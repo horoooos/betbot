@@ -1,22 +1,31 @@
 name: BetBot
 
+# Бот работает по кругу и не зависит от расписания GitHub: одна задача крутится ~5.5 часа,
+# запуская бота каждые LOOP_MINUTES минут, а в конце сама запускает следующую.
+# Расписание ниже — только страховка, если цепочка вдруг оборвётся.
+# Остановить бота: Actions → BetBot → «…» → Disable workflow.
+
 on:
+  workflow_dispatch:
   schedule:
-    - cron: "*/20 8-23 * * *"   # каждые 20 минут с 11:00 до 03:00 МСК — когда идут почти все матчи
-    - cron: "10 0-7 * * *"      # ночью и утром раз в час (в 08:10 МСК выходит расписание)
-  workflow_dispatch:            # кнопка «Run workflow» для ручного запуска
+    - cron: "17 */2 * * *"
 
 permissions:
   contents: write
+  actions: write
 
 concurrency:
-  group: betbot                 # два запуска одновременно не пойдут
+  group: betbot                 # всегда работает только одна копия бота
   cancel-in-progress: false
+
+env:
+  LOOP_MINUTES: "5"
+  LOOP_HOURS: "5.5"
 
 jobs:
   run:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 350
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -29,21 +38,33 @@ jobs:
         uses: actions/cache@v4
         with:
           path: data/raw
-          key: raw-${{ steps.day.outputs.day }}
+          key: raw-${{ steps.day.outputs.day }}-${{ github.run_id }}
           restore-keys: raw-
       - run: pip install -r requirements.txt
-      - run: python -W ignore run.py
+      - name: Bot loop
         env:
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-      - name: Save bot state
-        if: always()
         run: |
           git config user.name "betbot"
           git config user.email "betbot@users.noreply.github.com"
-          for f in data/state.json data/matches.json data/results.csv data/names_ru.json; do
-            if [ -f "$f" ]; then git add "$f"; fi
+          end=$(( $(date +%s) + $(python -c "print(int(float('$LOOP_HOURS') * 3600))") ))
+          while [ "$(date +%s)" -lt "$end" ]; do
+            started=$(date +%s)
+            python -W ignore run.py || echo "::warning::запуск бота завершился с ошибкой"
+            for f in data/state.json data/matches.json data/results.csv data/names_ru.json; do
+              if [ -f "$f" ]; then git add "$f"; fi
+            done
+            if ! git diff --cached --quiet; then
+              git commit -q -m "Bot update $(TZ=Europe/Moscow date '+%F %H:%M')"
+              git pull -q --rebase -X theirs || git rebase --abort || true
+              git push -q || echo "::warning::не удалось сохранить состояние"
+            fi
+            wait=$(( LOOP_MINUTES * 60 - ($(date +%s) - started) ))
+            if [ "$wait" -gt 0 ]; then sleep "$wait"; fi
           done
-          git diff --cached --quiet && exit 0
-          git commit -q -m "Bot update $(TZ=Europe/Moscow date '+%F %H:%M')"
-          git pull -q --rebase && git push -q
+      - name: Start next loop
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run daily.yml --repo "${{ github.repository }}" --ref main

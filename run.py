@@ -48,8 +48,8 @@ def matchday(t: pd.Timestamp) -> pd.Timestamp:
 
 
 def gap_minutes(now: pd.Timestamp) -> int:
-    """Сколько минут до следующего запуска (см. расписание в .github/workflows/daily.yml)."""
-    return 20 if 8 <= now.tz_convert("UTC").hour <= 23 else 60
+    """Сколько минут до следующего запуска (LOOP_MINUTES в .github/workflows/daily.yml)."""
+    return int(os.environ.get("LOOP_MINUTES", "20"))
 
 
 # ── коэффициенты и вероятности ──────────────────────────────────────────────
