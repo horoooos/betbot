@@ -245,7 +245,8 @@ def main():
             cache["hist"] = load_history(refresh_current=False, leagues=HIST_LEAGUES)
         return cache["hist"]
 
-    lead = pd.Timedelta(minutes=60 + gap_minutes(now) + 10)
+    # публикуем в последний запуск, который успевает до «за час»: обзор выходит за 60–80 минут
+    lead = pd.Timedelta(minutes=60 + gap_minutes(now))
     for ev in sorted(events, key=lambda e: e["kickoff"]):
         kick = pd.Timestamp(ev["kickoff"])
         if ev["state"] == "pre" and ev["id"] not in matches and now < kick <= now + lead:
