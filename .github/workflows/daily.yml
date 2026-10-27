@@ -42,7 +42,7 @@ jobs:
           git config user.name "betbot"
           git config user.email "betbot@users.noreply.github.com"
           for f in data/state.json data/matches.json data/results.csv data/names_ru.json; do
-            [ -f "$f" ] && git add "$f"
+            if [ -f "$f" ]; then git add "$f"; fi
           done
           git diff --cached --quiet && exit 0
           git commit -q -m "Bot update $(TZ=Europe/Moscow date '+%F %H:%M')"
