@@ -222,7 +222,8 @@ def review(m: dict, s: dict) -> str:
     parts.append("🧠 <b>Вывод</b>\n" + "\n".join(f"• {w}" for w in why))
     src = m.get("odds_src", "")
     parts.append(f"<i>Вероятности: коэффициенты ({src}) без маржи букмекера + модель голов. "
-                 f"Доверие модели сейчас {pct(m.get('model_w', 0))}.</i>\n{FOOTER}")
+                 f"Доверие модели сейчас {pct(m.get('model_w', 0))}. Выбор прогноза учитывает статистику "
+                 f"бота: какие типы ставок у него реально заходят.</i>\n{FOOTER}")
     return "\n\n".join(parts)
 
 
@@ -267,31 +268,46 @@ def result(m: dict, s: dict, hs: int, as_: int, day_stats: dict) -> str:
 
 # ── статистика ──────────────────────────────────────────────────────────────
 
-def _period(df: pd.DataFrame, name: str) -> str:
+def _hits(col: pd.Series) -> pd.Series:
+    return col.astype(str).str.lower().isin(["true", "1", "1.0"])
+
+
+def numbers(df: pd.DataFrame) -> tuple[int, int, float | None]:
+    """Угадано, всего и ROI основного прогноза за период."""
     if df.empty:
-        return f"<b>{name}:</b> матчей не было"
-    n = len(df)
-    hits = int(df["main_hit"].sum())
-    profit = (df["main_hit"] * (df["main_odds"] - 1) - (~df["main_hit"].astype(bool))).sum()
-    b = df.dropna(subset=["bold_hit"])
-    bold = f" · смелый {int(b['bold_hit'].sum())}/{len(b)}" if len(b) else ""
-    return (f"<b>{name}:</b> основной {hits}/{n} (<b>{pct(hits / n)}</b>){bold} · "
-            f"ROI ≈ <b>{100 * profit / n:+.1f}%</b>")
+        return 0, 0, None
+    hit = _hits(df["main_hit"])
+    profit = (hit * (df["main_odds"].astype(float) - 1) - (~hit)).sum()
+    return int(hit.sum()), len(df), float(100 * profit / len(df))
 
 
-def stats(res: pd.DataFrame, today: pd.Timestamp) -> str:
+def periods(res: pd.DataFrame, today: pd.Timestamp) -> list[tuple[str, pd.DataFrame]]:
     d = pd.to_datetime(res["date"]).dt.date if len(res) else pd.Series(dtype=object)
-    yday = (today - pd.Timedelta(days=1)).date()
-    lines = [f"📊 <b>СТАТИСТИКА БОТА</b>\n{LINE}",
-             _period(res[d == yday], f"Вчера, {date_ru(today - pd.Timedelta(days=1))}"),
-             _period(res[d > (today - pd.Timedelta(days=8)).date()], "За 7 дней"),
-             _period(res[d > (today - pd.Timedelta(days=31)).date()], "За 30 дней"),
-             _period(res, "За всё время")]
-    if len(res) >= 20:
-        by = res.groupby("main_label")["main_hit"].agg(["size", "mean"])
-        by = by[by["size"] >= 5].sort_values("mean", ascending=False).head(3)
-        if len(by):
-            lines.append("🏅 <b>Лучшие типы прогнозов:</b> " +
-                         ", ".join(f"{escape(k)} — {pct(v['mean'])} ({int(v['size'])})" for k, v in by.iterrows()))
+    yday = today - pd.Timedelta(days=1)
+    return [(f"Вчера, {date_ru(yday)}", res[d == yday.date()]),
+            ("За 7 дней", res[d > (today - pd.Timedelta(days=8)).date()]),
+            ("За 30 дней", res[d > (today - pd.Timedelta(days=31)).date()]),
+            ("За всё время", res)]
+
+
+def _period(df: pd.DataFrame, name: str) -> str:
+    hits, n, roi = numbers(df)
+    if not n:
+        return f"<b>{name}:</b> матчей не было"
+    b = df.dropna(subset=["bold_hit"])
+    bold = f" · смелый {int(_hits(b['bold_hit']).sum())}/{len(b)}" if len(b) else ""
+    return f"<b>{name}:</b> основной {hits}/{n} (<b>{pct(hits / n)}</b>){bold} · ROI ≈ <b>{roi:+.1f}%</b>"
+
+
+def stats(res: pd.DataFrame, today: pd.Timestamp, calib: dict | None = None) -> str:
+    from .markets import label  # здесь, чтобы не тянуть scipy ради одного текста
+    lines = [f"📊 <b>СТАТИСТИКА БОТА</b>\n{LINE}"] + [_period(df, name) for name, df in periods(res, today)]
+    learned = sorted(((k, r, n) for k, (r, n) in (calib or {}).items() if n >= 5 and abs(r - 1) >= 0.05),
+                     key=lambda x: -abs(x[1] - 1))[:4]
+    if learned:
+        lines.append("🧠 <b>Чему бот научился на своих прогнозах</b>\n" + "\n".join(
+            f"{'📈' if r > 1 else '📉'} {escape(label(k))}: заходит {'чаще' if r > 1 else 'реже'} обещанного "
+            f"({r:.2f}×, прогнозов: {n}) — {'выбирает охотнее' if r > 1 else 'выбирает реже'}"
+            for k, r, n in learned))
     lines.append("<i>ROI — прибыль на 1 ед. ставки по кэфам из постов (≈ — оценочный кэф)</i>")
     return "\n\n".join(lines)

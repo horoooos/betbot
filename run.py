@@ -20,7 +20,7 @@ from betbot import markets as mk
 from betbot.data import MSK, load_fixtures, load_history
 from betbot.engine import add_market, fit_full, fit_weights, walk_forward
 from betbot.espn import scoreboard, summary
-from betbot.leagues import ALL, EXTRA, MAIN
+from betbot.leagues import ALL, EXTRA, MAIN, ORDER
 
 # Лиги, по которым бот делает обзоры (код → см. betbot/leagues.py). Больше лиг = больше постов.
 REVIEW_LEAGUES = ["E0", "SP1", "I1", "D1", "F1", "RUS", "UCL", "UEL", "UECL", "N1", "P1", "T1"]
@@ -136,11 +136,29 @@ def learn(state: dict, now: pd.Timestamp) -> None:
         state.setdefault("weights", {"1X2": 0.0, "OU25": 0.0})
 
 
+def read_results() -> pd.DataFrame:
+    # тип прогноза «12» — это текст, а не число
+    return pd.read_csv(RESULTS, dtype={"main_key": str, "bold_key": str}) if RESULTS.exists() else pd.DataFrame()
+
+
+def post(png: bytes, text: str, reply_to: int | None = None) -> int:
+    """Картинка + текст. Длинный текст не влезает в подпись (1024 символа) — тогда он идёт ответом."""
+    if len(text) <= telegram.CAPTION_LIMIT:
+        return telegram.send_photo(png, text, reply_to)
+    head, _, rest = text.partition("\n\n")
+    mid = telegram.send_photo(png, head, reply_to)
+    telegram.send(rest, reply_to=mid, silent=True)
+    return mid
+
+
 def morning(state: dict, events: list[dict], now: pd.Timestamp) -> None:
-    res = pd.read_csv(RESULTS) if RESULTS.exists() else pd.DataFrame()
+    res = read_results()
+    today = now.normalize()
     if len(res):
-        telegram.send(texts.stats(res, now.normalize()))
-    start = pd.Timestamp(now.normalize()) + pd.Timedelta(hours=DAY_START_HOUR)
+        rows = [(name, *texts.numbers(df)) for name, df in texts.periods(res, today)]
+        png = card.stats_card(f"на {texts.date_ru(today)}", rows, BRAND)
+        post(png, texts.stats(res, today, mk.calibration(res)))
+    start = pd.Timestamp(today) + pd.Timedelta(hours=DAY_START_HOUR)
     day = [e for e in events if e["state"] == "pre" and start <= pd.Timestamp(e["kickoff"]) < start + pd.Timedelta(days=1)]
     for e in day:
         o = e.get("odds") or {}
@@ -149,11 +167,15 @@ def morning(state: dict, events: list[dict], now: pd.Timestamp) -> None:
             if max(p[0], p[2]) >= 0.45:
                 e["fav"] = (e["home"]["ru"], p[0]) if p[0] > p[2] else (e["away"]["ru"], p[2])
     if day:
-        telegram.send(texts.schedule(day, now))
+        top = sorted(day, key=lambda e: (ORDER.get(e["div"], 999), e["kickoff"]))[:8]
+        rows = [(f"{pd.Timestamp(e['kickoff']):%H:%M}", e["home"]["ru"], e["away"]["ru"], ALL[e["div"]][2])
+                for e in sorted(top, key=lambda e: e["kickoff"])]
+        title = f"{texts.DAYS[today.weekday()]}, {texts.date_ru(today)}"
+        post(card.schedule_card(title, rows, len(day) - len(top), BRAND), texts.schedule(day, now))
     print(f"Утренний пост: матчей в расписании {len(day)}")
 
 
-def review(ev: dict, w: dict, fx_loader, hist_loader) -> dict | None:
+def review(ev: dict, w: dict, fx_loader, hist_loader, calib: dict) -> dict | None:
     row = find_fixture(ev, fx_loader())
     mkt = market(ev, row)
     lam = lambdas(ev, row, mkt, w.get("1X2", 0.0), hist_loader)
@@ -162,7 +184,7 @@ def review(ev: dict, w: dict, fx_loader, hist_loader) -> dict | None:
         return None
     probs = mk.all_markets(*lam)
     scores = probs.pop("scores")
-    main, bold = mk.tips(probs, mkt["real"] if mkt else {})
+    main, bold = mk.tips(probs, mkt["real"] if mkt else {}, calib)
     m = {**ev, "lam": list(lam), "probs": probs, "scores": scores, "main": main, "bold": bold,
          "value": value_pick(probs, mkt), "odds_src": mkt["src"] if mkt else "нет, только модель",
          "model_w": w.get("1X2", 0.0) if mkt else 1.0}
@@ -184,20 +206,27 @@ def settle(m: dict, ev: dict) -> None:
     m["main_hit"] = mk.won(m["main"]["key"], hs, as_)
     m["bold_hit"] = mk.won(m["bold"]["key"], hs, as_) if m.get("bold") else None
     m["value_hit"] = mk.won(m["value"]["key"], hs, as_) if m.get("value") else None
+    bold = m.get("bold") or {}
     day = str(matchday(pd.Timestamp(m["kickoff"])).date())
     row = {"date": day, "id": m["id"], "div": m["div"], "home": m["home"]["ru"], "away": m["away"]["ru"],
-           "score": f"{hs}:{as_}", "main_label": m["main"]["label"], "main_odds": m["main"]["odds"],
-           "main_est": m["main"]["est"], "main_hit": m["main_hit"],
-           "bold_label": (m.get("bold") or {}).get("label"), "bold_odds": (m.get("bold") or {}).get("odds"),
-           "bold_hit": m["bold_hit"], "value_odds": (m.get("value") or {}).get("odds"), "value_hit": m["value_hit"]}
-    res = pd.read_csv(RESULTS) if RESULTS.exists() else pd.DataFrame()
-    res = pd.concat([res, pd.DataFrame([row])], ignore_index=True).drop_duplicates("id", keep="last")
+           "score": f"{hs}:{as_}", "main_key": m["main"]["key"], "main_label": m["main"]["label"],
+           "main_p": m["main"]["p"], "main_odds": m["main"]["odds"], "main_est": m["main"]["est"],
+           "main_hit": m["main_hit"], "bold_key": bold.get("key"), "bold_label": bold.get("label"),
+           "bold_p": bold.get("p"), "bold_odds": bold.get("odds"), "bold_hit": m["bold_hit"],
+           "value_odds": (m.get("value") or {}).get("odds"), "value_hit": m["value_hit"]}
+    res = pd.concat([read_results(), pd.DataFrame([row])], ignore_index=True).drop_duplicates("id", keep="last")
     res.to_csv(RESULTS, index=False)
     today = res[res["date"] == day]
-    bold = today.dropna(subset=["bold_hit"])
-    ds = {"n": len(today), "main": int(today["main_hit"].astype(bool).sum()),
-          "nb": len(bold), "bold": int(bold["bold_hit"].astype(bool).sum())}
-    telegram.send(texts.result(m, s, hs, as_, ds), reply_to=m["msg_id"])
+    tb = today.dropna(subset=["bold_hit"])
+    ds = {"n": len(today), "main": int(texts._hits(today["main_hit"]).sum()),
+          "nb": len(tb), "bold": int(texts._hits(tb["bold_hit"]).sum())}
+    verdicts = [(f"Основной: {m['main']['label']}", m["main_hit"])]
+    if bold:
+        verdicts.append((f"Смелый: {bold['label']}", m["bold_hit"]))
+    if m.get("value"):
+        verdicts.append((f"Value: {m['value']['label']}", m["value_hit"]))
+    png = card.result_card(texts.league_plain(m["div"]), m["home"], m["away"], hs, as_, verdicts, BRAND)
+    post(png, texts.result(m, s, hs, as_, ds), reply_to=m["msg_id"])
     m["status"] = "done"
     print(f"  итог: {m['home']['ru']} {hs}:{as_} {m['away']['ru']} → {'✅' if m['main_hit'] else '❌'}")
 
@@ -247,11 +276,12 @@ def main():
 
     # публикуем в последний запуск, который успевает до «за час»: обзор выходит за 60–80 минут
     lead = pd.Timedelta(minutes=60 + gap_minutes(now))
+    calib = mk.calibration(read_results())  # чему бот научился на своих прошлых прогнозах
     for ev in sorted(events, key=lambda e: e["kickoff"]):
         kick = pd.Timestamp(ev["kickoff"])
         if ev["state"] == "pre" and ev["id"] not in matches and now < kick <= now + lead:
             try:
-                m = review(ev, w, fx_loader, hist_loader)
+                m = review(ev, w, fx_loader, hist_loader, calib)
             except Exception as e:  # один сломанный матч не должен ронять весь запуск
                 print(f"  ! обзор не удался {ev['id']}: {e}")
                 continue

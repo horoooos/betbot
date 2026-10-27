@@ -5,6 +5,7 @@
 индивидуальные тоталы, форы, точный счёт.
 """
 import numpy as np
+import pandas as pd
 from scipy.optimize import minimize
 from scipy.stats import poisson
 
@@ -96,18 +97,51 @@ def label(key: str) -> str:
     return MARKETS[key][1]
 
 
-def tips(probs: dict, real_odds: dict) -> tuple[dict, dict]:
-    """Основной прогноз (самый надёжный с нормальным кэфом) и смелый (кэф 2.0–3.6)."""
+def calibration(res, prior: float = 20.0) -> dict[str, tuple[float, int]]:
+    """Учимся на своих прогнозах: во сколько раз каждый тип ставки заходит чаще/реже, чем обещал бот.
+
+    res — таблица results.csv. Возвращает key → (поправка, сколько прогнозов). Пока прогнозов мало,
+    поправка близка к 1 (`prior` воображаемых прогнозов «ровно как обещано»), с опытом — точнее.
+    """
+    out = {}
+    if res is None or len(res) == 0 or "main_key" not in res:
+        return out
+    rows = []
+    for kind in ("main", "bold"):
+        if f"{kind}_key" in res:
+            part = res[[f"{kind}_key", f"{kind}_p", f"{kind}_hit"]].dropna()
+            part.columns = ["key", "p", "hit"]
+            rows.append(part)
+    df = pd.concat(rows, ignore_index=True)
+    df["hit"] = df["hit"].astype(str).str.lower().isin(["true", "1", "1.0"])
+    for key, g in df.groupby("key"):
+        pbar = g["p"].astype(float).mean()
+        ratio = (g["hit"].sum() + prior * pbar) / (g["p"].astype(float).sum() + prior * pbar)
+        out[key] = (float(min(max(ratio, 0.8), 1.2)), len(g))
+    return out
+
+
+def tips(probs: dict, real_odds: dict, calib: dict | None = None) -> tuple[dict, dict]:
+    """Основной прогноз (самый надёжный с нормальным кэфом) и смелый (кэф 2.0–3.6).
+
+    calib — поправки из собственной статистики бота: типы ставок, которые у него заходят чаще
+    обещанного, выбираются охотнее, а «подводящие» — реже.
+    """
+    calib = calib or {}
+
     def odds_for(k):
         o = real_odds.get(k)
         return (round(o, 2), False) if o else (round(MARGIN / probs[k], 2), True)
 
+    def score(k):
+        return probs[k] * calib.get(k, (1.0, 0))[0]
+
     cands = [k for k in MARKETS if probs[k] > 0]
     # самый вероятный из «настоящих» рынков, но не пустой (вероятность до 75% ≈ кэф от 1.3)
     pool = [k for k in MAIN_POOL if probs[k] <= 0.75] or MAIN_POOL
-    main_k = max(pool, key=probs.get)
+    main_k = max(pool, key=score)
     bold_pool = [k for k in cands if 2.0 <= odds_for(k)[0] <= 3.6 and k != main_k]
-    bold_k = max(bold_pool, key=lambda k: probs[k]) if bold_pool else None
+    bold_k = max(bold_pool, key=score) if bold_pool else None
 
     def pack(k):
         if k is None:
