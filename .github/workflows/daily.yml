@@ -1,31 +1,45 @@
-name: Daily predictions
+name: BetBot
 
 on:
   schedule:
-    - cron: "0 7 * * *"   # каждый день в 10:00 по Москве
-  workflow_dispatch:       # кнопка «Run workflow» для ручного запуска
+    - cron: "*/30 * * * *"   # каждые 30 минут, 24/7 (~1500 бесплатных минут из 2000 в месяц)
+  workflow_dispatch:         # кнопка «Run workflow» для ручного запуска
 
 permissions:
   contents: write
 
+concurrency:
+  group: betbot              # два запуска одновременно не пойдут
+  cancel-in-progress: false
+
 jobs:
   run:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
           cache: pip
+      - id: day
+        run: echo "day=$(TZ=Europe/Moscow date +%F)" >> "$GITHUB_OUTPUT"
+      - name: Cache of match history
+        uses: actions/cache@v4
+        with:
+          path: data/raw
+          key: raw-${{ steps.day.outputs.day }}
+          restore-keys: raw-
       - run: pip install -r requirements.txt
-      - run: python run_daily.py
+      - run: python -W ignore run.py
         env:
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-      - name: Save history of picks
+      - name: Save bot state
         run: |
           git config user.name "betbot"
           git config user.email "betbot@users.noreply.github.com"
-          git add data/
-          git diff --cached --quiet || git commit -m "Daily update $(date +%F)"
-          git push
+          git add data/state.json data/forecasts.csv data/picks.csv 2>/dev/null || true
+          git diff --cached --quiet && exit 0
+          git commit -q -m "Bot update $(TZ=Europe/Moscow date '+%F %H:%M')"
+          git pull -q --rebase && git push -q

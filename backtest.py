@@ -21,7 +21,7 @@ def logloss(df):
 
 def main():
     print("Загружаю данные...")
-    hist = load_history(2019)
+    hist = load_history(2019, leagues=["E0", "SP1", "I1", "D1", "F1"])
     print("Прогоняю модель неделя за неделей (только прошлое → будущее)...")
     preds = add_market(walk_forward(hist, start="2021-07-01")).dropna(subset=["k_H", "k_O25"])
     preds["SeasonStart"] = preds["Season"].str[:2].astype(int)

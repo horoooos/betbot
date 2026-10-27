@@ -69,7 +69,9 @@ class PoissonModel:
         m[1, 1] *= 1 - r
         m /= m.sum()
         total = x[:, None] + x[None, :]
+        si, sj = np.unravel_index(m.argmax(), m.shape)
         return {
+            "score": f"{si}:{sj}",
             "H": np.tril(m, -1).sum(), "D": np.trace(m), "A": np.triu(m, 1).sum(),
             "O25": m[total > 2.5].sum(), "U25": m[total < 2.5].sum(),
             "xgH": lh, "xgA": la,

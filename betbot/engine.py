@@ -17,9 +17,19 @@ SIDE_NAMES = {"H": "П1", "D": "Ничья", "A": "П2", "O25": "ТБ 2.5", "U25
 def predict_rows(model: PoissonModel, rows: pd.DataFrame) -> pd.DataFrame:
     out = rows.copy()
     preds = [model.probs(r.HomeTeam, r.AwayTeam) for r in rows.itertuples()]
-    for key in ["H", "D", "A", "O25", "U25", "xgH", "xgA"]:
+    for key in ["H", "D", "A", "O25", "U25", "xgH", "xgA", "score"]:
         out["m_" + key] = [p[key] for p in preds]
     return out
+
+
+def blended(row, market: str, weights: dict[str, float]) -> list[float]:
+    """Итоговые вероятности исходов для одной строки: модель + рынок с выученным весом."""
+    sides = MARKETS[market]["sides"]
+    pm = np.array([getattr(row, "m_" + s) for s in sides])
+    pk = np.array([getattr(row, "k_" + s, np.nan) for s in sides])
+    if np.isnan(pk).any():
+        return list(pm)
+    return list(blend(pm, pk, weights[market]))
 
 
 def walk_forward(history: pd.DataFrame, start: str, **model_kw) -> pd.DataFrame:
@@ -40,6 +50,10 @@ def walk_forward(history: pd.DataFrame, start: str, **model_kw) -> pd.DataFrame:
 def add_market(df: pd.DataFrame) -> pd.DataFrame:
     """Добавляет вероятности рынка (без маржи) для каждого исхода."""
     df = df.copy()
+    odd_cols = [c for spec in MARKETS.values() for k in ("avg", "max", "sharp") for c in (spec[k] or [])]
+    for c in odd_cols:
+        if c in df:  # битые коэффициенты (0, 1.0, пусто) не должны ломать обучение
+            df[c] = df[c].where(df[c] > 1.01)
     for mk, spec in MARKETS.items():
         cols = spec["avg"]
         if spec["sharp"] and all(c in df for c in spec["sharp"]):

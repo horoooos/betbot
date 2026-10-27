@@ -1,5 +1,7 @@
 __pycache__/
 *.pyc
 .env
+data/raw/
 data/backtest_bets.csv
 data/backtest_log.txt
+data/dry*.txt
