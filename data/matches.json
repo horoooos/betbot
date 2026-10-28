@@ -526,7 +526,7 @@
   "kickoff": "2026-10-28T22:45:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Scheduled",
   "home": {
    "id": "3263",
@@ -618,7 +618,10 @@
   "value": null,
   "odds_src": "среднее по букмекерам",
   "model_w": 0.0,
-  "msg_id": 36
+  "msg_id": 36,
+  "main_hit": true,
+  "bold_hit": false,
+  "value_hit": null
  },
  "401874799": {
   "id": "401874799",
@@ -835,7 +838,7 @@
   "kickoff": "2026-10-28T22:45:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Scheduled",
   "home": {
    "id": "256",
@@ -927,7 +930,10 @@
   "value": null,
   "odds_src": "среднее по букмекерам",
   "model_w": 0.0,
-  "msg_id": 44
+  "msg_id": 44,
+  "main_hit": false,
+  "bold_hit": true,
+  "value_hit": null
  },
  "401878354": {
   "id": "401878354",
@@ -1453,7 +1459,7 @@
   "kickoff": "2026-10-28T22:45:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Scheduled",
   "home": {
    "id": "3231",
@@ -1545,7 +1551,10 @@
   "value": null,
   "odds_src": "среднее по букмекерам",
   "model_w": 0.0,
-  "msg_id": 56
+  "msg_id": 56,
+  "main_hit": true,
+  "bold_hit": true,
+  "value_hit": null
  },
  "401921840": {
   "id": "401921840",
@@ -1762,7 +1771,7 @@
   "kickoff": "2026-10-28T22:45:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Scheduled",
   "home": {
    "id": "366",
@@ -1854,7 +1863,10 @@
   "value": null,
   "odds_src": "DraftKings",
   "model_w": 0.0,
-  "msg_id": 62
+  "msg_id": 62,
+  "main_hit": true,
+  "bold_hit": false,
+  "value_hit": null
  },
  "401917033": {
   "id": "401917033",
@@ -1863,7 +1875,7 @@
   "kickoff": "2026-10-28T22:45:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Scheduled",
   "home": {
    "id": "131",
@@ -1955,7 +1967,10 @@
   "value": null,
   "odds_src": "DraftKings",
   "model_w": 0.0,
-  "msg_id": 64
+  "msg_id": 64,
+  "main_hit": true,
+  "bold_hit": false,
+  "value_hit": null
  },
  "401917035": {
   "id": "401917035",
