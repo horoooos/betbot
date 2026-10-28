@@ -627,7 +627,7 @@
   "kickoff": "2026-10-28T22:45:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Scheduled",
   "home": {
    "id": "4007",
@@ -719,7 +719,10 @@
   "value": null,
   "odds_src": "среднее по букмекерам",
   "model_w": 0.0,
-  "msg_id": 38
+  "msg_id": 38,
+  "main_hit": true,
+  "bold_hit": false,
+  "value_hit": null
  },
  "401878356": {
   "id": "401878356",
@@ -728,7 +731,7 @@
   "kickoff": "2026-10-28T22:45:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Scheduled",
   "home": {
    "id": "263",
@@ -820,7 +823,10 @@
   "value": null,
   "odds_src": "среднее по букмекерам",
   "model_w": 0.0,
-  "msg_id": 42
+  "msg_id": 42,
+  "main_hit": true,
+  "bold_hit": false,
+  "value_hit": null
  },
  "401878355": {
   "id": "401878355",
@@ -930,7 +936,7 @@
   "kickoff": "2026-10-28T22:45:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Scheduled",
   "home": {
    "id": "261",
@@ -1022,7 +1028,10 @@
   "value": null,
   "odds_src": "среднее по букмекерам",
   "model_w": 0.0,
-  "msg_id": 46
+  "msg_id": 46,
+  "main_hit": true,
+  "bold_hit": false,
+  "value_hit": null
  },
  "401878352": {
   "id": "401878352",
@@ -1340,7 +1349,7 @@
   "kickoff": "2026-10-28T22:45:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Scheduled",
   "home": {
    "id": "282",
@@ -1432,7 +1441,10 @@
   "value": null,
   "odds_src": "среднее по букмекерам",
   "model_w": 0.0,
-  "msg_id": 54
+  "msg_id": 54,
+  "main_hit": true,
+  "bold_hit": true,
+  "value_hit": null
  },
  "401889224": {
   "id": "401889224",
@@ -1646,7 +1658,7 @@
   "kickoff": "2026-10-28T22:45:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Scheduled",
   "home": {
    "id": "370",
@@ -1738,7 +1750,10 @@
   "value": null,
   "odds_src": "DraftKings",
   "model_w": 0.0,
-  "msg_id": 60
+  "msg_id": 60,
+  "main_hit": false,
+  "bold_hit": true,
+  "value_hit": null
  },
  "401921843": {
   "id": "401921843",
@@ -1949,7 +1964,7 @@
   "kickoff": "2026-10-28T22:45:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Scheduled",
   "home": {
    "id": "132",
@@ -2041,7 +2056,10 @@
   "value": null,
   "odds_src": "DraftKings",
   "model_w": 0.0,
-  "msg_id": 66
+  "msg_id": 66,
+  "main_hit": true,
+  "bold_hit": false,
+  "value_hit": null
  },
  "401916922": {
   "id": "401916922",
@@ -2050,7 +2068,7 @@
   "kickoff": "2026-10-28T22:45:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Scheduled",
   "home": {
    "id": "2428",
@@ -2142,7 +2160,10 @@
   "value": null,
   "odds_src": "DraftKings",
   "model_w": 0.0,
-  "msg_id": 68
+  "msg_id": 68,
+  "main_hit": true,
+  "bold_hit": false,
+  "value_hit": null
  },
  "401917034": {
   "id": "401917034",
