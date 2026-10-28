@@ -15,7 +15,8 @@ import requests
 CACHE = Path(__file__).resolve().parent.parent / "data" / "names_ru.json"
 API = "https://www.wikidata.org/w/api.php"
 HEADERS = {"User-Agent": "betbot/1.0 (football predictions telegram bot)"}
-CLUB_WORDS = ("football club", "soccer club", "association football", "soccer team", "football team")
+CLUB_WORDS = ("football club", "soccer club", "association football", "soccer team", "football team",
+              "ice hockey team", "hockey team", "hockey club", "basketball team", "basketball club")
 
 _cache: dict | None = None
 _dirty = False
@@ -32,6 +33,30 @@ FIXED = {
     "AFC Bournemouth": "Борнмут", "Real Madrid": "Реал Мадрид", "Barcelona": "Барселона",
     "Juventus": "Ювентус", "Napoli": "Наполи", "Lazio": "Лацио", "Zenit St Petersburg": "Зенит",
     "Spartak Moscow": "Спартак", "CSKA Moscow": "ЦСКА", "Dynamo Moscow": "Динамо", "Lokomotiv Moscow": "Локомотив",
+    # NHL
+    "Anaheim Ducks": "Анахайм", "Boston Bruins": "Бостон", "Buffalo Sabres": "Баффало", "Calgary Flames": "Калгари",
+    "Carolina Hurricanes": "Каролина", "Chicago Blackhawks": "Чикаго", "Colorado Avalanche": "Колорадо",
+    "Columbus Blue Jackets": "Коламбус", "Dallas Stars": "Даллас", "Detroit Red Wings": "Детройт",
+    "Edmonton Oilers": "Эдмонтон", "Florida Panthers": "Флорида", "Los Angeles Kings": "Лос-Анджелес",
+    "Minnesota Wild": "Миннесота", "Montreal Canadiens": "Монреаль", "Nashville Predators": "Нэшвилл",
+    "New Jersey Devils": "Нью-Джерси", "New York Islanders": "Айлендерс", "New York Rangers": "Рейнджерс",
+    "Ottawa Senators": "Оттава", "Philadelphia Flyers": "Филадельфия", "Pittsburgh Penguins": "Питтсбург",
+    "San Jose Sharks": "Сан-Хосе", "Seattle Kraken": "Сиэтл", "St. Louis Blues": "Сент-Луис",
+    "Tampa Bay Lightning": "Тампа-Бэй", "Toronto Maple Leafs": "Торонто", "Utah Mammoth": "Юта",
+    "Utah Hockey Club": "Юта", "Vancouver Canucks": "Ванкувер", "Vegas Golden Knights": "Вегас",
+    "Washington Capitals": "Вашингтон", "Winnipeg Jets": "Виннипег",
+    # NBA
+    "Atlanta Hawks": "Атланта Хокс", "Boston Celtics": "Бостон Селтикс", "Brooklyn Nets": "Бруклин Нетс",
+    "Charlotte Hornets": "Шарлотт Хорнетс", "Chicago Bulls": "Чикаго Буллз", "Cleveland Cavaliers": "Кливленд",
+    "Dallas Mavericks": "Даллас Маверикс", "Denver Nuggets": "Денвер Наггетс", "Detroit Pistons": "Детройт Пистонс",
+    "Golden State Warriors": "Голден Стэйт", "Houston Rockets": "Хьюстон Рокетс", "Indiana Pacers": "Индиана Пэйсерс",
+    "LA Clippers": "Клипперс", "Los Angeles Clippers": "Клипперс", "Los Angeles Lakers": "Лейкерс",
+    "Memphis Grizzlies": "Мемфис Гриззлис", "Miami Heat": "Майами Хит", "Milwaukee Bucks": "Милуоки Бакс",
+    "Minnesota Timberwolves": "Миннесота Тимбервулвз", "New Orleans Pelicans": "Нью-Орлеан Пеликанс",
+    "New York Knicks": "Нью-Йорк Никс", "Oklahoma City Thunder": "Оклахома-Сити Тандер", "Orlando Magic": "Орландо Мэджик",
+    "Philadelphia 76ers": "Филадельфия Сиксерс", "Phoenix Suns": "Финикс Санз", "Portland Trail Blazers": "Портленд",
+    "Sacramento Kings": "Сакраменто Кингз", "San Antonio Spurs": "Сан-Антонио Сперс", "Toronto Raptors": "Торонто Рэпторс",
+    "Utah Jazz": "Юта Джаз", "Washington Wizards": "Вашингтон Уизардс",
 }
 
 _TR = [("shch", "щ"), ("sch", "ш"), ("tch", "ч"), ("ey", "ей"), ("ay", "эй"), ("ce", "се"), ("ci", "си"),
@@ -79,15 +104,23 @@ def save() -> None:
         CACHE.write_text(json.dumps(_load(), ensure_ascii=False, indent=0, sort_keys=True), encoding="utf-8")
 
 
+BUDGET = 40.0  # секунд на поиск новых названий за один запуск — чтобы бот не ждал Wikidata вместо постов
+_spent = 0.0
+
+
 def _api(**params) -> dict | None:
-    for attempt in range(3):
-        try:
-            r = requests.get(API, params={**params, "format": "json"}, headers=HEADERS, timeout=20)
-            if r.status_code == 200 and r.headers.get("content-type", "").startswith("application/json"):
-                return r.json()
-        except Exception:
-            pass
-        time.sleep(2 * (attempt + 1))
+    global _spent
+    if _spent >= BUDGET:
+        return None
+    started = time.time()
+    try:
+        r = requests.get(API, params={**params, "format": "json"}, headers=HEADERS, timeout=8)
+        if r.status_code == 200 and r.headers.get("content-type", "").startswith("application/json"):
+            return r.json()
+    except Exception:
+        pass
+    finally:
+        _spent += time.time() - started
     return None
 
 

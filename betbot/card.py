@@ -1,6 +1,8 @@
 """Картинка-превью матча: логотипы, цвета клубов, время, вероятности и прогноз (Pillow, бесплатно)."""
 import io
+import random
 from pathlib import Path
+from urllib.parse import quote
 
 import requests
 from PIL import Image, ImageDraw, ImageFilter, ImageFont
@@ -106,7 +108,8 @@ def _pill(d, cx: int, y: int, text: str, fill: tuple, color=WHITE, size: int = 2
 
 
 def match_card(league: str, when: str, home: dict, away: dict, probs: tuple[float, float, float],
-               tip: str, xg: tuple[float, float], brand: str = "") -> bytes:
+               tip: str, center: str, brand: str = "") -> bytes:
+    """Превью матча. probs — П1/Х/П2 (в видах спорта без ничьей Х = 0), center — строка под временем."""
     hc, ac = _rgb(home["color"]), _rgb(away["color"], (180, 40, 40))
     img, d = _background(hc, ac)
     _title(d, league)
@@ -120,13 +123,15 @@ def match_card(league: str, when: str, home: dict, away: dict, probs: tuple[floa
     time_part, _, date_part = when.partition(" · ")
     d.text((W / 2, 210), time_part, font=font(76, "ExtraBold"), fill=WHITE, anchor="mm")
     d.text((W / 2, 272), date_part.upper(), font=font(26, "Medium"), fill=MUTED, anchor="mm")
-    d.text((W / 2, 330), f"xG {xg[0]:.1f} : {xg[1]:.1f}", font=font(30), fill=ACCENT, anchor="mm")
+    d.text((W / 2, 330), center, font=font(30), fill=ACCENT, anchor="mm")
 
     # полоса вероятностей П1 / Х / П2
     x0, x1, y0, bh = 120, W - 120, 500, 46
     total = x1 - x0
     xs = x0
     for p, c, name in zip(probs, (C_HOME, C_DRAW, C_AWAY), ("П1", "Х", "П2")):
+        if p <= 0:
+            continue
         w = max(int(total * p), 2)
         d.rounded_rectangle((xs, y0, xs + w, y0 + bh), radius=10, fill=c)
         if w > 110:
@@ -145,6 +150,37 @@ def match_card(league: str, when: str, home: dict, away: dict, probs: tuple[floa
 
 
 GREEN, RED = (39, 174, 96), (214, 48, 49)
+AI_URL = "https://image.pollinations.ai/prompt/{prompt}?width=1280&height=780&nologo=true&seed={seed}"
+
+
+def ai_card(prompt: str, title: str, subtitle: str = "", brand: str = "") -> bytes:
+    """Картинка от бесплатной нейросети Pollinations + наш заголовок поверх.
+
+    Если нейросеть не ответила — рисуем фон сами, пост всё равно выйдет с картинкой.
+    """
+    img = None
+    try:
+        r = requests.get(AI_URL.format(prompt=quote(prompt), seed=random.randint(1, 10 ** 6)), timeout=120)
+        if r.ok and r.headers.get("content-type", "").startswith("image"):
+            img = Image.open(io.BytesIO(r.content)).convert("RGB").resize((W, 780)).crop((0, 0, W, H))  # без водяного знака
+    except Exception:
+        img = None
+    if img is None:
+        img, _ = _background((40, 80, 170), (180, 60, 40))
+    # затемнение снизу, чтобы текст читался на любой картинке
+    shade = Image.new("L", (1, H))
+    for y in range(H):
+        shade.putpixel((0, y), int(230 * max(0, (y - H * 0.35) / (H * 0.65)) ** 1.2))
+    img = Image.composite(Image.new("RGB", (W, H), (8, 10, 24)), img, shade.resize((W, H)))
+    d = ImageDraw.Draw(img)
+    size = 64
+    while size > 34 and d.textlength(title.upper(), font=font(size, "ExtraBold")) > W - 120:
+        size -= 4
+    d.text((W / 2, H - 170), title.upper(), font=font(size, "ExtraBold"), fill=WHITE, anchor="mm")
+    d.line([(W / 2 - 90, H - 120), (W / 2 + 90, H - 120)], fill=ACCENT, width=4)
+    if subtitle:
+        d.text((W / 2, H - 80), subtitle, font=font(30, "Medium"), fill=(220, 226, 245), anchor="mm")
+    return _png(img, d, brand)
 
 
 def result_card(league: str, home: dict, away: dict, hs: int, as_: int,
@@ -167,10 +203,11 @@ def result_card(league: str, home: dict, away: dict, hs: int, as_: int,
     return _png(img, d, brand)
 
 
-def schedule_card(day: str, rows: list[tuple[str, str, str, str]], more: int, brand: str = "") -> bytes:
-    """Расписание дня: до 8 главных матчей (время, хозяева, гости, турнир)."""
+def schedule_card(day: str, rows: list[tuple[str, str, str, str]], more: int, brand: str = "",
+                  heading: str = "Матчи дня") -> bytes:
+    """Список матчей: до 8 строк (время, хозяева, гости, турнир) — расписание, теннис, экспресс."""
     img, d = _background((40, 80, 170), (130, 40, 120))
-    _title(d, "Матчи дня", y=50, size=34)
+    _title(d, heading, y=50, size=34)
     d.text((W / 2, 120), day.upper(), font=font(44, "ExtraBold"), fill=WHITE, anchor="mm")
     y = 175
     for t, h, a, lg in rows[:8]:

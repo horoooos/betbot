@@ -45,9 +45,10 @@ def tip_line(t: dict) -> str:
 
 # ── утреннее расписание ─────────────────────────────────────────────────────
 
-def schedule(matches: list[dict], day: pd.Timestamp) -> str:
+def schedule(matches: list[dict], day: pd.Timestamp, extra: str = "") -> str:
+    """Расписание дня: футбол по лигам, затем хоккей/баскетбол/теннис (extra)."""
     head = (f"📅 <b>МАТЧИ ДНЯ · {DAYS[day.weekday()].upper()}, {date_ru(day).upper()}</b>\n"
-            f"Всего матчей: <b>{len(matches)}</b>. Полный прогноз на каждый — примерно за час до начала 👇\n{LINE}")
+            f"Футбольных матчей: <b>{len(matches)}</b>. Прогноз на каждый матч — примерно за час до начала 👇\n{LINE}")
     blocks = [head]
     by_league: dict[str, list] = {}
     for m in sorted(matches, key=lambda m: (ORDER.get(m["div"], 999), m["kickoff"])):
@@ -60,6 +61,9 @@ def schedule(matches: list[dict], day: pd.Timestamp) -> str:
                 fav = f" · <i>фаворит: {escape(m['fav'][0])} {pct(m['fav'][1])}</i>"
             lines.append(f"🕒 {ts(m):%H:%M}  {escape(m['home']['ru'])} — {escape(m['away']['ru'])}{fav}")
         blocks.append("\n".join(lines))
+    if extra:
+        blocks.append(f"{LINE}\n<b>ДРУГИЕ ВИДЫ СПОРТА</b>")
+        blocks.append(extra)
     blocks.append(FOOTER)
     return "\n\n".join(blocks)
 
@@ -302,6 +306,15 @@ def _period(df: pd.DataFrame, name: str) -> str:
 def stats(res: pd.DataFrame, today: pd.Timestamp, calib: dict | None = None) -> str:
     from .markets import label  # здесь, чтобы не тянуть scipy ради одного текста
     lines = [f"📊 <b>СТАТИСТИКА БОТА</b>\n{LINE}"] + [_period(df, name) for name, df in periods(res, today)]
+    if "sport" in res and res["sport"].nunique() > 1:
+        from .sports import EMOJI, SPORT_RU
+        week = periods(res, today)[1][1]
+        parts = []
+        for sport, g in week.assign(sport=week["sport"].fillna("football")).groupby("sport"):
+            hits, n, _ = numbers(g)
+            parts.append(f"{EMOJI.get(sport, '')} {SPORT_RU.get(sport, sport)} {hits}/{n} ({pct(hits / n)})")
+        if parts:
+            lines.append("🏅 <b>За 7 дней по видам спорта:</b> " + " · ".join(parts))
     learned = sorted(((k, r, n) for k, (r, n) in (calib or {}).items() if n >= 5 and abs(r - 1) >= 0.05),
                      key=lambda x: -abs(x[1] - 1))[:4]
     if learned:

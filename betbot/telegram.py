@@ -68,6 +68,22 @@ def send(text: str, reply_to: int | None = None, silent: bool = False) -> list[i
     return ids
 
 
+def send_poll(question: str, options: list[str], quiz_correct: int | None = None, explanation: str = "",
+              reply_to: int | None = None) -> int:
+    """Опрос в канале (анонимный). quiz_correct — номер правильного ответа для викторины."""
+    import json
+    if DRY:
+        return _dry("poll", question + "\n" + "\n".join(f"- {o}" for o in options))
+    params = {"question": question[:300], "options": json.dumps([o[:100] for o in options], ensure_ascii=False),
+              "is_anonymous": True}
+    if quiz_correct is not None:
+        params.update({"type": "quiz", "correct_option_id": quiz_correct, "explanation": explanation[:200]})
+    if reply_to:
+        params["reply_to_message_id"] = reply_to
+        params["allow_sending_without_reply"] = True
+    return _call("sendPoll", **params)["message_id"]
+
+
 def send_photo(png: bytes, caption: str, reply_to: int | None = None) -> int:
     caption = caption[:CAPTION_LIMIT]
     if DRY:
