@@ -108,10 +108,12 @@ def _load() -> dict:
         bad = [k for k, v in _cache.items() if _reserve_mixup(k.split(":", 1)[-1], v)]
         for k in bad:  # чистим уже сохранённые ошибки — их переведём заново
             del _cache[k]
-        for k, v in list(_cache.items()):  # старые транслиты («Ввсб») заменяем оригиналом («VVSB»)
+        for k, v in list(_cache.items()):
+            # старые записи, похожие на транслит («Ввсб»), переспрашиваем у Wikidata: настоящие русские
+            # названия («Арсенал») вернутся, а для клубов без них останется оригинал латиницей («VVSB»)
             orig = k.split(":", 1)[-1]
-            if v == translit(orig) or v == f"Сборная {translit(orig)}":
-                _cache[k] = v.replace(translit(orig), orig)
+            if v in (translit(orig), f"Сборная {translit(orig)}") and orig not in FIXED:
+                del _cache[k]
                 bad.append(k)
         _dirty = _dirty or bool(bad)
     return _cache
