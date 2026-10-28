@@ -87,6 +87,8 @@ def translit(text: str) -> str:
             else:
                 res += w[i]
                 i += 1
+        if w.endswith("ie") and res.endswith("ие") and len(w) > 3:  # Norrie → Норри, Annie → Анни
+            res = res[:-2] + "и"
         out.append(res[:1].upper() + res[1:] if word[:1].isupper() else res)
     return "".join(out)
 

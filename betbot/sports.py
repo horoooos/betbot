@@ -21,6 +21,7 @@ from . import esports
 from . import markets as mk
 from . import names
 from .espn import MSK, _get, decimal
+from .reviews import ROUNDS
 
 SB = "https://site.api.espn.com/apis/site/v2/sports/{path}/scoreboard?dates={day}"
 TENNIS_CACHE = Path(__file__).resolve().parent.parent / "data" / "raw" / "tennis"
@@ -120,13 +121,19 @@ def _tennis_matches(code: str, data: dict, only_singles: bool = True) -> list[di
                 comps = c.get("competitors", [])
                 if len(comps) != 2 or not all(x.get("athlete") for x in comps):
                     continue
+                rnd = (c.get("round") or {}).get("displayName", "")
+                if only_singles and "Qualif" in rnd:  # квалификацию не берём — только основная сетка
+                    continue
                 st = c["status"]["type"]
                 p = sorted(comps, key=lambda x: x.get("order", 0))
                 players = [{"id": str(x.get("id")), "name": x["athlete"].get("displayName", ""),
+                            "logo": [f"https://a.espncdn.com/i/headshots/tennis/players/full/{x.get('id')}.png",
+                                     (x["athlete"].get("flag") or {}).get("href")],
+                            "country": (x["athlete"].get("flag") or {}).get("alt", ""), "color": "2d6a4f",
                             "winner": bool(x.get("winner")),
                             "sets": [s.get("value") for s in x.get("linescores") or []],
                             "set_won": [bool(s.get("winner")) for s in x.get("linescores") or []]} for x in p]
-                out.append({"id": str(c["id"]), "div": code, "sport": "tennis", "tournament": tour_name,
+                out.append({"id": str(c["id"]), "div": code, "sport": "tennis", "tournament": tour_name, "round": rnd,
                             "bo5": code == "ATP" and any(s in tour_name for s in SLAMS),
                             "kickoff": pd.Timestamp(c.get("date") or e["date"]).tz_convert(MSK).isoformat(),
                             "state": st.get("state"), "completed": bool(st.get("completed")),
@@ -467,17 +474,15 @@ def caption(m: dict, when: str) -> str:
     """Пост перед игрой (хоккей/баскетбол) — помещается в подпись к картинке."""
     h, a = escape(m["home"]["ru"]), escape(m["away"]["ru"])
     lines = [f"{EMOJI[m['sport']]} <b>{h} — {a}</b>", f"🏆 {title(m['div'])}", f"⏰ {when}"]
+    if m.get("tournament"):
+        rnd = ROUNDS.get(m.get("round", ""), m.get("round", ""))
+        lines.append(f"🎟 {escape(m['tournament'])}" + (f" · {escape(rnd)}" if rnd else ""))
     if m["home"].get("record") or m["away"].get("record"):
         lines.append(f"📋 Баланс: {h} {m['home'].get('record') or '—'} · {a} {m['away'].get('record') or '—'}")
-    lines.append("")
-    rows = [(m["labels"][k], m["probs"][k]) for k in m["probs"] if not k.startswith("TN_S")][:12]
-    width = max(len(r[0]) for r in rows)
-    lines.append("<code>" + "\n".join(f"{escape(n.ljust(width))} {_pct(p):>4}" for n, p in rows) + "</code>")
-    lines += ["", f"🎯 <b>Основной:</b> {_tip(m['main'])}"]
+    lines += ["", f"🎯 <b>Основной прогноз:</b> {_tip(m['main'])}"]
     if m.get("bold"):
-        lines.append(f"🔥 <b>Смелый:</b> {_tip(m['bold'])}")
-    source = "по коэффициентам без маржи" if m.get("real") else "по рейтингу Эло (история матчей за год)"
-    lines.append(f"<i>⚠️ 18+. Вероятности — {source}. Прогноз — не гарантия.</i>")
+        lines.append(f"🔥 <b>Смелый прогноз:</b> {_tip(m['bold'])}")
+    lines += ["", "👇 <i>Полный разбор — в ответе к посту</i>"]
     return "\n".join(lines)
 
 
@@ -487,6 +492,8 @@ def result_caption(m: dict, f: dict, day: dict) -> str:
     if m["sport"] == "hockey" and f.get("reg") and sum(f["reg"]) != f["hs"] + f["as"]:
         lines.append(f"Основное время {f['reg'][0]}:{f['reg'][1]}, дальше — овертайм/буллиты")
     per = " · ".join(f"{x}:{y}" for x, y in f.get("periods") or [])
+    if f.get("games"):
+        lines.append(f"📊 По геймам: {f['games']}")
     if per:
         lines.append(f"📊 По {'периодам' if m['sport'] == 'hockey' else 'четвертям'}: {per}")
     lines.append("")
@@ -495,38 +502,6 @@ def result_caption(m: dict, f: dict, day: dict) -> str:
         lines.append(f"🔥 Смелый: {escape(m['bold']['label'])} — {'✅ <b>ЗАШЁЛ</b>' if m['bold_hit'] else '❌ мимо'}")
     if day.get("n"):
         lines.append(f"\n📅 Сегодня ({SPORT_RU[m['sport']].lower()}): {day['main']}/{day['n']} ({_pct(day['main'] / day['n'])})")
-    return "\n".join(lines)
-
-
-def tennis_preview(ms: list[dict]) -> str:
-    lines = ["🎾 <b>ТЕННИС: ПРОГНОЗЫ НА БЛИЖАЙШИЕ МАТЧИ</b>"]
-    by_t: dict[str, list] = {}
-    for m in sorted(ms, key=lambda m: m["kickoff"]):
-        by_t.setdefault(f"{m['div']} · {m['tournament']}", []).append(m)
-    for t, group in by_t.items():
-        block = [f"\n<b>🏆 {escape(t)}</b>"]
-        for m in group:
-            k = pd.Timestamp(m["kickoff"])
-            block.append(f"🕒 {k:%H:%M} <b>{escape(m['home']['ru'])}</b> — <b>{escape(m['away']['ru'])}</b>\n"
-                         f"   {escape(m['home']['ru'].split()[-1])} {_pct(m['probs']['TN_W1'])} · "
-                         f"{escape(m['away']['ru'].split()[-1])} {_pct(m['probs']['TN_W2'])}\n"
-                         f"   🎯 {_tip(m['main'])}" + (f"\n   🔥 {_tip(m['bold'])}" if m.get("bold") else ""))
-        lines.append("\n".join(block))
-    lines.append("\n<i>⚠️ 18+. Вероятности — по рейтингу Эло (история матчей за год). Прогноз — не гарантия.</i>")
-    return "\n".join(lines)
-
-
-def tennis_results(ms: list[dict], day: dict) -> str:
-    lines = ["🎾 <b>ТЕННИС: ИТОГИ</b>"]
-    for m in ms:
-        f = m["final"]
-        win = m["home"]["ru"] if f["home_won"] else m["away"]["ru"]
-        lines.append(f"\n<b>{escape(m['home']['ru'])} — {escape(m['away']['ru'])}</b>: победа {escape(win)} "
-                     f"({f['sets']}{', ' + f['games'] if f.get('games') else ''})\n"
-                     f"   🎯 {escape(m['main']['label'])} — {'✅ зашёл' if m['main_hit'] else '❌ мимо'}"
-                     + (f" · 🔥 {escape(m['bold']['label'])} — {'✅' if m['bold_hit'] else '❌'}" if m.get("bold") else ""))
-    if day.get("n"):
-        lines.append(f"\n📅 Теннис сегодня: {day['main']}/{day['n']} ({_pct(day['main'] / day['n'])})")
     return "\n".join(lines)
 
 

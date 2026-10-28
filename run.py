@@ -15,7 +15,7 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-from betbot import card, content, esports, live, names, news, sports, tables, telegram, texts
+from betbot import card, content, esports, live, names, news, reviews, sports, tables, telegram, texts
 from betbot import markets as mk
 from betbot.data import MSK, load_fixtures, load_history
 from betbot.engine import add_market, fit_full, fit_weights, walk_forward
@@ -228,7 +228,9 @@ def add_result(m: dict, score: str, sport: str) -> dict:
 
 # ── хоккей, баскетбол, теннис ───────────────────────────────────────────────
 
-def other_review(e: dict, calib: dict, ratings: dict | None = None) -> dict | None:
+def other_review(e: dict, calib: dict, ctx: dict) -> dict | None:
+    """Пост перед матчем (хоккей, баскетбол, теннис, киберспорт): картинка + прогноз, полный разбор — ответом."""
+    hist, ratings = ctx.get(e["sport"], ([], {}))
     a = sports.analyse(e, ratings)
     if a is None:
         return None
@@ -239,6 +241,12 @@ def other_review(e: dict, calib: dict, ratings: dict | None = None) -> dict | No
     png = card.match_card(sports.league_plain(e["div"]), texts.when(kick), e["home"], e["away"], a["bar"], tip,
                           a["center"], BRAND, sport=e["sport"])
     m["msg_id"] = telegram.send_photo(png, sports.caption(m, texts.when(kick)))
+    if e["sport"] in ("hockey", "basketball"):
+        sport, slug = sports.LEAGUES[e["div"]][3].split("/")
+        text = reviews.team_review(m, summary(slug, e["id"], sport))
+    else:
+        text = reviews.history_review(m, hist, ratings)
+    telegram.send(text, reply_to=m["msg_id"], silent=True)
     m["status"] = "reviewed"
     print(f"  обзор ({e['sport']}): {e['home']['ru']} — {e['away']['ru']} → {m['main']['label']}")
     return m
@@ -250,7 +258,7 @@ def other_settle(m: dict, e: dict) -> None:
         return
     m["main_hit"] = sports.won(m["main"]["key"], f)
     m["bold_hit"] = sports.won(m["bold"]["key"], f) if m.get("bold") else None
-    ds = add_result(m, f"{f['hs']}:{f['as']}", m["sport"])
+    ds = add_result(m, f.get("sets") or f"{f['hs']}:{f['as']}", m["sport"])
     verdicts = [(f"Основной: {m['main']['label']}", m["main_hit"])]
     if m.get("bold"):
         verdicts.append((f"Смелый: {m['bold']['label']}", m["bold_hit"]))
@@ -260,87 +268,30 @@ def other_settle(m: dict, e: dict) -> None:
     m["status"] = "done"
 
 
-def tennis_round(store: dict, events: list[dict], now: pd.Timestamp, lead: pd.Timedelta, calib: dict, daily: bool) -> None:
-    """Теннис — сводками: одна сводка прогнозов на ближайшие матчи и одна сводка итогов за запуск."""
-    soon = [e for e in events if e["sport"] == "tennis" and e["state"] == "pre" and f"{e['div']}|{e['id']}" not in store
-            and now < pd.Timestamp(e["kickoff"]) <= now + lead and "ru" in e["home"]]
-    if soon:
-        ratings = sports.elo(sports.tennis_history(refresh=daily))
-        ready = []
-        for e in soon:
-            a = sports.analyse(e, ratings)
-            key = f"{e['div']}|{e['id']}"
-            if a is None:
-                store[key] = {"status": "skipped", "kickoff": e["kickoff"]}
-                continue
-            m = {**e, **a}
-            m["main"], m["bold"] = sports.pick(a, calib)
-            ready.append(m)
-        if ready:
-            rows = [(f"{pd.Timestamp(m['kickoff']):%H:%M}", m["home"]["ru"], m["away"]["ru"], m["div"])
-                    for m in sorted(ready, key=lambda m: m["kickoff"])[:8]]
-            png = card.schedule_card(f"прогнозов: {len(ready)}", rows, len(ready) - len(rows), BRAND,
-                                     heading="Теннис · ближайшие матчи", sport="tennis")
-            mid = post(png, sports.tennis_preview(ready))
-            for m in ready:
-                m["msg_id"], m["status"] = mid, "reviewed"
-                store[f"{m['div']}|{m['id']}"] = m
-            print(f"  теннис: сводка из {len(ready)} прогнозов")
-
-    by_key = {f"{e['div']}|{e['id']}": e for e in events if e["sport"] == "tennis"}
-    done = []
-    for key, m in store.items():
-        e = by_key.get(key)
-        if m.get("sport") == "tennis" and m.get("status") == "reviewed" and e and e["completed"]:
-            m.update({"home": {**m["home"], **e["home"], "ru": m["home"]["ru"]},
-                      "away": {**m["away"], **e["away"], "ru": m["away"]["ru"]}})
-            f = sports.final(m)
-            if f is None:
-                continue
-            m["final"] = f
-            m["main_hit"] = sports.won(m["main"]["key"], f)
-            m["bold_hit"] = sports.won(m["bold"]["key"], f) if m.get("bold") else None
-            done.append(m)
-    if done:
-        ds = {}
-        for m in done:
-            ds = add_result(m, m["final"]["sets"], "tennis")
-            m["status"] = "done"
-        rows = [(m["final"]["sets"], m["home"]["ru"], m["away"]["ru"], "✅" if m["main_hit"] else "❌") for m in done[:8]]
-        png = card.schedule_card(f"матчей: {len(done)}", rows, len(done) - len(rows), BRAND, heading="Теннис · итоги",
-                                 sport="tennis")
-        post(png, sports.tennis_results(done, ds))
-        print(f"  теннис: итоги {len(done)} матчей")
-
-
 def other_sports(state: dict, events: list[dict], now: pd.Timestamp, calib: dict, daily: bool) -> None:
     store = load_json(OTHER, {})
     lead = pd.Timedelta(minutes=60 + gap_minutes(now))
-    es_ratings = {}
+    ctx = {}  # история и рейтинг Эло для тенниса и киберспорта — загружаем, только когда нужны
     for e in sorted(events, key=lambda e: e["kickoff"]):
         key = f"{e['div']}|{e['id']}"
-        if e["sport"] != "tennis" and e["state"] == "pre" and key not in store and "ru" in e["home"] \
-                and now < pd.Timestamp(e["kickoff"]) <= now + lead:
-            if e["sport"] == "esports" and not es_ratings:  # рейтинг киберкоманд — только когда он нужен
-                es_ratings = sports.elo(esports.history(refresh=daily)) or {"_": (0, 0)}
+        if e["state"] == "pre" and key not in store and "ru" in e["home"]                 and now < pd.Timestamp(e["kickoff"]) <= now + lead:
+            if e["sport"] in ("tennis", "esports") and e["sport"] not in ctx:
+                hist = sports.tennis_history(refresh=daily) if e["sport"] == "tennis" else esports.history(refresh=daily)
+                ctx[e["sport"]] = (hist, sports.elo(hist))
             try:
-                store[key] = other_review(e, calib, es_ratings) or {"status": "skipped", "kickoff": e["kickoff"]}
+                store[key] = other_review(e, calib, ctx) or {"status": "skipped", "kickoff": e["kickoff"]}
             except Exception as ex:
                 print(f"  ! обзор не удался {key}: {ex}")
             save_json(OTHER, store)
     by_key = {f"{e['div']}|{e['id']}": e for e in events}
     for key, m in store.items():
         e = by_key.get(key)
-        if m.get("sport") in ("hockey", "basketball", "esports") and m.get("status") == "reviewed" and e and e["completed"]:
+        if m.get("sport") and m.get("status") == "reviewed" and e and e["completed"]:
             try:
                 other_settle(m, e)
             except Exception as ex:
                 print(f"  ! итог не удался {key}: {ex}")
             save_json(OTHER, store)
-    try:
-        tennis_round(store, events, now, lead, calib, daily)
-    except Exception as ex:
-        print(f"  ! теннис не удался: {ex}")
     old = now - pd.Timedelta(days=3)
     save_json(OTHER, {k: v for k, v in store.items() if pd.Timestamp(v["kickoff"]) > old})
 

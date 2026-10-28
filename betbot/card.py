@@ -27,15 +27,42 @@ def _rgb(hex_color: str, fallback=(60, 80, 140)) -> tuple:
         return fallback
 
 
-def _logo(url: str | None, size: int, initials: str, color: tuple) -> Image.Image:
-    if url:
+def _avatar(photo: Image.Image, size: int, color: tuple, top: float = 0.04) -> Image.Image:
+    """Фото игрока в круге с цветной подложкой и белой обводкой."""
+    canvas = Image.new("RGBA", (size, size), (0, 0, 0, 0))
+    d = ImageDraw.Draw(canvas)
+    d.ellipse((0, 0, size - 1, size - 1), fill=color + (255,))
+    ph = photo.copy()
+    # подгоняем по высоте круга: голова и плечи целиком, лишнее по бокам обрежет круг
+    ph = ph.resize((int(ph.width * size / ph.height), size), Image.LANCZOS)
+    layer = Image.new("RGBA", (size, size), (0, 0, 0, 0))
+    layer.paste(ph, ((size - ph.width) // 2, int(size * top)), ph)
+    mask = Image.new("L", (size, size), 0)
+    ImageDraw.Draw(mask).ellipse((0, 0, size - 1, size - 1), fill=255)
+    canvas.paste(layer, (0, 0), Image.composite(layer, Image.new("RGBA", (size, size)), mask).split()[3])
+    ImageDraw.Draw(canvas).ellipse((0, 0, size - 1, size - 1), outline=WHITE, width=6)
+    return canvas
+
+
+def _logo(url: str | list | None, size: int, initials: str, color: tuple) -> Image.Image:
+    """Логотип или фото: url может быть списком (фото игрока → флаг страны → инициалы)."""
+    for u in (url if isinstance(url, list) else [url]):
+        if not u:
+            continue
         try:
-            r = requests.get(url, timeout=15, headers={"User-Agent": "Mozilla/5.0"})
+            r = requests.get(u, timeout=15, headers={"User-Agent": "Mozilla/5.0"})
+            if r.status_code != 200:
+                continue
             img = Image.open(io.BytesIO(r.content)).convert("RGBA")
+            if "headshots" in u:  # фото игрока — в круглую рамку, как аватар
+                img = _avatar(img, size, color)
+            elif "countries" in u:  # флаг страны — тоже в круг, растянутый на весь круг
+                flag = img.resize((int(size * 1.5), size), Image.LANCZOS)
+                img = _avatar(flag, size, color, top=0)
             img.thumbnail((size, size), Image.LANCZOS)
             return img
         except Exception:
-            pass
+            continue
     img = Image.new("RGBA", (size, size), (0, 0, 0, 0))
     d = ImageDraw.Draw(img)
     light = sum(c * k for c, k in zip(color, (0.299, 0.587, 0.114))) > 160

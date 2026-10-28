@@ -6,7 +6,7 @@ import pandas as pd
 import requests
 
 SB = "https://site.api.espn.com/apis/site/v2/sports/soccer/{slug}/scoreboard?dates={day}"
-SUMMARY = "https://site.api.espn.com/apis/site/v2/sports/soccer/{slug}/summary?event={id}"
+SUMMARY = "https://site.api.espn.com/apis/site/v2/sports/{sport}/{slug}/summary?event={id}"
 MSK = "Europe/Moscow"
 
 
@@ -121,10 +121,26 @@ def _stat(stats: list, key: str):
     return None
 
 
-def summary(slug: str, event_id: str) -> dict:
-    s = _get(SUMMARY.format(slug=slug, id=event_id)) or {}
+def summary(slug: str, event_id: str, sport: str = "soccer") -> dict:
+    """Подробности матча. slug — лига ESPN (eng.1, nhl, nba…), sport — soccer / hockey / basketball."""
+    s = _get(SUMMARY.format(sport=sport, slug=slug, id=event_id)) or {}
     out = {"table": {}, "last5": {}, "h2h": [], "h2h_summary": "", "lineups": {}, "goals": [],
-           "reds": [], "stats": {}, "venue": None, "city": None}
+           "reds": [], "stats": {}, "venue": None, "city": None, "injuries": {}, "leaders": {}}
+
+    # травмы (NHL/NBA): команда → [(игрок, статус)]
+    for t in s.get("injuries") or []:
+        tid = str((t.get("team") or {}).get("id"))
+        out["injuries"][tid] = [((i.get("athlete") or {}).get("displayName", ""), i.get("status", ""))
+                                for i in t.get("injuries") or []]
+    # лидеры команд по статистике (NHL/NBA): команда → [(показатель, игрок, значение)]
+    for t in s.get("leaders") or []:
+        tid = str((t.get("team") or {}).get("id"))
+        rows = []
+        for cat in (t.get("leaders") or [])[:3]:
+            top = (cat.get("leaders") or [{}])[0]
+            rows.append((cat.get("displayName", ""), (top.get("athlete") or {}).get("displayName", ""),
+                         top.get("displayValue", "")))
+        out["leaders"][tid] = rows
 
     gi = (s.get("gameInfo") or {}).get("venue") or {}
     out["venue"] = gi.get("fullName")
@@ -138,6 +154,8 @@ def summary(slug: str, event_id: str) -> dict:
             out["table"][str(e.get("id"))] = {
                 "rank": _stat(st, "R"), "gp": _stat(st, "GP"), "w": _stat(st, "W"), "d": _stat(st, "D"),
                 "l": _stat(st, "L"), "gd": _stat(st, "GD"), "pts": _stat(st, "P"), "of": len(entries),
+                "raw": {x.get("abbreviation") or x.get("name"): x.get("displayValue") for x in st},
+                "group": g.get("header") or g.get("name") or "",
             }
 
     # последние 5 игр каждой команды
@@ -159,6 +177,9 @@ def summary(slug: str, event_id: str) -> dict:
     for ser in s.get("seasonseries") or []:
         out["h2h_summary"] = ser.get("summary", "")
         for ev in ser.get("events", []):
+            done = ev.get("status") == "post" or (ev.get("statusType") or {}).get("completed")
+            if not done:  # в серии сезона есть и будущие матчи — их не считаем
+                continue
             comps = {c.get("homeAway"): c for c in ev.get("competitors", [])}
             if "home" in comps and "away" in comps:
                 out["h2h"].append({
