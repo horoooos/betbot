@@ -16,7 +16,7 @@ import requests
 from . import card, telegram
 
 FEEDS = {
-    "football": ["https://www.championat.com/rss/news/football/", "https://www.sports.ru/rss/main.xml"],
+    "football": ["https://www.championat.com/rss/news/football/"],
     "hockey": ["https://www.championat.com/rss/news/hockey/"],
     "basketball": ["https://www.championat.com/rss/news/basketball/"],
     "tennis": ["https://www.championat.com/rss/news/tennis/"],
@@ -33,9 +33,12 @@ SCENE = {"football": "association football (soccer), round black and white socce
 TEXT_API = "https://text.pollinations.ai/openai"
 PROMPT = (
     "Ты редактор спортивного Telegram-канала. Перескажи новость своими словами, живо и коротко. "
-    "СТРОГО: используй только факты из исходника, ничего не добавляй и не додумывай, не пиши про источник. "
-    "Ответь только JSON без пояснений: {\"title\": \"заголовок до 70 символов\", "
-    "\"text\": \"2–3 предложения\", \"emoji\": \"один подходящий эмодзи\", "
+    "СТРОГО: используй только факты из исходника. Не добавляй оценок, мнений, реакции болельщиков или "
+    "«обсуждений» — если в исходнике мало фактов, пиши коротко. Не пиши про источник. "
+    "Ответь только JSON без пояснений: {\"sport\": \"football|hockey|basketball|tennis|esports|other\", "
+    "\"title\": \"заголовок до 70 символов\", "
+    "\"text\": \"1–2 предложения: перефразируй только то, что есть в описании, не длиннее его\", "
+    "\"emoji\": \"один подходящий эмодзи\", "
     "\"image_prompt\": \"короткое описание картинки по-английски, без текста и без реальных лиц\"}"
 )
 
@@ -84,7 +87,10 @@ def _rewrite(item: dict) -> dict | None:
         return None
     if title.lower() == item["title"].lower():  # нейросеть просто повторила заголовок — не годится
         return None
-    return {"title": title, "text": text, "emoji": str(data.get("emoji") or "")[:4],
+    if len(text) > 1.3 * len(item["title"] + " " + item["desc"]) + 40:  # длиннее исходника — значит, досочинила
+        return None
+    return {"sport": str(data.get("sport", "")).strip().lower(), "title": title, "text": text,
+            "emoji": str(data.get("emoji") or "")[:4],
             "image_prompt": str(data.get("image_prompt") or "")[:300]}
 
 
@@ -103,7 +109,7 @@ def run(state: dict, now: pd.Timestamp, brand: str) -> None:
         for item in fresh[:3]:
             seen.append(item["id"])
             news = _rewrite(item)
-            if not news:
+            if not news or news["sport"] != sport:  # новость не про этот вид спорта (Ф-1, бокс…) — пропускаем
                 continue
             prompt = f"{SCENE[sport]}, {news['image_prompt']}, cinematic, high detail, no text, no faces"
             png = card.ai_card(prompt, news["title"], TAGS[sport].lstrip("#").capitalize(), brand)
