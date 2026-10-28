@@ -20,6 +20,7 @@ API = "https://api.oddspapi.io/v4"
 CACHE = Path(__file__).resolve().parent.parent / "data" / "raw" / "oddspapi"
 BUDGET = 230           # из 250 бесплатных — с запасом
 REFRESH_HOURS = 11     # линия — примерно дважды в день
+RETRY_HOURS = 3        # после неудачного запроса — повтор не раньше чем через 3 часа
 TOURNAMENTS_DAYS = 3
 BOOKMAKERS = "pinnacle,bet365"
 SPORTS = {"tennis": ("tennis",), "CS2": ("counter", "cs2", "cs-go", "csgo"), "DOTA": ("dota",)}
@@ -110,6 +111,8 @@ def refresh(state: dict) -> None:
             continue
         if last.get(key) and now - pd.Timestamp(last[key]) < pd.Timedelta(hours=REFRESH_HOURS):
             continue
+        # следующая попытка не раньше чем через RETRY_HOURS, даже если сейчас не получится — бережём лимит
+        last[key] = (now - pd.Timedelta(hours=REFRESH_HOURS - RETRY_HOURS)).isoformat()
         ids = _tournaments(state, key, sid)
         if not ids:
             continue
