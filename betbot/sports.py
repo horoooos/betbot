@@ -9,6 +9,7 @@
 import json
 from concurrent.futures import ThreadPoolExecutor
 from html import escape
+from math import comb
 from pathlib import Path
 
 import numpy as np
@@ -16,6 +17,7 @@ import pandas as pd
 from scipy.optimize import minimize
 from scipy.stats import norm
 
+from . import esports
 from . import markets as mk
 from . import names
 from .espn import MSK, _get, decimal
@@ -31,9 +33,12 @@ LEAGUES = {
     "NBL": ("🇦🇺", "Австралия", "NBL", "basketball/nbl", "basketball"),
     "ATP": ("🎾", "Теннис", "ATP", "tennis/atp", "tennis"),
     "WTA": ("🎾", "Теннис", "WTA", "tennis/wta", "tennis"),
+    "CS2": ("🎮", "Киберспорт", "CS2", "", "esports"),      # данные — PandaScore, см. esports.py
+    "DOTA": ("🎮", "Киберспорт", "Dota 2", "", "esports"),
 }
-EMOJI = {"hockey": "🏒", "basketball": "🏀", "tennis": "🎾", "football": "⚽️"}
-SPORT_RU = {"hockey": "Хоккей", "basketball": "Баскетбол", "tennis": "Теннис", "football": "Футбол"}
+EMOJI = {"hockey": "🏒", "basketball": "🏀", "tennis": "🎾", "football": "⚽️", "esports": "🎮"}
+SPORT_RU = {"hockey": "Хоккей", "basketball": "Баскетбол", "tennis": "Теннис", "football": "Футбол",
+            "esports": "Киберспорт"}
 SLAMS = ("Australian Open", "Roland Garros", "French Open", "Wimbledon", "US Open")
 SIGMA = {"NBA": (12.0, 17.0), "WNBA": (11.0, 15.0), "NBL": (12.0, 17.0)}  # разброс разницы и тотала очков
 
@@ -134,7 +139,7 @@ def fetch(now: pd.Timestamp) -> list[dict]:
     """Все матчи хоккея, баскетбола и тенниса за вчера/сегодня/завтра."""
     utc = now.tz_convert("UTC")
     days = [(utc + pd.Timedelta(days=d)).strftime("%Y%m%d") for d in (-1, 0, 1)]
-    jobs = [(c, d) for c in LEAGUES for d in days]
+    jobs = [(c, d) for c in LEAGUES for d in days if LEAGUES[c][4] != "esports"]
 
     def one(job):
         code, day = job
@@ -144,6 +149,10 @@ def fetch(now: pd.Timestamp) -> list[dict]:
 
     with ThreadPoolExecutor(12) as ex:
         events = [e for part in ex.map(one, jobs) for e in part]
+    try:
+        events += esports.fetch()
+    except Exception as ex:
+        print(f"  ! киберспорт недоступен: {ex}")
     events = list({(e["div"], e["id"]): e for e in events}.values())
     return [e for e in events if "POSTPONED" not in e["status"] and "CANCEL" not in e["status"]]
 
@@ -221,6 +230,28 @@ def _p2(o: dict, a: str, b: str) -> float | None:
     return None
 
 
+def series(p: float, bo: int) -> dict[str, float]:
+    """Вероятности счёта серии (сеты в теннисе, карты в киберспорте) при вероятности выиграть серию p."""
+    if bo <= 1:
+        return {"1:0": p, "0:1": 1 - p}
+    if bo == 2:  # в серии из двух карт победителя может не быть, поэтому p — это шанс выиграть карту
+        return {"2:0": p * p, "1:1": 2 * p * (1 - p), "0:2": (1 - p) ** 2}
+    need = bo // 2 + 1
+
+    def win(s):
+        return sum(comb(need - 1 + k, k) * s ** need * (1 - s) ** k for k in range(need))
+    lo, hi = 0.01, 0.99
+    for _ in range(60):  # вероятность выиграть один сет/карту, дающая такую вероятность серии
+        mid = (lo + hi) / 2
+        lo, hi = (mid, hi) if win(mid) < p else (lo, mid)
+    s = (lo + hi) / 2
+    out = {}
+    for k in range(need):
+        out[f"{need}:{k}"] = comb(need - 1 + k, k) * s ** need * (1 - s) ** k
+        out[f"{k}:{need}"] = comb(need - 1 + k, k) * (1 - s) ** need * s ** k
+    return out
+
+
 def analyse(e: dict, ratings: dict | None = None) -> dict | None:
     """Вероятности всех рынков матча. Возвращает {probs, labels, real, center, model} или None."""
     o = e.get("odds") or {}
@@ -291,30 +322,44 @@ def analyse(e: dict, ratings: dict | None = None) -> dict | None:
         if not ra or not rb or ra[1] < 5 or rb[1] < 5:
             return None
         p = 1 / (1 + 10 ** ((rb[0] - ra[0]) / 400))
-        # вероятность выиграть сет, при которой выходит такая вероятность выиграть матч
-        need = 3 if e.get("bo5") else 2
-        lo, hi = 0.01, 0.99
-        for _ in range(60):
-            s = (lo + hi) / 2
-            q = 1 - s
-            pm = s ** 3 * (1 + 3 * q + 6 * q * q) if need == 3 else s * s * (1 + 2 * q)
-            lo, hi = (s, hi) if pm < p else (lo, s)
-        s, q = (lo + hi) / 2, 1 - (lo + hi) / 2
+        sets = series(p, 5 if e.get("bo5") else 3)
         probs.update({"TN_W1": p, "TN_W2": 1 - p})
         labels.update({"TN_W1": f"Победа: {h}", "TN_W2": f"Победа: {a}"})
-        if need == 2:
-            sets = {"2:0": s * s, "2:1": 2 * s * s * q, "0:2": q * q, "1:2": 2 * q * q * s}
+        if not e.get("bo5"):
             probs["TN_3S"], labels["TN_3S"] = sets["2:1"] + sets["1:2"], "Будет 3 сета"
             probs["TN_2S"], labels["TN_2S"] = sets["2:0"] + sets["0:2"], "Будет 2 сета"
         else:
-            sets = {"3:0": s ** 3, "3:1": 3 * s ** 3 * q, "3:2": 6 * s ** 3 * q * q,
-                    "0:3": q ** 3, "1:3": 3 * q ** 3 * s, "2:3": 6 * q ** 3 * s * s}
             probs["TN_4P"], labels["TN_4P"] = 1 - sets["3:0"] - sets["0:3"], "Будет 4+ сета"
         for sc, pr in sets.items():
             probs[f"TN_S{sc}"], labels[f"TN_S{sc}"] = pr, f"Счёт по сетам {sc}"
         center = f"Рейтинг Эло {ra[0]:.0f} : {rb[0]:.0f}"
         return {"probs": probs, "labels": labels, "real": real, "center": center, "bar": (p, 0, 1 - p),
                 "model": {"elo": [ra[0], rb[0]]}}
+
+    if sport == "esports":
+        ra, rb = (ratings or {}).get(e["home"]["id"]), (ratings or {}).get(e["away"]["id"])
+        if not ra or not rb or ra[1] < 5 or rb[1] < 5:
+            return None
+        p = 1 / (1 + 10 ** ((rb[0] - ra[0]) / 400))
+        bo = int(e.get("bo") or 1)
+        sc = series(p, bo)
+        if bo == 2:  # серия из двух карт может закончиться 1:1
+            probs.update({"ES_W1": sc["2:0"], "ES_X": sc["1:1"], "ES_W2": sc["0:2"]})
+            labels.update({"ES_W1": f"Победа {h} 2:0", "ES_X": "Ничья 1:1", "ES_W2": f"Победа {a} 2:0"})
+            bar = (sc["2:0"], sc["1:1"], sc["0:2"])
+        else:
+            probs.update({"ES_W1": p, "ES_W2": 1 - p})
+            labels.update({"ES_W1": f"Победа: {h}", "ES_W2": f"Победа: {a}"})
+            bar = (p, 0, 1 - p)
+        if bo >= 3:
+            need = bo // 2 + 1
+            dry = sc[f"{need}:0"] + sc[f"0:{need}"]
+            probs["ES_FULL"], labels["ES_FULL"] = 1 - dry, f"Больше {need} карт"
+            probs["ES_DRY"], labels["ES_DRY"] = dry, f"Всухую ({need}:0 или 0:{need})"
+            for k, v in sc.items():
+                probs[f"ES_S{k}"], labels[f"ES_S{k}"] = v, f"Счёт по картам {k}"
+        return {"probs": probs, "labels": labels, "real": real, "center": f"BO{bo} · Эло {ra[0]:.0f} : {rb[0]:.0f}",
+                "bar": bar, "model": {"elo": [ra[0], rb[0]]}}
     return None
 
 
@@ -328,7 +373,7 @@ def pick(a: dict, calib: dict) -> tuple[dict, dict]:
     def score(k):
         return probs[k] * calib.get(k, (1.0, 0))[0]
 
-    keys = [k for k in probs if 0 < probs[k] < 1 and not k.startswith("TN_S")]
+    keys = [k for k in probs if 0 < probs[k] < 1 and not k.startswith(("TN_S", "ES_S"))]
     pool = [k for k in keys if probs[k] <= 0.75] or keys
     main_k = max(pool, key=score)
     bold = [k for k in probs if k != main_k and 2.0 <= odds_for(k)[0] <= 3.6]
@@ -345,6 +390,9 @@ def pick(a: dict, calib: dict) -> tuple[dict, dict]:
 def final(e: dict) -> dict | None:
     """Итоговый счёт: для тенниса — по сетам, для хоккея ещё и основное время."""
     try:
+        if e["sport"] == "esports":  # счёт по картам
+            hs, as_ = int(e["home"]["score"] or 0), int(e["away"]["score"] or 0)
+            return {"hs": hs, "as": as_, "home_won": hs > as_, "away_won": as_ > hs, "sets": f"{hs}:{as_}"}
         if e["sport"] == "tennis":
             s1, s2 = sum(e["home"]["set_won"]), sum(e["away"]["set_won"])
             return {"hs": s1, "as": s2, "home_won": e["home"]["winner"], "sets": f"{s1}:{s2}",
@@ -382,6 +430,18 @@ def won(key: str, f: dict) -> bool:
         return f.get("spread_h") is not None and hs - as_ + f["spread_h"] > 0
     if key == "BB_SPR_A":
         return f.get("spread_h") is not None and hs - as_ + f["spread_h"] < 0
+    if key.startswith("ES_"):
+        if key == "ES_W1":
+            return f["home_won"]
+        if key == "ES_W2":
+            return f["away_won"]
+        if key == "ES_X":
+            return hs == as_
+        if key == "ES_FULL":
+            return min(hs, as_) > 0
+        if key == "ES_DRY":
+            return min(hs, as_) == 0
+        return f["sets"] == key[4:]
     if key == "TN_3S":
         return hs + as_ == 3
     if key == "TN_2S":
@@ -416,7 +476,8 @@ def caption(m: dict, when: str) -> str:
     lines += ["", f"🎯 <b>Основной:</b> {_tip(m['main'])}"]
     if m.get("bold"):
         lines.append(f"🔥 <b>Смелый:</b> {_tip(m['bold'])}")
-    lines.append("<i>⚠️ 18+. Вероятности — по коэффициентам без маржи. Прогноз — не гарантия.</i>")
+    source = "по коэффициентам без маржи" if m.get("real") else "по рейтингу Эло (история матчей за год)"
+    lines.append(f"<i>⚠️ 18+. Вероятности — {source}. Прогноз — не гарантия.</i>")
     return "\n".join(lines)
 
 
@@ -481,6 +542,14 @@ def schedule_block(events: list[dict], start: pd.Timestamp) -> str:
         if LEAGUES[code][4] == "tennis":
             tours = sorted({e["tournament"] for e in g})
             blocks.append(f"<b>🎾 Теннис · {code}</b>: {len(g)} матч(ей) — {escape(', '.join(tours))}")
+        elif LEAGUES[code][4] == "esports":
+            lines = [f"<b>🎮 {title(code)}</b>"]
+            for e in g[:12]:
+                lines.append(f"🕒 {pd.Timestamp(e['kickoff']):%H:%M}  {escape(e['home']['ru'])} — "
+                             f"{escape(e['away']['ru'])} · BO{e.get('bo', 1)}")
+            if len(g) > 12:
+                lines.append(f"…и ещё {len(g) - 12}")
+            blocks.append("\n".join(lines))
         else:
             lines = [f"<b>{EMOJI[LEAGUES[code][4]]} {title(code)}</b>"]
             for e in g:
@@ -496,4 +565,9 @@ def ru_names(events: list[dict], now: pd.Timestamp) -> None:
             continue
         for side in ("home", "away"):
             t = e[side]
-            t["ru"] = names.player(t["name"]) if e["sport"] == "tennis" else names.team(t["name"])
+            if e["sport"] == "esports":
+                t["ru"] = t["name"]  # киберкоманды принято писать как есть: NAVI, Team Spirit…
+            elif e["sport"] == "tennis":
+                t["ru"] = names.player(t["name"])
+            else:
+                t["ru"] = names.team(t["name"])

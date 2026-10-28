@@ -15,7 +15,7 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-from betbot import card, content, names, sports, telegram, texts
+from betbot import card, content, esports, names, sports, telegram, texts
 from betbot import markets as mk
 from betbot.data import MSK, load_fixtures, load_history
 from betbot.engine import add_market, fit_full, fit_weights, walk_forward
@@ -226,8 +226,8 @@ def add_result(m: dict, score: str, sport: str) -> dict:
 
 # ── хоккей, баскетбол, теннис ───────────────────────────────────────────────
 
-def other_review(e: dict, calib: dict) -> dict | None:
-    a = sports.analyse(e)
+def other_review(e: dict, calib: dict, ratings: dict | None = None) -> dict | None:
+    a = sports.analyse(e, ratings)
     if a is None:
         return None
     m = {**e, **a}
@@ -312,19 +312,22 @@ def tennis_round(store: dict, events: list[dict], now: pd.Timestamp, lead: pd.Ti
 def other_sports(state: dict, events: list[dict], now: pd.Timestamp, calib: dict, daily: bool) -> None:
     store = load_json(OTHER, {})
     lead = pd.Timedelta(minutes=60 + gap_minutes(now))
+    es_ratings = {}
     for e in sorted(events, key=lambda e: e["kickoff"]):
         key = f"{e['div']}|{e['id']}"
         if e["sport"] != "tennis" and e["state"] == "pre" and key not in store and "ru" in e["home"] \
                 and now < pd.Timestamp(e["kickoff"]) <= now + lead:
+            if e["sport"] == "esports" and not es_ratings:  # рейтинг киберкоманд — только когда он нужен
+                es_ratings = sports.elo(esports.history(refresh=daily)) or {"_": (0, 0)}
             try:
-                store[key] = other_review(e, calib) or {"status": "skipped", "kickoff": e["kickoff"]}
+                store[key] = other_review(e, calib, es_ratings) or {"status": "skipped", "kickoff": e["kickoff"]}
             except Exception as ex:
                 print(f"  ! обзор не удался {key}: {ex}")
             save_json(OTHER, store)
     by_key = {f"{e['div']}|{e['id']}": e for e in events}
     for key, m in store.items():
         e = by_key.get(key)
-        if m.get("sport") in ("hockey", "basketball") and m.get("status") == "reviewed" and e and e["completed"]:
+        if m.get("sport") in ("hockey", "basketball", "esports") and m.get("status") == "reviewed" and e and e["completed"]:
             try:
                 other_settle(m, e)
             except Exception as ex:
