@@ -15,7 +15,7 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-from betbot import card, content, esports, live, names, news, reviews, sports, tables, telegram, texts
+from betbot import card, content, esports, live, names, news, oddspapi, reviews, sports, tables, telegram, texts
 from betbot import markets as mk
 from betbot.data import MSK, load_fixtures, load_history
 from betbot.engine import add_market, fit_full, fit_weights, walk_forward
@@ -272,12 +272,18 @@ def other_sports(state: dict, events: list[dict], now: pd.Timestamp, calib: dict
     store = load_json(OTHER, {})
     lead = pd.Timedelta(minutes=60 + gap_minutes(now))
     ctx = {}  # история и рейтинг Эло для тенниса и киберспорта — загружаем, только когда нужны
+    try:
+        oddspapi.refresh(state)  # настоящая линия на теннис и киберспорт (раз в ~11 часов, без ключа — пропуск)
+    except Exception as ex:
+        print(f"  ! OddsPapi: {ex}")
     for e in sorted(events, key=lambda e: e["kickoff"]):
         key = f"{e['div']}|{e['id']}"
         if e["state"] == "pre" and key not in store and "ru" in e["home"]                 and now < pd.Timestamp(e["kickoff"]) <= now + lead:
             if e["sport"] in ("tennis", "esports") and e["sport"] not in ctx:
                 hist = sports.tennis_history(refresh=daily) if e["sport"] == "tennis" else esports.history(refresh=daily)
                 ctx[e["sport"]] = (hist, sports.elo(hist))
+            if e["sport"] in ("tennis", "esports"):
+                e["odds"] = oddspapi.lookup(e) or {}
             try:
                 store[key] = other_review(e, calib, ctx) or {"status": "skipped", "kickoff": e["kickoff"]}
             except Exception as ex:

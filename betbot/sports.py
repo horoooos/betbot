@@ -259,6 +259,20 @@ def series(p: float, bo: int) -> dict[str, float]:
     return out
 
 
+def _elo_or_market(e: dict, ratings: dict | None, o: dict):
+    """Вероятность победы первого: по линии букмекера (если есть), иначе по рейтингу Эло бота.
+
+    Возвращает (p, рейтинг1, рейтинг2, источник) или (None, …), если нет ни линии, ни истории.
+    """
+    ra, rb = (ratings or {}).get(e["home"]["id"]), (ratings or {}).get(e["away"]["id"])
+    elo_ok = ra and rb and ra[1] >= 5 and rb[1] >= 5
+    if o.get("H") and o.get("A"):
+        return float(mk.fair([o["H"], o["A"]])[0]), ra if elo_ok else None, rb if elo_ok else None, o.get("src", "букмекера")
+    if elo_ok:
+        return 1 / (1 + 10 ** ((rb[0] - ra[0]) / 400)), ra, rb, "Эло"
+    return None, None, None, None
+
+
 def analyse(e: dict, ratings: dict | None = None) -> dict | None:
     """Вероятности всех рынков матча. Возвращает {probs, labels, real, center, model} или None."""
     o = e.get("odds") or {}
@@ -325,12 +339,13 @@ def analyse(e: dict, ratings: dict | None = None) -> dict | None:
                 "model": {"mu": mu, "T": T}}
 
     if sport == "tennis":
-        ra, rb = (ratings or {}).get(e["home"]["id"]), (ratings or {}).get(e["away"]["id"])
-        if not ra or not rb or ra[1] < 5 or rb[1] < 5:
+        p, ra, rb, src = _elo_or_market(e, ratings, o)
+        if p is None:
             return None
-        p = 1 / (1 + 10 ** ((rb[0] - ra[0]) / 400))
         sets = series(p, 5 if e.get("bo5") else 3)
         probs.update({"TN_W1": p, "TN_W2": 1 - p})
+        if o.get("H") and o.get("A"):
+            real.update({"TN_W1": o["H"], "TN_W2": o["A"]})
         labels.update({"TN_W1": f"Победа: {h}", "TN_W2": f"Победа: {a}"})
         if not e.get("bo5"):
             probs["TN_3S"], labels["TN_3S"] = sets["2:1"] + sets["1:2"], "Будет 3 сета"
@@ -339,16 +354,17 @@ def analyse(e: dict, ratings: dict | None = None) -> dict | None:
             probs["TN_4P"], labels["TN_4P"] = 1 - sets["3:0"] - sets["0:3"], "Будет 4+ сета"
         for sc, pr in sets.items():
             probs[f"TN_S{sc}"], labels[f"TN_S{sc}"] = pr, f"Счёт по сетам {sc}"
-        center = f"Рейтинг Эло {ra[0]:.0f} : {rb[0]:.0f}"
+        elo = f"Эло {ra[0]:.0f} : {rb[0]:.0f}" if ra and rb else ""
+        center = (f"Линия {src}" + (f" · {elo}" if elo else "")) if src != "Эло" else f"Рейтинг {elo}"
         return {"probs": probs, "labels": labels, "real": real, "center": center, "bar": (p, 0, 1 - p),
-                "model": {"elo": [ra[0], rb[0]]}}
+                "model": {"elo": [ra[0], rb[0]] if ra and rb else None, "src": src}}
 
     if sport == "esports":
-        ra, rb = (ratings or {}).get(e["home"]["id"]), (ratings or {}).get(e["away"]["id"])
-        if not ra or not rb or ra[1] < 5 or rb[1] < 5:
-            return None
-        p = 1 / (1 + 10 ** ((rb[0] - ra[0]) / 400))
         bo = int(e.get("bo") or 1)
+        # в серии из двух карт возможна ничья — там линия «на победу» не подходит, считаем по рейтингу
+        p, ra, rb, src = _elo_or_market(e, ratings, o if bo != 2 else {})
+        if p is None:
+            return None
         sc = series(p, bo)
         if bo == 2:  # серия из двух карт может закончиться 1:1
             probs.update({"ES_W1": sc["2:0"], "ES_X": sc["1:1"], "ES_W2": sc["0:2"]})
@@ -357,6 +373,8 @@ def analyse(e: dict, ratings: dict | None = None) -> dict | None:
         else:
             probs.update({"ES_W1": p, "ES_W2": 1 - p})
             labels.update({"ES_W1": f"Победа: {h}", "ES_W2": f"Победа: {a}"})
+            if o.get("H") and o.get("A"):
+                real.update({"ES_W1": o["H"], "ES_W2": o["A"]})
             bar = (p, 0, 1 - p)
         if bo >= 3:
             need = bo // 2 + 1
@@ -365,8 +383,10 @@ def analyse(e: dict, ratings: dict | None = None) -> dict | None:
             probs["ES_DRY"], labels["ES_DRY"] = dry, f"Всухую ({need}:0 или 0:{need})"
             for k, v in sc.items():
                 probs[f"ES_S{k}"], labels[f"ES_S{k}"] = v, f"Счёт по картам {k}"
-        return {"probs": probs, "labels": labels, "real": real, "center": f"BO{bo} · Эло {ra[0]:.0f} : {rb[0]:.0f}",
-                "bar": bar, "model": {"elo": [ra[0], rb[0]]}}
+        elo = f"Эло {ra[0]:.0f} : {rb[0]:.0f}" if ra and rb else ""
+        center = f"BO{bo} · " + ((f"линия {src}" + (f" · {elo}" if elo else "")) if src != "Эло" else elo)
+        return {"probs": probs, "labels": labels, "real": real, "center": center,
+                "bar": bar, "model": {"elo": [ra[0], rb[0]] if ra and rb else None, "src": src}}
     return None
 
 
