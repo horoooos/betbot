@@ -22,7 +22,7 @@ BUDGET = 230           # из 250 бесплатных — с запасом
 REFRESH_HOURS = 11     # линия — примерно дважды в день
 RETRY_HOURS = 3        # после неудачного запроса — повтор не раньше чем через 3 часа
 TOURNAMENTS_DAYS = 3
-BOOKMAKERS = "pinnacle,bet365"
+BOOKMAKERS = "pinnacle"  # бесплатный тариф принимает ровно одного букмекера; Pinnacle — самая точная линия
 SPORTS = {"tennis": ("tennis",), "CS2": ("counter", "cs2", "cs-go", "csgo"), "DOTA": ("dota",)}
 MSK = "Europe/Moscow"
 

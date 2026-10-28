@@ -108,6 +108,11 @@ def _load() -> dict:
         bad = [k for k, v in _cache.items() if _reserve_mixup(k.split(":", 1)[-1], v)]
         for k in bad:  # чистим уже сохранённые ошибки — их переведём заново
             del _cache[k]
+        for k, v in list(_cache.items()):  # старые транслиты («Ввсб») заменяем оригиналом («VVSB»)
+            orig = k.split(":", 1)[-1]
+            if v == translit(orig) or v == f"Сборная {translit(orig)}":
+                _cache[k] = v.replace(translit(orig), orig)
+                bad.append(k)
         _dirty = _dirty or bool(bad)
     return _cache
 
@@ -172,8 +177,9 @@ def team(name: str, national: bool = False) -> str:
     try:
         ru = _wikidata(name, national)
     except ConnectionError:
-        return translit(name)  # попробуем ещё раз в следующий запуск
-    cache[key] = ru or (f"Сборная {translit(name)}" if national else translit(name))
+        return name  # Wikidata не ответила — пока латиницей, попробуем ещё раз в следующий запуск
+    # русского названия нет — оставляем оригинал латиницей: транслит клубов вроде «VVSB» даёт кашу
+    cache[key] = ru or (f"Сборная {name}" if national else name)
     _dirty = True
     time.sleep(0.3)
     return cache[key]
