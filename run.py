@@ -20,10 +20,11 @@ from betbot import markets as mk
 from betbot.data import MSK, load_fixtures, load_history
 from betbot.engine import add_market, fit_full, fit_weights, walk_forward
 from betbot.espn import scoreboard, summary
-from betbot.leagues import ALL, EXTRA, MAIN, ORDER
+from betbot.leagues import ALL, EXTRA, MAIN, NATIONAL, ORDER
 
-# Лиги, по которым бот делает обзоры (код → см. betbot/leagues.py). Больше лиг = больше постов.
-REVIEW_LEAGUES = ["E0", "SP1", "I1", "D1", "F1", "RUS", "UCL", "UEL", "UECL", "N1", "P1", "T1"]
+# Лиги, по которым бот делает обзоры (код → см. betbot/leagues.py). Сейчас — весь доступный футбол.
+# Чтобы постов было меньше, перечисли нужные коды, например ["E0", "SP1", "I1", "D1", "F1", "RUS", "UCL"].
+REVIEW_LEAGUES = list(ALL)
 MORNING_HOUR = 8        # во сколько (МСК) выходит расписание
 DAY_START_HOUR = 6      # «игровой день» — с 06:00 до 06:00 следующего дня
 VALUE_EDGE = (0.05, 0.30)
@@ -159,7 +160,8 @@ def morning(state: dict, events: list[dict], now: pd.Timestamp) -> None:
         png = card.stats_card(f"на {texts.date_ru(today)}", rows, BRAND)
         post(png, texts.stats(res, today, mk.calibration(res)))
     start = pd.Timestamp(today) + pd.Timedelta(hours=DAY_START_HOUR)
-    day = [e for e in events if e["state"] == "pre" and start <= pd.Timestamp(e["kickoff"]) < start + pd.Timedelta(days=1)]
+    day = [e for e in events if e["state"] == "pre" and start <= pd.Timestamp(e["kickoff"]) < start + pd.Timedelta(days=1)
+           and (e["div"] in HIST_LEAGUES or (e.get("odds") or {}).get("H"))]  # только матчи, на которые будет прогноз
     for e in day:
         o = e.get("odds") or {}
         if o.get("H") and o.get("D") and o.get("A"):
@@ -250,7 +252,9 @@ def main():
     events = [e for e in events if "POSTPONED" not in e["status"] and "CANCELED" not in e["status"]]
     for e in events:  # русские названия только для матчей ближайших суток
         if abs(pd.Timestamp(e["kickoff"]) - now) <= pd.Timedelta(hours=30):
-            e["home"]["ru"], e["away"]["ru"] = names.team(e["home"]["name"]), names.team(e["away"]["name"])
+            nat = e["div"] in NATIONAL
+            e["home"]["ru"] = names.team(e["home"]["name"], nat)
+            e["away"]["ru"] = names.team(e["away"]["name"], nat)
     events = [e for e in events if "ru" in e["home"]]
     print(f"Матчей в окне: {len(events)}")
 

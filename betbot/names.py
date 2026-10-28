@@ -91,39 +91,45 @@ def _api(**params) -> dict | None:
     return None
 
 
-def _wikidata(name: str) -> str | None:
-    for query in (name, f"{name} FC"):
+def _wikidata(name: str, national: bool = False) -> str | None:
+    queries = [f"{name} national football team"] if national else [name, f"{name} FC"]
+    words = ("national football team", "national association football team", "national soccer team") \
+        if national else CLUB_WORDS
+    for query in queries:
         res = _api(action="wbsearchentities", search=query, language="en", type="item", limit=10)
         if res is None:
             raise ConnectionError("wikidata недоступна")
         ids = [x["id"] for x in res.get("search", [])
-               if any(k in (x.get("description") or "").lower() for k in CLUB_WORDS)]
+               if any(k in ((x.get("description") or "") + " " + (x.get("label") or "")).lower() for k in words)]
         if ids:
             ent = _api(action="wbgetentities", ids="|".join(ids[:3]), props="labels", languages="ru")
             for i in ids[:3]:
                 label = ((ent or {}).get("entities", {}).get(i, {}).get("labels", {}).get("ru") or {}).get("value")
                 if label:
-                    return re.sub(r"\s*\(.*?\)", "", label)  # «Арсенал (Лондон)» → «Арсенал»
+                    label = re.sub(r"\s*\(.*?\)", "", label)  # «Арсенал (Лондон)» → «Арсенал»
+                    label = re.sub(r"\s+по футболу$", "", label)  # «Сборная Германии по футболу»
+                    return label[:1].upper() + label[1:]
         time.sleep(0.5)
     return None
 
 
-def team(name: str) -> str:
-    """Русское название команды."""
+def team(name: str, national: bool = False) -> str:
+    """Русское название команды (national=True — сборная страны)."""
     global _dirty
-    if name in FIXED:
+    if name in FIXED and not national:
         return FIXED[name]
     cache = _load()
-    if name in cache:
-        return cache[name]
+    key = f"national:{name}" if national else name
+    if key in cache:
+        return cache[key]
     try:
-        ru = _wikidata(name)
+        ru = _wikidata(name, national)
     except ConnectionError:
         return translit(name)  # попробуем ещё раз в следующий запуск
-    cache[name] = ru or translit(name)
+    cache[key] = ru or (f"Сборная {translit(name)}" if national else translit(name))
     _dirty = True
     time.sleep(0.3)
-    return cache[name]
+    return cache[key]
 
 
 def player(name: str) -> str:

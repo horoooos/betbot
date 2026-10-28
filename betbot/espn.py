@@ -102,7 +102,7 @@ def scoreboard(leagues: dict[str, str], days: list[str]) -> list[dict]:
         data = _get(SB.format(slug=slug, day=day)) or {}
         return [ev for e in data.get("events", []) if (ev := _event(code, slug, e))]
 
-    with ThreadPoolExecutor(12) as ex:
+    with ThreadPoolExecutor(16) as ex:
         events = [ev for part in ex.map(one, jobs) for ev in part]
     return list({e["id"]: e for e in events}.values())
 
