@@ -1,5 +1,6 @@
 """Картинка-превью матча: логотипы, цвета клубов, время, вероятности и прогноз (Pillow, бесплатно)."""
 import io
+import math
 import random
 from pathlib import Path
 from urllib.parse import quote
@@ -79,6 +80,57 @@ def _background(left: tuple, right: tuple) -> tuple[Image.Image, ImageDraw.Image
     return img, ImageDraw.Draw(img)
 
 
+def _sport_icon(img: Image.Image, sport: str, cx: int = W // 2, cy: int = H // 2 - 20, r: int = 250,
+                alpha: int = 34) -> Image.Image:
+    """Большая полупрозрачная иконка вида спорта на заднем фоне: мяч, шайба, джойстик…"""
+    layer = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    d = ImageDraw.Draw(layer)
+    c = (255, 255, 255, alpha)
+    w = max(6, r // 28)
+    box = (cx - r, cy - r, cx + r, cy + r)
+    if sport == "football":
+        d.ellipse(box, outline=c, width=w)
+        pent = [(cx + r * 0.32 * math.cos(math.radians(-90 + 72 * i)), cy + r * 0.32 * math.sin(math.radians(-90 + 72 * i)))
+                for i in range(5)]
+        d.polygon(pent, fill=c)
+        for i, (x, y) in enumerate(pent):  # швы от центрального пятиугольника к краю
+            ang = math.radians(-90 + 72 * i)
+            d.line([(x, y), (cx + r * 0.72 * math.cos(ang), cy + r * 0.72 * math.sin(ang))], fill=c, width=w)
+            ex, ey = cx + r * 0.72 * math.cos(ang), cy + r * 0.72 * math.sin(ang)
+            for side in (-1, 1):
+                a2 = ang + side * math.radians(28)
+                d.line([(ex, ey), (cx + r * 0.97 * math.cos(a2), cy + r * 0.97 * math.sin(a2))], fill=c, width=w)
+    elif sport == "basketball":
+        d.ellipse(box, outline=c, width=w)
+        d.line([(cx, cy - r), (cx, cy + r)], fill=c, width=w)
+        d.line([(cx - r, cy), (cx + r, cy)], fill=c, width=w)
+        d.arc((cx - r * 1.55, cy - r, cx - r * 0.35, cy + r), -60, 60, fill=c, width=w)
+        d.arc((cx + r * 0.35, cy - r, cx + r * 1.55, cy + r), 120, 240, fill=c, width=w)
+    elif sport == "tennis":
+        d.ellipse(box, outline=c, width=w)
+        d.arc((cx - r * 1.7, cy - r * 0.9, cx - r * 0.2, cy + r * 0.9), -50, 50, fill=c, width=w)
+        d.arc((cx + r * 0.2, cy - r * 0.9, cx + r * 1.7, cy + r * 0.9), 130, 230, fill=c, width=w)
+    elif sport == "hockey":
+        for sgn in (-1, 1):  # две скрещённые клюшки
+            x0, y0 = cx - sgn * r * 0.8, cy - r * 0.9
+            x1, y1 = cx + sgn * r * 0.55, cy + r * 0.55
+            d.line([(x0, y0), (x1, y1)], fill=c, width=w * 2)
+            d.line([(x1, y1), (x1 + sgn * r * 0.35, y1 + r * 0.05)], fill=c, width=w * 3)
+        d.ellipse((cx - r * 0.42, cy + r * 0.55, cx + r * 0.42, cy + r * 0.85), fill=c)
+    elif sport == "esports":  # геймпад
+        d.rounded_rectangle((cx - r, cy - r * 0.45, cx + r, cy + r * 0.35), radius=int(r * 0.3), outline=c, width=w)
+        d.ellipse((cx - r * 1.05, cy - r * 0.1, cx - r * 0.45, cy + r * 0.75), outline=c, width=w)
+        d.ellipse((cx + r * 0.45, cy - r * 0.1, cx + r * 1.05, cy + r * 0.75), outline=c, width=w)
+        k = r * 0.11
+        d.rectangle((cx - r * 0.6 - k, cy - r * 0.08 - k * 3, cx - r * 0.6 + k, cy - r * 0.08 + k * 3), fill=c)
+        d.rectangle((cx - r * 0.6 - k * 3, cy - r * 0.08 - k, cx - r * 0.6 + k * 3, cy - r * 0.08 + k), fill=c)
+        for bx, by in ((0.55, -0.2), (0.72, -0.05), (0.55, 0.1), (0.38, -0.05)):
+            d.ellipse((cx + r * bx - k, cy + r * by - k, cx + r * bx + k, cy + r * by + k), fill=c)
+    else:
+        return img
+    return Image.alpha_composite(img.convert("RGBA"), layer).convert("RGB")
+
+
 def _title(d: ImageDraw.ImageDraw, text: str, y: int = 46, size: int = 30) -> None:
     d.text((W / 2, y), text.upper(), font=font(size), fill=MUTED, anchor="mm")
     half = d.textlength(text.upper(), font=font(size)) / 2
@@ -108,10 +160,12 @@ def _pill(d, cx: int, y: int, text: str, fill: tuple, color=WHITE, size: int = 2
 
 
 def match_card(league: str, when: str, home: dict, away: dict, probs: tuple[float, float, float],
-               tip: str, center: str, brand: str = "") -> bytes:
+               tip: str, center: str, brand: str = "", sport: str = "football") -> bytes:
     """Превью матча. probs — П1/Х/П2 (в видах спорта без ничьей Х = 0), center — строка под временем."""
     hc, ac = _rgb(home["color"]), _rgb(away["color"], (180, 40, 40))
     img, d = _background(hc, ac)
+    img = _sport_icon(img, sport)
+    d = ImageDraw.Draw(img)
     _title(d, league)
 
     for team, cx, col in ((home, 300, hc), (away, 980, ac)):
@@ -173,21 +227,39 @@ def ai_card(prompt: str, title: str, subtitle: str = "", brand: str = "") -> byt
         shade.putpixel((0, y), int(230 * max(0, (y - H * 0.35) / (H * 0.65)) ** 1.2))
     img = Image.composite(Image.new("RGB", (W, H), (8, 10, 24)), img, shade.resize((W, H)))
     d = ImageDraw.Draw(img)
-    size = 64
-    while size > 34 and d.textlength(title.upper(), font=font(size, "ExtraBold")) > W - 120:
+    text = title.upper()
+    lines, size = [text], 64
+    while size > 30:  # короткий заголовок — крупно в одну строку, длинный — до трёх строк
+        f = font(size, "ExtraBold")
+        lines, cur = [], ""
+        for word in text.split():
+            test = f"{cur} {word}".strip()
+            if d.textlength(test, font=f) <= W - 120 or not cur:
+                cur = test
+            else:
+                lines.append(cur)
+                cur = word
+        lines.append(cur)
+        if len(lines) <= (1 if size > 52 else 3) and all(d.textlength(x, font=f) <= W - 120 for x in lines):
+            break
         size -= 4
-    d.text((W / 2, H - 170), title.upper(), font=font(size, "ExtraBold"), fill=WHITE, anchor="mm")
-    d.line([(W / 2 - 90, H - 120), (W / 2 + 90, H - 120)], fill=ACCENT, width=4)
+    step = size + 10
+    top = H - 140 - step * (len(lines) - 1)
+    for k, line in enumerate(lines[:3]):
+        d.text((W / 2, top + k * step), line, font=font(size, "ExtraBold"), fill=WHITE, anchor="mm")
+    d.line([(W / 2 - 90, H - 110), (W / 2 + 90, H - 110)], fill=ACCENT, width=4)
     if subtitle:
-        d.text((W / 2, H - 80), subtitle, font=font(30, "Medium"), fill=(220, 226, 245), anchor="mm")
+        d.text((W / 2, H - 70), subtitle, font=font(30, "Medium"), fill=(220, 226, 245), anchor="mm")
     return _png(img, d, brand)
 
 
 def result_card(league: str, home: dict, away: dict, hs: int, as_: int,
-                verdicts: list[tuple[str, bool]], brand: str = "") -> bytes:
+                verdicts: list[tuple[str, bool]], brand: str = "", sport: str = "football") -> bytes:
     """Итог матча: логотипы, счёт и плашки ЗАШЁЛ / МИМО по каждому прогнозу."""
     hc, ac = _rgb(home["color"]), _rgb(away["color"], (180, 40, 40))
     img, d = _background(hc, ac)
+    img = _sport_icon(img, sport)
+    d = ImageDraw.Draw(img)
     _title(d, f"Итог матча · {league}")
     _teams(img, d, home, away, hc, ac, top=110)
     d.text((W / 2, 210), f"{hs} : {as_}", font=font(110, "ExtraBold"), fill=WHITE, anchor="mm")
@@ -203,10 +275,59 @@ def result_card(league: str, home: dict, away: dict, hs: int, as_: int,
     return _png(img, d, brand)
 
 
+def live_card(league: str, home: dict, away: dict, hs, as_, headline: str, sub: str = "", brand: str = "",
+              sport: str = "football", color: tuple = RED) -> bytes:
+    """Live-событие: «МАТЧ НАЧАЛСЯ», «ГОЛ!», «ШАЙБА!», «КАРТА!» — логотипы, текущий счёт и плашка."""
+    hc, ac = _rgb(home["color"]), _rgb(away["color"], (180, 40, 40))
+    img, d = _background(hc, ac)
+    img = _sport_icon(img, sport)
+    d = ImageDraw.Draw(img)
+    _title(d, f"LIVE · {league}")
+    half = d.textlength(f"LIVE · {league}".upper(), font=font(30)) / 2
+    d.ellipse((W / 2 - half - 32, 38, W / 2 - half - 14, 56), fill=RED)  # «красная точка» прямого эфира
+    _teams(img, d, home, away, hc, ac, top=110)
+    d.text((W / 2, 210), f"{hs} : {as_}", font=font(110, "ExtraBold"), fill=WHITE, anchor="mm")
+    _pill(d, W // 2, 490, headline, color, size=40)
+    if sub:
+        size = 30
+        while size > 20 and d.textlength(sub, font=font(size, "Medium")) > W - 200:
+            size -= 2
+        d.text((W / 2, 600), sub, font=font(size, "Medium"), fill=WHITE, anchor="mm")
+    return _png(img, d, brand)
+
+
+def table_card(title: str, subtitle: str, header: tuple, rows: list[tuple], brand: str = "",
+               sport: str = "football") -> bytes:
+    """Турнирная таблица / рейтинг: до 10 строк (место, команда, и 2–3 числовые колонки)."""
+    img, d = _background((40, 90, 160), (30, 120, 90))
+    img = _sport_icon(img, sport, cx=W - 150, cy=130, r=110, alpha=28)
+    d = ImageDraw.Draw(img)
+    _title(d, title, y=40, size=32)
+    d.text((W / 2, 105), subtitle.upper(), font=font(30, "ExtraBold"), fill=WHITE, anchor="mm")
+    cols = [150, 230, 880, 1000, 1120]
+    y = 150
+    for i, h in enumerate(header):
+        d.text((cols[i], y), h, font=font(20, "Medium"), fill=MUTED, anchor="lm" if i < 2 else "mm")
+    y += 28
+    for k, row in enumerate(rows[:10]):
+        d.rounded_rectangle((110, y, W - 110, y + 46), radius=12, fill=(28, 36, 70) if k % 2 == 0 else (22, 29, 58))
+        for i, val in enumerate(row):
+            txt = str(val)
+            f = font(24, "ExtraBold" if i in (0, len(row) - 1) else "Bold")
+            if i == 1:
+                while d.textlength(txt, font=f) > 600 and len(txt) > 4:
+                    txt = txt[:-2]
+            d.text((cols[i], y + 23), txt, font=f, fill=ACCENT if i == 0 else WHITE, anchor="lm" if i < 2 else "mm")
+        y += 52
+    return _png(img, d, brand)
+
+
 def schedule_card(day: str, rows: list[tuple[str, str, str, str]], more: int, brand: str = "",
-                  heading: str = "Матчи дня") -> bytes:
+                  heading: str = "Матчи дня", sport: str = "football") -> bytes:
     """Список матчей: до 8 строк (время, хозяева, гости, турнир) — расписание, теннис, экспресс."""
     img, d = _background((40, 80, 170), (130, 40, 120))
+    img = _sport_icon(img, sport, cx=W - 170, cy=H - 150, r=150, alpha=30)
+    d = ImageDraw.Draw(img)
     _title(d, heading, y=50, size=34)
     d.text((W / 2, 120), day.upper(), font=font(44, "ExtraBold"), fill=WHITE, anchor="mm")
     y = 175
@@ -229,6 +350,8 @@ def schedule_card(day: str, rows: list[tuple[str, str, str, str]], more: int, br
 def stats_card(title: str, rows: list[tuple[str, int, int, float | None]], brand: str = "") -> bytes:
     """Статистика: период, угадано из скольких, процент, ROI."""
     img, d = _background((30, 130, 90), (40, 80, 170))
+    img = _sport_icon(img, "football", cx=W - 140, cy=120, r=110, alpha=26)
+    d = ImageDraw.Draw(img)
     _title(d, "Статистика бота", y=50, size=34)
     d.text((W / 2, 125), title.upper(), font=font(40, "ExtraBold"), fill=WHITE, anchor="mm")
     y = 200

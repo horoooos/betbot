@@ -15,7 +15,7 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-from betbot import card, content, esports, names, sports, telegram, texts
+from betbot import card, content, esports, live, names, news, sports, tables, telegram, texts
 from betbot import markets as mk
 from betbot.data import MSK, load_fixtures, load_history
 from betbot.engine import add_market, fit_full, fit_weights, walk_forward
@@ -31,7 +31,8 @@ VALUE_EDGE = (0.05, 0.30)
 
 DATA = Path(__file__).resolve().parent / "data"
 STATE, MATCHES, RESULTS = DATA / "state.json", DATA / "matches.json", DATA / "results.csv"
-OTHER = DATA / "other.json"  # хоккей, баскетбол, теннис
+OTHER = DATA / "other.json"  # хоккей, баскетбол, теннис, киберспорт
+LIVE = DATA / "live.json"    # что уже опубликовано в live (начало матча, счёт)
 HIST_LEAGUES = [c for c in REVIEW_LEAGUES if c in MAIN or c in EXTRA]
 BRAND = os.environ.get("TELEGRAM_CHAT_ID", "") if os.environ.get("TELEGRAM_CHAT_ID", "").startswith("@") else ""
 
@@ -191,7 +192,8 @@ def review(ev: dict, w: dict, fx_loader, hist_loader, calib: dict) -> dict | Non
     main, bold = mk.tips(probs, mkt["real"] if mkt else {}, calib)
     m = {**ev, "lam": list(lam), "probs": probs, "scores": scores, "main": main, "bold": bold,
          "value": value_pick(probs, mkt), "odds_src": mkt["src"] if mkt else "нет, только модель",
-         "model_w": w.get("1X2", 0.0) if mkt else 1.0}
+         "model_w": w.get("1X2", 0.0) if mkt else 1.0,
+         "learned_n": len(read_results())}
     s = summary(ev["slug"], ev["id"])
     kick = pd.Timestamp(ev["kickoff"])
     tip = f"{main['label']} · {texts.pct(main['p'])}"
@@ -235,7 +237,7 @@ def other_review(e: dict, calib: dict, ratings: dict | None = None) -> dict | No
     kick = pd.Timestamp(e["kickoff"])
     tip = f"{m['main']['label']} · {texts.pct(m['main']['p'])}"
     png = card.match_card(sports.league_plain(e["div"]), texts.when(kick), e["home"], e["away"], a["bar"], tip,
-                          a["center"], BRAND)
+                          a["center"], BRAND, sport=e["sport"])
     m["msg_id"] = telegram.send_photo(png, sports.caption(m, texts.when(kick)))
     m["status"] = "reviewed"
     print(f"  обзор ({e['sport']}): {e['home']['ru']} — {e['away']['ru']} → {m['main']['label']}")
@@ -252,7 +254,8 @@ def other_settle(m: dict, e: dict) -> None:
     verdicts = [(f"Основной: {m['main']['label']}", m["main_hit"])]
     if m.get("bold"):
         verdicts.append((f"Смелый: {m['bold']['label']}", m["bold_hit"]))
-    png = card.result_card(sports.league_plain(m["div"]), m["home"], m["away"], f["hs"], f["as"], verdicts, BRAND)
+    png = card.result_card(sports.league_plain(m["div"]), m["home"], m["away"], f["hs"], f["as"], verdicts, BRAND,
+                           sport=m["sport"])
     post(png, sports.result_caption(m, f, ds), reply_to=m["msg_id"])
     m["status"] = "done"
 
@@ -277,7 +280,7 @@ def tennis_round(store: dict, events: list[dict], now: pd.Timestamp, lead: pd.Ti
             rows = [(f"{pd.Timestamp(m['kickoff']):%H:%M}", m["home"]["ru"], m["away"]["ru"], m["div"])
                     for m in sorted(ready, key=lambda m: m["kickoff"])[:8]]
             png = card.schedule_card(f"прогнозов: {len(ready)}", rows, len(ready) - len(rows), BRAND,
-                                     heading="Теннис · ближайшие матчи")
+                                     heading="Теннис · ближайшие матчи", sport="tennis")
             mid = post(png, sports.tennis_preview(ready))
             for m in ready:
                 m["msg_id"], m["status"] = mid, "reviewed"
@@ -304,7 +307,8 @@ def tennis_round(store: dict, events: list[dict], now: pd.Timestamp, lead: pd.Ti
             ds = add_result(m, m["final"]["sets"], "tennis")
             m["status"] = "done"
         rows = [(m["final"]["sets"], m["home"]["ru"], m["away"]["ru"], "✅" if m["main_hit"] else "❌") for m in done[:8]]
-        png = card.schedule_card(f"матчей: {len(done)}", rows, len(done) - len(rows), BRAND, heading="Теннис · итоги")
+        png = card.schedule_card(f"матчей: {len(done)}", rows, len(done) - len(rows), BRAND, heading="Теннис · итоги",
+                                 sport="tennis")
         post(png, sports.tennis_results(done, ds))
         print(f"  теннис: итоги {len(done)} матчей")
 
@@ -452,6 +456,22 @@ def main():
 
     other_sports(state, other, now, calib, daily)
     content.settle_express(state, finished_scores(events, other))
+
+    # live: «матч начался» и голы — ответом к посту с прогнозом на этот матч
+    reviews = {f"{m['div']}|{k}": m["msg_id"] for k, m in matches.items() if m.get("msg_id") and m.get("div")}
+    reviews.update({k: m["msg_id"] for k, m in load_json(OTHER, {}).items() if m.get("msg_id")})
+    live_store = load_json(LIVE, {})
+    try:
+        live.run(live_store, events + [e for e in other if e["sport"] != "tennis"], reviews, BRAND)
+    except Exception as e:
+        print(f"  ! live не удался: {e}")
+    save_json(LIVE, live.cleanup(live_store, now))
+
+    for step in (news.run, tables.run):  # новость раз в час и таблица/рейтинг дня
+        try:
+            step(state, now, BRAND)
+        except Exception as e:
+            print(f"  ! {step.__module__} не удался: {e}")
 
     # храним только последние 3 дня, остальное уже в results.csv
     old = now - pd.Timedelta(days=3)

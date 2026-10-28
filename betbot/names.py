@@ -91,10 +91,22 @@ def translit(text: str) -> str:
     return "".join(out)
 
 
+RESERVE = re.compile(r"(\bII\b|\bB\b|U-?\d{2}|\(жен|женск|молод|дубл|резерв)", re.IGNORECASE)
+
+
+def _reserve_mixup(name: str, label: str) -> bool:
+    """Wikidata иногда подсовывает дубль/молодёжку/женскую команду вместо основной."""
+    return bool(RESERVE.search(label)) and not RESERVE.search(name.replace("Women", "(жен"))
+
+
 def _load() -> dict:
-    global _cache
+    global _cache, _dirty
     if _cache is None:
         _cache = json.loads(CACHE.read_text(encoding="utf-8")) if CACHE.exists() else {}
+        bad = [k for k, v in _cache.items() if _reserve_mixup(k.split(":", 1)[-1], v)]
+        for k in bad:  # чистим уже сохранённые ошибки — их переведём заново
+            del _cache[k]
+        _dirty = _dirty or bool(bad)
     return _cache
 
 
@@ -138,7 +150,7 @@ def _wikidata(name: str, national: bool = False) -> str | None:
             ent = _api(action="wbgetentities", ids="|".join(ids[:3]), props="labels", languages="ru")
             for i in ids[:3]:
                 label = ((ent or {}).get("entities", {}).get(i, {}).get("labels", {}).get("ru") or {}).get("value")
-                if label:
+                if label and not _reserve_mixup(name, label):
                     label = re.sub(r"\s*\(.*?\)", "", label)  # «Арсенал (Лондон)» → «Арсенал»
                     label = re.sub(r"\s+по футболу$", "", label)  # «Сборная Германии по футболу»
                     return label[:1].upper() + label[1:]

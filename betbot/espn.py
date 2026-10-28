@@ -90,6 +90,11 @@ def _event(code: str, slug: str, e: dict) -> dict | None:
         "away": _team(teams["away"]),
         "odds": _odds(comp),
         "venue": (comp.get("venue") or {}).get("fullName"),
+        "clock": e["status"].get("displayClock", ""),
+        "goals": [{"min": (x.get("clock") or {}).get("displayValue", ""), "team": str((x.get("team") or {}).get("id")),
+                   "player": ((x.get("athletesInvolved") or [{}])[0]).get("displayName", ""),
+                   "own": bool(x.get("ownGoal")), "pen": bool(x.get("penaltyKick"))}
+                  for x in comp.get("details") or [] if x.get("scoringPlay") and not x.get("shootout")],
     }
 
 
