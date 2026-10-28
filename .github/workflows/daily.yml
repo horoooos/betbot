@@ -8,7 +8,7 @@ name: BetBot
 on:
   workflow_dispatch:
   schedule:
-    - cron: "17 */2 * * *"
+    - cron: "*/30 * * * *"   # страховка: если цепочка оборвалась, бот поднимется не позже чем через 30 минут
 
 permissions:
   contents: write
@@ -19,7 +19,7 @@ concurrency:
   cancel-in-progress: false
 
 env:
-  LOOP_MINUTES: "5"
+  LOOP_MINUTES: "2"            # как часто бот проверяет матчи (live-голы — с задержкой до 2 минут)
   LOOP_HOURS: "5.5"
 
 jobs:
