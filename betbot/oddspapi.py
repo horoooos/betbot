@@ -23,7 +23,8 @@ REFRESH_HOURS = 11     # линия — примерно дважды в ден�
 RETRY_HOURS = 3        # после неудачного запроса — повтор не раньше чем через 3 часа
 TOURNAMENTS_DAYS = 3
 BOOKMAKERS = "pinnacle"  # бесплатный тариф принимает ровно одного букмекера; Pinnacle — самая точная линия
-VERSION = 2              # меняется, когда исправляется сам запрос: старые паузы после ошибок сбрасываются
+VERSION = 3              # меняется, когда исправляется сам запрос: старые паузы и списки турниров сбрасываются
+MAX_TOURNAMENTS = 5      # бесплатный тариф ограничивает число турниров в одном запросе
 SPORTS = {"tennis": ("tennis",), "CS2": ("counter", "cs2", "cs-go", "csgo"), "DOTA": ("dota",)}
 MSK = "Europe/Moscow"
 
@@ -44,7 +45,7 @@ def _get(state: dict, path: str, **params):
         time.sleep(1.1)  # у каждого метода пауза между запросами ~1 с
         if r.status_code == 200:
             return r.json()
-        print(f"  ! OddsPapi {path}: {r.status_code} {r.text[:120]}")
+        print(f"  ! OddsPapi {path}: {r.status_code} {r.text[:400]}")
     except Exception as e:
         print(f"  ! OddsPapi {path}: {e}")
     return None
@@ -90,9 +91,14 @@ def _tournaments(state: dict, key: str, sport_id: int) -> list[int]:
 
     def upcoming(x):  # число будущих матчей турнира (название поля в API может отличаться)
         return sum(v for k, v in x.items() if isinstance(v, (int, float)) and ("upcoming" in k.lower() or "future" in k.lower()))
-    ids = [x["tournamentId"] for x in sorted(items, key=upcoming, reverse=True) if upcoming(x) > 0][:40]
+    if key == "tennis":  # публикуем только ATP и WTA — челленджеры, ITF и пары не нужны
+        def main_tour(x):
+            text = f"{x.get('categoryName', '')} {x.get('tournamentName', '')}".lower()
+            return ("atp" in text or "wta" in text) and not any(w in text for w in ("challenger", "itf", "doubles", "qualif"))
+        items = [x for x in items if main_tour(x)]
+    ids = [x["tournamentId"] for x in sorted(items, key=upcoming, reverse=True) if upcoming(x) > 0][:MAX_TOURNAMENTS]
     if not ids:
-        ids = [x["tournamentId"] for x in items][:40]
+        ids = [x["tournamentId"] for x in items][:MAX_TOURNAMENTS]
     t[key] = {"at": pd.Timestamp.now(tz=MSK).isoformat(), "ids": ids}
     return ids
 
@@ -107,6 +113,7 @@ def refresh(state: dict) -> None:
     CACHE.mkdir(parents=True, exist_ok=True)
     if state["oddspapi"].get("ver") != VERSION:  # паузы от прошлой версии клиента (с ошибкой в запросе) не в счёт
         state["oddspapi"]["last"] = {}
+        state["oddspapi"]["tournaments"] = {}
         state["oddspapi"]["ver"] = VERSION
     last = state["oddspapi"].setdefault("last", {})
     now = pd.Timestamp.now(tz=MSK)
