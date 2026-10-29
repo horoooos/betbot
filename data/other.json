@@ -96,7 +96,7 @@
   "kickoff": "2026-10-29T02:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "home": {
    "id": "1",
    "name": "Atlanta Hawks",
@@ -183,7 +183,9 @@
    "odds": 2.14,
    "est": false
   },
-  "msg_id": 156
+  "msg_id": 156,
+  "main_hit": true,
+  "bold_hit": true
  },
  "NBA|401909882": {
   "id": "401909882",
