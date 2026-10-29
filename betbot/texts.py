@@ -3,7 +3,7 @@ from html import escape
 
 import pandas as pd
 
-from . import names
+from . import fun, names
 from .leagues import ALL, ORDER, title
 from .reviews import rest_info
 from .markets import stake_text
@@ -83,7 +83,10 @@ def caption(m: dict, venue: str | None) -> str:
              f"⏰ {when(ts(m))}"]
     if venue:
         lines.append(f"🏟 {escape(venue)}")
-    lines += ["", f"🎯 <b>Основной прогноз:</b> {tip_line(m['main'])}", stake_line(m["main"])]
+    p = m.get("probs") or {}
+    if p.get("H") is not None:
+        lines += ["", fun.chances([("П1", p["H"]), ("Х", p["D"]), ("П2", p["A"])])]
+    lines += ["", f"🎯 <b>Основной прогноз:</b> {tip_line(m['main'])}", fun.confidence(m["main"]["p"]), stake_line(m["main"])]
     if m.get("bold"):
         lines.append(f"🔥 <b>Смелый прогноз:</b> {tip_line(m['bold'])}")
     if m.get("value"):
@@ -294,6 +297,7 @@ def result(m: dict, s: dict, hs: int, as_: int, day_stats: dict) -> str:
     if day_stats["n"]:
         lines.append(f"\n📅 Сегодня: основной {day_stats['main']}/{day_stats['n']} ({pct(day_stats['main'] / day_stats['n'])})"
                      + (f" · смелый {day_stats['bold']}/{day_stats['nb']}" if day_stats["nb"] else ""))
+    lines.append(fun.verdict(m["main_hit"]))
     return "\n".join(lines)
 
 

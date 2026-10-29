@@ -17,7 +17,7 @@ import pandas as pd
 from scipy.optimize import minimize
 from scipy.stats import norm
 
-from . import esports
+from . import esports, fun
 from . import markets as mk
 from . import names
 from .espn import MSK, _get, decimal
@@ -540,7 +540,10 @@ def caption(m: dict, when: str) -> str:
         lines.append(f"🎟 {escape(m['tournament'])}" + (f" · {escape(rnd)}" if rnd else ""))
     if m["home"].get("record") or m["away"].get("record"):
         lines.append(f"📋 Баланс: {h} {m['home'].get('record') or '—'} · {a} {m['away'].get('record') or '—'}")
-    lines += ["", f"🎯 <b>Основной прогноз:</b> {_tip(m['main'])}", mk.stake_text(m["main"])]
+    if m.get("bar"):
+        b = m["bar"]
+        lines += ["", fun.chances([(m["home"]["ru"][:14], b[0]), ("Ничья", b[1]), (m["away"]["ru"][:14], b[2])])]
+    lines += ["", f"🎯 <b>Основной прогноз:</b> {_tip(m['main'])}", fun.confidence(m["main"]["p"]), mk.stake_text(m["main"])]
     if m.get("bold"):
         lines.append(f"🔥 <b>Смелый прогноз:</b> {_tip(m['bold'])}")
     lines += ["", "👇 <i>Полный разбор — в ответе к посту</i>"]
@@ -564,6 +567,7 @@ def result_caption(m: dict, f: dict, day: dict) -> str:
         lines.append(f"🔥 Смелый: {escape(m['bold']['label'])} — {'✅ <b>ЗАШЁЛ</b>' if m['bold_hit'] else '❌ мимо'}")
     if day.get("n"):
         lines.append(f"\n📅 Сегодня ({SPORT_RU[m['sport']].lower()}): {day['main']}/{day['n']} ({_pct(day['main'] / day['n'])})")
+    lines.append(fun.verdict(m["main_hit"]))
     return "\n".join(lines)
 
 

@@ -5,18 +5,21 @@
   16:00 — ⭐ Матч дня + опрос «Кто победит?»
   19:00 — 📺 Топ-матчи вечера по всем видам спорта
   22:00 — 📊 Интересные цифры из статистики бота
+  23:00 — 🌙 Итоги дня: все прогнозы дня с ✅/❌
+  после матча дня — 🤖 Бот против 👥 подписчиков: кто угадал в опросе
 """
+import random
 from html import escape
 
 import pandas as pd
 
-from . import card, sports, telegram
+from . import card, fun, sports, telegram
 from . import markets as mk
 from .leagues import ALL, ORDER, title
 from .sports import EMOJI, SPORT_RU
 from .texts import MONTHS
 
-SLOTS = {10: "express", 13: "learn", 16: "match_of_day", 19: "evening", 22: "facts"}
+SLOTS = {10: "express", 13: "learn", 16: "match_of_day", 19: "evening", 22: "facts", 23: "recap"}
 FOOTER = "<i>⚠️ 18+. Прогноз — не гарантия. Ставьте только то, что не жалко потерять.</i>"
 
 LESSONS = [
@@ -180,7 +183,7 @@ def learn(state: dict, now, brand) -> bool:
     return True
 
 
-def match_of_day(football: list[dict], now, brand) -> bool:
+def match_of_day(football: list[dict], now, brand, state: dict | None = None) -> bool:
     cands = [e for e in football if e["state"] == "pre" and "ru" in e["home"]
              and now + pd.Timedelta(hours=1) < pd.Timestamp(e["kickoff"]) <= now + pd.Timedelta(hours=14)]
     if not cands:
@@ -198,8 +201,84 @@ def match_of_day(football: list[dict], now, brand) -> bool:
     png = card.ai_card(f"epic soccer match atmosphere, soccer ball, {e['home']['name']} versus {e['away']['name']}, stadium at night, "
                        "fans, flares, cinematic", "Матч дня", f"{e['home']['ru']} — {e['away']['ru']} · {k:%H:%M} МСК", brand)
     mid = _post(png, text)
-    telegram.send_poll(f"Кто победит: {e['home']['ru']} — {e['away']['ru']}?",
-                       [f"П1 · {e['home']['ru']}", "Ничья", f"П2 · {e['away']['ru']}"], reply_to=mid)
+    poll = telegram.send_poll(f"Кто победит: {e['home']['ru']} — {e['away']['ru']}?",
+                              [f"П1 · {e['home']['ru']}", "Ничья", f"П2 · {e['away']['ru']}"], reply_to=mid)
+    if state is not None:
+        state["mod_poll"] = {"key": f"{e['div']}|{e['id']}", "id": e["id"], "poll": poll, "post": mid,
+                             "home": e["home"]["ru"], "away": e["away"]["ru"], "kickoff": e["kickoff"]}
+    return True
+
+
+def settle_poll(state: dict, finished: dict, matches: dict, brand: str) -> None:
+    """🤖 Бот против 👥 подписчиков: после матча дня закрываем опрос и сравниваем с прогнозом бота."""
+    mp = state.get("mod_poll")
+    if not mp or mp["key"] not in finished:
+        return
+    state.pop("mod_poll")
+    f = finished[mp["key"]]
+    hs, as_ = f["hs"], f["as"]
+    try:
+        poll = telegram.stop_poll(mp["poll"])
+    except Exception as ex:
+        print(f"  ! опрос матча дня не закрылся: {ex}")
+        return
+    if not poll or not poll.get("total_voter_count"):
+        return
+    votes = [o["voter_count"] for o in poll["options"]]
+    total = sum(votes)
+    names_ = ["П1", "Ничья", "П2"]
+    crowd = max(range(3), key=lambda i: votes[i])
+    real = 0 if hs > as_ else 1 if hs == as_ else 2
+    m = matches.get(str(mp["id"])) or {}
+    bot = None
+    if m.get("probs"):
+        bot = max(range(3), key=lambda i: m["probs"][["H", "D", "A"][i]])
+    lines = ["⚔️ <b>БОТ ПРОТИВ ПОДПИСЧИКОВ</b>\n",
+             f"⚽️ <b>{escape(mp['home'])} {hs}:{as_} {escape(mp['away'])}</b>\n",
+             f"👥 Подписчики ({total} голосов):"]
+    for i in range(3):
+        share = votes[i] / total
+        lines.append(f"<code>{names_[i].ljust(5)} {fun.bar(share)} {100 * share:.0f}%</code>" + (" ✅" if i == real else ""))
+    lines.append("")
+    crowd_ok = crowd == real
+    lines.append(f"👥 Большинство за <b>{names_[crowd]}</b> — {'угадали ✅' if crowd_ok else 'мимо ❌'}")
+    if bot is not None:
+        bot_ok = bot == real
+        lines.append(f"🤖 Бот считал фаворитом <b>{names_[bot]}</b> — {'угадал ✅' if bot_ok else 'мимо ❌'}")
+        score = state.setdefault("battle", {"bot": 0, "crowd": 0})
+        score["bot"] += bot_ok
+        score["crowd"] += crowd_ok
+        verdict = ("Ничья в споре 🤝" if bot_ok == crowd_ok else "Бот оказался умнее толпы 🤖" if bot_ok
+                   else "Подписчики переиграли бота 👏")
+        lines.append(f"\n<b>{verdict}</b>\n📈 Общий счёт: 🤖 {score['bot']} : {score['crowd']} 👥")
+    lines.append("\nНовый матч дня с опросом — завтра в 16:00 🗳")
+    try:
+        telegram.send("\n".join(lines), reply_to=mp["post"])
+    except Exception as ex:
+        print(f"  ! пост «бот против подписчиков» не удался: {ex}")
+
+
+def recap(res: pd.DataFrame, now, brand) -> bool:
+    """🌙 Итоги дня: все рассчитанные сегодня прогнозы одним постом."""
+    if res is None or res.empty:
+        return False
+    day = res[res["date"].astype(str) == str(now.date())]
+    if len(day) < 3:
+        return False
+    hit = day["main_hit"].astype(str).str.lower().isin(["true", "1", "1.0"])
+    sport = day["sport"].fillna("football") if "sport" in day else pd.Series("football", index=day.index)
+    lines = [f"🌙 <b>ИТОГИ ДНЯ · {now.day} {MONTHS[now.month - 1]}</b>\n"]
+    for (_, r), h, s in list(zip(day.iterrows(), hit, sport))[-25:]:
+        lines.append(f"{'✅' if h else '❌'} {EMOJI.get(s, '⚽️')} {escape(str(r['home']))} — {escape(str(r['away']))} "
+                     f"<b>{escape(str(r['score']))}</b> · {escape(str(r['main_label']))}")
+    n, w = len(day), int(hit.sum())
+    mood = ("🔥 Отличный день!" if w / n >= 0.7 else "👍 День в плюс по проходу" if w / n >= 0.55
+            else "😤 Тяжёлый день — завтра отыграемся")
+    lines.append(f"\n🎯 Зашло <b>{w} из {n}</b> ({_pct(w / n)}) · {mood}")
+    lines.append("\nУтром — расписание и новые прогнозы. Спокойной ночи 😴")
+    png = card.ai_card("night stadium with lights turning off, moon above, calm cinematic atmosphere", "Итоги дня",
+                       f"Зашло {w} из {n} · {_pct(w / n)}", brand)
+    _post(png, "\n".join(lines))
     return True
 
 
@@ -297,9 +376,11 @@ def run(state: dict, football: list[dict], other: list[dict], res: pd.DataFrame,
             done = weekly(res, now, brand) if now.weekday() == 0 else False
             done = done or learn(state, now, brand)
         elif kind == "match_of_day":
-            done = match_of_day(football, now, brand)
+            done = match_of_day(football, now, brand, state)
         elif kind == "evening":
             done = evening(football, other, now, brand)
+        elif kind == "recap":
+            done = recap(res, now, brand)
         else:
             done = facts(res, now, brand) or learn(state, now, brand)
         print(f"Тематический пост ({kind}): {'опубликован' if done else 'нечего публиковать'}")

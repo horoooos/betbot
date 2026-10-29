@@ -517,6 +517,10 @@ def main():
     other_sports(state, other, now, calib, daily)
     content.settle_express(state, finished_scores(events, other))
     try:
+        content.settle_poll(state, finished_scores(events, other), matches, BRAND)
+    except Exception as e:
+        print(f"  ! бот против подписчиков не удался: {e}")
+    try:
         pro.post_streak(state, read_results(), BRAND)  # «🔥 N заходов подряд!»
     except Exception as e:
         print(f"  ! пост про серию не удался: {e}")

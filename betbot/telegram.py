@@ -84,6 +84,13 @@ def send_poll(question: str, options: list[str], quiz_correct: int | None = None
     return _call("sendPoll", **params)["message_id"]
 
 
+def stop_poll(message_id: int) -> dict | None:
+    """Закрывает опрос и возвращает его итоги ({'options': [{'text', 'voter_count'}], 'total_voter_count'})."""
+    if DRY:
+        return None
+    return _call("stopPoll", message_id=message_id)
+
+
 def send_photo(png: bytes, caption: str, reply_to: int | None = None) -> int:
     caption = caption[:CAPTION_LIMIT]
     if DRY:
