@@ -4878,31 +4878,31 @@
   "kickoff": "2026-10-30T00:55:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Thu, October 29th at 5:55 PM EDT",
   "home": {
-   "id": "2346",
-   "name": "Tatjana Maria",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/2346.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/ger.png"
    ],
+   "id": "2346",
+   "name": "Tatjana Maria",
    "country": "Germany",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
    "ru": "Татьяна Мария"
   },
   "away": {
-   "id": "4458",
-   "name": "Martina Colmegna",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/4458.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/ita.png"
    ],
+   "id": "4458",
+   "name": "Martina Colmegna",
    "country": "Italy",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
@@ -4961,7 +4961,9 @@
   "msg_id": 511,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null
  },
  "NHL|401892601": {
   "id": "401892601",
