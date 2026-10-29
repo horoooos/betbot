@@ -252,20 +252,24 @@ GREEN, RED = (39, 174, 96), (214, 48, 49)
 AI_URL = "https://image.pollinations.ai/prompt/{prompt}?width=1280&height=780&nologo=true&seed={seed}"
 
 
-def ai_card(prompt: str, title: str, subtitle: str = "", brand: str = "") -> bytes:
+def ai_card(prompt: str, title: str, subtitle: str = "", brand: str = "", sport: str = "") -> bytes:
     """Картинка от бесплатной нейросети Pollinations + наш заголовок поверх.
 
-    Если нейросеть не ответила — рисуем фон сами, пост всё равно выйдет с картинкой.
+    Две попытки; если нейросеть так и не ответила — рисуем фон с иконкой вида спорта, пост всё равно выйдет.
     """
     img = None
-    try:
-        r = requests.get(AI_URL.format(prompt=quote(prompt), seed=random.randint(1, 10 ** 6)), timeout=120)
-        if r.ok and r.headers.get("content-type", "").startswith("image"):
-            img = Image.open(io.BytesIO(r.content)).convert("RGB").resize((W, 780)).crop((0, 0, W, H))  # без водяного знака
-    except Exception:
-        img = None
+    for _ in range(2):
+        try:
+            r = requests.get(AI_URL.format(prompt=quote(prompt), seed=random.randint(1, 10 ** 6)), timeout=90)
+            if r.ok and r.headers.get("content-type", "").startswith("image"):
+                img = Image.open(io.BytesIO(r.content)).convert("RGB").resize((W, 780)).crop((0, 0, W, H))  # без водяного знака
+                break
+        except Exception:
+            continue
     if img is None:
         img, _ = _background((40, 80, 170), (180, 60, 40))
+        if sport:
+            img = _sport_icon(img, sport, cy=H // 2 - 90, r=230, alpha=60)
     # затемнение снизу, чтобы текст читался на любой картинке
     shade = Image.new("L", (1, H))
     for y in range(H):

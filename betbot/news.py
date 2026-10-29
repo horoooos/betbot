@@ -42,9 +42,27 @@ TAGS = {"football": "#футбол", "hockey": "#хоккей", "basketball": "#
         "esports": "#киберспорт"}
 EMOJI = {"football": "⚽️", "hockey": "🏒", "basketball": "🏀", "tennis": "🎾", "esports": "🎮"}
 # чтобы нейросеть рисовала именно наш вид спорта (а не, например, американский футбол)
-SCENE = {"football": "association football (soccer), round black and white soccer ball, European stadium",
-         "hockey": "ice hockey, ice rink, puck and sticks", "basketball": "basketball court, orange basketball, hoop",
-         "tennis": "tennis court, tennis racket and yellow ball", "esports": "esports arena, gaming PC, gamepad, neon"}
+# Картинки к новостям — по заранее заданным спортивным сюжетам: описание «по смыслу новости» нейросеть
+# превращала в абстракцию без спорта (человек в лесу вместо тенниса). Несколько вариантов — чтобы не повторялись.
+SCENES = {
+    "football": ["packed European football stadium at night under floodlights, green pitch, soccer ball on the grass",
+                 "close-up of a black and white soccer ball on a wet football pitch, stadium lights bokeh",
+                 "aerial view of a football stadium full of fans, green pitch, evening",
+                 "soccer goal net and ball on the goal line, stadium in the background, dramatic light"],
+    "hockey": ["ice hockey arena with bright ice rink, hockey sticks and puck on the ice, arena lights",
+               "close-up of a black hockey puck on fresh ice, scratches on the ice, arena lights",
+               "hockey goal net on the ice rink, empty arena, dramatic lighting"],
+    "basketball": ["basketball arena, orange basketball going into the hoop, crowd in the background",
+                   "close-up of an orange basketball on a polished wooden court, arena lights",
+                   "basketball hoop and net from below, arena spotlights"],
+    "tennis": ["professional tennis court in a stadium, blue hard court, yellow tennis ball on the baseline",
+               "close-up of a yellow tennis ball and racket on a clay court",
+               "tennis stadium center court at night under floodlights, net and empty court",
+               "grass tennis court with white lines and a tennis ball near the net"],
+    "esports": ["esports arena with a big stage, neon lights, gaming PCs and crowd",
+                "close-up of a glowing gaming keyboard and mouse, neon purple and blue light",
+                "esports tournament stage with big screens and spotlights, dark arena"],
+}
 TEXT_API = "https://text.pollinations.ai/openai"
 PROMPT = (
     "Ты редактор русскоязычного спортивного Telegram-канала. Перескажи новость своими словами, живо и коротко. "
@@ -54,8 +72,7 @@ PROMPT = (
     "Ответь только JSON без пояснений: {\"sport\": \"football|hockey|basketball|tennis|esports|other\", "
     "\"title\": \"заголовок до 70 символов\", "
     "\"text\": \"1–2 предложения: перефразируй только то, что есть в описании, не длиннее его\", "
-    "\"emoji\": \"один подходящий эмодзи\", "
-    "\"image_prompt\": \"короткое описание картинки по-английски, без текста и без реальных лиц\"}"
+    "\"emoji\": \"один подходящий эмодзи\"}"
 )
 
 
@@ -120,8 +137,7 @@ def _rewrite(item: dict) -> dict | None:
     if len(text) > 1.3 * len(item["title"] + " " + item["desc"]) + 40:  # длиннее исходника — значит, досочинила
         return None
     return {"sport": str(data.get("sport", "")).strip().lower(), "title": title, "text": text,
-            "emoji": str(data.get("emoji") or "")[:4],
-            "image_prompt": str(data.get("image_prompt") or "")[:300]}
+            "emoji": str(data.get("emoji") or "")[:4]}
 
 
 def run(state: dict, now: pd.Timestamp, brand: str) -> None:
@@ -146,8 +162,8 @@ def run(state: dict, now: pd.Timestamp, brand: str) -> None:
             news = _rewrite(item)
             if not news or news["sport"] != sport:  # новость не про этот вид спорта (Ф-1, бокс…) — пропускаем
                 continue
-            prompt = f"{SCENE[sport]}, {news['image_prompt']}, cinematic, high detail, no text, no faces"
-            png = card.ai_card(prompt, news["title"], TAGS[sport].lstrip("#").capitalize(), brand)
+            prompt = f"{random.choice(SCENES[sport])}, cinematic, high detail, photorealistic, no text, no people"
+            png = card.ai_card(prompt, news["title"], TAGS[sport].lstrip("#").capitalize(), brand, sport=sport)
             telegram.send_photo(png, f"{news['emoji'] or EMOJI[sport]} <b>{escape(news['title'])}</b>\n\n"
                                      f"{escape(news['text'])}\n\n{TAGS[sport]}")
             state["news_i"] = (i + shift + 1) % len(ORDER)
