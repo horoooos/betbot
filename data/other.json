@@ -875,7 +875,7 @@
   "kickoff": "2026-10-29T03:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "home": {
    "id": "15",
    "name": "Milwaukee Bucks",
@@ -962,7 +962,9 @@
    "odds": 2.73,
    "est": true
   },
-  "msg_id": 194
+  "msg_id": 194,
+  "main_hit": true,
+  "bold_hit": false
  },
  "NBA|401909888": {
   "id": "401909888",
