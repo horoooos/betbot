@@ -216,7 +216,7 @@ def post(png: bytes, text: str, reply_to: int | None = None) -> int:
 
 
 def morning(state: dict, events: list[dict], other: list[dict], now: pd.Timestamp) -> None:
-    site_res = read_results()
+    res = read_results()
     today = now.normalize()
     if len(res):
         rows = [(name, *texts.numbers(df)) for name, df in texts.periods(res, today)]
