@@ -4426,5 +4426,108 @@
   "open": {},
   "top": false,
   "msg_id": 441
+ },
+ "WTA|185774": {
+  "id": "185774",
+  "div": "WTA",
+  "sport": "tennis",
+  "tournament": "Curitiba Open",
+  "round": "Round 2",
+  "bo5": false,
+  "kickoff": "2026-10-29T21:00:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "detail": "Thu, October 29th at 2:00 PM EDT",
+  "home": {
+   "id": "3220",
+   "name": "Maria Lourdes Carle",
+   "logo": [
+    "https://a.espncdn.com/i/headshots/tennis/players/full/3220.png",
+    "https://a.espncdn.com/i/teamlogos/countries/500/arg.png"
+   ],
+   "country": "Argentina",
+   "color": "2d6a4f",
+   "winner": false,
+   "sets": [],
+   "set_won": [],
+   "ru": "Мариа Лурдес Карле"
+  },
+  "away": {
+   "id": "2599",
+   "name": "Julia Grabher",
+   "logo": [
+    "https://a.espncdn.com/i/headshots/tennis/players/full/2599.png",
+    "https://a.espncdn.com/i/teamlogos/countries/500/aut.png"
+   ],
+   "country": "Austria",
+   "color": "2d6a4f",
+   "winner": false,
+   "sets": [],
+   "set_won": [],
+   "ru": "Жулиа Грабхер"
+  },
+  "odds": {},
+  "probs": {
+   "TN_W1": 0.25134758998664664,
+   "TN_W2": 0.7486524100133534,
+   "TN_3S": 0.4403995726477793,
+   "TN_2S": 0.5596004273522207,
+   "TN_S2:0": 0.10717282976466264,
+   "TN_S0:2": 0.4524275975875581,
+   "TN_S2:1": 0.14417476022198394,
+   "TN_S1:2": 0.29622481242579535,
+   "TN_SET1": 0.547572402412442,
+   "TN_SET2": 0.8928271702353374
+  },
+  "labels": {
+   "TN_W1": "Победа: Мариа Лурдес Карле",
+   "TN_W2": "Победа: Жулиа Грабхер",
+   "TN_3S": "Будет 3 сета",
+   "TN_2S": "Будет 2 сета",
+   "TN_S2:0": "Счёт по сетам 2:0",
+   "TN_S0:2": "Счёт по сетам 0:2",
+   "TN_S2:1": "Счёт по сетам 2:1",
+   "TN_S1:2": "Счёт по сетам 1:2",
+   "TN_SET1": "Мариа Лурдес Карле возьмёт хотя бы сет",
+   "TN_SET2": "Жулиа Грабхер возьмёт хотя бы сет"
+  },
+  "real": {},
+  "center": "Рейтинг Эло 1489 : 1679",
+  "bar": [
+   0.25134758998664664,
+   0,
+   0.7486524100133534
+  ],
+  "model": {
+   "elo": [
+    1489.1211813691361,
+    1678.7233819964415
+   ],
+   "src": "Эло"
+  },
+  "main": {
+   "key": "TN_2S",
+   "label": "Будет 2 сета",
+   "p": 0.5596,
+   "odds": 1.66,
+   "est": true,
+   "stake": 1.0
+  },
+  "bold": {
+   "key": "TN_S1:2",
+   "label": "Счёт по сетам 1:2",
+   "p": 0.2962,
+   "odds": 3.14,
+   "est": true,
+   "stake": 1.0
+  },
+  "open": {},
+  "top": false,
+  "msg_id": 450
+ },
+ "DOTA|1753767": {
+  "status": "skipped",
+  "kickoff": "2026-10-29T21:00:00+03:00"
  }
 }
