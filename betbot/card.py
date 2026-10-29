@@ -370,18 +370,20 @@ def table_card(title: str, subtitle: str, header: tuple, rows: list[tuple], bran
 GOLD_TOP, GOLD_BOTTOM = (255, 222, 110), (214, 152, 20)
 
 
-def _gold_box(img: Image.Image, box: tuple, radius: int = 26) -> None:
-    """Золотая плашка с вертикальным градиентом и тонкой светлой обводкой."""
+def _gold_box(img: Image.Image, box: tuple, radius: int = 26, top: tuple = None, bottom: tuple = None,
+              edge: tuple = (255, 240, 180)) -> None:
+    """Плашка с вертикальным градиентом и светлой обводкой (по умолчанию — золотая)."""
+    top, bottom = top or GOLD_TOP, bottom or GOLD_BOTTOM
     x0, y0, x1, y1 = box
     grad = Image.new("RGB", (x1 - x0, y1 - y0))
     gd = ImageDraw.Draw(grad)
     for y in range(y1 - y0):
         t = y / max(y1 - y0 - 1, 1)
-        gd.line([(0, y), (x1 - x0, y)], fill=tuple(int(a + (b - a) * t) for a, b in zip(GOLD_TOP, GOLD_BOTTOM)))
+        gd.line([(0, y), (x1 - x0, y)], fill=tuple(int(a + (b - a) * t) for a, b in zip(top, bottom)))
     mask = Image.new("L", grad.size, 0)
     ImageDraw.Draw(mask).rounded_rectangle((0, 0, grad.width - 1, grad.height - 1), radius=radius, fill=255)
     img.paste(grad, (x0, y0), mask)
-    ImageDraw.Draw(img).rounded_rectangle(box, radius=radius, outline=(255, 240, 180), width=3)
+    ImageDraw.Draw(img).rounded_rectangle(box, radius=radius, outline=edge, width=3)
 
 
 def express_card(legs: list[dict], total: float, p_all: float, day: str, brand: str = "") -> bytes:
@@ -429,6 +431,104 @@ def express_card(legs: list[dict], total: float, p_all: float, day: str, brand: 
     d.text((box[2] - 50, 530), "ШАНС, ЧТО ЗАЙДЁТ", font=font(22, "Bold"), fill=dark, anchor="rm")
     d.text((box[2] - 50, 590), f"{p_all * 100:.0f}%", font=font(64, "ExtraBold"), fill=dark, anchor="rm")
     d.text((W / 2, 680), f"{len(legs[:n])} события в одной ставке", font=font(22, "Medium"), fill=MUTED, anchor="mm")
+    return _png(img, d, brand)
+
+
+TEAL_TOP, TEAL_BOTTOM = (110, 235, 220), (20, 150, 160)
+
+
+def _fit(d: ImageDraw.ImageDraw, text: str, size: int, max_w: int, weight: str = "Bold", min_size: int = 14):
+    """Подбираем размер шрифта, чтобы строка влезла в max_w."""
+    while size > min_size and d.textlength(text, font=font(size, weight)) > max_w:
+        size -= 1
+    return font(size, weight)
+
+
+def _check(d: ImageDraw.ImageDraw, cx: int, cy: int, r: int = 20) -> None:
+    """Зелёный кружок с белой галочкой (рисуем сами — эмодзи шрифт не умеет)."""
+    d.ellipse((cx - r, cy - r, cx + r, cy + r), fill=GREEN)
+    d.line([(cx - r * 0.45, cy + r * 0.02), (cx - r * 0.1, cy + r * 0.38), (cx + r * 0.5, cy - r * 0.35)],
+           fill=WHITE, width=max(3, r // 5), joint="curve")
+
+
+def value_card(picks: list[dict], day: str, brand: str = "") -> bytes:
+    """Value дня: ставки, где лучший кэф выше справедливой цены — с логотипами и перевесом каждой."""
+    img, d = _background((20, 140, 150), (40, 60, 150))
+    img = _sport_icon(img, "football", cx=W - 120, cy=110, r=90, alpha=22)
+    d = ImageDraw.Draw(img)
+    _title(d, "Value дня", y=40, size=34)
+    d.text((W / 2, 98), f"{day} · ставки дороже справедливой цены".upper(), font=font(22, "Medium"), fill=MUTED,
+           anchor="mm")
+    n = min(len(picks), 4)
+    row_h = 92 if n <= 3 else 80
+    y = 128
+    for x in picks[:n]:
+        d.rounded_rectangle((60, y, W - 60, y + row_h - 10), radius=18, fill=(18, 34, 58), outline=(50, 110, 120), width=2)
+        cy = y + (row_h - 10) // 2
+        d.text((90, cy - 14), pd_time(x["kickoff"]), font=font(26, "ExtraBold"), fill=ACCENT, anchor="lm")
+        league = "".join(c for c in str(x.get("league", "")).split("·")[-1] if ord(c) < 0x2000).strip()
+        d.text((90, cy + 16), league, font=_fit(d, league, 17, 190, "Medium", 12), fill=MUTED, anchor="lm")
+        for k, side in enumerate(("home", "away")):
+            logo = _logo((x.get("logos") or [None, None])[k], 50, "".join(w[0] for w in x[side].split()[:2]).upper(),
+                         _rgb((x.get("colors") or ["3b4a7a", "8a2b2b"])[k]))
+            img.paste(logo, (300 + k * 58, cy - logo.height // 2), logo)
+        match = f"{x['home']} — {x['away']}"
+        d.text((430, cy - 14), match, font=_fit(d, match, 26, 400), fill=WHITE, anchor="lm")
+        d.text((430, cy + 16), x["label"], font=_fit(d, x["label"], 22, 400, "Medium"), fill=TEAL_TOP, anchor="lm")
+        # кэф против справедливой цены и перевес
+        d.text((W - 330, cy - 14), f"{x['odds']:.2f}", font=font(30, "ExtraBold"), fill=WHITE, anchor="mm")
+        d.text((W - 330, cy + 17), f"справ. {1 / x['p']:.2f}", font=font(16, "Medium"), fill=MUTED, anchor="mm")
+        _pill(d, W - 160, cy - 24, f"+{100 * x['edge']:.1f}%", (30, 140, 90), size=24)
+        y += row_h
+    best = max(picks[:n], key=lambda x: x["edge"])
+    box = (150, 480, W - 150, 650)
+    _gold_box(img, box, top=TEAL_TOP, bottom=TEAL_BOTTOM, edge=(200, 255, 245))
+    d = ImageDraw.Draw(img)
+    dark = (6, 40, 44)
+    d.text((box[0] + 50, 522), "ЛУЧШИЙ ПЕРЕВЕС ДНЯ", font=font(26, "ExtraBold"), fill=dark, anchor="lm")
+    d.text((box[0] + 50, 595), f"+{100 * best['edge']:.1f}%", font=font(80, "ExtraBold"), fill=dark, anchor="lm")
+    d.text((box[2] - 50, 535), "СТАВОК С ПЕРЕВЕСОМ", font=font(22, "Bold"), fill=dark, anchor="rm")
+    d.text((box[2] - 50, 595), str(len(picks)), font=font(64, "ExtraBold"), fill=dark, anchor="rm")
+    d.text((W / 2, 682), "перевес = насколько кэф выше честного", font=font(20, "Medium"), fill=MUTED, anchor="mm")
+    return _png(img, d, brand)
+
+
+def streak_card(rows: list[dict], n: int, total: float, brand: str = "", sport: str = "football") -> bytes:
+    """Серия заходов: огромная цифра серии, матчи с зелёными галочками и «кэф, если бы это был экспресс»."""
+    img, d = _background((30, 140, 70), (170, 110, 20))
+    img = _sport_icon(img, sport, cx=W - 150, cy=150, r=120, alpha=24)
+    d = ImageDraw.Draw(img)
+    _title(d, "Серия заходов", y=40, size=32)
+    word = "заход" if n % 10 == 1 and n % 100 != 11 else "захода" if 2 <= n % 10 <= 4 and not 12 <= n % 100 <= 14 else "заходов"
+    num_w = d.textlength(str(n), font=font(96, "ExtraBold"))
+    text_w = d.textlength(f"{word} подряд".upper(), font=font(40, "ExtraBold"))
+    x0 = (W - num_w - 24 - text_w) / 2  # цифра и подпись вместе — по центру
+    d.text((x0, 128), str(n), font=font(96, "ExtraBold"), fill=ACCENT, anchor="lm")
+    d.text((x0 + num_w + 24, 128), f"{word} подряд".upper(), font=font(40, "ExtraBold"), fill=WHITE, anchor="lm")
+    shown = rows[:5]
+    row_h = 58
+    y = 190
+    for r in shown:
+        d.rounded_rectangle((70, y, W - 70, y + row_h - 8), radius=14, fill=(20, 32, 40), outline=(50, 110, 70), width=2)
+        cy = y + (row_h - 8) // 2
+        _check(d, 108, cy, 17)
+        d.text((145, cy), r["score"], font=font(24, "ExtraBold"), fill=ACCENT, anchor="lm")
+        match = f"{r['home']} — {r['away']}"
+        d.text((235, cy), match, font=_fit(d, match, 23, 470), fill=WHITE, anchor="lm")
+        d.text((725, cy), r["label"], font=_fit(d, r["label"], 20, 300, "Medium"), fill=(140, 230, 160), anchor="lm")
+        d.text((W - 100, cy), f"{r['odds']:.2f}", font=font(24, "ExtraBold"), fill=WHITE, anchor="rm")
+        y += row_h
+    if len(rows) > len(shown):
+        d.text((W / 2, y + 6), f"…и ещё {len(rows) - len(shown)}", font=font(20, "Medium"), fill=MUTED, anchor="mm")
+    box = (150, 500, W - 150, 655)
+    _gold_box(img, box)
+    d = ImageDraw.Draw(img)
+    dark = (40, 28, 6)
+    d.text((box[0] + 50, 540), "ЕСЛИ БЫ ЭТО БЫЛ ЭКСПРЕСС", font=font(26, "ExtraBold"), fill=dark, anchor="lm")
+    d.text((box[0] + 50, 607), f"кэф {total:,.2f}".replace(",", " "), font=font(66, "ExtraBold"), fill=dark, anchor="lm")
+    d.text((box[2] - 50, 545), "ЗАШЛО ПОДРЯД", font=font(22, "Bold"), fill=dark, anchor="rm")
+    d.text((box[2] - 50, 607), f"{n} из {n}", font=font(52, "ExtraBold"), fill=dark, anchor="rm")
+    d.text((W / 2, 685), "серии заканчиваются — играйте по банку", font=font(20, "Medium"), fill=MUTED, anchor="mm")
     return _png(img, d, brand)
 
 

@@ -15,6 +15,7 @@ import pandas as pd
 from . import card, names, sports, telegram
 from . import markets as mk
 from .leagues import ALL, ORDER, title
+from .texts import MONTHS
 
 KELLY_FRACTION = 0.25         # четверть Келли — стандарт осторожных игроков
 STAKE_MIN, STAKE_MAX = 1.0, 3.0  # % банка
@@ -115,8 +116,8 @@ def clv_summary(res: pd.DataFrame, days: int = 30) -> str:
 
 # ── value дня ──────────────────────────────────────────────────────────────
 
-def _ru_pair(row: pd.Series, events: list[dict]) -> tuple[str, str]:
-    """Русские названия: ищем этот матч в расписании ESPN (там уже переведены)."""
+def _ru_pair(row: pd.Series, events: list[dict]) -> tuple[str, str, list, list]:
+    """Русские названия, логотипы и цвета: ищем этот матч в расписании ESPN (там всё уже есть)."""
     best, score = None, 0.0
     for e in events:
         if e["div"] != row["Div"] or "ru" not in e["home"]:
@@ -127,8 +128,9 @@ def _ru_pair(row: pd.Series, events: list[dict]) -> tuple[str, str]:
         if s > score:
             best, score = e, s
     if best is not None and score >= 1.3:
-        return best["home"]["ru"], best["away"]["ru"]
-    return row["HomeTeam"], row["AwayTeam"]
+        return (best["home"]["ru"], best["away"]["ru"], [best["home"].get("logo"), best["away"].get("logo")],
+                [best["home"].get("color"), best["away"].get("color")])
+    return row["HomeTeam"], row["AwayTeam"], [None, None], ["3b4a7a", "8a2b2b"]
 
 
 def value_candidates(fx: pd.DataFrame, events: list[dict], now: pd.Timestamp, edge=(0.03, 0.25)) -> list[dict]:
@@ -152,8 +154,9 @@ def value_candidates(fx: pd.DataFrame, events: list[dict], now: pd.Timestamp, ed
         for label, p, o in sides:
             e = p * float(o) - 1
             if edge[0] <= e <= edge[1] and 1.3 <= float(o) <= 6:
-                h, a = _ru_pair(r, events)
+                h, a, logos, colors = _ru_pair(r, events)
                 out.append({"div": r["Div"], "kickoff": r["Kickoff"], "home": h, "away": a, "label": label,
+                            "logos": logos, "colors": colors, "league": title(r["Div"]),
                             "p": float(p), "odds": float(o), "edge": float(e)})
     return sorted(out, key=lambda x: -x["edge"])
 
@@ -170,8 +173,7 @@ def post_value(fx, events, now, brand) -> bool:
                      f"   ✅ <b>{x['label']}</b> @ {x['odds']:.2f} · справедливо ≈{1 / x['p']:.2f} · "
                      f"перевес <b>+{100 * x['edge']:.1f}%</b> · ставка {stake(tip):g}% банка")
     lines += ["\n<i>Лучший кэф быстро уходит — проверяйте линию у своего букмекера перед ставкой.</i>", FOOTER]
-    rows = [(f"{x['kickoff']:%H:%M}", x["home"], x["away"], f"{x['label']} @ {x['odds']:.2f}") for x in picks]
-    png = card.schedule_card("ставки дороже справедливой цены", rows, 0, brand, heading="Value дня")
+    png = card.value_card(picks, f"{now.day} {MONTHS[now.month - 1]}", brand)
     _post(png, "\n".join(lines))
     return True
 
@@ -276,13 +278,12 @@ def post_streak(state: dict, res: pd.DataFrame, brand: str) -> None:
         lines.append(f"…и ещё {n - 10}")
     lines += [f"\n💰 Если бы всё это было одним экспрессом — кэф <b>{total:,.2f}</b>".replace(",", " "),
               "<i>Серии заканчиваются — играйте по банку, а не на эмоциях.</i>", FOOTER]
-    rows = [(str(r["score"]), str(r["home"]), str(r["away"]), str(r["main_label"]))
-            for _, r in tail.iloc[::-1].head(8).iterrows()]
+    rows = [{"score": str(r["score"]), "home": str(r["home"]), "away": str(r["away"]), "label": str(r["main_label"]),
+             "odds": float(r["main_odds"]), "sport": str(r.get("sport", "football"))}
+            for _, r in tail.iloc[::-1].iterrows()]
     sports_in = tail["sport"].fillna("football").unique() if "sport" in tail else ["football"]
     icon = sports_in[0] if len(sports_in) == 1 else "football"  # иконка вида спорта, из которого серия
-    word = "прогноз" if n % 10 == 1 and n % 100 != 11 else "прогноза" if 2 <= n % 10 <= 4 and not 12 <= n % 100 <= 14 else "прогнозов"
-    png = card.schedule_card(f"{n} {word} подряд", rows, max(0, n - 8), brand, heading="Серия заходов",
-                             sport=icon)
+    png = card.streak_card(rows, n, total, brand, sport=icon)
     _post(png, "\n".join(lines))
     print(f"Серия: {n} заходов подряд")
 
