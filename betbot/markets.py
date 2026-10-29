@@ -208,7 +208,12 @@ def stake_text(t: dict) -> str:
     if s > 1.0:
         line += " · есть перевес над линией"
     if t.get("p"):
-        line += f" · ставить при кэфе <b>от {1 / t['p']:.2f}</b>"
+        fair_odds = 1 / t["p"]
+        if not t.get("est") and t.get("odds") and t["odds"] < fair_odds:
+            # средний кэф ниже справедливого (это маржа букмекера) — честно говорим, где ставка становится выгодной
+            line += f" · выгодно с кэфа <b>{fair_odds:.2f}</b> — ищи у букмекеров повыше"
+        else:
+            line += f" · ставить при кэфе <b>от {fair_odds:.2f}</b>"
     return line
 
 
