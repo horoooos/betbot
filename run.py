@@ -16,7 +16,7 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-from betbot import card, content, esports, live, names, news, oddspapi, reviews, sports, tables, telegram, texts
+from betbot import card, content, esports, live, names, news, oddspapi, pro, reviews, site, sports, tables, telegram, texts
 from betbot import markets as mk
 from betbot.data import MSK, load_fixtures, load_history
 from betbot.engine import add_market, fit_full, fit_weights, walk_forward
@@ -41,6 +41,7 @@ CUP_SOURCES = {"FAC": ["eng.1", "eng.2", "eng.3", "eng.4"], "ELC": ["eng.1", "en
                "CDR": ["esp.1", "esp.2"], "DFB": ["ger.1", "ger.2", "ger.3"], "CIT": ["ita.1", "ita.2"],
                "CDF": ["fra.1", "fra.2"], "TPO": ["por.1", "por.2"], "SCC": ["sco.1", "sco.2"]}
 MORNING_HOUR = 8        # во сколько (МСК) выходит расписание
+VALUE_HOUR = 11         # во сколько выходит 💎 value дня
 DAY_START_HOUR = 6      # «игровой день» — с 06:00 до 06:00 следующего дня
 VALUE_EDGE = (0.05, 0.30)
 
@@ -205,7 +206,12 @@ def morning(state: dict, events: list[dict], other: list[dict], now: pd.Timestam
     if len(res):
         rows = [(name, *texts.numbers(df)) for name, df in texts.periods(res, today)]
         png = card.stats_card(f"на {texts.date_ru(today)}", rows, BRAND)
-        post(png, texts.stats(res, today, mk.calibration(res)))
+        curve = pro.bank_curve(res)
+        extra = [f"💼 <b>Виртуальный банк</b> (ставки ровно по рекомендациям бота): {pro.BANK_START:,} → "
+                 f"<b>{curve[-1]:,.0f} ₽</b> ({100 * (curve[-1] / pro.BANK_START - 1):+.1f}%)".replace(",", " ")]
+        if pro.clv_summary(res):
+            extra.append(pro.clv_summary(res))
+        post(png, texts.stats(res, today, mk.calibration(res)) + "\n\n" + "\n\n".join(extra))
     start = pd.Timestamp(today) + pd.Timedelta(hours=DAY_START_HOUR)
     day = [e for e in events if e["state"] == "pre" and start <= pd.Timestamp(e["kickoff"]) < start + pd.Timedelta(days=1)
            and (e["div"] in HIST_LEAGUES or (e.get("odds") or {}).get("H"))]  # только матчи, на которые будет прогноз
@@ -223,9 +229,13 @@ def morning(state: dict, events: list[dict], other: list[dict], now: pd.Timestam
         title = f"{texts.DAYS[today.weekday()]}, {texts.date_ru(today)}"
         post(card.schedule_card(title, rows, len(day) - len(top), BRAND), texts.schedule(day, now, extra))
     print(f"Утренний пост: футбольных матчей в расписании {len(day)}")
+    try:
+        pro.post_top(state, events, other, now, BRAND)  # 3 главных прогноза дня — закрепляются
+    except Exception as ex:
+        print(f"  ! прогнозы дня не удались: {ex}")
 
 
-def review(ev: dict, w: dict, fx_loader, hist_loader, calib: dict) -> dict | None:
+def review(ev: dict, w: dict, fx_loader, hist_loader, calib: dict, state: dict) -> dict | None:
     row = find_fixture(ev, fx_loader())
     mkt = market(ev, row)
     lam = lambdas(ev, row, mkt, w.get("1X2", 0.0), hist_loader)
@@ -235,7 +245,11 @@ def review(ev: dict, w: dict, fx_loader, hist_loader, calib: dict) -> dict | Non
     probs = mk.all_markets(*lam)
     scores = probs.pop("scores")
     main, bold = mk.tips(probs, mkt["real"] if mkt else {}, calib)
-    m = {**ev, "lam": list(lam), "probs": probs, "scores": scores, "main": main, "bold": bold,
+    for t in (main, bold):
+        if t:
+            t["stake"] = pro.stake(t)
+    m = {**ev, "open": pro.snapshot(ev, [main.get("key"), (bold or {}).get("key")]),
+         "top": pro.is_top(state, ev["div"], ev["id"]), "lam": list(lam), "probs": probs, "scores": scores, "main": main, "bold": bold,
          "value": value_pick(probs, mkt), "odds_src": mkt["src"] if mkt else "нет, только модель",
          "model_w": w.get("1X2", 0.0) if mkt else 1.0,
          "learned_n": len(read_results())}
@@ -260,7 +274,9 @@ def add_result(m: dict, score: str, sport: str) -> dict:
            "main_p": m["main"]["p"], "main_odds": m["main"]["odds"], "main_est": m["main"]["est"],
            "main_hit": m["main_hit"], "bold_key": bold.get("key"), "bold_label": bold.get("label"),
            "bold_p": bold.get("p"), "bold_odds": bold.get("odds"), "bold_hit": m.get("bold_hit"),
-           "value_odds": (m.get("value") or {}).get("odds"), "value_hit": m.get("value_hit")}
+           "value_odds": (m.get("value") or {}).get("odds"), "value_hit": m.get("value_hit"),
+           "main_stake": m["main"].get("stake", pro.STAKE_MIN), "main_clv": pro.clv(m, m["main"]["key"]),
+           "bold_clv": pro.clv(m, bold.get("key"))}
     res = pd.concat([read_results(), pd.DataFrame([row])], ignore_index=True)
     res["sport"] = res["sport"].fillna("football")
     res = res.drop_duplicates(["sport", "id"], keep="last")
@@ -273,7 +289,7 @@ def add_result(m: dict, score: str, sport: str) -> dict:
 
 # ── хоккей, баскетбол, теннис ───────────────────────────────────────────────
 
-def other_review(e: dict, calib: dict, ctx: dict) -> dict | None:
+def other_review(e: dict, calib: dict, ctx: dict, state: dict) -> dict | None:
     """Пост перед матчем (хоккей, баскетбол, теннис, киберспорт): картинка + прогноз, полный разбор — ответом."""
     hist, ratings = ctx.get(e["sport"], ([], {}))
     a = sports.analyse(e, ratings)
@@ -281,6 +297,11 @@ def other_review(e: dict, calib: dict, ctx: dict) -> dict | None:
         return None
     m = {**e, **a}
     m["main"], m["bold"] = sports.pick(a, calib)
+    for t in (m["main"], m["bold"]):
+        if t:
+            t["stake"] = pro.stake(t)
+    m["open"] = pro.snapshot(e, [m["main"].get("key"), (m["bold"] or {}).get("key")])
+    m["top"] = pro.is_top(state, e["div"], e["id"])
     kick = pd.Timestamp(e["kickoff"])
     tip = f"{m['main']['label']} · {texts.pct(m['main']['p'])}"
     png = card.match_card(sports.league_plain(e["div"]), texts.when(kick), e["home"], e["away"], a["bar"], tip,
@@ -316,7 +337,7 @@ def other_settle(m: dict, e: dict) -> None:
         verdicts.append((f"Смелый: {m['bold']['label']}", m["bold_hit"]))
     png = card.result_card(sports.league_plain(m["div"]), m["home"], m["away"], f["hs"], f["as"], verdicts, BRAND,
                            sport=m["sport"])
-    post(png, sports.result_caption(m, f, ds), reply_to=m["msg_id"])
+    post(png, sports.result_caption(m, f, ds) + pro.clv_line(m), reply_to=m["msg_id"])
     m["status"] = "done"
 
 
@@ -337,11 +358,13 @@ def other_sports(state: dict, events: list[dict], now: pd.Timestamp, calib: dict
             if e["sport"] in ("tennis", "esports"):
                 e["odds"] = oddspapi.lookup(e) or {}
             try:
-                store[key] = other_review(e, calib, ctx) or {"status": "skipped", "kickoff": e["kickoff"]}
+                store[key] = other_review(e, calib, ctx, state) or {"status": "skipped", "kickoff": e["kickoff"]}
             except Exception as ex:
                 print(f"  ! обзор не удался {key}: {ex}")
             save_json(OTHER, store)
     by_key = {f"{e['div']}|{e['id']}": e for e in events}
+    for key, m in store.items():
+        capture_close(m, by_key.get(key), now)
     for key, m in store.items():
         e = by_key.get(key)
         if m.get("sport") and m.get("status") == "reviewed" and e and e["completed"]:
@@ -352,6 +375,15 @@ def other_sports(state: dict, events: list[dict], now: pd.Timestamp, calib: dict
             save_json(OTHER, store)
     old = now - pd.Timedelta(days=3)
     save_json(OTHER, {k: v for k, v in store.items() if pd.Timestamp(v["kickoff"]) > old})
+
+
+def capture_close(m: dict, e: dict | None, now: pd.Timestamp) -> None:
+    """Запоминаем линию за несколько минут до начала — с ней сравнивается линия при публикации (CLV)."""
+    if not e or m.get("status") != "reviewed" or m.get("close") or e["state"] != "pre":
+        return
+    if pd.Timestamp(e["kickoff"]) - now <= pd.Timedelta(minutes=8):
+        keys = [m["main"].get("key"), (m.get("bold") or {}).get("key")]
+        m["close"] = pro.snapshot(e, keys) or {"_": None}
 
 
 def finished_scores(football: list[dict], other: list[dict]) -> dict:
@@ -380,7 +412,7 @@ def settle(m: dict, ev: dict) -> None:
     if m.get("value"):
         verdicts.append((f"Value: {m['value']['label']}", m["value_hit"]))
     png = card.result_card(texts.league_plain(m["div"]), m["home"], m["away"], hs, as_, verdicts, BRAND)
-    post(png, texts.result(m, s, hs, as_, ds), reply_to=m["msg_id"])
+    post(png, texts.result(m, s, hs, as_, ds) + pro.clv_line(m), reply_to=m["msg_id"])
     m["status"] = "done"
     print(f"  итог: {m['home']['ru']} {hs}:{as_} {m['away']['ru']} → {'✅' if m['main_hit'] else '❌'}")
 
@@ -448,7 +480,7 @@ def main():
         kick = pd.Timestamp(ev["kickoff"])
         if ev["state"] == "pre" and ev["id"] not in matches and now < kick <= now + lead:
             try:
-                m = review(ev, w, fx_loader, hist_loader, calib)
+                m = review(ev, w, fx_loader, hist_loader, calib, state)
             except Exception as e:  # один сломанный матч не должен ронять весь запуск
                 print(f"  ! обзор не удался {ev['id']}: {e}")
                 continue
@@ -456,6 +488,8 @@ def main():
             save_json(MATCHES, matches)
 
     by_id = {e["id"]: e for e in events}
+    for mid, m in matches.items():
+        capture_close(m, by_id.get(mid), now)
     for mid, m in matches.items():
         ev = by_id.get(mid)
         if m.get("status") == "reviewed" and ev and ev["completed"] and str(ev["home"]["score"]).isdigit():
@@ -477,6 +511,18 @@ def main():
     except Exception as e:
         print(f"  ! live не удался: {e}")
     save_json(LIVE, live.cleanup(live_store, now))
+
+    if now.hour == VALUE_HOUR and state.get("value_day") != today:  # 💎 value дня
+        state["value_day"] = today
+        try:
+            pro.post_value(fx_loader(), events, now, BRAND)
+        except Exception as e:
+            print(f"  ! value дня не удался: {e}")
+    if daily or not site.OUT.exists():  # публичная страница со статистикой — раз в день
+        try:
+            site.build(read_results(), now)
+        except Exception as e:
+            print(f"  ! страница статистики не собралась: {e}")
 
     for step in (news.run, tables.run):  # новость раз в час и таблица/рейтинг дня
         try:

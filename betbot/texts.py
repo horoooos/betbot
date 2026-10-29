@@ -5,6 +5,7 @@ import pandas as pd
 
 from . import names
 from .leagues import ALL, ORDER, title
+from .reviews import rest_info
 
 DAYS = ["понедельник", "вторник", "среда", "четверг", "пятница", "суббота", "воскресенье"]
 DAYS_SHORT = ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"]
@@ -34,6 +35,11 @@ def when(t: pd.Timestamp) -> str:
 def league_plain(code: str) -> str:
     _, country, league, _ = ALL[code]
     return f"{country} · {league}"
+
+
+def stake_line(t: dict) -> str:
+    s = t.get("stake", 1.0)
+    return f"💰 Ставка: <b>{s:g}% банка</b>" + (" · есть перевес над линией" if s > 1.0 else "")
 
 
 def tip_line(t: dict) -> str:
@@ -72,12 +78,12 @@ def schedule(matches: list[dict], day: pd.Timestamp, extra: str = "") -> str:
 
 def caption(m: dict, venue: str | None) -> str:
     h, a = escape(m["home"]["ru"]), escape(m["away"]["ru"])
-    lines = [f"⚽️ <b>{h} — {a}</b>",
+    lines = (["⭐ <b>ПРОГНОЗ ДНЯ</b>"] if m.get("top") else []) + [f"⚽️ <b>{h} — {a}</b>",
              f"🏆 {title(m['div'])}",
              f"⏰ {when(ts(m))}"]
     if venue:
         lines.append(f"🏟 {escape(venue)}")
-    lines += ["", f"🎯 <b>Основной прогноз:</b> {tip_line(m['main'])}"]
+    lines += ["", f"🎯 <b>Основной прогноз:</b> {tip_line(m['main'])}", stake_line(m["main"])]
     if m.get("bold"):
         lines.append(f"🔥 <b>Смелый прогноз:</b> {tip_line(m['bold'])}")
     if m.get("value"):
@@ -170,6 +176,9 @@ def review(m: dict, s: dict) -> str:
     fh, pts_h, goals_h, btts_h = _form_line(home, s["last5"].get(hid, []))
     fa, pts_a, goals_a, btts_a = _form_line(away, s["last5"].get(aid, []))
     parts.append("📈 <b>Форма: 5 последних матчей</b> (все турниры)\n" + fh + "\n" + fa)
+    rest_line, rest_why = rest_info(home, away, s["last5"].get(hid, []), s["last5"].get(aid, []), m["kickoff"], "football")
+    if rest_line:
+        parts.append(rest_line)
 
     h2h_lines, h2h_goals = _h2h(m, s)
     parts.append("🤝 <b>Личные встречи</b>\n" + "\n".join(h2h_lines))
@@ -218,6 +227,8 @@ def review(m: dict, s: dict) -> str:
             why.append(f"В матчах обеих команд много голов: в среднем {avg_goals:.1f} за игру.")
         elif avg_goals <= 2:
             why.append(f"Команды играют скупо: в среднем {avg_goals:.1f} гола за игру.")
+    if rest_why:
+        why.append(rest_why)
     if btts_h >= 0.6 and btts_a >= 0.6:
         why.append("Обе команды регулярно и забивают, и пропускают.")
     if h2h_goals is not None and h2h_goals >= 3:

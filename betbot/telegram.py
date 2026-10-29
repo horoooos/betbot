@@ -93,3 +93,14 @@ def send_photo(png: bytes, caption: str, reply_to: int | None = None) -> int:
         params["reply_to_message_id"] = reply_to
         params["allow_sending_without_reply"] = True
     return _call("sendPhoto", files={"photo": ("match.png", png, "image/png")}, **params)["message_id"]
+
+
+def pin(message_id: int) -> None:
+    """Закрепить пост в канале (нужны права администратора на закрепление)."""
+    if DRY:
+        print(f"[тест] закреплён пост #{message_id}")
+        return
+    try:
+        _call("pinChatMessage", message_id=message_id, disable_notification=True)
+    except RuntimeError as e:
+        print(f"  ! закрепить не удалось: {e}")

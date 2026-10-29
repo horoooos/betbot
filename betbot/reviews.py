@@ -18,6 +18,37 @@ LEADER = {"Goals": "голы", "Assists": "передачи", "Points": "очк�
 FOOTER = "<i>⚠️ 18+. Прогноз — не гарантия. Ставьте только то, что не жалко потерять.</i>"
 
 
+def rest_days(games: list[dict], kickoff: str) -> int | None:
+    """Сколько дней прошло с прошлого матча команды."""
+    dates = [pd.Timestamp(g["date"]) for g in games or [] if g.get("date")]
+    if not dates:
+        return None
+    kick = pd.Timestamp(kickoff).tz_localize(None).normalize()
+    return int((kick - max(d.tz_localize(None) if d.tzinfo else d for d in dates).normalize()).days)
+
+
+def _days(n: int) -> str:
+    one = n % 10 == 1 and n % 100 != 11
+    few = 2 <= n % 10 <= 4 and not 12 <= n % 100 <= 14
+    return f"{n} {'день' if one else 'дня' if few else 'дней'}"
+
+
+def rest_info(home: dict, away: dict, gh: list[dict], ga: list[dict], kickoff: str, sport: str):
+    """Строка про отдых перед матчем и (если разница заметная) вывод про усталость."""
+    rh, ra = rest_days(gh, kickoff), rest_days(ga, kickoff)
+    if rh is None or ra is None or rh < 0 or ra < 0:
+        return "", None
+    line = f"⏱ <b>Отдых перед матчем</b>: {escape(home['ru'])} — {_days(rh)}, {escape(away['ru'])} — {_days(ra)}"
+    why = None
+    if sport in ("hockey", "basketball") and min(rh, ra) <= 1 < max(rh, ra):
+        tired = home if rh <= 1 else away
+        why = f"{escape(tired['ru'])} играет второй день подряд — усталость обычно снижает шансы."
+    elif sport == "football" and min(rh, ra) <= 3 and max(rh, ra) - min(rh, ra) >= 3:
+        tired = home if rh < ra else away
+        why = f"{escape(tired['ru'])} отдыхал заметно меньше ({_days(min(rh, ra))}) — возможна ротация состава."
+    return line, why
+
+
 def _pct(p: float) -> str:
     return f"{100 * p:.0f}%"
 
@@ -84,6 +115,10 @@ def team_review(m: dict, s: dict) -> str:
     fh, wh = _form(home, (s.get("last5") or {}).get(hid, []))
     fa, wa = _form(away, (s.get("last5") or {}).get(aid, []))
     parts.append("📈 <b>Форма: 5 последних игр</b>\n" + fh + "\n" + fa)
+    rest_line, rest_why = rest_info(home, away, (s.get("last5") or {}).get(hid, []), (s.get("last5") or {}).get(aid, []),
+                                    m["kickoff"], m["sport"])
+    if rest_line:
+        parts.append(rest_line)
     h2h = s.get("h2h") or []
     if h2h:
         lines, wins_h = [], 0
@@ -127,6 +162,8 @@ def team_review(m: dict, s: dict) -> str:
     nh, na = len(inj.get(hid, [])), len(inj.get(aid, []))
     if abs(nh - na) >= 2:
         why.append(f"Больше потерь у команды {escape(home['ru'] if nh > na else away['ru'])} ({max(nh, na)} игрока).")
+    if rest_why:
+        why.append(rest_why)
     model = m.get("model") or {}
     if hockey and model.get("lh"):
         why.append(f"Ожидается около {model['lh'] + model['la']:.1f} шайб на двоих.")

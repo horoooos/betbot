@@ -499,13 +499,16 @@ def _tip(t: dict) -> str:
 def caption(m: dict, when: str) -> str:
     """Пост перед игрой (хоккей/баскетбол) — помещается в подпись к картинке."""
     h, a = escape(m["home"]["ru"]), escape(m["away"]["ru"])
-    lines = [f"{EMOJI[m['sport']]} <b>{h} — {a}</b>", f"🏆 {title(m['div'])}", f"⏰ {when}"]
+    lines = (["⭐ <b>ПРОГНОЗ ДНЯ</b>"] if m.get("top") else []) + [
+        f"{EMOJI[m['sport']]} <b>{h} — {a}</b>", f"🏆 {title(m['div'])}", f"⏰ {when}"]
     if m.get("tournament"):
         rnd = ROUNDS.get(m.get("round", ""), m.get("round", ""))
         lines.append(f"🎟 {escape(m['tournament'])}" + (f" · {escape(rnd)}" if rnd else ""))
     if m["home"].get("record") or m["away"].get("record"):
         lines.append(f"📋 Баланс: {h} {m['home'].get('record') or '—'} · {a} {m['away'].get('record') or '—'}")
-    lines += ["", f"🎯 <b>Основной прогноз:</b> {_tip(m['main'])}"]
+    s_ = m["main"].get("stake", 1.0)
+    lines += ["", f"🎯 <b>Основной прогноз:</b> {_tip(m['main'])}",
+              f"💰 Ставка: <b>{s_:g}% банка</b>" + (" · есть перевес над линией" if s_ > 1.0 else "")]
     if m.get("bold"):
         lines.append(f"🔥 <b>Смелый прогноз:</b> {_tip(m['bold'])}")
     lines += ["", "👇 <i>Полный разбор — в ответе к посту</i>"]

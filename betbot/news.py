@@ -22,6 +22,12 @@ FEEDS = {
     "tennis": ["https://www.championat.com/rss/news/tennis/"],
     "esports": ["https://www.championat.com/rss/news/cybersport/", "https://www.cybersport.ru/rss/materials"],
 }
+# общие ленты обо всём спорте — из них берём только новости, у которых рубрика/заголовок про нужный вид спорта
+MIXED = ["https://www.sports.ru/rss/main.xml", "https://www.sport-express.ru/services/materials/news/se/"]
+WORDS = {"football": ("футбол", "рпл", "лига чемпионов", "апл"), "hockey": ("хоккей", "кхл", "нхл"),
+         "basketball": ("баскетбол", "нба", "единая лига"), "tennis": ("теннис", "atp", "wta"),
+         "esports": ("киберспорт", "cs2", "dota", "counter-strike")}
+MAX_TRIES = 3  # попыток пересказа за один запуск — чтобы новости не задерживали live и прогнозы
 ORDER = ["football", "esports", "hockey", "football", "basketball", "tennis", "esports"]
 TAGS = {"football": "#футбол", "hockey": "#хоккей", "basketball": "#баскетбол", "tennis": "#теннис",
         "esports": "#киберспорт"}
@@ -49,7 +55,7 @@ def _clean(html: str) -> str:
 
 def _items(sport: str) -> list[dict]:
     out = []
-    for url in FEEDS[sport]:
+    for url in FEEDS[sport] + MIXED:
         try:
             r = requests.get(url, timeout=15, headers={"User-Agent": "Mozilla/5.0"})
             root = ET.fromstring(r.content)
@@ -57,6 +63,10 @@ def _items(sport: str) -> list[dict]:
             continue
         for it in root.findall(".//item"):
             title = _clean(it.findtext("title"))
+            if url in MIXED:  # общая лента — только если рубрика или заголовок про этот вид спорта
+                tags = " ".join(_clean(c.text) for c in it.findall("category")) + " " + title
+                if not any(w in tags.lower() for w in WORDS[sport]):
+                    continue
             guid = it.findtext("guid") or it.findtext("link") or title
             try:
                 when = pd.Timestamp(it.findtext("pubDate")).tz_convert("UTC")
@@ -96,17 +106,22 @@ def _rewrite(item: dict) -> dict | None:
 
 def run(state: dict, now: pd.Timestamp, brand: str) -> None:
     """Вызывается каждый запуск; публикует одну новость, когда подошло случайное время."""
-    if not (9 <= now.hour or now.hour < 1):
+    if 2 <= now.hour < 8:  # ночью с 02:00 до 08:00 новостей нет
         return
     nxt = state.get("news_next")
     if nxt and now < pd.Timestamp(nxt):
         return
     seen = state.setdefault("news_seen", [])
     i = state.get("news_i", 0)
+    tries = 0
     for shift in range(len(ORDER)):
         sport = ORDER[(i + shift) % len(ORDER)]
         fresh = [x for x in _items(sport) if x["id"] not in seen and x["when"] > now.tz_convert("UTC") - pd.Timedelta(hours=6)]
-        for item in fresh[:3]:
+        for item in fresh[:5]:
+            if tries >= MAX_TRIES:  # остальное — в следующий запуск (через пару минут)
+                state["news_next"] = (now + pd.Timedelta(minutes=2)).isoformat()
+                return
+            tries += 1
             seen.append(item["id"])
             news = _rewrite(item)
             if not news or news["sport"] != sport:  # новость не про этот вид спорта (Ф-1, бокс…) — пропускаем
@@ -116,8 +131,8 @@ def run(state: dict, now: pd.Timestamp, brand: str) -> None:
             telegram.send_photo(png, f"{news['emoji'] or EMOJI[sport]} <b>{escape(news['title'])}</b>\n\n"
                                      f"{escape(news['text'])}\n\n{TAGS[sport]}")
             state["news_i"] = (i + shift + 1) % len(ORDER)
-            state["news_next"] = (now + pd.Timedelta(minutes=random.randint(45, 80))).isoformat()
+            state["news_next"] = (now + pd.Timedelta(minutes=random.randint(40, 65))).isoformat()  # каждый час
             del seen[:-500]
             print(f"Новость ({sport}): {news['title']}")
             return
-    state["news_next"] = (now + pd.Timedelta(minutes=20)).isoformat()  # не вышло — попробуем позже
+    state["news_next"] = (now + pd.Timedelta(minutes=6)).isoformat()  # не вышло — пробуем снова через несколько минут
