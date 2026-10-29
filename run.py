@@ -113,6 +113,12 @@ def find_fixture(ev: dict, fx: pd.DataFrame) -> pd.Series | None:
     return best if score >= 1.3 else None
 
 
+def _real_max(real: dict, key: str | None, odds) -> None:
+    """Настоящий кэф рынка; если один рынок пришёл из двух мест (Ф1(−0.5) = П1) — берём лучший."""
+    if key and odds and not pd.isna(odds) and odds > 1.01:
+        real[key] = max(float(odds), float(real.get(key) or 0))
+
+
 def market(ev: dict, row: pd.Series | None) -> dict | None:
     def ok(*vals):
         return all(v is not None and not pd.isna(v) and v > 1.01 for v in vals)
@@ -126,6 +132,10 @@ def market(ev: dict, row: pd.Series | None) -> dict | None:
             line, p_over = 2.5, float(mk.fair([row["Avg>2.5"], row["Avg<2.5"]])[0])
             real.update({"O25": row["Avg>2.5"], "U25": row["Avg<2.5"]})
         best = {s: row.get(f"Max{s}") for s in "HDA"}
+        if ok(row.get("AvgAHH"), row.get("AvgAHA")) and not pd.isna(row.get("AHh")):
+            h = float(row["AHh"])
+            for side, hh, odd in (("H", h, row["AvgAHH"]), ("A", -h, row["AvgAHA"])):
+                _real_max(real, mk.handicap_key(side, hh), odd)
         return {"p1x2": p1x2, "line": line, "p_over": p_over, "real": real, "max": best,
                 "src": "среднее по букмекерам"}
     o = ev.get("odds") or {}
@@ -134,8 +144,12 @@ def market(ev: dict, row: pd.Series | None) -> dict | None:
         line = p_over = None
         if o.get("line") and ok(o.get("over"), o.get("under")):
             line, p_over = float(o["line"]), float(mk.fair([o["over"], o["under"]])[0])
-            if line == 2.5:
-                real.update({"O25": o["over"], "U25": o["under"]})
+            tag = {1.5: "15", 2.5: "25", 3.5: "35", 4.5: "45"}.get(line)
+            if tag:
+                real.update({f"O{tag}": o["over"], f"U{tag}": o["under"]})
+        for side, key in (("H", "spread_h"), ("A", "spread_a")):
+            if o.get(key) and ok(o[key][1]):
+                _real_max(real, mk.handicap_key(side, o[key][0]), o[key][1])
         return {"p1x2": mk.fair([o["H"], o["D"], o["A"]]), "line": line, "p_over": p_over, "real": real,
                 "max": {}, "src": "DraftKings"}
     return None

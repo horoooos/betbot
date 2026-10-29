@@ -57,7 +57,7 @@ def _markets(m: dict) -> str:
     rows = [(m["labels"][k], m["probs"][k]) for k in m["probs"]]
     width = min(max(len(r[0]) for r in rows), 30)
     return "📋 <b>Вероятности по всем рынкам</b>\n<code>" + "\n".join(
-        f"{escape(n[:30].ljust(width))} {_pct(p):>4}" for n, p in rows[:16]) + "</code>"
+        f"{escape(n[:30].ljust(width))} {_pct(p):>4}" for n, p in rows[:26]) + "</code>"
 
 
 def _tip(t: dict) -> str:

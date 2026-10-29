@@ -79,7 +79,37 @@ def _meta(state: dict) -> dict:
                 winner[key] = {"market": str(m["marketId"]), "p1": str(outs[0]["outcomeId"]), "p2": str(outs[1]["outcomeId"])}
         if winner:
             meta["winner"] = winner
+    if "extra" not in meta and meta.get("sports"):
+        meta["extra"] = _extra_markets(_get(state, "/markets") or [], meta["sports"])
     return meta
+
+
+def _extra_markets(markets: list, sports: dict) -> dict:
+    """Форы ±1.5 и тотал 2.5 по сетам (теннис) или картам (киберспорт) — из того же ответа с линией.
+
+    Возвращает вид спорта → {marketId: [вид, линия, исход1, исход2]}. Форы и тоталы по геймам/раундам
+    не берём: в названии рынка должно быть «set» или «map».
+    """
+    out = {}
+    for key, sid in sports.items():
+        unit = ("set",) if key == "tennis" else ("map",)
+        found = {}
+        for m in markets:
+            name = f"{m.get('marketType', '')} {m.get('marketName', '')}".lower()
+            if m.get("sportId") != sid or m.get("marketLength") != 2 or m.get("playerProp"):
+                continue
+            if not any(u in name for u in unit) or any(w in name for w in ("game", "round", "kill", "1st", "2nd", "first")):
+                continue
+            h = m.get("handicap")
+            outs = sorted(m.get("outcomes", []), key=lambda o: o["outcomeId"])
+            if h is None or len(outs) != 2:
+                continue
+            kind = "tot" if ("total" in name or "over" in name) else "hcp" if ("handicap" in name or "spread" in name) else None
+            if (kind == "tot" and float(h) == 2.5) or (kind == "hcp" and abs(float(h)) == 1.5):
+                found[str(m["marketId"])] = [kind, float(h), str(outs[0]["outcomeId"]), str(outs[1]["outcomeId"])]
+        out[key] = found
+    print(f"  OddsPapi: доп. рынки {({k: len(v) for k, v in out.items()})}")
+    return out
 
 
 def _tournaments(state: dict, key: str, sport_id: int) -> list[int]:
@@ -144,13 +174,32 @@ def refresh(state: dict) -> None:
                 except (KeyError, TypeError):
                     continue
                 if p1 and p2 and p1 > 1 and p2 > 1:
+                    markets = ((f.get("bookmakerOdds") or {}).get(book) or {}).get("markets", {})
                     rows.append({"start": f.get("startTime"), "p1": f.get("participant1Name", ""),
                                  "p2": f.get("participant2Name", ""), "o1": float(p1), "o2": float(p2),
-                                 "book": "Pinnacle" if book == "pinnacle" else "Bet365"})
+                                 "book": "Pinnacle" if book == "pinnacle" else "Bet365",
+                                 "extra": _parse_extra(markets, (meta.get("extra") or {}).get(key, {}))})
                     break
         (CACHE / f"{key}.json").write_text(json.dumps(rows, ensure_ascii=False), encoding="utf-8")
         last[key] = now.isoformat()
         print(f"  OddsPapi: линия {key} — {len(rows)} матчей")
+
+
+def _parse_extra(markets: dict, wanted: dict) -> dict:
+    """{'tot': [2.5, больше, меньше], 'hcp': [фора первого, кэф первого, кэф второго]}"""
+    out = {}
+    for mid, (kind, h, o1, o2) in wanted.items():
+        mkt = markets.get(mid)
+        if not mkt or kind in out:
+            continue
+        try:
+            a = mkt["outcomes"][o1]["players"]["0"]["price"]
+            b = mkt["outcomes"][o2]["players"]["0"]["price"]
+        except (KeyError, TypeError):
+            continue
+        if a and b and a > 1 and b > 1:
+            out[kind] = [h, float(a), float(b)]
+    return out
 
 
 def _surname(name: str) -> str:
@@ -187,4 +236,8 @@ def lookup(e: dict) -> dict | None:
     if best is None or score < (2 if e["sport"] == "tennis" else 1.4):
         return None
     o1, o2 = (best["o2"], best["o1"]) if swap else (best["o1"], best["o2"])
-    return {"H": o1, "A": o2, "src": best["book"]}
+    extra = dict(best.get("extra") or {})
+    if swap and extra.get("hcp"):  # фора записана для первого участника линии — переворачиваем
+        h, a, b = extra["hcp"]
+        extra["hcp"] = [-h, b, a]
+    return {"H": o1, "A": o2, "src": best["book"], "extra": extra}

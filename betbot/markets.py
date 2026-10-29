@@ -37,11 +37,53 @@ MARKETS = {
     "A+1.5": ("Фора", "Ф2 (+1.5)", lambda i, j: j - i >= -1),
     "A-1.5": ("Фора", "Ф2 (−1.5)", lambda i, j: j - i >= 2),
     "H+1.5": ("Фора", "Ф1 (+1.5)", lambda i, j: i - j >= -1),
+    "H-2.5": ("Фора", "Ф1 (−2.5)", lambda i, j: i - j >= 3),
+    "A-2.5": ("Фора", "Ф2 (−2.5)", lambda i, j: j - i >= 3),
+    "H+2.5": ("Фора", "Ф1 (+2.5)", lambda i, j: i - j >= -2),
+    "A+2.5": ("Фора", "Ф2 (+2.5)", lambda i, j: j - i >= -2),
+    # больше линий тотала и индивидуальных тоталов
+    "O45": ("Тотал", "ТБ 4.5", lambda i, j: i + j > 4.5),
+    "U45": ("Тотал", "ТМ 4.5", lambda i, j: i + j < 4.5),
+    "H_O25": ("Инд. тотал", "ИТ1 больше 2.5", lambda i, j: i > 2),
+    "A_O25": ("Инд. тотал", "ИТ2 больше 2.5", lambda i, j: j > 2),
+    # комбинированные
+    "H&O15": ("Комбо", "П1 и ТБ 1.5", lambda i, j: i > j and i + j > 1.5),
+    "A&O15": ("Комбо", "П2 и ТБ 1.5", lambda i, j: j > i and i + j > 1.5),
+    "H&BTTS": ("Комбо", "П1 и обе забьют", lambda i, j: i > j and j > 0),
+    "A&BTTS": ("Комбо", "П2 и обе забьют", lambda i, j: j > i and i > 0),
+    "1X&U35": ("Комбо", "1X и ТМ 3.5", lambda i, j: i >= j and i + j < 3.5),
+    "X2&U35": ("Комбо", "X2 и ТМ 3.5", lambda i, j: i <= j and i + j < 3.5),
+    "BTTS&O25": ("Комбо", "Обе забьют и ТБ 2.5", lambda i, j: i > 0 and j > 0 and i + j > 2.5),
+}
+# Первый тайм: модель та же, но в среднем в первом тайме забивают ~45% голов матча
+HT_SHARE = 0.45
+HT_MARKETS = {
+    "HT_H": ("1-й тайм", "П1 в 1-м тайме", lambda i, j: i > j),
+    "HT_D": ("1-й тайм", "Ничья в 1-м тайме", lambda i, j: i == j),
+    "HT_A": ("1-й тайм", "П2 в 1-м тайме", lambda i, j: i < j),
+    "HT_O05": ("1-й тайм", "ТБ 0.5 в 1-м тайме", lambda i, j: i + j > 0.5),
+    "HT_U05": ("1-й тайм", "ТМ 0.5 в 1-м тайме", lambda i, j: i + j < 0.5),
+    "HT_O15": ("1-й тайм", "ТБ 1.5 в 1-м тайме", lambda i, j: i + j > 1.5),
+    "HT_U15": ("1-й тайм", "ТМ 1.5 в 1-м тайме", lambda i, j: i + j < 1.5),
 }
 
 
-MAIN_POOL = ["H", "A", "1X", "X2", "12", "BTTS_Y", "BTTS_N", "O25", "U25", "O35",
-             "H-1.5", "A-1.5", "H_O15", "A_O15"]
+MAIN_POOL = ["H", "A", "1X", "X2", "12", "BTTS_Y", "BTTS_N", "O25", "U25", "O35", "U35",
+             "H-1.5", "A-1.5", "H+1.5", "A+1.5", "H_O15", "A_O15", "H&O15", "A&O15"]
+
+
+def handicap_key(side: str, h: float) -> str | None:
+    """Азиатская фора с половинной линией → наш рынок (возврата не бывает).
+
+    Ф1(−0.5) — это П1, Ф1(+0.5) — это 1X, Ф1(±1.5/2.5) — обычные форы. Целые и четвертные линии
+    пропускаем: там бывает возврат ставки, а честно учесть его в статистике сложнее.
+    """
+    if h is None or abs(h * 2) % 2 != 1:
+        return None
+    if abs(h) == 0.5:
+        return {("H", -1): "H", ("H", 1): "1X", ("A", -1): "A", ("A", 1): "X2"}[(side, 1 if h > 0 else -1)]
+    k = f"{side}{h:+.1f}"
+    return k if k in MARKETS else None
 
 
 def matrix(lh: float, la: float, rho: float = RHO) -> np.ndarray:
@@ -80,6 +122,8 @@ def implied_lambdas(p1x2: np.ndarray, line: float | None = None, p_over: float |
 def all_markets(lh: float, la: float) -> dict:
     m = matrix(lh, la)
     out = {k: _p(m, cond) for k, (_, _, cond) in MARKETS.items()}
+    ht = matrix(lh * HT_SHARE, la * HT_SHARE)
+    out.update({k: _p(ht, cond) for k, (_, _, cond) in HT_MARKETS.items()})
     flat = sorted(((m[i, j], f"{i}:{j}") for i in range(6) for j in range(6)), reverse=True)
     out["scores"] = [(s, float(p)) for p, s in flat[:3]]
     return out
@@ -94,7 +138,7 @@ def won(key: str, hs: int, as_: int) -> bool:
 def label(key: str) -> str:
     if key.startswith("CS_"):
         return f"Точный счёт {key[3:]}"
-    return MARKETS[key][1]
+    return (MARKETS.get(key) or HT_MARKETS[key])[1]
 
 
 def calibration(res, prior: float = 20.0) -> dict[str, tuple[float, int]]:

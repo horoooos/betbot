@@ -272,6 +272,22 @@ def _elo_or_market(e: dict, ratings: dict | None, o: dict):
     return None, None, None, None
 
 
+def _extra_real(real: dict, o: dict, over: str, under: str, w1: str, w2: str, one1: str, one2: str) -> None:
+    """Настоящие кэфы Pinnacle на тотал 2.5 и фору ±1.5 по сетам/картам (в серии до двух побед).
+
+    Тотал больше 2.5 = будет третья партия; Ф1(−1.5) = победа 2:0; Ф1(+1.5) = возьмёт хотя бы одну.
+    """
+    ex = o.get("extra") or {}
+    if ex.get("tot") and float(ex["tot"][0]) == 2.5:
+        real.update({over: ex["tot"][1], under: ex["tot"][2]})
+    if ex.get("hcp") and abs(float(ex["hcp"][0])) == 1.5:
+        h1, o1, o2 = float(ex["hcp"][0]), ex["hcp"][1], ex["hcp"][2]
+        if h1 < 0:  # первый −1.5, второй +1.5
+            real.update({w1: o1, one2: o2})
+        else:
+            real.update({one1: o1, w2: o2})
+
+
 def analyse(e: dict, ratings: dict | None = None) -> dict | None:
     """Вероятности всех рынков матча. Возвращает {probs, labels, real, center, model} или None."""
     o = e.get("odds") or {}
@@ -298,6 +314,11 @@ def analyse(e: dict, ratings: dict | None = None) -> dict | None:
             labels[f"HK_O{L}"], labels[f"HK_U{L}"] = f"ТБ {L}", f"ТМ {L}"
         if line and o.get("over") and o.get("under"):
             real.update({f"HK_O{line}": o["over"], f"HK_U{line}": o["under"]})
+        for side, lab in (("1", "ИТ1"), ("2", "ИТ2")):
+            for L in (1.5, 2.5, 3.5):
+                k = f"HK_IT{side}O{L}"
+                probs[k] = P(lambda i, j, L=L, s=side: (i if s == "1" else j) > L)
+                labels[k] = f"{lab} больше {L}"
         for k, lab, cond in (("HK_H-1.5", "Ф1 (−1.5)", lambda i, j: i - j >= 2), ("HK_A+1.5", "Ф2 (+1.5)", lambda i, j: j - i >= -1),
                              ("HK_A-1.5", "Ф2 (−1.5)", lambda i, j: j - i >= 2), ("HK_H+1.5", "Ф1 (+1.5)", lambda i, j: i - j >= -1)):
             probs[k], labels[k] = P(cond), lab
@@ -353,6 +374,11 @@ def analyse(e: dict, ratings: dict | None = None) -> dict | None:
             probs["TN_4P"], labels["TN_4P"] = 1 - sets["3:0"] - sets["0:3"], "Будет 4+ сета"
         for sc, pr in sets.items():
             probs[f"TN_S{sc}"], labels[f"TN_S{sc}"] = pr, f"Счёт по сетам {sc}"
+        lose = "0:3" if e.get("bo5") else "0:2"
+        probs["TN_SET1"], labels["TN_SET1"] = 1 - sets[lose], f"{h} возьмёт хотя бы сет"
+        probs["TN_SET2"], labels["TN_SET2"] = 1 - sets[lose[::-1]], f"{a} возьмёт хотя бы сет"
+        if not e.get("bo5"):
+            _extra_real(real, o, over="TN_3S", under="TN_2S", w1="TN_S2:0", w2="TN_S0:2", one1="TN_SET1", one2="TN_SET2")
         elo = f"Эло {ra[0]:.0f} : {rb[0]:.0f}" if ra and rb else ""
         center = (f"Линия {src}" + (f" · {elo}" if elo else "")) if src != "Эло" else f"Рейтинг {elo}"
         return {"probs": probs, "labels": labels, "real": real, "center": center, "bar": (p, 0, 1 - p),
@@ -382,6 +408,10 @@ def analyse(e: dict, ratings: dict | None = None) -> dict | None:
             probs["ES_DRY"], labels["ES_DRY"] = dry, f"Всухую ({need}:0 или 0:{need})"
             for k, v in sc.items():
                 probs[f"ES_S{k}"], labels[f"ES_S{k}"] = v, f"Счёт по картам {k}"
+            probs["ES_MAP1"], labels["ES_MAP1"] = 1 - sc[f"0:{need}"], f"{h} возьмёт хотя бы карту"
+            probs["ES_MAP2"], labels["ES_MAP2"] = 1 - sc[f"{need}:0"], f"{a} возьмёт хотя бы карту"
+            if bo == 3:
+                _extra_real(real, o, over="ES_FULL", under="ES_DRY", w1="ES_S2:0", w2="ES_S0:2", one1="ES_MAP1", one2="ES_MAP2")
         elo = f"Эло {ra[0]:.0f} : {rb[0]:.0f}" if ra and rb else ""
         center = f"BO{bo} · " + ((f"линия {src}" + (f" · {elo}" if elo else "")) if src != "Эло" else elo)
         return {"probs": probs, "labels": labels, "real": real, "center": center,
@@ -400,7 +430,7 @@ def pick(a: dict, calib: dict) -> tuple[dict, dict]:
         return probs[k] * calib.get(k, (1.0, 0))[0]
 
     keys = [k for k in probs if 0 < probs[k] < 1]
-    main_pool = [k for k in keys if not k.startswith(("TN_S", "ES_S"))]  # точный счёт — не для основного
+    main_pool = [k for k in keys if ":" not in k]  # точный счёт — не для основного
     main_k, bold_k = mk.choose(keys, probs, real, score, main_pool)
 
     def pack(k):
@@ -446,6 +476,12 @@ def won(key: str, f: dict) -> bool:
         return f["home_won"]
     if key in ("HK_ML_A", "BB_ML_A", "TN_W2"):
         return not f["home_won"]
+    if key.startswith("HK_IT"):
+        return (hs if key[5] == "1" else as_) > float(key[7:])
+    if key in ("TN_SET1", "ES_MAP1"):
+        return hs >= 1
+    if key in ("TN_SET2", "ES_MAP2"):
+        return as_ >= 1
     if key in ("HK_H", "HK_D", "HK_A"):
         rh, ra = f["reg"]
         return {"HK_H": rh > ra, "HK_D": rh == ra, "HK_A": rh < ra}[key]

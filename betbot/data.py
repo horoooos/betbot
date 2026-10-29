@@ -21,6 +21,7 @@ KEEP = [
     "AvgH", "AvgD", "AvgA", "MaxH", "MaxD", "MaxA",
     "PSH", "PSD", "PSA",
     "Avg>2.5", "Avg<2.5", "Max>2.5", "Max<2.5",
+    "AHh", "AvgAHH", "AvgAHA", "MaxAHH", "MaxAHA",
 ]
 # В файлах доп. лиг другие названия колонок и только коэффициенты закрытия
 EXTRA_RENAME = {

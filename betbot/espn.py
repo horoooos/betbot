@@ -52,6 +52,13 @@ def _odds(comp: dict) -> dict:
             "over": decimal(o.get("overOdds") or close(tot, "over")),
             "under": decimal(o.get("underOdds") or close(tot, "under")),
         }
+        ps = o.get("pointSpread") or {}
+        for side, key in (("home", "spread_h"), ("away", "spread_a")):
+            c = (ps.get(side) or {}).get("close") or {}
+            try:
+                out[key] = (float(c["line"]), decimal(c["odds"]))
+            except (KeyError, TypeError, ValueError):
+                pass
         if out["H"] and out["D"] and out["A"]:
             return out
     return {}
