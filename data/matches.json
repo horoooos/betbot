@@ -5070,7 +5070,7 @@
   "kickoff": "2026-10-29T04:05:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Scheduled",
   "home": {
    "id": "7445",
@@ -5165,7 +5165,10 @@
   "odds_src": "DraftKings",
   "model_w": 0.0,
   "learned_n": 30,
-  "msg_id": 234
+  "msg_id": 234,
+  "main_hit": false,
+  "bold_hit": false,
+  "value_hit": null
  },
  "761917": {
   "id": "761917",
