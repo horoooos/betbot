@@ -31,7 +31,6 @@ LEAGUES = {
     "NHL": ("🇺🇸", "США", "NHL", "hockey/nhl", "hockey"),
     "NBA": ("🇺🇸", "США", "NBA", "basketball/nba", "basketball"),
     "WNBA": ("🇺🇸", "США", "WNBA", "basketball/wnba", "basketball"),
-    "NBL": ("🇦🇺", "Австралия", "NBL", "basketball/nbl", "basketball"),
     "ATP": ("🎾", "Теннис", "ATP", "tennis/atp", "tennis"),
     "WTA": ("🎾", "Теннис", "WTA", "tennis/wta", "tennis"),
     "CS2": ("🎮", "Киберспорт", "CS2", "", "esports"),      # данные — PandaScore, см. esports.py
@@ -41,7 +40,7 @@ EMOJI = {"hockey": "🏒", "basketball": "🏀", "tennis": "🎾", "football": "
 SPORT_RU = {"hockey": "Хоккей", "basketball": "Баскетбол", "tennis": "Теннис", "football": "Футбол",
             "esports": "Киберспорт"}
 SLAMS = ("Australian Open", "Roland Garros", "French Open", "Wimbledon", "US Open")
-SIGMA = {"NBA": (12.0, 17.0), "WNBA": (11.0, 15.0), "NBL": (12.0, 17.0)}  # разброс разницы и тотала очков
+SIGMA = {"NBA": (12.0, 17.0), "WNBA": (11.0, 15.0)}  # разброс разницы и тотала очков
 
 
 def title(code: str) -> str:
@@ -416,12 +415,19 @@ def pick(a: dict, calib: dict) -> tuple[dict, dict]:
 
 def final(e: dict) -> dict | None:
     """Итоговый счёт: для тенниса — по сетам, для хоккея ещё и основное время."""
+    status = str(e.get("status", "")).upper()
+    if any(w in status for w in ("WALKOVER", "RETIRED", "FORFEIT", "ABANDON", "DEFAULT")):
+        return {"void": True, "reason": {"WALKOVER": "соперник снялся до матча", "RETIRED": "отказ по ходу матча",
+                                         "FORFEIT": "техническое поражение"}.get(
+            next((w for w in ("WALKOVER", "RETIRED", "FORFEIT") if w in status), ""), "матч не доигран")}
     try:
         if e["sport"] == "esports":  # счёт по картам
             hs, as_ = int(e["home"]["score"] or 0), int(e["away"]["score"] or 0)
             return {"hs": hs, "as": as_, "home_won": hs > as_, "away_won": as_ > hs, "sets": f"{hs}:{as_}"}
         if e["sport"] == "tennis":
             s1, s2 = sum(e["home"]["set_won"]), sum(e["away"]["set_won"])
+            if s1 + s2 == 0:  # ни одного сета — матча фактически не было
+                return {"void": True, "reason": "матч не состоялся"}
             return {"hs": s1, "as": s2, "home_won": e["home"]["winner"], "sets": f"{s1}:{s2}",
                     "games": " ".join(f"{int(x)}-{int(y)}" for x, y in zip(e["home"]["sets"], e["away"]["sets"]) if x is not None)}
         hs, as_ = int(e["home"]["score"]), int(e["away"]["score"])

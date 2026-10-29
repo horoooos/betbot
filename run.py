@@ -8,6 +8,7 @@
 
 Запуск:  python run.py   (без TELEGRAM_TOKEN посты сохраняются в data/preview/)
 """
+import difflib
 import json
 import os
 from pathlib import Path
@@ -19,12 +20,26 @@ from betbot import card, content, esports, live, names, news, oddspapi, reviews,
 from betbot import markets as mk
 from betbot.data import MSK, load_fixtures, load_history
 from betbot.engine import add_market, fit_full, fit_weights, walk_forward
-from betbot.espn import scoreboard, summary
+from betbot.espn import _get as espn_get, scoreboard, summary
 from betbot.leagues import ALL, EXTRA, MAIN, NATIONAL, ORDER
 
 # Лиги, по которым бот делает обзоры (код → см. betbot/leagues.py). Сейчас — весь доступный футбол.
 # Чтобы постов было меньше, перечисли нужные коды, например ["E0", "SP1", "I1", "D1", "F1", "RUS", "UCL"].
-REVIEW_LEAGUES = list(ALL)
+REVIEW_LEAGUES = [
+    # лиги
+    "E0", "E1", "SP1", "I1", "D1", "F1", "N1", "P1", "T1", "B1", "SC0", "RUS", "BRA", "ARG", "USA", "MEX", "KSA",
+    # еврокубки и Южная Америка
+    "UCL", "UEL", "UECL", "UCLQ", "USC", "LIB", "SUD",
+    # национальные кубки (только матчи профессиональных команд, см. CUP_SOURCES)
+    "FAC", "ELC", "CDR", "DFB", "CIT", "CDF", "TPO", "SCC",
+    # сборные
+    "UNL", "WCQE", "WCQS", "WC", "EURO", "FRI",
+]
+# В кубках играют и любители — берём матч, только если обе команды есть в профессиональных лигах страны
+# (названия лиг ESPN: из их таблиц берём список профессиональных команд — названия совпадают с кубковыми)
+CUP_SOURCES = {"FAC": ["eng.1", "eng.2", "eng.3", "eng.4"], "ELC": ["eng.1", "eng.2", "eng.3", "eng.4"],
+               "CDR": ["esp.1", "esp.2"], "DFB": ["ger.1", "ger.2", "ger.3"], "CIT": ["ita.1", "ita.2"],
+               "CDF": ["fra.1", "fra.2"], "TPO": ["por.1", "por.2"], "SCC": ["sco.1", "sco.2"]}
 MORNING_HOUR = 8        # во сколько (МСК) выходит расписание
 DAY_START_HOUR = 6      # «игровой день» — с 06:00 до 06:00 следующего дня
 VALUE_EDGE = (0.05, 0.30)
@@ -43,6 +58,31 @@ def load_json(path: Path, default):
 
 def save_json(path: Path, data) -> None:
     path.write_text(json.dumps(data, ensure_ascii=False, indent=1), encoding="utf-8")
+
+
+def cup_teams(state: dict, daily: bool) -> dict:
+    """Профессиональные команды каждой страны — из таблиц ESPN (обновляется раз в день)."""
+    if daily or not state.get("cup_teams"):
+        by_league = {}
+        for slug in sorted({x for v in CUP_SOURCES.values() for x in v}):
+            data = espn_get(f"https://site.api.espn.com/apis/v2/sports/soccer/{slug}/standings") or {}
+            groups = data.get("children") or [data]
+            by_league[slug] = [e["team"]["displayName"] for g in groups
+                               for e in (g.get("standings") or {}).get("entries", [])]
+        state["cup_teams"] = {cup: sorted({t for slug in src for t in by_league.get(slug, [])})
+                              for cup, src in CUP_SOURCES.items()}
+    return state["cup_teams"]
+
+
+def professional(e: dict, cup_teams: dict) -> bool:
+    """Кубковый матч берём, только если обе команды играют в профессиональных лигах страны."""
+    teams = cup_teams.get(e["div"])
+    if not teams:  # не кубок (или список ещё не собран) — пропускаем фильтр
+        return True
+    def known(name: str) -> bool:  # почти полное совпадение: «UD Castellonense» ≠ «Castellón»
+        n = names.norm(name)
+        return name in teams or any(difflib.SequenceMatcher(None, n, names.norm(t)).ratio() >= 0.9 for t in teams)
+    return known(e["home"]["name"]) and known(e["away"]["name"])
 
 
 def matchday(t: pd.Timestamp) -> pd.Timestamp:
@@ -141,7 +181,12 @@ def learn(state: dict, now: pd.Timestamp) -> None:
 
 def read_results() -> pd.DataFrame:
     # тип прогноза «12» — это текст, а не число
-    return pd.read_csv(RESULTS, dtype={"main_key": str, "bold_key": str}) if RESULTS.exists() else pd.DataFrame()
+    if not RESULTS.exists():
+        return pd.DataFrame()
+    res = pd.read_csv(RESULTS, dtype={"main_key": str, "bold_key": str, "score": str})
+    if "sport" in res:  # теннис «0:0» — несыгранный матч (снятие), засчитан по ошибке старой версией
+        res = res[~((res["sport"] == "tennis") & (res["score"] == "0:0"))]
+    return res
 
 
 def post(png: bytes, text: str, reply_to: int | None = None) -> int:
@@ -256,6 +301,13 @@ def other_settle(m: dict, e: dict) -> None:
     f = sports.final(e)
     if f is None:
         return
+    if f.get("void"):  # снятие, отказ, неявка — ставки возвращаются, в статистику не идёт
+        telegram.send(f"↩️ <b>Матч не состоялся</b>: {f['reason']}.\nПрогноз не засчитывается, ставки по нему "
+                      f"у букмекеров обычно возвращаются.", reply_to=m["msg_id"])
+        m["status"] = "void"
+        return
+    for side in ("home", "away"):  # у матчей, опубликованных старой версией, может не быть цвета для картинки
+        m[side] = {"color": "3b4a7a", "logo": None, **m[side]}
     m["main_hit"] = sports.won(m["main"]["key"], f)
     m["bold_hit"] = sports.won(m["bold"]["key"], f) if m.get("bold") else None
     ds = add_result(m, f.get("sets") or f"{f['hs']}:{f['as']}", m["sport"])
@@ -351,6 +403,8 @@ def main():
     days = [(utc + pd.Timedelta(days=d)).strftime("%Y%m%d") for d in (-1, 0, 1)]
     events = scoreboard({c: ALL[c][3] for c in REVIEW_LEAGUES}, days)
     events = [e for e in events if "POSTPONED" not in e["status"] and "CANCELED" not in e["status"]]
+    pros = cup_teams(state, daily)
+    events = [e for e in events if professional(e, pros)]
     # русские названия только для матчей ближайших суток — начиная с самых близких по времени
     for e in sorted(events, key=lambda e: abs(pd.Timestamp(e["kickoff"]) - now)):
         if abs(pd.Timestamp(e["kickoff"]) - now) <= pd.Timedelta(hours=30):

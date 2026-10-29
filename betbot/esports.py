@@ -1,7 +1,7 @@
 """Киберспорт (CS2 и Dota 2) через PandaScore (бесплатный тариф, нужен ключ в секрете PANDASCORE_TOKEN).
 
 Коэффициентов в бесплатном тарифе нет, поэтому вероятности — по своему рейтингу Эло команд,
-посчитанному по истории матчей. Берём только турниры уровня S, A и B, чтобы не тонуть в мелочи.
+посчитанному по истории матчей. Берём только турниры уровня S и A, чтобы не тонуть в мелочи.
 Без ключа модуль просто ничего не делает.
 """
 import json
@@ -14,7 +14,7 @@ import requests
 
 API = "https://api.pandascore.co"
 GAMES = {"CS2": "csgo", "DOTA": "dota2"}  # код лиги в боте → игра в PandaScore
-TIERS = {"s", "a", "b"}
+TIERS = {"s", "a"}  # только топ-турниры
 CACHE = Path(__file__).resolve().parent.parent / "data" / "raw" / "esports"
 MSK = "Europe/Moscow"
 
@@ -68,12 +68,13 @@ def _normalize(code: str, m: dict) -> dict | None:
             "bo": int(m.get("number_of_games") or 1),
             "kickoff": pd.Timestamp(begin).tz_convert(MSK).isoformat(),
             "state": {"not_started": "pre", "running": "in", "finished": "post"}.get(status, "pre"),
-            "completed": status == "finished", "status": status or "", "tier": _tier(m),
+            "completed": status == "finished", "tier": _tier(m),
+            "status": "FORFEIT" if m.get("forfeit") else (status or ""),  # техническая победа — не засчитываем
             "home": teams[0], "away": teams[1]}
 
 
 def fetch() -> list[dict]:
-    """Ближайшие, идущие и недавно закончившиеся матчи CS2 и Dota 2 (турниры S/A/B)."""
+    """Ближайшие, идущие и недавно закончившиеся матчи CS2 и Dota 2 (турниры S/A)."""
     if not enabled():
         return []
     out = []

@@ -13,8 +13,8 @@ from .leagues import title as league_title
 LIVE = {
     # футбол: топ-лиги, еврокубки, все национальные кубки и турниры сборных
     "E0", "SP1", "I1", "D1", "F1", "RUS", "N1", "P1", "T1", "E1", "BRA", "ARG",
-    "UCL", "UEL", "UECL", "UCLQ", "USC", "LIB", "SUD", "CCC",
-    "FAC", "ELC", "CDR", "DFB", "CIT", "CDF", "KNVB", "TPO", "SCC", "SLC", "CDB", "ARGC",
+    "UCL", "UEL", "UECL", "UCLQ", "USC", "LIB", "SUD",
+    "FAC", "ELC", "CDR", "DFB", "CIT", "CDF", "TPO", "SCC",
     "UNL", "WCQE", "WCQS", "WC", "EURO", "FRI",
     # другие виды спорта
     "NHL", "NBA", "CS2", "DOTA",
