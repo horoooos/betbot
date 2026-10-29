@@ -5,7 +5,7 @@
  },
  "learned": "2026-10-29",
  "schedule_day": "2026-10-29",
- "content_slot": "2026-10-28-22",
+ "content_slot": "2026-10-29-10",
  "news_seen": [
   "https://www.sports.ru/automoto/blogs/3563795.html",
   "shoot-house-poyavit-sya-v-call-of-duty-modern-warfare-4-v-nachale-noyabrya",
@@ -493,5 +493,49 @@
    "St Mirren",
    "Stenhousemuir"
   ]
+ },
+ "express": {
+  "msg": 367,
+  "legs": [
+   {
+    "sport": "football",
+    "div": "KSA",
+    "id": "401900881",
+    "side": "home",
+    "p": 0.7654455986878076,
+    "odds": 1.235,
+    "kickoff": "2026-10-29T21:00:00+03:00",
+    "home": "Ан-Наср",
+    "away": "Аль-Холуд",
+    "label": "Победа: Ан-Наср"
+   },
+   {
+    "sport": "football",
+    "div": "KSA",
+    "id": "401900880",
+    "side": "away",
+    "p": 0.7183010618363523,
+    "odds": 1.312,
+    "kickoff": "2026-10-29T21:00:00+03:00",
+    "home": "Эр-Рияд",
+    "away": "Аль-Кадисия",
+    "label": "Победа: Аль-Кадисия"
+   },
+   {
+    "sport": "basketball",
+    "div": "WNBA",
+    "id": "401918310",
+    "side": "home",
+    "p": 0.6309148264984228,
+    "odds": 1.521,
+    "kickoff": "2026-10-29T19:30:00+03:00",
+    "home": "Атланта Дрим",
+    "away": "Голден Стэйт Валкириз",
+    "label": "Победа: Атланта Дрим (с ОТ)"
+   }
+  ],
+  "odds": 2.46450672,
+  "day": "2026-10-29",
+  "done": false
  }
 }
