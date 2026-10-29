@@ -4318,7 +4318,7 @@
   "kickoff": "2026-10-29T03:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Scheduled",
   "home": {
    "id": "4936",
@@ -4413,7 +4413,10 @@
   "odds_src": "среднее по букмекерам",
   "model_w": 0.0,
   "learned_n": 30,
-  "msg_id": 209
+  "msg_id": 209,
+  "main_hit": false,
+  "bold_hit": false,
+  "value_hit": null
  },
  "761910": {
   "id": "761910",
