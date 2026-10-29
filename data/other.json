@@ -20,9 +20,11 @@
   "kickoff": "2026-10-29T00:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Wed, October 28th at 5:30 PM EDT",
   "home": {
+   "color": "3b4a7a",
+   "logo": null,
    "id": "17423",
    "name": "Carmen Andreea Herea",
    "winner": false,
@@ -31,6 +33,8 @@
    "ru": "Кармен Андриа Хереа"
   },
   "away": {
+   "color": "3b4a7a",
+   "logo": null,
    "id": "5299",
    "name": "Carole Monnet",
    "winner": false,
