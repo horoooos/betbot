@@ -779,7 +779,7 @@
   "kickoff": "2026-10-29T03:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "home": {
    "id": "4",
    "name": "Chicago Bulls",
@@ -866,7 +866,9 @@
    "odds": 2.73,
    "est": true
   },
-  "msg_id": 192
+  "msg_id": 192,
+  "main_hit": true,
+  "bold_hit": false
  },
  "NBA|401909887": {
   "id": "401909887",

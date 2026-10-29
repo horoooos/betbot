@@ -4428,7 +4428,7 @@
   "kickoff": "2026-10-29T03:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Scheduled",
   "home": {
    "id": "20906",
@@ -4523,7 +4523,10 @@
   "odds_src": "среднее по букмекерам",
   "model_w": 0.0,
   "learned_n": 30,
-  "msg_id": 211
+  "msg_id": 211,
+  "main_hit": true,
+  "bold_hit": false,
+  "value_hit": null
  },
  "761911": {
   "id": "761911",
@@ -4532,7 +4535,7 @@
   "kickoff": "2026-10-29T03:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Scheduled",
   "home": {
    "id": "182",
@@ -4627,7 +4630,10 @@
   "odds_src": "среднее по букмекерам",
   "model_w": 0.0,
   "learned_n": 30,
-  "msg_id": 213
+  "msg_id": 213,
+  "main_hit": true,
+  "bold_hit": true,
+  "value_hit": null
  },
  "761912": {
   "id": "761912",
@@ -4740,7 +4746,7 @@
   "kickoff": "2026-10-29T03:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Scheduled",
   "home": {
    "id": "17362",
@@ -4835,7 +4841,10 @@
   "odds_src": "среднее по букмекерам",
   "model_w": 0.0,
   "learned_n": 30,
-  "msg_id": 217
+  "msg_id": 217,
+  "main_hit": true,
+  "bold_hit": true,
+  "value_hit": null
  },
  "761914": {
   "id": "761914",
@@ -4844,7 +4853,7 @@
   "kickoff": "2026-10-29T03:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Scheduled",
   "home": {
    "id": "18986",
@@ -4939,7 +4948,10 @@
   "odds_src": "среднее по букмекерам",
   "model_w": 0.0,
   "learned_n": 30,
-  "msg_id": 219
+  "msg_id": 219,
+  "main_hit": true,
+  "bold_hit": false,
+  "value_hit": null
  },
  "761915": {
   "id": "761915",
