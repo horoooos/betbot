@@ -3929,22 +3929,22 @@
   "kickoff": "2026-10-29T19:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "home": {
+   "color": "e31837",
+   "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/atl.png",
    "id": "20",
    "name": "Atlanta Dream",
-   "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/atl.png",
-   "color": "e31837",
    "score": "0",
    "record": "30-14",
    "periods": [],
    "ru": "Атланта Дрим"
   },
   "away": {
+   "color": "b38fcf",
+   "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/gs.png",
    "id": "129689",
    "name": "Golden State Valkyries",
-   "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/gs.png",
-   "color": "b38fcf",
    "score": "0",
    "record": "32-12",
    "periods": [],
@@ -4027,7 +4027,9 @@
   "close": {
    "BB_ML_H": 0.6588,
    "BB_ML_A": 0.3412
-  }
+  },
+  "main_hit": true,
+  "bold_hit": false
  },
  "ATP|185183": {
   "id": "185183",
@@ -4644,7 +4646,10 @@
   },
   "open": {},
   "top": false,
-  "msg_id": 457
+  "msg_id": 457,
+  "close": {
+   "_": null
+  }
  },
  "ATP|185149": {
   "status": "skipped",
