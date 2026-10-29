@@ -216,7 +216,7 @@ def post(png: bytes, text: str, reply_to: int | None = None) -> int:
 
 
 def morning(state: dict, events: list[dict], other: list[dict], now: pd.Timestamp) -> None:
-    res = read_results()
+    site_res = read_results()
     today = now.normalize()
     if len(res):
         rows = [(name, *texts.numbers(df)) for name, df in texts.periods(res, today)]
@@ -558,9 +558,13 @@ def main():
             pro.post_value(fx_loader(), events, now, BRAND)
         except Exception as e:
             print(f"  ! value дня не удался: {e}")
-    if daily or not site.OUT.exists():  # публичная страница со статистикой — раз в день
+    site_res = read_results()
+    # публичная страница со статистикой — после каждого нового результата (и хотя бы раз в час)
+    stamp = f"{len(site_res)}|{now:%Y-%m-%d %H}"
+    if state.get("site_stamp") != stamp or not site.OUT.exists():
+        state["site_stamp"] = stamp
         try:
-            site.build(read_results(), now)
+            site.build(site_res, now)
         except Exception as e:
             print(f"  ! страница статистики не собралась: {e}")
 
