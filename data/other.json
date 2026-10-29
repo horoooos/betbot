@@ -1676,7 +1676,7 @@
   "kickoff": "2026-10-29T05:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "home": {
    "id": "124292",
    "name": "Seattle Kraken",
@@ -1771,7 +1771,9 @@
    "odds": 2.05,
    "est": false
   },
-  "msg_id": 262
+  "msg_id": 262,
+  "main_hit": true,
+  "bold_hit": false
  },
  "NBA|401909892": {
   "id": "401909892",
