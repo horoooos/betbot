@@ -4043,31 +4043,31 @@
   "kickoff": "2026-10-29T19:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Thu, October 29th at 12:30 PM EDT",
   "home": {
-   "id": "2375",
-   "name": "Alexander Zverev",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/2375.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/ger.png"
    ],
+   "id": "2375",
+   "name": "Alexander Zverev",
    "country": "Germany",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
    "ru": "Александер Зверев"
   },
   "away": {
-   "id": "3319",
-   "name": "Tallon Griekspoor",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/3319.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/ned.png"
    ],
+   "id": "3319",
+   "name": "Tallon Griekspoor",
    "country": "Netherlands",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
@@ -4133,7 +4133,9 @@
   "msg_id": 430,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": true,
+  "bold_hit": false
  },
  "WTA|185770": {
   "status": "skipped",
