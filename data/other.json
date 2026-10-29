@@ -4770,31 +4770,31 @@
   "kickoff": "2026-10-29T23:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Thu, October 29th at 4:00 PM EDT",
   "home": {
-   "id": "3256",
-   "name": "Nadia Podoroska",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/3256.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/arg.png"
    ],
+   "id": "3256",
+   "name": "Nadia Podoroska",
    "country": "Argentina",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
    "ru": "Надя Подорошка"
   },
   "away": {
-   "id": "3568",
-   "name": "Miriam Bulgaru",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/3568.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/rom.png"
    ],
+   "id": "3568",
+   "name": "Miriam Bulgaru",
    "country": "Romania",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
@@ -4860,6 +4860,8 @@
   "msg_id": 473,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": true,
+  "bold_hit": false
  }
 }
