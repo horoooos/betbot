@@ -3708,31 +3708,31 @@
   "kickoff": "2026-10-29T18:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Thu, October 29th at 11:00 AM EDT",
   "home": {
-   "id": "5749",
-   "name": "Julia Riera",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/5749.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/arg.png"
    ],
+   "id": "5749",
+   "name": "Julia Riera",
    "country": "Argentina",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
    "ru": "Хулия Риера"
   },
   "away": {
-   "id": "8318",
-   "name": "Yasmine Kabbaj",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/8318.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/lao.png"
    ],
+   "id": "8318",
+   "name": "Yasmine Kabbaj",
    "country": "Laos",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
@@ -3798,7 +3798,9 @@
   "msg_id": 422,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": true,
+  "bold_hit": false
  },
  "DOTA|1753766": {
   "status": "skipped",
