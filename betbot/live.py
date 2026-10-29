@@ -40,12 +40,15 @@ def _score(e: dict) -> tuple[int, int] | None:
 
 
 def run(store: dict, events: list[dict], reviews: dict, brand: str) -> None:
-    """store — состояние live (data/live.json); reviews — ключ матча → id поста с прогнозом."""
+    """store — состояние live (data/live.json); reviews — ключ матча → {"msg": id поста с прогнозом, "tip": прогноз}.
+
+    Live ведём только по матчам, на которые бот давал прогноз: всё идёт ответами в ветку этого прогноза.
+    """
     for e in events:
-        if e["div"] not in LIVE or "ru" not in e["home"]:
+        key = f"{e['div']}|{e['id']}"
+        if e["div"] not in LIVE or "ru" not in e["home"] or (key not in reviews and key not in store):
             continue
         sport = e.get("sport", "football")
-        key = f"{e['div']}|{e['id']}"
         sc = _score(e)
         st = store.get(key)
         h, a = e["home"]["ru"], e["away"]["ru"]
@@ -59,8 +62,14 @@ def run(store: dict, events: list[dict], reviews: dict, brand: str) -> None:
                 sub = f"{'Серия идёт, по картам' if sport == 'esports' else 'Матч идёт, на табло'} {sc[0]}:{sc[1]}"
             png = card.live_card(_league(e), e["home"], e["away"], sc[0], sc[1], "МАТЧ НАЧАЛСЯ", sub, brand, sport,
                                  color=(214, 48, 49))
+            rv = reviews.get(key) or {}
+            tip = rv.get("tip") or {}
+            tip_line = ""
+            if tip:
+                tip_line = (f"\n\n🎯 <b>Наш прогноз:</b> {escape(tip['label'])} · кэф {'≈' if tip.get('est') else ''}"
+                            f"{tip['odds']:.2f} · ставка {tip.get('stake', 1):g}% банка\n👀 Следим вместе — итог будет здесь")
             mid = telegram.send_photo(png, f"🔴 <b>МАТЧ НАЧАЛСЯ</b>\n{sports.EMOJI.get(sport, '⚽️')} <b>{escape(h)} — "
-                                           f"{escape(a)}</b>\n🏆 {_title(e)}", reply_to=reviews.get(key))
+                                           f"{escape(a)}</b>\n🏆 {_title(e)}{tip_line}", reply_to=rv.get("msg"))
             store[key] = {"msg": mid, "hs": sc[0], "as": sc[1], "goals": len(e.get("goals") or []),
                           "kickoff": e["kickoff"]}
             print(f"  live: начался {h} — {a}")

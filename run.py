@@ -507,8 +507,9 @@ def main():
         print(f"  ! пост про серию не удался: {e}")
 
     # live: «матч начался» и голы — ответом к посту с прогнозом на этот матч
-    reviews = {f"{m['div']}|{k}": m["msg_id"] for k, m in matches.items() if m.get("msg_id") and m.get("div")}
-    reviews.update({k: m["msg_id"] for k, m in load_json(OTHER, {}).items() if m.get("msg_id")})
+    reviews = {f"{m['div']}|{k}": {"msg": m["msg_id"], "tip": m.get("main")}
+               for k, m in matches.items() if m.get("msg_id") and m.get("div")}
+    reviews.update({k: {"msg": m["msg_id"], "tip": m.get("main")} for k, m in load_json(OTHER, {}).items() if m.get("msg_id")})
     live_store = load_json(LIVE, {})
     try:
         live.run(live_store, events + [e for e in other if e["sport"] != "tennis"], reviews, BRAND)
