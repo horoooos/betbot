@@ -419,6 +419,40 @@ def analyse(e: dict, ratings: dict | None = None) -> dict | None:
     return None
 
 
+HOME_SIDE = {"HK_ML_H", "HK_H", "HK_H-1.5", "HK_H+1.5", "BB_ML_H", "BB_SPR_H", "TN_W1", "ES_W1"}
+AWAY_SIDE = {"HK_ML_A", "HK_A", "HK_A-1.5", "HK_A+1.5", "BB_ML_A", "BB_SPR_A", "TN_W2", "ES_W2"}
+
+
+def _total(k: str):
+    """('O' или 'U', линия) для тоталов хоккея и баскетбола, иначе None."""
+    if k.startswith(("HK_O", "HK_U", "BB_O", "BB_U")):
+        try:
+            return k[3], float(k[4:])
+        except ValueError:
+            return None
+    return None
+
+
+def compatible(probs: dict, k1: str, k2: str) -> bool:
+    """Могут ли обе ставки зайти в одном матче — чтобы смелый прогноз не спорил с основным."""
+    scores = [k[4:] for k in probs if k.startswith(("TN_S", "ES_S")) and ":" in k]
+    if scores and k1.startswith(("TN_", "ES_")):  # теннис/серии карт: перебираем все возможные счета
+        def f(sc):
+            hs, as_ = map(int, sc.split(":"))
+            return {"hs": hs, "as": as_, "home_won": hs > as_, "away_won": as_ > hs, "sets": sc}
+        return any(won(k1, f(sc)) and won(k2, f(sc)) for sc in scores)
+    sides = {1 if k in HOME_SIDE else 2 if k in AWAY_SIDE else 0 for k in (k1, k2)}
+    if sides == {1, 2}:
+        return False
+    if {k1, k2} & {"HK_D", "ES_X"} and ({k1, k2} - {"HK_D", "ES_X"}) & (HOME_SIDE | AWAY_SIDE) - {"HK_ML_H", "HK_ML_A"}:
+        return False
+    t1, t2 = _total(k1), _total(k2)
+    if t1 and t2 and k1[:3] == k2[:3] and t1[0] != t2[0]:
+        over, under = (t1[1], t2[1]) if t1[0] == "O" else (t2[1], t1[1])
+        return under - over > 0.5  # ТБ 5.5 и ТМ 6.5 совместимы (ровно 6), ТБ 5.5 и ТМ 5.5 — нет
+    return True
+
+
 def pick(a: dict, calib: dict) -> tuple[dict, dict]:
     """Основной и смелый прогнозы — по правилам mk.choose, с учётом статистики бота."""
     probs, labels, real = a["probs"], a["labels"], a["real"]
@@ -431,7 +465,7 @@ def pick(a: dict, calib: dict) -> tuple[dict, dict]:
 
     keys = [k for k in probs if 0 < probs[k] < 1]
     main_pool = [k for k in keys if ":" not in k]  # точный счёт — не для основного
-    main_k, bold_k = mk.choose(keys, probs, real, score, main_pool)
+    main_k, bold_k = mk.choose(keys, probs, real, score, main_pool, lambda x, y: compatible(probs, x, y))
 
     def pack(k):
         if not k:

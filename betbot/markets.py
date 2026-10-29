@@ -169,7 +169,12 @@ MIN_ODDS = 1.5     # ниже этого кэфа профессионалы н�
 MAIN_MIN_P = 0.45  # основной прогноз — всё-таки «скорее зайдёт», чем нет
 
 
-def choose(keys: list[str], probs: dict, real: dict, score, main_pool: list[str] | None = None):
+def compatible(k1: str, k2: str) -> bool:
+    """Могут ли обе ставки зайти в одном матче (есть хотя бы один счёт, при котором заходят обе)."""
+    return any(won(k1, i, j) and won(k2, i, j) for i in range(8) for j in range(8))
+
+
+def choose(keys: list[str], probs: dict, real: dict, score, main_pool: list[str] | None = None, fits=None):
     """Как выбирает профессиональный каппер.
 
     Основной: среди рынков с НАСТОЯЩИМ кэфом от 1.5 и вероятностью от 45% — самый выгодный
@@ -189,7 +194,8 @@ def choose(keys: list[str], probs: dict, real: dict, score, main_pool: list[str]
     else:
         est = [k for k in pool if k in probs and MAIN_MIN_P <= probs[k] and odds(k) >= MIN_ODDS]
         main_k = max(est or [k for k in pool if k in probs], key=score)
-    bold = [k for k in keys if k != main_k and 2.0 <= odds(k) <= 3.6]
+    # смелый не должен спорить с основным: П1 основным и П2 смелым — это ставка против самого себя
+    bold = [k for k in keys if k != main_k and 2.0 <= odds(k) <= 3.6 and (fits is None or fits(main_k, k))]
     real_bold = [k for k in bold if real.get(k)]
     bold_k = max(real_bold or bold, key=ev) if bold else None
     return main_k, bold_k
@@ -221,7 +227,7 @@ def tips(probs: dict, real_odds: dict, calib: dict | None = None) -> tuple[dict,
     def score(k):
         return probs[k] * calib.get(k, (1.0, 0))[0]
 
-    main_k, bold_k = choose([k for k in MARKETS if probs[k] > 0], probs, real_odds, score, MAIN_POOL)
+    main_k, bold_k = choose([k for k in MARKETS if probs[k] > 0], probs, real_odds, score, MAIN_POOL, compatible)
 
     def pack(k):
         if k is None:
