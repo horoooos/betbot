@@ -4677,31 +4677,31 @@
   "kickoff": "2026-10-29T23:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Thu, October 29th at 4:00 PM EDT",
   "home": {
-   "id": "1095",
-   "name": "Polona Hercog",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/1095.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/slo.png"
    ],
+   "id": "1095",
+   "name": "Polona Hercog",
    "country": "Slovenia",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
    "ru": "Полона Херцог"
   },
   "away": {
-   "id": "3042",
-   "name": "Valeriya Strakhova",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/3042.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/ukr.png"
    ],
+   "id": "3042",
+   "name": "Valeriya Strakhova",
    "country": "Ukraine",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
@@ -4760,7 +4760,9 @@
   "msg_id": 471,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null
  },
  "WTA|185801": {
   "id": "185801",
