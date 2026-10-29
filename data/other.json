@@ -3500,17 +3500,17 @@
   "kickoff": "2026-10-29T17:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Thu, October 29th at 10:30 AM EDT",
   "home": {
-   "id": "8067",
-   "name": "Lucrezia Stefanini",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/8067.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/ita.png"
    ],
+   "id": "8067",
+   "name": "Lucrezia Stefanini",
    "country": "Italy",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [
     1.0
@@ -3521,14 +3521,14 @@
    "ru": "Лукреция Стефанини"
   },
   "away": {
-   "id": "3185",
-   "name": "Ayla Aksu",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/3185.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/tur.png"
    ],
+   "id": "3185",
+   "name": "Ayla Aksu",
    "country": "Türkiye",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [
     1.0
@@ -3598,7 +3598,9 @@
   "msg_id": 412,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": false,
+  "bold_hit": false
  },
  "ATP|185150": {
   "id": "185150",
@@ -4328,7 +4330,10 @@
   },
   "open": {},
   "top": false,
-  "msg_id": 434
+  "msg_id": 434,
+  "close": {
+   "_": null
+  }
  },
  "WTA|185847": {
   "id": "185847",
