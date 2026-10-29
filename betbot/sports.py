@@ -390,7 +390,7 @@ def analyse(e: dict, ratings: dict | None = None) -> dict | None:
 
 
 def pick(a: dict, calib: dict) -> tuple[dict, dict]:
-    """Основной (самый вероятный, до 75%) и смелый (кэф 2.0–3.6) прогнозы с учётом статистики бота."""
+    """Основной и смелый прогнозы — по правилам mk.choose, с учётом статистики бота."""
     probs, labels, real = a["probs"], a["labels"], a["real"]
 
     def odds_for(k):
@@ -399,11 +399,9 @@ def pick(a: dict, calib: dict) -> tuple[dict, dict]:
     def score(k):
         return probs[k] * calib.get(k, (1.0, 0))[0]
 
-    keys = [k for k in probs if 0 < probs[k] < 1 and not k.startswith(("TN_S", "ES_S"))]
-    pool = [k for k in keys if probs[k] <= 0.75] or keys
-    main_k = max(pool, key=score)
-    bold = [k for k in probs if k != main_k and 2.0 <= odds_for(k)[0] <= 3.6]
-    bold_k = max(bold, key=score) if bold else None
+    keys = [k for k in probs if 0 < probs[k] < 1]
+    main_pool = [k for k in keys if not k.startswith(("TN_S", "ES_S"))]  # точный счёт — не для основного
+    main_k, bold_k = mk.choose(keys, probs, real, score, main_pool)
 
     def pack(k):
         if not k:
@@ -506,9 +504,7 @@ def caption(m: dict, when: str) -> str:
         lines.append(f"🎟 {escape(m['tournament'])}" + (f" · {escape(rnd)}" if rnd else ""))
     if m["home"].get("record") or m["away"].get("record"):
         lines.append(f"📋 Баланс: {h} {m['home'].get('record') or '—'} · {a} {m['away'].get('record') or '—'}")
-    s_ = m["main"].get("stake", 1.0)
-    lines += ["", f"🎯 <b>Основной прогноз:</b> {_tip(m['main'])}",
-              f"💰 Ставка: <b>{s_:g}% банка</b>" + (" · есть перевес над линией" if s_ > 1.0 else "")]
+    lines += ["", f"🎯 <b>Основной прогноз:</b> {_tip(m['main'])}", mk.stake_text(m["main"])]
     if m.get("bold"):
         lines.append(f"🔥 <b>Смелый прогноз:</b> {_tip(m['bold'])}")
     lines += ["", "👇 <i>Полный разбор — в ответе к посту</i>"]
@@ -572,6 +568,6 @@ def ru_names(events: list[dict], now: pd.Timestamp) -> None:
             if e["sport"] == "esports":
                 t["ru"] = t["name"]  # киберкоманды принято писать как есть: NAVI, Team Spirit…
             elif e["sport"] == "tennis":
-                t["ru"] = names.player(t["name"])
+                t["ru"] = names.tennis_player(t["name"])
             else:
                 t["ru"] = names.team(t["name"])

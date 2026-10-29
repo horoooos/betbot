@@ -51,6 +51,8 @@ def bank_curve(res: pd.DataFrame) -> list[float]:
     bank, curve = float(BANK_START), [float(BANK_START)]
     if res is None or res.empty:
         return curve
+    if "main_est" in res:  # только ставки с настоящим кэфом — по расчётному «≈» реально не поставить
+        res = res[~res["main_est"].astype(str).str.lower().isin(["true", "1", "1.0"])]
     hit = res["main_hit"].astype(str).str.lower().isin(["true", "1", "1.0"])
     stakes = res["main_stake"].fillna(STAKE_MIN) if "main_stake" in res else pd.Series(STAKE_MIN, index=res.index)
     for h, o, s in zip(hit, res["main_odds"].astype(float), stakes.astype(float)):

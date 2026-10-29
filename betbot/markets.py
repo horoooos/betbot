@@ -121,6 +121,47 @@ def calibration(res, prior: float = 20.0) -> dict[str, tuple[float, int]]:
     return out
 
 
+MIN_ODDS = 1.5     # ниже этого кэфа профессионалы не играют: одна осечка съедает несколько выигрышей
+MAIN_MIN_P = 0.45  # основной прогноз — всё-таки «скорее зайдёт», чем нет
+
+
+def choose(keys: list[str], probs: dict, real: dict, score, main_pool: list[str] | None = None):
+    """Как выбирает профессиональный каппер.
+
+    Основной: среди рынков с НАСТОЯЩИМ кэфом от 1.5 и вероятностью от 45% — самый выгодный
+    (вероятность × кэф, т.е. ожидаемый возврат). Если настоящих кэфов нет — самый вероятный
+    с честным кэфом от 1.5. Смелый: кэф 2.0–3.6, тоже по выгоде, предпочтительно с настоящим кэфом.
+    """
+    def odds(k):
+        return real.get(k) or MARGIN / probs[k]
+
+    def ev(k):
+        return score(k) * odds(k)
+
+    pool = main_pool or keys
+    real_main = [k for k in keys if real.get(k) and real[k] >= MIN_ODDS and probs[k] >= MAIN_MIN_P]
+    if real_main:
+        main_k = max(real_main, key=lambda k: (round(ev(k), 3), score(k)))
+    else:
+        est = [k for k in pool if k in probs and MAIN_MIN_P <= probs[k] and odds(k) >= MIN_ODDS]
+        main_k = max(est or [k for k in pool if k in probs], key=score)
+    bold = [k for k in keys if k != main_k and 2.0 <= odds(k) <= 3.6]
+    real_bold = [k for k in bold if real.get(k)]
+    bold_k = max(real_bold or bold, key=ev) if bold else None
+    return main_k, bold_k
+
+
+def stake_text(t: dict) -> str:
+    """«💰 Ставка: 1% банка · ставить при кэфе от 1.72» — минимальный кэф = точка безубыточности (1 / вероятность)."""
+    s = t.get("stake", 1.0)
+    line = f"💰 Ставка: <b>{s:g}% банка</b>"
+    if s > 1.0:
+        line += " · есть перевес над линией"
+    if t.get("p"):
+        line += f" · ставить при кэфе <b>от {1 / t['p']:.2f}</b>"
+    return line
+
+
 def tips(probs: dict, real_odds: dict, calib: dict | None = None) -> tuple[dict, dict]:
     """Основной прогноз (самый надёжный с нормальным кэфом) и смелый (кэф 2.0–3.6).
 
@@ -136,12 +177,7 @@ def tips(probs: dict, real_odds: dict, calib: dict | None = None) -> tuple[dict,
     def score(k):
         return probs[k] * calib.get(k, (1.0, 0))[0]
 
-    cands = [k for k in MARKETS if probs[k] > 0]
-    # самый вероятный из «настоящих» рынков, но не пустой (вероятность до 75% ≈ кэф от 1.3)
-    pool = [k for k in MAIN_POOL if probs[k] <= 0.75] or MAIN_POOL
-    main_k = max(pool, key=score)
-    bold_pool = [k for k in cands if 2.0 <= odds_for(k)[0] <= 3.6 and k != main_k]
-    bold_k = max(bold_pool, key=score) if bold_pool else None
+    main_k, bold_k = choose([k for k in MARKETS if probs[k] > 0], probs, real_odds, score, MAIN_POOL)
 
     def pack(k):
         if k is None:

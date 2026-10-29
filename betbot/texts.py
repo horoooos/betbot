@@ -6,6 +6,7 @@ import pandas as pd
 from . import names
 from .leagues import ALL, ORDER, title
 from .reviews import rest_info
+from .markets import stake_text
 
 DAYS = ["понедельник", "вторник", "среда", "четверг", "пятница", "суббота", "воскресенье"]
 DAYS_SHORT = ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"]
@@ -38,8 +39,7 @@ def league_plain(code: str) -> str:
 
 
 def stake_line(t: dict) -> str:
-    s = t.get("stake", 1.0)
-    return f"💰 Ставка: <b>{s:g}% банка</b>" + (" · есть перевес над линией" if s > 1.0 else "")
+    return stake_text(t)
 
 
 def tip_line(t: dict) -> str:
@@ -296,8 +296,18 @@ def numbers(df: pd.DataFrame) -> tuple[int, int, float | None]:
     if df.empty:
         return 0, 0, None
     hit = _hits(df["main_hit"])
-    profit = (hit * (df["main_odds"].astype(float) - 1) - (~hit)).sum()
-    return int(hit.sum()), len(df), float(100 * profit / len(df))
+    return int(hit.sum()), len(df), roi_real(df)
+
+
+def roi_real(df: pd.DataFrame) -> float | None:
+    """ROI только по прогнозам с НАСТОЯЩИМ кэфом букмекера (расчётные «≈» в прибыль не идут)."""
+    if df.empty:
+        return None
+    real = df[~df["main_est"].astype(str).str.lower().isin(["true", "1", "1.0"])] if "main_est" in df else df
+    if real.empty:
+        return None
+    hit = _hits(real["main_hit"])
+    return float(100 * (hit * (real["main_odds"].astype(float) - 1) - (~hit)).sum() / len(real))
 
 
 def periods(res: pd.DataFrame, today: pd.Timestamp) -> list[tuple[str, pd.DataFrame]]:
@@ -315,7 +325,8 @@ def _period(df: pd.DataFrame, name: str) -> str:
         return f"<b>{name}:</b> матчей не было"
     b = df.dropna(subset=["bold_hit"])
     bold = f" · смелый {int(_hits(b['bold_hit']).sum())}/{len(b)}" if len(b) else ""
-    return f"<b>{name}:</b> основной {hits}/{n} (<b>{pct(hits / n)}</b>){bold} · ROI ≈ <b>{roi:+.1f}%</b>"
+    roi_s = f" · ROI <b>{roi:+.1f}%</b>" if roi is not None else ""
+    return f"<b>{name}:</b> основной {hits}/{n} (<b>{pct(hits / n)}</b>){bold}{roi_s}"
 
 
 def stats(res: pd.DataFrame, today: pd.Timestamp, calib: dict | None = None) -> str:
@@ -337,5 +348,5 @@ def stats(res: pd.DataFrame, today: pd.Timestamp, calib: dict | None = None) -> 
             f"{'📈' if r > 1 else '📉'} {escape(label(k))}: заходит {'чаще' if r > 1 else 'реже'} обещанного "
             f"({r:.2f}×, прогнозов: {n}) — {'выбирает охотнее' if r > 1 else 'выбирает реже'}"
             for k, r, n in learned))
-    lines.append("<i>ROI — прибыль на 1 ед. ставки по кэфам из постов (≈ — оценочный кэф)</i>")
+    lines.append("<i>ROI — прибыль на 1 ед. ставки, только по прогнозам с настоящим кэфом букмекера</i>")
     return "\n\n".join(lines)

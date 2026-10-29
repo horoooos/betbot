@@ -191,6 +191,35 @@ def player(name: str) -> str:
     return translit(name)
 
 
+def tennis_player(name: str) -> str:
+    """Русское имя теннисиста из Wikidata («Мария Тимофеева», «Сунь Синьжань»), иначе транслит."""
+    global _dirty
+    cache = _load()
+    key = f"tennis:{name}"
+    if key in cache:
+        return cache[key]
+    res = _api(action="wbsearchentities", search=name, language="en", type="item", limit=7)
+    if res is None:
+        return translit(name)  # Wikidata не ответила или лимит времени исчерпан — попробуем в следующий раз
+    ids = [x["id"] for x in res.get("search", []) if "tennis" in (x.get("description") or "").lower()]
+    label = None
+    if ids:
+        ent = _api(action="wbgetentities", ids=ids[0], props="labels", languages="ru")
+        label = ((ent or {}).get("entities", {}).get(ids[0], {}).get("labels", {}).get("ru") or {}).get("value")
+    cache[key] = _person(re.sub(r"\s*\(.*?\)", "", label)) if label else translit(name)
+    _dirty = True
+    return cache[key]
+
+
+def _person(label: str) -> str:
+    """«Тимофеева, Мария Глебовна» → «Мария Тимофеева»; «Даниил Сергеевич Медведев» → «Даниил Медведев»."""
+    if "," in label:
+        last, first = (x.strip() for x in label.split(",", 1))
+        label = f"{first.split()[0]} {last}" if first else last
+    words = [w for w in label.split() if not re.search(r"(вич|вна|ична|инична)$", w)]
+    return " ".join(words)
+
+
 # ── сопоставление названий из разных источников ─────────────────────────────
 
 _STOP = {"fc", "afc", "cf", "sc", "ac", "as", "ss", "us", "cd", "ud", "rc", "sv", "fk", "if", "bk",

@@ -27,7 +27,7 @@ def _rgb(hex_color: str, fallback=(60, 80, 140)) -> tuple:
         return fallback
 
 
-def _avatar(photo: Image.Image, size: int, color: tuple, top: float = 0.04) -> Image.Image:
+def _avatar(photo: Image.Image, size: int, color: tuple, top: float = 0.04, left: bool = False) -> Image.Image:
     """Фото игрока в круге с цветной подложкой и белой обводкой."""
     canvas = Image.new("RGBA", (size, size), (0, 0, 0, 0))
     d = ImageDraw.Draw(canvas)
@@ -36,7 +36,8 @@ def _avatar(photo: Image.Image, size: int, color: tuple, top: float = 0.04) -> I
     # подгоняем по высоте круга: голова и плечи целиком, лишнее по бокам обрежет круг
     ph = ph.resize((int(ph.width * size / ph.height), size), Image.LANCZOS)
     layer = Image.new("RGBA", (size, size), (0, 0, 0, 0))
-    layer.paste(ph, ((size - ph.width) // 2, int(size * top)), ph)
+    x = int(-size * 0.08) if left else (size - ph.width) // 2  # у флагов символ обычно слева (звёзды, крест)
+    layer.paste(ph, (x, int(size * top)), ph)
     mask = Image.new("L", (size, size), 0)
     ImageDraw.Draw(mask).ellipse((0, 0, size - 1, size - 1), fill=255)
     canvas.paste(layer, (0, 0), Image.composite(layer, Image.new("RGBA", (size, size)), mask).split()[3])
@@ -57,8 +58,10 @@ def _logo(url: str | list | None, size: int, initials: str, color: tuple) -> Ima
             if "headshots" in u:  # фото игрока — в круглую рамку, как аватар
                 img = _avatar(img, size, color)
             elif "countries" in u:  # флаг страны — тоже в круг, растянутый на весь круг
-                flag = img.resize((int(size * 1.5), size), Image.LANCZOS)
-                img = _avatar(flag, size, color, top=0)
+                if img.getbbox():  # у ESPN флаг лежит посередине квадрата с прозрачными полями — обрезаем их
+                    img = img.crop(img.getbbox())
+                flag = img.resize((int(size * img.width / img.height), size), Image.LANCZOS)
+                img = _avatar(flag, size, color, top=0, left=True)
             img.thumbnail((size, size), Image.LANCZOS)
             return img
         except Exception:

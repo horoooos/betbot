@@ -20,8 +20,12 @@ def _hits(col: pd.Series) -> pd.Series:
 
 
 def _roi(df: pd.DataFrame) -> float:
-    h = _hits(df["main_hit"])
-    return float(100 * (h * (df["main_odds"].astype(float) - 1) - (~h)).sum() / max(len(df), 1))
+    """ROI только по прогнозам с настоящим кэфом — расчётные «≈» в прибыль не идут."""
+    real = df[~df["main_est"].astype(str).str.lower().isin(["true", "1", "1.0"])] if "main_est" in df else df
+    if real.empty:
+        return 0.0
+    h = _hits(real["main_hit"])
+    return float(100 * (h * (real["main_odds"].astype(float) - 1) - (~h)).sum() / len(real))
 
 
 def _chart(curve: list[float]) -> str:
@@ -60,7 +64,7 @@ def build(res: pd.DataFrame, now: pd.Timestamp) -> None:
     kpis = "".join([
         kpi("прогнозов", f"{len(res)}"),
         kpi("основной зашёл", f"{100 * hit.mean():.0f}%" if len(res) else "—", f"{int(hit.sum())} из {len(res)}"),
-        kpi("ROI", f"{_roi(res):+.1f}%" if len(res) else "—", "по кэфам из постов"),
+        kpi("ROI", f"{_roi(res):+.1f}%" if len(res) else "—", "только настоящие кэфы"),
         kpi("виртуальный банк", f"{curve[-1]:,.0f} ₽".replace(",", " "), f"старт {pro.BANK_START:,} ₽".replace(",", " ")),
         kpi("CLV", f"{100 * clv.mean():+.1f}%" if len(clv) else "—",
             f"линия за ботом в {100 * (clv > 0).mean():.0f}%" if len(clv) else "копится"),
