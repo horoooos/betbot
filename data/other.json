@@ -2778,31 +2778,31 @@
   "kickoff": "2026-10-29T15:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Thu, October 29th at 8:30 AM EDT",
   "home": {
-   "id": "2366",
-   "name": "Cameron Norrie",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/2366.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/gbr.png"
    ],
+   "id": "2366",
+   "name": "Cameron Norrie",
    "country": "Great Britain",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
    "ru": "Кэмерон Норри"
   },
   "away": {
-   "id": "2383",
-   "name": "Daniil Medvedev",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/2383.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/rus.png"
    ],
+   "id": "2383",
+   "name": "Daniil Medvedev",
    "country": "Russia",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
@@ -2864,7 +2864,9 @@
   "msg_id": 393,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": false,
+  "bold_hit": true
  },
  "ATP|185190": {
   "id": "185190",
@@ -3078,31 +3080,31 @@
   "kickoff": "2026-10-29T16:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Thu, October 29th at 9:00 AM EDT",
   "home": {
-   "id": "8690",
-   "name": "Marina Bassols Ribera",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/8690.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/esp.png"
    ],
+   "id": "8690",
+   "name": "Marina Bassols Ribera",
    "country": "Spain",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
    "ru": "Марина Бассольс Рибера"
   },
   "away": {
-   "id": "7438",
-   "name": "Erika Andreeva",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/7438.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/rus.png"
    ],
+   "id": "7438",
+   "name": "Erika Andreeva",
    "country": "Russia",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
@@ -3168,7 +3170,9 @@
   "msg_id": 399,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": true,
+  "bold_hit": false
  },
  "ATP|185193": {
   "id": "185193",
