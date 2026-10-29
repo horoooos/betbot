@@ -352,6 +352,77 @@ def table_card(title: str, subtitle: str, header: tuple, rows: list[tuple], bran
     return _png(img, d, brand)
 
 
+GOLD_TOP, GOLD_BOTTOM = (255, 222, 110), (214, 152, 20)
+
+
+def _gold_box(img: Image.Image, box: tuple, radius: int = 26) -> None:
+    """Золотая плашка с вертикальным градиентом и тонкой светлой обводкой."""
+    x0, y0, x1, y1 = box
+    grad = Image.new("RGB", (x1 - x0, y1 - y0))
+    gd = ImageDraw.Draw(grad)
+    for y in range(y1 - y0):
+        t = y / max(y1 - y0 - 1, 1)
+        gd.line([(0, y), (x1 - x0, y)], fill=tuple(int(a + (b - a) * t) for a, b in zip(GOLD_TOP, GOLD_BOTTOM)))
+    mask = Image.new("L", grad.size, 0)
+    ImageDraw.Draw(mask).rounded_rectangle((0, 0, grad.width - 1, grad.height - 1), radius=radius, fill=255)
+    img.paste(grad, (x0, y0), mask)
+    ImageDraw.Draw(img).rounded_rectangle(box, radius=radius, outline=(255, 240, 180), width=3)
+
+
+def express_card(legs: list[dict], total: float, p_all: float, day: str, brand: str = "") -> bytes:
+    """Экспресс дня: все события с логотипами, прогнозом и кэфом + золотая плашка с итоговым кэфом."""
+    img, d = _background((150, 110, 20), (40, 60, 150))
+    _title(d, "Экспресс дня", y=40, size=34)
+    d.text((W / 2, 98), day.upper(), font=font(26, "Medium"), fill=MUTED, anchor="mm")
+    n = min(len(legs), 4)
+    row_h = 92 if n <= 3 else 78
+    y = 128
+    for leg in legs[:n]:
+        d.rounded_rectangle((70, y, W - 70, y + row_h - 10), radius=18, fill=(22, 28, 56), outline=(60, 72, 110), width=2)
+        cy = y + (row_h - 10) // 2
+        d.text((100, cy - 14), pd_time(leg["kickoff"]), font=font(26, "ExtraBold"), fill=ACCENT, anchor="lm")
+        # только название турнира, без флага-эмодзи (шрифт их не рисует)
+        league = "".join(c for c in leg.get("league", "").split("·")[-1] if ord(c) < 0x2000).strip()
+        size = 17
+        while size > 12 and d.textlength(league, font=font(size, "Medium")) > 200:
+            size -= 1
+        d.text((100, cy + 16), league, font=font(size, "Medium"), fill=MUTED, anchor="lm")
+        lx = 330
+        for k, side in enumerate(("home", "away")):  # два маленьких логотипа
+            logo = _logo((leg.get("logos") or [None, None])[k], 52, "".join(w[0] for w in leg[side].split()[:2]).upper(),
+                         _rgb((leg.get("colors") or ["3b4a7a", "3b4a7a"])[k]))
+            img.paste(logo, (lx + k * 60, cy - logo.height // 2), logo)
+        match = f"{leg['home']} — {leg['away']}"
+        size = 26
+        while size > 16 and d.textlength(match, font=font(size)) > 430:
+            size -= 2
+        d.text((470, cy - 14), match, font=font(size), fill=WHITE, anchor="lm")
+        pick = leg["label"]
+        size = 22
+        while size > 14 and d.textlength(pick, font=font(size, "Medium")) > 430:
+            size -= 2
+        d.text((470, cy + 16), pick, font=font(size, "Medium"), fill=(130, 220, 160), anchor="lm")
+        _pill(d, W - 160, cy - 25, f"{leg['odds']:.2f}", (46, 60, 110), size=26)
+        y += row_h
+    # золотая плашка с итоговым кэфом
+    box = (150, 470, W - 150, 650)
+    _gold_box(img, box)
+    d = ImageDraw.Draw(img)
+    dark = (40, 28, 6)
+    d.text((box[0] + 50, 515), "ИТОГОВЫЙ КЭФ", font=font(28, "ExtraBold"), fill=dark, anchor="lm")
+    d.text((box[0] + 50, 590), f"{total:.2f}", font=font(84, "ExtraBold"), fill=dark, anchor="lm")
+    d.text((box[2] - 50, 530), "ШАНС, ЧТО ЗАЙДЁТ", font=font(22, "Bold"), fill=dark, anchor="rm")
+    d.text((box[2] - 50, 590), f"{p_all * 100:.0f}%", font=font(64, "ExtraBold"), fill=dark, anchor="rm")
+    d.text((W / 2, 680), f"{len(legs[:n])} события в одной ставке", font=font(22, "Medium"), fill=MUTED, anchor="mm")
+    return _png(img, d, brand)
+
+
+def pd_time(kickoff) -> str:
+    """«21:00» из ISO-времени матча."""
+    s = str(kickoff)
+    return s[11:16] if len(s) >= 16 else s
+
+
 def schedule_card(day: str, rows: list[tuple[str, str, str, str]], more: int, brand: str = "",
                   heading: str = "Матчи дня", sport: str = "football") -> bytes:
     """Список матчей: до 8 строк (время, хозяева, гости, турнир) — расписание, теннис, экспресс."""

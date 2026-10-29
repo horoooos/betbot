@@ -47,7 +47,8 @@ SCENE = {"football": "association football (soccer), round black and white socce
          "tennis": "tennis court, tennis racket and yellow ball", "esports": "esports arena, gaming PC, gamepad, neon"}
 TEXT_API = "https://text.pollinations.ai/openai"
 PROMPT = (
-    "Ты редактор спортивного Telegram-канала. Перескажи новость своими словами, живо и коротко. "
+    "Ты редактор русскоязычного спортивного Telegram-канала. Перескажи новость своими словами, живо и коротко. "
+    "Заголовок и текст пиши ТОЛЬКО НА РУССКОМ ЯЗЫКЕ, имена — русскими буквами. "
     "СТРОГО: используй только факты из исходника. Не добавляй оценок, мнений, реакции болельщиков или "
     "«обсуждений» — если в исходнике мало фактов, пиши коротко. Не пиши про источник. "
     "Ответь только JSON без пояснений: {\"sport\": \"football|hockey|basketball|tennis|esports|other\", "
@@ -88,6 +89,12 @@ def _items(sport: str) -> list[dict]:
     return sorted(out, key=lambda x: x["when"], reverse=True)
 
 
+def _cyrillic(text: str) -> float:
+    """Доля русских букв среди всех букв (названия команд латиницей вроде «NAVI» допускаются)."""
+    letters = [c for c in text if c.isalpha()]
+    return sum("а" <= c.lower() <= "я" or c.lower() == "ё" for c in letters) / max(len(letters), 1)
+
+
 def _rewrite(item: dict) -> dict | None:
     body = {"model": "openai", "private": True,
             "messages": [{"role": "system", "content": PROMPT},
@@ -107,6 +114,8 @@ def _rewrite(item: dict) -> dict | None:
     if not (10 <= len(title) <= 110 and 40 <= len(text) <= 700):
         return None
     if title.lower() == item["title"].lower():  # нейросеть просто повторила заголовок — не годится
+        return None
+    if _cyrillic(title) < 0.4 or _cyrillic(text) < 0.4:  # ответила по-английски — в русский канал не годится
         return None
     if len(text) > 1.3 * len(item["title"] + " " + item["desc"]) + 40:  # длиннее исходника — значит, досочинила
         return None

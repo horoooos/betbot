@@ -14,6 +14,7 @@ from . import card, sports, telegram
 from . import markets as mk
 from .leagues import ALL, ORDER, title
 from .sports import EMOJI, SPORT_RU
+from .texts import MONTHS
 
 SLOTS = {10: "express", 13: "learn", 16: "match_of_day", 19: "evening", 22: "facts"}
 FOOTER = "<i>⚠️ 18+. Прогноз — не гарантия. Ставьте только то, что не жалко потерять.</i>"
@@ -80,7 +81,9 @@ def _favourites(football: list[dict], other: list[dict], now: pd.Timestamp, hour
             team = e[side]["ru"]
             legs.append({"sport": e.get("sport", "football"), "div": e["div"], "id": e["id"], "side": side,
                          "p": prob, "odds": float(odds), "kickoff": e["kickoff"],
-                         "home": e["home"]["ru"], "away": e["away"]["ru"],
+                         "home": e["home"]["ru"], "away": e["away"]["ru"], "league": _sport_title(e),
+                         "logos": [e["home"].get("logo"), e["away"].get("logo")],
+                         "colors": [e["home"].get("color"), e["away"].get("color")],
                          "label": f"Победа: {team}" + (" (с ОТ)" if e.get("sport") in ("hockey", "basketball") else "")})
     return sorted(legs, key=lambda x: -x["p"])
 
@@ -117,8 +120,7 @@ def express(state: dict, football, other, now, brand) -> bool:
                      f"   ✅ <b>{escape(leg['label'])}</b> · {_pct(leg['p'])} · кэф {leg['odds']:.2f}")
     lines += [f"\n💰 Итоговый кэф: <b>{total:.2f}</b> · шанс, что зайдёт всё: <b>{_pct(p_all)}</b>",
               "Вечером бот напишет, зашёл ли экспресс 👇", FOOTER]
-    png = card.ai_card("sports betting slip glowing on stadium background, neon, cinematic, high detail",
-                       "Экспресс дня", f"{len(picked)} события · кэф {total:.2f}", brand)
+    png = card.express_card(picked, total, p_all, f"{now.day} {MONTHS[now.month - 1]}", brand)
     mid = _post(png, "\n".join(lines))
     state["express"] = {"msg": mid, "legs": picked, "odds": total, "day": str(now.date()), "done": False}
     return True
