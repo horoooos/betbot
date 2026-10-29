@@ -1782,7 +1782,7 @@
   "kickoff": "2026-10-29T05:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "home": {
    "id": "12",
    "name": "LA Clippers",
@@ -1869,7 +1869,9 @@
    "odds": 2.73,
    "est": true
   },
-  "msg_id": 278
+  "msg_id": 278,
+  "main_hit": false,
+  "bold_hit": true
  },
  "WTA|185678": {
   "id": "185678",
