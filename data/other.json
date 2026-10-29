@@ -3791,5 +3791,104 @@
  "DOTA|1753766": {
   "status": "skipped",
   "kickoff": "2026-10-29T18:00:00+03:00"
+ },
+ "ATP|185194": {
+  "id": "185194",
+  "div": "ATP",
+  "sport": "tennis",
+  "tournament": "Erste Bank Open",
+  "round": "Round 2",
+  "bo5": false,
+  "kickoff": "2026-10-29T19:00:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "detail": "Thu, October 29th at 12:00 PM EDT",
+  "home": {
+   "id": "8621",
+   "name": "Arthur Fery",
+   "logo": [
+    "https://a.espncdn.com/i/headshots/tennis/players/full/8621.png",
+    "https://a.espncdn.com/i/teamlogos/countries/500/gbr.png"
+   ],
+   "country": "Great Britain",
+   "color": "2d6a4f",
+   "winner": false,
+   "sets": [],
+   "set_won": [],
+   "ru": "Артур Фери"
+  },
+  "away": {
+   "id": "3764",
+   "name": "Lorenzo Musetti",
+   "logo": [
+    "https://a.espncdn.com/i/headshots/tennis/players/full/3764.png",
+    "https://a.espncdn.com/i/teamlogos/countries/500/ita.png"
+   ],
+   "country": "Italy",
+   "color": "2d6a4f",
+   "winner": false,
+   "sets": [],
+   "set_won": [],
+   "ru": "Лорензо Мусетти"
+  },
+  "odds": {},
+  "probs": {
+   "TN_W1": 0.24878979792373193,
+   "TN_W2": 0.7512102020762681,
+   "TN_3S": 0.4390532100772565,
+   "TN_2S": 0.5609467899227435,
+   "TN_S2:0": 0.10590708961760915,
+   "TN_S0:2": 0.45503970030513435,
+   "TN_S2:1": 0.14288270830612274,
+   "TN_S1:2": 0.29617050177113374,
+   "TN_SET1": 0.5449602996948657,
+   "TN_SET2": 0.8940929103823908
+  },
+  "labels": {
+   "TN_W1": "Победа: Артур Фери",
+   "TN_W2": "Победа: Лорензо Мусетти",
+   "TN_3S": "Будет 3 сета",
+   "TN_2S": "Будет 2 сета",
+   "TN_S2:0": "Счёт по сетам 2:0",
+   "TN_S0:2": "Счёт по сетам 0:2",
+   "TN_S2:1": "Счёт по сетам 2:1",
+   "TN_S1:2": "Счёт по сетам 1:2",
+   "TN_SET1": "Артур Фери возьмёт хотя бы сет",
+   "TN_SET2": "Лорензо Мусетти возьмёт хотя бы сет"
+  },
+  "real": {},
+  "center": "Рейтинг Эло 1604 : 1796",
+  "bar": [
+   0.24878979792373193,
+   0,
+   0.7512102020762681
+  ],
+  "model": {
+   "elo": [
+    1604.2268626610494,
+    1796.1984266754766
+   ],
+   "src": "Эло"
+  },
+  "main": {
+   "key": "TN_2S",
+   "label": "Будет 2 сета",
+   "p": 0.5609,
+   "odds": 1.66,
+   "est": true,
+   "stake": 1.0
+  },
+  "bold": {
+   "key": "TN_S0:2",
+   "label": "Счёт по сетам 0:2",
+   "p": 0.455,
+   "odds": 2.04,
+   "est": true,
+   "stake": 1.0
+  },
+  "open": {},
+  "top": false,
+  "msg_id": 424
  }
 }
