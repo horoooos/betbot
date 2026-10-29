@@ -2073,31 +2073,31 @@
   "kickoff": "2026-10-29T08:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Thu, October 28th at 1:00 AM EDT",
   "home": {
-   "id": "2617",
-   "name": "Jil Teichmann",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/2617.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/sui.png"
    ],
+   "id": "2617",
+   "name": "Jil Teichmann",
    "country": "Switzerland",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
    "ru": "Жил Теичманн"
   },
   "away": {
-   "id": "5604",
-   "name": "Zeynep Sonmez",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/5604.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/tur.png"
    ],
+   "id": "5604",
+   "name": "Zeynep Sonmez",
    "country": "Türkiye",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
@@ -2152,7 +2152,9 @@
    "odds": 2.55,
    "est": true
   },
-  "msg_id": 341
+  "msg_id": 341,
+  "main_hit": true,
+  "bold_hit": false
  },
  "WTA|185672": {
   "id": "185672",
