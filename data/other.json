@@ -2360,31 +2360,31 @@
   "kickoff": "2026-10-29T11:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Thu, October 29th at 4:00 AM EDT",
   "home": {
-   "id": "3126",
-   "name": "Elena Rybakina",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/3126.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/kaz.png"
    ],
+   "id": "3126",
+   "name": "Elena Rybakina",
    "country": "Kazakhstan",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
    "ru": "Елена Рибакина"
   },
   "away": {
-   "id": "1802",
-   "name": "Yulia Putintseva",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/1802.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/kaz.png"
    ],
+   "id": "1802",
+   "name": "Yulia Putintseva",
    "country": "Kazakhstan",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
@@ -2446,7 +2446,9 @@
   "msg_id": 365,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": true,
+  "bold_hit": false
  },
  "CS2|1753682": {
   "status": "skipped",
