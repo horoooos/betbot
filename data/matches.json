@@ -5281,7 +5281,7 @@
   "kickoff": "2026-10-29T05:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Scheduled",
   "home": {
    "id": "9726",
@@ -5376,7 +5376,10 @@
   "odds_src": "среднее по букмекерам",
   "model_w": 0.0,
   "learned_n": 36,
-  "msg_id": 274
+  "msg_id": 274,
+  "main_hit": false,
+  "bold_hit": true,
+  "value_hit": null
  },
  "761918": {
   "id": "761918",
@@ -5385,7 +5388,7 @@
   "kickoff": "2026-10-29T05:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Scheduled",
   "home": {
    "id": "9727",
@@ -5480,7 +5483,10 @@
   "odds_src": "среднее по букмекерам",
   "model_w": 0.0,
   "learned_n": 36,
-  "msg_id": 276
+  "msg_id": 276,
+  "main_hit": true,
+  "bold_hit": false,
+  "value_hit": null
  },
  "401876986": {
   "id": "401876986",
