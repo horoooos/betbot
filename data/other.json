@@ -4320,5 +4320,104 @@
   "open": {},
   "top": false,
   "msg_id": 434
+ },
+ "WTA|185847": {
+  "id": "185847",
+  "div": "WTA",
+  "sport": "tennis",
+  "tournament": "Valle D'Aosta Ladies Open",
+  "round": "Round 2",
+  "bo5": false,
+  "kickoff": "2026-10-29T20:30:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "detail": "Thu, October 29th at 1:30 PM EDT",
+  "home": {
+   "id": "6419",
+   "name": "Martyna Kubka",
+   "logo": [
+    "https://a.espncdn.com/i/headshots/tennis/players/full/6419.png",
+    "https://a.espncdn.com/i/teamlogos/countries/500/pol.png"
+   ],
+   "country": "Poland",
+   "color": "2d6a4f",
+   "winner": false,
+   "sets": [],
+   "set_won": [],
+   "ru": "Мартина Кубка"
+  },
+  "away": {
+   "id": "8411",
+   "name": "Lisa Pigato",
+   "logo": [
+    "https://a.espncdn.com/i/headshots/tennis/players/full/8411.png",
+    "https://a.espncdn.com/i/teamlogos/countries/500/ita.png"
+   ],
+   "country": "Italy",
+   "color": "2d6a4f",
+   "winner": false,
+   "sets": [],
+   "set_won": [],
+   "ru": "Лиса Пигато"
+  },
+  "odds": {},
+  "probs": {
+   "TN_W1": 0.4116632415373756,
+   "TN_W2": 0.5883367584626245,
+   "TN_3S": 0.49299844992270625,
+   "TN_2S": 0.5070015500772936,
+   "TN_S2:0": 0.19433342729813338,
+   "TN_S0:2": 0.3126681227791603,
+   "TN_S2:1": 0.21732981423924227,
+   "TN_S1:2": 0.275668635683464,
+   "TN_SET1": 0.6873318772208397,
+   "TN_SET2": 0.8056665727018666
+  },
+  "labels": {
+   "TN_W1": "Победа: Мартина Кубка",
+   "TN_W2": "Победа: Лиса Пигато",
+   "TN_3S": "Будет 3 сета",
+   "TN_2S": "Будет 2 сета",
+   "TN_S2:0": "Счёт по сетам 2:0",
+   "TN_S0:2": "Счёт по сетам 0:2",
+   "TN_S2:1": "Счёт по сетам 2:1",
+   "TN_S1:2": "Счёт по сетам 1:2",
+   "TN_SET1": "Мартина Кубка возьмёт хотя бы сет",
+   "TN_SET2": "Лиса Пигато возьмёт хотя бы сет"
+  },
+  "real": {},
+  "center": "Рейтинг Эло 1603 : 1665",
+  "bar": [
+   0.4116632415373756,
+   0,
+   0.5883367584626245
+  ],
+  "model": {
+   "elo": [
+    1602.7227482061312,
+    1664.756305760399
+   ],
+   "src": "Эло"
+  },
+  "main": {
+   "key": "TN_W2",
+   "label": "Победа: Лиса Пигато",
+   "p": 0.5883,
+   "odds": 1.58,
+   "est": true,
+   "stake": 1.0
+  },
+  "bold": {
+   "key": "TN_S1:2",
+   "label": "Счёт по сетам 1:2",
+   "p": 0.2757,
+   "odds": 3.37,
+   "est": true,
+   "stake": 1.0
+  },
+  "open": {},
+  "top": false,
+  "msg_id": 441
  }
 }
