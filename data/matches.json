@@ -6052,7 +6052,7 @@
   "kickoff": "2026-10-29T21:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Scheduled",
   "home": {
    "id": "21965",
@@ -6188,7 +6188,10 @@
   "close": {
    "H+1.5": 0.51,
    "O45": 0.2774
-  }
+  },
+  "main_hit": false,
+  "bold_hit": true,
+  "value_hit": null
  },
  "401874969": {
   "id": "401874969",
