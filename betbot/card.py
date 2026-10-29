@@ -15,6 +15,21 @@ WHITE, MUTED, ACCENT = (255, 255, 255), (160, 172, 205), (255, 196, 0)
 C_HOME, C_DRAW, C_AWAY = (46, 204, 113), (149, 165, 166), (52, 152, 219)
 
 
+KEEP = set("—–·«»…₽≈−№")  # эти знаки шрифт рисует; эмодзи (🔥 ✅ флаги) — нет, вместо них были бы квадраты
+
+
+def safe(text: str) -> str:
+    """Убираем из текста для картинки всё, чего нет в шрифте Montserrat (эмодзи, флаги, значки)."""
+    out = "".join(c for c in str(text) if ord(c) < 0x2000 or c in KEEP)
+    return " ".join(out.split())
+
+
+# Вся отрисовка текста на картинках идёт через safe() — так эмодзи не превратятся в квадраты нигде.
+_text, _textlength = ImageDraw.ImageDraw.text, ImageDraw.ImageDraw.textlength
+ImageDraw.ImageDraw.text = lambda self, xy, text, *a, **k: _text(self, xy, safe(text), *a, **k)
+ImageDraw.ImageDraw.textlength = lambda self, text, *a, **k: _textlength(self, safe(text), *a, **k)
+
+
 def font(size: int, weight: str = "Bold") -> ImageFont.FreeTypeFont:
     return ImageFont.truetype(str(FONTS / f"Montserrat-{weight}.ttf"), size)
 

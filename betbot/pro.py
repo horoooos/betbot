@@ -276,9 +276,13 @@ def post_streak(state: dict, res: pd.DataFrame, brand: str) -> None:
         lines.append(f"…и ещё {n - 10}")
     lines += [f"\n💰 Если бы всё это было одним экспрессом — кэф <b>{total:,.2f}</b>".replace(",", " "),
               "<i>Серии заканчиваются — играйте по банку, а не на эмоциях.</i>", FOOTER]
-    rows = [(str(r["score"]), str(r["home"]), str(r["away"]), "✅ " + str(r["main_label"]))
+    rows = [(str(r["score"]), str(r["home"]), str(r["away"]), str(r["main_label"]))
             for _, r in tail.iloc[::-1].head(8).iterrows()]
-    png = card.schedule_card(f"{n} прогнозов подряд", rows, max(0, n - 8), brand, heading="Серия заходов 🔥")
+    sports_in = tail["sport"].fillna("football").unique() if "sport" in tail else ["football"]
+    icon = sports_in[0] if len(sports_in) == 1 else "football"  # иконка вида спорта, из которого серия
+    word = "прогноз" if n % 10 == 1 and n % 100 != 11 else "прогноза" if 2 <= n % 10 <= 4 and not 12 <= n % 100 <= 14 else "прогнозов"
+    png = card.schedule_card(f"{n} {word} подряд", rows, max(0, n - 8), brand, heading="Серия заходов",
+                             sport=icon)
     _post(png, "\n".join(lines))
     print(f"Серия: {n} заходов подряд")
 
