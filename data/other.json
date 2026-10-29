@@ -3288,31 +3288,31 @@
   "kickoff": "2026-10-29T17:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Thu, October 29th at 10:00 AM EDT",
   "home": {
-   "id": "4104",
-   "name": "Susan Bandecchi",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/4104.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/sui.png"
    ],
+   "id": "4104",
+   "name": "Susan Bandecchi",
    "country": "Switzerland",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
    "ru": "Сузан Бандекки"
   },
   "away": {
-   "id": "6061",
-   "name": "Elsa Jacquemot",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/6061.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/fra.png"
    ],
+   "id": "6061",
+   "name": "Elsa Jacquemot",
    "country": "France",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
@@ -3378,7 +3378,9 @@
   "msg_id": 405,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": true,
+  "bold_hit": false
  },
  "CS2|1753684": {
   "status": "skipped",
