@@ -49,6 +49,7 @@ DATA = Path(__file__).resolve().parent / "data"
 STATE, MATCHES, RESULTS = DATA / "state.json", DATA / "matches.json", DATA / "results.csv"
 OTHER = DATA / "other.json"  # хоккей, баскетбол, теннис, киберспорт
 LIVE = DATA / "live.json"    # что уже опубликовано в live (начало матча, счёт)
+REPOST = DATA / "repost.json"  # разовая просьба переотправить посты: {"id": "...", "items": ["value", ...]}
 HIST_LEAGUES = [c for c in REVIEW_LEAGUES if c in MAIN or c in EXTRA]
 BRAND = os.environ.get("TELEGRAM_CHAT_ID", "") if os.environ.get("TELEGRAM_CHAT_ID", "").startswith("@") else ""
 
@@ -516,6 +517,22 @@ def main():
     except Exception as e:
         print(f"  ! live не удался: {e}")
     save_json(LIVE, live.cleanup(live_store, now))
+
+    # разовая переотправка постов по запросу (data/repost.json) — выполняется один раз на каждый id
+    req = load_json(REPOST, {})
+    if req.get("id") and state.get("repost_done") != req["id"]:
+        state["repost_done"] = req["id"]  # отмечаем сразу — чтобы при ошибке не постить по кругу
+        for item in req.get("items", []):
+            try:
+                if item == "value":
+                    pro.post_value(fx_loader(), events, now, BRAND)
+                elif item == "streak":
+                    pro.post_streak(state, read_results(), BRAND, force=True)
+                elif item == "express":
+                    content.repost_express(state, events, other, now, BRAND)
+                print(f"Переотправка: {item}")
+            except Exception as e:
+                print(f"  ! переотправка {item} не удалась: {e}")
 
     if now.hour == VALUE_HOUR and state.get("value_day") != today:  # 💎 value дня
         state["value_day"] = today

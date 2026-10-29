@@ -249,7 +249,7 @@ def _is_mark(n: int) -> bool:
     return n in STREAK_MARKS or (n > 10 and n % 5 == 0)
 
 
-def post_streak(state: dict, res: pd.DataFrame, brand: str) -> None:
+def post_streak(state: dict, res: pd.DataFrame, brand: str, force: bool = False) -> None:
     """«🔥 5 заходов подряд!» — когда серия основных прогнозов доходит до 3, 5, 7, 10, 15…"""
     if res is None or res.empty:
         return
@@ -263,13 +263,16 @@ def post_streak(state: dict, res: pd.DataFrame, brand: str) -> None:
     if n < posted:  # серия прервалась — начинаем заново
         state["streak_posted"] = 0
         posted = 0
-    if n <= posted or not _is_mark(n):
+    if not force and (n <= posted or not _is_mark(n)):
+        return
+    if n < 3:  # даже по запросу не хвастаемся одним-двумя заходами
         return
     state["streak_posted"] = n
     tail = res.tail(n)
     odds = tail["main_odds"].astype(float)
     total = float(np.prod(odds))
-    lines = [f"🔥 <b>{n} ЗАХОДОВ ПОДРЯД!</b>", "Основной прогноз бота заходит раз за разом:\n"]
+    word = "ЗАХОД" if n % 10 == 1 and n % 100 != 11 else "ЗАХОДА" if 2 <= n % 10 <= 4 and not 12 <= n % 100 <= 14 else "ЗАХОДОВ"
+    lines = [f"🔥 <b>{n} {word} ПОДРЯД!</b>", "Основной прогноз бота заходит раз за разом:\n"]
     for _, r in tail.iloc[::-1].head(10).iterrows():
         emoji = sports.EMOJI.get(str(r.get("sport", "football")), "⚽️")
         lines.append(f"✅ {emoji} {escape(str(r['home']))} {escape(str(r['score']))} {escape(str(r['away']))} — "

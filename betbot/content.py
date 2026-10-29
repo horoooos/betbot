@@ -113,17 +113,41 @@ def express(state: dict, football, other, now, brand) -> bool:
     for leg in picked:
         total *= leg["odds"]
         p_all *= leg["p"]
+    png = card.express_card(picked, total, p_all, f"{now.day} {MONTHS[now.month - 1]}", brand)
+    mid = _post(png, _express_text(picked, total, p_all))
+    state["express"] = {"msg": mid, "legs": picked, "odds": total, "day": str(now.date()), "done": False}
+    return True
+
+
+def repost_express(state: dict, football: list[dict], other: list[dict], now, brand) -> bool:
+    """Переотправить сегодняшний экспресс с новой картинкой (логотипы берём из текущего расписания)."""
+    ex = state.get("express")
+    if not ex or ex.get("day") != str(now.date()) or ex.get("done"):
+        return express(state, football, other, now, brand)
+    by_key = {f"{e['div']}|{e['id']}": e for e in football + other}
+    for leg in ex["legs"]:
+        e = by_key.get(f"{leg['div']}|{leg['id']}")
+        if e:
+            leg.setdefault("logos", [e["home"].get("logo"), e["away"].get("logo")])
+            leg.setdefault("colors", [e["home"].get("color"), e["away"].get("color")])
+            leg.setdefault("league", _sport_title(e))
+    p_all = 1.0
+    for leg in ex["legs"]:
+        p_all *= leg["p"]
+    png = card.express_card(ex["legs"], ex["odds"], p_all, f"{now.day} {MONTHS[now.month - 1]}", brand)
+    ex["msg"] = _post(png, _express_text(ex["legs"], ex["odds"], p_all))  # итог придёт ответом на новый пост
+    return True
+
+
+def _express_text(legs: list[dict], total: float, p_all: float) -> str:
     lines = ["🔥 <b>ЭКСПРЕСС ДНЯ</b>", "Самые надёжные исходы сегодняшнего дня в одной ставке:\n"]
-    for i, leg in enumerate(picked, 1):
+    for i, leg in enumerate(legs, 1):
         k = pd.Timestamp(leg["kickoff"])
         lines.append(f"{i}. {k:%H:%M} {escape(leg['home'])} — {escape(leg['away'])}\n"
                      f"   ✅ <b>{escape(leg['label'])}</b> · {_pct(leg['p'])} · кэф {leg['odds']:.2f}")
     lines += [f"\n💰 Итоговый кэф: <b>{total:.2f}</b> · шанс, что зайдёт всё: <b>{_pct(p_all)}</b>",
               "Вечером бот напишет, зашёл ли экспресс 👇", FOOTER]
-    png = card.express_card(picked, total, p_all, f"{now.day} {MONTHS[now.month - 1]}", brand)
-    mid = _post(png, "\n".join(lines))
-    state["express"] = {"msg": mid, "legs": picked, "odds": total, "day": str(now.date()), "done": False}
-    return True
+    return "\n".join(lines)
 
 
 def settle_express(state: dict, finished: dict) -> None:
