@@ -975,7 +975,7 @@
   "kickoff": "2026-10-29T03:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "home": {
    "id": "16",
    "name": "Minnesota Timberwolves",
@@ -1062,7 +1062,9 @@
    "odds": 2.42,
    "est": false
   },
-  "msg_id": 196
+  "msg_id": 196,
+  "main_hit": true,
+  "bold_hit": true
  },
  "NBA|401909889": {
   "id": "401909889",
