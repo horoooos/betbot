@@ -575,7 +575,7 @@
   "kickoff": "2026-10-29T02:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "home": {
    "id": "23",
    "name": "Washington Capitals",
@@ -670,7 +670,9 @@
    "odds": 2.1,
    "est": false
   },
-  "msg_id": 181
+  "msg_id": 181,
+  "main_hit": true,
+  "bold_hit": false
  },
  "NBA|401909885": {
   "id": "401909885",
