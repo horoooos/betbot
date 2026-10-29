@@ -194,7 +194,7 @@
   "kickoff": "2026-10-29T02:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "home": {
    "id": "5",
    "name": "Cleveland Cavaliers",
@@ -281,7 +281,9 @@
    "odds": 2.73,
    "est": true
   },
-  "msg_id": 158
+  "msg_id": 158,
+  "main_hit": false,
+  "bold_hit": true
  },
  "NBA|401909883": {
   "id": "401909883",
