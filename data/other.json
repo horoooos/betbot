@@ -3163,5 +3163,207 @@
   "close": {
    "_": null
   }
+ },
+ "ATP|185193": {
+  "id": "185193",
+  "div": "ATP",
+  "sport": "tennis",
+  "tournament": "Erste Bank Open",
+  "round": "Round 2",
+  "bo5": false,
+  "kickoff": "2026-10-29T17:00:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "detail": "Thu, October 29th at 10:00 AM EDT",
+  "home": {
+   "id": "2498",
+   "name": "Nikoloz Basilashvili",
+   "logo": [
+    "https://a.espncdn.com/i/headshots/tennis/players/full/2498.png",
+    "https://a.espncdn.com/i/teamlogos/countries/500/geo.png"
+   ],
+   "country": "Georgia",
+   "color": "2d6a4f",
+   "winner": false,
+   "sets": [],
+   "set_won": [],
+   "ru": "Николоз Басилашвили"
+  },
+  "away": {
+   "id": "3782",
+   "name": "Carlos Alcaraz",
+   "logo": [
+    "https://a.espncdn.com/i/headshots/tennis/players/full/3782.png",
+    "https://a.espncdn.com/i/teamlogos/countries/500/esp.png"
+   ],
+   "country": "Spain",
+   "color": "2d6a4f",
+   "winner": false,
+   "sets": [],
+   "set_won": [],
+   "ru": "Карлос Алькарас"
+  },
+  "odds": {},
+  "probs": {
+   "TN_W1": 0.172940968698838,
+   "TN_W2": 0.827059031301162,
+   "TN_3S": 0.3891353283470448,
+   "TN_2S": 0.6108646716529553,
+   "TN_S2:0": 0.06999160904693842,
+   "TN_S0:2": 0.5408730626060169,
+   "TN_S2:1": 0.10294935965189952,
+   "TN_S1:2": 0.28618596869514523,
+   "TN_SET1": 0.45912693739398314,
+   "TN_SET2": 0.9300083909530615
+  },
+  "labels": {
+   "TN_W1": "Победа: Николоз Басилашвили",
+   "TN_W2": "Победа: Карлос Алькарас",
+   "TN_3S": "Будет 3 сета",
+   "TN_2S": "Будет 2 сета",
+   "TN_S2:0": "Счёт по сетам 2:0",
+   "TN_S0:2": "Счёт по сетам 0:2",
+   "TN_S2:1": "Счёт по сетам 2:1",
+   "TN_S1:2": "Счёт по сетам 1:2",
+   "TN_SET1": "Николоз Басилашвили возьмёт хотя бы сет",
+   "TN_SET2": "Карлос Алькарас возьмёт хотя бы сет"
+  },
+  "real": {},
+  "center": "Рейтинг Эло 1642 : 1914",
+  "bar": [
+   0.172940968698838,
+   0,
+   0.827059031301162
+  ],
+  "model": {
+   "elo": [
+    1641.7827801102778,
+    1913.6382285648056
+   ],
+   "src": "Эло"
+  },
+  "main": {
+   "key": "TN_2S",
+   "label": "Будет 2 сета",
+   "p": 0.6109,
+   "odds": 1.52,
+   "est": true,
+   "stake": 1.0
+  },
+  "bold": {
+   "key": "TN_S1:2",
+   "label": "Счёт по сетам 1:2",
+   "p": 0.2862,
+   "odds": 3.25,
+   "est": true,
+   "stake": 1.0
+  },
+  "open": {},
+  "top": false,
+  "msg_id": 403
+ },
+ "WTA|185850": {
+  "id": "185850",
+  "div": "WTA",
+  "sport": "tennis",
+  "tournament": "Valle D'Aosta Ladies Open",
+  "round": "Round 2",
+  "bo5": false,
+  "kickoff": "2026-10-29T17:00:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "detail": "Thu, October 29th at 10:00 AM EDT",
+  "home": {
+   "id": "4104",
+   "name": "Susan Bandecchi",
+   "logo": [
+    "https://a.espncdn.com/i/headshots/tennis/players/full/4104.png",
+    "https://a.espncdn.com/i/teamlogos/countries/500/sui.png"
+   ],
+   "country": "Switzerland",
+   "color": "2d6a4f",
+   "winner": false,
+   "sets": [],
+   "set_won": [],
+   "ru": "Сузан Бандекки"
+  },
+  "away": {
+   "id": "6061",
+   "name": "Elsa Jacquemot",
+   "logo": [
+    "https://a.espncdn.com/i/headshots/tennis/players/full/6061.png",
+    "https://a.espncdn.com/i/teamlogos/countries/500/fra.png"
+   ],
+   "country": "France",
+   "color": "2d6a4f",
+   "winner": false,
+   "sets": [],
+   "set_won": [],
+   "ru": "Эльза Жакмо"
+  },
+  "odds": {},
+  "probs": {
+   "TN_W1": 0.7103857043070596,
+   "TN_W2": 0.2896142956929404,
+   "TN_3S": 0.45837807168800837,
+   "TN_2S": 0.5416219283119916,
+   "TN_S2:0": 0.41507102153847375,
+   "TN_S0:2": 0.12655090677351788,
+   "TN_S2:1": 0.29531468276858586,
+   "TN_S1:2": 0.1630633889194225,
+   "TN_SET1": 0.8734490932264821,
+   "TN_SET2": 0.5849289784615262
+  },
+  "labels": {
+   "TN_W1": "Победа: Сузан Бандекки",
+   "TN_W2": "Победа: Эльза Жакмо",
+   "TN_3S": "Будет 3 сета",
+   "TN_2S": "Будет 2 сета",
+   "TN_S2:0": "Счёт по сетам 2:0",
+   "TN_S0:2": "Счёт по сетам 0:2",
+   "TN_S2:1": "Счёт по сетам 2:1",
+   "TN_S1:2": "Счёт по сетам 1:2",
+   "TN_SET1": "Сузан Бандекки возьмёт хотя бы сет",
+   "TN_SET2": "Эльза Жакмо возьмёт хотя бы сет"
+  },
+  "real": {},
+  "center": "Рейтинг Эло 1572 : 1416",
+  "bar": [
+   0.7103857043070596,
+   0,
+   0.2896142956929404
+  ],
+  "model": {
+   "elo": [
+    1571.9516605574493,
+    1416.08197341493
+   ],
+   "src": "Эло"
+  },
+  "main": {
+   "key": "TN_SET2",
+   "label": "Эльза Жакмо возьмёт хотя бы сет",
+   "p": 0.5849,
+   "odds": 1.59,
+   "est": true,
+   "stake": 1.0
+  },
+  "bold": {
+   "key": "TN_S2:1",
+   "label": "Счёт по сетам 2:1",
+   "p": 0.2953,
+   "odds": 3.15,
+   "est": true,
+   "stake": 1.0
+  },
+  "open": {},
+  "top": false,
+  "msg_id": 405
+ },
+ "CS2|1753684": {
+  "status": "skipped",
+  "kickoff": "2026-10-29T17:00:00+03:00"
  }
 }
