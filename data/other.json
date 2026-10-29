@@ -1485,7 +1485,7 @@
   "kickoff": "2026-10-29T04:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "home": {
    "id": "6",
    "name": "Dallas Mavericks",
@@ -1572,7 +1572,9 @@
    "odds": 2.73,
    "est": true
   },
-  "msg_id": 245
+  "msg_id": 245,
+  "main_hit": false,
+  "bold_hit": true
  },
  "WTA|185660": {
   "id": "185660",
