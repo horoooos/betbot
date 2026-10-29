@@ -1168,7 +1168,9 @@
      "f7f316",
      "008000"
     ],
-    "league": "🇸🇦 Саудовская Аравия · Про-лига"
+    "league": "🇸🇦 Саудовская Аравия · Про-лига",
+    "win": true,
+    "score": "5:3"
    },
    {
     "sport": "football",
@@ -1219,13 +1221,13 @@
   ],
   "odds": 2.46450672,
   "day": "2026-10-29",
-  "done": false
+  "done": true
  },
  "streak_posted": 0,
  "value_day": "2026-10-29",
  "repost_done": "2026-10-29-new-cards",
  "table_day": "2026-10-29",
- "site_stamp": "96|2026-10-29 22",
+ "site_stamp": "97|2026-10-29 22",
  "battle": {
   "bot": 1,
   "crowd": 1
