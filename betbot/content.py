@@ -158,20 +158,38 @@ def settle_express(state: dict, finished: dict) -> None:
     ex = state.get("express")
     if not ex or ex.get("done"):
         return
-    results = []
+    fresh = False
     for leg in ex["legs"]:
         f = finished.get(f"{leg['div']}|{leg['id']}")
-        if f is None:
-            return  # ещё не все матчи закончились
-        win = f["hs"] > f["as"] if leg["side"] == "home" else f["as"] > f["hs"]
-        results.append((leg, win, f))
-    ok = all(w for _, w, _ in results)
-    lines = [f"{'✅' if ok else '❌'} <b>ЭКСПРЕСС ДНЯ {'ЗАШЁЛ' if ok else 'НЕ ЗАШЁЛ'}</b>"
-             + (f" · кэф {ex['odds']:.2f}" if ok else "")]
-    for leg, w, f in results:
-        lines.append(f"{'✅' if w else '❌'} {escape(leg['home'])} {f['hs']}:{f['as']} {escape(leg['away'])} — {escape(leg['label'])}")
+        if f is None or "win" in leg:
+            continue
+        leg["win"] = f["hs"] > f["as"] if leg["side"] == "home" else f["as"] > f["hs"]
+        leg["score"] = f"{f['hs']}:{f['as']}"
+        fresh = True
+    if not fresh:
+        last = max(pd.Timestamp(leg["kickoff"]) for leg in ex["legs"])
+        if pd.Timestamp.now(tz="Europe/Moscow") - last > pd.Timedelta(hours=36):
+            ex["done"] = True  # матч пропал из расписания ESPN (перенос/отмена) — больше не ждём
+        return
+    played = [leg for leg in ex["legs"] if "win" in leg]
+    waiting = [leg for leg in ex["legs"] if "win" not in leg]
+    lost = any(not leg["win"] for leg in played)
+
+    def row(leg):
+        return f"{'✅' if leg['win'] else '❌'} {escape(leg['home'])} {leg['score']} {escape(leg['away'])} — {escape(leg['label'])}"
+    if lost or not waiting:  # итог: либо одно событие не зашло, либо сыграли все
+        ok = not lost
+        lines = [f"{'✅' if ok else '❌'} <b>ЭКСПРЕСС ДНЯ {'ЗАШЁЛ' if ok else 'НЕ ЗАШЁЛ'}</b>"
+                 + (f" · кэф {ex['odds']:.2f}" if ok else "")] + [row(leg) for leg in played]
+        lines += [f"⏳ {escape(leg['home'])} — {escape(leg['away'])} — уже не важно" for leg in waiting]
+        lines.append(f"\n<i>{'Касса! 💰 Экспресс собран полностью' if ok else 'Экспресс сгорел — завтра в 10:00 новый 🔄'}</i>")
+        ex["done"] = True
+    else:  # промежуточный итог: событие зашло, ждём остальные
+        lines = [f"🔥 <b>ЭКСПРЕСС ДНЯ: {len(played)} из {len(ex['legs'])} уже зашли!</b>"] + [row(leg) for leg in played]
+        lines += [f"⏳ {escape(leg['home'])} — {escape(leg['away'])} · {escape(leg['label'])} · "
+                  f"{pd.Timestamp(leg['kickoff']):%H:%M} МСК" for leg in waiting]
+        lines.append("\nДержим кулачки 🤞")
     telegram.send("\n".join(lines), reply_to=ex["msg"])
-    ex["done"] = True
 
 
 def learn(state: dict, now, brand) -> bool:
