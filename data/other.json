@@ -4865,5 +4865,97 @@
   },
   "main_hit": true,
   "bold_hit": false
+ },
+ "WTA|185794": {
+  "id": "185794",
+  "div": "WTA",
+  "sport": "tennis",
+  "tournament": "Queretaro Open",
+  "round": "Round 2",
+  "bo5": false,
+  "kickoff": "2026-10-30T00:55:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "detail": "Thu, October 29th at 5:55 PM EDT",
+  "home": {
+   "id": "2346",
+   "name": "Tatjana Maria",
+   "logo": [
+    "https://a.espncdn.com/i/headshots/tennis/players/full/2346.png",
+    "https://a.espncdn.com/i/teamlogos/countries/500/ger.png"
+   ],
+   "country": "Germany",
+   "color": "2d6a4f",
+   "winner": false,
+   "sets": [],
+   "set_won": [],
+   "ru": "Татьяна Мария"
+  },
+  "away": {
+   "id": "4458",
+   "name": "Martina Colmegna",
+   "logo": [
+    "https://a.espncdn.com/i/headshots/tennis/players/full/4458.png",
+    "https://a.espncdn.com/i/teamlogos/countries/500/ita.png"
+   ],
+   "country": "Italy",
+   "color": "2d6a4f",
+   "winner": false,
+   "sets": [],
+   "set_won": [],
+   "ru": "Мартина Колмегна"
+  },
+  "odds": {},
+  "probs": {
+   "TN_W1": 0.8155034913129401,
+   "TN_W2": 0.1844965086870599,
+   "TN_3S": 0.3981582989021234,
+   "TN_2S": 0.6018417010978765,
+   "TN_S2:0": 0.5265773384878811,
+   "TN_S0:2": 0.07526436260999539,
+   "TN_S2:1": 0.28892615282505874,
+   "TN_S1:2": 0.10923214607706469,
+   "TN_SET1": 0.9247356373900046,
+   "TN_SET2": 0.47342266151211887
+  },
+  "labels": {
+   "TN_W1": "Победа: Татьяна Мария",
+   "TN_W2": "Победа: Мартина Колмегна",
+   "TN_3S": "Будет 3 сета",
+   "TN_2S": "Будет 2 сета",
+   "TN_S2:0": "Счёт по сетам 2:0",
+   "TN_S0:2": "Счёт по сетам 0:2",
+   "TN_S2:1": "Счёт по сетам 2:1",
+   "TN_S1:2": "Счёт по сетам 1:2",
+   "TN_SET1": "Татьяна Мария возьмёт хотя бы сет",
+   "TN_SET2": "Мартина Колмегна возьмёт хотя бы сет"
+  },
+  "real": {},
+  "center": "Рейтинг Эло 1671 : 1413",
+  "bar": [
+   0.8155034913129401,
+   0,
+   0.1844965086870599
+  ],
+  "model": {
+   "elo": [
+    1670.742826953717,
+    1412.5677579722146
+   ],
+   "src": "Эло"
+  },
+  "main": {
+   "key": "TN_2S",
+   "label": "Будет 2 сета",
+   "p": 0.6018,
+   "odds": 1.55,
+   "est": true,
+   "stake": 1.0
+  },
+  "bold": {},
+  "open": {},
+  "top": false,
+  "msg_id": 511
  }
 }
