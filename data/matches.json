@@ -3239,7 +3239,7 @@
   "kickoff": "2026-10-29T02:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Scheduled",
   "home": {
    "id": "2919",
@@ -3334,7 +3334,10 @@
   "odds_src": "DraftKings",
   "model_w": 0.0,
   "learned_n": 24,
-  "msg_id": 154
+  "msg_id": 154,
+  "main_hit": false,
+  "bold_hit": false,
+  "value_hit": null
  },
  "761907": {
   "id": "761907",
