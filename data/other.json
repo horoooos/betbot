@@ -4656,5 +4656,196 @@
  "ATP|185149": {
   "status": "skipped",
   "kickoff": "2026-10-29T22:30:00+03:00"
+ },
+ "WTA|185796": {
+  "id": "185796",
+  "div": "WTA",
+  "sport": "tennis",
+  "tournament": "Queretaro Open",
+  "round": "Round 2",
+  "bo5": false,
+  "kickoff": "2026-10-29T23:00:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "detail": "Thu, October 29th at 4:00 PM EDT",
+  "home": {
+   "id": "1095",
+   "name": "Polona Hercog",
+   "logo": [
+    "https://a.espncdn.com/i/headshots/tennis/players/full/1095.png",
+    "https://a.espncdn.com/i/teamlogos/countries/500/slo.png"
+   ],
+   "country": "Slovenia",
+   "color": "2d6a4f",
+   "winner": false,
+   "sets": [],
+   "set_won": [],
+   "ru": "Полона Херцог"
+  },
+  "away": {
+   "id": "3042",
+   "name": "Valeriya Strakhova",
+   "logo": [
+    "https://a.espncdn.com/i/headshots/tennis/players/full/3042.png",
+    "https://a.espncdn.com/i/teamlogos/countries/500/ukr.png"
+   ],
+   "country": "Ukraine",
+   "color": "2d6a4f",
+   "winner": false,
+   "sets": [],
+   "set_won": [],
+   "ru": "Валерия Страхова"
+  },
+  "odds": {},
+  "probs": {
+   "TN_W1": 0.7810495240416153,
+   "TN_W2": 0.21895047595838468,
+   "TN_3S": 0.4218582567900073,
+   "TN_2S": 0.5781417432099927,
+   "TN_S2:0": 0.4867344029024927,
+   "TN_S0:2": 0.09140734030749996,
+   "TN_S2:1": 0.29431512113912256,
+   "TN_S1:2": 0.1275431356508848,
+   "TN_SET1": 0.9085926596925,
+   "TN_SET2": 0.5132655970975073
+  },
+  "labels": {
+   "TN_W1": "Победа: Полона Херцог",
+   "TN_W2": "Победа: Валерия Страхова",
+   "TN_3S": "Будет 3 сета",
+   "TN_2S": "Будет 2 сета",
+   "TN_S2:0": "Счёт по сетам 2:0",
+   "TN_S0:2": "Счёт по сетам 0:2",
+   "TN_S2:1": "Счёт по сетам 2:1",
+   "TN_S1:2": "Счёт по сетам 1:2",
+   "TN_SET1": "Полона Херцог возьмёт хотя бы сет",
+   "TN_SET2": "Валерия Страхова возьмёт хотя бы сет"
+  },
+  "real": {},
+  "center": "Рейтинг Эло 1579 : 1358",
+  "bar": [
+   0.7810495240416153,
+   0,
+   0.21895047595838468
+  ],
+  "model": {
+   "elo": [
+    1579.320771435357,
+    1358.3877000459163
+   ],
+   "src": "Эло"
+  },
+  "main": {
+   "key": "TN_2S",
+   "label": "Будет 2 сета",
+   "p": 0.5781,
+   "odds": 1.61,
+   "est": true,
+   "stake": 1.0
+  },
+  "bold": {},
+  "open": {},
+  "top": false,
+  "msg_id": 471
+ },
+ "WTA|185801": {
+  "id": "185801",
+  "div": "WTA",
+  "sport": "tennis",
+  "tournament": "Queretaro Open",
+  "round": "Round 2",
+  "bo5": false,
+  "kickoff": "2026-10-29T23:00:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "detail": "Thu, October 29th at 4:00 PM EDT",
+  "home": {
+   "id": "3256",
+   "name": "Nadia Podoroska",
+   "logo": [
+    "https://a.espncdn.com/i/headshots/tennis/players/full/3256.png",
+    "https://a.espncdn.com/i/teamlogos/countries/500/arg.png"
+   ],
+   "country": "Argentina",
+   "color": "2d6a4f",
+   "winner": false,
+   "sets": [],
+   "set_won": [],
+   "ru": "Надя Подорошка"
+  },
+  "away": {
+   "id": "3568",
+   "name": "Miriam Bulgaru",
+   "logo": [
+    "https://a.espncdn.com/i/headshots/tennis/players/full/3568.png",
+    "https://a.espncdn.com/i/teamlogos/countries/500/rom.png"
+   ],
+   "country": "Romania",
+   "color": "2d6a4f",
+   "winner": false,
+   "sets": [],
+   "set_won": [],
+   "ru": "Мириам Булгару"
+  },
+  "odds": {},
+  "probs": {
+   "TN_W1": 0.7409337493643978,
+   "TN_W2": 0.2590662506356022,
+   "TN_3S": 0.4443478877321131,
+   "TN_2S": 0.5556521122678869,
+   "TN_S2:0": 0.44463749499214483,
+   "TN_S0:2": 0.11101461727574208,
+   "TN_S2:1": 0.2962962543722529,
+   "TN_S1:2": 0.14805163335986024,
+   "TN_SET1": 0.888985382724258,
+   "TN_SET2": 0.5553625050078552
+  },
+  "labels": {
+   "TN_W1": "Победа: Надя Подорошка",
+   "TN_W2": "Победа: Мириам Булгару",
+   "TN_3S": "Будет 3 сета",
+   "TN_2S": "Будет 2 сета",
+   "TN_S2:0": "Счёт по сетам 2:0",
+   "TN_S0:2": "Счёт по сетам 0:2",
+   "TN_S2:1": "Счёт по сетам 2:1",
+   "TN_S1:2": "Счёт по сетам 1:2",
+   "TN_SET1": "Надя Подорошка возьмёт хотя бы сет",
+   "TN_SET2": "Мириам Булгару возьмёт хотя бы сет"
+  },
+  "real": {},
+  "center": "Рейтинг Эло 1634 : 1451",
+  "bar": [
+   0.7409337493643978,
+   0,
+   0.2590662506356022
+  ],
+  "model": {
+   "elo": [
+    1633.70962168899,
+    1451.1622067020608
+   ],
+   "src": "Эло"
+  },
+  "main": {
+   "key": "TN_2S",
+   "label": "Будет 2 сета",
+   "p": 0.5557,
+   "odds": 1.67,
+   "est": true,
+   "stake": 1.0
+  },
+  "bold": {
+   "key": "TN_W2",
+   "label": "Победа: Мириам Булгару",
+   "p": 0.2591,
+   "odds": 3.59,
+   "est": true,
+   "stake": 1.0
+  },
+  "open": {},
+  "top": false,
+  "msg_id": 473
  }
 }
