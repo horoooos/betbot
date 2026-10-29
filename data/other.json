@@ -2466,31 +2466,31 @@
   "kickoff": "2026-10-29T11:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Thu, October 29th at 4:30 AM EDT",
   "home": {
-   "id": "2734",
-   "name": "Anna Bondar",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/2734.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/hun.png"
    ],
+   "id": "2734",
+   "name": "Anna Bondar",
    "country": "Hungary",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
    "ru": "Анна Бондар"
   },
   "away": {
-   "id": "14460",
-   "name": "Kaitlin Quevedo",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/14460.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/esp.png"
    ],
+   "id": "14460",
+   "name": "Kaitlin Quevedo",
    "country": "Spain",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
@@ -2552,7 +2552,9 @@
   "msg_id": 372,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": true,
+  "bold_hit": true
  },
  "DOTA|1753770": {
   "status": "skipped",
