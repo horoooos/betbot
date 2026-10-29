@@ -2166,31 +2166,31 @@
   "kickoff": "2026-10-29T08:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Thu, October 28th at 1:30 AM EDT",
   "home": {
-   "id": "2789",
-   "name": "Naomi Osaka",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/2789.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/jpn.png"
    ],
+   "id": "2789",
+   "name": "Naomi Osaka",
    "country": "Japan",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
    "ru": "Наоми Осака"
   },
   "away": {
-   "id": "16296",
-   "name": "Mia Pohankova",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/16296.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/svk.png"
    ],
+   "id": "16296",
+   "name": "Mia Pohankova",
    "country": "Slovakia",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
@@ -2248,7 +2248,9 @@
   "msg_id": 345,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": true,
+  "bold_hit": false
  },
  "WTA|185722": {
   "id": "185722",
