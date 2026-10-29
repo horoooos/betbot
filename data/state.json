@@ -497,7 +497,7 @@
   ]
  },
  "express": {
-  "msg": 367,
+  "msg": 379,
   "legs": [
    {
     "sport": "football",
@@ -509,7 +509,16 @@
     "kickoff": "2026-10-29T21:00:00+03:00",
     "home": "Ан-Наср",
     "away": "Аль-Холуд",
-    "label": "Победа: Ан-Наср"
+    "label": "Победа: Ан-Наср",
+    "logos": [
+     "https://a.espncdn.com/i/teamlogos/soccer/500/817.png",
+     "https://a.espncdn.com/i/teamlogos/soccer/500/22028.png"
+    ],
+    "colors": [
+     "f7f316",
+     "008000"
+    ],
+    "league": "🇸🇦 Саудовская Аравия · Про-лига"
    },
    {
     "sport": "football",
@@ -521,7 +530,16 @@
     "kickoff": "2026-10-29T21:00:00+03:00",
     "home": "Эр-Рияд",
     "away": "Аль-Кадисия",
-    "label": "Победа: Аль-Кадисия"
+    "label": "Победа: Аль-Кадисия",
+    "logos": [
+     "https://a.espncdn.com/i/teamlogos/soccer/500/21965.png",
+     "https://a.espncdn.com/i/teamlogos/soccer/500/22022.png"
+    ],
+    "colors": [
+     "000000",
+     "ffd700"
+    ],
+    "league": "🇸🇦 Саудовская Аравия · Про-лига"
    },
    {
     "sport": "basketball",
@@ -533,7 +551,16 @@
     "kickoff": "2026-10-29T19:30:00+03:00",
     "home": "Атланта Дрим",
     "away": "Голден Стэйт Валкириз",
-    "label": "Победа: Атланта Дрим (с ОТ)"
+    "label": "Победа: Атланта Дрим (с ОТ)",
+    "logos": [
+     "https://a.espncdn.com/i/teamlogos/wnba/500/atl.png",
+     "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/gs.png"
+    ],
+    "colors": [
+     "e31837",
+     "b38fcf"
+    ],
+    "league": "🇺🇸 США · WNBA"
    }
   ],
   "odds": 2.46450672,
@@ -541,5 +568,6 @@
   "done": false
  },
  "streak_posted": 3,
- "value_day": "2026-10-29"
+ "value_day": "2026-10-29",
+ "repost_done": "2026-10-29-new-cards"
 }
