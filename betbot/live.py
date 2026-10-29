@@ -20,6 +20,8 @@ LIVE = {
     "NHL", "NBA", "CS2", "DOTA",
 }
 WORD = {"football": ("ГОЛ!", "⚽️"), "hockey": ("ШАЙБА!", "🏒"), "esports": ("КАРТА!", "🎮")}
+START = {"football": "все голы будут здесь", "hockey": "все шайбы будут здесь",
+         "basketball": "итог матча будет здесь", "esports": "результат каждой карты будет здесь"}
 
 
 def _league(e: dict) -> str:
@@ -51,7 +53,10 @@ def run(store: dict, events: list[dict], reviews: dict, brand: str) -> None:
             if e["state"] != "in" or sc is None:
                 continue
             # бот мог «проснуться» уже по ходу матча — тогда старые голы не дублируем, а показываем текущий счёт
-            sub = "Следим за игрой — все голы будут здесь" if sum(sc) == 0 else f"Матч идёт, на табло {sc[0]}:{sc[1]}"
+            if sum(sc) == 0:
+                sub = f"Следим за игрой — {START.get(sport, 'все события будут здесь')}"
+            else:
+                sub = f"{'Серия идёт, по картам' if sport == 'esports' else 'Матч идёт, на табло'} {sc[0]}:{sc[1]}"
             png = card.live_card(_league(e), e["home"], e["away"], sc[0], sc[1], "МАТЧ НАЧАЛСЯ", sub, brand, sport,
                                  color=(214, 48, 49))
             mid = telegram.send_photo(png, f"🔴 <b>МАТЧ НАЧАЛСЯ</b>\n{sports.EMOJI.get(sport, '⚽️')} <b>{escape(h)} — "

@@ -513,7 +513,8 @@ def caption(m: dict, when: str) -> str:
 
 def result_caption(m: dict, f: dict, day: dict) -> str:
     h, a = escape(m["home"]["ru"]), escape(m["away"]["ru"])
-    lines = [f"🏁 <b>ФИНАЛ: {h} {f['hs']}:{f['as']} {a}</b>"]
+    unit = {"esports": " (по картам)", "tennis": " (по сетам)"}.get(m["sport"], "")
+    lines = [f"🏁 <b>ФИНАЛ: {h} {f['hs']}:{f['as']} {a}</b>{unit}"]
     if m["sport"] == "hockey" and f.get("reg") and sum(f["reg"]) != f["hs"] + f["as"]:
         lines.append(f"Основное время {f['reg'][0]}:{f['reg'][1]}, дальше — овертайм/буллиты")
     per = " · ".join(f"{x}:{y}" for x, y in f.get("periods") or [])
