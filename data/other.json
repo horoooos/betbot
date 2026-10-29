@@ -2872,31 +2872,31 @@
   "kickoff": "2026-10-29T15:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Thu, October 29th at 8:30 AM EDT",
   "home": {
-   "id": "2964",
-   "name": "Tommy Paul",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/2964.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/usa.png"
    ],
+   "id": "2964",
+   "name": "Tommy Paul",
    "country": "USA",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
    "ru": "Томми Паул"
   },
   "away": {
-   "id": "7833",
-   "name": "Luciano Darderi",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/7833.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/ita.png"
    ],
+   "id": "7833",
+   "name": "Luciano Darderi",
    "country": "Italy",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
@@ -2958,7 +2958,9 @@
   "msg_id": 395,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": true,
+  "bold_hit": false
  },
  "ATP|185152": {
   "id": "185152",
