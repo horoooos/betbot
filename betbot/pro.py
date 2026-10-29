@@ -236,6 +236,51 @@ def post_top(state: dict, football: list[dict], other: list[dict], now: pd.Times
     print(f"Прогнозы дня: {len(top)}")
 
 
+# ── серии заходов ───────────────────────────────────────────────────────────
+
+STREAK_MARKS = (3, 5, 7, 10)  # дальше — каждые 5: 15, 20, 25…
+
+
+def _is_mark(n: int) -> bool:
+    return n in STREAK_MARKS or (n > 10 and n % 5 == 0)
+
+
+def post_streak(state: dict, res: pd.DataFrame, brand: str) -> None:
+    """«🔥 5 заходов подряд!» — когда серия основных прогнозов доходит до 3, 5, 7, 10, 15…"""
+    if res is None or res.empty:
+        return
+    hit = res["main_hit"].astype(str).str.lower().isin(["true", "1", "1.0"]).tolist()
+    n = 0
+    for h in reversed(hit):
+        if not h:
+            break
+        n += 1
+    posted = state.get("streak_posted", 0)
+    if n < posted:  # серия прервалась — начинаем заново
+        state["streak_posted"] = 0
+        posted = 0
+    if n <= posted or not _is_mark(n):
+        return
+    state["streak_posted"] = n
+    tail = res.tail(n)
+    odds = tail["main_odds"].astype(float)
+    total = float(np.prod(odds))
+    lines = [f"🔥 <b>{n} ЗАХОДОВ ПОДРЯД!</b>", "Основной прогноз бота заходит раз за разом:\n"]
+    for _, r in tail.iloc[::-1].head(10).iterrows():
+        emoji = sports.EMOJI.get(str(r.get("sport", "football")), "⚽️")
+        lines.append(f"✅ {emoji} {escape(str(r['home']))} {escape(str(r['score']))} {escape(str(r['away']))} — "
+                     f"{escape(str(r['main_label']))} @ {float(r['main_odds']):.2f}")
+    if n > 10:
+        lines.append(f"…и ещё {n - 10}")
+    lines += [f"\n💰 Если бы всё это было одним экспрессом — кэф <b>{total:,.2f}</b>".replace(",", " "),
+              "<i>Серии заканчиваются — играйте по банку, а не на эмоциях.</i>", FOOTER]
+    rows = [(str(r["score"]), str(r["home"]), str(r["away"]), "✅ " + str(r["main_label"]))
+            for _, r in tail.iloc[::-1].head(8).iterrows()]
+    png = card.schedule_card(f"{n} прогнозов подряд", rows, max(0, n - 8), brand, heading="Серия заходов 🔥")
+    _post(png, "\n".join(lines))
+    print(f"Серия: {n} заходов подряд")
+
+
 def is_top(state: dict, div: str, eid: str) -> bool:
     return f"{div}|{eid}" in (state.get("top_picks") or {}).get("keys", [])
 

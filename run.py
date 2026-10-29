@@ -501,6 +501,10 @@ def main():
 
     other_sports(state, other, now, calib, daily)
     content.settle_express(state, finished_scores(events, other))
+    try:
+        pro.post_streak(state, read_results(), BRAND)  # «🔥 N заходов подряд!»
+    except Exception as e:
+        print(f"  ! пост про серию не удался: {e}")
 
     # live: «матч начался» и голы — ответом к посту с прогнозом на этот матч
     reviews = {f"{m['div']}|{k}": m["msg_id"] for k, m in matches.items() if m.get("msg_id") and m.get("div")}

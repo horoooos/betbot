@@ -26,8 +26,17 @@ FEEDS = {
 MIXED = ["https://www.sports.ru/rss/main.xml", "https://www.sport-express.ru/services/materials/news/se/"]
 WORDS = {"football": ("футбол", "рпл", "лига чемпионов", "апл"), "hockey": ("хоккей", "кхл", "нхл"),
          "basketball": ("баскетбол", "нба", "единая лига"), "tennis": ("теннис", "atp", "wta"),
-         "esports": ("киберспорт", "cs2", "dota", "counter-strike")}
+         "esports": ("киберспорт", "cs2", "cs 2", "dota", "дота", "counter-strike", "major", "мейджор", "navi",
+                     "team spirit", "the international", "iem", "blast", "pgl")}
 MAX_TRIES = 3  # попыток пересказа за один запуск — чтобы новости не задерживали live и прогнозы
+# служебные материалы — не новости: расписания, итоги тура, трансляции, таблицы, чужие прогнозы
+SERVICE = ("расписание", "результаты", "трансляц", "где смотреть", "смотреть онлайн", "онлайн", "таблица",
+           "прогноз", "коэффициент", "ставк", "анонс", "текстовая", "видеообзор", "видео", "фото", "календар",
+           "обзор тура", "обзор матч", "лучшие моменты", "голы матча", "live", "прямой эфир", "тест", "опрос",
+           "главное к", "главное за", "главное дня",
+           # кино и игры — на киберспортивных сайтах их много, но к ставкам они не относятся
+           "фильм", "сериал", "кинотеатр", "трейлер", "тизер", "геймплей", "скидк", "steam", "актёр", "актер")
+MIN_DESC = 80  # в новости должно быть хоть какое-то содержание
 ORDER = ["football", "esports", "hockey", "football", "basketball", "tennis", "esports"]
 TAGS = {"football": "#футбол", "hockey": "#хоккей", "basketball": "#баскетбол", "tennis": "#теннис",
         "esports": "#киберспорт"}
@@ -63,7 +72,7 @@ def _items(sport: str) -> list[dict]:
             continue
         for it in root.findall(".//item"):
             title = _clean(it.findtext("title"))
-            if url in MIXED:  # общая лента — только если рубрика или заголовок про этот вид спорта
+            if url in MIXED or "cybersport.ru" in url:  # общие ленты (и кино/игры на Cybersport.ru) — по рубрике
                 tags = " ".join(_clean(c.text) for c in it.findall("category")) + " " + title
                 if not any(w in tags.lower() for w in WORDS[sport]):
                     continue
@@ -72,8 +81,10 @@ def _items(sport: str) -> list[dict]:
                 when = pd.Timestamp(it.findtext("pubDate")).tz_convert("UTC")
             except Exception:
                 when = pd.Timestamp.now(tz="UTC")
-            if title:
-                out.append({"id": guid, "title": title, "desc": _clean(it.findtext("description"))[:700], "when": when})
+            desc = _clean(it.findtext("description"))[:700]
+            if not title or any(w in title.lower() for w in SERVICE) or len(desc) < MIN_DESC:
+                continue  # служебный материал или пустая заметка — не новость
+            out.append({"id": guid, "title": title, "desc": desc, "when": when})
     return sorted(out, key=lambda x: x["when"], reverse=True)
 
 
