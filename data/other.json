@@ -1972,7 +1972,7 @@
   "kickoff": "2026-10-29T08:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Thu, October 28th at 1:00 AM EDT",
   "home": {
    "id": "2980",
@@ -2051,7 +2051,9 @@
    "odds": 2.09,
    "est": true
   },
-  "msg_id": 339
+  "msg_id": 339,
+  "main_hit": false,
+  "bold_hit": false
  },
  "WTA|185717": {
   "id": "185717",
