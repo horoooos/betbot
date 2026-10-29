@@ -1281,7 +1281,7 @@
   "kickoff": "2026-10-29T04:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "home": {
    "id": "17",
    "name": "Colorado Avalanche",
@@ -1376,7 +1376,9 @@
    "odds": 2.24,
    "est": false
   },
-  "msg_id": 230
+  "msg_id": 230,
+  "main_hit": true,
+  "bold_hit": false
  },
  "NBA|401909890": {
   "id": "401909890",
