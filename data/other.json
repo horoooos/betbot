@@ -3398,31 +3398,31 @@
   "kickoff": "2026-10-29T17:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Thu, October 29th at 10:30 AM EDT",
   "home": {
-   "id": "2946",
-   "name": "Taylor Fritz",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/2946.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/usa.png"
    ],
+   "id": "2946",
+   "name": "Taylor Fritz",
    "country": "USA",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
    "ru": "Тейлор Фриц"
   },
   "away": {
-   "id": "2860",
-   "name": "Denis Shapovalov",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/2860.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/can.png"
    ],
+   "id": "2860",
+   "name": "Denis Shapovalov",
    "country": "Canada",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
@@ -3488,7 +3488,9 @@
   "msg_id": 410,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": true,
+  "bold_hit": false
  },
  "WTA|185848": {
   "id": "185848",
