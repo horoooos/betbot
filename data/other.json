@@ -8424,31 +8424,31 @@
   "kickoff": "2026-10-30T18:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Fri, October 30th at 11:00 AM EDT",
   "home": {
-   "id": "10676",
-   "name": "Leyre Romero Gormaz",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/10676.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/esp.png"
    ],
+   "id": "10676",
+   "name": "Leyre Romero Gormaz",
    "country": "Spain",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
    "ru": "Лейре Ромеро Гормас"
   },
   "away": {
-   "id": "2599",
-   "name": "Julia Grabher",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/2599.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/aut.png"
    ],
+   "id": "2599",
+   "name": "Julia Grabher",
    "country": "Austria",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
@@ -8507,7 +8507,9 @@
   "msg_id": 739,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null
  },
  "WTA|185778": {
   "id": "185778",
