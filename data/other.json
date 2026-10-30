@@ -8925,31 +8925,31 @@
   "kickoff": "2026-10-30T22:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Fri, October 30th at 3:00 PM EDT",
   "home": {
-   "id": "5161",
-   "name": "Alice Tubello",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/5161.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/fra.png"
    ],
+   "id": "5161",
+   "name": "Alice Tubello",
    "country": "France",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
    "ru": "Алис Тюбелло"
   },
   "away": {
-   "id": "5746",
-   "name": "Jazmin Ortenzi",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/5746.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/arg.png"
    ],
+   "id": "5746",
+   "name": "Jazmin Ortenzi",
    "country": "Argentina",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
@@ -9008,7 +9008,9 @@
   "msg_id": 778,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null
  },
  "WTA|185816": {
   "id": "185816",
