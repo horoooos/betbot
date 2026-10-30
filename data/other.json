@@ -5359,22 +5359,22 @@
   "kickoff": "2026-10-30T02:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "home": {
+   "color": "e30526",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/det.png",
    "id": "5",
    "name": "Detroit Red Wings",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/det.png",
-   "color": "e30526",
    "score": "0",
    "record": "5-4-3",
    "periods": [],
    "ru": "Детройт"
   },
   "away": {
+   "color": "e31937",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/chi.png",
    "id": "4",
    "name": "Chicago Blackhawks",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/chi.png",
-   "color": "e31937",
    "score": "0",
    "record": "4-8-0",
    "periods": [],
@@ -5477,7 +5477,9 @@
   "close": {
    "HK_ML_H": 0.5934,
    "HK_U5.5": 0.4782
-  }
+  },
+  "main_hit": true,
+  "bold_hit": true
  },
  "NHL|401892604": {
   "id": "401892604",
