@@ -717,21 +717,27 @@ def top_card(picks: list[dict], day: str, brand: str = "") -> bytes:
         d.text((x + cw - 22, y0 + 40), p["time"], font=font(30, "ExtraBold"), fill=ACCENT, anchor="ra")
         d.text((x + cw - 22, y0 + 76), p["league"], font=_fit(d, p["league"], 18, 230, "Medium"), fill=MUTED, anchor="ra")
         # логотипы внахлёст
-        size = 112
+        size = 100
         lh = _logo(p["home"].get("logo"), size, p["home"]["ru"][:2].upper(), hc)
         la = _logo(p["away"].get("logo"), size, p["away"]["ru"][:2].upper(), ac)
         cx = x + cw // 2
-        img.paste(lh, (cx - size + 14, y0 + 100), lh)
-        img.paste(la, (cx - 14, y0 + 100), la)
+        img.paste(lh, (cx - size + 12, y0 + 102), lh)
+        img.paste(la, (cx - 12, y0 + 102), la)
         d = ImageDraw.Draw(img)
-        _centered_lines(d, p["home"]["ru"], cx, y0 + 226, cw - 40, 26)
-        d.text((cx, y0 + 290), "—", font=font(22), fill=MUTED, anchor="mm")
-        _centered_lines(d, p["away"]["ru"], cx, y0 + 302, cw - 40, 26)
+        _centered_lines(d, p["home"]["ru"], cx, y0 + 214, cw - 40, 26)
+        d.text((cx, y0 + 276), "—", font=font(22), fill=MUTED, anchor="mm")
+        _centered_lines(d, p["away"]["ru"], cx, y0 + 288, cw - 40, 26)
         # прогноз: золотая плашка + кэф + кольцо
-        _gold_box(img, (x + 20, y0 + 370, x + cw - 20, y0 + 424), radius=18)
+        _gold_box(img, (x + 20, y0 + 352, x + cw - 20, y0 + 404), radius=18)
         d = ImageDraw.Draw(img)
-        d.text((cx, y0 + 397), p["label"], font=_fit(d, p["label"], 26, cw - 70, "ExtraBold"), fill=(30, 22, 6), anchor="mm")
-        d.text((x + 30, y0 + 442), "КЭФ", font=font(18, "Medium"), fill=MUTED, anchor="la")
-        d.text((x + 30, y0 + 462), f"{p['odds']:.2f}", font=font(38, "ExtraBold"), fill=WHITE, anchor="la")
-        _ring(d, x + cw - 64, y0 + 466, 34, p["p"], (46, 204, 113))
+        d.text((cx, y0 + 378), p["label"], font=_fit(d, p["label"], 26, cw - 70, "ExtraBold"), fill=(30, 22, 6), anchor="mm")
+        # две ровные колонки: «КЭФ» и «ШАНС» с полоской вероятности
+        lx, rx, ly = x + cw // 4, x + 3 * cw // 4, y0 + 418
+        d.line([(cx, ly + 6), (cx, ly + 72)], fill=(70, 80, 120), width=2)
+        for colx, lab, val, colr in ((lx, "КЭФ", f"{p['odds']:.2f}", WHITE), (rx, "ШАНС", f"{100 * p['p']:.0f}%", (46, 204, 113))):
+            d.text((colx, ly + 10), lab, font=font(16, "Medium"), fill=MUTED, anchor="mm")
+            d.text((colx, ly + 40), val, font=font(36, "ExtraBold"), fill=colr, anchor="mm")
+        bw = cw // 2 - 70
+        d.rounded_rectangle((rx - bw / 2, ly + 68, rx + bw / 2, ly + 74), radius=3, fill=(52, 60, 96))
+        d.rounded_rectangle((rx - bw / 2, ly + 68, rx - bw / 2 + max(6, bw * p["p"]), ly + 74), radius=3, fill=(46, 204, 113))
     return _png(img, d, brand)
