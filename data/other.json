@@ -7033,31 +7033,31 @@
   "kickoff": "2026-10-30T05:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Thu, October 29th at 10:30 PM EDT",
   "home": {
-   "id": "16296",
-   "name": "Mia Pohankova",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/16296.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/svk.png"
    ],
+   "id": "16296",
+   "name": "Mia Pohankova",
    "country": "Slovakia",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
    "ru": "Миа Поганкова"
   },
   "away": {
-   "id": "5309",
-   "name": "Alycia Parks",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/5309.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/usa.png"
    ],
+   "id": "5309",
+   "name": "Alycia Parks",
    "country": "USA",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
@@ -7123,7 +7123,9 @@
   "msg_id": 612,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": true,
+  "bold_hit": true
  },
  "WTA|185729": {
   "id": "185729",
