@@ -6913,22 +6913,22 @@
   "kickoff": "2026-10-30T05:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "home": {
+   "color": "e03a3e",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/por.png",
    "id": "22",
    "name": "Portland Trail Blazers",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/por.png",
-   "color": "e03a3e",
    "score": "0",
    "record": "3-0",
    "periods": [],
    "ru": "Портленд"
   },
   "away": {
+   "color": "5d76a9",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/mem.png",
    "id": "29",
    "name": "Memphis Grizzlies",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/mem.png",
-   "color": "5d76a9",
    "score": "0",
    "record": "4-0",
    "periods": [],
@@ -7011,7 +7011,9 @@
   "close": {
    "BB_U232.5": 0.5,
    "BB_ML_A": 0.266
-  }
+  },
+  "main_hit": true,
+  "bold_hit": true
  },
  "WTA|185686": {
   "id": "185686",
