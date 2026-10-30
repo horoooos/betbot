@@ -144,7 +144,17 @@ def label(key: str) -> str:
     if key.startswith("CS_"):
         return f"Точный счёт {key[3:]}"
     m = MARKETS.get(key) or HT_MARKETS.get(key)
-    return m[1] if m else SPORT_LABELS.get(key, key)
+    if m:
+        return m[1]
+    if key in SPORT_LABELS:
+        return SPORT_LABELS[key]
+    if key[:4] in ("TN_S", "ES_S") and ":" in key:
+        return f"Счёт по {'сетам' if key[0] == 'T' else 'картам'} {key[4:]}"
+    if key[:4] in ("HK_O", "HK_U", "BB_O", "BB_U"):
+        return f"Т{'Б' if key[3] == 'O' else 'М'} {key[4:]}"
+    if key.startswith("HK_IT"):
+        return f"ИТ{key[5]} больше {key[7:]}"
+    return key
 
 
 def calibration(res, prior: float = 20.0) -> dict[str, tuple[float, int]]:

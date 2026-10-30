@@ -472,8 +472,11 @@ def main():
     print(f"Матчей в окне: футбол {len(events)}, другие виды спорта {len(other)}")
 
     if state.get("schedule_day") != today and now.hour >= MORNING_HOUR:
-        morning(state, events, other, now)
-        state["schedule_day"] = today
+        state["schedule_day"] = today  # даже если утренний пост упадёт — не повторяем его каждые 2 минуты
+        try:
+            morning(state, events, other, now)
+        except Exception as e:  # ошибка в утреннем посте не должна останавливать прогнозы, live и итоги
+            print(f"  ! утренний пост не удался: {e}")
     content.run(state, events, other, read_results(), now, BRAND)  # тематический пост раз в 3 часа
 
     cache = {}
