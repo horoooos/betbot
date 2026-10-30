@@ -8598,5 +8598,97 @@
  "CS2|1753687": {
   "status": "skipped",
   "kickoff": "2026-10-30T18:00:00+03:00"
+ },
+ "ATP|185199": {
+  "id": "185199",
+  "div": "ATP",
+  "sport": "tennis",
+  "tournament": "Erste Bank Open",
+  "round": "Quarterfinal",
+  "bo5": false,
+  "kickoff": "2026-10-30T19:30:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "detail": "Fri, October 30th at 12:30 PM EDT",
+  "home": {
+   "id": "2375",
+   "name": "Alexander Zverev",
+   "logo": [
+    "https://a.espncdn.com/i/headshots/tennis/players/full/2375.png",
+    "https://a.espncdn.com/i/teamlogos/countries/500/ger.png"
+   ],
+   "country": "Germany",
+   "color": "2d6a4f",
+   "winner": false,
+   "sets": [],
+   "set_won": [],
+   "ru": "Александр Зверев"
+  },
+  "away": {
+   "id": "8621",
+   "name": "Arthur Fery",
+   "logo": [
+    "https://a.espncdn.com/i/headshots/tennis/players/full/8621.png",
+    "https://a.espncdn.com/i/teamlogos/countries/500/gbr.png"
+   ],
+   "country": "Great Britain",
+   "color": "2d6a4f",
+   "winner": false,
+   "sets": [],
+   "set_won": [],
+   "ru": "Артур Фери"
+  },
+  "odds": {},
+  "probs": {
+   "TN_W1": 0.8479593528270701,
+   "TN_W2": 0.15204064717292987,
+   "TN_3S": 0.371211118180405,
+   "TN_2S": 0.628788881819595,
+   "TN_S2:0": 0.5681550385403152,
+   "TN_S0:2": 0.060633843279279794,
+   "TN_S2:1": 0.2798043142867548,
+   "TN_S1:2": 0.09140680389365018,
+   "TN_SET1": 0.9393661567207202,
+   "TN_SET2": 0.43184496145968476
+  },
+  "labels": {
+   "TN_W1": "Победа: Александр Зверев",
+   "TN_W2": "Победа: Артур Фери",
+   "TN_3S": "Будет 3 сета",
+   "TN_2S": "Будет 2 сета",
+   "TN_S2:0": "Счёт по сетам 2:0",
+   "TN_S0:2": "Счёт по сетам 0:2",
+   "TN_S2:1": "Счёт по сетам 2:1",
+   "TN_S1:2": "Счёт по сетам 1:2",
+   "TN_SET1": "Александр Зверев возьмёт хотя бы сет",
+   "TN_SET2": "Артур Фери возьмёт хотя бы сет"
+  },
+  "real": {},
+  "center": "Рейтинг Эло 1928 : 1629",
+  "bar": [
+   0.8479593528270701,
+   0,
+   0.15204064717292987
+  ],
+  "model": {
+   "elo": [
+    1927.6844946467136,
+    1629.1183645736908
+   ],
+   "src": "Эло"
+  },
+  "main": {
+   "key": "TN_SET1",
+   "label": "Александр Зверев возьмёт хотя бы сет",
+   "p": 0.9394,
+   "odds": 0.99,
+   "est": true,
+   "stake": 1.0
+  },
+  "bold": {},
+  "open": {},
+  "top": false,
+  "msg_id": 751
  }
 }
