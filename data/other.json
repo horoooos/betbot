@@ -6663,22 +6663,22 @@
   "kickoff": "2026-10-30T05:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "home": {
+   "color": "121212",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/la.png",
    "id": "8",
    "name": "Los Angeles Kings",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/la.png",
-   "color": "121212",
    "score": "0",
    "record": "3-6-2",
    "periods": [],
    "ru": "Лос-Анджелес"
   },
   "away": {
+   "color": "dd1a32",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/ott.png",
    "id": "14",
    "name": "Ottawa Senators",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/ott.png",
-   "color": "dd1a32",
    "score": "0",
    "record": "8-5-0",
    "periods": [],
@@ -6781,7 +6781,9 @@
   "close": {
    "HK_ML_H": 0.474,
    "HK_U5.5": 0.4675
-  }
+  },
+  "main_hit": true,
+  "bold_hit": false
  },
  "NHL|401892610": {
   "id": "401892610",
