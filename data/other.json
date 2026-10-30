@@ -8327,31 +8327,31 @@
   "kickoff": "2026-10-30T17:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Fri, October 30th at 10:30 AM EDT",
   "home": {
-   "id": "6061",
-   "name": "Elsa Jacquemot",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/6061.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/fra.png"
    ],
+   "id": "6061",
+   "name": "Elsa Jacquemot",
    "country": "France",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
    "ru": "Эльза Жакмо"
   },
   "away": {
-   "id": "9442",
-   "name": "Elizara Yaneva",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/9442.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/bul.png"
    ],
+   "id": "9442",
+   "name": "Elizara Yaneva",
    "country": "Bulgaria",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
@@ -8410,7 +8410,9 @@
   "msg_id": 735,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null
  },
  "WTA|185775": {
   "id": "185775",
