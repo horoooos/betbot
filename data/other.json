@@ -5873,22 +5873,22 @@
   "kickoff": "2026-10-30T03:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "home": {
+   "color": "124734",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/min.png",
    "id": "30",
    "name": "Minnesota Wild",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/min.png",
-   "color": "124734",
    "score": "0",
    "record": "9-3-2",
    "periods": [],
    "ru": "Миннесота"
   },
   "away": {
+   "color": "00529b",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/nyi.png",
    "id": "12",
    "name": "New York Islanders",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/nyi.png",
-   "color": "00529b",
    "score": "0",
    "record": "6-4-2",
    "periods": [],
@@ -5991,7 +5991,9 @@
   "close": {
    "HK_ML_H": 0.6309,
    "HK_U5.5": 0.4675
-  }
+  },
+  "main_hit": false,
+  "bold_hit": false
  },
  "NBA|401909893": {
   "id": "401909893",
