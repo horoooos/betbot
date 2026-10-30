@@ -5742,22 +5742,22 @@
   "kickoff": "2026-10-30T03:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "home": {
+   "color": "20864c",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/dal.png",
    "id": "9",
    "name": "Dallas Stars",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/dal.png",
-   "color": "20864c",
    "score": "0",
    "record": "7-4-1",
    "periods": [],
    "ru": "Даллас"
   },
   "away": {
+   "color": "c41230",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/mtl.png",
    "id": "10",
    "name": "Montreal Canadiens",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/mtl.png",
-   "color": "c41230",
    "score": "0",
    "record": "7-3-2",
    "periods": [],
@@ -5860,7 +5860,9 @@
   "close": {
    "HK_ML_H": 0.6093,
    "HK_U5.5": 0.4486
-  }
+  },
+  "main_hit": false,
+  "bold_hit": false
  },
  "NHL|401892607": {
   "id": "401892607",
