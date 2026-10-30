@@ -7593,7 +7593,7 @@
   "kickoff": "2026-10-30T22:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Scheduled",
   "home": {
    "id": "10388",
@@ -7720,7 +7720,10 @@
   "msg_id": 789,
   "close": {
    "A": 0.5049
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null,
+  "value_hit": null
  },
  "401878956": {
   "id": "401878956",
