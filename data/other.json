@@ -7440,31 +7440,31 @@
   "kickoff": "2026-10-30T10:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Fri, October 30th at 3:30 AM EDT",
   "home": {
-   "id": "17886",
-   "name": "Xinran Sun",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/17886.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/chn.png"
    ],
+   "id": "17886",
+   "name": "Xinran Sun",
    "country": "China",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
    "ru": "Ксинран Сун"
   },
   "away": {
-   "id": "2980",
-   "name": "Claire Liu",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/2980.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/usa.png"
    ],
+   "id": "2980",
+   "name": "Claire Liu",
    "country": "USA",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
@@ -7523,7 +7523,9 @@
   "msg_id": 696,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null
  },
  "WTA|185685": {
   "id": "185685",
