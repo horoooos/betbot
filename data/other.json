@@ -6534,22 +6534,22 @@
   "kickoff": "2026-10-30T05:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "home": {
+   "color": "fc4c02",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/ana.png",
    "id": "25",
    "name": "Anaheim Ducks",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/ana.png",
-   "color": "fc4c02",
    "score": "0",
    "record": "5-6-1",
    "periods": [],
    "ru": "Анахайм"
   },
   "away": {
+   "color": "00468b",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/buf.png",
    "id": "2",
    "name": "Buffalo Sabres",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/buf.png",
-   "color": "00468b",
    "score": "0",
    "record": "5-4-3",
    "periods": [],
@@ -6652,7 +6652,9 @@
   "close": {
    "HK_U6.5": 0.4572,
    "HK_ML_H": 0.417
-  }
+  },
+  "main_hit": false,
+  "bold_hit": false
  },
  "NHL|401892609": {
   "id": "401892609",
