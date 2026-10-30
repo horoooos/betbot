@@ -5101,22 +5101,22 @@
   "kickoff": "2026-10-30T02:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "home": {
+   "color": "000000",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/pit.png",
    "id": "16",
    "name": "Pittsburgh Penguins",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/pit.png",
-   "color": "000000",
    "score": "0",
    "record": "5-6-1",
    "periods": [],
    "ru": "Питтсбург"
   },
   "away": {
+   "color": "000000",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/uta.png",
    "id": "129764",
    "name": "Utah Mammoth",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/uta.png",
-   "color": "000000",
    "score": "0",
    "record": "8-5-0",
    "periods": [],
@@ -5219,7 +5219,9 @@
   "close": {
    "HK_O6.5": 0.5514,
    "HK_ML_H": 0.4486
-  }
+  },
+  "main_hit": true,
+  "bold_hit": false
  },
  "NHL|401892603": {
   "id": "401892603",
@@ -6628,7 +6630,11 @@
    "HK_ML_H": 0.4365
   },
   "top": false,
-  "msg_id": 591
+  "msg_id": 591,
+  "close": {
+   "HK_U6.5": 0.4572,
+   "HK_ML_H": 0.417
+  }
  },
  "NHL|401892609": {
   "id": "401892609",
@@ -6751,7 +6757,11 @@
    "HK_U5.5": 0.4675
   },
   "top": false,
-  "msg_id": 593
+  "msg_id": 593,
+  "close": {
+   "HK_ML_H": 0.474,
+   "HK_U5.5": 0.4675
+  }
  },
  "NHL|401892610": {
   "id": "401892610",
@@ -6874,7 +6884,11 @@
    "HK_ML_A": 0.3907
   },
   "top": false,
-  "msg_id": 595
+  "msg_id": 595,
+  "close": {
+   "HK_O6.5": 0.5514,
+   "HK_ML_A": 0.3907
+  }
  },
  "NBA|401909895": {
   "id": "401909895",
@@ -6977,7 +6991,11 @@
    "BB_ML_A": 0.266
   },
   "top": false,
-  "msg_id": 597
+  "msg_id": 597,
+  "close": {
+   "BB_U232.5": 0.5,
+   "BB_ML_A": 0.266
+  }
  },
  "WTA|185686": {
   "id": "185686",
