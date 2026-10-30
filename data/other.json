@@ -6433,31 +6433,31 @@
   "kickoff": "2026-10-30T04:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Thu, October 29th at 9:30 PM EDT",
   "home": {
-   "id": "3034",
-   "name": "Tamara Zidansek",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/3034.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/slo.png"
    ],
+   "id": "3034",
+   "name": "Tamara Zidansek",
    "country": "Slovenia",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
    "ru": "Тамара Зиданшек"
   },
   "away": {
-   "id": "4629",
-   "name": "Alicia Herrero Linana",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/4629.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/esp.png"
    ],
+   "id": "4629",
+   "name": "Alicia Herrero Linana",
    "country": "Spain",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
@@ -6523,7 +6523,9 @@
   "msg_id": 575,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": false,
+  "bold_hit": false
  },
  "NHL|401892608": {
   "id": "401892608",
