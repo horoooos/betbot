@@ -8828,31 +8828,31 @@
   "kickoff": "2026-10-30T22:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Fri, October 30th at 3:00 PM EDT",
   "home": {
-   "id": "2622",
-   "name": "Matteo Berrettini",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/2622.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/ita.png"
    ],
+   "id": "2622",
+   "name": "Matteo Berrettini",
    "country": "Italy",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
    "ru": "Маттео Берреттини"
   },
   "away": {
-   "id": "2651",
-   "name": "Alex de Minaur",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/2651.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/aus.png"
    ],
+   "id": "2651",
+   "name": "Alex de Minaur",
    "country": "Australia",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
@@ -8911,7 +8911,9 @@
   "msg_id": 776,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null
  },
  "WTA|185777": {
   "id": "185777",
