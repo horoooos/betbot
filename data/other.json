@@ -6329,31 +6329,31 @@
   "kickoff": "2026-10-30T04:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Thu, October 29th at 9:30 PM EDT",
   "home": {
-   "id": "3908",
-   "name": "Kamilla Rakhimova",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/3908.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/uzb.png"
    ],
+   "id": "3908",
+   "name": "Kamilla Rakhimova",
    "country": "Uzbekistan",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
    "ru": "Камилла Рахимова"
   },
   "away": {
-   "id": "14146",
-   "name": "Maya Joint",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/14146.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/aus.png"
    ],
+   "id": "14146",
+   "name": "Maya Joint",
    "country": "Australia",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
@@ -6419,7 +6419,9 @@
   "msg_id": 573,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": true,
+  "bold_hit": false
  },
  "WTA|185810": {
   "id": "185810",
