@@ -8230,7 +8230,7 @@
   "kickoff": "2026-10-30T17:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "void",
   "detail": "Fri, October 30th at 10:30 AM EDT",
   "home": {
    "id": "2946",
@@ -8694,7 +8694,10 @@
   "bold": {},
   "open": {},
   "top": false,
-  "msg_id": 751
+  "msg_id": 751,
+  "close": {
+   "_": null
+  }
  },
  "ATP|185155": {
   "status": "skipped",
