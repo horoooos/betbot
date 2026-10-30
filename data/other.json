@@ -5617,22 +5617,22 @@
   "kickoff": "2026-10-30T03:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "home": {
+   "color": "fdba31",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/nsh.png",
    "id": "27",
    "name": "Nashville Predators",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/nsh.png",
-   "color": "fdba31",
    "score": "0",
    "record": "4-3-5",
    "periods": [],
    "ru": "Нэшвилл"
   },
   "away": {
+   "color": "d71830",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/wsh.png",
    "id": "23",
    "name": "Washington Capitals",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/wsh.png",
-   "color": "d71830",
    "score": "0",
    "record": "7-4-0",
    "periods": [],
@@ -5735,7 +5735,9 @@
   "close": {
    "HK_U6.5": 0.5107,
    "HK_A-1.5": 0.2736
-  }
+  },
+  "main_hit": false,
+  "bold_hit": false
  },
  "NHL|401892606": {
   "id": "401892606",
