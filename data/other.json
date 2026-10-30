@@ -9926,5 +9926,497 @@
   },
   "top": false,
   "msg_id": 878
+ },
+ "NHL|401892613": {
+  "id": "401892613",
+  "div": "NHL",
+  "sport": "hockey",
+  "kickoff": "2026-10-31T03:00:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "home": {
+   "id": "3",
+   "name": "Calgary Flames",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/cgy.png",
+   "color": "dd1a32",
+   "score": "0",
+   "record": "5-7-0",
+   "periods": [],
+   "ru": "Калгари"
+  },
+  "away": {
+   "id": "124292",
+   "name": "Seattle Kraken",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/sea.png",
+   "color": "000d33",
+   "score": "0",
+   "record": "8-4-1",
+   "periods": [],
+   "ru": "Сиэтл"
+  },
+  "odds": {
+   "H": 1.952,
+   "A": 1.87,
+   "line": 6.5,
+   "over": 1.98,
+   "under": 1.847,
+   "spread": 1.5,
+   "sp_h": 1.388,
+   "sp_a": 3.1
+  },
+  "probs": {
+   "HK_ML_H": 0.48927496185782976,
+   "HK_ML_A": 0.5107250381421702,
+   "HK_H": 0.4065372011882562,
+   "HK_D": 0.1591110782107184,
+   "HK_A": 0.43435172060102534,
+   "HK_O5.5": 0.6395040711794043,
+   "HK_U5.5": 0.36049592882059567,
+   "HK_O6.5": 0.4826244447094462,
+   "HK_U6.5": 0.5173755552905537,
+   "HK_O7.5": 0.33555505412204895,
+   "HK_U7.5": 0.6644449458779509,
+   "HK_IT1O1.5": 0.8332710316255798,
+   "HK_IT1O2.5": 0.6272345203816238,
+   "HK_IT1O3.5": 0.4050303527174486,
+   "HK_IT2O1.5": 0.8445348342518162,
+   "HK_IT2O2.5": 0.6456971837763422,
+   "HK_IT2O3.5": 0.42519579025052007,
+   "HK_H-1.5": 0.2621364716160858,
+   "HK_A+1.5": 0.7378635283839142,
+   "HK_A-1.5": 0.28586962430142915,
+   "HK_H+1.5": 0.7141303756985709
+  },
+  "labels": {
+   "HK_ML_H": "П1 (с ОТ и буллитами)",
+   "HK_ML_A": "П2 (с ОТ и буллитами)",
+   "HK_H": "П1 в основное время",
+   "HK_D": "Ничья в основное время",
+   "HK_A": "П2 в основное время",
+   "HK_O5.5": "ТБ 5.5",
+   "HK_U5.5": "ТМ 5.5",
+   "HK_O6.5": "ТБ 6.5",
+   "HK_U6.5": "ТМ 6.5",
+   "HK_O7.5": "ТБ 7.5",
+   "HK_U7.5": "ТМ 7.5",
+   "HK_IT1O1.5": "ИТ1 больше 1.5",
+   "HK_IT1O2.5": "ИТ1 больше 2.5",
+   "HK_IT1O3.5": "ИТ1 больше 3.5",
+   "HK_IT2O1.5": "ИТ2 больше 1.5",
+   "HK_IT2O2.5": "ИТ2 больше 2.5",
+   "HK_IT2O3.5": "ИТ2 больше 3.5",
+   "HK_H-1.5": "Ф1 (−1.5)",
+   "HK_A+1.5": "Ф2 (+1.5)",
+   "HK_A-1.5": "Ф2 (−1.5)",
+   "HK_H+1.5": "Ф1 (+1.5)"
+  },
+  "real": {
+   "HK_ML_H": 1.952,
+   "HK_ML_A": 1.87,
+   "HK_O6.5": 1.98,
+   "HK_U6.5": 1.847
+  },
+  "center": "Ожидаемые голы 3.2 : 3.3",
+  "bar": [
+   0.48927496185782976,
+   0,
+   0.5107250381421702
+  ],
+  "model": {
+   "lh": 3.2354095833200525,
+   "la": 3.3268557488766963
+  },
+  "main": {
+   "key": "HK_O6.5",
+   "label": "ТБ 6.5",
+   "p": 0.4826,
+   "odds": 1.98,
+   "est": false,
+   "stake": 1.0
+  },
+  "bold": {},
+  "open": {
+   "HK_O6.5": 0.4826
+  },
+  "top": false,
+  "msg_id": 882
+ },
+ "NBA|401909282": {
+  "id": "401909282",
+  "div": "NBA",
+  "sport": "basketball",
+  "kickoff": "2026-10-31T03:00:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "home": {
+   "id": "14",
+   "name": "Miami Heat",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/mia.png",
+   "color": "98002e",
+   "score": "0",
+   "record": "1-4",
+   "periods": [],
+   "ru": "Майами Хит"
+  },
+  "away": {
+   "id": "11",
+   "name": "Indiana Pacers",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/ind.png",
+   "color": "0c2340",
+   "score": "0",
+   "record": "2-3",
+   "periods": [],
+   "ru": "Индиана Пэйсерс"
+  },
+  "odds": {
+   "H": 1.294,
+   "A": 3.7,
+   "line": 237.5,
+   "over": 1.952,
+   "under": 1.87,
+   "spread": -8.5,
+   "sp_h": 1.909,
+   "sp_a": 1.909
+  },
+  "probs": {
+   "BB_ML_H": 0.76063085913355,
+   "BB_ML_A": 0.23936914086645,
+   "BB_SPR_H": 0.5,
+   "BB_SPR_A": 0.5,
+   "BB_O230.5": 0.6597440535491568,
+   "BB_U230.5": 0.3402559464508432,
+   "BB_O237.5": 0.5,
+   "BB_U237.5": 0.5,
+   "BB_O244.5": 0.3402559464508432,
+   "BB_U244.5": 0.6597440535491568
+  },
+  "labels": {
+   "BB_ML_H": "П1 (с ОТ)",
+   "BB_ML_A": "П2 (с ОТ)",
+   "BB_SPR_H": "Ф1 (-8.5)",
+   "BB_SPR_A": "Ф2 (+8.5)",
+   "BB_O230.5": "ТБ 230.5",
+   "BB_U230.5": "ТМ 230.5",
+   "BB_O237.5": "ТБ 237.5",
+   "BB_U237.5": "ТМ 237.5",
+   "BB_O244.5": "ТБ 244.5",
+   "BB_U244.5": "ТМ 244.5"
+  },
+  "real": {
+   "BB_ML_H": 1.294,
+   "BB_ML_A": 3.7,
+   "BB_SPR_H": 1.909,
+   "BB_SPR_A": 1.909,
+   "BB_O237.5": 1.952,
+   "BB_U237.5": 1.87
+  },
+  "center": "Ожидаемый счёт 123 : 114",
+  "bar": [
+   0.76063085913355,
+   0,
+   0.23936914086645
+  ],
+  "model": {
+   "mu": 8.5,
+   "T": 237.5
+  },
+  "main": {
+   "key": "BB_O237.5",
+   "label": "ТБ 237.5",
+   "p": 0.5,
+   "odds": 1.95,
+   "est": false,
+   "stake": 1.0
+  },
+  "bold": {},
+  "open": {
+   "BB_O237.5": 0.5
+  },
+  "top": false,
+  "msg_id": 884
+ },
+ "NBA|401909283": {
+  "id": "401909283",
+  "div": "NBA",
+  "sport": "basketball",
+  "kickoff": "2026-10-31T03:00:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "home": {
+   "id": "6",
+   "name": "Dallas Mavericks",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/dal.png",
+   "color": "0064b1",
+   "score": "0",
+   "record": "3-2",
+   "periods": [],
+   "ru": "Даллас Маверикс"
+  },
+  "away": {
+   "id": "10",
+   "name": "Houston Rockets",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/hou.png",
+   "color": "ce0e2d",
+   "score": "0",
+   "record": "5-0",
+   "periods": [],
+   "ru": "Хьюстон Рокетс"
+  },
+  "odds": {
+   "H": 2.64,
+   "A": 1.505,
+   "line": 223.5,
+   "over": 1.909,
+   "under": 1.909,
+   "spread": 5.5,
+   "sp_h": 1.87,
+   "sp_a": 1.952
+  },
+  "probs": {
+   "BB_ML_H": 0.32335648980795006,
+   "BB_ML_A": 0.6766435101920499,
+   "BB_SPR_H": 0.5,
+   "BB_SPR_A": 0.5,
+   "BB_O216.5": 0.6597440535491568,
+   "BB_U216.5": 0.3402559464508432,
+   "BB_O223.5": 0.5,
+   "BB_U223.5": 0.5,
+   "BB_O230.5": 0.3402559464508432,
+   "BB_U230.5": 0.6597440535491568
+  },
+  "labels": {
+   "BB_ML_H": "П1 (с ОТ)",
+   "BB_ML_A": "П2 (с ОТ)",
+   "BB_SPR_H": "Ф1 (+5.5)",
+   "BB_SPR_A": "Ф2 (-5.5)",
+   "BB_O216.5": "ТБ 216.5",
+   "BB_U216.5": "ТМ 216.5",
+   "BB_O223.5": "ТБ 223.5",
+   "BB_U223.5": "ТМ 223.5",
+   "BB_O230.5": "ТБ 230.5",
+   "BB_U230.5": "ТМ 230.5"
+  },
+  "real": {
+   "BB_ML_H": 2.64,
+   "BB_ML_A": 1.505,
+   "BB_SPR_H": 1.87,
+   "BB_SPR_A": 1.952,
+   "BB_O223.5": 1.909,
+   "BB_U223.5": 1.909
+  },
+  "center": "Ожидаемый счёт 109 : 114",
+  "bar": [
+   0.32335648980795006,
+   0,
+   0.6766435101920499
+  ],
+  "model": {
+   "mu": -5.5,
+   "T": 223.5
+  },
+  "main": {
+   "key": "BB_ML_A",
+   "label": "П2 (с ОТ)",
+   "p": 0.6766,
+   "odds": 1.5,
+   "est": false,
+   "stake": 1.0
+  },
+  "bold": {},
+  "open": {
+   "BB_ML_A": 0.6766
+  },
+  "top": false,
+  "msg_id": 886
+ },
+ "NBA|401909284": {
+  "id": "401909284",
+  "div": "NBA",
+  "sport": "basketball",
+  "kickoff": "2026-10-31T03:00:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "home": {
+   "id": "16",
+   "name": "Minnesota Timberwolves",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/min.png",
+   "color": "266092",
+   "score": "0",
+   "record": "3-2",
+   "periods": [],
+   "ru": "Миннесота Тимбервулвз"
+  },
+  "away": {
+   "id": "12",
+   "name": "LA Clippers",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/lac.png",
+   "color": "12173f",
+   "score": "0",
+   "record": "1-3",
+   "periods": [],
+   "ru": "Клипперс"
+  },
+  "odds": {
+   "H": 1.377,
+   "A": 3.15,
+   "line": 222.5,
+   "over": 1.87,
+   "under": 1.952,
+   "spread": -6.5,
+   "sp_h": 1.847,
+   "sp_a": 1.98
+  },
+  "probs": {
+   "BB_ML_H": 0.7059759216515494,
+   "BB_ML_A": 0.29402407834845057,
+   "BB_SPR_H": 0.5,
+   "BB_SPR_A": 0.5,
+   "BB_O215.5": 0.6597440535491568,
+   "BB_U215.5": 0.3402559464508432,
+   "BB_O222.5": 0.5,
+   "BB_U222.5": 0.5,
+   "BB_O229.5": 0.3402559464508432,
+   "BB_U229.5": 0.6597440535491568
+  },
+  "labels": {
+   "BB_ML_H": "П1 (с ОТ)",
+   "BB_ML_A": "П2 (с ОТ)",
+   "BB_SPR_H": "Ф1 (-6.5)",
+   "BB_SPR_A": "Ф2 (+6.5)",
+   "BB_O215.5": "ТБ 215.5",
+   "BB_U215.5": "ТМ 215.5",
+   "BB_O222.5": "ТБ 222.5",
+   "BB_U222.5": "ТМ 222.5",
+   "BB_O229.5": "ТБ 229.5",
+   "BB_U229.5": "ТМ 229.5"
+  },
+  "real": {
+   "BB_ML_H": 1.377,
+   "BB_ML_A": 3.15,
+   "BB_SPR_H": 1.847,
+   "BB_SPR_A": 1.98,
+   "BB_O222.5": 1.87,
+   "BB_U222.5": 1.952
+  },
+  "center": "Ожидаемый счёт 114 : 108",
+  "bar": [
+   0.7059759216515494,
+   0,
+   0.29402407834845057
+  ],
+  "model": {
+   "mu": 6.5,
+   "T": 222.5
+  },
+  "main": {
+   "key": "BB_SPR_A",
+   "label": "Ф2 (+6.5)",
+   "p": 0.5,
+   "odds": 1.98,
+   "est": false,
+   "stake": 1.0
+  },
+  "bold": {},
+  "open": {
+   "BB_SPR_A": 0.5
+  },
+  "top": false,
+  "msg_id": 888
+ },
+ "WTA|185813": {
+  "id": "185813",
+  "div": "WTA",
+  "sport": "tennis",
+  "tournament": "Queretaro Open",
+  "round": "Quarterfinal",
+  "bo5": false,
+  "kickoff": "2026-10-31T03:00:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "detail": "Fri, October 30th at 8:00 PM EDT",
+  "home": {
+   "id": "2387",
+   "name": "Fiona Ferro",
+   "logo": [
+    "https://a.espncdn.com/i/headshots/tennis/players/full/2387.png",
+    "https://a.espncdn.com/i/teamlogos/countries/500/fra.png"
+   ],
+   "country": "France",
+   "color": "2d6a4f",
+   "winner": false,
+   "sets": [],
+   "set_won": [],
+   "ru": "Фиона Ферро"
+  },
+  "away": {
+   "id": "1955",
+   "name": "Elizabeth Mandlik",
+   "logo": [
+    "https://a.espncdn.com/i/headshots/tennis/players/full/1955.png",
+    "https://a.espncdn.com/i/teamlogos/countries/500/usa.png"
+   ],
+   "country": "USA",
+   "color": "2d6a4f",
+   "winner": false,
+   "sets": [],
+   "set_won": [],
+   "ru": "Элизабет Мандлик"
+  },
+  "odds": {},
+  "probs": {
+   "TN_W1": 0.6935824480230872,
+   "TN_W2": 0.3064175519769128,
+   "TN_3S": 0.4650829518948282,
+   "TN_2S": 0.5349170481051718,
+   "TN_S2:0": 0.39958923226451487,
+   "TN_S0:2": 0.13532781584065695,
+   "TN_S2:1": 0.29399321575857223,
+   "TN_S1:2": 0.17108973613625594,
+   "TN_SET1": 0.864672184159343,
+   "TN_SET2": 0.6004107677354851
+  },
+  "labels": {
+   "TN_W1": "Победа: Фиона Ферро",
+   "TN_W2": "Победа: Элизабет Мандлик",
+   "TN_3S": "Будет 3 сета",
+   "TN_2S": "Будет 2 сета",
+   "TN_S2:0": "Счёт по сетам 2:0",
+   "TN_S0:2": "Счёт по сетам 0:2",
+   "TN_S2:1": "Счёт по сетам 2:1",
+   "TN_S1:2": "Счёт по сетам 1:2",
+   "TN_SET1": "Фиона Ферро возьмёт хотя бы сет",
+   "TN_SET2": "Элизабет Мандлик возьмёт хотя бы сет"
+  },
+  "real": {},
+  "center": "Рейтинг Эло 1659 : 1517",
+  "bar": [
+   0.6935824480230872,
+   0,
+   0.3064175519769128
+  ],
+  "model": {
+   "elo": [
+    1659.3588663051087,
+    1517.4450840492145
+   ],
+   "src": "Эло"
+  },
+  "main": {
+   "key": "TN_SET2",
+   "label": "Элизабет Мандлик возьмёт хотя бы сет",
+   "p": 0.6004,
+   "odds": 1.55,
+   "est": true,
+   "stake": 1.0
+  },
+  "bold": {},
+  "open": {},
+  "top": false,
+  "msg_id": 890
  }
 }
