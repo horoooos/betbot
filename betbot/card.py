@@ -16,11 +16,13 @@ C_HOME, C_DRAW, C_AWAY = (46, 204, 113), (149, 165, 166), (52, 152, 219)
 
 
 KEEP = set("—–·«»…₽≈−№")  # эти знаки шрифт рисует; эмодзи (🔥 ✅ флаги) — нет, вместо них были бы квадраты
+DASHES = str.maketrans({"‐": "-", "‑": "-", "‒": "-", " ": " ", " ": " ", " ": " "})
 
 
 def safe(text: str) -> str:
     """Убираем из текста для картинки всё, чего нет в шрифте Montserrat (эмодзи, флаги, значки)."""
-    out = "".join(c for c in str(text) if ord(c) < 0x2000 or c in KEEP)
+    text = str(text).translate(DASHES)
+    out = "".join(c for c in text if ord(c) < 0x2000 or c in KEEP)
     return " ".join(out.split())
 
 
@@ -296,7 +298,8 @@ def ai_card(prompt: str, title: str, subtitle: str = "", brand: str = "", sport:
     top = H - 140 - step * (len(lines) - 1)
     for k, line in enumerate(lines[:3]):
         d.text((W / 2, top + k * step), line, font=font(size, "ExtraBold"), fill=WHITE, anchor="mm")
-    d.line([(W / 2 - 90, H - 110), (W / 2 + 90, H - 110)], fill=ACCENT, width=4)
+    bar = top - size / 2 - 22  # золотая черта над заголовком, а не поперёк букв
+    d.line([(W / 2 - 60, bar), (W / 2 + 60, bar)], fill=ACCENT, width=5)
     if subtitle:
         d.text((W / 2, H - 70), subtitle, font=font(30, "Medium"), fill=(220, 226, 245), anchor="mm")
     return _png(img, d, brand)

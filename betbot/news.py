@@ -7,6 +7,7 @@
 import json
 import random
 import re
+import time
 import xml.etree.ElementTree as ET
 from html import escape, unescape
 
@@ -52,14 +53,14 @@ SCENES = {
     "hockey": ["ice hockey arena with bright ice rink, hockey sticks and puck on the ice, arena lights",
                "close-up of a black hockey puck on fresh ice, scratches on the ice, arena lights",
                "hockey goal net on the ice rink, empty arena, dramatic lighting"],
-    "basketball": ["basketball arena, orange basketball going into the hoop, crowd in the background",
+    "basketball": ["empty basketball arena, orange basketball going into the hoop, empty seats",
                    "close-up of an orange basketball on a polished wooden court, arena lights",
                    "basketball hoop and net from below, arena spotlights"],
     "tennis": ["professional tennis court in a stadium, blue hard court, yellow tennis ball on the baseline",
                "close-up of a yellow tennis ball and racket on a clay court",
                "tennis stadium center court at night under floodlights, net and empty court",
                "grass tennis court with white lines and a tennis ball near the net"],
-    "esports": ["esports arena with a big stage, neon lights, gaming PCs and crowd",
+    "esports": ["empty esports arena with a big stage, neon lights, gaming PCs on desks",
                 "close-up of a glowing gaming keyboard and mouse, neon purple and blue light",
                 "esports tournament stage with big screens and spotlights, dark arena"],
 }
@@ -69,9 +70,11 @@ PROMPT = (
     "Заголовок и текст пиши ТОЛЬКО НА РУССКОМ ЯЗЫКЕ, имена — русскими буквами. "
     "СТРОГО: используй только факты из исходника. Не добавляй оценок, мнений, реакции болельщиков или "
     "«обсуждений» — если в исходнике мало фактов, пиши коротко. Не пиши про источник. "
+    "Пиши грамотно, без опечаток и выдуманных слов, названия клубов — в кавычках-ёлочках. "
     "Ответь только JSON без пояснений: {\"sport\": \"football|hockey|basketball|tennis|esports|other\", "
-    "\"title\": \"заголовок до 70 символов\", "
-    "\"text\": \"1–2 предложения: перефразируй только то, что есть в описании, не длиннее его\", "
+    "\"title\": \"информативный заголовок до 70 символов: кто и что сделал (не цитата и не обрывок фразы)\", "
+    "\"text\": \"2–3 предложения: перефразируй факты из описания, добавь контекст из него же (кто, где, когда), "
+    "не повторяй заголовок слово в слово\", "
     "\"emoji\": \"один подходящий эмодзи\"}"
 )
 
@@ -124,13 +127,18 @@ def _rewrite(item: dict) -> dict | None:
             data = json.loads(raw[raw.index("{"): raw.rindex("}") + 1])
             break
         except Exception:
+            time.sleep(6)  # бесплатный доступ: при частых запросах отвечает ошибкой — ждём и повторяем
             continue
     if not data:
         return None
-    title, text = str(data.get("title", "")).strip(), str(data.get("text", "")).strip()
+    fix = str.maketrans({"‐": "-", "‑": "-", " ": " ", " ": " "})  # «неразрывные» дефисы и пробелы
+    title, text = str(data.get("title", "")).strip().translate(fix), str(data.get("text", "")).strip().translate(fix)
     if not (10 <= len(title) <= 110 and 40 <= len(text) <= 700):
         return None
     if title.lower() == item["title"].lower():  # нейросеть просто повторила заголовок — не годится
+        return None
+    words = lambda s: set(re.findall(r"\w{3,}", s.lower()))  # noqa: E731
+    if len(words(text) - words(title)) < 6:  # текст — тот же заголовок другими словами, читать нечего
         return None
     if _cyrillic(title) < 0.4 or _cyrillic(text) < 0.4:  # ответила по-английски — в русский канал не годится
         return None
@@ -162,7 +170,7 @@ def run(state: dict, now: pd.Timestamp, brand: str) -> None:
             news = _rewrite(item)
             if not news or news["sport"] != sport:  # новость не про этот вид спорта (Ф-1, бокс…) — пропускаем
                 continue
-            prompt = f"{random.choice(SCENES[sport])}, cinematic, high detail, photorealistic, no text, no people"
+            prompt = f"{random.choice(SCENES[sport])}, cinematic, high detail, photorealistic, no text, no people, no players, no faces, empty scene"
             png = card.ai_card(prompt, news["title"], TAGS[sport].lstrip("#").capitalize(), brand, sport=sport)
             telegram.send_photo(png, f"{news['emoji'] or EMOJI[sport]} <b>{escape(news['title'])}</b>\n\n"
                                      f"{escape(news['text'])}\n\n{TAGS[sport]}")
