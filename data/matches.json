@@ -7091,7 +7091,7 @@
   "kickoff": "2026-10-30T17:50:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Scheduled",
   "home": {
    "id": "131746",
@@ -7218,7 +7218,10 @@
   "msg_id": 737,
   "close": {
    "X2": 0.6065
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null,
+  "value_hit": null
  },
  "401888259": {
   "id": "401888259",
@@ -7351,6 +7354,9 @@
   "odds_src": "среднее по букмекерам",
   "model_w": 0.0,
   "learned_n": 137,
-  "msg_id": 755
+  "msg_id": 755,
+  "close": {
+   "O25": 0.6235
+  }
  }
 }
