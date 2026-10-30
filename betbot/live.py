@@ -19,8 +19,9 @@ LIVE = {
     # другие виды спорта
     "NHL", "NBA", "CS2", "DOTA",
 }
-WORD = {"football": ("ГОЛ!", "⚽️"), "hockey": ("ШАЙБА!", "🏒"), "esports": ("КАРТА!", "🎮")}
-START = {"football": "все голы будут здесь", "hockey": "все шайбы будут здесь",
+# В хоккее шайб много (ночью NHL — десятки постов), поэтому там только «матч начался» и итог.
+WORD = {"football": ("ГОЛ!", "⚽️"), "esports": ("КАРТА!", "🎮")}
+START = {"football": "все голы будут здесь", "hockey": "итог матча будет здесь",
          "basketball": "итог матча будет здесь", "esports": "результат каждой карты будет здесь"}
 
 
@@ -75,6 +76,8 @@ def run(store: dict, events: list[dict], reviews: dict, brand: str) -> None:
             print(f"  live: начался {h} — {a}")
             continue
         if sc is None or sport not in WORD:
+            if sc is not None:
+                st["hs"], st["as"] = sc  # счёт помним, но без отдельных постов
             continue
         prev = (st["hs"], st["as"])
         if sc == prev:

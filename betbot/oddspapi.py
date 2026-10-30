@@ -20,6 +20,10 @@ API = "https://api.oddspapi.io/v4"
 CACHE = Path(__file__).resolve().parent.parent / "data" / "raw" / "oddspapi"
 BUDGET = 230           # из 250 бесплатных — с запасом
 REFRESH_HOURS = 11     # линия — примерно дважды в день
+# теннис — чаще: матчи следующего круга появляются в линии только после предыдущего; киберспорт — раз в сутки
+# (в месяц: теннис ~4×31 + турниры 31 + киберспорт 2×31 ≈ 217 запросов из 230)
+REFRESH = {"tennis": 6, "CS2": 23, "DOTA": 23}
+TOURNAMENTS_DAYS_BY = {"tennis": 1}
 RETRY_HOURS = 3        # после неудачного запроса — повтор не раньше чем через 3 часа
 TOURNAMENTS_DAYS = 3
 BOOKMAKERS = "pinnacle"  # бесплатный тариф принимает ровно одного букмекера; Pinnacle — самая точная линия
@@ -115,7 +119,8 @@ def _extra_markets(markets: list, sports: dict) -> dict:
 def _tournaments(state: dict, key: str, sport_id: int) -> list[int]:
     t = state["oddspapi"].setdefault("tournaments", {})
     saved = t.get(key)
-    if saved and pd.Timestamp.now(tz=MSK) - pd.Timestamp(saved["at"]) < pd.Timedelta(days=TOURNAMENTS_DAYS):
+    days = TOURNAMENTS_DAYS_BY.get(key, TOURNAMENTS_DAYS)
+    if saved and pd.Timestamp.now(tz=MSK) - pd.Timestamp(saved["at"]) < pd.Timedelta(days=days):
         return saved["ids"]
     items = _get(state, "/tournaments", sportId=sport_id) or []
 
@@ -150,10 +155,11 @@ def refresh(state: dict) -> None:
     for key, sid in meta["sports"].items():
         if key not in meta["winner"]:
             continue
-        if last.get(key) and now - pd.Timestamp(last[key]) < pd.Timedelta(hours=REFRESH_HOURS):
+        every = REFRESH.get(key, REFRESH_HOURS)
+        if last.get(key) and now - pd.Timestamp(last[key]) < pd.Timedelta(hours=every):
             continue
         # следующая попытка не раньше чем через RETRY_HOURS, даже если сейчас не получится — бережём лимит
-        last[key] = (now - pd.Timedelta(hours=REFRESH_HOURS - RETRY_HOURS)).isoformat()
+        last[key] = (now - pd.Timedelta(hours=max(every - RETRY_HOURS, 0))).isoformat()
         ids = _tournaments(state, key, sid)
         if not ids:
             continue

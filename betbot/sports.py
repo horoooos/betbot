@@ -195,22 +195,60 @@ def tennis_history(refresh: bool) -> list[dict]:
     return sorted({m["id"]: m for m in matches}.values(), key=lambda m: m["kickoff"])
 
 
+# Покрытие турнира по названию: ESPN его не отдаёт. Всё, чего нет в списках, — хард (большинство турниров).
+CLAY = ("roland", "french open", "madrid", "internazionali", "rome", "roma", "monte", "barcelona", "hamburg",
+        "buenos aires", "rio open", "santiago", "estoril", "munich", "bmw open", "geneva", "lyon", "bastad", "gstaad",
+        "umag", "kitzb", "houston", "marrakech", "charleston", "bogota", "rabat", "strasbourg", "parma", "palermo",
+        "prague", "budapest", "lausanne", "warsaw", "iasi", "cluj", "bucharest", "valle d'aosta", "curitiba")
+GRASS = ("wimbledon", "queen", "halle", "hertogenbosch", "libema", "eastbourne", "mallorca", "newport", "nottingham",
+         "birmingham", "berlin", "bad homburg", "stuttgart open")
+
+
+def surface(tournament: str) -> str:
+    t = (tournament or "").lower()
+    if any(w in t for w in GRASS):
+        return "grass"
+    if any(w in t for w in CLAY):
+        return "clay"
+    return "hard"
+
+
 def elo(history: list[dict]) -> dict[str, tuple[float, int]]:
-    """Рейтинг Эло (с K, убывающим по опыту игрока, как у FiveThirtyEight). id → (рейтинг, матчей)."""
+    """Рейтинг Эло (с K, убывающим по опыту игрока, как у FiveThirtyEight). id → (рейтинг, матчей).
+
+    Для тенниса дополнительно считается рейтинг на каждом покрытии — ключи «id@clay», «id@hard», «id@grass»:
+    на грунте и харде один и тот же игрок играет по-разному.
+    """
     r: dict[str, float] = {}
     n: dict[str, int] = {}
+
+    def update(wid, lid):
+        rw, rl = r.get(wid, 1500.0), r.get(lid, 1500.0)
+        exp = 1 / (1 + 10 ** ((rl - rw) / 400))
+        kw = 250 / (n.get(wid, 0) + 5) ** 0.4
+        kl = 250 / (n.get(lid, 0) + 5) ** 0.4
+        r[wid], r[lid] = rw + kw * (1 - exp), rl - kl * (1 - exp)
+        n[wid], n[lid] = n.get(wid, 0) + 1, n.get(lid, 0) + 1
+
     for m in history:
         a, b = m["home"], m["away"]
         if a["winner"] == b["winner"]:
             continue
         w, l = (a, b) if a["winner"] else (b, a)
-        rw, rl = r.get(w["id"], 1500.0), r.get(l["id"], 1500.0)
-        exp = 1 / (1 + 10 ** ((rl - rw) / 400))
-        kw = 250 / (n.get(w["id"], 0) + 5) ** 0.4
-        kl = 250 / (n.get(l["id"], 0) + 5) ** 0.4
-        r[w["id"]], r[l["id"]] = rw + kw * (1 - exp), rl - kl * (1 - exp)
-        n[w["id"]], n[l["id"]] = n.get(w["id"], 0) + 1, n.get(l["id"], 0) + 1
+        update(w["id"], l["id"])
+        if m.get("sport") == "tennis":
+            s = surface(m.get("tournament", ""))
+            update(f"{w['id']}@{s}", f"{l['id']}@{s}")
     return {k: (r[k], n[k]) for k in r}
+
+
+def _rating(ratings: dict, pid: str, surf: str | None):
+    """Общий рейтинг, смешанный пополам с рейтингом на покрытии (если на нём сыграно хотя бы 5 матчей)."""
+    base = ratings.get(pid)
+    on = ratings.get(f"{pid}@{surf}") if surf else None
+    if base and on and on[1] >= 5:
+        return ((base[0] + on[0]) / 2, base[1])
+    return base
 
 
 # ── вероятности и рынки ─────────────────────────────────────────────────────
@@ -263,7 +301,8 @@ def _elo_or_market(e: dict, ratings: dict | None, o: dict):
 
     Возвращает (p, рейтинг1, рейтинг2, источник) или (None, …), если нет ни линии, ни истории.
     """
-    ra, rb = (ratings or {}).get(e["home"]["id"]), (ratings or {}).get(e["away"]["id"])
+    surf = surface(e.get("tournament", "")) if e.get("sport") == "tennis" else None
+    ra, rb = _rating(ratings or {}, e["home"]["id"], surf), _rating(ratings or {}, e["away"]["id"], surf)
     elo_ok = ra and rb and ra[1] >= 5 and rb[1] >= 5
     if o.get("H") and o.get("A"):
         return float(mk.fair([o["H"], o["A"]])[0]), ra if elo_ok else None, rb if elo_ok else None, o.get("src", "букмекера")
@@ -463,7 +502,7 @@ def pick(a: dict, calib: dict) -> tuple[dict, dict]:
     def score(k):
         return probs[k] * calib.get(k, (1.0, 0))[0]
 
-    keys = [k for k in probs if 0 < probs[k] < 1]
+    keys = [k for k in probs if 0 < probs[k] < 1 and score(k) > 0]  # score 0 — рынок отключён (см. mk.calibration)
     main_pool = [k for k in keys if ":" not in k]  # точный счёт — не для основного
     main_k, bold_k = mk.choose(keys, probs, real, score, main_pool, lambda x, y: compatible(probs, x, y))
 

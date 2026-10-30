@@ -374,6 +374,8 @@ def other_sports(state: dict, events: list[dict], now: pd.Timestamp, calib: dict
                 ctx[e["sport"]] = (hist, sports.elo(hist))
             if e["sport"] in ("tennis", "esports"):
                 e["odds"] = oddspapi.lookup(e) or {}
+                if oddspapi.enabled() and not e["odds"]:
+                    print(f"  OddsPapi: нет линии для {e['home']['name']} — {e['away']['name']} ({e.get('tournament') or e['div']})")
             try:
                 store[key] = other_review(e, calib, ctx, state) or {"status": "skipped", "kickoff": e["kickoff"]}
             except Exception as ex:

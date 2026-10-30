@@ -578,16 +578,18 @@ def stats_card(title: str, rows: list[tuple[str, int, int, float | None]], brand
     _title(d, "Статистика бота", y=50, size=34)
     d.text((W / 2, 125), title.upper(), font=font(40, "ExtraBold"), fill=WHITE, anchor="mm")
     y = 200
+    step = min(120, (H - 230) // max(len(rows), 1))  # 4 строки — как раньше, 5 — плотнее, чтобы влезли
+    box = step - 20
     for name, hits, n, roi in rows:
-        d.rounded_rectangle((110, y, W - 110, y + 100), radius=20, fill=(28, 36, 70))
-        d.text((150, y + 50), name, font=font(32), fill=WHITE, anchor="lm")
+        d.rounded_rectangle((110, y, W - 110, y + box), radius=20, fill=(28, 36, 70))
+        d.text((150, y + box / 2), name, font=font(32), fill=WHITE, anchor="lm")
         if n:
             share = hits / n
-            d.text((720, y + 50), f"{hits}/{n} · {share * 100:.0f}%", font=font(38, "ExtraBold"),
+            d.text((720, y + box / 2), f"{hits}/{n} · {share * 100:.0f}%", font=font(38, "ExtraBold"),
                    fill=GREEN if share >= 0.5 else RED, anchor="mm")
             if roi is not None:
-                d.text((W - 150, y + 50), f"ROI {roi:+.1f}%", font=font(30), fill=ACCENT, anchor="rm")
+                d.text((W - 150, y + box / 2), f"ROI {roi:+.1f}%", font=font(30), fill=ACCENT, anchor="rm")
         else:
-            d.text((720, y + 50), "матчей не было", font=font(30, "Medium"), fill=MUTED, anchor="mm")
-        y += 120
+            d.text((720, y + box / 2), "матчей не было", font=font(30, "Medium"), fill=MUTED, anchor="mm")
+        y += step
     return _png(img, d, brand)

@@ -357,12 +357,15 @@ def stats(res: pd.DataFrame, today: pd.Timestamp, calib: dict | None = None) -> 
             parts.append(f"{EMOJI.get(sport, '')} {SPORT_RU.get(sport, sport)} {hits}/{n} ({pct(hits / n)})")
         if parts:
             lines.append("🏅 <b>За 7 дней по видам спорта:</b> " + " · ".join(parts))
-    learned = sorted(((k, r, n) for k, (r, n) in (calib or {}).items() if n >= 5 and abs(r - 1) >= 0.05),
+    learned = sorted(((k, r, n) for k, (r, n) in (calib or {}).items() if n >= 5 and r > 0 and abs(r - 1) >= 0.05),
                      key=lambda x: -abs(x[1] - 1))[:4]
     if learned:
         lines.append("🧠 <b>Чему бот научился на своих прогнозах</b>\n" + "\n".join(
             f"{'📈' if r > 1 else '📉'} {escape(label(k))}: заходит {'чаще' if r > 1 else 'реже'} обещанного "
             f"({r:.2f}×, прогнозов: {n}) — {'выбирает охотнее' if r > 1 else 'выбирает реже'}"
             for k, r, n in learned))
+    off = [k for k, (r, _) in (calib or {}).items() if r == 0.0]
+    if off:
+        lines.append("⛔ <b>Временно не ставим</b> (заходят заметно реже обещанного): " + ", ".join(escape(label(k)) for k in off))
     lines.append("<i>ROI — прибыль на 1 ед. ставки, только по прогнозам с настоящим кэфом букмекера</i>")
     return "\n\n".join(lines)

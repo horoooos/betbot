@@ -135,10 +135,16 @@ def won(key: str, hs: int, as_: int) -> bool:
     return bool(MARKETS[key][2](hs, as_))
 
 
+SPORT_LABELS = {"TN_2S": "Будет 2 сета", "TN_3S": "Будет 3 сета", "TN_W1": "Победа первого", "TN_W2": "Победа второго",
+                "HK_ML_H": "П1 (хоккей)", "HK_ML_A": "П2 (хоккей)", "BB_ML_H": "П1 (баскетбол)", "BB_ML_A": "П2 (баскетбол)",
+                "ES_W1": "Победа первого (кибер)", "ES_W2": "Победа второго (кибер)", "ES_FULL": "Все карты", "ES_DRY": "Всухую"}
+
+
 def label(key: str) -> str:
     if key.startswith("CS_"):
         return f"Точный счёт {key[3:]}"
-    return (MARKETS.get(key) or HT_MARKETS[key])[1]
+    m = MARKETS.get(key) or HT_MARKETS.get(key)
+    return m[1] if m else SPORT_LABELS.get(key, key)
 
 
 def calibration(res, prior: float = 20.0) -> dict[str, tuple[float, int]]:
@@ -153,20 +159,33 @@ def calibration(res, prior: float = 20.0) -> dict[str, tuple[float, int]]:
     rows = []
     for kind in ("main", "bold"):
         if f"{kind}_key" in res:
-            part = res[[f"{kind}_key", f"{kind}_p", f"{kind}_hit"]].dropna()
-            part.columns = ["key", "p", "hit"]
+            part = res[["date", f"{kind}_key", f"{kind}_p", f"{kind}_hit"]].dropna()
+            part.columns = ["date", "key", "p", "hit"]
             rows.append(part)
     df = pd.concat(rows, ignore_index=True)
     df["hit"] = df["hit"].astype(str).str.lower().isin(["true", "1", "1.0"])
+    recent = pd.to_datetime(df["date"]) > pd.to_datetime(df["date"]).max() - pd.Timedelta(days=WEAK_DAYS)
     for key, g in df.groupby("key"):
         pbar = g["p"].astype(float).mean()
         ratio = (g["hit"].sum() + prior * pbar) / (g["p"].astype(float).sum() + prior * pbar)
         out[key] = (float(min(max(ratio, 0.8), 1.2)), len(g))
+        last = g[recent[g.index]]
+        if len(last) >= WEAK_MIN_N and last["hit"].mean() < last["p"].astype(float).mean() - WEAK_GAP:
+            out[key] = (0.0, len(g))  # рынок стабильно заходит реже обещанного — бот его временно не ставит
     return out
+
+
+WEAK_MIN_N, WEAK_GAP, WEAK_DAYS = 20, 0.10, 30
+
+
+def weak(calib: dict) -> list[str]:
+    """Типы ставок, отключённые из-за плохой статистики."""
+    return [k for k, (r, _) in (calib or {}).items() if r == 0.0]
 
 
 MIN_ODDS = 1.5     # ниже этого кэфа профессионалы не играют: одна осечка съедает несколько выигрышей
 MAIN_MIN_P = 0.45  # основной прогноз — всё-таки «скорее зайдёт», чем нет
+BOLD_MIN_P = 0.40  # смелый — не лотерея: хотя бы 40%
 
 
 def compatible(k1: str, k2: str) -> bool:
@@ -195,9 +214,10 @@ def choose(keys: list[str], probs: dict, real: dict, score, main_pool: list[str]
         est = [k for k in pool if k in probs and MAIN_MIN_P <= probs[k] and odds(k) >= MIN_ODDS]
         main_k = max(est or [k for k in pool if k in probs], key=score)
     # смелый не должен спорить с основным: П1 основным и П2 смелым — это ставка против самого себя
-    bold = [k for k in keys if k != main_k and 2.0 <= odds(k) <= 3.6 and (fits is None or fits(main_k, k))]
-    real_bold = [k for k in bold if real.get(k)]
-    bold_k = max(real_bold or bold, key=ev) if bold else None
+    # смелый — только с настоящим кэфом букмекера и шансом от 40%: на «расчётных» кэфах он заходил в 31% случаев
+    bold = [k for k in keys if k != main_k and real.get(k) and 2.0 <= real[k] <= 3.6 and probs[k] >= BOLD_MIN_P
+            and (fits is None or fits(main_k, k))]
+    bold_k = max(bold, key=ev) if bold else None
     return main_k, bold_k
 
 
@@ -232,7 +252,8 @@ def tips(probs: dict, real_odds: dict, calib: dict | None = None) -> tuple[dict,
     def score(k):
         return probs[k] * calib.get(k, (1.0, 0))[0]
 
-    main_k, bold_k = choose([k for k in MARKETS if probs[k] > 0], probs, real_odds, score, MAIN_POOL, compatible)
+    keys = [k for k in MARKETS if probs[k] > 0 and score(k) > 0]  # score 0 — рынок отключён (см. calibration)
+    main_k, bold_k = choose(keys, probs, real_odds, score, [k for k in MAIN_POOL if k in keys] or keys, compatible)
 
     def pack(k):
         if k is None:

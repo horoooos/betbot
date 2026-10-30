@@ -19,6 +19,9 @@ from .leagues import ALL, ORDER, title
 from .sports import EMOJI, SPORT_RU
 from .texts import MONTHS
 
+MONTHS_NOM = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь",
+              "Ноябрь", "Декабрь"]
+
 SLOTS = {10: "express", 13: "learn", 16: "match_of_day", 19: "evening", 22: "facts", 23: "recap"}
 FOOTER = "<i>⚠️ 18+. Прогноз — не гарантия. Ставьте только то, что не жалко потерять.</i>"
 
@@ -355,6 +358,46 @@ def facts(res: pd.DataFrame, now, brand) -> bool:
     return True
 
 
+def summary(res: pd.DataFrame, now, brand, start: pd.Timestamp, end: pd.Timestamp, heading: str, period: str) -> bool:
+    """🏆 Итоги недели/месяца: карточка по видам спорта, лучшие попадания, ROI и value-ставки."""
+    from . import pro, texts
+    if res is None or res.empty:
+        return False
+    d = pd.to_datetime(res["date"])
+    part = res[(d >= start) & (d < end)].copy()
+    if len(part) < 5:
+        return False
+    part["sport"] = part["sport"].fillna("football") if "sport" in part else "football"
+    hit = part["main_hit"].astype(str).str.lower().isin(["true", "1", "1.0"])
+    rows = [(f"Все виды спорта", *texts.numbers(part))]
+    for sp, g in sorted(part.groupby("sport"), key=lambda x: -len(x[1]))[:4]:
+        rows.append((f"{SPORT_RU.get(sp, sp)}", *texts.numbers(g)))
+    roi = texts.roi_real(part)
+    lines = [f"🏆 <b>{heading}</b> · {period}\n",
+             f"🎯 Основной прогноз зашёл: <b>{int(hit.sum())} из {len(part)}</b> ({_pct(hit.mean())})"
+             + (f" · ROI <b>{roi:+.1f}%</b>" if roi is not None else "")]
+    for name, h, n, _ in rows[1:]:
+        lines.append(f"   {EMOJI.get(next((k for k, v in SPORT_RU.items() if v == name), ''), '•')} {name}: {h}/{n} ({_pct(h / n)})")
+    top = part[hit].sort_values("main_odds", ascending=False).head(3)
+    if len(top):
+        lines.append("\n💎 <b>Лучшие попадания:</b>")
+        for _, r in top.iterrows():
+            lines.append(f"✅ {escape(str(r['home']))} — {escape(str(r['away']))} ({r['score']}): "
+                         f"{escape(str(r['main_label']))} @ {float(r['main_odds']):.2f}")
+    best_day = part.assign(h=hit).groupby("date")["h"].agg(["sum", "size"])
+    best_day = best_day[best_day["size"] >= 3]
+    if len(best_day):
+        bd = (best_day["sum"] / best_day["size"]).idxmax()
+        lines.append(f"📅 Лучший день: {texts.date_ru(pd.Timestamp(bd))} — "
+                     f"{int(best_day.loc[bd, 'sum'])} из {int(best_day.loc[bd, 'size'])}")
+    if pro.value_summary():
+        lines.append("\n" + pro.value_summary())
+    lines.append("\n<i>Всё посчитано честно — по каждому опубликованному прогнозу.</i>")
+    png = card.stats_card(period, rows, brand)
+    _post(png, "\n".join(lines))
+    return True
+
+
 def weekly(res: pd.DataFrame, now, brand) -> bool:
     if res is None or res.empty:
         return False
@@ -391,7 +434,17 @@ def run(state: dict, football: list[dict], other: list[dict], res: pd.DataFrame,
         if kind == "express":
             done = express(state, football, other, now, brand)
         elif kind == "learn":
-            done = weekly(res, now, brand) if now.weekday() == 0 else False
+            done = False
+            today = now.tz_localize(None).normalize()
+            if now.day == 1:  # 1-го числа — итоги прошедшего месяца
+                start = (today - pd.Timedelta(days=1)).replace(day=1)
+                done = summary(res, now, brand, start, today, "ИТОГИ МЕСЯЦА",
+                               f"{MONTHS_NOM[start.month - 1]} {start.year}")
+            if now.weekday() == 0:  # по понедельникам — итоги прошедшей недели
+                start = today - pd.Timedelta(days=7)
+                done = summary(res, now, brand, start, today, "ИТОГИ НЕДЕЛИ",
+                               f"{start.day} {MONTHS[start.month - 1]} — {(today - pd.Timedelta(days=1)).day} "
+                               f"{MONTHS[(today - pd.Timedelta(days=1)).month - 1]}") or done
             done = done or learn(state, now, brand)
         elif kind == "match_of_day":
             done = match_of_day(football, now, brand, state)

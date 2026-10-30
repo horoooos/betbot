@@ -24,6 +24,52 @@ _dirty = False
 # Названия, которые Wikidata даёт неудобно длинными или непривычными
 FIXED = {
     # клубы, которые Wikidata путает с городами или находит без русского названия
+    "Barnet": "Барнет",
+    "Barrow": "Барроу",
+    "Boreham Wood": "Борэм Вуд",
+    "Bromley": "Бромли",
+    "Gateshead": "Гейтсхед",
+    "Southend United": "Саутенд Юнайтед",
+    "Tamworth": "Тамуэрт",
+    "Woking": "Уокинг",
+    "Worthing": "Уэртинг",
+    "Yeovil Town": "Йовил Таун",
+    "Hartlepool United": "Хартлпул Юнайтед",
+    "Kidderminster Harriers": "Киддерминстер",
+    "Forest Green Rovers": "Форест Грин Роверс",
+    "Boston United": "Бостон Юнайтед",
+    "Wealdstone": "Уилдстон",
+    "Real Ávila": "Реал Авила",
+    "Rayo Majadahonda": "Райо Махадаонда",
+    "CD Extremadura": "Эстремадура",
+    "Don Benito": "Дон Бенито",
+    "Sant Andreu": "Сант-Андреу",
+    "Manresa": "Манреса",
+    "Alcalá": "Алькала",
+    "Abha": "Абха",
+    "Al Khaleej": "Аль-Халидж",
+    "Internacional de Bogotá": "Интернасьональ Богота",
+    "Estudiantes de Río Cuarto": "Эстудиантес Рио-Куарто",
+    "Sarmiento (Junín)": "Сармьенто",
+    "Atlético Grau": "Атлетико Грау",
+    "Deportivo Garcilaso": "Депортиво Гарсиласо",
+    "Juan Pablo II": "Хуан Пабло II",
+    "IF Brommapojkarna": "Броммапойкарна",
+    "Excelsior Maassluis": "Эксельсиор Масслёйс",
+    "Atlético Tordesillas": "Атлетико Тордесильяс",
+    "Ciudad De Lucena": "Сьюдад-де-Лусена",
+    "Mijas Las Lagunas": "Михас Лас-Лагунас",
+    "Sporting de Alcázar": "Спортинг Алькасар",
+    "Koninklijke HFC": "ХФК Харлем",
+    "Rijnsburgse Boys": "Рейнсбургсе Бойз",
+    "Kloetinge": "Клутинге",
+    "Penicuik": "Пеникуик",
+    "Adelaide 36ers": "Аделаида Сиксерс",
+    "Brisbane Bullets": "Брисбен Буллетс",
+    "Cairns Taipans": "Кэрнс Тайпанс",
+    "Perth Wildcats": "Перт Уайлдкэтс",
+    "Sydney Kings": "Сидней Кингз",
+    "Tasmania JackJumpers": "Тасмания Джекджамперс",
     "Atalanta": "Аталанта",
     "Fiorentina": "Фиорентина",
     "Torino": "Торино",
@@ -175,6 +221,8 @@ def translit(text: str) -> str:
                 i += 1
         if w.endswith("ie") and res.endswith("ие") and len(w) > 3:  # Norrie → Норри, Annie → Анни
             res = res[:-2] + "и"
+        if w.endswith("ic") and res.endswith("ик") and len(w) > 4:  # Djokovic → Джокович (сербские/хорватские фамилии)
+            res = res[:-2] + "ич"
         out.append(res[:1].upper() + res[1:] if word[:1].isupper() else res)
     return "".join(out)
 
@@ -282,8 +330,8 @@ def tennis_player(name: str) -> str:
     global _dirty
     cache = _load()
     key = f"tennis:{name}"
-    if key in cache:
-        return cache[key]
+    if key in cache and len(cache[key].split()) >= min(2, len(name.split())):
+        return cache[key]  # запись из одного слова («Новак») — старая ошибка, переспрашиваем
     res = _api(action="wbsearchentities", search=name, language="en", type="item", limit=7)
     if res is None:
         return translit(name)  # Wikidata не ответила или лимит времени исчерпан — попробуем в следующий раз
@@ -292,7 +340,8 @@ def tennis_player(name: str) -> str:
     if ids:
         ent = _api(action="wbgetentities", ids=ids[0], props="labels", languages="ru")
         label = ((ent or {}).get("entities", {}).get(ids[0], {}).get("labels", {}).get("ru") or {}).get("value")
-    cache[key] = _person(re.sub(r"\s*\(.*?\)", "", label)) if label else translit(name)
+    ru = _person(re.sub(r"\s*\(.*?\)", "", label)) if label else ""
+    cache[key] = ru if len(ru.split()) >= min(2, len(name.split())) else translit(name)
     _dirty = True
     return cache[key]
 
@@ -302,7 +351,9 @@ def _person(label: str) -> str:
     if "," in label:
         last, first = (x.strip() for x in label.split(",", 1))
         label = f"{first.split()[0]} {last}" if first else last
-    words = [w for w in label.split() if not re.search(r"(вич|вна|ична|инична)$", w)]
+    words = label.split()
+    if len(words) >= 3:  # отчество — только среднее слово из трёх («Даниил Сергеевич Медведев»), а не фамилия «Джокович»
+        words = [w for i, w in enumerate(words) if not (0 < i < len(words) - 1 and re.search(r"(вич|вна|ична|инична)$", w))]
     return " ".join(words)
 
 
