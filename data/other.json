@@ -9102,5 +9102,97 @@
   "close": {
    "_": null
   }
+ },
+ "WTA|185815": {
+  "id": "185815",
+  "div": "WTA",
+  "sport": "tennis",
+  "tournament": "Queretaro Open",
+  "round": "Quarterfinal",
+  "bo5": false,
+  "kickoff": "2026-10-31T00:30:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "detail": "Fri, October 30th at 5:30 PM EDT",
+  "home": {
+   "id": "3256",
+   "name": "Nadia Podoroska",
+   "logo": [
+    "https://a.espncdn.com/i/headshots/tennis/players/full/3256.png",
+    "https://a.espncdn.com/i/teamlogos/countries/500/arg.png"
+   ],
+   "country": "Argentina",
+   "color": "2d6a4f",
+   "winner": false,
+   "sets": [],
+   "set_won": [],
+   "ru": "Надя Подорошка"
+  },
+  "away": {
+   "id": "5299",
+   "name": "Carole Monnet",
+   "logo": [
+    "https://a.espncdn.com/i/headshots/tennis/players/full/5299.png",
+    "https://a.espncdn.com/i/teamlogos/countries/500/fra.png"
+   ],
+   "country": "France",
+   "color": "2d6a4f",
+   "winner": false,
+   "sets": [],
+   "set_won": [],
+   "ru": "Кароль Монне"
+  },
+  "odds": {},
+  "probs": {
+   "TN_W1": 0.687132347839409,
+   "TN_W2": 0.312867652160591,
+   "TN_3S": 0.4674774291736653,
+   "TN_2S": 0.5325225708263347,
+   "TN_S2:0": 0.3937810306025588,
+   "TN_S0:2": 0.13874154022377586,
+   "TN_S2:1": 0.29335131723685026,
+   "TN_S1:2": 0.17412611193681507,
+   "TN_SET1": 0.8612584597762242,
+   "TN_SET2": 0.6062189693974411
+  },
+  "labels": {
+   "TN_W1": "Победа: Надя Подорошка",
+   "TN_W2": "Победа: Кароль Монне",
+   "TN_3S": "Будет 3 сета",
+   "TN_2S": "Будет 2 сета",
+   "TN_S2:0": "Счёт по сетам 2:0",
+   "TN_S0:2": "Счёт по сетам 0:2",
+   "TN_S2:1": "Счёт по сетам 2:1",
+   "TN_S1:2": "Счёт по сетам 1:2",
+   "TN_SET1": "Надя Подорошка возьмёт хотя бы сет",
+   "TN_SET2": "Кароль Монне возьмёт хотя бы сет"
+  },
+  "real": {},
+  "center": "Рейтинг Эло 1672 : 1535",
+  "bar": [
+   0.687132347839409,
+   0,
+   0.312867652160591
+  ],
+  "model": {
+   "elo": [
+    1672.0691779224449,
+    1535.397285527278
+   ],
+   "src": "Эло"
+  },
+  "main": {
+   "key": "TN_SET2",
+   "label": "Кароль Монне возьмёт хотя бы сет",
+   "p": 0.6062,
+   "odds": 1.53,
+   "est": true,
+   "stake": 1.0
+  },
+  "bold": {},
+  "open": {},
+  "top": false,
+  "msg_id": 833
  }
 }
