@@ -312,8 +312,11 @@ def post_top(state: dict, football: list[dict], other: list[dict], now: pd.Times
                      f"{escape(e['away']['ru'])}</b> · {league}\n   🎯 <b>{escape(t['label'])}</b> — {_pct(t['p'])} · "
                      f"кэф {t['odds']:.2f} · ставка {t['stake']:g}% банка")
     lines += ["\nПолный разбор каждого матча выйдет примерно за час до начала 👇", FOOTER]
-    rows = [(f"{pd.Timestamp(e['kickoff']):%H:%M}", e["home"]["ru"], e["away"]["ru"], t["label"]) for e, t in top]
-    png = card.schedule_card(f"{now.day:02d}.{now.month:02d} · самое надёжное", rows, 0, brand, heading="Прогнозы дня")
+    picks = [{"home": e["home"], "away": e["away"], "time": f"{pd.Timestamp(e['kickoff']):%H:%M}",
+              "league": card.safe(title(e["div"]) if e["div"] in ALL else sports.title(e["div"])),
+              "label": t["label"], "odds": t["odds"], "p": t["p"]}
+             for e, t in sorted(top, key=lambda x: x[0]["kickoff"])]
+    png = card.top_card(picks, f"{now.day} {MONTHS[now.month - 1]}", brand)
     mid = _post(png, "\n".join(lines))
     telegram.pin(mid)
     state["top_picks"] = {"day": str(now.date()), "keys": [f"{e['div']}|{e['id']}" for e, _ in top]}

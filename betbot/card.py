@@ -13,6 +13,7 @@ W, H = 1280, 720
 BG_TOP, BG_BOTTOM = (10, 14, 32), (22, 30, 60)
 WHITE, MUTED, ACCENT = (255, 255, 255), (160, 172, 205), (255, 196, 0)
 C_HOME, C_DRAW, C_AWAY = (46, 204, 113), (149, 165, 166), (52, 152, 219)
+GOLD_TOP, GOLD_BOTTOM = (255, 222, 110), (214, 152, 20)
 
 
 KEEP = set("—–·«»…₽≈−№")  # эти знаки шрифт рисует; эмодзи (🔥 ✅ флаги) — нет, вместо них были бы квадраты
@@ -112,19 +113,97 @@ def _centered_lines(d: ImageDraw.ImageDraw, text: str, cx: int, y: int, max_w: i
         d.text((cx, y + i * (s + 6)), line, font=f, fill=WHITE, anchor="ma")
 
 
-def _background(left: tuple, right: tuple) -> tuple[Image.Image, ImageDraw.ImageDraw]:
-    """Тёмный градиент и мягкое свечение двумя цветами слева и справа — общий стиль всех картинок."""
+# ── дизайн-система: фон в нескольких стилях, зерно, виньетка, уголки ────────
+# Стиль фона выбирается случайно — картинки в канале не повторяются, но остаются в одной гамме.
+STYLES = ("glow", "diagonal", "halftone", "rays", "pitch", "blobs")
+PALETTES = [((10, 14, 32), (22, 30, 60)), ((12, 10, 30), (34, 18, 58)), ((6, 18, 28), (14, 40, 52)),
+            ((16, 12, 20), (44, 22, 30)), ((8, 12, 22), (20, 26, 44))]
+_style_override: str | None = None  # для тестов: принудительно один стиль
+
+
+def _mix(a: tuple, b: tuple, t: float) -> tuple:
+    return tuple(int(x + (y - x) * t) for x, y in zip(a, b))
+
+
+def _layer() -> tuple[Image.Image, ImageDraw.ImageDraw]:
+    lay = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    return lay, ImageDraw.Draw(lay)
+
+
+def _background(left: tuple, right: tuple, style: str | None = None) -> tuple[Image.Image, ImageDraw.ImageDraw]:
+    """Тёмный градиент + свечение цветами команд + один из декоративных стилей (общий стиль канала)."""
+    style = style or _style_override or random.choice(STYLES)
+    top, bottom = random.choice(PALETTES)
     img = Image.new("RGB", (W, H))
     d = ImageDraw.Draw(img)
     for y in range(H):
-        t = y / H
-        d.line([(0, y), (W, y)], fill=tuple(int(a + (b - a) * t) for a, b in zip(BG_TOP, BG_BOTTOM)))
-    glow = Image.new("RGB", (W, H), (0, 0, 0))
-    g = ImageDraw.Draw(glow)
-    g.ellipse((-260, 40, 520, 640), fill=left)
-    g.ellipse((760, 40, 1540, 640), fill=right)
-    img = Image.blend(img, glow.filter(ImageFilter.GaussianBlur(140)), 0.38)
+        d.line([(0, y), (W, y)], fill=_mix(top, bottom, y / H))
+    img = img.convert("RGBA")
+    # свечение цветами команд — есть во всех стилях
+    glow, g = _layer()
+    g.ellipse((-300, 20, 520, 700), fill=left + (120,))
+    g.ellipse((760, 20, 1580, 700), fill=right + (120,))
+    img = Image.alpha_composite(img, glow.filter(ImageFilter.GaussianBlur(150)))
+    lay, l = _layer()
+    if style == "diagonal":  # широкая диагональная полоса и тонкие штрихи — «спортивный» динамичный фон
+        l.polygon([(W * 0.42, 0), (W * 0.78, 0), (W * 0.52, H), (W * 0.16, H)], fill=left + (78,))
+        l.polygon([(W * 0.80, 0), (W * 0.86, 0), (W * 0.60, H), (W * 0.54, H)], fill=ACCENT + (60,))
+        for x in range(-H, W, 26):
+            l.line([(x, H), (x + H * 0.55, 0)], fill=(255, 255, 255, 14), width=2)
+        lay = lay.filter(ImageFilter.GaussianBlur(1))
+    elif style == "halftone":  # полутоновые точки, растущие к углу
+        for y in range(0, H, 22):
+            for x in range(0, W, 22):
+                t = max(0.0, 1 - ((W - x) ** 2 + y ** 2) ** 0.5 / 900)
+                if t > 0.02:
+                    r = 1 + 7 * t
+                    l.ellipse((x - r, y - r, x + r, y + r), fill=_mix(right, (255, 255, 255), 0.3) + (int(110 * t),))
+                t2 = max(0.0, 1 - (x ** 2 + (H - y) ** 2) ** 0.5 / 800)
+                if t2 > 0.02:
+                    r = 1 + 6 * t2
+                    l.ellipse((x - r, y - r, x + r, y + r), fill=_mix(left, (255, 255, 255), 0.3) + (int(90 * t2),))
+    elif style == "rays":  # лучи прожекторов сверху, как на стадионе
+        for cx in (W * 0.18, W * 0.82):
+            for k in range(-3, 4):
+                l.polygon([(cx, -40), (cx + k * 150 - 40, H + 40), (cx + k * 150 + 40, H + 40)],
+                          fill=(255, 255, 255, 24))
+        lay = lay.filter(ImageFilter.GaussianBlur(16))
+    elif style == "pitch":  # разметка поля тонкими линиями
+        c = (255, 255, 255, 34)
+        l.line([(W / 2, 0), (W / 2, H)], fill=c, width=3)
+        l.ellipse((W / 2 - 170, H / 2 - 170, W / 2 + 170, H / 2 + 170), outline=c, width=3)
+        l.rectangle((-4, H / 2 - 220, 200, H / 2 + 220), outline=c, width=3)
+        l.rectangle((W - 200, H / 2 - 220, W + 4, H / 2 + 220), outline=c, width=3)
+        l.rectangle((-4, H / 2 - 100, 70, H / 2 + 100), outline=c, width=3)
+        l.rectangle((W - 70, H / 2 - 100, W + 4, H / 2 + 100), outline=c, width=3)
+    elif style == "blobs":  # мягкие цветные пятна — «меш-градиент»
+        for _ in range(5):
+            col = random.choice([left, right, ACCENT, (120, 80, 255), (0, 200, 200)])
+            x, y, r = random.randint(0, W), random.randint(0, H), random.randint(160, 340)
+            l.ellipse((x - r, y - r, x + r, y + r), fill=col + (85,))
+        lay = lay.filter(ImageFilter.GaussianBlur(90))
+    else:  # glow — мягкий ореол по центру
+        l.ellipse((W / 2 - 420, H / 2 - 300, W / 2 + 420, H / 2 + 300), fill=(255, 255, 255, 18))
+        lay = lay.filter(ImageFilter.GaussianBlur(120))
+    img = Image.alpha_composite(img, lay).convert("RGB")
     return img, ImageDraw.Draw(img)
+
+
+def _finish(img: Image.Image) -> Image.Image:
+    """Общая «отделка» всех картинок: виньетка по краям, лёгкое плёночное зерно и золотые уголки."""
+    img = img.convert("RGB")
+    vig = Image.new("L", (W, H), 0)
+    ImageDraw.Draw(vig).ellipse((-W * 0.25, -H * 0.35, W * 1.25, H * 1.35), fill=255)
+    vig = vig.filter(ImageFilter.GaussianBlur(160))
+    img = Image.composite(img, Image.new("RGB", (W, H), (0, 0, 0)), vig.point(lambda v: 90 + v * 165 // 255))
+    noise = Image.effect_noise((W, H), 28).convert("RGB")
+    img = Image.blend(img, noise, 0.035)
+    d = ImageDraw.Draw(img)
+    L, m = 34, 18  # уголки-«видоискатель»
+    for (x, y, sx, sy) in ((m, m, 1, 1), (W - m, m, -1, 1), (m, H - m, 1, -1), (W - m, H - m, -1, -1)):
+        d.line([(x, y), (x + sx * L, y)], fill=ACCENT, width=3)
+        d.line([(x, y), (x, y + sy * L)], fill=ACCENT, width=3)
+    return img
 
 
 def _sport_icon(img: Image.Image, sport: str, cx: int = W // 2, cy: int = H // 2 - 20, r: int = 250,
@@ -185,8 +264,9 @@ def _title(d: ImageDraw.ImageDraw, text: str, y: int = 46, size: int = 30) -> No
 
 
 def _png(img: Image.Image, d: ImageDraw.ImageDraw, brand: str) -> bytes:
+    img = _finish(img)
     if brand:
-        d.text((W - 24, H - 14), brand, font=font(20, "Medium"), fill=MUTED, anchor="rd")
+        ImageDraw.Draw(img).text((W - 30, H - 22), brand, font=font(20, "Medium"), fill=MUTED, anchor="rd")
     buf = io.BytesIO()
     img.save(buf, "PNG", optimize=True)
     return buf.getvalue()
@@ -242,7 +322,8 @@ def match_card(league: str, when: str, home: dict, away: dict, probs: tuple[floa
         xs += w
 
     # плашка с прогнозом
-    d.rounded_rectangle((180, 585, W - 180, 670), radius=22, fill=(255, 196, 0))
+    _gold_box(img, (180, 585, W - 180, 670), radius=24)  # золотая плашка с градиентом — как в «Прогнозах дня»
+    d = ImageDraw.Draw(img)
     size = 36
     while size > 22 and d.textlength(f"ПРОГНОЗ: {tip}", font=font(size, "ExtraBold")) > W - 420:
         size -= 2
@@ -374,7 +455,6 @@ def table_card(title: str, subtitle: str, header: tuple, rows: list[tuple], bran
     return _png(img, d, brand)
 
 
-GOLD_TOP, GOLD_BOTTOM = (255, 222, 110), (214, 152, 20)
 
 
 def _gold_box(img: Image.Image, box: tuple, radius: int = 26, top: tuple = None, bottom: tuple = None,
@@ -592,4 +672,66 @@ def stats_card(title: str, rows: list[tuple[str, int, int, float | None]], brand
         else:
             d.text((720, y + box / 2), "матчей не было", font=font(30, "Medium"), fill=MUTED, anchor="mm")
         y += step
+    return _png(img, d, brand)
+
+
+def _ring(d: ImageDraw.ImageDraw, cx: int, cy: int, r: int, p: float, color: tuple) -> None:
+    """Кольцо-индикатор вероятности с процентом в центре."""
+    d.ellipse((cx - r, cy - r, cx + r, cy + r), outline=(52, 60, 96), width=10)
+    d.arc((cx - r, cy - r, cx + r, cy + r), -90, -90 + 360 * p, fill=color, width=10)
+    d.text((cx, cy - 6), f"{100 * p:.0f}%", font=font(24, "ExtraBold"), fill=WHITE, anchor="mm")
+    d.text((cx, cy + 16), "шанс", font=font(13, "Medium"), fill=MUTED, anchor="mm")
+
+
+def top_card(picks: list[dict], day: str, brand: str = "") -> bytes:
+    """⭐ Прогнозы дня: три «билета» с логотипами, прогнозом, кэфом и кольцом вероятности."""
+    img, d = _background((255, 170, 0), (130, 60, 255), style=random.choice(("rays", "diagonal", "blobs")))
+    d.text((W / 2, 62), "ПРОГНОЗЫ ДНЯ", font=font(54, "ExtraBold"), fill=WHITE, anchor="mm")
+    hw = d.textlength("ПРОГНОЗЫ ДНЯ", font=font(54, "ExtraBold")) / 2
+    for sx in (-1, 1):  # звёздочки по бокам заголовка
+        cx = W / 2 + sx * (hw + 40)
+        pts = [(cx + (18 if i % 2 == 0 else 8) * math.cos(math.radians(-90 + 36 * i)),
+                62 + (18 if i % 2 == 0 else 8) * math.sin(math.radians(-90 + 36 * i))) for i in range(10)]
+        d.polygon(pts, fill=ACCENT)
+    d.text((W / 2, 112), f"{day.upper()} · САМОЕ НАДЁЖНОЕ ПО ЛИНИИ", font=font(22, "Medium"), fill=MUTED, anchor="mm")
+    n = len(picks)
+    cw, gap = 372, 22
+    x0 = (W - n * cw - (n - 1) * gap) // 2
+    for i, p in enumerate(picks):
+        x, y0, y1 = x0 + i * (cw + gap), 146, 652
+        hc, ac = _rgb(p["home"].get("color", "3b4a7a")), _rgb(p["away"].get("color", "8a2b2b"))
+        # стеклянная карточка с цветной полосой сверху
+        panel = Image.new("RGBA", (cw, y1 - y0), (0, 0, 0, 0))
+        pd_ = ImageDraw.Draw(panel)
+        pd_.rounded_rectangle((0, 0, cw - 1, y1 - y0 - 1), radius=28, fill=(18, 24, 50, 215),
+                              outline=(255, 255, 255, 40), width=2)
+        for k in range(cw):  # градиентная полоса цветами команд
+            pd_.line([(k, 0), (k, 8)], fill=_mix(hc, ac, k / cw) + (255,))
+        mask = Image.new("L", panel.size, 0)
+        ImageDraw.Draw(mask).rounded_rectangle((0, 0, cw - 1, y1 - y0 - 1), radius=28, fill=255)
+        img.paste(panel, (x, y0), Image.composite(panel, Image.new("RGBA", panel.size), mask).split()[3])
+        d = ImageDraw.Draw(img)
+        # номер
+        d.ellipse((x + 18, y0 + 24, x + 70, y0 + 76), fill=ACCENT)
+        d.text((x + 44, y0 + 50), str(i + 1), font=font(30, "ExtraBold"), fill=(25, 20, 10), anchor="mm")
+        d.text((x + cw - 22, y0 + 40), p["time"], font=font(30, "ExtraBold"), fill=ACCENT, anchor="ra")
+        d.text((x + cw - 22, y0 + 76), p["league"], font=_fit(d, p["league"], 18, 230, "Medium"), fill=MUTED, anchor="ra")
+        # логотипы внахлёст
+        size = 112
+        lh = _logo(p["home"].get("logo"), size, p["home"]["ru"][:2].upper(), hc)
+        la = _logo(p["away"].get("logo"), size, p["away"]["ru"][:2].upper(), ac)
+        cx = x + cw // 2
+        img.paste(lh, (cx - size + 14, y0 + 100), lh)
+        img.paste(la, (cx - 14, y0 + 100), la)
+        d = ImageDraw.Draw(img)
+        _centered_lines(d, p["home"]["ru"], cx, y0 + 226, cw - 40, 26)
+        d.text((cx, y0 + 290), "—", font=font(22), fill=MUTED, anchor="mm")
+        _centered_lines(d, p["away"]["ru"], cx, y0 + 302, cw - 40, 26)
+        # прогноз: золотая плашка + кэф + кольцо
+        _gold_box(img, (x + 20, y0 + 370, x + cw - 20, y0 + 424), radius=18)
+        d = ImageDraw.Draw(img)
+        d.text((cx, y0 + 397), p["label"], font=_fit(d, p["label"], 26, cw - 70, "ExtraBold"), fill=(30, 22, 6), anchor="mm")
+        d.text((x + 30, y0 + 442), "КЭФ", font=font(18, "Medium"), fill=MUTED, anchor="la")
+        d.text((x + 30, y0 + 462), f"{p['odds']:.2f}", font=font(38, "ExtraBold"), fill=WHITE, anchor="la")
+        _ring(d, x + cw - 64, y0 + 466, 34, p["p"], (46, 204, 113))
     return _png(img, d, brand)
