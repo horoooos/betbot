@@ -6795,7 +6795,7 @@
   "kickoff": "2026-10-30T03:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Scheduled",
   "home": {
    "id": "6273",
@@ -6931,6 +6931,9 @@
   "close": {
    "BTTS_Y": 0.5646,
    "D": 0.2724
-  }
+  },
+  "main_hit": false,
+  "bold_hit": false,
+  "value_hit": null
  }
 }
