@@ -7732,7 +7732,7 @@
   "kickoff": "2026-10-30T22:45:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Scheduled",
   "home": {
    "id": "4691",
@@ -7859,7 +7859,10 @@
   "msg_id": 795,
   "close": {
    "A&O15": 0.5994
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null,
+  "value_hit": null
  },
  "401880190": {
   "id": "401880190",
