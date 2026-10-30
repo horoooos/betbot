@@ -8133,31 +8133,31 @@
   "kickoff": "2026-10-30T17:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Fri, October 30th at 10:00 AM EDT",
   "home": {
-   "id": "2902",
-   "name": "Anna Blinkova",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/2902.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/fra.png"
    ],
+   "id": "2902",
+   "name": "Anna Blinkova",
    "country": "France",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
    "ru": "Анна Блинкова"
   },
   "away": {
-   "id": "6419",
-   "name": "Martyna Kubka",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/6419.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/pol.png"
    ],
+   "id": "6419",
+   "name": "Martyna Kubka",
    "country": "Poland",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
@@ -8216,7 +8216,9 @@
   "msg_id": 728,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null
  },
  "ATP|185154": {
   "id": "185154",
