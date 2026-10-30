@@ -57,6 +57,7 @@ def build(res: pd.DataFrame, now: pd.Timestamp) -> None:
     hit = _hits(res["main_hit"]) if len(res) else pd.Series(dtype=bool)
     curve = pro.bank_curve(res)
     clv = res["main_clv"].dropna().astype(float) if "main_clv" in res else pd.Series(dtype=float)
+    vn = pro.value_numbers()
 
     def kpi(label, value, sub=""):
         return f'<div class="kpi"><div class="v">{value}</div><div class="l">{label}</div><div class="s">{sub}</div></div>'
@@ -68,6 +69,8 @@ def build(res: pd.DataFrame, now: pd.Timestamp) -> None:
         kpi("виртуальный банк", f"{curve[-1]:,.0f} ₽".replace(",", " "), f"старт {pro.BANK_START:,} ₽".replace(",", " ")),
         kpi("CLV", f"{100 * clv.mean():+.1f}%" if len(clv) else "—",
             f"линия за ботом в {100 * (clv > 0).mean():.0f}%" if len(clv) else "копится"),
+        kpi("value-ставки", f"{vn[2]:+.1f}%" if vn else "—",
+            f"ROI · {vn[1]} из {vn[0]} зашли" if vn else "копятся"),
     ])
 
     rows_sport = ""

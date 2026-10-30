@@ -8,6 +8,7 @@
     бот нашёл ценность раньше рынка. Это главный признак качества прогнозов.
 """
 from html import escape
+from pathlib import Path
 
 import numpy as np
 import pandas as pd
@@ -21,6 +22,10 @@ KELLY_FRACTION = 0.25         # четверть Келли — стандарт
 STAKE_MIN, STAKE_MAX = 1.0, 3.0  # % банка
 BANK_START = 10_000
 FOOTER = "<i>⚠️ 18+. Прогноз — не гарантия. Ставьте только то, что не жалко потерять.</i>"
+# Журнал value-ставок: каждая сохраняется с кэфом на момент публикации и потом рассчитывается по итогу матча.
+# Порог 5%: на истории (backtest_value.py) ставки с перевесом от 3% по ранней линии уходили в минус, от 5% — в плюс.
+VALUE_LOG = Path(__file__).resolve().parent.parent / "data" / "value_bets.csv"
+VALUE_EDGE = (0.05, 0.30)
 
 
 def _pct(p: float) -> str:
@@ -133,7 +138,7 @@ def _ru_pair(row: pd.Series, events: list[dict]) -> tuple[str, str, list, list]:
     return row["HomeTeam"], row["AwayTeam"], [None, None], ["3b4a7a", "8a2b2b"]
 
 
-def value_candidates(fx: pd.DataFrame, events: list[dict], now: pd.Timestamp, edge=(0.03, 0.25)) -> list[dict]:
+def value_candidates(fx: pd.DataFrame, events: list[dict], now: pd.Timestamp, edge=VALUE_EDGE) -> list[dict]:
     """Матчи ближайших 24 часов, где лучший коэффициент выше справедливой цены (Pinnacle/среднее без маржи)."""
     if fx is None or fx.empty:
         return []
@@ -147,17 +152,18 @@ def value_candidates(fx: pd.DataFrame, events: list[dict], now: pd.Timestamp, ed
                 else ("AvgH", "AvgD", "AvgA")
             if all(pd.notna(r.get(c)) and r.get(c, 0) > 1 for c in fair_src):
                 p = mk.fair([r[c] for c in fair_src])
-                sides += [("П1", p[0], r["MaxH"]), ("Ничья", p[1], r["MaxD"]), ("П2", p[2], r["MaxA"])]
+                sides += [("П1", p[0], r["MaxH"], "H"), ("Ничья", p[1], r["MaxD"], "D"), ("П2", p[2], r["MaxA"], "A")]
         if all(pd.notna(r.get(c)) and r.get(c, 0) > 1 for c in ("Avg>2.5", "Avg<2.5", "Max>2.5", "Max<2.5")):
             p = mk.fair([r["Avg>2.5"], r["Avg<2.5"]])
-            sides += [("ТБ 2.5", p[0], r["Max>2.5"]), ("ТМ 2.5", p[1], r["Max<2.5"])]
-        for label, p, o in sides:
+            sides += [("ТБ 2.5", p[0], r["Max>2.5"], "O25"), ("ТМ 2.5", p[1], r["Max<2.5"], "U25")]
+        for label, p, o, key in sides:
             e = p * float(o) - 1
-            if edge[0] <= e <= edge[1] and 1.3 <= float(o) <= 6:
+            if edge[0] <= e <= edge[1] and 1.5 <= float(o) <= 4:
                 h, a, logos, colors = _ru_pair(r, events)
                 out.append({"div": r["Div"], "kickoff": r["Kickoff"], "home": h, "away": a, "label": label,
                             "logos": logos, "colors": colors, "league": title(r["Div"]),
-                            "p": float(p), "odds": float(o), "edge": float(e)})
+                            "p": float(p), "odds": float(o), "edge": float(e), "key": key,
+                            "ht": r["HomeTeam"], "at": r["AwayTeam"]})
     return sorted(out, key=lambda x: -x["edge"])
 
 
@@ -174,8 +180,82 @@ def post_value(fx, events, now, brand) -> bool:
                      f"перевес <b>+{100 * x['edge']:.1f}%</b> · ставка {stake(tip):g}% банка")
     lines += ["\n<i>Лучший кэф быстро уходит — проверяйте линию у своего букмекера перед ставкой.</i>", FOOTER]
     png = card.value_card(picks, f"{now.day} {MONTHS[now.month - 1]}", brand)
-    _post(png, "\n".join(lines))
+    mid = _post(png, "\n".join(lines))
+    rows = pd.DataFrame([{"posted": str(now.date()), "msg": mid, "div": x["div"], "kickoff": x["kickoff"].isoformat(),
+                          "ht": x["ht"], "at": x["at"], "home": x["home"], "away": x["away"], "key": x["key"],
+                          "label": x["label"], "odds": round(x["odds"], 3), "p": round(x["p"], 4),
+                          "edge": round(x["edge"], 4), "score": None, "hit": None} for x in picks])
+    old = pd.read_csv(VALUE_LOG, dtype=object) if VALUE_LOG.exists() else None
+    pd.concat([old, rows], ignore_index=True).to_csv(VALUE_LOG, index=False)
     return True
+
+
+def settle_value(now: pd.Timestamp, load_history) -> None:
+    """Рассчитывает value-ставки по итогам матчей (из той же базы football-data) и пишет итог дня."""
+    if not VALUE_LOG.exists():
+        return
+    log = pd.read_csv(VALUE_LOG, dtype={"score": object, "hit": object, "announced": object})
+    todo = log["hit"].isna() & (pd.to_datetime(log["kickoff"], utc=True) < now.tz_convert("UTC") - pd.Timedelta(hours=3))
+    if not todo.any():
+        return
+    hist = load_history(refresh_current=True, leagues=sorted(log.loc[todo, "div"].unique()))
+    hist = hist[hist["Date"] >= pd.Timestamp(now.date()) - pd.Timedelta(days=10)]
+    for i in log.index[todo]:
+        r = log.loc[i]
+        m = hist[(hist["Div"] == r["div"]) & (hist["HomeTeam"] == r["ht"]) & (hist["AwayTeam"] == r["at"])]
+        if m.empty:
+            if now.tz_convert("UTC") - pd.Timestamp(r["kickoff"]).tz_convert("UTC") > pd.Timedelta(days=4):
+                log.loc[i, "hit"] = "void"  # матч перенесён или не попал в базу — ставка не в счёт
+            continue
+        hs, as_ = int(m.iloc[-1]["FTHG"]), int(m.iloc[-1]["FTAG"])
+        log.loc[i, "score"] = f"{hs}:{as_}"
+        log.loc[i, "hit"] = str(bool(mk.won(r["key"], hs, as_)))
+    log.to_csv(VALUE_LOG, index=False)
+    # итог value дня — ответом к посту, когда рассчитаны все ставки этого поста
+    for msg, g in log.groupby("msg"):
+        if g["hit"].isna().any() or g.get("announced", pd.Series(dtype=object)).notna().any():
+            continue
+        played = g[g["hit"].isin(["True", "False"])]
+        if played.empty:
+            continue
+        win = played["hit"] == "True"
+        profit = float((win * (played["odds"] - 1) - (~win)).sum())
+        lines = [f"💎 <b>ИТОГ VALUE ДНЯ: {int(win.sum())} из {len(played)}</b> · "
+                 f"{'+' if profit >= 0 else ''}{profit:.2f} ед. при ставке 1 ед. на каждую"]
+        for (_, r), w in zip(played.iterrows(), win):
+            lines.append(f"{'✅' if w else '❌'} {escape(str(r['home']))} {r['score']} {escape(str(r['away']))} — "
+                         f"{escape(str(r['label']))} @ {r['odds']:.2f}")
+        total = value_summary()
+        if total:
+            lines.append("\n" + total)
+        try:
+            telegram.send("\n".join(lines), reply_to=int(msg))
+        except Exception as ex:
+            print(f"  ! итог value дня не отправлен: {ex}")
+        log.loc[g.index, "announced"] = str(now.date())
+    log.to_csv(VALUE_LOG, index=False)
+
+
+def value_numbers() -> tuple[int, int, float] | None:
+    """(ставок, зашло, ROI %) по всем рассчитанным value-ставкам."""
+    if not VALUE_LOG.exists():
+        return None
+    log = pd.read_csv(VALUE_LOG, dtype={"score": object, "hit": object, "announced": object})
+    done = log[log["hit"].isin(["True", "False", True, False])]
+    if done.empty:
+        return None
+    win = done["hit"].astype(str) == "True"
+    roi = float((win * (done["odds"].astype(float) - 1) - (~win)).mean() * 100)
+    return len(done), int(win.sum()), roi
+
+
+def value_summary() -> str:
+    v = value_numbers()
+    if not v:
+        return ""
+    n, w, roi = v
+    return (f"💎 <b>Value-ставки за всё время:</b> {w} из {n} · ROI <b>{roi:+.1f}%</b> "
+            f"<i>(настоящие кэфы, ставка 1 ед.)</i>")
 
 
 # ── прогнозы дня ───────────────────────────────────────────────────────────

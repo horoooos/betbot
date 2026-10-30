@@ -54,7 +54,7 @@ jobs:
           while [ "$(date +%s)" -lt "$end" ]; do
             started=$(date +%s)
             python -W ignore run.py || echo "::warning::запуск бота завершился с ошибкой"
-            for f in data/state.json data/matches.json data/other.json data/live.json data/results.csv data/names_ru.json docs/index.html; do
+            for f in data/state.json data/matches.json data/other.json data/live.json data/results.csv data/value_bets.csv data/names_ru.json docs/index.html; do
               if [ -f "$f" ]; then git add "$f"; fi
             done
             if ! git diff --cached --quiet; then

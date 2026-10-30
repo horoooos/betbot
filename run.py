@@ -226,6 +226,8 @@ def morning(state: dict, events: list[dict], other: list[dict], now: pd.Timestam
                  f"<b>{curve[-1]:,.0f} ₽</b> ({100 * (curve[-1] / pro.BANK_START - 1):+.1f}%)".replace(",", " ")]
         if pro.clv_summary(res):
             extra.append(pro.clv_summary(res))
+        if pro.value_summary():
+            extra.append(pro.value_summary())
         post(png, texts.stats(res, today, mk.calibration(res)) + "\n\n" + "\n\n".join(extra))
     start = pd.Timestamp(today) + pd.Timedelta(hours=DAY_START_HOUR)
     day = [e for e in events if e["state"] == "pre" and start <= pd.Timestamp(e["kickoff"]) < start + pd.Timedelta(days=1)
@@ -552,6 +554,12 @@ def main():
             except Exception as e:
                 print(f"  ! переотправка {item} не удалась: {e}")
 
+    if state.get("value_check") != f"{today}-{now.hour // 3}":  # расчёт value-ставок — раз в 3 часа
+        state["value_check"] = f"{today}-{now.hour // 3}"
+        try:
+            pro.settle_value(now, load_history)
+        except Exception as e:
+            print(f"  ! расчёт value-ставок не удался: {e}")
     if now.hour == VALUE_HOUR and state.get("value_day") != today:  # 💎 value дня
         state["value_day"] = today
         try:
