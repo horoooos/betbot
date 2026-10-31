@@ -969,3 +969,26 @@ def slide_card(kicker: str, big: str, sub: str, lines: list[str], colors: tuple,
         d.text((W / 2, y), line, font=_fit(d, line, 26, W - 220, "Medium"), fill=MUTED, anchor="mm")
         y += 44
     return _png(img, d, brand)
+
+
+def invite_card(stats: list[tuple[str, str]], bullets: list[str], channel: str, brand: str = "") -> bytes:
+    """«Почему стоит подписаться»: крупный заголовок, плитки честной статистики, 4 причины и кнопка-плашка."""
+    img, d = _background((255, 170, 0), (60, 120, 255), style=random.choice(("rays", "stars", "blobs")))
+    d.text((W / 2, 56), "ПОЧЕМУ СТОИТ ПОДПИСАТЬСЯ", font=font(46, "ExtraBold"), fill=WHITE, anchor="mm")
+    hw = d.textlength("ПОЧЕМУ СТОИТ ПОДПИСАТЬСЯ", font=font(46, "ExtraBold")) / 2
+    d.line([(W / 2 - hw, 90), (W / 2 + hw, 90)], fill=ACCENT, width=4)
+    _tiles(img, d, stats[:3], 116, ACCENT)
+    d = ImageDraw.Draw(img)
+    y = 296
+    for b in bullets[:4]:
+        cy = y + 24
+        d.ellipse((150, cy - 14, 178, cy + 14), fill=(46, 204, 113))
+        d.line([(157, cy), (163, cy + 7), (172, cy - 7)], fill=WHITE, width=4)
+        d.text((196, cy), b, font=_fit(d, b, 27, W - 360, "Bold"), fill=WHITE, anchor="lm")
+        y += 58
+    _gold_box(img, (330, 548, W - 330, 640), radius=46)
+    d = ImageDraw.Draw(img)
+    d.text((W / 2, 594), f"ПОДПИСЫВАЙСЯ: {channel}", font=_fit(d, f"ПОДПИСЫВАЙСЯ: {channel}", 34, W - 720, "ExtraBold"),
+           fill=(30, 22, 6), anchor="mm")
+    d.text((W / 2, 672), "бесплатно · 18+ · ставь с умом", font=font(20, "Medium"), fill=MUTED, anchor="mm")
+    return _png(img, d, brand)

@@ -604,6 +604,10 @@ def main():
                     content.repost_express(state, events, other, now, BRAND)
                 elif item == "guide":  # закреплённый путеводитель по каналу
                     content.guide(BRAND)
+                elif item == "invite":  # пост-приглашение «Почему стоит подписаться»
+                    content.invite(read_results(), BRAND)
+                elif item == "description":  # описание канала
+                    telegram.set_description(content.DESCRIPTION)
                 elif item == "news":  # новость прямо сейчас, не дожидаясь случайного времени
                     state.pop("news_next", None)
                     news.run(state, now, BRAND)

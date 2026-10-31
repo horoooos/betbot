@@ -13,6 +13,9 @@ from .sports import EMOJI, SPORT_RU
 
 OUT = Path(__file__).resolve().parent.parent / "docs" / "index.html"
 CHANNEL = os.environ.get("TELEGRAM_CHAT_ID", "")
+if not CHANNEL.startswith("@"):  # в секрете может быть числовой id — тогда берём публичное имя канала
+    CHANNEL = "@aistavvit"
+SITE = "https://horoooos.github.io/betbot/"
 
 
 def _hits(col: pd.Series) -> pd.Series:
@@ -92,12 +95,25 @@ def build(res: pd.DataFrame, now: pd.Timestamp) -> None:
                       f"<td>{escape(str(r['main_label']))}</td><td>{float(r['main_odds']):.2f}</td>"
                       f"<td class=\"{'good' if ok else 'bad'}\">{'✅' if ok else '❌'}</td>"
                       f"<td>{'' if pd.isna(c) else f'{100 * float(c):+.1f}%'}</td></tr>")
-    channel = (f'<a class="btn" href="https://t.me/{escape(CHANNEL.lstrip("@"))}">Канал в Telegram</a>'
-               if CHANNEL.startswith("@") else "")
+    tg = f"https://t.me/{escape(CHANNEL.lstrip('@'))}"
+    channel = (f'<div class="cta"><div><b>Прогнозы каждый день — в Telegram</b><br>'
+               f'<span class="muted">Футбол, хоккей, NBA, теннис, CS2 и Dota 2: прогноз за час до матча, live, '
+               f'экспрессы и честные итоги.</span></div><a class="btn big" href="{tg}">📲 Подписаться на канал</a></div>')
+    sticky = f'<a class="sticky" href="{tg}">📲 Подписаться на {escape(CHANNEL)}</a>'
+    hit_pct = f"{100 * hit.mean():.0f}%" if len(res) else "—"
+    seo_desc = (f"Бесплатные прогнозы на спорт от бота АИ СТАВИТ: футбол, хоккей НХЛ, баскетбол НБА, теннис, CS2 и Dota 2. "
+                f"Честная статистика всех {len(res)} прогнозов: заходит {hit_pct}, ROI и виртуальный банк.")
     html = f"""<!doctype html>
 <html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>АИ СТАВИТ — статистика</title>
-<meta name="description" content="Честная статистика всех прогнозов бота: процент попаданий, ROI, CLV, виртуальный банк.">
+<title>АИ СТАВИТ — бесплатные прогнозы на спорт и честная статистика</title>
+<meta name="description" content="{escape(seo_desc)}">
+<meta name="keywords" content="прогнозы на спорт, прогнозы на футбол, бесплатные прогнозы, ставки на спорт, прогнозы НХЛ, прогнозы НБА, прогнозы на теннис, прогнозы CS2, экспресс дня, статистика прогнозов">
+<meta name="robots" content="index,follow"><link rel="canonical" href="{SITE}">
+<meta property="og:type" content="website"><meta property="og:url" content="{SITE}">
+<meta property="og:title" content="АИ СТАВИТ — прогнозы на спорт с честной статистикой">
+<meta property="og:description" content="{escape(seo_desc)}"><meta property="og:locale" content="ru_RU">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">{{"@context":"https://schema.org","@type":"WebSite","name":"АИ СТАВИТ","url":"{SITE}","description":"{escape(seo_desc)}","sameAs":["{tg}"]}}</script>
 <style>
 :root{{--bg:#f6f7fb;--card:#fff;--ink:#141826;--muted:#667085;--line:#e4e7ef;--good:#1f9d55;--bad:#d64545;--accent:#f2b400}}
 @media (prefers-color-scheme:dark){{:root:not([data-theme=light]){{--bg:#0b0f1e;--card:#151b30;--ink:#eef1fb;--muted:#9aa3bd;--line:#26304d}}}}
@@ -112,9 +128,13 @@ table{{width:100%;border-collapse:collapse;font-size:14px}}td,th{{padding:7px 8p
 th{{color:var(--muted);font-weight:600}}.good{{color:var(--good)}}.bad{{color:var(--bad)}}
 svg{{width:100%;height:auto}}svg .base{{stroke:var(--line);stroke-dasharray:4 4}}svg .lbl{{fill:var(--muted);font-size:12px}}
 .btn{{display:inline-block;margin-top:12px;padding:8px 14px;border-radius:10px;background:var(--accent);color:#141826;text-decoration:none;font-weight:600}}
+.btn.big{{margin:0;padding:12px 20px;font-size:16px;white-space:nowrap}}
+.cta{{display:flex;gap:16px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin-top:16px;padding:16px;border-radius:14px;background:var(--card);border:2px solid var(--accent)}}
+.sticky{{position:fixed;left:50%;bottom:14px;transform:translateX(-50%);padding:10px 18px;border-radius:999px;background:var(--accent);color:#141826;font-weight:700;text-decoration:none;box-shadow:0 6px 20px rgba(0,0,0,.25);white-space:nowrap}}
+@media (min-width:900px){{.sticky{{display:none}}}}
 .grid2{{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:12px}}
 </style></head><body><main>
-<h1>АИ СТАВИТ — честная статистика</h1>
+<h1>АИ СТАВИТ — бесплатные прогнозы на спорт и честная статистика</h1>
 <div class="muted">Все прогнозы бота без исключений. Обновлено {now:%d.%m.%Y %H:%M} МСК.</div>{channel}
 <div class="kpis">{kpis}</div>
 <h2>Виртуальный банк</h2><div class="card">{_chart(curve) or '<span class="muted">Пока мало данных</span>'}
