@@ -9721,7 +9721,7 @@
   "kickoff": "2026-10-31T15:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Scheduled",
   "home": {
    "id": "363",
@@ -9848,7 +9848,10 @@
   "msg_id": 994,
   "close": {
    "X2": 0.5719
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null,
+  "value_hit": null
  },
  "401880194": {
   "id": "401880194",
