@@ -10447,5 +10447,97 @@
   "close": {
    "_": null
   }
+ },
+ "WTA|185814": {
+  "id": "185814",
+  "div": "WTA",
+  "sport": "tennis",
+  "tournament": "Queretaro Open",
+  "round": "Quarterfinal",
+  "bo5": false,
+  "kickoff": "2026-10-31T04:30:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "detail": "Fri, October 30th at 9:30 PM EDT",
+  "home": {
+   "id": "4629",
+   "name": "Alicia Herrero Linana",
+   "logo": [
+    "https://a.espncdn.com/i/headshots/tennis/players/full/4629.png",
+    "https://a.espncdn.com/i/teamlogos/countries/500/esp.png"
+   ],
+   "country": "Spain",
+   "color": "2d6a4f",
+   "winner": false,
+   "sets": [],
+   "set_won": [],
+   "ru": "Алисиа Херреро Линана"
+  },
+  "away": {
+   "id": "2979",
+   "name": "Bianca Andreescu",
+   "logo": [
+    "https://a.espncdn.com/i/headshots/tennis/players/full/2979.png",
+    "https://a.espncdn.com/i/teamlogos/countries/500/can.png"
+   ],
+   "country": "Canada",
+   "color": "2d6a4f",
+   "winner": false,
+   "sets": [],
+   "set_won": [],
+   "ru": "Бьянка Андрееску"
+  },
+  "odds": {},
+  "probs": {
+   "TN_W1": 0.4327472310095148,
+   "TN_W2": 0.5672527689904852,
+   "TN_3S": 0.495957857521332,
+   "TN_2S": 0.504042142478668,
+   "TN_S2:0": 0.20706474532924654,
+   "TN_S0:2": 0.29697739714942145,
+   "TN_S2:1": 0.22568248568026827,
+   "TN_S1:2": 0.2702753718410637,
+   "TN_SET1": 0.7030226028505786,
+   "TN_SET2": 0.7929352546707534
+  },
+  "labels": {
+   "TN_W1": "Победа: Алисиа Херреро Линана",
+   "TN_W2": "Победа: Бьянка Андрееску",
+   "TN_3S": "Будет 3 сета",
+   "TN_2S": "Будет 2 сета",
+   "TN_S2:0": "Счёт по сетам 2:0",
+   "TN_S0:2": "Счёт по сетам 0:2",
+   "TN_S2:1": "Счёт по сетам 2:1",
+   "TN_S1:2": "Счёт по сетам 1:2",
+   "TN_SET1": "Алисиа Херреро Линана возьмёт хотя бы сет",
+   "TN_SET2": "Бьянка Андрееску возьмёт хотя бы сет"
+  },
+  "real": {},
+  "center": "Рейтинг Эло 1649 : 1696",
+  "bar": [
+   0.4327472310095148,
+   0,
+   0.5672527689904852
+  ],
+  "model": {
+   "elo": [
+    1648.6311265461966,
+    1695.6480572917337
+   ],
+   "src": "Эло"
+  },
+  "main": {
+   "key": "TN_W2",
+   "label": "Победа: Бьянка Андрееску",
+   "p": 0.5673,
+   "odds": 1.64,
+   "est": true,
+   "stake": 1.0
+  },
+  "bold": {},
+  "open": {},
+  "top": false,
+  "msg_id": 922
  }
 }
