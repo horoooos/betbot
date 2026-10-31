@@ -8859,7 +8859,7 @@
   "kickoff": "2026-10-31T03:15:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Scheduled",
   "home": {
    "id": "15",
@@ -8992,7 +8992,10 @@
   "msg_id": 894,
   "close": {
    "H": 0.5429
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null,
+  "value_hit": false
  },
  "401841647": {
   "id": "401841647",
