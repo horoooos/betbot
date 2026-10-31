@@ -11664,31 +11664,31 @@
   "kickoff": "2026-10-31T18:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Sat, October 31st at 11:30 AM EDT",
   "home": {
-   "id": "2375",
-   "name": "Alexander Zverev",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/2375.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/ger.png"
    ],
+   "id": "2375",
+   "name": "Alexander Zverev",
    "country": "Germany",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
    "ru": "Александр Зверев"
   },
   "away": {
-   "id": "2651",
-   "name": "Alex de Minaur",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/2651.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/aus.png"
    ],
+   "id": "2651",
+   "name": "Alex de Minaur",
    "country": "Australia",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
@@ -11747,7 +11747,9 @@
   "msg_id": 1108,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null
  },
  "WTA|185779": {
   "id": "185779",
