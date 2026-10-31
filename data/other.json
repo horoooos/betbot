@@ -11061,5 +11061,97 @@
   "close": {
    "_": null
   }
+ },
+ "WTA|185734": {
+  "id": "185734",
+  "div": "WTA",
+  "sport": "tennis",
+  "tournament": "Guangzhou Open",
+  "round": "Semifinal",
+  "bo5": false,
+  "kickoff": "2026-10-31T13:00:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "detail": "Sat, October 31st at 6:00 AM EDT",
+  "home": {
+   "id": "14460",
+   "name": "Kaitlin Quevedo",
+   "logo": [
+    "https://a.espncdn.com/i/headshots/tennis/players/full/14460.png",
+    "https://a.espncdn.com/i/teamlogos/countries/500/esp.png"
+   ],
+   "country": "Spain",
+   "color": "2d6a4f",
+   "winner": false,
+   "sets": [],
+   "set_won": [],
+   "ru": "Кейтлин Кеведо"
+  },
+  "away": {
+   "id": "10830",
+   "name": "Lilli Tagger",
+   "logo": [
+    "https://a.espncdn.com/i/headshots/tennis/players/full/10830.png",
+    "https://a.espncdn.com/i/teamlogos/countries/500/aut.png"
+   ],
+   "country": "Austria",
+   "color": "2d6a4f",
+   "winner": false,
+   "sets": [],
+   "set_won": [],
+   "ru": "Лилли Таггер"
+  },
+  "odds": {},
+  "probs": {
+   "TN_W1": 0.6169733895547286,
+   "TN_W2": 0.3830266104452714,
+   "TN_3S": 0.4876345005768972,
+   "TN_2S": 0.5123654994231028,
+   "TN_S2:0": 0.3348132127112782,
+   "TN_S0:2": 0.17755228671182463,
+   "TN_S2:1": 0.28216017684345057,
+   "TN_S1:2": 0.20547432373344665,
+   "TN_SET1": 0.8224477132881753,
+   "TN_SET2": 0.6651867872887218
+  },
+  "labels": {
+   "TN_W1": "Победа: Кейтлин Кеведо",
+   "TN_W2": "Победа: Лилли Таггер",
+   "TN_3S": "Будет 3 сета",
+   "TN_2S": "Будет 2 сета",
+   "TN_S2:0": "Счёт по сетам 2:0",
+   "TN_S0:2": "Счёт по сетам 0:2",
+   "TN_S2:1": "Счёт по сетам 2:1",
+   "TN_S1:2": "Счёт по сетам 1:2",
+   "TN_SET1": "Кейтлин Кеведо возьмёт хотя бы сет",
+   "TN_SET2": "Лилли Таггер возьмёт хотя бы сет"
+  },
+  "real": {},
+  "center": "Рейтинг Эло 1732 : 1650",
+  "bar": [
+   0.6169733895547286,
+   0,
+   0.3830266104452714
+  ],
+  "model": {
+   "elo": [
+    1732.4293808222747,
+    1649.6143865050144
+   ],
+   "src": "Эло"
+  },
+  "main": {
+   "key": "TN_W1",
+   "label": "Победа: Кейтлин Кеведо",
+   "p": 0.617,
+   "odds": 1.51,
+   "est": true,
+   "stake": 1.0
+  },
+  "bold": {},
+  "open": {},
+  "top": false,
+  "msg_id": 981
  }
 }
