@@ -1281,7 +1281,9 @@
      "0000dd",
      "ffea01"
     ],
-    "label": "Победа: Порту"
+    "label": "Победа: Порту",
+    "win": true,
+    "score": "4:0"
    },
    {
     "sport": "football",
@@ -1332,13 +1334,13 @@
   ],
   "odds": 1.9213308319999998,
   "day": "2026-10-31",
-  "done": false
+  "done": true
  },
  "streak_posted": 0,
  "value_day": "2026-10-31",
  "repost_done": "2026-10-31-invite",
  "table_day": "2026-10-31",
- "site_stamp": "256|2026-11-01 01",
+ "site_stamp": "257|2026-11-01 01",
  "battle": {
   "bot": 1,
   "crowd": 1

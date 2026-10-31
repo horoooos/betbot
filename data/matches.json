@@ -15522,7 +15522,7 @@
   "kickoff": "2026-10-31T23:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Scheduled",
   "home": {
    "id": "437",
@@ -15669,7 +15669,10 @@
   "msg_id": 1369,
   "close": {
    "O25": 0.6736
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null,
+  "value_hit": null
  },
  "761925": {
   "id": "761925",
