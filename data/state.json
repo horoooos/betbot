@@ -5,7 +5,7 @@
  },
  "learned": "2026-10-31",
  "schedule_day": "2026-10-31",
- "content_slot": "2026-10-30-23",
+ "content_slot": "2026-10-31-10",
  "news_seen": [
   "https://www.sports.ru/automoto/blogs/3563795.html",
   "shoot-house-poyavit-sya-v-call-of-duty-modern-warfare-4-v-nachale-noyabrya",
@@ -1196,85 +1196,81 @@
   ]
  },
  "express": {
-  "msg": 701,
+  "msg": 974,
   "legs": [
    {
     "sport": "football",
-    "div": "F1",
-    "id": "401876421",
-    "side": "away",
-    "p": 0.7355946056395586,
-    "odds": 1.294,
-    "kickoff": "2026-10-30T21:00:00+03:00",
-    "home": "Гавр",
-    "away": "ПСЖ",
-    "league": "🇫🇷 Франция · Лига 1",
+    "div": "P1",
+    "id": "401885404",
+    "side": "home",
+    "p": 0.8025804873574465,
+    "odds": 1.174,
+    "kickoff": "2026-10-31T23:30:00+03:00",
+    "home": "Порту",
+    "away": "Estoril",
+    "league": "🇵🇹 Португалия · Примейра",
     "logos": [
-     "https://a.espncdn.com/i/teamlogos/soccer/500/3236.png",
-     "https://a.espncdn.com/i/teamlogos/soccer/500/160.png"
+     "https://a.espncdn.com/i/teamlogos/soccer/500/437.png",
+     "https://a.espncdn.com/i/teamlogos/soccer/500/12216.png"
     ],
     "colors": [
-     "011F68",
-     "011F68"
+     "0000dd",
+     "ffea01"
     ],
-    "label": "Победа: ПСЖ",
-    "win": true,
-    "score": "1:5"
+    "label": "Победа: Порту"
    },
    {
     "sport": "football",
-    "div": "P1",
-    "id": "401885408",
-    "side": "away",
-    "p": 0.7291375941948087,
-    "odds": 1.294,
-    "kickoff": "2026-10-30T23:15:00+03:00",
-    "home": "Каза Пия",
-    "away": "Спортинг",
-    "league": "🇵🇹 Португалия · Примейра",
+    "div": "E1",
+    "id": "401880193",
+    "side": "home",
+    "p": 0.7582473986281555,
+    "odds": 1.256,
+    "kickoff": "2026-10-31T18:00:00+03:00",
+    "home": "Мидлсбро",
+    "away": "Чарльтон Атлетик",
+    "league": "🏴󠁧󠁢󠁥󠁮󠁧󠁿 Англия · Чемпионшип",
     "logos": [
-     "https://a.espncdn.com/i/teamlogos/soccer/500/21581.png",
-     "https://a.espncdn.com/i/teamlogos/soccer/500/2250.png"
+     "https://a.espncdn.com/i/teamlogos/soccer/500/369.png",
+     "https://a.espncdn.com/i/teamlogos/soccer/500/372.png"
     ],
     "colors": [
-     "000000",
-     "008127"
+     "f42727",
+     "C8142F"
     ],
-    "label": "Победа: Спортинг"
+    "label": "Победа: Мидлсбро"
    },
    {
     "sport": "football",
     "div": "SP1",
-    "id": "401882817",
+    "id": "401882825",
     "side": "home",
-    "p": 0.6744257746261755,
-    "odds": 1.408,
-    "kickoff": "2026-10-30T23:00:00+03:00",
-    "home": "Вильярреал",
-    "away": "Эспаньол",
+    "p": 0.7291890501872289,
+    "odds": 1.303,
+    "kickoff": "2026-10-31T20:30:00+03:00",
+    "home": "Бетис",
+    "away": "Малага",
     "league": "🇪🇸 Испания · Ла Лига",
     "logos": [
-     "https://a.espncdn.com/i/teamlogos/soccer/500/102.png",
-     "https://a.espncdn.com/i/teamlogos/soccer/500/88.png"
+     "https://a.espncdn.com/i/teamlogos/soccer/500/244.png",
+     "https://a.espncdn.com/i/teamlogos/soccer/500/99.png"
     ],
     "colors": [
-     "ffff00",
-     "3366CC"
+     "288A00",
+     "b9e8f0"
     ],
-    "label": "Победа: Вильярреал",
-    "win": false,
-    "score": "0:1"
+    "label": "Победа: Бетис"
    }
   ],
-  "odds": 2.3576058879999997,
-  "day": "2026-10-30",
-  "done": true
+  "odds": 1.9213308319999998,
+  "day": "2026-10-31",
+  "done": false
  },
  "streak_posted": 0,
  "value_day": "2026-10-30",
  "repost_done": "2026-10-29-new-cards",
  "table_day": "2026-10-30",
- "site_stamp": "182|2026-10-31 09",
+ "site_stamp": "182|2026-10-31 10",
  "battle": {
   "bot": 1,
   "crowd": 1
