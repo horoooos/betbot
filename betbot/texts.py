@@ -347,7 +347,12 @@ def _period(df: pd.DataFrame, name: str) -> str:
 
 def stats(res: pd.DataFrame, today: pd.Timestamp, calib: dict | None = None) -> str:
     from .markets import label  # здесь, чтобы не тянуть scipy ради одного текста
-    lines = [f"📊 <b>СТАТИСТИКА БОТА</b>\n{LINE}"] + [_period(df, name) for name, df in periods(res, today)]
+    lines, prev = [f"📊 <b>СТАТИСТИКА БОТА</b>\n{LINE}"], None
+    for name, df in periods(res, today):
+        if prev is not None and len(df) == prev:  # тот же набор прогнозов, что в прошлой строке — не повторяем
+            continue
+        lines.append(_period(df, name))
+        prev = len(df)
     if "sport" in res and res["sport"].nunique() > 1:
         from .sports import EMOJI, SPORT_RU
         week = periods(res, today)[1][1]

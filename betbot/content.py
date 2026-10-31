@@ -244,6 +244,10 @@ def match_of_day(football: list[dict], now, brand, state: dict | None = None) ->
     return True
 
 
+def _votes(n: int) -> str:
+    return "голос" if n % 10 == 1 and n % 100 != 11 else "голоса" if 2 <= n % 10 <= 4 and not 12 <= n % 100 <= 14 else "голосов"
+
+
 def settle_poll(state: dict, finished: dict, matches: dict, brand: str) -> None:
     """🤖 Бот против 👥 подписчиков: после матча дня закрываем опрос и сравниваем с прогнозом бота."""
     mp = state.get("mod_poll")
@@ -257,7 +261,7 @@ def settle_poll(state: dict, finished: dict, matches: dict, brand: str) -> None:
     except Exception as ex:
         print(f"  ! опрос матча дня не закрылся: {ex}")
         return
-    if not poll or not poll.get("total_voter_count"):
+    if not poll or (poll.get("total_voter_count") or 0) < 3:  # 1–2 голоса — не соревнование
         return
     votes = [o["voter_count"] for o in poll["options"]]
     total = sum(votes)
@@ -270,7 +274,7 @@ def settle_poll(state: dict, finished: dict, matches: dict, brand: str) -> None:
         bot = max(range(3), key=lambda i: m["probs"][["H", "D", "A"][i]])
     lines = ["⚔️ <b>БОТ ПРОТИВ ПОДПИСЧИКОВ</b>\n",
              f"⚽️ <b>{escape(mp['home'])} {hs}:{as_} {escape(mp['away'])}</b>\n",
-             f"👥 Подписчики ({total} голосов):"]
+             f"👥 Подписчики ({total} {_votes(total)}):"]
     for i in range(3):
         share = votes[i] / total
         lines.append(f"<code>{names_[i].ljust(5)} {fun.bar(share)} {100 * share:.0f}%</code>" + (" ✅" if i == real else ""))

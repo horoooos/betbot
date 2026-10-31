@@ -177,7 +177,7 @@ def value_pick(probs: dict, mkt: dict | None) -> dict | None:
         if o is None or pd.isna(o):
             continue
         edge = probs[s] * o - 1
-        if VALUE_EDGE[0] <= edge <= VALUE_EDGE[1] and (best is None or edge > best["edge"]):
+        if VALUE_EDGE[0] <= edge <= VALUE_EDGE[1] and 1.5 <= o <= 4.0 and (best is None or edge > best["edge"]):
             best = {"key": s, "label": mk.label(s), "odds": float(o), "edge": float(edge), "p": probs[s]}
     return best
 
