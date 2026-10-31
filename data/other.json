@@ -10576,22 +10576,22 @@
   "kickoff": "2026-10-31T05:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "home": {
+   "color": "fdb927",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/gs.png",
    "id": "9",
    "name": "Golden State Warriors",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/gs.png",
-   "color": "fdb927",
    "score": "0",
    "record": "2-3",
    "periods": [],
    "ru": "Голден Стэйт"
   },
   "away": {
+   "color": "552583",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/lal.png",
    "id": "13",
    "name": "Los Angeles Lakers",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/lal.png",
-   "color": "552583",
    "score": "0",
    "record": "4-1",
    "periods": [],
@@ -10665,7 +10665,9 @@
   "msg_id": 929,
   "close": {
    "BB_ML_A": 0.5825
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null
  },
  "NBA|401909286": {
   "id": "401909286",
