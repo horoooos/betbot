@@ -9460,22 +9460,22 @@
   "kickoff": "2026-10-31T02:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "home": {
+   "color": "e31837",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/wsh.png",
    "id": "27",
    "name": "Washington Wizards",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/wsh.png",
-   "color": "e31837",
    "score": "0",
    "record": "2-3",
    "periods": [],
    "ru": "Вашингтон Уизардс"
   },
   "away": {
+   "color": "008ca8",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/cha.png",
    "id": "30",
    "name": "Charlotte Hornets",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/cha.png",
-   "color": "008ca8",
    "score": "0",
    "record": "3-2",
    "periods": [],
@@ -9549,7 +9549,9 @@
   "msg_id": 861,
   "close": {
    "BB_ML_A": 0.5497
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null
  },
  "NBA|401909278": {
   "id": "401909278",
