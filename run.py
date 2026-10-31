@@ -216,7 +216,32 @@ def post(png: bytes, text: str, reply_to: int | None = None) -> int:
     return mid
 
 
+def cover(events: list[dict], other: list[dict], now: pd.Timestamp) -> None:
+    """☀️ Обложка дня: дата, сколько матчей и видов спорта, три главных матча."""
+    start = now.normalize() + pd.Timedelta(hours=DAY_START_HOUR)
+    end = start + pd.Timedelta(days=1)
+    fb = [e for e in events if e["state"] == "pre" and "ru" in e["home"] and start <= pd.Timestamp(e["kickoff"]) < end]
+    ot = [e for e in other if e["state"] == "pre" and start <= pd.Timestamp(e["kickoff"]) < end]
+    if not fb and not ot:
+        return
+    sports_n = len({"football"} if fb else set()) + len({e["sport"] for e in ot})
+    top = sorted(fb, key=lambda e: (ORDER.get(e["div"], 999), e["kickoff"]))[:3]
+    hl = [(f"{pd.Timestamp(e['kickoff']):%H:%M}", f"{e['home']['ru']} — {e['away']['ru']}", ALL[e["div"]][2])
+          for e in sorted(top, key=lambda e: e["kickoff"])]
+    day = f"{texts.DAYS[now.weekday()]}, {texts.date_ru(now.normalize())}"
+    png = card.cover_card(day, [(str(len(fb) + len(ot)), "матчей"), (str(sports_n), "видов спорта"),
+                                (str(len(fb)), "футбольных")], hl, BRAND)
+    text = (f"☀️ <b>ДОБРОЕ УТРО!</b> {day}\n\nСегодня {len(fb) + len(ot)} матчей. Главное:\n"
+            + "\n".join(f"⚽️ {t} <b>{m}</b> · {lg}" for t, m, lg in hl)
+            + "\n\nНиже — статистика, расписание и ⭐ прогнозы дня 👇")
+    post(png, text)
+
+
 def morning(state: dict, events: list[dict], other: list[dict], now: pd.Timestamp) -> None:
+    try:
+        cover(events, other, now)
+    except Exception as e:
+        print(f"  ! обложка дня не удалась: {e}")
     res = read_results()
     today = now.normalize()
     if len(res):
@@ -280,7 +305,8 @@ def review(ev: dict, w: dict, fx_loader, hist_loader, calib: dict, state: dict) 
     kick = pd.Timestamp(ev["kickoff"])
     tip = f"{main['label']} · {texts.pct(main['p'])}"
     png = card.match_card(texts.league_plain(ev["div"]), texts.when(kick), ev["home"], ev["away"],
-                          (probs["H"], probs["D"], probs["A"]), tip, f"xG {lam[0]:.1f} : {lam[1]:.1f}", BRAND)
+                          (probs["H"], probs["D"], probs["A"]), main["label"], f"xG {lam[0]:.1f} : {lam[1]:.1f} · шанс {texts.pct(main['p'])}",
+                          BRAND, odds=f"{'≈' if main.get('est') else ''}{main['odds']:.2f}")
     m["msg_id"] = telegram.send_photo(png, texts.caption(m, s.get("venue") or ev.get("venue")))
     telegram.send(texts.review(m, s), reply_to=m["msg_id"], silent=True)
     m["status"] = "reviewed"
@@ -327,8 +353,9 @@ def other_review(e: dict, calib: dict, ctx: dict, state: dict) -> dict | None:
     m["top"] = pro.is_top(state, e["div"], e["id"])
     kick = pd.Timestamp(e["kickoff"])
     tip = f"{m['main']['label']} · {texts.pct(m['main']['p'])}"
-    png = card.match_card(sports.league_plain(e["div"]), texts.when(kick), e["home"], e["away"], a["bar"], tip,
-                          a["center"], BRAND, sport=e["sport"])
+    png = card.match_card(sports.league_plain(e["div"]), texts.when(kick), e["home"], e["away"], a["bar"], m["main"]["label"],
+                          a["center"], BRAND, sport=e["sport"],
+                          odds=f"{'≈' if m['main'].get('est') else ''}{m['main']['odds']:.2f}")
     m["msg_id"] = telegram.send_photo(png, sports.caption(m, texts.when(kick)))
     if e["sport"] in ("hockey", "basketball"):
         sport, slug = sports.LEAGUES[e["div"]][3].split("/")
@@ -484,6 +511,20 @@ def main():
         except Exception as e:  # ошибка в утреннем посте не должна останавливать прогнозы, live и итоги
             print(f"  ! утренний пост не удался: {e}")
     content.run(state, events, other, read_results(), now, BRAND)  # тематический пост раз в 3 часа
+    if now.weekday() == 4 and now.hour >= 18 and state.get("poster_day") != today:  # 🎪 пятничная афиша выходных
+        state["poster_day"] = today
+        try:
+            utc_now = pd.Timestamp.now(tz="UTC")
+            more = scoreboard({c: ALL[c][3] for c in REVIEW_LEAGUES},
+                              [(utc_now + pd.Timedelta(days=d)).strftime("%Y%m%d") for d in (1, 2)])
+            more = [e for e in more if professional(e, cup_teams(state, False))]
+            for e in more:
+                nat = e["div"] in NATIONAL
+                e["home"]["ru"] = names.team(e["home"]["name"], nat)
+                e["away"]["ru"] = names.team(e["away"]["name"], nat)
+            content.weekend_poster(more + other, now, BRAND)
+        except Exception as e:
+            print(f"  ! афиша выходных не удалась: {e}")
 
     cache = {}
 
@@ -561,6 +602,8 @@ def main():
                     pro.post_streak(state, read_results(), BRAND, force=True)
                 elif item == "express":
                     content.repost_express(state, events, other, now, BRAND)
+                elif item == "guide":  # закреплённый путеводитель по каналу
+                    content.guide(BRAND)
                 elif item == "news":  # новость прямо сейчас, не дожидаясь случайного времени
                     state.pop("news_next", None)
                     news.run(state, now, BRAND)

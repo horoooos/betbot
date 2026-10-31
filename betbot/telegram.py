@@ -91,8 +91,50 @@ def stop_poll(message_id: int) -> dict | None:
     return _call("stopPoll", message_id=message_id)
 
 
+# Хештег рубрики по первой строке поста: подписчик нажимает и видит всю рубрику. Порядок важен.
+TAGS = [("ЭКСПРЕСС НА ЯЙЦАХ", "#экспресс_на_яйцах"), ("ЭКСПРЕСС", "#экспресс"), ("ПРОГНОЗЫ ДНЯ", "#прогнозы_дня"),
+        ("VALUE", "#value"), ("ПОДРЯД", "#серия"), ("ЛИКБЕЗ", "#ликбез"), ("ПОЧЕМУ НЕ ЗАШЛО", "#провалы"),
+        ("СТАТИСТИКА БОТА", "#статистика"), ("МАТЧИ ДНЯ", "#расписание"), ("ИТОГИ МЕСЯЦА", "#итоги_месяца"),
+        ("ИТОГИ НЕДЕЛИ", "#итоги_недели"), ("ИТОГИ ДНЯ", "#итоги_дня"), ("ИТОГ", "#итог"), ("ФИНАЛ:", "#итог"),
+        ("МАТЧ НАЧАЛСЯ", "#live"), ("LIVE", "#live"), ("ГОЛ!", "#live"), ("КАРТА!", "#live"),
+        ("ПОЛНЫЙ РАЗБОР", "#разбор"), ("МАТЧ ДНЯ", "#матч_дня"), ("ТАБЛИЦА", "#таблица"), ("РЕЙТИНГ", "#таблица"),
+        ("БОТ ПРОТИВ", "#бот_против_подписчиков"), ("ТОП-МАТЧИ", "#топ_матчи"), ("ЦИФРЫ", "#цифры"),
+        ("АФИША", "#афиша"), ("ДОБРОЕ УТРО", "#утро"), ("ПУТЕВОДИТЕЛЬ", "#о_канале"), ("ПРОГНОЗ", "#прогноз")]
+
+
+def tag(text: str) -> str:
+    """Добавляет хештег рубрики, если в посте его ещё нет (у новостей свой, по виду спорта)."""
+    tail = text.rstrip().rsplit("\n", 1)[-1]
+    if tail.startswith("#"):
+        return text
+    head = text[:160].upper()
+    for word, t in TAGS:
+        if word in head:
+            return text.rstrip() + f"\n\n{t}"
+    return text
+
+
+def send_album(pngs: list[bytes], caption: str) -> int:
+    """Альбом картинок одним постом (подпись — у первой). Возвращает id первого сообщения."""
+    import json
+    caption = tag(caption)[:CAPTION_LIMIT]
+    if DRY:
+        return _dry("album", caption, pngs[0])
+    media, files = [], {}
+    for i, png in enumerate(pngs[:10]):
+        files[f"p{i}"] = (f"p{i}.png", png, "image/png")
+        item = {"type": "photo", "media": f"attach://p{i}"}
+        if i == 0:
+            item.update({"caption": caption, "parse_mode": "HTML"})
+        media.append(item)
+    res = _call("sendMediaGroup", files=files, media=json.dumps(media, ensure_ascii=False))
+    return res[0]["message_id"]
+
+
 def send_photo(png: bytes, caption: str, reply_to: int | None = None) -> int:
-    caption = caption[:CAPTION_LIMIT]
+    caption = tag(caption)
+    if len(caption) > CAPTION_LIMIT:  # хештег не должен «съесть» текст — тогда без него
+        caption = caption[:CAPTION_LIMIT]
     if DRY:
         return _dry("photo", caption, png)
     params = {"caption": caption, "parse_mode": "HTML"}

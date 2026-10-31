@@ -194,6 +194,7 @@ def run(state: dict, now: pd.Timestamp, brand: str) -> None:
     for shift in range(len(ORDER)):
         sport = ORDER[(i + shift) % len(ORDER)]
         fresh = [x for x in _items(sport) if x["id"] not in seen and x["when"] > now.tz_convert("UTC") - pd.Timedelta(hours=6)]
+        fresh.sort(key=lambda x: not x.get("photo"))  # сначала новости с фото в ленте
         for item in fresh[:5]:
             if tries >= MAX_TRIES:  # остальное — в следующий запуск (через пару минут)
                 state["news_next"] = (now + pd.Timedelta(minutes=2)).isoformat()
@@ -202,6 +203,8 @@ def run(state: dict, now: pd.Timestamp, brand: str) -> None:
             seen.append(item["id"])
             item["body"], og = _article(item)
             item["photo"] = item.get("photo") or og
+            if SOURCE_PHOTOS and not item["photo"]:  # без фото новость выглядит бедно — берём следующую
+                continue
             news = _rewrite(item)
             if not news or news["sport"] != sport:  # новость не про этот вид спорта (Ф-1, бокс…) — пропускаем
                 continue

@@ -78,8 +78,8 @@ def schedule(matches: list[dict], day: pd.Timestamp, extra: str = "") -> str:
 
 def caption(m: dict, venue: str | None) -> str:
     h, a = escape(m["home"]["ru"]), escape(m["away"]["ru"])
-    lines = (["⭐ <b>ПРОГНОЗ ДНЯ</b>"] if m.get("top") else []) + [f"⚽️ <b>{h} — {a}</b>",
-             f"🏆 {title(m['div'])}",
+    head = "⭐ <b>ПРОГНОЗ ДНЯ</b>" if m.get("top") else "🎯 <b>ПРОГНОЗ</b>"
+    lines = [f"{head} · {escape(league_plain(m['div']))} · {ts(m):%H:%M} МСК", f"⚽️ <b>{h} — {a}</b>",
              f"⏰ {when(ts(m))}"]
     if venue:
         lines.append(f"🏟 {escape(venue)}")
@@ -282,7 +282,8 @@ def _mark(hit: bool | None) -> str:
 def result(m: dict, s: dict, hs: int, as_: int, day_stats: dict) -> str:
     home, away = m["home"], m["away"]
     hid = str(home["id"])
-    lines = [f"🏁 <b>ФИНАЛ: {escape(home['ru'])} {hs}:{as_} {escape(away['ru'])}</b>"]
+    lines = [f"🏁 <b>ИТОГ</b> · {escape(league_plain(m['div']))} · {'✅ ЗАШЛО' if m.get('main_hit') else '❌ МИМО'}",
+             f"<b>{escape(home['ru'])} {hs}:{as_} {escape(away['ru'])}</b>"]
     if s.get("goals"):
         g = []
         for x in s["goals"]:

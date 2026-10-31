@@ -176,6 +176,15 @@ def _background(left: tuple, right: tuple, style: str | None = None) -> tuple[Im
         l.rectangle((W - 200, H / 2 - 220, W + 4, H / 2 + 220), outline=c, width=3)
         l.rectangle((-4, H / 2 - 100, 70, H / 2 + 100), outline=c, width=3)
         l.rectangle((W - 70, H / 2 - 100, W + 4, H / 2 + 100), outline=c, width=3)
+    elif style == "stars":  # еврокубки и турниры сборных — звёздное небо, как в заставке Лиги чемпионов
+        for _ in range(70):
+            x, y, r = random.randint(0, W), random.randint(0, H), random.choice((4, 6, 8, 12, 16))
+            a = random.randint(40, 150)
+            pts = [(x + (r if i % 2 == 0 else r * 0.42) * math.cos(math.radians(-90 + 36 * i)),
+                    y + (r if i % 2 == 0 else r * 0.42) * math.sin(math.radians(-90 + 36 * i))) for i in range(10)]
+            l.polygon(pts, fill=(255, 255, 255, a))
+        l.ellipse((W / 2 - 500, -300, W / 2 + 500, 300), fill=(120, 140, 255, 40))
+        lay = lay.filter(ImageFilter.GaussianBlur(1))
     elif style == "blobs":  # мягкие цветные пятна — «меш-градиент»
         for _ in range(5):
             col = random.choice([left, right, ACCENT, (120, 80, 255), (0, 200, 200)])
@@ -257,14 +266,14 @@ def _sport_icon(img: Image.Image, sport: str, cx: int = W // 2, cy: int = H // 2
     return Image.alpha_composite(img.convert("RGBA"), layer).convert("RGB")
 
 
-def _title(d: ImageDraw.ImageDraw, text: str, y: int = 46, size: int = 30) -> None:
+def _title(d: ImageDraw.ImageDraw, text: str, y: int = 46, size: int = 30, accent: tuple = ACCENT) -> None:
     d.text((W / 2, y), text.upper(), font=font(size), fill=MUTED, anchor="mm")
     half = d.textlength(text.upper(), font=font(size)) / 2
-    d.line([(W / 2 - half, y + 30), (W / 2 + half, y + 30)], fill=ACCENT, width=3)
+    d.line([(W / 2 - half, y + 30), (W / 2 + half, y + 30)], fill=accent, width=3)
 
 
-def _png(img: Image.Image, d: ImageDraw.ImageDraw, brand: str) -> bytes:
-    img = _finish(img)
+def _png(img: Image.Image, d: ImageDraw.ImageDraw, brand: str, sport: str | None = None) -> bytes:
+    img = _finish(_corner_icon(img, sport))
     if brand:
         ImageDraw.Draw(img).text((W - 30, H - 22), brand, font=font(20, "Medium"), fill=MUTED, anchor="rd")
     buf = io.BytesIO()
@@ -286,11 +295,18 @@ def _pill(d, cx: int, y: int, text: str, fill: tuple, color=WHITE, size: int = 2
     d.text((cx, y + (size + 22) / 2), text, font=font(size, "ExtraBold"), fill=color, anchor="mm")
 
 
+SPECIAL = ("Лига чемпионов", "Лига Европы", "Лига конференций", "Чемпионат мира", "Евро", "Суперкубок")
+
+
 def match_card(league: str, when: str, home: dict, away: dict, probs: tuple[float, float, float],
-               tip: str, center: str, brand: str = "", sport: str = "football") -> bytes:
-    """Превью матча. probs — П1/Х/П2 (в видах спорта без ничьей Х = 0), center — строка под временем."""
+               tip: str, center: str, brand: str = "", sport: str = "football", odds: str = "") -> bytes:
+    """Превью матча. probs — П1/Х/П2 (в видах спорта без ничьей Х = 0), center — строка под временем.
+
+    odds — кэф основного прогноза: тогда он крупно справа на золотой плашке, а прогноз — слева.
+    """
     hc, ac = _rgb(home["color"]), _rgb(away["color"], (180, 40, 40))
-    img, d = _background(hc, ac)
+    special = any(w.lower() in league.lower() for w in SPECIAL)
+    img, d = _background(hc, ac, style="stars" if special else None)
     img = _sport_icon(img, sport)
     d = ImageDraw.Draw(img)
     _title(d, league)
@@ -300,6 +316,7 @@ def match_card(league: str, when: str, home: dict, away: dict, probs: tuple[floa
         logo = _logo(team.get("logo"), 230, ini, col)
         img.paste(logo, (cx - logo.width // 2, 130 + (230 - logo.height) // 2), logo)
         _centered_lines(d, team["ru"], cx, 380, 400, 40)
+        form_dots(d, team.get("form", ""), cx, 478)
 
     time_part, _, date_part = when.partition(" · ")
     d.text((W / 2, 210), time_part, font=font(76, "ExtraBold"), fill=WHITE, anchor="mm")
@@ -321,21 +338,26 @@ def match_card(league: str, when: str, home: dict, away: dict, probs: tuple[floa
             d.text((xs + w / 2, y0 + bh / 2), f"{p * 100:.0f}%", font=font(18), fill=WHITE, anchor="mm")
         xs += w
 
-    # плашка с прогнозом
-    _gold_box(img, (180, 585, W - 180, 670), radius=24)  # золотая плашка с градиентом — как в «Прогнозах дня»
+    # плашка с прогнозом: прогноз слева, кэф — огромной цифрой справа
+    _gold_box(img, (150, 572, W - 150, 680), radius=26)
     d = ImageDraw.Draw(img)
-    size = 36
-    while size > 22 and d.textlength(f"ПРОГНОЗ: {tip}", font=font(size, "ExtraBold")) > W - 420:
-        size -= 2
-    d.text((W / 2, 627), f"ПРОГНОЗ: {tip}", font=font(size, "ExtraBold"), fill=(20, 20, 30), anchor="mm")
-    return _png(img, d, brand)
+    dark = (30, 22, 6)
+    if odds:
+        d.text((190, 598), "ПРОГНОЗ", font=font(20, "ExtraBold"), fill=(90, 60, 10), anchor="lm")
+        d.text((190, 642), tip, font=_fit(d, tip, 40, 620, "ExtraBold"), fill=dark, anchor="lm")
+        d.text((W - 190, 598), "КЭФ", font=font(20, "ExtraBold"), fill=(90, 60, 10), anchor="rm")
+        d.text((W - 190, 640), odds, font=font(62, "ExtraBold"), fill=dark, anchor="rm")
+    else:
+        d.text((W / 2, 626), f"ПРОГНОЗ: {tip}", font=_fit(d, f"ПРОГНОЗ: {tip}", 36, W - 380, "ExtraBold"), fill=dark,
+               anchor="mm")
+    return _png(img, d, brand, sport)
 
 
 GREEN, RED = (39, 174, 96), (214, 48, 49)
 AI_URL = "https://image.pollinations.ai/prompt/{prompt}?width=1280&height=780&nologo=true&seed={seed}"
 
 
-def ai_card(prompt: str, title: str, subtitle: str = "", brand: str = "", sport: str = "") -> bytes:
+def ai_card(prompt: str, title: str, subtitle: str = "", brand: str = "", sport: str = "", accent: tuple = ACCENT) -> bytes:
     """Картинка от бесплатной нейросети Pollinations + наш заголовок поверх.
 
     Две попытки; если нейросеть так и не ответила — рисуем фон с иконкой вида спорта, пост всё равно выйдет.
@@ -380,10 +402,10 @@ def ai_card(prompt: str, title: str, subtitle: str = "", brand: str = "", sport:
     for k, line in enumerate(lines[:3]):
         d.text((W / 2, top + k * step), line, font=font(size, "ExtraBold"), fill=WHITE, anchor="mm")
     bar = top - size / 2 - 22  # золотая черта над заголовком, а не поперёк букв
-    d.line([(W / 2 - 60, bar), (W / 2 + 60, bar)], fill=ACCENT, width=5)
+    d.line([(W / 2 - 60, bar), (W / 2 + 60, bar)], fill=accent, width=6)
     if subtitle:
         d.text((W / 2, H - 70), subtitle, font=font(30, "Medium"), fill=(220, 226, 245), anchor="mm")
-    return _png(img, d, brand)
+    return _png(img, d, brand, sport or None)
 
 
 def result_card(league: str, home: dict, away: dict, hs: int, as_: int,
@@ -393,7 +415,7 @@ def result_card(league: str, home: dict, away: dict, hs: int, as_: int,
     img, d = _background(hc, ac)
     img = _sport_icon(img, sport)
     d = ImageDraw.Draw(img)
-    _title(d, f"Итог матча · {league}")
+    _title(d, f"Итог матча · {league}", accent=RUBRIC["win"] if verdicts and verdicts[0][1] else RUBRIC["lose"])
     _teams(img, d, home, away, hc, ac, top=110)
     d.text((W / 2, 210), f"{hs} : {as_}", font=font(110, "ExtraBold"), fill=WHITE, anchor="mm")
     d.text((W / 2, 290), "ФИНАЛ", font=font(26, "Medium"), fill=MUTED, anchor="mm")
@@ -405,7 +427,7 @@ def result_card(league: str, home: dict, away: dict, hs: int, as_: int,
             size -= 2
         _pill(d, W // 2, y, text, GREEN if hit else RED, size=size)
         y += size + 40
-    return _png(img, d, brand)
+    return _png(img, d, brand, sport)
 
 
 def live_card(league: str, home: dict, away: dict, hs, as_, headline: str, sub: str = "", brand: str = "",
@@ -415,7 +437,7 @@ def live_card(league: str, home: dict, away: dict, hs, as_, headline: str, sub: 
     img, d = _background(hc, ac)
     img = _sport_icon(img, sport)
     d = ImageDraw.Draw(img)
-    _title(d, f"LIVE · {league}")
+    _title(d, f"LIVE · {league}", accent=RUBRIC["live"])
     half = d.textlength(f"LIVE · {league}".upper(), font=font(30)) / 2
     d.ellipse((W / 2 - half - 32, 38, W / 2 - half - 14, 56), fill=RED)  # «красная точка» прямого эфира
     _teams(img, d, home, away, hc, ac, top=110)
@@ -426,7 +448,7 @@ def live_card(league: str, home: dict, away: dict, hs, as_, headline: str, sub: 
         while size > 20 and d.textlength(sub, font=font(size, "Medium")) > W - 200:
             size -= 2
         d.text((W / 2, 600), sub, font=font(size, "Medium"), fill=WHITE, anchor="mm")
-    return _png(img, d, brand)
+    return _png(img, d, brand, sport)
 
 
 def table_card(title: str, subtitle: str, header: tuple, rows: list[tuple], brand: str = "",
@@ -477,7 +499,7 @@ def express_card(legs: list[dict], total: float, p_all: float, day: str, brand: 
                  title: str = "Экспресс дня", colors: tuple = ((150, 110, 20), (40, 60, 150))) -> bytes:
     """Экспресс: все события с логотипами, прогнозом и кэфом + золотая плашка с итоговым кэфом (до 6 событий)."""
     img, d = _background(*colors)
-    _title(d, title, y=40, size=34)
+    _title(d, title, y=40, size=34, accent=RUBRIC["express"])
     d.text((W / 2, 98), day.upper(), font=font(26, "Medium"), fill=MUTED, anchor="mm")
     n = min(len(legs), 6)
     row_h = {1: 92, 2: 92, 3: 92, 4: 78, 5: 64, 6: 56}[max(n, 1)]
@@ -805,11 +827,11 @@ def news_card(photo_url: str | None, title: str, tag: str, brand: str = "", spor
         d.text((70, top_y + k_ * step), line, font=font(size, "ExtraBold"), fill=WHITE, anchor="la")
     # плашка рубрики над заголовком и золотая черта слева
     tw = d.textlength(tag.upper(), font=font(22, "ExtraBold")) + 36
-    _gold_box(img, (70, top_y - 58, int(70 + tw), top_y - 18), radius=20)
+    _gold_box(img, (70, top_y - 58, int(70 + tw), top_y - 18), radius=20, top=BLUE_TOP, bottom=BLUE_BOTTOM, edge=(190, 215, 255))
     d = ImageDraw.Draw(img)
-    d.text((70 + tw / 2, top_y - 38), tag.upper(), font=font(22, "ExtraBold"), fill=(30, 22, 6), anchor="mm")
-    d.rectangle((44, top_y - 4, 50, top_y + step * len(lines[:3]) - 14), fill=ACCENT)
-    return _png(img, d, brand)
+    d.text((70 + tw / 2, top_y - 38), tag.upper(), font=font(22, "ExtraBold"), fill=WHITE, anchor="mm")
+    d.rectangle((44, top_y - 4, 50, top_y + step * len(lines[:3]) - 14), fill=RUBRIC["news"])
+    return _png(img, d, brand, sport or None)
 
 
 def misses_card(rows: list[dict], period: str, brand: str = "") -> bytes:
@@ -843,4 +865,107 @@ def misses_card(rows: list[dict], period: str, brand: str = "") -> bytes:
             d.text((170, y + 112 + k * 28), line, font=f, fill=(215, 220, 240), anchor="lm")
         _pill(d, W - 150, y + 20, f"{r['odds']:.2f}", (90, 40, 60), size=24)
         y += 182
+    return _png(img, d, brand)
+
+
+# ── цвета рубрик: подписчик узнаёт рубрику по цвету, не читая ──────────────
+RUBRIC = {"forecast": ACCENT, "win": (46, 204, 113), "lose": (231, 76, 60), "express": (170, 100, 255),
+          "lesson": (40, 205, 190), "news": (70, 150, 255), "misses": (231, 76, 60), "live": (255, 70, 70),
+          "info": (255, 196, 0)}
+BLUE_TOP, BLUE_BOTTOM = (120, 180, 255), (40, 90, 210)
+TEAL_BOX = ((120, 240, 225), (20, 150, 160))
+PURPLE_BOX = ((200, 150, 255), (110, 50, 210))
+
+
+def _corner_icon(img: Image.Image, sport: str | None) -> Image.Image:
+    """Маленькая иконка вида спорта в левом нижнем углу — всегда на одном месте."""
+    if not sport:
+        return img
+    return _sport_icon(img, sport, cx=86, cy=H - 72, r=26, alpha=150)
+
+
+def form_dots(d: ImageDraw.ImageDraw, form: str, cx: int, cy: int) -> None:
+    """Форма команды: 5 кружков — зелёный (победа), серый (ничья), красный (поражение)."""
+    form = "".join(c for c in (form or "").upper() if c in "WDL")[-5:]
+    if not form:
+        return
+    colors = {"W": (46, 204, 113), "D": (149, 165, 166), "L": (231, 76, 60)}
+    step = 26
+    x0 = cx - step * (len(form) - 1) / 2
+    for i, c in enumerate(form):
+        x = x0 + i * step
+        d.ellipse((x - 9, cy - 9, x + 9, cy + 9), fill=colors[c], outline=(255, 255, 255), width=2)
+
+
+def _tiles(img, d, tiles: list[tuple[str, str]], y: int, color: tuple) -> None:
+    """Ряд «плиток» с крупной цифрой и подписью."""
+    n = len(tiles)
+    w, gap = 300, 30
+    x = (W - n * w - (n - 1) * gap) // 2
+    for big, label in tiles:
+        d.rounded_rectangle((x, y, x + w, y + 150), radius=24, fill=(20, 26, 52), outline=color + (255,), width=3)
+        d.text((x + w / 2, y + 62), big, font=font(64, "ExtraBold"), fill=WHITE, anchor="mm")
+        d.text((x + w / 2, y + 118), label.upper(), font=font(20, "Medium"), fill=MUTED, anchor="mm")
+        x += w + gap
+
+
+def list_card(title: str, subtitle: str, rows: list[tuple[str, str, str]], brand: str = "",
+              colors: tuple = ((255, 170, 0), (60, 90, 200)), accent: tuple = ACCENT, sport: str | None = None,
+              style: str | None = None) -> bytes:
+    """Универсальная карточка-список: время/метка слева, главное по центру, пояснение справа (до 8 строк)."""
+    img, d = _background(*colors, style=style)
+    d.text((W / 2, 60), title.upper(), font=font(48, "ExtraBold"), fill=WHITE, anchor="mm")
+    hw = d.textlength(title.upper(), font=font(48, "ExtraBold")) / 2
+    d.line([(W / 2 - hw, 94), (W / 2 + hw, 94)], fill=accent, width=4)
+    d.text((W / 2, 122), subtitle.upper(), font=font(22, "Medium"), fill=MUTED, anchor="mm")
+    n = min(len(rows), 8)
+    row_h = min(68, (H - 190) // max(n, 1))
+    y = 156
+    for left, main, right in rows[:n]:
+        d.rounded_rectangle((80, y, W - 80, y + row_h - 10), radius=16, fill=(20, 26, 52), outline=(60, 72, 110), width=2)
+        cy = y + (row_h - 10) // 2
+        d.text((110, cy), left, font=font(26, "ExtraBold"), fill=accent, anchor="lm")
+        d.text((250, cy), main, font=_fit(d, main, 26, 640), fill=WHITE, anchor="lm")
+        if right:
+            d.text((W - 110, cy), right, font=_fit(d, right, 20, 300, "Medium"), fill=MUTED, anchor="rm")
+        y += row_h
+    return _png(img, d, brand, sport)
+
+
+def cover_card(day: str, tiles: list[tuple[str, str]], highlights: list[tuple[str, str, str]], brand: str = "") -> bytes:
+    """☀️ Обложка дня: дата крупно, три плитки с цифрами и три главных матча."""
+    img, d = _background((255, 160, 40), (90, 60, 220), style=random.choice(("rays", "blobs", "glow")))
+    d.text((W / 2, 52), "ДОБРОЕ УТРО", font=font(26, "Medium"), fill=MUTED, anchor="mm")
+    d.text((W / 2, 112), day.upper(), font=font(62, "ExtraBold"), fill=WHITE, anchor="mm")
+    hw = d.textlength(day.upper(), font=font(62, "ExtraBold")) / 2
+    d.line([(W / 2 - hw, 152), (W / 2 + hw, 152)], fill=ACCENT, width=4)
+    _tiles(img, d, tiles, 186, ACCENT)
+    d = ImageDraw.Draw(img)
+    d.text((W / 2, 378), "ГЛАВНОЕ СЕГОДНЯ", font=font(24, "ExtraBold"), fill=ACCENT, anchor="mm")
+    y = 408
+    for t, match, league in highlights[:3]:
+        d.rounded_rectangle((160, y, W - 160, y + 64), radius=18, fill=(20, 26, 52), outline=(70, 80, 120), width=2)
+        d.text((195, y + 32), t, font=font(28, "ExtraBold"), fill=ACCENT, anchor="lm")
+        d.text((320, y + 32), match, font=_fit(d, match, 28, 560), fill=WHITE, anchor="lm")
+        d.text((W - 195, y + 32), league, font=_fit(d, league, 20, 220, "Medium"), fill=MUTED, anchor="rm")
+        y += 76
+    return _png(img, d, brand)
+
+
+def slide_card(kicker: str, big: str, sub: str, lines: list[str], colors: tuple, accent: tuple = ACCENT,
+               brand: str = "", n: str = "") -> bytes:
+    """Слайд «итогов месяца»: надзаголовок, огромная цифра/фраза, подпись и до 4 строк деталей."""
+    img, d = _background(*colors, style=random.choice(("blobs", "rays", "halftone")))
+    if n:
+        d.text((W - 70, 58), n, font=font(22, "Medium"), fill=MUTED, anchor="rm")
+    d.text((W / 2, 110), kicker.upper(), font=font(30, "ExtraBold"), fill=accent, anchor="mm")
+    size = 150
+    while size > 50 and d.textlength(big, font=font(size, "ExtraBold")) > W - 160:
+        size -= 6
+    d.text((W / 2, 270), big, font=font(size, "ExtraBold"), fill=WHITE, anchor="mm")
+    d.text((W / 2, 390), sub, font=_fit(d, sub, 34, W - 200, "Bold"), fill=(230, 235, 250), anchor="mm")
+    y = 460
+    for line in lines[:4]:
+        d.text((W / 2, y), line, font=_fit(d, line, 26, W - 220, "Medium"), fill=MUTED, anchor="mm")
+        y += 44
     return _png(img, d, brand)

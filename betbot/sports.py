@@ -610,8 +610,9 @@ def _tip(t: dict) -> str:
 def caption(m: dict, when: str) -> str:
     """Пост перед игрой (хоккей/баскетбол) — помещается в подпись к картинке."""
     h, a = escape(m["home"]["ru"]), escape(m["away"]["ru"])
-    lines = (["⭐ <b>ПРОГНОЗ ДНЯ</b>"] if m.get("top") else []) + [
-        f"{EMOJI[m['sport']]} <b>{h} — {a}</b>", f"🏆 {title(m['div'])}", f"⏰ {when}"]
+    head = "⭐ <b>ПРОГНОЗ ДНЯ</b>" if m.get("top") else "🎯 <b>ПРОГНОЗ</b>"
+    lines = [f"{head} · {escape(league_plain(m['div']))} · {pd.Timestamp(m['kickoff']):%H:%M} МСК",
+             f"{EMOJI[m['sport']]} <b>{h} — {a}</b>", f"⏰ {when}"]
     if m.get("tournament"):
         rnd = ROUNDS.get(m.get("round", ""), m.get("round", ""))
         lines.append(f"🎟 {escape(m['tournament'])}" + (f" · {escape(rnd)}" if rnd else ""))
@@ -630,7 +631,8 @@ def caption(m: dict, when: str) -> str:
 def result_caption(m: dict, f: dict, day: dict) -> str:
     h, a = escape(m["home"]["ru"]), escape(m["away"]["ru"])
     unit = {"esports": " (по картам)", "tennis": " (по сетам)"}.get(m["sport"], "")
-    lines = [f"🏁 <b>ФИНАЛ: {h} {f['hs']}:{f['as']} {a}</b>{unit}"]
+    lines = [f"🏁 <b>ИТОГ</b> · {escape(league_plain(m['div']))} · {'✅ ЗАШЛО' if m.get('main_hit') else '❌ МИМО'}",
+             f"<b>{h} {f['hs']}:{f['as']} {a}</b>{unit}"]
     if m["sport"] == "hockey" and f.get("reg") and sum(f["reg"]) != f["hs"] + f["as"]:
         lines.append(f"Основное время {f['reg'][0]}:{f['reg'][1]}, дальше — овертайм/буллиты")
     per = " · ".join(f"{x}:{y}" for x, y in f.get("periods") or [])

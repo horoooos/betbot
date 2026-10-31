@@ -267,7 +267,7 @@ def learn(state: dict, now, brand) -> bool:
     used.append(les["title"])
     sport, rubric = les["sport"], les["rubric"]
     png = card.ai_card(f"{random.choice(SCENES_LEARN.get(sport, SCENES_LEARN['football']))}, cinematic, no text, no people",
-                       les["title"], f"Ликбез · {rubric}", brand, sport=sport)
+                       les["title"], f"Ликбез · {rubric}", brand, sport=sport, accent=card.RUBRIC["lesson"])
     mid = _post(png, f"🧠 <b>ЛИКБЕЗ · {escape(rubric).upper()}: {escape(les['title']).upper()}</b>\n\n"
                      f"{escape(les['text'])}\n\nПроверь себя в викторине 👇")
     telegram.send_poll(les["q"], les["options"], quiz_correct=les["correct"], explanation=les["why"], reply_to=mid)
@@ -537,7 +537,11 @@ def run(state: dict, football: list[dict], other: list[dict], res: pd.DataFrame,
         elif kind == "learn":
             done = False
             today = now.tz_localize(None).normalize()
-            if now.day == 1:  # 1-го числа — итоги прошедшего месяца
+            if now.day == 1:  # 1-го числа — итоги прошедшего месяца + слайды «Wrapped»
+                try:
+                    wrapped(res, now, brand)
+                except Exception as ex:
+                    print(f"  ! итоги месяца (слайды) не удались: {ex}")
                 start = (today - pd.Timedelta(days=1)).replace(day=1)
                 done = summary(res, now, brand, start, today, "ИТОГИ МЕСЯЦА",
                                f"{MONTHS_NOM[start.month - 1]} {start.year}")
@@ -562,3 +566,112 @@ def run(state: dict, football: list[dict], other: list[dict], res: pd.DataFrame,
         print(f"Тематический пост ({kind}): {'опубликован' if done else 'нечего публиковать'}")
     except Exception as e:
         print(f"  ! тематический пост ({kind}) не удался: {e}")
+
+
+GUIDE = (
+    "📌 <b>ПУТЕВОДИТЕЛЬ ПО КАНАЛУ «АИ СТАВИТ»</b>\n\n"
+    "Бот сам разбирает матчи по футболу, хоккею, баскетболу, теннису и киберспорту, даёт прогнозы и честно "
+    "считает каждый — включая промахи.\n\n"
+    "🕗 <b>08:00</b> — статистика, расписание и ⭐ прогнозы дня #прогнозы_дня\n"
+    "🎯 <b>за час до матча</b> — прогноз и полный разбор #прогноз #разбор\n"
+    "🔴 <b>во время матча</b> — старт, голы и итог #live #итог\n"
+    "🔥 <b>10:00</b> — экспресс дня #экспресс\n"
+    "💎 <b>11:00</b> — value: кэфы выше справедливых #value\n"
+    "🧠 <b>13:00</b> — ликбез с викториной #ликбез · по воскресеньям — разбор провалов #провалы\n"
+    "⭐ <b>16:00</b> — матч дня и опрос #матч_дня\n"
+    "🥚 <b>20:00</b> — экспресс на яйцах, кэф 10+ #экспресс_на_яйцах\n"
+    "🌙 <b>23:00</b> — итоги дня #итоги_дня\n"
+    "📰 новости — каждый час с 8:00 до 2:00 · 🏆 по понедельникам — итоги недели\n\n"
+    "📊 Вся статистика, банк и ROI: horoooos.github.io/betbot\n"
+    "<i>⚠️ 18+. Прогноз — не гарантия. Ставьте только то, что не жалко потерять.</i>"
+)
+
+
+def guide(brand: str) -> int:
+    """📌 Закреплённый путеводитель: что за канал, расписание рубрик и хештеги."""
+    rows = [("08:00", "Статистика, расписание, прогнозы дня", "#прогнозы_дня"),
+            ("за 1 ч", "Прогноз и полный разбор матча", "#прогноз"),
+            ("live", "Старт, голы и итог матча", "#live"),
+            ("10:00", "Экспресс дня", "#экспресс"),
+            ("13:00", "Ликбез · по вс — разбор провалов", "#ликбез"),
+            ("16:00", "Матч дня и опрос", "#матч_дня"),
+            ("20:00", "Экспресс на яйцах · кэф 10+", "#экспресс_на_яйцах"),
+            ("23:00", "Итоги дня", "#итоги_дня")]
+    png = card.list_card("АИ СТАВИТ", "путеводитель по каналу", rows, brand)
+    mid = _post(png, GUIDE)
+    telegram.pin(mid)
+    return mid
+
+
+def weekend_poster(events: list[dict], now, brand) -> bool:
+    """🎪 Пятничная афиша: главные матчи субботы и воскресенья."""
+    start = now.normalize() + pd.Timedelta(days=1)
+    end = start + pd.Timedelta(days=2)
+    games = [e for e in events if e["state"] == "pre" and "ru" in e["home"] and start <= pd.Timestamp(e["kickoff"]) < end]
+    rank = {"NHL": 30, "NBA": 30}
+    top = sorted(games, key=lambda e: (ORDER.get(e["div"], rank.get(e["div"], 90)), e["kickoff"]))[:8]
+    if len(top) < 3:
+        return False
+    top.sort(key=lambda e: e["kickoff"])
+    days = {0: "пн", 1: "вт", 2: "ср", 3: "чт", 4: "пт", 5: "сб", 6: "вс"}
+    rows = [(f"{days[pd.Timestamp(e['kickoff']).weekday()]} {pd.Timestamp(e['kickoff']):%H:%M}",
+             f"{e['home']['ru']} — {e['away']['ru']}", _sport_title(e).split(" · ")[-1]) for e in top]
+    lines = ["🎪 <b>АФИША ВЫХОДНЫХ</b>", "Главные матчи субботы и воскресенья — прогноз на каждый выйдет за час до начала:\n"]
+    for (t, match, league), e in zip(rows, top):
+        lines.append(f"{EMOJI.get(e.get('sport', 'football'), '⚽️')} {t} <b>{escape(match)}</b> · {escape(league)}")
+    lines.append("\nВключай уведомления, чтобы не пропустить 🔔")
+    png = card.list_card("Афиша выходных", f"{start.day} — {(end - pd.Timedelta(days=1)).day} {MONTHS[(end - pd.Timedelta(days=1)).month - 1]}",
+                         [(t.split()[0] + " " + t.split()[1], m, lg) for t, m, lg in rows], brand,
+                         colors=((230, 60, 120), (60, 120, 255)), style="stars")
+    _post(png, "\n".join(lines))
+    return True
+
+
+def wrapped(res: pd.DataFrame, now, brand) -> bool:
+    """🎁 Итоги месяца в формате «Wrapped»: альбом из 5 слайдов."""
+    from . import misses
+    if res is None or res.empty:
+        return False
+    today = now.tz_localize(None).normalize()
+    start = (today - pd.Timedelta(days=1)).replace(day=1)
+    d = pd.to_datetime(res["date"])
+    part = res[(d >= start) & (d < today)].copy()
+    if len(part) < 20:
+        return False
+    part["sport"] = part["sport"].fillna("football") if "sport" in part else "football"
+    hit = part["main_hit"].astype(str).str.lower().isin(["true", "1", "1.0"])
+    month = MONTHS_NOM[start.month - 1].upper()
+    n, w = len(part), int(hit.sum())
+    slides = [card.slide_card(f"итоги месяца · {month}", f"{n}", "прогнозов опубликовал бот",
+                              [f"Основной прогноз зашёл {w} раз — это {100 * w / n:.0f}%",
+                               f"Видов спорта: {part['sport'].nunique()} · дней с прогнозами: {part['date'].nunique()}"],
+                              ((255, 170, 0), (120, 60, 255)), n="1 / 5", brand=brand)]
+    best = part[hit].sort_values("main_odds", ascending=False).head(1)
+    if len(best):
+        b = best.iloc[0]
+        slides.append(card.slide_card("лучший заход месяца", f"{float(b['main_odds']):.2f}",
+                                      f"{b['home']} {b['score']} {b['away']}", [f"Прогноз: {b['main_label']} ✓"],
+                                      ((46, 204, 113), (20, 120, 160)), accent=(46, 204, 113), n="2 / 5", brand=brand))
+    pain = misses.worst(res, start, today, 1)
+    if pain:
+        x = pain[0]
+        slides.append(card.slide_card("самый обидный промах", f"{x['home']} {x['score']} {x['away']}",
+                                      f"Прогноз: {x['label']} · {100 * x['p']:.0f}%", [x["why"]],
+                                      ((231, 76, 60), (90, 40, 120)), accent=(231, 76, 60), n="3 / 5", brand=brand))
+    by_div = part.assign(h=hit).groupby("div")["h"].agg(["size", "mean"])
+    by_div = by_div[by_div["size"] >= 5].sort_values("mean", ascending=False)
+    if len(by_div):
+        div = by_div.index[0]
+        name = title(div).split(" · ", 1)[-1] if div in ALL else sports.league_plain(div)
+        slides.append(card.slide_card("любимая лига бота", f"{100 * by_div.iloc[0]['mean']:.0f}%",
+                                      card.safe(name), [f"{int(by_div.iloc[0]['size'] * by_div.iloc[0]['mean'])} заходов "
+                                                        f"из {int(by_div.iloc[0]['size'])}"],
+                                      ((60, 150, 255), (40, 200, 190)), accent=(70, 150, 255), n="4 / 5", brand=brand))
+    by_sp = part.assign(h=hit).groupby("sport")["h"].agg(["size", "mean"]).sort_values("size", ascending=False)
+    slides.append(card.slide_card("по видам спорта", f"{100 * w / n:.0f}%", "общий процент заходов",
+                                  [f"{SPORT_RU.get(s, s)}: {100 * r['mean']:.0f}% ({int(r['size'])})" for s, r in by_sp.iterrows()],
+                                  ((170, 100, 255), (255, 120, 60)), accent=(170, 100, 255), n=f"{len(slides) + 1} / 5", brand=brand))
+    text = (f"🎁 <b>ИТОГИ МЕСЯЦА · {month}</b>\n\n{n} прогнозов · зашло {w} ({100 * w / n:.0f}%)\n"
+            "Листай карточки → лучший заход, самый обидный промах, любимая лига бота.")
+    telegram.send_album(slides, text)
+    return True
