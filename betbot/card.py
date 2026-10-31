@@ -810,3 +810,37 @@ def news_card(photo_url: str | None, title: str, tag: str, brand: str = "", spor
     d.text((70 + tw / 2, top_y - 38), tag.upper(), font=font(22, "ExtraBold"), fill=(30, 22, 6), anchor="mm")
     d.rectangle((44, top_y - 4, 50, top_y + step * len(lines[:3]) - 14), fill=ACCENT)
     return _png(img, d, brand)
+
+
+def misses_card(rows: list[dict], period: str, brand: str = "") -> bytes:
+    """«Почему не зашло»: три промаха с красным крестиком, счётом, прогнозом и коротким объяснением."""
+    img, d = _background((200, 40, 60), (60, 70, 160))
+    d.text((W / 2, 58), "ПОЧЕМУ НЕ ЗАШЛО", font=font(50, "ExtraBold"), fill=WHITE, anchor="mm")
+    d.text((W / 2, 104), f"{period.upper()} · ТРИ САМЫХ ОБИДНЫХ ПРОМАХА", font=font(21, "Medium"), fill=MUTED, anchor="mm")
+    y = 140
+    for i, r in enumerate(rows[:3]):
+        d.rounded_rectangle((60, y, W - 60, y + 170), radius=22, fill=(26, 20, 40), outline=(120, 50, 70), width=2)
+        cx, cy = 115, y + 52  # красный кружок с крестиком
+        d.ellipse((cx - 28, cy - 28, cx + 28, cy + 28), fill=(214, 48, 49))
+        d.line([(cx - 11, cy - 11), (cx + 11, cy + 11)], fill=WHITE, width=6)
+        d.line([(cx - 11, cy + 11), (cx + 11, cy - 11)], fill=WHITE, width=6)
+        match = f"{r['home']} {r['score']} {r['away']}"
+        d.text((170, y + 38), match, font=_fit(d, match, 30, W - 420, "ExtraBold"), fill=WHITE, anchor="lm")
+        d.text((170, y + 76), f"Прогноз: {r['label']} · {100 * r['p']:.0f}%", font=_fit(d, r["label"], 22, 600, "Medium"),
+               fill=(255, 140, 140), anchor="lm")
+        # объяснение — до двух строк
+        words, lines, cur = r["why"].split(), [], ""
+        f = font(21, "Medium")
+        for w in words:
+            t = (cur + " " + w).strip()
+            if d.textlength(t, font=f) <= W - 250 or not cur:
+                cur = t
+            else:
+                lines.append(cur)
+                cur = w
+        lines.append(cur)
+        for k, line in enumerate(lines[:2]):
+            d.text((170, y + 112 + k * 28), line, font=f, fill=(215, 220, 240), anchor="lm")
+        _pill(d, W - 150, y + 20, f"{r['odds']:.2f}", (90, 40, 60), size=24)
+        y += 182
+    return _png(img, d, brand)

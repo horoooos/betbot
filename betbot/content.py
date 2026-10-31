@@ -480,6 +480,25 @@ def summary(res: pd.DataFrame, now, brand, start: pd.Timestamp, end: pd.Timestam
     return True
 
 
+def misses_post(res: pd.DataFrame, now, brand) -> bool:
+    """😤 Почему не зашло: три самых обидных промаха недели с объяснением и выводом про дисперсию."""
+    from . import misses
+    today = now.tz_localize(None).normalize()
+    rows = misses.worst(res, today - pd.Timedelta(days=7), today + pd.Timedelta(days=1))
+    if len(rows) < 2:
+        return False
+    lines = ["😤 <b>ПОЧЕМУ НЕ ЗАШЛО</b>", "Разбираем три самых обидных промаха недели — честно, без отмазок.\n"]
+    for i, r in enumerate(rows, 1):
+        lines.append(f"{i}. {EMOJI.get(r['sport'], '⚽️')} <b>{escape(r['home'])} {r['score']} {escape(r['away'])}</b>\n"
+                     f"   ❌ {escape(r['label'])} · {_pct(r['p'])} · кэф {r['odds']:.2f}\n"
+                     f"   💬 {escape(r['why'])}")
+    lines.append(f"\n🧠 {misses.lesson(sum(r['p'] for r in rows) / len(rows))}")
+    lines.append("Поэтому бот ставит 1–3% банка и оценивает себя на сотнях матчей, а не по одному вечеру.")
+    period = f"{(today - pd.Timedelta(days=6)).day} {MONTHS[(today - pd.Timedelta(days=6)).month - 1]} — {today.day} {MONTHS[today.month - 1]}"
+    _post(card.misses_card(rows, period, brand), "\n".join(lines))
+    return True
+
+
 def weekly(res: pd.DataFrame, now, brand) -> bool:
     if res is None or res.empty:
         return False
@@ -527,6 +546,8 @@ def run(state: dict, football: list[dict], other: list[dict], res: pd.DataFrame,
                 done = summary(res, now, brand, start, today, "ИТОГИ НЕДЕЛИ",
                                f"{start.day} {MONTHS[start.month - 1]} — {(today - pd.Timedelta(days=1)).day} "
                                f"{MONTHS[(today - pd.Timedelta(days=1)).month - 1]}") or done
+            if now.weekday() == 6 and not done:  # по воскресеньям — разбор провалов недели
+                done = misses_post(res, now, brand)
             done = done or learn(state, now, brand)
         elif kind == "match_of_day":
             done = match_of_day(football, now, brand, state)
