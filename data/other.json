@@ -11856,31 +11856,31 @@
   "kickoff": "2026-10-31T19:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Sat, October 31st at 12:00 PM EDT",
   "home": {
-   "id": "3754",
-   "name": "Jiri Lehecka",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/3754.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/cze.png"
    ],
+   "id": "3754",
+   "name": "Jiri Lehecka",
    "country": "Czechia",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
    "ru": "Иржи Леxечка"
   },
   "away": {
-   "id": "2337",
-   "name": "Jan-Lennard Struff",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/2337.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/ger.png"
    ],
+   "id": "2337",
+   "name": "Jan-Lennard Struff",
    "country": "Germany",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
@@ -11939,7 +11939,9 @@
   "msg_id": 1127,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null
  },
  "NHL|401892614": {
   "id": "401892614",
