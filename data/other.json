@@ -10080,22 +10080,22 @@
   "kickoff": "2026-10-31T03:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "home": {
+   "color": "98002e",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/mia.png",
    "id": "14",
    "name": "Miami Heat",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/mia.png",
-   "color": "98002e",
    "score": "0",
    "record": "1-4",
    "periods": [],
    "ru": "Майами Хит"
   },
   "away": {
+   "color": "0c2340",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/ind.png",
    "id": "11",
    "name": "Indiana Pacers",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/ind.png",
-   "color": "0c2340",
    "score": "0",
    "record": "2-3",
    "periods": [],
@@ -10169,7 +10169,9 @@
   "msg_id": 884,
   "close": {
    "BB_O237.5": 0.5
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null
  },
  "NBA|401909283": {
   "id": "401909283",
