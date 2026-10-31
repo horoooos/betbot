@@ -10779,31 +10779,31 @@
   "kickoff": "2026-10-31T06:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Fri, October 30th at 11:00 PM EDT",
   "home": {
-   "id": "3641",
-   "name": "Leylah Fernandez",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/3641.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/can.png"
    ],
+   "id": "3641",
+   "name": "Leylah Fernandez",
    "country": "Canada",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
    "ru": "Лейла Фернандес"
   },
   "away": {
-   "id": "3908",
-   "name": "Kamilla Rakhimova",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/3908.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/uzb.png"
    ],
+   "id": "3908",
+   "name": "Kamilla Rakhimova",
    "country": "Uzbekistan",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
@@ -10862,7 +10862,9 @@
   "msg_id": 939,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null
  },
  "WTA|185688": {
   "id": "185688",
