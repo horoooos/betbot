@@ -13509,7 +13509,7 @@
   "kickoff": "2026-10-31T21:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Scheduled",
   "home": {
    "id": "17606",
@@ -13637,7 +13637,10 @@
   "msg_id": 1273,
   "close": {
    "BTTS_Y": 0.5489
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null,
+  "value_hit": null
  },
  "401900883": {
   "id": "401900883",
