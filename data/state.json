@@ -5,7 +5,7 @@
  },
  "learned": "2026-10-31",
  "schedule_day": "2026-10-31",
- "content_slot": "2026-10-31-19",
+ "content_slot": "2026-10-31-20",
  "news_seen": [
   "https://www.sports.ru/automoto/blogs/3563795.html",
   "shoot-house-poyavit-sya-v-call-of-duty-modern-warfare-4-v-nachale-noyabrya",
@@ -1313,7 +1313,7 @@
  "value_day": "2026-10-31",
  "repost_done": "2026-10-31-invite",
  "table_day": "2026-10-31",
- "site_stamp": "221|2026-10-31 19",
+ "site_stamp": "221|2026-10-31 20",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1327,5 +1327,118 @@
   ]
  },
  "value_check": "2026-10-31-6",
- "news_next": "2026-10-31T20:42:56.303901+03:00"
+ "news_next": "2026-10-31T20:42:56.303901+03:00",
+ "express_risk": {
+  "msg": 1282,
+  "legs": [
+   {
+    "sport": "football",
+    "div": "B1",
+    "id": "401878960",
+    "side": "home",
+    "p": 0.5830690068372453,
+    "odds": 1.625,
+    "kickoff": "2026-10-31T22:45:00+03:00",
+    "home": "Андерлехт",
+    "away": "Вестерло",
+    "league": "🇧🇪 Бельгия · Про-лига",
+    "logos": [
+     "https://a.espncdn.com/i/teamlogos/soccer/500/441.png",
+     "https://a.espncdn.com/i/teamlogos/soccer/500/606.png"
+    ],
+    "colors": [
+     "695196",
+     "005bd2"
+    ],
+    "label": "Победа: Андерлехт"
+   },
+   {
+    "sport": "hockey",
+    "div": "NHL",
+    "id": "401892619",
+    "side": "away",
+    "p": 0.5830164765525981,
+    "odds": 1.645,
+    "kickoff": "2026-10-31T23:00:00+03:00",
+    "home": "Сан-Хосе",
+    "away": "Оттава",
+    "league": "🇺🇸 США · NHL",
+    "logos": [
+     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/sj.png",
+     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/ott.png"
+    ],
+    "colors": [
+     "00788a",
+     "dd1a32"
+    ],
+    "label": "Победа: Оттава (с ОТ)"
+   },
+   {
+    "sport": "hockey",
+    "div": "NHL",
+    "id": "401892618",
+    "side": "away",
+    "p": 0.5427759110881364,
+    "odds": 1.769,
+    "kickoff": "2026-10-31T23:00:00+03:00",
+    "home": "Лос-Анджелес",
+    "away": "Баффало",
+    "league": "🇺🇸 США · NHL",
+    "logos": [
+     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/la.png",
+     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/buf.png"
+    ],
+    "colors": [
+     "121212",
+     "00468b"
+    ],
+    "label": "Победа: Баффало (с ОТ)"
+   },
+   {
+    "sport": "football",
+    "div": "N1",
+    "id": "401875562",
+    "side": "home",
+    "p": 0.541816528833348,
+    "odds": 1.741,
+    "kickoff": "2026-10-31T23:00:00+03:00",
+    "home": "Аякс",
+    "away": "АЗ",
+    "league": "🇳🇱 Нидерланды · Эредивизи",
+    "logos": [
+     "https://a.espncdn.com/i/teamlogos/soccer/500/139.png",
+     "https://a.espncdn.com/i/teamlogos/soccer/500/140.png"
+    ],
+    "colors": [
+     "DF1B27",
+     "ef2f24"
+    ],
+    "label": "Победа: Аякс"
+   },
+   {
+    "sport": "basketball",
+    "div": "NBA",
+    "id": "401909902",
+    "side": "home",
+    "p": 0.5635245901639344,
+    "odds": 1.704,
+    "kickoff": "2026-11-01T03:30:00+03:00",
+    "home": "Хьюстон Рокетс",
+    "away": "Оклахома-Сити Тандер",
+    "league": "🇺🇸 США · NBA",
+    "logos": [
+     "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/hou.png",
+     "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/okc.png"
+    ],
+    "colors": [
+     "ce0e2d",
+     "007ac1"
+    ],
+    "label": "Победа: Хьюстон Рокетс (с ОТ)"
+   }
+  ],
+  "odds": 14.028636494145001,
+  "day": "2026-10-31",
+  "done": false
+ }
 }
