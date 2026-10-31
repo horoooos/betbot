@@ -20,6 +20,7 @@ from betbot import card, content, esports, live, names, news, oddspapi, pro, rev
 from betbot import markets as mk
 from betbot.data import MSK, load_fixtures, load_history
 from betbot.engine import add_market, fit_full, fit_weights, walk_forward
+from betbot import extras
 from betbot.espn import _get as espn_get, scoreboard, summary
 from betbot.leagues import ALL, EXTRA, MAIN, NATIONAL, ORDER
 
@@ -270,6 +271,11 @@ def review(ev: dict, w: dict, fx_loader, hist_loader, calib: dict, state: dict) 
          "value": value_pick(probs, mkt), "odds_src": mkt["src"] if mkt else "нет, только модель",
          "model_w": w.get("1X2", 0.0) if mkt else 1.0,
          "learned_n": len(read_results())}
+    if row is not None and ev["div"] in HIST_LEAGUES:  # угловые и карточки по статистике сезона (без кэфов)
+        try:
+            m["extra"] = extras.corners_cards(hist_loader(), ev["div"], row["HomeTeam"], row["AwayTeam"])
+        except Exception as e:
+            print(f"  ! угловые/карточки не посчитались: {e}")
     s = summary(ev["slug"], ev["id"])
     kick = pd.Timestamp(ev["kickoff"])
     tip = f"{main['label']} · {texts.pct(main['p'])}"

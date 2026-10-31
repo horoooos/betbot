@@ -473,51 +473,59 @@ def _gold_box(img: Image.Image, box: tuple, radius: int = 26, top: tuple = None,
     ImageDraw.Draw(img).rounded_rectangle(box, radius=radius, outline=edge, width=3)
 
 
-def express_card(legs: list[dict], total: float, p_all: float, day: str, brand: str = "") -> bytes:
-    """Экспресс дня: все события с логотипами, прогнозом и кэфом + золотая плашка с итоговым кэфом."""
-    img, d = _background((150, 110, 20), (40, 60, 150))
-    _title(d, "Экспресс дня", y=40, size=34)
+def express_card(legs: list[dict], total: float, p_all: float, day: str, brand: str = "",
+                 title: str = "Экспресс дня", colors: tuple = ((150, 110, 20), (40, 60, 150))) -> bytes:
+    """Экспресс: все события с логотипами, прогнозом и кэфом + золотая плашка с итоговым кэфом (до 6 событий)."""
+    img, d = _background(*colors)
+    _title(d, title, y=40, size=34)
     d.text((W / 2, 98), day.upper(), font=font(26, "Medium"), fill=MUTED, anchor="mm")
-    n = min(len(legs), 4)
-    row_h = 92 if n <= 3 else 78
+    n = min(len(legs), 6)
+    row_h = {1: 92, 2: 92, 3: 92, 4: 78, 5: 64, 6: 56}[max(n, 1)]
     y = 128
     for leg in legs[:n]:
-        d.rounded_rectangle((70, y, W - 70, y + row_h - 10), radius=18, fill=(22, 28, 56), outline=(60, 72, 110), width=2)
-        cy = y + (row_h - 10) // 2
-        d.text((100, cy - 14), pd_time(leg["kickoff"]), font=font(26, "ExtraBold"), fill=ACCENT, anchor="lm")
+        d.rounded_rectangle((70, y, W - 70, y + row_h - 8), radius=16, fill=(22, 28, 56), outline=(60, 72, 110), width=2)
+        cy = y + (row_h - 8) // 2
+        tight = row_h < 70  # 5–6 событий: строки плотнее, одна строка текста
+        d.text((100, cy - (0 if tight else 14)), pd_time(leg["kickoff"]), font=font(24 if tight else 26, "ExtraBold"),
+               fill=ACCENT, anchor="lm")
         # только название турнира, без флага-эмодзи (шрифт их не рисует)
         league = "".join(c for c in leg.get("league", "").split("·")[-1] if ord(c) < 0x2000).strip()
         size = 17
         while size > 12 and d.textlength(league, font=font(size, "Medium")) > 200:
             size -= 1
-        d.text((100, cy + 16), league, font=font(size, "Medium"), fill=MUTED, anchor="lm")
+        if not tight:
+            d.text((100, cy + 16), league, font=font(size, "Medium"), fill=MUTED, anchor="lm")
         lx = 330
         for k, side in enumerate(("home", "away")):  # два маленьких логотипа
-            logo = _logo((leg.get("logos") or [None, None])[k], 52, "".join(w[0] for w in leg[side].split()[:2]).upper(),
+            logo = _logo((leg.get("logos") or [None, None])[k], 40 if tight else 52, "".join(w[0] for w in leg[side].split()[:2]).upper(),
                          _rgb((leg.get("colors") or ["3b4a7a", "3b4a7a"])[k]))
             img.paste(logo, (lx + k * 60, cy - logo.height // 2), logo)
         match = f"{leg['home']} — {leg['away']}"
         size = 26
         while size > 16 and d.textlength(match, font=font(size)) > 430:
             size -= 2
-        d.text((470, cy - 14), match, font=font(size), fill=WHITE, anchor="lm")
+        d.text((470, cy - (12 if tight else 14)), match, font=font(size - (4 if tight else 0)), fill=WHITE, anchor="lm")
         pick = leg["label"]
         size = 22
         while size > 14 and d.textlength(pick, font=font(size, "Medium")) > 430:
             size -= 2
-        d.text((470, cy + 16), pick, font=font(size, "Medium"), fill=(130, 220, 160), anchor="lm")
-        _pill(d, W - 160, cy - 25, f"{leg['odds']:.2f}", (46, 60, 110), size=26)
+        d.text((470, cy + (13 if tight else 16)), pick, font=font(size - (4 if tight else 0), "Medium"),
+               fill=(130, 220, 160), anchor="lm")
+        _pill(d, W - 160, cy - (20 if tight else 25), f"{leg['odds']:.2f}", (46, 60, 110), size=22 if tight else 26)
         y += row_h
     # золотая плашка с итоговым кэфом
-    box = (150, 470, W - 150, 650)
+    box = (150, max(470, y + 6), W - 150, max(470, y + 6) + 180) if n <= 4 else (150, y + 6, W - 150, y + 156)
     _gold_box(img, box)
     d = ImageDraw.Draw(img)
     dark = (40, 28, 6)
-    d.text((box[0] + 50, 515), "ИТОГОВЫЙ КЭФ", font=font(28, "ExtraBold"), fill=dark, anchor="lm")
-    d.text((box[0] + 50, 590), f"{total:.2f}", font=font(84, "ExtraBold"), fill=dark, anchor="lm")
-    d.text((box[2] - 50, 530), "ШАНС, ЧТО ЗАЙДЁТ", font=font(22, "Bold"), fill=dark, anchor="rm")
-    d.text((box[2] - 50, 590), f"{p_all * 100:.0f}%", font=font(64, "ExtraBold"), fill=dark, anchor="rm")
-    d.text((W / 2, 680), f"{len(legs[:n])} события в одной ставке", font=font(22, "Medium"), fill=MUTED, anchor="mm")
+    bh = box[3] - box[1]
+    d.text((box[0] + 50, box[1] + bh * 0.25), "ИТОГОВЫЙ КЭФ", font=font(28, "ExtraBold"), fill=dark, anchor="lm")
+    d.text((box[0] + 50, box[1] + bh * 0.66), f"{total:.2f}", font=font(84 if bh > 160 else 70, "ExtraBold"), fill=dark, anchor="lm")
+    d.text((box[2] - 50, box[1] + bh * 0.33), "ШАНС, ЧТО ЗАЙДЁТ", font=font(22, "Bold"), fill=dark, anchor="rm")
+    d.text((box[2] - 50, box[1] + bh * 0.66), f"{p_all * 100:.0f}%", font=font(64 if bh > 160 else 54, "ExtraBold"), fill=dark, anchor="rm")
+    if box[3] < 670:
+        d.text((W / 2, 680), f"{len(legs[:n])} событий в одной ставке" if n >= 5 else f"{len(legs[:n])} события в одной ставке",
+               font=font(22, "Medium"), fill=MUTED, anchor="mm")
     return _png(img, d, brand)
 
 

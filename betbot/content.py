@@ -22,7 +22,8 @@ from .texts import MONTHS
 MONTHS_NOM = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь",
               "Ноябрь", "Декабрь"]
 
-SLOTS = {10: "express", 13: "learn", 16: "match_of_day", 19: "evening", 22: "facts", 23: "recap"}
+SLOTS = {10: "express", 13: "learn", 16: "match_of_day", 19: "evening", 20: "risky", 22: "facts", 23: "recap"}
+RISKY_MIN_ODDS = 10.0  # «экспресс на яйцах» — итоговый кэф от 10
 FOOTER = "<i>⚠️ 18+. Прогноз — не гарантия. Ставьте только то, что не жалко потерять.</i>"
 
 LESSONS = [
@@ -125,6 +126,62 @@ def express(state: dict, football, other, now, brand) -> bool:
     return True
 
 
+def _risky_legs(football: list[dict], other: list[dict], now: pd.Timestamp) -> list[dict]:
+    """Кандидаты в «экспресс на яйцах»: матчи вечера и ночи, где у победы шанс 38–62% и кэф 1.6–2.7."""
+    end = now + pd.Timedelta(hours=10)
+    legs = []
+    for e in football + other:
+        k = pd.Timestamp(e["kickoff"])
+        o = e.get("odds") or {}
+        if e["state"] != "pre" or not (now + pd.Timedelta(minutes=30) < k <= end) or not (o.get("H") and o.get("A")):
+            continue
+        if "ru" not in e["home"] or e.get("sport") == "tennis":
+            continue
+        p = mk.fair([o["H"], o["D"], o["A"]]) if o.get("D") else mk.fair([o["H"], o["A"]])
+        for side, prob, odds in (("home", float(p[0]), float(o["H"])), ("away", float(p[-1]), float(o["A"]))):
+            if 0.38 <= prob <= 0.62 and 1.6 <= odds <= 2.7:
+                team = e[side]["ru"]
+                legs.append({"sport": e.get("sport", "football"), "div": e["div"], "id": e["id"], "side": side,
+                             "p": prob, "odds": odds, "kickoff": e["kickoff"],
+                             "home": e["home"]["ru"], "away": e["away"]["ru"], "league": _sport_title(e),
+                             "logos": [e["home"].get("logo"), e["away"].get("logo")],
+                             "colors": [e["home"].get("color"), e["away"].get("color")],
+                             "label": f"Победа: {team}" + (" (с ОТ)" if e.get("sport") in ("hockey", "basketball") else "")})
+    return sorted(legs, key=lambda x: -x["p"])
+
+
+def risky(state: dict, football, other, now, brand) -> bool:
+    """🥚 Экспресс на яйцах: 3–6 событий вечера с итоговым кэфом от 10 — ставка «на кураж» на копейки."""
+    picked, seen, total, p_all = [], set(), 1.0, 1.0
+    for leg in _risky_legs(football, other, now):
+        if leg["id"] in seen:
+            continue
+        picked.append(leg)
+        seen.add(leg["id"])
+        total *= leg["odds"]
+        p_all *= leg["p"]
+        if total >= RISKY_MIN_ODDS and len(picked) >= 3:
+            break
+        if len(picked) == 6:
+            break
+    if total < RISKY_MIN_ODDS or len(picked) < 3:
+        return False
+    picked.sort(key=lambda x: x["kickoff"])  # в посте и на картинке — по времени начала
+    lines = ["🥚 <b>ЭКСПРЕСС НА ЯЙЦАХ</b>", "Вечерняя ставка на кураж: кэф от 10, событий больше — риск выше.\n"]
+    for i, leg in enumerate(picked, 1):
+        k = pd.Timestamp(leg["kickoff"])
+        lines.append(f"{i}. {k:%H:%M} {escape(leg['home'])} — {escape(leg['away'])}\n"
+                     f"   🎲 <b>{escape(leg['label'])}</b> · {_pct(leg['p'])} · кэф {leg['odds']:.2f}")
+    lines += [f"\n💰 Итоговый кэф: <b>{total:.2f}</b> · шанс, что зайдёт всё: <b>{_pct(p_all)}</b>",
+              "🧠 Это лотерея, а не стратегия: ставь сумму, которую не жалко, — максимум 0.5% банка.",
+              "Бот будет отмечать каждый матч ответом на этот пост 👇", FOOTER]
+    png = card.express_card(picked, total, p_all, f"{now.day} {MONTHS[now.month - 1]} · вечер", brand,
+                            title="Экспресс на яйцах", colors=((200, 40, 90), (120, 50, 220)))
+    mid = _post(png, "\n".join(lines))
+    state["express_risk"] = {"msg": mid, "legs": picked, "odds": total, "day": str(now.date()), "done": False}
+    return True
+
+
 def repost_express(state: dict, football: list[dict], other: list[dict], now, brand) -> bool:
     """Переотправить сегодняшний экспресс с новой картинкой (логотипы берём из текущего расписания)."""
     ex = state.get("express")
@@ -156,9 +213,16 @@ def _express_text(legs: list[dict], total: float, p_all: float) -> str:
     return "\n".join(lines)
 
 
+EXPRESSES = (("express", "ЭКСПРЕСС ДНЯ", "завтра в 10:00 новый"), ("express_risk", "ЭКСПРЕСС НА ЯЙЦАХ", "завтра в 20:00 новый"))
+
+
 def settle_express(state: dict, finished: dict) -> None:
-    """finished: (div, id) → итоговый словарь с hs/as. Когда сыграли все события — пишем итог экспресса."""
-    ex = state.get("express")
+    """finished: (div, id) → итоговый словарь с hs/as. Отмечаем каждый сыгранный матч обоих экспрессов."""
+    for key, name, again in EXPRESSES:
+        _settle_one(state.get(key), finished, name, again)
+
+
+def _settle_one(ex: dict | None, finished: dict, name: str, again: str) -> None:
     if not ex or ex.get("done"):
         return
     fresh = False
@@ -182,13 +246,13 @@ def settle_express(state: dict, finished: dict) -> None:
         return f"{'✅' if leg['win'] else '❌'} {escape(leg['home'])} {leg['score']} {escape(leg['away'])} — {escape(leg['label'])}"
     if lost or not waiting:  # итог: либо одно событие не зашло, либо сыграли все
         ok = not lost
-        lines = [f"{'✅' if ok else '❌'} <b>ЭКСПРЕСС ДНЯ {'ЗАШЁЛ' if ok else 'НЕ ЗАШЁЛ'}</b>"
+        lines = [f"{'✅' if ok else '❌'} <b>{name} {'ЗАШЁЛ' if ok else 'НЕ ЗАШЁЛ'}</b>"
                  + (f" · кэф {ex['odds']:.2f}" if ok else "")] + [row(leg) for leg in played]
         lines += [f"⏳ {escape(leg['home'])} — {escape(leg['away'])} — уже не важно" for leg in waiting]
-        lines.append(f"\n<i>{'Касса! 💰 Экспресс собран полностью' if ok else 'Экспресс сгорел — завтра в 10:00 новый 🔄'}</i>")
+        lines.append(f"\n<i>{'Касса! 💰 Экспресс собран полностью' if ok else f'Экспресс сгорел — {again} 🔄'}</i>")
         ex["done"] = True
     else:  # промежуточный итог: событие зашло, ждём остальные
-        lines = [f"🔥 <b>ЭКСПРЕСС ДНЯ: {len(played)} из {len(ex['legs'])} уже зашли!</b>"] + [row(leg) for leg in played]
+        lines = [f"🔥 <b>{name}: {len(played)} из {len(ex['legs'])} уже зашли!</b>"] + [row(leg) for leg in played]
         lines += [f"⏳ {escape(leg['home'])} — {escape(leg['away'])} · {escape(leg['label'])} · "
                   f"{pd.Timestamp(leg['kickoff']):%H:%M} МСК" for leg in waiting]
         lines.append("\nДержим кулачки 🤞")
@@ -468,6 +532,8 @@ def run(state: dict, football: list[dict], other: list[dict], res: pd.DataFrame,
             done = match_of_day(football, now, brand, state)
         elif kind == "evening":
             done = evening(football, other, now, brand)
+        elif kind == "risky":
+            done = risky(state, football, other, now, brand)
         elif kind == "recap":
             done = recap(res, now, brand)
         else:

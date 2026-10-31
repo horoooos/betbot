@@ -214,6 +214,18 @@ def review(m: dict, s: dict) -> str:
     parts.append(f"🧮 <b>Модель</b>\nОжидаемые голы (xG): <b>{m['lam'][0]:.1f} : {m['lam'][1]:.1f}</b>\n"
                  f"Самые вероятные счета: {sc}")
     parts.append("📋 <b>Вероятности по всем рынкам</b>\n" + _markets_table(m))
+    ex = m.get("extra") or {}
+    if ex:
+        rows = []
+        if ex.get("corners"):
+            c = ex["corners"]
+            rows.append(f"🚩 Угловые: ожидаем <b>≈{c['total']:.1f}</b> ({c['home']:.1f} : {c['away']:.1f})")
+            rows.append("   " + " · ".join(f"ТБ {L} — {pct(v)}" for L, v in c["lines"].items()))
+        if ex.get("cards"):
+            k = ex["cards"]
+            rows.append(f"🟨 Жёлтые карточки: ожидаем <b>≈{k['total']:.1f}</b>")
+            rows.append("   " + " · ".join(f"ТБ {L} — {pct(v)}" for L, v in k["lines"].items()))
+        parts.append("📐 <b>Угловые и карточки</b> <i>(по статистике команд, кэфов букмекера нет)</i>\n" + "\n".join(rows))
 
     # вывод: собираем факторы в связный текст
     why = []
