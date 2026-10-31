@@ -9962,22 +9962,22 @@
   "kickoff": "2026-10-31T03:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "home": {
+   "color": "dd1a32",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/cgy.png",
    "id": "3",
    "name": "Calgary Flames",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/cgy.png",
-   "color": "dd1a32",
    "score": "0",
    "record": "5-7-0",
    "periods": [],
    "ru": "Калгари"
   },
   "away": {
+   "color": "000d33",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/sea.png",
    "id": "124292",
    "name": "Seattle Kraken",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/sea.png",
-   "color": "000d33",
    "score": "0",
    "record": "8-4-1",
    "periods": [],
@@ -10071,7 +10071,9 @@
   "msg_id": 882,
   "close": {
    "HK_O6.5": 0.4826
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null
  },
  "NBA|401909282": {
   "id": "401909282",
