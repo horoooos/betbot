@@ -193,6 +193,9 @@ def weak(calib: dict) -> list[str]:
     return [k for k, (r, _) in (calib or {}).items() if r == 0.0]
 
 
+FAV_P = 0.60
+AGAINST = {"H": {"A", "D", "X2", "A+1.5", "A+2.5", "A-1.5", "A-2.5", "A&O15", "A&BTTS", "X2&U35"},
+           "A": {"H", "D", "1X", "H+1.5", "H+2.5", "H-1.5", "H-2.5", "H&O15", "H&BTTS", "1X&U35"}}
 MIN_ODDS = 1.5     # ниже этого кэфа профессионалы не играют: одна осечка съедает несколько выигрышей
 MAIN_MIN_P = 0.45  # основной прогноз — всё-таки «скорее зайдёт», чем нет
 BOLD_MIN_P = 0.40  # смелый — не лотерея: хотя бы 40%
@@ -263,6 +266,10 @@ def tips(probs: dict, real_odds: dict, calib: dict | None = None) -> tuple[dict,
         return probs[k] * calib.get(k, (1.0, 0))[0]
 
     keys = [k for k in MARKETS if probs[k] > 0 and score(k) > 0]  # score 0 — рынок отключён (см. calibration)
+    # при явном фаворите (60%+) не ставим против него: «Ф1 (+1.5)» за аутсайдера выглядит странно и путает читателей
+    fav = "H" if probs["H"] >= probs["A"] else "A"
+    if probs[fav] >= FAV_P:
+        keys = [k for k in keys if k not in AGAINST[fav]]
     main_k, bold_k = choose(keys, probs, real_odds, score, [k for k in MAIN_POOL if k in keys] or keys, compatible)
 
     def pack(k):

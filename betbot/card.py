@@ -741,3 +741,64 @@ def top_card(picks: list[dict], day: str, brand: str = "") -> bytes:
         d.rounded_rectangle((rx - bw / 2, ly + 68, rx + bw / 2, ly + 74), radius=3, fill=(52, 60, 96))
         d.rounded_rectangle((rx - bw / 2, ly + 68, rx - bw / 2 + max(6, bw * p["p"]), ly + 74), radius=3, fill=(46, 204, 113))
     return _png(img, d, brand)
+
+
+def news_card(photo_url: str | None, title: str, tag: str, brand: str = "", sport: str = "", fallback_prompt: str = "") -> bytes:
+    """Новость: фото из источника на весь кадр + наше оформление поверх (плашка рубрики, заголовок, градиент).
+
+    Если фото нет или оно не скачалось — картинка от нейросети, а если и она недоступна — наш фирменный фон.
+    """
+    photo = None
+    if photo_url:
+        try:
+            r = requests.get(photo_url, timeout=25, headers={"User-Agent": "Mozilla/5.0"})
+            if r.ok and len(r.content) > 5000:
+                photo = Image.open(io.BytesIO(r.content)).convert("RGB")
+        except Exception:
+            photo = None
+    if photo is None:
+        return ai_card(fallback_prompt or "sports arena at night", title, tag, brand, sport=sport)
+    # кадрирование «cover»: заполняем 1280×720 без полей, чуть выше центра — там обычно лица и мяч
+    k = max(W / photo.width, H / photo.height)
+    photo = photo.resize((int(photo.width * k) + 1, int(photo.height * k) + 1), Image.LANCZOS)
+    left, top = (photo.width - W) // 2, int((photo.height - H) * 0.35)
+    img = photo.crop((left, top, left + W, top + H))
+    # фирменная тонировка: тёмный градиент снизу и цветной отсвет слева
+    shade = Image.new("L", (1, H))
+    for y in range(H):
+        shade.putpixel((0, y), int(240 * max(0, (y - H * 0.30) / (H * 0.70)) ** 1.15))
+    img = Image.composite(Image.new("RGB", (W, H), (8, 10, 24)), img, shade.resize((W, H)))
+    tint = Image.new("RGB", (W, H), random.choice([(255, 170, 0), (0, 160, 255), (230, 40, 80), (120, 80, 255)]))
+    side = Image.new("L", (W, 1))
+    for x in range(W):
+        side.putpixel((x, 0), int(70 * max(0, 1 - x / (W * 0.45))))
+    img = Image.composite(tint, img, side.resize((W, H)))
+    d = ImageDraw.Draw(img)
+    # заголовок: до трёх строк, подбираем размер
+    text = title.upper()
+    size = 58
+    while True:
+        f = font(size, "ExtraBold")
+        lines, cur = [], ""
+        for w in text.split():
+            t = (cur + " " + w).strip()
+            if d.textlength(t, font=f) <= W - 140 or not cur:
+                cur = t
+            else:
+                lines.append(cur)
+                cur = w
+        lines.append(cur)
+        if len(lines) <= 3 or size <= 34:
+            break
+        size -= 4
+    step = size + 12
+    top_y = H - 70 - step * len(lines)
+    for k_, line in enumerate(lines[:3]):
+        d.text((70, top_y + k_ * step), line, font=font(size, "ExtraBold"), fill=WHITE, anchor="la")
+    # плашка рубрики над заголовком и золотая черта слева
+    tw = d.textlength(tag.upper(), font=font(22, "ExtraBold")) + 36
+    _gold_box(img, (70, top_y - 58, int(70 + tw), top_y - 18), radius=20)
+    d = ImageDraw.Draw(img)
+    d.text((70 + tw / 2, top_y - 38), tag.upper(), font=font(22, "ExtraBold"), fill=(30, 22, 6), anchor="mm")
+    d.rectangle((44, top_y - 4, 50, top_y + step * len(lines[:3]) - 14), fill=ACCENT)
+    return _png(img, d, brand)

@@ -503,6 +503,10 @@ def pick(a: dict, calib: dict) -> tuple[dict, dict]:
         return probs[k] * calib.get(k, (1.0, 0))[0]
 
     keys = [k for k in probs if 0 < probs[k] < 1 and score(k) > 0]  # score 0 — рынок отключён (см. mk.calibration)
+    bar = a.get("bar") or (0.5, 0, 0.5)
+    if max(bar[0], bar[2]) >= mk.FAV_P:  # явный фаворит — не ставим против него
+        against = AWAY_SIDE if bar[0] > bar[2] else HOME_SIDE
+        keys = [k for k in keys if k not in against]
     main_pool = [k for k in keys if ":" not in k]  # точный счёт — не для основного
     main_k, bold_k = mk.choose(keys, probs, real, score, main_pool, lambda x, y: compatible(probs, x, y))
 

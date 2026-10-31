@@ -196,13 +196,27 @@ def settle_express(state: dict, finished: dict) -> None:
 
 
 def learn(state: dict, now, brand) -> bool:
-    i = int(now.strftime("%j")) % len(LESSONS)
-    les = LESSONS[i]
-    png = card.ai_card(les["prompt"], les["title"], "Ликбез для ставок", brand)
-    mid = _post(png, f"🧠 <b>ЛИКБЕЗ: {escape(les['title']).upper()}</b>\n\n{les['text']}\n\nПроверь себя в викторине 👇")
+    """🧠 Ликбез с викториной: следующая тема из банка (betbot/lessons.py), рубрики по очереди, без повторов."""
+    from . import lessons
+    used = state.setdefault("lesson_titles", [])
+    les = lessons.next_lesson(used)
+    used.append(les["title"])
+    sport, rubric = les["sport"], les["rubric"]
+    png = card.ai_card(f"{random.choice(SCENES_LEARN.get(sport, SCENES_LEARN['football']))}, cinematic, no text, no people",
+                       les["title"], f"Ликбез · {rubric}", brand, sport=sport)
+    mid = _post(png, f"🧠 <b>ЛИКБЕЗ · {escape(rubric).upper()}: {escape(les['title']).upper()}</b>\n\n"
+                     f"{escape(les['text'])}\n\nПроверь себя в викторине 👇")
     telegram.send_poll(les["q"], les["options"], quiz_correct=les["correct"], explanation=les["why"], reply_to=mid)
     return True
 
+
+SCENES_LEARN = {
+    "football": ["empty football stadium at golden hour, green pitch", "soccer ball on chalk line, stadium lights"],
+    "hockey": ["empty ice hockey rink, puck and stick on ice", "hockey arena lights over fresh ice"],
+    "basketball": ["empty basketball court, ball near the hoop", "basketball hoop from below, arena lights"],
+    "tennis": ["empty tennis court at night, ball on the baseline", "clay tennis court with racket and ball"],
+    "esports": ["empty esports stage with neon lights and gaming PCs", "glowing gaming keyboard and mouse, neon"],
+}
 
 def match_of_day(football: list[dict], now, brand, state: dict | None = None) -> bool:
     cands = [e for e in football if e["state"] == "pre" and "ru" in e["home"]
