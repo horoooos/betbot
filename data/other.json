@@ -11074,31 +11074,31 @@
   "kickoff": "2026-10-31T13:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Sat, October 31st at 6:00 AM EDT",
   "home": {
-   "id": "14460",
-   "name": "Kaitlin Quevedo",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/14460.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/esp.png"
    ],
+   "id": "14460",
+   "name": "Kaitlin Quevedo",
    "country": "Spain",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
    "ru": "Кейтлин Кеведо"
   },
   "away": {
-   "id": "10830",
-   "name": "Lilli Tagger",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/10830.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/aut.png"
    ],
+   "id": "10830",
+   "name": "Lilli Tagger",
    "country": "Austria",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
@@ -11157,7 +11157,9 @@
   "msg_id": 981,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null
  },
  "CS2|1753690": {
   "status": "skipped",
