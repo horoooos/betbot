@@ -145,7 +145,7 @@ def _cyrillic(text: str) -> float:
 
 
 def _rewrite(item: dict) -> dict | None:
-    body = {"model": "openai", "private": True,
+    body = {"model": "openai", "private": True, "temperature": 0.2,  # меньше «фантазии» — меньше выдуманных фактов
             "messages": [{"role": "system", "content": PROMPT},
                          {"role": "user", "content": f"Заголовок: {item['title']}\nОписание: {item['desc']}"
                                                      + (f"\nТекст статьи: {item['body']}" if item.get("body") else "")}]}
