@@ -555,6 +555,9 @@ def main():
                     pro.post_streak(state, read_results(), BRAND, force=True)
                 elif item == "express":
                     content.repost_express(state, events, other, now, BRAND)
+                elif item == "news":  # новость прямо сейчас, не дожидаясь случайного времени
+                    state.pop("news_next", None)
+                    news.run(state, now, BRAND)
                 print(f"Переотправка: {item}")
             except Exception as e:
                 print(f"  ! переотправка {item} не удалась: {e}")
