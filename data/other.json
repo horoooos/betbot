@@ -10180,22 +10180,22 @@
   "kickoff": "2026-10-31T03:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "home": {
+   "color": "0064b1",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/dal.png",
    "id": "6",
    "name": "Dallas Mavericks",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/dal.png",
-   "color": "0064b1",
    "score": "0",
    "record": "3-2",
    "periods": [],
    "ru": "Даллас Маверикс"
   },
   "away": {
+   "color": "ce0e2d",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/hou.png",
    "id": "10",
    "name": "Houston Rockets",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/hou.png",
-   "color": "ce0e2d",
    "score": "0",
    "record": "5-0",
    "periods": [],
@@ -10269,7 +10269,9 @@
   "msg_id": 886,
   "close": {
    "BB_ML_A": 0.6766
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null
  },
  "NBA|401909284": {
   "id": "401909284",
