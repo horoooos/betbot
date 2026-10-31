@@ -87,17 +87,27 @@ def run(store: dict, events: list[dict], reviews: dict, brand: str) -> None:
             continue
         word, emoji = WORD[sport]
         if sport == "football":
-            new = (e.get("goals") or [])[st.get("goals", 0):]
-            for g in new or [{}]:
-                team = h if g.get("team") == str(e["home"]["id"]) else a if g.get("team") else ""
+            # постов ровно столько, на сколько вырос счёт: подробности голов ESPN иногда присылает с опозданием,
+            # и старый гол не должен выйти второй раз; счёт в каждом посте — на момент этого гола
+            details = e.get("goals") or []
+            k = sum(sc) - sum(prev)
+            new = details[st.get("goals", 0):][-k:]
+            new = [{}] * (k - len(new)) + new
+            run_sc = list(prev)
+            for g in new:
+                side = 0 if g.get("team") == str(e["home"]["id"]) else 1 if g.get("team") else None
+                if side is None or run_sc[side] >= sc[side]:  # нет данных или не сходится — по тому, кто ещё «должен» гол
+                    side = 0 if run_sc[0] < sc[0] else 1
+                run_sc[side] += 1
+                team = h if side == 0 else a
                 who = names.player(g["player"]) if g.get("player") else ""
                 tag = " (пен.)" if g.get("pen") else " (автогол)" if g.get("own") else ""
-                sub = " ".join(x for x in (g.get("min", ""), who + tag, f"— {team}" if team else "") if x).strip()
-                png = card.live_card(_league(e), e["home"], e["away"], sc[0], sc[1], word, sub, brand, sport,
+                sub = " ".join(x for x in (g.get("min", ""), who + tag, f"— {team}") if x).strip()
+                png = card.live_card(_league(e), e["home"], e["away"], run_sc[0], run_sc[1], word, sub, brand, sport,
                                      color=(39, 174, 96))
-                telegram.send_photo(png, f"{emoji} <b>{word} {escape(h)} {sc[0]}:{sc[1]} {escape(a)}</b>"
+                telegram.send_photo(png, f"{emoji} <b>{word} {escape(h)} {run_sc[0]}:{run_sc[1]} {escape(a)}</b>"
                                          + (f"\n{escape(sub)}" if sub else ""), reply_to=st["msg"])
-            st["goals"] = len(e.get("goals") or [])
+            st["goals"] = max(st.get("goals", 0), len(details))
         else:
             scorer = h if sc[0] > prev[0] else a
             sub = f"{'Карту взяла' if sport == 'esports' else 'Забила'} команда {scorer}"
