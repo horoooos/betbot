@@ -10385,31 +10385,31 @@
   "kickoff": "2026-10-31T03:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Fri, October 30th at 8:00 PM EDT",
   "home": {
-   "id": "2387",
-   "name": "Fiona Ferro",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/2387.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/fra.png"
    ],
+   "id": "2387",
+   "name": "Fiona Ferro",
    "country": "France",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
    "ru": "Фиона Ферро"
   },
   "away": {
-   "id": "1955",
-   "name": "Elizabeth Mandlik",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/1955.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/usa.png"
    ],
+   "id": "1955",
+   "name": "Elizabeth Mandlik",
    "country": "USA",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
@@ -10468,7 +10468,9 @@
   "msg_id": 890,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null
  },
  "WTA|185814": {
   "id": "185814",
