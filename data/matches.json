@@ -15615,7 +15615,10 @@
   "model_w": 0.0,
   "learned_n": 220,
   "extra": null,
-  "msg_id": 1269
+  "msg_id": 1269,
+  "close": {
+   "BTTS_Y": 0.5702
+  }
  },
  "761919": {
   "id": "761919",
@@ -15749,7 +15752,10 @@
   "model_w": 0.0,
   "learned_n": 220,
   "extra": null,
-  "msg_id": 1271
+  "msg_id": 1271,
+  "close": {
+   "1X": 0.658
+  }
  },
  "761930": {
   "id": "761930",
@@ -15883,7 +15889,10 @@
   "model_w": 0.0,
   "learned_n": 220,
   "extra": null,
-  "msg_id": 1273
+  "msg_id": 1273,
+  "close": {
+   "BTTS_Y": 0.5489
+  }
  },
  "401900883": {
   "id": "401900883",
@@ -16016,6 +16025,9 @@
   "odds_src": "DraftKings",
   "model_w": 0.0,
   "learned_n": 220,
-  "msg_id": 1275
+  "msg_id": 1275,
+  "close": {
+   "O35": 0.6276
+  }
  }
 }
