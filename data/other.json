@@ -10482,31 +10482,31 @@
   "kickoff": "2026-10-31T04:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Fri, October 30th at 9:30 PM EDT",
   "home": {
-   "id": "4629",
-   "name": "Alicia Herrero Linana",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/4629.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/esp.png"
    ],
+   "id": "4629",
+   "name": "Alicia Herrero Linana",
    "country": "Spain",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
    "ru": "Алисиа Херреро Линана"
   },
   "away": {
-   "id": "2979",
-   "name": "Bianca Andreescu",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/2979.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/can.png"
    ],
+   "id": "2979",
+   "name": "Bianca Andreescu",
    "country": "Canada",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
@@ -10565,7 +10565,9 @@
   "msg_id": 922,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null
  },
  "NBA|401909285": {
   "id": "401909285",
@@ -10672,22 +10674,22 @@
   "kickoff": "2026-10-31T05:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "home": {
+   "color": "29127a",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/phx.png",
    "id": "21",
    "name": "Phoenix Suns",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/phx.png",
-   "color": "29127a",
    "score": "0",
    "record": "1-2",
    "periods": [],
    "ru": "Финикс Санз"
   },
   "away": {
+   "color": "0e2240",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/den.png",
    "id": "7",
    "name": "Denver Nuggets",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/den.png",
-   "color": "0e2240",
    "score": "0",
    "record": "2-2",
    "periods": [],
@@ -10761,7 +10763,9 @@
   "msg_id": 931,
   "close": {
    "BB_ML_A": 0.6147
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null
  },
  "WTA|185687": {
   "id": "185687",
