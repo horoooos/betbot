@@ -11827,5 +11827,97 @@
   "open": {},
   "top": false,
   "msg_id": 1110
+ },
+ "ATP|185157": {
+  "id": "185157",
+  "div": "ATP",
+  "sport": "tennis",
+  "tournament": "Swiss Indoors Basel",
+  "round": "Semifinal",
+  "bo5": false,
+  "kickoff": "2026-10-31T19:00:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "detail": "Sat, October 31st at 12:00 PM EDT",
+  "home": {
+   "id": "3754",
+   "name": "Jiri Lehecka",
+   "logo": [
+    "https://a.espncdn.com/i/headshots/tennis/players/full/3754.png",
+    "https://a.espncdn.com/i/teamlogos/countries/500/cze.png"
+   ],
+   "country": "Czechia",
+   "color": "2d6a4f",
+   "winner": false,
+   "sets": [],
+   "set_won": [],
+   "ru": "Иржи Леxечка"
+  },
+  "away": {
+   "id": "2337",
+   "name": "Jan-Lennard Struff",
+   "logo": [
+    "https://a.espncdn.com/i/headshots/tennis/players/full/2337.png",
+    "https://a.espncdn.com/i/teamlogos/countries/500/ger.png"
+   ],
+   "country": "Germany",
+   "color": "2d6a4f",
+   "winner": false,
+   "sets": [],
+   "set_won": [],
+   "ru": "Ян-Леннард Штруфф"
+  },
+  "odds": {},
+  "probs": {
+   "TN_W1": 0.5280710771564616,
+   "TN_W2": 0.4719289228435384,
+   "TN_3S": 0.49929891334740817,
+   "TN_2S": 0.5007010866525917,
+   "TN_S2:0": 0.26907334563513535,
+   "TN_S0:2": 0.2316277410174564,
+   "TN_S2:1": 0.258997731521326,
+   "TN_S1:2": 0.2403011818260822,
+   "TN_SET1": 0.7683722589825436,
+   "TN_SET2": 0.7309266543648647
+  },
+  "labels": {
+   "TN_W1": "Победа: Иржи Леxечка",
+   "TN_W2": "Победа: Ян-Леннард Штруфф",
+   "TN_3S": "Будет 3 сета",
+   "TN_2S": "Будет 2 сета",
+   "TN_S2:0": "Счёт по сетам 2:0",
+   "TN_S0:2": "Счёт по сетам 0:2",
+   "TN_S2:1": "Счёт по сетам 2:1",
+   "TN_S1:2": "Счёт по сетам 1:2",
+   "TN_SET1": "Иржи Леxечка возьмёт хотя бы сет",
+   "TN_SET2": "Ян-Леннард Штруфф возьмёт хотя бы сет"
+  },
+  "real": {},
+  "center": "Рейтинг Эло 1749 : 1730",
+  "bar": [
+   0.5280710771564616,
+   0,
+   0.4719289228435384
+  ],
+  "model": {
+   "elo": [
+    1749.4420229261623,
+    1729.9157081307221
+   ],
+   "src": "Эло"
+  },
+  "main": {
+   "key": "TN_2S",
+   "label": "Будет 2 сета",
+   "p": 0.5007,
+   "odds": 1.86,
+   "est": true,
+   "stake": 1.0
+  },
+  "bold": {},
+  "open": {},
+  "top": false,
+  "msg_id": 1127
  }
 }
