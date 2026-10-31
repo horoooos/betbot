@@ -9143,7 +9143,7 @@
   "kickoff": "2026-10-31T04:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Scheduled",
   "home": {
    "id": "15720",
@@ -9270,7 +9270,10 @@
   "msg_id": 906,
   "close": {
    "BTTS_Y": 0.603
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null,
+  "value_hit": null
  },
  "401876918": {
   "id": "401876918",
