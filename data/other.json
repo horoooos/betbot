@@ -11757,31 +11757,31 @@
   "kickoff": "2026-10-31T18:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Sat, October 31st at 11:30 AM EDT",
   "home": {
-   "id": "17009",
-   "name": "Nauhany Vitoria Leme Da Silva",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/17009.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/bra.png"
    ],
+   "id": "17009",
+   "name": "Nauhany Vitoria Leme Da Silva",
    "country": "Brazil",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
    "ru": "Наухани Виториа Леме Да Силва"
   },
   "away": {
-   "id": "5161",
-   "name": "Alice Tubello",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/5161.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/fra.png"
    ],
+   "id": "5161",
+   "name": "Alice Tubello",
    "country": "France",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
@@ -11840,7 +11840,9 @@
   "msg_id": 1110,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null
  },
  "ATP|185157": {
   "id": "185157",
