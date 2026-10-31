@@ -9760,22 +9760,22 @@
   "kickoff": "2026-10-31T02:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "home": {
+   "color": "1d428a",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/phi.png",
    "id": "20",
    "name": "Philadelphia 76ers",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/phi.png",
-   "color": "1d428a",
    "score": "0",
    "record": "4-1",
    "periods": [],
    "ru": "Филадельфия Сиксерс"
   },
   "away": {
+   "color": "1d428a",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/ny.png",
    "id": "18",
    "name": "New York Knicks",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/ny.png",
-   "color": "1d428a",
    "score": "0",
    "record": "2-3",
    "periods": [],
@@ -9849,7 +9849,9 @@
   "msg_id": 876,
   "close": {
    "BB_ML_A": 0.6147
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null
  },
  "NBA|401909281": {
   "id": "401909281",
