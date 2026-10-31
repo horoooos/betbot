@@ -11952,22 +11952,22 @@
   "kickoff": "2026-10-31T20:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "home": {
+   "color": "231f20",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/bos.png",
    "id": "1",
    "name": "Boston Bruins",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/bos.png",
-   "color": "231f20",
    "score": "0",
    "record": "9-4-1",
    "periods": [],
    "ru": "Бостон"
   },
   "away": {
+   "color": "e31937",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/chi.png",
    "id": "4",
    "name": "Chicago Blackhawks",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/chi.png",
-   "color": "e31937",
    "score": "0",
    "record": "4-9-0",
    "periods": [],
@@ -12061,7 +12061,9 @@
   "msg_id": 1188,
   "close": {
    "HK_O6.5": 0.5043
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null
  },
  "NHL|401892615": {
   "id": "401892615",
@@ -12646,7 +12648,11 @@
    "HK_ML_H": 0.4486
   },
   "top": false,
-  "msg_id": 1350
+  "msg_id": 1350,
+  "close": {
+   "HK_O5.5": 0.5514,
+   "HK_ML_H": 0.4486
+  }
  },
  "NHL|401892619": {
   "id": "401892619",
@@ -12769,6 +12775,10 @@
    "HK_ML_H": 0.417
   },
   "top": false,
-  "msg_id": 1352
+  "msg_id": 1352,
+  "close": {
+   "HK_O6.5": 0.5174,
+   "HK_ML_H": 0.428
+  }
  }
 }
