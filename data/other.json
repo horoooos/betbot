@@ -13245,5 +13245,100 @@
   "open": {},
   "top": false,
   "msg_id": 1481
+ },
+ "NBA|401909902": {
+  "id": "401909902",
+  "div": "NBA",
+  "sport": "basketball",
+  "kickoff": "2026-11-01T03:30:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "home": {
+   "id": "10",
+   "name": "Houston Rockets",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/hou.png",
+   "color": "ce0e2d",
+   "score": "0",
+   "record": "5-1",
+   "periods": [],
+   "ru": "Хьюстон Рокетс"
+  },
+  "away": {
+   "id": "25",
+   "name": "Oklahoma City Thunder",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/okc.png",
+   "color": "007ac1",
+   "score": "0",
+   "record": "4-1",
+   "periods": [],
+   "ru": "Оклахома-Сити Тандер"
+  },
+  "odds": {
+   "H": 1.704,
+   "A": 2.2,
+   "line": 219.5,
+   "over": 1.926,
+   "under": 1.893,
+   "spread": -2.5,
+   "sp_h": 1.909,
+   "sp_a": 1.909
+  },
+  "probs": {
+   "BB_ML_H": 0.5825156468205225,
+   "BB_ML_A": 0.4174843531794775,
+   "BB_SPR_H": 0.5,
+   "BB_SPR_A": 0.5,
+   "BB_O212.5": 0.6597440535491568,
+   "BB_U212.5": 0.3402559464508432,
+   "BB_O219.5": 0.5,
+   "BB_U219.5": 0.5,
+   "BB_O226.5": 0.3402559464508432,
+   "BB_U226.5": 0.6597440535491568
+  },
+  "labels": {
+   "BB_ML_H": "П1 (с ОТ)",
+   "BB_ML_A": "П2 (с ОТ)",
+   "BB_SPR_H": "Ф1 (-2.5)",
+   "BB_SPR_A": "Ф2 (+2.5)",
+   "BB_O212.5": "ТБ 212.5",
+   "BB_U212.5": "ТМ 212.5",
+   "BB_O219.5": "ТБ 219.5",
+   "BB_U219.5": "ТМ 219.5",
+   "BB_O226.5": "ТБ 226.5",
+   "BB_U226.5": "ТМ 226.5"
+  },
+  "real": {
+   "BB_ML_H": 1.704,
+   "BB_ML_A": 2.2,
+   "BB_SPR_H": 1.909,
+   "BB_SPR_A": 1.909,
+   "BB_O219.5": 1.926,
+   "BB_U219.5": 1.893
+  },
+  "center": "Ожидаемый счёт 111 : 108",
+  "bar": [
+   0.5825156468205225,
+   0,
+   0.4174843531794775
+  ],
+  "model": {
+   "mu": 2.5,
+   "T": 219.5
+  },
+  "main": {
+   "key": "BB_ML_H",
+   "label": "П1 (с ОТ)",
+   "p": 0.5825,
+   "odds": 1.7,
+   "est": false,
+   "stake": 1.0
+  },
+  "bold": {},
+  "open": {
+   "BB_ML_H": 0.5825
+  },
+  "top": true,
+  "msg_id": 1492
  }
 }
