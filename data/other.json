@@ -11466,31 +11466,31 @@
   "kickoff": "2026-10-31T17:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Sat, October 31st at 10:00 AM EDT",
   "home": {
-   "id": "5749",
-   "name": "Julia Riera",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/5749.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/arg.png"
    ],
+   "id": "5749",
+   "name": "Julia Riera",
    "country": "Argentina",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
    "ru": "Хулия Риера"
   },
   "away": {
-   "id": "2599",
-   "name": "Julia Grabher",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/2599.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/aut.png"
    ],
+   "id": "2599",
+   "name": "Julia Grabher",
    "country": "Austria",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
@@ -11549,7 +11549,9 @@
   "msg_id": 1028,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null
  },
  "WTA|185854": {
   "id": "185854",
