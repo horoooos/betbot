@@ -11354,7 +11354,10 @@
   "bold": {},
   "open": {},
   "top": false,
-  "msg_id": 1024
+  "msg_id": 1024,
+  "close": {
+   "_": null
+  }
  },
  "ATP|185158": {
   "id": "185158",
@@ -11446,7 +11449,10 @@
   "bold": {},
   "open": {},
   "top": false,
-  "msg_id": 1026
+  "msg_id": 1026,
+  "close": {
+   "_": null
+  }
  },
  "WTA|185780": {
   "id": "185780",
@@ -11538,6 +11544,9 @@
   "bold": {},
   "open": {},
   "top": false,
-  "msg_id": 1028
+  "msg_id": 1028,
+  "close": {
+   "_": null
+  }
  }
 }
