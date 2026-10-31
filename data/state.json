@@ -1278,7 +1278,9 @@
      "f42727",
      "C8142F"
     ],
-    "label": "Победа: Мидлсбро"
+    "label": "Победа: Мидлсбро",
+    "win": true,
+    "score": "3:0"
    },
    {
     "sport": "football",
@@ -1306,11 +1308,11 @@
   "day": "2026-10-31",
   "done": false
  },
- "streak_posted": 0,
+ "streak_posted": 3,
  "value_day": "2026-10-31",
  "repost_done": "2026-10-31-invite",
  "table_day": "2026-10-31",
- "site_stamp": "207|2026-10-31 19",
+ "site_stamp": "216|2026-10-31 19",
  "battle": {
   "bot": 1,
   "crowd": 1
