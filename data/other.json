@@ -11720,31 +11720,31 @@
   "kickoff": "2026-11-01T11:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Sun, November 1st at 3:30 AM EST",
   "home": {
-   "id": "10830",
-   "name": "Lilli Tagger",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/10830.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/aut.png"
    ],
+   "id": "10830",
+   "name": "Lilli Tagger",
    "country": "Austria",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
    "ru": "Лилли Таггер"
   },
   "away": {
-   "id": "2200",
-   "name": "Harriet Dart",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/2200.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/gbr.png"
    ],
+   "id": "2200",
+   "name": "Harriet Dart",
    "country": "Great Britain",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
@@ -11803,6 +11803,8 @@
   "msg_id": 1556,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null
  }
 }
