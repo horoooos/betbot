@@ -11980,31 +11980,31 @@
   "kickoff": "2026-11-01T03:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Sat, October 31st at 8:00 PM EDT",
   "home": {
-   "id": "2346",
-   "name": "Tatjana Maria",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/2346.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/ger.png"
    ],
+   "id": "2346",
+   "name": "Tatjana Maria",
    "country": "Germany",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
    "ru": "Татьяна Мария"
   },
   "away": {
-   "id": "2387",
-   "name": "Fiona Ferro",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/2387.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/fra.png"
    ],
+   "id": "2387",
+   "name": "Fiona Ferro",
    "country": "France",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
@@ -12063,7 +12063,9 @@
   "msg_id": 1481,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null
  },
  "NBA|401909902": {
   "id": "401909902",
