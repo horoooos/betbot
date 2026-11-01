@@ -16693,7 +16693,7 @@
   "kickoff": "2026-11-01T18:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Scheduled",
   "home": {
    "id": "15784",
@@ -16840,7 +16840,10 @@
   "msg_id": 1659,
   "close": {
    "O25": 0.5112
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null,
+  "value_hit": null
  },
  "401875557": {
   "id": "401875557",
