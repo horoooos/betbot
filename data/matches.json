@@ -18973,7 +18973,7 @@
   "kickoff": "2026-11-02T00:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Scheduled",
   "home": {
    "id": "18418",
@@ -19101,7 +19101,10 @@
   "msg_id": 1834,
   "close": {
    "X2": 0.5253
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null,
+  "value_hit": null
  },
  "761920": {
   "id": "761920",
@@ -19509,7 +19512,10 @@
   "model_w": 0.0,
   "learned_n": 324,
   "extra": null,
-  "msg_id": 1872
+  "msg_id": 1872,
+  "close": {
+   "H": 0.6334
+  }
  },
  "761932": {
   "id": "761932",
