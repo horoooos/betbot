@@ -1355,7 +1355,9 @@
      "ffffff",
      "ffffff"
     ],
-    "label": "Победа: Реал Мадрид"
+    "label": "Победа: Реал Мадрид",
+    "win": true,
+    "score": "0:3"
    },
    {
     "sport": "football",
@@ -1406,13 +1408,13 @@
   ],
   "odds": 1.9492965179999997,
   "day": "2026-11-01",
-  "done": false
+  "done": true
  },
  "streak_posted": 0,
  "value_day": "2026-11-01",
  "repost_done": "2026-11-01-news-lively",
  "table_day": "2026-11-01",
- "site_stamp": "302|2026-11-01 20",
+ "site_stamp": "303|2026-11-01 20",
  "battle": {
   "bot": 1,
   "crowd": 1
