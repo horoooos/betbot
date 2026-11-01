@@ -18513,7 +18513,7 @@
   "kickoff": "2026-11-01T23:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Scheduled",
   "home": {
    "id": "93",
@@ -18669,7 +18669,10 @@
   "close": {
    "O25": 0.5376,
    "H": 0.4874
-  }
+  },
+  "main_hit": true,
+  "bold_hit": true,
+  "value_hit": null
  },
  "401885409": {
   "id": "401885409",
