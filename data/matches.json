@@ -18830,7 +18830,7 @@
   "kickoff": "2026-11-02T00:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Scheduled",
   "home": {
    "id": "14",
@@ -18958,7 +18958,10 @@
   "msg_id": 1832,
   "close": {
    "H": 0.443
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null,
+  "value_hit": null
  },
  "761931": {
   "id": "761931",
