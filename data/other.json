@@ -11394,22 +11394,22 @@
   "kickoff": "2026-11-01T03:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "home": {
+   "color": "5d76a9",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/mem.png",
    "id": "29",
    "name": "Memphis Grizzlies",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/mem.png",
-   "color": "5d76a9",
    "score": "0",
    "record": "5-0",
    "periods": [],
    "ru": "Мемфис Гриззлис"
   },
   "away": {
+   "color": "5a2d81",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/sac.png",
    "id": "23",
    "name": "Sacramento Kings",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/sac.png",
-   "color": "5a2d81",
    "score": "0",
    "record": "0-5",
    "periods": [],
@@ -11483,7 +11483,9 @@
   "msg_id": 1473,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null
  },
  "NBA|401909900": {
   "id": "401909900",
