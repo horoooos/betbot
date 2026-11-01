@@ -12027,31 +12027,31 @@
   "kickoff": "2026-11-01T06:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Sat, October 31st at 11:00 PM EDT",
   "home": {
-   "id": "3641",
-   "name": "Leylah Fernandez",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/3641.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/can.png"
    ],
+   "id": "3641",
+   "name": "Leylah Fernandez",
    "country": "Canada",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
    "ru": "Лейла Фернандес"
   },
   "away": {
-   "id": "8017",
-   "name": "Diana Shnaider",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/8017.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/rus.png"
    ],
+   "id": "8017",
+   "name": "Diana Shnaider",
    "country": "Russia",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
@@ -12110,6 +12110,8 @@
   "msg_id": 1522,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null
  }
 }
