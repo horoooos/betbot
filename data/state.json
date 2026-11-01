@@ -1337,11 +1337,11 @@
   "day": "2026-10-31",
   "done": true
  },
- "streak_posted": 0,
+ "streak_posted": 3,
  "value_day": "2026-10-31",
  "repost_done": "2026-10-31-invite",
  "table_day": "2026-10-31",
- "site_stamp": "275|2026-11-01 05",
+ "site_stamp": "276|2026-11-01 05",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1470,11 +1470,13 @@
      "ce0e2d",
      "007ac1"
     ],
-    "label": "Победа: Хьюстон Рокетс (с ОТ)"
+    "label": "Победа: Хьюстон Рокетс (с ОТ)",
+    "win": true,
+    "score": "119:98"
    }
   ],
   "odds": 14.028636494145001,
   "day": "2026-10-31",
-  "done": false
+  "done": true
  }
 }
