@@ -15240,7 +15240,7 @@
   "kickoff": "2026-11-01T16:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Scheduled",
   "home": {
    "id": "254",
@@ -15387,7 +15387,10 @@
   "msg_id": 1594,
   "close": {
    "A&O15": 0.5716
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null,
+  "value_hit": null
  },
  "401875559": {
   "id": "401875559",
@@ -16489,7 +16492,10 @@
     }
    }
   },
-  "msg_id": 1642
+  "msg_id": 1642,
+  "close": {
+   "O25": 0.5946
+  }
  },
  "401882819": {
   "id": "401882819",
