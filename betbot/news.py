@@ -73,6 +73,19 @@ SCENES = {
                 "esports tournament stage with big screens and spotlights, dark arena"],
 }
 TEXT_API = "https://text.pollinations.ai/openai"
+# Сильные бесплатные нейросети (нужен бесплатный ключ в секретах GitHub). Пробуем по порядку; без ключей —
+# запасная слабая Pollinations, для неё фильтр фактов строже. Названия бесплатных моделей OpenRouter иногда
+# меняются — поэтому несколько кандидатов.
+STRONG = [
+    ("GROQ_KEY", "https://api.groq.com/openai/v1/chat/completions", ["llama-3.3-70b-versatile"]),
+    ("OPENROUTER_KEY", "https://openrouter.ai/api/v1/chat/completions",
+     ["deepseek/deepseek-chat-v3-0324:free", "meta-llama/llama-3.3-70b-instruct:free", "google/gemma-3-27b-it:free"]),
+]
+STRONG_STYLE = (
+    "Пиши как автор популярного спортивного Telegram-канала: цепляющее первое предложение, живой разговорный, "
+    "но грамотный язык, яркие глаголы, без канцелярита. 3–5 предложений, 350–700 символов. Факты, цифры, "
+    "имена и цитаты — ТОЛЬКО из исходника, ничего не придумывай; эмоцию передавай словами, а не выдуманными деталями. "
+)
 PROMPT = (
     "Ты — редактор русскоязычного спортивного Telegram-канала и пишешь как живой спортивный журналист. "
     "Перескажи новость своими словами на РУССКОМ языке, имена — русскими буквами, клубы — в кавычках-ёлочках. "
@@ -155,19 +168,23 @@ def _numbers_ok(sentence: str, item: dict) -> bool:
     return all(n in src for n in re.findall(r"\d+", sentence))
 
 
-def _grounded(text: str, item: dict) -> str:
-    """Оставляет только предложения, которые опираются на исходник: ≥60% значимых слов есть в статье,
-    все числа — из статьи, без «воды». Максимум 3 предложения; меньше одного содержательного — пусто."""
+def _grounded(text: str, item: dict, strict: bool = True) -> str:
+    """Оставляет только предложения, которые опираются на исходник: все числа — из статьи, без «воды».
+
+    strict (слабая нейросеть): ещё и ≥60% значимых слов предложения есть в статье, максимум 3 предложения.
+    Сильная модель пишет живее и своими словами — для неё порог мягче (35%), до 5 предложений.
+    """
     src = _stems(item["title"] + " " + item["desc"] + " " + item.get("body", ""))
+    need, most = (0.6, 3) if strict else (0.35, 5)
     keep = []
     for s in re.split(r"(?<=[.!?…])\s+", text.strip()):
         words = _stems(s) - STOP
         if len(words) < 3 or any(w in s.lower() for w in WATER):
             continue
-        if len(words & src) / len(words) >= 0.6 and _numbers_ok(s, item):
+        if len(words & src) / len(words) >= need and _numbers_ok(s, item):
             keep.append(s)
-    text = " ".join(keep[:3])
-    return text if len(text) >= 90 else ""
+    text = " ".join(keep[:most])
+    return text if len(text) >= (90 if strict else 160) else ""
 
 
 def _cyrillic(text: str) -> float:
@@ -176,21 +193,37 @@ def _cyrillic(text: str) -> float:
     return sum("а" <= c.lower() <= "я" or c.lower() == "ё" for c in letters) / max(len(letters), 1)
 
 
-def _rewrite(item: dict) -> dict | None:
-    body = {"model": "openai", "private": True, "temperature": 0.2,  # меньше «фантазии» — меньше выдуманных фактов
-            "messages": [{"role": "system", "content": PROMPT},
-                         {"role": "user", "content": f"Заголовок: {item['title']}\nОписание: {item['desc']}"
-                                                     + (f"\nТекст статьи: {item['body']}" if item.get("body") else "")}]}
-    data = None
+def _ask(messages: list[dict]) -> tuple[dict | None, bool]:
+    """JSON-ответ нейросети и признак «сильная модель». Сначала бесплатные сильные (если есть ключ), потом Pollinations."""
+    import os
+    for env, url, models in STRONG:
+        key = os.environ.get(env)
+        if not key:
+            continue
+        for model in models:
+            try:
+                r = requests.post(url, timeout=60, headers={"Authorization": f"Bearer {key}"},
+                                  json={"model": model, "temperature": 0.6, "messages": messages})
+                if r.status_code != 200:
+                    continue
+                raw = r.json()["choices"][0]["message"]["content"]
+                return json.loads(raw[raw.index("{"): raw.rindex("}") + 1]), True
+            except Exception:
+                continue
+    body = {"model": "openai", "private": True, "temperature": 0.2, "messages": messages}
     for _ in range(2):  # бесплатная нейросеть иногда отвечает не по формату — даём вторую попытку
         try:
-            r = requests.post(TEXT_API, json=body, timeout=90)
-            raw = r.json()["choices"][0]["message"]["content"]
-            data = json.loads(raw[raw.index("{"): raw.rindex("}") + 1])
-            break
+            raw = requests.post(TEXT_API, json=body, timeout=90).json()["choices"][0]["message"]["content"]
+            return json.loads(raw[raw.index("{"): raw.rindex("}") + 1]), False
         except Exception:
             time.sleep(6)  # бесплатный доступ: при частых запросах отвечает ошибкой — ждём и повторяем
-            continue
+    return None, False
+
+
+def _rewrite(item: dict) -> dict | None:
+    user = {"role": "user", "content": f"Заголовок: {item['title']}\nОписание: {item['desc']}"
+                                       + (f"\nТекст статьи: {item['body']}" if item.get("body") else "")}
+    data, strong = _ask([{"role": "system", "content": STRONG_STYLE + PROMPT}, user])
     if not data:
         return None
     fix = str.maketrans({"‐": "-", "‑": "-", " ": " ", " ": " "})  # «неразрывные» дефисы и пробелы
@@ -206,9 +239,9 @@ def _rewrite(item: dict) -> dict | None:
         return None
     if _cyrillic(title) < 0.4 or _cyrillic(text) < 0.4:  # ответила по-английски — в русский канал не годится
         return None
-    if len(text) > 1.3 * len(item["title"] + " " + item["desc"] + " " + item.get("body", "")) + 40:  # досочинила
+    if len(text) > 1.6 * len(item["title"] + " " + item["desc"] + " " + item.get("body", "")) + 80:  # досочинила
         return None
-    text = _grounded(text, item)
+    text = _grounded(text, item, strict=not strong)
     if not text or not _numbers_ok(title, item):
         return None  # после проверки фактов почти ничего не осталось — новость не выходит
     return {"sport": str(data.get("sport", "")).strip().lower(), "title": title, "text": text,
