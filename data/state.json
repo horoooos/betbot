@@ -5,7 +5,7 @@
  },
  "learned": "2026-11-01",
  "schedule_day": "2026-11-01",
- "content_slot": "2026-10-31-23",
+ "content_slot": "2026-11-01-10",
  "news_seen": [
   "https://www.sports.ru/automoto/blogs/3563795.html",
   "shoot-house-poyavit-sya-v-call-of-duty-modern-warfare-4-v-nachale-noyabrya",
@@ -1282,87 +1282,81 @@
   ]
  },
  "express": {
-  "msg": 974,
+  "msg": 1555,
   "legs": [
    {
     "sport": "football",
-    "div": "P1",
-    "id": "401885404",
-    "side": "home",
-    "p": 0.8025804873574465,
-    "odds": 1.174,
-    "kickoff": "2026-10-31T23:30:00+03:00",
-    "home": "Порту",
-    "away": "Estoril",
-    "league": "🇵🇹 Португалия · Примейра",
-    "logos": [
-     "https://a.espncdn.com/i/teamlogos/soccer/500/437.png",
-     "https://a.espncdn.com/i/teamlogos/soccer/500/12216.png"
-    ],
-    "colors": [
-     "0000dd",
-     "ffea01"
-    ],
-    "label": "Победа: Порту",
-    "win": true,
-    "score": "4:0"
-   },
-   {
-    "sport": "football",
-    "div": "E1",
-    "id": "401880193",
-    "side": "home",
-    "p": 0.7582473986281555,
-    "odds": 1.256,
-    "kickoff": "2026-10-31T18:00:00+03:00",
-    "home": "Мидлсбро",
-    "away": "Чарльтон Атлетик",
-    "league": "🏴󠁧󠁢󠁥󠁮󠁧󠁿 Англия · Чемпионшип",
-    "logos": [
-     "https://a.espncdn.com/i/teamlogos/soccer/500/369.png",
-     "https://a.espncdn.com/i/teamlogos/soccer/500/372.png"
-    ],
-    "colors": [
-     "f42727",
-     "C8142F"
-    ],
-    "label": "Победа: Мидлсбро",
-    "win": true,
-    "score": "3:0"
-   },
-   {
-    "sport": "football",
     "div": "SP1",
-    "id": "401882825",
-    "side": "home",
-    "p": 0.7291890501872289,
-    "odds": 1.303,
-    "kickoff": "2026-10-31T20:30:00+03:00",
-    "home": "Бетис",
-    "away": "Малага",
+    "id": "401882819",
+    "side": "away",
+    "p": 0.7781293769777455,
+    "odds": 1.222,
+    "kickoff": "2026-11-01T18:15:00+03:00",
+    "home": "Racing Santander",
+    "away": "Реал Мадрид",
     "league": "🇪🇸 Испания · Ла Лига",
     "logos": [
-     "https://a.espncdn.com/i/teamlogos/soccer/500/244.png",
-     "https://a.espncdn.com/i/teamlogos/soccer/500/99.png"
+     "https://a.espncdn.com/i/teamlogos/soccer/500/87.png",
+     "https://a.espncdn.com/i/teamlogos/soccer/500/86.png"
     ],
     "colors": [
-     "288A00",
-     "b9e8f0"
+     "ffffff",
+     "ffffff"
     ],
-    "label": "Победа: Бетис",
-    "win": true,
-    "score": "2:1"
+    "label": "Победа: Реал Мадрид"
+   },
+   {
+    "sport": "football",
+    "div": "T1",
+    "id": "401888374",
+    "side": "home",
+    "p": 0.751435779077881,
+    "odds": 1.263,
+    "kickoff": "2026-11-01T13:30:00+03:00",
+    "home": "Amed SFK",
+    "away": "Эюпспор",
+    "league": "🇹🇷 Турция · Суперлига",
+    "logos": [
+     "https://a.espncdn.com/i/teamlogos/soccer/500/132335.png",
+     "https://a.espncdn.com/i/teamlogos/soccer/500/20729.png"
+    ],
+    "colors": [
+     "000000",
+     "000000"
+    ],
+    "label": "Победа: Amed SFK"
+   },
+   {
+    "sport": "football",
+    "div": "T1",
+    "id": "401888263",
+    "side": "home",
+    "p": 0.7492651438012717,
+    "odds": 1.263,
+    "kickoff": "2026-11-01T16:00:00+03:00",
+    "home": "Trabzonspor",
+    "away": "Газиантеп",
+    "league": "🇹🇷 Турция · Суперлига",
+    "logos": [
+     "https://a.espncdn.com/i/teamlogos/soccer/500/997.png",
+     "https://a.espncdn.com/i/teamlogos/soccer/500/20070.png"
+    ],
+    "colors": [
+     "5699eb",
+     "000000"
+    ],
+    "label": "Победа: Trabzonspor"
    }
   ],
-  "odds": 1.9213308319999998,
-  "day": "2026-10-31",
-  "done": true
+  "odds": 1.9492965179999997,
+  "day": "2026-11-01",
+  "done": false
  },
  "streak_posted": 0,
  "value_day": "2026-10-31",
  "repost_done": "2026-10-31-invite",
  "table_day": "2026-10-31",
- "site_stamp": "283|2026-11-01 09",
+ "site_stamp": "283|2026-11-01 10",
  "battle": {
   "bot": 1,
   "crowd": 1
