@@ -82,9 +82,12 @@ STRONG = [
      ["deepseek/deepseek-chat-v3-0324:free", "meta-llama/llama-3.3-70b-instruct:free", "google/gemma-3-27b-it:free"]),
 ]
 STRONG_STYLE = (
-    "Пиши как автор популярного спортивного Telegram-канала: цепляющее первое предложение, живой разговорный, "
-    "но грамотный язык, яркие глаголы, без канцелярита. 3–5 предложений, 350–700 символов. Факты, цифры, "
-    "имена и цитаты — ТОЛЬКО из исходника, ничего не придумывай; эмоцию передавай словами, а не выдуманными деталями. "
+    "Ты — автор популярного спортивного Telegram-канала, тебя читают с удовольствием. Пиши живо и эмоционально: "
+    "первая строка — цепляющий крючок с эмодзи (😱🔥💥⚡️🏆 и т. п. по смыслу), дальше 2–3 коротких абзаца по 1–2 "
+    "предложения, разделённых пустой строкой; в начале абзацев — уместные эмодзи (⚽️🏒🏀🎾🎮📊💬🗓🎯💪😮), всего 3–6 "
+    "эмодзи на текст. Яркие глаголы, разговорный, но грамотный язык, без канцелярита и штампов. 400–800 символов. "
+    "Факты, цифры, имена и цитаты — ТОЛЬКО из исходника, ничего не придумывай: эмоцию передавай подачей и словами, "
+    "а не выдуманными деталями. В поле text абзацы разделяй символами \\n\\n. "
 )
 PROMPT = (
     "Ты — редактор русскоязычного спортивного Telegram-канала и пишешь как живой спортивный журналист. "
@@ -175,15 +178,20 @@ def _grounded(text: str, item: dict, strict: bool = True) -> str:
     Сильная модель пишет живее и своими словами — для неё порог мягче (35%), до 5 предложений.
     """
     src = _stems(item["title"] + " " + item["desc"] + " " + item.get("body", ""))
-    need, most = (0.6, 3) if strict else (0.35, 5)
-    keep = []
-    for s in re.split(r"(?<=[.!?…])\s+", text.strip()):
-        words = _stems(s) - STOP
-        if len(words) < 3 or any(w in s.lower() for w in WATER):
-            continue
-        if len(words & src) / len(words) >= need and _numbers_ok(s, item):
-            keep.append(s)
-    text = " ".join(keep[:most])
+    need, most = (0.6, 3) if strict else (0.35, 7)
+    paras, total = [], 0
+    for para in re.split(r"\n\s*\n|\n", text.strip()):  # абзацы сохраняем — так текст читается легче
+        keep = []
+        for s in re.split(r"(?<=[.!?…])\s+", para.strip()):
+            words = _stems(s) - STOP
+            if len(words) < 3 or any(w in s.lower() for w in WATER):
+                continue
+            if len(words & src) / len(words) >= need and _numbers_ok(s, item) and total < most:
+                keep.append(s)
+                total += 1
+        if keep:
+            paras.append(" ".join(keep))
+    text = ("\n\n" if not strict else " ").join(paras)
     return text if len(text) >= (90 if strict else 160) else ""
 
 
@@ -230,7 +238,7 @@ def _rewrite(item: dict) -> dict | None:
         return None
     fix = str.maketrans({"‐": "-", "‑": "-", " ": " ", " ": " "})  # «неразрывные» дефисы и пробелы
     title, text = str(data.get("title", "")).strip().translate(fix), str(data.get("text", "")).strip().translate(fix)
-    if not (10 <= len(title) <= 110 and 40 <= len(text) <= 700):
+    if not (10 <= len(title) <= 110 and 40 <= len(text) <= 1000):
         return None
     if title.lower() == item["title"].lower():  # нейросеть просто повторила заголовок — не годится
         return None
