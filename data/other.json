@@ -9898,22 +9898,22 @@
   "kickoff": "2026-11-01T21:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "home": {
+   "color": "e30426",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/car.png",
    "id": "7",
    "name": "Carolina Hurricanes",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/car.png",
-   "color": "e30426",
    "score": "0",
    "record": "11-2-2",
    "periods": [],
    "ru": "Каролина"
   },
   "away": {
+   "color": "002d62",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/wpg.png",
    "id": "28",
    "name": "Winnipeg Jets",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/wpg.png",
-   "color": "002d62",
    "score": "0",
    "record": "4-7-3",
    "periods": [],
@@ -10007,7 +10007,9 @@
   "msg_id": 1752,
   "close": {
    "HK_O6.5": 0.4572
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null
  },
  "NHL|401892625": {
   "id": "401892625",
