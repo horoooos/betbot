@@ -878,10 +878,10 @@ PURPLE_BOX = ((200, 150, 255), (110, 50, 210))
 
 
 def _corner_icon(img: Image.Image, sport: str | None) -> Image.Image:
-    """Маленькая иконка вида спорта в левом нижнем углу — всегда на одном месте."""
+    """Маленькая иконка вида спорта в левом верхнем углу — всегда на одном месте, не мешает тексту."""
     if not sport:
         return img
-    return _sport_icon(img, sport, cx=86, cy=H - 72, r=26, alpha=150)
+    return _sport_icon(img, sport, cx=84, cy=80, r=24, alpha=140)
 
 
 def form_dots(d: ImageDraw.ImageDraw, form: str, cx: int, cy: int) -> None:

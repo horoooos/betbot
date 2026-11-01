@@ -41,6 +41,8 @@ SERVICE = ("расписание", "результаты", "трансляц", "
 # при претензии правообладателя выключите (False) — тогда картинки снова рисует нейросеть / фирменный фон.
 SOURCE_PHOTOS = True
 WATER = ("отражает", "вызвал интерес", "вызвало интерес", "стоит отметить", "необходимые мероприятия",
+         "не указан", "без дальнейших", "завершает", "стал частью", "в календаре", "обычный график", "готова продолжать",
+         "показывает, как", "таким образом", "это может", "это решение", "в результате",
          "очередной раз", "не оставил равнодушным", "подчеркнул важность", "станет важным", "это событие",
          "укрепляет позиции", "положительную динамику", "это подтверждает", "повышает шансы", "в целом")
 MIN_DESC = 80  # в новости должно быть хоть какое-то содержание
@@ -139,6 +141,35 @@ def _article(item: dict) -> tuple[str, str | None]:
     return body, (og.group(1) if og else None)
 
 
+def _stems(text: str) -> set[str]:
+    """Основы слов (первые 5 букв), чтобы «победил/победы/победой» считались одним словом."""
+    return {w[:5] for w in re.findall(r"[а-яёa-z]{4,}", text.lower())}
+
+
+STOP = {"котор", "этого", "также", "после", "время", "своей", "своих", "матче", "матча", "против", "между"}
+
+
+def _numbers_ok(sentence: str, item: dict) -> bool:
+    """Каждое число из текста есть в исходнике (счета, туры, возраст) — иначе нейросеть его выдумала."""
+    src = item["title"] + " " + item["desc"] + " " + item.get("body", "")
+    return all(n in src for n in re.findall(r"\d+", sentence))
+
+
+def _grounded(text: str, item: dict) -> str:
+    """Оставляет только предложения, которые опираются на исходник: ≥60% значимых слов есть в статье,
+    все числа — из статьи, без «воды». Максимум 3 предложения; меньше одного содержательного — пусто."""
+    src = _stems(item["title"] + " " + item["desc"] + " " + item.get("body", ""))
+    keep = []
+    for s in re.split(r"(?<=[.!?…])\s+", text.strip()):
+        words = _stems(s) - STOP
+        if len(words) < 3 or any(w in s.lower() for w in WATER):
+            continue
+        if len(words & src) / len(words) >= 0.6 and _numbers_ok(s, item):
+            keep.append(s)
+    text = " ".join(keep[:3])
+    return text if len(text) >= 90 else ""
+
+
 def _cyrillic(text: str) -> float:
     """Доля русских букв среди всех букв (названия команд латиницей вроде «NAVI» допускаются)."""
     letters = [c for c in text if c.isalpha()]
@@ -177,6 +208,9 @@ def _rewrite(item: dict) -> dict | None:
         return None
     if len(text) > 1.3 * len(item["title"] + " " + item["desc"] + " " + item.get("body", "")) + 40:  # досочинила
         return None
+    text = _grounded(text, item)
+    if not text or not _numbers_ok(title, item):
+        return None  # после проверки фактов почти ничего не осталось — новость не выходит
     return {"sport": str(data.get("sport", "")).strip().lower(), "title": title, "text": text,
             "emoji": str(data.get("emoji") or "")[:4]}
 

@@ -24,6 +24,19 @@ _dirty = False
 # Названия, которые Wikidata даёт неудобно длинными или непривычными
 FIXED = {
     # клубы, которые Wikidata путает с городами или находит без русского названия
+    "Arsenal": "Арсенал",
+    "Amed SFK": "Амедспор",
+    "Trabzonspor": "Трабзонспор",
+    "Racing Santander": "Расинг Сантандер",
+    "Braga": "Брага",
+    "SC Braga": "Брага",
+    "Sporting CP": "Спортинг",
+    "Benfica": "Бенфика",
+    "Porto": "Порту",
+    "Besiktas": "Бешикташ",
+    "Galatasaray": "Галатасарай",
+    "Fenerbahce": "Фенербахче",
+    "Basaksehir": "Истанбул Башакшехир",
     "Atlas": "Атлас",
     "Goztepe": "Гёзтепе",
     "Göztepe": "Гёзтепе",

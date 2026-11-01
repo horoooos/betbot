@@ -325,7 +325,8 @@ def post_top(state: dict, football: list[dict], other: list[dict], now: pd.Times
 
 # ── серии заходов ───────────────────────────────────────────────────────────
 
-STREAK_MARKS = (3, 5, 7, 10)  # дальше — каждые 5: 15, 20, 25…
+STREAK_MARKS = (5, 7, 10)  # дальше — каждые 5: 15, 20, 25… (серии по 3 случаются слишком часто)
+STREAK_PER_DAY = 2
 
 
 def _is_mark(n: int) -> bool:
@@ -350,6 +351,12 @@ def post_streak(state: dict, res: pd.DataFrame, brand: str, force: bool = False)
         return
     if n < 3:  # даже по запросу не хвастаемся одним-двумя заходами
         return
+    day = str(pd.Timestamp.now(tz="Europe/Moscow").date())
+    cnt = state.setdefault("streak_day", {})
+    if not force and cnt.get(day, 0) >= STREAK_PER_DAY:
+        return
+    cnt.clear()
+    cnt[day] = cnt.get(day, 0) + 1
     state["streak_posted"] = n
     tail = res.tail(n)
     odds = tail["main_odds"].astype(float)

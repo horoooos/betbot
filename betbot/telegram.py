@@ -107,7 +107,7 @@ def tag(text: str) -> str:
     tail = text.rstrip().rsplit("\n", 1)[-1]
     if tail.startswith("#"):
         return text
-    head = text[:160].upper()
+    head = text.split("\n", 1)[0].upper()
     for word, t in TAGS:
         if word in head:
             return text.rstrip() + f"\n\n{t}"
