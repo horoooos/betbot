@@ -13852,7 +13852,7 @@
   "kickoff": "2026-11-01T04:07:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Scheduled",
   "home": {
    "id": "219",
@@ -13980,7 +13980,10 @@
   "msg_id": 1498,
   "close": {
    "BTTS_Y": 0.5499
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null,
+  "value_hit": null
  },
  "761923": {
   "id": "761923",
