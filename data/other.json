@@ -10425,31 +10425,31 @@
   "kickoff": "2026-11-01T17:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Sun, November 1st at 9:30 AM EST",
   "home": {
-   "id": "3754",
-   "name": "Jiri Lehecka",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/3754.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/cze.png"
    ],
+   "id": "3754",
+   "name": "Jiri Lehecka",
    "country": "Czechia",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
    "ru": "Иржи Леxечка"
   },
   "away": {
-   "id": "9376",
-   "name": "Valentin Vacherot",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/9376.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/mon.png"
    ],
+   "id": "9376",
+   "name": "Valentin Vacherot",
    "country": "Monaco",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
@@ -10508,6 +10508,8 @@
   "msg_id": 1633,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null
  }
 }
