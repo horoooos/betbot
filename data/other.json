@@ -11519,22 +11519,22 @@
   "kickoff": "2026-11-01T01:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "home": {
+   "color": "008ca8",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/cha.png",
    "id": "30",
    "name": "Charlotte Hornets",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/cha.png",
-   "color": "008ca8",
    "score": "0",
    "record": "3-3",
    "periods": [],
    "ru": "Шарлотт Хорнетс"
   },
   "away": {
+   "color": "1d428a",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/phi.png",
    "id": "20",
    "name": "Philadelphia 76ers",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/phi.png",
-   "color": "1d428a",
    "score": "0",
    "record": "5-1",
    "periods": [],
@@ -11608,7 +11608,9 @@
   "msg_id": 1421,
   "close": {
    "BB_ML_A": 0.5825
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null
  },
  "NHL|401892620": {
   "id": "401892620",
