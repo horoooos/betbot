@@ -205,8 +205,10 @@ def _ask(messages: list[dict]) -> tuple[dict | None, bool]:
                 r = requests.post(url, timeout=60, headers={"Authorization": f"Bearer {key}"},
                                   json={"model": model, "temperature": 0.6, "messages": messages})
                 if r.status_code != 200:
+                    print(f"  ! {env} {model}: {r.status_code} {r.text[:150]}")
                     continue
                 raw = r.json()["choices"][0]["message"]["content"]
+                print(f"  нейросеть: {model}")
                 return json.loads(raw[raw.index("{"): raw.rindex("}") + 1]), True
             except Exception:
                 continue
