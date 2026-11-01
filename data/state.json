@@ -5,7 +5,7 @@
  },
  "learned": "2026-11-01",
  "schedule_day": "2026-11-01",
- "content_slot": "2026-11-01-13",
+ "content_slot": "2026-11-01-16",
  "news_seen": [
   "https://www.sports.ru/automoto/blogs/3563795.html",
   "shoot-house-poyavit-sya-v-call-of-duty-modern-warfare-4-v-nachale-noyabrya",
@@ -1378,7 +1378,7 @@
  "value_day": "2026-11-01",
  "repost_done": "2026-11-01-news-lively",
  "table_day": "2026-11-01",
- "site_stamp": "285|2026-11-01 15",
+ "site_stamp": "285|2026-11-01 16",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1515,5 +1515,14 @@
   "day": "2026-10-31",
   "done": true
  },
- "news_next": "2026-11-01T16:13:14.009900+03:00"
+ "news_next": "2026-11-01T16:13:14.009900+03:00",
+ "mod_poll": {
+  "key": "E0|401879246",
+  "id": "401879246",
+  "poll": 1620,
+  "post": 1619,
+  "home": "Ливерпуль",
+  "away": "Арсенал",
+  "kickoff": "2026-11-01T19:30:00+03:00"
+ }
 }
