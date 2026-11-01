@@ -10344,5 +10344,192 @@
   "close": {
    "HK_U6.5": 0.5514
   }
+ },
+ "NBA|401909904": {
+  "id": "401909904",
+  "div": "NBA",
+  "sport": "basketball",
+  "kickoff": "2026-11-02T01:00:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "home": {
+   "id": "11",
+   "name": "Indiana Pacers",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/ind.png",
+   "color": "0c2340",
+   "score": "0",
+   "record": "2-4",
+   "periods": [],
+   "ru": "Индиана Пэйсерс"
+  },
+  "away": {
+   "id": "17",
+   "name": "Brooklyn Nets",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/bkn.png",
+   "color": "000000",
+   "score": "0",
+   "record": "0-5",
+   "periods": [],
+   "ru": "Бруклин Нетс"
+  },
+  "odds": {
+   "H": 1.588,
+   "A": 2.42,
+   "line": 230.5,
+   "over": 1.893,
+   "under": 1.926,
+   "spread": -3.5,
+   "sp_h": 1.893,
+   "sp_a": 1.926
+  },
+  "probs": {
+   "BB_ML_H": 0.6147292511447229,
+   "BB_ML_A": 0.3852707488552771,
+   "BB_SPR_H": 0.5,
+   "BB_SPR_A": 0.5,
+   "BB_O223.5": 0.6597440535491568,
+   "BB_U223.5": 0.3402559464508432,
+   "BB_O230.5": 0.5,
+   "BB_U230.5": 0.5,
+   "BB_O237.5": 0.3402559464508432,
+   "BB_U237.5": 0.6597440535491568
+  },
+  "labels": {
+   "BB_ML_H": "П1 (с ОТ)",
+   "BB_ML_A": "П2 (с ОТ)",
+   "BB_SPR_H": "Ф1 (-3.5)",
+   "BB_SPR_A": "Ф2 (+3.5)",
+   "BB_O223.5": "ТБ 223.5",
+   "BB_U223.5": "ТМ 223.5",
+   "BB_O230.5": "ТБ 230.5",
+   "BB_U230.5": "ТМ 230.5",
+   "BB_O237.5": "ТБ 237.5",
+   "BB_U237.5": "ТМ 237.5"
+  },
+  "real": {
+   "BB_ML_H": 1.588,
+   "BB_ML_A": 2.42,
+   "BB_SPR_H": 1.893,
+   "BB_SPR_A": 1.926,
+   "BB_O230.5": 1.893,
+   "BB_U230.5": 1.926
+  },
+  "center": "Ожидаемый счёт 117 : 114",
+  "bar": [
+   0.6147292511447229,
+   0,
+   0.3852707488552771
+  ],
+  "model": {
+   "mu": 3.5,
+   "T": 230.5
+  },
+  "main": {
+   "key": "BB_ML_H",
+   "label": "П1 (с ОТ)",
+   "p": 0.6147,
+   "odds": 1.59,
+   "est": false,
+   "stake": 1.0
+  },
+  "bold": {},
+  "open": {
+   "BB_ML_H": 0.6147
+  },
+  "top": true,
+  "msg_id": 1846
+ },
+ "WTA|185819": {
+  "id": "185819",
+  "div": "WTA",
+  "sport": "tennis",
+  "tournament": "Queretaro Open",
+  "round": "Final",
+  "bo5": false,
+  "kickoff": "2026-11-02T01:00:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "detail": "Sun, November 1st at 5:00 PM EST",
+  "home": {
+   "id": "2346",
+   "name": "Tatjana Maria",
+   "logo": [
+    "https://a.espncdn.com/i/headshots/tennis/players/full/2346.png",
+    "https://a.espncdn.com/i/teamlogos/countries/500/ger.png"
+   ],
+   "country": "Germany",
+   "color": "2d6a4f",
+   "winner": false,
+   "sets": [],
+   "set_won": [],
+   "ru": "Татьяна Мария"
+  },
+  "away": {
+   "id": "2979",
+   "name": "Bianca Andreescu",
+   "logo": [
+    "https://a.espncdn.com/i/headshots/tennis/players/full/2979.png",
+    "https://a.espncdn.com/i/teamlogos/countries/500/can.png"
+   ],
+   "country": "Canada",
+   "color": "2d6a4f",
+   "winner": false,
+   "sets": [],
+   "set_won": [],
+   "ru": "Бьянка Андрееску"
+  },
+  "odds": {},
+  "probs": {
+   "TN_W1": 0.4217820874237493,
+   "TN_W2": 0.5782179125762508,
+   "TN_3S": 0.4945217994060984,
+   "TN_2S": 0.5054782005939016,
+   "TN_S2:0": 0.20040268566095595,
+   "TN_S0:2": 0.3050755149329456,
+   "TN_S2:1": 0.2213794017627934,
+   "TN_S1:2": 0.27314239764330506,
+   "TN_SET1": 0.6949244850670544,
+   "TN_SET2": 0.799597314339044
+  },
+  "labels": {
+   "TN_W1": "Победа: Татьяна Мария",
+   "TN_W2": "Победа: Бьянка Андрееску",
+   "TN_3S": "Будет 3 сета",
+   "TN_2S": "Будет 2 сета",
+   "TN_S2:0": "Счёт по сетам 2:0",
+   "TN_S0:2": "Счёт по сетам 0:2",
+   "TN_S2:1": "Счёт по сетам 2:1",
+   "TN_S1:2": "Счёт по сетам 1:2",
+   "TN_SET1": "Татьяна Мария возьмёт хотя бы сет",
+   "TN_SET2": "Бьянка Андрееску возьмёт хотя бы сет"
+  },
+  "real": {},
+  "center": "Рейтинг Эло 1688 : 1742",
+  "bar": [
+   0.4217820874237493,
+   0,
+   0.5782179125762508
+  ],
+  "model": {
+   "elo": [
+    1687.5870515059246,
+    1742.3884153826637
+   ],
+   "src": "Эло"
+  },
+  "main": {
+   "key": "TN_W2",
+   "label": "Победа: Бьянка Андрееску",
+   "p": 0.5782,
+   "odds": 1.61,
+   "est": true,
+   "stake": 1.0
+  },
+  "bold": {},
+  "open": {},
+  "top": false,
+  "msg_id": 1848
  }
 }
