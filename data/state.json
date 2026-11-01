@@ -1397,11 +1397,11 @@
   "day": "2026-11-01",
   "done": false
  },
- "streak_posted": 0,
+ "streak_posted": 5,
  "value_day": "2026-11-01",
  "repost_done": "2026-11-01-news-lively",
  "table_day": "2026-11-01",
- "site_stamp": "294|2026-11-01 18",
+ "site_stamp": "295|2026-11-01 18",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1547,5 +1547,8 @@
   "home": "Ливерпуль",
   "away": "Арсенал",
   "kickoff": "2026-11-01T19:30:00+03:00"
+ },
+ "streak_day": {
+  "2026-11-01": 1
  }
 }
