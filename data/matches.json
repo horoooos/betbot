@@ -17215,7 +17215,7 @@
   "kickoff": "2026-11-01T19:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Scheduled",
   "home": {
    "id": "125",
@@ -17345,7 +17345,10 @@
   "msg_id": 1702,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null,
+  "value_hit": null
  },
  "401879818": {
   "status": "skipped",
