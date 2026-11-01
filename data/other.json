@@ -11224,22 +11224,22 @@
   "kickoff": "2026-11-01T02:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "home": {
+   "color": "c41230",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/mtl.png",
    "id": "10",
    "name": "Montreal Canadiens",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/mtl.png",
-   "color": "c41230",
    "score": "0",
    "record": "8-3-2",
    "periods": [],
    "ru": "Монреаль"
   },
   "away": {
+   "color": "000000",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/pit.png",
    "id": "16",
    "name": "Pittsburgh Penguins",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/pit.png",
-   "color": "000000",
    "score": "0",
    "record": "5-6-2",
    "periods": [],
@@ -11342,7 +11342,9 @@
   "close": {
    "HK_O6.5": 0.5174,
    "HK_ML_A": 0.4782
-  }
+  },
+  "main_hit": true,
+  "bold_hit": false
  },
  "NHL|401892621": {
   "id": "401892621",
@@ -12475,6 +12477,9 @@
    "HK_O6.5": 0.5
   },
   "top": false,
-  "msg_id": 1513
+  "msg_id": 1513,
+  "close": {
+   "HK_O6.5": 0.5
+  }
  }
 }
