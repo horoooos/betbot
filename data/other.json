@@ -11469,22 +11469,22 @@
   "kickoff": "2026-11-01T02:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "home": {
+   "color": "0a2240",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/no.png",
    "id": "3",
    "name": "New Orleans Pelicans",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/no.png",
-   "color": "0a2240",
    "score": "0",
    "record": "1-4",
    "periods": [],
    "ru": "Нью-Орлеан Пеликанс"
   },
   "away": {
+   "color": "c8102e",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/atl.png",
    "id": "1",
    "name": "Atlanta Hawks",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/atl.png",
-   "color": "c8102e",
    "score": "0",
    "record": "3-3",
    "periods": [],
@@ -11558,7 +11558,9 @@
   "msg_id": 1455,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null
  },
  "NHL|401892622": {
   "id": "401892622",
