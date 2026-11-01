@@ -11996,31 +11996,31 @@
   "kickoff": "2026-11-01T04:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Sat, October 31st at 9:30 PM EDT",
   "home": {
-   "id": "2979",
-   "name": "Bianca Andreescu",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/2979.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/can.png"
    ],
+   "id": "2979",
+   "name": "Bianca Andreescu",
    "country": "Canada",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
    "ru": "Бьянка Андрееску"
   },
   "away": {
-   "id": "5299",
-   "name": "Carole Monnet",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/5299.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/fra.png"
    ],
+   "id": "5299",
+   "name": "Carole Monnet",
    "country": "France",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
@@ -12079,7 +12079,9 @@
   "msg_id": 1507,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null
  },
  "NHL|401892623": {
   "id": "401892623",
