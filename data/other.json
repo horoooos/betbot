@@ -8944,31 +8944,31 @@
   "kickoff": "2026-11-02T14:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Mon, November 2nd at 6:30 AM EST",
   "home": {
-   "id": "8814",
-   "name": "Luca Van Assche",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/8814.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/fra.png"
    ],
+   "id": "8814",
+   "name": "Luca Van Assche",
    "country": "France",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
    "ru": "Люка Ван Аш"
   },
   "away": {
-   "id": "9992",
-   "name": "Mariano Navone",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/9992.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/arg.png"
    ],
+   "id": "9992",
+   "name": "Mariano Navone",
    "country": "Argentina",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
@@ -9027,7 +9027,9 @@
   "msg_id": 1960,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null
  },
  "ATP|186468": {
   "id": "186468",
