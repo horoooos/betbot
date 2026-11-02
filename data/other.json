@@ -9041,31 +9041,31 @@
   "kickoff": "2026-11-02T14:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Mon, November 2nd at 6:30 AM EST",
   "home": {
-   "id": "2970",
-   "name": "Alejandro Tabilo",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/2970.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/chi.png"
    ],
+   "id": "2970",
+   "name": "Alejandro Tabilo",
    "country": "Chile",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
    "ru": "Алежандро Табило"
   },
   "away": {
-   "id": "12657",
-   "name": "Rafael Jodar",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/12657.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/esp.png"
    ],
+   "id": "12657",
+   "name": "Rafael Jodar",
    "country": "Spain",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
@@ -9124,7 +9124,9 @@
   "msg_id": 1962,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null
  },
  "WTA|186618": {
   "status": "skipped",
