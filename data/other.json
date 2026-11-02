@@ -8750,31 +8750,31 @@
   "kickoff": "2026-11-02T19:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Mon, November 2nd at 11:00 AM EST",
   "home": {
-   "id": "2635",
-   "name": "Alex Molcan",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/2635.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/svk.png"
    ],
+   "id": "2635",
+   "name": "Alex Molcan",
    "country": "Slovakia",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
    "ru": "Алекс Молчан"
   },
   "away": {
-   "id": "8136",
-   "name": "Titouan Droguet",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/8136.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/fra.png"
    ],
+   "id": "8136",
+   "name": "Titouan Droguet",
    "country": "France",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
@@ -8833,7 +8833,9 @@
   "msg_id": 1990,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null
  },
  "WTA|186711": {
   "id": "186711",
