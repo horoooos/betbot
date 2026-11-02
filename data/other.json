@@ -8859,31 +8859,31 @@
   "kickoff": "2026-11-02T16:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Mon, November 2nd at 8:00 AM EST",
   "home": {
-   "id": "10239",
-   "name": "Daniel Merida",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/10239.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/esp.png"
    ],
+   "id": "10239",
+   "name": "Daniel Merida",
    "country": "Spain",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
    "ru": "Даниэль Мерида"
   },
   "away": {
-   "id": "3340",
-   "name": "Sebastian Baez",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/3340.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/arg.png"
    ],
+   "id": "3340",
+   "name": "Sebastian Baez",
    "country": "Argentina",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
@@ -8942,7 +8942,9 @@
   "msg_id": 1969,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null
  },
  "ATP|186448": {
   "id": "186448",
