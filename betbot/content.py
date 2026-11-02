@@ -433,14 +433,14 @@ def facts(res: pd.DataFrame, now, brand) -> bool:
     if streak >= 3:
         lines.append(f"🔥 Сейчас серия: <b>{streak}</b> основных прогнозов подряд зашли!")
     lines.append("\n<i>Вся статистика считается честно — по каждому опубликованному прогнозу.</i>")
-    # цифры рисуем сами: нейросеть вместо графиков рисует кракозябры
-    details = [f"Всего прогнозов: {len(res)} · зашло {int(hit.sum())}"]
-    if len(best):
-        details.append(f"Самый крупный зашедший кэф: {best.iloc[0]['main_odds']:.2f}")
-    if streak >= 3:
-        details.append(f"Сейчас серия: {streak} заходов подряд")
-    png = card.slide_card("цифры дня", _pct(hit.mean()), "основной прогноз заходит", details,
-                          ((40, 200, 190), (70, 90, 220)), accent=(40, 205, 190), brand=brand)
+    # цифры рисуем сами, в стиле канала: нейросеть вместо графиков рисует кракозябры
+    sp = res.assign(h=hit, s=res["sport"].fillna("football") if "sport" in res else "football")
+    by_sp = sp.groupby("s")["h"].agg(["size", "mean"]).sort_values("size", ascending=False)
+    sports_rows = [(SPORT_RU.get(s, s), s, float(v["mean"]), int(v["size"])) for s, v in by_sp.iterrows()]
+    last_day = sp[sp["date"] == sp["date"].max()]
+    best_t = (float(best.iloc[0]["main_odds"]), f"{best.iloc[0]['home']} — {best.iloc[0]['away']}") if len(best) else (0.0, "—")
+    png = card.facts_card(float(hit.mean()), int(hit.sum()), len(res), sports_rows,
+                          (int(last_day["h"].sum()), len(last_day)), best_t, f"{now.day} {MONTHS[now.month - 1]}", brand)
     _post(png, "\n".join(lines))
     return True
 

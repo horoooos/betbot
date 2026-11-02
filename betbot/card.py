@@ -994,3 +994,68 @@ def invite_card(stats: list[tuple[str, str]], bullets: list[str], channel: str, 
            fill=(30, 22, 6), anchor="mm")
     d.text((W / 2, 672), "бесплатно · 18+ · ставь с умом", font=font(20, "Medium"), fill=MUTED, anchor="mm")
     return _png(img, d, brand)
+
+
+def _glass(img: Image.Image, box: tuple, c1: tuple, c2: tuple, radius: int = 28) -> Image.Image:
+    """Стеклянная панель как в «Прогнозах дня»: полупрозрачная, со светлой обводкой и цветной полосой сверху."""
+    x0, y0, x1, y1 = box
+    w, h = x1 - x0, y1 - y0
+    panel = Image.new("RGBA", (w, h), (0, 0, 0, 0))
+    pd_ = ImageDraw.Draw(panel)
+    pd_.rounded_rectangle((0, 0, w - 1, h - 1), radius=radius, fill=(18, 24, 50, 215), outline=(255, 255, 255, 40), width=2)
+    for k in range(w):
+        pd_.line([(k, 0), (k, 8)], fill=_mix(c1, c2, k / w) + (255,))
+    mask = Image.new("L", panel.size, 0)
+    ImageDraw.Draw(mask).rounded_rectangle((0, 0, w - 1, h - 1), radius=radius, fill=255)
+    img.paste(panel, (x0, y0), Image.composite(panel, Image.new("RGBA", panel.size), mask).split()[3])
+    return img
+
+
+def _bar(d: ImageDraw.ImageDraw, x0: int, x1: int, y: int, p: float, color: tuple) -> None:
+    d.rounded_rectangle((x0, y, x1, y + 8), radius=4, fill=(52, 60, 96))
+    d.rounded_rectangle((x0, y, x0 + max(8, (x1 - x0) * min(max(p, 0), 1)), y + 8), radius=4, fill=color)
+
+
+def facts_card(pct: float, hits: int, total: int, sports: list[tuple[str, str, float, int]],
+               last_day: tuple[int, int], best: tuple[float, str], day: str, brand: str = "") -> bytes:
+    """📊 Цифры дня в стиле канала: заголовок, три «билета» с главными цифрами и панель по видам спорта."""
+    green, teal, gold, purple = (46, 204, 113), (40, 205, 190), (255, 196, 0), (170, 100, 255)
+    img, d = _background((40, 200, 190), (120, 70, 230), style=random.choice(("rays", "diagonal", "blobs")))
+    d.text((W / 2, 62), "ЦИФРЫ ДНЯ", font=font(54, "ExtraBold"), fill=WHITE, anchor="mm")
+    hw = d.textlength("ЦИФРЫ ДНЯ", font=font(54, "ExtraBold")) / 2
+    d.line([(W / 2 - hw, 98), (W / 2 + hw, 98)], fill=ACCENT, width=4)
+    d.text((W / 2, 124), f"{day.upper()} · ЧЕСТНАЯ СТАТИСТИКА БОТА", font=font(22, "Medium"), fill=MUTED, anchor="mm")
+
+    lh, ln = last_day
+    tiles = [("ОСНОВНОЙ ЗАХОДИТ", f"{100 * pct:.0f}%", f"{hits} из {total} прогнозов", pct, (teal, green), green),
+             ("ПОСЛЕДНИЙ ДЕНЬ", f"{lh}/{ln}", f"{100 * lh / ln:.0f}% заходов" if ln else "—", lh / ln if ln else 0,
+              (gold, (255, 120, 60)), gold),
+             ("ЛУЧШИЙ ЗАШЕДШИЙ КЭФ", f"{best[0]:.2f}", best[1], None, (purple, (60, 140, 255)), purple)]
+    cw, gap = 372, 22
+    x0 = (W - 3 * cw - 2 * gap) // 2
+    for i, (label, big, sub, p, cols, accent) in enumerate(tiles):
+        x = x0 + i * (cw + gap)
+        img = _glass(img, (x, 156, x + cw, 380), *cols)
+        d = ImageDraw.Draw(img)
+        cx = x + cw // 2
+        d.text((cx, 196), label, font=font(19, "ExtraBold"), fill=MUTED, anchor="mm")
+        d.text((cx, 266), big, font=font(76, "ExtraBold"), fill=WHITE, anchor="mm")
+        d.text((cx, 326), sub, font=_fit(d, sub, 20, cw - 50, "Medium"), fill=(210, 216, 235), anchor="mm")
+        if p is not None:
+            _bar(d, x + 40, x + cw - 40, 350, p, accent)
+
+    img = _glass(img, (x0, 404, W - x0, 668), teal, purple)
+    d = ImageDraw.Draw(img)
+    d.text((W / 2, 440), "ПО ВИДАМ СПОРТА", font=font(20, "ExtraBold"), fill=MUTED, anchor="mm")
+    rows = sports[:4]
+    colw = (W - 2 * x0 - 40) / max(len(rows), 1)
+    for i, (name, _sport, p, n) in enumerate(rows):
+        cx = x0 + 20 + colw * (i + 0.5)
+        col = green if p >= 0.6 else gold if p >= 0.5 else (231, 76, 60)
+        d.text((cx, 490), name.upper(), font=font(20, "ExtraBold"), fill=WHITE, anchor="mm")
+        d.text((cx, 556), f"{100 * p:.0f}%", font=font(58, "ExtraBold"), fill=col, anchor="mm")
+        _bar(d, int(cx - colw / 2 + 30), int(cx + colw / 2 - 30), 602, p, col)
+        d.text((cx, 636), f"{n} прогнозов", font=font(17, "Medium"), fill=MUTED, anchor="mm")
+        if i:
+            d.line([(cx - colw / 2, 474), (cx - colw / 2, 646)], fill=(70, 80, 120), width=2)
+    return _png(img, d, brand)
