@@ -19525,7 +19525,7 @@
   "kickoff": "2026-11-02T04:10:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Scheduled",
   "home": {
    "id": "218",
@@ -19653,7 +19653,10 @@
   "msg_id": 1892,
   "close": {
    "H": 0.5581
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null,
+  "value_hit": null
  },
  "761921": {
   "id": "761921",
