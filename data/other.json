@@ -8648,5 +8648,189 @@
  "CS2|1761572": {
   "status": "skipped",
   "kickoff": "2026-11-02T10:00:00+03:00"
+ },
+ "WTA|186622": {
+  "id": "186622",
+  "div": "WTA",
+  "sport": "tennis",
+  "tournament": "Prudential Hong Kong Tennis Open",
+  "round": "Round 1",
+  "bo5": false,
+  "kickoff": "2026-11-02T10:30:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "detail": "Mon, November 1st at 2:30 AM EST",
+  "home": {
+   "id": "3746",
+   "name": "Katie Volynets",
+   "logo": [
+    "https://a.espncdn.com/i/headshots/tennis/players/full/3746.png",
+    "https://a.espncdn.com/i/teamlogos/countries/500/usa.png"
+   ],
+   "country": "USA",
+   "color": "2d6a4f",
+   "winner": false,
+   "sets": [],
+   "set_won": [],
+   "ru": "Кэти Волынец"
+  },
+  "away": {
+   "id": "1809",
+   "name": "Aliaksandra Sasnovich",
+   "logo": [
+    "https://a.espncdn.com/i/headshots/tennis/players/full/1809.png",
+    "https://a.espncdn.com/i/teamlogos/countries/500/blr.png"
+   ],
+   "country": "Belarus",
+   "color": "2d6a4f",
+   "winner": false,
+   "sets": [],
+   "set_won": [],
+   "ru": "Александра Саснович"
+  },
+  "odds": {},
+  "probs": {
+   "TN_W1": 0.5360488923409203,
+   "TN_W2": 0.46395110765907965,
+   "TN_3S": 0.4988430848499861,
+   "TN_2S": 0.5011569151500139,
+   "TN_S2:0": 0.2746296025582913,
+   "TN_S0:2": 0.22652731259172265,
+   "TN_S2:1": 0.26141928978262885,
+   "TN_S1:2": 0.23742379506735722,
+   "TN_SET1": 0.7734726874082773,
+   "TN_SET2": 0.7253703974417087
+  },
+  "labels": {
+   "TN_W1": "Победа: Кэти Волынец",
+   "TN_W2": "Победа: Александра Саснович",
+   "TN_3S": "Будет 3 сета",
+   "TN_2S": "Будет 2 сета",
+   "TN_S2:0": "Счёт по сетам 2:0",
+   "TN_S0:2": "Счёт по сетам 0:2",
+   "TN_S2:1": "Счёт по сетам 2:1",
+   "TN_S1:2": "Счёт по сетам 1:2",
+   "TN_SET1": "Кэти Волынец возьмёт хотя бы сет",
+   "TN_SET2": "Александра Саснович возьмёт хотя бы сет"
+  },
+  "real": {},
+  "center": "Рейтинг Эло 1621 : 1595",
+  "bar": [
+   0.5360488923409203,
+   0,
+   0.46395110765907965
+  ],
+  "model": {
+   "elo": [
+    1620.5734048139202,
+    1595.4805300004186
+   ],
+   "src": "Эло"
+  },
+  "main": {
+   "key": "TN_2S",
+   "label": "Будет 2 сета",
+   "p": 0.5012,
+   "odds": 1.86,
+   "est": true,
+   "stake": 1.0
+  },
+  "bold": {},
+  "open": {},
+  "top": false,
+  "msg_id": 1932
+ },
+ "WTA|186620": {
+  "id": "186620",
+  "div": "WTA",
+  "sport": "tennis",
+  "tournament": "Prudential Hong Kong Tennis Open",
+  "round": "Round 1",
+  "bo5": false,
+  "kickoff": "2026-11-02T10:30:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "detail": "Mon, November 1st at 2:30 AM EST",
+  "home": {
+   "id": "17105",
+   "name": "Carol Young Suh Lee",
+   "logo": [
+    "https://a.espncdn.com/i/headshots/tennis/players/full/17105.png",
+    "https://a.espncdn.com/i/teamlogos/countries/500/usa.png"
+   ],
+   "country": "USA",
+   "color": "2d6a4f",
+   "winner": false,
+   "sets": [],
+   "set_won": [],
+   "ru": "Кэрол Ли"
+  },
+  "away": {
+   "id": "3018",
+   "name": "Maria Sakkari",
+   "logo": [
+    "https://a.espncdn.com/i/headshots/tennis/players/full/3018.png",
+    "https://a.espncdn.com/i/teamlogos/countries/500/gre.png"
+   ],
+   "country": "Greece",
+   "color": "2d6a4f",
+   "winner": false,
+   "sets": [],
+   "set_won": [],
+   "ru": "Мария Саккари"
+  },
+  "odds": {},
+  "probs": {
+   "TN_W1": 0.24012173734042067,
+   "TN_W2": 0.7598782626595794,
+   "TN_3S": 0.43434585670487874,
+   "TN_2S": 0.5656541432951213,
+   "TN_S2:0": 0.10164464521618558,
+   "TN_S0:2": 0.4640094980789357,
+   "TN_S2:1": 0.1384770921242351,
+   "TN_S1:2": 0.29586876458064365,
+   "TN_SET1": 0.5359905019210642,
+   "TN_SET2": 0.8983553547838145
+  },
+  "labels": {
+   "TN_W1": "Победа: Кэрол Ли",
+   "TN_W2": "Победа: Мария Саккари",
+   "TN_3S": "Будет 3 сета",
+   "TN_2S": "Будет 2 сета",
+   "TN_S2:0": "Счёт по сетам 2:0",
+   "TN_S0:2": "Счёт по сетам 0:2",
+   "TN_S2:1": "Счёт по сетам 2:1",
+   "TN_S1:2": "Счёт по сетам 1:2",
+   "TN_SET1": "Кэрол Ли возьмёт хотя бы сет",
+   "TN_SET2": "Мария Саккари возьмёт хотя бы сет"
+  },
+  "real": {},
+  "center": "Рейтинг Эло 1474 : 1674",
+  "bar": [
+   0.24012173734042067,
+   0,
+   0.7598782626595794
+  ],
+  "model": {
+   "elo": [
+    1473.7973383920412,
+    1673.9223560664675
+   ],
+   "src": "Эло"
+  },
+  "main": {
+   "key": "TN_2S",
+   "label": "Будет 2 сета",
+   "p": 0.5657,
+   "odds": 1.64,
+   "est": true,
+   "stake": 1.0
+  },
+  "bold": {},
+  "open": {},
+  "top": false,
+  "msg_id": 1934
  }
 }
