@@ -8566,31 +8566,31 @@
   "kickoff": "2026-11-02T10:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Mon, November 1st at 2:30 AM EST",
   "home": {
-   "id": "17105",
-   "name": "Carol Young Suh Lee",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/17105.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/usa.png"
    ],
+   "id": "17105",
+   "name": "Carol Young Suh Lee",
    "country": "USA",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
    "ru": "Кэрол Ли"
   },
   "away": {
-   "id": "3018",
-   "name": "Maria Sakkari",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/3018.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/gre.png"
    ],
+   "id": "3018",
+   "name": "Maria Sakkari",
    "country": "Greece",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
@@ -8649,7 +8649,9 @@
   "msg_id": 1934,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null
  },
  "CS2|1761575": {
   "status": "skipped",
