@@ -8855,31 +8855,31 @@
   "kickoff": "2026-11-02T20:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Mon, November 2nd at 12:30 PM EST",
   "home": {
-   "id": "3839",
-   "name": "Selena Janicijevic",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/3839.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/fra.png"
    ],
+   "id": "3839",
+   "name": "Selena Janicijevic",
    "country": "France",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
    "ru": "Селена Яничевич"
   },
   "away": {
-   "id": "6500",
-   "name": "Solana Sierra",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/6500.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/arg.png"
    ],
+   "id": "6500",
+   "name": "Solana Sierra",
    "country": "Argentina",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
@@ -8938,7 +8938,9 @@
   "msg_id": 2003,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null
  },
  "ATP|186466": {
   "id": "186466",
