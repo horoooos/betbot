@@ -8461,31 +8461,31 @@
   "kickoff": "2026-11-02T09:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Mon, November 1st at 1:00 AM EST",
   "home": {
-   "id": "2458",
-   "name": "Viktorija Golubic",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/2458.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/sui.png"
    ],
+   "id": "2458",
+   "name": "Viktorija Golubic",
    "country": "Switzerland",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
    "ru": "Виктория Голубич"
   },
   "away": {
-   "id": "2054",
-   "name": "Katie Boulter",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/2054.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/gbr.png"
    ],
+   "id": "2054",
+   "name": "Katie Boulter",
    "country": "Great Britain",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
@@ -8544,7 +8544,9 @@
   "msg_id": 1922,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null
  },
  "CS2|1761576": {
   "status": "skipped",
