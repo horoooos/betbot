@@ -297,8 +297,7 @@ def match_of_day(football: list[dict], now, brand, state: dict | None = None) ->
     text = (f"⭐ <b>МАТЧ ДНЯ</b>\n\n⚽️ <b>{escape(e['home']['ru'])} — {escape(e['away']['ru'])}</b>\n"
             f"🏆 {_sport_title(e)}\n⏰ {k:%H:%M} МСК{odds_line}\n\n"
             "Полный разбор с прогнозом бот выложит примерно за час до начала. А как думаешь ты? 👇")
-    png = card.ai_card(f"epic soccer match atmosphere, soccer ball, {e['home']['name']} versus {e['away']['name']}, stadium at night, "
-                       "fans, flares, cinematic", "Матч дня", f"{e['home']['ru']} — {e['away']['ru']} · {k:%H:%M} МСК", brand)
+    png = card.ai_card("epic soccer match atmosphere, soccer ball on the pitch, stadium at night, floodlights, flares, cinematic", "Матч дня", f"{e['home']['ru']} — {e['away']['ru']} · {k:%H:%M} МСК", brand)
     mid = _post(png, text)
     poll = telegram.send_poll(f"Кто победит: {e['home']['ru']} — {e['away']['ru']}?",
                               [f"П1 · {e['home']['ru']}", "Ничья", f"П2 · {e['away']['ru']}"], reply_to=mid)
@@ -434,8 +433,14 @@ def facts(res: pd.DataFrame, now, brand) -> bool:
     if streak >= 3:
         lines.append(f"🔥 Сейчас серия: <b>{streak}</b> основных прогнозов подряд зашли!")
     lines.append("\n<i>Вся статистика считается честно — по каждому опубликованному прогнозу.</i>")
-    png = card.ai_card("futuristic sports analytics dashboard, glowing charts, dark blue, cinematic", "Цифры дня",
-                       f"Основной прогноз заходит в {_pct(hit.mean())}", brand)
+    # цифры рисуем сами: нейросеть вместо графиков рисует кракозябры
+    details = [f"Всего прогнозов: {len(res)} · зашло {int(hit.sum())}"]
+    if len(best):
+        details.append(f"Самый крупный зашедший кэф: {best.iloc[0]['main_odds']:.2f}")
+    if streak >= 3:
+        details.append(f"Сейчас серия: {streak} заходов подряд")
+    png = card.slide_card("цифры дня", _pct(hit.mean()), "основной прогноз заходит", details,
+                          ((40, 200, 190), (70, 90, 220)), accent=(40, 205, 190), brand=brand)
     _post(png, "\n".join(lines))
     return True
 

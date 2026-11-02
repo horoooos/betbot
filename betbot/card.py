@@ -365,7 +365,9 @@ def ai_card(prompt: str, title: str, subtitle: str = "", brand: str = "", sport:
     img = None
     for _ in range(2):
         try:
-            r = requests.get(AI_URL.format(prompt=quote(prompt), seed=random.randint(1, 10 ** 6)), timeout=90)
+            # нейросети не умеют рисовать буквы и цифры — получаются кракозябры, поэтому запрещаем любой текст
+            full = f"{prompt}, no text, no letters, no numbers, no words, no logos, no signs, no scoreboard, no watermark"
+            r = requests.get(AI_URL.format(prompt=quote(full), seed=random.randint(1, 10 ** 6)), timeout=90)
             if r.ok and r.headers.get("content-type", "").startswith("image"):
                 img = Image.open(io.BytesIO(r.content)).convert("RGB").resize((W, 780)).crop((0, 0, W, H))  # без водяного знака
                 break
