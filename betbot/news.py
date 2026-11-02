@@ -76,18 +76,55 @@ TEXT_API = "https://text.pollinations.ai/openai"
 # Сильные бесплатные нейросети (нужен бесплатный ключ в секретах GitHub). Пробуем по порядку; без ключей —
 # запасная слабая Pollinations, для неё фильтр фактов строже. Названия бесплатных моделей OpenRouter иногда
 # меняются — поэтому несколько кандидатов.
+# Бесплатные модели постоянно меняются (их убирают или переводят в платные), поэтому список не зашит:
+# бот сам спрашивает у сервиса доступные модели и берёт лучшую по нашему рейтингу.
 STRONG = [
-    ("GROQ_KEY", "https://api.groq.com/openai/v1/chat/completions", ["llama-3.3-70b-versatile"]),
-    ("OPENROUTER_KEY", "https://openrouter.ai/api/v1/chat/completions",
-     ["deepseek/deepseek-chat-v3-0324:free", "meta-llama/llama-3.3-70b-instruct:free", "google/gemma-3-27b-it:free"]),
+    ("GROQ_KEY", "https://api.groq.com/openai/v1", ("kimi-k2", "llama-4-maverick", "gpt-oss-120b", "qwen3", "llama-3.3-70b",
+                                                    "deepseek", "llama-4-scout", "gemma", "llama")),
+    ("OPENROUTER_KEY", "https://openrouter.ai/api/v1", ("gemma-4-31b", "nemotron-3-ultra", "deepseek", "qwen3", "llama-4",
+                                                        "gemma-4", "kimi", "llama-3.3", "openrouter/free")),
 ]
+SKIP = ("whisper", "guard", "tts", "orpheus", "safety", "code", "omni", "lyria", "vision", "-vl", "lightning", "nano",
+        "embed", "compound", "audio", "2.6b", "mini")
+_models_cache: dict[str, list[str]] = {}
+
+
+def _models(env: str, base: str, rank: tuple, key: str) -> list[str]:
+    """Лучшие доступные бесплатные модели сервиса (до 3), по нашему рейтингу. Кэш — на один запуск бота."""
+    if env in _models_cache:
+        return _models_cache[env]
+    try:
+        r = requests.get(f"{base}/models", headers={"Authorization": f"Bearer {key}"}, timeout=20)
+        data = r.json().get("data", [])
+    except Exception:
+        data = []
+    ids = []
+    for m in data:
+        mid = m.get("id", "")
+        if env == "OPENROUTER_KEY":
+            price = m.get("pricing") or {}
+            free = mid.endswith(":free") or (str(price.get("prompt")) == "0" and str(price.get("completion")) == "0")
+            if not free:
+                continue
+        if any(w in mid.lower() for w in SKIP):
+            continue
+        ids.append(mid)
+
+    def score(mid):
+        low = mid.lower()
+        return next((i for i, w in enumerate(rank) if w in low), len(rank))
+    best = sorted(ids, key=score)[:3]
+    _models_cache[env] = best
+    print(f"  нейросети {env}: {best}")
+    return best
 STRONG_STYLE = (
     "Ты — автор популярного спортивного Telegram-канала, тебя читают с удовольствием. Пиши живо и эмоционально: "
     "первая строка — цепляющий крючок с эмодзи (😱🔥💥⚡️🏆 и т. п. по смыслу), дальше 2–3 коротких абзаца по 1–2 "
     "предложения, разделённых пустой строкой; в начале абзацев — уместные эмодзи (⚽️🏒🏀🎾🎮📊💬🗓🎯💪😮), всего 3–6 "
     "эмодзи на текст. Яркие глаголы, разговорный, но грамотный язык, без канцелярита и штампов. 400–800 символов. "
     "Факты, цифры, имена и цитаты — ТОЛЬКО из исходника, ничего не придумывай: эмоцию передавай подачей и словами, "
-    "а не выдуманными деталями. В поле text абзацы разделяй символами \\n\\n. "
+    "а не выдуманными деталями. Первая строка text НЕ повторяет заголовок — она добавляет к нему деталь или интригу. "
+    "В поле text абзацы разделяй символами \\n\\n. "
 )
 PROMPT = (
     "Ты — редактор русскоязычного спортивного Telegram-канала и пишешь как живой спортивный журналист. "
@@ -204,20 +241,21 @@ def _cyrillic(text: str) -> float:
 def _ask(messages: list[dict]) -> tuple[dict | None, bool]:
     """JSON-ответ нейросети и признак «сильная модель». Сначала бесплатные сильные (если есть ключ), потом Pollinations."""
     import os
-    for env, url, models in STRONG:
+    for env, base, rank in STRONG:
         key = os.environ.get(env)
         if not key:
             continue
-        for model in models:
+        for model in _models(env, base, rank, key):
             try:
-                r = requests.post(url, timeout=60, headers={"Authorization": f"Bearer {key}"},
+                r = requests.post(f"{base}/chat/completions", timeout=90, headers={"Authorization": f"Bearer {key}"},
                                   json={"model": model, "temperature": 0.6, "messages": messages})
                 if r.status_code != 200:
                     print(f"  ! {env} {model}: {r.status_code} {r.text[:150]}")
                     continue
                 raw = r.json()["choices"][0]["message"]["content"]
                 print(f"  нейросеть: {model}")
-                return json.loads(raw[raw.index("{"): raw.rindex("}") + 1]), True
+                # strict=False: модели часто пишут настоящие переносы строк внутри JSON-строк — это не ошибка
+                return json.loads(raw[raw.index("{"): raw.rindex("}") + 1], strict=False), True
             except Exception:
                 continue
     body = {"model": "openai", "private": True, "temperature": 0.2, "messages": messages}
