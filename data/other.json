@@ -9111,5 +9111,480 @@
   },
   "top": true,
   "msg_id": 2094
+ },
+ "NBA|401909908": {
+  "id": "401909908",
+  "div": "NBA",
+  "sport": "basketball",
+  "kickoff": "2026-11-03T03:30:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "home": {
+   "id": "30",
+   "name": "Charlotte Hornets",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/cha.png",
+   "color": "008ca8",
+   "score": "0",
+   "record": "3-4",
+   "periods": [],
+   "ru": "Шарлотт Хорнетс"
+  },
+  "away": {
+   "id": "8",
+   "name": "Detroit Pistons",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/det.png",
+   "color": "1d428a",
+   "score": "0",
+   "record": "5-1",
+   "periods": [],
+   "ru": "Детройт Пистонс"
+  },
+  "odds": {
+   "H": 2.89,
+   "A": 1.437,
+   "line": 209.5,
+   "over": 1.893,
+   "under": 1.926,
+   "spread": 6.5,
+   "sp_h": 1.87,
+   "sp_a": 1.952
+  },
+  "probs": {
+   "BB_ML_H": 0.29402407834845057,
+   "BB_ML_A": 0.7059759216515494,
+   "BB_SPR_H": 0.5,
+   "BB_SPR_A": 0.5,
+   "BB_O202.5": 0.6597440535491568,
+   "BB_U202.5": 0.3402559464508432,
+   "BB_O209.5": 0.5,
+   "BB_U209.5": 0.5,
+   "BB_O216.5": 0.3402559464508432,
+   "BB_U216.5": 0.6597440535491568
+  },
+  "labels": {
+   "BB_ML_H": "П1 (с ОТ)",
+   "BB_ML_A": "П2 (с ОТ)",
+   "BB_SPR_H": "Ф1 (+6.5)",
+   "BB_SPR_A": "Ф2 (-6.5)",
+   "BB_O202.5": "ТБ 202.5",
+   "BB_U202.5": "ТМ 202.5",
+   "BB_O209.5": "ТБ 209.5",
+   "BB_U209.5": "ТМ 209.5",
+   "BB_O216.5": "ТБ 216.5",
+   "BB_U216.5": "ТМ 216.5"
+  },
+  "real": {
+   "BB_ML_H": 2.89,
+   "BB_ML_A": 1.437,
+   "BB_SPR_H": 1.87,
+   "BB_SPR_A": 1.952,
+   "BB_O209.5": 1.893,
+   "BB_U209.5": 1.926
+  },
+  "center": "Ожидаемый счёт 102 : 108",
+  "bar": [
+   0.29402407834845057,
+   0,
+   0.7059759216515494
+  ],
+  "model": {
+   "mu": -6.5,
+   "T": 209.5
+  },
+  "main": {
+   "key": "BB_U209.5",
+   "label": "ТМ 209.5",
+   "p": 0.5,
+   "odds": 1.93,
+   "est": false,
+   "stake": 1.0
+  },
+  "bold": {},
+  "open": {
+   "BB_U209.5": 0.5
+  },
+  "top": false,
+  "msg_id": 2103
+ },
+ "NBA|401909909": {
+  "id": "401909909",
+  "div": "NBA",
+  "sport": "basketball",
+  "kickoff": "2026-11-03T03:30:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "home": {
+   "id": "11",
+   "name": "Indiana Pacers",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/ind.png",
+   "color": "0c2340",
+   "score": "0",
+   "record": "2-5",
+   "periods": [],
+   "ru": "Индиана Пэйсерс"
+  },
+  "away": {
+   "id": "1",
+   "name": "Atlanta Hawks",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/atl.png",
+   "color": "c8102e",
+   "score": "0",
+   "record": "3-4",
+   "periods": [],
+   "ru": "Атланта Хокс"
+  },
+  "odds": {
+   "H": 4.11,
+   "A": 1.254,
+   "line": 227.5,
+   "over": 1.909,
+   "under": 1.909,
+   "spread": 9.5,
+   "sp_h": 1.893,
+   "sp_a": 1.926
+  },
+  "probs": {
+   "BB_ML_H": 0.2142775316753095,
+   "BB_ML_A": 0.7857224683246905,
+   "BB_SPR_H": 0.5,
+   "BB_SPR_A": 0.5,
+   "BB_O220.5": 0.6597440535491568,
+   "BB_U220.5": 0.3402559464508432,
+   "BB_O227.5": 0.5,
+   "BB_U227.5": 0.5,
+   "BB_O234.5": 0.3402559464508432,
+   "BB_U234.5": 0.6597440535491568
+  },
+  "labels": {
+   "BB_ML_H": "П1 (с ОТ)",
+   "BB_ML_A": "П2 (с ОТ)",
+   "BB_SPR_H": "Ф1 (+9.5)",
+   "BB_SPR_A": "Ф2 (-9.5)",
+   "BB_O220.5": "ТБ 220.5",
+   "BB_U220.5": "ТМ 220.5",
+   "BB_O227.5": "ТБ 227.5",
+   "BB_U227.5": "ТМ 227.5",
+   "BB_O234.5": "ТБ 234.5",
+   "BB_U234.5": "ТМ 234.5"
+  },
+  "real": {
+   "BB_ML_H": 4.11,
+   "BB_ML_A": 1.254,
+   "BB_SPR_H": 1.893,
+   "BB_SPR_A": 1.926,
+   "BB_O227.5": 1.909,
+   "BB_U227.5": 1.909
+  },
+  "center": "Ожидаемый счёт 109 : 118",
+  "bar": [
+   0.2142775316753095,
+   0,
+   0.7857224683246905
+  ],
+  "model": {
+   "mu": -9.5,
+   "T": 227.5
+  },
+  "main": {
+   "key": "BB_U227.5",
+   "label": "ТМ 227.5",
+   "p": 0.5,
+   "odds": 1.91,
+   "est": false,
+   "stake": 1.0
+  },
+  "bold": {},
+  "open": {
+   "BB_U227.5": 0.5
+  },
+  "top": true,
+  "msg_id": 2105
+ },
+ "NBA|401909910": {
+  "id": "401909910",
+  "div": "NBA",
+  "sport": "basketball",
+  "kickoff": "2026-11-03T03:30:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "home": {
+   "id": "18",
+   "name": "New York Knicks",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/ny.png",
+   "color": "1d428a",
+   "score": "0",
+   "record": "2-4",
+   "periods": [],
+   "ru": "Нью-Йорк Никс"
+  },
+  "away": {
+   "id": "17",
+   "name": "Brooklyn Nets",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/bkn.png",
+   "color": "000000",
+   "score": "0",
+   "record": "1-5",
+   "periods": [],
+   "ru": "Бруклин Нетс"
+  },
+  "odds": {
+   "H": 1.098,
+   "A": 7.6,
+   "line": 218.5,
+   "over": 1.885,
+   "under": 1.935,
+   "spread": -14.5,
+   "sp_h": 1.909,
+   "sp_a": 1.909
+  },
+  "probs": {
+   "BB_ML_H": 0.8865404641312604,
+   "BB_ML_A": 0.11345953586873958,
+   "BB_SPR_H": 0.5,
+   "BB_SPR_A": 0.5,
+   "BB_O211.5": 0.6597440535491568,
+   "BB_U211.5": 0.3402559464508432,
+   "BB_O218.5": 0.5,
+   "BB_U218.5": 0.5,
+   "BB_O225.5": 0.3402559464508432,
+   "BB_U225.5": 0.6597440535491568
+  },
+  "labels": {
+   "BB_ML_H": "П1 (с ОТ)",
+   "BB_ML_A": "П2 (с ОТ)",
+   "BB_SPR_H": "Ф1 (-14.5)",
+   "BB_SPR_A": "Ф2 (+14.5)",
+   "BB_O211.5": "ТБ 211.5",
+   "BB_U211.5": "ТМ 211.5",
+   "BB_O218.5": "ТБ 218.5",
+   "BB_U218.5": "ТМ 218.5",
+   "BB_O225.5": "ТБ 225.5",
+   "BB_U225.5": "ТМ 225.5"
+  },
+  "real": {
+   "BB_ML_H": 1.098,
+   "BB_ML_A": 7.6,
+   "BB_SPR_H": 1.909,
+   "BB_SPR_A": 1.909,
+   "BB_O218.5": 1.885,
+   "BB_U218.5": 1.935
+  },
+  "center": "Ожидаемый счёт 116 : 102",
+  "bar": [
+   0.8865404641312604,
+   0,
+   0.11345953586873958
+  ],
+  "model": {
+   "mu": 14.5,
+   "T": 218.5
+  },
+  "main": {
+   "key": "BB_U218.5",
+   "label": "ТМ 218.5",
+   "p": 0.5,
+   "odds": 1.94,
+   "est": false,
+   "stake": 1.0
+  },
+  "bold": {},
+  "open": {
+   "BB_U218.5": 0.5
+  },
+  "top": false,
+  "msg_id": 2107
+ },
+ "NBA|401909911": {
+  "id": "401909911",
+  "div": "NBA",
+  "sport": "basketball",
+  "kickoff": "2026-11-03T03:30:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "home": {
+   "id": "19",
+   "name": "Orlando Magic",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/orl.png",
+   "color": "0150b5",
+   "score": "0",
+   "record": "2-4",
+   "periods": [],
+   "ru": "Орландо Мэджик"
+  },
+  "away": {
+   "id": "27",
+   "name": "Washington Wizards",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/wsh.png",
+   "color": "e31837",
+   "score": "0",
+   "record": "3-3",
+   "periods": [],
+   "ru": "Вашингтон Уизардс"
+  },
+  "odds": {
+   "H": 1.645,
+   "A": 2.31,
+   "line": 225.5,
+   "over": 1.935,
+   "under": 1.885,
+   "spread": -2.5,
+   "sp_h": 1.855,
+   "sp_a": 1.971
+  },
+  "probs": {
+   "BB_ML_H": 0.5825156468205225,
+   "BB_ML_A": 0.4174843531794775,
+   "BB_SPR_H": 0.5,
+   "BB_SPR_A": 0.5,
+   "BB_O218.5": 0.6597440535491568,
+   "BB_U218.5": 0.3402559464508432,
+   "BB_O225.5": 0.5,
+   "BB_U225.5": 0.5,
+   "BB_O232.5": 0.3402559464508432,
+   "BB_U232.5": 0.6597440535491568
+  },
+  "labels": {
+   "BB_ML_H": "П1 (с ОТ)",
+   "BB_ML_A": "П2 (с ОТ)",
+   "BB_SPR_H": "Ф1 (-2.5)",
+   "BB_SPR_A": "Ф2 (+2.5)",
+   "BB_O218.5": "ТБ 218.5",
+   "BB_U218.5": "ТМ 218.5",
+   "BB_O225.5": "ТБ 225.5",
+   "BB_U225.5": "ТМ 225.5",
+   "BB_O232.5": "ТБ 232.5",
+   "BB_U232.5": "ТМ 232.5"
+  },
+  "real": {
+   "BB_ML_H": 1.645,
+   "BB_ML_A": 2.31,
+   "BB_SPR_H": 1.855,
+   "BB_SPR_A": 1.971,
+   "BB_O225.5": 1.935,
+   "BB_U225.5": 1.885
+  },
+  "center": "Ожидаемый счёт 114 : 112",
+  "bar": [
+   0.5825156468205225,
+   0,
+   0.4174843531794775
+  ],
+  "model": {
+   "mu": 2.5,
+   "T": 225.5
+  },
+  "main": {
+   "key": "BB_ML_H",
+   "label": "П1 (с ОТ)",
+   "p": 0.5825,
+   "odds": 1.65,
+   "est": false,
+   "stake": 1.0
+  },
+  "bold": {},
+  "open": {
+   "BB_ML_H": 0.5825
+  },
+  "top": false,
+  "msg_id": 2109
+ },
+ "NBA|401909912": {
+  "id": "401909912",
+  "div": "NBA",
+  "sport": "basketball",
+  "kickoff": "2026-11-03T03:30:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "home": {
+   "id": "20",
+   "name": "Philadelphia 76ers",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/phi.png",
+   "color": "1d428a",
+   "score": "0",
+   "record": "6-1",
+   "periods": [],
+   "ru": "Филадельфия Сиксерс"
+  },
+  "away": {
+   "id": "4",
+   "name": "Chicago Bulls",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/chi.png",
+   "color": "ce1141",
+   "score": "0",
+   "record": "1-5",
+   "periods": [],
+   "ru": "Чикаго Буллз"
+  },
+  "odds": {
+   "H": 1.192,
+   "A": 4.96,
+   "line": 239.5,
+   "over": 1.952,
+   "under": 1.87,
+   "spread": -9.5,
+   "sp_h": 1.877,
+   "sp_a": 1.943
+  },
+  "probs": {
+   "BB_ML_H": 0.7857224683246905,
+   "BB_ML_A": 0.2142775316753095,
+   "BB_SPR_H": 0.5,
+   "BB_SPR_A": 0.5,
+   "BB_O232.5": 0.6597440535491568,
+   "BB_U232.5": 0.3402559464508432,
+   "BB_O239.5": 0.5,
+   "BB_U239.5": 0.5,
+   "BB_O246.5": 0.3402559464508432,
+   "BB_U246.5": 0.6597440535491568
+  },
+  "labels": {
+   "BB_ML_H": "П1 (с ОТ)",
+   "BB_ML_A": "П2 (с ОТ)",
+   "BB_SPR_H": "Ф1 (-9.5)",
+   "BB_SPR_A": "Ф2 (+9.5)",
+   "BB_O232.5": "ТБ 232.5",
+   "BB_U232.5": "ТМ 232.5",
+   "BB_O239.5": "ТБ 239.5",
+   "BB_U239.5": "ТМ 239.5",
+   "BB_O246.5": "ТБ 246.5",
+   "BB_U246.5": "ТМ 246.5"
+  },
+  "real": {
+   "BB_ML_H": 1.192,
+   "BB_ML_A": 4.96,
+   "BB_SPR_H": 1.877,
+   "BB_SPR_A": 1.943,
+   "BB_O239.5": 1.952,
+   "BB_U239.5": 1.87
+  },
+  "center": "Ожидаемый счёт 124 : 115",
+  "bar": [
+   0.7857224683246905,
+   0,
+   0.2142775316753095
+  ],
+  "model": {
+   "mu": 9.5,
+   "T": 239.5
+  },
+  "main": {
+   "key": "BB_O239.5",
+   "label": "ТБ 239.5",
+   "p": 0.5,
+   "odds": 1.95,
+   "est": false,
+   "stake": 1.0
+  },
+  "bold": {},
+  "open": {
+   "BB_O239.5": 0.5
+  },
+  "top": false,
+  "msg_id": 2111
  }
 }
