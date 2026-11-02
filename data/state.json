@@ -5,7 +5,7 @@
  },
  "learned": "2026-11-02",
  "schedule_day": "2026-11-02",
- "content_slot": "2026-11-02-19",
+ "content_slot": "2026-11-02-20",
  "news_seen": [
   "aurora-gaming-podpisala-sostav-po-valorant-s-yeks-igrokami-vitality-i-liquid",
   "https://www.championat.com/hockey/news-6676638-raspisanie-matchej-khl-na-29-oktyabrya-2026-goda.html",
@@ -1496,7 +1496,7 @@
  "value_day": "2026-11-02",
  "repost_done": "2026-11-01-news-lively",
  "table_day": "2026-11-02",
- "site_stamp": "357|2026-11-02 19",
+ "site_stamp": "357|2026-11-02 20",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1511,121 +1511,117 @@
  },
  "value_check": "2026-11-02-6",
  "express_risk": {
-  "msg": 1755,
+  "msg": 2008,
   "legs": [
-   {
-    "sport": "football",
-    "div": "P1",
-    "id": "401885409",
-    "side": "home",
-    "p": 0.5726628824031748,
-    "odds": 1.645,
-    "kickoff": "2026-11-01T23:30:00+03:00",
-    "home": "Брага",
-    "away": "Фамаликан",
-    "league": "🇵🇹 Португалия · Примейра",
-    "logos": [
-     "https://a.espncdn.com/i/teamlogos/soccer/500/2994.png",
-     "https://a.espncdn.com/i/teamlogos/soccer/500/12698.png"
-    ],
-    "colors": [
-     "de1f26",
-     "FFFFFF"
-    ],
-    "label": "Победа: Брага",
-    "win": true,
-    "score": "3:0"
-   },
    {
     "sport": "hockey",
     "div": "NHL",
-    "id": "401892627",
-    "side": "home",
-    "p": 0.5427759110881364,
-    "odds": 1.769,
-    "kickoff": "2026-11-02T02:00:00+03:00",
-    "home": "Рейнджерс",
-    "away": "Эдмонтон",
+    "id": "401892629",
+    "side": "away",
+    "p": 0.5260416666666667,
+    "odds": 1.82,
+    "kickoff": "2026-11-03T03:00:00+03:00",
+    "home": "Бостон",
+    "away": "Вегас",
     "league": "🇺🇸 США · NHL",
     "logos": [
-     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/nyr.png",
-     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/edm.png"
+     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/bos.png",
+     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/vgk.png"
     ],
     "colors": [
-     "0056ae",
-     "00205b"
+     "231f20",
+     "344043"
     ],
-    "label": "Победа: Рейнджерс (с ОТ)",
-    "win": false,
-    "score": "1:4"
-   },
-   {
-    "sport": "football",
-    "div": "USA",
-    "id": "761921",
-    "side": "home",
-    "p": 0.5636264336428182,
-    "odds": 1.645,
-    "kickoff": "2026-11-02T04:30:00+03:00",
-    "home": "Лос-Анджелес",
-    "away": "Миннесота Юнайтед",
-    "league": "🇺🇸 США · MLS",
-    "logos": [
-     "https://a.espncdn.com/i/teamlogos/soccer/500/18966.png",
-     "https://a.espncdn.com/i/teamlogos/soccer/500/17362.png"
-    ],
-    "colors": [
-     "000000",
-     "000000"
-    ],
-    "label": "Победа: Лос-Анджелес"
+    "label": "Победа: Вегас (с ОТ)"
    },
    {
     "sport": "basketball",
     "div": "NBA",
-    "id": "401909905",
+    "id": "401909911",
     "side": "home",
-    "p": 0.5514042772481319,
-    "odds": 1.741,
-    "kickoff": "2026-11-02T04:30:00+03:00",
+    "p": 0.5830164765525981,
+    "odds": 1.645,
+    "kickoff": "2026-11-03T03:30:00+03:00",
+    "home": "Орландо Мэджик",
+    "away": "Вашингтон Уизардс",
+    "league": "🇺🇸 США · NBA",
+    "logos": [
+     "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/orl.png",
+     "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/wsh.png"
+    ],
+    "colors": [
+     "0150b5",
+     "e31837"
+    ],
+    "label": "Победа: Орландо Мэджик (с ОТ)"
+   },
+   {
+    "sport": "hockey",
+    "div": "NHL",
+    "id": "401892632",
+    "side": "home",
+    "p": 0.5324675324675325,
+    "odds": 1.8,
+    "kickoff": "2026-11-03T05:00:00+03:00",
+    "home": "Сан-Хосе",
+    "away": "Калгари",
+    "league": "🇺🇸 США · NHL",
+    "logos": [
+     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/sj.png",
+     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/cgy.png"
+    ],
+    "colors": [
+     "00788a",
+     "dd1a32"
+    ],
+    "label": "Победа: Сан-Хосе (с ОТ)"
+   },
+   {
+    "sport": "basketball",
+    "div": "NBA",
+    "id": "401909919",
+    "side": "home",
+    "p": 0.5738332058148432,
+    "odds": 1.671,
+    "kickoff": "2026-11-03T06:00:00+03:00",
     "home": "Голден Стэйт",
-    "away": "Клипперс",
+    "away": "Финикс Санз",
     "league": "🇺🇸 США · NBA",
     "logos": [
      "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/gs.png",
-     "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/lac.png"
+     "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/phx.png"
     ],
     "colors": [
      "fdb927",
-     "12173f"
+     "29127a"
     ],
     "label": "Победа: Голден Стэйт (с ОТ)"
    },
    {
     "sport": "basketball",
     "div": "NBA",
-    "id": "401909906",
+    "id": "401909921",
     "side": "home",
-    "p": 0.572012257405516,
-    "odds": 1.676,
-    "kickoff": "2026-11-02T05:00:00+03:00",
+    "p": 0.5324675324675325,
+    "odds": 1.8,
+    "kickoff": "2026-11-03T06:00:00+03:00",
     "home": "Лейкерс",
-    "away": "Торонто Рэпторс",
+    "away": "Майами Хит",
     "league": "🇺🇸 США · NBA",
     "logos": [
      "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/lal.png",
-     "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/tor.png"
+     "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/mia.png"
     ],
     "colors": [
      "552583",
-     "d91244"
+     "98002e"
     ],
     "label": "Победа: Лейкерс (с ОТ)"
    }
   ],
-  "odds": 13.9679419960591,
-  "day": "2026-11-01",
-  "done": true
+  "odds": 16.209094355999998,
+  "day": "2026-11-02",
+  "done": false
  },
  "news_next": "2026-11-02T20:06:53.412724+03:00",
  "streak_day": {
