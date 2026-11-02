@@ -8907,22 +8907,22 @@
   "kickoff": "2026-11-02T01:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "home": {
+   "color": "0c2340",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/ind.png",
    "id": "11",
    "name": "Indiana Pacers",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/ind.png",
-   "color": "0c2340",
    "score": "0",
    "record": "2-4",
    "periods": [],
    "ru": "Индиана Пэйсерс"
   },
   "away": {
+   "color": "000000",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/bkn.png",
    "id": "17",
    "name": "Brooklyn Nets",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/bkn.png",
-   "color": "000000",
    "score": "0",
    "record": "0-5",
    "periods": [],
@@ -8996,7 +8996,9 @@
   "msg_id": 1846,
   "close": {
    "BB_ML_H": 0.6147
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null
  },
  "WTA|185819": {
   "id": "185819",
