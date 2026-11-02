@@ -326,8 +326,11 @@ def run(state: dict, now: pd.Timestamp, brand: str) -> None:
             prompt = f"{random.choice(SCENES[sport])}, cinematic, high detail, photorealistic, no text, no people, no players, no faces, empty scene"
             tag = TAGS[sport].lstrip("#").capitalize()
             png = card.news_card(item["photo"] if SOURCE_PHOTOS else None, news["title"], tag, brand, sport, prompt)
-            telegram.send_photo(png, f"{news['emoji'] or EMOJI[sport]} <b>{escape(news['title'])}</b>\n\n"
-                                     f"{escape(news['text'])}\n\n{TAGS[sport]}")
+            emo = news["emoji"] or EMOJI[sport]
+            body = news["text"]
+            if body.startswith(emo):  # тот же эмодзи и в заголовке, и в начале текста — второй убираем
+                body = body[len(emo):].lstrip()
+            telegram.send_photo(png, f"{emo} <b>{escape(news['title'])}</b>\n\n{escape(body)}\n\n{TAGS[sport]}")
             state["news_i"] = (i + shift + 1) % len(ORDER)
             state["news_next"] = (now + pd.Timedelta(minutes=random.randint(40, 65))).isoformat()  # каждый час
             del seen[:-500]
