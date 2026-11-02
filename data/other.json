@@ -8364,31 +8364,31 @@
   "kickoff": "2026-11-02T09:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Mon, November 1st at 1:00 AM EST",
   "home": {
-   "id": "2980",
-   "name": "Claire Liu",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/2980.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/usa.png"
    ],
+   "id": "2980",
+   "name": "Claire Liu",
    "country": "USA",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
    "ru": "Клер Лю"
   },
   "away": {
-   "id": "12846",
-   "name": "Tatiana Prozorova",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/12846.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/rus.png"
    ],
+   "id": "12846",
+   "name": "Tatiana Prozorova",
    "country": "Russia",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
@@ -8447,7 +8447,9 @@
   "msg_id": 1920,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null
  },
  "WTA|186624": {
   "id": "186624",
