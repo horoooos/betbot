@@ -8853,31 +8853,31 @@
   "kickoff": "2026-11-02T16:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Mon, November 2nd at 8:00 AM EST",
   "home": {
-   "id": "2989",
-   "name": "Casper Ruud",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/2989.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/nor.png"
    ],
+   "id": "2989",
+   "name": "Casper Ruud",
    "country": "Norway",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
    "ru": "Каспер Рууд"
   },
   "away": {
-   "id": "4008",
-   "name": "Juan Manuel Cerundolo",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/4008.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/arg.png"
    ],
+   "id": "4008",
+   "name": "Juan Manuel Cerundolo",
    "country": "Argentina",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
@@ -8936,7 +8936,9 @@
   "msg_id": 1973,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null
  },
  "ATP|186447": {
   "id": "186447",
