@@ -10176,31 +10176,31 @@
   "kickoff": "2026-11-03T12:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Tue, November 3rd at 4:00 AM EST",
   "home": {
-   "id": "11317",
-   "name": "Himeno Sakatsume",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/11317.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/jpn.png"
    ],
+   "id": "11317",
+   "name": "Himeno Sakatsume",
    "country": "Japan",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
    "ru": "Химэно Сакацумэ"
   },
   "away": {
-   "id": "8419",
-   "name": "Tereza Valentova",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/8419.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/cze.png"
    ],
+   "id": "8419",
+   "name": "Tereza Valentova",
    "country": "Czechia",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
@@ -10259,7 +10259,9 @@
   "msg_id": 2226,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null
  },
  "WTA|186614": {
   "id": "186614",
