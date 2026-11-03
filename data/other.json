@@ -10079,31 +10079,31 @@
   "kickoff": "2026-11-03T10:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Tue, November 2nd at 2:30 AM EST",
   "home": {
-   "id": "1774",
-   "name": "Sorana Cirstea",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/1774.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/rom.png"
    ],
+   "id": "1774",
+   "name": "Sorana Cirstea",
    "country": "Romania",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
    "ru": "Сорана Кырстя"
   },
   "away": {
-   "id": "10501",
-   "name": "Maria Timofeeva",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/10501.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/uzb.png"
    ],
+   "id": "10501",
+   "name": "Maria Timofeeva",
    "country": "Uzbekistan",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
@@ -10162,7 +10162,9 @@
   "msg_id": 2218,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null
  },
  "WTA|186582": {
   "status": "skipped",
