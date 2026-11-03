@@ -1469,7 +1469,7 @@
  "value_day": "2026-11-03",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-03",
- "site_stamp": "440|2026-11-04 00",
+ "site_stamp": "441|2026-11-04 00",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1505,7 +1505,9 @@
      "FCEE33",
      "c2051b"
     ],
-    "label": "Победа: Будё-Глимт"
+    "label": "Победа: Будё-Глимт",
+    "win": false,
+    "score": "0:0"
    },
    {
     "sport": "football",
@@ -1594,7 +1596,7 @@
   ],
   "odds": 13.677478944882548,
   "day": "2026-11-03",
-  "done": false
+  "done": true
  },
  "streak_day": {
   "2026-11-03": 1
