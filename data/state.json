@@ -1496,7 +1496,7 @@
  "value_day": "2026-11-02",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-02",
- "site_stamp": "378|2026-11-03 05",
+ "site_stamp": "379|2026-11-03 05",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1532,7 +1532,9 @@
      "231f20",
      "344043"
     ],
-    "label": "Победа: Вегас (с ОТ)"
+    "label": "Победа: Вегас (с ОТ)",
+    "win": false,
+    "score": "3:2"
    },
    {
     "sport": "basketball",
@@ -1621,7 +1623,7 @@
   ],
   "odds": 16.209094355999998,
   "day": "2026-11-02",
-  "done": false
+  "done": true
  },
  "streak_day": {
   "2026-11-02": 1
