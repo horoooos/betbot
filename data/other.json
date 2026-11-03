@@ -10911,31 +10911,31 @@
   "kickoff": "2026-11-03T21:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Tue, November 3rd at 1:00 PM EST",
   "home": {
-   "id": "9250",
-   "name": "Ben Shelton",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/9250.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/usa.png"
    ],
+   "id": "9250",
+   "name": "Ben Shelton",
    "country": "USA",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
    "ru": "Бен Шелтон"
   },
   "away": {
-   "id": "2366",
-   "name": "Cameron Norrie",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/2366.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/gbr.png"
    ],
+   "id": "2366",
+   "name": "Cameron Norrie",
    "country": "Great Britain",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
@@ -10994,7 +10994,9 @@
   "msg_id": 2313,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null
  },
  "WTA|186716": {
   "id": "186716",
@@ -11181,7 +11183,10 @@
   "bold": {},
   "open": {},
   "top": false,
-  "msg_id": 2322
+  "msg_id": 2322,
+  "close": {
+   "_": null
+  }
  },
  "WTA|186710": {
   "id": "186710",
@@ -11273,7 +11278,10 @@
   "bold": {},
   "open": {},
   "top": false,
-  "msg_id": 2324
+  "msg_id": 2324,
+  "close": {
+   "_": null
+  }
  },
  "ATP|186484": {
   "id": "186484",
