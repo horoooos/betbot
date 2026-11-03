@@ -13301,7 +13301,11 @@
   "odds_src": "DraftKings",
   "model_w": 0.0,
   "learned_n": 419,
-  "msg_id": 2308
+  "msg_id": 2308,
+  "close": {
+   "H": 0.4821,
+   "U35": 0.4333
+  }
  },
  "401915310": {
   "id": "401915310",
@@ -13442,6 +13446,10 @@
   "odds_src": "DraftKings",
   "model_w": 0.0,
   "learned_n": 419,
-  "msg_id": 2310
+  "msg_id": 2310,
+  "close": {
+   "A": 0.4444,
+   "U25": 0.4792
+  }
  }
 }
