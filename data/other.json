@@ -8848,22 +8848,22 @@
   "kickoff": "2026-11-03T05:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "home": {
+   "color": "00788a",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/sj.png",
    "id": "18",
    "name": "San Jose Sharks",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/sj.png",
-   "color": "00788a",
    "score": "0",
    "record": "7-7-1",
    "periods": [],
    "ru": "Сан-Хосе"
   },
   "away": {
+   "color": "dd1a32",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/cgy.png",
    "id": "3",
    "name": "Calgary Flames",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/cgy.png",
-   "color": "dd1a32",
    "score": "0",
    "record": "6-8-0",
    "periods": [],
@@ -8966,7 +8966,9 @@
   "close": {
    "HK_O6.5": 0.4826,
    "HK_ML_A": 0.4675
-  }
+  },
+  "main_hit": false,
+  "bold_hit": true
  },
  "NBA|401909918": {
   "id": "401909918",
