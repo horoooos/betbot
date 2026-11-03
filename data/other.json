@@ -10848,31 +10848,31 @@
   "kickoff": "2026-11-03T22:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Tue, November 3rd at 2:00 PM EST",
   "home": {
-   "id": "2599",
-   "name": "Julia Grabher",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/2599.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/aut.png"
    ],
+   "id": "2599",
+   "name": "Julia Grabher",
    "country": "Austria",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
    "ru": "Юлия Грабер"
   },
   "away": {
-   "id": "2177",
-   "name": "Laura Pigossi",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/2177.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/bra.png"
    ],
+   "id": "2177",
+   "name": "Laura Pigossi",
    "country": "Brazil",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
@@ -10931,7 +10931,9 @@
   "msg_id": 2324,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null
  },
  "ATP|186484": {
   "id": "186484",
