@@ -10210,31 +10210,31 @@
   "kickoff": "2026-11-03T14:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Tue, November 3rd at 6:30 AM EST",
   "home": {
-   "id": "3774",
-   "name": "Brandon Nakashima",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/3774.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/usa.png"
    ],
+   "id": "3774",
+   "name": "Brandon Nakashima",
    "country": "USA",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
    "ru": "Брэндон Накашима"
   },
   "away": {
-   "id": "2622",
-   "name": "Matteo Berrettini",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/2622.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/ita.png"
    ],
+   "id": "2622",
+   "name": "Matteo Berrettini",
    "country": "Italy",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
@@ -10293,7 +10293,9 @@
   "msg_id": 2249,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null
  },
  "ATP|186467": {
   "id": "186467",
@@ -11071,7 +11073,10 @@
   "bold": {},
   "open": {},
   "top": false,
-  "msg_id": 2285
+  "msg_id": 2285,
+  "close": {
+   "_": null
+  }
  },
  "WTA|186669": {
   "status": "skipped",
