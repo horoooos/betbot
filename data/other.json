@@ -10693,31 +10693,31 @@
   "kickoff": "2026-11-03T14:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Tue, November 3rd at 6:30 AM EST",
   "home": {
-   "id": "11396",
-   "name": "Adolfo Daniel Vallejo",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/11396.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/par.png"
    ],
+   "id": "11396",
+   "name": "Adolfo Daniel Vallejo",
    "country": "Paraguay",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
    "ru": "Адолфо Даниел Валлежо"
   },
   "away": {
-   "id": "10386",
-   "name": "Learner Tien",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/10386.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/usa.png"
    ],
+   "id": "10386",
+   "name": "Learner Tien",
    "country": "USA",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
@@ -10776,7 +10776,9 @@
   "msg_id": 2253,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null
  },
  "WTA|186615": {
   "id": "186615",
