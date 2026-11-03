@@ -8020,22 +8020,22 @@
   "kickoff": "2026-11-03T03:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "home": {
+   "color": "0c2340",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/ind.png",
    "id": "11",
    "name": "Indiana Pacers",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/ind.png",
-   "color": "0c2340",
    "score": "0",
    "record": "2-5",
    "periods": [],
    "ru": "Индиана Пэйсерс"
   },
   "away": {
+   "color": "c8102e",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/atl.png",
    "id": "1",
    "name": "Atlanta Hawks",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/atl.png",
-   "color": "c8102e",
    "score": "0",
    "record": "3-4",
    "periods": [],
@@ -8109,7 +8109,9 @@
   "msg_id": 2105,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null
  },
  "NBA|401909910": {
   "id": "401909910",
