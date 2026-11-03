@@ -9687,31 +9687,31 @@
   "kickoff": "2026-11-03T09:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Tue, November 2nd at 1:00 AM EST",
   "home": {
-   "id": "3142",
-   "name": "Dayana Yastremska",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/3142.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/ukr.png"
    ],
+   "id": "3142",
+   "name": "Dayana Yastremska",
    "country": "Ukraine",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
    "ru": "Даяна Ястремская"
   },
   "away": {
-   "id": "5604",
-   "name": "Zeynep Sonmez",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/5604.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/tur.png"
    ],
+   "id": "5604",
+   "name": "Zeynep Sonmez",
    "country": "Türkiye",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
@@ -9770,7 +9770,9 @@
   "msg_id": 2195,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null
  },
  "WTA|186623": {
   "id": "186623",
