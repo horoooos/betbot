@@ -10423,31 +10423,31 @@
   "kickoff": "2026-11-03T18:15:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Tue, November 3rd at 10:15 AM EST",
   "home": {
-   "id": "13738",
-   "name": "Mei Yamaguchi",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/13738.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/jpn.png"
    ],
+   "id": "13738",
+   "name": "Mei Yamaguchi",
    "country": "Japan",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
    "ru": "Меи Ямагучи"
   },
   "away": {
-   "id": "4926",
-   "name": "Zhibek Kulambayeva",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/4926.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/kaz.png"
    ],
+   "id": "4926",
+   "name": "Zhibek Kulambayeva",
    "country": "Kazakhstan",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
@@ -10506,7 +10506,9 @@
   "msg_id": 2285,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null
  },
  "WTA|186669": {
   "status": "skipped",
