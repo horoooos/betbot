@@ -9780,31 +9780,31 @@
   "kickoff": "2026-11-03T10:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Tue, November 2nd at 2:00 AM EST",
   "home": {
-   "id": "5775",
-   "name": "Anastasia Zakharova",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/5775.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/rus.png"
    ],
+   "id": "5775",
+   "name": "Anastasia Zakharova",
    "country": "Russia",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
    "ru": "Анастасиа Захарова"
   },
   "away": {
-   "id": "17104",
-   "name": "Polina Iatcenko",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/17104.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/rus.png"
    ],
+   "id": "17104",
+   "name": "Polina Iatcenko",
    "country": "Russia",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
@@ -9863,7 +9863,9 @@
   "msg_id": 2210,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null
  },
  "WTA|186586": {
   "status": "skipped",
