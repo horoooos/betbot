@@ -19663,7 +19663,10 @@
   "model_w": 0.0,
   "learned_n": 370,
   "extra": null,
-  "msg_id": 2098
+  "msg_id": 2098,
+  "close": {
+   "BTTS_N": 0.5416
+  }
  },
  "401841652": {
   "id": "401841652",
@@ -19797,6 +19800,9 @@
   "model_w": 0.0,
   "learned_n": 370,
   "extra": null,
-  "msg_id": 2100
+  "msg_id": 2100,
+  "close": {
+   "H": 0.5835
+  }
  }
 }
