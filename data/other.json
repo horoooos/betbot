@@ -10719,31 +10719,31 @@
   "kickoff": "2026-11-03T20:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Tue, November 3rd at 12:30 PM EST",
   "home": {
-   "id": "2984",
-   "name": "Rebeka Masarova",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/2984.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/sui.png"
    ],
+   "id": "2984",
+   "name": "Rebeka Masarova",
    "country": "Switzerland",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
    "ru": "Ребека Масарова"
   },
   "away": {
-   "id": "5161",
-   "name": "Alice Tubello",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/5161.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/fra.png"
    ],
+   "id": "5161",
+   "name": "Alice Tubello",
    "country": "France",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
@@ -10802,7 +10802,9 @@
   "msg_id": 2304,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null
  },
  "WTA|186721": {
   "id": "186721",
