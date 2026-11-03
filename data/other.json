@@ -7825,22 +7825,22 @@
   "kickoff": "2026-11-03T03:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "home": {
+   "color": "008ca8",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/cha.png",
    "id": "30",
    "name": "Charlotte Hornets",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/cha.png",
-   "color": "008ca8",
    "score": "0",
    "record": "3-4",
    "periods": [],
    "ru": "Шарлотт Хорнетс"
   },
   "away": {
+   "color": "1d428a",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/det.png",
    "id": "8",
    "name": "Detroit Pistons",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/det.png",
-   "color": "1d428a",
    "score": "0",
    "record": "5-1",
    "periods": [],
@@ -7914,7 +7914,9 @@
   "msg_id": 2103,
   "close": {
    "BB_U209.5": 0.5
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null
  },
  "NBA|401909909": {
   "id": "401909909",
