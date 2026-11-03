@@ -9586,31 +9586,31 @@
   "kickoff": "2026-11-03T08:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Tue, November 2nd at 12:30 AM EST",
   "home": {
-   "id": "3000",
-   "name": "Panna Udvardy",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/3000.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/hun.png"
    ],
+   "id": "3000",
+   "name": "Panna Udvardy",
    "country": "Hungary",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
    "ru": "Панна Удварди"
   },
   "away": {
-   "id": "6723",
-   "name": "Robin Montgomery",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/6723.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/usa.png"
    ],
+   "id": "6723",
+   "name": "Robin Montgomery",
    "country": "USA",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
@@ -9669,7 +9669,9 @@
   "msg_id": 2191,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null
  },
  "WTA|186626": {
   "id": "186626",
