@@ -10623,31 +10623,31 @@
   "kickoff": "2026-11-03T19:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Tue, November 3rd at 11:00 AM EST",
   "home": {
-   "id": "5937",
-   "name": "Elvina Kalieva",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/5937.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/usa.png"
    ],
+   "id": "5937",
+   "name": "Elvina Kalieva",
    "country": "USA",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
    "ru": "Эльвина Калиева"
   },
   "away": {
-   "id": "4546",
-   "name": "Irene Burillo",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/4546.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/esp.png"
    ],
+   "id": "4546",
+   "name": "Irene Burillo",
    "country": "Spain",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
@@ -10706,7 +10706,9 @@
   "msg_id": 2293,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null
  },
  "ATP|186470": {
   "id": "186470",
