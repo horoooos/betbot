@@ -9493,31 +9493,31 @@
   "kickoff": "2026-11-03T08:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Tue, November 2nd at 12:30 AM EST",
   "home": {
-   "id": "2617",
-   "name": "Jil Teichmann",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/2617.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/sui.png"
    ],
+   "id": "2617",
+   "name": "Jil Teichmann",
    "country": "Switzerland",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
    "ru": "Джил Тайхманн"
   },
   "away": {
-   "id": "3705",
-   "name": "Joanna Garland",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/3705.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/tpo.png"
    ],
+   "id": "3705",
+   "name": "Joanna Garland",
    "country": "Chinese Taipei",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
@@ -9576,7 +9576,9 @@
   "msg_id": 2189,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null
  },
  "WTA|186577": {
   "id": "186577",
