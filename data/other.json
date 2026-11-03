@@ -10229,31 +10229,31 @@
   "kickoff": "2026-11-03T17:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Tue, November 3rd at 9:30 AM EST",
   "home": {
-   "id": "11400",
-   "name": "Alex Michelsen",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/11400.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/usa.png"
    ],
+   "id": "11400",
+   "name": "Alex Michelsen",
    "country": "USA",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
    "ru": "Алекс Микельсен"
   },
   "away": {
-   "id": "3754",
-   "name": "Jiri Lehecka",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/3754.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/cze.png"
    ],
+   "id": "3754",
+   "name": "Jiri Lehecka",
    "country": "Czechia",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
@@ -10312,7 +10312,9 @@
   "msg_id": 2279,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null
  },
  "ATP|186457": {
   "id": "186457",
@@ -10522,31 +10524,31 @@
   "kickoff": "2026-11-03T19:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Tue, November 3rd at 11:00 AM EST",
   "home": {
-   "id": "5746",
-   "name": "Jazmin Ortenzi",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/5746.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/arg.png"
    ],
+   "id": "5746",
+   "name": "Jazmin Ortenzi",
    "country": "Argentina",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
    "ru": "Хасмин Ортенси"
   },
   "away": {
-   "id": "1955",
-   "name": "Elizabeth Mandlik",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/1955.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/usa.png"
    ],
+   "id": "1955",
+   "name": "Elizabeth Mandlik",
    "country": "USA",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
@@ -10605,7 +10607,9 @@
   "msg_id": 2291,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null
  },
  "WTA|186719": {
   "id": "186719",
