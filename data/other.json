@@ -9877,31 +9877,31 @@
   "kickoff": "2026-11-03T10:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Tue, November 2nd at 2:00 AM EST",
   "home": {
-   "id": "6929",
-   "name": "Linda Fruhvirtova",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/6929.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/cze.png"
    ],
+   "id": "6929",
+   "name": "Linda Fruhvirtova",
    "country": "Czechia",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
    "ru": "Линда Фрухвиртова"
   },
   "away": {
-   "id": "8681",
-   "name": "Weronika Falkowska",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/8681.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/pol.png"
    ],
+   "id": "8681",
+   "name": "Weronika Falkowska",
    "country": "Poland",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
@@ -9960,7 +9960,9 @@
   "msg_id": 2212,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null
  },
  "CS2|1781465": {
   "status": "skipped",
@@ -10955,7 +10957,10 @@
   "bold": {},
   "open": {},
   "top": false,
-  "msg_id": 2249
+  "msg_id": 2249,
+  "close": {
+   "_": null
+  }
  },
  "ATP|186467": {
   "id": "186467",
@@ -11047,7 +11052,10 @@
   "bold": {},
   "open": {},
   "top": false,
-  "msg_id": 2251
+  "msg_id": 2251,
+  "close": {
+   "_": null
+  }
  },
  "ATP|186473": {
   "id": "186473",
@@ -11139,7 +11147,10 @@
   "bold": {},
   "open": {},
   "top": false,
-  "msg_id": 2253
+  "msg_id": 2253,
+  "close": {
+   "_": null
+  }
  },
  "WTA|186615": {
   "id": "186615",
