@@ -9396,31 +9396,31 @@
   "kickoff": "2026-11-03T08:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Tue, November 2nd at 12:30 AM EST",
   "home": {
-   "id": "6571",
-   "name": "Oksana Selekhmeteva",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/6571.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/esp.png"
    ],
+   "id": "6571",
+   "name": "Oksana Selekhmeteva",
    "country": "Spain",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
    "ru": "Оксана Селехметьева"
   },
   "away": {
-   "id": "16002",
-   "name": "Teodora Kostovic",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/16002.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/ser.png"
    ],
+   "id": "16002",
+   "name": "Teodora Kostovic",
    "country": "Serbia",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
@@ -9479,7 +9479,9 @@
   "msg_id": 2187,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null
  },
  "WTA|186583": {
   "id": "186583",
