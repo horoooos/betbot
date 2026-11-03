@@ -10862,5 +10862,281 @@
   "close": {
    "_": null
   }
+ },
+ "ATP|186455": {
+  "id": "186455",
+  "div": "ATP",
+  "sport": "tennis",
+  "tournament": "Rolex Paris Masters",
+  "round": "Round 1",
+  "bo5": false,
+  "kickoff": "2026-11-03T14:30:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "detail": "Tue, November 3rd at 6:30 AM EST",
+  "home": {
+   "id": "3774",
+   "name": "Brandon Nakashima",
+   "logo": [
+    "https://a.espncdn.com/i/headshots/tennis/players/full/3774.png",
+    "https://a.espncdn.com/i/teamlogos/countries/500/usa.png"
+   ],
+   "country": "USA",
+   "color": "2d6a4f",
+   "winner": false,
+   "sets": [],
+   "set_won": [],
+   "ru": "Брэндон Накашима"
+  },
+  "away": {
+   "id": "2622",
+   "name": "Matteo Berrettini",
+   "logo": [
+    "https://a.espncdn.com/i/headshots/tennis/players/full/2622.png",
+    "https://a.espncdn.com/i/teamlogos/countries/500/ita.png"
+   ],
+   "country": "Italy",
+   "color": "2d6a4f",
+   "winner": false,
+   "sets": [],
+   "set_won": [],
+   "ru": "Маттео Берреттини"
+  },
+  "odds": {},
+  "probs": {
+   "TN_W1": 0.6594645190967372,
+   "TN_W2": 0.3405354809032628,
+   "TN_3S": 0.47667685042568175,
+   "TN_2S": 0.5233231495743182,
+   "TN_S2:0": 0.36965034636624106,
+   "TN_S0:2": 0.1536728032080772,
+   "TN_S2:1": 0.28981417273049603,
+   "TN_S1:2": 0.1868626776951857,
+   "TN_SET1": 0.8463271967919228,
+   "TN_SET2": 0.6303496536337589
+  },
+  "labels": {
+   "TN_W1": "Победа: Брэндон Накашима",
+   "TN_W2": "Победа: Маттео Берреттини",
+   "TN_3S": "Будет 3 сета",
+   "TN_2S": "Будет 2 сета",
+   "TN_S2:0": "Счёт по сетам 2:0",
+   "TN_S0:2": "Счёт по сетам 0:2",
+   "TN_S2:1": "Счёт по сетам 2:1",
+   "TN_S1:2": "Счёт по сетам 1:2",
+   "TN_SET1": "Брэндон Накашима возьмёт хотя бы сет",
+   "TN_SET2": "Маттео Берреттини возьмёт хотя бы сет"
+  },
+  "real": {},
+  "center": "Рейтинг Эло 1694 : 1579",
+  "bar": [
+   0.6594645190967372,
+   0,
+   0.3405354809032628
+  ],
+  "model": {
+   "elo": [
+    1693.5271326227858,
+    1578.7155062469542
+   ],
+   "src": "Эло"
+  },
+  "main": {
+   "key": "TN_2S",
+   "label": "Будет 2 сета",
+   "p": 0.5233,
+   "odds": 1.78,
+   "est": true,
+   "stake": 1.0
+  },
+  "bold": {},
+  "open": {},
+  "top": false,
+  "msg_id": 2249
+ },
+ "ATP|186467": {
+  "id": "186467",
+  "div": "ATP",
+  "sport": "tennis",
+  "tournament": "Rolex Paris Masters",
+  "round": "Round 1",
+  "bo5": false,
+  "kickoff": "2026-11-03T14:30:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "detail": "Tue, November 3rd at 6:30 AM EST",
+  "home": {
+   "id": "4115",
+   "name": "Nuno Borges",
+   "logo": [
+    "https://a.espncdn.com/i/headshots/tennis/players/full/4115.png",
+    "https://a.espncdn.com/i/teamlogos/countries/500/por.png"
+   ],
+   "country": "Portugal",
+   "color": "2d6a4f",
+   "winner": false,
+   "sets": [],
+   "set_won": [],
+   "ru": "Нуну Боржеш"
+  },
+  "away": {
+   "id": "15473",
+   "name": "Moise Kouame",
+   "logo": [
+    "https://a.espncdn.com/i/headshots/tennis/players/full/15473.png",
+    "https://a.espncdn.com/i/teamlogos/countries/500/fra.png"
+   ],
+   "country": "France",
+   "color": "2d6a4f",
+   "winner": false,
+   "sets": [],
+   "set_won": [],
+   "ru": "Моиз Куаме"
+  },
+  "odds": {},
+  "probs": {
+   "TN_W1": 0.7992014248339875,
+   "TN_W2": 0.20079857516601252,
+   "TN_3S": 0.40993426913441444,
+   "TN_2S": 0.5900657308655857,
+   "TN_S2:0": 0.5072423502179758,
+   "TN_S0:2": 0.08282338064760983,
+   "TN_S2:1": 0.29195907461601184,
+   "TN_S1:2": 0.11797519451840258,
+   "TN_SET1": 0.9171766193523901,
+   "TN_SET2": 0.4927576497820242
+  },
+  "labels": {
+   "TN_W1": "Победа: Нуну Боржеш",
+   "TN_W2": "Победа: Моиз Куаме",
+   "TN_3S": "Будет 3 сета",
+   "TN_2S": "Будет 2 сета",
+   "TN_S2:0": "Счёт по сетам 2:0",
+   "TN_S0:2": "Счёт по сетам 0:2",
+   "TN_S2:1": "Счёт по сетам 2:1",
+   "TN_S1:2": "Счёт по сетам 1:2",
+   "TN_SET1": "Нуну Боржеш возьмёт хотя бы сет",
+   "TN_SET2": "Моиз Куаме возьмёт хотя бы сет"
+  },
+  "real": {},
+  "center": "Рейтинг Эло 1640 : 1400",
+  "bar": [
+   0.7992014248339875,
+   0,
+   0.20079857516601252
+  ],
+  "model": {
+   "elo": [
+    1640.4042091060483,
+    1400.4459600310765
+   ],
+   "src": "Эло"
+  },
+  "main": {
+   "key": "TN_2S",
+   "label": "Будет 2 сета",
+   "p": 0.5901,
+   "odds": 1.58,
+   "est": true,
+   "stake": 1.0
+  },
+  "bold": {},
+  "open": {},
+  "top": false,
+  "msg_id": 2251
+ },
+ "ATP|186473": {
+  "id": "186473",
+  "div": "ATP",
+  "sport": "tennis",
+  "tournament": "Rolex Paris Masters",
+  "round": "Round 1",
+  "bo5": false,
+  "kickoff": "2026-11-03T14:30:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "detail": "Tue, November 3rd at 6:30 AM EST",
+  "home": {
+   "id": "11396",
+   "name": "Adolfo Daniel Vallejo",
+   "logo": [
+    "https://a.espncdn.com/i/headshots/tennis/players/full/11396.png",
+    "https://a.espncdn.com/i/teamlogos/countries/500/par.png"
+   ],
+   "country": "Paraguay",
+   "color": "2d6a4f",
+   "winner": false,
+   "sets": [],
+   "set_won": [],
+   "ru": "Адолфо Даниел Валлежо"
+  },
+  "away": {
+   "id": "10386",
+   "name": "Learner Tien",
+   "logo": [
+    "https://a.espncdn.com/i/headshots/tennis/players/full/10386.png",
+    "https://a.espncdn.com/i/teamlogos/countries/500/usa.png"
+   ],
+   "country": "USA",
+   "color": "2d6a4f",
+   "winner": false,
+   "sets": [],
+   "set_won": [],
+   "ru": "Лёрнер Тьен"
+  },
+  "odds": {},
+  "probs": {
+   "TN_W1": 0.3452790858914489,
+   "TN_W2": 0.654720914108551,
+   "TN_3S": 0.4780856372104825,
+   "TN_2S": 0.5219143627895175,
+   "TN_S2:0": 0.1562806253052563,
+   "TN_S0:2": 0.3656337374842612,
+   "TN_S2:1": 0.18899846058619266,
+   "TN_S1:2": 0.28908717662428984,
+   "TN_SET1": 0.6343662625157388,
+   "TN_SET2": 0.8437193746947437
+  },
+  "labels": {
+   "TN_W1": "Победа: Адолфо Даниел Валлежо",
+   "TN_W2": "Победа: Лёрнер Тьен",
+   "TN_3S": "Будет 3 сета",
+   "TN_2S": "Будет 2 сета",
+   "TN_S2:0": "Счёт по сетам 2:0",
+   "TN_S0:2": "Счёт по сетам 0:2",
+   "TN_S2:1": "Счёт по сетам 2:1",
+   "TN_S1:2": "Счёт по сетам 1:2",
+   "TN_SET1": "Адолфо Даниел Валлежо возьмёт хотя бы сет",
+   "TN_SET2": "Лёрнер Тьен возьмёт хотя бы сет"
+  },
+  "real": {},
+  "center": "Рейтинг Эло 1560 : 1671",
+  "bar": [
+   0.3452790858914489,
+   0,
+   0.654720914108551
+  ],
+  "model": {
+   "elo": [
+    1559.8141506836548,
+    1670.9685270107827
+   ],
+   "src": "Эло"
+  },
+  "main": {
+   "key": "TN_2S",
+   "label": "Будет 2 сета",
+   "p": 0.5219,
+   "odds": 1.78,
+   "est": true,
+   "stake": 1.0
+  },
+  "bold": {},
+  "open": {},
+  "top": false,
+  "msg_id": 2253
  }
 }
