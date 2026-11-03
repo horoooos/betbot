@@ -10277,31 +10277,31 @@
   "kickoff": "2026-11-03T12:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Tue, November 3rd at 4:00 AM EST",
   "home": {
-   "id": "10858",
-   "name": "Alexandra Shubladze",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/10858.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/rus.png"
    ],
+   "id": "10858",
+   "name": "Alexandra Shubladze",
    "country": "Russia",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
    "ru": "Александра Шубладзе"
   },
   "away": {
-   "id": "3840",
-   "name": "Liudmila Samsonova",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/3840.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/rus.png"
    ],
+   "id": "3840",
+   "name": "Liudmila Samsonova",
    "country": "Russia",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
@@ -10360,7 +10360,9 @@
   "msg_id": 2228,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null
  },
  "WTA|186666": {
   "status": "skipped",
