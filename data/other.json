@@ -5914,31 +5914,31 @@
   "kickoff": "2026-11-02T15:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Mon, November 2nd at 7:30 AM EST",
   "home": {
-   "id": "5734",
-   "name": "Moyuka Uchijima",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/5734.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/jpn.png"
    ],
+   "id": "5734",
+   "name": "Moyuka Uchijima",
    "country": "Japan",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
    "ru": "Моюка Утидзима"
   },
   "away": {
-   "id": "2738",
-   "name": "Rebecca Sramkova",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/2738.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/svk.png"
    ],
+   "id": "2738",
+   "name": "Rebecca Sramkova",
    "country": "Slovakia",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
@@ -5997,7 +5997,9 @@
   "msg_id": 1967,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null
  },
  "ATP|186444": {
   "id": "186444",
