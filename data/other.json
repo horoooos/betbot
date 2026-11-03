@@ -8639,22 +8639,22 @@
   "kickoff": "2026-11-03T04:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "home": {
+   "color": "266092",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/min.png",
    "id": "16",
    "name": "Minnesota Timberwolves",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/min.png",
-   "color": "266092",
    "score": "0",
    "record": "4-3",
    "periods": [],
    "ru": "Миннесота Тимбервулвз"
   },
   "away": {
+   "color": "00471b",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/mil.png",
    "id": "15",
    "name": "Milwaukee Bucks",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/mil.png",
-   "color": "00471b",
    "score": "0",
    "record": "1-5",
    "periods": [],
@@ -8728,7 +8728,9 @@
   "msg_id": 2125,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null
  },
  "NBA|401909916": {
   "id": "401909916",
