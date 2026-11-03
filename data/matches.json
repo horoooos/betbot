@@ -18970,7 +18970,7 @@
   "kickoff": "2026-11-03T03:15:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Scheduled",
   "home": {
    "id": "9785",
@@ -19098,7 +19098,10 @@
   "msg_id": 2098,
   "close": {
    "BTTS_N": 0.5416
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null,
+  "value_hit": null
  },
  "401841652": {
   "id": "401841652",
