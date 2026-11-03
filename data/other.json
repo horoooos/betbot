@@ -9681,31 +9681,31 @@
   "kickoff": "2026-11-03T10:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Tue, November 2nd at 2:00 AM EST",
   "home": {
-   "id": "4969",
-   "name": "Viktoria Morvayova",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/4969.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/svk.png"
    ],
+   "id": "4969",
+   "name": "Viktoria Morvayova",
    "country": "Slovakia",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
    "ru": "Викториа Морвэйова"
   },
   "away": {
-   "id": "6413",
-   "name": "Polina Kudermetova",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/6413.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/uzb.png"
    ],
+   "id": "6413",
+   "name": "Polina Kudermetova",
    "country": "Uzbekistan",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
@@ -9764,7 +9764,9 @@
   "msg_id": 2208,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null
  },
  "WTA|186584": {
   "id": "186584",
