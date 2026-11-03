@@ -1437,7 +1437,9 @@
      "990000",
      "660e36"
     ],
-    "label": "Победа: Барселона"
+    "label": "Победа: Барселона",
+    "win": true,
+    "score": "3:0"
    },
    {
     "sport": "football",
@@ -1458,18 +1460,20 @@
      "ffffff",
      "81c0ff"
     ],
-    "label": "Победа: ЛАСК"
+    "label": "Победа: ЛАСК",
+    "win": true,
+    "score": "4:0"
    }
   ],
   "odds": 1.74043,
   "day": "2026-11-03",
-  "done": false
+  "done": true
  },
  "streak_posted": 0,
  "value_day": "2026-11-03",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-03",
- "site_stamp": "444|2026-11-04 00",
+ "site_stamp": "449|2026-11-04 00",
  "battle": {
   "bot": 1,
   "crowd": 1
