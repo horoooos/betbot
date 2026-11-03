@@ -10077,31 +10077,31 @@
   "kickoff": "2026-11-03T10:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Tue, November 2nd at 2:30 AM EST",
   "home": {
-   "id": "2584",
-   "name": "Maddison Inglis",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/2584.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/aus.png"
    ],
+   "id": "2584",
+   "name": "Maddison Inglis",
    "country": "Australia",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
    "ru": "Мэддисон Инглис"
   },
   "away": {
-   "id": "14146",
-   "name": "Maya Joint",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/14146.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/aus.png"
    ],
+   "id": "14146",
+   "name": "Maya Joint",
    "country": "Australia",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
@@ -10160,7 +10160,9 @@
   "msg_id": 2216,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null
  },
  "WTA|186619": {
   "id": "186619",
