@@ -10980,31 +10980,31 @@
   "kickoff": "2026-11-03T14:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Tue, November 3rd at 6:30 AM EST",
   "home": {
-   "id": "4115",
-   "name": "Nuno Borges",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/4115.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/por.png"
    ],
+   "id": "4115",
+   "name": "Nuno Borges",
    "country": "Portugal",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
    "ru": "Нуну Боржеш"
   },
   "away": {
-   "id": "15473",
-   "name": "Moise Kouame",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/15473.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/fra.png"
    ],
+   "id": "15473",
+   "name": "Moise Kouame",
    "country": "France",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
@@ -11063,7 +11063,9 @@
   "msg_id": 2251,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null
  },
  "ATP|186473": {
   "id": "186473",
