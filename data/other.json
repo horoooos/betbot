@@ -12323,31 +12323,31 @@
   "kickoff": "2026-11-04T19:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Wed, November 4th at 11:00 AM EST",
   "home": {
-   "id": "2622",
-   "name": "Matteo Berrettini",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/2622.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/ita.png"
    ],
+   "id": "2622",
+   "name": "Matteo Berrettini",
    "country": "Italy",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
    "ru": "Маттео Берреттини"
   },
   "away": {
-   "id": "3085",
-   "name": "Ugo Humbert",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/3085.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/fra.png"
    ],
+   "id": "3085",
+   "name": "Ugo Humbert",
    "country": "France",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
@@ -12406,7 +12406,9 @@
   "msg_id": 2605,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null
  },
  "WTA|186725": {
   "id": "186725",
