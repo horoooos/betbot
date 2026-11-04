@@ -11958,31 +11958,31 @@
   "kickoff": "2026-11-04T16:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Wed, November 4th at 8:00 AM EST",
   "home": {
-   "id": "11226",
-   "name": "Ignacio Buse",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/11226.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/per.png"
    ],
+   "id": "11226",
+   "name": "Ignacio Buse",
    "country": "Peru",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
    "ru": "Игнасио Бусе"
   },
   "away": {
-   "id": "2383",
-   "name": "Daniil Medvedev",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/2383.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/rus.png"
    ],
+   "id": "2383",
+   "name": "Daniil Medvedev",
    "country": "Russia",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
@@ -12041,7 +12041,9 @@
   "msg_id": 2580,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null
  },
  "ATP|186482": {
   "id": "186482",
