@@ -10790,22 +10790,22 @@
   "kickoff": "2026-11-04T04:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "home": {
+   "color": "fdba31",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/nsh.png",
    "id": "27",
    "name": "Nashville Predators",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/nsh.png",
-   "color": "fdba31",
    "score": "0",
    "record": "5-4-5",
    "periods": [],
    "ru": "Нэшвилл"
   },
   "away": {
+   "color": "e30426",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/car.png",
    "id": "7",
    "name": "Carolina Hurricanes",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/car.png",
-   "color": "e30426",
    "score": "0",
    "record": "12-2-2",
    "periods": [],
@@ -10899,7 +10899,9 @@
   "msg_id": 2495,
   "close": {
    "HK_O6.5": 0.4675
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null
  },
  "NHL|401892643": {
   "id": "401892643",
