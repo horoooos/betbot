@@ -6761,7 +6761,7 @@
   "kickoff": "2026-11-04T23:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Scheduled",
   "home": {
    "id": "333",
@@ -6908,7 +6908,10 @@
   "msg_id": 2660,
   "close": {
    "A": 0.4741
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null,
+  "value_hit": null
  },
  "401915304": {
   "id": "401915304",
@@ -7210,7 +7213,7 @@
   "kickoff": "2026-11-04T23:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Scheduled",
   "home": {
    "id": "175",
@@ -7346,7 +7349,10 @@
   "close": {
    "A": 0.5117,
    "U25": 0.3756
-  }
+  },
+  "main_hit": true,
+  "bold_hit": false,
+  "value_hit": null
  },
  "401915303": {
   "id": "401915303",
@@ -7355,7 +7361,7 @@
   "kickoff": "2026-11-04T23:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Scheduled",
   "home": {
    "id": "148",
@@ -7482,7 +7488,10 @@
   "msg_id": 2668,
   "close": {
    "H": 0.5104
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null,
+  "value_hit": null
  },
  "401915306": {
   "id": "401915306",
@@ -7491,7 +7500,7 @@
   "kickoff": "2026-11-04T23:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Scheduled",
   "home": {
    "id": "11420",
@@ -7627,7 +7636,10 @@
   "close": {
    "A": 0.6094,
    "U35": 0.4458
-  }
+  },
+  "main_hit": true,
+  "bold_hit": false,
+  "value_hit": null
  },
  "401915381": {
   "id": "401915381",
@@ -7636,7 +7648,7 @@
   "kickoff": "2026-11-04T23:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Scheduled",
   "home": {
    "id": "494",
@@ -7763,7 +7775,10 @@
   "msg_id": 2672,
   "close": {
    "O25": 0.5382
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null,
+  "value_hit": null
  },
  "401915302": {
   "id": "401915302",
@@ -7772,7 +7787,7 @@
   "kickoff": "2026-11-04T23:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Scheduled",
   "home": {
    "id": "510",
@@ -7908,7 +7923,10 @@
   "close": {
    "H": 0.6203,
    "H-1.5": 0.4136
-  }
+  },
+  "main_hit": true,
+  "bold_hit": true,
+  "value_hit": null
  },
  "401841306": {
   "id": "401841306",

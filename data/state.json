@@ -1461,7 +1461,9 @@
      "dc1f26",
      "e20520"
     ],
-    "label": "Победа: Арсенал"
+    "label": "Победа: Арсенал",
+    "win": true,
+    "score": "1:2"
    },
    {
     "sport": "football",
@@ -1482,18 +1484,20 @@
      "000080",
      "000000"
     ],
-    "label": "Победа: Викинг"
+    "label": "Победа: Викинг",
+    "win": true,
+    "score": "4:1"
    }
   ],
   "odds": 2.22249365,
   "day": "2026-11-04",
-  "done": false
+  "done": true
  },
  "streak_posted": 0,
  "value_day": "2026-11-04",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-04",
- "site_stamp": "500|2026-11-05 00",
+ "site_stamp": "506|2026-11-05 00",
  "battle": {
   "bot": 1,
   "crowd": 1
