@@ -9794,22 +9794,22 @@
   "kickoff": "2026-11-04T03:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "home": {
+   "color": "c41230",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/mtl.png",
    "id": "10",
    "name": "Montreal Canadiens",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/mtl.png",
-   "color": "c41230",
    "score": "0",
    "record": "9-3-2",
    "periods": [],
    "ru": "Монреаль"
   },
   "away": {
+   "color": "002d62",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/wpg.png",
    "id": "28",
    "name": "Winnipeg Jets",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/wpg.png",
-   "color": "002d62",
    "score": "0",
    "record": "4-8-3",
    "periods": [],
@@ -9912,7 +9912,9 @@
   "close": {
    "HK_U5.5": 0.4486,
    "HK_ML_A": 0.3907
-  }
+  },
+  "main_hit": false,
+  "bold_hit": true
  },
  "NHL|401892635": {
   "id": "401892635",
