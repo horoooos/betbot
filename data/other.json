@@ -11861,31 +11861,31 @@
   "kickoff": "2026-11-04T16:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Wed, November 4th at 8:00 AM EST",
   "home": {
-   "id": "3739",
-   "name": "Tomas Martin Etcheverry",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/3739.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/arg.png"
    ],
+   "id": "3739",
+   "name": "Tomas Martin Etcheverry",
    "country": "Argentina",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
    "ru": "Томас Мартин Этчеверри"
   },
   "away": {
-   "id": "2651",
-   "name": "Alex de Minaur",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/2651.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/aus.png"
    ],
+   "id": "2651",
+   "name": "Alex de Minaur",
    "country": "Australia",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
@@ -11944,7 +11944,9 @@
   "msg_id": 2578,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null
  },
  "ATP|186483": {
   "id": "186483",
