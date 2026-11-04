@@ -6422,7 +6422,7 @@
   "kickoff": "2026-11-04T22:45:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Scheduled",
   "home": {
    "id": "347",
@@ -6575,7 +6575,10 @@
   "msg_id": 2655,
   "close": {
    "A": 0.4814
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null,
+  "value_hit": false
  },
  "401880173": {
   "id": "401880173",
