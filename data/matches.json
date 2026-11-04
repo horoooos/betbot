@@ -8172,7 +8172,7 @@
   "kickoff": "2026-11-04T18:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Scheduled",
   "home": {
    "id": "169",
@@ -8308,7 +8308,10 @@
   "close": {
    "H": 0.4545,
    "U25": 0.4484
-  }
+  },
+  "main_hit": false,
+  "bold_hit": true,
+  "value_hit": null
  },
  "401915383": {
   "id": "401915383",
