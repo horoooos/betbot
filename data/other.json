@@ -12152,31 +12152,31 @@
   "kickoff": "2026-11-04T17:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Wed, November 4th at 9:30 AM EST",
   "home": {
-   "id": "4115",
-   "name": "Nuno Borges",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/4115.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/por.png"
    ],
+   "id": "4115",
+   "name": "Nuno Borges",
    "country": "Portugal",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
    "ru": "Нуну Боржеш"
   },
   "away": {
-   "id": "2367",
-   "name": "Karen Khachanov",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/2367.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/rus.png"
    ],
+   "id": "2367",
+   "name": "Karen Khachanov",
    "country": "Russia",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
@@ -12235,7 +12235,9 @@
   "msg_id": 2592,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null
  },
  "ATP|186490": {
   "id": "186490",
