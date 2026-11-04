@@ -5,7 +5,7 @@
  },
  "learned": "2026-11-04",
  "schedule_day": "2026-11-04",
- "content_slot": "2026-11-04-13",
+ "content_slot": "2026-11-04-16",
  "news_seen": [
   "https://www.sport-express.ru/hockey/nhl/news/michkov-stal-vtorym-igrokom-filadelfii-za-20-let-s-devyatyu-golami-v-oktyabre-2468591/",
   "https://www.championat.com/hockey/news-6676896-perepit-ego-tochno-ne-poluchitsya-forvard-vashingtona-o-vliyanii-ovechkina-v-komande.html",
@@ -1490,7 +1490,7 @@
  "value_day": "2026-11-04",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-04",
- "site_stamp": "473|2026-11-04 15",
+ "site_stamp": "473|2026-11-04 16",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1626,5 +1626,14 @@
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира"
- ]
+ ],
+ "mod_poll": {
+  "key": "B1|401878967",
+  "id": "401878967",
+  "poll": 2590,
+  "post": 2589,
+  "home": "Кортрейк",
+  "away": "Мехелен",
+  "kickoff": "2026-11-04T22:30:00+03:00"
+ }
 }
