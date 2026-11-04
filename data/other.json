@@ -10661,22 +10661,22 @@
   "kickoff": "2026-11-04T03:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "home": {
+   "color": "e30b2b",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/nj.png",
    "id": "11",
    "name": "New Jersey Devils",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/nj.png",
-   "color": "e30b2b",
    "score": "0",
    "record": "9-5-0",
    "periods": [],
    "ru": "Нью-Джерси"
   },
   "away": {
+   "color": "00205b",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/edm.png",
    "id": "6",
    "name": "Edmonton Oilers",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/edm.png",
-   "color": "00205b",
    "score": "0",
    "record": "11-2-2",
    "periods": [],
@@ -10779,7 +10779,9 @@
   "close": {
    "HK_O6.5": 0.4572,
    "HK_ML_A": 0.4066
-  }
+  },
+  "main_hit": true,
+  "bold_hit": false
  },
  "NHL|401892642": {
   "id": "401892642",
