@@ -10261,22 +10261,22 @@
   "kickoff": "2026-11-04T03:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "home": {
+   "color": "fe5823",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/phi.png",
    "id": "15",
    "name": "Philadelphia Flyers",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/phi.png",
-   "color": "fe5823",
    "score": "0",
    "record": "4-8-4",
    "periods": [],
    "ru": "Филадельфия"
   },
   "away": {
+   "color": "124734",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/min.png",
    "id": "30",
    "name": "Minnesota Wild",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/min.png",
-   "color": "124734",
    "score": "0",
    "record": "10-3-3",
    "periods": [],
@@ -10370,7 +10370,9 @@
   "msg_id": 2480,
   "close": {
    "HK_U5.5": 0.4572
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null
  },
  "NHL|401892639": {
   "id": "401892639",
@@ -10615,22 +10617,22 @@
   "kickoff": "2026-11-04T03:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "home": {
+   "color": "002d62",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/cbj.png",
    "id": "29",
    "name": "Columbus Blue Jackets",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/cbj.png",
-   "color": "002d62",
    "score": "0",
    "record": "5-7-0",
    "periods": [],
    "ru": "Коламбус"
   },
   "away": {
+   "color": "860038",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/col.png",
    "id": "17",
    "name": "Colorado Avalanche",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/col.png",
-   "color": "860038",
    "score": "0",
    "record": "9-5-1",
    "periods": [],
@@ -10733,7 +10735,9 @@
   "close": {
    "HK_O6.5": 0.474,
    "HK_ML_H": 0.4675
-  }
+  },
+  "main_hit": true,
+  "bold_hit": true
  },
  "NHL|401892636": {
   "id": "401892636",
