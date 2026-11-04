@@ -12854,31 +12854,31 @@
   "kickoff": "2026-11-04T22:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Wed, November 4th at 2:30 PM EST",
   "home": {
-   "id": "10052",
-   "name": "Arthur Fils",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/10052.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/fra.png"
    ],
+   "id": "10052",
+   "name": "Arthur Fils",
    "country": "France",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
    "ru": "Артур Филс"
   },
   "away": {
-   "id": "3811",
-   "name": "Tomas Machac",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/3811.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/cze.png"
    ],
+   "id": "3811",
+   "name": "Tomas Machac",
    "country": "Czechia",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
@@ -12937,7 +12937,9 @@
   "msg_id": 2651,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null
  },
  "WTA|186724": {
   "id": "186724",
