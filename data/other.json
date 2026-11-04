@@ -11723,5 +11723,101 @@
  "WTA|186661": {
   "status": "skipped",
   "kickoff": "2026-11-04T13:00:00+03:00"
+ },
+ "WTA|186632": {
+  "id": "186632",
+  "div": "WTA",
+  "sport": "tennis",
+  "tournament": "Prudential Hong Kong Tennis Open",
+  "round": "Round 2",
+  "bo5": false,
+  "kickoff": "2026-11-04T13:30:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "detail": "Wed, November 4th at 5:30 AM EST",
+  "home": {
+   "id": "14146",
+   "name": "Maya Joint",
+   "logo": [
+    "https://a.espncdn.com/i/headshots/tennis/players/full/14146.png",
+    "https://a.espncdn.com/i/teamlogos/countries/500/aus.png"
+   ],
+   "country": "Australia",
+   "color": "2d6a4f",
+   "winner": false,
+   "sets": [],
+   "set_won": [],
+   "ru": "Майя Джойнт"
+  },
+  "away": {
+   "id": "3018",
+   "name": "Maria Sakkari",
+   "logo": [
+    "https://a.espncdn.com/i/headshots/tennis/players/full/3018.png",
+    "https://a.espncdn.com/i/teamlogos/countries/500/gre.png"
+   ],
+   "country": "Greece",
+   "color": "2d6a4f",
+   "winner": false,
+   "sets": [],
+   "set_won": [],
+   "ru": "Мария Саккари"
+  },
+  "odds": {},
+  "probs": {
+   "TN_W1": 0.4116778183182456,
+   "TN_W2": 0.5883221816817543,
+   "TN_3S": 0.4930007823048589,
+   "TN_2S": 0.5069992176951411,
+   "TN_S2:0": 0.1943421169503428,
+   "TN_S0:2": 0.3126571007447983,
+   "TN_S2:1": 0.21733570136790278,
+   "TN_S1:2": 0.2756650809369561,
+   "TN_SET1": 0.6873428992552018,
+   "TN_SET2": 0.8056578830496572
+  },
+  "labels": {
+   "TN_W1": "Победа: Майя Джойнт",
+   "TN_W2": "Победа: Мария Саккари",
+   "TN_3S": "Будет 3 сета",
+   "TN_2S": "Будет 2 сета",
+   "TN_S2:0": "Счёт по сетам 2:0",
+   "TN_S0:2": "Счёт по сетам 0:2",
+   "TN_S2:1": "Счёт по сетам 2:1",
+   "TN_S1:2": "Счёт по сетам 1:2",
+   "TN_SET1": "Майя Джойнт возьмёт хотя бы сет",
+   "TN_SET2": "Мария Саккари возьмёт хотя бы сет"
+  },
+  "real": {},
+  "center": "Рейтинг Эло 1624 : 1686",
+  "bar": [
+   0.4116778183182456,
+   0,
+   0.5883221816817543
+  ],
+  "model": {
+   "elo": [
+    1624.3559075517496,
+    1686.379009828952
+   ],
+   "src": "Эло"
+  },
+  "main": {
+   "key": "TN_2S",
+   "label": "Будет 2 сета",
+   "p": 0.507,
+   "odds": 1.83,
+   "est": true,
+   "stake": 1.0
+  },
+  "bold": {},
+  "open": {},
+  "top": false,
+  "msg_id": 2559
+ },
+ "WTA|186662": {
+  "status": "skipped",
+  "kickoff": "2026-11-04T13:30:00+03:00"
  }
 }
