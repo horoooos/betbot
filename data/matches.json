@@ -12006,7 +12006,7 @@
   "kickoff": "2026-11-04T03:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Scheduled",
   "home": {
    "id": "1936",
@@ -12134,6 +12134,9 @@
   "msg_id": 2491,
   "close": {
    "H": 0.6104
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null,
+  "value_hit": null
  }
 }
