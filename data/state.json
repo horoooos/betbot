@@ -5,7 +5,7 @@
  },
  "learned": "2026-11-04",
  "schedule_day": "2026-11-04",
- "content_slot": "2026-11-03-23",
+ "content_slot": "2026-11-04-10",
  "news_seen": [
   "https://www.sport-express.ru/football/asian-cup/news/byvshiy-trener-sbornoy-yaponii-okada-pokinul-post-vice-prezidenta-futbolnoy-associacii-28-oktyabrya-2026-2468631/",
   "https://www.championat.com/hockey/news-6676974-forvard-moskovskogo-dinamo-otreagiroval-na-pervuyu-v-sezone-pobedu-doma-v-osnovnoe-vremya.html",
@@ -1416,64 +1416,81 @@
   ]
  },
  "express": {
-  "msg": 2220,
+  "msg": 2543,
   "legs": [
    {
     "sport": "football",
     "div": "UCL",
-    "id": "401915387",
-    "side": "home",
-    "p": 0.7348473072085694,
-    "odds": 1.294,
-    "kickoff": "2026-11-03T23:00:00+03:00",
-    "home": "Барселона",
-    "away": "Астон Вилла",
+    "id": "401915383",
+    "side": "away",
+    "p": 0.7727690892364306,
+    "odds": 1.235,
+    "kickoff": "2026-11-04T20:45:00+03:00",
+    "home": "АЕК",
+    "away": "Реал Мадрид",
     "league": "🏆 Европа · Лига чемпионов",
     "logos": [
-     "https://a.espncdn.com/i/teamlogos/soccer/500/83.png",
-     "https://a.espncdn.com/i/teamlogos/soccer/500/362.png"
+     "https://a.espncdn.com/i/teamlogos/soccer/500/887.png",
+     "https://a.espncdn.com/i/teamlogos/soccer/500/86.png"
     ],
     "colors": [
-     "990000",
-     "660e36"
+     "ffff00",
+     "ffffff"
     ],
-    "label": "Победа: Барселона",
-    "win": true,
-    "score": "3:0"
+    "label": "Победа: Реал Мадрид"
    },
    {
     "sport": "football",
     "div": "UCL",
-    "id": "401915385",
-    "side": "home",
-    "p": 0.7075907049244211,
-    "odds": 1.345,
-    "kickoff": "2026-11-03T23:00:00+03:00",
-    "home": "ЛАСК",
-    "away": "Слован",
+    "id": "401915381",
+    "side": "away",
+    "p": 0.7535106747345587,
+    "odds": 1.27,
+    "kickoff": "2026-11-04T23:00:00+03:00",
+    "home": "Славия",
+    "away": "Арсенал",
     "league": "🏆 Европа · Лига чемпионов",
     "logos": [
-     "https://a.espncdn.com/i/teamlogos/soccer/500/4411.png",
-     "https://a.espncdn.com/i/teamlogos/soccer/500/521.png"
+     "https://a.espncdn.com/i/teamlogos/soccer/500/494.png",
+     "https://a.espncdn.com/i/teamlogos/soccer/500/359.png"
     ],
     "colors": [
-     "ffffff",
-     "81c0ff"
+     "dc1f26",
+     "e20520"
     ],
-    "label": "Победа: ЛАСК",
-    "win": true,
-    "score": "4:0"
+    "label": "Победа: Арсенал"
+   },
+   {
+    "sport": "football",
+    "div": "UCL",
+    "id": "401915302",
+    "side": "home",
+    "p": 0.6720860270114575,
+    "odds": 1.417,
+    "kickoff": "2026-11-04T23:00:00+03:00",
+    "home": "Викинг",
+    "away": "Сабах",
+    "league": "🏆 Европа · Лига чемпионов",
+    "logos": [
+     "https://a.espncdn.com/i/teamlogos/soccer/500/510.png",
+     "https://a.espncdn.com/i/teamlogos/soccer/500/21922.png"
+    ],
+    "colors": [
+     "000080",
+     "000000"
+    ],
+    "label": "Победа: Викинг"
    }
   ],
-  "odds": 1.74043,
-  "day": "2026-11-03",
-  "done": true
+  "odds": 2.22249365,
+  "day": "2026-11-04",
+  "done": false
  },
  "streak_posted": 0,
  "value_day": "2026-11-03",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-03",
- "site_stamp": "464|2026-11-04 09",
+ "site_stamp": "464|2026-11-04 10",
  "battle": {
   "bot": 1,
   "crowd": 1
