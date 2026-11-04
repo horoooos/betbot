@@ -11249,31 +11249,31 @@
   "kickoff": "2026-11-04T10:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Wed, November 3rd at 2:30 AM EST",
   "home": {
-   "id": "2980",
-   "name": "Claire Liu",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/2980.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/usa.png"
    ],
+   "id": "2980",
+   "name": "Claire Liu",
    "country": "USA",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
    "ru": "Клер Лю"
   },
   "away": {
-   "id": "2054",
-   "name": "Katie Boulter",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/2054.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/gbr.png"
    ],
+   "id": "2054",
+   "name": "Katie Boulter",
    "country": "Great Britain",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
@@ -11332,7 +11332,9 @@
   "msg_id": 2541,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null
  },
  "WTA|186679": {
   "status": "skipped",
