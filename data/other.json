@@ -13239,22 +13239,22 @@
   "kickoff": "2026-11-05T04:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "home": {
+   "color": "5d76a9",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/mem.png",
    "id": "29",
    "name": "Memphis Grizzlies",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/mem.png",
-   "color": "5d76a9",
    "score": "0",
    "record": "6-1",
    "periods": [],
    "ru": "Мемфис Гриззлис"
   },
   "away": {
+   "color": "0c2340",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/ind.png",
    "id": "11",
    "name": "Indiana Pacers",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/ind.png",
-   "color": "0c2340",
    "score": "0",
    "record": "2-6",
    "periods": [],
@@ -13328,7 +13328,9 @@
   "msg_id": 2802,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null
  },
  "NBA|401909928": {
   "id": "401909928",
