@@ -13940,22 +13940,22 @@
   "kickoff": "2026-11-05T06:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "home": {
+   "color": "121212",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/la.png",
    "id": "8",
    "name": "Los Angeles Kings",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/la.png",
-   "color": "121212",
    "score": "0",
    "record": "4-7-2",
    "periods": [],
    "ru": "Лос-Анджелес"
   },
   "away": {
+   "color": "00788a",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/sj.png",
    "id": "18",
    "name": "San Jose Sharks",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/sj.png",
-   "color": "00788a",
    "score": "0",
    "record": "7-8-1",
    "periods": [],
@@ -14058,7 +14058,9 @@
   "close": {
    "HK_O6.5": 0.4675,
    "HK_ML_A": 0.4003
-  }
+  },
+  "main_hit": true,
+  "bold_hit": false
  },
  "NHL|401892647": {
   "id": "401892647",
