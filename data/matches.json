@@ -9319,7 +9319,7 @@
   "kickoff": "2026-11-05T21:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Scheduled",
   "home": {
    "id": "9739",
@@ -9447,7 +9447,10 @@
   "msg_id": 2977,
   "close": {
    "O25": 0.5242
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null,
+  "value_hit": null
  },
  "401915529": {
   "id": "401915529",
