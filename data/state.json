@@ -1493,11 +1493,11 @@
   "day": "2026-11-04",
   "done": true
  },
- "streak_posted": 7,
+ "streak_posted": 10,
  "value_day": "2026-11-04",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-04",
- "site_stamp": "511|2026-11-05 05",
+ "site_stamp": "513|2026-11-05 05",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1533,7 +1533,9 @@
      "e31837",
      "c8102e"
     ],
-    "label": "Победа: Атланта Хокс (с ОТ)"
+    "label": "Победа: Атланта Хокс (с ОТ)",
+    "win": true,
+    "score": "105:120"
    },
    {
     "sport": "football",
@@ -1554,7 +1556,9 @@
      "000000",
      "000000"
     ],
-    "label": "Победа: Ботафого"
+    "label": "Победа: Ботафого",
+    "win": true,
+    "score": "1:0"
    },
    {
     "sport": "basketball",

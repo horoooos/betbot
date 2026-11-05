@@ -12588,22 +12588,22 @@
   "kickoff": "2026-11-05T03:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "home": {
+   "color": "e31837",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/wsh.png",
    "id": "27",
    "name": "Washington Wizards",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/wsh.png",
-   "color": "e31837",
    "score": "0",
    "record": "4-3",
    "periods": [],
    "ru": "Вашингтон Уизардс"
   },
   "away": {
+   "color": "c8102e",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/atl.png",
    "id": "1",
    "name": "Atlanta Hawks",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/atl.png",
-   "color": "c8102e",
    "score": "0",
    "record": "4-4",
    "periods": [],
@@ -12677,7 +12677,9 @@
   "msg_id": 2780,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null
  },
  "NHL|401892644": {
   "id": "401892644",

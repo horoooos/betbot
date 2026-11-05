@@ -7519,7 +7519,7 @@
   "kickoff": "2026-11-05T03:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Scheduled",
   "home": {
    "id": "6086",
@@ -7647,7 +7647,10 @@
   "msg_id": 2786,
   "close": {
    "H": 0.5851
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null,
+  "value_hit": null
  },
  "401841298": {
   "id": "401841298",
