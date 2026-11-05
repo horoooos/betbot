@@ -7659,7 +7659,7 @@
   "kickoff": "2026-11-05T03:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Scheduled",
   "home": {
    "id": "2026",
@@ -7796,6 +7796,9 @@
   "close": {
    "U25": 0.6096,
    "H": 0.3709
-  }
+  },
+  "main_hit": true,
+  "bold_hit": false,
+  "value_hit": null
  }
 }
