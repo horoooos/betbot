@@ -13407,31 +13407,31 @@
   "kickoff": "2026-11-05T12:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Thu, November 5th at 4:30 AM EST",
   "home": {
-   "id": "3153",
-   "name": "Mai Hontama",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/3153.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/jpn.png"
    ],
+   "id": "3153",
+   "name": "Mai Hontama",
    "country": "Japan",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
    "ru": "Маи Хонтама"
   },
   "away": {
-   "id": "4926",
-   "name": "Zhibek Kulambayeva",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/4926.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/kaz.png"
    ],
+   "id": "4926",
+   "name": "Zhibek Kulambayeva",
    "country": "Kazakhstan",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
@@ -13490,7 +13490,9 @@
   "msg_id": 2896,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null
  },
  "ATP|186496": {
   "id": "186496",
