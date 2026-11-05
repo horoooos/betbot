@@ -14386,5 +14386,97 @@
   "close": {
    "_": null
   }
+ },
+ "WTA|186639": {
+  "id": "186639",
+  "div": "WTA",
+  "sport": "tennis",
+  "tournament": "Prudential Hong Kong Tennis Open",
+  "round": "Round 2",
+  "bo5": false,
+  "kickoff": "2026-11-05T10:30:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "detail": "Thu, November 4th at 2:30 AM EST",
+  "home": {
+   "id": "14877",
+   "name": "Mika Stojsavljevic",
+   "logo": [
+    "https://a.espncdn.com/i/headshots/tennis/players/full/14877.png",
+    "https://a.espncdn.com/i/teamlogos/countries/500/gbr.png"
+   ],
+   "country": "Great Britain",
+   "color": "2d6a4f",
+   "winner": false,
+   "sets": [],
+   "set_won": [],
+   "ru": "Мика Стойсавлевич"
+  },
+  "away": {
+   "id": "5604",
+   "name": "Zeynep Sonmez",
+   "logo": [
+    "https://a.espncdn.com/i/headshots/tennis/players/full/5604.png",
+    "https://a.espncdn.com/i/teamlogos/countries/500/tur.png"
+   ],
+   "country": "Türkiye",
+   "color": "2d6a4f",
+   "winner": false,
+   "sets": [],
+   "set_won": [],
+   "ru": "Зейнеп Сёнмез"
+  },
+  "odds": {},
+  "probs": {
+   "TN_W1": 0.39044167981527317,
+   "TN_W2": 0.6095583201847268,
+   "TN_3S": 0.48917496593846266,
+   "TN_2S": 0.5108250340615372,
+   "TN_S2:0": 0.18184270643723346,
+   "TN_S0:2": 0.3289823276243038,
+   "TN_S2:1": 0.20859897337803965,
+   "TN_S1:2": 0.28057599256042304,
+   "TN_SET1": 0.6710176723756962,
+   "TN_SET2": 0.8181572935627666
+  },
+  "labels": {
+   "TN_W1": "Победа: Мика Стойсавлевич",
+   "TN_W2": "Победа: Зейнеп Сёнмез",
+   "TN_3S": "Будет 3 сета",
+   "TN_2S": "Будет 2 сета",
+   "TN_S2:0": "Счёт по сетам 2:0",
+   "TN_S0:2": "Счёт по сетам 0:2",
+   "TN_S2:1": "Счёт по сетам 2:1",
+   "TN_S1:2": "Счёт по сетам 1:2",
+   "TN_SET1": "Мика Стойсавлевич возьмёт хотя бы сет",
+   "TN_SET2": "Зейнеп Сёнмез возьмёт хотя бы сет"
+  },
+  "real": {},
+  "center": "Рейтинг Эло 1514 : 1591",
+  "bar": [
+   0.39044167981527317,
+   0,
+   0.6095583201847268
+  ],
+  "model": {
+   "elo": [
+    1513.9127136662494,
+    1591.2963500543615
+   ],
+   "src": "Эло"
+  },
+  "main": {
+   "key": "TN_2S",
+   "label": "Будет 2 сета",
+   "p": 0.5108,
+   "odds": 1.82,
+   "est": true,
+   "stake": 1.0
+  },
+  "bold": {},
+  "open": {},
+  "top": false,
+  "msg_id": 2889
  }
 }
