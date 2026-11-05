@@ -1491,7 +1491,7 @@
  "value_day": "2026-11-05",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-05",
- "site_stamp": "548|2026-11-05 22",
+ "site_stamp": "552|2026-11-05 22",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1548,7 +1548,9 @@
      "ef2f24",
      "025719"
     ],
-    "label": "Победа: НЕК"
+    "label": "Победа: НЕК",
+    "win": true,
+    "score": "3:1"
    },
    {
     "sport": "football",
