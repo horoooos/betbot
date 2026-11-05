@@ -13411,31 +13411,31 @@
   "kickoff": "2026-11-05T14:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Thu, November 5th at 6:00 AM EST",
   "home": {
-   "id": "3388",
-   "name": "Simona Waltert",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/3388.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/sui.png"
    ],
+   "id": "3388",
+   "name": "Simona Waltert",
    "country": "Switzerland",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
    "ru": "Симона Вальтерт"
   },
   "away": {
-   "id": "8067",
-   "name": "Lucrezia Stefanini",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/8067.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/ita.png"
    ],
+   "id": "8067",
+   "name": "Lucrezia Stefanini",
    "country": "Italy",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
@@ -13494,7 +13494,9 @@
   "msg_id": 2907,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null
  },
  "ATP|186497": {
   "id": "186497",
