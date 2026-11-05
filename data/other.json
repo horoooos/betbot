@@ -13411,31 +13411,31 @@
   "kickoff": "2026-11-05T15:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Thu, November 5th at 7:00 AM EST",
   "home": {
-   "id": "1774",
-   "name": "Sorana Cirstea",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/1774.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/rom.png"
    ],
+   "id": "1774",
+   "name": "Sorana Cirstea",
    "country": "Romania",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
    "ru": "Сорана Кырстя"
   },
   "away": {
-   "id": "13479",
-   "name": "Mary Stoiana",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/13479.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/usa.png"
    ],
+   "id": "13479",
+   "name": "Mary Stoiana",
    "country": "USA",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
@@ -13494,7 +13494,9 @@
   "msg_id": 2915,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null
  },
  "WTA|186676": {
   "status": "skipped",
