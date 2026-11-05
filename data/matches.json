@@ -9356,7 +9356,7 @@
   "kickoff": "2026-11-05T20:45:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Scheduled",
   "home": {
    "id": "2290",
@@ -9483,7 +9483,10 @@
   "msg_id": 2972,
   "close": {
    "O35": 0.5731
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null,
+  "value_hit": null
  },
  "401915825": {
   "id": "401915825",
