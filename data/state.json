@@ -5,7 +5,7 @@
  },
  "learned": "2026-11-05",
  "schedule_day": "2026-11-05",
- "content_slot": "2026-11-04-23",
+ "content_slot": "2026-11-05-10",
  "news_seen": [
   "https://www.championat.com/football/news-6677308-lavia-nazval-polozhitelnye-momenty-v-igre-chelsi-v-matche-s-liverpulem.html",
   "https://www.championat.com/football/news-6677374-leonid-sluckij-predskazal-sleduyuschego-obladatelya-zolotogo-myacha.html",
@@ -1417,87 +1417,81 @@
   ]
  },
  "express": {
-  "msg": 2543,
+  "msg": 2892,
   "legs": [
    {
     "sport": "football",
-    "div": "UCL",
-    "id": "401915383",
-    "side": "away",
-    "p": 0.7727690892364306,
-    "odds": 1.235,
-    "kickoff": "2026-11-04T20:45:00+03:00",
-    "home": "АЕК",
-    "away": "Реал Мадрид",
-    "league": "🏆 Европа · Лига чемпионов",
-    "logos": [
-     "https://a.espncdn.com/i/teamlogos/soccer/500/887.png",
-     "https://a.espncdn.com/i/teamlogos/soccer/500/86.png"
-    ],
-    "colors": [
-     "ffff00",
-     "ffffff"
-    ],
-    "label": "Победа: Реал Мадрид",
-    "win": true,
-    "score": "2:3"
-   },
-   {
-    "sport": "football",
-    "div": "UCL",
-    "id": "401915381",
-    "side": "away",
-    "p": 0.7535106747345587,
-    "odds": 1.27,
-    "kickoff": "2026-11-04T23:00:00+03:00",
-    "home": "Славия",
-    "away": "Арсенал",
-    "league": "🏆 Европа · Лига чемпионов",
-    "logos": [
-     "https://a.espncdn.com/i/teamlogos/soccer/500/494.png",
-     "https://a.espncdn.com/i/teamlogos/soccer/500/359.png"
-    ],
-    "colors": [
-     "dc1f26",
-     "e20520"
-    ],
-    "label": "Победа: Арсенал",
-    "win": true,
-    "score": "1:2"
-   },
-   {
-    "sport": "football",
-    "div": "UCL",
-    "id": "401915302",
+    "div": "UECL",
+    "id": "401915740",
     "side": "home",
-    "p": 0.6720860270114575,
-    "odds": 1.417,
-    "kickoff": "2026-11-04T23:00:00+03:00",
-    "home": "Викинг",
-    "away": "Сабах",
-    "league": "🏆 Европа · Лига чемпионов",
+    "p": 0.8168285909226319,
+    "odds": 1.167,
+    "kickoff": "2026-11-05T23:00:00+03:00",
+    "home": "Копенгаген",
+    "away": "Сабуртало",
+    "league": "🏆 Европа · Лига конференций",
     "logos": [
-     "https://a.espncdn.com/i/teamlogos/soccer/500/510.png",
-     "https://a.espncdn.com/i/teamlogos/soccer/500/21922.png"
+     "https://a.espncdn.com/i/teamlogos/soccer/500/909.png",
+     "https://a.espncdn.com/i/teamlogos/soccer/500/20025.png"
     ],
     "colors": [
-     "000080",
+     "ffffff",
      "000000"
     ],
-    "label": "Победа: Викинг",
-    "win": true,
-    "score": "4:1"
+    "label": "Победа: Копенгаген"
+   },
+   {
+    "sport": "football",
+    "div": "UECL",
+    "id": "401915823",
+    "side": "home",
+    "p": 0.8115706791107504,
+    "odds": 1.182,
+    "kickoff": "2026-11-05T23:00:00+03:00",
+    "home": "Лугано",
+    "away": "Жальгирис",
+    "league": "🏆 Европа · Лига конференций",
+    "logos": [
+     "https://a.espncdn.com/i/teamlogos/soccer/500/7672.png",
+     "https://a.espncdn.com/i/teamlogos/soccer/500/20028.png"
+    ],
+    "colors": [
+     "000000",
+     "000000"
+    ],
+    "label": "Победа: Лугано"
+   },
+   {
+    "sport": "football",
+    "div": "UECL",
+    "id": "401915822",
+    "side": "home",
+    "p": 0.7283217182680225,
+    "odds": 1.312,
+    "kickoff": "2026-11-05T23:00:00+03:00",
+    "home": "Твенте",
+    "away": "Пафос",
+    "league": "🏆 Европа · Лига конференций",
+    "logos": [
+     "https://a.espncdn.com/i/teamlogos/soccer/500/152.png",
+     "https://a.espncdn.com/i/teamlogos/soccer/500/22281.png"
+    ],
+    "colors": [
+     "F31522",
+     "82c0fe"
+    ],
+    "label": "Победа: Твенте"
    }
   ],
-  "odds": 2.22249365,
-  "day": "2026-11-04",
-  "done": true
+  "odds": 1.809764928,
+  "day": "2026-11-05",
+  "done": false
  },
  "streak_posted": 0,
  "value_day": "2026-11-04",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-04",
- "site_stamp": "531|2026-11-05 09",
+ "site_stamp": "531|2026-11-05 10",
  "battle": {
   "bot": 1,
   "crowd": 1
