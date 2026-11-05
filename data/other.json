@@ -14104,22 +14104,22 @@
   "kickoff": "2026-11-05T06:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "home": {
+   "color": "12173f",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/lac.png",
    "id": "12",
    "name": "LA Clippers",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/lac.png",
-   "color": "12173f",
    "score": "0",
    "record": "1-6",
    "periods": [],
    "ru": "Клипперс"
   },
   "away": {
+   "color": "98002e",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/mia.png",
    "id": "14",
    "name": "Miami Heat",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/mia.png",
-   "color": "98002e",
    "score": "0",
    "record": "2-5",
    "periods": [],
@@ -14193,7 +14193,9 @@
   "msg_id": 2848,
   "close": {
    "BB_U233.5": 0.5
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null
  },
  "WTA|186640": {
   "id": "186640",
