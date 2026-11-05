@@ -5,7 +5,7 @@
  },
  "learned": "2026-11-05",
  "schedule_day": "2026-11-05",
- "content_slot": "2026-11-05-13",
+ "content_slot": "2026-11-05-16",
  "news_seen": [
   "https://www.championat.com/tennis/news-6677352-olga-danilovich-i-vratar-atletiko-madrid-yan-oblak-stali-roditelyami.html",
   "https://www.championat.com/football/news-6677332-dmitriev-ocenil-psihologicheskuyu-vazhnost-pobedy-spartaka-v-matche-s-rubinom.html",
@@ -1491,7 +1491,7 @@
  "value_day": "2026-11-05",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-05",
- "site_stamp": "537|2026-11-05 15",
+ "site_stamp": "537|2026-11-05 16",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1636,5 +1636,14 @@
   "Что такое офсайд",
   "Первый чемпионат мира",
   "Овертайм и буллиты в НХЛ"
- ]
+ ],
+ "mod_poll": {
+  "key": "BRA|401841300",
+  "id": "401841300",
+  "poll": 2927,
+  "post": 2926,
+  "home": "Палмейрас",
+  "away": "Ремо",
+  "kickoff": "2026-11-06T01:30:00+03:00"
+ }
 }
