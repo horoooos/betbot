@@ -1491,7 +1491,7 @@
  "value_day": "2026-11-05",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-05",
- "site_stamp": "552|2026-11-05 22",
+ "site_stamp": "557|2026-11-05 22",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1527,7 +1527,9 @@
      "3366CC",
      "ffffff"
     ],
-    "label": "Победа: Реал Сосьедад"
+    "label": "Победа: Реал Сосьедад",
+    "win": false,
+    "score": "1:1"
    },
    {
     "sport": "football",
@@ -1618,7 +1620,7 @@
   ],
   "odds": 13.65470889276,
   "day": "2026-11-05",
-  "done": false
+  "done": true
  },
  "streak_day": {
   "2026-11-05": 1
