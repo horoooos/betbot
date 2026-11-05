@@ -13731,22 +13731,22 @@
   "kickoff": "2026-11-05T05:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "home": {
+   "color": "29127a",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/phx.png",
    "id": "21",
    "name": "Phoenix Suns",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/phx.png",
-   "color": "29127a",
    "score": "0",
    "record": "1-4",
    "periods": [],
    "ru": "Финикс Санз"
   },
   "away": {
+   "color": "e03a3e",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/por.png",
    "id": "22",
    "name": "Portland Trail Blazers",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/por.png",
-   "color": "e03a3e",
    "score": "0",
    "record": "5-1",
    "periods": [],
@@ -13829,7 +13829,9 @@
   "close": {
    "BB_U227.5": 0.5,
    "BB_ML_H": 0.3853
-  }
+  },
+  "main_hit": false,
+  "bold_hit": false
  },
  "NBA|401909933": {
   "id": "401909933",
