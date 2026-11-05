@@ -14067,22 +14067,22 @@
   "kickoff": "2026-11-05T06:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "home": {
+   "color": "000d33",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/sea.png",
    "id": "124292",
    "name": "Seattle Kraken",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/sea.png",
-   "color": "000d33",
    "score": "0",
    "record": "8-5-1",
    "periods": [],
    "ru": "Сиэтл"
   },
   "away": {
+   "color": "dd1a32",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/cgy.png",
    "id": "3",
    "name": "Calgary Flames",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/cgy.png",
-   "color": "dd1a32",
    "score": "0",
    "record": "7-8-0",
    "periods": [],
@@ -14185,7 +14185,9 @@
   "close": {
    "HK_O6.5": 0.4826,
    "HK_ML_A": 0.4486
-  }
+  },
+  "main_hit": false,
+  "bold_hit": false
  },
  "NBA|401909934": {
   "id": "401909934",
@@ -14194,22 +14196,22 @@
   "kickoff": "2026-11-05T06:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "home": {
+   "color": "5a2d81",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/sac.png",
    "id": "23",
    "name": "Sacramento Kings",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/sac.png",
-   "color": "5a2d81",
    "score": "0",
    "record": "1-6",
    "periods": [],
    "ru": "Сакраменто Кингз"
   },
   "away": {
+   "color": "552583",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/lal.png",
    "id": "13",
    "name": "Los Angeles Lakers",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/lal.png",
-   "color": "552583",
    "score": "0",
    "record": "6-2",
    "periods": [],
@@ -14283,7 +14285,9 @@
   "msg_id": 2840,
   "close": {
    "BB_U233.5": 0.5
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null
  },
  "NBA|401909935": {
   "id": "401909935",
