@@ -13211,31 +13211,31 @@
   "kickoff": "2026-11-05T20:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Thu, November 5th at 12:00 PM EST",
   "home": {
-   "id": "5299",
-   "name": "Carole Monnet",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/5299.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/fra.png"
    ],
+   "id": "5299",
+   "name": "Carole Monnet",
    "country": "France",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
    "ru": "Кароль Монне"
   },
   "away": {
-   "id": "10676",
-   "name": "Leyre Romero Gormaz",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/10676.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/esp.png"
    ],
+   "id": "10676",
+   "name": "Leyre Romero Gormaz",
    "country": "Spain",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
@@ -13294,7 +13294,9 @@
   "msg_id": 2938,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null
  },
  "WTA|186727": {
   "id": "186727",
