@@ -13613,31 +13613,31 @@
   "kickoff": "2026-11-05T12:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Thu, November 5th at 4:30 AM EST",
   "home": {
-   "id": "5734",
-   "name": "Moyuka Uchijima",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/5734.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/jpn.png"
    ],
+   "id": "5734",
+   "name": "Moyuka Uchijima",
    "country": "Japan",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
    "ru": "Моюка Утидзима"
   },
   "away": {
-   "id": "1649",
-   "name": "Magda Linette",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/1649.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/pol.png"
    ],
+   "id": "1649",
+   "name": "Magda Linette",
    "country": "Poland",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
@@ -13696,7 +13696,9 @@
   "msg_id": 2894,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null
  },
  "WTA|186591": {
   "id": "186591",
@@ -14172,7 +14174,10 @@
   "bold": {},
   "open": {},
   "top": false,
-  "msg_id": 2911
+  "msg_id": 2911,
+  "close": {
+   "_": null
+  }
  },
  "WTA|186641": {
   "id": "186641",
