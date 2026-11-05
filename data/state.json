@@ -1438,7 +1438,9 @@
      "ffffff",
      "000000"
     ],
-    "label": "Победа: Копенгаген"
+    "label": "Победа: Копенгаген",
+    "win": true,
+    "score": "2:1"
    },
    {
     "sport": "football",
@@ -1489,13 +1491,13 @@
   ],
   "odds": 1.809764928,
   "day": "2026-11-05",
-  "done": false
+  "done": true
  },
  "streak_posted": 0,
  "value_day": "2026-11-05",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-05",
- "site_stamp": "576|2026-11-06 00",
+ "site_stamp": "581|2026-11-06 00",
  "battle": {
   "bot": 1,
   "crowd": 1
