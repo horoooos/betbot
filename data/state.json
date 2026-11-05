@@ -5,7 +5,7 @@
  },
  "learned": "2026-11-05",
  "schedule_day": "2026-11-05",
- "content_slot": "2026-11-05-19",
+ "content_slot": "2026-11-05-20",
  "news_seen": [
   "https://www.championat.com/football/news-6677368-krylya-sovetov-dinamo-mahachkala-rahmanovich-vyvel-hozyaev-polya-vperyod-na-32-j-min-v-matche-kubka-rossii-2026-2027-29-oktyabrya-.html",
   "https://www.sport-express.ru/football/rus_cup/news/krylya-sovetov-dinamo-mahachkala-rahmanovich-vyvel-samarcev-vpered-2468716/",
@@ -1491,7 +1491,7 @@
  "value_day": "2026-11-05",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-05",
- "site_stamp": "542|2026-11-05 19",
+ "site_stamp": "542|2026-11-05 20",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1506,127 +1506,117 @@
  },
  "value_check": "2026-11-05-6",
  "express_risk": {
-  "msg": 2634,
+  "msg": 2981,
   "legs": [
    {
-    "sport": "basketball",
-    "div": "NBA",
-    "id": "401909923",
-    "side": "away",
-    "p": 0.5824259306153456,
-    "odds": 1.649,
-    "kickoff": "2026-11-05T03:00:00+03:00",
-    "home": "Вашингтон Уизардс",
-    "away": "Атланта Хокс",
-    "league": "🇺🇸 США · NBA",
+    "sport": "football",
+    "div": "UEL",
+    "id": "401915537",
+    "side": "home",
+    "p": 0.568048017001235,
+    "odds": 1.69,
+    "kickoff": "2026-11-05T20:45:00+03:00",
+    "home": "Реал Сосьедад",
+    "away": "Олимпик",
+    "league": "🏆 Европа · Лига Европы",
     "logos": [
-     "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/wsh.png",
-     "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/atl.png"
+     "https://a.espncdn.com/i/teamlogos/soccer/500/89.png",
+     "https://a.espncdn.com/i/teamlogos/soccer/500/167.png"
     ],
     "colors": [
-     "e31837",
-     "c8102e"
+     "3366CC",
+     "ffffff"
     ],
-    "label": "Победа: Атланта Хокс (с ОТ)",
-    "win": true,
-    "score": "105:120"
+    "label": "Победа: Реал Сосьедад"
    },
    {
     "sport": "football",
-    "div": "BRA",
-    "id": "401841305",
+    "div": "UEL",
+    "id": "401915535",
     "side": "home",
-    "p": 0.5923168048739211,
-    "odds": 1.606,
-    "kickoff": "2026-11-05T03:30:00+03:00",
-    "home": "Ботафого",
-    "away": "Атлетико Минейро",
-    "league": "🇧🇷 Бразилия · Серия A",
+    "p": 0.5493551776116449,
+    "odds": 1.741,
+    "kickoff": "2026-11-05T20:45:00+03:00",
+    "home": "НЕК",
+    "away": "Омония",
+    "league": "🏆 Европа · Лига Европы",
     "logos": [
-     "https://a.espncdn.com/i/teamlogos/soccer/500/6086.png",
-     "https://a.espncdn.com/i/teamlogos/soccer/500/7632.png"
+     "https://a.espncdn.com/i/teamlogos/soccer/500/147.png",
+     "https://a.espncdn.com/i/teamlogos/soccer/500/617.png"
     ],
     "colors": [
-     "000000",
-     "000000"
+     "ef2f24",
+     "025719"
     ],
-    "label": "Победа: Ботафого",
-    "win": true,
-    "score": "1:0"
+    "label": "Победа: НЕК"
    },
    {
-    "sport": "basketball",
-    "div": "NBA",
-    "id": "401909929",
+    "sport": "football",
+    "div": "UECL",
+    "id": "401915820",
     "side": "home",
-    "p": 0.5928158754081889,
-    "odds": 1.621,
-    "kickoff": "2026-11-05T04:00:00+03:00",
-    "home": "Оклахома-Сити Тандер",
-    "away": "Кливленд",
-    "league": "🇺🇸 США · NBA",
+    "p": 0.5885795957258557,
+    "odds": 1.625,
+    "kickoff": "2026-11-05T23:00:00+03:00",
+    "home": "Сент-Трюйден",
+    "away": "Бранн",
+    "league": "🏆 Европа · Лига конференций",
     "logos": [
-     "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/okc.png",
-     "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/cle.png"
+     "https://a.espncdn.com/i/teamlogos/soccer/500/936.png",
+     "https://a.espncdn.com/i/teamlogos/soccer/500/620.png"
     ],
     "colors": [
-     "007ac1",
-     "860038"
+     "f8ea2c",
+     "FF0000"
     ],
-    "label": "Победа: Оклахома-Сити Тандер (с ОТ)",
-    "win": true,
-    "score": "124:116"
-   },
-   {
-    "sport": "basketball",
-    "div": "NBA",
-    "id": "401909932",
-    "side": "away",
-    "p": 0.5846621108580107,
-    "odds": 1.641,
-    "kickoff": "2026-11-05T05:00:00+03:00",
-    "home": "Финикс Санз",
-    "away": "Портленд",
-    "league": "🇺🇸 США · NBA",
-    "logos": [
-     "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/phx.png",
-     "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/por.png"
-    ],
-    "colors": [
-     "29127a",
-     "e03a3e"
-    ],
-    "label": "Победа: Портленд (с ОТ)",
-    "win": true,
-    "score": "119:132"
+    "label": "Победа: Сент-Трюйден"
    },
    {
     "sport": "hockey",
     "div": "NHL",
-    "id": "401892646",
+    "id": "401892653",
     "side": "home",
-    "p": 0.5997001499250374,
-    "odds": 1.602,
-    "kickoff": "2026-11-05T06:00:00+03:00",
-    "home": "Лос-Анджелес",
-    "away": "Сан-Хосе",
+    "p": 0.572012257405516,
+    "odds": 1.676,
+    "kickoff": "2026-11-06T03:00:00+03:00",
+    "home": "Рейнджерс",
+    "away": "Филадельфия",
     "league": "🇺🇸 США · NHL",
     "logos": [
-     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/la.png",
-     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/sj.png"
+     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/nyr.png",
+     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/phi.png"
     ],
     "colors": [
-     "121212",
-     "00788a"
+     "0056ae",
+     "fe5823"
     ],
-    "label": "Победа: Лос-Анджелес (с ОТ)",
-    "win": true,
-    "score": "7:2"
+    "label": "Победа: Рейнджерс (с ОТ)"
+   },
+   {
+    "sport": "hockey",
+    "div": "NHL",
+    "id": "401892649",
+    "side": "away",
+    "p": 0.5635245901639344,
+    "odds": 1.704,
+    "kickoff": "2026-11-06T03:00:00+03:00",
+    "home": "Детройт",
+    "away": "Вегас",
+    "league": "🇺🇸 США · NHL",
+    "logos": [
+     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/det.png",
+     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/vgk.png"
+    ],
+    "colors": [
+     "e30526",
+     "344043"
+    ],
+    "label": "Победа: Вегас (с ОТ)"
    }
   ],
-  "odds": 11.285486984666269,
-  "day": "2026-11-04",
-  "done": true
+  "odds": 13.65470889276,
+  "day": "2026-11-05",
+  "done": false
  },
  "streak_day": {
   "2026-11-05": 1
