@@ -12442,5 +12442,189 @@
  "CS2|1781483": {
   "status": "skipped",
   "kickoff": "2026-11-06T12:45:00+03:00"
+ },
+ "WTA|186635": {
+  "id": "186635",
+  "div": "WTA",
+  "sport": "tennis",
+  "tournament": "Prudential Hong Kong Tennis Open",
+  "round": "Quarterfinal",
+  "bo5": false,
+  "kickoff": "2026-11-06T13:30:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "detail": "Fri, November 6th at 5:30 AM EST",
+  "home": {
+   "id": "1809",
+   "name": "Aliaksandra Sasnovich",
+   "logo": [
+    "https://a.espncdn.com/i/headshots/tennis/players/full/1809.png",
+    "https://a.espncdn.com/i/teamlogos/countries/500/blr.png"
+   ],
+   "country": "Belarus",
+   "color": "2d6a4f",
+   "winner": false,
+   "sets": [],
+   "set_won": [],
+   "ru": "Александра Саснович"
+  },
+  "away": {
+   "id": "3018",
+   "name": "Maria Sakkari",
+   "logo": [
+    "https://a.espncdn.com/i/headshots/tennis/players/full/3018.png",
+    "https://a.espncdn.com/i/teamlogos/countries/500/gre.png"
+   ],
+   "country": "Greece",
+   "color": "2d6a4f",
+   "winner": false,
+   "sets": [],
+   "set_won": [],
+   "ru": "Мария Саккари"
+  },
+  "odds": {},
+  "probs": {
+   "TN_W1": 0.43259441358054046,
+   "TN_W2": 0.5674055864194596,
+   "TN_3S": 0.495939366470967,
+   "TN_2S": 0.5040606335290331,
+   "TN_S2:0": 0.2069712803287856,
+   "TN_S0:2": 0.2970893532002475,
+   "TN_S2:1": 0.22562313325175487,
+   "TN_S1:2": 0.2703162332192121,
+   "TN_SET1": 0.7029106467997526,
+   "TN_SET2": 0.7930287196712145
+  },
+  "labels": {
+   "TN_W1": "Победа: Александра Саснович",
+   "TN_W2": "Победа: Мария Саккари",
+   "TN_3S": "Будет 3 сета",
+   "TN_2S": "Будет 2 сета",
+   "TN_S2:0": "Счёт по сетам 2:0",
+   "TN_S0:2": "Счёт по сетам 0:2",
+   "TN_S2:1": "Счёт по сетам 2:1",
+   "TN_S1:2": "Счёт по сетам 1:2",
+   "TN_SET1": "Александра Саснович возьмёт хотя бы сет",
+   "TN_SET2": "Мария Саккари возьмёт хотя бы сет"
+  },
+  "real": {},
+  "center": "Рейтинг Эло 1664 : 1711",
+  "bar": [
+   0.43259441358054046,
+   0,
+   0.5674055864194596
+  ],
+  "model": {
+   "elo": [
+    1663.581128093989,
+    1710.7062083271474
+   ],
+   "src": "Эло"
+  },
+  "main": {
+   "key": "TN_2S",
+   "label": "Будет 2 сета",
+   "p": 0.5041,
+   "odds": 1.85,
+   "est": true,
+   "stake": 1.0
+  },
+  "bold": {},
+  "open": {},
+  "top": false,
+  "msg_id": 3308
+ },
+ "WTA|186689": {
+  "id": "186689",
+  "div": "WTA",
+  "sport": "tennis",
+  "tournament": "Angola Ladies Open",
+  "round": "Quarterfinal",
+  "bo5": false,
+  "kickoff": "2026-11-06T13:30:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "detail": "Fri, November 6th at 5:30 AM EST",
+  "home": {
+   "id": "3401",
+   "name": "Sofya Lansere",
+   "logo": [
+    "https://a.espncdn.com/i/headshots/tennis/players/full/3401.png",
+    "https://a.espncdn.com/i/teamlogos/countries/500/rus.png"
+   ],
+   "country": "Russia",
+   "color": "2d6a4f",
+   "winner": false,
+   "sets": [],
+   "set_won": [],
+   "ru": "Софья Лансере"
+  },
+  "away": {
+   "id": "6419",
+   "name": "Martyna Kubka",
+   "logo": [
+    "https://a.espncdn.com/i/headshots/tennis/players/full/6419.png",
+    "https://a.espncdn.com/i/teamlogos/countries/500/pol.png"
+   ],
+   "country": "Poland",
+   "color": "2d6a4f",
+   "winner": false,
+   "sets": [],
+   "set_won": [],
+   "ru": "Мартина Кубка"
+  },
+  "odds": {},
+  "probs": {
+   "TN_W1": 0.30853534554819384,
+   "TN_W2": 0.6914646544518062,
+   "TN_3S": 0.465879888041154,
+   "TN_2S": 0.534120111958846,
+   "TN_S2:0": 0.13644590674809737,
+   "TN_S0:2": 0.39767420521074864,
+   "TN_S2:1": 0.17208943880009642,
+   "TN_S1:2": 0.29379044924105757,
+   "TN_SET1": 0.6023257947892513,
+   "TN_SET2": 0.8635540932519026
+  },
+  "labels": {
+   "TN_W1": "Победа: Софья Лансере",
+   "TN_W2": "Победа: Мартина Кубка",
+   "TN_3S": "Будет 3 сета",
+   "TN_2S": "Будет 2 сета",
+   "TN_S2:0": "Счёт по сетам 2:0",
+   "TN_S0:2": "Счёт по сетам 0:2",
+   "TN_S2:1": "Счёт по сетам 2:1",
+   "TN_S1:2": "Счёт по сетам 1:2",
+   "TN_SET1": "Софья Лансере возьмёт хотя бы сет",
+   "TN_SET2": "Мартина Кубка возьмёт хотя бы сет"
+  },
+  "real": {},
+  "center": "Рейтинг Эло 1538 : 1678",
+  "bar": [
+   0.30853534554819384,
+   0,
+   0.6914646544518062
+  ],
+  "model": {
+   "elo": [
+    1537.7937556153593,
+    1677.9797802496273
+   ],
+   "src": "Эло"
+  },
+  "main": {
+   "key": "TN_2S",
+   "label": "Будет 2 сета",
+   "p": 0.5341,
+   "odds": 1.74,
+   "est": true,
+   "stake": 1.0
+  },
+  "bold": {},
+  "open": {},
+  "top": false,
+  "msg_id": 3310
  }
 }
