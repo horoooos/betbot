@@ -12650,5 +12650,97 @@
  "CS2|1781482": {
   "status": "skipped",
   "kickoff": "2026-11-06T09:30:00+03:00"
+ },
+ "WTA|186637": {
+  "id": "186637",
+  "div": "WTA",
+  "sport": "tennis",
+  "tournament": "Prudential Hong Kong Tennis Open",
+  "round": "Quarterfinal",
+  "bo5": false,
+  "kickoff": "2026-11-06T11:30:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "detail": "Fri, November 6th at 3:30 AM EST",
+  "home": {
+   "id": "1774",
+   "name": "Sorana Cirstea",
+   "logo": [
+    "https://a.espncdn.com/i/headshots/tennis/players/full/1774.png",
+    "https://a.espncdn.com/i/teamlogos/countries/500/rom.png"
+   ],
+   "country": "Romania",
+   "color": "2d6a4f",
+   "winner": false,
+   "sets": [],
+   "set_won": [],
+   "ru": "Сорана Кырстя"
+  },
+  "away": {
+   "id": "10858",
+   "name": "Alexandra Shubladze",
+   "logo": [
+    "https://a.espncdn.com/i/headshots/tennis/players/full/10858.png",
+    "https://a.espncdn.com/i/teamlogos/countries/500/rus.png"
+   ],
+   "country": "Russia",
+   "color": "2d6a4f",
+   "winner": false,
+   "sets": [],
+   "set_won": [],
+   "ru": "Александра Шубладзе"
+  },
+  "odds": {},
+  "probs": {
+   "TN_W1": 0.4412343439517794,
+   "TN_W2": 0.5587656560482206,
+   "TN_3S": 0.4969176542477136,
+   "TN_2S": 0.5030823457522864,
+   "TN_S2:0": 0.21228339815388986,
+   "TN_S0:2": 0.29079894759839653,
+   "TN_S2:1": 0.2289509457978895,
+   "TN_S1:2": 0.2679667084498241,
+   "TN_SET1": 0.7092010524016035,
+   "TN_SET2": 0.7877166018461101
+  },
+  "labels": {
+   "TN_W1": "Победа: Сорана Кырстя",
+   "TN_W2": "Победа: Александра Шубладзе",
+   "TN_3S": "Будет 3 сета",
+   "TN_2S": "Будет 2 сета",
+   "TN_S2:0": "Счёт по сетам 2:0",
+   "TN_S0:2": "Счёт по сетам 0:2",
+   "TN_S2:1": "Счёт по сетам 2:1",
+   "TN_S1:2": "Счёт по сетам 1:2",
+   "TN_SET1": "Сорана Кырстя возьмёт хотя бы сет",
+   "TN_SET2": "Александра Шубладзе возьмёт хотя бы сет"
+  },
+  "real": {},
+  "center": "Рейтинг Эло 1739 : 1780",
+  "bar": [
+   0.4412343439517794,
+   0,
+   0.5587656560482206
+  ],
+  "model": {
+   "elo": [
+    1739.0146388494816,
+    1780.038797224856
+   ],
+   "src": "Эло"
+  },
+  "main": {
+   "key": "TN_2S",
+   "label": "Будет 2 сета",
+   "p": 0.5031,
+   "odds": 1.85,
+   "est": true,
+   "stake": 1.0
+  },
+  "bold": {},
+  "open": {},
+  "top": false,
+  "msg_id": 3300
  }
 }
