@@ -11350,31 +11350,31 @@
   "kickoff": "2026-11-06T15:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Fri, November 6th at 7:30 AM EST",
   "home": {
-   "id": "3153",
-   "name": "Mai Hontama",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/3153.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/jpn.png"
    ],
+   "id": "3153",
+   "name": "Mai Hontama",
    "country": "Japan",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
    "ru": "Маи Хонтама"
   },
   "away": {
-   "id": "1649",
-   "name": "Magda Linette",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/1649.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/pol.png"
    ],
+   "id": "1649",
+   "name": "Magda Linette",
    "country": "Poland",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
@@ -11433,7 +11433,9 @@
   "msg_id": 3323,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null
  },
  "ATP|186500": {
   "id": "186500",
