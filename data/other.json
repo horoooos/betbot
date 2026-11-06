@@ -13127,22 +13127,22 @@
   "kickoff": "2026-11-06T05:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "home": {
+   "color": "860038",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/col.png",
    "id": "17",
    "name": "Colorado Avalanche",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/col.png",
-   "color": "860038",
    "score": "0",
    "record": "9-6-1",
    "periods": [],
    "ru": "Колорадо"
   },
   "away": {
+   "color": "fdba31",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/nsh.png",
    "id": "27",
    "name": "Nashville Predators",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/nsh.png",
-   "color": "fdba31",
    "score": "0",
    "record": "6-4-5",
    "periods": [],
@@ -13236,7 +13236,9 @@
   "msg_id": 3263,
   "close": {
    "HK_O6.5": 0.5174
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null
  },
  "NBA|401909937": {
   "id": "401909937",
