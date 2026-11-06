@@ -5,7 +5,7 @@
  },
  "learned": "2026-11-06",
  "schedule_day": "2026-11-06",
- "content_slot": "2026-11-06-13",
+ "content_slot": "2026-11-06-16",
  "news_seen": [
   "https://www.sport-express.ru/football/turkey/news/v-turcii-soobschili-chto-summa-otstupnyh-za-poluzaschitnika-galatasaraya-alekseya-batrakova-55-millionov-evro-2468639/",
   "mouz-vybila-aurora-gaming-iz-pgl-masters-bucharest-2026",
@@ -1497,7 +1497,7 @@
  "value_day": "2026-11-06",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-06",
- "site_stamp": "606|2026-11-06 15",
+ "site_stamp": "606|2026-11-06 16",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1637,5 +1637,14 @@
   "Первый чемпионат мира",
   "Овертайм и буллиты в НХЛ",
   "Сколько длится матч НБА"
- ]
+ ],
+ "mod_poll": {
+  "key": "E0|401879242",
+  "id": "401879242",
+  "poll": 3332,
+  "post": 3331,
+  "home": "Эвертон",
+  "away": "Ковентри Сити",
+  "kickoff": "2026-11-06T23:00:00+03:00"
+ }
 }
