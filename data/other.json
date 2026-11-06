@@ -12230,5 +12230,189 @@
   "close": {
    "_": null
   }
+ },
+ "WTA|186634": {
+  "id": "186634",
+  "div": "WTA",
+  "sport": "tennis",
+  "tournament": "Prudential Hong Kong Tennis Open",
+  "round": "Quarterfinal",
+  "bo5": false,
+  "kickoff": "2026-11-06T15:00:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "detail": "Fri, November 6th at 7:00 AM EST",
+  "home": {
+   "id": "6816",
+   "name": "Antonia Ruzic",
+   "logo": [
+    "https://a.espncdn.com/i/headshots/tennis/players/full/6816.png",
+    "https://a.espncdn.com/i/teamlogos/countries/500/cro.png"
+   ],
+   "country": "Croatia",
+   "color": "2d6a4f",
+   "winner": false,
+   "sets": [],
+   "set_won": [],
+   "ru": "Антония Ружич"
+  },
+  "away": {
+   "id": "7759",
+   "name": "Alexandra Eala",
+   "logo": [
+    "https://a.espncdn.com/i/headshots/tennis/players/full/7759.png",
+    "https://a.espncdn.com/i/teamlogos/countries/500/phi.png"
+   ],
+   "country": "Philippines",
+   "color": "2d6a4f",
+   "winner": false,
+   "sets": [],
+   "set_won": [],
+   "ru": "Александра Эала"
+  },
+  "odds": {},
+  "probs": {
+   "TN_W1": 0.23636669884758044,
+   "TN_W2": 0.7636333011524196,
+   "TN_3S": 0.4322355991342291,
+   "TN_2S": 0.567764400865771,
+   "TN_S2:0": 0.09981101737349005,
+   "TN_S0:2": 0.4679533834922809,
+   "TN_S2:1": 0.13655568147409042,
+   "TN_S1:2": 0.2956799176601387,
+   "TN_SET1": 0.5320466165077191,
+   "TN_SET2": 0.9001889826265099
+  },
+  "labels": {
+   "TN_W1": "Победа: Антония Ружич",
+   "TN_W2": "Победа: Александра Эала",
+   "TN_3S": "Будет 3 сета",
+   "TN_2S": "Будет 2 сета",
+   "TN_S2:0": "Счёт по сетам 2:0",
+   "TN_S0:2": "Счёт по сетам 0:2",
+   "TN_S2:1": "Счёт по сетам 2:1",
+   "TN_S1:2": "Счёт по сетам 1:2",
+   "TN_SET1": "Антония Ружич возьмёт хотя бы сет",
+   "TN_SET2": "Александра Эала возьмёт хотя бы сет"
+  },
+  "real": {},
+  "center": "Рейтинг Эло 1573 : 1776",
+  "bar": [
+   0.23636669884758044,
+   0,
+   0.7636333011524196
+  ],
+  "model": {
+   "elo": [
+    1572.6285611632243,
+    1776.347988932885
+   ],
+   "src": "Эло"
+  },
+  "main": {
+   "key": "TN_2S",
+   "label": "Будет 2 сета",
+   "p": 0.5678,
+   "odds": 1.64,
+   "est": true,
+   "stake": 1.0
+  },
+  "bold": {},
+  "open": {},
+  "top": false,
+  "msg_id": 3318
+ },
+ "WTA|186686": {
+  "id": "186686",
+  "div": "WTA",
+  "sport": "tennis",
+  "tournament": "Angola Ladies Open",
+  "round": "Quarterfinal",
+  "bo5": false,
+  "kickoff": "2026-11-06T15:00:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "detail": "Fri, November 6th at 7:00 AM EST",
+  "home": {
+   "id": "2441",
+   "name": "Justina Mikulskyte",
+   "logo": [
+    "https://a.espncdn.com/i/headshots/tennis/players/full/2441.png",
+    "https://a.espncdn.com/i/teamlogos/countries/500/ltu.png"
+   ],
+   "country": "Lithuania",
+   "color": "2d6a4f",
+   "winner": false,
+   "sets": [],
+   "set_won": [],
+   "ru": "Юстина Микульските"
+  },
+  "away": {
+   "id": "7849",
+   "name": "Noma Noha Akugue",
+   "logo": [
+    "https://a.espncdn.com/i/headshots/tennis/players/full/7849.png",
+    "https://a.espncdn.com/i/teamlogos/countries/500/ger.png"
+   ],
+   "country": "Germany",
+   "color": "2d6a4f",
+   "winner": false,
+   "sets": [],
+   "set_won": [],
+   "ru": "Нома Ноа Акугуэ"
+  },
+  "odds": {},
+  "probs": {
+   "TN_W1": 0.5110128463949061,
+   "TN_W2": 0.4889871536050939,
+   "TN_3S": 0.49989217757901977,
+   "TN_2S": 0.5001078224209802,
+   "TN_S2:0": 0.25739633659248123,
+   "TN_S0:2": 0.24271148582849897,
+   "TN_S2:1": 0.2536165098024249,
+   "TN_S1:2": 0.24627566777659488,
+   "TN_SET1": 0.757288514171501,
+   "TN_SET2": 0.7426036634075188
+  },
+  "labels": {
+   "TN_W1": "Победа: Юстина Микульските",
+   "TN_W2": "Победа: Нома Ноа Акугуэ",
+   "TN_3S": "Будет 3 сета",
+   "TN_2S": "Будет 2 сета",
+   "TN_S2:0": "Счёт по сетам 2:0",
+   "TN_S0:2": "Счёт по сетам 0:2",
+   "TN_S2:1": "Счёт по сетам 2:1",
+   "TN_S1:2": "Счёт по сетам 1:2",
+   "TN_SET1": "Юстина Микульските возьмёт хотя бы сет",
+   "TN_SET2": "Нома Ноа Акугуэ возьмёт хотя бы сет"
+  },
+  "real": {},
+  "center": "Рейтинг Эло 1591 : 1584",
+  "bar": [
+   0.5110128463949061,
+   0,
+   0.4889871536050939
+  ],
+  "model": {
+   "elo": [
+    1591.4382681426057,
+    1583.7845208210827
+   ],
+   "src": "Эло"
+  },
+  "main": {
+   "key": "TN_2S",
+   "label": "Будет 2 сета",
+   "p": 0.5001,
+   "odds": 1.86,
+   "est": true,
+   "stake": 1.0
+  },
+  "bold": {},
+  "open": {},
+  "top": false,
+  "msg_id": 3320
  }
 }
