@@ -12467,22 +12467,22 @@
   "kickoff": "2026-11-06T03:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "home": {
+   "color": "e30b2b",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/nj.png",
    "id": "11",
    "name": "New Jersey Devils",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/nj.png",
-   "color": "e30b2b",
    "score": "0",
    "record": "10-5-0",
    "periods": [],
    "ru": "Нью-Джерси"
   },
   "away": {
+   "color": "0070b9",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/stl.png",
    "id": "19",
    "name": "St. Louis Blues",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/stl.png",
-   "color": "0070b9",
    "score": "0",
    "record": "7-7-1",
    "periods": [],
@@ -12576,7 +12576,9 @@
   "msg_id": 3223,
   "close": {
    "HK_O5.5": 0.5428
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null
  },
  "NHL|401892652": {
   "id": "401892652",
@@ -12585,22 +12587,22 @@
   "kickoff": "2026-11-06T03:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "home": {
+   "color": "00529b",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/nyi.png",
    "id": "12",
    "name": "New York Islanders",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/nyi.png",
-   "color": "00529b",
    "score": "0",
    "record": "7-5-2",
    "periods": [],
    "ru": "Айлендерс"
   },
   "away": {
+   "color": "e30426",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/car.png",
    "id": "7",
    "name": "Carolina Hurricanes",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/car.png",
-   "color": "e30426",
    "score": "0",
    "record": "12-3-2",
    "periods": [],
@@ -12703,7 +12705,9 @@
   "close": {
    "HK_ML_A": 0.6369,
    "HK_O6.5": 0.4486
-  }
+  },
+  "main_hit": true,
+  "bold_hit": true
  },
  "NHL|401892653": {
   "id": "401892653",
