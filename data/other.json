@@ -11958,31 +11958,31 @@
   "kickoff": "2026-11-06T11:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Fri, November 6th at 3:30 AM EST",
   "home": {
-   "id": "1774",
-   "name": "Sorana Cirstea",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/1774.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/rom.png"
    ],
+   "id": "1774",
+   "name": "Sorana Cirstea",
    "country": "Romania",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
    "ru": "Сорана Кырстя"
   },
   "away": {
-   "id": "10858",
-   "name": "Alexandra Shubladze",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/10858.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/rus.png"
    ],
+   "id": "10858",
+   "name": "Alexandra Shubladze",
    "country": "Russia",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
@@ -12041,7 +12041,9 @@
   "msg_id": 3300,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null
  },
  "WTA|186592": {
   "id": "186592",
