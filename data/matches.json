@@ -8869,7 +8869,7 @@
   "kickoff": "2026-11-06T22:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Scheduled",
   "home": {
    "id": "127",
@@ -9006,7 +9006,10 @@
   "msg_id": 3370,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": true,
+  "bold_hit": true,
+  "value_hit": null
  },
  "401931085": {
   "id": "401931085",
