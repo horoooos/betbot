@@ -12710,22 +12710,22 @@
   "kickoff": "2026-11-06T03:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "home": {
+   "color": "0056ae",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/nyr.png",
    "id": "13",
    "name": "New York Rangers",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/nyr.png",
-   "color": "0056ae",
    "score": "0",
    "record": "8-7-1",
    "periods": [],
    "ru": "Рейнджерс"
   },
   "away": {
+   "color": "fe5823",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/phi.png",
    "id": "15",
    "name": "Philadelphia Flyers",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/phi.png",
-   "color": "fe5823",
    "score": "0",
    "record": "4-9-4",
    "periods": [],
@@ -12828,7 +12828,9 @@
   "close": {
    "HK_O5.5": 0.5428,
    "HK_ML_A": 0.428
-  }
+  },
+  "main_hit": false,
+  "bold_hit": false
  },
  "NHL|401892654": {
   "id": "401892654",
