@@ -11455,31 +11455,31 @@
   "kickoff": "2026-11-06T12:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Fri, November 6th at 4:30 AM EST",
   "home": {
-   "id": "6368",
-   "name": "Janice Tjen",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/6368.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/ina.png"
    ],
+   "id": "6368",
+   "name": "Janice Tjen",
    "country": "Indonesia",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
    "ru": "Джанис Тьен"
   },
   "away": {
-   "id": "6413",
-   "name": "Polina Kudermetova",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/6413.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/uzb.png"
    ],
+   "id": "6413",
+   "name": "Polina Kudermetova",
    "country": "Uzbekistan",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
@@ -11538,7 +11538,9 @@
   "msg_id": 3303,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null
  },
  "CS2|1781483": {
   "status": "skipped",
