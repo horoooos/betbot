@@ -11354,31 +11354,31 @@
   "kickoff": "2026-11-06T15:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Fri, November 6th at 7:00 AM EST",
   "home": {
-   "id": "6816",
-   "name": "Antonia Ruzic",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/6816.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/cro.png"
    ],
+   "id": "6816",
+   "name": "Antonia Ruzic",
    "country": "Croatia",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
    "ru": "Антония Ружич"
   },
   "away": {
-   "id": "7759",
-   "name": "Alexandra Eala",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/7759.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/phi.png"
    ],
+   "id": "7759",
+   "name": "Alexandra Eala",
    "country": "Philippines",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
@@ -11437,7 +11437,9 @@
   "msg_id": 3318,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null
  },
  "WTA|186686": {
   "id": "186686",
