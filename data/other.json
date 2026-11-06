@@ -13035,22 +13035,22 @@
   "kickoff": "2026-11-06T05:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "home": {
+   "color": "29127a",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/phx.png",
    "id": "21",
    "name": "Phoenix Suns",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/phx.png",
-   "color": "29127a",
    "score": "0",
    "record": "1-5",
    "periods": [],
    "ru": "Финикс Санз"
   },
   "away": {
+   "color": "0150b5",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/orl.png",
    "id": "19",
    "name": "Orlando Magic",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/orl.png",
-   "color": "0150b5",
    "score": "0",
    "record": "2-5",
    "periods": [],
@@ -13124,7 +13124,9 @@
   "msg_id": 3258,
   "close": {
    "BB_ML_H": 0.5497
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null
  },
  "NHL|401892658": {
   "id": "401892658",
