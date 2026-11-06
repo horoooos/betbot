@@ -12414,5 +12414,97 @@
   "open": {},
   "top": false,
   "msg_id": 3320
+ },
+ "WTA|186596": {
+  "id": "186596",
+  "div": "WTA",
+  "sport": "tennis",
+  "tournament": "Chennai Open",
+  "round": "Quarterfinal",
+  "bo5": false,
+  "kickoff": "2026-11-06T15:30:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "detail": "Fri, November 6th at 7:30 AM EST",
+  "home": {
+   "id": "3153",
+   "name": "Mai Hontama",
+   "logo": [
+    "https://a.espncdn.com/i/headshots/tennis/players/full/3153.png",
+    "https://a.espncdn.com/i/teamlogos/countries/500/jpn.png"
+   ],
+   "country": "Japan",
+   "color": "2d6a4f",
+   "winner": false,
+   "sets": [],
+   "set_won": [],
+   "ru": "Маи Хонтама"
+  },
+  "away": {
+   "id": "1649",
+   "name": "Magda Linette",
+   "logo": [
+    "https://a.espncdn.com/i/headshots/tennis/players/full/1649.png",
+    "https://a.espncdn.com/i/teamlogos/countries/500/pol.png"
+   ],
+   "country": "Poland",
+   "color": "2d6a4f",
+   "winner": false,
+   "sets": [],
+   "set_won": [],
+   "ru": "Магда Линетт"
+  },
+  "odds": {},
+  "probs": {
+   "TN_W1": 0.4390727839239805,
+   "TN_W2": 0.5609272160760195,
+   "TN_3S": 0.4966857028407051,
+   "TN_2S": 0.5033142971592949,
+   "TN_S2:0": 0.21094905872458986,
+   "TN_S0:2": 0.292365238434705,
+   "TN_S2:1": 0.2281237251993907,
+   "TN_S1:2": 0.2685619776413144,
+   "TN_SET1": 0.7076347615652949,
+   "TN_SET2": 0.7890509412754101
+  },
+  "labels": {
+   "TN_W1": "Победа: Маи Хонтама",
+   "TN_W2": "Победа: Магда Линетт",
+   "TN_3S": "Будет 3 сета",
+   "TN_2S": "Будет 2 сета",
+   "TN_S2:0": "Счёт по сетам 2:0",
+   "TN_S0:2": "Счёт по сетам 0:2",
+   "TN_S2:1": "Счёт по сетам 2:1",
+   "TN_S1:2": "Счёт по сетам 1:2",
+   "TN_SET1": "Маи Хонтама возьмёт хотя бы сет",
+   "TN_SET2": "Магда Линетт возьмёт хотя бы сет"
+  },
+  "real": {},
+  "center": "Рейтинг Эло 1509 : 1552",
+  "bar": [
+   0.4390727839239805,
+   0,
+   0.5609272160760195
+  ],
+  "model": {
+   "elo": [
+    1509.192820218539,
+    1551.740817960363
+   ],
+   "src": "Эло"
+  },
+  "main": {
+   "key": "TN_2S",
+   "label": "Будет 2 сета",
+   "p": 0.5033,
+   "odds": 1.85,
+   "est": true,
+   "stake": 1.0
+  },
+  "bold": {},
+  "open": {},
+  "top": false,
+  "msg_id": 3323
  }
 }
