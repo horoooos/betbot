@@ -159,14 +159,14 @@ def page(prefix: str, title: str, desc: str, canon: str, body: str, on: str = ""
 <meta property="og:url" content="{canon}"><meta property="og:site_name" content="АИ СТАВИТ"><meta property="og:locale" content="ru_RU">{img}
 <meta name="theme-color" content="#070b1a">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="{prefix}site.css">{lds}
+<link rel="stylesheet" href="{prefix}site.css?v=3">{lds}
 </head><body><main>
 {nav(prefix, on)}
 {body}
 <footer>АИ СТАВИТ — бесплатные прогнозы на спорт от искусственного интеллекта и честная статистика. Прогноз — не гарантия выигрыша. 18+.
 <br><a href="https://t.me/{CH}">Telegram-канал @{CH}</a> · <a href="{prefix}./">Статистика бота</a> · <a href="{prefix}matches.html">Матчи онлайн</a> · <a href="{prefix}news/">Новости спорта</a> · <a href="{prefix}predictions/">Прогнозы на матчи</a></footer>
 </main><div class="sticky"><a class="a" href="{prefix}matches.html">📺 Онлайн</a><a class="b" href="https://t.me/{CH}">📲 Канал</a></div>
-<script type="module">import("{prefix}fb.js").then(fb => {{ fb.navUser(document.getElementById("navUser")); fb.track("{on or 'page'}"); }}).catch(() => {{}});</script>
+<script type="module">import("{prefix}fb.js?v=3").then(fb => {{ fb.navUser(document.getElementById("navUser")); fb.track("{on or 'page'}"); }}).catch(() => {{}});</script>
 </body></html>"""
 
 

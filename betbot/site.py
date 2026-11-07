@@ -267,7 +267,7 @@ def build(res: pd.DataFrame, now: pd.Timestamp, blocks: dict | None = None) -> N
 <meta property="og:description" content="{escape(seo_desc)}"><meta property="og:locale" content="ru_RU">
 <meta name="twitter:card" content="summary"><meta name="theme-color" content="#070b1a">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="site.css">
+<link rel="stylesheet" href="site.css?v=3">
 <script type="application/ld+json">{{"@context":"https://schema.org","@type":"WebSite","name":"АИ СТАВИТ","url":"{SITE}","description":"{escape(seo_desc)}","sameAs":["{tg}"]}}</script>
 <style>{CSS}</style></head><body><main>
 <nav class="topnav"><a class="logo" href="./">АИ СТАВИТ</a><div class="links"><a href="matches.html">📺 Матчи онлайн</a><a href="predictions/">🎯 Прогнозы</a><a href="news/">📰 Новости</a><a href="feed.html">💬 Лента</a><a class="me" id="navUser" href="profile.html">Войти</a></div></nav>
@@ -296,7 +296,7 @@ def build(res: pd.DataFrame, now: pd.Timestamp, blocks: dict | None = None) -> N
 <footer>CLV — насколько выросла вероятность нашего исхода по линии букмекеров к началу матча: плюс значит, что бот нашёл ценность раньше рынка. 18+. Прогноз — не гарантия выигрыша.</footer>
 </main><div class="sticky"><a class="a" href="matches.html">📺 Онлайн</a><a class="b" href="{tg}">📲 Подписаться</a></div>
 <script>{LIVE_JS}</script>
-<script type="module">import("./fb.js").then(fb => {{ fb.track("index"); fb.navUser(document.getElementById("navUser")); fb.watchOnline(n => {{ const el = document.getElementById("online");
+<script type="module">import("./fb.js?v=3").then(fb => {{ fb.track("index"); fb.navUser(document.getElementById("navUser")); fb.watchOnline(n => {{ const el = document.getElementById("online");
   el.style.display = "inline-flex"; el.innerHTML = `<span class="dot" style="background:#2ecc71;box-shadow:0 0 10px #2ecc71"></span>Сейчас на сайте: ${{n}}`; }}); }}).catch(() => {{}});</script></body></html>"""
     OUT.write_text(html, encoding="utf-8")
     print(f"Страница статистики обновлена: {len(res)} прогнозов")

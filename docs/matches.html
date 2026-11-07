@@ -8,7 +8,7 @@
 <meta name="description" content="Все матчи дня онлайн: футбол, хоккей НХЛ, баскетбол НБА и теннис. Игроки, мяч и все моменты в реальном времени, плюс прогнозы бота АИ СТАВИТ.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="site.css">
+<link rel="stylesheet" href="site.css?v=3">
 <style>
   :root { --bg:#070b1a; --bg2:#0d1430; --card:#121a38; --card2:#18224a; --line:rgba(255,255,255,.09); --ink:#fff; --muted:#9aa6cc;
           --gold:#ffc400; --live:#ff4646; --good:#2ecc71 }
@@ -142,7 +142,7 @@ async function load() {
   }
   render(); await scores(); render();
 }
-import("./fb.js").then(fb => {
+import("./fb.js?v=3").then(fb => {
   fb.track("matches"); fb.navUser(document.getElementById("navUser"));
   fb.watchPresence(v => { viewers = v; render(); });
   fb.watchOnline(n => { const el = document.getElementById("online"); el.style.display = "inline-flex"; el.innerHTML = `<span class="dot" style="background:#2ecc71;box-shadow:0 0 10px #2ecc71"></span>Сейчас на сайте: ${n}`; });
