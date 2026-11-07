@@ -249,9 +249,11 @@ function supportModal() {
   w.innerHTML = `<div class="bx" style="text-align:center"><div style="font-size:44px">❤️</div><h3>Поддержать АИ СТАВИТ</h3>
     <p>Бот, сайт и прогнозы бесплатные. Если они вам помогают — поддержите проект переводом по номеру телефона (СБП) на любую сумму.</p>
     <div style="font-size:24px;font-weight:900;letter-spacing:1px;margin:6px 0 4px">${PHONE}</div>
+    <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(0,170,255,.14);border:1px solid rgba(0,170,255,.45);color:#7fd6ff;border-radius:999px;padding:6px 14px;font-weight:800;font-size:14px;margin:4px 0 10px">🏦 Банк получателя: Авито</div>
+    <p style="font-size:12px;margin:0 0 6px">В приложении своего банка: «Перевод по номеру телефона» → вставьте номер → в списке банков выберите <b>Авито</b>.</p>
     <button class="y" id="spc">📋 Скопировать номер</button><button class="t" id="spx">Закрыть</button><div class="err" id="spm" style="color:#7dffb0"></div>
     <p style="margin-top:10px;font-size:11px">Спасибо! Каждый перевод идёт на развитие бота: новые виды спорта, точнее прогнозы, трансляции.</p></div>`;
-  w.querySelector("#spc").onclick = async () => { try { await navigator.clipboard.writeText(PHONE.replace(/[\s-]/g, "")); w.querySelector("#spm").textContent = "Номер скопирован — вставьте его в приложении банка в «Перевод по телефону»"; }
+  w.querySelector("#spc").onclick = async () => { try { await navigator.clipboard.writeText(PHONE.replace(/[\s-]/g, "")); w.querySelector("#spm").textContent = "Номер скопирован — вставьте его в «Перевод по телефону» и выберите банк Авито"; }
     catch (e) { w.querySelector("#spm").textContent = PHONE; } };
   w.querySelector("#spx").onclick = () => w.remove(); w.onclick = e => { if (e.target === w) w.remove(); };
   document.body.appendChild(w);

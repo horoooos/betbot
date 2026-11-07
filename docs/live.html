@@ -1398,7 +1398,7 @@ function renderBot() {
 if (EVENT) loadBot();
 
 // ═════════════════════════ зрители и чат (Firebase) ═════════════════════════
-if (EVENT) import("./fb.js?v=4").then(fb => {
+if (EVENT) import("./fb.js?v=5").then(fb => {
   fb.track(`live:${EVENT}`, EVENT);
   fb.watchPresence(all => { const n = all[EVENT] || 0; $("viewers").textContent = `👁 ${n} ${n % 10 === 1 && n % 100 !== 11 ? "смотрит" : "смотрят"}`; $("viewers").style.display = "inline-block"; });
   $("chatbtn").style.display = "inline-block";
