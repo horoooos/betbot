@@ -9543,31 +9543,31 @@
   "kickoff": "2026-11-07T18:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Sat, November 7th at 10:00 AM EST",
   "home": {
-   "id": "2902",
-   "name": "Anna Blinkova",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/2902.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/fra.png"
    ],
+   "id": "2902",
+   "name": "Anna Blinkova",
    "country": "France",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
    "ru": "Анна Блинкова"
   },
   "away": {
-   "id": "13369",
-   "name": "Gina Feistel",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/13369.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/pol.png"
    ],
+   "id": "13369",
+   "name": "Gina Feistel",
    "country": "Poland",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
@@ -9627,7 +9627,9 @@
   "btn": 1,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null
  },
  "ATP|186505": {
   "id": "186505",
