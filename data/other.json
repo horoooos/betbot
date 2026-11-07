@@ -10933,31 +10933,31 @@
   "kickoff": "2026-11-07T09:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Sat, November 6th at 1:00 AM EST",
   "home": {
-   "id": "10858",
-   "name": "Alexandra Shubladze",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/10858.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/rus.png"
    ],
+   "id": "10858",
+   "name": "Alexandra Shubladze",
    "country": "Russia",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
    "ru": "Александра Шубладзе"
   },
   "away": {
-   "id": "2980",
-   "name": "Claire Liu",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/2980.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/usa.png"
    ],
+   "id": "2980",
+   "name": "Claire Liu",
    "country": "USA",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
@@ -11016,7 +11016,9 @@
   "msg_id": 3548,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null
  },
  "CS2|1781484": {
   "status": "skipped",
