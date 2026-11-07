@@ -1597,20 +1597,6 @@
 },
 {
 "sport": "tennis",
-"id": "186598",
-"league": "Теннис · WTA",
-"kickoff": "2026-11-08T08:00:00+03:00",
-"home": "Джанис Тьен",
-"away": "Тбд",
-"hl": "https://a.espncdn.com/i/teamlogos/countries/500/ina.png",
-"al": null,
-"path": "tennis/wta",
-"url": "live.html?s=tennis&p=tennis%2Fwta&e=186598&h=%D0%94%D0%B6%D0%B0%D0%BD%D0%B8%D1%81+%D0%A2%D1%8C%D0%B5%D0%BD&a=%D0%A2%D0%B1%D0%B4",
-"tip": "",
-"top": false
-},
-{
-"sport": "tennis",
 "id": "186690",
 "league": "Теннис · WTA",
 "kickoff": "2026-11-08T08:00:00+03:00",
@@ -1718,6 +1704,20 @@
 "al": "https://a.espncdn.com/i/teamlogos/soccer/500/244.png",
 "path": "soccer/esp.1",
 "url": "live.html?s=football&p=soccer%2Fesp.1&e=401882814&h=%D0%AD%D0%BB%D1%8C%D1%87%D0%B5&a=%D0%91%D0%B5%D1%82%D0%B8%D1%81",
+"tip": "",
+"top": false
+},
+{
+"sport": "tennis",
+"id": "186598",
+"league": "Теннис · WTA",
+"kickoff": "2026-11-08T16:00:00+03:00",
+"home": "Джанис Тьен",
+"away": "Тбд",
+"hl": "https://a.espncdn.com/i/teamlogos/countries/500/ina.png",
+"al": null,
+"path": "tennis/wta",
+"url": "live.html?s=tennis&p=tennis%2Fwta&e=186598&h=%D0%94%D0%B6%D0%B0%D0%BD%D0%B8%D1%81+%D0%A2%D1%8C%D0%B5%D0%BD&a=%D0%A2%D0%B1%D0%B4",
 "tip": "",
 "top": false
 },
