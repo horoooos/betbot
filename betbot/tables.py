@@ -36,6 +36,8 @@ def _football(code: str) -> tuple[bytes, str] | None:
         rows.append((_stat(st, "R", "rank"), names.team(e["team"]["displayName"]), _stat(st, "GP"),
                      _stat(st, "GD"), _stat(st, "P", "points")))
     rows.sort(key=lambda r: int(r[0] or 99))
+    if len(rows) < 5:  # таблица не пришла или почти пустая — не публикуем
+        return None
     text = [f"📊 <b>ТУРНИРНАЯ ТАБЛИЦА · {escape(title(code)).upper()}</b>\n"]
     for r in rows:
         text.append(f"{r[0]:>2}. {escape(r[1])} — <b>{r[4]}</b> очк. ({r[2]} игр, разница {r[3]})")
@@ -67,6 +69,8 @@ def _us(code: str) -> tuple[bytes, str] | None:
             text.append(f"{i:>2}. {escape(r[0])} — {r[1]}" + (f", <b>{r[2]}</b> очк." if hockey else f" ({r[2]})"))
         best += rows
     best.sort(key=lambda r: float(str(r[2]).replace("-", "0") or 0), reverse=True)
+    if len(best) < 5:  # таблица не пришла — не публикуем пустую
+        return None
     table = [(i, r[0], r[1], r[2]) for i, r in enumerate(best[:10], 1)]
     png = card.table_card(f"Таблица {code}", "лучшие команды лиги", ("#", "Команда", "В-П", "О" if hockey else "%"), table,
                           sport="hockey" if hockey else "basketball")
@@ -83,7 +87,11 @@ def _elo(code: str) -> tuple[bytes, str] | None:
     nm = {p["id"]: p["name"] for m in hist for p in (m["home"], m["away"])}
     recent = pd.Timestamp.now(tz="Europe/Moscow") - pd.Timedelta(days=60)
     active = {p["id"] for m in hist if pd.Timestamp(m["kickoff"]) > recent for p in (m["home"], m["away"])}
-    top = sorted(((k, v) for k, v in rating.items() if v[1] >= 10 and k in active), key=lambda x: -x[1][0])[:10]
+    top = sorted(((k, v) for k, v in rating.items() if v[1] >= 5 and k in active and "@" not in k),
+                 key=lambda x: -x[1][0])[:10]
+    if len(top) < 5:  # мало данных — пустую таблицу не публикуем, возьмём следующую по ротации
+        print(f"  таблица {code}: мало данных для рейтинга ({len(top)})")
+        return None
     show = (lambda n: names.player(n)) if sport == "tennis" else (lambda n: n)
     rows = [(i, show(nm[k]), v[1], f"{v[0]:.0f}") for i, (k, v) in enumerate(top, 1)]
     what = "игроков" if sport == "tennis" else "команд"
