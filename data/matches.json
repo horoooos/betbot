@@ -11033,7 +11033,7 @@
   "kickoff": "2026-11-07T04:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Scheduled",
   "home": {
    "id": "229",
@@ -11161,7 +11161,10 @@
   "msg_id": 3484,
   "close": {
    "BTTS_Y": 0.5802
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null,
+  "value_hit": null
  },
  "401876908": {
   "id": "401876908",
