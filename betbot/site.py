@@ -298,6 +298,44 @@ def build(res: pd.DataFrame, now: pd.Timestamp) -> None:
     print(f"Страница статистики обновлена: {len(res)} прогнозов")
 
 
+def _bot_block(m: dict) -> dict | None:
+    """Прогноз бота для страницы матча: главный и смелый прогноз, шансы исходов, рынки, вероятные счета."""
+    from . import markets as mk
+    if not m.get("msg_id") or not m.get("main"):
+        return None
+    probs = m.get("probs") or {}
+    tip = lambda x: {"label": x["label"], "p": round(float(x["p"]), 3), "odds": x.get("odds"), "est": bool(x.get("est"))} if x and x.get("label") else None
+    out = {"main": tip(m["main"]), "bold": tip(m.get("bold")), "markets": []}
+    if m.get("sport", "football") == "football":
+        o = m.get("odds") or {}
+        real = {"H": o.get("H"), "D": o.get("D"), "A": o.get("A")}
+        if o.get("line") is not None:
+            ln = str(o["line"]).replace(".", "")
+            real["O" + ln], real["U" + ln] = o.get("over"), o.get("under")
+        out["bar"] = [probs.get("H"), probs.get("D"), probs.get("A")]
+        lam = m.get("lam")
+        out["center"] = f"Ожидаемые голы (xG) {lam[0]:.1f} : {lam[1]:.1f}" if lam else ""
+        for k in ("H", "D", "A", "1X", "X2", "O15", "O25", "U25", "O35", "BTTS_Y", "BTTS_N", "H_O15", "A_O15", "H-1.5", "A+1.5"):
+            if k in probs:
+                try:
+                    out["markets"].append([mk.label(k), round(float(probs[k]), 3), real.get(k)])
+                except Exception:
+                    pass
+        out["scores"] = [[sc, round(float(pr), 3)] for sc, pr in (m.get("scores") or [])][:5]
+        ex = m.get("extra") or {}
+        if ex.get("corners"):
+            out["corners"] = round(float(ex["corners"].get("total", 0)), 1)
+        if ex.get("cards"):
+            out["cards"] = round(float(ex["cards"].get("total", 0)), 1)
+    else:
+        labels, real = m.get("labels") or {}, m.get("real") or {}
+        out["bar"], out["center"] = m.get("bar"), m.get("center", "")
+        for k, lab in list(labels.items())[:16]:
+            if k in probs:
+                out["markets"].append([lab, round(float(probs[k]), 3), real.get(k)])
+    return out
+
+
 def matches_json(events: list[dict], stored: dict, now: pd.Timestamp) -> None:
     """docs/matches.json — все матчи бота на ближайшие сутки (−4 ч … +30 ч) с параметрами 3D-трекера.
 
@@ -328,7 +366,7 @@ def matches_json(events: list[dict], stored: dict, now: pd.Timestamp) -> None:
                     "home": h, "away": a, "hl": logo(e["home"]), "al": logo(e["away"]),
                     "path": btn[1].split("p=")[1].split("&")[0].replace("%2F", "/"), "url": btn[1].replace(live.TRACKER, "live.html"),
                     "tip": f"{tip['label']} · {'≈' if tip.get('est') else ''}{tip['odds']:.2f}" if tip.get("label") and tip.get("odds") else "",
-                    "top": bool(m.get("top"))})
+                    "top": bool(m.get("top")), "bot": _bot_block(m)})
     out.sort(key=lambda x: (x["kickoff"], x["league"]))
     text = json.dumps(out, ensure_ascii=False, indent=0)
     if not MATCHES.exists() or MATCHES.read_text(encoding="utf-8") != text:

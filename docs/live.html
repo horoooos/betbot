@@ -23,6 +23,10 @@
   .team img:not([src]) { display:none }
   .team .nm { font-weight:800; font-size:14px; line-height:1.15; overflow:hidden; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical }
   .team .stripe { width:4px; height:30px; border-radius:2px; flex:none }
+  .team img { background:rgba(255,255,255,.92); border-radius:50%; padding:3px }
+  .legend { display:flex; justify-content:center; gap:14px; margin-top:6px; font-size:11px; font-weight:800; pointer-events:none }
+  .legend span { display:inline-flex; align-items:center; gap:6px; background:var(--card); border:1px solid var(--line); border-radius:999px; padding:3px 10px; max-width:46vw; white-space:nowrap; overflow:hidden; text-overflow:ellipsis }
+  .legend i { width:10px; height:10px; border-radius:50%; flex:none; box-shadow:0 0 0 2px rgba(255,255,255,.8) }
   .mid { text-align:center; flex:none }
   .score { font-weight:900; font-size:30px; letter-spacing:1px; transition:transform .3s, color .3s }
   .score.bump { transform:scale(1.35); color:var(--gold) }
@@ -37,16 +41,16 @@
           font:700 11px Montserrat,sans-serif; text-decoration:none; white-space:nowrap; cursor:pointer; backdrop-filter:blur(8px) }
   #pp { text-align:center; margin-top:6px } #pp span { display:inline-block; background:rgba(255,70,70,.9); border-radius:999px; padding:3px 10px; font-size:11px; font-weight:800 }
   #pp:empty { display:none }
-  #tag { position:fixed; z-index:2; pointer-events:none; transform:translate(-50%,-130%); padding:8px 12px 8px 14px; border-radius:14px;
-         background:var(--card); border:1px solid var(--line); backdrop-filter:blur(8px); white-space:nowrap; opacity:0;
-         transition:opacity .3s, left .35s linear, top .35s linear }
+  #tag { position:fixed; z-index:3; pointer-events:none; left:50%; top:var(--tagTop,128px); transform:translateX(-50%); padding:8px 14px 8px 16px; border-radius:14px;
+         background:var(--card); border:1px solid var(--line); backdrop-filter:blur(8px); white-space:nowrap; opacity:0; text-align:center;
+         max-width:calc(100vw - 32px); overflow:hidden; text-overflow:ellipsis; transition:opacity .35s, transform .35s }
   #tag .t { font-weight:800; font-size:14px } #tag .e { font-size:12px; color:var(--muted); font-weight:600 }
   #tag::before { content:""; position:absolute; left:0; top:8px; bottom:8px; width:4px; border-radius:2px; background:var(--c,#fff) }
   #flash { position:fixed; inset:0; z-index:1; pointer-events:none; opacity:0 }
   #big { position:fixed; left:50%; top:42%; z-index:4; pointer-events:none; transform:translate(-50%,-50%) scale(.2);
          font-weight:900; font-size:min(20vw,140px); letter-spacing:4px; opacity:0; text-align:center; line-height:1; white-space:nowrap;
          text-shadow:0 0 40px var(--bc,#ffc400), 0 0 90px var(--bc,#ffc400), 0 8px 0 rgba(0,0,0,.35) }
-  #big small { display:block; font-size:min(5vw,28px); letter-spacing:1px; margin-top:10px; text-shadow:0 2px 8px rgba(0,0,0,.6) }
+  #big small { display:block; font-size:min(4.4vw,26px); letter-spacing:.5px; margin:10px auto 0; max-width:92vw; white-space:normal; line-height:1.25; text-shadow:0 2px 8px rgba(0,0,0,.6) }
   #big.on { animation:boom 2.8s cubic-bezier(.2,1.4,.3,1) forwards }
   @keyframes boom { 0% { opacity:0; transform:translate(-50%,-50%) scale(.2) rotate(-8deg) }
     12% { opacity:1; transform:translate(-50%,-50%) scale(1.15) rotate(3deg) } 22% { transform:translate(-50%,-50%) scale(1) rotate(0) }
@@ -77,14 +81,34 @@
   .feed { margin-top:6px; border-top:1px solid var(--line); padding-top:4px; font-size:12px; color:var(--muted); max-height:38px; overflow:hidden }
   #stats:empty + .feed { margin-top:0; border-top:0; padding-top:0 }
   .feed div { white-space:nowrap; overflow:hidden; text-overflow:ellipsis; line-height:1.5 } .feed b { color:var(--ink); margin-right:6px }
-  .brand { position:fixed; right:14px; top:50%; transform:translateY(-50%) rotate(90deg); transform-origin:right center;
-           font-size:11px; color:rgba(255,255,255,.35); font-weight:700; letter-spacing:2px; pointer-events:none; z-index:3; white-space:nowrap }
+  .brand { position:fixed; left:50%; bottom:2px; transform:translateX(-50%); font-size:9px; color:rgba(255,255,255,.35); font-weight:700; letter-spacing:1.5px; pointer-events:none; z-index:3; white-space:nowrap }
+  .tipbtn { background:linear-gradient(90deg,#ffc400,#ff9f1a); color:#1a1405; border:0; font-weight:900 }
+  #sheet { position:fixed; inset:0; z-index:6; background:rgba(4,7,18,.6); backdrop-filter:blur(4px); display:none; align-items:flex-end; justify-content:center }
+  #sheet.on { display:flex }
+  #sheet .in { width:min(560px,100%); max-height:86vh; overflow:auto; background:linear-gradient(170deg,#18224a,#0d1430); border:1px solid var(--line);
+               border-radius:22px 22px 0 0; padding:18px 16px 26px; animation:up .3s ease-out }
+  @keyframes up { from { transform:translateY(40px); opacity:0 } }
+  #sheet h3 { font-size:18px; font-weight:900; display:flex; justify-content:space-between; align-items:center }
+  #sheet h4 { font-size:11px; color:var(--muted); letter-spacing:1.2px; text-transform:uppercase; margin:16px 0 8px }
+  #sheet .x { background:none; border:0; color:var(--muted); font-size:22px; cursor:pointer }
+  .tc { border-radius:16px; padding:12px 14px; margin-top:10px; display:flex; justify-content:space-between; align-items:center; gap:10px }
+  .tc.m { background:rgba(46,204,113,.14); border:1px solid rgba(46,204,113,.45) } .tc.b { background:rgba(255,122,61,.12); border:1px solid rgba(255,122,61,.4) }
+  .tc small { display:block; font-size:10px; font-weight:800; letter-spacing:1px; color:var(--muted) } .tc b { font-size:17px }
+  .tc .r { text-align:right; font-weight:900; font-size:22px } .tc .r small { text-align:right }
+  .b3 { display:flex; height:30px; border-radius:10px; overflow:hidden; font-size:12px; font-weight:900 }
+  .b3 div { display:flex; align-items:center; justify-content:center; min-width:34px } .b3l { display:flex; justify-content:space-between; font-size:11px; color:var(--muted); margin-top:5px; font-weight:700 }
+  .mr { display:grid; grid-template-columns:minmax(0,1fr) 90px 44px 44px; gap:8px; align-items:center; font-size:13px; padding:6px 0; border-bottom:1px solid var(--line) }
+  .mr span:first-child { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; font-weight:700 } .mr .p { text-align:right; font-weight:900 } .mr .o { text-align:right; color:var(--muted); font-size:12px }
+  .mr .mb { height:7px; border-radius:4px; background:rgba(255,255,255,.08); overflow:hidden } .mr .mb i { display:block; height:100%; border-radius:4px; background:var(--gold) }
+  .chips2 { display:flex; gap:8px; flex-wrap:wrap } .chips2 span { background:rgba(255,255,255,.06); border:1px solid var(--line); border-radius:12px; padding:7px 11px; font-weight:800; font-size:13px }
+  .chips2 span small { color:var(--muted); font-weight:700; margin-left:6px }
+  .disc { color:var(--muted); font-size:11px; margin-top:14px }
   #msg { position:fixed; inset:0; display:flex; align-items:center; justify-content:center; text-align:center; padding:30px; font-weight:700; color:var(--muted); z-index:5; background:var(--bg) }
   #replay { pointer-events:auto; display:none; margin:8px auto 0; background:var(--gold); color:#1e1606; border:0; border-radius:12px;
             padding:8px 16px; font:800 13px Montserrat,sans-serif; cursor:pointer }
   @media (max-height:560px) { .panel { padding:6px 10px } .stat .lbl { font-size:9px } .feed { display:none } }
   @media (max-width:520px) { .bar { gap:6px; padding:10px } .team { gap:5px } .team .nm { font-size:11px; letter-spacing:-.2px } .score { font-size:26px }
-    .team img { width:24px; height:24px } .team .stripe { display:none } #chip { font-size:17px } .league { font-size:10px; letter-spacing:1px } }
+    .team img { width:24px; height:24px } .team .stripe { width:3px; height:24px } #chip { font-size:17px } .league { font-size:10px; letter-spacing:1px } }
 </style>
 </head>
 <body>
@@ -102,12 +126,15 @@
     <div class="team away"><span class="nm" id="an">—</span><img id="al" alt=""><span class="stripe" id="ac"></span></div>
   </div>
   <div class="row2"><a class="pill" href="matches.html">← Все матчи</a><div class="league" id="lg"></div><button class="pill" id="cam">🎥 ТВ</button></div>
+  <div class="legend" id="legend"></div>
+  <div style="text-align:center;margin-top:6px"><button class="pill tipbtn" id="tipbtn" style="display:none">🎯 Прогноз бота</button></div>
   <div id="pp"></div>
   <div style="text-align:center"><button id="replay">▶ Смотреть повтор матча</button></div>
 </div>
 <div id="tag"><div class="t" id="tt"></div><div class="e" id="te"></div></div>
 <div class="hud bottom"><div class="panel"><div id="stats"></div><div class="feed" id="feed"></div></div></div>
 <div class="brand">@AISTAVVIT · 3D ПО ДАННЫМ МАТЧА</div>
+<div id="sheet"><div class="in" id="sheetIn"></div></div>
 
 <script type="importmap">{ "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js" } }</script>
 <script type="module">
@@ -350,7 +377,8 @@ class Fig {
     const body = new THREE.Mesh(GEO.body, this.mat); body.position.y = .67;
     const head = new THREE.Mesh(GEO.head, skinMat); head.position.y = 1.36;
     this.inner = new THREE.Group(); this.inner.add(body, head); this.g.add(this.inner);
-    const shd = new THREE.Mesh(GEO.shadow, shadowMat); shd.rotation.x = -Math.PI / 2; shd.position.y = .07; this.g.add(shd);
+    const shd = new THREE.Mesh(GEO.shadow, team ? new THREE.MeshBasicMaterial({ color: team.color, transparent: true, opacity: .6, depthWrite: false }) : shadowMat);
+    shd.rotation.x = -Math.PI / 2; shd.position.y = .07; shd.scale.setScalar(team ? 1.25 : 1); this.g.add(shd);
     this.bg = labelBg || color; this.fg = labelFg;
     if (label) { this.label = new THREE.Sprite(new THREE.SpriteMaterial({ map: labelTex(num, this.bg, labelFg), depthTest: false }));
       this.label.position.y = 2.15; this.label.scale.setScalar(.95); this.label.renderOrder = 5; this.g.add(this.label); }
@@ -554,7 +582,7 @@ $("cam").onclick = () => { camMode = camMode === "tv" ? "full" : "tv"; $("cam").
 let last = performance.now();
 const tag = $("tag");
 const camLook = new THREE.Vector3();
-let liveClock = null;
+let liveClock = null, clockMin = null;
 function animate(now) { requestAnimationFrame(animate); if (!manual) frame(now); }
 let manual = false;
 function frame(now) {
@@ -597,18 +625,21 @@ function frame(now) {
   camLook.x += (tx - camLook.x) * ease * 1.5; camLook.z += (tz - camLook.z) * ease * 1.5;
   camera.lookAt(camLook.x, 0, camLook.z);
   zoneMat.opacity += ((zone.userData.target || 0) - zoneMat.opacity) * .05;
-  if (liveClock) { const s = liveClock.base + (Date.now() - liveClock.at) / 1000; $("cl").textContent = `${Math.floor(s / 60)}:${String(Math.floor(s % 60)).padStart(2, "0")}${liveClock.suffix}`; }
+  if (liveClock) { const s = Math.min(liveClock.base + (Date.now() - liveClock.at) / 1000, liveClock.cap ?? 1e9); $("cl").textContent = `${Math.floor(s / 60)}:${String(Math.floor(s % 60)).padStart(2, "0")}${liveClock.suffix}`; }
   renderer.render(scene, camera);
-  const p = (BALL.owner ? BALL.owner.pos.clone().setY(2.6 * FS) : ball.position.clone().setY(ball.position.y + 2.5 * SC + .5)).applyMatrix4(world.matrixWorld).project(camera);
-  tag.style.left = ((p.x + 1) / 2 * innerWidth) + "px"; tag.style.top = ((1 - p.y) / 2 * innerHeight) + "px";
+  const topH = document.querySelector(".hud.top").getBoundingClientRect().bottom; tag.style.setProperty("--tagTop", `${Math.round(topH + 4)}px`);
 }
 requestAnimationFrame(animate);
 
 // ═════════════════════════ вспомогательное для событий ═════════════════════════
 const queue = [];
 const wait = ms => new Promise(r => setTimeout(r, ms * (queue.length > 3 ? .35 : 1)));
-function show(name, what, color) { $("tt").textContent = name || ""; $("te").textContent = what || ""; tag.style.setProperty("--c", color || "#ffc400"); tag.style.opacity = name || what ? 1 : 0; }
-function feed(clock, text) { const f = $("feed"), row = document.createElement("div"); row.innerHTML = `<b>${clock || ""}</b>${text}`; f.prepend(row); while (f.children.length > 4) f.lastChild.remove(); }
+let tagTimer = 0;
+function show(name, what, color, ms = 3500) { $("tt").textContent = name || ""; $("te").textContent = what || ""; tag.style.setProperty("--c", color || "#ffc400");
+  tag.style.opacity = name || what ? 1 : 0; clearTimeout(tagTimer); tagTimer = setTimeout(() => { tag.style.opacity = 0; }, ms); }
+function feed(clock, text) { const f = $("feed"), html = `<b>${clock || ""}</b>${text}`;
+  if (f.firstChild && f.firstChild.innerHTML === html) return;
+  const row = document.createElement("div"); row.innerHTML = html; f.prepend(row); while (f.children.length > 4) f.lastChild.remove(); }
 function zoneFor(tm) { if (!tm) return; zoneMat.color.set(tm.color); zone.position.x = tm.dir * L / 4; zone.userData.target = .14; }
 function side(p) {
   const id = p.team?.id, n = p.team?.displayName;
@@ -844,6 +875,7 @@ async function breakSeq(text, sub) {
   for (const p of figs) if (p.team) p.busy = false; if (ref) ref.busy = false;
 }
 
+let lastFoot = "";
 async function handleFootball(p) {
   const k = (p.type?.type || "").toLowerCase(), s = side(p), tm = teamOf(s), name = playerName(p), txt = p.text || "";
   const clock = p.clock?.displayValue || "";
@@ -858,7 +890,11 @@ async function handleFootball(p) {
     if (/^Match ends/i.test(txt)) { feed("", "Финальный свисток"); return breakSeq("ФИНАЛ", $("sc").textContent); }
     return;
   }
-  if (/wins a free kick/i.test(txt) && tm) { feed(clock, `${name || tm.ru} · Заработал штрафной`); return freeKickSeq(tm, pos, "Заработал штрафной"); }
+  if (/wins a free kick/i.test(txt) && tm) {
+    const after = lastFoot === "foul" || lastFoot === "handball"; lastFoot = "fk";
+    if (after) { show(name || tm.ru, "Заработал штрафной", tm.color); return; }
+    feed(clock, `${name || tm.ru} · Заработал штрафной`); return freeKickSeq(tm, pos, "Заработал штрафной"); }
+  lastFoot = k;
   feed(clock, `${name ? name + " · " : tm ? tm.ru + " · " : ""}${label}`);
   if ((/^goal|penalty---scored|own-goal/.test(k) || p.scoringPlay) && !/deleted|var/.test(k)) return goalSeq(p, tm || poss, s, k);
   const shooter = () => findFig(tm, name) || nearest(outfield(tm), { x: pos[0], z: pos[1] });
@@ -1245,12 +1281,17 @@ async function load() {
   $("sc").textContent = `${ch.score ?? 0} : ${ca.score ?? 0}`;
   const per = comp.status?.period, unit = SPORT === "football" ? "-й тайм" : SPORT === "hockey" ? "-й период" : "-я четверть";
   liveClock = null;
-  if (live && !brk && SPORT === "football" && comp.status?.clock != null) liveClock = { base: comp.status.clock, at: Date.now(), suffix: per ? ` · ${per}${unit}` : "" };
+  if (live && !brk && SPORT === "football") {
+    const mm = String(comp.status?.displayClock || "").match(/(\d+)'(?:\+(\d+))?/);
+    const min = comp.status?.clock != null ? Math.floor(comp.status.clock / 60) + 1 : mm ? +mm[1] + (+mm[2] || 0) : null;
+    if (min != null) { if (!clockMin || clockMin.min !== min) clockMin = { min, at: Date.now() };
+      liveClock = { base: (min - 1) * 60, at: clockMin.at, cap: min * 60 - 1, suffix: per ? ` · ${per}${unit}` : "" }; }
+  }
   $("cl").textContent = live ? (brk ? "Перерыв" : comp.status.displayClock ? `${comp.status.displayClock}${per ? " · " + per + unit : ""}` : (st.shortDetail || "LIVE"))
                              : (st.state === "post" ? "Матч завершён" : (st.shortDetail || "Скоро начало"));
   $("dot").classList.toggle("off", !live);
   if (d.boxscore?.teams?.length === 2) $("stats").innerHTML = statsHTML(d.boxscore.teams);
-  const plays = SPORT === "football" ? (d.commentary || []).map(c => c.play ? { ...c.play, text: c.play.text || c.text } : { id: `c${c.sequence}`, text: c.text, clock: c.time })
+  const plays = SPORT === "football" ? (d.commentary || []).map(c => c.play ? { ...c.play, id: `${c.play.id}-${c.sequence}`, text: c.text || c.play.text, clock: c.play.clock || c.time } : { id: `c${c.sequence}`, text: c.text, clock: c.time })
                                      : (d.plays || []);
   $("msg").style.display = "none";
   if (st.state === "post" && !replayMode) {
@@ -1265,8 +1306,8 @@ async function load() {
   }
   simOn = (live && !brk) || replayMode;
   if (!simOn && mode === "play") mode = "idle";
-  const fresh = plays.filter(p => !seen.has(pid(p)));
-  fresh.forEach(p => seen.add(pid(p)));
+  const fresh = [];
+  for (const p of plays) { const k = pid(p); if (!seen.has(k)) { seen.add(k); fresh.push(p); } }
   if (first) {
     fresh.slice(0, -3).forEach(silentApply);
     const lastT = [...fresh].reverse().find(p => teamOf(side(p)));
@@ -1275,6 +1316,67 @@ async function load() {
   } else fresh.forEach(p => queue.push(p));
   first = false;
 }
+// ═════════════════════════ кто за кого: легенда со стрелками атаки и названия на своих половинах ═════════════════════════
+const halfLbl = {};
+function halfSprite(tm) {
+  const c = document.createElement("canvas"); c.width = 1024; c.height = 160; const g = c.getContext("2d");
+  g.font = "900 96px Montserrat, Arial"; g.textAlign = "center"; g.textBaseline = "middle";
+  g.lineWidth = 10; g.strokeStyle = "rgba(0,0,0,.35)"; g.strokeText(tm.ru.toUpperCase(), 512, 84); g.fillStyle = tm.color; g.fillText(tm.ru.toUpperCase(), 512, 84);
+  const sp = new THREE.Sprite(new THREE.SpriteMaterial({ map: new THREE.CanvasTexture(c), transparent: true, opacity: .5, depthTest: false }));
+  const w = Math.min(L * .42, 40); sp.scale.set(w, w * 160 / 1024, 1); sp.renderOrder = 1; world.add(sp); return sp;
+}
+const arrowOf = (dx, dy) => Math.abs(dx) > Math.abs(dy) ? (dx > 0 ? "→" : "←") : (dy > 0 ? "↓" : "↑");
+let legendKey = "";
+function updateLegend() {
+  if (!H.ru || SPORT === "tennis" && !H.players.length) return;
+  const parts = [];
+  for (const tm of [H, A]) {
+    let goalX = SPORT === "basketball" ? basket(tm) : SPORT === "hockey" ? tm.dir * 26.5 : tm.dir * L / 2;
+    if (SPORT === "tennis") goalX = tm.dir * L / 2;
+    const own = new THREE.Vector3(-goalX, 0, 0).applyMatrix4(world.matrixWorld).project(camera), att = new THREE.Vector3(goalX, 0, 0).applyMatrix4(world.matrixWorld).project(camera);
+    const arrow = arrowOf(att.x - own.x, own.y - att.y);
+    parts.push(`<span><i style="background:${tm.color}"></i>${tm.ru} ${SPORT === "tennis" ? "" : arrow}</span>`);
+    if (SPORT !== "tennis") { if (!halfLbl[tm.side]) halfLbl[tm.side] = halfSprite(tm); halfLbl[tm.side].position.set(-goalX * .55, .5, 0); }
+  }
+  const html = parts.join("");
+  if (html !== legendKey) { legendKey = html; $("legend").innerHTML = html; }
+}
+setInterval(updateLegend, 700);
+
+// ═════════════════════════ прогноз бота на этот матч ═════════════════════════
+const pc = v => `${Math.round(v * 100)}%`;
+async function loadBot() {
+  let list = [];
+  for (const u of location.hostname.endsWith("github.io") ? ["https://raw.githubusercontent.com/horoooos/betbot/main/docs/matches.json", "matches.json"] : ["matches.json"]) {
+    try { list = await (await fetch(u, { cache: "no-store" })).json(); if (list.length) break; } catch (e) {}
+  }
+  const m = list.find(x => String(x.id) === String(EVENT));
+  if (!m || !m.bot) return;
+  botData = m.bot; $("tipbtn").textContent = `🎯 Прогноз бота: ${m.bot.main.label} · ${pc(m.bot.main.p)}`; $("tipbtn").style.display = "inline-block";
+  $("tipbtn").onclick = () => { renderBot(); $("sheet").classList.add("on"); };
+  $("sheet").onclick = e => { if (e.target.id === "sheet" || e.target.id === "sx") $("sheet").classList.remove("on"); };
+}
+let botData = null;
+function renderBot() {
+  const b = botData, esc = t => String(t ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+  const tc = (cls, title, t) => t ? `<div class="tc ${cls}"><div><small>${title}</small><b>${esc(t.label)}</b></div><div class="r"><small>шанс</small>${pc(t.p)}<small>кэф ${t.est ? "≈" : ""}${(+t.odds || 0).toFixed(2)}</small></div></div>` : "";
+  let html = `<h3>🎯 Прогноз бота <button class="x" id="sx">✕</button></h3>${tc("m", "ОСНОВНОЙ ПРОГНОЗ", b.main)}${tc("b", "СМЕЛЫЙ ПРОГНОЗ", b.bold)}`;
+  const bar = b.bar || [];
+  if (bar.length === 3 && bar.every(v => v != null)) {
+    const cols = [H.color, "#7f8bb3", A.color], names = [H.ru, SPORT === "football" ? "Ничья" : "", A.ru];
+    html += `<h4>Шансы на победу</h4><div class="b3">${bar.map((v, i) => v > 0 ? `<div style="width:${v * 100}%;background:${cols[i]}">${pc(v)}</div>` : "").join("")}</div>
+      <div class="b3l">${names.map((n, i) => bar[i] > 0 ? `<span>${esc(n)}</span>` : "").join("")}</div>`;
+  }
+  if (b.center) html += `<p class="disc" style="margin-top:8px">${esc(b.center)}</p>`;
+  if (b.markets?.length) html += `<h4>Шансы по рынкам</h4>` + b.markets.map(([l, p, o]) =>
+    `<div class="mr"><span>${esc(l)}</span><div class="mb"><i style="width:${p * 100}%;background:${p >= .6 ? "#2ecc71" : p >= .45 ? "#ffc400" : "#ff7a3d"}"></i></div><span class="p">${pc(p)}</span><span class="o">${o ? (+o).toFixed(2) : "—"}</span></div>`).join("");
+  if (b.scores?.length) html += `<h4>Самые вероятные счета</h4><div class="chips2">${b.scores.map(([sc, p]) => `<span>${esc(sc)}<small>${pc(p)}</small></span>`).join("")}</div>`;
+  if (b.corners || b.cards) html += `<h4>Статистика матча (ожидание)</h4><div class="chips2">${b.corners ? `<span>🚩 Угловые<small>≈${b.corners}</small></span>` : ""}${b.cards ? `<span>🟨 Карточки<small>≈${b.cards}</small></span>` : ""}</div>`;
+  html += `<p class="disc">Шанс — оценка модели бота; кэф — средний у букмекеров («≈» — расчётный). Прогноз — не гарантия. 18+</p>`;
+  $("sheetIn").innerHTML = html;
+}
+if (EVENT) loadBot();
+
 if (q.has("debug")) Object.assign(window, { __load: () => load(), __handle: p => HANDLE(p), __H: H, __A: A, __cam: camera, __world: world, __q: queue, __figs: figs,
   __state: () => ({ mode, simOn, poss: poss.ru, ball: BALL.mode, owner: BALL.owner?.name || BALL.owner?.num }), __sim: on => { simOn = on; mode = on ? "play" : "idle"; },
   __run: async (sec, fps = 30) => { manual = true; let n = last; for (let i = 0; i < sec * fps; i++) { n += 1000 / fps; frame(n); await Promise.resolve(); await Promise.resolve(); } manual = false; },

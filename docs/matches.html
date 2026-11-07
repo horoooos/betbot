@@ -109,7 +109,7 @@ function card(m) {
     <div class="lg"><span>${EM[m.sport] || ""} ${esc(m.league)}</span><span class="st ${cls}">${esc(label)}</span></div>
     <div class="tm ${win && win.h ? "win" : ""}">${img(m.hl)}<span class="nm">${esc(m.home)}</span><span class="sc">${esc(hsc)}</span></div>
     <div class="tm ${win && win.a ? "win" : ""}">${img(m.al)}<span class="nm">${esc(m.away)}</span><span class="sc">${esc(asc)}</span></div>
-    <div class="ft">${m.tip ? `<span class="tip">🎯 Прогноз: ${esc(m.tip)}</span>` : `<span class="tip no">Прогноз выйдет за час до начала</span>`}
+    <div class="ft">${m.tip ? `<span class="tip">🎯 ${esc(m.tip)}${m.bot?.main ? ` · шанс ${Math.round(m.bot.main.p * 100)}%` : ""}</span>` : `<span class="tip no">Прогноз выйдет за час до начала</span>`}
       <span class="go">${st === "in" ? "📺 Смотреть" : st === "post" ? "▶ Повтор" : "📺 3D"}</span></div></a>`;
 }
 function render() {
@@ -131,7 +131,10 @@ function render() {
   document.getElementById("list").innerHTML = html || `<div class="empty">Матчей пока нет — загляните позже.</div>`;
 }
 async function load() {
-  try { all = await (await fetch("matches.json", { cache: "no-store" })).json(); } catch (e) { all = []; }
+  all = [];
+  for (const u of location.hostname.endsWith("github.io") ? ["https://raw.githubusercontent.com/horoooos/betbot/main/docs/matches.json", "matches.json"] : ["matches.json"]) {   // из репозитория — свежее, чем копия сайта
+    try { all = await (await fetch(u, { cache: "no-store" })).json(); if (all.length) break; } catch (e) {}
+  }
   render(); await scores(); render();
 }
 load(); setInterval(async () => { await scores(); render(); }, 30000); setInterval(load, 10 * 60e3);
