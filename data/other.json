@@ -1,101 +1,4 @@
 {
- "ATP|186478": {
-  "id": "186478",
-  "div": "ATP",
-  "sport": "tennis",
-  "tournament": "Rolex Paris Masters",
-  "round": "Round 2",
-  "bo5": false,
-  "kickoff": "2026-11-04T15:30:00+03:00",
-  "state": "pre",
-  "completed": false,
-  "status": "done",
-  "detail": "Wed, November 4th at 7:30 AM EST",
-  "home": {
-   "color": "2d6a4f",
-   "logo": [
-    "https://a.espncdn.com/i/headshots/tennis/players/full/2375.png",
-    "https://a.espncdn.com/i/teamlogos/countries/500/ger.png"
-   ],
-   "id": "2375",
-   "name": "Alexander Zverev",
-   "country": "Germany",
-   "winner": false,
-   "sets": [],
-   "set_won": [],
-   "ru": "Александр Зверев"
-  },
-  "away": {
-   "color": "2d6a4f",
-   "logo": [
-    "https://a.espncdn.com/i/headshots/tennis/players/full/3764.png",
-    "https://a.espncdn.com/i/teamlogos/countries/500/ita.png"
-   ],
-   "id": "3764",
-   "name": "Lorenzo Musetti",
-   "country": "Italy",
-   "winner": false,
-   "sets": [],
-   "set_won": [],
-   "ru": "Лоренцо Музетти"
-  },
-  "odds": {},
-  "probs": {
-   "TN_W1": 0.6752700733993925,
-   "TN_W2": 0.3247299266006075,
-   "TN_3S": 0.4716307520093318,
-   "TN_2S": 0.5283692479906682,
-   "TN_S2:0": 0.38328384311676295,
-   "TN_S0:2": 0.14508540487390528,
-   "TN_S2:1": 0.29198623028262954,
-   "TN_S1:2": 0.17964452172670223,
-   "TN_SET1": 0.8549145951260947,
-   "TN_SET2": 0.6167161568832371
-  },
-  "labels": {
-   "TN_W1": "Победа: Александр Зверев",
-   "TN_W2": "Победа: Лоренцо Музетти",
-   "TN_3S": "Будет 3 сета",
-   "TN_2S": "Будет 2 сета",
-   "TN_S2:0": "Счёт по сетам 2:0",
-   "TN_S0:2": "Счёт по сетам 0:2",
-   "TN_S2:1": "Счёт по сетам 2:1",
-   "TN_S1:2": "Счёт по сетам 1:2",
-   "TN_SET1": "Александр Зверев возьмёт хотя бы сет",
-   "TN_SET2": "Лоренцо Музетти возьмёт хотя бы сет"
-  },
-  "real": {},
-  "center": "Рейтинг Эло 1904 : 1776",
-  "bar": [
-   0.6752700733993925,
-   0,
-   0.3247299266006075
-  ],
-  "model": {
-   "elo": [
-    1903.5756342042669,
-    1776.3935587133906
-   ],
-   "src": "Эло"
-  },
-  "main": {
-   "key": "TN_SET2",
-   "label": "Лоренцо Музетти возьмёт хотя бы сет",
-   "p": 0.6167,
-   "odds": 1.51,
-   "est": true,
-   "stake": 1.0
-  },
-  "bold": {},
-  "open": {},
-  "top": false,
-  "msg_id": 2575,
-  "close": {
-   "_": null
-  },
-  "main_hit": true,
-  "bold_hit": null
- },
  "ATP|186481": {
   "id": "186481",
   "div": "ATP",
@@ -191,7 +94,8 @@
    "_": null
   },
   "main_hit": false,
-  "bold_hit": null
+  "bold_hit": null,
+  "btn": 1
  },
  "ATP|186483": {
   "id": "186483",
@@ -288,7 +192,8 @@
    "_": null
   },
   "main_hit": false,
-  "bold_hit": null
+  "bold_hit": null,
+  "btn": 1
  },
  "ATP|186482": {
   "id": "186482",
@@ -385,7 +290,8 @@
    "_": null
   },
   "main_hit": true,
-  "bold_hit": null
+  "bold_hit": null,
+  "btn": 1
  },
  "ATP|186476": {
   "id": "186476",
@@ -482,7 +388,8 @@
    "_": null
   },
   "main_hit": true,
-  "bold_hit": null
+  "bold_hit": null,
+  "btn": 1
  },
  "ATP|186490": {
   "id": "186490",
@@ -579,7 +486,8 @@
    "_": null
   },
   "main_hit": false,
-  "bold_hit": null
+  "bold_hit": null,
+  "btn": 1
  },
  "WTA|186682": {
   "id": "186682",
@@ -676,7 +584,8 @@
    "_": null
   },
   "main_hit": true,
-  "bold_hit": null
+  "bold_hit": null,
+  "btn": 1
  },
  "ATP|186489": {
   "id": "186489",
@@ -773,7 +682,8 @@
    "_": null
   },
   "main_hit": true,
-  "bold_hit": null
+  "bold_hit": null,
+  "btn": 1
  },
  "WTA|186725": {
   "id": "186725",
@@ -870,7 +780,8 @@
    "_": null
   },
   "main_hit": false,
-  "bold_hit": null
+  "bold_hit": null,
+  "btn": 1
  },
  "WTA|186733": {
   "id": "186733",
@@ -967,7 +878,8 @@
    "_": null
   },
   "main_hit": true,
-  "bold_hit": null
+  "bold_hit": null,
+  "btn": 1
  },
  "WTA|186731": {
   "id": "186731",
@@ -1064,7 +976,8 @@
    "_": null
   },
   "main_hit": true,
-  "bold_hit": null
+  "bold_hit": null,
+  "btn": 1
  },
  "ATP|186485": {
   "id": "186485",
@@ -1161,7 +1074,8 @@
    "_": null
   },
   "main_hit": false,
-  "bold_hit": null
+  "bold_hit": null,
+  "btn": 1
  },
  "WTA|186722": {
   "id": "186722",
@@ -1258,7 +1172,8 @@
    "_": null
   },
   "main_hit": true,
-  "bold_hit": null
+  "bold_hit": null,
+  "btn": 1
  },
  "ATP|186480": {
   "id": "186480",
@@ -1355,7 +1270,8 @@
    "_": null
   },
   "main_hit": true,
-  "bold_hit": null
+  "bold_hit": null,
+  "btn": 1
  },
  "WTA|186723": {
   "id": "186723",
@@ -1452,7 +1368,8 @@
    "_": null
   },
   "main_hit": true,
-  "bold_hit": null
+  "bold_hit": null,
+  "btn": 1
  },
  "WTA|186732": {
   "id": "186732",
@@ -1549,7 +1466,8 @@
    "_": null
   },
   "main_hit": true,
-  "bold_hit": null
+  "bold_hit": null,
+  "btn": 1
  },
  "ATP|186491": {
   "id": "186491",
@@ -1646,7 +1564,8 @@
    "_": null
   },
   "main_hit": true,
-  "bold_hit": null
+  "bold_hit": null,
+  "btn": 1
  },
  "WTA|186724": {
   "id": "186724",
@@ -1743,7 +1662,8 @@
    "_": null
   },
   "main_hit": true,
-  "bold_hit": null
+  "bold_hit": null,
+  "btn": 1
  },
  "WTA|186726": {
   "id": "186726",
@@ -1840,7 +1760,8 @@
    "_": null
   },
   "main_hit": true,
-  "bold_hit": null
+  "bold_hit": null,
+  "btn": 1
  },
  "NBA|401909922": {
   "id": "401909922",
@@ -1940,7 +1861,8 @@
    "BB_ML_H": 0.5825
   },
   "main_hit": false,
-  "bold_hit": null
+  "bold_hit": null,
+  "btn": 1
  },
  "NBA|401909923": {
   "id": "401909923",
@@ -2040,7 +1962,8 @@
    "_": null
   },
   "main_hit": true,
-  "bold_hit": null
+  "bold_hit": null,
+  "btn": 1
  },
  "NHL|401892644": {
   "id": "401892644",
@@ -2169,7 +2092,8 @@
    "HK_ML_A": 0.4572
   },
   "main_hit": false,
-  "bold_hit": true
+  "bold_hit": true,
+  "btn": 1
  },
  "NHL|401892645": {
   "id": "401892645",
@@ -2289,7 +2213,8 @@
    "HK_O5.5": 0.5514
   },
   "main_hit": true,
-  "bold_hit": null
+  "bold_hit": null,
+  "btn": 1
  },
  "NBA|401909924": {
   "id": "401909924",
@@ -2389,7 +2314,8 @@
    "_": null
   },
   "main_hit": true,
-  "bold_hit": null
+  "bold_hit": null,
+  "btn": 1
  },
  "NBA|401909925": {
   "id": "401909925",
@@ -2489,7 +2415,8 @@
    "BB_ML_A": 0.6147
   },
   "main_hit": false,
-  "bold_hit": null
+  "bold_hit": null,
+  "btn": 1
  },
  "NBA|401909926": {
   "id": "401909926",
@@ -2589,7 +2516,8 @@
    "BB_U233.5": 0.5
   },
   "main_hit": false,
-  "bold_hit": null
+  "bold_hit": null,
+  "btn": 1
  },
  "NBA|401909927": {
   "id": "401909927",
@@ -2689,7 +2617,8 @@
    "_": null
   },
   "main_hit": false,
-  "bold_hit": null
+  "bold_hit": null,
+  "btn": 1
  },
  "NBA|401909928": {
   "id": "401909928",
@@ -2789,7 +2718,8 @@
    "BB_U231.5": 0.5
   },
   "main_hit": false,
-  "bold_hit": null
+  "bold_hit": null,
+  "btn": 1
  },
  "NBA|401909929": {
   "id": "401909929",
@@ -2889,7 +2819,8 @@
    "BB_ML_H": 0.6147
   },
   "main_hit": true,
-  "bold_hit": null
+  "bold_hit": null,
+  "btn": 1
  },
  "NBA|401909930": {
   "id": "401909930",
@@ -2989,7 +2920,8 @@
    "_": null
   },
   "main_hit": false,
-  "bold_hit": null
+  "bold_hit": null,
+  "btn": 1
  },
  "NBA|401909931": {
   "id": "401909931",
@@ -3089,7 +3021,8 @@
    "BB_U231.5": 0.5
   },
   "main_hit": false,
-  "bold_hit": null
+  "bold_hit": null,
+  "btn": 1
  },
  "NBA|401909932": {
   "id": "401909932",
@@ -3198,7 +3131,8 @@
    "BB_ML_H": 0.3853
   },
   "main_hit": false,
-  "bold_hit": false
+  "bold_hit": false,
+  "btn": 1
  },
  "NBA|401909933": {
   "id": "401909933",
@@ -3298,7 +3232,8 @@
    "BB_O226.5": 0.5
   },
   "main_hit": false,
-  "bold_hit": null
+  "bold_hit": null,
+  "btn": 1
  },
  "NHL|401892646": {
   "id": "401892646",
@@ -3427,7 +3362,8 @@
    "HK_ML_A": 0.4003
   },
   "main_hit": true,
-  "bold_hit": false
+  "bold_hit": false,
+  "btn": 1
  },
  "NHL|401892647": {
   "id": "401892647",
@@ -3556,7 +3492,8 @@
    "HK_ML_A": 0.4486
   },
   "main_hit": false,
-  "bold_hit": false
+  "bold_hit": false,
+  "btn": 1
  },
  "NBA|401909934": {
   "id": "401909934",
@@ -3656,7 +3593,8 @@
    "BB_U233.5": 0.5
   },
   "main_hit": true,
-  "bold_hit": null
+  "bold_hit": null,
+  "btn": 1
  },
  "NBA|401909935": {
   "id": "401909935",
@@ -3756,7 +3694,8 @@
    "BB_U233.5": 0.5
   },
   "main_hit": true,
-  "bold_hit": null
+  "bold_hit": null,
+  "btn": 1
  },
  "WTA|186640": {
   "id": "186640",
@@ -3853,7 +3792,8 @@
    "_": null
   },
   "main_hit": false,
-  "bold_hit": null
+  "bold_hit": null,
+  "btn": 1
  },
  "WTA|186631": {
   "id": "186631",
@@ -3950,7 +3890,8 @@
    "_": null
   },
   "main_hit": false,
-  "bold_hit": null
+  "bold_hit": null,
+  "btn": 1
  },
  "WTA|186639": {
   "id": "186639",
@@ -4047,7 +3988,8 @@
    "_": null
   },
   "main_hit": true,
-  "bold_hit": null
+  "bold_hit": null,
+  "btn": 1
  },
  "WTA|186681": {
   "status": "skipped",
@@ -4152,7 +4094,8 @@
    "_": null
   },
   "main_hit": true,
-  "bold_hit": null
+  "bold_hit": null,
+  "btn": 1
  },
  "WTA|186591": {
   "id": "186591",
@@ -4249,7 +4192,8 @@
    "_": null
   },
   "main_hit": false,
-  "bold_hit": null
+  "bold_hit": null,
+  "btn": 1
  },
  "ATP|186496": {
   "id": "186496",
@@ -4346,7 +4290,8 @@
    "_": null
   },
   "main_hit": true,
-  "bold_hit": null
+  "bold_hit": null,
+  "btn": 1
  },
  "WTA|186630": {
   "id": "186630",
@@ -4443,7 +4388,8 @@
    "_": null
   },
   "main_hit": true,
-  "bold_hit": null
+  "bold_hit": null,
+  "btn": 1
  },
  "WTA|186677": {
   "status": "skipped",
@@ -4544,7 +4490,8 @@
    "_": null
   },
   "main_hit": true,
-  "bold_hit": null
+  "bold_hit": null,
+  "btn": 1
  },
  "ATP|186497": {
   "id": "186497",
@@ -4641,7 +4588,8 @@
    "_": null
   },
   "main_hit": true,
-  "bold_hit": null
+  "bold_hit": null,
+  "btn": 1
  },
  "WTA|186641": {
   "id": "186641",
@@ -4738,7 +4686,8 @@
    "_": null
   },
   "main_hit": true,
-  "bold_hit": null
+  "bold_hit": null,
+  "btn": 1
  },
  "WTA|186676": {
   "status": "skipped",
@@ -4843,7 +4792,8 @@
    "_": null
   },
   "main_hit": false,
-  "bold_hit": null
+  "bold_hit": null,
+  "btn": 1
  },
  "ATP|186499": {
   "id": "186499",
@@ -4940,7 +4890,8 @@
    "_": null
   },
   "main_hit": false,
-  "bold_hit": null
+  "bold_hit": null,
+  "btn": 1
  },
  "ATP|186494": {
   "id": "186494",
@@ -5037,7 +4988,8 @@
    "_": null
   },
   "main_hit": true,
-  "bold_hit": null
+  "bold_hit": null,
+  "btn": 1
  },
  "WTA|186728": {
   "id": "186728",
@@ -5134,7 +5086,8 @@
    "_": null
   },
   "main_hit": false,
-  "bold_hit": null
+  "bold_hit": null,
+  "btn": 1
  },
  "WTA|186727": {
   "id": "186727",
@@ -5231,7 +5184,8 @@
    "_": null
   },
   "main_hit": false,
-  "bold_hit": null
+  "bold_hit": null,
+  "btn": 1
  },
  "ATP|186503": {
   "id": "186503",
@@ -5328,7 +5282,8 @@
    "_": null
   },
   "main_hit": true,
-  "bold_hit": null
+  "bold_hit": null,
+  "btn": 1
  },
  "WTA|186730": {
   "id": "186730",
@@ -5425,7 +5380,8 @@
    "_": null
   },
   "main_hit": true,
-  "bold_hit": null
+  "bold_hit": null,
+  "btn": 1
  },
  "WTA|186729": {
   "id": "186729",
@@ -5522,7 +5478,8 @@
    "_": null
   },
   "main_hit": true,
-  "bold_hit": null
+  "bold_hit": null,
+  "btn": 1
  },
  "ATP|186495": {
   "id": "186495",
@@ -5619,7 +5576,8 @@
    "_": null
   },
   "main_hit": true,
-  "bold_hit": null
+  "bold_hit": null,
+  "btn": 1
  },
  "NHL|401892648": {
   "id": "401892648",
@@ -5748,7 +5706,8 @@
    "HK_ML_H": 0.474
   },
   "main_hit": true,
-  "bold_hit": true
+  "bold_hit": true,
+  "btn": 1
  },
  "NHL|401892649": {
   "id": "401892649",
@@ -5877,7 +5836,8 @@
    "HK_O6.5": 0.3907
   },
   "main_hit": true,
-  "bold_hit": false
+  "bold_hit": false,
+  "btn": 1
  },
  "NHL|401892650": {
   "id": "401892650",
@@ -5997,7 +5957,8 @@
    "HK_O6.5": 0.4957
   },
   "main_hit": false,
-  "bold_hit": null
+  "bold_hit": null,
+  "btn": 1
  },
  "NHL|401892651": {
   "id": "401892651",
@@ -6117,7 +6078,8 @@
    "HK_O5.5": 0.5428
   },
   "main_hit": true,
-  "bold_hit": null
+  "bold_hit": null,
+  "btn": 1
  },
  "NHL|401892652": {
   "id": "401892652",
@@ -6246,7 +6208,8 @@
    "HK_O6.5": 0.4486
   },
   "main_hit": true,
-  "bold_hit": true
+  "bold_hit": true,
+  "btn": 1
  },
  "NHL|401892653": {
   "id": "401892653",
@@ -6375,7 +6338,8 @@
    "HK_ML_A": 0.428
   },
   "main_hit": false,
-  "bold_hit": false
+  "bold_hit": false,
+  "btn": 1
  },
  "NHL|401892654": {
   "id": "401892654",
@@ -6495,7 +6459,8 @@
    "HK_O6.5": 0.5043
   },
   "main_hit": true,
-  "bold_hit": null
+  "bold_hit": null,
+  "btn": 1
  },
  "NHL|401892655": {
   "id": "401892655",
@@ -6624,7 +6589,8 @@
    "HK_ML_H": 0.4572
   },
   "main_hit": false,
-  "bold_hit": false
+  "bold_hit": false,
+  "btn": 1
  },
  "NHL|401892656": {
   "id": "401892656",
@@ -6741,7 +6707,8 @@
   "top": false,
   "msg_id": 3239,
   "main_hit": true,
-  "bold_hit": null
+  "bold_hit": null,
+  "btn": 1
  },
  "NHL|401892657": {
   "id": "401892657",
@@ -6861,7 +6828,8 @@
    "HK_O6.5": 0.572
   },
   "main_hit": true,
-  "bold_hit": null
+  "bold_hit": null,
+  "btn": 1
  },
  "NBA|401909936": {
   "id": "401909936",
@@ -6961,7 +6929,8 @@
    "BB_ML_H": 0.5497
   },
   "main_hit": true,
-  "bold_hit": null
+  "bold_hit": null,
+  "btn": 1
  },
  "NHL|401892658": {
   "id": "401892658",
@@ -7081,7 +7050,8 @@
    "HK_O6.5": 0.5174
   },
   "main_hit": false,
-  "bold_hit": null
+  "bold_hit": null,
+  "btn": 1
  },
  "NBA|401909937": {
   "id": "401909937",
@@ -7181,7 +7151,8 @@
    "BB_ML_H": 0.6147
   },
   "main_hit": true,
-  "bold_hit": null
+  "bold_hit": null,
+  "btn": 1
  },
  "WTA|186636": {
   "id": "186636",
@@ -7278,7 +7249,8 @@
    "_": null
   },
   "main_hit": true,
-  "bold_hit": null
+  "bold_hit": null,
+  "btn": 1
  },
  "CS2|1781482": {
   "status": "skipped",
@@ -7379,7 +7351,8 @@
    "_": null
   },
   "main_hit": true,
-  "bold_hit": null
+  "bold_hit": null,
+  "btn": 1
  },
  "WTA|186592": {
   "id": "186592",
@@ -7476,7 +7449,8 @@
    "_": null
   },
   "main_hit": false,
-  "bold_hit": null
+  "bold_hit": null,
+  "btn": 1
  },
  "CS2|1781483": {
   "status": "skipped",
@@ -7577,7 +7551,8 @@
    "_": null
   },
   "main_hit": true,
-  "bold_hit": null
+  "bold_hit": null,
+  "btn": 1
  },
  "WTA|186689": {
   "id": "186689",
@@ -7674,7 +7649,8 @@
    "_": null
   },
   "main_hit": true,
-  "bold_hit": null
+  "bold_hit": null,
+  "btn": 1
  },
  "WTA|186597": {
   "status": "skipped",
@@ -7775,7 +7751,8 @@
    "_": null
   },
   "main_hit": true,
-  "bold_hit": null
+  "bold_hit": null,
+  "btn": 1
  },
  "WTA|186634": {
   "id": "186634",
@@ -7872,7 +7849,8 @@
    "_": null
   },
   "main_hit": true,
-  "bold_hit": null
+  "bold_hit": null,
+  "btn": 1
  },
  "WTA|186686": {
   "id": "186686",
@@ -7969,7 +7947,8 @@
    "_": null
   },
   "main_hit": true,
-  "bold_hit": null
+  "bold_hit": null,
+  "btn": 1
  },
  "WTA|186596": {
   "id": "186596",
@@ -8066,7 +8045,8 @@
    "_": null
   },
   "main_hit": false,
-  "bold_hit": null
+  "bold_hit": null,
+  "btn": 1
  },
  "ATP|186500": {
   "id": "186500",
@@ -8163,7 +8143,8 @@
    "_": null
   },
   "main_hit": false,
-  "bold_hit": null
+  "bold_hit": null,
+  "btn": 1
  },
  "WTA|186595": {
   "id": "186595",
@@ -8258,7 +8239,8 @@
   "msg_id": 3334,
   "close": {
    "_": null
-  }
+  },
+  "btn": 1
  },
  "ATP|186501": {
   "id": "186501",
@@ -8355,7 +8337,8 @@
    "_": null
   },
   "main_hit": false,
-  "bold_hit": null
+  "bold_hit": null,
+  "btn": 1
  },
  "WTA|186688": {
   "id": "186688",
@@ -8367,31 +8350,31 @@
   "kickoff": "2026-11-06T18:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Fri, November 6th at 10:30 AM EST",
   "home": {
-   "id": "2902",
-   "name": "Anna Blinkova",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/2902.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/fra.png"
    ],
+   "id": "2902",
+   "name": "Anna Blinkova",
    "country": "France",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
    "ru": "Анна Блинкова"
   },
   "away": {
-   "id": "8318",
-   "name": "Yasmine Kabbaj",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/8318.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/lao.png"
    ],
+   "id": "8318",
+   "name": "Yasmine Kabbaj",
    "country": "Laos",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
@@ -8450,7 +8433,10 @@
   "msg_id": 3340,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null,
+  "btn": 1
  },
  "WTA|186734": {
   "id": "186734",
@@ -8547,7 +8533,8 @@
    "_": null
   },
   "main_hit": false,
-  "bold_hit": null
+  "bold_hit": null,
+  "btn": 1
  },
  "ATP|186492": {
   "id": "186492",
@@ -8644,7 +8631,8 @@
    "_": null
   },
   "main_hit": false,
-  "bold_hit": null
+  "bold_hit": null,
+  "btn": 1
  },
  "WTA|186735": {
   "id": "186735",
@@ -8739,7 +8727,8 @@
   "msg_id": 3363,
   "close": {
    "_": null
-  }
+  },
+  "btn": 1
  },
  "ATP|186493": {
   "id": "186493",
@@ -8836,7 +8825,8 @@
    "_": null
   },
   "main_hit": true,
-  "bold_hit": null
+  "bold_hit": null,
+  "btn": 1
  },
  "NHL|401892659": {
   "id": "401892659",
@@ -8956,7 +8946,8 @@
    "HK_O6.5": 0.474
   },
   "main_hit": true,
-  "bold_hit": null
+  "bold_hit": null,
+  "btn": 1
  },
  "NBA|401909287": {
   "id": "401909287",
@@ -9056,7 +9047,8 @@
    "BB_U227.5": 0.5
   },
   "main_hit": false,
-  "bold_hit": null
+  "bold_hit": null,
+  "btn": 1
  },
  "NBA|401909288": {
   "id": "401909288",
@@ -9156,7 +9148,8 @@
    "_": null
   },
   "main_hit": false,
-  "bold_hit": null
+  "bold_hit": null,
+  "btn": 1
  },
  "NBA|401909289": {
   "id": "401909289",
@@ -9264,7 +9257,8 @@
    "BB_ML_H": 0.4175
   },
   "main_hit": false,
-  "bold_hit": true
+  "bold_hit": true,
+  "btn": 1
  },
  "NHL|401892660": {
   "id": "401892660",
@@ -9384,7 +9378,8 @@
    "HK_O6.5": 0.5
   },
   "main_hit": false,
-  "bold_hit": null
+  "bold_hit": null,
+  "btn": 1
  },
  "NHL|401892661": {
   "id": "401892661",
@@ -9513,7 +9508,8 @@
    "HK_ML_A": 0.428
   },
   "main_hit": true,
-  "bold_hit": true
+  "bold_hit": true,
+  "btn": 1
  },
  "NBA|401909290": {
   "id": "401909290",
@@ -9613,7 +9609,8 @@
    "_": null
   },
   "main_hit": false,
-  "bold_hit": null
+  "bold_hit": null,
+  "btn": 1
  },
  "NBA|401909291": {
   "id": "401909291",
@@ -9713,7 +9710,8 @@
    "BB_O224.5": 0.5
   },
   "main_hit": true,
-  "bold_hit": null
+  "bold_hit": null,
+  "btn": 1
  },
  "NBA|401909292": {
   "id": "401909292",
@@ -9813,7 +9811,8 @@
    "BB_ML_A": 0.6147
   },
   "main_hit": true,
-  "bold_hit": null
+  "bold_hit": null,
+  "btn": 1
  },
  "NBA|401909293": {
   "id": "401909293",
@@ -9913,7 +9912,8 @@
    "BB_U230.5": 0.5
   },
   "main_hit": true,
-  "bold_hit": null
+  "bold_hit": null,
+  "btn": 1
  },
  "NBA|401909294": {
   "id": "401909294",
@@ -10013,7 +10013,8 @@
    "BB_ML_H": 0.6147
   },
   "main_hit": true,
-  "bold_hit": null
+  "bold_hit": null,
+  "btn": 1
  },
  "NBA|401909295": {
   "id": "401909295",
@@ -10113,7 +10114,8 @@
    "BB_O231.5": 0.5
   },
   "main_hit": true,
-  "bold_hit": null
+  "bold_hit": null,
+  "btn": 1
  },
  "WTA|186644": {
   "id": "186644",
@@ -10210,7 +10212,8 @@
    "_": null
   },
   "main_hit": true,
-  "bold_hit": null
+  "bold_hit": null,
+  "btn": 1
  },
  "CS2|1781484": {
   "status": "skipped",
@@ -10311,7 +10314,8 @@
    "_": null
   },
   "main_hit": false,
-  "bold_hit": null
+  "bold_hit": null,
+  "btn": 1
  },
  "CS2|1781485": {
   "status": "skipped",
@@ -10407,7 +10411,8 @@
   "bold": {},
   "open": {},
   "top": false,
-  "msg_id": 3591
+  "msg_id": 3591,
+  "btn": 1
  },
  "WTA|186684": {
   "id": "186684",
@@ -10499,6 +10504,100 @@
   "bold": {},
   "open": {},
   "top": false,
-  "msg_id": 3593
+  "msg_id": 3593,
+  "btn": 1
+ },
+ "ATP|186504": {
+  "id": "186504",
+  "div": "ATP",
+  "sport": "tennis",
+  "tournament": "Rolex Paris Masters",
+  "round": "Semifinal",
+  "bo5": false,
+  "kickoff": "2026-11-07T16:30:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "detail": "Sat, November 7th at 8:30 AM EST",
+  "home": {
+   "id": "8814",
+   "name": "Luca Van Assche",
+   "logo": [
+    "https://a.espncdn.com/i/headshots/tennis/players/full/8814.png",
+    "https://a.espncdn.com/i/teamlogos/countries/500/fra.png"
+   ],
+   "country": "France",
+   "color": "2d6a4f",
+   "winner": false,
+   "sets": [],
+   "set_won": [],
+   "ru": "Люка Ван Аш"
+  },
+  "away": {
+   "id": "9250",
+   "name": "Ben Shelton",
+   "logo": [
+    "https://a.espncdn.com/i/headshots/tennis/players/full/9250.png",
+    "https://a.espncdn.com/i/teamlogos/countries/500/usa.png"
+   ],
+   "country": "USA",
+   "color": "2d6a4f",
+   "winner": false,
+   "sets": [],
+   "set_won": [],
+   "ru": "Бен Шелтон"
+  },
+  "odds": {},
+  "probs": {
+   "TN_W1": 0.2708725110967029,
+   "TN_W2": 0.729127488903297,
+   "TN_3S": 0.4500644576328633,
+   "TN_2S": 0.5499355423671368,
+   "TN_S2:0": 0.1169558375090247,
+   "TN_S0:2": 0.4329797048581121,
+   "TN_S2:1": 0.15391667358767816,
+   "TN_S1:2": 0.2961477840451851,
+   "TN_SET1": 0.5670202951418879,
+   "TN_SET2": 0.8830441624909753
+  },
+  "labels": {
+   "TN_W1": "Победа: Люка Ван Аш",
+   "TN_W2": "Победа: Бен Шелтон",
+   "TN_3S": "Будет 3 сета",
+   "TN_2S": "Будет 2 сета",
+   "TN_S2:0": "Счёт по сетам 2:0",
+   "TN_S0:2": "Счёт по сетам 0:2",
+   "TN_S2:1": "Счёт по сетам 2:1",
+   "TN_S1:2": "Счёт по сетам 1:2",
+   "TN_SET1": "Люка Ван Аш возьмёт хотя бы сет",
+   "TN_SET2": "Бен Шелтон возьмёт хотя бы сет"
+  },
+  "real": {},
+  "center": "Рейтинг Эло 1678 : 1850",
+  "bar": [
+   0.2708725110967029,
+   0,
+   0.729127488903297
+  ],
+  "model": {
+   "elo": [
+    1678.4239275712644,
+    1850.4393428013623
+   ],
+   "src": "Эло"
+  },
+  "main": {
+   "key": "TN_2S",
+   "label": "Будет 2 сета",
+   "p": 0.5499,
+   "odds": 1.69,
+   "est": true,
+   "stake": 1.0
+  },
+  "bold": {},
+  "open": {},
+  "top": false,
+  "msg_id": 3612,
+  "btn": 1
  }
 }
