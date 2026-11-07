@@ -49,10 +49,13 @@ jobs:
           ODDSPAPI_KEY: ${{ secrets.ODDSPAPI_KEY }}
           GROQ_KEY: ${{ secrets.GROQ_KEY }}
           OPENROUTER_KEY: ${{ secrets.OPENROUTER_KEY }}
+          GH_TOKEN: ${{ github.token }}
         run: |
           git config user.name "betbot"
           git config user.email "betbot@users.noreply.github.com"
           end=$(( $(date +%s) + $(python -c "print(int(float('$LOOP_HOURS') * 3600))") ))
+          # пуши бота через github.token не запускают другие workflow — сборку сайта запускаем сами (не чаще раза в 6 минут)
+          pages_sha=""; pages_at=0
           while [ "$(date +%s)" -lt "$end" ]; do
             started=$(date +%s)
             # жёсткий лимит на один проход: если какой-то сервис «повесит» запрос, цикл не встанет на часы
@@ -67,6 +70,9 @@ jobs:
             else
               # сохранять нечего (например, проход упал) — всё равно подтягиваем свежий код с исправлениями
               git pull -q --rebase -X theirs || git rebase --abort || true
+            fi
+            if [ $(( $(date +%s) - pages_at )) -ge 360 ] && { [ -z "$pages_sha" ] || ! git diff --quiet "$pages_sha" HEAD -- docs; }; then
+              gh workflow run pages.yml --repo "$GITHUB_REPOSITORY" --ref main && pages_sha=$(git rev-parse HEAD) && pages_at=$(date +%s) || echo "::warning::сборка сайта не запустилась"
             fi
             wait=$(( LOOP_MINUTES * 60 - ($(date +%s) - started) ))
             if [ "$wait" -gt 0 ]; then sleep "$wait"; fi
