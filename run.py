@@ -309,7 +309,7 @@ def review(ev: dict, w: dict, fx_loader, hist_loader, calib: dict, state: dict) 
                           BRAND, odds=f"{'≈' if main.get('est') else ''}{main['odds']:.2f}")
     m["msg_id"] = telegram.send_photo(png, texts.caption(m, s.get("venue") or ev.get("venue")),
                                       button=live.buttons(ev, "football", ev["home"]["ru"], ev["away"]["ru"]))
-    m["btn"] = 1
+    m["btn"] = 2
     telegram.send(texts.review(m, s), reply_to=m["msg_id"], silent=True)
     m["status"] = "reviewed"
     print(f"  обзор: {ev['home']['ru']} — {ev['away']['ru']} → {main['label']}")
@@ -360,7 +360,7 @@ def other_review(e: dict, calib: dict, ctx: dict, state: dict) -> dict | None:
                           odds=f"{'≈' if m['main'].get('est') else ''}{m['main']['odds']:.2f}")
     m["msg_id"] = telegram.send_photo(png, sports.caption(m, texts.when(kick)),
                                       button=live.buttons(e, e["sport"], e["home"]["ru"], e["away"]["ru"]))
-    m["btn"] = 1
+    m["btn"] = 2
     if e["sport"] in ("hockey", "basketball"):
         sport, slug = sports.LEAGUES[e["div"]][3].split("/")
         text = reviews.team_review(m, summary(slug, e["id"], sport))
@@ -594,27 +594,27 @@ def main():
         print(f"  ! live не удался: {e}")
     save_json(LIVE, live.cleanup(live_store, now))
 
-    # кнопки «📺 Матч в 3D» под уже опубликованными прогнозами, которые вышли до появления кнопок
+    # кнопки «📺 Смотреть онлайн» под уже опубликованными прогнозами (переписываем и старые «3D»)
     for path, store in ((MATCHES, matches), (OTHER, load_json(OTHER, {}))):
         changed = False
         for m in store.values():
-            if not m.get("msg_id") or m.get("btn") or "ru" not in m.get("home", {}):
+            if not m.get("msg_id") or m.get("btn") == 2 or "ru" not in m.get("home", {}):
                 continue
             if pd.Timestamp(m["kickoff"]) < now - pd.Timedelta(hours=3):
-                m["btn"] = 1  # старые матчи не трогаем
+                m["btn"] = 2  # старые матчи не трогаем
                 continue
             sp = m.get("sport", "football")
             if telegram.add_buttons(m["msg_id"], live.buttons(m, sp, m["home"]["ru"], m["away"]["ru"])):
-                m["btn"] = 1
+                m["btn"] = 2
                 changed = True
         if changed or path == OTHER:
             save_json(path, store)
 
-    # бот в личке: кнопка-меню «📺 Матчи 3D» (один раз) и ответы тем, кто написал боту
-    if state.get("bot_setup") != 1:
+    # бот в личке: кнопка-меню «📺 Матчи онлайн» (один раз) и ответы тем, кто написал боту
+    if state.get("bot_setup") != 2:  # 2 — кнопки «онлайн» вместо «3D»
         try:
             telegram.setup_bot(live.MATCHES_PAGE, site.SITE, site.CHANNEL)
-            state["bot_setup"] = 1
+            state["bot_setup"] = 2
         except Exception as e:
             print(f"  ! меню бота не настроилось: {e}")
     telegram.answer_users(state, live.MATCHES_PAGE, site.SITE, site.CHANNEL)

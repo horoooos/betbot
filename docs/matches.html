@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Матчи в 3D — АИ СТАВИТ</title>
-<meta name="description" content="Все матчи дня в живом 3D: футбол, хоккей НХЛ, баскетбол НБА и теннис. Игроки, мяч и все моменты в реальном времени, плюс прогнозы бота АИ СТАВИТ.">
+<title>Матчи онлайн — АИ СТАВИТ</title>
+<meta name="description" content="Все матчи дня онлайн: футбол, хоккей НХЛ, баскетбол НБА и теннис. Игроки, мяч и все моменты в реальном времени, плюс прогнозы бота АИ СТАВИТ.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
@@ -58,12 +58,12 @@
 <body>
 <main>
   <div class="top"><a class="brand" href="./">АИ СТАВИТ</a><a class="back" href="./">← Статистика бота</a></div>
-  <h1>📺 Матчи <span>в живом 3D</span></h1>
+  <h1>📺 Матчи <span>онлайн</span></h1>
   <p class="online" id="online" style="display:none"></p>
   <p class="sub">Игроки, мяч и шайба, голы, удары, карточки, VAR и замены — в реальном времени по данным матча. Выберите игру и смотрите прямо в браузере или в Telegram.</p>
   <div class="chips" id="chips"></div>
   <div id="list"><div class="empty">Загружаем матчи…</div></div>
-  <p class="note">Счёт и статус обновляются сами каждые 30 секунд. 3D-картинка строится по официальным событиям матча (удары, голы, фолы, замены), а движение игроков между ними — анимация. 18+.</p>
+  <p class="note">Счёт и статус обновляются сами каждые 30 секунд. Картинка строится по официальным событиям матча (удары, голы, фолы, замены), а движение игроков между ними — анимация. 18+.</p>
 </main>
 <a class="cta" href="https://t.me/aistavvit">📲 Прогнозы каждый день — @aistavvit</a>
 <script type="module">
@@ -113,7 +113,7 @@ function card(m) {
     <div class="tm ${win && win.h ? "win" : ""}">${img(m.hl)}<span class="nm">${esc(m.home)}</span><span class="sc">${esc(hsc)}</span></div>
     <div class="tm ${win && win.a ? "win" : ""}">${img(m.al)}<span class="nm">${esc(m.away)}</span><span class="sc">${esc(asc)}</span></div>
     <div class="ft">${m.tip ? `<span class="tip">🎯 ${esc(m.tip)}${m.bot?.main ? ` · шанс ${Math.round(m.bot.main.p * 100)}%` : ""}</span>` : `<span class="tip no">Прогноз выйдет за час до начала</span>`}
-      <span class="go">${st === "in" ? "📺 Смотреть" : st === "post" ? "▶ Повтор" : "📺 3D"}</span></div></a>`;
+      <span class="go">${st === "in" ? "📺 Смотреть" : st === "post" ? "▶ Повтор" : "📺 Онлайн"}</span></div></a>`;
 }
 function render() {
   const counts = { all: all.length, tip: all.filter(m => m.tip).length };

@@ -21,7 +21,7 @@ LIVE = {
     "NHL", "NBA", "WNBA", "ATP", "WTA", "CS2", "DOTA",
 }
 TRACKER = "https://horoooos.github.io/betbot/live.html"  # 3D-трекер матча (docs/live.html на GitHub Pages)
-MATCHES_PAGE = "https://horoooos.github.io/betbot/matches.html"  # все матчи дня в 3D
+MATCHES_PAGE = "https://horoooos.github.io/betbot/matches.html"  # все матчи дня онлайн
 # В хоккее шайб много (ночью NHL — десятки постов), поэтому там только «матч начался» и итог.
 WORD = {"football": ("ГОЛ!", "⚽️"), "esports": ("КАРТА!", "🎮")}
 START = {"football": "все голы будут здесь", "hockey": "итог матча будет здесь",
@@ -53,13 +53,13 @@ def _tracker(e: dict, sport: str, h: str, a: str) -> tuple[str, str] | None:
         path = sports.LEAGUES.get(e["div"], ("",) * 5)[3]
     if not path or sport == "esports":
         return None
-    return ("📺 Смотреть матч в 3D", f"{TRACKER}?" + urlencode({"s": sport, "p": path, "e": e["id"], "h": h, "a": a}))
+    return ("📺 Смотреть матч онлайн", f"{TRACKER}?" + urlencode({"s": sport, "p": path, "e": e["id"], "h": h, "a": a}))
 
 
 def buttons(e: dict, sport: str, h: str, a: str) -> list[tuple[str, str]]:
     """Кнопки под постом о матче: этот матч в 3D + все матчи дня."""
     b = _tracker(e, sport, h, a)
-    return [("📺 Матч в 3D", b[1]), ("🗂 Все матчи", MATCHES_PAGE)] if b else [("🗂 Матчи в 3D", MATCHES_PAGE)]
+    return [("📺 Смотреть онлайн", b[1]), ("🗂 Все матчи", MATCHES_PAGE)] if b else [("🗂 Матчи онлайн", MATCHES_PAGE)]
 
 
 def run(store: dict, events: list[dict], reviews: dict, brand: str) -> None:

@@ -13,7 +13,7 @@ from . import pro
 from .sports import EMOJI, SPORT_RU
 
 OUT = Path(__file__).resolve().parent.parent / "docs" / "index.html"
-MATCHES = OUT.parent / "matches.json"  # матчи с прогнозом для страницы «Смотреть матчи в 3D»
+MATCHES = OUT.parent / "matches.json"  # матчи с прогнозом для страницы «Смотреть матчи онлайн»
 CHANNEL = os.environ.get("TELEGRAM_CHAT_ID", "")
 if not CHANNEL.startswith("@"):  # в секрете может быть числовой id — тогда берём публичное имя канала
     CHANNEL = "@aistavvit"
@@ -150,16 +150,16 @@ LIVE_JS = """
   } catch (e) {} }));
   const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
   const EM = { football: "⚽", hockey: "🏒", basketball: "🏀", tennis: "🎾" };
-  let on = all.filter(m => live[m.id]?.state === "in"), title = '<span class="dot"></span>Сейчас в эфире — смотрите в 3D';
+  let on = all.filter(m => live[m.id]?.state === "in"), title = '<span class="dot"></span>Сейчас в эфире — смотрите онлайн';
   on.sort((a, b) => (b.tip ? 1 : 0) - (a.tip ? 1 : 0));
   if (!on.length) { on = all.filter(m => m.tip && new Date(m.kickoff).getTime() > now).slice(0, 4); title = "⏳ Ближайшие матчи с прогнозом бота"; }
-  if (!on.length) { on = all.filter(m => new Date(m.kickoff).getTime() > now).slice(0, 4); title = "⏳ Ближайшие матчи в 3D"; }
+  if (!on.length) { on = all.filter(m => new Date(m.kickoff).getTime() > now).slice(0, 4); title = "⏳ Ближайшие матчи онлайн"; }
   if (!on.length) return;
   const t = iso => new Date(iso).toLocaleTimeString("ru-RU", { hour: "2-digit", minute: "2-digit", timeZone: "Europe/Moscow" });
   box.innerHTML = `<h2>${title}</h2><div class="row">${on.slice(0, 6).map(m => { const s = live[m.id];
     return `<a class="lm" href="${esc(m.url)}"><div class="t"><span>${EM[m.sport] || ""} ${esc(m.league)}</span><span class="${s?.state === "in" ? "l" : ""}">${s?.state === "in" ? "● " + esc(s.clock || "LIVE") : t(m.kickoff)}</span></div>
       <div class="n"><span>${esc(m.home)} — ${esc(m.away)}</span><span>${s?.state === "in" ? esc(s.s) : ""}</span></div>
-      <div class="w">${m.tip ? "🎯 " + esc(m.tip) : "📺 Смотреть в 3D"}</div></a>`; }).join("")}</div>`;
+      <div class="w">${m.tip ? "🎯 " + esc(m.tip) : "📺 Смотреть онлайн"}</div></a>`; }).join("")}</div>`;
   box.style.display = "block";
 })();
 """
@@ -257,13 +257,13 @@ def build(res: pd.DataFrame, now: pd.Timestamp) -> None:
     tg = f"https://t.me/{escape(CHANNEL.lstrip('@'))}"
     hit_pct = f"{pct:.0f}%" if len(res) else "—"
     seo_desc = (f"Бесплатные прогнозы на спорт от бота АИ СТАВИТ: футбол, хоккей НХЛ, баскетбол НБА, теннис, CS2 и Dota 2. "
-                f"Честная статистика всех {len(res)} прогнозов: заходит {hit_pct}, ROI и виртуальный банк. Матчи в живом 3D.")
+                f"Честная статистика всех {len(res)} прогнозов: заходит {hit_pct}, ROI и виртуальный банк. Матчи онлайн.")
     streak = f'<span class="streak">🔥 Серия: {cur} подряд · рекорд {best_s}</span>' if cur >= 2 else f'<span class="streak">🏆 Рекордная серия: {best_s} подряд</span>' if best_s else ""
     html = f"""<!doctype html>
 <html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>АИ СТАВИТ — бесплатные прогнозы на спорт и честная статистика</title>
 <meta name="description" content="{escape(seo_desc)}">
-<meta name="keywords" content="прогнозы на спорт, прогнозы на футбол, бесплатные прогнозы, ставки на спорт, прогнозы НХЛ, прогнозы НБА, прогнозы на теннис, прогнозы CS2, экспресс дня, статистика прогнозов, матч онлайн 3D">
+<meta name="keywords" content="прогнозы на спорт, прогнозы на футбол, бесплатные прогнозы, ставки на спорт, прогнозы НХЛ, прогнозы НБА, прогнозы на теннис, прогнозы CS2, экспресс дня, статистика прогнозов, матчи онлайн, смотреть матч онлайн">
 <meta name="robots" content="index,follow"><link rel="canonical" href="{SITE}">
 <meta property="og:type" content="website"><meta property="og:url" content="{SITE}">
 <meta property="og:title" content="АИ СТАВИТ — прогнозы на спорт с честной статистикой">
@@ -272,11 +272,11 @@ def build(res: pd.DataFrame, now: pd.Timestamp) -> None:
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
 <script type="application/ld+json">{{"@context":"https://schema.org","@type":"WebSite","name":"АИ СТАВИТ","url":"{SITE}","description":"{escape(seo_desc)}","sameAs":["{tg}"]}}</script>
 <style>{CSS}</style></head><body><main>
-<nav><a class="logo" href="./">АИ СТАВИТ</a><div class="links"><a href="matches.html">📺 Матчи в 3D</a><a class="hide" href="#stats">Статистика</a><a href="{tg}">Telegram</a></div></nav>
+<nav><a class="logo" href="./">АИ СТАВИТ</a><div class="links"><a href="matches.html">📺 Матчи онлайн</a><a class="hide" href="#stats">Статистика</a><a href="{tg}">Telegram</a></div></nav>
 <section class="hero"><div>
 <h1>Прогнозы на спорт <span>с честной статистикой</span></h1>
-<p class="lead">Бот публикует прогноз за час до матча и сам считает итог — без удалений и подчисток. Футбол, НХЛ, НБА, теннис и киберспорт. А любой матч можно смотреть в живом 3D.</p>
-<div class="btns"><a class="btn gold" href="matches.html">📺 Смотреть матчи в 3D</a><a class="btn ghost" href="{tg}">📲 Подписаться на {escape(CHANNEL)}</a></div>
+<p class="lead">Бот публикует прогноз за час до матча и сам считает итог — без удалений и подчисток. Футбол, НХЛ, НБА, теннис и киберспорт. А любой матч можно смотреть онлайн.</p>
+<div class="btns"><a class="btn gold" href="matches.html">📺 Смотреть матчи онлайн</a><a class="btn ghost" href="{tg}">📲 Подписаться на {escape(CHANNEL)}</a></div>
 </div><div class="ringbox"><div class="ring" style="--p:{pct:.0f}"><div><b>{hit_pct}</b><small>заходит</small></div></div>
 <div class="ringtxt"><h3>{int(hit.sum()) if len(res) else 0} из {len(res)}</h3><p>основных прогнозов зашли — все до одного учтены. Обновлено {now:%d.%m.%Y %H:%M} МСК.</p>{streak}</div></div></section>
 <section class="live" id="live" style="display:none"></section>
@@ -294,7 +294,7 @@ def build(res: pd.DataFrame, now: pd.Timestamp) -> None:
 <div class="cta"><div><b>Прогнозы каждый день — в Telegram</b><br><span class="muted">Прогноз за час до матча, live-голы, экспрессы, разборы и честные итоги.</span></div>
 <a class="btn gold" href="{tg}">📲 Подписаться</a></div>
 <footer>CLV — насколько выросла вероятность нашего исхода по линии букмекеров к началу матча: плюс значит, что бот нашёл ценность раньше рынка. 18+. Прогноз — не гарантия выигрыша.</footer>
-</main><div class="sticky"><a class="a" href="matches.html">📺 Матчи 3D</a><a class="b" href="{tg}">📲 Подписаться</a></div>
+</main><div class="sticky"><a class="a" href="matches.html">📺 Онлайн</a><a class="b" href="{tg}">📲 Подписаться</a></div>
 <script>{LIVE_JS}</script>
 <script type="module">import("./fb.js").then(fb => {{ fb.track("index"); fb.watchOnline(n => {{ const el = document.getElementById("online");
   el.style.display = "inline-flex"; el.innerHTML = `<span class="dot" style="background:#2ecc71;box-shadow:0 0 10px #2ecc71"></span>Сейчас на сайте: ${{n}}`; }}); }}).catch(() => {{}});</script></body></html>"""

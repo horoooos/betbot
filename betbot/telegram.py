@@ -198,22 +198,22 @@ def setup_bot(matches_url: str, site_url: str, channel: str) -> None:
         print("[тест] настройка меню бота")
         return
     _call("setChatMenuButton", chat_id=None,
-          menu_button=json.dumps({"type": "web_app", "text": "📺 Матчи 3D", "web_app": {"url": matches_url}}, ensure_ascii=False))
+          menu_button=json.dumps({"type": "web_app", "text": "📺 Матчи онлайн", "web_app": {"url": matches_url}}, ensure_ascii=False))
     _call("setMyCommands", chat_id=None, commands=json.dumps([
         {"command": "start", "description": "Главное меню"},
-        {"command": "matches", "description": "📺 Матчи в живом 3D"},
+        {"command": "matches", "description": "📺 Матчи онлайн"},
         {"command": "stats", "description": "📊 Честная статистика бота"},
     ], ensure_ascii=False))
     _call("setMyShortDescription", chat_id=None,
-          short_description=f"Бесплатные прогнозы на спорт и матчи в живом 3D. Канал: {channel}"[:120])
+          short_description=f"Бесплатные прогнозы на спорт и матчи онлайн. Канал: {channel}"[:120])
     _call("setMyDescription", chat_id=None, description=(
         "🤖 АИ СТАВИТ — бесплатные прогнозы на футбол, НХЛ, НБА, теннис и киберспорт.\n\n"
-        "📺 Любой матч дня — в живом 3D: игроки, мяч, голы, VAR и замены в реальном времени.\n"
+        "📺 Любой матч дня — онлайн: игроки, мяч, голы, VAR и замены в реальном времени.\n"
         f"📊 Честная статистика всех прогнозов.\n📲 Канал: {channel}")[:512])
 
 
 WELCOME = ("👋 <b>Привет! Это АИ СТАВИТ</b>\n\n"
-           "📺 <b>Матчи в живом 3D</b> — игроки, мяч, голы, удары, карточки, VAR и замены в реальном времени.\n"
+           "📺 <b>Матчи онлайн</b> — игроки, мяч, голы, удары, карточки, VAR и замены в реальном времени.\n"
            "🎯 Прогнозы на футбол, НХЛ, НБА и теннис — в канале за час до матча.\n"
            "📊 Честная статистика всех прогнозов — на сайте.\n\n"
            "Жми кнопку ниже 👇")
@@ -241,9 +241,9 @@ def answer_users(state: dict, matches_url: str, site_url: str, channel: str) -> 
         if text.startswith("/stats"):
             reply, kb = "📊 <b>Честная статистика бота</b> — все прогнозы без исключений:", [[{"text": "📊 Открыть статистику", "web_app": {"url": site_url}}]]
         elif text.startswith("/matches"):
-            reply, kb = "📺 <b>Матчи дня в живом 3D</b> — выбирай игру:", [[{"text": "📺 Смотреть матчи в 3D", "web_app": {"url": matches_url}}]]
+            reply, kb = "📺 <b>Матчи дня онлайн</b> — выбирай игру:", [[{"text": "📺 Смотреть матчи онлайн", "web_app": {"url": matches_url}}]]
         else:
-            reply, kb = WELCOME, [[{"text": "📺 Смотреть матчи в 3D", "web_app": {"url": matches_url}}],
+            reply, kb = WELCOME, [[{"text": "📺 Смотреть матчи онлайн", "web_app": {"url": matches_url}}],
                                   [{"text": "📲 Канал с прогнозами", "url": tg}, {"text": "📊 Статистика", "web_app": {"url": site_url}}]]
         try:
             _call("sendMessage", chat_id=chat["id"], text=reply, parse_mode="HTML",
