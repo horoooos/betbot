@@ -1179,6 +1179,8 @@ function silentApply(p) {   // открыли посреди матча: про�
       const a = m && tm.athletes?.find(x => x.displayName === m[1]); if (f) { f.setNum(a?.jersey || "?", m[1]); f.athId = a ? String(a.id) : null; } } }
 }
 
+let lastServer = null, lastTB = false;
+const feedRows = [];
 async function loadTennis() {
   const d = await (await fetch(`https://site.api.espn.com/apis/site/v2/sports/${PATH}/scoreboard`, { cache: "no-store" })).json();
   let comp = null, tour = "";
@@ -1198,18 +1200,35 @@ async function loadTennis() {
   simOn = live || replayMode; if (simOn && mode === "idle") mode = "play"; if (!simOn) mode = "idle";
   if (st.state === "post" && !replayMode) { $("replay").style.display = "inline-block"; $("replay").textContent = "▶ Показать розыгрыши";
     $("replay").onclick = () => { replayMode = true; simOn = true; mode = "play"; $("replay").style.display = "none"; }; }
+  // кто подаёт: ESPN отдаёт это полем possession (очки внутри гейма — 15/30/40 — ESPN не отдаёт вообще)
+  const srvTeam = ph.possession ? H : pa.possession ? A : null;
+  const shownSrv = srvTeam || (live && lastServer) || null;
+  $("hn").textContent = (live && shownSrv === H ? "🎾 " : "") + H.ru; $("an").textContent = A.ru + (live && shownSrv === A ? " 🎾" : "");
+  const tb = live && (sh[n - 1] ?? 0) === 6 && (sa[n - 1] ?? 0) === 6;
+  if (tb) $("cl").textContent = `Тай-брейк · ${n}-й сет`;
   const gh = sh.reduce((a, b) => a + b, 0), games = gh + sa.reduce((a, b) => a + b, 0);
   if (lastGames !== null && games > lastGames) {
-    const who = gh > lastGH ? H : A;
-    netShake(0); shock(new THREE.Vector3(0, 0, 0), "#d9ff3a", 4); chip(`🎾 ГЕЙМ · ${who.ru}`, "#d9ff3a", `${sh[n - 1] ?? 0}-${sa[n - 1] ?? 0} в сете`);
-    show(who.ru, `Взял гейм · ${sh[n - 1] ?? 0}-${sa[n - 1] ?? 0}`, who.color);
-    TN.server = TN.server === H.players[0] ? A.players[0] : H.players[0];
+    const who = gh > lastGH ? H : A, score = `${sh[n - 1] ?? 0}-${sa[n - 1] ?? 0}`;
+    const brk = lastServer && lastServer !== who && !(lastSets !== null && setsH + setsA > lastSets && lastTB);   // гейм взял принимающий
+    netShake(0); shock(new THREE.Vector3(0, 0, 0), "#d9ff3a", brk ? 7 : 4);
+    if (brk) { chip("🔥 БРЕЙК!", "#ff7a3d", `${who.ru} взял гейм на чужой подаче · ${score}`); flash("#ff7a3d", .3); shake = .8;
+      burst(new THREE.Vector3(who.dir * L / 4, 1, 0), [who.color, "#ff7a3d", "#ffffff"], 120, .6); }
+    else chip(`🎾 ГЕЙМ · ${who.ru}`, "#d9ff3a", `${lastServer === who ? "взял свою подачу · " : ""}${score} в сете`);
+    show(who.ru, `${brk ? "Брейк" : "Взял гейм"} · ${score}`, who.color);
+    feedRows.unshift(`<div><b>${brk ? "🔥 Брейк" : "Гейм"}</b>${who.ru} · ${score}</div>`);
     if (lastSets !== null && setsH + setsA > lastSets) { bigText("СЕТ!", `${setsH > lastSetsH ? H.ru : A.ru} · ${setsH}:${setsA}`, "#d9ff3a");
-      burst(new THREE.Vector3(0, 1, 0), ["#d9ff3a", "#ffffff", who.color], 200, 1); flash("#d9ff3a", .35); shake = 1; }
+      burst(new THREE.Vector3(0, 1, 0), ["#d9ff3a", "#ffffff", who.color], 200, 1); flash("#d9ff3a", .35); shake = 1;
+      feedRows.unshift(`<div><b>Сет</b>${setsH > lastSetsH ? H.ru : A.ru} · ${setsH}:${setsA}</div>`); }
   }
-  if (lastGames === null) TN.server = games % 2 ? A.players[0] : H.players[0];
+  if (tb && !lastTB) chip("⚡ ТАЙ-БРЕЙК", "#ffc400", "6:6 — решающий розыгрыш сета");
+  const newGame = lastGames !== null && games > lastGames;
+  if (srvTeam) TN.server = srvTeam.players[0];
+  else if (lastGames === null) TN.server = games % 2 ? A.players[0] : H.players[0];
+  else if (newGame) TN.server = TN.server === H.players[0] ? A.players[0] : H.players[0];   // подача переходит после гейма
+  if (srvTeam) lastServer = srvTeam; else if (newGame) lastServer = null;   // брейк объявляем только по точным данным о подаче
+  lastTB = tb;
   lastGames = games; lastGH = gh; lastSets = setsH + setsA; lastSetsH = setsH;
-  $("feed").innerHTML = `<div><b>Сеты</b>${$("sets").textContent || "—"}</div>`;
+  $("feed").innerHTML = feedRows.slice(0, 2).join("") + `<div><b>Сеты</b>${$("sets").textContent || "—"}${live && shownSrv ? ` · подаёт ${shownSrv.ru}` : ""}</div>`;
 }
 
 async function load() {
@@ -1256,7 +1275,7 @@ async function load() {
   } else fresh.forEach(p => queue.push(p));
   first = false;
 }
-if (q.has("debug")) Object.assign(window, { __handle: p => HANDLE(p), __H: H, __A: A, __cam: camera, __world: world, __q: queue, __figs: figs,
+if (q.has("debug")) Object.assign(window, { __load: () => load(), __handle: p => HANDLE(p), __H: H, __A: A, __cam: camera, __world: world, __q: queue, __figs: figs,
   __state: () => ({ mode, simOn, poss: poss.ru, ball: BALL.mode, owner: BALL.owner?.name || BALL.owner?.num }), __sim: on => { simOn = on; mode = on ? "play" : "idle"; },
   __run: async (sec, fps = 30) => { manual = true; let n = last; for (let i = 0; i < sec * fps; i++) { n += 1000 / fps; frame(n); await Promise.resolve(); await Promise.resolve(); } manual = false; },
   __rt: async sec => { manual = true; const end = performance.now() + sec * 1000; while (performance.now() < end) { frame(performance.now()); await new Promise(r => setTimeout(r, 30)); } manual = false; } });
