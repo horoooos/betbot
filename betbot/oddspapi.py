@@ -22,7 +22,7 @@ BUDGET = 230           # из 250 бесплатных — с запасом
 REFRESH_HOURS = 11     # линия — примерно дважды в день
 # теннис — чаще: матчи следующего круга появляются в линии только после предыдущего; киберспорт — раз в сутки
 # (в месяц: теннис ~4×31 + турниры 31 + киберспорт 2×31 ≈ 217 запросов из 230)
-REFRESH = {"tennis": 6, "CS2": 23, "DOTA": 23}
+REFRESH = {"tennis": 8, "CS2": 47, "DOTA": 47}  # ≈ 3 + 1 + 0.5×2 запроса в день ≈ 180 в месяц из 230
 TOURNAMENTS_DAYS_BY = {"tennis": 1}
 RETRY_HOURS = 3        # после неудачного запроса — повтор не раньше чем через 3 часа
 TOURNAMENTS_DAYS = 3
@@ -166,6 +166,8 @@ def refresh(state: dict) -> None:
         data = _get(state, "/odds-by-tournaments", tournamentIds=",".join(map(str, ids)), bookmakers=BOOKMAKERS,
                     oddsFormat="decimal")
         if data is None:
+            # «нет матчей в этих турнирах» — список турниров устарел: в следующий раз выберем заново, а не тратим лимит
+            state["oddspapi"].setdefault("tournaments", {}).pop(key, None)
             continue
         w = meta["winner"][key]
         rows = []
