@@ -5,7 +5,7 @@
  },
  "learned": "2026-11-07",
  "schedule_day": "2026-11-07",
- "content_slot": "2026-11-07-19",
+ "content_slot": "2026-11-07-20",
  "news_seen": [
   "zeus-ob-igre-navi-na-dust2-protiv-vitality-ochen-stranno-chto-b1ad3-ne-ponimayet",
   "https://www.sport-express.ru/hockey/nhl/news/vankuver-v-shestoy-raz-v-istorii-vyigral-match-nhl-posle-otstavaniya-v-tri-shayby-v-tretem-periode-29-oktyabrya-2026-2468733/",
@@ -1491,7 +1491,7 @@
  "value_day": "2026-11-07",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-07",
- "site_stamp": "686|2026-11-07 19",
+ "site_stamp": "687|2026-11-07 20",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1506,121 +1506,117 @@
  },
  "value_check": "2026-11-07-6",
  "express_risk": {
-  "msg": 3359,
+  "msg": 3903,
   "legs": [
    {
     "sport": "football",
-    "div": "E0",
-    "id": "401879242",
-    "side": "home",
-    "p": 0.5798502053636143,
-    "odds": 1.645,
-    "kickoff": "2026-11-06T23:00:00+03:00",
-    "home": "Эвертон",
-    "away": "Ковентри Сити",
-    "league": "🏴󠁧󠁢󠁥󠁮󠁧󠁿 Англия · Премьер-лига",
-    "logos": [
-     "https://a.espncdn.com/i/teamlogos/soccer/500/368.png",
-     "https://a.espncdn.com/i/teamlogos/soccer/500/388.png"
-    ],
-    "colors": [
-     "0606fa",
-     "87cced"
-    ],
-    "label": "Победа: Эвертон",
-    "win": true,
-    "score": "3:1"
-   },
-   {
-    "sport": "basketball",
-    "div": "NBA",
-    "id": "401909289",
+    "div": "F1",
+    "id": "401876411",
     "side": "away",
-    "p": 0.572012257405516,
-    "odds": 1.676,
-    "kickoff": "2026-11-07T03:30:00+03:00",
-    "home": "Кливленд",
-    "away": "Филадельфия Сиксерс",
-    "league": "🇺🇸 США · NBA",
+    "p": 0.5862127659574469,
+    "odds": 1.625,
+    "kickoff": "2026-11-07T21:00:00+03:00",
+    "home": "Осер",
+    "away": "Париж",
+    "league": "🇫🇷 Франция · Лига 1",
     "logos": [
-     "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/cle.png",
-     "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/phi.png"
+     "https://a.espncdn.com/i/teamlogos/soccer/500/172.png",
+     "https://a.espncdn.com/i/teamlogos/soccer/500/6851.png"
     ],
     "colors": [
-     "860038",
-     "1d428a"
+     "ffffff",
+     "000000"
     ],
-    "label": "Победа: Филадельфия Сиксерс (с ОТ)"
+    "label": "Победа: Париж"
    },
    {
     "sport": "football",
-    "div": "MEX",
-    "id": "401876910",
-    "side": "home",
-    "p": 0.5765765765765767,
+    "div": "USA",
+    "id": "761934",
+    "side": "away",
+    "p": 0.5636264336428182,
     "odds": 1.645,
-    "kickoff": "2026-11-07T04:00:00+03:00",
-    "home": "Атлетико Сан-Луис",
-    "away": "Хуарес",
-    "league": "🇲🇽 Мексика · Лига MX",
+    "kickoff": "2026-11-08T00:00:00+03:00",
+    "home": "Клёб де Фут Монреаль",
+    "away": "Ванкувер Уайткэпс",
+    "league": "🇺🇸 США · MLS",
     "logos": [
-     "https://a.espncdn.com/i/teamlogos/soccer/500/15720.png",
-     "https://a.espncdn.com/i/teamlogos/soccer/500/17851.png"
+     "https://a.espncdn.com/i/teamlogos/soccer/500/9720.png",
+     "https://a.espncdn.com/i/teamlogos/soccer/500/9727.png"
     ],
     "colors": [
-     "EF0107",
-     "89f442"
+     "003da6",
+     "ffffff"
     ],
-    "label": "Победа: Атлетико Сан-Луис",
-    "win": false,
-    "score": "0:1"
+    "label": "Победа: Ванкувер Уайткэпс"
    },
    {
     "sport": "hockey",
     "div": "NHL",
-    "id": "401892661",
-    "side": "home",
+    "id": "401892667",
+    "side": "away",
     "p": 0.572012257405516,
     "odds": 1.676,
-    "kickoff": "2026-11-07T04:00:00+03:00",
-    "home": "Калгари",
-    "away": "Анахайм",
+    "kickoff": "2026-11-08T03:00:00+03:00",
+    "home": "Айлендерс",
+    "away": "Нью-Джерси",
     "league": "🇺🇸 США · NHL",
     "logos": [
-     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/cgy.png",
-     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/ana.png"
+     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/nyi.png",
+     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/nj.png"
     ],
     "colors": [
-     "dd1a32",
-     "fc4c02"
+     "00529b",
+     "e30b2b"
     ],
-    "label": "Победа: Калгари (с ОТ)"
+    "label": "Победа: Нью-Джерси (с ОТ)"
    },
    {
-    "sport": "basketball",
-    "div": "NBA",
-    "id": "401909294",
+    "sport": "football",
+    "div": "MEX",
+    "id": "401876905",
     "side": "home",
-    "p": 0.5830164765525981,
-    "odds": 1.645,
-    "kickoff": "2026-11-07T06:00:00+03:00",
-    "home": "Лейкерс",
-    "away": "Портленд",
-    "league": "🇺🇸 США · NBA",
+    "p": 0.5660789458724408,
+    "odds": 1.667,
+    "kickoff": "2026-11-08T04:00:00+03:00",
+    "home": "Толука",
+    "away": "Монтеррей",
+    "league": "🇲🇽 Мексика · Лига MX",
     "logos": [
-     "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/lal.png",
-     "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/por.png"
+     "https://a.espncdn.com/i/teamlogos/soccer/500/223.png",
+     "https://a.espncdn.com/i/teamlogos/soccer/500/220.png"
     ],
     "colors": [
-     "552583",
-     "e03a3e"
+     "EF0107",
+     "001C58"
     ],
-    "label": "Победа: Лейкерс (с ОТ)"
+    "label": "Победа: Толука"
+   },
+   {
+    "sport": "hockey",
+    "div": "NHL",
+    "id": "401892670",
+    "side": "away",
+    "p": 0.5635245901639344,
+    "odds": 1.704,
+    "kickoff": "2026-11-08T04:00:00+03:00",
+    "home": "Миннесота",
+    "away": "Тампа-Бэй",
+    "league": "🇺🇸 США · NHL",
+    "logos": [
+     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/min.png",
+     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/tb.png"
+    ],
+    "colors": [
+     "124734",
+     "003e7e"
+    ],
+    "label": "Победа: Тампа-Бэй (с ОТ)"
    }
   ],
-  "odds": 12.503907016257997,
-  "day": "2026-11-06",
-  "done": true
+  "odds": 12.726192029460002,
+  "day": "2026-11-07",
+  "done": false
  },
  "streak_day": {
   "2026-11-07": 1
