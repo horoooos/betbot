@@ -133,6 +133,7 @@ svg{width:100%;height:auto;display:block}svg .base{stroke:rgba(255,255,255,.25);
 @media (min-width:900px){.sticky{display:none}}
 @media (max-width:760px){.hero{grid-template-columns:1fr}.ring{width:120px;height:120px}.ring b{font-size:30px}nav .links a.hide{display:none}.mk{grid-template-columns:minmax(0,1fr) 80px 42px}}
 footer{margin-top:34px;color:var(--muted);font-size:12px}
+.online{display:inline-flex;align-items:center;gap:8px;background:rgba(46,204,113,.12);border:1px solid rgba(46,204,113,.35);color:#7dffb0;border-radius:999px;padding:5px 12px;font-size:12px;font-weight:800;margin:22px 0 0}
 """
 
 LIVE_JS = """
@@ -279,6 +280,7 @@ def build(res: pd.DataFrame, now: pd.Timestamp) -> None:
 </div><div class="ringbox"><div class="ring" style="--p:{pct:.0f}"><div><b>{hit_pct}</b><small>заходит</small></div></div>
 <div class="ringtxt"><h3>{int(hit.sum()) if len(res) else 0} из {len(res)}</h3><p>основных прогнозов зашли — все до одного учтены. Обновлено {now:%d.%m.%Y %H:%M} МСК.</p>{streak}</div></div></section>
 <section class="live" id="live" style="display:none"></section>
+<p class="online" id="online" style="display:none"></p>
 <div class="kpis" id="stats">{kpis}</div>
 <h2>💰 Виртуальный банк</h2><div class="card">{_chart(curve) or '<span class="muted">Пока мало данных</span>'}
 <p class="muted small" style="margin-top:8px">Если ставить ровно по рекомендациям бота (1–3% банка на основной прогноз), начиная с {money(pro.BANK_START)} ₽.</p></div>
@@ -293,7 +295,9 @@ def build(res: pd.DataFrame, now: pd.Timestamp) -> None:
 <a class="btn gold" href="{tg}">📲 Подписаться</a></div>
 <footer>CLV — насколько выросла вероятность нашего исхода по линии букмекеров к началу матча: плюс значит, что бот нашёл ценность раньше рынка. 18+. Прогноз — не гарантия выигрыша.</footer>
 </main><div class="sticky"><a class="a" href="matches.html">📺 Матчи 3D</a><a class="b" href="{tg}">📲 Подписаться</a></div>
-<script>{LIVE_JS}</script></body></html>"""
+<script>{LIVE_JS}</script>
+<script type="module">import("./fb.js").then(fb => {{ fb.track("index"); fb.watchOnline(n => {{ const el = document.getElementById("online");
+  el.style.display = "inline-flex"; el.innerHTML = `<span class="dot" style="background:#2ecc71;box-shadow:0 0 10px #2ecc71"></span>Сейчас на сайте: ${{n}}`; }}); }}).catch(() => {{}});</script></body></html>"""
     OUT.write_text(html, encoding="utf-8")
     print(f"Страница статистики обновлена: {len(res)} прогнозов")
 

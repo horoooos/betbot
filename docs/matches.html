@@ -51,22 +51,25 @@
   .cta { position:fixed; left:50%; bottom:14px; transform:translateX(-50%); background:var(--gold); color:#1a1405; text-decoration:none; font-weight:900;
          padding:12px 20px; border-radius:999px; box-shadow:0 10px 30px rgba(0,0,0,.4); white-space:nowrap; z-index:5 }
   .note { color:var(--muted); font-size:12px; margin-top:28px }
+  .online { display:inline-flex; align-items:center; gap:8px; background:rgba(46,204,113,.12); border:1px solid rgba(46,204,113,.35); color:#7dffb0;
+            border-radius:999px; padding:5px 12px; font-size:12px; font-weight:800; margin:0 0 10px }
 </style>
 </head>
 <body>
 <main>
   <div class="top"><a class="brand" href="./">АИ СТАВИТ</a><a class="back" href="./">← Статистика бота</a></div>
   <h1>📺 Матчи <span>в живом 3D</span></h1>
+  <p class="online" id="online" style="display:none"></p>
   <p class="sub">Игроки, мяч и шайба, голы, удары, карточки, VAR и замены — в реальном времени по данным матча. Выберите игру и смотрите прямо в браузере или в Telegram.</p>
   <div class="chips" id="chips"></div>
   <div id="list"><div class="empty">Загружаем матчи…</div></div>
   <p class="note">Счёт и статус обновляются сами каждые 30 секунд. 3D-картинка строится по официальным событиям матча (удары, голы, фолы, замены), а движение игроков между ними — анимация. 18+.</p>
 </main>
 <a class="cta" href="https://t.me/aistavvit">📲 Прогнозы каждый день — @aistavvit</a>
-<script>
+<script type="module">
 const SP = { football: "⚽ Футбол", hockey: "🏒 Хоккей", basketball: "🏀 Баскетбол", tennis: "🎾 Теннис" };
 const EM = { football: "⚽", hockey: "🏒", basketball: "🏀", tennis: "🎾" };
-let all = [], live = {}, filter = "all";
+let all = [], live = {}, filter = "all", viewers = {};
 try { filter = localStorage.getItem("mfilter") || "all"; } catch (e) {}
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 const time = iso => new Date(iso).toLocaleTimeString("ru-RU", { hour: "2-digit", minute: "2-digit", timeZone: "Europe/Moscow" });
@@ -106,7 +109,7 @@ function card(m) {
   const img = u => u ? `<img src="${esc(u)}" alt="" loading="lazy">` : `<span class="ph"></span>`;
   return `<a class="m ${st === "in" ? "live" : ""}" href="${esc(m.url)}">
     ${m.top ? '<span class="badge">⭐ ПРОГНОЗ ДНЯ</span>' : ""}
-    <div class="lg"><span>${EM[m.sport] || ""} ${esc(m.league)}</span><span class="st ${cls}">${esc(label)}</span></div>
+    <div class="lg"><span>${EM[m.sport] || ""} ${esc(m.league)}</span><span class="st ${cls}">${viewers[m.id] ? `👁 ${viewers[m.id]} · ` : ""}${esc(label)}</span></div>
     <div class="tm ${win && win.h ? "win" : ""}">${img(m.hl)}<span class="nm">${esc(m.home)}</span><span class="sc">${esc(hsc)}</span></div>
     <div class="tm ${win && win.a ? "win" : ""}">${img(m.al)}<span class="nm">${esc(m.away)}</span><span class="sc">${esc(asc)}</span></div>
     <div class="ft">${m.tip ? `<span class="tip">🎯 ${esc(m.tip)}${m.bot?.main ? ` · шанс ${Math.round(m.bot.main.p * 100)}%` : ""}</span>` : `<span class="tip no">Прогноз выйдет за час до начала</span>`}
@@ -137,6 +140,11 @@ async function load() {
   }
   render(); await scores(); render();
 }
+import("./fb.js").then(fb => {
+  fb.track("matches");
+  fb.watchPresence(v => { viewers = v; render(); });
+  fb.watchOnline(n => { const el = document.getElementById("online"); el.style.display = "inline-flex"; el.innerHTML = `<span class="dot" style="background:#2ecc71;box-shadow:0 0 10px #2ecc71"></span>Сейчас на сайте: ${n}`; });
+}).catch(() => {});
 load(); setInterval(async () => { await scores(); render(); }, 30000); setInterval(load, 10 * 60e3);
 </script>
 </body>

@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Админка — АИ СТАВИТ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root { --bg:#070b1a; --card:#121a38; --card2:#18224a; --line:rgba(255,255,255,.09); --ink:#fff; --muted:#9aa6cc; --gold:#ffc400; --good:#2ecc71; --bad:#ff5a5a }
+  * { box-sizing:border-box; margin:0; padding:0 }
+  body { background:radial-gradient(1000px 500px at 90% -10%,#1d2a66 0%,transparent 60%),var(--bg); color:var(--ink); font:14px/1.45 Montserrat,system-ui,sans-serif; min-height:100vh }
+  main { max-width:1180px; margin:0 auto; padding:18px 16px 60px }
+  nav { display:flex; justify-content:space-between; align-items:center; gap:10px; flex-wrap:wrap }
+  nav b { color:var(--gold); letter-spacing:1.5px; font-weight:900 } nav a, nav button { color:var(--muted); font:700 13px Montserrat,sans-serif; text-decoration:none; background:none; border:0; cursor:pointer }
+  h1 { font-size:26px; font-weight:900; margin:16px 0 4px } .sub { color:var(--muted) }
+  h2 { font-size:16px; font-weight:900; margin:26px 0 10px }
+  .kpis { display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:10px; margin-top:16px }
+  .k { background:linear-gradient(160deg,var(--card2),var(--card)); border:1px solid var(--line); border-radius:16px; padding:14px }
+  .k .v { font-size:28px; font-weight:900 } .k .l { color:var(--muted); font-size:11px; font-weight:800; letter-spacing:.6px; text-transform:uppercase } .k .s { color:var(--muted); font-size:12px }
+  .live { color:var(--good) }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(340px,1fr)); gap:12px }
+  .card { background:linear-gradient(160deg,var(--card2),var(--card)); border:1px solid var(--line); border-radius:18px; padding:14px; min-width:0 }
+  table { width:100%; border-collapse:collapse } td, th { padding:7px 6px; border-bottom:1px solid var(--line); text-align:left; font-size:13px; vertical-align:top }
+  th { color:var(--muted); font-size:11px; text-transform:uppercase; letter-spacing:.5px } tr:last-child td { border-bottom:0 }
+  td.n { text-align:right; font-weight:900; white-space:nowrap }
+  .bars { display:flex; align-items:flex-end; gap:6px; height:150px; padding-top:10px }
+  .bars div { flex:1; background:linear-gradient(180deg,#ffc400,#ff7a3d); border-radius:6px 6px 2px 2px; position:relative; min-height:3px }
+  .bars span { position:absolute; top:-18px; left:50%; transform:translateX(-50%); font-size:11px; font-weight:800 }
+  .bars i { position:absolute; bottom:-18px; left:50%; transform:translateX(-50%); font-size:10px; color:var(--muted); font-style:normal; white-space:nowrap }
+  .msg { padding:8px 0; border-bottom:1px solid var(--line); font-size:13px } .msg:last-child { border-bottom:0 }
+  .msg .m { color:var(--muted); font-size:11px } .msg b { color:var(--gold) }
+  .btn { border:0; border-radius:10px; padding:5px 10px; font:800 11px Montserrat,sans-serif; cursor:pointer; margin-left:6px }
+  .del { background:rgba(255,90,90,.15); color:var(--bad) } .ban { background:rgba(255,196,0,.15); color:var(--gold) } .unban { background:rgba(46,204,113,.15); color:var(--good) }
+  .gate { max-width:420px; margin:60px auto; text-align:center } .gate button { background:linear-gradient(90deg,#ffc400,#ff9f1a); color:#1a1405; border:0; border-radius:12px; padding:12px 20px; font:900 14px Montserrat,sans-serif; cursor:pointer; margin-top:14px }
+  code { background:rgba(255,255,255,.08); border-radius:6px; padding:2px 6px; font-size:12px; word-break:break-all }
+  .muted { color:var(--muted) } .scroll { max-height:420px; overflow:auto }
+</style>
+</head>
+<body><main>
+<nav><b>АИ СТАВИТ · АДМИНКА</b><div><a href="./">Сайт</a> · <a href="matches.html">Матчи</a> · <button id="out" style="display:none">Выйти</button></div></nav>
+<div id="app"><div class="gate"><p class="muted">Загрузка…</p></div></div>
+</main>
+<script type="module">
+import * as fb from "./fb.js";
+const { db, ref, get, set, remove, onValue } = fb;
+const $ = s => document.querySelector(s), app = $("#app");
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const ago = t => { const m = Math.round((Date.now() - t) / 60000); return m < 1 ? "только что" : m < 60 ? `${m} мин назад` : m < 1440 ? `${Math.round(m / 60)} ч назад` : `${Math.round(m / 1440)} дн назад`; };
+let names = {};   // id матча → «Команда — Команда»
+
+fb.onUser(async (u, prof) => {
+  $("#out").style.display = u ? "inline" : "none"; $("#out").onclick = () => fb.logout();
+  if (!u) { app.innerHTML = `<div class="gate"><h1>Админ-панель</h1><p class="sub">Войдите аккаунтом администратора.</p><button id="in">Войти</button></div>`; $("#in").onclick = () => fb.login(); return; }
+  if (!(await fb.isAdmin())) {
+    app.innerHTML = `<div class="gate"><h1>Нет доступа</h1><p class="sub">Этот аккаунт не администратор.</p><p class="sub" style="margin-top:10px">Ваш ID: <code>${esc(u.uid)}</code></p></div>`; return;
+  }
+  start();
+});
+
+async function start() {
+  try { for (const m of await (await fetch("https://raw.githubusercontent.com/horoooos/betbot/main/docs/matches.json", { cache: "no-store" })).json()) names[m.id] = `${m.home} — ${m.away}`; } catch (e) {}
+  app.innerHTML = `<h1>Пульт управления</h1><p class="sub">Всё обновляется само в реальном времени.</p>
+  <div class="kpis">
+    <div class="k"><div class="l">сейчас на сайте</div><div class="v live" id="kOn">—</div><div class="s" id="kOnS"></div></div>
+    <div class="k"><div class="l">смотрят трансляции</div><div class="v" id="kW">—</div><div class="s" id="kWS"></div></div>
+    <div class="k"><div class="l">посетителей сегодня</div><div class="v" id="kD">—</div><div class="s" id="kDS"></div></div>
+    <div class="k"><div class="l">зарегистрировано</div><div class="v" id="kU">—</div><div class="s" id="kUS"></div></div>
+    <div class="k"><div class="l">сообщений в чатах</div><div class="v" id="kC">—</div><div class="s" id="kCS"></div></div>
+    <div class="k"><div class="l">бот</div><div class="v" id="kB" style="font-size:18px">—</div><div class="s" id="kBS"></div></div>
+  </div>
+  <h2>📈 Посетители по дням</h2><div class="card"><div class="bars" id="days"></div><div style="height:22px"></div></div>
+  <div class="grid">
+    <div><h2>👁 Трансляции прямо сейчас</h2><div class="card scroll"><table id="wt"></table></div></div>
+    <div><h2>🌐 Кто где на сайте</h2><div class="card scroll"><table id="pg"></table></div></div>
+  </div>
+  <div class="grid">
+    <div><h2>💬 Последние сообщения (модерация)</h2><div class="card scroll" id="chat"></div></div>
+    <div><h2>👥 Пользователи</h2><div class="card scroll"><table id="users"></table></div></div>
+  </div>`;
+
+  onValue(ref(db, "online"), s => {
+    const pages = {}; s.forEach(c => { const p = (c.val() || {}).p || "?"; pages[p] = (pages[p] || 0) + 1; });
+    $("#kOn").textContent = s.size; $("#kOnS").textContent = "людей прямо сейчас";
+    const lbl = p => p === "index" ? "Главная (статистика)" : p === "matches" ? "Список матчей" : p.startsWith("live:") ? `📺 ${names[p.slice(5)] || "Матч " + p.slice(5)}` : p;
+    $("#pg").innerHTML = `<tr><th>Страница</th><th style="text-align:right">Людей</th></tr>` +
+      (Object.entries(pages).sort((a, b) => b[1] - a[1]).map(([p, n]) => `<tr><td>${esc(lbl(p))}</td><td class="n">${n}</td></tr>`).join("") || `<tr><td class="muted">Пока никого</td><td></td></tr>`);
+  });
+  fb.watchPresence(all => {
+    const rows = Object.entries(all).filter(([, n]) => n > 0).sort((a, b) => b[1] - a[1]);
+    $("#kW").textContent = rows.reduce((a, [, n]) => a + n, 0); $("#kWS").textContent = `на ${rows.length} матчах`;
+    $("#wt").innerHTML = `<tr><th>Матч</th><th style="text-align:right">Зрителей</th></tr>` +
+      (rows.map(([id, n]) => `<tr><td><a href="live.html?e=${esc(id)}" style="color:#fff">${esc(names[id] || "Матч " + id)}</a></td><td class="n">👁 ${n}</td></tr>`).join("") || `<tr><td class="muted">Сейчас трансляции никто не смотрит</td><td></td></tr>`);
+  });
+  onValue(ref(db, "visits"), s => {
+    const days = []; s.forEach(d => { days.push([d.key, d.size]); });
+    const last = days.slice(-14), max = Math.max(1, ...last.map(d => d[1]));
+    const today = new Date().toISOString().slice(0, 10), td = days.find(d => d[0] === today);
+    $("#kD").textContent = td ? td[1] : 0; $("#kDS").textContent = `всего уникальных за ${days.length} дн.: ${days.reduce((a, d) => a + d[1], 0)}`;
+    $("#days").innerHTML = last.map(([d, n]) => `<div style="height:${Math.max(3, n / max * 100)}%"><span>${n}</span><i>${d.slice(8)}.${d.slice(5, 7)}</i></div>`).join("") || `<p class="muted">Данные появятся после первых посетителей</p>`;
+  });
+  let banned = {};
+  onValue(ref(db, "banned"), s => { banned = s.val() || {}; renderUsers(); });
+  let users = {};
+  onValue(ref(db, "users"), s => { users = s.val() || {}; renderUsers(); });
+  function renderUsers() {
+    const list = Object.entries(users).sort((a, b) => (b[1].created || 0) - (a[1].created || 0));
+    $("#kU").textContent = list.length; const day = Date.now() - 864e5; $("#kUS").textContent = `за сутки: +${list.filter(([, u]) => u.created > day).length}`;
+    $("#users").innerHTML = `<tr><th>Имя</th><th>Когда</th><th></th></tr>` + (list.map(([uid, u]) => `<tr><td>${esc(u.name)}</td><td class="muted">${u.created ? ago(u.created) : ""}</td>
+      <td style="text-align:right">${banned[uid] ? `<button class="btn unban" data-unban="${uid}">Разбанить</button>` : `<button class="btn ban" data-ban="${uid}">Бан</button>`}</td></tr>`).join("") || `<tr><td class="muted">Пока никто не зарегистрировался</td><td></td><td></td></tr>`);
+  }
+  onValue(ref(db, "chat"), s => {
+    const msgs = []; s.forEach(m => m.forEach(c => { msgs.push({ match: m.key, key: c.key, ...c.val() }); }));
+    msgs.sort((a, b) => b.t - a.t);
+    $("#kC").textContent = msgs.length; $("#kCS").textContent = `в ${s.size} трансляциях`;
+    $("#chat").innerHTML = msgs.slice(0, 80).map(m => `<div class="msg"><b>${esc(m.name)}</b> ${esc(m.text)}
+      <div class="m">${esc(names[m.match] || "Матч " + m.match)} · ${ago(m.t)}
+      <button class="btn del" data-del="${m.match}/${m.key}">Удалить</button>${banned[m.uid] ? "" : `<button class="btn ban" data-ban="${m.uid}">Бан</button>`}</div></div>`).join("") || `<p class="muted">Сообщений пока нет</p>`;
+  });
+  app.onclick = async e => {
+    const d = e.target.dataset;
+    if (d.del && confirm("Удалить сообщение?")) await remove(ref(db, `chat/${d.del}`));
+    if (d.ban && confirm("Запретить этому пользователю писать в чат?")) await set(ref(db, `banned/${d.ban}`), true);
+    if (d.unban) await remove(ref(db, `banned/${d.unban}`));
+  };
+  // бот жив? — последний коммит бота в репозитории
+  try {
+    const c = (await (await fetch("https://api.github.com/repos/horoooos/betbot/commits?per_page=1")).json())[0];
+    const t = new Date(c.commit.committer.date).getTime(), ok = Date.now() - t < 20 * 60000;
+    $("#kB").innerHTML = ok ? `<span class="live">● работает</span>` : `<span style="color:var(--bad)">● молчит</span>`; $("#kBS").textContent = `последнее обновление ${ago(t)}`;
+  } catch (e) { $("#kB").textContent = "?"; }
+}
+</script>
+</body>
+</html>

@@ -103,6 +103,19 @@
   .chips2 { display:flex; gap:8px; flex-wrap:wrap } .chips2 span { background:rgba(255,255,255,.06); border:1px solid var(--line); border-radius:12px; padding:7px 11px; font-weight:800; font-size:13px }
   .chips2 span small { color:var(--muted); font-weight:700; margin-left:6px }
   .disc { color:var(--muted); font-size:11px; margin-top:14px }
+  .csheet { position:fixed; inset:0; z-index:6; background:rgba(4,7,18,.5); display:none; align-items:flex-end; justify-content:center }
+  .csheet.on { display:flex }
+  .csheet .in { width:min(560px,100%); height:min(70vh,560px); display:flex; flex-direction:column; background:linear-gradient(170deg,#18224a,#0d1430);
+                border:1px solid var(--line); border-radius:22px 22px 0 0; padding:16px 14px 14px; animation:up .3s ease-out }
+  @media (min-width:900px) { .csheet { background:none; pointer-events:none; justify-content:flex-end; align-items:stretch; padding:90px 14px 14px }
+    .csheet .in { pointer-events:auto; width:340px; height:auto; border-radius:22px } }
+  #chatBox { flex:1; display:flex; flex-direction:column; min-height:0; margin-top:8px }
+  .chat-list { flex:1; overflow:auto; display:flex; flex-direction:column; gap:6px; padding-right:4px }
+  .chat-msg { font-size:13px; line-height:1.35; background:rgba(255,255,255,.04); border-radius:12px; padding:7px 10px; word-wrap:break-word }
+  .chat-msg i { color:var(--muted); font-size:10px; font-style:normal } .chat-msg a { color:#ff6a6a; text-decoration:none; margin-left:4px }
+  .chat-form { display:flex; gap:8px; margin-top:10px } .chat-form input { flex:1; min-width:0; background:rgba(255,255,255,.07); border:1px solid var(--line); color:#fff;
+    border-radius:12px; padding:11px 12px; font:600 14px Montserrat,sans-serif } .chat-form button { border:0; border-radius:12px; padding:0 16px; background:var(--gold); color:#1a1405; font-weight:900; cursor:pointer }
+  .chat-who { color:var(--muted); font-size:11px; margin-top:6px } .chat-who a { color:var(--gold) }
   #msg { position:fixed; inset:0; display:flex; align-items:center; justify-content:center; text-align:center; padding:30px; font-weight:700; color:var(--muted); z-index:5; background:var(--bg) }
   #replay { pointer-events:auto; display:none; margin:8px auto 0; background:var(--gold); color:#1e1606; border:0; border-radius:12px;
             padding:8px 16px; font:800 13px Montserrat,sans-serif; cursor:pointer }
@@ -127,7 +140,10 @@
   </div>
   <div class="row2"><a class="pill" href="matches.html">← Все матчи</a><div class="league" id="lg"></div><button class="pill" id="cam">🎥 ТВ</button></div>
   <div class="legend" id="legend"></div>
-  <div style="text-align:center;margin-top:6px"><button class="pill tipbtn" id="tipbtn" style="display:none">🎯 Прогноз бота</button></div>
+  <div style="text-align:center;margin-top:6px;display:flex;gap:6px;justify-content:center;flex-wrap:wrap">
+    <span class="pill" id="viewers" style="display:none;pointer-events:none">👁 0</span>
+    <button class="pill tipbtn" id="tipbtn" style="display:none">🎯 Прогноз бота</button>
+    <button class="pill" id="chatbtn" style="display:none">💬 Чат</button></div>
   <div id="pp"></div>
   <div style="text-align:center"><button id="replay">▶ Смотреть повтор матча</button></div>
 </div>
@@ -135,6 +151,8 @@
 <div class="hud bottom"><div class="panel"><div id="stats"></div><div class="feed" id="feed"></div></div></div>
 <div class="brand">@AISTAVVIT · 3D ПО ДАННЫМ МАТЧА</div>
 <div id="sheet"><div class="in" id="sheetIn"></div></div>
+<div id="chatSheet" class="csheet"><div class="in"><h3 style="display:flex;justify-content:space-between;align-items:center;font-size:18px;font-weight:900">💬 Чат трансляции
+  <button class="x" id="chatx" style="background:none;border:0;color:var(--muted);font-size:22px;cursor:pointer">✕</button></h3><div id="chatBox"></div></div></div>
 
 <script type="importmap">{ "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js" } }</script>
 <script type="module">
@@ -1376,6 +1394,17 @@ function renderBot() {
   $("sheetIn").innerHTML = html;
 }
 if (EVENT) loadBot();
+
+// ═════════════════════════ зрители и чат (Firebase) ═════════════════════════
+if (EVENT) import("./fb.js").then(fb => {
+  fb.track(`live:${EVENT}`, EVENT);
+  fb.watchPresence(all => { const n = all[EVENT] || 0; $("viewers").textContent = `👁 ${n} ${n % 10 === 1 && n % 100 !== 11 ? "смотрит" : "смотрят"}`; $("viewers").style.display = "inline-block"; });
+  $("chatbtn").style.display = "inline-block";
+  let mounted = false;
+  $("chatbtn").onclick = () => { if (!mounted) { fb.mountChat(EVENT, $("chatBox"), n => { $("chatbtn").textContent = `💬 Чат · ${n}`; }); mounted = true; } $("chatSheet").classList.add("on"); };
+  $("chatx").onclick = () => $("chatSheet").classList.remove("on");
+  $("chatSheet").onclick = e => { if (e.target.id === "chatSheet") $("chatSheet").classList.remove("on"); };
+}).catch(e => console.warn("чат недоступен", e));
 
 if (q.has("debug")) Object.assign(window, { __load: () => load(), __handle: p => HANDLE(p), __H: H, __A: A, __cam: camera, __world: world, __q: queue, __figs: figs,
   __state: () => ({ mode, simOn, poss: poss.ru, ball: BALL.mode, owner: BALL.owner?.name || BALL.owner?.num }), __sim: on => { simOn = on; mode = on ? "play" : "idle"; },
