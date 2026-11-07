@@ -1,20 +1,6 @@
 [
 {
 "sport": "football",
-"id": "401888255",
-"league": "Турция · Суперлига",
-"kickoff": "2026-11-07T13:30:00+03:00",
-"home": "Эюпспор",
-"away": "Коджаэлиспор",
-"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/20729.png",
-"al": "https://a.espncdn.com/i/teamlogos/soccer/500/995.png",
-"path": "soccer/tur.1",
-"url": "live.html?s=football&p=soccer%2Ftur.1&e=401888255&h=%D0%AD%D1%8E%D0%BF%D1%81%D0%BF%D0%BE%D1%80&a=%D0%9A%D0%BE%D0%B4%D0%B6%D0%B0%D1%8D%D0%BB%D0%B8%D1%81%D0%BF%D0%BE%D1%80",
-"tip": "П2 · 1.93",
-"top": false
-},
-{
-"sport": "football",
 "id": "401879808",
 "league": "Россия · Премьер-лига",
 "kickoff": "2026-11-07T14:00:00+03:00",
@@ -2362,6 +2348,62 @@
 "al": "https://a.espncdn.com/i/teamlogos/countries/500/cze.png",
 "path": "tennis/wta",
 "url": "live.html?s=tennis&p=tennis%2Fwta&e=187373&h=%D0%95%D0%BB%D0%B5%D0%BD%D0%B0+%D0%A0%D1%8B%D0%B1%D0%B0%D0%BA%D0%B8%D0%BD%D0%B0&a=%D0%9B%D0%B8%D0%BD%D0%B4%D0%B0+%D0%9D%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D0%B0",
+"tip": "",
+"top": false
+},
+{
+"sport": "football",
+"id": "401885401",
+"league": "Португалия · Примейра",
+"kickoff": "2026-11-08T23:30:00+03:00",
+"home": "Эштрела",
+"away": "Бенфика",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/21610.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/1929.png",
+"path": "soccer/por.1",
+"url": "live.html?s=football&p=soccer%2Fpor.1&e=401885401&h=%D0%AD%D1%88%D1%82%D1%80%D0%B5%D0%BB%D0%B0&a=%D0%91%D0%B5%D0%BD%D1%84%D0%B8%D0%BA%D0%B0",
+"tip": "",
+"top": false
+},
+{
+"sport": "football",
+"id": "401885397",
+"league": "Португалия · Примейра",
+"kickoff": "2026-11-08T23:30:00+03:00",
+"home": "Риу Аве",
+"away": "Брага",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/3822.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/2994.png",
+"path": "soccer/por.1",
+"url": "live.html?s=football&p=soccer%2Fpor.1&e=401885397&h=%D0%A0%D0%B8%D1%83+%D0%90%D0%B2%D0%B5&a=%D0%91%D1%80%D0%B0%D0%B3%D0%B0",
+"tip": "",
+"top": false
+},
+{
+"sport": "basketball",
+"id": "401909945",
+"league": "США · NBA",
+"kickoff": "2026-11-08T23:30:00+03:00",
+"home": "Чикаго Буллз",
+"away": "Филадельфия Сиксерс",
+"hl": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/chi.png",
+"al": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/phi.png",
+"path": "basketball/nba",
+"url": "live.html?s=basketball&p=basketball%2Fnba&e=401909945&h=%D0%A7%D0%B8%D0%BA%D0%B0%D0%B3%D0%BE+%D0%91%D1%83%D0%BB%D0%BB%D0%B7&a=%D0%A4%D0%B8%D0%BB%D0%B0%D0%B4%D0%B5%D0%BB%D1%8C%D1%84%D0%B8%D1%8F+%D0%A1%D0%B8%D0%BA%D1%81%D0%B5%D1%80%D1%81",
+"tip": "",
+"top": false
+},
+{
+"sport": "hockey",
+"id": "401892675",
+"league": "США · NHL",
+"kickoff": "2026-11-08T23:30:00+03:00",
+"home": "Баффало",
+"away": "Вегас",
+"hl": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/buf.png",
+"al": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/vgk.png",
+"path": "hockey/nhl",
+"url": "live.html?s=hockey&p=hockey%2Fnhl&e=401892675&h=%D0%91%D0%B0%D1%84%D1%84%D0%B0%D0%BB%D0%BE&a=%D0%92%D0%B5%D0%B3%D0%B0%D1%81",
 "tip": "",
 "top": false
 }
