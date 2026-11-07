@@ -24,29 +24,71 @@ export const getProfile = () => profile;
 
 const ls = { get: k => { try { return localStorage.getItem(k); } catch (e) { return null; } }, set: (k, v) => { try { localStorage.setItem(k, v); } catch (e) {} } };
 
-// ── посетители: кто сейчас на сайте и сколько уникальных за день ──
+// ── посетители: кто сейчас на сайте, откуда пришёл и с какого устройства ──
 function visitorId() {
   let v = ls.get("aiv"); if (!v) { v = Math.random().toString(36).slice(2) + Date.now().toString(36); ls.set("aiv", v); }
   return v;
 }
+let skew = 0;   // разница часов браузера и сервера Firebase — чтобы «свежесть» считать по серверному времени
+onValue(ref(db, ".info/serverTimeOffset"), s => { skew = s.val() || 0; });
+const now = () => Date.now() + skew;
+const FRESH = 90e3;   // человек «на сайте», если отмечался за последние 90 секунд
+
+/** Откуда пришёл посетитель: Telegram, Яндекс, Google, ВКонтакте, прямой заход… */
+export function source() {
+  const ss = { get: k => { try { return sessionStorage.getItem(k); } catch (e) { return null; } }, set: (k, v) => { try { sessionStorage.setItem(k, v); } catch (e) {} } };
+  const saved = ss.get("aisrc"); if (saved) return saved;
+  const q = new URLSearchParams(location.search), utm = q.get("utm_source");
+  let host = ""; try { host = new URL(document.referrer).hostname; } catch (e) {}
+  const ua = navigator.userAgent || "";
+  let src = utm ? utm.slice(0, 30)
+    : /(^|\.)t\.me$|telegram/.test(host) || window.Telegram?.WebApp?.initData || /Telegram/i.test(ua) ? "Telegram"
+    : /yandex\.|ya\.ru/.test(host) ? "Яндекс" : /google\./.test(host) ? "Google" : /vk\.com|vk\.ru/.test(host) ? "ВКонтакте"
+    : /bing\./.test(host) ? "Bing" : /mail\.ru/.test(host) ? "Mail.ru" : /dzen\.ru|zen\.yandex/.test(host) ? "Дзен"
+    : host && host !== location.hostname ? host.replace(/^www\./, "").slice(0, 30) : "Прямой заход";
+  ss.set("aisrc", src); return src;
+}
+export const device = () => { const ua = navigator.userAgent || ""; return /iPad|Tablet/i.test(ua) ? "Планшет" : /Mobi|Android|iPhone/i.test(ua) ? "Телефон" : "Компьютер"; };
+
 /** page — короткое имя страницы ("index", "matches", "live:401888371"); match — id матча, если это трансляция. */
 export function track(page, match = null) {
-  const vid = visitorId(), day = new Date().toISOString().slice(0, 10);
-  if (ls.get("aiday") !== day) { set(ref(db, `visits/${day}/${vid}`), Date.now()).catch(() => {}); ls.set("aiday", day); }   // повтор за день правила всё равно не пустят
-  const conn = push(ref(db, "online")).key;
+  const vid = visitorId(), day = new Date().toISOString().slice(0, 10), src = source(), dev = device();
+  if (ls.get("aiday") !== day) {   // один раз в день: уникальный посетитель + откуда пришёл
+    set(ref(db, `visits/${day}/${vid}`), { t: Date.now(), r: src, d: dev, p: String(page).slice(0, 40) }).catch(() => {}); ls.set("aiday", day);
+  }
+  const conn = push(ref(db, "online")).key, started = Date.now();
+  const me = ref(db, `online/${conn}`), pm = match ? ref(db, `presence/${match}/${conn}`) : null;
+  const mark = () => {
+    set(me, { p: String(page).slice(0, 40), t: serverTimestamp(), v: vid, r: src, d: dev, s: started }).catch(() => {});
+    if (pm) set(pm, now()).catch(() => {});
+  };
   onValue(ref(db, ".info/connected"), s => {
     if (s.val() !== true) return;
-    const me = ref(db, `online/${conn}`);
-    onDisconnect(me).remove().then(() => set(me, { p: String(page).slice(0, 40), t: serverTimestamp() })).catch(() => {});
-    if (match) { const pm = ref(db, `presence/${match}/${conn}`); onDisconnect(pm).remove().then(() => set(pm, Date.now())).catch(() => {}); }
+    onDisconnect(me).remove().catch(() => {}); if (pm) onDisconnect(pm).remove().catch(() => {});
+    mark();
   });
+  setInterval(() => { if (document.visibilityState === "visible") mark(); }, 30e3);   // «я ещё тут» каждые 30 секунд, пока вкладка открыта
+  document.addEventListener("visibilitychange", () => { if (document.visibilityState === "visible") mark(); });
+  addEventListener("pagehide", () => { remove(me).catch(() => {}); if (pm) remove(pm).catch(() => {}); });
 }
-/** Сколько человек смотрят каждый матч: cb({ matchId: n }) */
+/** Сколько человек смотрят каждый матч: cb({ matchId: n }) — только «живые» отметки. */
 export function watchPresence(cb) {
-  onValue(ref(db, "presence"), s => { const out = {}; s.forEach(m => { out[m.key] = m.size; }); cb(out); }, () => cb({}));
+  onValue(ref(db, "presence"), s => { const out = {}, t = now();
+    s.forEach(m => { let n = 0; m.forEach(c => { if (typeof c.val() === "number" && t - c.val() < FRESH) n++; }); if (n) out[m.key] = n; }); cb(out); }, () => cb({}));
 }
-/** Сколько человек сейчас на сайте: cb(n) */
-export function watchOnline(cb) { onValue(ref(db, "online"), s => cb(s.size), () => cb(0)); }
+/** Живые посетители: уникальные люди, отмечавшиеся последние 90 секунд. cb(n, list) */
+export function watchOnline(cb) {
+  let last = null; setInterval(() => { if (last) count(last); }, 30e3);   // пересчёт, даже если в базе тихо
+  const count = s => {
+    const t = now(), people = {}, stale = [];
+    s.forEach(c => { const v = c.val() || {}; const age = t - (v.t || 0);
+      if (age < FRESH) { const k = v.v || c.key; if (!people[k] || people[k].t < v.t) people[k] = { ...v, key: c.key }; }
+      else if (age > 10 * 60e3) stale.push(c.key); });
+    stale.slice(0, 20).forEach(k => remove(ref(db, `online/${k}`)).catch(() => {}));   // подчищаем «зависшие» записи
+    cb(Object.keys(people).length, Object.values(people));
+  };
+  onValue(ref(db, "online"), s => { last = s; count(s); }, () => cb(0, []));
+}
 
 // ── аккаунт ──
 let profile = null;
@@ -162,7 +204,64 @@ export function mountChat(match, box, onCount) {
 export function navUser(el) {
   if (!el) return;
   onUser((u, prof) => {
-    if (u && prof) { el.innerHTML = `${esc(prof.emoji || "👤")} ${esc(prof.name)}`; el.href = `profile.html?u=${u.uid}`; el.onclick = null; }
+    if (u && prof) { el.innerHTML = `<span style="display:inline-flex;align-items:center;gap:6px">${prof.avatar ? avatarHTML(prof, 20) : esc(prof.emoji || "👤")} ${esc(prof.name)}</span>`; el.href = `profile.html?u=${u.uid}`; el.onclick = null; }
     else { el.textContent = "Войти"; el.href = "#"; el.onclick = e => { e.preventDefault(); login(); }; }
   });
 }
+
+// ── аватарки: фото сжимается в браузере до 160×160 и хранится в профиле ──
+/** Открывает выбор фото и возвращает data:image/jpeg (≈10–20 КБ) или null. */
+export function pickAvatar() {
+  return new Promise(resolve => {
+    const inp = document.createElement("input"); inp.type = "file"; inp.accept = "image/*";
+    inp.onchange = () => {
+      const f = inp.files && inp.files[0]; if (!f) return resolve(null);
+      const img = new Image(), url = URL.createObjectURL(f);
+      img.onload = () => {
+        const S = 160, c = document.createElement("canvas"); c.width = c.height = S; const g = c.getContext("2d");
+        const k = Math.max(S / img.width, S / img.height), w = img.width * k, h = img.height * k;   // обрезаем по центру в квадрат
+        g.drawImage(img, (S - w) / 2, (S - h) / 2, w, h); URL.revokeObjectURL(url);
+        let q = .85, data = c.toDataURL("image/jpeg", q);
+        while (data.length > 38000 && q > .4) { q -= .1; data = c.toDataURL("image/jpeg", q); }
+        resolve(data);
+      };
+      img.onerror = () => resolve(null); img.src = url;
+    };
+    inp.click();
+  });
+}
+/** HTML аватарки пользователя: фото или эмодзи. */
+export const avatarHTML = (u, size = 40) => u && u.avatar && /^data:image\/(jpeg|png|webp);base64,/.test(u.avatar)
+  ? `<img src="${u.avatar}" alt="" style="width:${size}px;height:${size}px;border-radius:50%;object-fit:cover;display:block">`
+  : esc((u && u.emoji) || "👤");
+const ucache = {};
+/** Профиль любого пользователя (имя, аватарка) с кэшем. */
+export async function userInfo(uid) {
+  if (!ucache[uid]) ucache[uid] = get(ref(db, `users/${uid}`)).then(s => s.val() || {}).catch(() => ({}));
+  return ucache[uid];
+}
+
+// ── «Поддержать проект»: кнопка в меню всех страниц ──
+const PHONE = "+7 906 146-63-36";
+function supportModal() {
+  css();
+  const w = document.createElement("div"); w.className = "fbm";
+  w.innerHTML = `<div class="bx" style="text-align:center"><div style="font-size:44px">❤️</div><h3>Поддержать АИ СТАВИТ</h3>
+    <p>Бот, сайт и прогнозы бесплатные. Если они вам помогают — поддержите проект переводом по номеру телефона (СБП) на любую сумму.</p>
+    <div style="font-size:24px;font-weight:900;letter-spacing:1px;margin:6px 0 4px">${PHONE}</div>
+    <button class="y" id="spc">📋 Скопировать номер</button><button class="t" id="spx">Закрыть</button><div class="err" id="spm" style="color:#7dffb0"></div>
+    <p style="margin-top:10px;font-size:11px">Спасибо! Каждый перевод идёт на развитие бота: новые виды спорта, точнее прогнозы, трансляции.</p></div>`;
+  w.querySelector("#spc").onclick = async () => { try { await navigator.clipboard.writeText(PHONE.replace(/[\s-]/g, "")); w.querySelector("#spm").textContent = "Номер скопирован — вставьте его в приложении банка в «Перевод по телефону»"; }
+    catch (e) { w.querySelector("#spm").textContent = PHONE; } };
+  w.querySelector("#spx").onclick = () => w.remove(); w.onclick = e => { if (e.target === w) w.remove(); };
+  document.body.appendChild(w);
+}
+export function supportButton() {
+  const links = document.querySelector(".topnav .links");
+  if (!links || links.querySelector(".support")) return;
+  const a = document.createElement("a"); a.href = "#"; a.className = "support"; a.textContent = "❤️ Поддержать";
+  a.style.cssText = "background:linear-gradient(90deg,#ff4d6d,#ff8a3d);color:#fff";
+  a.onclick = e => { e.preventDefault(); supportModal(); };
+  links.prepend(a);
+}
+if (typeof document !== "undefined") { if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", supportButton); else supportButton(); }

@@ -8,7 +8,7 @@
 <link rel="canonical" href="https://horoooos.github.io/betbot/feed.html">
 <meta property="og:title" content="Лента болельщиков — прогнозы и мнения"><meta property="og:type" content="website"><meta property="og:locale" content="ru_RU">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="site.css?v=3">
+<link rel="stylesheet" href="site.css?v=4">
 </head>
 <body><main>
 <nav class="topnav"><a class="logo" href="./">АИ СТАВИТ</a><div class="links"><a href="matches.html">📺 Матчи онлайн</a><a href="predictions/">🎯 Прогнозы</a><a href="news/">📰 Новости</a><a class="on" href="feed.html">💬 Лента</a><a class="me" id="navUser" href="#">Войти</a></div></nav>
@@ -16,7 +16,7 @@
 <p class="lead">Делитесь прогнозами на матчи и мыслями о футболе, хоккее, баскетболе и теннисе. Лучшие прогнозы — в топе по лайкам.</p>
 
 <div class="card comp" id="comp" style="margin-top:16px">
-  <textarea id="tx" maxlength="1000" placeholder="Ваш прогноз или мысли о матче…"></textarea>
+  <textarea id="tx" maxlength="1000" placeholder="Заметка, прогноз или мысли о матче…"></textarea>
   <div class="row"><label class="small muted"><input type="checkbox" id="isPick"> 🎯 Это прогноз на матч</label></div>
   <div class="row" id="pickRow" style="display:none">
     <select class="inp" id="mSel" style="flex:2 1 220px"></select>
@@ -27,14 +27,14 @@
   <div class="small" id="err" style="color:#ff6a6a"></div>
 </div>
 
-<div class="tabs" id="tabs"><button data-t="new" class="on">🆕 Свежее</button><button data-t="picks">🎯 Прогнозы</button><button data-t="top">🔥 Популярное</button></div>
+<div class="tabs" id="tabs"><button data-t="new" class="on">🆕 Все</button><button data-t="notes">📝 Заметки</button><button data-t="picks">🎯 Прогнозы</button><button data-t="top">🔥 Популярное</button></div>
 <div id="list"><p class="muted">Загружаем ленту…</p></div>
 <div style="text-align:center;margin-top:12px"><button class="btn ghost" id="more" style="display:none">Показать ещё</button></div>
 <footer>Пишите уважительно: оскорбления и спам удаляются, автор блокируется. 18+.</footer>
 </main>
 <div class="sticky"><a class="a" href="matches.html">📺 Онлайн</a><a class="b" href="https://t.me/aistavvit">📲 Канал</a></div>
 <script type="module">
-import * as fb from "./fb.js?v=3";
+import * as fb from "./fb.js?v=4";
 const { db, ref, get, push, set, remove, query, orderByChild, limitToLast, endBefore, onValue, esc } = fb;
 const $ = s => document.querySelector(s);
 fb.navUser($("#navUser")); fb.track("feed");
@@ -86,23 +86,26 @@ $("#more").onclick = async () => {
 };
 $("#tabs").onclick = e => { const t = e.target.dataset.t; if (!t) return; tab = t; document.querySelectorAll("#tabs button").forEach(b => b.classList.toggle("on", b.dataset.t === t)); render(); };
 
+const cnt = o => o ? Object.keys(o).length : 0, score = p => cnt(p.likes) - cnt(p.dislikes);
 function card(id, p) {
-  const me = fb.auth.currentUser?.uid, likes = p.likes ? Object.keys(p.likes).length : 0, liked = me && p.likes && p.likes[me];
+  const me = fb.auth.currentUser?.uid, likes = cnt(p.likes), liked = me && p.likes && p.likes[me], dis = cnt(p.dislikes), disliked = me && p.dislikes && p.dislikes[me];
   const pick = p.match ? `<div class="pick">🎯 <a href="${esc(p.match.url || "matches.html")}">${esc(p.match.title)}</a> · <b>${esc(p.pick || "")}</b>${p.odds ? ` · кэф ${(+p.odds).toFixed(2)}` : ""}
     <span class="muted small">${p.match.kickoff ? new Date(p.match.kickoff).toLocaleString("ru-RU", { day: "numeric", month: "short", hour: "2-digit", minute: "2-digit", timeZone: "Europe/Moscow" }) : ""}</span></div>` : "";
-  return `<div class="card fp" id="p_${id}"><div class="h"><div class="av">${esc(p.emoji || "👤")}</div><div><a href="profile.html?u=${esc(p.uid)}">${esc(p.name)}</a><div class="muted">${ago(p.t)}</div></div></div>
+  return `<div class="card fp" id="p_${id}"><div class="h"><div class="av" data-av="${esc(p.uid)}">${esc(p.emoji || "👤")}</div><div><a href="profile.html?u=${esc(p.uid)}">${esc(p.name)}</a><div class="muted">${ago(p.t)}</div></div></div>
     <div class="tx">${esc(p.text)}</div>${pick}
-    <div class="acts"><button data-like="${id}" class="${liked ? "on" : ""}">❤ ${likes}</button><button data-cm="${id}">💬 Обсудить</button><button data-share="${id}">🔗</button>
+    <div class="acts"><button data-like="${id}" class="${liked ? "on" : ""}" title="Нравится">👍 ${likes}</button><button data-dis="${id}" class="${disliked ? "on" : ""}" title="Не нравится">👎 ${dis}</button><button data-cm="${id}">💬 Обсудить</button><button data-share="${id}">🔗</button>
     ${me && (me === p.uid || admin) ? `<button data-del="${id}">🗑</button>` : ""}</div><div class="cm" id="cm_${id}" style="display:none"></div></div>`;
 }
 function render() {
   let list = Object.entries(posts);
   if (tab === "picks") list = list.filter(([, p]) => p.match);
-  if (tab === "top") { const day = Date.now() - 3 * 864e5; list = list.filter(([, p]) => p.t > day).sort((a, b) => (Object.keys(b[1].likes || {}).length - Object.keys(a[1].likes || {}).length) || b[1].t - a[1].t); }
+  if (tab === "notes") list = list.filter(([, p]) => !p.match);
+  if (tab === "top") { const day = Date.now() - 3 * 864e5; list = list.filter(([, p]) => p.t > day).sort((a, b) => (score(b[1]) - score(a[1])) || b[1].t - a[1].t); }
   else list.sort((a, b) => b[1].t - a[1].t);
   const open = [...document.querySelectorAll(".cm")].filter(c => c.style.display !== "none").map(c => c.id.slice(3));
   $("#list").innerHTML = list.map(([k, p]) => card(k, p)).join("") || `<div class="card muted">Пока пусто — будьте первым! Напишите прогноз на сегодняшний матч 👆</div>`;
   open.forEach(k => openComments(k));
+  document.querySelectorAll("[data-av]").forEach(async el => { const u = await fb.userInfo(el.dataset.av); if (u.avatar || u.emoji) el.innerHTML = fb.avatarHTML(u, 40); });
   if (location.hash.startsWith("#p=")) { const el = document.getElementById("p_" + location.hash.slice(3)); if (el) { el.scrollIntoView({ block: "center" }); el.style.borderColor = "#ffc400"; } }
 }
 const cmSubs = {};
@@ -118,7 +121,13 @@ function openComments(id) {
 }
 $("#list").onclick = async e => {
   const d = e.target.dataset, me = fb.auth.currentUser;
-  if (d.like) { if (!me) return fb.login(); const r = ref(db, `posts/${d.like}/likes/${me.uid}`); posts[d.like]?.likes?.[me.uid] ? await remove(r) : await set(r, true); }
+  const vote = async (id, kind, other) => {   // 👍 и 👎 взаимоисключающие: ставим одно — снимаем другое
+    if (!me) return fb.login();
+    const r = ref(db, `posts/${id}/${kind}/${me.uid}`);
+    if (posts[id]?.[kind]?.[me.uid]) await remove(r); else { await set(r, true); if (posts[id]?.[other]?.[me.uid]) await remove(ref(db, `posts/${id}/${other}/${me.uid}`)); }
+  };
+  if (d.like) await vote(d.like, "likes", "dislikes").catch(() => {});
+  if (d.dis) await vote(d.dis, "dislikes", "likes").catch(() => {});
   if (d.cm) { const b = document.getElementById("cm_" + d.cm); if (b.style.display === "none") openComments(d.cm); else b.style.display = "none"; }
   if (d.share) { const url = location.origin + location.pathname + "#p=" + d.share; try { await navigator.clipboard.writeText(url); e.target.textContent = "✓"; } catch (x) { prompt("Ссылка на пост:", url); } }
   if (d.del && confirm("Удалить пост?")) await remove(ref(db, `posts/${d.del}`)).catch(() => alert("Не получилось удалить"));

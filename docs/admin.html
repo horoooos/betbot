@@ -43,7 +43,7 @@
 <div id="app"><div class="gate"><p class="muted">Загрузка…</p></div></div>
 </main>
 <script type="module">
-import * as fb from "./fb.js?v=3";
+import * as fb from "./fb.js?v=4";
 const { db, ref, get, set, remove, onValue } = fb;
 const $ = s => document.querySelector(s), app = $("#app");
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
@@ -72,6 +72,11 @@ async function start() {
   </div>
   <h2>📈 Посетители по дням</h2><div class="card"><div class="bars" id="days"></div><div style="height:22px"></div></div>
   <div class="grid">
+    <div><h2>🧭 Откуда приходят — сегодня</h2><div class="card"><table id="srcT"></table></div></div>
+    <div><h2>🧭 Откуда приходят — 7 дней</h2><div class="card"><table id="srcW"></table></div></div>
+  </div>
+  <h2>🟢 Кто на сайте прямо сейчас</h2><div class="card scroll"><table id="now"></table></div>
+  <div class="grid">
     <div><h2>👁 Трансляции прямо сейчас</h2><div class="card scroll"><table id="wt"></table></div></div>
     <div><h2>🌐 Кто где на сайте</h2><div class="card scroll"><table id="pg"></table></div></div>
   </div>
@@ -80,12 +85,17 @@ async function start() {
     <div><h2>👥 Пользователи</h2><div class="card scroll"><table id="users"></table></div></div>
   </div>`;
 
-  onValue(ref(db, "online"), s => {
-    const pages = {}; s.forEach(c => { const p = (c.val() || {}).p || "?"; pages[p] = (pages[p] || 0) + 1; });
-    $("#kOn").textContent = s.size; $("#kOnS").textContent = "людей прямо сейчас";
+  fb.watchOnline((n, people) => {
+    const pages = {}; people.forEach(v => { const p = v.p || "?"; pages[p] = (pages[p] || 0) + 1; });
+    const devs = {}; people.forEach(v => { devs[v.d || "?"] = (devs[v.d || "?"] || 0) + 1; });
+    $("#kOn").textContent = n; $("#kOnS").textContent = Object.entries(devs).map(([d, k]) => `${d}: ${k}`).join(" · ") || "людей прямо сейчас";
     const lbl = p => p === "index" ? "Главная (статистика)" : p === "matches" ? "Список матчей" : p.startsWith("live:") ? `📺 ${names[p.slice(5)] || "Матч " + p.slice(5)}` : p;
     $("#pg").innerHTML = `<tr><th>Страница</th><th style="text-align:right">Людей</th></tr>` +
       (Object.entries(pages).sort((a, b) => b[1] - a[1]).map(([p, n]) => `<tr><td>${esc(lbl(p))}</td><td class="n">${n}</td></tr>`).join("") || `<tr><td class="muted">Пока никого</td><td></td></tr>`);
+    const mins = t => { const m = Math.max(0, Math.round((Date.now() - t) / 60000)); return m < 1 ? "только зашёл" : `${m} мин`; };
+    $("#now").innerHTML = `<tr><th>Где сейчас</th><th>Откуда пришёл</th><th>Устройство</th><th style="text-align:right">На сайте</th></tr>` +
+      (people.sort((a, b) => (a.s || 0) - (b.s || 0)).map(v => `<tr><td>${esc(lbl(v.p || "?"))}</td><td>${esc(v.r || "—")}</td><td>${esc(v.d || "—")}</td><td class="n">${v.s ? mins(v.s) : ""}</td></tr>`).join("")
+       || `<tr><td class="muted">Сейчас никого нет</td><td></td><td></td><td></td></tr>`);
   });
   fb.watchPresence(all => {
     const rows = Object.entries(all).filter(([, n]) => n > 0).sort((a, b) => b[1] - a[1]);
@@ -95,6 +105,14 @@ async function start() {
   });
   onValue(ref(db, "visits"), s => {
     const days = []; s.forEach(d => { days.push([d.key, d.size]); });
+    const agg = keys => { const out = {}, dv = {}; let total = 0;
+      s.forEach(d => { if (!keys.includes(d.key)) return; d.forEach(v => { const x = v.val(); const r = (x && x.r) || "Неизвестно (до учёта)"; out[r] = (out[r] || 0) + 1; total++;
+        const dd = (x && x.d) || "?"; dv[dd] = (dv[dd] || 0) + 1; }); });
+      return `<tr><th>Источник</th><th style="text-align:right">Людей</th><th style="text-align:right">Доля</th></tr>` +
+        (Object.entries(out).sort((a, b) => b[1] - a[1]).map(([r, n]) => `<tr><td>${esc(r)}</td><td class="n">${n}</td><td class="n muted">${Math.round(n / total * 100)}%</td></tr>`).join("") || `<tr><td class="muted">Нет данных</td><td></td><td></td></tr>`) +
+        (total ? `<tr><td class="muted" colspan="3">Устройства: ${Object.entries(dv).map(([d, n]) => `${esc(d)} ${Math.round(n / total * 100)}%`).join(" · ")}</td></tr>` : ""); };
+    const today0 = new Date().toISOString().slice(0, 10), week = [...Array(7)].map((_, i) => new Date(Date.now() - i * 864e5).toISOString().slice(0, 10));
+    $("#srcT").innerHTML = agg([today0]); $("#srcW").innerHTML = agg(week);
     const last = days.slice(-14), max = Math.max(1, ...last.map(d => d[1]));
     const today = new Date().toISOString().slice(0, 10), td = days.find(d => d[0] === today);
     $("#kD").textContent = td ? td[1] : 0; $("#kDS").textContent = `всего уникальных за ${days.length} дн.: ${days.reduce((a, d) => a + d[1], 0)}`;

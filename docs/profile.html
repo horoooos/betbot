@@ -7,14 +7,14 @@
 <meta name="description" content="Профиль болельщика на АИ СТАВИТ: прогнозы, мнения и активность в ленте.">
 <meta name="robots" content="noindex,follow">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="site.css?v=3">
+<link rel="stylesheet" href="site.css?v=4">
 </head>
 <body><main>
 <nav class="topnav"><a class="logo" href="./">АИ СТАВИТ</a><div class="links"><a href="matches.html">📺 Матчи онлайн</a><a href="predictions/">🎯 Прогнозы</a><a href="news/">📰 Новости</a><a href="feed.html">💬 Лента</a><a class="me" id="navUser" href="#">Войти</a></div></nav>
 <div id="app" style="margin-top:18px"><p class="muted">Загружаем профиль…</p></div>
 </main>
 <script type="module">
-import * as fb from "./fb.js?v=3";
+import * as fb from "./fb.js?v=4";
 const { db, ref, get, set, update, query, orderByChild, equalTo, onValue, esc } = fb;
 const $ = s => document.querySelector(s), app = $("#app");
 fb.navUser($("#navUser")); fb.track("profile");
@@ -34,7 +34,7 @@ async function show(u) {
   if (!s || !s.exists()) { app.innerHTML = own ? `<div class="card"><p>Профиль ещё не создан.</p><button class="btn gold" id="in">Выбрать имя</button></div>` : `<div class="card muted">Пользователь не найден.</div>`;
     if (own) $("#in").onclick = () => fb.login().then(() => show(fb.auth.currentUser)); return; }
   const p = s.val(); document.title = `${p.name} — профиль болельщика · АИ СТАВИТ`;
-  app.innerHTML = `<div class="card"><div class="pf"><div class="av">${esc(p.emoji || "👤")}</div><div><h1 style="margin:0">${esc(p.name)}</h1>
+  app.innerHTML = `<div class="card"><div class="pf"><div class="av">${fb.avatarHTML(p, 84)}</div><div><h1 style="margin:0">${esc(p.name)}</h1>
     <div class="muted small">На АИ СТАВИТ с ${ago(p.created)}</div><p style="margin-top:6px">${esc(p.bio || (own ? "Расскажите о себе — нажмите «Редактировать»" : ""))}</p></div></div>
     <div class="stats"><div><b id="sP">0</b><span>постов</span></div><div><b id="sK">0</b><span>прогнозов</span></div><div><b id="sL">0</b><span>лайков получено</span></div></div>
     ${own ? `<div class="row" style="margin-top:14px"><button class="btn ghost" id="edit">✏️ Редактировать</button><a class="btn ghost" href="feed.html">💬 Написать в ленту</a><button class="btn ghost" id="out">Выйти</button>
@@ -43,16 +43,23 @@ async function show(u) {
   if (own) {
     $("#out").onclick = () => fb.logout().then(() => location.href = "./");
     $("#edit").onclick = () => {
-      const ed = $("#ed"); ed.style.display = ed.style.display === "none" ? "block" : "none"; let emo = p.emoji || "👤";
-      ed.innerHTML = `<div class="small muted">Аватар</div><div class="emojis">${EMOJI.map(e => `<button data-e="${e}" class="${e === emo ? "on" : ""}">${e}</button>`).join("")}</div>
+      const ed = $("#ed"); ed.style.display = ed.style.display === "none" ? "block" : "none"; let emo = p.emoji || "👤", photo = p.avatar || null;
+      ed.innerHTML = `<div class="small muted">Фото профиля</div>
+        <div class="row" style="margin-top:4px"><div class="av" id="avp" style="width:64px;height:64px;font-size:30px">${fb.avatarHTML(p, 64)}</div>
+        <button class="btn ghost" id="up">📷 Загрузить фото</button><button class="btn ghost" id="rmph" style="${photo ? "" : "display:none"}">Убрать фото</button></div>
+        <div class="small muted" style="margin-top:10px">или аватар-эмодзи</div><div class="emojis">${EMOJI.map(e => `<button data-e="${e}" class="${e === emo ? "on" : ""}">${e}</button>`).join("")}</div>
         <div class="small muted" style="margin-top:10px">Имя (2–24 символа)</div><input class="inp" id="nm" maxlength="24" value="${esc(p.name)}" style="width:100%">
         <div class="small muted" style="margin-top:10px">О себе (до 200 символов)</div><textarea class="inp" id="bio" maxlength="200" style="width:100%;min-height:70px">${esc(p.bio || "")}</textarea>
         <div class="row"><button class="btn gold" id="sv">Сохранить</button><span class="small" id="msg"></span></div>`;
-      ed.querySelector(".emojis").onclick = e => { if (!e.target.dataset.e) return; emo = e.target.dataset.e; ed.querySelectorAll(".emojis button").forEach(b => b.classList.toggle("on", b.dataset.e === emo)); };
+      const prev = () => { $("#avp").innerHTML = fb.avatarHTML({ avatar: photo, emoji: emo }, 64); $("#rmph").style.display = photo ? "" : "none"; };
+      ed.querySelector(".emojis").onclick = e => { if (!e.target.dataset.e) return; emo = e.target.dataset.e; photo = null; prev(); ed.querySelectorAll(".emojis button").forEach(b => b.classList.toggle("on", b.dataset.e === emo)); };
+      $("#up").onclick = async () => { const d = await fb.pickAvatar(); if (d) { photo = d; prev(); } else $("#msg").textContent = "Не удалось прочитать фото — попробуйте другое"; };
+      $("#rmph").onclick = () => { photo = null; prev(); };
       $("#sv").onclick = async () => {
         const name = $("#nm").value.trim(), bio = $("#bio").value.trim();
         if (name.length < 2) return $("#msg").textContent = "Имя — минимум 2 символа";
-        try { await set(ref(db, `users/${uid}`), { ...p, name, bio, emoji: emo }); location.reload(); } catch (e) { $("#msg").textContent = "Не сохранилось: " + e.message; }
+        const data = { ...p, name, bio, emoji: emo }; if (photo) data.avatar = photo; else delete data.avatar;
+        try { await set(ref(db, `users/${uid}`), data); location.reload(); } catch (e) { $("#msg").textContent = "Не сохранилось: " + e.message; }
       };
     };
   }
