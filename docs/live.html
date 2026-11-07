@@ -1338,10 +1338,12 @@ async function load() {
 const halfLbl = {};
 function halfSprite(tm) {
   const c = document.createElement("canvas"); c.width = 1024; c.height = 160; const g = c.getContext("2d");
-  g.font = "900 96px Montserrat, Arial"; g.textAlign = "center"; g.textBaseline = "middle";
-  g.lineWidth = 10; g.strokeStyle = "rgba(0,0,0,.35)"; g.strokeText(tm.ru.toUpperCase(), 512, 84); g.fillStyle = tm.color; g.fillText(tm.ru.toUpperCase(), 512, 84);
-  const sp = new THREE.Sprite(new THREE.SpriteMaterial({ map: new THREE.CanvasTexture(c), transparent: true, opacity: .5, depthTest: false }));
-  const w = Math.min(L * .42, 40); sp.scale.set(w, w * 160 / 1024, 1); sp.renderOrder = 1; world.add(sp); return sp;
+  const txt = tm.ru.toUpperCase(); let fs = 96; g.font = `900 ${fs}px Montserrat, Arial`;
+  while (g.measureText(txt).width > 980 && fs > 30) { fs -= 4; g.font = `900 ${fs}px Montserrat, Arial`; }   // длинное название — мельче, но целиком
+  g.textAlign = "center"; g.textBaseline = "middle";
+  g.lineWidth = 10; g.strokeStyle = "rgba(0,0,0,.35)"; g.strokeText(txt, 512, 84); g.fillStyle = tm.color; g.fillText(txt, 512, 84);
+  const sp = new THREE.Sprite(new THREE.SpriteMaterial({ map: new THREE.CanvasTexture(c), transparent: true, opacity: .3, depthTest: false }));
+  const w = Math.min(L * .34, 30); sp.scale.set(w, w * 160 / 1024, 1); sp.renderOrder = 1; world.add(sp); return sp;
 }
 const arrowOf = (dx, dy) => Math.abs(dx) > Math.abs(dy) ? (dx > 0 ? "→" : "←") : (dy > 0 ? "↓" : "↑");
 let legendKey = "";
