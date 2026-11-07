@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Профиль болельщика — АИ СТАВИТ</title>
+<meta name="description" content="Профиль болельщика на АИ СТАВИТ: прогнозы, мнения и активность в ленте.">
+<meta name="robots" content="noindex,follow">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css">
+</head>
+<body><main>
+<nav class="topnav"><a class="logo" href="./">АИ СТАВИТ</a><div class="links"><a href="matches.html">📺 Матчи онлайн</a><a href="predictions/">🎯 Прогнозы</a><a href="news/">📰 Новости</a><a href="feed.html">💬 Лента</a><a class="me" id="navUser" href="#">Войти</a></div></nav>
+<div id="app" style="margin-top:18px"><p class="muted">Загружаем профиль…</p></div>
+</main>
+<script type="module">
+import * as fb from "./fb.js";
+const { db, ref, get, set, update, query, orderByChild, equalTo, onValue, esc } = fb;
+const $ = s => document.querySelector(s), app = $("#app");
+fb.navUser($("#navUser")); fb.track("profile");
+const EMOJI = ["👤", "⚽", "🏒", "🏀", "🎾", "🔥", "🦁", "🐺", "🦅", "🐉", "👑", "🎯", "💎", "🚀", "😎", "🤖", "🧠", "🍀"];
+const ago = t => new Date(t).toLocaleDateString("ru-RU", { day: "numeric", month: "long", year: "numeric" });
+let uid = new URLSearchParams(location.search).get("u");
+
+fb.onUser(async u => {
+  if (!uid && u) uid = u.uid;
+  if (!uid) { app.innerHTML = `<div class="card" style="text-align:center"><h1>Ваш профиль</h1><p class="lead" style="margin:0 auto 14px">Войдите, чтобы вести профиль, публиковать прогнозы и писать в чат трансляций.</p><button class="btn gold" id="in">Войти или зарегистрироваться</button></div>`;
+    $("#in").onclick = () => fb.login(); return; }
+  show(u);
+});
+async function show(u) {
+  const own = u && u.uid === uid;
+  const s = await get(ref(db, `users/${uid}`)).catch(() => null);
+  if (!s || !s.exists()) { app.innerHTML = own ? `<div class="card"><p>Профиль ещё не создан.</p><button class="btn gold" id="in">Выбрать имя</button></div>` : `<div class="card muted">Пользователь не найден.</div>`;
+    if (own) $("#in").onclick = () => fb.login().then(() => show(fb.auth.currentUser)); return; }
+  const p = s.val(); document.title = `${p.name} — профиль болельщика · АИ СТАВИТ`;
+  app.innerHTML = `<div class="card"><div class="pf"><div class="av">${esc(p.emoji || "👤")}</div><div><h1 style="margin:0">${esc(p.name)}</h1>
+    <div class="muted small">На АИ СТАВИТ с ${ago(p.created)}</div><p style="margin-top:6px">${esc(p.bio || (own ? "Расскажите о себе — нажмите «Редактировать»" : ""))}</p></div></div>
+    <div class="stats"><div><b id="sP">0</b><span>постов</span></div><div><b id="sK">0</b><span>прогнозов</span></div><div><b id="sL">0</b><span>лайков получено</span></div></div>
+    ${own ? `<div class="row" style="margin-top:14px"><button class="btn ghost" id="edit">✏️ Редактировать</button><a class="btn ghost" href="feed.html">💬 Написать в ленту</a><button class="btn ghost" id="out">Выйти</button>
+      ${(await fb.isAdmin()) ? `<a class="btn gold" href="admin.html">🛠 Админка</a>` : ""}</div><div id="ed" style="display:none;margin-top:14px"></div>` : ""}</div>
+    <h2>Посты</h2><div id="posts"><p class="muted">Загрузка…</p></div>`;
+  if (own) {
+    $("#out").onclick = () => fb.logout().then(() => location.href = "./");
+    $("#edit").onclick = () => {
+      const ed = $("#ed"); ed.style.display = ed.style.display === "none" ? "block" : "none"; let emo = p.emoji || "👤";
+      ed.innerHTML = `<div class="small muted">Аватар</div><div class="emojis">${EMOJI.map(e => `<button data-e="${e}" class="${e === emo ? "on" : ""}">${e}</button>`).join("")}</div>
+        <div class="small muted" style="margin-top:10px">Имя (2–24 символа)</div><input class="inp" id="nm" maxlength="24" value="${esc(p.name)}" style="width:100%">
+        <div class="small muted" style="margin-top:10px">О себе (до 200 символов)</div><textarea class="inp" id="bio" maxlength="200" style="width:100%;min-height:70px">${esc(p.bio || "")}</textarea>
+        <div class="row"><button class="btn gold" id="sv">Сохранить</button><span class="small" id="msg"></span></div>`;
+      ed.querySelector(".emojis").onclick = e => { if (!e.target.dataset.e) return; emo = e.target.dataset.e; ed.querySelectorAll(".emojis button").forEach(b => b.classList.toggle("on", b.dataset.e === emo)); };
+      $("#sv").onclick = async () => {
+        const name = $("#nm").value.trim(), bio = $("#bio").value.trim();
+        if (name.length < 2) return $("#msg").textContent = "Имя — минимум 2 символа";
+        try { await set(ref(db, `users/${uid}`), { ...p, name, bio, emoji: emo }); location.reload(); } catch (e) { $("#msg").textContent = "Не сохранилось: " + e.message; }
+      };
+    };
+  }
+  onValue(query(ref(db, "posts"), orderByChild("uid"), equalTo(uid)), ps => {
+    const list = []; ps.forEach(x => { list.push([x.key, x.val()]); }); list.sort((a, b) => b[1].t - a[1].t);
+    $("#sP").textContent = list.length; $("#sK").textContent = list.filter(([, v]) => v.match).length;
+    $("#sL").textContent = list.reduce((a, [, v]) => a + Object.keys(v.likes || {}).length, 0);
+    $("#posts").innerHTML = list.map(([k, v]) => `<a class="card fp" href="feed.html#p=${k}" style="display:block;text-decoration:none">
+      <div class="muted small">${new Date(v.t).toLocaleString("ru-RU", { day: "numeric", month: "long", hour: "2-digit", minute: "2-digit" })} · ❤ ${Object.keys(v.likes || {}).length}</div>
+      <div class="tx">${esc(v.text)}</div>${v.match ? `<div class="pick">🎯 ${esc(v.match.title)} · <b>${esc(v.pick || "")}</b>${v.odds ? ` · кэф ${(+v.odds).toFixed(2)}` : ""}</div>` : ""}</a>`).join("")
+      || `<div class="card muted">${own ? "Вы ещё ничего не публиковали — " : "Постов пока нет"}${own ? `<a href="feed.html" style="color:#ffc400">напишите первый пост</a>` : ""}</div>`;
+  });
+}
+</script>
+</body>
+</html>

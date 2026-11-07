@@ -1,0 +1,73 @@
+/* Общий стиль страниц АИ СТАВИТ: меню, карточки, статьи */
+:root { --bg:#070b1a; --card:#121a38; --card2:#18224a; --line:rgba(255,255,255,.09); --ink:#fff; --muted:#9aa6cc; --gold:#ffc400; --good:#2ecc71; --bad:#ff5a5a; --live:#ff4646 }
+* { box-sizing:border-box; margin:0; padding:0 }
+body { background:radial-gradient(1100px 600px at 85% -10%,#1d2a66 0%,transparent 60%),radial-gradient(900px 520px at -10% 5%,#3a1d5a 0%,transparent 55%),var(--bg);
+  background-attachment:fixed; color:var(--ink); font:15px/1.6 Montserrat,system-ui,sans-serif; min-height:100vh }
+a { color:inherit }
+main { max-width:980px; margin:0 auto; padding:14px 16px 90px }
+.topnav { display:flex; align-items:center; justify-content:space-between; gap:10px; flex-wrap:wrap; padding:6px 0 4px }
+.topnav .logo { font-weight:900; letter-spacing:1.5px; color:var(--gold); text-decoration:none }
+.topnav .links { display:flex; gap:4px; flex-wrap:wrap }
+.topnav .links a { text-decoration:none; color:var(--muted); font-weight:700; font-size:13px; padding:6px 10px; border-radius:10px }
+.topnav .links a:hover, .topnav .links a.on { color:var(--ink); background:rgba(255,255,255,.06) }
+.topnav .links a.me { color:#1a1405; background:var(--gold) }
+.crumbs { color:var(--muted); font-size:12px; margin:14px 0 4px } .crumbs a { color:var(--muted) }
+h1 { font-size:clamp(24px,4.6vw,38px); line-height:1.15; font-weight:900; margin:8px 0 8px }
+h1 span { background:linear-gradient(90deg,#ffc400,#ff7a3d); -webkit-background-clip:text; background-clip:text; color:transparent }
+h2 { font-size:19px; font-weight:900; margin:26px 0 10px }
+.lead { color:var(--muted); max-width:680px }
+.card { background:linear-gradient(160deg,var(--card2),var(--card)); border:1px solid var(--line); border-radius:20px; padding:16px }
+.grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(290px,1fr)); gap:12px }
+.btn { display:inline-flex; align-items:center; gap:8px; padding:11px 18px; border-radius:14px; font-weight:800; text-decoration:none; border:0; cursor:pointer; font-family:inherit; font-size:14px }
+.btn.gold { background:linear-gradient(90deg,#ffc400,#ff9f1a); color:#1a1405 } .btn.red { background:var(--live); color:#fff } .btn.ghost { background:rgba(255,255,255,.06); color:var(--ink); border:1px solid var(--line) }
+.muted { color:var(--muted) } .small { font-size:12px }
+.tag { display:inline-block; font-size:11px; font-weight:800; letter-spacing:.5px; text-transform:uppercase; color:var(--muted) }
+/* новости */
+.nc { display:block; text-decoration:none; overflow:hidden; padding:0 }
+.nc img, .nc .ph { width:100%; aspect-ratio:16/9; object-fit:cover; display:block; background:#1b2550 }
+.nc .b { padding:12px 14px } .nc b { display:block; font-size:16px; line-height:1.3; margin:4px 0 6px } .nc p { color:var(--muted); font-size:13px; line-height:1.45 }
+article.post { max-width:760px }
+article.post img.cover { width:100%; border-radius:18px; margin:10px 0 14px; display:block }
+article.post .body { font-size:16px; line-height:1.7 } article.post .body p { margin:0 0 12px }
+/* прогнозы на матчи */
+.mc { display:block; text-decoration:none }
+.mc .t { display:flex; justify-content:space-between; gap:8px; font-size:11px; font-weight:800; color:var(--muted); text-transform:uppercase; letter-spacing:.4px }
+.mc b { display:block; font-size:16px; margin:6px 0 } .mc .p { color:var(--good); font-weight:800; font-size:13px }
+.badge { display:inline-block; border-radius:999px; padding:3px 10px; font-size:12px; font-weight:800 }
+.badge.ok { background:rgba(46,204,113,.15); color:var(--good) } .badge.no { background:rgba(255,90,90,.15); color:var(--bad) } .badge.wait { background:rgba(255,196,0,.14); color:var(--gold) }
+.pre { white-space:pre-wrap; font-size:15px; line-height:1.65 }
+.pre code { font-family:ui-monospace,Consolas,monospace; font-size:13px; background:rgba(255,255,255,.05); padding:2px 4px; border-radius:6px }
+.tl { border-left:2px solid var(--line); margin-left:6px; padding-left:14px }
+.tl div { position:relative; margin:0 0 10px } .tl div::before { content:""; position:absolute; left:-21px; top:8px; width:10px; height:10px; border-radius:50%; background:var(--gold) }
+.mr { display:grid; grid-template-columns:minmax(0,1fr) 110px 46px 46px; gap:8px; align-items:center; font-size:13px; padding:6px 0; border-bottom:1px solid var(--line) }
+.mr:last-child { border-bottom:0 } .mr span:first-child { font-weight:700 } .mr .pc { text-align:right; font-weight:900 } .mr .o { text-align:right; color:var(--muted) }
+.mb { height:8px; border-radius:4px; background:rgba(255,255,255,.08); overflow:hidden } .mb i { display:block; height:100%; border-radius:4px }
+.teams { display:flex; align-items:center; justify-content:center; gap:16px; margin:14px 0 } .teams img { width:56px; height:56px; object-fit:contain; background:#fff; border-radius:50%; padding:5px }
+.teams b { font-size:20px; text-align:center } .teams .sc { font-size:34px; font-weight:900; min-width:90px; text-align:center }
+.sticky { position:fixed; left:50%; bottom:14px; transform:translateX(-50%); display:flex; gap:8px; z-index:5 }
+.sticky a { padding:11px 16px; border-radius:999px; font-weight:800; text-decoration:none; white-space:nowrap; box-shadow:0 10px 30px rgba(0,0,0,.45) }
+.sticky .a { background:var(--live); color:#fff } .sticky .b { background:var(--gold); color:#1a1405 }
+footer { margin-top:34px; color:var(--muted); font-size:12px }
+/* лента и профиль */
+textarea, input, select { font-family:inherit }
+.comp textarea { width:100%; min-height:86px; resize:vertical; background:rgba(255,255,255,.06); border:1px solid var(--line); color:#fff; border-radius:14px; padding:12px; font-size:15px }
+.row { display:flex; gap:8px; flex-wrap:wrap; align-items:center; margin-top:8px }
+.inp { background:rgba(255,255,255,.06); border:1px solid var(--line); color:#fff; border-radius:12px; padding:10px 12px; font-size:14px; min-width:0 }
+select.inp option { background:#121a38 }
+.tabs { display:flex; gap:6px; margin:18px 0 10px; flex-wrap:wrap }
+.tabs button { border:1px solid var(--line); background:var(--card); color:var(--ink); border-radius:999px; padding:8px 14px; font:700 13px Montserrat,sans-serif; cursor:pointer }
+.tabs button.on { background:var(--gold); color:#1a1405; border-color:var(--gold) }
+.fp { margin-bottom:10px } .fp .h { display:flex; align-items:center; gap:10px } .fp .av { width:40px; height:40px; border-radius:50%; display:grid; place-items:center; font-size:20px; background:rgba(255,255,255,.08); flex:none }
+.fp .h a { font-weight:800; text-decoration:none } .fp .h .muted { font-size:12px } .fp .tx { margin:10px 0 6px; white-space:pre-wrap; word-wrap:break-word }
+.fp .pick { display:flex; flex-wrap:wrap; gap:8px; align-items:center; background:rgba(46,204,113,.1); border:1px solid rgba(46,204,113,.35); border-radius:14px; padding:10px 12px; margin:8px 0 }
+.fp .pick a { font-weight:800 } .fp .acts { display:flex; gap:6px; margin-top:6px }
+.fp .acts button { background:rgba(255,255,255,.05); border:1px solid var(--line); color:var(--ink); border-radius:999px; padding:5px 12px; font:700 13px Montserrat,sans-serif; cursor:pointer }
+.fp .acts button.on { color:#ff6a8a; border-color:rgba(255,106,138,.5) }
+.cm { margin-top:10px; border-top:1px solid var(--line); padding-top:8px } .cm div { font-size:13px; margin:4px 0 } .cm b { margin-right:6px }
+.pf { display:flex; gap:16px; align-items:center } .pf .av { width:84px; height:84px; border-radius:50%; display:grid; place-items:center; font-size:44px; background:rgba(255,255,255,.08); flex:none }
+.stats { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-top:14px } .stats div { background:rgba(255,255,255,.04); border-radius:14px; padding:10px; text-align:center }
+.stats b { display:block; font-size:22px; font-weight:900 } .stats span { color:var(--muted); font-size:12px }
+.emojis { display:flex; flex-wrap:wrap; gap:6px } .emojis button { font-size:22px; background:rgba(255,255,255,.05); border:1px solid var(--line); border-radius:10px; width:42px; height:42px; cursor:pointer }
+.emojis button.on { border-color:var(--gold); background:rgba(255,196,0,.15) }
+@media (max-width:640px) { .topnav .links a { padding:5px 7px; font-size:12px } .mr { grid-template-columns:minmax(0,1fr) 70px 40px 40px } }
+@media (min-width:900px) { .sticky { display:none } }

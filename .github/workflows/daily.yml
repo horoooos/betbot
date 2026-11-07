@@ -60,8 +60,8 @@ jobs:
             started=$(date +%s)
             # жёсткий лимит на один проход: если какой-то сервис «повесит» запрос, цикл не встанет на часы
             timeout 900 python -W ignore run.py || echo "::warning::запуск бота завершился с ошибкой или превысил 15 минут"
-            for f in data/state.json data/matches.json data/other.json data/live.json data/results.csv data/value_bets.csv data/names_ru.json docs/index.html docs/matches.json; do
-              if [ -f "$f" ]; then git add "$f"; fi
+            for f in data/state.json data/matches.json data/other.json data/live.json data/results.csv data/value_bets.csv data/names_ru.json data/channel.json data/match_events.json docs; do
+              if [ -e "$f" ]; then git add "$f"; fi
             done
             if ! git diff --cached --quiet; then
               git commit -q -m "Bot update $(TZ=Europe/Moscow date '+%F %H:%M')"

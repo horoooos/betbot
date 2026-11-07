@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Лента болельщиков: прогнозы и мнения — АИ СТАВИТ</title>
+<meta name="description" content="Лента болельщиков АИ СТАВИТ: делитесь прогнозами на матчи, мнениями и разборами. Футбол, хоккей, баскетбол, теннис — прогнозы от подписчиков и бота.">
+<link rel="canonical" href="https://horoooos.github.io/betbot/feed.html">
+<meta property="og:title" content="Лента болельщиков — прогнозы и мнения"><meta property="og:type" content="website"><meta property="og:locale" content="ru_RU">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css">
+</head>
+<body><main>
+<nav class="topnav"><a class="logo" href="./">АИ СТАВИТ</a><div class="links"><a href="matches.html">📺 Матчи онлайн</a><a href="predictions/">🎯 Прогнозы</a><a href="news/">📰 Новости</a><a class="on" href="feed.html">💬 Лента</a><a class="me" id="navUser" href="#">Войти</a></div></nav>
+<h1>💬 Лента <span>болельщиков</span></h1>
+<p class="lead">Делитесь прогнозами на матчи и мыслями о футболе, хоккее, баскетболе и теннисе. Лучшие прогнозы — в топе по лайкам.</p>
+
+<div class="card comp" id="comp" style="margin-top:16px">
+  <textarea id="tx" maxlength="1000" placeholder="Ваш прогноз или мысли о матче…"></textarea>
+  <div class="row"><label class="small muted"><input type="checkbox" id="isPick"> 🎯 Это прогноз на матч</label></div>
+  <div class="row" id="pickRow" style="display:none">
+    <select class="inp" id="mSel" style="flex:2 1 220px"></select>
+    <input class="inp" id="pk" maxlength="40" placeholder="Ставка: П1, ТБ 2.5…" style="flex:1 1 140px">
+    <input class="inp" id="od" type="number" step="0.01" min="1.01" max="100" placeholder="Кэф" style="flex:0 1 90px">
+  </div>
+  <div class="row" style="justify-content:space-between"><span class="small muted" id="cnt">0 / 1000</span><button class="btn gold" id="send">Опубликовать</button></div>
+  <div class="small" id="err" style="color:#ff6a6a"></div>
+</div>
+
+<div class="tabs" id="tabs"><button data-t="new" class="on">🆕 Свежее</button><button data-t="picks">🎯 Прогнозы</button><button data-t="top">🔥 Популярное</button></div>
+<div id="list"><p class="muted">Загружаем ленту…</p></div>
+<div style="text-align:center;margin-top:12px"><button class="btn ghost" id="more" style="display:none">Показать ещё</button></div>
+<footer>Пишите уважительно: оскорбления и спам удаляются, автор блокируется. 18+.</footer>
+</main>
+<div class="sticky"><a class="a" href="matches.html">📺 Онлайн</a><a class="b" href="https://t.me/aistavvit">📲 Канал</a></div>
+<script type="module">
+import * as fb from "./fb.js";
+const { db, ref, get, push, set, remove, query, orderByChild, limitToLast, endBefore, onValue, esc } = fb;
+const $ = s => document.querySelector(s);
+fb.navUser($("#navUser")); fb.track("feed");
+const ago = t => { const m = Math.round((Date.now() - t) / 60000); return m < 1 ? "только что" : m < 60 ? `${m} мин назад` : m < 1440 ? `${Math.round(m / 60)} ч назад` : new Date(t).toLocaleDateString("ru-RU", { day: "numeric", month: "long" }); };
+let posts = {}, tab = "new", oldest = null, admin = false, users = {};
+
+// матчи на выбор для прогноза — ближайшие сутки из списка бота
+let matches = [];
+fetch(location.hostname.endsWith("github.io") ? "https://raw.githubusercontent.com/horoooos/betbot/main/docs/matches.json" : "matches.json", { cache: "no-store" })
+  .then(r => r.json()).then(list => { const now = Date.now(); matches = list.filter(m => new Date(m.kickoff).getTime() > now - 2 * 3600e3);
+    $("#mSel").innerHTML = `<option value="">— выберите матч —</option>` + matches.map(m => `<option value="${m.id}">${esc(m.home)} — ${esc(m.away)} · ${new Date(m.kickoff).toLocaleString("ru-RU", { day: "numeric", month: "short", hour: "2-digit", minute: "2-digit", timeZone: "Europe/Moscow" })}</option>`).join(""); })
+  .catch(() => {});
+$("#isPick").onchange = e => { $("#pickRow").style.display = e.target.checked ? "flex" : "none"; };
+$("#tx").oninput = e => { $("#cnt").textContent = `${e.target.value.length} / 1000`; };
+$("#tx").onfocus = async () => { if (!fb.auth.currentUser || !fb.getProfile()) { $("#tx").blur(); await fb.login(); } };
+fb.onUser(async u => { admin = await fb.isAdmin(); render(); });
+
+$("#send").onclick = async () => {
+  const text = $("#tx").value.trim(); $("#err").textContent = "";
+  if (!fb.auth.currentUser || !fb.getProfile()) { await fb.login(); if (!fb.auth.currentUser || !fb.getProfile()) return; }
+  if (!text) return $("#err").textContent = "Напишите что-нибудь";
+  const post = { uid: fb.auth.currentUser.uid, name: fb.getProfile().name, emoji: fb.getProfile().emoji || "👤", text, t: Date.now() };
+  if ($("#isPick").checked) {
+    const m = matches.find(x => x.id === $("#mSel").value);
+    if (!m) return $("#err").textContent = "Выберите матч для прогноза";
+    if (!$("#pk").value.trim()) return $("#err").textContent = "Напишите ставку, например «П1» или «ТБ 2.5»";
+    post.match = { id: m.id, title: `${m.home} — ${m.away}`, url: m.url, kickoff: m.kickoff, sport: m.sport };
+    post.pick = $("#pk").value.trim().slice(0, 40);
+    const od = parseFloat($("#od").value); if (od > 1 && od < 100) post.odds = Math.round(od * 100) / 100;
+  }
+  $("#send").disabled = true;
+  try { await push(ref(db, "posts"), post); $("#tx").value = ""; $("#pk").value = ""; $("#od").value = ""; $("#isPick").checked = false; $("#pickRow").style.display = "none"; $("#cnt").textContent = "0 / 1000"; }
+  catch (e) { $("#err").textContent = /permission/i.test(String(e)) ? "Публикация недоступна для этого аккаунта" : "Не получилось опубликовать, попробуйте ещё раз"; }
+  $("#send").disabled = false;
+};
+
+// живая лента: последние 60 постов + «Показать ещё»
+onValue(query(ref(db, "posts"), orderByChild("t"), limitToLast(60)), s => {
+  s.forEach(p => { posts[p.key] = p.val(); });
+  for (const k of Object.keys(posts)) if (!s.hasChild(k) && posts[k].t >= (oldestLive || 0)) delete posts[k];
+  oldestLive = Math.min(...Object.values(posts).map(p => p.t)); if (!oldest) oldest = oldestLive;
+  $("#more").style.display = s.size >= 60 ? "inline-flex" : "none"; render();
+});
+let oldestLive = 0;
+$("#more").onclick = async () => {
+  const s = await get(query(ref(db, "posts"), orderByChild("t"), endBefore(oldest), limitToLast(40)));
+  s.forEach(p => { posts[p.key] = p.val(); }); if (s.size) oldest = Math.min(...Object.values(posts).map(p => p.t));
+  if (s.size < 40) $("#more").style.display = "none"; render();
+};
+$("#tabs").onclick = e => { const t = e.target.dataset.t; if (!t) return; tab = t; document.querySelectorAll("#tabs button").forEach(b => b.classList.toggle("on", b.dataset.t === t)); render(); };
+
+function card(id, p) {
+  const me = fb.auth.currentUser?.uid, likes = p.likes ? Object.keys(p.likes).length : 0, liked = me && p.likes && p.likes[me];
+  const pick = p.match ? `<div class="pick">🎯 <a href="${esc(p.match.url || "matches.html")}">${esc(p.match.title)}</a> · <b>${esc(p.pick || "")}</b>${p.odds ? ` · кэф ${(+p.odds).toFixed(2)}` : ""}
+    <span class="muted small">${p.match.kickoff ? new Date(p.match.kickoff).toLocaleString("ru-RU", { day: "numeric", month: "short", hour: "2-digit", minute: "2-digit", timeZone: "Europe/Moscow" }) : ""}</span></div>` : "";
+  return `<div class="card fp" id="p_${id}"><div class="h"><div class="av">${esc(p.emoji || "👤")}</div><div><a href="profile.html?u=${esc(p.uid)}">${esc(p.name)}</a><div class="muted">${ago(p.t)}</div></div></div>
+    <div class="tx">${esc(p.text)}</div>${pick}
+    <div class="acts"><button data-like="${id}" class="${liked ? "on" : ""}">❤ ${likes}</button><button data-cm="${id}">💬 Обсудить</button><button data-share="${id}">🔗</button>
+    ${me && (me === p.uid || admin) ? `<button data-del="${id}">🗑</button>` : ""}</div><div class="cm" id="cm_${id}" style="display:none"></div></div>`;
+}
+function render() {
+  let list = Object.entries(posts);
+  if (tab === "picks") list = list.filter(([, p]) => p.match);
+  if (tab === "top") { const day = Date.now() - 3 * 864e5; list = list.filter(([, p]) => p.t > day).sort((a, b) => (Object.keys(b[1].likes || {}).length - Object.keys(a[1].likes || {}).length) || b[1].t - a[1].t); }
+  else list.sort((a, b) => b[1].t - a[1].t);
+  const open = [...document.querySelectorAll(".cm")].filter(c => c.style.display !== "none").map(c => c.id.slice(3));
+  $("#list").innerHTML = list.map(([k, p]) => card(k, p)).join("") || `<div class="card muted">Пока пусто — будьте первым! Напишите прогноз на сегодняшний матч 👆</div>`;
+  open.forEach(k => openComments(k));
+  if (location.hash.startsWith("#p=")) { const el = document.getElementById("p_" + location.hash.slice(3)); if (el) { el.scrollIntoView({ block: "center" }); el.style.borderColor = "#ffc400"; } }
+}
+const cmSubs = {};
+function openComments(id) {
+  const box = document.getElementById("cm_" + id); if (!box) return; box.style.display = "block";
+  const draw = s => {
+    let html = ""; s.forEach(c => { const v = c.val(); html += `<div><b><a href="profile.html?u=${esc(v.uid)}" style="text-decoration:none">${esc(v.name)}</a></b>${esc(v.text)} <span class="muted small">${ago(v.t)}</span>
+      ${fb.auth.currentUser && (fb.auth.currentUser.uid === v.uid || admin) ? `<a href="#" data-dc="${id}/${c.key}" style="color:#ff6a6a;text-decoration:none">✕</a>` : ""}</div>`; });
+    box.innerHTML = (html || `<div class="muted">Комментариев пока нет</div>`) + `<form class="row" data-f="${id}"><input class="inp" maxlength="500" placeholder="Ответить…" style="flex:1"><button class="btn gold" style="padding:9px 14px">➤</button></form>`;
+  };
+  if (cmSubs[id]) return draw(cmSubs[id]);
+  onValue(query(ref(db, `comments/${id}`), orderByChild("t"), limitToLast(50)), s => { cmSubs[id] = s; const b = document.getElementById("cm_" + id); if (b && b.style.display !== "none") draw(s); });
+}
+$("#list").onclick = async e => {
+  const d = e.target.dataset, me = fb.auth.currentUser;
+  if (d.like) { if (!me) return fb.login(); const r = ref(db, `posts/${d.like}/likes/${me.uid}`); posts[d.like]?.likes?.[me.uid] ? await remove(r) : await set(r, true); }
+  if (d.cm) { const b = document.getElementById("cm_" + d.cm); if (b.style.display === "none") openComments(d.cm); else b.style.display = "none"; }
+  if (d.share) { const url = location.origin + location.pathname + "#p=" + d.share; try { await navigator.clipboard.writeText(url); e.target.textContent = "✓"; } catch (x) { prompt("Ссылка на пост:", url); } }
+  if (d.del && confirm("Удалить пост?")) await remove(ref(db, `posts/${d.del}`)).catch(() => alert("Не получилось удалить"));
+  if (d.dc) { e.preventDefault(); await remove(ref(db, `comments/${d.dc}`)).catch(() => {}); }
+};
+$("#list").onsubmit = async e => {
+  e.preventDefault(); const id = e.target.dataset.f, inp = e.target.querySelector("input"), text = inp.value.trim(); if (!text) return;
+  if (!fb.auth.currentUser || !fb.getProfile()) { await fb.login(); if (!fb.getProfile()) return; }
+  try { await push(ref(db, `comments/${id}`), { uid: fb.auth.currentUser.uid, name: fb.getProfile().name, text, t: Date.now() }); inp.value = ""; } catch (x) { inp.value = ""; inp.placeholder = "Не отправилось"; }
+};
+</script>
+</body>
+</html>

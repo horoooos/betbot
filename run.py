@@ -16,7 +16,7 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-from betbot import card, content, esports, live, names, news, oddspapi, pro, reviews, site, sports, tables, telegram, texts
+from betbot import card, content, esports, live, names, news, oddspapi, pages, pro, reviews, site, sports, tables, telegram, texts
 from betbot import markets as mk
 from betbot.data import MSK, load_fixtures, load_history
 from betbot.engine import add_market, fit_full, fit_weights, walk_forward
@@ -661,8 +661,13 @@ def main():
     stamp = f"{len(site_res)}|{now:%Y-%m-%d %H}"
     if state.get("site_stamp") != stamp or not site.OUT.exists():
         state["site_stamp"] = stamp
+        blocks = None
+        try:   # страницы новостей и прогнозов из канала + sitemap (для поисковиков)
+            blocks = pages.build({**matches, **load_json(OTHER, {})}, site_res, now)
+        except Exception as e:
+            print(f"  ! страницы новостей/прогнозов не собрались: {e}")
         try:
-            site.build(site_res, now)
+            site.build(site_res, now, blocks)
         except Exception as e:
             print(f"  ! страница статистики не собралась: {e}")
     try:

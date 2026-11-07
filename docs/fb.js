@@ -1,10 +1,10 @@
 // Общий модуль сайта АИ СТАВИТ: вход (почта / Google), «кто смотрит» и чат трансляций — на Firebase.
 // Ключи ниже не секретные: Firebase сам вставляет их в любой сайт, доступ ограничен правилами базы.
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
-import { getAuth, onAuthStateChanged, GoogleAuthProvider, signInWithPopup, signInWithEmailAndPassword,
+import { getAuth, onAuthStateChanged, GoogleAuthProvider, signInWithPopup, signInWithRedirect, getRedirectResult, signInWithEmailAndPassword,
   createUserWithEmailAndPassword, signOut, sendPasswordResetEmail } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
-import { getDatabase, ref, set, get, push, remove, onValue, onDisconnect, serverTimestamp, query, orderByChild, limitToLast,
-  onChildAdded, onChildRemoved } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
+import { getDatabase, ref, set, get, push, remove, update, onValue, onDisconnect, serverTimestamp, query, orderByChild, equalTo, limitToLast,
+  endBefore, onChildAdded, onChildRemoved, onChildChanged } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
 
 const app = initializeApp({
   apiKey: "AIzaSyCijCZYGyEgmYNmb2GQMKkGpSHF2j_JZuA",
@@ -16,10 +16,12 @@ const app = initializeApp({
   appId: "1:69507895892:web:c2bb1f02969824e1dad3c1",
 });
 export const auth = getAuth(app);
+auth.languageCode = "ru";   // письма (сброс пароля, подтверждение) и окно Google — на русском
 export const db = getDatabase(app);
-export { ref, get, set, remove, onValue, query, orderByChild, limitToLast };
+export { ref, get, set, push, remove, update, onValue, query, orderByChild, equalTo, limitToLast, endBefore, onChildAdded, onChildRemoved, onChildChanged };
+export const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+export const getProfile = () => profile;
 
-const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 const ls = { get: k => { try { return localStorage.getItem(k); } catch (e) { return null; } }, set: (k, v) => { try { localStorage.setItem(k, v); } catch (e) {} } };
 
 // ── посетители: кто сейчас на сайте и сколько уникальных за день ──
@@ -48,6 +50,7 @@ export function watchOnline(cb) { onValue(ref(db, "online"), s => cb(s.size), ()
 
 // ── аккаунт ──
 let profile = null;
+getRedirectResult(auth).catch(() => {});   // вход через Google в Telegram/мобильном браузере идёт переходом, а не окном
 const listeners = [];
 export function onUser(cb) { listeners.push(cb); cb(auth.currentUser, profile); }
 onAuthStateChanged(auth, async u => {
@@ -71,7 +74,8 @@ const CSS = `
 function css() { if (!document.getElementById("fbcss")) { const s = document.createElement("style"); s.id = "fbcss"; s.textContent = CSS; document.head.appendChild(s); } }
 const RU_ERR = { "auth/invalid-email": "Неверный адрес почты", "auth/missing-password": "Введите пароль", "auth/weak-password": "Пароль — минимум 6 символов",
   "auth/email-already-in-use": "Эта почта уже зарегистрирована — войдите", "auth/invalid-credential": "Неверная почта или пароль",
-  "auth/too-many-requests": "Слишком много попыток, подождите минуту", "auth/popup-closed-by-user": "Окно входа закрыто", "auth/popup-blocked": "Браузер заблокировал окно входа" };
+  "auth/too-many-requests": "Слишком много попыток, подождите минуту", "auth/popup-closed-by-user": "Окно входа закрыто", "auth/popup-blocked": "Браузер заблокировал окно входа",
+  "auth/user-not-found": "Такой почты нет — зарегистрируйтесь", "auth/wrong-password": "Неверный пароль", "auth/network-request-failed": "Нет связи с сервером, проверьте интернет" };
 const errText = e => RU_ERR[e?.code] || "Не получилось: " + (e?.code || e?.message || e);
 
 /** Окно входа/регистрации. Возвращает Promise, который выполнится, когда есть пользователь с именем. */
@@ -98,10 +102,18 @@ export function login() {
       <button class="t" id="fbr">Забыли пароль?</button><button class="t" id="fbx">Закрыть</button><div class="err" id="fbe"></div></div>`;
     const E = t => { w.querySelector("#fbe").textContent = t; };
     const m = () => w.querySelector("#fbm").value.trim(), p = () => w.querySelector("#fbp").value;
-    w.querySelector("#fbg").onclick = () => signInWithPopup(auth, new GoogleAuthProvider()).then(r => done(r.user)).catch(e => E(errText(e)));
+    w.querySelector("#fbg").onclick = () => signInWithPopup(auth, new GoogleAuthProvider()).then(r => done(r.user)).catch(e => {
+      // в Telegram и некоторых мобильных браузерах окна запрещены — входим переходом на страницу Google
+      if (/popup-blocked|operation-not-supported|cancelled-popup/.test(e?.code || "")) return signInWithRedirect(auth, new GoogleAuthProvider());
+      E(errText(e)); });
     w.querySelector("#fbin").onclick = () => signInWithEmailAndPassword(auth, m(), p()).then(r => done(r.user)).catch(e => E(errText(e)));
     w.querySelector("#fbup").onclick = () => createUserWithEmailAndPassword(auth, m(), p()).then(r => done(r.user)).catch(e => E(errText(e)));
-    w.querySelector("#fbr").onclick = () => { if (!m()) return E("Введите почту"); sendPasswordResetEmail(auth, m()).then(() => E("Письмо для сброса отправлено")).catch(e => E(errText(e))); };
+    w.querySelector("#fbr").onclick = () => {
+      if (!m()) return E("Сначала впишите почту в поле выше, потом нажмите «Забыли пароль?»");
+      sendPasswordResetEmail(auth, m(), { url: location.href }).then(() => {
+        w.querySelector("#fbe").style.color = "#7dffb0";
+        E("✉️ Письмо отправлено на " + m() + ". Не видите — проверьте папку «Спам». Если вы входили через Google, пароля нет: нажмите «Войти через Google».");
+      }).catch(e => E(errText(e))); };
     w.querySelector("#fbx").onclick = () => { close(); resolve(null); };
     w.onclick = e => { if (e.target === w) { close(); resolve(null); } };
     document.body.appendChild(w);
@@ -144,4 +156,13 @@ export function mountChat(match, box, onCount) {
     try { await push(ref(db, `chat/${match}`), { uid: auth.currentUser.uid, name: profile.name, text: text.slice(0, 300), t: Date.now() }); input.value = ""; }
     catch (err) { who.innerHTML = /permission/i.test(String(err)) ? "Вы не можете писать в этот чат" : "Сообщение не отправилось, попробуйте ещё раз"; }
   };
+}
+
+/** Кнопка в меню: «Войти» или «👤 Имя» (ведёт в профиль). */
+export function navUser(el) {
+  if (!el) return;
+  onUser((u, prof) => {
+    if (u && prof) { el.innerHTML = `${esc(prof.emoji || "👤")} ${esc(prof.name)}`; el.href = `profile.html?u=${u.uid}`; el.onclick = null; }
+    else { el.textContent = "Войти"; el.href = "#"; el.onclick = e => { e.preventDefault(); login(); }; }
+  });
 }

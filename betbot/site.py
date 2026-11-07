@@ -68,9 +68,6 @@ body{background:radial-gradient(1100px 600px at 85% -10%,#1d2a66 0%,transparent 
  background-attachment:fixed;color:var(--ink);font:15px/1.5 Montserrat,system-ui,sans-serif;min-height:100vh}
 a{color:inherit}
 main{max-width:1080px;margin:0 auto;padding:18px 16px 96px}
-nav{display:flex;align-items:center;justify-content:space-between;gap:10px}
-nav .logo{font-weight:900;letter-spacing:1.5px;color:var(--gold);text-decoration:none}
-nav .links{display:flex;gap:14px;font-weight:700;font-size:13px}nav .links a{text-decoration:none;color:var(--muted)}nav .links a:hover{color:var(--ink)}
 .hero{margin:30px 0 8px;display:grid;grid-template-columns:1.25fr 1fr;gap:26px;align-items:center}
 h1{font-size:clamp(28px,5vw,46px);line-height:1.08;font-weight:900}
 h1 span{background:linear-gradient(90deg,#ffc400,#ff7a3d);-webkit-background-clip:text;background-clip:text;color:transparent}
@@ -131,7 +128,7 @@ svg{width:100%;height:auto;display:block}svg .base{stroke:rgba(255,255,255,.25);
 .sticky a{padding:11px 16px;border-radius:999px;font-weight:800;text-decoration:none;white-space:nowrap;box-shadow:0 10px 30px rgba(0,0,0,.45)}
 .sticky .a{background:var(--live);color:#fff}.sticky .b{background:var(--gold);color:#1a1405}
 @media (min-width:900px){.sticky{display:none}}
-@media (max-width:760px){.hero{grid-template-columns:1fr}.ring{width:120px;height:120px}.ring b{font-size:30px}nav .links a.hide{display:none}.mk{grid-template-columns:minmax(0,1fr) 80px 42px}}
+@media (max-width:760px){.hero{grid-template-columns:1fr}.ring{width:120px;height:120px}.ring b{font-size:30px}.mk{grid-template-columns:minmax(0,1fr) 80px 42px}}
 footer{margin-top:34px;color:var(--muted);font-size:12px}
 .online{display:inline-flex;align-items:center;gap:8px;background:rgba(46,204,113,.12);border:1px solid rgba(46,204,113,.35);color:#7dffb0;border-radius:999px;padding:5px 12px;font-size:12px;font-weight:800;margin:22px 0 0}
 """
@@ -165,7 +162,7 @@ LIVE_JS = """
 """
 
 
-def build(res: pd.DataFrame, now: pd.Timestamp) -> None:
+def build(res: pd.DataFrame, now: pd.Timestamp, blocks: dict | None = None) -> None:
     OUT.parent.mkdir(parents=True, exist_ok=True)
     if res is None or res.empty:
         res = pd.DataFrame(columns=["date", "sport", "home", "away", "score", "main_label", "main_odds", "main_hit"])
@@ -270,9 +267,10 @@ def build(res: pd.DataFrame, now: pd.Timestamp) -> None:
 <meta property="og:description" content="{escape(seo_desc)}"><meta property="og:locale" content="ru_RU">
 <meta name="twitter:card" content="summary"><meta name="theme-color" content="#070b1a">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css">
 <script type="application/ld+json">{{"@context":"https://schema.org","@type":"WebSite","name":"АИ СТАВИТ","url":"{SITE}","description":"{escape(seo_desc)}","sameAs":["{tg}"]}}</script>
 <style>{CSS}</style></head><body><main>
-<nav><a class="logo" href="./">АИ СТАВИТ</a><div class="links"><a href="matches.html">📺 Матчи онлайн</a><a class="hide" href="#stats">Статистика</a><a href="{tg}">Telegram</a></div></nav>
+<nav class="topnav"><a class="logo" href="./">АИ СТАВИТ</a><div class="links"><a href="matches.html">📺 Матчи онлайн</a><a href="predictions/">🎯 Прогнозы</a><a href="news/">📰 Новости</a><a href="feed.html">💬 Лента</a><a class="me" id="navUser" href="profile.html">Войти</a></div></nav>
 <section class="hero"><div>
 <h1>Прогнозы на спорт <span>с честной статистикой</span></h1>
 <p class="lead">Бот публикует прогноз за час до матча и сам считает итог — без удалений и подчисток. Футбол, НХЛ, НБА, теннис и киберспорт. А любой матч можно смотреть онлайн.</p>
@@ -281,6 +279,7 @@ def build(res: pd.DataFrame, now: pd.Timestamp) -> None:
 <div class="ringtxt"><h3>{int(hit.sum()) if len(res) else 0} из {len(res)}</h3><p>основных прогнозов зашли — все до одного учтены. Обновлено {now:%d.%m.%Y %H:%M} МСК.</p>{streak}</div></div></section>
 <section class="live" id="live" style="display:none"></section>
 <p class="online" id="online" style="display:none"></p>
+{f'<h2>🎯 Прогнозы на сегодня <a href="predictions/" class="small muted" style="font-weight:700;margin-left:auto">все прогнозы →</a></h2><div class="grid">{blocks["preds"]}</div>' if blocks and blocks.get("preds") else ""}
 <div class="kpis" id="stats">{kpis}</div>
 <h2>💰 Виртуальный банк</h2><div class="card">{_chart(curve) or '<span class="muted">Пока мало данных</span>'}
 <p class="muted small" style="margin-top:8px">Если ставить ровно по рекомендациям бота (1–3% банка на основной прогноз), начиная с {money(pro.BANK_START)} ₽.</p></div>
@@ -289,6 +288,7 @@ def build(res: pd.DataFrame, now: pd.Timestamp) -> None:
 <h2>🏅 По видам спорта</h2><div class="sp">{sport_cards}</div>
 <div class="grid2"><div><h2>🎯 По типам прогнозов</h2><div class="card">{markets}</div></div>
 <div><h2>🚀 Самые крупные заходы</h2><div class="card">{best_rows or '<span class="muted">Пока пусто</span>'}</div></div></div>
+{f'<h2>📰 Свежие новости спорта <a href="news/" class="small muted" style="font-weight:700;margin-left:auto">все новости →</a></h2><div class="grid">{blocks["news"]}</div>' if blocks and blocks.get("news") else ""}
 <h2>🧾 Последние прогнозы</h2><div class="feed" id="feed">{feed}</div>
 <button class="mbtn" onclick="document.getElementById('feed').classList.toggle('showall');this.textContent=this.textContent.startsWith('Показать')?'Свернуть':'Показать ещё 45'">Показать ещё 45</button>
 <div class="cta"><div><b>Прогнозы каждый день — в Telegram</b><br><span class="muted">Прогноз за час до матча, live-голы, экспрессы, разборы и честные итоги.</span></div>
@@ -296,7 +296,7 @@ def build(res: pd.DataFrame, now: pd.Timestamp) -> None:
 <footer>CLV — насколько выросла вероятность нашего исхода по линии букмекеров к началу матча: плюс значит, что бот нашёл ценность раньше рынка. 18+. Прогноз — не гарантия выигрыша.</footer>
 </main><div class="sticky"><a class="a" href="matches.html">📺 Онлайн</a><a class="b" href="{tg}">📲 Подписаться</a></div>
 <script>{LIVE_JS}</script>
-<script type="module">import("./fb.js").then(fb => {{ fb.track("index"); fb.watchOnline(n => {{ const el = document.getElementById("online");
+<script type="module">import("./fb.js").then(fb => {{ fb.track("index"); fb.navUser(document.getElementById("navUser")); fb.watchOnline(n => {{ const el = document.getElementById("online");
   el.style.display = "inline-flex"; el.innerHTML = `<span class="dot" style="background:#2ecc71;box-shadow:0 0 10px #2ecc71"></span>Сейчас на сайте: ${{n}}`; }}); }}).catch(() => {{}});</script></body></html>"""
     OUT.write_text(html, encoding="utf-8")
     print(f"Страница статистики обновлена: {len(res)} прогнозов")
