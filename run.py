@@ -636,6 +636,10 @@ def main():
             site.build(site_res, now)
         except Exception as e:
             print(f"  ! страница статистики не собралась: {e}")
+    try:
+        site.matches_json(events + other, {**matches, **load_json(OTHER, {})}, now)
+    except Exception as e:
+        print(f"  ! список матчей для 3D не обновился: {e}")
 
     for step in (news.run, tables.run):  # новость раз в час и таблица/рейтинг дня
         try:

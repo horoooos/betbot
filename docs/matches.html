@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Матчи в 3D — АИ СТАВИТ</title>
+<meta name="description" content="Все матчи дня в живом 3D: футбол, хоккей НХЛ, баскетбол НБА и теннис. Игроки, мяч и все моменты в реальном времени, плюс прогнозы бота АИ СТАВИТ.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root { --bg:#070b1a; --bg2:#0d1430; --card:#121a38; --card2:#18224a; --line:rgba(255,255,255,.09); --ink:#fff; --muted:#9aa6cc;
+          --gold:#ffc400; --live:#ff4646; --good:#2ecc71 }
+  * { box-sizing:border-box; margin:0; padding:0 }
+  body { background:radial-gradient(1200px 600px at 80% -10%, #1d2a66 0%, transparent 60%), radial-gradient(900px 500px at -10% 10%, #3a1d5a 0%, transparent 55%), var(--bg);
+         background-attachment:fixed; color:var(--ink); font:15px/1.45 Montserrat, system-ui, sans-serif; min-height:100vh }
+  main { max-width:1100px; margin:0 auto; padding:22px 16px 90px }
+  .top { display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap }
+  .brand { font-weight:900; letter-spacing:1px; color:var(--gold); text-decoration:none; font-size:14px }
+  .back { color:var(--muted); text-decoration:none; font-weight:700; font-size:13px }
+  h1 { font-size:clamp(26px,5vw,40px); font-weight:900; margin:18px 0 6px; line-height:1.1 }
+  h1 span { background:linear-gradient(90deg,#ffc400,#ff7a3d); -webkit-background-clip:text; background-clip:text; color:transparent }
+  .sub { color:var(--muted); max-width:640px }
+  .chips { display:flex; gap:8px; flex-wrap:wrap; margin:20px 0 8px }
+  .chip { border:1px solid var(--line); background:var(--card); color:var(--ink); border-radius:999px; padding:8px 14px; font:700 13px Montserrat,sans-serif; cursor:pointer }
+  .chip.on { background:var(--gold); color:#1a1405; border-color:var(--gold) }
+  .chip b { opacity:.6; margin-left:4px; font-weight:800 }
+  h2 { font-size:18px; font-weight:900; margin:26px 0 12px; display:flex; align-items:center; gap:10px }
+  h2 .n { font-size:12px; color:var(--muted); font-weight:700 }
+  .dot { width:10px; height:10px; border-radius:50%; background:var(--live); box-shadow:0 0 12px var(--live); animation:pulse 1.2s infinite }
+  @keyframes pulse { 50% { opacity:.35 } }
+  .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:12px }
+  .m { display:block; text-decoration:none; color:var(--ink); background:linear-gradient(160deg,var(--card2),var(--card)); border:1px solid var(--line);
+       border-radius:18px; padding:14px; transition:transform .15s, border-color .15s; position:relative; overflow:hidden }
+  .m:hover { transform:translateY(-2px); border-color:rgba(255,196,0,.5) }
+  .m.live { border-color:rgba(255,70,70,.55); box-shadow:0 0 0 1px rgba(255,70,70,.25), 0 10px 30px rgba(255,70,70,.12) }
+  .m .lg { display:flex; justify-content:space-between; gap:8px; font-size:11px; font-weight:700; color:var(--muted); letter-spacing:.5px; text-transform:uppercase; margin-bottom:10px }
+  .m .lg span:first-child { overflow:hidden; text-overflow:ellipsis; white-space:nowrap }
+  .st { flex:none; font-weight:800; letter-spacing:0 } .st.l { color:var(--live) } .st.f { color:var(--muted) }
+  .tm { display:flex; align-items:center; gap:10px; margin:6px 0; font-weight:800; font-size:15px }
+  .tm img { width:26px; height:26px; object-fit:contain; flex:none } .tm .ph { width:26px; height:26px; border-radius:50%; background:var(--line); flex:none }
+  .tm .nm { flex:1; min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap }
+  .tm .sc { font-size:20px; font-weight:900; min-width:24px; text-align:right; font-variant-numeric:tabular-nums }
+  .tm.win .nm { color:var(--gold) }
+  .ft { display:flex; align-items:center; justify-content:space-between; gap:8px; margin-top:12px; padding-top:10px; border-top:1px solid var(--line) }
+  .tip { font-size:12px; font-weight:700; color:var(--good); white-space:nowrap; overflow:hidden; text-overflow:ellipsis }
+  .tip.no { color:var(--muted); font-weight:600 }
+  .go { flex:none; font-size:12px; font-weight:800; background:rgba(255,196,0,.14); color:var(--gold); border-radius:10px; padding:6px 10px }
+  .m.live .go { background:var(--live); color:#fff }
+  .badge { position:absolute; top:0; right:0; background:var(--gold); color:#1a1405; font-size:10px; font-weight:900; padding:3px 10px; border-bottom-left-radius:10px; letter-spacing:.5px }
+  .empty { color:var(--muted); background:var(--card); border:1px dashed var(--line); border-radius:16px; padding:18px; text-align:center }
+  .cta { position:fixed; left:50%; bottom:14px; transform:translateX(-50%); background:var(--gold); color:#1a1405; text-decoration:none; font-weight:900;
+         padding:12px 20px; border-radius:999px; box-shadow:0 10px 30px rgba(0,0,0,.4); white-space:nowrap; z-index:5 }
+  .note { color:var(--muted); font-size:12px; margin-top:28px }
+</style>
+</head>
+<body>
+<main>
+  <div class="top"><a class="brand" href="./">АИ СТАВИТ</a><a class="back" href="./">← Статистика бота</a></div>
+  <h1>📺 Матчи <span>в живом 3D</span></h1>
+  <p class="sub">Игроки, мяч и шайба, голы, удары, карточки, VAR и замены — в реальном времени по данным матча. Выберите игру и смотрите прямо в браузере или в Telegram.</p>
+  <div class="chips" id="chips"></div>
+  <div id="list"><div class="empty">Загружаем матчи…</div></div>
+  <p class="note">Счёт и статус обновляются сами каждые 30 секунд. 3D-картинка строится по официальным событиям матча (удары, голы, фолы, замены), а движение игроков между ними — анимация. 18+.</p>
+</main>
+<a class="cta" href="https://t.me/aistavvit">📲 Прогнозы каждый день — @aistavvit</a>
+<script>
+const SP = { football: "⚽ Футбол", hockey: "🏒 Хоккей", basketball: "🏀 Баскетбол", tennis: "🎾 Теннис" };
+const EM = { football: "⚽", hockey: "🏒", basketball: "🏀", tennis: "🎾" };
+let all = [], live = {}, filter = "all";
+try { filter = localStorage.getItem("mfilter") || "all"; } catch (e) {}
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const time = iso => new Date(iso).toLocaleTimeString("ru-RU", { hour: "2-digit", minute: "2-digit", timeZone: "Europe/Moscow" });
+const day = iso => { const d = new Date(iso), n = new Date(); const f = x => x.toLocaleDateString("ru-RU", { timeZone: "Europe/Moscow" });
+  return f(d) === f(n) ? "сегодня" : f(d) === f(new Date(n.getTime() + 864e5)) ? "завтра" : d.toLocaleDateString("ru-RU", { day: "numeric", month: "short", timeZone: "Europe/Moscow" }); };
+
+async function scores() {
+  // статус и счёт берём у ESPN — только для лиг, где матч может идти прямо сейчас
+  const now = Date.now(), paths = new Set(all.filter(m => { const k = new Date(m.kickoff).getTime(); return k - 15 * 60e3 < now && now - k < 4 * 3600e3; }).map(m => m.path));
+  await Promise.all([...paths].map(async p => {
+    try {
+      const d = await (await fetch(`https://site.api.espn.com/apis/site/v2/sports/${p}/scoreboard`, { cache: "no-store" })).json();
+      const put = c => { const t = c.status?.type || {}, cs = c.competitors || [];
+        const h = cs.find(x => x.homeAway === "home") || [...cs].sort((a, b) => (a.order || 0) - (b.order || 0))[0];
+        const a = cs.find(x => x.homeAway === "away") || [...cs].sort((a, b) => (a.order || 0) - (b.order || 0))[1];
+        const sets = x => (x?.linescores || []).map(s => s.value);
+        live[String(c.id)] = { state: t.state, detail: t.shortDetail || "", clock: c.status?.displayClock, period: c.status?.period,
+          hs: p.startsWith("tennis") ? null : h?.score, as: p.startsWith("tennis") ? null : a?.score, hsets: sets(h), asets: sets(a), hw: h?.winner, aw: a?.winner }; };
+      for (const e of d.events || []) { if (e.competitions) for (const c of e.competitions) put({ ...c, id: c.id || e.id });
+        for (const g of e.groupings || []) for (const c of g.competitions || []) put(c); }
+    } catch (e) {}
+  }));
+}
+function status(m) {
+  const s = live[m.id], k = new Date(m.kickoff).getTime(), now = Date.now();
+  if (s) return s.state;
+  return k > now ? "pre" : now - k < 2 * 3600e3 ? "pre" : "post";
+}
+function card(m) {
+  const s = live[m.id] || {}, st = status(m);
+  let label = `${day(m.kickoff)}, ${time(m.kickoff)}`, cls = "";
+  if (st === "in") { cls = "l"; label = m.sport === "tennis" ? "● Идёт игра" : m.sport === "football" ? `● ${s.clock || s.detail}` : `● ${s.detail || s.clock}`; }
+  if (st === "post") { cls = "f"; label = "Завершён"; }
+  const ten = m.sport === "tennis", hsets = (s.hsets || []).join(" "), asets = (s.asets || []).join(" ");
+  const hsc = st === "pre" ? "" : ten ? hsets : (s.hs ?? ""), asc = st === "pre" ? "" : ten ? asets : (s.as ?? "");
+  const win = (st === "post") && (ten ? { h: s.hw, a: s.aw } : { h: +s.hs > +s.as, a: +s.as > +s.hs });
+  const img = u => u ? `<img src="${esc(u)}" alt="" loading="lazy">` : `<span class="ph"></span>`;
+  return `<a class="m ${st === "in" ? "live" : ""}" href="${esc(m.url)}">
+    ${m.top ? '<span class="badge">⭐ ПРОГНОЗ ДНЯ</span>' : ""}
+    <div class="lg"><span>${EM[m.sport] || ""} ${esc(m.league)}</span><span class="st ${cls}">${esc(label)}</span></div>
+    <div class="tm ${win && win.h ? "win" : ""}">${img(m.hl)}<span class="nm">${esc(m.home)}</span><span class="sc">${esc(hsc)}</span></div>
+    <div class="tm ${win && win.a ? "win" : ""}">${img(m.al)}<span class="nm">${esc(m.away)}</span><span class="sc">${esc(asc)}</span></div>
+    <div class="ft">${m.tip ? `<span class="tip">🎯 Прогноз: ${esc(m.tip)}</span>` : `<span class="tip no">Прогноз выйдет за час до начала</span>`}
+      <span class="go">${st === "in" ? "📺 Смотреть" : st === "post" ? "▶ Повтор" : "📺 3D"}</span></div></a>`;
+}
+function render() {
+  const counts = { all: all.length, tip: all.filter(m => m.tip).length };
+  for (const k in SP) counts[k] = all.filter(m => m.sport === k).length;
+  const chips = [["all", "Все"], ["tip", "🎯 С прогнозом бота"], ...Object.entries(SP)].filter(([k]) => counts[k] || k === "all");
+  document.getElementById("chips").innerHTML = chips.map(([k, n]) => `<button class="chip ${filter === k ? "on" : ""}" data-k="${k}">${n}<b>${counts[k]}</b></button>`).join("");
+  document.querySelectorAll(".chip").forEach(b => b.onclick = () => { filter = b.dataset.k; try { localStorage.setItem("mfilter", filter); } catch (e) {} render(); });
+  const list = all.filter(m => filter === "all" || (filter === "tip" ? m.tip : m.sport === filter));
+  const groups = [["in", '<span class="dot"></span>Сейчас в эфире'], ["pre", "⏳ Скоро"], ["post", "✅ Завершены"]];
+  let html = "";
+  for (const [st, title] of groups) {
+    let g = list.filter(m => status(m) === st);
+    if (st === "pre") g = g.sort((a, b) => a.kickoff.localeCompare(b.kickoff));
+    if (st === "post") g = g.reverse().slice(0, 24);
+    if (!g.length) { if (st === "in") html += `<h2>${title}</h2><div class="empty">Сейчас матчей в эфире нет — ближайшие ниже ⬇️</div>`; continue; }
+    html += `<h2>${title} <span class="n">${g.length}</span></h2><div class="grid">${g.map(card).join("")}</div>`;
+  }
+  document.getElementById("list").innerHTML = html || `<div class="empty">Матчей пока нет — загляните позже.</div>`;
+}
+async function load() {
+  try { all = await (await fetch("matches.json", { cache: "no-store" })).json(); } catch (e) { all = []; }
+  render(); await scores(); render();
+}
+load(); setInterval(async () => { await scores(); render(); }, 30000); setInterval(load, 10 * 60e3);
+</script>
+</body>
+</html>
