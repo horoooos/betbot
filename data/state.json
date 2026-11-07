@@ -5,7 +5,7 @@
  },
  "learned": "2026-11-07",
  "schedule_day": "2026-11-07",
- "content_slot": "2026-11-06-23",
+ "content_slot": "2026-11-07-10",
  "news_seen": [
   "https://www.sport-express.ru/hockey/khl/news/grebennikov-voshel-v-trenerskiy-shtab-razina-v-ska-smeniv-arzamasova-2468679/",
   "https://www.championat.com/hockey/news-6677138-yakupov-o-matche-avangarda-s-ak-barsom-pust-budet-ne-po-igre-glavnoe-my-pobedili.html",
@@ -1417,87 +1417,81 @@
   ]
  },
  "express": {
-  "msg": 2892,
+  "msg": 3564,
   "legs": [
    {
     "sport": "football",
-    "div": "UECL",
-    "id": "401915740",
+    "div": "ARG",
+    "id": "401841663",
     "side": "home",
-    "p": 0.8168285909226319,
+    "p": 0.8139759673595637,
     "odds": 1.167,
-    "kickoff": "2026-11-05T23:00:00+03:00",
-    "home": "Копенгаген",
-    "away": "Сабуртало",
-    "league": "🏆 Европа · Лига конференций",
+    "kickoff": "2026-11-07T23:30:00+03:00",
+    "home": "Росарио Сентраль",
+    "away": "Эстудиантес Рио-Куарто",
+    "league": "🇦🇷 Аргентина · Примера",
     "logos": [
-     "https://a.espncdn.com/i/teamlogos/soccer/500/909.png",
-     "https://a.espncdn.com/i/teamlogos/soccer/500/20025.png"
+     "https://a.espncdn.com/i/teamlogos/soccer/500/17.png",
+     "https://a.espncdn.com/i/teamlogos/soccer/500/19685.png"
+    ],
+    "colors": [
+     "ffff00",
+     "008bd0"
+    ],
+    "label": "Победа: Росарио Сентраль"
+   },
+   {
+    "sport": "football",
+    "div": "SP1",
+    "id": "401882808",
+    "side": "away",
+    "p": 0.751435779077881,
+    "odds": 1.263,
+    "kickoff": "2026-11-07T23:00:00+03:00",
+    "home": "Валенсия",
+    "away": "Реал Мадрид",
+    "league": "🇪🇸 Испания · Ла Лига",
+    "logos": [
+     "https://a.espncdn.com/i/teamlogos/soccer/500/94.png",
+     "https://a.espncdn.com/i/teamlogos/soccer/500/86.png"
     ],
     "colors": [
      "ffffff",
-     "000000"
+     "ffffff"
     ],
-    "label": "Победа: Копенгаген",
-    "win": true,
-    "score": "2:1"
+    "label": "Победа: Реал Мадрид"
    },
    {
     "sport": "football",
-    "div": "UECL",
-    "id": "401915823",
+    "div": "I1",
+    "id": "401874803",
     "side": "home",
-    "p": 0.8115706791107504,
-    "odds": 1.182,
-    "kickoff": "2026-11-05T23:00:00+03:00",
-    "home": "Лугано",
-    "away": "Жальгирис",
-    "league": "🏆 Европа · Лига конференций",
+    "p": 0.723583310393645,
+    "odds": 1.278,
+    "kickoff": "2026-11-07T22:45:00+03:00",
+    "home": "Рома",
+    "away": "Сассуоло",
+    "league": "🇮🇹 Италия · Серия A",
     "logos": [
-     "https://a.espncdn.com/i/teamlogos/soccer/500/7672.png",
-     "https://a.espncdn.com/i/teamlogos/soccer/500/20028.png"
+     "https://a.espncdn.com/i/teamlogos/soccer/500/104.png",
+     "https://a.espncdn.com/i/teamlogos/soccer/500/3997.png"
     ],
     "colors": [
-     "000000",
-     "000000"
+     "990a2c",
+     "0fa653"
     ],
-    "label": "Победа: Лугано",
-    "win": true,
-    "score": "3:0"
-   },
-   {
-    "sport": "football",
-    "div": "UECL",
-    "id": "401915822",
-    "side": "home",
-    "p": 0.7283217182680225,
-    "odds": 1.312,
-    "kickoff": "2026-11-05T23:00:00+03:00",
-    "home": "Твенте",
-    "away": "Пафос",
-    "league": "🏆 Европа · Лига конференций",
-    "logos": [
-     "https://a.espncdn.com/i/teamlogos/soccer/500/152.png",
-     "https://a.espncdn.com/i/teamlogos/soccer/500/22281.png"
-    ],
-    "colors": [
-     "F31522",
-     "82c0fe"
-    ],
-    "label": "Победа: Твенте",
-    "win": true,
-    "score": "3:1"
+    "label": "Победа: Рома"
    }
   ],
-  "odds": 1.809764928,
-  "day": "2026-11-05",
-  "done": true
+  "odds": 1.8836710380000001,
+  "day": "2026-11-07",
+  "done": false
  },
  "streak_posted": 0,
  "value_day": "2026-11-06",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-06",
- "site_stamp": "648|2026-11-07 09",
+ "site_stamp": "648|2026-11-07 10",
  "battle": {
   "bot": 1,
   "crowd": 1
