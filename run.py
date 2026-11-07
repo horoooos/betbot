@@ -585,7 +585,7 @@ def main():
     reviews.update({k: {"msg": m["msg_id"], "tip": m.get("main")} for k, m in load_json(OTHER, {}).items() if m.get("msg_id")})
     live_store = load_json(LIVE, {})
     try:
-        live.run(live_store, events + [e for e in other if e["sport"] != "tennis"], reviews, BRAND)
+        live.run(live_store, events + other, reviews, BRAND)
     except Exception as e:
         print(f"  ! live не удался: {e}")
     save_json(LIVE, live.cleanup(live_store, now))

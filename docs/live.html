@@ -4,64 +4,86 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
 <title>АИ СТАВИТ — матч в прямом эфире</title>
-<meta name="description" content="Живой 3D-трекер матча: счёт, минута, события на поле и статистика в реальном времени.">
+<meta name="description" content="Живой 3D-трекер матча: счёт, события на площадке и статистика в реальном времени.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800;900&display=swap" rel="stylesheet">
 <style>
-  :root { --bg:#070b1a; --card:rgba(16,22,46,.78); --line:rgba(255,255,255,.12); --ink:#fff; --muted:#a0acd0;
-          --gold:#ffc400; --live:#ff4646; --home:#2ecc71; --away:#3498db; }
+  :root { --bg:#070b1a; --card:rgba(16,22,46,.8); --line:rgba(255,255,255,.12); --ink:#fff; --muted:#a0acd0;
+          --gold:#ffc400; --live:#ff4646; }
   * { box-sizing:border-box; margin:0; padding:0 }
   html,body { height:100%; background:var(--bg); color:var(--ink); font-family:Montserrat,system-ui,sans-serif; overflow:hidden }
-  #scene { position:fixed; inset:0 }
-  .hud { position:fixed; left:0; right:0; pointer-events:none; padding:12px 14px }
-  .top { top:0 }
+  #scene { position:fixed; inset:0; width:100%; height:100%; display:block }
+  .hud { position:fixed; left:0; right:0; pointer-events:none; padding:12px 14px; z-index:3 }
+  .top { top:0 } .bottom { bottom:0 }
   .bar { display:flex; align-items:center; justify-content:space-between; gap:10px; background:var(--card);
          border:1px solid var(--line); border-radius:20px; padding:10px 14px; backdrop-filter:blur(10px); max-width:760px; margin:0 auto }
-  .team { display:flex; align-items:center; gap:8px; width:38%; min-width:0 }
+  .team { display:flex; align-items:center; gap:8px; flex:1 1 0; min-width:0 }
   .team.away { justify-content:flex-end; text-align:right }
   .team img { width:34px; height:34px; object-fit:contain; flex:none }
-  .team .nm { font-weight:800; font-size:14px; line-height:1.15; overflow:hidden; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; hyphens:auto }
+  .team img:not([src]) { display:none }
+  .team .nm { font-weight:800; font-size:14px; line-height:1.15; overflow:hidden; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical }
   .team .stripe { width:4px; height:30px; border-radius:2px; flex:none }
   .mid { text-align:center; flex:none }
-  .score { font-weight:800; font-size:30px; letter-spacing:1px }
+  .score { font-weight:900; font-size:30px; letter-spacing:1px; transition:transform .3s, color .3s }
+  .score.bump { transform:scale(1.35); color:var(--gold) }
+  .sets { font-size:11px; color:var(--muted); font-weight:700; margin-top:1px }
+  .sets:empty { display:none }
   .clock { display:inline-flex; align-items:center; gap:6px; font-size:12px; font-weight:700; color:var(--muted); margin-top:2px }
   .dot { width:8px; height:8px; border-radius:50%; background:var(--live); box-shadow:0 0 10px var(--live); animation:pulse 1.2s infinite }
   .dot.off { background:var(--muted); box-shadow:none; animation:none }
   @keyframes pulse { 50% { opacity:.35 } }
   .league { text-align:center; font-size:11px; font-weight:700; color:var(--muted); letter-spacing:1.5px; margin-top:6px; text-transform:uppercase }
-  #tag { position:fixed; pointer-events:none; transform:translate(-50%,-130%); padding:8px 12px 8px 14px; border-radius:14px;
+  #tag { position:fixed; z-index:2; pointer-events:none; transform:translate(-50%,-130%); padding:8px 12px 8px 14px; border-radius:14px;
          background:var(--card); border:1px solid var(--line); backdrop-filter:blur(8px); white-space:nowrap; opacity:0;
          transition:opacity .3s, left .9s cubic-bezier(.3,.7,.2,1), top .9s cubic-bezier(.3,.7,.2,1) }
   #tag .t { font-weight:800; font-size:14px } #tag .e { font-size:12px; color:var(--muted); font-weight:600 }
   #tag::before { content:""; position:absolute; left:0; top:8px; bottom:8px; width:4px; border-radius:2px; background:var(--c,#fff) }
-  #tag.goal .t { color:var(--gold); font-size:20px }
-  .bottom { bottom:0 }
+  #flash { position:fixed; inset:0; z-index:1; pointer-events:none; opacity:0 }
+  #big { position:fixed; left:50%; top:42%; z-index:4; pointer-events:none; transform:translate(-50%,-50%) scale(.2);
+         font-weight:900; font-size:min(22vw,150px); letter-spacing:4px; opacity:0; text-align:center; line-height:1; white-space:nowrap;
+         text-shadow:0 0 40px var(--bc,#ffc400), 0 0 90px var(--bc,#ffc400), 0 8px 0 rgba(0,0,0,.35) }
+  #big small { display:block; font-size:min(5vw,30px); letter-spacing:1px; margin-top:10px; text-shadow:0 2px 8px rgba(0,0,0,.6) }
+  #big.on { animation:boom 2.8s cubic-bezier(.2,1.4,.3,1) forwards }
+  @keyframes boom { 0% { opacity:0; transform:translate(-50%,-50%) scale(.2) rotate(-8deg) }
+    12% { opacity:1; transform:translate(-50%,-50%) scale(1.15) rotate(3deg) } 22% { transform:translate(-50%,-50%) scale(1) rotate(0) }
+    80% { opacity:1; transform:translate(-50%,-50%) scale(1.05) } 100% { opacity:0; transform:translate(-50%,-50%) scale(1.6) } }
+  #chip { position:fixed; left:50%; top:30%; z-index:4; pointer-events:none; transform:translate(-50%,-50%); opacity:0; white-space:nowrap;
+          padding:12px 22px; border-radius:18px; font-weight:900; font-size:22px; letter-spacing:1px; background:var(--card);
+          border:2px solid var(--cc,#fff); box-shadow:0 0 30px var(--cc,#fff) }
+  #chip.on { animation:chip 1.9s ease-out forwards }
+  @keyframes chip { 0% { opacity:0; transform:translate(-50%,-30%) scale(.7) } 15% { opacity:1; transform:translate(-50%,-50%) scale(1.05) }
+    75% { opacity:1 } 100% { opacity:0; transform:translate(-50%,-70%) scale(1) } }
   .panel { max-width:760px; margin:0 auto; background:var(--card); border:1px solid var(--line); border-radius:20px;
            padding:10px 14px; backdrop-filter:blur(10px) }
   #stats { display:grid; grid-template-columns:1fr 1fr; column-gap:18px }
-  .stat { display:grid; grid-template-columns:34px 1fr 34px; align-items:center; gap:6px; margin:2px 0; font-size:12px; font-weight:800 }
+  .stat { display:grid; grid-template-columns:38px 1fr 38px; align-items:center; gap:6px; margin:2px 0; font-size:12px; font-weight:800 }
   .stat .lbl { grid-column:1/4; text-align:center; font-size:10px; color:var(--muted); letter-spacing:1.2px; text-transform:uppercase; margin-bottom:-2px }
   .stat .v { text-align:center } .track { display:flex; height:6px; border-radius:3px; overflow:hidden; background:rgba(255,255,255,.08); gap:3px }
   .track i { display:block; height:100%; border-radius:3px; transition:width .8s } .track i:last-child { margin-left:auto }
   .feed { margin-top:6px; border-top:1px solid var(--line); padding-top:4px; font-size:12px; color:var(--muted); max-height:38px; overflow:hidden }
-  .feed div { white-space:nowrap; overflow:hidden; text-overflow:ellipsis; line-height:1.5 }
-  .feed b { color:var(--ink); margin-right:6px }
+  #stats:empty + .feed { margin-top:0; border-top:0; padding-top:0 }
+  .feed div { white-space:nowrap; overflow:hidden; text-overflow:ellipsis; line-height:1.5 } .feed b { color:var(--ink); margin-right:6px }
   .brand { position:fixed; right:14px; top:50%; transform:translateY(-50%) rotate(90deg); transform-origin:right center;
-           font-size:11px; color:rgba(255,255,255,.35); font-weight:700; letter-spacing:2px; pointer-events:none }
-  #msg { position:fixed; inset:0; display:flex; align-items:center; justify-content:center; text-align:center; padding:30px; font-weight:700; color:var(--muted) }
+           font-size:11px; color:rgba(255,255,255,.35); font-weight:700; letter-spacing:2px; pointer-events:none; z-index:3 }
+  #msg { position:fixed; inset:0; display:flex; align-items:center; justify-content:center; text-align:center; padding:30px; font-weight:700; color:var(--muted); z-index:5 }
   #replay { pointer-events:auto; display:none; margin:8px auto 0; background:var(--gold); color:#1e1606; border:0; border-radius:12px;
             padding:8px 16px; font:800 13px Montserrat,sans-serif }
   @media (max-height:560px) { .panel { padding:6px 10px } .stat .lbl { font-size:9px } .feed { display:none } }
-  @media (max-width:520px) { .team { width:41% } .team .nm { font-size:11px; letter-spacing:-.2px } .score { font-size:26px } .team img { width:24px; height:24px } .team .stripe { display:none } }
+  @media (max-width:520px) { .bar { gap:6px; padding:10px } .team { gap:5px } .team .nm { font-size:11px; letter-spacing:-.2px } .score { font-size:26px }
+    .team img { width:24px; height:24px } .team .stripe { display:none } #chip { font-size:18px } }
 </style>
 </head>
 <body>
 <canvas id="scene"></canvas>
+<div id="flash"></div>
+<div id="big"></div>
+<div id="chip"></div>
 <div id="msg">Загружаем матч…</div>
 <div class="hud top">
   <div class="bar">
     <div class="team home"><span class="stripe" id="hc"></span><img id="hl" alt=""><span class="nm" id="hn">—</span></div>
-    <div class="mid"><div class="score" id="sc">0 : 0</div><div class="clock"><span class="dot" id="dot"></span><span id="cl">—</span></div></div>
+    <div class="mid"><div class="score" id="sc">0 : 0</div><div class="sets" id="sets"></div>
+      <div class="clock"><span class="dot" id="dot"></span><span id="cl">—</span></div></div>
     <div class="team away"><span class="nm" id="an">—</span><img id="al" alt=""><span class="stripe" id="ac"></span></div>
   </div>
   <div class="league" id="lg"></div>
@@ -75,98 +97,172 @@
 <script type="module">
 import * as THREE from "three";
 
-// ── параметры ссылки: лига ESPN, id матча, русские названия ─────────────────
+// ── параметры: вид спорта, путь ESPN, id матча, русские названия ─────────────
 const q = new URLSearchParams(location.search);
-const LEAGUE = q.get("l") || "eng.1", EVENT = q.get("e"), RU_H = q.get("h"), RU_A = q.get("a");
-const API = `https://site.api.espn.com/apis/site/v2/sports/soccer/${LEAGUE}/summary?event=${EVENT}`;
+const SPORT = q.get("s") || "football";
+const PATH = q.get("p") || `soccer/${q.get("l") || "eng.1"}`;      // старые ссылки: l=eng.1
+const EVENT = q.get("e"), RU_H = q.get("h"), RU_A = q.get("a");
 const $ = id => document.getElementById(id);
 if (window.Telegram && Telegram.WebApp) { Telegram.WebApp.ready(); Telegram.WebApp.expand(); }
 
-// ── 3D-сцена: стадион, поле, ворота, прожекторы, мяч ─────────────────────────
-const L = 105, Wd = 68;                                   // размеры поля в метрах
-const canvas = $("scene");
-const renderer = new THREE.WebGLRenderer({ canvas, antialias: true });
+// размеры площадок в метрах
+const FIELD = { football: [105, 68], hockey: [61, 26], basketball: [28.6, 15.2], tennis: [23.8, 11] }[SPORT] || [105, 68];
+const [L, Wd] = FIELD;
+const SC = L / 105;                                       // масштаб камеры и эффектов относительно футбола
+
+// ── сцена и рендер ───────────────────────────────────────────────────────────
+const renderer = new THREE.WebGLRenderer({ canvas: $("scene"), antialias: true });
 renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
-renderer.shadowMap.enabled = true;
 const scene = new THREE.Scene();
 scene.background = new THREE.Color(0x070b1a);
-scene.fog = new THREE.Fog(0x070b1a, 170, 340);
-const camera = new THREE.PerspectiveCamera(42, 1, 0.1, 600);
-const world = new THREE.Group(); scene.add(world);        // стадион целиком: на вертикальном экране поворачиваем на 90°
+scene.fog = new THREE.Fog(0x070b1a, 170 * SC, 340 * SC);
+const camera = new THREE.PerspectiveCamera(42, 1, 1, 900);
+const world = new THREE.Group(); scene.add(world);
+const MAXANI = renderer.capabilities.getMaxAnisotropy();
 
-function pitchTexture() {                                 // газон с полосами и разметкой
-  const c = document.createElement("canvas"); c.width = 2100; c.height = 1360;
-  const g = c.getContext("2d"), k = c.width / L;
-  for (let i = 0; i < 14; i++) { g.fillStyle = i % 2 ? "#2f8f3a" : "#35a042"; g.fillRect(i * c.width / 14, 0, c.width / 14 + 1, c.height); }
-  g.strokeStyle = "rgba(255,255,255,.92)"; g.lineWidth = 0.14 * k;
-  const R = (x, y, w, h) => g.strokeRect(x * k, y * k, w * k, h * k);
-  R(0.5, 0.5, L - 1, Wd - 1);
-  g.beginPath(); g.moveTo(L / 2 * k, 0.5 * k); g.lineTo(L / 2 * k, (Wd - 0.5) * k); g.stroke();
-  g.beginPath(); g.arc(L / 2 * k, Wd / 2 * k, 9.15 * k, 0, Math.PI * 2); g.stroke();
-  for (const s of [0, 1]) {
-    const x = s ? L - 0.5 : 0.5, d = s ? -1 : 1;
-    R(s ? L - 0.5 - 16.5 : 0.5, Wd / 2 - 20.16, 16.5, 40.32);
-    R(s ? L - 0.5 - 5.5 : 0.5, Wd / 2 - 9.16, 5.5, 18.32);
-    g.beginPath(); g.arc((x + d * 11) * k, Wd / 2 * k, 9.15 * k, s ? Math.PI * 0.705 : -Math.PI * 0.295, s ? Math.PI * 1.295 : Math.PI * 0.295); g.stroke();
-    g.fillStyle = "#fff"; g.beginPath(); g.arc((x + d * 11) * k, Wd / 2 * k, 0.3 * k, 0, 7); g.fill();
-  }
-  g.fillStyle = "#fff"; g.beginPath(); g.arc(L / 2 * k, Wd / 2 * k, 0.3 * k, 0, 7); g.fill();
-  const t = new THREE.CanvasTexture(c); t.anisotropy = 8; t.colorSpace = THREE.SRGBColorSpace; return t;
+function tex(c) {                                         // текстура без ряби: мипмапы и анизотропная фильтрация
+  const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace; t.anisotropy = MAXANI;
+  t.minFilter = THREE.LinearMipmapLinearFilter; t.generateMipmaps = true; return t;
 }
-const pitch = new THREE.Mesh(new THREE.PlaneGeometry(L, Wd), new THREE.MeshStandardMaterial({ map: pitchTexture(), roughness: .9 }));
-pitch.rotation.x = -Math.PI / 2; pitch.receiveShadow = true; world.add(pitch);
-const apron = new THREE.Mesh(new THREE.PlaneGeometry(L + 24, Wd + 24), new THREE.MeshStandardMaterial({ color: 0x1d5a26, roughness: 1 }));
-apron.rotation.x = -Math.PI / 2; apron.position.y = -0.02; world.add(apron);
+function surface(draw, w = 2048) {
+  const c = document.createElement("canvas"); c.width = w; c.height = Math.round(w * Wd / L);
+  const g = c.getContext("2d"), k = c.width / L; draw(g, k, c); return tex(c);
+}
+const line = (g, k, w = .12) => { g.strokeStyle = "rgba(255,255,255,.95)"; g.lineWidth = Math.max(3, w * k); };
 
-// подсветка половины поля команды, которая сейчас атакует
+// ── площадки ─────────────────────────────────────────────────────────────────
+const DRAW = {
+  football(g, k, c) {   // мягкие полосы газона (резкие контрастные полосы и давали «рябь» на телефоне)
+    for (let i = 0; i < 12; i++) { g.fillStyle = i % 2 ? "#2f8f3b" : "#33983f"; g.fillRect(i * c.width / 12, 0, c.width / 12 + 1, c.height); }
+    line(g, k, .16); const Rc = (x, y, w, h) => g.strokeRect(x * k, y * k, w * k, h * k);
+    Rc(.5, .5, L - 1, Wd - 1);
+    g.beginPath(); g.moveTo(L / 2 * k, .5 * k); g.lineTo(L / 2 * k, (Wd - .5) * k); g.stroke();
+    g.beginPath(); g.arc(L / 2 * k, Wd / 2 * k, 9.15 * k, 0, 7); g.stroke();
+    for (const s of [0, 1]) {
+      const x = s ? L - .5 : .5, d = s ? -1 : 1;
+      Rc(s ? L - 17 : .5, Wd / 2 - 20.16, 16.5, 40.32); Rc(s ? L - 6 : .5, Wd / 2 - 9.16, 5.5, 18.32);
+      g.beginPath(); g.arc((x + d * 11) * k, Wd / 2 * k, 9.15 * k, s ? Math.PI * .705 : -Math.PI * .295, s ? Math.PI * 1.295 : Math.PI * .295); g.stroke();
+    }
+  },
+  hockey(g, k, c) {
+    g.fillStyle = "#eef4fb"; g.fillRect(0, 0, c.width, c.height);
+    const X = v => (v + L / 2) * k, Y = v => (v + Wd / 2) * k;
+    g.fillStyle = "#c8202f"; g.fillRect(X(-.15), 0, .3 * k, c.height);
+    g.fillStyle = "#1f4fb8"; for (const x of [-7.6, 7.6]) g.fillRect(X(x) - .15 * k, 0, .3 * k, c.height);
+    g.strokeStyle = "#c8202f"; g.lineWidth = .1 * k;
+    for (const x of [-26.5, 26.5]) { g.beginPath(); g.moveTo(X(x), 0); g.lineTo(X(x), c.height); g.stroke(); }
+    g.strokeStyle = "#1f4fb8"; g.beginPath(); g.arc(X(0), Y(0), 4.5 * k, 0, 7); g.stroke();
+    g.strokeStyle = "#c8202f"; for (const [x, y] of [[-20, -6.7], [-20, 6.7], [20, -6.7], [20, 6.7]]) { g.beginPath(); g.arc(X(x), Y(y), 4.5 * k, 0, 7); g.stroke(); }
+    g.fillStyle = "rgba(80,140,230,.55)"; for (const s of [-1, 1]) { g.beginPath(); g.arc(X(s * 26.5), Y(0), 1.8 * k, s < 0 ? -Math.PI / 2 : Math.PI / 2, s < 0 ? Math.PI / 2 : Math.PI * 1.5); g.fill(); }
+  },
+  basketball(g, k, c) {
+    for (let i = 0; i < 24; i++) { g.fillStyle = i % 2 ? "#cc8d4d" : "#d29452"; g.fillRect(0, i * c.height / 24, c.width, c.height / 24 + 1); }
+    line(g, k, .06); const X = v => (v + L / 2) * k, Y = v => (v + Wd / 2) * k;
+    g.strokeRect(X(-L / 2 + .05), Y(-Wd / 2 + .05), (L - .1) * k, (Wd - .1) * k);
+    g.beginPath(); g.moveTo(X(0), 0); g.lineTo(X(0), c.height); g.stroke();
+    g.beginPath(); g.arc(X(0), Y(0), 1.8 * k, 0, 7); g.stroke();
+    for (const s of [-1, 1]) {
+      const bx = s * (L / 2 - 1.575), x0 = s < 0 ? X(-L / 2) : X(L / 2 - 5.8);
+      g.fillStyle = "rgba(120,30,30,.55)"; g.fillRect(x0, Y(-2.45), 5.8 * k, 4.9 * k); g.strokeRect(x0, Y(-2.45), 5.8 * k, 4.9 * k);
+      g.beginPath(); g.arc(X(bx), Y(0), 6.75 * k, s < 0 ? -Math.PI * .45 : Math.PI * .55, s < 0 ? Math.PI * .45 : Math.PI * 1.45); g.stroke();
+    }
+  },
+  tennis(g, k, c) {
+    g.fillStyle = "#2c5fa8"; g.fillRect(0, 0, c.width, c.height);
+    line(g, k, .07); const X = v => (v + L / 2) * k, Y = v => (v + Wd / 2) * k;
+    g.strokeRect(X(-L / 2 + .05), Y(-5.485), (L - .1) * k, 10.97 * k);
+    g.strokeRect(X(-L / 2 + .05), Y(-4.115), (L - .1) * k, 8.23 * k);
+    for (const x of [-6.4, 6.4]) { g.beginPath(); g.moveTo(X(x), Y(-4.115)); g.lineTo(X(x), Y(4.115)); g.stroke(); }
+    g.beginPath(); g.moveTo(X(-6.4), Y(0)); g.lineTo(X(6.4), Y(0)); g.stroke();
+  },
+};
+const ground = { football: 0x1d5a26, hockey: 0x9fb4c8, basketball: 0x3a2412, tennis: 0x2d6a3e }[SPORT] || 0x1d5a26;
+const apron = new THREE.Mesh(new THREE.PlaneGeometry(L * 1.25, Wd * 1.35), new THREE.MeshStandardMaterial({ color: ground, roughness: 1 }));
+apron.rotation.x = -Math.PI / 2; apron.position.y = -.25; world.add(apron);
+const pitch = new THREE.Mesh(new THREE.PlaneGeometry(L, Wd), new THREE.MeshStandardMaterial({ map: surface(DRAW[SPORT] || DRAW.football), roughness: SPORT === "hockey" ? .3 : .9 }));
+pitch.rotation.x = -Math.PI / 2; world.add(pitch);
+
+// подсветка половины атакующей команды
 const zoneMat = new THREE.MeshBasicMaterial({ color: 0x2ecc71, transparent: true, opacity: 0, depthWrite: false });
 const zone = new THREE.Mesh(new THREE.PlaneGeometry(L / 2, Wd), zoneMat);
-zone.rotation.x = -Math.PI / 2; zone.position.y = 0.03; world.add(zone);
+zone.rotation.x = -Math.PI / 2; zone.position.y = .08; world.add(zone);
 
-function goal(side) {                                     // ворота: штанги, перекладина и сетка
-  const grp = new THREE.Group(), m = new THREE.MeshStandardMaterial({ color: 0xffffff, roughness: .3, metalness: .2 });
-  const post = (z) => { const p = new THREE.Mesh(new THREE.CylinderGeometry(.12, .12, 2.44), m); p.position.set(0, 1.22, z); p.castShadow = true; grp.add(p); };
-  post(-3.66); post(3.66);
-  const bar = new THREE.Mesh(new THREE.CylinderGeometry(.12, .12, 7.32), m); bar.rotation.x = Math.PI / 2; bar.position.set(0, 2.44, 0); grp.add(bar);
-  const net = new THREE.Mesh(new THREE.BoxGeometry(2, 2.44, 7.32), new THREE.MeshBasicMaterial({ color: 0xffffff, wireframe: true, transparent: true, opacity: .25 }));
-  net.position.set(side * 1, 1.22, 0); grp.add(net);
+// ворота / кольца / сетка
+const white = new THREE.MeshStandardMaterial({ color: 0xffffff, roughness: .3, metalness: .2, emissive: 0x000000 });
+const red = new THREE.MeshStandardMaterial({ color: 0xd12a2a, roughness: .4, emissive: 0x000000 });
+const nets = [], posts = [];
+function footballGoal(side) {
+  const grp = new THREE.Group();
+  for (const z of [-3.66, 3.66]) { const p = new THREE.Mesh(new THREE.CylinderGeometry(.12, .12, 2.44), white); p.position.set(0, 1.22, z); grp.add(p); }
+  const bar = new THREE.Mesh(new THREE.CylinderGeometry(.12, .12, 7.32), white); bar.rotation.x = Math.PI / 2; bar.position.y = 2.44; grp.add(bar);
+  const net = new THREE.Mesh(new THREE.BoxGeometry(2, 2.44, 7.32, 4, 4, 8), new THREE.MeshBasicMaterial({ color: 0xffffff, wireframe: true, transparent: true, opacity: .3 }));
+  net.position.set(side, 1.22, 0); grp.add(net); net.userData.side = side; nets.push(net);
   grp.position.x = side * L / 2; world.add(grp);
 }
-goal(-1); goal(1);
+function hockeyGoal(side) {
+  const grp = new THREE.Group();
+  const frame = new THREE.Mesh(new THREE.TorusGeometry(.9, .05, 8, 24, Math.PI), red); frame.rotation.y = Math.PI / 2; grp.add(frame);
+  const net = new THREE.Mesh(new THREE.SphereGeometry(.9, 12, 8, 0, Math.PI, 0, Math.PI / 2), new THREE.MeshBasicMaterial({ color: 0xffffff, wireframe: true, transparent: true, opacity: .45 }));
+  net.rotation.y = side > 0 ? -Math.PI / 2 : Math.PI / 2; grp.add(net); net.userData.side = side; nets.push(net);
+  grp.position.x = side * 26.5; world.add(grp);
+}
+function hoop(side) {
+  const grp = new THREE.Group();
+  const pole = new THREE.Mesh(new THREE.CylinderGeometry(.08, .08, 3.05), white); pole.position.set(side * .6, 1.52, 0); grp.add(pole);
+  const board = new THREE.Mesh(new THREE.BoxGeometry(.05, 1.05, 1.8), new THREE.MeshStandardMaterial({ color: 0xffffff, transparent: true, opacity: .6 }));
+  board.position.set(0, 3.4, 0); grp.add(board);
+  const rim = new THREE.Mesh(new THREE.TorusGeometry(.23, .02, 8, 24), new THREE.MeshStandardMaterial({ color: 0xff6a00, emissive: 0x552200 }));
+  rim.rotation.x = Math.PI / 2; rim.position.set(-side * .38, 3.05, 0); grp.add(rim);
+  const net = new THREE.Mesh(new THREE.CylinderGeometry(.23, .15, .45, 12, 3, true), new THREE.MeshBasicMaterial({ color: 0xffffff, wireframe: true, transparent: true, opacity: .7 }));
+  net.position.set(-side * .38, 2.8, 0); grp.add(net); net.userData.side = side; nets.push(net);
+  grp.position.x = side * (L / 2 - 1.2); world.add(grp);
+}
+if (SPORT === "football") { footballGoal(-1); footballGoal(1); posts.push(white); }
+if (SPORT === "hockey") {
+  hockeyGoal(-1); hockeyGoal(1); posts.push(red);
+  const boardMat = new THREE.MeshStandardMaterial({ color: 0xffffff, roughness: .4 });
+  const glassMat = new THREE.MeshStandardMaterial({ color: 0x9fd0ff, transparent: true, opacity: .15 });
+  for (const [w, x, z, ry] of [[L, 0, -Wd / 2, 0], [L, 0, Wd / 2, 0], [Wd, -L / 2, 0, Math.PI / 2], [Wd, L / 2, 0, Math.PI / 2]]) {
+    const b = new THREE.Mesh(new THREE.BoxGeometry(w, 1.1, .2), boardMat); b.position.set(x, .55, z); b.rotation.y = ry; world.add(b);
+    const gl = new THREE.Mesh(new THREE.BoxGeometry(w, 1.8, .05), glassMat); gl.position.set(x, 2, z); gl.rotation.y = ry; world.add(gl);
+  }
+}
+if (SPORT === "basketball") { hoop(-1); hoop(1); posts.push(white); }
+if (SPORT === "tennis") {
+  const net = new THREE.Mesh(new THREE.BoxGeometry(.05, .95, 12.8, 1, 6, 30), new THREE.MeshBasicMaterial({ color: 0xffffff, wireframe: true, transparent: true, opacity: .6 }));
+  net.position.y = .48; world.add(net); nets.push(net);
+  const tape = new THREE.Mesh(new THREE.BoxGeometry(.07, .06, 12.8), white); tape.position.y = .95; world.add(tape);
+}
 
-// трибуны: тёмные ступени со светящейся полосой
+// трибуны со светящейся полосой
 const standMat = new THREE.MeshStandardMaterial({ color: 0x141a33, roughness: 1 });
 const glowMat = new THREE.MeshBasicMaterial({ color: 0xffc400 });
-for (const [w, d, x, z, ry] of [[L + 30, 14, 0, -(Wd / 2 + 16), 0], [L + 30, 14, 0, Wd / 2 + 16, 0], [Wd + 30, 14, -(L / 2 + 16), 0, Math.PI / 2], [Wd + 30, 14, L / 2 + 16, 0, Math.PI / 2]]) {
-  for (let i = 0; i < 4; i++) {
-    const s = new THREE.Mesh(new THREE.BoxGeometry(w, 2.2, d / 4), standMat);
-    s.position.set(x, 1.1 + i * 2.2, z); s.rotation.y = ry;
-    const off = (i - 1.5) * d / 4 * Math.sign(z || x);
-    if (ry) s.position.x += off; else s.position.z += off; world.add(s);
-  }
-  const strip = new THREE.Mesh(new THREE.BoxGeometry(w, .25, .25), glowMat);
-  strip.position.set(x, 9, z); strip.rotation.y = ry; world.add(strip);
+const gap = 12 * Math.max(SC, .25), sh = 9 * Math.max(SC, .3);
+for (const [w, x, z, ry] of [[L * 1.3, 0, -(Wd / 2 + gap), 0], [L * 1.3, 0, Wd / 2 + gap, 0], [Wd * 1.6, -(L / 2 + gap), 0, Math.PI / 2], [Wd * 1.6, L / 2 + gap, 0, Math.PI / 2]]) {
+  const s = new THREE.Mesh(new THREE.BoxGeometry(w, sh, gap * .9), standMat); s.position.set(x, sh / 2, z); s.rotation.y = ry; world.add(s);
+  const strip = new THREE.Mesh(new THREE.BoxGeometry(w, .25 * SC + .05, .25 * SC + .05), glowMat); strip.position.set(x, sh + .1, z); strip.rotation.y = ry; world.add(strip);
 }
 
-// свет: мягкий общий + 4 прожектора по углам
-const hemi = new THREE.HemisphereLight(0xbfd6ff, 0x0a1a0a, .55); scene.add(hemi);
-for (const [x, z] of [[-60, -45], [60, -45], [-60, 45], [60, 45]]) {
-  const l = new THREE.SpotLight(0xffffff, 900, 220, Math.PI / 5, .5, 1.6);
-  l.position.set(x, 45, z); l.target.position.set(0, 0, 0); l.castShadow = x < 0 && z < 0;
-  scene.add(l, l.target);
-  const lamp = new THREE.Mesh(new THREE.SphereGeometry(1.4, 16, 16), new THREE.MeshBasicMaterial({ color: 0xfff4c8 }));
-  lamp.position.set(x, 45, z); scene.add(lamp);
+// свет без теней: тени от прожектора и давали мерцание («рябь») поля на телефонах
+const hemi = new THREE.HemisphereLight(0xdfe8ff, 0x1a2a1a, 1.1); scene.add(hemi);
+const sun = new THREE.DirectionalLight(0xffffff, 1.2); sun.position.set(30, 80, 40); scene.add(sun);
+for (const [x, z] of [[-1, -1], [1, -1], [-1, 1], [1, 1]]) {
+  const lamp = new THREE.Mesh(new THREE.SphereGeometry(1.4 * SC + .2, 16, 16), new THREE.MeshBasicMaterial({ color: 0xfff4c8 }));
+  lamp.position.set(x * L * .6, 45 * SC + 4, z * Wd * .7); scene.add(lamp);
 }
 
-// мяч со свечением и следом
-const ball = new THREE.Mesh(new THREE.SphereGeometry(.55, 32, 32), new THREE.MeshStandardMaterial({ color: 0xffffff, emissive: 0xffffff, emissiveIntensity: .35, roughness: .4 }));
-ball.castShadow = true; ball.position.set(0, .55, 0); world.add(ball);
+// мяч / шайба со свечением, кольцом и шлейфом
+const R = ({ football: .55, hockey: .3, basketball: .38, tennis: .2 }[SPORT]) || .55;
+const ballGeo = SPORT === "hockey" ? new THREE.CylinderGeometry(R, R, R * .5, 24) : new THREE.SphereGeometry(R, 32, 32);
+const ballCol = ({ football: 0xffffff, hockey: 0x111111, basketball: 0xff7a1a, tennis: 0xd9ff3a }[SPORT]) ?? 0xffffff;
+const ball = new THREE.Mesh(ballGeo, new THREE.MeshStandardMaterial({ color: ballCol, emissive: ballCol, emissiveIntensity: SPORT === "hockey" ? 0 : .35, roughness: .4 }));
+ball.position.set(0, R, 0); world.add(ball);
 const glowTex = (() => { const c = document.createElement("canvas"); c.width = c.height = 128; const g = c.getContext("2d");
   const r = g.createRadialGradient(64, 64, 0, 64, 64, 64); r.addColorStop(0, "rgba(255,230,140,1)"); r.addColorStop(.35, "rgba(255,196,0,.45)"); r.addColorStop(1, "rgba(255,196,0,0)");
   g.fillStyle = r; g.fillRect(0, 0, 128, 128); return new THREE.CanvasTexture(c); })();
-const halo = new THREE.Sprite(new THREE.SpriteMaterial({ map: glowTex, transparent: true, depthWrite: false })); halo.scale.set(7, 7, 1); world.add(halo);
-const ring = new THREE.Mesh(new THREE.RingGeometry(1.2, 1.6, 48), new THREE.MeshBasicMaterial({ color: 0xffc400, transparent: true, opacity: .8, side: THREE.DoubleSide }));
-ring.rotation.x = -Math.PI / 2; ring.position.y = .05; world.add(ring);
+const halo = new THREE.Sprite(new THREE.SpriteMaterial({ map: glowTex, transparent: true, depthWrite: false })); halo.scale.setScalar(7 * SC + 1); world.add(halo);
+const ring = new THREE.Mesh(new THREE.RingGeometry(1.2 * SC + .2, 1.6 * SC + .3, 48), new THREE.MeshBasicMaterial({ color: 0xffc400, transparent: true, opacity: .8, side: THREE.DoubleSide, depthWrite: false }));
+ring.rotation.x = -Math.PI / 2; ring.position.y = .1; world.add(ring);
 const trailPts = Array.from({ length: 40 }, () => ball.position.clone());
 const trail = new THREE.Line(new THREE.BufferGeometry().setFromPoints(trailPts), new THREE.LineBasicMaterial({ color: 0xffc400, transparent: true, opacity: .55 }));
 world.add(trail);
@@ -174,160 +270,289 @@ world.add(trail);
 function resize() { const w = innerWidth, h = innerHeight; renderer.setSize(w, h, false); camera.aspect = w / h; camera.updateProjectionMatrix(); }
 addEventListener("resize", resize); resize();
 
-// ── анимация мяча: полёт по дуге к точке события ─────────────────────────────
-let from = ball.position.clone(), to = from.clone(), t0 = 0, dur = 1, arc = 0, shake = 0;
-function flyTo(x, z, h = 6) { from = ball.position.clone(); to = new THREE.Vector3(x, .55, z); t0 = performance.now(); dur = 1100; arc = h; }
+// ── эффекты: салют, ударная волна, вспышка экрана, надписи, карточки ─────────
+const fx = [];
+function burst(pos, colors, n = 160, power = 1) {
+  const geo = new THREE.BufferGeometry(), p = new Float32Array(n * 3), c = new Float32Array(n * 3), v = [];
+  for (let i = 0; i < n; i++) {
+    p.set([pos.x, pos.y, pos.z], i * 3);
+    const col = new THREE.Color(colors[i % colors.length]); c.set([col.r, col.g, col.b], i * 3);
+    const th = Math.random() * Math.PI * 2, ph = Math.random() * Math.PI / 2, s = ((8 + Math.random() * 14) * SC + 1) * power;
+    v.push(new THREE.Vector3(Math.cos(th) * Math.cos(ph) * s, Math.sin(ph) * s * 1.3, Math.sin(th) * Math.cos(ph) * s));
+  }
+  geo.setAttribute("position", new THREE.BufferAttribute(p, 3)); geo.setAttribute("color", new THREE.BufferAttribute(c, 3));
+  const pts = new THREE.Points(geo, new THREE.PointsMaterial({ size: .9 * SC + .12, vertexColors: true, transparent: true, depthWrite: false, blending: THREE.AdditiveBlending }));
+  world.add(pts); fx.push({ kind: "burst", obj: pts, v, t: 0, life: 2.4 });
+}
+function shock(pos, color, size = 8) {
+  const m = new THREE.Mesh(new THREE.RingGeometry(.6, 1, 64), new THREE.MeshBasicMaterial({ color, transparent: true, opacity: .9, side: THREE.DoubleSide, depthWrite: false, blending: THREE.AdditiveBlending }));
+  m.rotation.x = -Math.PI / 2; m.position.set(pos.x, .12, pos.z); world.add(m); fx.push({ kind: "shock", obj: m, t: 0, life: 1.2, size: size * SC + 1 });
+}
+function flash(color, strength = .45) {
+  const f = $("flash"); f.style.transition = "none"; f.style.background = `radial-gradient(circle at 50% 45%, ${color}, transparent 70%)`;
+  f.style.opacity = strength; void f.offsetWidth; f.style.transition = "opacity 1.4s"; f.style.opacity = 0;
+}
+function bigText(text, sub, color) {
+  const b = $("big"); b.innerHTML = `${text}${sub ? `<small>${sub}</small>` : ""}`; b.style.setProperty("--bc", color); b.style.color = "#fff";
+  b.classList.remove("on"); void b.offsetWidth; b.classList.add("on");
+}
+function chip(text, color) {
+  const c = $("chip"); c.textContent = text; c.style.setProperty("--cc", color); c.style.color = color;
+  c.classList.remove("on"); void c.offsetWidth; c.classList.add("on");
+}
+function cardPop(pos, color) {
+  const m = new THREE.Mesh(new THREE.PlaneGeometry(1.4 * SC + .3, 2 * SC + .4), new THREE.MeshBasicMaterial({ color, side: THREE.DoubleSide, transparent: true }));
+  m.position.set(pos.x, 1, pos.z); world.add(m); fx.push({ kind: "card", obj: m, t: 0, life: 2.2 });
+}
+function netShake(side) { for (const n of nets) if (!side || n.userData.side === side) n.userData.shake = 1; }
+let shake = 0, camGoal = 0, postGlow = 0;
 
-let camGoal = 0;
+// ── анимация ─────────────────────────────────────────────────────────────────
+let from = ball.position.clone(), to = from.clone(), t0 = 0, dur = 1, arc = 0;
+function flyTo(x, z, h, y = R) { from = ball.position.clone(); to = new THREE.Vector3(x, y, z); t0 = performance.now(); dur = 1100; arc = h; }
+let last = performance.now();
+const tag = $("tag");
 function animate(now) {
   requestAnimationFrame(animate);
+  const dt = Math.min((now - last) / 1000, .05); last = now;
   const k = Math.min((now - t0) / dur, 1), e = 1 - Math.pow(1 - k, 3);
-  ball.position.lerpVectors(from, to, e);
-  ball.position.y = .55 + Math.sin(Math.PI * k) * arc;
-  ball.rotation.x += .08 * (1 - k) + .005; ball.rotation.z += .05 * (1 - k);
+  ball.position.lerpVectors(from, to, e); ball.position.y = to.y + Math.sin(Math.PI * k) * arc;
+  if (SPORT !== "hockey") { ball.rotation.x += .08 * (1 - k) + .005; ball.rotation.z += .05 * (1 - k); }
   halo.position.copy(ball.position); ring.position.x = ball.position.x; ring.position.z = ball.position.z;
   ring.scale.setScalar(1 + .25 * Math.sin(now / 250));
   trailPts.pop(); trailPts.unshift(ball.position.clone()); trail.geometry.setFromPoints(trailPts);
-  // камера медленно плывёт вокруг поля и чуть следит за мячом; при голе — наезд
-  const a = now / 9000, zoom = camGoal > now ? 0.62 : 1;
-  let tx = ball.position.x * .35, tz = ball.position.z * .2;
+  for (let i = fx.length - 1; i >= 0; i--) {
+    const f = fx[i]; f.t += dt; const a = f.t / f.life;
+    if (f.kind === "burst") { const p = f.obj.geometry.attributes.position;
+      for (let j = 0; j < f.v.length; j++) { f.v[j].y -= 14 * SC * dt + .5 * dt; p.setXYZ(j, p.getX(j) + f.v[j].x * dt, Math.max(0, p.getY(j) + f.v[j].y * dt), p.getZ(j) + f.v[j].z * dt); }
+      p.needsUpdate = true; f.obj.material.opacity = 1 - a; }
+    if (f.kind === "shock") { f.obj.scale.setScalar(1 + a * f.size); f.obj.material.opacity = .9 * (1 - a); }
+    if (f.kind === "card") { f.obj.position.y = 1 + a * (6 * SC + 1.5); f.obj.lookAt(camera.position); f.obj.rotateZ(Math.sin(f.t * 6) * .25); f.obj.material.opacity = a > .7 ? (1 - a) / .3 : 1; }
+    if (a >= 1) { world.remove(f.obj); f.obj.geometry.dispose(); f.obj.material.dispose(); fx.splice(i, 1); }
+  }
+  for (const n of nets) if (n.userData.shake > .01) { n.userData.shake *= .93; const s = n.userData.shake * Math.abs(Math.sin(now / 40));
+    n.scale.set(1 + s * .35, 1 - s * .1, 1 + s * .15); }
+  if (postGlow > .01) { postGlow *= .95; for (const m of posts) m.emissive.setRGB(postGlow, postGlow * .8, 0); }
+  // камера: широкий экран — трансляционный вид; телефон — стадион повёрнут, поле снизу вверх
   const portrait = camera.aspect < 1;
-  world.rotation.y += ((portrait ? -Math.PI / 2 : 0) - world.rotation.y) * .1;  // хозяева атакуют вверх по экрану
-  const bp = ball.getWorldPosition(new THREE.Vector3());
-  if (portrait) {   // телефон: камера почти сверху и строго по центру — поле целиком, с лёгким наклоном для объёма
-    tx = bp.x * .08; tz = bp.z * .1 + 12;                 // смотрим чуть ближе к себе — поле поднимается над панелью
-    camera.position.x += ((Math.sin(a) * 2 + tx) - camera.position.x) * .03;
-    camera.position.y += ((170 * zoom) - camera.position.y) * .03;
-    camera.position.z += ((52 * zoom + tz) - camera.position.z) * .03;
+  world.rotation.y += ((portrait ? -Math.PI / 2 : 0) - world.rotation.y) * .1;
+  const bp = ball.getWorldPosition(new THREE.Vector3()), t = now / 9000, zoom = camGoal > now ? .62 : 1;
+  let tx, tz;
+  if (portrait) {
+    tx = bp.x * .08; tz = bp.z * .1 + 12 * SC;
+    camera.position.x += ((Math.sin(t) * 2 * SC + tx) - camera.position.x) * .03;
+    camera.position.y += ((170 * SC * zoom) - camera.position.y) * .03;
+    camera.position.z += ((52 * SC * zoom + tz) - camera.position.z) * .03;
   } else {
     tx = bp.x * .35; tz = bp.z * .2;
-    camera.position.x += ((Math.sin(a) * 26 + tx) - camera.position.x) * .03;
-    camera.position.y += ((58 * zoom) - camera.position.y) * .03;
-    camera.position.z += ((70 * zoom + Math.cos(a) * 6) - camera.position.z) * .03;
+    camera.position.x += ((Math.sin(t) * 26 * SC + tx) - camera.position.x) * .03;
+    camera.position.y += ((58 * SC * zoom) - camera.position.y) * .03;
+    camera.position.z += ((70 * SC * zoom + Math.cos(t) * 6 * SC) - camera.position.z) * .03;
   }
-  const fov = portrait ? 56 : 42;
-  if (camera.fov !== fov) { camera.fov = fov; camera.updateProjectionMatrix(); }
-  scene.fog.near = portrait ? 260 : 170; scene.fog.far = portrait ? 500 : 340;
-  hemi.intensity = portrait ? 1.1 : .55;
-  if (shake > 0) { camera.position.x += (Math.random() - .5) * shake; camera.position.y += (Math.random() - .5) * shake; shake *= .92; }
+  const fov = portrait ? 56 : 42; if (camera.fov !== fov) { camera.fov = fov; camera.updateProjectionMatrix(); }
+  scene.fog.near = (portrait ? 260 : 170) * SC; scene.fog.far = (portrait ? 500 : 340) * SC;
+  if (shake > .02) { camera.position.x += (Math.random() - .5) * shake * SC; camera.position.y += (Math.random() - .5) * shake * SC; shake *= .92; }
   camera.lookAt(tx, 0, tz);
   zoneMat.opacity += ((zone.userData.target || 0) - zoneMat.opacity) * .05;
   renderer.render(scene, camera);
-  placeTag();
+  const p = bp.clone(); p.y += 2.5 * SC + .5; p.project(camera);
+  tag.style.left = ((p.x + 1) / 2 * innerWidth) + "px"; tag.style.top = ((1 - p.y) / 2 * innerHeight) + "px";
 }
 requestAnimationFrame(animate);
 
-// подпись события «над мячом»
-const tag = $("tag");
-function placeTag() {
-  const p = ball.getWorldPosition(new THREE.Vector3()); p.y += 2.5; p.project(camera);
-  tag.style.left = ((p.x + 1) / 2 * innerWidth) + "px"; tag.style.top = ((1 - p.y) / 2 * innerHeight) + "px";
-}
-
-// ── события ESPN → русские подписи и точка на поле ───────────────────────────
-// типы событий ESPN → русские подписи (точное соответствие, без угадывания по словам)
-const RU = { "goal": "ГОЛ!", "own-goal": "Автогол", "penalty---scored": "ГОЛ с пенальти!", "penalty---missed": "Незабитый пенальти",
-  "penalty---saved": "Вратарь отбил пенальти", "corner-awarded": "Угловой", "shot-on-target": "Удар в створ",
-  "shot-off-target": "Удар мимо", "shot-blocked": "Удар заблокирован", "shot-hit-woodwork": "Попадание в каркас ворот!",
-  "save": "Сейв вратаря", "offside": "Офсайд", "foul": "Фол", "free-kick": "Штрафной", "yellow-card": "Жёлтая карточка",
-  "red-card": "Красная карточка", "second-yellow-card": "Вторая жёлтая — удаление", "substitution": "Замена",
-  "kickoff": "Начало тайма", "halftime": "Перерыв", "end-regular-time": "Финальный свисток", "full-time": "Финальный свисток",
-  "start-delay": "Пауза в игре", "end-delay": "Игра продолжается", "handball": "Игра рукой", "aerial": "Борьба за верховой мяч",
-  "var": "Проверка VAR" };
-function ruType(p) {
-  const k = (p.type?.type || "").toLowerCase();
-  if (p.scoringPlay || k === "goal") return "ГОЛ!";
-  if (RU[k]) return RU[k];
-  for (const key in RU) if (k.includes(key)) return RU[key];
-  return "Атака";
-}
+// ── события: перевод, место на площадке, эффект ──────────────────────────────
 let H = {}, A = {};
-function side(p) {                                        // 1 — хозяева, -1 — гости, 0 — неизвестно
-  const n = p.team?.displayName; if (!n) return 0;
-  return n === H.name ? 1 : n === A.name ? -1 : 0;
-}
-function where(p) {                                       // координаты события → точка на 3D-поле
-  const s = side(p), t = ruType(p);
-  let x = p.fieldPositionX, y = p.fieldPositionY;
-  if (x == null) {                                        // координат нет — ставим по смыслу события
-    x = t === "Угловой" ? 99 : /Удар|ГОЛ|Сейв|енальти|каркас/.test(t) ? 88 : t === "Офсайд" ? 80 : t.startsWith("Начало") ? 50 : 55 + Math.random() * 20;
-    y = t === "Угловой" ? (Math.random() < .5 ? 1 : 99) : 30 + Math.random() * 40;
+const RU_FOOT = { "goal": "ГОЛ!", "own-goal": "Автогол", "penalty---scored": "ГОЛ с пенальти!", "penalty---missed": "Незабитый пенальти",
+  "penalty---saved": "Вратарь отбил пенальти", "corner-awarded": "Угловой", "shot-on-target": "Удар в створ",
+  "shot-off-target": "Удар мимо", "shot-blocked": "Удар заблокирован", "shot-hit-woodwork": "В каркас ворот!",
+  "save": "Сейв вратаря", "offside": "Офсайд", "foul": "Фол", "free-kick": "Штрафной", "yellow-card": "Жёлтая карточка",
+  "red-card": "Красная карточка", "second-yellow-card": "Удаление", "substitution": "Замена", "kickoff": "Начало тайма",
+  "halftime": "Перерыв", "end-regular-time": "Финальный свисток", "full-time": "Финальный свисток", "start-delay": "Пауза в игре",
+  "end-delay": "Игра продолжается", "handball": "Игра рукой", "aerial": "Борьба за верховой мяч", "var": "Проверка VAR" };
+const RU_TEXT = [["goal", "ГОЛ!"], ["missed", "Бросок мимо"], ["blocked", "Блок"], ["shot", "Бросок"], ["hit", "Силовой приём"],
+  ["face off", "Вбрасывание"], ["faceoff", "Вбрасывание"], ["giveaway", "Потеря"], ["takeaway", "Перехват"],
+  ["tripping", "Удаление: подножка"], ["hooking", "Удаление: задержка клюшкой"], ["slashing", "Удаление: удар клюшкой"], ["penalty", "Удаление"],
+  ["stoppage", "Остановка игры"], ["period start", "Начало периода"], ["period end", "Конец периода"],
+  ["rebound", "Подбор"], ["turnover", "Потеря"], ["steal", "Перехват"], ["block", "Блок-шот"],
+  ["foul", "Фол"], ["timeout", "Тайм-аут"], ["substitution", "Замена"], ["end of", "Конец отрезка"], ["end game", "Конец матча"]];
+function ruType(p) {
+  if (SPORT === "football") { const k = (p.type?.type || "").toLowerCase(); if (p.scoringPlay || k === "goal") return "ГОЛ!";
+    if (RU_FOOT[k]) return RU_FOOT[k]; for (const key in RU_FOOT) if (k.includes(key)) return RU_FOOT[key]; return "Атака"; }
+  const s = `${p.type?.text || ""} ${p.text || ""}`.toLowerCase();
+  if (SPORT === "basketball") {
+    if (p.scoringPlay) return p.scoreValue === 3 ? "ТРЁХОЧКОВЫЙ!" : p.scoreValue === 1 ? "Штрафной: +1" : /dunk/.test(s) ? "Слэм-данк: +2" : "Попадание: +2";
+    if (p.shootingPlay) return /free throw/.test(s) ? "Штрафной мимо" : "Промах";
   }
-  // у ESPN координаты — со стороны команды события (она атакует вправо); хозяева у нас атакуют вправо
-  if (s === -1) { x = 100 - x; y = 100 - y; }
-  return [(x / 100 - .5) * L, (y / 100 - .5) * Wd];
+  if (SPORT === "hockey" && p.scoringPlay) return "ГОЛ!";
+  for (const [k, v] of RU_TEXT) if ((p.type?.text || "").toLowerCase().includes(k)) return v;
+  return p.type?.text || "Атака";
 }
-
-const seen = new Set(), queue = [];
-let replayMode = false;
+function side(p) {
+  const id = p.team?.id, n = p.team?.displayName;
+  if (id && id === H.id) return 1; if (id && id === A.id) return -1;
+  return n && n === H.name ? 1 : n && n === A.name ? -1 : 0;
+}
+function where(p, t, s) {                                 // → [x, z] на площадке
+  if (SPORT === "football") {
+    let x = p.fieldPositionX, y = p.fieldPositionY;
+    if (x == null) { x = t === "Угловой" ? 99 : /Удар|ГОЛ|Сейв|енальти|каркас/.test(t) ? 88 : t === "Офсайд" ? 80 : 55 + Math.random() * 20;
+      y = t === "Угловой" ? (Math.random() < .5 ? 1 : 99) : 30 + Math.random() * 40; }
+    if (s === -1) { x = 100 - x; y = 100 - y; }         // у ESPN координаты со стороны команды события
+    return [(x / 100 - .5) * L, (y / 100 - .5) * Wd];
+  }
+  const c = p.coordinate, ok = c && Math.abs(c.x) < 1000 && Math.abs(c.y) < 1000;
+  if (SPORT === "hockey") {                                // NHL: x −100…100 фт вдоль, y −42.5…42.5 поперёк
+    if (ok) return [c.x / 100 * (L / 2), c.y / 42.5 * (Wd / 2)];
+    return [(s || 1) * (Math.random() * L / 3), (Math.random() - .5) * Wd * .7];
+  }
+  if (SPORT === "basketball") {                            // NBA: x 0…50 поперёк, y — футы от лицевой линии атакуемого кольца
+    const dir = s === -1 ? -1 : 1;
+    if (ok && c.y >= 0 && c.y < 94) return [dir * (L / 2 - c.y * .3048), (c.x - 25) * .3048];
+    return [dir * (L / 2 - 3 - Math.random() * 6), (Math.random() - .5) * 8];
+  }
+  return [(Math.random() - .5) * L * .8, (Math.random() - .5) * Wd * .8];
+}
 function show(p) {
-  const t = ruType(p), s = side(p), [x, z] = where(p);
-  const isGoal = t === "ГОЛ!";
-  flyTo(x, z, isGoal ? 9 : /Удар|Угловой|Штрафной|каркас/.test(t) ? 7 : 4);
-  const team = s === 1 ? H : s === -1 ? A : null;
-  $("tt").textContent = isGoal ? `⚽ ГОЛ! ${team ? team.ru : ""}` : (team ? team.ru : "");
-  $("te").textContent = isGoal ? (p.clock?.displayValue || "") : `${t}${p.clock?.displayValue ? " · " + p.clock.displayValue : ""}`;
-  tag.style.setProperty("--c", team ? team.color : "#fff");
-  tag.classList.toggle("goal", isGoal); tag.style.opacity = 1;
+  const t = ruType(p), s = side(p), team = s === 1 ? H : s === -1 ? A : null, [x, z] = where(p, t, s);
+  const goalX = (s || 1) * (SPORT === "hockey" ? 26.5 : SPORT === "basketball" ? L / 2 - 1.58 : L / 2);
+  const isGoal = /^ГОЛ|ТРЁХОЧКОВЫЙ|Слэм/.test(t), isBucket = /Попадание|Штрафной: \+1/.test(t), color = team ? team.color : "#ffc400";
+  const target = new THREE.Vector3(x, 0, z), gp = new THREE.Vector3(goalX, SPORT === "basketball" ? 3 : 1, 0);
+  if (isGoal || isBucket) {                                // мяч летит в ворота / кольцо
+    if (SPORT === "basketball") flyTo(goalX, 0, 3, 3.05);
+    else flyTo(goalX + (s || 1) * .6, SPORT === "football" ? (Math.random() - .5) * 5 : 0, 2.5 * SC + .5);
+  } else flyTo(x, z, (/Удар|Бросок|Угловой|Штрафной|каркас|Промах/.test(t) ? 7 : 4) * SC + .5);
+  $("tt").textContent = isGoal ? `${t} ${team ? team.ru : ""}` : (team ? team.ru : t);
+  $("te").textContent = [isGoal || !team ? "" : t, p.clock?.displayValue || ""].filter(Boolean).join(" · ");
+  tag.style.setProperty("--c", color); tag.style.opacity = 1;
   if (team) { zoneMat.color.set(team.color); zone.position.x = s * L / 4; zone.userData.target = .16; }
-  if (isGoal) { camGoal = performance.now() + 4000; shake = 1.2; }
-  const f = $("feed"); const row = document.createElement("div");
+  setTimeout(() => {
+    if (isGoal) {                                          // ГОЛ: салют в цветах команды, волна, сетка, вспышка, зум и тряска
+      burst(gp, [color, "#ffc400", "#ffffff"], 240, 1.2); burst(new THREE.Vector3(0, 2, 0), [color, "#ffffff"], 120, .8);
+      setTimeout(() => burst(new THREE.Vector3(goalX * .6, 3, (Math.random() - .5) * Wd * .5), [color, "#ffc400"], 140, 1), 450);
+      shock(gp, color, 10); netShake(s); flash(color, .55); shake = 2.2; camGoal = performance.now() + 3500;
+      bigText(t === "ТРЁХОЧКОВЫЙ!" ? "+3!" : /Слэм/.test(t) ? "ДАНК!" : "ГОЛ!", `${team ? team.ru + " · " : ""}${$("sc").textContent}`, color);
+      $("sc").classList.add("bump"); setTimeout(() => $("sc").classList.remove("bump"), 1600);
+      navigator.vibrate?.([80, 60, 160]);
+    } else if (isBucket) { burst(gp, [color, "#ffc400"], 70, .45); netShake(s); }
+    else if (/в створ|Сейв|отбил/.test(t)) { shock(gp, "#ffffff", 6); flash("#ffffff", .18); chip(/в створ/.test(t) ? "🎯 В СТВОР · 🧤 СЕЙВ" : "🧤 СЕЙВ!", "#ffffff"); netShake(s); }
+    else if (/каркас/.test(t)) { postGlow = 1; shake = 1.4; chip("🔔 ШТАНГА!", "#ffc400"); flash("#ffc400", .25); }
+    else if (/^Бросок$/.test(t)) { shock(gp, "#ffffff", 4); chip("🧤 БРОСОК В СТВОР", "#ffffff"); }
+    else if (/Промах|мимо|Блок|заблокирован/.test(t)) shock(target, "#ff6a6a", 4);
+    else if (/Жёлтая/.test(t)) { cardPop(target, 0xffd400); chip("🟨 ЖЁЛТАЯ", "#ffd400"); }
+    else if (/Красная|Удаление/.test(t)) { cardPop(target, 0xe32222); chip(SPORT === "hockey" ? "⛔ УДАЛЕНИЕ" : "🟥 УДАЛЕНИЕ", "#ff4646"); flash("#ff2020", .2); }
+    else if (t === "Угловой") { shock(target, color, 5); chip("🚩 УГЛОВОЙ", color); }
+    else if (t === "Офсайд") chip("🚫 ОФСАЙД", "#ffffff");
+    else if (/Силовой/.test(t)) { shake = .8; shock(target, color, 3); chip("💥 СИЛОВОЙ", color); }
+    else if (/Перехват/.test(t)) shock(target, color, 3);
+    else if (/Замена/.test(t)) chip("🔄 ЗАМЕНА", color);
+    else if (/енальти/.test(t)) { chip("🎯 ПЕНАЛЬТИ!", "#ffc400"); flash("#ffc400", .2); }
+    else if (/Автогол/.test(t)) { shock(gp, "#ff4646", 8); flash("#ff4646", .3); chip("😱 АВТОГОЛ", "#ff4646"); }
+  }, 900);
+  const f = $("feed"), row = document.createElement("div");
   row.innerHTML = `<b>${p.clock?.displayValue || ""}</b>${team ? team.ru + " · " : ""}${t}`;
   f.prepend(row); while (f.children.length > 4) f.lastChild.remove();
 }
-setInterval(() => { if (queue.length) show(queue.shift()); }, 2600);
 
-// ── шапка и статистика ───────────────────────────────────────────────────────
-const STATS = [["possessionPct", "Владение", "%"], ["totalShots", "Удары"], ["shotsOnTarget", "В створ"], ["wonCorners", "Угловые"],
-  ["foulsCommitted", "Фолы"], ["yellowCards", "Жёлтые"]];
+// ── статистика по видам спорта ───────────────────────────────────────────────
+const STATS = {
+  football: [["possessionPct", "Владение", "%"], ["totalShots", "Удары"], ["shotsOnTarget", "В створ"], ["wonCorners", "Угловые"], ["foulsCommitted", "Фолы"], ["yellowCards", "Жёлтые"]],
+  hockey: [["shotsTotal", "Броски"], ["hits", "Силовые"], ["blockedShots", "Блоки"], ["faceoffPercent", "Вбрасывания", "%"], ["powerPlayGoals", "Голы в большинстве"], ["penaltyMinutes", "Штраф, мин"]],
+  basketball: [["fieldGoalPct", "С игры", "%"], ["threePointFieldGoalPct", "Трёхочковые", "%"], ["totalRebounds", "Подборы"], ["assists", "Передачи"], ["steals", "Перехваты"], ["turnovers", "Потери"]],
+};
 function statsHTML(b) {
-  const get = (t, n) => +(t?.statistics?.find(s => s.name === n)?.displayValue || 0);
-  const [th, ta] = [b.find(t => t.homeAway === "home") || b[0], b.find(t => t.homeAway === "away") || b[1]];
-  return STATS.map(([n, lbl, suf = ""]) => {
-    const vh = get(th, n), va = get(ta, n), tot = vh + va || 1;
+  const list = STATS[SPORT]; if (!list) return "";
+  const get = (t, n) => { const s = t?.statistics?.find(x => x.name === n); return s ? parseFloat(String(s.displayValue).split("-")[0]) || 0 : 0; };
+  const th = b.find(t => t.homeAway === "home") || b[1], ta = b.find(t => t.homeAway === "away") || b[0];
+  return list.map(([n, lbl, suf = ""]) => { const vh = get(th, n), va = get(ta, n), tot = vh + va || 1;
     return `<div class="stat"><span class="lbl">${lbl}</span><span class="v">${Math.round(vh)}${suf}</span>
       <span class="track"><i style="width:${vh / tot * 100}%;background:${H.color}"></i><i style="width:${va / tot * 100}%;background:${A.color}"></i></span>
-      <span class="v">${Math.round(va)}${suf}</span></div>`;
-  }).join("");
+      <span class="v">${Math.round(va)}${suf}</span></div>`; }).join("");
 }
-const col = c => (c && c !== "000000" && c !== "ffffff") ? "#" + c : null;
-
-async function load() {
-  const d = await (await fetch(API, { cache: "no-store" })).json();
-  const comp = d.header.competitions[0];
-  const ch = comp.competitors.find(c => c.homeAway === "home"), ca = comp.competitors.find(c => c.homeAway === "away");
-  H = { name: ch.team.displayName, ru: RU_H || ch.team.displayName, color: col(ch.team.color) || "#2ecc71", logo: ch.team.logos?.[0]?.href };
-  A = { name: ca.team.displayName, ru: RU_A || ca.team.displayName, color: col(ca.team.color) || "#3498db", logo: ca.team.logos?.[0]?.href };
-  // похожие цвета (две «красные» команды) — гостям даём их второй цвет или контрастный синий
-  const rgb = c => [1, 3, 5].map(i => parseInt(c.slice(i, i + 2), 16));
-  const near = (a, b) => rgb(a).reduce((s, v, i) => s + Math.abs(v - rgb(b)[i]), 0) < 160;
-  if (near(H.color, A.color)) A.color = (col(ca.team.alternateColor) && !near(H.color, col(ca.team.alternateColor))) ? col(ca.team.alternateColor) : "#3498db";
+const col = c => (c && !/^(000000|ffffff)$/i.test(c)) ? "#" + c : null;
+const rgb = c => [1, 3, 5].map(i => parseInt(c.slice(i, i + 2), 16));
+const near = (a, b) => rgb(a).reduce((s, v, i) => s + Math.abs(v - rgb(b)[i]), 0) < 160;
+function setTeams(h, a) {
+  H = h; A = a; if (near(H.color, A.color)) A.color = (A.alt && !near(H.color, A.alt)) ? A.alt : "#3498db";
   $("hn").textContent = H.ru; $("an").textContent = A.ru; $("hc").style.background = H.color; $("ac").style.background = A.color;
   if (H.logo) $("hl").src = H.logo; if (A.logo) $("al").src = A.logo;
+}
+
+// ── загрузка ─────────────────────────────────────────────────────────────────
+const seen = new Set(), queue = [];
+let replayMode = false, lastGames = null, lastSets = null, first = true;
+setInterval(() => { if (queue.length) show(queue.shift()); }, 2600);
+
+async function loadTennis() {                              // теннис: ESPN даёт только счёт по сетам и геймам
+  const d = await (await fetch(`https://site.api.espn.com/apis/site/v2/sports/${PATH}/scoreboard`, { cache: "no-store" })).json();
+  let comp = null, tour = "";
+  for (const e of d.events || []) for (const g of e.groupings || []) for (const c of g.competitions || []) if (String(c.id) === EVENT) { comp = c; tour = e.name; }
+  if (!comp) throw new Error("no match");
+  const [ph, pa] = [...comp.competitors].sort((x, y) => (x.order || 0) - (y.order || 0));
+  const flag = p => p.athlete?.flag?.href;
+  if (first) setTeams({ name: ph.athlete?.displayName, ru: RU_H || ph.athlete?.displayName, color: "#2ecc71", logo: flag(ph) },
+                      { name: pa.athlete?.displayName, ru: RU_A || pa.athlete?.displayName, color: "#3498db", logo: flag(pa) });
+  const sh = (ph.linescores || []).map(s => s.value || 0), sa = (pa.linescores || []).map(s => s.value || 0);
+  const st = comp.status?.type || {}, live = st.state === "in", n = sh.length;
+  const done = i => (i < n - 1) || st.state === "post";  // все сеты, кроме текущего, завершены
+  const setsH = sh.filter((v, i) => done(i) && v > sa[i]).length, setsA = sa.filter((v, i) => done(i) && v > sh[i]).length;
+  $("sc").textContent = `${setsH} : ${setsA}`;
+  $("sets").textContent = sh.map((v, i) => `${v}-${sa[i] ?? 0}`).join("  ");
+  $("cl").textContent = live ? `Идёт ${n || 1}-й сет` : st.state === "post" ? "Матч завершён" : "Скоро начало"; $("dot").classList.toggle("off", !live);
+  $("lg").textContent = tour; $("msg").style.display = "none";
+  const gh = sh.reduce((a, b) => a + b, 0), games = gh + sa.reduce((a, b) => a + b, 0);
+  if (lastGames !== null && games > lastGames) {           // новый гейм — мяч перелетает сетку
+    const hWon = gh > lastGH, who = hWon ? H : A;
+    flyTo((hWon ? 1 : -1) * L * .35, (Math.random() - .5) * Wd * .6, 2.5); netShake(0);
+    shock(new THREE.Vector3(0, 0, 0), "#d9ff3a", 4); chip(`🎾 ГЕЙМ · ${who.ru}`, "#d9ff3a");
+    $("tt").textContent = who.ru; $("te").textContent = `Гейм · ${sh[n - 1] ?? 0}-${sa[n - 1] ?? 0}`; tag.style.opacity = 1; tag.style.setProperty("--c", who.color);
+    if (lastSets !== null && setsH + setsA > lastSets) {
+      bigText("СЕТ!", `${setsH > lastSetsH ? H.ru : A.ru} · ${setsH}:${setsA}`, "#d9ff3a");
+      burst(new THREE.Vector3(0, 1, 0), ["#d9ff3a", "#ffffff", who.color], 200, 1); flash("#d9ff3a", .35); shake = 1;
+    }
+  }
+  lastGames = games; lastGH = gh; lastSets = setsH + setsA; lastSetsH = setsH; first = false;
+  $("feed").innerHTML = `<div><b>Сеты</b>${$("sets").textContent || "—"}</div>`;
+}
+let lastSetsH = 0, lastGH = 0;
+
+async function load() {
+  if (SPORT === "tennis") return loadTennis();
+  const d = await (await fetch(`https://site.api.espn.com/apis/site/v2/sports/${PATH}/summary?event=${EVENT}`, { cache: "no-store" })).json();
+  const comp = d.header.competitions[0];
+  const ch = comp.competitors.find(c => c.homeAway === "home"), ca = comp.competitors.find(c => c.homeAway === "away");
+  const team = (c, ru, dflt) => ({ id: c.team.id, name: c.team.displayName, ru: ru || c.team.displayName, color: col(c.team.color) || dflt,
+    alt: col(c.team.alternateColor), logo: c.team.logos?.[0]?.href || c.team.logo });
+  if (first) setTeams(team(ch, RU_H, "#2ecc71"), team(ca, RU_A, "#3498db"));
   $("lg").textContent = d.header.league?.name || "";
-  const st = comp.status?.type || {};
-  const live = st.state === "in";
+  const st = comp.status?.type || {}, live = st.state === "in";
   $("sc").textContent = `${ch.score ?? 0} : ${ca.score ?? 0}`;
-  $("cl").textContent = live ? (comp.status.displayClock || st.shortDetail || "LIVE") : (st.state === "post" ? "Матч завершён" : (st.shortDetail || "Скоро начало"));
+  const per = comp.status?.period, unit = SPORT === "football" ? "-й тайм" : SPORT === "hockey" ? "-й период" : "-я четверть";
+  $("cl").textContent = live ? (comp.status.displayClock ? `${comp.status.displayClock}${per ? " · " + per + unit : ""}` : (st.shortDetail || "LIVE"))
+                          : (st.state === "post" ? "Матч завершён" : (st.shortDetail || "Скоро начало"));
   $("dot").classList.toggle("off", !live);
   if (d.boxscore?.teams?.length === 2) $("stats").innerHTML = statsHTML(d.boxscore.teams);
-  const plays = (d.commentary || []).map(c => c.play ? { ...c.play, text: c.play.text || c.text } : null).filter(Boolean);
+  const plays = SPORT === "football" ? (d.commentary || []).map(c => c.play ? { ...c.play, text: c.play.text || c.text } : null).filter(Boolean)
+                                     : (d.plays || []);
   $("msg").style.display = "none";
-  if (st.state === "post" && !replayMode) {                 // матч закончился — предлагаем повтор
+  if (st.state === "post" && !replayMode) {
     $("replay").style.display = "inline-block";
     $("replay").onclick = () => { replayMode = true; $("replay").style.display = "none"; queue.length = 0;
-      plays.filter(p => !/lineup/i.test(p.text || "")).forEach(p => queue.push(p)); };
-    return;
+      const interesting = plays.filter(p => SPORT === "football" ? !/lineup/i.test(p.text || "")
+        : (p.scoringPlay || /penalty|shot|hit|takeaway|steal|block|dunk|turnover/i.test(p.type?.text || "")));
+      interesting.forEach(p => queue.push(p)); };
+    first = false; return;
   }
-  for (const p of plays) {                                // новые события — в очередь, по одному каждые 2.6 с
-    if (seen.has(p.id)) continue; seen.add(p.id);
-    if (seen.size > plays.length - 6 || !live) queue.push(p);   // при открытии показываем последние события, а не весь матч
-  }
+  const fresh = plays.filter(p => !seen.has(p.id || p.sequenceNumber));
+  fresh.forEach(p => seen.add(p.id || p.sequenceNumber));
+  // при открытии показываем только последние события, дальше — всё новое по порядку
+  (first ? fresh.slice(-5) : fresh).forEach(p => queue.push(p));
+  first = false;
 }
-if (!EVENT) { $("msg").textContent = "Матч не найден: откройте трекер по кнопке под постом в канале."; }
+if (q.has("debug")) Object.assign(window, { __show: show, __cam: camera, __world: world });
+if (!EVENT) $("msg").textContent = "Матч не найден: откройте трекер по кнопке под постом в канале.";
 else {
   load().catch(() => { $("msg").textContent = "Не удалось загрузить матч. Проверьте интернет и откройте ещё раз."; });
-  setInterval(() => load().catch(() => {}), 15000);       // обновление каждые 15 секунд
+  setInterval(() => load().catch(() => {}), SPORT === "tennis" ? 20000 : 15000);
 }
 </script>
 </body>

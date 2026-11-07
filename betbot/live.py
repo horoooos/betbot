@@ -18,13 +18,13 @@ LIVE = {
     "FAC", "ELC", "CDR", "DFB", "CIT", "CDF", "TPO", "SCC",
     "UNL", "WCQE", "WCQS", "WC", "EURO", "FRI",
     # другие виды спорта
-    "NHL", "NBA", "CS2", "DOTA",
+    "NHL", "NBA", "WNBA", "ATP", "WTA", "CS2", "DOTA",
 }
 TRACKER = "https://horoooos.github.io/betbot/live.html"  # 3D-трекер матча (docs/live.html на GitHub Pages)
 # В хоккее шайб много (ночью NHL — десятки постов), поэтому там только «матч начался» и итог.
 WORD = {"football": ("ГОЛ!", "⚽️"), "esports": ("КАРТА!", "🎮")}
 START = {"football": "все голы будут здесь", "hockey": "итог матча будет здесь",
-         "basketball": "итог матча будет здесь", "esports": "результат каждой карты будет здесь"}
+         "basketball": "итог матча будет здесь", "tennis": "итог матча будет здесь", "esports": "результат каждой карты будет здесь"}
 
 
 def _league(e: dict) -> str:
@@ -36,10 +36,23 @@ def _title(e: dict) -> str:
 
 
 def _score(e: dict) -> tuple[int, int] | None:
+    if e.get("sport") == "tennis":  # в теннисе «счёт» — выигранные сеты
+        return sum(e["home"].get("set_won") or []), sum(e["away"].get("set_won") or [])
     try:
         return int(e["home"]["score"] or 0), int(e["away"]["score"] or 0)
     except (TypeError, ValueError):
         return None
+
+
+def _tracker(e: dict, sport: str, h: str, a: str) -> tuple[str, str] | None:
+    """Кнопка «Смотреть матч в 3D»: живой трекер на сайте (футбол, хоккей, баскетбол, теннис)."""
+    if sport == "football":
+        path = f"soccer/{e['slug']}" if e.get("slug") else ""
+    else:
+        path = sports.LEAGUES.get(e["div"], ("",) * 5)[3]
+    if not path or sport == "esports":
+        return None
+    return ("📺 Смотреть матч в 3D", f"{TRACKER}?" + urlencode({"s": sport, "p": path, "e": e["id"], "h": h, "a": a}))
 
 
 def run(store: dict, events: list[dict], reviews: dict, brand: str) -> None:
@@ -71,9 +84,7 @@ def run(store: dict, events: list[dict], reviews: dict, brand: str) -> None:
             if tip:
                 tip_line = (f"\n\n🎯 <b>Наш прогноз:</b> {escape(tip['label'])} · кэф {'≈' if tip.get('est') else ''}"
                             f"{tip['odds']:.2f} · ставка {tip.get('stake', 1):g}% банка\n👀 Следим вместе — итог будет здесь")
-            button = None
-            if sport == "football" and e.get("slug"):  # 3D-трекер матча на нашем сайте — обновляется сам
-                button = ("📺 Смотреть матч в 3D", f"{TRACKER}?" + urlencode({"l": e["slug"], "e": e["id"], "h": h, "a": a}))
+            button = _tracker(e, sport, h, a)
             mid = telegram.send_photo(png, f"🔴 <b>МАТЧ НАЧАЛСЯ</b>\n{sports.EMOJI.get(sport, '⚽️')} <b>{escape(h)} — "
                                            f"{escape(a)}</b>\n🏆 {_title(e)}{tip_line}", reply_to=rv.get("msg"), button=button)
             store[key] = {"msg": mid, "hs": sc[0], "as": sc[1], "goals": len(e.get("goals") or []),
