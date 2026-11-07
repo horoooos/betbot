@@ -10932,22 +10932,22 @@
   "kickoff": "2026-11-07T06:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "home": {
+   "color": "552583",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/lal.png",
    "id": "13",
    "name": "Los Angeles Lakers",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/lal.png",
-   "color": "552583",
    "score": "0",
    "record": "7-2",
    "periods": [],
    "ru": "Лейкерс"
   },
   "away": {
+   "color": "e03a3e",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/por.png",
    "id": "22",
    "name": "Portland Trail Blazers",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/por.png",
-   "color": "e03a3e",
    "score": "0",
    "record": "6-1",
    "periods": [],
@@ -11021,7 +11021,9 @@
   "msg_id": 3522,
   "close": {
    "BB_ML_H": 0.6147
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null
  },
  "NBA|401909295": {
   "id": "401909295",
