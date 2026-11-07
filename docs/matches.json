@@ -1,249 +1,5 @@
 [
 {
-"sport": "football",
-"id": "401874791",
-"league": "Италия · Серия A",
-"kickoff": "2026-11-07T17:00:00+03:00",
-"home": "Кальяри",
-"away": "Фрозиноне",
-"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/2925.png",
-"al": "https://a.espncdn.com/i/teamlogos/soccer/500/4057.png",
-"path": "soccer/ita.1",
-"url": "live.html?s=football&p=soccer%2Fita.1&e=401874791&h=%D0%9A%D0%B0%D0%BB%D1%8C%D1%8F%D1%80%D0%B8&a=%D0%A4%D1%80%D0%BE%D0%B7%D0%B8%D0%BD%D0%BE%D0%BD%D0%B5",
-"tip": "ТБ 2.5 · 1.53",
-"top": false,
-"bot": {
-"main": {
-"label": "ТБ 2.5",
-"p": 0.611,
-"odds": 1.53,
-"est": false
-},
-"bold": null,
-"markets": [
-[
-"П1",
-0.353,
-2.9
-],
-[
-"Ничья",
-0.253,
-3.65
-],
-[
-"П2",
-0.394,
-2.15
-],
-[
-"1X",
-0.606,
-null
-],
-[
-"X2",
-0.647,
-null
-],
-[
-"ТБ 1.5",
-0.831,
-null
-],
-[
-"ТБ 2.5",
-0.61,
-null
-],
-[
-"ТМ 2.5",
-0.39,
-null
-],
-[
-"ТБ 3.5",
-0.387,
-2.15
-],
-[
-"Обе забьют — да",
-0.638,
-null
-],
-[
-"Обе забьют — нет",
-0.362,
-null
-],
-[
-"ИТ1 больше 1.5",
-0.452,
-null
-],
-[
-"ИТ2 больше 1.5",
-0.483,
-null
-],
-[
-"Ф1 (−1.5)",
-0.173,
-null
-],
-[
-"Ф2 (+1.5)",
-0.827,
-null
-]
-],
-"bar": [
-0.3527070658627875,
-0.2528525898892961,
-0.3944403442479166
-],
-"center": "Ожидаемые голы (xG) 1.5 : 1.6",
-"scores": [
-[
-"1:1",
-0.115
-],
-[
-"1:2",
-0.086
-],
-[
-"2:1",
-0.081
-]
-],
-"corners": 13.6,
-"cards": 3.3
-}
-},
-{
-"sport": "football",
-"id": "401874811",
-"league": "Италия · Серия A",
-"kickoff": "2026-11-07T17:00:00+03:00",
-"home": "Торино",
-"away": "Лечче",
-"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/239.png",
-"al": "https://a.espncdn.com/i/teamlogos/soccer/500/113.png",
-"path": "soccer/ita.1",
-"url": "live.html?s=football&p=soccer%2Fita.1&e=401874811&h=%D0%A2%D0%BE%D1%80%D0%B8%D0%BD%D0%BE&a=%D0%9B%D0%B5%D1%87%D1%87%D0%B5",
-"tip": "П1 · 1.80",
-"top": false,
-"bot": {
-"main": {
-"label": "П1",
-"p": 0.524,
-"odds": 1.8,
-"est": false
-},
-"bold": null,
-"markets": [
-[
-"П1",
-0.524,
-1.769
-],
-[
-"Ничья",
-0.261,
-3.5
-],
-[
-"П2",
-0.215,
-4.3
-],
-[
-"1X",
-0.785,
-null
-],
-[
-"X2",
-0.476,
-null
-],
-[
-"ТБ 1.5",
-0.756,
-null
-],
-[
-"ТБ 2.5",
-0.5,
-1.833
-],
-[
-"ТМ 2.5",
-0.5,
-1.952
-],
-[
-"ТБ 3.5",
-0.28,
-null
-],
-[
-"Обе забьют — да",
-0.522,
-null
-],
-[
-"Обе забьют — нет",
-0.478,
-null
-],
-[
-"ИТ1 больше 1.5",
-0.499,
-null
-],
-[
-"ИТ2 больше 1.5",
-0.263,
-null
-],
-[
-"Ф1 (−1.5)",
-0.29,
-null
-],
-[
-"Ф2 (+1.5)",
-0.71,
-null
-]
-],
-"bar": [
-0.5237175704282682,
-0.26096436107524895,
-0.21531806849648322
-],
-"center": "Ожидаемые голы (xG) 1.7 : 1.0",
-"scores": [
-[
-"1:1",
-0.125
-],
-[
-"1:0",
-0.106
-],
-[
-"2:0",
-0.097
-]
-],
-"corners": 8.3,
-"cards": 3.0
-}
-},
-{
 "sport": "tennis",
 "id": "186593",
 "league": "Теннис · WTA",
@@ -7772,6 +7528,66 @@ null
 "al": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/tb.png",
 "path": "hockey/nhl",
 "url": "live.html?s=hockey&p=hockey%2Fnhl&e=401892677&h=%D0%92%D0%B8%D0%BD%D0%BD%D0%B8%D0%BF%D0%B5%D0%B3&a=%D0%A2%D0%B0%D0%BC%D0%BF%D0%B0-%D0%91%D1%8D%D0%B9",
+"tip": "",
+"top": false,
+"bot": null
+},
+{
+"sport": "football",
+"id": "401876903",
+"league": "Мексика · Лига MX",
+"kickoff": "2026-11-09T03:00:00+03:00",
+"home": "Керетаро",
+"away": "Пуэбла",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/222.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/231.png",
+"path": "soccer/mex.1",
+"url": "live.html?s=football&p=soccer%2Fmex.1&e=401876903&h=%D0%9A%D0%B5%D1%80%D0%B5%D1%82%D0%B0%D1%80%D0%BE&a=%D0%9F%D1%83%D1%8D%D0%B1%D0%BB%D0%B0",
+"tip": "",
+"top": false,
+"bot": null
+},
+{
+"sport": "basketball",
+"id": "401909947",
+"league": "США · NBA",
+"kickoff": "2026-11-09T03:00:00+03:00",
+"home": "Миннесота Тимбервулвз",
+"away": "Юта Джаз",
+"hl": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/min.png",
+"al": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/utah.png",
+"path": "basketball/nba",
+"url": "live.html?s=basketball&p=basketball%2Fnba&e=401909947&h=%D0%9C%D0%B8%D0%BD%D0%BD%D0%B5%D1%81%D0%BE%D1%82%D0%B0+%D0%A2%D0%B8%D0%BC%D0%B1%D0%B5%D1%80%D0%B2%D1%83%D0%BB%D0%B2%D0%B7&a=%D0%AE%D1%82%D0%B0+%D0%94%D0%B6%D0%B0%D0%B7",
+"tip": "",
+"top": false,
+"bot": null
+},
+{
+"sport": "hockey",
+"id": "401892676",
+"league": "США · NHL",
+"kickoff": "2026-11-09T03:00:00+03:00",
+"home": "Торонто",
+"away": "Нью-Джерси",
+"hl": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/tor.png",
+"al": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/nj.png",
+"path": "hockey/nhl",
+"url": "live.html?s=hockey&p=hockey%2Fnhl&e=401892676&h=%D0%A2%D0%BE%D1%80%D0%BE%D0%BD%D1%82%D0%BE&a=%D0%9D%D1%8C%D1%8E-%D0%94%D0%B6%D0%B5%D1%80%D1%81%D0%B8",
+"tip": "",
+"top": false,
+"bot": null
+},
+{
+"sport": "hockey",
+"id": "401892678",
+"league": "США · NHL",
+"kickoff": "2026-11-09T03:00:00+03:00",
+"home": "Калгари",
+"away": "Филадельфия",
+"hl": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/cgy.png",
+"al": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/phi.png",
+"path": "hockey/nhl",
+"url": "live.html?s=hockey&p=hockey%2Fnhl&e=401892678&h=%D0%9A%D0%B0%D0%BB%D0%B3%D0%B0%D1%80%D0%B8&a=%D0%A4%D0%B8%D0%BB%D0%B0%D0%B4%D0%B5%D0%BB%D1%8C%D1%84%D0%B8%D1%8F",
 "tip": "",
 "top": false,
 "bot": null
