@@ -21,6 +21,7 @@ LIVE = {
     "NHL", "NBA", "WNBA", "ATP", "WTA", "CS2", "DOTA",
 }
 TRACKER = "https://horoooos.github.io/betbot/live.html"  # 3D-трекер матча (docs/live.html на GitHub Pages)
+MATCHES_PAGE = "https://horoooos.github.io/betbot/matches.html"  # все матчи дня в 3D
 # В хоккее шайб много (ночью NHL — десятки постов), поэтому там только «матч начался» и итог.
 WORD = {"football": ("ГОЛ!", "⚽️"), "esports": ("КАРТА!", "🎮")}
 START = {"football": "все голы будут здесь", "hockey": "итог матча будет здесь",
@@ -55,6 +56,12 @@ def _tracker(e: dict, sport: str, h: str, a: str) -> tuple[str, str] | None:
     return ("📺 Смотреть матч в 3D", f"{TRACKER}?" + urlencode({"s": sport, "p": path, "e": e["id"], "h": h, "a": a}))
 
 
+def buttons(e: dict, sport: str, h: str, a: str) -> list[tuple[str, str]]:
+    """Кнопки под постом о матче: этот матч в 3D + все матчи дня."""
+    b = _tracker(e, sport, h, a)
+    return [("📺 Матч в 3D", b[1]), ("🗂 Все матчи", MATCHES_PAGE)] if b else [("🗂 Матчи в 3D", MATCHES_PAGE)]
+
+
 def run(store: dict, events: list[dict], reviews: dict, brand: str) -> None:
     """store — состояние live (data/live.json); reviews — ключ матча → {"msg": id поста с прогнозом, "tip": прогноз}.
 
@@ -84,7 +91,7 @@ def run(store: dict, events: list[dict], reviews: dict, brand: str) -> None:
             if tip:
                 tip_line = (f"\n\n🎯 <b>Наш прогноз:</b> {escape(tip['label'])} · кэф {'≈' if tip.get('est') else ''}"
                             f"{tip['odds']:.2f} · ставка {tip.get('stake', 1):g}% банка\n👀 Следим вместе — итог будет здесь")
-            button = _tracker(e, sport, h, a)
+            button = buttons(e, sport, h, a)
             mid = telegram.send_photo(png, f"🔴 <b>МАТЧ НАЧАЛСЯ</b>\n{sports.EMOJI.get(sport, '⚽️')} <b>{escape(h)} — "
                                            f"{escape(a)}</b>\n🏆 {_title(e)}{tip_line}", reply_to=rv.get("msg"), button=button)
             store[key] = {"msg": mid, "hs": sc[0], "as": sc[1], "goals": len(e.get("goals") or []),

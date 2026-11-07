@@ -307,7 +307,9 @@ def review(ev: dict, w: dict, fx_loader, hist_loader, calib: dict, state: dict) 
     png = card.match_card(texts.league_plain(ev["div"]), texts.when(kick), ev["home"], ev["away"],
                           (probs["H"], probs["D"], probs["A"]), main["label"], f"xG {lam[0]:.1f} : {lam[1]:.1f} · шанс {texts.pct(main['p'])}",
                           BRAND, odds=f"{'≈' if main.get('est') else ''}{main['odds']:.2f}")
-    m["msg_id"] = telegram.send_photo(png, texts.caption(m, s.get("venue") or ev.get("venue")))
+    m["msg_id"] = telegram.send_photo(png, texts.caption(m, s.get("venue") or ev.get("venue")),
+                                      button=live.buttons(ev, "football", ev["home"]["ru"], ev["away"]["ru"]))
+    m["btn"] = 1
     telegram.send(texts.review(m, s), reply_to=m["msg_id"], silent=True)
     m["status"] = "reviewed"
     print(f"  обзор: {ev['home']['ru']} — {ev['away']['ru']} → {main['label']}")
@@ -356,7 +358,9 @@ def other_review(e: dict, calib: dict, ctx: dict, state: dict) -> dict | None:
     png = card.match_card(sports.league_plain(e["div"]), texts.when(kick), e["home"], e["away"], a["bar"], m["main"]["label"],
                           a["center"], BRAND, sport=e["sport"],
                           odds=f"{'≈' if m['main'].get('est') else ''}{m['main']['odds']:.2f}")
-    m["msg_id"] = telegram.send_photo(png, sports.caption(m, texts.when(kick)))
+    m["msg_id"] = telegram.send_photo(png, sports.caption(m, texts.when(kick)),
+                                      button=live.buttons(e, e["sport"], e["home"]["ru"], e["away"]["ru"]))
+    m["btn"] = 1
     if e["sport"] in ("hockey", "basketball"):
         sport, slug = sports.LEAGUES[e["div"]][3].split("/")
         text = reviews.team_review(m, summary(slug, e["id"], sport))
@@ -589,6 +593,31 @@ def main():
     except Exception as e:
         print(f"  ! live не удался: {e}")
     save_json(LIVE, live.cleanup(live_store, now))
+
+    # кнопки «📺 Матч в 3D» под уже опубликованными прогнозами, которые вышли до появления кнопок
+    for path, store in ((MATCHES, matches), (OTHER, load_json(OTHER, {}))):
+        changed = False
+        for m in store.values():
+            if not m.get("msg_id") or m.get("btn") or "ru" not in m.get("home", {}):
+                continue
+            if pd.Timestamp(m["kickoff"]) < now - pd.Timedelta(hours=3):
+                m["btn"] = 1  # старые матчи не трогаем
+                continue
+            sp = m.get("sport", "football")
+            if telegram.add_buttons(m["msg_id"], live.buttons(m, sp, m["home"]["ru"], m["away"]["ru"])):
+                m["btn"] = 1
+                changed = True
+        if changed or path == OTHER:
+            save_json(path, store)
+
+    # бот в личке: кнопка-меню «📺 Матчи 3D» (один раз) и ответы тем, кто написал боту
+    if state.get("bot_setup") != 1:
+        try:
+            telegram.setup_bot(live.MATCHES_PAGE, site.SITE, site.CHANNEL)
+            state["bot_setup"] = 1
+        except Exception as e:
+            print(f"  ! меню бота не настроилось: {e}")
+    telegram.answer_users(state, live.MATCHES_PAGE, site.SITE, site.CHANNEL)
 
     # разовая переотправка постов по запросу (data/repost.json) — выполняется один раз на каждый id
     req = load_json(REPOST, {})

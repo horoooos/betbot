@@ -14,7 +14,10 @@ _fake_id = 0
 
 def _call(method: str, files=None, **params) -> dict:
     url = f"https://api.telegram.org/bot{os.environ['TELEGRAM_TOKEN']}/{method}"
-    params.setdefault("chat_id", os.environ["TELEGRAM_CHAT_ID"])
+    if "chat_id" not in params:
+        params["chat_id"] = os.environ["TELEGRAM_CHAT_ID"]
+    elif params["chat_id"] is None:  # настройки самого бота (меню, описание) — без чата
+        del params["chat_id"]
     data = {}
     for _ in range(5):
         r = requests.post(url, data=params, files=files, timeout=60)
@@ -139,8 +142,17 @@ def send_album(pngs: list[bytes], caption: str) -> int:
     return res[0]["message_id"]
 
 
-def send_photo(png: bytes, caption: str, reply_to: int | None = None, button: tuple[str, str] | None = None) -> int:
-    """Фото с подписью; button — (текст, ссылка) для кнопки под постом."""
+def _keyboard(buttons) -> str:
+    """Кнопки под постом: (текст, ссылка) или список таких — в один ряд."""
+    import json
+    if isinstance(buttons, tuple):
+        buttons = [buttons]
+    row = [{"text": t, "url": u} for t, u in buttons if t and u]
+    return json.dumps({"inline_keyboard": [row]}, ensure_ascii=False)
+
+
+def send_photo(png: bytes, caption: str, reply_to: int | None = None, button=None) -> int:
+    """Фото с подписью; button — (текст, ссылка) или список таких для кнопок под постом."""
     caption = tag(caption)
     if len(caption) > CAPTION_LIMIT:  # хештег не должен «съесть» текст — тогда без него
         caption = caption[:CAPTION_LIMIT]
@@ -151,8 +163,7 @@ def send_photo(png: bytes, caption: str, reply_to: int | None = None, button: tu
         params["reply_to_message_id"] = reply_to
         params["allow_sending_without_reply"] = True
     if button:
-        import json
-        params["reply_markup"] = json.dumps({"inline_keyboard": [[{"text": button[0], "url": button[1]}]]}, ensure_ascii=False)
+        params["reply_markup"] = _keyboard(button)
     return _call("sendPhoto", files={"photo": ("match.png", png, "image/png")}, **params)["message_id"]
 
 
@@ -165,3 +176,77 @@ def pin(message_id: int) -> None:
         _call("pinChatMessage", message_id=message_id, disable_notification=True)
     except RuntimeError as e:
         print(f"  ! закрепить не удалось: {e}")
+
+
+def add_buttons(message_id: int, buttons) -> bool:
+    """Добавить кнопки под уже опубликованный пост."""
+    if DRY:
+        print(f"[тест] кнопки под постом #{message_id}: {buttons}")
+        return True
+    try:
+        _call("editMessageReplyMarkup", message_id=message_id, reply_markup=_keyboard(buttons))
+        return True
+    except RuntimeError as e:
+        print(f"  ! кнопки под пост #{message_id} не добавились: {e}")
+        return "not modified" in str(e)
+
+
+def setup_bot(matches_url: str, site_url: str, channel: str) -> None:
+    """Один раз: кнопка «📺 Матчи 3D» в меню бота (открывает страницу прямо в Telegram), команды и описание."""
+    import json
+    if DRY:
+        print("[тест] настройка меню бота")
+        return
+    _call("setChatMenuButton", chat_id=None,
+          menu_button=json.dumps({"type": "web_app", "text": "📺 Матчи 3D", "web_app": {"url": matches_url}}, ensure_ascii=False))
+    _call("setMyCommands", chat_id=None, commands=json.dumps([
+        {"command": "start", "description": "Главное меню"},
+        {"command": "matches", "description": "📺 Матчи в живом 3D"},
+        {"command": "stats", "description": "📊 Честная статистика бота"},
+    ], ensure_ascii=False))
+    _call("setMyShortDescription", chat_id=None,
+          short_description=f"Бесплатные прогнозы на спорт и матчи в живом 3D. Канал: {channel}"[:120])
+    _call("setMyDescription", chat_id=None, description=(
+        "🤖 АИ СТАВИТ — бесплатные прогнозы на футбол, НХЛ, НБА, теннис и киберспорт.\n\n"
+        "📺 Любой матч дня — в живом 3D: игроки, мяч, голы, VAR и замены в реальном времени.\n"
+        f"📊 Честная статистика всех прогнозов.\n📲 Канал: {channel}")[:512])
+
+
+WELCOME = ("👋 <b>Привет! Это АИ СТАВИТ</b>\n\n"
+           "📺 <b>Матчи в живом 3D</b> — игроки, мяч, голы, удары, карточки, VAR и замены в реальном времени.\n"
+           "🎯 Прогнозы на футбол, НХЛ, НБА и теннис — в канале за час до матча.\n"
+           "📊 Честная статистика всех прогнозов — на сайте.\n\n"
+           "Жми кнопку ниже 👇")
+
+
+def answer_users(state: dict, matches_url: str, site_url: str, channel: str) -> None:
+    """Отвечаем тем, кто написал боту в личку: меню с 3D-матчами, каналом и статистикой (раз в цикл, без вебхука)."""
+    import json
+    if DRY:
+        return
+    try:
+        ups = _call("getUpdates", chat_id=None, offset=state.get("tg_offset", 0), timeout=0,
+                    allowed_updates=json.dumps(["message"]))
+    except RuntimeError as e:
+        print(f"  ! сообщения боту не прочитались: {e}")
+        return
+    for u in ups:
+        state["tg_offset"] = u["update_id"] + 1
+        msg = u.get("message") or {}
+        chat = msg.get("chat") or {}
+        if chat.get("type") != "private":
+            continue
+        text = (msg.get("text") or "").lower()
+        tg = f"https://t.me/{channel.lstrip('@')}"
+        if text.startswith("/stats"):
+            reply, kb = "📊 <b>Честная статистика бота</b> — все прогнозы без исключений:", [[{"text": "📊 Открыть статистику", "web_app": {"url": site_url}}]]
+        elif text.startswith("/matches"):
+            reply, kb = "📺 <b>Матчи дня в живом 3D</b> — выбирай игру:", [[{"text": "📺 Смотреть матчи в 3D", "web_app": {"url": matches_url}}]]
+        else:
+            reply, kb = WELCOME, [[{"text": "📺 Смотреть матчи в 3D", "web_app": {"url": matches_url}}],
+                                  [{"text": "📲 Канал с прогнозами", "url": tg}, {"text": "📊 Статистика", "web_app": {"url": site_url}}]]
+        try:
+            _call("sendMessage", chat_id=chat["id"], text=reply, parse_mode="HTML",
+                  reply_markup=json.dumps({"inline_keyboard": kb}, ensure_ascii=False))
+        except RuntimeError as e:
+            print(f"  ! ответ пользователю не ушёл: {e}")
