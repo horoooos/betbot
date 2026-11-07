@@ -11234,5 +11234,195 @@
   "close": {
    "BB_U230.5": 0.5
   }
+ },
+ "NBA|401909294": {
+  "id": "401909294",
+  "div": "NBA",
+  "sport": "basketball",
+  "kickoff": "2026-11-07T06:00:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "home": {
+   "id": "13",
+   "name": "Los Angeles Lakers",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/lal.png",
+   "color": "552583",
+   "score": "0",
+   "record": "7-2",
+   "periods": [],
+   "ru": "Лейкерс"
+  },
+  "away": {
+   "id": "22",
+   "name": "Portland Trail Blazers",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/por.png",
+   "color": "e03a3e",
+   "score": "0",
+   "record": "6-1",
+   "periods": [],
+   "ru": "Портленд"
+  },
+  "odds": {
+   "H": 1.649,
+   "A": 2.3,
+   "line": 231.5,
+   "over": 1.893,
+   "under": 1.926,
+   "spread": -3.5,
+   "sp_h": 1.962,
+   "sp_a": 1.862
+  },
+  "probs": {
+   "BB_ML_H": 0.6147292511447229,
+   "BB_ML_A": 0.3852707488552771,
+   "BB_SPR_H": 0.5,
+   "BB_SPR_A": 0.5,
+   "BB_O224.5": 0.6597440535491568,
+   "BB_U224.5": 0.3402559464508432,
+   "BB_O231.5": 0.5,
+   "BB_U231.5": 0.5,
+   "BB_O238.5": 0.3402559464508432,
+   "BB_U238.5": 0.6597440535491568
+  },
+  "labels": {
+   "BB_ML_H": "П1 (с ОТ)",
+   "BB_ML_A": "П2 (с ОТ)",
+   "BB_SPR_H": "Ф1 (-3.5)",
+   "BB_SPR_A": "Ф2 (+3.5)",
+   "BB_O224.5": "ТБ 224.5",
+   "BB_U224.5": "ТМ 224.5",
+   "BB_O231.5": "ТБ 231.5",
+   "BB_U231.5": "ТМ 231.5",
+   "BB_O238.5": "ТБ 238.5",
+   "BB_U238.5": "ТМ 238.5"
+  },
+  "real": {
+   "BB_ML_H": 1.649,
+   "BB_ML_A": 2.3,
+   "BB_SPR_H": 1.962,
+   "BB_SPR_A": 1.862,
+   "BB_O231.5": 1.893,
+   "BB_U231.5": 1.926
+  },
+  "center": "Ожидаемый счёт 118 : 114",
+  "bar": [
+   0.6147292511447229,
+   0,
+   0.3852707488552771
+  ],
+  "model": {
+   "mu": 3.5,
+   "T": 231.5
+  },
+  "main": {
+   "key": "BB_ML_H",
+   "label": "П1 (с ОТ)",
+   "p": 0.6147,
+   "odds": 1.65,
+   "est": false,
+   "stake": 1.0
+  },
+  "bold": {},
+  "open": {
+   "BB_ML_H": 0.6147
+  },
+  "top": false,
+  "msg_id": 3522
+ },
+ "NBA|401909295": {
+  "id": "401909295",
+  "div": "NBA",
+  "sport": "basketball",
+  "kickoff": "2026-11-07T06:00:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "home": {
+   "id": "23",
+   "name": "Sacramento Kings",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/sac.png",
+   "color": "5a2d81",
+   "score": "0",
+   "record": "1-7",
+   "periods": [],
+   "ru": "Сакраменто Кингз"
+  },
+  "away": {
+   "id": "24",
+   "name": "San Antonio Spurs",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/sa.png",
+   "color": "000000",
+   "score": "0",
+   "record": "6-2",
+   "periods": [],
+   "ru": "Сан-Антонио Сперс"
+  },
+  "odds": {
+   "H": 9.1,
+   "A": 1.075,
+   "line": 231.5,
+   "over": 1.909,
+   "under": 1.909,
+   "spread": 17.5,
+   "sp_h": 1.909,
+   "sp_a": 1.909
+  },
+  "probs": {
+   "BB_ML_H": 0.07237434330149779,
+   "BB_ML_A": 0.9276256566985022,
+   "BB_SPR_H": 0.5,
+   "BB_SPR_A": 0.5,
+   "BB_O224.5": 0.6597440535491568,
+   "BB_U224.5": 0.3402559464508432,
+   "BB_O231.5": 0.5,
+   "BB_U231.5": 0.5,
+   "BB_O238.5": 0.3402559464508432,
+   "BB_U238.5": 0.6597440535491568
+  },
+  "labels": {
+   "BB_ML_H": "П1 (с ОТ)",
+   "BB_ML_A": "П2 (с ОТ)",
+   "BB_SPR_H": "Ф1 (+17.5)",
+   "BB_SPR_A": "Ф2 (-17.5)",
+   "BB_O224.5": "ТБ 224.5",
+   "BB_U224.5": "ТМ 224.5",
+   "BB_O231.5": "ТБ 231.5",
+   "BB_U231.5": "ТМ 231.5",
+   "BB_O238.5": "ТБ 238.5",
+   "BB_U238.5": "ТМ 238.5"
+  },
+  "real": {
+   "BB_ML_H": 9.1,
+   "BB_ML_A": 1.075,
+   "BB_SPR_H": 1.909,
+   "BB_SPR_A": 1.909,
+   "BB_O231.5": 1.909,
+   "BB_U231.5": 1.909
+  },
+  "center": "Ожидаемый счёт 107 : 124",
+  "bar": [
+   0.07237434330149779,
+   0,
+   0.9276256566985022
+  ],
+  "model": {
+   "mu": -17.5,
+   "T": 231.5
+  },
+  "main": {
+   "key": "BB_O231.5",
+   "label": "ТБ 231.5",
+   "p": 0.5,
+   "odds": 1.91,
+   "est": false,
+   "stake": 1.0
+  },
+  "bold": {},
+  "open": {
+   "BB_O231.5": 0.5
+  },
+  "top": false,
+  "msg_id": 3524
  }
 }
