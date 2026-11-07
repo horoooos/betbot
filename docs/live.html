@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>АИ СТАВИТ — матч в прямом эфире</title>
+<meta name="description" content="Живой 3D-трекер матча: счёт, минута, события на поле и статистика в реальном времени.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&display=swap" rel="stylesheet">
+<style>
+  :root { --bg:#070b1a; --card:rgba(16,22,46,.78); --line:rgba(255,255,255,.12); --ink:#fff; --muted:#a0acd0;
+          --gold:#ffc400; --live:#ff4646; --home:#2ecc71; --away:#3498db; }
+  * { box-sizing:border-box; margin:0; padding:0 }
+  html,body { height:100%; background:var(--bg); color:var(--ink); font-family:Montserrat,system-ui,sans-serif; overflow:hidden }
+  #scene { position:fixed; inset:0 }
+  .hud { position:fixed; left:0; right:0; pointer-events:none; padding:12px 14px }
+  .top { top:0 }
+  .bar { display:flex; align-items:center; justify-content:space-between; gap:10px; background:var(--card);
+         border:1px solid var(--line); border-radius:20px; padding:10px 14px; backdrop-filter:blur(10px); max-width:760px; margin:0 auto }
+  .team { display:flex; align-items:center; gap:8px; width:38%; min-width:0 }
+  .team.away { justify-content:flex-end; text-align:right }
+  .team img { width:34px; height:34px; object-fit:contain; flex:none }
+  .team .nm { font-weight:800; font-size:14px; line-height:1.15; overflow:hidden; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; hyphens:auto }
+  .team .stripe { width:4px; height:30px; border-radius:2px; flex:none }
+  .mid { text-align:center; flex:none }
+  .score { font-weight:800; font-size:30px; letter-spacing:1px }
+  .clock { display:inline-flex; align-items:center; gap:6px; font-size:12px; font-weight:700; color:var(--muted); margin-top:2px }
+  .dot { width:8px; height:8px; border-radius:50%; background:var(--live); box-shadow:0 0 10px var(--live); animation:pulse 1.2s infinite }
+  .dot.off { background:var(--muted); box-shadow:none; animation:none }
+  @keyframes pulse { 50% { opacity:.35 } }
+  .league { text-align:center; font-size:11px; font-weight:700; color:var(--muted); letter-spacing:1.5px; margin-top:6px; text-transform:uppercase }
+  #tag { position:fixed; pointer-events:none; transform:translate(-50%,-130%); padding:8px 12px 8px 14px; border-radius:14px;
+         background:var(--card); border:1px solid var(--line); backdrop-filter:blur(8px); white-space:nowrap; opacity:0;
+         transition:opacity .3s, left .9s cubic-bezier(.3,.7,.2,1), top .9s cubic-bezier(.3,.7,.2,1) }
+  #tag .t { font-weight:800; font-size:14px } #tag .e { font-size:12px; color:var(--muted); font-weight:600 }
+  #tag::before { content:""; position:absolute; left:0; top:8px; bottom:8px; width:4px; border-radius:2px; background:var(--c,#fff) }
+  #tag.goal .t { color:var(--gold); font-size:20px }
+  .bottom { bottom:0 }
+  .panel { max-width:760px; margin:0 auto; background:var(--card); border:1px solid var(--line); border-radius:20px;
+           padding:10px 14px; backdrop-filter:blur(10px) }
+  #stats { display:grid; grid-template-columns:1fr 1fr; column-gap:18px }
+  .stat { display:grid; grid-template-columns:34px 1fr 34px; align-items:center; gap:6px; margin:2px 0; font-size:12px; font-weight:800 }
+  .stat .lbl { grid-column:1/4; text-align:center; font-size:10px; color:var(--muted); letter-spacing:1.2px; text-transform:uppercase; margin-bottom:-2px }
+  .stat .v { text-align:center } .track { display:flex; height:6px; border-radius:3px; overflow:hidden; background:rgba(255,255,255,.08); gap:3px }
+  .track i { display:block; height:100%; border-radius:3px; transition:width .8s } .track i:last-child { margin-left:auto }
+  .feed { margin-top:6px; border-top:1px solid var(--line); padding-top:4px; font-size:12px; color:var(--muted); max-height:38px; overflow:hidden }
+  .feed div { white-space:nowrap; overflow:hidden; text-overflow:ellipsis; line-height:1.5 }
+  .feed b { color:var(--ink); margin-right:6px }
+  .brand { position:fixed; right:14px; top:50%; transform:translateY(-50%) rotate(90deg); transform-origin:right center;
+           font-size:11px; color:rgba(255,255,255,.35); font-weight:700; letter-spacing:2px; pointer-events:none }
+  #msg { position:fixed; inset:0; display:flex; align-items:center; justify-content:center; text-align:center; padding:30px; font-weight:700; color:var(--muted) }
+  #replay { pointer-events:auto; display:none; margin:8px auto 0; background:var(--gold); color:#1e1606; border:0; border-radius:12px;
+            padding:8px 16px; font:800 13px Montserrat,sans-serif }
+  @media (max-height:560px) { .panel { padding:6px 10px } .stat .lbl { font-size:9px } .feed { display:none } }
+  @media (max-width:520px) { .team { width:41% } .team .nm { font-size:11px; letter-spacing:-.2px } .score { font-size:26px } .team img { width:24px; height:24px } .team .stripe { display:none } }
+</style>
+</head>
+<body>
+<canvas id="scene"></canvas>
+<div id="msg">Загружаем матч…</div>
+<div class="hud top">
+  <div class="bar">
+    <div class="team home"><span class="stripe" id="hc"></span><img id="hl" alt=""><span class="nm" id="hn">—</span></div>
+    <div class="mid"><div class="score" id="sc">0 : 0</div><div class="clock"><span class="dot" id="dot"></span><span id="cl">—</span></div></div>
+    <div class="team away"><span class="nm" id="an">—</span><img id="al" alt=""><span class="stripe" id="ac"></span></div>
+  </div>
+  <div class="league" id="lg"></div>
+  <div style="text-align:center"><button id="replay">▶ Смотреть повтор матча</button></div>
+</div>
+<div id="tag"><div class="t" id="tt"></div><div class="e" id="te"></div></div>
+<div class="hud bottom"><div class="panel"><div id="stats"></div><div class="feed" id="feed"></div></div></div>
+<div class="brand">@AISTAVVIT</div>
+
+<script type="importmap">{ "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js" } }</script>
+<script type="module">
+import * as THREE from "three";
+
+// ── параметры ссылки: лига ESPN, id матча, русские названия ─────────────────
+const q = new URLSearchParams(location.search);
+const LEAGUE = q.get("l") || "eng.1", EVENT = q.get("e"), RU_H = q.get("h"), RU_A = q.get("a");
+const API = `https://site.api.espn.com/apis/site/v2/sports/soccer/${LEAGUE}/summary?event=${EVENT}`;
+const $ = id => document.getElementById(id);
+if (window.Telegram && Telegram.WebApp) { Telegram.WebApp.ready(); Telegram.WebApp.expand(); }
+
+// ── 3D-сцена: стадион, поле, ворота, прожекторы, мяч ─────────────────────────
+const L = 105, Wd = 68;                                   // размеры поля в метрах
+const canvas = $("scene");
+const renderer = new THREE.WebGLRenderer({ canvas, antialias: true });
+renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+renderer.shadowMap.enabled = true;
+const scene = new THREE.Scene();
+scene.background = new THREE.Color(0x070b1a);
+scene.fog = new THREE.Fog(0x070b1a, 170, 340);
+const camera = new THREE.PerspectiveCamera(42, 1, 0.1, 600);
+const world = new THREE.Group(); scene.add(world);        // стадион целиком: на вертикальном экране поворачиваем на 90°
+
+function pitchTexture() {                                 // газон с полосами и разметкой
+  const c = document.createElement("canvas"); c.width = 2100; c.height = 1360;
+  const g = c.getContext("2d"), k = c.width / L;
+  for (let i = 0; i < 14; i++) { g.fillStyle = i % 2 ? "#2f8f3a" : "#35a042"; g.fillRect(i * c.width / 14, 0, c.width / 14 + 1, c.height); }
+  g.strokeStyle = "rgba(255,255,255,.92)"; g.lineWidth = 0.14 * k;
+  const R = (x, y, w, h) => g.strokeRect(x * k, y * k, w * k, h * k);
+  R(0.5, 0.5, L - 1, Wd - 1);
+  g.beginPath(); g.moveTo(L / 2 * k, 0.5 * k); g.lineTo(L / 2 * k, (Wd - 0.5) * k); g.stroke();
+  g.beginPath(); g.arc(L / 2 * k, Wd / 2 * k, 9.15 * k, 0, Math.PI * 2); g.stroke();
+  for (const s of [0, 1]) {
+    const x = s ? L - 0.5 : 0.5, d = s ? -1 : 1;
+    R(s ? L - 0.5 - 16.5 : 0.5, Wd / 2 - 20.16, 16.5, 40.32);
+    R(s ? L - 0.5 - 5.5 : 0.5, Wd / 2 - 9.16, 5.5, 18.32);
+    g.beginPath(); g.arc((x + d * 11) * k, Wd / 2 * k, 9.15 * k, s ? Math.PI * 0.705 : -Math.PI * 0.295, s ? Math.PI * 1.295 : Math.PI * 0.295); g.stroke();
+    g.fillStyle = "#fff"; g.beginPath(); g.arc((x + d * 11) * k, Wd / 2 * k, 0.3 * k, 0, 7); g.fill();
+  }
+  g.fillStyle = "#fff"; g.beginPath(); g.arc(L / 2 * k, Wd / 2 * k, 0.3 * k, 0, 7); g.fill();
+  const t = new THREE.CanvasTexture(c); t.anisotropy = 8; t.colorSpace = THREE.SRGBColorSpace; return t;
+}
+const pitch = new THREE.Mesh(new THREE.PlaneGeometry(L, Wd), new THREE.MeshStandardMaterial({ map: pitchTexture(), roughness: .9 }));
+pitch.rotation.x = -Math.PI / 2; pitch.receiveShadow = true; world.add(pitch);
+const apron = new THREE.Mesh(new THREE.PlaneGeometry(L + 24, Wd + 24), new THREE.MeshStandardMaterial({ color: 0x1d5a26, roughness: 1 }));
+apron.rotation.x = -Math.PI / 2; apron.position.y = -0.02; world.add(apron);
+
+// подсветка половины поля команды, которая сейчас атакует
+const zoneMat = new THREE.MeshBasicMaterial({ color: 0x2ecc71, transparent: true, opacity: 0, depthWrite: false });
+const zone = new THREE.Mesh(new THREE.PlaneGeometry(L / 2, Wd), zoneMat);
+zone.rotation.x = -Math.PI / 2; zone.position.y = 0.03; world.add(zone);
+
+function goal(side) {                                     // ворота: штанги, перекладина и сетка
+  const grp = new THREE.Group(), m = new THREE.MeshStandardMaterial({ color: 0xffffff, roughness: .3, metalness: .2 });
+  const post = (z) => { const p = new THREE.Mesh(new THREE.CylinderGeometry(.12, .12, 2.44), m); p.position.set(0, 1.22, z); p.castShadow = true; grp.add(p); };
+  post(-3.66); post(3.66);
+  const bar = new THREE.Mesh(new THREE.CylinderGeometry(.12, .12, 7.32), m); bar.rotation.x = Math.PI / 2; bar.position.set(0, 2.44, 0); grp.add(bar);
+  const net = new THREE.Mesh(new THREE.BoxGeometry(2, 2.44, 7.32), new THREE.MeshBasicMaterial({ color: 0xffffff, wireframe: true, transparent: true, opacity: .25 }));
+  net.position.set(side * 1, 1.22, 0); grp.add(net);
+  grp.position.x = side * L / 2; world.add(grp);
+}
+goal(-1); goal(1);
+
+// трибуны: тёмные ступени со светящейся полосой
+const standMat = new THREE.MeshStandardMaterial({ color: 0x141a33, roughness: 1 });
+const glowMat = new THREE.MeshBasicMaterial({ color: 0xffc400 });
+for (const [w, d, x, z, ry] of [[L + 30, 14, 0, -(Wd / 2 + 16), 0], [L + 30, 14, 0, Wd / 2 + 16, 0], [Wd + 30, 14, -(L / 2 + 16), 0, Math.PI / 2], [Wd + 30, 14, L / 2 + 16, 0, Math.PI / 2]]) {
+  for (let i = 0; i < 4; i++) {
+    const s = new THREE.Mesh(new THREE.BoxGeometry(w, 2.2, d / 4), standMat);
+    s.position.set(x, 1.1 + i * 2.2, z); s.rotation.y = ry;
+    const off = (i - 1.5) * d / 4 * Math.sign(z || x);
+    if (ry) s.position.x += off; else s.position.z += off; world.add(s);
+  }
+  const strip = new THREE.Mesh(new THREE.BoxGeometry(w, .25, .25), glowMat);
+  strip.position.set(x, 9, z); strip.rotation.y = ry; world.add(strip);
+}
+
+// свет: мягкий общий + 4 прожектора по углам
+const hemi = new THREE.HemisphereLight(0xbfd6ff, 0x0a1a0a, .55); scene.add(hemi);
+for (const [x, z] of [[-60, -45], [60, -45], [-60, 45], [60, 45]]) {
+  const l = new THREE.SpotLight(0xffffff, 900, 220, Math.PI / 5, .5, 1.6);
+  l.position.set(x, 45, z); l.target.position.set(0, 0, 0); l.castShadow = x < 0 && z < 0;
+  scene.add(l, l.target);
+  const lamp = new THREE.Mesh(new THREE.SphereGeometry(1.4, 16, 16), new THREE.MeshBasicMaterial({ color: 0xfff4c8 }));
+  lamp.position.set(x, 45, z); scene.add(lamp);
+}
+
+// мяч со свечением и следом
+const ball = new THREE.Mesh(new THREE.SphereGeometry(.55, 32, 32), new THREE.MeshStandardMaterial({ color: 0xffffff, emissive: 0xffffff, emissiveIntensity: .35, roughness: .4 }));
+ball.castShadow = true; ball.position.set(0, .55, 0); world.add(ball);
+const glowTex = (() => { const c = document.createElement("canvas"); c.width = c.height = 128; const g = c.getContext("2d");
+  const r = g.createRadialGradient(64, 64, 0, 64, 64, 64); r.addColorStop(0, "rgba(255,230,140,1)"); r.addColorStop(.35, "rgba(255,196,0,.45)"); r.addColorStop(1, "rgba(255,196,0,0)");
+  g.fillStyle = r; g.fillRect(0, 0, 128, 128); return new THREE.CanvasTexture(c); })();
+const halo = new THREE.Sprite(new THREE.SpriteMaterial({ map: glowTex, transparent: true, depthWrite: false })); halo.scale.set(7, 7, 1); world.add(halo);
+const ring = new THREE.Mesh(new THREE.RingGeometry(1.2, 1.6, 48), new THREE.MeshBasicMaterial({ color: 0xffc400, transparent: true, opacity: .8, side: THREE.DoubleSide }));
+ring.rotation.x = -Math.PI / 2; ring.position.y = .05; world.add(ring);
+const trailPts = Array.from({ length: 40 }, () => ball.position.clone());
+const trail = new THREE.Line(new THREE.BufferGeometry().setFromPoints(trailPts), new THREE.LineBasicMaterial({ color: 0xffc400, transparent: true, opacity: .55 }));
+world.add(trail);
+
+function resize() { const w = innerWidth, h = innerHeight; renderer.setSize(w, h, false); camera.aspect = w / h; camera.updateProjectionMatrix(); }
+addEventListener("resize", resize); resize();
+
+// ── анимация мяча: полёт по дуге к точке события ─────────────────────────────
+let from = ball.position.clone(), to = from.clone(), t0 = 0, dur = 1, arc = 0, shake = 0;
+function flyTo(x, z, h = 6) { from = ball.position.clone(); to = new THREE.Vector3(x, .55, z); t0 = performance.now(); dur = 1100; arc = h; }
+
+let camGoal = 0;
+function animate(now) {
+  requestAnimationFrame(animate);
+  const k = Math.min((now - t0) / dur, 1), e = 1 - Math.pow(1 - k, 3);
+  ball.position.lerpVectors(from, to, e);
+  ball.position.y = .55 + Math.sin(Math.PI * k) * arc;
+  ball.rotation.x += .08 * (1 - k) + .005; ball.rotation.z += .05 * (1 - k);
+  halo.position.copy(ball.position); ring.position.x = ball.position.x; ring.position.z = ball.position.z;
+  ring.scale.setScalar(1 + .25 * Math.sin(now / 250));
+  trailPts.pop(); trailPts.unshift(ball.position.clone()); trail.geometry.setFromPoints(trailPts);
+  // камера медленно плывёт вокруг поля и чуть следит за мячом; при голе — наезд
+  const a = now / 9000, zoom = camGoal > now ? 0.62 : 1;
+  let tx = ball.position.x * .35, tz = ball.position.z * .2;
+  const portrait = camera.aspect < 1;
+  world.rotation.y += ((portrait ? -Math.PI / 2 : 0) - world.rotation.y) * .1;  // хозяева атакуют вверх по экрану
+  const bp = ball.getWorldPosition(new THREE.Vector3());
+  if (portrait) {   // телефон: камера почти сверху и строго по центру — поле целиком, с лёгким наклоном для объёма
+    tx = bp.x * .08; tz = bp.z * .1 + 12;                 // смотрим чуть ближе к себе — поле поднимается над панелью
+    camera.position.x += ((Math.sin(a) * 2 + tx) - camera.position.x) * .03;
+    camera.position.y += ((170 * zoom) - camera.position.y) * .03;
+    camera.position.z += ((52 * zoom + tz) - camera.position.z) * .03;
+  } else {
+    tx = bp.x * .35; tz = bp.z * .2;
+    camera.position.x += ((Math.sin(a) * 26 + tx) - camera.position.x) * .03;
+    camera.position.y += ((58 * zoom) - camera.position.y) * .03;
+    camera.position.z += ((70 * zoom + Math.cos(a) * 6) - camera.position.z) * .03;
+  }
+  const fov = portrait ? 56 : 42;
+  if (camera.fov !== fov) { camera.fov = fov; camera.updateProjectionMatrix(); }
+  scene.fog.near = portrait ? 260 : 170; scene.fog.far = portrait ? 500 : 340;
+  hemi.intensity = portrait ? 1.1 : .55;
+  if (shake > 0) { camera.position.x += (Math.random() - .5) * shake; camera.position.y += (Math.random() - .5) * shake; shake *= .92; }
+  camera.lookAt(tx, 0, tz);
+  zoneMat.opacity += ((zone.userData.target || 0) - zoneMat.opacity) * .05;
+  renderer.render(scene, camera);
+  placeTag();
+}
+requestAnimationFrame(animate);
+
+// подпись события «над мячом»
+const tag = $("tag");
+function placeTag() {
+  const p = ball.getWorldPosition(new THREE.Vector3()); p.y += 2.5; p.project(camera);
+  tag.style.left = ((p.x + 1) / 2 * innerWidth) + "px"; tag.style.top = ((1 - p.y) / 2 * innerHeight) + "px";
+}
+
+// ── события ESPN → русские подписи и точка на поле ───────────────────────────
+// типы событий ESPN → русские подписи (точное соответствие, без угадывания по словам)
+const RU = { "goal": "ГОЛ!", "own-goal": "Автогол", "penalty---scored": "ГОЛ с пенальти!", "penalty---missed": "Незабитый пенальти",
+  "penalty---saved": "Вратарь отбил пенальти", "corner-awarded": "Угловой", "shot-on-target": "Удар в створ",
+  "shot-off-target": "Удар мимо", "shot-blocked": "Удар заблокирован", "shot-hit-woodwork": "Попадание в каркас ворот!",
+  "save": "Сейв вратаря", "offside": "Офсайд", "foul": "Фол", "free-kick": "Штрафной", "yellow-card": "Жёлтая карточка",
+  "red-card": "Красная карточка", "second-yellow-card": "Вторая жёлтая — удаление", "substitution": "Замена",
+  "kickoff": "Начало тайма", "halftime": "Перерыв", "end-regular-time": "Финальный свисток", "full-time": "Финальный свисток",
+  "start-delay": "Пауза в игре", "end-delay": "Игра продолжается", "handball": "Игра рукой", "aerial": "Борьба за верховой мяч",
+  "var": "Проверка VAR" };
+function ruType(p) {
+  const k = (p.type?.type || "").toLowerCase();
+  if (p.scoringPlay || k === "goal") return "ГОЛ!";
+  if (RU[k]) return RU[k];
+  for (const key in RU) if (k.includes(key)) return RU[key];
+  return "Атака";
+}
+let H = {}, A = {};
+function side(p) {                                        // 1 — хозяева, -1 — гости, 0 — неизвестно
+  const n = p.team?.displayName; if (!n) return 0;
+  return n === H.name ? 1 : n === A.name ? -1 : 0;
+}
+function where(p) {                                       // координаты события → точка на 3D-поле
+  const s = side(p), t = ruType(p);
+  let x = p.fieldPositionX, y = p.fieldPositionY;
+  if (x == null) {                                        // координат нет — ставим по смыслу события
+    x = t === "Угловой" ? 99 : /Удар|ГОЛ|Сейв|енальти|каркас/.test(t) ? 88 : t === "Офсайд" ? 80 : t.startsWith("Начало") ? 50 : 55 + Math.random() * 20;
+    y = t === "Угловой" ? (Math.random() < .5 ? 1 : 99) : 30 + Math.random() * 40;
+  }
+  // у ESPN координаты — со стороны команды события (она атакует вправо); хозяева у нас атакуют вправо
+  if (s === -1) { x = 100 - x; y = 100 - y; }
+  return [(x / 100 - .5) * L, (y / 100 - .5) * Wd];
+}
+
+const seen = new Set(), queue = [];
+let replayMode = false;
+function show(p) {
+  const t = ruType(p), s = side(p), [x, z] = where(p);
+  const isGoal = t === "ГОЛ!";
+  flyTo(x, z, isGoal ? 9 : /Удар|Угловой|Штрафной|каркас/.test(t) ? 7 : 4);
+  const team = s === 1 ? H : s === -1 ? A : null;
+  $("tt").textContent = isGoal ? `⚽ ГОЛ! ${team ? team.ru : ""}` : (team ? team.ru : "");
+  $("te").textContent = isGoal ? (p.clock?.displayValue || "") : `${t}${p.clock?.displayValue ? " · " + p.clock.displayValue : ""}`;
+  tag.style.setProperty("--c", team ? team.color : "#fff");
+  tag.classList.toggle("goal", isGoal); tag.style.opacity = 1;
+  if (team) { zoneMat.color.set(team.color); zone.position.x = s * L / 4; zone.userData.target = .16; }
+  if (isGoal) { camGoal = performance.now() + 4000; shake = 1.2; }
+  const f = $("feed"); const row = document.createElement("div");
+  row.innerHTML = `<b>${p.clock?.displayValue || ""}</b>${team ? team.ru + " · " : ""}${t}`;
+  f.prepend(row); while (f.children.length > 4) f.lastChild.remove();
+}
+setInterval(() => { if (queue.length) show(queue.shift()); }, 2600);
+
+// ── шапка и статистика ───────────────────────────────────────────────────────
+const STATS = [["possessionPct", "Владение", "%"], ["totalShots", "Удары"], ["shotsOnTarget", "В створ"], ["wonCorners", "Угловые"],
+  ["foulsCommitted", "Фолы"], ["yellowCards", "Жёлтые"]];
+function statsHTML(b) {
+  const get = (t, n) => +(t?.statistics?.find(s => s.name === n)?.displayValue || 0);
+  const [th, ta] = [b.find(t => t.homeAway === "home") || b[0], b.find(t => t.homeAway === "away") || b[1]];
+  return STATS.map(([n, lbl, suf = ""]) => {
+    const vh = get(th, n), va = get(ta, n), tot = vh + va || 1;
+    return `<div class="stat"><span class="lbl">${lbl}</span><span class="v">${Math.round(vh)}${suf}</span>
+      <span class="track"><i style="width:${vh / tot * 100}%;background:${H.color}"></i><i style="width:${va / tot * 100}%;background:${A.color}"></i></span>
+      <span class="v">${Math.round(va)}${suf}</span></div>`;
+  }).join("");
+}
+const col = c => (c && c !== "000000" && c !== "ffffff") ? "#" + c : null;
+
+async function load() {
+  const d = await (await fetch(API, { cache: "no-store" })).json();
+  const comp = d.header.competitions[0];
+  const ch = comp.competitors.find(c => c.homeAway === "home"), ca = comp.competitors.find(c => c.homeAway === "away");
+  H = { name: ch.team.displayName, ru: RU_H || ch.team.displayName, color: col(ch.team.color) || "#2ecc71", logo: ch.team.logos?.[0]?.href };
+  A = { name: ca.team.displayName, ru: RU_A || ca.team.displayName, color: col(ca.team.color) || "#3498db", logo: ca.team.logos?.[0]?.href };
+  // похожие цвета (две «красные» команды) — гостям даём их второй цвет или контрастный синий
+  const rgb = c => [1, 3, 5].map(i => parseInt(c.slice(i, i + 2), 16));
+  const near = (a, b) => rgb(a).reduce((s, v, i) => s + Math.abs(v - rgb(b)[i]), 0) < 160;
+  if (near(H.color, A.color)) A.color = (col(ca.team.alternateColor) && !near(H.color, col(ca.team.alternateColor))) ? col(ca.team.alternateColor) : "#3498db";
+  $("hn").textContent = H.ru; $("an").textContent = A.ru; $("hc").style.background = H.color; $("ac").style.background = A.color;
+  if (H.logo) $("hl").src = H.logo; if (A.logo) $("al").src = A.logo;
+  $("lg").textContent = d.header.league?.name || "";
+  const st = comp.status?.type || {};
+  const live = st.state === "in";
+  $("sc").textContent = `${ch.score ?? 0} : ${ca.score ?? 0}`;
+  $("cl").textContent = live ? (comp.status.displayClock || st.shortDetail || "LIVE") : (st.state === "post" ? "Матч завершён" : (st.shortDetail || "Скоро начало"));
+  $("dot").classList.toggle("off", !live);
+  if (d.boxscore?.teams?.length === 2) $("stats").innerHTML = statsHTML(d.boxscore.teams);
+  const plays = (d.commentary || []).map(c => c.play ? { ...c.play, text: c.play.text || c.text } : null).filter(Boolean);
+  $("msg").style.display = "none";
+  if (st.state === "post" && !replayMode) {                 // матч закончился — предлагаем повтор
+    $("replay").style.display = "inline-block";
+    $("replay").onclick = () => { replayMode = true; $("replay").style.display = "none"; queue.length = 0;
+      plays.filter(p => !/lineup/i.test(p.text || "")).forEach(p => queue.push(p)); };
+    return;
+  }
+  for (const p of plays) {                                // новые события — в очередь, по одному каждые 2.6 с
+    if (seen.has(p.id)) continue; seen.add(p.id);
+    if (seen.size > plays.length - 6 || !live) queue.push(p);   // при открытии показываем последние события, а не весь матч
+  }
+}
+if (!EVENT) { $("msg").textContent = "Матч не найден: откройте трекер по кнопке под постом в канале."; }
+else {
+  load().catch(() => { $("msg").textContent = "Не удалось загрузить матч. Проверьте интернет и откройте ещё раз."; });
+  setInterval(() => load().catch(() => {}), 15000);       // обновление каждые 15 секунд
+}
+</script>
+</body>
+</html>

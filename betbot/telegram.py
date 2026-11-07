@@ -139,7 +139,8 @@ def send_album(pngs: list[bytes], caption: str) -> int:
     return res[0]["message_id"]
 
 
-def send_photo(png: bytes, caption: str, reply_to: int | None = None) -> int:
+def send_photo(png: bytes, caption: str, reply_to: int | None = None, button: tuple[str, str] | None = None) -> int:
+    """Фото с подписью; button — (текст, ссылка) для кнопки под постом."""
     caption = tag(caption)
     if len(caption) > CAPTION_LIMIT:  # хештег не должен «съесть» текст — тогда без него
         caption = caption[:CAPTION_LIMIT]
@@ -149,6 +150,9 @@ def send_photo(png: bytes, caption: str, reply_to: int | None = None) -> int:
     if reply_to:
         params["reply_to_message_id"] = reply_to
         params["allow_sending_without_reply"] = True
+    if button:
+        import json
+        params["reply_markup"] = json.dumps({"inline_keyboard": [[{"text": button[0], "url": button[1]}]]}, ensure_ascii=False)
     return _call("sendPhoto", files={"photo": ("match.png", png, "image/png")}, **params)["message_id"]
 
 

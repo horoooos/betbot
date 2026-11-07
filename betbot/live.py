@@ -4,6 +4,7 @@
 Бот проверяет матчи каждые 5 минут, поэтому пост о голе выходит с задержкой до 5 минут.
 """
 from html import escape
+from urllib.parse import urlencode
 
 import pandas as pd
 
@@ -19,6 +20,7 @@ LIVE = {
     # другие виды спорта
     "NHL", "NBA", "CS2", "DOTA",
 }
+TRACKER = "https://horoooos.github.io/betbot/live.html"  # 3D-трекер матча (docs/live.html на GitHub Pages)
 # В хоккее шайб много (ночью NHL — десятки постов), поэтому там только «матч начался» и итог.
 WORD = {"football": ("ГОЛ!", "⚽️"), "esports": ("КАРТА!", "🎮")}
 START = {"football": "все голы будут здесь", "hockey": "итог матча будет здесь",
@@ -69,8 +71,11 @@ def run(store: dict, events: list[dict], reviews: dict, brand: str) -> None:
             if tip:
                 tip_line = (f"\n\n🎯 <b>Наш прогноз:</b> {escape(tip['label'])} · кэф {'≈' if tip.get('est') else ''}"
                             f"{tip['odds']:.2f} · ставка {tip.get('stake', 1):g}% банка\n👀 Следим вместе — итог будет здесь")
+            button = None
+            if sport == "football" and e.get("slug"):  # 3D-трекер матча на нашем сайте — обновляется сам
+                button = ("📺 Смотреть матч в 3D", f"{TRACKER}?" + urlencode({"l": e["slug"], "e": e["id"], "h": h, "a": a}))
             mid = telegram.send_photo(png, f"🔴 <b>МАТЧ НАЧАЛСЯ</b>\n{sports.EMOJI.get(sport, '⚽️')} <b>{escape(h)} — "
-                                           f"{escape(a)}</b>\n🏆 {_title(e)}{tip_line}", reply_to=rv.get("msg"))
+                                           f"{escape(a)}</b>\n🏆 {_title(e)}{tip_line}", reply_to=rv.get("msg"), button=button)
             store[key] = {"msg": mid, "hs": sc[0], "as": sc[1], "goals": len(e.get("goals") or []),
                           "kickoff": e["kickoff"]}
             print(f"  live: начался {h} — {a}")
