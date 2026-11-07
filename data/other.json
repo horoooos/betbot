@@ -9445,31 +9445,31 @@
   "kickoff": "2026-11-07T19:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Sat, November 7th at 11:30 AM EST",
   "home": {
-   "id": "2979",
-   "name": "Bianca Andreescu",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/2979.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/can.png"
    ],
+   "id": "2979",
+   "name": "Bianca Andreescu",
    "country": "Canada",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
    "ru": "Бьянка Андрееску"
   },
   "away": {
-   "id": "10676",
-   "name": "Leyre Romero Gormaz",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/10676.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/esp.png"
    ],
+   "id": "10676",
+   "name": "Leyre Romero Gormaz",
    "country": "Spain",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
@@ -9529,7 +9529,9 @@
   "btn": 2,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null
  },
  "NHL|401892662": {
   "id": "401892662",
