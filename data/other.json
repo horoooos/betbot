@@ -9641,31 +9641,31 @@
   "kickoff": "2026-11-07T19:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Sat, November 7th at 11:00 AM EST",
   "home": {
-   "id": "2989",
-   "name": "Casper Ruud",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/2989.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/nor.png"
    ],
+   "id": "2989",
+   "name": "Casper Ruud",
    "country": "Norway",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
    "ru": "Каспер Рууд"
   },
   "away": {
-   "id": "3782",
-   "name": "Carlos Alcaraz",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/3782.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/esp.png"
    ],
+   "id": "3782",
+   "name": "Carlos Alcaraz",
    "country": "Spain",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
@@ -9725,7 +9725,9 @@
   "btn": 1,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null
  },
  "WTA|186741": {
   "id": "186741",
