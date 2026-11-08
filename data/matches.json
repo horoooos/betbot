@@ -19434,7 +19434,7 @@
   "kickoff": "2026-11-08T19:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Scheduled",
   "home": {
    "id": "360",
@@ -19591,7 +19591,10 @@
   "close": {
    "O25": 0.6609,
    "H": 0.4806
-  }
+  },
+  "main_hit": true,
+  "bold_hit": false,
+  "value_hit": null
  },
  "401884741": {
   "id": "401884741",
