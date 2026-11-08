@@ -222,7 +222,7 @@ export async function search(q) {
       for (const x of grp.contents || []) {
         const sp = x.sport, lg = String(x.defaultLeagueSlug || "").toLowerCase();
         if (!SPORT[sp] || (OK_LEAGUE[sp] && !OK_LEAGUE[sp].includes(lg))) continue;
-        if (sp === "soccer" && /(\.w\.|women|u-?\d\d|\.youth|college|trophy)/i.test(lg + " " + x.subtitle + " " + x.displayName)) continue;
+        if (sp === "soccer" && /(\.w\.|women|\bu-?\d\d\b|\.youth|college|trophy)/i.test(lg + " " + x.subtitle + " " + x.displayName)) continue;
         const id = (String(x.uid).match(/[at]:(\d+)$/) || [])[1]; if (!id) continue;
         const path = `${sp}/${lg || "all"}`, key = sp + ":" + id; if (seen.has(key)) continue; seen.add(key);
         const t = grp.type === "team";
