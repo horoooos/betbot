@@ -1,0 +1,33 @@
+name: VK check
+# Ручная проверка ключа ВКонтакте: какое сообщество, какие права. Сам ключ в журнал не попадает.
+on: workflow_dispatch
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check VK token
+        env:
+          VK_TOKEN: ${{ secrets.VK_TOKEN }}
+        run: |
+          python3 - <<'EOF'
+          import json, os, urllib.parse, urllib.request
+          tok = os.environ.get("VK_TOKEN", "").strip()
+          print("ключ задан:", bool(tok))
+          def call(method, **p):
+              p.update(access_token=tok, v="5.199")
+              data = urllib.parse.urlencode(p).encode()
+              with urllib.request.urlopen(f"https://api.vk.com/method/{method}", data, timeout=30) as r:
+                  return json.load(r)
+          g = call("groups.getById")
+          print("groups.getById:", json.dumps(g, ensure_ascii=False)[:600])
+          gid = None
+          try:
+              items = g["response"].get("groups") or g["response"]
+              gid = items[0]["id"]
+              print("СООБЩЕСТВО:", items[0].get("name"), "| vk.com/" + str(items[0].get("screen_name")), "| id", gid)
+          except Exception as e:
+              print("не удалось определить сообщество:", e)
+          if gid:
+              print("photos.getWallUploadServer:", json.dumps(call("photos.getWallUploadServer", group_id=gid), ensure_ascii=False)[:300])
+              print("wall.get:", json.dumps(call("wall.get", owner_id=-gid, count=1), ensure_ascii=False)[:300])
+          EOF
