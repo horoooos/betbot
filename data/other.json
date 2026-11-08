@@ -7930,31 +7930,31 @@
   "kickoff": "2026-11-08T19:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Sun, November 8th at 11:30 AM EST",
   "home": {
-   "id": "4010",
-   "name": "Thiago Agustin Tirante",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/4010.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/arg.png"
    ],
+   "id": "4010",
+   "name": "Thiago Agustin Tirante",
    "country": "Argentina",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
    "ru": "Тьяго Агустин Тиранте"
   },
   "away": {
-   "id": "2709",
-   "name": "Jaume Munar",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/2709.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/esp.png"
    ],
+   "id": "2709",
+   "name": "Jaume Munar",
    "country": "Spain",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
@@ -8014,7 +8014,9 @@
   "btn": 4,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null
  },
  "NHL|401892674": {
   "id": "401892674",
