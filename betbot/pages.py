@@ -160,7 +160,7 @@ def page(prefix: str, title: str, desc: str, canon: str, body: str, on: str = ""
 <meta name="theme-color" content="#070b1a">
 <link rel="icon" href="{prefix}favicon.ico" sizes="any"><link rel="icon" type="image/png" sizes="32x32" href="{prefix}favicon-32.png"><link rel="apple-touch-icon" href="{prefix}apple-touch-icon.png"><link rel="manifest" href="{prefix}site.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="{prefix}site.css?v=5">{lds}
+<link rel="stylesheet" href="{prefix}site.css?v=6">{lds}
 </head><body><main>
 {nav(prefix, on)}
 {body}
