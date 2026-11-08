@@ -23,7 +23,7 @@
 <footer>АИ СТАВИТ · <a href="./">Статистика бота</a> · <a href="leagues.html">Команды и турниры</a> · <a href="matches.html">Матчи онлайн</a> · <a href="tools.html">Калькуляторы</a> · <a href="school/">Школа ставок</a></footer>
 </main>
 <script type="module">
-import * as E from "./espn.js?v=1";
+import * as E from "./espn.js?v=2";
 import("./fb.js?v=9").then(fb => { fb.navUser(document.getElementById("navUser")); fb.track("team"); }).catch(() => {});
 const { $, esc } = E;
 document.head.insertAdjacentHTML("beforeend", `<style>${E.CSS}</style>`);
@@ -61,25 +61,39 @@ if (sp === "soccer") {
 const mainSlug = main.split("/")[1];
 const comps = {}; for (const g of games) if (g.slug || g.league) comps[g.slug || g.league] = g;
 
-// ── шапка ──
+// ── шапка: цвета клуба, форма, главные цифры, следующий матч ──
 const pos = String(T.standingSummary || "").match(/^(\d+)\w*\s+in\s+(.+)$/);
-const form = done.slice(-6).reverse();
-const W = done.filter(g => E.result(g) === "W").length, D = done.filter(g => E.result(g) === "D").length, L = done.filter(g => E.result(g) === "L").length;
-const gf = done.reduce((s, g) => s + (+g.my || 0), 0), ga = done.reduce((s, g) => s + (+g.op || 0), 0);
+const official = done.filter(g => !/friendly|товарищ/i.test(g.leagueName + g.league));
+const W = official.filter(g => E.result(g) === "W").length, D = official.filter(g => E.result(g) === "D").length, L = official.length - W - D;
+const gf = official.reduce((s, g) => s + (+g.my || 0), 0), ga = official.reduce((s, g) => s + (+g.op || 0), 0);
+const dec = sport === "basketball" ? 1 : 2, avg = (x, n) => n ? (x / n).toFixed(dec) : "—";
+const tc = "#" + (T.color && T.color !== "000000" && T.color !== "ffffff" ? T.color : "ffc400");
+const form = official.slice(-6);
+const formChip = g => `<span class="fchip big" style="background:${E.RES[E.result(g)][1]}" title="${esc(E.msk(g.date, { day: "numeric", month: "short" }))} · ${g.home ? "" : "@ "}${esc(E.teamRu(g.opp.displayName || ""))} ${esc(g.my)}:${esc(g.op)}">${E.RES[E.result(g)][0]}</span>`;
+const DIV = { "Atlantic Division": "Атлантический дивизион", "Metropolitan Division": "Столичный дивизион", "Central Division": "Центральный дивизион", "Pacific Division": "Тихоокеанский дивизион",
+  "Eastern Conference": "Восточная конференция", "Western Conference": "Западная конференция", "Southeast Division": "Юго-Восточный дивизион", "Northwest Division": "Северо-Западный дивизион", "Southwest Division": "Юго-Западный дивизион" };
 $("#crumbs").insertAdjacentHTML("beforeend", ` › <a href="${E.leagueUrl(main)}">${esc(E.leagueRu(mainSlug))}</a> › ${esc(name)}`);
-$("#hero").innerHTML = `<div class="hero" style="border-left:4px solid #${esc(T.color || "ffc400")};padding-left:14px">
-  <div class="lg">${E.img(T.logo, 70)}</div>
-  <div style="min-width:0"><h1>${esc(name)}</h1>
-  <div class="sub">${name !== T.displayName ? `<span>${esc(T.displayName)}</span>` : ""}<span>${E.EMOJI[sport]} <a href="${E.leagueUrl(main)}" style="color:inherit">${esc(E.leagueRu(mainSlug))}</a></span>
-  ${pos ? `<span>📊 ${pos[1]}-е место${/Division|Conference/.test(pos[2]) ? " · " + esc(E.trLeague(pos[2]).replace("Atlantic Division", "Атлантический дивизион").replace("Metropolitan Division", "Столичный дивизион").replace("Central Division", "Центральный дивизион").replace("Pacific Division", "Тихоокеанский дивизион")) : ""}</span>` : ""}</div></div></div>
-  <div class="facts">
-   <div><span>Форма (последние)</span><div class="form" style="margin-top:4px">${form.map(g => E.chip(E.result(g))).join("") || "—"}</div></div>
-   <div><span>Сезон: матчей</span><b>${done.length}</b></div>
-   <div><span>Победы · ${sport === "football" ? "ничьи · " : ""}поражения</span><b>${W} · ${sport === "football" ? D + " · " : ""}${L}</b></div>
-   <div><span>${sport === "basketball" ? "Очки" : sport === "hockey" ? "Шайбы" : "Голы"}: забито — пропущено</span><b>${gf} — ${ga}</b></div>
-   ${next[0] ? `<div><span>Следующий матч</span><b style="font-size:14px">${esc(E.teamRu(next[0].opp.displayName || ""))}</b><span>${E.msk(next[0].date)} МСК</span></div>` : ""}
+const nx = next[0], nxOur = nx && (await E.ourMatches()).find(m => m.id === nx.id);
+$("#hero").innerHTML = `<div class="thero" style="--tc:${tc}">
+  <div class="tlogo">${E.img(T.logo, 84)}</div>
+  <div class="tinfo"><h1>${esc(name)}</h1>
+    ${name !== T.displayName ? `<div class="ten">${esc(T.displayName)}</div>` : ""}
+    <div class="tpills"><a href="${E.leagueUrl(main)}">${E.EMOJI[sport]} ${esc(E.leagueRu(mainSlug))}</a>
+      ${pos ? `<span>📊 ${pos[1]}-е место${DIV[pos[2]] ? " · " + DIV[pos[2]] : ""}</span>` : ""}
+      ${Object.values(comps).filter(g => g.slug && g.slug !== mainSlug && !/friendly/i.test(g.slug)).map(g => `<a href="${E.leagueUrl("soccer/" + g.slug)}">${esc(g.league)}</a>`).join("")}</div>
+    ${form.length ? `<div class="tform"><span>Форма</span>${form.map(formChip).join("")}<small>старые → новые</small></div>` : ""}
+  </div></div>
+  <div class="kpi4">
+    <div><b>${official.length}</b><span>матчей в сезоне</span></div>
+    <div><b>${official.length ? Math.round(W / official.length * 100) : 0}<i>%</i></b><span>побед · ${W}-${sport === "football" ? D + "-" : ""}${L}</span></div>
+    <div><b>${gf}<i>:</i>${ga}</b><span>${sport === "basketball" ? "очки" : sport === "hockey" ? "шайбы" : "голы"} · ${avg(gf, official.length)} за игру</span></div>
+    <div><b>${pos ? pos[1] : "—"}<i>${pos ? "-е" : ""}</i></b><span>место в таблице</span></div>
   </div>
-  <div class="chips">${Object.values(comps).filter(g => g.slug).map(g => `<a href="${E.leagueUrl("soccer/" + g.slug)}">${esc(g.league)}</a>`).join("") || ""}</div>`;
+  ${nx ? `<a class="nextm" href="${nxOur ? esc(nxOur.url) : E.teamUrl(sp === "soccer" ? "soccer/" + (nx.slug || "all") : path, nx.oppId)}">
+    <span class="lbl">Следующий матч · ${esc(nx.league)}</span>
+    <span class="vs"><span class="sd">${E.img(T.logo, 40)}<b>${esc(name)}</b></span><span class="when">${E.msk(nx.date, { day: "numeric", month: "short" })}<br><b>${E.msk(nx.date, { hour: "2-digit", minute: "2-digit" })}</b><small>${nx.home ? "дома" : "в гостях"}</small></span>
+    <span class="sd r"><b>${esc(E.teamRu(nx.opp.displayName || ""))}</b>${E.img(E.logoOf(nx.opp), 40)}</span></span>
+    ${nxOur ? `<span class="go">${nxOur.tip ? "🎯 Прогноз бота: " + esc(nxOur.tip) : "📺 Смотреть онлайн"} →</span>` : ""}</a>` : ""}`;
 
 // ── прогнозы бота на эту команду ──
 const ours = (await E.ourMatches()).filter(m => m.hid === String(id) || m.aid === String(id));
@@ -134,26 +148,32 @@ const LOAD = {
     catch (e) { el.innerHTML = `<p class="muted">Таблица недоступна.</p>`; }
   },
   stats() {
-    const pct = (n, d) => d ? Math.round(n / d * 100) : 0;
-    const box = (title, list) => { const n = list.length; if (!n) return "";
-      const w = list.filter(g => E.result(g) === "W").length, d = list.filter(g => E.result(g) === "D").length, l = n - w - d;
-      const f = list.reduce((s, g) => s + (+g.my || 0), 0), a = list.reduce((s, g) => s + (+g.op || 0), 0);
-      const tot = g => (+g.my || 0) + (+g.op || 0);
-      const lines = sport === "football" ? [["ТБ 2.5", list.filter(g => tot(g) > 2.5).length], ["ТБ 1.5", list.filter(g => tot(g) > 1.5).length], ["Обе забьют", list.filter(g => +g.my > 0 && +g.op > 0).length], ["Сухие матчи", list.filter(g => +g.op === 0).length]]
-        : sport === "hockey" ? [["ТБ 5.5", list.filter(g => tot(g) > 5.5).length], ["ТБ 6.5", list.filter(g => tot(g) > 6.5).length], ["Обе забьют 2+", list.filter(g => +g.my >= 2 && +g.op >= 2).length]]
-        : [["ТБ 220.5", list.filter(g => tot(g) > 220.5).length], ["ТБ 230.5", list.filter(g => tot(g) > 230.5).length]];
-      return `<h2>${title}</h2><div class="kv">
-        <div><span>Матчей · ${sport === "football" ? "В-Н-П" : "В-П"}</span><b>${n}</b> <span style="display:inline">${w}-${sport === "football" ? d + "-" : ""}${l}</span></div>
-        <div><span>Процент побед</span><b>${pct(w, n)}%</b><div class="bar2"><i style="width:${pct(w, n)}%"></i></div></div>
-        <div><span>Забивает в среднем</span><b>${(f / n).toFixed(sport === "basketball" ? 1 : 2)}</b></div>
-        <div><span>Пропускает в среднем</span><b>${(a / n).toFixed(sport === "basketball" ? 1 : 2)}</b></div>
-        <div><span>Тотал в среднем</span><b>${((f + a) / n).toFixed(sport === "basketball" ? 1 : 2)}</b></div>
-        ${lines.map(([t, k]) => `<div><span>${t}</span><b>${pct(k, n)}%</b> <span style="display:inline">(${k} из ${n})</span><div class="bar2"><i style="width:${pct(k, n)}%"></i></div></div>`).join("")}</div>`; };
-    const off = done.filter(g => !/friendly|товарищ/i.test(g.leagueName + g.league));
-    $("#t-stats").innerHTML = (box("Весь сезон", off) + box("Дома", off.filter(g => g.home)) + box("В гостях", off.filter(g => !g.home)) + box("Последние 10 матчей", off.slice(-10)))
-      || `<p class="muted">Статистика появится после первых матчей сезона.</p>`;
-    $("#t-stats").insertAdjacentHTML("beforeend", `<p class="small muted" style="margin-top:10px">Считаем по официальным матчам сезона (без товарищеских). Пригодится для ставок на тоталы и «обе забьют» — проверьте в <a href="tools.html">калькуляторах</a>.</p>`);
-  },
+    // одна понятная таблица: строки — показатели, столбцы — сезон / дома / в гостях / последние 10
+    const off = official, cols = [["Весь сезон", off], ["Дома", off.filter(g => g.home)], ["В гостях", off.filter(g => !g.home)], ["Последние 10", off.slice(-10)]].filter(c => c[1].length);
+    if (!cols.length) { $("#t-stats").innerHTML = `<p class="muted">Статистика появится после первых матчей сезона.</p>`; return; }
+    const tot = g => (+g.my || 0) + (+g.op || 0), pct = (k, n) => n ? Math.round(k / n * 100) : 0;
+    const P = (f, l) => list => { const k = list.filter(f).length; return { p: pct(k, list.length), t: `${k} из ${list.length}` }; };
+    const A = f => list => ({ v: (list.reduce((s, g) => s + f(g), 0) / list.length).toFixed(sport === "basketball" ? 1 : 2) });
+    const rows = [
+      ["Победы", P(g => E.result(g) === "W")], ...(sport === "football" ? [["Ничьи", P(g => E.result(g) === "D")]] : []), ["Поражения", P(g => E.result(g) === "L"), true],
+      ["Забивает за матч", A(g => +g.my || 0)], ["Пропускает за матч", A(g => +g.op || 0)], ["Тотал за матч", A(tot)],
+      ...(sport === "football" ? [["ТБ 1.5", P(g => tot(g) > 1.5)], ["ТБ 2.5", P(g => tot(g) > 2.5)], ["ТБ 3.5", P(g => tot(g) > 3.5)], ["Обе забьют", P(g => +g.my > 0 && +g.op > 0)], ["Сухие матчи", P(g => +g.op === 0)], ["Не забил", P(g => +g.my === 0), true]]
+        : sport === "hockey" ? [["ТБ 5.5", P(g => tot(g) > 5.5)], ["ТБ 6.5", P(g => tot(g) > 6.5)], ["Забил 3+", P(g => +g.my >= 3)], ["Пропустил 3+", P(g => +g.op >= 3), true]]
+        : [["ТБ 220.5", P(g => tot(g) > 220.5)], ["ТБ 230.5", P(g => tot(g) > 230.5)], ["Набрал 115+", P(g => +g.my >= 115)]]),
+    ];
+    const cell = (r, list) => { const x = r[1](list);
+      if (x.v !== undefined) return `<td class="num">${x.v}</td>`;
+      const good = r[2] ? x.p <= 30 : x.p >= 60, mid = r[2] ? x.p <= 50 : x.p >= 40;
+      return `<td><span class="pp ${good ? "g" : mid ? "m" : r[2] ? "r" : "b"}" title="${x.t}">${x.p}%</span><i class="pb"><i style="width:${x.p}%"></i></i></td>`; };
+    // полоса «победы / ничьи / поражения» за сезон
+    const w = pct(W, off.length), d = pct(D, off.length), l = 100 - w - d;
+    $("#t-stats").innerHTML = `<div class="card wdl"><div class="wdlh"><b>Итоги сезона</b><span>${off.length} матчей</span></div>
+      <div class="seg"><i style="width:${w}%;background:#2ecc71">${w >= 12 ? w + "%" : ""}</i>${sport === "football" ? `<i style="width:${d}%;background:#7d89ad">${d >= 12 ? d + "%" : ""}</i>` : ""}<i style="width:${l}%;background:#ff5a5a">${l >= 12 ? l + "%" : ""}</i></div>
+      <div class="segl"><span><i style="background:#2ecc71"></i>Победы ${W}</span>${sport === "football" ? `<span><i style="background:#7d89ad"></i>Ничьи ${D}</span>` : ""}<span><i style="background:#ff5a5a"></i>Поражения ${L}</span></div></div>
+      <div class="card wrapx st2"><table><tr><th></th>${cols.map(c => `<th>${c[0]}<small>${c[1].length} м.</small></th>`).join("")}</tr>
+      ${rows.map(r => `<tr><td class="rl">${r[0]}</td>${cols.map(c => cell(r, c[1])).join("")}</tr>`).join("")}</table></div>
+      <p class="small muted" style="margin-top:10px">Только официальные матчи сезона, без товарищеских. Зелёным — то, что случается часто. Посчитать выгодность ставки — в <a href="tools.html">калькуляторах</a>.</p>`;
+  }
 };
 const first = (location.hash || "#games").slice(1);
 (TABS.find(t => t[0] === first) ? document.querySelector(`#tabs button[data-t=${first}]`) : document.querySelector("#tabs button")).click();

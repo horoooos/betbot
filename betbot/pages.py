@@ -169,6 +169,7 @@ def page(prefix: str, title: str, desc: str, canon: str, body: str, on: str = ""
 <br><a href="{prefix}leagues.html">Команды, игроки и турниры</a> · <a href="{prefix}teams/">Прогнозы по командам</a> · <a href="{prefix}tools.html">Калькуляторы ставок</a> · <a href="{prefix}school/">Школа ставок</a> · <a href="{prefix}top.html">Рейтинг прогнозистов</a></footer>
 </main><div class="sticky"><a class="a" href="{prefix}matches.html">📺 Онлайн</a><a class="b" href="https://t.me/{CH}">📲 Канал</a></div>
 <script type="module">import("{prefix}fb.js?v=9").then(fb => {{ fb.navUser(document.getElementById("navUser")); fb.track("{on or 'page'}");
+  fb.countView(document.querySelector("[data-view]")); fb.showViews();
   const v = document.getElementById("votes"); if (v) fb.voteWidget(v, v.dataset.m, {{ finished: v.dataset.f === "1", botHit: v.dataset.h === "" ? null : v.dataset.h === "1" }}); }}).catch(() => {{}});</script>
 </body></html>"""
 
@@ -214,8 +215,8 @@ def _news_page(n: dict, all_news: list[dict]) -> str:
           "dateModified": n["t"].isoformat(), "inLanguage": "ru", "mainEntityOfPage": canon, "articleSection": SPORT_RU[n["sport"]],
           "publisher": {"@type": "Organization", "name": "АИ СТАВИТ", "url": SITE}, "author": {"@type": "Organization", "name": "АИ СТАВИТ"},
           **({"image": [n["photo"]]} if n["photo"] else {})}
-    body = f"""{crumbs}<article class="post">
-<span class="tag">{EMOJI[n['sport']]} {SPORT_RU[n['sport']]} · {_date_ru(n['t'])}, {n['t']:%H:%M} МСК</span>
+    body = f"""{crumbs}<article class="post" data-view="news:{n['id']}">
+<span class="tag">{EMOJI[n['sport']]} {SPORT_RU[n['sport']]} · {_date_ru(n['t'])}, {n['t']:%H:%M} МСК<span class="vw" data-views="news:{n['id']}"></span></span>
 <h1>{H.escape(n['title'])}</h1>
 {f'<img class="cover" src="{H.escape(n["photo"])}" alt="{H.escape(n["title"])}" loading="eager">' if n['photo'] else ''}
 <div class="body">{paras}</div>
@@ -229,7 +230,7 @@ def _news_page(n: dict, all_news: list[dict]) -> str:
 def _news_card(n: dict, prefix: str) -> str:
     img = f'<img src="{H.escape(n["photo"])}" alt="{H.escape(n["title"])}" loading="lazy">' if n["photo"] else '<div class="ph"></div>'
     return (f'<a class="card nc" href="{prefix}{n["url"]}">{img}<div class="b"><span class="tag">{EMOJI[n["sport"]]} {SPORT_RU[n["sport"]]} · '
-            f'{n["t"].day} {MONTHS[n["t"].month - 1]}</span><b>{H.escape(n["title"])}</b><p>{H.escape(n["desc"][:150])}…</p></div></a>')
+            f'{n["t"].day} {MONTHS[n["t"].month - 1]}<span class="vw" data-views="news:{n["id"]}"></span></span><b>{H.escape(n["title"])}</b><p>{H.escape(n["desc"][:150])}…</p></div></a>')
 
 
 def _news_index(news: list[dict]) -> str:

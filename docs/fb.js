@@ -4,7 +4,7 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/fireba
 import { getAuth, onAuthStateChanged, GoogleAuthProvider, signInWithPopup, signInWithRedirect, getRedirectResult, signInWithEmailAndPassword,
   createUserWithEmailAndPassword, signOut, sendPasswordResetEmail } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
 import { getDatabase, ref, set, get, push, remove, update, onValue, onDisconnect, serverTimestamp, query, orderByChild, equalTo, limitToLast,
-  endBefore, onChildAdded, onChildRemoved, onChildChanged } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
+  endBefore, onChildAdded, onChildRemoved, onChildChanged, runTransaction } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
 
 const app = initializeApp({
   apiKey: "AIzaSyCijCZYGyEgmYNmb2GQMKkGpSHF2j_JZuA",
@@ -481,6 +481,24 @@ export function searchButton() {
   a.href = new URL("leagues.html", import.meta.url).href;
   box.insertBefore(a, box.querySelector(".support") ? box.querySelector(".support").nextSibling : box.firstChild);
 }
+// ── просмотры новостей: +1 от посетителя (не чаще раза в сутки), счётчик на карточках ──
+/** el — элемент с data-view="news:123" (страница новости). */
+export async function countView(el) {
+  const key = el && el.dataset && el.dataset.view; if (!key || !/^[a-z]+:[\w-]{1,60}$/.test(key)) return;
+  const day = new Date().toISOString().slice(0, 10), mark = "vw:" + key;
+  if (ls.get(mark) === day) return;
+  try { await runTransaction(ref(db, `views/${key.replace(":", "/")}`), v => (typeof v === "number" ? v : 0) + 1); ls.set(mark, day); showViews(); } catch (e) {}
+}
+const fmtViews = n => n >= 1e6 ? (n / 1e6).toFixed(1).replace(".0", "") + " млн" : n >= 1e3 ? (n / 1e3).toFixed(1).replace(".0", "") + " тыс." : String(n);
+/** Заполняет все [data-views="news:123"] числом просмотров (пустые — если просмотров ещё нет). */
+export function showViews(root = document) {
+  root.querySelectorAll("[data-views]").forEach(async el => {
+    const key = el.dataset.views; if (!/^[a-z]+:[\w-]{1,60}$/.test(key)) return;
+    try { const s = await get(ref(db, `views/${key.replace(":", "/")}`)); const n = s.val();
+      if (typeof n === "number" && n > 0) { el.textContent = `👁 ${fmtViews(n)}`; el.title = `${n} просмотров`; } } catch (e) {}
+  });
+}
+
 /** Карточки и секции плавно появляются при прокрутке. */
 export function reveal() {
   if (typeof IntersectionObserver === "undefined" || document.documentElement.classList.contains("rv-on")) return;

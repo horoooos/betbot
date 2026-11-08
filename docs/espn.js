@@ -273,6 +273,31 @@ export const CSS = `
 .chips a:hover{background:rgba(255,255,255,.1)}.load{color:var(--muted);padding:20px 0}.bar2{height:8px;border-radius:5px;background:rgba(255,255,255,.08);overflow:hidden}.bar2 i{display:block;height:100%;background:linear-gradient(90deg,#ffc400,#ff7a3d)}
 .kv{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:8px}.kv div{background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:14px;padding:10px 12px}
 .kv b{font-size:20px}.kv span{display:block;color:var(--muted);font-size:12px;margin-bottom:6px}
+.thero{position:relative;display:flex;gap:20px;align-items:center;margin:14px 0 12px;padding:22px;border-radius:24px;overflow:hidden;border:1px solid var(--line);
+  background:radial-gradient(520px 260px at 0% 0%,color-mix(in srgb,var(--tc) 38%,transparent),transparent 70%),linear-gradient(160deg,#18224a,#0e1533)}
+.thero::after{content:"";position:absolute;right:-60px;top:-60px;width:260px;height:260px;border-radius:50%;background:color-mix(in srgb,var(--tc) 18%,transparent);filter:blur(40px);pointer-events:none}
+.tlogo{width:112px;height:112px;border-radius:28px;background:#fff;display:grid;place-items:center;flex:none;box-shadow:0 14px 30px -14px rgba(0,0,0,.7),0 0 0 4px color-mix(in srgb,var(--tc) 55%,transparent)}
+.tinfo{min-width:0;position:relative;z-index:1}.tinfo h1{margin:0;font-size:clamp(26px,4vw,40px)}.ten{color:var(--muted);font-weight:600;margin-top:2px}
+.tpills{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}.tpills a,.tpills span{padding:5px 11px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.1);font-size:12.5px;font-weight:700;text-decoration:none;color:#fff}
+.tpills a:hover{background:rgba(255,255,255,.14)}.tform{display:flex;gap:5px;align-items:center;margin-top:12px;flex-wrap:wrap}.tform>span{color:var(--muted);font-size:12px;font-weight:700;margin-right:4px}
+.tform small{color:var(--muted);font-size:10.5px;margin-left:6px;opacity:.7}.fchip.big{width:30px;height:30px;border-radius:9px;font-size:13px;box-shadow:0 4px 10px -4px rgba(0,0,0,.6)}
+.kpi4{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:12px}.kpi4 div{padding:14px 16px;border-radius:18px;background:linear-gradient(160deg,var(--card2),var(--card));border:1px solid var(--line)}
+.kpi4 b{display:block;font-size:30px;font-weight:900;line-height:1.1;letter-spacing:-.5px}.kpi4 b i{font-style:normal;color:var(--muted);font-size:18px;margin:0 2px}.kpi4 span{color:var(--muted);font-size:12px;font-weight:600}
+.nextm{display:block;padding:14px 18px;border-radius:20px;text-decoration:none;border:1px solid rgba(255,196,0,.28);background:linear-gradient(120deg,rgba(255,196,0,.1),rgba(255,255,255,.03));margin-bottom:6px}
+.nextm:hover{border-color:rgba(255,196,0,.55)}.nextm .lbl{display:block;color:var(--gold);font-size:11px;font-weight:800;letter-spacing:.8px;text-transform:uppercase;margin-bottom:8px}
+.nextm .vs{display:grid;grid-template-columns:1fr auto 1fr;gap:12px;align-items:center}.nextm .sd{display:flex;align-items:center;gap:10px;min-width:0}.nextm .sd.r{justify-content:flex-end;text-align:right}
+.nextm .sd b{font-size:16px;overflow:hidden;text-overflow:ellipsis}.nextm .when{text-align:center;color:var(--muted);font-size:12px;line-height:1.3}.nextm .when b{display:block;color:#fff;font-size:20px}.nextm .when small{font-size:11px}
+.nextm .go{display:block;margin-top:10px;font-weight:800;font-size:13px;color:var(--gold)}
+.wdl{margin-bottom:12px}.wdlh{display:flex;justify-content:space-between;margin-bottom:10px}.wdlh span{color:var(--muted);font-size:13px}
+.seg{display:flex;height:30px;border-radius:10px;overflow:hidden;gap:2px}.seg i{display:grid;place-items:center;font:900 12px Montserrat,sans-serif;color:#071019;font-style:normal;min-width:0}
+.segl{display:flex;gap:14px;margin-top:8px;font-size:12.5px;color:var(--muted);font-weight:600}.segl i{display:inline-block;width:9px;height:9px;border-radius:3px;margin-right:5px}
+.st2{padding:4px 8px}.st2 table{width:100%;border-collapse:collapse;font-size:14px}.st2 th{font-size:12px;color:#fff;font-weight:800;padding:12px 8px;text-align:center;white-space:nowrap}
+.st2 th small{display:block;color:var(--muted);font-weight:600;font-size:10.5px}.st2 td{padding:9px 8px;border-top:1px solid var(--line);text-align:center;white-space:nowrap}
+.st2 td.rl{text-align:left;font-weight:700;color:#dfe5ff}.st2 td.num{font-weight:900;font-size:15px}
+.pp{display:inline-block;min-width:48px;padding:3px 8px;border-radius:8px;font-weight:900;font-size:13px}.pp.g{background:rgba(46,204,113,.18);color:#5ff09a}.pp.m{background:rgba(255,196,0,.14);color:#ffd34d}.pp.b{background:rgba(255,255,255,.06);color:#9aa6cc}.pp.r{background:rgba(255,90,90,.16);color:#ff8080}
+.pb{display:block;height:3px;border-radius:2px;background:rgba(255,255,255,.07);margin:5px auto 0;width:60px;overflow:hidden}.pb i{display:block;height:100%;background:var(--gold)}
+@media(max-width:700px){.kpi4{grid-template-columns:1fr 1fr}.thero{padding:16px;gap:14px}.tlogo{width:76px;height:76px;border-radius:20px}.tlogo img{width:58px!important;height:58px!important}.kpi4 b{font-size:24px}
+  .nextm .sd b{font-size:13px}.nextm .sd img{width:30px!important;height:30px!important}}
 @media(max-width:560px){.hero .lg{width:64px;height:64px;border-radius:18px}.hero .lg img{width:52px;height:52px}.hero .ph{width:72px;height:72px}.gm{grid-template-columns:64px minmax(0,1fr) auto}}`;
 
 // ── турнирная таблица (футбол, НХЛ, НБА) ──

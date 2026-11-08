@@ -1306,7 +1306,7 @@ function setTeams(h, a) {
 let SUM = null;
 $("sheet").addEventListener("click", e => { if (e.target.id === "sheet" || e.target.id === "sx") $("sheet").classList.remove("on"); });
 $("teamsbtn").onclick = async () => {
-  const E = await import("./espn.js?v=1"); await E.dir();
+  const E = await import("./espn.js?v=2"); await E.dir();
   const page = (x) => `${SPORT === "tennis" ? "player" : "team"}.html?p=${encodeURIComponent(PATH)}&id=${encodeURIComponent(x.id)}`;
   const card = x => `<a href="${page(x)}" target="_blank" style="display:flex;gap:12px;align-items:center;padding:12px;border-radius:16px;background:rgba(255,255,255,.05);border:1px solid var(--line);border-left:4px solid ${x.color};text-decoration:none;color:#fff;margin-top:8px">
     ${x.logo ? `<span style="width:44px;height:44px;border-radius:12px;background:#fff;display:grid;place-items:center;flex:none"><img src="${x.logo}" style="width:34px;height:34px;object-fit:contain"></span>` : ""}

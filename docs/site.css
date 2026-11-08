@@ -124,3 +124,4 @@ footer { border-top:1px solid var(--line); padding-top:16px; line-height:1.9 } f
 @media (prefers-reduced-motion:reduce) { .rv-on .rv { opacity:1; transform:none; transition:none } * { scroll-behavior:auto } }
 @media (max-width:1150px) { .topnav { padding-top:8px; padding-bottom:6px } .topnav .links { margin:0; padding:0; flex-basis:100% } }
 @media (max-width:520px) { .topnav .links { -webkit-mask-image:linear-gradient(90deg,#000 82%,transparent); mask-image:linear-gradient(90deg,#000 82%,transparent); padding-right:28px } }
+.vw:not(:empty) { margin-left:8px; color:var(--muted); font-weight:700; letter-spacing:0; text-transform:none } .vw:not(:empty)::before { content:"· "; }

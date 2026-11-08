@@ -31,7 +31,7 @@
 <footer>АИ СТАВИТ · <a href="./">Статистика бота</a> · <a href="matches.html">Матчи онлайн</a> · <a href="tools.html">Калькуляторы</a> · <a href="school/">Школа ставок</a> · <a href="teams/">Команды</a></footer>
 </main>
 <script type="module">
-import * as E from "./espn.js?v=1";
+import * as E from "./espn.js?v=2";
 import("./fb.js?v=9").then(fb => { fb.navUser(document.getElementById("navUser")); fb.track("leagues"); }).catch(() => {});
 const { $, esc } = E;
 document.head.insertAdjacentHTML("beforeend", `<style>${E.CSS}</style>`);
