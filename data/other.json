@@ -9090,22 +9090,22 @@
   "kickoff": "2026-11-08T06:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "home": {
+   "color": "00205b",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/edm.png",
    "id": "6",
    "name": "Edmonton Oilers",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/edm.png",
-   "color": "00205b",
    "score": "0",
    "record": "11-3-3",
    "periods": [],
    "ru": "Эдмонтон"
   },
   "away": {
+   "color": "003e7e",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/van.png",
    "id": "22",
    "name": "Vancouver Canucks",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/van.png",
-   "color": "003e7e",
    "score": "0",
    "record": "3-14-1",
    "periods": [],
@@ -9200,7 +9200,9 @@
   "btn": 2,
   "close": {
    "HK_O6.5": 0.572
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null
  },
  "NBA|401909944": {
   "id": "401909944",
