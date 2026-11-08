@@ -8155,22 +8155,22 @@
   "kickoff": "2026-11-08T23:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "home": {
+   "color": "00468b",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/buf.png",
    "id": "2",
    "name": "Buffalo Sabres",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/buf.png",
-   "color": "00468b",
    "score": "0",
    "record": "8-5-3",
    "periods": [],
    "ru": "Баффало"
   },
   "away": {
+   "color": "344043",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/vgk.png",
    "id": "37",
    "name": "Vegas Golden Knights",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/vgk.png",
-   "color": "344043",
    "score": "0",
    "record": "11-5-2",
    "periods": [],
@@ -8265,7 +8265,9 @@
   "btn": 4,
   "close": {
    "HK_O6.5": 0.4893
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null
  },
  "NBA|401909945": {
   "id": "401909945",
