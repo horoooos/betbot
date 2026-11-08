@@ -20722,7 +20722,7 @@
   "kickoff": "2026-11-08T21:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Scheduled",
   "home": {
    "id": "1895",
@@ -20870,7 +20870,10 @@
   "btn": 4,
   "close": {
    "H-1.5": 0.6301
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null,
+  "value_hit": null
  },
  "401878944": {
   "id": "401878944",
@@ -21836,7 +21839,10 @@
    }
   },
   "msg_id": 4499,
-  "btn": 4
+  "btn": 4,
+  "close": {
+   "A": 0.5177
+  }
  },
  "401885401": {
   "id": "401885401",
