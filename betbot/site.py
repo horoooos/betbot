@@ -280,7 +280,7 @@ def build(res: pd.DataFrame, now: pd.Timestamp, blocks: dict | None = None) -> N
 <link rel="stylesheet" href="site.css?v=4">
 <script type="application/ld+json">{{"@context":"https://schema.org","@type":"WebSite","name":"АИ СТАВИТ","url":"{SITE}","description":"{escape(seo_desc)}","sameAs":["{tg}"]}}</script>
 <style>{CSS}</style></head><body><main>
-<nav class="topnav"><a class="logo" href="./">АИ СТАВИТ</a><div class="links"><a href="matches.html">📺 Матчи онлайн</a><a href="predictions/">🎯 Прогнозы</a><a href="news/">📰 Новости</a><a href="feed.html">💬 Лента</a><a href="top.html">🏆 Рейтинг</a><a class="me" id="navUser" href="profile.html">Войти</a></div></nav>
+<nav class="topnav"><a class="logo" href="./">АИ СТАВИТ</a><div class="links"><a href="matches.html">Матчи онлайн</a><a href="predictions/">Прогнозы</a><a href="news/">Новости</a><a href="feed.html">Лента</a><a href="top.html">Рейтинг</a></div><div class="navacts"><a class="me" id="navUser" href="profile.html">Войти</a></div></nav>
 <section class="hero"><div>
 <h1>Прогнозы на спорт <span>с честной статистикой</span></h1>
 <p class="lead">Бот публикует прогноз за час до матча и сам считает итог — без удалений и подчисток. Футбол, НХЛ, НБА, теннис и киберспорт. А любой матч можно смотреть онлайн.</p>

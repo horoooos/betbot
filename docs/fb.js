@@ -204,8 +204,8 @@ export function mountChat(match, box, onCount) {
 export function navUser(el) {
   if (!el) return;
   onUser((u, prof) => {
-    if (u && prof) { el.innerHTML = `<span style="display:inline-flex;align-items:center;gap:6px">${prof.avatar ? avatarHTML(prof, 20) : esc(prof.emoji || "👤")} ${esc(prof.name)}</span>`; el.href = `profile.html?u=${u.uid}`; el.onclick = null; }
-    else { el.textContent = "Войти"; el.href = "#"; el.onclick = e => { e.preventDefault(); login(); }; }
+    if (u && prof) { el.classList.add("in"); el.title = "Мой профиль"; el.innerHTML = `<span style="width:24px;height:24px;display:grid;place-items:center;border-radius:50%;overflow:hidden;background:rgba(255,255,255,.08)">${prof.avatar ? avatarHTML(prof, 24) : esc(prof.emoji || "👤")}</span><span class="nm">${esc(prof.name)}</span>`; el.href = new URL(`profile.html?u=${u.uid}`, import.meta.url).href; el.onclick = null; }
+    else { el.classList.remove("in"); el.title = ""; el.textContent = "Войти"; el.href = "#"; el.onclick = e => { e.preventDefault(); login(); }; }
   });
 }
 
@@ -258,13 +258,20 @@ function supportModal() {
   w.querySelector("#spx").onclick = () => w.remove(); w.onclick = e => { if (e.target === w) w.remove(); };
   document.body.appendChild(w);
 }
+/** Правый блок шапки (поддержать, колокольчик, профиль). На старых страницах — переносим туда кнопку профиля. */
+function navActs() {
+  const nav = document.querySelector(".topnav"); if (!nav) return null;
+  let box = nav.querySelector(".navacts");
+  if (!box) { box = document.createElement("div"); box.className = "navacts"; nav.appendChild(box); const me = nav.querySelector(".links .me"); if (me) box.appendChild(me); }
+  return box;
+}
 export function supportButton() {
-  const links = document.querySelector(".topnav .links");
-  if (!links || links.querySelector(".support")) return;
-  const a = document.createElement("a"); a.href = "#"; a.className = "support"; a.textContent = "❤️ Поддержать";
-  a.style.cssText = "background:linear-gradient(90deg,#ff4d6d,#ff8a3d);color:#fff";
+  const box = navActs();
+  if (!box || box.querySelector(".support")) return;
+  const a = document.createElement("a"); a.href = "#"; a.className = "support"; a.title = "Поддержать проект";
+  a.innerHTML = `<span>❤</span><span class="tx">Поддержать</span>`;
   a.onclick = e => { e.preventDefault(); supportModal(); };
-  links.prepend(a);
+  box.prepend(a);
 }
 /** «● 12 онлайн» в шапке рядом с логотипом — на всех страницах с меню. */
 export function onlineBadge() {
@@ -458,11 +465,11 @@ function pushModal() {
 }
 function paintBell() { const b = document.querySelector(".topnav .bell"); if (b) b.textContent = pushEnabled() ? "🔔" : "🔕"; }
 export function bellButton() {
-  const links = document.querySelector(".topnav .links");
-  if (!links || links.querySelector(".bell") || typeof Notification === "undefined") return;
+  const box = navActs();
+  if (!box || box.querySelector(".bell") || typeof Notification === "undefined") return;
   const a = document.createElement("a"); a.href = "#"; a.className = "bell"; a.title = "Уведомления: голы, сеты и прогноз дня";
   a.onclick = e => { e.preventDefault(); pushModal(); };
-  const me = links.querySelector(".me"); links.insertBefore(a, me || null); paintBell();
+  const me = box.querySelector(".me"); box.insertBefore(a, me || null); paintBell();
 }
 
 // запуск кнопок меню — в самом конце, когда все функции модуля уже объявлены

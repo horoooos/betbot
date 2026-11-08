@@ -5,12 +5,33 @@ body { background:radial-gradient(1100px 600px at 85% -10%,#1d2a66 0%,transparen
   background-attachment:fixed; color:var(--ink); font:15px/1.6 Montserrat,system-ui,sans-serif; min-height:100vh }
 a { color:inherit }
 main { max-width:980px; margin:0 auto; padding:14px 16px 90px }
-.topnav { display:flex; align-items:center; justify-content:space-between; gap:10px; flex-wrap:wrap; padding:6px 0 4px }
-.topnav .logo { font-weight:900; letter-spacing:1.5px; color:var(--gold); text-decoration:none }
-.topnav .links { display:flex; gap:4px; flex-wrap:wrap }
-.topnav .links a { text-decoration:none; color:var(--muted); font-weight:700; font-size:13px; padding:6px 10px; border-radius:10px }
-.topnav .links a:hover, .topnav .links a.on { color:var(--ink); background:rgba(255,255,255,.06) }
+.topnav { display:flex; align-items:center; gap:8px 14px; flex-wrap:wrap; padding:8px 0 6px }
+.topnav .logo { font-weight:900; letter-spacing:1.5px; color:var(--gold); text-decoration:none; white-space:nowrap }
+.topnav .brandbox, .topnav > .logo { flex:none }
+.topnav .links { display:flex; gap:2px; flex:1; justify-content:center; min-width:0; overflow-x:auto; scrollbar-width:none }
+.topnav .links::-webkit-scrollbar { display:none }
+.topnav .links a { text-decoration:none; color:var(--muted); font-weight:700; font-size:13.5px; padding:7px 11px; border-radius:10px; white-space:nowrap; transition:color .15s, background .15s }
+.topnav .links a:hover { color:var(--ink) }
+.topnav .links a.on { color:var(--ink); background:rgba(255,255,255,.07) }
 .topnav .links a.me { color:#1a1405; background:var(--gold) }
+.navacts { display:flex; align-items:center; gap:6px; flex:none; margin-left:auto }
+.navacts a { display:inline-flex; align-items:center; justify-content:center; gap:6px; height:34px; min-width:34px; padding:0 11px; border-radius:12px; text-decoration:none;
+  font-weight:800; font-size:13px; color:var(--ink); background:rgba(255,255,255,.05); border:1px solid var(--line); white-space:nowrap; transition:background .15s }
+.navacts a:hover { background:rgba(255,255,255,.1) }
+.navacts .support { color:#ff8fa3; border-color:rgba(255,90,120,.3); background:rgba(255,77,109,.08) }
+.navacts .support:hover { background:rgba(255,77,109,.16) }
+.navacts .bell { padding:0; width:34px; font-size:15px }
+.navacts .me { color:#1a1405; background:var(--gold); border-color:transparent }
+.navacts .me:hover { background:#ffd23f }
+.navacts .me.in { color:var(--ink); background:rgba(255,255,255,.05); border-color:var(--line); padding:0 11px 0 5px }
+.navacts .me.in:hover { background:rgba(255,255,255,.1) }
+.navacts .me .nm { max-width:120px; overflow:hidden; text-overflow:ellipsis }
+@media (max-width:860px) {
+  .topnav .links { order:3; flex-basis:calc(100% + 32px); margin:0 -16px; padding:0 16px; justify-content:flex-start }
+  .navacts .support .tx { display:none }
+  .navacts .support { padding:0; width:34px }
+}
+@media (max-width:520px) { .navacts .me.in { padding:0 5px } .navacts .me .nm { display:none } }
 .crumbs { color:var(--muted); font-size:12px; margin:14px 0 4px } .crumbs a { color:var(--muted) }
 h1 { font-size:clamp(24px,4.6vw,38px); line-height:1.15; font-weight:900; margin:8px 0 8px }
 h1 span { background:linear-gradient(90deg,#ffc400,#ff7a3d); -webkit-background-clip:text; background-clip:text; color:transparent }

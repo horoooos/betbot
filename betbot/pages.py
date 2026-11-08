@@ -141,10 +141,10 @@ def _write(path: Path, text: str) -> bool:
 
 
 def nav(prefix: str, on: str = "") -> str:
-    items = [("matches.html", "📺 Матчи онлайн", "live"), ("predictions/", "🎯 Прогнозы", "pred"), ("news/", "📰 Новости", "news"), ("feed.html", "💬 Лента", "feed"), ("top.html", "🏆 Рейтинг", "top")]
+    items = [("matches.html", "Матчи онлайн", "live"), ("predictions/", "Прогнозы", "pred"), ("news/", "Новости", "news"), ("feed.html", "Лента", "feed"), ("top.html", "Рейтинг", "top")]
     links = "".join(f'<a href="{prefix}{u}"{" class=on" if k == on else ""}>{t}</a>' for u, t, k in items)
     return (f'<nav class="topnav"><a class="logo" href="{prefix}./">АИ СТАВИТ</a><div class="links">{links}'
-            f'<a class="me" id="navUser" href="{prefix}profile.html">Войти</a></div></nav>')
+            f'</div><div class="navacts"><a class="me" id="navUser" href="{prefix}profile.html">Войти</a></div></nav>')
 
 
 def page(prefix: str, title: str, desc: str, canon: str, body: str, on: str = "", og_image: str | None = None,
