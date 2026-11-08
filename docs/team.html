@@ -24,7 +24,7 @@
 </main>
 <script type="module">
 import * as E from "./espn.js?v=2";
-import("./fb.js?v=9").then(fb => { fb.navUser(document.getElementById("navUser")); fb.track("team"); }).catch(() => {});
+import("./fb.js?v=10").then(fb => { fb.navUser(document.getElementById("navUser")); fb.track("team"); }).catch(() => {});
 const { $, esc } = E;
 document.head.insertAdjacentHTML("beforeend", `<style>${E.CSS}</style>`);
 const q = new URLSearchParams(location.search);

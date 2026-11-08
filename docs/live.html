@@ -1561,7 +1561,7 @@ if ("Notification" in window && EVENT) {
     paint();
   };
 }
-if (EVENT) import("./fb.js?v=9").then(fb => {
+if (EVENT) import("./fb.js?v=10").then(fb => {
   window.__fb = fb;
   fb.track(`live:${EVENT}`, EVENT);
   fb.watchPresence(all => { const n = all[EVENT] || 0; $("viewers").textContent = `👁 ${n} ${n % 10 === 1 && n % 100 !== 11 ? "смотрит" : "смотрят"}`; $("viewers").style.display = "inline-block"; });

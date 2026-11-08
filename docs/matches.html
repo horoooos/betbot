@@ -157,7 +157,7 @@ async function load() {
   }
   render(); await scores(); render();
 }
-import("./fb.js?v=9").then(fb => {
+import("./fb.js?v=10").then(fb => {
   fb.track("matches"); fb.navUser(document.getElementById("navUser"));
   fb.watchPresence(v => { viewers = v; render(); });
 }).catch(() => {});
