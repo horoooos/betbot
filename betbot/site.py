@@ -312,7 +312,8 @@ def build(res: pd.DataFrame, now: pd.Timestamp, blocks: dict | None = None) -> N
 </main><div class="sticky"><a class="a" href="matches.html">📺 Онлайн</a><a class="b" href="{tg}">📲 Подписаться</a></div>
 <script>{LIVE_JS}</script>
 <script type="module">import("./fb.js?v=10").then(fb => {{ fb.track("index"); fb.navUser(document.getElementById("navUser")); fb.showViews(); fetch(location.hostname.endsWith("github.io") ? "https://raw.githubusercontent.com/horoooos/betbot/main/docs/matches.json" : "matches.json", {{ cache: "no-store" }}).then(r => r.json()).then(l => fb.quizWidget(document.getElementById("quiz"), fb.quizMatch(l))).catch(() => {{}}); }}).catch(() => {{}});</script></body></html>"""
-    OUT.write_text(html, encoding="utf-8")
+    OUT.write_text(html, encoding="utf-8", newline="
+")
     print(f"Страница статистики обновлена: {len(res)} прогнозов")
 
 
