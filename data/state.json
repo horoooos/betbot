@@ -7,8 +7,6 @@
  "schedule_day": "2026-11-08",
  "content_slot": "2026-11-08-23",
  "news_seen": [
-  "https://www.sport-express.ru/hockey/nhl/news/neshvill-podaril-ovechkinu-imennuyu-gitaru-a-kapitan-vashingtona-pozdravil-trotca-vinom-2468953/",
-  "https://www.championat.com/football/news-6678298-v-ska-habarovsk-rasskazali-o-zaderzhke-vyleta-komandy-na-match-s-neftehimikom.html",
   "https://www.championat.com/basketball/news-6678316-grin-uveren-chto-oklahoma-vybyla-iz-borby-za-chempionstvo-posle-travm-uilyamsa-i-uollesa.html",
   "https://www.sport-express.ru/tennis/news/adrian-mannarino-daniil-medvedev-vo-skolko-nachalo-chetvertfinala-turnira-v-vene-gde-smotret-translyaciyu-30-oktyabrya-2026-2468970/",
   "shansy-nemiga-gaming-obygrat-vitality-v-polufinale-pgl-masters-bucharest-2026",
@@ -506,9 +504,11 @@
   "https://www.championat.com/tennis/news-6691656-uchimsya-razdelyat-kort-i-zhizn-vne-ego-egorova-ob-otnosheniyah-s-trenerom-krasnoruckim.html",
   "m0nesy-o-pobede-na-iem-cologne-major-2026-dlya-menya-yeto-byla-takaya-malenkaya",
   "https://www.championat.com/football/news-6691712-predsedatel-sobraniya-uchreditelej-dinamo-mh-prokommentiroval-pobedu-nad-baltikoj.html",
-  "https://www.championat.com/hockey/news-6691664-boston-bryuinz-florida-panterz-rezultat-matcha-8-noyabrya-2026-goda-schet-4-1-regulyarnyj-chempionat-nhl-2026-2027.html"
+  "https://www.championat.com/hockey/news-6691664-boston-bryuinz-florida-panterz-rezultat-matcha-8-noyabrya-2026-goda-schet-4-1-regulyarnyj-chempionat-nhl-2026-2027.html",
+  "https://www.championat.com/football/news-6691746-barselona-prervala-seriyu-atletiko-iz-semi-pobed-podryad-v-la-lige.html",
+  "https://www.championat.com/football/news-6691742-ne-dumayu-chto-eschyo-takoj-uvidim-genich-o-vtorom-gole-krasnodara-v-vorota-cska.html"
  ],
- "news_i": 3,
+ "news_i": 4,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1622,7 +1622,7 @@
  "streak_day": {
   "2026-11-08": 1
  },
- "news_next": "2026-11-09T01:28:55.652741+03:00",
+ "news_next": "2026-11-09T01:57:55.396865+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1634,5 +1634,5 @@
  "bot_setup": 3,
  "tg_offset": 727618641,
  "push_watch": {},
- "news_video": true
+ "news_video": false
 }
