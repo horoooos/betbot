@@ -8034,22 +8034,22 @@
   "kickoff": "2026-11-08T03:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "home": {
+   "color": "003e7e",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/tor.png",
    "id": "21",
    "name": "Toronto Maple Leafs",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/tor.png",
-   "color": "003e7e",
    "score": "0",
    "record": "8-7-2",
    "periods": [],
    "ru": "Торонто"
   },
   "away": {
+   "color": "c41230",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/mtl.png",
    "id": "10",
    "name": "Montreal Canadiens",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/mtl.png",
-   "color": "c41230",
    "score": "0",
    "record": "10-3-3",
    "periods": [],
@@ -8153,7 +8153,9 @@
   "close": {
    "HK_O6.5": 0.5107,
    "HK_ML_H": 0.474
-  }
+  },
+  "main_hit": false,
+  "bold_hit": false
  },
  "NHL|401892666": {
   "id": "401892666",
