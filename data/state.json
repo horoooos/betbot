@@ -1497,7 +1497,7 @@
  "value_day": "2026-11-07",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-07",
- "site_stamp": "731|2026-11-08 05",
+ "site_stamp": "732|2026-11-08 06",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1510,7 +1510,7 @@
    "N1|401875552"
   ]
  },
- "value_check": "2026-11-08-1",
+ "value_check": "2026-11-08-2",
  "express_risk": {
   "msg": 3903,
   "legs": [
@@ -1579,7 +1579,9 @@
      "00529b",
      "e30b2b"
     ],
-    "label": "Победа: Нью-Джерси (с ОТ)"
+    "label": "Победа: Нью-Джерси (с ОТ)",
+    "win": true,
+    "score": "4:5"
    },
    {
     "sport": "football",
