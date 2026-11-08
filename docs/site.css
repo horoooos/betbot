@@ -125,3 +125,6 @@ footer { border-top:1px solid var(--line); padding-top:16px; line-height:1.9 } f
 @media (max-width:1150px) { .topnav { padding-top:8px; padding-bottom:6px } .topnav .links { margin:0; padding:0; flex-basis:100% } }
 @media (max-width:520px) { .topnav .links { -webkit-mask-image:linear-gradient(90deg,#000 82%,transparent); mask-image:linear-gradient(90deg,#000 82%,transparent); padding-right:28px } }
 .vw:not(:empty) { margin-left:8px; color:var(--muted); font-weight:700; letter-spacing:0; text-transform:none } .vw:not(:empty)::before { content:"· "; }
+.bbm { display:block; margin-top:10px; padding:13px 16px; border-radius:16px; text-align:center; text-decoration:none; color:#fff !important; font-weight:900; font-size:15px;
+  background:linear-gradient(90deg,#e30613,#ff4b2b); box-shadow:0 10px 24px -12px rgba(227,6,19,.8); transition:transform .15s, filter .2s }
+.bbm:hover { filter:brightness(1.08); transform:translateY(-1px) } .bbm small { display:block; font-weight:600; font-size:11px; opacity:.85; margin-top:3px }

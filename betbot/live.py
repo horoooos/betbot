@@ -56,10 +56,14 @@ def _tracker(e: dict, sport: str, h: str, a: str) -> tuple[str, str] | None:
     return ("📺 Смотреть матч онлайн", f"{TRACKER}?" + urlencode({"s": sport, "p": path, "e": e["id"], "h": h, "a": a}))
 
 
+BETBOOM = "https://app.betboom.ru/mIlkmXZpiS"   # реферальная ссылка владельца канала
+
+
 def buttons(e: dict, sport: str, h: str, a: str) -> list[tuple[str, str]]:
-    """Кнопки под постом о матче: этот матч в 3D + все матчи дня."""
+    """Кнопки под постом о матче: этот матч онлайн + все матчи дня; отдельной строкой — сделать ставку в BetBoom."""
     b = _tracker(e, sport, h, a)
-    return [("📺 Смотреть онлайн", b[1]), ("🗂 Все матчи", MATCHES_PAGE)] if b else [("🗂 Матчи онлайн", MATCHES_PAGE)]
+    row = [("📺 Смотреть онлайн", b[1]), ("🗂 Все матчи", MATCHES_PAGE)] if b else [("🗂 Матчи онлайн", MATCHES_PAGE)]
+    return row + [("💰 Сделать ставку в BetBoom", BETBOOM)]
 
 
 def run(store: dict, events: list[dict], reviews: dict, brand: str) -> None:

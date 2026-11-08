@@ -277,7 +277,7 @@ def build(res: pd.DataFrame, now: pd.Timestamp, blocks: dict | None = None) -> N
 <meta property="og:description" content="{escape(seo_desc)}"><meta property="og:locale" content="ru_RU">
 <meta name="twitter:card" content="summary_large_image"><meta name="theme-color" content="#070b1a"><meta property="og:image" content="https://horoooos.github.io/betbot/og.png"><meta name="twitter:image" content="https://horoooos.github.io/betbot/og.png"><link rel="icon" href="favicon.ico" sizes="any"><link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="manifest" href="site.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="site.css?v=6">
+<link rel="stylesheet" href="site.css?v=7">
 <script type="application/ld+json">{{"@context":"https://schema.org","@type":"WebSite","name":"АИ СТАВИТ","url":"{SITE}","description":"{escape(seo_desc)}","sameAs":["{tg}"]}}</script>
 <style>{CSS}</style></head><body><main>
 <nav class="topnav"><a class="logo" href="./">АИ СТАВИТ</a><div class="links"><a href="matches.html">Матчи онлайн</a><a href="predictions/">Прогнозы</a><a href="news/">Новости</a><a href="feed.html">Лента</a><a href="top.html">Рейтинг</a></div><div class="navacts"><a class="me" id="navUser" href="profile.html">Войти</a></div></nav>
@@ -289,6 +289,7 @@ def build(res: pd.DataFrame, now: pd.Timestamp, blocks: dict | None = None) -> N
 <div class="ringtxt"><h3>{int(hit.sum()) if len(res) else 0} из {len(res)}</h3><p>основных прогнозов зашли — все до одного учтены. Обновлено {now:%d.%m.%Y %H:%M} МСК.</p>{streak}</div></div></section>
 <section class="live" id="live" style="display:none"></section>
 {f'<h2>🎯 Прогнозы на сегодня <a href="predictions/" class="small muted" style="font-weight:700;margin-left:auto">все прогнозы →</a></h2><div class="grid">{blocks["preds"]}</div>' if blocks and blocks.get("preds") else ""}
+<a class="bbm" href="https://app.betboom.ru/mIlkmXZpiS" target="_blank" rel="noopener sponsored" style="margin-top:12px">💰 Ставьте вместе с ботом в BetBoom<small>Регистрация по нашей ссылке поддерживает проект. 18+</small></a>
 <div class="card" id="quizbox" style="margin-top:18px;display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:16px;align-items:center">
 <div id="quiz"><div class="muted">Загружаем матч дня…</div></div>
 <div><div style="font-weight:900;font-size:17px">🏆 Турнир прогнозистов</div><p class="muted small" style="margin:6px 0 10px">Делайте прогнозы в ленте — бот рассчитает их после матча. Лучшие недели — в топе.</p>

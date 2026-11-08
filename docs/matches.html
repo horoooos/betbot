@@ -9,7 +9,7 @@
 <meta name="description" content="Все матчи дня онлайн: футбол, хоккей НХЛ, баскетбол НБА и теннис. Игроки, мяч и все моменты в реальном времени, плюс прогнозы бота АИ СТАВИТ.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="site.css?v=6">
+<link rel="stylesheet" href="site.css?v=7">
 <style>
   :root { --bg:#070b1a; --bg2:#0d1430; --card:#121a38; --card2:#18224a; --line:rgba(255,255,255,.09); --ink:#fff; --muted:#9aa6cc;
           --gold:#ffc400; --live:#ff4646; --good:#2ecc71 }
@@ -52,6 +52,8 @@
   .tip.no { color:var(--muted); font-weight:600 }
   .go { flex:none; font-size:12px; font-weight:800; background:rgba(255,196,0,.14); color:var(--gold); border-radius:10px; padding:6px 10px }
   .m.live .go { background:var(--live); color:#fff }
+  .bb { flex:none; font-size:12px; font-weight:900; color:#fff; background:linear-gradient(90deg,#e30613,#ff4b2b); border-radius:10px; padding:6px 10px; cursor:pointer; margin-left:auto }
+  .bb + .go { margin-left:0 }
   .badge { position:absolute; top:0; right:0; background:var(--gold); color:#1a1405; font-size:10px; font-weight:900; padding:3px 10px; border-bottom-left-radius:10px; letter-spacing:.5px }
   .empty { color:var(--muted); background:var(--card); border:1px dashed var(--line); border-radius:16px; padding:18px; text-align:center }
   .cta { position:fixed; left:50%; bottom:14px; transform:translateX(-50%); background:var(--gold); color:#1a1405; text-decoration:none; font-weight:900;
@@ -115,6 +117,10 @@ function status(m) {
 // название команды → её страница (карточка сама — ссылка на трансляцию, поэтому переход через data-go)
 const tl = (m, id, side) => m.path ? ` data-go="${m.sport === "tennis" ? "player" : "team"}.html?p=${encodeURIComponent(m.path)}&amp;${id ? "id=" + encodeURIComponent(id) : "ev=" + encodeURIComponent(m.id) + "&amp;side=" + side}" title="Расписание, форма, состав и статистика"` : "";
 document.addEventListener("click", e => { const g = e.target.closest("[data-go]"); if (g) { e.preventDefault(); location.href = g.dataset.go; } });
+// «💰 BetBoom»: открываем BetBoom по реферальной ссылке, ставку бота копируем в буфер
+const BETBOOM = "https://app.betboom.ru/mIlkmXZpiS";
+document.addEventListener("click", e => { const b = e.target.closest("[data-bb]"); if (!b) return; e.preventDefault(); e.stopPropagation();
+  try { navigator.clipboard?.writeText(b.dataset.bb); } catch (x) {} window.open(BETBOOM, "_blank", "noopener"); }, true);
 function card(m) {
   const s = live[m.id] || {}, st = status(m);
   let label = `${day(m.kickoff)}, ${time(m.kickoff)}`, cls = "";
@@ -130,6 +136,7 @@ function card(m) {
     <div class="tm ${win && win.h ? "win" : ""}">${img(m.hl)}<span class="nm"${tl(m, m.hid, "h")}>${esc(m.home)}</span><span class="sc">${esc(hsc)}</span></div>
     <div class="tm ${win && win.a ? "win" : ""}">${img(m.al)}<span class="nm"${tl(m, m.aid, "a")}>${esc(m.away)}</span><span class="sc">${esc(asc)}</span></div>
     <div class="ft">${m.tip ? `<span class="tip">🎯 ${esc(m.tip)}${m.bot?.main ? ` · шанс ${Math.round(m.bot.main.p * 100)}%` : ""}</span>` : `<span class="tip no">Прогноз выйдет за час до начала</span>`}
+      ${m.tip && st !== "post" ? `<span class="bb" data-bb="${esc(m.home + " — " + m.away + ": " + (m.bot?.main?.label || m.tip))}" title="Повторить ставку бота в BetBoom">💰 BetBoom</span>` : ""}
       <span class="go">${st === "in" ? "📺 Смотреть" : st === "post" ? "▶ Повтор" : "📺 Онлайн"}</span></div></a>`;
 }
 function render() {

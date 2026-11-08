@@ -43,17 +43,24 @@
   #pp { text-align:center; margin-top:6px } #pp span { display:inline-block; background:rgba(255,70,70,.9); border-radius:999px; padding:3px 10px; font-size:11px; font-weight:800 }
   #pp:empty { display:none }
   #acts { margin-top:6px; display:flex; gap:6px; justify-content:center; flex-wrap:wrap }
-  /* телефон: всё управление в одну строку под табло — поле остаётся открытым */
+  /* телефон: кнопки по краям экрана — сверху «назад» и камера, внизу чат / прогноз / составы, справа уведомления */
+  #bbar, #fab { display:none }
   @media (max-width:600px) {
     .hud.top { padding:8px 8px 0 }
-    .legend { display:none }
-    .row2 { margin-top:5px; gap:6px; justify-content:flex-start }
-    .row2 .league { display:none }
-    .row2 > .pill { flex:none; padding:5px 9px; font-size:11px }
-    .row2 #acts { margin:0; flex:1; min-width:0; flex-wrap:nowrap; justify-content:flex-start; overflow-x:auto; scrollbar-width:none; pointer-events:auto;
-      -webkit-mask-image:linear-gradient(90deg,#000 88%,transparent); mask-image:linear-gradient(90deg,#000 88%,transparent); padding-right:14px }
-    .row2 #acts::-webkit-scrollbar { display:none }
-    #acts .pill { flex:none; padding:5px 9px; font-size:11px; white-space:nowrap }
+    .legend, .row2 .league { display:none }
+    .row2 { margin-top:6px }
+    .row2 > .pill { padding:6px 11px; font-size:12px } .row2 .tx { display:none }
+    .row2 #viewers { background:rgba(10,16,38,.7); font-size:11px; padding:4px 10px }
+    #acts { display:none }
+    #bbar { display:flex; gap:8px; justify-content:center; align-items:center; margin:0 auto 8px; max-width:760px; pointer-events:none }
+    #bbar .pill { pointer-events:auto; height:38px; padding:0 14px; font-size:12.5px; font-weight:800; display:inline-flex; align-items:center; gap:6px;
+      background:rgba(14,21,48,.88); -webkit-backdrop-filter:blur(10px); backdrop-filter:blur(10px); box-shadow:0 8px 20px -10px rgba(0,0,0,.8); white-space:nowrap }
+    #bbar .tipbtn { background:linear-gradient(90deg,#ffc400,#ff9f1a); color:#1a1405; border:0; max-width:46vw; overflow:hidden; text-overflow:ellipsis }
+    #fab { display:flex; flex-direction:column; gap:10px; position:fixed; right:10px; top:42%; z-index:4 }
+    #fab .pill { width:46px; height:46px; padding:0; border-radius:50%; font-size:0; display:grid; place-items:center; background:rgba(14,21,48,.88);
+      -webkit-backdrop-filter:blur(10px); backdrop-filter:blur(10px); box-shadow:0 8px 20px -10px rgba(0,0,0,.8); position:relative }
+    #fab .pill::before { content:attr(data-ic); font-size:20px }
+    #fab .pill::after { content:attr(data-lb); position:absolute; top:100%; right:0; margin-top:2px; text-align:right; font-size:9px; font-weight:800; color:#cfd6f5; text-shadow:0 1px 3px #000; white-space:nowrap }
   }
   #tag { position:fixed; z-index:3; pointer-events:none; left:50%; top:var(--tagTop,128px); transform:translateX(-50%); padding:8px 14px 8px 16px; border-radius:14px;
          background:var(--card); border:1px solid var(--line); backdrop-filter:blur(8px); white-space:nowrap; opacity:0; text-align:center;
@@ -105,6 +112,9 @@
   #sheet h3 { font-size:18px; font-weight:900; display:flex; justify-content:space-between; align-items:center }
   #sheet h4 { font-size:11px; color:var(--muted); letter-spacing:1.2px; text-transform:uppercase; margin:16px 0 8px }
   #sheet .x { background:none; border:0; color:var(--muted); font-size:22px; cursor:pointer }
+  .bbm { display:block; margin-top:12px; padding:13px 16px; border-radius:16px; text-align:center; text-decoration:none; color:#fff; font-weight:900; font-size:15px;
+    background:linear-gradient(90deg,#e30613,#ff4b2b); box-shadow:0 10px 24px -12px rgba(227,6,19,.8) }
+  .bbm small { display:block; font-weight:600; font-size:11px; opacity:.85; margin-top:3px }
   .tc { border-radius:16px; padding:12px 14px; margin-top:10px; display:flex; justify-content:space-between; align-items:center; gap:10px }
   .tc.m { background:rgba(46,204,113,.14); border:1px solid rgba(46,204,113,.45) } .tc.b { background:rgba(255,122,61,.12); border:1px solid rgba(255,122,61,.4) }
   .tc small { display:block; font-size:10px; font-weight:800; letter-spacing:1px; color:var(--muted) } .tc b { font-size:17px }
@@ -152,7 +162,7 @@
       <div class="clock"><span class="dot" id="dot"></span><span id="cl">—</span></div></div>
     <div class="team away"><span class="nm" id="an">—</span><img id="al" alt=""><span class="stripe" id="ac"></span></div>
   </div>
-  <div class="row2"><a class="pill" href="matches.html">← Все матчи</a><div class="league" id="lg"></div><button class="pill" id="cam">🎥 ТВ</button></div>
+  <div class="row2"><a class="pill" href="matches.html">← <span class="tx">Все матчи</span></a><div class="league" id="lg"></div><button class="pill" id="cam">🎥 ТВ</button></div>
   <div class="legend" id="legend"></div>
   <div id="acts">
     <span class="pill" id="viewers" style="display:none;pointer-events:none">👁 0</span>
@@ -164,7 +174,8 @@
   <div style="text-align:center"><button id="replay">▶ Смотреть повтор матча</button></div>
 </div>
 <div id="tag"><div class="t" id="tt"></div><div class="e" id="te"></div></div>
-<div class="hud bottom"><div class="panel"><div id="stats"></div><div class="feed" id="feed"></div></div></div>
+<div id="fab"></div>
+<div class="hud bottom"><div id="bbar"></div><div class="panel"><div id="stats"></div><div class="feed" id="feed"></div></div></div>
 <div class="brand">@AISTAVVIT · ОНЛАЙН ПО ДАННЫМ МАТЧА</div>
 <div id="sheet"><div class="in" id="sheetIn"></div></div>
 <div id="chatSheet" class="csheet"><div class="in"><h3 style="display:flex;justify-content:space-between;align-items:center;font-size:18px;font-weight:900">💬 Чат трансляции
@@ -176,6 +187,7 @@ import * as THREE from "three";
 
 // ═════════════════════════ параметры ═════════════════════════
 const q = new URLSearchParams(location.search);
+const BETBOOM = "https://app.betboom.ru/mIlkmXZpiS";   // реферальная ссылка владельца
 const SPORT = q.get("s") || "football";
 const PATH = q.get("p") || `soccer/${q.get("l") || "eng.1"}`;      // старые ссылки: l=eng.1
 const EVENT = q.get("e"), RU_H = q.get("h"), RU_A = q.get("a");
@@ -1336,9 +1348,18 @@ function setTeams(h, a) {
   }
 }
 
-{ const mq = matchMedia("(max-width:600px)"), acts = $("acts"), row = document.querySelector(".row2"), home = acts.parentNode, after = acts.nextSibling;
-  const place = () => { if (mq.matches) row.insertBefore(acts, $("cam")); else home.insertBefore(acts, after); };
-  place(); mq.addEventListener?.("change", place); }
+{ // телефон: «смотрят» — в строку с «назад» и «ТВ»; чат, прогноз, составы — вниз; уведомления — круглая кнопка справа
+  const mq = matchMedia("(max-width:600px)"), acts = $("acts"), row = document.querySelector(".row2");
+  const home = [...acts.children];
+  const place = () => {
+    if (mq.matches) {
+      row.insertBefore($("viewers"), $("cam"));
+      $("bbar").append($("chatbtn"), $("tipbtn"), $("teamsbtn"));
+      $("fab").append($("notibtn"));
+    } else acts.append(...home);
+  };
+  place(); mq.addEventListener?.("change", place);
+}
 // ═════════════════════════ «Команды и составы»: переходы на страницы команд, игроков и турнира ═════════════════════════
 let SUM = null;
 $("sheet").addEventListener("click", e => { if (e.target.id === "sheet" || e.target.id === "sx") $("sheet").classList.remove("on"); });
@@ -1560,7 +1581,7 @@ async function loadBot() {
   }
   const m = list.find(x => String(x.id) === String(EVENT));
   if (!m || !m.bot) return;
-  botData = m.bot; $("tipbtn").textContent = `🎯 Прогноз бота: ${m.bot.main.label} · ${pc(m.bot.main.p)}`; $("tipbtn").style.display = "inline-block";
+  botData = m.bot; $("tipbtn").textContent = matchMedia("(max-width:600px)").matches ? `🎯 ${m.bot.main.label} · ${pc(m.bot.main.p)}` : `🎯 Прогноз бота: ${m.bot.main.label} · ${pc(m.bot.main.p)}`; $("tipbtn").style.display = "inline-block";
   $("tipbtn").onclick = () => { renderBot(); $("sheet").classList.add("on"); };
   $("sheet").onclick = e => { if (e.target.id === "sheet" || e.target.id === "sx") $("sheet").classList.remove("on"); };
 }
@@ -1569,6 +1590,9 @@ function renderBot() {
   const b = botData, esc = t => String(t ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
   const tc = (cls, title, t) => t ? `<div class="tc ${cls}"><div><small>${title}</small><b>${esc(t.label)}</b></div><div class="r"><small>шанс</small>${pc(t.p)}<small>кэф ${t.est ? "≈" : ""}${(+t.odds || 0).toFixed(2)}</small></div></div>` : "";
   let html = `<h3>🎯 Прогноз бота <button class="x" id="sx">✕</button></h3>${tc("m", "ОСНОВНОЙ ПРОГНОЗ", b.main)}${tc("b", "СМЕЛЫЙ ПРОГНОЗ", b.bold)}`;
+  // повторить ставку бота: открываем BetBoom по реферальной ссылке, а саму ставку копируем — останется найти матч и выбрать её
+  const bet = b.main ? `${H.ru} — ${A.ru}: ${b.main.label}` : "";
+  if (bet) html += `<a class="bbm" id="bbm" href="${BETBOOM}" target="_blank" rel="noopener sponsored">💰 Поставить «${esc(b.main.label)}» в BetBoom<small>Откроется BetBoom, а ставка скопируется — найдите матч и выберите её</small></a>`;
   const bar = b.bar || [];
   if (bar.length === 3 && bar.every(v => v != null)) {
     const cols = [H.color, "#7f8bb3", A.color], names = [H.ru, SPORT === "football" ? "Ничья" : "", A.ru];
@@ -1583,6 +1607,7 @@ function renderBot() {
   html += `<div class="card" id="votew" style="margin-top:14px;padding:14px;background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:16px"></div>`;
   html += `<p class="disc">Шанс — оценка модели бота; кэф — средний у букмекеров («≈» — расчётный). Прогноз — не гарантия. 18+</p>`;
   $("sheetIn").innerHTML = html;
+  if ($("bbm")) $("bbm").onclick = () => { try { navigator.clipboard?.writeText(bet); } catch (e) {} };
   if (window.__fb) window.__fb.voteWidget($("votew"), EVENT, { finished: /завершён/i.test($("cl").textContent) });
 }
 if (EVENT) loadBot();
@@ -1592,7 +1617,8 @@ if ("Notification" in window && EVENT) {
   const nb = $("notibtn"); nb.style.display = "inline-block";
   // что присылаем — зависит от вида спорта: в теннисе голов нет, там сеты
   const WHAT = { football: ["Голы", "гол"], hockey: ["Шайбы", "шайбу"], basketball: ["Матч", "начало и итог матча"], tennis: ["Сеты", "каждый сет"] }[SPORT] || ["Матч", "главное"];
-  const paint = () => { nb.textContent = notifyOn ? `🔔 ${WHAT[0]}: вкл` : `🔕 ${WHAT[0]}`; nb.style.borderColor = notifyOn ? "#2ecc71" : ""; };
+  const paint = () => { nb.textContent = notifyOn ? `🔔 ${WHAT[0]}: вкл` : `🔕 ${WHAT[0]}`; nb.dataset.ic = notifyOn ? "🔔" : "🔕"; nb.dataset.lb = notifyOn ? `${WHAT[0]}: вкл` : WHAT[0];
+    nb.style.borderColor = notifyOn ? "#2ecc71" : ""; };
   paint();
   nb.onclick = async () => {
     if (notifyOn) { notifyOn = false; try { localStorage.setItem("ainotify", "0"); } catch (e) {} window.__fb?.pushUnfollow(EVENT).catch(() => {}); return paint(); }

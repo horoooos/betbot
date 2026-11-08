@@ -147,8 +147,9 @@ def _keyboard(buttons) -> str:
     import json
     if isinstance(buttons, tuple):
         buttons = [buttons]
-    row = [{"text": t, "url": u} for t, u in buttons if t and u]
-    return json.dumps({"inline_keyboard": [row]}, ensure_ascii=False)
+    row = [{"text": t, "url": u} for t, u in buttons if t and u and "betboom" not in u]
+    bet = [[{"text": t, "url": u}] for t, u in buttons if t and u and "betboom" in u]   # ставка — отдельной строкой во всю ширину
+    return json.dumps({"inline_keyboard": ([row] if row else []) + bet}, ensure_ascii=False)
 
 
 def send_photo(png: bytes, caption: str, reply_to: int | None = None, button=None) -> int:

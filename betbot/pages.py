@@ -166,13 +166,13 @@ def page(prefix: str, title: str, desc: str, canon: str, body: str, on: str = ""
 <meta name="theme-color" content="#070b1a">
 <link rel="icon" href="{prefix}favicon.ico" sizes="any"><link rel="icon" type="image/png" sizes="32x32" href="{prefix}favicon-32.png"><link rel="apple-touch-icon" href="{prefix}apple-touch-icon.png"><link rel="manifest" href="{prefix}site.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="{prefix}site.css?v=6">{lds}
+<link rel="stylesheet" href="{prefix}site.css?v=7">{lds}
 </head><body><main>
 {nav(prefix, on)}
 {body}
 <footer>АИ СТАВИТ — бесплатные прогнозы на спорт от искусственного интеллекта и честная статистика. Прогноз — не гарантия выигрыша. 18+.
 <br><a href="https://t.me/{CH}">Telegram-канал @{CH}</a> · <a href="{prefix}./">Статистика бота</a> · <a href="{prefix}matches.html">Матчи онлайн</a> · <a href="{prefix}news/">Новости спорта</a> · <a href="{prefix}predictions/">Прогнозы на матчи</a>
-<br><a href="{prefix}leagues.html">Команды, игроки и турниры</a> · <a href="{prefix}teams/">Прогнозы по командам</a> · <a href="{prefix}tools.html">Калькуляторы ставок</a> · <a href="{prefix}school/">Школа ставок</a> · <a href="{prefix}top.html">Рейтинг прогнозистов</a></footer>
+<br><a href="{BETBOOM}" target="_blank" rel="noopener sponsored" style="color:#ff6a5a;font-weight:800">💰 Ставки в BetBoom по нашей ссылке</a> · <a href="{prefix}leagues.html">Команды, игроки и турниры</a> · <a href="{prefix}teams/">Прогнозы по командам</a> · <a href="{prefix}tools.html">Калькуляторы ставок</a> · <a href="{prefix}school/">Школа ставок</a> · <a href="{prefix}top.html">Рейтинг прогнозистов</a></footer>
 </main><div class="sticky"><a class="a" href="{prefix}matches.html">📺 Онлайн</a><a class="b" href="https://t.me/{CH}">📲 Канал</a></div>
 <script type="module">import("{prefix}fb.js?v=10").then(fb => {{ fb.navUser(document.getElementById("navUser")); fb.track("{on or 'page'}");
   fb.countView(document.querySelector("[data-view]")); fb.showViews();
@@ -407,6 +407,7 @@ def _match_page(m: dict, store: dict[int, dict], all_m: list[dict]) -> str:
 <div style="text-align:center">{res}</div>
 <div class="row" style="justify-content:center;margin-top:12px">{watch}<a class="btn gold" href="https://t.me/{CH}/{m['msg']}">📲 Прогноз в Telegram</a></div></div>
 <h2>🎯 Прогноз бота</h2><div class="card pre">{pred.get('html') or H.escape(m['tip'])}</div>
+{_betboom(f"{m['home']} — {m['away']}: {m['tip']}", m['tip']) if not m.get('finished') else ''}
 <div class="card" id="votes" data-m="{H.escape(m['id'])}" data-f="{'1' if m.get('finished') else '0'}" data-h="{('1' if m.get('hit') else '0') if m.get('finished') else ''}" style="margin-top:10px"></div>
 {chances}
 {''.join(f'<h2>🔎 Полный разбор матча</h2><div class="card pre">{p["html"]}</div>' for p in analysis[:2])}
@@ -414,6 +415,16 @@ def _match_page(m: dict, store: dict[int, dict], all_m: list[dict]) -> str:
 {f'<h2>Другие прогнозы на {day}</h2><div class="grid">' + "".join(_match_card(x, "../") for x in others) + "</div>" if others else ""}"""
     img = pred.get("photo")
     return page("../", f"Прогноз на матч {title_teams} {m['kickoff']:%d.%m.%Y}: {m['tip']} — АИ СТАВИТ", desc, SITE + m["url"], body, "pred", img, [ld, bc], "article")
+
+
+BETBOOM = "https://app.betboom.ru/mIlkmXZpiS"   # реферальная ссылка владельца
+
+
+def _betboom(bet: str, label: str) -> str:
+    """Кнопка «повторить ставку бота»: BetBoom по реферальной ссылке + ставка копируется в буфер."""
+    return (f'<a class="bbm" href="{BETBOOM}" target="_blank" rel="noopener sponsored" data-bet="{H.escape(bet)}" '
+            f'onclick="try{{navigator.clipboard.writeText(this.dataset.bet)}}catch(e){{}}">💰 Поставить «{H.escape(label)}» в BetBoom'
+            f'<small>Откроется BetBoom, а ставка скопируется — найдите матч и выберите её. 18+</small></a>')
 
 
 def _match_card(m: dict, prefix: str) -> str:
