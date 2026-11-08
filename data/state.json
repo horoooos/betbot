@@ -7,7 +7,6 @@
  "schedule_day": "2026-11-08",
  "content_slot": "2026-11-08-10",
  "news_seen": [
-  "https://www.championat.com/hockey/news-6677534-shafranov-prokommentiroval-pervoe-porazhenie-na-postu-glavnogo-trenera-metallurga.html",
   "https://www.championat.com/football/news-6677530-oleg-ivanov-rasskazal-o-rabote-trenerom-v-rubine.html",
   "https://www.championat.com/football/news-6677532-kerrik-otvetil-udivlyon-li-on-chto-prodolzhaet-trenirovat-manchester-yunajted.html",
   "https://www.championat.com/hockey/news-6677542-ne-vo-mne-delo-shafranov-o-rezultativnoj-serii-tolchinskogo.html",
@@ -506,9 +505,10 @@
   "https://www.championat.com/football/news-6690616-danks-s-majncem-vremenami-prihodilos-terpet-eto-tyazhyolaya-pobeda.html",
   "https://www.championat.com/cybersport/news-6690694-uvidimsya-na-strimah-chopper-oficialno-obyavil-o-zavershenii-karery-v-cs-2.html",
   "https://www.championat.com/cybersport/news-6690688-navi-obygrala-betboom-team-i-zanyala-trete-mesto-na-iem-beijing-2026-po-cs-2.html",
-  "https://www.championat.com/hockey/news-6690736-glavnyj-trener-karoliny-ocenil-pervuyu-igru-nikishina-v-tekuschem-sezone.html"
+  "https://www.championat.com/hockey/news-6690736-glavnyj-trener-karoliny-ocenil-pervuyu-igru-nikishina-v-tekuschem-sezone.html",
+  "https://www.championat.com/football/news-6691120-kazakov-o-80-letii-hiddinka-gus-ne-otryvayas-smotrel-pozdravleniya-ot-russkih-igrokov.html"
  ],
- "news_i": 3,
+ "news_i": 4,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -982,7 +982,7 @@
   },
   "used": {
    "2026-10": 41,
-   "2026-11": 74
+   "2026-11": 76
   },
   "tournaments": {
    "tennis": {
@@ -1004,19 +1004,12 @@
      44609,
      52720
     ]
-   },
-   "DOTA": {
-    "at": "2026-11-04T21:36:01.967537+03:00",
-    "ids": [
-     52376,
-     54032
-    ]
    }
   },
   "last": {
    "tennis": "2026-11-08T10:45:20.174208+03:00",
    "CS2": "2026-11-06T20:22:54.386902+03:00",
-   "DOTA": "2026-11-06T14:39:51.518468+03:00"
+   "DOTA": "2026-11-06T21:06:13.854370+03:00"
   },
   "ver": 3
  },
@@ -1491,7 +1484,7 @@
  "value_day": "2026-11-08",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-07",
- "site_stamp": "746|2026-11-08 11",
+ "site_stamp": "748|2026-11-08 17",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1504,7 +1497,7 @@
    "N1|401875548"
   ]
  },
- "value_check": "2026-11-08-3",
+ "value_check": "2026-11-08-5",
  "express_risk": {
   "msg": 3903,
   "legs": [
@@ -1631,7 +1624,7 @@
  "streak_day": {
   "2026-11-08": 1
  },
- "news_next": "2026-11-08T12:27:47.592094+03:00",
+ "news_next": "2026-11-08T17:53:14.094013+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",

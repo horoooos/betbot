@@ -1,94 +1,49 @@
 [
 {
-"sport": "tennis",
-"id": "186642",
-"league": "Теннис · WTA",
-"kickoff": "2026-11-08T11:05:00+03:00",
-"home": "Клер Лю",
-"away": "Александра Эала",
-"hl": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
-"al": "https://a.espncdn.com/i/teamlogos/countries/500/phi.png",
-"path": "tennis/wta",
-"url": "live.html?s=tennis&p=tennis%2Fwta&e=186642&h=%D0%9A%D0%BB%D0%B5%D1%80+%D0%9B%D1%8E&a=%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80%D0%B0+%D0%AD%D0%B0%D0%BB%D0%B0",
-"tip": "Будет 2 сета · ≈1.74",
+"sport": "football",
+"id": "401888253",
+"league": "Турция · Суперлига",
+"kickoff": "2026-11-08T13:30:00+03:00",
+"home": "Кайкур Ризеспор",
+"away": "Эрзурумспор",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/7656.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/19267.png",
+"hid": "7656",
+"aid": "19267",
+"path": "soccer/tur.1",
+"url": "live.html?s=football&p=soccer%2Ftur.1&e=401888253&h=%D0%9A%D0%B0%D0%B9%D0%BA%D1%83%D1%80+%D0%A0%D0%B8%D0%B7%D0%B5%D1%81%D0%BF%D0%BE%D1%80&a=%D0%AD%D1%80%D0%B7%D1%83%D1%80%D1%83%D0%BC%D1%81%D0%BF%D0%BE%D1%80",
+"tip": "",
 "top": false,
-"bot": {
-"main": {
-"label": "Будет 2 сета",
-"p": 0.535,
-"odds": 1.74,
-"est": true
+"bot": null
 },
-"bold": null,
-"markets": [
-[
-"Победа: Клер Лю",
-0.306,
-null
-],
-[
-"Победа: Александра Эала",
-0.694,
-null
-],
-[
-"Будет 3 сета",
-0.465,
-null
-],
-[
-"Будет 2 сета",
-0.535,
-null
-],
-[
-"Счёт по сетам 2:0",
-0.135,
-null
-],
-[
-"Счёт по сетам 0:2",
-0.4,
-null
-],
-[
-"Счёт по сетам 2:1",
-0.171,
-null
-],
-[
-"Счёт по сетам 1:2",
-0.294,
-null
-],
-[
-"Клер Лю возьмёт хотя бы сет",
-0.6,
-null
-],
-[
-"Александра Эала возьмёт хотя бы сет",
-0.865,
-null
-]
-],
-"bar": [
-0.30641425147972395,
-0,
-0.6935857485202761
-],
-"center": "Рейтинг Эло 1654 : 1796"
-}
+{
+"sport": "football",
+"id": "401879814",
+"league": "Россия · Премьер-лига",
+"kickoff": "2026-11-08T14:00:00+03:00",
+"home": "Крылья Советов",
+"away": "Оренбург",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/3850.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/18285.png",
+"hid": "3850",
+"aid": "18285",
+"path": "soccer/rus.1",
+"url": "live.html?s=football&p=soccer%2Frus.1&e=401879814&h=%D0%9A%D1%80%D1%8B%D0%BB%D1%8C%D1%8F+%D0%A1%D0%BE%D0%B2%D0%B5%D1%82%D0%BE%D0%B2&a=%D0%9E%D1%80%D0%B5%D0%BD%D0%B1%D1%83%D1%80%D0%B3",
+"tip": "",
+"top": false,
+"bot": null
 },
 {
 "sport": "tennis",
 "id": "186690",
 "league": "Теннис · WTA",
-"kickoff": "2026-11-08T13:00:00+03:00",
+"kickoff": "2026-11-08T14:10:00+03:00",
 "home": "Анна Блинкова",
 "away": "Софья Лансере",
 "hl": "https://a.espncdn.com/i/teamlogos/countries/500/fra.png",
 "al": "https://a.espncdn.com/i/teamlogos/countries/500/rus.png",
+"hid": "2902",
+"aid": "3401",
 "path": "tennis/wta",
 "url": "live.html?s=tennis&p=tennis%2Fwta&e=186690&h=%D0%90%D0%BD%D0%BD%D0%B0+%D0%91%D0%BB%D0%B8%D0%BD%D0%BA%D0%BE%D0%B2%D0%B0&a=%D0%A1%D0%BE%D1%84%D1%8C%D1%8F+%D0%9B%D0%B0%D0%BD%D1%81%D0%B5%D1%80%D0%B5",
 "tip": "Будет 2 сета · ≈1.85",
@@ -163,36 +118,6 @@ null
 },
 {
 "sport": "football",
-"id": "401888253",
-"league": "Турция · Суперлига",
-"kickoff": "2026-11-08T13:30:00+03:00",
-"home": "Кайкур Ризеспор",
-"away": "Эрзурумспор",
-"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/7656.png",
-"al": "https://a.espncdn.com/i/teamlogos/soccer/500/19267.png",
-"path": "soccer/tur.1",
-"url": "live.html?s=football&p=soccer%2Ftur.1&e=401888253&h=%D0%9A%D0%B0%D0%B9%D0%BA%D1%83%D1%80+%D0%A0%D0%B8%D0%B7%D0%B5%D1%81%D0%BF%D0%BE%D1%80&a=%D0%AD%D1%80%D0%B7%D1%83%D1%80%D1%83%D0%BC%D1%81%D0%BF%D0%BE%D1%80",
-"tip": "",
-"top": false,
-"bot": null
-},
-{
-"sport": "football",
-"id": "401879814",
-"league": "Россия · Премьер-лига",
-"kickoff": "2026-11-08T14:00:00+03:00",
-"home": "Крылья Советов",
-"away": "Оренбург",
-"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/3850.png",
-"al": "https://a.espncdn.com/i/teamlogos/soccer/500/18285.png",
-"path": "soccer/rus.1",
-"url": "live.html?s=football&p=soccer%2Frus.1&e=401879814&h=%D0%9A%D1%80%D1%8B%D0%BB%D1%8C%D1%8F+%D0%A1%D0%BE%D0%B2%D0%B5%D1%82%D0%BE%D0%B2&a=%D0%9E%D1%80%D0%B5%D0%BD%D0%B1%D1%83%D1%80%D0%B3",
-"tip": "",
-"top": false,
-"bot": null
-},
-{
-"sport": "football",
 "id": "401875551",
 "league": "Нидерланды · Эредивизи",
 "kickoff": "2026-11-08T14:15:00+03:00",
@@ -200,6 +125,8 @@ null
 "away": "Фейеноорд",
 "hl": "https://a.espncdn.com/i/teamlogos/soccer/500/146.png",
 "al": "https://a.espncdn.com/i/teamlogos/soccer/500/142.png",
+"hid": "146",
+"aid": "142",
 "path": "soccer/ned.1",
 "url": "live.html?s=football&p=soccer%2Fned.1&e=401875551&h=%D0%A5%D0%B5%D1%80%D0%B5%D0%BD%D0%B2%D0%B5%D0%BD&a=%D0%A4%D0%B5%D0%B9%D0%B5%D0%BD%D0%BE%D0%BE%D1%80%D0%B4",
 "tip": "",
@@ -215,6 +142,8 @@ null
 "away": "Лацио",
 "hl": "https://a.espncdn.com/i/teamlogos/soccer/500/114.png",
 "al": "https://a.espncdn.com/i/teamlogos/soccer/500/112.png",
+"hid": "114",
+"aid": "112",
 "path": "soccer/ita.1",
 "url": "live.html?s=football&p=soccer%2Fita.1&e=401874810&h=%D0%9D%D0%B0%D0%BF%D0%BE%D0%BB%D0%B8&a=%D0%9B%D0%B0%D1%86%D0%B8%D0%BE",
 "tip": "",
@@ -230,6 +159,8 @@ null
 "away": "Андерлехт",
 "hl": "https://a.espncdn.com/i/teamlogos/soccer/500/570.png",
 "al": "https://a.espncdn.com/i/teamlogos/soccer/500/441.png",
+"hid": "570",
+"aid": "441",
 "path": "soccer/bel.1",
 "url": "live.html?s=football&p=soccer%2Fbel.1&e=401878946&h=%D0%91%D1%80%D1%8E%D0%B3%D0%B3%D0%B5&a=%D0%90%D0%BD%D0%B4%D0%B5%D1%80%D0%BB%D0%B5%D1%85%D1%82",
 "tip": "",
@@ -245,23 +176,10 @@ null
 "away": "Бетис",
 "hl": "https://a.espncdn.com/i/teamlogos/soccer/500/3751.png",
 "al": "https://a.espncdn.com/i/teamlogos/soccer/500/244.png",
+"hid": "3751",
+"aid": "244",
 "path": "soccer/esp.1",
 "url": "live.html?s=football&p=soccer%2Fesp.1&e=401882814&h=%D0%AD%D0%BB%D1%8C%D1%87%D0%B5&a=%D0%91%D0%B5%D1%82%D0%B8%D1%81",
-"tip": "",
-"top": false,
-"bot": null
-},
-{
-"sport": "tennis",
-"id": "186598",
-"league": "Теннис · WTA",
-"kickoff": "2026-11-08T16:00:00+03:00",
-"home": "Джанис Тьен",
-"away": "Магда Линетт",
-"hl": "https://a.espncdn.com/i/teamlogos/countries/500/ina.png",
-"al": "https://a.espncdn.com/i/teamlogos/countries/500/pol.png",
-"path": "tennis/wta",
-"url": "live.html?s=tennis&p=tennis%2Fwta&e=186598&h=%D0%94%D0%B6%D0%B0%D0%BD%D0%B8%D1%81+%D0%A2%D1%8C%D0%B5%D0%BD&a=%D0%9C%D0%B0%D0%B3%D0%B4%D0%B0+%D0%9B%D0%B8%D0%BD%D0%B5%D1%82%D1%82",
 "tip": "",
 "top": false,
 "bot": null
@@ -275,6 +193,8 @@ null
 "away": "Фенербахче",
 "hl": "https://a.espncdn.com/i/teamlogos/soccer/500/132334.png",
 "al": "https://a.espncdn.com/i/teamlogos/soccer/500/436.png",
+"hid": "132334",
+"aid": "436",
 "path": "soccer/tur.1",
 "url": "live.html?s=football&p=soccer%2Ftur.1&e=401888372&h=%D0%A7%D0%BE%D1%80%D1%83%D0%BC&a=%D0%A4%D0%B5%D0%BD%D0%B5%D1%80%D0%B1%D0%B0%D1%85%D1%87%D0%B5",
 "tip": "",
@@ -290,6 +210,8 @@ null
 "away": "Акрон",
 "hl": "https://a.espncdn.com/i/teamlogos/soccer/500/1941.png",
 "al": "https://a.espncdn.com/i/teamlogos/soccer/500/22271.png",
+"hid": "1941",
+"aid": "22271",
 "path": "soccer/rus.1",
 "url": "live.html?s=football&p=soccer%2Frus.1&e=401879815&h=%D0%A1%D0%BF%D0%B0%D1%80%D1%82%D0%B0%D0%BA&a=%D0%90%D0%BA%D1%80%D0%BE%D0%BD",
 "tip": "",
@@ -305,6 +227,8 @@ null
 "away": "Аякс",
 "hl": "https://a.espncdn.com/i/teamlogos/soccer/500/152.png",
 "al": "https://a.espncdn.com/i/teamlogos/soccer/500/139.png",
+"hid": "152",
+"aid": "139",
 "path": "soccer/ned.1",
 "url": "live.html?s=football&p=soccer%2Fned.1&e=401875550&h=%D0%A2%D0%B2%D0%B5%D0%BD%D1%82%D0%B5&a=%D0%90%D1%8F%D0%BA%D1%81",
 "tip": "",
@@ -320,6 +244,8 @@ null
 "away": "Брентфорд",
 "hl": "https://a.espncdn.com/i/teamlogos/soccer/500/331.png",
 "al": "https://a.espncdn.com/i/teamlogos/soccer/500/337.png",
+"hid": "331",
+"aid": "337",
 "path": "soccer/eng.1",
 "url": "live.html?s=football&p=soccer%2Feng.1&e=401879244&h=%D0%91%D1%80%D0%B0%D0%B9%D1%82%D0%BE%D0%BD&a=%D0%91%D1%80%D0%B5%D0%BD%D1%82%D1%84%D0%BE%D1%80%D0%B4",
 "tip": "",
@@ -335,6 +261,8 @@ null
 "away": "Ливерпуль",
 "hl": "https://a.espncdn.com/i/teamlogos/soccer/500/384.png",
 "al": "https://a.espncdn.com/i/teamlogos/soccer/500/364.png",
+"hid": "384",
+"aid": "364",
 "path": "soccer/eng.1",
 "url": "live.html?s=football&p=soccer%2Feng.1&e=401879243&h=%D0%9A%D1%80%D0%B8%D1%81%D1%82%D0%B0%D0%BB+%D0%9F%D1%8D%D0%BB%D0%B0%D1%81&a=%D0%9B%D0%B8%D0%B2%D0%B5%D1%80%D0%BF%D1%83%D0%BB%D1%8C",
 "tip": "",
@@ -350,6 +278,8 @@ null
 "away": "Борнмут",
 "hl": "https://a.espncdn.com/i/teamlogos/soccer/500/373.png",
 "al": "https://a.espncdn.com/i/teamlogos/soccer/500/349.png",
+"hid": "373",
+"aid": "349",
 "path": "soccer/eng.1",
 "url": "live.html?s=football&p=soccer%2Feng.1&e=401878759&h=%D0%98%D0%BF%D1%81%D0%B2%D0%B8%D1%87+%D0%A2%D0%B0%D1%83%D0%BD&a=%D0%91%D0%BE%D1%80%D0%BD%D0%BC%D1%83%D1%82",
 "tip": "",
@@ -365,6 +295,8 @@ null
 "away": "Челси",
 "hl": "https://a.espncdn.com/i/teamlogos/soccer/500/366.png",
 "al": "https://a.espncdn.com/i/teamlogos/soccer/500/363.png",
+"hid": "366",
+"aid": "363",
 "path": "soccer/eng.1",
 "url": "live.html?s=football&p=soccer%2Feng.1&e=401879239&h=%D0%A1%D0%B0%D0%BD%D0%B4%D0%B5%D1%80%D0%BB%D0%B5%D0%BD%D0%B4&a=%D0%A7%D0%B5%D0%BB%D1%81%D0%B8",
 "tip": "",
@@ -380,6 +312,8 @@ null
 "away": "Милан",
 "hl": "https://a.espncdn.com/i/teamlogos/soccer/500/3263.png",
 "al": "https://a.espncdn.com/i/teamlogos/soccer/500/103.png",
+"hid": "3263",
+"aid": "103",
 "path": "soccer/ita.1",
 "url": "live.html?s=football&p=soccer%2Fita.1&e=401875018&h=%D0%94%D0%B6%D0%B5%D0%BD%D0%BE%D0%B0&a=%D0%9C%D0%B8%D0%BB%D0%B0%D0%BD",
 "tip": "",
@@ -395,23 +329,10 @@ null
 "away": "Аталанта",
 "hl": "https://a.espncdn.com/i/teamlogos/soccer/500/4007.png",
 "al": "https://a.espncdn.com/i/teamlogos/soccer/500/105.png",
+"hid": "4007",
+"aid": "105",
 "path": "soccer/ita.1",
 "url": "live.html?s=football&p=soccer%2Fita.1&e=401874800&h=%D0%9C%D0%BE%D0%BD%D1%86%D0%B0&a=%D0%90%D1%82%D0%B0%D0%BB%D0%B0%D0%BD%D1%82%D0%B0",
-"tip": "",
-"top": false,
-"bot": null
-},
-{
-"sport": "tennis",
-"id": "186507",
-"league": "Теннис · ATP",
-"kickoff": "2026-11-08T17:00:00+03:00",
-"home": "Бен Шелтон",
-"away": "Карлос Алькарас",
-"hl": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
-"al": "https://a.espncdn.com/i/teamlogos/countries/500/esp.png",
-"path": "tennis/atp",
-"url": "live.html?s=tennis&p=tennis%2Fatp&e=186507&h=%D0%91%D0%B5%D0%BD+%D0%A8%D0%B5%D0%BB%D1%82%D0%BE%D0%BD&a=%D0%9A%D0%B0%D1%80%D0%BB%D0%BE%D1%81+%D0%90%D0%BB%D1%8C%D0%BA%D0%B0%D1%80%D0%B0%D1%81",
 "tip": "",
 "top": false,
 "bot": null
@@ -425,11 +346,96 @@ null
 "away": "Лилль",
 "hl": "https://a.espncdn.com/i/teamlogos/soccer/500/169.png",
 "al": "https://a.espncdn.com/i/teamlogos/soccer/500/166.png",
+"hid": "169",
+"aid": "166",
 "path": "soccer/fra.1",
 "url": "live.html?s=football&p=soccer%2Ffra.1&e=401876406&h=%D0%A0%D0%B5%D0%BD%D0%BD&a=%D0%9B%D0%B8%D0%BB%D0%BB%D1%8C",
 "tip": "",
 "top": false,
 "bot": null
+},
+{
+"sport": "tennis",
+"id": "186507",
+"league": "Теннис · ATP",
+"kickoff": "2026-11-08T17:10:00+03:00",
+"home": "Бен Шелтон",
+"away": "Карлос Алькарас",
+"hl": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
+"al": "https://a.espncdn.com/i/teamlogos/countries/500/esp.png",
+"hid": "9250",
+"aid": "3782",
+"path": "tennis/atp",
+"url": "live.html?s=tennis&p=tennis%2Fatp&e=186507&h=%D0%91%D0%B5%D0%BD+%D0%A8%D0%B5%D0%BB%D1%82%D0%BE%D0%BD&a=%D0%9A%D0%B0%D1%80%D0%BB%D0%BE%D1%81+%D0%90%D0%BB%D1%8C%D0%BA%D0%B0%D1%80%D0%B0%D1%81",
+"tip": "Будет 2 сета · ≈1.74",
+"top": false,
+"bot": {
+"main": {
+"label": "Будет 2 сета",
+"p": 0.535,
+"odds": 1.74,
+"est": true
+},
+"bold": null,
+"markets": [
+[
+"Победа: Бен Шелтон",
+0.305,
+null
+],
+[
+"Победа: Карлос Алькарас",
+0.695,
+null
+],
+[
+"Будет 3 сета",
+0.465,
+null
+],
+[
+"Будет 2 сета",
+0.535,
+null
+],
+[
+"Счёт по сетам 2:0",
+0.135,
+null
+],
+[
+"Счёт по сетам 0:2",
+0.401,
+null
+],
+[
+"Счёт по сетам 2:1",
+0.171,
+null
+],
+[
+"Счёт по сетам 1:2",
+0.294,
+null
+],
+[
+"Бен Шелтон возьмёт хотя бы сет",
+0.599,
+null
+],
+[
+"Карлос Алькарас возьмёт хотя бы сет",
+0.865,
+null
+]
+],
+"bar": [
+0.30523106241023656,
+0,
+0.6947689375897634
+],
+"center": "Рейтинг Эло 1862 : 2005"
+}
 },
 {
 "sport": "football",
@@ -440,11 +446,203 @@ null
 "away": "Байер",
 "hl": "https://a.espncdn.com/i/teamlogos/soccer/500/122.png",
 "al": "https://a.espncdn.com/i/teamlogos/soccer/500/131.png",
+"hid": "122",
+"aid": "131",
 "path": "soccer/ger.1",
 "url": "live.html?s=football&p=soccer%2Fger.1&e=401884738&h=%D0%9A%D1%91%D0%BB%D1%8C%D0%BD&a=%D0%91%D0%B0%D0%B9%D0%B5%D1%80",
-"tip": "",
+"tip": "П2 · 1.78",
 "top": false,
-"bot": null
+"bot": {
+"main": {
+"label": "П2",
+"p": 0.527,
+"odds": 1.78,
+"est": false
+},
+"bold": null,
+"markets": [
+[
+"П1",
+0.247,
+4.3
+],
+[
+"Ничья",
+0.226,
+3.85
+],
+[
+"П2",
+0.527,
+1.714
+],
+[
+"1X",
+0.473,
+null
+],
+[
+"X2",
+0.753,
+null
+],
+[
+"ТБ 1.5",
+0.866,
+null
+],
+[
+"ТБ 2.5",
+0.67,
+null
+],
+[
+"ТМ 2.5",
+0.33,
+null
+],
+[
+"ТБ 3.5",
+0.453,
+2.3
+],
+[
+"Обе забьют — да",
+0.662,
+null
+],
+[
+"Обе забьют — нет",
+0.338,
+null
+],
+[
+"ИТ1 больше 1.5",
+0.401,
+null
+],
+[
+"ИТ2 больше 1.5",
+0.613,
+null
+],
+[
+"Ф1 (−1.5)",
+0.11,
+null
+],
+[
+"Ф2 (+1.5)",
+0.89,
+null
+]
+],
+"bar": [
+0.24653573892807512,
+0.22621703866877124,
+0.5272472224031538
+],
+"center": "Ожидаемые голы (xG) 1.4 : 2.1",
+"scores": [
+[
+"1:1",
+0.098
+],
+[
+"1:2",
+0.094
+],
+[
+"0:2",
+0.068
+]
+],
+"corners": 11.1,
+"cards": 4.3
+}
+},
+{
+"sport": "tennis",
+"id": "186598",
+"league": "Теннис · WTA",
+"kickoff": "2026-11-08T17:30:00+03:00",
+"home": "Джанис Тьен",
+"away": "Магда Линетт",
+"hl": "https://a.espncdn.com/i/teamlogos/countries/500/ina.png",
+"al": "https://a.espncdn.com/i/teamlogos/countries/500/pol.png",
+"hid": "6368",
+"aid": "1649",
+"path": "tennis/wta",
+"url": "live.html?s=tennis&p=tennis%2Fwta&e=186598&h=%D0%94%D0%B6%D0%B0%D0%BD%D0%B8%D1%81+%D0%A2%D1%8C%D0%B5%D0%BD&a=%D0%9C%D0%B0%D0%B3%D0%B4%D0%B0+%D0%9B%D0%B8%D0%BD%D0%B5%D1%82%D1%82",
+"tip": "Будет 2 сета · ≈1.84",
+"top": false,
+"bot": {
+"main": {
+"label": "Будет 2 сета",
+"p": 0.504,
+"odds": 1.84,
+"est": true
+},
+"bold": null,
+"markets": [
+[
+"Победа: Джанис Тьен",
+0.568,
+null
+],
+[
+"Победа: Магда Линетт",
+0.432,
+null
+],
+[
+"Будет 3 сета",
+0.496,
+null
+],
+[
+"Будет 2 сета",
+0.504,
+null
+],
+[
+"Счёт по сетам 2:0",
+0.297,
+null
+],
+[
+"Счёт по сетам 0:2",
+0.207,
+null
+],
+[
+"Счёт по сетам 2:1",
+0.27,
+null
+],
+[
+"Счёт по сетам 1:2",
+0.225,
+null
+],
+[
+"Джанис Тьен возьмёт хотя бы сет",
+0.793,
+null
+],
+[
+"Магда Линетт возьмёт хотя бы сет",
+0.703,
+null
+]
+],
+"bar": [
+0.5677971203553589,
+0,
+0.4322028796446411
+],
+"center": "Рейтинг Эло 1644 : 1596"
+}
 },
 {
 "sport": "football",
@@ -455,11 +653,120 @@ null
 "away": "Кортрейк",
 "hl": "https://a.espncdn.com/i/teamlogos/soccer/500/3611.png",
 "al": "https://a.espncdn.com/i/teamlogos/soccer/500/5786.png",
+"hid": "3611",
+"aid": "5786",
 "path": "soccer/bel.1",
 "url": "live.html?s=football&p=soccer%2Fbel.1&e=401878945&h=%D0%93%D0%B5%D0%BD%D1%82&a=%D0%9A%D0%BE%D1%80%D1%82%D1%80%D0%B5%D0%B9%D0%BA",
-"tip": "",
+"tip": "ТБ 2.5 · 1.69",
 "top": false,
-"bot": null
+"bot": {
+"main": {
+"label": "ТБ 2.5",
+"p": 0.551,
+"odds": 1.69,
+"est": false
+},
+"bold": null,
+"markets": [
+[
+"П1",
+0.644,
+1.526
+],
+[
+"Ничья",
+0.218,
+4.3
+],
+[
+"П2",
+0.138,
+6.0
+],
+[
+"1X",
+0.862,
+null
+],
+[
+"X2",
+0.356,
+null
+],
+[
+"ТБ 1.5",
+0.791,
+null
+],
+[
+"ТБ 2.5",
+0.551,
+1.69
+],
+[
+"ТМ 2.5",
+0.449,
+2.1
+],
+[
+"ТБ 3.5",
+0.328,
+null
+],
+[
+"Обе забьют — да",
+0.504,
+null
+],
+[
+"Обе забьют — нет",
+0.496,
+null
+],
+[
+"ИТ1 больше 1.5",
+0.605,
+null
+],
+[
+"ИТ2 больше 1.5",
+0.208,
+null
+],
+[
+"Ф1 (−1.5)",
+0.407,
+null
+],
+[
+"Ф2 (+1.5)",
+0.593,
+null
+]
+],
+"bar": [
+0.644076023318388,
+0.21767560309918266,
+0.1382483735824291
+],
+"center": "Ожидаемые голы (xG) 2.0 : 0.8",
+"scores": [
+[
+"2:0",
+0.116
+],
+[
+"1:0",
+0.106
+],
+[
+"1:1",
+0.104
+]
+],
+"corners": 8.4,
+"cards": 3.5
+}
 },
 {
 "sport": "tennis",
@@ -470,6 +777,8 @@ null
 "away": "Хуан Мануэль Серундоло",
 "hl": "https://a.espncdn.com/i/teamlogos/countries/500/swe.png",
 "al": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+"hid": "2229",
+"aid": "4008",
 "path": "tennis/atp",
 "url": "live.html?s=tennis&p=tennis%2Fatp&e=186534&h=%D0%AD%D0%BB%D0%B8%D0%B0%D1%81+%D0%98%D0%BC%D0%B5%D1%80&a=%D0%A5%D1%83%D0%B0%D0%BD+%D0%9C%D0%B0%D0%BD%D1%83%D1%8D%D0%BB%D1%8C+%D0%A1%D0%B5%D1%80%D1%83%D0%BD%D0%B4%D0%BE%D0%BB%D0%BE",
 "tip": "",
@@ -485,11 +794,120 @@ null
 "away": "Фалкерк",
 "hl": "https://a.espncdn.com/i/teamlogos/soccer/500/262.png",
 "al": "https://a.espncdn.com/i/teamlogos/soccer/500/254.png",
+"hid": "262",
+"aid": "254",
 "path": "soccer/sco.1",
 "url": "live.html?s=football&p=soccer%2Fsco.1&e=401878339&h=%D0%A5%D0%B0%D1%80%D1%82+%D0%BE%D1%84+%D0%9C%D0%B8%D0%B4%D0%BB%D0%BE%D1%82%D0%B8%D0%B0%D0%BD&a=%D0%A4%D0%B0%D0%BB%D0%BA%D0%B5%D1%80%D0%BA",
-"tip": "",
+"tip": "П1 · 1.54",
 "top": false,
-"bot": null
+"bot": {
+"main": {
+"label": "П1",
+"p": 0.601,
+"odds": 1.54,
+"est": false
+},
+"bold": null,
+"markets": [
+[
+"П1",
+0.601,
+1.741
+],
+[
+"Ничья",
+0.22,
+3.95
+],
+[
+"П2",
+0.179,
+4.4
+],
+[
+"1X",
+0.821,
+null
+],
+[
+"X2",
+0.399,
+null
+],
+[
+"ТБ 1.5",
+0.833,
+null
+],
+[
+"ТБ 2.5",
+0.615,
+1.69
+],
+[
+"ТМ 2.5",
+0.385,
+2.1
+],
+[
+"ТБ 3.5",
+0.392,
+null
+],
+[
+"Обе забьют — да",
+0.586,
+null
+],
+[
+"Обе забьют — нет",
+0.414,
+null
+],
+[
+"ИТ1 больше 1.5",
+0.62,
+null
+],
+[
+"ИТ2 больше 1.5",
+0.292,
+null
+],
+[
+"Ф1 (−1.5)",
+0.377,
+null
+],
+[
+"Ф2 (+1.5)",
+0.623,
+null
+]
+],
+"bar": [
+0.6014074770520494,
+0.21988144549511132,
+0.17871107745283937
+],
+"center": "Ожидаемые голы (xG) 2.1 : 1.1",
+"scores": [
+[
+"1:1",
+0.102
+],
+[
+"2:1",
+0.099
+],
+[
+"2:0",
+0.092
+]
+],
+"corners": 11.0,
+"cards": 4.3
+}
 },
 {
 "sport": "football",
@@ -500,6 +918,8 @@ null
 "away": "Райо Вальекано",
 "hl": "https://a.espncdn.com/i/teamlogos/soccer/500/89.png",
 "al": "https://a.espncdn.com/i/teamlogos/soccer/500/101.png",
+"hid": "89",
+"aid": "101",
 "path": "soccer/esp.1",
 "url": "live.html?s=football&p=soccer%2Fesp.1&e=401882810&h=%D0%A0%D0%B5%D0%B0%D0%BB+%D0%A1%D0%BE%D1%81%D1%8C%D0%B5%D0%B4%D0%B0%D0%B4&a=%D0%A0%D0%B0%D0%B9%D0%BE+%D0%92%D0%B0%D0%BB%D1%8C%D0%B5%D0%BA%D0%B0%D0%BD%D0%BE",
 "tip": "",
@@ -515,6 +935,8 @@ null
 "away": "Академику де Визеу",
 "hl": "https://a.espncdn.com/i/teamlogos/soccer/500/3472.png",
 "al": "https://a.espncdn.com/i/teamlogos/soccer/500/21607.png",
+"hid": "3472",
+"aid": "21607",
 "path": "soccer/por.1",
 "url": "live.html?s=football&p=soccer%2Fpor.1&e=401885398&h=%D0%9D%D0%B0%D1%81%D1%8C%D0%BE%D0%BD%D0%B0%D0%BB&a=%D0%90%D0%BA%D0%B0%D0%B4%D0%B5%D0%BC%D0%B8%D0%BA%D1%83+%D0%B4%D0%B5+%D0%92%D0%B8%D0%B7%D0%B5%D1%83",
 "tip": "ТМ 2.5 · 1.76",
@@ -637,6 +1059,8 @@ null
 "away": "Жил Висенте",
 "hl": "https://a.espncdn.com/i/teamlogos/soccer/500/12215.png",
 "al": "https://a.espncdn.com/i/teamlogos/soccer/500/3699.png",
+"hid": "12215",
+"aid": "3699",
 "path": "soccer/por.1",
 "url": "live.html?s=football&p=soccer%2Fpor.1&e=401885396&h=%D0%A1%D0%B0%D0%BD%D1%82%D0%B0-%D0%9A%D0%BB%D0%B0%D1%80%D0%B0&a=%D0%96%D0%B8%D0%BB+%D0%92%D0%B8%D1%81%D0%B5%D0%BD%D1%82%D0%B5",
 "tip": "",
@@ -652,6 +1076,8 @@ null
 "away": "Ростов",
 "hl": "https://a.espncdn.com/i/teamlogos/soccer/500/2533.png",
 "al": "https://a.espncdn.com/i/teamlogos/soccer/500/3852.png",
+"hid": "2533",
+"aid": "3852",
 "path": "soccer/rus.1",
 "url": "live.html?s=football&p=soccer%2Frus.1&e=401879809&h=%D0%97%D0%B5%D0%BD%D0%B8%D1%82&a=%D0%A0%D0%BE%D1%81%D1%82%D0%BE%D0%B2",
 "tip": "",
@@ -667,6 +1093,8 @@ null
 "away": "Трабзонспор",
 "hl": "https://a.espncdn.com/i/teamlogos/soccer/500/9078.png",
 "al": "https://a.espncdn.com/i/teamlogos/soccer/500/997.png",
+"hid": "9078",
+"aid": "997",
 "path": "soccer/tur.1",
 "url": "live.html?s=football&p=soccer%2Ftur.1&e=401888254&h=%D0%90%D0%BB%D0%B0%D0%BD%D1%8C%D1%8F%D1%81%D0%BF%D0%BE%D1%80&a=%D0%A2%D1%80%D0%B0%D0%B1%D0%B7%D0%BE%D0%BD%D1%81%D0%BF%D0%BE%D1%80",
 "tip": "",
@@ -682,6 +1110,8 @@ null
 "away": "Гронинген",
 "hl": "https://a.espncdn.com/i/teamlogos/soccer/500/140.png",
 "al": "https://a.espncdn.com/i/teamlogos/soccer/500/145.png",
+"hid": "140",
+"aid": "145",
 "path": "soccer/ned.1",
 "url": "live.html?s=football&p=soccer%2Fned.1&e=401875548&h=%D0%90%D0%97&a=%D0%93%D1%80%D0%BE%D0%BD%D0%B8%D0%BD%D0%B3%D0%B5%D0%BD",
 "tip": "",
@@ -697,6 +1127,8 @@ null
 "away": "ПСВ",
 "hl": "https://a.espncdn.com/i/teamlogos/soccer/500/3736.png",
 "al": "https://a.espncdn.com/i/teamlogos/soccer/500/148.png",
+"hid": "3736",
+"aid": "148",
 "path": "soccer/ned.1",
 "url": "live.html?s=football&p=soccer%2Fned.1&e=401875553&h=%D0%9A%D0%B0%D0%BC%D0%B1%D1%8E%D1%80&a=%D0%9F%D0%A1%D0%92",
 "tip": "",
@@ -712,6 +1144,8 @@ null
 "away": "Килмарнок",
 "hl": "https://a.espncdn.com/i/teamlogos/soccer/500/256.png",
 "al": "https://a.espncdn.com/i/teamlogos/soccer/500/260.png",
+"hid": "256",
+"aid": "260",
 "path": "soccer/sco.1",
 "url": "live.html?s=football&p=soccer%2Fsco.1&e=401878343&h=%D0%A1%D0%B5%D0%BB%D1%82%D0%B8%D0%BA&a=%D0%9A%D0%B8%D0%BB%D0%BC%D0%B0%D1%80%D0%BD%D0%BE%D0%BA",
 "tip": "",
@@ -727,6 +1161,8 @@ null
 "away": "Ницца",
 "hl": "https://a.espncdn.com/i/teamlogos/soccer/500/7868.png",
 "al": "https://a.espncdn.com/i/teamlogos/soccer/500/2502.png",
+"hid": "7868",
+"aid": "2502",
 "path": "soccer/fra.1",
 "url": "live.html?s=football&p=soccer%2Ffra.1&e=401876412&h=%D0%90%D0%BD%D0%B6%D0%B5&a=%D0%9D%D0%B8%D1%86%D1%86%D0%B0",
 "tip": "",
@@ -742,6 +1178,8 @@ null
 "away": "Олимпик",
 "hl": "https://a.espncdn.com/i/teamlogos/soccer/500/6997.png",
 "al": "https://a.espncdn.com/i/teamlogos/soccer/500/167.png",
+"hid": "6997",
+"aid": "167",
 "path": "soccer/fra.1",
 "url": "live.html?s=football&p=soccer%2Ffra.1&e=401876410&h=Brest&a=%D0%9E%D0%BB%D0%B8%D0%BC%D0%BF%D0%B8%D0%BA",
 "tip": "",
@@ -757,6 +1195,8 @@ null
 "away": "Лорьян",
 "hl": "https://a.espncdn.com/i/teamlogos/soccer/500/3236.png",
 "al": "https://a.espncdn.com/i/teamlogos/soccer/500/273.png",
+"hid": "3236",
+"aid": "273",
 "path": "soccer/fra.1",
 "url": "live.html?s=football&p=soccer%2Ffra.1&e=401876409&h=%D0%93%D0%B0%D0%B2%D1%80&a=%D0%9B%D0%BE%D1%80%D1%8C%D1%8F%D0%BD",
 "tip": "",
@@ -772,6 +1212,8 @@ null
 "away": "Монако",
 "hl": "https://a.espncdn.com/i/teamlogos/soccer/500/2697.png",
 "al": "https://a.espncdn.com/i/teamlogos/soccer/500/174.png",
+"hid": "2697",
+"aid": "174",
 "path": "soccer/fra.1",
 "url": "live.html?s=football&p=soccer%2Ffra.1&e=401876408&h=%D0%9B%D0%B5-%D0%9C%D0%B0%D0%BD&a=%D0%9C%D0%BE%D0%BD%D0%B0%D0%BA%D0%BE",
 "tip": "",
@@ -787,6 +1229,8 @@ null
 "away": "Астон Вилла",
 "hl": "https://a.espncdn.com/i/teamlogos/soccer/500/360.png",
 "al": "https://a.espncdn.com/i/teamlogos/soccer/500/362.png",
+"hid": "360",
+"aid": "362",
 "path": "soccer/eng.1",
 "url": "live.html?s=football&p=soccer%2Feng.1&e=401879240&h=%D0%9C%D0%B0%D0%BD%D1%87%D0%B5%D1%81%D1%82%D0%B5%D1%80+%D0%AE%D0%BD%D0%B0%D0%B9%D1%82%D0%B5%D0%B4&a=%D0%90%D1%81%D1%82%D0%BE%D0%BD+%D0%92%D0%B8%D0%BB%D0%BB%D0%B0",
 "tip": "",
@@ -802,6 +1246,8 @@ null
 "away": "Унион Берлин",
 "hl": "https://a.espncdn.com/i/teamlogos/soccer/500/126.png",
 "al": "https://a.espncdn.com/i/teamlogos/soccer/500/598.png",
+"hid": "126",
+"aid": "598",
 "path": "soccer/ger.1",
 "url": "live.html?s=football&p=soccer%2Fger.1&e=401884741&h=%D0%A4%D1%80%D0%B0%D0%B9%D0%B1%D1%83%D1%80%D0%B3&a=%D0%A3%D0%BD%D0%B8%D0%BE%D0%BD+%D0%91%D0%B5%D1%80%D0%BB%D0%B8%D0%BD",
 "tip": "",
@@ -817,6 +1263,8 @@ null
 "away": "Хауме Муньяр",
 "hl": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
 "al": "https://a.espncdn.com/i/teamlogos/countries/500/esp.png",
+"hid": "4010",
+"aid": "2709",
 "path": "tennis/atp",
 "url": "live.html?s=tennis&p=tennis%2Fatp&e=186528&h=%D0%A2%D1%8C%D1%8F%D0%B3%D0%BE+%D0%90%D0%B3%D1%83%D1%81%D1%82%D0%B8%D0%BD+%D0%A2%D0%B8%D1%80%D0%B0%D0%BD%D1%82%D0%B5&a=%D0%A5%D0%B0%D1%83%D0%BC%D0%B5+%D0%9C%D1%83%D0%BD%D1%8C%D1%8F%D1%80",
 "tip": "",
@@ -832,6 +1280,8 @@ null
 "away": "Комо",
 "hl": "https://a.espncdn.com/i/teamlogos/soccer/500/110.png",
 "al": "https://a.espncdn.com/i/teamlogos/soccer/500/2572.png",
+"hid": "110",
+"aid": "2572",
 "path": "soccer/ita.1",
 "url": "live.html?s=football&p=soccer%2Fita.1&e=401874808&h=%D0%98%D0%BD%D1%82%D0%B5%D1%80&a=%D0%9A%D0%BE%D0%BC%D0%BE",
 "tip": "",
@@ -847,6 +1297,8 @@ null
 "away": "Шеффилд Уэнсдей",
 "hl": "https://a.espncdn.com/i/teamlogos/soccer/500/332.png",
 "al": "https://a.espncdn.com/i/teamlogos/soccer/500/399.png",
+"hid": "332",
+"aid": "399",
 "path": "soccer/eng.fa",
 "url": "live.html?s=football&p=soccer%2Feng.fa&e=401931108&h=%D0%9E%D0%BB%D0%B4%D0%B5%D0%BC+%D0%90%D1%82%D0%BB%D0%B5%D1%82%D0%B8%D0%BA&a=%D0%A8%D0%B5%D1%84%D1%84%D0%B8%D0%BB%D0%B4+%D0%A3%D1%8D%D0%BD%D1%81%D0%B4%D0%B5%D0%B9",
 "tip": "",
@@ -862,6 +1314,8 @@ null
 "away": "Генк",
 "hl": "https://a.espncdn.com/i/teamlogos/soccer/500/5807.png",
 "al": "https://a.espncdn.com/i/teamlogos/soccer/500/938.png",
+"hid": "5807",
+"aid": "938",
 "path": "soccer/bel.1",
 "url": "live.html?s=football&p=soccer%2Fbel.1&e=401878943&h=%D0%AE%D0%BD%D0%B8%D0%BE%D0%BD&a=%D0%93%D0%B5%D0%BD%D0%BA",
 "tip": "",
@@ -877,6 +1331,8 @@ null
 "away": "Леванте",
 "hl": "https://a.espncdn.com/i/teamlogos/soccer/500/85.png",
 "al": "https://a.espncdn.com/i/teamlogos/soccer/500/1538.png",
+"hid": "85",
+"aid": "1538",
 "path": "soccer/esp.1",
 "url": "live.html?s=football&p=soccer%2Fesp.1&e=401882815&h=%D0%A1%D0%B5%D0%BB%D1%8C%D1%82%D0%B0&a=%D0%9B%D0%B5%D0%B2%D0%B0%D0%BD%D1%82%D0%B5",
 "tip": "",
@@ -892,6 +1348,8 @@ null
 "away": "Хетафе",
 "hl": "https://a.espncdn.com/i/teamlogos/soccer/500/102.png",
 "al": "https://a.espncdn.com/i/teamlogos/soccer/500/2922.png",
+"hid": "102",
+"aid": "2922",
 "path": "soccer/esp.1",
 "url": "live.html?s=football&p=soccer%2Fesp.1&e=401882807&h=%D0%92%D0%B8%D0%BB%D1%8C%D1%8F%D1%80%D1%80%D0%B5%D0%B0%D0%BB&a=%D0%A5%D0%B5%D1%82%D0%B0%D1%84%D0%B5",
 "tip": "",
@@ -907,6 +1365,8 @@ null
 "away": "Динамо Махачкала",
 "hl": "https://a.espncdn.com/i/teamlogos/soccer/500/21949.png",
 "al": "https://a.espncdn.com/i/teamlogos/soccer/500/22300.png",
+"hid": "21949",
+"aid": "22300",
 "path": "soccer/rus.1",
 "url": "live.html?s=football&p=soccer%2Frus.1&e=401879813&h=%D0%91%D0%B0%D0%BB%D1%82%D0%B8%D0%BA%D0%B0&a=%D0%94%D0%B8%D0%BD%D0%B0%D0%BC%D0%BE+%D0%9C%D0%B0%D1%85%D0%B0%D1%87%D0%BA%D0%B0%D0%BB%D0%B0",
 "tip": "",
@@ -922,6 +1382,8 @@ null
 "away": "Порту",
 "hl": "https://a.espncdn.com/i/teamlogos/soccer/500/5309.png",
 "al": "https://a.espncdn.com/i/teamlogos/soccer/500/437.png",
+"hid": "5309",
+"aid": "437",
 "path": "soccer/por.1",
 "url": "live.html?s=football&p=soccer%2Fpor.1&e=401885394&h=%D0%92%D0%B8%D1%82%D0%BE%D1%80%D0%B8%D1%8F&a=%D0%9F%D0%BE%D1%80%D1%82%D1%83",
 "tip": "",
@@ -937,6 +1399,8 @@ null
 "away": "Флорида",
 "hl": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/bos.png",
 "al": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/fla.png",
+"hid": "1",
+"aid": "26",
 "path": "hockey/nhl",
 "url": "live.html?s=hockey&p=hockey%2Fnhl&e=401892674&h=%D0%91%D0%BE%D1%81%D1%82%D0%BE%D0%BD&a=%D0%A4%D0%BB%D0%BE%D1%80%D0%B8%D0%B4%D0%B0",
 "tip": "",
@@ -952,6 +1416,8 @@ null
 "away": "Генчлербирлиги",
 "hl": "https://a.espncdn.com/i/teamlogos/soccer/500/1895.png",
 "al": "https://a.espncdn.com/i/teamlogos/soccer/500/996.png",
+"hid": "1895",
+"aid": "996",
 "path": "soccer/tur.1",
 "url": "live.html?s=football&p=soccer%2Ftur.1&e=401888251&h=%D0%91%D0%B5%D1%88%D0%B8%D0%BA%D1%82%D0%B0%D1%88&a=%D0%93%D0%B5%D0%BD%D1%87%D0%BB%D0%B5%D1%80%D0%B1%D0%B8%D1%80%D0%BB%D0%B8%D0%B3%D0%B8",
 "tip": "",
@@ -967,6 +1433,8 @@ null
 "away": "Зюлте-Варегем",
 "hl": "https://a.espncdn.com/i/teamlogos/soccer/500/936.png",
 "al": "https://a.espncdn.com/i/teamlogos/soccer/500/4691.png",
+"hid": "936",
+"aid": "4691",
 "path": "soccer/bel.1",
 "url": "live.html?s=football&p=soccer%2Fbel.1&e=401878944&h=%D0%A1%D0%B5%D0%BD%D1%82-%D0%A2%D1%80%D1%8E%D0%B9%D0%B4%D0%B5%D0%BD&a=%D0%97%D1%8E%D0%BB%D1%82%D0%B5-%D0%92%D0%B0%D1%80%D0%B5%D0%B3%D0%B5%D0%BC",
 "tip": "",
@@ -982,6 +1450,8 @@ null
 "away": "Шальке 04",
 "hl": "https://a.espncdn.com/i/teamlogos/soccer/500/7911.png",
 "al": "https://a.espncdn.com/i/teamlogos/soccer/500/133.png",
+"hid": "7911",
+"aid": "133",
 "path": "soccer/ger.1",
 "url": "live.html?s=football&p=soccer%2Fger.1&e=401884742&h=%D0%A5%D0%BE%D1%84%D1%84%D0%B5%D0%BD%D1%85%D0%B0%D0%B9%D0%BC&a=%D0%A8%D0%B0%D0%BB%D1%8C%D0%BA%D0%B5+04",
 "tip": "",
@@ -997,6 +1467,8 @@ null
 "away": "НЕК",
 "hl": "https://a.espncdn.com/i/teamlogos/soccer/500/153.png",
 "al": "https://a.espncdn.com/i/teamlogos/soccer/500/147.png",
+"hid": "153",
+"aid": "147",
 "path": "soccer/ned.1",
 "url": "live.html?s=football&p=soccer%2Fned.1&e=401875549&h=%D0%A3%D1%82%D1%80%D0%B5%D1%85%D1%82&a=%D0%9D%D0%95%D0%9A",
 "tip": "",
@@ -1012,6 +1484,8 @@ null
 "away": "Ювентус",
 "hl": "https://a.espncdn.com/i/teamlogos/soccer/500/109.png",
 "al": "https://a.espncdn.com/i/teamlogos/soccer/500/111.png",
+"hid": "109",
+"aid": "111",
 "path": "soccer/ita.1",
 "url": "live.html?s=football&p=soccer%2Fita.1&e=401875003&h=%D0%A4%D0%B8%D0%BE%D1%80%D0%B5%D0%BD%D1%82%D0%B8%D0%BD%D0%B0&a=%D0%AE%D0%B2%D0%B5%D0%BD%D1%82%D1%83%D1%81",
 "tip": "",
@@ -1027,6 +1501,8 @@ null
 "away": "Олимпик",
 "hl": "https://a.espncdn.com/i/teamlogos/soccer/500/175.png",
 "al": "https://a.espncdn.com/i/teamlogos/soccer/500/176.png",
+"hid": "175",
+"aid": "176",
 "path": "soccer/fra.1",
 "url": "live.html?s=football&p=soccer%2Ffra.1&e=401876404&h=%D0%9B%D0%B0%D0%BD%D1%81&a=%D0%9E%D0%BB%D0%B8%D0%BC%D0%BF%D0%B8%D0%BA",
 "tip": "",
@@ -1042,6 +1518,8 @@ null
 "away": "Барселона",
 "hl": "https://a.espncdn.com/i/teamlogos/soccer/500/1068.png",
 "al": "https://a.espncdn.com/i/teamlogos/soccer/500/83.png",
+"hid": "1068",
+"aid": "83",
 "path": "soccer/esp.1",
 "url": "live.html?s=football&p=soccer%2Fesp.1&e=401882816&h=%D0%90%D1%82%D0%BB%D0%B5%D1%82%D0%B8%D0%BA%D0%BE&a=%D0%91%D0%B0%D1%80%D1%81%D0%B5%D0%BB%D0%BE%D0%BD%D0%B0",
 "tip": "",
@@ -1057,6 +1535,8 @@ null
 "away": "Линда Носкова",
 "hl": "https://a.espncdn.com/i/teamlogos/countries/500/ukr.png",
 "al": "https://a.espncdn.com/i/teamlogos/countries/500/cze.png",
+"hid": "3382",
+"aid": "6970",
 "path": "tennis/wta",
 "url": "live.html?s=tennis&p=tennis%2Fwta&e=187373&h=%D0%9C%D0%B0%D1%80%D1%82%D0%B0+%D0%9A%D0%BE%D1%81%D1%82%D1%8E%D0%BA&a=%D0%9B%D0%B8%D0%BD%D0%B4%D0%B0+%D0%9D%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D0%B0",
 "tip": "",
@@ -1072,6 +1552,8 @@ null
 "away": "Бенфика",
 "hl": "https://a.espncdn.com/i/teamlogos/soccer/500/21610.png",
 "al": "https://a.espncdn.com/i/teamlogos/soccer/500/1929.png",
+"hid": "21610",
+"aid": "1929",
 "path": "soccer/por.1",
 "url": "live.html?s=football&p=soccer%2Fpor.1&e=401885401&h=%D0%AD%D1%88%D1%82%D1%80%D0%B5%D0%BB%D0%B0&a=%D0%91%D0%B5%D0%BD%D1%84%D0%B8%D0%BA%D0%B0",
 "tip": "",
@@ -1087,6 +1569,8 @@ null
 "away": "Брага",
 "hl": "https://a.espncdn.com/i/teamlogos/soccer/500/3822.png",
 "al": "https://a.espncdn.com/i/teamlogos/soccer/500/2994.png",
+"hid": "3822",
+"aid": "2994",
 "path": "soccer/por.1",
 "url": "live.html?s=football&p=soccer%2Fpor.1&e=401885397&h=%D0%A0%D0%B8%D1%83+%D0%90%D0%B2%D0%B5&a=%D0%91%D1%80%D0%B0%D0%B3%D0%B0",
 "tip": "",
@@ -1102,6 +1586,8 @@ null
 "away": "Филадельфия Сиксерс",
 "hl": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/chi.png",
 "al": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/phi.png",
+"hid": "4",
+"aid": "20",
 "path": "basketball/nba",
 "url": "live.html?s=basketball&p=basketball%2Fnba&e=401909945&h=%D0%A7%D0%B8%D0%BA%D0%B0%D0%B3%D0%BE+%D0%91%D1%83%D0%BB%D0%BB%D0%B7&a=%D0%A4%D0%B8%D0%BB%D0%B0%D0%B4%D0%B5%D0%BB%D1%8C%D1%84%D0%B8%D1%8F+%D0%A1%D0%B8%D0%BA%D1%81%D0%B5%D1%80%D1%81",
 "tip": "",
@@ -1117,6 +1603,8 @@ null
 "away": "Вегас",
 "hl": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/buf.png",
 "al": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/vgk.png",
+"hid": "2",
+"aid": "37",
 "path": "hockey/nhl",
 "url": "live.html?s=hockey&p=hockey%2Fnhl&e=401892675&h=%D0%91%D0%B0%D1%84%D1%84%D0%B0%D0%BB%D0%BE&a=%D0%92%D0%B5%D0%B3%D0%B0%D1%81",
 "tip": "",
@@ -1132,6 +1620,8 @@ null
 "away": "Джессика Пегула",
 "hl": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
 "al": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
+"hid": "3626",
+"aid": "2113",
 "path": "tennis/wta",
 "url": "live.html?s=tennis&p=tennis%2Fwta&e=187374&h=%D0%9A%D0%BE%D1%80%D0%B8+%D0%93%D0%B0%D1%83%D1%84%D1%84&a=%D0%94%D0%B6%D0%B5%D1%81%D1%81%D0%B8%D0%BA%D0%B0+%D0%9F%D0%B5%D0%B3%D1%83%D0%BB%D0%B0",
 "tip": "",
@@ -1147,6 +1637,8 @@ null
 "away": "Ланус",
 "hl": "https://a.espncdn.com/i/teamlogos/soccer/500/11989.png",
 "al": "https://a.espncdn.com/i/teamlogos/soccer/500/12.png",
+"hid": "11989",
+"aid": "12",
 "path": "soccer/arg.1",
 "url": "live.html?s=football&p=soccer%2Farg.1&e=401841668&h=Central+C%C3%B3rdoba+%28Santiago+del+Estero%29&a=%D0%9B%D0%B0%D0%BD%D1%83%D1%81",
 "tip": "",
@@ -1162,6 +1654,8 @@ null
 "away": "Лейкерс",
 "hl": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/det.png",
 "al": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/lal.png",
+"hid": "8",
+"aid": "13",
 "path": "basketball/nba",
 "url": "live.html?s=basketball&p=basketball%2Fnba&e=401909946&h=%D0%94%D0%B5%D1%82%D1%80%D0%BE%D0%B9%D1%82+%D0%9F%D0%B8%D1%81%D1%82%D0%BE%D0%BD%D1%81&a=%D0%9B%D0%B5%D0%B9%D0%BA%D0%B5%D1%80%D1%81",
 "tip": "",
@@ -1177,6 +1671,8 @@ null
 "away": "Тампа-Бэй",
 "hl": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/wpg.png",
 "al": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/tb.png",
+"hid": "28",
+"aid": "20",
 "path": "hockey/nhl",
 "url": "live.html?s=hockey&p=hockey%2Fnhl&e=401892677&h=%D0%92%D0%B8%D0%BD%D0%BD%D0%B8%D0%BF%D0%B5%D0%B3&a=%D0%A2%D0%B0%D0%BC%D0%BF%D0%B0-%D0%91%D1%8D%D0%B9",
 "tip": "",
@@ -1192,6 +1688,8 @@ null
 "away": "Пуэбла",
 "hl": "https://a.espncdn.com/i/teamlogos/soccer/500/222.png",
 "al": "https://a.espncdn.com/i/teamlogos/soccer/500/231.png",
+"hid": "222",
+"aid": "231",
 "path": "soccer/mex.1",
 "url": "live.html?s=football&p=soccer%2Fmex.1&e=401876903&h=%D0%9A%D0%B5%D1%80%D0%B5%D1%82%D0%B0%D1%80%D0%BE&a=%D0%9F%D1%83%D1%8D%D0%B1%D0%BB%D0%B0",
 "tip": "",
@@ -1207,6 +1705,8 @@ null
 "away": "Юта Джаз",
 "hl": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/min.png",
 "al": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/utah.png",
+"hid": "16",
+"aid": "26",
 "path": "basketball/nba",
 "url": "live.html?s=basketball&p=basketball%2Fnba&e=401909947&h=%D0%9C%D0%B8%D0%BD%D0%BD%D0%B5%D1%81%D0%BE%D1%82%D0%B0+%D0%A2%D0%B8%D0%BC%D0%B1%D0%B5%D1%80%D0%B2%D1%83%D0%BB%D0%B2%D0%B7&a=%D0%AE%D1%82%D0%B0+%D0%94%D0%B6%D0%B0%D0%B7",
 "tip": "",
@@ -1222,6 +1722,8 @@ null
 "away": "Нью-Джерси",
 "hl": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/tor.png",
 "al": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/nj.png",
+"hid": "21",
+"aid": "11",
 "path": "hockey/nhl",
 "url": "live.html?s=hockey&p=hockey%2Fnhl&e=401892676&h=%D0%A2%D0%BE%D1%80%D0%BE%D0%BD%D1%82%D0%BE&a=%D0%9D%D1%8C%D1%8E-%D0%94%D0%B6%D0%B5%D1%80%D1%81%D0%B8",
 "tip": "",
@@ -1237,6 +1739,8 @@ null
 "away": "Филадельфия",
 "hl": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/cgy.png",
 "al": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/phi.png",
+"hid": "3",
+"aid": "15",
 "path": "hockey/nhl",
 "url": "live.html?s=hockey&p=hockey%2Fnhl&e=401892678&h=%D0%9A%D0%B0%D0%BB%D0%B3%D0%B0%D1%80%D0%B8&a=%D0%A4%D0%B8%D0%BB%D0%B0%D0%B4%D0%B5%D0%BB%D1%8C%D1%84%D0%B8%D1%8F",
 "tip": "",
@@ -1252,6 +1756,8 @@ null
 "away": "Бруклин Нетс",
 "hl": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/dal.png",
 "al": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/bkn.png",
+"hid": "6",
+"aid": "17",
 "path": "basketball/nba",
 "url": "live.html?s=basketball&p=basketball%2Fnba&e=401909948&h=%D0%94%D0%B0%D0%BB%D0%BB%D0%B0%D1%81+%D0%9C%D0%B0%D0%B2%D0%B5%D1%80%D0%B8%D0%BA%D1%81&a=%D0%91%D1%80%D1%83%D0%BA%D0%BB%D0%B8%D0%BD+%D0%9D%D0%B5%D1%82%D1%81",
 "tip": "",
@@ -1267,6 +1773,8 @@ null
 "away": "Бостон Селтикс",
 "hl": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/mil.png",
 "al": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/bos.png",
+"hid": "15",
+"aid": "2",
 "path": "basketball/nba",
 "url": "live.html?s=basketball&p=basketball%2Fnba&e=401909949&h=%D0%9C%D0%B8%D0%BB%D1%83%D0%BE%D0%BA%D0%B8+%D0%91%D0%B0%D0%BA%D1%81&a=%D0%91%D0%BE%D1%81%D1%82%D0%BE%D0%BD+%D0%A1%D0%B5%D0%BB%D1%82%D0%B8%D0%BA%D1%81",
 "tip": "",
@@ -1282,6 +1790,8 @@ null
 "away": "Питтсбург",
 "hl": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/ana.png",
 "al": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/pit.png",
+"hid": "25",
+"aid": "16",
 "path": "hockey/nhl",
 "url": "live.html?s=hockey&p=hockey%2Fnhl&e=401892679&h=%D0%90%D0%BD%D0%B0%D1%85%D0%B0%D0%B9%D0%BC&a=%D0%9F%D0%B8%D1%82%D1%82%D1%81%D0%B1%D1%83%D1%80%D0%B3",
 "tip": "",
@@ -1297,6 +1807,8 @@ null
 "away": "Нью-Орлеан Пеликанс",
 "hl": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/lac.png",
 "al": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/no.png",
+"hid": "12",
+"aid": "3",
 "path": "basketball/nba",
 "url": "live.html?s=basketball&p=basketball%2Fnba&e=401909950&h=%D0%9A%D0%BB%D0%B8%D0%BF%D0%BF%D0%B5%D1%80%D1%81&a=%D0%9D%D1%8C%D1%8E-%D0%9E%D1%80%D0%BB%D0%B5%D0%B0%D0%BD+%D0%9F%D0%B5%D0%BB%D0%B8%D0%BA%D0%B0%D0%BD%D1%81",
 "tip": "",
@@ -1312,6 +1824,8 @@ null
 "away": "Майами Хит",
 "hl": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/sac.png",
 "al": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/mia.png",
+"hid": "23",
+"aid": "14",
 "path": "basketball/nba",
 "url": "live.html?s=basketball&p=basketball%2Fnba&e=401909951&h=%D0%A1%D0%B0%D0%BA%D1%80%D0%B0%D0%BC%D0%B5%D0%BD%D1%82%D0%BE+%D0%9A%D0%B8%D0%BD%D0%B3%D0%B7&a=%D0%9C%D0%B0%D0%B9%D0%B0%D0%BC%D0%B8+%D0%A5%D0%B8%D1%82",
 "tip": "",
@@ -1327,6 +1841,8 @@ null
 "away": "Гвадалахара",
 "hl": "https://a.espncdn.com/i/teamlogos/soccer/500/228.png",
 "al": "https://a.espncdn.com/i/teamlogos/soccer/500/219.png",
+"hid": "228",
+"aid": "219",
 "path": "soccer/mex.1",
 "url": "live.html?s=football&p=soccer%2Fmex.1&e=401876902&h=%D0%9B%D0%B5%D0%BE%D0%BD&a=%D0%93%D0%B2%D0%B0%D0%B4%D0%B0%D0%BB%D0%B0%D1%85%D0%B0%D1%80%D0%B0",
 "tip": "",
@@ -1342,128 +1858,10 @@ null
 "away": "Тбд",
 "hl": "https://a.espncdn.com/i/teamlogos/countries/500/swe.png",
 "al": null,
+"hid": "7600",
+"aid": "-4",
 "path": "tennis/atp",
 "url": "live.html?s=tennis&p=tennis%2Fatp&e=186522&h=%D0%9B%D0%B5%D0%BE+%D0%91%D0%BE%D1%80%D0%B3&a=%D0%A2%D0%B1%D0%B4",
-"tip": "",
-"top": false,
-"bot": null
-},
-{
-"sport": "tennis",
-"id": "186537",
-"league": "Теннис · ATP",
-"kickoff": "2026-11-09T08:00:00+03:00",
-"home": "Томаш Махач",
-"away": "Тбд",
-"hl": "https://a.espncdn.com/i/teamlogos/countries/500/cze.png",
-"al": null,
-"path": "tennis/atp",
-"url": "live.html?s=tennis&p=tennis%2Fatp&e=186537&h=%D0%A2%D0%BE%D0%BC%D0%B0%D1%88+%D0%9C%D0%B0%D1%85%D0%B0%D1%87&a=%D0%A2%D0%B1%D0%B4",
-"tip": "",
-"top": false,
-"bot": null
-},
-{
-"sport": "tennis",
-"id": "186536",
-"league": "Теннис · ATP",
-"kickoff": "2026-11-09T08:00:00+03:00",
-"home": "Даниэль Вальехо",
-"away": "Юго Юмбер",
-"hl": "https://a.espncdn.com/i/teamlogos/countries/500/par.png",
-"al": "https://a.espncdn.com/i/teamlogos/countries/500/fra.png",
-"path": "tennis/atp",
-"url": "live.html?s=tennis&p=tennis%2Fatp&e=186536&h=%D0%94%D0%B0%D0%BD%D0%B8%D1%8D%D0%BB%D1%8C+%D0%92%D0%B0%D0%BB%D1%8C%D0%B5%D1%85%D0%BE&a=%D0%AE%D0%B3%D0%BE+%D0%AE%D0%BC%D0%B1%D0%B5%D1%80",
-"tip": "",
-"top": false,
-"bot": null
-},
-{
-"sport": "tennis",
-"id": "186535",
-"league": "Теннис · ATP",
-"kickoff": "2026-11-09T08:00:00+03:00",
-"home": "Алекс Микельсен",
-"away": "Янник Ханфманн",
-"hl": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
-"al": "https://a.espncdn.com/i/teamlogos/countries/500/ger.png",
-"path": "tennis/atp",
-"url": "live.html?s=tennis&p=tennis%2Fatp&e=186535&h=%D0%90%D0%BB%D0%B5%D0%BA%D1%81+%D0%9C%D0%B8%D0%BA%D0%B5%D0%BB%D1%8C%D1%81%D0%B5%D0%BD&a=%D0%AF%D0%BD%D0%BD%D0%B8%D0%BA+%D0%A5%D0%B0%D0%BD%D1%84%D0%BC%D0%B0%D0%BD%D0%BD",
-"tip": "",
-"top": false,
-"bot": null
-},
-{
-"sport": "tennis",
-"id": "186533",
-"league": "Теннис · ATP",
-"kickoff": "2026-11-09T08:00:00+03:00",
-"home": "Тбд",
-"away": "Кантен Алис",
-"hl": null,
-"al": "https://a.espncdn.com/i/teamlogos/countries/500/fra.png",
-"path": "tennis/atp",
-"url": "live.html?s=tennis&p=tennis%2Fatp&e=186533&h=%D0%A2%D0%B1%D0%B4&a=%D0%9A%D0%B0%D0%BD%D1%82%D0%B5%D0%BD+%D0%90%D0%BB%D0%B8%D1%81",
-"tip": "",
-"top": false,
-"bot": null
-},
-{
-"sport": "tennis",
-"id": "186530",
-"league": "Теннис · ATP",
-"kickoff": "2026-11-09T08:00:00+03:00",
-"home": "Томас Мартин Этчеверри",
-"away": "Макс Дахлин",
-"hl": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
-"al": "https://a.espncdn.com/i/teamlogos/countries/500/swe.png",
-"path": "tennis/atp",
-"url": "live.html?s=tennis&p=tennis%2Fatp&e=186530&h=%D0%A2%D0%BE%D0%BC%D0%B0%D1%81+%D0%9C%D0%B0%D1%80%D1%82%D0%B8%D0%BD+%D0%AD%D1%82%D1%87%D0%B5%D0%B2%D0%B5%D1%80%D1%80%D0%B8&a=%D0%9C%D0%B0%D0%BA%D1%81+%D0%94%D0%B0%D1%85%D0%BB%D0%B8%D0%BD",
-"tip": "",
-"top": false,
-"bot": null
-},
-{
-"sport": "tennis",
-"id": "186529",
-"league": "Теннис · ATP",
-"kickoff": "2026-11-09T08:00:00+03:00",
-"home": "Жамес Дукуорт",
-"away": "Кэмерон Норри",
-"hl": "https://a.espncdn.com/i/teamlogos/countries/500/aus.png",
-"al": "https://a.espncdn.com/i/teamlogos/countries/500/gbr.png",
-"path": "tennis/atp",
-"url": "live.html?s=tennis&p=tennis%2Fatp&e=186529&h=%D0%96%D0%B0%D0%BC%D0%B5%D1%81+%D0%94%D1%83%D0%BA%D1%83%D0%BE%D1%80%D1%82&a=%D0%9A%D1%8D%D0%BC%D0%B5%D1%80%D0%BE%D0%BD+%D0%9D%D0%BE%D1%80%D1%80%D0%B8",
-"tip": "",
-"top": false,
-"bot": null
-},
-{
-"sport": "tennis",
-"id": "186527",
-"league": "Теннис · ATP",
-"kickoff": "2026-11-09T08:00:00+03:00",
-"home": "Артюр Риндеркнеш",
-"away": "Миомир Кекманович",
-"hl": "https://a.espncdn.com/i/teamlogos/countries/500/fra.png",
-"al": "https://a.espncdn.com/i/teamlogos/countries/500/ser.png",
-"path": "tennis/atp",
-"url": "live.html?s=tennis&p=tennis%2Fatp&e=186527&h=%D0%90%D1%80%D1%82%D1%8E%D1%80+%D0%A0%D0%B8%D0%BD%D0%B4%D0%B5%D1%80%D0%BA%D0%BD%D0%B5%D1%88&a=%D0%9C%D0%B8%D0%BE%D0%BC%D0%B8%D1%80+%D0%9A%D0%B5%D0%BA%D0%BC%D0%B0%D0%BD%D0%BE%D0%B2%D0%B8%D1%87",
-"tip": "",
-"top": false,
-"bot": null
-},
-{
-"sport": "tennis",
-"id": "186526",
-"league": "Теннис · ATP",
-"kickoff": "2026-11-09T08:00:00+03:00",
-"home": "Люка Ван Аш",
-"away": "Тбд",
-"hl": "https://a.espncdn.com/i/teamlogos/countries/500/fra.png",
-"al": null,
-"path": "tennis/atp",
-"url": "live.html?s=tennis&p=tennis%2Fatp&e=186526&h=%D0%9B%D1%8E%D0%BA%D0%B0+%D0%92%D0%B0%D0%BD+%D0%90%D1%88&a=%D0%A2%D0%B1%D0%B4",
 "tip": "",
 "top": false,
 "bot": null
@@ -1477,8 +1875,146 @@ null
 "away": "Зизу Бергс",
 "hl": "https://a.espncdn.com/i/teamlogos/countries/500/den.png",
 "al": "https://a.espncdn.com/i/teamlogos/countries/500/bel.png",
+"hid": "3659",
+"aid": "3356",
 "path": "tennis/atp",
 "url": "live.html?s=tennis&p=tennis%2Fatp&e=186525&h=%D0%A5%D0%BE%D0%BB%D1%8C%D0%B3%D0%B5%D1%80+%D0%A0%D1%83%D0%BD%D0%B5&a=%D0%97%D0%B8%D0%B7%D1%83+%D0%91%D0%B5%D1%80%D0%B3%D1%81",
+"tip": "",
+"top": false,
+"bot": null
+},
+{
+"sport": "tennis",
+"id": "186526",
+"league": "Теннис · ATP",
+"kickoff": "2026-11-09T08:00:00+03:00",
+"home": "Люка Ван Аш",
+"away": "Тбд",
+"hl": "https://a.espncdn.com/i/teamlogos/countries/500/fra.png",
+"al": null,
+"hid": "8814",
+"aid": "-4",
+"path": "tennis/atp",
+"url": "live.html?s=tennis&p=tennis%2Fatp&e=186526&h=%D0%9B%D1%8E%D0%BA%D0%B0+%D0%92%D0%B0%D0%BD+%D0%90%D1%88&a=%D0%A2%D0%B1%D0%B4",
+"tip": "",
+"top": false,
+"bot": null
+},
+{
+"sport": "tennis",
+"id": "186527",
+"league": "Теннис · ATP",
+"kickoff": "2026-11-09T08:00:00+03:00",
+"home": "Артюр Риндеркнеш",
+"away": "Миомир Кекманович",
+"hl": "https://a.espncdn.com/i/teamlogos/countries/500/fra.png",
+"al": "https://a.espncdn.com/i/teamlogos/countries/500/ser.png",
+"hid": "3511",
+"aid": "2874",
+"path": "tennis/atp",
+"url": "live.html?s=tennis&p=tennis%2Fatp&e=186527&h=%D0%90%D1%80%D1%82%D1%8E%D1%80+%D0%A0%D0%B8%D0%BD%D0%B4%D0%B5%D1%80%D0%BA%D0%BD%D0%B5%D1%88&a=%D0%9C%D0%B8%D0%BE%D0%BC%D0%B8%D1%80+%D0%9A%D0%B5%D0%BA%D0%BC%D0%B0%D0%BD%D0%BE%D0%B2%D0%B8%D1%87",
+"tip": "",
+"top": false,
+"bot": null
+},
+{
+"sport": "tennis",
+"id": "186529",
+"league": "Теннис · ATP",
+"kickoff": "2026-11-09T08:00:00+03:00",
+"home": "Жамес Дукуорт",
+"away": "Кэмерон Норри",
+"hl": "https://a.espncdn.com/i/teamlogos/countries/500/aus.png",
+"al": "https://a.espncdn.com/i/teamlogos/countries/500/gbr.png",
+"hid": "1857",
+"aid": "2366",
+"path": "tennis/atp",
+"url": "live.html?s=tennis&p=tennis%2Fatp&e=186529&h=%D0%96%D0%B0%D0%BC%D0%B5%D1%81+%D0%94%D1%83%D0%BA%D1%83%D0%BE%D1%80%D1%82&a=%D0%9A%D1%8D%D0%BC%D0%B5%D1%80%D0%BE%D0%BD+%D0%9D%D0%BE%D1%80%D1%80%D0%B8",
+"tip": "",
+"top": false,
+"bot": null
+},
+{
+"sport": "tennis",
+"id": "186530",
+"league": "Теннис · ATP",
+"kickoff": "2026-11-09T08:00:00+03:00",
+"home": "Томас Мартин Этчеверри",
+"away": "Макс Дахлин",
+"hl": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+"al": "https://a.espncdn.com/i/teamlogos/countries/500/swe.png",
+"hid": "3739",
+"aid": "13232",
+"path": "tennis/atp",
+"url": "live.html?s=tennis&p=tennis%2Fatp&e=186530&h=%D0%A2%D0%BE%D0%BC%D0%B0%D1%81+%D0%9C%D0%B0%D1%80%D1%82%D0%B8%D0%BD+%D0%AD%D1%82%D1%87%D0%B5%D0%B2%D0%B5%D1%80%D1%80%D0%B8&a=%D0%9C%D0%B0%D0%BA%D1%81+%D0%94%D0%B0%D1%85%D0%BB%D0%B8%D0%BD",
+"tip": "",
+"top": false,
+"bot": null
+},
+{
+"sport": "tennis",
+"id": "186533",
+"league": "Теннис · ATP",
+"kickoff": "2026-11-09T08:00:00+03:00",
+"home": "Тбд",
+"away": "Кантен Алис",
+"hl": null,
+"al": "https://a.espncdn.com/i/teamlogos/countries/500/fra.png",
+"hid": "-3",
+"aid": "2362",
+"path": "tennis/atp",
+"url": "live.html?s=tennis&p=tennis%2Fatp&e=186533&h=%D0%A2%D0%B1%D0%B4&a=%D0%9A%D0%B0%D0%BD%D1%82%D0%B5%D0%BD+%D0%90%D0%BB%D0%B8%D1%81",
+"tip": "",
+"top": false,
+"bot": null
+},
+{
+"sport": "tennis",
+"id": "186535",
+"league": "Теннис · ATP",
+"kickoff": "2026-11-09T08:00:00+03:00",
+"home": "Алекс Микельсен",
+"away": "Янник Ханфманн",
+"hl": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
+"al": "https://a.espncdn.com/i/teamlogos/countries/500/ger.png",
+"hid": "11400",
+"aid": "3322",
+"path": "tennis/atp",
+"url": "live.html?s=tennis&p=tennis%2Fatp&e=186535&h=%D0%90%D0%BB%D0%B5%D0%BA%D1%81+%D0%9C%D0%B8%D0%BA%D0%B5%D0%BB%D1%8C%D1%81%D0%B5%D0%BD&a=%D0%AF%D0%BD%D0%BD%D0%B8%D0%BA+%D0%A5%D0%B0%D0%BD%D1%84%D0%BC%D0%B0%D0%BD%D0%BD",
+"tip": "",
+"top": false,
+"bot": null
+},
+{
+"sport": "tennis",
+"id": "186536",
+"league": "Теннис · ATP",
+"kickoff": "2026-11-09T08:00:00+03:00",
+"home": "Даниэль Вальехо",
+"away": "Юго Юмбер",
+"hl": "https://a.espncdn.com/i/teamlogos/countries/500/par.png",
+"al": "https://a.espncdn.com/i/teamlogos/countries/500/fra.png",
+"hid": "11396",
+"aid": "3085",
+"path": "tennis/atp",
+"url": "live.html?s=tennis&p=tennis%2Fatp&e=186536&h=%D0%94%D0%B0%D0%BD%D0%B8%D1%8D%D0%BB%D1%8C+%D0%92%D0%B0%D0%BB%D1%8C%D0%B5%D1%85%D0%BE&a=%D0%AE%D0%B3%D0%BE+%D0%AE%D0%BC%D0%B1%D0%B5%D1%80",
+"tip": "",
+"top": false,
+"bot": null
+},
+{
+"sport": "tennis",
+"id": "186537",
+"league": "Теннис · ATP",
+"kickoff": "2026-11-09T08:00:00+03:00",
+"home": "Томаш Махач",
+"away": "Тбд",
+"hl": "https://a.espncdn.com/i/teamlogos/countries/500/cze.png",
+"al": null,
+"hid": "3811",
+"aid": "-4",
+"path": "tennis/atp",
+"url": "live.html?s=tennis&p=tennis%2Fatp&e=186537&h=%D0%A2%D0%BE%D0%BC%D0%B0%D1%88+%D0%9C%D0%B0%D1%85%D0%B0%D1%87&a=%D0%A2%D0%B1%D0%B4",
 "tip": "",
 "top": false,
 "bot": null
@@ -1492,6 +2028,8 @@ null
 "away": "Тбд",
 "hl": null,
 "al": null,
+"hid": "-3",
+"aid": "-4",
 "path": "tennis/wta",
 "url": "live.html?s=tennis&p=tennis%2Fwta&e=186745&h=%D0%A2%D0%B1%D0%B4&a=%D0%A2%D0%B1%D0%B4",
 "tip": "",
@@ -1507,6 +2045,8 @@ null
 "away": "Тбд",
 "hl": null,
 "al": null,
+"hid": "-3",
+"aid": "-4",
 "path": "tennis/wta",
 "url": "live.html?s=tennis&p=tennis%2Fwta&e=186759&h=%D0%A2%D0%B1%D0%B4&a=%D0%A2%D0%B1%D0%B4",
 "tip": "",
@@ -1522,6 +2062,8 @@ null
 "away": "Тбд",
 "hl": null,
 "al": null,
+"hid": "-3",
+"aid": "-4",
 "path": "tennis/wta",
 "url": "live.html?s=tennis&p=tennis%2Fwta&e=186758&h=%D0%A2%D0%B1%D0%B4&a=%D0%A2%D0%B1%D0%B4",
 "tip": "",
@@ -1537,6 +2079,8 @@ null
 "away": "Тбд",
 "hl": null,
 "al": null,
+"hid": "-3",
+"aid": "-4",
 "path": "tennis/wta",
 "url": "live.html?s=tennis&p=tennis%2Fwta&e=186757&h=%D0%A2%D0%B1%D0%B4&a=%D0%A2%D0%B1%D0%B4",
 "tip": "",
@@ -1552,6 +2096,8 @@ null
 "away": "Тбд",
 "hl": null,
 "al": null,
+"hid": "-3",
+"aid": "-4",
 "path": "tennis/wta",
 "url": "live.html?s=tennis&p=tennis%2Fwta&e=186756&h=%D0%A2%D0%B1%D0%B4&a=%D0%A2%D0%B1%D0%B4",
 "tip": "",
@@ -1567,6 +2113,8 @@ null
 "away": "Тбд",
 "hl": null,
 "al": null,
+"hid": "-3",
+"aid": "-4",
 "path": "tennis/wta",
 "url": "live.html?s=tennis&p=tennis%2Fwta&e=186755&h=%D0%A2%D0%B1%D0%B4&a=%D0%A2%D0%B1%D0%B4",
 "tip": "",
@@ -1582,6 +2130,8 @@ null
 "away": "Тбд",
 "hl": null,
 "al": null,
+"hid": "-3",
+"aid": "-4",
 "path": "tennis/wta",
 "url": "live.html?s=tennis&p=tennis%2Fwta&e=186753&h=%D0%A2%D0%B1%D0%B4&a=%D0%A2%D0%B1%D0%B4",
 "tip": "",
@@ -1597,6 +2147,8 @@ null
 "away": "Тбд",
 "hl": null,
 "al": null,
+"hid": "-3",
+"aid": "-4",
 "path": "tennis/wta",
 "url": "live.html?s=tennis&p=tennis%2Fwta&e=186744&h=%D0%A2%D0%B1%D0%B4&a=%D0%A2%D0%B1%D0%B4",
 "tip": "",
@@ -1612,6 +2164,8 @@ null
 "away": "Тбд",
 "hl": null,
 "al": null,
+"hid": "-3",
+"aid": "-4",
 "path": "tennis/wta",
 "url": "live.html?s=tennis&p=tennis%2Fwta&e=186746&h=%D0%A2%D0%B1%D0%B4&a=%D0%A2%D0%B1%D0%B4",
 "tip": "",
@@ -1627,6 +2181,8 @@ null
 "away": "Тбд",
 "hl": null,
 "al": null,
+"hid": "-3",
+"aid": "-4",
 "path": "tennis/wta",
 "url": "live.html?s=tennis&p=tennis%2Fwta&e=186747&h=%D0%A2%D0%B1%D0%B4&a=%D0%A2%D0%B1%D0%B4",
 "tip": "",
@@ -1642,6 +2198,8 @@ null
 "away": "Тбд",
 "hl": null,
 "al": null,
+"hid": "-3",
+"aid": "-4",
 "path": "tennis/wta",
 "url": "live.html?s=tennis&p=tennis%2Fwta&e=186748&h=%D0%A2%D0%B1%D0%B4&a=%D0%A2%D0%B1%D0%B4",
 "tip": "",
@@ -1657,6 +2215,8 @@ null
 "away": "Тбд",
 "hl": null,
 "al": null,
+"hid": "-3",
+"aid": "-4",
 "path": "tennis/wta",
 "url": "live.html?s=tennis&p=tennis%2Fwta&e=186749&h=%D0%A2%D0%B1%D0%B4&a=%D0%A2%D0%B1%D0%B4",
 "tip": "",
@@ -1672,6 +2232,8 @@ null
 "away": "Тбд",
 "hl": null,
 "al": null,
+"hid": "-3",
+"aid": "-4",
 "path": "tennis/wta",
 "url": "live.html?s=tennis&p=tennis%2Fwta&e=186754&h=%D0%A2%D0%B1%D0%B4&a=%D0%A2%D0%B1%D0%B4",
 "tip": "",
@@ -1687,6 +2249,8 @@ null
 "away": "Тбд",
 "hl": null,
 "al": null,
+"hid": "-3",
+"aid": "-4",
 "path": "tennis/wta",
 "url": "live.html?s=tennis&p=tennis%2Fwta&e=186752&h=%D0%A2%D0%B1%D0%B4&a=%D0%A2%D0%B1%D0%B4",
 "tip": "",
@@ -1702,6 +2266,8 @@ null
 "away": "Тбд",
 "hl": null,
 "al": null,
+"hid": "-3",
+"aid": "-4",
 "path": "tennis/wta",
 "url": "live.html?s=tennis&p=tennis%2Fwta&e=186751&h=%D0%A2%D0%B1%D0%B4&a=%D0%A2%D0%B1%D0%B4",
 "tip": "",
@@ -1717,8 +2283,27 @@ null
 "away": "Тбд",
 "hl": null,
 "al": null,
+"hid": "-3",
+"aid": "-4",
 "path": "tennis/wta",
 "url": "live.html?s=tennis&p=tennis%2Fwta&e=186750&h=%D0%A2%D0%B1%D0%B4&a=%D0%A2%D0%B1%D0%B4",
+"tip": "",
+"top": false,
+"bot": null
+},
+{
+"sport": "tennis",
+"id": "187381",
+"league": "Теннис · WTA",
+"kickoff": "2026-11-09T23:00:00+03:00",
+"home": "Арина Сабаленка",
+"away": "Каролина Мучова",
+"hl": "https://a.espncdn.com/i/teamlogos/countries/500/blr.png",
+"al": "https://a.espncdn.com/i/teamlogos/countries/500/cze.png",
+"hid": "3038",
+"aid": "3039",
+"path": "tennis/wta",
+"url": "live.html?s=tennis&p=tennis%2Fwta&e=187381&h=%D0%90%D1%80%D0%B8%D0%BD%D0%B0+%D0%A1%D0%B0%D0%B1%D0%B0%D0%BB%D0%B5%D0%BD%D0%BA%D0%B0&a=%D0%9A%D0%B0%D1%80%D0%BE%D0%BB%D0%B8%D0%BD%D0%B0+%D0%9C%D1%83%D1%87%D0%BE%D0%B2%D0%B0",
 "tip": "",
 "top": false,
 "bot": null

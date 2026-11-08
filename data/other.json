@@ -1,906 +1,4 @@
 {
- "WTA|186681": {
-  "status": "skipped",
-  "kickoff": "2026-11-05T12:00:00+03:00"
- },
- "WTA|186683": {
-  "status": "skipped",
-  "kickoff": "2026-11-05T12:00:00+03:00"
- },
- "WTA|186590": {
-  "id": "186590",
-  "div": "WTA",
-  "sport": "tennis",
-  "tournament": "Chennai Open",
-  "round": "Round 2",
-  "bo5": false,
-  "kickoff": "2026-11-05T12:30:00+03:00",
-  "state": "pre",
-  "completed": false,
-  "status": "done",
-  "detail": "Thu, November 5th at 4:30 AM EST",
-  "home": {
-   "color": "2d6a4f",
-   "logo": [
-    "https://a.espncdn.com/i/headshots/tennis/players/full/5734.png",
-    "https://a.espncdn.com/i/teamlogos/countries/500/jpn.png"
-   ],
-   "id": "5734",
-   "name": "Moyuka Uchijima",
-   "country": "Japan",
-   "winner": false,
-   "sets": [],
-   "set_won": [],
-   "ru": "Моюка Утидзима"
-  },
-  "away": {
-   "color": "2d6a4f",
-   "logo": [
-    "https://a.espncdn.com/i/headshots/tennis/players/full/1649.png",
-    "https://a.espncdn.com/i/teamlogos/countries/500/pol.png"
-   ],
-   "id": "1649",
-   "name": "Magda Linette",
-   "country": "Poland",
-   "winner": false,
-   "sets": [],
-   "set_won": [],
-   "ru": "Магда Линетт"
-  },
-  "odds": {},
-  "probs": {
-   "TN_W1": 0.543127117164883,
-   "TN_W2": 0.45687288283511696,
-   "TN_3S": 0.49834305407546553,
-   "TN_2S": 0.5016569459245345,
-   "TN_S2:0": 0.2796116792163877,
-   "TN_S0:2": 0.22204526670814678,
-   "TN_S2:1": 0.2635154379484952,
-   "TN_S1:2": 0.23482761612697034,
-   "TN_SET1": 0.7779547332918533,
-   "TN_SET2": 0.7203883207836124
-  },
-  "labels": {
-   "TN_W1": "Победа: Моюка Утидзима",
-   "TN_W2": "Победа: Магда Линетт",
-   "TN_3S": "Будет 3 сета",
-   "TN_2S": "Будет 2 сета",
-   "TN_S2:0": "Счёт по сетам 2:0",
-   "TN_S0:2": "Счёт по сетам 0:2",
-   "TN_S2:1": "Счёт по сетам 2:1",
-   "TN_S1:2": "Счёт по сетам 1:2",
-   "TN_SET1": "Моюка Утидзима возьмёт хотя бы сет",
-   "TN_SET2": "Магда Линетт возьмёт хотя бы сет"
-  },
-  "real": {},
-  "center": "Рейтинг Эло 1570 : 1540",
-  "bar": [
-   0.543127117164883,
-   0,
-   0.45687288283511696
-  ],
-  "model": {
-   "elo": [
-    1570.4295731586385,
-    1540.387131178878
-   ],
-   "src": "Эло"
-  },
-  "main": {
-   "key": "TN_2S",
-   "label": "Будет 2 сета",
-   "p": 0.5017,
-   "odds": 1.85,
-   "est": true,
-   "stake": 1.0
-  },
-  "bold": {},
-  "open": {},
-  "top": false,
-  "msg_id": 2894,
-  "close": {
-   "_": null
-  },
-  "main_hit": true,
-  "bold_hit": null,
-  "btn": 2
- },
- "WTA|186591": {
-  "id": "186591",
-  "div": "WTA",
-  "sport": "tennis",
-  "tournament": "Chennai Open",
-  "round": "Round 2",
-  "bo5": false,
-  "kickoff": "2026-11-05T12:30:00+03:00",
-  "state": "pre",
-  "completed": false,
-  "status": "done",
-  "detail": "Thu, November 5th at 4:30 AM EST",
-  "home": {
-   "color": "2d6a4f",
-   "logo": [
-    "https://a.espncdn.com/i/headshots/tennis/players/full/3153.png",
-    "https://a.espncdn.com/i/teamlogos/countries/500/jpn.png"
-   ],
-   "id": "3153",
-   "name": "Mai Hontama",
-   "country": "Japan",
-   "winner": false,
-   "sets": [],
-   "set_won": [],
-   "ru": "Маи Хонтама"
-  },
-  "away": {
-   "color": "2d6a4f",
-   "logo": [
-    "https://a.espncdn.com/i/headshots/tennis/players/full/4926.png",
-    "https://a.espncdn.com/i/teamlogos/countries/500/kaz.png"
-   ],
-   "id": "4926",
-   "name": "Zhibek Kulambayeva",
-   "country": "Kazakhstan",
-   "winner": false,
-   "sets": [],
-   "set_won": [],
-   "ru": "Жибек Куламбаева"
-  },
-  "odds": {},
-  "probs": {
-   "TN_W1": 0.5559488644050706,
-   "TN_W2": 0.44405113559492937,
-   "TN_3S": 0.4972071425644602,
-   "TN_2S": 0.5027928574355398,
-   "TN_S2:0": 0.2887652488459185,
-   "TN_S0:2": 0.21402760858962136,
-   "TN_S2:1": 0.2671836155591521,
-   "TN_S1:2": 0.23002352700530806,
-   "TN_SET1": 0.7859723914103787,
-   "TN_SET2": 0.7112347511540815
-  },
-  "labels": {
-   "TN_W1": "Победа: Маи Хонтама",
-   "TN_W2": "Победа: Жибек Куламбаева",
-   "TN_3S": "Будет 3 сета",
-   "TN_2S": "Будет 2 сета",
-   "TN_S2:0": "Счёт по сетам 2:0",
-   "TN_S0:2": "Счёт по сетам 0:2",
-   "TN_S2:1": "Счёт по сетам 2:1",
-   "TN_S1:2": "Счёт по сетам 1:2",
-   "TN_SET1": "Маи Хонтама возьмёт хотя бы сет",
-   "TN_SET2": "Жибек Куламбаева возьмёт хотя бы сет"
-  },
-  "real": {},
-  "center": "Рейтинг Эло 1477 : 1438",
-  "bar": [
-   0.5559488644050706,
-   0,
-   0.44405113559492937
-  ],
-  "model": {
-   "elo": [
-    1477.4748338884006,
-    1438.4340889186074
-   ],
-   "src": "Эло"
-  },
-  "main": {
-   "key": "TN_2S",
-   "label": "Будет 2 сета",
-   "p": 0.5028,
-   "odds": 1.85,
-   "est": true,
-   "stake": 1.0
-  },
-  "bold": {},
-  "open": {},
-  "top": false,
-  "msg_id": 2896,
-  "close": {
-   "_": null
-  },
-  "main_hit": false,
-  "bold_hit": null,
-  "btn": 2
- },
- "ATP|186496": {
-  "id": "186496",
-  "div": "ATP",
-  "sport": "tennis",
-  "tournament": "Rolex Paris Masters",
-  "round": "Round 3",
-  "bo5": false,
-  "kickoff": "2026-11-05T13:00:00+03:00",
-  "state": "pre",
-  "completed": false,
-  "status": "done",
-  "detail": "Thu, November 5th at 5:00 AM EST",
-  "home": {
-   "color": "2d6a4f",
-   "logo": [
-    "https://a.espncdn.com/i/headshots/tennis/players/full/2964.png",
-    "https://a.espncdn.com/i/teamlogos/countries/500/usa.png"
-   ],
-   "id": "2964",
-   "name": "Tommy Paul",
-   "country": "USA",
-   "winner": false,
-   "sets": [],
-   "set_won": [],
-   "ru": "Томми Пол"
-  },
-  "away": {
-   "color": "2d6a4f",
-   "logo": [
-    "https://a.espncdn.com/i/headshots/tennis/players/full/2362.png",
-    "https://a.espncdn.com/i/teamlogos/countries/500/fra.png"
-   ],
-   "id": "2362",
-   "name": "Quentin Halys",
-   "country": "France",
-   "winner": false,
-   "sets": [],
-   "set_won": [],
-   "ru": "Кантен Алис"
-  },
-  "odds": {},
-  "probs": {
-   "TN_W1": 0.6966404597216774,
-   "TN_W2": 0.30335954027832257,
-   "TN_3S": 0.46391348570467195,
-   "TN_2S": 0.536086514295328,
-   "TN_S2:0": 0.4023684489311267,
-   "TN_S0:2": 0.13371806536420133,
-   "TN_S2:1": 0.2942720107905507,
-   "TN_S1:2": 0.1696414749141212,
-   "TN_SET1": 0.8662819346357986,
-   "TN_SET2": 0.5976315510688732
-  },
-  "labels": {
-   "TN_W1": "Победа: Томми Пол",
-   "TN_W2": "Победа: Кантен Алис",
-   "TN_3S": "Будет 3 сета",
-   "TN_2S": "Будет 2 сета",
-   "TN_S2:0": "Счёт по сетам 2:0",
-   "TN_S0:2": "Счёт по сетам 0:2",
-   "TN_S2:1": "Счёт по сетам 2:1",
-   "TN_S1:2": "Счёт по сетам 1:2",
-   "TN_SET1": "Томми Пол возьмёт хотя бы сет",
-   "TN_SET2": "Кантен Алис возьмёт хотя бы сет"
-  },
-  "real": {},
-  "center": "Рейтинг Эло 1800 : 1655",
-  "bar": [
-   0.6966404597216774,
-   0,
-   0.30335954027832257
-  ],
-  "model": {
-   "elo": [
-    1799.6365351634593,
-    1655.2161205858538
-   ],
-   "src": "Эло"
-  },
-  "main": {
-   "key": "TN_2S",
-   "label": "Будет 2 сета",
-   "p": 0.5361,
-   "odds": 1.73,
-   "est": true,
-   "stake": 1.0
-  },
-  "bold": {},
-  "open": {},
-  "top": false,
-  "msg_id": 2900,
-  "close": {
-   "_": null
-  },
-  "main_hit": true,
-  "bold_hit": null,
-  "btn": 2
- },
- "WTA|186630": {
-  "id": "186630",
-  "div": "WTA",
-  "sport": "tennis",
-  "tournament": "Prudential Hong Kong Tennis Open",
-  "round": "Round 2",
-  "bo5": false,
-  "kickoff": "2026-11-05T13:30:00+03:00",
-  "state": "pre",
-  "completed": false,
-  "status": "done",
-  "detail": "Thu, November 5th at 5:30 AM EST",
-  "home": {
-   "color": "2d6a4f",
-   "logo": [
-    "https://a.espncdn.com/i/headshots/tennis/players/full/8419.png",
-    "https://a.espncdn.com/i/teamlogos/countries/500/cze.png"
-   ],
-   "id": "8419",
-   "name": "Tereza Valentova",
-   "country": "Czechia",
-   "winner": false,
-   "sets": [],
-   "set_won": [],
-   "ru": "Тереза Валентова"
-  },
-  "away": {
-   "color": "2d6a4f",
-   "logo": [
-    "https://a.espncdn.com/i/headshots/tennis/players/full/7759.png",
-    "https://a.espncdn.com/i/teamlogos/countries/500/phi.png"
-   ],
-   "id": "7759",
-   "name": "Alexandra Eala",
-   "country": "Philippines",
-   "winner": false,
-   "sets": [],
-   "set_won": [],
-   "ru": "Александра Эала"
-  },
-  "odds": {},
-  "probs": {
-   "TN_W1": 0.3311534189225892,
-   "TN_W2": 0.6688465810774108,
-   "TN_3S": 0.4737476436618097,
-   "TN_2S": 0.5262523563381903,
-   "TN_S2:0": 0.14855664395910043,
-   "TN_S0:2": 0.3776957123790899,
-   "TN_S2:1": 0.18259677496348875,
-   "TN_S1:2": 0.29115086869832096,
-   "TN_SET1": 0.6223042876209102,
-   "TN_SET2": 0.8514433560408996
-  },
-  "labels": {
-   "TN_W1": "Победа: Тереза Валентова",
-   "TN_W2": "Победа: Александра Эала",
-   "TN_3S": "Будет 3 сета",
-   "TN_2S": "Будет 2 сета",
-   "TN_S2:0": "Счёт по сетам 2:0",
-   "TN_S0:2": "Счёт по сетам 0:2",
-   "TN_S2:1": "Счёт по сетам 2:1",
-   "TN_S1:2": "Счёт по сетам 1:2",
-   "TN_SET1": "Тереза Валентова возьмёт хотя бы сет",
-   "TN_SET2": "Александра Эала возьмёт хотя бы сет"
-  },
-  "real": {},
-  "center": "Рейтинг Эло 1638 : 1760",
-  "bar": [
-   0.3311534189225892,
-   0,
-   0.6688465810774108
-  ],
-  "model": {
-   "elo": [
-    1638.166349361723,
-    1760.285256663598
-   ],
-   "src": "Эло"
-  },
-  "main": {
-   "key": "TN_2S",
-   "label": "Будет 2 сета",
-   "p": 0.5263,
-   "odds": 1.77,
-   "est": true,
-   "stake": 1.0
-  },
-  "bold": {},
-  "open": {},
-  "top": false,
-  "msg_id": 2904,
-  "close": {
-   "_": null
-  },
-  "main_hit": true,
-  "bold_hit": null,
-  "btn": 2
- },
- "WTA|186677": {
-  "status": "skipped",
-  "kickoff": "2026-11-05T13:30:00+03:00"
- },
- "WTA|186585": {
-  "id": "186585",
-  "div": "WTA",
-  "sport": "tennis",
-  "tournament": "Chennai Open",
-  "round": "Round 2",
-  "bo5": false,
-  "kickoff": "2026-11-05T14:00:00+03:00",
-  "state": "pre",
-  "completed": false,
-  "status": "done",
-  "detail": "Thu, November 5th at 6:00 AM EST",
-  "home": {
-   "color": "2d6a4f",
-   "logo": [
-    "https://a.espncdn.com/i/headshots/tennis/players/full/3388.png",
-    "https://a.espncdn.com/i/teamlogos/countries/500/sui.png"
-   ],
-   "id": "3388",
-   "name": "Simona Waltert",
-   "country": "Switzerland",
-   "winner": false,
-   "sets": [],
-   "set_won": [],
-   "ru": "Симона Вальтерт"
-  },
-  "away": {
-   "color": "2d6a4f",
-   "logo": [
-    "https://a.espncdn.com/i/headshots/tennis/players/full/8067.png",
-    "https://a.espncdn.com/i/teamlogos/countries/500/ita.png"
-   ],
-   "id": "8067",
-   "name": "Lucrezia Stefanini",
-   "country": "Italy",
-   "winner": false,
-   "sets": [],
-   "set_won": [],
-   "ru": "Лукреция Стефанини"
-  },
-  "odds": {},
-  "probs": {
-   "TN_W1": 0.36144909634604666,
-   "TN_W2": 0.6385509036539534,
-   "TN_3S": 0.4825321077066505,
-   "TN_2S": 0.5174678922933494,
-   "TN_S2:0": 0.16527836232914814,
-   "TN_S0:2": 0.35218952996420133,
-   "TN_S2:1": 0.1961707340168986,
-   "TN_S1:2": 0.2863613736897519,
-   "TN_SET1": 0.6478104700357987,
-   "TN_SET2": 0.8347216376708518
-  },
-  "labels": {
-   "TN_W1": "Победа: Симона Вальтерт",
-   "TN_W2": "Победа: Лукреция Стефанини",
-   "TN_3S": "Будет 3 сета",
-   "TN_2S": "Будет 2 сета",
-   "TN_S2:0": "Счёт по сетам 2:0",
-   "TN_S0:2": "Счёт по сетам 0:2",
-   "TN_S2:1": "Счёт по сетам 2:1",
-   "TN_S1:2": "Счёт по сетам 1:2",
-   "TN_SET1": "Симона Вальтерт возьмёт хотя бы сет",
-   "TN_SET2": "Лукреция Стефанини возьмёт хотя бы сет"
-  },
-  "real": {},
-  "center": "Рейтинг Эло 1533 : 1631",
-  "bar": [
-   0.36144909634604666,
-   0,
-   0.6385509036539534
-  ],
-  "model": {
-   "elo": [
-    1532.6276792123113,
-    1631.4870314204427
-   ],
-   "src": "Эло"
-  },
-  "main": {
-   "key": "TN_2S",
-   "label": "Будет 2 сета",
-   "p": 0.5175,
-   "odds": 1.8,
-   "est": true,
-   "stake": 1.0
-  },
-  "bold": {},
-  "open": {},
-  "top": false,
-  "msg_id": 2907,
-  "close": {
-   "_": null
-  },
-  "main_hit": true,
-  "bold_hit": null,
-  "btn": 2
- },
- "ATP|186497": {
-  "id": "186497",
-  "div": "ATP",
-  "sport": "tennis",
-  "tournament": "Rolex Paris Masters",
-  "round": "Round 3",
-  "bo5": false,
-  "kickoff": "2026-11-05T14:30:00+03:00",
-  "state": "pre",
-  "completed": false,
-  "status": "done",
-  "detail": "Thu, November 5th at 6:30 AM EST",
-  "home": {
-   "color": "2d6a4f",
-   "logo": [
-    "https://a.espncdn.com/i/headshots/tennis/players/full/9250.png",
-    "https://a.espncdn.com/i/teamlogos/countries/500/usa.png"
-   ],
-   "id": "9250",
-   "name": "Ben Shelton",
-   "country": "USA",
-   "winner": false,
-   "sets": [],
-   "set_won": [],
-   "ru": "Бен Шелтон"
-  },
-  "away": {
-   "color": "2d6a4f",
-   "logo": [
-    "https://a.espncdn.com/i/headshots/tennis/players/full/3511.png",
-    "https://a.espncdn.com/i/teamlogos/countries/500/fra.png"
-   ],
-   "id": "3511",
-   "name": "Arthur Rinderknech",
-   "country": "France",
-   "winner": false,
-   "sets": [],
-   "set_won": [],
-   "ru": "Артюр Риндеркнеш"
-  },
-  "odds": {},
-  "probs": {
-   "TN_W1": 0.8460577602007204,
-   "TN_W2": 0.15394223979927957,
-   "TN_3S": 0.37293453796918374,
-   "TN_2S": 0.6270654620308163,
-   "TN_S2:0": 0.565589730552037,
-   "TN_S0:2": 0.061475731478779265,
-   "TN_S2:1": 0.28046802964868334,
-   "TN_S1:2": 0.09246650832050043,
-   "TN_SET1": 0.9385242685212207,
-   "TN_SET2": 0.434410269447963
-  },
-  "labels": {
-   "TN_W1": "Победа: Бен Шелтон",
-   "TN_W2": "Победа: Артюр Риндеркнеш",
-   "TN_3S": "Будет 3 сета",
-   "TN_2S": "Будет 2 сета",
-   "TN_S2:0": "Счёт по сетам 2:0",
-   "TN_S0:2": "Счёт по сетам 0:2",
-   "TN_S2:1": "Счёт по сетам 2:1",
-   "TN_S1:2": "Счёт по сетам 1:2",
-   "TN_SET1": "Бен Шелтон возьмёт хотя бы сет",
-   "TN_SET2": "Артюр Риндеркнеш возьмёт хотя бы сет"
-  },
-  "real": {},
-  "center": "Рейтинг Эло 1858 : 1562",
-  "bar": [
-   0.8460577602007204,
-   0,
-   0.15394223979927957
-  ],
-  "model": {
-   "elo": [
-    1857.9602861568515,
-    1561.9434012896618
-   ],
-   "src": "Эло"
-  },
-  "main": {
-   "key": "TN_SET1",
-   "label": "Бен Шелтон возьмёт хотя бы сет",
-   "p": 0.9385,
-   "odds": 0.99,
-   "est": true,
-   "stake": 1.0
-  },
-  "bold": {},
-  "open": {},
-  "top": false,
-  "msg_id": 2911,
-  "close": {
-   "_": null
-  },
-  "main_hit": true,
-  "bold_hit": null,
-  "btn": 2
- },
- "WTA|186641": {
-  "id": "186641",
-  "div": "WTA",
-  "sport": "tennis",
-  "tournament": "Prudential Hong Kong Tennis Open",
-  "round": "Round 2",
-  "bo5": false,
-  "kickoff": "2026-11-05T15:00:00+03:00",
-  "state": "pre",
-  "completed": false,
-  "status": "done",
-  "detail": "Thu, November 5th at 7:00 AM EST",
-  "home": {
-   "color": "2d6a4f",
-   "logo": [
-    "https://a.espncdn.com/i/headshots/tennis/players/full/1774.png",
-    "https://a.espncdn.com/i/teamlogos/countries/500/rom.png"
-   ],
-   "id": "1774",
-   "name": "Sorana Cirstea",
-   "country": "Romania",
-   "winner": false,
-   "sets": [],
-   "set_won": [],
-   "ru": "Сорана Кырстя"
-  },
-  "away": {
-   "color": "2d6a4f",
-   "logo": [
-    "https://a.espncdn.com/i/headshots/tennis/players/full/13479.png",
-    "https://a.espncdn.com/i/teamlogos/countries/500/usa.png"
-   ],
-   "id": "13479",
-   "name": "Mary Stoiana",
-   "country": "USA",
-   "winner": false,
-   "sets": [],
-   "set_won": [],
-   "ru": "Мэри Стояна"
-  },
-  "odds": {},
-  "probs": {
-   "TN_W1": 0.6568868619174376,
-   "TN_W2": 0.3431131380825624,
-   "TN_3S": 0.47744833871139547,
-   "TN_2S": 0.5225516612886045,
-   "TN_S2:0": 0.36746354483150123,
-   "TN_S0:2": 0.1550881164571033,
-   "TN_S2:1": 0.2894233170859364,
-   "TN_S1:2": 0.18802502162545912,
-   "TN_SET1": 0.8449118835428967,
-   "TN_SET2": 0.6325364551684988
-  },
-  "labels": {
-   "TN_W1": "Победа: Сорана Кырстя",
-   "TN_W2": "Победа: Мэри Стояна",
-   "TN_3S": "Будет 3 сета",
-   "TN_2S": "Будет 2 сета",
-   "TN_S2:0": "Счёт по сетам 2:0",
-   "TN_S0:2": "Счёт по сетам 0:2",
-   "TN_S2:1": "Счёт по сетам 2:1",
-   "TN_S1:2": "Счёт по сетам 1:2",
-   "TN_SET1": "Сорана Кырстя возьмёт хотя бы сет",
-   "TN_SET2": "Мэри Стояна возьмёт хотя бы сет"
-  },
-  "real": {},
-  "center": "Рейтинг Эло 1724 : 1611",
-  "bar": [
-   0.6568868619174376,
-   0,
-   0.3431131380825624
-  ],
-  "model": {
-   "elo": [
-    1724.1608636755527,
-    1611.339572487011
-   ],
-   "src": "Эло"
-  },
-  "main": {
-   "key": "TN_2S",
-   "label": "Будет 2 сета",
-   "p": 0.5226,
-   "odds": 1.78,
-   "est": true,
-   "stake": 1.0
-  },
-  "bold": {},
-  "open": {},
-  "top": false,
-  "msg_id": 2915,
-  "close": {
-   "_": null
-  },
-  "main_hit": true,
-  "bold_hit": null,
-  "btn": 2
- },
- "WTA|186676": {
-  "status": "skipped",
-  "kickoff": "2026-11-05T15:00:00+03:00"
- },
- "WTA|186588": {
-  "status": "skipped",
-  "kickoff": "2026-11-05T15:30:00+03:00"
- },
- "ATP|186498": {
-  "id": "186498",
-  "div": "ATP",
-  "sport": "tennis",
-  "tournament": "Rolex Paris Masters",
-  "round": "Round 3",
-  "bo5": false,
-  "kickoff": "2026-11-05T16:00:00+03:00",
-  "state": "pre",
-  "completed": false,
-  "status": "done",
-  "detail": "Thu, November 5th at 8:00 AM EST",
-  "home": {
-   "color": "2d6a4f",
-   "logo": [
-    "https://a.espncdn.com/i/headshots/tennis/players/full/3716.png",
-    "https://a.espncdn.com/i/teamlogos/countries/500/aus.png"
-   ],
-   "id": "3716",
-   "name": "Rinky Hijikata",
-   "country": "Australia",
-   "winner": false,
-   "sets": [],
-   "set_won": [],
-   "ru": "Ринки Хидзиката"
-  },
-  "away": {
-   "color": "2d6a4f",
-   "logo": [
-    "https://a.espncdn.com/i/headshots/tennis/players/full/3739.png",
-    "https://a.espncdn.com/i/teamlogos/countries/500/arg.png"
-   ],
-   "id": "3739",
-   "name": "Tomas Martin Etcheverry",
-   "country": "Argentina",
-   "winner": false,
-   "sets": [],
-   "set_won": [],
-   "ru": "Томас Мартин Этчеверри"
-  },
-  "odds": {},
-  "probs": {
-   "TN_W1": 0.5795045246042677,
-   "TN_W2": 0.4204954753957323,
-   "TN_3S": 0.4943387075033074,
-   "TN_2S": 0.5056612924966927,
-   "TN_S2:0": 0.30603446423489983,
-   "TN_S0:2": 0.19962682826179282,
-   "TN_S2:1": 0.2734700603693678,
-   "TN_S1:2": 0.2208686471339396,
-   "TN_SET1": 0.8003731717382072,
-   "TN_SET2": 0.6939655357651002
-  },
-  "labels": {
-   "TN_W1": "Победа: Ринки Хидзиката",
-   "TN_W2": "Победа: Томас Мартин Этчеверри",
-   "TN_3S": "Будет 3 сета",
-   "TN_2S": "Будет 2 сета",
-   "TN_S2:0": "Счёт по сетам 2:0",
-   "TN_S0:2": "Счёт по сетам 0:2",
-   "TN_S2:1": "Счёт по сетам 2:1",
-   "TN_S1:2": "Счёт по сетам 1:2",
-   "TN_SET1": "Ринки Хидзиката возьмёт хотя бы сет",
-   "TN_SET2": "Томас Мартин Этчеверри возьмёт хотя бы сет"
-  },
-  "real": {},
-  "center": "Рейтинг Эло 1568 : 1513",
-  "bar": [
-   0.5795045246042677,
-   0,
-   0.4204954753957323
-  ],
-  "model": {
-   "elo": [
-    1568.4516449479547,
-    1512.7334433144079
-   ],
-   "src": "Эло"
-  },
-  "main": {
-   "key": "TN_2S",
-   "label": "Будет 2 сета",
-   "p": 0.5057,
-   "odds": 1.84,
-   "est": true,
-   "stake": 1.0
-  },
-  "bold": {},
-  "open": {},
-  "top": false,
-  "msg_id": 2920,
-  "close": {
-   "_": null
-  },
-  "main_hit": false,
-  "bold_hit": null,
-  "btn": 2
- },
- "ATP|186499": {
-  "id": "186499",
-  "div": "ATP",
-  "sport": "tennis",
-  "tournament": "Rolex Paris Masters",
-  "round": "Round 3",
-  "bo5": false,
-  "kickoff": "2026-11-05T16:00:00+03:00",
-  "state": "pre",
-  "completed": false,
-  "status": "done",
-  "detail": "Thu, November 5th at 8:00 AM EST",
-  "home": {
-   "color": "2d6a4f",
-   "logo": [
-    "https://a.espncdn.com/i/headshots/tennis/players/full/3764.png",
-    "https://a.espncdn.com/i/teamlogos/countries/500/ita.png"
-   ],
-   "id": "3764",
-   "name": "Lorenzo Musetti",
-   "country": "Italy",
-   "winner": false,
-   "sets": [],
-   "set_won": [],
-   "ru": "Лоренцо Музетти"
-  },
-  "away": {
-   "color": "2d6a4f",
-   "logo": [
-    "https://a.espncdn.com/i/headshots/tennis/players/full/8814.png",
-    "https://a.espncdn.com/i/teamlogos/countries/500/fra.png"
-   ],
-   "id": "8814",
-   "name": "Luca Van Assche",
-   "country": "France",
-   "winner": false,
-   "sets": [],
-   "set_won": [],
-   "ru": "Люка Ван Аш"
-  },
-  "odds": {},
-  "probs": {
-   "TN_W1": 0.8132251392092061,
-   "TN_W2": 0.18677486079079386,
-   "TN_3S": 0.3998690345397164,
-   "TN_2S": 0.6001309654602835,
-   "TN_S2:0": 0.5238186564062749,
-   "TN_S0:2": 0.07631230905400867,
-   "TN_S2:1": 0.289406482802931,
-   "TN_S1:2": 0.11046255173678536,
-   "TN_SET1": 0.9236876909459913,
-   "TN_SET2": 0.4761813435937251
-  },
-  "labels": {
-   "TN_W1": "Победа: Лоренцо Музетти",
-   "TN_W2": "Победа: Люка Ван Аш",
-   "TN_3S": "Будет 3 сета",
-   "TN_2S": "Будет 2 сета",
-   "TN_S2:0": "Счёт по сетам 2:0",
-   "TN_S0:2": "Счёт по сетам 0:2",
-   "TN_S2:1": "Счёт по сетам 2:1",
-   "TN_S1:2": "Счёт по сетам 1:2",
-   "TN_SET1": "Лоренцо Музетти возьмёт хотя бы сет",
-   "TN_SET2": "Люка Ван Аш возьмёт хотя бы сет"
-  },
-  "real": {},
-  "center": "Рейтинг Эло 1854 : 1598",
-  "bar": [
-   0.8132251392092061,
-   0,
-   0.18677486079079386
-  ],
-  "model": {
-   "elo": [
-    1853.741297702686,
-    1598.1843480544821
-   ],
-   "src": "Эло"
-  },
-  "main": {
-   "key": "TN_2S",
-   "label": "Будет 2 сета",
-   "p": 0.6001,
-   "odds": 1.55,
-   "est": true,
-   "stake": 1.0
-  },
-  "bold": {},
-  "open": {},
-  "top": false,
-  "msg_id": 2922,
-  "close": {
-   "_": null
-  },
-  "main_hit": false,
-  "bold_hit": null,
-  "btn": 2
- },
  "ATP|186494": {
   "id": "186494",
   "div": "ATP",
@@ -9029,31 +8127,31 @@
   "kickoff": "2026-11-08T11:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Sun, November 8th at 3:00 AM EST",
   "home": {
-   "id": "2980",
-   "name": "Claire Liu",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/2980.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/usa.png"
    ],
+   "id": "2980",
+   "name": "Claire Liu",
    "country": "USA",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
    "ru": "Клер Лю"
   },
   "away": {
-   "id": "7759",
-   "name": "Alexandra Eala",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/7759.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/phi.png"
    ],
+   "id": "7759",
+   "name": "Alexandra Eala",
    "country": "Philippines",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
@@ -9113,7 +8211,9 @@
   "btn": 2,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null
  },
  "WTA|186690": {
   "id": "186690",
@@ -9125,31 +8225,31 @@
   "kickoff": "2026-11-08T13:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Sun, November 8th at 5:00 AM EST",
   "home": {
-   "id": "2902",
-   "name": "Anna Blinkova",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/2902.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/fra.png"
    ],
+   "id": "2902",
+   "name": "Anna Blinkova",
    "country": "France",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
    "ru": "Анна Блинкова"
   },
   "away": {
-   "id": "3401",
-   "name": "Sofya Lansere",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/3401.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/rus.png"
    ],
+   "id": "3401",
+   "name": "Sofya Lansere",
    "country": "Russia",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
@@ -9206,6 +8306,201 @@
   "open": {},
   "top": false,
   "msg_id": 4253,
+  "btn": 2,
+  "main_hit": false,
+  "bold_hit": null
+ },
+ "ATP|186507": {
+  "id": "186507",
+  "div": "ATP",
+  "sport": "tennis",
+  "tournament": "Rolex Paris Masters",
+  "round": "Final",
+  "bo5": false,
+  "kickoff": "2026-11-08T17:10:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "detail": "Sun, November 8th at 9:10 AM EST",
+  "home": {
+   "id": "9250",
+   "name": "Ben Shelton",
+   "logo": [
+    "https://a.espncdn.com/i/headshots/tennis/players/full/9250.png",
+    "https://a.espncdn.com/i/teamlogos/countries/500/usa.png"
+   ],
+   "country": "USA",
+   "color": "2d6a4f",
+   "winner": false,
+   "sets": [],
+   "set_won": [],
+   "ru": "Бен Шелтон"
+  },
+  "away": {
+   "id": "3782",
+   "name": "Carlos Alcaraz",
+   "logo": [
+    "https://a.espncdn.com/i/headshots/tennis/players/full/3782.png",
+    "https://a.espncdn.com/i/teamlogos/countries/500/esp.png"
+   ],
+   "country": "Spain",
+   "color": "2d6a4f",
+   "winner": false,
+   "sets": [],
+   "set_won": [],
+   "ru": "Карлос Алькарас"
+  },
+  "odds": {},
+  "probs": {
+   "TN_W1": 0.30523106241023656,
+   "TN_W2": 0.6947689375897634,
+   "TN_3S": 0.4646318419322346,
+   "TN_2S": 0.5353681580677654,
+   "TN_S2:0": 0.13470258019331952,
+   "TN_S0:2": 0.4006655778744459,
+   "TN_S2:1": 0.1705284822169171,
+   "TN_S1:2": 0.2941033597153175,
+   "TN_SET1": 0.5993344221255541,
+   "TN_SET2": 0.8652974198066805
+  },
+  "labels": {
+   "TN_W1": "Победа: Бен Шелтон",
+   "TN_W2": "Победа: Карлос Алькарас",
+   "TN_3S": "Будет 3 сета",
+   "TN_2S": "Будет 2 сета",
+   "TN_S2:0": "Счёт по сетам 2:0",
+   "TN_S0:2": "Счёт по сетам 0:2",
+   "TN_S2:1": "Счёт по сетам 2:1",
+   "TN_S1:2": "Счёт по сетам 1:2",
+   "TN_SET1": "Бен Шелтон возьмёт хотя бы сет",
+   "TN_SET2": "Карлос Алькарас возьмёт хотя бы сет"
+  },
+  "real": {},
+  "center": "Рейтинг Эло 1862 : 2005",
+  "bar": [
+   0.30523106241023656,
+   0,
+   0.6947689375897634
+  ],
+  "model": {
+   "elo": [
+    1861.7959563820586,
+    2004.6806223914464
+   ],
+   "src": "Эло"
+  },
+  "main": {
+   "key": "TN_2S",
+   "label": "Будет 2 сета",
+   "p": 0.5354,
+   "odds": 1.74,
+   "est": true,
+   "stake": 1.0
+  },
+  "bold": {},
+  "open": {},
+  "top": false,
+  "msg_id": 4340,
+  "btn": 2,
+  "close": {
+   "_": null
+  }
+ },
+ "WTA|186598": {
+  "id": "186598",
+  "div": "WTA",
+  "sport": "tennis",
+  "tournament": "Chennai Open",
+  "round": "Final",
+  "bo5": false,
+  "kickoff": "2026-11-08T17:30:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "detail": "Sun, November 8th at 9:30 AM EST",
+  "home": {
+   "id": "6368",
+   "name": "Janice Tjen",
+   "logo": [
+    "https://a.espncdn.com/i/headshots/tennis/players/full/6368.png",
+    "https://a.espncdn.com/i/teamlogos/countries/500/ina.png"
+   ],
+   "country": "Indonesia",
+   "color": "2d6a4f",
+   "winner": false,
+   "sets": [],
+   "set_won": [],
+   "ru": "Джанис Тьен"
+  },
+  "away": {
+   "id": "1649",
+   "name": "Magda Linette",
+   "logo": [
+    "https://a.espncdn.com/i/headshots/tennis/players/full/1649.png",
+    "https://a.espncdn.com/i/teamlogos/countries/500/pol.png"
+   ],
+   "country": "Poland",
+   "color": "2d6a4f",
+   "winner": false,
+   "sets": [],
+   "set_won": [],
+   "ru": "Магда Линетт"
+  },
+  "odds": {},
+  "probs": {
+   "TN_W1": 0.5677971203553589,
+   "TN_W2": 0.4322028796446411,
+   "TN_3S": 0.49589179476798906,
+   "TN_2S": 0.5041082052320108,
+   "TN_S2:0": 0.29737631147662297,
+   "TN_S0:2": 0.2067318937553879,
+   "TN_S2:1": 0.2704208088787358,
+   "TN_S1:2": 0.22547098588925327,
+   "TN_SET1": 0.7932681062446121,
+   "TN_SET2": 0.702623688523377
+  },
+  "labels": {
+   "TN_W1": "Победа: Джанис Тьен",
+   "TN_W2": "Победа: Магда Линетт",
+   "TN_3S": "Будет 3 сета",
+   "TN_2S": "Будет 2 сета",
+   "TN_S2:0": "Счёт по сетам 2:0",
+   "TN_S0:2": "Счёт по сетам 0:2",
+   "TN_S2:1": "Счёт по сетам 2:1",
+   "TN_S1:2": "Счёт по сетам 1:2",
+   "TN_SET1": "Джанис Тьен возьмёт хотя бы сет",
+   "TN_SET2": "Магда Линетт возьмёт хотя бы сет"
+  },
+  "real": {},
+  "center": "Рейтинг Эло 1644 : 1596",
+  "bar": [
+   0.5677971203553589,
+   0,
+   0.4322028796446411
+  ],
+  "model": {
+   "elo": [
+    1643.7112060667587,
+    1596.3089942721062
+   ],
+   "src": "Эло"
+  },
+  "main": {
+   "key": "TN_2S",
+   "label": "Будет 2 сета",
+   "p": 0.5041,
+   "odds": 1.84,
+   "est": true,
+   "stake": 1.0
+  },
+  "bold": {},
+  "open": {},
+  "top": false,
+  "msg_id": 4342,
   "btn": 2
+ },
+ "ATP|186534": {
+  "status": "skipped",
+  "kickoff": "2026-11-08T18:00:00+03:00"
  }
 }
