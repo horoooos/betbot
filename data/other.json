@@ -9036,5 +9036,101 @@
   "top": false,
   "msg_id": 4598,
   "btn": 4
+ },
+ "NBA|401909948": {
+  "id": "401909948",
+  "div": "NBA",
+  "sport": "basketball",
+  "kickoff": "2026-11-09T03:30:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "home": {
+   "id": "6",
+   "name": "Dallas Mavericks",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/dal.png",
+   "color": "0064b1",
+   "score": "0",
+   "record": "5-4",
+   "periods": [],
+   "ru": "Даллас Маверикс"
+  },
+  "away": {
+   "id": "17",
+   "name": "Brooklyn Nets",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/bkn.png",
+   "color": "000000",
+   "score": "0",
+   "record": "2-7",
+   "periods": [],
+   "ru": "Бруклин Нетс"
+  },
+  "odds": {
+   "H": 1.328,
+   "A": 3.48,
+   "line": 223.5,
+   "over": 1.926,
+   "under": 1.893,
+   "spread": -7.5,
+   "sp_h": 1.935,
+   "sp_a": 1.885
+  },
+  "probs": {
+   "BB_ML_H": 0.7340144709512995,
+   "BB_ML_A": 0.26598552904870054,
+   "BB_SPR_H": 0.5,
+   "BB_SPR_A": 0.5,
+   "BB_O216.5": 0.6597440535491568,
+   "BB_U216.5": 0.3402559464508432,
+   "BB_O223.5": 0.5,
+   "BB_U223.5": 0.5,
+   "BB_O230.5": 0.3402559464508432,
+   "BB_U230.5": 0.6597440535491568
+  },
+  "labels": {
+   "BB_ML_H": "П1 (с ОТ)",
+   "BB_ML_A": "П2 (с ОТ)",
+   "BB_SPR_H": "Ф1 (-7.5)",
+   "BB_SPR_A": "Ф2 (+7.5)",
+   "BB_O216.5": "ТБ 216.5",
+   "BB_U216.5": "ТМ 216.5",
+   "BB_O223.5": "ТБ 223.5",
+   "BB_U223.5": "ТМ 223.5",
+   "BB_O230.5": "ТБ 230.5",
+   "BB_U230.5": "ТМ 230.5"
+  },
+  "real": {
+   "BB_ML_H": 1.328,
+   "BB_ML_A": 3.48,
+   "BB_SPR_H": 1.935,
+   "BB_SPR_A": 1.885,
+   "BB_O223.5": 1.926,
+   "BB_U223.5": 1.893
+  },
+  "center": "Ожидаемый счёт 116 : 108",
+  "bar": [
+   0.7340144709512995,
+   0,
+   0.26598552904870054
+  ],
+  "model": {
+   "mu": 7.5,
+   "T": 223.5
+  },
+  "main": {
+   "key": "BB_U223.5",
+   "label": "ТМ 223.5",
+   "p": 0.5,
+   "odds": 1.89,
+   "est": false,
+   "stake": 1.0
+  },
+  "bold": {},
+  "open": {
+   "BB_U223.5": 0.5
+  },
+  "top": false,
+  "msg_id": 4605,
+  "btn": 4
  }
 }
