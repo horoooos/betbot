@@ -8629,22 +8629,22 @@
   "kickoff": "2026-11-08T04:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "home": {
+   "color": "007ac1",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/okc.png",
    "id": "25",
    "name": "Oklahoma City Thunder",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/okc.png",
-   "color": "007ac1",
    "score": "0",
    "record": "7-2",
    "periods": [],
    "ru": "Оклахома-Сити Тандер"
   },
   "away": {
+   "color": "e31837",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/wsh.png",
    "id": "27",
    "name": "Washington Wizards",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/wsh.png",
-   "color": "e31837",
    "score": "0",
    "record": "4-5",
    "periods": [],
@@ -8719,7 +8719,9 @@
   "btn": 2,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null
  },
  "NBA|401909942": {
   "id": "401909942",
