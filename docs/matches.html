@@ -2,6 +2,7 @@
 <html lang="ru">
 <head>
 <meta charset="utf-8">
+<link rel="icon" href="favicon.ico" sizes="any"><link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="manifest" href="site.webmanifest"><meta property="og:image" content="https://horoooos.github.io/betbot/og.png"><meta name="twitter:image" content="https://horoooos.github.io/betbot/og.png">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Матчи онлайн сегодня: футбол, хоккей, НБА, теннис — АИ СТАВИТ</title>
 <link rel="canonical" href="https://horoooos.github.io/betbot/matches.html">
@@ -78,32 +79,41 @@ const time = iso => new Date(iso).toLocaleTimeString("ru-RU", { hour: "2-digit",
 const day = iso => { const d = new Date(iso), n = new Date(); const f = x => x.toLocaleDateString("ru-RU", { timeZone: "Europe/Moscow" });
   return f(d) === f(n) ? "сегодня" : f(d) === f(new Date(n.getTime() + 864e5)) ? "завтра" : d.toLocaleDateString("ru-RU", { day: "numeric", month: "short", timeZone: "Europe/Moscow" }); };
 
+// сколько обычно длится матч — если ESPN не ответил, по времени понимаем, что он идёт
+const DUR = { football: 115, hockey: 165, basketball: 150, tennis: 200 };
+const ymd = t => new Date(t).toISOString().slice(0, 10).replace(/-/g, "");
+async function espn(p) {
+  // «сегодня» у ESPN — по американскому времени, поэтому спрашиваем и без даты, и за сегодня/вчера по UTC; при сбое — ещё раз
+  const urls = [``, `?dates=${ymd(Date.now())}`, `?dates=${ymd(Date.now() - 864e5)}`].map(q => `https://site.api.espn.com/apis/site/v2/sports/${p}/scoreboard${q}`);
+  const events = [];
+  await Promise.all(urls.map(async u => { for (let i = 0; i < 2; i++) { try { const r = await fetch(u, { cache: "no-store" }); if (r.ok) { events.push(...((await r.json()).events || [])); return; } } catch (e) {} } }));
+  return events;
+}
 async function scores() {
   // статус и счёт берём у ESPN — только для лиг, где матч может идти прямо сейчас
-  const now = Date.now(), paths = new Set(all.filter(m => { const k = new Date(m.kickoff).getTime(); return k - 15 * 60e3 < now && now - k < 4 * 3600e3; }).map(m => m.path));
+  const now = Date.now(), paths = new Set(all.filter(m => { const k = new Date(m.kickoff).getTime(); return k - 15 * 60e3 < now && now - k < 5 * 3600e3; }).map(m => m.path));
   await Promise.all([...paths].map(async p => {
-    try {
-      const d = await (await fetch(`https://site.api.espn.com/apis/site/v2/sports/${p}/scoreboard`, { cache: "no-store" })).json();
-      const put = c => { const t = c.status?.type || {}, cs = c.competitors || [];
-        const h = cs.find(x => x.homeAway === "home") || [...cs].sort((a, b) => (a.order || 0) - (b.order || 0))[0];
-        const a = cs.find(x => x.homeAway === "away") || [...cs].sort((a, b) => (a.order || 0) - (b.order || 0))[1];
-        const sets = x => (x?.linescores || []).map(s => s.value);
-        live[String(c.id)] = { state: t.state, detail: t.shortDetail || "", clock: c.status?.displayClock, period: c.status?.period,
-          hs: p.startsWith("tennis") ? null : h?.score, as: p.startsWith("tennis") ? null : a?.score, hsets: sets(h), asets: sets(a), hw: h?.winner, aw: a?.winner }; };
-      for (const e of d.events || []) { if (e.competitions) for (const c of e.competitions) put({ ...c, id: c.id || e.id });
-        for (const g of e.groupings || []) for (const c of g.competitions || []) put(c); }
-    } catch (e) {}
+    const put = c => { const t = c.status?.type || {}, cs = c.competitors || [];
+      const h = cs.find(x => x.homeAway === "home") || [...cs].sort((a, b) => (a.order || 0) - (b.order || 0))[0];
+      const a = cs.find(x => x.homeAway === "away") || [...cs].sort((a, b) => (a.order || 0) - (b.order || 0))[1];
+      const sets = x => (x?.linescores || []).map(s => s.value);
+      live[String(c.id)] = { state: t.state, detail: t.shortDetail || "", clock: c.status?.displayClock, period: c.status?.period, at: Date.now(),
+        hs: p.startsWith("tennis") ? null : h?.score, as: p.startsWith("tennis") ? null : a?.score, hsets: sets(h), asets: sets(a), hw: h?.winner, aw: a?.winner }; };
+    for (const e of await espn(p)) { for (const c of e.competitions || []) put({ ...c, id: c.id || e.id });
+      for (const g of e.groupings || []) for (const c of g.competitions || []) put(c); }
   }));
 }
 function status(m) {
   const s = live[m.id], k = new Date(m.kickoff).getTime(), now = Date.now();
-  if (s) return s.state;
-  return k > now ? "pre" : now - k < 2 * 3600e3 ? "pre" : "post";
+  if (s && !(s.state === "pre" && now - k > 20 * 60e3 && now - k < (DUR[m.sport] || 120) * 60e3)) return s.state;
+  // ESPN молчит — решаем по времени: начался и ещё не должен был закончиться → идёт
+  if (k > now) return "pre";
+  return now - k < (DUR[m.sport] || 120) * 60e3 ? "in" : "post";
 }
 function card(m) {
   const s = live[m.id] || {}, st = status(m);
   let label = `${day(m.kickoff)}, ${time(m.kickoff)}`, cls = "";
-  if (st === "in") { cls = "l"; label = m.sport === "tennis" ? "● Идёт игра" : m.sport === "football" ? `● ${s.clock || s.detail}` : `● ${s.detail || s.clock}`; }
+  if (st === "in") { cls = "l"; label = !s.state || s.state !== "in" ? "● Идёт" : m.sport === "tennis" ? "● Идёт игра" : m.sport === "football" ? `● ${s.clock || s.detail}` : `● ${s.detail || s.clock}`; }
   if (st === "post") { cls = "f"; label = "Завершён"; }
   const ten = m.sport === "tennis", hsets = (s.hsets || []).join(" "), asets = (s.asets || []).join(" ");
   const hsc = st === "pre" ? "" : ten ? hsets : (s.hs ?? ""), asc = st === "pre" ? "" : ten ? asets : (s.as ?? "");

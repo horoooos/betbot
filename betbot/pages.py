@@ -150,7 +150,7 @@ def nav(prefix: str, on: str = "") -> str:
 def page(prefix: str, title: str, desc: str, canon: str, body: str, on: str = "", og_image: str | None = None,
          ld: list[dict] | None = None, og_type: str = "website") -> str:
     lds = "".join(f'<script type="application/ld+json">{json.dumps(x, ensure_ascii=False)}</script>' for x in (ld or []))
-    img = f'<meta property="og:image" content="{H.escape(og_image)}"><meta name="twitter:card" content="summary_large_image">' if og_image else '<meta name="twitter:card" content="summary">'
+    img = f'<meta property="og:image" content="{H.escape(og_image or SITE + "og.png")}"><meta name="twitter:card" content="summary_large_image">'
     return f"""<!doctype html>
 <html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{H.escape(title)}</title><meta name="description" content="{H.escape(desc[:300])}">
@@ -158,6 +158,7 @@ def page(prefix: str, title: str, desc: str, canon: str, body: str, on: str = ""
 <meta property="og:type" content="{og_type}"><meta property="og:title" content="{H.escape(title)}"><meta property="og:description" content="{H.escape(desc[:300])}">
 <meta property="og:url" content="{canon}"><meta property="og:site_name" content="АИ СТАВИТ"><meta property="og:locale" content="ru_RU">{img}
 <meta name="theme-color" content="#070b1a">
+<link rel="icon" href="{prefix}favicon.ico" sizes="any"><link rel="icon" type="image/png" sizes="32x32" href="{prefix}favicon-32.png"><link rel="apple-touch-icon" href="{prefix}apple-touch-icon.png"><link rel="manifest" href="{prefix}site.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{prefix}site.css?v=4">{lds}
 </head><body><main>

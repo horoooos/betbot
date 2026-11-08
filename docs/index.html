@@ -7,7 +7,7 @@
 <meta property="og:type" content="website"><meta property="og:url" content="https://horoooos.github.io/betbot/">
 <meta property="og:title" content="АИ СТАВИТ — прогнозы на спорт с честной статистикой">
 <meta property="og:description" content="Бесплатные прогнозы на спорт от бота АИ СТАВИТ: футбол, хоккей НХЛ, баскетбол НБА, теннис, CS2 и Dota 2. Честная статистика всех 746 прогнозов: заходит 57%, ROI и виртуальный банк. Матчи онлайн."><meta property="og:locale" content="ru_RU">
-<meta name="twitter:card" content="summary"><meta name="theme-color" content="#070b1a">
+<meta name="twitter:card" content="summary_large_image"><meta name="theme-color" content="#070b1a"><meta property="og:image" content="https://horoooos.github.io/betbot/og.png"><meta name="twitter:image" content="https://horoooos.github.io/betbot/og.png"><link rel="icon" href="favicon.ico" sizes="any"><link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="manifest" href="site.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="site.css?v=4">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"АИ СТАВИТ","url":"https://horoooos.github.io/betbot/","description":"Бесплатные прогнозы на спорт от бота АИ СТАВИТ: футбол, хоккей НХЛ, баскетбол НБА, теннис, CS2 и Dota 2. Честная статистика всех 746 прогнозов: заходит 57%, ROI и виртуальный банк. Матчи онлайн.","sameAs":["https://t.me/aistavvit"]}</script>
@@ -112,23 +112,33 @@ footer{margin-top:34px;color:var(--muted);font-size:12px}
   const box = document.getElementById("live"); if (!box) return;
   let all = []; try { all = await (await fetch("matches.json", { cache: "no-store" })).json(); } catch (e) { return; }
   const now = Date.now(), live = {};
-  const paths = new Set(all.filter(m => { const k = new Date(m.kickoff).getTime(); return k - 15 * 60e3 < now && now - k < 4 * 3600e3; }).map(m => m.path));
+  const paths = new Set(all.filter(m => { const k = new Date(m.kickoff).getTime(); return k - 15 * 60e3 < now && now - k < 5 * 3600e3; }).map(m => m.path));
+  const ymd = t => new Date(t).toISOString().slice(0, 10).replace(/-/g, "");
   await Promise.all([...paths].map(async p => { try {
-    const d = await (await fetch(`https://site.api.espn.com/apis/site/v2/sports/${p}/scoreboard`, { cache: "no-store" })).json();
+    const evs = [];   // без даты + сегодня/вчера по UTC (у ESPN «сегодня» — по времени США), при сбое — повтор
+    await Promise.all(["", `?dates=${ymd(now)}`, `?dates=${ymd(now - 864e5)}`].map(async q => { for (let i = 0; i < 2; i++) { try {
+      const r = await fetch(`https://site.api.espn.com/apis/site/v2/sports/${p}/scoreboard${q}`, { cache: "no-store" }); if (r.ok) { evs.push(...((await r.json()).events || [])); return; } } catch (e) {} } }));
+    const d = { events: evs };
     const put = c => { const cs = c.competitors || [], h = cs.find(x => x.homeAway === "home") || cs[0], a = cs.find(x => x.homeAway === "away") || cs[1];
       live[String(c.id)] = { state: c.status?.type?.state, clock: c.status?.displayClock || c.status?.type?.shortDetail, s: p.startsWith("tennis") ? "" : `${h?.score ?? ""}:${a?.score ?? ""}` }; };
     for (const e of d.events || []) { for (const c of e.competitions || []) put({ ...c, id: c.id || e.id }); for (const g of e.groupings || []) for (const c of g.competitions || []) put(c); }
   } catch (e) {} }));
   const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
   const EM = { football: "⚽", hockey: "🏒", basketball: "🏀", tennis: "🎾" };
-  let on = all.filter(m => live[m.id]?.state === "in"), title = '<span class="dot"></span>Сейчас в эфире — смотрите онлайн';
+  const DUR = { football: 115, hockey: 165, basketball: 150, tennis: 200 };
+  const going = m => { const s = live[m.id], k = new Date(m.kickoff).getTime();
+    if (s && s.state !== "pre") return s.state === "in";
+    return k < now && now - k < (DUR[m.sport] || 120) * 60e3;   // ESPN молчит — решаем по времени начала
+  };
+  let on = all.filter(going), title = '<span class="dot"></span>Сейчас в эфире — смотрите онлайн';
   on.sort((a, b) => (b.tip ? 1 : 0) - (a.tip ? 1 : 0));
   if (!on.length) { on = all.filter(m => m.tip && new Date(m.kickoff).getTime() > now).slice(0, 4); title = "⏳ Ближайшие матчи с прогнозом бота"; }
   if (!on.length) { on = all.filter(m => new Date(m.kickoff).getTime() > now).slice(0, 4); title = "⏳ Ближайшие матчи онлайн"; }
   if (!on.length) return;
   const t = iso => new Date(iso).toLocaleTimeString("ru-RU", { hour: "2-digit", minute: "2-digit", timeZone: "Europe/Moscow" });
   box.innerHTML = `<h2>${title}</h2><div class="row">${on.slice(0, 6).map(m => { const s = live[m.id];
-    return `<a class="lm" href="${esc(m.url)}"><div class="t"><span>${EM[m.sport] || ""} ${esc(m.league)}</span><span class="${s?.state === "in" ? "l" : ""}">${s?.state === "in" ? "● " + esc(s.clock || "LIVE") : t(m.kickoff)}</span></div>
+    const g = going(m);
+    return `<a class="lm" href="${esc(m.url)}"><div class="t"><span>${EM[m.sport] || ""} ${esc(m.league)}</span><span class="${g ? "l" : ""}">${g ? "● " + esc(s?.state === "in" ? (s.clock || "LIVE") : "идёт") : t(m.kickoff)}</span></div>
       <div class="n"><span>${esc(m.home)} — ${esc(m.away)}</span><span>${s?.state === "in" ? esc(s.s) : ""}</span></div>
       <div class="w">${m.tip ? "🎯 " + esc(m.tip) : "📺 Смотреть онлайн"}</div></a>`; }).join("")}</div>`;
   box.style.display = "block";
