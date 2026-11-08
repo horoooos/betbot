@@ -1,131 +1,6 @@
 [
 {
 "sport": "football",
-"id": "401878343",
-"league": "Шотландия · Премьершип",
-"kickoff": "2026-11-08T19:00:00+03:00",
-"home": "Селтик",
-"away": "Килмарнок",
-"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/256.png",
-"al": "https://a.espncdn.com/i/teamlogos/soccer/500/260.png",
-"hid": "256",
-"aid": "260",
-"bb": "https://betboom.ru/search?query=%D0%A1%D0%B5%D0%BB%D1%82%D0%B8%D0%BA",
-"path": "soccer/sco.1",
-"url": "live.html?s=football&p=soccer%2Fsco.1&e=401878343&h=%D0%A1%D0%B5%D0%BB%D1%82%D0%B8%D0%BA&a=%D0%9A%D0%B8%D0%BB%D0%BC%D0%B0%D1%80%D0%BD%D0%BE%D0%BA",
-"tip": "Обе забьют — да · ≈1.68",
-"top": false,
-"bot": {
-"main": {
-"label": "Обе забьют — да",
-"p": 0.555,
-"odds": 1.68,
-"est": true
-},
-"bold": null,
-"markets": [
-[
-"П1",
-0.804,
-1.154
-],
-[
-"Ничья",
-0.127,
-8.5
-],
-[
-"П2",
-0.069,
-13.0
-],
-[
-"1X",
-0.931,
-null
-],
-[
-"X2",
-0.196,
-null
-],
-[
-"ТБ 1.5",
-0.907,
-null
-],
-[
-"ТБ 2.5",
-0.75,
-null
-],
-[
-"ТМ 2.5",
-0.25,
-null
-],
-[
-"ТБ 3.5",
-0.551,
-1.625
-],
-[
-"Обе забьют — да",
-0.555,
-null
-],
-[
-"Обе забьют — нет",
-0.445,
-null
-],
-[
-"ИТ1 больше 1.5",
-0.809,
-null
-],
-[
-"ИТ2 больше 1.5",
-0.214,
-null
-],
-[
-"Ф1 (−1.5)",
-0.624,
-null
-],
-[
-"Ф2 (+1.5)",
-0.376,
-null
-]
-],
-"bar": [
-0.803998805973179,
-0.12692210215388472,
-0.06907909187293612
-],
-"center": "Ожидаемые голы (xG) 3.1 : 0.9",
-"scores": [
-[
-"3:0",
-0.095
-],
-[
-"2:0",
-0.093
-],
-[
-"3:1",
-0.082
-]
-],
-"corners": 12.4,
-"cards": 4.0
-}
-},
-{
-"sport": "football",
 "id": "401876412",
 "league": "Франция · Лига 1",
 "kickoff": "2026-11-08T19:15:00+03:00",
@@ -2762,7 +2637,7 @@ null
 "sport": "tennis",
 "id": "187373",
 "league": "Теннис · WTA",
-"kickoff": "2026-11-08T23:00:00+03:00",
+"kickoff": "2026-11-08T23:05:00+03:00",
 "home": "Марта Костюк",
 "away": "Линда Носкова",
 "hl": "https://a.espncdn.com/i/teamlogos/countries/500/ukr.png",
@@ -4036,6 +3911,24 @@ null
 "bb": "https://betboom.ru/search?query=%D0%A5%D1%8C%D1%8E%D1%81%D1%82%D0%BE%D0%BD",
 "path": "basketball/nba",
 "url": "live.html?s=basketball&p=basketball%2Fnba&e=401909957&h=%D0%A5%D1%8C%D1%8E%D1%81%D1%82%D0%BE%D0%BD+%D0%A0%D0%BE%D0%BA%D0%B5%D1%82%D1%81&a=%D0%94%D0%B5%D0%BD%D0%B2%D0%B5%D1%80+%D0%9D%D0%B0%D0%B3%D0%B3%D0%B5%D1%82%D1%81",
+"tip": "",
+"top": false,
+"bot": null
+},
+{
+"sport": "basketball",
+"id": "401909958",
+"league": "США · NBA",
+"kickoff": "2026-11-10T05:00:00+03:00",
+"home": "Финикс Санз",
+"away": "Сан-Антонио Сперс",
+"hl": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/phx.png",
+"al": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/sa.png",
+"hid": "21",
+"aid": "24",
+"bb": "https://betboom.ru/search?query=%D0%A4%D0%B8%D0%BD%D0%B8%D0%BA%D1%81",
+"path": "basketball/nba",
+"url": "live.html?s=basketball&p=basketball%2Fnba&e=401909958&h=%D0%A4%D0%B8%D0%BD%D0%B8%D0%BA%D1%81+%D0%A1%D0%B0%D0%BD%D0%B7&a=%D0%A1%D0%B0%D0%BD-%D0%90%D0%BD%D1%82%D0%BE%D0%BD%D0%B8%D0%BE+%D0%A1%D0%BF%D0%B5%D1%80%D1%81",
 "tip": "",
 "top": false,
 "bot": null
