@@ -634,13 +634,13 @@ def main():
             save_json(path, store)
 
     # бот в личке: кнопка-меню «📺 Матчи онлайн» (один раз) и ответы тем, кто написал боту
-    if state.get("bot_setup") != 2:  # 2 — кнопки «онлайн» вместо «3D»
+    if state.get("bot_setup") != 3:  # 3 — меню бота открывает мини-приложение (app.html), всегда свежую версию
         try:
-            telegram.setup_bot(live.MATCHES_PAGE, site.SITE, site.CHANNEL)
-            state["bot_setup"] = 2
+            telegram.setup_bot(live.APP_MATCHES, site.SITE, site.CHANNEL)
+            state["bot_setup"] = 3
         except Exception as e:
             print(f"  ! меню бота не настроилось: {e}")
-    telegram.answer_users(state, live.MATCHES_PAGE, site.SITE, site.CHANNEL)
+    telegram.answer_users(state, live.APP_MATCHES, site.SITE, site.CHANNEL)
 
     # разовая переотправка постов по запросу (data/repost.json) — выполняется один раз на каждый id
     req = load_json(REPOST, {})

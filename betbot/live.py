@@ -23,7 +23,8 @@ LIVE = {
     "NHL", "NBA", "WNBA", "ATP", "WTA", "CS2", "DOTA",
 }
 TRACKER = "https://horoooos.github.io/betbot/live.html"  # 3D-трекер матча (docs/live.html на GitHub Pages)
-MATCHES_PAGE = "https://horoooos.github.io/betbot/matches.html"  # все матчи дня онлайн
+MATCHES_PAGE = "https://horoooos.github.io/betbot/matches.html"
+APP_MATCHES = "https://horoooos.github.io/betbot/app.html?startapp=matches"  # то же внутри Telegram — всегда свежая версия  # все матчи дня онлайн
 # В хоккее шайб много (ночью NHL — десятки постов), поэтому там только «матч начался» и итог.
 WORD = {"football": ("ГОЛ!", "⚽️"), "esports": ("КАРТА!", "🎮")}
 START = {"football": "все голы будут здесь", "hockey": "итог матча будет здесь",

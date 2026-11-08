@@ -23,6 +23,21 @@ jobs:
       - uses: actions/checkout@v4
         with:
           sparse-checkout: docs
+      - name: Версии файлов по содержимому (сброс кэша в браузерах и мини-приложении Telegram)
+        run: |
+          python3 - <<'EOF'
+          import hashlib, pathlib, re
+          docs = pathlib.Path("docs")
+          ver = {n: hashlib.md5((docs / n).read_bytes()).hexdigest()[:8] for n in ("site.css", "fb.js", "espn.js") if (docs / n).exists()}
+          pat = re.compile(r"(site\.css|fb\.js|espn\.js)\?v=[0-9A-Za-z]+")
+          n = 0
+          for f in list(docs.rglob("*.html")) + [docs / "fb.js"]:
+              t = f.read_text(encoding="utf-8")
+              t2 = pat.sub(lambda m: f"{m.group(1)}?v={ver.get(m.group(1), 'x')}", t)
+              if t2 != t:
+                  f.write_text(t2, encoding="utf-8"); n += 1
+          print("версии:", ver, "| страниц обновлено:", n)
+          EOF
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

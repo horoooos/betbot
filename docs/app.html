@@ -27,7 +27,8 @@
   try { sessionStorage.setItem("tgapp", "1"); } catch (e) {}
   const q = new URLSearchParams(location.search);
   const sp = (tg && tg.initDataUnsafe && tg.initDataUnsafe.start_param) || q.get("tgWebAppStartParam") || q.get("startapp") || "";
-  const go = u => location.replace(u);
+  const fresh = u => u + (u.includes("?") ? "&" : "?") + "_=" + Math.floor(Date.now() / 60000);   // свежая страница, не из кэша Telegram
+  const go = u => location.replace(fresh(u));
   const PAGES = { matches: "matches.html", news: "news/", top: "top.html", feed: "feed.html", preds: "predictions/", home: "./", teams: "leagues.html" };
   if (PAGES[sp]) return go(PAGES[sp]);
   const m = sp.match(/^m(\d{3,12})$/);
