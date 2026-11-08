@@ -473,5 +473,13 @@ export function bellButton() {
 }
 
 // запуск кнопок меню — в самом конце, когда все функции модуля уже объявлены
-const boot = () => { supportButton(); onlineBadge(); bellButton(); };
+/** 🔍 в шапке — поиск команд и игроков (страница leagues.html). */
+export function searchButton() {
+  const box = navActs();
+  if (!box || box.querySelector(".srch")) return;
+  const a = document.createElement("a"); a.className = "srch bell"; a.title = "Поиск команд и игроков"; a.textContent = "🔍";
+  a.href = new URL("leagues.html", import.meta.url).href;
+  box.insertBefore(a, box.querySelector(".support") ? box.querySelector(".support").nextSibling : box.firstChild);
+}
+const boot = () => { supportButton(); searchButton(); onlineBadge(); bellButton(); };
 if (typeof document !== "undefined") { if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", boot); else boot(); }

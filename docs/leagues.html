@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<link rel="icon" href="favicon.ico" sizes="any"><link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="manifest" href="site.webmanifest">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Команды, игроки и турниры: таблицы, расписание, статистика — АИ СТАВИТ</title>
+<meta name="description" content="Поиск любой команды и игрока: расписание матчей, форма, состав, статистика. Турнирные таблицы футбола, НХЛ, НБА и рейтинги теннисистов ATP и WTA.">
+<link rel="canonical" href="https://horoooos.github.io/betbot/leagues.html">
+<meta property="og:title" content="Команды, игроки и турниры — АИ СТАВИТ"><meta property="og:type" content="website"><meta property="og:locale" content="ru_RU"><meta property="og:image" content="https://horoooos.github.io/betbot/og.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css?v=4">
+<style>
+  .sbox{position:relative;margin:14px 0 6px}.sbox input{width:100%;padding:14px 16px 14px 44px;border-radius:16px;border:1px solid var(--line);background:rgba(255,255,255,.06);color:#fff;font:700 16px Montserrat,sans-serif;outline:none}
+  .sbox input:focus{border-color:var(--gold)}.sbox:before{content:"🔍";position:absolute;left:15px;top:50%;transform:translateY(-50%);font-size:16px}
+  .res a .ic{width:40px;height:40px;border-radius:50%;background:#fff;display:grid;place-items:center;overflow:hidden;flex:none}.res a .ic img{width:32px;height:32px;object-fit:contain}
+  .res a .ic.p{background:linear-gradient(160deg,#28336b,#141c40)}.res a .ic.p img{width:40px;height:40px;object-fit:cover}
+  .lgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:8px}.lgrid a{display:flex;gap:10px;align-items:center;padding:11px 12px;border-radius:14px;background:rgba(255,255,255,.04);border:1px solid var(--line);text-decoration:none;font-weight:800}
+  .lgrid a:hover{background:rgba(255,255,255,.08)}.lgrid a small{display:block;color:var(--muted);font-weight:600;font-size:12px}.lgrid .f{font-size:22px;width:28px;text-align:center;flex:none}
+</style>
+</head>
+<body><main>
+<nav class="topnav"><a class="logo" href="./">АИ СТАВИТ</a><div class="links"><a href="matches.html">Матчи онлайн</a><a href="predictions/">Прогнозы</a><a href="news/">Новости</a><a href="feed.html">Лента</a><a href="top.html">Рейтинг</a></div><div class="navacts"><a class="me" id="navUser" href="profile.html">Войти</a></div></nav>
+<div class="crumbs"><a href="./">Главная</a> › Команды и турниры</div>
+<h1>Команды, игроки <span>и турниры</span></h1>
+<p class="lead">Найдите любую команду или игрока — расписание матчей, форма, состав, место в таблице и статистика. Можно писать по-русски: «Арсенал», «Овечкин», «Медведев».</p>
+<div class="sbox"><input id="q" type="search" placeholder="Команда или игрок…" autocomplete="off" enterkeyhint="search"></div>
+<div id="res" class="pl res"></div>
+<div id="list"><p class="load">Загружаем турниры…</p></div>
+<p style="margin-top:18px"><a class="btn" href="teams/">🎯 Команды, на которые бот давал прогнозы →</a></p>
+<footer>АИ СТАВИТ · <a href="./">Статистика бота</a> · <a href="matches.html">Матчи онлайн</a> · <a href="tools.html">Калькуляторы</a> · <a href="school/">Школа ставок</a> · <a href="teams/">Команды</a></footer>
+</main>
+<script type="module">
+import * as E from "./espn.js?v=1";
+import("./fb.js?v=9").then(fb => { fb.navUser(document.getElementById("navUser")); fb.track("leagues"); }).catch(() => {});
+const { $, esc } = E;
+document.head.insertAdjacentHTML("beforeend", `<style>${E.CSS}</style>`);
+const D = await E.dir();
+const GROUPS = [["⚽️ Футбол — чемпионаты", l => l.s === "football" && !["Европа", "Сборные", "Южная Америка", "КОНКАКАФ"].includes(l.c) && !/Кубок|Суперкубок/.test(l.n)],
+  ["🏆 Еврокубки и международные турниры", l => l.s === "football" && ["Европа", "Южная Америка", "КОНКАКАФ"].includes(l.c)],
+  ["🌍 Сборные", l => l.s === "football" && l.c === "Сборные"],
+  ["🥇 Национальные кубки", l => l.s === "football" && /Кубок|Суперкубок/.test(l.n) && !["Европа", "Сборные", "Южная Америка", "КОНКАКАФ"].includes(l.c)],
+  ["🏒 Хоккей", l => l.s === "hockey"], ["🏀 Баскетбол", l => l.s === "basketball"], ["🎾 Теннис", l => l.s === "tennis"]];
+$("#list").innerHTML = GROUPS.map(([t, f]) => { const ls = D.leagues.filter(f); return ls.length ? `<h2>${t}</h2><div class="lgrid">${ls.map(l => `<a href="${E.leagueUrl(l.p)}"><span class="f">${E.leagueIcon(l, 26)}</span><span>${esc(l.n)}<small>${esc(l.c)}</small></span></a>`).join("")}</div>` : ""; }).join("");
+
+let timer, seq = 0;
+const go = async () => {
+  const v = $("#q").value.trim(), my = ++seq;
+  if (v.length < 2) { $("#res").innerHTML = ""; return; }
+  $("#res").innerHTML = `<p class="load">Ищем…</p>`;
+  const r = await E.search(v).catch(() => []);
+  if (my !== seq) return;
+  $("#res").innerHTML = r.length ? r.map(x => `<a href="${x.url}"><span class="ic ${x.type === "player" ? "p" : ""}">${x.img ? `<img src="${esc(x.img)}" alt="" onerror="this.remove()">` : x.type === "player" ? "👤" : "🛡"}</span>
+    <span style="min-width:0"><div class="n">${esc(x.name)}</div><div class="m">${x.type === "player" ? "Игрок" : "Команда"} · ${esc(x.sub)}</div></span></a>`).join("")
+    : `<p class="muted">Ничего не нашли. Попробуйте написать по-английски, например «Arsenal» или «Ovechkin».</p>`;
+};
+$("#q").oninput = () => { clearTimeout(timer); timer = setTimeout(go, 350); };
+const q0 = new URLSearchParams(location.search).get("q"); if (q0) { $("#q").value = q0; go(); }
+</script>
+</body>
+</html>

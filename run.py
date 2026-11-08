@@ -16,7 +16,7 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-from betbot import card, content, esports, live, names, news, oddspapi, pages, pro, push, reviews, site, sports, tables, telegram, texts
+from betbot import card, content, directory, esports, live, names, news, oddspapi, pages, pro, push, reviews, site, sports, tables, telegram, texts
 from betbot import markets as mk
 from betbot.data import MSK, load_fixtures, load_history
 from betbot.engine import add_market, fit_full, fit_weights, walk_forward
@@ -674,6 +674,10 @@ def main():
             pro.post_value(fx_loader(), events, now, BRAND)
         except Exception as e:
             print(f"  ! value дня не удался: {e}")
+    try:   # справочник команд/игроков для страниц team.html и player.html
+        directory.export(events + other)
+    except Exception as e:
+        print(f"  ! справочник команд не обновился: {e}")
     site_res = read_results()
     # публичная страница со статистикой — после каждого нового результата (и хотя бы раз в час)
     stamp = f"{len(site_res)}|{now:%Y-%m-%d %H}"

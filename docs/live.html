@@ -1212,6 +1212,12 @@ function setTeams(h, a) {
   Object.assign(H, h); Object.assign(A, a); if (near(H.color, A.color)) A.color = (A.alt && !near(H.color, A.alt)) ? A.alt : "#3498db";
   $("hn").textContent = H.ru; $("an").textContent = A.ru; $("hc").style.background = H.color; $("ac").style.background = A.color;
   if (H.logo) $("hl").src = H.logo; if (A.logo) $("al").src = A.logo;
+  // имя команды/игрока → страница с расписанием, формой, составом и статистикой (в новой вкладке, трансляция не прерывается)
+  for (const [el, x] of [["hn", H], ["an", A]]) if (x.id) {
+    const url = `${SPORT === "tennis" ? "player" : "team"}.html?p=${encodeURIComponent(PATH)}&id=${encodeURIComponent(x.id)}`;
+    const n = $(el); n.style.cursor = "pointer"; n.title = SPORT === "tennis" ? "Профиль игрока" : "Расписание, состав и статистика команды";
+    n.onclick = () => window.open(url, "_blank");
+  }
 }
 
 // ═════════════════════════ загрузка данных ═════════════════════════
@@ -1252,8 +1258,8 @@ async function loadTennis() {
   if (!comp) throw new Error("no match");
   const [ph, pa] = [...comp.competitors].sort((x, y) => (x.order || 0) - (y.order || 0));
   const flag = p => p.athlete?.flag?.href;
-  if (!built) { setTeams({ name: ph.athlete?.displayName, ru: RU_H || ph.athlete?.displayName, color: "#2ecc71", logo: flag(ph) },
-                         { name: pa.athlete?.displayName, ru: RU_A || pa.athlete?.displayName, color: "#e74c3c", logo: flag(pa) }); setupTennis(); built = true; }
+  if (!built) { setTeams({ id: ph.id, name: ph.athlete?.displayName, ru: RU_H || ph.athlete?.displayName, color: "#2ecc71", logo: flag(ph) },
+                         { id: pa.id, name: pa.athlete?.displayName, ru: RU_A || pa.athlete?.displayName, color: "#e74c3c", logo: flag(pa) }); setupTennis(); built = true; }
   const sh = (ph.linescores || []).map(s => s.value || 0), sa = (pa.linescores || []).map(s => s.value || 0);
   const st = comp.status?.type || {}, live = st.state === "in", n = sh.length;
   const done = i => (i < n - 1) || st.state === "post";

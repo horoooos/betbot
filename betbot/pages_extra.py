@@ -11,6 +11,7 @@ from pathlib import Path
 
 import pandas as pd
 
+from . import directory
 from .pages import DOCS, EMOJI, MONTHS, SITE, SPORT_RU, _crumbs, _match_card, _news_card, _write, page, slug
 
 
@@ -66,9 +67,12 @@ def _team_page(t: dict, news: list[dict], url: str) -> str:
 
     logo = f'<img src="{H.escape(t["logo"])}" alt="{H.escape(name)}" style="width:72px;height:72px;object-fit:contain;background:#fff;border-radius:50%;padding:6px">' if t["logo"] else ""
     stat = f"Бот давал прогнозы на {len(preds)} матчей с участием команды «{name}»" + (f": из {len(done)} рассчитанных зашло {hits} ({round(hits / len(done) * 100)}%)." if done else ".")
+    link = directory.team_link(sport, name, "../")
+    live_btn = (f'<a class="btn gold" href="{H.escape(link)}" style="margin-top:8px">📊 {"Профиль, рейтинг и матчи" if sport == "tennis" else "Расписание, состав, таблица и статистика"} →</a>'
+                if link else "")
     body = f"""{crumbs}<div class="card" style="display:flex;gap:16px;align-items:center;margin-top:10px">{logo}<div>
 <span class="tag">{EMOJI.get(sport, "")} {SPORT_RU.get(sport, "")}{" · " + H.escape(league) if league else ""}</span>
-<h1 style="margin:4px 0">{H.escape(name)}: <span>прогнозы и матчи</span></h1><p class="muted small">{H.escape(stat)}</p></div></div>
+<h1 style="margin:4px 0">{H.escape(name)}: <span>прогнозы и матчи</span></h1><p class="muted small">{H.escape(stat)}</p>{live_btn}</div></div>
 {('<h2>📅 Ближайшие матчи</h2><div class="grid">' + "".join(nxt_card(u) for u in nxt) + "</div>") if nxt else ""}
 <h2>🎯 Прогнозы бота на матчи «{H.escape(name)}»</h2><div class="grid">{"".join(_match_card(m, "../") for m in preds[:24])}</div>
 {('<h2>📰 Новости</h2><div class="grid">' + "".join(_news_card(n, "../") for n in about) + "</div>") if about else ""}
@@ -95,7 +99,8 @@ def _teams_index(teams: dict) -> str:
             links = " · ".join(f'<a href="../{team_url(sp, n)}">{H.escape(n)}</a>' for n in sorted(by[lg]))
             blocks += f'<div class="card" style="margin-bottom:8px"><span class="tag">{H.escape(lg)}</span><div style="margin-top:6px;line-height:2">{links}</div></div>'
     body = f"""{crumbs}<h1>Команды и игроки: <span>прогнозы на матчи</span></h1>
-<p class="lead">Выберите команду или теннисиста — ближайшие матчи, все прогнозы бота с результатами и свежие новости на одной странице.</p>{blocks}"""
+<p class="lead">Выберите команду или теннисиста — ближайшие матчи, все прогнозы бота с результатами и свежие новости на одной странице.</p>
+<p><a class="btn gold" href="../leagues.html">🔍 Поиск любой команды и игрока, таблицы всех турниров →</a></p>{blocks}"""
     return page("../", "Прогнозы на матчи команд: футбол, хоккей, НБА, теннис — АИ СТАВИТ",
                 "Все команды и теннисисты с прогнозами АИ СТАВИТ: ближайшие матчи, результаты прогнозов и новости. Футбол, НХЛ, НБА, теннис.",
                 SITE + "teams/", body, "teams", None, [bc])

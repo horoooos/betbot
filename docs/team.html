@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<link rel="icon" href="favicon.ico" sizes="any"><link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="manifest" href="site.webmanifest">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Команда: расписание, форма, состав и статистика — АИ СТАВИТ</title>
+<meta name="description" content="Расписание матчей команды во всех турнирах, последние результаты и форма, состав игроков, турнирная таблица и статистика для ставок.">
+<meta property="og:type" content="website"><meta property="og:locale" content="ru_RU"><meta property="og:image" content="https://horoooos.github.io/betbot/og.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css?v=4">
+</head>
+<body><main>
+<nav class="topnav"><a class="logo" href="./">АИ СТАВИТ</a><div class="links"><a href="matches.html">Матчи онлайн</a><a href="predictions/">Прогнозы</a><a href="news/">Новости</a><a href="feed.html">Лента</a><a href="top.html">Рейтинг</a></div><div class="navacts"><a class="me" id="navUser" href="profile.html">Войти</a></div></nav>
+<div class="crumbs" id="crumbs"><a href="./">Главная</a> › <a href="leagues.html">Команды и турниры</a></div>
+<div id="hero"><p class="load">Загружаем команду…</p></div>
+<div id="bot"></div>
+<div class="tabs2" id="tabs"></div>
+<section id="t-games"></section>
+<section id="t-squad" hidden></section>
+<section id="t-table" hidden></section>
+<section id="t-stats" hidden></section>
+<footer>АИ СТАВИТ · <a href="./">Статистика бота</a> · <a href="leagues.html">Команды и турниры</a> · <a href="matches.html">Матчи онлайн</a> · <a href="tools.html">Калькуляторы</a> · <a href="school/">Школа ставок</a></footer>
+</main>
+<script type="module">
+import * as E from "./espn.js?v=1";
+import("./fb.js?v=9").then(fb => { fb.navUser(document.getElementById("navUser")); fb.track("team"); }).catch(() => {});
+const { $, esc } = E;
+document.head.insertAdjacentHTML("beforeend", `<style>${E.CSS}</style>`);
+const q = new URLSearchParams(location.search);
+let path = q.get("p"), id = q.get("id");
+await E.dir();
+if ((!path || !id) && q.get("n")) { const x = (await E.teamIds())[`${q.get("s") || "football"}|${q.get("n")}`]; if (x) [path, id] = x; }
+if (!path || !id) { $("#hero").innerHTML = `<p class="load">Команда не найдена. <a href="leagues.html" style="color:var(--gold)">Поиск команд и игроков →</a></p>`; throw 0; }
+const sp = path.split("/")[0], sport = E.sportOf(path);
+
+let past, fut;
+try { [past, fut] = await Promise.all([E.schedule(path, id), sp === "soccer" ? E.schedule(path, id, true).catch(() => null) : null]); }
+catch (e) { $("#hero").innerHTML = `<p class="load">Не удалось загрузить данные ESPN. Обновите страницу через минуту.</p>`; throw e; }
+const T = past.team || {};
+const ids = await E.teamIds();
+const ourName = Object.entries(ids).find(([k, v]) => v[1] === String(id) && v[0].startsWith(sp))?.[0].split("|")[1];
+const name = ourName || E.teamRu(T.displayName || "");
+document.title = `${name}: расписание матчей, форма, состав и статистика — АИ СТАВИТ`;
+document.querySelector('meta[name=description]').content = `${name}: расписание матчей во всех турнирах, последние результаты, состав, место в таблице и статистика для ставок.`;
+
+// все матчи сезона: прошедшие + будущие, без дублей
+const all = {}; for (const e of [...(past.events || []), ...((fut && fut.events) || [])]) all[e.id] = e;
+const games = Object.values(all).map(e => E.game(e, id)).sort((a, b) => a.date.localeCompare(b.date));
+const done = games.filter(g => g.state === "post" && g.my != null), next = games.filter(g => g.state !== "post");
+
+// основной чемпионат клуба (для состава и таблицы): самая частая лига, не кубок и не товарищеские
+let main = path;
+if (sp === "soccer") {
+  const cnt = {};
+  for (const e of Object.values(all)) { const l = e.league || {}; if (l.slug && !l.isTournament && !/friendly|cup|copa|pokal|coupe|coppa|taca|shield|super|uefa\.|conmebol|concacaf|fifa/i.test(l.slug + " " + l.name)) cnt[l.slug] = (cnt[l.slug] || 0) + 1; }
+  const best = Object.entries(cnt).sort((a, b) => b[1] - a[1])[0];
+  main = best ? `soccer/${best[0]}` : (path.endsWith("/all") ? path : path);
+}
+const mainSlug = main.split("/")[1];
+const comps = {}; for (const g of games) if (g.slug || g.league) comps[g.slug || g.league] = g;
+
+// ── шапка ──
+const pos = String(T.standingSummary || "").match(/^(\d+)\w*\s+in\s+(.+)$/);
+const form = done.slice(-6).reverse();
+const W = done.filter(g => E.result(g) === "W").length, D = done.filter(g => E.result(g) === "D").length, L = done.filter(g => E.result(g) === "L").length;
+const gf = done.reduce((s, g) => s + (+g.my || 0), 0), ga = done.reduce((s, g) => s + (+g.op || 0), 0);
+$("#crumbs").insertAdjacentHTML("beforeend", ` › <a href="${E.leagueUrl(main)}">${esc(E.leagueRu(mainSlug))}</a> › ${esc(name)}`);
+$("#hero").innerHTML = `<div class="hero" style="border-left:4px solid #${esc(T.color || "ffc400")};padding-left:14px">
+  <div class="lg">${E.img(T.logo, 70)}</div>
+  <div style="min-width:0"><h1>${esc(name)}</h1>
+  <div class="sub">${name !== T.displayName ? `<span>${esc(T.displayName)}</span>` : ""}<span>${E.EMOJI[sport]} <a href="${E.leagueUrl(main)}" style="color:inherit">${esc(E.leagueRu(mainSlug))}</a></span>
+  ${pos ? `<span>📊 ${pos[1]}-е место${/Division|Conference/.test(pos[2]) ? " · " + esc(E.trLeague(pos[2]).replace("Atlantic Division", "Атлантический дивизион").replace("Metropolitan Division", "Столичный дивизион").replace("Central Division", "Центральный дивизион").replace("Pacific Division", "Тихоокеанский дивизион")) : ""}</span>` : ""}</div></div></div>
+  <div class="facts">
+   <div><span>Форма (последние)</span><div class="form" style="margin-top:4px">${form.map(g => E.chip(E.result(g))).join("") || "—"}</div></div>
+   <div><span>Сезон: матчей</span><b>${done.length}</b></div>
+   <div><span>Победы · ${sport === "football" ? "ничьи · " : ""}поражения</span><b>${W} · ${sport === "football" ? D + " · " : ""}${L}</b></div>
+   <div><span>${sport === "basketball" ? "Очки" : sport === "hockey" ? "Шайбы" : "Голы"}: забито — пропущено</span><b>${gf} — ${ga}</b></div>
+   ${next[0] ? `<div><span>Следующий матч</span><b style="font-size:14px">${esc(E.teamRu(next[0].opp.displayName || ""))}</b><span>${E.msk(next[0].date)} МСК</span></div>` : ""}
+  </div>
+  <div class="chips">${Object.values(comps).filter(g => g.slug).map(g => `<a href="${E.leagueUrl("soccer/" + g.slug)}">${esc(g.league)}</a>`).join("") || ""}</div>`;
+
+// ── прогнозы бота на эту команду ──
+const ours = (await E.ourMatches()).filter(m => m.hid === String(id) || m.aid === String(id));
+if (ours.length) $("#bot").innerHTML = `<h2>🎯 Прогноз бота</h2><div class="grid">${ours.map(m => `<a class="card" href="${esc(m.url)}" style="text-decoration:none">
+  <div class="muted small">${esc(m.league)} · ${E.msk(m.kickoff)} МСК</div><div style="font-weight:900;margin:4px 0">${esc(m.home)} — ${esc(m.away)}</div>
+  ${m.tip ? `<div style="color:var(--gold);font-weight:800">🎯 ${esc(m.tip)}</div>` : `<div class="muted">Прогноз появится ближе к матчу</div>`}<div class="small" style="margin-top:6px">📺 Смотреть онлайн →</div></a>`).join("")}</div>`;
+
+// ── вкладки ──
+const TABS = [["games", "📅 Матчи"], ["squad", "👥 Состав"], ["table", "📊 Таблица"], ["stats", "📈 Статистика"]];
+$("#tabs").innerHTML = TABS.map(([k, t], i) => `<button data-t="${k}" class="${i ? "" : "on"}">${t}</button>`).join("");
+const loaded = {};
+$("#tabs").onclick = e => { const k = e.target.dataset.t; if (!k) return; for (const [x] of TABS) { $("#t-" + x).hidden = x !== k; } document.querySelectorAll("#tabs button").forEach(b => b.classList.toggle("on", b.dataset.t === k)); if (!loaded[k]) { loaded[k] = 1; LOAD[k](); } history.replaceState(null, "", "#" + k); };
+
+const oursById = Object.fromEntries((await E.ourMatches()).map(m => [m.id, m]));
+const LOAD = {
+  games() {
+    const nx = next.slice(0, 12), pr = done.slice(-20).reverse();
+    const extra = g => oursById[g.id] ? `<a href="${esc(oursById[g.id].url)}" style="color:var(--gold)">${oursById[g.id].tip ? "🎯 " + esc(oursById[g.id].tip) : "📺 онлайн"}</a>` : "";
+    $("#t-games").innerHTML = `${nx.length ? `<h2>Ближайшие матчи</h2><div class="card gl">${nx.map(g => E.gameRow(g, path, { extra: extra(g) })).join("")}</div>` : ""}
+      <h2>Последние результаты</h2><div class="card gl">${pr.map(g => E.gameRow(g, path)).join("") || `<p class="muted">Матчей в этом сезоне ещё не было.</p>`}</div>`;
+  },
+  async squad() {
+    const el = $("#t-squad"); el.innerHTML = `<p class="load">Загружаем состав…</p>`;
+    try {
+      const r = await E.roster(main, id);
+      let list = r.athletes || [];
+      if (list[0] && list[0].items) list = list.flatMap(g => g.items.map(a => ({ ...a, _grp: g.position })));
+      const groups = {};
+      for (const a of list) {
+        const p = E.posRu(sp, (a.position && (a.position.displayName || a.position.name)) || a._grp || "");
+        const key = sp === "soccer" ? (["Вратарь", "Защитник", "Полузащитник", "Нападающий"].find(x => p.includes(x.slice(0, 5))) || p || "Игроки") : (a._grp ? E.posRu(sp, a._grp) : p || "Игроки");
+        (groups[key] = groups[key] || []).push({ a, p });
+      }
+      const order = ["Вратарь", "Вратари", "Защитник", "Защитники", "Полузащитник", "Нападающий", "Нападающие"];
+      const keys = Object.keys(groups).sort((x, y) => (order.indexOf(x) + 1 || 99) - (order.indexOf(y) + 1 || 99));
+      const stat = a => {
+        const s = {}; for (const c of (a.statistics && a.statistics.splits && a.statistics.splits.categories) || []) for (const x of c.stats || []) s[x.name] = x.displayValue;
+        if (sp === "soccer") return [+s.appearances ? E.plural(+s.appearances, "матч", "матча", "матчей") : "", +s.totalGoals ? `⚽ ${s.totalGoals}` : "", +s.goalAssists ? `🅰️ ${s.goalAssists}` : "", +s.saves ? `🧤 ${s.saves}` : ""].filter(Boolean).join(" · ");
+        return "";
+      };
+      el.innerHTML = keys.map(k => `<h2>${esc(k === "Вратарь" ? "Вратари" : k === "Защитник" ? "Защитники" : k === "Полузащитник" ? "Полузащитники" : k === "Нападающий" ? "Нападающие" : k)}</h2>
+        <div class="pl">${groups[k].map(({ a, p }) => `<a href="${E.playerUrl(main, a.id)}"><span class="j">${esc(a.jersey || "")}</span>
+          ${a.headshot && sp !== "soccer" ? E.img(a.headshot.href, 40, true) : (a.flag ? E.img(a.flag.href, 24) : "")}
+          <span style="min-width:0"><div class="n">${esc(E.personRu(a.displayName))}</div>
+          <div class="m">${a.flag && a.headshot && sp !== "soccer" ? `<img src="${esc(a.flag.href)}" alt="" style="width:14px;height:14px;vertical-align:-2px;object-fit:contain"> ` : ""}${esc(E.countryRu(a.citizenship || (a.birthPlace && a.birthPlace.country) || ""))}${a.age ? " · " + E.years(a.age) : ""}${stat(a) ? " · " + stat(a) : ""}</div></span></a>`).join("")}</div>`).join("")
+        || `<p class="muted">ESPN пока не опубликовал состав этой команды.</p>`;
+    } catch (e) { el.innerHTML = `<p class="muted">Состав недоступен для этой команды.</p>`; }
+  },
+  async table() {
+    const el = $("#t-table"); el.innerHTML = `<p class="load">Загружаем таблицу…</p>`;
+    try { el.innerHTML = `<h2>${esc(E.leagueRu(mainSlug))}</h2>` + E.standingsHTML(await E.standings(main), main, id) + `<p style="margin-top:10px"><a class="btn" href="${E.leagueUrl(main)}">Все матчи турнира →</a></p>`; }
+    catch (e) { el.innerHTML = `<p class="muted">Таблица недоступна.</p>`; }
+  },
+  stats() {
+    const pct = (n, d) => d ? Math.round(n / d * 100) : 0;
+    const box = (title, list) => { const n = list.length; if (!n) return "";
+      const w = list.filter(g => E.result(g) === "W").length, d = list.filter(g => E.result(g) === "D").length, l = n - w - d;
+      const f = list.reduce((s, g) => s + (+g.my || 0), 0), a = list.reduce((s, g) => s + (+g.op || 0), 0);
+      const tot = g => (+g.my || 0) + (+g.op || 0);
+      const lines = sport === "football" ? [["ТБ 2.5", list.filter(g => tot(g) > 2.5).length], ["ТБ 1.5", list.filter(g => tot(g) > 1.5).length], ["Обе забьют", list.filter(g => +g.my > 0 && +g.op > 0).length], ["Сухие матчи", list.filter(g => +g.op === 0).length]]
+        : sport === "hockey" ? [["ТБ 5.5", list.filter(g => tot(g) > 5.5).length], ["ТБ 6.5", list.filter(g => tot(g) > 6.5).length], ["Обе забьют 2+", list.filter(g => +g.my >= 2 && +g.op >= 2).length]]
+        : [["ТБ 220.5", list.filter(g => tot(g) > 220.5).length], ["ТБ 230.5", list.filter(g => tot(g) > 230.5).length]];
+      return `<h2>${title}</h2><div class="kv">
+        <div><span>Матчей · ${sport === "football" ? "В-Н-П" : "В-П"}</span><b>${n}</b> <span style="display:inline">${w}-${sport === "football" ? d + "-" : ""}${l}</span></div>
+        <div><span>Процент побед</span><b>${pct(w, n)}%</b><div class="bar2"><i style="width:${pct(w, n)}%"></i></div></div>
+        <div><span>Забивает в среднем</span><b>${(f / n).toFixed(sport === "basketball" ? 1 : 2)}</b></div>
+        <div><span>Пропускает в среднем</span><b>${(a / n).toFixed(sport === "basketball" ? 1 : 2)}</b></div>
+        <div><span>Тотал в среднем</span><b>${((f + a) / n).toFixed(sport === "basketball" ? 1 : 2)}</b></div>
+        ${lines.map(([t, k]) => `<div><span>${t}</span><b>${pct(k, n)}%</b> <span style="display:inline">(${k} из ${n})</span><div class="bar2"><i style="width:${pct(k, n)}%"></i></div></div>`).join("")}</div>`; };
+    const off = done.filter(g => !/friendly|товарищ/i.test(g.leagueName + g.league));
+    $("#t-stats").innerHTML = (box("Весь сезон", off) + box("Дома", off.filter(g => g.home)) + box("В гостях", off.filter(g => !g.home)) + box("Последние 10 матчей", off.slice(-10)))
+      || `<p class="muted">Статистика появится после первых матчей сезона.</p>`;
+    $("#t-stats").insertAdjacentHTML("beforeend", `<p class="small muted" style="margin-top:10px">Считаем по официальным матчам сезона (без товарищеских). Пригодится для ставок на тоталы и «обе забьют» — проверьте в <a href="tools.html">калькуляторах</a>.</p>`);
+  },
+};
+const first = (location.hash || "#games").slice(1);
+(TABS.find(t => t[0] === first) ? document.querySelector(`#tabs button[data-t=${first}]`) : document.querySelector("#tabs button")).click();
+</script>
+</body>
+</html>

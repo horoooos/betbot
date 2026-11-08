@@ -166,7 +166,7 @@ def page(prefix: str, title: str, desc: str, canon: str, body: str, on: str = ""
 {body}
 <footer>АИ СТАВИТ — бесплатные прогнозы на спорт от искусственного интеллекта и честная статистика. Прогноз — не гарантия выигрыша. 18+.
 <br><a href="https://t.me/{CH}">Telegram-канал @{CH}</a> · <a href="{prefix}./">Статистика бота</a> · <a href="{prefix}matches.html">Матчи онлайн</a> · <a href="{prefix}news/">Новости спорта</a> · <a href="{prefix}predictions/">Прогнозы на матчи</a>
-<br><a href="{prefix}teams/">Команды</a> · <a href="{prefix}tools.html">Калькуляторы ставок</a> · <a href="{prefix}school/">Школа ставок</a> · <a href="{prefix}top.html">Рейтинг прогнозистов</a></footer>
+<br><a href="{prefix}leagues.html">Команды, игроки и турниры</a> · <a href="{prefix}teams/">Прогнозы по командам</a> · <a href="{prefix}tools.html">Калькуляторы ставок</a> · <a href="{prefix}school/">Школа ставок</a> · <a href="{prefix}top.html">Рейтинг прогнозистов</a></footer>
 </main><div class="sticky"><a class="a" href="{prefix}matches.html">📺 Онлайн</a><a class="b" href="https://t.me/{CH}">📲 Канал</a></div>
 <script type="module">import("{prefix}fb.js?v=9").then(fb => {{ fb.navUser(document.getElementById("navUser")); fb.track("{on or 'page'}");
   const v = document.getElementById("votes"); if (v) fb.voteWidget(v, v.dataset.m, {{ finished: v.dataset.f === "1", botHit: v.dataset.h === "" ? null : v.dataset.h === "1" }}); }}).catch(() => {{}});</script>
@@ -451,7 +451,12 @@ def build(stores: dict, results: pd.DataFrame, now: pd.Timestamp, max_pages: int
     from . import pages_extra
     extra = pages_extra.build_teams(ms, news, now) + pages_extra.build_school()
     _write(DOCS / "tools.html", pages_extra.build_tools())
-    extra += ["tools.html", "top.html"]
+    extra += ["tools.html", "top.html", "leagues.html"]
+    try:   # страницы турниров (таблица и расписание) — тоже в поиск
+        from . import directory
+        extra += [f"league.html?p={x['p'].replace('/', '%2F')}" for x in directory._leagues()]
+    except Exception:
+        pass
     urls = [("", "hourly", "1.0"), ("matches.html", "hourly", "0.9"), ("predictions/", "hourly", "0.9"), ("news/", "hourly", "0.9"), ("feed.html", "hourly", "0.6")]
     sm = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
     for u, f, pr in urls:

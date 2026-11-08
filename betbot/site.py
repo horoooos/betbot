@@ -381,6 +381,7 @@ def matches_json(events: list[dict], stored: dict, now: pd.Timestamp) -> None:
         logo = lambda t: (t.get("logo") or [None, None])[1] if isinstance(t.get("logo"), list) else t.get("logo")
         out.append({"sport": sport, "id": str(e["id"]), "league": live._league(e), "kickoff": ko.isoformat(),
                     "home": h, "away": a, "hl": logo(e["home"]), "al": logo(e["away"]),
+                    "hid": str(e["home"].get("id") or ""), "aid": str(e["away"].get("id") or ""),
                     "path": btn[1].split("p=")[1].split("&")[0].replace("%2F", "/"), "url": btn[1].replace(live.TRACKER, "live.html"),
                     "tip": f"{tip['label']} · {'≈' if tip.get('est') else ''}{tip['odds']:.2f}" if tip.get("label") and tip.get("odds") else "",
                     "top": bool(m.get("top")), "bot": _bot_block(m)})
