@@ -85,22 +85,53 @@ def _team_page(t: dict, news: list[dict], url: str) -> str:
 
 
 def _teams_index(teams: dict) -> str:
+    """Каталог команд плитками: логотип, название, сколько прогнозов; быстрый фильтр и вкладки по видам спорта."""
     crumbs, bc = _crumbs("../", [("Главная", ""), ("Команды", None)])
-    blocks = ""
+    blocks, tabs = "", []
     for sp in ("football", "hockey", "basketball", "tennis"):
         by = defaultdict(list)
         for (s, name), t in teams.items():
             if s == sp:
-                by[sorted(t["leagues"])[0] if t["leagues"] else "Другие"].append(name)
+                by[sorted(t["leagues"])[0] if t["leagues"] else "Другие"].append((name, t))
         if not by:
             continue
-        blocks += f"<h2>{EMOJI[sp]} {SPORT_RU[sp]}</h2>"
-        for lg in sorted(by):
-            links = " · ".join(f'<a href="../{team_url(sp, n)}">{H.escape(n)}</a>' for n in sorted(by[lg]))
-            blocks += f'<div class="card" style="margin-bottom:8px"><span class="tag">{H.escape(lg)}</span><div style="margin-top:6px;line-height:2">{links}</div></div>'
-    body = f"""{crumbs}<h1>Команды и игроки: <span>прогнозы на матчи</span></h1>
-<p class="lead">Выберите команду или теннисиста — ближайшие матчи, все прогнозы бота с результатами и свежие новости на одной странице.</p>
-<p><a class="btn gold" href="../leagues.html">🔍 Поиск любой команды и игрока, таблицы всех турниров →</a></p>{blocks}"""
+        n_sp = sum(len(v) for v in by.values())
+        tabs.append(f'<a href="#{sp}">{EMOJI[sp]} {SPORT_RU[sp]} <b>{n_sp}</b></a>')
+        blocks += f'<section class="tsec" id="{sp}"><h2>{EMOJI[sp]} {SPORT_RU[sp]}</h2>'
+        # крупные турниры (где больше команд) — выше
+        for lg in sorted(by, key=lambda x: (x == "Другие", -len(by[x]), x)):
+            tiles = "".join(
+                f'<a class="tt" href="../{team_url(sp, n)}" data-n="{H.escape(n.lower())}">'
+                + (f'<img src="{H.escape(t["logo"])}" alt="" loading="lazy">' if t.get("logo") else f'<span class="ph">{EMOJI[sp]}</span>')
+                + f'<span><b>{H.escape(n)}</b><small>{len(t["preds"])} прогн.</small></span></a>'
+                for n, t in sorted(by[lg]))
+            blocks += f'<div class="tlg"><h3>{H.escape(lg)} <span>{len(by[lg])}</span></h3><div class="tgrid">{tiles}</div></div>'
+        blocks += "</section>"
+    style = """<style>
+.ttabs{display:flex;gap:6px;flex-wrap:wrap;margin:14px 0 4px}.ttabs a{padding:8px 14px;border-radius:999px;background:rgba(255,255,255,.05);border:1px solid var(--line);text-decoration:none;font-weight:800;font-size:13px}
+.ttabs a b{color:var(--gold);margin-left:4px}.ttabs a:hover{background:rgba(255,255,255,.1)}
+.tfind{position:relative;margin:12px 0}.tfind input{width:100%;padding:13px 16px 13px 44px;border-radius:16px;border:1px solid var(--line);background:rgba(255,255,255,.06);color:#fff;font:700 15px Montserrat,sans-serif;outline:none}
+.tfind input:focus{border-color:var(--gold)}.tfind:before{content:"🔍";position:absolute;left:15px;top:50%;transform:translateY(-50%)}
+.tlg{margin:14px 0 4px}.tlg h3{font-size:12px;letter-spacing:.8px;text-transform:uppercase;color:var(--muted);font-weight:800;margin:0 0 8px}.tlg h3 span{color:var(--gold);margin-left:4px}
+.tgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:8px}
+.tt{display:flex;align-items:center;gap:10px;padding:9px 11px;border-radius:14px;background:linear-gradient(160deg,var(--card2),var(--card));border:1px solid var(--line);text-decoration:none;
+  transition:transform .2s,border-color .2s,background .2s;min-width:0}
+.tt:hover{transform:translateY(-2px);border-color:rgba(255,196,0,.4)}
+.tt img,.tt .ph{width:34px;height:34px;flex:none;border-radius:10px;background:#fff;object-fit:contain;padding:3px;display:grid;place-items:center;font-size:18px}
+.tt .ph{background:rgba(255,255,255,.08)}.tt span{min-width:0}.tt b{display:block;font-size:13.5px;line-height:1.25;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.tt small{color:var(--muted);font-size:11px;font-weight:600}
+@media(max-width:520px){.tgrid{grid-template-columns:1fr 1fr}.tt{padding:8px}.tt img,.tt .ph{width:28px;height:28px}}
+</style>"""
+    script = """<script>
+document.getElementById("tq").oninput = e => { const q = e.target.value.trim().toLowerCase();
+  document.querySelectorAll(".tt").forEach(a => a.style.display = !q || a.dataset.n.includes(q) ? "" : "none");
+  document.querySelectorAll(".tlg").forEach(g => g.style.display = [...g.querySelectorAll(".tt")].some(a => a.style.display !== "none") ? "" : "none");
+  document.querySelectorAll(".tsec").forEach(s => s.style.display = [...s.querySelectorAll(".tlg")].some(g => g.style.display !== "none") ? "" : "none"); };
+</script>"""
+    body = f"""{style}{crumbs}<h1>Команды и игроки: <span>прогнозы на матчи</span></h1>
+<p class="lead">Команды и теннисисты, на которых бот давал прогнозы: ближайшие матчи, все прогнозы с результатами и новости. Любую другую команду или игрока ищите в <a href="../leagues.html" style="color:var(--gold)">поиске по всем турнирам</a>.</p>
+<div class="tfind"><input id="tq" type="search" placeholder="Быстрый поиск по названию…" autocomplete="off"></div>
+<div class="ttabs">{"".join(tabs)}<a href="../leagues.html">🏆 Все турниры и таблицы</a></div>{blocks}{script}"""
     return page("../", "Прогнозы на матчи команд: футбол, хоккей, НБА, теннис — АИ СТАВИТ",
                 "Все команды и теннисисты с прогнозами АИ СТАВИТ: ближайшие матчи, результаты прогнозов и новости. Футбол, НХЛ, НБА, теннис.",
                 SITE + "teams/", body, "teams", None, [bc])

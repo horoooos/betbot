@@ -8,7 +8,7 @@ main { max-width:980px; margin:0 auto; padding:14px 16px 90px }
 .topnav { display:flex; align-items:center; gap:8px 14px; flex-wrap:wrap; padding:8px 0 6px }
 .topnav .logo { font-weight:900; letter-spacing:1.5px; color:var(--gold); text-decoration:none; white-space:nowrap }
 .topnav .brandbox, .topnav > .logo { flex:none }
-.topnav .links { display:flex; gap:2px; flex:1; justify-content:center; min-width:0; overflow-x:auto; scrollbar-width:none }
+.topnav .links { display:flex; gap:2px; flex:1; justify-content:safe center; min-width:0; overflow-x:auto; scrollbar-width:none }
 .topnav .links::-webkit-scrollbar { display:none }
 .topnav .links a { text-decoration:none; color:var(--muted); font-weight:700; font-size:13.5px; padding:7px 11px; border-radius:10px; white-space:nowrap; transition:color .15s, background .15s }
 .topnav .links a:hover { color:var(--ink) }
@@ -26,7 +26,7 @@ main { max-width:980px; margin:0 auto; padding:14px 16px 90px }
 .navacts .me.in { color:var(--ink); background:rgba(255,255,255,.05); border-color:var(--line); padding:0 11px 0 5px }
 .navacts .me.in:hover { background:rgba(255,255,255,.1) }
 .navacts .me .nm { max-width:120px; overflow:hidden; text-overflow:ellipsis }
-@media (max-width:860px) {
+@media (max-width:1150px) {
   .topnav .links { order:3; flex-basis:calc(100% + 32px); margin:0 -16px; padding:0 16px; justify-content:flex-start }
   .navacts .support .tx { display:none }
   .navacts .support { padding:0; width:34px }
@@ -101,7 +101,9 @@ html { scroll-behavior:smooth; -webkit-tap-highlight-color:transparent }
 body { text-rendering:optimizeLegibility; -webkit-font-smoothing:antialiased }
 body::before { content:""; position:fixed; inset:0; pointer-events:none; z-index:-1;
   background:radial-gradient(700px 380px at 50% -120px,rgba(255,196,0,.08),transparent 70%), radial-gradient(600px 400px at 100% 100%,rgba(70,90,255,.08),transparent 70%) }
-.topnav { position:sticky; top:0; z-index:40; margin:-14px -16px 6px; padding:10px 16px 8px;
+html, body { overflow-x:clip }
+/* шапка на всю ширину экрана, содержимое — до 1200px: меню не обрезается на ноутбуках */
+.topnav { position:sticky; top:0; z-index:40; margin:-14px calc(50% - 50vw) 6px; padding:10px max(16px, calc(50vw - 600px)) 8px;
   background:linear-gradient(180deg,rgba(7,11,26,.88),rgba(7,11,26,.68)); -webkit-backdrop-filter:blur(16px) saturate(150%); backdrop-filter:blur(16px) saturate(150%);
   border-bottom:1px solid rgba(255,255,255,.06) }
 .topnav .logo { font-size:17px; text-shadow:0 0 22px rgba(255,196,0,.35) }
@@ -119,4 +121,5 @@ footer { border-top:1px solid var(--line); padding-top:16px; line-height:1.9 } f
 .rv-on .rv { opacity:0; transform:translateY(14px); transition:opacity .6s ease, transform .6s cubic-bezier(.2,.7,.2,1) }
 .rv-on .rv.in { opacity:1; transform:none }
 @media (prefers-reduced-motion:reduce) { .rv-on .rv { opacity:1; transform:none; transition:none } * { scroll-behavior:auto } }
-@media (max-width:860px) { .topnav { padding:8px 16px 6px } }
+@media (max-width:1150px) { .topnav { padding-top:8px; padding-bottom:6px } .topnav .links { margin:0; padding:0; flex-basis:100% } }
+@media (max-width:520px) { .topnav .links { -webkit-mask-image:linear-gradient(90deg,#000 82%,transparent); mask-image:linear-gradient(90deg,#000 82%,transparent); padding-right:28px } }
