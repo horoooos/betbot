@@ -145,7 +145,7 @@
     <span class="pill" id="viewers" style="display:none;pointer-events:none">👁 0</span>
     <button class="pill tipbtn" id="tipbtn" style="display:none">🎯 Прогноз бота</button>
     <button class="pill" id="chatbtn" style="display:none">💬 Чат</button>
-    <button class="pill" id="notibtn" style="display:none">🔔 Голы</button></div>
+    <button class="pill" id="notibtn" style="display:none">🔔</button></div>
   <div id="pp"></div>
   <div style="text-align:center"><button id="replay">▶ Смотреть повтор матча</button></div>
 </div>
@@ -1430,7 +1430,9 @@ if (EVENT) loadBot();
 // ═════════════════════════ зрители и чат (Firebase) ═════════════════════════
 if ("Notification" in window && EVENT) {
   const nb = $("notibtn"); nb.style.display = "inline-block";
-  const paint = () => { nb.textContent = notifyOn ? "🔔 Голы: вкл" : "🔕 Голы"; nb.style.borderColor = notifyOn ? "#2ecc71" : ""; };
+  // что присылаем — зависит от вида спорта: в теннисе голов нет, там сеты
+  const WHAT = { football: ["Голы", "гол"], hockey: ["Шайбы", "шайбу"], basketball: ["Матч", "начало и итог матча"], tennis: ["Сеты", "каждый сет"] }[SPORT] || ["Матч", "главное"];
+  const paint = () => { nb.textContent = notifyOn ? `🔔 ${WHAT[0]}: вкл` : `🔕 ${WHAT[0]}`; nb.style.borderColor = notifyOn ? "#2ecc71" : ""; };
   paint();
   nb.onclick = async () => {
     if (notifyOn) { notifyOn = false; try { localStorage.setItem("ainotify", "0"); } catch (e) {} window.__fb?.pushUnfollow(EVENT).catch(() => {}); return paint(); }
@@ -1440,11 +1442,11 @@ if ("Notification" in window && EVENT) {
     const perm = Notification.permission === "granted" ? "granted" : await Notification.requestPermission();
     notifyOn = perm === "granted"; try { localStorage.setItem("ainotify", notifyOn ? "1" : "0"); } catch (e) {}
     if (!notifyOn) chip("🔕 УВЕДОМЛЕНИЯ ЗАПРЕЩЕНЫ", "#ff6a6a", "Разрешите их в настройках браузера для этого сайта");
-    else chip("🔔 УВЕДОМЛЕНИЯ ВКЛЮЧЕНЫ", "#3dff6a", pushed ? "Пришлём гол, даже если сайт закрыт" : "Пришлём гол, пока вкладка открыта");
+    else chip("🔔 УВЕДОМЛЕНИЯ ВКЛЮЧЕНЫ", "#3dff6a", pushed ? `Пришлём ${WHAT[1]}, даже если сайт закрыт` : `Пришлём ${WHAT[1]}, пока вкладка открыта`);
     paint();
   };
 }
-if (EVENT) import("./fb.js?v=8").then(fb => {
+if (EVENT) import("./fb.js?v=9").then(fb => {
   window.__fb = fb;
   fb.track(`live:${EVENT}`, EVENT);
   fb.watchPresence(all => { const n = all[EVENT] || 0; $("viewers").textContent = `👁 ${n} ${n % 10 === 1 && n % 100 !== 11 ? "смотрит" : "смотрят"}`; $("viewers").style.display = "inline-block"; });

@@ -446,7 +446,7 @@ function pushModal() {
   w.innerHTML = `<div class="bx" style="text-align:center"><div style="font-size:44px">🔔</div><h3>Уведомления АИ СТАВИТ</h3>
     <p>Приходят на телефон и компьютер, даже когда сайт закрыт.</p>
     <label style="display:flex;gap:10px;align-items:center;text-align:left;margin:8px 0;font-weight:700"><input type="checkbox" id="pd" checked style="width:20px;height:20px"> 🔥 Прогноз дня — один раз в день</label>
-    <div style="text-align:left;font-size:13px;color:#9aa6cc;margin-bottom:8px">⚽ Голы — нажмите «🔔 Голы» в трансляции нужного матча.</div>
+    <div style="text-align:left;font-size:13px;color:#9aa6cc;margin-bottom:8px">⚽ Голы, 🏒 шайбы, 🎾 сеты — нажмите 🔔 в трансляции нужного матча.</div>
     <button class="y" id="pon">${on ? "Сохранить" : "Включить уведомления"}</button><button class="t" id="px">Закрыть</button><div class="err" id="pe"></div></div>`;
   w.querySelector("#pon").onclick = async () => {
     const e = w.querySelector("#pe"); e.style.color = "#9aa6cc"; e.textContent = "Включаем…";
@@ -460,7 +460,7 @@ function paintBell() { const b = document.querySelector(".topnav .bell"); if (b)
 export function bellButton() {
   const links = document.querySelector(".topnav .links");
   if (!links || links.querySelector(".bell") || typeof Notification === "undefined") return;
-  const a = document.createElement("a"); a.href = "#"; a.className = "bell"; a.title = "Уведомления о голах и прогнозе дня";
+  const a = document.createElement("a"); a.href = "#"; a.className = "bell"; a.title = "Уведомления: голы, сеты и прогноз дня";
   a.onclick = e => { e.preventDefault(); pushModal(); };
   const me = links.querySelector(".me"); links.insertBefore(a, me || null); paintBell();
 }
