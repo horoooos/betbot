@@ -8060,31 +8060,31 @@
   "kickoff": "2026-11-08T23:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Sun, November 8th at 3:00 PM EST",
   "home": {
-   "id": "3382",
-   "name": "Marta Kostyuk",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/3382.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/ukr.png"
    ],
+   "id": "3382",
+   "name": "Marta Kostyuk",
    "country": "Ukraine",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
    "ru": "Марта Костюк"
   },
   "away": {
-   "id": "6970",
-   "name": "Linda Noskova",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/6970.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/cze.png"
    ],
+   "id": "6970",
+   "name": "Linda Noskova",
    "country": "Czechia",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
@@ -8144,7 +8144,9 @@
   "btn": 4,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null
  },
  "NHL|401892675": {
   "id": "401892675",
