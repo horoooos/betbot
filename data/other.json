@@ -8305,22 +8305,22 @@
   "kickoff": "2026-11-08T04:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "home": {
+   "color": "124734",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/min.png",
    "id": "30",
    "name": "Minnesota Wild",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/min.png",
-   "color": "124734",
    "score": "0",
    "record": "12-3-3",
    "periods": [],
    "ru": "Миннесота"
   },
   "away": {
+   "color": "003e7e",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/tb.png",
    "id": "20",
    "name": "Tampa Bay Lightning",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/tb.png",
-   "color": "003e7e",
    "score": "0",
    "record": "10-3-2",
    "periods": [],
@@ -8424,7 +8424,9 @@
   "close": {
    "HK_O6.5": 0.5107,
    "HK_ML_H": 0.4486
-  }
+  },
+  "main_hit": true,
+  "bold_hit": false
  },
  "NBA|401909940": {
   "id": "401909940",
