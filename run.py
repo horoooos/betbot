@@ -588,6 +588,10 @@ def main():
 
     other_sports(state, other, now, calib, daily)
     content.settle_express(state, finished_scores(events, other))
+    try:   # экспрессы — на главную сайта
+        site.express_json(state)
+    except Exception as e:
+        print(f"  ! экспрессы для сайта не выгрузились: {e}")
     try:
         content.settle_poll(state, finished_scores(events, other), matches, BRAND)
     except Exception as e:

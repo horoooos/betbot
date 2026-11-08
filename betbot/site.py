@@ -311,6 +311,58 @@ def build(res: pd.DataFrame, now: pd.Timestamp, blocks: dict | None = None) -> N
   <div style="position:relative;z-index:1"><div class="bb">BetBoom</div><div class="big">Фрибет<span>до 10 000 ₽</span></div>
   <div class="sub">за регистрацию<small>по ссылке друга — ставьте вместе с ботом</small></div></div>
   <span class="go">🎁 Забрать фрибет</span></a>
+<style>
+.xps{{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:22px 0 4px}}
+.xp{{position:relative;border-radius:24px;padding:18px;overflow:hidden;border:1px solid rgba(255,255,255,.1);background:linear-gradient(160deg,#18224a,#0e1533)}}
+.xp::before{{content:"";position:absolute;inset:-60px -60px auto auto;width:220px;height:220px;border-radius:50%;filter:blur(50px);opacity:.45;pointer-events:none}}
+.xp.d::before{{background:#8a5cff}}.xp.r::before{{background:#ff7a1a}}
+.xp .hd{{position:relative;display:flex;justify-content:space-between;align-items:flex-start;gap:10px}}
+.xp .tt{{font-weight:900;font-size:19px;letter-spacing:-.3px}}.xp .tt small{{display:block;color:#9aa6cc;font-size:12px;font-weight:600;letter-spacing:0}}
+.xp .od{{text-align:right;line-height:1.05}}.xp .od b{{display:block;font:900 32px Montserrat,sans-serif;letter-spacing:-1px}}
+.xp.d .od b{{color:#c4a8ff}}.xp.r .od b{{color:#ffb35c}}.xp .od span{{color:#9aa6cc;font-size:11.5px;font-weight:700}}
+.xp .st{{position:relative;display:inline-flex;align-items:center;gap:6px;margin:10px 0 4px;padding:4px 10px;border-radius:999px;font-size:12px;font-weight:800;background:rgba(255,255,255,.07)}}
+.xp .st.won{{background:rgba(46,204,113,.18);color:#5ff09a}}.xp .st.lost{{background:rgba(255,90,90,.16);color:#ff8080}}.xp .st.live{{background:rgba(255,70,70,.16);color:#ff8a8a}}
+.xp .lg{{position:relative;display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:10px;align-items:center;padding:10px 0;border-top:1px solid rgba(255,255,255,.07);text-decoration:none;color:#fff}}
+.xp .lg:hover .tm{{text-decoration:underline}}.xp .lgs{{display:flex}}.xp .lgs img{{width:26px;height:26px;border-radius:50%;background:#fff;object-fit:contain;padding:2px}}.xp .lgs img+img{{margin-left:-8px}}
+.xp .tm{{font-weight:800;font-size:13.5px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}}.xp .sub{{color:#9aa6cc;font-size:11.5px;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}}
+.xp .pk{{color:#ffd34d}}.xp .rt{{text-align:right;font-weight:900;font-size:13px;white-space:nowrap}}.xp .rt small{{display:block;color:#9aa6cc;font-weight:700;font-size:11px}}
+.xp .ok{{color:#5ff09a}}.xp .no{{color:#ff8080;text-decoration:line-through}}
+.xp .ft{{position:relative;display:flex;gap:8px;margin-top:12px}}.xp .ft a,.xp .ft button{{flex:1;text-align:center;padding:10px;border-radius:12px;font:800 13px Montserrat,sans-serif;text-decoration:none;cursor:pointer;border:0}}
+.xp .ft a{{background:rgba(255,255,255,.08);color:#fff}}.xp .ft button{{color:#1a1405;background:linear-gradient(90deg,#ffc400,#ff9f1a)}}
+.xp .empty{{position:relative;color:#9aa6cc;padding:14px 0 4px}}
+@media(max-width:760px){{.xps{{grid-template-columns:1fr}}}}
+</style>
+<div class="xps" id="xps"></div>
+<script>
+(async () => {{
+  const el = document.getElementById("xps"); if (!el) return;
+  const src = location.hostname.endsWith("github.io") ? "https://raw.githubusercontent.com/horoooos/betbot/main/docs/express.json" : "express.json";
+  let list = []; try {{ list = await (await fetch(src, {{ cache: "no-store" }})).json(); }} catch (e) {{}}
+  const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({{ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }}[c]));
+  const today = new Date().toLocaleDateString("sv-SE", {{ timeZone: "Europe/Moscow" }});
+  const time = iso => new Date(iso).toLocaleTimeString("ru-RU", {{ hour: "2-digit", minute: "2-digit", timeZone: "Europe/Moscow" }});
+  const day = iso => new Date(iso).toLocaleDateString("ru-RU", {{ day: "numeric", month: "short", timeZone: "Europe/Moscow" }});
+  const META = {{ express: ["d", "🔥", "Экспресс дня", "надёжные фавориты · каждый день в 10:00"], express_risk: ["r", "🥚", "Экспресс на яйцах", "кэф 10+ · каждый день в 20:00"] }};
+  const ST = {{ wait: ["", "⏳ Ждёт начала"], live: ["live", "● В игре"], won: ["won", "✅ Зашёл!"], lost: ["lost", "❌ Не зашёл"] }};
+  el.innerHTML = Object.keys(META).map(k => {{
+    const [cls, ic, title, sub] = META[k], x = list.find(e => e.kind === k);
+    if (!x) return `<div class="xp ${{cls}}"><div class="hd"><div class="tt">${{ic}} ${{title}}<small>${{sub}}</small></div></div><div class="empty">Новый экспресс скоро — следите за каналом.</div></div>`;
+    const old = x.day !== today && x.status !== "wait" && x.status !== "live";
+    const st = x.status === "live" ? ["live", `🔥 ${{x.won}} из ${{x.n}} уже зашли`] : ST[x.status];
+    const legs = x.legs.map(l => {{
+      const res = l.win === true ? `<span class="ok">✅ ${{esc(l.score)}}</span>` : l.win === false ? `<span class="no">❌ ${{esc(l.score)}}</span>` : `${{time(l.kickoff)}}<small>${{day(l.kickoff)}}</small>`;
+      return `<a class="lg" href="${{esc(l.url || "matches.html")}}"><span class="lgs">${{(l.logos || []).filter(Boolean).slice(0, 2).map(u => `<img src="${{esc(u)}}" alt="" loading="lazy">`).join("")}}</span>
+        <span style="min-width:0"><div class="tm">${{esc(l.home)}} — ${{esc(l.away)}}</div><div class="sub"><span class="pk">${{esc(l.label)}}</span> · ${{(+l.odds).toFixed(2)}}</div></span><span class="rt">${{res}}</span></a>`;
+    }}).join("");
+    const text = `${{title}} от АИ СТАВИТ (кэф ${{(+x.odds).toFixed(2)}}):\\n` + x.legs.map(l => `${{l.home}} — ${{l.away}}: ${{l.label}} · ${{(+l.odds).toFixed(2)}}`).join("\\n");
+    return `<div class="xp ${{cls}}"><div class="hd"><div class="tt">${{ic}} ${{title}}<small>${{old ? "вчерашний · " : ""}}${{x.n}} событий · шанс ~${{Math.round(x.p * 100)}}%</small></div>
+      <div class="od"><span>общий кэф</span><b>${{(+x.odds).toFixed(2)}}</b></div></div>
+      <span class="st ${{st[0]}}">${{st[1]}}</span>${{legs}}
+      <div class="ft">${{x.post ? `<a href="${{esc(x.post)}}" target="_blank" rel="noopener">📲 Пост в канале</a>` : ""}}<button data-copy="${{esc(text)}}">📋 Скопировать экспресс</button></div></div>`;
+  }}).join("");
+  el.querySelectorAll("[data-copy]").forEach(b => b.onclick = async () => {{ try {{ await navigator.clipboard.writeText(b.dataset.copy); b.textContent = "✅ Скопировано"; setTimeout(() => b.textContent = "📋 Скопировать экспресс", 2000); }} catch (e) {{}} }});
+}})();
+</script>
 {f'<h2>🎯 Прогнозы на сегодня <a href="predictions/" class="small muted" style="font-weight:700;margin-left:auto">все прогнозы →</a></h2><div class="grid">{blocks["preds"]}</div>' if blocks and blocks.get("preds") else ""}
 <div class="card" id="quizbox" style="margin-top:18px;display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:16px;align-items:center">
 <div id="quiz"><div class="muted">Загружаем матч дня…</div></div>
@@ -415,6 +467,37 @@ def matches_json(events: list[dict], stored: dict, now: pd.Timestamp) -> None:
     if not MATCHES.exists() or MATCHES.read_text(encoding="utf-8") != text:
         MATCHES.write_text(text, encoding="utf-8")
         print(f"Список матчей для 3D обновлён: {len(out)}")
+
+
+EXPRESS = OUT.parent / "express.json"   # «Экспресс дня» и «Экспресс на яйцах» для главной
+
+
+def express_json(state: dict) -> None:
+    """docs/express.json: оба экспресса бота с событиями, итогами и ссылками на трансляции (пишем только при изменениях)."""
+    from urllib.parse import urlencode
+    from . import leagues, sports
+    from .pages import CH
+    out = []
+    for key, title in (("express", "Экспресс дня"), ("express_risk", "Экспресс на яйцах")):
+        ex = state.get(key)
+        if not ex or not ex.get("legs"):
+            continue
+        legs = []
+        for leg in ex["legs"]:
+            sport, div = leg.get("sport", "football"), leg.get("div", "")
+            path = f"soccer/{leagues.ALL[div][3]}" if sport == "football" and div in leagues.ALL else (sports.LEAGUES.get(div) or ("",) * 5)[3]
+            url = ("live.html?" + urlencode({"s": sport, "p": path, "e": leg["id"], "h": leg["home"], "a": leg["away"]})) if path else ""
+            legs.append({k: leg.get(k) for k in ("sport", "id", "home", "away", "league", "kickoff", "label", "odds", "p", "logos", "win", "score")} | {"url": url})
+        p_all = 1.0
+        for leg in legs:
+            p_all *= leg["p"] or 0
+        played = [x for x in legs if x.get("win") is not None]
+        status = "lost" if any(x["win"] is False for x in played) else "won" if len(played) == len(legs) else "live" if played else "wait"
+        out.append({"kind": key, "title": title, "day": ex.get("day"), "odds": ex.get("odds"), "p": round(p_all, 4), "status": status,
+                    "won": sum(1 for x in played if x["win"]), "n": len(legs), "post": f"https://t.me/{CH}/{ex['msg']}" if ex.get("msg") else "", "legs": legs})
+    text = json.dumps(out, ensure_ascii=False, indent=0)
+    if not EXPRESS.exists() or EXPRESS.read_text(encoding="utf-8") != text:
+        EXPRESS.write_text(text, encoding="utf-8", newline=chr(10))
 
 
 SCORES = OUT.parent / "scores.json"   # счёт завершённых матчей — по нему сайт рассчитывает прогнозы болельщиков
