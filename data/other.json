@@ -8859,22 +8859,22 @@
   "kickoff": "2026-11-08T05:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "home": {
+   "color": "121212",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/la.png",
    "id": "8",
    "name": "Los Angeles Kings",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/la.png",
-   "color": "121212",
    "score": "0",
    "record": "5-7-2",
    "periods": [],
    "ru": "Лос-Анджелес"
   },
   "away": {
+   "color": "000000",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/pit.png",
    "id": "16",
    "name": "Pittsburgh Penguins",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/pit.png",
-   "color": "000000",
    "score": "0",
    "record": "5-9-2",
    "periods": [],
@@ -8978,7 +8978,9 @@
   "close": {
    "HK_O6.5": 0.4826,
    "HK_ML_A": 0.474
-  }
+  },
+  "main_hit": true,
+  "bold_hit": true
  },
  "NBA|401909943": {
   "id": "401909943",
