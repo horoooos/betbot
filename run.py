@@ -16,7 +16,7 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-from betbot import card, content, directory, esports, live, names, news, oddspapi, pages, pro, push, reviews, site, sports, tables, telegram, texts
+from betbot import card, content, directory, vk, esports, live, names, news, oddspapi, pages, pro, push, reviews, site, sports, tables, telegram, texts
 from betbot import markets as mk
 from betbot.data import MSK, load_fixtures, load_history
 from betbot.engine import add_market, fit_full, fit_weights, walk_forward
@@ -702,6 +702,10 @@ def main():
             site.build(site_res, now, blocks)
         except Exception as e:
             print(f"  ! страница статистики не собралась: {e}")
+    try:   # кросспостинг новых постов канала во ВКонтакте
+        vk.crosspost(state)
+    except Exception as e:
+        print(f"  ! ВК: {e}")
     try:
         site.matches_json(events + other, {**matches, **load_json(OTHER, {})}, now)
         site.scores_json(events + other, now)

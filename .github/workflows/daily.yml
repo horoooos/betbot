@@ -51,6 +51,7 @@ jobs:
           OPENROUTER_KEY: ${{ secrets.OPENROUTER_KEY }}
           GH_TOKEN: ${{ github.token }}
           FIREBASE_SA: ${{ secrets.FIREBASE_SA }}
+          VK_USER_TOKEN: ${{ secrets.VK_USER_TOKEN }}
         run: |
           git config user.name "betbot"
           git config user.email "betbot@users.noreply.github.com"
