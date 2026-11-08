@@ -427,7 +427,7 @@ def bb_search(home: str, sport: str = "") -> str:
     """Поиск BetBoom по команде: betboom.ru/search?query=… сразу показывает её матчи с коэффициентами."""
     import re
     from urllib.parse import quote
-    words = [w for w in re.split(r"[\s\-–—.()]+", home or "") if len(w) >= (2 if sport == "tennis" else 3)]
+    words = [w for w in re.split(r"[\s.()]+", home or "") if len(w) >= (2 if sport == "tennis" else 3)]
     key = (words[-1] if sport == "tennis" else max(words, key=len)) if words else (home or "")   # теннис — по фамилии
     if re.search(r"[A-Za-z]", key) and not re.search(r"[А-Яа-яЁё]", key):   # в BetBoom всё по-русски: Brest → Брест
         from .names import translit

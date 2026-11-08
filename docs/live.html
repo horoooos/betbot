@@ -189,7 +189,7 @@ import * as THREE from "three";
 const q = new URLSearchParams(location.search);
 // BetBoom: поиск по команде хозяев — их матч сразу в списке (реферальная ссылка — только на главной)
 let botBB = "";
-const bbSearch = (home, sport) => { const w = String(home || "").split(/[\s\-–—.()]+/).filter(x => x.length >= (sport === "tennis" ? 2 : 3));   // теннис — по фамилии, иначе самое длинное слово
+const bbSearch = (home, sport) => { const w = String(home || "").split(/[\s.()]+/).filter(x => x.length >= (sport === "tennis" ? 2 : 3));   // теннис — по фамилии, иначе самое длинное слово
   return "https://betboom.ru/search?query=" + encodeURIComponent(w.length ? (sport === "tennis" ? w[w.length - 1] : w.reduce((a, b) => b.length > a.length ? b : a)) : (home || "")); };
 const SPORT = q.get("s") || "football";
 const PATH = q.get("p") || `soccer/${q.get("l") || "eng.1"}`;      // старые ссылки: l=eng.1
