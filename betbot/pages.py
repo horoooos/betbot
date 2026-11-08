@@ -89,6 +89,12 @@ def _fetch(before: int | None) -> dict[int, dict]:
         return {}
 
 
+def latest_post_id() -> int:
+    """Номер последнего поста канала (один быстрый запрос) — чтобы пересобрать сайт сразу после нового поста."""
+    got = _fetch(None)
+    return max(got) if got else 0
+
+
 def sync_channel(max_pages: int = 25) -> dict[int, dict]:
     """Подтягивает новые посты канала, а старую историю докачивает понемногу (max_pages страниц за запуск)."""
     raw = json.loads(CHANNEL_FILE.read_text(encoding="utf-8")) if CHANNEL_FILE.exists() else {}

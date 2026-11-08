@@ -42,6 +42,19 @@
           font:700 11px Montserrat,sans-serif; text-decoration:none; white-space:nowrap; cursor:pointer; backdrop-filter:blur(8px) }
   #pp { text-align:center; margin-top:6px } #pp span { display:inline-block; background:rgba(255,70,70,.9); border-radius:999px; padding:3px 10px; font-size:11px; font-weight:800 }
   #pp:empty { display:none }
+  #acts { margin-top:6px; display:flex; gap:6px; justify-content:center; flex-wrap:wrap }
+  /* телефон: всё управление в одну строку под табло — поле остаётся открытым */
+  @media (max-width:600px) {
+    .hud.top { padding:8px 8px 0 }
+    .legend { display:none }
+    .row2 { margin-top:5px; gap:6px; justify-content:flex-start }
+    .row2 .league { display:none }
+    .row2 > .pill { flex:none; padding:5px 9px; font-size:11px }
+    .row2 #acts { margin:0; flex:1; min-width:0; flex-wrap:nowrap; justify-content:flex-start; overflow-x:auto; scrollbar-width:none; pointer-events:auto;
+      -webkit-mask-image:linear-gradient(90deg,#000 88%,transparent); mask-image:linear-gradient(90deg,#000 88%,transparent); padding-right:14px }
+    .row2 #acts::-webkit-scrollbar { display:none }
+    #acts .pill { flex:none; padding:5px 9px; font-size:11px; white-space:nowrap }
+  }
   #tag { position:fixed; z-index:3; pointer-events:none; left:50%; top:var(--tagTop,128px); transform:translateX(-50%); padding:8px 14px 8px 16px; border-radius:14px;
          background:var(--card); border:1px solid var(--line); backdrop-filter:blur(8px); white-space:nowrap; opacity:0; text-align:center;
          max-width:calc(100vw - 32px); overflow:hidden; text-overflow:ellipsis; transition:opacity .35s, transform .35s }
@@ -141,10 +154,10 @@
   </div>
   <div class="row2"><a class="pill" href="matches.html">← Все матчи</a><div class="league" id="lg"></div><button class="pill" id="cam">🎥 ТВ</button></div>
   <div class="legend" id="legend"></div>
-  <div style="text-align:center;margin-top:6px;display:flex;gap:6px;justify-content:center;flex-wrap:wrap">
+  <div id="acts">
     <span class="pill" id="viewers" style="display:none;pointer-events:none">👁 0</span>
     <button class="pill tipbtn" id="tipbtn" style="display:none">🎯 Прогноз бота</button>
-    <button class="pill" id="teamsbtn" style="display:none">👥 Команды и составы</button>
+    <button class="pill" id="teamsbtn" style="display:none">👥 Составы</button>
     <button class="pill" id="chatbtn" style="display:none">💬 Чат</button>
     <button class="pill" id="notibtn" style="display:none">🔔</button></div>
   <div id="pp"></div>
@@ -176,8 +189,13 @@ const [L, Wd] = FIELD;
 const SC = L / 105;
 
 // ═════════════════════════ сцена ═════════════════════════
-const renderer = new THREE.WebGLRenderer({ canvas: $("scene"), antialias: true });
-renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+// ── качество под устройство: слабым — проще модели и ниже разрешение; дальше подстраиваемся по частоте кадров ──
+const MOBILE = /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent) || (matchMedia("(pointer:coarse)").matches && innerWidth < 900);
+const LOW = q.has("low") || (navigator.hardwareConcurrency || 8) <= 4 || (navigator.deviceMemory || 8) <= 3;
+const PR_MAX = Math.min(devicePixelRatio || 1, LOW ? 1.25 : MOBILE ? 1.75 : 2), PR_MIN = .7;
+let pr = PR_MAX;
+const renderer = new THREE.WebGLRenderer({ canvas: $("scene"), antialias: !(MOBILE && (devicePixelRatio || 1) >= 2) && !LOW, powerPreference: "high-performance" });
+renderer.setPixelRatio(pr);
 renderer.toneMapping = THREE.ACESFilmicToneMapping; renderer.toneMappingExposure = 1.15;
 const scene = new THREE.Scene();
 scene.background = (() => { const c = document.createElement("canvas"); c.width = 4; c.height = 256; const g = c.getContext("2d");
@@ -196,7 +214,7 @@ const line = (g, k, w = .12) => { g.strokeStyle = "rgba(255,255,255,.95)"; g.lin
 const DRAW = {
   football(g, k, c) {
     for (let i = 0; i < 12; i++) { g.fillStyle = i % 2 ? "#2c8a37" : "#34993f"; g.fillRect(i * c.width / 12, 0, c.width / 12 + 1, c.height); }
-    for (let i = 0; i < 26000; i++) {   // травинки: мелкий шум светлее/темнее
+    for (let i = 0; i < (LOW ? 8000 : 26000); i++) {   // травинки: мелкий шум светлее/темнее
       g.fillStyle = Math.random() < .5 ? `rgba(255,255,220,${Math.random() * .05})` : `rgba(0,30,0,${Math.random() * .08})`;
       g.fillRect(Math.random() * c.width, Math.random() * c.height, 1 + Math.random() * 3, 1 + Math.random() * 2);
     }
@@ -345,7 +363,7 @@ for (const [sx, sz] of [[-1, -1], [1, -1], [-1, 1], [1, 1]]) {
   const panel = new THREE.Mesh(new THREE.BoxGeometry(5 * m, 3 * m, .5), new THREE.MeshBasicMaterial({ color: 0xfff6d8 }));
   panel.position.set(px, hgt + 1, pz); panel.lookAt(0, 0, 0); world.add(panel);
   const gl = new THREE.Sprite(new THREE.SpriteMaterial({ map: lampGlow, transparent: true, depthWrite: false, blending: THREE.AdditiveBlending, opacity: .9 }));
-  gl.scale.setScalar(16 * m); gl.position.copy(panel.position); world.add(gl);
+  gl.scale.setScalar(16 * m); gl.position.copy(panel.position); if (!LOW) world.add(gl);
 }
 scene.add(new THREE.HemisphereLight(0xe6eeff, 0x20301e, 1.25));
 const sun = new THREE.DirectionalLight(0xfff6e8, 1.6); sun.position.set(30, 80, 40); scene.add(sun);
@@ -461,13 +479,17 @@ class Fig {
     const shorts = new THREE.Mesh(GEO.shorts, this.shortsMat); shorts.position.y = .76;
     const head = new THREE.Mesh(GEO.head, skin); head.position.y = 1.46;
     const hair = new THREE.Mesh(GEO.hair, pick(hairMats)); hair.position.y = 1.475; hair.rotation.x = -.25;
-    this.inner.add(torso, shorts, head, hair);
+    this.inner.add(torso, shorts, head); if (!LOW) this.inner.add(hair);
     // ноги и руки на «шарнирах» — качаются в такт шагу
     this.legs = [-1, 1].map(s => { const j = new THREE.Group(); j.position.set(s * .1, .74, 0);
-      const l = new THREE.Mesh(GEO.leg, skin); l.position.y = -.3; const sock = new THREE.Mesh(GEO.leg, this.shortsMat); sock.scale.set(1.08, .5, 1.08); sock.position.y = -.42;
-      const b = new THREE.Mesh(GEO.boot, bootMat); b.position.set(0, -.6, .04); j.add(l, sock, b); this.inner.add(j); return j; });
+      const l = new THREE.Mesh(GEO.leg, skin); l.position.y = -.3; j.add(l);
+      if (!LOW) { const sock = new THREE.Mesh(GEO.leg, this.shortsMat); sock.scale.set(1.08, .5, 1.08); sock.position.y = -.42;
+        const b = new THREE.Mesh(GEO.boot, bootMat); b.position.set(0, -.6, .04); j.add(sock, b); }
+      this.inner.add(j); return j; });
     this.arms = [-1, 1].map(s => { const j = new THREE.Group(); j.position.set(s * .27, 1.2, 0); j.rotation.z = s * .12;
-      const a = new THREE.Mesh(GEO.arm, this.mat); a.position.y = -.2; const h = new THREE.Mesh(GEO.arm, skin); h.scale.set(.9, .45, .9); h.position.y = -.4; j.add(a, h); this.inner.add(j); return j; });
+      const a = new THREE.Mesh(GEO.arm, this.mat); a.position.y = -.2; j.add(a);
+      if (!LOW) { const h = new THREE.Mesh(GEO.arm, skin); h.scale.set(.9, .45, .9); h.position.y = -.4; j.add(h); }
+      this.inner.add(j); return j; });
     const shd = new THREE.Mesh(GEO.shadow, team ? new THREE.MeshBasicMaterial({ color: team.color, map: softShadow, transparent: true, opacity: .75, depthWrite: false }) : shadowMat);
     shd.rotation.x = -Math.PI / 2; shd.position.y = .05; shd.scale.setScalar(team ? 1.35 : 1); this.g.add(shd);
     this.bg = labelBg || color; this.fg = labelFg;
@@ -690,9 +712,21 @@ let last = performance.now();
 const tag = $("tag");
 const camLook = new THREE.Vector3();
 let liveClock = null, clockMin = null;
-function animate(now) { requestAnimationFrame(animate); if (!manual) frame(now); }
+function animate(now) { requestAnimationFrame(animate); if (!manual && document.visibilityState === "visible") frame(now); else last = now; }
 let manual = false;
+let fpsAcc = 0, fpsN = 0, fpsAt = 0;
+function adaptQuality(ms, now) {
+  if (manual || document.visibilityState !== "visible") return;
+  fpsAcc += ms; fpsN++;
+  if (now - fpsAt < 1500 || fpsN < 20) return;
+  const avg = fpsAcc / fpsN; fpsAcc = fpsN = 0; fpsAt = now;
+  let next = pr;
+  if (avg > 24 && pr > PR_MIN) next = Math.max(PR_MIN, pr - .2);          // меньше ~40 к/с — снижаем разрешение
+  else if (avg < 14 && pr < PR_MAX) next = Math.min(PR_MAX, pr + .1);     // запас есть — понемногу возвращаем чёткость
+  if (Math.abs(next - pr) > .01) { pr = next; renderer.setPixelRatio(pr); resize(); }
+}
 function frame(now) {
+  adaptQuality(now - last, now);
   const dt = Math.min((now - last) / 1000, .05); last = now; const t = now / 1000;
   simStep(dt, t);
   for (const f of figs) f.update(dt, t);
@@ -735,7 +769,7 @@ function frame(now) {
   zoneMat.opacity += ((zone.userData.target || 0) - zoneMat.opacity) * (1 - Math.exp(-dt * 3));
   if (liveClock) { const s = Math.min(liveClock.base + (Date.now() - liveClock.at) / 1000, liveClock.cap ?? 1e9); $("cl").textContent = `${Math.floor(s / 60)}:${String(Math.floor(s % 60)).padStart(2, "0")}${liveClock.suffix}`; }
   renderer.render(scene, camera);
-  const topH = document.querySelector(".hud.top").getBoundingClientRect().bottom; tag.style.setProperty("--tagTop", `${Math.round(topH + 4)}px`);
+  if (now - (frame.hudAt || 0) > 500) { frame.hudAt = now; const topH = document.querySelector(".hud.top").getBoundingClientRect().bottom; tag.style.setProperty("--tagTop", `${Math.round(topH + 4)}px`); }
 }
 requestAnimationFrame(animate);
 
@@ -1004,7 +1038,7 @@ async function handleFootball(p) {
     feed(clock, `${name || tm.ru} · Заработал штрафной`); return freeKickSeq(tm, pos, "Заработал штрафной"); }
   lastFoot = k;
   feed(clock, `${name ? name + " · " : tm ? tm.ru + " · " : ""}${label}`);
-  if ((/^goal|penalty---scored|own-goal/.test(k) || p.scoringPlay) && !/deleted|var/.test(k)) return goalSeq(p, tm || poss, s, k);
+  if ((/^goal|penalty---scored|own-goal/.test(k) || p.scoringPlay) && !/deleted|var/.test(k)) { if (!goalOnce(p, name || tm?.ru)) return; return goalSeq(p, tm || poss, s, k); }
   const shooter = () => findFig(tm, name) || nearest(outfield(tm), { x: pos[0], z: pos[1] });
   switch (k) {
     case "shot-on-target": case "save": { if (!tm) return; mode = "script"; zoneFor(tm); chip("🎯 УДАР В СТВОР", "#ffffff", name || tm.ru); await footShot(tm, shooter(), pos, pos2, "save"); mode = "play"; return; }
@@ -1153,7 +1187,7 @@ function updatePP() {
 async function handleHockey(p) {
   const tt = (p.type?.text || "").toLowerCase(), s = side(p), tm = teamOf(s), clock = p.clock?.displayValue || "", name = hkName(p);
   const pos = hkPos(p, s);
-  if (p.scoringPlay || tt === "goal") { feed(clock, `${name ? name + " · " : ""}${tm?.ru || ""} · ГОЛ!`); return hkGoal(p, tm || poss); }
+  if (p.scoringPlay || tt === "goal") { if (!goalOnce(p, name || tm?.ru)) return; feed(clock, `${name ? name + " · " : ""}${tm?.ru || ""} · ГОЛ!`); return hkGoal(p, tm || poss); }
   if (tt === "face off") { feed(clock, `Вбрасывание · выиграл ${tm?.ru || ""}`); show(tm?.ru, "Выиграл вбрасывание", tm?.color); return faceoff(pos[0], pos[1], tm); }
   if (tt === "shot" || tt === "missed" || tt === "blocked") { if (!tm) return; setDir(tm, pos[0]); zoneFor(tm);
     const sh = figBy(tm, p, { x: pos[0], z: pos[1] }) || nearest(field(tm.players).filter(f => f.role !== "G" && !f.inBox), { x: pos[0], z: pos[1] });
@@ -1302,6 +1336,9 @@ function setTeams(h, a) {
   }
 }
 
+{ const mq = matchMedia("(max-width:600px)"), acts = $("acts"), row = document.querySelector(".row2"), home = acts.parentNode, after = acts.nextSibling;
+  const place = () => { if (mq.matches) row.insertBefore(acts, $("cam")); else home.insertBefore(acts, after); };
+  place(); mq.addEventListener?.("change", place); }
 // ═════════════════════════ «Команды и составы»: переходы на страницы команд, игроков и турнира ═════════════════════════
 let SUM = null;
 $("sheet").addEventListener("click", e => { if (e.target.id === "sheet" || e.target.id === "sx") $("sheet").classList.remove("on"); });
@@ -1333,6 +1370,12 @@ const seen = new Set();
 let first = true, replayMode = false, built = false, lastGames = null, lastGH = 0, lastSets = null, lastSetsH = 0;
 const HANDLE = { football: handleFootball, hockey: handleHockey, basketball: handleBasketball }[SPORT];
 const pid = p => p.id || p.sequenceNumber || `${p.sequence}-${p.text}`;
+let scoreTotal = 0, goalsShown = 0; const goalKeys = new Set();
+function goalOnce(p, who) {   // true — показываем гол; false — это повтор того, что уже показали
+  const key = `${p.clock?.displayValue || p.clock || ""}|${who || ""}|${p.period?.number || ""}`;
+  if (goalKeys.has(key) || (!replayMode && goalsShown >= scoreTotal && scoreTotal > 0)) return false;
+  goalKeys.add(key); goalsShown++; return true;
+}
 (async function runner() {
   for (;;) {
     if (queue.length && HANDLE) {
@@ -1440,6 +1483,7 @@ async function load() {
   $("lg").textContent = d.header.league?.name || d.header.league?.abbreviation || "";
   const st = comp.status?.type || {}, live = st.state === "in", brk = /HALFTIME|END_PERIOD/i.test(st.name || "");
   $("sc").textContent = `${ch.score ?? 0} : ${ca.score ?? 0}`;
+  scoreTotal = (+ch.score || 0) + (+ca.score || 0);
   const per = comp.status?.period, unit = SPORT === "football" ? "-й тайм" : SPORT === "hockey" ? "-й период" : "-я четверть";
   liveClock = null;
   if (live && !brk && SPORT === "football") {
@@ -1452,7 +1496,8 @@ async function load() {
                              : (st.state === "post" ? "Матч завершён" : (st.shortDetail || "Скоро начало"));
   $("dot").classList.toggle("off", !live);
   if (d.boxscore?.teams?.length === 2) $("stats").innerHTML = statsHTML(d.boxscore.teams);
-  const plays = SPORT === "football" ? (d.commentary || []).map(c => c.play ? { ...c.play, id: `${c.play.id}-${c.sequence}`, text: c.text || c.play.text, clock: c.play.clock || c.time } : { id: `c${c.sequence}`, text: c.text, clock: c.time })
+  const plays = SPORT === "football" ? (d.commentary || []).map(c => c.play ? { ...c.play, id: `${c.play.id}|${String(c.text || c.play.text || "").slice(0, 60)}`, text: c.text || c.play.text, clock: c.play.clock || c.time }
+                                                                           : { id: `c|${c.time?.displayValue || ""}|${String(c.text || "").slice(0, 80)}`, text: c.text, clock: c.time })
                                      : (d.plays || []);
   $("msg").style.display = "none";
   if (st.state === "post" && !replayMode) {

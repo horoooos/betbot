@@ -56,7 +56,7 @@ jobs:
           git config user.email "betbot@users.noreply.github.com"
           export GIT_TERMINAL_PROMPT=0   # git никогда не ждёт ввода — иначе цикл может встать навсегда
           end=$(( $(date +%s) + $(python -c "print(int(float('$LOOP_HOURS') * 3600))") ))
-          # пуши бота через github.token не запускают другие workflow — сборку сайта запускаем сами (не чаще раза в 6 минут)
+          # пуши бота через github.token не запускают другие workflow — сборку сайта запускаем сами (не чаще раза в 2,5 минуты)
           pages_sha=""; pages_at=0
           while [ "$(date +%s)" -lt "$end" ]; do
             started=$(date +%s)
@@ -80,7 +80,7 @@ jobs:
               # сохранять нечего (например, проход упал) — всё равно подтягиваем свежий код с исправлениями
               timeout 600 git pull -q --rebase -X theirs || git rebase --abort 2>/dev/null || true
             fi
-            if [ $(( $(date +%s) - pages_at )) -ge 360 ] && { [ -z "$pages_sha" ] || ! git diff --quiet "$pages_sha" HEAD -- docs; }; then
+            if [ $(( $(date +%s) - pages_at )) -ge 150 ] && { [ -z "$pages_sha" ] || ! git diff --quiet "$pages_sha" HEAD -- docs; }; then
               timeout 60 gh workflow run pages.yml --repo "$GITHUB_REPOSITORY" --ref main && pages_sha=$(git rev-parse HEAD) && pages_at=$(date +%s) || echo "::warning::сборка сайта не запустилась"
             fi
             wait=$(( LOOP_MINUTES * 60 - ($(date +%s) - started) ))

@@ -679,8 +679,13 @@ def main():
     except Exception as e:
         print(f"  ! справочник команд не обновился: {e}")
     site_res = read_results()
-    # публичная страница со статистикой — после каждого нового результата (и хотя бы раз в час)
-    stamp = f"{len(site_res)}|{now:%Y-%m-%d %H}"
+    # сайт пересобирается сразу после каждого нового поста в канале (новость, прогноз, итог),
+    # после каждого нового результата и хотя бы раз в час
+    try:
+        last_post = pages.latest_post_id()
+    except Exception:
+        last_post = 0
+    stamp = f"{len(site_res)}|{last_post}|{now:%Y-%m-%d %H}"
     if state.get("site_stamp") != stamp or not site.OUT.exists():
         state["site_stamp"] = stamp
         blocks = None
