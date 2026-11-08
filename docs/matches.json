@@ -1,23 +1,6 @@
 [
 {
 "sport": "football",
-"id": "401888253",
-"league": "Турция · Суперлига",
-"kickoff": "2026-11-08T13:30:00+03:00",
-"home": "Кайкур Ризеспор",
-"away": "Эрзурумспор",
-"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/7656.png",
-"al": "https://a.espncdn.com/i/teamlogos/soccer/500/19267.png",
-"hid": "7656",
-"aid": "19267",
-"path": "soccer/tur.1",
-"url": "live.html?s=football&p=soccer%2Ftur.1&e=401888253&h=%D0%9A%D0%B0%D0%B9%D0%BA%D1%83%D1%80+%D0%A0%D0%B8%D0%B7%D0%B5%D1%81%D0%BF%D0%BE%D1%80&a=%D0%AD%D1%80%D0%B7%D1%83%D1%80%D1%83%D0%BC%D1%81%D0%BF%D0%BE%D1%80",
-"tip": "",
-"top": false,
-"bot": null
-},
-{
-"sport": "football",
 "id": "401879814",
 "league": "Россия · Премьер-лига",
 "kickoff": "2026-11-08T14:00:00+03:00",
@@ -562,89 +545,6 @@ null
 }
 },
 {
-"sport": "tennis",
-"id": "186598",
-"league": "Теннис · WTA",
-"kickoff": "2026-11-08T17:30:00+03:00",
-"home": "Джанис Тьен",
-"away": "Магда Линетт",
-"hl": "https://a.espncdn.com/i/teamlogos/countries/500/ina.png",
-"al": "https://a.espncdn.com/i/teamlogos/countries/500/pol.png",
-"hid": "6368",
-"aid": "1649",
-"path": "tennis/wta",
-"url": "live.html?s=tennis&p=tennis%2Fwta&e=186598&h=%D0%94%D0%B6%D0%B0%D0%BD%D0%B8%D1%81+%D0%A2%D1%8C%D0%B5%D0%BD&a=%D0%9C%D0%B0%D0%B3%D0%B4%D0%B0+%D0%9B%D0%B8%D0%BD%D0%B5%D1%82%D1%82",
-"tip": "Будет 2 сета · ≈1.84",
-"top": false,
-"bot": {
-"main": {
-"label": "Будет 2 сета",
-"p": 0.504,
-"odds": 1.84,
-"est": true
-},
-"bold": null,
-"markets": [
-[
-"Победа: Джанис Тьен",
-0.568,
-null
-],
-[
-"Победа: Магда Линетт",
-0.432,
-null
-],
-[
-"Будет 3 сета",
-0.496,
-null
-],
-[
-"Будет 2 сета",
-0.504,
-null
-],
-[
-"Счёт по сетам 2:0",
-0.297,
-null
-],
-[
-"Счёт по сетам 0:2",
-0.207,
-null
-],
-[
-"Счёт по сетам 2:1",
-0.27,
-null
-],
-[
-"Счёт по сетам 1:2",
-0.225,
-null
-],
-[
-"Джанис Тьен возьмёт хотя бы сет",
-0.793,
-null
-],
-[
-"Магда Линетт возьмёт хотя бы сет",
-0.703,
-null
-]
-],
-"bar": [
-0.5677971203553589,
-0,
-0.4322028796446411
-],
-"center": "Рейтинг Эло 1644 : 1596"
-}
-},
-{
 "sport": "football",
 "id": "401878945",
 "league": "Бельгия · Про-лига",
@@ -784,6 +684,89 @@ null
 "tip": "",
 "top": false,
 "bot": null
+},
+{
+"sport": "tennis",
+"id": "186598",
+"league": "Теннис · WTA",
+"kickoff": "2026-11-08T18:00:00+03:00",
+"home": "Джанис Тьен",
+"away": "Магда Линетт",
+"hl": "https://a.espncdn.com/i/teamlogos/countries/500/ina.png",
+"al": "https://a.espncdn.com/i/teamlogos/countries/500/pol.png",
+"hid": "6368",
+"aid": "1649",
+"path": "tennis/wta",
+"url": "live.html?s=tennis&p=tennis%2Fwta&e=186598&h=%D0%94%D0%B6%D0%B0%D0%BD%D0%B8%D1%81+%D0%A2%D1%8C%D0%B5%D0%BD&a=%D0%9C%D0%B0%D0%B3%D0%B4%D0%B0+%D0%9B%D0%B8%D0%BD%D0%B5%D1%82%D1%82",
+"tip": "Будет 2 сета · ≈1.84",
+"top": false,
+"bot": {
+"main": {
+"label": "Будет 2 сета",
+"p": 0.504,
+"odds": 1.84,
+"est": true
+},
+"bold": null,
+"markets": [
+[
+"Победа: Джанис Тьен",
+0.568,
+null
+],
+[
+"Победа: Магда Линетт",
+0.432,
+null
+],
+[
+"Будет 3 сета",
+0.496,
+null
+],
+[
+"Будет 2 сета",
+0.504,
+null
+],
+[
+"Счёт по сетам 2:0",
+0.297,
+null
+],
+[
+"Счёт по сетам 0:2",
+0.207,
+null
+],
+[
+"Счёт по сетам 2:1",
+0.27,
+null
+],
+[
+"Счёт по сетам 1:2",
+0.225,
+null
+],
+[
+"Джанис Тьен возьмёт хотя бы сет",
+0.793,
+null
+],
+[
+"Магда Линетт возьмёт хотя бы сет",
+0.703,
+null
+]
+],
+"bar": [
+0.5677971203553589,
+0,
+0.4322028796446411
+],
+"center": "Рейтинг Эло 1644 : 1596"
+}
 },
 {
 "sport": "football",
