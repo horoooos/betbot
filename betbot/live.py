@@ -3,7 +3,9 @@
 Чтобы канал не утонул в сотнях постов, live включён только для турниров из LIVE (их легко расширить).
 Бот проверяет матчи каждые 5 минут, поэтому пост о голе выходит с задержкой до 5 минут.
 """
+import json
 from html import escape
+from pathlib import Path
 from urllib.parse import urlencode
 
 import pandas as pd
@@ -59,10 +61,37 @@ def _tracker(e: dict, sport: str, h: str, a: str) -> tuple[str, str] | None:
 BB_SPORT = "https://betboom.ru/sport/"   # обычная ссылка на линию BetBoom (реферальная — только на главной сайта)
 
 
+# Мини-приложение Telegram: кнопки в канале открывают сайт прямо внутри Telegram (t.me/<бот>?startapp=…).
+# Включается в data/miniapp.json ({"on": true}) — после настройки «Main Mini App» в BotFather. Бот этот файл не пишет.
+MINIAPP_FILE = Path(__file__).resolve().parent.parent / "data" / "miniapp.json"
+_bot_name: dict = {}
+
+
+def miniapp_bot() -> str | None:
+    """Имя бота, если мини-приложение включено; иначе None (кнопки ведут на сайт в браузере)."""
+    try:
+        if not json.loads(MINIAPP_FILE.read_text(encoding="utf-8")).get("on"):
+            return None
+    except (OSError, ValueError):
+        return None
+    if "v" not in _bot_name:
+        try:
+            _bot_name["v"] = telegram._call("getMe", chat_id=None).get("username")
+        except Exception as ex:
+            print(f"  ! мини-приложение: не узнали имя бота: {ex}")
+            _bot_name["v"] = None
+    return _bot_name["v"]
+
+
 def buttons(e: dict, sport: str, h: str, a: str) -> list[tuple[str, str]]:
     """Кнопки под постом о матче: этот матч онлайн + все матчи дня; отдельной строкой — сделать ставку в BetBoom."""
     b = _tracker(e, sport, h, a)
-    row = [("📺 Смотреть онлайн", b[1]), ("🗂 Все матчи", MATCHES_PAGE)] if b else [("🗂 Матчи онлайн", MATCHES_PAGE)]
+    bot = miniapp_bot()
+    if bot:   # внутри Telegram, без браузера
+        watch, allm = f"https://t.me/{bot}?startapp=m{e['id']}", f"https://t.me/{bot}?startapp=matches"
+    else:
+        watch, allm = (b[1] if b else None), MATCHES_PAGE
+    row = [("📺 Смотреть онлайн", watch), ("🗂 Все матчи", allm)] if b else [("🗂 Матчи онлайн", allm)]
     from .pages import bb_search
     return row + [("💰 Сделать ставку в BetBoom", bb_search(h, sport))]
 

@@ -1347,7 +1347,7 @@ function setTeams(h, a) {
   for (const [el, x] of [["hn", H], ["an", A]]) if (x.id) {
     const url = `${SPORT === "tennis" ? "player" : "team"}.html?p=${encodeURIComponent(PATH)}&id=${encodeURIComponent(x.id)}`;
     const n = $(el); n.style.cursor = "pointer"; n.title = SPORT === "tennis" ? "Профиль игрока" : "Расписание, состав и статистика команды";
-    n.onclick = () => window.open(url, "_blank");
+    n.onclick = () => { let tgApp = false; try { tgApp = sessionStorage.getItem("tgapp") === "1"; } catch (e) {} tgApp ? (location.href = url) : window.open(url, "_blank"); };   // в Telegram — в том же окне
   }
 }
 
@@ -1635,7 +1635,7 @@ if ("Notification" in window && EVENT) {
     paint();
   };
 }
-if (EVENT) import("./fb.js?v=10").then(fb => {
+if (EVENT) import("./fb.js?v=11").then(fb => {
   window.__fb = fb;
   fb.track(`live:${EVENT}`, EVENT);
   fb.watchPresence(all => { const n = all[EVENT] || 0; $("viewers").textContent = `👁 ${n} ${n % 10 === 1 && n % 100 !== 11 ? "смотрит" : "смотрят"}`; $("viewers").style.display = "inline-block"; });

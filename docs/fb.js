@@ -513,5 +513,29 @@ export function reveal() {
     if (seen) { el.style.transitionDelay = Math.min(i, 8) * 40 + "ms"; requestAnimationFrame(() => requestAnimationFrame(() => el.classList.add("in"))); } else io.observe(el); }); first = false; };
   mark(); new MutationObserver(() => mark()).observe(document.querySelector("main") || document.body, { childList: true, subtree: true });
 }
-const boot = () => { supportButton(); searchButton(); onlineBadge(); bellButton(); reveal(); };
+// ── мини-приложение Telegram: сайт открыт внутри Telegram (из канала или меню бота) ──
+export const inTelegram = () => { try { return sessionStorage.getItem("tgapp") === "1" || /tgWebApp/.test(location.hash + location.search); } catch (e) { return false; } };
+function telegramApp() {
+  if (!inTelegram()) return;
+  try { sessionStorage.setItem("tgapp", "1"); } catch (e) {}
+  const start = tg => {
+    try { tg.ready(); tg.expand(); tg.setHeaderColor?.("#070b1a"); tg.setBackgroundColor?.("#070b1a"); tg.disableVerticalSwipes?.(); } catch (e) {}
+    // «Назад» в шапке Telegram — на всех страницах, кроме первой
+    const home = /\/betbot\/(index\.html)?$/.test(location.pathname) || location.pathname.endsWith("/app.html");
+    if (tg.BackButton) { if (!home && history.length > 1) { tg.BackButton.show(); tg.BackButton.onClick(() => history.back()); } else tg.BackButton.hide(); }
+    // внешние ссылки — средствами Telegram: t.me — внутри Telegram, остальное (BetBoom) — во внешнем браузере/приложении
+    document.addEventListener("click", e => {
+      const a = e.target.closest && e.target.closest("a[href]"); if (!a) return;
+      const u = new URL(a.href, location.href);
+      if (u.host === location.host) { if (a.target === "_blank") { e.preventDefault(); location.href = u.href; } return; }   // свои страницы — в том же окне мини-приложения
+      e.preventDefault();
+      if (/^(t\.me|telegram\.me)$/.test(u.host)) tg.openTelegramLink(u.href); else tg.openLink(u.href, { try_instant_view: false });
+    }, true);
+    document.documentElement.classList.add("tg");
+  };
+  if (window.Telegram && Telegram.WebApp) return start(Telegram.WebApp);
+  const s = document.createElement("script"); s.src = "https://telegram.org/js/telegram-web-app.js?56"; s.onload = () => window.Telegram && start(Telegram.WebApp);
+  document.head.appendChild(s);
+}
+const boot = () => { telegramApp(); supportButton(); searchButton(); onlineBadge(); bellButton(); reveal(); };
 if (typeof document !== "undefined") { if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", boot); else boot(); }

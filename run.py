@@ -613,17 +613,18 @@ def main():
         print(f"  ! push не удался: {e}")
 
     # кнопки «📺 Смотреть онлайн» под уже опубликованными прогнозами (переписываем и старые «3D»)
+    btn_ver = 4 if live.miniapp_bot() else 3   # 4 — кнопки открывают мини-приложение в Telegram
     for path, store in ((MATCHES, matches), (OTHER, load_json(OTHER, {}))):
         changed = False
         for m in store.values():
-            if not m.get("msg_id") or m.get("btn") == 3 or "ru" not in m.get("home", {}):
+            if not m.get("msg_id") or m.get("btn") == btn_ver or "ru" not in m.get("home", {}):
                 continue
             if pd.Timestamp(m["kickoff"]) < now - pd.Timedelta(hours=3):
-                m["btn"] = 3  # старые матчи не трогаем
+                m["btn"] = btn_ver  # старые матчи не трогаем
                 continue
             sp = m.get("sport", "football")
-            if telegram.add_buttons(m["msg_id"], live.buttons(m, sp, m["home"]["ru"], m["away"]["ru"])):   # 3 — с кнопкой BetBoom
-                m["btn"] = 3
+            if telegram.add_buttons(m["msg_id"], live.buttons(m, sp, m["home"]["ru"], m["away"]["ru"])):
+                m["btn"] = btn_ver
                 changed = True
         if changed or path == OTHER:
             save_json(path, store)

@@ -120,7 +120,7 @@ document.addEventListener("click", e => { const g = e.target.closest("[data-go]"
 // «💰 BetBoom»: открываем поиск BetBoom по команде (матч сразу в списке), ставку бота копируем в буфер
 
 document.addEventListener("click", e => { const b = e.target.closest("[data-bb]"); if (!b) return; e.preventDefault(); e.stopPropagation();
-  try { navigator.clipboard?.writeText(b.dataset.bb); } catch (x) {} window.open(b.dataset.u || bbSearch(b.dataset.h, b.dataset.sp), "_blank", "noopener"); }, true);
+  try { navigator.clipboard?.writeText(b.dataset.bb); } catch (x) {} { const u = b.dataset.u || bbSearch(b.dataset.h, b.dataset.sp); window.Telegram?.WebApp?.openLink ? Telegram.WebApp.openLink(u) : window.open(u, "_blank", "noopener"); } }, true);
 const bbSearch = (home, sport) => { const w = String(home || "").split(/[\s.()]+/).filter(x => x.length >= (sport === "tennis" ? 2 : 3));   // теннис — по фамилии, иначе самое длинное слово
   return "https://betboom.ru/search?query=" + encodeURIComponent(w.length ? (sport === "tennis" ? w[w.length - 1] : w.reduce((a, b) => b.length > a.length ? b : a)) : (home || "")); };
 function card(m) {
@@ -166,7 +166,7 @@ async function load() {
   }
   render(); await scores(); render();
 }
-import("./fb.js?v=10").then(fb => {
+import("./fb.js?v=11").then(fb => {
   fb.track("matches"); fb.navUser(document.getElementById("navUser"));
   fb.watchPresence(v => { viewers = v; render(); });
 }).catch(() => {});
