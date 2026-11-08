@@ -19328,7 +19328,7 @@
   "kickoff": "2026-11-08T04:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Scheduled",
   "home": {
    "id": "232",
@@ -19466,7 +19466,10 @@
   "close": {
    "BTTS_Y": 0.5998,
    "A": 0.4726
-  }
+  },
+  "main_hit": true,
+  "bold_hit": true,
+  "value_hit": null
  },
  "401876905": {
   "id": "401876905",
@@ -19750,6 +19753,9 @@
   "learned_n": 723,
   "extra": null,
   "msg_id": 4198,
-  "btn": 2
+  "btn": 2,
+  "close": {
+   "_": null
+  }
  }
 }
