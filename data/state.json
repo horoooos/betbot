@@ -7,8 +7,6 @@
  "schedule_day": "2026-11-08",
  "content_slot": "2026-11-08-23",
  "news_seen": [
-  "https://www.championat.com/cybersport/news-6678104-takim-vy-ego-eschyo-ne-videli-robert-pattinson-o-sikvele-betmena-metta-rivza.html",
-  "https://www.championat.com/cybersport/news-6678084-hyu-dzhekman-ien-makkellen-i-drugie-otreagirovali-na-smert-patrika-styuarta.html",
   "https://www.championat.com/football/news-6678160-kondakov-prokommentiroval-pobedu-zenita-v-matche-kubka-rossii-s-baltikoj.html",
   "https://www.championat.com/cybersport/news-6678194-dzhejms-gann-kommentiruet-vozmozhnoe-vozvraschenie-margo-robbi-v-roli-harli-kvinn.html",
   "https://www.sport-express.ru/hockey/nhl/news/duda-debyutiroval-v-nhl-i-provel-na-ldu-bolshe-15-minut-v-pobednom-matche-yuty-2468952/",
@@ -506,9 +504,11 @@
   "https://www.sport-express.ru/cybersport/esports/news/kak-iem-beijing-2026-izmenil-top-20-igrokov-cs2-molodoy-oboshel-sh1ro-a-xertion-podnyalsya-na-14-e-mesto-2472550/",
   "https://www.championat.com/hockey/news-6691438-nikita-gusev-vyskazalsya-ob-ustanovlenii-novogo-klubnogo-rekorda-sochi.html",
   "https://www.championat.com/hockey/news-6691418-i-o-glavnogo-trenera-sochi-ocenil-novyj-klubnyj-rekord-nikity-guseva.html",
-  "https://www.championat.com/football/news-6691580-trener-zenita-semak-prokommentiroval-nevklyuchenie-soboleva-v-zayavku-sbornoj-rossii.html"
+  "https://www.championat.com/football/news-6691580-trener-zenita-semak-prokommentiroval-nevklyuchenie-soboleva-v-zayavku-sbornoj-rossii.html",
+  "https://www.championat.com/basketball/news-6691572-oni-po-prezhnemu-luchshie-v-mire-nikola-jokich-o-sbornoj-ssha-po-basketbolu.html",
+  "https://www.championat.com/basketball/news-6691590-gomelskij-to-chto-karri-delaet-s-myachom-sejchas-cherez-pyat-let-budut-delat-malchishki.html"
  ],
- "news_i": 4,
+ "news_i": 5,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1488,7 +1488,7 @@
  "value_day": "2026-11-08",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-07",
- "site_stamp": "774|4547|2026-11-08 23",
+ "site_stamp": "774|4548|2026-11-08 23",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1620,7 +1620,7 @@
  "streak_day": {
   "2026-11-08": 1
  },
- "news_next": "2026-11-08T23:24:20.015243+03:00",
+ "news_next": "2026-11-08T23:55:55.772633+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1631,5 +1631,6 @@
  "poster_day": "2026-11-06",
  "bot_setup": 3,
  "tg_offset": 727618641,
- "push_watch": {}
+ "push_watch": {},
+ "news_video": false
 }
