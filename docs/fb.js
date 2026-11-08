@@ -481,5 +481,19 @@ export function searchButton() {
   a.href = new URL("leagues.html", import.meta.url).href;
   box.insertBefore(a, box.querySelector(".support") ? box.querySelector(".support").nextSibling : box.firstChild);
 }
-const boot = () => { supportButton(); searchButton(); onlineBadge(); bellButton(); };
+/** Карточки и секции плавно появляются при прокрутке. */
+export function reveal() {
+  if (typeof IntersectionObserver === "undefined" || document.documentElement.classList.contains("rv-on")) return;
+  document.documentElement.classList.add("rv-on");
+  const io = new IntersectionObserver(es => { for (const e of es) if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }, { rootMargin: "0px 0px -6% 0px" });
+  // анимируем только то, что ещё не видно: блоки, которые страница перерисовывает на экране (счёт, списки), не мигают
+  let first = true, started = Date.now();
+  const mark = () => { document.querySelectorAll("main .card:not(.rv):not(.rv-skip), main h2:not(.rv):not(.rv-skip), main .grid > *:not(.rv):not(.rv-skip), main .kpi:not(.rv):not(.rv-skip)").forEach((el, i) => {
+    const r = el.getBoundingClientRect(), seen = r.top < innerHeight;
+    if (seen && !(first || Date.now() - started < 600)) { el.classList.add("rv-skip"); return; }
+    el.classList.add("rv");
+    if (seen) { el.style.transitionDelay = Math.min(i, 8) * 40 + "ms"; requestAnimationFrame(() => requestAnimationFrame(() => el.classList.add("in"))); } else io.observe(el); }); first = false; };
+  mark(); new MutationObserver(() => mark()).observe(document.querySelector("main") || document.body, { childList: true, subtree: true });
+}
+const boot = () => { supportButton(); searchButton(); onlineBadge(); bellButton(); reveal(); };
 if (typeof document !== "undefined") { if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", boot); else boot(); }

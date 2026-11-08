@@ -92,3 +92,31 @@ select.inp option { background:#121a38 }
 .emojis button.on { border-color:var(--gold); background:rgba(255,196,0,.15) }
 @media (max-width:640px) { .topnav .links a { padding:5px 7px; font-size:12px } .mr { grid-template-columns:minmax(0,1fr) 70px 40px 40px } }
 @media (min-width:900px) { .sticky { display:none } }
+
+/* ── лоск: стеклянная шапка, мягкие тени, плавные переходы, появление блоков ── */
+html { scroll-behavior:smooth; -webkit-tap-highlight-color:transparent }
+::selection { background:rgba(255,196,0,.32); color:#fff }
+* { scrollbar-width:thin; scrollbar-color:rgba(255,255,255,.18) transparent }
+::-webkit-scrollbar { width:10px; height:10px } ::-webkit-scrollbar-thumb { background:rgba(255,255,255,.16); border-radius:10px; border:3px solid transparent; background-clip:padding-box }
+body { text-rendering:optimizeLegibility; -webkit-font-smoothing:antialiased }
+body::before { content:""; position:fixed; inset:0; pointer-events:none; z-index:-1;
+  background:radial-gradient(700px 380px at 50% -120px,rgba(255,196,0,.08),transparent 70%), radial-gradient(600px 400px at 100% 100%,rgba(70,90,255,.08),transparent 70%) }
+.topnav { position:sticky; top:0; z-index:40; margin:-14px -16px 6px; padding:10px 16px 8px;
+  background:linear-gradient(180deg,rgba(7,11,26,.88),rgba(7,11,26,.68)); -webkit-backdrop-filter:blur(16px) saturate(150%); backdrop-filter:blur(16px) saturate(150%);
+  border-bottom:1px solid rgba(255,255,255,.06) }
+.topnav .logo { font-size:17px; text-shadow:0 0 22px rgba(255,196,0,.35) }
+.topnav .links a.on { box-shadow:inset 0 -2px 0 var(--gold); background:rgba(255,255,255,.05) }
+.card { box-shadow:inset 0 1px 0 rgba(255,255,255,.05), 0 14px 34px -22px rgba(0,0,0,.7); transition:transform .25s cubic-bezier(.2,.7,.2,1), border-color .25s, box-shadow .25s }
+a.card:hover, .grid > a:hover, a.mc:hover, a.nc:hover { transform:translateY(-3px); border-color:rgba(255,196,0,.35); box-shadow:inset 0 1px 0 rgba(255,255,255,.07), 0 22px 40px -22px rgba(0,0,0,.85) }
+.btn { transition:transform .15s, filter .2s, box-shadow .2s } .btn:hover { filter:brightness(1.08); transform:translateY(-1px) } .btn:active { transform:translateY(1px) scale(.98) }
+.btn.gold { box-shadow:0 10px 26px -12px rgba(255,170,0,.7) }
+h2 { letter-spacing:-.2px }
+h1 { letter-spacing:-.5px }
+.nc img { transition:transform .5s cubic-bezier(.2,.7,.2,1) } .nc:hover img { transform:scale(1.04) }
+footer { border-top:1px solid var(--line); padding-top:16px; line-height:1.9 } footer a { color:var(--muted); text-decoration:none } footer a:hover { color:var(--ink) }
+.tabs button, .tabs2 button, .chips a { transition:background .2s, color .2s, border-color .2s, transform .15s } .tabs button:active, .tabs2 button:active { transform:scale(.97) }
+/* блоки мягко появляются при прокрутке (включает fb.js; без JS всё видно сразу) */
+.rv-on .rv { opacity:0; transform:translateY(14px); transition:opacity .6s ease, transform .6s cubic-bezier(.2,.7,.2,1) }
+.rv-on .rv.in { opacity:1; transform:none }
+@media (prefers-reduced-motion:reduce) { .rv-on .rv { opacity:1; transform:none; transition:none } * { scroll-behavior:auto } }
+@media (max-width:860px) { .topnav { padding:8px 16px 6px } }

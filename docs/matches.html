@@ -44,7 +44,9 @@
   .tm .nm { flex:1; min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap }
   .tm .sc { font-size:20px; font-weight:900; min-width:24px; text-align:right; font-variant-numeric:tabular-nums }
   .tm.win .nm { color:var(--gold) }
-  .tm .nm[data-go]:hover { text-decoration:underline; text-underline-offset:3px }
+  .tm .nm[data-go] { flex:0 1 auto; text-decoration:underline dotted rgba(255,255,255,.35); text-underline-offset:4px; cursor:pointer }
+  .tm .nm[data-go]:hover { text-decoration:underline solid var(--gold) } .tm .nm[data-go]::after { content:" ›"; color:var(--muted); font-weight:700 }
+  .tm .sc { margin-left:auto }
   .ft { display:flex; align-items:center; justify-content:space-between; gap:8px; margin-top:12px; padding-top:10px; border-top:1px solid var(--line) }
   .tip { font-size:12px; font-weight:700; color:var(--good); white-space:nowrap; overflow:hidden; text-overflow:ellipsis }
   .tip.no { color:var(--muted); font-weight:600 }
@@ -111,7 +113,7 @@ function status(m) {
   return now - k < (DUR[m.sport] || 120) * 60e3 ? "in" : "post";
 }
 // название команды → её страница (карточка сама — ссылка на трансляцию, поэтому переход через data-go)
-const tl = (m, id) => id && m.path ? ` data-go="${m.sport === "tennis" ? "player" : "team"}.html?p=${encodeURIComponent(m.path)}&amp;id=${encodeURIComponent(id)}" title="Расписание, форма и статистика"` : "";
+const tl = (m, id, side) => m.path ? ` data-go="${m.sport === "tennis" ? "player" : "team"}.html?p=${encodeURIComponent(m.path)}&amp;${id ? "id=" + encodeURIComponent(id) : "ev=" + encodeURIComponent(m.id) + "&amp;side=" + side}" title="Расписание, форма, состав и статистика"` : "";
 document.addEventListener("click", e => { const g = e.target.closest("[data-go]"); if (g) { e.preventDefault(); location.href = g.dataset.go; } });
 function card(m) {
   const s = live[m.id] || {}, st = status(m);
@@ -125,8 +127,8 @@ function card(m) {
   return `<a class="m ${st === "in" ? "live" : ""}" href="${esc(m.url)}">
     ${m.top ? '<span class="badge">⭐ ПРОГНОЗ ДНЯ</span>' : ""}
     <div class="lg"><span>${EM[m.sport] || ""} ${esc(m.league)}</span><span class="st ${cls}">${viewers[m.id] ? `👁 ${viewers[m.id]} · ` : ""}${esc(label)}</span></div>
-    <div class="tm ${win && win.h ? "win" : ""}">${img(m.hl)}<span class="nm"${tl(m, m.hid)}>${esc(m.home)}</span><span class="sc">${esc(hsc)}</span></div>
-    <div class="tm ${win && win.a ? "win" : ""}">${img(m.al)}<span class="nm"${tl(m, m.aid)}>${esc(m.away)}</span><span class="sc">${esc(asc)}</span></div>
+    <div class="tm ${win && win.h ? "win" : ""}">${img(m.hl)}<span class="nm"${tl(m, m.hid, "h")}>${esc(m.home)}</span><span class="sc">${esc(hsc)}</span></div>
+    <div class="tm ${win && win.a ? "win" : ""}">${img(m.al)}<span class="nm"${tl(m, m.aid, "a")}>${esc(m.away)}</span><span class="sc">${esc(asc)}</span></div>
     <div class="ft">${m.tip ? `<span class="tip">🎯 ${esc(m.tip)}${m.bot?.main ? ` · шанс ${Math.round(m.bot.main.p * 100)}%` : ""}</span>` : `<span class="tip no">Прогноз выйдет за час до начала</span>`}
       <span class="go">${st === "in" ? "📺 Смотреть" : st === "post" ? "▶ Повтор" : "📺 Онлайн"}</span></div></a>`;
 }

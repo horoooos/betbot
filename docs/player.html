@@ -27,8 +27,10 @@ import("./fb.js?v=9").then(fb => { fb.navUser(document.getElementById("navUser")
 const { $, esc } = E;
 document.head.insertAdjacentHTML("beforeend", `<style>${E.CSS}</style>`);
 const q = new URLSearchParams(location.search);
-const path = q.get("p"), id = q.get("id");
+const path = q.get("p");
+let id = q.get("id");
 await E.dir();
+if (path && !id && q.get("ev")) { await E.dir(); id = await E.resolveSide(path, q.get("ev"), q.get("side")); if (id) history.replaceState(null, "", E.playerUrl(path, id)); }
 if (!path || !id) { $("#hero").innerHTML = `<p class="load">Игрок не найден. <a href="leagues.html" style="color:var(--gold)">Поиск команд и игроков →</a></p>`; throw 0; }
 const [sp, lg] = path.split("/"), sport = E.sportOf(path);
 let A;

@@ -178,6 +178,20 @@ export const overview = (path, id) => { const [sp, lg] = path.split("/"); return
 export const gamelog = (path, id) => { const [sp, lg] = path.split("/"); return api(`${WEB}${sp}/${sp === "soccer" ? "" : lg + "/"}athletes/${id}/gamelog`, 600); };
 export const rankings = path => api(`${SITE}${path}/rankings`, 3600);
 
+/** id команды (side = h|a) по id матча — для ссылок из списка матчей, пока бот не прислал номера команд. */
+export async function resolveSide(path, ev, side) {
+  const pickC = cs => { const s = [...(cs || [])].sort((x, y) => (x.order || 0) - (y.order || 0));
+    return (side === "a" ? cs.find(x => x.homeAway === "away") || s[1] : cs.find(x => x.homeAway === "home") || s[0]) || null; };
+  if (!path.startsWith("tennis")) {
+    try { const d = await api(`${SITE}${path}/summary?event=${ev}`, 600); const c = pickC(d.header.competitions[0].competitors); if (c) return String(c.id || c.team.id); } catch (e) {}
+  }
+  try { const sb = await api(`${SITE}${path}/scoreboard`, 120);
+    for (const e of sb.events || []) for (const c of [...(e.competitions || []), ...(e.groupings || []).flatMap(g => g.competitions || [])])
+      if (String(c.id) === String(ev) || String(e.id) === String(ev)) { const x = pickC(c.competitors); if (x) return String(x.id); }
+  } catch (e) {}
+  return null;
+}
+
 /** Матч из расписания команды → простая запись. */
 export function game(e, teamId) {
   const c = e.competitions[0], st = c.status.type;
