@@ -8983,22 +8983,22 @@
   "kickoff": "2026-11-08T05:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "home": {
+   "color": "29127a",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/phx.png",
    "id": "21",
    "name": "Phoenix Suns",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/phx.png",
-   "color": "29127a",
    "score": "0",
    "record": "2-5",
    "periods": [],
    "ru": "Финикс Санз"
   },
   "away": {
+   "color": "ce0e2d",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/hou.png",
    "id": "10",
    "name": "Houston Rockets",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/hou.png",
-   "color": "ce0e2d",
    "score": "0",
    "record": "7-2",
    "periods": [],
@@ -9073,7 +9073,9 @@
   "btn": 2,
   "close": {
    "BB_U223.5": 0.5
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null
  },
  "NHL|401892673": {
   "id": "401892673",
