@@ -63,7 +63,8 @@ def buttons(e: dict, sport: str, h: str, a: str) -> list[tuple[str, str]]:
     """Кнопки под постом о матче: этот матч онлайн + все матчи дня; отдельной строкой — сделать ставку в BetBoom."""
     b = _tracker(e, sport, h, a)
     row = [("📺 Смотреть онлайн", b[1]), ("🗂 Все матчи", MATCHES_PAGE)] if b else [("🗂 Матчи онлайн", MATCHES_PAGE)]
-    return row + [("💰 Сделать ставку в BetBoom", BB_SPORT + (sport if sport in ("football", "hockey", "basketball", "tennis") else ""))]
+    from .pages import bb_search
+    return row + [("💰 Сделать ставку в BetBoom", bb_search(h, sport))]
 
 
 def run(store: dict, events: list[dict], reviews: dict, brand: str) -> None:

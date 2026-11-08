@@ -407,7 +407,7 @@ def _match_page(m: dict, store: dict[int, dict], all_m: list[dict]) -> str:
 <div style="text-align:center">{res}</div>
 <div class="row" style="justify-content:center;margin-top:12px">{watch}<a class="btn gold" href="https://t.me/{CH}/{m['msg']}">📲 Прогноз в Telegram</a></div></div>
 <h2>🎯 Прогноз бота</h2><div class="card pre">{pred.get('html') or H.escape(m['tip'])}</div>
-{_betboom(f"{m['home']} — {m['away']}: {m['tip']}", m['tip'], m['sport']) if not m.get('finished') else ''}
+{_betboom(f"{m['home']} — {m['away']}: {m['tip']}", m['tip'], m['home'], m['sport']) if not m.get('finished') else ''}
 <div class="card" id="votes" data-m="{H.escape(m['id'])}" data-f="{'1' if m.get('finished') else '0'}" data-h="{('1' if m.get('hit') else '0') if m.get('finished') else ''}" style="margin-top:10px"></div>
 {chances}
 {''.join(f'<h2>🔎 Полный разбор матча</h2><div class="card pre">{p["html"]}</div>' for p in analysis[:2])}
@@ -423,12 +423,24 @@ BB_SPORT = "https://betboom.ru/sport/"   # обычная ссылка на ли
 def bb_url(sport: str) -> str:
     return BB_SPORT + {"football": "football", "hockey": "hockey", "basketball": "basketball", "tennis": "tennis"}.get(sport, "")
 
+def bb_search(home: str, sport: str = "") -> str:
+    """Поиск BetBoom по команде: betboom.ru/search?query=… сразу показывает её матчи с коэффициентами."""
+    import re
+    from urllib.parse import quote
+    words = [w for w in re.split(r"[\s\-–—.()]+", home or "") if len(w) >= (2 if sport == "tennis" else 3)]
+    key = (words[-1] if sport == "tennis" else max(words, key=len)) if words else (home or "")   # теннис — по фамилии
+    if re.search(r"[A-Za-z]", key) and not re.search(r"[А-Яа-яЁё]", key):   # в BetBoom всё по-русски: Brest → Брест
+        from .names import translit
+        key = translit(key)
+    return "https://betboom.ru/search?query=" + quote(key)
 
-def _betboom(bet: str, label: str, sport: str = "football") -> str:
-    """Кнопка «повторить ставку бота»: линия BetBoom нужного вида спорта + ставка копируется в буфер."""
-    return (f'<a class="bbm" href="{bb_url(sport)}" target="_blank" rel="noopener sponsored" data-bet="{H.escape(bet)}" '
+
+
+def _betboom(bet: str, label: str, home: str, sport: str = "") -> str:
+    """Кнопка «повторить ставку бота»: поиск BetBoom по команде (матч в списке сверху) + ставка копируется в буфер."""
+    return (f'<a class="bbm" href="{bb_search(home, sport)}" target="_blank" rel="noopener sponsored" data-bet="{H.escape(bet)}" '
             f'onclick="try{{navigator.clipboard.writeText(this.dataset.bet)}}catch(e){{}}">💰 Поставить «{H.escape(label)}» в BetBoom'
-            f'<small>Откроется BetBoom, а ставка скопируется — найдите матч и выберите её. 18+</small></a>')
+            f'<small>Откроется BetBoom с этим матчем, ставка скопируется — выберите её. 18+</small></a>')
 
 
 def _match_card(m: dict, prefix: str) -> str:
@@ -441,7 +453,7 @@ def _match_card(m: dict, prefix: str) -> str:
         return card
     # «Поставить»: BetBoom по реферальной ссылке; ставка бота копируется, чтобы быстро найти её в линии
     bet = f'{m["home"]} — {m["away"]}: {m["tip"]}'
-    put = (f'<a class="put" href="{bb_url(m["sport"])}" target="_blank" rel="noopener sponsored" data-bet="{H.escape(bet)}" title="Ставка скопируется — найдите матч в BetBoom" '
+    put = (f'<a class="put" href="{bb_search(m["home"], m["sport"])}" target="_blank" rel="noopener sponsored" data-bet="{H.escape(bet)}" title="Откроется BetBoom с этим матчем; ставка скопируется" '
            f'onclick="try{{navigator.clipboard.writeText(this.dataset.bet)}}catch(e){{}}"><span>Поставить</span><b>{H.escape(m["tip"])}'
            f'{f" · {m["odds"]:.2f}" if m.get("odds") else ""}</b><i>BetBoom →</i></a>')
     return f'<div class="mcw">{card}{put}</div>'

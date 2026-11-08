@@ -187,7 +187,10 @@ import * as THREE from "three";
 
 // ═════════════════════════ параметры ═════════════════════════
 const q = new URLSearchParams(location.search);
-const BETBOOM = `https://betboom.ru/sport/${SPORT}`;   // линия BetBoom этого вида спорта (реферальная ссылка — только на главной)
+// BetBoom: поиск по команде хозяев — их матч сразу в списке (реферальная ссылка — только на главной)
+let botBB = "";
+const bbSearch = (home, sport) => { const w = String(home || "").split(/[\s\-–—.()]+/).filter(x => x.length >= (sport === "tennis" ? 2 : 3));   // теннис — по фамилии, иначе самое длинное слово
+  return "https://betboom.ru/search?query=" + encodeURIComponent(w.length ? (sport === "tennis" ? w[w.length - 1] : w.reduce((a, b) => b.length > a.length ? b : a)) : (home || "")); };
 const SPORT = q.get("s") || "football";
 const PATH = q.get("p") || `soccer/${q.get("l") || "eng.1"}`;      // старые ссылки: l=eng.1
 const EVENT = q.get("e"), RU_H = q.get("h"), RU_A = q.get("a");
@@ -1581,7 +1584,7 @@ async function loadBot() {
   }
   const m = list.find(x => String(x.id) === String(EVENT));
   if (!m || !m.bot) return;
-  botData = m.bot; $("tipbtn").textContent = matchMedia("(max-width:600px)").matches ? `🎯 ${m.bot.main.label} · ${pc(m.bot.main.p)}` : `🎯 Прогноз бота: ${m.bot.main.label} · ${pc(m.bot.main.p)}`; $("tipbtn").style.display = "inline-block";
+  botData = m.bot; botBB = m.bb || ""; $("tipbtn").textContent = matchMedia("(max-width:600px)").matches ? `🎯 ${m.bot.main.label} · ${pc(m.bot.main.p)}` : `🎯 Прогноз бота: ${m.bot.main.label} · ${pc(m.bot.main.p)}`; $("tipbtn").style.display = "inline-block";
   $("tipbtn").onclick = () => { renderBot(); $("sheet").classList.add("on"); };
   $("sheet").onclick = e => { if (e.target.id === "sheet" || e.target.id === "sx") $("sheet").classList.remove("on"); };
 }
@@ -1592,7 +1595,7 @@ function renderBot() {
   let html = `<h3>🎯 Прогноз бота <button class="x" id="sx">✕</button></h3>${tc("m", "ОСНОВНОЙ ПРОГНОЗ", b.main)}${tc("b", "СМЕЛЫЙ ПРОГНОЗ", b.bold)}`;
   // повторить ставку бота: открываем BetBoom по реферальной ссылке, а саму ставку копируем — останется найти матч и выбрать её
   const bet = b.main ? `${H.ru} — ${A.ru}: ${b.main.label}` : "";
-  if (bet) html += `<a class="bbm" id="bbm" href="${BETBOOM}" target="_blank" rel="noopener sponsored">💰 Поставить «${esc(b.main.label)}» в BetBoom<small>Откроется BetBoom, а ставка скопируется — найдите матч и выберите её</small></a>`;
+  if (bet) html += `<a class="bbm" id="bbm" href="${botBB || bbSearch(H.ru, SPORT)}" target="_blank" rel="noopener sponsored">💰 Поставить «${esc(b.main.label)}» в BetBoom<small>Откроется BetBoom с этим матчем, а ставка скопируется — выберите её</small></a>`;
   const bar = b.bar || [];
   if (bar.length === 3 && bar.every(v => v != null)) {
     const cols = [H.color, "#7f8bb3", A.color], names = [H.ru, SPORT === "football" ? "Ничья" : "", A.ru];

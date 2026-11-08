@@ -384,6 +384,7 @@ def matches_json(events: list[dict], stored: dict, now: pd.Timestamp) -> None:
     поэтому файл меняется, только когда меняется список или выходят новые прогнозы.
     """
     from . import live  # здесь, чтобы не тянуть live при импорте site
+    from .pages import bb_search
     out = []
     for e in events:
         sport = e.get("sport", "football")
@@ -405,6 +406,7 @@ def matches_json(events: list[dict], stored: dict, now: pd.Timestamp) -> None:
         out.append({"sport": sport, "id": str(e["id"]), "league": live._league(e), "kickoff": ko.isoformat(),
                     "home": h, "away": a, "hl": logo(e["home"]), "al": logo(e["away"]),
                     "hid": str(e["home"].get("id") or ""), "aid": str(e["away"].get("id") or ""),
+                    "bb": bb_search(h, sport),   # поиск BetBoom по команде — матч сразу в списке
                     "path": btn[1].split("p=")[1].split("&")[0].replace("%2F", "/"), "url": btn[1].replace(live.TRACKER, "live.html"),
                     "tip": f"{tip['label']} · {'≈' if tip.get('est') else ''}{tip['odds']:.2f}" if tip.get("label") and tip.get("odds") else "",
                     "top": bool(m.get("top")), "bot": _bot_block(m)})

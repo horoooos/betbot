@@ -117,10 +117,12 @@ function status(m) {
 // название команды → её страница (карточка сама — ссылка на трансляцию, поэтому переход через data-go)
 const tl = (m, id, side) => m.path ? ` data-go="${m.sport === "tennis" ? "player" : "team"}.html?p=${encodeURIComponent(m.path)}&amp;${id ? "id=" + encodeURIComponent(id) : "ev=" + encodeURIComponent(m.id) + "&amp;side=" + side}" title="Расписание, форма, состав и статистика"` : "";
 document.addEventListener("click", e => { const g = e.target.closest("[data-go]"); if (g) { e.preventDefault(); location.href = g.dataset.go; } });
-// «💰 BetBoom»: открываем линию BetBoom этого вида спорта, ставку бота копируем в буфер
+// «💰 BetBoom»: открываем поиск BetBoom по команде (матч сразу в списке), ставку бота копируем в буфер
 
 document.addEventListener("click", e => { const b = e.target.closest("[data-bb]"); if (!b) return; e.preventDefault(); e.stopPropagation();
-  try { navigator.clipboard?.writeText(b.dataset.bb); } catch (x) {} window.open("https://betboom.ru/sport/" + (b.dataset.sp || "football"), "_blank", "noopener"); }, true);
+  try { navigator.clipboard?.writeText(b.dataset.bb); } catch (x) {} window.open(b.dataset.u || bbSearch(b.dataset.h, b.dataset.sp), "_blank", "noopener"); }, true);
+const bbSearch = (home, sport) => { const w = String(home || "").split(/[\s\-–—.()]+/).filter(x => x.length >= (sport === "tennis" ? 2 : 3));   // теннис — по фамилии, иначе самое длинное слово
+  return "https://betboom.ru/search?query=" + encodeURIComponent(w.length ? (sport === "tennis" ? w[w.length - 1] : w.reduce((a, b) => b.length > a.length ? b : a)) : (home || "")); };
 function card(m) {
   const s = live[m.id] || {}, st = status(m);
   let label = `${day(m.kickoff)}, ${time(m.kickoff)}`, cls = "";
@@ -136,7 +138,7 @@ function card(m) {
     <div class="tm ${win && win.h ? "win" : ""}">${img(m.hl)}<span class="nm"${tl(m, m.hid, "h")}>${esc(m.home)}</span><span class="sc">${esc(hsc)}</span></div>
     <div class="tm ${win && win.a ? "win" : ""}">${img(m.al)}<span class="nm"${tl(m, m.aid, "a")}>${esc(m.away)}</span><span class="sc">${esc(asc)}</span></div>
     <div class="ft">${m.tip ? `<span class="tip">🎯 ${esc(m.tip)}${m.bot?.main ? ` · шанс ${Math.round(m.bot.main.p * 100)}%` : ""}</span>` : `<span class="tip no">Прогноз выйдет за час до начала</span>`}
-      ${m.tip && st !== "post" ? `<span class="bb" data-sp="${m.sport}" data-bb="${esc(m.home + " — " + m.away + ": " + (m.bot?.main?.label || m.tip))}" title="Повторить ставку бота в BetBoom">💰 BetBoom</span>` : ""}
+      ${m.tip && st !== "post" ? `<span class="bb" data-u="${esc(m.bb || "")}" data-h="${esc(m.home)}" data-sp="${m.sport}" data-bb="${esc(m.home + " — " + m.away + ": " + (m.bot?.main?.label || m.tip))}" title="Повторить ставку бота в BetBoom">💰 BetBoom</span>` : ""}
       <span class="go">${st === "in" ? "📺 Смотреть" : st === "post" ? "▶ Повтор" : "📺 Онлайн"}</span></div></a>`;
 }
 function render() {
