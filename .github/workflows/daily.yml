@@ -67,11 +67,18 @@ jobs:
             done
             if ! git diff --cached --quiet; then
               git commit -q -m "Bot update $(TZ=Europe/Moscow date '+%F %H:%M')"
-              timeout 180 git pull -q --rebase -X theirs || git rebase --abort || true
-              timeout 180 git push -q || echo "::warning::не удалось сохранить состояние"
+              # сохраняем надёжно: до 3 попыток; при неудаче — откат незаконченного rebase, чтобы следующий проход начал с чистого места
+              ok=""
+              for try in 1 2 3; do
+                if timeout 600 git pull -q --rebase -X theirs && timeout 180 git push -q; then ok=1; break; fi
+                git rebase --abort 2>/dev/null || true
+                echo "::warning::сохранение не удалось (попытка $try): $(git status -sb | head -1)"
+                sleep 5
+              done
+              [ -n "$ok" ] || echo "::warning::не удалось сохранить состояние — попробуем на следующем проходе"
             else
               # сохранять нечего (например, проход упал) — всё равно подтягиваем свежий код с исправлениями
-              timeout 180 git pull -q --rebase -X theirs || git rebase --abort || true
+              timeout 600 git pull -q --rebase -X theirs || git rebase --abort 2>/dev/null || true
             fi
             if [ $(( $(date +%s) - pages_at )) -ge 360 ] && { [ -z "$pages_sha" ] || ! git diff --quiet "$pages_sha" HEAD -- docs; }; then
               timeout 60 gh workflow run pages.yml --repo "$GITHUB_REPOSITORY" --ref main && pages_sha=$(git rev-parse HEAD) && pages_at=$(date +%s) || echo "::warning::сборка сайта не запустилась"
