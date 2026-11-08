@@ -7927,22 +7927,22 @@
   "kickoff": "2026-11-08T21:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "home": {
+   "color": "231f20",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/bos.png",
    "id": "1",
    "name": "Boston Bruins",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/bos.png",
-   "color": "231f20",
    "score": "0",
    "record": "12-4-1",
    "periods": [],
    "ru": "Бостон"
   },
   "away": {
+   "color": "e51937",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/fla.png",
    "id": "26",
    "name": "Florida Panthers",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/fla.png",
-   "color": "e51937",
    "score": "0",
    "record": "9-6-2",
    "periods": [],
@@ -8046,7 +8046,9 @@
   "close": {
    "HK_O6.5": 0.3616,
    "HK_ML_A": 0.417
-  }
+  },
+  "main_hit": false,
+  "bold_hit": false
  },
  "WTA|187373": {
   "id": "187373",
