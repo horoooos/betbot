@@ -18757,7 +18757,7 @@
   "kickoff": "2026-11-08T19:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Scheduled",
   "home": {
    "id": "256",
@@ -18905,7 +18905,10 @@
   "btn": 3,
   "close": {
    "BTTS_Y": 0.5585
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null,
+  "value_hit": null
  },
  "401876412": {
   "id": "401876412",
@@ -20815,7 +20818,10 @@
    }
   },
   "msg_id": 4426,
-  "btn": 3
+  "btn": 3,
+  "close": {
+   "U25": 0.4726
+  }
  },
  "401888251": {
   "id": "401888251",
@@ -20969,7 +20975,10 @@
    }
   },
   "msg_id": 4428,
-  "btn": 3
+  "btn": 3,
+  "close": {
+   "H-1.5": 0.6301
+  }
  },
  "401878944": {
   "id": "401878944",
