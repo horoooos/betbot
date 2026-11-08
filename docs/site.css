@@ -128,3 +128,10 @@ footer { border-top:1px solid var(--line); padding-top:16px; line-height:1.9 } f
 .bbm { display:block; margin-top:10px; padding:13px 16px; border-radius:16px; text-align:center; text-decoration:none; color:#fff !important; font-weight:900; font-size:15px;
   background:linear-gradient(90deg,#e30613,#ff4b2b); box-shadow:0 10px 24px -12px rgba(227,6,19,.8); transition:transform .15s, filter .2s }
 .bbm:hover { filter:brightness(1.08); transform:translateY(-1px) } .bbm small { display:block; font-weight:600; font-size:11px; opacity:.85; margin-top:3px }
+/* карточка прогноза + кнопка «Поставить» (BetBoom) */
+.mcw { position:relative; display:flex } .mcw > .mc { flex:1; padding-bottom:64px }
+.put { position:absolute; left:14px; right:14px; bottom:12px; display:flex; align-items:center; gap:10px; padding:9px 12px; border-radius:13px; text-decoration:none;
+  background:linear-gradient(90deg,#e30613,#ff4b2b); color:#fff; box-shadow:0 10px 22px -12px rgba(227,6,19,.9); transition:transform .15s, filter .2s; font-size:13px }
+.put:hover { filter:brightness(1.1); transform:translateY(-1px) } .put span { font-weight:900; letter-spacing:.2px }
+.put b { flex:1; min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; font-weight:700; opacity:.92; background:rgba(0,0,0,.18); border-radius:8px; padding:3px 8px }
+.put i { font-style:normal; font-weight:900; font-size:12px; opacity:.95; white-space:nowrap }
