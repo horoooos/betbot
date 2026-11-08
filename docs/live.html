@@ -144,7 +144,8 @@
   <div style="text-align:center;margin-top:6px;display:flex;gap:6px;justify-content:center;flex-wrap:wrap">
     <span class="pill" id="viewers" style="display:none;pointer-events:none">👁 0</span>
     <button class="pill tipbtn" id="tipbtn" style="display:none">🎯 Прогноз бота</button>
-    <button class="pill" id="chatbtn" style="display:none">💬 Чат</button></div>
+    <button class="pill" id="chatbtn" style="display:none">💬 Чат</button>
+    <button class="pill" id="notibtn" style="display:none">🔔 Голы</button></div>
   <div id="pp"></div>
   <div style="text-align:center"><button id="replay">▶ Смотреть повтор матча</button></div>
 </div>
@@ -348,7 +349,15 @@ function flash(color, strength = .45) {
   const f = $("flash"); f.style.transition = "none"; f.style.background = `radial-gradient(circle at 50% 45%, ${color}, transparent 70%)`;
   f.style.opacity = strength; void f.offsetWidth; f.style.transition = "opacity 1.4s"; f.style.opacity = 0;
 }
+// уведомления: гол / сет / финал, когда вкладка свёрнута (браузер показывает их поверх других приложений)
+let notifyOn = false;
+try { notifyOn = localStorage.getItem("ainotify") === "1" && "Notification" in window && Notification.permission === "granted"; } catch (e) {}
+function notify(title, body) {
+  if (!notifyOn || !document.hidden || !("Notification" in window) || Notification.permission !== "granted") return;
+  try { new Notification(title, { body, icon: "icon-192.png", badge: "favicon-32.png", tag: "ai-" + EVENT }); } catch (e) {}
+}
 function bigText(text, sub, color) {
+  if (/ГОЛ|СЕТ|ДАНК|\+3|ФИНАЛ/.test(text)) notify(`${text} ${$("hn").textContent.replace("🎾 ", "")} ${$("sc").textContent} ${$("an").textContent.replace(" 🎾", "")}`, sub || "");
   const b = $("big"); b.innerHTML = `${text}${sub ? `<small>${sub}</small>` : ""}`; b.style.setProperty("--bc", color); b.style.color = "#fff";
   b.classList.remove("on"); void b.offsetWidth; b.classList.add("on");
 }
@@ -1393,13 +1402,29 @@ function renderBot() {
     `<div class="mr"><span>${esc(l)}</span><div class="mb"><i style="width:${p * 100}%;background:${p >= .6 ? "#2ecc71" : p >= .45 ? "#ffc400" : "#ff7a3d"}"></i></div><span class="p">${pc(p)}</span><span class="o">${o ? (+o).toFixed(2) : "—"}</span></div>`).join("");
   if (b.scores?.length) html += `<h4>Самые вероятные счета</h4><div class="chips2">${b.scores.map(([sc, p]) => `<span>${esc(sc)}<small>${pc(p)}</small></span>`).join("")}</div>`;
   if (b.corners || b.cards) html += `<h4>Статистика матча (ожидание)</h4><div class="chips2">${b.corners ? `<span>🚩 Угловые<small>≈${b.corners}</small></span>` : ""}${b.cards ? `<span>🟨 Карточки<small>≈${b.cards}</small></span>` : ""}</div>`;
+  html += `<div class="card" id="votew" style="margin-top:14px;padding:14px;background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:16px"></div>`;
   html += `<p class="disc">Шанс — оценка модели бота; кэф — средний у букмекеров («≈» — расчётный). Прогноз — не гарантия. 18+</p>`;
   $("sheetIn").innerHTML = html;
+  if (window.__fb) window.__fb.voteWidget($("votew"), EVENT, { finished: /завершён/i.test($("cl").textContent) });
 }
 if (EVENT) loadBot();
 
 // ═════════════════════════ зрители и чат (Firebase) ═════════════════════════
-if (EVENT) import("./fb.js?v=6").then(fb => {
+if ("Notification" in window && EVENT) {
+  const nb = $("notibtn"); nb.style.display = "inline-block";
+  const paint = () => { nb.textContent = notifyOn ? "🔔 Голы: вкл" : "🔕 Голы"; nb.style.borderColor = notifyOn ? "#2ecc71" : ""; };
+  paint();
+  nb.onclick = async () => {
+    if (notifyOn) { notifyOn = false; try { localStorage.setItem("ainotify", "0"); } catch (e) {} return paint(); }
+    const perm = Notification.permission === "granted" ? "granted" : await Notification.requestPermission();
+    notifyOn = perm === "granted"; try { localStorage.setItem("ainotify", notifyOn ? "1" : "0"); } catch (e) {}
+    if (!notifyOn) chip("🔕 УВЕДОМЛЕНИЯ ЗАПРЕЩЕНЫ", "#ff6a6a", "Разрешите их в настройках браузера для этого сайта");
+    else chip("🔔 УВЕДОМЛЕНИЯ ВКЛЮЧЕНЫ", "#3dff6a", "Пришлём гол, даже если вкладка свёрнута");
+    paint();
+  };
+}
+if (EVENT) import("./fb.js?v=7").then(fb => {
+  window.__fb = fb;
   fb.track(`live:${EVENT}`, EVENT);
   fb.watchPresence(all => { const n = all[EVENT] || 0; $("viewers").textContent = `👁 ${n} ${n % 10 === 1 && n % 100 !== 11 ? "смотрит" : "смотрят"}`; $("viewers").style.display = "inline-block"; });
   $("chatbtn").style.display = "inline-block";

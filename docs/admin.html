@@ -44,7 +44,7 @@
 <div id="app"><div class="gate"><p class="muted">Загрузка…</p></div></div>
 </main>
 <script type="module">
-import * as fb from "./fb.js?v=6";
+import * as fb from "./fb.js?v=7";
 const { db, ref, get, set, remove, onValue } = fb;
 const $ = s => document.querySelector(s), app = $("#app");
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));

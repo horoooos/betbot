@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Калькулятор ставок: экспресс, маржа, вероятность, Келли — АИ СТАВИТ</title><meta name="description" content="Бесплатные калькуляторы для ставок на спорт: калькулятор экспресса, перевод коэффициента в вероятность, маржа букмекера, размер ставки по Келли и проверка value.">
+<link rel="canonical" href="https://horoooos.github.io/betbot/tools.html"><meta name="robots" content="index,follow,max-image-preview:large">
+<meta property="og:type" content="website"><meta property="og:title" content="Калькулятор ставок: экспресс, маржа, вероятность, Келли — АИ СТАВИТ"><meta property="og:description" content="Бесплатные калькуляторы для ставок на спорт: калькулятор экспресса, перевод коэффициента в вероятность, маржа букмекера, размер ставки по Келли и проверка value.">
+<meta property="og:url" content="https://horoooos.github.io/betbot/tools.html"><meta property="og:site_name" content="АИ СТАВИТ"><meta property="og:locale" content="ru_RU"><meta property="og:image" content="https://horoooos.github.io/betbot/og.png"><meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#070b1a">
+<link rel="icon" href="favicon.ico" sizes="any"><link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="manifest" href="site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css?v=4"><script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Калькуляторы для ставок АИ СТАВИТ", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any", "url": "https://horoooos.github.io/betbot/tools.html", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "RUB"}}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Главная", "item": "https://horoooos.github.io/betbot/"}, {"@type": "ListItem", "position": 2, "name": "Калькуляторы"}]}</script>
+</head><body><main>
+<nav class="topnav"><a class="logo" href="./">АИ СТАВИТ</a><div class="links"><a href="matches.html">📺 Матчи онлайн</a><a href="predictions/">🎯 Прогнозы</a><a href="news/">📰 Новости</a><a href="feed.html">💬 Лента</a><a href="top.html">🏆 Рейтинг</a><a class="me" id="navUser" href="profile.html">Войти</a></div></nav>
+<div class="crumbs"><a href="">Главная</a> › Калькуляторы</div><h1>Калькуляторы <span>для ставок</span></h1>
+<p class="lead">Посчитайте экспресс, переведите коэффициент в вероятность, узнайте маржу букмекера, размер ставки и есть ли в ставке ценность.</p>
+<div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(320px,1fr));margin-top:16px">
+<div class="card"><h2 style="margin-top:0">🧮 Калькулятор экспресса</h2><div id="exl"></div><div class="row"><button class="btn ghost" id="exa" type="button">+ событие</button><input class="inp" id="exs" type="number" step="1" placeholder="Сумма ставки, ₽" value="1000" style="flex:1;min-width:120px"></div><div id="exr" style="margin-top:10px;font-size:15px"></div></div>
+<div class="card"><h2 style="margin-top:0">🔁 Кэф ↔ вероятность</h2><div class="row"><input class="inp" id="kpk" type="number" step="0.01" placeholder="Кэф" value="1.85" style="flex:1;min-width:120px"><input class="inp" id="kpp" type="number" step="0.1" placeholder="Вероятность, %" value="" style="flex:1;min-width:120px"></div><div id="kpr" style="margin-top:10px;font-size:15px"></div></div>
+<div class="card"><h2 style="margin-top:0">📉 Маржа букмекера</h2><div class="row"><input class="inp" id="m1" type="number" step="0.01" placeholder="П1" value="2.10" style="flex:1;min-width:120px"><input class="inp" id="m2" type="number" step="0.01" placeholder="Х" value="3.40" style="flex:1;min-width:120px"><input class="inp" id="m3" type="number" step="0.01" placeholder="П2" value="3.60" style="flex:1;min-width:120px"></div><div id="mgr" style="margin-top:10px;font-size:15px"></div></div>
+<div class="card"><h2 style="margin-top:0">💰 Банк и критерий Келли</h2><div class="row"><input class="inp" id="bkb" type="number" step="1" placeholder="Банк, ₽" value="10000" style="flex:1;min-width:120px"><input class="inp" id="bkp" type="number" step="0.1" placeholder="Ставка, % банка" value="2" style="flex:1;min-width:120px"></div><div class="row"><input class="inp" id="bkpr" type="number" step="0.1" placeholder="Ваш шанс, %" value="55" style="flex:1;min-width:120px"><input class="inp" id="bkk" type="number" step="0.01" placeholder="Кэф" value="2.00" style="flex:1;min-width:120px"></div><div id="bkr" style="margin-top:10px;font-size:15px"></div></div>
+<div class="card"><h2 style="margin-top:0">💎 Есть ли value?</h2><div class="row"><input class="inp" id="vlp" type="number" step="0.1" placeholder="Ваш шанс, %" value="55" style="flex:1;min-width:120px"><input class="inp" id="vlk" type="number" step="0.01" placeholder="Кэф" value="1.95" style="flex:1;min-width:120px"></div><div id="vlr" style="margin-top:10px;font-size:15px"></div></div>
+</div>
+<p class="muted small" style="margin-top:14px">Как пользоваться этими цифрами — в <a href="school/">Школе ставок</a>. Ставки — это риск, играйте только на то, что готовы потерять. 18+.</p>
+<script>
+const $ = s => document.querySelector(s), num = v => parseFloat(String(v).replace(",", "."));
+// экспресс
+function exRow(v = "") { const d = document.createElement("div"); d.className = "row"; d.innerHTML = `<input class="inp ex" type="number" step="0.01" min="1.01" placeholder="Кэф, например 1.85" value="${v}" style="flex:1"><button class="btn ghost rm" type="button">✕</button>`; $("#exl").appendChild(d); d.querySelector(".rm").onclick = () => { d.remove(); ex(); }; d.querySelector("input").oninput = ex; }
+function ex() { const ks = [...document.querySelectorAll(".ex")].map(i => num(i.value)).filter(k => k > 1), st = num($("#exs").value) || 0;
+  const k = ks.reduce((a, b) => a * b, 1); $("#exr").innerHTML = ks.length ? `Итоговый кэф: <b>${k.toFixed(2)}</b> · выплата: <b>${(k * st).toFixed(0)} ₽</b> · чистая прибыль: <b>${(k * st - st).toFixed(0)} ₽</b><br><span class="muted">Шанс, что зайдут все ${ks.length} событий (по кэфам, с маржой): ${(100 / k).toFixed(1)}%</span>` : "Добавьте кэфы событий"; }
+// кэф ↔ вероятность
+function kp() { const k = num($("#kpk").value), p = num($("#kpp").value);
+  $("#kpr").innerHTML = (k > 1 ? `Кэф ${k.toFixed(2)} → вероятность <b>${(100 / k).toFixed(1)}%</b>` : "") + (p > 0 && p < 100 ? `${k > 1 ? "<br>" : ""}Вероятность ${p}% → справедливый кэф <b>${(100 / p).toFixed(2)}</b>` : ""); }
+// маржа
+function mg() { const ks = [$("#m1").value, $("#m2").value, $("#m3").value].map(num).filter(k => k > 1);
+  if (ks.length < 2) { $("#mgr").textContent = "Введите кэфы на все исходы (2 или 3)"; return; }
+  const s = ks.reduce((a, k) => a + 1 / k, 0); $("#mgr").innerHTML = `Маржа букмекера: <b>${((s - 1) * 100).toFixed(1)}%</b><br>Честные вероятности: ${ks.map(k => (100 / k / s).toFixed(1) + "%").join(" · ")}`; }
+// банк и Келли
+function bk() { const b = num($("#bkb").value), pc = num($("#bkp").value), p = num($("#bkpr").value) / 100, k = num($("#bkk").value);
+  let h = b > 0 && pc > 0 ? `Ставка ${pc}% банка = <b>${(b * pc / 100).toFixed(0)} ₽</b>` : "";
+  if (p > 0 && p < 1 && k > 1) { const f = (p * k - 1) / (k - 1); h += `${h ? "<br>" : ""}${f > 0 ? `По Келли: <b>${(f * 100).toFixed(1)}%</b> банка, безопаснее — четверть: <b>${(f * 25).toFixed(1)}%</b>${b > 0 ? ` (${(b * f / 4).toFixed(0)} ₽)` : ""}` : "По Келли ставка не выгодна — пропустите"}`; }
+  $("#bkr").innerHTML = h || "Введите банк и процент"; }
+// value
+function vl() { const p = num($("#vlp").value) / 100, k = num($("#vlk").value);
+  if (!(p > 0 && p < 1 && k > 1)) { $("#vlr").textContent = "Введите вашу оценку шанса и кэф"; return; }
+  const v = (p * k - 1) * 100; $("#vlr").innerHTML = v > 0 ? `✅ Value-ставка: перевес <b>+${v.toFixed(1)}%</b> — на дистанции в плюс` : `❌ Не value: ${v.toFixed(1)}% — букмекер оценивает исход выше вашего шанса`; }
+document.querySelectorAll("input").forEach(i => i.addEventListener("input", () => { ex(); kp(); mg(); bk(); vl(); }));
+$("#exa").onclick = () => exRow(); exRow("1.85"); exRow("1.70"); ex(); kp(); mg(); bk(); vl();
+</script>
+<footer>АИ СТАВИТ — бесплатные прогнозы на спорт от искусственного интеллекта и честная статистика. Прогноз — не гарантия выигрыша. 18+.
+<br><a href="https://t.me/aistavvit">Telegram-канал @aistavvit</a> · <a href="./">Статистика бота</a> · <a href="matches.html">Матчи онлайн</a> · <a href="news/">Новости спорта</a> · <a href="predictions/">Прогнозы на матчи</a>
+<br><a href="teams/">Команды</a> · <a href="tools.html">Калькуляторы ставок</a> · <a href="school/">Школа ставок</a> · <a href="top.html">Рейтинг прогнозистов</a></footer>
+</main><div class="sticky"><a class="a" href="matches.html">📺 Онлайн</a><a class="b" href="https://t.me/aistavvit">📲 Канал</a></div>
+<script type="module">import("fb.js?v=7").then(fb => { fb.navUser(document.getElementById("navUser")); fb.track("tools");
+  const v = document.getElementById("votes"); if (v) fb.voteWidget(v, v.dataset.m, { finished: v.dataset.f === "1", botHit: v.dataset.h === "" ? null : v.dataset.h === "1" }); }).catch(() => {});</script>
+</body></html>

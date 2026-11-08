@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="site.css?v=4">
 </head>
 <body><main>
-<nav class="topnav"><a class="logo" href="./">АИ СТАВИТ</a><div class="links"><a href="matches.html">📺 Матчи онлайн</a><a href="predictions/">🎯 Прогнозы</a><a href="news/">📰 Новости</a><a class="on" href="feed.html">💬 Лента</a><a class="me" id="navUser" href="#">Войти</a></div></nav>
+<nav class="topnav"><a class="logo" href="./">АИ СТАВИТ</a><div class="links"><a href="matches.html">📺 Матчи онлайн</a><a href="predictions/">🎯 Прогнозы</a><a href="news/">📰 Новости</a><a class="on" href="feed.html">💬 Лента</a><a href="top.html">🏆 Рейтинг</a><a class="me" id="navUser" href="#">Войти</a></div></nav>
 <h1>💬 Лента <span>болельщиков</span></h1>
 <p class="lead">Делитесь прогнозами на матчи и мыслями о футболе, хоккее, баскетболе и теннисе. Лучшие прогнозы — в топе по лайкам.</p>
 
@@ -21,7 +21,8 @@
   <div class="row"><label class="small muted"><input type="checkbox" id="isPick"> 🎯 Это прогноз на матч</label></div>
   <div class="row" id="pickRow" style="display:none">
     <select class="inp" id="mSel" style="flex:2 1 220px"></select>
-    <input class="inp" id="pk" maxlength="40" placeholder="Ставка: П1, ТБ 2.5…" style="flex:1 1 140px">
+    <select class="inp" id="pkSel" style="flex:1 1 150px"><option value="">— ставка —</option></select>
+    <input class="inp" id="pk" maxlength="40" placeholder="Своя ставка" style="flex:1 1 120px;display:none">
     <input class="inp" id="od" type="number" step="0.01" min="1.01" max="100" placeholder="Кэф" style="flex:0 1 90px">
   </div>
   <div class="row" style="justify-content:space-between"><span class="small muted" id="cnt">0 / 1000</span><button class="btn gold" id="send">Опубликовать</button></div>
@@ -35,7 +36,7 @@
 </main>
 <div class="sticky"><a class="a" href="matches.html">📺 Онлайн</a><a class="b" href="https://t.me/aistavvit">📲 Канал</a></div>
 <script type="module">
-import * as fb from "./fb.js?v=6";
+import * as fb from "./fb.js?v=7";
 const { db, ref, get, push, set, remove, query, orderByChild, limitToLast, endBefore, onValue, esc } = fb;
 const $ = s => document.querySelector(s);
 fb.navUser($("#navUser")); fb.track("feed");
@@ -45,9 +46,17 @@ let posts = {}, tab = "new", oldest = null, admin = false, users = {};
 // матчи на выбор для прогноза — ближайшие сутки из списка бота
 let matches = [];
 fetch(location.hostname.endsWith("github.io") ? "https://raw.githubusercontent.com/horoooos/betbot/main/docs/matches.json" : "matches.json", { cache: "no-store" })
-  .then(r => r.json()).then(list => { const now = Date.now(); matches = list.filter(m => new Date(m.kickoff).getTime() > now - 2 * 3600e3);
+  .then(r => r.json()).then(list => { const now = Date.now(); matches = list.filter(m => new Date(m.kickoff).getTime() > now + 60e3);   // только не начавшиеся — иначе прогноз не идёт в зачёт
     $("#mSel").innerHTML = `<option value="">— выберите матч —</option>` + matches.map(m => `<option value="${m.id}">${esc(m.home)} — ${esc(m.away)} · ${new Date(m.kickoff).toLocaleString("ru-RU", { day: "numeric", month: "short", hour: "2-digit", minute: "2-digit", timeZone: "Europe/Moscow" })}</option>`).join(""); })
   .catch(() => {});
+const fillMarkets = () => {
+  const m = matches.find(x => x.id === $("#mSel").value), list = fb.MARKETS[m ? m.sport : "football"] || fb.MARKETS.football;
+  $("#pkSel").innerHTML = `<option value="">— ставка —</option>` + list.map(x => `<option>${esc(x)}</option>`).join("") + `<option value="__own">Своя ставка…</option>`;
+  $("#pk").style.display = "none";
+};
+fillMarkets();
+$("#mSel").onchange = fillMarkets;
+$("#pkSel").onchange = e => { $("#pk").style.display = e.target.value === "__own" ? "" : "none"; };
 $("#isPick").onchange = e => { $("#pickRow").style.display = e.target.checked ? "flex" : "none"; };
 $("#tx").oninput = e => { $("#cnt").textContent = `${e.target.value.length} / 1000`; };
 $("#tx").onfocus = async () => { if (!fb.auth.currentUser || !fb.getProfile()) { $("#tx").blur(); await fb.login(); } };
@@ -61,9 +70,11 @@ $("#send").onclick = async () => {
   if ($("#isPick").checked) {
     const m = matches.find(x => x.id === $("#mSel").value);
     if (!m) return $("#err").textContent = "Выберите матч для прогноза";
-    if (!$("#pk").value.trim()) return $("#err").textContent = "Напишите ставку, например «П1» или «ТБ 2.5»";
+    const pickV = $("#pkSel").value === "__own" ? $("#pk").value.trim() : $("#pkSel").value;
+    if (!pickV) return $("#err").textContent = "Выберите ставку, например «П1» или «ТБ 2.5»";
+    if (new Date(m.kickoff).getTime() <= Date.now()) return $("#err").textContent = "Матч уже начался — прогноз не пойдёт в зачёт";
     post.match = { id: m.id, title: `${m.home} — ${m.away}`, url: m.url, kickoff: m.kickoff, sport: m.sport };
-    post.pick = $("#pk").value.trim().slice(0, 40);
+    post.pick = pickV.slice(0, 40);
     const od = parseFloat($("#od").value); if (od > 1 && od < 100) post.odds = Math.round(od * 100) / 100;
   }
   $("#send").disabled = true;
@@ -71,6 +82,7 @@ $("#send").onclick = async () => {
   catch (e) { $("#err").textContent = /permission/i.test(String(e)) ? "Публикация недоступна для этого аккаунта" : "Не получилось опубликовать, попробуйте ещё раз"; }
   $("#send").disabled = false;
 };
+let SC = {}; fb.scores().then(s => { SC = s; render(); });
 
 // живая лента: последние 60 постов + «Показать ещё»
 onValue(query(ref(db, "posts"), orderByChild("t"), limitToLast(60)), s => {
@@ -90,7 +102,10 @@ $("#tabs").onclick = e => { const t = e.target.dataset.t; if (!t) return; tab = 
 const cnt = o => o ? Object.keys(o).length : 0, score = p => cnt(p.likes) - cnt(p.dislikes);
 function card(id, p) {
   const me = fb.auth.currentUser?.uid, likes = cnt(p.likes), liked = me && p.likes && p.likes[me], dis = cnt(p.dislikes), disliked = me && p.dislikes && p.dislikes[me];
-  const pick = p.match ? `<div class="pick">🎯 <a href="${esc(p.match.url || "matches.html")}">${esc(p.match.title)}</a> · <b>${esc(p.pick || "")}</b>${p.odds ? ` · кэф ${(+p.odds).toFixed(2)}` : ""}
+  const sc = p.match && SC[p.match.id], res = sc ? fb.settle(p.pick, sc.s) : undefined, late = p.match && !(p.t < new Date(p.match.kickoff).getTime());
+  const badge = !p.match ? "" : late ? `<span class="badge wait" title="Опубликован после начала матча">вне зачёта</span>` : res === undefined ? `<span class="badge wait">⏳ ждём итог</span>`
+    : res === null ? `<span class="badge wait">↩ ${sc.s.join(":")} · возврат</span>` : `<span class="badge ${res ? "ok" : "no"}">${res ? "✅ зашёл" : "❌ не зашёл"} · ${sc.s.join(":")}</span>`;
+  const pick = p.match ? `<div class="pick">🎯 <a href="${esc(p.match.url || "matches.html")}">${esc(p.match.title)}</a> · <b>${esc(p.pick || "")}</b>${p.odds ? ` · кэф ${(+p.odds).toFixed(2)}` : ""} ${badge}
     <span class="muted small">${p.match.kickoff ? new Date(p.match.kickoff).toLocaleString("ru-RU", { day: "numeric", month: "short", hour: "2-digit", minute: "2-digit", timeZone: "Europe/Moscow" }) : ""}</span></div>` : "";
   return `<div class="card fp" id="p_${id}"><div class="h"><div class="av" data-av="${esc(p.uid)}">${esc(p.emoji || "👤")}</div><div><a href="profile.html?u=${esc(p.uid)}">${esc(p.name)}</a><div class="muted">${ago(p.t)}</div></div></div>
     <div class="tx">${esc(p.text)}</div>${pick}

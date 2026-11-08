@@ -672,6 +672,7 @@ def main():
             print(f"  ! страница статистики не собралась: {e}")
     try:
         site.matches_json(events + other, {**matches, **load_json(OTHER, {})}, now)
+        site.scores_json(events + other, now)
     except Exception as e:
         print(f"  ! список матчей для 3D не обновился: {e}")
 

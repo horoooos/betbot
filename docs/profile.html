@@ -11,11 +11,11 @@
 <link rel="stylesheet" href="site.css?v=4">
 </head>
 <body><main>
-<nav class="topnav"><a class="logo" href="./">АИ СТАВИТ</a><div class="links"><a href="matches.html">📺 Матчи онлайн</a><a href="predictions/">🎯 Прогнозы</a><a href="news/">📰 Новости</a><a href="feed.html">💬 Лента</a><a class="me" id="navUser" href="#">Войти</a></div></nav>
+<nav class="topnav"><a class="logo" href="./">АИ СТАВИТ</a><div class="links"><a href="matches.html">📺 Матчи онлайн</a><a href="predictions/">🎯 Прогнозы</a><a href="news/">📰 Новости</a><a href="feed.html">💬 Лента</a><a href="top.html">🏆 Рейтинг</a><a class="me" id="navUser" href="#">Войти</a></div></nav>
 <div id="app" style="margin-top:18px"><p class="muted">Загружаем профиль…</p></div>
 </main>
 <script type="module">
-import * as fb from "./fb.js?v=6";
+import * as fb from "./fb.js?v=7";
 const { db, ref, get, set, update, query, orderByChild, equalTo, onValue, esc } = fb;
 const $ = s => document.querySelector(s), app = $("#app");
 fb.navUser($("#navUser")); fb.track("profile");
@@ -38,6 +38,7 @@ async function show(u) {
   app.innerHTML = `<div class="card"><div class="pf"><div class="av">${fb.avatarHTML(p, 84)}</div><div><h1 style="margin:0">${esc(p.name)}</h1>
     <div class="muted small">На АИ СТАВИТ с ${ago(p.created)}</div><p style="margin-top:6px">${esc(p.bio || (own ? "Расскажите о себе — нажмите «Редактировать»" : ""))}</p></div></div>
     <div class="stats"><div><b id="sP">0</b><span>постов</span></div><div><b id="sK">0</b><span>прогнозов</span></div><div><b id="sL">0</b><span>лайков получено</span></div></div>
+    <div class="stats"><div><b id="sW">—</b><span>прогнозов зашло</span></div><div><b id="sPr">—</b><span>прибыль, ставок</span></div><div><a href="top.html" style="text-decoration:none"><b>🏆</b><span>рейтинг</span></a></div></div>
     ${own ? `<div class="row" style="margin-top:14px"><button class="btn ghost" id="edit">✏️ Редактировать</button><a class="btn ghost" href="feed.html">💬 Написать в ленту</a><button class="btn ghost" id="out">Выйти</button>
       ${(await fb.isAdmin()) ? `<a class="btn gold" href="admin.html">🛠 Админка</a>` : ""}</div><div id="ed" style="display:none;margin-top:14px"></div>` : ""}</div>
     <h2>Посты</h2><div id="posts"><p class="muted">Загрузка…</p></div>`;
@@ -68,6 +69,8 @@ async function show(u) {
     const list = []; ps.forEach(x => { list.push([x.key, x.val()]); }); list.sort((a, b) => b[1].t - a[1].t);
     $("#sP").textContent = list.length; $("#sK").textContent = list.filter(([, v]) => v.match).length;
     $("#sL").textContent = list.reduce((a, [, v]) => a + Object.keys(v.likes || {}).length, 0);
+    fb.scores().then(SC => { const b = fb.board(Object.fromEntries(list), SC)[0];
+      if (b && b.n) { $("#sW").textContent = `${b.pct}% (${b.w}/${b.n})`; $("#sPr").textContent = `${b.profit > 0 ? "+" : ""}${b.profit}`; $("#sPr").style.color = b.profit >= 0 ? "#2ecc71" : "#ff5a5a"; } });
     $("#posts").innerHTML = list.map(([k, v]) => `<a class="card fp" href="feed.html#p=${k}" style="display:block;text-decoration:none">
       <div class="muted small">${new Date(v.t).toLocaleString("ru-RU", { day: "numeric", month: "long", hour: "2-digit", minute: "2-digit" })} · ❤ ${Object.keys(v.likes || {}).length}</div>
       <div class="tx">${esc(v.text)}</div>${v.match ? `<div class="pick">🎯 ${esc(v.match.title)} · <b>${esc(v.pick || "")}</b>${v.odds ? ` · кэф ${(+v.odds).toFixed(2)}` : ""}</div>` : ""}</a>`).join("")

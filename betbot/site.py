@@ -280,7 +280,7 @@ def build(res: pd.DataFrame, now: pd.Timestamp, blocks: dict | None = None) -> N
 <link rel="stylesheet" href="site.css?v=4">
 <script type="application/ld+json">{{"@context":"https://schema.org","@type":"WebSite","name":"АИ СТАВИТ","url":"{SITE}","description":"{escape(seo_desc)}","sameAs":["{tg}"]}}</script>
 <style>{CSS}</style></head><body><main>
-<nav class="topnav"><a class="logo" href="./">АИ СТАВИТ</a><div class="links"><a href="matches.html">📺 Матчи онлайн</a><a href="predictions/">🎯 Прогнозы</a><a href="news/">📰 Новости</a><a href="feed.html">💬 Лента</a><a class="me" id="navUser" href="profile.html">Войти</a></div></nav>
+<nav class="topnav"><a class="logo" href="./">АИ СТАВИТ</a><div class="links"><a href="matches.html">📺 Матчи онлайн</a><a href="predictions/">🎯 Прогнозы</a><a href="news/">📰 Новости</a><a href="feed.html">💬 Лента</a><a href="top.html">🏆 Рейтинг</a><a class="me" id="navUser" href="profile.html">Войти</a></div></nav>
 <section class="hero"><div>
 <h1>Прогнозы на спорт <span>с честной статистикой</span></h1>
 <p class="lead">Бот публикует прогноз за час до матча и сам считает итог — без удалений и подчисток. Футбол, НХЛ, НБА, теннис и киберспорт. А любой матч можно смотреть онлайн.</p>
@@ -289,6 +289,11 @@ def build(res: pd.DataFrame, now: pd.Timestamp, blocks: dict | None = None) -> N
 <div class="ringtxt"><h3>{int(hit.sum()) if len(res) else 0} из {len(res)}</h3><p>основных прогнозов зашли — все до одного учтены. Обновлено {now:%d.%m.%Y %H:%M} МСК.</p>{streak}</div></div></section>
 <section class="live" id="live" style="display:none"></section>
 {f'<h2>🎯 Прогнозы на сегодня <a href="predictions/" class="small muted" style="font-weight:700;margin-left:auto">все прогнозы →</a></h2><div class="grid">{blocks["preds"]}</div>' if blocks and blocks.get("preds") else ""}
+<div class="card" id="quizbox" style="margin-top:18px;display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:16px;align-items:center">
+<div id="quiz"><div class="muted">Загружаем матч дня…</div></div>
+<div><div style="font-weight:900;font-size:17px">🏆 Турнир прогнозистов</div><p class="muted small" style="margin:6px 0 10px">Делайте прогнозы в ленте — бот рассчитает их после матча. Лучшие недели — в топе.</p>
+<div class="row"><a class="btn gold" href="top.html">Рейтинг</a><a class="btn ghost" href="feed.html">🎯 Сделать прогноз</a></div></div></div>
+<style>@media (max-width:760px){{#quizbox{{grid-template-columns:1fr!important}}}}</style>
 <div class="kpis" id="stats">{kpis}</div>
 <h2>💰 Виртуальный банк</h2><div class="card">{_chart(curve) or '<span class="muted">Пока мало данных</span>'}
 <p class="muted small" style="margin-top:8px">Если ставить ровно по рекомендациям бота (1–3% банка на основной прогноз), начиная с {money(pro.BANK_START)} ₽.</p></div>
@@ -305,7 +310,7 @@ def build(res: pd.DataFrame, now: pd.Timestamp, blocks: dict | None = None) -> N
 <footer>CLV — насколько выросла вероятность нашего исхода по линии букмекеров к началу матча: плюс значит, что бот нашёл ценность раньше рынка. 18+. Прогноз — не гарантия выигрыша.</footer>
 </main><div class="sticky"><a class="a" href="matches.html">📺 Онлайн</a><a class="b" href="{tg}">📲 Подписаться</a></div>
 <script>{LIVE_JS}</script>
-<script type="module">import("./fb.js?v=6").then(fb => {{ fb.track("index"); fb.navUser(document.getElementById("navUser")); }}).catch(() => {{}});</script></body></html>"""
+<script type="module">import("./fb.js?v=7").then(fb => {{ fb.track("index"); fb.navUser(document.getElementById("navUser")); fetch(location.hostname.endsWith("github.io") ? "https://raw.githubusercontent.com/horoooos/betbot/main/docs/matches.json" : "matches.json", {{ cache: "no-store" }}).then(r => r.json()).then(l => fb.quizWidget(document.getElementById("quiz"), fb.quizMatch(l))).catch(() => {{}}); }}).catch(() => {{}});</script></body></html>"""
     OUT.write_text(html, encoding="utf-8")
     print(f"Страница статистики обновлена: {len(res)} прогнозов")
 
@@ -384,3 +389,31 @@ def matches_json(events: list[dict], stored: dict, now: pd.Timestamp) -> None:
     if not MATCHES.exists() or MATCHES.read_text(encoding="utf-8") != text:
         MATCHES.write_text(text, encoding="utf-8")
         print(f"Список матчей для 3D обновлён: {len(out)}")
+
+
+SCORES = OUT.parent / "scores.json"   # счёт завершённых матчей — по нему сайт рассчитывает прогнозы болельщиков
+
+
+def scores_json(events: list[dict], now: pd.Timestamp) -> None:
+    """docs/scores.json: id матча → итоговый счёт (теннис — по сетам). Хранится 45 дней, пишется только при изменениях."""
+    data = json.loads(SCORES.read_text(encoding="utf-8")) if SCORES.exists() else {}
+    before = json.dumps(data, sort_keys=True)
+    for e in events:
+        sport = e.get("sport", "football")
+        if sport == "esports" or not (e.get("completed") or e.get("state") == "post"):
+            continue
+        try:
+            if sport == "tennis":
+                sh, sa = e["home"].get("set_won") or [], e["away"].get("set_won") or []
+                s = [int(sum(bool(x) for x in sh)), int(sum(bool(x) for x in sa))]
+                if not any(s):
+                    continue
+            else:
+                s = [int(float(e["home"]["score"])), int(float(e["away"]["score"]))]
+        except (KeyError, TypeError, ValueError):
+            continue
+        data[str(e["id"])] = {"s": s, "sp": sport, "d": str(pd.Timestamp(e["kickoff"]).date())}
+    old = str((now - pd.Timedelta(days=45)).date())
+    data = {k: v for k, v in data.items() if v["d"] >= old}
+    if json.dumps(data, sort_keys=True) != before:
+        SCORES.write_text(json.dumps(data, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")

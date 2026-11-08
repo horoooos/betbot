@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<link rel="icon" href="favicon.ico" sizes="any"><link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="manifest" href="site.webmanifest">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Рейтинг прогнозистов и «Угадай счёт» — АИ СТАВИТ</title>
+<meta name="description" content="Турнир прогнозистов АИ СТАВИТ: делайте прогнозы на матчи, соревнуйтесь с ботом и другими болельщиками, угадывайте счёт дня и попадайте в топ недели.">
+<link rel="canonical" href="https://horoooos.github.io/betbot/top.html">
+<meta property="og:title" content="Рейтинг прогнозистов — АИ СТАВИТ"><meta property="og:type" content="website"><meta property="og:locale" content="ru_RU">
+<meta property="og:image" content="https://horoooos.github.io/betbot/og.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css?v=4">
+<style>
+  .lb { width:100%; border-collapse:collapse } .lb td, .lb th { padding:9px 6px; border-bottom:1px solid var(--line); text-align:left; font-size:14px }
+  .lb th { color:var(--muted); font-size:11px; text-transform:uppercase; letter-spacing:.5px } .lb tr:last-child td { border-bottom:0 }
+  .lb td.n { text-align:right; font-weight:900; white-space:nowrap } .lb .pl { color:var(--good) } .lb .mn { color:var(--bad) }
+  .lb .who { display:flex; align-items:center; gap:10px } .lb .who a { font-weight:800; text-decoration:none } .lb .av { width:32px; height:32px; border-radius:50%; display:grid; place-items:center; background:rgba(255,255,255,.08); flex:none; overflow:hidden }
+  .medal { font-size:20px; width:28px; text-align:center } .rules li { margin:4px 0 4px 18px }
+</style>
+</head>
+<body><main>
+<nav class="topnav"><a class="logo" href="./">АИ СТАВИТ</a><div class="links"><a href="matches.html">📺 Матчи онлайн</a><a href="predictions/">🎯 Прогнозы</a><a href="news/">📰 Новости</a><a href="feed.html">💬 Лента</a><a class="on" href="top.html">🏆 Рейтинг</a><a class="me" id="navUser" href="profile.html">Войти</a></div></nav>
+<h1>🏆 Турнир <span>прогнозистов</span></h1>
+<p class="lead">Делайте прогнозы на матчи в ленте — бот сам рассчитает их после игры. Лучшие по прибыли попадают в топ недели. А ещё каждый день — «Угадай счёт».</p>
+
+<div class="card" id="quiz" style="margin-top:16px"><p class="muted">Загружаем матч дня…</p></div>
+
+<div class="tabs" id="per"><button data-p="7" class="on">Неделя</button><button data-p="30">Месяц</button><button data-p="0">Всё время</button></div>
+<div class="card" style="overflow-x:auto"><table class="lb" id="lb"><tr><td class="muted">Считаем…</td></tr></table></div>
+<p class="small muted" style="margin-top:6px">Прибыль — в ставках: зашёл прогноз с кэфом 2.10 — +1.10, не зашёл — −1. Без кэфа считаем 1.85. В рейтинге — от 3 рассчитанных прогнозов.</p>
+<div class="row" style="margin-top:10px"><a class="btn gold" href="feed.html">🎯 Сделать прогноз</a></div>
+
+<h2>🎯 Таблица «Угадай счёт»</h2>
+<div class="card" style="overflow-x:auto"><table class="lb" id="qb"><tr><td class="muted">Считаем…</td></tr></table></div>
+
+<h2>📜 Правила</h2>
+<div class="card rules"><ul>
+<li>Прогноз делается в <a href="feed.html">ленте</a>: отметьте «Это прогноз на матч», выберите матч и ставку. Кэф — по желанию.</li>
+<li>В зачёт идут только прогнозы, опубликованные <b>до начала</b> матча.</li>
+<li>Итог считается по финальному счёту (в хоккее и баскетболе — с овертаймом). Ровно в линию тотала или форы — возврат.</li>
+<li>«Угадай счёт»: точный счёт — 3 очка, угадан исход — 1 очко.</li>
+<li>Накрутка и мультиаккаунты — бан. 18+.</li>
+</ul></div>
+<footer>АИ СТАВИТ · <a href="./">Статистика бота</a> · <a href="tools.html">Калькуляторы</a> · <a href="school/">Школа ставок</a> · <a href="teams/">Команды</a></footer>
+</main>
+<script type="module">
+import * as fb from "./fb.js?v=7";
+const { db, ref, query, orderByChild, limitToLast, onValue, esc } = fb;
+const $ = s => document.querySelector(s);
+fb.navUser($("#navUser")); fb.track("top");
+const medal = i => ["🥇", "🥈", "🥉"][i] || `<span class="muted">${i + 1}</span>`;
+let posts = {}, SC = {}, per = 7;
+const list = await fetch(location.hostname.endsWith("github.io") ? "https://raw.githubusercontent.com/horoooos/betbot/main/docs/matches.json" : "matches.json", { cache: "no-store" }).then(r => r.json()).catch(() => []);
+fb.quizWidget($("#quiz"), fb.quizMatch(list));
+SC = await fb.scores();
+const who = async (el) => { for (const x of el.querySelectorAll("[data-av]")) { const u = await fb.userInfo(x.dataset.av); x.innerHTML = fb.avatarHTML(u, 32); } };
+function draw() {
+  const from = per ? Date.now() - per * 864e5 : 0;
+  const rows = fb.board(posts, SC, from).filter(u => u.n >= 3);
+  $("#lb").innerHTML = `<tr><th></th><th>Прогнозист</th><th style="text-align:right">Прогнозов</th><th style="text-align:right">Зашло</th><th style="text-align:right">Прибыль</th><th style="text-align:right">ROI</th></tr>` +
+    (rows.map((u, i) => `<tr><td class="medal">${medal(i)}</td><td><div class="who"><div class="av" data-av="${esc(u.uid)}">👤</div><a href="profile.html?u=${esc(u.uid)}">${esc(u.name)}</a></div></td>
+      <td class="n">${u.n}${u.open ? ` <span class="muted small">+${u.open}</span>` : ""}</td><td class="n">${u.pct}%</td><td class="n ${u.profit >= 0 ? "pl" : "mn"}">${u.profit > 0 ? "+" : ""}${u.profit}</td><td class="n ${u.roi >= 0 ? "pl" : "mn"}">${u.roi > 0 ? "+" : ""}${u.roi}%</td></tr>`).join("")
+     || `<tr><td class="muted" colspan="6">Пока никто не набрал 3 рассчитанных прогноза за этот период — станьте первым! <a href="feed.html" style="color:#ffc400">Сделать прогноз →</a></td></tr>`);
+  who($("#lb"));
+}
+onValue(query(ref(db, "posts"), orderByChild("t"), limitToLast(2000)), s => { posts = {}; s.forEach(p => { posts[p.key] = p.val(); }); draw(); }, () => draw());
+$("#per").onclick = e => { const p = e.target.dataset.p; if (p === undefined) return; per = +p; document.querySelectorAll("#per button").forEach(b => b.classList.toggle("on", b.dataset.p === p)); draw(); };
+onValue(ref(db, "quiz"), s => {
+  const pts = {};
+  s.forEach(m => { const r = SC[m.key]; m.forEach(a => { const v = a.val() || {}; const p = r ? fb.quizPoints(v.s, r.s) : null; const u = pts[a.key] || (pts[a.key] = { uid: a.key, name: v.n, pts: 0, n: 0, exact: 0 });
+    u.name = v.n || u.name; u.n++; if (p) { u.pts += p; if (p === 3) u.exact++; } }); });
+  const rows = Object.values(pts).sort((a, b) => b.pts - a.pts || b.exact - a.exact);
+  $("#qb").innerHTML = `<tr><th></th><th>Участник</th><th style="text-align:right">Ответов</th><th style="text-align:right">Точных</th><th style="text-align:right">Очки</th></tr>` +
+    (rows.map((u, i) => `<tr><td class="medal">${medal(i)}</td><td><div class="who"><div class="av" data-av="${esc(u.uid)}">👤</div><a href="profile.html?u=${esc(u.uid)}">${esc(u.name || "—")}</a></div></td><td class="n">${u.n}</td><td class="n">${u.exact}</td><td class="n pl">${u.pts}</td></tr>`).join("")
+     || `<tr><td class="muted" colspan="5">Пока никто не отвечал — угадайте счёт матча дня выше!</td></tr>`);
+  who($("#qb"));
+}, () => { $("#qb").innerHTML = `<tr><td class="muted">Таблица временно недоступна</td></tr>`; });
+</script>
+</body>
+</html>

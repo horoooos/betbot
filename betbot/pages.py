@@ -141,7 +141,7 @@ def _write(path: Path, text: str) -> bool:
 
 
 def nav(prefix: str, on: str = "") -> str:
-    items = [("matches.html", "📺 Матчи онлайн", "live"), ("predictions/", "🎯 Прогнозы", "pred"), ("news/", "📰 Новости", "news"), ("feed.html", "💬 Лента", "feed")]
+    items = [("matches.html", "📺 Матчи онлайн", "live"), ("predictions/", "🎯 Прогнозы", "pred"), ("news/", "📰 Новости", "news"), ("feed.html", "💬 Лента", "feed"), ("top.html", "🏆 Рейтинг", "top")]
     links = "".join(f'<a href="{prefix}{u}"{" class=on" if k == on else ""}>{t}</a>' for u, t, k in items)
     return (f'<nav class="topnav"><a class="logo" href="{prefix}./">АИ СТАВИТ</a><div class="links">{links}'
             f'<a class="me" id="navUser" href="{prefix}profile.html">Войти</a></div></nav>')
@@ -165,9 +165,11 @@ def page(prefix: str, title: str, desc: str, canon: str, body: str, on: str = ""
 {nav(prefix, on)}
 {body}
 <footer>АИ СТАВИТ — бесплатные прогнозы на спорт от искусственного интеллекта и честная статистика. Прогноз — не гарантия выигрыша. 18+.
-<br><a href="https://t.me/{CH}">Telegram-канал @{CH}</a> · <a href="{prefix}./">Статистика бота</a> · <a href="{prefix}matches.html">Матчи онлайн</a> · <a href="{prefix}news/">Новости спорта</a> · <a href="{prefix}predictions/">Прогнозы на матчи</a></footer>
+<br><a href="https://t.me/{CH}">Telegram-канал @{CH}</a> · <a href="{prefix}./">Статистика бота</a> · <a href="{prefix}matches.html">Матчи онлайн</a> · <a href="{prefix}news/">Новости спорта</a> · <a href="{prefix}predictions/">Прогнозы на матчи</a>
+<br><a href="{prefix}teams/">Команды</a> · <a href="{prefix}tools.html">Калькуляторы ставок</a> · <a href="{prefix}school/">Школа ставок</a> · <a href="{prefix}top.html">Рейтинг прогнозистов</a></footer>
 </main><div class="sticky"><a class="a" href="{prefix}matches.html">📺 Онлайн</a><a class="b" href="https://t.me/{CH}">📲 Канал</a></div>
-<script type="module">import("{prefix}fb.js?v=6").then(fb => {{ fb.navUser(document.getElementById("navUser")); fb.track("{on or 'page'}"); }}).catch(() => {{}});</script>
+<script type="module">import("{prefix}fb.js?v=7").then(fb => {{ fb.navUser(document.getElementById("navUser")); fb.track("{on or 'page'}");
+  const v = document.getElementById("votes"); if (v) fb.voteWidget(v, v.dataset.m, {{ finished: v.dataset.f === "1", botHit: v.dataset.h === "" ? null : v.dataset.h === "1" }}); }}).catch(() => {{}});</script>
 </body></html>"""
 
 
@@ -359,6 +361,8 @@ def _match_page(m: dict, store: dict[int, dict], all_m: list[dict]) -> str:
     livep = [p for p in thread if p not in analysis]
     crumbs, bc = _crumbs("../", [("Главная", ""), ("Прогнозы", "predictions/"), (title_teams, None)])
     logo = lambda u: f'<img src="{H.escape(u)}" alt="" loading="lazy">' if u else ""
+    from .pages_extra import team_url
+    tl = lambda n: f'<a href="../{team_url(m["sport"], n)}" style="text-decoration:none">{H.escape(n)}</a>'
     sc = m.get("score", "").replace(":", " : ") if m.get("finished") else "vs"
     res = ""
     if m.get("finished"):
@@ -392,10 +396,11 @@ def _match_page(m: dict, store: dict[int, dict], all_m: list[dict]) -> str:
           "description": desc, "url": SITE + m["url"], **({"location": {"@type": "Place", "name": m["venue"]}} if m.get("venue") else {})}
     body = f"""{crumbs}<span class="tag">{EMOJI.get(m['sport'], '')} {H.escape(m.get('league') or SPORT_RU.get(m['sport'], ''))} · {day}, {m['kickoff']:%H:%M} МСК</span>
 <h1>Прогноз на матч {H.escape(title_teams)}: <span>{H.escape(m['tip'])}</span></h1>
-<div class="card"><div class="teams">{logo(m.get('hl'))}<b>{H.escape(m['home'])}</b><span class="sc">{H.escape(sc)}</span><b>{H.escape(m['away'])}</b>{logo(m.get('al'))}</div>
+<div class="card"><div class="teams">{logo(m.get('hl'))}<b>{tl(m['home'])}</b><span class="sc">{H.escape(sc)}</span><b>{tl(m['away'])}</b>{logo(m.get('al'))}</div>
 <div style="text-align:center">{res}</div>
 <div class="row" style="justify-content:center;margin-top:12px">{watch}<a class="btn gold" href="https://t.me/{CH}/{m['msg']}">📲 Прогноз в Telegram</a></div></div>
 <h2>🎯 Прогноз бота</h2><div class="card pre">{pred.get('html') or H.escape(m['tip'])}</div>
+<div class="card" id="votes" data-m="{H.escape(m['id'])}" data-f="{'1' if m.get('finished') else '0'}" data-h="{('1' if m.get('hit') else '0') if m.get('finished') else ''}" style="margin-top:10px"></div>
 {chances}
 {''.join(f'<h2>🔎 Полный разбор матча</h2><div class="card pre">{p["html"]}</div>' for p in analysis[:2])}
 {game}
@@ -443,12 +448,18 @@ def build(stores: dict, results: pd.DataFrame, now: pd.Timestamp, max_pages: int
     for m in ms:
         changed += _write(DOCS / m["url"], _match_page(m, store, ms))
     changed += _write(DOCS / "predictions" / "index.html", _pred_index(ms, now))
+    from . import pages_extra
+    extra = pages_extra.build_teams(ms, news, now) + pages_extra.build_school()
+    _write(DOCS / "tools.html", pages_extra.build_tools())
+    extra += ["tools.html", "top.html"]
     urls = [("", "hourly", "1.0"), ("matches.html", "hourly", "0.9"), ("predictions/", "hourly", "0.9"), ("news/", "hourly", "0.9"), ("feed.html", "hourly", "0.6")]
     sm = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
     for u, f, pr in urls:
         sm.append(f"<url><loc>{SITE}{u}</loc><changefreq>{f}</changefreq><priority>{pr}</priority></url>")
     for n in news[:400]:
         sm.append(f"<url><loc>{SITE}{n['url']}</loc><lastmod>{n['t']:%Y-%m-%d}</lastmod><priority>0.6</priority></url>")
+    for u in extra:
+        sm.append(f"<url><loc>{SITE}{u}</loc><changefreq>daily</changefreq><priority>0.6</priority></url>")
     for m in ms:
         sm.append(f"<url><loc>{SITE}{m['url']}</loc><lastmod>{m['kickoff']:%Y-%m-%d}</lastmod><priority>{'0.8' if not m.get('finished') else '0.5'}</priority></url>")
     sm.append("</urlset>")

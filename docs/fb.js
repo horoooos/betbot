@@ -285,3 +285,128 @@ export function onlineBadge() {
 }
 const boot = () => { supportButton(); onlineBadge(); };
 if (typeof document !== "undefined") { if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", boot); else boot(); }
+
+// ── турнир прогнозистов: расчёт ставок по итоговому счёту ──
+export const MARKETS = {
+  football: ["П1", "X", "П2", "1X", "X2", "12", "ТБ 1.5", "ТБ 2.5", "ТБ 3.5", "ТМ 1.5", "ТМ 2.5", "ТМ 3.5", "Обе забьют — да", "Обе забьют — нет", "Ф1 (−1.5)", "Ф2 (+1.5)"],
+  hockey: ["П1", "П2", "ТБ 4.5", "ТБ 5.5", "ТБ 6.5", "ТМ 4.5", "ТМ 5.5", "ТМ 6.5", "Ф1 (−1.5)", "Ф2 (+1.5)"],
+  basketball: ["П1", "П2", "ТБ 210.5", "ТБ 220.5", "ТБ 230.5", "ТМ 210.5", "ТМ 220.5", "ТМ 230.5", "Ф1 (−5.5)", "Ф2 (+5.5)"],
+  tennis: ["П1", "П2", "Будет 3 сета", "Будет 2 сета"],
+};
+const DEFAULT_ODDS = 1.85;
+/** Зашла ли ставка: true / false / null (не понять или возврат). s = [хозяева, гости] (теннис — сеты). */
+export function settle(label, s) {
+  if (!s) return null;
+  const [h, a] = s.map(Number), L = String(label || "").toUpperCase().replace(/Х/g, "X").replace(/−/g, "-").replace(/\s+/g, " ").trim();
+  let m;
+  if (/^П1\b/.test(L) || L === "1") return h > a;
+  if (/^П2\b/.test(L) || L === "2") return a > h;
+  if (/^(X|НИЧЬЯ)$/.test(L)) return h === a;
+  if (L === "1X") return h >= a;
+  if (L === "X2") return a >= h;
+  if (L === "12") return h !== a;
+  if ((m = L.match(/^ТБ ?(\d+(?:[.,]\d+)?)/))) { const n = parseFloat(m[1].replace(",", ".")); return h + a === n ? null : h + a > n; }
+  if ((m = L.match(/^ТМ ?(\d+(?:[.,]\d+)?)/))) { const n = parseFloat(m[1].replace(",", ".")); return h + a === n ? null : h + a < n; }
+  if (/ОБЕ ЗАБЬЮТ/.test(L)) return /НЕТ/.test(L) ? !(h > 0 && a > 0) : (h > 0 && a > 0);
+  if ((m = L.match(/^Ф([12]) ?\(?([+-]?\d+(?:[.,]\d+)?)\)?/))) { const n = parseFloat(m[2].replace(",", ".")), d = m[1] === "1" ? h + n - a : a + n - h; return d === 0 ? null : d > 0; }
+  if (/3 СЕТА/.test(L)) return h + a === 3;
+  if (/2 СЕТА/.test(L)) return h + a === 2;
+  return null;
+}
+let scoresP = null;
+/** Итоги завершённых матчей (бот обновляет docs/scores.json). */
+export function scores() {
+  if (!scoresP) {
+    const local = new URL("scores.json", import.meta.url).href;
+    const url = location.hostname.endsWith("github.io") ? "https://raw.githubusercontent.com/horoooos/betbot/main/docs/scores.json" : local;
+    scoresP = fetch(url, { cache: "no-store" }).then(r => r.json()).catch(() => fetch(local).then(r => r.json()).catch(() => ({})));
+  }
+  return scoresP;
+}
+/** Рейтинг прогнозистов. posts — {id: пост}; from/to — по времени начала матча. */
+export function board(posts, sc, from = 0, to = Infinity) {
+  const out = {};
+  for (const p of Object.values(posts || {})) {
+    if (!p.match || !p.pick) continue;
+    const k = new Date(p.match.kickoff).getTime();
+    if (!(p.t < k) || k < from || k > to) continue;          // в зачёт только прогнозы, сделанные до начала матча
+    const r = sc[p.match.id], res = r ? settle(p.pick, r.s) : undefined;
+    const u = out[p.uid] || (out[p.uid] = { uid: p.uid, name: p.name, n: 0, w: 0, open: 0, profit: 0, last: 0 });
+    u.name = p.name; u.last = Math.max(u.last, p.t);
+    if (res === undefined) { u.open++; continue; }
+    if (res === null) continue;
+    u.n++; const o = p.odds > 1 ? p.odds : DEFAULT_ODDS;
+    if (res) { u.w++; u.profit += o - 1; } else u.profit -= 1;
+  }
+  return Object.values(out).map(u => ({ ...u, profit: Math.round(u.profit * 100) / 100, pct: u.n ? Math.round(u.w / u.n * 100) : 0, roi: u.n ? Math.round(u.profit / u.n * 100) : 0 }))
+    .sort((a, b) => b.profit - a.profit || b.pct - a.pct || b.n - a.n);
+}
+
+// ── «Бот против подписчиков»: согласны с прогнозом бота или нет ──
+export function voteWidget(el, matchId, opts = {}) {
+  if (!el || !matchId) return;
+  const finished = !!opts.finished, botHit = opts.botHit ?? null;
+  const key = () => (auth.currentUser && auth.currentUser.uid) || visitorId();
+  const btn = (v, on, color, bg, text) => `<button data-v="${v}" style="flex:1;min-width:140px;border:1px solid ${on ? color : "rgba(255,255,255,.15)"};background:${on ? bg : "rgba(255,255,255,.05)"};color:#fff;border-radius:12px;padding:10px;font:800 14px Montserrat,sans-serif;cursor:pointer">${text}</button>`;
+  const draw = s => {
+    let a = 0, d = 0, mine = null;
+    s.forEach(c => { if (c.val() === "a") a++; if (c.val() === "d") d++; if (c.key === key()) mine = c.val(); });
+    const n = a + d, pa = n ? Math.round(a / n * 100) : 50;
+    const res = finished && botHit !== null ? `<div style="margin-top:8px;font-weight:800">${botHit ? "✅ Бот оказался прав — правы те, кто был согласен" : "❌ Бот ошибся — правы те, кто был против"}</div>` : "";
+    el.innerHTML = `<div style="font-weight:800;margin-bottom:8px">🤖 Бот против подписчиков: вы согласны с прогнозом?</div>`
+      + (finished ? "" : `<div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px">${btn("a", mine === "a", "#2ecc71", "rgba(46,204,113,.2)", "👍 Согласен с ботом")}${btn("d", mine === "d", "#ff5a5a", "rgba(255,90,90,.18)", "👎 Я против")}</div>`)
+      + `<div style="display:flex;height:28px;border-radius:10px;overflow:hidden;font:900 12px Montserrat,sans-serif">
+        <div style="width:${pa}%;background:#2ecc71;display:flex;align-items:center;padding-left:8px">${n ? pa + "%" : ""}</div>
+        <div style="flex:1;background:#ff5a5a;display:flex;align-items:center;justify-content:flex-end;padding-right:8px">${n ? 100 - pa + "%" : ""}</div></div>
+      <div style="display:flex;justify-content:space-between;font-size:12px;color:#9aa6cc;margin-top:4px"><span>Согласны: ${a}</span><span>Против: ${d}</span></div>${res}`;
+    el.querySelectorAll("button[data-v]").forEach(b => b.onclick = () => {
+      const r = ref(db, `votes/${matchId}/${key()}`);
+      (mine === b.dataset.v ? remove(r) : set(r, b.dataset.v)).catch(() => {});
+    });
+  };
+  onValue(ref(db, `votes/${matchId}`), draw, () => {});
+}
+
+// ── «Угадай счёт дня» ──
+/** Матч дня для викторины: «прогноз дня» бота сегодня, иначе первый футбольный матч с прогнозом. */
+export function quizMatch(list) {
+  const day = d => new Date(d).toLocaleDateString("ru-RU", { timeZone: "Europe/Moscow" }), today = day(Date.now());
+  const todays = (list || []).filter(m => day(m.kickoff) === today && m.sport === "football");
+  return todays.find(m => m.top) || todays.filter(m => m.tip).sort((a, b) => a.kickoff.localeCompare(b.kickoff))[0] || todays[0] || null;
+}
+export const quizPoints = (guess, s) => {
+  if (!guess || !s) return null;
+  const [gh, ga] = guess.split(":").map(Number), [h, a] = s;
+  if (gh === h && ga === a) return 3;
+  return Math.sign(gh - ga) === Math.sign(h - a) ? 1 : 0;
+};
+export function quizWidget(el, m) {
+  if (!el) return;
+  if (!m) { el.innerHTML = `<div class="muted">Сегодня матча для викторины нет — загляните завтра.</div>`; return; }
+  const k = new Date(m.kickoff).getTime();
+  const inp = (id, v) => `<input id="${id}" type="number" min="0" max="20" value="${v}" style="width:64px;text-align:center;font:900 22px Montserrat,sans-serif;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.15);color:#fff;border-radius:12px;padding:8px">`;
+  const draw = async u => {
+    const open = Date.now() < k;
+    const snap = u ? await get(ref(db, `quiz/${m.id}/${u.uid}`)).catch(() => null) : null, mine = snap ? snap.val() : null;
+    const sc = (await scores())[m.id];
+    const t = new Date(m.kickoff).toLocaleTimeString("ru-RU", { hour: "2-digit", minute: "2-digit", timeZone: "Europe/Moscow" });
+    let body;
+    if (sc) body = `<div>Итог: <b>${sc.s.join(":")}</b>${mine ? ` · ваш ответ ${esc(mine.s)} → <b>+${quizPoints(mine.s, sc.s)} очк.</b>` : ""}</div>`;
+    else if (open) body = `<div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">${inp("qh", mine ? mine.s.split(":")[0] : "")}<b style="font-size:22px">:</b>${inp("qa", mine ? mine.s.split(":")[1] : "")}
+        <button id="qs" style="border:0;border-radius:12px;padding:12px 16px;background:linear-gradient(90deg,#ffc400,#ff9f1a);color:#1a1405;font:900 14px Montserrat,sans-serif;cursor:pointer">${mine ? "Изменить" : "Ответить"}</button></div>
+        <div class="small muted" style="margin-top:6px">Точный счёт — 3 очка, угадан исход — 1 очко. Ответы принимаются до начала матча.${mine ? ` Ваш ответ: <b>${esc(mine.s)}</b>` : ""}</div>`;
+    else body = `<div class="muted">Приём ответов закрыт — матч начался.${mine ? ` Ваш ответ: <b>${esc(mine.s)}</b>` : ""}</div>`;
+    el.innerHTML = `<div style="font-weight:900;font-size:17px">🎯 Угадай счёт дня</div>
+      <div style="margin:6px 0 10px"><b>${esc(m.home)} — ${esc(m.away)}</b> <span class="muted small">· ${esc(m.league)} · ${t} МСК</span></div>${body}
+      <div class="small" id="qe" style="color:#ff6a6a;margin-top:4px"></div>`;
+    const b = el.querySelector("#qs"); if (!b) return;
+    b.onclick = async () => {
+      if (!auth.currentUser || !profile) { await login(); if (!auth.currentUser || !profile) return; }
+      const h = parseInt(el.querySelector("#qh").value, 10), a = parseInt(el.querySelector("#qa").value, 10);
+      if (!(h >= 0 && a >= 0 && h < 21 && a < 21)) { el.querySelector("#qe").textContent = "Впишите счёт, например 2 : 1"; return; }
+      try { await set(ref(db, `quiz/${m.id}/${auth.currentUser.uid}`), { s: `${h}:${a}`, t: serverTimestamp(), n: profile.name }); draw(auth.currentUser); }
+      catch (e) { el.querySelector("#qe").textContent = "Не сохранилось, попробуйте ещё раз"; }
+    };
+  };
+  onUser(u => draw(u));
+}
