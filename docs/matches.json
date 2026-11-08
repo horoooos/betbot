@@ -3527,9 +3527,116 @@ null
 "bb": "https://betboom.ru/search?query=%D0%AD%D1%88%D1%82%D1%80%D0%B5%D0%BB%D0%B0",
 "path": "soccer/por.1",
 "url": "live.html?s=football&p=soccer%2Fpor.1&e=401885401&h=%D0%AD%D1%88%D1%82%D1%80%D0%B5%D0%BB%D0%B0&a=%D0%91%D0%B5%D0%BD%D1%84%D0%B8%D0%BA%D0%B0",
-"tip": "",
+"tip": "ТМ 3.5 · ≈1.67",
 "top": false,
-"bot": null
+"bot": {
+"main": {
+"label": "ТМ 3.5",
+"p": 0.556,
+"odds": 1.67,
+"est": true
+},
+"bold": null,
+"markets": [
+[
+"П1",
+0.09,
+12.0
+],
+[
+"Ничья",
+0.161,
+7.5
+],
+[
+"П2",
+0.749,
+1.19
+],
+[
+"1X",
+0.251,
+null
+],
+[
+"X2",
+0.91,
+null
+],
+[
+"ТБ 1.5",
+0.86,
+null
+],
+[
+"ТБ 2.5",
+0.663,
+null
+],
+[
+"ТМ 2.5",
+0.337,
+null
+],
+[
+"ТБ 3.5",
+0.444,
+1.833
+],
+[
+"Обе забьют — да",
+0.523,
+null
+],
+[
+"Обе забьют — нет",
+0.477,
+null
+],
+[
+"ИТ1 больше 1.5",
+0.198,
+null
+],
+[
+"ИТ2 больше 1.5",
+0.731,
+null
+],
+[
+"Ф1 (−1.5)",
+0.027,
+null
+],
+[
+"Ф2 (+1.5)",
+0.973,
+null
+]
+],
+"bar": [
+0.0896454022111293,
+0.16144982239161476,
+0.7489047753972554
+],
+"center": "Ожидаемые голы (xG) 0.8 : 2.6",
+"scores": [
+[
+"0:2",
+0.111
+],
+[
+"0:3",
+0.096
+],
+[
+"1:2",
+0.091
+]
+],
+"corners": 11.8,
+"cards": 4.9
+}
 },
 {
 "sport": "football",
@@ -3545,9 +3652,116 @@ null
 "bb": "https://betboom.ru/search?query=%D0%A0%D0%B8%D1%83",
 "path": "soccer/por.1",
 "url": "live.html?s=football&p=soccer%2Fpor.1&e=401885397&h=%D0%A0%D0%B8%D1%83+%D0%90%D0%B2%D0%B5&a=%D0%91%D1%80%D0%B0%D0%B3%D0%B0",
-"tip": "",
+"tip": "ТМ 2.5 · 1.97",
 "top": false,
-"bot": null
+"bot": {
+"main": {
+"label": "ТМ 2.5",
+"p": 0.47,
+"odds": 1.97,
+"est": false
+},
+"bold": null,
+"markets": [
+[
+"П1",
+0.159,
+6.0
+],
+[
+"Ничья",
+0.233,
+4.5
+],
+[
+"П2",
+0.609,
+1.5
+],
+[
+"1X",
+0.391,
+null
+],
+[
+"X2",
+0.841,
+null
+],
+[
+"ТБ 1.5",
+0.777,
+null
+],
+[
+"ТБ 2.5",
+0.53,
+1.645
+],
+[
+"ТМ 2.5",
+0.47,
+2.2
+],
+[
+"ТБ 3.5",
+0.308,
+null
+],
+[
+"Обе забьют — да",
+0.508,
+null
+],
+[
+"Обе забьют — нет",
+0.492,
+null
+],
+[
+"ИТ1 больше 1.5",
+0.221,
+null
+],
+[
+"ИТ2 больше 1.5",
+0.571,
+null
+],
+[
+"Ф1 (−1.5)",
+0.053,
+null
+],
+[
+"Ф2 (+1.5)",
+0.947,
+null
+]
+],
+"bar": [
+0.15867200966082715,
+0.23282058142220233,
+0.6085074089169703
+],
+"center": "Ожидаемые голы (xG) 0.9 : 1.9",
+"scores": [
+[
+"0:2",
+0.112
+],
+[
+"1:1",
+0.111
+],
+[
+"0:1",
+0.108
+]
+],
+"corners": 9.3,
+"cards": 4.6
+}
 },
 {
 "sport": "basketball",
@@ -3563,9 +3777,75 @@ null
 "bb": "https://betboom.ru/search?query=%D0%A7%D0%B8%D0%BA%D0%B0%D0%B3%D0%BE",
 "path": "basketball/nba",
 "url": "live.html?s=basketball&p=basketball%2Fnba&e=401909945&h=%D0%A7%D0%B8%D0%BA%D0%B0%D0%B3%D0%BE+%D0%91%D1%83%D0%BB%D0%BB%D0%B7&a=%D0%A4%D0%B8%D0%BB%D0%B0%D0%B4%D0%B5%D0%BB%D1%8C%D1%84%D0%B8%D1%8F+%D0%A1%D0%B8%D0%BA%D1%81%D0%B5%D1%80%D1%81",
-"tip": "",
+"tip": "ТБ 237.5 · 1.91",
 "top": false,
-"bot": null
+"bot": {
+"main": {
+"label": "ТБ 237.5",
+"p": 0.5,
+"odds": 1.91,
+"est": false
+},
+"bold": null,
+"markets": [
+[
+"П1 (с ОТ)",
+0.191,
+4.62
+],
+[
+"П2 (с ОТ)",
+0.809,
+1.213
+],
+[
+"Ф1 (+10.5)",
+0.5,
+1.855
+],
+[
+"Ф2 (-10.5)",
+0.5,
+1.971
+],
+[
+"ТБ 230.5",
+0.66,
+null
+],
+[
+"ТМ 230.5",
+0.34,
+null
+],
+[
+"ТБ 237.5",
+0.5,
+1.909
+],
+[
+"ТМ 237.5",
+0.5,
+1.909
+],
+[
+"ТБ 244.5",
+0.34,
+null
+],
+[
+"ТМ 244.5",
+0.66,
+null
+]
+],
+"bar": [
+0.19078695285251068,
+0,
+0.8092130471474893
+],
+"center": "Ожидаемый счёт 114 : 124"
+}
 },
 {
 "sport": "hockey",
@@ -3581,9 +3861,105 @@ null
 "bb": "https://betboom.ru/search?query=%D0%91%D0%B0%D1%84%D1%84%D0%B0%D0%BB%D0%BE",
 "path": "hockey/nhl",
 "url": "live.html?s=hockey&p=hockey%2Fnhl&e=401892675&h=%D0%91%D0%B0%D1%84%D1%84%D0%B0%D0%BB%D0%BE&a=%D0%92%D0%B5%D0%B3%D0%B0%D1%81",
-"tip": "",
+"tip": "ТБ 6.5 · 1.95",
 "top": false,
-"bot": null
+"bot": {
+"main": {
+"label": "ТБ 6.5",
+"p": 0.489,
+"odds": 1.95,
+"est": false
+},
+"bold": null,
+"markets": [
+[
+"П1 (с ОТ и буллитами)",
+0.496,
+1.926
+],
+[
+"П2 (с ОТ и буллитами)",
+0.504,
+1.893
+],
+[
+"П1 в основное время",
+0.413,
+null
+],
+[
+"Ничья в основное время",
+0.159,
+null
+],
+[
+"П2 в основное время",
+0.428,
+null
+],
+[
+"ТБ 5.5",
+0.646,
+null
+],
+[
+"ТМ 5.5",
+0.354,
+null
+],
+[
+"ТБ 6.5",
+0.489,
+1.952
+],
+[
+"ТМ 6.5",
+0.511,
+1.87
+],
+[
+"ТБ 7.5",
+0.342,
+null
+],
+[
+"ТМ 7.5",
+0.658,
+null
+],
+[
+"ИТ1 больше 1.5",
+0.839,
+null
+],
+[
+"ИТ1 больше 2.5",
+0.636,
+null
+],
+[
+"ИТ1 больше 3.5",
+0.414,
+null
+],
+[
+"ИТ2 больше 1.5",
+0.845,
+null
+],
+[
+"ИТ2 больше 2.5",
+0.646,
+null
+]
+],
+"bar": [
+0.4956747115391247,
+0,
+0.5043252884608752
+],
+"center": "Ожидаемые голы 3.3 : 3.3"
+}
 },
 {
 "sport": "tennis",
@@ -3986,15 +4362,15 @@ null
 "id": "186746",
 "league": "Теннис · WTA",
 "kickoff": "2026-11-09T08:00:00+03:00",
-"home": "Тбд",
-"away": "Тбд",
-"hl": null,
-"al": null,
-"hid": "-3",
-"aid": "-4",
-"bb": "https://betboom.ru/search?query=%D0%A2%D0%B1%D0%B4",
+"home": "Хасмин Ортенси",
+"away": "Леолия Жанжан",
+"hl": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+"al": "https://a.espncdn.com/i/teamlogos/countries/500/fra.png",
+"hid": "5746",
+"aid": "4453",
+"bb": "https://betboom.ru/search?query=%D0%9E%D1%80%D1%82%D0%B5%D0%BD%D1%81%D0%B8",
 "path": "tennis/wta",
-"url": "live.html?s=tennis&p=tennis%2Fwta&e=186746&h=%D0%A2%D0%B1%D0%B4&a=%D0%A2%D0%B1%D0%B4",
+"url": "live.html?s=tennis&p=tennis%2Fwta&e=186746&h=%D0%A5%D0%B0%D1%81%D0%BC%D0%B8%D0%BD+%D0%9E%D1%80%D1%82%D0%B5%D0%BD%D1%81%D0%B8&a=%D0%9B%D0%B5%D0%BE%D0%BB%D0%B8%D1%8F+%D0%96%D0%B0%D0%BD%D0%B6%D0%B0%D0%BD",
 "tip": "",
 "top": false,
 "bot": null
@@ -4022,15 +4398,15 @@ null
 "id": "186748",
 "league": "Теннис · WTA",
 "kickoff": "2026-11-09T08:00:00+03:00",
-"home": "Тбд",
-"away": "Тбд",
-"hl": null,
-"al": null,
-"hid": "-3",
-"aid": "-4",
-"bb": "https://betboom.ru/search?query=%D0%A2%D0%B1%D0%B4",
+"home": "Катрина Скотт",
+"away": "Андреа Лазаро Гарсиа",
+"hl": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
+"al": "https://a.espncdn.com/i/teamlogos/countries/500/esp.png",
+"hid": "7812",
+"aid": "4291",
+"bb": "https://betboom.ru/search?query=%D0%A1%D0%BA%D0%BE%D1%82%D1%82",
 "path": "tennis/wta",
-"url": "live.html?s=tennis&p=tennis%2Fwta&e=186748&h=%D0%A2%D0%B1%D0%B4&a=%D0%A2%D0%B1%D0%B4",
+"url": "live.html?s=tennis&p=tennis%2Fwta&e=186748&h=%D0%9A%D0%B0%D1%82%D1%80%D0%B8%D0%BD%D0%B0+%D0%A1%D0%BA%D0%BE%D1%82%D1%82&a=%D0%90%D0%BD%D0%B4%D1%80%D0%B5%D0%B0+%D0%9B%D0%B0%D0%B7%D0%B0%D1%80%D0%BE+%D0%93%D0%B0%D1%80%D1%81%D0%B8%D0%B0",
 "tip": "",
 "top": false,
 "bot": null
@@ -4058,15 +4434,15 @@ null
 "id": "186754",
 "league": "Теннис · WTA",
 "kickoff": "2026-11-09T08:00:00+03:00",
-"home": "Тбд",
-"away": "Тбд",
-"hl": null,
-"al": null,
-"hid": "-3",
-"aid": "-4",
-"bb": "https://betboom.ru/search?query=%D0%A2%D0%B1%D0%B4",
+"home": "Тамара Зиданшек",
+"away": "Юлия Грабер",
+"hl": "https://a.espncdn.com/i/teamlogos/countries/500/slo.png",
+"al": "https://a.espncdn.com/i/teamlogos/countries/500/aut.png",
+"hid": "3034",
+"aid": "2599",
+"bb": "https://betboom.ru/search?query=%D0%97%D0%B8%D0%B4%D0%B0%D0%BD%D1%88%D0%B5%D0%BA",
 "path": "tennis/wta",
-"url": "live.html?s=tennis&p=tennis%2Fwta&e=186754&h=%D0%A2%D0%B1%D0%B4&a=%D0%A2%D0%B1%D0%B4",
+"url": "live.html?s=tennis&p=tennis%2Fwta&e=186754&h=%D0%A2%D0%B0%D0%BC%D0%B0%D1%80%D0%B0+%D0%97%D0%B8%D0%B4%D0%B0%D0%BD%D1%88%D0%B5%D0%BA&a=%D0%AE%D0%BB%D0%B8%D1%8F+%D0%93%D1%80%D0%B0%D0%B1%D0%B5%D1%80",
 "tip": "",
 "top": false,
 "bot": null
@@ -4076,15 +4452,15 @@ null
 "id": "186752",
 "league": "Теннис · WTA",
 "kickoff": "2026-11-09T08:00:00+03:00",
-"home": "Тбд",
-"away": "Тбд",
-"hl": null,
-"al": null,
-"hid": "-3",
-"aid": "-4",
-"bb": "https://betboom.ru/search?query=%D0%A2%D0%B1%D0%B4",
+"home": "Лючия Бронцетти",
+"away": "Жулиета Парежа",
+"hl": "https://a.espncdn.com/i/teamlogos/countries/500/ita.png",
+"al": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
+"hid": "4666",
+"aid": "15219",
+"bb": "https://betboom.ru/search?query=%D0%91%D1%80%D0%BE%D0%BD%D1%86%D0%B5%D1%82%D1%82%D0%B8",
 "path": "tennis/wta",
-"url": "live.html?s=tennis&p=tennis%2Fwta&e=186752&h=%D0%A2%D0%B1%D0%B4&a=%D0%A2%D0%B1%D0%B4",
+"url": "live.html?s=tennis&p=tennis%2Fwta&e=186752&h=%D0%9B%D1%8E%D1%87%D0%B8%D1%8F+%D0%91%D1%80%D0%BE%D0%BD%D1%86%D0%B5%D1%82%D1%82%D0%B8&a=%D0%96%D1%83%D0%BB%D0%B8%D0%B5%D1%82%D0%B0+%D0%9F%D0%B0%D1%80%D0%B5%D0%B6%D0%B0",
 "tip": "",
 "top": false,
 "bot": null
@@ -4112,15 +4488,15 @@ null
 "id": "186750",
 "league": "Теннис · WTA",
 "kickoff": "2026-11-09T08:00:00+03:00",
-"home": "Тбд",
-"away": "Тбд",
-"hl": null,
-"al": null,
-"hid": "-3",
-"aid": "-4",
-"bb": "https://betboom.ru/search?query=%D0%A2%D0%B1%D0%B4",
+"home": "Элизабет Мандлик",
+"away": "Вероника Ержавек",
+"hl": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
+"al": "https://a.espncdn.com/i/teamlogos/countries/500/slo.png",
+"hid": "1955",
+"aid": "5878",
+"bb": "https://betboom.ru/search?query=%D0%9C%D0%B0%D0%BD%D0%B4%D0%BB%D0%B8%D0%BA",
 "path": "tennis/wta",
-"url": "live.html?s=tennis&p=tennis%2Fwta&e=186750&h=%D0%A2%D0%B1%D0%B4&a=%D0%A2%D0%B1%D0%B4",
+"url": "live.html?s=tennis&p=tennis%2Fwta&e=186750&h=%D0%AD%D0%BB%D0%B8%D0%B7%D0%B0%D0%B1%D0%B5%D1%82+%D0%9C%D0%B0%D0%BD%D0%B4%D0%BB%D0%B8%D0%BA&a=%D0%92%D0%B5%D1%80%D0%BE%D0%BD%D0%B8%D0%BA%D0%B0+%D0%95%D1%80%D0%B6%D0%B0%D0%B2%D0%B5%D0%BA",
 "tip": "",
 "top": false,
 "bot": null
