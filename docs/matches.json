@@ -1,131 +1,6 @@
 [
 {
 "sport": "football",
-"id": "401874808",
-"league": "Италия · Серия A",
-"kickoff": "2026-11-08T20:00:00+03:00",
-"home": "Интер",
-"away": "Комо",
-"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/110.png",
-"al": "https://a.espncdn.com/i/teamlogos/soccer/500/2572.png",
-"hid": "110",
-"aid": "2572",
-"bb": "https://betboom.ru/search?query=%D0%98%D0%BD%D1%82%D0%B5%D1%80",
-"path": "soccer/ita.1",
-"url": "live.html?s=football&p=soccer%2Fita.1&e=401874808&h=%D0%98%D0%BD%D1%82%D0%B5%D1%80&a=%D0%9A%D0%BE%D0%BC%D0%BE",
-"tip": "П1 · 1.86",
-"top": false,
-"bot": {
-"main": {
-"label": "П1",
-"p": 0.503,
-"odds": 1.86,
-"est": false
-},
-"bold": null,
-"markets": [
-[
-"П1",
-0.503,
-2.1
-],
-[
-"Ничья",
-0.236,
-3.7
-],
-[
-"П2",
-0.261,
-3.0
-],
-[
-"1X",
-0.739,
-null
-],
-[
-"X2",
-0.497,
-null
-],
-[
-"ТБ 1.5",
-0.85,
-null
-],
-[
-"ТБ 2.5",
-0.642,
-null
-],
-[
-"ТМ 2.5",
-0.358,
-null
-],
-[
-"ТБ 3.5",
-0.421,
-2.3
-],
-[
-"Обе забьют — да",
-0.645,
-null
-],
-[
-"Обе забьют — нет",
-0.355,
-null
-],
-[
-"ИТ1 больше 1.5",
-0.579,
-null
-],
-[
-"ИТ2 больше 1.5",
-0.395,
-null
-],
-[
-"Ф1 (−1.5)",
-0.293,
-null
-],
-[
-"Ф2 (+1.5)",
-0.707,
-null
-]
-],
-"bar": [
-0.5034519873809781,
-0.2358169377662028,
-0.2607310748528193
-],
-"center": "Ожидаемые голы (xG) 1.9 : 1.4",
-"scores": [
-[
-"1:1",
-0.105
-],
-[
-"2:1",
-0.094
-],
-[
-"2:0",
-0.069
-]
-],
-"corners": 9.1,
-"cards": 3.5
-}
-},
-{
-"sport": "football",
 "id": "401931108",
 "league": "Англия · Кубок Англии",
 "kickoff": "2026-11-08T20:15:00+03:00",
@@ -3248,6 +3123,42 @@ null
 "bb": "https://betboom.ru/search?query=%D0%92%D0%B0%D0%BD%D0%BA%D1%83%D0%B2%D0%B5%D1%80",
 "path": "hockey/nhl",
 "url": "live.html?s=hockey&p=hockey%2Fnhl&e=401892681&h=%D0%92%D0%B0%D0%BD%D0%BA%D1%83%D0%B2%D0%B5%D1%80&a=%D0%A4%D0%B8%D0%BB%D0%B0%D0%B4%D0%B5%D0%BB%D1%8C%D1%84%D0%B8%D1%8F",
+"tip": "",
+"top": false,
+"bot": null
+},
+{
+"sport": "basketball",
+"id": "401909959",
+"league": "США · NBA",
+"kickoff": "2026-11-10T06:00:00+03:00",
+"home": "Голден Стэйт",
+"away": "Нью-Орлеан Пеликанс",
+"hl": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/gs.png",
+"al": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/no.png",
+"hid": "9",
+"aid": "3",
+"bb": "https://betboom.ru/search?query=%D0%93%D0%BE%D0%BB%D0%B4%D0%B5%D0%BD",
+"path": "basketball/nba",
+"url": "live.html?s=basketball&p=basketball%2Fnba&e=401909959&h=%D0%93%D0%BE%D0%BB%D0%B4%D0%B5%D0%BD+%D0%A1%D1%82%D1%8D%D0%B9%D1%82&a=%D0%9D%D1%8C%D1%8E-%D0%9E%D1%80%D0%BB%D0%B5%D0%B0%D0%BD+%D0%9F%D0%B5%D0%BB%D0%B8%D0%BA%D0%B0%D0%BD%D1%81",
+"tip": "",
+"top": false,
+"bot": null
+},
+{
+"sport": "hockey",
+"id": "401892682",
+"league": "США · NHL",
+"kickoff": "2026-11-10T06:00:00+03:00",
+"home": "Сан-Хосе",
+"away": "Айлендерс",
+"hl": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/sj.png",
+"al": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/nyi.png",
+"hid": "18",
+"aid": "12",
+"bb": "https://betboom.ru/search?query=%D0%A1%D0%B0%D0%BD-%D0%A5%D0%BE%D1%81%D0%B5",
+"path": "hockey/nhl",
+"url": "live.html?s=hockey&p=hockey%2Fnhl&e=401892682&h=%D0%A1%D0%B0%D0%BD-%D0%A5%D0%BE%D1%81%D0%B5&a=%D0%90%D0%B9%D0%BB%D0%B5%D0%BD%D0%B4%D0%B5%D1%80%D1%81",
 "tip": "",
 "top": false,
 "bot": null
