@@ -187,7 +187,7 @@ import * as THREE from "three";
 
 // ═════════════════════════ параметры ═════════════════════════
 const q = new URLSearchParams(location.search);
-const BETBOOM = "https://app.betboom.ru/mIlkmXZpiS";   // реферальная ссылка владельца
+const BETBOOM = `https://betboom.ru/sport/${SPORT}`;   // линия BetBoom этого вида спорта (реферальная ссылка — только на главной)
 const SPORT = q.get("s") || "football";
 const PATH = q.get("p") || `soccer/${q.get("l") || "eng.1"}`;      // старые ссылки: l=eng.1
 const EVENT = q.get("e"), RU_H = q.get("h"), RU_A = q.get("a");

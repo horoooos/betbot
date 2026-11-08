@@ -172,7 +172,7 @@ def page(prefix: str, title: str, desc: str, canon: str, body: str, on: str = ""
 {body}
 <footer>АИ СТАВИТ — бесплатные прогнозы на спорт от искусственного интеллекта и честная статистика. Прогноз — не гарантия выигрыша. 18+.
 <br><a href="https://t.me/{CH}">Telegram-канал @{CH}</a> · <a href="{prefix}./">Статистика бота</a> · <a href="{prefix}matches.html">Матчи онлайн</a> · <a href="{prefix}news/">Новости спорта</a> · <a href="{prefix}predictions/">Прогнозы на матчи</a>
-<br><a href="{BETBOOM}" target="_blank" rel="noopener sponsored" style="color:#ff6a5a;font-weight:800">💰 Ставки в BetBoom по нашей ссылке</a> · <a href="{prefix}leagues.html">Команды, игроки и турниры</a> · <a href="{prefix}teams/">Прогнозы по командам</a> · <a href="{prefix}tools.html">Калькуляторы ставок</a> · <a href="{prefix}school/">Школа ставок</a> · <a href="{prefix}top.html">Рейтинг прогнозистов</a></footer>
+<br><a href="{prefix}leagues.html">Команды, игроки и турниры</a> · <a href="{prefix}teams/">Прогнозы по командам</a> · <a href="{prefix}tools.html">Калькуляторы ставок</a> · <a href="{prefix}school/">Школа ставок</a> · <a href="{prefix}top.html">Рейтинг прогнозистов</a></footer>
 </main><div class="sticky"><a class="a" href="{prefix}matches.html">📺 Онлайн</a><a class="b" href="https://t.me/{CH}">📲 Канал</a></div>
 <script type="module">import("{prefix}fb.js?v=10").then(fb => {{ fb.navUser(document.getElementById("navUser")); fb.track("{on or 'page'}");
   fb.countView(document.querySelector("[data-view]")); fb.showViews();
@@ -407,7 +407,7 @@ def _match_page(m: dict, store: dict[int, dict], all_m: list[dict]) -> str:
 <div style="text-align:center">{res}</div>
 <div class="row" style="justify-content:center;margin-top:12px">{watch}<a class="btn gold" href="https://t.me/{CH}/{m['msg']}">📲 Прогноз в Telegram</a></div></div>
 <h2>🎯 Прогноз бота</h2><div class="card pre">{pred.get('html') or H.escape(m['tip'])}</div>
-{_betboom(f"{m['home']} — {m['away']}: {m['tip']}", m['tip']) if not m.get('finished') else ''}
+{_betboom(f"{m['home']} — {m['away']}: {m['tip']}", m['tip'], m['sport']) if not m.get('finished') else ''}
 <div class="card" id="votes" data-m="{H.escape(m['id'])}" data-f="{'1' if m.get('finished') else '0'}" data-h="{('1' if m.get('hit') else '0') if m.get('finished') else ''}" style="margin-top:10px"></div>
 {chances}
 {''.join(f'<h2>🔎 Полный разбор матча</h2><div class="card pre">{p["html"]}</div>' for p in analysis[:2])}
@@ -417,12 +417,16 @@ def _match_page(m: dict, store: dict[int, dict], all_m: list[dict]) -> str:
     return page("../", f"Прогноз на матч {title_teams} {m['kickoff']:%d.%m.%Y}: {m['tip']} — АИ СТАВИТ", desc, SITE + m["url"], body, "pred", img, [ld, bc], "article")
 
 
-BETBOOM = "https://app.betboom.ru/mIlkmXZpiS"   # реферальная ссылка владельца
+BB_SPORT = "https://betboom.ru/sport/"   # обычная ссылка на линию BetBoom (реферальная — только баннер на главной)
 
 
-def _betboom(bet: str, label: str) -> str:
-    """Кнопка «повторить ставку бота»: BetBoom по реферальной ссылке + ставка копируется в буфер."""
-    return (f'<a class="bbm" href="{BETBOOM}" target="_blank" rel="noopener sponsored" data-bet="{H.escape(bet)}" '
+def bb_url(sport: str) -> str:
+    return BB_SPORT + {"football": "football", "hockey": "hockey", "basketball": "basketball", "tennis": "tennis"}.get(sport, "")
+
+
+def _betboom(bet: str, label: str, sport: str = "football") -> str:
+    """Кнопка «повторить ставку бота»: линия BetBoom нужного вида спорта + ставка копируется в буфер."""
+    return (f'<a class="bbm" href="{bb_url(sport)}" target="_blank" rel="noopener sponsored" data-bet="{H.escape(bet)}" '
             f'onclick="try{{navigator.clipboard.writeText(this.dataset.bet)}}catch(e){{}}">💰 Поставить «{H.escape(label)}» в BetBoom'
             f'<small>Откроется BetBoom, а ставка скопируется — найдите матч и выберите её. 18+</small></a>')
 
@@ -437,7 +441,7 @@ def _match_card(m: dict, prefix: str) -> str:
         return card
     # «Поставить»: BetBoom по реферальной ссылке; ставка бота копируется, чтобы быстро найти её в линии
     bet = f'{m["home"]} — {m["away"]}: {m["tip"]}'
-    put = (f'<a class="put" href="{BETBOOM}" target="_blank" rel="noopener sponsored" data-bet="{H.escape(bet)}" title="Ставка скопируется — найдите матч в BetBoom" '
+    put = (f'<a class="put" href="{bb_url(m["sport"])}" target="_blank" rel="noopener sponsored" data-bet="{H.escape(bet)}" title="Ставка скопируется — найдите матч в BetBoom" '
            f'onclick="try{{navigator.clipboard.writeText(this.dataset.bet)}}catch(e){{}}"><span>Поставить</span><b>{H.escape(m["tip"])}'
            f'{f" · {m["odds"]:.2f}" if m.get("odds") else ""}</b><i>BetBoom →</i></a>')
     return f'<div class="mcw">{card}{put}</div>'

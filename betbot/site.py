@@ -288,6 +288,29 @@ def build(res: pd.DataFrame, now: pd.Timestamp, blocks: dict | None = None) -> N
 </div><div class="ringbox"><div class="ring" style="--p:{pct:.0f}"><div><b>{hit_pct}</b><small>заходит</small></div></div>
 <div class="ringtxt"><h3>{int(hit.sum()) if len(res) else 0} из {len(res)}</h3><p>основных прогнозов зашли — все до одного учтены. Обновлено {now:%d.%m.%Y %H:%M} МСК.</p>{streak}</div></div></section>
 <section class="live" id="live" style="display:none"></section>
+<style>
+.fb10{{position:relative;display:grid;grid-template-columns:1fr auto;align-items:center;gap:18px;margin:26px 0 6px;padding:24px 26px;border-radius:26px;overflow:hidden;text-decoration:none;color:#fff;
+  background:radial-gradient(420px 220px at 0% 0%,rgba(255,120,40,.55),transparent 70%),radial-gradient(380px 240px at 100% 100%,rgba(90,110,255,.45),transparent 70%),linear-gradient(135deg,#140c22,#0a0d1c);
+  border:1px solid rgba(255,255,255,.12);box-shadow:0 24px 50px -28px rgba(255,110,40,.7);transition:transform .2s}}
+.fb10:hover{{transform:translateY(-2px)}}
+.fb10::before{{content:"";position:absolute;inset:-40% -10% auto auto;width:260px;height:260px;border-radius:50%;background:conic-gradient(from 90deg,#ffb800,#ff4d6d,#7b5cff,#ffb800);filter:blur(60px);opacity:.35;pointer-events:none}}
+.fb10 .bb{{font-weight:900;font-size:14px;letter-spacing:.5px;opacity:.9}}
+.fb10 .big{{font:900 clamp(30px,6vw,52px)/1 Montserrat,sans-serif;letter-spacing:-1px;margin:6px 0 4px;text-transform:uppercase;
+  background:linear-gradient(180deg,#fff 40%,#c9d2ff);-webkit-background-clip:text;background-clip:text;color:transparent}}
+.fb10 .big span{{display:block;font-size:.55em;letter-spacing:0}}
+.fb10 .sub{{font-weight:800;text-transform:uppercase;letter-spacing:.5px}}.fb10 .sub small{{display:block;text-transform:none;font-weight:600;opacity:.7;letter-spacing:0;margin-top:2px}}
+.fb10 .go{{position:relative;z-index:1;padding:14px 20px;border-radius:16px;background:linear-gradient(90deg,#ffc400,#ff8a1a);color:#1a1405;font-weight:900;font-size:15px;white-space:nowrap;
+  box-shadow:0 12px 26px -12px rgba(255,170,0,.9)}}
+.fb10 .coin{{position:absolute;width:44px;height:44px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff3b0,#ffc400 45%,#b87400);box-shadow:0 6px 16px rgba(0,0,0,.5);opacity:.9}}
+.fb10 .c1{{right:34%;top:-12px}}.fb10 .c2{{right:26%;bottom:-14px;width:30px;height:30px}}
+.fb10 .age{{position:absolute;right:14px;top:10px;font-size:11px;font-weight:800;opacity:.6}}
+@media(max-width:620px){{.fb10{{grid-template-columns:1fr;padding:20px}}.fb10 .go{{text-align:center}}.fb10 .c1{{right:12%}}.fb10 .c2{{display:none}}}}
+</style>
+<a class="fb10" href="https://app.betboom.ru/mIlkmXZpiS" target="_blank" rel="noopener sponsored">
+  <i class="coin c1"></i><i class="coin c2"></i><span class="age">18+</span>
+  <div style="position:relative;z-index:1"><div class="bb">BetBoom</div><div class="big">Фрибет<span>до 10 000 ₽</span></div>
+  <div class="sub">за регистрацию<small>по ссылке друга — ставьте вместе с ботом</small></div></div>
+  <span class="go">🎁 Забрать фрибет</span></a>
 {f'<h2>🎯 Прогнозы на сегодня <a href="predictions/" class="small muted" style="font-weight:700;margin-left:auto">все прогнозы →</a></h2><div class="grid">{blocks["preds"]}</div>' if blocks and blocks.get("preds") else ""}
 <div class="card" id="quizbox" style="margin-top:18px;display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:16px;align-items:center">
 <div id="quiz"><div class="muted">Загружаем матч дня…</div></div>
