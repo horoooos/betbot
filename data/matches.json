@@ -20411,7 +20411,7 @@
   "kickoff": "2026-11-08T18:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Scheduled",
   "home": {
    "id": "12215",
@@ -20568,7 +20568,10 @@
   "close": {
    "BTTS_N": 0.5163,
    "H": 0.39
-  }
+  },
+  "main_hit": false,
+  "bold_hit": false,
+  "value_hit": null
  },
  "401888254": {
   "id": "401888254",
