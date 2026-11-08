@@ -271,7 +271,7 @@ def build(res: pd.DataFrame, now: pd.Timestamp, blocks: dict | None = None) -> N
 <title>АИ СТАВИТ — бесплатные прогнозы на спорт и честная статистика</title>
 <meta name="description" content="{escape(seo_desc)}">
 <meta name="keywords" content="прогнозы на спорт, прогнозы на футбол, бесплатные прогнозы, ставки на спорт, прогнозы НХЛ, прогнозы НБА, прогнозы на теннис, прогнозы CS2, экспресс дня, статистика прогнозов, матчи онлайн, смотреть матч онлайн">
-<meta name="robots" content="index,follow"><link rel="canonical" href="{SITE}">
+<meta name="robots" content="index,follow"><link rel="canonical" href="{SITE}"><link rel="alternate" type="application/rss+xml" title="АИ СТАВИТ — прогнозы и новости" href="{SITE}rss.xml">
 <meta property="og:type" content="website"><meta property="og:url" content="{SITE}">
 <meta property="og:title" content="АИ СТАВИТ — прогнозы на спорт с честной статистикой">
 <meta property="og:description" content="{escape(seo_desc)}"><meta property="og:locale" content="ru_RU">

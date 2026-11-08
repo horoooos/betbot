@@ -160,7 +160,7 @@ def page(prefix: str, title: str, desc: str, canon: str, body: str, on: str = ""
     return f"""<!doctype html>
 <html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{H.escape(title)}</title><meta name="description" content="{H.escape(desc[:300])}">
-<link rel="canonical" href="{canon}"><meta name="robots" content="index,follow,max-image-preview:large">
+<link rel="canonical" href="{canon}"><link rel="alternate" type="application/rss+xml" title="АИ СТАВИТ — прогнозы и новости" href="{SITE}rss.xml"><meta name="robots" content="index,follow,max-image-preview:large">
 <meta property="og:type" content="{og_type}"><meta property="og:title" content="{H.escape(title)}"><meta property="og:description" content="{H.escape(desc[:300])}">
 <meta property="og:url" content="{canon}"><meta property="og:site_name" content="АИ СТАВИТ"><meta property="og:locale" content="ru_RU">{img}
 <meta name="theme-color" content="#070b1a">
@@ -476,6 +476,43 @@ def _pred_index(ms: list[dict], now: pd.Timestamp) -> str:
 
 # ── сборка ────────────────────────────────────────────────────────────────────
 
+def _rss(news: list[dict], ms: list[dict], store: dict[int, dict], now: pd.Timestamp) -> str:
+    """docs/rss.xml — последние новости и прогнозы (RSS 2.0, полный текст в content:encoded).
+    Её забирают Дзен, читалки новостей, агрегаторы и поисковики."""
+    from email.utils import format_datetime
+    x = lambda s: H.escape(str(s or ""), quote=False)
+    items = []
+    for n in news[:40]:
+        body = "".join(f"<p>{H.escape(p)}</p>" for p in n["body"].split(chr(10) * 2) if p.strip())
+        items.append((pd.Timestamp(n["t"]), f"""<item><title>{x(n['title'])}</title><link>{SITE}{n['url']}</link><guid isPermaLink="true">{SITE}{n['url']}</guid>
+<pubDate>{format_datetime(pd.Timestamp(n['t']).to_pydatetime())}</pubDate><category>{x(SPORT_RU.get(n['sport'], 'Спорт'))}</category>
+<description>{x(n['desc'])}</description><content:encoded><![CDATA[{(f'<img src="{n["photo"]}">' if n.get('photo') else '') + body}]]></content:encoded>
+{f'<enclosure url="{x(n["photo"])}" type="image/jpeg" length="0"/>' if n.get('photo') else ''}</item>"""))
+    for m in [m for m in ms if not m.get("finished")][:30]:
+        post = store.get(int(m["msg"])) if str(m.get("msg", "")).isdigit() else None
+        when = pd.Timestamp(post["t"]) if post else pd.Timestamp(m["kickoff"]) - pd.Timedelta(hours=1)
+        title = f"Прогноз на матч {m['home']} — {m['away']}: {m['tip']}"
+        desc = (f"{m.get('league', '')} · {_date_ru(m['kickoff'])}, {m['kickoff']:%H:%M} МСК. Прогноз бота: {m['tip']}"
+                + (f", кэф {m['odds']:.2f}" if m.get("odds") else "") + (f", шанс {m['p'] * 100:.0f}%" if m.get("p") else "") + ".")
+        html = (post or {}).get("html") or H.escape(desc)
+        photo = (post or {}).get("photo")
+        items.append((when, f"""<item><title>{x(title)}</title><link>{SITE}{m['url']}</link><guid isPermaLink="true">{SITE}{m['url']}</guid>
+<pubDate>{format_datetime(when.to_pydatetime())}</pubDate><category>Прогнозы</category>
+<description>{x(desc)}</description><content:encoded><![CDATA[{(f'<img src="{photo}">' if photo else '') + html.replace(chr(10), '<br>')}]]></content:encoded>
+{f'<enclosure url="{x(photo)}" type="image/jpeg" length="0"/>' if photo else ''}</item>"""))
+    items.sort(key=lambda it: it[0], reverse=True)
+    return f"""<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel><title>АИ СТАВИТ — прогнозы на спорт и новости</title><link>{SITE}</link>
+<description>Бесплатные прогнозы на футбол, хоккей, НБА и теннис от искусственного интеллекта, честная статистика и свежие новости спорта.</description>
+<language>ru</language><lastBuildDate>{format_datetime(now.to_pydatetime())}</lastBuildDate>
+<atom:link href="{SITE}rss.xml" rel="self" type="application/rss+xml"/>
+<image><url>{SITE}icon-192.png</url><title>АИ СТАВИТ</title><link>{SITE}</link></image>
+{chr(10).join(it[1] for it in items[:60])}
+</channel></rss>
+"""
+
+
 def build(stores: dict, results: pd.DataFrame, now: pd.Timestamp, max_pages: int = 25) -> dict:
     """Синхронизирует канал, пишет страницы новостей и прогнозов, sitemap.xml и robots.txt.
     Возвращает блоки для главной (свежие новости и ближайшие прогнозы)."""
@@ -510,6 +547,10 @@ def build(stores: dict, results: pd.DataFrame, now: pd.Timestamp, max_pages: int
     for m in ms:
         sm.append(f"<url><loc>{SITE}{m['url']}</loc><lastmod>{m['kickoff']:%Y-%m-%d}</lastmod><priority>{'0.8' if not m.get('finished') else '0.5'}</priority></url>")
     sm.append("</urlset>")
+    try:
+        _write(DOCS / "rss.xml", _rss(news, ms, store, now))
+    except Exception as e:
+        print(f"  ! RSS не собралась: {e}")
     _write(DOCS / "sitemap.xml", "\n".join(sm))
     _write(DOCS / "robots.txt", f"User-agent: *\nAllow: /\nDisallow: /betbot/admin.html\nDisallow: /betbot/profile.html\n\nSitemap: {SITE}sitemap.xml\n")
     print(f"Страницы сайта: новостей {len(news)}, прогнозов {len(ms)}, изменено {changed}")
