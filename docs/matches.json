@@ -1,256 +1,6 @@
 [
 {
 "sport": "football",
-"id": "401878945",
-"league": "Бельгия · Про-лига",
-"kickoff": "2026-11-08T18:00:00+03:00",
-"home": "Гент",
-"away": "Кортрейк",
-"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/3611.png",
-"al": "https://a.espncdn.com/i/teamlogos/soccer/500/5786.png",
-"hid": "3611",
-"aid": "5786",
-"bb": "https://betboom.ru/search?query=%D0%93%D0%B5%D0%BD%D1%82",
-"path": "soccer/bel.1",
-"url": "live.html?s=football&p=soccer%2Fbel.1&e=401878945&h=%D0%93%D0%B5%D0%BD%D1%82&a=%D0%9A%D0%BE%D1%80%D1%82%D1%80%D0%B5%D0%B9%D0%BA",
-"tip": "ТБ 2.5 · 1.69",
-"top": false,
-"bot": {
-"main": {
-"label": "ТБ 2.5",
-"p": 0.551,
-"odds": 1.69,
-"est": false
-},
-"bold": null,
-"markets": [
-[
-"П1",
-0.644,
-1.526
-],
-[
-"Ничья",
-0.218,
-4.3
-],
-[
-"П2",
-0.138,
-6.0
-],
-[
-"1X",
-0.862,
-null
-],
-[
-"X2",
-0.356,
-null
-],
-[
-"ТБ 1.5",
-0.791,
-null
-],
-[
-"ТБ 2.5",
-0.551,
-1.69
-],
-[
-"ТМ 2.5",
-0.449,
-2.1
-],
-[
-"ТБ 3.5",
-0.328,
-null
-],
-[
-"Обе забьют — да",
-0.504,
-null
-],
-[
-"Обе забьют — нет",
-0.496,
-null
-],
-[
-"ИТ1 больше 1.5",
-0.605,
-null
-],
-[
-"ИТ2 больше 1.5",
-0.208,
-null
-],
-[
-"Ф1 (−1.5)",
-0.407,
-null
-],
-[
-"Ф2 (+1.5)",
-0.593,
-null
-]
-],
-"bar": [
-0.644076023318388,
-0.21767560309918266,
-0.1382483735824291
-],
-"center": "Ожидаемые голы (xG) 2.0 : 0.8",
-"scores": [
-[
-"2:0",
-0.116
-],
-[
-"1:0",
-0.106
-],
-[
-"1:1",
-0.104
-]
-],
-"corners": 8.4,
-"cards": 3.5
-}
-},
-{
-"sport": "football",
-"id": "401878339",
-"league": "Шотландия · Премьершип",
-"kickoff": "2026-11-08T18:00:00+03:00",
-"home": "Харт оф Мидлотиан",
-"away": "Фалкерк",
-"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/262.png",
-"al": "https://a.espncdn.com/i/teamlogos/soccer/500/254.png",
-"hid": "262",
-"aid": "254",
-"bb": "https://betboom.ru/search?query=%D0%9C%D0%B8%D0%B4%D0%BB%D0%BE%D1%82%D0%B8%D0%B0%D0%BD",
-"path": "soccer/sco.1",
-"url": "live.html?s=football&p=soccer%2Fsco.1&e=401878339&h=%D0%A5%D0%B0%D1%80%D1%82+%D0%BE%D1%84+%D0%9C%D0%B8%D0%B4%D0%BB%D0%BE%D1%82%D0%B8%D0%B0%D0%BD&a=%D0%A4%D0%B0%D0%BB%D0%BA%D0%B5%D1%80%D0%BA",
-"tip": "П1 · 1.54",
-"top": false,
-"bot": {
-"main": {
-"label": "П1",
-"p": 0.601,
-"odds": 1.54,
-"est": false
-},
-"bold": null,
-"markets": [
-[
-"П1",
-0.601,
-1.741
-],
-[
-"Ничья",
-0.22,
-3.95
-],
-[
-"П2",
-0.179,
-4.4
-],
-[
-"1X",
-0.821,
-null
-],
-[
-"X2",
-0.399,
-null
-],
-[
-"ТБ 1.5",
-0.833,
-null
-],
-[
-"ТБ 2.5",
-0.615,
-1.69
-],
-[
-"ТМ 2.5",
-0.385,
-2.1
-],
-[
-"ТБ 3.5",
-0.392,
-null
-],
-[
-"Обе забьют — да",
-0.586,
-null
-],
-[
-"Обе забьют — нет",
-0.414,
-null
-],
-[
-"ИТ1 больше 1.5",
-0.62,
-null
-],
-[
-"ИТ2 больше 1.5",
-0.292,
-null
-],
-[
-"Ф1 (−1.5)",
-0.377,
-null
-],
-[
-"Ф2 (+1.5)",
-0.623,
-null
-]
-],
-"bar": [
-0.6014074770520494,
-0.21988144549511132,
-0.17871107745283937
-],
-"center": "Ожидаемые голы (xG) 2.1 : 1.1",
-"scores": [
-[
-"1:1",
-0.102
-],
-[
-"2:1",
-0.099
-],
-[
-"2:0",
-0.092
-]
-],
-"corners": 11.0,
-"cards": 4.3
-}
-},
-{
-"sport": "football",
 "id": "401882810",
 "league": "Испания · Ла Лига",
 "kickoff": "2026-11-08T18:15:00+03:00",
@@ -4796,6 +4546,42 @@ null
 "bb": "https://betboom.ru/search?query=%D0%A2%D0%BE%D1%80%D0%BE%D0%BD%D1%82%D0%BE",
 "path": "basketball/nba",
 "url": "live.html?s=basketball&p=basketball%2Fnba&e=401909955&h=%D0%A2%D0%BE%D1%80%D0%BE%D0%BD%D1%82%D0%BE+%D0%A0%D1%8D%D0%BF%D1%82%D0%BE%D1%80%D1%81&a=%D0%9C%D0%B5%D0%BC%D1%84%D0%B8%D1%81+%D0%93%D1%80%D0%B8%D0%B7%D0%B7%D0%BB%D0%B8%D1%81",
+"tip": "",
+"top": false,
+"bot": null
+},
+{
+"sport": "basketball",
+"id": "401909956",
+"league": "США · NBA",
+"kickoff": "2026-11-10T04:00:00+03:00",
+"home": "Даллас Маверикс",
+"away": "Индиана Пэйсерс",
+"hl": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/dal.png",
+"al": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/ind.png",
+"hid": "6",
+"aid": "11",
+"bb": "https://betboom.ru/search?query=%D0%9C%D0%B0%D0%B2%D0%B5%D1%80%D0%B8%D0%BA%D1%81",
+"path": "basketball/nba",
+"url": "live.html?s=basketball&p=basketball%2Fnba&e=401909956&h=%D0%94%D0%B0%D0%BB%D0%BB%D0%B0%D1%81+%D0%9C%D0%B0%D0%B2%D0%B5%D1%80%D0%B8%D0%BA%D1%81&a=%D0%98%D0%BD%D0%B4%D0%B8%D0%B0%D0%BD%D0%B0+%D0%9F%D1%8D%D0%B9%D1%81%D0%B5%D1%80%D1%81",
+"tip": "",
+"top": false,
+"bot": null
+},
+{
+"sport": "hockey",
+"id": "401892680",
+"league": "США · NHL",
+"kickoff": "2026-11-10T04:00:00+03:00",
+"home": "Эдмонтон",
+"away": "Рейнджерс",
+"hl": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/edm.png",
+"al": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/nyr.png",
+"hid": "6",
+"aid": "13",
+"bb": "https://betboom.ru/search?query=%D0%AD%D0%B4%D0%BC%D0%BE%D0%BD%D1%82%D0%BE%D0%BD",
+"path": "hockey/nhl",
+"url": "live.html?s=hockey&p=hockey%2Fnhl&e=401892680&h=%D0%AD%D0%B4%D0%BC%D0%BE%D0%BD%D1%82%D0%BE%D0%BD&a=%D0%A0%D0%B5%D0%B9%D0%BD%D0%B4%D0%B6%D0%B5%D1%80%D1%81",
 "tip": "",
 "top": false,
 "bot": null
