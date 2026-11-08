@@ -8063,22 +8063,22 @@
   "kickoff": "2026-11-08T03:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "home": {
+   "color": "c8102e",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/atl.png",
    "id": "1",
    "name": "Atlanta Hawks",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/atl.png",
-   "color": "c8102e",
    "score": "0",
    "record": "6-4",
    "periods": [],
    "ru": "Атланта Хокс"
   },
   "away": {
+   "color": "000000",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/bkn.png",
    "id": "17",
    "name": "Brooklyn Nets",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/bkn.png",
-   "color": "000000",
    "score": "0",
    "record": "2-6",
    "periods": [],
@@ -8153,7 +8153,9 @@
   "btn": 2,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null
  },
  "NHL|401892668": {
   "id": "401892668",
