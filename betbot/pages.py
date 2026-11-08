@@ -167,7 +167,7 @@ def page(prefix: str, title: str, desc: str, canon: str, body: str, on: str = ""
 <footer>АИ СТАВИТ — бесплатные прогнозы на спорт от искусственного интеллекта и честная статистика. Прогноз — не гарантия выигрыша. 18+.
 <br><a href="https://t.me/{CH}">Telegram-канал @{CH}</a> · <a href="{prefix}./">Статистика бота</a> · <a href="{prefix}matches.html">Матчи онлайн</a> · <a href="{prefix}news/">Новости спорта</a> · <a href="{prefix}predictions/">Прогнозы на матчи</a></footer>
 </main><div class="sticky"><a class="a" href="{prefix}matches.html">📺 Онлайн</a><a class="b" href="https://t.me/{CH}">📲 Канал</a></div>
-<script type="module">import("{prefix}fb.js?v=5").then(fb => {{ fb.navUser(document.getElementById("navUser")); fb.track("{on or 'page'}"); }}).catch(() => {{}});</script>
+<script type="module">import("{prefix}fb.js?v=6").then(fb => {{ fb.navUser(document.getElementById("navUser")); fb.track("{on or 'page'}"); }}).catch(() => {{}});</script>
 </body></html>"""
 
 

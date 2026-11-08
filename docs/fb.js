@@ -266,4 +266,22 @@ export function supportButton() {
   a.onclick = e => { e.preventDefault(); supportModal(); };
   links.prepend(a);
 }
-if (typeof document !== "undefined") { if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", supportButton); else supportButton(); }
+/** «● 12 онлайн» в шапке рядом с логотипом — на всех страницах с меню. */
+export function onlineBadge() {
+  const nav = document.querySelector(".topnav"), logo = nav && nav.querySelector(".logo");
+  if (!logo || nav.querySelector(".onl")) return;
+  if (!document.getElementById("onlcss")) { const st = document.createElement("style"); st.id = "onlcss"; st.textContent = `
+    .topnav .brandbox{display:flex;align-items:center;gap:10px;min-width:0}
+    .onl{display:inline-flex;align-items:center;gap:6px;padding:4px 10px 4px 8px;border-radius:999px;font:800 12px Montserrat,system-ui,sans-serif;
+      color:#7dffb0;background:rgba(46,204,113,.12);border:1px solid rgba(46,204,113,.35);white-space:nowrap;opacity:0;transition:opacity .4s}
+    .onl i{width:8px;height:8px;border-radius:50%;background:#2ecc71;box-shadow:0 0 0 0 rgba(46,204,113,.7);animation:onlp 1.8s infinite}
+    .onl b{font-weight:900;color:#fff;font-variant-numeric:tabular-nums}
+    @keyframes onlp{0%{box-shadow:0 0 0 0 rgba(46,204,113,.7)}70%{box-shadow:0 0 0 7px rgba(46,204,113,0)}100%{box-shadow:0 0 0 0 rgba(46,204,113,0)}}
+    @media (max-width:520px){.onl{font-size:11px;padding:3px 8px 3px 7px}}`; document.head.appendChild(st); }
+  const box = document.createElement("div"); box.className = "brandbox"; logo.replaceWith(box); box.appendChild(logo);
+  const b = document.createElement("span"); b.className = "onl"; b.title = "Сколько человек сейчас на сайте";
+  box.appendChild(b);
+  watchOnline(n => { const k = Math.max(1, n); b.innerHTML = `<i></i><b>${k}</b> онлайн`; b.style.opacity = 1; });
+}
+const boot = () => { supportButton(); onlineBadge(); };
+if (typeof document !== "undefined") { if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", boot); else boot(); }

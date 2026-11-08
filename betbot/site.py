@@ -288,7 +288,6 @@ def build(res: pd.DataFrame, now: pd.Timestamp, blocks: dict | None = None) -> N
 </div><div class="ringbox"><div class="ring" style="--p:{pct:.0f}"><div><b>{hit_pct}</b><small>заходит</small></div></div>
 <div class="ringtxt"><h3>{int(hit.sum()) if len(res) else 0} из {len(res)}</h3><p>основных прогнозов зашли — все до одного учтены. Обновлено {now:%d.%m.%Y %H:%M} МСК.</p>{streak}</div></div></section>
 <section class="live" id="live" style="display:none"></section>
-<p class="online" id="online" style="display:none"></p>
 {f'<h2>🎯 Прогнозы на сегодня <a href="predictions/" class="small muted" style="font-weight:700;margin-left:auto">все прогнозы →</a></h2><div class="grid">{blocks["preds"]}</div>' if blocks and blocks.get("preds") else ""}
 <div class="kpis" id="stats">{kpis}</div>
 <h2>💰 Виртуальный банк</h2><div class="card">{_chart(curve) or '<span class="muted">Пока мало данных</span>'}
@@ -306,8 +305,7 @@ def build(res: pd.DataFrame, now: pd.Timestamp, blocks: dict | None = None) -> N
 <footer>CLV — насколько выросла вероятность нашего исхода по линии букмекеров к началу матча: плюс значит, что бот нашёл ценность раньше рынка. 18+. Прогноз — не гарантия выигрыша.</footer>
 </main><div class="sticky"><a class="a" href="matches.html">📺 Онлайн</a><a class="b" href="{tg}">📲 Подписаться</a></div>
 <script>{LIVE_JS}</script>
-<script type="module">import("./fb.js?v=5").then(fb => {{ fb.track("index"); fb.navUser(document.getElementById("navUser")); fb.watchOnline(n => {{ const el = document.getElementById("online");
-  el.style.display = "inline-flex"; el.innerHTML = `<span class="dot" style="background:#2ecc71;box-shadow:0 0 10px #2ecc71"></span>Сейчас на сайте: ${{n}}`; }}); }}).catch(() => {{}});</script></body></html>"""
+<script type="module">import("./fb.js?v=6").then(fb => {{ fb.track("index"); fb.navUser(document.getElementById("navUser")); }}).catch(() => {{}});</script></body></html>"""
     OUT.write_text(html, encoding="utf-8")
     print(f"Страница статистики обновлена: {len(res)} прогнозов")
 
