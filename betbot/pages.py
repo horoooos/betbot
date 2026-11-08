@@ -142,8 +142,7 @@ def _write(path: Path, text: str) -> bool:
     path.parent.mkdir(parents=True, exist_ok=True)
     if path.exists() and path.read_text(encoding="utf-8") == text:
         return False
-    path.write_text(text, encoding="utf-8", newline="
-")   # одинаково на Windows и на сервере
+    path.write_text(text, encoding="utf-8", newline=chr(10))   # одинаково на Windows и на сервере
     return True
 
 
@@ -431,9 +430,17 @@ def _betboom(bet: str, label: str) -> str:
 def _match_card(m: dict, prefix: str) -> str:
     st = (f'<span class="badge {"ok" if m.get("hit") else "no"}">{H.escape(m.get("score", ""))} {"✅" if m.get("hit") else "❌"}</span>' if m.get("finished")
           else f'<span>{m["kickoff"]:%d.%m %H:%M}</span>')
-    return (f'<a class="card mc" href="{prefix}{m["url"]}"><div class="t"><span>{EMOJI.get(m["sport"], "")} {H.escape(m.get("league") or SPORT_RU.get(m["sport"], ""))}</span>{st}</div>'
+    card = (f'<a class="card mc" href="{prefix}{m["url"]}"><div class="t"><span>{EMOJI.get(m["sport"], "")} {H.escape(m.get("league") or SPORT_RU.get(m["sport"], ""))}</span>{st}</div>'
             f'<b>{H.escape(m["home"])} — {H.escape(m["away"])}</b><span class="p">🎯 {H.escape(m["tip"])}{f" · {m["odds"]:.2f}" if m.get("odds") else ""}'
             f'{f" · шанс {m["p"] * 100:.0f}%" if m.get("p") else ""}</span></a>')
+    if m.get("finished"):
+        return card
+    # «Поставить»: BetBoom по реферальной ссылке; ставка бота копируется, чтобы быстро найти её в линии
+    bet = f'{m["home"]} — {m["away"]}: {m["tip"]}'
+    put = (f'<a class="put" href="{BETBOOM}" target="_blank" rel="noopener sponsored" data-bet="{H.escape(bet)}" title="Ставка скопируется — найдите матч в BetBoom" '
+           f'onclick="try{{navigator.clipboard.writeText(this.dataset.bet)}}catch(e){{}}"><span>Поставить</span><b>{H.escape(m["tip"])}'
+           f'{f" · {m["odds"]:.2f}" if m.get("odds") else ""}</b><i>BetBoom →</i></a>')
+    return f'<div class="mcw">{card}{put}</div>'
 
 
 def _pred_index(ms: list[dict], now: pd.Timestamp) -> str:
