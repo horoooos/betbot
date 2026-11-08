@@ -168,6 +168,25 @@ def send_photo(png: bytes, caption: str, reply_to: int | None = None, button=Non
     return _call("sendPhoto", files={"photo": ("match.png", png, "image/png")}, **params)["message_id"]
 
 
+def send_video(mp4: bytes, caption: str, png: bytes | None = None, width: int = 1280, height: int = 720, duration: int = 9) -> int:
+    """Видео с подписью (видео-новость); png — обложка, которую Telegram покажет до запуска."""
+    caption = tag(caption)
+    if len(caption) > CAPTION_LIMIT:
+        caption = caption[:CAPTION_LIMIT]
+    if DRY:
+        return _dry("video", caption, png or b"")
+    files = {"video": ("news.mp4", mp4, "video/mp4")}
+    if png:
+        from PIL import Image
+        import io
+        im = Image.open(io.BytesIO(png)).convert("RGB")
+        im.thumbnail((320, 320))
+        buf = io.BytesIO(); im.save(buf, "JPEG", quality=85)
+        files["thumbnail"] = ("thumb.jpg", buf.getvalue(), "image/jpeg")
+    return _call("sendVideo", files=files, caption=caption, parse_mode="HTML", width=width, height=height,
+                 duration=duration, supports_streaming=True, **({"thumbnail": "attach://thumbnail"} if png else {}))["message_id"]
+
+
 def pin(message_id: int) -> None:
     """Закрепить пост в канале (нужны права администратора на закрепление)."""
     if DRY:

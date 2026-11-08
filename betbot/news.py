@@ -330,10 +330,20 @@ def run(state: dict, now: pd.Timestamp, brand: str) -> None:
             body = news["text"]
             if body.startswith(emo):  # тот же эмодзи и в заголовке, и в начале текста — второй убираем
                 body = body[len(emo):].lstrip()
-            telegram.send_photo(png, f"{emo} <b>{escape(news['title'])}</b>\n\n{escape(body)}\n\n{TAGS[sport]}")
+            caption = f"{emo} <b>{escape(news['title'])}</b>\n\n{escape(body)}\n\n{TAGS[sport]}"
+            # по очереди: видео-новость (наш ролик с водяным знаком @aistavvit) и новость с картинкой
+            mp4 = None
+            if state.get("news_video", True):
+                from . import video
+                mp4 = video.news_video(png)
+            if mp4:
+                telegram.send_video(mp4, caption, png)
+            else:
+                telegram.send_photo(png, caption)
+            state["news_video"] = not state.get("news_video", True) if mp4 or not state.get("news_video", True) else True
             state["news_i"] = (i + shift + 1) % len(ORDER)
-            state["news_next"] = (now + pd.Timedelta(minutes=random.randint(40, 65))).isoformat()  # каждый час
+            state["news_next"] = (now + pd.Timedelta(minutes=random.randint(27, 33))).isoformat()  # каждые ~30 минут
             del seen[:-500]
-            print(f"Новость ({sport}): {news['title']}")
+            print(f"Новость ({sport}, {'видео' if mp4 else 'картинка'}): {news['title']}")
             return
     state["news_next"] = (now + pd.Timedelta(minutes=6)).isoformat()  # не вышло — пробуем снова через несколько минут
