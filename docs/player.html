@@ -8,7 +8,7 @@
 <meta name="description" content="Профиль игрока: клуб и сборная, возраст, рост, позиция, статистика по турнирам сезона, последние матчи и карьера.">
 <meta property="og:type" content="profile"><meta property="og:locale" content="ru_RU"><meta property="og:image" content="https://horoooos.github.io/betbot/og.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="site.css?v=8">
+<link rel="stylesheet" href="site.css?v=9">
 </head>
 <body><main>
 <nav class="topnav"><a class="logo" href="./">АИ СТАВИТ</a><div class="links"><a href="matches.html">Матчи онлайн</a><a href="predictions/">Прогнозы</a><a href="news/">Новости</a><a href="feed.html">Лента</a><a href="top.html">Рейтинг</a></div><div class="navacts"><a class="me" id="navUser" href="profile.html">Войти</a></div></nav>
@@ -23,7 +23,7 @@
 </main>
 <script type="module">
 import * as E from "./espn.js?v=2";
-import("./fb.js?v=11").then(fb => { fb.navUser(document.getElementById("navUser")); fb.track("player"); }).catch(() => {});
+import("./fb.js?v=12").then(fb => { fb.navUser(document.getElementById("navUser")); fb.track("player"); }).catch(() => {});
 const { $, esc } = E;
 document.head.insertAdjacentHTML("beforeend", `<style>${E.CSS}</style>`);
 const q = new URLSearchParams(location.search);

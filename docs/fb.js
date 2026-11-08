@@ -288,7 +288,7 @@ export function onlineBadge() {
   const box = document.createElement("div"); box.className = "brandbox"; logo.replaceWith(box); box.appendChild(logo);
   const b = document.createElement("span"); b.className = "onl"; b.title = "Сколько человек сейчас на сайте";
   box.appendChild(b);
-  watchOnline(n => { const k = Math.max(1, n); b.innerHTML = `<i></i><b>${k}</b> онлайн`; b.style.opacity = 1; });
+  watchOnline(n => { const k = Math.max(1, n); b.innerHTML = `<i></i><b>${k}</b><span class="ot"> онлайн</span>`; b.style.opacity = 1; });
 }
 
 // ── турнир прогнозистов: расчёт ставок по итоговому счёту ──

@@ -9,7 +9,7 @@
 <link rel="canonical" href="https://horoooos.github.io/betbot/leagues.html">
 <meta property="og:title" content="Команды, игроки и турниры — АИ СТАВИТ"><meta property="og:type" content="website"><meta property="og:locale" content="ru_RU"><meta property="og:image" content="https://horoooos.github.io/betbot/og.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="site.css?v=8">
+<link rel="stylesheet" href="site.css?v=9">
 <style>
   .sbox{position:relative;margin:14px 0 6px}.sbox input{width:100%;padding:14px 16px 14px 44px;border-radius:16px;border:1px solid var(--line);background:rgba(255,255,255,.06);color:#fff;font:700 16px Montserrat,sans-serif;outline:none}
   .sbox input:focus{border-color:var(--gold)}.sbox:before{content:"🔍";position:absolute;left:15px;top:50%;transform:translateY(-50%);font-size:16px}
@@ -32,7 +32,7 @@
 </main>
 <script type="module">
 import * as E from "./espn.js?v=2";
-import("./fb.js?v=11").then(fb => { fb.navUser(document.getElementById("navUser")); fb.track("leagues"); }).catch(() => {});
+import("./fb.js?v=12").then(fb => { fb.navUser(document.getElementById("navUser")); fb.track("leagues"); }).catch(() => {});
 const { $, esc } = E;
 document.head.insertAdjacentHTML("beforeend", `<style>${E.CSS}</style>`);
 const D = await E.dir();

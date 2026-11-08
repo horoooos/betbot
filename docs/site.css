@@ -135,3 +135,17 @@ footer { border-top:1px solid var(--line); padding-top:16px; line-height:1.9 } f
 .put:hover { filter:brightness(1.1); transform:translateY(-1px) } .put span { font-weight:900; letter-spacing:.2px }
 .put b { flex:1; min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; font-weight:700; opacity:.92; background:rgba(0,0,0,.18); border-radius:8px; padding:3px 8px }
 .put i { font-style:normal; font-weight:900; font-size:12px; opacity:.95; white-space:nowrap }
+/* телефон: шапка в две ровные строки — логотип + кнопки, под ними меню целиком */
+@media (max-width:520px) {
+  .topnav { gap:6px 8px }
+  .topnav .logo { font-size:15px; letter-spacing:1px }
+  .topnav .brandbox { gap:6px }
+  .onl .ot { display:none } .onl { padding:3px 8px 3px 7px }
+  .navacts { gap:5px }
+  .navacts a { height:32px; min-width:32px; padding:0 10px; font-size:12.5px }
+  .navacts .bell, .navacts .support { width:32px; padding:0 }
+  .topnav .links { justify-content:space-between; -webkit-mask-image:none; mask-image:none; padding-right:0 }
+  .topnav .links { gap:0 }
+  .topnav .links a { padding:6px 2px; font-size:12px; letter-spacing:-.15px }
+}
+@media (max-width:360px) { .topnav .links a { font-size:11px } }
