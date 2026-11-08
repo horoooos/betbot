@@ -5,7 +5,7 @@
  },
  "learned": "2026-11-08",
  "schedule_day": "2026-11-08",
- "content_slot": "2026-11-07-22",
+ "content_slot": "2026-11-08-10",
  "news_seen": [
   "https://www.championat.com/hockey/news-6677518-ryabykin-moskovskoe-dinamo-na-chuzhom-pyatake-poka-vyglyadit-skromno.html",
   "https://www.championat.com/football/news-6677526-krylya-sovetov-dinamo-mahachkala-rezultat-matcha-29-oktyabrya-2026-schet-2-0-5-j-tur-puti-rpl-kubka-rossii-2026-2027.html",
@@ -1417,87 +1417,81 @@
   ]
  },
  "express": {
-  "msg": 3564,
+  "msg": 4249,
   "legs": [
    {
     "sport": "football",
-    "div": "ARG",
-    "id": "401841663",
+    "div": "SC0",
+    "id": "401878343",
     "side": "home",
-    "p": 0.8139759673595637,
-    "odds": 1.167,
-    "kickoff": "2026-11-07T23:30:00+03:00",
-    "home": "Росарио Сентраль",
-    "away": "Эстудиантес Рио-Куарто",
-    "league": "🇦🇷 Аргентина · Примера",
+    "p": 0.816637228311076,
+    "odds": 1.154,
+    "kickoff": "2026-11-08T19:00:00+03:00",
+    "home": "Селтик",
+    "away": "Килмарнок",
+    "league": "🏴󠁧󠁢󠁳󠁣󠁴󠁿 Шотландия · Премьершип",
     "logos": [
-     "https://a.espncdn.com/i/teamlogos/soccer/500/17.png",
-     "https://a.espncdn.com/i/teamlogos/soccer/500/19685.png"
+     "https://a.espncdn.com/i/teamlogos/soccer/500/256.png",
+     "https://a.espncdn.com/i/teamlogos/soccer/500/260.png"
     ],
     "colors": [
-     "ffff00",
-     "008bd0"
+     "009921",
+     "0046ff"
     ],
-    "label": "Победа: Росарио Сентраль",
-    "win": true,
-    "score": "2:0"
+    "label": "Победа: Селтик"
    },
    {
     "sport": "football",
-    "div": "SP1",
-    "id": "401882808",
-    "side": "away",
-    "p": 0.751435779077881,
-    "odds": 1.263,
-    "kickoff": "2026-11-07T23:00:00+03:00",
-    "home": "Валенсия",
-    "away": "Реал Мадрид",
-    "league": "🇪🇸 Испания · Ла Лига",
+    "div": "T1",
+    "id": "401888251",
+    "side": "home",
+    "p": 0.7865168539325843,
+    "odds": 1.2,
+    "kickoff": "2026-11-08T21:00:00+03:00",
+    "home": "Бешикташ",
+    "away": "Генчлербирлиги",
+    "league": "🇹🇷 Турция · Суперлига",
     "logos": [
-     "https://a.espncdn.com/i/teamlogos/soccer/500/94.png",
-     "https://a.espncdn.com/i/teamlogos/soccer/500/86.png"
+     "https://a.espncdn.com/i/teamlogos/soccer/500/1895.png",
+     "https://a.espncdn.com/i/teamlogos/soccer/500/996.png"
     ],
     "colors": [
      "ffffff",
-     "ffffff"
+     "000000"
     ],
-    "label": "Победа: Реал Мадрид",
-    "win": true,
-    "score": "0:3"
+    "label": "Победа: Бешикташ"
    },
    {
-    "sport": "football",
-    "div": "I1",
-    "id": "401874803",
-    "side": "home",
-    "p": 0.723583310393645,
-    "odds": 1.278,
-    "kickoff": "2026-11-07T22:45:00+03:00",
-    "home": "Рома",
-    "away": "Сассуоло",
-    "league": "🇮🇹 Италия · Серия A",
+    "sport": "basketball",
+    "div": "NBA",
+    "id": "401909945",
+    "side": "away",
+    "p": 0.7667969477014703,
+    "odds": 1.253,
+    "kickoff": "2026-11-08T23:30:00+03:00",
+    "home": "Чикаго Буллз",
+    "away": "Филадельфия Сиксерс",
+    "league": "🇺🇸 США · NBA",
     "logos": [
-     "https://a.espncdn.com/i/teamlogos/soccer/500/104.png",
-     "https://a.espncdn.com/i/teamlogos/soccer/500/3997.png"
+     "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/chi.png",
+     "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/phi.png"
     ],
     "colors": [
-     "990a2c",
-     "0fa653"
+     "ce1141",
+     "1d428a"
     ],
-    "label": "Победа: Рома",
-    "win": true,
-    "score": "3:0"
+    "label": "Победа: Филадельфия Сиксерс (с ОТ)"
    }
   ],
-  "odds": 1.8836710380000001,
-  "day": "2026-11-07",
-  "done": true
+  "odds": 1.7351543999999997,
+  "day": "2026-11-08",
+  "done": false
  },
  "streak_posted": 0,
  "value_day": "2026-11-07",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-07",
- "site_stamp": "746|2026-11-08 09",
+ "site_stamp": "746|2026-11-08 10",
  "battle": {
   "bot": 1,
   "crowd": 1
