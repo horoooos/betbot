@@ -7,8 +7,6 @@
  "schedule_day": "2026-11-08",
  "content_slot": "2026-11-08-23",
  "news_seen": [
-  "https://www.championat.com/cybersport/news-6678194-dzhejms-gann-kommentiruet-vozmozhnoe-vozvraschenie-margo-robbi-v-roli-harli-kvinn.html",
-  "https://www.sport-express.ru/hockey/nhl/news/duda-debyutiroval-v-nhl-i-provel-na-ldu-bolshe-15-minut-v-pobednom-matche-yuty-2468952/",
   "https://www.sport-express.ru/hockey/nhl/news/rossiyane-v-nhl-panarin-zabil-malkin-sdelal-dve-peredachi-kochetkov-oderzhal-devyatuyu-pobedu-podryad-2468944/",
   "https://www.sport-express.ru/hockey/nhl/news/neshvill-podaril-ovechkinu-imennuyu-gitaru-a-kapitan-vashingtona-pozdravil-trotca-vinom-2468953/",
   "https://www.championat.com/football/news-6678298-v-ska-habarovsk-rasskazali-o-zaderzhke-vyleta-komandy-na-match-s-neftehimikom.html",
@@ -506,9 +504,11 @@
   "https://www.championat.com/football/news-6691580-trener-zenita-semak-prokommentiroval-nevklyuchenie-soboleva-v-zayavku-sbornoj-rossii.html",
   "https://www.championat.com/basketball/news-6691572-oni-po-prezhnemu-luchshie-v-mire-nikola-jokich-o-sbornoj-ssha-po-basketbolu.html",
   "https://www.championat.com/basketball/news-6691590-gomelskij-to-chto-karri-delaet-s-myachom-sejchas-cherez-pyat-let-budut-delat-malchishki.html",
-  "https://www.championat.com/tennis/news-6691656-uchimsya-razdelyat-kort-i-zhizn-vne-ego-egorova-ob-otnosheniyah-s-trenerom-krasnoruckim.html"
+  "https://www.championat.com/tennis/news-6691656-uchimsya-razdelyat-kort-i-zhizn-vne-ego-egorova-ob-otnosheniyah-s-trenerom-krasnoruckim.html",
+  "m0nesy-o-pobede-na-iem-cologne-major-2026-dlya-menya-yeto-byla-takaya-malenkaya",
+  "https://www.championat.com/football/news-6691712-predsedatel-sobraniya-uchreditelej-dinamo-mh-prokommentiroval-pobedu-nad-baltikoj.html"
  ],
- "news_i": 6,
+ "news_i": 1,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1488,7 +1488,7 @@
  "value_day": "2026-11-08",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-07",
- "site_stamp": "777|4564|2026-11-09 00",
+ "site_stamp": "777|4565|2026-11-09 00",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1622,7 +1622,7 @@
  "streak_day": {
   "2026-11-08": 1
  },
- "news_next": "2026-11-09T00:25:55.401068+03:00",
+ "news_next": "2026-11-09T00:58:55.095637+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1634,5 +1634,5 @@
  "bot_setup": 3,
  "tg_offset": 727618641,
  "push_watch": {},
- "news_video": true
+ "news_video": false
 }
