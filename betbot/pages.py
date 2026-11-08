@@ -168,7 +168,7 @@ def page(prefix: str, title: str, desc: str, canon: str, body: str, on: str = ""
 <br><a href="https://t.me/{CH}">Telegram-канал @{CH}</a> · <a href="{prefix}./">Статистика бота</a> · <a href="{prefix}matches.html">Матчи онлайн</a> · <a href="{prefix}news/">Новости спорта</a> · <a href="{prefix}predictions/">Прогнозы на матчи</a>
 <br><a href="{prefix}teams/">Команды</a> · <a href="{prefix}tools.html">Калькуляторы ставок</a> · <a href="{prefix}school/">Школа ставок</a> · <a href="{prefix}top.html">Рейтинг прогнозистов</a></footer>
 </main><div class="sticky"><a class="a" href="{prefix}matches.html">📺 Онлайн</a><a class="b" href="https://t.me/{CH}">📲 Канал</a></div>
-<script type="module">import("{prefix}fb.js?v=7").then(fb => {{ fb.navUser(document.getElementById("navUser")); fb.track("{on or 'page'}");
+<script type="module">import("{prefix}fb.js?v=8").then(fb => {{ fb.navUser(document.getElementById("navUser")); fb.track("{on or 'page'}");
   const v = document.getElementById("votes"); if (v) fb.voteWidget(v, v.dataset.m, {{ finished: v.dataset.f === "1", botHit: v.dataset.h === "" ? null : v.dataset.h === "1" }}); }}).catch(() => {{}});</script>
 </body></html>"""
 

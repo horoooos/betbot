@@ -1258,7 +1258,11 @@ async function loadTennis() {
   const st = comp.status?.type || {}, live = st.state === "in", n = sh.length;
   const done = i => (i < n - 1) || st.state === "post";
   const setsH = sh.filter((v, i) => done(i) && v > sa[i]).length, setsA = sa.filter((v, i) => done(i) && v > sh[i]).length;
-  $("sc").textContent = `${setsH} : ${setsA}`; $("sets").textContent = sh.map((v, i) => `${v}-${sa[i] ?? 0}`).join("  ");
+  // табло: крупно — геймы текущего сета, ниже — сеты и счёт прошлых сетов
+  const curH = live ? (sh[n - 1] ?? 0) : null, curA = live ? (sa[n - 1] ?? 0) : null;
+  $("sc").textContent = live ? `${curH} : ${curA}` : `${setsH} : ${setsA}`;
+  const past = sh.map((v, i) => i < n - 1 || !live ? `${v}-${sa[i] ?? 0}` : null).filter(Boolean).join("  ");
+  $("sets").innerHTML = live ? `<span style="color:#fff">Сеты ${setsH} : ${setsA}</span>${past ? ` · ${past}` : ""}` : (past || "");
   $("cl").textContent = live ? `Идёт ${n || 1}-й сет` : st.state === "post" ? "Матч завершён" : "Скоро начало"; $("dot").classList.toggle("off", !live);
   $("lg").textContent = tour; $("msg").style.display = "none";
   simOn = live || replayMode; if (simOn && mode === "idle") mode = "play"; if (!simOn) mode = "idle";
@@ -1292,7 +1296,21 @@ async function loadTennis() {
   if (srvTeam) lastServer = srvTeam; else if (newGame) lastServer = null;   // брейк объявляем только по точным данным о подаче
   lastTB = tb;
   lastGames = games; lastGH = gh; lastSets = setsH + setsA; lastSetsH = setsH;
-  $("feed").innerHTML = feedRows.slice(0, 2).join("") + `<div><b>Сеты</b>${$("sets").textContent || "—"}${live && shownSrv ? ` · подаёт ${shownSrv.ru}` : ""}</div>`;
+  // полное табло внизу: игроки × сеты, итог по сетам, кто подаёт
+  const cols = Math.max(n, 3), bo5 = n > 3;
+  const cell = (v, o, i) => { if (v === undefined) return `<td></td>`; const won = (i < n - 1 || !live) && v > o, cur = live && i === n - 1;
+    return `<td style="text-align:center;font-weight:900;${won ? "color:#ffc400;" : ""}${cur ? "background:rgba(217,255,58,.14);border-radius:8px;" : ""}">${v}</td>`; };
+  const row = (tm, arr, oth, setsW, srv) => `<tr><td style="padding:4px 6px;white-space:nowrap;max-width:46vw;overflow:hidden;text-overflow:ellipsis">
+      <span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:${tm.color};margin-right:6px"></span>${tm.ru}${srv ? " 🎾" : ""}</td>
+      ${[...Array(Math.max(cols, bo5 ? 5 : 3))].map((_, i) => cell(arr[i], oth[i], i)).join("")}
+      <td style="text-align:center;font-weight:900;font-size:16px;border-left:1px solid var(--line)">${setsW}</td></tr>`;
+  const heads = [...Array(Math.max(cols, bo5 ? 5 : 3))].map((_, i) => `<th style="text-align:center;font-weight:700;color:var(--muted);font-size:10px">${i + 1}-й</th>`).join("");
+  $("stats").style.display = "block";
+  $("stats").innerHTML = `<table style="width:100%;border-collapse:separate;border-spacing:0 3px;font-size:13px">
+    <tr><th style="text-align:left;font-size:10px;color:var(--muted);font-weight:700;letter-spacing:1px">ИГРОК · СЕТ →</th>${heads}<th style="font-size:10px;color:var(--muted);font-weight:700">СЕТЫ</th></tr>
+    ${row(H, sh, sa, setsH, live && shownSrv === H)}${row(A, sa, sh, setsA, live && shownSrv === A)}</table>
+    <div class="small" style="color:var(--muted);font-size:11px;margin-top:4px">Счёт по очкам внутри гейма (15/30/40) источник не передаёт — показываем геймы и сеты.</div>`;
+  $("feed").innerHTML = feedRows.slice(0, 2).join("") || `<div>${live ? "Идёт игра" : st.state === "post" ? "Матч завершён" : "Матч скоро начнётся"}</div>`;
 }
 
 async function load() {
@@ -1415,15 +1433,18 @@ if ("Notification" in window && EVENT) {
   const paint = () => { nb.textContent = notifyOn ? "🔔 Голы: вкл" : "🔕 Голы"; nb.style.borderColor = notifyOn ? "#2ecc71" : ""; };
   paint();
   nb.onclick = async () => {
-    if (notifyOn) { notifyOn = false; try { localStorage.setItem("ainotify", "0"); } catch (e) {} return paint(); }
+    if (notifyOn) { notifyOn = false; try { localStorage.setItem("ainotify", "0"); } catch (e) {} window.__fb?.pushUnfollow(EVENT).catch(() => {}); return paint(); }
+    let pushed = false;
+    try { if (window.__fb) { await window.__fb.pushSubscribe({ match: EVENT, title: `${H.ru} — ${A.ru}` }); pushed = true; } }   // push: придёт даже при закрытом сайте
+    catch (x) { chip("🔕 PUSH НЕДОСТУПЕН", "#ffc400", x.message || ""); }
     const perm = Notification.permission === "granted" ? "granted" : await Notification.requestPermission();
     notifyOn = perm === "granted"; try { localStorage.setItem("ainotify", notifyOn ? "1" : "0"); } catch (e) {}
     if (!notifyOn) chip("🔕 УВЕДОМЛЕНИЯ ЗАПРЕЩЕНЫ", "#ff6a6a", "Разрешите их в настройках браузера для этого сайта");
-    else chip("🔔 УВЕДОМЛЕНИЯ ВКЛЮЧЕНЫ", "#3dff6a", "Пришлём гол, даже если вкладка свёрнута");
+    else chip("🔔 УВЕДОМЛЕНИЯ ВКЛЮЧЕНЫ", "#3dff6a", pushed ? "Пришлём гол, даже если сайт закрыт" : "Пришлём гол, пока вкладка открыта");
     paint();
   };
 }
-if (EVENT) import("./fb.js?v=7").then(fb => {
+if (EVENT) import("./fb.js?v=8").then(fb => {
   window.__fb = fb;
   fb.track(`live:${EVENT}`, EVENT);
   fb.watchPresence(all => { const n = all[EVENT] || 0; $("viewers").textContent = `👁 ${n} ${n % 10 === 1 && n % 100 !== 11 ? "смотрит" : "смотрят"}`; $("viewers").style.display = "inline-block"; });

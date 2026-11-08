@@ -16,7 +16,7 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-from betbot import card, content, esports, live, names, news, oddspapi, pages, pro, reviews, site, sports, tables, telegram, texts
+from betbot import card, content, esports, live, names, news, oddspapi, pages, pro, push, reviews, site, sports, tables, telegram, texts
 from betbot import markets as mk
 from betbot.data import MSK, load_fixtures, load_history
 from betbot.engine import add_market, fit_full, fit_weights, walk_forward
@@ -310,6 +310,13 @@ def review(ev: dict, w: dict, fx_loader, hist_loader, calib: dict, state: dict) 
     m["msg_id"] = telegram.send_photo(png, texts.caption(m, s.get("venue") or ev.get("venue")),
                                       button=live.buttons(ev, "football", ev["home"]["ru"], ev["away"]["ru"]))
     m["btn"] = 2
+    if m.get("top"):   # 🔥 прогноз дня — push подписчикам сайта
+        try:
+            push.notify_daily(f"🔥 Прогноз дня: {ev['home']['ru']} — {ev['away']['ru']}",
+                              f"{main['label']} · кэф {'≈' if main.get('est') else ''}{main['odds']:.2f} · {texts.when(kick)}",
+                              live.buttons(ev, "football", ev["home"]["ru"], ev["away"]["ru"])[0][1])
+        except Exception as e:
+            print(f"  ! push прогноза дня не удался: {e}")
     telegram.send(texts.review(m, s), reply_to=m["msg_id"], silent=True)
     m["status"] = "reviewed"
     print(f"  обзор: {ev['home']['ru']} — {ev['away']['ru']} → {main['label']}")
@@ -361,6 +368,13 @@ def other_review(e: dict, calib: dict, ctx: dict, state: dict) -> dict | None:
     m["msg_id"] = telegram.send_photo(png, sports.caption(m, texts.when(kick)),
                                       button=live.buttons(e, e["sport"], e["home"]["ru"], e["away"]["ru"]))
     m["btn"] = 2
+    if m.get("top"):
+        try:
+            push.notify_daily(f"🔥 Прогноз дня: {e['home']['ru']} — {e['away']['ru']}",
+                              f"{m['main']['label']} · кэф {'≈' if m['main'].get('est') else ''}{m['main']['odds']:.2f} · {texts.when(kick)}",
+                              live.buttons(e, e["sport"], e["home"]["ru"], e["away"]["ru"])[0][1])
+        except Exception as ex:
+            print(f"  ! push прогноза дня не удался: {ex}")
     if e["sport"] in ("hockey", "basketball"):
         sport, slug = sports.LEAGUES[e["div"]][3].split("/")
         text = reviews.team_review(m, summary(slug, e["id"], sport))
@@ -593,6 +607,10 @@ def main():
     except Exception as e:
         print(f"  ! live не удался: {e}")
     save_json(LIVE, live.cleanup(live_store, now))
+    try:   # push-уведомления подписчикам сайта: голы и начало/конец матчей, за которыми они следят
+        push.watch(events + other, state.setdefault("push_watch", {}))
+    except Exception as e:
+        print(f"  ! push не удался: {e}")
 
     # кнопки «📺 Смотреть онлайн» под уже опубликованными прогнозами (переписываем и старые «3D»)
     for path, store in ((MATCHES, matches), (OTHER, load_json(OTHER, {}))):

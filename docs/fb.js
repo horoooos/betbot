@@ -283,8 +283,6 @@ export function onlineBadge() {
   box.appendChild(b);
   watchOnline(n => { const k = Math.max(1, n); b.innerHTML = `<i></i><b>${k}</b> онлайн`; b.style.opacity = 1; });
 }
-const boot = () => { supportButton(); onlineBadge(); };
-if (typeof document !== "undefined") { if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", boot); else boot(); }
 
 // ── турнир прогнозистов: расчёт ставок по итоговому счёту ──
 export const MARKETS = {
@@ -410,3 +408,63 @@ export function quizWidget(el, m) {
   };
   onUser(u => draw(u));
 }
+
+// ── push-уведомления (Firebase Cloud Messaging): голы в выбранных матчах и прогноз дня ──
+const VAPID = "BLB0-dN_T6rpAFTmzkNWKRUTalT7Ow8R0NRhVGN4zCiBFJByiMehYcqiwSmZSy_eQtwskfG9nzqt9frXfmrxzMc";
+const pushKey = t => t.replace(/[.#$\[\]\/]/g, "_");
+let pushTok = null;
+/** Включает push: разрешение браузера + токен устройства. Возвращает токен или бросает понятную ошибку. */
+export async function pushToken() {
+  if (pushTok) return pushTok;
+  const mm = await import("https://www.gstatic.com/firebasejs/10.12.2/firebase-messaging.js");
+  if (!(await mm.isSupported())) throw new Error(/iPhone|iPad/.test(navigator.userAgent) ? "На iPhone уведомления работают, если добавить сайт на экран «Домой» (Поделиться → На экран «Домой») и открыть его оттуда" : "Этот браузер не поддерживает уведомления");
+  const perm = Notification.permission === "granted" ? "granted" : await Notification.requestPermission();
+  if (perm !== "granted") throw new Error("Уведомления запрещены — разрешите их в настройках браузера для этого сайта");
+  const reg = await navigator.serviceWorker.register(new URL("firebase-messaging-sw.js", import.meta.url).href, { scope: new URL("./", import.meta.url).pathname });
+  pushTok = await mm.getToken(mm.getMessaging(app), { vapidKey: VAPID, serviceWorkerRegistration: reg });
+  if (!pushTok) throw new Error("Не удалось получить разрешение на уведомления");
+  ls.set("aipush", "1");
+  return pushTok;
+}
+/** Подписка: daily — прогноз дня; match — следить за голами этого матча. */
+export async function pushSubscribe({ daily = null, match = null, title = "" } = {}) {
+  const t = await pushToken(), r = ref(db, `push/${pushKey(t)}`);
+  const upd = { t, ts: serverTimestamp() };
+  if (daily !== null) upd.d = !!daily;
+  if (auth.currentUser) upd.u = auth.currentUser.uid;
+  await update(r, upd);
+  if (match) await set(ref(db, `push/${pushKey(t)}/m/${match}`), String(title || "1").slice(0, 80));
+  return true;
+}
+export async function pushUnfollow(match) { if (!pushTok) await pushToken(); await remove(ref(db, `push/${pushKey(pushTok)}/m/${match}`)); }
+export const pushEnabled = () => ls.get("aipush") === "1" && typeof Notification !== "undefined" && Notification.permission === "granted";
+
+function pushModal() {
+  css();
+  const w = document.createElement("div"); w.className = "fbm";
+  const on = pushEnabled();
+  w.innerHTML = `<div class="bx" style="text-align:center"><div style="font-size:44px">🔔</div><h3>Уведомления АИ СТАВИТ</h3>
+    <p>Приходят на телефон и компьютер, даже когда сайт закрыт.</p>
+    <label style="display:flex;gap:10px;align-items:center;text-align:left;margin:8px 0;font-weight:700"><input type="checkbox" id="pd" checked style="width:20px;height:20px"> 🔥 Прогноз дня — один раз в день</label>
+    <div style="text-align:left;font-size:13px;color:#9aa6cc;margin-bottom:8px">⚽ Голы — нажмите «🔔 Голы» в трансляции нужного матча.</div>
+    <button class="y" id="pon">${on ? "Сохранить" : "Включить уведомления"}</button><button class="t" id="px">Закрыть</button><div class="err" id="pe"></div></div>`;
+  w.querySelector("#pon").onclick = async () => {
+    const e = w.querySelector("#pe"); e.style.color = "#9aa6cc"; e.textContent = "Включаем…";
+    try { await pushSubscribe({ daily: w.querySelector("#pd").checked }); e.style.color = "#7dffb0"; e.textContent = "✅ Готово! Уведомления включены."; paintBell(); }
+    catch (x) { e.style.color = "#ff6a6a"; e.textContent = x.message || "Не получилось включить"; }
+  };
+  w.querySelector("#px").onclick = () => w.remove(); w.onclick = ev => { if (ev.target === w) w.remove(); };
+  document.body.appendChild(w);
+}
+function paintBell() { const b = document.querySelector(".topnav .bell"); if (b) b.textContent = pushEnabled() ? "🔔" : "🔕"; }
+export function bellButton() {
+  const links = document.querySelector(".topnav .links");
+  if (!links || links.querySelector(".bell") || typeof Notification === "undefined") return;
+  const a = document.createElement("a"); a.href = "#"; a.className = "bell"; a.title = "Уведомления о голах и прогнозе дня";
+  a.onclick = e => { e.preventDefault(); pushModal(); };
+  const me = links.querySelector(".me"); links.insertBefore(a, me || null); paintBell();
+}
+
+// запуск кнопок меню — в самом конце, когда все функции модуля уже объявлены
+const boot = () => { supportButton(); onlineBadge(); bellButton(); };
+if (typeof document !== "undefined") { if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", boot); else boot(); }

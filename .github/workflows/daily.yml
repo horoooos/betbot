@@ -50,6 +50,7 @@ jobs:
           GROQ_KEY: ${{ secrets.GROQ_KEY }}
           OPENROUTER_KEY: ${{ secrets.OPENROUTER_KEY }}
           GH_TOKEN: ${{ github.token }}
+          FIREBASE_SA: ${{ secrets.FIREBASE_SA }}
         run: |
           git config user.name "betbot"
           git config user.email "betbot@users.noreply.github.com"
