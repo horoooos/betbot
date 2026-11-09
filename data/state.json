@@ -7,8 +7,6 @@
  "schedule_day": "2026-11-09",
  "content_slot": "2026-11-09-10",
  "news_seen": [
-  "https://www.championat.com/football/news-6678884-v-seti-poyavilos-neopublikovannoe-obraschenie-messi-k-yamalyu-iz-2024-goda.html",
-  "https://www.championat.com/basketball/news-6678886-advokat-sedokovoj-raskryla-novye-detali-v-dele-o-nasledstve-yanisa-timmy.html",
   "https://www.championat.com/tennis/news-6678992-tejlor-fric-artyur-fis-rezultat-matcha-30-oktyabrya-2026-schet-2-0-otkaz-fisa-1-4-finala-atr-250-v-bazele.html",
   "https://www.championat.com/cybersport/news-6678968-aktyor-majkla-iz-gta-5-hotel-by-sygrat-v-gta-pro-rossiyu.html",
   "https://www.championat.com/cybersport/news-6678930-team-spirit-parivision-i-drugie-grandy-oglashyon-spisok-uchastnikov-blast-slam-9-po-dota-2.html",
@@ -506,9 +504,11 @@
   "https://www.championat.com/tennis/news-6691998-darya-egorova-nazvala-tennisistok-iz-top-10-wta-chej-stil-igry-ej-simpatichen.html",
   "kassad-posle-pobedy-mouz-na-iem-beijing-2026-xertion-vpolne-mozhet-stat",
   "https://www.championat.com/football/news-6692138-igrok-rostova-langovich-o-matche-s-zenitom-my-mogli-poluchit-tri-ochka.html",
-  "https://www.championat.com/cybersport/news-6692174-bilibili-gaming-vybila-t1-i-vyshla-v-final-worlds-2026-po-lol.html"
+  "https://www.championat.com/cybersport/news-6692174-bilibili-gaming-vybila-t1-i-vyshla-v-final-worlds-2026-po-lol.html",
+  "https://www.championat.com/hockey/news-6692212-khl-opredelila-luchshih-igrokov-devyatoj-nedeli-sezona-2026-2027.html",
+  "https://www.championat.com/hockey/news-6692166-istochnik-fhr-poluchila-uvedomlenie-ot-iihf-ob-uchastii-sbornoj-rossii-na-mchm-2027.html"
  ],
- "news_i": 2,
+ "news_i": 3,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1626,7 +1626,7 @@
  "streak_day": {
   "2026-11-08": 1
  },
- "news_next": "2026-11-09T12:45:01.726223+03:00",
+ "news_next": "2026-11-09T13:16:01.767366+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1638,5 +1638,5 @@
  "bot_setup": 3,
  "tg_offset": 727618641,
  "push_watch": {},
- "news_video": false
+ "news_video": true
 }
