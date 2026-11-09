@@ -16,15 +16,18 @@ import requests
 
 from . import card, telegram
 
+# бесплатные русские ленты, которые отдают и новость, и полный текст статьи
+# (Чемпионат с ноября 2026 закрыт для ботов — отдаёт заглушку вместо статьи, поэтому не используем)
+SE = "https://www.sport-express.ru/services/materials/news/{}/se/"
 FEEDS = {
-    "football": ["https://www.championat.com/rss/news/football/"],
-    "hockey": ["https://www.championat.com/rss/news/hockey/"],
-    "basketball": ["https://www.championat.com/rss/news/basketball/"],
-    "tennis": ["https://www.championat.com/rss/news/tennis/"],
-    "esports": ["https://www.championat.com/rss/news/cybersport/", "https://www.cybersport.ru/rss/materials"],
+    "football": [SE.format("football")],
+    "hockey": [SE.format("hockey")],
+    "basketball": [SE.format("basketball")],
+    "tennis": [SE.format("tennis")],
+    "esports": [SE.format("cybersport"), "https://www.cybersport.ru/rss/materials"],
 }
 # общие ленты обо всём спорте — из них берём только новости, у которых рубрика/заголовок про нужный вид спорта
-MIXED = ["https://www.sports.ru/rss/main.xml", "https://www.sport-express.ru/services/materials/news/se/"]
+MIXED = ["https://www.sports.ru/rss/main.xml", "https://lenta.ru/rss/news/sport"]
 WORDS = {"football": ("футбол", "рпл", "лига чемпионов", "апл"), "hockey": ("хоккей", "кхл", "нхл"),
          "basketball": ("баскетбол", "нба", "единая лига"), "tennis": ("теннис", "atp", "wta"),
          "esports": ("киберспорт", "cs2", "cs 2", "dota", "дота", "counter-strike", "major", "мейджор", "navi",
@@ -190,10 +193,21 @@ def _article(item: dict) -> tuple[str, str | None]:
     except Exception:
         return "", None
     og = re.search(r'property="og:image"\s+content="([^"]+)"', h) or re.search(r'content="([^"]+)"\s+property="og:image"', h)
-    paras = [_clean(p) for p in re.findall(r"<p[^>]*>(.*?)</p>", h, re.S)]
-    # меню и подписи короткие, а абзацы статьи — длинные предложения
-    paras = [p for p in paras if len(p) >= 60 and p.count(" ") >= 8 and "cookie" not in p.lower()]
-    body = " ".join(paras)[:6000]   # почти вся статья — чтобы пересказ был подробным
+    h = re.sub(r"<(script|style|nav|header|footer|aside|noscript)\b.*?</\1>", " ", h, flags=re.S | re.I)
+    # сам текст статьи: блок <article> или itemprop="articleBody" (иначе — вся страница)
+    blocks = re.findall(r"<article\b.*?</article>", h, re.S | re.I) or re.findall(r'itemprop="articleBody".*', h, re.S)
+    junk = ("cookie", "реклама", "получить", "{", "}", "подпишитесь", "читайте также", "©")
+
+    def text_of(html: str, strict: bool) -> str:
+        paras = [_clean(p) for p in re.findall(r"<p[^>]*>(.*?)</p>", html, re.S)]
+        # меню и подписи короткие, а абзацы статьи — длинные предложения; реклама и стили — не текст
+        paras = [p for p in paras if len(p) >= 60 and p.count(" ") >= 8 and not any(j in p.lower() for j in junk)
+                 and (not strict or re.search(r"[.!?»…]$", p))]
+        return " ".join(paras)[:6000]   # почти вся статья — чтобы пересказ был подробным
+
+    body = text_of(max(blocks, key=len), True) if blocks else ""
+    if len(body) < 300:   # блока статьи нет или в нём пусто — берём абзацы со всей страницы
+        body = text_of(h, False)
     if any(w in body.lower() for w in ("перенаправлен", "подождите", "javascript", "включите")):
         body = ""  # вместо статьи — заглушка сайта
     return body, (og.group(1) if og else None)
