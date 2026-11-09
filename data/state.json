@@ -5,7 +5,7 @@
  },
  "learned": "2026-11-09",
  "schedule_day": "2026-11-09",
- "content_slot": "2026-11-09-19",
+ "content_slot": "2026-11-09-20",
  "news_seen": [
   "https://www.championat.com/hockey/news-6679812-maksim-sushinskij-idyot-raskachivanie-dlya-uvelicheniya-kontrakta-kucherova-s-tampoj.html",
   "https://www.sport-express.ru/hockey/world/news/svetlana-zhurova-kommentariy-deputata-gosdumy-rf-o-zayavlenii-shvecii-po-povodu-uchastiya-rossii-v-hokkeynyh-turnirah-2469369/",
@@ -1490,7 +1490,7 @@
  "value_day": "2026-11-09",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-09",
- "site_stamp": "803|4695|2026-11-09 19",
+ "site_stamp": "803|4696|2026-11-09 20",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1505,123 +1505,117 @@
  },
  "value_check": "2026-11-09-6",
  "express_risk": {
-  "msg": 4434,
+  "msg": 4696,
   "legs": [
    {
-    "sport": "hockey",
-    "div": "NHL",
-    "id": "401892674",
+    "sport": "basketball",
+    "div": "NBA",
+    "id": "401909955",
     "side": "home",
-    "p": 0.572012257405516,
+    "p": 0.5731023942944474,
     "odds": 1.676,
-    "kickoff": "2026-11-08T21:00:00+03:00",
-    "home": "Бостон",
-    "away": "Флорида",
-    "league": "🇺🇸 США · NHL",
+    "kickoff": "2026-11-10T03:30:00+03:00",
+    "home": "Торонто Рэпторс",
+    "away": "Мемфис Гриззлис",
+    "league": "🇺🇸 США · NBA",
     "logos": [
-     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/bos.png",
-     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/fla.png"
+     "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/tor.png",
+     "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/mem.png"
     ],
     "colors": [
-     "231f20",
-     "e51937"
+     "d91244",
+     "5d76a9"
     ],
-    "label": "Победа: Бостон (с ОТ)",
-    "win": true,
-    "score": "4:1"
+    "label": "Победа: Торонто Рэпторс (с ОТ)"
    },
    {
-    "sport": "football",
-    "div": "B1",
-    "id": "401878944",
+    "sport": "hockey",
+    "div": "NHL",
+    "id": "401892680",
     "side": "home",
-    "p": 0.5306447333510215,
-    "odds": 1.769,
-    "kickoff": "2026-11-08T21:15:00+03:00",
-    "home": "Сент-Трюйден",
-    "away": "Зюлте-Варегем",
-    "league": "🇧🇪 Бельгия · Про-лига",
+    "p": 0.5934121196882072,
+    "odds": 1.617,
+    "kickoff": "2026-11-10T04:00:00+03:00",
+    "home": "Эдмонтон",
+    "away": "Рейнджерс",
+    "league": "🇺🇸 США · NHL",
     "logos": [
-     "https://a.espncdn.com/i/teamlogos/soccer/500/936.png",
-     "https://a.espncdn.com/i/teamlogos/soccer/500/4691.png"
+     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/edm.png",
+     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/nyr.png"
     ],
     "colors": [
-     "f8ea2c",
-     "ff0000"
+     "00205b",
+     "0056ae"
     ],
-    "label": "Победа: Сент-Трюйден",
-    "win": true,
-    "score": "4:1"
+    "label": "Победа: Эдмонтон (с ОТ)"
    },
    {
-    "sport": "football",
-    "div": "ARG",
-    "id": "401841668",
-    "side": "away",
-    "p": 0.5477600471536537,
-    "odds": 1.714,
-    "kickoff": "2026-11-09T01:30:00+03:00",
-    "home": "Central Córdoba (Santiago del Estero)",
-    "away": "Ланус",
-    "league": "🇦🇷 Аргентина · Примера",
+    "sport": "basketball",
+    "div": "NBA",
+    "id": "401909956",
+    "side": "home",
+    "p": 0.5928158754081889,
+    "odds": 1.621,
+    "kickoff": "2026-11-10T04:00:00+03:00",
+    "home": "Даллас Маверикс",
+    "away": "Индиана Пэйсерс",
+    "league": "🇺🇸 США · NBA",
     "logos": [
-     "https://a.espncdn.com/i/teamlogos/soccer/500/11989.png",
-     "https://a.espncdn.com/i/teamlogos/soccer/500/12.png"
+     "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/dal.png",
+     "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/ind.png"
     ],
     "colors": [
-     "000000",
-     "9f0000"
+     "0064b1",
+     "0c2340"
     ],
-    "label": "Победа: Ланус",
-    "win": false,
-    "score": "1:1"
+    "label": "Победа: Даллас Маверикс (с ОТ)"
    },
    {
     "sport": "hockey",
     "div": "NHL",
-    "id": "401892677",
+    "id": "401892681",
     "side": "away",
-    "p": 0.572012257405516,
-    "odds": 1.676,
-    "kickoff": "2026-11-09T02:00:00+03:00",
-    "home": "Виннипег",
-    "away": "Тампа-Бэй",
+    "p": 0.5514042772481319,
+    "odds": 1.741,
+    "kickoff": "2026-11-10T05:30:00+03:00",
+    "home": "Ванкувер",
+    "away": "Филадельфия",
     "league": "🇺🇸 США · NHL",
     "logos": [
-     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/wpg.png",
-     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/tb.png"
-    ],
-    "colors": [
-     "002d62",
-     "003e7e"
-    ],
-    "label": "Победа: Тампа-Бэй (с ОТ)"
-   },
-   {
-    "sport": "hockey",
-    "div": "NHL",
-    "id": "401892676",
-    "side": "away",
-    "p": 0.5830164765525981,
-    "odds": 1.645,
-    "kickoff": "2026-11-09T03:00:00+03:00",
-    "home": "Торонто",
-    "away": "Нью-Джерси",
-    "league": "🇺🇸 США · NHL",
-    "logos": [
-     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/tor.png",
-     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/nj.png"
+     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/van.png",
+     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/phi.png"
     ],
     "colors": [
      "003e7e",
-     "e30b2b"
+     "fe5823"
     ],
-    "label": "Победа: Нью-Джерси (с ОТ)"
+    "label": "Победа: Филадельфия (с ОТ)"
+   },
+   {
+    "sport": "hockey",
+    "div": "NHL",
+    "id": "401892682",
+    "side": "away",
+    "p": 0.5635245901639344,
+    "odds": 1.704,
+    "kickoff": "2026-11-10T06:00:00+03:00",
+    "home": "Сан-Хосе",
+    "away": "Айлендерс",
+    "league": "🇺🇸 США · NHL",
+    "logos": [
+     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/sj.png",
+     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/nyi.png"
+    ],
+    "colors": [
+     "00788a",
+     "00529b"
+    ],
+    "label": "Победа: Айлендерс (с ОТ)"
    }
   ],
-  "odds": 14.010466027164316,
-  "day": "2026-11-08",
-  "done": true
+  "odds": 13.03273037677565,
+  "day": "2026-11-09",
+  "done": false
  },
  "streak_day": {
   "2026-11-08": 1
