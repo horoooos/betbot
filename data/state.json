@@ -7,7 +7,6 @@
  "schedule_day": "2026-11-09",
  "content_slot": "2026-11-09-10",
  "news_seen": [
-  "https://www.sport-express.ru/hockey/nhl/news/mark-shayfli-i-kayl-konnor-pobili-rekord-vinnipega-v-nhl-po-sovmestnomu-uchastiyu-v-golah-30-oktyabrya-2026-2469102/",
   "https://www.championat.com/hockey/news-6678714-schitov-dumayu-rossii-v-iihf-budut-vstavlyat-palki-v-kolyosa.html",
   "https://www.sport-express.ru/hockey/russia/news/kirilenko-o-polozhitelnom-reshenii-cas-po-dopusku-rossiyskih-hokkeistov-na-etot-keys-mozhno-opiratsya-2469091/",
   "https://www.sport-express.ru/hockey/khl/news/ak-bars-amur-vo-skolko-nachalo-matcha-khl-gde-smotret-translyaciyu-30-oktyabrya-2026-2468655/",
@@ -506,9 +505,10 @@
   "https://www.championat.com/football/news-6691902-davajte-vspomnim-trener-akrona-otvetil-za-schyot-chego-mozhno-bylo-odolet-spartak.html",
   "https://www.championat.com/hockey/news-6691908-hellebajk-ustupil-lish-vasilevskomu-i-bobrovskomu-po-skorosti-dostizheniya-350-pobed-v-nhl.html",
   "https://www.championat.com/football/news-6692004-nuzhno-otdohnut-i-perezagruzitsya-alibekov-o-pauze-i-tekuschej-forme-dinamo-mh.html",
-  "https://www.championat.com/basketball/news-6691790-sergej-karasyov-stal-shestym-igrokom-v-istorii-edinoj-ligi-s-3000-nabrannyh-ochkov.html"
+  "https://www.championat.com/basketball/news-6691790-sergej-karasyov-stal-shestym-igrokom-v-istorii-edinoj-ligi-s-3000-nabrannyh-ochkov.html",
+  "https://www.championat.com/tennis/news-6691998-darya-egorova-nazvala-tennisistok-iz-top-10-wta-chej-stil-igry-ej-simpatichen.html"
  ],
- "news_i": 5,
+ "news_i": 6,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1626,7 +1626,7 @@
  "streak_day": {
   "2026-11-08": 1
  },
- "news_next": "2026-11-09T10:40:59.010841+03:00",
+ "news_next": "2026-11-09T11:11:00.868635+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1638,5 +1638,5 @@
  "bot_setup": 3,
  "tg_offset": 727618641,
  "push_watch": {},
- "news_video": false
+ "news_video": true
 }
