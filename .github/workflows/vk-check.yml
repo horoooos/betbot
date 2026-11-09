@@ -54,3 +54,21 @@ jobs:
                   except Exception as e:
                       print("  ошибка:", e)
           EOF
+      - uses: actions/checkout@v4
+      - name: Bot-style upload test (no post)
+        env:
+          VK_TOKEN: ${{ secrets.VK_TOKEN }}
+        run: |
+          pip install -q requests pillow pandas
+          python3 - <<'EOF'
+          import json, requests, sys
+          sys.path.insert(0, ".")
+          from betbot import postimg, vk
+          posts = json.load(open("data/channel.json", encoding="utf-8"))["posts"]
+          pid = max((int(k) for k, v in posts.items() if v.get("photo")))
+          img = postimg.image_for(posts[str(pid)], "итог", posts)
+          print("картинка:", pid, len(img or b""), (img or b"")[:3])
+          up = vk._call("photos.getMessagesUploadServer", peer_id=0)["upload_url"]
+          r = requests.post(up, files={"photo": ("post.jpg", img, "image/jpeg")}, timeout=60)
+          print("ответ загрузки:", r.status_code, r.headers.get("content-type"), repr(r.text[:300]))
+          EOF
