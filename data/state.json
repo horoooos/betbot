@@ -7,7 +7,6 @@
  "schedule_day": "2026-11-09",
  "content_slot": "2026-11-09-20",
  "news_seen": [
-  "https://www.championat.com/hockey/news-6679812-maksim-sushinskij-idyot-raskachivanie-dlya-uvelicheniya-kontrakta-kucherova-s-tampoj.html",
   "https://www.sport-express.ru/hockey/world/news/svetlana-zhurova-kommentariy-deputata-gosdumy-rf-o-zayavlenii-shvecii-po-povodu-uchastiya-rossii-v-hokkeynyh-turnirah-2469369/",
   "https://www.championat.com/football/news-6679944-krylya-sovetov-spartak-moskva-rezultat-matcha-31-oktyabrya-2026-schyot-0-2-24-j-tur-zhenskoj-superligi-sezona-2026-2027.html",
   "https://www.championat.com/basketball/news-6680014-lebron-dzhejms-o-filadelfii-schastliv-chto-prinyal-reshenie-prijti-syuda.html",
@@ -506,9 +505,10 @@
   "krabeni-mozhet-propustit-blast-rivals-fall-2026-iz-za-problem-s-vizoi",
   "https://www.championat.com/football/news-6692716-kloze-o-kejne-on-neveroyatno-mnogo-rabotal-poetomu-zasluzhivaet-zolotoj-myach.html",
   "https://www.championat.com/cybersport/news-6692718-oliviya-kuk-ushla-iz-socsetej-iz-za-hejta-posle-reliza-tretego-sezona-doma-drakona.html",
-  "natus-vincere-oboshli-team-falcons-v-reitinge-valve-po-cs2"
+  "natus-vincere-oboshli-team-falcons-v-reitinge-valve-po-cs2",
+  "https://www.championat.com/hockey/news-6692770-spartak-zamenil-vratarya-na-13-j-minute-posle-chetyryoh-propuschennyh-golov-v-matche-so-ska.html"
  ],
- "news_i": 2,
+ "news_i": 3,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1620,7 +1620,7 @@
  "streak_day": {
   "2026-11-08": 1
  },
- "news_next": "2026-11-09T20:19:35.241551+03:00",
+ "news_next": "2026-11-09T20:50:35.322242+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1632,5 +1632,5 @@
  "bot_setup": 3,
  "tg_offset": 727618641,
  "push_watch": {},
- "news_video": false
+ "news_video": true
 }
