@@ -7,8 +7,6 @@
  "schedule_day": "2026-11-09",
  "content_slot": "2026-11-09-22",
  "news_seen": [
-  "https://www.championat.com/basketball/news-6679970-lebron-raskryl-kogda-ponyal-chto-tajriz-maksi-stanet-velikim-igrokom.html",
-  "https://www.championat.com/basketball/news-6679952-eks-igrok-dallasa-o-flegge-ne-dumayu-chto-v-2026-m-belyj-mozhet-stat-licom-ligi.html",
   "https://www.championat.com/basketball/news-6679896-andrej-kirilenko-ocenil-shansy-egora-dyomina-stat-chempionom-nba.html",
   "https://www.championat.com/basketball/news-6679884-zhurnalist-the-athletic-soobschil-o-vozmozhnom-nedovolstve-yannisa-perspektivami-majami.html",
   "https://www.championat.com/basketball/news-6679874-vsyo-nachalos-s-menya-rivz-iz-lejkers-o-25-ochkovom-kambeke-uorriorz.html",
@@ -506,9 +504,11 @@
   "https://www.championat.com/hockey/news-6692770-spartak-zamenil-vratarya-na-13-j-minute-posle-chetyryoh-propuschennyh-golov-v-matche-so-ska.html",
   "https://www.championat.com/football/news-6692816-kaseres-o-sudyah-v-rpl-oni-ne-dayut-dejstvovat-v-toj-silovoj-manere-k-kotoroj-ya-privyk.html",
   "https://www.championat.com/basketball/news-6692828-bronni-dzhejms-rezko-otvetil-bolelschice-vo-vremya-matcha-lejkers-s-detrojtom.html",
-  "https://www.championat.com/tennis/news-6692890-vavrinka-nazval-tennisista-kotoryj-mozhet-priblizitsya-k-urovnyu-igry-alkarasa-i-sinnera.html"
+  "https://www.championat.com/tennis/news-6692890-vavrinka-nazval-tennisista-kotoryj-mozhet-priblizitsya-k-urovnyu-igry-alkarasa-i-sinnera.html",
+  "https://www.championat.com/cybersport/news-6692886-ispytyvayu-oblegchenie-dzhejms-gann-ob-uhode-iz-kinovselennoj-dc.html",
+  "arteezy-vse-moye-nyte-po-povodu-dota-2-idet-ot-lyubvi-k-yetoi-igre"
  ],
- "news_i": 6,
+ "news_i": 0,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1620,7 +1620,7 @@
  "streak_day": {
   "2026-11-08": 1
  },
- "news_next": "2026-11-09T22:19:26.134267+03:00",
+ "news_next": "2026-11-09T22:50:26.353676+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1632,8 +1632,9 @@
  "bot_setup": 3,
  "tg_offset": 727618641,
  "push_watch": {},
- "news_video": false,
+ "news_video": true,
  "vk_last": 4709,
  "dz_last": 4709,
- "vk_err": "4704: VK wall.post: 100 One of the parameters specified was missing or invalid: Violated: link_photo_sizing_rule. No photo given"
+ "vk_err": "4704: VK wall.post: 100 One of the parameters specified was missing or invalid: Violated: link_photo_sizing_rule. No photo given",
+ "news_forced": "2026-11-09T19:15:43Z"
 }
