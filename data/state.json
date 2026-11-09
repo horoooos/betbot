@@ -7,7 +7,6 @@
  "schedule_day": "2026-11-09",
  "content_slot": "2026-11-09-19",
  "news_seen": [
-  "https://www.sport-express.ru/hockey/russia/news/v-mid-rf-otreagirovali-na-zayavlenie-gossekretarya-kanady-o-zaprete-rossiyanam-uchastvovat-v-mchm-po-hokkeyu-2469380/",
   "https://www.sport-express.ru/hockey/khl/news/fonbet-i-khl-zapuskayut-dlya-bolelschikov-igru-pervye-na-linii-2469378/",
   "https://www.championat.com/hockey/news-6679788-eto-nesyot-v-sebe-nepriyatnyj-simvolicheskij-posyl-prezident-finlyandii-o-dopuske-rossii.html",
   "https://www.championat.com/hockey/news-6679812-maksim-sushinskij-idyot-raskachivanie-dlya-uvelicheniya-kontrakta-kucherova-s-tampoj.html",
@@ -506,9 +505,10 @@
   "https://www.championat.com/tennis/news-6692616-motogonschik-valentino-rossi-rasskazal-o-vstreche-s-yannikom-sinnerom-v-milane.html",
   "https://www.championat.com/tennis/news-6692604-bartoli-nazvala-favorita-itogovogo-turnira-wta-2026-posle-snyatiya-rybakinoj.html",
   "https://www.championat.com/cybersport/news-6692656-v-cyberpunk-2077-poyavilsya-multipleer-mod-dostupen-dlya-vseh-zhelayuschih.html",
-  "krabeni-mozhet-propustit-blast-rivals-fall-2026-iz-za-problem-s-vizoi"
+  "krabeni-mozhet-propustit-blast-rivals-fall-2026-iz-za-problem-s-vizoi",
+  "https://www.championat.com/football/news-6692716-kloze-o-kejne-on-neveroyatno-mnogo-rabotal-poetomu-zasluzhivaet-zolotoj-myach.html"
  ],
- "news_i": 0,
+ "news_i": 1,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1626,7 +1626,7 @@
  "streak_day": {
   "2026-11-08": 1
  },
- "news_next": "2026-11-09T19:16:35.998556+03:00",
+ "news_next": "2026-11-09T19:49:35.752714+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1638,5 +1638,5 @@
  "bot_setup": 3,
  "tg_offset": 727618641,
  "push_watch": {},
- "news_video": false
+ "news_video": true
 }
