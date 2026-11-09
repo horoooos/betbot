@@ -7,12 +7,6 @@
  "schedule_day": "2026-11-09",
  "content_slot": "2026-11-09-16",
  "news_seen": [
-  "https://www.sport-express.ru/football/france/news/poluzaschitnik-monako-aleksandr-golovin-kommentariy-o-roli-lidera-v-komande-2469281/",
-  "https://www.sport-express.ru/hockey/khl/news/evgeniy-biryukov-kommentariy-po-peregovoram-so-ska-posle-uhoda-andreya-razina-2469237/",
-  "https://www.sport-express.ru/hockey/khl/news/evgeniy-biryukov-kommentariy-po-peregovoram-so-spartakom-po-ivanu-morozovu-2469235/",
-  "https://www.sport-express.ru/hockey/nhl/news/luchshie-snaypery-nhl-31-oktyabrya-2026-top-10-regulyarnogo-chempionata-lidery-po-golam-kaprizov-drayzaytl-konnor-2469279/",
-  "https://www.championat.com/hockey/news-6679454-insajder-predpolozhil-kakie-kluby-popytayutsya-podpisat-nikitu-kucherova.html",
-  "https://www.championat.com/football/news-6679586-dolgo-ne-spitsya-kuryu-hotya-v-zhizni-ne-kuryaschij-tedeev-o-reakcii-organizma-na-matchi.html",
   "https://www.championat.com/basketball/news-6679638-igrok-golden-stejt-zayavil-chto-byl-porazhyon-fintom-stefena-karri-na-luku-donchicha.html",
   "https://www.championat.com/tennis/news-6679714-osobennoe-dostizhenie-shnajder-o-vyhode-v-final-pyatisotnika-v-tokio.html",
   "malr1ne-pokhvalil-sapportov-team-spirit-oni-prosto-khodyat-i-ubivayut-vdvoyem",
@@ -509,9 +503,12 @@
   "https://www.championat.com/cybersport/news-6692462-ya-vernus-silnee-faker-o-porazhenii-ot-blg-i-vylete-t1-s-worlds-2026.html",
   "https://www.championat.com/hockey/news-6692520-cheshskie-igroki-nhl-raskritikovali-glavu-mid-za-slova-o-rossijskih-hokkeistkah.html",
   "https://www.championat.com/hockey/news-6692504-leonid-tambiev-vremenno-otstranyon-ot-dolzhnosti-glavnogo-trenera-moskovskogo-dinamo.html",
-  "https://www.championat.com/hockey/news-6692426-sbornaya-stanet-chempionom-za-schyot-tehnicheskih-porazhenij-kozhevnikov-o-rossii-na-mchm.html"
+  "https://www.championat.com/hockey/news-6692426-sbornaya-stanet-chempionom-za-schyot-tehnicheskih-porazhenij-kozhevnikov-o-rossii-na-mchm.html",
+  "https://www.championat.com/hockey/news-6692412-nikolaj-goldobin-primet-uchastie-v-predstoyaschem-matche-ska-so-spartakom.html",
+  "https://www.championat.com/hockey/news-6692404-zdes-sluchayutsya-bezumnye-veschi-trener-vinnipega-o-neobychnoj-pobede-nad-tampoj.html",
+  "https://www.championat.com/hockey/news-6692302-eks-zaschitnik-ska-rotenberg-eto-fanat-hokkeya-v-horoshem-smysle-moschno-prodvigaet-ego.html"
  ],
- "news_i": 2,
+ "news_i": 3,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1493,7 +1490,7 @@
  "value_day": "2026-11-09",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-09",
- "site_stamp": "802|4677|2026-11-09 16",
+ "site_stamp": "802|4678|2026-11-09 16",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1629,7 +1626,7 @@
  "streak_day": {
   "2026-11-08": 1
  },
- "news_next": "2026-11-09T16:35:34.776235+03:00",
+ "news_next": "2026-11-09T17:04:34.950317+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1641,5 +1638,5 @@
  "bot_setup": 3,
  "tg_offset": 727618641,
  "push_watch": {},
- "news_video": true
+ "news_video": false
 }
