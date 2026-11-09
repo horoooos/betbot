@@ -7,10 +7,6 @@
  "schedule_day": "2026-11-09",
  "content_slot": "2026-11-09-16",
  "news_seen": [
-  "mouz-zanyala-trete-mesto-na-pgl-masters-bucharest-2026",
-  "thorin-jl-na-pgl-masters-bucharest-2026-sygral-prosto-uzhasno",
-  "iz-koda-cs2-udalili-upominaniye-novogo-oruzhiya-lar",
-  "https://www.championat.com/hockey/news-6679882-fetisov-kucherov-luchshij-hokkeist-nhl-u-nego-est-vse-prava-trebovat-to-chto-hochet.html",
   "https://www.championat.com/hockey/news-6679870-vyacheslav-fetisov-vyskazalsya-o-reshenii-cas-dopustit-rossiyu-do-mezhdunarodnyh-sorevnovanij.html",
   "https://www.championat.com/hockey/news-6679852-glava-mid-chehii-ne-isklyuchil-uchastie-sbornoj-rossii-na-zhenskom-yuchm-2027.html",
   "https://www.sport-express.ru/hockey/russia/news/v-mid-rf-otreagirovali-na-zayavlenie-gossekretarya-kanady-o-zaprete-rossiyanam-uchastvovat-v-mchm-po-hokkeyu-2469380/",
@@ -509,9 +505,10 @@
   "https://www.championat.com/basketball/news-6692566-delaet-vsyo-chto-prosit-trenerskij-shtab-lebron-ob-igre-s-dzhejlenom-braunom.html",
   "https://www.championat.com/tennis/news-6692642-emu-nuzhno-nemnogo-udachi-greg-rusedski-o-shansah-novaka-dzhokovicha-na-25-j-titul-na-tbsh.html",
   "https://www.championat.com/tennis/news-6692618-uzhe-ne-znayu-chto-dumat-o-novake-on-razdvigaet-granicy-kure-o-dzhokoviche.html",
-  "https://www.championat.com/tennis/news-6692616-motogonschik-valentino-rossi-rasskazal-o-vstreche-s-yannikom-sinnerom-v-milane.html"
+  "https://www.championat.com/tennis/news-6692616-motogonschik-valentino-rossi-rasskazal-o-vstreche-s-yannikom-sinnerom-v-milane.html",
+  "https://www.championat.com/tennis/news-6692604-bartoli-nazvala-favorita-itogovogo-turnira-wta-2026-posle-snyatiya-rybakinoj.html"
  ],
- "news_i": 5,
+ "news_i": 6,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1629,7 +1626,7 @@
  "streak_day": {
   "2026-11-08": 1
  },
- "news_next": "2026-11-09T18:09:35.285999+03:00",
+ "news_next": "2026-11-09T18:41:35.533806+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1641,5 +1638,5 @@
  "bot_setup": 3,
  "tg_offset": 727618641,
  "push_watch": {},
- "news_video": false
+ "news_video": true
 }
