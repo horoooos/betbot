@@ -7367,31 +7367,31 @@
   "kickoff": "2026-11-09T00:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Sun, November 8th at 4:30 PM EST",
   "home": {
-   "id": "3626",
-   "name": "Coco Gauff",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/3626.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/usa.png"
    ],
+   "id": "3626",
+   "name": "Coco Gauff",
    "country": "USA",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
    "ru": "Кори Гауфф"
   },
   "away": {
-   "id": "2113",
-   "name": "Jessica Pegula",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/2113.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/usa.png"
    ],
+   "id": "2113",
+   "name": "Jessica Pegula",
    "country": "USA",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
@@ -7451,7 +7451,9 @@
   "btn": 4,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null
  },
  "NHL|401892677": {
   "id": "401892677",
