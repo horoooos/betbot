@@ -325,24 +325,6 @@ null
 },
 {
 "sport": "tennis",
-"id": "186522",
-"league": "Теннис · ATP",
-"kickoff": "2026-11-09T22:00:00+03:00",
-"home": "Лео Борг",
-"away": "Тоби Сэмюэл",
-"hl": "https://a.espncdn.com/i/teamlogos/countries/500/swe.png",
-"al": "https://a.espncdn.com/i/teamlogos/countries/500/gbr.png",
-"hid": "7600",
-"aid": "10645",
-"bb": "https://betboom.ru/search?query=%D0%91%D0%BE%D1%80%D0%B3",
-"path": "tennis/atp",
-"url": "live.html?s=tennis&p=tennis%2Fatp&e=186522&h=%D0%9B%D0%B5%D0%BE+%D0%91%D0%BE%D1%80%D0%B3&a=%D0%A2%D0%BE%D0%B1%D0%B8+%D0%A1%D1%8D%D0%BC%D1%8E%D1%8D%D0%BB",
-"tip": "",
-"top": false,
-"bot": null
-},
-{
-"sport": "tennis",
 "id": "186754",
 "league": "Теннис · WTA",
 "kickoff": "2026-11-09T22:00:00+03:00",
@@ -424,6 +406,24 @@ null
 ],
 "center": "Рейтинг Эло 1573 : 1661"
 }
+},
+{
+"sport": "tennis",
+"id": "186522",
+"league": "Теннис · ATP",
+"kickoff": "2026-11-09T22:15:00+03:00",
+"home": "Лео Борг",
+"away": "Тоби Сэмюэл",
+"hl": "https://a.espncdn.com/i/teamlogos/countries/500/swe.png",
+"al": "https://a.espncdn.com/i/teamlogos/countries/500/gbr.png",
+"hid": "7600",
+"aid": "10645",
+"bb": "https://betboom.ru/search?query=%D0%91%D0%BE%D1%80%D0%B3",
+"path": "tennis/atp",
+"url": "live.html?s=tennis&p=tennis%2Fatp&e=186522&h=%D0%9B%D0%B5%D0%BE+%D0%91%D0%BE%D1%80%D0%B3&a=%D0%A2%D0%BE%D0%B1%D0%B8+%D0%A1%D1%8D%D0%BC%D1%8E%D1%8D%D0%BB",
+"tip": "",
+"top": false,
+"bot": null
 },
 {
 "sport": "tennis",
