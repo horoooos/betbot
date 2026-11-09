@@ -7492,22 +7492,22 @@
   "kickoff": "2026-11-09T03:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "home": {
+   "color": "0064b1",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/dal.png",
    "id": "6",
    "name": "Dallas Mavericks",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/dal.png",
-   "color": "0064b1",
    "score": "0",
    "record": "5-4",
    "periods": [],
    "ru": "Даллас Маверикс"
   },
   "away": {
+   "color": "000000",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/bkn.png",
    "id": "17",
    "name": "Brooklyn Nets",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/bkn.png",
-   "color": "000000",
    "score": "0",
    "record": "2-7",
    "periods": [],
@@ -7582,7 +7582,9 @@
   "btn": 4,
   "close": {
    "BB_U223.5": 0.5
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null
  },
  "NHL|401892679": {
   "id": "401892679",
