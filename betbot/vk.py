@@ -135,7 +135,7 @@ def crosspost(state: dict) -> int:
         text += "\n\n" + (f"📺 Смотреть матч онлайн: {link}" if started else f"📊 Подробнее, статистика и матчи онлайн: {link}")
         # с личным ключом — фото поста; с ключом сообщества — текст со ссылкой на наш сайт
         from . import dzen, postimg
-        img = postimg.image_for(p, ("начало" if started else dzen.kind(p.get("html", "")) or "новость"))
+        img = postimg.image_for(p, ("начало" if started else dzen.kind(p.get("html", "")) or "новость"), posts)
         photo = _photo(img) if img else None
         if not photo and getattr(_photo, "err", ""):
             state["vk_err"] = f"фото: {_photo.err}"

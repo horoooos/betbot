@@ -55,8 +55,60 @@ def _card(html: str, kind: str) -> bytes:
     return card.slide_card(kicker, big, sub, rest, COLORS.get(kind, COLORS["новость"]), brand="@aistavvit")
 
 
-def image_for(post: dict, kind: str) -> bytes | None:
-    """Картинка поста: своя (скачиваем) или нарисованная карточка."""
+def _get(url: str) -> bytes | None:
+    try:
+        r = requests.get(url, timeout=25, headers={"User-Agent": "Mozilla/5.0"})
+        return r.content if r.ok and len(r.content) > 5000 else None
+    except Exception:
+        return None
+
+
+def _ribbon(jpg: bytes, title: str = "ПОЛНЫЙ РАЗБОР МАТЧА", sub: str = "форма · личные встречи · рейтинг · шансы на все рынки") -> bytes:
+    """Фирменная карточка матча + яркая лента сверху: так разбор выглядит как отдельная рубрика."""
+    import io
+    from PIL import Image, ImageDraw
+    img = Image.open(io.BytesIO(jpg)).convert("RGB")
+    w, h = img.size
+    k = w / 1280
+    band = int(108 * k)
+    over = Image.new("RGBA", (w, band), (0, 0, 0, 0))
+    g = Image.new("RGBA", (w, band))
+    gd = ImageDraw.Draw(g)
+    for x in range(w):   # градиент: фиолетовый → золотой
+        t_ = x / w
+        gd.line((x, 0, x, band), fill=(int(124 + (255 - 124) * t_), int(58 + (176 - 58) * t_), int(237 + (0 - 237) * t_), 255))
+    over.alpha_composite(g)
+    d = ImageDraw.Draw(over)
+    cx, cy, r = int(64 * k), band // 2, int(22 * k)   # значок лупы
+    d.ellipse((cx - r, cy - r - 4 * k, cx + r, cy + r - 4 * k), outline=(255, 255, 255, 255), width=max(3, int(6 * k)))
+    d.line((cx + r * 0.7, cy + r * 0.6, cx + r * 1.5, cy + r * 1.5), fill=(255, 255, 255, 255), width=max(4, int(8 * k)))
+    d.text((int(110 * k), cy - int(14 * k)), title, font=card.font(int(40 * k), "ExtraBold"), fill=(255, 255, 255, 255), anchor="lm")
+    d.text((int(110 * k), cy + int(24 * k)), sub, font=card.font(int(22 * k), "Bold"), fill=(255, 255, 255, 215), anchor="lm")
+    base = img.convert("RGBA")
+    base.alpha_composite(over, (0, 0))
+    out = io.BytesIO()
+    base.convert("RGB").save(out, "JPEG", quality=92)
+    return out.getvalue()
+
+
+def _teams_of(html: str) -> str:
+    """«ПОЛНЫЙ РАЗБОР: Арина Соболенко — Каролина Мухова» → «Арина Соболенко — Каролина Мухова»."""
+    first = plain(html).strip().split(chr(10))[0]
+    return first.split(":", 1)[-1].strip() if " — " in first else ""
+
+
+def image_for(post: dict, kind: str, posts: dict | None = None) -> bytes | None:
+    """Картинка поста: своя (скачиваем); у разбора — фирменная карточка его матча с лентой «ПОЛНЫЙ РАЗБОР»;
+    иначе — нарисованная карточка."""
+    if kind == "разбор" and posts and not post.get("photo"):
+        teams, pid = _teams_of(post.get("html", "")), int(post.get("id", 0))
+        for j in range(pid - 1, pid - 8, -1):           # прогноз на этот матч — один из предыдущих постов
+            q = posts.get(str(j)) or {}
+            if q.get("photo") and teams and teams in plain(q.get("html", "")) and "ПРОГНОЗ" in plain(q.get("html", "")):
+                jpg = _get(q["photo"])
+                if jpg:
+                    return _ribbon(jpg)
+                break
     if post.get("photo"):
         try:
             r = requests.get(post["photo"], timeout=25, headers={"User-Agent": "Mozilla/5.0"})

@@ -64,7 +64,7 @@ def crosspost(state: dict) -> int:
                     telegram._call("copyMessage", chat_id=TARGET, from_chat_id=os.environ["TELEGRAM_CHAT_ID"], message_id=pid)
                 else:                   # текстовый пост (разбор) — с нашей карточкой, иначе в Дзене он без картинки
                     from . import postimg
-                    img = postimg.image_for(post, k)
+                    img = postimg.image_for(post, k, posts)
                     text = postimg.plain(post.get("html", "")).strip()
                     tail = f"\n\n📖 Полностью — в Telegram-канале: t.me/aistavvit/{pid}"
                     if len(text) + len(tail) > 1024:

@@ -29,6 +29,7 @@ WORDS = {"football": ("футбол", "рпл", "лига чемпионов", "
          "basketball": ("баскетбол", "нба", "единая лига"), "tennis": ("теннис", "atp", "wta"),
          "esports": ("киберспорт", "cs2", "cs 2", "dota", "дота", "counter-strike", "major", "мейджор", "navi",
                      "team spirit", "the international", "iem", "blast", "pgl")}
+VIDEO_NEWS = False  # видео-новости выключены: все новости выходят с фирменной картинкой
 MAX_TRIES = 3  # попыток пересказа за один запуск — чтобы новости не задерживали live и прогнозы
 # служебные материалы — не новости: расписания, итоги тура, трансляции, таблицы, чужие прогнозы
 SERVICE = ("расписание", "результаты", "трансляц", "где смотреть", "смотреть онлайн", "онлайн", "таблица",
@@ -360,7 +361,7 @@ def run(state: dict, now: pd.Timestamp, brand: str) -> None:
             caption = head
             # по очереди: видео-новость (наш ролик с водяным знаком @aistavvit) и новость с картинкой
             mp4 = None
-            if state.get("news_video", True):
+            if VIDEO_NEWS and state.get("news_video", True):
                 from . import video
                 mp4 = video.news_video(png)
             if mp4:
