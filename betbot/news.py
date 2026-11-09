@@ -216,6 +216,60 @@ def _article(item: dict) -> tuple[str, str | None]:
     return body, (og.group(1) if og else None)
 
 
+WIKI_UA = {"User-Agent": "AIStavitBot/1.0 (https://horoooos.github.io/betbot/)"}
+WIKI_CTX = {"football": "футбол", "hockey": "хоккей", "basketball": "баскетбол", "tennis": "теннис", "esports": "киберспорт"}
+# статья Википедии должна быть про спорт (по её краткому описанию): «российский футболист», «professional dota 2 player»…
+SPORTY = ("футбол", "хокке", "теннис", "баскетбол", "киберспорт", "клуб", "спортсмен", "игрок", "тренер", "вратар",
+          "нападающ", "защитник", "полузащит", "сборн", "команд", "стадион", "арена", "лига",
+          "football", "soccer", "hockey", "tennis", "basketball", "esports", "player", "team", "club", "coach", "dota", "counter-strike")
+NOT_NAMES = {"Глава", "Тренер", "Главный", "Бывший", "Защитник", "Форвард", "Нападающий", "Вратарь", "Президент", "Капитан",
+             "Сборная", "Россия", "России", "Чемпионат", "Лига", "Матч", "Итоги", "Источник", "Стало", "Известно", "Обладатель"}
+
+
+def _names(title: str, text: str = "") -> list[str]:
+    """Кто в новости: сначала люди «Имя Фамилия», потом команды «в кавычках» и латиницей, потом одиночные фамилии."""
+    src = title + " . " + text[:400]
+    persons, teams, singles = [], [], []
+    for m in re.finditer(r"«([^»]{2,30})»(\s+[А-ЯЁ][а-яё]+)?", src):          # «Динамо» Махачкала
+        teams.append((m.group(1) + (m.group(2) or "")).strip())
+    for m in re.finditer(r"([А-ЯЁ][а-яё]+(?:-[А-ЯЁ][а-яё]+)?)\s+([А-ЯЁ][а-яё]{2,}(?:-[А-ЯЁ][а-яё]+)?)", src):
+        if m.group(1) not in NOT_NAMES and m.group(2) not in NOT_NAMES:   # Иван Обляков
+            persons.append(m.group(0))
+    for m in re.finditer(r"\b([A-Z][\w.&-]{2,}(?:\s+[A-Z][\w.&-]+)*)", src):  # Virtus.pro, Arteezy
+        teams.append(m.group(1))
+    for m in re.finditer(r"(?<![«\w-])([А-ЯЁ][а-яё]{3,})", src):           # Вавринка, Мбаппе
+        if m.group(1) not in NOT_NAMES:
+            singles.append(m.group(1))
+    out: list[str] = []
+    for n in persons + teams + singles:
+        if n not in out and not any(n in o for o in out):
+            out.append(n)
+    return out[:6]
+
+
+def _wiki_photo(title: str, text: str = "", sport: str = "") -> str | None:
+    """Фото героя новости (игрока, тренера, клуба) из Википедии: бесплатно, без ключа и под свободной лицензией."""
+    for q in _names(title, text):
+        for lang in ("ru", "en"):
+            try:
+                r = requests.get(f"https://{lang}.wikipedia.org/w/api.php", headers=WIKI_UA, timeout=15, params={
+                    "action": "query", "format": "json", "generator": "search",
+                    "gsrsearch": f"{q} {WIKI_CTX.get(sport, '')}".strip(), "gsrlimit": 3,
+                    "prop": "pageimages|description", "piprop": "thumbnail", "pithumbsize": 1280}).json()
+            except Exception:
+                continue
+            words = [w.lower()[:5] for w in re.findall(r"\w{3,}", q)]
+            for p in sorted((r.get("query") or {}).get("pages", {}).values(), key=lambda p: p.get("index", 9)):
+                t = p.get("thumbnail") or {}
+                src, desc = t.get("source", ""), (p.get("description") or "").lower()
+                if not src or ".svg" in src.lower() or t.get("width", 0) < 400:   # логотипы и мелкие картинки — мимо
+                    continue
+                if all(w in p["title"].lower() for w in words) and any(s in desc for s in SPORTY):
+                    print(f"  фото из Википедии: {q} → {p['title']}")
+                    return src
+    return None
+
+
 def _stems(text: str) -> set[str]:
     """Основы слов (первые 5 букв), чтобы «победил/победы/победой» считались одним словом."""
     return {w[:5] for w in re.findall(r"[а-яёa-z]{4,}", text.lower())}
@@ -385,9 +439,11 @@ def run(state: dict, now: pd.Timestamp, brand: str) -> None:
             news = _rewrite(item)
             if not news or news["sport"] != sport:  # новость не про этот вид спорта (Ф-1, бокс…) — пропускаем
                 continue
-            prompt = f"{random.choice(SCENES[sport])}, cinematic, high detail, photorealistic, no text, no people, no players, no faces, empty scene"
+            if not item["photo"]:   # нет фото у источника — ищем героя новости (игрока, клуб) в Википедии
+                item["photo"] = _wiki_photo(item["title"] + " . " + news["title"], news["text"], sport)
             tag = TAGS[sport].lstrip("#").capitalize()
-            png = card.news_card(item["photo"] if SOURCE_PHOTOS else None, news["title"], tag, brand, sport, prompt)
+            # без нейросети: фото источника или из Википедии, а если нет — фирменный фон с иконкой спорта
+            png = card.news_card(item["photo"], news["title"], tag, brand, sport, "")
             emo = news["emoji"] or EMOJI[sport]
             body = news["text"]
             if body.startswith(emo):  # тот же эмодзи и в заголовке, и в начале текста — второй убираем

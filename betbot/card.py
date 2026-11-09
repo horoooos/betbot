@@ -363,7 +363,7 @@ def ai_card(prompt: str, title: str, subtitle: str = "", brand: str = "", sport:
     Две попытки; если нейросеть так и не ответила — рисуем фон с иконкой вида спорта, пост всё равно выйдет.
     """
     img = None
-    for _ in range(2):
+    for _ in range(2 if prompt else 0):   # без описания сцены нейросеть не зовём — сразу фирменный фон
         try:
             # нейросети не умеют рисовать буквы и цифры — получаются кракозябры, поэтому запрещаем любой текст
             full = f"{prompt}, no text, no letters, no numbers, no words, no logos, no signs, no scoreboard, no watermark"
@@ -789,7 +789,7 @@ def news_card(photo_url: str | None, title: str, tag: str, brand: str = "", spor
         except Exception:
             photo = None
     if photo is None:
-        return ai_card(fallback_prompt or "sports arena at night", title, tag, brand, sport=sport)
+        return ai_card(fallback_prompt, title, tag, brand, sport=sport)   # пустой prompt — фирменный фон без нейросети
     # кадрирование «cover»: заполняем 1280×720 без полей, чуть выше центра — там обычно лица и мяч
     k = max(W / photo.width, H / photo.height)
     photo = photo.resize((int(photo.width * k) + 1, int(photo.height * k) + 1), Image.LANCZOS)
