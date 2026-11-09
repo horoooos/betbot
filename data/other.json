@@ -7232,22 +7232,22 @@
   "kickoff": "2026-11-09T03:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "home": {
+   "color": "003e7e",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/tor.png",
    "id": "21",
    "name": "Toronto Maple Leafs",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/tor.png",
-   "color": "003e7e",
    "score": "0",
    "record": "8-8-2",
    "periods": [],
    "ru": "Торонто"
   },
   "away": {
+   "color": "e30b2b",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/nj.png",
    "id": "11",
    "name": "New Jersey Devils",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/nj.png",
-   "color": "e30b2b",
    "score": "0",
    "record": "12-5-0",
    "periods": [],
@@ -7351,7 +7351,9 @@
   "close": {
    "HK_O6.5": 0.474,
    "HK_ML_H": 0.4066
-  }
+  },
+  "main_hit": false,
+  "bold_hit": false
  },
  "NHL|401892678": {
   "id": "401892678",
