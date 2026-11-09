@@ -1,6 +1,12 @@
 name: VK check
 # Ручная проверка ключа ВКонтакте: какое сообщество, какие права. Сам ключ в журнал не попадает.
-on: workflow_dispatch
+on:
+  workflow_dispatch:
+    inputs:
+      delete_post:
+        description: "Номер поста на стене ВК, который удалить (пусто — ничего не удалять)"
+        required: false
+        default: ""
 jobs:
   check:
     runs-on: ubuntu-latest
@@ -59,6 +65,7 @@ jobs:
         env:
           VK_TOKEN: ${{ secrets.VK_TOKEN }}
           VK_USER_TOKEN: ${{ secrets.VK_USER_TOKEN }}
+          DELETE_POST: ${{ inputs.delete_post }}
         run: |
           pip install -q requests pillow pandas
           python3 - <<'PY'
@@ -70,6 +77,13 @@ jobs:
           pid = max(int(k) for k in posts)
           img = postimg.image_for(posts[str(pid)], "новость", posts)
           print("картинка:", pid, len(img or b""))
+          d = os.environ.get("DELETE_POST", "").strip()
+          if d:
+              w = vk._call("wall.getById", posts=f"-{vk.GROUP_ID}_{d}")
+              items = w.get("items", w) if isinstance(w, dict) else w
+              print("УДАЛЯЮ:", d, [(i.get("text") or "")[:40] for i in items])
+              print("wall.delete:", vk._call("wall.delete", owner_id=-vk.GROUP_ID, post_id=int(d)))
+              sys.exit(0)
           vk._photo.err = ""
           print("ВЛОЖЕНИЕ:", vk._photo(img), "| ошибка:", vk._photo.err)
           for w in vk._call("wall.get", owner_id=-vk.GROUP_ID, count=3)["items"]:
