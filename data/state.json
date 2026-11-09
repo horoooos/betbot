@@ -7,11 +7,6 @@
  "schedule_day": "2026-11-09",
  "content_slot": "2026-11-09-13",
  "news_seen": [
-  "https://www.championat.com/cybersport/news-6679020-v-rocket-league-projdyot-ivent-po-anime-van-pis-start-1-noyabrya.html",
-  "xant3r-o-vykhode-v-final-pgl-masters-bucharest-2026-eto-komandnaya-magiya",
-  "https://www.championat.com/football/news-6679080-u-batrakova-gol-pas-k-49-j-minute-matcha-galatasaraya-s-konyasporom.html",
-  "https://www.championat.com/cybersport/news-6679060-furia-obygrala-mouz-i-vyshla-v-grand-final-pgl-masters-bucharest-2026-po-cs-2.html",
-  "https://www.championat.com/hockey/news-6679234-napadayuschij-ak-barsa-denisenko-nazval-svoj-gol-amuru-odnim-iz-samyh-neobychnyh-v-karere.html",
   "https://www.championat.com/hockey/news-6679226-denisenko-o-vozvraschenii-sbornyh-rossii-dlya-vsego-nashego-hokkeya-eto-horosho.html",
   "https://www.championat.com/hockey/news-6679214-olimpijskij-chempion-vojnov-otreagiroval-na-dopusk-rossii-k-mezhdunarodnym-startam.html",
   "https://www.championat.com/hockey/news-6679210-zaschitnik-ak-barsa-yarullin-o-mchm-odin-iz-luchshih-turnirov-v-plane-emocij.html",
@@ -509,9 +504,11 @@
   "https://www.championat.com/tennis/news-6692312-gauff-delit-s-peguloj-liderstvo-po-chislu-pobed-v-tryohsetovyh-matchah-v-etom-sezone.html",
   "https://www.championat.com/cybersport/news-6692360-v-novoj-zelandii-nachalas-predzagruzka-gta-6-igra-vesit-210-gb.html",
   "https://www.championat.com/cybersport/news-6692300-moj-lyubimyj-geroj-aleksandr-nevskij-o-sherife-turchine-iz-vesterna-rio-bravo.html",
-  "karrigan-chtoby-vyigrat-meidzhor-nuzhno-chtoby-kazhdyi-yelement-mekhanizma"
+  "karrigan-chtoby-vyigrat-meidzhor-nuzhno-chtoby-kazhdyi-yelement-mekhanizma",
+  "https://www.championat.com/cybersport/news-6692402-izdaniya-gta-6-chem-otlichaetsya-standart-ot-ultimate-raznica-versij.html",
+  "https://www.championat.com/cybersport/news-6692262-eto-istoricheskij-moment-bin-o-pobede-nad-t1-i-vyhode-v-final-worlds-2026.html"
  ],
- "news_i": 6,
+ "news_i": 0,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1629,7 +1626,7 @@
  "streak_day": {
   "2026-11-08": 1
  },
- "news_next": "2026-11-09T14:53:00.969563+03:00",
+ "news_next": "2026-11-09T15:25:01.411584+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1641,5 +1638,5 @@
  "bot_setup": 3,
  "tg_offset": 727618641,
  "push_watch": {},
- "news_video": false
+ "news_video": true
 }
