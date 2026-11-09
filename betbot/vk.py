@@ -124,9 +124,9 @@ def crosspost(state: dict) -> int:
                 break                     # пост совсем свежий — страница на сайте ещё публикуется, вернёмся позже
             link = _site_link(pid)
         text += "\n\n" + (f"📺 Смотреть матч онлайн: {link}" if started else f"📊 Подробнее, статистика и матчи онлайн: {link}")
-        # с личным ключом — фото поста; с ключом сообщества — карточка ссылки на наш сайт (ВК сам подставит картинку)
+        # с личным ключом — фото поста; с ключом сообщества — текст со ссылкой на наш сайт
         photo = _photo(p["photo"]) if p.get("photo") and os.environ.get("VK_USER_TOKEN") else None
-        att = [photo] if photo else [link]
+        att = [photo] if photo else []   # ссылка — в тексте: карточку ссылки ВК без подходящей картинки не принимает
         try:
             _call("wall.post", owner_id=-GROUP_ID, from_group=1, message=text[:15000], attachments=",".join(att))
             state["vk_last"] = pid
