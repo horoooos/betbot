@@ -4,10 +4,9 @@
   "OU25": 0.0
  },
  "learned": "2026-11-09",
- "schedule_day": "2026-11-08",
+ "schedule_day": "2026-11-09",
  "content_slot": "2026-11-08-23",
  "news_seen": [
-  "https://www.championat.com/football/news-6678626-obyavleny-sudejskie-naznacheniya-na-matchi-13-go-tura-rpl-sezona-2026-2027.html",
   "https://www.championat.com/cybersport/news-6678690-strimerskaya-premiya-slay-2026-vnov-projdyot-v-prirodnom-stile-pervye-detali.html",
   "komanda-derzhavinskogo-universiteta-stala-pobeditelem-studencheskoi-kiberligi",
   "https://www.sport-express.ru/hockey/world/news/v-shvecii-prizvali-boykotirovat-chempionat-mira-v-sluchae-uchastiya-rossiyskih-hokkeistov-2469109/",
@@ -506,9 +505,10 @@
   "https://www.championat.com/football/news-6691742-ne-dumayu-chto-eschyo-takoj-uvidim-genich-o-vtorom-gole-krasnodara-v-vorota-cska.html",
   "https://www.championat.com/basketball/news-6691774-detrojt-obyavil-novye-podrobnosti-vosstanovleniya-centrovogo-dzhejlena-dyurena.html",
   "https://www.championat.com/basketball/news-6691768-oklahoma-oficialno-vernula-zaschitnika-kotorogo-sama-vybrala-na-drafte-nba-2025.html",
-  "https://www.championat.com/basketball/news-6691760-chikago-bullz-filadelfiya-siksers-rezultat-matcha-9-noyabrya-2025-schyot-121-127-regulyarnyj-chempionat-nba-2026-2027.html"
+  "https://www.championat.com/basketball/news-6691760-chikago-bullz-filadelfiya-siksers-rezultat-matcha-9-noyabrya-2025-schyot-121-127-regulyarnyj-chempionat-nba-2026-2027.html",
+  "https://www.championat.com/tennis/news-6691884-gauff-nazvala-klyuchevoj-faktor-pobedy-nad-peguloj-v-matche-gruppy-itogovogo-turnira-wta.html"
  ],
- "news_i": 5,
+ "news_i": 6,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1490,17 +1490,17 @@
  "value_day": "2026-11-08",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-07",
- "site_stamp": "799|4639|2026-11-09 07",
+ "site_stamp": "799|4645|2026-11-09 08",
  "battle": {
   "bot": 1,
   "crowd": 1
  },
  "top_picks": {
-  "day": "2026-11-08",
+  "day": "2026-11-09",
   "keys": [
-   "NBA|401909946",
-   "B1|401878946",
-   "N1|401875548"
+   "NBA|401909956",
+   "NBA|401909955",
+   "NHL|401892680"
   ]
  },
  "value_check": "2026-11-09-2",
@@ -1626,7 +1626,7 @@
  "streak_day": {
   "2026-11-08": 1
  },
- "news_next": "2026-11-09T02:28:55.807530+03:00",
+ "news_next": "2026-11-09T08:33:30.729036+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1638,5 +1638,5 @@
  "bot_setup": 3,
  "tg_offset": 727618641,
  "push_watch": {},
- "news_video": true
+ "news_video": false
 }
