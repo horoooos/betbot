@@ -54,7 +54,8 @@ def tip_line(t: dict) -> str:
 def schedule(matches: list[dict], day: pd.Timestamp, extra: str = "") -> str:
     """Расписание дня: футбол по лигам, затем хоккей/баскетбол/теннис (extra)."""
     head = (f"📅 <b>МАТЧИ ДНЯ · {DAYS[day.weekday()].upper()}, {date_ru(day).upper()}</b>\n"
-            f"Футбольных матчей: <b>{len(matches)}</b>. Прогноз на каждый матч — примерно за час до начала 👇\n{LINE}")
+            + (f"Футбольных матчей: <b>{len(matches)}</b>. Прогноз на каждый матч — примерно за час до начала 👇\n{LINE}" if matches
+               else "Сегодня без футбола — играют хоккей, баскетбол и теннис. Прогнозы — примерно за час до начала 👇"))
     blocks = [head]
     by_league: dict[str, list] = {}
     for m in sorted(matches, key=lambda m: (ORDER.get(m["div"], 999), m["kickoff"])):
@@ -68,7 +69,8 @@ def schedule(matches: list[dict], day: pd.Timestamp, extra: str = "") -> str:
             lines.append(f"🕒 {ts(m):%H:%M}  {escape(m['home']['ru'])} — {escape(m['away']['ru'])}{fav}")
         blocks.append("\n".join(lines))
     if extra:
-        blocks.append(f"{LINE}\n<b>ДРУГИЕ ВИДЫ СПОРТА</b>")
+        if matches:   # без футбола — сразу список, без пустых разделителей
+            blocks.append(f"{LINE}\n<b>ДРУГИЕ ВИДЫ СПОРТА</b>")
         blocks.append(extra)
     blocks.append(FOOTER)
     return "\n\n".join(blocks)

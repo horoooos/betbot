@@ -269,6 +269,14 @@ def morning(state: dict, events: list[dict], other: list[dict], now: pd.Timestam
         top = sorted(day, key=lambda e: (ORDER.get(e["div"], 999), e["kickoff"]))[:8]
         rows = [(f"{pd.Timestamp(e['kickoff']):%H:%M}", e["home"]["ru"], e["away"]["ru"], ALL[e["div"]][2])
                 for e in sorted(top, key=lambda e: e["kickoff"])]
+        # свободные строки картинки — хоккей, НБА, теннис этого дня (без футбола картинка не останется пустой)
+        if len(rows) < 8:
+            pri = {"NHL": 0, "NBA": 1, "ATP": 2, "WTA": 3}
+            od = [e for e in other if e.get("state") == "pre" and e.get("sport") != "esports" and e.get("div") in pri
+                  and start <= pd.Timestamp(e["kickoff"]) < start + pd.Timedelta(days=1)]
+            od = sorted(od, key=lambda e: (pri[e["div"]], e["kickoff"]))[:8 - len(rows)]
+            rows += [(f"{pd.Timestamp(e['kickoff']):%H:%M}", e["home"].get("ru", e["home"].get("name", "")),
+                      e["away"].get("ru", e["away"].get("name", "")), sports.LEAGUES[e["div"]][2]) for e in sorted(od, key=lambda e: e["kickoff"])]
         title = f"{texts.DAYS[today.weekday()]}, {texts.date_ru(today)}"
         post(card.schedule_card(title, rows, len(day) - len(top), BRAND), texts.schedule(day, now, extra))
     print(f"Утренний пост: футбольных матчей в расписании {len(day)}")
