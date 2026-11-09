@@ -6857,31 +6857,31 @@
   "kickoff": "2026-11-09T20:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Mon, November 9th at 12:00 PM EST",
   "home": {
-   "id": "1955",
-   "name": "Elizabeth Mandlik",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/1955.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/usa.png"
    ],
+   "id": "1955",
+   "name": "Elizabeth Mandlik",
    "country": "USA",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
    "ru": "Элизабет Мандлик"
   },
   "away": {
-   "id": "5878",
-   "name": "Veronika Erjavec",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/5878.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/slo.png"
    ],
+   "id": "5878",
+   "name": "Veronika Erjavec",
    "country": "Slovenia",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
@@ -6941,7 +6941,9 @@
   "btn": 4,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null
  },
  "WTA|186756": {
   "status": "skipped",
