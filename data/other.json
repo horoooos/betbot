@@ -7069,31 +7069,31 @@
   "kickoff": "2026-11-09T23:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Mon, November 9th at 3:00 PM EST",
   "home": {
-   "id": "3038",
-   "name": "Aryna Sabalenka",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/3038.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/blr.png"
    ],
+   "id": "3038",
+   "name": "Aryna Sabalenka",
    "country": "Belarus",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
    "ru": "Арина Соболенко"
   },
   "away": {
-   "id": "3039",
-   "name": "Karolina Muchova",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/3039.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/cze.png"
    ],
+   "id": "3039",
+   "name": "Karolina Muchova",
    "country": "Czechia",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
@@ -7153,7 +7153,9 @@
   "btn": 4,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null
  },
  "WTA|187382": {
   "id": "187382",
