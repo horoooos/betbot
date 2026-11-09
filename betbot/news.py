@@ -263,13 +263,22 @@ def _ask(messages: list[dict]) -> tuple[dict | None, bool]:
                 return json.loads(raw[raw.index("{"): raw.rindex("}") + 1], strict=False), True
             except Exception:
                 continue
-    body = {"model": "openai", "private": True, "temperature": 0.2, "messages": messages}
+    # модель «думает» перед ответом: без лимита и низкого усилия она тратит все токены на размышления
+    # и длинную новость не выдаёт (ошибка output_token_limit_exceeded)
+    body = {"model": "openai", "private": True, "temperature": 0.2, "messages": messages,
+            "max_tokens": 4000, "reasoning_effort": "low"}
     for _ in range(2):  # бесплатная нейросеть иногда отвечает не по формату — даём вторую попытку
         try:
-            raw = requests.post(TEXT_API, json=body, timeout=90).json()["choices"][0]["message"]["content"]
-            return json.loads(raw[raw.index("{"): raw.rindex("}") + 1]), False
-        except Exception:
-            time.sleep(6)  # бесплатный доступ: при частых запросах отвечает ошибкой — ждём и повторяем
+            r = requests.post(TEXT_API, json=body, timeout=150)
+            if r.status_code != 200:
+                print(f"  ! нейросеть: {r.status_code} {r.text[:150]}")
+                time.sleep(46)  # бесплатный доступ: 1 ответ в 45 секунд — ждём и повторяем
+                continue
+            raw = r.json()["choices"][0]["message"]["content"]
+            return json.loads(raw[raw.index("{"): raw.rindex("}") + 1], strict=False), False   # длинный текст — с переносами строк
+        except Exception as e:
+            print(f"  ! нейросеть: {e}")
+            time.sleep(46)
     return None, False
 
 
@@ -285,8 +294,7 @@ def _rewrite(item: dict) -> dict | None:
         return None
     if title.lower() == item["title"].lower():  # нейросеть просто повторила заголовок — не годится
         return None
-    if any(w in text.lower() for w in WATER):  # «вода» и домыслы нейросети — такой текст не публикуем
-        return None
+    # «вода» и домыслы: в длинном тексте такие предложения выкидывает _grounded ниже, а не всю новость целиком
     words = lambda s: set(re.findall(r"\w{3,}", s.lower()))  # noqa: E731
     if len(words(text) - words(title)) < 6:  # текст — тот же заголовок другими словами, читать нечего
         return None
@@ -345,16 +353,18 @@ def run(state: dict, now: pd.Timestamp, brand: str) -> None:
         sport = ORDER[(i + shift) % len(ORDER)]
         fresh = [x for x in _items(sport) if x["id"] not in seen and x["when"] > now.tz_convert("UTC") - pd.Timedelta(hours=6)]
         fresh.sort(key=lambda x: not x.get("photo"))  # сначала новости с фото в ленте
-        for item in fresh[:5]:
+        for item in fresh[:12]:
             if tries >= MAX_TRIES:  # остальное — в следующий запуск (через пару минут)
                 state["news_next"] = (now + pd.Timedelta(minutes=2)).isoformat()
                 return
-            tries += 1
             seen.append(item["id"])
             item["body"], og = _article(item)
             item["photo"] = item.get("photo") or og
             if SOURCE_PHOTOS and not item["photo"]:  # без фото новость выглядит бедно — берём следующую
                 continue
+            if len(item["body"]) < 300:  # сайт не отдал статью (Чемпионат закрылся от ботов) — длинную новость не из чего писать
+                continue
+            tries += 1
             news = _rewrite(item)
             if not news or news["sport"] != sport:  # новость не про этот вид спорта (Ф-1, бокс…) — пропускаем
                 continue
