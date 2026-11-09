@@ -5,7 +5,7 @@
 вырезаем — ВК строго относится к рекламе ставок. Ссылка ведёт на наш сайт.
 
 Стена ВК недоступна по ключу сообщества — нужен личный ключ администратора (секрет VK_USER_TOKEN,
-права wall, photos, offline). Без него модуль молчит.
+права wall, photos, offline). Без него работает ключ сообщества VK_TOKEN: текст + карточка ссылки на сайт.
 """
 from __future__ import annotations
 
@@ -26,12 +26,17 @@ MAX_PER_PASS = 3               # не заваливаем стену, если 
 STOP = re.compile(r"betboom|бетбум|букмекер|промокод|фрибет|реферал", re.I)
 
 
+def _token() -> str:
+    """Личный ключ админа (может грузить фото) или ключ сообщества (VK_TOKEN: публикует текст со ссылкой)."""
+    return os.environ.get("VK_USER_TOKEN") or os.environ.get("VK_TOKEN") or ""
+
+
 def enabled() -> bool:
-    return bool(os.environ.get("VK_USER_TOKEN"))
+    return bool(_token())
 
 
 def _call(method: str, **params) -> dict:
-    params.update(access_token=os.environ["VK_USER_TOKEN"], v=V)
+    params.update(access_token=_token(), v=V)
     r = requests.post(API + method, data=params, timeout=30).json()
     if "error" in r:
         raise RuntimeError(f"VK {method}: {r['error'].get('error_code')} {r['error'].get('error_msg')}")
@@ -62,6 +67,22 @@ def _photo(url: str) -> str | None:
         return None
 
 
+DOCS = Path(__file__).resolve().parent.parent / "docs"
+DELAY_MIN = 10   # ждём, пока страница поста появится на сайте — тогда ВК покажет карточку ссылки с картинкой
+
+
+def _site_link(pid: int) -> str:
+    """Страница поста на нашем сайте: новость или прогноз на матч; иначе главная."""
+    news = sorted((DOCS / "news").glob(f"{pid}-*.html"))
+    if news:
+        return SITE + "news/" + news[0].name
+    needle = f"t.me/aistavvit/{pid}\""
+    for f in sorted((DOCS / "predictions").glob("*.html"), key=lambda f: f.stat().st_mtime, reverse=True)[:300]:
+        if needle in f.read_text(encoding="utf-8", errors="ignore"):
+            return SITE + "predictions/" + f.name
+    return SITE
+
+
 def crosspost(state: dict) -> int:
     """Публикует в ВК посты канала, вышедшие после прошлого запуска. Возвращает, сколько опубликовано."""
     if not enabled() or not CHANNEL.exists():
@@ -82,8 +103,14 @@ def crosspost(state: dict) -> int:
         if len(text) < 20 or "#live" in p.get("html", ""):   # пустые посты и live (голы, «матч начался») в ВК не дублируем
             state["vk_last"] = pid
             continue
-        text += f"\n\n📊 Прогнозы, статистика и матчи онлайн: {SITE}"
-        att = [a for a in [_photo(p["photo"]) if p.get("photo") else None] if a]
+        import pandas as pd
+        if pd.Timestamp.now(tz="UTC") - pd.Timestamp(p["t"]) < pd.Timedelta(minutes=DELAY_MIN):
+            break                         # пост совсем свежий — страница на сайте ещё публикуется, вернёмся позже
+        link = _site_link(pid)
+        text += "\n\n" + f"📊 Подробнее, статистика и матчи онлайн: {link}"
+        # с личным ключом — фото поста; с ключом сообщества — карточка ссылки на наш сайт (ВК сам подставит картинку)
+        photo = _photo(p["photo"]) if p.get("photo") and os.environ.get("VK_USER_TOKEN") else None
+        att = [photo] if photo else [link]
         try:
             _call("wall.post", owner_id=-GROUP_ID, from_group=1, message=text[:15000], attachments=",".join(att))
             state["vk_last"] = pid
