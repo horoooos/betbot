@@ -7420,5 +7420,98 @@
  "ATP|186537": {
   "status": "skipped",
   "kickoff": "2026-11-09T16:00:00+03:00"
+ },
+ "ATP|186536": {
+  "id": "186536",
+  "div": "ATP",
+  "sport": "tennis",
+  "tournament": "Bybit Stockholm Open",
+  "round": "Round 1",
+  "bo5": false,
+  "kickoff": "2026-11-09T16:30:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "detail": "Mon, November 9th at 8:30 AM EST",
+  "home": {
+   "id": "11396",
+   "name": "Adolfo Daniel Vallejo",
+   "logo": [
+    "https://a.espncdn.com/i/headshots/tennis/players/full/11396.png",
+    "https://a.espncdn.com/i/teamlogos/countries/500/par.png"
+   ],
+   "country": "Paraguay",
+   "color": "2d6a4f",
+   "winner": false,
+   "sets": [],
+   "set_won": [],
+   "ru": "Даниэль Вальехо"
+  },
+  "away": {
+   "id": "3085",
+   "name": "Ugo Humbert",
+   "logo": [
+    "https://a.espncdn.com/i/headshots/tennis/players/full/3085.png",
+    "https://a.espncdn.com/i/teamlogos/countries/500/fra.png"
+   ],
+   "country": "France",
+   "color": "2d6a4f",
+   "winner": false,
+   "sets": [],
+   "set_won": [],
+   "ru": "Юго Юмбер"
+  },
+  "odds": {},
+  "probs": {
+   "TN_W1": 0.5475390808715549,
+   "TN_W2": 0.4524609191284451,
+   "TN_3S": 0.49798573688196907,
+   "TN_2S": 0.5020142631180309,
+   "TN_S2:0": 0.28274246768478295,
+   "TN_S0:2": 0.21927179543324793,
+   "TN_S2:1": 0.26479661318677183,
+   "TN_S1:2": 0.23318912369519723,
+   "TN_SET1": 0.7807282045667521,
+   "TN_SET2": 0.717257532315217
+  },
+  "labels": {
+   "TN_W1": "Победа: Даниэль Вальехо",
+   "TN_W2": "Победа: Юго Юмбер",
+   "TN_3S": "Будет 3 сета",
+   "TN_2S": "Будет 2 сета",
+   "TN_S2:0": "Счёт по сетам 2:0",
+   "TN_S0:2": "Счёт по сетам 0:2",
+   "TN_S2:1": "Счёт по сетам 2:1",
+   "TN_S1:2": "Счёт по сетам 1:2",
+   "TN_SET1": "Даниэль Вальехо возьмёт хотя бы сет",
+   "TN_SET2": "Юго Юмбер возьмёт хотя бы сет"
+  },
+  "real": {},
+  "center": "Рейтинг Эло 1557 : 1524",
+  "bar": [
+   0.5475390808715549,
+   0,
+   0.4524609191284451
+  ],
+  "model": {
+   "elo": [
+    1557.1529488517826,
+    1524.0193291705596
+   ],
+   "src": "Эло"
+  },
+  "main": {
+   "key": "TN_2S",
+   "label": "Будет 2 сета",
+   "p": 0.502,
+   "odds": 1.85,
+   "est": true,
+   "stake": 1.0
+  },
+  "bold": {},
+  "open": {},
+  "top": false,
+  "msg_id": 4671,
+  "btn": 4
  }
 }
