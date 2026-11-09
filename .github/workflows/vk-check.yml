@@ -32,5 +32,25 @@ jobs:
               print("wall.get:", json.dumps(call("wall.get", owner_id=-gid, count=1), ensure_ascii=False)[:300])
               # пустой пост: ВК его не опубликует, но по ошибке видно, есть ли право публиковать (27 — нет, 100 — есть)
               print("wall.post (пустой, проверка прав):", json.dumps(call("wall.post", owner_id=-gid, from_group=1, message=""), ensure_ascii=False)[:300])
-              print("photos.getMessagesUploadServer:", json.dumps(call("photos.getMessagesUploadServer", peer_id=0), ensure_ascii=False)[:200])
+              # тест загрузки фото (ничего не публикуется): берём картинку и пробуем разные варианты
+              import uuid
+              img = urllib.request.urlopen("https://horoooos.github.io/betbot/og.png", timeout=30).read()
+              def upload(url, field, name, mime):
+                  b = uuid.uuid4().hex
+                  body = (f"--{b}\r\nContent-Disposition: form-data; name=\"{field}\"; filename=\"{name}\"\r\nContent-Type: {mime}\r\n\r\n").encode() + img + f"\r\n--{b}--\r\n".encode()
+                  req = urllib.request.Request(url, data=body, headers={"Content-Type": f"multipart/form-data; boundary={b}"})
+                  with urllib.request.urlopen(req, timeout=60) as r:
+                      return json.load(r)
+              for peer in (None, 0, 2000000001):
+                  try:
+                      args = {} if peer is None else {"peer_id": peer}
+                      srv = call("photos.getMessagesUploadServer", **args)
+                      print("upload server peer", peer, ":", json.dumps(srv, ensure_ascii=False)[:160])
+                      if "response" in srv:
+                          res = upload(srv["response"]["upload_url"], "photo", "og.png", "image/png")
+                          print("  upload ответ:", {k: (str(v)[:60]) for k, v in res.items()})
+                          if res.get("photo") and res["photo"] != "[]":
+                              print("  save:", json.dumps(call("photos.saveMessagesPhoto", photo=res["photo"], server=res["server"], hash=res["hash"]), ensure_ascii=False)[:300])
+                  except Exception as e:
+                      print("  ошибка:", e)
           EOF
