@@ -7,9 +7,6 @@
  "schedule_day": "2026-11-09",
  "content_slot": "2026-11-09-13",
  "news_seen": [
-  "https://www.championat.com/hockey/news-6679226-denisenko-o-vozvraschenii-sbornyh-rossii-dlya-vsego-nashego-hokkeya-eto-horosho.html",
-  "https://www.championat.com/hockey/news-6679214-olimpijskij-chempion-vojnov-otreagiroval-na-dopusk-rossii-k-mezhdunarodnym-startam.html",
-  "https://www.championat.com/hockey/news-6679210-zaschitnik-ak-barsa-yarullin-o-mchm-odin-iz-luchshih-turnirov-v-plane-emocij.html",
   "https://www.championat.com/football/news-6679292-statisticheskij-portal-sofascore-ocenil-igru-safonova-v-matche-pszh-gavr-v-lige-1.html",
   "https://www.championat.com/basketball/news-6679350-barselona-valensiya-rezultat-matcha-31-oktyabrya-2026-schet-98-94-evroliga-2026-2027.html",
   "https://www.championat.com/tennis/news-6679354-glavnaya-zadacha-polnostyu-vosstanovitsya-menshik-o-snyatii-s-mastersa-v-parizhe.html",
@@ -506,9 +503,12 @@
   "https://www.championat.com/cybersport/news-6692300-moj-lyubimyj-geroj-aleksandr-nevskij-o-sherife-turchine-iz-vesterna-rio-bravo.html",
   "karrigan-chtoby-vyigrat-meidzhor-nuzhno-chtoby-kazhdyi-yelement-mekhanizma",
   "https://www.championat.com/cybersport/news-6692402-izdaniya-gta-6-chem-otlichaetsya-standart-ot-ultimate-raznica-versij.html",
-  "https://www.championat.com/cybersport/news-6692262-eto-istoricheskij-moment-bin-o-pobede-nad-t1-i-vyhode-v-final-worlds-2026.html"
+  "https://www.championat.com/cybersport/news-6692262-eto-istoricheskij-moment-bin-o-pobede-nad-t1-i-vyhode-v-final-worlds-2026.html",
+  "https://www.championat.com/football/news-6692440-yurij-syomin-rasskazal-kto-mog-by-vozglavit-lokomotiv.html",
+  "https://www.championat.com/football/news-6692420-mozhet-byt-chto-to-budet-kislyak-prokommentiroval-interes-galatasaraya-i-fenerbahche.html",
+  "https://www.championat.com/football/news-6692406-roman-shirokov-zenit-kak-igral-s-perepadami-tak-i-igraet-nichego-novogo-tam-net.html"
  ],
- "news_i": 0,
+ "news_i": 1,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1626,7 +1626,7 @@
  "streak_day": {
   "2026-11-08": 1
  },
- "news_next": "2026-11-09T15:25:01.411584+03:00",
+ "news_next": "2026-11-09T15:56:34.380316+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1638,5 +1638,5 @@
  "bot_setup": 3,
  "tg_offset": 727618641,
  "push_watch": {},
- "news_video": true
+ "news_video": false
 }
