@@ -133,6 +133,7 @@ def crosspost(state: dict) -> int:
             done += 1
         except Exception as e:
             print(f"  ! ВК: пост {pid} не опубликован: {e}")
+            state["vk_err"] = f"{pid}: {e}"[:300]   # видно в data/state.json без журнала GitHub
             break                         # ошибка ключа/лимита — попробуем в следующий проход
     if done:
         print(f"  ВК: опубликовано постов: {done}")

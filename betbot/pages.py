@@ -205,6 +205,12 @@ def _crumbs(prefix: str, items: list[tuple[str, str | None]]) -> tuple[str, dict
 
 def _news(store: dict[int, dict]) -> list[dict]:
     out = []
+    # длинная новость: продолжение выходит ответом «📖 Продолжение» — на сайте склеиваем в один текст
+    conts = {}
+    for p in store.values():
+        if p.get("reply") and _plain(p["html"]).lstrip().startswith("📖"):
+            c = p["html"].split("\n", 1)[1] if "\n" in p["html"] else ""
+            conts[p["reply"]] = re.sub(r"\s*<a[^>]*>#[^<]+</a>\s*$", "", c.strip()).strip()
     for p in store.values():
         plain = _plain(p["html"]).strip()
         tail = plain.rsplit("\n", 1)[-1].strip()
@@ -216,6 +222,9 @@ def _news(store: dict[int, dict]) -> list[dict]:
         title = re.sub(r"^[^\wА-Яа-яЁё«\"]+", "", lines[0]).strip()
         body_html = p["html"].split("\n", 1)[1] if "\n" in p["html"] else ""
         body_html = re.sub(r"\s*<a[^>]*>#[^<]+</a>\s*$", "", body_html.strip())
+        body_html = re.sub(r"\s*👇 Продолжение — в ответе\s*", "\n", body_html).strip()
+        if conts.get(p["id"]):
+            body_html += "\n\n" + conts[p["id"]]
         t = pd.Timestamp(p["t"]).tz_convert("Europe/Moscow")
         out.append({"id": p["id"], "title": title, "sport": NEWS_TAGS[tail], "t": t, "photo": p.get("photo"),
                     "body": body_html.strip(), "desc": " ".join(lines[1:3])[:240],

@@ -119,9 +119,11 @@ def _models(env: str, base: str, rank: tuple, key: str) -> list[str]:
     return best
 STRONG_STYLE = (
     "Ты — автор популярного спортивного Telegram-канала, тебя читают с удовольствием. Пиши живо и эмоционально: "
-    "первая строка — цепляющий крючок с эмодзи (😱🔥💥⚡️🏆 и т. п. по смыслу), дальше 2–3 коротких абзаца по 1–2 "
-    "предложения, разделённых пустой строкой; в начале абзацев — уместные эмодзи (⚽️🏒🏀🎾🎮📊💬🗓🎯💪😮), всего 3–6 "
-    "эмодзи на текст. Яркие глаголы, разговорный, но грамотный язык, без канцелярита и штампов. 400–800 символов. "
+    "первая строка — цепляющий крючок с эмодзи (😱🔥💥⚡️🏆 и т. п. по смыслу), дальше 5–8 абзацев по 1–3 "
+    "предложения, разделённых пустой строкой; в начале абзацев — уместные эмодзи (⚽️🏒🏀🎾🎮📊💬🗓🎯💪😮), всего 4–8 "
+    "эмодзи на текст. Яркие глаголы, разговорный, но грамотный язык, без канцелярита и штампов. 1200–2500 символов: "
+    "раскрой ВСЕ детали статьи — контекст, цифры и статистику, ход событий, суть цитат, реакции, что будет дальше "
+    "(всё это — только если есть в исходнике). Чем больше фактов в статье, тем подробнее текст. "
     "Факты, цифры, имена и цитаты — ТОЛЬКО из исходника, ничего не придумывай: эмоцию передавай подачей и словами, "
     "а не выдуманными деталями. Первая строка text НЕ повторяет заголовок — она добавляет к нему деталь или интригу. "
     "В поле text абзацы разделяй символами \\n\\n. "
@@ -132,13 +134,15 @@ PROMPT = (
     "Структура текста: 1) главное событие с конкретикой (кто, что, счёт/цифры, турнир); "
     "2) важные детали из текста статьи (статистика, обстоятельства, суть цитаты своими словами); "
     "3) что это значит или что будет дальше — ТОЛЬКО если это есть в исходнике. "
-    "Если фактов мало — напиши 2 коротких предложения, не растягивай и не додумывай. "
+    "4) реакции, контекст сезона, история противостояния — если это есть в статье. "
+    "Если фактов мало — напиши 4–5 предложений по существу, не растягивай водой и не додумывай. "
     "СТРОГО: только факты из исходника, ничего не выдумывай. Без канцелярита и пустых фраз вроде "
     "«отметил впечатление», «стоит отметить», «это событие вызвало интерес». Не пиши про источник. "
     "Пиши грамотно, без опечаток и несуществующих слов. "
     "Ответь только JSON без пояснений: {\"sport\": \"football|hockey|basketball|tennis|esports|other\", "
     "\"title\": \"цепляющий информативный заголовок до 70 символов: кто и что сделал (не цитата, не обрывок)\", "
-    "\"text\": \"3–4 предложения, 250–500 символов, по структуре выше; не повторяй заголовок слово в слово\", "
+    "\"text\": \"подробная новость: 8–16 предложений в 5–8 абзацах, 1200–2500 символов, по структуре выше; "
+    "не повторяй заголовок слово в слово\", "
     "\"emoji\": \"один подходящий эмодзи\"}"
 )
 
@@ -188,7 +192,7 @@ def _article(item: dict) -> tuple[str, str | None]:
     paras = [_clean(p) for p in re.findall(r"<p[^>]*>(.*?)</p>", h, re.S)]
     # меню и подписи короткие, а абзацы статьи — длинные предложения
     paras = [p for p in paras if len(p) >= 60 and p.count(" ") >= 8 and "cookie" not in p.lower()]
-    body = " ".join(paras)[:1800]
+    body = " ".join(paras)[:6000]   # почти вся статья — чтобы пересказ был подробным
     if any(w in body.lower() for w in ("перенаправлен", "подождите", "javascript", "включите")):
         body = ""  # вместо статьи — заглушка сайта
     return body, (og.group(1) if og else None)
@@ -215,7 +219,7 @@ def _grounded(text: str, item: dict, strict: bool = True) -> str:
     Сильная модель пишет живее и своими словами — для неё порог мягче (35%), до 5 предложений.
     """
     src = _stems(item["title"] + " " + item["desc"] + " " + item.get("body", ""))
-    need, most = (0.6, 3) if strict else (0.35, 7)
+    need, most = (0.6, 10) if strict else (0.35, 18)
     paras, total = [], 0
     for para in re.split(r"\n\s*\n|\n", text.strip()):  # абзацы сохраняем — так текст читается легче
         keep = []
@@ -228,7 +232,7 @@ def _grounded(text: str, item: dict, strict: bool = True) -> str:
                 total += 1
         if keep:
             paras.append(" ".join(keep))
-    text = ("\n\n" if not strict else " ").join(paras)
+    text = "\n\n".join(paras)
     return text if len(text) >= (90 if strict else 160) else ""
 
 
@@ -276,7 +280,7 @@ def _rewrite(item: dict) -> dict | None:
         return None
     fix = str.maketrans({"‐": "-", "‑": "-", " ": " ", " ": " "})  # «неразрывные» дефисы и пробелы
     title, text = str(data.get("title", "")).strip().translate(fix), str(data.get("text", "")).strip().translate(fix)
-    if not (10 <= len(title) <= 110 and 40 <= len(text) <= 1000):
+    if not (10 <= len(title) <= 110 and 40 <= len(text) <= 3200):
         return None
     if title.lower() == item["title"].lower():  # нейросеть просто повторила заголовок — не годится
         return None
@@ -294,6 +298,26 @@ def _rewrite(item: dict) -> dict | None:
         return None  # после проверки фактов почти ничего не осталось — новость не выходит
     return {"sport": str(data.get("sport", "")).strip().lower(), "title": title, "text": text,
             "emoji": str(data.get("emoji") or "")[:4]}
+
+
+def _split(head: str, body: str, tags: str, limit: int = 1000) -> tuple[str, str]:
+    """Подпись к картинке (заголовок + первые абзацы, до limit символов) и продолжение (остальные абзацы)."""
+    paras = [escape(p.strip()) for p in body.split("\n\n") if p.strip()]
+    cap, i = head, 0
+    while i < len(paras) and len(cap + "\n\n" + paras[i] + "\n\n" + tags) <= limit:
+        cap += "\n\n" + paras[i]
+        i += 1
+    if i == 0 and paras:   # первый абзац сам не влез — режем по предложениям
+        sents = re.split(r"(?<=[.!?…])\s+", paras[0])
+        j = 0
+        while j < len(sents) and len(cap + " " + sents[j] + "\n\n" + tags) <= limit:
+            cap += ("\n\n" if j == 0 else " ") + sents[j]
+            j += 1
+        paras[0] = " ".join(sents[j:])
+        if not paras[0]:
+            i = 1
+    rest = "\n\n".join(p for p in paras[i:] if p)
+    return (cap + ("\n\n👇 Продолжение — в ответе" if rest else "") + "\n\n" + tags)[:1024], rest
 
 
 def run(state: dict, now: pd.Timestamp, brand: str) -> None:
@@ -330,16 +354,27 @@ def run(state: dict, now: pd.Timestamp, brand: str) -> None:
             body = news["text"]
             if body.startswith(emo):  # тот же эмодзи и в заголовке, и в начале текста — второй убираем
                 body = body[len(emo):].lstrip()
-            caption = f"{emo} <b>{escape(news['title'])}</b>\n\n{escape(body)}\n\n{TAGS[sport]}"
+            # длинная новость: под картинкой/видео — сколько влезает в подпись (лимит Telegram 1024),
+            # остальное — продолжением сразу ответом на пост
+            head, rest = _split(f"{emo} <b>{escape(news['title'])}</b>", body, TAGS[sport])
+            caption = head
             # по очереди: видео-новость (наш ролик с водяным знаком @aistavvit) и новость с картинкой
             mp4 = None
             if state.get("news_video", True):
                 from . import video
                 mp4 = video.news_video(png)
             if mp4:
-                telegram.send_video(mp4, caption, png)
+                mid = telegram.send_video(mp4, caption, png)
             else:
-                telegram.send_photo(png, caption)
+                mid = telegram.send_photo(png, caption)
+            if rest:
+                telegram.send(f"📖 <b>Продолжение</b>\n\n{rest}\n\n{TAGS[sport]}", reply_to=mid, silent=True)
+            # канал для Дзена: новость — картинкой (видео Дзен не берёт), с тем же текстом
+            try:
+                from . import dzen
+                dzen.post_news(png, caption, mid)
+            except Exception as ex:
+                print(f"  ! Дзен-канал: новость не отправилась: {ex}")
             state["news_video"] = not state.get("news_video", True) if mp4 or not state.get("news_video", True) else True
             state["news_i"] = (i + shift + 1) % len(ORDER)
             state["news_next"] = (now + pd.Timedelta(minutes=random.randint(27, 33))).isoformat()  # каждые ~30 минут

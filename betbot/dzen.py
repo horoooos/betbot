@@ -35,6 +35,14 @@ def kind(html: str) -> str | None:
     return None
 
 
+def post_news(png: bytes, caption: str, source_id: int | None = None) -> None:
+    """Новость — в канал для Дзена сразу картинкой (видео @zen_sync_bot не берёт, пост в Дзене был бы пустым)."""
+    if not os.environ.get("TELEGRAM_TOKEN"):
+        return
+    cap = caption.replace("👇 Продолжение — в ответе", "📖 Полностью — в Telegram-канале @aistavvit")
+    telegram._call("sendPhoto", chat_id=TARGET, files={"photo": ("news.png", png, "image/png")}, caption=cap[:1024], parse_mode="HTML")
+
+
 def crosspost(state: dict) -> int:
     if not CHANNEL.exists() or not os.environ.get("TELEGRAM_TOKEN"):
         return 0
@@ -49,12 +57,13 @@ def crosspost(state: dict) -> int:
     done = 0
     for pid in sorted(int(k) for k in posts if int(k) > state["dz_last"])[:MAX_PER_PASS]:
         k = kind(posts[str(pid)].get("html", ""))
-        if k:
+        if k and k != "новость":                      # новости news.py отправляет сам — картинкой (см. post_news)
             try:
                 telegram._call("copyMessage", chat_id=TARGET, from_chat_id=os.environ["TELEGRAM_CHAT_ID"], message_id=pid)
                 done += 1
             except Exception as e:
                 print(f"  ! Дзен-канал: пост {pid} не скопирован (бот — админ в {TARGET}?): {e}")
+                state["dz_err"] = f"{pid}: {e}"[:300]
                 break                                 # попробуем в следующий проход
         state["dz_last"] = pid
     if done:
