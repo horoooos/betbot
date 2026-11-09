@@ -58,28 +58,18 @@ jobs:
       - name: Bot-style upload test (no post)
         env:
           VK_TOKEN: ${{ secrets.VK_TOKEN }}
+          VK_USER_TOKEN: ${{ secrets.VK_USER_TOKEN }}
         run: |
           pip install -q requests pillow pandas
-          python3 - <<'EOF'
-          import json, requests, sys
+          python3 - <<'PY'
+          import json, os, sys
           sys.path.insert(0, ".")
           from betbot import postimg, vk
+          print("VK_TOKEN задан:", bool(os.environ.get("VK_TOKEN")), "| VK_USER_TOKEN задан:", bool(os.environ.get("VK_USER_TOKEN")))
           posts = json.load(open("data/channel.json", encoding="utf-8"))["posts"]
-          pid = max((int(k) for k, v in posts.items() if v.get("photo")))
-          img = postimg.image_for(posts[str(pid)], "итог", posts)
-          print("картинка:", pid, len(img or b""), (img or b"")[:3])
-          import io
-          from PIL import Image
-          og = requests.get("https://horoooos.github.io/betbot/og.png", timeout=30).content
-          im = Image.open(io.BytesIO(img)).convert("RGB")
-          def b(fmt, **kw):
-              o = io.BytesIO(); im.save(o, fmt, **kw); return o.getvalue()
-          variants = {"og.png как есть": (og, "og.png", "image/png"), "наш jpeg": (img, "post.jpg", "image/jpeg"),
-                      "наш как png": (b("PNG"), "post.png", "image/png"), "наш jpeg baseline q85": (b("JPEG", quality=85, progressive=False, optimize=False), "post.jpg", "image/jpeg"),
-                      "наш 1280 jpeg": (b("JPEG", quality=90) if im.width >= 1280 else (lambda x: x)(b("JPEG", quality=90)), "photo.jpg", "image/jpeg")}
-          print("размер:", im.size)
-          for name, (data, fn, mime) in variants.items():
-              up = vk._call("photos.getMessagesUploadServer", peer_id=0)["upload_url"]
-              r = requests.post(up, files={"photo": (fn, data, mime)}, timeout=60)
-              print(f"ответ загрузки [{name}] {len(data)} байт:", repr(r.text[:120]))
-          EOF
+          pid = max(int(k) for k in posts)
+          img = postimg.image_for(posts[str(pid)], "новость", posts)
+          print("картинка:", pid, len(img or b""))
+          vk._photo.err = ""
+          print("ВЛОЖЕНИЕ:", vk._photo(img), "| ошибка:", vk._photo.err)
+          PY

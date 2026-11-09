@@ -35,9 +35,13 @@ def enabled() -> bool:
     return bool(_token())
 
 
-def _call(method: str, **params) -> dict:
-    params.update(access_token=_token(), v=V)
-    r = requests.post(API + method, data=params, timeout=30).json()
+def _call(method: str, _tok: str | None = None, **params) -> dict:
+    params.update(access_token=_tok or _token(), v=V)
+    resp = requests.post(API + method, data=params, timeout=30)
+    try:
+        r = resp.json()
+    except ValueError:
+        raise RuntimeError(f"VK {method}: ответ не JSON ({resp.status_code}): {resp.text[:120]!r}") from None
     if "error" in r:
         raise RuntimeError(f"VK {method}: {r['error'].get('error_code')} {r['error'].get('error_msg')}")
     return r["response"]
@@ -60,30 +64,43 @@ def _photo(img: bytes) -> str | None:
     Личный ключ — как фото стены. Ключ сообщества фото стены грузить не умеет, поэтому грузим как
     «фото для сообщений сообщества» и прикрепляем к посту (нужны включённые сообщения сообщества).
     """
-    try:
-        if os.environ.get("VK_USER_TOKEN"):
+    import time
+    s, errs = None, []
+    if os.environ.get("VK_USER_TOKEN"):
+        try:
             up = _call("photos.getWallUploadServer", group_id=GROUP_ID)["upload_url"]
-            res = requests.post(up, files={"photo": (("post.png", img, "image/png") if img[1:4] == b"PNG" else ("post.jpg", img, "image/jpeg"))}, timeout=60).json()
+            r = requests.post(up, files={"photo": (("post.png", img, "image/png") if img[1:4] == b"PNG" else ("post.jpg", img, "image/jpeg"))}, timeout=60)
+            try:
+                res = r.json()
+            except ValueError:
+                raise RuntimeError(f"сервер загрузки ответил не JSON ({r.status_code}): {r.text[:80]!r}") from None
             s = _call("photos.saveWallPhoto", group_id=GROUP_ID, photo=res["photo"], server=res["server"], hash=res["hash"])[0]
-        else:
+        except Exception as e:   # личный ключ не сработал — грузим через сообщения сообщества
+            errs.append(f"стена: {e}")
+            print(f"  ! ВК: фото стены не загрузилось: {e}")
+    try:
+        if not s:
+            if not os.environ.get("VK_TOKEN"):
+                raise RuntimeError("нет VK_TOKEN для загрузки через сообщения")
             res = {}
             for attempt in range(3):   # сервер загрузки ВК иногда возвращает пустое фото — пробуем заново с новым адресом
-                up = _call("photos.getMessagesUploadServer", peer_id=0)["upload_url"]
+                up = _call("photos.getMessagesUploadServer", _tok=os.environ["VK_TOKEN"], peer_id=0)["upload_url"]
+                r = requests.post(up, files={"photo": (("post.png", img, "image/png") if img[1:4] == b"PNG" else ("post.jpg", img, "image/jpeg"))}, timeout=60)
                 try:
-                    res = requests.post(up, files={"photo": (("post.png", img, "image/png") if img[1:4] == b"PNG" else ("post.jpg", img, "image/jpeg"))}, timeout=60).json()
+                    res = r.json()
                 except ValueError:
-                    res = {}
+                    res = {"ответ": f"{r.status_code} {r.text[:80]}"}
                 if res.get("photo") and res.get("photo") != "[]":
                     break
-                import time
                 time.sleep(2)
             if not res.get("photo") or res.get("photo") == "[]":
                 raise RuntimeError(f"ВК не принял файл после 3 попыток ({len(img)} байт): {str(res)[:120]}")
-            s = _call("photos.saveMessagesPhoto", photo=res["photo"], server=res["server"], hash=res["hash"])[0]
+            s = _call("photos.saveMessagesPhoto", _tok=os.environ["VK_TOKEN"], photo=res["photo"], server=res["server"], hash=res["hash"])[0]
         return f"photo{s['owner_id']}_{s['id']}" + (f"_{s['access_key']}" if s.get("access_key") else "")
     except Exception as e:
+        errs.append(f"сообщения: {e}")
         print(f"  ! ВК: картинка не загрузилась: {e}")
-        _photo.err = str(e)[:200]
+        _photo.err = " | ".join(errs)[:300]
         return None
 
 
@@ -156,9 +173,9 @@ def crosspost(state: dict) -> int:
         # с личным ключом — фото поста; с ключом сообщества — текст со ссылкой на наш сайт
         from . import dzen, postimg
         img = postimg.image_for(p, ("начало" if started else dzen.kind(p.get("html", "")) or "новость"), posts)
+        _photo.err = "" if img else "картинка поста не получена"
         photo = _photo(img) if img else None
-        if not photo and getattr(_photo, "err", ""):
-            state["vk_err"] = f"фото: {_photo.err}"
+        state["vk_err"] = f"{pid} фото: {_photo.err}" if not photo else None   # старую ошибку стираем
         att = [photo] if photo else []   # ссылка — в тексте: карточку ссылки ВК без подходящей картинки не принимает
         try:
             _call("wall.post", owner_id=-GROUP_ID, from_group=1, message=text[:15000], attachments=",".join(att))
