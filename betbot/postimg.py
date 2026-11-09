@@ -55,10 +55,27 @@ def _card(html: str, kind: str) -> bytes:
     return card.slide_card(kicker, big, sub, rest, COLORS.get(kind, COLORS["новость"]), brand="@aistavvit")
 
 
+def as_jpeg(data: bytes | None) -> bytes | None:
+    """Проверяем, что это действительно картинка, и пересохраняем в обычный JPEG (его принимают все соцсети)."""
+    if not data:
+        return None
+    try:
+        import io
+        from PIL import Image
+        im = Image.open(io.BytesIO(data)).convert("RGB")
+        if im.width < 200 or im.height < 120:
+            return None
+        out = io.BytesIO()
+        im.save(out, "JPEG", quality=90)
+        return out.getvalue()
+    except Exception:
+        return None
+
+
 def _get(url: str) -> bytes | None:
     try:
         r = requests.get(url, timeout=25, headers={"User-Agent": "Mozilla/5.0"})
-        return r.content if r.ok and len(r.content) > 5000 else None
+        return as_jpeg(r.content) if r.ok else None
     except Exception:
         return None
 
@@ -111,18 +128,15 @@ def image_for(post: dict, kind: str, posts: dict | None = None) -> bytes | None:
             jpg = None
         try:   # инфографика разбора: логотипы, форма, рейтинг, личные встречи, шансы, прогноз бота
             from .razbor_card import razbor_card
-            return razbor_card(post.get("html", ""), jpg)
+            return as_jpeg(razbor_card(post.get("html", ""), jpg))
         except Exception as e:
             print(f"  ! картинка разбора не нарисовалась: {e}")
     if post.get("photo"):
-        try:
-            r = requests.get(post["photo"], timeout=25, headers={"User-Agent": "Mozilla/5.0"})
-            if r.ok and len(r.content) > 5000:
-                return r.content
-        except Exception:
-            pass
+        jpg = _get(post["photo"])   # своя картинка поста — только если это действительно картинка
+        if jpg:
+            return jpg
     try:
-        return _card(post.get("html", ""), kind)
+        return as_jpeg(_card(post.get("html", ""), kind))
     except Exception as e:
         print(f"  ! картинка поста не нарисовалась: {e}")
         return None

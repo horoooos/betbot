@@ -68,6 +68,8 @@ def _photo(img: bytes) -> str | None:
         else:
             up = _call("photos.getMessagesUploadServer", peer_id=0)["upload_url"]
             res = requests.post(up, files={"photo": (("post.png", img, "image/png") if img[1:4] == b"PNG" else ("post.jpg", img, "image/jpeg"))}, timeout=60).json()
+            if not res.get("photo") or res.get("photo") == "[]":
+                raise RuntimeError(f"ВК не принял файл ({len(img)} байт, начало {img[:4]!r}): {str(res)[:120]}")
             s = _call("photos.saveMessagesPhoto", photo=res["photo"], server=res["server"], hash=res["hash"])[0]
         return f"photo{s['owner_id']}_{s['id']}" + (f"_{s['access_key']}" if s.get("access_key") else "")
     except Exception as e:
