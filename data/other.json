@@ -7353,22 +7353,22 @@
   "kickoff": "2026-11-09T02:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "home": {
+   "color": "1d428a",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/det.png",
    "id": "8",
    "name": "Detroit Pistons",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/det.png",
-   "color": "1d428a",
    "score": "0",
    "record": "6-2",
    "periods": [],
    "ru": "Детройт Пистонс"
   },
   "away": {
+   "color": "552583",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/lal.png",
    "id": "13",
    "name": "Los Angeles Lakers",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/lal.png",
-   "color": "552583",
    "score": "0",
    "record": "8-2",
    "periods": [],
@@ -7443,7 +7443,9 @@
   "btn": 4,
   "close": {
    "BB_U216.5": 0.5
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null
  },
  "NHL|401892676": {
   "id": "401892676",
