@@ -106,9 +106,14 @@ def image_for(post: dict, kind: str, posts: dict | None = None) -> bytes | None:
             q = posts.get(str(j)) or {}
             if q.get("photo") and teams and teams in plain(q.get("html", "")) and "ПРОГНОЗ" in plain(q.get("html", "")):
                 jpg = _get(q["photo"])
-                if jpg:
-                    return _ribbon(jpg)
                 break
+        else:
+            jpg = None
+        try:   # инфографика разбора: логотипы, форма, рейтинг, личные встречи, шансы, прогноз бота
+            from .razbor_card import razbor_card
+            return razbor_card(post.get("html", ""), jpg)
+        except Exception as e:
+            print(f"  ! картинка разбора не нарисовалась: {e}")
     if post.get("photo"):
         try:
             r = requests.get(post["photo"], timeout=25, headers={"User-Agent": "Mozilla/5.0"})
