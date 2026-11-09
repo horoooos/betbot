@@ -323,7 +323,17 @@ def _split(head: str, body: str, tags: str, limit: int = 1000) -> tuple[str, str
 
 def run(state: dict, now: pd.Timestamp, brand: str) -> None:
     """Вызывается каждый запуск; публикует одну новость, когда подошло случайное время."""
-    if 2 <= now.hour < 8:  # ночью с 02:00 до 08:00 новостей нет
+    # «новость сейчас»: в data/news_now.txt кладут метку времени — бот выпускает новость на ближайшем проходе (один раз)
+    try:
+        from pathlib import Path
+        flag = (Path(__file__).resolve().parent.parent / "data" / "news_now.txt").read_text(encoding="utf-8").strip()
+        if flag and flag != state.get("news_forced"):
+            state["news_forced"] = flag
+            state["news_next"] = None
+            print(f"Новость по запросу ({flag})")
+    except OSError:
+        pass
+    if 2 <= now.hour < 8 and state.get("news_next") is not None:  # ночью с 02:00 до 08:00 новостей нет
         return
     nxt = state.get("news_next")
     if nxt and now < pd.Timestamp(nxt):
