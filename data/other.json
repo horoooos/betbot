@@ -7045,31 +7045,31 @@
   "kickoff": "2026-11-09T16:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Mon, November 9th at 8:30 AM EST",
   "home": {
-   "id": "11396",
-   "name": "Adolfo Daniel Vallejo",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/11396.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/par.png"
    ],
+   "id": "11396",
+   "name": "Adolfo Daniel Vallejo",
    "country": "Paraguay",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
    "ru": "Даниэль Вальехо"
   },
   "away": {
-   "id": "3085",
-   "name": "Ugo Humbert",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/3085.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/fra.png"
    ],
+   "id": "3085",
+   "name": "Ugo Humbert",
    "country": "France",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
@@ -7129,7 +7129,9 @@
   "btn": 4,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null
  },
  "WTA|186744": {
   "status": "skipped",
