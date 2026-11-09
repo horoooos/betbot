@@ -82,20 +82,24 @@ def _photo(img: bytes) -> str | None:
         if not s:
             if not os.environ.get("VK_TOKEN"):
                 raise RuntimeError("нет VK_TOKEN для загрузки через сообщения")
-            res = {}
-            for attempt in range(3):   # сервер загрузки ВК иногда возвращает пустое фото — пробуем заново с новым адресом
-                up = _call("photos.getMessagesUploadServer", _tok=os.environ["VK_TOKEN"], peer_id=0)["upload_url"]
-                r = requests.post(up, files={"photo": (("post.png", img, "image/png") if img[1:4] == b"PNG" else ("post.jpg", img, "image/jpeg"))}, timeout=60)
+            last = ""
+            for attempt in range(3):   # ВК иногда отвечает пустым фото или не-JSON — пробуем заново с новым адресом
                 try:
-                    res = r.json()
-                except ValueError:
-                    res = {"ответ": f"{r.status_code} {r.text[:80]}"}
-                if res.get("photo") and res.get("photo") != "[]":
+                    up = _call("photos.getMessagesUploadServer", _tok=os.environ["VK_TOKEN"], peer_id=0)["upload_url"]
+                    r = requests.post(up, files={"photo": (("post.png", img, "image/png") if img[1:4] == b"PNG" else ("post.jpg", img, "image/jpeg"))}, timeout=60)
+                    try:
+                        res = r.json()
+                    except ValueError:
+                        raise RuntimeError(f"сервер загрузки ответил не JSON ({r.status_code}): {r.text[:80]!r}") from None
+                    if not res.get("photo") or res.get("photo") == "[]":
+                        raise RuntimeError(f"пустое фото ({len(img)} байт): {str(res)[:100]}")
+                    s = _call("photos.saveMessagesPhoto", _tok=os.environ["VK_TOKEN"], photo=res["photo"], server=res["server"], hash=res["hash"])[0]
                     break
-                time.sleep(2)
-            if not res.get("photo") or res.get("photo") == "[]":
-                raise RuntimeError(f"ВК не принял файл после 3 попыток ({len(img)} байт): {str(res)[:120]}")
-            s = _call("photos.saveMessagesPhoto", _tok=os.environ["VK_TOKEN"], photo=res["photo"], server=res["server"], hash=res["hash"])[0]
+                except Exception as e:
+                    last = str(e)
+                    time.sleep(3)
+            if not s:
+                raise RuntimeError(f"после 3 попыток: {last}")
         return f"photo{s['owner_id']}_{s['id']}" + (f"_{s['access_key']}" if s.get("access_key") else "")
     except Exception as e:
         errs.append(f"сообщения: {e}")
