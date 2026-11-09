@@ -6853,31 +6853,31 @@
   "kickoff": "2026-11-09T18:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Mon, November 9th at 10:30 AM EST",
   "home": {
-   "id": "2346",
-   "name": "Tatjana Maria",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/2346.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/ger.png"
    ],
+   "id": "2346",
+   "name": "Tatjana Maria",
    "country": "Germany",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
    "ru": "Татьяна Мария"
   },
   "away": {
-   "id": "13950",
-   "name": "Luisina Giovannini",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/13950.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/arg.png"
    ],
+   "id": "13950",
+   "name": "Luisina Giovannini",
    "country": "Argentina",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
@@ -6937,7 +6937,9 @@
   "btn": 4,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null
  },
  "ATP|186530": {
   "status": "skipped",
