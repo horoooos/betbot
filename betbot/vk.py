@@ -66,10 +66,19 @@ def _photo(img: bytes) -> str | None:
             res = requests.post(up, files={"photo": (("post.png", img, "image/png") if img[1:4] == b"PNG" else ("post.jpg", img, "image/jpeg"))}, timeout=60).json()
             s = _call("photos.saveWallPhoto", group_id=GROUP_ID, photo=res["photo"], server=res["server"], hash=res["hash"])[0]
         else:
-            up = _call("photos.getMessagesUploadServer", peer_id=0)["upload_url"]
-            res = requests.post(up, files={"photo": (("post.png", img, "image/png") if img[1:4] == b"PNG" else ("post.jpg", img, "image/jpeg"))}, timeout=60).json()
+            res = {}
+            for attempt in range(3):   # сервер загрузки ВК иногда возвращает пустое фото — пробуем заново с новым адресом
+                up = _call("photos.getMessagesUploadServer", peer_id=0)["upload_url"]
+                try:
+                    res = requests.post(up, files={"photo": (("post.png", img, "image/png") if img[1:4] == b"PNG" else ("post.jpg", img, "image/jpeg"))}, timeout=60).json()
+                except ValueError:
+                    res = {}
+                if res.get("photo") and res.get("photo") != "[]":
+                    break
+                import time
+                time.sleep(2)
             if not res.get("photo") or res.get("photo") == "[]":
-                raise RuntimeError(f"ВК не принял файл ({len(img)} байт, начало {img[:4]!r}): {str(res)[:120]}")
+                raise RuntimeError(f"ВК не принял файл после 3 попыток ({len(img)} байт): {str(res)[:120]}")
             s = _call("photos.saveMessagesPhoto", photo=res["photo"], server=res["server"], hash=res["hash"])[0]
         return f"photo{s['owner_id']}_{s['id']}" + (f"_{s['access_key']}" if s.get("access_key") else "")
     except Exception as e:
@@ -92,6 +101,14 @@ def _site_link(pid: int) -> str:
         if needle in f.read_text(encoding="utf-8", errors="ignore"):
             return SITE + "predictions/" + f.name
     return SITE
+
+
+def _short(url: str) -> str:
+    """Короткая ссылка ВК (vk.cc/…); не вышло — исходная."""
+    try:
+        return _call("utils.getShortLink", url=url)["short_url"].replace("https://", "")
+    except Exception:
+        return url.replace("https://", "")
 
 
 def _live_link(text: str) -> str | None:
@@ -134,7 +151,8 @@ def crosspost(state: dict) -> int:
             if pd.Timestamp.now(tz="UTC") - pd.Timestamp(p["t"]) < pd.Timedelta(minutes=DELAY_MIN):
                 break                     # пост совсем свежий — страница на сайте ещё публикуется, вернёмся позже
             link = _site_link(pid)
-        text += "\n\n" + (f"📺 Смотреть матч онлайн: {link}" if started else f"📊 Подробнее, статистика и матчи онлайн: {link}")
+        short = _short(link)   # внешние ссылки ВК не прячет под слово — делаем короткую vk.cc/…
+        text += "\n\n" + (f"📺 Смотреть матч онлайн 👉 {short}" if started else f"📊 Подробнее на сайте 👉 {short}")
         # с личным ключом — фото поста; с ключом сообщества — текст со ссылкой на наш сайт
         from . import dzen, postimg
         img = postimg.image_for(p, ("начало" if started else dzen.kind(p.get("html", "")) or "новость"), posts)
