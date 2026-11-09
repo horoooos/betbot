@@ -70,7 +70,7 @@ def _parse(page: str) -> dict[int, dict]:
             continue
         pid = int(m.group(1))
         text = re.search(r'<div class="tgme_widget_message_text js-message_text"[^>]*>(.*?)</div>', chunk, re.S)
-        photo = re.search(r"tgme_widget_message_photo_wrap[^>]+background-image:url\('([^']+)'\)", chunk)
+        photo = re.search(r"tgme_widget_message_photo_wrap[^>]+background-image:url\('([^']+)'\)", chunk)             or re.search(r"tgme_widget_message_video_thumb[^>]+background-image:url\('([^']+)'\)", chunk)   # видео-пост — обложка ролика
         when = re.search(r'<time datetime="([^"]+)"', chunk)
         reply = re.search(r'class="tgme_widget_message_reply"[^>]*href="https://t\.me/' + CH + r'/(\d+)"', chunk)
         if not when:
@@ -109,6 +109,18 @@ def sync_channel(max_pages: int = 25) -> dict[int, dict]:
         if min(got) <= known or min(got) <= 1:
             break
         before = min(got); time.sleep(0.6)
+    # 1б) свежие посты без картинки (видео-новости, разобранные до поддержки обложек) — перечитываем, до 4 страниц
+    cutoff = pd.Timestamp.now(tz="UTC") - pd.Timedelta(days=3)
+    holes = sorted((k for k, v in store.items() if not v.get("photo") and v.get("html") and pd.Timestamp(v["t"]) > cutoff), reverse=True)
+    for _ in range(4):
+        if not holes:
+            break
+        got = _fetch(holes[0] + 1); pages += 1
+        if not got:
+            break
+        store.update({k: v for k, v in got.items() if v.get("photo") or k not in store})
+        holes = [k for k in holes if k < min(got) and not store[k].get("photo")]
+        time.sleep(0.6)
     while not complete and pages < max_pages:     # 2) история канала — от самого старого известного поста назад
         got = _fetch(min(store) if store else None); pages += 1
         if not got or min(got) >= min(store):

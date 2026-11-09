@@ -22,7 +22,7 @@ API = "https://api.vk.com/method/"
 V = "5.199"
 CHANNEL = Path(__file__).resolve().parent.parent / "data" / "channel.json"
 SITE = "https://horoooos.github.io/betbot/"
-MAX_PER_PASS = 3               # не заваливаем стену, если в канале выйдет пачка постов
+MAX_PER_PASS = 5               # не заваливаем стену, если в канале выйдет пачка постов
 STOP = re.compile(r"betboom|бетбум|букмекер|промокод|фрибет|реферал", re.I)
 
 
@@ -68,7 +68,7 @@ def _photo(url: str) -> str | None:
 
 
 DOCS = Path(__file__).resolve().parent.parent / "docs"
-DELAY_MIN = 10   # ждём, пока страница поста появится на сайте — тогда ВК покажет карточку ссылки с картинкой
+DELAY_MIN = 4   # ждём, пока страница поста появится на сайте — тогда ВК покажет карточку ссылки с картинкой
 
 
 def _site_link(pid: int) -> str:
@@ -81,6 +81,17 @@ def _site_link(pid: int) -> str:
         if needle in f.read_text(encoding="utf-8", errors="ignore"):
             return SITE + "predictions/" + f.name
     return SITE
+
+
+def _live_link(text: str) -> str | None:
+    """«Матч начался»: ссылка на нашу трансляцию этого матча (ищем пару команд в docs/matches.json)."""
+    try:
+        for m in json.loads((DOCS / "matches.json").read_text(encoding="utf-8")):
+            if m.get("home") and m.get("away") and f"{m['home']} — {m['away']}" in text and m.get("url"):
+                return SITE + m["url"]
+    except (OSError, ValueError):
+        pass
+    return None
 
 
 def crosspost(state: dict) -> int:
@@ -100,14 +111,19 @@ def crosspost(state: dict) -> int:
     for pid in fresh:
         p = posts[str(pid)]
         text = _text(p.get("html", ""))
-        if len(text) < 20 or "#live" in p.get("html", ""):   # пустые посты и live (голы, «матч начался») в ВК не дублируем
+        started = "МАТЧ НАЧАЛСЯ" in text
+        if len(text) < 20 or ("#live" in p.get("html", "") and not started):   # голы и прочий live в ВК не дублируем
             state["vk_last"] = pid
             continue
         import pandas as pd
-        if pd.Timestamp.now(tz="UTC") - pd.Timestamp(p["t"]) < pd.Timedelta(minutes=DELAY_MIN):
-            break                         # пост совсем свежий — страница на сайте ещё публикуется, вернёмся позже
-        link = _site_link(pid)
-        text += "\n\n" + f"📊 Подробнее, статистика и матчи онлайн: {link}"
+        link = _live_link(text) if started else None
+        if started:
+            text = "\n".join(ln for ln in text.split("\n") if ln.strip() != "#live")
+        if not link:
+            if pd.Timestamp.now(tz="UTC") - pd.Timestamp(p["t"]) < pd.Timedelta(minutes=DELAY_MIN):
+                break                     # пост совсем свежий — страница на сайте ещё публикуется, вернёмся позже
+            link = _site_link(pid)
+        text += "\n\n" + (f"📺 Смотреть матч онлайн: {link}" if started else f"📊 Подробнее, статистика и матчи онлайн: {link}")
         # с личным ключом — фото поста; с ключом сообщества — карточка ссылки на наш сайт (ВК сам подставит картинку)
         photo = _photo(p["photo"]) if p.get("photo") and os.environ.get("VK_USER_TOKEN") else None
         att = [photo] if photo else [link]
