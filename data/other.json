@@ -7223,22 +7223,22 @@
   "kickoff": "2026-11-09T02:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "home": {
+   "color": "002d62",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/wpg.png",
    "id": "28",
    "name": "Winnipeg Jets",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/wpg.png",
-   "color": "002d62",
    "score": "0",
    "record": "6-8-3",
    "periods": [],
    "ru": "Виннипег"
   },
   "away": {
+   "color": "003e7e",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/tb.png",
    "id": "20",
    "name": "Tampa Bay Lightning",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/tb.png",
-   "color": "003e7e",
    "score": "0",
    "record": "11-3-2",
    "periods": [],
@@ -7342,7 +7342,9 @@
   "close": {
    "HK_O6.5": 0.4782,
    "HK_ML_H": 0.4066
-  }
+  },
+  "main_hit": true,
+  "bold_hit": true
  },
  "NBA|401909946": {
   "id": "401909946",
