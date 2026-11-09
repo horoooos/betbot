@@ -59,7 +59,19 @@ def crosspost(state: dict) -> int:
         k = kind(posts[str(pid)].get("html", ""))
         if k and k != "новость":                      # новости news.py отправляет сам — картинкой (см. post_news)
             try:
-                telegram._call("copyMessage", chat_id=TARGET, from_chat_id=os.environ["TELEGRAM_CHAT_ID"], message_id=pid)
+                post = posts[str(pid)]
+                if post.get("photo"):   # с картинкой — копия как есть
+                    telegram._call("copyMessage", chat_id=TARGET, from_chat_id=os.environ["TELEGRAM_CHAT_ID"], message_id=pid)
+                else:                   # текстовый пост (разбор) — с нашей карточкой, иначе в Дзене он без картинки
+                    from . import postimg
+                    img = postimg.image_for(post, k)
+                    text = postimg.plain(post.get("html", "")).strip()
+                    tail = f"\n\n📖 Полностью — в Telegram-канале: t.me/aistavvit/{pid}"
+                    if len(text) + len(tail) > 1024:
+                        cut = text[:1024 - len(tail) - 2]
+                        text = cut[:cut.rfind("\n")] if "\n" in cut[200:] else cut
+                        text += "…" + tail
+                    telegram._call("sendPhoto", chat_id=TARGET, files={"photo": ("post.png", img, "image/png")}, caption=text)
                 done += 1
             except Exception as e:
                 print(f"  ! Дзен-канал: пост {pid} не скопирован (бот — админ в {TARGET}?): {e}")
