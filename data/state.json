@@ -7,7 +7,6 @@
  "schedule_day": "2026-11-09",
  "content_slot": "2026-11-08-23",
  "news_seen": [
-  "https://www.championat.com/hockey/news-6678726-v-shvecii-prizvali-bojkotirovat-chm-po-hokkeyu-v-sluchae-uchastiya-sbornoj-rossii.html",
   "https://www.sport-express.ru/hockey/khl/news/shanhay-dregons-barys-vo-skolko-nachalo-matcha-khl-gde-smotret-translyaciyu-30-oktyabrya-2026-2468657/",
   "https://www.sport-express.ru/hockey/nhl/news/dzheyms-heygens-povtoril-dostizhenie-fila-kessela-po-skorosti-pyati-golov-sredi-tineydzherov-bostona-v-nhl-2469103/",
   "https://www.sport-express.ru/hockey/nhl/news/mark-shayfli-i-kayl-konnor-pobili-rekord-vinnipega-v-nhl-po-sovmestnomu-uchastiyu-v-golah-30-oktyabrya-2026-2469102/",
@@ -506,9 +505,10 @@
   "https://www.championat.com/cybersport/news-6691942-bill-skarsgard-hotel-by-sygrat-dzhona-konstantina-v-kino.html",
   "https://www.championat.com/football/news-6691918-barselona-pobedila-vo-vseh-shesti-gostevyh-matchah-nyneshnego-sezona-la-ligi.html",
   "https://www.championat.com/football/news-6691898-v-yanvare-takuyu-summu-nikto-ne-dast-v-turcii-soobschili-skolko-cska-hochet-za-kislyaka.html",
-  "https://www.championat.com/football/news-6691902-davajte-vspomnim-trener-akrona-otvetil-za-schyot-chego-mozhno-bylo-odolet-spartak.html"
+  "https://www.championat.com/football/news-6691902-davajte-vspomnim-trener-akrona-otvetil-za-schyot-chego-mozhno-bylo-odolet-spartak.html",
+  "https://www.championat.com/hockey/news-6691908-hellebajk-ustupil-lish-vasilevskomu-i-bobrovskomu-po-skorosti-dostizheniya-350-pobed-v-nhl.html"
  ],
- "news_i": 1,
+ "news_i": 3,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1626,7 +1626,7 @@
  "streak_day": {
   "2026-11-08": 1
  },
- "news_next": "2026-11-09T09:09:30.807521+03:00",
+ "news_next": "2026-11-09T09:38:30.280401+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1638,5 +1638,5 @@
  "bot_setup": 3,
  "tg_offset": 727618641,
  "push_watch": {},
- "news_video": true
+ "news_video": false
 }
