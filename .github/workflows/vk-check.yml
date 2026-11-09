@@ -72,4 +72,6 @@ jobs:
           print("картинка:", pid, len(img or b""))
           vk._photo.err = ""
           print("ВЛОЖЕНИЕ:", vk._photo(img), "| ошибка:", vk._photo.err)
+          for w in vk._call("wall.get", owner_id=-vk.GROUP_ID, count=3)["items"]:
+              print("ПОСТ", w["id"], (w.get("text") or "")[:40].replace(chr(10), " "), "| вложения:", [a["type"] for a in w.get("attachments", [])])
           PY
