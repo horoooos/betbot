@@ -7,7 +7,6 @@
  "schedule_day": "2026-11-09",
  "content_slot": "2026-11-09-23",
  "news_seen": [
-  "https://www.championat.com/football/news-6680528-kordoba-kak-mozhno-perestat-verit-v-musaeva-kogda-my-vmeste-brali-titul.html",
   "https://www.championat.com/football/news-6680530-rodina-vtoroj-klub-v-istorii-rpl-obygravshij-zenit-i-krasnodar-v-debyutnom-sezone.html",
   "https://www.championat.com/football/news-6680518-poluchilsya-horoshij-spektakl-trener-rodiny-alba-o-matche-s-krasnodarom.html",
   "https://www.championat.com/football/news-6680500-sandro-shvarc-prokommentiroval-pobedu-dinamo-nad-ahmatom-v-rpl.html",
@@ -506,9 +505,10 @@
   "https://www.championat.com/football/news-6692946-gurckaya-nazval-idealnogo-trenera-dlya-lokomotiva-upomyanuv-mostovogo.html",
   "https://www.sport-express.ru/football/spain/news/forvard-reala-kilian-mbappe-priznan-luchshim-igrokom-la-ligi-v-oktyabre-2473007/",
   "https://www.sport-express.ru/football/germany/news/obladatel-zolotogo-myacha-keyn-ne-popal-v-komandu-goda-po-versii-fifpro-ego-mesto-zanyal-messi-2472989/",
-  "https://www.sport-express.ru/football/rfpl/news/ivan-oblyakov-priznan-luchshim-igrokom-cska-v-oktyabre-2472987/"
+  "https://www.sport-express.ru/football/rfpl/news/ivan-oblyakov-priznan-luchshim-igrokom-cska-v-oktyabre-2472987/",
+  "virtus-pro-srazit-sya-s-cyberhero-za-vykhod-v-plei-off-winline-epic-standoff-2"
  ],
- "news_i": 1,
+ "news_i": 2,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1620,7 +1620,7 @@
  "streak_day": {
   "2026-11-08": 1
  },
- "news_next": "2026-11-09T23:37:25.671341+03:00",
+ "news_next": "2026-11-09T23:43:26.424834+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1636,5 +1636,5 @@
  "vk_last": 4712,
  "dz_last": 4713,
  "vk_err": "фото: Expecting value: line 1 column 1 (char 0)",
- "news_forced": "2026-11-09T19:28:52Z"
+ "news_forced": "now"
 }
