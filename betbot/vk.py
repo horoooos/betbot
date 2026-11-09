@@ -182,12 +182,15 @@ def crosspost(state: dict) -> int:
         state["vk_err"] = f"{pid} фото: {_photo.err}" if not photo else None   # старую ошибку стираем
         # фото «из сообщений» сообщества ВК на стене один не показывает — пробуем вместе с карточкой ссылки
         # (наше фото как обложка ссылки); не принял — публикуем как раньше, текст со ссылкой
-        tries = [[photo, link], [photo]] if photo and link != SITE else [[photo] if photo else []]
+        if photo and photo.startswith("photo-"):   # фото «из сообщений» сообщества — только вместе со ссылкой
+            tries = [[photo, link], [photo]] if link != SITE else [[photo]]
+        else:                                      # фото стены (личный ключ) ВК показывает как обычную картинку
+            tries = [[photo] if photo else []]
         try:
             for i, att in enumerate(tries):
                 try:
                     _call("wall.post", owner_id=-GROUP_ID, from_group=1, message=text[:15000], attachments=",".join(att))
-                    state["vk_mode"] = "фото+ссылка" if len(att) == 2 else "текст"
+                    state["vk_mode"] = "+".join(a[:5] for a in att) or "текст"
                     break
                 except RuntimeError as e:
                     if i == len(tries) - 1:
