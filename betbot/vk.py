@@ -109,7 +109,7 @@ def _photo(img: bytes) -> str | None:
 
 
 DOCS = Path(__file__).resolve().parent.parent / "docs"
-DELAY_MIN = 4   # ждём, пока страница поста появится на сайте — тогда ВК покажет карточку ссылки с картинкой
+DELAY_MIN = 9  # ждём, пока страница поста появится на сайте — тогда ВК покажет карточку ссылки с картинкой
 
 
 def _site_link(pid: int) -> str:
@@ -180,9 +180,19 @@ def crosspost(state: dict) -> int:
         _photo.err = "" if img else "картинка поста не получена"
         photo = _photo(img) if img else None
         state["vk_err"] = f"{pid} фото: {_photo.err}" if not photo else None   # старую ошибку стираем
-        att = [photo] if photo else []   # ссылка — в тексте: карточку ссылки ВК без подходящей картинки не принимает
+        # фото «из сообщений» сообщества ВК на стене один не показывает — пробуем вместе с карточкой ссылки
+        # (наше фото как обложка ссылки); не принял — публикуем как раньше, текст со ссылкой
+        tries = [[photo, link], [photo]] if photo and link != SITE else [[photo] if photo else []]
         try:
-            _call("wall.post", owner_id=-GROUP_ID, from_group=1, message=text[:15000], attachments=",".join(att))
+            for i, att in enumerate(tries):
+                try:
+                    _call("wall.post", owner_id=-GROUP_ID, from_group=1, message=text[:15000], attachments=",".join(att))
+                    state["vk_mode"] = "фото+ссылка" if len(att) == 2 else "текст"
+                    break
+                except RuntimeError as e:
+                    if i == len(tries) - 1:
+                        raise
+                    state["vk_err"] = f"{pid} фото+ссылка: {e}"[:300]
             state["vk_last"] = pid
             done += 1
         except Exception as e:
