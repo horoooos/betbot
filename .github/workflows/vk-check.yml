@@ -30,4 +30,7 @@ jobs:
           if gid:
               print("photos.getWallUploadServer:", json.dumps(call("photos.getWallUploadServer", group_id=gid), ensure_ascii=False)[:300])
               print("wall.get:", json.dumps(call("wall.get", owner_id=-gid, count=1), ensure_ascii=False)[:300])
+              # пустой пост: ВК его не опубликует, но по ошибке видно, есть ли право публиковать (27 — нет, 100 — есть)
+              print("wall.post (пустой, проверка прав):", json.dumps(call("wall.post", owner_id=-gid, from_group=1, message=""), ensure_ascii=False)[:300])
+              print("photos.getMessagesUploadServer:", json.dumps(call("photos.getMessagesUploadServer", peer_id=0), ensure_ascii=False)[:200])
           EOF
