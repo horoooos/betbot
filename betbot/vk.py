@@ -164,6 +164,20 @@ def crosspost(state: dict) -> int:
         if len(text) < 20 or ("#live" in p.get("html", "") and not started):   # голы и прочий live в ВК не дублируем
             state["vk_last"] = pid
             continue
+        if text.startswith("📖 Продолжение"):   # продолжение длинной новости уже вошло в её пост (ниже)
+            state["vk_last"] = pid
+            continue
+        if "Продолжение — в ответе" in text:   # длинная новость: в ВК — одним постом, вместе с продолжением
+            text = "\n".join(ln for ln in text.split("\n") if "Продолжение — в ответе" not in ln)
+            for j in range(pid + 1, pid + 4):
+                cont = _text((posts.get(str(j)) or {}).get("html", ""))
+                if cont.startswith("📖 Продолжение"):
+                    body = "\n".join(ln for ln in cont.split("\n")[1:] if not ln.strip().startswith("#")).strip()
+                    lines = text.rstrip().split("\n")
+                    tags = lines.pop() if lines and lines[-1].strip().startswith("#") else ""
+                    text = "\n".join(lines).rstrip() + "\n\n" + body + ("\n\n" + tags if tags else "")
+                    text = re.sub(r"\n{3,}", "\n\n", text)
+                    break
         import pandas as pd
         link = _live_link(text) if started else None
         if started:
