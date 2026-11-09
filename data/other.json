@@ -7362,22 +7362,22 @@
   "kickoff": "2026-11-09T03:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "home": {
+   "color": "dd1a32",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/cgy.png",
    "id": "3",
    "name": "Calgary Flames",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/cgy.png",
-   "color": "dd1a32",
    "score": "0",
    "record": "7-9-1",
    "periods": [],
    "ru": "Калгари"
   },
   "away": {
+   "color": "fe5823",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/phi.png",
    "id": "15",
    "name": "Philadelphia Flyers",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/phi.png",
-   "color": "fe5823",
    "score": "0",
    "record": "4-10-4",
    "periods": [],
@@ -7481,7 +7481,9 @@
   "close": {
    "HK_ML_A": 0.5174,
    "HK_U5.5": 0.4826
-  }
+  },
+  "main_hit": false,
+  "bold_hit": false
  },
  "NBA|401909947": {
   "id": "401909947",
