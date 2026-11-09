@@ -206,15 +206,21 @@ def _crumbs(prefix: str, items: list[tuple[str, str | None]]) -> tuple[str, dict
 def _news(store: dict[int, dict]) -> list[dict]:
     out = []
     # длинная новость: продолжение выходит ответом «📖 Продолжение» — на сайте склеиваем в один текст
-    conts = {}
+    conts, skip = {}, set()
     for p in store.values():
-        if p.get("reply") and _plain(p["html"]).lstrip().startswith("📖"):
+        if _plain(p["html"]).lstrip().startswith("📖"):
+            skip.add(p["id"])   # продолжение — не отдельная новость
+            parent = p.get("reply")
+            if not parent:   # страница канала не всегда показывает, на что это ответ — ищем новость чуть выше
+                parent = next((j for j in range(p["id"] - 1, p["id"] - 4, -1)
+                               if "Продолжение — в ответе" in (store.get(j) or {}).get("html", "")), None)
             c = p["html"].split("\n", 1)[1] if "\n" in p["html"] else ""
-            conts[p["reply"]] = re.sub(r"\s*<a[^>]*>#[^<]+</a>\s*$", "", c.strip()).strip()
+            if parent:
+                conts[parent] = re.sub(r"\s*<a[^>]*>#[^<]+</a>\s*$", "", c.strip()).strip()
     for p in store.values():
         plain = _plain(p["html"]).strip()
         tail = plain.rsplit("\n", 1)[-1].strip()
-        if tail not in NEWS_TAGS or p.get("reply"):
+        if tail not in NEWS_TAGS or p.get("reply") or p["id"] in skip:
             continue
         lines = [x for x in plain.split("\n") if x.strip()]
         if len(lines) < 3:
