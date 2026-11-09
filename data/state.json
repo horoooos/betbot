@@ -7,7 +7,6 @@
  "schedule_day": "2026-11-09",
  "content_slot": "2026-11-09-13",
  "news_seen": [
-  "https://www.championat.com/cybersport/news-6678902-ea-otmenila-mass-effect-5-radi-star-wars-battlefront-3-smi.html",
   "https://www.championat.com/cybersport/news-6679020-v-rocket-league-projdyot-ivent-po-anime-van-pis-start-1-noyabrya.html",
   "xant3r-o-vykhode-v-final-pgl-masters-bucharest-2026-eto-komandnaya-magiya",
   "https://www.championat.com/football/news-6679080-u-batrakova-gol-pas-k-49-j-minute-matcha-galatasaraya-s-konyasporom.html",
@@ -506,9 +505,10 @@
   "https://www.championat.com/hockey/news-6692166-istochnik-fhr-poluchila-uvedomlenie-ot-iihf-ob-uchastii-sbornoj-rossii-na-mchm-2027.html",
   "https://www.championat.com/football/news-6692288-mesut-ozil-popal-v-bazu-dannyh-mirotvorca.html",
   "https://www.championat.com/football/news-6692278-vratar-pszh-matvej-safonov-soobschil-o-potere-bagazha-po-puti-v-raspolozhenie-sbornoj-rossii.html",
-  "https://www.championat.com/basketball/news-6692298-karmelo-entoni-dostig-soglasheniya-o-razvode-s-zhenoj-spustya-devyat-let-posle-rasstavaniya.html"
+  "https://www.championat.com/basketball/news-6692298-karmelo-entoni-dostig-soglasheniya-o-razvode-s-zhenoj-spustya-devyat-let-posle-rasstavaniya.html",
+  "https://www.championat.com/tennis/news-6692312-gauff-delit-s-peguloj-liderstvo-po-chislu-pobed-v-tryohsetovyh-matchah-v-etom-sezone.html"
  ],
- "news_i": 5,
+ "news_i": 6,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1626,7 +1626,7 @@
  "streak_day": {
   "2026-11-08": 1
  },
- "news_next": "2026-11-09T14:18:01.401764+03:00",
+ "news_next": "2026-11-09T14:49:01.325415+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1638,5 +1638,5 @@
  "bot_setup": 3,
  "tg_offset": 727618641,
  "push_watch": {},
- "news_video": true
+ "news_video": false
 }
