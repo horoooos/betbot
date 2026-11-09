@@ -7,8 +7,6 @@
  "schedule_day": "2026-11-09",
  "content_slot": "2026-11-09-16",
  "news_seen": [
-  "https://www.championat.com/basketball/news-6679638-igrok-golden-stejt-zayavil-chto-byl-porazhyon-fintom-stefena-karri-na-luku-donchicha.html",
-  "https://www.championat.com/tennis/news-6679714-osobennoe-dostizhenie-shnajder-o-vyhode-v-final-pyatisotnika-v-tokio.html",
   "malr1ne-pokhvalil-sapportov-team-spirit-oni-prosto-khodyat-i-ubivayut-vdvoyem",
   "https://www.championat.com/football/news-6679846-absolyutnaya-zhemchuzhina-zhurnalist-kandzha-voshischyon-igroj-batrakova-v-matche-s-konyasporom.html",
   "https://www.championat.com/cybersport/news-6679770-igroki-world-of-warcraft-forever-sozdali-bolee-8-mln-personazhej-v-bete.html",
@@ -506,9 +504,11 @@
   "https://www.championat.com/hockey/news-6692426-sbornaya-stanet-chempionom-za-schyot-tehnicheskih-porazhenij-kozhevnikov-o-rossii-na-mchm.html",
   "https://www.championat.com/hockey/news-6692412-nikolaj-goldobin-primet-uchastie-v-predstoyaschem-matche-ska-so-spartakom.html",
   "https://www.championat.com/hockey/news-6692404-zdes-sluchayutsya-bezumnye-veschi-trener-vinnipega-o-neobychnoj-pobede-nad-tampoj.html",
-  "https://www.championat.com/hockey/news-6692302-eks-zaschitnik-ska-rotenberg-eto-fanat-hokkeya-v-horoshem-smysle-moschno-prodvigaet-ego.html"
+  "https://www.championat.com/hockey/news-6692302-eks-zaschitnik-ska-rotenberg-eto-fanat-hokkeya-v-horoshem-smysle-moschno-prodvigaet-ego.html",
+  "https://www.championat.com/football/news-6692526-liverpul-aktiviziroval-rabotu-po-transferu-odnoklubnika-golovina-iz-monako-konur.html",
+  "https://www.championat.com/football/news-6692562-kevin-kurani-batrakov-ochen-legko-by-vpisalsya-v-bavariyu.html"
  ],
- "news_i": 3,
+ "news_i": 4,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1626,7 +1626,7 @@
  "streak_day": {
   "2026-11-08": 1
  },
- "news_next": "2026-11-09T17:04:34.950317+03:00",
+ "news_next": "2026-11-09T17:37:34.076589+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1638,5 +1638,5 @@
  "bot_setup": 3,
  "tg_offset": 727618641,
  "push_watch": {},
- "news_video": false
+ "news_video": true
 }
