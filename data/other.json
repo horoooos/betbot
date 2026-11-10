@@ -7055,7 +7055,10 @@
   "open": {},
   "top": false,
   "msg_id": 4808,
-  "btn": 4
+  "btn": 4,
+  "close": {
+   "_": null
+  }
  },
  "ATP|186539": {
   "id": "186539",
@@ -7067,7 +7070,7 @@
   "kickoff": "2026-11-10T16:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "void",
   "detail": "Tue, November 10th at 8:30 AM EST",
   "home": {
    "id": "3739",
