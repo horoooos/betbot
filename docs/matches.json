@@ -505,9 +505,93 @@ null
 },
 {
 "sport": "tennis",
+"id": "186525",
+"league": "Теннис · ATP",
+"kickoff": "2026-11-10T20:10:00+03:00",
+"home": "Хольгер Руне",
+"away": "Зизу Бергс",
+"hl": "https://a.espncdn.com/i/teamlogos/countries/500/den.png",
+"al": "https://a.espncdn.com/i/teamlogos/countries/500/bel.png",
+"hid": "3659",
+"aid": "3356",
+"bb": "https://betboom.ru/search?query=%D0%A0%D1%83%D0%BD%D0%B5",
+"path": "tennis/atp",
+"url": "live.html?s=tennis&p=tennis%2Fatp&e=186525&h=%D0%A5%D0%BE%D0%BB%D1%8C%D0%B3%D0%B5%D1%80+%D0%A0%D1%83%D0%BD%D0%B5&a=%D0%97%D0%B8%D0%B7%D1%83+%D0%91%D0%B5%D1%80%D0%B3%D1%81",
+"tip": "Будет 2 сета · ≈1.85",
+"top": false,
+"bot": {
+"main": {
+"label": "Будет 2 сета",
+"p": 0.502,
+"odds": 1.85,
+"est": true
+},
+"bold": null,
+"markets": [
+[
+"Победа: Хольгер Руне",
+0.448,
+null
+],
+[
+"Победа: Зизу Бергс",
+0.552,
+null
+],
+[
+"Будет 3 сета",
+0.498,
+null
+],
+[
+"Будет 2 сета",
+0.502,
+null
+],
+[
+"Счёт по сетам 2:0",
+0.217,
+null
+],
+[
+"Счёт по сетам 0:2",
+0.286,
+null
+],
+[
+"Счёт по сетам 2:1",
+0.232,
+null
+],
+[
+"Счёт по сетам 1:2",
+0.266,
+null
+],
+[
+"Хольгер Руне возьмёт хотя бы сет",
+0.714,
+null
+],
+[
+"Зизу Бергс возьмёт хотя бы сет",
+0.783,
+null
+]
+],
+"bar": [
+0.4482271735463779,
+0,
+0.5517728264536221
+],
+"center": "Рейтинг Эло 1526 : 1562"
+}
+},
+{
+"sport": "tennis",
 "id": "186745",
 "league": "Теннис · WTA",
-"kickoff": "2026-11-10T20:00:00+03:00",
+"kickoff": "2026-11-10T20:15:00+03:00",
 "home": "Бьянка Андрееску",
 "away": "Ребека Масарова",
 "hl": "https://a.espncdn.com/i/teamlogos/countries/500/can.png",
@@ -591,7 +675,7 @@ null
 "sport": "tennis",
 "id": "186746",
 "league": "Теннис · WTA",
-"kickoff": "2026-11-10T20:00:00+03:00",
+"kickoff": "2026-11-10T20:15:00+03:00",
 "home": "Хасмин Ортенси",
 "away": "Мариа Камила Торрес Мурсиа",
 "hl": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
@@ -609,7 +693,7 @@ null
 "sport": "tennis",
 "id": "186748",
 "league": "Теннис · WTA",
-"kickoff": "2026-11-10T20:00:00+03:00",
+"kickoff": "2026-11-10T20:15:00+03:00",
 "home": "Катрина Скотт",
 "away": "Андреа Лазаро Гарсиа",
 "hl": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
@@ -622,90 +706,6 @@ null
 "tip": "",
 "top": false,
 "bot": null
-},
-{
-"sport": "tennis",
-"id": "186525",
-"league": "Теннис · ATP",
-"kickoff": "2026-11-10T20:10:00+03:00",
-"home": "Хольгер Руне",
-"away": "Зизу Бергс",
-"hl": "https://a.espncdn.com/i/teamlogos/countries/500/den.png",
-"al": "https://a.espncdn.com/i/teamlogos/countries/500/bel.png",
-"hid": "3659",
-"aid": "3356",
-"bb": "https://betboom.ru/search?query=%D0%A0%D1%83%D0%BD%D0%B5",
-"path": "tennis/atp",
-"url": "live.html?s=tennis&p=tennis%2Fatp&e=186525&h=%D0%A5%D0%BE%D0%BB%D1%8C%D0%B3%D0%B5%D1%80+%D0%A0%D1%83%D0%BD%D0%B5&a=%D0%97%D0%B8%D0%B7%D1%83+%D0%91%D0%B5%D1%80%D0%B3%D1%81",
-"tip": "Будет 2 сета · ≈1.85",
-"top": false,
-"bot": {
-"main": {
-"label": "Будет 2 сета",
-"p": 0.502,
-"odds": 1.85,
-"est": true
-},
-"bold": null,
-"markets": [
-[
-"Победа: Хольгер Руне",
-0.448,
-null
-],
-[
-"Победа: Зизу Бергс",
-0.552,
-null
-],
-[
-"Будет 3 сета",
-0.498,
-null
-],
-[
-"Будет 2 сета",
-0.502,
-null
-],
-[
-"Счёт по сетам 2:0",
-0.217,
-null
-],
-[
-"Счёт по сетам 0:2",
-0.286,
-null
-],
-[
-"Счёт по сетам 2:1",
-0.232,
-null
-],
-[
-"Счёт по сетам 1:2",
-0.266,
-null
-],
-[
-"Хольгер Руне возьмёт хотя бы сет",
-0.714,
-null
-],
-[
-"Зизу Бергс возьмёт хотя бы сет",
-0.783,
-null
-]
-],
-"bar": [
-0.4482271735463779,
-0,
-0.5517728264536221
-],
-"center": "Рейтинг Эло 1526 : 1562"
-}
 },
 {
 "sport": "tennis",
