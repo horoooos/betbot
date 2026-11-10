@@ -1490,7 +1490,7 @@
  "value_day": "2026-11-09",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-09",
- "site_stamp": "812|4763|2026-11-10 05",
+ "site_stamp": "813|4765|2026-11-10 05",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1526,7 +1526,9 @@
      "d91244",
      "5d76a9"
     ],
-    "label": "Победа: Торонто Рэпторс (с ОТ)"
+    "label": "Победа: Торонто Рэпторс (с ОТ)",
+    "win": false,
+    "score": "102:118"
    },
    {
     "sport": "hockey",
@@ -1615,7 +1617,7 @@
   ],
   "odds": 13.03273037677565,
   "day": "2026-11-09",
-  "done": false
+  "done": true
  },
  "streak_day": {
   "2026-11-08": 1
@@ -1634,7 +1636,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 4763,
- "dz_last": 4763,
+ "dz_last": 4765,
  "vk_err": null,
  "news_forced": "now",
  "vk_mode": "photo"
