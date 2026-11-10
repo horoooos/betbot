@@ -982,7 +982,7 @@
   },
   "used": {
    "2026-10": 41,
-   "2026-11": 122
+   "2026-11": 124
   },
   "tournaments": {
    "tennis": {
@@ -1009,7 +1009,7 @@
   "last": {
    "tennis": "2026-11-10T18:50:43.919697+03:00",
    "CS2": "2026-11-10T18:25:09.740800+03:00",
-   "DOTA": "2026-11-09T00:20:44.270504+03:00"
+   "DOTA": "2026-11-09T03:21:10.472809+03:00"
   },
   "ver": 3
  },
@@ -1490,7 +1490,7 @@
  "value_day": "2026-11-10",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-10",
- "site_stamp": "829|4864|2026-11-10 23",
+ "site_stamp": "830|4865|2026-11-10 23",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1635,7 +1635,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 4862,
- "dz_last": 4864,
+ "dz_last": 4865,
  "vk_err": "4862 фото+ссылка: VK wall.post: 100 One of the parameters specified was missing or invalid: Violated: link_photo_sizing_rule. No photo given",
  "news_forced": "now",
  "vk_mode": "photo"
