@@ -6810,22 +6810,22 @@
   "kickoff": "2026-11-10T05:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "home": {
+   "color": "003e7e",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/van.png",
    "id": "22",
    "name": "Vancouver Canucks",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/van.png",
-   "color": "003e7e",
    "score": "0",
    "record": "3-15-1",
    "periods": [],
    "ru": "Ванкувер"
   },
   "away": {
+   "color": "fe5823",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/phi.png",
    "id": "15",
    "name": "Philadelphia Flyers",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/phi.png",
-   "color": "fe5823",
    "score": "0",
    "record": "4-10-5",
    "periods": [],
@@ -6929,7 +6929,9 @@
   "close": {
    "HK_O6.5": 0.4893,
    "HK_ML_H": 0.4365
-  }
+  },
+  "main_hit": false,
+  "bold_hit": false
  },
  "NHL|401892682": {
   "id": "401892682",
