@@ -1,90 +1,6 @@
 [
 {
 "sport": "tennis",
-"id": "186533",
-"league": "Теннис · ATP",
-"kickoff": "2026-11-10T16:25:00+03:00",
-"home": "Лоренцо Сонего",
-"away": "Кантен Алис",
-"hl": "https://a.espncdn.com/i/teamlogos/countries/500/ita.png",
-"al": "https://a.espncdn.com/i/teamlogos/countries/500/fra.png",
-"hid": "3052",
-"aid": "2362",
-"bb": "https://betboom.ru/search?query=%D0%A1%D0%BE%D0%BD%D0%B5%D0%B3%D0%BE",
-"path": "tennis/atp",
-"url": "live.html?s=tennis&p=tennis%2Fatp&e=186533&h=%D0%9B%D0%BE%D1%80%D0%B5%D0%BD%D1%86%D0%BE+%D0%A1%D0%BE%D0%BD%D0%B5%D0%B3%D0%BE&a=%D0%9A%D0%B0%D0%BD%D1%82%D0%B5%D0%BD+%D0%90%D0%BB%D0%B8%D1%81",
-"tip": "Будет 2 сета · ≈1.68",
-"top": false,
-"bot": {
-"main": {
-"label": "Будет 2 сета",
-"p": 0.552,
-"odds": 1.68,
-"est": true
-},
-"bold": null,
-"markets": [
-[
-"Победа: Лоренцо Сонего",
-0.266,
-null
-],
-[
-"Победа: Кантен Алис",
-0.734,
-null
-],
-[
-"Будет 3 сета",
-0.448,
-null
-],
-[
-"Будет 2 сета",
-0.552,
-null
-],
-[
-"Счёт по сетам 2:0",
-0.114,
-null
-],
-[
-"Счёт по сетам 0:2",
-0.438,
-null
-],
-[
-"Счёт по сетам 2:1",
-0.151,
-null
-],
-[
-"Счёт по сетам 1:2",
-0.296,
-null
-],
-[
-"Лоренцо Сонего возьмёт хотя бы сет",
-0.562,
-null
-],
-[
-"Кантен Алис возьмёт хотя бы сет",
-0.886,
-null
-]
-],
-"bar": [
-0.2658244551200562,
-0,
-0.7341755448799439
-],
-"center": "Рейтинг Эло 1413 : 1589"
-}
-},
-{
-"sport": "tennis",
 "id": "186539",
 "league": "Теннис · ATP",
 "kickoff": "2026-11-10T16:30:00+03:00",
@@ -591,7 +507,7 @@ null
 "sport": "tennis",
 "id": "186748",
 "league": "Теннис · WTA",
-"kickoff": "2026-11-10T20:25:00+03:00",
+"kickoff": "2026-11-10T20:30:00+03:00",
 "home": "Катрина Скотт",
 "away": "Андреа Лазаро Гарсиа",
 "hl": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
@@ -609,7 +525,7 @@ null
 "sport": "tennis",
 "id": "186745",
 "league": "Теннис · WTA",
-"kickoff": "2026-11-10T20:35:00+03:00",
+"kickoff": "2026-11-10T20:40:00+03:00",
 "home": "Бьянка Андрееску",
 "away": "Ребека Масарова",
 "hl": "https://a.espncdn.com/i/teamlogos/countries/500/can.png",
@@ -693,7 +609,7 @@ null
 "sport": "tennis",
 "id": "186746",
 "league": "Теннис · WTA",
-"kickoff": "2026-11-10T20:35:00+03:00",
+"kickoff": "2026-11-10T20:40:00+03:00",
 "home": "Хасмин Ортенси",
 "away": "Мариа Камила Торрес Мурсиа",
 "hl": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
