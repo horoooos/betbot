@@ -5,7 +5,7 @@
  },
  "learned": "2026-11-10",
  "schedule_day": "2026-11-10",
- "content_slot": "2026-11-10-19",
+ "content_slot": "2026-11-10-20",
  "news_seen": [
   "https://www.championat.com/hockey/news-6682292-anahajm-daks-ottava-senatorz-rezultat-matcha-2-noyabrya-2026-schyot-6-3-regulyarnyj-chempionat-nhl-2026-2027.html",
   "https://www.championat.com/hockey/news-6682280-kaprizov-ne-smog-otorvatsya-ot-michkova-v-gonke-rossijskih-snajperov-nhl.html",
@@ -1525,7 +1525,7 @@
  "value_day": "2026-11-10",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-10",
- "site_stamp": "823|4840|2026-11-10 19",
+ "site_stamp": "823|4841|2026-11-10 20",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1540,119 +1540,117 @@
  },
  "value_check": "2026-11-10-6",
  "express_risk": {
-  "msg": 4696,
+  "msg": 4841,
   "legs": [
    {
-    "sport": "basketball",
-    "div": "NBA",
-    "id": "401909955",
-    "side": "home",
-    "p": 0.5731023942944474,
-    "odds": 1.676,
-    "kickoff": "2026-11-10T03:30:00+03:00",
-    "home": "Торонто Рэпторс",
-    "away": "Мемфис Гриззлис",
-    "league": "🇺🇸 США · NBA",
-    "logos": [
-     "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/tor.png",
-     "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/mem.png"
-    ],
-    "colors": [
-     "d91244",
-     "5d76a9"
-    ],
-    "label": "Победа: Торонто Рэпторс (с ОТ)",
-    "win": false,
-    "score": "102:118"
-   },
-   {
     "sport": "hockey",
     "div": "NHL",
-    "id": "401892680",
-    "side": "home",
+    "id": "401892683",
+    "side": "away",
     "p": 0.5934121196882072,
     "odds": 1.617,
-    "kickoff": "2026-11-10T04:00:00+03:00",
-    "home": "Эдмонтон",
-    "away": "Рейнджерс",
+    "kickoff": "2026-11-11T03:00:00+03:00",
+    "home": "Торонто",
+    "away": "Колорадо",
     "league": "🇺🇸 США · NHL",
     "logos": [
-     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/edm.png",
-     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/nyr.png"
-    ],
-    "colors": [
-     "00205b",
-     "0056ae"
-    ],
-    "label": "Победа: Эдмонтон (с ОТ)"
-   },
-   {
-    "sport": "basketball",
-    "div": "NBA",
-    "id": "401909956",
-    "side": "home",
-    "p": 0.5928158754081889,
-    "odds": 1.621,
-    "kickoff": "2026-11-10T04:00:00+03:00",
-    "home": "Даллас Маверикс",
-    "away": "Индиана Пэйсерс",
-    "league": "🇺🇸 США · NBA",
-    "logos": [
-     "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/dal.png",
-     "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/ind.png"
-    ],
-    "colors": [
-     "0064b1",
-     "0c2340"
-    ],
-    "label": "Победа: Даллас Маверикс (с ОТ)"
-   },
-   {
-    "sport": "hockey",
-    "div": "NHL",
-    "id": "401892681",
-    "side": "away",
-    "p": 0.5514042772481319,
-    "odds": 1.741,
-    "kickoff": "2026-11-10T05:30:00+03:00",
-    "home": "Ванкувер",
-    "away": "Филадельфия",
-    "league": "🇺🇸 США · NHL",
-    "logos": [
-     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/van.png",
-     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/phi.png"
+     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/tor.png",
+     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/col.png"
     ],
     "colors": [
      "003e7e",
-     "fe5823"
+     "860038"
     ],
-    "label": "Победа: Филадельфия (с ОТ)"
+    "label": "Победа: Колорадо (с ОТ)"
    },
    {
     "sport": "hockey",
     "div": "NHL",
-    "id": "401892682",
+    "id": "401892688",
     "side": "away",
-    "p": 0.5635245901639344,
-    "odds": 1.704,
-    "kickoff": "2026-11-10T06:00:00+03:00",
-    "home": "Сан-Хосе",
-    "away": "Айлендерс",
+    "p": 0.572012257405516,
+    "odds": 1.676,
+    "kickoff": "2026-11-11T03:00:00+03:00",
+    "home": "Виннипег",
+    "away": "Нью-Джерси",
     "league": "🇺🇸 США · NHL",
     "logos": [
-     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/sj.png",
-     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/nyi.png"
+     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/wpg.png",
+     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/nj.png"
     ],
     "colors": [
-     "00788a",
-     "00529b"
+     "002d62",
+     "e30b2b"
     ],
-    "label": "Победа: Айлендерс (с ОТ)"
+    "label": "Победа: Нью-Джерси (с ОТ)"
+   },
+   {
+    "sport": "hockey",
+    "div": "NHL",
+    "id": "401892684",
+    "side": "away",
+    "p": 0.5427759110881364,
+    "odds": 1.769,
+    "kickoff": "2026-11-11T03:00:00+03:00",
+    "home": "Монреаль",
+    "away": "Миннесота",
+    "league": "🇺🇸 США · NHL",
+    "logos": [
+     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/mtl.png",
+     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/min.png"
+    ],
+    "colors": [
+     "c41230",
+     "124734"
+    ],
+    "label": "Победа: Миннесота (с ОТ)"
+   },
+   {
+    "sport": "hockey",
+    "div": "NHL",
+    "id": "401892687",
+    "side": "home",
+    "p": 0.5635245901639344,
+    "odds": 1.704,
+    "kickoff": "2026-11-11T04:00:00+03:00",
+    "home": "Сент-Луис",
+    "away": "Детройт",
+    "league": "🇺🇸 США · NHL",
+    "logos": [
+     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/stl.png",
+     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/det.png"
+    ],
+    "colors": [
+     "0070b9",
+     "e30526"
+    ],
+    "label": "Победа: Сент-Луис (с ОТ)"
+   },
+   {
+    "sport": "hockey",
+    "div": "NHL",
+    "id": "401892689",
+    "side": "home",
+    "p": 0.5514042772481319,
+    "odds": 1.741,
+    "kickoff": "2026-11-11T06:00:00+03:00",
+    "home": "Лос-Анджелес",
+    "away": "Нэшвилл",
+    "league": "🇺🇸 США · NHL",
+    "logos": [
+     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/la.png",
+     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/nsh.png"
+    ],
+    "colors": [
+     "121212",
+     "fdba31"
+    ],
+    "label": "Победа: Лос-Анджелес (с ОТ)"
    }
   ],
-  "odds": 13.03273037677565,
-  "day": "2026-11-09",
-  "done": true
+  "odds": 14.222640367992671,
+  "day": "2026-11-10",
+  "done": false
  },
  "streak_day": {
   "2026-11-08": 1
@@ -1672,7 +1670,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 4840,
- "dz_last": 4840,
+ "dz_last": 4841,
  "vk_err": null,
  "news_forced": "now",
  "vk_mode": "photo"
