@@ -1497,7 +1497,7 @@
  "value_day": "2026-11-10",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-10",
- "site_stamp": "831|4870|2026-11-11 01",
+ "site_stamp": "831|4871|2026-11-11 01",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1627,7 +1627,7 @@
  "streak_day": {
   "2026-11-08": 1
  },
- "news_next": "2026-11-11T01:11:03.177203+03:00",
+ "news_next": "2026-11-11T01:19:03.559724+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1641,9 +1641,9 @@
  "tg_offset": 727618641,
  "push_watch": {},
  "news_video": true,
- "vk_last": 4870,
- "dz_last": 4870,
- "vk_err": null,
+ "vk_last": 4871,
+ "dz_last": 4871,
+ "vk_err": "4871 фото+ссылка: VK wall.post: 100 One of the parameters specified was missing or invalid: Violated: link_photo_sizing_rule. No photo given",
  "news_forced": "now",
  "vk_mode": "photo"
 }
