@@ -1,89 +1,5 @@
 [
 {
-"sport": "basketball",
-"id": "401909958",
-"league": "США · NBA",
-"kickoff": "2026-11-10T05:00:00+03:00",
-"home": "Финикс Санз",
-"away": "Сан-Антонио Сперс",
-"hl": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/phx.png",
-"al": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/sa.png",
-"hid": "21",
-"aid": "24",
-"bb": "https://betboom.ru/search?query=%D0%A4%D0%B8%D0%BD%D0%B8%D0%BA%D1%81",
-"path": "basketball/nba",
-"url": "live.html?s=basketball&p=basketball%2Fnba&e=401909958&h=%D0%A4%D0%B8%D0%BD%D0%B8%D0%BA%D1%81+%D0%A1%D0%B0%D0%BD%D0%B7&a=%D0%A1%D0%B0%D0%BD-%D0%90%D0%BD%D1%82%D0%BE%D0%BD%D0%B8%D0%BE+%D0%A1%D0%BF%D0%B5%D1%80%D1%81",
-"tip": "ТБ 225.5 · 1.94",
-"top": false,
-"bot": {
-"main": {
-"label": "ТБ 225.5",
-"p": 0.5,
-"odds": 1.94,
-"est": false
-},
-"bold": null,
-"markets": [
-[
-"П1 (с ОТ)",
-0.214,
-4.12
-],
-[
-"П2 (с ОТ)",
-0.786,
-1.253
-],
-[
-"Ф1 (+9.5)",
-0.5,
-1.855
-],
-[
-"Ф2 (-9.5)",
-0.5,
-1.971
-],
-[
-"ТБ 218.5",
-0.66,
-null
-],
-[
-"ТМ 218.5",
-0.34,
-null
-],
-[
-"ТБ 225.5",
-0.5,
-1.935
-],
-[
-"ТМ 225.5",
-0.5,
-1.885
-],
-[
-"ТБ 232.5",
-0.34,
-null
-],
-[
-"ТМ 232.5",
-0.66,
-null
-]
-],
-"bar": [
-0.2142775316753095,
-0,
-0.7857224683246905
-],
-"center": "Ожидаемый счёт 108 : 118"
-}
-},
-{
 "sport": "hockey",
 "id": "401892681",
 "league": "США · NHL",
@@ -1175,6 +1091,24 @@ null
 "bb": "https://betboom.ru/search?query=%D0%A5%D0%B5%D1%80%D1%86%D0%BE%D0%B3",
 "path": "tennis/wta",
 "url": "live.html?s=tennis&p=tennis%2Fwta&e=186766&h=%D0%9F%D0%BE%D0%BB%D0%BE%D0%BD%D0%B0+%D0%A5%D0%B5%D1%80%D1%86%D0%BE%D0%B3&a=%D0%A2%D0%B1%D0%B4",
+"tip": "",
+"top": false,
+"bot": null
+},
+{
+"sport": "football",
+"id": "401930244",
+"league": "Сборные · Товарищеские матчи",
+"kickoff": "2026-11-11T15:00:00+03:00",
+"home": "Сборная Вьетнама",
+"away": "Сборная Тайваня",
+"hl": "https://a.espncdn.com/i/teamlogos/countries/500/vie.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/14561.png",
+"hid": "7349",
+"aid": "14561",
+"bb": "https://betboom.ru/search?query=%D0%92%D1%8C%D0%B5%D1%82%D0%BD%D0%B0%D0%BC%D0%B0",
+"path": "soccer/fifa.friendly",
+"url": "live.html?s=football&p=soccer%2Ffifa.friendly&e=401930244&h=%D0%A1%D0%B1%D0%BE%D1%80%D0%BD%D0%B0%D1%8F+%D0%92%D1%8C%D0%B5%D1%82%D0%BD%D0%B0%D0%BC%D0%B0&a=%D0%A1%D0%B1%D0%BE%D1%80%D0%BD%D0%B0%D1%8F+%D0%A2%D0%B0%D0%B9%D0%B2%D0%B0%D0%BD%D1%8F",
 "tip": "",
 "top": false,
 "bot": null
