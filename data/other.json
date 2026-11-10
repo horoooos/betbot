@@ -6780,31 +6780,31 @@
   "kickoff": "2026-11-10T15:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Tue, November 10th at 7:00 AM EST",
   "home": {
-   "id": "1266",
-   "name": "Adrian Mannarino",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/1266.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/fra.png"
    ],
+   "id": "1266",
+   "name": "Adrian Mannarino",
    "country": "France",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
    "ru": "Адриан Маннарино"
   },
   "away": {
-   "id": "8710",
-   "name": "Aleksandr Shevchenko",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/8710.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/kaz.png"
    ],
+   "id": "8710",
+   "name": "Aleksandr Shevchenko",
    "country": "Kazakhstan",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
@@ -6864,7 +6864,9 @@
   "btn": 4,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null
  },
  "ATP|186541": {
   "id": "186541",
