@@ -1490,7 +1490,7 @@
  "value_day": "2026-11-10",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-10",
- "site_stamp": "820|4803|2026-11-10 15",
+ "site_stamp": "820|4804|2026-11-10 15",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1636,9 +1636,9 @@
  "tg_offset": 727618641,
  "push_watch": {},
  "news_video": true,
- "vk_last": 4803,
- "dz_last": 4803,
- "vk_err": null,
+ "vk_last": 4804,
+ "dz_last": 4804,
+ "vk_err": "4804 фото+ссылка: VK wall.post: 100 One of the parameters specified was missing or invalid: Violated: link_photo_sizing_rule. No photo given",
  "news_forced": "now",
  "vk_mode": "photo"
 }
