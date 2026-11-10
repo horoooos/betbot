@@ -7,17 +7,6 @@
  "schedule_day": "2026-11-10",
  "content_slot": "2026-11-10-13",
  "news_seen": [
-  "https://www.championat.com/hockey/news-6681984-karolina-harrikejnz-vinnipeg-dzhets-rezultat-matcha-1-noyabrya-2026-schet-7-0-regulyarnyj-chempionat-nhl-2026-2027.html",
-  "https://www.championat.com/hockey/news-6681822-germaniya-rassmatrivaet-variant-otkaza-ot-provedeniya-chm-2027-posle-vozvrascheniya-rossii.html",
-  "https://www.championat.com/hockey/news-6681786-zaschitnik-moskovskogo-dinamo-o-4-0-s-minchanami-schyot-matcha-vpolne-spravedliv.html",
-  "https://www.championat.com/hockey/news-6681898-kirill-kaprizov-i-pyotr-kochetkov-voshli-v-trojku-luchshih-igrokov-oktyabrya-v-nhl.html",
-  "https://www.championat.com/hockey/news-6681778-kapitan-moskovskogo-dinamo-ozhiganov-otmetil-atmosferu-na-matche-v-minske.html",
-  "https://www.championat.com/hockey/news-6681770-chut-ne-hvatilo-vezeniya-i-svezhesti-zhamnov-o-porazhenii-spartaka-ot-torpedo.html",
-  "https://www.championat.com/hockey/news-6681764-aleksej-isakov-ocenil-pobedu-torpedo-v-domashnem-matche-so-spartakom.html",
-  "https://www.championat.com/hockey/news-6681752-byrlin-nazval-prichiny-porazheniya-minskogo-dinamo-v-domashnem-matche-s-moskovskim-dinamo.html",
-  "https://www.championat.com/hockey/news-6681740-tambiev-rasskazal-pochemu-ne-vypustil-nikonova-na-lyod-v-gostevom-matche-s-minskim-dinamo.html",
-  "https://www.championat.com/hockey/news-6681728-u-komandy-poyavlyaetsya-fundament-tambiev-ocenil-gostevuyu-pobedu-nad-minskim-dinamo.html",
-  "https://www.championat.com/hockey/news-6681690-kanadskij-glavnyj-trener-drakonov-lav-ocenil-predstoyaschee-vozvraschenie-sbornoj-rossii.html",
   "https://www.championat.com/football/news-6682098-proizoshlo-futbolnoe-prestuplenie-arshavin-o-matche-dinamo-mh-rostov.html",
   "https://www.championat.com/football/news-6682054-my-zasluzhili-etu-pobedu-trener-arsenala-arteta-o-matche-s-liverpulem.html",
   "https://www.championat.com/football/news-6682084-atletik-bilbao-real-sosedad-rezultat-matcha-1-noyabrya-2026-schet-2-1-11-j-tur-la-ligi-2026-2027.html",
@@ -506,9 +495,20 @@
   "https://www.sport-express.ru/hockey/nhl/news/reyndzhers-ne-propustili-v-menshinstve-v-13-m-matche-sezona-a-hmelarzh-zabil-posle-udaleniya-2473164/",
   "https://www.sport-express.ru/football/transfers/news/barselona-zainteresovana-v-transfere-zaschitnika-bavarii-ta-v-yanvare-2473210/",
   "https://www.sport-express.ru/football/spain/news/endrik-ne-isklyuchil-uhoda-iz-reala-v-zimnee-transfernoe-okno-2473203/",
-  "https://www.sport-express.ru/football/rfpl/news/gazizov-o-pobede-nad-baltikoy-rad-chto-vystoyali-seychas-glavnoe-nabirat-ochki-2473154/"
+  "https://www.sport-express.ru/football/rfpl/news/gazizov-o-pobede-nad-baltikoy-rad-chto-vystoyali-seychas-glavnoe-nabirat-ochki-2473154/",
+  "https://www.sport-express.ru/basketball/nba/news/viktor-vembanyama-unikalnoe-dostizhenie-nba-25-minut-na-40-ochkov-11-podborov-9-blok-shotov-10-noyabrya-2026-2473209/",
+  "https://www.sport-express.ru/basketball/news/19-letniy-darius-eykaff-povtoril-dostizhenie-oskara-robertsona-v-pervyh-desyati-matchah-nba-9-noyabrya-2026-2473190/",
+  "https://www.sport-express.ru/basketball/nba/news/viktor-vembanyama-pervym-v-istorii-nba-sobral-291-ochko-120-podborov-39-blok-shotov-za-10-igr-sezona-8-noyabrya-2026-2473189/",
+  "https://www.sport-express.ru/basketball/nba/news/luka-donchich-pervym-posle-uilta-chemberlena-v-nba-nabral-40-ochkov-v-srednem-za-9-startovyh-matchey-sezona-7-noyabrya-2026-2473191/",
+  "https://www.sport-express.ru/basketball/nba/news/yaksel-lendeborg-pervyy-novichok-golden-steyt-so-vremen-rika-barri-s-20-ochkami-v-srednem-za-pervye-10-igr-nba-2473193/",
+  "https://www.sport-express.ru/tennis/wta/news/vse-chetyre-favoritki-vyigrali-pervye-matchi-itogovogo-turnira-wta-lish-chetvertyy-sluchay-s-2003-goda-10-noyabrya-2026-2473196/",
+  "https://www.sport-express.ru/tennis/wta/news/arina-sobolenko-vyigrala-startovyy-match-itogovogo-turnira-wta-v-pyatyy-raz-podryad-statistika-10-noyabrya-2026-2473195/",
+  "https://www.sport-express.ru/football/germany/news/kompani-vernulsya-v-raspolozhenie-bavarii-posle-gospitalizacii-2473218/",
+  "https://www.sport-express.ru/football/france/news/pszh-mozhet-vklyuchit-ferrana-torresa-v-sdelku-po-perehodu-niko-pasa-iz-komo-2473217/",
+  "https://www.sport-express.ru/football/germany/news/zhurnalist-plettenberg-vratar-shalke-karius-mozhet-pereyti-v-bavariyu-v-svyazi-s-travmoy-noyera-2473216/",
+  "https://www.sport-express.ru/football/rfpl/news/silkin-ne-verit-v-chempionstvo-dinamo-uzhe-skolko-let-zhdem-a-po-itogu-odni-razocharovaniya-2473212/"
  ],
- "news_i": 4,
+ "news_i": 1,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1622,7 +1622,7 @@
  "streak_day": {
   "2026-11-08": 1
  },
- "news_next": "2026-11-10T13:22:30.778139+03:00",
+ "news_next": "2026-11-10T13:54:30.335975+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
