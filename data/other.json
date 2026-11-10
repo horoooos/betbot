@@ -6959,5 +6959,191 @@
   },
   "main_hit": false,
   "bold_hit": null
+ },
+ "ATP|186526": {
+  "id": "186526",
+  "div": "ATP",
+  "sport": "tennis",
+  "tournament": "Bybit Stockholm Open",
+  "round": "Round 1",
+  "bo5": false,
+  "kickoff": "2026-11-10T15:00:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "detail": "Tue, November 10th at 7:00 AM EST",
+  "home": {
+   "id": "1266",
+   "name": "Adrian Mannarino",
+   "logo": [
+    "https://a.espncdn.com/i/headshots/tennis/players/full/1266.png",
+    "https://a.espncdn.com/i/teamlogos/countries/500/fra.png"
+   ],
+   "country": "France",
+   "color": "2d6a4f",
+   "winner": false,
+   "sets": [],
+   "set_won": [],
+   "ru": "Адриан Маннарино"
+  },
+  "away": {
+   "id": "8710",
+   "name": "Aleksandr Shevchenko",
+   "logo": [
+    "https://a.espncdn.com/i/headshots/tennis/players/full/8710.png",
+    "https://a.espncdn.com/i/teamlogos/countries/500/kaz.png"
+   ],
+   "country": "Kazakhstan",
+   "color": "2d6a4f",
+   "winner": false,
+   "sets": [],
+   "set_won": [],
+   "ru": "Александр Шевченко"
+  },
+  "odds": {},
+  "probs": {
+   "TN_W1": 0.7719363764025742,
+   "TN_W2": 0.22806362359742582,
+   "TN_3S": 0.4274117970833806,
+   "TN_2S": 0.5725882029166194,
+   "TN_S2:0": 0.47680421000457474,
+   "TN_S0:2": 0.09578399291204465,
+   "TN_S2:1": 0.2951321663979994,
+   "TN_S1:2": 0.13227963068538126,
+   "TN_SET1": 0.9042160070879554,
+   "TN_SET2": 0.5231957899954253
+  },
+  "labels": {
+   "TN_W1": "Победа: Адриан Маннарино",
+   "TN_W2": "Победа: Александр Шевченко",
+   "TN_3S": "Будет 3 сета",
+   "TN_2S": "Будет 2 сета",
+   "TN_S2:0": "Счёт по сетам 2:0",
+   "TN_S0:2": "Счёт по сетам 0:2",
+   "TN_S2:1": "Счёт по сетам 2:1",
+   "TN_S1:2": "Счёт по сетам 1:2",
+   "TN_SET1": "Адриан Маннарино возьмёт хотя бы сет",
+   "TN_SET2": "Александр Шевченко возьмёт хотя бы сет"
+  },
+  "real": {},
+  "center": "Рейтинг Эло 1616 : 1405",
+  "bar": [
+   0.7719363764025742,
+   0,
+   0.22806362359742582
+  ],
+  "model": {
+   "elo": [
+    1616.3366284277895,
+    1404.5264337975552
+   ],
+   "src": "Эло"
+  },
+  "main": {
+   "key": "TN_2S",
+   "label": "Будет 2 сета",
+   "p": 0.5726,
+   "odds": 1.62,
+   "est": true,
+   "stake": 1.0
+  },
+  "bold": {},
+  "open": {},
+  "top": false,
+  "msg_id": 4797,
+  "btn": 4
+ },
+ "ATP|186541": {
+  "id": "186541",
+  "div": "ATP",
+  "sport": "tennis",
+  "tournament": "Bybit Stockholm Open",
+  "round": "Round 2",
+  "bo5": false,
+  "kickoff": "2026-11-10T15:00:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "detail": "Tue, November 10th at 7:00 AM EST",
+  "home": {
+   "id": "11400",
+   "name": "Alex Michelsen",
+   "logo": [
+    "https://a.espncdn.com/i/headshots/tennis/players/full/11400.png",
+    "https://a.espncdn.com/i/teamlogos/countries/500/usa.png"
+   ],
+   "country": "USA",
+   "color": "2d6a4f",
+   "winner": false,
+   "sets": [],
+   "set_won": [],
+   "ru": "Алекс Микельсен"
+  },
+  "away": {
+   "id": "4008",
+   "name": "Juan Manuel Cerundolo",
+   "logo": [
+    "https://a.espncdn.com/i/headshots/tennis/players/full/4008.png",
+    "https://a.espncdn.com/i/teamlogos/countries/500/arg.png"
+   ],
+   "country": "Argentina",
+   "color": "2d6a4f",
+   "winner": false,
+   "sets": [],
+   "set_won": [],
+   "ru": "Хуан Мануэль Серундоло"
+  },
+  "odds": {},
+  "probs": {
+   "TN_W1": 0.7912027803971287,
+   "TN_W2": 0.20879721960287134,
+   "TN_3S": 0.41533530459488266,
+   "TN_2S": 0.5846646954051173,
+   "TN_S2:0": 0.4980806106419057,
+   "TN_S0:2": 0.08658408476321167,
+   "TN_S2:1": 0.29312216975522304,
+   "TN_S1:2": 0.12221313483965963,
+   "TN_SET1": 0.9134159152367883,
+   "TN_SET2": 0.5019193893580943
+  },
+  "labels": {
+   "TN_W1": "Победа: Алекс Микельсен",
+   "TN_W2": "Победа: Хуан Мануэль Серундоло",
+   "TN_3S": "Будет 3 сета",
+   "TN_2S": "Будет 2 сета",
+   "TN_S2:0": "Счёт по сетам 2:0",
+   "TN_S0:2": "Счёт по сетам 0:2",
+   "TN_S2:1": "Счёт по сетам 2:1",
+   "TN_S1:2": "Счёт по сетам 1:2",
+   "TN_SET1": "Алекс Микельсен возьмёт хотя бы сет",
+   "TN_SET2": "Хуан Мануэль Серундоло возьмёт хотя бы сет"
+  },
+  "real": {},
+  "center": "Рейтинг Эло 1717 : 1486",
+  "bar": [
+   0.7912027803971287,
+   0,
+   0.20879721960287134
+  ],
+  "model": {
+   "elo": [
+    1717.3282187589357,
+    1485.9029813305901
+   ],
+   "src": "Эло"
+  },
+  "main": {
+   "key": "TN_2S",
+   "label": "Будет 2 сета",
+   "p": 0.5847,
+   "odds": 1.59,
+   "est": true,
+   "stake": 1.0
+  },
+  "bold": {},
+  "open": {},
+  "top": false,
+  "msg_id": 4799,
+  "btn": 4
  }
 }
