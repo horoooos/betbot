@@ -95,6 +95,10 @@ jobs:
               for field, name, mime in (("photo", "post.jpg", "image/jpeg"), ("file", "post.jpg", "image/jpeg"), ("file1", "post.jpg", "image/jpeg")):
                   r = requests.post(up, files={field: (name, img, mime)}, timeout=60)
                   print("ЗАГРУЗКА", field, r.status_code, repr(r.text[:120]))
+          try:
+              print("ПРАВО VIDEO:", vk._call("video.get", owner_id=-vk.GROUP_ID, count=1).get("count"), "видео у группы")
+          except Exception as e:
+              print("ПРАВО VIDEO: нет —", e)
           vk._photo.err = ""
           print("ВЛОЖЕНИЕ:", vk._photo(img), "| ошибка:", vk._photo.err)
           for w in vk._call("wall.get", owner_id=-vk.GROUP_ID, count=3)["items"]:
