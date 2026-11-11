@@ -204,11 +204,9 @@ def _bank_block(res: pd.DataFrame, now: pd.Timestamp) -> str:
         f"Ставка — рекомендованные ботом 1–3% от текущего банка; смелые и экспрессы — по 1%. Старт — {money(pro.BANK_START)} ₽."
     c = pro.bet_counts(res)
     nb = lambda v: f"{v:,}".replace(",", " ")   # noqa: E731
-    allb = (f'<span class="h">за всё время: <b>{nb(c["total"])}</b> реальных ставок · зашло <b>{nb(c["won"])}</b>'
-            f'{f" ({100 * c["won"] / c["total"]:.0f}%)" if c["total"] else ""}</span>'
-            f'<span>🎯 основных <b>{nb(c["main"])}</b> · зашло {nb(c["main_w"])}</span>'
-            f'<span>🔥 смелых <b>{nb(c["bold"])}</b> · зашло {nb(c["bold_w"])}</span>'
-            f'<span>🧩 экспрессов <b>{nb(c["express"])}</b> · зашло {nb(c["express_w"])}</span>')
+    allb = (f'<span class="h">всего ставок бота: <b>{nb(c["total"])}</b></span>'   # просто счётчик — без процентов прошлого банка
+            f'<span>🎯 основных <b>{nb(c["main"])}</b></span><span>🔥 смелых <b>{nb(c["bold"])}</b></span>'
+            f'<span>🧩 экспрессов <b>{nb(c["express"])}</b></span>')
     wr = f"{100 * w_all / n_all:.0f}%" if n_all else "—"
     mx = money(best["bank"]) + " ₽" if best else "—"
     return f"""<style>{BANK_CSS}</style>
