@@ -104,6 +104,9 @@ def _team_events(code: str, day: str) -> list[dict]:
         out.append({"id": e["id"], "div": code, "sport": LEAGUES[code][4],
                     "kickoff": pd.Timestamp(e["date"]).tz_convert(MSK).isoformat(),
                     "state": st.get("state"), "completed": bool(st.get("completed")), "status": st.get("name", ""),
+                    # время периода («8:43 - 2nd Period») и часы — для ⚡ LIVE-прогноза в моменте игры (betbot/inplay.py)
+                    "detail": st.get("detail") or st.get("shortDetail") or "", "clock": e["status"].get("displayClock", ""),
+                    "period": e["status"].get("period") or 0,
                     "home": _team(teams["home"]), "away": _team(teams["away"]), "odds": _team_odds(comp)})
     return out
 

@@ -83,8 +83,8 @@ def _minute(e: dict) -> float | None:
             return 45.0
         m = re.match(r"(\d+)", str(e.get("clock") or ""))
         return float(m.group(1)) if m else None
-    per = len((e.get("home") or {}).get("periods") or [])
-    m = re.search(r"(\d+):(\d+)", e.get("detail") or "")
+    per = int(e.get("period") or 0) or len((e.get("home") or {}).get("periods") or [])
+    m = re.match(r"(\d+):(\d+)", str(e.get("clock") or "")) or re.search(r"(\d+):(\d+)", e.get("detail") or "")
     if not per or not m:
         return None
     left = int(m.group(1)) + int(m.group(2)) / 60
