@@ -6137,22 +6137,22 @@
   "kickoff": "2026-11-11T03:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "home": {
+   "color": "dd1a32",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/ott.png",
    "id": "14",
    "name": "Ottawa Senators",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/ott.png",
-   "color": "dd1a32",
    "score": "0",
    "record": "11-6-1",
    "periods": [],
    "ru": "Оттава"
   },
   "away": {
+   "color": "d71830",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/wsh.png",
    "id": "23",
    "name": "Washington Capitals",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/wsh.png",
-   "color": "d71830",
    "score": "0",
    "record": "9-6-0",
    "periods": [],
@@ -6247,7 +6247,9 @@
   "btn": 4,
   "close": {
    "HK_O6.5": 0.4826
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null
  },
  "NHL|401892688": {
   "id": "401892688",
