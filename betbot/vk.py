@@ -77,6 +77,7 @@ def _photo(img: bytes) -> str | None:
             s = _call("photos.saveWallPhoto", group_id=GROUP_ID, photo=res["photo"], server=res["server"], hash=res["hash"])[0]
         except Exception as e:   # личный ключ не сработал — грузим через сообщения сообщества
             errs.append(f"стена: {e}")
+            _photo.wall_err = str(e)[:250]
             print(f"  ! ВК: фото стены не загрузилось: {e}")
     try:
         if not s:
@@ -214,8 +215,10 @@ def crosspost(state: dict) -> int:
             text += "\n\n" + tags
         img = postimg.image_for(p, ("начало" if started else dzen.kind(p.get("html", "")) or "новость"), posts)
         _photo.err = "" if img else "картинка поста не получена"
+        _photo.wall_err = ""
         photo = _photo(img) if img else None
         state["vk_err"] = f"{pid} фото: {_photo.err}" if not photo else None   # старую ошибку стираем
+        state["vk_wall_err"] = f"{pid}: {_photo.wall_err}" if _photo.wall_err else None   # почему не вышло фото стены по личному ключу
         # фото «из сообщений» сообщества ВК на стене один не показывает — пробуем вместе с карточкой ссылки
         # (наше фото как обложка ссылки); не принял — публикуем как раньше, текст со ссылкой
         if photo and photo.startswith("photo-"):   # фото «из сообщений» сообщества — только вместе со ссылкой

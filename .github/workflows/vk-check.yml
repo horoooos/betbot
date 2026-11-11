@@ -84,6 +84,16 @@ jobs:
               print("УДАЛЯЮ:", d, [(i.get("text") or "")[:40] for i in items])
               print("wall.delete:", vk._call("wall.delete", owner_id=-vk.GROUP_ID, post_id=int(d)))
               sys.exit(0)
+          from urllib.parse import urlparse
+          import os as _os
+          tok = _os.environ.get("VK_USER_TOKEN")
+          if tok:
+              srv = vk._call("photos.getWallUploadServer", _tok=tok, group_id=vk.GROUP_ID)
+              up = srv["upload_url"]; u = urlparse(up)
+              print("СЕРВЕР СТЕНЫ:", u.scheme, u.netloc, u.path, "| параметры:", sorted(k.split("=")[0] for k in u.query.split("&")))
+              for field, name, mime in (("photo", "post.jpg", "image/jpeg"), ("file", "post.jpg", "image/jpeg"), ("file1", "post.jpg", "image/jpeg")):
+                  r = requests.post(up, files={field: (name, img, mime)}, timeout=60)
+                  print("ЗАГРУЗКА", field, r.status_code, repr(r.text[:120]))
           vk._photo.err = ""
           print("ВЛОЖЕНИЕ:", vk._photo(img), "| ошибка:", vk._photo.err)
           for w in vk._call("wall.get", owner_id=-vk.GROUP_ID, count=3)["items"]:
