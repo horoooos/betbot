@@ -208,24 +208,6 @@ null
 },
 {
 "sport": "tennis",
-"id": "186542",
-"league": "Теннис · ATP",
-"kickoff": "2026-11-11T18:00:00+03:00",
-"home": "Борна Гойо",
-"away": "Юго Юмбер",
-"hl": "https://a.espncdn.com/i/teamlogos/countries/500/cro.png",
-"al": "https://a.espncdn.com/i/teamlogos/countries/500/fra.png",
-"hid": "3449",
-"aid": "3085",
-"bb": "https://betboom.ru/search?query=%D0%93%D0%BE%D0%B9%D0%BE",
-"path": "tennis/atp",
-"url": "live.html?s=tennis&p=tennis%2Fatp&e=186542&h=%D0%91%D0%BE%D1%80%D0%BD%D0%B0+%D0%93%D0%BE%D0%B9%D0%BE&a=%D0%AE%D0%B3%D0%BE+%D0%AE%D0%BC%D0%B1%D0%B5%D1%80",
-"tip": "",
-"top": false,
-"bot": null
-},
-{
-"sport": "tennis",
 "id": "186760",
 "league": "Теннис · WTA",
 "kickoff": "2026-11-11T18:00:00+03:00",
@@ -475,6 +457,24 @@ null
 ],
 "center": "Рейтинг Эло 1691 : 1641"
 }
+},
+{
+"sport": "tennis",
+"id": "186542",
+"league": "Теннис · ATP",
+"kickoff": "2026-11-11T18:10:00+03:00",
+"home": "Борна Гойо",
+"away": "Юго Юмбер",
+"hl": "https://a.espncdn.com/i/teamlogos/countries/500/cro.png",
+"al": "https://a.espncdn.com/i/teamlogos/countries/500/fra.png",
+"hid": "3449",
+"aid": "3085",
+"bb": "https://betboom.ru/search?query=%D0%93%D0%BE%D0%B9%D0%BE",
+"path": "tennis/atp",
+"url": "live.html?s=tennis&p=tennis%2Fatp&e=186542&h=%D0%91%D0%BE%D1%80%D0%BD%D0%B0+%D0%93%D0%BE%D0%B9%D0%BE&a=%D0%AE%D0%B3%D0%BE+%D0%AE%D0%BC%D0%B1%D0%B5%D1%80",
+"tip": "",
+"top": false,
+"bot": null
 },
 {
 "sport": "tennis",
