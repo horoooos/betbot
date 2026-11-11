@@ -85,6 +85,7 @@ jobs:
               print("wall.delete:", vk._call("wall.delete", owner_id=-vk.GROUP_ID, post_id=int(d)))
               sys.exit(0)
           from urllib.parse import urlparse
+          import requests
           import os as _os
           tok = _os.environ.get("VK_USER_TOKEN")
           if tok:
