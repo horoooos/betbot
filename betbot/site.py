@@ -57,6 +57,156 @@ def _chart(curve: list[float]) -> str:
             "</svg>")
 
 
+def _smooth(xs: list[float], ys: list[float]) -> str:
+    """Плавная линия через точки (монотонная кубическая кривая — без «выбросов» между днями)."""
+    n = len(xs)
+    if n < 2:
+        return ""
+    d = [(ys[i + 1] - ys[i]) / ((xs[i + 1] - xs[i]) or 1) for i in range(n - 1)]
+    m = [d[0]] + [0.0 if d[i - 1] * d[i] <= 0 else (d[i - 1] + d[i]) / 2 for i in range(1, n - 1)] + [d[-1]]
+    path = f"M{xs[0]:.1f},{ys[0]:.1f}"
+    for i in range(n - 1):
+        h = (xs[i + 1] - xs[i]) / 3
+        path += (f" C{xs[i] + h:.1f},{ys[i] + m[i] * h:.1f} {xs[i + 1] - h:.1f},{ys[i + 1] - m[i + 1] * h:.1f}"
+                 f" {xs[i + 1]:.1f},{ys[i + 1]:.1f}")
+    return path
+
+
+BANK_CSS = """
+.bankx{position:relative;overflow:hidden;padding:22px 22px 16px;border-radius:24px;border:1px solid rgba(255,255,255,.1);
+ background:radial-gradient(700px 260px at 85% -20%,rgba(46,204,113,.18),transparent 60%),radial-gradient(600px 240px at 0% 120%,rgba(255,196,0,.12),transparent 60%),linear-gradient(160deg,#141d42,#0c1330)}
+.bankx.down{background:radial-gradient(700px 260px at 85% -20%,rgba(255,90,90,.18),transparent 60%),radial-gradient(600px 240px at 0% 120%,rgba(255,196,0,.12),transparent 60%),linear-gradient(160deg,#141d42,#0c1330)}
+.bankx .top{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:14px;margin-bottom:6px}
+.bankx .lab{font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.bankx .big{font-size:clamp(34px,6vw,54px);font-weight:900;line-height:1;margin-top:6px;font-variant-numeric:tabular-nums;
+ background:linear-gradient(90deg,#fff,#cfe9ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.bankx .chg{display:inline-flex;align-items:center;gap:6px;margin-top:10px;padding:6px 12px;border-radius:999px;font-weight:900;font-size:14px}
+.bankx .chg.up{color:#7dffb0;background:rgba(46,204,113,.14);border:1px solid rgba(46,204,113,.4)}
+.bankx .chg.dn{color:#ff9a9a;background:rgba(255,90,90,.14);border:1px solid rgba(255,90,90,.4)}
+.bankx .chg.eq{color:#ffd54d;background:rgba(255,196,0,.12);border:1px solid rgba(255,196,0,.4)}
+.bankx .mini{display:flex;gap:10px;flex-wrap:wrap}
+.bankx .mini div{min-width:96px;padding:9px 12px;border-radius:14px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08)}
+.bankx .mini b{display:block;font-size:17px;font-weight:900}.bankx .mini span{font-size:11px;color:var(--muted);font-weight:700}
+.bankx svg{display:block;width:100%;height:auto;margin-top:8px;overflow:visible}.bankx .bk-narrow{display:none}
+@media (max-width:620px){.bankx .bk-wide{display:none}.bankx .bk-narrow{display:block}}
+.bankx .mini b{white-space:nowrap}
+.bankx .grid line{stroke:rgba(255,255,255,.06)}.bankx .ax{fill:#7f8bb3;font:600 12px Montserrat,system-ui,sans-serif}
+.bankx .startl{stroke:#ffc400;stroke-dasharray:6 7;stroke-width:1.6;opacity:.75}
+.bankx .startt{fill:#ffc400;font:800 12px Montserrat,system-ui,sans-serif}
+.bankx .ln{fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:2600;stroke-dashoffset:2600}
+.bankx .ar{opacity:0}
+.bankx.go .ln{animation:bkdraw 2.2s cubic-bezier(.3,.7,.2,1) .15s forwards}.bankx.go .ar{animation:bkfade 1.2s ease 1.1s forwards}
+.bankx .pulse{transform-origin:center;transform-box:fill-box;animation:bkpulse 1.8s ease-out infinite}
+.bankx .tip{position:absolute;pointer-events:none;padding:8px 12px;border-radius:12px;background:rgba(8,12,30,.92);border:1px solid rgba(255,255,255,.18);
+ font-size:12px;font-weight:700;white-space:nowrap;transform:translate(-50%,-115%);opacity:0;transition:opacity .15s}
+.bankx .tip b{display:block;font-size:16px;font-weight:900}
+.bankx .note{color:var(--muted);font-size:12px;margin-top:8px}
+@keyframes bkdraw{to{stroke-dashoffset:0}}@keyframes bkfade{to{opacity:1}}
+@keyframes bkpulse{0%{opacity:.7;transform:scale(1)}100%{opacity:0;transform:scale(3.2)}}
+@media (max-width:620px){.bankx{padding:16px 14px 12px}.bankx .mini div{min-width:0;flex:1}}
+"""
+
+BANK_JS = """<script>(()=>{const b=document.querySelector('.bankx');if(!b)return;const go=()=>b.classList.add('go');if('IntersectionObserver'in window){const io=new IntersectionObserver(es=>{if(es.some(e=>e.isIntersecting)){go();io.disconnect();}},{threshold:.25});io.observe(b);setTimeout(go,3000);}else go();
+const t=b.querySelector('.tip'),fmt=x=>Math.round(x).toLocaleString('ru-RU')+' ₽';
+b.querySelectorAll('svg[data-p]').forEach(s=>{const P=JSON.parse(s.dataset.p||'[]'),VW=+s.dataset.w,v=s.querySelector('.vline'),dot=s.querySelector('.hov');if(!P.length)return;
+const move=e=>{const r=s.getBoundingClientRect(),k=VW/r.width,x=((e.touches?e.touches[0].clientX:e.clientX)-r.left)*k;
+let i=0;P.forEach((p,j)=>{if(Math.abs(p[0]-x)<Math.abs(P[i][0]-x))i=j});const p=P[i];
+v.setAttribute('x1',p[0]);v.setAttribute('x2',p[0]);v.style.opacity=1;dot.setAttribute('cx',p[0]);dot.setAttribute('cy',p[1]);dot.style.opacity=1;
+t.innerHTML=`${p[2]}<b>${fmt(p[3])}</b>${p[4]?`${p[4]} ставок · зашло ${p[5]}`:'старт банка'}`;
+const br=b.getBoundingClientRect();t.style.left=Math.min(Math.max(r.left-br.left+p[0]/k,70),br.width-70)+'px';t.style.top=(r.top-br.top+p[1]/k)+'px';t.style.opacity=1;};
+const out=()=>{t.style.opacity=0;v.style.opacity=0;dot.style.opacity=0};
+s.addEventListener('mousemove',move);s.addEventListener('touchstart',move,{passive:true});s.addEventListener('touchmove',move,{passive:true});s.addEventListener('mouseleave',out);s.addEventListener('touchend',()=>setTimeout(out,1500));});})();</script>"""
+
+
+def _bank_block(res: pd.DataFrame, now: pd.Timestamp) -> str:
+    """💰 Виртуальный банк с 10 000 ₽: крупная сумма, изменение, мини-итоги и анимированный график по дням.
+
+    График рисуем в двух вариантах — широкий для компьютера и компактный (выше, крупные подписи) для телефона."""
+    days = pro.bank_daily(res)
+    today = now.tz_convert("Europe/Moscow").strftime("%Y-%m-%d")
+    pts = list(days)
+    if len(pts) == 1 or pts[-1]["date"] < today:   # сегодня ставок ещё нет — линия доходит до сегодняшнего дня
+        pts.append({"date": today, "bank": pts[-1]["bank"], "n": 0, "w": 0, "flat": True})
+    bank = pts[-1]["bank"]
+    diff, pct = bank - pro.BANK_START, 100 * (bank - pro.BANK_START) / pro.BANK_START
+    n_all, w_all = sum(p["n"] for p in days), sum(p["w"] for p in days)
+    money = lambda v: f"{v:,.0f}".replace(",", " ")   # noqa: E731
+    up = bank >= pro.BANK_START
+    vals = [p["bank"] for p in pts] + [pro.BANK_START]
+    lo0, hi0 = min(vals), max(vals)
+    span = max(hi0 - lo0, pro.BANK_START * 0.04)        # в начале — не растягиваем копейки на весь экран
+    lo, hi = (lo0 + hi0) / 2 - span * 0.65, (lo0 + hi0) / 2 + span * 0.65
+    reset = pd.Timestamp(pro.BANK_RESET)
+
+    def chart(W, H, L, R, T, B, fs, n_x, sfx, cls):
+        X = lambda i: L + i * (W - L - R) / max(len(pts) - 1, 1)   # noqa: E731
+        Y = lambda v: T + (hi - v) * (H - T - B) / (hi - lo)      # noqa: E731
+        xs, ys = [X(i) for i in range(len(pts))], [Y(p["bank"]) for p in pts]
+        line, base = _smooth(xs, ys), Y(pro.BANK_START)
+        area = f"{line} L{xs[-1]:.1f},{base:.1f} L{xs[0]:.1f},{base:.1f} Z"
+        ticks = [lo + (hi - lo) * k / 4 for k in range(5)]
+        grid = "".join(f'<line x1="{L}" x2="{W - R}" y1="{Y(v):.1f}" y2="{Y(v):.1f}"/>' for v in ticks)
+        yl = "".join(f'<text class="ax" style="font-size:{fs}px" x="{L - 8}" y="{Y(v) + fs / 3:.1f}" text-anchor="end">{money(v)}</text>' for v in ticks)
+        step = max(1, -(-len(pts) // n_x))
+        anchor = lambda i: "start" if i == 0 else "end" if i == len(pts) - 1 else "middle"   # noqa: E731
+        xl = "".join(f'<text class="ax" style="font-size:{fs}px" x="{xs[i]:.1f}" y="{H - 10}" text-anchor="{anchor(i)}">'
+                     f'{pd.Timestamp(p["date"]):%d.%m}</text>' for i, p in enumerate(pts) if i % step == 0 or i == len(pts) - 1)
+        overlay = ""
+        if n_all == 0:   # новый банк ещё без ставок: подписи «старт · 12.11» и «сейчас», крупная надпись по центру
+            xl = (f'<text class="ax" style="font-size:{fs}px" x="{xs[0]:.1f}" y="{H - 10}" text-anchor="start">старт · {reset:%d.%m}</text>'
+                  f'<text class="ax" style="font-size:{fs}px" x="{xs[-1]:.1f}" y="{H - 10}" text-anchor="end">сейчас</text>')
+            overlay = (f'<text x="{(L + W - R) / 2:.0f}" y="{base - fs * 4.6:.0f}" text-anchor="middle" '
+                       f'style="font:900 {fs * 2.4:.0f}px Montserrat,system-ui,sans-serif;fill:#fff">🚀 Новый отсчёт</text>'
+                       f'<text x="{(L + W - R) / 2:.0f}" y="{base - fs * 2.4:.0f}" text-anchor="middle" '
+                       f'style="font:700 {fs * 1.1:.0f}px Montserrat,system-ui,sans-serif;fill:#9aa6cc">'
+                       f'первые ставки — {reset.day} {MONTHS_RU[reset.month - 1]}</text>')
+        data = json.dumps([[round(xs[i], 1), round(ys[i], 1), f"{pd.Timestamp(p['date']).day} {MONTHS_RU[pd.Timestamp(p['date']).month - 1]}",
+                            round(p["bank"]), p["n"], p["w"]] for i, p in enumerate(pts)], ensure_ascii=False)
+        col = "#2ecc71" if up else "#ff5a5a"
+        mid, end = ("#2ecc71", "#5dffa8") if up else ("#ff7a5a", "#ff5a5a")
+        return f"""<svg class="{cls}" viewBox="0 0 {W} {H}" data-w="{W}" data-p='{escape(data, quote=True)}' role="img" aria-label="График виртуального банка бота">
+<defs>
+<linearGradient id="bkU{sfx}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2ecc71" stop-opacity=".55"/><stop offset="1" stop-color="#2ecc71" stop-opacity="0"/></linearGradient>
+<linearGradient id="bkD{sfx}" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#ff5a5a" stop-opacity=".5"/><stop offset="1" stop-color="#ff5a5a" stop-opacity="0"/></linearGradient>
+<linearGradient id="bkL{sfx}" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ffc400"/><stop offset=".5" stop-color="{mid}"/><stop offset="1" stop-color="{end}"/></linearGradient>
+<clipPath id="bkA{sfx}"><rect x="0" y="0" width="{W}" height="{base:.1f}"/></clipPath>
+<clipPath id="bkB{sfx}"><rect x="0" y="{base:.1f}" width="{W}" height="{H}"/></clipPath>
+<filter id="bkG{sfx}" x="-10%" y="-30%" width="120%" height="160%"><feGaussianBlur stdDeviation="{fs / 2:.0f}" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<g class="grid">{grid}</g>{yl}{xl}
+<path class="ar" d="{area}" fill="url(#bkU{sfx})" clip-path="url(#bkA{sfx})"/>
+<path class="ar" d="{area}" fill="url(#bkD{sfx})" clip-path="url(#bkB{sfx})"/>
+<line class="startl" x1="{L}" x2="{W - R}" y1="{base:.1f}" y2="{base:.1f}"/>
+<text class="startt" style="font-size:{fs}px" x="{W - R}" y="{base - fs * 0.7:.1f}" text-anchor="end">старт {money(pro.BANK_START)} ₽</text>
+<path class="ln" d="{line}" stroke="url(#bkL{sfx})" filter="url(#bkG{sfx})" style="stroke-width:{fs / 3:.1f}px"/>{overlay}
+<circle class="pulse" cx="{xs[-1]:.1f}" cy="{ys[-1]:.1f}" r="{fs * 0.66:.0f}" fill="{col}"/>
+<circle cx="{xs[-1]:.1f}" cy="{ys[-1]:.1f}" r="{fs * 0.58:.0f}" fill="#fff" stroke="{col}" stroke-width="{fs / 3:.0f}"/>
+<line class="vline" x1="0" x2="0" y1="{T}" y2="{H - B}" stroke="rgba(255,255,255,.35)" stroke-dasharray="4 5" style="opacity:0"/>
+<circle class="hov" cx="0" cy="0" r="{fs * 0.58:.0f}" fill="#ffc400" stroke="#0b1024" stroke-width="3" style="opacity:0"/>
+</svg>"""
+
+    cls, sign = ("up", "▲ +") if diff > 0.5 else ("dn", "▼ −") if diff < -0.5 else ("eq", "● ")
+    chg = f"{sign}{money(abs(diff))} ₽ · {abs(pct):.1f}%" if cls != "eq" else "● на старте"
+    best = max(days[1:], key=lambda p: p["bank"], default=None)
+    note = (f"Новый банк стартовал {reset.day} {MONTHS_RU[reset.month - 1]} с {money(pro.BANK_START)} ₽ — по новым правилам: "
+            "все ставки бота и экспрессы. График растёт с каждой рассчитанной ставкой.") if n_all == 0 else \
+        f"Ставка — рекомендованные ботом 1–3% от текущего банка; смелые и экспрессы — по 1%. Старт — {money(pro.BANK_START)} ₽."
+    wr = f"{100 * w_all / n_all:.0f}%" if n_all else "—"
+    mx = money(best["bank"]) + " ₽" if best else "—"
+    return f"""<style>{BANK_CSS}</style>
+<h2>💰 Виртуальный банк</h2>
+<div class="bankx{'' if up else ' down'}">
+<div class="top"><div><div class="lab">банк бота · с {reset:%d.%m.%Y}</div><div class="big">{money(bank)} ₽</div>
+<div class="chg {cls}">{chg}</div></div>
+<div class="mini"><div><b>{n_all}</b><span>ставок</span></div><div><b>{wr}</b><span>зашло</span></div>
+<div><b>{mx}</b><span>максимум</span></div></div></div>
+{chart(1000, 330, 64, 26, 24, 40, 12, 8, "d", "bk-wide")}{chart(400, 300, 50, 14, 20, 34, 14, 4, "m", "bk-narrow")}<div class="tip"></div>
+<div class="note">{note}</div></div>{BANK_JS}"""
+
+
+MONTHS_RU = ["января", "февраля", "марта", "апреля", "мая", "июня", "июля", "августа", "сентября", "октября", "ноября", "декабря"]
+
+
 CSS = """
 :root{--bg:#070b1a;--card:#111936;--card2:#18224a;--line:rgba(255,255,255,.09);--ink:#fff;--muted:#9aa6cc;--gold:#ffc400;--good:#2ecc71;--bad:#ff5a5a;--live:#ff4646}
 *{box-sizing:border-box;margin:0;padding:0}
@@ -371,8 +521,7 @@ def build(res: pd.DataFrame, now: pd.Timestamp, blocks: dict | None = None) -> N
 <div class="row"><a class="btn gold" href="top.html">Рейтинг</a><a class="btn ghost" href="feed.html">🎯 Сделать прогноз</a></div></div></div>
 <style>@media (max-width:760px){{#quizbox{{grid-template-columns:1fr!important}}}}</style>
 <div class="kpis" id="stats">{kpis}</div>
-<h2>💰 Виртуальный банк</h2><div class="card">{_chart(curve) or '<span class="muted">Пока мало данных</span>'}
-<p class="muted small" style="margin-top:8px">Если ставить ровно по рекомендациям бота (1–3% банка на основной прогноз), начиная с {money(pro.BANK_START)} ₽.</p></div>
+{_bank_block(res, now)}
 <h2>🗓 Последние 4 недели</h2><div class="card"><div class="heat">{heat}</div>
 <div class="legend"><span><i style="background:#2ecc71"></i>60%+ заходов</span><span><i style="background:#9be15d"></i>50–60%</span><span><i style="background:#ffc400"></i>40–50%</span><span><i style="background:#ff5a5a"></i>меньше 40%</span><span><i style="background:rgba(255,255,255,.08)"></i>без прогнозов</span></div></div>
 <h2>🏅 По видам спорта</h2><div class="sp">{sport_cards}</div>

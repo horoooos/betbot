@@ -56,6 +56,22 @@ BANK_RESET = "2026-11-12"   # банк обнулён до 10 000: с этого
 EXPRESS_LOG = Path(__file__).resolve().parent.parent / "data" / "express_bets.csv"
 
 
+def bank_daily(res: pd.DataFrame, today: pd.Timestamp | None = None) -> list[dict]:
+    """Банк по дням с BANK_RESET: [{date, bank, n (ставок), w (зашло)}]; первая точка — старт 10 000."""
+    if res is not None and len(res):
+        res = res[pd.to_datetime(res["date"]) >= pd.Timestamp(BANK_RESET)]
+    start = pd.Timestamp(BANK_RESET)
+    out = [{"date": (start - pd.Timedelta(days=1)).strftime("%Y-%m-%d"), "bank": float(BANK_START), "n": 0, "w": 0, "start": True}]
+    bank = float(BANK_START)
+    for day, o, h, s in all_bets(res, start=BANK_RESET, dated=True):
+        if out[-1]["date"] != day:
+            out.append({"date": day, "bank": bank, "n": 0, "w": 0})
+        amount = bank * s / 100
+        bank += amount * (o - 1) if h else -amount
+        out[-1].update(bank=round(bank, 2), n=out[-1]["n"] + 1, w=out[-1]["w"] + int(h))
+    return out
+
+
 def bank_curve(res: pd.DataFrame) -> list[float]:
     """Виртуальный банк по ВСЕМ исходам бота с BANK_RESET: старт 10 000, ставка — рекомендованный % от текущего банка.
 
@@ -90,7 +106,7 @@ def expresses(start: str | None = None, end: str | None = None) -> pd.DataFrame:
     return ex
 
 
-def all_bets(res: pd.DataFrame, start: str | None = None, end: str | None = None) -> list[tuple[float, bool, float]]:
+def all_bets(res: pd.DataFrame, start: str | None = None, end: str | None = None, dated: bool = False) -> list:
     """Все рассчитанные ставки бота по датам: (кэф, зашла ли, % банка) — основные, смелые и экспрессы.
 
     Экспрессы берём за даты таблицы res (или с start, если задан)."""
@@ -115,7 +131,7 @@ def all_bets(res: pd.DataFrame, start: str | None = None, end: str | None = None
         rows += [(str(r["date"])[:10], float(r["odds"]), str(r["hit"]).lower() in ("true", "1"), STAKE_MIN)
                  for _, r in ex.iterrows() if float(r["odds"]) > 1]
     rows.sort(key=lambda r: r[0])   # по дням; внутри дня — в порядке записи
-    return [(o, h, s) for _, o, h, s in rows]
+    return rows if dated else [(o, h, s) for _, o, h, s in rows]
 
 
 def roi_all(res: pd.DataFrame) -> float | None:
