@@ -1649,7 +1649,7 @@
  "tg_offset": 727618641,
  "push_watch": {},
  "news_video": true,
- "vk_last": 5018,
+ "vk_last": 5020,
  "dz_last": 5020,
  "vk_err": null,
  "news_forced": "now",
@@ -1659,5 +1659,5 @@
   "https://images.cybersport.ru/images/as-is/plain/13/132879f8-8954-492d-9570-ac3a27a28fb8.jpg"
  ],
  "indexnow_day": "2026-11-11",
- "vk_wall_err": null
+ "vk_wall_err": "5020: попытка 1: сервер загрузки ответил не JSON (405): '<html>\\r\\n<head><title>405 Not Allowed</title></head>\\r\\n<body>\\r\\n<center><h1>405 Not'"
 }
