@@ -985,7 +985,7 @@
   },
   "used": {
    "2026-10": 41,
-   "2026-11": 146
+   "2026-11": 147
   },
   "tournaments": {
    "tennis": {
@@ -1010,7 +1010,7 @@
    }
   },
   "last": {
-   "tennis": "2026-11-11T18:52:48.194892+03:00",
+   "tennis": "2026-11-12T02:53:58.067988+03:00",
    "CS2": "2026-11-10T18:25:09.740800+03:00",
    "DOTA": "2026-11-10T06:23:59.302971+03:00"
   },
@@ -1712,7 +1712,7 @@
  "tg_offset": 727618641,
  "push_watch": {},
  "news_video": true,
- "vk_last": 5040,
+ "vk_last": 5041,
  "dz_last": 5041,
  "vk_err": null,
  "news_forced": "now",
@@ -1723,5 +1723,5 @@
   "https://images.cybersport.ru/images/as-is/plain/ac/ac12208a-caeb-4553-b73f-98b5e460de44.jpg"
  ],
  "indexnow_day": "2026-11-12",
- "vk_wall_err": null
+ "vk_wall_err": "5041: попытка 1: VK photos.saveWallPhoto: 100 One of the parameters specified was missing or invalid: photo is undefined"
 }
