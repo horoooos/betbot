@@ -7144,31 +7144,31 @@
   "kickoff": "2026-11-11T19:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Wed, November 11th at 11:30 AM EST",
   "home": {
-   "id": "4666",
-   "name": "Lucia Bronzetti",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/4666.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/ita.png"
    ],
+   "id": "4666",
+   "name": "Lucia Bronzetti",
    "country": "Italy",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
    "ru": "Лючия Бронцетти"
   },
   "away": {
-   "id": "1955",
-   "name": "Elizabeth Mandlik",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/1955.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/usa.png"
    ],
+   "id": "1955",
+   "name": "Elizabeth Mandlik",
    "country": "USA",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
@@ -7228,7 +7228,9 @@
   "btn": 4,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null
  },
  "WTA|186763": {
   "id": "186763",
