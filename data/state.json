@@ -5,7 +5,7 @@
  },
  "learned": "2026-11-11",
  "schedule_day": "2026-11-11",
- "content_slot": "2026-11-11-19",
+ "content_slot": "2026-11-11-20",
  "news_seen": [
   "https://www.championat.com/tennis/news-6690446-elene-rybakinoj-stalo-ploho-vo-vremya-intervyu-pozzhe-ona-snyalas-s-itogovogo-turnira-wta.html",
   "https://www.championat.com/cybersport/news-6690444-ya-vyigrayu-i-stanu-chempionom-chovy-o-vyhode-v-pervyj-grand-final-worlds.html",
@@ -1508,7 +1508,7 @@
  "value_day": "2026-11-11",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-11",
- "site_stamp": "851|4997|2026-11-11 19",
+ "site_stamp": "851|4999|2026-11-11 20",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1523,119 +1523,117 @@
  },
  "value_check": "2026-11-11-6",
  "express_risk": {
-  "msg": 4841,
+  "msg": 4998,
   "legs": [
    {
     "sport": "hockey",
     "div": "NHL",
-    "id": "401892683",
-    "side": "away",
-    "p": 0.5934121196882072,
-    "odds": 1.617,
-    "kickoff": "2026-11-11T03:00:00+03:00",
-    "home": "Торонто",
-    "away": "Колорадо",
-    "league": "🇺🇸 США · NHL",
-    "logos": [
-     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/tor.png",
-     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/col.png"
-    ],
-    "colors": [
-     "003e7e",
-     "860038"
-    ],
-    "label": "Победа: Колорадо (с ОТ)"
-   },
-   {
-    "sport": "hockey",
-    "div": "NHL",
-    "id": "401892688",
+    "id": "401892691",
     "side": "away",
     "p": 0.572012257405516,
     "odds": 1.676,
-    "kickoff": "2026-11-11T03:00:00+03:00",
-    "home": "Виннипег",
-    "away": "Нью-Джерси",
+    "kickoff": "2026-11-12T03:30:00+03:00",
+    "home": "Калгари",
+    "away": "Рейнджерс",
     "league": "🇺🇸 США · NHL",
     "logos": [
-     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/wpg.png",
-     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/nj.png"
+     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/cgy.png",
+     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/nyr.png"
     ],
     "colors": [
-     "002d62",
-     "e30b2b"
+     "dd1a32",
+     "0056ae"
     ],
-    "label": "Победа: Нью-Джерси (с ОТ)",
-    "win": false,
-    "score": "4:2"
+    "label": "Победа: Рейнджерс (с ОТ)"
    },
    {
-    "sport": "hockey",
-    "div": "NHL",
-    "id": "401892684",
+    "sport": "basketball",
+    "div": "NBA",
+    "id": "401909972",
+    "side": "home",
+    "p": 0.5934121196882072,
+    "odds": 1.617,
+    "kickoff": "2026-11-12T04:00:00+03:00",
+    "home": "Нью-Орлеан Пеликанс",
+    "away": "Бруклин Нетс",
+    "league": "🇺🇸 США · NBA",
+    "logos": [
+     "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/no.png",
+     "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/bkn.png"
+    ],
+    "colors": [
+     "0a2240",
+     "000000"
+    ],
+    "label": "Победа: Нью-Орлеан Пеликанс (с ОТ)"
+   },
+   {
+    "sport": "basketball",
+    "div": "NBA",
+    "id": "401909973",
     "side": "away",
-    "p": 0.5427759110881364,
-    "odds": 1.769,
-    "kickoff": "2026-11-11T03:00:00+03:00",
-    "home": "Монреаль",
-    "away": "Миннесота",
-    "league": "🇺🇸 США · NHL",
+    "p": 0.584070796460177,
+    "odds": 1.645,
+    "kickoff": "2026-11-12T05:00:00+03:00",
+    "home": "Юта Джаз",
+    "away": "Орландо Мэджик",
+    "league": "🇺🇸 США · NBA",
     "logos": [
-     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/mtl.png",
-     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/min.png"
+     "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/utah.png",
+     "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/orl.png"
     ],
     "colors": [
-     "c41230",
-     "124734"
+     "4e008e",
+     "0150b5"
     ],
-    "label": "Победа: Миннесота (с ОТ)"
+    "label": "Победа: Орландо Мэджик (с ОТ)"
    },
    {
     "sport": "hockey",
     "div": "NHL",
-    "id": "401892687",
+    "id": "401892694",
     "side": "home",
     "p": 0.5635245901639344,
     "odds": 1.704,
-    "kickoff": "2026-11-11T04:00:00+03:00",
-    "home": "Сент-Луис",
-    "away": "Детройт",
+    "kickoff": "2026-11-12T06:00:00+03:00",
+    "home": "Анахайм",
+    "away": "Нэшвилл",
     "league": "🇺🇸 США · NHL",
     "logos": [
-     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/stl.png",
-     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/det.png"
+     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/ana.png",
+     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/nsh.png"
     ],
     "colors": [
-     "0070b9",
-     "e30526"
+     "fc4c02",
+     "fdba31"
     ],
-    "label": "Победа: Сент-Луис (с ОТ)"
+    "label": "Победа: Анахайм (с ОТ)"
    },
    {
     "sport": "hockey",
     "div": "NHL",
-    "id": "401892689",
-    "side": "home",
-    "p": 0.5514042772481319,
-    "odds": 1.741,
-    "kickoff": "2026-11-11T06:00:00+03:00",
-    "home": "Лос-Анджелес",
-    "away": "Нэшвилл",
+    "id": "401892695",
+    "side": "away",
+    "p": 0.5635245901639344,
+    "odds": 1.704,
+    "kickoff": "2026-11-12T06:00:00+03:00",
+    "home": "Сан-Хосе",
+    "away": "Питтсбург",
     "league": "🇺🇸 США · NHL",
     "logos": [
-     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/la.png",
-     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/nsh.png"
+     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/sj.png",
+     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/pit.png"
     ],
     "colors": [
-     "121212",
-     "fdba31"
+     "00788a",
+     "000000"
     ],
-    "label": "Победа: Лос-Анджелес (с ОТ)"
+    "label": "Победа: Питтсбург (с ОТ)"
    }
   ],
-  "odds": 14.222640367992671,
-  "day": "2026-11-10",
-  "done": true
+  "odds": 12.94461438044544,
+  "day": "2026-11-11",
+  "done": false
  },
  "streak_day": {
   "2026-11-08": 1
@@ -1655,8 +1653,8 @@
  "tg_offset": 727618641,
  "push_watch": {},
  "news_video": true,
- "vk_last": 4994,
- "dz_last": 4997,
+ "vk_last": 4995,
+ "dz_last": 4999,
  "vk_err": null,
  "news_forced": "now",
  "vk_mode": "photo",

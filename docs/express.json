@@ -69,103 +69,103 @@
 {
 "kind": "express_risk",
 "title": "Экспресс на яйцах",
-"day": "2026-11-10",
-"odds": 14.222640367992671,
-"p": 0.0572,
-"status": "lost",
+"day": "2026-11-11",
+"odds": 12.94461438044544,
+"p": 0.063,
+"status": "wait",
 "won": 0,
 "n": 5,
-"post": "https://t.me/aistavvit/4841",
+"post": "https://t.me/aistavvit/4998",
 "legs": [
 {
 "sport": "hockey",
-"id": "401892683",
-"home": "Торонто",
-"away": "Колорадо",
+"id": "401892691",
+"home": "Калгари",
+"away": "Рейнджерс",
 "league": "🇺🇸 США · NHL",
-"kickoff": "2026-11-11T03:00:00+03:00",
-"label": "Победа: Колорадо (с ОТ)",
-"odds": 1.617,
-"p": 0.5934121196882072,
-"logos": [
-"https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/tor.png",
-"https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/col.png"
-],
-"win": null,
-"score": null,
-"url": "live.html?s=hockey&p=hockey%2Fnhl&e=401892683&h=%D0%A2%D0%BE%D1%80%D0%BE%D0%BD%D1%82%D0%BE&a=%D0%9A%D0%BE%D0%BB%D0%BE%D1%80%D0%B0%D0%B4%D0%BE"
-},
-{
-"sport": "hockey",
-"id": "401892688",
-"home": "Виннипег",
-"away": "Нью-Джерси",
-"league": "🇺🇸 США · NHL",
-"kickoff": "2026-11-11T03:00:00+03:00",
-"label": "Победа: Нью-Джерси (с ОТ)",
+"kickoff": "2026-11-12T03:30:00+03:00",
+"label": "Победа: Рейнджерс (с ОТ)",
 "odds": 1.676,
 "p": 0.572012257405516,
 "logos": [
-"https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/wpg.png",
-"https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/nj.png"
-],
-"win": false,
-"score": "4:2",
-"url": "live.html?s=hockey&p=hockey%2Fnhl&e=401892688&h=%D0%92%D0%B8%D0%BD%D0%BD%D0%B8%D0%BF%D0%B5%D0%B3&a=%D0%9D%D1%8C%D1%8E-%D0%94%D0%B6%D0%B5%D1%80%D1%81%D0%B8"
-},
-{
-"sport": "hockey",
-"id": "401892684",
-"home": "Монреаль",
-"away": "Миннесота",
-"league": "🇺🇸 США · NHL",
-"kickoff": "2026-11-11T03:00:00+03:00",
-"label": "Победа: Миннесота (с ОТ)",
-"odds": 1.769,
-"p": 0.5427759110881364,
-"logos": [
-"https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/mtl.png",
-"https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/min.png"
+"https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/cgy.png",
+"https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/nyr.png"
 ],
 "win": null,
 "score": null,
-"url": "live.html?s=hockey&p=hockey%2Fnhl&e=401892684&h=%D0%9C%D0%BE%D0%BD%D1%80%D0%B5%D0%B0%D0%BB%D1%8C&a=%D0%9C%D0%B8%D0%BD%D0%BD%D0%B5%D1%81%D0%BE%D1%82%D0%B0"
+"url": "live.html?s=hockey&p=hockey%2Fnhl&e=401892691&h=%D0%9A%D0%B0%D0%BB%D0%B3%D0%B0%D1%80%D0%B8&a=%D0%A0%D0%B5%D0%B9%D0%BD%D0%B4%D0%B6%D0%B5%D1%80%D1%81"
+},
+{
+"sport": "basketball",
+"id": "401909972",
+"home": "Нью-Орлеан Пеликанс",
+"away": "Бруклин Нетс",
+"league": "🇺🇸 США · NBA",
+"kickoff": "2026-11-12T04:00:00+03:00",
+"label": "Победа: Нью-Орлеан Пеликанс (с ОТ)",
+"odds": 1.617,
+"p": 0.5934121196882072,
+"logos": [
+"https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/no.png",
+"https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/bkn.png"
+],
+"win": null,
+"score": null,
+"url": "live.html?s=basketball&p=basketball%2Fnba&e=401909972&h=%D0%9D%D1%8C%D1%8E-%D0%9E%D1%80%D0%BB%D0%B5%D0%B0%D0%BD+%D0%9F%D0%B5%D0%BB%D0%B8%D0%BA%D0%B0%D0%BD%D1%81&a=%D0%91%D1%80%D1%83%D0%BA%D0%BB%D0%B8%D0%BD+%D0%9D%D0%B5%D1%82%D1%81"
+},
+{
+"sport": "basketball",
+"id": "401909973",
+"home": "Юта Джаз",
+"away": "Орландо Мэджик",
+"league": "🇺🇸 США · NBA",
+"kickoff": "2026-11-12T05:00:00+03:00",
+"label": "Победа: Орландо Мэджик (с ОТ)",
+"odds": 1.645,
+"p": 0.584070796460177,
+"logos": [
+"https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/utah.png",
+"https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/orl.png"
+],
+"win": null,
+"score": null,
+"url": "live.html?s=basketball&p=basketball%2Fnba&e=401909973&h=%D0%AE%D1%82%D0%B0+%D0%94%D0%B6%D0%B0%D0%B7&a=%D0%9E%D1%80%D0%BB%D0%B0%D0%BD%D0%B4%D0%BE+%D0%9C%D1%8D%D0%B4%D0%B6%D0%B8%D0%BA"
 },
 {
 "sport": "hockey",
-"id": "401892687",
-"home": "Сент-Луис",
-"away": "Детройт",
+"id": "401892694",
+"home": "Анахайм",
+"away": "Нэшвилл",
 "league": "🇺🇸 США · NHL",
-"kickoff": "2026-11-11T04:00:00+03:00",
-"label": "Победа: Сент-Луис (с ОТ)",
+"kickoff": "2026-11-12T06:00:00+03:00",
+"label": "Победа: Анахайм (с ОТ)",
 "odds": 1.704,
 "p": 0.5635245901639344,
 "logos": [
-"https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/stl.png",
-"https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/det.png"
-],
-"win": null,
-"score": null,
-"url": "live.html?s=hockey&p=hockey%2Fnhl&e=401892687&h=%D0%A1%D0%B5%D0%BD%D1%82-%D0%9B%D1%83%D0%B8%D1%81&a=%D0%94%D0%B5%D1%82%D1%80%D0%BE%D0%B9%D1%82"
-},
-{
-"sport": "hockey",
-"id": "401892689",
-"home": "Лос-Анджелес",
-"away": "Нэшвилл",
-"league": "🇺🇸 США · NHL",
-"kickoff": "2026-11-11T06:00:00+03:00",
-"label": "Победа: Лос-Анджелес (с ОТ)",
-"odds": 1.741,
-"p": 0.5514042772481319,
-"logos": [
-"https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/la.png",
+"https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/ana.png",
 "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/nsh.png"
 ],
 "win": null,
 "score": null,
-"url": "live.html?s=hockey&p=hockey%2Fnhl&e=401892689&h=%D0%9B%D0%BE%D1%81-%D0%90%D0%BD%D0%B4%D0%B6%D0%B5%D0%BB%D0%B5%D1%81&a=%D0%9D%D1%8D%D1%88%D0%B2%D0%B8%D0%BB%D0%BB"
+"url": "live.html?s=hockey&p=hockey%2Fnhl&e=401892694&h=%D0%90%D0%BD%D0%B0%D1%85%D0%B0%D0%B9%D0%BC&a=%D0%9D%D1%8D%D1%88%D0%B2%D0%B8%D0%BB%D0%BB"
+},
+{
+"sport": "hockey",
+"id": "401892695",
+"home": "Сан-Хосе",
+"away": "Питтсбург",
+"league": "🇺🇸 США · NHL",
+"kickoff": "2026-11-12T06:00:00+03:00",
+"label": "Победа: Питтсбург (с ОТ)",
+"odds": 1.704,
+"p": 0.5635245901639344,
+"logos": [
+"https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/sj.png",
+"https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/pit.png"
+],
+"win": null,
+"score": null,
+"url": "live.html?s=hockey&p=hockey%2Fnhl&e=401892695&h=%D0%A1%D0%B0%D0%BD-%D0%A5%D0%BE%D1%81%D0%B5&a=%D0%9F%D0%B8%D1%82%D1%82%D1%81%D0%B1%D1%83%D1%80%D0%B3"
 }
 ]
 }
