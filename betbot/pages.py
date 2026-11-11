@@ -217,7 +217,7 @@ def page(prefix: str, title: str, desc: str, canon: str, body: str, on: str = ""
 <footer>АИ СТАВИТ — бесплатные прогнозы на спорт от искусственного интеллекта и честная статистика. Прогноз — не гарантия выигрыша. 18+.
 <br><a href="https://t.me/{CH}">Telegram-канал @{CH}</a> · <a href="{prefix}./">Статистика бота</a> · <a href="{prefix}matches.html">Матчи онлайн</a> · <a href="{prefix}news/">Новости спорта</a> · <a href="{prefix}predictions/">Прогнозы на матчи</a>
 <br><a href="{prefix}leagues.html">Команды, игроки и турниры</a> · <a href="{prefix}teams/">Прогнозы по командам</a> · <a href="{prefix}tools.html">Калькуляторы ставок</a> · <a href="{prefix}school/">Школа ставок</a> · <a href="{prefix}top.html">Рейтинг прогнозистов</a>
-<br>Прогнозы: <a href="{prefix}prognozy/futbol-segodnya.html">на футбол сегодня</a> · <a href="{prefix}prognozy/ekspress-dnya.html">экспресс дня</a> · <a href="{prefix}prognozy/rpl.html">РПЛ</a> · <a href="{prefix}prognozy/apl.html">АПЛ</a> · <a href="{prefix}prognozy/liga-chempionov.html">Лига чемпионов</a> · <a href="{prefix}prognozy/hokkej-nhl.html">хоккей</a> · <a href="{prefix}prognozy/nba.html">НБА</a> · <a href="{prefix}prognozy/tennis.html">теннис</a> · <a href="{prefix}prognozy/kibersport.html">киберспорт</a> · <a href="{prefix}watch/">смотреть онлайн</a>
+<br>Прогнозы: <a href="{prefix}prognozy/futbol-segodnya.html">на футбол сегодня</a> · <a href="{prefix}prognozy/ekspress-dnya.html">экспресс дня</a> · <a href="{prefix}itogi/">итоги дня</a> · <a href="{prefix}prognozy/rpl.html">РПЛ</a> · <a href="{prefix}prognozy/apl.html">АПЛ</a> · <a href="{prefix}prognozy/liga-chempionov.html">Лига чемпионов</a> · <a href="{prefix}prognozy/hokkej-nhl.html">хоккей</a> · <a href="{prefix}prognozy/nba.html">НБА</a> · <a href="{prefix}prognozy/tennis.html">теннис</a> · <a href="{prefix}prognozy/kibersport.html">киберспорт</a> · <a href="{prefix}watch/">смотреть онлайн</a>
 <br>Мы в соцсетях: {SOCIAL_LINKS} · <a href="https://vk.me/aistavvit" rel="noopener">написать в поддержку</a></footer>
 </main><div class="sticky"><a class="a" href="{prefix}matches.html">📺 Онлайн</a><a class="b" href="https://t.me/{CH}">📲 Канал</a></div>
 <script type="module">import("{prefix}fb.js?v=12").then(fb => {{ fb.navUser(document.getElementById("navUser")); fb.track("{on or 'page'}");
@@ -664,6 +664,11 @@ def build(stores: dict, results: pd.DataFrame, now: pd.Timestamp, max_pages: int
         extra += hubs.build(ms, now)
     except Exception as e:
         print(f"  ! подборки прогнозов не собрались: {e}")
+    try:   # «Итоги дня» с картинкой для репостов
+        from . import recap_page
+        extra += recap_page.build(results, now)
+    except Exception as e:
+        print(f"  ! итоги дня не собрались: {e}")
     try:   # страницы турниров (таблица и расписание) — тоже в поиск
         from . import directory
         extra += [f"league.html?p={x['p'].replace('/', '%2F')}" for x in directory._leagues()]

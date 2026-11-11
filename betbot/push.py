@@ -86,6 +86,43 @@ def notify_match(match_id, title: str, body: str, link: str) -> int:
     return n
 
 
+def notify_all(title: str, body: str, link: str, tag: str = "ai-weekly") -> int:
+    """Всем подписчикам сайта (любая подписка) — еженедельная рассылка."""
+    if not enabled():
+        return 0
+    tok = _token()
+    if not tok:
+        return 0
+    n = 0
+    for key, s in list(_subscribers(tok).items()):
+        if isinstance(s, dict) and s.get("t"):
+            n += _send(tok, key, s["t"], title, body, link, tag)
+    print(f"  push: «{title}» → {n} устройств")
+    return n
+
+
+def weekly(state: dict, now, res) -> None:
+    """Пятница, 18:00–19:00 МСК: «лучшее за неделю + экспресс выходных» всем подписчикам (раз в неделю)."""
+    import pandas as pd
+    now = now.tz_convert("Europe/Moscow")
+    week = f"{now:%G-%V}"
+    if now.weekday() != 4 or now.hour != 18 or state.get("push_weekly") == week:
+        return
+    state["push_weekly"] = week
+    body = "Экспресс выходных и прогнозы на главные матчи — уже на сайте."
+    try:
+        r = res[pd.to_datetime(res["date"]) >= (now.tz_localize(None).normalize() - pd.Timedelta(days=7))]
+        hit = r["main_hit"].astype(str).str.lower().isin(["true", "1", "1.0"])
+        if len(r):
+            best = r[hit].sort_values("main_odds", ascending=False).head(1)
+            top = f" Лучший заход: {best.iloc[0]['home']} — {best.iloc[0]['away']} @ {float(best.iloc[0]['main_odds']):.2f}." if len(best) else ""
+            body = f"За неделю зашло {int(hit.sum())} из {len(r)} прогнозов.{top} Экспресс выходных — на сайте."
+    except Exception:
+        pass
+    notify_all("🔥 Лучшее за неделю + экспресс выходных", body,
+               "https://horoooos.github.io/betbot/prognozy/ekspress-dnya.html")
+
+
 def notify_daily(title: str, body: str, link: str) -> int:
     """Всем, кто подписан на «Прогноз дня»."""
     if not enabled():

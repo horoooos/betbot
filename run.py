@@ -641,6 +641,7 @@ def main():
     save_json(LIVE, live.cleanup(live_store, now))
     try:   # push-уведомления подписчикам сайта: голы и начало/конец матчей, за которыми они следят
         push.watch(events + other, state.setdefault("push_watch", {}))
+        push.weekly(state, now, read_results())   # пятница 18:00 — «лучшее за неделю + экспресс выходных»
     except Exception as e:
         print(f"  ! push не удался: {e}")
 
