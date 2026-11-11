@@ -3,7 +3,7 @@
   "1X2": 0.0,
   "OU25": 0.0
  },
- "learned": "2026-11-11",
+ "learned": "2026-11-12",
  "schedule_day": "2026-11-11",
  "content_slot": "2026-11-11-23",
  "news_seen": [
@@ -1427,6 +1427,80 @@
    "St Johnstone",
    "St Mirren",
    "Stenhousemuir"
+  ],
+  "CDB": [
+   "América Mineiro",
+   "Athletic",
+   "Athletico Paranaense",
+   "Atlético Goianiense",
+   "Atlético-MG",
+   "Avaí",
+   "Bahia",
+   "Botafogo",
+   "Botafogo-SP",
+   "CRB",
+   "Ceará",
+   "Chapecoense",
+   "Corinthians",
+   "Coritiba",
+   "Criciúma",
+   "Cruzeiro",
+   "Cuiabá",
+   "Flamengo",
+   "Fluminense",
+   "Fortaleza",
+   "Goiás",
+   "Grêmio",
+   "Internacional",
+   "Juventude",
+   "Londrina",
+   "Mirassol",
+   "Novorizontino",
+   "Náutico",
+   "Operário PR",
+   "Palmeiras",
+   "Ponte Preta",
+   "Red Bull Bragantino",
+   "Remo",
+   "Santos",
+   "Sport",
+   "São Bernardo",
+   "São Paulo",
+   "Vasco da Gama",
+   "Vila Nova",
+   "Vitória"
+  ],
+  "ARGC": [
+   "Aldosivi",
+   "Argentinos Juniors",
+   "Atlético Tucumán",
+   "Banfield",
+   "Barracas Central",
+   "Belgrano (Córdoba)",
+   "Boca Juniors",
+   "Central Córdoba (Santiago del Estero)",
+   "Defensa y Justicia",
+   "Deportivo Riestra",
+   "Estudiantes de La Plata",
+   "Estudiantes de Río Cuarto",
+   "Gimnasia (Mendoza)",
+   "Gimnasia La Plata",
+   "Huracán",
+   "Independiente",
+   "Independiente Rivadavia",
+   "Instituto (Córdoba)",
+   "Lanús",
+   "Newell's Old Boys",
+   "Platense",
+   "Racing Club",
+   "River Plate",
+   "Rosario Central",
+   "San Lorenzo",
+   "Sarmiento (Junín)",
+   "Talleres (Córdoba)",
+   "Tigre",
+   "Unión (Santa Fe)",
+   "Vélez Sarsfield"
   ]
  },
  "express": {
@@ -1510,7 +1584,7 @@
  "value_day": "2026-11-11",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-11",
- "site_stamp": "858|5026|2026-11-11 23",
+ "site_stamp": "858|5026|2026-11-12 00",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1523,7 +1597,7 @@
    "NBA|401909966"
   ]
  },
- "value_check": "2026-11-11-7",
+ "value_check": "2026-11-12-0",
  "express_risk": {
   "msg": 4998,
   "legs": [
@@ -1655,7 +1729,7 @@
  "tg_offset": 727618641,
  "push_watch": {},
  "news_video": true,
- "vk_last": 5023,
+ "vk_last": 5024,
  "dz_last": 5026,
  "vk_err": null,
  "news_forced": "now",
@@ -1664,6 +1738,6 @@
  "img_used": [
   "https://images.cybersport.ru/images/as-is/plain/13/132879f8-8954-492d-9570-ac3a27a28fb8.jpg"
  ],
- "indexnow_day": "2026-11-11",
- "vk_wall_err": "5023: попытка 1: сервер загрузки ответил не JSON (500): '<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\\n<html>\\n<head>\\n  <title>The pa'"
+ "indexnow_day": "2026-11-12",
+ "vk_wall_err": "5024: попытка 3: сервер загрузки ответил не JSON (500): '<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\\n<html>\\n<head>\\n  <title>The pa'"
 }
