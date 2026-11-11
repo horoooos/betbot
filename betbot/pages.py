@@ -294,9 +294,65 @@ def _news_page(n: dict, all_news: list[dict]) -> str:
 
 
 def _news_card(n: dict, prefix: str) -> str:
-    img = f'<img src="{H.escape(n["photo"])}" alt="{H.escape(n["title"])}" loading="lazy">' if n["photo"] else '<div class="ph"></div>'
+    img = (f'<img src="{H.escape(n["photo"])}" alt="{H.escape(n["title"])}" loading="lazy" onerror="{PH_SWAP}" data-e="{EMOJI[n["sport"]]}">'
+           if n["photo"] else f'<div class="ph">{EMOJI[n["sport"]]}</div>')
     return (f'<a class="card nc" href="{prefix}{n["url"]}">{img}<div class="b"><span class="tag">{EMOJI[n["sport"]]} {SPORT_RU[n["sport"]]} · '
             f'{n["t"].day} {MONTHS[n["t"].month - 1]}<span class="vw" data-views="news:{n["id"]}"></span></span><b>{H.escape(n["title"])}</b><p>{H.escape(n["desc"][:150])}…</p></div></a>')
+
+
+# фото из Telegram со временем перестают открываться — вместо пустого квадрата показываем значок спорта
+PH_SWAP = "const s=document.createElement('span');s.className='ph';s.textContent=this.dataset.e;this.replaceWith(s)"
+SPORT_COLOR = {"football": "#2ecc71", "hockey": "#4aa3ff", "basketball": "#ff8a3d", "tennis": "#d4e157", "esports": "#b06bff"}
+ARCHIVE_CSS = """<style>
+.arch-f{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 14px}
+.arch-f button{font:700 13px Montserrat,system-ui,sans-serif;color:#cfd6ee;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);
+  border-radius:999px;padding:7px 14px;cursor:pointer;transition:.15s}
+.arch-f button.on,.arch-f button:hover{color:#0b1020;background:#ffc400;border-color:#ffc400}
+.arch-d{margin:18px 0 8px;font:800 13px Montserrat,system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#ffc400;
+  display:flex;align-items:center;gap:10px}
+.arch-d:after{content:"";flex:1;height:1px;background:linear-gradient(90deg,rgba(255,196,0,.4),transparent)}
+.arch{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.arch a{display:flex;align-items:center;gap:12px;padding:10px;border-radius:16px;text-decoration:none;color:#fff;
+  background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.08);transition:transform .15s,background .15s,border-color .15s}
+.arch a:hover{transform:translateY(-2px);background:rgba(255,255,255,.07);border-color:rgba(255,196,0,.45)}
+.arch img,.arch .ph{flex:none;width:78px;height:54px;border-radius:11px;object-fit:cover;background:#1b2240}
+.arch .ph{display:grid;place-items:center;font-size:24px;background:linear-gradient(135deg,var(--c),#1b2240 75%)}
+.arch .t{min-width:0;display:flex;flex-direction:column;gap:4px}
+.arch .t b{font-size:14px;line-height:1.3;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.arch .m{font-size:11px;font-weight:700;color:#8f9bbf;display:flex;align-items:center;gap:6px}
+.arch .m i{width:8px;height:8px;border-radius:50%;background:var(--c)}
+@media (max-width:720px){.arch{grid-template-columns:1fr}.arch img,.arch .ph{width:68px;height:48px}}
+</style>"""
+
+
+def _archive(news: list[dict], now: pd.Timestamp | None = None) -> str:
+    """📚 Архив новостей: по дням, с миниатюрой фото, видом спорта и временем; фильтр по видам спорта."""
+    if not news:
+        return ""
+    today = (now or pd.Timestamp.now(tz="Europe/Moscow")).tz_convert("Europe/Moscow").normalize()
+    days: dict = {}
+    for n in news:
+        days.setdefault(n["t"].tz_convert("Europe/Moscow").normalize(), []).append(n)
+    names_ = {0: "Сегодня", 1: "Вчера"}
+    out = []
+    for d, items in sorted(days.items(), reverse=True):
+        ago = (today - d).days
+        label = names_.get(ago, f"{d.day} {MONTHS[d.month - 1]}")
+        rows = "".join(
+            f'<a href="../{n["url"]}" data-s="{n["sport"]}" style="--c:{SPORT_COLOR.get(n["sport"], "#ffc400")}">'
+            + (f'<img src="{H.escape(n["photo"])}" alt="" loading="lazy" onerror="{PH_SWAP}" data-e="{EMOJI[n["sport"]]}">'
+               if n.get("photo") else f'<span class="ph">{EMOJI[n["sport"]]}</span>')
+            + f'<span class="t"><b>{H.escape(n["title"])}</b><span class="m"><i></i>{SPORT_RU[n["sport"]]} · '
+            f'{n["t"].tz_convert("Europe/Moscow"):%H:%M}</span></span></a>' for n in items)
+        out.append(f'<div class="arch-day"><div class="arch-d">{label}</div><div class="arch">{rows}</div></div>')
+    sports_ = [s for s in ("football", "hockey", "basketball", "tennis", "esports") if any(n["sport"] == s for n in news)]
+    chips = '<button class="on" data-f="">Все</button>' + "".join(
+        f'<button data-f="{s}">{EMOJI[s]} {SPORT_RU[s]}</button>' for s in sports_)
+    js = """<script>(()=>{const f=document.querySelector('.arch-f');if(!f)return;f.onclick=e=>{const b=e.target.closest('button');if(!b)return;
+f.querySelectorAll('button').forEach(x=>x.classList.toggle('on',x===b));const s=b.dataset.f;
+document.querySelectorAll('.arch a').forEach(a=>a.style.display=!s||a.dataset.s===s?'':'none');
+document.querySelectorAll('.arch-day').forEach(d=>d.style.display=[...d.querySelectorAll('a')].some(a=>a.style.display!=='none')?'':'none');};})();</script>"""
+    return f'{ARCHIVE_CSS}<h2>📚 Архив новостей</h2><div class="arch-f">{chips}</div>{"".join(out)}{js}'
 
 
 def _news_index(news: list[dict]) -> str:
@@ -309,7 +365,7 @@ def _news_index(news: list[dict]) -> str:
     body = f"""{crumbs}<h1>Новости спорта <span>сегодня</span></h1>
 <p class="lead">Главные новости футбола, хоккея, НБА, тенниса и киберспорта — коротко и по делу, каждый час. Из нашего Telegram-канала @{CH}.</p>
 <h2>🆕 Свежие новости</h2><div class="grid">{"".join(_news_card(n, "../") for n in news[:12])}</div>{blocks}
-<h2>📚 Архив новостей</h2><div class="card">{"".join(f'<div><a href="../{n["url"]}">{H.escape(n["title"])}</a> <span class="muted small">· {n["t"]:%d.%m}</span></div>' for n in news[12:150])}</div>"""
+{_archive(news[12:150])}"""
     ld = {"@context": "https://schema.org", "@type": "CollectionPage", "name": "Новости спорта", "url": SITE + "news/"}
     return page("../", "Новости спорта сегодня: футбол, хоккей, НБА, теннис — АИ СТАВИТ",
                 "Свежие новости спорта каждый час: футбол, хоккей НХЛ и КХЛ, баскетбол НБА, теннис и киберспорт. Коротко, с фото и без воды.",
