@@ -718,6 +718,10 @@ def main():
         blocks = None
         try:   # страницы новостей и прогнозов из канала + sitemap (для поисковиков)
             blocks = pages.build({**matches, **load_json(OTHER, {})}, site_res, now)
+            day = f"{now:%Y-%m-%d}"
+            hubs = [] if state.get("indexnow_day") == day else [pages.SITE, pages.SITE + "predictions/", pages.SITE + "news/", pages.SITE + "matches.html"]
+            if pages.indexnow(hubs) and hubs:
+                state["indexnow_day"] = day   # главные разделы — раз в день, новые страницы — сразу
         except Exception as e:
             print(f"  ! страницы новостей/прогнозов не собрались: {e}")
         try:

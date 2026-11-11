@@ -537,5 +537,49 @@ function telegramApp() {
   const s = document.createElement("script"); s.src = "https://telegram.org/js/telegram-web-app.js?56"; s.onload = () => window.Telegram && start(Telegram.WebApp);
   document.head.appendChild(s);
 }
-const boot = () => { telegramApp(); supportButton(); searchButton(); onlineBadge(); bellButton(); reveal(); };
+// ── соцсети и чат поддержки: мини-иконки в подвале и плавающая кнопка «написать» на всех страницах ──
+export const SOCIAL = [
+  { k: "tg", t: "Telegram", u: "https://t.me/aistavvit", c: "#29a9eb",
+    i: '<path d="M21.9 4.3 18.6 20c-.2 1.1-.9 1.4-1.8.9l-5-3.7-2.4 2.3c-.3.3-.5.5-1 .5l.4-5.1 9.2-8.3c.4-.4-.1-.6-.6-.2L6.1 13.6 1.2 12c-1.1-.3-1.1-1.1.2-1.6L20.6 3c.9-.3 1.6.2 1.3 1.3z"/>' },
+  { k: "vk", t: "ВКонтакте", u: "https://vk.ru/aistavvit", c: "#0077ff",
+    i: '<path d="M12.8 18.2c-6.6 0-10.4-4.5-10.6-12.1h3.3c.1 5.6 2.6 7.9 4.5 8.4V6.1h3.1V11c1.9-.2 3.9-2.4 4.6-4.9h3.1c-.5 3-2.7 5.2-4.3 6.1 1.6.7 4.1 2.7 5 6h-3.4c-.7-2.2-2.5-3.9-5-4.2v4.2h-.3z"/>' },
+  { k: "ok", t: "Одноклассники", u: "https://ok.ru/group/70000012626015", c: "#ee8208",
+    i: '<path d="M12 12.3a5.1 5.1 0 1 0 0-10.2 5.1 5.1 0 0 0 0 10.2zm0-7.2a2.1 2.1 0 1 1 0 4.2 2.1 2.1 0 0 1 0-4.2zm2.1 11.3a9.6 9.6 0 0 0 3-1.2 1.5 1.5 0 1 0-1.6-2.6 6.6 6.6 0 0 1-7 0 1.5 1.5 0 1 0-1.6 2.6c.9.6 1.9 1 3 1.2l-2.9 2.9a1.5 1.5 0 0 0 2.1 2.1l2.9-2.9 2.9 2.9a1.5 1.5 0 0 0 2.1-2.1l-2.9-2.9z"/>' },
+  { k: "dzen", t: "Дзен", u: "https://dzen.ru/id/5f075de89b77826e1e78ab92", c: "#ffffff",
+    i: '<path d="M12 2c-.1 5.6-1.1 8.9-3.3 10.7C6.9 14.9 3.6 11.9 2 12c1.6.1 4.9.4 6.7 2.6 2.2 1.8 3.2 5.1 3.3 7.4.1-2.3 1.1-5.6 3.3-7.4 1.8-2.2 5.1-2.5 6.7-2.6-1.6-.1-4.9-.4-6.7-2.6C13.1 8.1 12.1 4.8 12 2z"/>' },
+];
+const SUPPORT_URL = "https://vk.me/aistavvit";   // личные сообщения сообщества ВК
+export function socialIcons(where) {
+  if (!where || where.querySelector(".soc")) return;
+  const box = document.createElement("div"); box.className = "soc";
+  box.innerHTML = SOCIAL.map(s => `<a href="${s.u}" target="_blank" rel="noopener" title="${s.t}" aria-label="${s.t}" style="--c:${s.c}"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">${s.i}</svg></a>`).join("");
+  where.prepend(box);
+}
+function socialCss() {
+  if (document.getElementById("soccss")) return;
+  const st = document.createElement("style"); st.id = "soccss"; st.textContent = `
+    .soc{display:flex;gap:10px;justify-content:center;margin:0 0 12px}
+    .soc a{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;color:var(--c);background:rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.14);transition:transform .15s,background .15s}
+    .soc a:hover{transform:translateY(-2px);background:rgba(255,255,255,.14)}
+    .helpfab{position:fixed;right:18px;bottom:18px;z-index:60;display:flex;align-items:center;gap:8px;padding:12px 16px 12px 14px;border-radius:999px;
+      background:linear-gradient(135deg,#0077ff,#3b9cff);color:#fff;font:800 14px Montserrat,system-ui,sans-serif;text-decoration:none;
+      box-shadow:0 10px 26px rgba(0,119,255,.45);transition:transform .15s}
+    .helpfab:hover{transform:translateY(-2px)}
+    .helpfab svg{flex:none;width:22px!important;height:22px!important}
+    .soc svg{width:18px!important;height:18px!important}
+    @media (max-width:720px){.helpfab{bottom:78px;right:12px;padding:12px}.helpfab .tx{display:none}}
+    html.tg .helpfab{bottom:18px}`;
+  document.head.appendChild(st);
+}
+export function supportChat() {
+  if (document.querySelector(".helpfab") || /\/(admin|app|live)\.html$/.test(location.pathname)) return;
+  const a = document.createElement("a"); a.className = "helpfab"; a.href = SUPPORT_URL; a.target = "_blank"; a.rel = "noopener";
+  a.title = "Написать в поддержку (сообщения ВКонтакте)";
+  a.innerHTML = `<svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M4 3h16a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H9l-5 4v-4H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm3 6.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm5 0a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm5 0a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z"/></svg><span class="tx">Поддержка</span>`;
+  document.body.appendChild(a);
+}
+function social() { socialCss(); socialIcons(document.querySelector("footer")); supportChat(); }
+
+const boot = () => { telegramApp(); supportButton(); searchButton(); onlineBadge(); bellButton(); reveal(); social(); };
 if (typeof document !== "undefined") { if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", boot); else boot(); }

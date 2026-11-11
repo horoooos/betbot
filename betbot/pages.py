@@ -27,6 +27,10 @@ SPORT_RU = {"football": "Футбол", "hockey": "Хоккей", "basketball": 
 EMOJI = {"football": "⚽", "hockey": "🏒", "basketball": "🏀", "tennis": "🎾", "esports": "🎮"}
 MONTHS = ["января", "февраля", "марта", "апреля", "мая", "июня", "июля", "августа", "сентября", "октября", "ноября", "декабря"]
 UA = {"User-Agent": "Mozilla/5.0 (compatible; AISTAVVIT-site/1.0)"}
+# наши соцсети: ссылки в подвале каждой страницы и sameAs в разметке для поисковиков
+SOCIAL = [("Telegram", "https://t.me/aistavvit"), ("ВКонтакте", "https://vk.ru/aistavvit"),
+          ("Одноклассники", "https://ok.ru/group/70000012626015"), ("Дзен", "https://dzen.ru/id/5f075de89b77826e1e78ab92")]
+SOCIAL_LINKS = " · ".join(f'<a href="{u}" rel="noopener">{t}</a>' for t, u in SOCIAL)
 
 
 # ── канал ─────────────────────────────────────────────────────────────────────
@@ -152,12 +156,38 @@ def _date_ru(t: pd.Timestamp) -> str:
     return f"{t.day} {MONTHS[t.month - 1]} {t.year}"
 
 
+NEW_PAGES: list[str] = []   # новые страницы этого прохода — сообщаем о них поисковикам (IndexNow)
+INDEXNOW_KEY = "a1s7a9v0v1t2b3o4t5i6n7d8e9x0n1o2"   # тот же ключ лежит в docs/<ключ>.txt — так поисковик проверяет, что сайт наш
+
+
 def _write(path: Path, text: str) -> bool:
     path.parent.mkdir(parents=True, exist_ok=True)
     if path.exists() and path.read_text(encoding="utf-8") == text:
         return False
+    if not path.exists() and path.suffix == ".html":
+        NEW_PAGES.append(SITE + path.relative_to(DOCS).as_posix())
     path.write_text(text, encoding="utf-8", newline=chr(10))   # одинаково на Windows и на сервере
     return True
+
+
+def indexnow(extra: list[str] | None = None) -> int:
+    """Мгновенно сообщаем Яндексу и Bing о новых страницах (протокол IndexNow) — индексация за минуты, а не дни."""
+    urls = list(dict.fromkeys(NEW_PAGES + (extra or [])))[:1000]
+    NEW_PAGES.clear()
+    if not urls:
+        return 0
+    body = {"host": "horoooos.github.io", "key": INDEXNOW_KEY, "keyLocation": f"{SITE}{INDEXNOW_KEY}.txt", "urlList": urls}
+    ok = 0
+    for api in ("https://yandex.com/indexnow", "https://api.indexnow.org/indexnow"):
+        try:
+            r = requests.post(api, json=body, timeout=20)
+            ok += r.status_code in (200, 202)
+            if r.status_code not in (200, 202):
+                print(f"  ! IndexNow {api}: {r.status_code} {r.text[:120]}")
+        except Exception as e:
+            print(f"  ! IndexNow {api}: {e}")
+    print(f"  IndexNow: отправлено страниц {len(urls)} (принято сервисами: {ok} из 2)")
+    return len(urls)
 
 
 def nav(prefix: str, on: str = "") -> str:
@@ -186,7 +216,8 @@ def page(prefix: str, title: str, desc: str, canon: str, body: str, on: str = ""
 {body}
 <footer>АИ СТАВИТ — бесплатные прогнозы на спорт от искусственного интеллекта и честная статистика. Прогноз — не гарантия выигрыша. 18+.
 <br><a href="https://t.me/{CH}">Telegram-канал @{CH}</a> · <a href="{prefix}./">Статистика бота</a> · <a href="{prefix}matches.html">Матчи онлайн</a> · <a href="{prefix}news/">Новости спорта</a> · <a href="{prefix}predictions/">Прогнозы на матчи</a>
-<br><a href="{prefix}leagues.html">Команды, игроки и турниры</a> · <a href="{prefix}teams/">Прогнозы по командам</a> · <a href="{prefix}tools.html">Калькуляторы ставок</a> · <a href="{prefix}school/">Школа ставок</a> · <a href="{prefix}top.html">Рейтинг прогнозистов</a></footer>
+<br><a href="{prefix}leagues.html">Команды, игроки и турниры</a> · <a href="{prefix}teams/">Прогнозы по командам</a> · <a href="{prefix}tools.html">Калькуляторы ставок</a> · <a href="{prefix}school/">Школа ставок</a> · <a href="{prefix}top.html">Рейтинг прогнозистов</a>
+<br>Мы в соцсетях: {SOCIAL_LINKS} · <a href="https://vk.me/aistavvit" rel="noopener">написать в поддержку</a></footer>
 </main><div class="sticky"><a class="a" href="{prefix}matches.html">📺 Онлайн</a><a class="b" href="https://t.me/{CH}">📲 Канал</a></div>
 <script type="module">import("{prefix}fb.js?v=12").then(fb => {{ fb.navUser(document.getElementById("navUser")); fb.track("{on or 'page'}");
   fb.countView(document.querySelector("[data-view]")); fb.showViews();
@@ -443,7 +474,8 @@ def _match_page(m: dict, store: dict[int, dict], all_m: list[dict]) -> str:
 {game}
 {f'<h2>Другие прогнозы на {day}</h2><div class="grid">' + "".join(_match_card(x, "../") for x in others) + "</div>" if others else ""}"""
     img = pred.get("photo")
-    return page("../", f"Прогноз на матч {title_teams} {m['kickoff']:%d.%m.%Y}: {m['tip']} — АИ СТАВИТ", desc, SITE + m["url"], body, "pred", img, [ld, bc], "article")
+    odds = f", кэф {m['odds']:.2f}" if m.get("odds") else ""   # как ищут: «прогноз на матч … ставка … кэф»
+    return page("../", f"Прогноз на матч {title_teams} {m['kickoff']:%d.%m.%Y}: ставка {m['tip']}{odds} — АИ СТАВИТ", desc, SITE + m["url"], body, "pred", img, [ld, bc], "article")
 
 
 BB_SPORT = "https://betboom.ru/sport/"   # обычная ссылка на линию BetBoom (реферальная — только баннер на главной)

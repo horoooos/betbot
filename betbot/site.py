@@ -9,7 +9,7 @@ from pathlib import Path
 
 import pandas as pd
 
-from . import pro
+from . import pages, pro
 from .sports import EMOJI, SPORT_RU
 
 OUT = Path(__file__).resolve().parent.parent / "docs" / "index.html"
@@ -274,7 +274,8 @@ def build(res: pd.DataFrame, now: pd.Timestamp, blocks: dict | None = None) -> N
 <meta name="twitter:card" content="summary_large_image"><meta name="theme-color" content="#070b1a"><meta property="og:image" content="https://horoooos.github.io/betbot/og.png"><meta name="twitter:image" content="https://horoooos.github.io/betbot/og.png"><link rel="icon" href="favicon.ico" sizes="any"><link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="manifest" href="site.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="site.css?v=9">
-<script type="application/ld+json">{{"@context":"https://schema.org","@type":"WebSite","name":"АИ СТАВИТ","url":"{SITE}","description":"{escape(seo_desc)}","sameAs":["{tg}"]}}</script>
+<script type="application/ld+json">{{"@context":"https://schema.org","@type":"WebSite","name":"АИ СТАВИТ","url":"{SITE}","description":"{escape(seo_desc)}","sameAs":{json.dumps([u for _, u in pages.SOCIAL])}}}</script>
+<script type="application/ld+json">{{"@context":"https://schema.org","@type":"Organization","name":"АИ СТАВИТ","url":"{SITE}","logo":"{SITE}apple-touch-icon.png","sameAs":{json.dumps([u for _, u in pages.SOCIAL])},"contactPoint":{{"@type":"ContactPoint","contactType":"customer support","url":"https://vk.me/aistavvit","availableLanguage":"Russian"}}}}</script>
 <style>{CSS}</style></head><body><main>
 <nav class="topnav"><a class="logo" href="./">АИ СТАВИТ</a><div class="links"><a href="matches.html">Матчи онлайн</a><a href="predictions/">Прогнозы</a><a href="news/">Новости</a><a href="feed.html">Лента</a><a href="top.html">Рейтинг</a></div><div class="navacts"><a class="me" id="navUser" href="profile.html">Войти</a></div></nav>
 <section class="hero"><div>
@@ -378,7 +379,8 @@ def build(res: pd.DataFrame, now: pd.Timestamp, blocks: dict | None = None) -> N
 <button class="mbtn" onclick="document.getElementById('feed').classList.toggle('showall');this.textContent=this.textContent.startsWith('Показать')?'Свернуть':'Показать ещё 45'">Показать ещё 45</button>
 <div class="cta"><div><b>Прогнозы каждый день — в Telegram</b><br><span class="muted">Прогноз за час до матча, live-голы, экспрессы, разборы и честные итоги.</span></div>
 <a class="btn gold" href="{tg}">📲 Подписаться</a></div>
-<footer>CLV — насколько выросла вероятность нашего исхода по линии букмекеров к началу матча: плюс значит, что бот нашёл ценность раньше рынка. 18+. Прогноз — не гарантия выигрыша.</footer>
+<footer>CLV — насколько выросла вероятность нашего исхода по линии букмекеров к началу матча: плюс значит, что бот нашёл ценность раньше рынка. 18+. Прогноз — не гарантия выигрыша.
+<br>Мы в соцсетях: {pages.SOCIAL_LINKS} · <a href="https://vk.me/aistavvit" rel="noopener">написать в поддержку</a></footer>
 </main><div class="sticky"><a class="a" href="matches.html">📺 Онлайн</a><a class="b" href="{tg}">📲 Подписаться</a></div>
 <script>{LIVE_JS}</script>
 <script type="module">import("./fb.js?v=12").then(fb => {{ fb.track("index"); fb.navUser(document.getElementById("navUser")); fb.showViews(); fetch(location.hostname.endsWith("github.io") ? "https://raw.githubusercontent.com/horoooos/betbot/main/docs/matches.json" : "matches.json", {{ cache: "no-store" }}).then(r => r.json()).then(l => fb.quizWidget(document.getElementById("quiz"), fb.quizMatch(l))).catch(() => {{}}); }}).catch(() => {{}});</script></body></html>"""
