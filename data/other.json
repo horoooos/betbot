@@ -6832,22 +6832,22 @@
   "kickoff": "2026-11-11T06:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "home": {
+   "color": "121212",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/la.png",
    "id": "8",
    "name": "Los Angeles Kings",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/la.png",
-   "color": "121212",
    "score": "0",
    "record": "5-8-2",
    "periods": [],
    "ru": "Лос-Анджелес"
   },
   "away": {
+   "color": "fdba31",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/nsh.png",
    "id": "27",
    "name": "Nashville Predators",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/nsh.png",
-   "color": "fdba31",
    "score": "0",
    "record": "8-4-5",
    "periods": [],
@@ -6951,7 +6951,9 @@
   "close": {
    "HK_O6.5": 0.4572,
    "HK_ML_A": 0.4675
-  }
+  },
+  "main_hit": false,
+  "bold_hit": true
  },
  "NBA|401909964": {
   "id": "401909964",
