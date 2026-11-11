@@ -6782,31 +6782,31 @@
   "kickoff": "2026-11-11T15:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Wed, November 11th at 7:00 AM EST",
   "home": {
-   "id": "3052",
-   "name": "Lorenzo Sonego",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/3052.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/ita.png"
    ],
+   "id": "3052",
+   "name": "Lorenzo Sonego",
    "country": "Italy",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
    "ru": "Лоренцо Сонего"
   },
   "away": {
-   "id": "2970",
-   "name": "Alejandro Tabilo",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/2970.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/chi.png"
    ],
+   "id": "2970",
+   "name": "Alejandro Tabilo",
    "country": "Chile",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
@@ -6866,7 +6866,9 @@
   "btn": 4,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null
  },
  "ATP|186545": {
   "id": "186545",
