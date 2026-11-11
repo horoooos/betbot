@@ -167,6 +167,7 @@
   <div id="acts">
     <span class="pill" id="viewers" style="display:none;pointer-events:none">👁 0</span>
     <button class="pill tipbtn" id="tipbtn" style="display:none">🎯 Прогноз бота</button>
+    <button class="pill" id="ltbtn" style="display:none;background:linear-gradient(135deg,#7c3aed,#a855f7);color:#fff;border-color:transparent">⚡ LIVE</button>
     <button class="pill" id="teamsbtn" style="display:none">👥 Составы</button>
     <button class="pill" id="chatbtn" style="display:none">💬 Чат</button>
     <button class="pill" id="notibtn" style="display:none">🔔</button></div>
@@ -1614,6 +1615,29 @@ function renderBot() {
   if (window.__fb) window.__fb.voteWidget($("votew"), EVENT, { finished: /завершён/i.test($("cl").textContent) });
 }
 if (EVENT) loadBot();
+
+// ═════════════ ⚡ LIVE-прогноз в моменте игры (бот считает по ходу матча, docs/live_tips.json) ═════════════
+let liveTip = null;
+async function loadLiveTip() {
+  const urls = location.hostname.endsWith("github.io") ? ["https://raw.githubusercontent.com/horoooos/betbot/main/docs/live_tips.json", "live_tips.json"] : ["live_tips.json"];
+  for (const u of urls) {
+    try { const all = await (await fetch(u + "?t=" + Date.now(), { cache: "no-store" })).json(); liveTip = all[String(EVENT)] || null; break; } catch (e) {}
+  }
+  const b = $("ltbtn"); if (!liveTip || !b) return;
+  const res = liveTip.result === "hit" ? " ✅" : liveTip.result === "miss" ? " ❌" : "";
+  b.textContent = `⚡ LIVE: ${liveTip.label} · ${Math.round(liveTip.p * 100)}%${res}`; b.style.display = "inline-block";
+  b.onclick = () => { renderLiveTip(); $("sheet").classList.add("on"); };
+  $("sheet").onclick = e => { if (e.target.id === "sheet" || e.target.id === "sx") $("sheet").classList.remove("on"); };
+}
+function renderLiveTip() {
+  const t = liveTip, esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+  const res = t.result === "hit" ? `<p style="color:#2ecc71;font-weight:800">✅ LIVE-прогноз зашёл</p>` : t.result === "miss" ? `<p style="color:#ff6b6b;font-weight:800">❌ LIVE-прогноз не зашёл</p>` : "";
+  $("sheetIn").innerHTML = `<h3>⚡ LIVE-прогноз <button class="x" id="sx">✕</button></h3>
+    <div class="tc m"><div><small>В МОМЕНТЕ · ${esc(t.minute)} · СЧЁТ ${esc(t.score)}</small><b>${esc(t.label)}</b></div><div class="r"><small>шанс</small>${Math.round(t.p * 100)}%<small>кэф ≈${(+t.fair).toFixed(2)}</small></div></div>
+    ${res}<p style="margin:12px 0 6px">💰 Ставка выгодна, если у букмекера кэф <b>от ${(+t.min_odds).toFixed(2)}</b>.</p>
+    <p class="disc">Бот пересчитал шансы по ходу игры: сила команд до матча, текущий счёт и оставшееся время. Справедливый кэф — 1/шанс. Прогноз — не гарантия. 18+</p>`;
+}
+if (EVENT) { loadLiveTip(); setInterval(loadLiveTip, 60000); }
 
 // ═════════════════════════ зрители и чат (Firebase) ═════════════════════════
 if ("Notification" in window && EVENT) {

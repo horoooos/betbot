@@ -16,7 +16,7 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-from betbot import card, content, directory, dzen, vk, esports, live, names, news, oddspapi, pages, pro, push, reviews, site, sports, tables, telegram, texts
+from betbot import card, content, directory, dzen, vk, esports, inplay, live, names, news, oddspapi, pages, pro, push, reviews, site, sports, tables, telegram, texts
 from betbot import markets as mk
 from betbot.data import MSK, load_fixtures, load_history
 from betbot.engine import add_market, fit_full, fit_weights, walk_forward
@@ -632,6 +632,12 @@ def main():
         live.run(live_store, events + other, reviews, BRAND)
     except Exception as e:
         print(f"  ! live не удался: {e}")
+    try:   # ⚡ LIVE-прогноз в моменте игры (одна ставка на матч) и его итог — в ветку матча и на сайт
+        preds = {f"{m['div']}|{k}": m for k, m in matches.items() if m.get("div")}
+        preds.update(load_json(OTHER, {}))
+        inplay.run(live_store, events + other, preds, BRAND)
+    except Exception as e:
+        print(f"  ! live-прогноз не удался: {e}")
     save_json(LIVE, live.cleanup(live_store, now))
     try:   # push-уведомления подписчикам сайта: голы и начало/конец матчей, за которыми они следят
         push.watch(events + other, state.setdefault("push_watch", {}))
