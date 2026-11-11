@@ -644,6 +644,11 @@ def main():
         push.weekly(state, now, read_results())   # пятница 18:00 — «лучшее за неделю + экспресс выходных»
     except Exception as e:
         print(f"  ! push не удался: {e}")
+    try:   # 🎬 12:00 — вертикальный ролик «заход дня» (и «экспресс зашёл») в Telegram и ВК Клипы
+        from betbot import shorts
+        shorts.run(state, now, read_results(), BRAND)
+    except Exception as e:
+        print(f"  ! ролики не сделаны: {e}")
 
     # кнопки «📺 Смотреть онлайн» под уже опубликованными прогнозами (переписываем и старые «3D»)
     btn_ver = 4 if live.miniapp_bot() else 3   # 4 — кнопки открывают мини-приложение в Telegram
