@@ -225,7 +225,9 @@ def choose(keys: list[str], probs: dict, real: dict, score, main_pool: list[str]
         main_k = max(real_main, key=lambda k: (round(ev(k), 3), score(k)))
     else:
         est = [k for k in pool if k in probs and MAIN_MIN_P <= probs[k] and odds(k) >= MIN_ODDS]
-        main_k = max(est or [k for k in pool if k in probs], key=score)
+        # запасной вариант — самый вероятный, но не «кэф ≈0.96»: ставка с кэфом около 1 убыточна даже при заходе
+        fallback = [k for k in pool if k in probs and odds(k) >= 1.2] or [k for k in pool if k in probs and odds(k) > 1.05]
+        main_k = max(est or fallback or [k for k in pool if k in probs], key=score)
     # смелый не должен спорить с основным: П1 основным и П2 смелым — это ставка против самого себя
     # смелый — только с настоящим кэфом букмекера и шансом от 40%: на «расчётных» кэфах он заходил в 31% случаев
     bold = [k for k in keys if k != main_k and real.get(k) and 2.0 <= real[k] <= 3.6 and probs[k] >= BOLD_MIN_P
