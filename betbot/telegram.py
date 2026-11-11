@@ -258,6 +258,17 @@ def answer_users(state: dict, matches_url: str, site_url: str, channel: str) -> 
             continue
         text = (msg.get("text") or "").lower()
         tg = f"https://t.me/{channel.lstrip('@')}"
+        if text.startswith("/dzen"):   # владелец: сюда бот шлёт ролики и готовые тексты для Дзена (запоминаем только первого)
+            if not state.get("dzen_chat"):
+                state["dzen_chat"] = chat["id"]
+            ok = state["dzen_chat"] == chat["id"]
+            reply = ("✅ Готово: каждый день около 12:00 МСК пришлю сюда ролик «Заход дня» и готовые заголовок, описание и теги для Дзена."
+                     if ok else "Эта команда уже настроена владельцем канала.")
+            try:
+                _call("sendMessage", chat_id=chat["id"], text=reply)
+            except RuntimeError as e:
+                print(f"  ! ответ /dzen не ушёл: {e}")
+            continue
         if text.startswith("/stats"):
             reply, kb = "📊 <b>Честная статистика бота</b> — все прогнозы без исключений:", [[{"text": "📊 Открыть статистику", "web_app": {"url": site_url}}]]
         elif text.startswith("/matches"):

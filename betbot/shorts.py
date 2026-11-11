@@ -4,8 +4,8 @@
 экспресс — ещё и ролик про него. Ролик из трёх сцен с плавными переходами:
   1) «ПРОГНОЗ БОТА» — логотипы, команды, ставка и кэф;  2) «ИТОГ» — счёт и зелёная плашка «ЗАШЛО»;
   3) призыв — «вчера бот: 7 из 10», «бесплатные прогнозы каждый день», @aistavvit и сайт.
-Публикация: Telegram-канал (видео — его же можно скачать и загрузить в YouTube Shorts / Дзен) и стена ВК
-(если в ключе VK_USER_TOKEN есть право video).
+Публикация — у каждой платформы свой заголовок, описание и хештеги: Telegram-канал, стена ВК (видео), YouTube Shorts
+(бесплатный API, секреты YT_*), а для Дзена — ролик и готовый текст владельцу в личку (Дзен не даёт загружать видео программно).
 """
 from __future__ import annotations
 
@@ -247,8 +247,118 @@ def _vk_video(mp4: bytes, name: str, desc: str) -> str | None:
         return str(e)[:200]
 
 
+SITE = "https://horoooos.github.io/betbot/"
+SPORT_TAG = {"football": "футбол", "hockey": "хоккей", "basketball": "баскетбол", "tennis": "теннис", "esports": "киберспорт"}
+SPORT_EN = {"football": "football", "hockey": "hockey", "basketball": "basketball", "tennis": "tennis", "esports": "esports"}
+
+
+def _tag(words: str) -> str:
+    """«Нью-Йорк Никс» → #НьюЙоркНикс."""
+    import re
+    parts = re.findall(r"[\wА-Яа-яЁё]+", words)
+    return "#" + "".join(p[:1].upper() + p[1:] for p in parts) if parts else ""
+
+
+def texts(kind: str, m: dict | None = None, ex: dict | None = None) -> dict:
+    """Уникальные тексты под каждую платформу: Telegram, ВК, YouTube Shorts и Дзен (заголовок, описание, хештеги/теги)."""
+    if kind == "best":
+        h, a, tip, odds, score, sport = m["home"], m["away"], m["tip"], m["odds"], m["score"], m["sport"]
+        league = (m.get("league") or "").split(" · ")[-1]
+        teams = [_tag(h), _tag(a)]
+        lg = [_tag(league)] if league else []
+        sp = SPORT_TAG.get(sport, "спорт")
+        tg = (f"🎬 <b>Заход дня</b>: {h} — {a}\n🎯 {tip} · кэф {odds:.2f} → итог {score} ✅\n\n"
+              f"Бесплатные прогнозы каждый день — @aistavvit · <a href=\"{SITE}\">сайт</a>\n\n"
+              + " ".join(["#заходдня", f"#{sp}"] + teams[:2]))
+        vk_name = f"{h} — {a}: {tip} зашёл ✅ кэф {odds:.2f}"
+        vk_desc = (f"Прогноз бота АИ СТАВИТ на матч {h} — {a}: {tip} по кэфу {odds:.2f}. Итог {score} — ЗАШЛО ✅\n\n"
+                   f"Бесплатные прогнозы на {sp} и другие виды спорта каждый день, честная статистика — все прогнозы учтены.\n"
+                   f"Telegram: https://t.me/aistavvit\nСайт: {SITE}\n\n"
+                   + " ".join(["#заходдня", "#прогнозынаспорт", "#ставкинаспорт", f"#{sp}", f"#прогноз{sp}", "#клипы", "#спорт"] + teams + lg))
+        yt_title = f"{h} — {a}: прогноз {tip} зашёл ✅ #shorts"
+        yt_desc = (f"Бот АИ СТАВИТ дал прогноз {tip} (кэф {odds:.2f}) на матч {h} — {a}. Итог: {score} — прогноз зашёл!\n\n"
+                   f"📲 Бесплатные прогнозы каждый день: https://t.me/aistavvit\n🌐 Статистика и матчи онлайн: {SITE}\n\n"
+                   f"18+. Прогноз — не гарантия.\n\n" + " ".join(["#shorts", "#прогнозынаспорт", f"#{sp}"] + teams))
+        yt_tags = [f"прогноз {h} {a}", f"{h} {a}", h, a, f"прогноз на {sp}", "прогнозы на спорт", "ставки на спорт",
+                   "заход дня", SPORT_EN.get(sport, "sport"), "betting tips", league or sp, "АИ СТАВИТ"]
+        dz_title = f"{h} — {a}: бот поставил {tip} и не ошибся"
+        dz_desc = (f"Прогноз {tip} по кэфу {odds:.2f}, итог {score}. Как бот выбирает ставки и почему вся статистика открыта — "
+                   f"в Telegram @aistavvit и на сайте {SITE}")
+        dz_tags = ["прогнозы на спорт", "ставки", sp, h, a] + ([league] if league else [])
+    else:
+        title = ex.get("title", "Экспресс")
+        legs = ex.get("legs", [])
+        teams = [_tag(g["home"]) for g in legs[:3]]
+        lines = "\n".join(f"✅ {g['home']} — {g['away']}: {g['label']} · {g['odds']:.2f}" for g in legs)
+        tg = (f"🎬 <b>{title} зашёл!</b> Общий кэф {ex['odds']:.2f} ✅\n\n{lines}\n\n"
+              f"Бесплатно каждый день — @aistavvit\n\n#экспресс #заходдня #ставкинаспорт")
+        vk_name = f"{title} зашёл ✅ общий кэф {ex['odds']:.2f}"
+        vk_desc = (f"{title} от бота АИ СТАВИТ зашёл целиком — общий кэф {ex['odds']:.2f}.\n\n{lines}\n\n"
+                   f"Telegram: https://t.me/aistavvit\nСайт: {SITE}\n\n"
+                   + " ".join(["#экспресс", "#экспрессдня", "#прогнозынаспорт", "#ставкинаспорт", "#клипы", "#спорт"] + teams))
+        yt_title = f"{title} зашёл ✅ кэф {ex['odds']:.2f} #shorts"
+        yt_desc = (f"{title} от бота АИ СТАВИТ — все события зашли, общий кэф {ex['odds']:.2f}.\n\n{lines}\n\n"
+                   f"📲 https://t.me/aistavvit\n🌐 {SITE}\n\n18+. Прогноз — не гарантия.\n\n#shorts #экспресс #прогнозынаспорт")
+        yt_tags = ["экспресс дня", "экспресс на сегодня", "прогнозы на спорт", "ставки на спорт", "АИ СТАВИТ"] + [g["home"] for g in legs[:4]]
+        dz_title = f"{title} зашёл: общий кэф {ex['odds']:.2f}"
+        dz_desc = f"Все события экспресса зашли. Разбор и новые экспрессы — в Telegram @aistavvit и на сайте {SITE}"
+        dz_tags = ["экспресс", "ставки", "прогнозы на спорт"]
+    tags_len, yt_ok = 0, []
+    for t in yt_tags:   # у YouTube лимит на теги — 500 символов
+        if t and tags_len + len(t) + 2 <= 480:
+            yt_ok.append(t[:100])
+            tags_len += len(t) + 2
+    return {"tg": tg, "vk_name": vk_name[:128], "vk_desc": vk_desc[:5000], "yt_title": yt_title[:100], "yt_desc": yt_desc[:4900],
+            "yt_tags": yt_ok, "dz_title": dz_title[:120], "dz_desc": dz_desc, "dz_tags": dz_tags}
+
+
+def _youtube(mp4: bytes, t: dict) -> str | None:
+    """Загрузка в YouTube Shorts (бесплатный YouTube Data API). Нужны секреты YT_CLIENT_ID, YT_CLIENT_SECRET, YT_REFRESH_TOKEN."""
+    import os
+    cid, sec, ref = os.environ.get("YT_CLIENT_ID"), os.environ.get("YT_CLIENT_SECRET"), os.environ.get("YT_REFRESH_TOKEN")
+    if not (cid and sec and ref):
+        return "YouTube не подключён (нет секретов YT_*)"
+    try:
+        tok = requests.post("https://oauth2.googleapis.com/token", timeout=30, data={
+            "client_id": cid, "client_secret": sec, "refresh_token": ref, "grant_type": "refresh_token"}).json()
+        if "access_token" not in tok:
+            return f"YouTube: ключ не обновился: {str(tok)[:150]}"
+        auth = {"Authorization": f"Bearer {tok['access_token']}"}
+        meta = {"snippet": {"title": t["yt_title"], "description": t["yt_desc"], "tags": t["yt_tags"], "categoryId": "17",
+                            "defaultLanguage": "ru", "defaultAudioLanguage": "ru"},
+                "status": {"privacyStatus": "public", "selfDeclaredMadeForKids": False}}
+        r = requests.post("https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status",
+                          headers={**auth, "Content-Type": "application/json; charset=UTF-8", "X-Upload-Content-Type": "video/mp4",
+                                   "X-Upload-Content-Length": str(len(mp4))}, data=json.dumps(meta), timeout=60)
+        if r.status_code != 200 or "Location" not in r.headers:
+            return f"YouTube: {r.status_code} {r.text[:150]}"
+        up = requests.put(r.headers["Location"], headers={**auth, "Content-Type": "video/mp4"}, data=mp4, timeout=300)
+        if up.status_code not in (200, 201):
+            return f"YouTube загрузка: {up.status_code} {up.text[:150]}"
+        print(f"  YouTube Shorts: https://youtube.com/shorts/{up.json().get('id')}")
+        return None
+    except Exception as e:
+        return f"YouTube: {e}"[:200]
+
+
+def _dzen(state: dict, mp4: bytes, t: dict) -> None:
+    """Дзен не даёт загружать видео программно — шлём ролик и готовый текст владельцу в личку (он сделал /dzen у бота)."""
+    from . import telegram
+    chat = state.get("dzen_chat")
+    if not chat:
+        return
+    cap = (f"📤 <b>Для Дзена</b> (скачай ролик → Дзен-Студия → «Ролик»)\n\n<b>Заголовок:</b>\n{t['dz_title']}\n\n"
+           f"<b>Описание:</b>\n{t['dz_desc']}\n\n<b>Теги:</b>\n{', '.join(t['dz_tags'])}")
+    try:
+        telegram._call("sendVideo", chat_id=chat, files={"video": ("clip.mp4", mp4, "video/mp4")}, caption=cap[:1024],
+                       parse_mode="HTML", width=VW, height=VH, supports_streaming=True)
+    except Exception as e:
+        print(f"  ! ролик для Дзена не отправлен: {e}")
+
+
 def run(state: dict, now: pd.Timestamp, res: pd.DataFrame, brand: str = "@aistavvit") -> None:
-    """Раз в день (12:00–13:00 МСК): ролик «лучший заход вчера» (+ «экспресс зашёл», если был) → Telegram и ВК."""
+    """Раз в день (12:00–13:00 МСК): ролик «лучший заход вчера» (+ «экспресс зашёл», если был) →
+    Telegram, ВК, YouTube Shorts (если подключён) и владельцу в личку для Дзена — у каждой платформы свой текст и теги."""
     from . import telegram
     now = now.tz_convert("Europe/Moscow")
     day = f"{now:%Y-%m-%d}"
@@ -259,9 +369,7 @@ def run(state: dict, now: pd.Timestamp, res: pd.DataFrame, brand: str = "@aistav
     clips = []
     mp4, m = clip_best(res, yday)
     if mp4:
-        cap = (f"🎬 <b>Заход дня</b>: {m['home']} — {m['away']}\n🎯 {m['tip']} · кэф {m['odds']:.2f} → итог {m['score']} ✅\n\n"
-               f"Бесплатные прогнозы каждый день — @aistavvit")
-        clips.append((mp4, cap, f"Заход дня: {m['home']} — {m['away']} — {m['tip']} @ {m['odds']:.2f} ✅"))
+        clips.append((mp4, texts("best", m=m)))
     try:
         exs = json.loads((ROOT / "docs" / "express.json").read_text(encoding="utf-8"))
         _, w, n = best_of_day(res, yday)
@@ -269,16 +377,18 @@ def run(state: dict, now: pd.Timestamp, res: pd.DataFrame, brand: str = "@aistav
             if ex.get("status") == "won" and ex.get("day") == f"{yday:%Y-%m-%d}":
                 mp = clip_express(ex, w, n)
                 if mp:
-                    clips.append((mp, f"🎬 <b>{ex.get('title', 'Экспресс')} зашёл!</b> Кэф {ex['odds']:.2f} ✅\n\nБесплатно каждый день — @aistavvit",
-                                  f"{ex.get('title', 'Экспресс')} зашёл — кэф {ex['odds']:.2f}"))
+                    clips.append((mp, texts("express", ex=ex)))
     except (OSError, ValueError, KeyError):
         pass
-    for i, (mp4, cap, name) in enumerate(clips):
+    errs = {}
+    for mp4, t in clips:
         try:
-            telegram.send_video(mp4, cap, width=VW, height=VH, duration=int(SCENE * 3 - FADE * 2))
+            telegram.send_video(mp4, t["tg"], width=VW, height=VH, duration=int(SCENE * 3 - FADE * 2))
         except Exception as e:
             print(f"  ! ролик в Telegram не отправлен: {e}")
-        err = _vk_video(mp4, name, cap.replace("<b>", "").replace("</b>", "") + "\n\nhttps://horoooos.github.io/betbot/")
-        state["shorts_vk_err"] = err
+        errs["vk"] = _vk_video(mp4, t["vk_name"], t["vk_desc"])
+        errs["youtube"] = _youtube(mp4, t)
+        _dzen(state, mp4, t)
+    state["shorts_err"] = {k: v for k, v in errs.items() if v} or None
     if clips:
         print(f"  🎬 ролики: {len(clips)}")
