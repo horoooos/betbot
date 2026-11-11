@@ -32,8 +32,8 @@ NOT_NAMES = {"Глава", "Тренер", "Главный", "Бывший", "З
 KEEP = 300   # сколько последних картинок помним, чтобы не повторяться
 
 
-def names(title: str, text: str = "") -> list[str]:
-    """Кто в новости: люди «Имя Фамилия», команды «в кавычках» и латиницей, одиночные фамилии."""
+def names(title: str, text: str = "", singles: bool = True) -> list[str]:
+    """Кто в новости: люди «Имя Фамилия», команды «в кавычках» и латиницей, одиночные фамилии (если singles)."""
     src = title + " . " + text[:500]
     persons, teams, singles = [], [], []
     for m in re.finditer(r"«([^»]{2,30})»(\s+[А-ЯЁ][а-яё]+)?", src):            # «Динамо» Махачкала
@@ -47,7 +47,7 @@ def names(title: str, text: str = "") -> list[str]:
         if m.group(1) not in NOT_NAMES:
             singles.append(m.group(1))
     out: list[str] = []
-    for n in persons + teams + singles:
+    for n in persons + [t for t in teams if len(t) >= 3] + (singles if singles else []):
         if n not in out and not any(n in o for o in out):
             out.append(n)
     return out[:6]

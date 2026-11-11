@@ -209,6 +209,9 @@ def crosspost(state: dict) -> int:
         text += "\n\n" + (f"📺 Смотреть матч онлайн 👉 {short}" if started else f"📊 Подробнее на сайте 👉 {short}")
         # с личным ключом — фото поста; с ключом сообщества — текст со ссылкой на наш сайт
         from . import dzen, postimg
+        tags = dzen.hashtags(p.get("html", ""), "начало" if started else dzen.kind(p.get("html", "")), limit=8)
+        if tags:   # хештеги по теме (команды, игроки, лига) — ВК лучше показывает пост в поиске и рекомендациях
+            text += "\n\n" + tags
         img = postimg.image_for(p, ("начало" if started else dzen.kind(p.get("html", "")) or "новость"), posts)
         _photo.err = "" if img else "картинка поста не получена"
         photo = _photo(img) if img else None
