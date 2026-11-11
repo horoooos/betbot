@@ -443,8 +443,9 @@ def facts(res: pd.DataFrame, now, brand) -> bool:
     best = res[hit].sort_values("main_odds", ascending=False).head(1)
     if len(best):
         b = best.iloc[0]
-        lines.append(f"Самый крупный зашедший кэф: <b>{b['main_odds']:.2f}</b> — {escape(str(b['home']))} — "
-                     f"{escape(str(b['away']))} ({escape(str(b['main_label']))}).")
+        bd = pd.Timestamp(b["date"])
+        lines.append(f"Самый крупный зашедший кэф за всё время: <b>{b['main_odds']:.2f}</b> — {escape(str(b['home']))} — "
+                     f"{escape(str(b['away']))} ({escape(str(b['main_label']))}, {bd.day} {MONTHS[bd.month - 1]}).")
     streak = 0
     for h in reversed(hit.tolist()):
         if not h:
@@ -458,7 +459,7 @@ def facts(res: pd.DataFrame, now, brand) -> bool:
     by_sp = sp.groupby("s")["h"].agg(["size", "mean"]).sort_values("size", ascending=False)
     sports_rows = [(SPORT_RU.get(s, s), s, float(v["mean"]), int(v["size"])) for s, v in by_sp.iterrows()]
     last_day = sp[sp["date"] == sp["date"].max()]
-    best_t = (float(best.iloc[0]["main_odds"]), f"{best.iloc[0]['home']} — {best.iloc[0]['away']}") if len(best) else (0.0, "—")
+    best_t = (float(best.iloc[0]["main_odds"]), f"{best.iloc[0]['home']} — {best.iloc[0]['away']} · {pd.Timestamp(best.iloc[0]['date']):%d.%m}")         if len(best) else (0.0, "—")   # дата — чтобы не путали с сегодняшним матчем
     png = card.facts_card(float(hit.mean()), int(hit.sum()), len(res), sports_rows,
                           (int(last_day["h"].sum()), len(last_day)), best_t, f"{now.day} {MONTHS[now.month - 1]}", brand)
     _post(png, "\n".join(lines))

@@ -1070,7 +1070,7 @@ def facts_card(pct: float, hits: int, total: int, sports: list[tuple[str, str, f
     tiles = [("ОСНОВНОЙ ЗАХОДИТ", f"{100 * pct:.0f}%", f"{hits} из {total} прогнозов", pct, (teal, green), green),
              ("ПОСЛЕДНИЙ ДЕНЬ", f"{lh}/{ln}", f"{100 * lh / ln:.0f}% заходов" if ln else "—", lh / ln if ln else 0,
               (gold, (255, 120, 60)), gold),
-             ("ЛУЧШИЙ ЗАШЕДШИЙ КЭФ", f"{best[0]:.2f}", best[1], None, (purple, (60, 140, 255)), purple)]
+             ("ЛУЧШИЙ КЭФ ЗА ВСЁ ВРЕМЯ", f"{best[0]:.2f}", best[1], None, (purple, (60, 140, 255)), purple)]
     cw, gap = 372, 22
     x0 = (W - 3 * cw - 2 * gap) // 2
     for i, (label, big, sub, p, cols, accent) in enumerate(tiles):
