@@ -66,7 +66,8 @@ def _photo(img: bytes) -> str | None:
     """
     import time
     s, errs = None, []
-    if os.environ.get("VK_USER_TOKEN"):
+    for attempt in range(3 if os.environ.get("VK_USER_TOKEN") else 0):
+        # отдельные серверы загрузки ВК иногда отвечают «405 Not Allowed» — каждый раз берём новый сервер
         try:
             up = _call("photos.getWallUploadServer", group_id=GROUP_ID)["upload_url"]
             r = requests.post(up, files={"photo": (("post.png", img, "image/png") if img[1:4] == b"PNG" else ("post.jpg", img, "image/jpeg"))}, timeout=60)
@@ -75,10 +76,13 @@ def _photo(img: bytes) -> str | None:
             except ValueError:
                 raise RuntimeError(f"сервер загрузки ответил не JSON ({r.status_code}): {r.text[:80]!r}") from None
             s = _call("photos.saveWallPhoto", group_id=GROUP_ID, photo=res["photo"], server=res["server"], hash=res["hash"])[0]
-        except Exception as e:   # личный ключ не сработал — грузим через сообщения сообщества
-            errs.append(f"стена: {e}")
-            _photo.wall_err = str(e)[:250]
-            print(f"  ! ВК: фото стены не загрузилось: {e}")
+            break
+        except Exception as e:   # после 3 неудач — грузим через сообщения сообщества
+            _photo.wall_err = f"попытка {attempt + 1}: {e}"[:250]
+            print(f"  ! ВК: фото стены не загрузилось (попытка {attempt + 1}): {e}")
+            time.sleep(3)
+    if not s and getattr(_photo, "wall_err", ""):
+        errs.append(f"стена: {_photo.wall_err}")
     try:
         if not s:
             if not os.environ.get("VK_TOKEN"):
