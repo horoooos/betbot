@@ -1514,7 +1514,7 @@
  "value_day": "2026-11-11",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-11",
- "site_stamp": "852|5006|2026-11-11 20",
+ "site_stamp": "853|5007|2026-11-11 20",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1659,9 +1659,9 @@
  "tg_offset": 727618641,
  "push_watch": {},
  "news_video": true,
- "vk_last": 5003,
- "dz_last": 5006,
- "vk_err": null,
+ "vk_last": 5006,
+ "dz_last": 5007,
+ "vk_err": "5006 фото+ссылка: VK wall.post: 100 One of the parameters specified was missing or invalid: Violated: link_photo_sizing_rule. No photo given",
  "news_forced": "now",
  "vk_mode": "photo",
  "dz_err": "4987: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
