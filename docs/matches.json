@@ -355,6 +355,90 @@ null
 },
 {
 "sport": "tennis",
+"id": "186763",
+"league": "Теннис · WTA",
+"kickoff": "2026-11-11T19:20:00+03:00",
+"home": "Лаура Самсон",
+"away": "София Костоулас",
+"hl": "https://a.espncdn.com/i/teamlogos/countries/500/cze.png",
+"al": "https://a.espncdn.com/i/teamlogos/countries/500/bel.png",
+"hid": "15069",
+"aid": "14562",
+"bb": "https://betboom.ru/search?query=%D0%A1%D0%B0%D0%BC%D1%81%D0%BE%D0%BD",
+"path": "tennis/wta",
+"url": "live.html?s=tennis&p=tennis%2Fwta&e=186763&h=%D0%9B%D0%B0%D1%83%D1%80%D0%B0+%D0%A1%D0%B0%D0%BC%D1%81%D0%BE%D0%BD&a=%D0%A1%D0%BE%D1%84%D0%B8%D1%8F+%D0%9A%D0%BE%D1%81%D1%82%D0%BE%D1%83%D0%BB%D0%B0%D1%81",
+"tip": "Лаура Самсон возьмёт хотя бы сет · ≈0.99",
+"top": false,
+"bot": {
+"main": {
+"label": "Лаура Самсон возьмёт хотя бы сет",
+"p": 0.943,
+"odds": 0.99,
+"est": true
+},
+"bold": null,
+"markets": [
+[
+"Победа: Лаура Самсон",
+0.856,
+null
+],
+[
+"Победа: София Костоулас",
+0.144,
+null
+],
+[
+"Будет 3 сета",
+0.364,
+null
+],
+[
+"Будет 2 сета",
+0.636,
+null
+],
+[
+"Счёт по сетам 2:0",
+0.579,
+null
+],
+[
+"Счёт по сетам 0:2",
+0.057,
+null
+],
+[
+"Счёт по сетам 2:1",
+0.277,
+null
+],
+[
+"Счёт по сетам 1:2",
+0.087,
+null
+],
+[
+"Лаура Самсон возьмёт хотя бы сет",
+0.943,
+null
+],
+[
+"София Костоулас возьмёт хотя бы сет",
+0.421,
+null
+]
+],
+"bar": [
+0.8559267287187292,
+0,
+0.1440732712812708
+],
+"center": "Рейтинг Эло 1704 : 1394"
+}
+},
+{
+"sport": "tennis",
 "id": "186762",
 "league": "Теннис · WTA",
 "kickoff": "2026-11-11T19:30:00+03:00",
@@ -519,90 +603,6 @@ null
 0.4086485317557187
 ],
 "center": "Рейтинг Эло 1557 : 1493"
-}
-},
-{
-"sport": "tennis",
-"id": "186763",
-"league": "Теннис · WTA",
-"kickoff": "2026-11-11T19:30:00+03:00",
-"home": "Лаура Самсон",
-"away": "София Костоулас",
-"hl": "https://a.espncdn.com/i/teamlogos/countries/500/cze.png",
-"al": "https://a.espncdn.com/i/teamlogos/countries/500/bel.png",
-"hid": "15069",
-"aid": "14562",
-"bb": "https://betboom.ru/search?query=%D0%A1%D0%B0%D0%BC%D1%81%D0%BE%D0%BD",
-"path": "tennis/wta",
-"url": "live.html?s=tennis&p=tennis%2Fwta&e=186763&h=%D0%9B%D0%B0%D1%83%D1%80%D0%B0+%D0%A1%D0%B0%D0%BC%D1%81%D0%BE%D0%BD&a=%D0%A1%D0%BE%D1%84%D0%B8%D1%8F+%D0%9A%D0%BE%D1%81%D1%82%D0%BE%D1%83%D0%BB%D0%B0%D1%81",
-"tip": "Лаура Самсон возьмёт хотя бы сет · ≈0.99",
-"top": false,
-"bot": {
-"main": {
-"label": "Лаура Самсон возьмёт хотя бы сет",
-"p": 0.943,
-"odds": 0.99,
-"est": true
-},
-"bold": null,
-"markets": [
-[
-"Победа: Лаура Самсон",
-0.856,
-null
-],
-[
-"Победа: София Костоулас",
-0.144,
-null
-],
-[
-"Будет 3 сета",
-0.364,
-null
-],
-[
-"Будет 2 сета",
-0.636,
-null
-],
-[
-"Счёт по сетам 2:0",
-0.579,
-null
-],
-[
-"Счёт по сетам 0:2",
-0.057,
-null
-],
-[
-"Счёт по сетам 2:1",
-0.277,
-null
-],
-[
-"Счёт по сетам 1:2",
-0.087,
-null
-],
-[
-"Лаура Самсон возьмёт хотя бы сет",
-0.943,
-null
-],
-[
-"София Костоулас возьмёт хотя бы сет",
-0.421,
-null
-]
-],
-"bar": [
-0.8559267287187292,
-0,
-0.1440732712812708
-],
-"center": "Рейтинг Эло 1704 : 1394"
 }
 },
 {
@@ -1087,6 +1087,24 @@ null
 },
 {
 "sport": "tennis",
+"id": "186769",
+"league": "Теннис · WTA",
+"kickoff": "2026-11-12T08:00:00+03:00",
+"home": "Тбд",
+"away": "Полона Херцог",
+"hl": null,
+"al": "https://a.espncdn.com/i/teamlogos/countries/500/slo.png",
+"hid": "-3",
+"aid": "1095",
+"bb": "https://betboom.ru/search?query=%D0%A2%D0%B1%D0%B4",
+"path": "tennis/wta",
+"url": "live.html?s=tennis&p=tennis%2Fwta&e=186769&h=%D0%A2%D0%B1%D0%B4&a=%D0%9F%D0%BE%D0%BB%D0%BE%D0%BD%D0%B0+%D0%A5%D0%B5%D1%80%D1%86%D0%BE%D0%B3",
+"tip": "",
+"top": false,
+"bot": null
+},
+{
+"sport": "tennis",
 "id": "186771",
 "league": "Теннис · WTA",
 "kickoff": "2026-11-12T08:00:00+03:00",
@@ -1117,24 +1135,6 @@ null
 "bb": "https://betboom.ru/search?query=%D0%A2%D0%B1%D0%B4",
 "path": "tennis/wta",
 "url": "live.html?s=tennis&p=tennis%2Fwta&e=186770&h=%D0%A2%D0%B1%D0%B4&a=%D0%A2%D0%B1%D0%B4",
-"tip": "",
-"top": false,
-"bot": null
-},
-{
-"sport": "tennis",
-"id": "186769",
-"league": "Теннис · WTA",
-"kickoff": "2026-11-12T08:00:00+03:00",
-"home": "Тбд",
-"away": "Полона Херцог",
-"hl": null,
-"al": "https://a.espncdn.com/i/teamlogos/countries/500/slo.png",
-"hid": "-3",
-"aid": "1095",
-"bb": "https://betboom.ru/search?query=%D0%A2%D0%B1%D0%B4",
-"path": "tennis/wta",
-"url": "live.html?s=tennis&p=tennis%2Fwta&e=186769&h=%D0%A2%D0%B1%D0%B4&a=%D0%9F%D0%BE%D0%BB%D0%BE%D0%BD%D0%B0+%D0%A5%D0%B5%D1%80%D1%86%D0%BE%D0%B3",
 "tip": "",
 "top": false,
 "bot": null
