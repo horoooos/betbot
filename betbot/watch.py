@@ -124,13 +124,65 @@ def _espn_football(now: pd.Timestamp, known: set, cache: dict, countries: dict) 
             url = f"live.html?s=soccer&p={quote_plus(p)}&e={eid}&h={quote_plus(info['home'])}&a={quote_plus(info['away'])}"
             out.append({"sport": "football", "id": eid, "league": info["league"] or "Футбол", "kickoff": info["kickoff"],
                         "home": info["home"], "away": info["away"], "hl": info["hl"], "al": info["al"],
-                        "venue": info["venue"], "url": url, "tip": "", "bot": None})
+                        "venue": info["venue"], "url": url, "tip": "", "bot": None,
+                        "pred": predict(e["competitions"][0])})   # прогноз по линии — каждый проход по свежим кэфам
     return out
+
+
+def predict(comp: dict) -> dict | None:
+    """Прогноз по линии букмекера (DraftKings из расписания ESPN) — та же математика, что у бота:
+    кэфы → честные шансы → ожидаемые голы → шансы всех рынков → ставка по правилам бота (mk.choose)."""
+    from . import espn
+    from . import markets as mk
+    o = espn._odds(comp)
+    if not all(o.get(k) and o[k] > 1.01 for k in ("H", "D", "A")):
+        return None
+    real = {"H": o["H"], "D": o["D"], "A": o["A"]}
+    line = p_over = None
+    if o.get("line") and o.get("over") and o.get("under") and o["over"] > 1.01 and o["under"] > 1.01:
+        line, p_over = float(o["line"]), float(mk.fair([o["over"], o["under"]])[0])
+        tag = {1.5: "15", 2.5: "25", 3.5: "35", 4.5: "45"}.get(line)
+        if tag:
+            real.update({f"O{tag}": o["over"], f"U{tag}": o["under"]})
+    try:
+        lh, la = mk.implied_lambdas(mk.fair([o["H"], o["D"], o["A"]]), line, p_over)
+        probs = mk.all_markets(lh, la)
+    except Exception:
+        return None
+    keys = [k for k in probs if k != "scores" and not k.startswith("HT_") and 0 < probs[k] < 1]
+    main, _ = mk.choose(keys, probs, real, lambda k: probs[k])
+    if not main:
+        return None
+    odds = real.get(main) or mk.MARGIN / probs[main]
+    show = [k for k in ("1X", "X2", "O25", "U25", "BTTS_Y", "BTTS_N") if k in probs and k != main][:4]
+    return {"label": mk.label(main), "p": round(probs[main], 3), "odds": round(float(odds), 2), "est": main not in real,
+            "bar": [round(probs["H"], 3), round(probs["D"], 3), round(probs["A"], 3)], "xg": [round(lh, 2), round(la, 2)],
+            "more": [(mk.label(k), round(probs[k], 3)) for k in show], "scores": probs.get("scores", [])[:3]}
 
 
 def _url(m: dict) -> str:
     ko = pd.Timestamp(m["kickoff"]).tz_convert(MSK)
     return f"watch/{ko:%Y-%m-%d}-{pages.slug(m['home'] + ' ' + m['away'], 60)}-{m['id']}.html"
+
+
+def _pred_block(pr: dict, hh: str, aa: str, vs: str) -> str:
+    """🎯 Прогноз по линии: ставка, шанс и кэф, шансы на исход матча, другие рынки и вероятные счета."""
+    pct = lambda v: f"{100 * v:.0f}%"   # noqa: E731
+    bar = "".join(f'<div style="width:{100 * v:.1f}%;background:{c};padding:6px 0;text-align:center;font-weight:800;font-size:12px">{pct(v)}</div>'
+                  for v, c in zip(pr["bar"], ("#2ecc71", "#6b7799", "#4aa3ff")) if v > 0.04)
+    more = "".join(f'<span style="padding:6px 10px;border-radius:10px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.09);font-size:13px">'
+                   f'{H.escape(lb)} <b>{pct(p)}</b></span>' for lb, p in pr["more"])
+    scores = " · ".join(f"{s} ({pct(p)})" for s, p in pr["scores"])
+    return f"""<h2>🎯 Прогноз на матч {H.escape(vs)}</h2>
+<div class="card" style="margin:10px 0">
+<div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+<div><div class="muted small">СТАВКА ПО РАСЧЁТУ БОТА</div><div style="font-size:22px;font-weight:900">{H.escape(pr['label'])}</div></div>
+<div style="text-align:right"><div class="muted small">шанс · кэф</div><div style="font-size:22px;font-weight:900;color:#ffc400">{pct(pr['p'])} · {'≈' if pr['est'] else ''}{pr['odds']:.2f}</div></div></div>
+<div style="display:flex;border-radius:12px;overflow:hidden;margin:14px 0 6px">{bar}</div>
+<div class="muted small" style="display:flex;justify-content:space-between"><span>{H.escape(hh)}</span><span>ничья</span><span>{H.escape(aa)}</span></div>
+<div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:12px">{more}</div>
+<p class="muted small" style="margin-top:10px">Ожидаемые голы {pr['xg'][0]:.1f} : {pr['xg'][1]:.1f} · самые вероятные счета: {scores}.
+Расчёт по линии букмекеров (DraftKings) математикой бота; кэф «≈» — расчётный. Прогноз — не гарантия. 18+</p></div>"""
 
 
 def _page(m: dict, pred_url: str | None) -> str:
@@ -139,9 +191,16 @@ def _page(m: dict, pred_url: str | None) -> str:
     hh, aa, lg = m["home"], m["away"], m.get("league") or SPORT_RU.get(sport, "")
     vs = f"{hh} — {aa}"
     day = f"{ko.day} {pages.MONTHS[ko.month - 1]}"
-    title = f"{vs} смотреть онлайн бесплатно {ko:%d.%m.%Y} — прямая трансляция матча"
-    desc = (f"{vs}: смотреть онлайн бесплатно, {day} в {ko:%H:%M} МСК. {lg}. Прямая трансляция матча, счёт в реальном "
-            f"времени, голы, составы, статистика и прогноз на матч {hh} — {aa}.")
+    pr = m.get("pred")
+    pct = lambda v: f"{100 * v:.0f}%"   # noqa: E731
+    if pr:   # есть линия — страница и под «прогноз на матч», и под «смотреть онлайн»
+        title = f"{vs}: прогноз на матч и смотреть онлайн бесплатно {ko:%d.%m.%Y}"
+        desc = (f"Прогноз на матч {vs} {day}: {pr['label']} — шанс {pct(pr['p'])}, кэф {'≈' if pr['est'] else ''}{pr['odds']:.2f}. "
+                f"Смотреть онлайн бесплатно в {ko:%H:%M} МСК, {lg}. Шансы на победу, тоталы, счёт и прямая трансляция.")
+    else:
+        title = f"{vs} смотреть онлайн бесплатно {ko:%d.%m.%Y} — прямая трансляция матча"
+        desc = (f"{vs}: смотреть онлайн бесплатно, {day} в {ko:%H:%M} МСК. {lg}. Прямая трансляция матча, счёт в реальном "
+                f"времени, голы, составы, статистика и прогноз на матч {hh} — {aa}.")
     live = pages.SITE + m["url"]
     tip = ""
     if m.get("tip"):
@@ -154,6 +213,8 @@ def _page(m: dict, pred_url: str | None) -> str:
            (f"Во сколько начинается матч {vs}?", f"Матч {vs} начнётся {day} {ko.year} года в {ko:%H:%M} по московскому времени. Турнир: {lg}."),
            (f"Какой прогноз на матч {vs}?",
             f"Прогноз бота: {m['tip']}." if m.get("tip") else
+            f"Расчёт бота по линии букмекеров: {pr['label']} — шанс {pct(pr['p'])}, кэф {'≈' if pr['est'] else ''}{pr['odds']:.2f}. "
+            f"Шансы: победа {hh} {pct(pr['bar'][0])}, ничья {pct(pr['bar'][1])}, победа {aa} {pct(pr['bar'][2])}." if pr else
             f"Прогноз на матч {vs} публикуем в Telegram-канале @aistavvit примерно за час до начала, если по матчу есть линия.")]
     ld = [{"@context": "https://schema.org", "@type": "SportsEvent", "name": vs, "startDate": ko.isoformat(),
            "eventStatus": "https://schema.org/EventScheduled", "sport": SPORT_RU.get(sport, ""),
@@ -170,12 +231,12 @@ def _page(m: dict, pred_url: str | None) -> str:
     crumbs, bc = pages._crumbs("../", [("Главная", ""), ("Смотреть онлайн", "watch/"), (vs, None)])
     body = f"""{crumbs}
 <article class="post">
-<h1>{H.escape(vs)}: смотреть онлайн бесплатно</h1>
+<h1>{H.escape(vs)}: {"прогноз и " if pr else ""}смотреть онлайн бесплатно</h1>
 <p class="muted">{H.escape(lg)} · {day} {ko.year}, {ko:%H:%M} МСК{(' · ' + H.escape(m['venue'])) if m.get('venue') else ''}</p>
 <div class="card" style="display:flex;align-items:center;justify-content:space-around;gap:12px;text-align:center;margin:14px 0">
 <div>{logo(m.get('hl'))}<br><b>{H.escape(hh)}</b></div><div style="font-size:22px;font-weight:900">{ko:%H:%M}</div><div>{logo(m.get('al'))}<br><b>{H.escape(aa)}</b></div></div>
 <a class="btn gold" href="../{H.escape(m['url'])}" style="display:block;text-align:center;font-size:18px;padding:16px">▶ Смотреть {H.escape(vs)} онлайн</a>
-{tip}
+{tip}{_pred_block(pr, hh, aa, vs) if pr and not m.get("tip") else ""}
 <h2>Прямая трансляция {H.escape(vs)}</h2>
 <p>Трансляция матча {H.escape(vs)} ({H.escape(lg)}) начнётся {day} в {ko:%H:%M} по Москве. На странице трансляции — счёт онлайн,
 голы и важные моменты в реальном времени, 3D-поле с ходом игры, составы команд, статистика и чат болельщиков. Смотреть
@@ -230,6 +291,11 @@ def build(now: pd.Timestamp, preds: dict | None = None) -> list[str]:
         except ValueError:
             pass
     upcoming = sorted([m for m in items if pd.Timestamp(m["kickoff"]) > now - pd.Timedelta(hours=3)], key=lambda m: m["kickoff"])
+    # прогнозы по линии на ближайшие матчи — для подборки «прогнозы на футбол сегодня» (betbot/hubs.py)
+    preds = [{"url": _url(m), "home": m["home"], "away": m["away"], "league": m.get("league") or "", "kickoff": m["kickoff"],
+              "label": m["pred"]["label"], "p": m["pred"]["p"], "odds": m["pred"]["odds"], "est": m["pred"]["est"]}
+             for m in upcoming if m.get("pred") and pd.Timestamp(m["kickoff"]) > now]
+    (ROOT / "data" / "watch_preds.json").write_text(json.dumps(preds, ensure_ascii=False), encoding="utf-8")
     pages._write(OUT / "index.html", _index(upcoming, now))
     cache = {k: v for k, v in cache.items() if pd.Timestamp(v["kickoff"]) > old}
     CACHE.write_text(json.dumps(cache, ensure_ascii=False), encoding="utf-8")

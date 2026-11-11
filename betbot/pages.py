@@ -217,6 +217,7 @@ def page(prefix: str, title: str, desc: str, canon: str, body: str, on: str = ""
 <footer>АИ СТАВИТ — бесплатные прогнозы на спорт от искусственного интеллекта и честная статистика. Прогноз — не гарантия выигрыша. 18+.
 <br><a href="https://t.me/{CH}">Telegram-канал @{CH}</a> · <a href="{prefix}./">Статистика бота</a> · <a href="{prefix}matches.html">Матчи онлайн</a> · <a href="{prefix}news/">Новости спорта</a> · <a href="{prefix}predictions/">Прогнозы на матчи</a>
 <br><a href="{prefix}leagues.html">Команды, игроки и турниры</a> · <a href="{prefix}teams/">Прогнозы по командам</a> · <a href="{prefix}tools.html">Калькуляторы ставок</a> · <a href="{prefix}school/">Школа ставок</a> · <a href="{prefix}top.html">Рейтинг прогнозистов</a>
+<br>Прогнозы: <a href="{prefix}prognozy/futbol-segodnya.html">на футбол сегодня</a> · <a href="{prefix}prognozy/ekspress-dnya.html">экспресс дня</a> · <a href="{prefix}prognozy/rpl.html">РПЛ</a> · <a href="{prefix}prognozy/apl.html">АПЛ</a> · <a href="{prefix}prognozy/liga-chempionov.html">Лига чемпионов</a> · <a href="{prefix}prognozy/hokkej-nhl.html">хоккей</a> · <a href="{prefix}prognozy/nba.html">НБА</a> · <a href="{prefix}prognozy/tennis.html">теннис</a> · <a href="{prefix}prognozy/kibersport.html">киберспорт</a> · <a href="{prefix}watch/">смотреть онлайн</a>
 <br>Мы в соцсетях: {SOCIAL_LINKS} · <a href="https://vk.me/aistavvit" rel="noopener">написать в поддержку</a></footer>
 </main><div class="sticky"><a class="a" href="{prefix}matches.html">📺 Онлайн</a><a class="b" href="https://t.me/{CH}">📲 Канал</a></div>
 <script type="module">import("{prefix}fb.js?v=12").then(fb => {{ fb.navUser(document.getElementById("navUser")); fb.track("{on or 'page'}");
@@ -435,6 +436,15 @@ def fetch_events(items: list[dict], limit: int = 10) -> None:
     EVENTS_FILE.write_text(json.dumps(cache, ensure_ascii=False), encoding="utf-8")
 
 
+def _league_of(div, sport: str) -> str:
+    """Название турнира по коду лиги из results.csv (для старых матчей, у которых в памяти бота его уже нет)."""
+    from . import live
+    try:
+        return live._league({"div": str(div), "sport": sport}) if isinstance(div, str) and div else ""
+    except Exception:
+        return ""
+
+
 def _matches(stores: dict, results: pd.DataFrame, store: dict[int, dict], now: pd.Timestamp) -> list[dict]:
     """Все матчи с прогнозом: свежие из памяти бота + завершённые из results.csv за 60 дней."""
     from . import live, sports
@@ -466,7 +476,8 @@ def _matches(stores: dict, results: pd.DataFrame, store: dict[int, dict], now: p
             if not msg:
                 continue
             out[key] = {"id": str(r["id"]), "sport": sport, "home": str(r["home"]), "away": str(r["away"]), "hl": None, "al": None,
-                        "kickoff": pd.Timestamp(store[msg]["t"]).tz_convert("Europe/Moscow") + pd.Timedelta(hours=1), "league": "",
+                        "kickoff": pd.Timestamp(store[msg]["t"]).tz_convert("Europe/Moscow") + pd.Timedelta(hours=1),
+                        "league": _league_of(r.get("div"), sport),
                         "msg": msg, "tip": str(r["main_label"]), "odds": float(r["main_odds"]) if pd.notna(r["main_odds"]) else None,
                         "p": None, "bot": None, "path": "", "live": None, "venue": None, "score": str(r["score"]), "hit": hit, "finished": True}
     for m in out.values():
@@ -648,6 +659,11 @@ def build(stores: dict, results: pd.DataFrame, now: pd.Timestamp, max_pages: int
     extra = pages_extra.build_teams(ms, news, now) + pages_extra.build_school()
     _write(DOCS / "tools.html", pages_extra.build_tools())
     extra += ["tools.html", "top.html", "leagues.html"]
+    try:   # подборки под запросы «прогнозы на футбол сегодня», «прогнозы на РПЛ», «экспресс дня» и т.д.
+        from . import hubs
+        extra += hubs.build(ms, now)
+    except Exception as e:
+        print(f"  ! подборки прогнозов не собрались: {e}")
     try:   # страницы турниров (таблица и расписание) — тоже в поиск
         from . import directory
         extra += [f"league.html?p={x['p'].replace('/', '%2F')}" for x in directory._leagues()]
