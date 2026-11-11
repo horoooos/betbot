@@ -7316,31 +7316,31 @@
   "kickoff": "2026-11-11T23:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Wed, November 11th at 3:00 PM EST",
   "home": {
-   "id": "1797",
-   "name": "Elina Svitolina",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/1797.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/ukr.png"
    ],
+   "id": "1797",
+   "name": "Elina Svitolina",
    "country": "Ukraine",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
    "ru": "Элина Свитолина"
   },
   "away": {
-   "id": "3039",
-   "name": "Karolina Muchova",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/3039.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/cze.png"
    ],
+   "id": "3039",
+   "name": "Karolina Muchova",
    "country": "Czechia",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
@@ -7400,7 +7400,9 @@
   "btn": 4,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null
  },
  "WTA|187378": {
   "id": "187378",
