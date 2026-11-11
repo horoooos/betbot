@@ -6009,22 +6009,22 @@
   "kickoff": "2026-11-11T03:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "home": {
+   "color": "c41230",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/mtl.png",
    "id": "10",
    "name": "Montreal Canadiens",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/mtl.png",
-   "color": "c41230",
    "score": "0",
    "record": "11-3-3",
    "periods": [],
    "ru": "Монреаль"
   },
   "away": {
+   "color": "124734",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/min.png",
    "id": "30",
    "name": "Minnesota Wild",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/min.png",
-   "color": "124734",
    "score": "0",
    "record": "12-3-4",
    "periods": [],
@@ -6128,7 +6128,9 @@
   "close": {
    "HK_O6.5": 0.4675,
    "HK_ML_H": 0.4572
-  }
+  },
+  "main_hit": false,
+  "bold_hit": false
  },
  "NHL|401892685": {
   "id": "401892685",
