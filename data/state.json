@@ -1642,14 +1642,15 @@
  "tg_offset": 727618641,
  "push_watch": {},
  "news_video": true,
- "vk_last": 5009,
+ "vk_last": 5010,
  "dz_last": 5013,
- "vk_err": "5009 фото+ссылка: VK wall.post: 100 One of the parameters specified was missing or invalid: Violated: link_photo_sizing_rule. No photo given",
+ "vk_err": null,
  "news_forced": "now",
  "vk_mode": "photo",
  "dz_err": "4987: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))",
  "img_used": [
   "https://images.cybersport.ru/images/as-is/plain/13/132879f8-8954-492d-9570-ac3a27a28fb8.jpg"
  ],
- "indexnow_day": "2026-11-11"
+ "indexnow_day": "2026-11-11",
+ "vk_wall_err": null
 }
