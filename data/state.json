@@ -1490,7 +1490,7 @@
  "value_day": "2026-11-11",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-11",
- "site_stamp": "848|4981|2026-11-11 18",
+ "site_stamp": "848|4987|2026-11-11 18",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1638,8 +1638,9 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 4978,
- "dz_last": 4981,
+ "dz_last": 4986,
  "vk_err": null,
  "news_forced": "now",
- "vk_mode": "photo"
+ "vk_mode": "photo",
+ "dz_err": "4987: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
 }
