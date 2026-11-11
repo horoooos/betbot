@@ -134,6 +134,23 @@ def all_bets(res: pd.DataFrame, start: str | None = None, end: str | None = None
     return rows if dated else [(o, h, s) for _, o, h, s in rows]
 
 
+def bet_counts(res: pd.DataFrame) -> dict:
+    """Сколько реально было ставок за всё время: основные, смелые, экспрессы и сколько из них зашло."""
+    out = {"main": 0, "main_w": 0, "bold": 0, "bold_w": 0, "express": 0, "express_w": 0}
+    if res is not None and len(res):
+        m = res[pd.to_numeric(res["main_odds"], errors="coerce") > 1]
+        m = m[m["main_hit"].notna()]
+        out["main"], out["main_w"] = len(m), int(_truthy(m["main_hit"]).sum())
+        if "bold_odds" in res and "bold_hit" in res:
+            b = res[(pd.to_numeric(res["bold_odds"], errors="coerce") > 1) & res["bold_hit"].notna()]
+            out["bold"], out["bold_w"] = len(b), int(_truthy(b["bold_hit"]).sum())
+    ex = expresses()
+    out["express"], out["express_w"] = len(ex), int(ex["hit"].astype(str).str.lower().isin(["true", "1"]).sum()) if len(ex) else 0
+    out["total"] = out["main"] + out["bold"] + out["express"]
+    out["won"] = out["main_w"] + out["bold_w"] + out["express_w"]
+    return out
+
+
 def roi_all(res: pd.DataFrame) -> float | None:
     """ROI по всем исходам (основные + смелые + экспрессы, любые кэфы), ставка 1 ед."""
     bets = all_bets(res)

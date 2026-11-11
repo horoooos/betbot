@@ -101,6 +101,10 @@ BANK_CSS = """
  font-size:12px;font-weight:700;white-space:nowrap;transform:translate(-50%,-115%);opacity:0;transition:opacity .15s}
 .bankx .tip b{display:block;font-size:16px;font-weight:900}
 .bankx .note{color:var(--muted);font-size:12px;margin-top:8px}
+.bankx .allb{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.bankx .allb span{padding:7px 12px;border-radius:12px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.09);font-size:12px;font-weight:700;color:#cfd6ee}
+.bankx .allb span b{color:#fff;font-weight:900}.bankx .allb .h{background:rgba(255,196,0,.12);border-color:rgba(255,196,0,.4);color:#ffd54d}
+.bankx .vol{opacity:0}.bankx.go .vol{animation:bkfade .8s ease .3s forwards}
 @keyframes bkdraw{to{stroke-dashoffset:0}}@keyframes bkfade{to{opacity:1}}
 @keyframes bkpulse{0%{opacity:.7;transform:scale(1)}100%{opacity:0;transform:scale(3.2)}}
 @media (max-width:620px){.bankx{padding:16px 14px 12px}.bankx .mini div{min-width:0;flex:1}}
@@ -140,7 +144,8 @@ def _bank_block(res: pd.DataFrame, now: pd.Timestamp) -> str:
 
     def chart(W, H, L, R, T, B, fs, n_x, sfx, cls):
         X = lambda i: L + i * (W - L - R) / max(len(pts) - 1, 1)   # noqa: E731
-        Y = lambda v: T + (hi - v) * (H - T - B) / (hi - lo)      # noqa: E731
+        VH = H * 0.16                                              # снизу — столбики «сколько ставок в этот день»
+        Y = lambda v: T + (hi - v) * (H - T - B - VH) / (hi - lo)  # noqa: E731
         xs, ys = [X(i) for i in range(len(pts))], [Y(p["bank"]) for p in pts]
         line, base = _smooth(xs, ys), Y(pro.BANK_START)
         area = f"{line} L{xs[-1]:.1f},{base:.1f} L{xs[0]:.1f},{base:.1f} Z"
@@ -151,6 +156,12 @@ def _bank_block(res: pd.DataFrame, now: pd.Timestamp) -> str:
         anchor = lambda i: "start" if i == 0 else "end" if i == len(pts) - 1 else "middle"   # noqa: E731
         xl = "".join(f'<text class="ax" style="font-size:{fs}px" x="{xs[i]:.1f}" y="{H - 10}" text-anchor="{anchor(i)}">'
                      f'{pd.Timestamp(p["date"]):%d.%m}</text>' for i, p in enumerate(pts) if i % step == 0 or i == len(pts) - 1)
+        nmax = max([p["n"] for p in pts] + [1])
+        bw = min(26.0, (W - L - R) / max(len(pts), 1) * 0.55)
+        vol = "".join(
+            f'<rect class="vol" x="{xs[i] - bw / 2:.1f}" y="{H - B - VH * p["n"] / nmax:.1f}" width="{bw:.1f}" height="{VH * p["n"] / nmax:.1f}" rx="3" '
+            f'fill="{"#2ecc71" if p["w"] >= p["n"] / 2 else "#ff5a5a"}" fill-opacity=".45"><title>{p["n"]} ставок, зашло {p["w"]}</title></rect>'
+            for i, p in enumerate(pts) if p.get("n"))
         overlay = ""
         if n_all == 0:   # новый банк ещё без ставок: подписи «старт · 12.11» и «сейчас», крупная надпись по центру
             xl = (f'<text class="ax" style="font-size:{fs}px" x="{xs[0]:.1f}" y="{H - 10}" text-anchor="start">старт · {reset:%d.%m}</text>'
@@ -173,7 +184,7 @@ def _bank_block(res: pd.DataFrame, now: pd.Timestamp) -> str:
 <clipPath id="bkB{sfx}"><rect x="0" y="{base:.1f}" width="{W}" height="{H}"/></clipPath>
 <filter id="bkG{sfx}" x="-10%" y="-30%" width="120%" height="160%"><feGaussianBlur stdDeviation="{fs / 2:.0f}" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
 </defs>
-<g class="grid">{grid}</g>{yl}{xl}
+<g class="grid">{grid}</g>{yl}{xl}{vol}
 <path class="ar" d="{area}" fill="url(#bkU{sfx})" clip-path="url(#bkA{sfx})"/>
 <path class="ar" d="{area}" fill="url(#bkD{sfx})" clip-path="url(#bkB{sfx})"/>
 <line class="startl" x1="{L}" x2="{W - R}" y1="{base:.1f}" y2="{base:.1f}"/>
@@ -191,6 +202,13 @@ def _bank_block(res: pd.DataFrame, now: pd.Timestamp) -> str:
     note = (f"Новый банк стартовал {reset.day} {MONTHS_RU[reset.month - 1]} с {money(pro.BANK_START)} ₽ — по новым правилам: "
             "все ставки бота и экспрессы. График растёт с каждой рассчитанной ставкой.") if n_all == 0 else \
         f"Ставка — рекомендованные ботом 1–3% от текущего банка; смелые и экспрессы — по 1%. Старт — {money(pro.BANK_START)} ₽."
+    c = pro.bet_counts(res)
+    nb = lambda v: f"{v:,}".replace(",", " ")   # noqa: E731
+    allb = (f'<span class="h">за всё время: <b>{nb(c["total"])}</b> реальных ставок · зашло <b>{nb(c["won"])}</b>'
+            f'{f" ({100 * c["won"] / c["total"]:.0f}%)" if c["total"] else ""}</span>'
+            f'<span>🎯 основных <b>{nb(c["main"])}</b> · зашло {nb(c["main_w"])}</span>'
+            f'<span>🔥 смелых <b>{nb(c["bold"])}</b> · зашло {nb(c["bold_w"])}</span>'
+            f'<span>🧩 экспрессов <b>{nb(c["express"])}</b> · зашло {nb(c["express_w"])}</span>')
     wr = f"{100 * w_all / n_all:.0f}%" if n_all else "—"
     mx = money(best["bank"]) + " ₽" if best else "—"
     return f"""<style>{BANK_CSS}</style>
@@ -201,7 +219,7 @@ def _bank_block(res: pd.DataFrame, now: pd.Timestamp) -> str:
 <div class="mini"><div><b>{n_all}</b><span>ставок</span></div><div><b>{wr}</b><span>зашло</span></div>
 <div><b>{mx}</b><span>максимум</span></div></div></div>
 {chart(1000, 330, 64, 26, 24, 40, 12, 8, "d", "bk-wide")}{chart(400, 300, 50, 14, 20, 34, 14, 4, "m", "bk-narrow")}<div class="tip"></div>
-<div class="note">{note}</div></div>{BANK_JS}"""
+<div class="allb">{allb}</div><div class="note">{note}</div></div>{BANK_JS}"""
 
 
 MONTHS_RU = ["января", "февраля", "марта", "апреля", "мая", "июня", "июля", "августа", "сентября", "октября", "ноября", "декабря"]
