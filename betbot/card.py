@@ -775,7 +775,8 @@ def top_card(picks: list[dict], day: str, brand: str = "") -> bytes:
     return _png(img, d, brand)
 
 
-def news_card(photo_url: str | None, title: str, tag: str, brand: str = "", sport: str = "", fallback_prompt: str = "") -> bytes:
+def news_card(photo_url: str | None, title: str, tag: str, brand: str = "", sport: str = "", fallback_prompt: str = "",
+              credit: str = "") -> bytes:
     """Новость: фото из источника на весь кадр + наше оформление поверх (плашка рубрики, заголовок, градиент).
 
     Если фото нет или оно не скачалось — картинка от нейросети, а если и она недоступна — наш фирменный фон.
@@ -783,18 +784,41 @@ def news_card(photo_url: str | None, title: str, tag: str, brand: str = "", spor
     photo = None
     if photo_url:
         try:
-            r = requests.get(photo_url, timeout=25, headers={"User-Agent": "Mozilla/5.0"})
+            # Wikimedia отдаёт файлы только запросам с понятным названием программы
+            ua = "AIStavitBot/1.0 (https://horoooos.github.io/betbot/)" if "wikimedia.org" in photo_url else "Mozilla/5.0"
+            r = requests.get(photo_url, timeout=25, headers={"User-Agent": ua})
             if r.ok and len(r.content) > 5000:
                 photo = Image.open(io.BytesIO(r.content)).convert("RGB")
         except Exception:
             photo = None
     if photo is None:
         return ai_card(fallback_prompt, title, tag, brand, sport=sport)   # пустой prompt — фирменный фон без нейросети
+    src = photo
     # кадрирование «cover»: заполняем 1280×720 без полей, чуть выше центра — там обычно лица и мяч
     k = max(W / photo.width, H / photo.height)
     photo = photo.resize((int(photo.width * k) + 1, int(photo.height * k) + 1), Image.LANCZOS)
     left, top = (photo.width - W) // 2, int((photo.height - H) * 0.35)
     img = photo.crop((left, top, left + W, top + H))
+    text_w = W - 140
+    if src.width < 900 or src.height > src.width * 1.05:
+        # маленькое или вертикальное фото (портрет игрока): не растягиваем на весь кадр — фото «карточкой» справа
+        # поверх размытого фона из того же снимка; лицо не обрезается и не мылится
+        img = img.filter(ImageFilter.GaussianBlur(28))
+        img = Image.blend(img, Image.new("RGB", (W, H), (8, 10, 24)), 0.45)
+        fh = H - 150
+        fw = min(int(src.width * fh / src.height), 560)
+        fg = src.resize((fw, int(src.height * fw / src.width)), Image.LANCZOS)
+        if fg.height > fh:   # слишком вытянутое — обрезаем низ, лицо обычно сверху
+            fg = fg.crop((0, 0, fw, fh))
+        x0, y0 = W - fw - 90, (H - fg.height) // 2 - 10
+        shadow = Image.new("L", (W, H), 0)
+        ImageDraw.Draw(shadow).rounded_rectangle((x0 + 8, y0 + 14, x0 + fw + 8, y0 + fg.height + 14), radius=26, fill=170)
+        img = Image.composite(Image.new("RGB", (W, H), (0, 0, 0)), img, shadow.filter(ImageFilter.GaussianBlur(18)))
+        mask = Image.new("L", fg.size, 0)
+        ImageDraw.Draw(mask).rounded_rectangle((0, 0, fw - 1, fg.height - 1), radius=24, fill=255)
+        img.paste(fg, (x0, y0), mask)
+        ImageDraw.Draw(img).rounded_rectangle((x0, y0, x0 + fw - 1, y0 + fg.height - 1), radius=24, outline=(255, 255, 255), width=3)
+        text_w = x0 - 70 - 60
     # фирменная тонировка: тёмный градиент снизу и цветной отсвет слева
     shade = Image.new("L", (1, H))
     for y in range(H):
@@ -814,25 +838,27 @@ def news_card(photo_url: str | None, title: str, tag: str, brand: str = "", spor
         lines, cur = [], ""
         for w in text.split():
             t = (cur + " " + w).strip()
-            if d.textlength(t, font=f) <= W - 140 or not cur:
+            if d.textlength(t, font=f) <= text_w or not cur:
                 cur = t
             else:
                 lines.append(cur)
                 cur = w
         lines.append(cur)
-        if len(lines) <= 3 or size <= 34:
+        if len(lines) <= (3 if text_w > 900 else 4) or size <= 34:
             break
         size -= 4
     step = size + 12
     top_y = H - 70 - step * len(lines)
-    for k_, line in enumerate(lines[:3]):
+    for k_, line in enumerate(lines[:4]):
         d.text((70, top_y + k_ * step), line, font=font(size, "ExtraBold"), fill=WHITE, anchor="la")
     # плашка рубрики над заголовком и золотая черта слева
     tw = d.textlength(tag.upper(), font=font(22, "ExtraBold")) + 36
     _gold_box(img, (70, top_y - 58, int(70 + tw), top_y - 18), radius=20, top=BLUE_TOP, bottom=BLUE_BOTTOM, edge=(190, 215, 255))
     d = ImageDraw.Draw(img)
     d.text((70 + tw / 2, top_y - 38), tag.upper(), font=font(22, "ExtraBold"), fill=WHITE, anchor="mm")
-    d.rectangle((44, top_y - 4, 50, top_y + step * len(lines[:3]) - 14), fill=RUBRIC["news"])
+    d.rectangle((44, top_y - 4, 50, top_y + step * len(lines[:4]) - 14), fill=RUBRIC["news"])
+    if credit:   # автор и лицензия фото — этого требуют свободные лицензии
+        d.text((W - 70, 44), credit[:70], font=font(15, "Medium"), fill=(200, 205, 220), anchor="ra")
     return _png(img, d, brand, sport or None)
 
 
@@ -962,9 +988,23 @@ def slide_card(kicker: str, big: str, sub: str, lines: list[str], colors: tuple,
         d.text((W - 70, 58), n, font=font(22, "Medium"), fill=MUTED, anchor="rm")
     d.text((W / 2, 110), kicker.upper(), font=font(30, "ExtraBold"), fill=accent, anchor="mm")
     size = 150
-    while size > 50 and d.textlength(big, font=font(size, "ExtraBold")) > W - 160:
+    while size > 72 and d.textlength(big, font=font(size, "ExtraBold")) > W - 160:
         size -= 6
-    d.text((W / 2, 270), big, font=font(size, "ExtraBold"), fill=WHITE, anchor="mm")
+    if d.textlength(big, font=font(size, "ExtraBold")) <= W - 160:
+        d.text((W / 2, 270), big, font=font(size, "ExtraBold"), fill=WHITE, anchor="mm")
+    else:   # длинная фраза — в две строки (раньше вылезала за края картинки)
+        words, best = big.split(), None
+        for i in range(1, len(words)):
+            a, b = " ".join(words[:i]), " ".join(words[i:])
+            wide = max(d.textlength(a, font=font(60, "ExtraBold")), d.textlength(b, font=font(60, "ExtraBold")))
+            if best is None or wide < best[0]:
+                best = (wide, a, b)
+        a, b = (best[1], best[2]) if best else (big, "")
+        size = 64
+        while size > 30 and max(d.textlength(a, font=font(size, "ExtraBold")), d.textlength(b, font=font(size, "ExtraBold"))) > W - 140:
+            size -= 4
+        d.text((W / 2, 270 - size * 0.6), a, font=font(size, "ExtraBold"), fill=WHITE, anchor="mm")
+        d.text((W / 2, 270 + size * 0.6), b, font=font(size, "ExtraBold"), fill=WHITE, anchor="mm")
     d.text((W / 2, 390), sub, font=_fit(d, sub, 34, W - 200, "Bold"), fill=(230, 235, 250), anchor="mm")
     y = 460
     for line in lines[:4]:

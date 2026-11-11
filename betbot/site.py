@@ -25,12 +25,8 @@ def _hits(col: pd.Series) -> pd.Series:
 
 
 def _roi(df: pd.DataFrame) -> float:
-    """ROI только по прогнозам с настоящим кэфом — расчётные «≈» в прибыль не идут."""
-    real = df[~df["main_est"].astype(str).str.lower().isin(["true", "1", "1.0"])] if "main_est" in df else df
-    if real.empty:
-        return 0.0
-    h = _hits(real["main_hit"])
-    return float(100 * (h * (real["main_odds"].astype(float) - 1) - (~h)).sum() / len(real))
+    """ROI по всем исходам: основные и смелые ставки, с настоящим и расчётным кэфом."""
+    return pro.roi_all(df) or 0.0
 
 
 def _chart(curve: list[float]) -> str:
@@ -203,7 +199,7 @@ def build(res: pd.DataFrame, now: pd.Timestamp, blocks: dict | None = None) -> N
 
     kpis = "".join([
         kpi("📊", "прогнозов", f"{len(res)}", f"за последние 7 дней — {len(week)}"),
-        kpi("📈", "ROI", f"{roi:+.1f}%" if len(res) else "—", "только настоящие кэфы", "good" if roi >= 0 else "bad"),
+        kpi("📈", "ROI", f"{roi:+.1f}%" if len(res) else "—", "все исходы: основные и смелые", "good" if roi >= 0 else "bad"),
         kpi("💰", "виртуальный банк", f"{money(curve[-1])} ₽", f"старт {money(pro.BANK_START)} ₽", "good" if curve[-1] >= pro.BANK_START else "bad"),
         kpi("🗓", "заходит за неделю", wk, "последние 7 дней"),
         kpi("🧭", "CLV", f"{100 * clv.mean():+.1f}%" if len(clv) else "—",

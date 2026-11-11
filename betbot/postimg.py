@@ -50,7 +50,7 @@ def _card(html: str, kind: str) -> bytes:
         rest = ls[2:5]
     else:
         kicker, big, sub, rest = "Новости спорта", first, "", ls[1:3]
-    big = big if len(big) <= 60 else big[:57] + "…"
+    big = big if len(big) <= 90 else big[:87] + "…"
     rest = [r if len(r) <= 70 else r[:67] + "…" for r in rest]
     return card.slide_card(kicker, big, sub, rest, COLORS.get(kind, COLORS["новость"]), brand="@aistavvit")
 

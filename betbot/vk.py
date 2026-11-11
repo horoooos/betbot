@@ -143,6 +143,19 @@ def _live_link(text: str) -> str | None:
     return None
 
 
+def _service(text: str) -> bool:
+    """Служебные сообщения канала («… pinned a photo», «закрепил сообщение») — не посты."""
+    return len(text) < 160 and bool(re.search(r"\bpinned\b|закрепил", text, re.I))
+
+
+def _stats_tail(pid: int, posts: dict) -> bool:
+    """Текст статистики («Вчера, 9 ноября: …»), вышедший ответом сразу после картинки «СТАТИСТИКА БОТА»."""
+    p = posts.get(str(pid)) or {}
+    if not _text(p.get("html", "")).startswith("Вчера,"):
+        return False
+    return any("СТАТИСТИКА БОТА" in (posts.get(str(j)) or {}).get("html", "") for j in range(pid - 1, pid - 4, -1))
+
+
 def crosspost(state: dict) -> int:
     """Публикует в ВК посты канала, вышедшие после прошлого запуска. Возвращает, сколько опубликовано."""
     if not enabled() or not CHANNEL.exists():
@@ -164,9 +177,15 @@ def crosspost(state: dict) -> int:
         if len(text) < 20 or ("#live" in p.get("html", "") and not started):   # голы и прочий live в ВК не дублируем
             state["vk_last"] = pid
             continue
-        if text.startswith("📖 Продолжение"):   # продолжение длинной новости уже вошло в её пост (ниже)
+        if text.startswith("📖 Продолжение") or _service(text) or _stats_tail(pid, posts):
+            # продолжение новости и текст статистики уже вошли в свой пост (ниже); «pinned a photo» — служебное
             state["vk_last"] = pid
             continue
+        if "СТАТИСТИКА БОТА" in text:   # картинка статистики + текст ответом в Telegram → в ВК одним постом
+            for j in range(pid + 1, pid + 4):
+                if _stats_tail(j, posts):
+                    text = text.rstrip() + "\n\n" + _text(posts[str(j)].get("html", ""))
+                    break
         if "Продолжение — в ответе" in text:   # длинная новость: в ВК — одним постом, вместе с продолжением
             text = "\n".join(ln for ln in text.split("\n") if "Продолжение — в ответе" not in ln)
             for j in range(pid + 1, pid + 4):

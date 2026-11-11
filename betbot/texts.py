@@ -331,14 +331,11 @@ def numbers(df: pd.DataFrame) -> tuple[int, int, float | None]:
 
 
 def roi_real(df: pd.DataFrame) -> float | None:
-    """ROI только по прогнозам с НАСТОЯЩИМ кэфом букмекера (расчётные «≈» в прибыль не идут)."""
+    """ROI по всем исходам за период: основные и смелые ставки, с настоящим и расчётным кэфом."""
     if df.empty:
         return None
-    real = df[~df["main_est"].astype(str).str.lower().isin(["true", "1", "1.0"])] if "main_est" in df else df
-    if real.empty:
-        return None
-    hit = _hits(real["main_hit"])
-    return float(100 * (hit * (real["main_odds"].astype(float) - 1) - (~hit)).sum() / len(real))
+    from . import pro
+    return pro.roi_all(df)
 
 
 def periods(res: pd.DataFrame, today: pd.Timestamp) -> list[tuple[str, pd.DataFrame]]:

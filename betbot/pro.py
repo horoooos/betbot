@@ -53,19 +53,47 @@ def stake_line(tip: dict) -> str:
 
 
 def bank_curve(res: pd.DataFrame) -> list[float]:
-    """Виртуальный банк по рекомендациям бота: старт 10 000, ставка — рекомендованный % от текущего банка."""
+    """Виртуальный банк по ВСЕМ исходам бота: старт 10 000, ставка — рекомендованный % от текущего банка.
+
+    Учитываются все основные прогнозы (и с настоящим кэфом, и с расчётным «≈») и все смелые ставки (1% банка).
+    """
     bank, curve = float(BANK_START), [float(BANK_START)]
-    if res is None or res.empty:
-        return curve
-    if "main_est" in res:  # только ставки с настоящим кэфом — по расчётному «≈» реально не поставить
-        res = res[~res["main_est"].astype(str).str.lower().isin(["true", "1", "1.0"])]
-    hit = res["main_hit"].astype(str).str.lower().isin(["true", "1", "1.0"])
-    stakes = res["main_stake"].fillna(STAKE_MIN) if "main_stake" in res else pd.Series(STAKE_MIN, index=res.index)
-    for h, o, s in zip(hit, res["main_odds"].astype(float), stakes.astype(float)):
+    for o, h, s in all_bets(res):
         amount = bank * s / 100
         bank += amount * (o - 1) if h else -amount
         curve.append(round(bank, 2))
     return curve
+
+
+def _truthy(col: pd.Series) -> pd.Series:
+    return col.astype(str).str.lower().isin(["true", "1", "1.0"])
+
+
+def all_bets(res: pd.DataFrame) -> list[tuple[float, bool, float]]:
+    """Все рассчитанные ставки бота по порядку: (кэф, зашла ли, % банка) — основные и смелые."""
+    out: list[tuple[float, bool, float]] = []
+    if res is None or res.empty:
+        return out
+    stakes = res["main_stake"].fillna(STAKE_MIN) if "main_stake" in res else pd.Series(STAKE_MIN, index=res.index)
+    main_hit = _truthy(res["main_hit"])
+    bold_hit = _truthy(res["bold_hit"]) if "bold_hit" in res else pd.Series(False, index=res.index)
+    for i in res.index:
+        o = pd.to_numeric(res.at[i, "main_odds"], errors="coerce")
+        if pd.notna(o) and o > 1 and pd.notna(res.at[i, "main_hit"]):
+            out.append((float(o), bool(main_hit[i]), float(stakes[i])))
+        if "bold_odds" in res and pd.notna(res.at[i, "bold_hit"] if "bold_hit" in res else None):
+            bo = pd.to_numeric(res.at[i, "bold_odds"], errors="coerce")
+            if pd.notna(bo) and bo > 1:
+                out.append((float(bo), bool(bold_hit[i]), STAKE_MIN))
+    return out
+
+
+def roi_all(res: pd.DataFrame) -> float | None:
+    """ROI по всем исходам (основные + смелые, любые кэфы), ставка 1 ед."""
+    bets = all_bets(res)
+    if not bets:
+        return None
+    return float(100 * sum((o - 1) if h else -1 for o, h, _ in bets) / len(bets))
 
 
 # ── CLV: движение линии после прогноза ──────────────────────────────────────

@@ -27,12 +27,16 @@ from betbot.leagues import ALL, EXTRA, MAIN, NATIONAL, ORDER
 # Лиги, по которым бот делает обзоры (код → см. betbot/leagues.py). Сейчас — весь доступный футбол.
 # Чтобы постов было меньше, перечисли нужные коды, например ["E0", "SP1", "I1", "D1", "F1", "RUS", "UCL"].
 REVIEW_LEAGUES = [
-    # лиги
-    "E0", "E1", "SP1", "I1", "D1", "F1", "N1", "P1", "T1", "B1", "SC0", "RUS", "BRA", "ARG", "USA", "MEX", "KSA",
+    # лиги Европы: высшие и вторые дивизионы (футбол есть каждый день, даже в паузу на сборные)
+    "E0", "E1", "E2", "E3", "SP1", "SP2", "I1", "I2", "D1", "D2", "F1", "F2", "N1", "P1", "T1", "B1", "G1",
+    "SC0", "SC1", "RUS", "AUT", "SWZ", "POL", "ROU", "DNK", "SWE", "NOR", "FIN", "IRL", "CZE",
+    # Америка, Азия, Африка, Океания — играют, когда в Европе пауза или ночь
+    "BRA", "BRA2", "ARG", "USA", "MEX", "MEX2", "COL", "CHI", "URU", "PER", "ECU", "PAR", "CRC",
+    "JPN", "CHN", "KSA", "AUS", "RSA",
     # еврокубки и Южная Америка
-    "UCL", "UEL", "UECL", "UCLQ", "USC", "LIB", "SUD",
+    "UCL", "UEL", "UECL", "UCLQ", "USC", "LIB", "SUD", "CCC",
     # национальные кубки (только матчи профессиональных команд, см. CUP_SOURCES)
-    "FAC", "ELC", "CDR", "DFB", "CIT", "CDF", "TPO", "SCC",
+    "FAC", "ELC", "CDR", "DFB", "CIT", "CDF", "TPO", "SCC", "CDB", "ARGC",
     # сборные
     "UNL", "WCQE", "WCQS", "WC", "EURO", "FRI",
 ]
@@ -40,7 +44,8 @@ REVIEW_LEAGUES = [
 # (названия лиг ESPN: из их таблиц берём список профессиональных команд — названия совпадают с кубковыми)
 CUP_SOURCES = {"FAC": ["eng.1", "eng.2", "eng.3", "eng.4"], "ELC": ["eng.1", "eng.2", "eng.3", "eng.4"],
                "CDR": ["esp.1", "esp.2"], "DFB": ["ger.1", "ger.2", "ger.3"], "CIT": ["ita.1", "ita.2"],
-               "CDF": ["fra.1", "fra.2"], "TPO": ["por.1", "por.2"], "SCC": ["sco.1", "sco.2"]}
+               "CDF": ["fra.1", "fra.2"], "TPO": ["por.1", "por.2"], "SCC": ["sco.1", "sco.2"],
+               "CDB": ["bra.1", "bra.2"], "ARGC": ["arg.1"]}
 MORNING_HOUR = 8        # во сколько (МСК) выходит расписание
 VALUE_HOUR = 11         # во сколько выходит 💎 value дня
 DAY_START_HOUR = 6      # «игровой день» — с 06:00 до 06:00 следующего дня
@@ -225,14 +230,23 @@ def cover(events: list[dict], other: list[dict], now: pd.Timestamp) -> None:
     if not fb and not ot:
         return
     sports_n = len({"football"} if fb else set()) + len({e["sport"] for e in ot})
-    top = sorted(fb, key=lambda e: (ORDER.get(e["div"], 999), e["kickoff"]))[:3]
-    hl = [(f"{pd.Timestamp(e['kickoff']):%H:%M}", f"{e['home']['ru']} — {e['away']['ru']}", ALL[e["div"]][2])
-          for e in sorted(top, key=lambda e: e["kickoff"])]
+    top = [("⚽️", e) for e in sorted(fb, key=lambda e: (ORDER.get(e["div"], 999), e["kickoff"]))[:3]]
+    if len(top) < 3:   # футбола мало (пауза на сборные) — добираем главные матчи других видов спорта
+        prio = {"NHL": 0, "NBA": 1, "ATP": 2, "WTA": 3, "CS2": 4, "DOTA": 5}
+        named = sorted([e for e in ot if e["home"].get("ru") and e["away"].get("ru")],
+                       key=lambda e: (prio.get(e["div"], 9), pd.Timestamp(e["kickoff"])))
+        first = list({e["sport"]: e for e in reversed(named)}.values())   # по одному главному матчу каждого вида спорта
+        first.sort(key=lambda e: (prio.get(e["div"], 9), pd.Timestamp(e["kickoff"])))
+        rest = [e for e in named if e not in first]
+        top += [(sports.EMOJI.get(e["sport"], "🏆"), e) for e in (first + rest)[:3 - len(top)]]
+    league = lambda e: ALL[e["div"]][2] if e["div"] in ALL else sports.LEAGUES.get(e["div"], ("", "", e["div"]))[2]  # noqa: E731
+    hl = [(f"{pd.Timestamp(e['kickoff']).tz_convert('Europe/Moscow'):%H:%M}", f"{e['home']['ru']} — {e['away']['ru']}", league(e), emo)
+          for emo, e in sorted(top, key=lambda x: pd.Timestamp(x[1]["kickoff"]))]
     day = f"{texts.DAYS[now.weekday()]}, {texts.date_ru(now.normalize())}"
     png = card.cover_card(day, [(str(len(fb) + len(ot)), "матчей"), (str(sports_n), "видов спорта"),
-                                (str(len(fb)), "футбольных")], hl, BRAND)
+                                (str(len(fb)), "футбольных")], [h[:3] for h in hl], BRAND)
     text = (f"☀️ <b>ДОБРОЕ УТРО!</b> {day}\n\nСегодня {len(fb) + len(ot)} матчей. Главное:\n"
-            + "\n".join(f"⚽️ {t} <b>{m}</b> · {lg}" for t, m, lg in hl)
+            + "\n".join(f"{emo} {t} <b>{m}</b> · {lg}" for t, m, lg, emo in hl)
             + "\n\nНиже — статистика, расписание и ⭐ прогнозы дня 👇")
     post(png, text)
 

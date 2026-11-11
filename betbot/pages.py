@@ -75,6 +75,8 @@ def _parse(page: str) -> dict[int, dict]:
         reply = re.search(r'class="tgme_widget_message_reply"[^>]*href="https://t\.me/' + CH + r'/(\d+)"', chunk)
         if not when:
             continue
+        if text and len(_plain(text.group(1))) < 160 and re.search(r"\bpinned\b", _plain(text.group(1))):
+            continue   # «… pinned a photo» — служебное сообщение о закреплении, не пост
         posts[pid] = {"id": pid, "t": when.group(1), "html": _clean(text.group(1)) if text else "",
                       "photo": photo.group(1) if photo else None, "reply": int(reply.group(1)) if reply else None}
     return posts

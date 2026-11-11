@@ -157,7 +157,7 @@ def label(key: str) -> str:
     return key
 
 
-def calibration(res, prior: float = 20.0) -> dict[str, tuple[float, int]]:
+def calibration(res, prior: float = 8.0) -> dict[str, tuple[float, int]]:
     """Учимся на своих прогнозах: во сколько раз каждый тип ставки заходит чаще/реже, чем обещал бот.
 
     res — таблица results.csv. Возвращает key → (поправка, сколько прогнозов). Пока прогнозов мало,
@@ -178,14 +178,14 @@ def calibration(res, prior: float = 20.0) -> dict[str, tuple[float, int]]:
     for key, g in df.groupby("key"):
         pbar = g["p"].astype(float).mean()
         ratio = (g["hit"].sum() + prior * pbar) / (g["p"].astype(float).sum() + prior * pbar)
-        out[key] = (float(min(max(ratio, 0.8), 1.2)), len(g))
+        out[key] = (float(min(max(ratio, 0.75), 1.25)), len(g))   # учимся быстрее: меньше «воображаемых» прогнозов, шире поправка
         last = g[recent[g.index]]
         if len(last) >= WEAK_MIN_N and last["hit"].mean() < last["p"].astype(float).mean() - WEAK_GAP:
             out[key] = (0.0, len(g))  # рынок стабильно заходит реже обещанного — бот его временно не ставит
     return out
 
 
-WEAK_MIN_N, WEAK_GAP, WEAK_DAYS = 20, 0.10, 30
+WEAK_MIN_N, WEAK_GAP, WEAK_DAYS = 15, 0.10, 30
 
 
 def weak(calib: dict) -> list[str]:
