@@ -9,6 +9,7 @@
   после матча дня — 🤖 Бот против 👥 подписчиков: кто угадал в опросе
 """
 import random
+from pathlib import Path
 from html import escape
 
 import pandas as pd
@@ -222,6 +223,24 @@ def settle_express(state: dict, finished: dict) -> None:
         _settle_one(state.get(key), finished, name, again)
 
 
+EXPRESS_LOG = Path(__file__).resolve().parent.parent / "data" / "express_bets.csv"
+
+
+def _log_express(name: str, ex: dict, ok: bool) -> None:
+    """Рассчитанный экспресс → data/express_bets.csv (дата, вид, кэф, зашёл) — для баланса и статистики."""
+    import csv
+    try:
+        last = max(pd.Timestamp(leg["kickoff"]) for leg in ex["legs"])
+        new = not EXPRESS_LOG.exists()
+        with EXPRESS_LOG.open("a", encoding="utf-8", newline="") as f:
+            w = csv.writer(f)
+            if new:
+                w.writerow(["date", "name", "legs", "odds", "hit"])
+            w.writerow([f"{last.tz_convert('Europe/Moscow'):%Y-%m-%d}", name, len(ex["legs"]), f"{float(ex['odds']):.2f}", ok])
+    except Exception as e:
+        print(f"  ! экспресс не записан в журнал: {e}")
+
+
 def _settle_one(ex: dict | None, finished: dict, name: str, again: str) -> None:
     if not ex or ex.get("done"):
         return
@@ -251,6 +270,7 @@ def _settle_one(ex: dict | None, finished: dict, name: str, again: str) -> None:
         lines += [f"⏳ {escape(leg['home'])} — {escape(leg['away'])} — уже не важно" for leg in waiting]
         lines.append(f"\n<i>{'Касса! 💰 Экспресс собран полностью' if ok else f'Экспресс сгорел — {again} 🔄'}</i>")
         ex["done"] = True
+        _log_express(name, ex, ok)   # в журнал — экспрессы входят в баланс бота наравне с одиночными ставками
     else:  # промежуточный итог: событие зашло, ждём остальные
         lines = [f"🔥 <b>{name}: {len(played)} из {len(ex['legs'])} уже зашли!</b>"] + [row(leg) for leg in played]
         lines += [f"⏳ {escape(leg['home'])} — {escape(leg['away'])} · {escape(leg['label'])} · "

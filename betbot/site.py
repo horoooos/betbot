@@ -200,7 +200,7 @@ def build(res: pd.DataFrame, now: pd.Timestamp, blocks: dict | None = None) -> N
     kpis = "".join([
         kpi("📊", "прогнозов", f"{len(res)}", f"за последние 7 дней — {len(week)}"),
         kpi("📈", "ROI", f"{roi:+.1f}%" if len(res) else "—", "все исходы: основные и смелые", "good" if roi >= 0 else "bad"),
-        kpi("💰", "виртуальный банк", f"{money(curve[-1])} ₽", f"старт {money(pro.BANK_START)} ₽", "good" if curve[-1] >= pro.BANK_START else "bad"),
+        kpi("💰", "виртуальный банк", f"{money(curve[-1])} ₽", f"старт {money(pro.BANK_START)} ₽ с {pd.Timestamp(pro.BANK_RESET):%d.%m.%Y} · все ставки и экспрессы", "good" if curve[-1] >= pro.BANK_START else "bad"),
         kpi("🗓", "заходит за неделю", wk, "последние 7 дней"),
         kpi("🧭", "CLV", f"{100 * clv.mean():+.1f}%" if len(clv) else "—",
             f"линия за ботом в {100 * (clv > 0).mean():.0f}%" if len(clv) else "копится"),

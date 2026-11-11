@@ -16,7 +16,7 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-from betbot import card, content, directory, dzen, vk, esports, inplay, live, names, news, oddspapi, pages, pro, push, reviews, site, sports, tables, telegram, texts
+from betbot import card, content, directory, dzen, vk, esports, inplay, live, names, news, oddspapi, pages, pro, push, reviews, site, sports, tables, telegram, texts, watch
 from betbot import markets as mk
 from betbot.data import MSK, load_fixtures, load_history
 from betbot.engine import add_market, fit_full, fit_weights, walk_forward
@@ -723,6 +723,10 @@ def main():
         state["site_stamp"] = stamp
         blocks = None
         try:   # страницы новостей и прогнозов из канала + sitemap (для поисковиков)
+            try:   # «смотреть онлайн бесплатно» — отдельная страница на каждый матч (под поисковые запросы)
+                watch.build(now)
+            except Exception as e:
+                print(f"  ! страницы «смотреть онлайн» не собрались: {e}")
             blocks = pages.build({**matches, **load_json(OTHER, {})}, site_res, now)
             day = f"{now:%Y-%m-%d}"
             hubs = [] if state.get("indexnow_day") == day else [pages.SITE, pages.SITE + "predictions/", pages.SITE + "news/", pages.SITE + "matches.html"]

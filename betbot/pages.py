@@ -607,6 +607,10 @@ def build(stores: dict, results: pd.DataFrame, now: pd.Timestamp, max_pages: int
         sm.append(f"<url><loc>{SITE}{u}</loc><changefreq>daily</changefreq><priority>0.6</priority></url>")
     for m in ms:
         sm.append(f"<url><loc>{SITE}{m['url']}</loc><lastmod>{m['kickoff']:%Y-%m-%d}</lastmod><priority>{'0.8' if not m.get('finished') else '0.5'}</priority></url>")
+    # «смотреть онлайн» на каждый матч (betbot/watch.py): имя файла начинается с даты матча
+    sm.append(f"<url><loc>{SITE}watch/</loc><changefreq>hourly</changefreq><priority>0.9</priority></url>")
+    for f in sorted((DOCS / "watch").glob("20*.html")):
+        sm.append(f"<url><loc>{SITE}watch/{f.name}</loc><lastmod>{f.name[:10]}</lastmod><priority>0.8</priority></url>")
     sm.append("</urlset>")
     try:
         _write(DOCS / "rss.xml", _rss(news, ms, store, now))

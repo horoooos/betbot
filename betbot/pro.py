@@ -52,13 +52,20 @@ def stake_line(tip: dict) -> str:
     return f"💰 Ставка: <b>{s:g}% банка</b> ({why})"
 
 
-def bank_curve(res: pd.DataFrame) -> list[float]:
-    """Виртуальный банк по ВСЕМ исходам бота: старт 10 000, ставка — рекомендованный % от текущего банка.
+BANK_RESET = "2026-11-12"   # банк обнулён до 10 000: с этого дня бот ставит по новым правилам (все исходы + экспрессы)
+EXPRESS_LOG = Path(__file__).resolve().parent.parent / "data" / "express_bets.csv"
 
-    Учитываются все основные прогнозы (и с настоящим кэфом, и с расчётным «≈») и все смелые ставки (1% банка).
+
+def bank_curve(res: pd.DataFrame) -> list[float]:
+    """Виртуальный банк по ВСЕМ исходам бота с BANK_RESET: старт 10 000, ставка — рекомендованный % от текущего банка.
+
+    Учитываются все основные прогнозы (и с настоящим кэфом, и с расчётным «≈»), все смелые ставки (1% банка)
+    и все экспрессы — «Экспресс дня» и «Экспресс на яйцах» (1% банка).
     """
+    if res is not None and len(res):
+        res = res[pd.to_datetime(res["date"]) >= pd.Timestamp(BANK_RESET)]
     bank, curve = float(BANK_START), [float(BANK_START)]
-    for o, h, s in all_bets(res):
+    for o, h, s in all_bets(res, start=BANK_RESET):
         amount = bank * s / 100
         bank += amount * (o - 1) if h else -amount
         curve.append(round(bank, 2))
@@ -69,27 +76,50 @@ def _truthy(col: pd.Series) -> pd.Series:
     return col.astype(str).str.lower().isin(["true", "1", "1.0"])
 
 
-def all_bets(res: pd.DataFrame) -> list[tuple[float, bool, float]]:
-    """Все рассчитанные ставки бота по порядку: (кэф, зашла ли, % банка) — основные и смелые."""
-    out: list[tuple[float, bool, float]] = []
-    if res is None or res.empty:
-        return out
-    stakes = res["main_stake"].fillna(STAKE_MIN) if "main_stake" in res else pd.Series(STAKE_MIN, index=res.index)
-    main_hit = _truthy(res["main_hit"])
-    bold_hit = _truthy(res["bold_hit"]) if "bold_hit" in res else pd.Series(False, index=res.index)
-    for i in res.index:
-        o = pd.to_numeric(res.at[i, "main_odds"], errors="coerce")
-        if pd.notna(o) and o > 1 and pd.notna(res.at[i, "main_hit"]):
-            out.append((float(o), bool(main_hit[i]), float(stakes[i])))
-        if "bold_odds" in res and pd.notna(res.at[i, "bold_hit"] if "bold_hit" in res else None):
-            bo = pd.to_numeric(res.at[i, "bold_odds"], errors="coerce")
-            if pd.notna(bo) and bo > 1:
-                out.append((float(bo), bool(bold_hit[i]), STAKE_MIN))
-    return out
+def expresses(start: str | None = None, end: str | None = None) -> pd.DataFrame:
+    """Рассчитанные экспрессы из журнала (дата, вид, событий, кэф, зашёл) за период."""
+    try:
+        ex = pd.read_csv(EXPRESS_LOG)
+    except (OSError, ValueError):
+        return pd.DataFrame(columns=["date", "name", "legs", "odds", "hit"])
+    d = pd.to_datetime(ex["date"])
+    if start:
+        ex = ex[d >= pd.Timestamp(start)]
+    if end:
+        ex = ex[pd.to_datetime(ex["date"]) <= pd.Timestamp(end)]
+    return ex
+
+
+def all_bets(res: pd.DataFrame, start: str | None = None, end: str | None = None) -> list[tuple[float, bool, float]]:
+    """Все рассчитанные ставки бота по датам: (кэф, зашла ли, % банка) — основные, смелые и экспрессы.
+
+    Экспрессы берём за даты таблицы res (или с start, если задан)."""
+    rows: list[tuple[str, float, bool, float]] = []
+    if res is not None and not res.empty:
+        stakes = res["main_stake"].fillna(STAKE_MIN) if "main_stake" in res else pd.Series(STAKE_MIN, index=res.index)
+        main_hit = _truthy(res["main_hit"])
+        bold_hit = _truthy(res["bold_hit"]) if "bold_hit" in res else pd.Series(False, index=res.index)
+        for i in res.index:
+            day = str(res.at[i, "date"])[:10]
+            o = pd.to_numeric(res.at[i, "main_odds"], errors="coerce")
+            if pd.notna(o) and o > 1 and pd.notna(res.at[i, "main_hit"]):
+                rows.append((day, float(o), bool(main_hit[i]), float(stakes[i])))
+            if "bold_odds" in res and pd.notna(res.at[i, "bold_hit"] if "bold_hit" in res else None):
+                bo = pd.to_numeric(res.at[i, "bold_odds"], errors="coerce")
+                if pd.notna(bo) and bo > 1:
+                    rows.append((day, float(bo), bool(bold_hit[i]), STAKE_MIN))
+        start = start or str(res["date"].min())[:10]
+        end = end or str(res["date"].max())[:10]
+    if start or end:
+        ex = expresses(start, end)
+        rows += [(str(r["date"])[:10], float(r["odds"]), str(r["hit"]).lower() in ("true", "1"), STAKE_MIN)
+                 for _, r in ex.iterrows() if float(r["odds"]) > 1]
+    rows.sort(key=lambda r: r[0])   # по дням; внутри дня — в порядке записи
+    return [(o, h, s) for _, o, h, s in rows]
 
 
 def roi_all(res: pd.DataFrame) -> float | None:
-    """ROI по всем исходам (основные + смелые, любые кэфы), ставка 1 ед."""
+    """ROI по всем исходам (основные + смелые + экспрессы, любые кэфы), ставка 1 ед."""
     bets = all_bets(res)
     if not bets:
         return None
