@@ -6516,22 +6516,22 @@
   "kickoff": "2026-11-11T03:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "home": {
+   "color": "1d428a",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/ny.png",
    "id": "18",
    "name": "New York Knicks",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/ny.png",
-   "color": "1d428a",
    "score": "0",
    "record": "5-4",
    "periods": [],
    "ru": "Нью-Йорк Никс"
   },
   "away": {
+   "color": "00471b",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/mil.png",
    "id": "15",
    "name": "Milwaukee Bucks",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/mil.png",
-   "color": "00471b",
    "score": "0",
    "record": "1-9",
    "periods": [],
@@ -6606,7 +6606,9 @@
   "btn": 4,
   "close": {
    "BB_U221.5": 0.5
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null
  },
  "NHL|401892687": {
   "id": "401892687",
@@ -7159,7 +7161,11 @@
   },
   "top": false,
   "msg_id": 4902,
-  "btn": 4
+  "btn": 4,
+  "close": {
+   "HK_O6.5": 0.4572,
+   "HK_ML_A": 0.4675
+  }
  },
  "NBA|401909964": {
   "id": "401909964",
@@ -7255,6 +7261,9 @@
   },
   "top": false,
   "msg_id": 4904,
-  "btn": 4
+  "btn": 4,
+  "close": {
+   "_": null
+  }
  }
 }
