@@ -6727,22 +6727,22 @@
   "kickoff": "2026-11-11T05:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "home": {
+   "color": "4e008e",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/utah.png",
    "id": "26",
    "name": "Utah Jazz",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/utah.png",
-   "color": "4e008e",
    "score": "0",
    "record": "1-9",
    "periods": [],
    "ru": "Юта Джаз"
   },
   "away": {
+   "color": "98002e",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/mia.png",
    "id": "14",
    "name": "Miami Heat",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/mia.png",
-   "color": "98002e",
    "score": "0",
    "record": "4-6",
    "periods": [],
@@ -6817,7 +6817,9 @@
   "btn": 4,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null
  },
  "CS2|1762450": {
   "status": "skipped",
