@@ -49,6 +49,69 @@ def build_teams(ms: list[dict], news: list[dict], now: pd.Timestamp) -> list[str
     return urls
 
 
+def _pl(n: int, one: str, few: str, many: str) -> str:
+    """«1 победа», «3 победы», «5 побед»."""
+    n10, n100 = n % 10, n % 100
+    return f"{n} {one if n10 == 1 and n100 != 11 else few if 2 <= n10 <= 4 and not 12 <= n100 <= 14 else many}"
+
+
+def _team_text(t: dict, preds: list[dict], done: list[dict], nxt: list[dict], now_s: str) -> tuple[str, list[tuple[str, str]], str]:
+    """Текст страницы «Прогноз на …» из данных бота: ближайший матч, форма, тоталы, точность прогнозов, FAQ."""
+    name, sport = t["name"], t["sport"]
+    unit = {"football": "гола", "hockey": "шайбы", "basketball": "очка", "tennis": "сета"}.get(sport, "очка")   # «4.3 гола»
+    paras, faq = [], []
+    if nxt:   # ближайший матч
+        u = nxt[0]
+        k = pd.Timestamp(u["kickoff"]).tz_convert("Europe/Moscow")
+        when = f"{k.day} {MONTHS[k.month - 1]} в {k:%H:%M} МСК"
+        tip = (f"Прогноз бота: <b>{H.escape(u['tip'])}</b>." if u.get("tip")
+               else "Прогноз бот опубликует примерно за час до начала — с шансом и коэффициентом.")
+        lg = f", {H.escape(u['league'])}" if u.get("league") else ""
+        paras.append(f"<p>Ближайший матч — <b>{H.escape(u['home'])} — {H.escape(u['away'])}</b>, {when}{lg}. {tip} "
+                     f"Матч можно смотреть онлайн на нашем сайте.</p>")
+        faq.append((f"{name}: какой прогноз на ближайший матч?",
+                    f"Прогноз бота на матч {u['home']} — {u['away']}: {u['tip']}." if u.get("tip")
+                    else f"Прогноз на матч {u['home']} — {u['away']} выйдет примерно за час до начала, {when}."))
+        faq.append((f"{name}: когда следующий матч?", f"{u['home']} — {u['away']}, {when}."))
+    res, totals = [], []   # форма и тоталы по сыгранным матчам
+    for m in done:
+        try:
+            a, b = (int(x) for x in str(m.get("score", "")).split(":")[:2])
+        except ValueError:
+            continue
+        mine, opp = (a, b) if m["home"] == name else (b, a)
+        res.append("В" if mine > opp else "П" if mine < opp else "Н")
+        totals.append(a + b)
+    if res:
+        last = res[:10]
+        w, d, l_ = last.count("В"), last.count("Н"), last.count("П")
+        avg = sum(totals[:10]) / len(totals[:10])
+        form = _pl(w, "победа", "победы", "побед") + (", " + _pl(d, "ничья", "ничьи", "ничьих") if d else "") + ", " + _pl(l_, "поражение", "поражения", "поражений")
+        extra = ""
+        if sport == "football":
+            o25 = sum(1 for x in totals[:10] if x > 2.5)
+            extra = f" «Больше 2.5» был в {o25} из {len(totals[:10])}."
+        paras.append(f"<p>Форма «{H.escape(name)}» в последних матчах ({len(last)}), на которые бот давал прогноз: {form} "
+                     f"(от свежих к старым: {' '.join(last)}). В среднем {avg:.1f} {unit} за матч.{extra}</p>")
+    short = ""
+    if done:   # точность прогнозов
+        hits = sum(1 for m in done if m.get("hit"))
+        by: dict = defaultdict(lambda: [0, 0])
+        for m in done:
+            key = m["tip"].split(" (")[0]
+            by[key][0] += 1
+            by[key][1] += int(bool(m.get("hit")))
+        good = sorted(((lb, n, w_) for lb, (n, w_) in by.items() if n >= 2), key=lambda x: -x[2] / x[1])
+        best = f" Лучше всего заходит «{H.escape(good[0][0])}» — {good[0][2]} из {good[0][1]}." if good and good[0][2] else ""
+        pct = round(100 * hits / len(done))
+        paras.append(f"<p>Бот дал {_pl(len(preds), 'прогноз', 'прогноза', 'прогнозов')} на матчи «{H.escape(name)}», из {len(done)} рассчитанных зашло {hits} "
+                     f"({pct}%).{best} Все прогнозы учтены — и заходы, и промахи.</p>")
+        faq.append((f"{name}: насколько точны прогнозы бота?", f"Из {len(done)} рассчитанных прогнозов на матчи {name} зашло {hits} ({pct}%)."))
+        short = f"{_pl(len(done), 'прогноз', 'прогноза', 'прогнозов')}, зашло {pct}%"
+    paras.append(f'<p class="muted small">Страница обновляется автоматически после каждого матча. Обновлено {now_s}. Прогноз — не гарантия. 18+</p>')
+    return "".join(paras), faq, short
+
+
 def _team_page(t: dict, news: list[dict], url: str) -> str:
     name, sport = t["name"], t["sport"]
     preds = sorted(t["preds"], key=lambda m: m["kickoff"], reverse=True)
@@ -70,18 +133,31 @@ def _team_page(t: dict, news: list[dict], url: str) -> str:
     link = directory.team_link(sport, name, "../")
     live_btn = (f'<a class="btn gold" href="{H.escape(link)}" style="margin-top:8px">📊 {"Профиль, рейтинг и матчи" if sport == "tennis" else "Расписание, состав, таблица и статистика"} →</a>'
                 if link else "")
+    now_s = f"{pd.Timestamp.now(tz='Europe/Moscow'):%d.%m.%Y}"
+    text, faq, short = _team_text(t, preds, done, nxt, now_s)
+    faq_html = ('<h2>Вопросы</h2>' + "".join(f"<h3>{H.escape(q)}</h3><p>{H.escape(x)}</p>" for q, x in faq)) if faq else ""
     body = f"""{crumbs}<div class="card" style="display:flex;gap:16px;align-items:center;margin-top:10px">{logo}<div>
 <span class="tag">{EMOJI.get(sport, "")} {SPORT_RU.get(sport, "")}{" · " + H.escape(league) if league else ""}</span>
-<h1 style="margin:4px 0">{H.escape(name)}: <span>прогнозы и матчи</span></h1><p class="muted small">{H.escape(stat)}</p>{live_btn}</div></div>
+<h1 style="margin:4px 0">{H.escape(name)}: <span>прогноз и ставки на матчи</span></h1><p class="muted small">{H.escape(stat)}</p>{live_btn}</div></div>
+<h2>📝 {H.escape(name)}: разбор и прогноз</h2><div class="card">{text}</div>
 {('<h2>📅 Ближайшие матчи</h2><div class="grid">' + "".join(nxt_card(u) for u in nxt) + "</div>") if nxt else ""}
 <h2>🎯 Прогнозы бота на матчи «{H.escape(name)}»</h2><div class="grid">{"".join(_match_card(m, "../") for m in preds[:24])}</div>
 {('<h2>📰 Новости</h2><div class="grid">' + "".join(_news_card(n, "../") for n in about) + "</div>") if about else ""}
+{faq_html}
 <div class="row" style="margin-top:16px"><a class="btn red" href="../matches.html">📺 Матчи онлайн</a><a class="btn gold" href="https://t.me/aistavvit">📲 Прогнозы в Telegram</a></div>"""
     ld = {"@context": "https://schema.org", "@type": "SportsTeam", "name": name, "sport": SPORT_RU.get(sport, ""), "url": SITE + url,
           **({"logo": t["logo"]} if t["logo"] else {})}
-    desc = (f"{name}: прогнозы на ближайшие матчи, результаты и статистика прогнозов, новости. {SPORT_RU.get(sport, '')}"
-            f"{', ' + league if league else ''}. Бесплатно от АИ СТАВИТ.")
-    return page("../", f"{name} — прогнозы на матчи, результаты и новости · АИ СТАВИТ", desc, SITE + url, body, "teams", t["logo"], [ld, bc])
+    nk = pd.Timestamp(nxt[0]["kickoff"]).tz_convert("Europe/Moscow") if nxt else None
+    opp = (nxt[0]["away"] if nxt[0]["home"] == name else nxt[0]["home"]) if nxt else ""
+    desc = (f"{name} — прогноз и ставки" + (f": ближайший матч {nxt[0]['home']} — {nxt[0]['away']} {nk.day} {MONTHS[nk.month - 1]}" if nxt else "")
+            + f". Ставки от ИИ, форма команды, статистика прогнозов{' (' + short + ')' if short else ''}. {SPORT_RU.get(sport, '')}"
+            + (f", {league}" if league else "") + ". Бесплатно.")
+    title = (f"{name}: прогноз на матч с {opp} {nk:%d.%m} — ставка и статистика" if nxt else f"{name}: прогнозы на матчи и статистика ставок") + " · АИ СТАВИТ"
+    lds = [ld, bc]
+    if faq:
+        lds.append({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
+            {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in faq]})
+    return page("../", title, desc, SITE + url, body, "teams", t["logo"], lds)
 
 
 def _teams_index(teams: dict) -> str:
