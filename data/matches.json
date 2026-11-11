@@ -5315,7 +5315,7 @@
   "kickoff": "2026-11-11T15:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Scheduled",
   "home": {
    "id": "7349",
@@ -5443,6 +5443,9 @@
   "btn": 4,
   "close": {
    "O35": 0.5497
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null,
+  "value_hit": null
  }
 }
