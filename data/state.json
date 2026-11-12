@@ -512,7 +512,10 @@
   "team-spirit-pobedila-1w-team-so-stariy-bog-v-sostave-na-essence-iii",
   "https://www.sport-express.ru/football/nation-league/news/italiya-franciya-espozito-ne-realizoval-penalti-2474240/",
   "https://www.sport-express.ru/football/nation-league/news/italiya-franciya-frattezi-vyvel-hozyaev-vpered-2474241/",
-  "https://www.sport-express.ru/football/nation-league/news/italiya-franciya-espozito-s-penalti-zabil-tretiy-myach-hozyaev-i-oformil-dubl-2474244/"
+  "https://www.sport-express.ru/football/nation-league/news/italiya-franciya-espozito-s-penalti-zabil-tretiy-myach-hozyaev-i-oformil-dubl-2474244/",
+  "mauisnake-ne-vklyuchil-falcons-v-top-5-glavnykh-pretendentov-na-pobedu-na-pgl",
+  "https://www.sport-express.ru/football/nation-league/news/angliya-horvatiya-schet-i-rezultat-matcha-ligi-naciy-13-noyabrya-2026-2474246/",
+  "https://www.sport-express.ru/hockey/nhl/news/geri-bettmen-kommentariy-po-politicheskoy-pozicii-aleksandra-ovechkina-2474245/"
  ],
  "news_i": 4,
  "oddspapi": {
@@ -1532,7 +1535,9 @@
      "FFFFFF",
      "ff0000"
     ],
-    "label": "Победа: Сборная Англии"
+    "label": "Победа: Сборная Англии",
+    "win": true,
+    "score": "2:1"
    },
    {
     "sport": "football",
@@ -1564,7 +1569,7 @@
  "value_day": "2026-11-12",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-12",
- "site_stamp": "891|5278|2026-11-13 00",
+ "site_stamp": "892|5281|2026-11-13 00",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1694,7 +1699,7 @@
  "streak_day": {
   "2026-11-12": 1
  },
- "news_next": "2026-11-13T00:35:49.558870+03:00",
+ "news_next": "2026-11-13T00:43:48.949189+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1711,7 +1716,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5263,
- "dz_last": 5278,
+ "dz_last": 5281,
  "vk_err": "5257: VK wall.post: 9 Flood control",
  "news_forced": "now",
  "vk_mode": "photo",
