@@ -355,7 +355,8 @@
    "min_odds": 1.81,
    "minute": "26'",
    "score": "0:0",
-   "sport": "football"
+   "sport": "football",
+   "result": "miss"
   }
  },
  "UNL|401861148": {
@@ -411,9 +412,9 @@
  },
  "UNL|401861152": {
   "msg": 5246,
-  "hs": 1,
+  "hs": 2,
   "as": 1,
-  "goals": 2,
+  "goals": 3,
   "kickoff": "2026-11-12T22:45:00+03:00",
   "lt": {
    "key": "O1.5",
