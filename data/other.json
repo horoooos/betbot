@@ -7600,25 +7600,25 @@
   "kickoff": "2026-11-12T05:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Wed, November 11th at 9:30 PM EST",
   "clock": "0:00",
   "period": 0,
   "home": {
+   "color": "344043",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/vgk.png",
    "id": "37",
    "name": "Vegas Golden Knights",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/vgk.png",
-   "color": "344043",
    "score": "0",
    "record": "12-5-2",
    "periods": [],
    "ru": "Вегас"
   },
   "away": {
+   "color": "000000",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/uta.png",
    "id": "129764",
    "name": "Utah Mammoth",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/uta.png",
-   "color": "000000",
    "score": "0",
    "record": "10-7-1",
    "periods": [],
@@ -7722,7 +7722,9 @@
   "close": {
    "HK_O6.5": 0.4826,
    "HK_ML_A": 0.4365
-  }
+  },
+  "main_hit": true,
+  "bold_hit": false
  },
  "NBA|401909974": {
   "id": "401909974",
