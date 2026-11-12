@@ -1576,7 +1576,7 @@
  "value_day": "2026-11-12",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-12",
- "site_stamp": "896|5291|2026-11-13 00",
+ "site_stamp": "896|5295|2026-11-13 00",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1706,7 +1706,7 @@
  "streak_day": {
   "2026-11-12": 1
  },
- "news_next": "2026-11-13T00:57:49.451997+03:00",
+ "news_next": "2026-11-13T01:05:49.625637+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1722,9 +1722,9 @@
  "tg_offset": 727618641,
  "push_watch": {},
  "news_video": true,
- "vk_last": 5265,
- "dz_last": 5291,
- "vk_err": "5257: VK wall.post: 9 Flood control",
+ "vk_last": 5293,
+ "dz_last": 5295,
+ "vk_err": "5266: VK wall.post: 9 Flood control",
  "news_forced": "now",
  "vk_mode": "photo",
  "dz_err": "4987: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))",
@@ -1747,7 +1747,7 @@
   "https://upload.wikimedia.org/wikipedia/commons/9/9a/GGadzhiev.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
  ],
  "indexnow_day": "2026-11-13",
- "vk_wall_err": "5257: попытка 3: VK photos.getWallUploadServer: 9 Flood control",
+ "vk_wall_err": "5266: попытка 3: VK photos.getWallUploadServer: 9 Flood control",
  "shorts_day": "2026-11-12",
  "shorts_err": {
   "youtube": "YouTube не подключён (нет секретов YT_*)"
@@ -1762,10 +1762,11 @@
   "kickoff": "2026-11-13T01:00:00+03:00"
  },
  "vk_try": {},
- "vk_pause_ts": 1794520568.0019164,
+ "vk_pause_ts": 1794524485.944614,
  "push": {
   "on": true,
   "subs": 0,
   "err": null
- }
+ },
+ "vk_floods": 1
 }
