@@ -5,7 +5,7 @@
  },
  "learned": "2026-11-12",
  "schedule_day": "2026-11-12",
- "content_slot": "2026-11-11-23",
+ "content_slot": "2026-11-12-10",
  "news_seen": [
   "https://www.championat.com/cybersport/news-6692300-moj-lyubimyj-geroj-aleksandr-nevskij-o-sherife-turchine-iz-vesterna-rio-bravo.html",
   "karrigan-chtoby-vyigrat-meidzhor-nuzhno-chtoby-kazhdyi-yelement-mekhanizma",
@@ -1528,87 +1528,81 @@
   ]
  },
  "express": {
-  "msg": 4249,
+  "msg": 5128,
   "legs": [
    {
     "sport": "football",
-    "div": "SC0",
-    "id": "401878343",
-    "side": "home",
-    "p": 0.816637228311076,
-    "odds": 1.154,
-    "kickoff": "2026-11-08T19:00:00+03:00",
-    "home": "Селтик",
-    "away": "Килмарнок",
-    "league": "🏴󠁧󠁢󠁳󠁣󠁴󠁿 Шотландия · Премьершип",
+    "div": "UNL",
+    "id": "401861148",
+    "side": "away",
+    "p": 0.769881556683587,
+    "odds": 1.2,
+    "kickoff": "2026-11-12T22:45:00+03:00",
+    "home": "Сборная Чехии",
+    "away": "Сборная Испании",
+    "league": "🌍 Сборные · Лига наций",
     "logos": [
-     "https://a.espncdn.com/i/teamlogos/soccer/500/256.png",
-     "https://a.espncdn.com/i/teamlogos/soccer/500/260.png"
+     "https://a.espncdn.com/i/teamlogos/countries/500/cze.png",
+     "https://a.espncdn.com/i/teamlogos/countries/500/esp.png"
     ],
     "colors": [
-     "009921",
-     "0046ff"
+     "d7141a",
+     "c60b1e"
     ],
-    "label": "Победа: Селтик",
-    "win": true,
-    "score": "1:0"
+    "label": "Победа: Сборная Испании"
    },
    {
     "sport": "football",
-    "div": "T1",
-    "id": "401888251",
+    "div": "UNL",
+    "id": "401861150",
     "side": "home",
-    "p": 0.7865168539325843,
-    "odds": 1.2,
-    "kickoff": "2026-11-08T21:00:00+03:00",
-    "home": "Бешикташ",
-    "away": "Генчлербирлиги",
-    "league": "🇹🇷 Турция · Суперлига",
+    "p": 0.741306191687871,
+    "odds": 1.25,
+    "kickoff": "2026-11-12T22:45:00+03:00",
+    "home": "Сборная Англии",
+    "away": "Сборная Хорватии",
+    "league": "🌍 Сборные · Лига наций",
     "logos": [
-     "https://a.espncdn.com/i/teamlogos/soccer/500/1895.png",
-     "https://a.espncdn.com/i/teamlogos/soccer/500/996.png"
+     "https://a.espncdn.com/i/teamlogos/countries/500/eng.png",
+     "https://a.espncdn.com/i/teamlogos/countries/500/cro.png"
     ],
     "colors": [
-     "ffffff",
-     "000000"
+     "FFFFFF",
+     "ff0000"
     ],
-    "label": "Победа: Бешикташ",
-    "win": true,
-    "score": "3:0"
+    "label": "Победа: Сборная Англии"
    },
    {
-    "sport": "basketball",
-    "div": "NBA",
-    "id": "401909945",
-    "side": "away",
-    "p": 0.7667969477014703,
-    "odds": 1.253,
-    "kickoff": "2026-11-08T23:30:00+03:00",
-    "home": "Чикаго Буллз",
-    "away": "Филадельфия Сиксерс",
-    "league": "🇺🇸 США · NBA",
+    "sport": "football",
+    "div": "UNL",
+    "id": "401861152",
+    "side": "home",
+    "p": 0.7269613380461319,
+    "odds": 1.27,
+    "kickoff": "2026-11-12T22:45:00+03:00",
+    "home": "Сборная Черногории",
+    "away": "Сборная Латвии",
+    "league": "🌍 Сборные · Лига наций",
     "logos": [
-     "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/chi.png",
-     "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/phi.png"
+     "https://a.espncdn.com/i/teamlogos/countries/500/mtg.png",
+     "https://a.espncdn.com/i/teamlogos/countries/500/lva.png"
     ],
     "colors": [
-     "ce1141",
-     "1d428a"
+     "E70000",
+     "992242"
     ],
-    "label": "Победа: Филадельфия Сиксерс (с ОТ)",
-    "win": true,
-    "score": "121:127"
+    "label": "Победа: Сборная Черногории"
    }
   ],
-  "odds": 1.7351543999999997,
-  "day": "2026-11-08",
-  "done": true
+  "odds": 1.905,
+  "day": "2026-11-12",
+  "done": false
  },
  "streak_posted": 0,
  "value_day": "2026-11-11",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-11",
- "site_stamp": "879|5127|2026-11-12 09",
+ "site_stamp": "879|5128|2026-11-12 10",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1758,7 +1752,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5127,
- "dz_last": 5127,
+ "dz_last": 5128,
  "vk_err": null,
  "news_forced": "now",
  "vk_mode": "photo",
