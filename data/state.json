@@ -1558,7 +1558,7 @@
  "value_day": "2026-11-12",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-12",
- "site_stamp": "890|5264|2026-11-12 23",
+ "site_stamp": "890|5265|2026-11-12 23",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1704,9 +1704,9 @@
  "tg_offset": 727618641,
  "push_watch": {},
  "news_video": true,
- "vk_last": 5256,
- "dz_last": 5264,
- "vk_err": "5246: VK wall.post: 9 Flood control",
+ "vk_last": 5263,
+ "dz_last": 5265,
+ "vk_err": "5257: VK wall.post: 9 Flood control",
  "news_forced": "now",
  "vk_mode": "photo",
  "dz_err": "4987: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))",
@@ -1729,7 +1729,7 @@
   "https://upload.wikimedia.org/wikipedia/commons/9/9a/GGadzhiev.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
  ],
  "indexnow_day": "2026-11-12",
- "vk_wall_err": "5246: попытка 3: VK photos.getWallUploadServer: 9 Flood control",
+ "vk_wall_err": "5257: попытка 3: VK photos.getWallUploadServer: 9 Flood control",
  "shorts_day": "2026-11-12",
  "shorts_err": {
   "youtube": "YouTube не подключён (нет секретов YT_*)"
@@ -1744,7 +1744,7 @@
   "kickoff": "2026-11-13T01:00:00+03:00"
  },
  "vk_try": {},
- "vk_pause_ts": 1794516867.467114,
+ "vk_pause_ts": 1794520568.0019164,
  "push": {
   "on": true,
   "subs": 0,
