@@ -301,6 +301,7 @@ svg{width:100%;height:auto;display:block}svg .base{stroke:rgba(255,255,255,.25);
 .fr .m span{color:var(--muted);font-size:12px}.fr .r{text-align:right;font-size:12px;color:var(--muted)}.fr .r b{display:block;font-size:14px;color:var(--ink)}
 .fr.lv{background:linear-gradient(90deg,rgba(124,58,237,.20),rgba(124,58,237,.04));border-color:rgba(124,58,237,.45)}
 .fr.lv .m span{color:#c4b5fd}
+.fr .lvline{display:block;margin-top:4px;color:#c4b5fd;font-size:12px;font-weight:800}
 .more{display:none}.showall .more{display:grid}
 .mbtn{margin-top:10px;background:none;border:1px solid var(--line);color:var(--ink);font:700 13px Montserrat,sans-serif;border-radius:12px;padding:9px 14px;cursor:pointer}
 .cta{margin-top:34px;display:flex;gap:16px;align-items:center;justify-content:space-between;flex-wrap:wrap;padding:20px;border-radius:22px;
@@ -440,18 +441,24 @@ def build(res: pd.DataFrame, now: pd.Timestamp, blocks: dict | None = None) -> N
     for _, r in res.tail(60).iterrows():
         items.append({"d": str(r["date"])[:10], "ok": str(r["main_hit"]).lower() in ("true", "1", "1.0"),
                       "home": str(r["home"]), "away": str(r["away"]), "label": str(r["main_label"]),
-                      "odds": r["main_odds"], "score": str(r["score"]), "live": False,
+                      "odds": r["main_odds"], "score": str(r["score"]), "live": False, "lives": [],
                       "emoji": EMOJI.get(r.get("sport"), "")})
-    try:   # ⚡ live-ставки бота: в ленте рядом с обычными прогнозами, с пометкой LIVE
+    by_key = {(it["home"], it["away"], it["d"]): it for it in items}
+    try:   # ⚡ live-ставки: цепляем к строке того же матча, чтобы шли рядом с обычным прогнозом
         for _, r in pro.live_bets().tail(40).iterrows():
             mt = str(r.get("match") or "")
             h_, sep, a_ = mt.partition(" — ")
             fin = r.get("final")
             fin = "" if fin is None or pd.isna(fin) or str(fin).lower() in ("nan", "none") else str(fin)
-            items.append({"d": str(r["date"])[:10], "ok": str(r["hit"]).lower() in ("true", "1", "1.0"),
-                          "home": h_ or mt, "away": a_ if sep else "",
-                          "label": str(r.get("label") or ""), "odds": r.get("min_odds"),
-                          "score": fin, "live": True, "emoji": ""})
+            lv = {"label": str(r.get("label") or ""), "odds": r.get("min_odds"),
+                  "ok": str(r["hit"]).lower() in ("true", "1", "1.0")}
+            host = by_key.get((h_ or mt, a_ if sep else "", str(r["date"])[:10]))
+            if host is not None and lv["label"]:
+                host["lives"].append(lv)          # тот же матч — дописываем строку в его карточку
+                continue
+            items.append({"d": str(r["date"])[:10], "ok": lv["ok"], "home": h_ or mt, "away": a_ if sep else "",
+                          "label": lv["label"], "odds": lv["odds"], "score": fin, "live": True, "lives": [],
+                          "emoji": ""})
     except Exception:
         pass
     items.sort(key=lambda x: x["d"], reverse=True)
@@ -462,10 +469,18 @@ def build(res: pd.DataFrame, now: pd.Timestamp, blocks: dict | None = None) -> N
         except (TypeError, ValueError):
             odds = "—"
         badge = "⚡ LIVE" if it["live"] else ""
-        feed += (f'<div class="fr{" lv" if it["live"] else ""}{" more" if i >= 15 else ""}">'
+        lives = ""
+        for lv in it.get("lives") or []:
+            try:
+                lo = f"{float(lv['odds']):.2f}"
+            except (TypeError, ValueError):
+                lo = "—"
+            lives += (f'<span class="lvline">⚡ LIVE: {escape(lv["label"])} · кэф {lo} '
+                      f'{"✅" if lv["ok"] else "❌"}</span>')
+        feed += (f'<div class="fr{" lv" if (it["live"] or lives) else ""}{" more" if i >= 15 else ""}">'
                  f'<span class="ok">{"✅" if ok else "❌"}</span>'
                  f'<div class="m"><b>{escape(it["home"])}{" — " + escape(it["away"]) if it["away"] else ""}</b>'
-                 f'<span>{badge + " · " if badge else ""}{it["emoji"]} {escape(it["label"])} · кэф {odds}</span></div>'
+                 f'<span>{badge + " · " if badge else ""}{it["emoji"]} {escape(it["label"])} · кэф {odds}</span>{lives}</div>'
                  f'<div class="r"><b>{escape(it["score"])}</b>{d[1] + "." + d[0] if len(d) == 2 else ""}</div></div>')
 
     tg = f"https://t.me/{escape(CHANNEL.lstrip('@'))}"
