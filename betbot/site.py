@@ -261,10 +261,12 @@ h1 span{background:linear-gradient(90deg,#ffc400,#ff7a3d);-webkit-background-cli
 .ringtxt h3{font-size:18px;font-weight:900}.ringtxt p{color:var(--muted);font-size:13px;margin-top:6px}
 .streak{display:inline-block;margin-top:10px;background:rgba(255,196,0,.14);color:var(--gold);font-weight:800;font-size:12px;border-radius:999px;padding:5px 11px}
 .live{margin-top:26px;background:linear-gradient(160deg,rgba(255,70,70,.12),var(--card));border:1px solid rgba(255,70,70,.35);border-radius:22px;padding:16px}
-.live h2{margin:0 0 12px}.live .row{display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
-.lm{flex:0 1 calc((100% - (var(--n,4) - 1) * 10px) / var(--n,4));min-width:0;display:flex;flex-direction:column;min-height:98px;text-decoration:none;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:11px 12px;transition:border-color .2s,transform .2s}
+.live h2{margin:0 0 12px}.live .row{display:grid;grid-template-columns:repeat(var(--n,4),minmax(0,1fr));gap:10px}
+@media (max-width:900px){.live .row{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.live .row{grid-template-columns:1fr}}
+.lm{min-width:0;height:100%;display:flex;flex-direction:column;min-height:98px;text-decoration:none;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:11px 12px;transition:border-color .2s,transform .2s}
 .lm:hover{border-color:rgba(255,196,0,.45);transform:translateY(-2px)}
-@media (max-width:900px){.lm{flex-basis:calc(50% - 5px)}}@media (max-width:560px){.lm{flex-basis:100%}}
+
 .lm .t{display:flex;justify-content:space-between;font-size:11px;color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:.4px}
 .lm .t .l{color:var(--live)}.lm .n{display:flex;justify-content:space-between;gap:8px;font-weight:800;margin-top:4px}
 .lm .n span:first-child{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.lm .w{font-size:12px;color:var(--gold);font-weight:800;margin-top:auto;padding-top:6px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
