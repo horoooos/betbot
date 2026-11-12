@@ -24,10 +24,11 @@ V = "5.199"
 CHANNEL = Path(__file__).resolve().parent.parent / "data" / "channel.json"
 SITE = "https://horoooos.github.io/betbot/"
 MAX_PER_PASS = 1               # за проход — один пост: ВК банит стену за пачки (ошибка 9 Flood control)
-MIN_GAP_S = 300                # и не чаще одного поста за 5 минут
-HOUR_LIMIT = 4                 # больше 4 постов в час на стену не публикуем
+MIN_GAP_S = 900                # и не чаще одного поста за 15 минут
+HOUR_LIMIT = 2                 # больше 2 постов в час на стену не публикуем
+DAY_LIMIT = 16                 # и не больше 16 в сутки — ВК режет за частые посты
 TRIES_LIMIT = 3                # после трёх неудач пост пропускаем, чтобы очередь не вставала навсегда
-PAUSE_S = 30 * 60              # после «Flood control» молчим 30 минут — иначе ВК блокирует стену надолго
+PAUSE_S = 60 * 60              # после «Flood control» молчим час — иначе ВК блокирует стену надолго
 STOP = re.compile(r"betboom|бетбум|букмекер|промокод|фрибет|реферал", re.I)
 
 
@@ -190,6 +191,12 @@ def crosspost(state: dict) -> int:
         return 0
     if now_ts - float(state.get("vk_at_ts") or 0) < MIN_GAP_S:
         return 0
+    day = time.strftime("%Y-%m-%d", time.gmtime())
+    dl = state.get("vk_day") or {}
+    if dl.get("d") != day:
+        dl = {"d": day, "n": 0}
+    if dl.get("n", 0) >= DAY_LIMIT:
+        return 0
     fresh = sorted(int(k) for k in posts if int(k) > state["vk_last"])[:MAX_PER_PASS]
     done = 0
     for pid in fresh:
@@ -260,6 +267,8 @@ def crosspost(state: dict) -> int:
             state["vk_at_ts"] = time.time()
             lim["n"] = lim.get("n", 0) + 1
             state["vk_hour"] = lim
+            dl["n"] = dl.get("n", 0) + 1
+            state["vk_day"] = dl
             (state.get("vk_try") or {}).pop(str(pid), None)
             state["vk_err"] = None
             done += 1
