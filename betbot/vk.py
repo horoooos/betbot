@@ -12,6 +12,7 @@ from __future__ import annotations
 import json
 import os
 import re
+import time
 from html import unescape
 from pathlib import Path
 
@@ -22,7 +23,11 @@ API = "https://api.vk.com/method/"
 V = "5.199"
 CHANNEL = Path(__file__).resolve().parent.parent / "data" / "channel.json"
 SITE = "https://horoooos.github.io/betbot/"
-MAX_PER_PASS = 5               # не заваливаем стену, если в канале выйдет пачка постов
+MAX_PER_PASS = 1               # за проход — один пост: ВК банит стену за пачки (ошибка 9 Flood control)
+MIN_GAP_S = 300                # и не чаще одного поста за 5 минут
+HOUR_LIMIT = 4                 # больше 4 постов в час на стену не публикуем
+TRIES_LIMIT = 3                # после трёх неудач пост пропускаем, чтобы очередь не вставала навсегда
+PAUSE_S = 45 * 60              # после «Flood control» молчим 45 минут — иначе ВК блокирует стену надолго
 STOP = re.compile(r"betboom|бетбум|букмекер|промокод|фрибет|реферал", re.I)
 
 
@@ -173,6 +178,18 @@ def crosspost(state: dict) -> int:
         state["vk_last"] = newest
         print(f"  ВК: кросспостинг включён, начинаем после поста {newest}")
         return 0
+    # тормоза: после Flood control ВК блокирует стену, поэтому молчим и постепенно наращиваем темп
+    now_ts = time.time()
+    if now_ts < float(state.get("vk_pause_ts") or 0):
+        return 0
+    hour = time.strftime("%Y-%m-%d-%H", time.gmtime())
+    lim = state.get("vk_hour") or {}
+    if lim.get("h") != hour:
+        lim = {"h": hour, "n": 0}
+    if lim.get("n", 0) >= HOUR_LIMIT:
+        return 0
+    if now_ts - float(state.get("vk_at_ts") or 0) < MIN_GAP_S:
+        return 0
     fresh = sorted(int(k) for k in posts if int(k) > state["vk_last"])[:MAX_PER_PASS]
     done = 0
     for pid in fresh:
@@ -240,11 +257,28 @@ def crosspost(state: dict) -> int:
                         raise
                     state["vk_err"] = f"{pid} фото+ссылка: {e}"[:300]
             state["vk_last"] = pid
+            state["vk_at_ts"] = time.time()
+            lim["n"] = lim.get("n", 0) + 1
+            state["vk_hour"] = lim
+            (state.get("vk_try") or {}).pop(str(pid), None)
+            state["vk_err"] = None
             done += 1
         except Exception as e:
-            print(f"  ! ВК: пост {pid} не опубликован: {e}")
-            state["vk_err"] = f"{pid}: {e}"[:300]   # видно в data/state.json без журнала GitHub
-            break                         # ошибка ключа/лимита — попробуем в следующий проход
+            msg = str(e)
+            print(f"  ! ВК: пост {pid} не опубликован: {msg}")
+            state["vk_err"] = f"{pid}: {msg}"[:300]   # видно в data/state.json без журнала GitHub
+            tries = state.setdefault("vk_try", {})
+            tries[str(pid)] = tries.get(str(pid), 0) + 1
+            if "flood" in msg.lower() or ": 9" in msg:   # 9 Flood control — ВК просит подождать
+                state["vk_pause_ts"] = time.time() + PAUSE_S
+                print(f"  ВК: пауза {PAUSE_S // 60} минут — ВК ограничил частоту публикаций")
+                break
+            if tries[str(pid)] >= TRIES_LIMIT:   # безнадёжный пост не должен держать очередь
+                state["vk_last"] = pid
+                tries.pop(str(pid), None)
+                print(f"  ВК: пост {pid} пропущен после {TRIES_LIMIT} неудач")
+                continue
+            break                         # временная ошибка — попробуем в следующий проход
     if done:
         print(f"  ВК: опубликовано постов: {done}")
     return done

@@ -1628,6 +1628,32 @@ async function loadLiveTip() {
   b.textContent = `⚡ LIVE: ${liveTip.label} · ${Math.round(liveTip.p * 100)}%${res}`; b.style.display = "inline-block";
   b.onclick = () => { renderLiveTip(); $("sheet").classList.add("on"); };
   $("sheet").onclick = e => { if (e.target.id === "sheet" || e.target.id === "sx") $("sheet").classList.remove("on"); };
+  liveToast();
+}
+// всплывающее окно: бот поставил LIVE по ходу матча (и итог этой ставки)
+let shownTip = null;
+function liveToast() {
+  if (!liveTip || !EVENT) return;
+  const key = `${liveTip.label}|${liveTip.minute}|${liveTip.score}|${liveTip.result || ""}`;
+  if (key === shownTip) return;
+  shownTip = key;
+  const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+  const done = liveTip.result === "hit" ? ["✅ LIVE-ЗАШЛА", "#16a34a"] : liveTip.result === "miss" ? ["❌ LIVE-МИМО", "#b91c1c"] : ["● LIVE", "#ff4646"];
+  let el = $("ltToast");
+  if (!el) {
+    el = document.createElement("div"); el.id = "ltToast";
+    el.style.cssText = "position:fixed;left:50%;bottom:18px;transform:translate(-50%,150%);z-index:9999;width:min(92vw,520px);background:linear-gradient(160deg,#7c3aed,#4c1d95);color:#fff;border-radius:18px;padding:14px 16px;box-shadow:0 18px 50px rgba(0,0,0,.55);font:600 15px/1.35 system-ui,-apple-system,sans-serif;transition:transform .45s cubic-bezier(.2,.9,.2,1);cursor:pointer;border:1px solid rgba(255,255,255,.18)";
+    el.onclick = () => { el.style.transform = "translate(-50%,150%)"; renderLiveTip(); $("sheet").classList.add("on"); };
+    document.body.appendChild(el);
+  }
+  el.innerHTML = `<div style="display:flex;gap:10px;align-items:center">
+      <span style="background:${done[1]};border-radius:8px;padding:3px 8px;font-weight:900;font-size:12px;letter-spacing:.5px">${done[0]}</span>
+      <span style="opacity:.85;font-size:12px">${liveTip.result ? "бот ставил по ходу матча" : "бот поставил по ходу матча"}</span></div>
+    <div style="font-weight:900;font-size:20px;margin:8px 0 4px">${esc(liveTip.label)}</div>
+    <div style="opacity:.92;font-size:13px">шанс ${Math.round(liveTip.p * 100)}% · кэф от ${(+liveTip.min_odds).toFixed(2)} · ${esc(liveTip.minute)} · счёт ${esc(liveTip.score)}</div>
+    <div style="opacity:.7;font-size:11px;margin-top:6px">нажмите, чтобы открыть карточку ставки</div>`;
+  el.style.transform = "translate(-50%,0)";
+  setTimeout(() => { el.style.transform = "translate(-50%,150%)"; }, 15000);
 }
 function renderLiveTip() {
   const t = liveTip, esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));

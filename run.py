@@ -421,13 +421,20 @@ def other_settle(m: dict, e: dict) -> None:
         m[side] = {"color": "3b4a7a", "logo": None, **m[side]}
     m["main_hit"] = sports.won(m["main"]["key"], f)
     m["bold_hit"] = sports.won(m["bold"]["key"], f) if m.get("bold") else None
+    lv = (load_json(LIVE, {}).get(f"{e['div']}|{e['id']}") or {}).get("lt") or {}
+    if lv.get("result"):   # ⚡ live-ставка в этом матче — её итог тоже в пост
+        m["live"] = {k: lv.get(k) for k in ("label", "p", "fair", "min_odds", "minute", "result")}
     ds = add_result(m, f.get("sets") or f"{f['hs']}:{f['as']}", m["sport"])
     verdicts = [(f"Основной: {m['main']['label']}", m["main_hit"])]
     if m.get("bold"):
         verdicts.append((f"Смелый: {m['bold']['label']}", m["bold_hit"]))
+    if m.get("live"):
+        verdicts.append((f"LIVE: {m['live']['label']}", m["live"].get("result") == "hit"))
     png = card.result_card(sports.league_plain(m["div"]), m["home"], m["away"], f["hs"], f["as"], verdicts, BRAND,
                            sport=m["sport"])
-    post(png, sports.result_caption(m, f, ds) + pro.clv_line(m), reply_to=m["msg_id"])
+    live_line = (f"\n⚡ LIVE: {m['live']['label']} — "
+                 f"{'✅' if m['live'].get('result') == 'hit' else '❌'}") if m.get("live") else ""
+    post(png, sports.result_caption(m, f, ds) + live_line + pro.clv_line(m), reply_to=m["msg_id"])
     m["status"] = "done"
 
 
@@ -496,6 +503,9 @@ def settle(m: dict, ev: dict) -> None:
     m["main_hit"] = mk.won(m["main"]["key"], hs, as_)
     m["bold_hit"] = mk.won(m["bold"]["key"], hs, as_) if m.get("bold") else None
     m["value_hit"] = mk.won(m["value"]["key"], hs, as_) if m.get("value") else None
+    lv = (load_json(LIVE, {}).get(f"{ev['div']}|{ev['id']}") or {}).get("lt") or {}
+    if lv.get("result"):   # ⚡ бот ставил по ходу этого матча — добавим её итог в пост
+        m["live"] = {k: lv.get(k) for k in ("label", "p", "fair", "min_odds", "minute", "result")}
     bold = m.get("bold") or {}
     ds = add_result(m, f"{hs}:{as_}", "football")
     verdicts = [(f"Основной: {m['main']['label']}", m["main_hit"])]
@@ -503,6 +513,8 @@ def settle(m: dict, ev: dict) -> None:
         verdicts.append((f"Смелый: {bold['label']}", m["bold_hit"]))
     if m.get("value"):
         verdicts.append((f"Value: {m['value']['label']}", m["value_hit"]))
+    if m.get("live"):
+        verdicts.append((f"LIVE: {m['live']['label']}", m["live"].get("result") == "hit"))
     png = card.result_card(texts.league_plain(m["div"]), m["home"], m["away"], hs, as_, verdicts, BRAND)
     post(png, texts.result(m, s, hs, as_, ds) + pro.clv_line(m), reply_to=m["msg_id"])
     m["status"] = "done"

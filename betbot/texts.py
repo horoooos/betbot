@@ -309,6 +309,11 @@ def result(m: dict, s: dict, hs: int, as_: int, day_stats: dict) -> str:
         lines.append(f"🔥 Смелый: {escape(m['bold']['label'])} — {_mark(m['bold_hit'])}")
     if m.get("value"):
         lines.append(f"💎 Value: {escape(m['value']['label'])} @ {m['value']['odds']:.2f} — {_mark(m['value_hit'])}")
+    lv = m.get("live") or {}
+    if lv.get("label"):   # ⚡ живая ставка в этом же матче — показываем и её результат
+        lines.append(f"⚡ LIVE: {escape(lv['label'])}"
+                     + (f" @ {lv['min_odds']:.2f}" if lv.get("min_odds") else "")
+                     + f" — {_mark(lv.get('result') == 'hit')}")
     if day_stats["n"]:
         lines.append(f"\n📅 Сегодня: основной {day_stats['main']}/{day_stats['n']} ({pct(day_stats['main'] / day_stats['n'])})"
                      + (f" · смелый {day_stats['bold']}/{day_stats['nb']}" if day_stats["nb"] else ""))

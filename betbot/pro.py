@@ -54,6 +54,7 @@ def stake_line(tip: dict) -> str:
 
 BANK_RESET = "2026-11-12"   # банк обнулён до 10 000: с этого дня бот ставит по новым правилам (все исходы + экспрессы)
 EXPRESS_LOG = Path(__file__).resolve().parent.parent / "data" / "express_bets.csv"
+LIVE_LOG = Path(__file__).resolve().parent.parent / "data" / "live_bets.csv"   # ⚡ live-ставки бота (пишет inplay.py)
 
 
 def bank_daily(res: pd.DataFrame, today: pd.Timestamp | None = None) -> list[dict]:
@@ -106,10 +107,26 @@ def expresses(start: str | None = None, end: str | None = None) -> pd.DataFrame:
     return ex
 
 
-def all_bets(res: pd.DataFrame, start: str | None = None, end: str | None = None, dated: bool = False) -> list:
-    """Все рассчитанные ставки бота по датам: (кэф, зашла ли, % банка) — основные, смелые и экспрессы.
+def live_bets(start: str | None = None, end: str | None = None) -> pd.DataFrame:
+    """Рассчитанные live-ставки из журнала inplay.py: дата, матч, рынок, кэф «от», зашла ли."""
+    try:
+        df = pd.read_csv(LIVE_LOG)
+    except (OSError, ValueError):
+        return pd.DataFrame(columns=["date", "match", "label", "odds", "hit"])
+    if df.empty:
+        return df
+    if start:
+        df = df[pd.to_datetime(df["date"]) >= pd.Timestamp(start)]
+    if end:
+        df = df[pd.to_datetime(df["date"]) <= pd.Timestamp(end)]
+    return df
 
-    Экспрессы берём за даты таблицы res (или с start, если задан)."""
+
+def all_bets(res: pd.DataFrame, start: str | None = None, end: str | None = None, dated: bool = False) -> list:
+    """Все рассчитанные ставки бота по датам: (кэф, зашла ли, % банка) — основные, смелые, экспрессы и live.
+
+    Экспрессы берём за даты таблицы res (или с start, если задан). Live-ставки — из журнала inplay.py,
+    кэф у них — минимальный, при котором ставка была выгодна (так их и рекомендовал бот)."""
     rows: list[tuple[str, float, bool, float]] = []
     if res is not None and not res.empty:
         stakes = res["main_stake"].fillna(STAKE_MIN) if "main_stake" in res else pd.Series(STAKE_MIN, index=res.index)
@@ -130,6 +147,10 @@ def all_bets(res: pd.DataFrame, start: str | None = None, end: str | None = None
         ex = expresses(start, end)
         rows += [(str(r["date"])[:10], float(r["odds"]), str(r["hit"]).lower() in ("true", "1"), STAKE_MIN)
                  for _, r in ex.iterrows() if float(r["odds"]) > 1]
+        lb = live_bets(start, end)
+        rows += [(str(r["date"])[:10], float(r["min_odds"]), str(r["hit"]).lower() in ("true", "1"), STAKE_MIN)
+                 for _, r in lb.iterrows()
+                 if pd.notna(r.get("min_odds")) and float(r["min_odds"]) > 1 and str(r.get("hit")) not in ("", "nan")]
     rows.sort(key=lambda r: r[0])   # по дням; внутри дня — в порядке записи
     return rows if dated else [(o, h, s) for _, o, h, s in rows]
 

@@ -284,6 +284,8 @@ svg{width:100%;height:auto;display:block}svg .base{stroke:rgba(255,255,255,.25);
 .fr{display:grid;grid-template-columns:28px minmax(0,1fr) auto;gap:10px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:10px 12px}
 .fr .ok{font-size:18px}.fr .m b{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:14px}
 .fr .m span{color:var(--muted);font-size:12px}.fr .r{text-align:right;font-size:12px;color:var(--muted)}.fr .r b{display:block;font-size:14px;color:var(--ink)}
+.fr.lv{background:linear-gradient(90deg,rgba(124,58,237,.20),rgba(124,58,237,.04));border-color:rgba(124,58,237,.45)}
+.fr.lv .m span{color:#c4b5fd}
 .more{display:none}.showall .more{display:grid}
 .mbtn{margin-top:10px;background:none;border:1px solid var(--line);color:var(--ink);font:700 13px Montserrat,sans-serif;border-radius:12px;padding:9px 14px;cursor:pointer}
 .cta{margin-top:34px;display:flex;gap:16px;align-items:center;justify-content:space-between;flex-wrap:wrap;padding:20px;border-radius:22px;
@@ -419,13 +421,35 @@ def build(res: pd.DataFrame, now: pd.Timestamp, blocks: dict | None = None) -> N
                           f'<span>{EMOJI.get(r["sport"], "")} {escape(str(r["main_label"]))} · {escape(str(r["score"]))} · {escape(str(r["date"]))[5:].replace("-", ".")}</span></div></div>')
 
     feed = ""
-    for i, (_, r) in enumerate(res.tail(60).iloc[::-1].iterrows()):
-        ok = str(r["main_hit"]).lower() in ("true", "1", "1.0")
-        d = escape(str(r["date"]))[5:].split("-")
-        feed += (f'<div class="fr{" more" if i >= 15 else ""}"><span class="ok">{"✅" if ok else "❌"}</span>'
-                 f'<div class="m"><b>{escape(str(r["home"]))} — {escape(str(r["away"]))}</b><span>{EMOJI.get(r["sport"], "")} '
-                 f'{escape(str(r["main_label"]))} · кэф {float(r["main_odds"]):.2f}</span></div>'
-                 f'<div class="r"><b>{escape(str(r["score"]))}</b>{d[1] + "." + d[0] if len(d) == 2 else ""}</div></div>')
+    items = []
+    for _, r in res.tail(60).iterrows():
+        items.append({"d": str(r["date"])[:10], "ok": str(r["main_hit"]).lower() in ("true", "1", "1.0"),
+                      "home": str(r["home"]), "away": str(r["away"]), "label": str(r["main_label"]),
+                      "odds": r["main_odds"], "score": str(r["score"]), "live": False,
+                      "emoji": EMOJI.get(r.get("sport"), "")})
+    try:   # ⚡ live-ставки бота: в ленте рядом с обычными прогнозами, с пометкой LIVE
+        for _, r in pro.live_bets().tail(40).iterrows():
+            mt = str(r.get("match") or "")
+            h_, sep, a_ = mt.partition(" — ")
+            items.append({"d": str(r["date"])[:10], "ok": str(r["hit"]).lower() in ("true", "1", "1.0"),
+                          "home": h_ or mt, "away": a_ if sep else "",
+                          "label": str(r.get("label") or ""), "odds": r.get("min_odds"),
+                          "score": str(r.get("final") or ""), "live": True, "emoji": "⚡"})
+    except Exception:
+        pass
+    items.sort(key=lambda x: x["d"], reverse=True)
+    for i, it in enumerate(items[:60]):
+        ok, d = it["ok"], it["d"][5:].split("-")
+        try:
+            odds = f"{float(it['odds']):.2f}"
+        except (TypeError, ValueError):
+            odds = "—"
+        badge = "⚡ LIVE" if it["live"] else ""
+        feed += (f'<div class="fr{" lv" if it["live"] else ""}{" more" if i >= 15 else ""}">'
+                 f'<span class="ok">{"✅" if ok else "❌"}</span>'
+                 f'<div class="m"><b>{escape(it["home"])}{" — " + escape(it["away"]) if it["away"] else ""}</b>'
+                 f'<span>{badge + " · " if badge else ""}{it["emoji"]} {escape(it["label"])} · кэф {odds}</span></div>'
+                 f'<div class="r"><b>{escape(it["score"])}</b>{d[1] + "." + d[0] if len(d) == 2 else ""}</div></div>')
 
     tg = f"https://t.me/{escape(CHANNEL.lstrip('@'))}"
     hit_pct = f"{pct:.0f}%" if len(res) else "—"
