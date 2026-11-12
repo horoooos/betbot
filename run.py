@@ -424,6 +424,12 @@ def other_settle(m: dict, e: dict) -> None:
     lv = (load_json(LIVE, {}).get(f"{e['div']}|{e['id']}") or {}).get("lt") or {}
     if lv.get("result"):   # ⚡ live-ставка в этом матче — её итог тоже в пост
         m["live"] = {k: lv.get(k) for k in ("label", "p", "fair", "min_odds", "minute", "result")}
+    elif lv.get("key") and m.get("sport") in ("hockey", "basketball"):
+        fin = inplay._regulation(e) if m.get("sport") == "hockey" else (f["hs"], f["as"])
+        if fin:
+            hit = inplay.hit(lv["key"], *fin)
+            m["live"] = {"label": lv.get("label"), "min_odds": lv.get("min_odds"), "minute": lv.get("minute"),
+                         "result": "hit" if hit else "miss"}
     ds = add_result(m, f.get("sets") or f"{f['hs']}:{f['as']}", m["sport"])
     verdicts = [(f"Основной: {m['main']['label']}", m["main_hit"])]
     if m.get("bold"):
@@ -504,7 +510,12 @@ def settle(m: dict, ev: dict) -> None:
     m["bold_hit"] = mk.won(m["bold"]["key"], hs, as_) if m.get("bold") else None
     m["value_hit"] = mk.won(m["value"]["key"], hs, as_) if m.get("value") else None
     lv = (load_json(LIVE, {}).get(f"{ev['div']}|{ev['id']}") or {}).get("lt") or {}
-    if lv.get("result"):   # ⚡ бот ставил по ходу этого матча — добавим её итог в пост
+    if lv.get("key"):   # ⚡ live-ставка в этом матче: считаем итог сами — inplay мог не успеть до поста
+        hit = inplay.hit(lv["key"], hs, as_)
+        m["live"] = {"label": lv.get("label"), "p": lv.get("p"), "fair": lv.get("fair"),
+                     "min_odds": lv.get("min_odds"), "minute": lv.get("minute"),
+                     "result": "hit" if hit else "miss"}
+    elif lv.get("result"):
         m["live"] = {k: lv.get(k) for k in ("label", "p", "fair", "min_odds", "minute", "result")}
     bold = m.get("bold") or {}
     ds = add_result(m, f"{hs}:{as_}", "football")

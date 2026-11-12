@@ -412,35 +412,45 @@ def ai_card(prompt: str, title: str, subtitle: str = "", brand: str = "", sport:
 
 def result_card(league: str, home: dict, away: dict, hs: int, as_: int,
                 verdicts: list[tuple[str, bool]], brand: str = "", sport: str = "football") -> bytes:
-    """Итог матча: логотипы, счёт и строки «прогноз — ЗАШЁЛ/МИМО» (до 4: основной, смелый, value, live)."""
+    """Итог матча в стиле канала: заголовок, логотипы, счёт и плашки «ЗАШЁЛ/МИМО» по центру.
+
+    Имена команд — одной строкой с автоподбором размера, поэтому они не наезжают на плашки.
+    До 2 прогнозов — в столбик, 3 — компактнее, 4 (main/bold/value/live) — двумя колонками.
+    """
     hc, ac = _rgb(home["color"]), _rgb(away["color"], (180, 40, 40))
     img, d = _background(hc, ac)
     img = _sport_icon(img, sport)
     d = ImageDraw.Draw(img)
     _title(d, f"Итог матча · {league}", accent=RUBRIC["win"] if verdicts and verdicts[0][1] else RUBRIC["lose"])
-    _teams(img, d, home, away, hc, ac, top=104)
+    for team, cx, col in ((home, 300, hc), (away, 980, ac)):
+        ini = "".join(w[0] for w in team["ru"].split()[:2]).upper()
+        logo = _logo(team.get("logo"), 190, ini, col)
+        img.paste(logo, (cx - logo.width // 2, 108), logo)
+        name, size = team["ru"], 34
+        while size > 20 and d.textlength(name, font=font(size, "ExtraBold")) > 390:
+            size -= 2
+        d.text((cx, 322), name, font=font(size, "ExtraBold"), fill=WHITE, anchor="mm")
     score = f"{hs} : {as_}"
-    size = 110
-    while size > 78 and d.textlength(score, font=font(size, "ExtraBold")) > 470:
+    size = 104
+    while size > 76 and d.textlength(score, font=font(size, "ExtraBold")) > 430:
         size -= 4
-    d.text((W / 2, 202), score, font=font(size, "ExtraBold"), fill=WHITE, anchor="mm")
-    d.text((W / 2, 278), "ФИНАЛ", font=font(24, "Medium"), fill=MUTED, anchor="mm")
+    d.text((W / 2, 196), score, font=font(size, "ExtraBold"), fill=WHITE, anchor="mm")
+    d.text((W / 2, 288), "ФИНАЛ", font=font(24, "Medium"), fill=MUTED, anchor="mm")
     vs = verdicts[:4]
     n = len(vs)
-    rh = 46 if n >= 4 else 52
-    gap = 12 if n >= 4 else 14
-    top = 424 if n >= 4 else 430
-    for i, (name, hit) in enumerate(vs):
-        y = top + i * (rh + gap)
-        col = GREEN if hit else RED
-        d.rounded_rectangle((150, y, W - 150, y + rh), radius=14,
-                            fill=(24, 31, 62) if i % 2 == 0 else (19, 25, 52))
-        d.rounded_rectangle((150, y + 6, 156, y + rh - 6), radius=3, fill=col)   # цветная метка слева
-        label = name
-        while d.textlength(label, font=font(26, "Bold")) > W - 150 - 178 - 170 and len(label) > 6:
-            label = label[:-2]
-        d.text((178, y + rh / 2), label, font=font(26, "Bold"), fill=WHITE, anchor="lm")
-        d.text((W - 172, y + rh / 2), "ЗАШЁЛ" if hit else "МИМО", font=font(24, "ExtraBold"), fill=col, anchor="rm")
+    if n <= 2:
+        ys, size = (430, 520), 34
+        for i, (name, hit) in enumerate(vs):
+            _pill(d, W // 2, ys[i], f"{name} — {'ЗАШЁЛ' if hit else 'МИМО'}", GREEN if hit else RED, size=size)
+    elif n == 3:
+        size = 30
+        for i, (name, hit) in enumerate(vs):
+            _pill(d, W // 2, 404 + i * 78, f"{name} — {'ЗАШЁЛ' if hit else 'МИМО'}", GREEN if hit else RED, size=size)
+    else:
+        size = 22
+        for i, (name, hit) in enumerate(vs):
+            cx = W / 2 - 300 if i % 2 == 0 else W / 2 + 300
+            _pill(d, cx, 404 + (i // 2) * 86, f"{name} — {'ЗАШЁЛ' if hit else 'МИМО'}", GREEN if hit else RED, size=size)
     return _png(img, d, brand, sport)
 
 

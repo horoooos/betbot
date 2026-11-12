@@ -119,6 +119,10 @@
   .tc.m { background:rgba(46,204,113,.14); border:1px solid rgba(46,204,113,.45) } .tc.b { background:rgba(255,122,61,.12); border:1px solid rgba(255,122,61,.4) }
   .tc small { display:block; font-size:10px; font-weight:800; letter-spacing:1px; color:var(--muted) } .tc b { font-size:17px }
   .tc .r { text-align:right; font-weight:900; font-size:22px } .tc .r small { text-align:right }
+  .lvbox { background:linear-gradient(160deg,rgba(124,58,237,.30),rgba(76,29,149,.18)); border:1px solid rgba(168,85,247,.5);
+           border-radius:16px; padding:10px 12px; margin-top:10px }
+  .lvbox .lvt { font:800 11px/1.35 Montserrat,system-ui,sans-serif; letter-spacing:.08em; color:#c4b5fd; margin-bottom:4px }
+  .lvbox .tc { margin-top:6px }
   .b3 { display:flex; height:30px; border-radius:10px; overflow:hidden; font-size:12px; font-weight:900 }
   .b3 div { display:flex; align-items:center; justify-content:center; min-width:34px } .b3l { display:flex; justify-content:space-between; font-size:11px; color:var(--muted); margin-top:5px; font-weight:700 }
   .mr { display:grid; grid-template-columns:minmax(0,1fr) 90px 44px 44px; gap:8px; align-items:center; font-size:13px; padding:6px 0; border-bottom:1px solid var(--line) }
@@ -1593,7 +1597,13 @@ let botData = null;
 function renderBot() {
   const b = botData, esc = t => String(t ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
   const tc = (cls, title, t) => t ? `<div class="tc ${cls}"><div><small>${title}</small><b>${esc(t.label)}</b></div><div class="r"><small>шанс</small>${pc(t.p)}<small>кэф ${t.est ? "≈" : ""}${(+t.odds || 0).toFixed(2)}</small></div></div>` : "";
-  let html = `<h3>🎯 Прогноз бота <button class="x" id="sx">✕</button></h3>${tc("m", "ОСНОВНОЙ ПРОГНОЗ", b.main)}${tc("b", "СМЕЛЫЙ ПРОГНОЗ", b.bold)}`;
+  let html = `<h3>🎯 Прогноз бота <button class="x" id="sx">✕</button></h3>`;
+  if (liveTip) {   // ⚡ ставка по ходу матча — первым блоком, до предматчевого прогноза
+    const lr = liveTip.result === "hit" ? " · ✅ зашла" : liveTip.result === "miss" ? " · ❌ мимо" : "";
+    html += `<div class="lvbox"><div class="lvt">⚡ LIVE-ПРОГНОЗ · ${esc(liveTip.minute)} · СЧЁТ ${esc(liveTip.score)}${lr}</div>`
+      + tc("m", "СТАВКА ПО ХОДУ МАТЧА", { label: liveTip.label, p: liveTip.p, odds: liveTip.min_odds, est: true }) + `</div>`;
+  }
+  html += `${tc("m", "ОСНОВНОЙ ПРОГНОЗ", b.main)}${tc("b", "СМЕЛЫЙ ПРОГНОЗ", b.bold)}`;
   // повторить ставку бота: открываем BetBoom по реферальной ссылке, а саму ставку копируем — останется найти матч и выбрать её
   const bet = b.main ? `${H.ru} — ${A.ru}: ${b.main.label}` : "";
   if (bet) html += `<a class="bbm" id="bbm" href="${botBB || bbSearch(H.ru, SPORT)}" target="_blank" rel="noopener sponsored">💰 Поставить «${esc(b.main.label)}» в BetBoom<small>Откроется BetBoom с этим матчем, а ставка скопируется — выберите её</small></a>`;
@@ -1625,36 +1635,15 @@ async function loadLiveTip() {
   }
   const b = $("ltbtn"); if (!liveTip || !b) return;
   const res = liveTip.result === "hit" ? " ✅" : liveTip.result === "miss" ? " ❌" : "";
-  b.textContent = `⚡ LIVE: ${liveTip.label} · ${Math.round(liveTip.p * 100)}%${res}`; b.style.display = "inline-block";
+  b.textContent = `⚡ ${Math.round(liveTip.p * 100)}%${res}`;   // маленькая плашка, а не огромный тост
+  b.style.display = "inline-block";
+  b.title = `LIVE-прогноз: ${liveTip.label} · шанс ${Math.round(liveTip.p * 100)}% · кэф от ${(+liveTip.min_odds).toFixed(2)}`;
+  const v = $("viewers");
+  if (v && v.parentNode) v.parentNode.insertBefore(b, v.nextSibling);   // сверху, сразу под «👁 N смотрит»
   b.onclick = () => { renderLiveTip(); $("sheet").classList.add("on"); };
   $("sheet").onclick = e => { if (e.target.id === "sheet" || e.target.id === "sx") $("sheet").classList.remove("on"); };
-  liveToast();
 }
-// всплывающее окно: бот поставил LIVE по ходу матча (и итог этой ставки)
-let shownTip = null;
-function liveToast() {
-  if (!liveTip || !EVENT) return;
-  const key = `${liveTip.label}|${liveTip.minute}|${liveTip.score}|${liveTip.result || ""}`;
-  if (key === shownTip) return;
-  shownTip = key;
-  const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
-  const done = liveTip.result === "hit" ? ["✅ LIVE-ЗАШЛА", "#16a34a"] : liveTip.result === "miss" ? ["❌ LIVE-МИМО", "#b91c1c"] : ["● LIVE", "#ff4646"];
-  let el = $("ltToast");
-  if (!el) {
-    el = document.createElement("div"); el.id = "ltToast";
-    el.style.cssText = "position:fixed;left:50%;bottom:18px;transform:translate(-50%,150%);z-index:9999;width:min(92vw,520px);background:linear-gradient(160deg,#7c3aed,#4c1d95);color:#fff;border-radius:18px;padding:14px 16px;box-shadow:0 18px 50px rgba(0,0,0,.55);font:600 15px/1.35 system-ui,-apple-system,sans-serif;transition:transform .45s cubic-bezier(.2,.9,.2,1);cursor:pointer;border:1px solid rgba(255,255,255,.18)";
-    el.onclick = () => { el.style.transform = "translate(-50%,150%)"; renderLiveTip(); $("sheet").classList.add("on"); };
-    document.body.appendChild(el);
-  }
-  el.innerHTML = `<div style="display:flex;gap:10px;align-items:center">
-      <span style="background:${done[1]};border-radius:8px;padding:3px 8px;font-weight:900;font-size:12px;letter-spacing:.5px">${done[0]}</span>
-      <span style="opacity:.85;font-size:12px">${liveTip.result ? "бот ставил по ходу матча" : "бот поставил по ходу матча"}</span></div>
-    <div style="font-weight:900;font-size:20px;margin:8px 0 4px">${esc(liveTip.label)}</div>
-    <div style="opacity:.92;font-size:13px">шанс ${Math.round(liveTip.p * 100)}% · кэф от ${(+liveTip.min_odds).toFixed(2)} · ${esc(liveTip.minute)} · счёт ${esc(liveTip.score)}</div>
-    <div style="opacity:.7;font-size:11px;margin-top:6px">нажмите, чтобы открыть карточку ставки</div>`;
-  el.style.transform = "translate(-50%,0)";
-  setTimeout(() => { el.style.transform = "translate(-50%,150%)"; }, 15000);
-}
+
 function renderLiveTip() {
   const t = liveTip, esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
   const res = t.result === "hit" ? `<p style="color:#2ecc71;font-weight:800">✅ LIVE-прогноз зашёл</p>` : t.result === "miss" ? `<p style="color:#ff6b6b;font-weight:800">❌ LIVE-прогноз не зашёл</p>` : "";

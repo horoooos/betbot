@@ -107,7 +107,7 @@ BANK_CSS = """
 .bankx .vol{opacity:0}.bankx.go .vol{animation:bkfade .8s ease .3s forwards}
 @keyframes bkdraw{to{stroke-dashoffset:0}}@keyframes bkfade{to{opacity:1}}
 @keyframes bkpulse{0%{opacity:.7;transform:scale(1)}100%{opacity:0;transform:scale(3.2)}}
-@media (max-width:620px){.bankx{padding:16px 14px 12px}.bankx .mini div{min-width:0;flex:1}}
+@media (max-width:620px){.bankx{padding:16px 14px 12px}.bankx .mini div{min-width:0;flex:1}.bankx .allb span{font-size:11px;padding:6px 10px}.bankx .allb{gap:6px}main{padding-bottom:132px}}
 """
 
 BANK_JS = """<script>(()=>{const b=document.querySelector('.bankx');if(!b)return;const go=()=>b.classList.add('go');if('IntersectionObserver'in window){const io=new IntersectionObserver(es=>{if(es.some(e=>e.isIntersecting)){go();io.disconnect();}},{threshold:.25});io.observe(b);setTimeout(go,3000);}else go();
