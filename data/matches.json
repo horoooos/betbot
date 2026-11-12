@@ -1878,7 +1878,7 @@
   "kickoff": "2026-11-13T01:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Scheduled",
   "home": {
    "id": "3459",
@@ -2015,7 +2015,10 @@
   "close": {
    "U25": 0.4413,
    "1X": 0.4357
-  }
+  },
+  "main_hit": true,
+  "bold_hit": false,
+  "value_hit": null
  },
  "401878034": {
   "id": "401878034",
@@ -2568,6 +2571,10 @@
   "model_w": 0.0,
   "learned_n": 897,
   "msg_id": 5298,
-  "btn": 4
+  "btn": 4,
+  "close": {
+   "U25": 0.4971,
+   "H-1.5": 0.4462
+  }
  }
 }
