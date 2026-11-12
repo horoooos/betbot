@@ -410,47 +410,53 @@ def ai_card(prompt: str, title: str, subtitle: str = "", brand: str = "", sport:
     return _png(img, d, brand, sport or None)
 
 
+def _side_teams(img, d, home, away, hc, ac, y=80, size=150, name_w=320):
+    """Логотипы по краям и имена в 1–2 строки под ними — как на фирменных карточках канала."""
+    for team, cx, col in ((home, 205, hc), (away, 1075, ac)):
+        ini = "".join(w[0] for w in team["ru"].split()[:2]).upper()
+        logo = _logo(team.get("logo"), size, ini, col)
+        img.paste(logo, (cx - logo.width // 2, y), logo)
+        lines, cur = [], ""
+        for word in team["ru"].split():
+            trial = (cur + " " + word).strip()
+            if d.textlength(trial, font=font(28, "ExtraBold")) <= name_w:
+                cur = trial
+            else:
+                if cur:
+                    lines.append(cur)
+                cur = word
+        if cur:
+            lines.append(cur)
+        for i, line in enumerate(lines[:2]):
+            f = 28
+            while f > 18 and d.textlength(line, font=font(f, "ExtraBold")) > name_w:
+                f -= 2
+            d.text((cx, y + size + 24 + i * 34), line, font=font(f, "ExtraBold"), fill=WHITE, anchor="mm")
+
+
 def result_card(league: str, home: dict, away: dict, hs: int, as_: int,
                 verdicts: list[tuple[str, bool]], brand: str = "", sport: str = "football") -> bytes:
-    """Итог матча в стиле канала: заголовок, логотипы, счёт и плашки «ЗАШЁЛ/МИМО» по центру.
-
-    Имена команд — одной строкой с автоподбором размера, поэтому они не наезжают на плашки.
-    До 2 прогнозов — в столбик, 3 — компактнее, 4 (main/bold/value/live) — двумя колонками.
-    """
+    """Итог матча как в фирменном наборе: заголовок, логотипы по краям, счёт и плашки по центру."""
     hc, ac = _rgb(home["color"]), _rgb(away["color"], (180, 40, 40))
     img, d = _background(hc, ac)
     img = _sport_icon(img, sport)
     d = ImageDraw.Draw(img)
-    _title(d, f"Итог матча · {league}", accent=RUBRIC["win"] if verdicts and verdicts[0][1] else RUBRIC["lose"])
-    for team, cx, col in ((home, 300, hc), (away, 980, ac)):
-        ini = "".join(w[0] for w in team["ru"].split()[:2]).upper()
-        logo = _logo(team.get("logo"), 190, ini, col)
-        img.paste(logo, (cx - logo.width // 2, 108), logo)
-        name, size = team["ru"], 34
-        while size > 20 and d.textlength(name, font=font(size, "ExtraBold")) > 390:
-            size -= 2
-        d.text((cx, 322), name, font=font(size, "ExtraBold"), fill=WHITE, anchor="mm")
+    _title(d, f"Итог матча · {league}", y=38, size=26,
+           accent=RUBRIC["win"] if verdicts and verdicts[0][1] else RUBRIC["lose"])
+    _side_teams(img, d, home, away, hc, ac)
     score = f"{hs} : {as_}"
     size = 104
-    while size > 76 and d.textlength(score, font=font(size, "ExtraBold")) > 430:
+    while size > 72 and d.textlength(score, font=font(size, "ExtraBold")) > 360:
         size -= 4
-    d.text((W / 2, 196), score, font=font(size, "ExtraBold"), fill=WHITE, anchor="mm")
-    d.text((W / 2, 288), "ФИНАЛ", font=font(24, "Medium"), fill=MUTED, anchor="mm")
+    d.text((W / 2, 150), score, font=font(size, "ExtraBold"), fill=WHITE, anchor="mm")
+    d.text((W / 2, 224), "ФИНАЛ", font=font(22, "Medium"), fill=MUTED, anchor="mm")
     vs = verdicts[:4]
     n = len(vs)
-    if n <= 2:
-        ys, size = (430, 520), 34
-        for i, (name, hit) in enumerate(vs):
-            _pill(d, W // 2, ys[i], f"{name} — {'ЗАШЁЛ' if hit else 'МИМО'}", GREEN if hit else RED, size=size)
-    elif n == 3:
-        size = 30
-        for i, (name, hit) in enumerate(vs):
-            _pill(d, W // 2, 404 + i * 78, f"{name} — {'ЗАШЁЛ' if hit else 'МИМО'}", GREEN if hit else RED, size=size)
-    else:
-        size = 22
-        for i, (name, hit) in enumerate(vs):
-            cx = W / 2 - 300 if i % 2 == 0 else W / 2 + 300
-            _pill(d, cx, 404 + (i // 2) * 86, f"{name} — {'ЗАШЁЛ' if hit else 'МИМО'}", GREEN if hit else RED, size=size)
+    size_p = 30 if n <= 2 else 26 if n == 3 else 22
+    y = 292 if n >= 4 else 300
+    for name, hit in vs:
+        _pill(d, W // 2, y, f"{name} — {'ЗАШЁЛ' if hit else 'МИМО'}", GREEN if hit else RED, size=size_p)
+        y += size_p + (28 if n < 4 else 34)
     return _png(img, d, brand, sport)
 
 
@@ -460,133 +466,88 @@ LIVE_VIOLET = (168, 85, 247)
 
 
 def _live_header(d: ImageDraw.ImageDraw, text: str, accent: tuple = (255, 70, 70), prefix: str = "LIVE") -> None:
-    """Как у Claude: «● LIVE · ТУРНИР» по центру сверху + красная линия. Верхний левый угол свободен."""
+    """Как в примерах: «● LIVE · ТУРНИР» по центру сверху и цветная линия под ним."""
     t = (f"{prefix} · {text}" if prefix else text).upper()
     f = font(26)
     half = d.textlength(t, font=f) / 2
-    d.text((W / 2, 46), t, font=f, fill=WHITE, anchor="mm")
-    d.ellipse((W / 2 - half - 24, 39, W / 2 - half - 12, 51), fill=(255, 46, 46))
-    d.line([(W / 2 - half, 72), (W / 2 + half, 72)], fill=accent, width=3)
+    d.text((W / 2, 40), t, font=f, fill=WHITE, anchor="mm")
+    d.ellipse((W / 2 - half - 24, 33, W / 2 - half - 12, 45), fill=(255, 46, 46))
+    d.line([(W / 2 - half, 66), (W / 2 + half, 66)], fill=accent, width=3)
 
 
 def _live_base(home: dict, away: dict, sport: str) -> tuple[Image.Image, ImageDraw.ImageDraw]:
-    """Фон live-карточки: ярче обычного, лучи, крупная полупрозрачная иконка вида спорта."""
+    """Фон live-карточки: ярче обычного, лучи и крупная полупрозрачная иконка вида спорта."""
     hc, ac = _rgb(home["color"]), _rgb(away["color"], (180, 40, 40))
     img, _ = _background(hc, ac, style="rays")
-    img = ImageEnhance.Brightness(img).enhance(1.12)   # live-кадр должен быть ярче обычных постов
-    img = _sport_icon(img, sport, cy=H // 2 + 60, r=250, alpha=26)
+    img = ImageEnhance.Brightness(img).enhance(1.1)
+    img = _sport_icon(img, sport, cy=H // 2 + 40, r=250, alpha=24)
     return img, ImageDraw.Draw(img)
-
-
-def _live_score(img: Image.Image, d: ImageDraw.ImageDraw, hs, as_, minute: str = "") -> None:
-    """Счёт по центру между логотипами + плашка «LIVE · минута»."""
-    score = f"{hs} : {as_}"
-    size = 120
-    while size > 84 and d.textlength(score, font=font(size, "ExtraBold")) > 470:
-        size -= 4
-    d.text((W / 2, 196), score, font=font(size, "ExtraBold"), fill=WHITE, anchor="mm")
-    if minute:
-        txt = ("LIVE · " + str(minute)).upper()
-        w = d.textlength(txt, font=font(22, "ExtraBold")) + 52
-        d.rounded_rectangle((W / 2 - w / 2, 252, W / 2 + w / 2, 290), radius=19, fill=(150, 22, 34))
-        d.ellipse((W / 2 - w / 2 + 18, 265, W / 2 - w / 2 + 28, 275), fill=WHITE)
-        d.text((W / 2 + 6, 271), txt, font=font(22, "ExtraBold"), fill=WHITE, anchor="mm")
-
-
-def _shadow(img: Image.Image, box: tuple, radius: int = 18, dx: int = 0, dy: int = 8,
-            blur: int = 12, alpha: int = 110) -> Image.Image:
-    """Мягкая тень под плашкой — объём, как на карточках Claude."""
-    x0, y0, x1, y1 = box
-    layer = Image.new("RGBA", img.size, (0, 0, 0, 0))
-    ImageDraw.Draw(layer).rounded_rectangle((x0 + dx, y0 + dy, x1 + dx, y1 + dy), radius=radius, fill=(0, 0, 0, alpha))
-    layer = layer.filter(ImageFilter.GaussianBlur(blur))
-    return Image.alpha_composite(img.convert("RGBA"), layer).convert("RGB")
-
-
-def _odds_pill(img: Image.Image, box: tuple, label: str, value: str) -> tuple[Image.Image, ImageDraw.ImageDraw]:
-    """Золотая плашка с кэфом: подпись и число ровно по центру, с тенью (как в фирменных карточках)."""
-    img = _shadow(img, box, radius=20, dy=7, blur=10, alpha=120)
-    _gold_box(img, box, radius=20)   # рисует градиент на месте и возвращает None
-    d = ImageDraw.Draw(img)
-    cx = (box[0] + box[2]) / 2
-    d.text((cx, box[1] + 20), label, font=font(16, "ExtraBold"), fill=(84, 60, 4), anchor="mm")
-    d.text((cx, box[1] + 52), value, font=font(40, "ExtraBold"), fill=(38, 27, 0), anchor="mm")
-    return img, d
 
 
 def live_card(league: str, home: dict, away: dict, hs, as_, headline: str, sub: str = "", brand: str = "",
               sport: str = "football", color: tuple = RED, market: str = "", odds: str = "", chance: str = "",
               minute: str = "", tally: str = "") -> bytes:
-    """Карточка LIVE-ставки: плашка LIVE, счёт, и крупно — что поставил бот, по какому кэфу и с каким шансом.
+    """Live-кадр в стиле примеров: счёт, плашка события/ставки по центру и подпись под ней.
 
-    Старые вызовы (headline + sub) продолжают работать: market по умолчанию = headline.
+    Для live-ставки: плашка «LIVE-СТАВКА: рынок · шанс», подпись «кэф от … · минута · пересчёт».
+    Для гола/старта: плашка события (color) и подпись sub.
     """
     market = market or headline
-    is_bet = bool(odds or chance) or bool(market and market != headline)   # это ставка, а не гол/начало
+    is_bet = bool(odds or chance) or bool(market and market != headline)
     hc, ac = _rgb(home["color"]), _rgb(away["color"], (180, 40, 40))
     img, d = _live_base(home, away, sport)
     _live_header(d, league)
-    _teams(img, d, home, away, hc, ac, top=88)
+    _side_teams(img, d, home, away, hc, ac, y=84, size=150)
     d = ImageDraw.Draw(img)
-    _live_score(img, d, hs, as_, minute)
-    footer = tally or sub
-    bottom = 676 if is_bet else (608 if footer else 568)
-    c1, c2 = (LIVE_PURPLE, LIVE_VIOLET) if is_bet else (color, _mix(color, (0, 0, 0), 0.45))
-    img = _shadow(img, (96, 416, W - 96, bottom), radius=30, dy=10, blur=16, alpha=130)
-    img = _glass(img, (96, 416, W - 96, bottom), c1, c2, radius=30)
-    d = ImageDraw.Draw(img)
-    d.text((132, 436), "БОТ ПОСТАВИЛ В LIVE" if is_bet else "ПРЯМОЙ ЭФИР",
-           font=font(20, "ExtraBold"), fill=(226, 217, 255) if is_bet else (235, 235, 235))
-    size = 50
-    while size > 30 and d.textlength(market, font=font(size, "ExtraBold")) > W - 132 - 320:
-        size -= 3
-    d.text((132, 462), market, font=font(size, "ExtraBold"), fill=WHITE)
-    if odds:   # золотая плашка с кэфом — ровно по центру, с тенью
-        img, d = _odds_pill(img, (W - 372, 430, W - 128, 512), "КЭФ ОТ", odds)
+    score = f"{hs} : {as_}"
+    size = 116
+    while size > 80 and d.textlength(score, font=font(size, "ExtraBold")) > 360:
+        size -= 4
+    d.text((W / 2, 160), score, font=font(size, "ExtraBold"), fill=WHITE, anchor="mm")
+    caption = ""
     if is_bet:
-        d.line([(132, 536), (W - 132, 536)], fill=(74, 66, 120), width=2)
-        label = f"ШАНС ПО МОДЕЛИ {chance}" if chance else "ШАНС ПО МОДЕЛИ"
-        d.text((132, 554), label, font=font(20, "ExtraBold"), fill=(214, 205, 255))
-        if chance:
-            p = float(str(chance).replace("%", "").replace(",", ".")) / 100 if "%" in str(chance) else float(chance)
-            _bar(d, 132, W - 132, 582, p, LIVE_VIOLET)
-        d.text((132, 608), "пересчёт по текущему счёту и оставшемуся времени", font=font(18, "Medium"),
-               fill=(150, 142, 190))
-        if footer:
-            d.text((132, 646), footer, font=font(20, "Medium"), fill=WHITE)
-    elif footer:
-        size = 24
-        while size > 18 and d.textlength(footer, font=font(size, "Medium")) > W - 264:
-            size -= 2
-        d.text((W / 2, 548), footer, font=font(size, "Medium"), fill=WHITE, anchor="mm")
+        label = f"LIVE-СТАВКА: {market}" + (f" · {chance}" if chance else "")
+        _pill(d, W / 2, 296, label, LIVE_PURPLE, size=30)
+        bits = []
+        if odds:
+            bits.append(f"кэф от {odds}")
+        if minute:
+            bits.append(str(minute))
+        bits.append("пересчёт по текущему счёту и времени")
+        caption = " · ".join(bits)
+    else:
+        _pill(d, W / 2, 296, market, color, size=34)
+        caption = sub
+    if caption:
+        f = 26
+        while f > 18 and d.textlength(caption, font=font(f, "Medium")) > W - 200:
+            f -= 2
+        d.text((W / 2, 392), caption, font=font(f, "Medium"), fill=(226, 230, 245), anchor="mm")
+    footer = tally or ""
+    if footer:
+        d.text((W / 2, 630), footer, font=font(20, "Medium"), fill=MUTED, anchor="mm")
     return _png(img, d, brand, sport)
 
 
 def live_result_card(league: str, home: dict, away: dict, hs, as_, market: str, odds: str = "", minute: str = "",
                      ok: bool = False, tally: str = "", brand: str = "", sport: str = "football") -> bytes:
-    """Итог LIVE-ставки: счёт, что ставили, по какому кэфу — и статус ЗАШЛА / НЕ ЗАШЛА."""
+    """Итог live-ставки в том же макете: заголовок, логотипы, счёт, плашка результата и серия."""
     hc, ac = _rgb(home["color"]), _rgb(away["color"], (180, 40, 40))
     img, d = _live_base(home, away, sport)
     _live_header(d, f"ИТОГ · {league}", prefix="")
-    _teams(img, d, home, away, hc, ac, top=88)
+    _side_teams(img, d, home, away, hc, ac, y=84, size=150)
     d = ImageDraw.Draw(img)
-    _live_score(img, d, hs, as_, minute)
-    col = (46, 204, 113) if ok else (231, 76, 60)
-    img = _shadow(img, (96, 416, W - 96, 676), radius=30, dy=10, blur=16, alpha=130)
-    img = _glass(img, (96, 416, W - 96, 676), _mix(col, (0, 0, 0), 0.35), _mix(col, (0, 0, 0), 0.62), radius=30)
-    d = ImageDraw.Draw(img)
-    d.text((132, 436), "СТАВКА НА LIVE", font=font(20, "ExtraBold"), fill=(226, 226, 226))
-    size = 50
-    while size > 28 and d.textlength(market, font=font(size, "ExtraBold")) > W - 132 - 320:
-        size -= 3
-    d.text((132, 462), market, font=font(size, "ExtraBold"), fill=WHITE)
-    if odds:
-        img, d = _odds_pill(img, (W - 372, 430, W - 128, 512), "КЭФ", odds)
-    d.rounded_rectangle((132, 560, W - 132, 626), radius=18, fill=_mix(col, (0, 0, 0), 0.62))
-    d.text((W / 2, 593), "СТАВКА ЗАШЛА" if ok else "СТАВКА НЕ ЗАШЛА", font=font(32, "ExtraBold"),
-           fill=_mix(col, (255, 255, 255), 0.25), anchor="mm")
+    score = f"{hs} : {as_}"
+    size = 104
+    while size > 72 and d.textlength(score, font=font(size, "ExtraBold")) > 360:
+        size -= 4
+    d.text((W / 2, 150), score, font=font(size, "ExtraBold"), fill=WHITE, anchor="mm")
+    d.text((W / 2, 224), "ФИНАЛ", font=font(22, "Medium"), fill=MUTED, anchor="mm")
+    col = GREEN if ok else RED
+    tail = f" @ {odds}" if odds else ""
+    _pill(d, W / 2, 296, f"LIVE: {market}{tail} — {'ЗАШЛА' if ok else 'НЕ ЗАШЛА'}", col, size=28)
     if tally:
-        d.text((W / 2, 650), tally, font=font(20, "Medium"), fill=(214, 214, 214), anchor="mm")
+        d.text((W / 2, 392), tally, font=font(24, "Medium"), fill=WHITE, anchor="mm")
     return _png(img, d, brand, sport)
 
 
