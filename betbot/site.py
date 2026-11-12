@@ -269,6 +269,7 @@ h1 span{background:linear-gradient(90deg,#ffc400,#ff7a3d);-webkit-background-cli
 .lm .t .l{color:var(--live)}.lm .n{display:flex;justify-content:space-between;gap:8px;font-weight:800;margin-top:4px}
 .lm .n span:first-child{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.lm .w{font-size:12px;color:var(--gold);font-weight:800;margin-top:auto;padding-top:6px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .lm .t span:first-child{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}.lm .t{gap:8px}.lm .t span:last-child{flex:none}
+.lm .lt{display:inline-flex;align-items:center;gap:4px;margin-top:7px;padding:2px 8px;border-radius:999px;background:rgba(124,58,237,.22);border:1px solid rgba(168,85,247,.5);color:#c9b8ff;font-size:10px;font-weight:900}
 .dot{display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--live);box-shadow:0 0 10px var(--live);animation:p 1.2s infinite;margin-right:4px}
 @keyframes p{50%{opacity:.35}}
 h2{font-size:19px;font-weight:900;margin:34px 0 12px;display:flex;align-items:center;gap:8px}
@@ -301,7 +302,7 @@ svg{width:100%;height:auto;display:block}svg .base{stroke:rgba(255,255,255,.25);
 .fr .m span{color:var(--muted);font-size:12px}.fr .r{text-align:right;font-size:12px;color:var(--muted)}.fr .r b{display:block;font-size:14px;color:var(--ink)}
 .fr.lv{background:linear-gradient(90deg,rgba(124,58,237,.20),rgba(124,58,237,.04));border-color:rgba(124,58,237,.45)}
 .fr.lv .m span{color:#c4b5fd}
-.fr .lvline{display:inline-flex;align-items:center;gap:5px;margin-top:6px;padding:3px 9px;border-radius:999px;background:rgba(124,58,237,.18);border:1px solid rgba(168,85,247,.5);color:#c9b8ff;font-size:12px;font-weight:800}
+.fr .lvline{display:inline-flex;align-items:center;gap:5px;margin-left:8px;margin-top:6px;padding:3px 9px;border-radius:999px;background:rgba(124,58,237,.18);border:1px solid rgba(168,85,247,.5);color:#c9b8ff;font-size:12px;font-weight:800}
 .more{display:none}.showall .more{display:grid}
 .mbtn{margin-top:10px;background:none;border:1px solid var(--line);color:var(--ink);font:700 13px Montserrat,sans-serif;border-radius:12px;padding:9px 14px;cursor:pointer}
 .cta{margin-top:34px;display:flex;gap:16px;align-items:center;justify-content:space-between;flex-wrap:wrap;padding:20px;border-radius:22px;
@@ -340,7 +341,7 @@ LIVE_JS = """
     return k < now && now - k < (DUR[m.sport] || 120) * 60e3;   // ESPN молчит — решаем по времени начала
   };
   let on = all.filter(going), title = '<span class="dot"></span>Сейчас в эфире — смотрите онлайн';
-  on.sort((a, b) => (b.tip ? 1 : 0) - (a.tip ? 1 : 0));
+  on.sort((a, b) => ((b.lt ? 2 : 0) + (b.tip ? 1 : 0)) - ((a.lt ? 2 : 0) + (a.tip ? 1 : 0)));
   if (!on.length) { on = all.filter(m => m.tip && new Date(m.kickoff).getTime() > now).slice(0, 4); title = "⏳ Ближайшие матчи с прогнозом бота"; }
   if (!on.length) { on = all.filter(m => new Date(m.kickoff).getTime() > now).slice(0, 4); title = "⏳ Ближайшие матчи онлайн"; }
   if (!on.length) return;
@@ -350,7 +351,7 @@ LIVE_JS = """
     const g = going(m);
     return `<a class="lm rv-skip" href="${esc(m.url)}" title="${esc(m.home + " — " + m.away + (m.tip ? " · " + m.tip : ""))}"><div class="t"><span>${EM[m.sport] || ""} ${esc(m.league)}</span><span class="${g ? "l" : ""}">${g ? "● " + esc(s?.state === "in" ? (s.clock || "LIVE") : "идёт") : t(m.kickoff)}</span></div>
       <div class="n"><span>${esc(m.home)} — ${esc(m.away)}</span><span>${s?.state === "in" ? esc(s.s) : ""}</span></div>
-      <div class="w">${m.tip ? "🎯 " + esc(m.tip) : "📺 Смотреть онлайн"}</div></a>`; }).join("")}</div>`;
+      <div class="w">${m.tip ? "🎯 " + esc(m.tip) : "📺 Смотреть онлайн"}</div>${m.lt ? `<div class="lt">⚡ LIVE-ПРОГНОЗ: ${esc(m.lt.label)} · ${Math.round((m.lt.p || 0) * 100)}%</div>` : ""}</a>`; }).join("")}</div>`;
   box.style.display = "block";
 })();
 """
