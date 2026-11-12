@@ -629,7 +629,7 @@ def matches_json(events: list[dict], stored: dict, now: pd.Timestamp) -> None:
     from . import live  # здесь, чтобы не тянуть live при импорте site
     from .pages import bb_search
     try:   # ⚡ live-прогнозы в моменте игры — пометка на карточке матча
-        tips = json.loads((DOCS / "live_tips.json").read_text(encoding="utf-8"))
+        tips = json.loads((MATCHES.parent / "live_tips.json").read_text(encoding="utf-8"))
     except (OSError, ValueError):
         tips = {}
     out = []
