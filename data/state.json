@@ -518,7 +518,8 @@
   "https://www.sport-express.ru/football/england/news/uzhin-associacii-byvshih-igrokov-myu-perenesli-so-stadiona-v-otel-2473962/",
   "https://www.sport-express.ru/hockey/world-u20/news/vyacheslav-bykov-sbornaya-rossii-byla-by-glavnym-pretendentom-na-pobedu-na-mchm-2027-2473975/",
   "https://www.sport-express.ru/tennis/wta/news/andreeva-o-pobede-nad-sobolenko-mne-udalos-napravit-plohuyu-mirru-v-pravilnuyu-storonu-2473976/",
-  "https://www.sport-express.ru/basketball/nba/news/stefen-karri-poluchil-travmu-zhivota-v-matche-s-hyustonom-2473978/"
+  "https://www.sport-express.ru/basketball/nba/news/stefen-karri-poluchil-travmu-zhivota-v-matche-s-hyustonom-2473978/",
+  "https://www.sport-express.ru/hockey/world/news/tretyak-o-zayavleniyah-federaciy-o-boykote-fhr-obratilas-v-sovet-po-etike-iihf-s-trebovaniem-nakazat-iniciatorov-2473981/"
  ],
  "news_i": 1,
  "oddspapi": {
@@ -1704,7 +1705,7 @@
  "streak_day": {
   "2026-11-08": 1
  },
- "news_next": "2026-11-12T11:37:20.220617+03:00",
+ "news_next": "2026-11-12T11:43:20.322975+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1731,5 +1732,5 @@
   "https://upload.wikimedia.org/wikipedia/commons/3/3f/Mikhail_Galaktionov_2020.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
  ],
  "indexnow_day": "2026-11-12",
- "vk_wall_err": "5133: попытка 3: VK photos.saveWallPhoto: 9 Flood control"
+ "vk_wall_err": "5133: попытка 3: VK photos.getWallUploadServer: 9 Flood control"
 }
