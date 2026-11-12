@@ -271,6 +271,7 @@ def crosspost(state: dict) -> int:
             state["vk_day"] = dl
             (state.get("vk_try") or {}).pop(str(pid), None)
             state.pop("vk_captcha", None)
+            state["vk_floods"] = 0
             state["vk_err"] = None
             done += 1
         except Exception as e:
@@ -288,14 +289,17 @@ def crosspost(state: dict) -> int:
                       "подтвердите вход/публикацию в самом ВК)")
                 break
             if "flood" in msg.lower() or ": 9" in msg:
-                # ВК ограничил частоту: старый бэклог не долбим — начинаем со свежих постов,
-                # иначе бот тратит часы на посты, которые уже неактуальны
+                # ВК ограничил частоту: старый бэклог не долбим — начинаем со свежих постов.
+                # Если флуд повторяется, пауза растёт: 1 час → 6 часов → 24 часа.
                 newest_now = max(int(k) for k in posts)
                 state["vk_last"] = max(pid, newest_now - 2)
                 tries.pop(str(pid), None)
-                state["vk_pause_ts"] = time.time() + PAUSE_S
-                print(f"  ВК: пауза {PAUSE_S // 60} минут — ВК ограничил частоту; "
-                      f"старый бэклог пропущен, продолжим после {state['vk_last']}")
+                n = int(state.get("vk_floods", 0)) + 1
+                state["vk_floods"] = n
+                pause = PAUSE_S if n == 1 else 6 * 3600 if n == 2 else 24 * 3600
+                state["vk_pause_ts"] = time.time() + pause
+                print(f"  ВК: Flood control №{n} — пауза {pause // 3600} ч; бэклог пропущен, "
+                      f"продолжим после {state['vk_last']}")
                 break
             if tries[str(pid)] >= TRIES_LIMIT:   # безнадёжный пост не должен держать очередь
                 state["vk_last"] = pid
