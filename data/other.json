@@ -7922,31 +7922,31 @@
   "kickoff": "2026-11-12T18:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Thu, November 12th at 10:00 AM EST",
   "home": {
-   "id": "1955",
-   "name": "Elizabeth Mandlik",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/1955.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/usa.png"
    ],
+   "id": "1955",
+   "name": "Elizabeth Mandlik",
    "country": "USA",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
    "ru": "Элизабет Мандлик"
   },
   "away": {
-   "id": "4291",
-   "name": "Andrea Lazaro Garcia",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/4291.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/esp.png"
    ],
+   "id": "4291",
+   "name": "Andrea Lazaro Garcia",
    "country": "Spain",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
@@ -8006,7 +8006,9 @@
   "btn": 4,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null
  },
  "WTA|186771": {
   "id": "186771",
