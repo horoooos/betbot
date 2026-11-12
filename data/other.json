@@ -8403,5 +8403,98 @@
  "DOTA|1793328": {
   "status": "skipped",
   "kickoff": "2026-11-12T22:00:00+03:00"
+ },
+ "WTA|187371": {
+  "id": "187371",
+  "div": "WTA",
+  "sport": "tennis",
+  "tournament": "FAGE WTA Finals Indian Wells",
+  "round": "Group Stage",
+  "bo5": false,
+  "kickoff": "2026-11-12T23:00:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "detail": "Thu, November 12th at 3:00 PM EST",
+  "home": {
+   "id": "3382",
+   "name": "Marta Kostyuk",
+   "logo": [
+    "https://a.espncdn.com/i/headshots/tennis/players/full/3382.png",
+    "https://a.espncdn.com/i/teamlogos/countries/500/ukr.png"
+   ],
+   "country": "Ukraine",
+   "color": "2d6a4f",
+   "winner": false,
+   "sets": [],
+   "set_won": [],
+   "ru": "Марта Костюк"
+  },
+  "away": {
+   "id": "3626",
+   "name": "Coco Gauff",
+   "logo": [
+    "https://a.espncdn.com/i/headshots/tennis/players/full/3626.png",
+    "https://a.espncdn.com/i/teamlogos/countries/500/usa.png"
+   ],
+   "country": "USA",
+   "color": "2d6a4f",
+   "winner": false,
+   "sets": [],
+   "set_won": [],
+   "ru": "Кори Гауфф"
+  },
+  "odds": {},
+  "probs": {
+   "TN_W1": 0.20402627012548924,
+   "TN_W2": 0.7959737298745108,
+   "TN_3S": 0.4121423988136968,
+   "TN_2S": 0.5878576011863033,
+   "TN_S2:0": 0.08433681459857309,
+   "TN_S0:2": 0.5035207865877301,
+   "TN_S2:1": 0.11968945552691608,
+   "TN_S1:2": 0.29245294328678073,
+   "TN_SET1": 0.49647921341226986,
+   "TN_SET2": 0.9156631854014269
+  },
+  "labels": {
+   "TN_W1": "Победа: Марта Костюк",
+   "TN_W2": "Победа: Кори Гауфф",
+   "TN_3S": "Будет 3 сета",
+   "TN_2S": "Будет 2 сета",
+   "TN_S2:0": "Счёт по сетам 2:0",
+   "TN_S0:2": "Счёт по сетам 0:2",
+   "TN_S2:1": "Счёт по сетам 2:1",
+   "TN_S1:2": "Счёт по сетам 1:2",
+   "TN_SET1": "Марта Костюк возьмёт хотя бы сет",
+   "TN_SET2": "Кори Гауфф возьмёт хотя бы сет"
+  },
+  "real": {},
+  "center": "Рейтинг Эло 1735 : 1972",
+  "bar": [
+   0.20402627012548924,
+   0,
+   0.7959737298745108
+  ],
+  "model": {
+   "elo": [
+    1735.1035733332305,
+    1971.5886311220993
+   ],
+   "src": "Эло"
+  },
+  "main": {
+   "key": "TN_2S",
+   "label": "Будет 2 сета",
+   "p": 0.5879,
+   "odds": 1.58,
+   "est": true,
+   "stake": 1.0
+  },
+  "bold": {},
+  "open": {},
+  "top": false,
+  "msg_id": 5231,
+  "btn": 4
  }
 }
