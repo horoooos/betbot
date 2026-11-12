@@ -126,6 +126,10 @@ def _bank_block(res: pd.DataFrame, now: pd.Timestamp) -> str:
     """💰 Виртуальный банк с 10 000 ₽: крупная сумма, изменение, мини-итоги и анимированный график по дням.
 
     График рисуем в двух вариантах — широкий для компьютера и компактный (выше, крупные подписи) для телефона."""
+    try:
+        lb = pro.live_bets()
+    except Exception:
+        lb = pd.DataFrame(columns=["hit"])
     days = pro.bank_daily(res)
     today = now.tz_convert("Europe/Moscow").strftime("%Y-%m-%d")
     pts = list(days)
@@ -203,10 +207,21 @@ def _bank_block(res: pd.DataFrame, now: pd.Timestamp) -> str:
             "все ставки бота и экспрессы. График растёт с каждой рассчитанной ставкой.") if n_all == 0 else \
         f"Ставка — рекомендованные ботом 1–3% от текущего банка; смелые и экспрессы — по 1%. Старт — {money(pro.BANK_START)} ₽."
     c = pro.bet_counts(res)
+    try:   # ⚡ live-ставки: считаем отдельно, они тоже в банке
+        live_n, live_w = len(lb), int((lb["hit"].astype(str).str.lower().isin(["true", "1", "1.0"])).sum())
+    except Exception:
+        live_n = live_w = 0
+    if not live_n:   # журнала ещё нет (он коммитится с нового цикла) — берём счёт из live_tips.json
+        try:
+            tips = json.loads((MATCHES.parent / "live_tips.json").read_text(encoding="utf-8"))
+            live_n = sum(1 for t in tips.values() if str(t.get("result")) in ("hit", "miss"))
+        except (OSError, ValueError):
+            live_n = 0
     nb = lambda v: f"{v:,}".replace(",", " ")   # noqa: E731
-    allb = (f'<span class="h">всего ставок бота: <b>{nb(c["total"])}</b></span>'   # просто счётчик — без процентов прошлого банка
+    allb = (f'<span class="h">всего ставок бота: <b>{nb(c["total"] + live_n)}</b></span>'   # просто счётчик — без процентов прошлого банка
             f'<span>🎯 основных <b>{nb(c["main"])}</b></span><span>🔥 смелых <b>{nb(c["bold"])}</b></span>'
-            f'<span>🧩 экспрессов <b>{nb(c["express"])}</b></span>')
+            f'<span>🧩 экспрессов <b>{nb(c["express"])}</b></span>'
+            f'<span>⚡ лайв <b>{nb(live_n)}</b></span>')
     wr = f"{100 * w_all / n_all:.0f}%" if n_all else "—"
     mx = money(best["bank"]) + " ₽" if best else "—"
     return f"""<style>{BANK_CSS}</style>
