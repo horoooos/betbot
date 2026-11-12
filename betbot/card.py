@@ -421,16 +421,14 @@ def result_card(league: str, home: dict, away: dict, hs: int, as_: int,
     _teams(img, d, home, away, hc, ac, top=110)
     d.text((W / 2, 210), f"{hs} : {as_}", font=font(110, "ExtraBold"), fill=WHITE, anchor="mm")
     d.text((W / 2, 290), "ФИНАЛ", font=font(26, "Medium"), fill=MUTED, anchor="mm")
-    vs = verdicts[:4]                 # 4-я плашка — LIVE-ставка, если бот её делал
-    four = len(vs) == 4
-    y = 424 if four else 470
-    for name, hit in vs:
+    y = 470
+    for name, hit in verdicts[:3]:
         text = f"{name} — {'ЗАШЁЛ' if hit else 'МИМО'}"
-        size = 26 if four else 30
-        while size > (18 if four else 20) and d.textlength(text, font=font(size, "ExtraBold")) > W - 300:
+        size = 30
+        while size > 20 and d.textlength(text, font=font(size, "ExtraBold")) > W - 300:
             size -= 2
         _pill(d, W // 2, y, text, GREEN if hit else RED, size=size)
-        y += size + (34 if four else 40)
+        y += size + 40
     return _png(img, d, brand, sport)
 
 
