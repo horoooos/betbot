@@ -180,3 +180,24 @@ def watch(events: list[dict], store: dict) -> None:
             notify_match(mid, f"{word} {h} {sc[0]}:{sc[1]} {a}", f"{'Сет взял(а)' if sport == 'tennis' else 'Забивает'}: {who}", link)
         if st == "post" and prev.get("st") != "post" and sc:
             notify_match(mid, f"🏁 Финал: {h} {sc[0]}:{sc[1]} {a}", "Разбор и статистика матча на сайте", link)
+
+def status(state: dict) -> dict:
+    """Диагностика push: есть ли ключ FIREBASE_SA, отвечает ли Firebase и сколько подписчиков.
+
+    Пишет результат в state["push"] — видно в data/state.json без журналов Actions.
+    """
+    out = {"on": enabled(), "subs": 0, "err": None}
+    if not out["on"]:
+        out["err"] = "нет FIREBASE_SA"
+        state["push"] = out
+        return out
+    try:
+        tok = _token()
+        if not tok:
+            raise RuntimeError("не удалось получить токен Google (проверьте FIREBASE_SA)")
+        out["subs"] = len(_subscribers(tok) or {})
+    except Exception as e:                     # noqa: BLE001
+        out["err"] = str(e)[:200]
+    state["push"] = out
+    return out
+

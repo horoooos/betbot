@@ -640,6 +640,7 @@ def main():
         print(f"  ! live-прогноз не удался: {e}")
     save_json(LIVE, live.cleanup(live_store, now))
     try:   # push-уведомления подписчикам сайта: голы и начало/конец матчей, за которыми они следят
+        push.status(state)   # диагностика: ключ Firebase, подписчики, ошибка — в data/state.json
         push.watch(events + other, state.setdefault("push_watch", {}))
         push.weekly(state, now, read_results())   # пятница 18:00 — «лучшее за неделю + экспресс выходных»
     except Exception as e:

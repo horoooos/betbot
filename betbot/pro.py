@@ -348,13 +348,18 @@ def settle_value(now: pd.Timestamp, load_history) -> None:
     log.to_csv(VALUE_LOG, index=False)
 
 
+VALUE_MIN_N = 20   # пока рассчитанных value-ставок меньше — статистику не публикуем (малая выборка врёт)
+
+
 def value_numbers() -> tuple[int, int, float] | None:
-    """(ставок, зашло, ROI %) по всем рассчитанным value-ставкам."""
+    """(ставок, зашло, ROI %) по всем рассчитанным value-ставкам. Меньше 20 — не показываем."""
     if not VALUE_LOG.exists():
         return None
     log = pd.read_csv(VALUE_LOG, dtype={"score": object, "hit": object, "announced": object})
     done = log[log["hit"].isin(["True", "False", True, False])]
     if done.empty:
+        return None
+    if len(done) < VALUE_MIN_N:
         return None
     win = done["hit"].astype(str) == "True"
     roi = float((win * (done["odds"].astype(float) - 1) - (~win)).mean() * 100)
