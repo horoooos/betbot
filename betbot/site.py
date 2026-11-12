@@ -301,7 +301,7 @@ svg{width:100%;height:auto;display:block}svg .base{stroke:rgba(255,255,255,.25);
 .fr .m span{color:var(--muted);font-size:12px}.fr .r{text-align:right;font-size:12px;color:var(--muted)}.fr .r b{display:block;font-size:14px;color:var(--ink)}
 .fr.lv{background:linear-gradient(90deg,rgba(124,58,237,.20),rgba(124,58,237,.04));border-color:rgba(124,58,237,.45)}
 .fr.lv .m span{color:#c4b5fd}
-.fr .lvline{display:block;margin-top:4px;color:#c4b5fd;font-size:12px;font-weight:800}
+.fr .lvline{display:inline-flex;align-items:center;gap:5px;margin-top:6px;padding:3px 9px;border-radius:999px;background:rgba(124,58,237,.18);border:1px solid rgba(168,85,247,.5);color:#c9b8ff;font-size:12px;font-weight:800}
 .more{display:none}.showall .more{display:grid}
 .mbtn{margin-top:10px;background:none;border:1px solid var(--line);color:var(--ink);font:700 13px Montserrat,sans-serif;border-radius:12px;padding:9px 14px;cursor:pointer}
 .cta{margin-top:34px;display:flex;gap:16px;align-items:center;justify-content:space-between;flex-wrap:wrap;padding:20px;border-radius:22px;
@@ -477,7 +477,7 @@ def build(res: pd.DataFrame, now: pd.Timestamp, blocks: dict | None = None) -> N
                 lo = "—"
             lives += (f'<span class="lvline">⚡ LIVE: {escape(lv["label"])} · кэф {lo} '
                       f'{"✅" if lv["ok"] else "❌"}</span>')
-        feed += (f'<div class="fr{" lv" if (it["live"] or lives) else ""}{" more" if i >= 15 else ""}">'
+        feed += (f'<div class="fr{" lv" if it["live"] else ""}{" more" if i >= 15 else ""}">'
                  f'<span class="ok">{"✅" if ok else "❌"}</span>'
                  f'<div class="m"><b>{escape(it["home"])}{" — " + escape(it["away"]) if it["away"] else ""}</b>'
                  f'<span>{badge + " · " if badge else ""}{it["emoji"]} {escape(it["label"])} · кэф {odds}</span>{lives}</div>'
