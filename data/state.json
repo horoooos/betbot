@@ -1558,7 +1558,9 @@
      "E70000",
      "992242"
     ],
-    "label": "Победа: Сборная Черногории"
+    "label": "Победа: Сборная Черногории",
+    "win": true,
+    "score": "2:1"
    }
   ],
   "odds": 1.905,
@@ -1569,7 +1571,7 @@
  "value_day": "2026-11-12",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-12",
- "site_stamp": "892|5281|2026-11-13 00",
+ "site_stamp": "893|5284|2026-11-13 00",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1716,7 +1718,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5263,
- "dz_last": 5281,
+ "dz_last": 5284,
  "vk_err": "5257: VK wall.post: 9 Flood control",
  "news_forced": "now",
  "vk_mode": "photo",
