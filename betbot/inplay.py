@@ -179,11 +179,9 @@ def run(store: dict, events: list[dict], matches: dict, brand: str) -> None:
             if not tip:
                 continue
             try:
-                png = card.live_card(live._league(e), e["home"], e["away"], *_score(e), tip["label"],
-                                     f"шанс {100 * tip['p']:.0f}% · кэф от {tip['min_odds']:.2f}", brand,
-                                     tip["sport"], color=(124, 58, 237), market=tip["label"],
-                                     odds=f"{tip['min_odds']:.2f}", chance=f"{100 * tip['p']:.0f}%",
-                                     minute=tip["minute"])
+                png = card.live_bet_card(live._league(e), e["home"], e["away"], *_score(e), tip["label"],
+                                         odds=f"{tip['min_odds']:.2f}", chance=f"{100 * tip['p']:.0f}%",
+                                         minute=tip["minute"], brand=brand, sport=tip["sport"])
                 text = (f"⚡ <b>LIVE-ПРОГНОЗ · {tip['minute']}</b>\n{escape(h)} <b>{tip['score']}</b> {escape(a)}\n\n"
                         f"🎯 <b>{escape(tip['label'])}</b> — шанс {100 * tip['p']:.0f}%\n"
                         f"💰 Справедливый кэф ≈{tip['fair']:.2f} · ставить, если у букмекера <b>от {tip['min_odds']:.2f}</b>\n"
@@ -210,9 +208,9 @@ def run(store: dict, events: list[dict], matches: dict, brand: str) -> None:
             text = (f"{'✅' if ok else '❌'} <b>LIVE-прогноз {'зашёл' if ok else 'не зашёл'}</b>: "
                     f"{escape(lt['label'])} · итог {fin[0]}:{fin[1]}\n📊 LIVE-прогнозы бота: {wins} из {total}")
             try:   # картинка с итогом — чтобы и в ВК/Дзене была видна ставка и её результат
-                png = card.live_result_card(_league(e), e["home"], e["away"], *fin, lt["label"],
-                                            odds=f"{lt.get('min_odds', 0):.2f}", minute=lt.get("minute", ""),
-                                            ok=ok, tally=f"LIVE-прогнозы бота: {wins} из {total}", brand=brand,
+                png = card.live_bet_result_card(_league(e), e["home"], e["away"], *fin, lt["label"],
+                                                odds=f"{lt.get('min_odds', 0):.2f}", minute=lt.get("minute", ""),
+                                                ok=ok, tally=f"LIVE-прогнозы бота: {wins} из {total}", brand=brand,
                                             sport=lt.get("sport", "football"))
                 telegram.send_photo(png, text, reply_to=st["msg"])
             except Exception as ex:
