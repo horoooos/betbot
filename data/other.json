@@ -6618,25 +6618,25 @@
   "kickoff": "2026-11-12T03:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Wed, November 11th at 7:00 PM EST",
   "clock": "0.0",
   "period": 0,
   "home": {
+   "color": "1d428a",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/ny.png",
    "id": "18",
    "name": "New York Knicks",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/ny.png",
-   "color": "1d428a",
    "score": "0",
    "record": "6-4",
    "periods": [],
    "ru": "Нью-Йорк Никс"
   },
   "away": {
+   "color": "860038",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/cle.png",
    "id": "5",
    "name": "Cleveland Cavaliers",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/cle.png",
-   "color": "860038",
    "score": "0",
    "record": "5-6",
    "periods": [],
@@ -6711,7 +6711,9 @@
   "btn": 4,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null
  },
  "NBA|401909968": {
   "id": "401909968",
@@ -6720,25 +6722,25 @@
   "kickoff": "2026-11-12T03:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Wed, November 11th at 7:00 PM EST",
   "clock": "0.0",
   "period": 0,
   "home": {
+   "color": "d91244",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/tor.png",
    "id": "28",
    "name": "Toronto Raptors",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/tor.png",
-   "color": "d91244",
    "score": "0",
    "record": "5-5",
    "periods": [],
    "ru": "Торонто Рэпторс"
   },
   "away": {
+   "color": "008348",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/bos.png",
    "id": "2",
    "name": "Boston Celtics",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/bos.png",
-   "color": "008348",
    "score": "0",
    "record": "9-2",
    "periods": [],
@@ -6813,7 +6815,9 @@
   "btn": 4,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null
  },
  "NHL|401892691": {
   "id": "401892691",
