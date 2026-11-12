@@ -1576,8 +1576,8 @@
  "streak_posted": 0,
  "value_day": "2026-11-12",
  "repost_done": "2026-11-02-news-strong",
- "table_day": "2026-11-11",
- "site_stamp": "880|5134|2026-11-12 11",
+ "table_day": "2026-11-12",
+ "site_stamp": "880|5135|2026-11-12 12",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1590,7 +1590,7 @@
    "NHL|401892702"
   ]
  },
- "value_check": "2026-11-12-3",
+ "value_check": "2026-11-12-4",
  "express_risk": {
   "msg": 4998,
   "legs": [
@@ -1727,7 +1727,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5132,
- "dz_last": 5134,
+ "dz_last": 5135,
  "vk_err": "5133: VK wall.post: 9 Flood control",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -1738,5 +1738,9 @@
   "https://upload.wikimedia.org/wikipedia/commons/3/3f/Mikhail_Galaktionov_2020.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
  ],
  "indexnow_day": "2026-11-12",
- "vk_wall_err": "5133: попытка 3: VK photos.getWallUploadServer: 9 Flood control"
+ "vk_wall_err": "5133: попытка 3: VK photos.getWallUploadServer: 9 Flood control",
+ "shorts_day": "2026-11-12",
+ "shorts_err": {
+  "youtube": "YouTube не подключён (нет секретов YT_*)"
+ }
 }
