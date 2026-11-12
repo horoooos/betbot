@@ -1744,7 +1744,7 @@
  "tg_offset": 727618641,
  "push_watch": {},
  "news_video": true,
- "vk_last": 5113,
+ "vk_last": 5115,
  "dz_last": 5115,
  "vk_err": null,
  "news_forced": "now",
@@ -1755,5 +1755,5 @@
   "https://images.cybersport.ru/images/as-is/plain/ac/ac12208a-caeb-4553-b73f-98b5e460de44.jpg"
  ],
  "indexnow_day": "2026-11-12",
- "vk_wall_err": null
+ "vk_wall_err": "5115: попытка 1: VK photos.saveWallPhoto: 100 One of the parameters specified was missing or invalid: photo is undefined"
 }
