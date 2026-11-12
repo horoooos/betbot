@@ -2754,5 +2754,43 @@ null
 "top": false,
 "bot": null,
 "lt": null
+},
+{
+"sport": "football",
+"id": "401877838",
+"league": "Колумбия · Примера A",
+"kickoff": "2026-11-14T04:30:00+03:00",
+"home": "Интернасьональ Богота",
+"away": "Independiente Santa Fe",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/7445.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/5488.png",
+"hid": "7445",
+"aid": "5488",
+"bb": "https://betboom.ru/search?query=%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B0%D1%81%D1%8C%D0%BE%D0%BD%D0%B0%D0%BB%D1%8C",
+"path": "soccer/col.1",
+"url": "live.html?s=football&p=soccer%2Fcol.1&e=401877838&h=%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B0%D1%81%D1%8C%D0%BE%D0%BD%D0%B0%D0%BB%D1%8C+%D0%91%D0%BE%D0%B3%D0%BE%D1%82%D0%B0&a=Independiente+Santa+Fe",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "basketball",
+"id": "401909301",
+"league": "США · NBA",
+"kickoff": "2026-11-14T04:30:00+03:00",
+"home": "Хьюстон Рокетс",
+"away": "Юта Джаз",
+"hl": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/hou.png",
+"al": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/utah.png",
+"hid": "10",
+"aid": "26",
+"bb": "https://betboom.ru/search?query=%D0%A5%D1%8C%D1%8E%D1%81%D1%82%D0%BE%D0%BD",
+"path": "basketball/nba",
+"url": "live.html?s=basketball&p=basketball%2Fnba&e=401909301&h=%D0%A5%D1%8C%D1%8E%D1%81%D1%82%D0%BE%D0%BD+%D0%A0%D0%BE%D0%BA%D0%B5%D1%82%D1%81&a=%D0%AE%D1%82%D0%B0+%D0%94%D0%B6%D0%B0%D0%B7",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
 }
 ]
