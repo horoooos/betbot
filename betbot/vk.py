@@ -270,6 +270,7 @@ def crosspost(state: dict) -> int:
             dl["n"] = dl.get("n", 0) + 1
             state["vk_day"] = dl
             (state.get("vk_try") or {}).pop(str(pid), None)
+            state.pop("vk_captcha", None)
             state["vk_err"] = None
             done += 1
         except Exception as e:
@@ -278,6 +279,14 @@ def crosspost(state: dict) -> int:
             state["vk_err"] = f"{pid}: {msg}"[:300]   # видно в data/state.json без журнала GitHub
             tries = state.setdefault("vk_try", {})
             tries[str(pid)] = tries.get(str(pid), 0) + 1
+            if "captcha" in msg.lower() or ": 14" in msg:
+                # ВК просит капчу — это его антибот-защита, автоматически её не решаем.
+                # Молчим 6 часов; публикации вернутся, когда вход в сообщество подтвердят вручную.
+                state["vk_pause_ts"] = time.time() + 6 * 3600
+                state["vk_captcha"] = True
+                print("  ВК: просит капчу — пауза 6 часов (защиту ВК обходим только вручную: "
+                      "подтвердите вход/публикацию в самом ВК)")
+                break
             if "flood" in msg.lower() or ": 9" in msg:
                 # ВК ограничил частоту: старый бэклог не долбим — начинаем со свежих постов,
                 # иначе бот тратит часы на посты, которые уже неактуальны
