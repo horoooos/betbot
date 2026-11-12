@@ -441,7 +441,7 @@ def result_card(league: str, home: dict, away: dict, hs: int, as_: int,
             label = label[:-2]
         d.text((178, y + rh / 2), label, font=font(26, "Bold"), fill=WHITE, anchor="lm")
         d.text((W - 172, y + rh / 2), "ЗАШЁЛ" if hit else "МИМО", font=font(24, "ExtraBold"), fill=col, anchor="rm")
-    return _png(img, d, brand)
+    return _png(img, d, brand, sport)
 
 
 LIVE_RED = (214, 32, 45)
@@ -483,6 +483,27 @@ def _live_score(img: Image.Image, d: ImageDraw.ImageDraw, hs, as_, minute: str =
         d.text((W / 2 + 6, 271), txt, font=font(22, "ExtraBold"), fill=WHITE, anchor="mm")
 
 
+def _shadow(img: Image.Image, box: tuple, radius: int = 18, dx: int = 0, dy: int = 8,
+            blur: int = 12, alpha: int = 110) -> Image.Image:
+    """Мягкая тень под плашкой — объём, как на карточках Claude."""
+    x0, y0, x1, y1 = box
+    layer = Image.new("RGBA", img.size, (0, 0, 0, 0))
+    ImageDraw.Draw(layer).rounded_rectangle((x0 + dx, y0 + dy, x1 + dx, y1 + dy), radius=radius, fill=(0, 0, 0, alpha))
+    layer = layer.filter(ImageFilter.GaussianBlur(blur))
+    return Image.alpha_composite(img.convert("RGBA"), layer).convert("RGB")
+
+
+def _odds_pill(img: Image.Image, box: tuple, label: str, value: str) -> tuple[Image.Image, ImageDraw.ImageDraw]:
+    """Золотая плашка с кэфом: подпись и число ровно по центру, с тенью (как в фирменных карточках)."""
+    img = _shadow(img, box, radius=20, dy=7, blur=10, alpha=120)
+    _gold_box(img, box, radius=20)   # рисует градиент на месте и возвращает None
+    d = ImageDraw.Draw(img)
+    cx = (box[0] + box[2]) / 2
+    d.text((cx, box[1] + 20), label, font=font(16, "ExtraBold"), fill=(84, 60, 4), anchor="mm")
+    d.text((cx, box[1] + 52), value, font=font(40, "ExtraBold"), fill=(38, 27, 0), anchor="mm")
+    return img, d
+
+
 def live_card(league: str, home: dict, away: dict, hs, as_, headline: str, sub: str = "", brand: str = "",
               sport: str = "football", color: tuple = RED, market: str = "", odds: str = "", chance: str = "",
               minute: str = "", tally: str = "") -> bytes:
@@ -501,6 +522,7 @@ def live_card(league: str, home: dict, away: dict, hs, as_, headline: str, sub: 
     footer = tally or sub
     bottom = 676 if is_bet else (608 if footer else 568)
     c1, c2 = (LIVE_PURPLE, LIVE_VIOLET) if is_bet else (color, _mix(color, (0, 0, 0), 0.45))
+    img = _shadow(img, (96, 416, W - 96, bottom), radius=30, dy=10, blur=16, alpha=130)
     img = _glass(img, (96, 416, W - 96, bottom), c1, c2, radius=30)
     d = ImageDraw.Draw(img)
     d.text((132, 436), "БОТ ПОСТАВИЛ В LIVE" if is_bet else "ПРЯМОЙ ЭФИР",
@@ -509,11 +531,8 @@ def live_card(league: str, home: dict, away: dict, hs, as_, headline: str, sub: 
     while size > 30 and d.textlength(market, font=font(size, "ExtraBold")) > W - 132 - 320:
         size -= 3
     d.text((132, 462), market, font=font(size, "ExtraBold"), fill=WHITE)
-    if odds:   # золотая плашка с кэфом — яркий акцент, как на карточках Claude
-        x0, x1 = W - 360, W - 136
-        d.rounded_rectangle((x0, 432, x1, 508), radius=18, fill=ACCENT)
-        d.text((x0 + 20, 442), "КЭФ ОТ", font=font(17, "ExtraBold"), fill=(70, 50, 0))
-        d.text((x1 - 20, 480), odds, font=font(44, "ExtraBold"), fill=(36, 26, 0), anchor="rs")
+    if odds:   # золотая плашка с кэфом — ровно по центру, с тенью
+        img, d = _odds_pill(img, (W - 372, 430, W - 128, 512), "КЭФ ОТ", odds)
     if is_bet:
         d.line([(132, 536), (W - 132, 536)], fill=(74, 66, 120), width=2)
         label = f"ШАНС ПО МОДЕЛИ {chance}" if chance else "ШАНС ПО МОДЕЛИ"
@@ -530,7 +549,7 @@ def live_card(league: str, home: dict, away: dict, hs, as_, headline: str, sub: 
         while size > 18 and d.textlength(footer, font=font(size, "Medium")) > W - 264:
             size -= 2
         d.text((W / 2, 548), footer, font=font(size, "Medium"), fill=WHITE, anchor="mm")
-    return _png(img, d, brand)
+    return _png(img, d, brand, sport)
 
 
 def live_result_card(league: str, home: dict, away: dict, hs, as_, market: str, odds: str = "", minute: str = "",
@@ -543,6 +562,7 @@ def live_result_card(league: str, home: dict, away: dict, hs, as_, market: str, 
     d = ImageDraw.Draw(img)
     _live_score(img, d, hs, as_, minute)
     col = (46, 204, 113) if ok else (231, 76, 60)
+    img = _shadow(img, (96, 416, W - 96, 676), radius=30, dy=10, blur=16, alpha=130)
     img = _glass(img, (96, 416, W - 96, 676), _mix(col, (0, 0, 0), 0.35), _mix(col, (0, 0, 0), 0.62), radius=30)
     d = ImageDraw.Draw(img)
     d.text((132, 436), "СТАВКА НА LIVE", font=font(20, "ExtraBold"), fill=(226, 226, 226))
@@ -551,16 +571,13 @@ def live_result_card(league: str, home: dict, away: dict, hs, as_, market: str, 
         size -= 3
     d.text((132, 462), market, font=font(size, "ExtraBold"), fill=WHITE)
     if odds:
-        x0, x1 = W - 360, W - 136
-        d.rounded_rectangle((x0, 432, x1, 508), radius=18, fill=ACCENT)
-        d.text((x0 + 20, 442), "КЭФ", font=font(17, "ExtraBold"), fill=(70, 50, 0))
-        d.text((x1 - 20, 480), odds, font=font(44, "ExtraBold"), fill=(36, 26, 0), anchor="rs")
+        img, d = _odds_pill(img, (W - 372, 430, W - 128, 512), "КЭФ", odds)
     d.rounded_rectangle((132, 560, W - 132, 626), radius=18, fill=_mix(col, (0, 0, 0), 0.62))
     d.text((W / 2, 593), "СТАВКА ЗАШЛА" if ok else "СТАВКА НЕ ЗАШЛА", font=font(32, "ExtraBold"),
            fill=_mix(col, (255, 255, 255), 0.25), anchor="mm")
     if tally:
         d.text((W / 2, 650), tally, font=font(20, "Medium"), fill=(214, 214, 214), anchor="mm")
-    return _png(img, d, brand)
+    return _png(img, d, brand, sport)
 
 
 def table_card(title: str, subtitle: str, header: tuple, rows: list[tuple], brand: str = "",
