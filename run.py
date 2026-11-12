@@ -19,7 +19,7 @@ import pandas as pd
 from betbot import card, content, directory, dzen, vk, esports, inplay, live, names, news, oddspapi, pages, pro, push, reviews, site, sports, tables, telegram, texts, watch
 from betbot import markets as mk
 from betbot.data import MSK, load_fixtures, load_history
-from betbot.engine import add_market, fit_full, fit_weights, walk_forward
+from betbot.engine import add_market, fit_full, fit_weights, fit_weights_lambda, walk_forward
 from betbot import extras
 from betbot.espn import _get as espn_get, scoreboard, summary
 from betbot.leagues import ALL, EXTRA, MAIN, NATIONAL, ORDER
@@ -194,7 +194,7 @@ def learn(state: dict, now: pd.Timestamp) -> None:
     try:
         hist = load_history(refresh_current=True, leagues=HIST_LEAGUES)
         start = str((now.tz_localize(None) - pd.Timedelta(days=730)).date())
-        state["weights"] = fit_weights(add_market(walk_forward(hist, start=start)))
+        state["weights"] = fit_weights_lambda(add_market(walk_forward(hist, start=start)))
         print(f"    переобучение: вес модели {state['weights']}")
     except Exception as e:
         print(f"  ! переобучение не удалось: {e}")
@@ -647,7 +647,7 @@ def main():
         print(f"  ! push не удался: {e}")
     try:   # 🎬 12:00 — вертикальный ролик «заход дня» (и «экспресс зашёл») в Telegram и ВК Клипы
         from betbot import shorts
-        shorts.run(state, now, read_results(), BRAND)
+        shorts.run(state, now, read_results(), BRAND, {**matches, **load_json(OTHER, {})})
     except Exception as e:
         print(f"  ! ролики не сделаны: {e}")
 

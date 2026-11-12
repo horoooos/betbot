@@ -132,3 +132,51 @@ def settle(bets: pd.DataFrame) -> pd.DataFrame:
 def fit_full(history: pd.DataFrame, league: str, as_of: pd.Timestamp, **model_kw) -> PoissonModel:
     df = history[(history["Div"] == league) & (history["Date"] >= as_of - pd.Timedelta(days=WINDOW_DAYS))]
     return PoissonModel(**model_kw).fit(df, as_of)
+
+def fit_weights_lambda(df: pd.DataFrame, rho: float = -0.08, max_rows: int = 8000) -> dict[str, float]:
+    """Вес модели, выученный в той же шкале, в которой применяется — по лямбдам.
+
+    Раньше вес подбирался на смеси вероятностей, а применялся к λ в run.lambdas — это разные операции.
+    Здесь обучение и применение идут в λ: для каждого w берём λ = модель^w · рынок^(1−w), строим
+    матрицу счёта (Пуассон + поправка Диксона-Коулза) и считаем log-loss 1X2 и ТБ/ТМ 2.5.
+    Считаем векторизованно и не больше max_rows матчей — иначе переобучение занимает минуты.
+    """
+    from scipy.stats import poisson
+
+    from .markets import implied_lambdas
+    sub = df.dropna(subset=["k_H", "k_D", "k_A", "m_xgH", "m_xgA", "FTHG", "FTAG"])
+    if len(sub) < 200:
+        return {"1X2": 0.0, "OU25": 0.0}
+    if len(sub) > max_rows:
+        sub = sub.sample(max_rows, random_state=1)
+    lams = np.array([implied_lambdas([r.k_H, r.k_D, r.k_A]) for r in sub.itertuples()], float)
+    kl, ka = lams[:, 0], lams[:, 1]
+    ml = sub["m_xgH"].to_numpy(float)
+    ma = sub["m_xgA"].to_numpy(float)
+    hg, ag = sub["FTHG"].to_numpy(int), sub["FTAG"].to_numpy(int)
+    res_out = np.where(hg > ag, 0, np.where(hg == ag, 1, 2))
+    ou_out = np.where(hg + ag > 2.5, 0, 1)
+    x = np.arange(11)
+    tot = x[:, None] + x[None, :]
+    mask_h, mask_d, mask_a = np.tril(np.ones((11, 11)), -1).astype(bool), np.eye(11, dtype=bool), np.triu(np.ones((11, 11)), 1).astype(bool)
+    best = {"1X2": (np.inf, 0.0), "OU25": (np.inf, 0.0)}
+    for w in np.linspace(0, 1, 21):
+        lh = np.power(ml, w) * np.power(kl, 1 - w)
+        la = np.power(ma, w) * np.power(ka, 1 - w)
+        m = poisson.pmf(x[None, :], lh[:, None])[:, :, None] * poisson.pmf(x[None, :], la[:, None])[:, None, :]
+        m[:, 0, 0] *= 1 - lh * la * rho
+        m[:, 0, 1] *= 1 + lh * rho
+        m[:, 1, 0] *= 1 + la * rho
+        m[:, 1, 1] *= 1 - rho
+        m /= m.sum(axis=(1, 2), keepdims=True)
+        p1x2 = np.stack([(m * mask_h).sum(axis=(1, 2)), (m * mask_d).sum(axis=(1, 2)),
+                         (m * mask_a).sum(axis=(1, 2))], axis=1)
+        p_ou = np.stack([m[:, tot > 2.5].sum(axis=1), m[:, tot < 2.5].sum(axis=1)], axis=1)
+        ll1 = -np.log(p1x2[np.arange(len(sub)), res_out] + 1e-12).mean()
+        ll2 = -np.log(p_ou[np.arange(len(sub)), ou_out] + 1e-12).mean()
+        if ll1 < best["1X2"][0]:
+            best["1X2"] = (ll1, float(w))
+        if ll2 < best["OU25"][0]:
+            best["OU25"] = (ll2, float(w))
+    return {"1X2": best["1X2"][1], "OU25": best["OU25"][1]}
+

@@ -71,7 +71,8 @@ def _sport_title(e: dict) -> str:
     return title(e["div"]) if e["div"] in ALL else sports.title(e["div"])
 
 
-def _favourites(football: list[dict], other: list[dict], now: pd.Timestamp, hours: int) -> list[dict]:
+def _favourites(football: list[dict], other: list[dict], now: pd.Timestamp, hours: int,
+                ratio: float = 1.0) -> list[dict]:
     """Кандидаты в экспресс: явные фавориты (60–82%) с реальным коэффициентом, в ближайшие N часов."""
     end = now + pd.Timedelta(hours=hours)
     legs = []
@@ -85,6 +86,7 @@ def _favourites(football: list[dict], other: list[dict], now: pd.Timestamp, hour
         p = mk.fair([o["H"], o["D"], o["A"]]) if o.get("D") else mk.fair([o["H"], o["A"]])
         ph, pa = float(p[0]), float(p[-1])
         side, prob, odds = ("home", ph, o["H"]) if ph >= pa else ("away", pa, o["A"])
+        prob = min(max(prob * ratio, 0.05), 0.95)   # поправка по истории экспрессов
         if 0.6 <= prob <= 0.82:
             team = e[side]["ru"]
             legs.append({"sport": e.get("sport", "football"), "div": e["div"], "id": e["id"], "side": side,
@@ -106,7 +108,9 @@ def _post(png: bytes, text: str) -> int:
 
 
 def express(state: dict, football, other, now, brand) -> bool:
-    legs = _favourites(football, other, now, 14)
+    from . import pro
+    ratio, _n = pro.express_calibration()
+    legs = _favourites(football, other, now, 14, ratio)
     picked, seen = [], set()
     for leg in legs:
         if leg["id"] not in seen:

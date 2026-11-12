@@ -157,6 +157,7 @@ def _date_ru(t: pd.Timestamp) -> str:
 
 
 NEW_PAGES: list[str] = []   # новые страницы этого прохода — сообщаем о них поисковикам (IndexNow)
+CHANGED_PAGES: list[str] = []   # изменённые существующие страницы — тоже переотправляем
 INDEXNOW_KEY = "a1s7a9v0v1t2b3o4t5i6n7d8e9x0n1o2"   # тот же ключ лежит в docs/<ключ>.txt — так поисковик проверяет, что сайт наш
 
 
@@ -164,16 +165,18 @@ def _write(path: Path, text: str) -> bool:
     path.parent.mkdir(parents=True, exist_ok=True)
     if path.exists() and path.read_text(encoding="utf-8") == text:
         return False
-    if not path.exists() and path.suffix == ".html":
-        NEW_PAGES.append(SITE + path.relative_to(DOCS).as_posix())
+    if path.suffix == ".html":
+        url = SITE + path.relative_to(DOCS).as_posix()
+        (NEW_PAGES if not path.exists() else CHANGED_PAGES).append(url)
     path.write_text(text, encoding="utf-8", newline=chr(10))   # одинаково на Windows и на сервере
     return True
 
 
 def indexnow(extra: list[str] | None = None) -> int:
     """Мгновенно сообщаем Яндексу и Bing о новых страницах (протокол IndexNow) — индексация за минуты, а не дни."""
-    urls = list(dict.fromkeys(NEW_PAGES + (extra or [])))[:1000]
+    urls = list(dict.fromkeys(NEW_PAGES + CHANGED_PAGES + (extra or [])))[:1000]
     NEW_PAGES.clear()
+    CHANGED_PAGES.clear()
     if not urls:
         return 0
     body = {"host": "horoooos.github.io", "key": INDEXNOW_KEY, "keyLocation": f"{SITE}{INDEXNOW_KEY}.txt", "urlList": urls}
@@ -551,6 +554,17 @@ BB_SPORT = "https://betboom.ru/sport/"   # обычная ссылка на ли
 def bb_url(sport: str) -> str:
     return BB_SPORT + {"football": "football", "hockey": "hockey", "basketball": "basketball", "tennis": "tennis"}.get(sport, "")
 
+def _utm(url: str, source: str = "site", medium: str = "button", content: str = "", campaign: str = "betbot") -> str:
+    """Метки UTM для партнёрских ссылок BetBoom — видно, откуда пришли переходы и регистрации."""
+    from urllib.parse import parse_qsl, urlencode, urlsplit, urlunsplit
+    parts = urlsplit(url)
+    q = dict(parse_qsl(parts.query))
+    q.update({"utm_source": source, "utm_medium": medium, "utm_campaign": campaign})
+    if content:
+        q["utm_content"] = content
+    return urlunsplit((parts.scheme, parts.netloc, parts.path, urlencode(q), parts.fragment))
+
+
 def bb_search(home: str, sport: str = "") -> str:
     """Поиск BetBoom по команде: betboom.ru/search?query=… сразу показывает её матчи с коэффициентами."""
     import re
@@ -560,7 +574,7 @@ def bb_search(home: str, sport: str = "") -> str:
     if re.search(r"[A-Za-z]", key) and not re.search(r"[А-Яа-яЁё]", key):   # в BetBoom всё по-русски: Brest → Брест
         from .names import translit
         key = translit(key)
-    return "https://betboom.ru/search?query=" + quote(key)
+    return _utm("https://betboom.ru/search?query=" + quote(key), "site", "search", content=sport)
 
 
 
@@ -675,6 +689,22 @@ def build(stores: dict, results: pd.DataFrame, now: pd.Timestamp, max_pages: int
     except Exception:
         pass
     urls = [("", "hourly", "1.0"), ("matches.html", "hourly", "0.9"), ("predictions/", "hourly", "0.9"), ("news/", "hourly", "0.9"), ("feed.html", "hourly", "0.6")]
+    # чистка: прогнозы вне окна и старые новости (иначе копятся тысячи страниц-сирот)
+    keep_pred = {m["url"] for m in ms}
+    for f in (DOCS / "predictions").glob("*.html"):
+        if f.name != "index.html" and f"predictions/{f.name}" not in keep_pred:
+            try:
+                f.unlink()
+            except OSError:
+                pass
+    keep_news = {n["url"] for n in news[:400]}
+    for f in (DOCS / "news").glob("*.html"):
+        if f.name != "index.html" and f"news/{f.name}" not in keep_news:
+            try:
+                if now.timestamp() - f.stat().st_mtime > 30 * 86400:
+                    f.unlink()
+            except OSError:
+                pass
     sm = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
     for u, f, pr in urls:
         sm.append(f"<url><loc>{SITE}{u}</loc><changefreq>{f}</changefreq><priority>{pr}</priority></url>")

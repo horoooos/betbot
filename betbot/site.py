@@ -512,7 +512,7 @@ def build(res: pd.DataFrame, now: pd.Timestamp, blocks: dict | None = None) -> N
 .fb10 .age{{position:absolute;right:14px;top:10px;font-size:11px;font-weight:800;opacity:.6}}
 @media(max-width:620px){{.fb10{{grid-template-columns:1fr;padding:20px}}.fb10 .go{{text-align:center}}.fb10 .c1{{right:12%}}.fb10 .c2{{display:none}}}}
 </style>
-<a class="fb10" href="https://app.betboom.ru/mIlkmXZpiS" target="_blank" rel="noopener sponsored">
+<a class="fb10" href="https://app.betboom.ru/mIlkmXZpiS?utm_source=site&utm_medium=banner&utm_campaign=betbot" target="_blank" rel="noopener sponsored">
   <i class="coin c1"></i><i class="coin c2"></i><span class="age">18+</span>
   <div style="position:relative;z-index:1"><div class="bb">BetBoom</div><div class="big">Фрибет<span>до 10 000 ₽</span></div>
   <div class="sub">за регистрацию<small>по ссылке друга — ставьте вместе с ботом</small></div></div>

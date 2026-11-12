@@ -164,9 +164,42 @@ def _site(store: dict, events: list[dict]) -> None:
         pass
 
 
+def _seed_log(store: dict) -> None:
+    """Первый запуск нового job: журнала live_bets.csv нет — восстанавливаем историю из live.json.
+
+    Названия команд берём из docs/matches.json (id → home/away), чтобы в ленте были не «NHL|123».
+    """
+    if LOG.exists() and LOG.stat().st_size > 40:
+        return
+    rows = []
+    try:
+        names = {str(m.get("id")): (m.get("home"), m.get("away"))
+                 for m in json.loads((ROOT / "docs" / "matches.json").read_text(encoding="utf-8"))}
+    except (OSError, ValueError):
+        names = {}
+    for key, st in store.items():
+        lt = (st or {}).get("lt") or {}
+        if lt.get("result") not in ("hit", "miss"):
+            continue
+        mid = str(key).split("|")[-1]
+        home, away = names.get(mid, (f"матч {mid}", ""))
+        ko = pd.Timestamp(st.get("kickoff") or pd.Timestamp.now(tz=MSK))
+        rows.append([ko.strftime("%Y-%m-%d"), f"{home} — {away}".strip(" —"), lt.get("label", ""), lt.get("p", ""),
+                     lt.get("fair", ""), lt.get("min_odds", ""), lt.get("minute", ""), "", lt["result"] == "hit"])
+    if not rows:
+        return
+    LOG.parent.mkdir(parents=True, exist_ok=True)
+    with LOG.open("w", encoding="utf-8", newline="") as f:
+        w = csv.writer(f)
+        w.writerow(["date", "match", "label", "p", "fair", "min_odds", "minute", "final", "hit"])
+        w.writerows(sorted(rows))
+    print(f"  live_bets.csv восстановлен из live.json: {len(rows)} записей")
+
+
 def run(store: dict, events: list[dict], matches: dict, brand: str) -> None:
     """store — data/live.json (ветка матча в Telegram: st['msg']); matches — прогнозы бота по ключу «div|id»."""
     from . import live
+    _seed_log(store)
     for e in events:
         key = f"{e['div']}|{e['id']}"
         st, m = store.get(key), matches.get(key)
@@ -178,6 +211,13 @@ def run(store: dict, events: list[dict], matches: dict, brand: str) -> None:
             tip = pick(e, m)
             if not tip:
                 continue
+            from . import pro
+            ratio, _n = pro.live_calibration()   # учимся на своих live-ставках
+            if ratio != 1.0:
+                p_adj = min(max(tip["p"] * ratio, 0.05), 0.95)
+                tip["p"] = round(p_adj, 3)
+                tip["fair"] = round(1 / p_adj, 2)
+                tip["min_odds"] = round(EDGE / p_adj, 2)
             try:
                 png = card.live_bet_card(live._league(e), e["home"], e["away"], *_score(e), tip["label"],
                                          odds=f"{tip['min_odds']:.2f}", chance=f"{100 * tip['p']:.0f}%",

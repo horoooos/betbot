@@ -233,6 +233,60 @@ def clip_express(ex: dict, w: int, n: int) -> bytes | None:
     return render([_scene_express(ex), _scene_cta(w, n)])
 
 
+def best_of_week(res: pd.DataFrame, day: pd.Timestamp) -> tuple[dict | None, int, int]:
+    """Лучший заход за последние 7 дней (самый высокий кэф) + счёт за этот период."""
+    r = res[pd.to_datetime(res["date"]).dt.normalize() > day.normalize() - pd.Timedelta(days=7)]
+    r = r[pd.to_numeric(r["main_odds"], errors="coerce") > 1]
+    hit = r["main_hit"].astype(str).str.lower().isin(["true", "1", "1.0"])
+    if not len(r) or not hit.any():
+        return None, int(hit.sum()), len(r)
+    b = r[hit].sort_values("main_odds", ascending=False).iloc[0]
+    from .live import _league
+    sport = b["sport"] if isinstance(b.get("sport"), str) else "football"
+    try:
+        league = _league({"div": str(b["div"]), "sport": sport})
+    except Exception:
+        league = ""
+    m = {"id": str(b["id"]), "sport": sport, "home": str(b["home"]), "away": str(b["away"]), "score": str(b["score"]),
+         "tip": str(b["main_label"]), "odds": float(b["main_odds"]),
+         "p": float(b["main_p"]) if pd.notna(b.get("main_p")) else None, "league": league}
+    m.update(_logos(m))
+    return m, int(hit.sum()), len(r)
+
+
+def clip_week(res: pd.DataFrame, day: pd.Timestamp) -> tuple[bytes | None, dict | None]:
+    m, w, n = best_of_week(res, day)
+    if not m:
+        return None, None
+    return render([_scene_pick(m), _scene_result(m), _scene_cta(w, n)]), m
+
+
+def _scene_top3(picks: list[dict]) -> Image.Image:
+    """Три самых надёжных прогноза дня: команды, рынок, шанс и кэф."""
+    img = _bg((26, 34, 82), (86, 30, 122))
+    d = ImageDraw.Draw(img)
+    _center(d, 80, "ТОП-3 ПРОГНОЗА БОТА", 60)
+    y = 176
+    for i, p in enumerate(picks[:3], 1):
+        d.rounded_rectangle((60, y, VW - 60, y + 148), radius=26, fill=(20, 26, 54))
+        d.text((104, y + 74), str(i), font=card.font(64, "ExtraBold"), fill=(255, 196, 0), anchor="lm")
+        teams = f'{p["home"]} — {p["away"]}'
+        size = 34
+        while size > 22 and d.textlength(teams, font=card.font(size, "ExtraBold")) > VW - 320:
+            size -= 2
+        d.text((160, y + 52), teams, font=card.font(size, "ExtraBold"), fill=WHITE, anchor="lm")
+        sub = f'{p["label"]} · шанс {round((p.get("p") or 0) * 100)}%' + (f' · кэф {p["odds"]:.2f}' if p.get("odds") else "")
+        d.text((160, y + 100), sub, font=card.font(26, "Medium"), fill=(190, 200, 230), anchor="lm")
+        y += 168
+    return img
+
+
+def clip_top3(picks: list[dict]) -> bytes | None:
+    if not picks:
+        return None
+    return render([_scene_top3(picks), _scene_cta(0, 0)])
+
+
 def _vk_video(mp4: bytes, name: str, desc: str) -> str | None:
     """Ролик на стену сообщества ВК (нужен личный ключ с правом video)."""
     from . import vk
@@ -285,6 +339,27 @@ def texts(kind: str, m: dict | None = None, ex: dict | None = None) -> dict:
         dz_desc = (f"Прогноз {tip} по кэфу {odds:.2f}, итог {score}. Как бот выбирает ставки и почему вся статистика открыта — "
                    f"в Telegram @aistavvit и на сайте {SITE}")
         dz_tags = ["прогнозы на спорт", "ставки", sp, h, a] + ([league] if league else [])
+    if kind == "week":
+        t = texts("best", m=m)
+        for k in ("tg", "vk_name", "vk_desc", "yt_title", "yt_desc", "dz_title", "dz_desc"):
+            t[k] = t[k].replace("Заход дня", "Лучший кэф недели").replace("заход дня", "лучший кэф недели")
+        return t
+    if kind == "top3":
+        picks = m or []
+        rows = "\n".join(f"{i}. {g['home']} — {g['away']}: {g['label']} · {round((g.get('p') or 0) * 100)}%"
+                          for i, g in enumerate(picks[:3], 1))
+        tag = "#топ3 #прогнозынаспорт #ставкинаспорт #аиставит"
+        return {
+            "tg": f"🎬 <b>Топ-3 прогноза бота на сегодня</b>\n\n{rows}\n\nБесплатно каждый день — @aistavvit · <a href=\"{SITE}\">сайт</a>\n\n#топ3 #заходдня #ставки",
+            "vk_name": "Топ-3 прогноза бота на сегодня",
+            "vk_desc": f"Три самых надёжных прогноза бота АИ СТАВИТ:\n\n{rows}\n\nTelegram: https://t.me/aistavvit\nСайт: {SITE}\n\n{tag}",
+            "yt_title": "Топ-3 прогноза бота на сегодня #shorts",
+            "yt_desc": f"Три самых надёжных прогноза дня от бота АИ СТАВИТ.\n\n{rows}\n\n📲 Telegram: https://t.me/aistavvit\n🌐 {SITE}\n\n18+. Прогноз — не гарантия.\n\n#shorts #прогнозынаспорт",
+            "yt_tags": ["топ 3 прогноза", "прогнозы на спорт", "ставки на спорт", "прогнозы футбол", "АИ СТАВИТ"],
+            "dz_title": "Топ-3 прогноза бота на сегодня",
+            "dz_desc": f"Три самых надёжных прогноза дня. {rows}",
+            "dz_tags": ["прогнозы на спорт", "ставки", "футбол", "топ-3"],
+        }
     else:
         title = ex.get("title", "Экспресс")
         legs = ex.get("legs", [])
@@ -356,9 +431,14 @@ def _dzen(state: dict, mp4: bytes, t: dict) -> None:
         print(f"  ! ролик для Дзена не отправлен: {e}")
 
 
-def run(state: dict, now: pd.Timestamp, res: pd.DataFrame, brand: str = "@aistavvit") -> None:
-    """Раз в день (12:00–13:00 МСК): ролик «лучший заход вчера» (+ «экспресс зашёл», если был) →
-    Telegram, ВК, YouTube Shorts (если подключён) и владельцу в личку для Дзена — у каждой платформы свой текст и теги."""
+def run(state: dict, now: pd.Timestamp, res: pd.DataFrame, brand: str = "@aistavvit",
+        preds: dict | None = None) -> None:
+    """Раз в день (12:00–13:00 МСК) — один ролик, по дням недели разные рубрики:
+
+    пн «заход дня», вт «экспресс зашёл», ср «лучший кэф недели», чт «топ-3 прогноза»,
+    пт «экспресс зашёл», сб/вс «заход дня». Публикуем в Telegram, ВК, YouTube (если подключён)
+    и владельцу в личку для Дзена — у каждой платформы свой текст и теги.
+    """
     from . import telegram
     now = now.tz_convert("Europe/Moscow")
     day = f"{now:%Y-%m-%d}"
@@ -366,29 +446,45 @@ def run(state: dict, now: pd.Timestamp, res: pd.DataFrame, brand: str = "@aistav
         return
     state["shorts_day"] = day
     yday = now.tz_localize(None).normalize() - pd.Timedelta(days=1)
-    clips = []
-    mp4, m = clip_best(res, yday)
-    if mp4:
-        clips.append((mp4, texts("best", m=m)))
-    try:
-        exs = json.loads((ROOT / "docs" / "express.json").read_text(encoding="utf-8"))
-        _, w, n = best_of_day(res, yday)
-        for ex in exs:
-            if ex.get("status") == "won" and ex.get("day") == f"{yday:%Y-%m-%d}":
-                mp = clip_express(ex, w, n)
-                if mp:
-                    clips.append((mp, texts("express", ex=ex)))
-    except (OSError, ValueError, KeyError):
-        pass
-    errs = {}
-    for mp4, t in clips:
+    kind = ("best", "express", "week", "top3", "express", "best", "best")[now.weekday()]
+    clip, t = None, None
+    if kind == "week":
+        clip, m = clip_week(res, yday)
+        t = texts("week", m=m) if clip else None
+    elif kind == "top3":
+        picks = []
+        for m in (preds or {}).values():
+            tip = m.get("main") or {}
+            if not tip.get("label") or not m.get("home", {}).get("ru"):
+                continue
+            picks.append({"home": m["home"]["ru"], "away": m["away"]["ru"], "label": tip["label"],
+                          "p": tip.get("p"), "odds": tip.get("odds")})
+        picks.sort(key=lambda x: -(x.get("p") or 0))
+        clip = clip_top3(picks)
+        t = texts("top3", m=picks) if clip else None
+    elif kind == "express":
         try:
-            telegram.send_video(mp4, t["tg"], width=VW, height=VH, duration=int(SCENE * 3 - FADE * 2))
-        except Exception as e:
-            print(f"  ! ролик в Telegram не отправлен: {e}")
-        errs["vk"] = _vk_video(mp4, t["vk_name"], t["vk_desc"])
-        errs["youtube"] = _youtube(mp4, t)
-        _dzen(state, mp4, t)
+            exs = json.loads((ROOT / "docs" / "express.json").read_text(encoding="utf-8"))
+            _, w, n = best_of_day(res, yday)
+            for ex in exs:
+                if ex.get("status") == "won" and ex.get("day") == f"{yday:%Y-%m-%d}":
+                    clip = clip_express(ex, w, n)
+                    t = texts("express", ex=ex) if clip else None
+                    break
+        except (OSError, ValueError, KeyError):
+            pass
+    if not clip:   # рубрика не сложилась — обычный «заход дня»
+        clip, m = clip_best(res, yday)
+        t = texts("best", m=m) if clip else None
+    if not clip:
+        return
+    errs = {}
+    try:
+        telegram.send_video(clip, t["tg"], width=VW, height=VH, duration=int(SCENE * 3 - FADE * 2))
+    except Exception as e:
+        print(f"  ! ролик в Telegram не отправлен: {e}")
+    errs["vk"] = _vk_video(clip, t["vk_name"], t["vk_desc"])
+    errs["youtube"] = _youtube(clip, t)
+    _dzen(state, clip, t)
     state["shorts_err"] = {k: v for k, v in errs.items() if v} or None
-    if clips:
-        print(f"  🎬 ролики: {len(clips)}")
+    print(f"  🎬 ролик ({kind}) готов")

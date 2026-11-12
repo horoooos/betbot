@@ -510,3 +510,40 @@ def _post(png: bytes, text: str) -> int:
     mid = telegram.send_photo(png, head)
     telegram.send(rest, reply_to=mid, silent=True)
     return mid
+
+# ── калибровка для live и экспрессов ────────────────────────────────────────
+
+def live_calibration() -> tuple[float, int]:
+    """Поправка к вероятностям live-ставок по их же истории: (ratio, сколько учтено).
+
+    Пока рассчитано меньше 10 live-ставок — 1.0 (не трогаем). Сглаживание 4 «воображаемыми» ставками.
+    """
+    lb = live_bets()
+    if lb is None or len(lb) < 10:
+        return 1.0, 0
+    lb = lb[lb["hit"].notna() & lb["p"].notna()]
+    if len(lb) < 10:
+        return 1.0, 0
+    p = lb["p"].astype(float)
+    hit = lb["hit"].astype(str).str.lower().isin(["true", "1", "1.0"])
+    ratio = (hit.sum() + 4 * p.mean()) / (p.sum() + 4 * p.mean())
+    return float(min(max(ratio, 0.8), 1.2)), len(lb)
+
+
+def express_calibration() -> tuple[float, int]:
+    """Поправка для экспрессов: факт заходов против обещанного (произведение шансов ног)."""
+    try:
+        ex = pd.read_csv(EXPRESS_LOG)
+    except (OSError, ValueError):
+        return 1.0, 0
+    if len(ex) < 10 or "hit" not in ex:
+        return 1.0, 0
+    ex = ex[ex["hit"].notna()]
+    if len(ex) < 10:
+        return 1.0, 0
+    hit = ex["hit"].astype(str).str.lower().isin(["true", "1", "1.0"])
+    p = pd.to_numeric(ex.get("p"), errors="coerce") if "p" in ex else pd.Series([0.5] * len(ex))
+    p = p.fillna(p.mean() if p.notna().any() else 0.5)
+    ratio = (hit.sum() + 3 * p.mean()) / (p.sum() + 3 * p.mean())
+    return float(min(max(ratio, 0.75), 1.25)), len(ex)
+
