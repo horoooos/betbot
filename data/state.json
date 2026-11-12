@@ -7,7 +7,6 @@
  "schedule_day": "2026-11-12",
  "content_slot": "2026-11-12-20",
  "news_seen": [
-  "https://www.sport-express.ru/hockey/nhl/news/luchshie-snaypery-nhl-10-noyabrya-2026-top-10-regulyarnogo-chempionata-lidery-po-golam-drayzaytl-kaprizov-gote-2473132/",
   "https://www.sport-express.ru/tennis/wta/news/sobolenko-zayavila-o-zhelanii-vzyat-revansh-u-andreevoy-na-itogovom-turnire-wta-2473136/",
   "https://www.sport-express.ru/football/rfpl/news/eks-skaut-cska-andreev-schitaet-chto-kislyak-gotov-k-perehodu-v-evropeyskiy-klub-2473149/",
   "valve-obnovila-sait-dota-2-i-vnesla-shest-izmenenii-v-steidzhing-server",
@@ -506,9 +505,10 @@
   "https://www.sport-express.ru/football/rusteam/news/agent-tyukavina-ob-igre-forvarda-s-uzbekistanom-neploho-sygral-ne-zabil-nichego-strashnogo-2474160/",
   "https://www.sport-express.ru/football/rusteam/news/silkin-o-pobede-sbornoy-rossii-nad-uzbekistanom-te-kto-igral-v-pervom-tayme-voobsche-ne-vpechatlili-2474168/",
   "https://www.sport-express.ru/tennis/wta/news/olhovskiy-o-pobede-andreevoy-nad-sobolenko-vyigrat-11-geymov-podryad-u-ariny-eto-chto-to-zaoblachnoe-2474167/",
-  "yekindar-u-nas-budet-nebolshoi-pereryv-pered-meidzhorom-eto-mozhet-sygrat-s-nami"
+  "yekindar-u-nas-budet-nebolshoi-pereryv-pered-meidzhorom-eto-mozhet-sygrat-s-nami",
+  "https://www.sport-express.ru/hockey/world-u20/news/rodnina-schitaet-nevozmozhnym-perenos-mchm-2027-iz-kanady-2474198/"
  ],
- "news_i": 2,
+ "news_i": 3,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1558,7 +1558,7 @@
  "value_day": "2026-11-12",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-12",
- "site_stamp": "885|5211|2026-11-12 21",
+ "site_stamp": "885|5212|2026-11-12 21",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1688,7 +1688,7 @@
  "streak_day": {
   "2026-11-08": 1
  },
- "news_next": "2026-11-12T21:19:02.421609+03:00",
+ "news_next": "2026-11-12T21:49:03.002032+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1705,7 +1705,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5132,
- "dz_last": 5211,
+ "dz_last": 5212,
  "vk_err": "5133: VK wall.post: 9 Flood control",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -1724,7 +1724,8 @@
   "https://images.cybersport.ru/images/as-is/plain/f2/f2ac6f30-28fc-4233-bc46-fd55f9fd8b6d.jpg",
   "https://images.cybersport.ru/images/as-is/plain/0e/0e1c90d0-4b5b-4a1a-b596-578ce9457562.jpg",
   "https://images.cybersport.ru/images/as-is/plain/ee/ee2d3d49-71f2-42f7-ad0d-fbd09717fd73.jpg",
-  "https://images.cybersport.ru/images/as-is/plain/0e/0e7d9576-039d-40a7-bb7a-fe371d6399e5.jpg"
+  "https://images.cybersport.ru/images/as-is/plain/0e/0e7d9576-039d-40a7-bb7a-fe371d6399e5.jpg",
+  "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/98/Alaska_Anchorage_Seawolves_at_Wisconsin_Badgers_men%27s_ice_hockey_men%27s_ice_hockey_game_on_November_25%2C_2023_at_Kohl_Center_in_Madison%2C_Wisconsin_5476.jpg/1280px-Alaska_Anchorage_Seawolves_at_Wisconsin_Badgers_men%27s_ice_hockey_men%27s_ice_hockey_game_on_November_25%2C_2023_at_Kohl_Center_in_Madison%2C_Wisconsin_5476.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
  ],
  "indexnow_day": "2026-11-12",
  "vk_wall_err": "5133: попытка 3: VK photos.getWallUploadServer: 9 Flood control",
