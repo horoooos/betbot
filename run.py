@@ -609,7 +609,7 @@ def main():
             save_json(MATCHES, matches)
 
     other_sports(state, other, now, calib, daily)
-    content.settle_express(state, finished_scores(events, other))
+    content.settle_express(state, finished_scores(events, other), BRAND)
     try:   # экспрессы — на главную сайта
         site.express_json(state)
     except Exception as e:

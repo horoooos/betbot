@@ -304,7 +304,7 @@ def match_card(league: str, when: str, home: dict, away: dict, probs: tuple[floa
 
     odds — кэф основного прогноза: тогда он крупно справа на золотой плашке, а прогноз — слева.
     """
-    hc, ac = _rgb(home["color"]), _rgb(away["color"], (180, 40, 40))
+    hc, ac = _rgb(home.get("color") or "3b4a7a"), _rgb(away.get("color") or "3b4a7a", (180, 40, 40))
     special = any(w.lower() in league.lower() for w in SPECIAL)
     img, d = _background(hc, ac, style="stars" if special else None)
     img = _sport_icon(img, sport)
@@ -413,7 +413,7 @@ def ai_card(prompt: str, title: str, subtitle: str = "", brand: str = "", sport:
 def result_card(league: str, home: dict, away: dict, hs: int, as_: int,
                 verdicts: list[tuple[str, bool]], brand: str = "", sport: str = "football") -> bytes:
     """Итог матча: логотипы, счёт и плашки ЗАШЁЛ / МИМО по каждому прогнозу."""
-    hc, ac = _rgb(home["color"]), _rgb(away["color"], (180, 40, 40))
+    hc, ac = _rgb(home.get("color") or "3b4a7a"), _rgb(away.get("color") or "3b4a7a", (180, 40, 40))
     img, d = _background(hc, ac)
     img = _sport_icon(img, sport)
     d = ImageDraw.Draw(img)
@@ -435,7 +435,7 @@ def result_card(league: str, home: dict, away: dict, hs: int, as_: int,
 def live_card(league: str, home: dict, away: dict, hs, as_, headline: str, sub: str = "", brand: str = "",
               sport: str = "football", color: tuple = RED) -> bytes:
     """Live-событие: «МАТЧ НАЧАЛСЯ», «ГОЛ!», «ШАЙБА!», «КАРТА!» — логотипы, текущий счёт и плашка."""
-    hc, ac = _rgb(home["color"]), _rgb(away["color"], (180, 40, 40))
+    hc, ac = _rgb(home.get("color") or "3b4a7a"), _rgb(away.get("color") or "3b4a7a", (180, 40, 40))
     img, d = _background(hc, ac)
     img = _sport_icon(img, sport)
     d = ImageDraw.Draw(img)
@@ -461,7 +461,7 @@ def live_bet_card(league: str, home: dict, away: dict, hs, as_, market: str, odd
                   chance: str = "", minute: str = "", tally: str = "", brand: str = "",
                   sport: str = "football") -> bytes:
     """⚡ LIVE-ставка бота: live-кадр канала + маленькая фиолетовая плашка-пилюля по центру."""
-    hc, ac = _rgb(home["color"]), _rgb(away["color"], (180, 40, 40))
+    hc, ac = _rgb(home.get("color") or "3b4a7a"), _rgb(away.get("color") or "3b4a7a", (180, 40, 40))
     img, d = _background(hc, ac)
     img = _sport_icon(img, sport)
     d = ImageDraw.Draw(img)
@@ -493,7 +493,7 @@ def live_bet_result_card(league: str, home: dict, away: dict, hs, as_, market: s
                          minute: str = "", ok: bool = False, tally: str = "", brand: str = "",
                          sport: str = "football") -> bytes:
     """Итог LIVE-ставки: тот же кадр, маленькая полукруглая плашка со ставкой и статусом."""
-    hc, ac = _rgb(home["color"]), _rgb(away["color"], (180, 40, 40))
+    hc, ac = _rgb(home.get("color") or "3b4a7a"), _rgb(away.get("color") or "3b4a7a", (180, 40, 40))
     img, d = _background(hc, ac)
     img = _sport_icon(img, sport)
     d = ImageDraw.Draw(img)
@@ -617,6 +617,90 @@ def express_card(legs: list[dict], total: float, p_all: float, day: str, brand: 
 
 
 TEAL_TOP, TEAL_BOTTOM = (110, 235, 220), (20, 150, 160)
+
+
+def express_result_card(legs: list[dict], total: float, day: str = "", brand: str = "", won: bool = True) -> bytes:
+    """Итог экспресса: крупный штамп ЗАШЁЛ/НЕ ЗАШЁЛ слева, события справа, плашка с кэфом внизу.
+
+    legs: home/away/label/odds/win/score. Работает для 2–6 событий (4+ — плотные строки).
+    """
+    legs = legs[:6]
+    n = len(legs)
+    green, dark_green = (46, 204, 113), (18, 60, 38)
+    red, dark_red = (255, 90, 90), (62, 22, 26)
+    accent = green if won else red
+    accent_bg = dark_green if won else dark_red
+    img, d = _background((10, 14, 32), (22, 30, 60), style="diagonal")
+    d.text((W / 2, 52), "ЭКСПРЕСС ДНЯ", font=font(44, "ExtraBold"), fill=ACCENT, anchor="mm")
+    d.line((W / 2 - 130, 82, W / 2 + 130, 82), fill=ACCENT, width=3)
+    d.text((W / 2, 106), f"{day} · {n} " + ("событие" if n == 1 else "события" if n < 5 else "событий"),
+           font=font(22, "Medium"), fill=MUTED, anchor="mm")
+    # штамп
+    d.rounded_rectangle((84, 140, 430, 540), radius=28, fill=accent_bg, outline=accent, width=4)
+    d.ellipse((180, 164, 334, 318), fill=accent)
+    if won:
+        d.line(((214, 246), (248, 282), (302, 212)), fill=(10, 40, 26), width=14)
+    else:
+        d.line(((216, 186), (298, 268)), fill=(60, 16, 20), width=14)
+        d.line(((298, 186), (216, 268)), fill=(60, 16, 20), width=14)
+    stamp = "ЗАШЁЛ" if won else "НЕ ЗАШЁЛ"
+    size = 58
+    while d.textlength(stamp, font=font(size, "ExtraBold")) > 300:
+        size -= 2
+    d.text((257, 376), stamp, font=font(size, "ExtraBold"), fill=accent, anchor="mm")
+    wins = sum(1 for leg in legs if leg.get("win"))
+    d.text((257, 434), f"{wins} из {n} событий", font=font(26, "Bold"),
+           fill=(150, 230, 180) if won else (255, 190, 190), anchor="mm")
+    d.text((257, 480), "экспресс собран полностью" if won else "экспресс сгорел",
+           font=font(17, "Medium"), fill=MUTED, anchor="mm")
+    # события
+    dense = n >= 4
+    row_h, gap, y = (74, 6, 136) if 4 <= n <= 5 else (62, 4, 130) if n >= 6 else (116, 14, 140)
+    for leg in legs:
+        d.rounded_rectangle((462, y, W - 84, y + row_h), radius=16, fill=(20, 26, 52), outline=(52, 64, 100), width=2)
+        cy = y + row_h // 2
+        pend = bool(leg.get("pending"))
+        ok = bool(leg.get("win")) and not pend
+        mk = (150, 158, 180) if pend else (green if ok else red)
+        if not dense:
+            d.ellipse((486, cy - 34, 514, cy - 6), fill=mk)
+            d.line(((490, cy - 27), (495, cy - 18), (504, cy - 30)), fill=(12, 30, 20), width=3) if ok else                 (d.line(((491, cy - 32), (509, cy - 8)), fill=(40, 10, 12), width=3),
+                 d.line(((509, cy - 32), (491, cy - 8)), fill=(40, 10, 12), width=3))
+            d.text((524, cy - 16), f"{leg['home']} — {leg['away']}", font=font(24, "ExtraBold"), fill=WHITE, anchor="lm")
+            d.text((524, cy + 22), "ещё не сыграно" if pend else leg["label"], font=font(19, "Medium"),
+                   fill=(160, 168, 190) if pend else (140, 225, 170) if ok else (255, 180, 180), anchor="lm")
+            d.text((W - 110, cy - 16), str(leg.get("score", "")), font=font(28, "ExtraBold"), fill=mk, anchor="rm")
+            d.text((W - 110, cy + 22), f"{leg['odds']:.2f}", font=font(20, "Bold"), fill=MUTED, anchor="rm")
+        else:
+            teams = f"{leg['home']} — {leg['away']}"
+            f19 = font(19 if n <= 5 else 18, "ExtraBold")
+            while d.textlength(teams, font=f19) > 360 and len(teams) > 12:
+                teams = teams[:-3] + "…"
+            lab = leg["label"]
+            f14 = font(14 if n <= 5 else 13, "Medium")
+            while d.textlength(lab, font=f14) > 360 and len(lab) > 8:
+                lab = lab[:-3] + "…"
+            d.ellipse((486, cy - 14, 506, cy + 6), fill=mk)
+            if pend:
+                d.text((496, cy - 4), "…", font=font(16, "ExtraBold"), fill=(20, 24, 34), anchor="mm")
+            elif ok:
+                d.line(((490, cy - 4), (494, cy + 2), (502, cy - 8)), fill=(12, 30, 20), width=2)
+            else:
+                d.line(((489, cy - 11), (503, cy + 3)), fill=(40, 10, 12), width=2)
+                d.line(((503, cy - 11), (489, cy + 3)), fill=(40, 10, 12), width=2)
+            d.text((518, cy - 13), teams, font=f19, fill=WHITE, anchor="lm")
+            d.text((518, cy + 16), "ещё не сыграно" if pend else lab, font=f14,
+                   fill=(160, 168, 190) if pend else (140, 225, 170) if ok else (255, 180, 180), anchor="lm")
+            d.text((W - 110, cy - 13), str(leg.get("score", "")), font=font(19, "ExtraBold"), fill=mk, anchor="rm")
+            d.text((W - 110, cy + 16), f"{leg['odds']:.2f}", font=font(15, "Bold"), fill=MUTED, anchor="rm")
+        y += row_h + gap
+    _gold_box(img, (84, 578, W - 84, 676))
+    d = ImageDraw.Draw(img)
+    dark = (40, 28, 6)
+    d.text((122, 627), f"ОБЩИЙ КЭФ {total:.2f}", font=font(38, "ExtraBold"), fill=dark, anchor="lm")
+    d.text((W - 122, 627), f"ВЫПЛАТА {total:.2f} × 1 ед." if won else "СТАВКА НЕ СЫГРАЛА",
+           font=font(24, "Bold"), fill=dark, anchor="rm")
+    return _png(img, d, brand)
 
 
 def _fit(d: ImageDraw.ImageDraw, text: str, size: int, max_w: int, weight: str = "Bold", min_size: int = 14):

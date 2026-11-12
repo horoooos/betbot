@@ -221,10 +221,10 @@ def _express_text(legs: list[dict], total: float, p_all: float) -> str:
 EXPRESSES = (("express", "ЭКСПРЕСС ДНЯ", "завтра в 10:00 новый"), ("express_risk", "ЭКСПРЕСС НА ЯЙЦАХ", "завтра в 20:00 новый"))
 
 
-def settle_express(state: dict, finished: dict) -> None:
+def settle_express(state: dict, finished: dict, brand: str = "") -> None:
     """finished: (div, id) → итоговый словарь с hs/as. Отмечаем каждый сыгранный матч обоих экспрессов."""
     for key, name, again in EXPRESSES:
-        _settle_one(state.get(key), finished, name, again)
+        _settle_one(state.get(key), finished, name, again, brand)
 
 
 EXPRESS_LOG = Path(__file__).resolve().parent.parent / "data" / "express_bets.csv"
@@ -245,7 +245,7 @@ def _log_express(name: str, ex: dict, ok: bool) -> None:
         print(f"  ! экспресс не записан в журнал: {e}")
 
 
-def _settle_one(ex: dict | None, finished: dict, name: str, again: str) -> None:
+def _settle_one(ex: dict | None, finished: dict, name: str, again: str, brand: str = "") -> None:
     if not ex or ex.get("done"):
         return
     fresh = False
@@ -275,6 +275,17 @@ def _settle_one(ex: dict | None, finished: dict, name: str, again: str) -> None:
         lines.append(f"\n<i>{'Касса! 💰 Экспресс собран полностью' if ok else f'Экспресс сгорел — {again} 🔄'}</i>")
         ex["done"] = True
         _log_express(name, ex, ok)   # в журнал — экспрессы входят в баланс бота наравне с одиночными ставками
+        try:   # картинка итога: крупный штамп ЗАШЁЛ/НЕ ЗАШЁЛ и события
+            rows = [dict(leg, pending="win" not in leg, win=bool(leg.get("win")), score=leg.get("score") or "—")
+                    for leg in ex["legs"]]
+            day_raw = str(ex.get("day") or "")
+            day_h = (f"{int(day_raw[8:10])} {MONTHS[int(day_raw[5:7]) - 1]}" if len(day_raw) >= 10 else "")
+            png = card.express_result_card(rows, float(ex["odds"]), day=day_h, brand=brand, won=ok)
+            telegram.send_photo(png, "\n".join(lines), reply_to=ex["msg"])
+        except Exception as ex2:
+            print(f"  ! картинка экспресса не отправлена: {ex2}")
+            telegram.send("\n".join(lines))
+        return
     else:  # промежуточный итог: событие зашло, ждём остальные
         lines = [f"🔥 <b>{name}: {len(played)} из {len(ex['legs'])} уже зашли!</b>"] + [row(leg) for leg in played]
         lines += [f"⏳ {escape(leg['home'])} — {escape(leg['away'])} · {escape(leg['label'])} · "
