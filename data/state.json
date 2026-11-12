@@ -1725,9 +1725,9 @@
  "tg_offset": 727618641,
  "push_watch": {},
  "news_video": true,
- "vk_last": 5234,
+ "vk_last": 5245,
  "dz_last": 5247,
- "vk_err": "5133: VK wall.post: 9 Flood control",
+ "vk_err": "5235: VK wall.post: 9 Flood control",
  "news_forced": "now",
  "vk_mode": "photo",
  "dz_err": "4987: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))",
@@ -1749,7 +1749,7 @@
   "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/98/Alaska_Anchorage_Seawolves_at_Wisconsin_Badgers_men%27s_ice_hockey_men%27s_ice_hockey_game_on_November_25%2C_2023_at_Kohl_Center_in_Madison%2C_Wisconsin_5476.jpg/1280px-Alaska_Anchorage_Seawolves_at_Wisconsin_Badgers_men%27s_ice_hockey_men%27s_ice_hockey_game_on_November_25%2C_2023_at_Kohl_Center_in_Madison%2C_Wisconsin_5476.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
  ],
  "indexnow_day": "2026-11-12",
- "vk_wall_err": "5133: попытка 3: VK photos.getWallUploadServer: 9 Flood control",
+ "vk_wall_err": "5235: попытка 3: VK photos.getWallUploadServer: 9 Flood control",
  "shorts_day": "2026-11-12",
  "shorts_err": {
   "youtube": "YouTube не подключён (нет секретов YT_*)"
@@ -1764,5 +1764,5 @@
   "kickoff": "2026-11-13T01:00:00+03:00"
  },
  "vk_try": {},
- "vk_pause_ts": 1794513079.7524176
+ "vk_pause_ts": 1794515007.8149235
 }
