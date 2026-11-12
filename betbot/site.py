@@ -446,10 +446,12 @@ def build(res: pd.DataFrame, now: pd.Timestamp, blocks: dict | None = None) -> N
         for _, r in pro.live_bets().tail(40).iterrows():
             mt = str(r.get("match") or "")
             h_, sep, a_ = mt.partition(" — ")
+            fin = r.get("final")
+            fin = "" if fin is None or pd.isna(fin) or str(fin).lower() in ("nan", "none") else str(fin)
             items.append({"d": str(r["date"])[:10], "ok": str(r["hit"]).lower() in ("true", "1", "1.0"),
                           "home": h_ or mt, "away": a_ if sep else "",
                           "label": str(r.get("label") or ""), "odds": r.get("min_odds"),
-                          "score": str(r.get("final") or ""), "live": True, "emoji": "⚡"})
+                          "score": fin, "live": True, "emoji": ""})
     except Exception:
         pass
     items.sort(key=lambda x: x["d"], reverse=True)

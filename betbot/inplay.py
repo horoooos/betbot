@@ -165,27 +165,58 @@ def _site(store: dict, events: list[dict]) -> None:
 
 
 def _seed_log(store: dict) -> None:
-    """Первый запуск нового job: журнала live_bets.csv нет — восстанавливаем историю из live.json.
+    """Журнал live_bets.csv: восстановление из live.json и починка названий команд.
 
-    Названия команд берём из docs/matches.json (id → home/away), чтобы в ленте были не «NHL|123».
+    Названия берём из docs/matches.json и results.csv (id → home/away), иначе пишем «LIVE-ставка».
     """
-    if LOG.exists() and LOG.stat().st_size > 40:
-        return
-    rows = []
+    names, scores = {}, {}
     try:
-        names = {str(m.get("id")): (m.get("home"), m.get("away"))
-                 for m in json.loads((ROOT / "docs" / "matches.json").read_text(encoding="utf-8"))}
+        for m in json.loads((ROOT / "docs" / "matches.json").read_text(encoding="utf-8")):
+            names[str(m.get("id"))] = (m.get("home"), m.get("away"))
     except (OSError, ValueError):
-        names = {}
+        pass
+    try:
+        res = pd.read_csv(ROOT / "data" / "results.csv", dtype=str)
+        for r in res.itertuples():
+            names.setdefault(str(r.id), (r.home, r.away))
+            scores.setdefault(str(r.id), str(r.score))
+    except (OSError, ValueError):
+        pass
+
+    if LOG.exists() and LOG.stat().st_size > 40:
+        try:   # починить ранее восстановленные строки «матч 4018…»
+            cur = list(csv.DictReader(LOG.open(encoding="utf-8")))
+            bad = 0
+            for r in cur:
+                mt = str(r.get("match", ""))
+                if mt.startswith("матч "):
+                    mid = mt.replace("матч ", "").strip()
+                    if mid in names:
+                        r["match"] = f"{names[mid][0]} — {names[mid][1]}".strip(" —")
+                        if not str(r.get("final", "")).strip():
+                            r["final"] = scores.get(mid, "")
+                        bad += 1
+            if bad:
+                with LOG.open("w", encoding="utf-8", newline="") as fh:
+                    w = csv.DictWriter(fh, fieldnames=list(cur[0].keys()))
+                    w.writeheader()
+                    w.writerows(cur)
+                print(f"  live_bets.csv: исправлены названия у {bad} записей")
+        except (OSError, ValueError, KeyError) as e:
+            print(f"  ! не удалось починить live_bets.csv: {e}")
+        return
+
+    rows = []
     for key, st in store.items():
         lt = (st or {}).get("lt") or {}
         if lt.get("result") not in ("hit", "miss"):
             continue
         mid = str(key).split("|")[-1]
-        home, away = names.get(mid, (f"матч {mid}", ""))
-        ko = pd.Timestamp(st.get("kickoff") or pd.Timestamp.now(tz=MSK))
+        home, away = names.get(mid, ("LIVE-ставка", ""))
+        ko = pd.Timestamp(st.get("kickoff") or pd.Timestamp.now(tz="Europe/Moscow"))
         rows.append([ko.strftime("%Y-%m-%d"), f"{home} — {away}".strip(" —"), lt.get("label", ""), lt.get("p", ""),
-                     lt.get("fair", ""), lt.get("min_odds", ""), lt.get("minute", ""), "", lt["result"] == "hit"])
+                     lt.get("fair", ""), lt.get("min_odds", ""), lt.get("minute", ""), scores.get(mid, ""),
+                     lt["result"] == "hit"])
     if not rows:
         return
     LOG.parent.mkdir(parents=True, exist_ok=True)
@@ -194,7 +225,6 @@ def _seed_log(store: dict) -> None:
         w.writerow(["date", "match", "label", "p", "fair", "min_odds", "minute", "final", "hit"])
         w.writerows(sorted(rows))
     print(f"  live_bets.csv восстановлен из live.json: {len(rows)} записей")
-
 
 def run(store: dict, events: list[dict], matches: dict, brand: str) -> None:
     """store — data/live.json (ветка матча в Telegram: st['msg']); matches — прогнозы бота по ключу «div|id»."""
