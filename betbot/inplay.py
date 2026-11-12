@@ -164,6 +164,16 @@ def _site(store: dict, events: list[dict]) -> None:
         pass
 
 
+def _log_err(msg: str) -> None:
+    """Ошибки live-карточек в data/live_err.txt — иначе они видны только в журнале Actions."""
+    print(f"  ! {msg}")
+    try:
+        with (ROOT / "data" / "live_err.txt").open("a", encoding="utf-8") as fh:
+            fh.write(msg[:500] + "\n")
+    except OSError:
+        pass
+
+
 def _seed_log(store: dict) -> None:
     """Журнал live_bets.csv: восстановление из live.json и починка названий команд.
 
@@ -277,16 +287,27 @@ def run(store: dict, events: list[dict], matches: dict, brand: str) -> None:
             wins, total = _tally()
             text = (f"{'✅' if ok else '❌'} <b>LIVE-прогноз {'зашёл' if ok else 'не зашёл'}</b>: "
                     f"{escape(lt['label'])} · итог {fin[0]}:{fin[1]}\n📊 LIVE-прогнозы бота: {wins} из {total}")
+            png = None
             try:   # картинка с итогом — чтобы и в ВК/Дзене была видна ставка и её результат
                 png = card.live_bet_result_card(_league(e), e["home"], e["away"], *fin, lt["label"],
                                                 odds=f"{lt.get('min_odds', 0):.2f}", minute=lt.get("minute", ""),
                                                 ok=ok, tally=f"LIVE-прогнозы бота: {wins} из {total}", brand=brand,
                                             sport=lt.get("sport", "football"))
-                telegram.send_photo(png, text, reply_to=st["msg"])
             except Exception as ex:
-                print(f"  ! картинка итога live-прогноза не отправлена: {ex}")
+                _log_err(f"{key}: карточка итога — {type(ex).__name__}: {ex}")
+            if png:
+                try:
+                    telegram.send_photo(png, text, reply_to=st["msg"])
+                except Exception as ex:
+                    _log_err(f"{key}: фото с ответом — {type(ex).__name__}: {ex}")
+                    try:   # повтор без привязки к сообщению: картинка важнее «ответа в ветке»
+                        telegram.send_photo(png, text)
+                    except Exception as ex2:
+                        _log_err(f"{key}: фото без ответа — {type(ex2).__name__}: {ex2}")
+                        png = None
+            if png is None:
                 try:
                     telegram.send(text, reply_to=st["msg"], silent=True)
                 except Exception as ex2:
-                    print(f"  ! итог live-прогноза не отправлен: {ex2}")
+                    _log_err(f"{key}: текст итога — {type(ex2).__name__}: {ex2}")
     _site(store, events)

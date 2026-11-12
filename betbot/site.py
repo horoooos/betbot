@@ -353,7 +353,7 @@ LIVE_JS = """
     const g = going(m);
     return `<a class="lm rv-skip" href="${esc(m.url)}" title="${esc(m.home + " — " + m.away + (m.tip ? " · " + m.tip : ""))}"><div class="t"><span>${EM[m.sport] || ""} ${esc(m.league)}</span><span class="${g ? "l" : ""}">${g ? "● " + esc(s?.state === "in" ? (s.clock || "LIVE") : "идёт") : t(m.kickoff)}</span></div>
       <div class="n"><span>${esc(m.home)} — ${esc(m.away)}</span><span>${s?.state === "in" ? esc(s.s) : ""}</span></div>
-      <div class="w">${m.tip ? "🎯 " + esc(m.tip) : "📺 Смотреть онлайн"}</div>${m.lt ? `<div class="lt">⚡ LIVE-ПРОГНОЗ: ${esc(m.lt.label)} · ${Math.round((m.lt.p || 0) * 100)}%</div>` : ""}</a>`; }).join("")}</div>`;
+      ${m.lt ? `<div class="lt">⚡ LIVE-ПРОГНОЗ: ${esc(m.lt.label)} · ${Math.round((m.lt.p || 0) * 100)}%</div>` : ""}<div class="w">${m.tip ? "🎯 " + esc(m.tip) : "📺 Смотреть онлайн"}</div></a>`; }).join("")}</div>`;
   box.style.display = "block";
 })();
 """
