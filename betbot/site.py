@@ -628,6 +628,10 @@ def matches_json(events: list[dict], stored: dict, now: pd.Timestamp) -> None:
     """
     from . import live  # здесь, чтобы не тянуть live при импорте site
     from .pages import bb_search
+    try:   # ⚡ live-прогнозы в моменте игры — пометка на карточке матча
+        tips = json.loads((DOCS / "live_tips.json").read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        tips = {}
     out = []
     for e in events:
         sport = e.get("sport", "football")
@@ -652,7 +656,8 @@ def matches_json(events: list[dict], stored: dict, now: pd.Timestamp) -> None:
                     "bb": bb_search(h, sport),   # поиск BetBoom по команде — матч сразу в списке
                     "path": btn[1].split("p=")[1].split("&")[0].replace("%2F", "/"), "url": btn[1].replace(live.TRACKER, "live.html"),
                     "tip": f"{tip['label']} · {'≈' if tip.get('est') else ''}{tip['odds']:.2f}" if tip.get("label") and tip.get("odds") else "",
-                    "top": bool(m.get("top")), "bot": _bot_block(m)})
+                    "top": bool(m.get("top")), "bot": _bot_block(m),
+                    "lt": tips.get(str(e["id"]))})
     out.sort(key=lambda x: (x["kickoff"], x["league"]))
     text = json.dumps(out, ensure_ascii=False, indent=0)
     if not MATCHES.exists() or MATCHES.read_text(encoding="utf-8") != text:

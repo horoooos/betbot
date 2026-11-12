@@ -465,11 +465,11 @@ def post_streak(state: dict, res: pd.DataFrame, brand: str, force: bool = False)
         return
     day = str(pd.Timestamp.now(tz="Europe/Moscow").date())
     cnt = state.setdefault("streak_day", {})
+    for k in [k for k in cnt if k != day]:   # держим только сегодняшний счётчик, а не обнуляем его
+        cnt.pop(k, None)
     if not force and cnt.get(day, 0) >= STREAK_PER_DAY:
         return
-    cnt.clear()
     cnt[day] = cnt.get(day, 0) + 1
-    state["streak_posted"] = n
     tail = res.tail(n)
     odds = tail["main_odds"].astype(float)
     total = float(np.prod(odds))
@@ -490,6 +490,7 @@ def post_streak(state: dict, res: pd.DataFrame, brand: str, force: bool = False)
     icon = sports_in[0] if len(sports_in) == 1 else "football"  # иконка вида спорта, из которого серия
     png = card.streak_card(rows, n, total, brand, sport=icon)
     _post(png, "\n".join(lines))
+    state["streak_posted"] = n   # только после успешной публикации — иначе при сбое серия не повторится
     print(f"Серия: {n} заходов подряд")
 
 
