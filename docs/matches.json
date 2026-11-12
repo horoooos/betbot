@@ -1,222 +1,5 @@
 [
 {
-"sport": "football",
-"id": "401931296",
-"league": "Сборные · Товарищеские матчи",
-"kickoff": "2026-11-12T20:30:00+03:00",
-"home": "Сборная Мальты",
-"away": "Сборная Свазиленда",
-"hl": "https://a.espncdn.com/i/teamlogos/countries/500/mlt.png",
-"al": "https://a.espncdn.com/i/teamlogos/countries/500/swz.png",
-"hid": "453",
-"aid": "6686",
-"bb": "https://betboom.ru/search?query=%D0%A1%D0%B1%D0%BE%D1%80%D0%BD%D0%B0%D1%8F&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
-"path": "soccer/fifa.friendly",
-"url": "live.html?s=football&p=soccer%2Ffifa.friendly&e=401931296&h=%D0%A1%D0%B1%D0%BE%D1%80%D0%BD%D0%B0%D1%8F+%D0%9C%D0%B0%D0%BB%D1%8C%D1%82%D1%8B&a=%D0%A1%D0%B1%D0%BE%D1%80%D0%BD%D0%B0%D1%8F+%D0%A1%D0%B2%D0%B0%D0%B7%D0%B8%D0%BB%D0%B5%D0%BD%D0%B4%D0%B0",
-"tip": "ТМ 2.5 · 1.65",
-"top": false,
-"bot": {
-"main": {
-"label": "ТМ 2.5",
-"p": 0.56,
-"odds": 1.65,
-"est": false
-},
-"bold": null,
-"markets": [
-[
-"П1",
-0.642,
-1.465
-],
-[
-"Ничья",
-0.238,
-4.3
-],
-[
-"П2",
-0.12,
-7.0
-],
-[
-"1X",
-0.88,
-null
-],
-[
-"X2",
-0.358,
-null
-],
-[
-"ТБ 1.5",
-0.707,
-null
-],
-[
-"ТБ 2.5",
-0.44,
-2.15
-],
-[
-"ТМ 2.5",
-0.56,
-1.645
-],
-[
-"ТБ 3.5",
-0.229,
-null
-],
-[
-"Обе забьют — да",
-0.404,
-null
-],
-[
-"Обе забьют — нет",
-0.596,
-null
-],
-[
-"ИТ1 больше 1.5",
-0.535,
-null
-],
-[
-"ИТ2 больше 1.5",
-0.136,
-null
-],
-[
-"Ф1 (−1.5)",
-0.384,
-null
-],
-[
-"Ф2 (+1.5)",
-0.616,
-null
-]
-],
-"bar": [
-0.6424350968554383,
-0.23774502738959563,
-0.11981987575496597
-],
-"center": "Ожидаемые голы (xG) 1.8 : 0.6",
-"scores": [
-[
-"1:0",
-0.149
-],
-[
-"2:0",
-0.141
-],
-[
-"1:1",
-0.109
-]
-]
-},
-"lt": {
-"fair": 1.74,
-"label": "П1",
-"min_odds": 1.83,
-"minute": "25'",
-"p": 0.575,
-"result": "miss",
-"score": "0:0"
-}
-},
-{
-"sport": "tennis",
-"id": "186551",
-"league": "Теннис · ATP",
-"kickoff": "2026-11-12T20:30:00+03:00",
-"home": "Тейлор Фриц",
-"away": "Хольгер Руне",
-"hl": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
-"al": "https://a.espncdn.com/i/teamlogos/countries/500/den.png",
-"hid": "2946",
-"aid": "3659",
-"bb": "https://betboom.ru/search?query=%D0%A4%D1%80%D0%B8%D1%86&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=tennis",
-"path": "tennis/atp",
-"url": "live.html?s=tennis&p=tennis%2Fatp&e=186551&h=%D0%A2%D0%B5%D0%B9%D0%BB%D0%BE%D1%80+%D0%A4%D1%80%D0%B8%D1%86&a=%D0%A5%D0%BE%D0%BB%D1%8C%D0%B3%D0%B5%D1%80+%D0%A0%D1%83%D0%BD%D0%B5",
-"tip": "Будет 2 сета · ≈1.56",
-"top": false,
-"bot": {
-"main": {
-"label": "Будет 2 сета",
-"p": 0.596,
-"odds": 1.56,
-"est": true
-},
-"bold": null,
-"markets": [
-[
-"Победа: Тейлор Фриц",
-0.808,
-null
-],
-[
-"Победа: Хольгер Руне",
-0.192,
-null
-],
-[
-"Будет 3 сета",
-0.404,
-null
-],
-[
-"Будет 2 сета",
-0.596,
-null
-],
-[
-"Счёт по сетам 2:0",
-0.517,
-null
-],
-[
-"Счёт по сетам 0:2",
-0.079,
-null
-],
-[
-"Счёт по сетам 2:1",
-0.29,
-null
-],
-[
-"Счёт по сетам 1:2",
-0.113,
-null
-],
-[
-"Тейлор Фриц возьмёт хотя бы сет",
-0.921,
-null
-],
-[
-"Хольгер Руне возьмёт хотя бы сет",
-0.483,
-null
-]
-],
-"bar": [
-0.8077774895402606,
-0,
-0.19222251045973937
-],
-"center": "Рейтинг Эло 1808 : 1559"
-},
-"lt": null
-},
-{
 "sport": "tennis",
 "id": "186550",
 "league": "Теннис · ATP",
@@ -2491,6 +2274,25 @@ null
 "bb": "https://betboom.ru/search?query=%D0%92%D0%B5%D0%B3%D0%B0%D1%81&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=hockey",
 "path": "hockey/nhl",
 "url": "live.html?s=hockey&p=hockey%2Fnhl&e=401892707&h=%D0%92%D0%B5%D0%B3%D0%B0%D1%81&a=%D0%9D%D1%8D%D1%88%D0%B2%D0%B8%D0%BB%D0%BB",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "basketball",
+"id": "401909304",
+"league": "США · NBA",
+"kickoff": "2026-11-14T06:30:00+03:00",
+"home": "Клипперс",
+"away": "Оклахома-Сити Тандер",
+"hl": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/lac.png",
+"al": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/okc.png",
+"hid": "12",
+"aid": "25",
+"bb": "https://betboom.ru/search?query=%D0%9A%D0%BB%D0%B8%D0%BF%D0%BF%D0%B5%D1%80%D1%81&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=basketball",
+"path": "basketball/nba",
+"url": "live.html?s=basketball&p=basketball%2Fnba&e=401909304&h=%D0%9A%D0%BB%D0%B8%D0%BF%D0%BF%D0%B5%D1%80%D1%81&a=%D0%9E%D0%BA%D0%BB%D0%B0%D1%85%D0%BE%D0%BC%D0%B0-%D0%A1%D0%B8%D1%82%D0%B8+%D0%A2%D0%B0%D0%BD%D0%B4%D0%B5%D1%80",
 "tip": "",
 "top": false,
 "bot": null,
