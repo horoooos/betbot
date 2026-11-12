@@ -65,7 +65,7 @@ def _odds(comp: dict) -> dict:
 
 
 def _team(t: dict) -> dict:
-    team = t["team"]
+    team = t.get("team") or {}
     return {
         "id": team.get("id"),
         "name": team.get("displayName") or team.get("name"),
@@ -84,11 +84,14 @@ def _event(code: str, slug: str, e: dict) -> dict | None:
     if "home" not in teams or "away" not in teams:
         return None
     st = e["status"]["type"]
+    kick = pd.Timestamp(e["date"])
+    if kick.tz is None:   # ESPN изредка отдаёт время без зоны — считаем его UTC
+        kick = kick.tz_localize("UTC")
     return {
         "id": e["id"],
         "div": code,
         "slug": slug,
-        "kickoff": pd.Timestamp(e["date"]).tz_convert(MSK).isoformat(),
+        "kickoff": kick.tz_convert(MSK).isoformat(),
         "state": st.get("state"),                       # pre / in / post
         "completed": bool(st.get("completed")),
         "status": st.get("name", ""),                   # STATUS_FULL_TIME, STATUS_POSTPONED…
@@ -112,7 +115,15 @@ def scoreboard(leagues: dict[str, str], days: list[str]) -> list[dict]:
     def one(job):
         code, slug, day = job
         data = _get(SB.format(slug=slug, day=day)) or {}
-        return [ev for e in data.get("events", []) if (ev := _event(code, slug, e))]
+        out = []
+        for e in data.get("events") or []:
+            try:   # один битый матч в ответе ESPN не должен ронять весь запуск бота
+                ev = _event(code, slug, e)
+            except (KeyError, IndexError, TypeError, ValueError, AttributeError):
+                continue
+            if ev:
+                out.append(ev)
+        return out
 
     with ThreadPoolExecutor(16) as ex:
         events = [ev for part in ex.map(one, jobs) for ev in part]

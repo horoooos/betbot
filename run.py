@@ -730,7 +730,15 @@ def main():
         blocks = None
         try:   # страницы новостей и прогнозов из канала + sitemap (для поисковиков)
             try:   # «смотреть онлайн бесплатно» — отдельная страница на каждый матч (под поисковые запросы)
-                watch.build(now)
+                # ссылка «полный разбор» на этих страницах ведёт туда же, куда соберёт pages.build:
+                # адрес считается по той же формуле (см. pages._matches), иначе ссылки не появлялись
+                watch_preds = {
+                    str(m["id"]): f"predictions/{pd.Timestamp(m['kickoff']):%Y-%m-%d}-"
+                                  f"{pages.slug(m['home']['ru'] + ' ' + m['away']['ru'], 60)}-{m['id']}.html"
+                    for m in {**matches, **load_json(OTHER, {})}.values()
+                    if m.get("msg_id") and m.get("main") and m.get("home", {}).get("ru") and m.get("id")
+                }
+                watch.build(now, watch_preds)
             except Exception as e:
                 print(f"  ! страницы «смотреть онлайн» не собрались: {e}")
             blocks = pages.build({**matches, **load_json(OTHER, {})}, site_res, now)

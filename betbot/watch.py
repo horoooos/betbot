@@ -291,11 +291,12 @@ def build(now: pd.Timestamp, preds: dict | None = None) -> list[str]:
         except ValueError:
             pass
     upcoming = sorted([m for m in items if pd.Timestamp(m["kickoff"]) > now - pd.Timedelta(hours=3)], key=lambda m: m["kickoff"])
-    # прогнозы по линии на ближайшие матчи — для подборки «прогнозы на футбол сегодня» (betbot/hubs.py)
-    preds = [{"url": _url(m), "home": m["home"], "away": m["away"], "league": m.get("league") or "", "kickoff": m["kickoff"],
-              "label": m["pred"]["label"], "p": m["pred"]["p"], "odds": m["pred"]["odds"], "est": m["pred"]["est"]}
-             for m in upcoming if m.get("pred") and pd.Timestamp(m["kickoff"]) > now]
-    (ROOT / "data" / "watch_preds.json").write_text(json.dumps(preds, ensure_ascii=False), encoding="utf-8")
+    # прогнозы по линии на ближайшие матчи — для подборки «прогнозы на футбол сегодня» (betbot/hubs.py).
+    # (отдельное имя: preds — это ссылки на страницы разбора, переданные из run.py)
+    tips = [{"url": _url(m), "home": m["home"], "away": m["away"], "league": m.get("league") or "", "kickoff": m["kickoff"],
+             "label": m["pred"]["label"], "p": m["pred"]["p"], "odds": m["pred"]["odds"], "est": m["pred"]["est"]}
+            for m in upcoming if m.get("pred") and pd.Timestamp(m["kickoff"]) > now]
+    (ROOT / "data" / "watch_preds.json").write_text(json.dumps(tips, ensure_ascii=False), encoding="utf-8")
     pages._write(OUT / "index.html", _index(upcoming, now))
     cache = {k: v for k, v in cache.items() if pd.Timestamp(v["kickoff"]) > old}
     CACHE.write_text(json.dumps(cache, ensure_ascii=False), encoding="utf-8")
