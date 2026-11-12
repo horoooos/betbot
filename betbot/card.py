@@ -637,12 +637,7 @@ def express_result_card(legs: list[dict], total: float, day: str = "", brand: st
            font=font(22, "Medium"), fill=MUTED, anchor="mm")
     # штамп
     d.rounded_rectangle((84, 140, 430, 540), radius=28, fill=accent_bg, outline=accent, width=4)
-    d.ellipse((180, 164, 334, 318), fill=accent)
-    if won:
-        d.line(((214, 246), (248, 282), (302, 212)), fill=(10, 40, 26), width=14)
-    else:
-        d.line(((216, 186), (298, 268)), fill=(60, 16, 20), width=14)
-        d.line(((298, 186), (216, 268)), fill=(60, 16, 20), width=14)
+    _mark(d, 257, 241, 74, "check" if won else "cross", accent)
     stamp = "ЗАШЁЛ" if won else "НЕ ЗАШЁЛ"
     size = 58
     while d.textlength(stamp, font=font(size, "ExtraBold")) > 300:
@@ -663,9 +658,7 @@ def express_result_card(legs: list[dict], total: float, day: str = "", brand: st
         ok = bool(leg.get("win")) and not pend
         mk = (150, 158, 180) if pend else (green if ok else red)
         if not dense:
-            d.ellipse((486, cy - 34, 514, cy - 6), fill=mk)
-            d.line(((490, cy - 27), (495, cy - 18), (504, cy - 30)), fill=(12, 30, 20), width=3) if ok else                 (d.line(((491, cy - 32), (509, cy - 8)), fill=(40, 10, 12), width=3),
-                 d.line(((509, cy - 32), (491, cy - 8)), fill=(40, 10, 12), width=3))
+            _mark(d, 500, cy - 20, 15, "wait" if pend else "check" if ok else "cross", mk)
             d.text((524, cy - 16), f"{leg['home']} — {leg['away']}", font=font(24, "ExtraBold"), fill=WHITE, anchor="lm")
             d.text((524, cy + 22), "ещё не сыграно" if pend else leg["label"], font=font(19, "Medium"),
                    fill=(160, 168, 190) if pend else (140, 225, 170) if ok else (255, 180, 180), anchor="lm")
@@ -680,14 +673,7 @@ def express_result_card(legs: list[dict], total: float, day: str = "", brand: st
             f14 = font(14 if n <= 5 else 13, "Medium")
             while d.textlength(lab, font=f14) > 360 and len(lab) > 8:
                 lab = lab[:-3] + "…"
-            d.ellipse((486, cy - 14, 506, cy + 6), fill=mk)
-            if pend:
-                d.text((496, cy - 4), "…", font=font(16, "ExtraBold"), fill=(20, 24, 34), anchor="mm")
-            elif ok:
-                d.line(((490, cy - 4), (494, cy + 2), (502, cy - 8)), fill=(12, 30, 20), width=2)
-            else:
-                d.line(((489, cy - 11), (503, cy + 3)), fill=(40, 10, 12), width=2)
-                d.line(((503, cy - 11), (489, cy + 3)), fill=(40, 10, 12), width=2)
+            _mark(d, 496, cy - 4, 11, "wait" if pend else "check" if ok else "cross", mk)
             d.text((518, cy - 13), teams, font=f19, fill=WHITE, anchor="lm")
             d.text((518, cy + 16), "ещё не сыграно" if pend else lab, font=f14,
                    fill=(160, 168, 190) if pend else (140, 225, 170) if ok else (255, 180, 180), anchor="lm")
@@ -708,6 +694,21 @@ def _fit(d: ImageDraw.ImageDraw, text: str, size: int, max_w: int, weight: str =
     while size > min_size and d.textlength(text, font=font(size, weight)) > max_w:
         size -= 1
     return font(size, weight)
+
+
+def _mark(d: ImageDraw.ImageDraw, cx: float, cy: float, r: float, kind: str, fill=GREEN) -> None:
+    """Круглый значок ✅/❌/… — строго по центру кружка, скруглённые концы линий."""
+    d.ellipse((cx - r, cy - r, cx + r, cy + r), fill=fill)
+    w = max(2, int(r * (0.16 if kind == "cross" else 0.22)))
+    ink = (14, 34, 24) if kind == "check" else (44, 12, 16) if kind == "cross" else (26, 30, 42)
+    if kind == "check":
+        d.line([(cx - r * 0.44, cy + r * 0.02), (cx - r * 0.10, cy + r * 0.34), (cx + r * 0.44, cy - r * 0.32)],
+               fill=ink, width=w, joint="curve")
+    elif kind == "cross":
+        d.line([(cx - r * 0.34, cy - r * 0.34), (cx + r * 0.34, cy + r * 0.34)], fill=ink, width=w)
+        d.line([(cx + r * 0.34, cy - r * 0.34), (cx - r * 0.34, cy + r * 0.34)], fill=ink, width=w)
+    else:   # ещё не сыграно — «?» по центру
+        d.text((cx, cy + r * 0.02), "?", font=font(int(r * 1.45), "ExtraBold"), fill=ink, anchor="mm")
 
 
 def _check(d: ImageDraw.ImageDraw, cx: int, cy: int, r: int = 20) -> None:
