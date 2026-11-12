@@ -7826,5 +7826,401 @@
   "top": false,
   "msg_id": 5039,
   "btn": 4
+ },
+ "NBA|401909969": {
+  "id": "401909969",
+  "div": "NBA",
+  "sport": "basketball",
+  "kickoff": "2026-11-12T04:00:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "detail": "Wed, November 11th at 8:00 PM EST",
+  "clock": "0.0",
+  "period": 0,
+  "home": {
+   "id": "4",
+   "name": "Chicago Bulls",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/chi.png",
+   "color": "ce1141",
+   "score": "0",
+   "record": "1-8",
+   "periods": [],
+   "ru": "Чикаго Буллз"
+  },
+  "away": {
+   "id": "24",
+   "name": "San Antonio Spurs",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/sa.png",
+   "color": "000000",
+   "score": "0",
+   "record": "9-2",
+   "periods": [],
+   "ru": "Сан-Антонио Сперс"
+  },
+  "odds": {
+   "H": 8.4,
+   "A": 1.085,
+   "line": 236.5,
+   "over": 1.885,
+   "under": 1.935,
+   "spread": 15.5,
+   "sp_h": 1.909,
+   "sp_a": 1.909
+  },
+  "probs": {
+   "BB_ML_H": 0.09823630291969482,
+   "BB_ML_A": 0.9017636970803051,
+   "BB_SPR_H": 0.5,
+   "BB_SPR_A": 0.5,
+   "BB_O229.5": 0.6597440535491568,
+   "BB_U229.5": 0.3402559464508432,
+   "BB_O236.5": 0.5,
+   "BB_U236.5": 0.5,
+   "BB_O243.5": 0.3402559464508432,
+   "BB_U243.5": 0.6597440535491568
+  },
+  "labels": {
+   "BB_ML_H": "П1 (с ОТ)",
+   "BB_ML_A": "П2 (с ОТ)",
+   "BB_SPR_H": "Ф1 (+15.5)",
+   "BB_SPR_A": "Ф2 (-15.5)",
+   "BB_O229.5": "ТБ 229.5",
+   "BB_U229.5": "ТМ 229.5",
+   "BB_O236.5": "ТБ 236.5",
+   "BB_U236.5": "ТМ 236.5",
+   "BB_O243.5": "ТБ 243.5",
+   "BB_U243.5": "ТМ 243.5"
+  },
+  "real": {
+   "BB_ML_H": 8.4,
+   "BB_ML_A": 1.085,
+   "BB_SPR_H": 1.909,
+   "BB_SPR_A": 1.909,
+   "BB_O236.5": 1.885,
+   "BB_U236.5": 1.935
+  },
+  "center": "Ожидаемый счёт 110 : 126",
+  "bar": [
+   0.09823630291969482,
+   0,
+   0.9017636970803051
+  ],
+  "model": {
+   "mu": -15.5,
+   "T": 236.5
+  },
+  "main": {
+   "key": "BB_U236.5",
+   "label": "ТМ 236.5",
+   "p": 0.5,
+   "odds": 1.94,
+   "est": false,
+   "stake": 1.0
+  },
+  "bold": {},
+  "open": {
+   "BB_U236.5": 0.5
+  },
+  "top": false,
+  "msg_id": 5043,
+  "btn": 4
+ },
+ "NBA|401909970": {
+  "id": "401909970",
+  "div": "NBA",
+  "sport": "basketball",
+  "kickoff": "2026-11-12T04:00:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "detail": "Wed, November 11th at 8:00 PM EST",
+  "clock": "0.0",
+  "period": 0,
+  "home": {
+   "id": "29",
+   "name": "Memphis Grizzlies",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/mem.png",
+   "color": "5d76a9",
+   "score": "0",
+   "record": "7-3",
+   "periods": [],
+   "ru": "Мемфис Гриззлис"
+  },
+  "away": {
+   "id": "7",
+   "name": "Denver Nuggets",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/den.png",
+   "color": "0e2240",
+   "score": "0",
+   "record": "5-4",
+   "periods": [],
+   "ru": "Денвер Наггетс"
+  },
+  "odds": {
+   "H": 2.36,
+   "A": 1.621,
+   "line": 230.5,
+   "over": 1.909,
+   "under": 1.909,
+   "spread": 3.5,
+   "sp_h": 1.943,
+   "sp_a": 1.87
+  },
+  "probs": {
+   "BB_ML_H": 0.3852707488552771,
+   "BB_ML_A": 0.6147292511447229,
+   "BB_SPR_H": 0.5,
+   "BB_SPR_A": 0.5,
+   "BB_O223.5": 0.6597440535491568,
+   "BB_U223.5": 0.3402559464508432,
+   "BB_O230.5": 0.5,
+   "BB_U230.5": 0.5,
+   "BB_O237.5": 0.3402559464508432,
+   "BB_U237.5": 0.6597440535491568
+  },
+  "labels": {
+   "BB_ML_H": "П1 (с ОТ)",
+   "BB_ML_A": "П2 (с ОТ)",
+   "BB_SPR_H": "Ф1 (+3.5)",
+   "BB_SPR_A": "Ф2 (-3.5)",
+   "BB_O223.5": "ТБ 223.5",
+   "BB_U223.5": "ТМ 223.5",
+   "BB_O230.5": "ТБ 230.5",
+   "BB_U230.5": "ТМ 230.5",
+   "BB_O237.5": "ТБ 237.5",
+   "BB_U237.5": "ТМ 237.5"
+  },
+  "real": {
+   "BB_ML_H": 2.36,
+   "BB_ML_A": 1.621,
+   "BB_SPR_H": 1.943,
+   "BB_SPR_A": 1.87,
+   "BB_O230.5": 1.909,
+   "BB_U230.5": 1.909
+  },
+  "center": "Ожидаемый счёт 114 : 117",
+  "bar": [
+   0.3852707488552771,
+   0,
+   0.6147292511447229
+  ],
+  "model": {
+   "mu": -3.5,
+   "T": 230.5
+  },
+  "main": {
+   "key": "BB_U230.5",
+   "label": "ТМ 230.5",
+   "p": 0.5,
+   "odds": 1.91,
+   "est": false,
+   "stake": 1.0
+  },
+  "bold": {},
+  "open": {
+   "BB_U230.5": 0.5
+  },
+  "top": true,
+  "msg_id": 5045,
+  "btn": 4
+ },
+ "NBA|401909971": {
+  "id": "401909971",
+  "div": "NBA",
+  "sport": "basketball",
+  "kickoff": "2026-11-12T04:00:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "detail": "Wed, November 11th at 8:00 PM EST",
+  "clock": "0.0",
+  "period": 0,
+  "home": {
+   "id": "15",
+   "name": "Milwaukee Bucks",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/mil.png",
+   "color": "00471b",
+   "score": "0",
+   "record": "1-10",
+   "periods": [],
+   "ru": "Милуоки Бакс"
+  },
+  "away": {
+   "id": "13",
+   "name": "Los Angeles Lakers",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/lal.png",
+   "color": "552583",
+   "score": "0",
+   "record": "10-2",
+   "periods": [],
+   "ru": "Лейкерс"
+  },
+  "odds": {
+   "H": 6.99,
+   "A": 1.114,
+   "line": 229.5,
+   "over": 1.952,
+   "under": 1.87,
+   "spread": 14.5,
+   "sp_h": 1.943,
+   "sp_a": 1.877
+  },
+  "probs": {
+   "BB_ML_H": 0.11345953586873964,
+   "BB_ML_A": 0.8865404641312604,
+   "BB_SPR_H": 0.5,
+   "BB_SPR_A": 0.5,
+   "BB_O222.5": 0.6597440535491568,
+   "BB_U222.5": 0.3402559464508432,
+   "BB_O229.5": 0.5,
+   "BB_U229.5": 0.5,
+   "BB_O236.5": 0.3402559464508432,
+   "BB_U236.5": 0.6597440535491568
+  },
+  "labels": {
+   "BB_ML_H": "П1 (с ОТ)",
+   "BB_ML_A": "П2 (с ОТ)",
+   "BB_SPR_H": "Ф1 (+14.5)",
+   "BB_SPR_A": "Ф2 (-14.5)",
+   "BB_O222.5": "ТБ 222.5",
+   "BB_U222.5": "ТМ 222.5",
+   "BB_O229.5": "ТБ 229.5",
+   "BB_U229.5": "ТМ 229.5",
+   "BB_O236.5": "ТБ 236.5",
+   "BB_U236.5": "ТМ 236.5"
+  },
+  "real": {
+   "BB_ML_H": 6.99,
+   "BB_ML_A": 1.114,
+   "BB_SPR_H": 1.943,
+   "BB_SPR_A": 1.877,
+   "BB_O229.5": 1.952,
+   "BB_U229.5": 1.87
+  },
+  "center": "Ожидаемый счёт 108 : 122",
+  "bar": [
+   0.11345953586873964,
+   0,
+   0.8865404641312604
+  ],
+  "model": {
+   "mu": -14.5,
+   "T": 229.5
+  },
+  "main": {
+   "key": "BB_O229.5",
+   "label": "ТБ 229.5",
+   "p": 0.5,
+   "odds": 1.95,
+   "est": false,
+   "stake": 1.0
+  },
+  "bold": {},
+  "open": {
+   "BB_O229.5": 0.5
+  },
+  "top": false,
+  "msg_id": 5047,
+  "btn": 4
+ },
+ "NBA|401909972": {
+  "id": "401909972",
+  "div": "NBA",
+  "sport": "basketball",
+  "kickoff": "2026-11-12T04:00:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "detail": "Wed, November 11th at 8:00 PM EST",
+  "clock": "0.0",
+  "period": 0,
+  "home": {
+   "id": "3",
+   "name": "New Orleans Pelicans",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/no.png",
+   "color": "0a2240",
+   "score": "0",
+   "record": "4-7",
+   "periods": [],
+   "ru": "Нью-Орлеан Пеликанс"
+  },
+  "away": {
+   "id": "17",
+   "name": "Brooklyn Nets",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/bkn.png",
+   "color": "000000",
+   "score": "0",
+   "record": "2-8",
+   "periods": [],
+   "ru": "Бруклин Нетс"
+  },
+  "odds": {
+   "H": 1.676,
+   "A": 2.25,
+   "line": 228.5,
+   "over": 1.909,
+   "under": 1.909,
+   "spread": -2.5,
+   "sp_h": 1.862,
+   "sp_a": 1.952
+  },
+  "probs": {
+   "BB_ML_H": 0.5825156468205225,
+   "BB_ML_A": 0.4174843531794775,
+   "BB_SPR_H": 0.5,
+   "BB_SPR_A": 0.5,
+   "BB_O221.5": 0.6597440535491568,
+   "BB_U221.5": 0.3402559464508432,
+   "BB_O228.5": 0.5,
+   "BB_U228.5": 0.5,
+   "BB_O235.5": 0.3402559464508432,
+   "BB_U235.5": 0.6597440535491568
+  },
+  "labels": {
+   "BB_ML_H": "П1 (с ОТ)",
+   "BB_ML_A": "П2 (с ОТ)",
+   "BB_SPR_H": "Ф1 (-2.5)",
+   "BB_SPR_A": "Ф2 (+2.5)",
+   "BB_O221.5": "ТБ 221.5",
+   "BB_U221.5": "ТМ 221.5",
+   "BB_O228.5": "ТБ 228.5",
+   "BB_U228.5": "ТМ 228.5",
+   "BB_O235.5": "ТБ 235.5",
+   "BB_U235.5": "ТМ 235.5"
+  },
+  "real": {
+   "BB_ML_H": 1.676,
+   "BB_ML_A": 2.25,
+   "BB_SPR_H": 1.862,
+   "BB_SPR_A": 1.952,
+   "BB_O228.5": 1.909,
+   "BB_U228.5": 1.909
+  },
+  "center": "Ожидаемый счёт 116 : 113",
+  "bar": [
+   0.5825156468205225,
+   0,
+   0.4174843531794775
+  ],
+  "model": {
+   "mu": 2.5,
+   "T": 228.5
+  },
+  "main": {
+   "key": "BB_ML_H",
+   "label": "П1 (с ОТ)",
+   "p": 0.5825,
+   "odds": 1.68,
+   "est": false,
+   "stake": 1.0
+  },
+  "bold": {},
+  "open": {
+   "BB_ML_H": 0.5825
+  },
+  "top": true,
+  "msg_id": 5049,
+  "btn": 4
  }
 }
