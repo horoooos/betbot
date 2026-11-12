@@ -1008,7 +1008,7 @@
   "kickoff": "2026-11-12T20:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Scheduled",
   "home": {
    "id": "453",
@@ -1136,6 +1136,17 @@
   "btn": 4,
   "close": {
    "U25": 0.5679
+  },
+  "main_hit": true,
+  "bold_hit": null,
+  "value_hit": null,
+  "live": {
+   "label": "П1",
+   "p": 0.575,
+   "fair": 1.74,
+   "min_odds": 1.83,
+   "minute": "25'",
+   "result": "miss"
   }
  },
  "401861147": {
