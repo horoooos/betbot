@@ -1718,7 +1718,7 @@
  "news_video": true,
  "vk_last": 5132,
  "dz_last": 5134,
- "vk_err": null,
+ "vk_err": "5133: VK wall.post: 9 Flood control",
  "news_forced": "now",
  "vk_mode": "photo",
  "dz_err": "4987: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))",
@@ -1728,5 +1728,5 @@
   "https://upload.wikimedia.org/wikipedia/commons/3/3f/Mikhail_Galaktionov_2020.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
  ],
  "indexnow_day": "2026-11-12",
- "vk_wall_err": null
+ "vk_wall_err": "5133: попытка 3: VK photos.getWallUploadServer: 9 Flood control"
 }
