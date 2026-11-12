@@ -8203,7 +8203,10 @@
   "open": {},
   "top": false,
   "msg_id": 5157,
-  "btn": 4
+  "btn": 4,
+  "close": {
+   "_": null
+  }
  },
  "WTA|186771": {
   "id": "186771",
@@ -8296,6 +8299,9 @@
   "open": {},
   "top": false,
   "msg_id": 5159,
-  "btn": 4
+  "btn": 4,
+  "close": {
+   "_": null
+  }
  }
 }
