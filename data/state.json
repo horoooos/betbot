@@ -5,7 +5,7 @@
  },
  "learned": "2026-11-12",
  "schedule_day": "2026-11-12",
- "content_slot": "2026-11-12-19",
+ "content_slot": "2026-11-12-20",
  "news_seen": [
   "https://www.sport-express.ru/hockey/nhl/news/vankuver-filadelfiya-rezultat-matcha-regulyarnogo-chempionata-nhl-10-noyabrya-2026-2473106/",
   "https://www.sport-express.ru/hockey/nhl/news/makdevid-prerval-vtoruyu-po-dline-seriyu-peredach-v-istorii-nhl-vpervye-v-sezone-ostavshis-bez-assista-2473113/",
@@ -1564,7 +1564,7 @@
  "value_day": "2026-11-12",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-12",
- "site_stamp": "883|5188|2026-11-12 19",
+ "site_stamp": "883|5189|2026-11-12 20",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1579,121 +1579,117 @@
  },
  "value_check": "2026-11-12-6",
  "express_risk": {
-  "msg": 4998,
+  "msg": 5189,
   "legs": [
    {
-    "sport": "hockey",
-    "div": "NHL",
-    "id": "401892691",
+    "sport": "football",
+    "div": "BRA2",
+    "id": "401860434",
     "side": "away",
-    "p": 0.572012257405516,
-    "odds": 1.676,
-    "kickoff": "2026-11-12T03:30:00+03:00",
-    "home": "Калгари",
-    "away": "Рейнджерс",
-    "league": "🇺🇸 США · NHL",
+    "p": 0.5652985801593986,
+    "odds": 1.667,
+    "kickoff": "2026-11-13T01:00:00+03:00",
+    "home": "Понте-Прета",
+    "away": "Operário PR",
+    "league": "🇧🇷 Бразилия · Серия B",
     "logos": [
-     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/cgy.png",
-     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/nyr.png"
+     "https://a.espncdn.com/i/teamlogos/soccer/500/3459.png",
+     "https://a.espncdn.com/i/teamlogos/soccer/500/18187.png"
     ],
     "colors": [
-     "dd1a32",
-     "0056ae"
-    ],
-    "label": "Победа: Рейнджерс (с ОТ)",
-    "win": true,
-    "score": "1:3"
-   },
-   {
-    "sport": "basketball",
-    "div": "NBA",
-    "id": "401909972",
-    "side": "home",
-    "p": 0.5934121196882072,
-    "odds": 1.617,
-    "kickoff": "2026-11-12T04:00:00+03:00",
-    "home": "Нью-Орлеан Пеликанс",
-    "away": "Бруклин Нетс",
-    "league": "🇺🇸 США · NBA",
-    "logos": [
-     "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/no.png",
-     "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/bkn.png"
-    ],
-    "colors": [
-     "0a2240",
+     "000000",
      "000000"
     ],
-    "label": "Победа: Нью-Орлеан Пеликанс (с ОТ)",
-    "win": false,
-    "score": "111:145"
+    "label": "Победа: Operário PR"
    },
    {
-    "sport": "basketball",
-    "div": "NBA",
-    "id": "401909973",
-    "side": "away",
-    "p": 0.584070796460177,
+    "sport": "hockey",
+    "div": "NHL",
+    "id": "401892700",
+    "side": "home",
+    "p": 0.5830164765525981,
     "odds": 1.645,
-    "kickoff": "2026-11-12T05:00:00+03:00",
-    "home": "Юта Джаз",
-    "away": "Орландо Мэджик",
-    "league": "🇺🇸 США · NBA",
+    "kickoff": "2026-11-13T03:00:00+03:00",
+    "home": "Нью-Джерси",
+    "away": "Вашингтон",
+    "league": "🇺🇸 США · NHL",
     "logos": [
-     "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/utah.png",
-     "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/orl.png"
+     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/nj.png",
+     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/wsh.png"
     ],
     "colors": [
-     "4e008e",
-     "0150b5"
+     "e30b2b",
+     "d71830"
     ],
-    "label": "Победа: Орландо Мэджик (с ОТ)"
+    "label": "Победа: Нью-Джерси (с ОТ)"
    },
    {
     "sport": "hockey",
     "div": "NHL",
-    "id": "401892694",
+    "id": "401892696",
     "side": "home",
-    "p": 0.5635245901639344,
-    "odds": 1.704,
-    "kickoff": "2026-11-12T06:00:00+03:00",
-    "home": "Анахайм",
-    "away": "Нэшвилл",
+    "p": 0.5324675324675325,
+    "odds": 1.8,
+    "kickoff": "2026-11-13T03:00:00+03:00",
+    "home": "Бостон",
+    "away": "Монреаль",
     "league": "🇺🇸 США · NHL",
     "logos": [
-     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/ana.png",
-     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/nsh.png"
+     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/bos.png",
+     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/mtl.png"
     ],
     "colors": [
-     "fc4c02",
-     "fdba31"
+     "231f20",
+     "c41230"
     ],
-    "label": "Победа: Анахайм (с ОТ)"
+    "label": "Победа: Бостон (с ОТ)"
    },
    {
     "sport": "hockey",
     "div": "NHL",
-    "id": "401892695",
+    "id": "401892702",
     "side": "away",
-    "p": 0.5635245901639344,
-    "odds": 1.704,
-    "kickoff": "2026-11-12T06:00:00+03:00",
-    "home": "Сан-Хосе",
-    "away": "Питтсбург",
+    "p": 0.5830164765525981,
+    "odds": 1.645,
+    "kickoff": "2026-11-13T04:00:00+03:00",
+    "home": "Чикаго",
+    "away": "Баффало",
     "league": "🇺🇸 США · NHL",
     "logos": [
-     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/sj.png",
-     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/pit.png"
+     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/chi.png",
+     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/buf.png"
     ],
     "colors": [
-     "00788a",
-     "000000"
+     "e31937",
+     "00468b"
     ],
-    "label": "Победа: Питтсбург (с ОТ)"
+    "label": "Победа: Баффало (с ОТ)"
+   },
+   {
+    "sport": "football",
+    "div": "MEX2",
+    "id": "401931922",
+    "side": "home",
+    "p": 0.5576021833053524,
+    "odds": 1.645,
+    "kickoff": "2026-11-13T05:00:00+03:00",
+    "home": "Монаркас Морелия",
+    "away": "Леонес Негрос",
+    "league": "🇲🇽 Мексика · Лига де Экспансьон",
+    "logos": [
+     "https://a.espncdn.com/i/teamlogos/soccer/500/221.png",
+     "https://a.espncdn.com/i/teamlogos/soccer/500/10129.png"
+    ],
+    "colors": [
+     "ffd011",
+     "F7AA25"
+    ],
+    "label": "Победа: Монаркас Морелия"
    }
   ],
-  "odds": 12.94461438044544,
-  "day": "2026-11-11",
-  "done": true
+  "odds": 13.356904221675002,
+  "day": "2026-11-12",
+  "done": false
  },
  "streak_day": {
   "2026-11-08": 1
@@ -1715,7 +1711,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5132,
- "dz_last": 5188,
+ "dz_last": 5189,
  "vk_err": "5133: VK wall.post: 9 Flood control",
  "news_forced": "now",
  "vk_mode": "photo",
