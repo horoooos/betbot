@@ -10,6 +10,9 @@ on:
       story_id:
         description: "ID опубликованной истории для одного тестового поста"
         required: false
+      recipient:
+        description: "Ссылка или ID администратора, разрешившего сообщения группы (только для GIF-теста)"
+        required: false
 permissions:
   contents: read
 concurrency:
@@ -32,4 +35,5 @@ jobs:
           VK_SERVICE_KEY: ${{ secrets.VK_SERVICE_KEY }}
           VK_MEDIA_MODE: ${{ inputs.mode }}
           VK_STORY_TEST_ID: ${{ inputs.story_id }}
+          VK_DOC_TEST_RECIPIENT: ${{ inputs.recipient }}
         run: python tools/vk_media_check.py

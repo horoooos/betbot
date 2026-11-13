@@ -22,6 +22,25 @@ def call(method, token, **params):
     return vk._call(method, _tok=token, **params)
 
 
+def resolve_recipient(token, value):
+    value = value.strip()
+    if "://" in value or value.startswith(("vk.com/", "vk.ru/", "m.vk.com/", "m.vk.ru/")):
+        parsed = urlsplit(value if "://" in value else "https://" + value)
+        if parsed.hostname not in {"vk.com", "vk.ru", "m.vk.com", "m.vk.ru"}:
+            raise RuntimeError("Для получателя нужна ссылка на профиль VK")
+        value = parsed.path.strip("/")
+    if value.startswith("id") and value[2:].isdigit():
+        value = value[2:]
+    if value.isdigit() and int(value) > 0:
+        return int(value)
+    if not value or "/" in value:
+        raise RuntimeError("Укажите профиль пользователя для загрузки GIF")
+    resolved = call("utils.resolveScreenName", token, screen_name=value)
+    if not isinstance(resolved, dict) or resolved.get("type") != "user" or not resolved.get("object_id"):
+        raise RuntimeError("Получатель должен быть пользователем VK")
+    return int(resolved["object_id"])
+
+
 def link_preview(group, reader, parse_token=None):
     from PIL import Image
 
@@ -129,8 +148,15 @@ def main():
         from betbot import vk_gif
         if not group:
             raise RuntimeError("VK_TOKEN отсутствует")
+        peer_id = None
+        if mode == "gif-message-wall":
+            peer_id = resolve_recipient(group, os.environ.get("VK_DOC_TEST_RECIPIENT", ""))
+            allowed = call("messages.isMessagesFromGroupAllowed", group, group_id=vk.GROUP_ID, user_id=peer_id)
+            if not allowed.get("is_allowed"):
+                raise RuntimeError("Пользователь ещё не разрешил сообщения группы")
+            print("RECIPIENT_PERMISSION_CONFIRMED: true", flush=True)
         try:
-            server = (call("docs.getMessagesUploadServer", group, type="doc")
+            server = (call("docs.getMessagesUploadServer", group, type="doc", peer_id=peer_id)
                       if mode == "gif-message-wall" else call("docs.getWallUploadServer", group, group_id=vk.GROUP_ID))
         except RuntimeError as error:
             if ": 15 " not in str(error):
