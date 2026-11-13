@@ -8,6 +8,7 @@ import sys
 import time
 from html.parser import HTMLParser
 from io import BytesIO
+from urllib.parse import urlsplit
 from datetime import datetime, timezone
 
 import requests
@@ -42,8 +43,9 @@ def link_preview(group, reader):
     meta = Metadata()
     meta.feed(response.text)
     image_url = meta.values.get("og:image", "")
-    if not image_url.startswith(vk.SITE):
-        raise RuntimeError("Страница не содержит изображения на нашем сайте")
+    host = urlsplit(image_url).hostname or ""
+    if not image_url.startswith("https://") or not (image_url.startswith(vk.SITE) or host.endswith(".telesco.pe")):
+        raise RuntimeError("Страница не содержит изображения с разрешённого источника")
     image = requests.get(image_url, timeout=30)
     image.raise_for_status()
     with Image.open(BytesIO(image.content)) as picture:
