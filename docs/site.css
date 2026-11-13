@@ -192,3 +192,6 @@ img { max-width: 100%; height: auto; }
   .sticky { left: 0; right: 0; transform: none; justify-content: center; bottom: 10px; padding: 0 10px; }
   .sticky a { flex: 0 1 auto; }
 }
+
+.tl { border-left: 2px solid var(--line); margin-left: 0; padding-left: 26px; }
+.tl div::before { left: -18px; top: 7px; width: 9px; height: 9px; }

@@ -276,7 +276,7 @@ def crosspost(state: dict) -> int:
         if not photo:                            # загрузка не удалась — берём ранее загруженное фото
             photo = (cache[0] if cache else (SEED_PHOTOS[0] if SEED_PHOTOS else None))
         if not photo:   # фото не залилось (Flood control на загрузку) — публикуем текст со ссылкой
-            text = text.rstrip() + "\n\n" + link
+            text = text.rstrip() + "\n\n" + _short(link)
             if "flood" in (_photo.err or "").lower() or " 9 " in f" {_photo.err} ":
                 state["vk_photo_until"] = time.time() + 900   # 15 минут не трогаем загрузку фото
                 print(f"  ВК: загрузка фото во флуд-контроле — час публикуем без картинок")
@@ -284,11 +284,9 @@ def crosspost(state: dict) -> int:
         state["vk_wall_err"] = f"{pid}: {_photo.wall_err}" if _photo.wall_err else None   # почему не вышло фото стены по личному ключу
         # фото «из сообщений» сообщества ВК на стене один не показывает — пробуем вместе с карточкой ссылки
         # (наше фото как обложка ссылки); не принял — публикуем как раньше, текст со ссылкой
-        if photo and photo.startswith("photo-"):   # фото «из сообщений» сообщества — только вместе со ссылкой
-            tries = [[photo, link], [photo]] if link != SITE else [[photo]]
-        elif photo:                                # фото стены (личный ключ) ВК показывает как обычную картинку
-            tries = [[photo]]
-        else:                                      # без фото вообще — только текст
+        if photo:   # сначала картинка без ссылки (ВК не теряет вложение), при ошибке — с ссылкой
+            tries = [[photo], [photo, link]] if link != SITE else [[photo]]
+        else:
             tries = [[]]
         try:
             for i, att in enumerate(tries):
