@@ -15,6 +15,10 @@ on:
         description: "1 — снять паузу и сразу опубликовать свежие посты с фото"
         required: false
         default: ""
+      photo_test:
+        description: "1 — опубликовать отдельную тестовую запись с фото и проверить вложение"
+        required: false
+        default: ""
 jobs:
   check:
     runs-on: ubuntu-latest
@@ -161,4 +165,53 @@ jobs:
                         "|", (it.get("text") or "")[:40].replace("\n", " "))
           except Exception as e:
               print("wall.get не удался:", e)
+          PY
+
+      - name: Test photo post
+        if: ${{ always() && inputs.photo_test == '1' }}
+        env:
+          VK_TOKEN: ${{ secrets.VK_TOKEN }}
+          VK_USER_TOKEN: ${{ secrets.VK_USER_TOKEN }}
+        run: |
+          pip install -q requests pillow pandas
+          python3 - <<'PY'
+          import json, os, sys
+          from datetime import datetime, timezone
+          sys.path.insert(0, ".")
+          from betbot import postimg, vk
+
+          posts = json.load(open("data/channel.json", encoding="utf-8"))["posts"]
+          pid = max(int(k) for k in posts)
+          post = posts[str(pid)]
+          image = postimg.image_for(post, "новость", posts)
+          if not image:
+              raise SystemExit("Не удалось создать тестовое изображение")
+          photo = vk._photo(image)
+          source = "новая загрузка"
+          if not photo:
+              available = [p for p in vk.SEED_PHOTOS if p]
+              if not available:
+                  raise SystemExit(f"VK не загрузил фото и нет запасного снимка: {vk._photo.err}")
+              photo = available[0]
+              source = "резервный снимок сообщества"
+          message = f"🧪 Тест фото ВК · {datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M UTC')}\nПроверка отображения вложения."
+          created = vk._call("wall.post", _tok=os.environ.get("VK_TOKEN"), owner_id=-vk.GROUP_ID,
+                             from_group=1, message=message, attachments=photo)
+          post_id = int(created["post_id"])
+          print("TEST_POST_ID:", post_id, "| PHOTO_SOURCE:", source)
+          try:
+              pending = {"post_id": post_id}
+              has_photo = vk._pending_has_photo(pending)
+          except Exception as error:
+              print(f"TEST_POST_URL: https://vk.com/wall-{vk.GROUP_ID}_{post_id}")
+              raise SystemExit(f"Пост создан, но VK временно не дал проверить фото: {error}") from None
+          if not has_photo:
+              try:
+                  vk._call("wall.delete", _tok=os.environ.get("VK_USER_TOKEN"),
+                           owner_id=-vk.GROUP_ID, post_id=post_id)
+              except Exception as error:
+                  raise SystemExit(f"VK создал тест без фото и не дал удалить запись {post_id}: {error}") from None
+              raise SystemExit("VK принял тестовый пост без фото; запись удалена")
+          print("TEST_POST_URL:", f"https://vk.com/wall-{vk.GROUP_ID}_{post_id}")
+          print("TEST_PHOTO_VERIFIED: true")
           PY
