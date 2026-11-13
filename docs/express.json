@@ -2,67 +2,67 @@
 {
 "kind": "express",
 "title": "Экспресс дня",
-"day": "2026-11-12",
-"odds": 1.905,
-"p": 0.4149,
-"status": "won",
-"won": 3,
+"day": "2026-11-13",
+"odds": 1.8512447759999997,
+"p": 0.4239,
+"status": "wait",
+"won": 0,
 "n": 3,
-"post": "https://t.me/aistavvit/5128",
+"post": "https://t.me/aistavvit/5398",
 "legs": [
 {
 "sport": "football",
-"id": "401861148",
-"home": "Сборная Чехии",
-"away": "Сборная Испании",
+"id": "401861161",
+"home": "Сборная Шотландии",
+"away": "Сборная Северной Македонии",
 "league": "🌍 Сборные · Лига наций",
-"kickoff": "2026-11-12T22:45:00+03:00",
-"label": "Победа: Сборная Испании",
-"odds": 1.2,
-"p": 0.769881556683587,
+"kickoff": "2026-11-13T22:45:00+03:00",
+"label": "Победа: Сборная Шотландии",
+"odds": 1.167,
+"p": 0.7918310876365582,
 "logos": [
-"https://a.espncdn.com/i/teamlogos/countries/500/cze.png",
-"https://a.espncdn.com/i/teamlogos/countries/500/esp.png"
+"https://a.espncdn.com/i/teamlogos/countries/500/sco.png",
+"https://a.espncdn.com/i/teamlogos/countries/500/mkd.png"
 ],
-"win": true,
-"score": "0:2",
-"url": "live.html?s=football&p=soccer%2Fuefa.nations&e=401861148&h=%D0%A1%D0%B1%D0%BE%D1%80%D0%BD%D0%B0%D1%8F+%D0%A7%D0%B5%D1%85%D0%B8%D0%B8&a=%D0%A1%D0%B1%D0%BE%D1%80%D0%BD%D0%B0%D1%8F+%D0%98%D1%81%D0%BF%D0%B0%D0%BD%D0%B8%D0%B8"
+"win": null,
+"score": null,
+"url": "live.html?s=football&p=soccer%2Fuefa.nations&e=401861161&h=%D0%A1%D0%B1%D0%BE%D1%80%D0%BD%D0%B0%D1%8F+%D0%A8%D0%BE%D1%82%D0%BB%D0%B0%D0%BD%D0%B4%D0%B8%D0%B8&a=%D0%A1%D0%B1%D0%BE%D1%80%D0%BD%D0%B0%D1%8F+%D0%A1%D0%B5%D0%B2%D0%B5%D1%80%D0%BD%D0%BE%D0%B9+%D0%9C%D0%B0%D0%BA%D0%B5%D0%B4%D0%BE%D0%BD%D0%B8%D0%B8"
 },
 {
 "sport": "football",
-"id": "401861150",
-"home": "Сборная Англии",
-"away": "Сборная Хорватии",
+"id": "401861153",
+"home": "Сборная Лихтенштейна",
+"away": "Сборная Азербайджана",
 "league": "🌍 Сборные · Лига наций",
-"kickoff": "2026-11-12T22:45:00+03:00",
-"label": "Победа: Сборная Англии",
-"odds": 1.25,
-"p": 0.741306191687871,
+"kickoff": "2026-11-13T22:45:00+03:00",
+"label": "Победа: Сборная Азербайджана",
+"odds": 1.256,
+"p": 0.7323958666240545,
 "logos": [
-"https://a.espncdn.com/i/teamlogos/countries/500/eng.png",
-"https://a.espncdn.com/i/teamlogos/countries/500/cro.png"
+"https://a.espncdn.com/i/teamlogos/countries/500/lie.png",
+"https://a.espncdn.com/i/teamlogos/countries/500/aze.png"
 ],
-"win": true,
-"score": "2:1",
-"url": "live.html?s=football&p=soccer%2Fuefa.nations&e=401861150&h=%D0%A1%D0%B1%D0%BE%D1%80%D0%BD%D0%B0%D1%8F+%D0%90%D0%BD%D0%B3%D0%BB%D0%B8%D0%B8&a=%D0%A1%D0%B1%D0%BE%D1%80%D0%BD%D0%B0%D1%8F+%D0%A5%D0%BE%D1%80%D0%B2%D0%B0%D1%82%D0%B8%D0%B8"
+"win": null,
+"score": null,
+"url": "live.html?s=football&p=soccer%2Fuefa.nations&e=401861153&h=%D0%A1%D0%B1%D0%BE%D1%80%D0%BD%D0%B0%D1%8F+%D0%9B%D0%B8%D1%85%D1%82%D0%B5%D0%BD%D1%88%D1%82%D0%B5%D0%B9%D0%BD%D0%B0&a=%D0%A1%D0%B1%D0%BE%D1%80%D0%BD%D0%B0%D1%8F+%D0%90%D0%B7%D0%B5%D1%80%D0%B1%D0%B0%D0%B9%D0%B4%D0%B6%D0%B0%D0%BD%D0%B0"
 },
 {
 "sport": "football",
-"id": "401861152",
-"home": "Сборная Черногории",
-"away": "Сборная Латвии",
+"id": "401861158",
+"home": "Сборная Сербии",
+"away": "Сборная Германии",
 "league": "🌍 Сборные · Лига наций",
-"kickoff": "2026-11-12T22:45:00+03:00",
-"label": "Победа: Сборная Черногории",
-"odds": 1.27,
-"p": 0.7269613380461319,
+"kickoff": "2026-11-13T22:45:00+03:00",
+"label": "Победа: Сборная Германии",
+"odds": 1.263,
+"p": 0.7308657113697283,
 "logos": [
-"https://a.espncdn.com/i/teamlogos/countries/500/mtg.png",
-"https://a.espncdn.com/i/teamlogos/countries/500/lva.png"
+"https://a.espncdn.com/i/teamlogos/countries/500/sba.png",
+"https://a.espncdn.com/i/teamlogos/countries/500/ger.png"
 ],
-"win": true,
-"score": "2:1",
-"url": "live.html?s=football&p=soccer%2Fuefa.nations&e=401861152&h=%D0%A1%D0%B1%D0%BE%D1%80%D0%BD%D0%B0%D1%8F+%D0%A7%D0%B5%D1%80%D0%BD%D0%BE%D0%B3%D0%BE%D1%80%D0%B8%D0%B8&a=%D0%A1%D0%B1%D0%BE%D1%80%D0%BD%D0%B0%D1%8F+%D0%9B%D0%B0%D1%82%D0%B2%D0%B8%D0%B8"
+"win": null,
+"score": null,
+"url": "live.html?s=football&p=soccer%2Fuefa.nations&e=401861158&h=%D0%A1%D0%B1%D0%BE%D1%80%D0%BD%D0%B0%D1%8F+%D0%A1%D0%B5%D1%80%D0%B1%D0%B8%D0%B8&a=%D0%A1%D0%B1%D0%BE%D1%80%D0%BD%D0%B0%D1%8F+%D0%93%D0%B5%D1%80%D0%BC%D0%B0%D0%BD%D0%B8%D0%B8"
 }
 ]
 },

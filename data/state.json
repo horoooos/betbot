@@ -5,15 +5,8 @@
  },
  "learned": "2026-11-13",
  "schedule_day": "2026-11-13",
- "content_slot": "2026-11-12-23",
+ "content_slot": "2026-11-13-10",
  "news_seen": [
-  "https://www.sport-express.ru/tennis/wta/news/andreeva-rasskazala-o-rituale-kotoryy-pomogaet-ey-nastroitsya-na-matchi-2473281/",
-  "https://www.sport-express.ru/tennis/atp/news/sinner-rasskazal-o-srokah-vozvrascheniya-na-kort-posle-travmy-kolena-2473251/",
-  "https://www.sport-express.ru/football/england/news/times-pochettino-osnovnoy-kandidat-na-zamenu-kerriku-v-manchester-yunayted-2473344/",
-  "https://www.sport-express.ru/football/women/news/byvshiy-trener-zhenskih-sbornyh-sssr-i-rossii-oleg-lapshin-skonchalsya-v-89-let-2473343/",
-  "https://www.sport-express.ru/football/rfpl/news/grushevskiy-o-matche-krasnodar-cska-ne-uvidel-ni-odnogo-povtora-gde-kordoba-sto-procentov-igraet-rukoy-2473322/",
-  "furia-protiv-legacy-kto-nachnet-blast-rivals-fall-2026-s-pobedy",
-  "https://www.sport-express.ru/hockey/world-u20/news/bykov-sbornaya-rossii-nikak-ne-dolzhna-otkazyvatsya-ot-uchastiya-v-molodezhnom-chm-2473348/",
   "https://www.sport-express.ru/hockey/vhl/news/shayba-probila-shlem-golkiperu-dinamo-altay-v-matche-vhl-2473345/",
   "https://www.sport-express.ru/hockey/world/news/dve-nemeckie-partii-podderzhali-uchastie-sbornoy-rossii-v-chempionate-mira-po-hokkeyu-2473323/",
   "https://www.sport-express.ru/hockey/nhl/news/forvard-reyndzhers-mika-zibanezhad-vyshel-na-chetvertoe-mesto-sredi-shvedov-v-istorii-nhl-po-ochkam-v-menshinstve-2473321/",
@@ -511,9 +504,11 @@
   "virtus-pro-proshla-v-polufinal-blast-r6-major-osaka-2026",
   "https://www.sport-express.ru/hockey/nhl/news/napadayuschiy-minnesoty-mett-boldi-kirill-kaprizov-superzvezda-ne-prosto-tak-on-delaet-vse-2474327/",
   "https://www.sport-express.ru/hockey/nhl/news/napadayuschiy-kolorado-makkinnon-travmirovalsya-posle-stolknoveniya-s-rossiyaninom-zubom-2474326/",
-  "https://www.sport-express.ru/hockey/nhl/news/vratar-ilya-sorokin-priznan-vtoroy-zvezdoy-matcha-los-andzheles-aylenders-2474331/"
+  "https://www.sport-express.ru/hockey/nhl/news/vratar-ilya-sorokin-priznan-vtoroy-zvezdoy-matcha-los-andzheles-aylenders-2474331/",
+  "https://www.sport-express.ru/tennis/wta/news/pegula-nazvala-match-s-andreevoy-osobenno-ozhidaemym-iz-za-incidenta-na-trenirovke-2474334/",
+  "https://www.sport-express.ru/football/rfpl/news/kushanashvili-prizval-spartak-vernut-dzyubu-on-russkiy-messi-2474304/"
  ],
- "news_i": 4,
+ "news_i": 1,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1489,87 +1484,81 @@
   ]
  },
  "express": {
-  "msg": 5128,
+  "msg": 5398,
   "legs": [
    {
     "sport": "football",
     "div": "UNL",
-    "id": "401861148",
+    "id": "401861161",
+    "side": "home",
+    "p": 0.7918310876365582,
+    "odds": 1.167,
+    "kickoff": "2026-11-13T22:45:00+03:00",
+    "home": "Сборная Шотландии",
+    "away": "Сборная Северной Македонии",
+    "league": "🌍 Сборные · Лига наций",
+    "logos": [
+     "https://a.espncdn.com/i/teamlogos/countries/500/sco.png",
+     "https://a.espncdn.com/i/teamlogos/countries/500/mkd.png"
+    ],
+    "colors": [
+     "1a2d69",
+     "E70000"
+    ],
+    "label": "Победа: Сборная Шотландии"
+   },
+   {
+    "sport": "football",
+    "div": "UNL",
+    "id": "401861153",
     "side": "away",
-    "p": 0.769881556683587,
-    "odds": 1.2,
-    "kickoff": "2026-11-12T22:45:00+03:00",
-    "home": "Сборная Чехии",
-    "away": "Сборная Испании",
+    "p": 0.7323958666240545,
+    "odds": 1.256,
+    "kickoff": "2026-11-13T22:45:00+03:00",
+    "home": "Сборная Лихтенштейна",
+    "away": "Сборная Азербайджана",
     "league": "🌍 Сборные · Лига наций",
     "logos": [
-     "https://a.espncdn.com/i/teamlogos/countries/500/cze.png",
-     "https://a.espncdn.com/i/teamlogos/countries/500/esp.png"
+     "https://a.espncdn.com/i/teamlogos/countries/500/lie.png",
+     "https://a.espncdn.com/i/teamlogos/countries/500/aze.png"
     ],
     "colors": [
-     "d7141a",
-     "c60b1e"
+     "0000cd",
+     "2D4AB0"
     ],
-    "label": "Победа: Сборная Испании",
-    "win": true,
-    "score": "0:2"
+    "label": "Победа: Сборная Азербайджана"
    },
    {
     "sport": "football",
     "div": "UNL",
-    "id": "401861150",
-    "side": "home",
-    "p": 0.741306191687871,
-    "odds": 1.25,
-    "kickoff": "2026-11-12T22:45:00+03:00",
-    "home": "Сборная Англии",
-    "away": "Сборная Хорватии",
+    "id": "401861158",
+    "side": "away",
+    "p": 0.7308657113697283,
+    "odds": 1.263,
+    "kickoff": "2026-11-13T22:45:00+03:00",
+    "home": "Сборная Сербии",
+    "away": "Сборная Германии",
     "league": "🌍 Сборные · Лига наций",
     "logos": [
-     "https://a.espncdn.com/i/teamlogos/countries/500/eng.png",
-     "https://a.espncdn.com/i/teamlogos/countries/500/cro.png"
-    ],
-    "colors": [
-     "FFFFFF",
-     "ff0000"
-    ],
-    "label": "Победа: Сборная Англии",
-    "win": true,
-    "score": "2:1"
-   },
-   {
-    "sport": "football",
-    "div": "UNL",
-    "id": "401861152",
-    "side": "home",
-    "p": 0.7269613380461319,
-    "odds": 1.27,
-    "kickoff": "2026-11-12T22:45:00+03:00",
-    "home": "Сборная Черногории",
-    "away": "Сборная Латвии",
-    "league": "🌍 Сборные · Лига наций",
-    "logos": [
-     "https://a.espncdn.com/i/teamlogos/countries/500/mtg.png",
-     "https://a.espncdn.com/i/teamlogos/countries/500/lva.png"
+     "https://a.espncdn.com/i/teamlogos/countries/500/sba.png",
+     "https://a.espncdn.com/i/teamlogos/countries/500/ger.png"
     ],
     "colors": [
      "E70000",
-     "992242"
+     "FFFFFF"
     ],
-    "label": "Победа: Сборная Черногории",
-    "win": true,
-    "score": "2:1"
+    "label": "Победа: Сборная Германии"
    }
   ],
-  "odds": 1.905,
-  "day": "2026-11-12",
-  "done": true
+  "odds": 1.8512447759999997,
+  "day": "2026-11-13",
+  "done": false
  },
  "streak_posted": 0,
  "value_day": "2026-11-12",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-12",
- "site_stamp": "918|5397|2026-11-13 09",
+ "site_stamp": "918|5400|2026-11-13 10",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1703,7 +1692,7 @@
  "streak_day": {
   "2026-11-12": 1
  },
- "news_next": "2026-11-13T09:58:17.371303+03:00",
+ "news_next": "2026-11-13T10:31:17.216820+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1719,8 +1708,8 @@
  "tg_offset": 727618641,
  "push_watch": {},
  "news_video": true,
- "vk_last": 5395,
- "dz_last": 5397,
+ "vk_last": 5398,
+ "dz_last": 5400,
  "vk_err": "5312: VK wall.post: 9 Flood control",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -1743,7 +1732,8 @@
   "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/98/Alaska_Anchorage_Seawolves_at_Wisconsin_Badgers_men%27s_ice_hockey_men%27s_ice_hockey_game_on_November_25%2C_2023_at_Kohl_Center_in_Madison%2C_Wisconsin_5476.jpg/1280px-Alaska_Anchorage_Seawolves_at_Wisconsin_Badgers_men%27s_ice_hockey_men%27s_ice_hockey_game_on_November_25%2C_2023_at_Kohl_Center_in_Madison%2C_Wisconsin_5476.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
   "https://upload.wikimedia.org/wikipedia/commons/9/9a/GGadzhiev.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
   "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5f/Uganda_Cranes_fans_going_to_Nambooole_Stadium5.jpg/1280px-Uganda_Cranes_fans_going_to_Nambooole_Stadium5.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-  "https://upload.wikimedia.org/wikipedia/commons/3/31/CSKA-MC_%285%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+  "https://upload.wikimedia.org/wikipedia/commons/3/31/CSKA-MC_%285%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "https://upload.wikimedia.org/wikipedia/commons/5/55/5597.90290.AS_10552.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
  ],
  "indexnow_day": "2026-11-13",
  "vk_wall_err": "5312: попытка 3: VK photos.getWallUploadServer: 9 Flood control",
