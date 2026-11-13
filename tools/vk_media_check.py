@@ -111,6 +111,52 @@ def link_preview(group, reader, parse_token=None):
 
 def main():
     mode = os.environ.get("VK_MEDIA_MODE", "access")
+    if mode in {"fresh-wall", "fresh-personal-wall", "fresh-chat-photo"}:
+        from betbot.vk_wall_events import PhotoMonitor
+        import hashlib
+        group = os.environ.get("VK_TOKEN", "")
+        user = os.environ.get("VK_USER_TOKEN", "")
+        posts = json.loads(Path("data/channel.json").read_text(encoding="utf-8"))["posts"]
+        pid = max(posts, key=int)
+        image = postimg.as_jpeg(postimg.image_for(posts[pid], "новость", posts))
+        if not image:
+            raise RuntimeError("Картинка не создана")
+        print("SOURCE_POST:", pid, "IMAGE_SHA256:", hashlib.sha256(image).hexdigest(), flush=True)
+        if mode == "fresh-chat-photo":
+            # Reproduce the historical upload only; never send a chat message.
+            token = group
+            server = call("photos.getMessagesUploadServer", token, peer_id=2000000001)
+        else:
+            token = user
+            params = {"group_id": vk.GROUP_ID} if mode == "fresh-wall" else {}
+            server = call("photos.getWallUploadServer", token, **params)
+        response = requests.post(server["upload_url"], files={"photo": ("betbot.jpg", image, "image/jpeg")}, timeout=60)
+        response.raise_for_status()
+        uploaded = response.json()
+        if not uploaded.get("photo") or uploaded["photo"] == "[]":
+            raise RuntimeError("Сервер не вернул новое фото")
+        params = {k: uploaded[k] for k in ("photo", "server", "hash")}
+        if mode == "fresh-wall":
+            params["group_id"] = vk.GROUP_ID
+        saved = call("photos.saveMessagesPhoto" if mode == "fresh-chat-photo" else "photos.saveWallPhoto", token, **params)[0]
+        public_id = f"photo{saved['owner_id']}_{saved['id']}"
+        attachment = public_id + ("_" + saved["access_key"] if saved.get("access_key") else "")
+        print("NEW_PHOTO:", public_id, flush=True)
+        monitor = PhotoMonitor(group)
+        monitor.start()
+        created = call("wall.post", group, owner_id=-vk.GROUP_ID, from_group=1,
+                       message=f"Проверка новой картинки к публикации Telegram №{pid}.\nСпособ: {mode}",
+                       attachments=attachment, guid=f"betbot-fresh-{mode}-{pid}")
+        post_id = int(created["post_id"])
+        print("POST_URL:", f"https://vk.com/wall-{vk.GROUP_ID}_{post_id}", flush=True)
+        verified = monitor.verify(post_id)
+        print("FRESH_PHOTO_VERIFIED:", verified, flush=True)
+        if not verified:
+            raise RuntimeError("Новое фото отсутствует во вложениях события стены")
+        short = vk._short(vk._site_link(int(pid)))
+        call("wall.createComment", group, owner_id=-vk.GROUP_ID, post_id=post_id, from_group=1,
+             message=f"Сайт проекта: {short}", guid=f"betbot-fresh-site-{post_id}")
+        return
     user = os.environ.get("VK_USER_TOKEN", "").strip()
     group = os.environ.get("VK_TOKEN", "").strip()
     reader = os.environ.get("VK_SERVICE_KEY", "").strip() or user
