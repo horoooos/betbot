@@ -271,7 +271,7 @@ h1 span{background:linear-gradient(90deg,#ffc400,#ff7a3d);-webkit-background-cli
 .lm .t .l{color:var(--live)}.lm .n{display:flex;justify-content:space-between;gap:8px;font-weight:800;margin-top:4px}
 .lm .n span:first-child{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.lm .w{font-size:12px;color:var(--gold);font-weight:800;margin-top:auto;padding-top:6px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .lm .t span:first-child{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}.lm .t{gap:8px}.lm .t span:last-child{flex:none}
-.lm .lt{display:inline-flex;align-items:center;gap:4px;margin-top:7px;padding:2px 8px;border-radius:999px;background:rgba(124,58,237,.22);border:1px solid rgba(168,85,247,.5);color:#c9b8ff;font-size:10px;font-weight:900}
+.lm .lt{display:inline-flex;align-self:flex-start;align-items:center;gap:4px;margin-top:7px;padding:2px 8px;border-radius:999px;background:rgba(124,58,237,.22);border:1px solid rgba(168,85,247,.5);color:#c9b8ff;font-size:10px;font-weight:900}
 .dot{display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--live);box-shadow:0 0 10px var(--live);animation:p 1.2s infinite;margin-right:4px}
 @keyframes p{50%{opacity:.35}}
 h2{font-size:19px;font-weight:900;margin:34px 0 12px;display:flex;align-items:center;gap:8px}
@@ -446,7 +446,7 @@ def build(res: pd.DataFrame, now: pd.Timestamp, blocks: dict | None = None) -> N
                       "home": str(r["home"]), "away": str(r["away"]), "label": str(r["main_label"]),
                       "odds": r["main_odds"], "score": str(r["score"]), "live": False, "lives": [],
                       "emoji": EMOJI.get(r.get("sport"), "")})
-    by_key = {(it["home"], it["away"], it["d"]): it for it in items}
+    by_key = {(it["home"], it["away"]): it for it in items}
     try:   # ⚡ live-ставки: цепляем к строке того же матча, чтобы шли рядом с обычным прогнозом
         for _, r in pro.live_bets().tail(40).iterrows():
             mt = str(r.get("match") or "")
@@ -455,18 +455,33 @@ def build(res: pd.DataFrame, now: pd.Timestamp, blocks: dict | None = None) -> N
             fin = "" if fin is None or pd.isna(fin) or str(fin).lower() in ("nan", "none") else str(fin)
             lv = {"label": str(r.get("label") or ""), "odds": r.get("min_odds"),
                   "ok": str(r["hit"]).lower() in ("true", "1", "1.0")}
-            host = by_key.get((h_ or mt, a_ if sep else "", str(r["date"])[:10]))
+            host = by_key.get((h_ or mt, a_ if sep else ""))
             if host is not None and lv["label"]:
                 host["lives"].append(lv)          # тот же матч — дописываем строку в его карточку
                 continue
+            live_only = sum(1 for x in items if x.get("live_only"))
+            if live_only >= 3:      # без парного прогноза — не больше трёх строк, чтобы не было стены
+                continue
             items.append({"d": str(r["date"])[:10], "ok": lv["ok"], "home": h_ or mt, "away": a_ if sep else "",
-                          "label": lv["label"], "odds": lv["odds"], "score": fin, "live": True, "lives": [],
-                          "emoji": ""})
+                          "label": "", "odds": lv["odds"], "score": fin, "live": False, "live_only": True,
+                          "lives": [lv], "emoji": ""})
     except Exception:
         pass
     items.sort(key=lambda x: x["d"], reverse=True)
     for i, it in enumerate(items[:60]):
         ok, d = it["ok"], it["d"][5:].split("-")
+        if it.get("live_only"):
+            lv = it["lives"][0]
+            try:
+                lo = f"{float(lv['odds']):.2f}"
+            except (TypeError, ValueError):
+                lo = "—"
+            feed += (f'<div class="fr{" more" if i >= 15 else ""}">'
+                     f'<span class="ok">{"✅" if lv["ok"] else "❌"}</span>'
+                     f'<div class="m"><b>{escape(it["home"])}{" — " + escape(it["away"]) if it["away"] else ""}</b>'
+                     f'<span class="lvline">⚡ LIVE: {escape(lv["label"])} · кэф {lo}</span></div>'
+                     f'<div class="r"><b>{escape(it["score"])}</b>{d[1] + "." + d[0] if len(d) == 2 else ""}</div></div>')
+            continue
         try:
             odds = f"{float(it['odds']):.2f}"
         except (TypeError, ValueError):
