@@ -293,7 +293,10 @@ def crosspost(state: dict) -> int:
         try:
             for i, att in enumerate(tries):
                 try:
-                    _call("wall.post", owner_id=-GROUP_ID, from_group=1, message=text[:15000], attachments=",".join(att))
+                    # стену публикуем ключом сообщества: у Kate-токена лимит на wall.post (9 Flood control),
+                    # а загрузка фото — личным (photos.* групповым ключом недоступны)
+                    _call("wall.post", _tok=os.environ.get("VK_TOKEN"), owner_id=-GROUP_ID, from_group=1,
+                          message=text[:15000], attachments=",".join(att))
                     state["vk_mode"] = "+".join(a[:5] for a in att) or "текст"
                     break
                 except RuntimeError as e:
