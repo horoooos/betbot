@@ -92,7 +92,19 @@ def main():
         from betbot import vk_gif
         if not group:
             raise RuntimeError("VK_TOKEN отсутствует")
-        server = call("docs.getWallUploadServer", group, group_id=vk.GROUP_ID)
+        try:
+            server = call("docs.getWallUploadServer", group, group_id=vk.GROUP_ID)
+        except RuntimeError as error:
+            if ": 15 " not in str(error):
+                raise
+            permissions = call("groups.getTokenPermissions", group)
+            names = {p.get("name") for p in permissions.get("permissions", [])}
+            print("GROUP_PERMISSION_NAMES:", sorted(str(n) for n in names), flush=True)
+            if not {"docs", "manage"}.issubset(names):
+                raise RuntimeError("Ключу группы недостаёт права docs или manage для настройки загрузки GIF") from None
+            call("groups.edit", group, group_id=vk.GROUP_ID, docs=2)
+            print("DOCUMENT_SECTION_LIMITED_ENABLED: true", flush=True)
+            server = call("docs.getWallUploadServer", group, group_id=vk.GROUP_ID)
         posts = json.loads(Path("data/channel.json").read_text(encoding="utf-8"))["posts"]
         pid = max(posts, key=int)
         image = postimg.image_for(posts[pid], "новость", posts)
