@@ -88,6 +88,43 @@ def main():
     user = os.environ.get("VK_USER_TOKEN", "").strip()
     group = os.environ.get("VK_TOKEN", "").strip()
     reader = os.environ.get("VK_SERVICE_KEY", "").strip() or user
+    if mode == "graffiti-wall":
+        from PIL import Image
+        if not group:
+            raise RuntimeError("VK_TOKEN отсутствует")
+        server = call("docs.getMessagesUploadServer", group, type="graffiti", peer_id=-vk.GROUP_ID)
+        print("GRAFFITI_UPLOAD_SERVER_READY: true", flush=True)
+        posts = json.loads(Path("data/channel.json").read_text(encoding="utf-8"))["posts"]
+        pid = max(posts, key=int)
+        image = postimg.image_for(posts[pid], "новость", posts)
+        if not image:
+            raise RuntimeError("Картинка граффити не создана")
+        with Image.open(BytesIO(image)) as source:
+            picture = source.convert("RGBA")
+            picture.thumbnail((1024, 1024))
+            output = BytesIO()
+            picture.save(output, "PNG")
+        uploaded = requests.post(server["upload_url"],
+                                 files={"file": ("betbot.png", output.getvalue(), "image/png")}, timeout=60)
+        print("GRAFFITI_UPLOAD_HTTP:", uploaded.status_code, flush=True)
+        uploaded.raise_for_status()
+        payload = uploaded.json()
+        if not payload.get("file"):
+            raise RuntimeError("VK не вернул идентификатор загруженного граффити")
+        saved = call("docs.save", group, file=payload["file"])
+        graffiti = saved.get("graffiti", {})
+        if not graffiti.get("owner_id") or not graffiti.get("id"):
+            raise RuntimeError("VK не подтвердил сохранение граффити")
+        attachment = f"graffiti{graffiti['owner_id']}_{graffiti['id']}"
+        if graffiti.get("access_key"):
+            attachment += "_" + graffiti["access_key"]
+        print("GRAFFITI_SAVED: true", flush=True)
+        post = call("wall.post", group, owner_id=-vk.GROUP_ID, from_group=1,
+                    message="Тест BetBot: карточка новости как граффити.", attachments=attachment,
+                    guid="betbot-graffiti-test-" + os.environ.get("GITHUB_RUN_ID", str(int(time.time()))))
+        print("POST_URL:", f"https://vk.com/wall-{vk.GROUP_ID}_{int(post['post_id'])}", flush=True)
+        print("WALL_DISPLAY_REQUIRES_VERIFICATION: true", flush=True)
+        return
     if mode == "gif-wall":
         from betbot import vk_gif
         if not group:
