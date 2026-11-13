@@ -11,6 +11,10 @@ on:
         description: "Текст тестового поста в ВК (пусто — не публиковать)"
         required: false
         default: ""
+      post_now:
+        description: "1 — снять паузу и сразу опубликовать свежие посты с фото"
+        required: false
+        default: ""
 jobs:
   check:
     runs-on: ubuntu-latest
@@ -127,3 +131,25 @@ jobs:
           except Exception as e:
               print("wall.post ОШИБКА:", repr(e))
           EOF
+
+      - name: Post now
+        if: ${{ inputs.post_now == '1' }}
+        env:
+          VK_TOKEN: ${{ secrets.VK_TOKEN }}
+          VK_USER_TOKEN: ${{ secrets.VK_USER_TOKEN }}
+        run: |
+          pip install -q requests pillow pandas
+          python3 - <<'PY'
+          import json, sys
+          sys.path.insert(0, ".")
+          from betbot import vk
+          st = json.load(open("data/state.json", encoding="utf-8"))
+          posts = json.load(open("data/channel.json", encoding="utf-8"))["posts"]
+          newest = max(int(k) for k in posts)
+          st["vk_pause_ts"] = 0
+          st["vk_floods"] = 0
+          st["vk_last"] = max(0, newest - 2)
+          n = vk.crosspost(st)
+          print("ОПУБЛИКОВАНО:", n, "| mode:", st.get("vk_mode"), "| last:", st.get("vk_last"),
+                "| err:", st.get("vk_err"), "| photos:", len(st.get("vk_photos") or []))
+          PY
