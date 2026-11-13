@@ -1,0 +1,66 @@
+name: VK probe
+
+# Ручная проверка: реально публикуем в ВК текст и фото (для диагностики Flood control).
+on:
+  workflow_dispatch:
+    inputs:
+      probe_text:
+        description: "Текст поста для проверки"
+        required: true
+        default: "Проверка публикации из бота: текст без картинки."
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Probe VK posting
+        env:
+          VK_TOKEN: ${{ secrets.VK_TOKEN }}
+          VK_USER_TOKEN: ${{ secrets.VK_USER_TOKEN }}
+          PROBE_TEXT: ${{ inputs.probe_text }}
+        run: |
+          python3 - <<'PY'
+          import json, os, urllib.parse, urllib.request, uuid
+          group_tok = os.environ["VK_TOKEN"].strip()
+          user_tok = os.environ.get("VK_USER_TOKEN", "").strip()
+          text = os.environ["PROBE_TEXT"][:900]
+
+          def call(method, tok=None, **p):
+              p.update(access_token=tok or group_tok, v="5.199")
+              data = urllib.parse.urlencode(p).encode()
+              try:
+                  with urllib.request.urlopen(f"https://api.vk.com/method/{method}", data, timeout=30) as r:
+                      return json.load(r)
+              except Exception as e:
+                  return {"transport_error": repr(e)}
+
+          gid = 228963529
+
+          # 1) текст без вложений
+          r1 = call("wall.post", owner_id=-gid, from_group=1, message=text)
+          print("ТЕКСТ:", json.dumps(r1, ensure_ascii=False)[:300])
+
+          # 2) фото через сообщения (getMessagesUploadServer) → фото сообщества → пост со вложением
+          img = urllib.request.urlopen("https://horoooos.github.io/betbot/og.png", timeout=30).read()
+          srv = call("photos.getMessagesUploadServer", tok=user_tok, group_id=gid)
+          print("СЕРВЕР СООБЩЕНИЙ:", json.dumps(srv, ensure_ascii=False)[:160])
+          if "response" in srv:
+              up = srv["response"]["upload_url"]
+              b = uuid.uuid4().hex
+              body = (f"--{b}\r\nContent-Disposition: form-data; name=\"photo\"; filename=\"p.png\"\r\n"
+                      f"Content-Type: image/png\r\n\r\n").encode() + img + f"\r\n--{b}--\r\n".encode()
+              req = urllib.request.Request(up, data=body, headers={"Content-Type": f"multipart/form-data; boundary={b}"})
+              with urllib.request.urlopen(req, timeout=60) as r:
+                  res = json.load(r)
+              print("ЗАГРУЗКА:", json.dumps(res, ensure_ascii=False)[:200])
+              sv = call("photos.saveMessagesPhoto", tok=user_tok, photo=res.get("photo"), server=res.get("server"),
+                        hash=res.get("hash"))
+              print("СОХРАНЕНИЕ:", json.dumps(sv, ensure_ascii=False)[:300])
+              if "response" in sv and sv["response"]:
+                  ph = sv["response"][0]
+                  att = f"photo{ph['owner_id']}_{ph['id']}"
+                  r2 = call("wall.post", owner_id=-gid, from_group=1, message=text, attachments=att)
+                  print("ФОТО+ТЕКСТ:", json.dumps(r2, ensure_ascii=False)[:300])
+          PY
