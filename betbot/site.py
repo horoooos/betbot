@@ -414,19 +414,15 @@ def build(res: pd.DataFrame, now: pd.Timestamp, blocks: dict | None = None) -> N
             pred_days = {}
         for i in range(27, -1, -1):
             d = end - pd.Timedelta(days=i)
-            if d in by_day.index and not (d.isoformat() in pred_days and int(by_day.loc[d, "size"]) < 3):
+            if d in by_day.index:   # если итоги уже есть — цвет по факту, без «ждём»
                 n, k = int(by_day.loc[d, "size"]), int(by_day.loc[d, "sum"])
                 p = k / n
                 col = "#2ecc71" if p >= .6 else "#9be15d" if p >= .5 else "#ffc400" if p >= .4 else "#ff5a5a"
-                heat += f'<i style="background:{col};opacity:{.45 + .55 * min(n, 10) / 10:.2f}" title="{d:%d.%m}: {k} из {n} ({100 * p:.0f}%)"></i>'
+                heat += f'<i style="background:{col};opacity:{.62 + .38 * min(n, 10) / 10:.2f}" title="{d:%d.%m}: {k} из {n} ({100 * p:.0f}%)"></i>'
             elif d.isoformat() in pred_days:
                 cnt = pred_days[d.isoformat()]
-                cur_note = ""
-                if d in by_day.index:
-                    n, k = int(by_day.loc[d, "size"]), int(by_day.loc[d, "sum"])
-                    cur_note = f", уже {k} из {n}"
                 heat += (f'<i style="background:repeating-linear-gradient(135deg,#ffc400 0 9px,#a87400 9px 18px)" '
-                         f'title="{d:%d.%m}: {cnt} прогнозов, ждём итогов{cur_note}"></i>')
+                         f'title="{d:%d.%m}: {cnt} прогнозов, ждём итогов"></i>')
             else:
                 heat += f'<i title="{d:%d.%m}: прогнозов не было"></i>'
 
@@ -629,7 +625,7 @@ def build(res: pd.DataFrame, now: pd.Timestamp, blocks: dict | None = None) -> N
 <style>@media (max-width:760px){{#quizbox{{grid-template-columns:1fr!important}}}}</style>
 <div class="kpis" id="stats">{kpis}</div>
 {_bank_block(res, now)}
-<h2>🗓 Последние 4 недели</h2><div class="card"><div class="heat">{heat}</div>
+<h2>🗓 Последние 30 дней</h2><div class="card"><div class="heat">{heat}</div>
 <div class="legend"><span><i style="background:#2ecc71"></i>60%+ заходов</span><span><i style="background:#9be15d"></i>50–60%</span><span><i style="background:#ffc400"></i>40–50%</span><span><i style="background:repeating-linear-gradient(135deg,#ffc400 0 9px,#a87400 9px 18px)"></i>ждём итогов</span><span><i style="background:#ff5a5a"></i>меньше 40%</span><span><i style="background:rgba(255,255,255,.08)"></i>без прогнозов</span></div></div>
 <h2>🏅 По видам спорта</h2><div class="sp">{sport_cards}</div>
 <div class="grid2"><div><h2>🎯 По типам прогнозов</h2><div class="card">{markets}</div></div>
