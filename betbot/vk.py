@@ -89,14 +89,9 @@ SEED_PHOTOS = [   # фото сообщества, загруженные ран
 
 
 def _photo(img: bytes) -> str | None:
-    """Загружаем картинку и возвращаем вложение для поста.
-
-    Личный ключ — как фото стены. Ключ сообщества фото стены грузить не умеет, поэтому грузим как
-    «фото для сообщений сообщества» и прикрепляем к посту (нужны включённые сообщения сообщества).
-    """
+    """Загружает фото именно в альбом стены через личный ключ администратора."""
     import time
-    s, errs = None, []
-    wall_flood = False
+    s = None
     for attempt in range(3 if os.environ.get("VK_USER_TOKEN") else 0):
         # отдельные серверы загрузки ВК иногда отвечают «405 Not Allowed» — каждый раз берём новый сервер
         try:
@@ -108,53 +103,25 @@ def _photo(img: bytes) -> str | None:
                 raise RuntimeError(f"сервер загрузки ответил не JSON ({r.status_code}): {r.text[:80]!r}") from None
             s = _call("photos.saveWallPhoto", group_id=GROUP_ID, photo=res["photo"], server=res["server"], hash=res["hash"])[0]
             break
-        except Exception as e:   # после 3 неудач — грузим через сообщения сообщества
+        except Exception as e:
             _photo.wall_err = f"попытка {attempt + 1}: {e}"[:250]
             print(f"  ! ВК: фото стены не загрузилось (попытка {attempt + 1}): {e}")
-            if _is_flood_error(e):
-                wall_flood = True
+            if _is_flood_error(e):  # Flood control не лечится повтором и тем более другим типом фото
                 break
             time.sleep(3)
-    if not s and getattr(_photo, "wall_err", ""):
-        errs.append(f"стена: {_photo.wall_err}")
+    if not s:
+        reasons = []
+        if getattr(_photo, "wall_err", ""):
+            reasons.append(f"фото стены: {_photo.wall_err}")
+        if not os.environ.get("VK_USER_TOKEN"):
+            reasons.append("нет VK_USER_TOKEN с правом загрузки фото стены")
+        _photo.err = " | ".join(reasons)[:300] or "ВК не сохранил фото стены"
+        print(f"  ! ВК: изображение не загружено: {_photo.err}; попробую ранее загруженный снимок сообщества")
+        return None
     try:
-        if not s:
-            if not os.environ.get("VK_TOKEN"):
-                raise RuntimeError("нет VK_TOKEN для загрузки через сообщения")
-            last = ""
-            for attempt in range(3):   # ВК иногда отвечает пустым фото или не-JSON — пробуем заново с новым адресом
-                try:
-                    # Эта схема была рабочей на 12 ноября: личный ключ для стены
-                    # может получить Flood control, а ключ сообщества — загрузить фото сообщений.
-                    group_token = os.environ.get("VK_TOKEN")
-                    if not group_token:
-                        raise RuntimeError("нет VK_TOKEN для загрузки через сообщения")
-                    up = _call("photos.getMessagesUploadServer", _tok=group_token,
-                                peer_id=0, group_id=GROUP_ID)["upload_url"]
-                    r = requests.post(up, files={"photo": (("post.png", img, "image/png") if img[1:4] == b"PNG" else ("post.jpg", img, "image/jpeg"))}, timeout=60)
-                    try:
-                        res = r.json()
-                    except ValueError:
-                        raise RuntimeError(f"сервер загрузки ответил не JSON ({r.status_code}): {r.text[:80]!r}") from None
-                    if not res.get("photo") or res.get("photo") == "[]":
-                        raise RuntimeError(f"пустое фото ({len(img)} байт): {str(res)[:100]}")
-                    s = _call("photos.saveMessagesPhoto", _tok=group_token,
-                              photo=res["photo"], server=res["server"], hash=res["hash"])[0]
-                    break
-                except Exception as e:
-                    last = str(e)
-                    if _is_flood_error(e):
-                        break
-                    time.sleep(3)
-            if not s:
-                raise RuntimeError(f"после попыток: {last}")
         return f"photo{s['owner_id']}_{s['id']}" + (f"_{s['access_key']}" if s.get("access_key") else "")
     except Exception as e:
-        errs.append(f"сообщения: {e}")
-        print(f"  ! ВК: картинка не загрузилась: {e}")
-        _photo.err = " | ".join(errs)[:300]
-        if wall_flood and "стена:" not in _photo.err:
-            _photo.err = f"стена: {_photo.wall_err} | " + _photo.err
+        _photo.err = f"неполный ответ photos.saveWallPhoto: {e}"[:300]
         return None
 
 
@@ -278,6 +245,79 @@ def _stats_tail(pid: int, posts: dict) -> bool:
     return any("СТАТИСТИКА БОТА" in (posts.get(str(j)) or {}).get("html", "") for j in range(pid - 1, pid - 4, -1))
 
 
+def _pending_has_photo(pending: dict) -> bool:
+    result = _call("wall.getById", _tok=os.environ.get("VK_USER_TOKEN"),
+                   posts=f"-{GROUP_ID}_{pending['post_id']}")
+    items = result.get("items", []) if isinstance(result, dict) else []
+    attachments = items[0].get("attachments", []) if items else []
+    return any(a.get("type") == "photo" for a in attachments if isinstance(a, dict))
+
+
+def _resolve_pending_post(state: dict) -> bool:
+    """Resolve a post created before a transient verification failure; never repost it blindly."""
+    pending = state.get("vk_verify_pending")
+    if not isinstance(pending, dict):
+        return False
+    if time.time() < float(state.get("vk_verify_retry_at") or 0):
+        return True
+    try:
+        has_photo = _pending_has_photo(pending)
+    except Exception as error:
+        state["vk_err"] = f"{pending.get('pid')}: ожидает проверки фото записи {pending.get('post_id')}: {error}"[:300]
+        state["vk_verify_retry_at"] = time.time() + 900
+        print(f"  ВК: запись {pending.get('post_id')} создана; проверку повторю позже: {error}")
+        return True
+    if not has_photo:
+        try:
+            _call("wall.delete", _tok=os.environ.get("VK_USER_TOKEN"), owner_id=-GROUP_ID,
+                  post_id=int(pending["post_id"]))
+        except Exception as error:
+            state["vk_err"] = f"{pending.get('pid')}: запись без фото не удалена: {error}"[:300]
+            state["vk_verify_retry_at"] = time.time() + 900
+            return True
+        pid = str(pending.get("pid", ""))
+        cursor = state.setdefault("vk_photo_cursor", {})
+        cursor[pid] = max(int(cursor.get(pid, 0)), int(pending.get("cursor", 0)) + 1)
+        state.pop("vk_verify_pending", None)
+        state.pop("vk_verify_retry_at", None)
+        state["vk_err"] = f"{pid}: запись без фото удалена; повторю с другим вложением"
+        return True
+
+    pid = int(pending["pid"])
+    state["vk_last"] = max(int(state.get("vk_last", 0)), pid)
+    state["vk_at_ts"] = time.time()
+    hour = time.strftime("%Y-%m-%d-%H", time.gmtime())
+    lim = state.get("vk_hour") or {}
+    if lim.get("h") != hour:
+        lim = {"h": hour, "n": 0}
+    lim["n"] = int(lim.get("n", 0)) + 1
+    state["vk_hour"] = lim
+    day = time.strftime("%Y-%m-%d", time.gmtime())
+    dl = state.get("vk_day") or {}
+    if dl.get("d") != day:
+        dl = {"d": day, "n": 0}
+    dl["n"] = int(dl.get("n", 0)) + 1
+    state["vk_day"] = dl
+    state["vk_mode"] = pending.get("attachment", "photo")
+    state.setdefault("vk_photo_cursor", {}).pop(str(pid), None)
+    state.pop("vk_verify_pending", None)
+    state.pop("vk_verify_retry_at", None)
+    state["vk_err"] = None
+    comment = f"🔗 Сайт проекта: {pending['short']}"
+    try:
+        _ensure_short_comment(int(pending["post_id"]), comment)
+        state.setdefault("vk_comment_pending", {}).pop(str(pid), None)
+        state["vk_comment_err"] = None
+    except Exception as error:
+        state.setdefault("vk_comment_pending", {})[str(pid)] = {
+            "post_id": int(pending["post_id"]), "message": comment,
+            "retry_at": time.time() + 900, "error": str(error)[:200],
+        }
+        state["vk_comment_err"] = f"{pid}: {str(error)[:200]}"
+    print(f"  ВК: фото записи {pending['post_id']} подтверждено; пост {pid} отмечен опубликованным")
+    return True
+
+
 def crosspost(state: dict) -> int:
     """Публикует в ВК посты канала, вышедшие после прошлого запуска. Возвращает, сколько опубликовано."""
     if not enabled() or not CHANNEL.exists():
@@ -289,6 +329,8 @@ def crosspost(state: dict) -> int:
     if "vk_last" not in state:           # первый запуск: старое не переносим, начинаем с новых постов
         state["vk_last"] = newest
         print(f"  ВК: кросспостинг включён, начинаем после поста {newest}")
+        return 0
+    if _resolve_pending_post(state):
         return 0
     if newest - int(state["vk_last"]) > STALE_GAP:   # очередь устарела — публикуем только новые посты
         skipped = newest - int(state["vk_last"])
@@ -413,17 +455,17 @@ def crosspost(state: dict) -> int:
             photo = photo_candidates[0]
         state["vk_err"] = f"{pid} фото: {_photo.err}" if _photo.err else None
         state["vk_wall_err"] = f"{pid}: {_photo.wall_err}" if _photo.wall_err else None   # почему не вышло фото стены по личному ключу
-        # Раньше фотографии, загруженные через фото сообщений сообщества,
-        # прикреплялись вместе со ссылкой: ВК показывал их как обложку записи.
-        # Сначала пробуем этот рабочий порядок, затем само фото.
+        # Сначала прикрепляем проверенное фото стены вместе со ссылкой, затем фото отдельно.
         tries = []
         for candidate in photo_candidates:
             if candidate.startswith("photo-"):
                 tries.append([candidate, link])
             tries.append([candidate])
         last_photo_error = None
+        photo_cursor = state.setdefault("vk_photo_cursor", {})
+        cursor = max(0, int(photo_cursor.get(str(pid), 0)))
         try:
-            for i, att in enumerate(tries):
+            for i, att in enumerate(tries[cursor:], start=cursor):
                 try:
                     # стену публикуем ключом сообщества: у Kate-токена лимит на wall.post (9 Flood control),
                     # а загрузка фото — личным (photos.* групповым ключом недоступны)
@@ -432,31 +474,29 @@ def crosspost(state: dict) -> int:
                     post_id = result.get("post_id") if isinstance(result, dict) else None
                     if not post_id:
                         raise PhotoVerificationError("VK wall.post не вернул id записи для проверки фото")
+                    state["vk_verify_pending"] = {
+                        "pid": pid, "post_id": int(post_id), "short": short,
+                        "attachment": "+".join(a[:5] for a in att), "cursor": i,
+                    }
                     try:
-                        check = _call("wall.getById", posts=f"-{GROUP_ID}_{post_id}")
+                        has_photo = _pending_has_photo(state["vk_verify_pending"])
                     except Exception as check_error:
-                        try:
-                            _call("wall.delete", _tok=os.environ.get("VK_USER_TOKEN") or os.environ.get("VK_TOKEN"), owner_id=-GROUP_ID,
-                                  post_id=post_id)
-                        except Exception as delete_error:
-                            raise PhotoVerificationError(
-                                f"не удалось проверить фото ({check_error}); не удалось удалить неподтверждённый пост ({delete_error})"
-                            ) from None
                         raise PhotoVerificationError(
-                            f"проверка фото не удалась; неподтверждённый пост удалён ({check_error})"
+                            f"запись {post_id} создана; проверка фото временно недоступна ({check_error})"
                         ) from None
-                    items = check.get("items", []) if isinstance(check, dict) else []
-                    attachments = items[0].get("attachments", []) if items else []
-                    if not any(a.get("type") == "photo" for a in attachments if isinstance(a, dict)):
+                    if not has_photo:
                         # Удаляем запись, если ВК принял запрос, но потерял картинку.
                         try:
-                            _call("wall.delete", _tok=os.environ.get("VK_USER_TOKEN") or os.environ.get("VK_TOKEN"), owner_id=-GROUP_ID,
+                            _call("wall.delete", _tok=os.environ.get("VK_USER_TOKEN"), owner_id=-GROUP_ID,
                                   post_id=post_id)
                         except Exception as delete_error:
                             raise PhotoVerificationError(
                                 f"ВК создал запись без фото и не удалил её ({delete_error})"
                             ) from None
+                        state.pop("vk_verify_pending", None)
+                        photo_cursor[str(pid)] = i + 1
                         raise RuntimeError("ВК создал запись без фото; запись удалена, пробую резервное вложение")
+                    state.pop("vk_verify_pending", None)
                     state["vk_mode"] = "+".join(a[:5] for a in att) or "текст"
                     break
                 except PhotoVerificationError:
@@ -470,6 +510,7 @@ def crosspost(state: dict) -> int:
             else:
                 raise RuntimeError(f"ни одно резервное фото не прошло проверку: {last_photo_error}")
             state["vk_last"] = pid
+            photo_cursor.pop(str(pid), None)
             state["vk_at_ts"] = time.time()
             lim["n"] = lim.get("n", 0) + 1
             state["vk_hour"] = lim
@@ -503,6 +544,7 @@ def crosspost(state: dict) -> int:
                 # Не продвигаем очередь и не пытаемся повторно создать запись,
                 # пока не удаётся безопасно проверить наличие изображения.
                 state["vk_pause_ts"] = time.time() + PAUSE_S
+                state["vk_verify_retry_at"] = time.time() + 900
                 print(f"  ВК: публикация {pid} остановлена до проверки фото: {msg}")
                 break
             tries = state.setdefault("vk_try", {})

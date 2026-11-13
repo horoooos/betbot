@@ -15,40 +15,24 @@ from betbot import dzen, names, postimg, shorts, vk
 
 
 class VKPhotoTests(unittest.TestCase):
-    def test_photo_upload_falls_back_to_group_token_after_personal_flood(self):
+    def test_photo_upload_does_not_use_unverified_messages_photo_fallback_after_wall_flood(self):
         calls = []
-
-        class UploadResponse:
-            status_code = 200
-            text = ""
-
-            @staticmethod
-            def json():
-                return {"photo": "uploaded", "server": 3, "hash": "h"}
 
         def api(method, _tok=None, **params):
             calls.append((method, _tok, params))
             if method == "photos.getWallUploadServer":
                 raise RuntimeError("VK photos.getWallUploadServer: 9 Flood control")
-            if method == "photos.getMessagesUploadServer":
-                return {"upload_url": "https://upload.test"}
-            if method == "photos.saveMessagesPhoto":
-                return [{"owner_id": -vk.GROUP_ID, "id": 999, "access_key": "key"}]
             raise AssertionError(method)
 
         with patch.dict(os.environ, {"VK_USER_TOKEN": "user", "VK_TOKEN": "group"}), \
                 patch.object(vk, "_call", side_effect=api), \
-                patch.object(vk.requests, "post", return_value=UploadResponse()), \
                 patch("time.sleep"):
-            self.assertEqual(vk._photo(b"jpeg"), f"photo-{vk.GROUP_ID}_999_key")
+            self.assertIsNone(vk._photo(b"jpeg"))
 
-        self.assertEqual([c[0] for c in calls], [
-            "photos.getWallUploadServer", "photos.getMessagesUploadServer", "photos.saveMessagesPhoto",
-        ])
-        self.assertEqual(calls[1][1], "group")
-        self.assertEqual(calls[2][1], "group")
+        self.assertEqual([c[0] for c in calls], ["photos.getWallUploadServer"])
+        self.assertIn("Flood control", vk._photo.err)
 
-    def _crosspost(self, photo, *, short_fails=False):
+    def _crosspost(self, photo, *, short_fails=False, verify_fails=False, state=None):
         tmp = tempfile.TemporaryDirectory()
         self.addCleanup(tmp.cleanup)
         root = Path(tmp.name)
@@ -75,6 +59,8 @@ class VKPhotoTests(unittest.TestCase):
             if method == "wall.post":
                 return {"post_id": 77}
             if method == "wall.getById":
+                if verify_fails:
+                    raise RuntimeError("VK wall.getById: 9 Flood control")
                 return {"items": [{"attachments": [{"type": "photo"}]}]}
             if method == "wall.getComments":
                 return {"items": []}
@@ -82,7 +68,7 @@ class VKPhotoTests(unittest.TestCase):
                 return {"comment_id": 88}
             raise AssertionError(method)
 
-        state = {
+        state = state or {
             "vk_last": 5400, "vk_pause_ts": 0, "vk_at_ts": 0,
             "vk_hour": {}, "vk_day": {}, "vk_photos": [], "vk_comment_pending": {},
         }
@@ -116,6 +102,31 @@ class VKPhotoTests(unittest.TestCase):
         done, state, calls, _ = self._crosspost(None)
         self.assertEqual(done, 0)
         self.assertEqual(state["vk_last"], 5400)
+        self.assertFalse(any(c[0] == "wall.post" for c in calls))
+
+    def test_verification_flood_does_not_delete_or_duplicate_created_post(self):
+        photo = f"photo-{vk.GROUP_ID}_999"
+        state = {
+            "vk_last": 5400, "vk_pause_ts": 0, "vk_at_ts": 0,
+            "vk_hour": {}, "vk_day": {}, "vk_photos": [], "vk_comment_pending": {},
+        }
+        done, state, calls, _ = self._crosspost(photo, verify_fails=True, state=state)
+        self.assertEqual(done, 0)
+        self.assertEqual(state["vk_last"], 5400)
+        self.assertEqual(state["vk_verify_pending"]["post_id"], 77)
+        self.assertEqual(sum(c[0] == "wall.post" for c in calls), 1)
+        self.assertFalse(any(c[0] == "wall.delete" for c in calls))
+
+        done, state, calls, _ = self._crosspost(photo, state=state)
+        self.assertEqual(done, 0)
+        self.assertEqual(state["vk_last"], 5400)
+        self.assertFalse(calls)  # не опрашиваем VK постоянно во время паузы
+        state["vk_verify_retry_at"] = 0
+
+        done, state, calls, _ = self._crosspost(photo, state=state)
+        self.assertEqual(done, 0)
+        self.assertEqual(state["vk_last"], 5401)
+        self.assertNotIn("vk_verify_pending", state)
         self.assertFalse(any(c[0] == "wall.post" for c in calls))
 
         done, state, calls, _ = self._crosspost(f"photo-{vk.GROUP_ID}_999", short_fails=True)
