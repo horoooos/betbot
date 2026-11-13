@@ -619,7 +619,8 @@ def express_card(legs: list[dict], total: float, p_all: float, day: str, brand: 
 TEAL_TOP, TEAL_BOTTOM = (110, 235, 220), (20, 150, 160)
 
 
-def express_result_card(legs: list[dict], total: float, day: str = "", brand: str = "", won: bool = True) -> bytes:
+def express_result_card(legs: list[dict], total: float, day: str = "", brand: str = "", won: bool = True,
+                        title: str = "ЭКСПРЕСС ДНЯ") -> bytes:
     """Итог экспресса: крупный штамп ЗАШЁЛ/НЕ ЗАШЁЛ слева, события справа, плашка с кэфом внизу.
 
     legs: home/away/label/odds/win/score. Работает для 2–6 событий (4+ — плотные строки).
@@ -631,8 +632,9 @@ def express_result_card(legs: list[dict], total: float, day: str = "", brand: st
     accent = green if won else red
     accent_bg = dark_green if won else dark_red
     img, d = _background((10, 14, 32), (22, 30, 60), style="diagonal")
-    d.text((W / 2, 52), "ЭКСПРЕСС ДНЯ", font=font(44, "ExtraBold"), fill=ACCENT, anchor="mm")
-    d.line((W / 2 - 130, 82, W / 2 + 130, 82), fill=ACCENT, width=3)
+    head = (255, 150, 60) if "ЯЙЦ" in title.upper() else ACCENT
+    d.text((W / 2, 52), title.upper(), font=font(44, "ExtraBold"), fill=head, anchor="mm")
+    d.line((W / 2 - 130, 82, W / 2 + 130, 82), fill=head, width=3)
     d.text((W / 2, 106), f"{day} · {n} " + ("событие" if n == 1 else "события" if n < 5 else "событий"),
            font=font(22, "Medium"), fill=MUTED, anchor="mm")
     # штамп

@@ -590,7 +590,11 @@ def _match_card(m: dict, prefix: str) -> str:
           else f'<span>{m["kickoff"]:%d.%m %H:%M}</span>')
     card = (f'<a class="card mc" href="{prefix}{m["url"]}"><div class="t"><span>{EMOJI.get(m["sport"], "")} {H.escape(m.get("league") or SPORT_RU.get(m["sport"], ""))}</span>{st}</div>'
             f'<b>{H.escape(m["home"])} — {H.escape(m["away"])}</b><span class="p">🎯 {H.escape(m["tip"])}{f" · {m["odds"]:.2f}" if m.get("odds") else ""}'
-            f'{f" · шанс {m["p"] * 100:.0f}%" if m.get("p") else ""}</span></a>')
+            f'{f" · шанс {m["p"] * 100:.0f}%" if m.get("p") else ""}</span>'
+            + (f'<span class="p" style="display:block;color:#c4b5fd;font-size:12px;margin-top:4px">⚡ LIVE: {H.escape(m["live"]["label"])}'
+               f'{f" · {m["live"]["odds"]:.2f}" if m["live"].get("odds") else ""}'
+               f' {"✅" if m["live"]["ok"] else "❌"}</span>' if m.get("live") else "")
+            + '</a>')
     if m.get("finished"):
         return card
     # «Поставить»: BetBoom по реферальной ссылке; ставка бота копируется, чтобы быстро найти её в линии
@@ -605,8 +609,9 @@ def _pred_index(ms: list[dict], now: pd.Timestamp) -> str:
     crumbs, bc = _crumbs("../", [("Главная", ""), ("Прогнозы на матчи", None)])
     upcoming = sorted([m for m in ms if not m.get("finished") and m["kickoff"] > now - pd.Timedelta(hours=3)], key=lambda m: m["kickoff"])
     done = [m for m in ms if m.get("finished")][:60]
-    try:   # ⚡ live-ставки бота — в тех же «Последних результатах»
+    try:   # ⚡ live-ставки: дописываем в карточку того же матча, одиночных — максимум 3
         from . import pro
+        by, order = {}, []
         for _, r in pro.live_bets().tail(40).iterrows():
             if str(r.get("hit")) in ("", "nan", "None"):
                 continue
@@ -614,11 +619,29 @@ def _pred_index(ms: list[dict], now: pd.Timestamp) -> str:
             h_, sep, a_ = mt.partition(" — ")
             fin = r.get("final")
             fin = "" if fin is None or (isinstance(fin, float) and fin != fin) else str(fin)
-            done.append({"sport": "", "league": "⚡ LIVE-ставка", "home": h_ or mt, "away": a_ if sep else "",
-                         "tip": str(r.get("label") or ""), "odds": r.get("min_odds"), "p": r.get("p"),
-                         "score": fin, "hit": str(r["hit"]).lower() in ("true", "1", "1.0"),
-                         "finished": True, "url": "live.html",
-                         "date": str(r["date"])[:10]})
+            lv = {"label": str(r.get("label") or ""), "odds": pd.to_numeric(r.get("min_odds"), errors="coerce"),
+                  "ok": str(r["hit"]).lower() in ("true", "1", "1.0")}
+            key = (h_ or mt, a_ if sep else "")
+            if key not in by:
+                by[key] = lv
+                order.append((key, lv, str(r["date"])[:10], fin))
+        used = set()
+        for m in done:
+            key = (m["home"], m["away"])
+            if key in by and key not in used:
+                m["live"] = by[key]
+                used.add(key)
+        extra = []
+        for key, lv, day, fin in order:
+            if key in used:
+                continue
+            if len(extra) >= 3:
+                break
+            extra.append({"sport": "", "league": "⚡ LIVE-ставка", "home": key[0], "away": key[1],
+                          "tip": lv["label"], "odds": lv["odds"], "p": None, "score": fin,
+                          "hit": lv["ok"], "finished": True, "url": "live.html", "date": day,
+                          "live_only": True})
+        done = extra + done
         done.sort(key=lambda m: str(m.get("date") or ""), reverse=True)
     except Exception as e:
         print(f"  ! live в результатах не собрались: {e}")

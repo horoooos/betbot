@@ -28,7 +28,8 @@ MIN_GAP_S = 900                # и не чаще одного поста за 1
 HOUR_LIMIT = 2                 # больше 2 постов в час на стену не публикуем
 DAY_LIMIT = 16                 # и не больше 16 в сутки — ВК режет за частые посты
 TRIES_LIMIT = 3                # после трёх неудач пост пропускаем, чтобы очередь не вставала навсегда
-PAUSE_S = 60 * 60              # после «Flood control» молчим час — иначе ВК блокирует стену надолго
+PAUSE_S = 60 * 60
+STALE_GAP = 2                  # отставание больше 2 постов — старую очередь пропускаем              # после «Flood control» молчим час — иначе ВК блокирует стену надолго
 STOP = re.compile(r"betboom|бетбум|букмекер|промокод|фрибет|реферал", re.I)
 
 
@@ -179,6 +180,10 @@ def crosspost(state: dict) -> int:
         state["vk_last"] = newest
         print(f"  ВК: кросспостинг включён, начинаем после поста {newest}")
         return 0
+    if newest - int(state["vk_last"]) > STALE_GAP:   # очередь устарела — публикуем только новые посты
+        skipped = newest - int(state["vk_last"])
+        state["vk_last"] = newest - STALE_GAP
+        print(f"  ВК: очередь очищена, пропущено {skipped} старых постов")
     # тормоза: после Flood control ВК блокирует стену, поэтому молчим и постепенно наращиваем темп
     now_ts = time.time()
     if now_ts < float(state.get("vk_pause_ts") or 0):
