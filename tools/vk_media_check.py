@@ -114,13 +114,18 @@ def main():
     user = os.environ.get("VK_USER_TOKEN", "").strip()
     group = os.environ.get("VK_TOKEN", "").strip()
     reader = os.environ.get("VK_SERVICE_KEY", "").strip() or user
-    if mode == "existing-photo":
-        attachment = public_photo_reference(os.environ.get("VK_PUBLIC_PHOTO_REFERENCE", "").strip())
+    if mode in {"existing-photo", "keyed-photo"}:
+        if mode == "keyed-photo":
+            attachment = os.environ.get("VK_TEST_PHOTO_ATTACHMENT", "").strip()
+            if not re.fullmatch(r"photo-?[1-9]\d*_[1-9]\d*_[A-Za-z0-9]+", attachment):
+                raise RuntimeError("В защищённом секрете нет полного вложения фотографии")
+        else:
+            attachment = public_photo_reference(os.environ.get("VK_PUBLIC_PHOTO_REFERENCE", "").strip())
         if not group:
             raise RuntimeError("VK_TOKEN отсутствует")
         created = call("wall.post", group, owner_id=-vk.GROUP_ID, from_group=1,
                        message="Тест BetBot: прикрепление публичной фотографии из обычного поста.",
-                       attachments=attachment, guid="betbot-public-photo-" + attachment)
+                       attachments=attachment, guid="betbot-" + mode + "-" + "_".join(attachment.split("_")[:2]))
         print("POST_URL:", f"https://vk.com/wall-{vk.GROUP_ID}_{int(created['post_id'])}", flush=True)
         print("WALL_DISPLAY_REQUIRES_VERIFICATION: true", flush=True)
         return

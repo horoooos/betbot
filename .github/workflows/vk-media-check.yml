@@ -5,7 +5,7 @@ on:
       mode:
         description: "access — права ключа; wall — новая картинка стены; album — новая картинка альбома"
         type: choice
-        options: [access, app-info, album-access, link-preview, link-parsed-preview, link-community-preview, story-test, story-to-wall, story-to-wall-user, gif-wall, gif-message-wall, docs-info, graffiti-wall, existing-photo, wall, album]
+        options: [access, app-info, album-access, link-preview, link-parsed-preview, link-community-preview, story-test, story-to-wall, story-to-wall-user, gif-wall, gif-message-wall, docs-info, graffiti-wall, existing-photo, keyed-photo, wall, album]
         default: access
       story_id:
         description: "ID опубликованной истории для одного тестового поста"
@@ -40,4 +40,5 @@ jobs:
           VK_STORY_TEST_ID: ${{ inputs.story_id }}
           VK_DOC_TEST_RECIPIENT: ${{ inputs.recipient }}
           VK_PUBLIC_PHOTO_REFERENCE: ${{ inputs.photo_reference }}
+          VK_TEST_PHOTO_ATTACHMENT: ${{ secrets.VK_TEST_PHOTO_ATTACHMENT }}
         run: python tools/vk_media_check.py
