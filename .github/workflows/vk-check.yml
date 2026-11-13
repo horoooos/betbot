@@ -153,4 +153,12 @@ jobs:
           n = vk.crosspost(st)
           print("ОПУБЛИКОВАНО:", n, "| mode:", st.get("vk_mode"), "| last:", st.get("vk_last"),
                 "| err:", st.get("vk_err"), "| photos:", len(st.get("vk_photos") or []))
+          try:
+              import os
+              w = vk._call("wall.get", _tok=os.environ.get("VK_USER_TOKEN"), owner_id=-vk.GROUP_ID, count=3)
+              for it in w.get("items", []):
+                  print("ПОСТ", it["id"], "| вложения:", [a["type"] for a in it.get("attachments", [])],
+                        "|", (it.get("text") or "")[:40].replace("\n", " "))
+          except Exception as e:
+              print("wall.get не удался:", e)
           PY
