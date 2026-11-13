@@ -1720,7 +1720,7 @@
  "streak_day": {
   "2026-11-12": 1
  },
- "news_next": "2026-11-14T00:52:50.767670+03:00",
+ "news_next": "2026-11-14T01:00:50.932793+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1737,7 +1737,7 @@
  "tg_offset": 727618641,
  "push_watch": {},
  "news_video": true,
- "vk_last": 5624,
+ "vk_last": 5625,
  "dz_last": 5626,
  "vk_err": null,
  "news_forced": "now",
@@ -1809,14 +1809,14 @@
  "vk_photos": [],
  "vk_photo_until": 0,
  "vk_photo_cursor": {},
- "vk_story_last": 5460,
- "vk_story_err": "VK stories: ошибка загрузки; подписанный URL скрыт",
+ "vk_story_last": 5461,
+ "vk_story_err": null,
  "push_weekly": "2026-46",
- "vk_story_at": 1794598683.6720753,
- "vk_story_url": "https://vk.com/story-228963529_456239025",
+ "vk_story_at": 1794606927.3690376,
+ "vk_story_url": "https://vk.com/story-228963529_456239026",
  "vk_story_day": {
   "date": "2026-11-13",
-  "count": 7
+  "count": 8
  },
  "vk_legacy_pending": [
   {
@@ -1829,16 +1829,15 @@
   }
  ],
  "vk_reserve_mode_initialized": true,
- "vk_at_ts": 1794603272.3340118,
+ "vk_at_ts": 1794606925.6487124,
  "vk_photo_source": "archive",
  "vk_hour": {
-  "h": "2026-11-13-20",
-  "n": 2
+  "h": "2026-11-13-21",
+  "n": 1
  },
  "vk_day": {
   "d": "2026-11-13",
-  "n": 4
+  "n": 5
  },
- "vk_comment_err": null,
- "vk_story_retry_at": 1794606873.2824996
+ "vk_comment_err": null
 }
