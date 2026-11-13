@@ -13,9 +13,114 @@
 "bb": "https://betboom.ru/search?query=%D0%A1%D0%B8%D0%BD%D0%B3%D0%B0%D0%BF%D1%83%D1%80%D0%B0&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
 "path": "soccer/fifa.friendly",
 "url": "live.html?s=football&p=soccer%2Ffifa.friendly&e=401916338&h=%D0%A1%D0%B1%D0%BE%D1%80%D0%BD%D0%B0%D1%8F+%D0%A1%D0%B8%D0%BD%D0%B3%D0%B0%D0%BF%D1%83%D1%80%D0%B0&a=%D0%A1%D0%B1%D0%BE%D1%80%D0%BD%D0%B0%D1%8F+%D0%9F%D0%B0%D1%80%D0%B0%D0%B3%D0%B2%D0%B0%D1%8F",
-"tip": "",
+"tip": "ТМ 3.5 · 1.91",
 "top": false,
-"bot": null,
+"bot": {
+"main": {
+"label": "ТМ 3.5",
+"p": 0.484,
+"odds": 1.91,
+"est": false
+},
+"bold": null,
+"markets": [
+[
+"П1",
+0.029,
+23.0
+],
+[
+"Ничья",
+0.089,
+12.0
+],
+[
+"П2",
+0.882,
+1.071
+],
+[
+"1X",
+0.118,
+null
+],
+[
+"X2",
+0.971,
+null
+],
+[
+"ТБ 1.5",
+0.891,
+null
+],
+[
+"ТБ 2.5",
+0.723,
+null
+],
+[
+"ТМ 2.5",
+0.277,
+null
+],
+[
+"ТБ 3.5",
+0.516,
+1.8
+],
+[
+"Обе забьют — да",
+0.392,
+null
+],
+[
+"Обе забьют — нет",
+0.608,
+null
+],
+[
+"ИТ1 больше 1.5",
+0.096,
+null
+],
+[
+"ИТ2 больше 1.5",
+0.833,
+null
+],
+[
+"Ф1 (−1.5)",
+0.006,
+null
+],
+[
+"Ф2 (+1.5)",
+0.994,
+null
+]
+],
+"bar": [
+0.0289531067970039,
+0.0893698195138323,
+0.8816770736891637
+],
+"center": "Ожидаемые голы (xG) 0.5 : 3.2",
+"scores": [
+[
+"0:3",
+0.132
+],
+[
+"0:2",
+0.123
+],
+[
+"0:4",
+0.107
+]
+]
+},
 "lt": null
 },
 {
@@ -1296,15 +1401,15 @@
 "id": "401878524",
 "league": "Шотландия · Чемпионшип",
 "kickoff": "2026-11-14T18:00:00+03:00",
-"home": "Ливингстон",
-"away": "Гринок Мортон",
+"home": "Livingston",
+"away": "Greenock Morton",
 "hl": "https://a.espncdn.com/i/teamlogos/soccer/500/259.png",
 "al": "https://a.espncdn.com/i/teamlogos/soccer/500/411.png",
 "hid": "259",
 "aid": "411",
 "bb": "https://betboom.ru/search?query=%D0%9B%D0%B8%D0%B2%D0%B8%D0%BD%D0%B3%D1%81%D1%82%D0%BE%D0%BD&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
 "path": "soccer/sco.2",
-"url": "live.html?s=football&p=soccer%2Fsco.2&e=401878524&h=%D0%9B%D0%B8%D0%B2%D0%B8%D0%BD%D0%B3%D1%81%D1%82%D0%BE%D0%BD&a=%D0%93%D1%80%D0%B8%D0%BD%D0%BE%D0%BA+%D0%9C%D0%BE%D1%80%D1%82%D0%BE%D0%BD",
+"url": "live.html?s=football&p=soccer%2Fsco.2&e=401878524&h=Livingston&a=Greenock+Morton",
 "tip": "",
 "top": false,
 "bot": null,
