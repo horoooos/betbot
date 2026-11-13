@@ -72,7 +72,9 @@ jobs:
             done
             # vk_resume.txt is a one-shot signal. Stage its removal as well, or
             # every loop will read it again, clear the flood pause, and retry VK.
-            git add -A -- data/vk_resume.txt
+            if [ -e data/vk_resume.txt ] || git ls-files --error-unmatch data/vk_resume.txt >/dev/null 2>&1; then
+              git add -A -- data/vk_resume.txt
+            fi
             if ! git diff --cached --quiet; then
               git commit -q -m "Bot update $(TZ=Europe/Moscow date '+%F %H:%M')"
               # сохраняем надёжно: до 3 попыток; при неудаче — откат незаконченного rebase, чтобы следующий проход начал с чистого места
