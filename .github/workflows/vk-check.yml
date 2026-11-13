@@ -19,11 +19,20 @@ on:
         description: "1 — опубликовать отдельную тестовую запись с фото и проверить вложение"
         required: false
         default: ""
+      verify_post_id:
+        description: "Номер уже созданной записи: только проверить её вложения, не публикуя и не удаляя"
+        required: false
+        default: ""
+      diagnostics:
+        description: "1 — выполнить расширенную диагностику API ВК (несколько запросов)"
+        required: false
+        default: ""
 jobs:
   check:
     runs-on: ubuntu-latest
     steps:
       - name: Check VK token
+        if: ${{ inputs.diagnostics == '1' && inputs.photo_test != '1' && inputs.verify_post_id == '' && inputs.post_now != '1' }}
         continue-on-error: true
         env:
           VK_TOKEN: ${{ secrets.VK_TOKEN }}
@@ -75,6 +84,7 @@ jobs:
           EOF
       - uses: actions/checkout@v4
       - name: Bot-style upload test (no post)
+        if: ${{ inputs.diagnostics == '1' && inputs.photo_test != '1' && inputs.verify_post_id == '' && inputs.post_now != '1' }}
         env:
           VK_TOKEN: ${{ secrets.VK_TOKEN }}
           VK_USER_TOKEN: ${{ secrets.VK_USER_TOKEN }}
@@ -213,5 +223,40 @@ jobs:
                   raise SystemExit(f"VK создал тест без фото и не дал удалить запись {post_id}: {error}") from None
               raise SystemExit("VK принял тестовый пост без фото; запись удалена")
           print("TEST_POST_URL:", f"https://vk.com/wall-{vk.GROUP_ID}_{post_id}")
+          print("TEST_PHOTO_VERIFIED: true")
+          PY
+
+      - name: Verify existing VK post photo
+        if: ${{ inputs.verify_post_id != '' }}
+        env:
+          VK_USER_TOKEN: ${{ secrets.VK_USER_TOKEN }}
+          VERIFY_POST_ID: ${{ inputs.verify_post_id }}
+        run: |
+          pip install -q requests
+          python3 - <<'PY'
+          import os, re, sys
+          sys.path.insert(0, ".")
+          from betbot import vk
+
+          post_id = os.environ.get("VERIFY_POST_ID", "").strip()
+          token = os.environ.get("VK_USER_TOKEN", "").strip()
+          if not re.fullmatch(r"\d+", post_id):
+              raise SystemExit("Номер записи должен содержать только цифры")
+          if not token:
+              raise SystemExit("В GitHub Actions не задан секрет VK_USER_TOKEN")
+          result = vk._call("wall.getById", _tok=token, posts=f"-{vk.GROUP_ID}_{post_id}")
+          items = result.get("items", []) if isinstance(result, dict) else result if isinstance(result, list) else []
+          if not items:
+              raise SystemExit(f"VK не вернул запись {post_id}")
+          post = items[0]
+          attachments = post.get("attachments", [])
+          photos = [item["photo"] for item in attachments if item.get("type") == "photo" and isinstance(item.get("photo"), dict)]
+          print("POST_URL:", f"https://vk.com/wall-{vk.GROUP_ID}_{post_id}")
+          print("ATTACHMENT_TYPES:", [item.get("type") for item in attachments])
+          print("PHOTO_COUNT:", len(photos))
+          for photo in photos:
+              print("PHOTO_ID:", f"{photo.get('owner_id')}_{photo.get('id')}", "| sizes:", len(photo.get("sizes", [])))
+          if not photos:
+              raise SystemExit("В записи ВК нет фото-вложения")
           print("TEST_PHOTO_VERIFIED: true")
           PY
