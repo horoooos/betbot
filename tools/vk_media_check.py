@@ -107,6 +107,14 @@ def main():
     user = os.environ.get("VK_USER_TOKEN", "").strip()
     group = os.environ.get("VK_TOKEN", "").strip()
     reader = os.environ.get("VK_SERVICE_KEY", "").strip() or user
+    if mode == "docs-info":
+        documents = call("docs.get", group, owner_id=-vk.GROUP_ID, count=10)
+        print("GROUP_DOCUMENT_COUNT:", documents.get("count"), flush=True)
+        for document in documents.get("items", []):
+            print("DOCUMENT_METADATA:", {"id": document.get("id"), "owner_id": document.get("owner_id"),
+                  "ext": document.get("ext"), "type": document.get("type"),
+                  "preview_types": list((document.get("preview") or {}).keys())}, flush=True)
+        return
     if mode == "graffiti-wall":
         from PIL import Image
         if not group:

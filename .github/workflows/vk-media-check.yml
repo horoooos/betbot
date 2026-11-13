@@ -5,7 +5,7 @@ on:
       mode:
         description: "access — права ключа; wall — новая картинка стены; album — новая картинка альбома"
         type: choice
-        options: [access, app-info, album-access, link-preview, link-parsed-preview, link-community-preview, story-test, story-to-wall, story-to-wall-user, gif-wall, gif-message-wall, graffiti-wall, wall, album]
+        options: [access, app-info, album-access, link-preview, link-parsed-preview, link-community-preview, story-test, story-to-wall, story-to-wall-user, gif-wall, gif-message-wall, docs-info, graffiti-wall, wall, album]
         default: access
       story_id:
         description: "ID опубликованной истории для одного тестового поста"
