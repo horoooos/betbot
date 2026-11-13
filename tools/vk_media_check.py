@@ -88,7 +88,7 @@ def main():
     user = os.environ.get("VK_USER_TOKEN", "").strip()
     group = os.environ.get("VK_TOKEN", "").strip()
     reader = os.environ.get("VK_SERVICE_KEY", "").strip() or user
-    if mode == "story-to-wall":
+    if mode in {"story-to-wall", "story-to-wall-user"}:
         from betbot import vk_stories
         story_id = os.environ.get("VK_STORY_TEST_ID", "").strip()
         if not story_id.isdigit():
@@ -102,9 +102,12 @@ def main():
             attachment += "_" + photo["access_key"]
         print("STORY_PHOTO_FOUND: true", flush=True)
         print("PHOTO_OWNER_AND_ID:", photo["owner_id"], photo["id"], flush=True)
-        created = call("wall.post", group, owner_id=-vk.GROUP_ID, from_group=1,
+        publisher = user if mode == "story-to-wall-user" else group
+        if not publisher:
+            raise RuntimeError("Отсутствует ключ для выбранного способа публикации")
+        created = call("wall.post", publisher, owner_id=-vk.GROUP_ID, from_group=1,
                        message="Тест BetBot: фотография из опубликованной истории.",
-                       attachments=attachment, guid="betbot-story-wall-" + story_id)
+                       attachments=attachment, guid="betbot-" + mode + "-" + story_id)
         post_id = int(created["post_id"])
         print("POST_URL:", f"https://vk.com/wall-{vk.GROUP_ID}_{post_id}", flush=True)
         result = call("wall.getById", reader, posts=f"-{vk.GROUP_ID}_{post_id}")
