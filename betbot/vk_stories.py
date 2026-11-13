@@ -43,6 +43,15 @@ def _upload(url: str, image: bytes) -> str:
         raise RuntimeError("VK stories: сервер загрузки вернул не JSON") from None
     body = payload.get("response", payload)
     if not isinstance(body, dict) or not isinstance(body.get("upload_result"), str) or not body["upload_result"]:
+        def shape(value, depth=0):
+            if isinstance(value, dict) and depth < 3:
+                return {str(k)[:40]: shape(v, depth + 1) for k, v in list(value.items())[:12]}
+            if isinstance(value, list):
+                return [shape(value[0], depth + 1)] if value else []
+            return type(value).__name__
+        print("STORY_UPLOAD_RESPONSE_SHAPE:", shape(payload), flush=True)
+        if isinstance(payload.get("error"), dict):
+            print("STORY_UPLOAD_ERROR_CODE:", payload["error"].get("error_code"), flush=True)
         raise RuntimeError("VK stories: сервер не вернул upload_result")
     return body["upload_result"]
 
