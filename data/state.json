@@ -7,10 +7,6 @@
  "schedule_day": "2026-11-13",
  "content_slot": "2026-11-13-16",
  "news_seen": [
-  "https://www.sport-express.ru/hockey/khl/news/grishin-o-500-y-pobede-neftehimika-v-khl-priyatnaya-cifra-zdorovo-2473435/",
-  "https://www.sport-express.ru/tennis/atp/news/lorenco-muzetti-tobi-semyuel-schet-i-rezultat-matcha-2-kruga-turnira-v-stokgolme-10-noyabrya-2026-2473437/",
-  "https://www.sport-express.ru/hockey/khl/news/kozlov-o-porazhenii-salavata-yulaeva-ot-neftehimika-udaleniya-sbili-nash-ritm-2473438/",
-  "nel-o-stikerakh-k-pgl-major-singapore-2026-vladelets-titan-dolzhen-podat-v-sud",
   "analitiki-fut-esports-ne-smozhet-odolet-team-spirit-na-blast-rivals-fall-2026",
   "https://www.sport-express.ru/football/england/news/konte-hochet-vozglavit-manchester-yunayted-2473441/",
   "https://www.sport-express.ru/football/nation-league/news/tchuameni-iz-za-travmy-ne-sygraet-za-sbornuyu-francii-s-italiey-i-turciey-v-lige-naciy-2473442/",
@@ -506,9 +502,13 @@
   "https://www.sport-express.ru/football/spain/news/cadena-ser-rassledovanie-dela-negreyry-v-otnoshenii-barselony-blizitsya-k-zaversheniyu-2474520/",
   "https://www.sport-express.ru/stavki-na-sport/prognozy/news/moldaviya-kazahstan-prognoz-na-match-ligi-naciy-13-noyabrya-2026-goda-2474519/",
   "https://www.sport-express.ru/football/juniors/news/rossiya-u-21-kirgiziya-u-23-schet-i-rezultat-tovarischeskogo-matcha-13-noyabrya-2026-2474517/",
-  "https://www.sport-express.ru/football/rfpl/news/semak-vyrazil-nadezhdu-chto-poluzaschitnik-zenita-vendel-poluchit-vyzov-v-sbornuyu-brazilii-2474395/"
+  "https://www.sport-express.ru/football/rfpl/news/semak-vyrazil-nadezhdu-chto-poluzaschitnik-zenita-vendel-poluchit-vyzov-v-sbornuyu-brazilii-2474395/",
+  "https://www.sport-express.ru/tennis/wta/news/diana-shnayder-vystupit-na-vystavochnom-turnire-v-peterburge-2474535/",
+  "https://www.sport-express.ru/tennis/wta/news/makki-andreeva-uzhe-broniruet-sebe-mesto-pervoy-raketki-v-sleduyuschem-godu-2474531/",
+  "https://www.sport-express.ru/tennis/atp/news/marca-u-alkarasa-voznikli-problemy-s-zheludkom-pered-startom-itogovogo-turnira-2474526/",
+  "quinn-mozhet-priznayem-chto-yuzhnaya-amerika-khudshii-region-v-dota-2-seichas"
  ],
- "news_i": 4,
+ "news_i": 0,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1558,7 +1558,7 @@
  "value_day": "2026-11-12",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-12",
- "site_stamp": "920|5469|2026-11-13 17",
+ "site_stamp": "920|5469|2026-11-13 18",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1571,7 +1571,7 @@
    "SP2|401883136"
   ]
  },
- "value_check": "2026-11-13-5",
+ "value_check": "2026-11-13-6",
  "express_risk": {
   "msg": 5189,
   "legs": [
@@ -1692,7 +1692,7 @@
  "streak_day": {
   "2026-11-12": 1
  },
- "news_next": "2026-11-13T18:00:36.306960+03:00",
+ "news_next": "2026-11-13T18:31:36.653353+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1704,7 +1704,7 @@
   "Что такое xG",
   "Олимпийский девиз"
  ],
- "poster_day": "2026-11-06",
+ "poster_day": "2026-11-13",
  "bot_setup": 3,
  "tg_offset": 727618641,
  "push_watch": {},
@@ -1744,7 +1744,8 @@
   "https://ss.sport-express.ru/userfiles/materials/224/2242947/1180x665.jpg",
   "https://images.cybersport.ru/images/as-is/plain/3d/3d7e0808-4ff5-4d75-be03-d0c9e9326cf0.jpg",
   "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/1165064_sPICT.jpg/1280px-1165064_sPICT.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-  "https://upload.wikimedia.org/wikipedia/commons/9/9a/Dmitry_Medvedev_in_Tatarstan_%282009-10-23%29_37.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+  "https://upload.wikimedia.org/wikipedia/commons/9/9a/Dmitry_Medvedev_in_Tatarstan_%282009-10-23%29_37.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "https://images.cybersport.ru/images/as-is/plain/ae/ae7e2300-f791-440a-9486-9fe0f236d365.jpg"
  ],
  "indexnow_day": "2026-11-13",
  "vk_wall_err": "5417: попытка 1: VK photos.getWallUploadServer: 9 Flood control",
@@ -1789,5 +1790,6 @@
  },
  "vk_story_last": 5450,
  "vk_story_err": "VK stories: сервер не вернул upload_result",
- "vk_story_retry_at": 1794585572.72327
+ "vk_story_retry_at": 1794585572.72327,
+ "push_weekly": "2026-46"
 }
