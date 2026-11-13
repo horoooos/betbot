@@ -5,8 +5,11 @@ on:
       mode:
         description: "access — права ключа; wall — новая картинка стены; album — новая картинка альбома"
         type: choice
-        options: [access, app-info, album-access, link-preview, link-parsed-preview, link-community-preview, story-test, wall, album]
+        options: [access, app-info, album-access, link-preview, link-parsed-preview, link-community-preview, story-test, story-to-wall, wall, album]
         default: access
+      story_id:
+        description: "ID опубликованной истории для одного тестового поста"
+        required: false
 permissions:
   contents: read
 concurrency:
@@ -28,4 +31,5 @@ jobs:
           VK_USER_TOKEN: ${{ secrets.VK_USER_TOKEN }}
           VK_SERVICE_KEY: ${{ secrets.VK_SERVICE_KEY }}
           VK_MEDIA_MODE: ${{ inputs.mode }}
+          VK_STORY_TEST_ID: ${{ inputs.story_id }}
         run: python tools/vk_media_check.py

@@ -88,6 +88,32 @@ def main():
     user = os.environ.get("VK_USER_TOKEN", "").strip()
     group = os.environ.get("VK_TOKEN", "").strip()
     reader = os.environ.get("VK_SERVICE_KEY", "").strip() or user
+    if mode == "story-to-wall":
+        from betbot import vk_stories
+        story_id = os.environ.get("VK_STORY_TEST_ID", "").strip()
+        if not story_id.isdigit():
+            raise RuntimeError("Укажите ID истории цифрами")
+        story = vk_stories.verify_story({"owner_id": -vk.GROUP_ID, "id": int(story_id)})
+        photo = story["photo"]
+        if not photo.get("id") or not photo.get("owner_id"):
+            raise RuntimeError("Фото истории не содержит ID для прикрепления")
+        attachment = f"photo{photo['owner_id']}_{photo['id']}"
+        if photo.get("access_key"):
+            attachment += "_" + photo["access_key"]
+        print("STORY_PHOTO_FOUND: true", flush=True)
+        print("PHOTO_OWNER_AND_ID:", photo["owner_id"], photo["id"], flush=True)
+        created = call("wall.post", group, owner_id=-vk.GROUP_ID, from_group=1,
+                       message="Тест BetBot: фотография из опубликованной истории.",
+                       attachments=attachment, guid="betbot-story-wall-" + story_id)
+        post_id = int(created["post_id"])
+        print("POST_URL:", f"https://vk.com/wall-{vk.GROUP_ID}_{post_id}", flush=True)
+        result = call("wall.getById", reader, posts=f"-{vk.GROUP_ID}_{post_id}")
+        items = result.get("items", []) if isinstance(result, dict) else result
+        photos = [a for a in items[0].get("attachments", []) if a.get("type") == "photo"] if items else []
+        print("WALL_PHOTO_VERIFIED:", bool(photos), flush=True)
+        if not photos:
+            raise RuntimeError("VK создал пост, но не вернул фото истории в его вложениях")
+        return
     if mode == "story-test":
         from betbot import vk_stories
         posts = json.loads(Path("data/channel.json").read_text(encoding="utf-8"))["posts"]
