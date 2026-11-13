@@ -941,9 +941,114 @@ null
 "bb": "https://betboom.ru/search?query=%D0%A2%D0%BE%D1%80%D0%BA%D0%B5&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
 "path": "soccer/uru.1",
 "url": "live.html?s=football&p=soccer%2Furu.1&e=401933237&h=%D0%A2%D0%BE%D1%80%D0%BA%D0%B5&a=Racing+%28Montevideo%29",
-"tip": "",
+"tip": "ТМ 2.5 · 1.91",
 "top": false,
-"bot": null,
+"bot": {
+"main": {
+"label": "ТМ 2.5",
+"p": 0.487,
+"odds": 1.91,
+"est": false
+},
+"bold": null,
+"markets": [
+[
+"П1",
+0.51,
+1.8
+],
+[
+"Ничья",
+0.261,
+3.65
+],
+[
+"П2",
+0.229,
+3.95
+],
+[
+"1X",
+0.771,
+null
+],
+[
+"X2",
+0.49,
+null
+],
+[
+"ТБ 1.5",
+0.765,
+null
+],
+[
+"ТБ 2.5",
+0.513,
+1.833
+],
+[
+"ТМ 2.5",
+0.487,
+1.909
+],
+[
+"ТБ 3.5",
+0.292,
+null
+],
+[
+"Обе забьют — да",
+0.538,
+null
+],
+[
+"Обе забьют — нет",
+0.462,
+null
+],
+[
+"ИТ1 больше 1.5",
+0.499,
+null
+],
+[
+"ИТ2 больше 1.5",
+0.283,
+null
+],
+[
+"Ф1 (−1.5)",
+0.281,
+null
+],
+[
+"Ф2 (+1.5)",
+0.719,
+null
+]
+],
+"bar": [
+0.5104539599349011,
+0.2609704759929467,
+0.2285755640721521
+],
+"center": "Ожидаемые голы (xG) 1.7 : 1.1",
+"scores": [
+[
+"1:1",
+0.124
+],
+[
+"1:0",
+0.1
+],
+[
+"2:1",
+0.097
+]
+]
+},
 "lt": null
 },
 {
@@ -1123,14 +1228,14 @@ null
 "league": "Теннис · WTA",
 "kickoff": "2026-11-13T23:00:00+03:00",
 "home": "Мирра Андреева",
-"away": "Каролина Мухова",
+"away": "Диана Шнайдер",
 "hl": "https://a.espncdn.com/i/teamlogos/countries/500/rus.png",
-"al": "https://a.espncdn.com/i/teamlogos/countries/500/cze.png",
+"al": "https://a.espncdn.com/i/teamlogos/countries/500/rus.png",
 "hid": "9820",
-"aid": "3039",
+"aid": "8017",
 "bb": "https://betboom.ru/search?query=%D0%90%D0%BD%D0%B4%D1%80%D0%B5%D0%B5%D0%B2%D0%B0&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=tennis",
 "path": "tennis/wta",
-"url": "live.html?s=tennis&p=tennis%2Fwta&e=187384&h=%D0%9C%D0%B8%D1%80%D1%80%D0%B0+%D0%90%D0%BD%D0%B4%D1%80%D0%B5%D0%B5%D0%B2%D0%B0&a=%D0%9A%D0%B0%D1%80%D0%BE%D0%BB%D0%B8%D0%BD%D0%B0+%D0%9C%D1%83%D1%85%D0%BE%D0%B2%D0%B0",
+"url": "live.html?s=tennis&p=tennis%2Fwta&e=187384&h=%D0%9C%D0%B8%D1%80%D1%80%D0%B0+%D0%90%D0%BD%D0%B4%D1%80%D0%B5%D0%B5%D0%B2%D0%B0&a=%D0%94%D0%B8%D0%B0%D0%BD%D0%B0+%D0%A8%D0%BD%D0%B0%D0%B9%D0%B4%D0%B5%D1%80",
 "tip": "",
 "top": false,
 "bot": null,
@@ -1997,14 +2102,14 @@ null
 "league": "Шотландия · Чемпионшип",
 "kickoff": "2026-11-14T18:00:00+03:00",
 "home": "Ливингстон",
-"away": "Гринок Мортон",
+"away": "Greenock Morton",
 "hl": "https://a.espncdn.com/i/teamlogos/soccer/500/259.png",
 "al": "https://a.espncdn.com/i/teamlogos/soccer/500/411.png",
 "hid": "259",
 "aid": "411",
 "bb": "https://betboom.ru/search?query=%D0%9B%D0%B8%D0%B2%D0%B8%D0%BD%D0%B3%D1%81%D1%82%D0%BE%D0%BD&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
 "path": "soccer/sco.2",
-"url": "live.html?s=football&p=soccer%2Fsco.2&e=401878524&h=%D0%9B%D0%B8%D0%B2%D0%B8%D0%BD%D0%B3%D1%81%D1%82%D0%BE%D0%BD&a=%D0%93%D1%80%D0%B8%D0%BD%D0%BE%D0%BA+%D0%9C%D0%BE%D1%80%D1%82%D0%BE%D0%BD",
+"url": "live.html?s=football&p=soccer%2Fsco.2&e=401878524&h=%D0%9B%D0%B8%D0%B2%D0%B8%D0%BD%D0%B3%D1%81%D1%82%D0%BE%D0%BD&a=Greenock+Morton",
 "tip": "",
 "top": false,
 "bot": null,
@@ -2187,14 +2292,14 @@ null
 "league": "Бразилия · Серия B",
 "kickoff": "2026-11-14T22:30:00+03:00",
 "home": "Америка Минейро",
-"away": "Аваи",
+"away": "Avaí",
 "hl": "https://a.espncdn.com/i/teamlogos/soccer/500/6154.png",
 "al": "https://a.espncdn.com/i/teamlogos/soccer/500/9966.png",
 "hid": "6154",
 "aid": "9966",
 "bb": "https://betboom.ru/search?query=%D0%90%D0%BC%D0%B5%D1%80%D0%B8%D0%BA%D0%B0&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
 "path": "soccer/bra.2",
-"url": "live.html?s=football&p=soccer%2Fbra.2&e=401860432&h=%D0%90%D0%BC%D0%B5%D1%80%D0%B8%D0%BA%D0%B0+%D0%9C%D0%B8%D0%BD%D0%B5%D0%B9%D1%80%D0%BE&a=%D0%90%D0%B2%D0%B0%D0%B8",
+"url": "live.html?s=football&p=soccer%2Fbra.2&e=401860432&h=%D0%90%D0%BC%D0%B5%D1%80%D0%B8%D0%BA%D0%B0+%D0%9C%D0%B8%D0%BD%D0%B5%D0%B9%D1%80%D0%BE&a=Ava%C3%AD",
 "tip": "",
 "top": false,
 "bot": null,
@@ -2225,14 +2330,14 @@ null
 "league": "Бразилия · Серия B",
 "kickoff": "2026-11-14T22:30:00+03:00",
 "home": "КРБ",
-"away": "Сеара",
+"away": "Ceará",
 "hl": "https://a.espncdn.com/i/teamlogos/soccer/500/9970.png",
 "al": "https://a.espncdn.com/i/teamlogos/soccer/500/9969.png",
 "hid": "9970",
 "aid": "9969",
 "bb": "https://betboom.ru/search?query=%D0%9A%D0%A0%D0%91&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
 "path": "soccer/bra.2",
-"url": "live.html?s=football&p=soccer%2Fbra.2&e=401860439&h=%D0%9A%D0%A0%D0%91&a=%D0%A1%D0%B5%D0%B0%D1%80%D0%B0",
+"url": "live.html?s=football&p=soccer%2Fbra.2&e=401860439&h=%D0%9A%D0%A0%D0%91&a=Cear%C3%A1",
 "tip": "",
 "top": false,
 "bot": null,
@@ -2358,14 +2463,14 @@ null
 "league": "Сборные · Лига наций",
 "kickoff": "2026-11-14T22:45:00+03:00",
 "home": "Northern Ireland",
-"away": "Ukraine",
+"away": "Сборная Украины",
 "hl": "https://a.espncdn.com/i/teamlogos/countries/500/nir.png",
 "al": "https://a.espncdn.com/i/teamlogos/countries/500/ukr.png",
 "hid": "586",
 "aid": "457",
 "bb": "https://betboom.ru/search?query=%D0%9D%D0%BE%D1%80%D1%82%D0%B5%D1%80%D0%BD&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
 "path": "soccer/uefa.nations",
-"url": "live.html?s=football&p=soccer%2Fuefa.nations&e=401861169&h=Northern+Ireland&a=Ukraine",
+"url": "live.html?s=football&p=soccer%2Fuefa.nations&e=401861169&h=Northern+Ireland&a=%D0%A1%D0%B1%D0%BE%D1%80%D0%BD%D0%B0%D1%8F+%D0%A3%D0%BA%D1%80%D0%B0%D0%B8%D0%BD%D1%8B",
 "tip": "",
 "top": false,
 "bot": null,
@@ -2376,15 +2481,15 @@ null
 "id": "401861167",
 "league": "Сборные · Лига наций",
 "kickoff": "2026-11-14T22:45:00+03:00",
-"home": "Portugal",
-"away": "Denmark",
+"home": "Сборная Португалии",
+"away": "Сборная Дании",
 "hl": "https://a.espncdn.com/i/teamlogos/countries/500/por.png",
 "al": "https://a.espncdn.com/i/teamlogos/countries/500/den.png",
 "hid": "482",
 "aid": "479",
-"bb": "https://betboom.ru/search?query=%D0%9F%D0%BE%D1%80%D1%82%D1%83%D0%B3%D0%B0%D0%BB&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"bb": "https://betboom.ru/search?query=%D0%9F%D0%BE%D1%80%D1%82%D1%83%D0%B3%D0%B0%D0%BB%D0%B8%D0%B8&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
 "path": "soccer/uefa.nations",
-"url": "live.html?s=football&p=soccer%2Fuefa.nations&e=401861167&h=Portugal&a=Denmark",
+"url": "live.html?s=football&p=soccer%2Fuefa.nations&e=401861167&h=%D0%A1%D0%B1%D0%BE%D1%80%D0%BD%D0%B0%D1%8F+%D0%9F%D0%BE%D1%80%D1%82%D1%83%D0%B3%D0%B0%D0%BB%D0%B8%D0%B8&a=%D0%A1%D0%B1%D0%BE%D1%80%D0%BD%D0%B0%D1%8F+%D0%94%D0%B0%D0%BD%D0%B8%D0%B8",
 "tip": "",
 "top": false,
 "bot": null,
@@ -2395,15 +2500,15 @@ null
 "id": "401861168",
 "league": "Сборные · Лига наций",
 "kickoff": "2026-11-14T22:45:00+03:00",
-"home": "Romania",
-"away": "Poland",
+"home": "Сборная Румынии",
+"away": "Сборная Польши",
 "hl": "https://a.espncdn.com/i/teamlogos/countries/500/rom.png",
 "al": "https://a.espncdn.com/i/teamlogos/countries/500/pol.png",
 "hid": "473",
 "aid": "471",
-"bb": "https://betboom.ru/search?query=%D0%A0%D0%BE%D0%BC%D0%B0%D0%BD%D0%B8%D0%B0&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"bb": "https://betboom.ru/search?query=%D0%A1%D0%B1%D0%BE%D1%80%D0%BD%D0%B0%D1%8F&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
 "path": "soccer/uefa.nations",
-"url": "live.html?s=football&p=soccer%2Fuefa.nations&e=401861168&h=Romania&a=Poland",
+"url": "live.html?s=football&p=soccer%2Fuefa.nations&e=401861168&h=%D0%A1%D0%B1%D0%BE%D1%80%D0%BD%D0%B0%D1%8F+%D0%A0%D1%83%D0%BC%D1%8B%D0%BD%D0%B8%D0%B8&a=%D0%A1%D0%B1%D0%BE%D1%80%D0%BD%D0%B0%D1%8F+%D0%9F%D0%BE%D0%BB%D1%8C%D1%88%D0%B8",
 "tip": "",
 "top": false,
 "bot": null,
