@@ -280,7 +280,10 @@ def _settle_one(ex: dict | None, finished: dict, name: str, again: str, brand: s
                     for leg in ex["legs"]]
             day_raw = str(ex.get("day") or "")
             day_h = (f"{int(day_raw[8:10])} {MONTHS[int(day_raw[5:7]) - 1]}" if len(day_raw) >= 10 else "")
-            png = card.express_result_card(rows, float(ex["odds"]), day=day_h, brand=brand, won=ok, title=name)
+            if "ЯЙЦ" in name.upper():
+                png = card.express_risk_card(rows, float(ex["odds"]), day=day_h, brand=brand, won=ok)
+            else:
+                png = card.express_result_card(rows, float(ex["odds"]), day=day_h, brand=brand, won=ok, title=name)
             telegram.send_photo(png, "\n".join(lines), reply_to=ex["msg"])
         except Exception as ex2:
             print(f"  ! картинка экспресса не отправлена: {ex2}")

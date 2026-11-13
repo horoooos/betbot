@@ -1249,3 +1249,101 @@ def facts_card(pct: float, hits: int, total: int, sports: list[tuple[str, str, f
         if i:
             d.line([(cx - colw / 2, 474), (cx - colw / 2, 646)], fill=(70, 80, 120), width=2)
     return _png(img, d, brand)
+
+# ── «ЭКСПРЕСС НА ЯЙЦАХ»: цыплята на заходе, треснутые яйца на провале ────────
+
+def _egg_gradient(size: tuple, top: tuple, bottom: tuple) -> Image.Image:
+    """Яйцо с плавным градиентом и бликом."""
+    w, h = size
+    grad = Image.new("RGB", (w, h))
+    gd = ImageDraw.Draw(grad)
+    for y in range(h):
+        t = y / max(h - 1, 1)
+        gd.line([(0, y), (w, y)], fill=tuple(round(top[i] + (bottom[i] - top[i]) * t) for i in range(3)))
+    mask = Image.new("L", (w, h), 0)
+    ImageDraw.Draw(mask).ellipse((0, 0, w - 1, h - 1), fill=255)
+    egg = Image.new("RGBA", (w, h), (0, 0, 0, 0))
+    egg.paste(grad, (0, 0), mask)
+    hl = Image.new("RGBA", (w, h), (0, 0, 0, 0))
+    ImageDraw.Draw(hl).ellipse((w * 0.18, h * 0.10, w * 0.60, h * 0.32), fill=(255, 255, 255, 75))
+    return Image.alpha_composite(egg, hl)
+
+
+def _egg_hatch(img: Image.Image, d: ImageDraw.ImageDraw, cx: float, y: float, w: int = 96, h: int = 124) -> None:
+    """Яйцо с цыплёнком: скорлупа снизу, голова цыплёнка сверху, зубчатый край скорлупы."""
+    egg = _egg_gradient((w, h), (120, 235, 150), (26, 150, 90))
+    img.paste(egg, (int(cx - w / 2), y), egg)
+    hy = y + 8
+    d.ellipse((cx - 27, hy - 30, cx + 27, hy + 16), fill=(255, 214, 90))
+    d.ellipse((cx - 19, hy - 34, cx - 6, hy - 20), fill=(250, 190, 60))
+    d.ellipse((cx + 6, hy - 34, cx + 19, hy - 20), fill=(250, 190, 60))
+    d.ellipse((cx - 12, hy - 12, cx - 6, hy - 4), fill=(40, 30, 10))
+    d.ellipse((cx + 6, hy - 12, cx + 12, hy - 4), fill=(40, 30, 10))
+    d.polygon([(cx - 6, hy + 2), (cx + 6, hy + 2), (cx, hy + 10)], fill=(255, 150, 40))
+    zig = [(cx - w / 2 + 4, y + 30)]
+    for k in range(1, 7):
+        zig.append((cx - w / 2 + 4 + k * (w - 8) / 6, y + 30 + (8 if k % 2 else -4)))
+    d.line(zig, fill=(20, 120, 70), width=4, joint="curve")
+
+
+def _egg_cracked(img: Image.Image, d: ImageDraw.ImageDraw, cx: float, y: float, w: int = 96, h: int = 124) -> None:
+    """Треснутое красное яйцо: трещины и отколовшийся кусочек."""
+    egg = _egg_gradient((w, h), (255, 140, 120), (150, 30, 40))
+    img.paste(egg, (int(cx - w / 2), y), egg)
+    d.polygon([(cx + 14, y + 20), (cx + 32, y + 10), (cx + 36, y + 26), (cx + 20, y + 32)], fill=(70, 10, 16))
+    pts = [(cx - 26, y + 34), (cx - 12, y + 46), (cx + 2, y + 34), (cx + 14, y + 50), (cx + 26, y + 40), (cx + 32, y + 56)]
+    d.line(pts, fill=(50, 4, 8), width=6, joint="curve")
+    d.line([(cx - 22, y + 64), (cx - 8, y + 76), (cx + 6, y + 64), (cx + 20, y + 78)],
+           fill=(50, 4, 8), width=5, joint="curve")
+
+
+def express_risk_card(legs: list[dict], total: float, day: str = "", brand: str = "", won: bool = True) -> bytes:
+    """Итог «Экспресса на яйцах»: яйца по числу событий (цыплята/треснутые) и стикер зашёл/не зашёл.
+
+    Поддерживает 2–6 событий: шаг строк подбирается сам, строки прижаты к нижней плашке.
+    """
+    legs = legs[:6]
+    n = len(legs)
+    img, d = _background((8, 10, 22), (36, 22, 16), style="halftone")
+    d.text((W / 2, 48), "ЭКСПРЕСС НА ЯЙЦАХ", font=font(44, "ExtraBold"), fill=WHITE, anchor="mm")
+    d.text((W / 2, 84), f"{day} · кэф 10+ · ставка 1% банка" if day else "кэф 10+ · ставка 1% банка",
+           font=font(20, "Medium"), fill=MUTED, anchor="mm")
+    step = 190 if n <= 2 else 176 if n >= 6 else min(210, (W - 220) // max(n, 1))
+    x0 = W / 2 - step * (n - 1) / 2
+    for i, leg in enumerate(legs):
+        cx = x0 + i * step
+        if leg.get("win"):
+            _egg_hatch(img, d, cx, 126)
+        else:
+            _egg_cracked(img, d, cx, 126)
+    wins = sum(1 for leg in legs if leg.get("win"))
+    d.text((W / 2, 282), f"{wins} из {n} событий зашло", font=font(21, "Bold"),
+           fill=(150, 235, 180) if wins else MUTED, anchor="mm")
+    d.text((W / 2, 344), f"{total:.2f}", font=font(100, "ExtraBold"), fill=(255, 150, 60), anchor="mm")
+    d.text((W / 2, 410), "общий кэф экспресса", font=font(20, "Bold"), fill=MUTED, anchor="mm")
+    step_y = {2: 56, 3: 48, 4: 42, 5: 36, 6: 30}.get(n, 30)
+    row_h = step_y - 3
+    y = 606 - n * step_y
+    for leg in legs:
+        d.rounded_rectangle((84, y, W - 84, y + row_h), radius=12, fill=(20, 20, 34), outline=(64, 50, 46), width=2)
+        cy = y + row_h // 2
+        ok = bool(leg.get("win"))
+        _mark(d, 106, cy, 10, "check" if ok else "cross", (46, 204, 113) if ok else (255, 90, 90))
+        teams = f"{leg['home']} — {leg['away']}"
+        f18 = font(18, "ExtraBold")
+        while d.textlength(teams, font=f18) > 520 and len(teams) > 12:
+            teams = teams[:-2]
+        d.text((128, cy), teams, font=f18, fill=WHITE, anchor="lm")
+        d.text((W - 250, cy), leg.get("label", ""), font=font(14, "Medium"),
+               fill=(150, 235, 180) if ok else (255, 180, 180), anchor="rm")
+        d.text((W - 150, cy), str(leg.get("score", "")), font=font(18, "ExtraBold"),
+               fill=(70, 220, 130) if ok else (255, 110, 110), anchor="rm")
+        d.text((W - 104, cy), f"{float(leg.get('odds') or 0):.2f}", font=font(15, "Bold"), fill=MUTED, anchor="rm")
+        y += step_y
+    col = (46, 204, 113) if won else (255, 110, 110)
+    bg = (16, 52, 34) if won else (56, 20, 22)
+    d.rounded_rectangle((84, 614, W - 84, 670), radius=26, fill=bg, outline=col, width=3)
+    _mark(d, 132, 642, 18, "check" if won else "cross", col)
+    d.text((168, 642), "ЭКСПРЕСС ЗАШЁЛ" if won else "ЭКСПРЕСС НЕ ЗАШЁЛ", font=font(30, "ExtraBold"), fill=col, anchor="lm")
+    d.text((W - 110, 642), "касса!" if won else "завтра в 20:00 новый", font=font(19, "Bold"), fill=MUTED, anchor="rm")
+    return _png(img, d, brand)
