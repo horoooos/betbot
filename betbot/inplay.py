@@ -289,7 +289,7 @@ def run(store: dict, events: list[dict], matches: dict, brand: str) -> None:
                     f"{escape(lt['label'])} · итог {fin[0]}:{fin[1]}\n📊 LIVE-прогнозы бота: {wins} из {total}")
             png = None
             try:   # картинка с итогом — чтобы и в ВК/Дзене была видна ставка и её результат
-                png = card.live_bet_result_card(_league(e), e["home"], e["away"], *fin, lt["label"],
+                png = card.live_bet_result_card(live._league(e), e["home"], e["away"], *fin, lt["label"],
                                                 odds=f"{lt.get('min_odds', 0):.2f}", minute=lt.get("minute", ""),
                                                 ok=ok, tally=f"LIVE-прогнозы бота: {wins} из {total}", brand=brand,
                                             sport=lt.get("sport", "football"))
