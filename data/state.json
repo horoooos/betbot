@@ -1715,9 +1715,9 @@
  "tg_offset": 727618641,
  "push_watch": {},
  "news_video": true,
- "vk_last": 5416,
+ "vk_last": 5512,
  "dz_last": 5512,
- "vk_err": "5417: ожидает проверки фото записи 414: VK wall.getById: 9 Flood control",
+ "vk_err": null,
  "news_forced": "now",
  "vk_mode": "photo",
  "dz_err": "4987: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))",
@@ -1762,7 +1762,7 @@
   "youtube": "YouTube не подключён (нет секретов YT_*)"
  },
  "vk_try": {},
- "vk_pause_ts": 1794580667.173619,
+ "vk_pause_ts": 0,
  "push": {
   "on": true,
   "subs": 0,
@@ -1776,17 +1776,8 @@
  },
  "vk_short_err": null,
  "vk_photos": [],
- "vk_photo_until": 1794567623.2926874,
+ "vk_photo_until": 0,
  "vk_photo_cursor": {},
- "vk_verify_pending": {
-  "pid": 5417,
-  "post_id": 414,
-  "short": "vk.cc/d3SJzU",
-  "attachment": "photo",
-  "cursor": 1,
-  "retry_delay_s": 3600
- },
- "vk_verify_retry_at": 1794580667.173619,
  "mod_poll": {
   "key": "SP2|401883136",
   "id": "401883136",
@@ -1804,5 +1795,17 @@
  "vk_story_day": {
   "date": "2026-11-13",
   "count": 6
- }
+ },
+ "vk_legacy_pending": [
+  {
+   "pid": 5417,
+   "post_id": 414,
+   "short": "vk.cc/d3SJzU",
+   "attachment": "photo",
+   "cursor": 1,
+   "retry_delay_s": 3600
+  }
+ ],
+ "vk_reserve_mode_initialized": true,
+ "vk_at_ts": 1794594317.9146543
 }
