@@ -4,6 +4,15 @@ from tools import vk_media_check
 
 
 class RecipientTests(unittest.TestCase):
+    def test_public_photo_reference_accepts_user_and_group_owners(self):
+        for reference in ("photo-123_456", "photo123_456"):
+            self.assertEqual(vk_media_check.public_photo_reference(reference), reference)
+
+    def test_public_photo_reference_rejects_cdn_urls_and_access_keys(self):
+        for reference in ("https://example.test/image.jpg", "photo-123_456_private", "photo0_0"):
+            with self.assertRaises(RuntimeError):
+                vk_media_check.public_photo_reference(reference)
+
     def test_numeric_profile_does_not_need_resolution(self):
         with patch.object(vk_media_check, "call") as api:
             self.assertEqual(vk_media_check.resolve_recipient("group", "https://vk.com/id1234"), 1234)

@@ -5,13 +5,16 @@ on:
       mode:
         description: "access — права ключа; wall — новая картинка стены; album — новая картинка альбома"
         type: choice
-        options: [access, app-info, album-access, link-preview, link-parsed-preview, link-community-preview, story-test, story-to-wall, story-to-wall-user, gif-wall, gif-message-wall, docs-info, graffiti-wall, wall, album]
+        options: [access, app-info, album-access, link-preview, link-parsed-preview, link-community-preview, story-test, story-to-wall, story-to-wall-user, gif-wall, gif-message-wall, docs-info, graffiti-wall, existing-photo, wall, album]
         default: access
       story_id:
         description: "ID опубликованной истории для одного тестового поста"
         required: false
       recipient:
         description: "Ссылка или ID администратора, разрешившего сообщения группы (только для GIF-теста)"
+        required: false
+      photo_reference:
+        description: "Только публичный ID фото формата photo-123_456 (без URL и ключей доступа)"
         required: false
 permissions:
   contents: read
@@ -36,4 +39,5 @@ jobs:
           VK_MEDIA_MODE: ${{ inputs.mode }}
           VK_STORY_TEST_ID: ${{ inputs.story_id }}
           VK_DOC_TEST_RECIPIENT: ${{ inputs.recipient }}
+          VK_PUBLIC_PHOTO_REFERENCE: ${{ inputs.photo_reference }}
         run: python tools/vk_media_check.py

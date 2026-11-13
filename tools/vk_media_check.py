@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import json
 import os
+import re
 from pathlib import Path
 import sys
 import time
@@ -20,6 +21,12 @@ from betbot import postimg, vk
 def call(method, token, **params):
     time.sleep(1)
     return vk._call(method, _tok=token, **params)
+
+
+def public_photo_reference(value):
+    if not re.fullmatch(r"photo-?[1-9]\d*_[1-9]\d*", value):
+        raise RuntimeError("Нужен публичный ID фотографии без адреса файла и ключей доступа")
+    return value
 
 
 def resolve_recipient(token, value):
@@ -107,6 +114,16 @@ def main():
     user = os.environ.get("VK_USER_TOKEN", "").strip()
     group = os.environ.get("VK_TOKEN", "").strip()
     reader = os.environ.get("VK_SERVICE_KEY", "").strip() or user
+    if mode == "existing-photo":
+        attachment = public_photo_reference(os.environ.get("VK_PUBLIC_PHOTO_REFERENCE", "").strip())
+        if not group:
+            raise RuntimeError("VK_TOKEN отсутствует")
+        created = call("wall.post", group, owner_id=-vk.GROUP_ID, from_group=1,
+                       message="Тест BetBot: прикрепление публичной фотографии из обычного поста.",
+                       attachments=attachment, guid="betbot-public-photo-" + attachment)
+        print("POST_URL:", f"https://vk.com/wall-{vk.GROUP_ID}_{int(created['post_id'])}", flush=True)
+        print("WALL_DISPLAY_REQUIRES_VERIFICATION: true", flush=True)
+        return
     if mode == "docs-info":
         documents = call("docs.get", group, owner_id=-vk.GROUP_ID, count=10)
         print("GROUP_DOCUMENT_COUNT:", documents.get("count"), flush=True)
