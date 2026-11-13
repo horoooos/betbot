@@ -5,7 +5,7 @@
  },
  "learned": "2026-11-13",
  "schedule_day": "2026-11-13",
- "content_slot": "2026-11-13-13",
+ "content_slot": "2026-11-13-16",
  "news_seen": [
   "stariy-bog-sygrayet-protiv-team-spirit-na-gruppovom-yetape-essence-iii",
   "https://www.sport-express.ru/tennis/atp/news/alkaras-i-zverev-stali-pervymi-uchastnikami-kubka-leyvera-2027-2473381/",
@@ -1558,7 +1558,7 @@
  "value_day": "2026-11-12",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-12",
- "site_stamp": "918|5433|2026-11-13 15",
+ "site_stamp": "918|5435|2026-11-13 16",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1710,7 +1710,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5416,
- "dz_last": 5433,
+ "dz_last": 5435,
  "vk_err": "5417: ожидает проверки фото записи 414: VK wall.getById: 9 Flood control",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -1773,5 +1773,14 @@
   "cursor": 1,
   "retry_delay_s": 3600
  },
- "vk_verify_retry_at": 1794577036.8537824
+ "vk_verify_retry_at": 1794577036.8537824,
+ "mod_poll": {
+  "key": "SP2|401883136",
+  "id": "401883136",
+  "poll": 5435,
+  "post": 5434,
+  "home": "Леганес",
+  "away": "Burgos",
+  "kickoff": "2026-11-13T22:30:00+03:00"
+ }
 }
