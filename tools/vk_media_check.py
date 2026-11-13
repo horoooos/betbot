@@ -125,12 +125,13 @@ def main():
         print("POST_URL:", f"https://vk.com/wall-{vk.GROUP_ID}_{int(post['post_id'])}", flush=True)
         print("WALL_DISPLAY_REQUIRES_VERIFICATION: true", flush=True)
         return
-    if mode == "gif-wall":
+    if mode in {"gif-wall", "gif-message-wall"}:
         from betbot import vk_gif
         if not group:
             raise RuntimeError("VK_TOKEN отсутствует")
         try:
-            server = call("docs.getWallUploadServer", group, group_id=vk.GROUP_ID)
+            server = (call("docs.getMessagesUploadServer", group, type="doc", peer_id=-vk.GROUP_ID)
+                      if mode == "gif-message-wall" else call("docs.getWallUploadServer", group, group_id=vk.GROUP_ID))
         except RuntimeError as error:
             if ": 15 " not in str(error):
                 raise
@@ -142,6 +143,7 @@ def main():
             call("groups.edit", group, group_id=vk.GROUP_ID, docs=2)
             print("DOCUMENT_SECTION_LIMITED_ENABLED: true", flush=True)
             server = call("docs.getWallUploadServer", group, group_id=vk.GROUP_ID)
+        print("GIF_UPLOAD_SERVER_READY: true", flush=True)
         posts = json.loads(Path("data/channel.json").read_text(encoding="utf-8"))["posts"]
         pid = max(posts, key=int)
         image = postimg.image_for(posts[pid], "новость", posts)
@@ -149,6 +151,7 @@ def main():
             raise RuntimeError("Картинка GIF не создана")
         gif = vk_gif.render(image)
         uploaded = requests.post(server["upload_url"], files={"file": ("betbot.gif", gif, "image/gif")}, timeout=60)
+        print("GIF_UPLOAD_HTTP:", uploaded.status_code, flush=True)
         uploaded.raise_for_status()
         payload = uploaded.json()
         if not payload.get("file"):
