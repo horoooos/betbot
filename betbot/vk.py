@@ -249,9 +249,13 @@ def crosspost(state: dict) -> int:
         img = postimg.image_for(p, ("начало" if started else dzen.kind(p.get("html", "")) or "новость"), posts)
         _photo.err = "" if img else "картинка поста не получена"
         _photo.wall_err = ""
-        photo = _photo(img) if img else None
+        photo_off = now_ts < float(state.get("vk_photo_until") or 0)   # ВК во флуде на загрузку фото
+        photo = None if photo_off else (_photo(img) if img else None)
         if not photo:   # фото не залилось (Flood control на загрузку) — публикуем текст со ссылкой
             text = text.rstrip() + "\n\n" + link
+            if "flood" in (_photo.err or "").lower() or " 9 " in f" {_photo.err} ":
+                state["vk_photo_until"] = time.time() + 3600   # час не трогаем загрузку фото
+                print(f"  ВК: загрузка фото во флуд-контроле — час публикуем без картинок")
         state["vk_err"] = f"{pid} фото: {_photo.err}" if not photo else None   # старую ошибку стираем
         state["vk_wall_err"] = f"{pid}: {_photo.wall_err}" if _photo.wall_err else None   # почему не вышло фото стены по личному ключу
         # фото «из сообщений» сообщества ВК на стене один не показывает — пробуем вместе с карточкой ссылки
