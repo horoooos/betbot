@@ -1816,7 +1816,7 @@
  "vk_photo_until": 0,
  "vk_photo_cursor": {},
  "vk_story_last": 5469,
- "vk_story_err": null,
+ "vk_story_err": "VK stories: сервер не вернул upload_result",
  "push_weekly": "2026-46",
  "vk_story_at": 1794610833.1377816,
  "vk_story_url": "https://vk.com/story-228963529_456239030",
@@ -1845,5 +1845,6 @@
   "d": "2026-11-13",
   "n": 8
  },
- "vk_comment_err": null
+ "vk_comment_err": null,
+ "vk_story_retry_at": 1794615360.6080358
 }
