@@ -1568,7 +1568,7 @@
  "value_day": "2026-11-12",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-12",
- "site_stamp": "927|5518|2026-11-13 21",
+ "site_stamp": "928|5520|2026-11-13 21",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1715,8 +1715,8 @@
  "tg_offset": 727618641,
  "push_watch": {},
  "news_video": true,
- "vk_last": 5516,
- "dz_last": 5518,
+ "vk_last": 5518,
+ "dz_last": 5520,
  "vk_err": null,
  "news_forced": "now",
  "vk_mode": "photo",
@@ -1789,7 +1789,7 @@
   "kickoff": "2026-11-13T22:30:00+03:00"
  },
  "vk_story_last": 5459,
- "vk_story_err": null,
+ "vk_story_err": "VK stories: сервер не вернул upload_result",
  "push_weekly": "2026-46",
  "vk_story_at": 1794594120.3073788,
  "vk_story_url": "https://vk.com/story-228963529_456239024",
@@ -1808,5 +1808,6 @@
   }
  ],
  "vk_reserve_mode_initialized": true,
- "vk_at_ts": 1794594317.9146543
+ "vk_at_ts": 1794594317.9146543,
+ "vk_story_retry_at": 1794598672.7803705
 }
