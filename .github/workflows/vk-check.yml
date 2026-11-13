@@ -7,6 +7,10 @@ on:
         description: "Номер поста на стене ВК, который удалить (пусто — ничего не удалять)"
         required: false
         default: ""
+      test_text:
+        description: "Текст тестового поста в ВК (пусто — не публиковать)"
+        required: false
+        default: ""
 jobs:
   check:
     runs-on: ubuntu-latest
@@ -104,3 +108,22 @@ jobs:
           for w in vk._call("wall.get", owner_id=-vk.GROUP_ID, count=3)["items"]:
               print("ПОСТ", w["id"], (w.get("text") or "")[:40].replace(chr(10), " "), "| вложения:", [a["type"] for a in w.get("attachments", [])])
           PY
+
+      - name: Test wall.post
+        if: ${{ inputs.test_text != '' }}
+        env:
+          VK_TOKEN: ${{ secrets.VK_TOKEN }}
+          TEST_TEXT: ${{ inputs.test_text }}
+        run: |
+          python3 - <<'EOF'
+          import json, os, urllib.parse, urllib.request
+          tok = os.environ["VK_TOKEN"].strip()
+          text = os.environ["TEST_TEXT"]
+          p = {"owner_id": -228963529, "from_group": 1, "message": text, "access_token": tok, "v": "5.199"}
+          data = urllib.parse.urlencode(p).encode()
+          try:
+              with urllib.request.urlopen("https://api.vk.com/method/wall.post", data, timeout=30) as r:
+                  print("wall.post:", json.dumps(json.load(r), ensure_ascii=False)[:500])
+          except Exception as e:
+              print("wall.post ОШИБКА:", repr(e))
+          EOF
