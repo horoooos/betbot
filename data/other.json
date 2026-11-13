@@ -7714,25 +7714,25 @@
   "kickoff": "2026-11-13T03:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Thu, November 12th at 7:00 PM EST",
   "clock": "0:00",
   "period": 0,
   "home": {
+   "color": "dd1a32",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/ott.png",
    "id": "14",
    "name": "Ottawa Senators",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/ott.png",
-   "color": "dd1a32",
    "score": "0",
    "record": "11-6-2",
    "periods": [],
    "ru": "Оттава"
   },
   "away": {
+   "color": "860038",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/col.png",
    "id": "17",
    "name": "Colorado Avalanche",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/col.png",
-   "color": "860038",
    "score": "0",
    "record": "11-6-2",
    "periods": [],
@@ -7827,7 +7827,9 @@
   "btn": 4,
   "close": {
    "HK_O6.5": 0.474
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null
  },
  "NHL|401892700": {
   "id": "401892700",
