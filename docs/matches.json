@@ -1,138 +1,6 @@
 [
 {
 "sport": "football",
-"id": "401861162",
-"league": "Сборные · Лига наций",
-"kickoff": "2026-11-13T20:00:00+03:00",
-"home": "Сборная Молдавии",
-"away": "Сборная Казахстана",
-"hl": "https://a.espncdn.com/i/teamlogos/countries/500/mda.png",
-"al": "https://a.espncdn.com/i/teamlogos/countries/500/kaz.png",
-"hid": "483",
-"aid": "2619",
-"bb": "https://betboom.ru/search?query=%D0%9C%D0%BE%D0%BB%D0%B4%D0%B0%D0%B2%D0%B8%D0%B8&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
-"path": "soccer/uefa.nations",
-"url": "live.html?s=football&p=soccer%2Fuefa.nations&e=401861162&h=%D0%A1%D0%B1%D0%BE%D1%80%D0%BD%D0%B0%D1%8F+%D0%9C%D0%BE%D0%BB%D0%B4%D0%B0%D0%B2%D0%B8%D0%B8&a=%D0%A1%D0%B1%D0%BE%D1%80%D0%BD%D0%B0%D1%8F+%D0%9A%D0%B0%D0%B7%D0%B0%D1%85%D1%81%D1%82%D0%B0%D0%BD%D0%B0",
-"tip": "ТМ 2.5 · 1.61",
-"top": false,
-"bot": {
-"main": {
-"label": "ТМ 2.5",
-"p": 0.592,
-"odds": 1.61,
-"est": false
-},
-"bold": null,
-"markets": [
-[
-"П1",
-0.396,
-2.35
-],
-[
-"Ничья",
-0.302,
-3.0
-],
-[
-"П2",
-0.302,
-3.1
-],
-[
-"1X",
-0.698,
-null
-],
-[
-"X2",
-0.604,
-null
-],
-[
-"ТБ 1.5",
-0.684,
-null
-],
-[
-"ТБ 2.5",
-0.408,
-2.3
-],
-[
-"ТМ 2.5",
-0.592,
-1.606
-],
-[
-"ТБ 3.5",
-0.204,
-null
-],
-[
-"Обе забьют — да",
-0.478,
-null
-],
-[
-"Обе забьют — нет",
-0.522,
-null
-],
-[
-"ИТ1 больше 1.5",
-0.357,
-null
-],
-[
-"ИТ2 больше 1.5",
-0.287,
-null
-],
-[
-"Ф1 (−1.5)",
-0.18,
-null
-],
-[
-"Ф2 (+1.5)",
-0.82,
-null
-]
-],
-"bar": [
-0.396313404480084,
-0.30181744061151744,
-0.30186915490839833
-],
-"center": "Ожидаемые голы (xG) 1.3 : 1.1",
-"scores": [
-[
-"1:1",
-0.142
-],
-[
-"1:0",
-0.113
-],
-[
-"0:0",
-0.109
-]
-]
-},
-"lt": {
-"fair": 1.48,
-"label": "X2",
-"min_odds": 1.55,
-"minute": "26'",
-"p": 0.676,
-"result": "miss",
-"score": "0:0"
-}
-},
-{
-"sport": "football",
 "id": "401883136",
 "league": "Испания · Сегунда",
 "kickoff": "2026-11-13T22:30:00+03:00",
@@ -3573,6 +3441,82 @@ null
 "bb": "https://betboom.ru/search?query=%D0%AE%D1%82%D0%B0&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=hockey",
 "path": "hockey/nhl",
 "url": "live.html?s=hockey&p=hockey%2Fnhl&e=401892718&h=%D0%AE%D1%82%D0%B0&a=%D0%A1%D0%B0%D0%BD-%D0%A5%D0%BE%D1%81%D0%B5",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "football",
+"id": "401931905",
+"league": "Мексика · Лига де Экспансьон",
+"kickoff": "2026-11-15T06:00:00+03:00",
+"home": "Club Atlético La Paz",
+"away": "Piratas",
+"hl": "https://a.espncdn.com/guid/c6a0e36d-c3f5-3f04-93d8-1436cb1f6e9c/logos/default.png",
+"al": "",
+"hid": "21533",
+"aid": "131881",
+"bb": "https://betboom.ru/search?query=%D0%90%D1%82%D0%BB%D0%B5%D1%82%D0%B8%D0%BA%D0%BE&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/mex.2",
+"url": "live.html?s=football&p=soccer%2Fmex.2&e=401931905&h=Club+Atl%C3%A9tico+La+Paz&a=Piratas",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "hockey",
+"id": "401892719",
+"league": "США · NHL",
+"kickoff": "2026-11-15T06:00:00+03:00",
+"home": "Анахайм",
+"away": "Айлендерс",
+"hl": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/ana.png",
+"al": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/nyi.png",
+"hid": "25",
+"aid": "12",
+"bb": "https://betboom.ru/search?query=%D0%90%D0%BD%D0%B0%D1%85%D0%B0%D0%B9%D0%BC&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=hockey",
+"path": "hockey/nhl",
+"url": "live.html?s=hockey&p=hockey%2Fnhl&e=401892719&h=%D0%90%D0%BD%D0%B0%D1%85%D0%B0%D0%B9%D0%BC&a=%D0%90%D0%B9%D0%BB%D0%B5%D0%BD%D0%B4%D0%B5%D1%80%D1%81",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "hockey",
+"id": "401892720",
+"league": "США · NHL",
+"kickoff": "2026-11-15T06:00:00+03:00",
+"home": "Лос-Анджелес",
+"away": "Калгари",
+"hl": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/la.png",
+"al": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/cgy.png",
+"hid": "8",
+"aid": "3",
+"bb": "https://betboom.ru/search?query=%D0%9B%D0%BE%D1%81-%D0%90%D0%BD%D0%B4%D0%B6%D0%B5%D0%BB%D0%B5%D1%81&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=hockey",
+"path": "hockey/nhl",
+"url": "live.html?s=hockey&p=hockey%2Fnhl&e=401892720&h=%D0%9B%D0%BE%D1%81-%D0%90%D0%BD%D0%B4%D0%B6%D0%B5%D0%BB%D0%B5%D1%81&a=%D0%9A%D0%B0%D0%BB%D0%B3%D0%B0%D1%80%D0%B8",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "football",
+"id": "401906463",
+"league": "Сборные · Товарищеские матчи",
+"kickoff": "2026-11-15T06:00:00+03:00",
+"home": "Сборная Новой Зеландии",
+"away": "Сборная Индии",
+"hl": "https://a.espncdn.com/i/teamlogos/countries/500/nzl.png",
+"al": "https://a.espncdn.com/i/teamlogos/countries/500/ind.png",
+"hid": "2666",
+"aid": "4385",
+"bb": "https://betboom.ru/search?query=%D0%97%D0%B5%D0%BB%D0%B0%D0%BD%D0%B4%D0%B8%D0%B8&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/fifa.friendly",
+"url": "live.html?s=football&p=soccer%2Ffifa.friendly&e=401906463&h=%D0%A1%D0%B1%D0%BE%D1%80%D0%BD%D0%B0%D1%8F+%D0%9D%D0%BE%D0%B2%D0%BE%D0%B9+%D0%97%D0%B5%D0%BB%D0%B0%D0%BD%D0%B4%D0%B8%D0%B8&a=%D0%A1%D0%B1%D0%BE%D1%80%D0%BD%D0%B0%D1%8F+%D0%98%D0%BD%D0%B4%D0%B8%D0%B8",
 "tip": "",
 "top": false,
 "bot": null,
