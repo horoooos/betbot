@@ -755,7 +755,7 @@ def main():
             print(f"  ! страница статистики не собралась: {e}")
     try:   # кросспостинг новых постов канала во ВКонтакте
         if os.environ.get("VK_WALL_ENABLED", "1") == "1":
-            vk.crosspost(state)
+            vk.crosspost(state, checkpoint=lambda: save_json(STATE, state))
     except Exception as e:
         print(f"  ! ВК: {e}")
     try:

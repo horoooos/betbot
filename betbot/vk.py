@@ -56,6 +56,13 @@ def enabled() -> bool:
     return bool(_token())
 
 
+def _verified_reserve_photo() -> str:
+    photo = os.environ.get("VK_WALL_RESERVE_PHOTO", "").strip()
+    if photo and not re.fullmatch(r"photo-?[1-9]\d*_[1-9]\d*", photo):
+        raise RuntimeError("VK_WALL_RESERVE_PHOTO должен содержать проверенный публичный ID фото")
+    return photo
+
+
 def _call(method: str, _tok: str | None = None, **params) -> dict:
     params.update(access_token=_tok or _token(), v=V)
     resp = requests.post(API + method, data=params, timeout=30)
@@ -156,6 +163,8 @@ def _short(url: str, state: dict | None = None) -> str:
         raise ShortLinkError("нет токена ВК для сокращения ссылки")
     errors = []
     tokens = list(dict.fromkeys((os.environ.get("VK_TOKEN"), os.environ.get("VK_USER_TOKEN"))))
+    if _verified_reserve_photo():
+        tokens = [os.environ.get("VK_TOKEN")]
     for token in tokens:
         if not token:
             continue
@@ -177,6 +186,12 @@ def _short(url: str, state: dict | None = None) -> str:
 
 def _ensure_short_comment(post_id: int, message: str) -> None:
     """Пишет ссылку первым комментарием, не дублируя её при повторной попытке."""
+    if _verified_reserve_photo():
+        created = _call("wall.createComment", _tok=os.environ.get("VK_TOKEN"), owner_id=-GROUP_ID,
+                        post_id=post_id, from_group=1, message=message, guid=f"betbot-site-{post_id}")
+        if not isinstance(created, dict) or not created.get("comment_id"):
+            raise RuntimeError("ВК не подтвердил комментарий со ссылкой")
+        return
     # Чтение стены требует пользовательского ключа; публикация от имени группы
     # выполняется ключом сообщества, как и wall.post.
     read_token = os.environ.get("VK_USER_TOKEN") or os.environ.get("VK_TOKEN")
@@ -246,6 +261,12 @@ def _stats_tail(pid: int, posts: dict) -> bool:
 
 
 def _pending_has_photo(pending: dict) -> bool:
+    if pending.get("poll_ts") is not None:
+        from .vk_wall_events import PhotoMonitor
+        monitor = PhotoMonitor(os.environ.get("VK_TOKEN"))
+        monitor.start()
+        monitor.server["ts"] = pending["poll_ts"]
+        return monitor.verify(int(pending["post_id"]))
     result = _call("wall.getById", _tok=os.environ.get("VK_SERVICE_KEY") or os.environ.get("VK_USER_TOKEN"),
                    posts=f"-{GROUP_ID}_{pending['post_id']}")
     items = result.get("items", []) if isinstance(result, dict) else []
@@ -331,7 +352,7 @@ def _resolve_pending_post(state: dict) -> bool:
     return True
 
 
-def crosspost(state: dict) -> int:
+def crosspost(state: dict, checkpoint=None) -> int:
     """Публикует в ВК посты канала, вышедшие после прошлого запуска. Возвращает, сколько опубликовано."""
     if not enabled() or not CHANNEL.exists():
         return 0
@@ -339,6 +360,25 @@ def crosspost(state: dict) -> int:
     if not posts:
         return 0
     newest = max(int(k) for k in posts)
+    checkpoint = checkpoint or (lambda: None)
+    reserve = _verified_reserve_photo()
+    if reserve and not state.get("vk_reserve_mode_initialized"):
+        # The old pending post used an unverified attachment. Keep its identity
+        # for review and start the new, confirmed route with future channel posts.
+        old_pending = state.pop("vk_verify_pending", None)
+        if old_pending:
+            state.setdefault("vk_legacy_pending", []).append(old_pending)
+            state["vk_legacy_pending"] = state["vk_legacy_pending"][-10:]
+        state["vk_reserve_mode_initialized"] = True
+        state["vk_last"] = newest
+        state["vk_at_ts"] = time.time()
+        state["vk_pause_ts"] = 0
+        state["vk_photo_until"] = 0
+        state["vk_err"] = None
+        state.pop("vk_verify_retry_at", None)
+        checkpoint()
+        print(f"ВК: проверенное резервное фото включено; начинаем после {newest}")
+        return 0
     if "vk_last" not in state:           # первый запуск: старое не переносим, начинаем с новых постов
         state["vk_last"] = newest
         print(f"  ВК: кросспостинг включён, начинаем после поста {newest}")
@@ -434,17 +474,19 @@ def crosspost(state: dict) -> int:
             print(f"  ВК: пост {pid} отложен — короткая ссылка недоступна: {e}")
             break
         text += "\n\n" + (f"📺 Смотреть матч онлайн 👉 {short}" if started else f"📊 Подробнее на сайте 👉 {short}")
+        if reserve:
+            text += "\n\nИллюстрация из архива проекта."
         # Личный ключ загружает картинку, ключ сообщества публикует запись.
         from . import dzen, postimg
         tags = dzen.hashtags(p.get("html", ""), "начало" if started else dzen.kind(p.get("html", "")), limit=8)
         if tags:   # хештеги по теме (команды, игроки, лига) — ВК лучше показывает пост в поиске и рекомендациях
             text += "\n\n" + tags
-        img = postimg.image_for(p, ("начало" if started else dzen.kind(p.get("html", "")) or "новость"), posts)
-        _photo.err = "" if img else "картинка поста не получена"
+        img = None if reserve else postimg.image_for(p, ("начало" if started else dzen.kind(p.get("html", "")) or "новость"), posts)
+        _photo.err = "" if img or reserve else "картинка поста не получена"
         _photo.wall_err = ""
         photo_off = now_ts < float(state.get("vk_photo_until") or 0)   # ВК во флуде на загрузку фото
         cache = state.setdefault("vk_photos", [])
-        photo = None if photo_off else (_photo(img) if img else None)
+        photo = reserve or (None if photo_off else (_photo(img) if img else None))
         if photo and photo.startswith("photo-"):
             cache.insert(0, photo)
             del cache[12:]                       # держим последние 12 загруженных
@@ -478,10 +520,15 @@ def crosspost(state: dict) -> int:
         try:
             for i, att in enumerate(tries[cursor:], start=cursor):
                 try:
+                    monitor = None
+                    if reserve:
+                        from .vk_wall_events import PhotoMonitor
+                        monitor = PhotoMonitor(os.environ.get("VK_TOKEN"))
+                        monitor.start()
                     # стену публикуем ключом сообщества: у Kate-токена лимит на wall.post (9 Flood control),
                     # а загрузка фото — личным (photos.* групповым ключом недоступны)
                     result = _call("wall.post", _tok=os.environ.get("VK_TOKEN"), owner_id=-GROUP_ID, from_group=1,
-                                   message=text[:15000], attachments=",".join(att))
+                                   message=text[:15000], attachments=",".join(att), guid=f"betbot-channel-{GROUP_ID}-{pid}-{i}")
                     post_id = result.get("post_id") if isinstance(result, dict) else None
                     if not post_id:
                         raise PhotoVerificationError("VK wall.post не вернул id записи для проверки фото")
@@ -489,8 +536,11 @@ def crosspost(state: dict) -> int:
                         "pid": pid, "post_id": int(post_id), "short": short,
                         "attachment": "+".join(a[:5] for a in att), "cursor": i,
                     }
+                    if monitor:
+                        state["vk_verify_pending"]["poll_ts"] = monitor.server["ts"]
+                    checkpoint()
                     try:
-                        has_photo = _pending_has_photo(state["vk_verify_pending"])
+                        has_photo = monitor.verify(int(post_id)) if monitor else _pending_has_photo(state["vk_verify_pending"])
                     except Exception as check_error:
                         raise PhotoVerificationError(
                             f"запись {post_id} создана; проверка фото временно недоступна ({check_error})"

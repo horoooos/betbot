@@ -32,7 +32,7 @@ class VKPhotoTests(unittest.TestCase):
         self.assertEqual([c[0] for c in calls], ["photos.getWallUploadServer"])
         self.assertIn("Flood control", vk._photo.err)
 
-    def _crosspost(self, photo, *, short_fails=False, verify_fails=False, state=None, seeds=None):
+    def _crosspost(self, photo, *, short_fails=False, verify_fails=False, state=None, seeds=None, reserve=""):
         tmp = tempfile.TemporaryDirectory()
         self.addCleanup(tmp.cleanup)
         root = Path(tmp.name)
@@ -73,7 +73,7 @@ class VKPhotoTests(unittest.TestCase):
             "vk_hour": {}, "vk_day": {}, "vk_photos": [], "vk_comment_pending": {},
         }
         photo_patcher = patch.object(vk, "_photo", return_value=photo)
-        with patch.dict(os.environ, {"VK_USER_TOKEN": "user", "VK_TOKEN": "group"}), \
+        with patch.dict(os.environ, {"VK_USER_TOKEN": "user", "VK_TOKEN": "group", "VK_WALL_RESERVE_PHOTO": reserve}), \
                 patch.object(vk, "__file__", str(fake_file)), \
                 patch.object(vk, "CHANNEL", channel), \
                 patch.object(vk, "SEED_PHOTOS", seeds or []), \
@@ -82,9 +82,45 @@ class VKPhotoTests(unittest.TestCase):
                 photo_patcher, \
                 patch.object(dzen, "hashtags", return_value=""), \
                 patch.object(dzen, "kind", return_value="новость"), \
-                patch.object(postimg, "image_for", return_value=b"image"):
+                patch.object(postimg, "image_for", return_value=b"image"), \
+                patch("betbot.vk_wall_events.PhotoMonitor") as monitor:
+            monitor.return_value.server = {"ts": "123"}
+            monitor.return_value.verify.return_value = True
+            if verify_fails:
+                monitor.return_value.verify.side_effect = RuntimeError("events unavailable")
             done = vk.crosspost(state)
         return done, state, calls, full_link
+
+    def test_verified_reserve_uses_group_and_event_verification(self):
+        state = {"vk_last": 5400, "vk_reserve_mode_initialized": True}
+        done, state, calls, _ = self._crosspost(None, state=state, reserve="photo394825865_457255433")
+        self.assertEqual(done, 1)
+        wall = next(c for c in calls if c[0] == "wall.post")
+        self.assertEqual(wall[2]["attachments"], "photo394825865_457255433")
+        self.assertIn("Иллюстрация из архива", wall[2]["message"])
+        self.assertTrue(all(c[1] == "group" for c in calls))
+        self.assertFalse(any(c[0] in ("wall.getById", "wall.getComments") for c in calls))
+        self.assertEqual(state["vk_last"], 5401)
+        self.assertNotIn("vk_verify_pending", state)
+
+    def test_reserve_activation_preserves_old_pending_and_starts_with_future_posts(self):
+        pending = {"pid": 5300, "post_id": 414}
+        done, state, calls, _ = self._crosspost(None, state={"vk_last": 5299, "vk_verify_pending": pending},
+                                             reserve="photo394825865_457255433")
+        self.assertEqual(done, 0)
+        self.assertEqual(state["vk_last"], 5401)
+        self.assertEqual(state["vk_legacy_pending"], [pending])
+        self.assertFalse(calls)
+
+    def test_reserve_verification_failure_keeps_event_cursor_without_duplicate(self):
+        state = {"vk_last": 5400, "vk_reserve_mode_initialized": True}
+        done, state, calls, _ = self._crosspost(None, state=state, reserve="photo394825865_457255433", verify_fails=True)
+        self.assertEqual(done, 0)
+        self.assertEqual(state["vk_verify_pending"]["poll_ts"], "123")
+        state["vk_verify_retry_at"] = 0
+        done, state, calls, _ = self._crosspost(None, state=state, reserve="photo394825865_457255433")
+        self.assertFalse(any(c[0] == "wall.post" for c in calls))
+        self.assertEqual(state["vk_last"], 5401)
 
     def test_wall_post_has_photo_and_short_link_comment(self):
         photo = f"photo-{vk.GROUP_ID}_999"
