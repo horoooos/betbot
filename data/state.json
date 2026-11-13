@@ -7,7 +7,6 @@
  "schedule_day": "2026-11-13",
  "content_slot": "2026-11-13-23",
  "news_seen": [
-  "https://www.sport-express.ru/hockey/nhl/news/ovechkin-povtoril-rekord-vashingtona-po-golevym-peredacham-2473469/",
   "https://www.sport-express.ru/hockey/nhl/news/toronto-kolorado-schet-3-6-rezultat-matcha-regulyarnogo-chempionata-nhl-11-noyabrya-2026-goda-2473467/",
   "https://www.sport-express.ru/basketball/nba/news/filadelfiya-boston-schet-101-123-rezultat-matcha-regulyarnogo-chempionata-nba-11-noyabrya-2026-goda-2473479/",
   "https://www.sport-express.ru/basketball/nba/news/leonard-propustit-esche-minimum-nedelyu-2473462/",
@@ -506,9 +505,10 @@
   "https://www.sport-express.ru/football/euro/news/kushanashvili-rasskazal-kak-popal-v-portugalskuyu-tyurmu-na-evro-2004-2474555/",
   "https://www.sport-express.ru/tennis/wta/news/shnayder-zamenit-muhovu-v-matche-s-andreevoy-na-itogovom-turnire-wta-2474613/",
   "https://www.sport-express.ru/hockey/khl/news/razin-raskritikoval-igru-ska-posle-porazheniya-ot-minskogo-dinamo-dazhe-ne-hochetsya-kommentirovat-2474621/",
-  "noticed-podelilsya-ozhidaniyami-ot-sleduyushchego-patcha-v-dota-2"
+  "noticed-podelilsya-ozhidaniyami-ot-sleduyushchego-patcha-v-dota-2",
+  "https://www.sport-express.ru/football/rfpl/news/kushanashvili-rasskazal-o-perepiske-s-anohinym-iz-tyurmy-2474556/"
  ],
- "news_i": 0,
+ "news_i": 1,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1568,7 +1568,7 @@
  "value_day": "2026-11-12",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-12",
- "site_stamp": "929|5564|2026-11-13 23",
+ "site_stamp": "929|5571|2026-11-13 23",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1698,7 +1698,7 @@
  "streak_day": {
   "2026-11-12": 1
  },
- "news_next": "2026-11-13T23:10:37.037947+03:00",
+ "news_next": "2026-11-13T23:43:37.708418+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1715,8 +1715,8 @@
  "tg_offset": 727618641,
  "push_watch": {},
  "news_video": true,
- "vk_last": 5563,
- "dz_last": 5564,
+ "vk_last": 5570,
+ "dz_last": 5571,
  "vk_err": null,
  "news_forced": "now",
  "vk_mode": "photo",
@@ -1756,7 +1756,8 @@
   "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/Academy_Sports_%2B_Outdoors_-_Sarah_Stierch_-_May_2024_21.jpg/1280px-Academy_Sports_%2B_Outdoors_-_Sarah_Stierch_-_May_2024_21.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
   "https://images.cybersport.ru/images/as-is/plain/76/76178cea-468f-46db-9514-91a2dc220909.jpg",
   "https://ss.sport-express.ru/userfiles/materials/224/2243116/1180x665.jpg",
-  "https://images.cybersport.ru/images/as-is/plain/67/6705775c-a60d-44f3-930b-7ece288fef2b.jpg"
+  "https://images.cybersport.ru/images/as-is/plain/67/6705775c-a60d-44f3-930b-7ece288fef2b.jpg",
+  "https://ss.sport-express.ru/userfiles/materials/224/2243088/1180x665.jpg"
  ],
  "indexnow_day": "2026-11-13",
  "vk_wall_err": null,
