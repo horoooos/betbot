@@ -49,3 +49,21 @@ post for review and starts with future Telegram posts; it does not replay backlo
 The existing minimum gap and hourly/daily caps still apply. Access or availability
 of an external VK photo can change; no successful wall.post response alone is
 accepted as proof of a photo attachment.
+
+## Fresh-photo checks and automatic recovery
+
+2026-11-13: fresh-wall run 43484152939 failed at photos.getWallUploadServer
+with error 9. The historical community chat upload (run 43484363181) saved a
+new photo394825865_457255546, but wall event verification found no photo in
+test post 422. A positive user owner ID alone is therefore insufficient proof.
+The personal message uploader (run 43484684328) also returned error 9 at
+photos.getMessagesUploadServer. No messages were sent by these diagnostics.
+
+VK_WALL_PREFER_FRESH=1 enables the real per-post image as first choice when
+personal-token uploads become available. On upload failure it keeps the labeled
+archive fallback, with independent six-hour retry backoff for Flood control
+(one hour for other errors). VK_WALL_FRESH_NOT_BEFORE sets an initial upload
+cooldown after these confirmed failures. Successful recovery removes the archive
+caption and uses the newly saved per-post attachment. The same community wall
+verification and short-link comments are retained. Unique images on the wall are
+NOT confirmed working with the current restricted personal token.

@@ -32,7 +32,7 @@ class VKPhotoTests(unittest.TestCase):
         self.assertEqual([c[0] for c in calls], ["photos.getWallUploadServer"])
         self.assertIn("Flood control", vk._photo.err)
 
-    def _crosspost(self, photo, *, short_fails=False, verify_fails=False, state=None, seeds=None, reserve=""):
+    def _crosspost(self, photo, *, short_fails=False, verify_fails=False, state=None, seeds=None, reserve="", prefer_fresh=False):
         tmp = tempfile.TemporaryDirectory()
         self.addCleanup(tmp.cleanup)
         root = Path(tmp.name)
@@ -73,7 +73,8 @@ class VKPhotoTests(unittest.TestCase):
             "vk_hour": {}, "vk_day": {}, "vk_photos": [], "vk_comment_pending": {},
         }
         photo_patcher = patch.object(vk, "_photo", return_value=photo)
-        with patch.dict(os.environ, {"VK_USER_TOKEN": "user", "VK_TOKEN": "group", "VK_WALL_RESERVE_PHOTO": reserve}), \
+        with patch.dict(os.environ, {"VK_USER_TOKEN": "user", "VK_TOKEN": "group", "VK_WALL_RESERVE_PHOTO": reserve,
+                                     "VK_WALL_PREFER_FRESH": "1" if prefer_fresh else "0"}), \
                 patch.object(vk, "__file__", str(fake_file)), \
                 patch.object(vk, "CHANNEL", channel), \
                 patch.object(vk, "SEED_PHOTOS", seeds or []), \
@@ -90,6 +91,35 @@ class VKPhotoTests(unittest.TestCase):
                 monitor.return_value.verify.side_effect = RuntimeError("events unavailable")
             done = vk.crosspost(state)
         return done, state, calls, full_link
+
+    def test_new_post_image_takes_priority_over_verified_archive(self):
+        state = {"vk_last": 5400, "vk_reserve_mode_initialized": True}
+        done, state, calls, _ = self._crosspost("photo394825865_999", state=state,
+                                             reserve="photo394825865_457255433", prefer_fresh=True)
+        self.assertEqual(done, 1)
+        wall = next(c for c in calls if c[0] == "wall.post")
+        self.assertEqual(wall[2]["attachments"], "photo394825865_999")
+        self.assertNotIn("Иллюстрация из архива", wall[2]["message"])
+        self.assertEqual(state["vk_photo_source"], "fresh")
+
+    def test_failed_fresh_upload_keeps_archive_working_with_separate_backoff(self):
+        state = {"vk_last": 5400, "vk_reserve_mode_initialized": True}
+        done, state, calls, _ = self._crosspost(None, state=state,
+                                             reserve="photo394825865_457255433", prefer_fresh=True)
+        self.assertEqual(done, 1)
+        self.assertEqual(state["vk_photo_source"], "archive")
+        self.assertGreater(state["vk_fresh_retry_at"], time.time() + 3500)
+        self.assertEqual(state.get("vk_photo_until", 0), 0)
+
+    def test_fresh_upload_cooldown_does_not_try_upload_or_mislabel_archive(self):
+        state = {"vk_last": 5400, "vk_reserve_mode_initialized": True, "vk_fresh_retry_at": time.time() + 1000}
+        # If upload is attempted, this fake successful fresh ID would be selected.
+        done, state, calls, _ = self._crosspost("photo394825865_999", state=state,
+                                             reserve="photo394825865_457255433", prefer_fresh=True)
+        self.assertEqual(done, 1)
+        wall = next(c for c in calls if c[0] == "wall.post")
+        self.assertEqual(wall[2]["attachments"], "photo394825865_457255433")
+        self.assertIn("Иллюстрация из архива", wall[2]["message"])
 
     def test_verified_reserve_uses_group_and_event_verification(self):
         state = {"vk_last": 5400, "vk_reserve_mode_initialized": True}

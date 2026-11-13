@@ -474,19 +474,38 @@ def crosspost(state: dict, checkpoint=None) -> int:
             print(f"  ВК: пост {pid} отложен — короткая ссылка недоступна: {e}")
             break
         text += "\n\n" + (f"📺 Смотреть матч онлайн 👉 {short}" if started else f"📊 Подробнее на сайте 👉 {short}")
-        if reserve:
-            text += "\n\nИллюстрация из архива проекта."
         # Личный ключ загружает картинку, ключ сообщества публикует запись.
         from . import dzen, postimg
         tags = dzen.hashtags(p.get("html", ""), "начало" if started else dzen.kind(p.get("html", "")), limit=8)
         if tags:   # хештеги по теме (команды, игроки, лига) — ВК лучше показывает пост в поиске и рекомендациях
             text += "\n\n" + tags
-        img = None if reserve else postimg.image_for(p, ("начало" if started else dzen.kind(p.get("html", "")) or "новость"), posts)
+        fresh_probe = bool(reserve and os.environ.get("VK_WALL_PREFER_FRESH") == "1"
+                           and os.environ.get("VK_USER_TOKEN")
+                           and now_ts >= max(float(state.get("vk_fresh_retry_at") or 0),
+                                             float(os.environ.get("VK_WALL_FRESH_NOT_BEFORE") or 0)))
+        img = postimg.image_for(p, ("начало" if started else dzen.kind(p.get("html", "")) or "новость"), posts) if not reserve or fresh_probe else None
         _photo.err = "" if img or reserve else "картинка поста не получена"
         _photo.wall_err = ""
         photo_off = now_ts < float(state.get("vk_photo_until") or 0)   # ВК во флуде на загрузку фото
         cache = state.setdefault("vk_photos", [])
-        photo = reserve or (None if photo_off else (_photo(img) if img else None))
+        photo = None if photo_off else (_photo(img) if img else None)
+        if reserve:
+            if photo:
+                state["vk_photo_source"] = "fresh"
+                state["vk_fresh_err"] = None
+                state["vk_fresh_retry_at"] = 0
+            else:
+                if fresh_probe:
+                    error = getattr(_photo, "err", "") or "картинка поста не получена"
+                    state["vk_fresh_err"] = str(error)[:300]
+                    # The upload restriction is independent of community wall posting.
+                    # Keep archive posts working; do not hammer the personal key.
+                    state["vk_fresh_retry_at"] = time.time() + (6 * 3600 if _is_flood_error(error) else 3600)
+                    checkpoint()
+                    print("  ВК: новое фото пока недоступно; повторная проверка загрузки отложена")
+                photo = reserve
+                state["vk_photo_source"] = "archive"
+                text += "\n\nИллюстрация из архива проекта."
         if photo and photo.startswith("photo-"):
             cache.insert(0, photo)
             del cache[12:]                       # держим последние 12 загруженных
