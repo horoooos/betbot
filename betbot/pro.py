@@ -64,7 +64,8 @@ def bank_daily(res: pd.DataFrame, today: pd.Timestamp | None = None) -> list[dic
     start = pd.Timestamp(BANK_RESET)
     out = [{"date": (start - pd.Timedelta(days=1)).strftime("%Y-%m-%d"), "bank": float(BANK_START), "n": 0, "w": 0, "start": True}]
     bank = float(BANK_START)
-    for day, o, h, s in all_bets(res, start=BANK_RESET, dated=True):
+    end = (pd.Timestamp(today) if today is not None else pd.Timestamp.now(tz="Europe/Moscow").tz_localize(None)).strftime("%Y-%m-%d")
+    for day, o, h, s in all_bets(res, start=BANK_RESET, end=end, dated=True):
         if out[-1]["date"] != day:
             out.append({"date": day, "bank": bank, "n": 0, "w": 0})
         amount = bank * s / 100
@@ -82,7 +83,8 @@ def bank_curve(res: pd.DataFrame) -> list[float]:
     if res is not None and len(res):
         res = res[pd.to_datetime(res["date"]) >= pd.Timestamp(BANK_RESET)]
     bank, curve = float(BANK_START), [float(BANK_START)]
-    for o, h, s in all_bets(res, start=BANK_RESET):
+    end = pd.Timestamp.now(tz="Europe/Moscow").tz_localize(None).strftime("%Y-%m-%d")
+    for o, h, s in all_bets(res, start=BANK_RESET, end=end):
         amount = bank * s / 100
         bank += amount * (o - 1) if h else -amount
         curve.append(round(bank, 2))

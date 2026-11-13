@@ -605,6 +605,23 @@ def _pred_index(ms: list[dict], now: pd.Timestamp) -> str:
     crumbs, bc = _crumbs("../", [("Главная", ""), ("Прогнозы на матчи", None)])
     upcoming = sorted([m for m in ms if not m.get("finished") and m["kickoff"] > now - pd.Timedelta(hours=3)], key=lambda m: m["kickoff"])
     done = [m for m in ms if m.get("finished")][:60]
+    try:   # ⚡ live-ставки бота — в тех же «Последних результатах»
+        from . import pro
+        for _, r in pro.live_bets().tail(40).iterrows():
+            if str(r.get("hit")) in ("", "nan", "None"):
+                continue
+            mt = str(r.get("match") or "")
+            h_, sep, a_ = mt.partition(" — ")
+            fin = r.get("final")
+            fin = "" if fin is None or (isinstance(fin, float) and fin != fin) else str(fin)
+            done.append({"sport": "", "league": "⚡ LIVE-ставка", "home": h_ or mt, "away": a_ if sep else "",
+                         "tip": str(r.get("label") or ""), "odds": r.get("min_odds"), "p": r.get("p"),
+                         "score": fin, "hit": str(r["hit"]).lower() in ("true", "1", "1.0"),
+                         "finished": True, "url": "live.html",
+                         "date": str(r["date"])[:10]})
+        done.sort(key=lambda m: str(m.get("date") or ""), reverse=True)
+    except Exception as e:
+        print(f"  ! live в результатах не собрались: {e}")
     hits = sum(1 for m in done if m.get("hit"))
     body = f"""{crumbs}<h1>Прогнозы на спорт <span>на сегодня и завтра</span></h1>
 <p class="lead">Бесплатные прогнозы на футбол, хоккей, баскетбол и теннис от искусственного интеллекта: шансы по всем рынкам, разбор каждого матча и честный итог. Из последних {len(done)} прогнозов зашло {hits}.</p>
