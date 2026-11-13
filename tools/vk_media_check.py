@@ -22,7 +22,7 @@ def call(method, token, **params):
     return vk._call(method, _tok=token, **params)
 
 
-def link_preview(group, reader):
+def link_preview(group, reader, parse_token=None):
     from PIL import Image
 
     class Metadata(HTMLParser):
@@ -51,10 +51,20 @@ def link_preview(group, reader):
     with Image.open(BytesIO(image.content)) as picture:
         print("SITE_IMAGE_SIZE:", picture.size, flush=True)
     print("PREVIEW_PAGE:", link, flush=True)
+    extra = {}
+    if parse_token:
+        parsed = call("wall.parseAttachedLink", parse_token, links=json.dumps([link]))
+        data = parsed.get("data", [])
+        item = data[0] if data else {}
+        preview = item.get("link", item).get("photo", {})
+        if not preview.get("id") or "owner_id" not in preview:
+            raise RuntimeError("VK не подготовил фото для карточки ссылки")
+        extra["link_photo_id"] = f"{preview['owner_id']}_{preview['id']}"
+        print("PARSED_PREVIEW_PHOTO: true", flush=True)
     post = call("wall.post", group, owner_id=-vk.GROUP_ID, from_group=1,
                 message="Тест BetBot: карточка новости с картинкой сайта.",
                 attachments=link, link_title=meta.values.get("og:title", "Новость BetBot"),
-                guid="betbot-link-preview-" + os.environ.get("GITHUB_RUN_ID", str(int(time.time()))))
+                guid="betbot-link-preview-" + os.environ.get("GITHUB_RUN_ID", str(int(time.time()))), **extra)
     post_id = int(post["post_id"])
     print("POST_URL:", f"https://vk.com/wall-{vk.GROUP_ID}_{post_id}", flush=True)
     result = call("wall.getById", reader, posts=f"-{vk.GROUP_ID}_{post_id}")
@@ -76,10 +86,10 @@ def main():
         raise RuntimeError("VK_USER_TOKEN отсутствует")
     print("API_HOST: api.vk.ru", flush=True)
     print("INDEPENDENT_READ_KEY:", bool(os.environ.get("VK_SERVICE_KEY")), flush=True)
-    if mode == "link-preview":
+    if mode in {"link-preview", "link-parsed-preview"}:
         if not group:
             raise RuntimeError("VK_TOKEN отсутствует")
-        link_preview(group, reader)
+        link_preview(group, reader, user if mode == "link-parsed-preview" else None)
         return
     if mode == "access":
         mask = int(call("account.getAppPermissions", user))
