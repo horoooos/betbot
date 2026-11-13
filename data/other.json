@@ -8785,25 +8785,25 @@
   "kickoff": "2026-11-13T06:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Thu, November 12th at 10:00 PM EST",
   "clock": "0:00",
   "period": 0,
   "home": {
+   "color": "121212",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/la.png",
    "id": "8",
    "name": "Los Angeles Kings",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/la.png",
-   "color": "121212",
    "score": "0",
    "record": "5-9-2",
    "periods": [],
    "ru": "Лос-Анджелес"
   },
   "away": {
+   "color": "00529b",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/nyi.png",
    "id": "12",
    "name": "New York Islanders",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/nyi.png",
-   "color": "00529b",
    "score": "0",
    "record": "7-6-4",
    "periods": [],
@@ -8898,6 +8898,8 @@
   "btn": 4,
   "close": {
    "HK_ML_A": 0.4675
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null
  }
 }
