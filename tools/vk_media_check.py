@@ -114,6 +114,28 @@ def main():
     user = os.environ.get("VK_USER_TOKEN", "").strip()
     group = os.environ.get("VK_TOKEN", "").strip()
     reader = os.environ.get("VK_SERVICE_KEY", "").strip() or user
+    if mode == "event-photo":
+        from betbot.vk_wall_events import PhotoMonitor
+        attachment = public_photo_reference(os.environ.get("VK_PUBLIC_PHOTO_REFERENCE", "").strip())
+        if not group:
+            raise RuntimeError("VK_TOKEN отсутствует")
+        monitor = PhotoMonitor(group)
+        monitor.start()
+        print("WALL_EVENT_MONITOR_READY: true", flush=True)
+        created = call("wall.post", group, owner_id=-vk.GROUP_ID, from_group=1,
+                       message="Тест BetBot: проверка картинки через события сообщества.",
+                       attachments=attachment, guid="betbot-event-photo-" + attachment)
+        post_id = int(created["post_id"])
+        print("POST_URL:", f"https://vk.com/wall-{vk.GROUP_ID}_{post_id}", flush=True)
+        has_photo = monitor.verify(post_id)
+        print("WALL_EVENT_PHOTO_VERIFIED:", has_photo, flush=True)
+        if not has_photo:
+            raise RuntimeError("Событие VK не содержит фото-вложения")
+        short = vk._short(vk.SITE)
+        comment = call("wall.createComment", group, owner_id=-vk.GROUP_ID, post_id=post_id,
+                       from_group=1, message="🔗 Сайт проекта: " + short, guid="betbot-event-site-" + str(post_id))
+        print("SHORT_LINK_COMMENT_CREATED:", bool(comment.get("comment_id")), flush=True)
+        return
     if mode in {"existing-photo", "keyed-photo"}:
         if mode == "keyed-photo":
             attachment = os.environ.get("VK_TEST_PHOTO_ATTACHMENT", "").strip()
