@@ -5,7 +5,7 @@
  },
  "learned": "2026-11-13",
  "schedule_day": "2026-11-13",
- "content_slot": "2026-11-13-19",
+ "content_slot": "2026-11-13-20",
  "news_seen": [
   "https://www.sport-express.ru/football/spain/news/tabernes-valensiya-schet-i-rezultaty-matchey-2-raunda-kubka-ispanii-10-noyabrya-2026-2473444/",
   "https://www.sport-express.ru/hockey/nhl/news/istochnik-filadelfiya-mozhet-obmenyat-michkova-iz-za-raznoglasiy-v-komande-2473445/",
@@ -1583,7 +1583,7 @@
  "value_day": "2026-11-12",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-12",
- "site_stamp": "924|5502|2026-11-13 19",
+ "site_stamp": "924|5503|2026-11-13 20",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1598,121 +1598,117 @@
  },
  "value_check": "2026-11-13-6",
  "express_risk": {
-  "msg": 5189,
+  "msg": 5503,
   "legs": [
    {
     "sport": "football",
-    "div": "BRA2",
-    "id": "401860434",
-    "side": "away",
-    "p": 0.5652985801593986,
-    "odds": 1.667,
-    "kickoff": "2026-11-13T01:00:00+03:00",
-    "home": "Понте-Прета",
-    "away": "Operário PR",
-    "league": "🇧🇷 Бразилия · Серия B",
-    "logos": [
-     "https://a.espncdn.com/i/teamlogos/soccer/500/3459.png",
-     "https://a.espncdn.com/i/teamlogos/soccer/500/18187.png"
-    ],
-    "colors": [
-     "000000",
-     "000000"
-    ],
-    "label": "Победа: Operário PR",
-    "win": true,
-    "score": "0:2"
-   },
-   {
-    "sport": "hockey",
-    "div": "NHL",
-    "id": "401892700",
+    "div": "UNL",
+    "id": "401861155",
     "side": "home",
-    "p": 0.5830164765525981,
-    "odds": 1.645,
-    "kickoff": "2026-11-13T03:00:00+03:00",
-    "home": "Нью-Джерси",
-    "away": "Вашингтон",
-    "league": "🇺🇸 США · NHL",
+    "p": 0.5662921348314607,
+    "odds": 1.625,
+    "kickoff": "2026-11-13T22:45:00+03:00",
+    "home": "Сборная Андорры",
+    "away": "Сборная Гибралтара",
+    "league": "🌍 Сборные · Лига наций",
     "logos": [
-     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/nj.png",
-     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/wsh.png"
+     "https://a.espncdn.com/i/teamlogos/countries/500/and.png",
+     "https://a.espncdn.com/i/teamlogos/countries/500/gib.png"
     ],
     "colors": [
-     "e30b2b",
-     "d71830"
+     "E70000",
+     "DE2918"
     ],
-    "label": "Победа: Нью-Джерси (с ОТ)"
-   },
-   {
-    "sport": "hockey",
-    "div": "NHL",
-    "id": "401892696",
-    "side": "home",
-    "p": 0.5324675324675325,
-    "odds": 1.8,
-    "kickoff": "2026-11-13T03:00:00+03:00",
-    "home": "Бостон",
-    "away": "Монреаль",
-    "league": "🇺🇸 США · NHL",
-    "logos": [
-     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/bos.png",
-     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/mtl.png"
-    ],
-    "colors": [
-     "231f20",
-     "c41230"
-    ],
-    "label": "Победа: Бостон (с ОТ)",
-    "win": false,
-    "score": "2:5"
-   },
-   {
-    "sport": "hockey",
-    "div": "NHL",
-    "id": "401892702",
-    "side": "away",
-    "p": 0.5830164765525981,
-    "odds": 1.645,
-    "kickoff": "2026-11-13T04:00:00+03:00",
-    "home": "Чикаго",
-    "away": "Баффало",
-    "league": "🇺🇸 США · NHL",
-    "logos": [
-     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/chi.png",
-     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/buf.png"
-    ],
-    "colors": [
-     "e31937",
-     "00468b"
-    ],
-    "label": "Победа: Баффало (с ОТ)"
+    "label": "Победа: Сборная Андорры"
    },
    {
     "sport": "football",
-    "div": "MEX2",
-    "id": "401931922",
-    "side": "home",
-    "p": 0.5576021833053524,
-    "odds": 1.645,
-    "kickoff": "2026-11-13T05:00:00+03:00",
-    "home": "Монаркас Морелия",
-    "away": "Леонес Негрос",
-    "league": "🇲🇽 Мексика · Лига де Экспансьон",
+    "div": "UNL",
+    "id": "401861156",
+    "side": "away",
+    "p": 0.5388618118820195,
+    "odds": 1.714,
+    "kickoff": "2026-11-13T22:45:00+03:00",
+    "home": "Сборная Словении",
+    "away": "Сборная Швейцарии",
+    "league": "🌍 Сборные · Лига наций",
     "logos": [
-     "https://a.espncdn.com/i/teamlogos/soccer/500/221.png",
-     "https://a.espncdn.com/i/teamlogos/soccer/500/10129.png"
+     "https://a.espncdn.com/i/teamlogos/countries/500/svn.png",
+     "https://a.espncdn.com/i/teamlogos/countries/500/sui.png"
     ],
     "colors": [
-     "ffd011",
-     "F7AA25"
+     "ffffff",
+     "FF0000"
     ],
-    "label": "Победа: Монаркас Морелия"
+    "label": "Победа: Сборная Швейцарии"
+   },
+   {
+    "sport": "basketball",
+    "div": "NBA",
+    "id": "401909298",
+    "side": "home",
+    "p": 0.5514042772481319,
+    "odds": 1.741,
+    "kickoff": "2026-11-14T04:00:00+03:00",
+    "home": "Майами Хит",
+    "away": "Кливленд",
+    "league": "🇺🇸 США · NBA",
+    "logos": [
+     "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/mia.png",
+     "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/cle.png"
+    ],
+    "colors": [
+     "98002e",
+     "860038"
+    ],
+    "label": "Победа: Майами Хит (с ОТ)"
+   },
+   {
+    "sport": "basketball",
+    "div": "NBA",
+    "id": "401909300",
+    "side": "away",
+    "p": 0.5514042772481319,
+    "odds": 1.741,
+    "kickoff": "2026-11-14T04:00:00+03:00",
+    "home": "Нью-Орлеан Пеликанс",
+    "away": "Мемфис Гриззлис",
+    "league": "🇺🇸 США · NBA",
+    "logos": [
+     "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/no.png",
+     "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/mem.png"
+    ],
+    "colors": [
+     "0a2240",
+     "5d76a9"
+    ],
+    "label": "Победа: Мемфис Гриззлис (с ОТ)"
+   },
+   {
+    "sport": "hockey",
+    "div": "NHL",
+    "id": "401892707",
+    "side": "home",
+    "p": 0.5934121196882072,
+    "odds": 1.617,
+    "kickoff": "2026-11-14T06:00:00+03:00",
+    "home": "Вегас",
+    "away": "Нэшвилл",
+    "league": "🇺🇸 США · NHL",
+    "logos": [
+     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/vgk.png",
+     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/nsh.png"
+    ],
+    "colors": [
+     "344043",
+     "fdba31"
+    ],
+    "label": "Победа: Вегас (с ОТ)"
    }
   ],
-  "odds": 13.356904221675002,
-  "day": "2026-11-12",
-  "done": true
+  "odds": 13.651228780439254,
+  "day": "2026-11-13",
+  "done": false
  },
  "streak_day": {
   "2026-11-12": 1
@@ -1735,7 +1731,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5416,
- "dz_last": 5502,
+ "dz_last": 5503,
  "vk_err": "5417: ожидает проверки фото записи 414: VK wall.getById: 9 Flood control",
  "news_forced": "now",
  "vk_mode": "photo",

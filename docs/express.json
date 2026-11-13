@@ -69,103 +69,103 @@
 {
 "kind": "express_risk",
 "title": "Экспресс на яйцах",
-"day": "2026-11-12",
-"odds": 13.356904221675002,
-"p": 0.0571,
-"status": "lost",
-"won": 1,
+"day": "2026-11-13",
+"odds": 13.651228780439254,
+"p": 0.0551,
+"status": "wait",
+"won": 0,
 "n": 5,
-"post": "https://t.me/aistavvit/5189",
+"post": "https://t.me/aistavvit/5503",
 "legs": [
 {
 "sport": "football",
-"id": "401860434",
-"home": "Понте-Прета",
-"away": "Operário PR",
-"league": "🇧🇷 Бразилия · Серия B",
-"kickoff": "2026-11-13T01:00:00+03:00",
-"label": "Победа: Operário PR",
-"odds": 1.667,
-"p": 0.5652985801593986,
+"id": "401861155",
+"home": "Сборная Андорры",
+"away": "Сборная Гибралтара",
+"league": "🌍 Сборные · Лига наций",
+"kickoff": "2026-11-13T22:45:00+03:00",
+"label": "Победа: Сборная Андорры",
+"odds": 1.625,
+"p": 0.5662921348314607,
 "logos": [
-"https://a.espncdn.com/i/teamlogos/soccer/500/3459.png",
-"https://a.espncdn.com/i/teamlogos/soccer/500/18187.png"
-],
-"win": true,
-"score": "0:2",
-"url": "live.html?s=football&p=soccer%2Fbra.2&e=401860434&h=%D0%9F%D0%BE%D0%BD%D1%82%D0%B5-%D0%9F%D1%80%D0%B5%D1%82%D0%B0&a=Oper%C3%A1rio+PR"
-},
-{
-"sport": "hockey",
-"id": "401892700",
-"home": "Нью-Джерси",
-"away": "Вашингтон",
-"league": "🇺🇸 США · NHL",
-"kickoff": "2026-11-13T03:00:00+03:00",
-"label": "Победа: Нью-Джерси (с ОТ)",
-"odds": 1.645,
-"p": 0.5830164765525981,
-"logos": [
-"https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/nj.png",
-"https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/wsh.png"
+"https://a.espncdn.com/i/teamlogos/countries/500/and.png",
+"https://a.espncdn.com/i/teamlogos/countries/500/gib.png"
 ],
 "win": null,
 "score": null,
-"url": "live.html?s=hockey&p=hockey%2Fnhl&e=401892700&h=%D0%9D%D1%8C%D1%8E-%D0%94%D0%B6%D0%B5%D1%80%D1%81%D0%B8&a=%D0%92%D0%B0%D1%88%D0%B8%D0%BD%D0%B3%D1%82%D0%BE%D0%BD"
-},
-{
-"sport": "hockey",
-"id": "401892696",
-"home": "Бостон",
-"away": "Монреаль",
-"league": "🇺🇸 США · NHL",
-"kickoff": "2026-11-13T03:00:00+03:00",
-"label": "Победа: Бостон (с ОТ)",
-"odds": 1.8,
-"p": 0.5324675324675325,
-"logos": [
-"https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/bos.png",
-"https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/mtl.png"
-],
-"win": false,
-"score": "2:5",
-"url": "live.html?s=hockey&p=hockey%2Fnhl&e=401892696&h=%D0%91%D0%BE%D1%81%D1%82%D0%BE%D0%BD&a=%D0%9C%D0%BE%D0%BD%D1%80%D0%B5%D0%B0%D0%BB%D1%8C"
-},
-{
-"sport": "hockey",
-"id": "401892702",
-"home": "Чикаго",
-"away": "Баффало",
-"league": "🇺🇸 США · NHL",
-"kickoff": "2026-11-13T04:00:00+03:00",
-"label": "Победа: Баффало (с ОТ)",
-"odds": 1.645,
-"p": 0.5830164765525981,
-"logos": [
-"https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/chi.png",
-"https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/buf.png"
-],
-"win": null,
-"score": null,
-"url": "live.html?s=hockey&p=hockey%2Fnhl&e=401892702&h=%D0%A7%D0%B8%D0%BA%D0%B0%D0%B3%D0%BE&a=%D0%91%D0%B0%D1%84%D1%84%D0%B0%D0%BB%D0%BE"
+"url": "live.html?s=football&p=soccer%2Fuefa.nations&e=401861155&h=%D0%A1%D0%B1%D0%BE%D1%80%D0%BD%D0%B0%D1%8F+%D0%90%D0%BD%D0%B4%D0%BE%D1%80%D1%80%D1%8B&a=%D0%A1%D0%B1%D0%BE%D1%80%D0%BD%D0%B0%D1%8F+%D0%93%D0%B8%D0%B1%D1%80%D0%B0%D0%BB%D1%82%D0%B0%D1%80%D0%B0"
 },
 {
 "sport": "football",
-"id": "401931922",
-"home": "Монаркас Морелия",
-"away": "Леонес Негрос",
-"league": "🇲🇽 Мексика · Лига де Экспансьон",
-"kickoff": "2026-11-13T05:00:00+03:00",
-"label": "Победа: Монаркас Морелия",
-"odds": 1.645,
-"p": 0.5576021833053524,
+"id": "401861156",
+"home": "Сборная Словении",
+"away": "Сборная Швейцарии",
+"league": "🌍 Сборные · Лига наций",
+"kickoff": "2026-11-13T22:45:00+03:00",
+"label": "Победа: Сборная Швейцарии",
+"odds": 1.714,
+"p": 0.5388618118820195,
 "logos": [
-"https://a.espncdn.com/i/teamlogos/soccer/500/221.png",
-"https://a.espncdn.com/i/teamlogos/soccer/500/10129.png"
+"https://a.espncdn.com/i/teamlogos/countries/500/svn.png",
+"https://a.espncdn.com/i/teamlogos/countries/500/sui.png"
 ],
 "win": null,
 "score": null,
-"url": "live.html?s=football&p=soccer%2Fmex.2&e=401931922&h=%D0%9C%D0%BE%D0%BD%D0%B0%D1%80%D0%BA%D0%B0%D1%81+%D0%9C%D0%BE%D1%80%D0%B5%D0%BB%D0%B8%D1%8F&a=%D0%9B%D0%B5%D0%BE%D0%BD%D0%B5%D1%81+%D0%9D%D0%B5%D0%B3%D1%80%D0%BE%D1%81"
+"url": "live.html?s=football&p=soccer%2Fuefa.nations&e=401861156&h=%D0%A1%D0%B1%D0%BE%D1%80%D0%BD%D0%B0%D1%8F+%D0%A1%D0%BB%D0%BE%D0%B2%D0%B5%D0%BD%D0%B8%D0%B8&a=%D0%A1%D0%B1%D0%BE%D1%80%D0%BD%D0%B0%D1%8F+%D0%A8%D0%B2%D0%B5%D0%B9%D1%86%D0%B0%D1%80%D0%B8%D0%B8"
+},
+{
+"sport": "basketball",
+"id": "401909298",
+"home": "Майами Хит",
+"away": "Кливленд",
+"league": "🇺🇸 США · NBA",
+"kickoff": "2026-11-14T04:00:00+03:00",
+"label": "Победа: Майами Хит (с ОТ)",
+"odds": 1.741,
+"p": 0.5514042772481319,
+"logos": [
+"https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/mia.png",
+"https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/cle.png"
+],
+"win": null,
+"score": null,
+"url": "live.html?s=basketball&p=basketball%2Fnba&e=401909298&h=%D0%9C%D0%B0%D0%B9%D0%B0%D0%BC%D0%B8+%D0%A5%D0%B8%D1%82&a=%D0%9A%D0%BB%D0%B8%D0%B2%D0%BB%D0%B5%D0%BD%D0%B4"
+},
+{
+"sport": "basketball",
+"id": "401909300",
+"home": "Нью-Орлеан Пеликанс",
+"away": "Мемфис Гриззлис",
+"league": "🇺🇸 США · NBA",
+"kickoff": "2026-11-14T04:00:00+03:00",
+"label": "Победа: Мемфис Гриззлис (с ОТ)",
+"odds": 1.741,
+"p": 0.5514042772481319,
+"logos": [
+"https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/no.png",
+"https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/mem.png"
+],
+"win": null,
+"score": null,
+"url": "live.html?s=basketball&p=basketball%2Fnba&e=401909300&h=%D0%9D%D1%8C%D1%8E-%D0%9E%D1%80%D0%BB%D0%B5%D0%B0%D0%BD+%D0%9F%D0%B5%D0%BB%D0%B8%D0%BA%D0%B0%D0%BD%D1%81&a=%D0%9C%D0%B5%D0%BC%D1%84%D0%B8%D1%81+%D0%93%D1%80%D0%B8%D0%B7%D0%B7%D0%BB%D0%B8%D1%81"
+},
+{
+"sport": "hockey",
+"id": "401892707",
+"home": "Вегас",
+"away": "Нэшвилл",
+"league": "🇺🇸 США · NHL",
+"kickoff": "2026-11-14T06:00:00+03:00",
+"label": "Победа: Вегас (с ОТ)",
+"odds": 1.617,
+"p": 0.5934121196882072,
+"logos": [
+"https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/vgk.png",
+"https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/nsh.png"
+],
+"win": null,
+"score": null,
+"url": "live.html?s=hockey&p=hockey%2Fnhl&e=401892707&h=%D0%92%D0%B5%D0%B3%D0%B0%D1%81&a=%D0%9D%D1%8D%D1%88%D0%B2%D0%B8%D0%BB%D0%BB"
 }
 ]
 }
