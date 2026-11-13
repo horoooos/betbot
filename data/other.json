@@ -8622,5 +8622,98 @@
  "DOTA|1793318": {
   "status": "skipped",
   "kickoff": "2026-11-13T16:00:00+03:00"
+ },
+ "WTA|186773": {
+  "id": "186773",
+  "div": "WTA",
+  "sport": "tennis",
+  "tournament": "DIRECTV Open Presentado por Compesar",
+  "round": "Semifinal",
+  "bo5": false,
+  "kickoff": "2026-11-13T18:00:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "detail": "Fri, November 13th at 10:00 AM EST",
+  "home": {
+   "id": "15069",
+   "name": "Laura Samson",
+   "logo": [
+    "https://a.espncdn.com/i/headshots/tennis/players/full/15069.png",
+    "https://a.espncdn.com/i/teamlogos/countries/500/cze.png"
+   ],
+   "country": "Czechia",
+   "color": "2d6a4f",
+   "winner": false,
+   "sets": [],
+   "set_won": [],
+   "ru": "Лаура Самсон"
+  },
+  "away": {
+   "id": "1955",
+   "name": "Elizabeth Mandlik",
+   "logo": [
+    "https://a.espncdn.com/i/headshots/tennis/players/full/1955.png",
+    "https://a.espncdn.com/i/teamlogos/countries/500/usa.png"
+   ],
+   "country": "USA",
+   "color": "2d6a4f",
+   "winner": false,
+   "sets": [],
+   "set_won": [],
+   "ru": "Элизабет Мандлик"
+  },
+  "odds": {},
+  "probs": {
+   "TN_W1": 0.6428768703383998,
+   "TN_W2": 0.3571231296616002,
+   "TN_3S": 0.4813957720894332,
+   "TN_2S": 0.5186042279105668,
+   "TN_S2:0": 0.3557495812900114,
+   "TN_S0:2": 0.16285464662055543,
+   "TN_S2:1": 0.28712728904838836,
+   "TN_S1:2": 0.1942684830410448,
+   "TN_SET1": 0.8371453533794446,
+   "TN_SET2": 0.6442504187099887
+  },
+  "labels": {
+   "TN_W1": "Победа: Лаура Самсон",
+   "TN_W2": "Победа: Элизабет Мандлик",
+   "TN_3S": "Будет 3 сета",
+   "TN_2S": "Будет 2 сета",
+   "TN_S2:0": "Счёт по сетам 2:0",
+   "TN_S0:2": "Счёт по сетам 0:2",
+   "TN_S2:1": "Счёт по сетам 2:1",
+   "TN_S1:2": "Счёт по сетам 1:2",
+   "TN_SET1": "Лаура Самсон возьмёт хотя бы сет",
+   "TN_SET2": "Элизабет Мандлик возьмёт хотя бы сет"
+  },
+  "real": {},
+  "center": "Рейтинг Эло 1698 : 1596",
+  "bar": [
+   0.6428768703383998,
+   0,
+   0.3571231296616002
+  ],
+  "model": {
+   "elo": [
+    1698.3357561855987,
+    1596.2118274089958
+   ],
+   "src": "Эло"
+  },
+  "main": {
+   "key": "TN_2S",
+   "label": "Будет 2 сета",
+   "p": 0.5186,
+   "odds": 1.79,
+   "est": true,
+   "stake": 1.0
+  },
+  "bold": {},
+  "open": {},
+  "top": false,
+  "msg_id": 5455,
+  "btn": 4
  }
 }
