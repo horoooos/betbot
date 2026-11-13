@@ -1746,7 +1746,7 @@
   "youtube": "YouTube не подключён (нет секретов YT_*)"
  },
  "vk_try": {},
- "vk_pause_ts": 1794570326.8099499,
+ "vk_pause_ts": 1794573346.496983,
  "push": {
   "on": true,
   "subs": 0,
@@ -1767,7 +1767,8 @@
   "post_id": 414,
   "short": "vk.cc/d3SJzU",
   "attachment": "photo",
-  "cursor": 1
+  "cursor": 1,
+  "retry_delay_s": 3600
  },
- "vk_verify_retry_at": 1794570646.496983
+ "vk_verify_retry_at": 1794573346.496983
 }
