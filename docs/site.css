@@ -150,3 +150,30 @@ footer { border-top:1px solid var(--line); padding-top:16px; line-height:1.9 } f
   .topnav .links a { padding:6px 2px; font-size:12px; letter-spacing:-.15px }
 }
 @media (max-width:360px) { .topnav .links a { font-size:11px } }
+
+@media (max-width: 700px) {
+  h1 { font-size: 26px; line-height: 1.2; overflow-wrap: anywhere; }
+  h1 span { display: block; }
+  .teams { flex-wrap: wrap; justify-content: center; gap: 8px; }
+  .teams b { font-size: 16px; }
+  .teams .sc { font-size: 34px; }
+  .teams img { width: 44px; height: 44px; }
+  .row { flex-wrap: wrap; justify-content: center; }
+  .btn { white-space: normal; text-align: center; padding: 11px 14px; font-size: 13px; }
+  .card, .pre, .mr, .mc, .mc b, .mc .p { overflow-wrap: anywhere; }
+  .mr { grid-template-columns: minmax(0, 1fr) 64px 40px; gap: 6px; }
+  .mr .o { font-size: 11px; }
+  .grid { grid-template-columns: 1fr; }
+  .lead { font-size: 14px; }
+  body { overflow-x: hidden; }
+}
+
+/* универсальные правила против горизонтального выпирания */
+html, body { max-width: 100%; overflow-x: hidden; }
+h1, h2, .lead, .mc b, .card, .pre, .mr span { overflow-wrap: anywhere; word-break: break-word; }
+.teams { flex-wrap: wrap; }
+.row { flex-wrap: wrap; }
+.btn { white-space: normal; text-align: center; }
+img { max-width: 100%; height: auto; }
+.mr { min-width: 0; }
+.grid, .cards { min-width: 0; }

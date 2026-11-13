@@ -276,8 +276,12 @@ def crosspost(state: dict) -> int:
         # (наше фото как обложка ссылки); не принял — публикуем как раньше, текст со ссылкой
         if photo and photo.startswith("photo-"):   # фото «из сообщений» сообщества — только вместе со ссылкой
             tries = [[photo, link], [photo]] if link != SITE else [[photo]]
-        else:                                      # фото стены (личный ключ) ВК показывает как обычную картинку
-            tries = [[photo] if photo else []]
+        elif photo:                                # фото стены (личный ключ) ВК показывает как обычную картинку
+            tries = [[photo]]
+        elif link:                                 # без фото: ссылка как вложение — ВК покажет превью с картинкой
+            tries = [[link]]
+        else:
+            tries = [[]]
         try:
             for i, att in enumerate(tries):
                 try:

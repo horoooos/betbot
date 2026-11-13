@@ -326,7 +326,24 @@ ARCHIVE_CSS = """<style>
 .arch .m{font-size:11px;font-weight:700;color:#8f9bbf;display:flex;align-items:center;gap:6px}
 .arch .m i{width:8px;height:8px;border-radius:50%;background:var(--c)}
 @media (max-width:720px){.arch{grid-template-columns:1fr}.arch img,.arch .ph{width:68px;height:48px}}
-</style>"""
+</style>
+@media (max-width: 700px) {
+  h1 { font-size: 26px; line-height: 1.2; overflow-wrap: anywhere; }
+  h1 span { display: block; }
+  .teams { flex-wrap: wrap; justify-content: center; gap: 8px; }
+  .teams b { font-size: 16px; }
+  .teams .sc { font-size: 34px; }
+  .teams img { width: 44px; height: 44px; }
+  .row { flex-wrap: wrap; justify-content: center; }
+  .btn { white-space: normal; text-align: center; padding: 11px 14px; font-size: 13px; }
+  .card, .pre, .mr, .mc, .mc b, .mc .p { overflow-wrap: anywhere; }
+  .mr { grid-template-columns: minmax(0, 1fr) 64px 40px; gap: 6px; }
+  .mr .o { font-size: 11px; }
+  .grid { grid-template-columns: 1fr; }
+  .lead { font-size: 14px; }
+  body { overflow-x: hidden; }
+}
+"""
 
 
 def _archive(news: list[dict], now: pd.Timestamp | None = None) -> str:
@@ -502,6 +519,26 @@ def _matches(stores: dict, results: pd.DataFrame, store: dict[int, dict], now: p
     return sorted(out.values(), key=lambda m: m["kickoff"], reverse=True)
 
 
+
+_RU_EVENT = [
+    ("Slap Shot", "щелчок"), ("Wrist Shot", "кистевой бросок"), ("Tip-In", "подставление"),
+    ("Snap Shot", "бросок"), ("Backhand", "неудобной"), ("Deflection", "рикошет"),
+    ("Wrap Around", "обводка ворот"), ("Goal", "гол"), ("assists:", "передачи:"), ("assist:", "передача:"),
+    ("none", "—"), ("Power Play", "большинство"), ("Short Handed", "меньшинство"),
+    ("Penalty", "удаление"), ("Faceoff", "вбрасывание"), ("Save", "сейв"), ("Blocked Shot", "блок"),
+    ("Giveaway", "потеря"), ("Takeaway", "отбор"), ("Icing", "проброс"), ("Offside", "офсайд"),
+    ("1st", "1-й"), ("2nd", "2-й"), ("3rd", "3-й"), ("OT", "ОТ"), ("Period", "период"),
+]
+
+
+def _ru_event(text: str) -> str:
+    """Событие матча с ESPN — по-русски (термины; имена игроков оставляем латиницей)."""
+    out = text
+    for en, ru in _RU_EVENT:
+        out = out.replace(en, ru)
+    return out
+
+
 def _match_page(m: dict, store: dict[int, dict], all_m: list[dict]) -> str:
     title_teams = f"{m['home']} — {m['away']}"
     day = _date_ru(m["kickoff"])
@@ -544,7 +581,7 @@ def _match_page(m: dict, store: dict[int, dict], all_m: list[dict]) -> str:
     game = ""
     if livep or ev:
         game = '<h2>🏟 Как прошёл матч</h2><div class="card tl">' + "".join(f'<div class="pre">{p["html"]}</div>' for p in livep) + \
-               "".join(f"<div>{H.escape(e)}</div>" for e in ev) + "</div>"
+               "".join(f"<div>{H.escape(_ru_event(e))}</div>" for e in ev) + "</div>"
     watch = (f'<a class="btn red" href="../{H.escape(m["live"].split("/betbot/")[-1])}">{"▶ Повтор матча" if m.get("finished") else "📺 Смотреть онлайн"}</a>'
              if m.get("live") else "")
     others = [x for x in all_m if x is not m and x["kickoff"].date() == m["kickoff"].date()][:8]

@@ -48,6 +48,12 @@ jobs:
                     attachments="photo-228963529_457239766")
           print("ФОТО-ЗАПАС:", json.dumps(r3, ensure_ascii=False)[:300])
 
+
+          # 4) текст + ссылка как вложение (ВК показывает превью с картинкой сайта)
+          r4 = call("wall.post", owner_id=-gid, from_group=1, message=text,
+                    attachments="https://horoooos.github.io/betbot/")
+          print("ССЫЛКА-ПРЕВЬЮ:", json.dumps(r4, ensure_ascii=False)[:300])
+
           # 2) фото через сообщения (getMessagesUploadServer) → фото сообщества → пост со вложением
           img = urllib.request.urlopen("https://horoooos.github.io/betbot/og.png", timeout=30).read()
           srv = call("photos.getMessagesUploadServer", tok=user_tok, group_id=gid)
