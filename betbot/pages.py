@@ -465,6 +465,19 @@ def _matches(stores: dict, results: pd.DataFrame, store: dict[int, dict], now: p
             "kickoff": pd.Timestamp(m["kickoff"]).tz_convert("Europe/Moscow"), "league": live._league(m), "msg": m["msg_id"],
             "tip": m["main"]["label"], "odds": m["main"].get("odds"), "p": m["main"].get("p"), "bot": _bot_block(m),
             "path": path, "live": btn[1] if btn else None, "venue": m.get("venue")}
+    try:   # ⚡ live-прогнозы: находим по тем же командам, чтобы показать на странице матча
+        from . import pro
+        lb = pro.live_bets()
+        pairs = {(x["home"], x["away"]): x for x in out.values()}
+        for _, r in lb.iterrows():
+            mt = str(r.get("match") or "")
+            h_, sep, a_ = mt.partition(" — ")
+            m0 = pairs.get((h_, a_ if sep else ""))
+            if m0 is not None:
+                m0["lt"] = {"label": str(r.get("label") or ""), "odds": r.get("min_odds"), "p": r.get("p"),
+                            "ok": str(r.get("hit")).lower() in ("true", "1", "1.0")}
+    except Exception as e:
+        print(f"  ! live на страницах матчей не собрались: {e}")
     if results is not None and len(results):
         recent = results[pd.to_datetime(results["date"]) >= (now.tz_localize(None).normalize() - pd.Timedelta(days=60))]
         cands = _pred_posts(store)
@@ -506,6 +519,18 @@ def _match_page(m: dict, store: dict[int, dict], all_m: list[dict]) -> str:
         res = f'<span class="badge {"ok" if m.get("hit") else "no"}">{"✅ Прогноз зашёл" if m.get("hit") else "❌ Прогноз не зашёл"}</span>'
     else:
         res = '<span class="badge wait">⏳ Матч ещё не сыгран</span>'
+    lt = m.get("lt")
+    liveline = ""
+    if lt:
+        ok = bool(lt.get("ok"))
+        try:
+            odds_lt = f"{float(lt.get('odds')):.2f}"
+        except (TypeError, ValueError):
+            odds_lt = "—"
+        liveline = (f'<div class="card" style="margin-top:10px;border-color:rgba(124,58,237,.5);background:linear-gradient(90deg,rgba(124,58,237,.18),rgba(124,58,237,.04))">'
+                    f'<b>⚡ LIVE-прогноз бота</b> · {H.escape(lt.get("label") or "")} · кэф {odds_lt}'
+                    f'{f" · шанс {round((lt.get('p') or 0) * 100)}%" if lt.get("p") else ""} — '
+                    f'<span class="badge {"ok" if ok else "no"}">{"✅ зашёл" if ok else "❌ не зашёл"}</span></div>')
     chances = ""
     b = m.get("bot")
     if b and b.get("markets"):
@@ -536,6 +561,7 @@ def _match_page(m: dict, store: dict[int, dict], all_m: list[dict]) -> str:
 <div class="card"><div class="teams">{logo(m.get('hl'))}<b>{tl(m['home'])}</b><span class="sc">{H.escape(sc)}</span><b>{tl(m['away'])}</b>{logo(m.get('al'))}</div>
 <div style="text-align:center">{res}</div>
 <div class="row" style="justify-content:center;margin-top:12px">{watch}<a class="btn gold" href="https://t.me/{CH}/{m['msg']}">📲 Прогноз в Telegram</a></div></div>
+{liveline}
 <h2>🎯 Прогноз бота</h2><div class="card pre">{pred.get('html') or H.escape(m['tip'])}</div>
 {_betboom(f"{m['home']} — {m['away']}: {m['tip']}", m['tip'], m['home'], m['sport']) if not m.get('finished') else ''}
 <div class="card" id="votes" data-m="{H.escape(m['id'])}" data-f="{'1' if m.get('finished') else '0'}" data-h="{('1' if m.get('hit') else '0') if m.get('finished') else ''}" style="margin-top:10px"></div>
@@ -591,9 +617,9 @@ def _match_card(m: dict, prefix: str) -> str:
     card = (f'<a class="card mc" href="{prefix}{m["url"]}"><div class="t"><span>{EMOJI.get(m["sport"], "")} {H.escape(m.get("league") or SPORT_RU.get(m["sport"], ""))}</span>{st}</div>'
             f'<b>{H.escape(m["home"])} — {H.escape(m["away"])}</b><span class="p">🎯 {H.escape(m["tip"])}{f" · {m["odds"]:.2f}" if m.get("odds") else ""}'
             f'{f" · шанс {m["p"] * 100:.0f}%" if m.get("p") else ""}</span>'
-            + (f'<span class="p" style="display:block;color:#c4b5fd;font-size:12px;margin-top:4px">⚡ LIVE: {H.escape(m["live"]["label"])}'
-               f'{f" · {m["live"]["odds"]:.2f}" if m["live"].get("odds") else ""}'
-               f' {"✅" if m["live"]["ok"] else "❌"}</span>' if m.get("live") else "")
+            + (f'<span class="p" style="display:block;color:#c4b5fd;font-size:12px;margin-top:4px">⚡ LIVE: {H.escape(m["lt"]["label"])}'
+               f'{f" · {float(m["lt"]["odds"]):.2f}" if m["lt"].get("odds") else ""}'
+               f' {"✅" if m["lt"].get("ok") else "❌"}</span>' if isinstance(m.get("lt"), dict) else "")
             + '</a>')
     if m.get("finished"):
         return card
@@ -629,7 +655,7 @@ def _pred_index(ms: list[dict], now: pd.Timestamp) -> str:
         for m in done:
             key = (m["home"], m["away"])
             if key in by and key not in used:
-                m["live"] = by[key]
+                m["lt"] = by[key]
                 used.add(key)
         extra = []
         for key, lv, day, fin in order:

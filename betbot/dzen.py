@@ -26,6 +26,8 @@ def kind(html: str) -> str | None:
         return "разбор"
     if "МАТЧ НАЧАЛСЯ" in text:
         return "начало"
+    if "LIVE-прогноз" in text:                        # итог live не копируем отдельно — идёт вместе с матчем
+        return None
     if "ГОЛ" in text.split("\n")[0] or "#live" in text:
         return None                                   # голы и прочий live — нет
     if "#итог" in text and "ИТОГИ" not in text:       # итог матча, но не «итоги недели/месяца»

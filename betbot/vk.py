@@ -97,7 +97,7 @@ def _photo(img: bytes) -> str | None:
             last = ""
             for attempt in range(3):   # ВК иногда отвечает пустым фото или не-JSON — пробуем заново с новым адресом
                 try:
-                    up = _call("photos.getMessagesUploadServer", _tok=os.environ["VK_TOKEN"], peer_id=0)["upload_url"]
+                    up = _call("photos.getMessagesUploadServer", peer_id=0, group_id=GROUP_ID)["upload_url"]
                     r = requests.post(up, files={"photo": (("post.png", img, "image/png") if img[1:4] == b"PNG" else ("post.jpg", img, "image/jpeg"))}, timeout=60)
                     try:
                         res = r.json()
@@ -105,7 +105,7 @@ def _photo(img: bytes) -> str | None:
                         raise RuntimeError(f"сервер загрузки ответил не JSON ({r.status_code}): {r.text[:80]!r}") from None
                     if not res.get("photo") or res.get("photo") == "[]":
                         raise RuntimeError(f"пустое фото ({len(img)} байт): {str(res)[:100]}")
-                    s = _call("photos.saveMessagesPhoto", _tok=os.environ["VK_TOKEN"], photo=res["photo"], server=res["server"], hash=res["hash"])[0]
+                    s = _call("photos.saveMessagesPhoto", photo=res["photo"], server=res["server"], hash=res["hash"])[0]
                     break
                 except Exception as e:
                     last = str(e)
@@ -254,7 +254,7 @@ def crosspost(state: dict) -> int:
         if not photo:   # фото не залилось (Flood control на загрузку) — публикуем текст со ссылкой
             text = text.rstrip() + "\n\n" + link
             if "flood" in (_photo.err or "").lower() or " 9 " in f" {_photo.err} ":
-                state["vk_photo_until"] = time.time() + 3600   # час не трогаем загрузку фото
+                state["vk_photo_until"] = time.time() + 900   # 15 минут не трогаем загрузку фото
                 print(f"  ВК: загрузка фото во флуд-контроле — час публикуем без картинок")
         state["vk_err"] = f"{pid} фото: {_photo.err}" if not photo else None   # старую ошибку стираем
         state["vk_wall_err"] = f"{pid}: {_photo.wall_err}" if _photo.wall_err else None   # почему не вышло фото стены по личному ключу
