@@ -65,6 +65,13 @@ def _text(html: str) -> str:
     return re.sub(r"\n{3,}", "\n\n", t)
 
 
+SEED_PHOTOS = [   # фото сообщества, загруженные ранее (аварийный запас, когда загрузка во флуде)
+    "photo-228963529_457239766",
+    "photo-228963529_457239765",
+    "photo-228963529_457239764",
+]
+
+
 def _photo(img: bytes) -> str | None:
     """Загружаем картинку и возвращаем вложение для поста.
 
@@ -250,7 +257,14 @@ def crosspost(state: dict) -> int:
         _photo.err = "" if img else "картинка поста не получена"
         _photo.wall_err = ""
         photo_off = now_ts < float(state.get("vk_photo_until") or 0)   # ВК во флуде на загрузку фото
+        cache = state.setdefault("vk_photos", [])
         photo = None if photo_off else (_photo(img) if img else None)
+        if photo and photo.startswith("photo-"):
+            cache.insert(0, photo)
+            del cache[12:]                       # держим последние 12 загруженных
+            state["vk_photos"] = cache
+        if not photo:                            # загрузка не удалась — берём ранее загруженное фото
+            photo = (cache[0] if cache else (SEED_PHOTOS[0] if SEED_PHOTOS else None))
         if not photo:   # фото не залилось (Flood control на загрузку) — публикуем текст со ссылкой
             text = text.rstrip() + "\n\n" + link
             if "flood" in (_photo.err or "").lower() or " 9 " in f" {_photo.err} ":

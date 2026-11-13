@@ -42,6 +42,12 @@ jobs:
           r1 = call("wall.post", owner_id=-gid, from_group=1, message=text)
           print("ТЕКСТ:", json.dumps(r1, ensure_ascii=False)[:300])
 
+
+          # 3) текст с уже загруженным фото сообщества (без новой загрузки)
+          r3 = call("wall.post", owner_id=-gid, from_group=1, message=text,
+                    attachments="photo-228963529_457239766")
+          print("ФОТО-ЗАПАС:", json.dumps(r3, ensure_ascii=False)[:300])
+
           # 2) фото через сообщения (getMessagesUploadServer) → фото сообщества → пост со вложением
           img = urllib.request.urlopen("https://horoooos.github.io/betbot/og.png", timeout=30).read()
           srv = call("photos.getMessagesUploadServer", tok=user_tok, group_id=gid)
