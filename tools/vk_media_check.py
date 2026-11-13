@@ -88,6 +88,15 @@ def main():
     user = os.environ.get("VK_USER_TOKEN", "").strip()
     group = os.environ.get("VK_TOKEN", "").strip()
     reader = os.environ.get("VK_SERVICE_KEY", "").strip() or user
+    if mode == "story-test":
+        from betbot import vk_stories
+        posts = json.loads(Path("data/channel.json").read_text(encoding="utf-8"))["posts"]
+        pid = max(posts, key=int)
+        image = postimg.image_for(posts[pid], "новость", posts)
+        if not image:
+            raise RuntimeError("Картинка истории не создана")
+        vk_stories.publish_image(image, posts[pid].get("html", ""), test=True)
+        return
     if not user:
         raise RuntimeError("VK_USER_TOKEN отсутствует")
     print("API_HOST: api.vk.ru", flush=True)
