@@ -7,7 +7,6 @@
  "schedule_day": "2026-11-13",
  "content_slot": "2026-11-13-13",
  "news_seen": [
-  "https://www.sport-express.ru/tennis/wta/news/andreeva-rasskazala-chto-pegula-izvinilas-pered-ney-nikakoy-dramy-net-2473376/",
   "stariy-bog-sygrayet-protiv-team-spirit-na-gruppovom-yetape-essence-iii",
   "https://www.sport-express.ru/tennis/atp/news/alkaras-i-zverev-stali-pervymi-uchastnikami-kubka-leyvera-2027-2473381/",
   "https://www.sport-express.ru/football/england/news/porro-ob-interese-barselony-priyatno-kogda-toboy-interesuetsya-odin-iz-luchshih-klubov-mira-2473382/",
@@ -506,9 +505,10 @@
   "https://www.sport-express.ru/football/england/news/liverpul-esche-ne-nachinal-peregovory-o-prodlenii-kontrakta-s-makallisterom-2474407/",
   "https://www.sport-express.ru/football/england/news/daily-mail-gleyzery-vybrali-pochettino-vopreki-rekomendaciyam-rukovodstva-myu-2474406/",
   "https://www.sport-express.ru/football/nation-league/news/upamekano-pokinul-raspolozhenie-sbornoy-francii-po-lichnym-prichinam-2474402/",
-  "https://www.sport-express.ru/football/rfpl/news/kushanashvili-raskritikoval-chelestini-futbolisty-ego-ne-vosprinimali-2474311/"
+  "https://www.sport-express.ru/football/rfpl/news/kushanashvili-raskritikoval-chelestini-futbolisty-ego-ne-vosprinimali-2474311/",
+  "zywoo-provel-khudshii-lan-v-karere-po-itogam-blast-rivals-fall-2026"
  ],
- "news_i": 1,
+ "news_i": 2,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1692,7 +1692,7 @@
  "streak_day": {
   "2026-11-12": 1
  },
- "news_next": "2026-11-13T15:35:49.145035+03:00",
+ "news_next": "2026-11-13T16:04:48.966100+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1739,7 +1739,8 @@
   "https://upload.wikimedia.org/wikipedia/commons/1/1d/Aleksey_Batrakov.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
   "https://images.cybersport.ru/images/as-is/plain/44/445dbd74-e823-434e-91f5-af5675033e6e.jpg",
   "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cc/16014-event-Football_Game_Fans-1856_%2821223890396%29.jpg/1280px-16014-event-Football_Game_Fans-1856_%2821223890396%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-  "https://ss.sport-express.ru/userfiles/materials/224/2242920/1180x665.jpg"
+  "https://ss.sport-express.ru/userfiles/materials/224/2242920/1180x665.jpg",
+  "https://images.cybersport.ru/images/as-is/plain/5a/5ad0e1f1-2675-4898-85ce-a5bd81c869a4.jpg"
  ],
  "indexnow_day": "2026-11-13",
  "vk_wall_err": "5417: попытка 1: VK photos.getWallUploadServer: 9 Flood control",
@@ -1748,7 +1749,7 @@
   "youtube": "YouTube не подключён (нет секретов YT_*)"
  },
  "vk_try": {},
- "vk_pause_ts": 1794573346.496983,
+ "vk_pause_ts": 1794577036.8537824,
  "push": {
   "on": true,
   "subs": 0,
@@ -1772,5 +1773,5 @@
   "cursor": 1,
   "retry_delay_s": 3600
  },
- "vk_verify_retry_at": 1794573346.496983
+ "vk_verify_retry_at": 1794577036.8537824
 }
