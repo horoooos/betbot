@@ -282,7 +282,7 @@ h2{font-size:19px;font-weight:900;margin:34px 0 12px;display:flex;align-items:ce
 .card{background:linear-gradient(160deg,var(--card2),var(--card));border:1px solid var(--line);border-radius:20px;padding:16px}
 svg{width:100%;height:auto;display:block}svg .base{stroke:rgba(255,255,255,.25);stroke-dasharray:5 6}svg .lbl{fill:var(--muted);font-size:12px;font-family:Montserrat,sans-serif}
 .muted{color:var(--muted)}.small{font-size:12px}
-.heat{display:grid;grid-template-columns:repeat(14,1fr);gap:6px}
+.heat{display:grid;grid-template-columns:repeat(15,1fr);gap:6px}
 .heat i{aspect-ratio:1;border-radius:6px;background:rgba(255,255,255,.06);position:relative}
 .legend{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px;font-size:12px;color:var(--muted)}.legend span{display:inline-flex;align-items:center;gap:6px}
 .legend i{width:12px;height:12px;border-radius:3px;display:inline-block}
@@ -412,13 +412,13 @@ def build(res: pd.DataFrame, now: pd.Timestamp, blocks: dict | None = None) -> N
                         pred_days[dk] = pred_days.get(dk, 0) + 1
         except (OSError, ValueError):
             pred_days = {}
-        for i in range(27, -1, -1):
+        for i in range(29, -1, -1):   # ровно 30 дней — как в заголовке
             d = end - pd.Timedelta(days=i)
             if d in by_day.index:   # если итоги уже есть — цвет по факту, без «ждём»
                 n, k = int(by_day.loc[d, "size"]), int(by_day.loc[d, "sum"])
                 p = k / n
                 col = "#2ecc71" if p >= .6 else "#9be15d" if p >= .5 else "#ffc400" if p >= .4 else "#ff5a5a"
-                heat += f'<i style="background:{col};opacity:{.62 + .38 * min(n, 10) / 10:.2f}" title="{d:%d.%m}: {k} из {n} ({100 * p:.0f}%)"></i>'
+                heat += f'<i style="background:{col}" title="{d:%d.%m}: {k} из {n} ({100 * p:.0f}%)"></i>'
             elif d.isoformat() in pred_days:
                 cnt = pred_days[d.isoformat()]
                 heat += (f'<i style="background:repeating-linear-gradient(135deg,#ffc400 0 9px,#a87400 9px 18px)" '
