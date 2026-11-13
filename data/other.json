@@ -8128,5 +8128,203 @@
   "close": {
    "_": null
   }
+ },
+ "NBA|401909296": {
+  "id": "401909296",
+  "div": "NBA",
+  "sport": "basketball",
+  "kickoff": "2026-11-14T03:00:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "detail": "Fri, November 13th at 7:00 PM EST",
+  "clock": "0.0",
+  "period": 0,
+  "home": {
+   "id": "11",
+   "name": "Indiana Pacers",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/ind.png",
+   "color": "0c2340",
+   "score": "0",
+   "record": "4-8",
+   "periods": [],
+   "ru": "Индиана Пэйсерс"
+  },
+  "away": {
+   "id": "18",
+   "name": "New York Knicks",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/ny.png",
+   "color": "1d428a",
+   "score": "0",
+   "record": "6-5",
+   "periods": [],
+   "ru": "Нью-Йорк Никс"
+  },
+  "odds": {
+   "H": 3.71,
+   "A": 1.297,
+   "line": 219.5,
+   "over": 1.935,
+   "under": 1.885,
+   "spread": 8.5,
+   "sp_h": 1.909,
+   "sp_a": 1.909
+  },
+  "probs": {
+   "BB_ML_H": 0.23936914086644995,
+   "BB_ML_A": 0.76063085913355,
+   "BB_SPR_H": 0.5,
+   "BB_SPR_A": 0.5,
+   "BB_O212.5": 0.6597440535491568,
+   "BB_U212.5": 0.3402559464508432,
+   "BB_O219.5": 0.5,
+   "BB_U219.5": 0.5,
+   "BB_O226.5": 0.3402559464508432,
+   "BB_U226.5": 0.6597440535491568
+  },
+  "labels": {
+   "BB_ML_H": "П1 (с ОТ)",
+   "BB_ML_A": "П2 (с ОТ)",
+   "BB_SPR_H": "Ф1 (+8.5)",
+   "BB_SPR_A": "Ф2 (-8.5)",
+   "BB_O212.5": "ТБ 212.5",
+   "BB_U212.5": "ТМ 212.5",
+   "BB_O219.5": "ТБ 219.5",
+   "BB_U219.5": "ТМ 219.5",
+   "BB_O226.5": "ТБ 226.5",
+   "BB_U226.5": "ТМ 226.5"
+  },
+  "real": {
+   "BB_ML_H": 3.71,
+   "BB_ML_A": 1.297,
+   "BB_SPR_H": 1.909,
+   "BB_SPR_A": 1.909,
+   "BB_O219.5": 1.935,
+   "BB_U219.5": 1.885
+  },
+  "center": "Ожидаемый счёт 106 : 114",
+  "bar": [
+   0.23936914086644995,
+   0,
+   0.76063085913355
+  ],
+  "model": {
+   "mu": -8.5,
+   "T": 219.5
+  },
+  "main": {
+   "key": "BB_O219.5",
+   "label": "ТБ 219.5",
+   "p": 0.5,
+   "odds": 1.94,
+   "est": false,
+   "stake": 1.0
+  },
+  "bold": {},
+  "open": {
+   "BB_O219.5": 0.5
+  },
+  "top": false,
+  "msg_id": 5633,
+  "btn": 4
+ },
+ "NBA|401909297": {
+  "id": "401909297",
+  "div": "NBA",
+  "sport": "basketball",
+  "kickoff": "2026-11-14T03:00:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "detail": "Fri, November 13th at 7:00 PM EST",
+  "clock": "0.0",
+  "period": 0,
+  "home": {
+   "id": "19",
+   "name": "Orlando Magic",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/orl.png",
+   "color": "0150b5",
+   "score": "0",
+   "record": "4-7",
+   "periods": [],
+   "ru": "Орландо Мэджик"
+  },
+  "away": {
+   "id": "15",
+   "name": "Milwaukee Bucks",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/mil.png",
+   "color": "00471b",
+   "score": "0",
+   "record": "1-11",
+   "periods": [],
+   "ru": "Милуоки Бакс"
+  },
+  "odds": {
+   "H": 1.244,
+   "A": 4.22,
+   "line": 224.5,
+   "over": 1.926,
+   "under": 1.893,
+   "spread": -9.5,
+   "sp_h": 1.893,
+   "sp_a": 1.926
+  },
+  "probs": {
+   "BB_ML_H": 0.7857224683246905,
+   "BB_ML_A": 0.2142775316753095,
+   "BB_SPR_H": 0.5,
+   "BB_SPR_A": 0.5,
+   "BB_O217.5": 0.6597440535491568,
+   "BB_U217.5": 0.3402559464508432,
+   "BB_O224.5": 0.5,
+   "BB_U224.5": 0.5,
+   "BB_O231.5": 0.3402559464508432,
+   "BB_U231.5": 0.6597440535491568
+  },
+  "labels": {
+   "BB_ML_H": "П1 (с ОТ)",
+   "BB_ML_A": "П2 (с ОТ)",
+   "BB_SPR_H": "Ф1 (-9.5)",
+   "BB_SPR_A": "Ф2 (+9.5)",
+   "BB_O217.5": "ТБ 217.5",
+   "BB_U217.5": "ТМ 217.5",
+   "BB_O224.5": "ТБ 224.5",
+   "BB_U224.5": "ТМ 224.5",
+   "BB_O231.5": "ТБ 231.5",
+   "BB_U231.5": "ТМ 231.5"
+  },
+  "real": {
+   "BB_ML_H": 1.244,
+   "BB_ML_A": 4.22,
+   "BB_SPR_H": 1.893,
+   "BB_SPR_A": 1.926,
+   "BB_O224.5": 1.926,
+   "BB_U224.5": 1.893
+  },
+  "center": "Ожидаемый счёт 117 : 108",
+  "bar": [
+   0.7857224683246905,
+   0,
+   0.2142775316753095
+  ],
+  "model": {
+   "mu": 9.5,
+   "T": 224.5
+  },
+  "main": {
+   "key": "BB_O224.5",
+   "label": "ТБ 224.5",
+   "p": 0.5,
+   "odds": 1.93,
+   "est": false,
+   "stake": 1.0
+  },
+  "bold": {},
+  "open": {
+   "BB_O224.5": 0.5
+  },
+  "top": false,
+  "msg_id": 5635,
+  "btn": 4
  }
 }
