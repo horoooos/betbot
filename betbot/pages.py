@@ -343,6 +343,21 @@ ARCHIVE_CSS = """<style>
   .lead { font-size: 14px; }
   body { overflow-x: hidden; }
 }
+
+/* аккуратные переносы на всех экранах */
+.pre, .card, .mc .p, .mr span, .mc b { overflow-wrap: break-word; word-break: normal; }
+@media (max-width: 700px) {
+  main { padding-bottom: 150px; }
+  h1 { font-size: 24px; }
+  .teams { flex-direction: column; gap: 2px; }
+  .teams .sc { font-size: 30px; min-width: 0; margin: 2px 0; }
+  .teams b { font-size: 15px; line-height: 1.25; }
+  .teams img { width: 42px; height: 42px; }
+  .mr { grid-template-columns: minmax(0, 1fr) 56px 34px; }
+  .mcw > .mc { padding-bottom: 56px; }
+  .sticky { left: 0; right: 0; transform: none; justify-content: center; bottom: 10px; padding: 0 10px; }
+  .sticky a { flex: 0 1 auto; }
+}
 """
 
 

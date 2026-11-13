@@ -191,6 +191,16 @@ def crosspost(state: dict) -> int:
         skipped = newest - int(state["vk_last"])
         state["vk_last"] = newest - STALE_GAP
         print(f"  ВК: очередь очищена, пропущено {skipped} старых постов")
+    resume = (Path(__file__).resolve().parent.parent / "data" / "vk_resume.txt")
+    if resume.exists():   # ручной сигнал «возобновить публикации сейчас»
+        state["vk_pause_ts"] = 0
+        state["vk_floods"] = 0
+        state["vk_err"] = None
+        try:
+            resume.unlink()
+        except OSError:
+            pass
+        print("  ВК: публикации возобновлены вручную")
     # тормоза: после Flood control ВК блокирует стену, поэтому молчим и постепенно наращиваем темп
     now_ts = time.time()
     if now_ts < float(state.get("vk_pause_ts") or 0):
