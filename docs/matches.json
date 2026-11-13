@@ -1,137 +1,5 @@
 [
 {
-"sport": "football",
-"id": "401916338",
-"league": "Сборные · Товарищеские матчи",
-"kickoff": "2026-11-13T15:00:00+03:00",
-"home": "Сборная Сингапура",
-"away": "Сборная Парагвая",
-"hl": "https://a.espncdn.com/i/teamlogos/countries/500/sin.png",
-"al": "https://a.espncdn.com/i/teamlogos/countries/500/par.png",
-"hid": "4384",
-"aid": "210",
-"bb": "https://betboom.ru/search?query=%D0%A1%D0%B8%D0%BD%D0%B3%D0%B0%D0%BF%D1%83%D1%80%D0%B0&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
-"path": "soccer/fifa.friendly",
-"url": "live.html?s=football&p=soccer%2Ffifa.friendly&e=401916338&h=%D0%A1%D0%B1%D0%BE%D1%80%D0%BD%D0%B0%D1%8F+%D0%A1%D0%B8%D0%BD%D0%B3%D0%B0%D0%BF%D1%83%D1%80%D0%B0&a=%D0%A1%D0%B1%D0%BE%D1%80%D0%BD%D0%B0%D1%8F+%D0%9F%D0%B0%D1%80%D0%B0%D0%B3%D0%B2%D0%B0%D1%8F",
-"tip": "ТМ 3.5 · 1.91",
-"top": false,
-"bot": {
-"main": {
-"label": "ТМ 3.5",
-"p": 0.484,
-"odds": 1.91,
-"est": false
-},
-"bold": null,
-"markets": [
-[
-"П1",
-0.029,
-23.0
-],
-[
-"Ничья",
-0.089,
-12.0
-],
-[
-"П2",
-0.882,
-1.071
-],
-[
-"1X",
-0.118,
-null
-],
-[
-"X2",
-0.971,
-null
-],
-[
-"ТБ 1.5",
-0.891,
-null
-],
-[
-"ТБ 2.5",
-0.723,
-null
-],
-[
-"ТМ 2.5",
-0.277,
-null
-],
-[
-"ТБ 3.5",
-0.516,
-1.8
-],
-[
-"Обе забьют — да",
-0.392,
-null
-],
-[
-"Обе забьют — нет",
-0.608,
-null
-],
-[
-"ИТ1 больше 1.5",
-0.096,
-null
-],
-[
-"ИТ2 больше 1.5",
-0.833,
-null
-],
-[
-"Ф1 (−1.5)",
-0.006,
-null
-],
-[
-"Ф2 (+1.5)",
-0.994,
-null
-]
-],
-"bar": [
-0.0289531067970039,
-0.0893698195138323,
-0.8816770736891637
-],
-"center": "Ожидаемые голы (xG) 0.5 : 3.2",
-"scores": [
-[
-"0:3",
-0.132
-],
-[
-"0:2",
-0.123
-],
-[
-"0:4",
-0.107
-]
-]
-},
-"lt": {
-"fair": 1.26,
-"label": "ТБ 2.5",
-"min_odds": 1.32,
-"minute": "26'",
-"p": 0.794,
-"result": "hit",
-"score": "0:1"
-}
-},
-{
 "sport": "tennis",
 "id": "186546",
 "league": "Теннис · ATP",
@@ -835,7 +703,7 @@ null
 "sport": "tennis",
 "id": "186547",
 "league": "Теннис · ATP",
-"kickoff": "2026-11-13T19:00:00+03:00",
+"kickoff": "2026-11-13T19:05:00+03:00",
 "home": "Тейлор Фриц",
 "away": "Лоренцо Музетти",
 "hl": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
@@ -2959,6 +2827,25 @@ null
 "bb": "https://betboom.ru/search?query=%D0%9C%D0%B8%D1%80%D0%B0%D1%81%D0%BE%D0%BB&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
 "path": "soccer/bra.1",
 "url": "live.html?s=football&p=soccer%2Fbra.1&e=401841311&h=%D0%9C%D0%B8%D1%80%D0%B0%D1%81%D0%BE%D0%BB&a=%D0%90%D1%82%D0%BB%D0%B5%D1%82%D0%B8%D0%BA%D0%BE+%D0%9C%D0%B8%D0%BD%D0%B5%D0%B9%D1%80%D0%BE",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "football",
+"id": "401926286",
+"league": "Аргентина · Кубок Аргентины",
+"kickoff": "2026-11-15T01:00:00+03:00",
+"home": "Банфилд",
+"away": "Бока Хуниорс",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/235.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+"hid": "235",
+"aid": "5",
+"bb": "https://betboom.ru/search?query=%D0%91%D0%B0%D0%BD%D1%84%D0%B8%D0%BB%D0%B4&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/arg.copa",
+"url": "live.html?s=football&p=soccer%2Farg.copa&e=401926286&h=%D0%91%D0%B0%D0%BD%D1%84%D0%B8%D0%BB%D0%B4&a=%D0%91%D0%BE%D0%BA%D0%B0+%D0%A5%D1%83%D0%BD%D0%B8%D0%BE%D1%80%D1%81",
 "tip": "",
 "top": false,
 "bot": null,
