@@ -1711,7 +1711,7 @@
  "news_video": true,
  "vk_last": 5416,
  "dz_last": 5417,
- "vk_err": null,
+ "vk_err": "5417: запись 414 создана; проверка фото временно недоступна (VK wall.getById: 9 Flood control)",
  "news_forced": "now",
  "vk_mode": "photo",
  "dz_err": "4987: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))",
@@ -1738,13 +1738,13 @@
   "https://images.cybersport.ru/images/as-is/plain/ed/ede7983c-271c-404a-93be-4f530fd3f1f1.jpg"
  ],
  "indexnow_day": "2026-11-13",
- "vk_wall_err": "5312: попытка 3: VK photos.getWallUploadServer: 9 Flood control",
+ "vk_wall_err": "5417: попытка 1: VK photos.getWallUploadServer: 9 Flood control",
  "shorts_day": "2026-11-12",
  "shorts_err": {
   "youtube": "YouTube не подключён (нет секретов YT_*)"
  },
  "vk_try": {},
- "vk_pause_ts": 0,
+ "vk_pause_ts": 1794570326.8099499,
  "push": {
   "on": true,
   "subs": 0,
@@ -1752,5 +1752,20 @@
  },
  "vk_floods": 0,
  "vk_resume_key": "resume",
- "vk_comment_pending": {}
+ "vk_comment_pending": {},
+ "vk_shortlinks": {
+  "https://horoooos.github.io/betbot/news/5417-g2-esports-pytayutsya-ostanovit-team-falcons-v-chetvertfinale-blast-ri.html": "vk.cc/d3SJzU"
+ },
+ "vk_short_err": null,
+ "vk_photos": [],
+ "vk_photo_until": 1794567623.2926874,
+ "vk_photo_cursor": {},
+ "vk_verify_pending": {
+  "pid": 5417,
+  "post_id": 414,
+  "short": "vk.cc/d3SJzU",
+  "attachment": "photo",
+  "cursor": 1
+ },
+ "vk_verify_retry_at": 1794567626.809951
 }
