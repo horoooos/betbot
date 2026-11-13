@@ -1515,7 +1515,9 @@
      "1a2d69",
      "E70000"
     ],
-    "label": "Победа: Сборная Шотландии"
+    "label": "Победа: Сборная Шотландии",
+    "win": true,
+    "score": "2:1"
    },
    {
     "sport": "football",
@@ -1568,7 +1570,7 @@
  "value_day": "2026-11-12",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-12",
- "site_stamp": "933|5606|2026-11-14 00",
+ "site_stamp": "934|5609|2026-11-14 00",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1715,8 +1717,8 @@
  "tg_offset": 727618641,
  "push_watch": {},
  "news_video": true,
- "vk_last": 5604,
- "dz_last": 5606,
+ "vk_last": 5607,
+ "dz_last": 5609,
  "vk_err": null,
  "news_forced": "now",
  "vk_mode": "photo",
