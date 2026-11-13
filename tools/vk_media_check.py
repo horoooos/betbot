@@ -34,6 +34,11 @@ def main():
                               (("photos", 4), ("wall", 8192), ("offline", 65536))}, flush=True)
         print("ACCESS_CHECK_OK: true", flush=True)
         return
+    if mode == "album-access":
+        result = call("photos.getAlbums", user, owner_id=-vk.GROUP_ID, count=100)
+        print("ALBUM_ACCESS_OK: true", flush=True)
+        print("ALBUM_COUNT:", result.get("count", len(result.get("items", []))), flush=True)
+        return
     if mode not in {"wall", "album"}:
         raise RuntimeError("Неизвестный режим")
     state = json.loads(Path("data/state.json").read_text(encoding="utf-8"))
