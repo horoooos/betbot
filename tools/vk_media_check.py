@@ -92,6 +92,11 @@ def main():
         raise RuntimeError("VK_USER_TOKEN отсутствует")
     print("API_HOST: api.vk.ru", flush=True)
     print("INDEPENDENT_READ_KEY:", bool(os.environ.get("VK_SERVICE_KEY")), flush=True)
+    if mode == "app-info":
+        result = call("apps.get", user)
+        for app in result.get("items", []):
+            print("TOKEN_APPLICATION:", {k: app.get(k) for k in ("id", "title", "type")}, flush=True)
+        return
     if mode in {"link-preview", "link-parsed-preview", "link-community-preview"}:
         if not group:
             raise RuntimeError("VK_TOKEN отсутствует")
