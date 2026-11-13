@@ -1715,7 +1715,7 @@
  "tg_offset": 727618641,
  "push_watch": {},
  "news_video": true,
- "vk_last": 5543,
+ "vk_last": 5544,
  "dz_last": 5545,
  "vk_err": null,
  "news_forced": "now",
@@ -1758,7 +1758,7 @@
   "https://ss.sport-express.ru/userfiles/materials/224/2243116/1180x665.jpg"
  ],
  "indexnow_day": "2026-11-13",
- "vk_wall_err": "5417: попытка 1: VK photos.getWallUploadServer: 9 Flood control",
+ "vk_wall_err": null,
  "shorts_day": "2026-11-12",
  "shorts_err": {
   "youtube": "YouTube не подключён (нет секретов YT_*)"
@@ -1774,7 +1774,8 @@
  "vk_resume_key": "resume",
  "vk_comment_pending": {},
  "vk_shortlinks": {
-  "https://horoooos.github.io/betbot/news/5417-g2-esports-pytayutsya-ostanovit-team-falcons-v-chetvertfinale-blast-ri.html": "vk.cc/d3SJzU"
+  "https://horoooos.github.io/betbot/news/5417-g2-esports-pytayutsya-ostanovit-team-falcons-v-chetvertfinale-blast-ri.html": "vk.cc/d3SJzU",
+  "https://horoooos.github.io/betbot/": "vk.cc/d3KHkF"
  },
  "vk_short_err": null,
  "vk_photos": [],
@@ -1809,6 +1810,16 @@
   }
  ],
  "vk_reserve_mode_initialized": true,
- "vk_at_ts": 1794594317.9146543,
- "vk_story_retry_at": 1794598672.7803705
+ "vk_at_ts": 1794597011.495597,
+ "vk_story_retry_at": 1794598672.7803705,
+ "vk_photo_source": "archive",
+ "vk_hour": {
+  "h": "2026-11-13-19",
+  "n": 1
+ },
+ "vk_day": {
+  "d": "2026-11-13",
+  "n": 1
+ },
+ "vk_comment_err": null
 }
