@@ -278,9 +278,7 @@ def crosspost(state: dict) -> int:
             tries = [[photo, link], [photo]] if link != SITE else [[photo]]
         elif photo:                                # фото стены (личный ключ) ВК показывает как обычную картинку
             tries = [[photo]]
-        elif link:                                 # без фото: ссылка как вложение — ВК покажет превью с картинкой
-            tries = [[link]]
-        else:
+        else:                                      # без фото вообще — только текст
             tries = [[]]
         try:
             for i, att in enumerate(tries):
