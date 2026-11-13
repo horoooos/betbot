@@ -296,14 +296,20 @@ def crosspost(state: dict) -> int:
         print(f"  ВК: очередь очищена, пропущено {skipped} старых постов")
     resume = (Path(__file__).resolve().parent.parent / "data" / "vk_resume.txt")
     if resume.exists():   # ручной сигнал «возобновить публикации сейчас»
-        state["vk_pause_ts"] = 0
-        state["vk_floods"] = 0
-        state["vk_err"] = None
+        try:
+            marker_key = resume.read_text(encoding="utf-8-sig").strip() or "resume"
+        except OSError:
+            marker_key = "resume"
+        if state.get("vk_resume_key") != marker_key:
+            state["vk_resume_key"] = marker_key
+            state["vk_pause_ts"] = 0
+            state["vk_floods"] = 0
+            state["vk_err"] = None
+            print("  ВК: публикации возобновлены вручную")
         try:
             resume.unlink()
         except OSError:
             pass
-        print("  ВК: публикации возобновлены вручную")
     # тормоза: после Flood control ВК блокирует стену, поэтому молчим и постепенно наращиваем темп
     now_ts = time.time()
     if now_ts < float(state.get("vk_pause_ts") or 0):
