@@ -1583,7 +1583,7 @@
  "value_day": "2026-11-12",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-12",
- "site_stamp": "924|5503|2026-11-13 20",
+ "site_stamp": "924|5504|2026-11-13 20",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1731,7 +1731,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5416,
- "dz_last": 5503,
+ "dz_last": 5504,
  "vk_err": "5417: ожидает проверки фото записи 414: VK wall.getById: 9 Flood control",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -1811,12 +1811,13 @@
   "kickoff": "2026-11-13T22:30:00+03:00"
  },
  "vk_story_last": 5457,
- "vk_story_err": null,
+ "vk_story_err": "VK stories: сервер не вернул upload_result",
  "push_weekly": "2026-46",
  "vk_story_at": 1794588474.9982011,
  "vk_story_url": "https://vk.com/story-228963529_456239022",
  "vk_story_day": {
   "date": "2026-11-13",
   "count": 4
- }
+ },
+ "vk_story_retry_at": 1794593061.7789264
 }
