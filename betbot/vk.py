@@ -258,13 +258,24 @@ def _resolve_pending_post(state: dict) -> bool:
     pending = state.get("vk_verify_pending")
     if not isinstance(pending, dict):
         return False
+    # Older versions retried reads after 15 minutes even during the hour-long
+    # flood pause. Migrate that scheduled retry once, without contacting VK.
+    if not pending.get("retry_delay_s") and _is_flood_error(state.get("vk_err", "")):
+        retry_at = float(state.get("vk_verify_retry_at") or 0)
+        state["vk_verify_retry_at"] = max(retry_at, retry_at - 900 + PAUSE_S)
+        pending["retry_delay_s"] = PAUSE_S
+        state["vk_pause_ts"] = max(float(state.get("vk_pause_ts") or 0), state["vk_verify_retry_at"])
     if time.time() < float(state.get("vk_verify_retry_at") or 0):
         return True
     try:
         has_photo = _pending_has_photo(pending)
     except Exception as error:
         state["vk_err"] = f"{pending.get('pid')}: ожидает проверки фото записи {pending.get('post_id')}: {error}"[:300]
-        state["vk_verify_retry_at"] = time.time() + 900
+        delay = PAUSE_S if _is_flood_error(error) else 900
+        pending["retry_delay_s"] = delay
+        state["vk_verify_retry_at"] = time.time() + delay
+        if _is_flood_error(error):
+            state["vk_pause_ts"] = max(float(state.get("vk_pause_ts") or 0), state["vk_verify_retry_at"])
         print(f"  ВК: запись {pending.get('post_id')} создана; проверку повторю позже: {error}")
         return True
     if not has_photo:
@@ -273,7 +284,9 @@ def _resolve_pending_post(state: dict) -> bool:
                   post_id=int(pending["post_id"]))
         except Exception as error:
             state["vk_err"] = f"{pending.get('pid')}: запись без фото не удалена: {error}"[:300]
-            state["vk_verify_retry_at"] = time.time() + 900
+            delay = PAUSE_S if _is_flood_error(error) else 900
+            pending["retry_delay_s"] = delay
+            state["vk_verify_retry_at"] = time.time() + delay
             return True
         pid = str(pending.get("pid", ""))
         cursor = state.setdefault("vk_photo_cursor", {})
@@ -544,7 +557,10 @@ def crosspost(state: dict) -> int:
                 # Не продвигаем очередь и не пытаемся повторно создать запись,
                 # пока не удаётся безопасно проверить наличие изображения.
                 state["vk_pause_ts"] = time.time() + PAUSE_S
-                state["vk_verify_retry_at"] = time.time() + 900
+                delay = PAUSE_S if _is_flood_error(e) else 900
+                state["vk_verify_retry_at"] = time.time() + delay
+                if isinstance(state.get("vk_verify_pending"), dict):
+                    state["vk_verify_pending"]["retry_delay_s"] = delay
                 print(f"  ВК: публикация {pid} остановлена до проверки фото: {msg}")
                 break
             tries = state.setdefault("vk_try", {})

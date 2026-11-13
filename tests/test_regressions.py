@@ -116,6 +116,7 @@ class VKPhotoTests(unittest.TestCase):
         self.assertEqual(state["vk_verify_pending"]["post_id"], 77)
         self.assertEqual(sum(c[0] == "wall.post" for c in calls), 1)
         self.assertFalse(any(c[0] == "wall.delete" for c in calls))
+        self.assertGreater(state["vk_verify_retry_at"], time.time() + vk.PAUSE_S - 5)
 
         done, state, calls, _ = self._crosspost(photo, state=state)
         self.assertEqual(done, 0)
@@ -133,6 +134,17 @@ class VKPhotoTests(unittest.TestCase):
         self.assertEqual(done, 0)
         self.assertEqual(state["vk_last"], 5400)
         self.assertFalse(any(c[0] == "wall.post" for c in calls))
+
+    def test_legacy_verification_flood_retry_is_extended_once_without_api_calls(self):
+        state = {"vk_verify_pending": {"pid": 5401, "post_id": 77},
+                 "vk_verify_retry_at": 1900, "vk_pause_ts": 0,
+                 "vk_err": "VK wall.getById: 9 Flood control"}
+        with patch.object(vk.time, "time", return_value=2000), patch.object(vk, "_call") as api:
+            self.assertTrue(vk._resolve_pending_post(state))
+            self.assertEqual(state["vk_verify_retry_at"], 4600)
+            self.assertTrue(vk._resolve_pending_post(state))
+            self.assertEqual(state["vk_verify_retry_at"], 4600)
+            api.assert_not_called()
 
     def test_resume_marker_is_only_consumed_once_if_git_restores_it(self):
         with tempfile.TemporaryDirectory() as td:
