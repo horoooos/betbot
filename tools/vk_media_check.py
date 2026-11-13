@@ -88,6 +88,38 @@ def main():
     user = os.environ.get("VK_USER_TOKEN", "").strip()
     group = os.environ.get("VK_TOKEN", "").strip()
     reader = os.environ.get("VK_SERVICE_KEY", "").strip() or user
+    if mode == "gif-wall":
+        from betbot import vk_gif
+        if not group:
+            raise RuntimeError("VK_TOKEN отсутствует")
+        server = call("docs.getWallUploadServer", group, group_id=vk.GROUP_ID)
+        posts = json.loads(Path("data/channel.json").read_text(encoding="utf-8"))["posts"]
+        pid = max(posts, key=int)
+        image = postimg.image_for(posts[pid], "новость", posts)
+        if not image:
+            raise RuntimeError("Картинка GIF не создана")
+        gif = vk_gif.render(image)
+        uploaded = requests.post(server["upload_url"], files={"file": ("betbot.gif", gif, "image/gif")}, timeout=60)
+        uploaded.raise_for_status()
+        payload = uploaded.json()
+        if not payload.get("file"):
+            raise RuntimeError("VK не вернул идентификатор загруженного GIF")
+        saved = call("docs.save", group, file=payload["file"], title="BetBot — тест GIF-картинки")
+        document = saved.get("doc", {}) if isinstance(saved, dict) else saved[0] if saved else {}
+        if document.get("ext", "").lower() != "gif" or not document.get("id") or not document.get("owner_id"):
+            raise RuntimeError("VK не подтвердил сохранение GIF-документа")
+        attachment = f"doc{document['owner_id']}_{document['id']}"
+        if document.get("access_key"):
+            attachment += "_" + document["access_key"]
+        print("GIF_DOCUMENT_SAVED: true", flush=True)
+        print("GIF_HAS_PREVIEW:", bool(document.get("preview")), flush=True)
+        post = call("wall.post", group, owner_id=-vk.GROUP_ID, from_group=1,
+                    message="Тест BetBot: карточка новости в формате GIF.", attachments=attachment,
+                    guid="betbot-gif-test-" + os.environ.get("GITHUB_RUN_ID", str(int(time.time()))))
+        post_id = int(post["post_id"])
+        print("POST_URL:", f"https://vk.com/wall-{vk.GROUP_ID}_{post_id}", flush=True)
+        print("WALL_DISPLAY_REQUIRES_VERIFICATION: true", flush=True)
+        return
     if mode in {"story-to-wall", "story-to-wall-user"}:
         from betbot import vk_stories
         story_id = os.environ.get("VK_STORY_TEST_ID", "").strip()
