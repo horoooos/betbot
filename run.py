@@ -754,9 +754,15 @@ def main():
         except Exception as e:
             print(f"  ! страница статистики не собралась: {e}")
     try:   # кросспостинг новых постов канала во ВКонтакте
-        vk.crosspost(state)
+        if os.environ.get("VK_WALL_ENABLED", "1") == "1":
+            vk.crosspost(state)
     except Exception as e:
         print(f"  ! ВК: {e}")
+    try:
+        from betbot import vk_stories
+        vk_stories.crosspost(state, checkpoint=lambda: save_json(STATE, state))
+    except Exception as e:
+        print(f"  ! ВК истории: {e}")
     try:   # канал-фильтр для Дзена: разборы, начало матча, новости, итоги
         dzen.crosspost(state)
     except Exception as e:
