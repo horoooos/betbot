@@ -92,10 +92,11 @@ def main():
         raise RuntimeError("VK_USER_TOKEN отсутствует")
     print("API_HOST: api.vk.ru", flush=True)
     print("INDEPENDENT_READ_KEY:", bool(os.environ.get("VK_SERVICE_KEY")), flush=True)
-    if mode in {"link-preview", "link-parsed-preview"}:
+    if mode in {"link-preview", "link-parsed-preview", "link-community-preview"}:
         if not group:
             raise RuntimeError("VK_TOKEN отсутствует")
-        link_preview(group, reader, user if mode == "link-parsed-preview" else None)
+        parser = group if mode == "link-community-preview" else user if mode == "link-parsed-preview" else None
+        link_preview(group, reader, parser)
         return
     if mode == "access":
         mask = int(call("account.getAppPermissions", user))

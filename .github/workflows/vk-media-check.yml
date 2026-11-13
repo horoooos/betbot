@@ -5,7 +5,7 @@ on:
       mode:
         description: "access — права ключа; wall — новая картинка стены; album — новая картинка альбома"
         type: choice
-        options: [access, album-access, link-preview, link-parsed-preview, wall, album]
+        options: [access, album-access, link-preview, link-parsed-preview, link-community-preview, wall, album]
         default: access
 permissions:
   contents: read
