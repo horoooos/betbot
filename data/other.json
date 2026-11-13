@@ -7457,25 +7457,25 @@
   "kickoff": "2026-11-13T03:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Thu, November 12th at 7:00 PM EST",
   "clock": "0:00",
   "period": 0,
   "home": {
+   "color": "231f20",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/bos.png",
    "id": "1",
    "name": "Boston Bruins",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/bos.png",
-   "color": "231f20",
    "score": "0",
    "record": "13-4-1",
    "periods": [],
    "ru": "Бостон"
   },
   "away": {
+   "color": "c41230",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/mtl.png",
    "id": "10",
    "name": "Montreal Canadiens",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/mtl.png",
-   "color": "c41230",
    "score": "0",
    "record": "11-3-4",
    "periods": [],
@@ -7579,7 +7579,9 @@
   "close": {
    "HK_O6.5": 0.4572,
    "HK_ML_A": 0.4675
-  }
+  },
+  "main_hit": true,
+  "bold_hit": true
  },
  "NHL|401892697": {
   "id": "401892697",

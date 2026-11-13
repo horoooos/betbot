@@ -1579,7 +1579,7 @@
  "value_day": "2026-11-12",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-12",
- "site_stamp": "904|5358|2026-11-13 05",
+ "site_stamp": "905|5361|2026-11-13 05",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1659,7 +1659,9 @@
      "231f20",
      "c41230"
     ],
-    "label": "Победа: Бостон (с ОТ)"
+    "label": "Победа: Бостон (с ОТ)",
+    "win": false,
+    "score": "2:5"
    },
    {
     "sport": "hockey",
@@ -1706,7 +1708,7 @@
   ],
   "odds": 13.356904221675002,
   "day": "2026-11-12",
-  "done": false
+  "done": true
  },
  "streak_day": {
   "2026-11-12": 1
@@ -1728,7 +1730,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5311,
- "dz_last": 5358,
+ "dz_last": 5361,
  "vk_err": "5294: VK wall.post: 9 Flood control",
  "news_forced": "now",
  "vk_mode": "photo",
