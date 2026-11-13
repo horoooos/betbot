@@ -1,0 +1,31 @@
+name: VK media check
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "access — права ключа; wall — новая картинка стены; album — новая картинка альбома"
+        type: choice
+        options: [access, wall, album]
+        default: access
+permissions:
+  contents: read
+concurrency:
+  group: vk-media-check
+  cancel-in-progress: false
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install requests pillow pandas
+      - name: Check access or publish one uploaded image
+        env:
+          VK_TOKEN: ${{ secrets.VK_TOKEN }}
+          VK_USER_TOKEN: ${{ secrets.VK_USER_TOKEN }}
+          VK_SERVICE_KEY: ${{ secrets.VK_SERVICE_KEY }}
+          VK_MEDIA_MODE: ${{ inputs.mode }}
+        run: python tools/vk_media_check.py

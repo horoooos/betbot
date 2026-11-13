@@ -53,6 +53,7 @@ jobs:
           FIREBASE_SA: ${{ secrets.FIREBASE_SA }}
           VK_USER_TOKEN: ${{ secrets.VK_USER_TOKEN }}
           VK_TOKEN: ${{ secrets.VK_TOKEN }}
+          VK_SERVICE_KEY: ${{ secrets.VK_SERVICE_KEY }}
           YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
           YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
           YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}

@@ -20,7 +20,7 @@ from urllib.parse import urlsplit
 import requests
 
 GROUP_ID = 228963529           # vk.com/aistavvit
-API = "https://api.vk.com/method/"
+API = "https://api.vk.ru/method/"
 V = "5.199"
 CHANNEL = Path(__file__).resolve().parent.parent / "data" / "channel.json"
 SITE = "https://horoooos.github.io/betbot/"
@@ -246,7 +246,7 @@ def _stats_tail(pid: int, posts: dict) -> bool:
 
 
 def _pending_has_photo(pending: dict) -> bool:
-    result = _call("wall.getById", _tok=os.environ.get("VK_USER_TOKEN"),
+    result = _call("wall.getById", _tok=os.environ.get("VK_SERVICE_KEY") or os.environ.get("VK_USER_TOKEN"),
                    posts=f"-{GROUP_ID}_{pending['post_id']}")
     items = result.get("items", []) if isinstance(result, dict) else []
     attachments = items[0].get("attachments", []) if items else []
