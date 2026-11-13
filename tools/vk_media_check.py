@@ -130,7 +130,7 @@ def main():
         if not group:
             raise RuntimeError("VK_TOKEN отсутствует")
         try:
-            server = (call("docs.getMessagesUploadServer", group, type="doc", peer_id=-vk.GROUP_ID)
+            server = (call("docs.getMessagesUploadServer", group, type="doc")
                       if mode == "gif-message-wall" else call("docs.getWallUploadServer", group, group_id=vk.GROUP_ID))
         except RuntimeError as error:
             if ": 15 " not in str(error):
