@@ -15,6 +15,7 @@ import re
 import time
 from html import unescape
 from pathlib import Path
+from urllib.parse import urlsplit
 
 import requests
 
@@ -35,6 +36,15 @@ STOP = re.compile(r"betboom|бетбум|букмекер|промокод|фр�
 
 class PhotoVerificationError(RuntimeError):
     """ВК не удалось подтвердить фото; запись нельзя считать опубликованной."""
+
+
+class ShortLinkError(RuntimeError):
+    """Не удалось получить короткую ссылку ВК; длинный адрес не подставляется молча."""
+
+
+def _is_flood_error(error: object) -> bool:
+    message = str(error).lower()
+    return "flood" in message or ": 9 " in f" {message} "
 
 
 def _token() -> str:
@@ -70,6 +80,8 @@ def _text(html: str) -> str:
 
 
 SEED_PHOTOS = [   # фото сообщества, загруженные ранее (аварийный запас, когда загрузка во флуде)
+    "photo-228963529_457239775",
+    "photo-228963529_457239776",
     "photo-228963529_457239773",
     "photo-228963529_457239774",
     "photo-228963529_457239766",
@@ -84,6 +96,7 @@ def _photo(img: bytes) -> str | None:
     """
     import time
     s, errs = None, []
+    wall_flood = False
     for attempt in range(3 if os.environ.get("VK_USER_TOKEN") else 0):
         # отдельные серверы загрузки ВК иногда отвечают «405 Not Allowed» — каждый раз берём новый сервер
         try:
@@ -98,6 +111,9 @@ def _photo(img: bytes) -> str | None:
         except Exception as e:   # после 3 неудач — грузим через сообщения сообщества
             _photo.wall_err = f"попытка {attempt + 1}: {e}"[:250]
             print(f"  ! ВК: фото стены не загрузилось (попытка {attempt + 1}): {e}")
+            if _is_flood_error(e):
+                wall_flood = True
+                break
             time.sleep(3)
     if not s and getattr(_photo, "wall_err", ""):
         errs.append(f"стена: {_photo.wall_err}")
@@ -108,7 +124,13 @@ def _photo(img: bytes) -> str | None:
             last = ""
             for attempt in range(3):   # ВК иногда отвечает пустым фото или не-JSON — пробуем заново с новым адресом
                 try:
-                    up = _call("photos.getMessagesUploadServer", peer_id=0, group_id=GROUP_ID)["upload_url"]
+                    # Эта схема была рабочей на 12 ноября: личный ключ для стены
+                    # может получить Flood control, а ключ сообщества — загрузить фото сообщений.
+                    group_token = os.environ.get("VK_TOKEN")
+                    if not group_token:
+                        raise RuntimeError("нет VK_TOKEN для загрузки через сообщения")
+                    up = _call("photos.getMessagesUploadServer", _tok=group_token,
+                                peer_id=0, group_id=GROUP_ID)["upload_url"]
                     r = requests.post(up, files={"photo": (("post.png", img, "image/png") if img[1:4] == b"PNG" else ("post.jpg", img, "image/jpeg"))}, timeout=60)
                     try:
                         res = r.json()
@@ -116,18 +138,23 @@ def _photo(img: bytes) -> str | None:
                         raise RuntimeError(f"сервер загрузки ответил не JSON ({r.status_code}): {r.text[:80]!r}") from None
                     if not res.get("photo") or res.get("photo") == "[]":
                         raise RuntimeError(f"пустое фото ({len(img)} байт): {str(res)[:100]}")
-                    s = _call("photos.saveMessagesPhoto", photo=res["photo"], server=res["server"], hash=res["hash"])[0]
+                    s = _call("photos.saveMessagesPhoto", _tok=group_token,
+                              photo=res["photo"], server=res["server"], hash=res["hash"])[0]
                     break
                 except Exception as e:
                     last = str(e)
+                    if _is_flood_error(e):
+                        break
                     time.sleep(3)
             if not s:
-                raise RuntimeError(f"после 3 попыток: {last}")
+                raise RuntimeError(f"после попыток: {last}")
         return f"photo{s['owner_id']}_{s['id']}" + (f"_{s['access_key']}" if s.get("access_key") else "")
     except Exception as e:
         errs.append(f"сообщения: {e}")
         print(f"  ! ВК: картинка не загрузилась: {e}")
         _photo.err = " | ".join(errs)[:300]
+        if wall_flood and "стена:" not in _photo.err:
+            _photo.err = f"стена: {_photo.wall_err} | " + _photo.err
         return None
 
 
@@ -147,12 +174,84 @@ def _site_link(pid: int) -> str:
     return SITE
 
 
-def _short(url: str) -> str:
-    """Короткая ссылка ВК (vk.cc/…); не вышло — исходная."""
-    try:
-        return _call("utils.getShortLink", url=url)["short_url"].replace("https://", "")
-    except Exception:
-        return url.replace("https://", "")
+def _short(url: str, state: dict | None = None) -> str:
+    """Возвращает vk.cc-ссылку и кэширует её. Длинный адрес не подставляется молча."""
+    cache = state.setdefault("vk_shortlinks", {}) if state is not None else {}
+    if not isinstance(cache, dict):
+        cache = {}
+        if state is not None:
+            state["vk_shortlinks"] = cache
+    cached = cache.get(url)
+    if isinstance(cached, str) and cached.startswith("vk.cc/"):
+        return cached
+    token = os.environ.get("VK_TOKEN") or os.environ.get("VK_USER_TOKEN")
+    if not token:
+        raise ShortLinkError("нет токена ВК для сокращения ссылки")
+    errors = []
+    tokens = list(dict.fromkeys((os.environ.get("VK_TOKEN"), os.environ.get("VK_USER_TOKEN"))))
+    for token in tokens:
+        if not token:
+            continue
+        try:
+            result = _call("utils.getShortLink", _tok=token, url=url)
+            raw = str(result.get("short_url") or "").strip()
+            parsed = urlsplit(raw if "://" in raw else "https://" + raw)
+            if parsed.netloc.lower() not in {"vk.cc", "www.vk.cc"} or not parsed.path.strip("/"):
+                raise ValueError("VK не вернул ссылку vk.cc")
+            short = f"vk.cc{parsed.path}"
+            cache[url] = short
+            while len(cache) > 100:
+                cache.pop(next(iter(cache)))
+            return short
+        except Exception as e:
+            errors.append(str(e))
+    raise ShortLinkError(f"не удалось сократить URL: {'; '.join(errors) or 'нет токена ВК'}") from None
+
+
+def _ensure_short_comment(post_id: int, message: str) -> None:
+    """Пишет ссылку первым комментарием, не дублируя её при повторной попытке."""
+    # Чтение стены требует пользовательского ключа; публикация от имени группы
+    # выполняется ключом сообщества, как и wall.post.
+    read_token = os.environ.get("VK_USER_TOKEN") or os.environ.get("VK_TOKEN")
+    result = _call("wall.getComments", _tok=read_token, owner_id=-GROUP_ID, post_id=post_id,
+                   count=100, sort="desc")
+    comments = result.get("items", []) if isinstance(result, dict) else []
+    if any(str(c.get("text", "")).strip() == message for c in comments if isinstance(c, dict)):
+        return
+    write_token = os.environ.get("VK_TOKEN") or os.environ.get("VK_USER_TOKEN")
+    created = _call("wall.createComment", _tok=write_token, owner_id=-GROUP_ID, post_id=post_id,
+                    from_group=1, message=message)
+    if not isinstance(created, dict) or not created.get("comment_id"):
+        raise RuntimeError("ВК не подтвердил создание комментария со ссылкой")
+
+
+def _retry_short_comments(state: dict) -> bool:
+    """Повторяет отправку ссылки, если пост уже опубликован, а комментарий не прошёл."""
+    pending = state.get("vk_comment_pending")
+    if not isinstance(pending, dict):
+        pending = {}
+    now = time.time()
+    attempted = False
+    for source_id, item in list(pending.items()):
+        if not isinstance(item, dict):
+            pending.pop(source_id, None)
+            continue
+        if now < float(item.get("retry_at") or 0):
+            continue
+        attempted = True
+        try:
+            _ensure_short_comment(int(item["post_id"]), str(item["message"]))
+            pending.pop(source_id, None)
+            state["vk_comment_err"] = None
+            print(f"  ВК: ссылка из поста {source_id} добавлена в комментарии")
+        except Exception as e:
+            item["retry_at"] = now + 900
+            item["error"] = str(e)[:200]
+            state["vk_comment_err"] = f"{source_id}: {str(e)[:200]}"
+            print(f"  ! ВК: ссылка в комментарии к посту {source_id} не добавлена: {e}")
+        break  # не отправляем пачку комментариев за один проход
+    state["vk_comment_pending"] = pending
+    return attempted
 
 
 def _live_link(text: str) -> str | None:
@@ -223,6 +322,10 @@ def crosspost(state: dict) -> int:
         dl = {"d": day, "n": 0}
     if dl.get("n", 0) >= DAY_LIMIT:
         return 0
+    if now_ts < float(state.get("vk_link_retry_at") or 0):
+        return 0
+    if _retry_short_comments(state):
+        return 0
     fresh = sorted(int(k) for k in posts if int(k) > state["vk_last"])[:MAX_PER_PASS]
     done = 0
     for pid in fresh:
@@ -260,7 +363,15 @@ def crosspost(state: dict) -> int:
             if pd.Timestamp.now(tz="UTC") - pd.Timestamp(p["t"]) < pd.Timedelta(minutes=DELAY_MIN):
                 break                     # пост совсем свежий — страница на сайте ещё публикуется, вернёмся позже
             link = _site_link(pid)
-        short = _short(link)   # внешние ссылки ВК не прячет под слово — делаем короткую vk.cc/…
+        try:
+            short = _short(link, state)
+            state["vk_short_err"] = None
+            state.pop("vk_link_retry_at", None)
+        except ShortLinkError as e:
+            state["vk_short_err"] = f"{pid}: {e}"[:250]
+            state["vk_link_retry_at"] = time.time() + 900
+            print(f"  ВК: пост {pid} отложен — короткая ссылка недоступна: {e}")
+            break
         text += "\n\n" + (f"📺 Смотреть матч онлайн 👉 {short}" if started else f"📊 Подробнее на сайте 👉 {short}")
         # с личным ключом — фото поста; с ключом сообщества — текст со ссылкой на наш сайт
         from . import dzen, postimg
@@ -362,6 +473,21 @@ def crosspost(state: dict) -> int:
             state.pop("vk_captcha", None)
             state["vk_floods"] = 0
             state["vk_err"] = None
+            comment = f"🔗 Сайт проекта: {short}"
+            try:
+                _ensure_short_comment(int(post_id), comment)
+                state.setdefault("vk_comment_pending", {}).pop(str(pid), None)
+                state["vk_comment_err"] = None
+            except Exception as comment_error:
+                # Стеновой пост уже опубликован с фото. Не дублируем его из-за
+                # ошибки комментария; сохраним ссылку и повторим отдельно.
+                pending = state.setdefault("vk_comment_pending", {})
+                pending[str(pid)] = {"post_id": int(post_id), "message": comment,
+                                     "retry_at": time.time() + 900, "error": str(comment_error)[:200]}
+                while len(pending) > 100:
+                    pending.pop(next(iter(pending)))
+                state["vk_comment_err"] = f"{pid}: {str(comment_error)[:200]}"
+                print(f"  ! ВК: пост с фото опубликован, ссылку в комментарии отправлю повторно: {comment_error}")
             done += 1
         except Exception as e:
             msg = str(e)

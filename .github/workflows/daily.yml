@@ -70,6 +70,9 @@ jobs:
             for f in data/state.json data/matches.json data/other.json data/live.json data/results.csv data/value_bets.csv data/live_bets.csv data/express_bets.csv data/live_err.txt data/names_ru.json data/channel.json data/match_events.json data/teamids.json docs; do
               if [ -e "$f" ]; then git add "$f"; fi
             done
+            # vk_resume.txt is a one-shot signal. Stage its removal as well, or
+            # every loop will read it again, clear the flood pause, and retry VK.
+            git add -A -- data/vk_resume.txt
             if ! git diff --cached --quiet; then
               git commit -q -m "Bot update $(TZ=Europe/Moscow date '+%F %H:%M')"
               # сохраняем надёжно: до 3 попыток; при неудаче — откат незаконченного rebase, чтобы следующий проход начал с чистого места
