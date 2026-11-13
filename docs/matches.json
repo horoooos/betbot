@@ -1,138 +1,6 @@
 [
 {
 "sport": "football",
-"id": "401931476",
-"league": "Сборные · Товарищеские матчи",
-"kickoff": "2026-11-13T17:30:00+03:00",
-"home": "Сборная Саудовской Аравии",
-"away": "Сборная Республики Корея",
-"hl": "https://a.espncdn.com/i/teamlogos/countries/500/ksa.png",
-"al": "https://a.espncdn.com/i/teamlogos/countries/500/kors.png",
-"hid": "655",
-"aid": "451",
-"bb": "https://betboom.ru/search?query=%D0%A1%D0%B0%D1%83%D0%B4%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%B9&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
-"path": "soccer/fifa.friendly",
-"url": "live.html?s=football&p=soccer%2Ffifa.friendly&e=401931476&h=%D0%A1%D0%B1%D0%BE%D1%80%D0%BD%D0%B0%D1%8F+%D0%A1%D0%B0%D1%83%D0%B4%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%B9+%D0%90%D1%80%D0%B0%D0%B2%D0%B8%D0%B8&a=%D0%A1%D0%B1%D0%BE%D1%80%D0%BD%D0%B0%D1%8F+%D0%A0%D0%B5%D1%81%D0%BF%D1%83%D0%B1%D0%BB%D0%B8%D0%BA%D0%B8+%D0%9A%D0%BE%D1%80%D0%B5%D1%8F",
-"tip": "ТМ 2.5 · 1.61",
-"top": false,
-"bot": {
-"main": {
-"label": "ТМ 2.5",
-"p": 0.582,
-"odds": 1.61,
-"est": false
-},
-"bold": null,
-"markets": [
-[
-"П1",
-0.206,
-4.5
-],
-[
-"Ничья",
-0.282,
-3.4
-],
-[
-"П2",
-0.512,
-1.833
-],
-[
-"1X",
-0.488,
-null
-],
-[
-"X2",
-0.794,
-null
-],
-[
-"ТБ 1.5",
-0.691,
-null
-],
-[
-"ТБ 2.5",
-0.418,
-2.25
-],
-[
-"ТМ 2.5",
-0.582,
-1.606
-],
-[
-"ТБ 3.5",
-0.212,
-null
-],
-[
-"Обе забьют — да",
-0.457,
-null
-],
-[
-"Обе забьют — нет",
-0.543,
-null
-],
-[
-"ИТ1 больше 1.5",
-0.212,
-null
-],
-[
-"ИТ2 больше 1.5",
-0.441,
-null
-],
-[
-"Ф1 (−1.5)",
-0.07,
-null
-],
-[
-"Ф2 (+1.5)",
-0.93,
-null
-]
-],
-"bar": [
-0.20608425300628272,
-0.281588393684988,
-0.5123273533087292
-],
-"center": "Ожидаемые голы (xG) 0.9 : 1.5",
-"scores": [
-[
-"0:1",
-0.132
-],
-[
-"1:1",
-0.132
-],
-[
-"0:2",
-0.106
-]
-]
-},
-"lt": {
-"fair": 1.68,
-"label": "1X",
-"min_odds": 1.77,
-"minute": "31'",
-"p": 0.594,
-"result": "hit",
-"score": "0:0"
-}
-},
-{
-"sport": "football",
 "id": "401919978",
 "league": "Сборные · Товарищеские матчи",
 "kickoff": "2026-11-13T17:45:00+03:00",
@@ -922,9 +790,116 @@ null
 "bb": "https://betboom.ru/search?query=%D0%9B%D0%B5%D0%B3%D0%B0%D0%BD%D0%B5%D1%81&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
 "path": "soccer/esp.2",
 "url": "live.html?s=football&p=soccer%2Fesp.2&e=401883136&h=%D0%9B%D0%B5%D0%B3%D0%B0%D0%BD%D0%B5%D1%81&a=Burgos",
-"tip": "",
-"top": false,
-"bot": null,
+"tip": "ТМ 2.5 · 1.61",
+"top": true,
+"bot": {
+"main": {
+"label": "ТМ 2.5",
+"p": 0.578,
+"odds": 1.61,
+"est": false
+},
+"bold": null,
+"markets": [
+[
+"П1",
+0.389,
+2.35
+],
+[
+"Ничья",
+0.299,
+3.05
+],
+[
+"П2",
+0.313,
+3.25
+],
+[
+"1X",
+0.687,
+null
+],
+[
+"X2",
+0.611,
+null
+],
+[
+"ТБ 1.5",
+0.695,
+null
+],
+[
+"ТБ 2.5",
+0.423,
+2.35
+],
+[
+"ТМ 2.5",
+0.577,
+1.556
+],
+[
+"ТБ 3.5",
+0.215,
+null
+],
+[
+"Обе забьют — да",
+0.491,
+null
+],
+[
+"Обе забьют — нет",
+0.509,
+null
+],
+[
+"ИТ1 больше 1.5",
+0.36,
+null
+],
+[
+"ИТ2 больше 1.5",
+0.304,
+null
+],
+[
+"Ф1 (−1.5)",
+0.177,
+null
+],
+[
+"Ф2 (+1.5)",
+0.823,
+null
+]
+],
+"bar": [
+0.3885084209964395,
+0.2985206763502204,
+0.31297090265334
+],
+"center": "Ожидаемые голы (xG) 1.3 : 1.1",
+"scores": [
+[
+"1:1",
+0.141
+],
+[
+"1:0",
+0.108
+],
+[
+"0:0",
+0.104
+]
+],
+"corners": 8.9,
+"cards": 5.5
+},
 "lt": null
 },
 {
@@ -2102,14 +2077,14 @@ null
 "league": "Шотландия · Чемпионшип",
 "kickoff": "2026-11-14T18:00:00+03:00",
 "home": "Ливингстон",
-"away": "Greenock Morton",
+"away": "Гринок Мортон",
 "hl": "https://a.espncdn.com/i/teamlogos/soccer/500/259.png",
 "al": "https://a.espncdn.com/i/teamlogos/soccer/500/411.png",
 "hid": "259",
 "aid": "411",
 "bb": "https://betboom.ru/search?query=%D0%9B%D0%B8%D0%B2%D0%B8%D0%BD%D0%B3%D1%81%D1%82%D0%BE%D0%BD&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
 "path": "soccer/sco.2",
-"url": "live.html?s=football&p=soccer%2Fsco.2&e=401878524&h=%D0%9B%D0%B8%D0%B2%D0%B8%D0%BD%D0%B3%D1%81%D1%82%D0%BE%D0%BD&a=Greenock+Morton",
+"url": "live.html?s=football&p=soccer%2Fsco.2&e=401878524&h=%D0%9B%D0%B8%D0%B2%D0%B8%D0%BD%D0%B3%D1%81%D1%82%D0%BE%D0%BD&a=%D0%93%D1%80%D0%B8%D0%BD%D0%BE%D0%BA+%D0%9C%D0%BE%D1%80%D1%82%D0%BE%D0%BD",
 "tip": "",
 "top": false,
 "bot": null,
@@ -2292,14 +2267,14 @@ null
 "league": "Бразилия · Серия B",
 "kickoff": "2026-11-14T22:30:00+03:00",
 "home": "Америка Минейро",
-"away": "Avaí",
+"away": "Аваи",
 "hl": "https://a.espncdn.com/i/teamlogos/soccer/500/6154.png",
 "al": "https://a.espncdn.com/i/teamlogos/soccer/500/9966.png",
 "hid": "6154",
 "aid": "9966",
 "bb": "https://betboom.ru/search?query=%D0%90%D0%BC%D0%B5%D1%80%D0%B8%D0%BA%D0%B0&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
 "path": "soccer/bra.2",
-"url": "live.html?s=football&p=soccer%2Fbra.2&e=401860432&h=%D0%90%D0%BC%D0%B5%D1%80%D0%B8%D0%BA%D0%B0+%D0%9C%D0%B8%D0%BD%D0%B5%D0%B9%D1%80%D0%BE&a=Ava%C3%AD",
+"url": "live.html?s=football&p=soccer%2Fbra.2&e=401860432&h=%D0%90%D0%BC%D0%B5%D1%80%D0%B8%D0%BA%D0%B0+%D0%9C%D0%B8%D0%BD%D0%B5%D0%B9%D1%80%D0%BE&a=%D0%90%D0%B2%D0%B0%D0%B8",
 "tip": "",
 "top": false,
 "bot": null,
@@ -2330,14 +2305,14 @@ null
 "league": "Бразилия · Серия B",
 "kickoff": "2026-11-14T22:30:00+03:00",
 "home": "КРБ",
-"away": "Ceará",
+"away": "Сеара",
 "hl": "https://a.espncdn.com/i/teamlogos/soccer/500/9970.png",
 "al": "https://a.espncdn.com/i/teamlogos/soccer/500/9969.png",
 "hid": "9970",
 "aid": "9969",
 "bb": "https://betboom.ru/search?query=%D0%9A%D0%A0%D0%91&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
 "path": "soccer/bra.2",
-"url": "live.html?s=football&p=soccer%2Fbra.2&e=401860439&h=%D0%9A%D0%A0%D0%91&a=Cear%C3%A1",
+"url": "live.html?s=football&p=soccer%2Fbra.2&e=401860439&h=%D0%9A%D0%A0%D0%91&a=%D0%A1%D0%B5%D0%B0%D1%80%D0%B0",
 "tip": "",
 "top": false,
 "bot": null,
@@ -2348,7 +2323,7 @@ null
 "id": "401860438",
 "league": "Бразилия · Серия B",
 "kickoff": "2026-11-14T22:30:00+03:00",
-"home": "Criciúma",
+"home": "Крисиума",
 "away": "Novorizontino",
 "hl": "https://a.espncdn.com/i/teamlogos/soccer/500/9971.png",
 "al": "https://a.espncdn.com/i/teamlogos/soccer/500/18127.png",
@@ -2356,7 +2331,7 @@ null
 "aid": "18127",
 "bb": "https://betboom.ru/search?query=%D0%9A%D1%80%D0%B8%D1%81%D0%B8%D1%83%D0%BC%D0%B0&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
 "path": "soccer/bra.2",
-"url": "live.html?s=football&p=soccer%2Fbra.2&e=401860438&h=Crici%C3%BAma&a=Novorizontino",
+"url": "live.html?s=football&p=soccer%2Fbra.2&e=401860438&h=%D0%9A%D1%80%D0%B8%D1%81%D0%B8%D1%83%D0%BC%D0%B0&a=Novorizontino",
 "tip": "",
 "top": false,
 "bot": null,
@@ -2965,6 +2940,25 @@ null
 "bb": "https://betboom.ru/search?query=%D0%A1%D0%B5%D0%BD%D1%82-%D0%9B%D1%83%D0%B8%D1%81&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=hockey",
 "path": "hockey/nhl",
 "url": "live.html?s=hockey&p=hockey%2Fnhl&e=401892716&h=%D0%A1%D0%B5%D0%BD%D1%82-%D0%9B%D1%83%D0%B8%D1%81&a=%D0%A4%D0%BB%D0%BE%D1%80%D0%B8%D0%B4%D0%B0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "basketball",
+"id": "401909981",
+"league": "США · NBA",
+"kickoff": "2026-11-15T03:30:00+03:00",
+"home": "Кливленд",
+"away": "Даллас Маверикс",
+"hl": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/cle.png",
+"al": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/dal.png",
+"hid": "5",
+"aid": "6",
+"bb": "https://betboom.ru/search?query=%D0%9A%D0%BB%D0%B8%D0%B2%D0%BB%D0%B5%D0%BD%D0%B4&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=basketball",
+"path": "basketball/nba",
+"url": "live.html?s=basketball&p=basketball%2Fnba&e=401909981&h=%D0%9A%D0%BB%D0%B8%D0%B2%D0%BB%D0%B5%D0%BD%D0%B4&a=%D0%94%D0%B0%D0%BB%D0%BB%D0%B0%D1%81+%D0%9C%D0%B0%D0%B2%D0%B5%D1%80%D0%B8%D0%BA%D1%81",
 "tip": "",
 "top": false,
 "bot": null,
