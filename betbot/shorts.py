@@ -24,6 +24,8 @@ from . import card
 
 VW, VH = 1080, 1920
 SCENE, FADE, FPS = 5.0, 0.5, 30
+RETRY_S = 15 * 60
+MAX_BUILD_ATTEMPTS = 3
 ROOT = Path(__file__).resolve().parent.parent
 GOLD, GREEN, WHITE, MUTED = (255, 196, 0), (46, 204, 113), (255, 255, 255), (170, 182, 215)
 SPORT_RU = {"football": "ФУТБОЛ", "hockey": "ХОККЕЙ", "basketball": "БАСКЕТБОЛ", "tennis": "ТЕННИС", "esports": "КИБЕРСПОРТ"}
@@ -444,40 +446,66 @@ def run(state: dict, now: pd.Timestamp, res: pd.DataFrame, brand: str = "@aistav
     day = f"{now:%Y-%m-%d}"
     if now.hour != 12 or state.get("shorts_day") == day or res is None or not len(res):
         return
-    state["shorts_day"] = day
+    if state.get("shorts_retry_day") != day:
+        state["shorts_retry_day"] = day
+        state["shorts_retry_attempts"] = 0
+        state.pop("shorts_retry_at", None)
+    if now.timestamp() < float(state.get("shorts_retry_at") or 0):
+        return
     yday = now.tz_localize(None).normalize() - pd.Timedelta(days=1)
     kind = ("best", "express", "week", "top3", "express", "best", "best")[now.weekday()]
     clip, t = None, None
-    if kind == "week":
-        clip, m = clip_week(res, yday)
-        t = texts("week", m=m) if clip else None
-    elif kind == "top3":
-        picks = []
-        for m in (preds or {}).values():
-            tip = m.get("main") or {}
-            if not tip.get("label") or not m.get("home", {}).get("ru"):
-                continue
-            picks.append({"home": m["home"]["ru"], "away": m["away"]["ru"], "label": tip["label"],
-                          "p": tip.get("p"), "odds": tip.get("odds")})
-        picks.sort(key=lambda x: -(x.get("p") or 0))
-        clip = clip_top3(picks)
-        t = texts("top3", m=picks) if clip else None
-    elif kind == "express":
-        try:
-            exs = json.loads((ROOT / "docs" / "express.json").read_text(encoding="utf-8"))
-            _, w, n = best_of_day(res, yday)
-            for ex in exs:
-                if ex.get("status") == "won" and ex.get("day") == f"{yday:%Y-%m-%d}":
-                    clip = clip_express(ex, w, n)
-                    t = texts("express", ex=ex) if clip else None
-                    break
-        except (OSError, ValueError, KeyError):
-            pass
+    try:
+        if kind == "week":
+            clip, m = clip_week(res, yday)
+            t = texts("week", m=m) if clip else None
+        elif kind == "top3":
+            picks = []
+            for m in (preds or {}).values():
+                tip = m.get("main") or {}
+                if not tip.get("label") or not m.get("home", {}).get("ru"):
+                    continue
+                picks.append({"home": m["home"]["ru"], "away": m["away"]["ru"], "label": tip["label"],
+                              "p": tip.get("p"), "odds": tip.get("odds")})
+            picks.sort(key=lambda x: -(x.get("p") or 0))
+            clip = clip_top3(picks)
+            t = texts("top3", m=picks) if clip else None
+        elif kind == "express":
+            try:
+                exs = json.loads((ROOT / "docs" / "express.json").read_text(encoding="utf-8"))
+                _, w, n = best_of_day(res, yday)
+                for ex in exs:
+                    if ex.get("status") == "won" and ex.get("day") == f"{yday:%Y-%m-%d}":
+                        clip = clip_express(ex, w, n)
+                        t = texts("express", ex=ex) if clip else None
+                        break
+            except (OSError, ValueError, KeyError):
+                pass
+    except Exception as e:
+        print(f"  ! не удалось собрать ролик ({kind}): {e}")
+        clip, t = None, None
     if not clip:   # рубрика не сложилась — обычный «заход дня»
-        clip, m = clip_best(res, yday)
-        t = texts("best", m=m) if clip else None
+        try:
+            clip, m = clip_best(res, yday)
+            t = texts("best", m=m) if clip else None
+        except Exception as e:
+            print(f"  ! запасной ролик тоже не собрался: {e}")
     if not clip:
+        attempts = int(state.get("shorts_retry_attempts") or 0) + 1
+        state["shorts_retry_attempts"] = attempts
+        if attempts >= MAX_BUILD_ATTEMPTS:
+            state["shorts_day"] = day
+            state.pop("shorts_retry_at", None)
+            print(f"  ! ролик не собрался за {attempts} попытки; сегодня больше не повторяю")
+        else:
+            state["shorts_retry_at"] = now.timestamp() + RETRY_S
+            print(f"  ! ролик не собрался; повторю через {RETRY_S // 60} мин ({attempts}/{MAX_BUILD_ATTEMPTS})")
         return
+    # One render succeeded; mark the day before sending so a delivery error
+    # does not cause duplicate public videos on the next bot pass.
+    state["shorts_day"] = day
+    state.pop("shorts_retry_at", None)
+    state.pop("shorts_retry_attempts", None)
     errs = {}
     try:
         telegram.send_video(clip, t["tg"], width=VW, height=VH, duration=int(SCENE * 3 - FADE * 2))

@@ -458,8 +458,11 @@ _STOP = {"fc", "afc", "cf", "sc", "ac", "as", "ss", "us", "cd", "ud", "rc", "sv"
 
 
 def norm(name: str) -> str:
-    s = unicodedata.normalize("NFKD", name).encode("ascii", "ignore").decode().lower()
-    return " ".join(w for w in re.split(r"[^a-z0-9]+", s) if w and w not in _STOP)
+    # Keep Cyrillic characters: dropping non-ASCII text made every Russian
+    # team name normalize to an empty string, so two unrelated names compared
+    # as an exact match (SequenceMatcher('', '').ratio() == 1).
+    s = unicodedata.normalize("NFKD", name).lower()
+    return " ".join(w for w in re.split(r"[^a-z0-9а-яё]+", s) if w and w not in _STOP)
 
 
 def similarity(a: str, b: str) -> float:
