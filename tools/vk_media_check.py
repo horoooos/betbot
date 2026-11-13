@@ -36,10 +36,16 @@ def link_preview(group, reader, parse_token=None):
                 self.values[attrs["property"]] = attrs.get("content", "")
 
     pages = [p for p in (vk.DOCS / "news").glob("*.html") if p.name.split("-", 1)[0].isdigit()]
-    page = max(pages, key=lambda p: int(p.name.split("-", 1)[0]))
-    link = vk.SITE + "news/" + page.name
-    response = requests.get(link, timeout=30)
-    response.raise_for_status()
+    # The bot commit can precede Pages deployment. Use a page already public.
+    for page in sorted(pages, key=lambda p: int(p.name.split("-", 1)[0]), reverse=True)[:10]:
+        link = vk.SITE + "news/" + page.name
+        response = requests.get(link, timeout=30)
+        if response.status_code == 404:
+            continue
+        response.raise_for_status()
+        break
+    else:
+        raise RuntimeError("Свежие страницы ещё не опубликованы на GitHub Pages")
     meta = Metadata()
     meta.feed(response.text)
     image_url = meta.values.get("og:image", "")
@@ -162,8 +168,9 @@ def main():
 if __name__ == "__main__":
     try:
         main()
-    except requests.RequestException:
-        raise SystemExit("Ошибка транспорта VK; URL и ключи скрыты") from None
+    except requests.RequestException as error:
+        status = error.response.status_code if error.response is not None else "нет ответа"
+        raise SystemExit(f"Ошибка транспорта: {type(error).__name__}, HTTP {status}; URL и ключи скрыты") from None
     except (ValueError, KeyError, IndexError, TypeError):
         raise SystemExit("Неожиданный формат ответа VK; содержимое скрыто") from None
     except RuntimeError as error:
