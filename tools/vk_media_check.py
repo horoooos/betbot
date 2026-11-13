@@ -111,7 +111,7 @@ def link_preview(group, reader, parse_token=None):
 
 def main():
     mode = os.environ.get("VK_MEDIA_MODE", "access")
-    if mode in {"fresh-wall", "fresh-personal-wall", "fresh-chat-photo"}:
+    if mode in {"fresh-wall", "fresh-personal-wall", "fresh-chat-photo", "fresh-user-message"}:
         from betbot.vk_wall_events import PhotoMonitor
         import hashlib
         group = os.environ.get("VK_TOKEN", "")
@@ -122,10 +122,10 @@ def main():
         if not image:
             raise RuntimeError("Картинка не создана")
         print("SOURCE_POST:", pid, "IMAGE_SHA256:", hashlib.sha256(image).hexdigest(), flush=True)
-        if mode == "fresh-chat-photo":
+        if mode in {"fresh-chat-photo", "fresh-user-message"}:
             # Reproduce the historical upload only; never send a chat message.
-            token = group
-            server = call("photos.getMessagesUploadServer", token, peer_id=2000000001)
+            token = user if mode == "fresh-user-message" else group
+            server = call("photos.getMessagesUploadServer", token, peer_id=0 if mode == "fresh-user-message" else 2000000001)
         else:
             token = user
             params = {"group_id": vk.GROUP_ID} if mode == "fresh-wall" else {}
@@ -138,7 +138,7 @@ def main():
         params = {k: uploaded[k] for k in ("photo", "server", "hash")}
         if mode == "fresh-wall":
             params["group_id"] = vk.GROUP_ID
-        saved = call("photos.saveMessagesPhoto" if mode == "fresh-chat-photo" else "photos.saveWallPhoto", token, **params)[0]
+        saved = call("photos.saveMessagesPhoto" if mode in {"fresh-chat-photo", "fresh-user-message"} else "photos.saveWallPhoto", token, **params)[0]
         public_id = f"photo{saved['owner_id']}_{saved['id']}"
         attachment = public_id + ("_" + saved["access_key"] if saved.get("access_key") else "")
         print("NEW_PHOTO:", public_id, flush=True)
