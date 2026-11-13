@@ -6,6 +6,8 @@ import os
 from pathlib import Path
 import sys
 import time
+from html.parser import HTMLParser
+from io import BytesIO
 from datetime import datetime, timezone
 
 import requests
@@ -19,6 +21,50 @@ def call(method, token, **params):
     return vk._call(method, _tok=token, **params)
 
 
+def link_preview(group, reader):
+    from PIL import Image
+
+    class Metadata(HTMLParser):
+        def __init__(self):
+            super().__init__()
+            self.values = {}
+
+        def handle_starttag(self, tag, attrs):
+            attrs = dict(attrs)
+            if tag == "meta" and attrs.get("property", "").startswith("og:"):
+                self.values[attrs["property"]] = attrs.get("content", "")
+
+    pages = [p for p in (vk.DOCS / "news").glob("*.html") if p.name.split("-", 1)[0].isdigit()]
+    page = max(pages, key=lambda p: int(p.name.split("-", 1)[0]))
+    link = vk.SITE + "news/" + page.name
+    response = requests.get(link, timeout=30)
+    response.raise_for_status()
+    meta = Metadata()
+    meta.feed(response.text)
+    image_url = meta.values.get("og:image", "")
+    if not image_url.startswith(vk.SITE):
+        raise RuntimeError("Страница не содержит изображения на нашем сайте")
+    image = requests.get(image_url, timeout=30)
+    image.raise_for_status()
+    with Image.open(BytesIO(image.content)) as picture:
+        print("SITE_IMAGE_SIZE:", picture.size, flush=True)
+    print("PREVIEW_PAGE:", link, flush=True)
+    post = call("wall.post", group, owner_id=-vk.GROUP_ID, from_group=1,
+                message="Тест BetBot: карточка новости с картинкой сайта.",
+                attachments=link, link_title=meta.values.get("og:title", "Новость BetBot"),
+                guid="betbot-link-preview-" + os.environ.get("GITHUB_RUN_ID", str(int(time.time()))))
+    post_id = int(post["post_id"])
+    print("POST_URL:", f"https://vk.com/wall-{vk.GROUP_ID}_{post_id}", flush=True)
+    result = call("wall.getById", reader, posts=f"-{vk.GROUP_ID}_{post_id}")
+    items = result.get("items", []) if isinstance(result, dict) else result
+    attachments = items[0].get("attachments", []) if items else []
+    has_image = any(a.get("type") == "photo" or
+                    (a.get("type") == "link" and a.get("link", {}).get("photo")) for a in attachments)
+    print("PREVIEW_IMAGE_VERIFIED:", bool(has_image), flush=True)
+    if not has_image:
+        raise RuntimeError("VK создал запись без подтверждённой картинки-превью")
+
+
 def main():
     mode = os.environ.get("VK_MEDIA_MODE", "access")
     user = os.environ.get("VK_USER_TOKEN", "").strip()
@@ -28,6 +74,11 @@ def main():
         raise RuntimeError("VK_USER_TOKEN отсутствует")
     print("API_HOST: api.vk.ru", flush=True)
     print("INDEPENDENT_READ_KEY:", bool(os.environ.get("VK_SERVICE_KEY")), flush=True)
+    if mode == "link-preview":
+        if not group:
+            raise RuntimeError("VK_TOKEN отсутствует")
+        link_preview(group, reader)
+        return
     if mode == "access":
         mask = int(call("account.getAppPermissions", user))
         print("PERMISSIONS:", {name: bool(mask & bit) for name, bit in
