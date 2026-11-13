@@ -8196,25 +8196,25 @@
   "kickoff": "2026-11-13T04:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Thu, November 12th at 8:00 PM EST",
   "clock": "0:00",
   "period": 0,
   "home": {
+   "color": "e31937",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/chi.png",
    "id": "4",
    "name": "Chicago Blackhawks",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/chi.png",
-   "color": "e31937",
    "score": "0",
    "record": "4-13-1",
    "periods": [],
    "ru": "Чикаго"
   },
   "away": {
+   "color": "00468b",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/buf.png",
    "id": "2",
    "name": "Buffalo Sabres",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/buf.png",
-   "color": "00468b",
    "score": "0",
    "record": "8-7-3",
    "periods": [],
@@ -8309,7 +8309,9 @@
   "btn": 4,
   "close": {
    "HK_O6.5": 0.526
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null
  },
  "NHL|401892703": {
   "id": "401892703",
