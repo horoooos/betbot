@@ -74,8 +74,20 @@ def publish_image(image: bytes, text: str = "", *, test: bool = False, on_saving
     token = os.environ.get("VK_TOKEN", "").strip()
     if not token:
         raise RuntimeError("VK_TOKEN отсутствует")
-    server = vk._call("stories.getPhotoUploadServer", _tok=token, group_id=vk.GROUP_ID, add_to_news=1)
-    uploaded = _upload(server["upload_url"], portrait(image, text, test))
+    picture = None
+    for attempt in range(2):
+        # Retry only the upload, before stories.save can publish anything.
+        # A new server fixed observed transient empty upload responses.
+        server = vk._call("stories.getPhotoUploadServer", _tok=token, group_id=vk.GROUP_ID, add_to_news=1)
+        if picture is None:
+            picture = portrait(image, text, test)
+        try:
+            uploaded = _upload(server["upload_url"], picture)
+            break
+        except RuntimeError:
+            if attempt == 1:
+                raise
+            time.sleep(3)
     time.sleep(1)
     if on_saving:
         on_saving()

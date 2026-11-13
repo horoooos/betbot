@@ -42,6 +42,18 @@ class StoryTests(unittest.TestCase):
         with self.assertRaises(RuntimeError):
             self.publish({"owner_id": -vk.GROUP_ID, "id": 123, "type": "photo"})
 
+    def test_empty_upload_response_uses_new_server_but_saves_only_once(self):
+        story = {"owner_id": -vk.GROUP_ID, "id": 123, "type": "photo", "photo": {"id": 456}}
+        with patch.dict(os.environ, {"VK_TOKEN": "group"}), \
+                patch.object(vk_stories, "_upload", side_effect=[RuntimeError("No upload_result"), "uploaded"]) as upload, \
+                patch.object(vk_stories.time, "sleep"), \
+                patch.object(vk, "_call", side_effect=[{"upload_url": "https://example.test/one"},
+                                                      {"upload_url": "https://example.test/two"},
+                                                      {"items": [story]}, {"items": [story]}]) as api:
+            self.assertEqual(vk_stories.publish_image(self.image())["id"], 123)
+            self.assertEqual(upload.call_count, 2)
+            self.assertEqual(sum(c.args[0] == "stories.save" for c in api.call_args_list), 1)
+
     def test_pending_story_is_verified_without_republishing(self):
         story = {"owner_id": -vk.GROUP_ID, "id": 123, "type": "photo", "photo": {"id": 456}}
         state = {"vk_story_last": 100}
