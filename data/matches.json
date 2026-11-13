@@ -5190,7 +5190,7 @@
   "kickoff": "2026-11-13T22:45:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Scheduled",
   "home": {
    "id": "472",
@@ -5318,6 +5318,9 @@
   "btn": 4,
   "close": {
    "A": 0.5062
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null,
+  "value_hit": null
  }
 }
