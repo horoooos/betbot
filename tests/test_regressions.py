@@ -32,7 +32,7 @@ class VKPhotoTests(unittest.TestCase):
         self.assertEqual([c[0] for c in calls], ["photos.getWallUploadServer"])
         self.assertIn("Flood control", vk._photo.err)
 
-    def _crosspost(self, photo, *, short_fails=False, verify_fails=False, state=None):
+    def _crosspost(self, photo, *, short_fails=False, verify_fails=False, state=None, seeds=None):
         tmp = tempfile.TemporaryDirectory()
         self.addCleanup(tmp.cleanup)
         root = Path(tmp.name)
@@ -76,7 +76,7 @@ class VKPhotoTests(unittest.TestCase):
         with patch.dict(os.environ, {"VK_USER_TOKEN": "user", "VK_TOKEN": "group"}), \
                 patch.object(vk, "__file__", str(fake_file)), \
                 patch.object(vk, "CHANNEL", channel), \
-                patch.object(vk, "SEED_PHOTOS", []), \
+                patch.object(vk, "SEED_PHOTOS", seeds or []), \
                 patch.object(vk, "_site_link", return_value=full_link), \
                 patch.object(vk, "_call", side_effect=api), \
                 photo_patcher, \
@@ -128,6 +128,13 @@ class VKPhotoTests(unittest.TestCase):
         self.assertEqual(done, 0)
         self.assertEqual(state["vk_last"], 5401)
         self.assertNotIn("vk_verify_pending", state)
+        self.assertFalse(any(c[0] == "wall.post" for c in calls))
+
+    def test_failed_upload_never_publishes_cached_or_seed_photo(self):
+        state = {"vk_last": 5400, "vk_photos": ["photo-1_123"]}
+        done, state, calls, _ = self._crosspost(None, state=state, seeds=["photo-1_456"])
+        self.assertEqual(done, 0)
+        self.assertEqual(state["vk_last"], 5400)
         self.assertFalse(any(c[0] == "wall.post" for c in calls))
 
         done, state, calls, _ = self._crosspost(f"photo-{vk.GROUP_ID}_999", short_fails=True)

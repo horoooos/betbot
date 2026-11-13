@@ -199,11 +199,7 @@ jobs:
           photo = vk._photo(image)
           source = "новая загрузка"
           if not photo:
-              available = [p for p in vk.SEED_PHOTOS if p]
-              if not available:
-                  raise SystemExit(f"VK не загрузил фото и нет запасного снимка: {vk._photo.err}")
-              photo = available[0]
-              source = "резервный снимок сообщества"
+              raise SystemExit(f"Тест не опубликован: VK не загрузил его картинку: {vk._photo.err}")
           message = f"🧪 Тест фото ВК · {datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M UTC')}\nПроверка отображения вложения."
           created = vk._call("wall.post", _tok=os.environ.get("VK_TOKEN"), owner_id=-vk.GROUP_ID,
                              from_group=1, message=message, attachments=photo)

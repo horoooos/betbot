@@ -79,7 +79,9 @@ def build(res: pd.DataFrame, now: pd.Timestamp) -> list[str]:
     res = res[pd.to_numeric(res["main_odds"], errors="coerce") > 1].copy()
     res["d"] = pd.to_datetime(res["date"]).dt.normalize()
     today = now.tz_convert("Europe/Moscow").tz_localize(None).normalize()
-    days = sorted(d for d in res["d"].unique() if today - pd.Timedelta(days=KEEP_DAYS) <= d < today)
+    counts = res.groupby("d").size()
+    days = sorted(d for d, count in counts.items()
+                  if count >= 3 and today - pd.Timedelta(days=KEEP_DAYS) <= d < today)
     urls = []
     for i, d in enumerate(days):
         d = pd.Timestamp(d)

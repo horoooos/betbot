@@ -4,8 +4,8 @@
 сообщества от имени сообщества: текст + картинка поста. Ставки/букмекеры и реферальные ссылки
 вырезаем — ВК строго относится к рекламе ставок. Ссылка ведёт на наш сайт.
 
-Стена ВК недоступна по ключу сообщества — нужен личный ключ администратора (секрет VK_USER_TOKEN,
-права wall, photos, offline). Без него работает ключ сообщества VK_TOKEN: текст + карточка ссылки на сайт.
+Для загрузки фото нужен личный ключ администратора VK_USER_TOKEN (wall, photos, offline).
+VK_TOKEN публикует запись от имени сообщества. Без загруженной картинки публикация откладывается.
 """
 from __future__ import annotations
 
@@ -116,7 +116,7 @@ def _photo(img: bytes) -> str | None:
         if not os.environ.get("VK_USER_TOKEN"):
             reasons.append("нет VK_USER_TOKEN с правом загрузки фото стены")
         _photo.err = " | ".join(reasons)[:300] or "ВК не сохранил фото стены"
-        print(f"  ! ВК: изображение не загружено: {_photo.err}; попробую ранее загруженный снимок сообщества")
+        print(f"  ! ВК: изображение не загружено: {_photo.err}; публикация отложена")
         return None
     try:
         return f"photo{s['owner_id']}_{s['id']}" + (f"_{s['access_key']}" if s.get("access_key") else "")
@@ -367,7 +367,7 @@ def crosspost(state: dict) -> int:
             pass
     # тормоза: после Flood control ВК блокирует стену, поэтому молчим и постепенно наращиваем темп
     now_ts = time.time()
-    if now_ts < float(state.get("vk_pause_ts") or 0):
+    if now_ts < max(float(state.get("vk_pause_ts") or 0), float(state.get("vk_photo_until") or 0)):
         return 0
     hour = time.strftime("%Y-%m-%d-%H", time.gmtime())
     lim = state.get("vk_hour") or {}
@@ -434,7 +434,7 @@ def crosspost(state: dict) -> int:
             print(f"  ВК: пост {pid} отложен — короткая ссылка недоступна: {e}")
             break
         text += "\n\n" + (f"📺 Смотреть матч онлайн 👉 {short}" if started else f"📊 Подробнее на сайте 👉 {short}")
-        # с личным ключом — фото поста; с ключом сообщества — текст со ссылкой на наш сайт
+        # Личный ключ загружает картинку, ключ сообщества публикует запись.
         from . import dzen, postimg
         tags = dzen.hashtags(p.get("html", ""), "начало" if started else dzen.kind(p.get("html", "")), limit=8)
         if tags:   # хештеги по теме (команды, игроки, лига) — ВК лучше показывает пост в поиске и рекомендациях
@@ -449,21 +449,19 @@ def crosspost(state: dict) -> int:
             cache.insert(0, photo)
             del cache[12:]                       # держим последние 12 загруженных
             state["vk_photos"] = cache
-        if not photo:                            # загрузка не удалась — берём ранее загруженное фото
-            photo = cache[0] if cache else None
-        # Проверяем все доступные резервные фото: старое вложение могло быть удалено из сообщества.
-        photo_candidates = list(dict.fromkeys(
-            [p for p in (photo, *cache, *SEED_PHOTOS) if p]
-        ))
+        # VK can silently discard old photo IDs, including previously saved
+        # community photos. Publish only the image uploaded for this post.
+        photo_candidates = [photo] if photo else []
         if not photo_candidates:
             # Картинка обязательна. Оставляем указатель очереди на этом посте и
             # повторяем попытку позже; текстом без вложения не публикуем.
             state["vk_err"] = f"{pid} фото: нет доступного изображения ({_photo.err})"[:300]
-            state["vk_photo_until"] = time.time() + 900
+            delay = PAUSE_S if _is_flood_error(_photo.err) else 900
+            state["vk_photo_until"] = time.time() + delay
             print(f"  ВК: пост {pid} отложен — не удалось получить/загрузить фото: {_photo.err}")
             break
         if "flood" in (_photo.err or "").lower() or " 9 " in f" {_photo.err} ":
-            state["vk_photo_until"] = time.time() + 900   # 15 минут не трогаем загрузку фото
+            state["vk_photo_until"] = time.time() + PAUSE_S
         if not photo:
             photo = photo_candidates[0]
         state["vk_err"] = f"{pid} фото: {_photo.err}" if _photo.err else None
