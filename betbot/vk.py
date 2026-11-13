@@ -33,6 +33,10 @@ STALE_GAP = 2                  # отставание больше 2 посто�
 STOP = re.compile(r"betboom|бетбум|букмекер|промокод|фрибет|реферал", re.I)
 
 
+class PhotoVerificationError(RuntimeError):
+    """ВК не удалось подтвердить фото; запись нельзя считать опубликованной."""
+
+
 def _token() -> str:
     """Личный ключ админа (может грузить фото) или ключ сообщества (VK_TOKEN: публикует текст со ссылкой)."""
     return os.environ.get("VK_USER_TOKEN") or os.environ.get("VK_TOKEN") or ""
@@ -274,33 +278,80 @@ def crosspost(state: dict) -> int:
             del cache[12:]                       # держим последние 12 загруженных
             state["vk_photos"] = cache
         if not photo:                            # загрузка не удалась — берём ранее загруженное фото
-            photo = (cache[0] if cache else (SEED_PHOTOS[0] if SEED_PHOTOS else None))
-        if not photo:   # фото не залилось (Flood control на загрузку) — публикуем текст со ссылкой
-            text = text.rstrip() + "\n\n" + _short(link)
-            if "flood" in (_photo.err or "").lower() or " 9 " in f" {_photo.err} ":
-                state["vk_photo_until"] = time.time() + 900   # 15 минут не трогаем загрузку фото
-                print(f"  ВК: загрузка фото во флуд-контроле — час публикуем без картинок")
-        state["vk_err"] = f"{pid} фото: {_photo.err}" if not photo else None   # старую ошибку стираем
+            photo = cache[0] if cache else None
+        # Проверяем все доступные резервные фото: старое вложение могло быть удалено из сообщества.
+        photo_candidates = list(dict.fromkeys(
+            [p for p in (photo, *cache, *SEED_PHOTOS) if p]
+        ))
+        if not photo_candidates:
+            # Картинка обязательна. Оставляем указатель очереди на этом посте и
+            # повторяем попытку позже; текстом без вложения не публикуем.
+            state["vk_err"] = f"{pid} фото: нет доступного изображения ({_photo.err})"[:300]
+            state["vk_photo_until"] = time.time() + 900
+            print(f"  ВК: пост {pid} отложен — не удалось получить/загрузить фото: {_photo.err}")
+            break
+        if "flood" in (_photo.err or "").lower() or " 9 " in f" {_photo.err} ":
+            state["vk_photo_until"] = time.time() + 900   # 15 минут не трогаем загрузку фото
+        if not photo:
+            photo = photo_candidates[0]
+        state["vk_err"] = f"{pid} фото: {_photo.err}" if _photo.err else None
         state["vk_wall_err"] = f"{pid}: {_photo.wall_err}" if _photo.wall_err else None   # почему не вышло фото стены по личному ключу
-        # фото «из сообщений» сообщества ВК на стене один не показывает — пробуем вместе с карточкой ссылки
-        # (наше фото как обложка ссылки); не принял — публикуем как раньше, текст со ссылкой
-        if photo:   # сначала картинка без ссылки (ВК не теряет вложение), при ошибке — с ссылкой
-            tries = [[photo], [photo, link]] if link != SITE else [[photo]]
-        else:
-            tries = [[]]
+        # Раньше фотографии, загруженные через фото сообщений сообщества,
+        # прикреплялись вместе со ссылкой: ВК показывал их как обложку записи.
+        # Сначала пробуем этот рабочий порядок, затем само фото.
+        tries = []
+        for candidate in photo_candidates:
+            if candidate.startswith("photo-"):
+                tries.append([candidate, link])
+            tries.append([candidate])
+        last_photo_error = None
         try:
             for i, att in enumerate(tries):
                 try:
                     # стену публикуем ключом сообщества: у Kate-токена лимит на wall.post (9 Flood control),
                     # а загрузка фото — личным (photos.* групповым ключом недоступны)
-                    _call("wall.post", _tok=os.environ.get("VK_TOKEN"), owner_id=-GROUP_ID, from_group=1,
-                          message=text[:15000], attachments=",".join(att))
+                    result = _call("wall.post", _tok=os.environ.get("VK_TOKEN"), owner_id=-GROUP_ID, from_group=1,
+                                   message=text[:15000], attachments=",".join(att))
+                    post_id = result.get("post_id") if isinstance(result, dict) else None
+                    if not post_id:
+                        raise PhotoVerificationError("VK wall.post не вернул id записи для проверки фото")
+                    try:
+                        check = _call("wall.getById", posts=f"-{GROUP_ID}_{post_id}")
+                    except Exception as check_error:
+                        try:
+                            _call("wall.delete", _tok=os.environ.get("VK_USER_TOKEN") or os.environ.get("VK_TOKEN"), owner_id=-GROUP_ID,
+                                  post_id=post_id)
+                        except Exception as delete_error:
+                            raise PhotoVerificationError(
+                                f"не удалось проверить фото ({check_error}); не удалось удалить неподтверждённый пост ({delete_error})"
+                            ) from None
+                        raise PhotoVerificationError(
+                            f"проверка фото не удалась; неподтверждённый пост удалён ({check_error})"
+                        ) from None
+                    items = check.get("items", []) if isinstance(check, dict) else []
+                    attachments = items[0].get("attachments", []) if items else []
+                    if not any(a.get("type") == "photo" for a in attachments if isinstance(a, dict)):
+                        # Удаляем запись, если ВК принял запрос, но потерял картинку.
+                        try:
+                            _call("wall.delete", _tok=os.environ.get("VK_USER_TOKEN") or os.environ.get("VK_TOKEN"), owner_id=-GROUP_ID,
+                                  post_id=post_id)
+                        except Exception as delete_error:
+                            raise PhotoVerificationError(
+                                f"ВК создал запись без фото и не удалил её ({delete_error})"
+                            ) from None
+                        raise RuntimeError("ВК создал запись без фото; запись удалена, пробую резервное вложение")
                     state["vk_mode"] = "+".join(a[:5] for a in att) or "текст"
                     break
+                except PhotoVerificationError:
+                    raise
                 except RuntimeError as e:
-                    if i == len(tries) - 1:
+                    last_photo_error = e
+                    msg = str(e).lower()
+                    if i == len(tries) - 1 or "flood" in msg or ": 9" in msg or "captcha" in msg or ": 14" in msg:
                         raise
                     state["vk_err"] = f"{pid} фото+ссылка: {e}"[:300]
+            else:
+                raise RuntimeError(f"ни одно резервное фото не прошло проверку: {last_photo_error}")
             state["vk_last"] = pid
             state["vk_at_ts"] = time.time()
             lim["n"] = lim.get("n", 0) + 1
@@ -316,6 +367,12 @@ def crosspost(state: dict) -> int:
             msg = str(e)
             print(f"  ! ВК: пост {pid} не опубликован: {msg}")
             state["vk_err"] = f"{pid}: {msg}"[:300]   # видно в data/state.json без журнала GitHub
+            if isinstance(e, PhotoVerificationError):
+                # Не продвигаем очередь и не пытаемся повторно создать запись,
+                # пока не удаётся безопасно проверить наличие изображения.
+                state["vk_pause_ts"] = time.time() + PAUSE_S
+                print(f"  ВК: публикация {pid} остановлена до проверки фото: {msg}")
+                break
             tries = state.setdefault("vk_try", {})
             tries[str(pid)] = tries.get(str(pid), 0) + 1
             if "captcha" in msg.lower() or ": 14" in msg:
