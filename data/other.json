@@ -8679,25 +8679,25 @@
   "kickoff": "2026-11-13T05:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Thu, November 12th at 9:00 PM EST",
   "clock": "0.0",
   "period": 0,
   "home": {
+   "color": "29127a",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/phx.png",
    "id": "21",
    "name": "Phoenix Suns",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/phx.png",
-   "color": "29127a",
    "score": "0",
    "record": "4-6",
    "periods": [],
    "ru": "Финикс Санз"
   },
   "away": {
+   "color": "008ca8",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/cha.png",
    "id": "30",
    "name": "Charlotte Hornets",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/cha.png",
-   "color": "008ca8",
    "score": "0",
    "record": "4-7",
    "periods": [],
@@ -8772,7 +8772,9 @@
   "btn": 4,
   "close": {
    "BB_O214.5": 0.5
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null
  },
  "NHL|401892705": {
   "id": "401892705",
