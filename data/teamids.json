@@ -164,6 +164,11 @@
 "4815",
 "Atlético Junior"
 ],
+"football|Ayr United": [
+"soccer/sco.2",
+"248",
+"Ayr United"
+],
 "football|Azerbaijan": [
 "soccer/uefa.nations",
 "581",
@@ -174,10 +179,20 @@
 "4381",
 "Bahrain"
 ],
+"football|Barnsley": [
+"soccer/eng.3",
+"397",
+"Barnsley"
+],
 "football|Belarus": [
 "soccer/uefa.nations",
 "583",
 "Belarus"
+],
+"football|Blackpool": [
+"soccer/eng.3",
+"346",
+"Blackpool"
 ],
 "football|Bolivia": [
 "soccer/fifa.friendly",
@@ -214,6 +229,11 @@
 "12597",
 "Burgos"
 ],
+"football|Burton Albion": [
+"soccer/eng.3",
+"2567",
+"Burton Albion"
+],
 "football|Castellón": [
 "soccer/esp.2",
 "4438",
@@ -234,6 +254,11 @@
 "9902",
 "Cerro Largo"
 ],
+"football|Chesterfield": [
+"soccer/eng.4",
+"343",
+"Chesterfield"
+],
 "football|Chile": [
 "soccer/fifa.friendly",
 "207",
@@ -243,6 +268,11 @@
 "soccer/mex.2",
 "21533",
 "Club Atlético La Paz"
+],
+"football|Colchester United": [
+"soccer/eng.4",
+"339",
+"Colchester United"
 ],
 "football|Cook Islands": [
 "soccer/fifa.friendly",
@@ -299,6 +329,11 @@
 "16721",
 "Gibraltar"
 ],
+"football|Gillingham": [
+"soccer/eng.4",
+"389",
+"Gillingham"
+],
 "football|Gimnasia (Mendoza)": [
 "soccer/arg.1",
 "11972",
@@ -308,6 +343,16 @@
 "soccer/uefa.nations",
 "455",
 "Greece"
+],
+"football|Greenock Morton": [
+"soccer/sco.2",
+"411",
+"Greenock Morton"
+],
+"football|Grimsby Town": [
+"soccer/eng.4",
+"386",
+"Grimsby Town"
 ],
 "football|Iceland": [
 "soccer/uefa.nations",
@@ -324,10 +369,30 @@
 "2975",
 "Instituto (Córdoba)"
 ],
+"football|Inverness Caledonian Thistle": [
+"soccer/sco.2",
+"253",
+"Inverness Caledonian Thistle"
+],
+"football|Iran": [
+"soccer/fifa.friendly",
+"469",
+"Iran"
+],
+"football|Israel": [
+"soccer/uefa.nations",
+"461",
+"Israel"
+],
 "football|Italy": [
 "soccer/uefa.nations",
 "162",
 "Italy"
+],
+"football|Kosovo": [
+"soccer/uefa.nations",
+"18272",
+"Kosovo"
 ],
 "football|Kyrgyz Republic": [
 "soccer/fifa.friendly",
@@ -343,6 +408,11 @@
 "soccer/uefa.nations",
 "589",
 "Liechtenstein"
+],
+"football|Livingston": [
+"soccer/sco.2",
+"259",
+"Livingston"
 ],
 "football|Luxembourg": [
 "soccer/uefa.nations",
@@ -379,25 +449,65 @@
 "18187",
 "Operário PR"
 ],
+"football|Palestine": [
+"soccer/fifa.friendly",
+"6167",
+"Palestine"
+],
+"football|Partick Thistle": [
+"soccer/sco.2",
+"247",
+"Partick Thistle"
+],
 "football|Piratas": [
 "soccer/mex.2",
 "131881",
 "Piratas"
+],
+"football|Plymouth Argyle": [
+"soccer/eng.3",
+"307",
+"Plymouth Argyle"
 ],
 "football|Ponte Preta": [
 "soccer/bra.2",
 "3459",
 "Ponte Preta"
 ],
+"football|Port Vale": [
+"soccer/eng.4",
+"348",
+"Port Vale"
+],
 "football|Progreso": [
 "soccer/uru.1",
 "6866",
 "Progreso"
 ],
+"football|Queen's Park": [
+"soccer/sco.2",
+"422",
+"Queen's Park"
+],
 "football|Racing (Montevideo)": [
 "soccer/uru.1",
 "9903",
 "Racing (Montevideo)"
+],
+"football|Raith Rovers": [
+"soccer/sco.2",
+"249",
+"Raith Rovers"
+],
+"football|Real Sociedad II": [
+"soccer/esp.2",
+"20983",
+"Real Sociedad II"
+],
+"football|Salford City": [
+"soccer/eng.4",
+"4703",
+"Salford City"
 ],
 "football|San Marino": [
 "soccer/uefa.nations",
@@ -413,6 +523,11 @@
 "soccer/uefa.nations",
 "6757",
 "Serbia"
+],
+"football|Shrewsbury Town": [
+"soccer/eng.4",
+"302",
+"Shrewsbury Town"
 ],
 "football|Slovakia": [
 "soccer/uefa.nations",
@@ -480,7 +595,7 @@
 "Académico de Viseu"
 ],
 "football|Аккрингтон Стэнли": [
-"soccer/eng.fa",
+"soccer/eng.4",
 "2731",
 "Accrington Stanley"
 ],
@@ -689,6 +804,11 @@
 "337",
 "Brentford"
 ],
+"football|Бристоль Роверс": [
+"soccer/eng.4",
+"308",
+"Bristol Rovers"
+],
 "football|Бристоль Сити": [
 "soccer/eng.2",
 "333",
@@ -895,7 +1015,7 @@
 "Istanbul Basaksehir"
 ],
 "football|Йорк Сити": [
-"soccer/eng.fa",
+"soccer/eng.4",
 "315",
 "York City"
 ],
@@ -980,7 +1100,7 @@
 "Crystal Palace"
 ],
 "football|Кру Александра": [
-"soccer/eng.fa",
+"soccer/eng.4",
 "396",
 "Crewe Alexandra"
 ],
@@ -1140,7 +1260,7 @@
 "Millwall"
 ],
 "football|Милтон Кинс Донс": [
-"soccer/eng.fa",
+"soccer/eng.3",
 "390",
 "Milton Keynes Dons"
 ],
@@ -1210,7 +1330,7 @@
 "Norwich City"
 ],
 "football|Нортгемптон Таун": [
-"soccer/eng.fa",
+"soccer/eng.4",
 "353",
 "Northampton Town"
 ],
@@ -1240,7 +1360,7 @@
 "Newcastle United"
 ],
 "football|Ньюпорт Каунти": [
-"soccer/eng.fa",
+"soccer/eng.4",
 "635",
 "Newport County"
 ],
@@ -1260,7 +1380,7 @@
 "Oxford United"
 ],
 "football|Олдем Атлетик": [
-"soccer/eng.fa",
+"soccer/eng.4",
 "332",
 "Oldham Athletic"
 ],
@@ -1395,7 +1515,7 @@
 "Real Sociedad"
 ],
 "football|Рединг": [
-"soccer/eng.fa",
+"soccer/eng.3",
 "338",
 "Reading"
 ],
@@ -1445,7 +1565,7 @@
 "Rotherham United"
 ],
 "football|Рочдейл": [
-"soccer/eng.fa",
+"soccer/eng.4",
 "303",
 "Rochdale"
 ],
@@ -1925,14 +2045,19 @@
 "Spartak Moscow"
 ],
 "football|Спортинг": [
-"soccer/por.1",
-"2250",
-"Sporting CP"
+"soccer/esp.2",
+"3788",
+"Sporting Gijón"
 ],
 "football|Спортинг Канзас-Сити": [
 "soccer/usa.1",
 "186",
 "Sporting Kansas City"
+],
+"football|Стенхаусмюир": [
+"soccer/sco.2",
+"405",
+"Stenhousemuir"
 ],
 "football|Стивенидж": [
 "soccer/eng.fa",
@@ -1944,8 +2069,13 @@
 "336",
 "Stoke City"
 ],
+"football|Стокпорт Каунти": [
+"soccer/eng.3",
+"400",
+"Stockport County"
+],
 "football|Суиндон Таун": [
-"soccer/eng.fa",
+"soccer/eng.4",
 "341",
 "Swindon Town"
 ],
@@ -2009,13 +2139,18 @@
 "233",
 "Pumas UNAM"
 ],
+"football|Уиган": [
+"soccer/eng.3",
+"350",
+"Wigan Athletic"
+],
 "football|Уиком Уондерерс": [
 "soccer/eng.fa",
 "344",
 "Wycombe Wanderers"
 ],
 "football|Уимблдон": [
-"soccer/eng.fa",
+"soccer/eng.3",
 "3802",
 "AFC Wimbledon"
 ],
@@ -2195,7 +2330,7 @@
 "Charlotte FC"
 ],
 "football|Шеффилд Уэнсдей": [
-"soccer/eng.fa",
+"soccer/eng.3",
 "399",
 "Sheffield Wednesday"
 ],

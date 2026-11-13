@@ -5,10 +5,8 @@
  },
  "learned": "2026-11-13",
  "schedule_day": "2026-11-13",
- "content_slot": "2026-11-13-10",
+ "content_slot": "2026-11-13-13",
  "news_seen": [
-  "https://www.sport-express.ru/hockey/vhl/news/shayba-probila-shlem-golkiperu-dinamo-altay-v-matche-vhl-2473345/",
-  "https://www.sport-express.ru/hockey/world/news/dve-nemeckie-partii-podderzhali-uchastie-sbornoy-rossii-v-chempionate-mira-po-hokkeyu-2473323/",
   "https://www.sport-express.ru/hockey/nhl/news/forvard-reyndzhers-mika-zibanezhad-vyshel-na-chetvertoe-mesto-sredi-shvedov-v-istorii-nhl-po-ochkam-v-menshinstve-2473321/",
   "https://www.sport-express.ru/cybersport/videogames/news/gta-6-mozhet-rabotat-v-30-fps-dazhe-na-ps5-pro-chto-izvestno-o-pssr-trassirovke-luchey-i-rezhime-40-fps-2473340/",
   "https://www.sport-express.ru/cybersport/videogames/news/rockstar-vypustila-novyy-rolik-gta-6-k-startu-predzagruzki-10-noyabrya-gde-posmotret-video-i-data-reliza-2473319/",
@@ -506,9 +504,11 @@
   "https://www.sport-express.ru/hockey/nhl/news/napadayuschiy-kolorado-makkinnon-travmirovalsya-posle-stolknoveniya-s-rossiyaninom-zubom-2474326/",
   "https://www.sport-express.ru/hockey/nhl/news/vratar-ilya-sorokin-priznan-vtoroy-zvezdoy-matcha-los-andzheles-aylenders-2474331/",
   "https://www.sport-express.ru/tennis/wta/news/pegula-nazvala-match-s-andreevoy-osobenno-ozhidaemym-iz-za-incidenta-na-trenirovke-2474334/",
-  "https://www.sport-express.ru/football/rfpl/news/kushanashvili-prizval-spartak-vernut-dzyubu-on-russkiy-messi-2474304/"
+  "https://www.sport-express.ru/football/rfpl/news/kushanashvili-prizval-spartak-vernut-dzyubu-on-russkiy-messi-2474304/",
+  "mouz-vybila-team-vitality-iz-blast-rivals-fall-2026",
+  "smozhet-li-g2-ne-pustit-team-falcons-v-polufinal-blast-rivals-fall-2026"
  ],
- "news_i": 1,
+ "news_i": 2,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -982,11 +982,11 @@
   },
   "used": {
    "2026-10": 41,
-   "2026-11": 173
+   "2026-11": 177
   },
   "tournaments": {
    "tennis": {
-    "at": "2026-11-12T10:55:36.647741+03:00",
+    "at": "2026-11-13T13:33:22.463778+03:00",
     "ids": [
      3091,
      53480,
@@ -1007,9 +1007,9 @@
    }
   },
   "last": {
-   "tennis": "2026-11-13T02:57:42.053520+03:00",
+   "tennis": "2026-11-13T13:33:20.715294+03:00",
    "CS2": "2026-11-12T17:26:15.019731+03:00",
-   "DOTA": "2026-11-11T12:30:33.873189+03:00"
+   "DOTA": "2026-11-11T17:33:20.715294+03:00"
   },
   "ver": 3
  },
@@ -1558,7 +1558,7 @@
  "value_day": "2026-11-12",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-12",
- "site_stamp": "918|5400|2026-11-13 10",
+ "site_stamp": "918|5414|2026-11-13 13",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1571,7 +1571,7 @@
    "SP2|401883136"
   ]
  },
- "value_check": "2026-11-13-3",
+ "value_check": "2026-11-13-4",
  "express_risk": {
   "msg": 5189,
   "legs": [
@@ -1692,7 +1692,7 @@
  "streak_day": {
   "2026-11-12": 1
  },
- "news_next": "2026-11-13T10:31:17.216820+03:00",
+ "news_next": "2026-11-13T14:01:53.719127+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1701,16 +1701,17 @@
   "Как считают очки в теннисе",
   "Форматы BO1, BO3, BO5",
   "Что такое маржа букмекера",
-  "Что такое xG"
+  "Что такое xG",
+  "Олимпийский девиз"
  ],
  "poster_day": "2026-11-06",
  "bot_setup": 3,
  "tg_offset": 727618641,
  "push_watch": {},
  "news_video": true,
- "vk_last": 5398,
- "dz_last": 5400,
- "vk_err": "5312: VK wall.post: 9 Flood control",
+ "vk_last": 5413,
+ "dz_last": 5410,
+ "vk_err": null,
  "news_forced": "now",
  "vk_mode": "photo",
  "dz_err": "4987: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))",
@@ -1733,7 +1734,8 @@
   "https://upload.wikimedia.org/wikipedia/commons/9/9a/GGadzhiev.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
   "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5f/Uganda_Cranes_fans_going_to_Nambooole_Stadium5.jpg/1280px-Uganda_Cranes_fans_going_to_Nambooole_Stadium5.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
   "https://upload.wikimedia.org/wikipedia/commons/3/31/CSKA-MC_%285%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-  "https://upload.wikimedia.org/wikipedia/commons/5/55/5597.90290.AS_10552.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+  "https://upload.wikimedia.org/wikipedia/commons/5/55/5597.90290.AS_10552.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "https://images.cybersport.ru/images/as-is/plain/ed/ede7983c-271c-404a-93be-4f530fd3f1f1.jpg"
  ],
  "indexnow_day": "2026-11-13",
  "vk_wall_err": "5312: попытка 3: VK photos.getWallUploadServer: 9 Flood control",
@@ -1742,11 +1744,13 @@
   "youtube": "YouTube не подключён (нет секретов YT_*)"
  },
  "vk_try": {},
- "vk_pause_ts": 1794632613.8733435,
+ "vk_pause_ts": 0,
  "push": {
   "on": true,
   "subs": 0,
   "err": null
  },
- "vk_floods": 3
+ "vk_floods": 0,
+ "vk_resume_key": "resume",
+ "vk_comment_pending": {}
 }
