@@ -20,6 +20,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check VK token
+        continue-on-error: true
         env:
           VK_TOKEN: ${{ secrets.VK_TOKEN }}
         run: |
@@ -133,7 +134,7 @@ jobs:
           EOF
 
       - name: Post now
-        if: ${{ inputs.post_now == '1' }}
+        if: ${{ always() && inputs.post_now == '1' }}
         env:
           VK_TOKEN: ${{ secrets.VK_TOKEN }}
           VK_USER_TOKEN: ${{ secrets.VK_USER_TOKEN }}
