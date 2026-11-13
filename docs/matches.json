@@ -829,9 +829,75 @@ null
 "bb": "https://betboom.ru/search?query=%D0%A4%D1%80%D0%B8%D1%86&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=tennis",
 "path": "tennis/atp",
 "url": "live.html?s=tennis&p=tennis%2Fatp&e=186547&h=%D0%A2%D0%B5%D0%B9%D0%BB%D0%BE%D1%80+%D0%A4%D1%80%D0%B8%D1%86&a=%D0%9B%D0%BE%D1%80%D0%B5%D0%BD%D1%86%D0%BE+%D0%9C%D1%83%D0%B7%D0%B5%D1%82%D1%82%D0%B8",
-"tip": "",
+"tip": "Будет 2 сета · ≈1.83",
 "top": false,
-"bot": null,
+"bot": {
+"main": {
+"label": "Будет 2 сета",
+"p": 0.508,
+"odds": 1.83,
+"est": true
+},
+"bold": null,
+"markets": [
+[
+"Победа: Тейлор Фриц",
+0.592,
+null
+],
+[
+"Победа: Лоренцо Музетти",
+0.408,
+null
+],
+[
+"Будет 3 сета",
+0.492,
+null
+],
+[
+"Будет 2 сета",
+0.508,
+null
+],
+[
+"Счёт по сетам 2:0",
+0.315,
+null
+],
+[
+"Счёт по сетам 0:2",
+0.192,
+null
+],
+[
+"Счёт по сетам 2:1",
+0.277,
+null
+],
+[
+"Счёт по сетам 1:2",
+0.216,
+null
+],
+[
+"Тейлор Фриц возьмёт хотя бы сет",
+0.808,
+null
+],
+[
+"Лоренцо Музетти возьмёт хотя бы сет",
+0.685,
+null
+]
+],
+"bar": [
+0.5918849244103789,
+0,
+0.4081150755896211
+],
+"center": "Рейтинг Эло 1858 : 1793"
+},
 "lt": null
 },
 {
@@ -1600,14 +1666,14 @@ null
 "league": "Теннис · ATP",
 "kickoff": "2026-11-14T15:00:00+03:00",
 "home": "Тбд",
-"away": "Тбд",
+"away": "Тьяго Агустин Тиранте",
 "hl": null,
-"al": null,
+"al": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
 "hid": "-3",
-"aid": "-4",
+"aid": "4010",
 "bb": "https://betboom.ru/search?query=%D0%A2%D0%B1%D0%B4&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=tennis",
 "path": "tennis/atp",
-"url": "live.html?s=tennis&p=tennis%2Fatp&e=186552&h=%D0%A2%D0%B1%D0%B4&a=%D0%A2%D0%B1%D0%B4",
+"url": "live.html?s=tennis&p=tennis%2Fatp&e=186552&h=%D0%A2%D0%B1%D0%B4&a=%D0%A2%D1%8C%D1%8F%D0%B3%D0%BE+%D0%90%D0%B3%D1%83%D1%81%D1%82%D0%B8%D0%BD+%D0%A2%D0%B8%D1%80%D0%B0%D0%BD%D1%82%D0%B5",
 "tip": "",
 "top": false,
 "bot": null,
