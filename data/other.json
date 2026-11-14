@@ -7256,25 +7256,25 @@
   "kickoff": "2026-11-14T05:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Fri, November 13th at 9:00 PM EST",
   "clock": "0:00",
   "period": 0,
   "home": {
+   "color": "003e7e",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/van.png",
    "id": "22",
    "name": "Vancouver Canucks",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/van.png",
-   "color": "003e7e",
    "score": "0",
    "record": "3-16-1",
    "periods": [],
    "ru": "Ванкувер"
   },
   "away": {
+   "color": "0056ae",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/nyr.png",
    "id": "13",
    "name": "New York Rangers",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/nyr.png",
-   "color": "0056ae",
    "score": "0",
    "record": "11-8-1",
    "periods": [],
@@ -7369,7 +7369,9 @@
   "btn": 4,
   "close": {
    "HK_O6.5": 0.4893
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null
  },
  "NBA|401909302": {
   "id": "401909302",
