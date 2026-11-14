@@ -37,6 +37,12 @@ class EditorialDeliveryTests(unittest.TestCase):
                 self.assertIn('<p>', article_body)
                 self.assertNotIn('<pre', article_body)
                 self.assertIn('Заключительный абзац, который нельзя потерять.', article_body)
+                seed = {**complete[0], 't': '2026-11-14T10:30:00Z', 'title': 'Полная версия: новость', 'url': 'news/full-100.html'}
+                (root / 'vk_rss_article_seed.json').write_text(json.dumps(seed, default=str), encoding='utf-8')
+                ordinary = ET.fromstring(pages._vk_rss(complete, pd.Timestamp('2026-11-14T11:00:00Z')))
+                article = ET.fromstring(pages._vk_rss(complete, pd.Timestamp('2026-11-14T11:00:00Z'), article=True))
+                self.assertEqual(len(ordinary.findall('channel/item')), 1)
+                self.assertEqual(article.findtext('channel/item/title'), 'Полная версия: новость')
 
     def test_match_visual_uses_exact_team_metadata_without_forecast_fields(self):
         source = {"one": {"home": {"ru": "Сборная Японии", "logo": "japan", "color": "000555"},

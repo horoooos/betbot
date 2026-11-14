@@ -800,6 +800,12 @@ def _vk_rss(news: list[dict], now: pd.Timestamp, *, article=False) -> str:
         published = pd.Timestamp(entry["t"])
         if since <= published <= now and now - published <= pd.Timedelta(hours=24):
             selected.append(entry)
+    seed = DATA / "vk_rss_article_seed.json"
+    if article and seed.exists():
+        entry = json.loads(seed.read_text(encoding="utf-8"))
+        published = pd.Timestamp(entry["t"])
+        if since <= published <= now and now - published <= pd.Timedelta(hours=24):
+            selected.append(entry)
     illustrated = []
     format_file = DATA / "vk_rss_format_since.txt"
     format_since = pd.Timestamp(format_file.read_text(encoding="utf-8").strip()) if format_file.exists() else None

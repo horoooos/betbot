@@ -121,7 +121,7 @@ def main():
                 except RuntimeError as error:
                     print(role + "_EDIT_ACCESS:", str(error), flush=True)
         return
-    if mode == "rss-watch":
+    if mode in {"rss-watch", "rss-article-watch"}:
         from betbot.vk_wall_events import PhotoMonitor
         import xml.etree.ElementTree as ET
         monitor = PhotoMonitor(os.environ.get("VK_TOKEN", ""))
@@ -147,7 +147,8 @@ def main():
                 post = event.get("object") or {}
                 attachments = post.get("attachments") or []
                 titles = []
-                feed = requests.get(vk.SITE + "rss-vk.xml", timeout=20)
+                feed_name = "rss-vk-article.xml" if mode == "rss-article-watch" else "rss-vk.xml"
+                feed = requests.get(vk.SITE + feed_name, timeout=20)
                 feed.raise_for_status()
                 titles = [item.findtext("title", "") for item in ET.fromstring(feed.content).findall("channel/item")]
                 content = post.get("text", "") + " " + " ".join(str(a.get("link", {}).get("title", "")) + " " +
@@ -157,7 +158,10 @@ def main():
                 print("MATCHED_RSS_TITLE:", match, flush=True)
                 print("ATTACHMENT_TYPES:", [a.get("type") for a in attachments], flush=True)
                 print("LINK_WITH_PHOTO:", any(a.get("type") == "link" and bool(a.get("link", {}).get("photo")) for a in attachments), flush=True)
-                if match:
+                articles = [a.get("article") or {} for a in attachments if a.get("type") == "article"]
+                print("ARTICLE_URLS:", [a.get("view_url") or a.get("url") or a.get("short_url") for a in articles], flush=True)
+                print("ARTICLE_WITH_COVER:", any(a.get("photo") or a.get("cover") for a in articles), flush=True)
+                if match and (mode != "rss-article-watch" or articles):
                     return
         print("NATIVE_RSS_EVENT_NOT_YET_OBSERVED: true", flush=True)
         return
