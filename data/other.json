@@ -7484,25 +7484,25 @@
   "kickoff": "2026-11-14T06:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Fri, November 13th at 10:00 PM EST",
   "clock": "0:00",
   "period": 0,
   "home": {
+   "color": "344043",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/vgk.png",
    "id": "37",
    "name": "Vegas Golden Knights",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/vgk.png",
-   "color": "344043",
    "score": "0",
    "record": "13-5-2",
    "periods": [],
    "ru": "Вегас"
   },
   "away": {
+   "color": "fdba31",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/nsh.png",
    "id": "27",
    "name": "Nashville Predators",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/nsh.png",
-   "color": "fdba31",
    "score": "0",
    "record": "10-4-5",
    "periods": [],
@@ -7597,7 +7597,9 @@
   "btn": 4,
   "close": {
    "HK_U6.5": 0.5514
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null
  },
  "NBA|401909303": {
   "id": "401909303",
@@ -7710,25 +7712,25 @@
   "kickoff": "2026-11-14T06:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Fri, November 13th at 10:30 PM EST",
   "clock": "0.0",
   "period": 0,
   "home": {
+   "color": "12173f",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/lac.png",
    "id": "12",
    "name": "LA Clippers",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/lac.png",
-   "color": "12173f",
    "score": "0",
    "record": "2-8",
    "periods": [],
    "ru": "Клипперс"
   },
   "away": {
+   "color": "007ac1",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/okc.png",
    "id": "25",
    "name": "Oklahoma City Thunder",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/okc.png",
-   "color": "007ac1",
    "score": "0",
    "record": "8-4",
    "periods": [],
@@ -7803,6 +7805,8 @@
   "btn": 4,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null
  }
 }
