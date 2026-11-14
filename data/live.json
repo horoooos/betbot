@@ -471,7 +471,8 @@
    "min_odds": 1.67,
    "minute": "26'",
    "score": "2:0",
-   "sport": "football"
+   "sport": "football",
+   "result": "miss"
   }
  },
  "ATP|186552": {
@@ -480,5 +481,12 @@
   "as": 1,
   "goals": 0,
   "kickoff": "2026-11-14T15:10:00+03:00"
+ },
+ "UNL|401861163": {
+  "msg": 5810,
+  "hs": 0,
+  "as": 0,
+  "goals": 0,
+  "kickoff": "2026-11-14T17:00:00+03:00"
  }
 }
