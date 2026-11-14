@@ -111,6 +111,19 @@ def link_preview(group, reader, parse_token=None):
 
 def main():
     mode = os.environ.get("VK_MEDIA_MODE", "access")
+    if mode == "rss-enable":
+        import xml.etree.ElementTree as ET
+        feed_url = vk.SITE + "rss-vk.xml"
+        response = requests.get(feed_url, timeout=30)
+        response.raise_for_status()
+        root = ET.fromstring(response.content)
+        if root.tag != "rss" or root.find("channel") is None:
+            raise RuntimeError("Публичная RSS-лента не прошла проверку")
+        result = call("groups.edit", os.environ.get("VK_TOKEN", ""), group_id=vk.GROUP_ID, rss=feed_url)
+        print("RSS_FEED:", feed_url, flush=True)
+        print("RSS_SETTING_ACCEPTED:", result == 1, flush=True)
+        print("NATIVE_IMPORT_POST_NOT_YET_VERIFIED: true", flush=True)
+        return
     if mode == "rss-settings":
         settings = call("groups.getSettings", os.environ.get("VK_TOKEN", ""), group_id=vk.GROUP_ID)
         print("RSS_SETTINGS:", {k: v for k, v in settings.items() if "rss" in k.lower()}, flush=True)
