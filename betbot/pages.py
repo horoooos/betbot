@@ -780,6 +780,12 @@ def _vk_rss(news: list[dict], now: pd.Timestamp) -> str:
         raise ValueError("VK RSS start timestamp must include a timezone")
     selected = [n for n in news if n.get("photo") and since <= pd.Timestamp(n["t"]) <= now
                 and now - pd.Timestamp(n["t"]) <= pd.Timedelta(hours=24)]
+    probe = DATA / "vk_rss_probe.json"
+    if probe.exists():
+        entry = json.loads(probe.read_text(encoding="utf-8"))
+        published = pd.Timestamp(entry["t"])
+        if since <= published <= now and now - published <= pd.Timedelta(hours=24):
+            selected.append(entry)
     illustrated = []
     for n in selected:
         image = DOCS / "rss-images" / f"{int(n['id'])}.jpg"
