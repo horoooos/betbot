@@ -510,7 +510,8 @@
   "team-spirit-proshla-v-final-blast-rivals-fall-2026-posle-pobedy-nad-mouz",
   "https://www.sport-express.ru/hockey/world/news/bah-vystupil-za-uchastie-sbornoy-rossii-na-chm-2027-ne-gosudarstvam-i-ne-pravitelstvam-eto-reshat-2474780/",
   "https://www.sport-express.ru/hockey/nhl/news/reyndzhers-lidiruyut-v-nhl-po-matcham-bez-propuschennyh-shayb-v-menshinstve-2474750/",
-  "https://www.sport-express.ru/football/france/news/safonov-postavil-sebe-pyat-s-bolshim-plyusom-za-vystuplenie-v-proshlom-sezone-2474776/"
+  "https://www.sport-express.ru/football/france/news/safonov-postavil-sebe-pyat-s-bolshim-plyusom-za-vystuplenie-v-proshlom-sezone-2474776/",
+  "https://www.sport-express.ru/football/rfpl/news/fayzullaev-verit-v-chempionstvo-cska-2474781/"
  ],
  "news_i": 1,
  "oddspapi": {
@@ -1572,7 +1573,7 @@
  "value_day": "2026-11-14",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-14",
- "site_stamp": "959|5738|2026-11-14 13",
+ "site_stamp": "959|5739|2026-11-14 13",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1706,7 +1707,7 @@
  "streak_day": {
   "2026-11-12": 1
  },
- "news_next": "2026-11-14T13:16:25.636604+03:00",
+ "news_next": "2026-11-14T13:24:25.275193+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1725,7 +1726,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 5738,
+ "dz_last": 5739,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -1847,15 +1848,17 @@
  "shorts_retry_day": "2026-11-14",
  "dz_sent_ids": [
   "5731",
-  "5735"
+  "5735",
+  "5739"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
-  "2026-11-14:новость:86e7f03e1a6b8c9791448dcc"
+  "2026-11-14:новость:86e7f03e1a6b8c9791448dcc",
+  "2026-11-14:начало:d62c8db5ec7b519c3a95b20d"
  ],
  "dz_last_delivery": {
-  "source_id": 5735,
-  "message_id": 550,
-  "kind": "новость"
+  "source_id": 5739,
+  "message_id": 551,
+  "kind": "начало"
  }
 }
