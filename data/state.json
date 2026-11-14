@@ -1819,14 +1819,14 @@
  "vk_photos": [],
  "vk_photo_until": 1794622404.8964572,
  "vk_photo_cursor": {},
- "vk_story_last": 5493,
- "vk_story_err": "VK stories: сервер не вернул upload_result",
+ "vk_story_last": 5494,
+ "vk_story_err": null,
  "push_weekly": "2026-46",
- "vk_story_at": 1794625859.387517,
- "vk_story_url": "https://vk.com/story-228963529_456239038",
+ "vk_story_at": 1794630533.9210966,
+ "vk_story_url": "https://vk.com/story-228963529_456239039",
  "vk_story_day": {
   "date": "2026-11-14",
-  "count": 8
+  "count": 9
  },
  "vk_legacy_pending": [
   {
@@ -1851,6 +1851,5 @@
  },
  "vk_comment_err": null,
  "vk_fresh_err": "фото стены: попытка 1: VK photos.getWallUploadServer: 9 Flood control",
- "vk_fresh_retry_at": 1794640404.8951557,
- "vk_story_retry_at": 1794630419.292655
+ "vk_fresh_retry_at": 1794640404.8951557
 }
