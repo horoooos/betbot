@@ -789,6 +789,9 @@ def _vk_rss(news: list[dict], now: pd.Timestamp, *, article=False) -> str:
     since = pd.Timestamp((DATA / "vk_rss_since.txt").read_text(encoding="utf-8").strip())
     if since.tzinfo is None:
         raise ValueError("VK RSS start timestamp must include a timezone")
+    article_since = DATA / "vk_rss_article_since.txt"
+    if article and article_since.exists():
+        since = max(since, pd.Timestamp(article_since.read_text(encoding="utf-8").strip()))
     selected = [n for n in news if n.get("photo") and n.get("complete", True) and since <= pd.Timestamp(n["t"]) <= now
                 and now - pd.Timestamp(n["t"]) <= pd.Timedelta(hours=24)]
     probe = DATA / "vk_rss_probe.json"
