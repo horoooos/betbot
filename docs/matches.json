@@ -1,138 +1,6 @@
 [
 {
 "sport": "football",
-"id": "401861163",
-"league": "Сборные · Лига наций",
-"kickoff": "2026-11-14T17:00:00+03:00",
-"home": "Сборная Косова",
-"away": "Сборная Израиля",
-"hl": "https://a.espncdn.com/i/teamlogos/countries/500/kosovo.png",
-"al": "https://a.espncdn.com/i/teamlogos/countries/500/isr.png",
-"hid": "18272",
-"aid": "461",
-"bb": "https://betboom.ru/search?query=%D0%A1%D0%B1%D0%BE%D1%80%D0%BD%D0%B0%D1%8F&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
-"path": "soccer/uefa.nations",
-"url": "live.html?s=football&p=soccer%2Fuefa.nations&e=401861163&h=%D0%A1%D0%B1%D0%BE%D1%80%D0%BD%D0%B0%D1%8F+%D0%9A%D0%BE%D1%81%D0%BE%D0%B2%D0%B0&a=%D0%A1%D0%B1%D0%BE%D1%80%D0%BD%D0%B0%D1%8F+%D0%98%D0%B7%D1%80%D0%B0%D0%B8%D0%BB%D1%8F",
-"tip": "П1 · 1.83",
-"top": false,
-"bot": {
-"main": {
-"label": "П1",
-"p": 0.504,
-"odds": 1.83,
-"est": false
-},
-"bold": null,
-"markets": [
-[
-"П1",
-0.504,
-1.833
-],
-[
-"Ничья",
-0.266,
-3.5
-],
-[
-"П2",
-0.23,
-4.0
-],
-[
-"1X",
-0.77,
-null
-],
-[
-"X2",
-0.496,
-null
-],
-[
-"ТБ 1.5",
-0.753,
-null
-],
-[
-"ТБ 2.5",
-0.495,
-1.909
-],
-[
-"ТМ 2.5",
-0.505,
-1.87
-],
-[
-"ТБ 3.5",
-0.276,
-null
-],
-[
-"Обе забьют — да",
-0.526,
-null
-],
-[
-"Обе забьют — нет",
-0.474,
-null
-],
-[
-"ИТ1 больше 1.5",
-0.484,
-null
-],
-[
-"ИТ2 больше 1.5",
-0.275,
-null
-],
-[
-"Ф1 (−1.5)",
-0.273,
-null
-],
-[
-"Ф2 (+1.5)",
-0.727,
-null
-]
-],
-"bar": [
-0.5039692029099464,
-0.2659707334194426,
-0.23006006367061127
-],
-"center": "Ожидаемые голы (xG) 1.6 : 1.0",
-"scores": [
-[
-"1:1",
-0.127
-],
-[
-"1:0",
-0.105
-],
-[
-"2:1",
-0.096
-]
-]
-},
-"lt": {
-"fair": 1.72,
-"label": "ТБ 1.5",
-"min_odds": 1.81,
-"minute": "25'",
-"p": 0.581,
-"result": "miss",
-"score": "0:0"
-}
-},
-{
-"sport": "football",
 "id": "401880754",
 "league": "Англия · Лига 1",
 "kickoff": "2026-11-14T18:00:00+03:00",
@@ -4858,6 +4726,25 @@ null
 "bb": "https://betboom.ru/search?query=%D0%94%D0%B5%D1%84%D0%B5%D0%BD%D1%81%D0%BE%D1%80&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
 "path": "soccer/uru.1",
 "url": "live.html?s=football&p=soccer%2Furu.1&e=401933376&h=Defensor+Sporting&a=Pe%C3%B1arol",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "basketball",
+"id": "401909991",
+"league": "США · NBA",
+"kickoff": "2026-11-16T03:00:00+03:00",
+"home": "Вашингтон Уизардс",
+"away": "Хьюстон Рокетс",
+"hl": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/wsh.png",
+"al": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/hou.png",
+"hid": "27",
+"aid": "10",
+"bb": "https://betboom.ru/search?query=%D0%92%D0%B0%D1%88%D0%B8%D0%BD%D0%B3%D1%82%D0%BE%D0%BD&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=basketball",
+"path": "basketball/nba",
+"url": "live.html?s=basketball&p=basketball%2Fnba&e=401909991&h=%D0%92%D0%B0%D1%88%D0%B8%D0%BD%D0%B3%D1%82%D0%BE%D0%BD+%D0%A3%D0%B8%D0%B7%D0%B0%D1%80%D0%B4%D1%81&a=%D0%A5%D1%8C%D1%8E%D1%81%D1%82%D0%BE%D0%BD+%D0%A0%D0%BE%D0%BA%D0%B5%D1%82%D1%81",
 "tip": "",
 "top": false,
 "bot": null,
