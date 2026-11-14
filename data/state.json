@@ -5,7 +5,7 @@
  },
  "learned": "2026-11-14",
  "schedule_day": "2026-11-14",
- "content_slot": "2026-11-14-22",
+ "content_slot": "2026-11-14-23",
  "news_seen": [
   "https://www.sport-express.ru/hockey/europe/news/posolstvo-rossii-nazvalo-neudachnym-vyskazyvanie-ministra-inostrannyh-del-chehii-o-rossiyskih-hokkeistkah-2473674/",
   "https://www.sport-express.ru/tennis/atp/news/nadal-predlozhil-izmenit-sistemu-reytinga-atp-i-raskritikoval-dvuhnedelnye-mastersy-2473679/",
@@ -1593,7 +1593,7 @@
  "value_day": "2026-11-14",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-14",
- "site_stamp": "991|5937|2026-11-14 22",
+ "site_stamp": "991|5939|2026-11-14 23",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1742,7 +1742,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 5937,
+ "dz_last": 5939,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -1886,7 +1886,8 @@
   "5932",
   "5933",
   "5934",
-  "5935"
+  "5935",
+  "5938"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -1909,11 +1910,12 @@
   "2026-11-14:начало:3a0edc5518bf1e7e84d9ba48",
   "2026-11-14:начало:0fa4b927bd58737e3663d8ef",
   "2026-11-14:начало:ec5e5bfb0f305871ce7e0748",
-  "2026-11-14:начало:7c48781d9f07494ebc8fdc0e"
+  "2026-11-14:начало:7c48781d9f07494ebc8fdc0e",
+  "2026-11-14:сводка:644572aa8a887fac63886cf3"
  ],
  "dz_last_delivery": {
-  "source_id": 5935,
-  "message_id": 569,
-  "kind": "начало"
+  "source_id": 5938,
+  "message_id": 570,
+  "kind": "сводка"
  }
 }
