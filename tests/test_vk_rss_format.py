@@ -1,5 +1,7 @@
 import json
 import os
+import re
+from html.parser import HTMLParser
 import tempfile
 import unittest
 import xml.etree.ElementTree as ET
@@ -46,6 +48,19 @@ class VKRSSFormattingTests(unittest.TestCase):
             body = item.findtext("{http://purl.org/rss/1.0/modules/content/}encoded")
             self.assertIn("#Денисов", body)
             self.assertIn("Подробнее на сайте 👉 vk.cc/example", body)
+            plain = re.sub(r"<[^>]+>", "", body).strip()
+            self.assertIn("клуб «Зенит».\n\n#футбол\n\n📊 Подробнее", plain)
+            self.assertIn("vk.cc/example\n\n#РПЛ #Денисов", plain)
+            class TextOnly(HTMLParser):
+                def __init__(self):
+                    super().__init__()
+                    self.parts = []
+                def handle_data(self, data):
+                    if data.strip():
+                        self.parts.append(data.strip())
+            importer = TextOnly()
+            importer.feed(body)
+            self.assertIn("клуб «Зенит».\n\n#футбол\n\n📊 Подробнее", "".join(importer.parts))
             self.assertTrue(item.findtext("title").startswith("⚽ "))
             self.assertEqual(json.loads((root / "vk_rss_links.json").read_text())[pages.SITE + "news/1.html"], "vk.cc/example")
 

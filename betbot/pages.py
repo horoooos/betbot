@@ -743,10 +743,18 @@ def _rss(news: list[dict], ms: list[dict], store: dict[int, dict], now: pd.Times
     x = lambda s: H.escape(str(s or ""), quote=False)
     items = []
     for n in news[:40]:
-        body = "".join(f"<p>{H.escape(p)}</p>" for p in n["body"].split(chr(10) * 2) if p.strip())
+        if feed_name == "rss-vk.xml":
+            # Keep paragraph breaks inside one text node. Importers that strip
+            # tags and whitespace-only nodes otherwise concatenate <p> blocks.
+            body = '<pre style="white-space:pre-wrap;font:inherit">' + H.escape(n["body"].strip()) + '</pre>'
+        else:
+            body = "".join(f"<p>{H.escape(p)}</p>" for p in n["body"].split(chr(10) * 2) if p.strip())
+        photo_html = (f'<img src="{n["photo"]}">' if n.get('photo') else '')
+        if photo_html and feed_name == "rss-vk.xml":
+            photo_html += "\n\n"
         items.append((pd.Timestamp(n["t"]), f"""<item><title>{x(n['title'])}</title><link>{x(n.get('rss_link') or SITE + n['url'])}</link><guid isPermaLink="true">{SITE}{n['url']}</guid>
 <pubDate>{format_datetime(pd.Timestamp(n['t']).to_pydatetime())}</pubDate><category>{x(SPORT_RU.get(n['sport'], 'Спорт'))}</category>
-<description>{x(n['desc'])}</description><content:encoded><![CDATA[{(f'<img src="{n["photo"]}">' if n.get('photo') else '') + body}]]></content:encoded>
+<description>{x(n['desc'])}</description><content:encoded><![CDATA[{photo_html + body}]]></content:encoded>
 {f'<enclosure url="{x(n["photo"])}" type="image/jpeg" length="{int(n.get("photo_bytes") or 0)}"/>' if n.get('photo') else ''}</item>"""))
     for m in [m for m in ms if not m.get("finished")][:30]:
         post = store.get(int(m["msg"])) if str(m.get("msg", "")).isdigit() else None
