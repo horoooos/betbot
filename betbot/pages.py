@@ -266,11 +266,12 @@ def _news(store: dict[int, dict]) -> list[dict]:
         body_html = p["html"].split("\n", 1)[1] if "\n" in p["html"] else ""
         body_html = re.sub(r"\s*<a[^>]*>#[^<]+</a>\s*$", "", body_html.strip())
         body_html = re.sub(r"\s*👇 Продолжение — в ответе\s*", "\n", body_html).strip()
+        complete = "Продолжение — в ответе" not in p["html"] or bool(conts.get(p["id"]))
         if conts.get(p["id"]):
             body_html += "\n\n" + conts[p["id"]]
         t = pd.Timestamp(p["t"]).tz_convert("Europe/Moscow")
         out.append({"id": p["id"], "title": title, "sport": NEWS_TAGS[tail], "t": t, "photo": p.get("photo"),
-                    "body": body_html.strip(), "desc": " ".join(lines[1:3])[:240],
+                    "body": body_html.strip(), "complete": complete, "desc": " ".join(lines[1:3])[:240],
                     "url": f"news/{p['id']}-{slug(title)}.html"})
     return sorted(out, key=lambda x: x["t"], reverse=True)
 
@@ -786,7 +787,7 @@ def _vk_rss(news: list[dict], now: pd.Timestamp) -> str:
     since = pd.Timestamp((DATA / "vk_rss_since.txt").read_text(encoding="utf-8").strip())
     if since.tzinfo is None:
         raise ValueError("VK RSS start timestamp must include a timezone")
-    selected = [n for n in news if n.get("photo") and since <= pd.Timestamp(n["t"]) <= now
+    selected = [n for n in news if n.get("photo") and n.get("complete", True) and since <= pd.Timestamp(n["t"]) <= now
                 and now - pd.Timestamp(n["t"]) <= pd.Timedelta(hours=24)]
     probe = DATA / "vk_rss_probe.json"
     if probe.exists():

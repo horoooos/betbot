@@ -111,6 +111,16 @@ def link_preview(group, reader, parse_token=None):
 
 def main():
     mode = os.environ.get("VK_MEDIA_MODE", "access")
+    if mode == "edit-access":
+        # An invalid negative post ID guarantees that no wall post is edited.
+        for role, token in (("GROUP", os.environ.get("VK_TOKEN", "")), ("USER", os.environ.get("VK_USER_TOKEN", ""))):
+            if token:
+                try:
+                    call("wall.edit", token, owner_id=-vk.GROUP_ID, post_id=-1, message="")
+                    print(role + "_EDIT_INVALID_ID_ACCEPTED: unexpected", flush=True)
+                except RuntimeError as error:
+                    print(role + "_EDIT_ACCESS:", str(error), flush=True)
+        return
     if mode == "rss-watch":
         from betbot.vk_wall_events import PhotoMonitor
         import xml.etree.ElementTree as ET

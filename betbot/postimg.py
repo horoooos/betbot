@@ -36,6 +36,11 @@ def _lines(html: str) -> list[str]:
 
 
 def _card(html: str, kind: str) -> bytes:
+    if kind == "начало":
+        from .editorial_cards import match_cover
+        cover = match_cover(plain(html))
+        if cover:
+            return cover
     ls = _lines(html)
     first = ls[0] if ls else "АИ СТАВИТ"
     if kind == "разбор":
@@ -48,10 +53,17 @@ def _card(html: str, kind: str) -> bytes:
         kicker, big = "Итог матча", (ls[1] if len(ls) > 1 else first)
         sub = " · ".join(x for x in (first.replace("ИТОГ", "").strip(" ·"), res) if x)
         rest = ls[2:5]
+    elif kind in {"матчи", "статистика", "сводка", "экспресс"}:
+        kicker = {"матчи": "Матчи дня", "статистика": "Цифры и факты", "сводка": "Главное за день", "экспресс": "Экспресс дня"}[kind]
+        big, sub, rest = first, (ls[1] if len(ls) > 1 else ""), ls[2:4]
     else:
         kicker, big, sub, rest = "Новости спорта", first, "", ls[1:3]
     big = big if len(big) <= 90 else big[:87] + "…"
     rest = [r if len(r) <= 70 else r[:67] + "…" for r in rest]
+    if kind != "итог" and not (kind == "экспресс" and re.search(r"ЗАШ[ЁЕ]Л", html)):
+        from .editorial_cards import topic_cover, SPORTS
+        sport = next((sport for emoji, sport in SPORTS if emoji in html), "football")
+        return topic_cover(kicker, big, sub, rest, COLORS.get(kind, COLORS["новость"]), sport=sport)
     return card.slide_card(kicker, big, sub, rest, COLORS.get(kind, COLORS["новость"]), brand="@aistavvit")
 
 
