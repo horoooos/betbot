@@ -1520,7 +1520,9 @@
      "FFFFFF",
      "E70000"
     ],
-    "label": "Победа: Сборная Кыргызстана"
+    "label": "Победа: Сборная Кыргызстана",
+    "win": true,
+    "score": "0:3"
    },
    {
     "sport": "hockey",
@@ -1573,7 +1575,7 @@
  "value_day": "2026-11-14",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-14",
- "site_stamp": "960|5770|2026-11-14 16",
+ "site_stamp": "961|5808|2026-11-14 16",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1726,7 +1728,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 5770,
+ "dz_last": 5808,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
