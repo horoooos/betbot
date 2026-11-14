@@ -3,6 +3,7 @@ on:
   workflow_dispatch:
 permissions:
   contents: write
+  actions: write
 concurrency:
   group: vk-rss-refresh
   cancel-in-progress: false
@@ -39,3 +40,7 @@ jobs:
             git pull --rebase -X theirs origin main
             git push origin HEAD:main
           fi
+      - name: Publish refreshed RSS on the site
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run pages.yml --repo "${{ github.repository }}" --ref main
