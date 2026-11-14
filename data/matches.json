@@ -13067,7 +13067,7 @@
   "kickoff": "2026-11-14T23:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Scheduled",
   "home": {
    "id": "5264",
@@ -13204,7 +13204,10 @@
   "close": {
    "U25": 0.4616,
    "H": 0.412
-  }
+  },
+  "main_hit": true,
+  "bold_hit": false,
+  "value_hit": null
  },
  "401878043": {
   "id": "401878043",
