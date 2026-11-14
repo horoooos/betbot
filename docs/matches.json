@@ -1,271 +1,5 @@
 [
 {
-"sport": "football",
-"id": "401930236",
-"league": "Сборные · Товарищеские матчи",
-"kickoff": "2026-11-14T15:00:00+03:00",
-"home": "Сборная Китая",
-"away": "Сборная Малайзии",
-"hl": "https://a.espncdn.com/i/teamlogos/countries/500/chn.png",
-"al": "https://a.espncdn.com/i/teamlogos/countries/500/mas.png",
-"hid": "658",
-"aid": "2405",
-"bb": "https://betboom.ru/search?query=%D0%A1%D0%B1%D0%BE%D1%80%D0%BD%D0%B0%D1%8F&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
-"path": "soccer/fifa.friendly",
-"url": "live.html?s=football&p=soccer%2Ffifa.friendly&e=401930236&h=%D0%A1%D0%B1%D0%BE%D1%80%D0%BD%D0%B0%D1%8F+%D0%9A%D0%B8%D1%82%D0%B0%D1%8F&a=%D0%A1%D0%B1%D0%BE%D1%80%D0%BD%D0%B0%D1%8F+%D0%9C%D0%B0%D0%BB%D0%B0%D0%B9%D0%B7%D0%B8%D0%B8",
-"tip": "П1 · 1.56",
-"top": false,
-"bot": {
-"main": {
-"label": "П1",
-"p": 0.602,
-"odds": 1.56,
-"est": false
-},
-"bold": {
-"label": "ТМ 2.5",
-"p": 0.45,
-"odds": 2.05,
-"est": false
-},
-"markets": [
-[
-"П1",
-0.602,
-1.556
-],
-[
-"Ничья",
-0.231,
-4.4
-],
-[
-"П2",
-0.167,
-5.25
-],
-[
-"1X",
-0.833,
-null
-],
-[
-"X2",
-0.398,
-null
-],
-[
-"ТБ 1.5",
-0.791,
-null
-],
-[
-"ТБ 2.5",
-0.55,
-1.714
-],
-[
-"ТМ 2.5",
-0.45,
-2.05
-],
-[
-"ТБ 3.5",
-0.326,
-null
-],
-[
-"Обе забьют — да",
-0.529,
-null
-],
-[
-"Обе забьют — нет",
-0.471,
-null
-],
-[
-"ИТ1 больше 1.5",
-0.58,
-null
-],
-[
-"ИТ2 больше 1.5",
-0.24,
-null
-],
-[
-"Ф1 (−1.5)",
-0.367,
-null
-],
-[
-"Ф2 (+1.5)",
-0.633,
-null
-]
-],
-"bar": [
-0.6019315059882244,
-0.23125288674170774,
-0.16681560727006828
-],
-"center": "Ожидаемые голы (xG) 1.9 : 0.9",
-"scores": [
-[
-"1:1",
-0.11
-],
-[
-"2:0",
-0.106
-],
-[
-"1:0",
-0.101
-]
-]
-},
-"lt": {
-"fair": 1.59,
-"label": "ТБ 3.5",
-"min_odds": 1.67,
-"minute": "26'",
-"p": 0.629,
-"result": "miss",
-"score": "2:0"
-}
-},
-{
-"sport": "football",
-"id": "401930243",
-"league": "Сборные · Товарищеские матчи",
-"kickoff": "2026-11-14T15:00:00+03:00",
-"home": "Сборная Тайваня",
-"away": "Сборная Кыргызстана",
-"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/14561.png",
-"al": "https://a.espncdn.com/i/teamlogos/countries/500/kgz.png",
-"hid": "14561",
-"aid": "6724",
-"bb": "https://betboom.ru/search?query=%D0%A1%D0%B1%D0%BE%D1%80%D0%BD%D0%B0%D1%8F&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
-"path": "soccer/fifa.friendly",
-"url": "live.html?s=football&p=soccer%2Ffifa.friendly&e=401930243&h=%D0%A1%D0%B1%D0%BE%D1%80%D0%BD%D0%B0%D1%8F+%D0%A2%D0%B0%D0%B9%D0%B2%D0%B0%D0%BD%D1%8F&a=%D0%A1%D0%B1%D0%BE%D1%80%D0%BD%D0%B0%D1%8F+%D0%9A%D1%8B%D1%80%D0%B3%D1%8B%D0%B7%D1%81%D1%82%D0%B0%D0%BD%D0%B0",
-"tip": "ТМ 3.5 · 1.80",
-"top": false,
-"bot": {
-"main": {
-"label": "ТМ 3.5",
-"p": 0.518,
-"odds": 1.8,
-"est": false
-},
-"bold": {
-"label": "Ф2 (−2.5)",
-"p": 0.42,
-"odds": 2.0,
-"est": false
-},
-"markets": [
-[
-"П1",
-0.054,
-14.0
-],
-[
-"Ничья",
-0.124,
-8.5
-],
-[
-"П2",
-0.822,
-1.143
-],
-[
-"1X",
-0.178,
-null
-],
-[
-"X2",
-0.946,
-null
-],
-[
-"ТБ 1.5",
-0.877,
-null
-],
-[
-"ТБ 2.5",
-0.695,
-null
-],
-[
-"ТМ 2.5",
-0.305,
-null
-],
-[
-"ТБ 3.5",
-0.482,
-1.952
-],
-[
-"Обе забьют — да",
-0.468,
-null
-],
-[
-"Обе забьют — нет",
-0.532,
-null
-],
-[
-"ИТ1 больше 1.5",
-0.146,
-null
-],
-[
-"ИТ2 больше 1.5",
-0.788,
-null
-],
-[
-"Ф1 (−1.5)",
-0.014,
-null
-],
-[
-"Ф2 (+1.5)",
-0.986,
-null
-]
-],
-"bar": [
-0.05377588761432187,
-0.12386678205857533,
-0.8223573303271026
-],
-"center": "Ожидаемые голы (xG) 0.7 : 2.9",
-"scores": [
-[
-"0:2",
-0.118
-],
-[
-"0:3",
-0.114
-],
-[
-"0:4",
-0.083
-]
-]
-},
-"lt": null
-},
-{
 "sport": "tennis",
 "id": "186552",
 "league": "Теннис · ATP",
@@ -4971,6 +4705,25 @@ null
 "bb": "https://betboom.ru/search?query=%D0%9A%D0%BB%D0%B8%D0%BF%D0%BF%D0%B5%D1%80%D1%81&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=basketball",
 "path": "basketball/nba",
 "url": "live.html?s=basketball&p=basketball%2Fnba&e=401909987&h=%D0%9A%D0%BB%D0%B8%D0%BF%D0%BF%D0%B5%D1%80%D1%81&a=%D0%A8%D0%B0%D1%80%D0%BB%D0%BE%D1%82%D1%82+%D0%A5%D0%BE%D1%80%D0%BD%D0%B5%D1%82%D1%81",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "basketball",
+"id": "401909988",
+"league": "США · NBA",
+"kickoff": "2026-11-16T01:00:00+03:00",
+"home": "Юта Джаз",
+"away": "Сан-Антонио Сперс",
+"hl": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/utah.png",
+"al": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/sa.png",
+"hid": "26",
+"aid": "24",
+"bb": "https://betboom.ru/search?query=%D0%94%D0%B6%D0%B0%D0%B7&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=basketball",
+"path": "basketball/nba",
+"url": "live.html?s=basketball&p=basketball%2Fnba&e=401909988&h=%D0%AE%D1%82%D0%B0+%D0%94%D0%B6%D0%B0%D0%B7&a=%D0%A1%D0%B0%D0%BD-%D0%90%D0%BD%D1%82%D0%BE%D0%BD%D0%B8%D0%BE+%D0%A1%D0%BF%D0%B5%D1%80%D1%81",
 "tip": "",
 "top": false,
 "bot": null,
