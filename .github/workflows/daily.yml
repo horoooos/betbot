@@ -74,7 +74,7 @@ jobs:
             started=$(date +%s)
             # жёсткий лимит на один проход: если какой-то сервис «повесит» запрос, цикл не встанет на часы
             timeout 900 python -W ignore run.py || echo "::warning::запуск бота завершился с ошибкой или превысил 15 минут"
-            for f in data/state.json data/matches.json data/other.json data/live.json data/results.csv data/value_bets.csv data/live_bets.csv data/express_bets.csv data/live_err.txt data/names_ru.json data/channel.json data/match_events.json data/teamids.json docs; do
+            for f in data/state.json data/matches.json data/other.json data/live.json data/results.csv data/value_bets.csv data/live_bets.csv data/express_bets.csv data/live_err.txt data/names_ru.json data/channel.json data/match_events.json data/teamids.json data/vk_rss_links.json docs; do
               if [ -e "$f" ]; then git add "$f"; fi
             done
             # vk_resume.txt is a one-shot signal. Stage its removal as well, or

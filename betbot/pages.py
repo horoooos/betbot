@@ -744,7 +744,7 @@ def _rss(news: list[dict], ms: list[dict], store: dict[int, dict], now: pd.Times
     items = []
     for n in news[:40]:
         body = "".join(f"<p>{H.escape(p)}</p>" for p in n["body"].split(chr(10) * 2) if p.strip())
-        items.append((pd.Timestamp(n["t"]), f"""<item><title>{x(n['title'])}</title><link>{SITE}{n['url']}</link><guid isPermaLink="true">{SITE}{n['url']}</guid>
+        items.append((pd.Timestamp(n["t"]), f"""<item><title>{x(n['title'])}</title><link>{x(n.get('rss_link') or SITE + n['url'])}</link><guid isPermaLink="true">{SITE}{n['url']}</guid>
 <pubDate>{format_datetime(pd.Timestamp(n['t']).to_pydatetime())}</pubDate><category>{x(SPORT_RU.get(n['sport'], 'Спорт'))}</category>
 <description>{x(n['desc'])}</description><content:encoded><![CDATA[{(f'<img src="{n["photo"]}">' if n.get('photo') else '') + body}]]></content:encoded>
 {f'<enclosure url="{x(n["photo"])}" type="image/jpeg" length="{int(n.get("photo_bytes") or 0)}"/>' if n.get('photo') else ''}</item>"""))
@@ -787,7 +787,20 @@ def _vk_rss(news: list[dict], now: pd.Timestamp) -> str:
         if since <= published <= now and now - published <= pd.Timedelta(hours=24):
             selected.append(entry)
     illustrated = []
+    format_file = DATA / "vk_rss_format_since.txt"
+    format_since = pd.Timestamp(format_file.read_text(encoding="utf-8").strip()) if format_file.exists() else None
+    links_file = DATA / "vk_rss_links.json"
+    links = json.loads(links_file.read_text(encoding="utf-8")) if links_file.exists() else {}
+    old_links = dict(links)
     for n in selected:
+        if format_since is not None and pd.Timestamp(n["t"]) >= format_since:
+            from .vk_rss import prepare
+            from .vk import ShortLinkError
+            try:
+                n = prepare(n, links)
+            except ShortLinkError:
+                print(f"  ! VK RSS: новость {n['id']} ожидает короткую ссылку")
+                continue
         image = DOCS / "rss-images" / f"{int(n['id'])}.jpg"
         if not image.exists():
             from .postimg import as_jpeg
@@ -805,6 +818,8 @@ def _vk_rss(news: list[dict], now: pd.Timestamp) -> str:
                 print(f"  ! VK RSS: изображение новости {n['id']} пока недоступно")
                 continue
         illustrated.append({**n, "photo": SITE + f"rss-images/{int(n['id'])}.jpg", "photo_bytes": image.stat().st_size})
+    if links != old_links:
+        links_file.write_text(json.dumps(links, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     return _rss(illustrated, [], {}, now, feed_name="rss-vk.xml")
 
 
