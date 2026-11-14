@@ -747,7 +747,7 @@ def _rss(news: list[dict], ms: list[dict], store: dict[int, dict], now: pd.Times
         items.append((pd.Timestamp(n["t"]), f"""<item><title>{x(n['title'])}</title><link>{SITE}{n['url']}</link><guid isPermaLink="true">{SITE}{n['url']}</guid>
 <pubDate>{format_datetime(pd.Timestamp(n['t']).to_pydatetime())}</pubDate><category>{x(SPORT_RU.get(n['sport'], 'Спорт'))}</category>
 <description>{x(n['desc'])}</description><content:encoded><![CDATA[{(f'<img src="{n["photo"]}">' if n.get('photo') else '') + body}]]></content:encoded>
-{f'<enclosure url="{x(n["photo"])}" type="image/jpeg" length="0"/>' if n.get('photo') else ''}</item>"""))
+{f'<enclosure url="{x(n["photo"])}" type="image/jpeg" length="{int(n.get("photo_bytes") or 0)}"/>' if n.get('photo') else ''}</item>"""))
     for m in [m for m in ms if not m.get("finished")][:30]:
         post = store.get(int(m["msg"])) if str(m.get("msg", "")).isdigit() else None
         when = pd.Timestamp(post["t"]) if post else pd.Timestamp(m["kickoff"]) - pd.Timedelta(hours=1)
@@ -780,7 +780,26 @@ def _vk_rss(news: list[dict], now: pd.Timestamp) -> str:
         raise ValueError("VK RSS start timestamp must include a timezone")
     selected = [n for n in news if n.get("photo") and since <= pd.Timestamp(n["t"]) <= now
                 and now - pd.Timestamp(n["t"]) <= pd.Timedelta(hours=24)]
-    return _rss(selected, [], {}, now, feed_name="rss-vk.xml")
+    illustrated = []
+    for n in selected:
+        image = DOCS / "rss-images" / f"{int(n['id'])}.jpg"
+        if not image.exists():
+            from .postimg import as_jpeg
+            try:
+                response = requests.get(n["photo"], headers=UA, timeout=15)
+                response.raise_for_status()
+                data = as_jpeg(response.content)
+                if not data:
+                    raise ValueError("not an image")
+                image.parent.mkdir(parents=True, exist_ok=True)
+                temporary = image.with_suffix(".tmp")
+                temporary.write_bytes(data)
+                temporary.replace(image)
+            except (requests.RequestException, ValueError):
+                print(f"  ! VK RSS: изображение новости {n['id']} пока недоступно")
+                continue
+        illustrated.append({**n, "photo": SITE + f"rss-images/{int(n['id'])}.jpg", "photo_bytes": image.stat().st_size})
+    return _rss(illustrated, [], {}, now, feed_name="rss-vk.xml")
 
 
 def build(stores: dict, results: pd.DataFrame, now: pd.Timestamp, max_pages: int = 25) -> dict:
