@@ -31,6 +31,12 @@ class EditorialDeliveryTests(unittest.TestCase):
                 body = feed.findtext('channel/item/{http://purl.org/rss/1.0/modules/content/}encoded')
                 self.assertIn('Заключительный абзац, который нельзя потерять.', body)
                 self.assertGreater(len(body), 1024)
+                self.assertIn('Заключительный абзац, который нельзя потерять.', feed.findtext('channel/item/description'))
+                article = ET.fromstring(pages._vk_rss(complete, pd.Timestamp('2026-11-14T11:00:00Z'), article=True))
+                article_body = article.findtext('channel/item/{http://purl.org/rss/1.0/modules/content/}encoded')
+                self.assertIn('<p>', article_body)
+                self.assertNotIn('<pre', article_body)
+                self.assertIn('Заключительный абзац, который нельзя потерять.', article_body)
 
     def test_match_visual_uses_exact_team_metadata_without_forecast_fields(self):
         source = {"one": {"home": {"ru": "Сборная Японии", "logo": "japan", "color": "000555"},

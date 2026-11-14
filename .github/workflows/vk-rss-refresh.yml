@@ -31,10 +31,11 @@ jobs:
           from betbot import pages
           store = {int(k): v for k, v in json.loads(Path('data/channel.json').read_text(encoding='utf-8'))['posts'].items()}
           Path('docs/rss-vk.xml').write_text(pages._vk_rss(pages._news(store), pd.Timestamp.now(tz='UTC')), encoding='utf-8')
+          Path('docs/rss-vk-article.xml').write_text(pages._vk_rss(pages._news(store), pd.Timestamp.now(tz='UTC'), article=True), encoding='utf-8')
           PY
           git config user.name betbot
           git config user.email betbot@users.noreply.github.com
-          git add data/vk_rss_links.json docs/rss-vk.xml docs/rss-images
+          git add data/vk_rss_links.json docs/rss-vk.xml docs/rss-vk-article.xml docs/rss-images
           if ! git diff --cached --quiet; then
             git commit -m 'Refresh VK RSS short links and formatting'
             git pull --rebase -X theirs origin main

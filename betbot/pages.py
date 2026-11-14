@@ -748,14 +748,16 @@ def _rss(news: list[dict], ms: list[dict], store: dict[int, dict], now: pd.Times
             # Keep paragraph breaks inside one text node. Importers that strip
             # tags and whitespace-only nodes otherwise concatenate <p> blocks.
             body = '<pre style="white-space:pre-wrap;font:inherit">' + H.escape(n["body"].strip()) + '</pre>'
+        elif feed_name == "rss-vk-article.xml":
+            body = "\n\n".join(f"<p>{H.escape(_plain(p)).replace(chr(10), '<br>')}</p>" for p in n["body"].split("\n\n") if p.strip())
         else:
             body = "".join(f"<p>{H.escape(p)}</p>" for p in n["body"].split(chr(10) * 2) if p.strip())
         photo_html = (f'<img src="{n["photo"]}">' if n.get('photo') else '')
-        if photo_html and feed_name == "rss-vk.xml":
+        if photo_html and feed_name.startswith("rss-vk"):
             photo_html += "\n\n"
         items.append((pd.Timestamp(n["t"]), f"""<item><title>{x(n['title'])}</title><link>{x(n.get('rss_link') or SITE + n['url'])}</link><guid isPermaLink="true">{SITE}{n['url']}</guid>
 <pubDate>{format_datetime(pd.Timestamp(n['t']).to_pydatetime())}</pubDate><category>{x(SPORT_RU.get(n['sport'], 'Спорт'))}</category>
-<description>{x(n['desc'])}</description><content:encoded><![CDATA[{photo_html + body}]]></content:encoded>
+<description>{x(_plain(n['body']) if feed_name.startswith('rss-vk') else n['desc'])}</description><content:encoded><![CDATA[{photo_html + body}]]></content:encoded>
 {f'<enclosure url="{x(n["photo"])}" type="image/jpeg" length="{int(n.get("photo_bytes") or 0)}"/>' if n.get('photo') else ''}</item>"""))
     for m in [m for m in ms if not m.get("finished")][:30]:
         post = store.get(int(m["msg"])) if str(m.get("msg", "")).isdigit() else None
@@ -772,8 +774,8 @@ def _rss(news: list[dict], ms: list[dict], store: dict[int, dict], now: pd.Times
     items.sort(key=lambda it: it[0], reverse=True)
     return f"""<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom">
-<channel><title>{'АИ СТАВИТ — свежие новости спорта' if feed_name == 'rss-vk.xml' else 'АИ СТАВИТ — прогнозы на спорт и новости'}</title><link>{SITE}</link>
-<description>{'Свежие новости спорта с иллюстрациями к публикациям.' if feed_name == 'rss-vk.xml' else 'Бесплатные прогнозы на футбол, хоккей, НБА и теннис от искусственного интеллекта, честная статистика и свежие новости спорта.'}</description>
+<channel><title>{'АИ СТАВИТ — свежие новости спорта' if feed_name.startswith('rss-vk') else 'АИ СТАВИТ — прогнозы на спорт и новости'}</title><link>{SITE}</link>
+<description>{'Свежие новости спорта с иллюстрациями к публикациям.' if feed_name.startswith('rss-vk') else 'Бесплатные прогнозы на футбол, хоккей, НБА и теннис от искусственного интеллекта, честная статистика и свежие новости спорта.'}</description>
 <language>ru</language><lastBuildDate>{format_datetime(now.to_pydatetime())}</lastBuildDate>
 <atom:link href="{SITE}{feed_name}" rel="self" type="application/rss+xml"/>
 <image><url>{SITE}icon-192.png</url><title>АИ СТАВИТ</title><link>{SITE}</link></image>
@@ -782,7 +784,7 @@ def _rss(news: list[dict], ms: list[dict], store: dict[int, dict], now: pd.Times
 """
 
 
-def _vk_rss(news: list[dict], now: pd.Timestamp) -> str:
+def _vk_rss(news: list[dict], now: pd.Timestamp, *, article=False) -> str:
     """Native VK import feed: only new illustrated news, never the old backlog."""
     since = pd.Timestamp((DATA / "vk_rss_since.txt").read_text(encoding="utf-8").strip())
     if since.tzinfo is None:
@@ -829,7 +831,7 @@ def _vk_rss(news: list[dict], now: pd.Timestamp) -> str:
         illustrated.append({**n, "photo": SITE + f"rss-images/{int(n['id'])}.jpg", "photo_bytes": image.stat().st_size})
     if links != old_links:
         links_file.write_text(json.dumps(links, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    return _rss(illustrated, [], {}, now, feed_name="rss-vk.xml")
+    return _rss(illustrated, [], {}, now, feed_name="rss-vk-article.xml" if article else "rss-vk.xml")
 
 
 def build(stores: dict, results: pd.DataFrame, now: pd.Timestamp, max_pages: int = 25) -> dict:
@@ -899,6 +901,7 @@ def build(stores: dict, results: pd.DataFrame, now: pd.Timestamp, max_pages: int
     try:
         _write(DOCS / "rss.xml", _rss(news, ms, store, now))
         _write(DOCS / "rss-vk.xml", _vk_rss(news, now))
+        _write(DOCS / "rss-vk-article.xml", _vk_rss(news, now, article=True))
     except Exception as e:
         print(f"  ! RSS не собралась: {e}")
     _write(DOCS / "sitemap.xml", "\n".join(sm))
