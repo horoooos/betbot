@@ -1536,7 +1536,7 @@ null
 "min_odds": 1.7,
 "minute": "26'",
 "p": 0.617,
-"result": null,
+"result": "miss",
 "score": "0:0"
 }
 },
@@ -1668,7 +1668,7 @@ null
 "min_odds": 1.66,
 "minute": "25'",
 "p": 0.633,
-"result": null,
+"result": "miss",
 "score": "0:0"
 }
 },
@@ -1805,7 +1805,7 @@ null
 "min_odds": 1.66,
 "minute": "26'",
 "p": 0.632,
-"result": null,
+"result": "miss",
 "score": "2:0"
 }
 },
@@ -3016,7 +3016,15 @@ null
 ],
 "center": "Ожидаемые голы 2.9 : 3.6"
 },
-"lt": null
+"lt": {
+"fair": 1.4,
+"label": "ТБ 5.5",
+"min_odds": 1.47,
+"minute": "2-й период",
+"p": 0.716,
+"result": null,
+"score": "3:0"
+}
 },
 {
 "sport": "football",

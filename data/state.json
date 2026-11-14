@@ -519,7 +519,10 @@
   "https://www.sport-express.ru/hockey/nhl/news/karolina-sietl-schet-i-rezultat-matcha-regulyarnogo-chempionata-nhl-14-noyabrya-2026-2474939/",
   "https://www.sport-express.ru/hockey/nhl/news/svechnikov-stal-vtoroy-zvezdoy-matcha-s-sietlom-2474950/",
   "https://www.sport-express.ru/tennis/wta/news/mirra-andreeva-dzhessika-pegula-schet-pervogo-seta-polufinala-itogovogo-turnira-wta-14-noyabrya-2026-2474949/",
-  "https://www.sport-express.ru/football/spain/news/glava-rfef-louzan-o-diskvalifikacii-ovono-na-12-matchey-nado-uvazhat-eto-reshenie-2474961/"
+  "https://www.sport-express.ru/football/spain/news/glava-rfef-louzan-o-diskvalifikacii-ovono-na-12-matchey-nado-uvazhat-eto-reshenie-2474961/",
+  "https://www.sport-express.ru/football/nation-league/news/portugaliya-daniya-schet-i-rezultat-matcha-5-tura-ligi-naciy-14-noyabrya-2026-2474964/",
+  "https://www.sport-express.ru/football/nation-league/news/avstriya-irlandiya-schet-1-0-rezultat-matcha-ligi-naciy-14-noyabrya-2026-2474965/",
+  "https://www.sport-express.ru/tennis/wta/news/mirra-andreeva-dzhessika-pegula-rezultat-polufinala-itogovogo-turnira-wta-14-noyabrya-2026-2474963/"
  ],
  "news_i": 2,
  "oddspapi": {
@@ -1587,7 +1590,7 @@
  "value_day": "2026-11-14",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-14",
- "site_stamp": "1001|5981|2026-11-15 00",
+ "site_stamp": "1006|5992|2026-11-15 00",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1623,7 +1626,9 @@
      "fcd116",
      "ffffff"
     ],
-    "label": "Победа: Сборная Польши"
+    "label": "Победа: Сборная Польши",
+    "win": false,
+    "score": "2:1"
    },
    {
     "sport": "hockey",
@@ -1712,12 +1717,12 @@
   ],
   "odds": 12.465056419301641,
   "day": "2026-11-14",
-  "done": false
+  "done": true
  },
  "streak_day": {
   "2026-11-12": 1
  },
- "news_next": "2026-11-15T00:41:04.727767+03:00",
+ "news_next": "2026-11-15T00:47:05.638078+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1736,7 +1741,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 5981,
+ "dz_last": 5992,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -1887,7 +1892,8 @@
   "5947",
   "5954",
   "5956",
-  "5971"
+  "5971",
+  "5987"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -1916,11 +1922,12 @@
   "2026-11-14:начало:72e429bdfedcf2e81cb5c24f",
   "2026-11-14:начало:8530690035c08f73f52849fc",
   "2026-11-14:экспресс:1aeee2377175055cfc140ae4",
-  "2026-11-14:начало:f19d86c82be46401c5b129db"
+  "2026-11-14:начало:f19d86c82be46401c5b129db",
+  "2026-11-14:экспресс:5382401198a0f8011208e4c1"
  ],
  "dz_last_delivery": {
-  "source_id": 5971,
-  "message_id": 575,
-  "kind": "начало"
+  "source_id": 5987,
+  "message_id": 576,
+  "kind": "экспресс"
  }
 }
