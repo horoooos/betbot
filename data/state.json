@@ -5,7 +5,7 @@
  },
  "learned": "2026-11-14",
  "schedule_day": "2026-11-14",
- "content_slot": "2026-11-14-13",
+ "content_slot": "2026-11-14-16",
  "news_seen": [
   "https://www.sport-express.ru/hockey/nhl/news/rossiyane-v-nhl-11-noyabrya-ovechkin-kaprizov-i-statistika-vseh-igrokov-2473641/",
   "https://www.sport-express.ru/hockey/nhl/news/shveycarskiy-forvard-sent-luisa-pius-suter-odnovremenno-zabil-100-gol-i-nabral-200-ochko-v-nhl-11-noyabrya-2026-2473625/",
@@ -1571,7 +1571,7 @@
  "value_day": "2026-11-14",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-14",
- "site_stamp": "960|5766|2026-11-14 15",
+ "site_stamp": "960|5768|2026-11-14 16",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1724,7 +1724,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 5766,
+ "dz_last": 5768,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -1851,7 +1851,8 @@
   "5739",
   "5755",
   "5759",
-  "5761"
+  "5761",
+  "5767"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -1859,11 +1860,21 @@
   "2026-11-14:начало:d62c8db5ec7b519c3a95b20d",
   "2026-11-14:начало:b62f59cf39e2e44901fb6de2",
   "2026-11-14:начало:de69470fbb13535f92f2c202",
-  "2026-11-14:новость:56fc43a1d399ddff14369bf2"
+  "2026-11-14:новость:56fc43a1d399ddff14369bf2",
+  "2026-11-14:матчи:6d4f5505ae0ac991128f08b4"
  ],
  "dz_last_delivery": {
-  "source_id": 5761,
-  "message_id": 554,
-  "kind": "новость"
+  "source_id": 5767,
+  "message_id": 555,
+  "kind": "матчи"
+ },
+ "mod_poll": {
+  "key": "SP2|401883134",
+  "id": "401883134",
+  "poll": 5768,
+  "post": 5767,
+  "home": "Real Sociedad II",
+  "away": "Спортинг",
+  "kickoff": "2026-11-14T18:15:00+03:00"
  }
 }
