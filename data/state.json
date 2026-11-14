@@ -1568,7 +1568,7 @@
  "value_day": "2026-11-14",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-12",
- "site_stamp": "959|5728|2026-11-14 11",
+ "site_stamp": "959|5729|2026-11-14 11",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1719,8 +1719,8 @@
  "tg_offset": 727618641,
  "push_watch": {},
  "news_video": true,
- "vk_last": 5727,
- "dz_last": 5728,
+ "vk_last": 5728,
+ "dz_last": 5729,
  "vk_err": null,
  "news_forced": "now",
  "vk_mode": "photo",
@@ -1823,15 +1823,15 @@
   }
  ],
  "vk_reserve_mode_initialized": true,
- "vk_at_ts": 1794644368.8731537,
+ "vk_at_ts": 1794645699.9298856,
  "vk_photo_source": "archive",
  "vk_hour": {
   "h": "2026-11-14-08",
-  "n": 1
+  "n": 2
  },
  "vk_day": {
   "d": "2026-11-14",
-  "n": 15
+  "n": 16
  },
  "vk_comment_err": null,
  "vk_fresh_err": "фото стены: попытка 1: VK photos.getWallUploadServer: 9 Flood control",
