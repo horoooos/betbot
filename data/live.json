@@ -460,7 +460,8 @@
    "min_odds": 1.69,
    "minute": "26'",
    "score": "2:0",
-   "sport": "football"
+   "sport": "football",
+   "result": "miss"
   }
  },
  "FRI|401930236": {
@@ -469,5 +470,12 @@
   "as": 0,
   "goals": 1,
   "kickoff": "2026-11-14T15:00:00+03:00"
+ },
+ "ATP|186552": {
+  "msg": 5759,
+  "hs": 0,
+  "as": 0,
+  "goals": 0,
+  "kickoff": "2026-11-14T15:10:00+03:00"
  }
 }
