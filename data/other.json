@@ -7631,31 +7631,31 @@
   "kickoff": "2026-11-14T15:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Sat, November 14th at 7:00 AM EST",
   "home": {
-   "id": "2946",
-   "name": "Taylor Fritz",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/2946.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/usa.png"
    ],
+   "id": "2946",
+   "name": "Taylor Fritz",
    "country": "USA",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
    "ru": "Тейлор Фриц"
   },
   "away": {
-   "id": "4010",
-   "name": "Thiago Agustin Tirante",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/4010.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/arg.png"
    ],
+   "id": "4010",
+   "name": "Thiago Agustin Tirante",
    "country": "Argentina",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
@@ -7715,7 +7715,9 @@
   "btn": 4,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null
  },
  "DOTA|1793324": {
   "status": "skipped",
