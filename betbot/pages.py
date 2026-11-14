@@ -736,7 +736,7 @@ def _pred_index(ms: list[dict], now: pd.Timestamp) -> str:
 
 # ── сборка ────────────────────────────────────────────────────────────────────
 
-def _rss(news: list[dict], ms: list[dict], store: dict[int, dict], now: pd.Timestamp) -> str:
+def _rss(news: list[dict], ms: list[dict], store: dict[int, dict], now: pd.Timestamp, *, feed_name="rss.xml") -> str:
     """docs/rss.xml — последние новости и прогнозы (RSS 2.0, полный текст в content:encoded).
     Её забирают Дзен, читалки новостей, агрегаторы и поисковики."""
     from email.utils import format_datetime
@@ -763,14 +763,24 @@ def _rss(news: list[dict], ms: list[dict], store: dict[int, dict], now: pd.Times
     items.sort(key=lambda it: it[0], reverse=True)
     return f"""<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom">
-<channel><title>АИ СТАВИТ — прогнозы на спорт и новости</title><link>{SITE}</link>
-<description>Бесплатные прогнозы на футбол, хоккей, НБА и теннис от искусственного интеллекта, честная статистика и свежие новости спорта.</description>
+<channel><title>{'АИ СТАВИТ — свежие новости спорта' if feed_name == 'rss-vk.xml' else 'АИ СТАВИТ — прогнозы на спорт и новости'}</title><link>{SITE}</link>
+<description>{'Свежие новости спорта с иллюстрациями к публикациям.' if feed_name == 'rss-vk.xml' else 'Бесплатные прогнозы на футбол, хоккей, НБА и теннис от искусственного интеллекта, честная статистика и свежие новости спорта.'}</description>
 <language>ru</language><lastBuildDate>{format_datetime(now.to_pydatetime())}</lastBuildDate>
-<atom:link href="{SITE}rss.xml" rel="self" type="application/rss+xml"/>
+<atom:link href="{SITE}{feed_name}" rel="self" type="application/rss+xml"/>
 <image><url>{SITE}icon-192.png</url><title>АИ СТАВИТ</title><link>{SITE}</link></image>
 {chr(10).join(it[1] for it in items[:60])}
 </channel></rss>
 """
+
+
+def _vk_rss(news: list[dict], now: pd.Timestamp) -> str:
+    """Native VK import feed: only new illustrated news, never the old backlog."""
+    since = pd.Timestamp((DATA / "vk_rss_since.txt").read_text(encoding="utf-8").strip())
+    if since.tzinfo is None:
+        raise ValueError("VK RSS start timestamp must include a timezone")
+    selected = [n for n in news if n.get("photo") and since <= pd.Timestamp(n["t"]) <= now
+                and now - pd.Timestamp(n["t"]) <= pd.Timedelta(hours=24)]
+    return _rss(selected, [], {}, now, feed_name="rss-vk.xml")
 
 
 def build(stores: dict, results: pd.DataFrame, now: pd.Timestamp, max_pages: int = 25) -> dict:
@@ -839,6 +849,7 @@ def build(stores: dict, results: pd.DataFrame, now: pd.Timestamp, max_pages: int
     sm.append("</urlset>")
     try:
         _write(DOCS / "rss.xml", _rss(news, ms, store, now))
+        _write(DOCS / "rss-vk.xml", _vk_rss(news, now))
     except Exception as e:
         print(f"  ! RSS не собралась: {e}")
     _write(DOCS / "sitemap.xml", "\n".join(sm))

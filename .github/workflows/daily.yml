@@ -54,7 +54,7 @@ jobs:
           VK_USER_TOKEN: ${{ secrets.VK_USER_TOKEN }}
           VK_TOKEN: ${{ secrets.VK_TOKEN }}
           VK_STORIES_ENABLED: "1"
-          VK_WALL_ENABLED: "1"
+          VK_WALL_ENABLED: ${{ vars.VK_WALL_ENABLED || '1' }}
           VK_WALL_REQUIRE_FRESH: "1"
           VK_WALL_PREFER_FRESH: "1"
           VK_WALL_FRESH_NOT_BEFORE: ${{ vars.VK_WALL_FRESH_NOT_BEFORE }}
