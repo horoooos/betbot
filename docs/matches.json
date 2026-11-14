@@ -1,214 +1,6 @@
 [
 {
 "sport": "basketball",
-"id": "401909303",
-"league": "США · NBA",
-"kickoff": "2026-11-14T06:00:00+03:00",
-"home": "Сакраменто Кингз",
-"away": "Портленд",
-"hl": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/sac.png",
-"al": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/por.png",
-"hid": "23",
-"aid": "22",
-"bb": "https://betboom.ru/search?query=%D0%A1%D0%B0%D0%BA%D1%80%D0%B0%D0%BC%D0%B5%D0%BD%D1%82%D0%BE&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=basketball",
-"path": "basketball/nba",
-"url": "live.html?s=basketball&p=basketball%2Fnba&e=401909303&h=%D0%A1%D0%B0%D0%BA%D1%80%D0%B0%D0%BC%D0%B5%D0%BD%D1%82%D0%BE+%D0%9A%D0%B8%D0%BD%D0%B3%D0%B7&a=%D0%9F%D0%BE%D1%80%D1%82%D0%BB%D0%B5%D0%BD%D0%B4",
-"tip": "ТБ 229.5 · 1.89",
-"top": false,
-"bot": {
-"main": {
-"label": "ТБ 229.5",
-"p": 0.5,
-"odds": 1.89,
-"est": false
-},
-"bold": null,
-"markets": [
-[
-"П1 (с ОТ)",
-0.191,
-4.61
-],
-[
-"П2 (с ОТ)",
-0.809,
-1.214
-],
-[
-"Ф1 (+10.5)",
-0.5,
-1.87
-],
-[
-"Ф2 (-10.5)",
-0.5,
-1.952
-],
-[
-"ТБ 222.5",
-0.66,
-null
-],
-[
-"ТМ 222.5",
-0.34,
-null
-],
-[
-"ТБ 229.5",
-0.5,
-1.893
-],
-[
-"ТМ 229.5",
-0.5,
-1.926
-],
-[
-"ТБ 236.5",
-0.34,
-null
-],
-[
-"ТМ 236.5",
-0.66,
-null
-]
-],
-"bar": [
-0.19078695285251068,
-0,
-0.8092130471474893
-],
-"center": "Ожидаемый счёт 110 : 120"
-},
-"lt": null
-},
-{
-"sport": "hockey",
-"id": "401892707",
-"league": "США · NHL",
-"kickoff": "2026-11-14T06:00:00+03:00",
-"home": "Вегас",
-"away": "Нэшвилл",
-"hl": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/vgk.png",
-"al": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/nsh.png",
-"hid": "37",
-"aid": "27",
-"bb": "https://betboom.ru/search?query=%D0%92%D0%B5%D0%B3%D0%B0%D1%81&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=hockey",
-"path": "hockey/nhl",
-"url": "live.html?s=hockey&p=hockey%2Fnhl&e=401892707&h=%D0%92%D0%B5%D0%B3%D0%B0%D1%81&a=%D0%9D%D1%8D%D1%88%D0%B2%D0%B8%D0%BB%D0%BB",
-"tip": "ТМ 6.5 · 1.74",
-"top": false,
-"bot": {
-"main": {
-"label": "ТМ 6.5",
-"p": 0.551,
-"odds": 1.74,
-"est": false
-},
-"bold": null,
-"markets": [
-[
-"П1 (с ОТ и буллитами)",
-0.604,
-1.588
-],
-[
-"П2 (с ОТ и буллитами)",
-0.396,
-2.42
-],
-[
-"П1 в основное время",
-0.522,
-null
-],
-[
-"Ничья в основное время",
-0.157,
-null
-],
-[
-"П2 в основное время",
-0.321,
-null
-],
-[
-"ТБ 5.5",
-0.608,
-null
-],
-[
-"ТМ 5.5",
-0.392,
-null
-],
-[
-"ТБ 6.5",
-0.449,
-2.14
-],
-[
-"ТМ 6.5",
-0.551,
-1.741
-],
-[
-"ТБ 7.5",
-0.304,
-null
-],
-[
-"ТМ 7.5",
-0.696,
-null
-],
-[
-"ИТ1 больше 1.5",
-0.864,
-null
-],
-[
-"ИТ1 больше 2.5",
-0.679,
-null
-],
-[
-"ИТ1 больше 3.5",
-0.463,
-null
-],
-[
-"ИТ2 больше 1.5",
-0.776,
-null
-],
-[
-"ИТ2 больше 2.5",
-0.541,
-null
-]
-],
-"bar": [
-0.6037877616445766,
-0,
-0.3962122383554233
-],
-"center": "Ожидаемые голы 3.5 : 2.8"
-},
-"lt": {
-"fair": 1.41,
-"label": "1X (осн. время)",
-"min_odds": 1.48,
-"minute": "2-й период",
-"p": 0.708,
-"result": "hit",
-"score": "1:1"
-}
-},
-{
-"sport": "basketball",
 "id": "401909304",
 "league": "США · NBA",
 "kickoff": "2026-11-14T06:30:00+03:00",
@@ -2012,6 +1804,44 @@ null
 "bb": "https://betboom.ru/search?query=%D0%A2%D0%B1%D0%B4&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=tennis",
 "path": "tennis/wta",
 "url": "live.html?s=tennis&p=tennis%2Fwta&e=187442&h=%D0%A2%D0%B1%D0%B4&a=%D0%A2%D0%B1%D0%B4",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "football",
+"id": "401883113",
+"league": "Испания · Сегунда",
+"kickoff": "2026-11-15T16:00:00+03:00",
+"home": "Tenerife",
+"away": "Ceuta",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/245.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/5404.png",
+"hid": "245",
+"aid": "5404",
+"bb": "https://betboom.ru/search?query=%D0%A2%D0%B5%D0%BD%D0%B5%D1%80%D0%B8%D1%84%D0%B5&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/esp.2",
+"url": "live.html?s=football&p=soccer%2Fesp.2&e=401883113&h=Tenerife&a=Ceuta",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "tennis",
+"id": "187505",
+"league": "Теннис · ATP",
+"kickoff": "2026-11-15T16:00:00+03:00",
+"home": "Александр Зверев",
+"away": "Рафаэль Ходар",
+"hl": "https://a.espncdn.com/i/teamlogos/countries/500/ger.png",
+"al": "https://a.espncdn.com/i/teamlogos/countries/500/esp.png",
+"hid": "2375",
+"aid": "12657",
+"bb": "https://betboom.ru/search?query=%D0%97%D0%B2%D0%B5%D1%80%D0%B5%D0%B2&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=tennis",
+"path": "tennis/atp",
+"url": "live.html?s=tennis&p=tennis%2Fatp&e=187505&h=%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80+%D0%97%D0%B2%D0%B5%D1%80%D0%B5%D0%B2&a=%D0%A0%D0%B0%D1%84%D0%B0%D1%8D%D0%BB%D1%8C+%D0%A5%D0%BE%D0%B4%D0%B0%D1%80",
 "tip": "",
 "top": false,
 "bot": null,
