@@ -1,4 +1,28 @@
-# VK publishing status — 2026-11-13
+# VK publishing status
+
+## Current state: 2026-11-14 (authoritative)
+
+- Native VK RSS import has produced actual visible current news images, confirmed
+  by the owner. API wall publishing is disabled through VK_WALL_ENABLED=0.
+- Native ordinary RSS posts truncate long bodies. The complete Telegram caption
+  and continuation are present in RSS; this is not resolved for normal wall posts.
+  wall.edit access diagnostics: community error 27, personal token error 9.
+- rss-vk.xml now keeps real paragraph breaks within a single HTML text node and
+  exports complete descriptions. New posts after vk_rss_format_since.txt receive
+  vk.cc links, sport emoji, per-paragraph formatting and topic/surname hashtags.
+  Incomplete Telegram news waits for its continuation before entering RSS.
+- Optional rss-vk-article.xml is prepared for full-text VK articles, using normal
+  HTML paragraphs and original images. It starts at vk_rss_article_since.txt to
+  avoid replaying old news. Switching VK to this format awaits the owner's choice.
+- Dzen mirror excludes single forecasts, full analyses, goals and live betting
+  noise. No daily quota. Match-start covers now use actual team logos/flags or
+  player portraits and never contain betting predictions or odds.
+- The existing mirror post https://t.me/aistavvit_dzen/551 was updated with the
+  new Japan/Brazil cover and the live image was visually verified.
+- The owner will delete VK test posts personally; do not delete them automatically.
+
+Older diagnostic history follows; earlier archive-fallback settings are superseded.
+
 
 ## Confirmed working
 
