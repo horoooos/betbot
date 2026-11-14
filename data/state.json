@@ -7,10 +7,6 @@
  "schedule_day": "2026-11-14",
  "content_slot": "2026-11-14-16",
  "news_seen": [
-  "https://www.sport-express.ru/hockey/nhl/news/rossiyane-v-nhl-11-noyabrya-ovechkin-kaprizov-i-statistika-vseh-igrokov-2473641/",
-  "https://www.sport-express.ru/hockey/nhl/news/shveycarskiy-forvard-sent-luisa-pius-suter-odnovremenno-zabil-100-gol-i-nabral-200-ochko-v-nhl-11-noyabrya-2026-2473625/",
-  "https://www.sport-express.ru/hockey/nhl/news/napadayuschiy-vinnipega-mark-shayfli-sdelal-550-peredachu-v-nhl-i-sravnyalsya-s-haverchukom-i-uilerom-11-noyabrya-2026-2473624/",
-  "https://www.sport-express.ru/hockey/nhl/news/18-letniy-napadayuschiy-gevin-makkenna-stal-tretim-igrokom-toronto-s-13-ochkami-za-pervye-20-matchey-nhl-2473623/",
   "https://www.sport-express.ru/hockey/nhl/news/kuinn-hyuz-stal-vtorym-zaschitnikom-v-istorii-nhl-po-skorosti-nabora-80-ochkov-za-odin-klub-minnesota-11-noyabrya-2026-2473622/",
   "https://www.sport-express.ru/football/rus_d1/news/v-urale-podderzhali-ideyu-rasshireniya-rpl-u-nas-chetyre-komandy-iz-16-mozhet-vyletet-tak-byt-ne-dolzhno-2473662/",
   "https://www.sport-express.ru/football/rus_d1/news/v-urale-zayavili-chto-dovolny-rabotoy-yurana-poyavilas-igra-himiya-my-dolgo-etogo-zhdali-2473651/",
@@ -509,9 +505,10 @@
   "https://www.sport-express.ru/football/italy/news/vladelec-milana-zayavil-chto-nikogda-ne-prodast-klub-2474804/",
   "https://www.sport-express.ru/basketball/russia/news/babkina-o-basketbolnoy-dinastii-papa-igral-v-odnoy-komande-s-kirilenko-2474801/",
   "https://www.sport-express.ru/basketball/news/babkina-rasskazala-o-svoih-uvlecheniyah-vne-parketa-sobiranie-okamenelostey-zhivopis-verhovaya-ezda-2474798/",
-  "https://www.sport-express.ru/basketball/russia/news/aleksandra-babkina-nazvala-svoih-lyubimyh-igrokov-2474796/"
+  "https://www.sport-express.ru/basketball/russia/news/aleksandra-babkina-nazvala-svoih-lyubimyh-igrokov-2474796/",
+  "xertion-o-mouz-my-postavili-pered-soboi-tsel-vyigrat-odin-iz-trekh-turnirov"
  ],
- "news_i": 4,
+ "news_i": 0,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1705,7 +1702,7 @@
  "streak_day": {
   "2026-11-12": 1
  },
- "news_next": "2026-11-14T16:02:25.782014+03:00",
+ "news_next": "2026-11-14T16:35:25.316459+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1775,7 +1772,8 @@
   "https://images.cybersport.ru/images/as-is/plain/92/921c60a5-ba4b-4d40-a8bb-02c217ba1bff.jpg",
   "https://upload.wikimedia.org/wikipedia/commons/9/9a/Amkar-Loco_%281%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
   "https://upload.wikimedia.org/wikipedia/commons/6/6d/Dinamo-Rostov15_%283%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-  "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e0/%22La_Gazzetta_dello_Sport%22_-_diffusione_media_del_quotidiano_-_avarage_daily_newspaper_circulation_%281976-%29.png/1280px-%22La_Gazzetta_dello_Sport%22_-_diffusione_media_del_quotidiano_-_avarage_daily_newspaper_circulation_%281976-%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e0/%22La_Gazzetta_dello_Sport%22_-_diffusione_media_del_quotidiano_-_avarage_daily_newspaper_circulation_%281976-%29.png/1280px-%22La_Gazzetta_dello_Sport%22_-_diffusione_media_del_quotidiano_-_avarage_daily_newspaper_circulation_%281976-%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "https://images.cybersport.ru/images/as-is/plain/f9/f9155943-0ee2-468d-82b4-c11231e8b56a.jpg"
  ],
  "indexnow_day": "2026-11-14",
  "vk_wall_err": null,
@@ -1852,7 +1850,8 @@
   "5755",
   "5759",
   "5761",
-  "5767"
+  "5767",
+  "5769"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -1861,12 +1860,13 @@
   "2026-11-14:начало:b62f59cf39e2e44901fb6de2",
   "2026-11-14:начало:de69470fbb13535f92f2c202",
   "2026-11-14:новость:56fc43a1d399ddff14369bf2",
-  "2026-11-14:матчи:6d4f5505ae0ac991128f08b4"
+  "2026-11-14:матчи:6d4f5505ae0ac991128f08b4",
+  "2026-11-14:новость:10e4bb614e45e33f9f8e58af"
  ],
  "dz_last_delivery": {
-  "source_id": 5767,
-  "message_id": 555,
-  "kind": "матчи"
+  "source_id": 5769,
+  "message_id": 556,
+  "kind": "новость"
  },
  "mod_poll": {
   "key": "SP2|401883134",
