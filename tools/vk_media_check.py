@@ -111,6 +111,46 @@ def link_preview(group, reader, parse_token=None):
 
 def main():
     mode = os.environ.get("VK_MEDIA_MODE", "access")
+    if mode == "rss-watch":
+        from betbot.vk_wall_events import PhotoMonitor
+        import xml.etree.ElementTree as ET
+        monitor = PhotoMonitor(os.environ.get("VK_TOKEN", ""))
+        monitor.start()
+        deadline = time.monotonic() + 300
+        print("WATCHING_NATIVE_RSS: true", flush=True)
+        while time.monotonic() < deadline:
+            try:
+                response = requests.get(monitor.server["server"], params={"act": "a_check", "key": monitor.server["key"],
+                                        "ts": monitor.server["ts"], "wait": 15}, timeout=25)
+                response.raise_for_status()
+                result = response.json()
+            except (requests.RequestException, ValueError):
+                raise RuntimeError("Чтение событий VK недоступно; ключ скрыт") from None
+            monitor.server["ts"] = result.get("ts", monitor.server["ts"])
+            if result.get("failed") == 1:
+                continue
+            if result.get("failed"):
+                raise RuntimeError("VK не дал прочитать события импорта")
+            for event in result.get("updates", []):
+                if event.get("type") != "wall_post_new" or event.get("group_id") != vk.GROUP_ID:
+                    continue
+                post = event.get("object") or {}
+                attachments = post.get("attachments") or []
+                titles = []
+                feed = requests.get(vk.SITE + "rss-vk.xml", timeout=20)
+                feed.raise_for_status()
+                titles = [item.findtext("title", "") for item in ET.fromstring(feed.content).findall("channel/item")]
+                content = post.get("text", "") + " " + " ".join(str(a.get("link", {}).get("title", "")) + " " +
+                          str(a.get("article", {}).get("title", "")) for a in attachments)
+                match = any(title and title.casefold() in content.casefold() for title in titles)
+                print("WALL_EVENT_URL:", f"https://vk.com/wall-{vk.GROUP_ID}_{post.get('id')}", flush=True)
+                print("MATCHED_RSS_TITLE:", match, flush=True)
+                print("ATTACHMENT_TYPES:", [a.get("type") for a in attachments], flush=True)
+                print("LINK_WITH_PHOTO:", any(a.get("type") == "link" and bool(a.get("link", {}).get("photo")) for a in attachments), flush=True)
+                if match:
+                    return
+        print("NATIVE_RSS_EVENT_NOT_YET_OBSERVED: true", flush=True)
+        return
     if mode == "rss-enable":
         import xml.etree.ElementTree as ET
         feed_url = vk.SITE + "rss-vk.xml"
