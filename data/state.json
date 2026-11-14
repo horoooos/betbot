@@ -1719,7 +1719,7 @@
  "tg_offset": 727618641,
  "push_watch": {},
  "news_video": true,
- "vk_last": 5721,
+ "vk_last": 5722,
  "dz_last": 5723,
  "vk_err": null,
  "news_forced": "now",
@@ -1768,7 +1768,7 @@
   "https://upload.wikimedia.org/wikipedia/commons/8/8c/Olga_Smorodskaya.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
  ],
  "indexnow_day": "2026-11-14",
- "vk_wall_err": null,
+ "vk_wall_err": "5722: попытка 1: VK photos.getWallUploadServer: 9 Flood control",
  "shorts_day": "2026-11-12",
  "shorts_err": {
   "youtube": "YouTube не подключён (нет секретов YT_*)"
@@ -1797,7 +1797,7 @@
  },
  "vk_short_err": null,
  "vk_photos": [],
- "vk_photo_until": 1794622404.8964572,
+ "vk_photo_until": 1794644243.1147308,
  "vk_photo_cursor": {},
  "vk_story_last": 5496,
  "vk_story_err": "VK stories: сервер не вернул upload_result",
@@ -1819,18 +1819,18 @@
   }
  ],
  "vk_reserve_mode_initialized": true,
- "vk_at_ts": 1794639719.4326825,
+ "vk_at_ts": 1794640647.6748393,
  "vk_photo_source": "archive",
  "vk_hour": {
   "h": "2026-11-14-07",
-  "n": 1
+  "n": 2
  },
  "vk_day": {
   "d": "2026-11-14",
-  "n": 13
+  "n": 14
  },
  "vk_comment_err": null,
  "vk_fresh_err": "фото стены: попытка 1: VK photos.getWallUploadServer: 9 Flood control",
- "vk_fresh_retry_at": 1794640404.8951557,
+ "vk_fresh_retry_at": 1794662243.1134844,
  "vk_story_retry_at": 1794643401.7215512
 }
