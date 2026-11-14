@@ -1,132 +1,6 @@
 [
 {
 "sport": "football",
-"id": "401883134",
-"league": "Испания · Сегунда",
-"kickoff": "2026-11-14T18:15:00+03:00",
-"home": "Real Sociedad II",
-"away": "Спортинг",
-"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/20983.png",
-"al": "https://a.espncdn.com/i/teamlogos/soccer/500/3788.png",
-"hid": "20983",
-"aid": "3788",
-"bb": "https://betboom.ru/search?query=%D0%A1%D0%BE%D1%81%D0%B8%D0%B5%D0%B4%D0%B0%D0%B4&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
-"path": "soccer/esp.2",
-"url": "live.html?s=football&p=soccer%2Fesp.2&e=401883134&h=Real+Sociedad+II&a=%D0%A1%D0%BF%D0%BE%D1%80%D1%82%D0%B8%D0%BD%D0%B3",
-"tip": "ТМ 2.5 · 1.77",
-"top": false,
-"bot": {
-"main": {
-"label": "ТМ 2.5",
-"p": 0.525,
-"odds": 1.77,
-"est": false
-},
-"bold": null,
-"markets": [
-[
-"П1",
-0.384,
-2.15
-],
-[
-"Ничья",
-0.285,
-3.3
-],
-[
-"П2",
-0.331,
-3.5
-],
-[
-"1X",
-0.669,
-null
-],
-[
-"X2",
-0.616,
-null
-],
-[
-"ТБ 1.5",
-0.737,
-null
-],
-[
-"ТБ 2.5",
-0.475,
-1.87
-],
-[
-"ТМ 2.5",
-0.525,
-1.87
-],
-[
-"ТБ 3.5",
-0.258,
-null
-],
-[
-"Обе забьют — да",
-0.533,
-null
-],
-[
-"Обе забьют — нет",
-0.467,
-null
-],
-[
-"ИТ1 больше 1.5",
-0.388,
-null
-],
-[
-"ИТ2 больше 1.5",
-0.348,
-null
-],
-[
-"Ф1 (−1.5)",
-0.18,
-null
-],
-[
-"Ф2 (+1.5)",
-0.82,
-null
-]
-],
-"bar": [
-0.3838609818997743,
-0.2851912382738711,
-0.3309477798263548
-],
-"center": "Ожидаемые голы (xG) 1.3 : 1.2",
-"scores": [
-[
-"1:1",
-0.136
-],
-[
-"1:0",
-0.092
-],
-[
-"0:0",
-0.086
-]
-],
-"corners": 9.0,
-"cards": 5.2
-},
-"lt": null
-},
-{
-"sport": "football",
 "id": "401861164",
 "league": "Сборные · Лига наций",
 "kickoff": "2026-11-14T20:00:00+03:00",
@@ -975,7 +849,15 @@ null
 ],
 "center": "Ожидаемые голы 4.2 : 2.3"
 },
-"lt": null
+"lt": {
+"fair": 1.34,
+"label": "ТБ 5.5",
+"min_odds": 1.41,
+"minute": "2-й период",
+"p": 0.744,
+"result": null,
+"score": "3:0"
+}
 },
 {
 "sport": "football",
