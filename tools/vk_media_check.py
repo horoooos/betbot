@@ -111,6 +111,11 @@ def link_preview(group, reader, parse_token=None):
 
 def main():
     mode = os.environ.get("VK_MEDIA_MODE", "access")
+    if mode == "rss-settings":
+        settings = call("groups.getSettings", os.environ.get("VK_TOKEN", ""), group_id=vk.GROUP_ID)
+        print("RSS_SETTINGS:", {k: v for k, v in settings.items() if "rss" in k.lower()}, flush=True)
+        print("RSS_SETTINGS_READ_OK: true", flush=True)
+        return
     if mode in {"fresh-wall", "fresh-personal-wall", "fresh-chat-photo", "fresh-user-message"}:
         from betbot.vk_wall_events import PhotoMonitor
         import hashlib
