@@ -512,7 +512,8 @@
   "https://www.sport-express.ru/football/rfpl/news/eks-arbitr-fifa-nikolaev-otmetil-omolozhenie-sudeyskogo-korpusa-rpl-2474854/",
   "https://www.sport-express.ru/hockey/khl/news/igroki-spartaka-i-admirala-ustroili-massovuyu-draku-v-koncovke-matcha-khl-2474858/",
   "https://www.sport-express.ru/football/rfpl/news/eks-arbitr-fifa-nikolaev-ne-stal-by-zayavlyat-chto-vnedrenie-iskusstvennogo-intellekta-v-sudeystvo-neizbezhno-2474855/",
-  "https://www.sport-express.ru/tennis/wta/news/olhovskiy-ob-andreevoy-mirra-naslazhdaetsya-svoey-igroy-mozhno-rasschityvat-na-vyhod-v-final-2474859/"
+  "https://www.sport-express.ru/tennis/wta/news/olhovskiy-ob-andreevoy-mirra-naslazhdaetsya-svoey-igroy-mozhno-rasschityvat-na-vyhod-v-final-2474859/",
+  "https://www.sport-express.ru/tennis/wta/news/andrey-olhovskiy-ocenil-vystuplenie-ariny-sobolenko-na-itogovom-turnire-wta-2474861/"
  ],
  "news_i": 1,
  "oddspapi": {
@@ -1706,7 +1707,7 @@
  "streak_day": {
   "2026-11-12": 1
  },
- "news_next": "2026-11-14T20:04:20.005465+03:00",
+ "news_next": "2026-11-14T20:12:19.292092+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1725,11 +1726,11 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 5861,
+ "dz_last": 5862,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
- "dz_err": "5862: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))",
+ "dz_err": null,
  "img_used": [
   "https://images.cybersport.ru/images/as-is/plain/13/132879f8-8954-492d-9570-ac3a27a28fb8.jpg",
   "https://images.cybersport.ru/images/as-is/plain/ac/ac12208a-caeb-4553-b73f-98b5e460de44.jpg",
@@ -1861,7 +1862,8 @@
   "5818",
   "5819",
   "5857",
-  "5860"
+  "5860",
+  "5862"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -1876,11 +1878,12 @@
   "2026-11-14:начало:af92352f1d130c8ca06d518f",
   "2026-11-14:новость:9aad5cf14e8de0afa7b8033c",
   "2026-11-14:экспресс:e67f2441b176b73a512b6655",
-  "2026-11-14:начало:357f86b047074a4bf4323215"
+  "2026-11-14:начало:357f86b047074a4bf4323215",
+  "2026-11-14:начало:ae1f5ef110daea7ec334e1c1"
  ],
  "dz_last_delivery": {
-  "source_id": 5860,
-  "message_id": 561,
+  "source_id": 5862,
+  "message_id": 562,
   "kind": "начало"
  },
  "mod_poll": {
