@@ -32,7 +32,7 @@ class VKPhotoTests(unittest.TestCase):
         self.assertEqual([c[0] for c in calls], ["photos.getWallUploadServer"])
         self.assertIn("Flood control", vk._photo.err)
 
-    def _crosspost(self, photo, *, short_fails=False, verify_fails=False, state=None, seeds=None, reserve="", prefer_fresh=False):
+    def _crosspost(self, photo, *, short_fails=False, verify_fails=False, state=None, seeds=None, reserve="", prefer_fresh=False, require_fresh=False):
         tmp = tempfile.TemporaryDirectory()
         self.addCleanup(tmp.cleanup)
         root = Path(tmp.name)
@@ -74,7 +74,8 @@ class VKPhotoTests(unittest.TestCase):
         }
         photo_patcher = patch.object(vk, "_photo", return_value=photo)
         with patch.dict(os.environ, {"VK_USER_TOKEN": "user", "VK_TOKEN": "group", "VK_WALL_RESERVE_PHOTO": reserve,
-                                     "VK_WALL_PREFER_FRESH": "1" if prefer_fresh else "0"}), \
+                                     "VK_WALL_PREFER_FRESH": "1" if prefer_fresh else "0",
+                                     "VK_WALL_REQUIRE_FRESH": "1" if require_fresh else "0"}), \
                 patch.object(vk, "__file__", str(fake_file)), \
                 patch.object(vk, "CHANNEL", channel), \
                 patch.object(vk, "SEED_PHOTOS", seeds or []), \
@@ -91,6 +92,27 @@ class VKPhotoTests(unittest.TestCase):
                 monitor.return_value.verify.side_effect = RuntimeError("events unavailable")
             done = vk.crosspost(state)
         return done, state, calls, full_link
+
+    def test_strict_fresh_mode_never_uses_configured_archive(self):
+        state = {"vk_last": 5400}
+        done, state, calls, _ = self._crosspost(None, state=state, reserve="photo394825865_457255433", require_fresh=True)
+        self.assertEqual(done, 0)
+        self.assertFalse(any(c[0] == "wall.post" for c in calls))
+        self.assertEqual(state["vk_last"], 5400)
+
+    def test_strict_fresh_mode_verifies_new_photo_through_group_events(self):
+        done, state, calls, _ = self._crosspost("photo394825865_999", reserve="photo394825865_457255433", require_fresh=True)
+        self.assertEqual(done, 1)
+        self.assertEqual(state["vk_photo_source"], "fresh")
+        self.assertFalse(any(c[0] == "wall.getById" for c in calls))
+        wall = next(c for c in calls if c[0] == "wall.post")
+        self.assertEqual(wall[2]["attachments"], "photo394825865_999")
+
+    def test_strict_mode_respects_existing_upload_cooldown(self):
+        state = {"vk_last": 5400, "vk_fresh_retry_at": time.time() + 3600}
+        done, state, calls, _ = self._crosspost("photo394825865_999", state=state, require_fresh=True)
+        self.assertEqual(done, 0)
+        self.assertFalse(calls)
 
     def test_new_post_image_takes_priority_over_verified_archive(self):
         state = {"vk_last": 5400, "vk_reserve_mode_initialized": True}

@@ -764,7 +764,7 @@ def main():
     except Exception as e:
         print(f"  ! ВК истории: {e}")
     try:   # канал-фильтр для Дзена: разборы, начало матча, новости, итоги
-        dzen.crosspost(state)
+        dzen.crosspost(state, checkpoint=lambda: save_json(STATE, state))
     except Exception as e:
         print(f"  ! Дзен-канал: {e}")
     try:

@@ -1,7 +1,8 @@
 """Канал-«фильтр» для Дзена: @aistavvit_dzen.
 
-Бот копирует туда из основного канала только то, что нужно в Дзене: полные разборы матчей,
-«Матч начался», новости и итоги матчей. Дзен (@zen_sync_bot) забирает посты уже из этого канала.
+Бот копирует новости, статистику, расписания и старты матчей, экспрессы и общие итоги.
+Одиночные прогнозы, разборы, голы, live-обновления и повторы исключены.
+Суточного лимита нет. Дзен (@zen_sync_bot) забирает посты уже из этого канала.
 Копия — через copyMessage: картинка/видео и подпись как в оригинале, без пометки «переслано».
 """
 from __future__ import annotations
@@ -9,6 +10,10 @@ from __future__ import annotations
 import json
 import os
 import re
+import hashlib
+import time
+from datetime import datetime, timezone
+from html import unescape
 from pathlib import Path
 
 from . import telegram
@@ -37,15 +42,85 @@ def kind(html: str) -> str | None:
     return None
 
 
-def post_news(png: bytes, caption: str, source_id: int | None = None) -> None:
+def delivery_kind(html: str) -> str | None:
+    """Editorial selection for the mirror; independent of image/hashtag kind()."""
+    text = unescape(re.sub(r"<[^>]+>", " ", html or ""))
+    lines = [line.strip() for line in text.splitlines() if line.strip()]
+    if not lines:
+        return None
+    head = re.sub(r"^[^\wА-Яа-яЁё]+", "", lines[0]).upper()
+    if head.startswith(("ПРОДОЛЖЕНИЕ", "ПОЛНЫЙ РАЗБОР", "ПРОГНОЗ", "LIVE", "ИТОГ ·")) or re.match(r"^(ГОЛ|ШАЙБА|КАРТА)(?:\W|$)", head):
+        return None
+    if head.startswith("СТАТИСТИКА БОТА"):
+        return "статистика"
+    if head.startswith(("ИТОГИ ДНЯ", "ИТОГИ НЕДЕЛИ", "ИТОГИ МЕСЯЦА")):
+        return "сводка"
+    if head.startswith("ЭКСПРЕСС"):
+        if re.search(r"\d+\s+ИЗ\s+\d+|ПРОМЕЖУТОЧ|УЖЕ ЗАШЛ", head):
+            return None
+        return "экспресс"
+    if head.startswith("МАТЧ НАЧАЛСЯ"):
+        return "начало"
+    if "#live" in text.lower() or "LIVE-ПРОГНОЗ" in text.upper():
+        return None
+    if head.startswith(("МАТЧ ДНЯ", "МАТЧИ ДНЯ")):
+        return "матчи"
+    if "#итог" in text.lower():
+        return None
+    if any(tag in text.lower() for tag in NEWS_TAGS):
+        return "новость"
+    return None
+
+
+def _delivery_key(html: str, k: str, day: str) -> str:
+    text = unescape(re.sub(r"<[^>]+>", " ", html or ""))
+    lines = [line.strip().lower() for line in text.splitlines() if line.strip()]
+    title = lines[0] if lines else ""
+    if k == "начало":
+        title = next((line for line in lines if " — " in line), title)
+    title = re.sub(r"[^\wа-яё]+", " ", title).strip()
+    return f"{day}:{k}:" + hashlib.sha256(title.encode()).hexdigest()[:24]
+
+
+def _remember(state: dict, source_id, key: str, result=None, k=None) -> None:
+    for name, value in (("dz_sent_ids", str(source_id) if source_id else None), ("dz_sent_keys", key)):
+        items = state.setdefault(name, [])
+        if value and value not in items:
+            items.append(value)
+        del items[:-1500]
+    state["dz_err"] = None
+    if isinstance(result, dict) and result.get("message_id"):
+        state["dz_last_delivery"] = {"source_id": source_id, "message_id": result["message_id"], "kind": k}
+
+
+def _seen(state: dict, source_id, key: str) -> bool:
+    return str(source_id) in state.get("dz_sent_ids", []) or key in state.get("dz_sent_keys", [])
+
+
+def _match_text(html: str) -> str:
+    from .postimg import plain
+    text = plain(html)
+    lines = [line for line in text.splitlines() if not re.search(
+        r"прогноз|ставк|кэф|коэф|букмекер|% банка|#live", line, re.I)]
+    return re.sub(r"\n{3,}", "\n\n", "\n".join(lines)).strip()
+
+
+def post_news(png: bytes, caption: str, source_id: int | None = None, *, state: dict | None = None) -> None:
     """Новость — в канал для Дзена сразу картинкой (видео @zen_sync_bot не берёт, пост в Дзене был бы пустым)."""
     if not os.environ.get("TELEGRAM_TOKEN"):
+        return
+    if delivery_kind(caption) != "новость":
+        return
+    state = state if state is not None else {}
+    key = _delivery_key(caption, "новость", datetime.now(timezone.utc).date().isoformat())
+    if _seen(state, source_id, key):
         return
     cap = caption.replace("👇 Продолжение — в ответе", "📖 Полностью — в Telegram-канале @aistavvit")
     tags = hashtags(caption, "новость", limit=10)
     if len(cap) + len(tags) + 2 <= 1024:   # хештеги по теме (команды, игроки, лига) — в конец подписи
         cap += "\n" + tags
-    telegram._call("sendPhoto", chat_id=TARGET, files={"photo": ("news.png", png, "image/png")}, caption=cap[:1024], parse_mode="HTML")
+    result = telegram._call("sendPhoto", chat_id=TARGET, files={"photo": ("news.png", png, "image/png")}, caption=cap[:1024], parse_mode="HTML")
+    _remember(state, source_id, key, result, "новость")
 
 
 SPORT_TAG = (("⚽", "#футбол"), ("🏒", "#хоккей"), ("🏀", "#баскетбол"), ("🎾", "#теннис"), ("🎮", "#киберспорт"))
@@ -105,39 +180,61 @@ def _caption(text: str, tags: str, tail: str = "") -> str:
     return text + end
 
 
-def crosspost(state: dict) -> int:
+def crosspost(state: dict, checkpoint=None) -> int:
     if not CHANNEL.exists() or not os.environ.get("TELEGRAM_TOKEN"):
         return 0
     posts = json.loads(CHANNEL.read_text(encoding="utf-8")).get("posts", {})
     if not posts:
         return 0
+    checkpoint = checkpoint or (lambda: None)
     newest = max(int(k) for k in posts)
     if "dz_last" not in state:                        # первый запуск: начинаем с новых постов, старое не переносим
         state["dz_last"] = newest
         print(f"  Дзен-канал: копирование включено, начинаем после поста {newest}")
         return 0
     done = 0
-    for pid in sorted(int(k) for k in posts if int(k) > state["dz_last"])[:MAX_PER_PASS]:
-        k = kind(posts[str(pid)].get("html", ""))
-        if k and k != "новость":                      # новости news.py отправляет сам — картинкой (см. post_news)
+    for pid in sorted(int(k) for k in posts if int(k) > state["dz_last"])[:MAX_PER_PASS * 30]:
+        post = posts[str(pid)]
+        html = post.get("html", "")
+        k = delivery_kind(html)
+        try:
+            posted_at = datetime.fromisoformat(post.get("t", "").replace("Z", "+00:00"))
+            age = time.time() - posted_at.timestamp()
+            day = posted_at.astimezone(timezone.utc).date().isoformat()
+        except (ValueError, TypeError):
+            age, day = float("inf"), "unknown"
+        max_age = 1200 if k == "начало" else 86400 if k in {"статистика", "сводка", "матчи"} else 21600
+        key = _delivery_key(html, k or "skip", day)
+        if k and 0 <= age <= max_age and not _seen(state, pid, key):
             try:
-                post = posts[str(pid)]
                 from . import postimg
-                text = postimg.plain(post.get("html", "")).strip()
-                tags = hashtags(post.get("html", ""), k)   # больше хештегов по теме — Дзен и соцсети лучше продвигают
-                if post.get("photo"):   # с картинкой — копия, подпись с хештегами
-                    telegram._call("copyMessage", chat_id=TARGET, from_chat_id=os.environ["TELEGRAM_CHAT_ID"], message_id=pid,
-                                   caption=_caption(text, tags))
-                else:                   # текстовый пост (разбор) — с нашей карточкой, иначе в Дзене он без картинки
-                    img = postimg.image_for(post, k, posts)
-                    cap = _caption(text, tags, f"\n\n📖 Полностью — в Telegram-канале: t.me/aistavvit/{pid}")
-                    telegram._call("sendPhoto", chat_id=TARGET, files={"photo": ("post.png", img, "image/png")}, caption=cap)
+                text = _match_text(html) if k in {"начало", "матчи"} else postimg.plain(html).strip()
+                if k == "статистика":
+                    tail = posts.get(str(pid + 1), {}).get("html", "")
+                    if postimg.plain(tail).strip().startswith("Вчера,"):
+                        text += "\n\n" + postimg.plain(tail).strip()
+                tags = "#спорт #матчи #аиставит" if k in {"начало", "матчи"} else hashtags(html, k)
+                cap = _caption(text, tags, f"\n\n📖 Полностью: t.me/aistavvit/{pid}")
+                if post.get("photo") and k != "начало":
+                    result = telegram._call("copyMessage", chat_id=TARGET, from_chat_id=os.environ["TELEGRAM_CHAT_ID"], message_id=pid,
+                                   caption=cap)
+                else:
+                    # Start cards are redrawn from sanitized text so the original
+                    # forecast cannot remain embedded in the copied image.
+                    img = postimg._card(text, "начало") if k == "начало" else postimg.image_for(post, k, posts)
+                    if not img:
+                        raise RuntimeError("Картинка публикации не получена")
+                    result = telegram._call("sendPhoto", chat_id=TARGET, files={"photo": ("post.png", img, "image/png")}, caption=cap)
+                _remember(state, pid, key, result, k)
                 done += 1
             except Exception as e:
                 print(f"  ! Дзен-канал: пост {pid} не скопирован (бот — админ в {TARGET}?): {e}")
                 state["dz_err"] = f"{pid}: {e}"[:300]
                 break                                 # попробуем в следующий проход
         state["dz_last"] = pid
+        checkpoint()
+        if done >= MAX_PER_PASS:
+            break
     if done:
         print(f"  Дзен-канал: скопировано постов: {done}")
     return done

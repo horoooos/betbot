@@ -417,7 +417,7 @@ def run(state: dict, now: pd.Timestamp, brand: str) -> None:
             # канал для Дзена: новость — картинкой (видео Дзен не берёт), с тем же текстом
             try:
                 from . import dzen
-                dzen.post_news(png, caption, mid)
+                dzen.post_news(png, caption, mid, state=state)
             except Exception as ex:
                 print(f"  ! Дзен-канал: новость не отправилась: {ex}")
             state["news_video"] = not state.get("news_video", True) if mp4 or not state.get("news_video", True) else True

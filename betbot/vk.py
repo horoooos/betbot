@@ -57,6 +57,8 @@ def enabled() -> bool:
 
 
 def _verified_reserve_photo() -> str:
+    if os.environ.get("VK_WALL_REQUIRE_FRESH") == "1":
+        return ""
     photo = os.environ.get("VK_WALL_RESERVE_PHOTO", "").strip()
     if photo and not re.fullmatch(r"photo-?[1-9]\d*_[1-9]\d*", photo):
         raise RuntimeError("VK_WALL_RESERVE_PHOTO должен содержать проверенный публичный ID фото")
@@ -163,7 +165,7 @@ def _short(url: str, state: dict | None = None) -> str:
         raise ShortLinkError("нет токена ВК для сокращения ссылки")
     errors = []
     tokens = list(dict.fromkeys((os.environ.get("VK_TOKEN"), os.environ.get("VK_USER_TOKEN"))))
-    if _verified_reserve_photo():
+    if _verified_reserve_photo() or os.environ.get("VK_WALL_REQUIRE_FRESH") == "1":
         tokens = [os.environ.get("VK_TOKEN")]
     for token in tokens:
         if not token:
@@ -186,7 +188,7 @@ def _short(url: str, state: dict | None = None) -> str:
 
 def _ensure_short_comment(post_id: int, message: str) -> None:
     """Пишет ссылку первым комментарием, не дублируя её при повторной попытке."""
-    if _verified_reserve_photo():
+    if _verified_reserve_photo() or os.environ.get("VK_WALL_REQUIRE_FRESH") == "1":
         created = _call("wall.createComment", _tok=os.environ.get("VK_TOKEN"), owner_id=-GROUP_ID,
                         post_id=post_id, from_group=1, message=message, guid=f"betbot-site-{post_id}")
         if not isinstance(created, dict) or not created.get("comment_id"):
@@ -301,7 +303,7 @@ def _resolve_pending_post(state: dict) -> bool:
         return True
     if not has_photo:
         try:
-            _call("wall.delete", _tok=os.environ.get("VK_USER_TOKEN"), owner_id=-GROUP_ID,
+            _call("wall.delete", _tok=os.environ.get("VK_TOKEN") if os.environ.get("VK_WALL_REQUIRE_FRESH") == "1" else os.environ.get("VK_USER_TOKEN"), owner_id=-GROUP_ID,
                   post_id=int(pending["post_id"]))
         except Exception as error:
             state["vk_err"] = f"{pending.get('pid')}: запись без фото не удалена: {error}"[:300]
@@ -385,6 +387,12 @@ def crosspost(state: dict, checkpoint=None) -> int:
         return 0
     if _resolve_pending_post(state):
         return 0
+    if os.environ.get("VK_WALL_REQUIRE_FRESH") == "1":
+        retry_at = max(float(state.get("vk_fresh_retry_at") or 0),
+                       float(os.environ.get("VK_WALL_FRESH_NOT_BEFORE") or 0))
+        if time.time() < retry_at:
+            state["vk_err"] = "Загрузка актуального фото ограничена VK; архивная подмена отключена"
+            return 0
     if newest - int(state["vk_last"]) > STALE_GAP:   # очередь устарела — публикуем только новые посты
         skipped = newest - int(state["vk_last"])
         state["vk_last"] = newest - STALE_GAP
@@ -489,6 +497,10 @@ def crosspost(state: dict, checkpoint=None) -> int:
         photo_off = now_ts < float(state.get("vk_photo_until") or 0)   # ВК во флуде на загрузку фото
         cache = state.setdefault("vk_photos", [])
         photo = None if photo_off else (_photo(img) if img else None)
+        if photo and not reserve:
+            state["vk_photo_source"] = "fresh"
+            state["vk_fresh_err"] = None
+            state["vk_fresh_retry_at"] = 0
         if reserve:
             if photo:
                 state["vk_photo_source"] = "fresh"
@@ -519,6 +531,10 @@ def crosspost(state: dict, checkpoint=None) -> int:
             state["vk_err"] = f"{pid} фото: нет доступного изображения ({_photo.err})"[:300]
             delay = PAUSE_S if _is_flood_error(_photo.err) else 900
             state["vk_photo_until"] = time.time() + delay
+            if os.environ.get("VK_WALL_REQUIRE_FRESH") == "1":
+                state["vk_fresh_err"] = str(_photo.err)[:300]
+                state["vk_fresh_retry_at"] = time.time() + (6 * 3600 if _is_flood_error(_photo.err) else 3600)
+                checkpoint()
             print(f"  ВК: пост {pid} отложен — не удалось получить/загрузить фото: {_photo.err}")
             break
         if "flood" in (_photo.err or "").lower() or " 9 " in f" {_photo.err} ":
@@ -540,7 +556,7 @@ def crosspost(state: dict, checkpoint=None) -> int:
             for i, att in enumerate(tries[cursor:], start=cursor):
                 try:
                     monitor = None
-                    if reserve:
+                    if reserve or os.environ.get("VK_WALL_REQUIRE_FRESH") == "1":
                         from .vk_wall_events import PhotoMonitor
                         monitor = PhotoMonitor(os.environ.get("VK_TOKEN"))
                         monitor.start()
@@ -567,7 +583,7 @@ def crosspost(state: dict, checkpoint=None) -> int:
                     if not has_photo:
                         # Удаляем запись, если ВК принял запрос, но потерял картинку.
                         try:
-                            _call("wall.delete", _tok=os.environ.get("VK_USER_TOKEN"), owner_id=-GROUP_ID,
+                            _call("wall.delete", _tok=os.environ.get("VK_TOKEN") if os.environ.get("VK_WALL_REQUIRE_FRESH") == "1" else os.environ.get("VK_USER_TOKEN"), owner_id=-GROUP_ID,
                                   post_id=post_id)
                         except Exception as delete_error:
                             raise PhotoVerificationError(

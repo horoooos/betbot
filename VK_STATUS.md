@@ -67,3 +67,21 @@ cooldown after these confirmed failures. Successful recovery removes the archive
 caption and uses the newly saved per-post attachment. The same community wall
 verification and short-link comments are retained. Unique images on the wall are
 NOT confirmed working with the current restricted personal token.
+
+## Update 2026-11-14: only current per-post photos
+
+VK_WALL_REQUIRE_FRESH=1 now disables archive substitution, even if the old
+VK_WALL_RESERVE_PHOTO variable remains configured. A wall post waits for its own
+newly uploaded image; a configured archive cannot satisfy that requirement.
+Community event verification and short-link comments remain enabled. Upload
+cooldowns are respected independently. The latest live state still records
+photos.getWallUploadServer error 9; unique wall uploads remain unconfirmed.
+
+The Telegram mirror @aistavvit_dzen has separate editorial delivery rules:
+news, bot statistics, daily match schedules, match starts, expresses and final
+express results, and day/week/month summaries. Individual forecasts, full match
+analyses, forecast digests, goals, live forecasts, per-match results and partial
+express updates are excluded. No daily quota is applied. Starts are sanitized in
+both caption and newly rendered image. Source IDs and content keys deduplicate
+direct news delivery and channel-copy retries. Old news/starts are skipped rather
+than replayed after downtime; successful deliveries checkpoint state.
