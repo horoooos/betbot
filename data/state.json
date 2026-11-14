@@ -7,12 +7,6 @@
  "schedule_day": "2026-11-14",
  "content_slot": "2026-11-14-10",
  "news_seen": [
-  "https://www.sport-express.ru/hockey/world-u20/news/svischev-otvetil-na-zayavlenie-glavy-federacii-hokkeya-shvecii-pust-dazhe-ne-nadeyutsya-2473592/",
-  "https://www.sport-express.ru/football/turkey/news/fenerbahche-obyavil-ob-uhode-kyuyta-iz-trenerskogo-shtaba-2473609/",
-  "https://www.sport-express.ru/football/rfpl/news/gendirektor-akrona-klyushev-v-perspektive-klub-mozhet-borotsya-za-top-5-rpl-ne-dengi-igrayut-v-futbol-2473602/",
-  "https://www.sport-express.ru/martial/mma/ufc/news/islam-mahachev-vozglavil-reyting-forbes-samyh-cennyh-brendov-rossiyskih-sportsmenov-v-top-10-safonov-i-ovechkin-2473615/",
-  "https://www.sport-express.ru/basketball/juniors/news/espn-lebron-dzheyms-i-kevin-dyurant-vlozhilis-v-ligu-dlya-basketbolistov-mladshe-18-let-komandy-v-ney-prodayut-po-6-mln-2473610/",
-  "https://www.sport-express.ru/basketball/vtb-league/news/hryapa-o-starte-sezona-edinoy-ligi-v-regulyarnom-chempionate-budet-mnogo-neozhidannostey-2473596/",
   "https://www.sport-express.ru/basketball/russia/news/hryapa-pri-polozhitelnom-ishode-zasedaniya-centralnogo-byuro-fiba-my-srazu-vklyuchaemsya-vo-vse-chto-nam-predlozhat-2473595/",
   "komanda-s1mple-protiv-team-liquid-parivision-protiv-dendele-stali-izvestny",
   "https://www.sport-express.ru/football/spain/news/kurtua-vysoko-ocenil-igru-bellingema-on-ochen-vazhen-dlya-reala-2473619/",
@@ -506,9 +500,15 @@
   "https://www.sport-express.ru/football/rfpl/news/kislyak-ne-obschalis-s-batrakovym-naschet-vozmozhnogo-perehoda-v-galatsaray-2474741/",
   "https://www.sport-express.ru/football/turkey/news/eks-skaut-cska-andreev-batrakov-seychas-yavlyaetsya-otlichnoy-reklamoy-rossiyskogo-futbola-v-evrope-2474753/",
   "https://www.sport-express.ru/football/rfpl/news/musagaliev-verit-v-chempionstvo-spartaka-klubu-nuzhen-igrok-po-tipu-vendela-2474752/",
-  "v-kode-dota-2-nashli-papku-pod-nazvaniyem-mishutka-yeto-ne-shutka-na-russkom"
+  "v-kode-dota-2-nashli-papku-pod-nazvaniyem-mishutka-yeto-ne-shutka-na-russkom",
+  "https://www.sport-express.ru/hockey/nhl/news/napadayuschiy-vankuvera-pettersson-prerval-seriyu-iz-56-matchey-bez-golov-v-ravnyh-sostavah-2474749/",
+  "https://www.sport-express.ru/hockey/khl/news/tambiev-stanet-glavnym-trenerom-dinamo-sankt-peterburg-moskovskiy-klub-ne-budet-razryvat-s-nim-soglashenie-2474766/",
+  "https://www.sport-express.ru/hockey/nhl/news/boser-nabral-500-e-ochko-za-vankuver-v-matche-s-reyndzhers-2474748/",
+  "https://www.sport-express.ru/hockey/nhl/news/forvard-reyndzhers-goudin-zabil-pervye-dve-shayby-za-kareru-v-nhl-s-intervalom-tri-minuty-2474747/",
+  "https://www.sport-express.ru/hockey/nhl/news/rossiyane-v-nhl-14-noyabrya-2026-goda-gavrikov-barbashev-dorofeev-i-statistika-igrokov-2474746/",
+  "https://www.sport-express.ru/football/rfpl/news/denisov-zhelayu-vsem-rebyatam-kotorye-umeyut-popadat-po-myachu-uezzhat-v-evropu-batrakov-vse-pravilno-sdelal-2474762/"
  ],
- "news_i": 2,
+ "news_i": 4,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1702,7 +1702,7 @@
  "streak_day": {
   "2026-11-12": 1
  },
- "news_next": "2026-11-14T12:07:59.262788+03:00",
+ "news_next": "2026-11-14T12:40:16.875820+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1724,7 +1724,7 @@
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
- "dz_err": "4987: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))",
+ "dz_err": null,
  "img_used": [
   "https://images.cybersport.ru/images/as-is/plain/13/132879f8-8954-492d-9570-ac3a27a28fb8.jpg",
   "https://images.cybersport.ru/images/as-is/plain/ac/ac12208a-caeb-4553-b73f-98b5e460de44.jpg",
@@ -1768,7 +1768,8 @@
   "https://upload.wikimedia.org/wikipedia/commons/8/8c/Olga_Smorodskaya.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
   "https://upload.wikimedia.org/wikipedia/commons/b/ba/Matvey_Kislyak_2025.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
   "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/Sarn_v_Bronington_football_match_%281529912%29.jpg/1280px-Sarn_v_Bronington_football_match_%281529912%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-  "https://images.cybersport.ru/images/as-is/plain/92/921c60a5-ba4b-4d40-a8bb-02c217ba1bff.jpg"
+  "https://images.cybersport.ru/images/as-is/plain/92/921c60a5-ba4b-4d40-a8bb-02c217ba1bff.jpg",
+  "https://upload.wikimedia.org/wikipedia/commons/9/9a/Amkar-Loco_%281%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
  ],
  "indexnow_day": "2026-11-14",
  "vk_wall_err": null,
@@ -1837,5 +1838,16 @@
  "vk_comment_err": null,
  "vk_fresh_err": "фото стены: попытка 1: VK photos.getWallUploadServer: 9 Flood control",
  "vk_fresh_retry_at": 1794662243.1134844,
- "shorts_retry_day": "2026-11-14"
+ "shorts_retry_day": "2026-11-14",
+ "dz_sent_ids": [
+  "5731"
+ ],
+ "dz_sent_keys": [
+  "2026-11-14:новость:e45bc7fef64184123f1662b8"
+ ],
+ "dz_last_delivery": {
+  "source_id": 5731,
+  "message_id": 549,
+  "kind": "новость"
+ }
 }
