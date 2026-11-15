@@ -34,7 +34,9 @@ class PublishedMatchVisibilityTests(unittest.TestCase):
             row=json.loads(site.MATCHES.read_text(encoding='utf-8'))[0]
             self.assertEqual((row['state'],row['hs'],row['as']),('in',1,0))
             site.matches_json([] ,{'DOTA|1793335':old},pd.Timestamp('2026-11-15T20:00:00Z'))
-            self.assertEqual(json.loads(site.MATCHES.read_text(encoding='utf-8'))[0]['state'],'unknown')
+            missing=json.loads(site.MATCHES.read_text(encoding='utf-8'))[0]
+            self.assertEqual(missing['state'],'unknown')
+            self.assertIsNone(missing['hs']);self.assertIsNone(missing['as'])
 
     def test_new_forecast_invalidates_site_without_waiting_for_telegram_scraper(self):
         old={};m=self.match();new={'ATP|187506':m}

@@ -742,7 +742,8 @@ def matches_json(events: list[dict], stored: dict, now: pd.Timestamp) -> None:
                     "path": parse_qs(urlsplit(btn[1]).query).get('p',[''])[0], "url": btn[1].replace(SITE, ""),
                     "div":e.get('div'),"state":e.get('state') if identity(e) in fresh_keys else ('pre' if ko>now else 'unknown'),"bo":e.get('bo'),
                     "prediction":f"predictions/{ko.tz_convert('Europe/Moscow'):%Y-%m-%d}-{pages.slug(h+' '+a,60)}-{e['id']}.html" if m.get('msg_id') else '',
-                    "hs":e['home'].get('score'),"as":e['away'].get('score'),
+                    "hs":e['home'].get('score') if identity(e) in fresh_keys else None,
+                    "as":e['away'].get('score') if identity(e) in fresh_keys else None,
                     "tip": f"{tip['label']} · {'≈' if tip.get('est') else ''}{tip['odds']:.2f}" if tip.get("label") and tip.get("odds") else "",
                     "top": bool(m.get("top")), "bot": _bot_block(m),
                     "lt": tips.get(str(e["id"]))})

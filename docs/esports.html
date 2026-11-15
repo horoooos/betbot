@@ -19,7 +19,7 @@ async function load(){
  document.title=m.home+' — '+m.away+' · счёт матча — АИ СТАВИТ';
  const status={pre:'Ожидается начало',in:'● Матч идёт',post:'Матч завершён'}[m.state]||'Ожидаем обновления счёта';
  const team=(name,logo)=>'<div class="team">'+(logo?'<img src="'+esc(logo)+'" alt="">':'')+'<strong>'+esc(name)+'</strong></div>';
- const score=m.state==='pre'?'vs':esc(m.hs??'—')+' : '+esc(m.as??'—');
+ const score=m.state==='pre'?'vs':!['in','post'].includes(m.state)?'— : —':esc(m.hs??'—')+' : '+esc(m.as??'—');
  document.getElementById('panel').innerHTML='<div class="eyebrow">'+esc(m.league)+(m.bo?' · BO'+esc(m.bo):'')+'</div><h1>'+esc(m.home)+' — '+esc(m.away)+'</h1><span class="status">'+status+'</span><div class="teams">'+team(m.home,m.hl)+'<div class="score">'+score+'</div>'+team(m.away,m.al)+'</div><p>'+new Date(m.kickoff).toLocaleString('ru-RU',{timeZone:'Europe/Moscow',day:'numeric',month:'long',hour:'2-digit',minute:'2-digit'})+' МСК</p>'+(m.tip?'<div class="tip">🎯 Прогноз бота<br><strong>'+esc(m.tip)+'</strong></div>':'')+'<div class="buttons">'+(m.prediction?'<a href="'+esc(m.prediction)+'">Полный разбор →</a>':'')+'<a href="matches.html">Все матчи</a></div>';
 }
 load();setInterval(load,60000);
