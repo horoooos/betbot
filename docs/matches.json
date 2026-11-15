@@ -739,8 +739,8 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-15-filadelfiya-siksers-indiana-peysers-401909985.html",
-"hs": "129",
-"as": "121",
+"hs": "131",
+"as": "124",
 "tip": "Ф1 (-7.5) · 1.87",
 "top": false,
 "bot": {
@@ -1835,7 +1835,7 @@ null
 "sport": "esports",
 "id": "1793335",
 "league": "Киберспорт · Dota 2",
-"kickoff": "2026-11-15T23:30:00+03:00",
+"kickoff": "2026-11-15T23:27:46+03:00",
 "home": "LGD Gaming",
 "away": "Team Spirit",
 "hl": "https://cdn-api.pandascore.co/images/team/image/1657/600px_lgd_gaming_dec_2019_allmode.png",
@@ -1846,7 +1846,7 @@ null
 "path": "",
 "url": "esports.html?e=1793335&d=DOTA",
 "div": "DOTA",
-"state": "pre",
+"state": "in",
 "bo": 3,
 "prediction": "predictions/2026-11-15-lgd-gaming-team-spirit-1793335.html",
 "hs": 0,
@@ -2030,12 +2030,78 @@ null
 "div": "NBA",
 "state": "pre",
 "bo": null,
-"prediction": "",
+"prediction": "predictions/2026-11-16-klippers-sharlott-hornets-401909987.html",
 "hs": "0",
 "as": "0",
-"tip": "",
+"tip": "Ф1 (+1.5) · 1.86",
 "top": false,
-"bot": null,
+"bot": {
+"main": {
+"label": "Ф1 (+1.5)",
+"p": 0.5,
+"odds": 1.86,
+"est": false
+},
+"bold": null,
+"markets": [
+[
+"П1 (с ОТ)",
+0.45,
+1.943
+],
+[
+"П2 (с ОТ)",
+0.55,
+1.901
+],
+[
+"Ф1 (+1.5)",
+0.5,
+1.862
+],
+[
+"Ф2 (-1.5)",
+0.5,
+1.962
+],
+[
+"ТБ 206.5",
+0.66,
+null
+],
+[
+"ТМ 206.5",
+0.34,
+null
+],
+[
+"ТБ 213.5",
+0.5,
+1.952
+],
+[
+"ТМ 213.5",
+0.5,
+1.87
+],
+[
+"ТБ 220.5",
+0.34,
+null
+],
+[
+"ТМ 220.5",
+0.66,
+null
+]
+],
+"bar": [
+0.4502617751698871,
+0,
+0.5497382248301129
+],
+"center": "Ожидаемый счёт 106 : 108"
+},
 "lt": null
 },
 {
