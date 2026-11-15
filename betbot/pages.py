@@ -492,7 +492,7 @@ def _matches(stores: dict, results: pd.DataFrame, store: dict[int, dict], now: p
             continue
         sport = m.get("sport", "football")
         path = f"soccer/{m['slug']}" if sport == "football" and m.get("slug") else (sports.LEAGUES.get(m.get("div"), ("",) * 5)[3] or "")
-        btn = live._tracker(m, sport, m["home"]["ru"], m["away"]["ru"]) if sport != "esports" else None
+        btn = live._tracker(m, sport, m["home"]["ru"], m["away"]["ru"])
         out[(sport, str(m["id"]))] = {"id": str(m["id"]), "sport": sport, "home": m["home"]["ru"], "away": m["away"]["ru"],
             "hl": (m["home"].get("logo") or [None, None])[1] if isinstance(m["home"].get("logo"), list) else m["home"].get("logo"),
             "al": (m["away"].get("logo") or [None, None])[1] if isinstance(m["away"].get("logo"), list) else m["away"].get("logo"),
@@ -557,10 +557,12 @@ def _ru_event(text: str) -> str:
 
 
 def _match_page(m: dict, store: dict[int, dict], all_m: list[dict]) -> str:
+    from .sports import public_model_label
     title_teams = f"{m['home']} — {m['away']}"
     day = _date_ru(m["kickoff"])
     pred = store.get(m["msg"], {})
-    thread = sorted([p for p in store.values() if p.get("reply") == m["msg"]], key=lambda p: p["id"])
+    pred={**pred,'html':public_model_label(pred.get('html',''))}
+    thread = sorted([{**p,'html':public_model_label(p.get('html',''))} for p in store.values() if p.get("reply") == m["msg"]], key=lambda p: p["id"])
     analysis = [p for p in thread if "#live" not in p["html"][-60:] and "#итог" not in p["html"][-60:]]
     livep = [p for p in thread if p not in analysis]
     crumbs, bc = _crumbs("../", [("Главная", ""), ("Прогнозы", "predictions/"), (title_teams, None)])
@@ -599,7 +601,7 @@ def _match_page(m: dict, store: dict[int, dict], all_m: list[dict]) -> str:
     if livep or ev:
         game = '<h2>🏟 Как прошёл матч</h2><div class="card tl">' + "".join(f'<div class="pre">{p["html"]}</div>' for p in livep) + \
                "".join(f"<div>{H.escape(_ru_event(e))}</div>" for e in ev) + "</div>"
-    watch = (f'<a class="btn red" href="../{H.escape(m["live"].split("/betbot/")[-1])}">{"▶ Повтор матча" if m.get("finished") else "📺 Смотреть онлайн"}</a>'
+    watch = (f'<a class="btn red" href="../{H.escape(m["live"].split("/betbot/")[-1])}">{"🎮 Счёт по картам" if m["sport"]=="esports" else "▶ Повтор матча" if m.get("finished") else "📺 Смотреть онлайн"}</a>'
              if m.get("live") else "")
     others = [x for x in all_m if x is not m and x["kickoff"].date() == m["kickoff"].date()][:8]
     pct = f" — шанс {m['p'] * 100:.0f}%" if m.get("p") else ""

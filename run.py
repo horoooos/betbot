@@ -331,7 +331,7 @@ def review(ev: dict, w: dict, fx_loader, hist_loader, calib: dict, state: dict) 
     try:
         probs, source_signal = stavka.adjust(ev, lam, probs, pd.Timestamp.now(tz=MSK))
     except Exception as exc:
-        print(f"  ! СТАВКА ТВ: сигнал не применён: {exc}")
+        print(f"  ! Внешние сигналы: сигнал не применён: {exc}")
     scores = probs.pop("scores")
     main, bold = mk.tips(probs, mkt["real"] if mkt else {}, calib)
     for t in (main, bold):
@@ -405,7 +405,7 @@ def other_review(e: dict, calib: dict, ctx: dict, state: dict) -> dict | None:
     try:
         a,source_signal=stavka_sports.adjust(e,a,pd.Timestamp.now(tz=MSK))
     except Exception as exc:
-        print(f"  ! СТАВКА ТВ: сигнал {e['sport']} не применён: {exc}")
+        print(f"  ! Внешние сигналы: сигнал {e['sport']} не применён: {exc}")
     m = {**e, **a}
     m['stavka_signal']=source_signal
     m["main"], m["bold"] = sports.pick(a, calib)
@@ -595,11 +595,11 @@ def main():
     print(f"Матчей в окне: футбол {len(events)}, другие виды спорта {len(other)}")
     try:
         state["stavka"] = stavka.tick(events + other, now)
-        print(f"СТАВКА ТВ: {state['stavka']['tips']} прогнозов, {state['stavka']['snapshots']} снимков, "
+        print(f"Внешние сигналы: {state['stavka']['tips']} прогнозов, {state['stavka']['snapshots']} снимков, "
               f"вес {state['stavka']['model'].get('weight', 0):.2f}")
     except Exception as exc:
         state["stavka"] = {"error": str(exc)[:240]}
-        print(f"  ! СТАВКА ТВ: сбор отложен: {exc}")
+        print(f"  ! Внешние сигналы: сбор отложен: {exc}")
 
     if state.get("schedule_day") != today and now.hour >= MORNING_HOUR:
         state["schedule_day"] = today  # даже если утренний пост упадёт — не повторяем его каждые 2 минуты
@@ -782,7 +782,13 @@ def main():
         last_post = pages.latest_post_id()
     except Exception:
         last_post = 0
-    stamp = f"{len(site_res)}|{last_post}|{now:%Y-%m-%d %H}|{site.RENDER_VERSION}"
+    published_other=load_json(OTHER,{})
+    published={**matches,**published_other}
+    try:
+        site.matches_json(events+other,published,now)
+    except Exception as exc:
+        print(f'  ! список матчей не обновился: {exc}')
+    stamp = f"{len(site_res)}|{last_post}|{now:%Y-%m-%d %H}|{site.RENDER_VERSION}|{site.forecast_stamp(published)}"
     if state.get("site_stamp") != stamp or not site.OUT.exists():
         state["site_stamp"] = stamp
         blocks = None
@@ -799,7 +805,7 @@ def main():
                 watch.build(now, watch_preds)
             except Exception as e:
                 print(f"  ! страницы «смотреть онлайн» не собрались: {e}")
-            blocks = pages.build({**matches, **load_json(OTHER, {})}, site_res, now)
+            blocks = pages.build(published, site_res, now)
             day = f"{now:%Y-%m-%d}"
             hubs = [] if state.get("indexnow_day") == day else [pages.SITE, pages.SITE + "predictions/", pages.SITE + "news/", pages.SITE + "matches.html"]
             if pages.indexnow(hubs) and hubs:
@@ -825,7 +831,6 @@ def main():
     except Exception as e:
         print(f"  ! Дзен-канал: {e}")
     try:
-        site.matches_json(events + other, {**matches, **load_json(OTHER, {})}, now)
         site.scores_json(events + other, now)
     except Exception as e:
         print(f"  ! список матчей для 3D не обновился: {e}")

@@ -78,8 +78,8 @@
 </main>
 <a class="cta" href="https://t.me/aistavvit">📲 Прогнозы каждый день — @aistavvit</a>
 <script type="module">
-const SP = { football: "⚽ Футбол", hockey: "🏒 Хоккей", basketball: "🏀 Баскетбол", tennis: "🎾 Теннис" };
-const EM = { football: "⚽", hockey: "🏒", basketball: "🏀", tennis: "🎾" };
+const SP = { football: "⚽ Футбол", hockey: "🏒 Хоккей", basketball: "🏀 Баскетбол", tennis: "🎾 Теннис", esports: "🎮 Киберспорт" };
+const EM = { football: "⚽", hockey: "🏒", basketball: "🏀", tennis: "🎾", esports: "🎮" };
 let all = [], live = {}, filter = "all", viewers = {};
 try { filter = localStorage.getItem("mfilter") || "all"; } catch (e) {}
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
@@ -99,7 +99,7 @@ async function espn(p) {
 }
 async function scores() {
   // статус и счёт берём у ESPN — только для лиг, где матч может идти прямо сейчас
-  const now = Date.now(), paths = new Set(all.filter(m => { const k = new Date(m.kickoff).getTime(); return k - 15 * 60e3 < now && now - k < 5 * 3600e3; }).map(m => m.path));
+  const now = Date.now(), paths = new Set(all.filter(m => { const k = new Date(m.kickoff).getTime(); return k - 15 * 60e3 < now && now - k < 5 * 3600e3; }).map(m => m.path).filter(Boolean));
   await Promise.all([...paths].map(async p => {
     const put = c => { const t = c.status?.type || {}, cs = c.competitors || [];
       const h = cs.find(x => x.homeAway === "home") || [...cs].sort((a, b) => (a.order || 0) - (b.order || 0))[0];
@@ -112,6 +112,7 @@ async function scores() {
   }));
 }
 function status(m) {
+  if (m.sport === "esports") return ["pre", "in", "post"].includes(m.state) ? m.state : "pre";
   const s = live[m.id], k = new Date(m.kickoff).getTime(), now = Date.now();
   if (s && !(s.state === "pre" && now - k > 20 * 60e3 && now - k < (DUR[m.sport] || 120) * 60e3)) return s.state;
   // ESPN молчит — решаем по времени: начался и ещё не должен был закончиться → идёт
@@ -128,7 +129,7 @@ document.addEventListener("click", e => { const b = e.target.closest("[data-bb]"
 const bbSearch = (home, sport) => { const w = String(home || "").split(/[\s.()]+/).filter(x => x.length >= (sport === "tennis" ? 2 : 3));   // теннис — по фамилии, иначе самое длинное слово
   return "https://betboom.ru/search?query=" + encodeURIComponent(w.length ? (sport === "tennis" ? w[w.length - 1] : w.reduce((a, b) => b.length > a.length ? b : a)) : (home || "")); };
 function card(m) {
-  const s = live[m.id] || {}, st = status(m);
+  const s = m.sport === "esports" ? {state:m.state,hs:m.hs,as:m.as} : live[m.id] || {}, st = status(m);
   let label = `${day(m.kickoff)}, ${time(m.kickoff)}`, cls = "";
   if (st === "in") { cls = "l"; label = !s.state || s.state !== "in" ? "● Идёт" : m.sport === "tennis" ? "● Идёт игра" : m.sport === "football" ? `● ${s.clock || s.detail}` : `● ${s.detail || s.clock}`; }
   if (st === "post") { cls = "f"; label = "Завершён"; }
@@ -143,7 +144,7 @@ function card(m) {
     <div class="tm ${win && win.a ? "win" : ""}">${img(m.al)}<span class="nm"${tl(m, m.aid, "a")}>${esc(m.away)}</span><span class="sc">${esc(asc)}</span></div>
     <div class="ft">${m.tip ? `<span class="tip">🎯 ${esc(m.tip)}${m.bot?.main ? ` · шанс ${Math.round(m.bot.main.p * 100)}%` : ""}</span>` : `<span class="tip no">Прогноз выйдет за час до начала</span>`}
       ${m.tip && st !== "post" ? `<span class="bb" data-u="${esc(m.bb || "")}" data-h="${esc(m.home)}" data-sp="${m.sport}" data-bb="${esc(m.home + " — " + m.away + ": " + (m.bot?.main?.label || m.tip))}" title="Повторить ставку бота в BetBoom">💰 BetBoom</span>` : ""}
-      <span class="go">${st === "in" ? "📺 Смотреть" : st === "post" ? "▶ Повтор" : "📺 Онлайн"}</span></div></a>`;
+      <span class="go">${m.sport === "esports" ? "🎮 Счёт по картам" : st === "in" ? "📺 Смотреть" : st === "post" ? "▶ Повтор" : "📺 Онлайн"}</span></div></a>`;
 }
 function render() {
   const counts = { all: all.length, tip: all.filter(m => m.tip).length, lt: all.filter(m => m.lt).length };
@@ -174,7 +175,7 @@ import("./fb.js?v=12").then(fb => {
   fb.track("matches"); fb.navUser(document.getElementById("navUser"));
   fb.watchPresence(v => { viewers = v; render(); });
 }).catch(() => {});
-load(); setInterval(async () => { await scores(); render(); }, 30000); setInterval(load, 10 * 60e3);
+load(); setInterval(async () => { await scores(); render(); }, 30000); setInterval(load, 60000);
 </script>
 </body>
 </html>

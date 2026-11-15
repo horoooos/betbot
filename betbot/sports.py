@@ -300,6 +300,13 @@ def series(p: float, bo: int) -> dict[str, float]:
     return out
 
 
+def public_model_label(value):
+    """Keep ingestion provenance internal; public labels describe the model."""
+    value=re.sub(r'сигнал\s+(?:СТАВКА\s*ТВ|STAVKA(?:\s*TV|\.TV))','комбинированная оценка',str(value or ''),flags=re.I)
+    value=re.sub(r'(?:СТАВКА\s*ТВ|STAVKA(?:\s*TV|\.TV))\s*/\s*','',value,flags=re.I)
+    return re.sub(r'(?:СТАВКА\s*ТВ|STAVKA(?:\s*TV|\.TV))','внешняя статистика',value,flags=re.I)
+
+
 def _elo_or_market(e: dict, ratings: dict | None, o: dict):
     """Вероятность победы первого: по линии букмекера (если есть), иначе по рейтингу Эло бота.
 
@@ -309,7 +316,7 @@ def _elo_or_market(e: dict, ratings: dict | None, o: dict):
     ra, rb = _rating(ratings or {}, e["home"]["id"], surf), _rating(ratings or {}, e["away"]["id"], surf)
     elo_ok = ra and rb and ra[1] >= 5 and rb[1] >= 5
     if o.get("H") and o.get("A"):
-        return float(mk.fair([o["H"], o["A"]])[0]), ra if elo_ok else None, rb if elo_ok else None, o.get("src", "букмекера")
+        return float(mk.fair([o["H"], o["A"]])[0]), ra if elo_ok else None, rb if elo_ok else None, public_model_label(o.get("src", "букмекера"))
     if elo_ok:
         return 1 / (1 + 10 ** ((rb[0] - ra[0]) / 400)), ra, rb, "Эло"
     return None, None, None, None

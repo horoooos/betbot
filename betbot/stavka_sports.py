@@ -89,9 +89,9 @@ def adjust(event,analysis,now,store=None):
             result['real']=copy.deepcopy(analysis['real'])
             result['labels']=copy.deepcopy(analysis['labels'])
             if event['sport'] in ('tennis','esports'):
-                result['center']=analysis['center']+' · сигнал СТАВКА ТВ'
+                result['center']=sports.public_model_label(analysis['center'])+' · комбинированная оценка'
                 result['model']['src']='комбинированная оценка'
-            else:result['center']+=' · сигнал СТАВКА ТВ'
+            else:result['center']=sports.public_model_label(result['center'])+' · комбинированная оценка'
             result['model']['external_weight']=weight
     stavka.save(store)
     return result,dict(status=model['status'],weight=weight,authors=len(tips),group=category,snapshot=sid,source='https://stavka.tv')

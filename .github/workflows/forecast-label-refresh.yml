@@ -1,0 +1,27 @@
+name: Refresh existing forecast labels
+on:
+  workflow_dispatch:
+    inputs:
+      match_keys:
+        description: Existing forecast keys to update, comma separated
+        required: true
+permissions:
+  contents: read
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r requirements.txt
+      - name: Replace images on existing verified forecasts
+        env:
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          MATCH_KEYS: ${{ inputs.match_keys }}
+        run: python tools/refresh_forecast_labels.py

@@ -50,6 +50,8 @@ def _score(e: dict) -> tuple[int, int] | None:
 
 def _tracker(e: dict, sport: str, h: str, a: str) -> tuple[str, str] | None:
     """Кнопка «Смотреть матч в 3D»: живой трекер на сайте (футбол, хоккей, баскетбол, теннис)."""
+    if sport=='esports':
+        return ('🎮 Счёт матча',TRACKER.replace('live.html','esports.html')+'?'+urlencode({'e':e['id'],'d':e['div']}))
     if sport == "football":
         path = f"soccer/{e['slug']}" if e.get("slug") else ""
     else:
@@ -92,7 +94,7 @@ def buttons(e: dict, sport: str, h: str, a: str) -> list[tuple[str, str]]:
         watch, allm = f"https://t.me/{bot}?startapp=m{e['id']}", f"https://t.me/{bot}?startapp=matches"
     else:
         watch, allm = (b[1] if b else None), MATCHES_PAGE
-    row = [("📺 Смотреть онлайн", watch), ("🗂 Все матчи", allm)] if b else [("🗂 Матчи онлайн", allm)]
+    row = [(("🎮 Счёт матча" if sport=='esports' else "📺 Смотреть онлайн"), watch), ("🗂 Все матчи", allm)] if b else [("🗂 Матчи онлайн", allm)]
     from .pages import bb_search
     return row + [("💰 Сделать ставку в BetBoom", bb_search(h, sport))]
 

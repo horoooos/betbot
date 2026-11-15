@@ -304,6 +304,8 @@ def match_card(league: str, when: str, home: dict, away: dict, probs: tuple[floa
 
     odds — кэф основного прогноза: тогда он крупно справа на золотой плашке, а прогноз — слева.
     """
+    from .sports import public_model_label
+    center=public_model_label(center)
     hc, ac = _rgb(home.get("color") or "3b4a7a"), _rgb(away.get("color") or "3b4a7a", (180, 40, 40))
     special = any(w.lower() in league.lower() for w in SPECIAL)
     img, d = _background(hc, ac, style="stars" if special else None)
@@ -321,7 +323,11 @@ def match_card(league: str, when: str, home: dict, away: dict, probs: tuple[floa
     time_part, _, date_part = when.partition(" · ")
     d.text((W / 2, 210), time_part, font=font(76, "ExtraBold"), fill=WHITE, anchor="mm")
     d.text((W / 2, 272), date_part.upper(), font=font(26, "Medium"), fill=MUTED, anchor="mm")
-    d.text((W / 2, 330), center, font=font(30), fill=ACCENT, anchor="mm")
+    if d.textbbox((0,0),center,font=font(30))[2]>440 and ' · ' in center:
+        for y,line in zip((320,355),center.rsplit(' · ',1)):
+            d.text((W / 2,y),line,font=font(26),fill=ACCENT,anchor='mm')
+    else:
+        d.text((W / 2, 330), center, font=font(30), fill=ACCENT, anchor="mm")
 
     # полоса вероятностей П1 / Х / П2
     x0, x1, y0, bh = 120, W - 120, 500, 46

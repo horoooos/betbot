@@ -7,7 +7,7 @@ from html import escape
 
 import pandas as pd
 
-from . import names
+from . import names, sports
 
 FORM = {"W": "🟢", "D": "⚪", "L": "🔴"}
 INJURY = {"Out": "не сыграет", "Day-To-Day": "под вопросом", "Injured Reserve": "в лазарете",
@@ -149,7 +149,7 @@ def team_review(m: dict, s: dict) -> str:
                 items = "; ".join(f"{LEADER.get(c, c.lower())}: {names.player(p)} ({v})" for c, p, v in lead[tid] if p)
                 lines.append(f"<b>{escape(team['ru'])}:</b> {escape(items)}")
         parts.append("\n".join(lines))
-    parts.append(f"🧮 <b>Модель</b>: {escape(m['center'])}")
+    parts.append(f"🧮 <b>Модель</b>: {escape(sports.public_model_label(m['center']))}")
     parts.append(_markets(m))
 
     p_home = m["bar"][0]
@@ -234,7 +234,7 @@ def history_review(m: dict, hist: list[dict], ratings: dict) -> str:
                      f"({last['score']})")
     else:
         parts.append("🤝 <b>Личные встречи</b>: за год не встречались")
-    parts.append(f"🧮 <b>Модель</b>: {escape(m['center'])}")
+    parts.append(f"🧮 <b>Модель</b>: {escape(sports.public_model_label(m['center']))}")
     parts.append(_markets(m))
 
     sh, sa = stats[home["id"]], stats[away["id"]]

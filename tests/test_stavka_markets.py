@@ -93,7 +93,8 @@ class StavkaMarketsTests(unittest.TestCase):
         a=sports.analyse(e,{})
         self.assertEqual(a['real']['TN_W1'],1.7)
         self.assertEqual(a['real']['TN_W2'],2.2)
-        self.assertIn('СТАВКА ТВ',a['center'])
+        self.assertNotIn('СТАВКА ТВ',a['center'])
+        self.assertIn('winline',a['center'])
         for at in (NOW-pd.Timedelta(seconds=1),NOW+pd.Timedelta(minutes=26)):
             self.assertIs(stavka_markets.supplement(EVENT,at,s),EVENT)
         existing=dict(EVENT,odds={'H':1.8,'A':2.0,'src':'Pinnacle'})

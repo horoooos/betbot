@@ -18,7 +18,7 @@ CHANNEL = os.environ.get("TELEGRAM_CHAT_ID", "")
 if not CHANNEL.startswith("@"):  # в секрете может быть числовой id — тогда берём публичное имя канала
     CHANNEL = "@aistavvit"
 SITE = "https://horoooos.github.io/betbot/"
-RENDER_VERSION = 2
+RENDER_VERSION = 3
 
 
 def _hits(col: pd.Series) -> pd.Series:
@@ -677,11 +677,19 @@ def _bot_block(m: dict) -> dict | None:
             out["cards"] = round(float(ex["cards"].get("total", 0)), 1)
     else:
         labels, real = m.get("labels") or {}, m.get("real") or {}
-        out["bar"], out["center"] = m.get("bar"), m.get("center", "")
+        from .sports import public_model_label
+        out["bar"], out["center"] = m.get("bar"), public_model_label(m.get("center", ""))
         for k, lab in list(labels.items())[:16]:
             if k in probs:
                 out["markets"].append([lab, round(float(probs[k]), 3), real.get(k)])
     return out
+
+
+def forecast_stamp(stored):
+    import hashlib
+    rows=sorted((str(m.get('sport','football')),str(m.get('div','')),str(m.get('id','')),str(m.get('msg_id','')),str(m.get('status','')))
+                for m in stored.values() if m.get('msg_id') and m.get('main'))
+    return hashlib.sha256(json.dumps(rows).encode()).hexdigest()[:16]
 
 
 def matches_json(events: list[dict], stored: dict, now: pd.Timestamp) -> None:
@@ -693,14 +701,26 @@ def matches_json(events: list[dict], stored: dict, now: pd.Timestamp) -> None:
     """
     from . import live  # здесь, чтобы не тянуть live при импорте site
     from .pages import bb_search
+    from urllib.parse import urlsplit,parse_qs
     try:   # ⚡ live-прогнозы в моменте игры — пометка на карточке матча
         tips = json.loads((MATCHES.parent / "live_tips.json").read_text(encoding="utf-8"))
     except (OSError, ValueError):
         tips = {}
+    # A published forecast remains visible if an upstream schedule temporarily
+    # omits it. Fresh events override frozen prediction-time status and scores.
+    identity=lambda e:(e.get('sport','football'),e.get('div',''),str(e['id']))
+    fresh_keys={identity(e) for e in events}
+    candidates={identity(m):m for m in stored.values() if m.get('id') and m.get('msg_id') and m.get('main')}
+    for event in events:
+        key=identity(event);old=candidates.get(key,{})
+        merged={**old,**event}
+        for side in ('home','away'):
+            merged[side]={**old.get(side,{}),**event.get(side,{})}
+        candidates[key]=merged
     out = []
-    for e in events:
+    for e in candidates.values():
         sport = e.get("sport", "football")
-        if sport == "esports" or "ru" not in e.get("home", {}) or "ru" not in e.get("away", {}):
+        if "ru" not in e.get("home", {}) or "ru" not in e.get("away", {}):
             continue
         try:
             ko = pd.Timestamp(e["kickoff"])
@@ -719,7 +739,10 @@ def matches_json(events: list[dict], stored: dict, now: pd.Timestamp) -> None:
                     "home": h, "away": a, "hl": logo(e["home"]), "al": logo(e["away"]),
                     "hid": str(e["home"].get("id") or ""), "aid": str(e["away"].get("id") or ""),
                     "bb": bb_search(h, sport),   # поиск BetBoom по команде — матч сразу в списке
-                    "path": btn[1].split("p=")[1].split("&")[0].replace("%2F", "/"), "url": btn[1].replace(live.TRACKER, "live.html"),
+                    "path": parse_qs(urlsplit(btn[1]).query).get('p',[''])[0], "url": btn[1].replace(SITE, ""),
+                    "div":e.get('div'),"state":e.get('state') if identity(e) in fresh_keys else ('pre' if ko>now else 'unknown'),"bo":e.get('bo'),
+                    "prediction":f"predictions/{ko.tz_convert('Europe/Moscow'):%Y-%m-%d}-{pages.slug(h+' '+a,60)}-{e['id']}.html" if m.get('msg_id') else '',
+                    "hs":e['home'].get('score'),"as":e['away'].get('score'),
                     "tip": f"{tip['label']} · {'≈' if tip.get('est') else ''}{tip['odds']:.2f}" if tip.get("label") and tip.get("odds") else "",
                     "top": bool(m.get("top")), "bot": _bot_block(m),
                     "lt": tips.get(str(e["id"]))})

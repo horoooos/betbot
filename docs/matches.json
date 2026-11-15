@@ -904,6 +904,12 @@ null
 "bb": "https://betboom.ru/search?query=%D0%A8%D0%B5%D0%BB%D1%82%D0%BE%D0%BD&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=tennis",
 "path": "tennis/atp",
 "url": "live.html?s=tennis&p=tennis%2Fatp&e=187506&h=%D0%91%D0%B5%D0%BD+%D0%A8%D0%B5%D0%BB%D1%82%D0%BE%D0%BD&a=%D0%90%D1%80%D1%82%D1%83%D1%80+%D0%A4%D0%B8%D0%BB%D1%81",
+"div": "ATP",
+"state": "pre",
+"bo": null,
+"prediction": "predictions/2026-11-15-ben-shelton-artur-fils-187506.html",
+"hs": null,
+"as": null,
 "tip": "Победа: Бен Шелтон · 1.55",
 "top": false,
 "bot": {
@@ -971,7 +977,7 @@ null
 0,
 0.38749999999999996
 ],
-"center": "Линия СТАВКА ТВ / winline · Эло 1862 : 1786"
+"center": "Линия winline · Эло 1862 : 1786"
 },
 "lt": null
 },
@@ -2781,6 +2787,97 @@ null
 "tip": "",
 "top": false,
 "bot": null,
+"lt": null
+},
+{
+"sport": "esports",
+"id": "1793335",
+"league": "Киберспорт · Dota 2",
+"kickoff": "2026-11-15T22:00:00+03:00",
+"home": "LGD Gaming",
+"away": "Team Spirit",
+"hl": "https://cdn-api.pandascore.co/images/team/image/1657/600px_lgd_gaming_dec_2019_allmode.png",
+"al": "https://cdn-api.pandascore.co/images/team/image/1669/153px_team_spirit_2022_lightmode.png",
+"hid": "1657",
+"aid": "1669",
+"bb": "https://betboom.ru/search?query=%D0%93%D0%B0%D0%BC%D0%B8%D0%BD%D0%B3&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=esports",
+"path": "",
+"url": "esports.html?e=1793335&d=DOTA",
+"div": "DOTA",
+"state": "unknown",
+"bo": 3,
+"prediction": "predictions/2026-11-15-lgd-gaming-team-spirit-1793335.html",
+"hs": 0,
+"as": 0,
+"tip": "Всухую (2:0 или 0:2) · ≈1.63",
+"top": false,
+"bot": {
+"main": {
+"label": "Всухую (2:0 или 0:2)",
+"p": 0.569,
+"odds": 1.63,
+"est": true
+},
+"bold": null,
+"markets": [
+[
+"Победа: LGD Gaming",
+0.234,
+null
+],
+[
+"Победа: Team Spirit",
+0.766,
+null
+],
+[
+"Больше 2 карт",
+0.431,
+null
+],
+[
+"Всухую (2:0 или 0:2)",
+0.569,
+null
+],
+[
+"Счёт по картам 2:0",
+0.099,
+null
+],
+[
+"Счёт по картам 0:2",
+0.47,
+null
+],
+[
+"Счёт по картам 2:1",
+0.135,
+null
+],
+[
+"Счёт по картам 1:2",
+0.296,
+null
+],
+[
+"LGD Gaming возьмёт хотя бы карту",
+0.53,
+null
+],
+[
+"Team Spirit возьмёт хотя бы карту",
+0.901,
+null
+]
+],
+"bar": [
+0.2339758692455226,
+0,
+0.7660241307544774
+],
+"center": "BO3 · Эло 1567 : 1773"
+},
 "lt": null
 }
 ]

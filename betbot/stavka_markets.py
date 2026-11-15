@@ -74,6 +74,6 @@ def supplement(event,now,store=None):
     age=utc(now)-utc(quote['observed_at'])
     if not pd.Timedelta(0)<=age<=pd.Timedelta(minutes=25) or utc(event['kickoff'])<=utc(now)+pd.Timedelta(minutes=5):return event
     if abs((utc(quote['kickoff'])-utc(event['kickoff'])).total_seconds())>300:return event
-    odds={**old,**quote['odds'],'src':'СТАВКА ТВ / '+quote['bookmaker'],
+    odds={**old,**quote['odds'],'src':quote['bookmaker'],
           'source_url':quote['source'],'observed_at':quote['observed_at'],'price_kind':'public_displayed'}
     return {**event,'odds':odds}
