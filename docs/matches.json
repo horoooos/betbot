@@ -740,7 +740,7 @@ null
 "bo": null,
 "prediction": "predictions/2026-11-15-filadelfiya-siksers-indiana-peysers-401909985.html",
 "hs": "117",
-"as": "109",
+"as": "111",
 "tip": "Ф1 (-7.5) · 1.87",
 "top": false,
 "bot": {
@@ -1056,7 +1056,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-15-sbornaya-belgii-sbornaya-italii-401861176.html",
-"hs": "2",
+"hs": "3",
 "as": "1",
 "tip": "ТБ 2.5 · 1.59",
 "top": false,
@@ -1595,7 +1595,15 @@ null
 ]
 ]
 },
-"lt": null
+"lt": {
+"fair": 1.61,
+"label": "ТМ 2.5",
+"min_odds": 1.7,
+"minute": "26'",
+"p": 0.619,
+"result": null,
+"score": "0:0"
+}
 },
 {
 "sport": "tennis",
@@ -1612,7 +1620,7 @@ null
 "path": "tennis/wta",
 "url": "live.html?s=tennis&p=tennis%2Fwta&e=187442&h=%D0%AD%D0%BB%D0%B8%D0%BD%D0%B0+%D0%A1%D0%B2%D0%B8%D1%82%D0%BE%D0%BB%D0%B8%D0%BD%D0%B0&a=%D0%9C%D0%B8%D1%80%D1%80%D0%B0+%D0%90%D0%BD%D0%B4%D1%80%D0%B5%D0%B5%D0%B2%D0%B0",
 "div": "WTA",
-"state": "pre",
+"state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-15-elina-svitolina-mirra-andreeva-187442.html",
 "hs": null,
