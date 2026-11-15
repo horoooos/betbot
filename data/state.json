@@ -7,9 +7,6 @@
  "schedule_day": "2026-11-15",
  "content_slot": "2026-11-15-22",
  "news_seen": [
-  "https://www.sport-express.ru/football/rfpl/news/tuttosport-yuventus-prodolzhaet-sledit-za-agkacevym-2474057/",
-  "https://www.sport-express.ru/hockey/world-u20/news/ministr-sporta-kanady-van-kuverden-obyasnil-reshenie-ne-dopuskat-rossiyskih-hokkeistov-na-mchm-2027-2474068/",
-  "https://www.sport-express.ru/figure-skating/grand-pri/news/finlyandiya-s-16-noyabrya-ogranichivaet-vezd-rossiyskih-sportsmenov-2474066/",
   "https://www.sport-express.ru/football/england/news/kristal-pelas-uvolil-sazha-s-posta-glavnogo-trenera-2474072/",
   "krabeni-o-propuske-blast-rivals-fall-2026-eto-byl-khudshii-opyt-v-moyei-zhizni",
   "https://www.sport-express.ru/hockey/nhl/news/forvard-vegasa-mitch-marner-v-chetverke-luchshih-deystvuyuschih-igrokov-nhl-po-peredacham-za-pervye-99-matchey-v-klube-2474080/",
@@ -506,9 +503,12 @@
   "https://www.sport-express.ru/football/rusteam/news/gavrilov-o-pobede-sbornoy-rossii-nad-uzbekistanom-ele-ele-obygrali-otkrovenno-slabogo-sopernika-2475272/",
   "https://www.sport-express.ru/football/transfers/news/milan-rassmatrivaet-vozmozhnost-arendy-endrika-u-reala-s-opciey-vykupa-2475286/",
   "https://www.sport-express.ru/football/nation-league/news/belorussiya-albaniya-finlyandiya-san-marino-rezultaty-matchey-ligi-naciy-15-noyabrya-2026-2475278/",
-  "https://www.sport-express.ru/football/rfpl/news/gavrilov-obyasnil-pochemu-ego-ne-interesuet-rossiyskiy-futbol-malo-tehnichnyh-netrivialnyh-igrokov-2475270/"
+  "https://www.sport-express.ru/football/rfpl/news/gavrilov-obyasnil-pochemu-ego-ne-interesuet-rossiyskiy-futbol-malo-tehnichnyh-netrivialnyh-igrokov-2475270/",
+  "https://www.sport-express.ru/cybersport/videogames/news/v-xbox-game-pass-essential-dobavili-vosem-igr-vklyuchaya-halo-i-perfect-dark-2475260/",
+  "https://www.sport-express.ru/football/world/news/klopp-ob-infantino-dumali-chto-posle-blattera-huzhe-uzhe-ne-mozhet-byt-a-potom-poluchili-eto-2475292/",
+  "https://www.sport-express.ru/football/foreign/news/gvardiola-ne-vozglavit-sbornuyu-ssha-posle-uhoda-pochettino-2475264/"
  ],
- "news_i": 4,
+ "news_i": 1,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1677,7 +1677,7 @@
  "streak_day": {
   "2026-11-15": 2
  },
- "news_next": "2026-11-15T22:43:45.010679+03:00",
+ "news_next": "2026-11-15T23:18:02.604823+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1769,7 +1769,8 @@
   "https://images.cybersport.ru/images/as-is/plain/79/79a92088-0d03-48ca-b25f-4cb1af97987d.jpg",
   "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/UC_Riverside_Soccer_Stadium_Field.jpg/1280px-UC_Riverside_Soccer_Stadium_Field.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
   "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/Celebrity_Football_Fun_Match%2C_25_January_2025_05.jpg/1280px-Celebrity_Football_Fun_Match%2C_25_January_2025_05.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-  "https://upload.wikimedia.org/wikipedia/commons/5/59/Match_veteranov_Spartaka_%2833%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+  "https://upload.wikimedia.org/wikipedia/commons/5/59/Match_veteranov_Spartaka_%2833%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/2023-10-04_Fu%C3%9Fball%2C_M%C3%A4nner%2C_UEFA_Champions_League%2C_RB_Leipzig_-_Manchester_City_FC_1DX_2642.jpg/1280px-2023-10-04_Fu%C3%9Fball%2C_M%C3%A4nner%2C_UEFA_Champions_League%2C_RB_Leipzig_-_Manchester_City_FC_1DX_2642.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
  ],
  "indexnow_day": "2026-11-15",
  "vk_wall_err": null,
@@ -1917,7 +1918,8 @@
   "6219",
   "6236",
   "6244",
-  "6248"
+  "6248",
+  "6249"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -1997,12 +1999,13 @@
   "2026-11-15:новость:09b32bf059774f2f666ec709",
   "2026-11-15:новость:8ba2145311f460349c7f65d8",
   "2026-11-15:новость:390662622932ce858e84b08b",
-  "2026-11-15:начало:eed0fc59d46af40456437aa9"
+  "2026-11-15:начало:eed0fc59d46af40456437aa9",
+  "2026-11-15:новость:711cff26338f199592700ee1"
  ],
  "dz_last_delivery": {
-  "source_id": 6248,
-  "message_id": 626,
-  "kind": "начало"
+  "source_id": 6249,
+  "message_id": 627,
+  "kind": "новость"
  },
  "learn_attempt_day": "2026-11-15",
  "learn_diagnostics": {
@@ -2091,7 +2094,7 @@
   "quote_matches": 6
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-15T22:43:01.791190+03:00",
+  "last_poll": "2026-11-15T22:45:02.604823+03:00",
   "cursor": "52",
   "posts": [
    {
