@@ -1699,7 +1699,7 @@
  "streak_day": {
   "2026-11-15": 2
  },
- "news_next": "2026-11-16T01:41:06.810343+03:00",
+ "news_next": "2026-11-16T01:47:30.651031+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -2136,8 +2136,8 @@
   "quote_matches": 12
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-16T01:39:29.819325+03:00",
-  "cursor": "56",
+  "last_poll": "2026-11-16T01:41:30.651031+03:00",
+  "cursor": "57",
   "posts": [
    {
     "post_id": 499,
@@ -2257,6 +2257,23 @@
     },
     "status": "needs_review",
     "observed_at": "2026-11-16T00:38:08.121869+03:00"
+   },
+   {
+    "post_id": 506,
+    "url": "https://vk.com/wall-228963529_506",
+    "title": "PARIVISION уступила 100 Thieves в закрытой квалификации PGL Cluj-Napoca 2027",
+    "text": "PARIVISION уступила 100 Thieves в закрытой квалификации PGL Cluj-Napoca 2027\n\nрџ“° В закрытой отборочной на PGL Cluj-Napoca 2027 по CS2 «PARIVISION» проиграла «100 Thieves» со счётом 1:2.\n\nрџ“Љ На первой карте Inferno «PARIVISION» одержала победу 13:9, но на Dust2 соперники отыграли 13:11, а на Cache уже в конце матча «100 Thieves» вырвали победу 16:13, закрыв серию.\n\n#киберспорт #CS2 #новостиспорта #спорт #главное #аиставит\n\nрџ“Љ Подробнее на сайте рџ‘‡",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": true,
+     "details_present": true,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-16T01:41:30.651031+03:00"
    }
   ],
   "status": "observing"
