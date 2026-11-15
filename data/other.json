@@ -5655,25 +5655,25 @@
   "kickoff": "2026-11-15T03:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Sat, November 14th at 7:00 PM EST",
   "clock": "0:00",
   "period": 0,
   "home": {
+   "color": "231f20",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/bos.png",
    "id": "1",
    "name": "Boston Bruins",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/bos.png",
-   "color": "231f20",
    "score": "0",
    "record": "13-5-1",
    "periods": [],
    "ru": "Бостон"
   },
   "away": {
+   "color": "124734",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/min.png",
    "id": "30",
    "name": "Minnesota Wild",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/min.png",
-   "color": "124734",
    "score": "0",
    "record": "14-3-4",
    "periods": [],
@@ -5768,7 +5768,9 @@
   "btn": 4,
   "close": {
    "HK_ML_A": 0.5428
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null
  },
  "NHL|401892710": {
   "id": "401892710",
