@@ -140,7 +140,7 @@ def main():
         import xml.etree.ElementTree as ET
         monitor = PhotoMonitor(os.environ.get("VK_TOKEN", ""))
         monitor.start()
-        deadline = time.monotonic() + 300
+        deadline = time.monotonic() + 1200
         print("WATCHING_NATIVE_RSS: true", flush=True)
         while time.monotonic() < deadline:
             try:
@@ -179,9 +179,11 @@ def main():
                 print('ARTICLE_HEADER_MATCH:',header_match,flush=True)
                 print('WALL_HAS_HASHTAGS:','#аиставит' in post.get('text','').lower(),flush=True)
                 print('WALL_HAS_DETAILS:','подробнее на сайте' in post.get('text','').lower(),flush=True)
+                print('WALL_TEXT:',json.dumps(post.get('text',''),ensure_ascii=False),flush=True)
+                print('WALL_TEXT_LENGTH:',len(post.get('text','')),flush=True)
                 print("ARTICLE_URLS:", [a.get("view_url") or a.get("url") or a.get("short_url") for a in articles], flush=True)
                 print("ARTICLE_WITH_COVER:", any(a.get("photo") or a.get("cover") for a in articles), flush=True)
-                if match and (mode != "rss-article-watch" or (articles and header_match)):
+                if match and '#аиставит' in post.get('text','').lower() and 'подробнее на сайте' in post.get('text','').lower():
                     return
         print("NATIVE_RSS_EVENT_NOT_YET_OBSERVED: true", flush=True)
         return

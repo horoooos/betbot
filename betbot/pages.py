@@ -745,15 +745,20 @@ def _rss(news: list[dict], ms: list[dict], store: dict[int, dict], now: pd.Times
     x = lambda s: H.escape(str(s or ""), quote=False)
     items = []
     for n in news[:40]:
-        # Article metadata must be fetched directly from our UTF-8 page.
-        # vk.cc redirects via a Windows-1251 intermediary; keep it only in text.
+        # ASCII-safe source metadata; new native-source links may use vk.cc.
         is_vk = feed_name.startswith('rss-vk')
         item_link = SITE+n['vk_article_url'] if is_vk and n.get('vk_article_url') else (SITE+n['url'] if feed_name=='rss-vk-article.xml' else n.get('rss_link') or SITE+n['url'])
         if is_vk and n.get('rss_source_link'):
             item_link=n['rss_source_link']
         item_title = re.sub(r'^[^\wА-Яа-яЁё«"]+', '', n['title']) if is_vk else n['title']
         item_guid = n.get('vk_guid',SITE+n['url']) if is_vk else SITE+n['url']
-        if feed_name == "rss-vk.xml":
+        if is_vk and n.get('vk_compact_rss'):
+            # Native VK ignores description for its wall text and clips the
+            # full content:encoded. Put the complete, bounded caption here too.
+            # The full source article is published separately, without slicing.
+            from .vk_rss import announcement
+            body='\n\n'.join('<p>'+H.escape(p).replace('\n','<br>')+'</p>' for p in announcement(n).split('\n\n'))
+        elif feed_name == "rss-vk.xml":
             # Keep paragraph breaks inside one text node. Importers that strip
             # tags and whitespace-only nodes otherwise concatenate <p> blocks.
             from .vk_rss import wall_description
@@ -830,6 +835,8 @@ def _vk_rss(news: list[dict], now: pd.Timestamp, *, article=False) -> str:
     unified_since=pd.Timestamp(unified_file.read_text(encoding='utf-8').strip()) if unified_file.exists() else None
     footer_file=DATA/'vk_rss_footer_since.txt'
     footer_since=pd.Timestamp(footer_file.read_text(encoding='utf-8').strip()) if footer_file.exists() else None
+    caption_file=DATA/'vk_rss_caption_since.txt'
+    caption_since=pd.Timestamp(caption_file.read_text(encoding='utf-8').strip()) if caption_file.exists() else None
     format_file = DATA / "vk_rss_format_since.txt"
     format_since = pd.Timestamp(format_file.read_text(encoding="utf-8").strip()) if format_file.exists() else None
     links_file = DATA / "vk_rss_links.json"
@@ -861,6 +868,8 @@ def _vk_rss(news: list[dict], now: pd.Timestamp, *, article=False) -> str:
                 print(f"  ! VK RSS: изображение новости {n['id']} пока недоступно")
                 continue
         n={**n, "photo": SITE + f"rss-images/{int(n['id'])}.jpg", "photo_bytes": image.stat().st_size}
+        if caption_since is not None and pd.Timestamp(n['t'])>=caption_since:
+            n['vk_compact_rss']=True
         unified=unified_since is None or pd.Timestamp(n['t'])>=unified_since
         if unified or (article and (transport_since is None or pd.Timestamp(n['t'])>=transport_since)):
             from .vk_rss import article_page
