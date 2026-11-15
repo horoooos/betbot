@@ -14359,7 +14359,7 @@
   "kickoff": "2026-11-15T02:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Scheduled",
   "home": {
    "id": "9318",
@@ -14488,6 +14488,9 @@
   "btn": 4,
   "close": {
    "A&O15": 0.579
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null,
+  "value_hit": null
  }
 }
