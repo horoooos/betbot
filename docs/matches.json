@@ -923,7 +923,15 @@ null
 ],
 "center": "Ожидаемые голы 2.8 : 3.1"
 },
-"lt": null
+"lt": {
+"fair": 1.6,
+"label": "П2 (осн. время)",
+"min_odds": 1.68,
+"minute": "2-й период",
+"p": 0.625,
+"result": null,
+"score": "0:1"
+}
 },
 {
 "sport": "hockey",
@@ -1043,7 +1051,15 @@ null
 ],
 "center": "Ожидаемые голы 3.2 : 3.8"
 },
-"lt": null
+"lt": {
+"fair": 1.54,
+"label": "X2 (осн. время)",
+"min_odds": 1.62,
+"minute": "2-й период",
+"p": 0.648,
+"result": null,
+"score": "0:0"
+}
 },
 {
 "sport": "hockey",
