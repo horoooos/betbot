@@ -1292,5 +1292,43 @@ null
 "top": false,
 "bot": null,
 "lt": null
+},
+{
+"sport": "football",
+"id": "401886134",
+"league": "Перу · Лига 1",
+"kickoff": "2026-11-16T21:00:00+03:00",
+"home": "UTC",
+"away": "Los Chankas",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/10122.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/22168.png",
+"hid": "10122",
+"aid": "22168",
+"bb": "https://betboom.ru/search?query=%D0%A3%D1%82%D0%BA&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/per.1",
+"url": "live.html?s=football&p=soccer%2Fper.1&e=401886134&h=UTC&a=Los+Chankas",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "football",
+"id": "401914292",
+"league": "Сборные · Товарищеские матчи",
+"kickoff": "2026-11-16T21:00:00+03:00",
+"home": "Сборная Андорры",
+"away": "Сборная Азербайджана",
+"hl": "https://a.espncdn.com/i/teamlogos/countries/500/and.png",
+"al": "https://a.espncdn.com/i/teamlogos/countries/500/aze.png",
+"hid": "587",
+"aid": "581",
+"bb": "https://betboom.ru/search?query=%D0%A1%D0%B1%D0%BE%D1%80%D0%BD%D0%B0%D1%8F&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/fifa.friendly",
+"url": "live.html?s=football&p=soccer%2Ffifa.friendly&e=401914292&h=%D0%A1%D0%B1%D0%BE%D1%80%D0%BD%D0%B0%D1%8F+%D0%90%D0%BD%D0%B4%D0%BE%D1%80%D1%80%D1%8B&a=%D0%A1%D0%B1%D0%BE%D1%80%D0%BD%D0%B0%D1%8F+%D0%90%D0%B7%D0%B5%D1%80%D0%B1%D0%B0%D0%B9%D0%B4%D0%B6%D0%B0%D0%BD%D0%B0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
 }
 ]
