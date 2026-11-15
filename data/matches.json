@@ -14527,7 +14527,7 @@
   "kickoff": "2026-11-15T20:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Scheduled",
   "home": {
    "id": "458",
@@ -14659,7 +14659,10 @@
   "btn": 4,
   "close": {
    "O45": 0.4635
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null,
+  "value_hit": null
  },
  "401933837": {
   "status": "skipped",
