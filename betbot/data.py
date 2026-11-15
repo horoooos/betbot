@@ -46,19 +46,23 @@ def season_codes(first_start_year: int, today: date | None = None) -> list[str]:
     return [f"{y % 100:02d}{(y + 1) % 100:02d}" for y in range(first_start_year, 2000 + last + 1)]
 
 
-def _get_csv(url: str) -> pd.DataFrame:
+def _get_csv(url: str, deadline: float | None = None) -> pd.DataFrame:
     for attempt in range(3):
         try:
-            r = requests.get(url, timeout=30, headers={"User-Agent": "betbot/1.0"})
+            remaining = deadline - time.monotonic() if deadline is not None else 30
+            if remaining <= 0:
+                raise TimeoutError("Истёк бюджет обновления истории")
+            r = requests.get(url, timeout=min(30, remaining), headers={"User-Agent": "betbot/1.0"})
             r.raise_for_status()
             text = r.content.decode("utf-8-sig", errors="replace")
             df = pd.read_csv(io.StringIO(text), on_bad_lines="skip")
             df.columns = [c.strip().lstrip("﻿").lstrip("ï»¿") for c in df.columns]
             return df
         except Exception:
-            if attempt == 2:
+            delay = 2 * (attempt + 1)
+            if attempt == 2 or (deadline is not None and time.monotonic() + delay >= deadline):
                 raise
-            time.sleep(2 * (attempt + 1))
+            time.sleep(delay)
 
 
 def _clean(df: pd.DataFrame) -> pd.DataFrame:
@@ -72,11 +76,11 @@ def _clean(df: pd.DataFrame) -> pd.DataFrame:
     return df
 
 
-def _cached(path: Path, url: str, refresh: bool) -> pd.DataFrame | None:
+def _cached(path: Path, url: str, refresh: bool, deadline: float | None = None) -> pd.DataFrame | None:
     if path.exists() and not refresh:
         return pd.read_csv(path)
     try:
-        df = _get_csv(url)
+        df = _get_csv(url, deadline=deadline) if deadline is not None else _get_csv(url)
     except Exception as e:
         print(f"  ! не удалось скачать {url}: {e}")
         return pd.read_csv(path) if path.exists() else None
@@ -85,17 +89,18 @@ def _cached(path: Path, url: str, refresh: bool) -> pd.DataFrame | None:
 
 
 def load_history(first_start_year: int = 2021, refresh_current: bool = True,
-                 leagues: list[str] | None = None) -> pd.DataFrame:
+                 leagues: list[str] | None = None, download_budget_seconds: float | None = None) -> pd.DataFrame:
     """Все сыгранные матчи. Старые сезоны кэшируются на диске, текущий — обновляется."""
     CACHE.mkdir(parents=True, exist_ok=True)
     cur = current_season_code()
     frames = []
+    deadline = time.monotonic() + download_budget_seconds if download_budget_seconds is not None else None
     for league in MAIN:
         if leagues and league not in leagues:
             continue
         for season in season_codes(first_start_year):
             df = _cached(CACHE / f"{league}_{season}.csv", BASE.format(season=season, league=league),
-                         refresh_current and season == cur)
+                         refresh_current and season == cur, deadline=deadline)
             if df is None or df.empty:
                 continue
             df = _clean(df)
@@ -104,7 +109,7 @@ def load_history(first_start_year: int = 2021, refresh_current: bool = True,
     for code in EXTRA:
         if leagues and code not in leagues:
             continue
-        df = _cached(CACHE / f"{code}_all.csv", EXTRA_URL.format(code=code), refresh_current)
+        df = _cached(CACHE / f"{code}_all.csv", EXTRA_URL.format(code=code), refresh_current, deadline=deadline)
         if df is None or df.empty:
             continue
         df = _clean(df.rename(columns=EXTRA_RENAME))

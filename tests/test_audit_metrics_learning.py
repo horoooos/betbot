@@ -9,12 +9,21 @@ from unittest.mock import patch
 import numpy as np
 import pandas as pd
 
-from betbot import engine, pages, pro, site, sports
+from betbot import data, engine, pages, pro, site, sports
 from tools.reconcile_spreads import reconcile
 import run
 
 
 class AuditRegressionTests(unittest.TestCase):
+    def test_exhausted_download_budget_uses_cached_history_without_network(self):
+        with tempfile.TemporaryDirectory() as directory:
+            path=Path(directory)/'history.csv'
+            pd.DataFrame({'FTHG':[2]}).to_csv(path,index=False)
+            with patch.object(data.time,'monotonic',return_value=10),patch.object(data.requests,'get') as get:
+                result=data._cached(path,'https://example.test/history.csv',True,deadline=9)
+                self.assertEqual(result.FTHG.tolist(),[2])
+                get.assert_not_called()
+
     def results(self):
         return pd.DataFrame([dict(date=day, main_odds=2, main_hit=hit, main_stake=1,
                                   bold_odds=np.nan, bold_hit=np.nan)

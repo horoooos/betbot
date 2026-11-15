@@ -196,7 +196,7 @@ LEARN_VERSION = "shared-lambda-v2"
 def learn(state: dict, now: pd.Timestamp) -> bool:
     state["learn_attempt_day"] = str(now.date())
     try:
-        hist = load_history(refresh_current=True, leagues=HIST_LEAGUES)
+        hist = load_history(refresh_current=True, leagues=HIST_LEAGUES, download_budget_seconds=180)
         hist = hist[hist["Date"] < now.tz_localize(None)]
         start = str((now.tz_localize(None) - pd.Timedelta(days=730)).date())
         diagnostics = {}
