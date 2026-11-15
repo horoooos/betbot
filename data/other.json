@@ -6953,25 +6953,25 @@
   "kickoff": "2026-11-15T05:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Sat, November 14th at 9:00 PM EST",
   "clock": "0:00",
   "period": 0,
   "home": {
+   "color": "000000",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/uta.png",
    "id": "129764",
    "name": "Utah Mammoth",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/uta.png",
-   "color": "000000",
    "score": "0",
    "record": "10-8-2",
    "periods": [],
    "ru": "Юта"
   },
   "away": {
+   "color": "00788a",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/sj.png",
    "id": "18",
    "name": "San Jose Sharks",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/sj.png",
-   "color": "00788a",
    "score": "0",
    "record": "8-11-2",
    "periods": [],
@@ -7066,7 +7066,9 @@
   "btn": 4,
   "close": {
    "HK_O6.5": 0.4675
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null
  },
  "NHL|401892719": {
   "id": "401892719",
