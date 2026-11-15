@@ -1515,7 +1515,9 @@
      "000080",
      "ffffff"
     ],
-    "label": "Победа: Сборная Франции"
+    "label": "Победа: Сборная Франции",
+    "win": true,
+    "score": "2:1"
    },
    {
     "sport": "basketball",
@@ -1543,13 +1545,13 @@
   ],
   "odds": 1.571949,
   "day": "2026-11-15",
-  "done": false
+  "done": true
  },
  "streak_posted": 0,
  "value_day": "2026-11-15",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-15",
- "site_stamp": "1053|6297|2026-11-16 00|3|bb543aa30e1fa129",
+ "site_stamp": "1054|6300|2026-11-16 00|3|398cb348e538f5ab",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1698,7 +1700,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 6297,
+ "dz_last": 6300,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2113,7 +2115,7 @@
   "quote_matches": 9
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-16T00:38:08.121869+03:00",
+  "last_poll": "2026-11-16T00:40:08.525024+03:00",
   "cursor": "56",
   "posts": [
    {
