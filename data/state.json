@@ -7,7 +7,6 @@
  "schedule_day": "2026-11-15",
  "content_slot": "2026-11-15-13",
  "news_seen": [
-  "https://www.sport-express.ru/hockey/nhl/news/trener-tampy-dzhon-kuper-ob-igre-nikity-kucherova-v-matche-s-baffalo-on-sdelal-svoe-delo-2473934/",
   "https://www.sport-express.ru/hockey/nhl/news/makdevid-stal-chetvertym-igrokom-v-istorii-nhl-s-rezultativnoy-seriey-iz-20-matchey-sezona-2473935/",
   "https://www.sport-express.ru/hockey/nhl/news/vratar-sergey-murashov-priznan-pervoy-zvezdoy-matcha-san-hose-pittsburg-2473939/",
   "https://www.sport-express.ru/tennis/wta/news/andreeva-stala-pervoy-rossiyankoy-za-desyat-let-vyshedshey-iz-gruppy-na-itogovom-turnire-2473938/",
@@ -506,9 +505,10 @@
   "https://www.sport-express.ru/hockey/nhl/news/trener-san-hose-varsofski-o-4-ochkah-orlova-v-matche-s-yutoy-imenno-etogo-i-zhdesh-ot-opytnogo-igroka-2475136/",
   "https://www.sport-express.ru/hockey/nhl/news/rossiyane-v-nhl-15-noyabrya-yurov-svechnikov-orlov-ovechkin-i-statistika-igrokov-2475135/",
   "https://www.sport-express.ru/football/foreign/news/anderlehtu-grozit-porazhenie-iz-za-narusheniya-pravila-o-domoroschennyh-futbolistah-2475138/",
-  "https://www.sport-express.ru/tennis/wta/news/andreeva-o-statuse-vtoroy-raketki-mira-ne-hochu-slishkom-mnogo-ob-etom-dumat-2475139/"
+  "https://www.sport-express.ru/tennis/wta/news/andreeva-o-statuse-vtoroy-raketki-mira-ne-hochu-slishkom-mnogo-ob-etom-dumat-2475139/",
+  "https://www.sport-express.ru/football/rfpl/news/istochnik-zhedson-fernandesh-nedovolen-zhiznyu-v-rossii-i-mozhet-pereyti-iz-spartaka-v-trabzonspor-2475144/"
  ],
- "news_i": 6,
+ "news_i": 1,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1679,7 +1679,7 @@
  "streak_day": {
   "2026-11-15": 2
  },
- "news_next": "2026-11-15T13:04:12.032947+03:00",
+ "news_next": "2026-11-15T13:35:13.586252+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1755,7 +1755,8 @@
   "https://images.cybersport.ru/images/as-is/plain/eb/ebdc995e-c056-4b30-b02a-9b9a3bdced39.jpg",
   "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/2016_NHL_All-Star_Game_%2824751803866%29.jpg/1280px-2016_NHL_All-Star_Game_%2824751803866%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
   "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/72/2017_IIHF_World_Championship_-_ITA_vs_RUS_1.jpg/1280px-2017_IIHF_World_Championship_-_ITA_vs_RUS_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-  "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Andreeva_M._WMQ23_%2853062105200%29.jpg/1280px-Andreeva_M._WMQ23_%2853062105200%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Andreeva_M._WMQ23_%2853062105200%29.jpg/1280px-Andreeva_M._WMQ23_%2853062105200%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/63/23.08.2026_FC_Spartak_Moscow_vs._FC_Zenit_Saint_Petersburg554.jpg/1280px-23.08.2026_FC_Spartak_Moscow_vs._FC_Zenit_Saint_Petersburg554.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
  ],
  "indexnow_day": "2026-11-15",
  "vk_wall_err": null,
@@ -1879,7 +1880,8 @@
   "6125",
   "6137",
   "6138",
-  "6141"
+  "6141",
+  "6144"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -1935,11 +1937,12 @@
   "2026-11-15:матчи:7a1efc0fb4a494cca241951f",
   "2026-11-15:новость:e2f14bc870e509d3b061e97e",
   "2026-11-15:экспресс:599c186fc1f94ecc21811e5b",
-  "2026-11-15:новость:9cb1e358a7d4f475ebd7f5d8"
+  "2026-11-15:новость:9cb1e358a7d4f475ebd7f5d8",
+  "2026-11-15:новость:3b1dfdb049c70bb298b1797f"
  ],
  "dz_last_delivery": {
-  "source_id": 6141,
-  "message_id": 602,
+  "source_id": 6144,
+  "message_id": 603,
   "kind": "новость"
  }
 }
