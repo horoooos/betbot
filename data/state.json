@@ -1549,7 +1549,7 @@
  "value_day": "2026-11-15",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-15",
- "site_stamp": "1051|6276|2026-11-15 23|3|0bced7b3147c1aaa",
+ "site_stamp": "1051|6277|2026-11-15 23|3|0bced7b3147c1aaa",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1698,7 +1698,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 6276,
+ "dz_last": 6277,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2107,8 +2107,8 @@
   "quote_matches": 6
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-15T23:33:02.526213+03:00",
-  "cursor": "52",
+  "last_poll": "2026-11-15T23:35:01.878479+03:00",
+  "cursor": "54",
   "posts": [
    {
     "post_id": 499,
@@ -2160,6 +2160,40 @@
     },
     "status": "needs_review",
     "observed_at": "2026-11-15T22:29:02.605345+03:00"
+   },
+   {
+    "post_id": 502,
+    "url": "https://vk.com/wall-228963529_502",
+    "title": "Рольгизер: «Никогда не видел такой плотности в Востоке» – 5:1 над СКА",
+    "text": "Рольгизер: «Никогда не видел такой плотности в Востоке» – 5:1 над СКА\n\nрџ± Нападающий «Трактора» Михаил Рольгизер в интервью «СЭ» раскрыл детали громкой победы над СКА (5:1) в рамках FONBET-чемпионата КХЛ.\n\n#хоккей #КХЛ #Рольгизер #новостиспорта #спорт #главное #аиставит\n\nрџ“Љ Подробнее на сайте рџ‘‡",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": true,
+     "details_present": true,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-15T23:35:01.878479+03:00"
+   },
+   {
+    "post_id": 503,
+    "url": "https://vk.com/wall-228963529_503",
+    "title": "Гвардиола отказывается вести сборную США после ухода Почеттино",
+    "text": "Гвардиола отказывается вести сборную США после ухода Почеттино\n\nрџ± Гвардиола отказывается от США: планирует год перерыва.\n\nвљЅпёЏ По сведениям The Telegraph 55-летний испанский тренер Хосеп Гвардиола официально отклонил любые предложения от американской федерации футбола, заявив, что после ухода нынешнего руководителя Маурисио Почеттино он не собирается возглавлять сборную США.\n\n#футбол #Гвардиола #новостиспорта #спорт #главное #аиставит\n\nрџ“Љ Подробнее на сайте рџ‘‡",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": true,
+     "details_present": true,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-15T23:35:01.878479+03:00"
    }
   ],
   "status": "observing"
