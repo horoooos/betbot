@@ -30,7 +30,9 @@ def main():
         if result.get('message_id')!=mid or not result.get('photo'):raise ValueError('Photo update not confirmed')
         print('UPDATED_FORECAST',f'https://t.me/aistavvit/{mid}',flush=True)
         for p in channel.values():
-            if p.get('reply')!=mid:continue
+            heading=pages._plain(p['html']).split('\n',1)[0]
+            own_analysis='ПОЛНЫЙ РАЗБОР:' in heading and all(t['ru'] in heading for t in (m['home'],m['away']))
+            if p.get('reply')!=mid and not own_analysis:continue
             text=sports.public_model_label(p['html'])
             if text==p['html']:continue
             text=re.sub(r' rel="[^"]*"','',text)
