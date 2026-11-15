@@ -1823,14 +1823,14 @@
  "vk_photos": [],
  "vk_photo_until": 1794644243.1147308,
  "vk_photo_cursor": {},
- "vk_story_last": 5696,
- "vk_story_err": "VK stories: сервер не вернул upload_result",
+ "vk_story_last": 5704,
+ "vk_story_err": null,
  "push_weekly": "2026-46",
- "vk_story_at": 1794712085.2867923,
- "vk_story_url": "https://vk.com/story-228963529_456239055",
+ "vk_story_at": 1794716747.6238997,
+ "vk_story_url": "https://vk.com/story-228963529_456239056",
  "vk_story_day": {
   "date": "2026-11-15",
-  "count": 9
+  "count": 10
  },
  "vk_legacy_pending": [
   {
@@ -1963,6 +1963,5 @@
   "source_id": 6109,
   "message_id": 597,
   "kind": "начало"
- },
- "vk_story_retry_at": 1794716627.8268895
+ }
 }
