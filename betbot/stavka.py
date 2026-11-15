@@ -25,6 +25,28 @@ MIN_MATCHES = 100
 MONTHS = ['янв', 'фев', 'мар', 'апр', 'мая', 'июн', 'июл', 'авг', 'сен', 'окт', 'ноя', 'дек']
 _runtime = None
 SOURCE_SPORTS={'soccer':'football','ice-hockey':'hockey','basketball':'basketball','tennis':'tennis','csgo':'esports','dota2':'esports'}
+TEAM_ALIASES={
+    'Anaheim Ducks':['Анахайм Дакс'],'Boston Bruins':['Бостон Брюинз'],
+    'Buffalo Sabres':['Баффало Сейбрз'],'Calgary Flames':['Калгари Флэймз'],
+    'Carolina Hurricanes':['Каролина Харрикейнз'],'Chicago Blackhawks':['Чикаго Блэкхокс'],
+    'Colorado Avalanche':['Колорадо Эвеланш'],'Columbus Blue Jackets':['Коламбус Блю Джекетс'],
+    'Dallas Stars':['Даллас Старз'],'Detroit Red Wings':['Детройт Ред Уингз'],
+    'Edmonton Oilers':['Эдмонтон Ойлерз'],'Florida Panthers':['Флорида Пантерз'],
+    'Los Angeles Kings':['Лос-Анджелес Кингз'],'Minnesota Wild':['Миннесота Уайлд'],
+    'Montreal Canadiens':['Монреаль Канадиенс'],'Nashville Predators':['Нэшвилл Предаторз'],
+    'New Jersey Devils':['Нью-Джерси Девилз'],'New York Islanders':['Нью-Йорк Айлендерс'],
+    'New York Rangers':['Нью-Йорк Рейнджерс'],'Ottawa Senators':['Оттава Сенаторз'],
+    'Philadelphia Flyers':['Филадельфия Флайерз'],'Pittsburgh Penguins':['Питтсбург Пингвинз'],
+    'San Jose Sharks':['Сан-Хосе Шаркс'],'Seattle Kraken':['Сиэтл Кракен'],
+    'St. Louis Blues':['Сент-Луис Блюз'],'Tampa Bay Lightning':['Тампа-Бэй Лайтнинг'],
+    'Toronto Maple Leafs':['Торонто Мейпл Лифс'],'Utah Mammoth':['Юта Маммот'],
+    'Vancouver Canucks':['Ванкувер Кэнакс'],'Vegas Golden Knights':['Вегас Голден Найтс'],
+    'Washington Capitals':['Вашингтон Кэпиталз'],'Winnipeg Jets':['Виннипег Джетс'],
+    'Philadelphia 76ers':['Филадельфия Севенти Сиксерс'],
+    'Golden State Warriors':['Голден Стэйт Уорриорз'],
+    'Cleveland Cavaliers':['Кливленд Кавальерс'],'Portland Trail Blazers':['Портленд Трэйл Блэйзерс'],
+    'LA Clippers':['Лос-Анджелес Клипперс'],'Coco Gauff':['Коко Гауфф'],
+    'Team Spirit':['Spirit'],'Natus Vincere':['NAVI','NaVi']}
 
 
 def utc(value):
@@ -136,6 +158,7 @@ def normalized(team):
 
 def team_aliases(team):
     aliases={normalized(team.get(k,'')) for k in ('ru','name')}
+    aliases.update(normalized(n) for n in TEAM_ALIASES.get(team.get('name'),[]))
     ru=team.get('ru','')
     if ru.startswith('Сборная '):
         country=normalized(ru)

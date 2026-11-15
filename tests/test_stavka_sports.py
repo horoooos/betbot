@@ -40,6 +40,12 @@ class AllSportSignalsTests(unittest.TestCase):
         self.assertIsNone(stavka.market_key('ПОБЕДА 1 НА ПЕРВОЙ КАРТЕ.','esports'))
         self.assertIsNone(stavka.market_key('ПОБЕДА 1 В ПЕРВОМ СЕТЕ.','tennis'))
 
+    def test_nhl_full_names_match_trusted_short_names(self):
+        e=self.event('hockey','NHL',home={'ru':'Бостон','name':'Boston Bruins'},away={'ru':'Тампа-Бэй','name':'Tampa Bay Lightning'})
+        row=dict(sport='hockey',day='2026-11-15',home='Бостон Брюинз',away='Тампа-Бэй Лайтнинг')
+        self.assertEqual(stavka.match_event(row,[e])['id'],e['id'])
+        self.assertIsNone(stavka.match_event({**row,'sport':'basketball'},[e]))
+
     def test_all_sports_can_apply_signal_without_inventing_bookmaker_odds(self):
         for sport,div,extra in [('hockey','NHL',{}),('basketball','NBA',{'odds':{'H':1.7,'A':2.2,'spread':-3.5,'sp_h':1.9,'sp_a':1.9,'line':220.5,'over':1.9,'under':1.9}}),
                                 ('tennis','ATP',{}),('esports','CS2',{'bo':3}),('esports','DOTA',{'bo':3})]:
