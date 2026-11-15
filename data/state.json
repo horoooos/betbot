@@ -1992,7 +1992,47 @@
  "stavka": {
   "model": {
    "weight": 0.0,
-   "status": "collecting"
+   "status": "collecting",
+   "settled_matches": 0,
+   "required_matches": 100,
+   "trained_at": "2026-11-15T13:43:14.477857+00:00"
+  },
+  "sport_models": {
+   "hockey": {
+    "status": "collecting",
+    "weight": 0.0,
+    "settled_matches": 0,
+    "required_matches": 100,
+    "trained_at": "2026-11-15T13:43:14.477857+00:00"
+   },
+   "basketball": {
+    "status": "collecting",
+    "weight": 0.0,
+    "settled_matches": 0,
+    "required_matches": 100,
+    "trained_at": "2026-11-15T13:43:14.477857+00:00"
+   },
+   "tennis": {
+    "status": "collecting",
+    "weight": 0.0,
+    "settled_matches": 0,
+    "required_matches": 100,
+    "trained_at": "2026-11-15T13:43:14.477857+00:00"
+   },
+   "esports:CS2": {
+    "status": "collecting",
+    "weight": 0.0,
+    "settled_matches": 0,
+    "required_matches": 100,
+    "trained_at": "2026-11-15T13:43:14.477857+00:00"
+   },
+   "esports:DOTA": {
+    "status": "collecting",
+    "weight": 0.0,
+    "settled_matches": 0,
+    "required_matches": 100,
+    "trained_at": "2026-11-15T13:43:14.477857+00:00"
+   }
   },
   "source": {
    "last_success": "2026-11-15T13:25:14.875693+00:00",
