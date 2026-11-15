@@ -1547,7 +1547,7 @@
  "value_day": "2026-11-15",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-15",
- "site_stamp": "1044|6204|2026-11-15 20|2",
+ "site_stamp": "1045|6207|2026-11-15 20|2",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1696,7 +1696,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 6204,
+ "dz_last": 6207,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2007,15 +2007,6 @@
  "learn_version": "shared-lambda-v2",
  "learn_error": null,
  "learn_retry_at": 0,
- "mod_poll": {
-  "key": "SP2|401883116",
-  "id": "401883116",
-  "poll": 6159,
-  "post": 6158,
-  "home": "Granada",
-  "away": "Лас-Пальмас",
-  "kickoff": "2026-11-15T18:15:00+03:00"
- },
  "stavka": {
   "model": {
    "weight": 0.0,
