@@ -7,9 +7,6 @@
  "schedule_day": "2026-11-15",
  "content_slot": "2026-11-15-19",
  "news_seen": [
-  "https://www.sport-express.ru/football/england/news/manchester-yunayted-oficialno-uvolil-maykla-karrika-s-posta-glavnogo-trenera-2474013/",
-  "https://www.sport-express.ru/hockey/nhl/news/malkin-ustanovil-unikalnoe-dostizhenie-v-nhl-sredi-igrokov-40-let-2474012/",
-  "https://www.sport-express.ru/football/england/news/romano-manchester-yunayted-uvolil-maykla-kerrika-s-posta-glavnogo-trenera-2474013/",
   "https://www.sport-express.ru/football/transfers/news/espn-andres-gomes-mozhet-pereyti-iz-vasko-da-gama-v-bornmut-2474014/",
   "valve-mozhet-pererabotat-kartu-dota-2-v-patche-7-42",
   "https://www.sport-express.ru/hockey/khl/news/tambiev-pozhalovalsya-v-khl-na-dinamo-i-bolelschikov-kluba-2474031/",
@@ -506,9 +503,12 @@
   "https://www.sport-express.ru/basketball/vtb-league/news/lokomotiv-kuban-uniks-schet-i-rezultat-matcha-basket-cup-15-noyabrya-2026-2475207/",
   "https://www.sport-express.ru/tennis/atp/news/zverev-o-pobede-na-starte-itogovogo-turnira-dovolen-nachalom-no-mne-esche-nuzhno-pribavlyat-2475231/",
   "https://www.sport-express.ru/tennis/atp/news/aleksandr-zverev-rafael-hodar-rezultat-matcha-gruppovogo-etapa-itogovogo-turnira-atp-15-noyabrya-2026-2475215/",
-  "https://www.sport-express.ru/tennis/wta/news/sinner-pozhelal-bolelschikam-osobennogo-itogovogo-turnira-i-poobeschal-sledit-za-nim-iz-doma-2475214/"
+  "https://www.sport-express.ru/tennis/wta/news/sinner-pozhelal-bolelschikam-osobennogo-itogovogo-turnira-i-poobeschal-sledit-za-nim-iz-doma-2475214/",
+  "daxak-o-porazhenii-team-spirit-ot-frogling-yesli-by-odna-pobeda-chto-to-znachila",
+  "parivision-vyigrala-u-bet-m-33-v-kvalifikatsii-na-pgl-cluj-napoca-2027",
+  "magixx-nazval-prichinu-provala-team-spirit-na-dust2-v-finale-blast-rivals-fall"
  ],
- "news_i": 6,
+ "news_i": 0,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1679,7 +1679,7 @@
  "streak_day": {
   "2026-11-15": 2
  },
- "news_next": "2026-11-15T19:40:22.860172+03:00",
+ "news_next": "2026-11-15T20:12:22.224067+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1765,7 +1765,8 @@
   "https://upload.wikimedia.org/wikipedia/commons/b/b5/FC_Dynamo_Kyiv_Fans_-_%D0%A4%D0%B0%D0%BD%D0%B0%D1%82%D1%8B_%D0%A4%D0%9A_%D0%94%D0%B8%D0%BD%D0%B0%D0%BC%D0%BE_%D0%9A%D0%B8%D0%B5%D0%B2_%2822165368489%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
   "https://images.cybersport.ru/images/as-is/plain/ce/cefafdcf-6a33-4bad-87a7-b9488e1eb8dc.jpg",
   "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2e/23.08.2026_FC_Spartak_Moscow_vs._FC_Zenit_Saint_Petersburg_51.jpg/1280px-23.08.2026_FC_Spartak_Moscow_vs._FC_Zenit_Saint_Petersburg_51.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-  "https://upload.wikimedia.org/wikipedia/commons/4/48/Jannik_Sinner_US_Open_2025_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+  "https://upload.wikimedia.org/wikipedia/commons/4/48/Jannik_Sinner_US_Open_2025_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "https://images.cybersport.ru/images/as-is/plain/c6/c65f942e-2cc8-4b08-b8b0-7b397a3e75cf.jpg"
  ],
  "indexnow_day": "2026-11-15",
  "vk_wall_err": null,
@@ -1903,7 +1904,8 @@
   "6171",
   "6175",
   "6179",
-  "6189"
+  "6189",
+  "6195"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -1973,11 +1975,12 @@
   "2026-11-15:новость:c46909dd5592270efce39acb",
   "2026-11-15:новость:56bb980e077ffb898236a3b3",
   "2026-11-15:новость:9b80e20f0e6ad31b76de6539",
-  "2026-11-15:новость:5dcef164306c49d2b57f6256"
+  "2026-11-15:новость:5dcef164306c49d2b57f6256",
+  "2026-11-15:новость:dd62db6fb9fe0475f12a1bbc"
  ],
  "dz_last_delivery": {
-  "source_id": 6189,
-  "message_id": 616,
+  "source_id": 6195,
+  "message_id": 617,
   "kind": "новость"
  },
  "learn_attempt_day": "2026-11-15",
