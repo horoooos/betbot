@@ -14491,7 +14491,7 @@
   "kickoff": "2026-11-15T06:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Scheduled",
   "home": {
    "id": "2666",
@@ -14619,6 +14619,9 @@
   "btn": 4,
   "close": {
    "U35": 0.4885
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null,
+  "value_hit": null
  }
 }
