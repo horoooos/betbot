@@ -7,8 +7,6 @@
  "schedule_day": "2026-11-15",
  "content_slot": "2026-11-15-20",
  "news_seen": [
-  "https://www.sport-express.ru/football/transfers/news/espn-andres-gomes-mozhet-pereyti-iz-vasko-da-gama-v-bornmut-2474014/",
-  "valve-mozhet-pererabotat-kartu-dota-2-v-patche-7-42",
   "https://www.sport-express.ru/hockey/khl/news/tambiev-pozhalovalsya-v-khl-na-dinamo-i-bolelschikov-kluba-2474031/",
   "https://www.sport-express.ru/hockey/world-u20/news/rene-fazel-nazval-maloveroyatnym-vozmozhnyy-perenos-mchm-2027-iz-kanady-iz-za-nevydachi-viz-rossiyanam-2474027/",
   "https://www.sport-express.ru/hockey/nhl/news/rossiyane-v-nhl-12-noyabrya-2026-goda-kucherov-barbashev-murashov-statistika-vseh-igrokov-2474017/",
@@ -506,9 +504,11 @@
   "https://www.sport-express.ru/tennis/wta/news/sinner-pozhelal-bolelschikam-osobennogo-itogovogo-turnira-i-poobeschal-sledit-za-nim-iz-doma-2475214/",
   "daxak-o-porazhenii-team-spirit-ot-frogling-yesli-by-odna-pobeda-chto-to-znachila",
   "parivision-vyigrala-u-bet-m-33-v-kvalifikatsii-na-pgl-cluj-napoca-2027",
-  "magixx-nazval-prichinu-provala-team-spirit-na-dust2-v-finale-blast-rivals-fall"
+  "magixx-nazval-prichinu-provala-team-spirit-na-dust2-v-finale-blast-rivals-fall",
+  "https://www.sport-express.ru/football/spain/news/trener-sevili-plasa-zayavil-chto-real-i-barselona-delayut-la-ligu-skuchnoy-2475249/",
+  "https://www.sport-express.ru/football/rfpl/news/semak-vybral-pszh-v-kachestve-zhelaemogo-sopernika-dlya-zenita-2475247/"
  ],
- "news_i": 0,
+ "news_i": 1,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1677,7 +1677,7 @@
  "streak_day": {
   "2026-11-15": 2
  },
- "news_next": "2026-11-15T20:12:22.224067+03:00",
+ "news_next": "2026-11-15T20:42:22.828141+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1764,7 +1764,8 @@
   "https://images.cybersport.ru/images/as-is/plain/ce/cefafdcf-6a33-4bad-87a7-b9488e1eb8dc.jpg",
   "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2e/23.08.2026_FC_Spartak_Moscow_vs._FC_Zenit_Saint_Petersburg_51.jpg/1280px-23.08.2026_FC_Spartak_Moscow_vs._FC_Zenit_Saint_Petersburg_51.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
   "https://upload.wikimedia.org/wikipedia/commons/4/48/Jannik_Sinner_US_Open_2025_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-  "https://images.cybersport.ru/images/as-is/plain/c6/c65f942e-2cc8-4b08-b8b0-7b397a3e75cf.jpg"
+  "https://images.cybersport.ru/images/as-is/plain/c6/c65f942e-2cc8-4b08-b8b0-7b397a3e75cf.jpg",
+  "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/2021-12-08_-_FC_Zenit_Saint_Petersburg_v_Chelsea_F.C._-_Photo_231.jpg/1280px-2021-12-08_-_FC_Zenit_Saint_Petersburg_v_Chelsea_F.C._-_Photo_231.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
  ],
  "indexnow_day": "2026-11-15",
  "vk_wall_err": null,
@@ -1905,7 +1906,8 @@
   "6189",
   "6195",
   "6202",
-  "6203"
+  "6203",
+  "6205"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -1978,12 +1980,13 @@
   "2026-11-15:новость:5dcef164306c49d2b57f6256",
   "2026-11-15:новость:dd62db6fb9fe0475f12a1bbc",
   "2026-11-15:экспресс:e67f2441b176b73a512b6655",
-  "2026-11-15:начало:be7bbeddf8114fdf5cf2e429"
+  "2026-11-15:начало:be7bbeddf8114fdf5cf2e429",
+  "2026-11-15:новость:5cd4aa1b418744abeb0c5115"
  ],
  "dz_last_delivery": {
-  "source_id": 6203,
-  "message_id": 619,
-  "kind": "начало"
+  "source_id": 6205,
+  "message_id": 620,
+  "kind": "новость"
  },
  "learn_attempt_day": "2026-11-15",
  "learn_diagnostics": {
