@@ -6847,25 +6847,25 @@
   "kickoff": "2026-11-15T04:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Sat, November 14th at 8:00 PM EST",
   "clock": "0.0",
   "period": 0,
   "home": {
+   "color": "266092",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/min.png",
    "id": "16",
    "name": "Minnesota Timberwolves",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/min.png",
-   "color": "266092",
    "score": "0",
    "record": "9-3",
    "periods": [],
    "ru": "Миннесота Тимбервулвз"
   },
   "away": {
+   "color": "ce1141",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/chi.png",
    "id": "4",
    "name": "Chicago Bulls",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/chi.png",
-   "color": "ce1141",
    "score": "0",
    "record": "2-9",
    "periods": [],
@@ -6940,7 +6940,9 @@
   "btn": 4,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null
  },
  "NHL|401892718": {
   "id": "401892718",
