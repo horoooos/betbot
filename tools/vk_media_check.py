@@ -111,6 +111,20 @@ def link_preview(group, reader, parse_token=None):
 
 def main():
     mode = os.environ.get("VK_MEDIA_MODE", "access")
+    if mode=='rss-post-check':
+        for role,token in (('GROUP',os.environ.get('VK_TOKEN','')),('USER',os.environ.get('VK_USER_TOKEN',''))):
+            if not token:continue
+            try:
+                result=call('wall.getById',token,posts=f'-{vk.GROUP_ID}_487')
+                items=result.get('items',[]) if isinstance(result,dict) else result
+                for item in items:
+                    print(role+'_POST_TEXT:',item.get('text',''),flush=True)
+                    for attachment in item.get('attachments',[]):
+                        kind=attachment.get('type');data=attachment.get(kind,{})
+                        print(role+'_ATTACHMENT:',json.dumps({'type':kind,'title':data.get('title'),'id':data.get('id')},ensure_ascii=False),flush=True)
+            except RuntimeError as error:
+                print(role+'_POST_READ:',str(error),flush=True)
+        return
     if mode == "edit-access":
         # An invalid negative post ID guarantees that no wall post is edited.
         for role, token in (("GROUP", os.environ.get("VK_TOKEN", "")), ("USER", os.environ.get("VK_USER_TOKEN", ""))):

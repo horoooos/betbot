@@ -1,4 +1,5 @@
 import json
+import html
 import tempfile
 import unittest
 import xml.etree.ElementTree as ET
@@ -36,7 +37,7 @@ class EditorialDeliveryTests(unittest.TestCase):
                 article_body = article.findtext('channel/item/{http://purl.org/rss/1.0/modules/content/}encoded')
                 self.assertIn('<p>', article_body)
                 self.assertNotIn('<pre', article_body)
-                self.assertIn('Заключительный абзац, который нельзя потерять.', article_body)
+                self.assertIn('Заключительный абзац, который нельзя потерять.', html.unescape(article_body))
                 seed = {**complete[0], 't': '2026-11-14T10:30:00Z', 'title': 'Полная версия: новость', 'url': 'news/full-100.html'}
                 (root / 'vk_rss_article_seed.json').write_text(json.dumps(seed, default=str), encoding='utf-8')
                 ordinary = ET.fromstring(pages._vk_rss(complete, pd.Timestamp('2026-11-14T11:00:00Z')))

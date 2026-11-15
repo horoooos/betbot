@@ -20,7 +20,7 @@ from betbot import card, content, directory, dzen, vk, esports, inplay, live, na
 from betbot import markets as mk
 from betbot.data import MSK, load_fixtures, load_history
 from betbot.engine import add_market, fit_full, fit_weights, fit_weights_lambda, walk_forward
-from betbot import extras, stavka
+from betbot import extras, stavka, stavka_sports
 from betbot.espn import _get as espn_get, scoreboard, summary
 from betbot.leagues import ALL, EXTRA, MAIN, NATIONAL, ORDER
 
@@ -399,7 +399,13 @@ def other_review(e: dict, calib: dict, ctx: dict, state: dict) -> dict | None:
     a = sports.analyse(e, ratings)
     if a is None:
         return None
+    source_signal={"status":"unavailable","weight":0.0}
+    try:
+        a,source_signal=stavka_sports.adjust(e,a,pd.Timestamp.now(tz=MSK))
+    except Exception as exc:
+        print(f"  ! СТАВКА ТВ: сигнал {e['sport']} не применён: {exc}")
     m = {**e, **a}
+    m['stavka_signal']=source_signal
     m["main"], m["bold"] = sports.pick(a, calib)
     for t in (m["main"], m["bold"]):
         if t:
@@ -568,7 +574,7 @@ def main():
         other = []
     print(f"Матчей в окне: футбол {len(events)}, другие виды спорта {len(other)}")
     try:
-        state["stavka"] = stavka.tick(events, now)
+        state["stavka"] = stavka.tick(events + other, now)
         print(f"СТАВКА ТВ: {state['stavka']['tips']} прогнозов, {state['stavka']['snapshots']} снимков, "
               f"вес {state['stavka']['model'].get('weight', 0):.2f}")
     except Exception as exc:

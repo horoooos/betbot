@@ -8,6 +8,7 @@ import json
 import math
 import re
 from pathlib import Path
+from concurrent.futures import ThreadPoolExecutor
 from urllib.parse import urljoin, urlsplit
 
 import numpy as np
@@ -23,6 +24,7 @@ VERSION = 1
 MIN_MATCHES = 100
 MONTHS = ['янв', 'фев', 'мар', 'апр', 'мая', 'июн', 'июл', 'авг', 'сен', 'окт', 'ноя', 'дек']
 _runtime = None
+SOURCE_SPORTS={'soccer':'football','ice-hockey':'hockey','basketball':'basketball','tennis':'tennis','csgo':'esports','dota2':'esports'}
 
 
 def utc(value):
@@ -32,9 +34,21 @@ def utc(value):
     return t.tz_convert('UTC')
 
 
-def market_key(label):
+def market_key(label, sport='football'):
     """Only exact supported full-time football markets; never guess a line."""
     label = re.sub(r'\s+', ' ', label.upper().replace('Ё', 'Е')).strip(' .')
+    if sport != 'football':
+        if sport=='hockey':
+            mapping={'ПОБЕДА 1':'HK_H','НИЧЬЯ':'HK_D','ПОБЕДА 2':'HK_A',
+                     'ПОБЕДА 1 (С УЧЕТОМ ОТ И БУЛЛИТОВ)':'HK_ML_H','ПОБЕДА 2 (С УЧЕТОМ ОТ И БУЛЛИТОВ)':'HK_ML_A'}
+        else:
+            prefix={'basketball':'BB_ML_','tennis':'TN_W','esports':'ES_W'}[sport]
+            sides=('H','A') if sport=='basketball' else ('1','2')
+            mapping={f'ПОБЕДА {i}':prefix+side for i,side in zip((1,2),sides)}
+            if sport=='esports':mapping['НИЧЬЯ']='ES_X'
+            if sport=='basketball':
+                mapping.update({f'ПОБЕДА {i} (С УЧЕТОМ ОТ)':prefix+side for i,side in zip((1,2),sides)})
+        return mapping.get(label)
     simple = {'ПОБЕДА 1': 'H', 'ПОБЕДА 2': 'A', 'НИЧЬЯ': 'D',
               'ОБЕ ЗАБЬЮТ (ДА)': 'BTTS_Y', 'ОБЕ ЗАБЬЮТ (НЕТ)': 'BTTS_N',
               'ДВОЙНОЙ ШАНС 1X': '1X', 'ДВОЙНОЙ ШАНС X2': 'X2', 'ДВОЙНОЙ ШАНС 12': '12'}
@@ -50,7 +64,8 @@ def public_url(url):
     p = urlsplit(urljoin(BASE, url))
     if p.scheme != 'https' or p.netloc != 'stavka.tv' or p.query:
         raise ValueError('Only canonical public HTML URLs are supported')
-    if p.path not in ('/predictions', '/predictions/soccer', '/matches/soccer') and not re.fullmatch(r'/matches/soccer/\d{2}-\d{2}-\d{4}-[a-z0-9-]+', p.path):
+    sports='|'.join(SOURCE_SPORTS)
+    if p.path!='/predictions' and not re.fullmatch(r'/(?:predictions|matches)/('+sports+r')',p.path) and not re.fullmatch(r'/matches/('+sports+r')/\d{2}-\d{2}-\d{4}-[a-z0-9-]+', p.path):
         raise ValueError('Unsupported source path')
     return BASE + p.path
 
@@ -80,7 +95,7 @@ def published_time(text, now):
 def parse_predictions(html, now):
     soup = BeautifulSoup(html, 'html.parser')
     rows = []
-    for card in soup.select('.PredictionsItem--soccer'):
+    for card in soup.select('.PredictionsItem'):
         def text(selector):
             e = card.select_one(selector)
             return e.get_text(' ', strip=True) if e else ''
@@ -90,20 +105,23 @@ def parse_predictions(html, now):
             if not event or not author:
                 continue
             source = public_url(event['href'])
-            key = market_key(text('.outcome'))
+            source_sport=urlsplit(source).path.split('/')[2]
+            sport=SOURCE_SPORTS[source_sport]
+            key = market_key(text('.outcome'),sport)
             published = published_time(text('.PredictionsItemHeader .date'), now)
             if not key or published is None or published > utc(now) + pd.Timedelta(minutes=1):
                 continue
             odds = float(text('.Rate').replace(',', '.'))
             if not 1.01 < odds <= 100:
                 continue
-            slug_day = re.search(r'/soccer/(\d{2}-\d{2}-\d{4})-', source)[1]
+            slug_day = re.search(r'/matches/[^/]+/(\d{2}-\d{2}-\d{4})-', source)[1]
             author_id = author['href'].split('?')[0].rstrip('/')
             if not re.fullmatch(r'/predictors/[a-zA-Z0-9_-]+', author_id):
                 continue
             # One opinion per author/event/market; edits cannot replace first facts.
             uid = hashlib.sha256(f'{source}|{author_id}|{key}'.encode()).hexdigest()[:24]
             rows.append(dict(id=uid, source=source, author=author_id, key=key, odds=odds,
+                             sport=sport,discipline={'csgo':'CS2','dota2':'DOTA'}.get(source_sport),
                              home=text('.team--home'), away=text('.team--away'),
                              day=pd.to_datetime(slug_day,format='%d-%m-%Y').strftime('%Y-%m-%d'),
                              published_at=published.isoformat(), observed_at=utc(now).isoformat()))
@@ -135,6 +153,8 @@ def team_aliases(team):
 def match_event(row, events):
     hits = []
     for event in events:
+        if event.get('sport','football')!=row.get('sport','football') or (row.get('discipline') and row['discipline']!=event.get('div')):
+            continue
         day = utc(event['kickoff']).tz_convert('Europe/Moscow').date()
         if abs((day - pd.Timestamp(row['day']).date()).days) > 1:
             continue
@@ -148,12 +168,15 @@ def event_for_url(url, events):
     """Conservative English slug discovery; final tips still need name matching."""
     try:
         url = public_url(url)
-        day = pd.to_datetime(re.search(r'/soccer/(\d{2}-\d{2}-\d{4})-', url)[1],format='%d-%m-%Y').date()
+        source_sport=urlsplit(url).path.split('/')[2]
+        day = pd.to_datetime(re.search(r'/matches/[^/]+/(\d{2}-\d{2}-\d{4})-', url)[1],format='%d-%m-%Y').date()
     except (ValueError, TypeError):
         return None
     slug = url.rsplit('/',1)[-1][11:].replace('-', '')
     hits=[]
     for e in events:
+        if e.get('sport','football')!=SOURCE_SPORTS[source_sport] or (source_sport in ('csgo','dota2') and e['div']!={'csgo':'CS2','dota2':'DOTA'}[source_sport]):
+            continue
         if abs((utc(e['kickoff']).tz_convert('Europe/Moscow').date()-day).days)>1:
             continue
         home, away = [re.sub('[^a-z0-9]', '', normalized(e[s].get('name',''))) for s in ('home','away')]
@@ -201,46 +224,56 @@ def ingest(store, rows, events, now):
 
 
 def collect(store, events, now, session=None):
-    session=session or requests.Session()
+    session=session or requests
     upcoming=[e for e in events if e.get('state')=='pre' and utc(now)+pd.Timedelta(minutes=5)<utc(e['kickoff'])<=utc(now)+pd.Timedelta(days=2)]
-    html=fetch(BASE+'/predictions/soccer',session)
-    soup=BeautifulSoup(html,'html.parser')
-    if not soup.select('.PredictionsItem'):
-        raise ValueError('Prediction markup missing; no data accepted')
-    rows=parse_predictions(html,now)
-    urls={r['source'] for r in rows if match_event(r,upcoming)}
-    # The public schedule supplies discovery for matches absent from the latest feed.
-    try:
-        schedule=BeautifulSoup(fetch(BASE+'/matches/soccer',session),'html.parser')
-        for a in schedule.select('a[href*="/matches/soccer/"]'):
-            if event_for_url(a['href'],upcoming):
-                urls.add(public_url(a['href']))
-    except (requests.RequestException,ValueError):
-        pass
-    # Rotate pages; a large slate must not permanently starve later matches.
-    urls=sorted(urls)
-    offset=int(store.get('page_offset',0)) % max(len(urls),1)
-    selected=(urls[offset:]+urls[:offset])[:3]
-    errors=[]
-    for url in selected:
+    def read(url):
         try:
-            rows+=parse_predictions(fetch(url,session),now)
+            return url,fetch(url,session),None
         except (requests.RequestException,ValueError) as exc:
-            errors.append(str(exc)[:160])
-    store['page_offset']=offset+len(selected)
+            return url,None,str(exc)[:160]
+    urls0=[BASE+f'/{kind}/{slug}' for slug in SOURCE_SPORTS for kind in ('predictions','matches')]
+    rows=[];urls=set();errors=[];parsed_by_sport={};feeds_ok=0
+    with ThreadPoolExecutor(max_workers=4) as pool:
+        for url,html,error in pool.map(read,urls0):
+            if error:errors.append(error);continue
+            soup=BeautifulSoup(html,'html.parser')
+            if '/predictions/' in url:
+                if not soup.select('.PredictionsItem'):
+                    errors.append('Prediction markup missing: '+url);continue
+                feeds_ok+=1
+                got=parse_predictions(html,now);rows+=got
+                parsed_by_sport[url.rsplit('/',1)[-1]]=len(got)
+                urls.update(r['source'] for r in got if match_event(r,upcoming))
+            else:
+                for a in soup.select('a[href*="/matches/"]'):
+                    if event_for_url(a['href'],upcoming):urls.add(public_url(a['href']))
+        selected=[]
+        offsets=store.setdefault('page_offsets',{})
+        for slug in SOURCE_SPORTS:
+            candidates=sorted(u for u in urls if '/matches/'+slug+'/' in u)
+            if candidates:
+                offset=int(offsets.get(slug,0))%len(candidates)
+                selected.append(candidates[offset]);offsets[slug]=offset+1
+        for url,html,error in pool.map(read,selected):
+            if error:errors.append(error)
+            else:rows+=parse_predictions(html,now)
+    if not feeds_ok:
+        raise ValueError('No public sport feed could be read: '+'; '.join(errors[:2]))
     count=ingest(store,rows,upcoming,now)
-    store['source_status']=dict(last_success=utc(now).isoformat(),parsed=len(rows),added=count,discovered_matches=len(urls),pages=len(selected)+2,errors=errors)
+    store['source_status']=dict(last_success=utc(now).isoformat(),parsed=len(rows),added=count,discovered_matches=len(urls),pages=len(selected)+len(urls0),errors=errors,parsed_by_sport=parsed_by_sport)
     return count
 
 
 def settle(store, events, now):
     """Only observed final regulation-time scores; no backfilled outcomes in features."""
-    by_id={str(e['id']):e for e in events}
+    by_id={(e['div'],str(e['id'])):e for e in events if e.get('sport','football')=='football'}
     changed=0
     for sample in store['samples'].values():
+        if sample.get('sport','football')!='football':
+            continue
         if sample.get('settled_at'):
             continue
-        e=by_id.get(sample['event_id'])
+        e=by_id.get((sample['div'],sample['event_id']))
         if not e or not e.get('completed'):
             continue
         if 'FULL_TIME' not in e.get('status','') or any(x in (e.get('detail','').upper()) for x in ('AET','PEN','ET ')):
@@ -259,6 +292,8 @@ def settle(store, events, now):
 def author_weights(store, at):
     totals={}
     for sample in store['samples'].values():
+        if sample.get('sport','football')!='football':
+            continue
         if not sample.get('settled_at') or utc(sample['settled_at'])>=utc(at):
             continue
         for tip in sample['opinions']:
@@ -309,7 +344,7 @@ def adjusted_matrix(lam, votes, weight):
 
 
 def train(store, now):
-    samples=[s for s in store['samples'].values() if s.get('settled_at') and utc(s['settled_at'])<utc(now)
+    samples=[s for s in store['samples'].values() if s.get('sport','football')=='football' and s.get('settled_at') and utc(s['settled_at'])<utc(now)
              and all(0<=g<=mk.MAXG for g in s['score'])]
     samples=sorted(samples,key=lambda s:s['kickoff'])[-3000:]
     model=dict(weight=0.0,status='collecting',settled_matches=len(samples),required_matches=MIN_MATCHES,trained_at=utc(now).isoformat())
@@ -338,6 +373,8 @@ def tick(events, now):
     global _runtime
     store=load()
     changed=settle(store,events,now)
+    from . import stavka_sports
+    other_changed=stavka_sports.settle(store,events,now)
     last=store.get('last_attempt')
     if not last or utc(now)-utc(last)>=pd.Timedelta(minutes=20):
         store['last_attempt']=utc(now).isoformat()
@@ -346,11 +383,13 @@ def tick(events, now):
             store['source_error']=None
         except (requests.RequestException,ValueError) as exc:
             store['source_error']=str(exc)[:240]
-    if changed or not store.get('model'):
+    if changed or not store.get('model',{}).get('trained_at'):
         train(store,now)
+    if other_changed or not store.get('sport_models'):
+        stavka_sports.train(store,now)
     _runtime=store
     save(store)
-    return {'model':store['model'],'source':store.get('source_status'),'error':store.get('source_error'),
+    return {'model':store['model'],'sport_models':store.get('sport_models',{}),'source':store.get('source_status'),'error':store.get('source_error'),
             'tips':len(store['tips']),'snapshots':len(store['samples'])}
 
 

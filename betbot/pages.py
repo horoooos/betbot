@@ -746,7 +746,7 @@ def _rss(news: list[dict], ms: list[dict], store: dict[int, dict], now: pd.Times
     for n in news[:40]:
         # Article metadata must be fetched directly from our UTF-8 page.
         # vk.cc redirects via a Windows-1251 intermediary; keep it only in text.
-        item_link = SITE + n['url'] if feed_name == 'rss-vk-article.xml' else n.get('rss_link') or SITE + n['url']
+        item_link = SITE + n.get('vk_article_url',n['url']) if feed_name == 'rss-vk-article.xml' else n.get('rss_link') or SITE + n['url']
         item_title = re.sub(r'^[^\wА-Яа-яЁё«"]+', '', n['title']) if feed_name == 'rss-vk-article.xml' else n['title']
         if feed_name == "rss-vk.xml":
             # Keep paragraph breaks inside one text node. Importers that strip
@@ -759,9 +759,13 @@ def _rss(news: list[dict], ms: list[dict], store: dict[int, dict], now: pd.Times
         photo_html = (f'<img src="{n["photo"]}">' if n.get('photo') else '')
         if photo_html and feed_name.startswith("rss-vk"):
             photo_html += "\n\n"
+        description = _plain(n['body']) if feed_name.startswith('rss-vk') else n['desc']
+        if feed_name == 'rss-vk-article.xml':
+            from .vk_rss import wall_description
+            description = wall_description(n)
         items.append((pd.Timestamp(n["t"]), f"""<item><title>{x(item_title)}</title><link>{x(item_link)}</link><guid isPermaLink="true">{SITE}{n['url']}</guid>
 <pubDate>{format_datetime(pd.Timestamp(n['t']).to_pydatetime())}</pubDate><category>{x(SPORT_RU.get(n['sport'], 'Спорт'))}</category>
-<description>{x(_plain(n['body']) if feed_name.startswith('rss-vk') else n['desc'])}</description><content:encoded><![CDATA[{photo_html + body}]]></content:encoded>
+<description>{x(description)}</description><content:encoded><![CDATA[{photo_html + body}]]></content:encoded>
 {f'<enclosure url="{x(n["photo"])}" type="image/jpeg" length="{int(n.get("photo_bytes") or 0)}"/>' if n.get('photo') else ''}</item>"""))
     for m in [m for m in ms if not m.get("finished")][:30]:
         post = store.get(int(m["msg"])) if str(m.get("msg", "")).isdigit() else None
@@ -776,7 +780,7 @@ def _rss(news: list[dict], ms: list[dict], store: dict[int, dict], now: pd.Times
 <description>{x(desc)}</description><content:encoded><![CDATA[{(f'<img src="{photo}">' if photo else '') + html.replace(chr(10), '<br>')}]]></content:encoded>
 {f'<enclosure url="{x(photo)}" type="image/jpeg" length="0"/>' if photo else ''}</item>"""))
     items.sort(key=lambda it: it[0], reverse=True)
-    return f"""<?xml version="1.0" encoding="UTF-8"?>
+    xml = f"""<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel><title>{'АИ СТАВИТ — свежие новости спорта' if feed_name.startswith('rss-vk') else 'АИ СТАВИТ — прогнозы на спорт и новости'}</title><link>{SITE}</link>
 <description>{'Свежие новости спорта с иллюстрациями к публикациям.' if feed_name.startswith('rss-vk') else 'Бесплатные прогнозы на футбол, хоккей, НБА и теннис от искусственного интеллекта, честная статистика и свежие новости спорта.'}</description>
@@ -786,6 +790,7 @@ def _rss(news: list[dict], ms: list[dict], store: dict[int, dict], now: pd.Times
 {chr(10).join(it[1] for it in items[:60])}
 </channel></rss>
 """
+    return xml.encode('ascii','xmlcharrefreplace').decode('ascii') if feed_name=='rss-vk-article.xml' else xml
 
 
 def _vk_rss(news: list[dict], now: pd.Timestamp, *, article=False) -> str:
@@ -811,6 +816,8 @@ def _vk_rss(news: list[dict], now: pd.Timestamp, *, article=False) -> str:
         if since <= published <= now and now - published <= pd.Timedelta(hours=24):
             selected.append(entry)
     illustrated = []
+    transport_file = DATA / 'vk_rss_ascii_since.txt'
+    transport_since = pd.Timestamp(transport_file.read_text(encoding='utf-8').strip()) if transport_file.exists() else None
     format_file = DATA / "vk_rss_format_since.txt"
     format_since = pd.Timestamp(format_file.read_text(encoding="utf-8").strip()) if format_file.exists() else None
     links_file = DATA / "vk_rss_links.json"
@@ -841,7 +848,14 @@ def _vk_rss(news: list[dict], now: pd.Timestamp, *, article=False) -> str:
             except (requests.RequestException, ValueError):
                 print(f"  ! VK RSS: изображение новости {n['id']} пока недоступно")
                 continue
-        illustrated.append({**n, "photo": SITE + f"rss-images/{int(n['id'])}.jpg", "photo_bytes": image.stat().st_size})
+        n={**n, "photo": SITE + f"rss-images/{int(n['id'])}.jpg", "photo_bytes": image.stat().st_size}
+        if article and (transport_since is None or pd.Timestamp(n['t'])>=transport_since):
+            from .vk_rss import article_page
+            path=f"vk-articles/{int(n['id'])}.html"
+            (DOCS/'vk-articles').mkdir(parents=True,exist_ok=True)
+            (DOCS/path).write_text(article_page(n),encoding='ascii')
+            n['vk_article_url']=path
+        illustrated.append(n)
     if links != old_links:
         links_file.write_text(json.dumps(links, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     return _rss(illustrated, [], {}, now, feed_name="rss-vk-article.xml" if article else "rss-vk.xml")

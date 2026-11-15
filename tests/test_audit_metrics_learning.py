@@ -62,7 +62,7 @@ class AuditRegressionTests(unittest.TestCase):
             image=root/'docs/rss-images/1.jpg';image.parent.mkdir(parents=True);image.write_bytes(b'jpeg')
             with patch.object(pages,'DATA',root),patch.object(pages,'DOCS',root/'docs'),patch('betbot.vk._short',return_value='vk.cc/test'):
                 item=ET.fromstring(pages._vk_rss([news],pd.Timestamp('2026-11-15T11:00:00Z'),article=True)).find('channel/item')
-        self.assertEqual(item.findtext('link'),pages.SITE+'news/1.html')
+        self.assertEqual(item.findtext('link'),pages.SITE+'vk-articles/1.html')
         self.assertEqual(item.findtext('title'),'Team Spirit разгромили в финале')
         self.assertIn('vk.cc/test',item.findtext('{http://purl.org/rss/1.0/modules/content/}encoded'))
 
