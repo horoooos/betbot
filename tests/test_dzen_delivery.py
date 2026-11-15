@@ -19,12 +19,12 @@ class CuratedChannelTests(unittest.TestCase):
             with self.subTest(text=text):
                 self.assertIsNone(dzen.delivery_kind(text))
 
-    def test_selection_keeps_requested_categories(self):
+    def test_selection_keeps_only_news(self):
         allowed = {"⚽ Головин вернулся к тренировкам\n#футбол": "новость",
-                   "📊 СТАТИСТИКА БОТА": "статистика", "📅 МАТЧИ ДНЯ": "матчи",
-                   "⭐ МАТЧ ДНЯ": "матчи", "🔴 МАТЧ НАЧАЛСЯ\nА — Б\n#live": "начало",
-                   "🔥 ЭКСПРЕСС ДНЯ": "экспресс", "❌ ЭКСПРЕСС ДНЯ НЕ ЗАШЁЛ": "экспресс",
-                   "🌙 ИТОГИ ДНЯ": "сводка"}
+                   "🏒 Новый тренер клуба\n#хоккей": "новость",
+                   "🏀 Обновление состава\n#баскетбол": "новость",
+                   "🎾 Итоги жеребьёвки турнира\n#теннис": "новость",
+                   "🎮 Анонс турнира\n#киберспорт": "новость"}
         for text, expected in allowed.items():
             with self.subTest(text=text):
                 self.assertEqual(dzen.delivery_kind(text), expected)
@@ -46,20 +46,26 @@ class CuratedChannelTests(unittest.TestCase):
     def post(self, text):
         return {"html": text, "t": datetime.now(timezone.utc).isoformat(), "photo": "image"}
 
-    def test_forecasts_filtered_start_sanitized_and_duplicate_suppressed(self):
+    def test_only_news_delivered_from_mixed_channel_backlog(self):
         start = "🔴 МАТЧ НАЧАЛСЯ\n⚽ А — Б\n🎯 Наш прогноз: П1 · кэф 2\n💰 Ставка 1% банка\n#live"
         entries = {"1": self.post("🎯 ПРОГНОЗ · Футбол"), "2": self.post(start), "3": self.post(start),
                    "4": self.post("🔎 ПОЛНЫЙ РАЗБОР: А — Б"), "5": self.post("🏁 ИТОГ · Футбол\n#итог")}
+        for title in ("📊 СТАТИСТИКА БОТА", "📅 МАТЧИ ДНЯ", "⭐ МАТЧ ДНЯ",
+                      "🔥 ЭКСПРЕСС ДНЯ", "❌ ЭКСПРЕСС ДНЯ НЕ ЗАШЁЛ",
+                      "🌙 ИТОГИ ДНЯ", "ИТОГИ НЕДЕЛИ", "ИТОГИ МЕСЯЦА"):
+            # Even a sports hashtag must not let other categories through.
+            entries[str(len(entries) + 1)] = self.post(title + "\n#футбол")
+        news_id = len(entries) + 1
+        entries[str(news_id)] = self.post("⚽ Важная новость\n#футбол")
+        entries[str(news_id + 1)] = self.post("⚽ Важная новость\n#футбол")
         state = {"dz_last": 0}
         done, calls, cards = self._run(entries, state)
         self.assertEqual(done, 1)
-        self.assertEqual(calls[0].args[0], "sendPhoto")
-        self.assertEqual(calls[0].kwargs["files"]["photo"][1], b"sanitized-card")
-        for text in (calls[0].kwargs["caption"], cards[0].args[0]):
-            self.assertNotIn("прогноз", text.lower())
-            self.assertNotIn("ставка", text.lower())
-            self.assertNotIn("кэф", text.lower())
-        self.assertEqual(state["dz_last"], 5)
+        self.assertEqual(calls[0].args[0], "copyMessage")
+        self.assertEqual(calls[0].kwargs["message_id"], news_id)
+        self.assertEqual(calls[0].kwargs["chat_id"], "@aistavvit_dzen")
+        self.assertFalse(cards)
+        self.assertEqual(state["dz_last"], news_id + 1)
 
     def test_direct_news_and_channel_retry_share_deduplication(self):
         text = "⚽ Важная новость\n#футбол"
@@ -82,15 +88,24 @@ class CuratedChannelTests(unittest.TestCase):
         self.assertEqual(done, 1)
         self.assertIsNone(state["dz_err"])
 
-    def test_no_daily_limit_and_statistics_include_the_body(self):
+    def test_direct_news_sender_rejects_other_categories(self):
+        with patch.dict(os.environ, {"TELEGRAM_TOKEN": "test"}), \
+                patch.object(dzen.telegram, "_call") as send:
+            for title in ("📊 СТАТИСТИКА БОТА", "🔥 ЭКСПРЕСС ДНЯ", "📅 МАТЧИ ДНЯ",
+                          "🔴 МАТЧ НАЧАЛСЯ", "🎯 ПРОГНОЗ", "🌙 ИТОГИ ДНЯ"):
+                dzen.post_news(b"image", title + "\n#футбол", 100, state={})
+            send.assert_not_called()
+
+    def test_no_daily_limit_and_statistics_excluded(self):
         state = {"dz_last": 0}
         entries = {str(i): self.post(f"⚽ Новость {i}\n#футбол") for i in range(1, 12)}
         self.assertEqual(self._run(entries, state)[0], 10)
         self.assertEqual(self._run(entries, state)[0], 1)
         entries = {"12": self.post("📊 СТАТИСТИКА БОТА"), "13": self.post("Вчера, 13 ноября: 17/37, ROI -13%")}
         done, calls, _ = self._run(entries, state)
-        self.assertEqual(done, 1)
-        self.assertIn("17/37", calls[0].kwargs["caption"])
+        self.assertEqual(done, 0)
+        self.assertFalse(calls)
+        self.assertEqual(state["dz_last"], 13)
 
 
 if __name__ == "__main__":

@@ -1,7 +1,7 @@
 """Канал-«фильтр» для Дзена: @aistavvit_dzen.
 
-Бот копирует новости, статистику, расписания и старты матчей, экспрессы и общие итоги.
-Одиночные прогнозы, разборы, голы, live-обновления и повторы исключены.
+Бот копирует только спортивные новости из основного канала.
+Прогнозы, статистика, расписания, старты матчей, экспрессы, итоги и live исключены.
 Суточного лимита нет. Дзен (@zen_sync_bot) забирает посты уже из этого канала.
 Копия — через copyMessage: картинка/видео и подпись как в оригинале, без пометки «переслано».
 """
@@ -43,7 +43,7 @@ def kind(html: str) -> str | None:
 
 
 def delivery_kind(html: str) -> str | None:
-    """Editorial selection for the mirror; independent of image/hashtag kind()."""
+    """Only news go to the mirror; kind() still serves other social channels."""
     text = unescape(re.sub(r"<[^>]+>", " ", html or ""))
     lines = [line.strip() for line in text.splitlines() if line.strip()]
     if not lines:
@@ -51,20 +51,11 @@ def delivery_kind(html: str) -> str | None:
     head = re.sub(r"^[^\wА-Яа-яЁё]+", "", lines[0]).upper()
     if head.startswith(("ПРОДОЛЖЕНИЕ", "ПОЛНЫЙ РАЗБОР", "ПРОГНОЗ", "LIVE", "ИТОГ ·")) or re.match(r"^(ГОЛ|ШАЙБА|КАРТА)(?:\W|$)", head):
         return None
-    if head.startswith("СТАТИСТИКА БОТА"):
-        return "статистика"
-    if head.startswith(("ИТОГИ ДНЯ", "ИТОГИ НЕДЕЛИ", "ИТОГИ МЕСЯЦА")):
-        return "сводка"
-    if head.startswith("ЭКСПРЕСС"):
-        if re.search(r"\d+\s+ИЗ\s+\d+|ПРОМЕЖУТОЧ|УЖЕ ЗАШЛ", head):
-            return None
-        return "экспресс"
-    if head.startswith("МАТЧ НАЧАЛСЯ"):
-        return "начало"
+    if head.startswith(("СТАТИСТИКА БОТА", "ИТОГИ ДНЯ", "ИТОГИ НЕДЕЛИ", "ИТОГИ МЕСЯЦА",
+                        "ЭКСПРЕСС", "МАТЧ НАЧАЛСЯ", "МАТЧ ДНЯ", "МАТЧИ ДНЯ")):
+        return None
     if "#live" in text.lower() or "LIVE-ПРОГНОЗ" in text.upper():
         return None
-    if head.startswith(("МАТЧ ДНЯ", "МАТЧИ ДНЯ")):
-        return "матчи"
     if "#итог" in text.lower():
         return None
     if any(tag in text.lower() for tag in NEWS_TAGS):
@@ -205,7 +196,7 @@ def crosspost(state: dict, checkpoint=None) -> int:
             age, day = float("inf"), "unknown"
         max_age = 1200 if k == "начало" else 86400 if k in {"статистика", "сводка", "матчи"} else 21600
         key = _delivery_key(html, k or "skip", day)
-        if k and 0 <= age <= max_age and not _seen(state, pid, key):
+        if k == "новость" and 0 <= age <= max_age and not _seen(state, pid, key):
             try:
                 from . import postimg
                 text = _match_text(html) if k in {"начало", "матчи"} else postimg.plain(html).strip()
