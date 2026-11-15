@@ -2035,15 +2035,23 @@
    }
   },
   "source": {
-   "last_success": "2026-11-15T13:25:14.875693+00:00",
-   "parsed": 17,
-   "added": 10,
-   "discovered_matches": 9,
-   "pages": 5,
-   "errors": []
+   "last_success": "2026-11-15T13:47:14.185851+00:00",
+   "parsed": 106,
+   "added": 26,
+   "discovered_matches": 20,
+   "pages": 15,
+   "errors": [],
+   "parsed_by_sport": {
+    "soccer": 29,
+    "ice-hockey": 22,
+    "basketball": 13,
+    "tennis": 8,
+    "csgo": 19,
+    "dota2": 15
+   }
   },
   "error": null,
-  "tips": 10,
+  "tips": 36,
   "snapshots": 0
  }
 }
