@@ -764,8 +764,8 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-15-filadelfiya-siksers-indiana-peysers-401909985.html",
-"hs": "102",
-"as": "91",
+"hs": "107",
+"as": "96",
 "tip": "Ф1 (-7.5) · 1.87",
 "top": false,
 "bot": {
@@ -1082,7 +1082,7 @@ null
 "bo": null,
 "prediction": "predictions/2026-11-15-sbornaya-belgii-sbornaya-italii-401861176.html",
 "hs": "0",
-"as": "0",
+"as": "1",
 "tip": "ТБ 2.5 · 1.59",
 "top": false,
 "bot": {
@@ -1932,12 +1932,78 @@ null
 "div": "NBA",
 "state": "pre",
 "bo": null,
-"prediction": "",
+"prediction": "predictions/2026-11-16-finiks-sanz-leykers-401909986.html",
 "hs": "0",
 "as": "0",
-"tip": "",
-"top": false,
-"bot": null,
+"tip": "П2 (с ОТ) · 1.62",
+"top": true,
+"bot": {
+"main": {
+"label": "П2 (с ОТ)",
+"p": 0.615,
+"odds": 1.62,
+"est": false
+},
+"bold": null,
+"markets": [
+[
+"П1 (с ОТ)",
+0.385,
+2.36
+],
+[
+"П2 (с ОТ)",
+0.615,
+1.621
+],
+[
+"Ф1 (+3.5)",
+0.5,
+1.893
+],
+[
+"Ф2 (-3.5)",
+0.5,
+1.926
+],
+[
+"ТБ 219.5",
+0.66,
+null
+],
+[
+"ТМ 219.5",
+0.34,
+null
+],
+[
+"ТБ 226.5",
+0.5,
+1.909
+],
+[
+"ТМ 226.5",
+0.5,
+1.909
+],
+[
+"ТБ 233.5",
+0.34,
+null
+],
+[
+"ТМ 233.5",
+0.66,
+null
+]
+],
+"bar": [
+0.3852707488552771,
+0,
+0.6147292511447229
+],
+"center": "Ожидаемый счёт 112 : 115"
+},
 "lt": null
 },
 {
