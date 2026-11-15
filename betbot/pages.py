@@ -746,12 +746,16 @@ def _rss(news: list[dict], ms: list[dict], store: dict[int, dict], now: pd.Times
     for n in news[:40]:
         # Article metadata must be fetched directly from our UTF-8 page.
         # vk.cc redirects via a Windows-1251 intermediary; keep it only in text.
-        item_link = SITE + n.get('vk_article_url',n['url']) if feed_name == 'rss-vk-article.xml' else n.get('rss_link') or SITE + n['url']
-        item_title = re.sub(r'^[^\wА-Яа-яЁё«"]+', '', n['title']) if feed_name == 'rss-vk-article.xml' else n['title']
+        is_vk = feed_name.startswith('rss-vk')
+        item_link = SITE+n['vk_article_url'] if is_vk and n.get('vk_article_url') else (SITE+n['url'] if feed_name=='rss-vk-article.xml' else n.get('rss_link') or SITE+n['url'])
+        item_title = re.sub(r'^[^\wА-Яа-яЁё«"]+', '', n['title']) if is_vk else n['title']
+        item_guid = n.get('vk_guid',SITE+n['url']) if is_vk else SITE+n['url']
         if feed_name == "rss-vk.xml":
             # Keep paragraph breaks inside one text node. Importers that strip
             # tags and whitespace-only nodes otherwise concatenate <p> blocks.
-            body = '<pre style="white-space:pre-wrap;font:inherit">' + H.escape(n["body"].strip()) + '</pre>'
+            from .vk_rss import wall_description
+            text=wall_description(n) if n.get('vk_article_url') else n['body'].strip()
+            body = '<pre style="white-space:pre-wrap;font:inherit">' + H.escape(text) + '</pre>'
         elif feed_name == "rss-vk-article.xml":
             from .vk_rss import wall_description
             body = "\n\n".join(f"<p>{H.escape(_plain(p)).replace(chr(10), '<br>')}</p>" for p in wall_description(n).split("\n\n") if p.strip())
@@ -761,10 +765,10 @@ def _rss(news: list[dict], ms: list[dict], store: dict[int, dict], now: pd.Times
         if photo_html and feed_name.startswith("rss-vk"):
             photo_html += "\n\n"
         description = _plain(n['body']) if feed_name.startswith('rss-vk') else n['desc']
-        if feed_name == 'rss-vk-article.xml':
+        if is_vk and (feed_name=='rss-vk-article.xml' or n.get('vk_article_url')):
             from .vk_rss import wall_description
             description = wall_description(n)
-        items.append((pd.Timestamp(n["t"]), f"""<item><title>{x(item_title)}</title><link>{x(item_link)}</link><guid isPermaLink="true">{SITE}{n['url']}</guid>
+        items.append((pd.Timestamp(n["t"]), f"""<item><title>{x(item_title)}</title><link>{x(item_link)}</link><guid isPermaLink="true">{x(item_guid)}</guid>
 <pubDate>{format_datetime(pd.Timestamp(n['t']).to_pydatetime())}</pubDate><category>{x(SPORT_RU.get(n['sport'], 'Спорт'))}</category>
 <description>{x(description)}</description><content:encoded><![CDATA[{photo_html + body}]]></content:encoded>
 {f'<enclosure url="{x(n["photo"])}" type="image/jpeg" length="{int(n.get("photo_bytes") or 0)}"/>' if n.get('photo') else ''}</item>"""))
@@ -791,7 +795,7 @@ def _rss(news: list[dict], ms: list[dict], store: dict[int, dict], now: pd.Times
 {chr(10).join(it[1] for it in items[:60])}
 </channel></rss>
 """
-    return xml.encode('ascii','xmlcharrefreplace').decode('ascii') if feed_name=='rss-vk-article.xml' else xml
+    return xml.encode('ascii','xmlcharrefreplace').decode('ascii') if feed_name.startswith('rss-vk') else xml
 
 
 def _vk_rss(news: list[dict], now: pd.Timestamp, *, article=False) -> str:
@@ -811,7 +815,7 @@ def _vk_rss(news: list[dict], now: pd.Timestamp, *, article=False) -> str:
         if since <= published <= now and now - published <= pd.Timedelta(hours=24):
             selected.append(entry)
     seed = DATA / "vk_rss_article_seed.json"
-    if article and seed.exists():
+    if seed.exists():
         entry = json.loads(seed.read_text(encoding="utf-8"))
         published = pd.Timestamp(entry["t"])
         if since <= published <= now and now - published <= pd.Timedelta(hours=24):
@@ -819,6 +823,8 @@ def _vk_rss(news: list[dict], now: pd.Timestamp, *, article=False) -> str:
     illustrated = []
     transport_file = DATA / 'vk_rss_ascii_since.txt'
     transport_since = pd.Timestamp(transport_file.read_text(encoding='utf-8').strip()) if transport_file.exists() else None
+    unified_file=DATA/'vk_rss_unified_since.txt'
+    unified_since=pd.Timestamp(unified_file.read_text(encoding='utf-8').strip()) if unified_file.exists() else None
     format_file = DATA / "vk_rss_format_since.txt"
     format_since = pd.Timestamp(format_file.read_text(encoding="utf-8").strip()) if format_file.exists() else None
     links_file = DATA / "vk_rss_links.json"
@@ -850,12 +856,16 @@ def _vk_rss(news: list[dict], now: pd.Timestamp, *, article=False) -> str:
                 print(f"  ! VK RSS: изображение новости {n['id']} пока недоступно")
                 continue
         n={**n, "photo": SITE + f"rss-images/{int(n['id'])}.jpg", "photo_bytes": image.stat().st_size}
-        if article and (transport_since is None or pd.Timestamp(n['t'])>=transport_since):
+        unified=unified_since is None or pd.Timestamp(n['t'])>=unified_since
+        if unified or (article and (transport_since is None or pd.Timestamp(n['t'])>=transport_since)):
             from .vk_rss import article_page
             path=f"vk-articles/{int(n['id'])}.html"
             (DOCS/'vk-articles').mkdir(parents=True,exist_ok=True)
             (DOCS/path).write_text(article_page(n),encoding='ascii')
             n['vk_article_url']=path
+            if unified_since is not None and unified:
+                # Every URI VK may use now points to the same ASCII-safe source.
+                n['vk_guid']=SITE+path
         illustrated.append(n)
     if links != old_links:
         links_file.write_text(json.dumps(links, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")

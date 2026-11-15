@@ -30,7 +30,7 @@ class EditorialDeliveryTests(unittest.TestCase):
                 self.assertTrue(complete[0]['complete'])
                 feed = ET.fromstring(pages._vk_rss(complete, pd.Timestamp('2026-11-14T11:00:00Z')))
                 body = feed.findtext('channel/item/{http://purl.org/rss/1.0/modules/content/}encoded')
-                self.assertIn('Заключительный абзац, который нельзя потерять.', body)
+                self.assertIn('Заключительный абзац, который нельзя потерять.', html.unescape(body))
                 self.assertGreater(len(body), 1024)
                 self.assertIn('Заключительный абзац, который нельзя потерять.', feed.findtext('channel/item/description'))
                 article = ET.fromstring(pages._vk_rss(complete, pd.Timestamp('2026-11-14T11:00:00Z'), article=True))
@@ -42,7 +42,7 @@ class EditorialDeliveryTests(unittest.TestCase):
                 (root / 'vk_rss_article_seed.json').write_text(json.dumps(seed, default=str), encoding='utf-8')
                 ordinary = ET.fromstring(pages._vk_rss(complete, pd.Timestamp('2026-11-14T11:00:00Z')))
                 article = ET.fromstring(pages._vk_rss(complete, pd.Timestamp('2026-11-14T11:00:00Z'), article=True))
-                self.assertEqual(len(ordinary.findall('channel/item')), 1)
+                self.assertEqual(len(ordinary.findall('channel/item')), 2)
                 self.assertEqual(article.findtext('channel/item/title'), 'Полная версия: новость')
 
     def test_match_visual_uses_exact_team_metadata_without_forecast_fields(self):

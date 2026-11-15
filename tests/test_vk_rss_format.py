@@ -1,4 +1,5 @@
 import json
+import html
 import os
 import re
 from html.parser import HTMLParser
@@ -42,15 +43,16 @@ class VKRSSFormattingTests(unittest.TestCase):
                 pages._vk_rss([self.news()], pd.Timestamp("2026-11-14T11:01:00Z"))
                 self.assertEqual(api.call_count, 1)
             item = feed.find("channel/item")
-            self.assertEqual(item.findtext("link"), "https://vk.cc/example")
+            self.assertEqual(item.findtext("link"), pages.SITE + "vk-articles/1.html")
             self.assertEqual(item.findtext("guid"), pages.SITE + "news/1.html")
             self.assertEqual(item.find("enclosure").attrib["url"], pages.SITE + "rss-images/1.jpg")
             body = item.findtext("{http://purl.org/rss/1.0/modules/content/}encoded")
+            body = html.unescape(body)
             self.assertIn("#Денисов", body)
             self.assertIn("Подробнее на сайте 👉 vk.cc/example", body)
             plain = re.sub(r"<[^>]+>", "", body).strip()
-            self.assertIn("клуб «Зенит».\n\n#футбол\n\n📊 Подробнее", plain)
-            self.assertIn("vk.cc/example\n\n#РПЛ #Денисов", plain)
+            self.assertTrue(plain.startswith("📊 Подробнее на сайте 👉 vk.cc/example\n\n#футбол #РПЛ #Денисов"))
+            self.assertIn("клуб «Зенит».",plain)
             class TextOnly(HTMLParser):
                 def __init__(self):
                     super().__init__()
@@ -60,8 +62,8 @@ class VKRSSFormattingTests(unittest.TestCase):
                         self.parts.append(data.strip())
             importer = TextOnly()
             importer.feed(body)
-            self.assertIn("клуб «Зенит».\n\n#футбол\n\n📊 Подробнее", "".join(importer.parts))
-            self.assertTrue(item.findtext("title").startswith("⚽ "))
+            self.assertIn("Подробнее на сайте 👉 vk.cc/example", "".join(importer.parts))
+            self.assertTrue(item.findtext("title").startswith("Игорь"))
             self.assertEqual(json.loads((root / "vk_rss_links.json").read_text())[pages.SITE + "news/1.html"], "vk.cc/example")
 
     def test_short_link_failure_holds_new_entry_instead_of_leaking_long_url(self):
