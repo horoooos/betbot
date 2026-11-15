@@ -6289,25 +6289,25 @@
   "kickoff": "2026-11-15T03:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Sat, November 14th at 7:00 PM EST",
   "clock": "0:00",
   "period": 0,
   "home": {
+   "color": "d71830",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/wsh.png",
    "id": "23",
    "name": "Washington Capitals",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/wsh.png",
-   "color": "d71830",
    "score": "0",
    "record": "10-7-0",
    "periods": [],
    "ru": "Вашингтон"
   },
   "away": {
+   "color": "e30b2b",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/nj.png",
    "id": "11",
    "name": "New Jersey Devils",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/nj.png",
-   "color": "e30b2b",
    "score": "0",
    "record": "14-6-0",
    "periods": [],
@@ -6402,7 +6402,9 @@
   "btn": 4,
   "close": {
    "HK_ML_A": 0.5514
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null
  },
  "NHL|401892715": {
   "id": "401892715",
