@@ -749,6 +749,8 @@ def _rss(news: list[dict], ms: list[dict], store: dict[int, dict], now: pd.Times
         # vk.cc redirects via a Windows-1251 intermediary; keep it only in text.
         is_vk = feed_name.startswith('rss-vk')
         item_link = SITE+n['vk_article_url'] if is_vk and n.get('vk_article_url') else (SITE+n['url'] if feed_name=='rss-vk-article.xml' else n.get('rss_link') or SITE+n['url'])
+        if is_vk and n.get('rss_source_link'):
+            item_link=n['rss_source_link']
         item_title = re.sub(r'^[^\wА-Яа-яЁё«"]+', '', n['title']) if is_vk else n['title']
         item_guid = n.get('vk_guid',SITE+n['url']) if is_vk else SITE+n['url']
         if feed_name == "rss-vk.xml":
@@ -826,6 +828,8 @@ def _vk_rss(news: list[dict], now: pd.Timestamp, *, article=False) -> str:
     transport_since = pd.Timestamp(transport_file.read_text(encoding='utf-8').strip()) if transport_file.exists() else None
     unified_file=DATA/'vk_rss_unified_since.txt'
     unified_since=pd.Timestamp(unified_file.read_text(encoding='utf-8').strip()) if unified_file.exists() else None
+    footer_file=DATA/'vk_rss_footer_since.txt'
+    footer_since=pd.Timestamp(footer_file.read_text(encoding='utf-8').strip()) if footer_file.exists() else None
     format_file = DATA / "vk_rss_format_since.txt"
     format_since = pd.Timestamp(format_file.read_text(encoding="utf-8").strip()) if format_file.exists() else None
     links_file = DATA / "vk_rss_links.json"
@@ -862,8 +866,19 @@ def _vk_rss(news: list[dict], now: pd.Timestamp, *, article=False) -> str:
             from .vk_rss import article_page
             path=f"vk-articles/{int(n['id'])}.html"
             (DOCS/'vk-articles').mkdir(parents=True,exist_ok=True)
-            (DOCS/path).write_text(article_page(n),encoding='ascii')
             n['vk_article_url']=path
+            if footer_since is not None and pd.Timestamp(n['t'])>=footer_since:
+                n['vk_native_link']=True
+            # Publish the source even if shortening has to wait until next pass.
+            (DOCS/path).write_text(article_page(n),encoding='ascii')
+            if n.get('vk_native_link'):
+                from .vk import _short, ShortLinkError
+                try:
+                    source_short=_short(SITE+path,{'vk_shortlinks':links})
+                except ShortLinkError:
+                    print(f"  ! VK RSS: новость {n['id']} ожидает короткий адрес источника")
+                    continue
+                n['rss_source_link']='https://'+source_short
             if unified_since is not None and unified:
                 # Every URI VK may use now points to the same ASCII-safe source.
                 n['vk_guid']=SITE+path

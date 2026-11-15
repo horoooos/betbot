@@ -1,6 +1,7 @@
 import tempfile
 import re
 import json
+import os
 import unittest
 import xml.etree.ElementTree as ET
 from pathlib import Path
@@ -46,13 +47,43 @@ class VKFeedTransportTests(unittest.TestCase):
                         self.assertEqual(new.findtext('guid'),pages.SITE+'vk-articles/2.html')
                         self.assertEqual(new.findtext('link'),new.findtext('guid'))
                         self.assertEqual(new.findtext('title'),'Андреева сравнили с Шараповой')
-                        self.assertTrue(new.findtext('description').startswith('📊 Подробнее на сайте'))
+                        self.assertIn('Первый абзац.',new.findtext('description').split('\n\n#',1)[0])
+                        self.assertGreater(new.findtext('description').index('Подробнее на сайте'),new.findtext('description').index('#теннис'))
                         body=unescape(new.findtext('{http://purl.org/rss/1.0/modules/content/}encoded'))
                         self.assertIn('#теннис',body)
                         self.assertIn('Заключительный абзац.',body)
                 page=(docs/'vk-articles/2.html').read_bytes()
                 self.assertTrue(page.isascii())
                 self.assertIn('Андреева сравнили с Шараповой',unescape(page.decode('windows-1251')))
+
+    def test_native_footer_has_one_short_source_link_and_complete_summary(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root=Path(directory);docs=root/'docs';images=docs/'rss-images';images.mkdir(parents=True)
+            for name in ('vk_rss_since.txt','vk_rss_format_since.txt','vk_rss_ascii_since.txt','vk_rss_unified_since.txt','vk_rss_footer_since.txt'):
+                (root/name).write_text('2026-11-15T00:00:00Z')
+            (images/'2.jpg').write_bytes(b'jpeg')
+            news=dict(id=2,title='Синнер обратился к зрителям',sport='tennis',photo='https://example.test/image.jpg',
+                url='news/2.html',body='🎾 Первое завершённое предложение.\n\n'+'Полный текст новости. '*100,
+                desc='Новость',complete=True,t='2026-11-15T12:00:00Z')
+            def shorten(method,**params):
+                return {'short_url':'https://vk.cc/source' if '/vk-articles/' in params['url'] else 'https://vk.cc/article'}
+            with patch.object(pages,'DATA',root),patch.object(pages,'DOCS',docs),patch.dict(os.environ,{'VK_TOKEN':'group'}),patch('betbot.vk._call',side_effect=shorten) as api:
+                for article in (False,True):
+                    item=ET.fromstring(pages._vk_rss([news],pd.Timestamp('2026-11-15T13:00:00Z'),article=article)).find('channel/item')
+                    self.assertEqual(item.findtext('link'),'https://vk.cc/source')
+                    self.assertEqual(item.findtext('guid'),pages.SITE+'vk-articles/2.html')
+                    caption=item.findtext('description')
+                    self.assertTrue(caption.startswith('🎾 Первое завершённое предложение.'))
+                    self.assertLessEqual(len(caption),420)
+                    self.assertNotIn('vk.cc/',caption) # VK appends the one short item link.
+                    self.assertGreater(caption.index('#теннис'),caption.index('предложение.'))
+                    self.assertTrue(caption.endswith('📊 Подробнее на сайте 👇'))
+                    wire_body=unescape(item.findtext('{http://purl.org/rss/1.0/modules/content/}encoded'))
+                    self.assertEqual(wire_body.count('Полный текст новости.'),100)
+                self.assertEqual(api.call_count,2) # Canonical + source URL; second feed uses cache.
+            raw=(docs/'vk-articles/2.html').read_bytes()
+            self.assertTrue(raw.isascii())
+            self.assertIn('Синнер обратился к зрителям',unescape(raw.decode('windows-1251')))
 
 
 if __name__=='__main__':unittest.main()

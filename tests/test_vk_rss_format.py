@@ -51,7 +51,8 @@ class VKRSSFormattingTests(unittest.TestCase):
             self.assertIn("#Денисов", body)
             self.assertIn("Подробнее на сайте 👉 vk.cc/example", body)
             plain = re.sub(r"<[^>]+>", "", body).strip()
-            self.assertTrue(plain.startswith("📊 Подробнее на сайте 👉 vk.cc/example\n\n#футбол #РПЛ #Денисов"))
+            self.assertTrue(plain.endswith("📊 Подробнее на сайте 👉 vk.cc/example"))
+            self.assertGreater(plain.index('#футбол'),plain.index('клуб «Зенит».'))
             self.assertIn("клуб «Зенит».",plain)
             class TextOnly(HTMLParser):
                 def __init__(self):

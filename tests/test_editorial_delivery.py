@@ -33,7 +33,7 @@ class EditorialDeliveryTests(unittest.TestCase):
                 self.assertIn('Заключительный абзац, который нельзя потерять.', html.unescape(body))
                 self.assertGreater(len(body), 1024)
                 self.assertLessEqual(len(feed.findtext('channel/item/description')),480)
-                self.assertTrue(feed.findtext('channel/item/description').endswith('.'))
+                self.assertTrue(feed.findtext('channel/item/description').split('\n\n#',1)[0].endswith('.'))
                 article = ET.fromstring(pages._vk_rss(complete, pd.Timestamp('2026-11-14T11:00:00Z'), article=True))
                 article_body = article.findtext('channel/item/{http://purl.org/rss/1.0/modules/content/}encoded')
                 self.assertIn('<p>', article_body)

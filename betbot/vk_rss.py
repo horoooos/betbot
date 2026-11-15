@@ -75,24 +75,29 @@ def article_page(news):
 
 
 def wall_description(news):
-    """Place essential footer before the body: VK clips the wall announcement."""
+    """Full article with one footer; the wall teaser is built separately."""
     short = news.get('rss_link','').removeprefix('https://')
     body = news['body']
     # Move the prepared footer once, keeping every paragraph of the news.
     marker = '\n\n'+SPORTS.get(news.get('sport'),'#спорт')
     body = body.split(marker,1)[0]
-    lead = f"📊 Подробнее на сайте 👉 {short}\n\n" if short else ''
-    return lead+hashtags(news)+'\n\n'+body
+    footer = f"\n\n📊 Подробнее на сайте 👉 {short}" if short else ''
+    return body+'\n\n'+hashtags(news)+footer
 
 
-def announcement(news, limit=480):
+def announcement(news, limit=420):
     """Wall teaser: complete paragraphs/sentences, full article stays elsewhere."""
     from html import unescape
     short=news.get('rss_link','').removeprefix('https://')
-    lead=(f'📊 Подробнее на сайте 👉 {short}\n\n' if short else '')+hashtags(news)
+    if news.get('vk_native_link'):
+        # VK appends the RSS item link itself. Do not print that URL twice.
+        link_line='📊 Подробнее на сайте 👇'
+    else:
+        link_line=f'📊 Подробнее на сайте 👉 {short}' if short else ''
+    footer=hashtags(news)+(('\n\n'+link_line) if link_line else '')
     body=news['body'].split('\n\n'+SPORTS.get(news.get('sport'),'#спорт'),1)[0]
     body=unescape(re.sub(r'<[^>]+>','',body)).strip()
-    budget=max(0,limit-len(lead)-2)
+    budget=max(0,limit-len(footer)-2)
     chosen=[]
     for paragraph in re.split(r'\n\s*\n',body):
         paragraph=paragraph.strip()
@@ -113,4 +118,4 @@ def announcement(news, limit=480):
                 if chosen:chosen=[' '.join(chosen)]
             break
     summary='\n\n'.join(chosen) or 'Полный материал и подробности — в статье.'
-    return lead+'\n\n'+summary
+    return summary+'\n\n'+footer

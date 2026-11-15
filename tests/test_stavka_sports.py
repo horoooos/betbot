@@ -106,5 +106,5 @@ class AllSportSignalsTests(unittest.TestCase):
             self.assertIn('#РПЛ',text)
             self.assertIn('<p>Последний абзац.</p>',text)
         announcement=vk_rss.wall_description(n)
-        self.assertLess(announcement.index('#футбол'),100)
-        self.assertLess(announcement.index('Подробнее на сайте'),20)
+        self.assertGreater(announcement.index('#футбол'),announcement.index('Последний абзац.'))
+        self.assertGreater(announcement.index('Подробнее на сайте'),announcement.index('#футбол'))
