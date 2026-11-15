@@ -50,7 +50,7 @@ def public_url(url):
     p = urlsplit(urljoin(BASE, url))
     if p.scheme != 'https' or p.netloc != 'stavka.tv' or p.query:
         raise ValueError('Only canonical public HTML URLs are supported')
-    if p.path not in ('/predictions', '/matches/soccer') and not re.fullmatch(r'/matches/soccer/\d{2}-\d{2}-\d{4}-[a-z0-9-]+', p.path):
+    if p.path not in ('/predictions', '/predictions/soccer', '/matches/soccer') and not re.fullmatch(r'/matches/soccer/\d{2}-\d{2}-\d{4}-[a-z0-9-]+', p.path):
         raise ValueError('Unsupported source path')
     return BASE + p.path
 
@@ -203,7 +203,7 @@ def ingest(store, rows, events, now):
 def collect(store, events, now, session=None):
     session=session or requests.Session()
     upcoming=[e for e in events if e.get('state')=='pre' and utc(now)+pd.Timedelta(minutes=5)<utc(e['kickoff'])<=utc(now)+pd.Timedelta(days=2)]
-    html=fetch(BASE+'/predictions',session)
+    html=fetch(BASE+'/predictions/soccer',session)
     soup=BeautifulSoup(html,'html.parser')
     if not soup.select('.PredictionsItem'):
         raise ValueError('Prediction markup missing; no data accepted')
