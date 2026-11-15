@@ -6645,25 +6645,25 @@
   "kickoff": "2026-11-15T04:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Sat, November 14th at 8:00 PM EST",
   "clock": "0.0",
   "period": 0,
   "home": {
+   "color": "98002e",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/mia.png",
    "id": "14",
    "name": "Miami Heat",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/mia.png",
-   "color": "98002e",
    "score": "0",
    "record": "6-6",
    "periods": [],
    "ru": "Майами Хит"
   },
   "away": {
+   "color": "1d428a",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/det.png",
    "id": "8",
    "name": "Detroit Pistons",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/det.png",
-   "color": "1d428a",
    "score": "0",
    "record": "8-3",
    "periods": [],
@@ -6738,7 +6738,9 @@
   "btn": 4,
   "close": {
    "BB_ML_A": 0.6462
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null
  },
  "NBA|401909983": {
   "id": "401909983",
