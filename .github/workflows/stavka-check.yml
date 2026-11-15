@@ -1,0 +1,30 @@
+name: Check STAVKA TV access
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install requests beautifulsoup4
+      - name: Inspect public prediction markup
+        run: |
+          python - <<'PY'
+          import requests,re
+          from bs4 import BeautifulSoup
+          r=requests.get('https://stavka.tv/predictions',timeout=25,headers={'User-Agent':'BetBot/1.0 (public pre-match research)'})
+          print('HTTP',r.status_code,'bytes',len(r.content))
+          r.raise_for_status()
+          s=BeautifulSoup(r.content,'html.parser')
+          print('SCRIPTS',[(x.get('id'),x.get('type'),len(x.text)) for x in s.find_all('script')][:10])
+          a=s.find('a',href=re.compile('/matches/soccer/'))
+          if a:
+            for i in range(4):
+              print('PARENT',i,a.name,a.get('class'),str(a)[:6500])
+              a=a.parent
+          PY
