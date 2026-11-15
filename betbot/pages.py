@@ -868,7 +868,9 @@ def _vk_rss(news: list[dict], now: pd.Timestamp, *, article=False) -> str:
                 print(f"  ! VK RSS: изображение новости {n['id']} пока недоступно")
                 continue
         n={**n, "photo": SITE + f"rss-images/{int(n['id'])}.jpg", "photo_bytes": image.stat().st_size}
-        if caption_since is not None and pd.Timestamp(n['t'])>=caption_since:
+        # Also fix queued older entries; keep their GUIDs/links unchanged so
+        # already imported posts are not deliberately published a second time.
+        if caption_since is not None and now>=caption_since:
             n['vk_compact_rss']=True
         unified=unified_since is None or pd.Timestamp(n['t'])>=unified_since
         if unified or (article and (transport_since is None or pd.Timestamp(n['t'])>=transport_since)):

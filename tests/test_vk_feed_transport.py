@@ -21,6 +21,9 @@ class VKFeedTransportTests(unittest.TestCase):
             root=Path(directory);docs=root/'docs';images=docs/'rss-images';images.mkdir(parents=True)
             for name in ('vk_rss_since.txt','vk_rss_format_since.txt','vk_rss_ascii_since.txt','vk_rss_unified_since.txt','vk_rss_footer_since.txt','vk_rss_caption_since.txt'):
                 (root/name).write_text('2026-11-15T00:00:00Z')
+            # This item predates the rollout but may still be waiting in VK's
+            # import queue. Its actual content must be bounded as well.
+            (root/'vk_rss_caption_since.txt').write_text('2026-11-15T12:30:00Z')
             (images/'6219.jpg').write_bytes(b'jpeg')
             tail='Заключительная фраза полной статьи сохранена целиком.'
             news=dict(id=6219,title='Унаи Симон получил трофей',sport='football',photo='https://example.test/image.jpg',
