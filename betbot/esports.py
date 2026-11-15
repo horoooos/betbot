@@ -7,6 +7,7 @@
 import json
 import os
 import time
+from collections import Counter
 from pathlib import Path
 
 import pandas as pd
@@ -88,12 +89,13 @@ def fetch() -> list[dict]:
     return list({(e["div"], e["id"]): e for e in out}.values())
 
 
-def history(refresh: bool) -> list[dict]:
+def history(refresh: bool, upcoming: list[dict] | None = None) -> list[dict]:
     """Завершённые матчи за год (все уровни — для рейтинга важны и мелкие турниры). Кэш дополняется раз в день."""
     if not enabled():
         return []
     CACHE.mkdir(parents=True, exist_ok=True)
     all_matches = []
+    now=pd.Timestamp.now(tz=MSK)
     for code, game in GAMES.items():
         path = CACHE / f"{code}.json"
         known = json.loads(path.read_text(encoding="utf-8")) if path.exists() else []
@@ -110,5 +112,38 @@ def history(refresh: bool) -> list[dict]:
             year_ago = (pd.Timestamp.now(tz=MSK) - pd.Timedelta(days=365)).isoformat()
             known = [m for m in known if m["kickoff"] >= year_ago]
             path.write_text(json.dumps(known, ensure_ascii=False), encoding="utf-8")
+        # A small cached head page may never contain the next top teams. Refresh
+        # their own histories instead of stopping forever at the first overlap.
+        candidates=[e for e in upcoming or [] if e.get('div')==code and e.get('state')=='pre'
+                    and now<pd.Timestamp(e['kickoff'])<=now+pd.Timedelta(days=2)]
+        counts=Counter(t['id'] for m in known if m['home']['winner']!=m['away']['winner'] for t in (m['home'],m['away']))
+        attempts_path=CACHE/f'{code}_coverage.json'
+        try:
+            attempts=json.loads(attempts_path.read_text(encoding='utf-8'))
+        except (OSError,ValueError):
+            attempts={}
+        requested=0
+        for event in sorted(candidates,key=lambda e:e['kickoff']):
+            for side in ('home','away'):
+                tid=str(event[side]['id'])
+                if counts[tid]>=5 or requested>=4 or now.timestamp()-float(attempts.get(tid,0))<900:
+                    continue
+                attempts[tid]=now.timestamp();requested+=1
+                batch=_get(f'/{game}/matches/past',per_page=100,sort='-begin_at',**{'filter[opponent_id]':tid})
+                merged={m['id']:m for m in known}
+                added=0
+                for raw in batch:
+                    match=_normalize(code,raw)
+                    if not match or not match['completed'] or match['status']=='FORFEIT':continue
+                    if tid not in {match['home']['id'],match['away']['id']}:continue
+                    if not now-pd.Timedelta(days=365)<=pd.Timestamp(match['kickoff'])<now:continue
+                    if match['id'] not in merged:added+=1
+                    merged[match['id']]=match
+                known=list(merged.values())
+                counts=Counter(t['id'] for m in known if m['home']['winner']!=m['away']['winner'] for t in (m['home'],m['away']))
+                print(f'  PandaScore: история команды {tid}: добавлено {added}, рассчитано {counts[tid]} матчей')
+        if requested:
+            path.write_text(json.dumps(known,ensure_ascii=False),encoding='utf-8')
+            attempts_path.write_text(json.dumps(attempts),encoding='utf-8')
         all_matches.extend(known)
     return sorted(all_matches, key=lambda m: m["kickoff"])

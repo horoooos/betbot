@@ -14,19 +14,23 @@ def observed(url,*args,**kwargs):
     r=get(url,*args,**kwargs)
     if url.startswith(esports.API):
         print('PANDA_HTTP',urlsplit(url).path,r.status_code,flush=True)
+        if r.status_code==200 and isinstance(r.json(),list):
+            print('PANDA_ROWS',len(r.json()),'TIERS',dict(Counter(esports._tier(x) for x in r.json())),flush=True)
     return r
 requests.get=observed
 print('TOKEN_CONFIGURED',esports.enabled(),flush=True)
 print('CACHE_FILES',{p.name:p.stat().st_size for p in esports.CACHE.glob('*.json')},flush=True)
 events=esports.fetch()
-history=esports.history(refresh=False)
+history=esports.history(refresh=False,upcoming=events)
 ratings=sports.elo(history)
 print('EVENTS',dict(Counter((e['div'],e['state']) for e in events)),flush=True)
 print('HISTORY',len(history),'DECISIVE',sum(m['home']['winner']!=m['away']['winner'] for m in history),'RATINGS',len(ratings),flush=True)
 now=pd.Timestamp.now(tz='UTC')
 for e in events:
     if e['state']!='pre' or pd.Timestamp(e['kickoff'])>now+pd.Timedelta(days=2):continue
+    e['odds']=oddspapi.lookup(e) or {}
     a=sports.analyse(e,ratings)
+    main=sports.pick(a,{})[0] if a else {}
     print('MATCH',json.dumps(dict(div=e['div'],id=e['id'],home=e['home']['name'],away=e['away']['name'],kickoff=e['kickoff'],
         rating_home=ratings.get(e['home']['id']),rating_away=ratings.get(e['away']['id']),analysis=bool(a),
-        cached_odds=bool(oddspapi.lookup(e))),ensure_ascii=False),flush=True)
+        cached_odds=bool(e['odds']),selected_market=main.get('key'),probability=main.get('p')),ensure_ascii=False),flush=True)

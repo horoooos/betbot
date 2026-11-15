@@ -461,6 +461,17 @@ def other_settle(m: dict, e: dict) -> None:
     m["status"] = "done"
 
 
+def other_review_due(e: dict, previous: dict | None, now: pd.Timestamp, lead: pd.Timedelta) -> bool:
+    kick=pd.Timestamp(e['kickoff'])
+    if e.get('state')!='pre' or 'ru' not in e.get('home',{}) or not now<kick<=now+lead:
+        return False
+    if e.get('sport')=='esports' and kick-now<=pd.Timedelta(minutes=5):
+        return False
+    if not previous:return True
+    return (e.get('sport')=='esports' and previous.get('status') in ('skipped','waiting_data')
+            and now.timestamp()>=float(previous.get('retry_at',0)))
+
+
 def other_sports(state: dict, events: list[dict], now: pd.Timestamp, calib: dict, daily: bool) -> None:
     store = load_json(OTHER, {})
     lead = pd.Timedelta(minutes=60 + gap_minutes(now))
@@ -471,16 +482,23 @@ def other_sports(state: dict, events: list[dict], now: pd.Timestamp, calib: dict
         print(f"  ! OddsPapi: {ex}")
     for e in sorted(events, key=lambda e: e["kickoff"]):
         key = f"{e['div']}|{e['id']}"
-        if e["state"] == "pre" and key not in store and "ru" in e["home"]                 and now < pd.Timestamp(e["kickoff"]) <= now + lead:
+        if other_review_due(e,store.get(key),now,lead):
             if e["sport"] in ("tennis", "esports") and e["sport"] not in ctx:
-                hist = sports.tennis_history(refresh=daily) if e["sport"] == "tennis" else esports.history(refresh=daily)
+                hist = sports.tennis_history(refresh=daily) if e["sport"] == "tennis" else esports.history(refresh=daily,upcoming=events)
                 ctx[e["sport"]] = (hist, sports.elo(hist))
             if e["sport"] in ("tennis", "esports"):
                 e["odds"] = oddspapi.lookup(e) or {}
                 if oddspapi.enabled() and not e["odds"]:
                     print(f"  OddsPapi: нет линии для {e['home']['name']} — {e['away']['name']} ({e.get('tournament') or e['div']})")
             try:
-                store[key] = other_review(e, calib, ctx, state) or {"status": "skipped", "kickoff": e["kickoff"]}
+                result=other_review(e, calib, ctx, state)
+                if result:
+                    store[key]=result
+                elif e['sport']=='esports':
+                    store[key]={'status':'waiting_data','kickoff':e['kickoff'],'sport':'esports','div':e['div'],
+                                'reason':'no_odds_or_sufficient_history','retry_at':now.timestamp()+600}
+                else:
+                    store[key]={'status':'skipped','kickoff':e['kickoff']}
             except Exception as ex:
                 print(f"  ! обзор не удался {key}: {ex}")
             save_json(OTHER, store)
