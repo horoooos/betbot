@@ -18,6 +18,8 @@ soup=BeautifulSoup(html,'html.parser')
 for card in soup.select('.PredictionsItem'):card.decompose()
 print('MATCH_SOURCE',url,flush=True)
 print('QUOTE_CLASSES',dict(Counter(c for e in soup.select('[class]') for c in e.get('class',[]) if any(w in c.lower() for w in ('odd','rate','book','market','outcome')))),flush=True)
-for node in soup.select('.Rate')[:8]:
+for node in soup.select('.MatchHeaderRates, .MatchPopularOutcomes')[:2]:
+    print('QUOTE_BLOCK',str(node)[:7000],flush=True)
+for node in soup.select('.Rate, .rate, .odd')[:4]:
     parent=node.parent
     print('QUOTE_STRUCTURE',str(parent)[:1800],flush=True)
