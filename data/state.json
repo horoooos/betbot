@@ -7,10 +7,6 @@
  "schedule_day": "2026-11-15",
  "content_slot": "2026-11-15-16",
  "news_seen": [
-  "https://www.sport-express.ru/football/england/news/uzhin-associacii-byvshih-igrokov-myu-perenesli-so-stadiona-v-otel-2473962/",
-  "https://www.sport-express.ru/hockey/world-u20/news/vyacheslav-bykov-sbornaya-rossii-byla-by-glavnym-pretendentom-na-pobedu-na-mchm-2027-2473975/",
-  "https://www.sport-express.ru/tennis/wta/news/andreeva-o-pobede-nad-sobolenko-mne-udalos-napravit-plohuyu-mirru-v-pravilnuyu-storonu-2473976/",
-  "https://www.sport-express.ru/basketball/nba/news/stefen-karri-poluchil-travmu-zhivota-v-matche-s-hyustonom-2473978/",
   "https://www.sport-express.ru/hockey/world/news/tretyak-o-zayavleniyah-federaciy-o-boykote-fhr-obratilas-v-sovet-po-etike-iihf-s-trebovaniem-nakazat-iniciatorov-2473981/",
   "betboom-zapustila-sedmoi-sezon-spetsproyekta-blast-boks",
   "https://www.sport-express.ru/hockey/nhl/news/dzhon-karlson-nabral-800-ochko-v-nhl-peredachey-na-tretiy-gol-nikity-kucherova-v-matche-s-baffalo-12-noyabrya-2026-2473985/",
@@ -506,9 +502,13 @@
   "https://www.sport-express.ru/football/rfpl/news/shvarc-propustil-match-dinamo-s-fk-10-po-semeynym-obstoyatelstvam-2475186/",
   "https://www.sport-express.ru/hockey/khl/news/sibir-dinamo-schet-1-3-rezultat-matcha-khl-15-noyabrya-2026-2475185/",
   "https://www.sport-express.ru/hockey/nhl/news/napadayuschiy-kayl-konnor-nabral-700-ochko-v-nhl-i-zabil-340-gol-za-vinnipeg-statistika-15-noyabrya-2026-2475178/",
-  "https://www.sport-express.ru/football/rfpl/news/gazizov-otpravit-v-rpl-dokument-po-povodu-rasshireniya-ligi-na-sleduyuschey-nedele-2475189/"
+  "https://www.sport-express.ru/football/rfpl/news/gazizov-otpravit-v-rpl-dokument-po-povodu-rasshireniya-ligi-na-sleduyuschey-nedele-2475189/",
+  "https://www.sport-express.ru/hockey/khl/news/kapitan-sibiri-alanov-ob-evandere-keyne-istorii-ne-vsegda-mogut-byt-pravdoy-2475196/",
+  "https://www.sport-express.ru/hockey/khl/news/trener-sibiri-lyuzenkov-o-keyne-paren-mozhet-igrat-horosho-ego-nado-napravit-v-pravilnoe-ruslo-2475195/",
+  "https://www.sport-express.ru/football/rus_d1/news/ufa-spartak-kostroma-3-3-schet-i-rezultat-matcha-19-go-tura-ligi-pari-15-noyabrya-2026-2475197/",
+  "https://www.sport-express.ru/football/rfpl/news/gazizov-poka-ni-odin-klub-rpl-ne-vystupil-protiv-rasshireniya-ligi-2475198/"
  ],
- "news_i": 1,
+ "news_i": 4,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1679,7 +1679,7 @@
  "streak_day": {
   "2026-11-15": 2
  },
- "news_next": "2026-11-15T16:30:39.583732+03:00",
+ "news_next": "2026-11-15T17:01:14.717494+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1759,7 +1759,8 @@
   "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/63/23.08.2026_FC_Spartak_Moscow_vs._FC_Zenit_Saint_Petersburg554.jpg/1280px-23.08.2026_FC_Spartak_Moscow_vs._FC_Zenit_Saint_Petersburg554.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
   "https://images.cybersport.ru/images/as-is/plain/8f/8f98ae49-bd14-4f5b-bc3f-da8cf3171187.jpg",
   "https://upload.wikimedia.org/wikipedia/commons/a/af/Dinamo-Loc2015_%289%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-  "https://upload.wikimedia.org/wikipedia/commons/9/94/Easter_Road_Football_Stadium_-_geograph.org.uk_-_3287315.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+  "https://upload.wikimedia.org/wikipedia/commons/9/94/Easter_Road_Football_Stadium_-_geograph.org.uk_-_3287315.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "https://upload.wikimedia.org/wikipedia/commons/9/9c/Ashton_Gate_Football_stadium_from_Greville_Smyth_Park_-_geograph.org.uk_-_5699478.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
  ],
  "indexnow_day": "2026-11-15",
  "vk_wall_err": null,
@@ -1889,7 +1890,8 @@
   "6151",
   "6156",
   "6158",
-  "6160"
+  "6160",
+  "6161"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -1951,12 +1953,13 @@
   "2026-11-15:новость:5a9d342f2b421f1c10dbcf5a",
   "2026-11-15:новость:c2be7d0671c17023a6f95d2c",
   "2026-11-15:матчи:6d4f5505ae0ac991128f08b4",
-  "2026-11-15:начало:4121d7472b03a3995ad7f486"
+  "2026-11-15:начало:4121d7472b03a3995ad7f486",
+  "2026-11-15:новость:24b92436fc9f0316c379438f"
  ],
  "dz_last_delivery": {
-  "source_id": 6160,
-  "message_id": 608,
-  "kind": "начало"
+  "source_id": 6161,
+  "message_id": 609,
+  "kind": "новость"
  },
  "learn_attempt_day": "2026-11-15",
  "learn_diagnostics": {
