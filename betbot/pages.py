@@ -766,9 +766,9 @@ def _rss(news: list[dict], ms: list[dict], store: dict[int, dict], now: pd.Times
         if photo_html and feed_name.startswith("rss-vk"):
             photo_html += "\n\n"
         description = _plain(n['body']) if feed_name.startswith('rss-vk') else n['desc']
-        if is_vk and (feed_name=='rss-vk-article.xml' or n.get('vk_article_url')):
-            from .vk_rss import wall_description
-            description = wall_description(n)
+        if is_vk:
+            from .vk_rss import announcement
+            description = announcement(n)
         items.append((pd.Timestamp(n["t"]), f"""<item><title>{x(item_title)}</title><link>{x(item_link)}</link><guid isPermaLink="true">{x(item_guid)}</guid>
 <pubDate>{format_datetime(pd.Timestamp(n['t']).to_pydatetime())}</pubDate><category>{x(SPORT_RU.get(n['sport'], 'Спорт'))}</category>
 <description>{x(description)}</description><content:encoded><![CDATA[{photo_html + body}]]></content:encoded>

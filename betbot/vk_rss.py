@@ -58,6 +58,7 @@ def article_page(news):
     from html import escape
     title = re.sub(r'^[^\wА-Яа-яЁё«"]+', '', news['title'])
     content = wall_description(news)
+    description = announcement(news)
     paragraphs = ''.join('<p>'+escape(p).replace('\n','<br>')+'</p>' for p in content.split('\n\n') if p.strip())
     short = news.get('rss_link', '')
     if short:
@@ -66,7 +67,7 @@ def article_page(news):
             '<meta http-equiv="Content-Type" content="text/html; charset=utf-8">'
             '<meta name="viewport" content="width=device-width,initial-scale=1">'
             '<title>'+escape(title)+'</title><meta property="og:title" content="'+escape(title,quote=True)+'">'
-            '<meta name="description" content="'+escape(content[:900],quote=True)+'"><meta property="og:description" content="'+escape(content[:900],quote=True)+'">'
+            '<meta name="description" content="'+escape(description,quote=True)+'"><meta property="og:description" content="'+escape(description,quote=True)+'">'
             '<meta property="og:type" content="article"><meta property="og:image" content="'+escape(news['photo'],quote=True)+'">'
             '<style>body{max-width:760px;margin:32px auto;padding:0 20px;font:18px/1.65 system-ui}img{width:100%}p{margin:1.2em 0}</style>'
             '</head><body><article><h1>'+escape(title)+'</h1><img src="'+escape(news['photo'],quote=True)+'">'+paragraphs+'</article></body></html>')
@@ -82,3 +83,34 @@ def wall_description(news):
     body = body.split(marker,1)[0]
     lead = f"📊 Подробнее на сайте 👉 {short}\n\n" if short else ''
     return lead+hashtags(news)+'\n\n'+body
+
+
+def announcement(news, limit=480):
+    """Wall teaser: complete paragraphs/sentences, full article stays elsewhere."""
+    from html import unescape
+    short=news.get('rss_link','').removeprefix('https://')
+    lead=(f'📊 Подробнее на сайте 👉 {short}\n\n' if short else '')+hashtags(news)
+    body=news['body'].split('\n\n'+SPORTS.get(news.get('sport'),'#спорт'),1)[0]
+    body=unescape(re.sub(r'<[^>]+>','',body)).strip()
+    budget=max(0,limit-len(lead)-2)
+    chosen=[]
+    for paragraph in re.split(r'\n\s*\n',body):
+        paragraph=paragraph.strip()
+        if not paragraph:continue
+        remaining=budget-len('\n\n'.join(chosen))-(2 if chosen else 0)
+        completed=paragraph if paragraph[-1:] in '.!?…»”"' else paragraph+'.'
+        if len(completed)<=remaining:
+            chosen.append(completed)
+            if len(chosen)==2:break
+        else:
+            if not chosen:
+                sentences=re.findall(r'.*?[.!?…](?:[»”"\')\]]*)(?=\s|$)',paragraph,flags=re.S)
+                for sentence in sentences:
+                    sentence=sentence.strip()
+                    candidate=' '.join(chosen+[sentence])
+                    if len(candidate)>budget:break
+                    chosen.append(sentence)
+                if chosen:chosen=[' '.join(chosen)]
+            break
+    summary='\n\n'.join(chosen) or 'Полный материал и подробности — в статье.'
+    return lead+'\n\n'+summary
