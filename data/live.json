@@ -526,7 +526,8 @@
    "min_odds": 1.8,
    "minute": "2-й период",
    "score": "0:1",
-   "sport": "hockey"
+   "sport": "hockey",
+   "result": "hit"
   }
  },
  "FRI|401906463": {
@@ -550,7 +551,7 @@
  "NHL|401892720": {
   "msg": 6109,
   "hs": 1,
-  "as": 1,
+  "as": 2,
   "goals": 0,
   "kickoff": "2026-11-15T06:00:00+03:00",
   "lt": {

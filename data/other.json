@@ -7077,25 +7077,25 @@
   "kickoff": "2026-11-15T06:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Sat, November 14th at 10:00 PM EST",
   "clock": "0:00",
   "period": 0,
   "home": {
+   "color": "fc4c02",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/ana.png",
    "id": "25",
    "name": "Anaheim Ducks",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/ana.png",
-   "color": "fc4c02",
    "score": "0",
    "record": "10-8-1",
    "periods": [],
    "ru": "Анахайм"
   },
   "away": {
+   "color": "00529b",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/nyi.png",
    "id": "12",
    "name": "New York Islanders",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/nyi.png",
-   "color": "00529b",
    "score": "0",
    "record": "8-6-4",
    "periods": [],
@@ -7199,7 +7199,9 @@
   "close": {
    "HK_ML_A": 0.5043,
    "HK_U6.5": 0.4365
-  }
+  },
+  "main_hit": true,
+  "bold_hit": false
  },
  "NHL|401892720": {
   "id": "401892720",
