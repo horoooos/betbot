@@ -57,7 +57,8 @@ def article_page(news):
     """ASCII transport survives importers guessing Windows-1251 for HTML."""
     from html import escape
     title = re.sub(r'^[^\wА-Яа-яЁё«"]+', '', news['title'])
-    paragraphs = ''.join('<p>'+escape(p).replace('\n','<br>')+'</p>' for p in news['body'].split('\n\n') if p.strip())
+    content = wall_description(news)
+    paragraphs = ''.join('<p>'+escape(p).replace('\n','<br>')+'</p>' for p in content.split('\n\n') if p.strip())
     short = news.get('rss_link', '')
     if short:
         paragraphs = paragraphs.replace(escape(short.removeprefix('https://')), '<a href="'+escape(short,quote=True)+'">'+escape(short.removeprefix('https://'))+'</a>')
@@ -65,6 +66,7 @@ def article_page(news):
             '<meta http-equiv="Content-Type" content="text/html; charset=utf-8">'
             '<meta name="viewport" content="width=device-width,initial-scale=1">'
             '<title>'+escape(title)+'</title><meta property="og:title" content="'+escape(title,quote=True)+'">'
+            '<meta name="description" content="'+escape(content[:900],quote=True)+'"><meta property="og:description" content="'+escape(content[:900],quote=True)+'">'
             '<meta property="og:type" content="article"><meta property="og:image" content="'+escape(news['photo'],quote=True)+'">'
             '<style>body{max-width:760px;margin:32px auto;padding:0 20px;font:18px/1.65 system-ui}img{width:100%}p{margin:1.2em 0}</style>'
             '</head><body><article><h1>'+escape(title)+'</h1><img src="'+escape(news['photo'],quote=True)+'">'+paragraphs+'</article></body></html>')
@@ -74,4 +76,9 @@ def article_page(news):
 def wall_description(news):
     """Place essential footer before the body: VK clips the wall announcement."""
     short = news.get('rss_link','').removeprefix('https://')
-    return f"📊 Подробнее на сайте 👉 {short}\n\n{hashtags(news)}\n\n{news['body']}"
+    body = news['body']
+    # Move the prepared footer once, keeping every paragraph of the news.
+    marker = '\n\n'+SPORTS.get(news.get('sport'),'#спорт')
+    body = body.split(marker,1)[0]
+    lead = f"📊 Подробнее на сайте 👉 {short}\n\n" if short else ''
+    return lead+hashtags(news)+'\n\n'+body

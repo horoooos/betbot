@@ -753,7 +753,8 @@ def _rss(news: list[dict], ms: list[dict], store: dict[int, dict], now: pd.Times
             # tags and whitespace-only nodes otherwise concatenate <p> blocks.
             body = '<pre style="white-space:pre-wrap;font:inherit">' + H.escape(n["body"].strip()) + '</pre>'
         elif feed_name == "rss-vk-article.xml":
-            body = "\n\n".join(f"<p>{H.escape(_plain(p)).replace(chr(10), '<br>')}</p>" for p in n["body"].split("\n\n") if p.strip())
+            from .vk_rss import wall_description
+            body = "\n\n".join(f"<p>{H.escape(_plain(p)).replace(chr(10), '<br>')}</p>" for p in wall_description(n).split("\n\n") if p.strip())
         else:
             body = "".join(f"<p>{H.escape(p)}</p>" for p in n["body"].split(chr(10) * 2) if p.strip())
         photo_html = (f'<img src="{n["photo"]}">' if n.get('photo') else '')
