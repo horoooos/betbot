@@ -88,6 +88,11 @@ def adjust(event,analysis,now,store=None):
             # Model inputs change; published bookmaker prices/lines never do.
             result['real']=copy.deepcopy(analysis['real'])
             result['labels']=copy.deepcopy(analysis['labels'])
+            if event['sport'] in ('tennis','esports'):
+                result['center']=analysis['center']+' · сигнал СТАВКА ТВ'
+                result['model']['src']='комбинированная оценка'
+            else:result['center']+=' · сигнал СТАВКА ТВ'
+            result['model']['external_weight']=weight
     stavka.save(store)
     return result,dict(status=model['status'],weight=weight,authors=len(tips),group=category,snapshot=sid,source='https://stavka.tv')
 

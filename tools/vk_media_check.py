@@ -173,9 +173,15 @@ def main():
                 print("ATTACHMENT_TYPES:", [a.get("type") for a in attachments], flush=True)
                 print("LINK_WITH_PHOTO:", any(a.get("type") == "link" and bool(a.get("link", {}).get("photo")) for a in attachments), flush=True)
                 articles = [a.get("article") or {} for a in attachments if a.get("type") == "article"]
+                article_titles=[a.get('title','') for a in articles]
+                header_match=any(title and title.casefold() in actual.casefold() for title in titles for actual in article_titles)
+                print('ARTICLE_TITLES:',json.dumps(article_titles,ensure_ascii=False),flush=True)
+                print('ARTICLE_HEADER_MATCH:',header_match,flush=True)
+                print('WALL_HAS_HASHTAGS:','#аиставит' in post.get('text','').lower(),flush=True)
+                print('WALL_HAS_DETAILS:','подробнее на сайте' in post.get('text','').lower(),flush=True)
                 print("ARTICLE_URLS:", [a.get("view_url") or a.get("url") or a.get("short_url") for a in articles], flush=True)
                 print("ARTICLE_WITH_COVER:", any(a.get("photo") or a.get("cover") for a in articles), flush=True)
-                if match and (mode != "rss-article-watch" or articles):
+                if match and (mode != "rss-article-watch" or (articles and header_match)):
                     return
         print("NATIVE_RSS_EVENT_NOT_YET_OBSERVED: true", flush=True)
         return
