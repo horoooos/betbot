@@ -2113,8 +2113,8 @@
   "quote_matches": 9
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-16T00:36:08.141535+03:00",
-  "cursor": "54",
+  "last_poll": "2026-11-16T00:38:08.121869+03:00",
+  "cursor": "56",
   "posts": [
    {
     "post_id": 499,
@@ -2200,6 +2200,40 @@
     },
     "status": "needs_review",
     "observed_at": "2026-11-15T23:35:01.878479+03:00"
+   },
+   {
+    "post_id": 504,
+    "url": "https://vk.com/wall-228963529_504",
+    "title": "Стример Nix предсказал конец Dota 2 без патчей и турниров",
+    "text": "Стример Nix предсказал конец Dota 2 без патчей и турниров\n\nрџ“° Стример Александр Nix Левин задумался о «смерти» Dota 2, задав вопрос, когда игра перестанет быть живой.\n\nрџЋ® В качестве яркого примера Nix привёл StarCraft II. Blizzard уже давно не выпускает новые обновления и полностью перестала поддерживать киберспортивную сцену этой стратегии.\n\n#киберспорт #Dota #Александр #новостиспорта #спорт #главное #аиставит\n\nрџ“Љ Подробнее на сайте рџ‘‡",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": true,
+     "details_present": true,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-16T00:38:08.121869+03:00"
+   },
+   {
+    "post_id": 505,
+    "url": "https://vk.com/wall-228963529_505",
+    "title": "ЦСКА планирует вернуть бразильского защитника Виллиана Рошу",
+    "text": "ЦСКА планирует вернуть бразильского защитника Виллиана Рошу\n\nрџ± ЦСКА уже сделали первый шаг к возвращению Виллиана Роши – 31-летнего бразильского защитника, который сейчас играет за «Аль-Джазиру».\n\nвљЅпёЏ По словам журналиста Фелипе Силвы, армейцы напрямую связались с игроком, предложив вернуться в «красно-синие» после трех лет в Москве.\n\n#футбол #Рошу #новостиспорта #спорт #главное #аиставит\n\nрџ“Љ Подробнее на сайте рџ‘‡",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": true,
+     "details_present": true,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-16T00:38:08.121869+03:00"
    }
   ],
   "status": "observing"
