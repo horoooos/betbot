@@ -364,7 +364,7 @@ null
 "path": "soccer/esp.2",
 "url": "live.html?s=football&p=soccer%2Fesp.2&e=401883137&h=Eldense&a=CD+Sabadell",
 "div": "SP2",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "predictions/2026-11-15-eldense-cd-sabadell-401883137.html",
 "hs": "2",
@@ -764,8 +764,8 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-15-filadelfiya-siksers-indiana-peysers-401909985.html",
-"hs": "66",
-"as": "64",
+"hs": "73",
+"as": "68",
 "tip": "Ф1 (-7.5) · 1.87",
 "top": false,
 "bot": {
@@ -834,97 +834,6 @@ null
 0.26598552904870054
 ],
 "center": "Ожидаемый счёт 116 : 108"
-},
-"lt": null
-},
-{
-"sport": "tennis",
-"id": "187506",
-"league": "Теннис · ATP",
-"kickoff": "2026-11-15T22:30:00+03:00",
-"home": "Бен Шелтон",
-"away": "Артур Филс",
-"hl": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
-"al": "https://a.espncdn.com/i/teamlogos/countries/500/fra.png",
-"hid": "9250",
-"aid": "10052",
-"bb": "https://betboom.ru/search?query=%D0%A8%D0%B5%D0%BB%D1%82%D0%BE%D0%BD&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=tennis",
-"path": "tennis/atp",
-"url": "live.html?s=tennis&p=tennis%2Fatp&e=187506&h=%D0%91%D0%B5%D0%BD+%D0%A8%D0%B5%D0%BB%D1%82%D0%BE%D0%BD&a=%D0%90%D1%80%D1%82%D1%83%D1%80+%D0%A4%D0%B8%D0%BB%D1%81",
-"div": "ATP",
-"state": "pre",
-"bo": null,
-"prediction": "predictions/2026-11-15-ben-shelton-artur-fils-187506.html",
-"hs": null,
-"as": null,
-"tip": "Победа: Бен Шелтон · 1.55",
-"top": false,
-"bot": {
-"main": {
-"label": "Победа: Бен Шелтон",
-"p": 0.613,
-"odds": 1.55,
-"est": false
-},
-"bold": null,
-"markets": [
-[
-"Победа: Бен Шелтон",
-0.613,
-1.55
-],
-[
-"Победа: Артур Филс",
-0.387,
-2.45
-],
-[
-"Будет 3 сета",
-0.489,
-null
-],
-[
-"Будет 2 сета",
-0.511,
-null
-],
-[
-"Счёт по сетам 2:0",
-0.331,
-null
-],
-[
-"Счёт по сетам 0:2",
-0.18,
-null
-],
-[
-"Счёт по сетам 2:1",
-0.281,
-null
-],
-[
-"Счёт по сетам 1:2",
-0.207,
-null
-],
-[
-"Бен Шелтон возьмёт хотя бы сет",
-0.82,
-null
-],
-[
-"Артур Филс возьмёт хотя бы сет",
-0.669,
-null
-]
-],
-"bar": [
-0.6125,
-0,
-0.38749999999999996
-],
-"center": "Линия winline · Эло 1862 : 1786"
 },
 "lt": null
 },
@@ -1060,6 +969,97 @@ null
 0.096
 ]
 ]
+},
+"lt": null
+},
+{
+"sport": "tennis",
+"id": "187506",
+"league": "Теннис · ATP",
+"kickoff": "2026-11-15T22:35:00+03:00",
+"home": "Бен Шелтон",
+"away": "Артур Филс",
+"hl": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
+"al": "https://a.espncdn.com/i/teamlogos/countries/500/fra.png",
+"hid": "9250",
+"aid": "10052",
+"bb": "https://betboom.ru/search?query=%D0%A8%D0%B5%D0%BB%D1%82%D0%BE%D0%BD&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=tennis",
+"path": "tennis/atp",
+"url": "live.html?s=tennis&p=tennis%2Fatp&e=187506&h=%D0%91%D0%B5%D0%BD+%D0%A8%D0%B5%D0%BB%D1%82%D0%BE%D0%BD&a=%D0%90%D1%80%D1%82%D1%83%D1%80+%D0%A4%D0%B8%D0%BB%D1%81",
+"div": "ATP",
+"state": "pre",
+"bo": null,
+"prediction": "predictions/2026-11-15-ben-shelton-artur-fils-187506.html",
+"hs": null,
+"as": null,
+"tip": "Победа: Бен Шелтон · 1.55",
+"top": false,
+"bot": {
+"main": {
+"label": "Победа: Бен Шелтон",
+"p": 0.613,
+"odds": 1.55,
+"est": false
+},
+"bold": null,
+"markets": [
+[
+"Победа: Бен Шелтон",
+0.613,
+1.55
+],
+[
+"Победа: Артур Филс",
+0.387,
+2.45
+],
+[
+"Будет 3 сета",
+0.489,
+null
+],
+[
+"Будет 2 сета",
+0.511,
+null
+],
+[
+"Счёт по сетам 2:0",
+0.331,
+null
+],
+[
+"Счёт по сетам 0:2",
+0.18,
+null
+],
+[
+"Счёт по сетам 2:1",
+0.281,
+null
+],
+[
+"Счёт по сетам 1:2",
+0.207,
+null
+],
+[
+"Бен Шелтон возьмёт хотя бы сет",
+0.82,
+null
+],
+[
+"Артур Филс возьмёт хотя бы сет",
+0.669,
+null
+]
+],
+"bar": [
+0.6125,
+0,
+0.38749999999999996
+],
+"center": "Линия winline · Эло 1862 : 1786"
 },
 "lt": null
 },
