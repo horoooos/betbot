@@ -2121,8 +2121,8 @@
   "quote_matches": 12
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-16T02:42:22.296544+03:00",
-  "cursor": "57",
+  "last_poll": "2026-11-16T02:44:22.425528+03:00",
+  "cursor": "58",
   "posts": [
    {
     "post_id": 499,
@@ -2259,6 +2259,23 @@
     },
     "status": "needs_review",
     "observed_at": "2026-11-16T01:41:30.651031+03:00"
+   },
+   {
+    "post_id": 507,
+    "url": "https://vk.com/wall-228963529_507",
+    "title": "Андреева обошла Рыбакину по победам, но уступила в рейтинге",
+    "text": "Андреева обошла Рыбакину по победам, но уступила в рейтинге\n\nрџ“° Мирра Андреева закрыла сезон-2026 с рекордными 55 победами в матчах основного тура WTA, опередив Елену Рыбакину на одну победу, однако в итоговом рейтинге заняла второе место, отставая от казахстанки на 293 очка.\n\n#теннис #WTA #Андреева #новостиспорта #спорт #главное #аиставит\n\nрџ“Љ Подробнее на сайте рџ‘‡",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": true,
+     "details_present": true,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-16T02:44:22.425528+03:00"
    }
   ],
   "status": "observing"
