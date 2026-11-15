@@ -739,8 +739,8 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-15-filadelfiya-siksers-indiana-peysers-401909985.html",
-"hs": "115",
-"as": "107",
+"hs": "117",
+"as": "109",
 "tip": "Ф1 (-7.5) · 1.87",
 "top": false,
 "bot": {
@@ -1306,7 +1306,15 @@ null
 ]
 ]
 },
-"lt": null
+"lt": {
+"fair": 1.65,
+"label": "ТБ 2.5",
+"min_odds": 1.73,
+"minute": "26'",
+"p": 0.607,
+"result": null,
+"score": "1:0"
+}
 },
 {
 "sport": "football",
@@ -1436,7 +1444,15 @@ null
 ]
 ]
 },
-"lt": null
+"lt": {
+"fair": 1.41,
+"label": "П1",
+"min_odds": 1.48,
+"minute": "25'",
+"p": 0.707,
+"result": null,
+"score": "0:0"
+}
 },
 {
 "sport": "football",
