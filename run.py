@@ -563,6 +563,12 @@ def main():
     DATA.mkdir(exist_ok=True)
     now = pd.Timestamp.now(tz=MSK)
     state = load_json(STATE, {})
+    try:
+        from betbot import vk_rss_audit
+        vk_rss_audit.poll(state,now)
+        save_json(STATE,state)
+    except Exception as exc:
+        print(f'  ! проверка фактических RSS-постов VK: {exc}')
     matches = load_json(MATCHES, {})
     today = str(now.date())
 
