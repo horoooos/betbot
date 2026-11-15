@@ -1857,14 +1857,14 @@
  "vk_photos": [],
  "vk_photo_until": 1794644243.1147308,
  "vk_photo_cursor": {},
- "vk_story_last": 5716,
- "vk_story_err": "VK stories: ошибка загрузки; подписанный URL скрыт",
+ "vk_story_last": 5721,
+ "vk_story_err": null,
  "push_weekly": "2026-46",
- "vk_story_at": 1794718667.9412668,
- "vk_story_url": "https://vk.com/story-228963529_456239058",
+ "vk_story_at": 1794723373.9250503,
+ "vk_story_url": "https://vk.com/story-228963529_456239059",
  "vk_story_day": {
   "date": "2026-11-15",
-  "count": 12
+  "count": 13
  },
  "vk_legacy_pending": [
   {
@@ -2001,6 +2001,5 @@
   "source_id": 6125,
   "message_id": 599,
   "kind": "матчи"
- },
- "vk_story_retry_at": 1794723254.7989454
+ }
 }
