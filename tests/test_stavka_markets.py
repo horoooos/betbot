@@ -1,5 +1,7 @@
 import copy
+import tempfile
 import unittest
+from pathlib import Path
 from unittest.mock import patch
 import pandas as pd
 from betbot import stavka,stavka_markets,sports
@@ -14,6 +16,16 @@ QUOTES='''<div class="MatchHeaderRates"><button><span class="outcome">П1</span>
 
 
 class StavkaMarketsTests(unittest.TestCase):
+    def test_collector_upgrade_runs_once_immediately_and_keeps_failure_backoff(self):
+        s=store();s['last_attempt']=NOW.isoformat();s['model']['trained_at']=NOW.isoformat();s['sport_models']={'tennis':{}}
+        with tempfile.TemporaryDirectory() as tmp,patch.object(stavka,'PATH',Path(tmp)/'store.json'),patch.object(stavka,'_runtime',None),patch.object(stavka,'collect',side_effect=ValueError('source unavailable')) as collect:
+            stavka.save(s)
+            stavka.tick([],NOW)
+            stavka.tick([],NOW+pd.Timedelta(minutes=2))
+            self.assertEqual(collect.call_count,1)
+            stavka.tick([],NOW+pd.Timedelta(minutes=21))
+            self.assertEqual(collect.call_count,2)
+
     def test_collector_saves_all_outcomes_and_public_pair_separately(self):
         markup=html(outcome='ТОТАЛ БОЛЬШЕ (21.5).',home='Даниил Медведев',away='Флавио Коболли').replace('/matches/soccer/15-11-2026-spain-england',SOURCE)
         def fetch(url,session):

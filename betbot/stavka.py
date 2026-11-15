@@ -21,6 +21,7 @@ from . import markets as mk, names
 BASE = 'https://stavka.tv'
 PATH = Path(__file__).resolve().parent.parent / 'data/stavka_learning.json'
 VERSION = 1
+COLLECTOR_VERSION = 2
 MIN_MATCHES = 100
 MONTHS = ['янв', 'фев', 'мар', 'апр', 'мая', 'июн', 'июл', 'авг', 'сен', 'окт', 'ноя', 'дек']
 _runtime = None
@@ -438,7 +439,8 @@ def tick(events, now):
     from . import stavka_sports
     other_changed=stavka_sports.settle(store,events,now)
     last=store.get('last_attempt')
-    if not last or utc(now)-utc(last)>=pd.Timedelta(minutes=20):
+    if store.get('collector_version')!=COLLECTOR_VERSION or not last or utc(now)-utc(last)>=pd.Timedelta(minutes=20):
+        store['collector_version']=COLLECTOR_VERSION
         store['last_attempt']=utc(now).isoformat()
         try:
             collect(store,events,now)
