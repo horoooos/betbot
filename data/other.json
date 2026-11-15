@@ -7080,5 +7080,219 @@
   "close": {
    "BB_U222.5": 0.5
   }
+ },
+ "NBA|401909989": {
+  "id": "401909989",
+  "div": "NBA",
+  "sport": "basketball",
+  "kickoff": "2026-11-16T02:00:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "detail": "Sun, November 15th at 6:00 PM EST",
+  "clock": "0.0",
+  "period": 0,
+  "home": {
+   "id": "2",
+   "name": "Boston Celtics",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/bos.png",
+   "color": "008348",
+   "score": "0",
+   "record": "10-2",
+   "periods": [],
+   "ru": "Бостон Селтикс"
+  },
+  "away": {
+   "id": "6",
+   "name": "Dallas Mavericks",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/dal.png",
+   "color": "0064b1",
+   "score": "0",
+   "record": "7-6",
+   "periods": [],
+   "ru": "Даллас Маверикс"
+  },
+  "odds": {
+   "H": 1.103,
+   "A": 7.4,
+   "line": 217.5,
+   "over": 1.893,
+   "under": 1.926,
+   "spread": -14.5,
+   "sp_h": 1.87,
+   "sp_a": 1.952
+  },
+  "probs": {
+   "BB_ML_H": 0.8865404641312604,
+   "BB_ML_A": 0.11345953586873958,
+   "BB_SPR_H": 0.5,
+   "BB_SPR_A": 0.5,
+   "BB_O210.5": 0.6597440535491568,
+   "BB_U210.5": 0.3402559464508432,
+   "BB_O217.5": 0.5,
+   "BB_U217.5": 0.5,
+   "BB_O224.5": 0.3402559464508432,
+   "BB_U224.5": 0.6597440535491568
+  },
+  "labels": {
+   "BB_ML_H": "П1 (с ОТ)",
+   "BB_ML_A": "П2 (с ОТ)",
+   "BB_SPR_H": "Ф1 (-14.5)",
+   "BB_SPR_A": "Ф2 (+14.5)",
+   "BB_O210.5": "ТБ 210.5",
+   "BB_U210.5": "ТМ 210.5",
+   "BB_O217.5": "ТБ 217.5",
+   "BB_U217.5": "ТМ 217.5",
+   "BB_O224.5": "ТБ 224.5",
+   "BB_U224.5": "ТМ 224.5"
+  },
+  "real": {
+   "BB_ML_H": 1.103,
+   "BB_ML_A": 7.4,
+   "BB_SPR_H": 1.87,
+   "BB_SPR_A": 1.952,
+   "BB_O217.5": 1.893,
+   "BB_U217.5": 1.926
+  },
+  "center": "Ожидаемый счёт 116 : 102",
+  "bar": [
+   0.8865404641312604,
+   0,
+   0.11345953586873958
+  ],
+  "model": {
+   "mu": 14.5,
+   "T": 217.5
+  },
+  "stavka_signal": {
+   "status": "collecting",
+   "weight": 0.0,
+   "authors": 7,
+   "group": "basketball",
+   "snapshot": "NBA|401909989",
+   "source": "https://stavka.tv"
+  },
+  "main": {
+   "key": "BB_U217.5",
+   "label": "ТМ 217.5",
+   "p": 0.5,
+   "odds": 1.93,
+   "est": false,
+   "stake": 1.0
+  },
+  "bold": {},
+  "open": {
+   "BB_U217.5": 0.5
+  },
+  "top": false,
+  "msg_id": 6310,
+  "btn": 4
+ },
+ "NBA|401909990": {
+  "id": "401909990",
+  "div": "NBA",
+  "sport": "basketball",
+  "kickoff": "2026-11-16T02:00:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "detail": "Sun, November 15th at 6:00 PM EST",
+  "clock": "0.0",
+  "period": 0,
+  "home": {
+   "id": "28",
+   "name": "Toronto Raptors",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/tor.png",
+   "color": "d91244",
+   "score": "0",
+   "record": "5-7",
+   "periods": [],
+   "ru": "Торонто Рэпторс"
+  },
+  "away": {
+   "id": "18",
+   "name": "New York Knicks",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/ny.png",
+   "color": "1d428a",
+   "score": "0",
+   "record": "6-6",
+   "periods": [],
+   "ru": "Нью-Йорк Никс"
+  },
+  "odds": {
+   "H": 2.54,
+   "A": 1.543,
+   "line": 217.5,
+   "over": 1.87,
+   "under": 1.952,
+   "spread": 4.5,
+   "sp_h": 1.87,
+   "sp_a": 1.943
+  },
+  "probs": {
+   "BB_ML_H": 0.3538302333272762,
+   "BB_ML_A": 0.6461697666727237,
+   "BB_SPR_H": 0.5,
+   "BB_SPR_A": 0.5,
+   "BB_O210.5": 0.6597440535491568,
+   "BB_U210.5": 0.3402559464508432,
+   "BB_O217.5": 0.5,
+   "BB_U217.5": 0.5,
+   "BB_O224.5": 0.3402559464508432,
+   "BB_U224.5": 0.6597440535491568
+  },
+  "labels": {
+   "BB_ML_H": "П1 (с ОТ)",
+   "BB_ML_A": "П2 (с ОТ)",
+   "BB_SPR_H": "Ф1 (+4.5)",
+   "BB_SPR_A": "Ф2 (-4.5)",
+   "BB_O210.5": "ТБ 210.5",
+   "BB_U210.5": "ТМ 210.5",
+   "BB_O217.5": "ТБ 217.5",
+   "BB_U217.5": "ТМ 217.5",
+   "BB_O224.5": "ТБ 224.5",
+   "BB_U224.5": "ТМ 224.5"
+  },
+  "real": {
+   "BB_ML_H": 2.54,
+   "BB_ML_A": 1.543,
+   "BB_SPR_H": 1.87,
+   "BB_SPR_A": 1.943,
+   "BB_O217.5": 1.87,
+   "BB_U217.5": 1.952
+  },
+  "center": "Ожидаемый счёт 106 : 111",
+  "bar": [
+   0.3538302333272762,
+   0,
+   0.6461697666727237
+  ],
+  "model": {
+   "mu": -4.5,
+   "T": 217.5
+  },
+  "stavka_signal": {
+   "status": "collecting",
+   "weight": 0.0,
+   "authors": 19,
+   "group": "basketball",
+   "snapshot": "NBA|401909990",
+   "source": "https://stavka.tv"
+  },
+  "main": {
+   "key": "BB_U217.5",
+   "label": "ТМ 217.5",
+   "p": 0.5,
+   "odds": 1.95,
+   "est": false,
+   "stake": 1.0
+  },
+  "bold": {},
+  "open": {
+   "BB_U217.5": 0.5
+  },
+  "top": true,
+  "msg_id": 6312,
+  "btn": 4
  }
 }
