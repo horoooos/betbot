@@ -5,7 +5,7 @@
  },
  "learned": "2026-11-15",
  "schedule_day": "2026-11-15",
- "content_slot": "2026-11-15-13",
+ "content_slot": "2026-11-15-16",
  "news_seen": [
   "https://www.sport-express.ru/football/england/news/uzhin-associacii-byvshih-igrokov-myu-perenesli-so-stadiona-v-otel-2473962/",
   "https://www.sport-express.ru/hockey/world-u20/news/vyacheslav-bykov-sbornaya-rossii-byla-by-glavnym-pretendentom-na-pobedu-na-mchm-2027-2473975/",
@@ -1547,7 +1547,7 @@
  "value_day": "2026-11-15",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-15",
- "site_stamp": "1040|6155|2026-11-15 15|2",
+ "site_stamp": "1040|6159|2026-11-15 16|2",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1698,7 +1698,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 6155,
+ "dz_last": 6159,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -1887,7 +1887,8 @@
   "6144",
   "6146",
   "6151",
-  "6156"
+  "6156",
+  "6158"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -1947,12 +1948,13 @@
   "2026-11-15:новость:3b1dfdb049c70bb298b1797f",
   "2026-11-15:новость:8810f26f7f62a5cd2d9654f5",
   "2026-11-15:новость:5a9d342f2b421f1c10dbcf5a",
-  "2026-11-15:новость:c2be7d0671c17023a6f95d2c"
+  "2026-11-15:новость:c2be7d0671c17023a6f95d2c",
+  "2026-11-15:матчи:6d4f5505ae0ac991128f08b4"
  ],
  "dz_last_delivery": {
-  "source_id": 6156,
-  "message_id": 606,
-  "kind": "новость"
+  "source_id": 6158,
+  "message_id": 607,
+  "kind": "матчи"
  },
  "learn_attempt_day": "2026-11-15",
  "learn_diagnostics": {
@@ -1972,5 +1974,14 @@
  "learned_at": "2026-11-15T15:44:13.362329+03:00",
  "learn_version": "shared-lambda-v2",
  "learn_error": null,
- "learn_retry_at": 0
+ "learn_retry_at": 0,
+ "mod_poll": {
+  "key": "SP2|401883116",
+  "id": "401883116",
+  "poll": 6159,
+  "post": 6158,
+  "home": "Granada",
+  "away": "Лас-Пальмас",
+  "kickoff": "2026-11-15T18:15:00+03:00"
+ }
 }
