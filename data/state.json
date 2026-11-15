@@ -1983,5 +1983,22 @@
   "home": "Granada",
   "away": "Лас-Пальмас",
   "kickoff": "2026-11-15T18:15:00+03:00"
+ },
+ "stavka": {
+  "model": {
+   "weight": 0.0,
+   "status": "collecting"
+  },
+  "source": {
+   "last_success": "2026-11-15T13:25:14.875693+00:00",
+   "parsed": 17,
+   "added": 10,
+   "discovered_matches": 9,
+   "pages": 5,
+   "errors": []
+  },
+  "error": null,
+  "tips": 10,
+  "snapshots": 0
  }
 }
