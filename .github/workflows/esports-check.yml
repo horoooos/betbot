@@ -1,0 +1,27 @@
+name: Diagnose esports predictions
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/cache/restore@v4
+        with:
+          path: data/raw
+          key: raw-diagnose-${{ github.run_id }}
+          restore-keys: raw-
+      - run: pip install pandas numpy scipy requests
+      - name: Inspect data, ratings and skip reasons without publishing
+        env:
+          PANDASCORE_TOKEN: ${{ secrets.PANDASCORE_TOKEN }}
+          ODDSPAPI_KEY: ${{ secrets.ODDSPAPI_KEY }}
+        run: python tools/esports_check.py
