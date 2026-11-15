@@ -16,6 +16,7 @@ jobs:
           python-version: '3.12'
       - run: pip install requests beautifulsoup4 pandas scipy numpy
       - name: Inspect public tennis market coverage
+        continue-on-error: true
         run: python tools/stavka_market_probe.py
       - name: Verify real parsing and match alignment without publishing
         env:

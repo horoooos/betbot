@@ -395,6 +395,8 @@ def add_result(m: dict, score: str, sport: str) -> dict:
 
 def other_review(e: dict, calib: dict, ctx: dict, state: dict) -> dict | None:
     """Пост перед матчем (хоккей, баскетбол, теннис, киберспорт): картинка + прогноз, полный разбор — ответом."""
+    from betbot import stavka_markets
+    e=stavka_markets.supplement(e,pd.Timestamp.now(tz=MSK))
     hist, ratings = ctx.get(e["sport"], ([], {}))
     a = sports.analyse(e, ratings)
     if a is None:
@@ -465,10 +467,10 @@ def other_review_due(e: dict, previous: dict | None, now: pd.Timestamp, lead: pd
     kick=pd.Timestamp(e['kickoff'])
     if e.get('state')!='pre' or 'ru' not in e.get('home',{}) or not now<kick<=now+lead:
         return False
-    if e.get('sport')=='esports' and kick-now<=pd.Timedelta(minutes=5):
+    if e.get('sport') in ('esports','tennis') and kick-now<=pd.Timedelta(minutes=5):
         return False
     if not previous:return True
-    return (e.get('sport')=='esports' and previous.get('status') in ('skipped','waiting_data')
+    return (e.get('sport') in ('esports','tennis') and previous.get('status') in ('skipped','waiting_data')
             and now.timestamp()>=float(previous.get('retry_at',0)))
 
 
@@ -494,8 +496,8 @@ def other_sports(state: dict, events: list[dict], now: pd.Timestamp, calib: dict
                 result=other_review(e, calib, ctx, state)
                 if result:
                     store[key]=result
-                elif e['sport']=='esports':
-                    store[key]={'status':'waiting_data','kickoff':e['kickoff'],'sport':'esports','div':e['div'],
+                elif e['sport'] in ('esports','tennis'):
+                    store[key]={'status':'waiting_data','kickoff':e['kickoff'],'sport':e['sport'],'div':e['div'],
                                 'reason':'no_odds_or_sufficient_history','retry_at':now.timestamp()+600}
                 else:
                     store[key]={'status':'skipped','kickoff':e['kickoff']}

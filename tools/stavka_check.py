@@ -25,4 +25,6 @@ for e in events:
 store=stavka.load()
 count=stavka.collect(store,events,now)
 print(json.dumps(dict(events=len(events),new_forecasts=count,source=store['source_status'],
+                     unmapped_markets=len(store.get('market_observations',{})),
+                     quote_matches=[{k:q[k] for k in ('event_id','div','odds','bookmaker','source','observed_at')} for q in store.get('quotes',{}).values()],
                      preview=[{k:t[k] for k in ('source','key','odds','published_at','event_id')} for t in list(store['tips'].values())[-3:]]),ensure_ascii=False,indent=2))
