@@ -382,14 +382,15 @@
    "min_odds": 1.73,
    "minute": "26'",
    "score": "1:0",
-   "sport": "football"
+   "sport": "football",
+   "result": "hit"
   }
  },
  "UNL|401861177": {
   "msg": 6252,
   "hs": 2,
-  "as": 0,
-  "goals": 2,
+  "as": 1,
+  "goals": 3,
   "kickoff": "2026-11-15T22:45:00+03:00",
   "lt": {
    "key": "H",
@@ -452,8 +453,8 @@
  },
  "NBA|401909986": {
   "msg": 6285,
-  "hs": 16,
-  "as": 25,
+  "hs": 17,
+  "as": 27,
   "goals": 0,
   "kickoff": "2026-11-16T00:00:00+03:00"
  }
