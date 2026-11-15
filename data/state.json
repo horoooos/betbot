@@ -1536,7 +1536,9 @@
      "1d428a",
      "0c2340"
     ],
-    "label": "Победа: Филадельфия Сиксерс (с ОТ)"
+    "label": "Победа: Филадельфия Сиксерс (с ОТ)",
+    "win": true,
+    "score": "131:124"
    }
   ],
   "odds": 1.571949,
@@ -1547,7 +1549,7 @@
  "value_day": "2026-11-15",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-15",
- "site_stamp": "1050|6274|2026-11-15 23|3|1e394939840ad062",
+ "site_stamp": "1051|6276|2026-11-15 23|3|0bced7b3147c1aaa",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1696,7 +1698,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 6274,
+ "dz_last": 6276,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2051,35 +2053,35 @@
     "weight": 0.0,
     "settled_matches": 0,
     "required_matches": 100,
-    "trained_at": "2026-11-15T13:43:14.477857+00:00"
+    "trained_at": "2026-11-15T20:31:01.952445+00:00"
    },
    "basketball": {
     "status": "collecting",
     "weight": 0.0,
     "settled_matches": 0,
     "required_matches": 100,
-    "trained_at": "2026-11-15T13:43:14.477857+00:00"
+    "trained_at": "2026-11-15T20:31:01.952445+00:00"
    },
    "tennis": {
     "status": "collecting",
     "weight": 0.0,
     "settled_matches": 0,
     "required_matches": 100,
-    "trained_at": "2026-11-15T13:43:14.477857+00:00"
+    "trained_at": "2026-11-15T20:31:01.952445+00:00"
    },
    "esports:CS2": {
     "status": "collecting",
     "weight": 0.0,
     "settled_matches": 0,
     "required_matches": 100,
-    "trained_at": "2026-11-15T13:43:14.477857+00:00"
+    "trained_at": "2026-11-15T20:31:01.952445+00:00"
    },
    "esports:DOTA": {
     "status": "collecting",
     "weight": 0.0,
     "settled_matches": 0,
     "required_matches": 100,
-    "trained_at": "2026-11-15T13:43:14.477857+00:00"
+    "trained_at": "2026-11-15T20:31:01.952445+00:00"
    }
   },
   "source": {
@@ -2100,12 +2102,12 @@
   },
   "error": null,
   "tips": 670,
-  "snapshots": 7,
+  "snapshots": 8,
   "unmapped_markets": 606,
   "quote_matches": 6
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-15T23:29:01.810809+03:00",
+  "last_poll": "2026-11-15T23:31:01.952445+03:00",
   "cursor": "52",
   "posts": [
    {
