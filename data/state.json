@@ -1,7 +1,7 @@
 {
  "weights": {
   "1X2": 0.0,
-  "OU25": 0.1
+  "OU25": 0.0
  },
  "learned": "2026-11-15",
  "schedule_day": "2026-11-15",
@@ -1547,7 +1547,7 @@
  "value_day": "2026-11-15",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-15",
- "site_stamp": "1040|6151|2026-11-15 15",
+ "site_stamp": "1040|6151|2026-11-15 15|2",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1950,5 +1950,24 @@
   "source_id": 6151,
   "message_id": 605,
   "kind": "новость"
- }
+ },
+ "learn_attempt_day": "2026-11-15",
+ "learn_diagnostics": {
+  "objective": "shared_lambda_1X2_OU25",
+  "rows": 8000,
+  "train_rows": 6280,
+  "validation_rows": 1720,
+  "validation_from": "2026-09-22",
+  "history_from": "2026-02-21",
+  "history_until": "2026-11-09",
+  "candidate_weight": 0.0,
+  "weight": 0.0,
+  "train_logloss": 0.8407235020570081,
+  "validation_logloss": 0.8195036503184738,
+  "validation_market_logloss": 0.8195036503184738
+ },
+ "learned_at": "2026-11-15T15:44:13.362329+03:00",
+ "learn_version": "shared-lambda-v2",
+ "learn_error": null,
+ "learn_retry_at": 0
 }
