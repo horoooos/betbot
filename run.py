@@ -20,7 +20,7 @@ from betbot import card, content, directory, dzen, vk, esports, inplay, live, na
 from betbot import markets as mk
 from betbot.data import MSK, load_fixtures, load_history
 from betbot.engine import add_market, fit_full, fit_weights, fit_weights_lambda, walk_forward
-from betbot import extras
+from betbot import extras, stavka
 from betbot.espn import _get as espn_get, scoreboard, summary
 from betbot.leagues import ALL, EXTRA, MAIN, NATIONAL, ORDER
 
@@ -327,6 +327,11 @@ def review(ev: dict, w: dict, fx_loader, hist_loader, calib: dict, state: dict) 
         print(f"  нет коэффициентов и истории: {ev['home']['name']} — {ev['away']['name']}")
         return None
     probs = mk.all_markets(*lam)
+    source_signal = {"status": "unavailable", "weight": 0.0}
+    try:
+        probs, source_signal = stavka.adjust(ev, lam, probs, pd.Timestamp.now(tz=MSK))
+    except Exception as exc:
+        print(f"  ! СТАВКА ТВ: сигнал не применён: {exc}")
     scores = probs.pop("scores")
     main, bold = mk.tips(probs, mkt["real"] if mkt else {}, calib)
     for t in (main, bold):
@@ -336,7 +341,7 @@ def review(ev: dict, w: dict, fx_loader, hist_loader, calib: dict, state: dict) 
          "top": pro.is_top(state, ev["div"], ev["id"]), "lam": list(lam), "probs": probs, "scores": scores, "main": main, "bold": bold,
          "value": value_pick(probs, mkt), "odds_src": mkt["src"] if mkt else "нет, только модель",
          "model_w": w.get("1X2", 0.0) if mkt else 1.0,
-         "learned_n": len(read_results())}
+         "learned_n": len(read_results()), "stavka_signal": source_signal}
     if row is not None and ev["div"] in HIST_LEAGUES:  # угловые и карточки по статистике сезона (без кэфов)
         try:
             m["extra"] = extras.corners_cards(hist_loader(), ev["div"], row["HomeTeam"], row["AwayTeam"])
@@ -562,6 +567,13 @@ def main():
         print(f"  ! хоккей/баскетбол/теннис недоступны: {e}")
         other = []
     print(f"Матчей в окне: футбол {len(events)}, другие виды спорта {len(other)}")
+    try:
+        state["stavka"] = stavka.tick(events, now)
+        print(f"СТАВКА ТВ: {state['stavka']['tips']} прогнозов, {state['stavka']['snapshots']} снимков, "
+              f"вес {state['stavka']['model'].get('weight', 0):.2f}")
+    except Exception as exc:
+        state["stavka"] = {"error": str(exc)[:240]}
+        print(f"  ! СТАВКА ТВ: сбор отложен: {exc}")
 
     if state.get("schedule_day") != today and now.hour >= MORNING_HOUR:
         state["schedule_day"] = today  # даже если утренний пост упадёт — не повторяем его каждые 2 минуты
