@@ -5,7 +5,7 @@
  },
  "learned": "2026-11-15",
  "schedule_day": "2026-11-15",
- "content_slot": "2026-11-14-23",
+ "content_slot": "2026-11-15-10",
  "news_seen": [
   "https://www.sport-express.ru/football/nation-league/news/roberto-manchini-kommentariy-po-predstoyaschemu-matchu-ligi-naciy-uefa-mezhdu-franciey-i-italiey-2473873/",
   "https://www.sport-express.ru/football/nation-league/news/dayot-upamekano-kommentariy-po-matchu-ligi-naciy-uefa-protiv-italii-2473870/",
@@ -1495,87 +1495,60 @@
   ]
  },
  "express": {
-  "msg": 5722,
+  "msg": 6138,
   "legs": [
    {
     "sport": "football",
-    "div": "FRI",
-    "id": "401930243",
-    "side": "away",
-    "p": 0.8152094797216642,
-    "odds": 1.154,
-    "kickoff": "2026-11-14T15:00:00+03:00",
-    "home": "Сборная Тайваня",
-    "away": "Сборная Кыргызстана",
-    "league": "🌍 Сборные · Товарищеские матчи",
-    "logos": [
-     "https://a.espncdn.com/i/teamlogos/soccer/500/14561.png",
-     "https://a.espncdn.com/i/teamlogos/countries/500/kgz.png"
-    ],
-    "colors": [
-     "FFFFFF",
-     "E70000"
-    ],
-    "label": "Победа: Сборная Кыргызстана",
-    "win": true,
-    "score": "0:3"
-   },
-   {
-    "sport": "hockey",
-    "div": "NHL",
-    "id": "401891809",
-    "side": "home",
-    "p": 0.7571401188422466,
-    "odds": 1.267,
-    "kickoff": "2026-11-14T21:00:00+03:00",
-    "home": "Каролина",
-    "away": "Сиэтл",
-    "league": "🇺🇸 США · NHL",
-    "logos": [
-     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/car.png",
-     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/sea.png"
-    ],
-    "colors": [
-     "e30426",
-     "000d33"
-    ],
-    "label": "Победа: Каролина (с ОТ)",
-    "win": true,
-    "score": "5:1"
-   },
-   {
-    "sport": "football",
     "div": "UNL",
-    "id": "401861165",
+    "id": "401861177",
     "side": "home",
-    "p": 0.7558959887119532,
-    "odds": 1.211,
-    "kickoff": "2026-11-14T20:00:00+03:00",
-    "home": "Сборная Норвегии",
-    "away": "Сборная Уэльса",
+    "p": 0.791161594755729,
+    "odds": 1.167,
+    "kickoff": "2026-11-15T22:45:00+03:00",
+    "home": "Сборная Франции",
+    "away": "Сборная Турции",
     "league": "🌍 Сборные · Лига наций",
     "logos": [
-     "https://a.espncdn.com/i/teamlogos/countries/500/nor.png",
-     "https://a.espncdn.com/i/teamlogos/countries/500/wal.png"
+     "https://a.espncdn.com/i/teamlogos/countries/500/fra.png",
+     "https://a.espncdn.com/i/teamlogos/countries/500/tur.png"
     ],
     "colors": [
-     "C8102E",
-     "E70000"
+     "000080",
+     "ffffff"
     ],
-    "label": "Победа: Сборная Норвегии",
-    "win": true,
-    "score": "3:1"
+    "label": "Победа: Сборная Франции"
+   },
+   {
+    "sport": "basketball",
+    "div": "NBA",
+    "id": "401909985",
+    "side": "home",
+    "p": 0.7132212050244837,
+    "odds": 1.347,
+    "kickoff": "2026-11-15T21:00:00+03:00",
+    "home": "Филадельфия Сиксерс",
+    "away": "Индиана Пэйсерс",
+    "league": "🇺🇸 США · NBA",
+    "logos": [
+     "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/phi.png",
+     "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/ind.png"
+    ],
+    "colors": [
+     "1d428a",
+     "0c2340"
+    ],
+    "label": "Победа: Филадельфия Сиксерс (с ОТ)"
    }
   ],
-  "odds": 1.770624898,
-  "day": "2026-11-14",
-  "done": true
+  "odds": 1.571949,
+  "day": "2026-11-15",
+  "done": false
  },
  "streak_posted": 0,
  "value_day": "2026-11-14",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-14",
- "site_stamp": "1040|6137|2026-11-15 09",
+ "site_stamp": "1040|6138|2026-11-15 10",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1726,7 +1699,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 6137,
+ "dz_last": 6138,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -1904,7 +1877,8 @@
   "6109",
   "6123",
   "6125",
-  "6137"
+  "6137",
+  "6138"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -1958,11 +1932,12 @@
   "2026-11-15:начало:879dddc7125c18864c314d62",
   "2026-11-15:статистика:13aae1c419e2030a273bcaab",
   "2026-11-15:матчи:7a1efc0fb4a494cca241951f",
-  "2026-11-15:новость:e2f14bc870e509d3b061e97e"
+  "2026-11-15:новость:e2f14bc870e509d3b061e97e",
+  "2026-11-15:экспресс:599c186fc1f94ecc21811e5b"
  ],
  "dz_last_delivery": {
-  "source_id": 6137,
-  "message_id": 600,
-  "kind": "новость"
+  "source_id": 6138,
+  "message_id": 601,
+  "kind": "экспресс"
  }
 }

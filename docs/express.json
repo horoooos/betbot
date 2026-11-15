@@ -2,67 +2,49 @@
 {
 "kind": "express",
 "title": "Экспресс дня",
-"day": "2026-11-14",
-"odds": 1.770624898,
-"p": 0.4666,
-"status": "won",
-"won": 3,
-"n": 3,
-"post": "https://t.me/aistavvit/5722",
+"day": "2026-11-15",
+"odds": 1.571949,
+"p": 0.5643,
+"status": "wait",
+"won": 0,
+"n": 2,
+"post": "https://t.me/aistavvit/6138",
 "legs": [
 {
 "sport": "football",
-"id": "401930243",
-"home": "Сборная Тайваня",
-"away": "Сборная Кыргызстана",
-"league": "🌍 Сборные · Товарищеские матчи",
-"kickoff": "2026-11-14T15:00:00+03:00",
-"label": "Победа: Сборная Кыргызстана",
-"odds": 1.154,
-"p": 0.8152094797216642,
-"logos": [
-"https://a.espncdn.com/i/teamlogos/soccer/500/14561.png",
-"https://a.espncdn.com/i/teamlogos/countries/500/kgz.png"
-],
-"win": true,
-"score": "0:3",
-"url": "live.html?s=football&p=soccer%2Ffifa.friendly&e=401930243&h=%D0%A1%D0%B1%D0%BE%D1%80%D0%BD%D0%B0%D1%8F+%D0%A2%D0%B0%D0%B9%D0%B2%D0%B0%D0%BD%D1%8F&a=%D0%A1%D0%B1%D0%BE%D1%80%D0%BD%D0%B0%D1%8F+%D0%9A%D1%8B%D1%80%D0%B3%D1%8B%D0%B7%D1%81%D1%82%D0%B0%D0%BD%D0%B0"
-},
-{
-"sport": "hockey",
-"id": "401891809",
-"home": "Каролина",
-"away": "Сиэтл",
-"league": "🇺🇸 США · NHL",
-"kickoff": "2026-11-14T21:00:00+03:00",
-"label": "Победа: Каролина (с ОТ)",
-"odds": 1.267,
-"p": 0.7571401188422466,
-"logos": [
-"https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/car.png",
-"https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/sea.png"
-],
-"win": true,
-"score": "5:1",
-"url": "live.html?s=hockey&p=hockey%2Fnhl&e=401891809&h=%D0%9A%D0%B0%D1%80%D0%BE%D0%BB%D0%B8%D0%BD%D0%B0&a=%D0%A1%D0%B8%D1%8D%D1%82%D0%BB"
-},
-{
-"sport": "football",
-"id": "401861165",
-"home": "Сборная Норвегии",
-"away": "Сборная Уэльса",
+"id": "401861177",
+"home": "Сборная Франции",
+"away": "Сборная Турции",
 "league": "🌍 Сборные · Лига наций",
-"kickoff": "2026-11-14T20:00:00+03:00",
-"label": "Победа: Сборная Норвегии",
-"odds": 1.211,
-"p": 0.7558959887119532,
+"kickoff": "2026-11-15T22:45:00+03:00",
+"label": "Победа: Сборная Франции",
+"odds": 1.167,
+"p": 0.791161594755729,
 "logos": [
-"https://a.espncdn.com/i/teamlogos/countries/500/nor.png",
-"https://a.espncdn.com/i/teamlogos/countries/500/wal.png"
+"https://a.espncdn.com/i/teamlogos/countries/500/fra.png",
+"https://a.espncdn.com/i/teamlogos/countries/500/tur.png"
 ],
-"win": true,
-"score": "3:1",
-"url": "live.html?s=football&p=soccer%2Fuefa.nations&e=401861165&h=%D0%A1%D0%B1%D0%BE%D1%80%D0%BD%D0%B0%D1%8F+%D0%9D%D0%BE%D1%80%D0%B2%D0%B5%D0%B3%D0%B8%D0%B8&a=%D0%A1%D0%B1%D0%BE%D1%80%D0%BD%D0%B0%D1%8F+%D0%A3%D1%8D%D0%BB%D1%8C%D1%81%D0%B0"
+"win": null,
+"score": null,
+"url": "live.html?s=football&p=soccer%2Fuefa.nations&e=401861177&h=%D0%A1%D0%B1%D0%BE%D1%80%D0%BD%D0%B0%D1%8F+%D0%A4%D1%80%D0%B0%D0%BD%D1%86%D0%B8%D0%B8&a=%D0%A1%D0%B1%D0%BE%D1%80%D0%BD%D0%B0%D1%8F+%D0%A2%D1%83%D1%80%D1%86%D0%B8%D0%B8"
+},
+{
+"sport": "basketball",
+"id": "401909985",
+"home": "Филадельфия Сиксерс",
+"away": "Индиана Пэйсерс",
+"league": "🇺🇸 США · NBA",
+"kickoff": "2026-11-15T21:00:00+03:00",
+"label": "Победа: Филадельфия Сиксерс (с ОТ)",
+"odds": 1.347,
+"p": 0.7132212050244837,
+"logos": [
+"https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/phi.png",
+"https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/ind.png"
+],
+"win": null,
+"score": null,
+"url": "live.html?s=basketball&p=basketball%2Fnba&e=401909985&h=%D0%A4%D0%B8%D0%BB%D0%B0%D0%B4%D0%B5%D0%BB%D1%8C%D1%84%D0%B8%D1%8F+%D0%A1%D0%B8%D0%BA%D1%81%D0%B5%D1%80%D1%81&a=%D0%98%D0%BD%D0%B4%D0%B8%D0%B0%D0%BD%D0%B0+%D0%9F%D1%8D%D0%B9%D1%81%D0%B5%D1%80%D1%81"
 }
 ]
 },
