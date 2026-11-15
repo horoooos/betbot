@@ -1551,7 +1551,7 @@
  "value_day": "2026-11-15",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-15",
- "site_stamp": "1059|6324|2026-11-16 02|3|7bdecaa802d3bc4e",
+ "site_stamp": "1060|6326|2026-11-16 02|3|b9998c87a4b28bc7",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1587,7 +1587,9 @@
      "29127a",
      "552583"
     ],
-    "label": "Победа: Лейкерс (с ОТ)"
+    "label": "Победа: Лейкерс (с ОТ)",
+    "win": true,
+    "score": "123:131"
    },
    {
     "sport": "football",
@@ -1700,7 +1702,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 6324,
+ "dz_last": 6326,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2121,7 +2123,7 @@
   "quote_matches": 12
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-16T02:44:22.425528+03:00",
+  "last_poll": "2026-11-16T02:46:22.590860+03:00",
   "cursor": "58",
   "posts": [
    {
