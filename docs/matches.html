@@ -112,7 +112,7 @@ async function scores() {
   }));
 }
 function status(m) {
-  if (m.sport === "esports") return ["pre", "in", "post"].includes(m.state) ? m.state : "pre";
+  if (m.sport === "esports") return ["pre", "in", "post"].includes(m.state) ? m.state : "unknown";
   const s = live[m.id], k = new Date(m.kickoff).getTime(), now = Date.now();
   if (s && !(s.state === "pre" && now - k > 20 * 60e3 && now - k < (DUR[m.sport] || 120) * 60e3)) return s.state;
   // ESPN молчит — решаем по времени: начался и ещё не должен был закончиться → идёт
@@ -131,6 +131,7 @@ const bbSearch = (home, sport) => { const w = String(home || "").split(/[\s.()]+
 function card(m) {
   const s = m.sport === "esports" ? {state:m.state,hs:m.hs,as:m.as} : live[m.id] || {}, st = status(m);
   let label = `${day(m.kickoff)}, ${time(m.kickoff)}`, cls = "";
+  if (st === "unknown") label = "Ожидаем обновления счёта";
   if (st === "in") { cls = "l"; label = !s.state || s.state !== "in" ? "● Идёт" : m.sport === "tennis" ? "● Идёт игра" : m.sport === "football" ? `● ${s.clock || s.detail}` : `● ${s.detail || s.clock}`; }
   if (st === "post") { cls = "f"; label = "Завершён"; }
   const ten = m.sport === "tennis", hsets = (s.hsets || []).join(" "), asets = (s.asets || []).join(" ");
@@ -153,7 +154,7 @@ function render() {
   document.getElementById("chips").innerHTML = chips.map(([k, n]) => `<button class="chip ${filter === k ? "on" : ""}" data-k="${k}">${n}<b>${counts[k]}</b></button>`).join("");
   document.querySelectorAll(".chip").forEach(b => b.onclick = () => { filter = b.dataset.k; try { localStorage.setItem("mfilter", filter); } catch (e) {} render(); });
   const list = all.filter(m => filter === "all" || (filter === "tip" ? m.tip : filter === "lt" ? m.lt : m.sport === filter));
-  const groups = [["in", '<span class="dot"></span>Сейчас в эфире'], ["pre", "⏳ Скоро"], ["post", "✅ Завершены"]];
+  const groups = [["in", '<span class="dot"></span>Сейчас в эфире'], ["pre", "⏳ Скоро"], ["unknown", "🔄 Ожидаем данные матча"], ["post", "✅ Завершены"]];
   let html = "";
   for (const [st, title] of groups) {
     let g = list.filter(m => status(m) === st);
