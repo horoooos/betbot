@@ -1127,8 +1127,8 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-16-finiks-sanz-leykers-401909986.html",
-"hs": "69",
-"as": "95",
+"hs": "70",
+"as": "97",
 "tip": "П2 (с ОТ) · 1.62",
 "top": true,
 "bot": {
@@ -1218,8 +1218,8 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-16-klippers-sharlott-hornets-401909987.html",
-"hs": "51",
-"as": "54",
+"hs": "52",
+"as": "55",
 "tip": "Ф1 (+1.5) · 1.86",
 "top": false,
 "bot": {
@@ -1310,7 +1310,7 @@ null
 "bo": null,
 "prediction": "predictions/2026-11-16-yuta-dzhaz-san-antonio-spers-401909988.html",
 "hs": "49",
-"as": "49",
+"as": "50",
 "tip": "ТМ 222.5 · 1.93",
 "top": false,
 "bot": {
@@ -1716,12 +1716,78 @@ null
 "div": "NBA",
 "state": "pre",
 "bo": null,
-"prediction": "",
+"prediction": "predictions/2026-11-16-vashington-uizards-hyuston-rokets-401909991.html",
 "hs": "0",
 "as": "0",
-"tip": "",
+"tip": "ТМ 223.5 · 1.89",
 "top": false,
-"bot": null,
+"bot": {
+"main": {
+"label": "ТМ 223.5",
+"p": 0.5,
+"odds": 1.89,
+"est": false
+},
+"bold": null,
+"markets": [
+[
+"П1 (с ОТ)",
+0.239,
+3.76
+],
+[
+"П2 (с ОТ)",
+0.761,
+1.29
+],
+[
+"Ф1 (+8.5)",
+0.5,
+1.885
+],
+[
+"Ф2 (-8.5)",
+0.5,
+1.935
+],
+[
+"ТБ 216.5",
+0.66,
+null
+],
+[
+"ТМ 216.5",
+0.34,
+null
+],
+[
+"ТБ 223.5",
+0.5,
+1.935
+],
+[
+"ТМ 223.5",
+0.5,
+1.885
+],
+[
+"ТБ 230.5",
+0.34,
+null
+],
+[
+"ТМ 230.5",
+0.66,
+null
+]
+],
+"bar": [
+0.23936914086644995,
+0,
+0.76063085913355
+],
+"center": "Ожидаемый счёт 108 : 116"
+},
 "lt": null
 },
 {
