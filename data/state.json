@@ -2056,25 +2056,25 @@
    }
   },
   "source": {
-   "last_success": "2026-11-15T17:39:22.203981+00:00",
-   "parsed": 96,
-   "added": 45,
-   "discovered_matches": 21,
-   "pages": 17,
+   "last_success": "2026-11-15T17:53:22.388090+00:00",
+   "parsed": 360,
+   "added": 163,
+   "discovered_matches": 27,
+   "pages": 19,
    "errors": [],
    "parsed_by_sport": {
-    "soccer": 29,
-    "ice-hockey": 17,
-    "basketball": 7,
-    "tennis": 10,
-    "csgo": 18,
-    "dota2": 15
+    "soccer": 50,
+    "ice-hockey": 50,
+    "basketball": 50,
+    "tennis": 50,
+    "csgo": 50,
+    "dota2": 50
    }
   },
   "error": null,
-  "tips": 320,
+  "tips": 394,
   "snapshots": 1,
-  "unmapped_markets": 0,
-  "quote_matches": 0
+  "unmapped_markets": 89,
+  "quote_matches": 3
  }
 }
