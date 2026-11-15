@@ -6658,25 +6658,25 @@
   "kickoff": "2026-11-15T03:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Sat, November 14th at 7:00 PM EST",
   "clock": "0.0",
   "period": 0,
   "home": {
+   "color": "0a2240",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/no.png",
    "id": "3",
    "name": "New Orleans Pelicans",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/no.png",
-   "color": "0a2240",
    "score": "0",
    "record": "4-9",
    "periods": [],
    "ru": "Нью-Орлеан Пеликанс"
   },
   "away": {
+   "color": "0e2240",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/den.png",
    "id": "7",
    "name": "Denver Nuggets",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/den.png",
-   "color": "0e2240",
    "score": "0",
    "record": "6-4",
    "periods": [],
@@ -6751,7 +6751,9 @@
   "btn": 4,
   "close": {
    "BB_O235.5": 0.5
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null
  },
  "NBA|401909981": {
   "id": "401909981",
