@@ -11,8 +11,8 @@ const q=new URLSearchParams(location.search),id=q.get('e'),div=q.get('d');
 const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 async function load(){
  let all=null;
- for(const url of location.hostname.endsWith('github.io')?['https://raw.githubusercontent.com/horoooos/betbot/main/docs/matches.json','matches.json']:['matches.json']){
-  try{const r=await fetch(url,{cache:'no-store'});if(!r.ok)continue;all=await r.json();break;}catch(e){}
+ for(const url of location.hostname.endsWith('github.io')?['matches.json','https://raw.githubusercontent.com/horoooos/betbot/main/docs/matches.json']:['matches.json']){
+  try{const r=await fetch(url+'?v='+Date.now(),{cache:'no-store'});if(!r.ok)continue;all=await r.json();break;}catch(e){}
  }
  const m=all?.find(m=>m.sport==='esports'&&String(m.id)===id&&(!div||m.div===div));
  if(!m){document.getElementById('panel').innerHTML='<h1>Матч пока недоступен</h1><p>Проверяем обновления. Прогнозы и результаты доступны в разделе матчей.</p><a href="matches.html">Открыть все матчи →</a>';return;}

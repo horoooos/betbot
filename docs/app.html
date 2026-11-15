@@ -33,7 +33,7 @@
   if (PAGES[sp]) return go(PAGES[sp]);
   const m = sp.match(/^m(\d{3,12})$/);
   if (m) {
-    const src = location.hostname.endsWith("github.io") ? "https://raw.githubusercontent.com/horoooos/betbot/main/docs/matches.json" : "matches.json";
+    const src = "matches.json?v="+Date.now();
     try {
       const list = await (await fetch(src, { cache: "no-store" })).json();
       const x = list.find(x => String(x.id) === m[1]);

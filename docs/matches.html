@@ -166,8 +166,8 @@ function render() {
 }
 async function load() {
   all = [];
-  for (const u of location.hostname.endsWith("github.io") ? ["https://raw.githubusercontent.com/horoooos/betbot/main/docs/matches.json", "matches.json"] : ["matches.json"]) {   // из репозитория — свежее, чем копия сайта
-    try { all = await (await fetch(u, { cache: "no-store" })).json(); if (all.length) break; } catch (e) {}
+  for (const u of location.hostname.endsWith("github.io") ? ["matches.json", "https://raw.githubusercontent.com/horoooos/betbot/main/docs/matches.json"] : ["matches.json"]) {
+    try { all = await (await fetch(u+'?v='+Date.now(), { cache: "no-store" })).json(); if (all.length) break; } catch (e) {}
   }
   render(); await scores(); render();
 }
