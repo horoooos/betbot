@@ -18,6 +18,7 @@ CHANNEL = os.environ.get("TELEGRAM_CHAT_ID", "")
 if not CHANNEL.startswith("@"):  # в секрете может быть числовой id — тогда берём публичное имя канала
     CHANNEL = "@aistavvit"
 SITE = "https://horoooos.github.io/betbot/"
+RENDER_VERSION = 2
 
 
 def _hits(col: pd.Series) -> pd.Series:
@@ -62,8 +63,8 @@ def _smooth(xs: list[float], ys: list[float]) -> str:
     n = len(xs)
     if n < 2:
         return ""
-    d = [(ys[i + 1] - ys[i]) / ((xs[i + 1] - xs[i]) or 1) for i in range(n - 1)]
-    m = [d[0]] + [0.0 if d[i - 1] * d[i] <= 0 else (d[i - 1] + d[i]) / 2 for i in range(1, n - 1)] + [d[-1]]
+    from scipy.interpolate import PchipInterpolator
+    m = PchipInterpolator(xs, ys).derivative()(xs)
     path = f"M{xs[0]:.1f},{ys[0]:.1f}"
     for i in range(n - 1):
         h = (xs[i + 1] - xs[i]) / 3
@@ -116,7 +117,7 @@ b.querySelectorAll('svg[data-p]').forEach(s=>{const P=JSON.parse(s.dataset.p||'[
 const move=e=>{const r=s.getBoundingClientRect(),k=VW/r.width,x=((e.touches?e.touches[0].clientX:e.clientX)-r.left)*k;
 let i=0;P.forEach((p,j)=>{if(Math.abs(p[0]-x)<Math.abs(P[i][0]-x))i=j});const p=P[i];
 v.setAttribute('x1',p[0]);v.setAttribute('x2',p[0]);v.style.opacity=1;dot.setAttribute('cx',p[0]);dot.setAttribute('cy',p[1]);dot.style.opacity=1;
-t.innerHTML=`${p[2]}<b>${fmt(p[3])}</b>${p[4]?`${p[4]} ставок · зашло ${p[5]}`:'старт банка'}`;
+t.innerHTML=`${p[2]}<b>${fmt(p[3])}</b>${p[4]?`${p[4]} ставок · зашло ${p[5]}`:p[6]?'старт банка':'нет рассчитанных ставок'}`;
 const br=b.getBoundingClientRect();t.style.left=Math.min(Math.max(r.left-br.left+p[0]/k,70),br.width-70)+'px';t.style.top=(r.top-br.top+p[1]/k)+'px';t.style.opacity=1;};
 const out=()=>{t.style.opacity=0;v.style.opacity=0;dot.style.opacity=0};
 s.addEventListener('mousemove',move);s.addEventListener('touchstart',move,{passive:true});s.addEventListener('touchmove',move,{passive:true});s.addEventListener('mouseleave',out);s.addEventListener('touchend',()=>setTimeout(out,1500));});})();</script>"""
@@ -130,7 +131,7 @@ def _bank_block(res: pd.DataFrame, now: pd.Timestamp) -> str:
         lb = pro.live_bets()
     except Exception:
         lb = pd.DataFrame(columns=["hit"])
-    days = pro.bank_daily(res)
+    days = pro.bank_daily(res, today=now)
     today = now.tz_convert("Europe/Moscow").strftime("%Y-%m-%d")
     pts = list(days)
     if len(pts) == 1 or pts[-1]["date"] < today:   # сегодня ставок ещё нет — линия доходит до сегодняшнего дня
@@ -159,7 +160,7 @@ def _bank_block(res: pd.DataFrame, now: pd.Timestamp) -> str:
         step = max(1, -(-len(pts) // n_x))
         anchor = lambda i: "start" if i == 0 else "end" if i == len(pts) - 1 else "middle"   # noqa: E731
         xl = "".join(f'<text class="ax" style="font-size:{fs}px" x="{xs[i]:.1f}" y="{H - 10}" text-anchor="{anchor(i)}">'
-                     f'{pd.Timestamp(p["date"]):%d.%m}</text>' for i, p in enumerate(pts) if i % step == 0 or i == len(pts) - 1)
+                     f'{"Старт" if p.get("start") else pd.Timestamp(p["date"]).strftime("%d.%m")}</text>' for i, p in enumerate(pts) if i % step == 0 or i == len(pts) - 1)
         nmax = max([p["n"] for p in pts] + [1])
         bw = min(26.0, (W - L - R) / max(len(pts), 1) * 0.55)
         vol = "".join(
@@ -175,8 +176,8 @@ def _bank_block(res: pd.DataFrame, now: pd.Timestamp) -> str:
                        f'<text x="{(L + W - R) / 2:.0f}" y="{base - fs * 2.4:.0f}" text-anchor="middle" '
                        f'style="font:700 {fs * 1.1:.0f}px Montserrat,system-ui,sans-serif;fill:#9aa6cc">'
                        f'первые ставки — {reset.day} {MONTHS_RU[reset.month - 1]}</text>')
-        data = json.dumps([[round(xs[i], 1), round(ys[i], 1), f"{pd.Timestamp(p['date']).day} {MONTHS_RU[pd.Timestamp(p['date']).month - 1]}",
-                            round(p["bank"]), p["n"], p["w"]] for i, p in enumerate(pts)], ensure_ascii=False)
+        data = json.dumps([[round(xs[i], 1), round(ys[i], 1), f"{reset.day} {MONTHS_RU[reset.month - 1]} · старт" if p.get('start') else f"{pd.Timestamp(p['date']).day} {MONTHS_RU[pd.Timestamp(p['date']).month - 1]}",
+                            round(p["bank"]), p["n"], p["w"], bool(p.get("start"))] for i, p in enumerate(pts)], ensure_ascii=False)
         col = "#2ecc71" if up else "#ff5a5a"
         mid, end = ("#2ecc71", "#5dffa8") if up else ("#ff7a5a", "#ff5a5a")
         return f"""<svg class="{cls}" viewBox="0 0 {W} {H}" data-w="{W}" data-p='{escape(data, quote=True)}' role="img" aria-label="График виртуального банка бота">
@@ -206,6 +207,7 @@ def _bank_block(res: pd.DataFrame, now: pd.Timestamp) -> str:
     note = (f"Новый банк стартовал {reset.day} {MONTHS_RU[reset.month - 1]} с {money(pro.BANK_START)} ₽ — по новым правилам: "
             "все ставки бота и экспрессы. График растёт с каждой рассчитанной ставкой.") if n_all == 0 else \
         f"Ставка — рекомендованные ботом 1–3% от текущего банка; смелые и экспрессы — по 1%. Старт — {money(pro.BANK_START)} ₽."
+    note += " Симуляция включает расчётные коэффициенты; ставки пересчитываются последовательно."
     c = pro.bet_counts(res)
     try:   # ⚡ live-ставки: считаем отдельно, они тоже в банке
         live_n, live_w = len(lb), int((lb["hit"].astype(str).str.lower().isin(["true", "1", "1.0"])).sum())
@@ -229,10 +231,10 @@ def _bank_block(res: pd.DataFrame, now: pd.Timestamp) -> str:
 <div class="bankx{'' if up else ' down'}">
 <div class="top"><div><div class="lab">банк бота · с {reset:%d.%m.%Y}</div><div class="big">{money(bank)} ₽</div>
 <div class="chg {cls}">{chg}</div></div>
-<div class="mini"><div><b>{n_all}</b><span>ставок</span></div><div><b>{wr}</b><span>зашло</span></div>
-<div><b>{mx}</b><span>максимум</span></div></div></div>
+<div class="mini"><div><b>{n_all}</b><span>ставок с {reset:%d.%m}</span></div><div><b>{wr}</b><span>зашло</span></div>
+<div title="Максимальный остаток на конец дня"><b>{mx}</b><span>пик по дням</span></div></div></div>
 {chart(1000, 330, 64, 26, 24, 40, 12, 8, "d", "bk-wide")}{chart(400, 300, 50, 14, 20, 34, 14, 4, "m", "bk-narrow")}<div class="tip"></div>
-<div class="allb">{allb}</div><div class="note">{note}</div></div>{BANK_JS}"""
+<div class="note">Счётчики за всё время:</div><div class="allb">{allb}</div><div class="note">{note}</div></div>{BANK_JS}"""
 
 
 MONTHS_RU = ["января", "февраля", "марта", "апреля", "мая", "июня", "июля", "августа", "сентября", "октября", "ноября", "декабря"]

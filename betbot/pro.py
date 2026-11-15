@@ -65,12 +65,15 @@ def bank_daily(res: pd.DataFrame, today: pd.Timestamp | None = None) -> list[dic
     out = [{"date": (start - pd.Timedelta(days=1)).strftime("%Y-%m-%d"), "bank": float(BANK_START), "n": 0, "w": 0, "start": True}]
     bank = float(BANK_START)
     end = (pd.Timestamp(today) if today is not None else pd.Timestamp.now(tz="Europe/Moscow").tz_localize(None)).strftime("%Y-%m-%d")
+    by_day = {}
     for day, o, h, s in all_bets(res, start=BANK_RESET, end=end, dated=True):
-        if out[-1]["date"] != day:
-            out.append({"date": day, "bank": bank, "n": 0, "w": 0})
         amount = bank * s / 100
         bank += amount * (o - 1) if h else -amount
-        out[-1].update(bank=round(bank, 2), n=out[-1]["n"] + 1, w=out[-1]["w"] + int(h))
+        point = by_day.setdefault(day, {"date": day, "n": 0, "w": 0})
+        point.update(bank=round(bank, 2), n=point["n"] + 1, w=point["w"] + int(h))
+    for day in pd.date_range(start, end):
+        key = day.strftime("%Y-%m-%d")
+        out.append(by_day.get(key, {"date": key, "bank": out[-1]["bank"], "n": 0, "w": 0}))
     return out
 
 
@@ -131,6 +134,14 @@ def all_bets(res: pd.DataFrame, start: str | None = None, end: str | None = None
     кэф у них — минимальный, при котором ставка была выгодна (так их и рекомендовал бот)."""
     rows: list[tuple[str, float, bool, float]] = []
     if res is not None and not res.empty:
+        dates = pd.to_datetime(res["date"]).dt.normalize()
+        selected = pd.Series(True, index=res.index)
+        if start:
+            selected &= dates >= pd.Timestamp(start).normalize()
+        if end:
+            selected &= dates <= pd.Timestamp(end).normalize()
+        res = res.loc[selected]
+    if res is not None and not res.empty:
         stakes = res["main_stake"].fillna(STAKE_MIN) if "main_stake" in res else pd.Series(STAKE_MIN, index=res.index)
         main_hit = _truthy(res["main_hit"])
         bold_hit = _truthy(res["bold_hit"]) if "bold_hit" in res else pd.Series(False, index=res.index)
@@ -147,10 +158,10 @@ def all_bets(res: pd.DataFrame, start: str | None = None, end: str | None = None
         end = end or str(res["date"].max())[:10]
     if start or end:
         ex = expresses(start, end)
-        rows += [(str(r["date"])[:10], float(r["odds"]), str(r["hit"]).lower() in ("true", "1"), STAKE_MIN)
+        rows += [(str(r["date"])[:10], float(r["odds"]), str(r["hit"]).lower() in ("true", "1", "1.0"), STAKE_MIN)
                  for _, r in ex.iterrows() if float(r["odds"]) > 1]
         lb = live_bets(start, end)
-        rows += [(str(r["date"])[:10], float(r["min_odds"]), str(r["hit"]).lower() in ("true", "1"), STAKE_MIN)
+        rows += [(str(r["date"])[:10], float(r["min_odds"]), str(r["hit"]).lower() in ("true", "1", "1.0"), STAKE_MIN)
                  for _, r in lb.iterrows()
                  if pd.notna(r.get("min_odds")) and float(r["min_odds"]) > 1 and str(r.get("hit")) not in ("", "nan")]
     rows.sort(key=lambda r: r[0])   # по дням; внутри дня — в порядке записи

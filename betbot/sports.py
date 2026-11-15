@@ -7,6 +7,7 @@
     из него — победа, счёт по сетам, «будет ли третий сет».
 """
 import json
+import re
 from concurrent.futures import ThreadPoolExecutor
 from html import escape
 from math import comb
@@ -495,6 +496,20 @@ def compatible(probs: dict, k1: str, k2: str) -> bool:
     return True
 
 
+def published_spread(tip: dict) -> float:
+    """Selected-side handicap frozen at publication, not a later bookmaker line."""
+    line = tip.get("line")
+    if line is None:
+        label = str(tip.get("label", "")).replace("−", "-")
+        match = re.search(r"\(([+-]?[\d.,]+)\)", label)
+        if not match:
+            raise ValueError("В опубликованной ставке отсутствует значение форы")
+        line = float(match.group(1).replace(",", "."))
+    if not np.isfinite(float(line)):
+        raise ValueError("Некорректная опубликованная фора")
+    return float(line)
+
+
 def pick(a: dict, calib: dict) -> tuple[dict, dict]:
     """Основной и смелый прогнозы — по правилам mk.choose, с учётом статистики бота."""
     probs, labels, real = a["probs"], a["labels"], a["real"]
@@ -506,6 +521,15 @@ def pick(a: dict, calib: dict) -> tuple[dict, dict]:
         return probs[k] * calib.get(k, (1.0, 0))[0]
 
     keys = [k for k in probs if 0 < probs[k] < 1 and score(k) > 0]  # score 0 — рынок отключён (см. mk.calibration)
+    # Until refund settlement is represented explicitly, do not recommend lines
+    # that can push. Existing supported half-point lines remain available.
+    def supported(k):
+        if k in ("BB_SPR_H", "BB_SPR_A"):
+            return not published_spread({"label": labels[k]}).is_integer()
+        if re.match(r"^(BB|HK)_[OU]", k):
+            return not float(k[4:]).is_integer()
+        return True
+    keys = [k for k in keys if supported(k)]
     bar = a.get("bar") or (0.5, 0, 0.5)
     if max(bar[0], bar[2]) >= mk.FAV_P:  # явный фаворит — не ставим против него
         against = AWAY_SIDE if bar[0] > bar[2] else HOME_SIDE
@@ -517,7 +541,10 @@ def pick(a: dict, calib: dict) -> tuple[dict, dict]:
         if not k:
             return {}
         o, est = odds_for(k)
-        return {"key": k, "label": labels[k], "p": round(probs[k], 4), "odds": o, "est": est}
+        tip = {"key": k, "label": labels[k], "p": round(probs[k], 4), "odds": o, "est": est}
+        if k in ("BB_SPR_H", "BB_SPR_A"):
+            tip["line"] = published_spread(tip)
+        return tip
     return pack(main_k), pack(bold_k)
 
 
@@ -550,7 +577,7 @@ def final(e: dict) -> dict | None:
         return None
 
 
-def won(key: str, f: dict) -> bool:
+def won(key: str, f: dict, tip: dict | None = None) -> bool:
     hs, as_ = f["hs"], f["as"]
     if key in ("HK_ML_H", "BB_ML_H", "TN_W1"):
         return f["home_won"]
@@ -574,8 +601,12 @@ def won(key: str, f: dict) -> bool:
         diff = (hs - as_) if side == "H" else (as_ - hs)
         return diff + line > 0
     if key == "BB_SPR_H":
+        if tip is not None:
+            return hs - as_ + published_spread(tip) > 0
         return f.get("spread_h") is not None and hs - as_ + f["spread_h"] > 0
     if key == "BB_SPR_A":
+        if tip is not None:
+            return as_ - hs + published_spread(tip) > 0
         return f.get("spread_h") is not None and hs - as_ + f["spread_h"] < 0
     if key.startswith("ES_"):
         if key == "ES_W1":

@@ -190,22 +190,41 @@ def value_pick(probs: dict, mkt: dict | None) -> dict | None:
 
 # ── шаги бота ───────────────────────────────────────────────────────────────
 
-def learn(state: dict, now: pd.Timestamp) -> None:
+LEARN_VERSION = "shared-lambda-v2"
+
+
+def learn(state: dict, now: pd.Timestamp) -> bool:
+    state["learn_attempt_day"] = str(now.date())
     try:
         hist = load_history(refresh_current=True, leagues=HIST_LEAGUES)
+        hist = hist[hist["Date"] < now.tz_localize(None)]
         start = str((now.tz_localize(None) - pd.Timedelta(days=730)).date())
-        state["weights"] = fit_weights_lambda(add_market(walk_forward(hist, start=start)))
+        diagnostics = {}
+        weights = fit_weights_lambda(add_market(walk_forward(hist, start=start)), diagnostics=diagnostics)
+        if not weights or not all(pd.notna(v) and 0 <= v <= 1 for v in weights.values()):
+            raise ValueError("Обучение вернуло некорректные веса")
+        state["weights"] = weights
+        state["learn_diagnostics"] = diagnostics
+        state["learned"] = str(now.date())
+        state["learned_at"] = now.isoformat()
+        state["learn_version"] = LEARN_VERSION
+        state["learn_error"] = None
+        state["learn_retry_at"] = 0
         print(f"    переобучение: вес модели {state['weights']}")
+        return True
     except Exception as e:
         print(f"  ! переобучение не удалось: {e}")
         state.setdefault("weights", {"1X2": 0.0, "OU25": 0.0})
+        state["learn_error"] = str(e)[:300]
+        state["learn_retry_at"] = now.timestamp() + 3600
+        return False
 
 
 def read_results() -> pd.DataFrame:
     # тип прогноза «12» — это текст, а не число
     if not RESULTS.exists():
         return pd.DataFrame()
-    res = pd.read_csv(RESULTS, dtype={"main_key": str, "bold_key": str, "score": str})
+    res = pd.read_csv(RESULTS, dtype={"id": str, "main_key": str, "bold_key": str, "score": str})
     if "sport" in res:  # теннис «0:0» — несыгранный матч (снятие), засчитан по ошибке старой версией
         res = res[~((res["sport"] == "tennis") & (res["score"] == "0:0"))]
     return res
@@ -419,8 +438,8 @@ def other_settle(m: dict, e: dict) -> None:
         return
     for side in ("home", "away"):  # у матчей, опубликованных старой версией, может не быть цвета для картинки
         m[side] = {"color": "3b4a7a", "logo": None, **m[side]}
-    m["main_hit"] = sports.won(m["main"]["key"], f)
-    m["bold_hit"] = sports.won(m["bold"]["key"], f) if m.get("bold") else None
+    m["main_hit"] = sports.won(m["main"]["key"], f, m["main"])
+    m["bold_hit"] = sports.won(m["bold"]["key"], f, m["bold"]) if m.get("bold") else None
     ds = add_result(m, f.get("sets") or f"{f['hs']}:{f['as']}", m["sport"])
     verdicts = [(f"Основной: {m['main']['label']}", m["main_hit"])]
     if m.get("bold"):
@@ -516,11 +535,11 @@ def main():
     matches = load_json(MATCHES, {})
     today = str(now.date())
 
-    daily = state.get("learned") != today
-    if daily:
+    daily = state.get("learn_attempt_day", state.get("learned")) != today
+    learn_due = state.get("learned") != today or state.get("learn_version") != LEARN_VERSION
+    if learn_due and now.timestamp() >= float(state.get("learn_retry_at") or 0):
         print("Переобучаюсь на свежих результатах...")
         learn(state, now)
-        state["learned"] = today
     w = state.get("weights", {"1X2": 0.0, "OU25": 0.0})
 
     utc = now.tz_convert("UTC")
@@ -725,7 +744,7 @@ def main():
         last_post = pages.latest_post_id()
     except Exception:
         last_post = 0
-    stamp = f"{len(site_res)}|{last_post}|{now:%Y-%m-%d %H}"
+    stamp = f"{len(site_res)}|{last_post}|{now:%Y-%m-%d %H}|{site.RENDER_VERSION}"
     if state.get("site_stamp") != stamp or not site.OUT.exists():
         state["site_stamp"] = stamp
         blocks = None
