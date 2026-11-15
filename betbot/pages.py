@@ -202,13 +202,14 @@ def nav(prefix: str, on: str = "") -> str:
 
 def page(prefix: str, title: str, desc: str, canon: str, body: str, on: str = "", og_image: str | None = None,
          ld: list[dict] | None = None, og_type: str = "website") -> str:
-    lds = "".join(f'<script type="application/ld+json">{json.dumps(x, ensure_ascii=False)}</script>' for x in (ld or []))
+    lds = "".join(f'<script type="application/ld+json">{json.dumps(x, ensure_ascii=True)}</script>' for x in (ld or []))
+    metadata = lambda value: H.escape(value).encode('ascii','xmlcharrefreplace').decode('ascii')
     img = f'<meta property="og:image" content="{H.escape(og_image or SITE + "og.png")}"><meta name="twitter:card" content="summary_large_image">'
     return f"""<!doctype html>
-<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>{H.escape(title)}</title><meta name="description" content="{H.escape(desc[:300])}">
+<html lang="ru"><head><meta charset="utf-8"><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{metadata(title)}</title><meta name="description" content="{metadata(desc[:300])}">
 <link rel="canonical" href="{canon}"><link rel="alternate" type="application/rss+xml" title="АИ СТАВИТ — прогнозы и новости" href="{SITE}rss.xml"><meta name="robots" content="index,follow,max-image-preview:large">
-<meta property="og:type" content="{og_type}"><meta property="og:title" content="{H.escape(title)}"><meta property="og:description" content="{H.escape(desc[:300])}">
+<meta property="og:type" content="{og_type}"><meta property="og:title" content="{metadata(title)}"><meta property="og:description" content="{metadata(desc[:300])}">
 <meta property="og:url" content="{canon}"><meta property="og:site_name" content="АИ СТАВИТ"><meta property="og:locale" content="ru_RU">{img}
 <meta name="theme-color" content="#070b1a">
 <link rel="icon" href="{prefix}favicon.ico" sizes="any"><link rel="icon" type="image/png" sizes="32x32" href="{prefix}favicon-32.png"><link rel="apple-touch-icon" href="{prefix}apple-touch-icon.png"><link rel="manifest" href="{prefix}site.webmanifest">
@@ -288,7 +289,7 @@ def _news_page(n: dict, all_news: list[dict]) -> str:
           **({"image": [n["photo"]]} if n["photo"] else {})}
     body = f"""{crumbs}<article class="post" data-view="news:{n['id']}">
 <span class="tag">{EMOJI[n['sport']]} {SPORT_RU[n['sport']]} · {_date_ru(n['t'])}, {n['t']:%H:%M} МСК<span class="vw" data-views="news:{n['id']}"></span></span>
-<h1>{H.escape(n['title'])}</h1>
+<h1>{H.escape(n['title']).encode('ascii','xmlcharrefreplace').decode('ascii')}</h1>
 {f'<img class="cover" src="{H.escape(n["photo"])}" alt="{H.escape(n["title"])}" loading="eager">' if n['photo'] else ''}
 <div class="body">{paras}</div>
 <p class="muted small">Новость опубликована в Telegram-канале <a href="https://t.me/{CH}/{n['id']}">@{CH}</a>.</p>

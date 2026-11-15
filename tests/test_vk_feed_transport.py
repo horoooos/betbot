@@ -1,4 +1,6 @@
 import tempfile
+import re
+import json
 import unittest
 import xml.etree.ElementTree as ET
 from pathlib import Path
@@ -10,6 +12,16 @@ from betbot import pages
 
 
 class VKFeedTransportTests(unittest.TestCase):
+    def test_canonical_page_metadata_also_survives_a_legacy_decoder(self):
+        title='Андреева и Шарапова — русский заголовок'
+        page=pages.page('',title,'Описание новости','https://example.test/', '<p>Текст</p>',ld=[{'headline':title}])
+        raw=page.encode('utf-8').decode('windows-1251',errors='replace')
+        self.assertEqual(unescape(re.search('<title>(.*?)</title>',raw)[1]),title)
+        self.assertEqual(unescape(re.search('property="og:title" content="([^"]+)"',raw)[1]),title)
+        data=re.search('application/ld\+json">(.*?)</script>',raw)[1]
+        self.assertEqual(json.loads(data)['headline'],title)
+        self.assertIn('http-equiv="Content-Type" content="text/html; charset=utf-8"',page)
+
     def test_both_vk_feeds_use_same_ascii_source_and_guid_only_for_new_news(self):
         with tempfile.TemporaryDirectory() as directory:
             root=Path(directory);docs=root/'docs'
