@@ -1,76 +1,4 @@
 {
- "UNL|401861178": {
-  "msg": 6251,
-  "hs": 2,
-  "as": 1,
-  "goals": 3,
-  "kickoff": "2026-11-15T22:45:00+03:00",
-  "lt": {
-   "key": "O2.5",
-   "label": "ТБ 2.5",
-   "p": 0.607,
-   "fair": 1.65,
-   "min_odds": 1.73,
-   "minute": "26'",
-   "score": "1:0",
-   "sport": "football",
-   "result": "hit"
-  }
- },
- "UNL|401861177": {
-  "msg": 6252,
-  "hs": 2,
-  "as": 1,
-  "goals": 3,
-  "kickoff": "2026-11-15T22:45:00+03:00",
-  "lt": {
-   "key": "H",
-   "label": "П1",
-   "p": 0.707,
-   "fair": 1.41,
-   "min_odds": 1.48,
-   "minute": "25'",
-   "score": "0:0",
-   "sport": "football",
-   "result": "hit"
-  }
- },
- "UNL|401861176": {
-  "msg": 6253,
-  "hs": 4,
-  "as": 1,
-  "goals": 5,
-  "kickoff": "2026-11-15T22:45:00+03:00",
-  "lt": {
-   "key": "U5.5",
-   "label": "ТМ 5.5",
-   "p": 0.619,
-   "fair": 1.61,
-   "min_odds": 1.7,
-   "minute": "26'",
-   "score": "2:1",
-   "sport": "football",
-   "result": "hit"
-  }
- },
- "UNL|401861175": {
-  "msg": 6255,
-  "hs": 2,
-  "as": 3,
-  "goals": 5,
-  "kickoff": "2026-11-15T22:45:00+03:00",
-  "lt": {
-   "key": "U2.5",
-   "label": "ТМ 2.5",
-   "p": 0.619,
-   "fair": 1.61,
-   "min_odds": 1.7,
-   "minute": "26'",
-   "score": "0:0",
-   "sport": "football",
-   "result": "miss"
-  }
- },
  "WTA|187442": {
   "msg": 6268,
   "hs": 0,
@@ -373,7 +301,7 @@
  "WTA|186784": {
   "msg": 6482,
   "hs": 1,
-  "as": 1,
+  "as": 2,
   "goals": 0,
   "kickoff": "2026-11-16T20:45:00+03:00"
  },
