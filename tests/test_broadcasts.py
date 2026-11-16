@@ -1,5 +1,7 @@
 import json
 import unittest
+from unittest.mock import Mock, patch
+from types import SimpleNamespace
 from betbot.broadcasts import public_video, panda_streams, title_matches, youtube_listing, espn_streams, live_title_teams
 
 
@@ -40,6 +42,20 @@ class BroadcastTests(unittest.TestCase):
     def test_discovered_match_does_not_need_a_prediction(self):
         self.assertEqual(live_title_teams('LIVE - Cuba vs Grenada | Concacaf'), ['Cuba', 'Grenada'])
         self.assertIsNone(live_title_teams('DreamLeague live studio'))
+        self.assertIsNone(live_title_teams('RERUN: Cuba vs Grenada'))
+
+    def test_publish_preserves_other_rules_when_etag_unavailable(self):
+        from tools.broadcast_scan import publish
+        session = Mock()
+        session.get.return_value.headers = {}
+        session.get.return_value.json.return_value = {'rules': {'private': {'.read': False}}}
+        module = SimpleNamespace(admin_session=lambda: session, DB='https://example.invalid')
+        with patch.dict('sys.modules', {'dota_live_relay': module}):
+            publish({'at': 100, 'matches': []})
+        rules_call = session.put.call_args_list[0]
+        self.assertEqual(rules_call.kwargs['json']['rules']['private'], {'.read': False})
+        self.assertEqual(rules_call.kwargs['json']['rules']['broadcasts'], {'.read': True, '.write': False})
+        self.assertEqual(session.put.call_count, 2)
 
     def test_espn_does_not_offer_highlights_or_tracking_tokens(self):
         raw = {'videos': [{'links': [{'rel': ['watch'], 'href': 'https://www.espn.com/watch/player?id=clip'}]}],

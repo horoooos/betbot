@@ -127,6 +127,8 @@ def title_matches(title, participants):
 
 def live_title_teams(title):
     """A discovered official match can exist even without our own forecast/schedule."""
+    if re.search(r'\b(highlights?|replay|rerun|обзор|повтор|запись)\b', norm(title)):
+        return None
     title = re.sub(r'^\s*LIVE\s*[-:|]?\s*', '', title, flags=re.I)
     title = re.split(r'\s[|]\s|\s-\s', title, maxsplit=1)[0]
     teams = re.split(r'\s+(?:vs?\.?|—)\s+', title, maxsplit=1, flags=re.I)

@@ -24,7 +24,8 @@ def publish(payload):
         if branch is not None:
             raise RuntimeError('Existing broadcast rules require review')
         rules['rules']['broadcasts'] = desired
-        response = session.put(url, json=rules, headers={'if-match': response.headers['ETag']}, timeout=20)
+        headers = {'if-match': response.headers['ETag']} if response.headers.get('ETag') else {}
+        response = session.put(url, json=rules, headers=headers, timeout=20)
         response.raise_for_status()
     response = session.put(DB + '/broadcasts.json', json=payload, timeout=20)
     response.raise_for_status()

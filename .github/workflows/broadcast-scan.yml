@@ -26,6 +26,7 @@ jobs:
           FIREBASE_SA: ${{ secrets.FIREBASE_SA }}
         run: python tools/broadcast_scan.py --remote --publish
       - uses: actions/upload-artifact@v4
+        if: always()
         with:
           name: broadcast-search-report
           path: work/broadcasts-check.json
