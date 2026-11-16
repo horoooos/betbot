@@ -18,7 +18,7 @@ CHANNEL = os.environ.get("TELEGRAM_CHAT_ID", "")
 if not CHANNEL.startswith("@"):  # в секрете может быть числовой id — тогда берём публичное имя канала
     CHANNEL = "@aistavvit"
 SITE = "https://horoooos.github.io/betbot/"
-RENDER_VERSION = 3
+RENDER_VERSION = 4
 
 
 def _hits(col: pd.Series) -> pd.Series:
@@ -454,6 +454,8 @@ def build(res: pd.DataFrame, now: pd.Timestamp, blocks: dict | None = None) -> N
             best_rows += (f'<div class="best"><span class="o">{r["o"]:.2f}</span><div class="m"><b>{escape(str(r["home"]))} — {escape(str(r["away"]))}</b>'
                           f'<span>{EMOJI.get(r["sport"], "")} {escape(str(r["main_label"]))} · {escape(str(r["score"]))} · {escape(str(r["date"]))[5:].replace("-", ".")}</span></div></div>')
 
+    from . import forecast_feed
+    forecast_feed.write(res, OUT.parent)
     feed = ""
     items = []
     for _, r in res.tail(60).iterrows():
@@ -532,7 +534,7 @@ def build(res: pd.DataFrame, now: pd.Timestamp, blocks: dict | None = None) -> N
 <meta property="og:description" content="{escape(seo_desc)}"><meta property="og:locale" content="ru_RU">
 <meta name="twitter:card" content="summary_large_image"><meta name="theme-color" content="#070b1a"><meta property="og:image" content="https://horoooos.github.io/betbot/og.png"><meta name="twitter:image" content="https://horoooos.github.io/betbot/og.png"><link rel="icon" href="favicon.ico" sizes="any"><link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="manifest" href="site.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="site.css?v=9">
+<link rel="stylesheet" href="site.css?v=9"><link rel="stylesheet" href="forecast-feed.css?v=1">
 <script type="application/ld+json">{{"@context":"https://schema.org","@type":"WebSite","name":"АИ СТАВИТ","url":"{SITE}","description":"{escape(seo_desc)}","sameAs":{json.dumps([u for _, u in pages.SOCIAL])}}}</script>
 <script type="application/ld+json">{{"@context":"https://schema.org","@type":"Organization","name":"АИ СТАВИТ","url":"{SITE}","logo":"{SITE}apple-touch-icon.png","sameAs":{json.dumps([u for _, u in pages.SOCIAL])},"contactPoint":{{"@type":"ContactPoint","contactType":"customer support","url":"https://vk.me/aistavvit","availableLanguage":"Russian"}}}}</script>
 <style>{CSS}</style></head><body><main>
@@ -633,8 +635,14 @@ def build(res: pd.DataFrame, now: pd.Timestamp, blocks: dict | None = None) -> N
 <div class="grid2"><div><h2>🎯 По типам прогнозов</h2><div class="card">{markets}</div></div>
 <div><h2>🚀 Самые крупные заходы</h2><div class="card">{best_rows or '<span class="muted">Пока пусто</span>'}</div></div></div>
 {f'<h2>📰 Свежие новости спорта <a href="news/" class="small muted" style="font-weight:700;margin-left:auto">все новости →</a></h2><div class="grid">{blocks["news"]}</div>' if blocks and blocks.get("news") else ""}
-<h2>🧾 Последние прогнозы</h2><div class="feed" id="feed">{feed}</div>
-<button class="mbtn" onclick="document.getElementById('feed').classList.toggle('showall');this.textContent=this.textContent.startsWith('Показать')?'Свернуть':'Показать ещё 45'">Показать ещё 45</button>
+<h2 id="forecastHistory">🧾 Все прогнозы бота</h2>
+<p class="muted small">Опубликованные прогнозы: ожидающие результата, текущие и завершённые матчи.</p>
+<div class="forecast-controls"><label>Вид спорта <select id="forecastSport"><option value="">Все виды спорта</option><option value="football">Футбол</option><option value="hockey">Хоккей</option><option value="basketball">Баскетбол</option><option value="tennis">Теннис</option><option value="esports">Киберспорт</option></select></label><label>Статус <select id="forecastStatus"><option value="">Все статусы</option><option value="pending">Ждём результата</option><option value="in">Сейчас идут</option><option value="settled">Завершены</option></select></label><label>Поиск <input id="forecastSearch" type="search" placeholder="Команда или игрок"></label></div>
+<p id="forecastCount" class="muted small" aria-live="polite"></p>
+<div class="feed" id="feed">{feed}</div>
+<button class="mbtn" id="forecastMore" hidden>Показать ещё</button>
+<noscript><p><a href="predictions/">Открыть прогнозы и разборы →</a></p></noscript>
+<script src="forecast-feed.js?v=1" defer></script>
 <div class="cta"><div><b>Прогнозы каждый день — в Telegram</b><br><span class="muted">Прогноз за час до матча, live-голы, экспрессы, разборы и честные итоги.</span></div>
 <a class="btn gold" href="{tg}">📲 Подписаться</a></div>
 <footer>CLV — насколько выросла вероятность нашего исхода по линии букмекеров к началу матча: плюс значит, что бот нашёл ценность раньше рынка. 18+. Прогноз — не гарантия выигрыша.

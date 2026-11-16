@@ -1,26 +1,34 @@
 <!doctype html>
-<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Киберспорт: счёт матча — АИ СТАВИТ</title><link rel="icon" href="favicon.ico"><link rel="stylesheet" href="site.css?v=9">
-<style>
-body{background:#080d20;color:#f2f4ff;font:17px/1.55 system-ui;margin:0;padding:24px}main{max-width:850px;margin:30px auto}a{color:#65bdff}nav{display:flex;gap:24px;margin-bottom:32px}.panel{border:1px solid #343b61;border-radius:24px;padding:32px;background:radial-gradient(ellipse at top,#293658,#141b35 70%);text-align:center}.eyebrow{font-size:14px;letter-spacing:2px;color:#aeb9df;text-transform:uppercase}h1{font-size:clamp(26px,5vw,40px);line-height:1.2;margin:24px 0}.teams{display:grid;grid-template-columns:1fr auto 1fr;gap:20px;align-items:center;margin:36px 0}.team img{width:90px;height:90px;object-fit:contain;display:block;margin:0 auto 16px}.score{font-size:clamp(35px,7vw,64px);font-weight:900;color:#ffc400}.status{display:inline-block;padding:8px 20px;border-radius:30px;background:#283756}.tip{border-top:1px solid #3a4664;margin-top:28px;padding-top:24px}.buttons{display:flex;gap:15px;justify-content:center;flex-wrap:wrap;margin-top:24px}.buttons a{padding:12px 20px;border-radius:12px;background:#263654;text-decoration:none}.muted{color:#a9b4d4;font-size:14px}@media(max-width:480px){body{padding:14px}.panel{padding:22px 15px}.teams{gap:10px}.team img{width:65px;height:65px}.team{font-size:14px}}
-</style></head><body><main><nav><a href="./">АИ СТАВИТ</a><a href="matches.html">Все матчи</a><a href="predictions/">Прогнозы</a></nav>
-<section class="panel" id="panel"><div class="eyebrow">Киберспорт</div><h1>Загружаем матч…</h1></section>
-<p class="muted">Счёт серии отображается по картам. Страница проверяет обновления каждую минуту.</p></main>
-<script>
-const q=new URLSearchParams(location.search),id=q.get('e'),div=q.get('d');
-const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-async function load(){
- let all=null;
- for(const url of location.hostname.endsWith('github.io')?['matches.json','https://raw.githubusercontent.com/horoooos/betbot/main/docs/matches.json']:['matches.json']){
-  try{const r=await fetch(url+'?v='+Date.now(),{cache:'no-store'});if(!r.ok)continue;all=await r.json();break;}catch(e){}
- }
- const m=all?.find(m=>m.sport==='esports'&&String(m.id)===id&&(!div||m.div===div));
- if(!m){document.getElementById('panel').innerHTML='<h1>Матч пока недоступен</h1><p>Проверяем обновления. Прогнозы и результаты доступны в разделе матчей.</p><a href="matches.html">Открыть все матчи →</a>';return;}
- document.title=m.home+' — '+m.away+' · счёт матча — АИ СТАВИТ';
- const status={pre:'Ожидается начало',in:'● Матч идёт',post:'Матч завершён'}[m.state]||'Ожидаем обновления счёта';
- const team=(name,logo)=>'<div class="team">'+(logo?'<img src="'+esc(logo)+'" alt="">':'')+'<strong>'+esc(name)+'</strong></div>';
- const score=m.state==='pre'?'vs':!['in','post'].includes(m.state)?'— : —':esc(m.hs??'—')+' : '+esc(m.as??'—');
- document.getElementById('panel').innerHTML='<div class="eyebrow">'+esc(m.league)+(m.bo?' · BO'+esc(m.bo):'')+'</div><h1>'+esc(m.home)+' — '+esc(m.away)+'</h1><span class="status">'+status+'</span><div class="teams">'+team(m.home,m.hl)+'<div class="score">'+score+'</div>'+team(m.away,m.al)+'</div><p>'+new Date(m.kickoff).toLocaleString('ru-RU',{timeZone:'Europe/Moscow',day:'numeric',month:'long',hour:'2-digit',minute:'2-digit'})+' МСК</p>'+(m.tip?'<div class="tip">🎯 Прогноз бота<br><strong>'+esc(m.tip)+'</strong></div>':'')+'<div class="buttons">'+(m.prediction?'<a href="'+esc(m.prediction)+'">Полный разбор →</a>':'')+'<a href="matches.html">Все матчи</a></div>';
-}
-load();setInterval(load,60000);
-</script></body></html>
+<html lang="ru"><head><meta charset="utf-8"><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>&#1050;&#1080;&#1073;&#1077;&#1088;&#1089;&#1087;&#1086;&#1088;&#1090; &#1086;&#1085;&#1083;&#1072;&#1081;&#1085;: Dota 2 &#1080; CS2 &#8212; &#1040;&#1048; &#1057;&#1058;&#1040;&#1042;&#1048;&#1058;</title><meta name="description" content="&#1057;&#1095;&#1105;&#1090; &#1084;&#1072;&#1090;&#1095;&#1077;&#1081; Dota 2 &#1080; CS2, &#1087;&#1088;&#1086;&#1075;&#1085;&#1086;&#1079;&#1099; &#1080; &#1073;&#1077;&#1089;&#1087;&#1083;&#1072;&#1090;&#1085;&#1072;&#1103; &#1078;&#1080;&#1074;&#1072;&#1103; &#1082;&#1072;&#1088;&#1090;&#1072; &#1087;&#1086; &#1076;&#1086;&#1089;&#1090;&#1091;&#1087;&#1085;&#1099;&#1084; &#1076;&#1072;&#1085;&#1085;&#1099;&#1084; &#1084;&#1072;&#1090;&#1095;&#1077;&#1081;.">
+<link rel="canonical" href="https://horoooos.github.io/betbot/esports.html"><link rel="alternate" type="application/rss+xml" title="АИ СТАВИТ — прогнозы и новости" href="https://horoooos.github.io/betbot/rss.xml"><meta name="robots" content="index,follow,max-image-preview:large">
+<meta property="og:type" content="website"><meta property="og:title" content="&#1050;&#1080;&#1073;&#1077;&#1088;&#1089;&#1087;&#1086;&#1088;&#1090; &#1086;&#1085;&#1083;&#1072;&#1081;&#1085;: Dota 2 &#1080; CS2 &#8212; &#1040;&#1048; &#1057;&#1058;&#1040;&#1042;&#1048;&#1058;"><meta property="og:description" content="&#1057;&#1095;&#1105;&#1090; &#1084;&#1072;&#1090;&#1095;&#1077;&#1081; Dota 2 &#1080; CS2, &#1087;&#1088;&#1086;&#1075;&#1085;&#1086;&#1079;&#1099; &#1080; &#1073;&#1077;&#1089;&#1087;&#1083;&#1072;&#1090;&#1085;&#1072;&#1103; &#1078;&#1080;&#1074;&#1072;&#1103; &#1082;&#1072;&#1088;&#1090;&#1072; &#1087;&#1086; &#1076;&#1086;&#1089;&#1090;&#1091;&#1087;&#1085;&#1099;&#1084; &#1076;&#1072;&#1085;&#1085;&#1099;&#1084; &#1084;&#1072;&#1090;&#1095;&#1077;&#1081;.">
+<meta property="og:url" content="https://horoooos.github.io/betbot/esports.html"><meta property="og:site_name" content="АИ СТАВИТ"><meta property="og:locale" content="ru_RU"><meta property="og:image" content="https://horoooos.github.io/betbot/og.png"><meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#070b1a">
+<link rel="icon" href="favicon.ico" sizes="any"><link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="manifest" href="site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css?v=9">
+</head><body><main>
+<nav class="topnav"><a class="logo" href="./">АИ СТАВИТ</a><div class="links"><a href="matches.html" class=on>Матчи онлайн</a><a href="predictions/">Прогнозы</a><a href="news/">Новости</a><a href="feed.html">Лента</a><a href="top.html">Рейтинг</a></div><div class="navacts"><a class="me" id="navUser" href="profile.html">Войти</a></div></nav>
+<link rel="stylesheet" href="esports.css?v=1">
+<div class="es-kicker">АИ СТАВИТ · КИБЕРСПОРТ</div>
+<div class="es-heading"><div><h1 id="esTitle">Киберспорт онлайн</h1><p class="lead">Счёт серии, прогноз бота и живая карта — бесплатно.</p></div><span class="es-pill">CS2 / Dota 2</span></div>
+<section class="es-scoreboard" id="scoreboard"><p class="es-muted">Загружаем матч…</p></section>
+<div class="es-layout"><section class="es-box"><div class="es-livehead"><h2>Живая карта · 3D</h2><span class="es-telemetry" id="telemetry">Подключаем данные…</span></div>
+<div class="es-row es-controls" style="margin-top:12px"><button id="camera">Вид сверху / 3D</button><button id="rotate">Повернуть</button><button id="zoom">Масштаб</button><button id="fullscreen">На весь экран</button></div>
+<div class="es-view" id="arena"><div class="es-empty" id="empty"><span style="font-size:36px">🎮</span><strong id="emptyTitle">Ищем живые координаты</strong><p id="emptyText">Подключаем доступные данные матча.</p></div></div>
+<p class="es-caption">Схематичная карта Dota 2. Позиции героев и состояние построек — по данным Valve. Зелёные — Radiant, красные — Dire; портреты отмечают героев. Обновление около 10 секунд, возможна задержка источника.</p><div class="es-roster" id="roster"></div></section>
+<aside class="es-sidebar"><section class="es-box" id="prediction"><h2>🎯 Прогноз бота</h2><p class="es-muted">Выбери матч, чтобы увидеть разбор.</p></section><section class="es-box" id="markets" style="margin-top:14px"><h2>Оценка исходов</h2><p class="es-muted">Оценки опубликованного прогноза.</p></section></aside></div>
+<h2>● Доступные живые карты Dota 2</h2><p class="es-muted">Отдельные текущие карты из открытой трансляции. Список зависит от доступности данных Valve.</p><div class="es-games" id="available"><p class="es-muted">Проверяем карты…</p></div>
+<h2>Матчи киберспорта</h2><div class="es-games" id="schedule"></div>
+<script type="module" src="esports.js?v=1"></script>
+<footer>АИ СТАВИТ — бесплатные прогнозы на спорт от искусственного интеллекта и честная статистика. Прогноз — не гарантия выигрыша. 18+.
+<br><a href="https://t.me/aistavvit">Telegram-канал @aistavvit</a> · <a href="./">Статистика бота</a> · <a href="matches.html">Матчи онлайн</a> · <a href="news/">Новости спорта</a> · <a href="predictions/">Прогнозы на матчи</a>
+<br><a href="leagues.html">Команды, игроки и турниры</a> · <a href="teams/">Прогнозы по командам</a> · <a href="tools.html">Калькуляторы ставок</a> · <a href="school/">Школа ставок</a> · <a href="top.html">Рейтинг прогнозистов</a>
+<br>Прогнозы: <a href="prognozy/futbol-segodnya.html">на футбол сегодня</a> · <a href="prognozy/ekspress-dnya.html">экспресс дня</a> · <a href="itogi/">итоги дня</a> · <a href="prognozy/rpl.html">РПЛ</a> · <a href="prognozy/apl.html">АПЛ</a> · <a href="prognozy/liga-chempionov.html">Лига чемпионов</a> · <a href="prognozy/hokkej-nhl.html">хоккей</a> · <a href="prognozy/nba.html">НБА</a> · <a href="prognozy/tennis.html">теннис</a> · <a href="prognozy/kibersport.html">киберспорт</a> · <a href="watch/">смотреть онлайн</a>
+<br>Мы в соцсетях: <a href="https://t.me/aistavvit" rel="noopener">Telegram</a> · <a href="https://vk.ru/aistavvit" rel="noopener">ВКонтакте</a> · <a href="https://ok.ru/group/70000012626015" rel="noopener">Одноклассники</a> · <a href="https://dzen.ru/id/5f075de89b77826e1e78ab92" rel="noopener">Дзен</a> · <a href="https://vk.me/aistavvit" rel="noopener">написать в поддержку</a></footer>
+</main><div class="sticky"><a class="a" href="matches.html">📺 Онлайн</a><a class="b" href="https://t.me/aistavvit">📲 Канал</a></div>
+<script type="module">import("fb.js?v=12").then(fb => { fb.navUser(document.getElementById("navUser")); fb.track("live");
+  fb.countView(document.querySelector("[data-view]")); fb.showViews();
+  const v = document.getElementById("votes"); if (v) fb.voteWidget(v, v.dataset.m, { finished: v.dataset.f === "1", botHit: v.dataset.h === "" ? null : v.dataset.h === "1" }); }).catch(() => {});</script>
+</body></html>
