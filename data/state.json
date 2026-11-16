@@ -1515,7 +1515,9 @@
      "0c2fff",
      "E70000"
     ],
-    "label": "Победа: Сборная Исландии"
+    "label": "Победа: Сборная Исландии",
+    "win": true,
+    "score": "3:0"
    },
    {
     "sport": "football",
@@ -1568,7 +1570,7 @@
  "value_day": "2026-11-16",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-16",
- "site_stamp": "1080|6508|2026-11-16 21|4|2aca4537b3c813e9",
+ "site_stamp": "1082|6513|2026-11-16 21|4|1ef5104a73c2f105",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1717,7 +1719,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 6508,
+ "dz_last": 6513,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2116,9 +2118,9 @@
   "model": {
    "weight": 0.0,
    "status": "collecting",
-   "settled_matches": 3,
+   "settled_matches": 5,
    "required_matches": 100,
-   "trained_at": "2026-11-16T17:02:13.376216+00:00"
+   "trained_at": "2026-11-16T18:51:54.687038+00:00"
   },
   "sport_models": {
    "hockey": {
@@ -2180,7 +2182,7 @@
   "quote_matches": 14
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-16T21:49:54.070748+03:00",
+  "last_poll": "2026-11-16T21:51:54.687038+03:00",
   "cursor": "72",
   "posts": [
    {
