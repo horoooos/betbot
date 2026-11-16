@@ -334,8 +334,8 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-16-vashington-uizards-hyuston-rokets-401909991.html",
-"hs": "98",
-"as": "128",
+"hs": "101",
+"as": "132",
 "tip": "ТМ 223.5 · 1.89",
 "top": false,
 "bot": {
@@ -880,7 +880,15 @@ null
 ],
 "center": "Ожидаемые голы 3.7 : 3.1"
 },
-"lt": null
+"lt": {
+"fair": 1.38,
+"label": "ТБ 4.5",
+"min_odds": 1.45,
+"minute": "2-й период",
+"p": 0.725,
+"result": null,
+"score": "2:0"
+}
 },
 {
 "sport": "basketball",
@@ -900,8 +908,8 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-16-sakramento-kingz-oklahoma-siti-tander-401909993.html",
-"hs": "0",
-"as": "0",
+"hs": "4",
+"as": "8",
 "tip": "ТМ 223.5 · 1.91",
 "top": false,
 "bot": {
