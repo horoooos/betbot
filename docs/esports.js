@@ -3,7 +3,7 @@ const $=id=>document.getElementById(id),esc=s=>String(s??'').replace(/[&<>"']/g,
 const DB='https://aistavvit-default-rtdb.europe-west1.firebasedatabase.app/esportsLive.json';
 let match=null,matches=[],arena=null,selected=null,lastId=null,busy=false;
 let heroes={};
-try {const r=await fetch("dota-heroes.json");if(r.ok)heroes=await r.json();}catch(e){}
+try {const r=await fetch("dota-heroes.json?v=2",{cache:"no-store"});if(r.ok)heroes=await r.json();}catch(e){}
 const normalized=s=>String(s||'').toLowerCase().replace(/\b(team|gaming|esports)\b/g,'').replace(/[^\p{L}\p{N}]/gu,'');
 const number=v=>v!==null&&v!==undefined&&Number.isFinite(Number(v))?Number(v).toFixed(2):'—';
 const pair=frame=>(frame.teams||[]).map(t=>normalized(t.name)).sort().join('|');
