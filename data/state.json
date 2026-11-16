@@ -1559,18 +1559,20 @@
      "DE2918",
      "DE2400"
     ],
-    "label": "Победа: Сборная Мальты"
+    "label": "Победа: Сборная Мальты",
+    "win": false,
+    "score": "1:1"
    }
   ],
   "odds": 2.5739805000000002,
   "day": "2026-11-16",
-  "done": false
+  "done": true
  },
  "streak_posted": 0,
  "value_day": "2026-11-16",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-16",
- "site_stamp": "1090|6575|2026-11-17 00|4|281b9f2857e0483e",
+ "site_stamp": "1091|6579|2026-11-17 00|4|771725815d5f23a1",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1719,7 +1721,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 6575,
+ "dz_last": 6579,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2133,9 +2135,9 @@
   "model": {
    "weight": 0.0,
    "status": "collecting",
-   "settled_matches": 9,
+   "settled_matches": 11,
    "required_matches": 100,
-   "trained_at": "2026-11-16T21:35:48.117693+00:00"
+   "trained_at": "2026-11-16T21:37:47.990232+00:00"
   },
   "sport_models": {
    "hockey": {
@@ -2197,7 +2199,7 @@
   "quote_matches": 14
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-17T00:35:48.117693+03:00",
+  "last_poll": "2026-11-17T00:37:47.990232+03:00",
   "cursor": "76",
   "posts": [
    {
