@@ -1123,7 +1123,15 @@ null
 ]
 ]
 },
-"lt": null
+"lt": {
+"fair": 1.71,
+"label": "ТБ 2.5",
+"min_odds": 1.8,
+"minute": "26'",
+"p": 0.584,
+"result": null,
+"score": "1:0"
+}
 },
 {
 "sport": "esports",
@@ -1218,97 +1226,6 @@ null
 },
 {
 "sport": "tennis",
-"id": "186793",
-"league": "Теннис · WTA",
-"kickoff": "2026-11-16T20:30:00+03:00",
-"home": "Лейре Ромеро Гормас",
-"away": "Ипек Оз",
-"hl": "https://a.espncdn.com/i/teamlogos/countries/500/esp.png",
-"al": "https://a.espncdn.com/i/teamlogos/countries/500/tur.png",
-"hid": "10676",
-"aid": "10197",
-"bb": "https://betboom.ru/search?query=%D0%93%D0%BE%D1%80%D0%BC%D0%B0%D1%81&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=tennis",
-"path": "tennis/wta",
-"url": "live.html?s=tennis&p=tennis%2Fwta&e=186793&h=%D0%9B%D0%B5%D0%B9%D1%80%D0%B5+%D0%A0%D0%BE%D0%BC%D0%B5%D1%80%D0%BE+%D0%93%D0%BE%D1%80%D0%BC%D0%B0%D1%81&a=%D0%98%D0%BF%D0%B5%D0%BA+%D0%9E%D0%B7",
-"div": "WTA",
-"state": "pre",
-"bo": null,
-"prediction": "predictions/2026-11-16-leyre-romero-gormas-ipek-oz-186793.html",
-"hs": null,
-"as": null,
-"tip": "Будет 2 сета · ≈1.71",
-"top": false,
-"bot": {
-"main": {
-"label": "Будет 2 сета",
-"p": 0.545,
-"odds": 1.71,
-"est": true
-},
-"bold": null,
-"markets": [
-[
-"Победа: Лейре Ромеро Гормас",
-0.718,
-1.29
-],
-[
-"Победа: Ипек Оз",
-0.282,
-3.28
-],
-[
-"Будет 3 сета",
-0.455,
-null
-],
-[
-"Будет 2 сета",
-0.545,
-null
-],
-[
-"Счёт по сетам 2:0",
-0.422,
-null
-],
-[
-"Счёт по сетам 0:2",
-0.123,
-null
-],
-[
-"Счёт по сетам 2:1",
-0.296,
-null
-],
-[
-"Счёт по сетам 1:2",
-0.16,
-null
-],
-[
-"Лейре Ромеро Гормас возьмёт хотя бы сет",
-0.877,
-null
-],
-[
-"Ипек Оз возьмёт хотя бы сет",
-0.578,
-null
-]
-],
-"bar": [
-0.7177242888402626,
-0,
-0.2822757111597374
-],
-"center": "Линия winline · Эло 1638 : 1360"
-},
-"lt": null
-},
-{
-"sport": "tennis",
 "id": "186784",
 "league": "Теннис · WTA",
 "kickoff": "2026-11-16T20:35:00+03:00",
@@ -1395,6 +1312,97 @@ null
 0.648780487804878
 ],
 "center": "Линия winline · Эло 1424 : 1554"
+},
+"lt": null
+},
+{
+"sport": "tennis",
+"id": "186793",
+"league": "Теннис · WTA",
+"kickoff": "2026-11-16T20:35:00+03:00",
+"home": "Лейре Ромеро Гормас",
+"away": "Ипек Оз",
+"hl": "https://a.espncdn.com/i/teamlogos/countries/500/esp.png",
+"al": "https://a.espncdn.com/i/teamlogos/countries/500/tur.png",
+"hid": "10676",
+"aid": "10197",
+"bb": "https://betboom.ru/search?query=%D0%93%D0%BE%D1%80%D0%BC%D0%B0%D1%81&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=tennis",
+"path": "tennis/wta",
+"url": "live.html?s=tennis&p=tennis%2Fwta&e=186793&h=%D0%9B%D0%B5%D0%B9%D1%80%D0%B5+%D0%A0%D0%BE%D0%BC%D0%B5%D1%80%D0%BE+%D0%93%D0%BE%D1%80%D0%BC%D0%B0%D1%81&a=%D0%98%D0%BF%D0%B5%D0%BA+%D0%9E%D0%B7",
+"div": "WTA",
+"state": "pre",
+"bo": null,
+"prediction": "predictions/2026-11-16-leyre-romero-gormas-ipek-oz-186793.html",
+"hs": null,
+"as": null,
+"tip": "Будет 2 сета · ≈1.71",
+"top": false,
+"bot": {
+"main": {
+"label": "Будет 2 сета",
+"p": 0.545,
+"odds": 1.71,
+"est": true
+},
+"bold": null,
+"markets": [
+[
+"Победа: Лейре Ромеро Гормас",
+0.718,
+1.29
+],
+[
+"Победа: Ипек Оз",
+0.282,
+3.28
+],
+[
+"Будет 3 сета",
+0.455,
+null
+],
+[
+"Будет 2 сета",
+0.545,
+null
+],
+[
+"Счёт по сетам 2:0",
+0.422,
+null
+],
+[
+"Счёт по сетам 0:2",
+0.123,
+null
+],
+[
+"Счёт по сетам 2:1",
+0.296,
+null
+],
+[
+"Счёт по сетам 1:2",
+0.16,
+null
+],
+[
+"Лейре Ромеро Гормас возьмёт хотя бы сет",
+0.877,
+null
+],
+[
+"Ипек Оз возьмёт хотя бы сет",
+0.578,
+null
+]
+],
+"bar": [
+0.7177242888402626,
+0,
+0.2822757111597374
+],
+"center": "Линия winline · Эло 1638 : 1360"
 },
 "lt": null
 },
