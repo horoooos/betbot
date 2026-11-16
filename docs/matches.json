@@ -1,187 +1,5 @@
 [
 {
-"sport": "tennis",
-"id": "186789",
-"league": "Теннис · WTA",
-"kickoff": "2026-11-16T17:05:00+03:00",
-"home": "Катрина Скотт",
-"away": "Анастасия Золотарёва",
-"hl": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
-"al": "https://a.espncdn.com/i/teamlogos/countries/500/rus.png",
-"hid": "7812",
-"aid": "6209",
-"bb": "https://betboom.ru/search?query=%D0%A1%D0%BA%D0%BE%D1%82%D1%82&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=tennis",
-"path": "tennis/wta",
-"url": "live.html?s=tennis&p=tennis%2Fwta&e=186789&h=%D0%9A%D0%B0%D1%82%D1%80%D0%B8%D0%BD%D0%B0+%D0%A1%D0%BA%D0%BE%D1%82%D1%82&a=%D0%90%D0%BD%D0%B0%D1%81%D1%82%D0%B0%D1%81%D0%B8%D1%8F+%D0%97%D0%BE%D0%BB%D0%BE%D1%82%D0%B0%D1%80%D1%91%D0%B2%D0%B0",
-"div": "WTA",
-"state": "post",
-"bo": null,
-"prediction": "predictions/2026-11-16-katrina-skott-anastasiya-zolotareva-186789.html",
-"hs": null,
-"as": null,
-"tip": "Победа: Катрина Скотт · 1.61",
-"top": false,
-"bot": {
-"main": {
-"label": "Победа: Катрина Скотт",
-"p": 0.58,
-"odds": 1.61,
-"est": false
-},
-"bold": null,
-"markets": [
-[
-"Победа: Катрина Скотт",
-0.58,
-1.61
-],
-[
-"Победа: Анастасия Золотарёва",
-0.42,
-2.22
-],
-[
-"Будет 3 сета",
-0.494,
-null
-],
-[
-"Будет 2 сета",
-0.506,
-null
-],
-[
-"Счёт по сетам 2:0",
-0.306,
-null
-],
-[
-"Счёт по сетам 0:2",
-0.2,
-null
-],
-[
-"Счёт по сетам 2:1",
-0.274,
-null
-],
-[
-"Счёт по сетам 1:2",
-0.221,
-null
-],
-[
-"Катрина Скотт возьмёт хотя бы сет",
-0.8,
-null
-],
-[
-"Анастасия Золотарёва возьмёт хотя бы сет",
-0.694,
-null
-]
-],
-"bar": [
-0.5796344647519582,
-0,
-0.42036553524804177
-],
-"center": "Линия winline"
-},
-"lt": null
-},
-{
-"sport": "tennis",
-"id": "186792",
-"league": "Теннис · WTA",
-"kickoff": "2026-11-16T17:05:00+03:00",
-"home": "Ребека Масарова",
-"away": "Дилетта Черубини",
-"hl": "https://a.espncdn.com/i/teamlogos/countries/500/sui.png",
-"al": "https://a.espncdn.com/i/teamlogos/countries/500/ita.png",
-"hid": "2984",
-"aid": "11455",
-"bb": "https://betboom.ru/search?query=%D0%9C%D0%B0%D1%81%D0%B0%D1%80%D0%BE%D0%B2%D0%B0&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=tennis",
-"path": "tennis/wta",
-"url": "live.html?s=tennis&p=tennis%2Fwta&e=186792&h=%D0%A0%D0%B5%D0%B1%D0%B5%D0%BA%D0%B0+%D0%9C%D0%B0%D1%81%D0%B0%D1%80%D0%BE%D0%B2%D0%B0&a=%D0%94%D0%B8%D0%BB%D0%B5%D1%82%D1%82%D0%B0+%D0%A7%D0%B5%D1%80%D1%83%D0%B1%D0%B8%D0%BD%D0%B8",
-"div": "WTA",
-"state": "post",
-"bo": null,
-"prediction": "predictions/2026-11-16-rebeka-masarova-diletta-cherubini-186792.html",
-"hs": null,
-"as": null,
-"tip": "Будет 2 сета · ≈1.57",
-"top": false,
-"bot": {
-"main": {
-"label": "Будет 2 сета",
-"p": 0.594,
-"odds": 1.57,
-"est": true
-},
-"bold": null,
-"markets": [
-[
-"Победа: Ребека Масарова",
-0.805,
-1.15
-],
-[
-"Победа: Дилетта Черубини",
-0.195,
-4.75
-],
-[
-"Будет 3 сета",
-0.406,
-null
-],
-[
-"Будет 2 сета",
-0.594,
-null
-],
-[
-"Счёт по сетам 2:0",
-0.514,
-null
-],
-[
-"Счёт по сетам 0:2",
-0.08,
-null
-],
-[
-"Счёт по сетам 2:1",
-0.291,
-null
-],
-[
-"Счёт по сетам 1:2",
-0.115,
-null
-],
-[
-"Ребека Масарова возьмёт хотя бы сет",
-0.92,
-null
-],
-[
-"Дилетта Черубини возьмёт хотя бы сет",
-0.486,
-null
-]
-],
-"bar": [
-0.8050847457627119,
-0,
-0.19491525423728806
-],
-"center": "Линия winline · Эло 1498 : 1449"
-},
-"lt": null
-},
-{
 "sport": "football",
 "id": "401861180",
 "league": "Сборные · Лига наций",
@@ -1241,97 +1059,6 @@ null
 "lt": null
 },
 {
-"sport": "esports",
-"id": "1793338",
-"league": "Киберспорт · Dota 2",
-"kickoff": "2026-11-16T21:00:00+03:00",
-"home": "PARIVISION",
-"away": "Team Spirit",
-"hl": "https://cdn-api.pandascore.co/images/team/image/135712/250px_parivision_allmode.png",
-"al": "https://cdn-api.pandascore.co/images/team/image/1669/153px_team_spirit_2022_lightmode.png",
-"hid": "135712",
-"aid": "1669",
-"bb": "https://betboom.ru/search?query=%D0%9F%D0%B0%D1%80%D0%B8%D0%B2%D0%B8%D1%81%D0%B8%D0%BE%D0%BD&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=esports",
-"path": "",
-"url": "esports.html?e=1793338&d=DOTA",
-"div": "DOTA",
-"state": "pre",
-"bo": 3,
-"prediction": "predictions/2026-11-16-parivision-team-spirit-1793338.html",
-"hs": 0,
-"as": 0,
-"tip": "Всухую (2:0 или 0:2) · ≈1.61",
-"top": false,
-"bot": {
-"main": {
-"label": "Всухую (2:0 или 0:2)",
-"p": 0.578,
-"odds": 1.61,
-"est": true
-},
-"bold": null,
-"markets": [
-[
-"Победа: PARIVISION",
-0.219,
-null
-],
-[
-"Победа: Team Spirit",
-0.781,
-null
-],
-[
-"Больше 2 карт",
-0.422,
-null
-],
-[
-"Всухую (2:0 или 0:2)",
-0.578,
-null
-],
-[
-"Счёт по картам 2:0",
-0.091,
-null
-],
-[
-"Счёт по картам 0:2",
-0.487,
-null
-],
-[
-"Счёт по картам 2:1",
-0.127,
-null
-],
-[
-"Счёт по картам 1:2",
-0.294,
-null
-],
-[
-"PARIVISION возьмёт хотя бы карту",
-0.513,
-null
-],
-[
-"Team Spirit возьмёт хотя бы карту",
-0.909,
-null
-]
-],
-"bar": [
-0.2188386595862859,
-0,
-0.7811613404137141
-],
-"center": "BO3 · Эло 1568 : 1789"
-},
-"lt": null
-},
-{
 "sport": "football",
 "id": "401886134",
 "league": "Перу · Лига 1",
@@ -1483,6 +1210,97 @@ null
 0.134
 ]
 ]
+},
+"lt": null
+},
+{
+"sport": "esports",
+"id": "1793338",
+"league": "Киберспорт · Dota 2",
+"kickoff": "2026-11-16T21:04:52+03:00",
+"home": "PARIVISION",
+"away": "Team Spirit",
+"hl": "https://cdn-api.pandascore.co/images/team/image/135712/250px_parivision_allmode.png",
+"al": "https://cdn-api.pandascore.co/images/team/image/1669/153px_team_spirit_2022_lightmode.png",
+"hid": "135712",
+"aid": "1669",
+"bb": "https://betboom.ru/search?query=%D0%9F%D0%B0%D1%80%D0%B8%D0%B2%D0%B8%D1%81%D0%B8%D0%BE%D0%BD&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=esports",
+"path": "",
+"url": "esports.html?e=1793338&d=DOTA",
+"div": "DOTA",
+"state": "in",
+"bo": 3,
+"prediction": "predictions/2026-11-16-parivision-team-spirit-1793338.html",
+"hs": 0,
+"as": 0,
+"tip": "Всухую (2:0 или 0:2) · ≈1.61",
+"top": false,
+"bot": {
+"main": {
+"label": "Всухую (2:0 или 0:2)",
+"p": 0.578,
+"odds": 1.61,
+"est": true
+},
+"bold": null,
+"markets": [
+[
+"Победа: PARIVISION",
+0.219,
+null
+],
+[
+"Победа: Team Spirit",
+0.781,
+null
+],
+[
+"Больше 2 карт",
+0.422,
+null
+],
+[
+"Всухую (2:0 или 0:2)",
+0.578,
+null
+],
+[
+"Счёт по картам 2:0",
+0.091,
+null
+],
+[
+"Счёт по картам 0:2",
+0.487,
+null
+],
+[
+"Счёт по картам 2:1",
+0.127,
+null
+],
+[
+"Счёт по картам 1:2",
+0.294,
+null
+],
+[
+"PARIVISION возьмёт хотя бы карту",
+0.513,
+null
+],
+[
+"Team Spirit возьмёт хотя бы карту",
+0.909,
+null
+]
+],
+"bar": [
+0.2188386595862859,
+0,
+0.7811613404137141
+],
+"center": "BO3 · Эло 1568 : 1789"
 },
 "lt": null
 },
