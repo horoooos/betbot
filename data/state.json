@@ -3,7 +3,7 @@
   "1X2": 0.0,
   "OU25": 0.0
  },
- "learned": "2026-11-16",
+ "learned": "2026-11-17",
  "schedule_day": "2026-11-16",
  "content_slot": "2026-11-16-23",
  "news_seen": [
@@ -1570,7 +1570,7 @@
  "value_day": "2026-11-16",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-16",
- "site_stamp": "1086|6557|2026-11-16 23|4|1029052c5eb04c2b",
+ "site_stamp": "1086|6559|2026-11-17 00|4|1029052c5eb04c2b",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1583,7 +1583,7 @@
    "NBA|401909999"
   ]
  },
- "value_check": "2026-11-16-7",
+ "value_check": "2026-11-17-0",
  "express_risk": {
   "msg": 6458,
   "legs": [
@@ -1719,7 +1719,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 6557,
+ "dz_last": 6559,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -1818,7 +1818,7 @@
   "https://images.cybersport.ru/images/as-is/plain/6c/6cffa5e4-d127-4186-a64b-6b3c68b20c1d.jpg",
   "https://images.cybersport.ru/images/as-is/plain/e5/e587e7de-be65-4fd6-a68d-fd669741f8fe.jpg"
  ],
- "indexnow_day": "2026-11-16",
+ "indexnow_day": "2026-11-17",
  "vk_wall_err": null,
  "shorts_day": "2026-11-16",
  "shorts_err": {
@@ -2107,22 +2107,22 @@
   "message_id": 654,
   "kind": "новость"
  },
- "learn_attempt_day": "2026-11-16",
+ "learn_attempt_day": "2026-11-17",
  "learn_diagnostics": {
   "objective": "shared_lambda_1X2_OU25",
   "rows": 8000,
-  "train_rows": 6280,
-  "validation_rows": 1720,
-  "validation_from": "2026-09-22",
+  "train_rows": 6250,
+  "validation_rows": 1750,
+  "validation_from": "2026-09-25",
   "history_from": "2026-02-21",
-  "history_until": "2026-11-09",
+  "history_until": "2026-11-15",
   "candidate_weight": 0.0,
   "weight": 0.0,
-  "train_logloss": 0.8407235020570081,
-  "validation_logloss": 0.8195036503184738,
-  "validation_market_logloss": 0.8195036503184738
+  "train_logloss": 0.84055327660324,
+  "validation_logloss": 0.8189784477134526,
+  "validation_market_logloss": 0.8189784477134526
  },
- "learned_at": "2026-11-16T00:01:02.500886+03:00",
+ "learned_at": "2026-11-17T00:01:59.855391+03:00",
  "learn_version": "shared-lambda-v2",
  "learn_error": null,
  "learn_retry_at": 0,
@@ -2194,7 +2194,7 @@
   "quote_matches": 14
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-16T23:59:59.550861+03:00",
+  "last_poll": "2026-11-17T00:01:59.855391+03:00",
   "cursor": "76",
   "posts": [
    {
