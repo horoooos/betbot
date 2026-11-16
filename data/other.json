@@ -6842,7 +6842,10 @@
   "open": {},
   "top": false,
   "msg_id": 6401,
-  "btn": 4
+  "btn": 4,
+  "close": {
+   "_": null
+  }
  },
  "WTA|186792": {
   "id": "186792",
@@ -6949,6 +6952,9 @@
   "open": {},
   "top": false,
   "msg_id": 6403,
-  "btn": 4
+  "btn": 4,
+  "close": {
+   "_": null
+  }
  }
 }
