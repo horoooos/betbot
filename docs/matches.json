@@ -1,96 +1,5 @@
 [
 {
-"sport": "esports",
-"id": "1793341",
-"league": "Киберспорт · Dota 2",
-"kickoff": "2026-11-16T17:03:11+03:00",
-"home": "GamerLegion",
-"away": "LGD Gaming",
-"hl": "https://cdn-api.pandascore.co/images/team/image/137588/591px_gamer_legion_2026_allmode.png",
-"al": "https://cdn-api.pandascore.co/images/team/image/1657/600px_lgd_gaming_dec_2019_allmode.png",
-"hid": "137588",
-"aid": "1657",
-"bb": "https://betboom.ru/search?query=%D0%93%D0%B0%D0%BC%D0%B5%D1%80%D0%BB%D0%B5%D0%B3%D0%B8%D0%BE%D0%BD&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=esports",
-"path": "",
-"url": "esports.html?e=1793341&d=DOTA",
-"div": "DOTA",
-"state": "in",
-"bo": 3,
-"prediction": "predictions/2026-11-16-gamerlegion-lgd-gaming-1793341.html",
-"hs": 1,
-"as": 1,
-"tip": "Победа: LGD Gaming · ≈1.55",
-"top": false,
-"bot": {
-"main": {
-"label": "Победа: LGD Gaming",
-"p": 0.601,
-"odds": 1.55,
-"est": true
-},
-"bold": null,
-"markets": [
-[
-"Победа: GamerLegion",
-0.399,
-null
-],
-[
-"Победа: LGD Gaming",
-0.601,
-null
-],
-[
-"Больше 2 карт",
-0.491,
-null
-],
-[
-"Всухую (2:0 или 0:2)",
-0.509,
-null
-],
-[
-"Счёт по картам 2:0",
-0.187,
-null
-],
-[
-"Счёт по картам 0:2",
-0.323,
-null
-],
-[
-"Счёт по картам 2:1",
-0.212,
-null
-],
-[
-"Счёт по картам 1:2",
-0.279,
-null
-],
-[
-"GamerLegion возьмёт хотя бы карту",
-0.677,
-null
-],
-[
-"LGD Gaming возьмёт хотя бы карту",
-0.813,
-null
-]
-],
-"bar": [
-0.39857270811657425,
-0,
-0.6014272918834258
-],
-"center": "BO3 · Эло 1505 : 1577"
-},
-"lt": null
-},
-{
 "sport": "tennis",
 "id": "186789",
 "league": "Теннис · WTA",
@@ -1164,7 +1073,7 @@ null
 "path": "tennis/wta",
 "url": "live.html?s=tennis&p=tennis%2Fwta&e=186793&h=%D0%9B%D0%B5%D0%B9%D1%80%D0%B5+%D0%A0%D0%BE%D0%BC%D0%B5%D1%80%D0%BE+%D0%93%D0%BE%D1%80%D0%BC%D0%B0%D1%81&a=%D0%98%D0%BF%D0%B5%D0%BA+%D0%9E%D0%B7",
 "div": "WTA",
-"state": "pre",
+"state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-16-leyre-romero-gormas-ipek-oz-186793.html",
 "hs": null,
