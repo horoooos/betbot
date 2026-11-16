@@ -381,7 +381,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-16-sbornaya-farerskih-ostrovov-sbornaya-moldavii-401861180.html",
-"hs": "0",
+"hs": "1",
 "as": "0",
 "tip": "П1 · 1.83",
 "top": false,
@@ -626,7 +626,15 @@ null
 ]
 ]
 },
-"lt": null
+"lt": {
+"fair": 1.74,
+"label": "ТБ 1.5",
+"min_odds": 1.83,
+"minute": "26'",
+"p": 0.574,
+"result": null,
+"score": "0:0"
+}
 },
 {
 "sport": "tennis",
