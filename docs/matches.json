@@ -1595,7 +1595,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-16-sbornaya-shveytsarii-sbornaya-shotlandii-401861186.html",
-"hs": "2",
+"hs": "3",
 "as": "0",
 "tip": "П1 · 2.05",
 "top": false,
@@ -1950,7 +1950,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-16-real-garsilaso-adt-401886121.html",
-"hs": "1",
+"hs": "2",
 "as": "1",
 "tip": "П1 · 1.69",
 "top": false,
@@ -2335,12 +2335,78 @@ null
 "div": "WTA",
 "state": "pre",
 "bo": null,
-"prediction": "",
+"prediction": "predictions/2026-11-17-luisina-giovannini-ariana-girlings-186788.html",
 "hs": null,
 "as": null,
-"tip": "",
+"tip": "Будет 2 сета · ≈1.79",
 "top": false,
-"bot": null,
+"bot": {
+"main": {
+"label": "Будет 2 сета",
+"p": 0.52,
+"odds": 1.79,
+"est": true
+},
+"bold": null,
+"markets": [
+[
+"Победа: Луисина Гиованнини",
+0.351,
+null
+],
+[
+"Победа: Ариана Гирлингс",
+0.649,
+null
+],
+[
+"Будет 3 сета",
+0.48,
+null
+],
+[
+"Будет 2 сета",
+0.52,
+null
+],
+[
+"Счёт по сетам 2:0",
+0.159,
+null
+],
+[
+"Счёт по сетам 0:2",
+0.361,
+null
+],
+[
+"Счёт по сетам 2:1",
+0.191,
+null
+],
+[
+"Счёт по сетам 1:2",
+0.288,
+null
+],
+[
+"Луисина Гиованнини возьмёт хотя бы сет",
+0.639,
+null
+],
+[
+"Ариана Гирлингс возьмёт хотя бы сет",
+0.841,
+null
+]
+],
+"bar": [
+0.3508085473633515,
+0,
+0.6491914526366485
+],
+"center": "Рейтинг Эло 1630 : 1737"
+},
 "lt": null
 },
 {
