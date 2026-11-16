@@ -863,7 +863,15 @@ null
 ]
 ]
 },
-"lt": null
+"lt": {
+"fair": 1.73,
+"label": "ТМ 2.5",
+"min_odds": 1.82,
+"minute": "29'",
+"p": 0.577,
+"result": null,
+"score": "1:0"
+}
 },
 {
 "sport": "football",
@@ -883,7 +891,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-16-sbornaya-islandii-sbornaya-lyuksemburga-401861182.html",
-"hs": "0",
+"hs": "1",
 "as": "0",
 "tip": "ТМ 2.5 · 1.95",
 "top": false,
