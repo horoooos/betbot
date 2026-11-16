@@ -7,7 +7,6 @@
  "schedule_day": "2026-11-16",
  "content_slot": "2026-11-16-13",
  "news_seen": [
-  "https://www.sport-express.ru/hockey/nhl/news/hellebayk-stal-pervym-s-2024-goda-vratarem-nhl-vyigravshim-shest-startovyh-matchey-za-novyy-klub-2474370/",
   "https://www.sport-express.ru/hockey/nhl/news/luchshie-snaypery-nhl-13-noyabrya-2026-top-10-regulyarnogo-chempionata-lidery-po-golam-drayzaytl-kaprizov-konnor-2474340/",
   "https://www.sport-express.ru/hockey/nhl/news/luchshie-bombardiry-nhl-13-noyabrya-2026-top-10-regulyarnogo-chempionata-lidery-po-ochkam-makdevid-drayzaytl-kaprizov-2474337/",
   "https://www.sport-express.ru/football/rfpl/news/kushanashvili-podderzhal-igdisamova-nuzhno-dat-spokoyno-porabotat-2474315/",
@@ -506,9 +505,10 @@
   "https://www.sport-express.ru/football/rfpl/news/komik-kosicyn-sravnil-match-protiv-dinamo-s-pervoy-blizostyu-velikolepnye-tri-minuty-2475472/",
   "https://www.sport-express.ru/tennis/davis-cup/news/ispanec-davidovich-fokina-propustit-finalnyy-raund-kubka-devisa-iz-za-travmy-2475487/",
   "https://www.sport-express.ru/football/rusteam/news/rfs-realizoval-vse-bilety-na-tovarischeskiy-match-sbornyh-rossii-i-venesuely-2475486/",
-  "https://www.sport-express.ru/football/rfpl/news/idovu-otvetil-leschuku-medialiga-ne-tak-ploha-kak-on-schitaet-2475470/"
+  "https://www.sport-express.ru/football/rfpl/news/idovu-otvetil-leschuku-medialiga-ne-tak-ploha-kak-on-schitaet-2475470/",
+  "devushku-donk-raskritikovali-v-kitaye-ona-ne-peredala-podarki-igrokam-team"
  ],
- "news_i": 1,
+ "news_i": 2,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1702,7 +1702,7 @@
  "streak_day": {
   "2026-11-15": 2
  },
- "news_next": "2026-11-16T14:48:33.553920+03:00",
+ "news_next": "2026-11-16T15:18:07.198414+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1807,7 +1807,8 @@
   "https://images.cybersport.ru/images/as-is/plain/ba/ba8bbf39-84fd-405c-afc0-539782639124.jpg",
   "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a3/EC_Stadium.jpg/1280px-EC_Stadium.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
   "https://upload.wikimedia.org/wikipedia/commons/2/2b/FC_Dynamo_Kyiv_2011.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-  "https://upload.wikimedia.org/wikipedia/commons/6/6b/Igor_Leshchuk_2017.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+  "https://upload.wikimedia.org/wikipedia/commons/6/6b/Igor_Leshchuk_2017.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "https://images.cybersport.ru/images/as-is/plain/52/5278fad2-db8c-4aaf-aab7-399c2bb5307b.jpg"
  ],
  "indexnow_day": "2026-11-16",
  "vk_wall_err": null,
@@ -1972,7 +1973,8 @@
   "6388",
   "6390",
   "6391",
-  "6393"
+  "6393",
+  "6395"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -2069,11 +2071,12 @@
   "2026-11-16:новость:ff6396bef2d3533a0af8c094",
   "2026-11-16:новость:80fbf3a05f19cd155caa691b",
   "2026-11-16:новость:18292ac9e938cb91db2c2bb0",
-  "2026-11-16:новость:5b041e42483b8076f283a721"
+  "2026-11-16:новость:5b041e42483b8076f283a721",
+  "2026-11-16:новость:8a52f541fbe1fed12392b442"
  ],
  "dz_last_delivery": {
-  "source_id": 6393,
-  "message_id": 643,
+  "source_id": 6395,
+  "message_id": 644,
   "kind": "новость"
  },
  "learn_attempt_day": "2026-11-16",
@@ -2163,7 +2166,7 @@
   "quote_matches": 13
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-16T14:48:06.959122+03:00",
+  "last_poll": "2026-11-16T14:50:07.198414+03:00",
   "cursor": "65",
   "posts": [
    {
