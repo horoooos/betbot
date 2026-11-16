@@ -6675,31 +6675,31 @@
   "kickoff": "2026-11-16T18:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Mon, November 16th at 10:30 AM EST",
   "home": {
-   "id": "12957",
-   "name": "Guiomar Maristany Zuleta De Reales",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/12957.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/esp.png"
    ],
+   "id": "12957",
+   "name": "Guiomar Maristany Zuleta De Reales",
    "country": "Spain",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
    "ru": "Гуйомар Маристани"
   },
   "away": {
-   "id": "1374",
-   "name": "Martina Trevisan",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/1374.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/ita.png"
    ],
+   "id": "1374",
+   "name": "Martina Trevisan",
    "country": "Italy",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
@@ -6763,7 +6763,9 @@
   "btn": 4,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null
  },
  "WTA|186796": {
   "id": "186796",
