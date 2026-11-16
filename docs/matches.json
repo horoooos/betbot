@@ -908,7 +908,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-16-sakramento-kingz-oklahoma-siti-tander-401909993.html",
-"hs": "39",
+"hs": "40",
 "as": "40",
 "tip": "ТМ 223.5 · 1.91",
 "top": false,
@@ -1100,7 +1100,15 @@ null
 ],
 "center": "Ожидаемые голы 4.3 : 2.4"
 },
-"lt": null
+"lt": {
+"fair": 1.82,
+"label": "П2 (осн. время)",
+"min_odds": 1.91,
+"minute": "2-й период",
+"p": 0.548,
+"result": null,
+"score": "1:3"
+}
 },
 {
 "sport": "hockey",
