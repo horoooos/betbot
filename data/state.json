@@ -2172,8 +2172,8 @@
   "quote_matches": 14
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-16T17:34:40.086881+03:00",
-  "cursor": "68",
+  "last_poll": "2026-11-16T17:36:40.125498+03:00",
+  "cursor": "69",
   "posts": [
    {
     "post_id": 499,
@@ -2463,6 +2463,23 @@
     },
     "status": "needs_review",
     "observed_at": "2026-11-16T15:30:07.358831+03:00"
+   },
+   {
+    "post_id": 518,
+    "url": "https://vk.com/wall-228963529_518",
+    "title": "PARIVISION фаворит против Heroic в отборочных PGL Cluj-Napoca 2027",
+    "text": "PARIVISION фаворит против Heroic в отборочных PGL Cluj-Napoca 2027\n\nрџ“° На горизонте отборочный баттл, где PARIVISION бросает вызов Heroic в решающем поединке за место на PGL Cluj-Napoca 2027 по CS2. Матч назначен на 16 ноября в 21:00 мск и будет разыгран в формате best-of-3.\n\n#киберспорт #CS2 #новостиспорта #спорт #главное #аиставит\n\nрџ“Љ Подробнее на сайте рџ‘‡",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": true,
+     "details_present": true,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-16T17:36:40.125498+03:00"
    }
   ],
   "status": "observing"
