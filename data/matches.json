@@ -13953,7 +13953,7 @@
   "kickoff": "2026-11-16T18:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Scheduled",
   "home": {
    "id": "447",
@@ -14100,7 +14100,10 @@
   "close": {
    "H": 0.5092,
    "O25": 0.422
-  }
+  },
+  "main_hit": true,
+  "bold_hit": false,
+  "value_hit": null
  },
  "401861181": {
   "id": "401861181",
@@ -14399,7 +14402,10 @@
    "snapshot": "UNL|401861183"
   },
   "msg_id": 6434,
-  "btn": 4
+  "btn": 4,
+  "close": {
+   "H": 0.4357
+  }
  },
  "401861182": {
   "id": "401861182",
@@ -14545,7 +14551,10 @@
    "snapshot": "UNL|401861182"
   },
   "msg_id": 6436,
-  "btn": 4
+  "btn": 4,
+  "close": {
+   "U25": 0.513
+  }
  },
  "401861184": {
   "id": "401861184",
@@ -14693,6 +14702,9 @@
    "snapshot": "UNL|401861184"
   },
   "msg_id": 6438,
-  "btn": 4
+  "btn": 4,
+  "close": {
+   "U25": 0.5183
+  }
  }
 }
