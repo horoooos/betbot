@@ -105,7 +105,7 @@ null
 "path": "hockey/nhl",
 "url": "live.html?s=hockey&p=hockey%2Fnhl&e=401892721&h=%D0%A4%D0%B8%D0%BB%D0%B0%D0%B4%D0%B5%D0%BB%D1%8C%D1%84%D0%B8%D1%8F&a=%D0%AD%D0%B4%D0%BC%D0%BE%D0%BD%D1%82%D0%BE%D0%BD",
 "div": "NHL",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "predictions/2026-11-16-filadelfiya-edmonton-401892721.html",
 "hs": "2",
@@ -215,7 +215,7 @@ null
 "min_odds": 1.42,
 "minute": "2-й период",
 "p": 0.741,
-"result": null,
+"result": "hit",
 "score": "0:3"
 }
 },
@@ -683,7 +683,7 @@ null
 "bo": null,
 "prediction": "predictions/2026-11-16-vegas-vankuver-401892724.html",
 "hs": "1",
-"as": "3",
+"as": "4",
 "tip": "ТБ 6.5 · 1.91",
 "top": false,
 "bot": {
