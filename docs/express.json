@@ -2,49 +2,67 @@
 {
 "kind": "express",
 "title": "Экспресс дня",
-"day": "2026-11-15",
-"odds": 1.571949,
-"p": 0.5643,
-"status": "won",
-"won": 2,
-"n": 2,
-"post": "https://t.me/aistavvit/6138",
+"day": "2026-11-16",
+"odds": 2.5739805000000002,
+"p": 0.308,
+"status": "wait",
+"won": 0,
+"n": 3,
+"post": "https://t.me/aistavvit/6380",
 "legs": [
 {
 "sport": "football",
-"id": "401861177",
-"home": "Сборная Франции",
-"away": "Сборная Турции",
+"id": "401861182",
+"home": "Сборная Исландии",
+"away": "Сборная Люксембурга",
 "league": "🌍 Сборные · Лига наций",
-"kickoff": "2026-11-15T22:45:00+03:00",
-"label": "Победа: Сборная Франции",
-"odds": 1.167,
-"p": 0.791161594755729,
+"kickoff": "2026-11-16T20:00:00+03:00",
+"label": "Победа: Сборная Исландии",
+"odds": 1.211,
+"p": 0.7622391352050539,
 "logos": [
-"https://a.espncdn.com/i/teamlogos/countries/500/fra.png",
-"https://a.espncdn.com/i/teamlogos/countries/500/tur.png"
+"https://a.espncdn.com/i/teamlogos/countries/500/isl.png",
+"https://a.espncdn.com/i/teamlogos/countries/500/lux.png"
 ],
-"win": true,
-"score": "2:1",
-"url": "live.html?s=football&p=soccer%2Fuefa.nations&e=401861177&h=%D0%A1%D0%B1%D0%BE%D1%80%D0%BD%D0%B0%D1%8F+%D0%A4%D1%80%D0%B0%D0%BD%D1%86%D0%B8%D0%B8&a=%D0%A1%D0%B1%D0%BE%D1%80%D0%BD%D0%B0%D1%8F+%D0%A2%D1%83%D1%80%D1%86%D0%B8%D0%B8"
+"win": null,
+"score": null,
+"url": "live.html?s=football&p=soccer%2Fuefa.nations&e=401861182&h=%D0%A1%D0%B1%D0%BE%D1%80%D0%BD%D0%B0%D1%8F+%D0%98%D1%81%D0%BB%D0%B0%D0%BD%D0%B4%D0%B8%D0%B8&a=%D0%A1%D0%B1%D0%BE%D1%80%D0%BD%D0%B0%D1%8F+%D0%9B%D1%8E%D0%BA%D1%81%D0%B5%D0%BC%D0%B1%D1%83%D1%80%D0%B3%D0%B0"
 },
 {
-"sport": "basketball",
-"id": "401909985",
-"home": "Филадельфия Сиксерс",
-"away": "Индиана Пэйсерс",
-"league": "🇺🇸 США · NBA",
-"kickoff": "2026-11-15T21:00:00+03:00",
-"label": "Победа: Филадельфия Сиксерс (с ОТ)",
-"odds": 1.347,
-"p": 0.7132212050244837,
+"sport": "football",
+"id": "401861188",
+"home": "Сборная Греции",
+"away": "Сборная Сербии",
+"league": "🌍 Сборные · Лига наций",
+"kickoff": "2026-11-16T22:45:00+03:00",
+"label": "Победа: Сборная Греции",
+"odds": 1.417,
+"p": 0.6523630037692084,
 "logos": [
-"https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/phi.png",
-"https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/ind.png"
+"https://a.espncdn.com/i/teamlogos/countries/500/gre.png",
+"https://a.espncdn.com/i/teamlogos/countries/500/sba.png"
 ],
-"win": true,
-"score": "131:124",
-"url": "live.html?s=basketball&p=basketball%2Fnba&e=401909985&h=%D0%A4%D0%B8%D0%BB%D0%B0%D0%B4%D0%B5%D0%BB%D1%8C%D1%84%D0%B8%D1%8F+%D0%A1%D0%B8%D0%BA%D1%81%D0%B5%D1%80%D1%81&a=%D0%98%D0%BD%D0%B4%D0%B8%D0%B0%D0%BD%D0%B0+%D0%9F%D1%8D%D0%B9%D1%81%D0%B5%D1%80%D1%81"
+"win": null,
+"score": null,
+"url": "live.html?s=football&p=soccer%2Fuefa.nations&e=401861188&h=%D0%A1%D0%B1%D0%BE%D1%80%D0%BD%D0%B0%D1%8F+%D0%93%D1%80%D0%B5%D1%86%D0%B8%D0%B8&a=%D0%A1%D0%B1%D0%BE%D1%80%D0%BD%D0%B0%D1%8F+%D0%A1%D0%B5%D1%80%D0%B1%D0%B8%D0%B8"
+},
+{
+"sport": "football",
+"id": "401861179",
+"home": "Сборная Гибралтара",
+"away": "Сборная Мальты",
+"league": "🌍 Сборные · Лига наций",
+"kickoff": "2026-11-16T22:45:00+03:00",
+"label": "Победа: Сборная Мальты",
+"odds": 1.5,
+"p": 0.6194690265486725,
+"logos": [
+"https://a.espncdn.com/i/teamlogos/countries/500/gib.png",
+"https://a.espncdn.com/i/teamlogos/countries/500/mlt.png"
+],
+"win": null,
+"score": null,
+"url": "live.html?s=football&p=soccer%2Fuefa.nations&e=401861179&h=%D0%A1%D0%B1%D0%BE%D1%80%D0%BD%D0%B0%D1%8F+%D0%93%D0%B8%D0%B1%D1%80%D0%B0%D0%BB%D1%82%D0%B0%D1%80%D0%B0&a=%D0%A1%D0%B1%D0%BE%D1%80%D0%BD%D0%B0%D1%8F+%D0%9C%D0%B0%D0%BB%D1%8C%D1%82%D1%8B"
 }
 ]
 },

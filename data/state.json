@@ -5,7 +5,7 @@
  },
  "learned": "2026-11-16",
  "schedule_day": "2026-11-16",
- "content_slot": "2026-11-15-23",
+ "content_slot": "2026-11-16-10",
  "news_seen": [
   "https://www.sport-express.ru/football/rusteam/news/oblyakov-uzbekistan-horoshiy-sopernik-no-dolzhny-byli-ranshe-zabivat-igra-byla-pod-nashim-kontrolem-2474207/",
   "https://www.sport-express.ru/football/rusteam/news/komlichenko-vse-mysli-o-sbornoy-no-abstragirovatsya-ot-proishodyaschego-v-lokomotive-nikak-ne-poluchitsya-2474206/",
@@ -1534,64 +1534,81 @@
   ]
  },
  "express": {
-  "msg": 6138,
+  "msg": 6380,
   "legs": [
    {
     "sport": "football",
     "div": "UNL",
-    "id": "401861177",
+    "id": "401861182",
     "side": "home",
-    "p": 0.791161594755729,
-    "odds": 1.167,
-    "kickoff": "2026-11-15T22:45:00+03:00",
-    "home": "Сборная Франции",
-    "away": "Сборная Турции",
+    "p": 0.7622391352050539,
+    "odds": 1.211,
+    "kickoff": "2026-11-16T20:00:00+03:00",
+    "home": "Сборная Исландии",
+    "away": "Сборная Люксембурга",
     "league": "🌍 Сборные · Лига наций",
     "logos": [
-     "https://a.espncdn.com/i/teamlogos/countries/500/fra.png",
-     "https://a.espncdn.com/i/teamlogos/countries/500/tur.png"
+     "https://a.espncdn.com/i/teamlogos/countries/500/isl.png",
+     "https://a.espncdn.com/i/teamlogos/countries/500/lux.png"
     ],
     "colors": [
-     "000080",
-     "ffffff"
+     "0c2fff",
+     "E70000"
     ],
-    "label": "Победа: Сборная Франции",
-    "win": true,
-    "score": "2:1"
+    "label": "Победа: Сборная Исландии"
    },
    {
-    "sport": "basketball",
-    "div": "NBA",
-    "id": "401909985",
+    "sport": "football",
+    "div": "UNL",
+    "id": "401861188",
     "side": "home",
-    "p": 0.7132212050244837,
-    "odds": 1.347,
-    "kickoff": "2026-11-15T21:00:00+03:00",
-    "home": "Филадельфия Сиксерс",
-    "away": "Индиана Пэйсерс",
-    "league": "🇺🇸 США · NBA",
+    "p": 0.6523630037692084,
+    "odds": 1.417,
+    "kickoff": "2026-11-16T22:45:00+03:00",
+    "home": "Сборная Греции",
+    "away": "Сборная Сербии",
+    "league": "🌍 Сборные · Лига наций",
     "logos": [
-     "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/phi.png",
-     "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/ind.png"
+     "https://a.espncdn.com/i/teamlogos/countries/500/gre.png",
+     "https://a.espncdn.com/i/teamlogos/countries/500/sba.png"
     ],
     "colors": [
-     "1d428a",
-     "0c2340"
+     "295da8",
+     "E70000"
     ],
-    "label": "Победа: Филадельфия Сиксерс (с ОТ)",
-    "win": true,
-    "score": "131:124"
+    "label": "Победа: Сборная Греции"
+   },
+   {
+    "sport": "football",
+    "div": "UNL",
+    "id": "401861179",
+    "side": "away",
+    "p": 0.6194690265486725,
+    "odds": 1.5,
+    "kickoff": "2026-11-16T22:45:00+03:00",
+    "home": "Сборная Гибралтара",
+    "away": "Сборная Мальты",
+    "league": "🌍 Сборные · Лига наций",
+    "logos": [
+     "https://a.espncdn.com/i/teamlogos/countries/500/gib.png",
+     "https://a.espncdn.com/i/teamlogos/countries/500/mlt.png"
+    ],
+    "colors": [
+     "DE2918",
+     "DE2400"
+    ],
+    "label": "Победа: Сборная Мальты"
    }
   ],
-  "odds": 1.571949,
-  "day": "2026-11-15",
-  "done": true
+  "odds": 2.5739805000000002,
+  "day": "2026-11-16",
+  "done": false
  },
  "streak_posted": 0,
  "value_day": "2026-11-15",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-15",
- "site_stamp": "1073|6378|2026-11-16 09|3|2728edd9d338b003",
+ "site_stamp": "1073|6380|2026-11-16 10|3|2728edd9d338b003",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1744,7 +1761,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 6378,
+ "dz_last": 6380,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2165,7 +2182,7 @@
   "quote_matches": 13
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-16T09:59:23.144969+03:00",
+  "last_poll": "2026-11-16T10:01:22.885114+03:00",
   "cursor": "59",
   "posts": [
    {
