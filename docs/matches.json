@@ -1,96 +1,5 @@
 [
 {
-"sport": "tennis",
-"id": "187442",
-"league": "Теннис · WTA",
-"kickoff": "2026-11-15T23:10:00+03:00",
-"home": "Элина Свитолина",
-"away": "Мирра Андреева",
-"hl": "https://a.espncdn.com/i/teamlogos/countries/500/ukr.png",
-"al": "https://a.espncdn.com/i/teamlogos/countries/500/rus.png",
-"hid": "1797",
-"aid": "9820",
-"bb": "https://betboom.ru/search?query=%D0%A1%D0%B2%D0%B8%D1%82%D0%BE%D0%BB%D0%B8%D0%BD%D0%B0&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=tennis",
-"path": "tennis/wta",
-"url": "live.html?s=tennis&p=tennis%2Fwta&e=187442&h=%D0%AD%D0%BB%D0%B8%D0%BD%D0%B0+%D0%A1%D0%B2%D0%B8%D1%82%D0%BE%D0%BB%D0%B8%D0%BD%D0%B0&a=%D0%9C%D0%B8%D1%80%D1%80%D0%B0+%D0%90%D0%BD%D0%B4%D1%80%D0%B5%D0%B5%D0%B2%D0%B0",
-"div": "WTA",
-"state": "post",
-"bo": null,
-"prediction": "predictions/2026-11-15-elina-svitolina-mirra-andreeva-187442.html",
-"hs": null,
-"as": null,
-"tip": "Будет 2 сета · ≈1.73",
-"top": false,
-"bot": {
-"main": {
-"label": "Будет 2 сета",
-"p": 0.539,
-"odds": 1.73,
-"est": true
-},
-"bold": null,
-"markets": [
-[
-"Победа: Элина Свитолина",
-0.297,
-3.2
-],
-[
-"Победа: Мирра Андреева",
-0.703,
-1.35
-],
-[
-"Будет 3 сета",
-0.461,
-null
-],
-[
-"Будет 2 сета",
-0.539,
-null
-],
-[
-"Счёт по сетам 2:0",
-0.13,
-null
-],
-[
-"Счёт по сетам 0:2",
-0.408,
-null
-],
-[
-"Счёт по сетам 2:1",
-0.166,
-null
-],
-[
-"Счёт по сетам 1:2",
-0.295,
-null
-],
-[
-"Элина Свитолина возьмёт хотя бы сет",
-0.592,
-null
-],
-[
-"Мирра Андреева возьмёт хотя бы сет",
-0.87,
-null
-]
-],
-"bar": [
-0.2967032967032967,
-0,
-0.7032967032967032
-],
-"center": "Линия winline · Эло 1877 : 1970"
-},
-"lt": null
-},
-{
 "sport": "football",
 "id": "401886137",
 "league": "Перу · Лига 1",
@@ -425,7 +334,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-16-yuta-dzhaz-san-antonio-spers-401909988.html",
-"hs": "96",
+"hs": "98",
 "as": "94",
 "tip": "ТМ 222.5 · 1.93",
 "top": false,
@@ -608,7 +517,7 @@ null
 "bo": null,
 "prediction": "predictions/2026-11-16-toronto-reptors-nyu-york-niks-401909990.html",
 "hs": "40",
-"as": "41",
+"as": "42",
 "tip": "ТМ 217.5 · 1.95",
 "top": true,
 "bot": {
