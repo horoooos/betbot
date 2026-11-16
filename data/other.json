@@ -6834,5 +6834,220 @@
   "top": false,
   "msg_id": 6399,
   "btn": 4
+ },
+ "WTA|186789": {
+  "id": "186789",
+  "div": "WTA",
+  "sport": "tennis",
+  "tournament": "LP Open by IND",
+  "round": "Round 1",
+  "bo5": false,
+  "kickoff": "2026-11-16T17:00:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "detail": "Mon, November 16th at 9:00 AM EST",
+  "home": {
+   "id": "7812",
+   "name": "Katrina Scott",
+   "logo": [
+    "https://a.espncdn.com/i/headshots/tennis/players/full/7812.png",
+    "https://a.espncdn.com/i/teamlogos/countries/500/usa.png"
+   ],
+   "country": "USA",
+   "color": "2d6a4f",
+   "winner": false,
+   "sets": [],
+   "set_won": [],
+   "ru": "Катрина Скотт"
+  },
+  "away": {
+   "id": "6209",
+   "name": "Anastasia Zolotareva",
+   "logo": [
+    "https://a.espncdn.com/i/headshots/tennis/players/full/6209.png",
+    "https://a.espncdn.com/i/teamlogos/countries/500/rus.png"
+   ],
+   "country": "Russia",
+   "color": "2d6a4f",
+   "winner": false,
+   "sets": [],
+   "set_won": [],
+   "ru": "Анастасия Золотарёва"
+  },
+  "odds": {
+   "H": 1.61,
+   "A": 2.22,
+   "src": "winline",
+   "source_url": "https://stavka.tv/matches/tennis/16-11-2026-scott-katrina-zolotareva-anastasia",
+   "observed_at": "2026-11-16T12:58:07.711981+00:00",
+   "price_kind": "public_displayed"
+  },
+  "probs": {
+   "TN_W1": 0.5796344647519582,
+   "TN_W2": 0.42036553524804177,
+   "TN_3S": 0.49432004517012906,
+   "TN_2S": 0.505679954829871,
+   "TN_S2:0": 0.3061314158918194,
+   "TN_S0:2": 0.1995485389380516,
+   "TN_S2:1": 0.27350304886013893,
+   "TN_S1:2": 0.2208169963099901,
+   "TN_SET1": 0.8004514610619484,
+   "TN_SET2": 0.6938685841081806
+  },
+  "labels": {
+   "TN_W1": "Победа: Катрина Скотт",
+   "TN_W2": "Победа: Анастасия Золотарёва",
+   "TN_3S": "Будет 3 сета",
+   "TN_2S": "Будет 2 сета",
+   "TN_S2:0": "Счёт по сетам 2:0",
+   "TN_S0:2": "Счёт по сетам 0:2",
+   "TN_S2:1": "Счёт по сетам 2:1",
+   "TN_S1:2": "Счёт по сетам 1:2",
+   "TN_SET1": "Катрина Скотт возьмёт хотя бы сет",
+   "TN_SET2": "Анастасия Золотарёва возьмёт хотя бы сет"
+  },
+  "real": {
+   "TN_W1": 1.61,
+   "TN_W2": 2.22
+  },
+  "center": "Линия winline",
+  "bar": [
+   0.5796344647519582,
+   0,
+   0.42036553524804177
+  ],
+  "model": {
+   "elo": null,
+   "src": "winline"
+  },
+  "stavka_signal": {
+   "status": "collecting",
+   "weight": 0.0,
+   "authors": 21,
+   "group": "tennis",
+   "snapshot": "WTA|186789",
+   "source": "https://stavka.tv"
+  },
+  "main": {
+   "key": "TN_W1",
+   "label": "Победа: Катрина Скотт",
+   "p": 0.5796,
+   "odds": 1.61,
+   "est": false,
+   "stake": 1.0
+  },
+  "bold": {},
+  "open": {},
+  "top": false,
+  "msg_id": 6401,
+  "btn": 4
+ },
+ "WTA|186792": {
+  "id": "186792",
+  "div": "WTA",
+  "sport": "tennis",
+  "tournament": "LP Open by IND",
+  "round": "Round 1",
+  "bo5": false,
+  "kickoff": "2026-11-16T17:00:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "detail": "Mon, November 16th at 9:00 AM EST",
+  "home": {
+   "id": "2984",
+   "name": "Rebeka Masarova",
+   "logo": [
+    "https://a.espncdn.com/i/headshots/tennis/players/full/2984.png",
+    "https://a.espncdn.com/i/teamlogos/countries/500/sui.png"
+   ],
+   "country": "Switzerland",
+   "color": "2d6a4f",
+   "winner": false,
+   "sets": [],
+   "set_won": [],
+   "ru": "Ребека Масарова"
+  },
+  "away": {
+   "id": "11455",
+   "name": "Diletta Cherubini",
+   "logo": [
+    "https://a.espncdn.com/i/headshots/tennis/players/full/11455.png",
+    "https://a.espncdn.com/i/teamlogos/countries/500/ita.png"
+   ],
+   "country": "Italy",
+   "color": "2d6a4f",
+   "winner": false,
+   "sets": [],
+   "set_won": [],
+   "ru": "Дилетта Черубини"
+  },
+  "odds": {
+   "H": 1.15,
+   "A": 4.75,
+   "src": "winline",
+   "source_url": "https://stavka.tv/matches/tennis/16-11-2026-masarova-rebeka-cherubini-diletta",
+   "observed_at": "2026-11-16T12:58:07.711981+00:00",
+   "price_kind": "public_displayed"
+  },
+  "probs": {
+   "TN_W1": 0.8050847457627119,
+   "TN_W2": 0.19491525423728806,
+   "TN_3S": 0.40580676196569565,
+   "TN_2S": 0.5941932380343045,
+   "TN_S2:0": 0.514114173646155,
+   "TN_S0:2": 0.08007906438814945,
+   "TN_S2:1": 0.2909705721165569,
+   "TN_S1:2": 0.11483618984913875,
+   "TN_SET1": 0.9199209356118505,
+   "TN_SET2": 0.48588582635384503
+  },
+  "labels": {
+   "TN_W1": "Победа: Ребека Масарова",
+   "TN_W2": "Победа: Дилетта Черубини",
+   "TN_3S": "Будет 3 сета",
+   "TN_2S": "Будет 2 сета",
+   "TN_S2:0": "Счёт по сетам 2:0",
+   "TN_S0:2": "Счёт по сетам 0:2",
+   "TN_S2:1": "Счёт по сетам 2:1",
+   "TN_S1:2": "Счёт по сетам 1:2",
+   "TN_SET1": "Ребека Масарова возьмёт хотя бы сет",
+   "TN_SET2": "Дилетта Черубини возьмёт хотя бы сет"
+  },
+  "real": {
+   "TN_W1": 1.15,
+   "TN_W2": 4.75
+  },
+  "center": "Линия winline · Эло 1498 : 1449",
+  "bar": [
+   0.8050847457627119,
+   0,
+   0.19491525423728806
+  ],
+  "model": {
+   "elo": [
+    1497.7321873385958,
+    1448.759154676425
+   ],
+   "src": "winline"
+  },
+  "stavka_signal": {
+   "status": "insufficient_opinions",
+   "weight": 0.0
+  },
+  "main": {
+   "key": "TN_2S",
+   "label": "Будет 2 сета",
+   "p": 0.5942,
+   "odds": 1.57,
+   "est": true,
+   "stake": 1.0
+  },
+  "bold": {},
+  "open": {},
+  "top": false,
+  "msg_id": 6403,
+  "btn": 4
  }
 }
