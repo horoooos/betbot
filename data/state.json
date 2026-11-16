@@ -7,10 +7,6 @@
  "schedule_day": "2026-11-16",
  "content_slot": "2026-11-16-23",
  "news_seen": [
-  "https://www.sport-express.ru/football/euro/news/kushanashvili-rasskazal-kak-popal-v-portugalskuyu-tyurmu-na-evro-2004-2474555/",
-  "https://www.sport-express.ru/tennis/wta/news/shnayder-zamenit-muhovu-v-matche-s-andreevoy-na-itogovom-turnire-wta-2474613/",
-  "https://www.sport-express.ru/hockey/khl/news/razin-raskritikoval-igru-ska-posle-porazheniya-ot-minskogo-dinamo-dazhe-ne-hochetsya-kommentirovat-2474621/",
-  "noticed-podelilsya-ozhidaniyami-ot-sleduyushchego-patcha-v-dota-2",
   "https://www.sport-express.ru/football/rfpl/news/kushanashvili-rasskazal-o-perepiske-s-anohinym-iz-tyurmy-2474556/",
   "https://www.sport-express.ru/hockey/world/news/hokkeist-sbornoy-germanii-zayder-zayavil-chto-byl-by-rad-videt-sbornuyu-rossii-na-chempionate-mira-2474633/",
   "https://www.sport-express.ru/hockey/nhl/news/zaschitnik-minnesoty-brok-feyber-posle-pereloma-cherepa-mozhet-debyutirovat-v-sezone-nhl-14-noyabrya-2026-2474628/",
@@ -506,9 +502,13 @@
   "https://www.sport-express.ru/basketball/nba/news/centrovoy-san-antonio-viktor-vembanyama-stal-chetvertym-igrokom-nba-s-unikalnym-sochetaniem-pokazateley-za-12-matchey-2475644/",
   "https://www.sport-express.ru/basketball/nba/news/zaschitnik-leykers-luka-donchich-nabral-468-ochkov-za-12-matchey-nba-luchshiy-pokazatel-za-50-let-15-noyabrya-2026-2475643/",
   "https://www.sport-express.ru/tennis/atp/news/nachalo-pervogo-matcha-medvedeva-na-itogovom-turnire-otlozhili-iz-za-ceremonii-zvereva-2475661/",
-  "parivision-ustupila-heroic-i-pokinula-zakrytyye-otborochnyye-na-pgl-cluj-napoca"
+  "parivision-ustupila-heroic-i-pokinula-zakrytyye-otborochnyye-na-pgl-cluj-napoca",
+  "https://www.sport-express.ru/football/england/news/the-athletic-timber-soglasilsya-prodlit-kontrakt-s-arsenalom-2475669/",
+  "https://www.sport-express.ru/football/nation-league/news/robertson-oboshel-dalglisha-i-stal-rekordsmenom-sbornoy-shotlandii-po-chislu-matchey-2475668/",
+  "https://www.sport-express.ru/football/foreign/news/vanda-nara-obvinila-svoego-byvshego-muzha-mauro-ikardi-v-travle-v-socsetyah-s-pomoschyu-botov-2475667/",
+  "furia-vernulas-na-pervoye-mesto-v-tope-komand-ot-hltv-org-posle-pobedy-na-blast"
  ],
- "news_i": 0,
+ "news_i": 2,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1570,7 +1570,7 @@
  "value_day": "2026-11-16",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-16",
- "site_stamp": "1086|6551|2026-11-16 23|4|be14294f759c7752",
+ "site_stamp": "1086|6552|2026-11-16 23|4|be14294f759c7752",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1700,7 +1700,7 @@
  "streak_day": {
   "2026-11-15": 2
  },
- "news_next": "2026-11-16T23:54:55.435240+03:00",
+ "news_next": "2026-11-17T00:24:55.327678+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1719,7 +1719,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 6551,
+ "dz_last": 6552,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -1815,7 +1815,8 @@
   "https://ss.sport-express.ru/userfiles/materials/224/2243981/1180x665.jpg",
   "https://images.cybersport.ru/images/as-is/plain/b8/b8b405a6-24c6-44f6-b47c-0f3b0b86ad78.jpg",
   "https://images.cybersport.ru/images/as-is/plain/c1/c17e885d-ae7a-45e3-86a3-5f6a48f21b59.jpg",
-  "https://images.cybersport.ru/images/as-is/plain/6c/6cffa5e4-d127-4186-a64b-6b3c68b20c1d.jpg"
+  "https://images.cybersport.ru/images/as-is/plain/6c/6cffa5e4-d127-4186-a64b-6b3c68b20c1d.jpg",
+  "https://images.cybersport.ru/images/as-is/plain/e5/e587e7de-be65-4fd6-a68d-fd669741f8fe.jpg"
  ],
  "indexnow_day": "2026-11-16",
  "vk_wall_err": null,
@@ -1990,7 +1991,8 @@
   "6507",
   "6524",
   "6535",
-  "6550"
+  "6550",
+  "6553"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -2097,11 +2099,12 @@
   "2026-11-16:новость:61208ccc69fb0fbee438a147",
   "2026-11-16:новость:c5c187e86f9250c0b845c87b",
   "2026-11-16:новость:b7b5aa08070cab7b724b9d83",
-  "2026-11-16:новость:4f4fd119ea6c124527aff8b6"
+  "2026-11-16:новость:4f4fd119ea6c124527aff8b6",
+  "2026-11-16:новость:90611de5833a739a2aafe6b0"
  ],
  "dz_last_delivery": {
-  "source_id": 6550,
-  "message_id": 653,
+  "source_id": 6553,
+  "message_id": 654,
   "kind": "новость"
  },
  "learn_attempt_day": "2026-11-16",
@@ -2169,11 +2172,11 @@
    }
   },
   "source": {
-   "last_success": "2026-11-16T20:33:55.847628+00:00",
-   "parsed": 344,
-   "added": 55,
-   "discovered_matches": 15,
-   "pages": 17,
+   "last_success": "2026-11-16T20:55:55.327678+00:00",
+   "parsed": 345,
+   "added": 60,
+   "discovered_matches": 17,
+   "pages": 19,
    "errors": [],
    "parsed_by_sport": {
     "soccer": 50,
@@ -2185,14 +2188,14 @@
    }
   },
   "error": null,
-  "tips": 2680,
+  "tips": 2699,
   "snapshots": 38,
-  "unmapped_markets": 3520,
+  "unmapped_markets": 3561,
   "quote_matches": 14
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-16T23:53:55.707148+03:00",
-  "cursor": "74",
+  "last_poll": "2026-11-16T23:55:55.327678+03:00",
+  "cursor": "76",
   "posts": [
    {
     "post_id": 499,
@@ -2567,6 +2570,40 @@
     },
     "status": "needs_review",
     "observed_at": "2026-11-16T22:53:55.118444+03:00"
+   },
+   {
+    "post_id": 524,
+    "url": "https://vk.com/wall-228963529_524",
+    "title": "Team Spirit уверенно прошла в финал верхней сетки ESSENCE III",
+    "text": "Team Spirit уверенно прошла в финал верхней сетки ESSENCE III\n\nрџ± Team Spirit уверенно прошла в финал верхней сетки турнира ESSENCE III по Dota 2, обыграв PARIVISION со счётом 2:0.\n\nрџЋ® Состав Владимира No[o]ne Миненко опустился в нижнюю сетку после поражения.\n\n#киберспорт #Dota #Владимира #новостиспорта #спорт #главное #аиставит\n\nрџ“Љ Подробнее на сайте рџ‘‡",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": true,
+     "details_present": true,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-16T23:55:55.327678+03:00"
+   },
+   {
+    "post_id": 525,
+    "url": "https://vk.com/wall-228963529_525",
+    "title": "PARIVISION проиграла Heroic и выбывает из закрытой квалификации PGL Cluj-Napoca 2027",
+    "text": "PARIVISION проиграла Heroic и выбывает из закрытой квалификации PGL Cluj-Napoca 2027\n\nрџ“° PARIVISION падает в нижней сетке: 0:2 от «Heroic» и прощается с шансом на основной этап.\n\nрџЋ® В матче закрытой квалификации на PGL Cluj-Napoca 2027 команда Джами Jame Али уступила «Heroic» со счётом 0:2. На карте «Ancient» закончилась 9:13, а на «Cache» – 5:13, что полностью отразило разницу в силе.\n\n#киберспорт #новостиспорта #спорт #главное #аиставит\n\nрџ“Љ Подробнее на сайте рџ‘‡",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": true,
+     "details_present": true,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-16T23:55:55.327678+03:00"
    }
   ],
   "status": "observing"
