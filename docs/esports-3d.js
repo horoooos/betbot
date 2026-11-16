@@ -43,7 +43,7 @@ export function createArena(container,heroes={}) {
   // Decorative embers and base lights are ambience, never interpreted as game events.
   const radiantLight=new THREE.PointLight('#64ffbe',30,25,2);radiantLight.position.set(-40,7,35);scene.add(radiantLight);
   const direLight=new THREE.PointLight('#ff5933',35,25,2);direLight.position.set(38,7,-35);scene.add(direLight);
-  const structures=new Map(),units=new Map();let active=true,last=performance.now(),follow=null,top=false,gameId=null,modelLoaded=0,modelWanted=0;
+  const structures=new Map(),units=new Map();let active=true,last=performance.now(),follow=null,flight=null,top=false,gameId=null,modelLoaded=0,modelWanted=0;
   function structure(b){
     const group=new THREE.Group(),baseMat=b.team===2?stone:darkStone,glow=b.team===2?green:red;
     if(b.destroyed){for(let i=0;i<5;i++)add(group,new THREE.DodecahedronGeometry(.5+i*.09),baseMat,Math.sin(i*4)*1.1,.2,Math.cos(i*4)*1.1);return group;}
@@ -92,12 +92,13 @@ export function createArena(container,heroes={}) {
     for(const b of frame.buildings||[]){const key=[b.team,b.type,b.x,b.y].join(':'),old=structures.get(key);if(old?.userData.destroyed===b.destroyed)continue;if(old)scene.remove(old);const mesh=structure(b);mesh.position.copy(coord(b));mesh.userData.destroyed=b.destroyed;structures.set(key,mesh);scene.add(mesh);}
     active=true;
   }
-  function overview(){follow=null;controls.target.set(0,0,0);camera.position.set(63,102,101);controls.update();}
-  function focus(team,id){const u=units.get(team+':'+id);if(!u)return;follow=u.key;controls.target.copy(u.group.position).add(new THREE.Vector3(0,2,0));camera.position.copy(controls.target).add(new THREE.Vector3(12,15,20));controls.update();}
+  function overview(){follow=null;flight=null;controls.target.set(0,0,0);camera.position.set(63,102,101);controls.update();}
+  function focus(team,id,options={}){const u=units.get(team+':'+id);if(!u)return;follow=u.key;const offset=options.wide?new THREE.Vector3(18,24,30):new THREE.Vector3(12,15,20);if(options.smooth){flight={camera:camera.position.clone(),target:controls.target.clone(),at:performance.now(),offset};}else{flight=null;controls.target.copy(u.group.position).add(new THREE.Vector3(0,2,0));camera.position.copy(controls.target).add(offset);}controls.update();}
+  controls.addEventListener('start',()=>{flight=null;});
   const raycaster=new THREE.Raycaster();let down=null;
   renderer.domElement.addEventListener('pointerdown',e=>{down=[e.clientX,e.clientY];});renderer.domElement.addEventListener('pointerup',e=>{
     if(!down||Math.hypot(e.clientX-down[0],e.clientY-down[1])>6)return;const rect=renderer.domElement.getBoundingClientRect();raycaster.setFromCamera(new THREE.Vector2((e.clientX-rect.left)/rect.width*2-1,-(e.clientY-rect.top)/rect.height*2+1),camera);
-    const hit=raycaster.intersectObjects([...units.values()].map(u=>u.group),true)[0];if(hit){let node=hit.object;while(node&&!node.userData.unitKey)node=node.parent;if(node){const [team,id]=node.userData.unitKey.split(':');focus(team,id);}}
+    const hit=raycaster.intersectObjects([...units.values()].map(u=>u.group),true)[0];if(hit){let node=hit.object;while(node&&!node.userData.unitKey)node=node.parent;if(node){const [team,id]=node.userData.unitKey.split(':');focus(team,id);container.dispatchEvent(new CustomEvent('hero-focus',{detail:node.userData.unitKey}));}}
   });
   function resize(){const w=container.clientWidth,h=container.clientHeight;renderer.setSize(w,h);camera.aspect=w/h;camera.updateProjectionMatrix();}
   const observer=new ResizeObserver(resize);observer.observe(container);resize();
@@ -108,8 +109,8 @@ export function createArena(container,heroes={}) {
       if(speed>.12){const wanted=Math.atan2(movement.x,movement.z),diff=Math.atan2(Math.sin(wanted-u.heading),Math.cos(wanted-u.heading));u.heading+=diff*(1-Math.exp(-dt*9));u.visual.root.rotation.y=u.heading;}
       if(active)u.visual.animate(dt,speed);u.label.visible=!follow||u.key===follow;u.ring.material.opacity=u.key===follow?1:.8;
     }
-    if(follow&&units.has(follow)){const next=units.get(follow).group.position.clone().add(new THREE.Vector3(0,2,0)),delta=next.clone().sub(controls.target);camera.position.add(delta);controls.target.copy(next);}
+    if(follow&&units.has(follow)){const next=units.get(follow).group.position.clone().add(new THREE.Vector3(0,2,0));if(flight){const progress=Math.min(1,(now-flight.at)/1400),ease=progress*progress*(3-2*progress);camera.position.lerpVectors(flight.camera,next.clone().add(flight.offset),ease);controls.target.lerpVectors(flight.target,next,ease);if(progress>=1)flight=null;}else{const delta=next.clone().sub(controls.target);camera.position.add(delta);controls.target.copy(next);}}
     controls.update();renderer.render(scene,camera);
   });
-  return {update,focus,overview,freeze(){active=false;},camera(){top=!top;const target=controls.target;camera.position.copy(target).add(top?new THREE.Vector3(0,follow?28:145,.01):new THREE.Vector3(follow?12:63,follow?15:102,follow?20:101));controls.update();},rotate(){const offset=camera.position.clone().sub(controls.target).applyAxisAngle(new THREE.Vector3(0,1,0),Math.PI/4);camera.position.copy(controls.target).add(offset);controls.update();},zoom(){const offset=camera.position.clone().sub(controls.target);offset.multiplyScalar(offset.length()>30?.65:2);camera.position.copy(controls.target).add(offset);controls.update();},dispose(){renderer.setAnimationLoop(null);observer.disconnect();controls.dispose();for(const u of units.values())clearUnit(u);renderer.dispose();}};
+  return {update,focus,overview,freeze(){active=false;},camera(){flight=null;top=!top;const target=controls.target;camera.position.copy(target).add(top?new THREE.Vector3(0,follow?28:145,.01):new THREE.Vector3(follow?12:63,follow?15:102,follow?20:101));controls.update();},rotate(){const offset=camera.position.clone().sub(controls.target).applyAxisAngle(new THREE.Vector3(0,1,0),Math.PI/4);camera.position.copy(controls.target).add(offset);controls.update();},zoom(){const offset=camera.position.clone().sub(controls.target);offset.multiplyScalar(offset.length()>30?.65:2);camera.position.copy(controls.target).add(offset);controls.update();},dispose(){renderer.setAnimationLoop(null);observer.disconnect();controls.dispose();for(const u of units.values())clearUnit(u);renderer.dispose();}};
 }

@@ -1,6 +1,6 @@
 const q=new URLSearchParams(location.search),id=q.get('e'),div=q.get('d'),native=q.get('game');
 const $=id=>document.getElementById(id),esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const DB='https://aistavvit-default-rtdb.europe-west1.firebasedatabase.app/esportsLive.json';
+const DB='https://aistavvit-default-rtdb.europe-west1.firebasedatabase.app/esportsLive/index.json';
 let match=null,matches=[],arena=null,selected=null,lastId=null,busy=false;
 let nativeInfo=null;
 let heroes={};
@@ -32,7 +32,7 @@ async function positions(){
   try {
     const r=await fetch(DB,{cache:'no-store'});if(!r.ok)throw Error();const data=await r.json(),games=Object.values(data?.games||{}).filter(g=>g.state===5&&g.teams?.length===2&&g.teams.every(t=>t.name?.trim()));
     const fresh=games.filter(g=>Date.now()/1000-g.at<50);
-    $('available').innerHTML=fresh.map(g=>`<a class="es-game" href="esports.html?d=DOTA&game=${encodeURIComponent(g.match_id)}"><span class="es-live-dot">● Dota 2 · живая карта</span><strong>${esc(g.teams.map(t=>t.name).join(' — '))}</strong><span>${Math.floor(Math.max(0,g.game_time)/60)} мин · ${g.teams.map(t=>t.score??'—').join(' : ')} убийств</span></a>`).join('')||'<p class="es-muted">Сейчас нет доступных свежих карт. Проверяем каждые 10 секунд.</p>';
+    $('available').innerHTML=fresh.map(g=>`<a class="es-game" href="dota.html?d=DOTA&game=${encodeURIComponent(g.match_id)}"><span class="es-live-dot">● Dota 2 · живая карта</span><strong>${esc(g.teams.map(t=>t.name).join(' — '))}</strong><span>${Math.floor(Math.max(0,g.game_time)/60)} мин · ${g.teams.map(t=>t.score??'—').join(' : ')} убийств</span></a>`).join('')||'<p class="es-muted">Сейчас нет доступных свежих карт. Проверяем каждые 10 секунд.</p>';
     if((match?.div||div)==='CS2'){empty('Координаты CS2 пока недоступны','Счёт серии и прогноз доступны выше. Живая карта появится при подключении потока CSTV этого турнира.');return;}
     const target=match?[normalized(match.home),normalized(match.away)].sort().join('|'):null;
     selected=native?fresh.find(g=>g.match_id===native):target?fresh.find(g=>pair(g)===target):null;

@@ -22,7 +22,7 @@ class PublishedMatchVisibilityTests(unittest.TestCase):
         self.assertEqual({r['id'] for r in rows},{'187506','1793335'})
         tennis=next(r for r in rows if r['sport']=='tennis');es=next(r for r in rows if r['sport']=='esports')
         self.assertEqual(tennis['path'],'tennis/atp');self.assertTrue(tennis['url'].startswith('live.html?'))
-        self.assertTrue(es['url'].startswith('esports.html?'));self.assertEqual(es['path'],'')
+        self.assertTrue(es['url'].startswith('dota.html?'));self.assertEqual(es['path'],'')
         self.assertIn('1793335',es['prediction'])
         self.assertNotIn('СТАВКА ТВ',tennis['bot']['center'])
 
@@ -50,5 +50,5 @@ class PublishedMatchVisibilityTests(unittest.TestCase):
             self.assertNotIn('СТАВКА ТВ',sports.public_model_label(text))
         e=self.match('esports','DOTA','1793335')
         button=live._tracker(e,'esports','Первый','Второй')
-        self.assertIn('esports.html?',button[1])
+        self.assertIn('dota.html?',button[1])
 

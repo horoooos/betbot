@@ -32,4 +32,4 @@ class ForecastFeedTests(unittest.TestCase):
         self.assertEqual(len(rows),2)
         live=next(r for r in rows if r['sport']=='esports')
         self.assertEqual(live['status'],'in')
-        self.assertIn('esports.html?',live['watch'])
+        self.assertIn('dota.html?',live['watch'])

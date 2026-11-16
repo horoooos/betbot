@@ -573,7 +573,7 @@ function socialCss() {
   document.head.appendChild(st);
 }
 export function supportChat() {
-  if (document.querySelector(".helpfab") || /\/(admin|app|live)\.html$/.test(location.pathname)) return;
+  if (document.querySelector(".helpfab") || /\/(admin|app|live|dota)\.html$/.test(location.pathname)) return;
   const a = document.createElement("a"); a.className = "helpfab"; a.href = SUPPORT_URL; a.target = "_blank"; a.rel = "noopener";
   a.title = "Написать в поддержку (сообщения ВКонтакте)";
   a.innerHTML = `<svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M4 3h16a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H9l-5 4v-4H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm3 6.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm5 0a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm5 0a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z"/></svg><span class="tx">Поддержка</span>`;

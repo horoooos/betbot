@@ -1,6 +1,7 @@
 import copy
 import unittest
-from tools.dota_live_relay import snapshot
+from unittest.mock import patch, Mock
+from tools.dota_live_relay import snapshot, collect
 
 
 class DotaLiveTests(unittest.TestCase):
@@ -52,3 +53,14 @@ class DotaLiveTests(unittest.TestCase):
         graph=snapshot(raw)['gold_graph']
         self.assertEqual((graph[0],graph[-1]),(0,999))
         self.assertLessEqual(len(graph),121)
+
+    def test_all_named_live_matches_are_indexed_without_forecast_or_twelve_match_limit(self):
+        games=[dict(match_id=str(i),server_steam_id=str(i),radiant_name='Home '+str(i),dire_name='Away '+str(i)) for i in range(15)]
+        response=Mock();response.json.return_value={'games':games}
+        def fetch(game):
+            frame=snapshot(self.frame());frame['match_id']=game['match_id'];return frame
+        with patch('tools.dota_live_relay.requests.get',return_value=response),patch('tools.dota_live_relay.fetch_frame',side_effect=fetch):
+            data=collect()
+        self.assertEqual(len(data['games']),15)
+        self.assertEqual(len(data['index']['games']),15)
+        self.assertNotIn('players',data['index']['games']['0']['teams'][0])

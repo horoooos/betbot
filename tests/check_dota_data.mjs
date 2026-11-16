@@ -1,0 +1,16 @@
+import assert from 'node:assert/strict';
+import {liveFrames,mergeDotaMatches,directorTarget,gameClock} from '../docs/dota-data.js';
+const frame={match_id:'909',at:100,state:5,game_time:123,teams:[2,3].map(team=>({team,name:team===2?'Team Spirit':'PARIVISION',score:team,players:Array.from({length:5},(_,id)=>({id:String(id),x:team*.03+id*.001,y:.1,kills:0,networth:1000}))}))};
+assert.equal(liveFrames({games:{a:frame}},110).length,1);
+assert.equal(liveFrames({games:{a:frame}},151).length,0);
+assert.equal(liveFrames({games:{a:{...frame,state:6}}},110).length,0);
+assert.equal(gameClock(123),'2:03');
+const summary={...frame,teams:frame.teams.map(({players,...team})=>team)};
+assert.equal(liveFrames({games:{a:summary}},110,false).length,1);assert.equal(liveFrames({games:{a:summary}},110).length,0);
+const now=Date.parse('2026-11-16T20:00:00Z');
+const base=[{id:'179',sport:'esports',div:'DOTA',home:'PARIVISION',away:'Team Spirit',kickoff:new Date(now).toISOString(),state:'in',tip:'П1',hs:0,as:1}];
+const merged=mergeDotaMatches(base,[frame],now);assert.equal(merged.length,1);assert.equal(merged[0].tip,'П1');assert.equal(merged[0].hs,0);assert.match(merged[0].url,/dota.html/);
+const extra=structuredClone(frame);extra.match_id='910';extra.teams[0].name='Other';
+const all=mergeDotaMatches(base,[frame,extra],now);assert.equal(all.length,2);assert.equal(all.filter(m=>m.tip).length,1);assert.equal(all[1].scoreUnit,'убийства');
+const next=structuredClone(frame);next.teams[1].players[2].kills=1;assert.equal(directorTarget(next,frame,null),'3:2');
+console.log('Dota live list, freshness, deduplication and camera director checks passed');

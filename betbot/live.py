@@ -51,7 +51,9 @@ def _score(e: dict) -> tuple[int, int] | None:
 def _tracker(e: dict, sport: str, h: str, a: str) -> tuple[str, str] | None:
     """Кнопка «Смотреть матч в 3D»: живой трекер на сайте (футбол, хоккей, баскетбол, теннис)."""
     if sport=='esports':
-        return ('🎮 Счёт матча',TRACKER.replace('live.html','esports.html')+'?'+urlencode({'e':e['id'],'d':e['div']}))
+        page = 'dota.html' if e.get('div') == 'DOTA' else 'esports.html'
+        label = '🎮 Смотреть в 3D' if e.get('div') == 'DOTA' else '🎮 Счёт матча'
+        return (label,TRACKER.replace('live.html',page)+'?'+urlencode({'e':e['id'],'d':e['div']}))
     if sport == "football":
         path = f"soccer/{e['slug']}" if e.get("slug") else ""
     else:

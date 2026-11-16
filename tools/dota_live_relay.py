@@ -43,7 +43,7 @@ def snapshot(raw, now=None):
         if (len(gold_graph) - 1) % step:
             out['gold_graph'].append(gold_graph[-1])
     for t in teams:
-        out['teams'].append(dict(id=str(t.get('team_id') or ''), name=t.get('team_name') or '',
+        out['teams'].append(dict(id=str(t.get('team_id') or ''), name=t.get('team_name') or '', logo=t.get('team_logo_url') or '',
             team=t['team_number'], score=t.get('score'), networth=t.get('net_worth'), players=[dict(
                 id=str(p.get('playerid')), name=p.get('name', ''), hero=p.get('heroid'),
                 x=pos(p)[0], y=pos(p)[1], level=p.get('level'), kills=p.get('kill_count'),
@@ -115,7 +115,7 @@ def collect():
                 pass
     at = int(time.time())
     summaries = {key: {**{k: frame.get(k) for k in ('match_id','at','game_time','state')},
-                       'teams': [{k: t.get(k) for k in ('team','name','score','networth')} for t in frame['teams']]}
+                       'teams': [{k: t.get(k) for k in ('team','name','score','networth','logo')} for t in frame['teams']]}
                  for key,frame in frames.items()}
     return {'at': at, 'games': frames, 'index': {'at': at, 'games': summaries}, 'source': 'Valve', 'interval': 10}
 
