@@ -1568,7 +1568,7 @@
  "value_day": "2026-11-16",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-16",
- "site_stamp": "1080|6506|2026-11-16 21|3|2aca4537b3c813e9",
+ "site_stamp": "1080|6508|2026-11-16 21|4|2aca4537b3c813e9",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1717,7 +1717,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 6506,
+ "dz_last": 6508,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2180,8 +2180,8 @@
   "quote_matches": 14
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-16T21:47:54.366715+03:00",
-  "cursor": "70",
+  "last_poll": "2026-11-16T21:49:54.070748+03:00",
+  "cursor": "72",
   "posts": [
    {
     "post_id": 499,
@@ -2505,6 +2505,23 @@
     },
     "status": "needs_review",
     "observed_at": "2026-11-16T19:41:35.190030+03:00"
+   },
+   {
+    "post_id": 520,
+    "url": "https://vk.com/wall-228963529_520",
+    "title": "Артига предсказал своё увольнение сразу после закрытия окна",
+    "text": "Артига предсказал своё увольнение сразу после закрытия окна\n\nрџ“° Франк Артига возглавлял «Рубин» около десяти месяцев, но 24 октября, после 0:2 от «Крыльев Советов» в 12-м туре, его уволили. На тот момент команда стояла 11-й с 12 очками.\n\n#футбол #Артига #новостиспорта #спорт #главное #аиставит\n\nрџ“Љ Подробнее на сайте рџ‘‡",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": true,
+     "details_present": true,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-16T21:49:54.070748+03:00"
    }
   ],
   "status": "observing"
