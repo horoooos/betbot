@@ -7,9 +7,6 @@
  "schedule_day": "2026-11-16",
  "content_slot": "2026-11-16-23",
  "news_seen": [
-  "https://www.sport-express.ru/football/rfpl/news/kushanashvili-rasskazal-o-perepiske-s-anohinym-iz-tyurmy-2474556/",
-  "https://www.sport-express.ru/hockey/world/news/hokkeist-sbornoy-germanii-zayder-zayavil-chto-byl-by-rad-videt-sbornuyu-rossii-na-chempionate-mira-2474633/",
-  "https://www.sport-express.ru/hockey/nhl/news/zaschitnik-minnesoty-brok-feyber-posle-pereloma-cherepa-mozhet-debyutirovat-v-sezone-nhl-14-noyabrya-2026-2474628/",
   "https://www.sport-express.ru/hockey/khl/news/goldobin-posle-porazheniya-ska-ot-minskogo-dinamo-nuzhno-steret-etot-den-iz-pamyati-2474623/",
   "https://www.sport-express.ru/hockey/nhl/news/zaschitnik-aylenders-mettyu-shefer-ustanovil-rekord-nhl-po-matcham-s-nagruzkoy-bolee-26-minut-za-pervye-100-igr-2474636/",
   "https://www.sport-express.ru/football/rfpl/news/guberniev-vystupil-protiv-rasshireniya-rpl-do-18-komand-2474625/",
@@ -506,9 +503,12 @@
   "https://www.sport-express.ru/football/england/news/the-athletic-timber-soglasilsya-prodlit-kontrakt-s-arsenalom-2475669/",
   "https://www.sport-express.ru/football/nation-league/news/robertson-oboshel-dalglisha-i-stal-rekordsmenom-sbornoy-shotlandii-po-chislu-matchey-2475668/",
   "https://www.sport-express.ru/football/foreign/news/vanda-nara-obvinila-svoego-byvshego-muzha-mauro-ikardi-v-travle-v-socsetyah-s-pomoschyu-botov-2475667/",
-  "furia-vernulas-na-pervoye-mesto-v-tope-komand-ot-hltv-org-posle-pobedy-na-blast"
+  "furia-vernulas-na-pervoye-mesto-v-tope-komand-ot-hltv-org-posle-pobedy-na-blast",
+  "https://www.sport-express.ru/hockey/women/news/sbornaya-ssha-zaschitila-titul-zhenskogo-chempionata-mira-obygrav-v-finale-kanadu-2475671/",
+  "https://www.sport-express.ru/hockey/khl/news/glavnyy-trener-salavata-kozlov-vsegda-pochetno-kogda-tebya-vyzyvayut-v-sbornuyu-2475666/",
+  "https://www.sport-express.ru/football/rfpl/news/orlov-o-kritike-krugovogo-v-adres-glushenkova-est-chto-to-neporyadochnoe-ne-po-muzhski-2475672/"
  ],
- "news_i": 2,
+ "news_i": 4,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1570,7 +1570,7 @@
  "value_day": "2026-11-16",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-16",
- "site_stamp": "1086|6565|2026-11-17 00|4|1029052c5eb04c2b",
+ "site_stamp": "1088|6565|2026-11-17 00|4|fa05efcf147ad8f2",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1700,7 +1700,7 @@
  "streak_day": {
   "2026-11-15": 2
  },
- "news_next": "2026-11-17T00:24:55.327678+03:00",
+ "news_next": "2026-11-17T00:56:48.682225+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1816,7 +1816,8 @@
   "https://images.cybersport.ru/images/as-is/plain/b8/b8b405a6-24c6-44f6-b47c-0f3b0b86ad78.jpg",
   "https://images.cybersport.ru/images/as-is/plain/c1/c17e885d-ae7a-45e3-86a3-5f6a48f21b59.jpg",
   "https://images.cybersport.ru/images/as-is/plain/6c/6cffa5e4-d127-4186-a64b-6b3c68b20c1d.jpg",
-  "https://images.cybersport.ru/images/as-is/plain/e5/e587e7de-be65-4fd6-a68d-fd669741f8fe.jpg"
+  "https://images.cybersport.ru/images/as-is/plain/e5/e587e7de-be65-4fd6-a68d-fd669741f8fe.jpg",
+  "https://upload.wikimedia.org/wikipedia/commons/c/ce/GennadyOrlov.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
  ],
  "indexnow_day": "2026-11-17",
  "vk_wall_err": null,
@@ -1992,7 +1993,8 @@
   "6524",
   "6535",
   "6550",
-  "6553"
+  "6553",
+  "6569"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -2100,11 +2102,12 @@
   "2026-11-16:новость:c5c187e86f9250c0b845c87b",
   "2026-11-16:новость:b7b5aa08070cab7b724b9d83",
   "2026-11-16:новость:4f4fd119ea6c124527aff8b6",
-  "2026-11-16:новость:90611de5833a739a2aafe6b0"
+  "2026-11-16:новость:90611de5833a739a2aafe6b0",
+  "2026-11-16:новость:b032639657d25a30449b8c28"
  ],
  "dz_last_delivery": {
-  "source_id": 6553,
-  "message_id": 654,
+  "source_id": 6569,
+  "message_id": 655,
   "kind": "новость"
  },
  "learn_attempt_day": "2026-11-17",
@@ -2194,7 +2197,7 @@
   "quote_matches": 14
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-17T00:23:48.040813+03:00",
+  "last_poll": "2026-11-17T00:25:48.682225+03:00",
   "cursor": "76",
   "posts": [
    {
@@ -2607,14 +2610,5 @@
    }
   ],
   "status": "observing"
- },
- "mod_poll": {
-  "key": "SP2|401883305",
-  "id": "401883305",
-  "poll": 6406,
-  "post": 6405,
-  "home": "Альбасете",
-  "away": "Сельта Фортуна",
-  "kickoff": "2026-11-16T22:30:00+03:00"
  }
 }
