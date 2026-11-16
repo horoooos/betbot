@@ -399,6 +399,10 @@
 <url><loc>https://horoooos.github.io/betbot/news/389-berns-nabral-950-ochkov-vhodit-v-desyatku-luchshih-zaschitnikov-nhl.html</loc><lastmod>2026-10-29</lastmod><priority>0.6</priority></url>
 <url><loc>https://horoooos.github.io/betbot/news/364-bavariya-i-ayaks-sygrayut-v-nayrobi-5-yanv-2027.html</loc><lastmod>2026-10-29</lastmod><priority>0.6</priority></url>
 <url><loc>https://horoooos.github.io/betbot/news/150-aurora-gaming-podpisala-valorant-s-eks-igrokami-vitality-i-liquid.html</loc><lastmod>2026-10-29</lastmod><priority>0.6</priority></url>
+<url><loc>https://horoooos.github.io/betbot/teams/basketball-minnesota-timbervulvz.html</loc><changefreq>daily</changefreq><priority>0.6</priority></url>
+<url><loc>https://horoooos.github.io/betbot/teams/basketball-portlend.html</loc><changefreq>daily</changefreq><priority>0.6</priority></url>
+<url><loc>https://horoooos.github.io/betbot/teams/basketball-nyu-orlean-pelikans.html</loc><changefreq>daily</changefreq><priority>0.6</priority></url>
+<url><loc>https://horoooos.github.io/betbot/teams/basketball-golden-steyt.html</loc><changefreq>daily</changefreq><priority>0.6</priority></url>
 <url><loc>https://horoooos.github.io/betbot/teams/hockey-reyndzhers.html</loc><changefreq>daily</changefreq><priority>0.6</priority></url>
 <url><loc>https://horoooos.github.io/betbot/teams/hockey-monreal.html</loc><changefreq>daily</changefreq><priority>0.6</priority></url>
 <url><loc>https://horoooos.github.io/betbot/teams/basketball-bruklin-nets.html</loc><changefreq>daily</changefreq><priority>0.6</priority></url>
@@ -538,7 +542,6 @@
 <url><loc>https://horoooos.github.io/betbot/teams/hockey-yuta.html</loc><changefreq>daily</changefreq><priority>0.6</priority></url>
 <url><loc>https://horoooos.github.io/betbot/teams/hockey-baffalo.html</loc><changefreq>daily</changefreq><priority>0.6</priority></url>
 <url><loc>https://horoooos.github.io/betbot/teams/basketball-detroyt-pistons.html</loc><changefreq>daily</changefreq><priority>0.6</priority></url>
-<url><loc>https://horoooos.github.io/betbot/teams/basketball-minnesota-timbervulvz.html</loc><changefreq>daily</changefreq><priority>0.6</priority></url>
 <url><loc>https://horoooos.github.io/betbot/teams/hockey-boston.html</loc><changefreq>daily</changefreq><priority>0.6</priority></url>
 <url><loc>https://horoooos.github.io/betbot/teams/hockey-minnesota.html</loc><changefreq>daily</changefreq><priority>0.6</priority></url>
 <url><loc>https://horoooos.github.io/betbot/teams/hockey-toronto.html</loc><changefreq>daily</changefreq><priority>0.6</priority></url>
@@ -551,7 +554,6 @@
 <url><loc>https://horoooos.github.io/betbot/teams/hockey-nyu-dzhersi.html</loc><changefreq>daily</changefreq><priority>0.6</priority></url>
 <url><loc>https://horoooos.github.io/betbot/teams/hockey-kolambus.html</loc><changefreq>daily</changefreq><priority>0.6</priority></url>
 <url><loc>https://horoooos.github.io/betbot/teams/hockey-sent-luis.html</loc><changefreq>daily</changefreq><priority>0.6</priority></url>
-<url><loc>https://horoooos.github.io/betbot/teams/basketball-nyu-orlean-pelikans.html</loc><changefreq>daily</changefreq><priority>0.6</priority></url>
 <url><loc>https://horoooos.github.io/betbot/teams/basketball-denver-naggets.html</loc><changefreq>daily</changefreq><priority>0.6</priority></url>
 <url><loc>https://horoooos.github.io/betbot/teams/football-shapekoense.html</loc><changefreq>daily</changefreq><priority>0.6</priority></url>
 <url><loc>https://horoooos.github.io/betbot/teams/football-vasko-da-gama.html</loc><changefreq>daily</changefreq><priority>0.6</priority></url>
@@ -676,8 +678,6 @@
 <url><loc>https://horoooos.github.io/betbot/teams/football-sbornaya-brazilii.html</loc><changefreq>daily</changefreq><priority>0.6</priority></url>
 <url><loc>https://horoooos.github.io/betbot/teams/football-sbornaya-bahreyna.html</loc><changefreq>daily</changefreq><priority>0.6</priority></url>
 <url><loc>https://horoooos.github.io/betbot/teams/football-sbornaya-yemena.html</loc><changefreq>daily</changefreq><priority>0.6</priority></url>
-<url><loc>https://horoooos.github.io/betbot/teams/basketball-portlend.html</loc><changefreq>daily</changefreq><priority>0.6</priority></url>
-<url><loc>https://horoooos.github.io/betbot/teams/basketball-golden-steyt.html</loc><changefreq>daily</changefreq><priority>0.6</priority></url>
 <url><loc>https://horoooos.github.io/betbot/teams/football-internasonal-bogota.html</loc><changefreq>daily</changefreq><priority>0.6</priority></url>
 <url><loc>https://horoooos.github.io/betbot/teams/football-independente-santa-fe.html</loc><changefreq>daily</changefreq><priority>0.6</priority></url>
 <url><loc>https://horoooos.github.io/betbot/teams/football-sbornaya-peru.html</loc><changefreq>daily</changefreq><priority>0.6</priority></url>
@@ -1340,6 +1340,8 @@
 <url><loc>https://horoooos.github.io/betbot/league.html?p=basketball%2Fwnba</loc><changefreq>daily</changefreq><priority>0.6</priority></url>
 <url><loc>https://horoooos.github.io/betbot/league.html?p=tennis%2Fatp</loc><changefreq>daily</changefreq><priority>0.6</priority></url>
 <url><loc>https://horoooos.github.io/betbot/league.html?p=tennis%2Fwta</loc><changefreq>daily</changefreq><priority>0.6</priority></url>
+<url><loc>https://horoooos.github.io/betbot/predictions/2026-11-17-minnesota-timbervulvz-portlend-401909999.html</loc><lastmod>2026-11-17</lastmod><priority>0.8</priority></url>
+<url><loc>https://horoooos.github.io/betbot/predictions/2026-11-17-nyu-orlean-pelikans-golden-steyt-401910000.html</loc><lastmod>2026-11-17</lastmod><priority>0.8</priority></url>
 <url><loc>https://horoooos.github.io/betbot/predictions/2026-11-17-reyndzhers-monreal-401892726.html</loc><lastmod>2026-11-17</lastmod><priority>0.8</priority></url>
 <url><loc>https://horoooos.github.io/betbot/predictions/2026-11-17-bruklin-nets-filadelfiya-siksers-401909997.html</loc><lastmod>2026-11-17</lastmod><priority>0.8</priority></url>
 <url><loc>https://horoooos.github.io/betbot/predictions/2026-11-17-mayami-hit-hyuston-rokets-401909998.html</loc><lastmod>2026-11-17</lastmod><priority>0.8</priority></url>
@@ -2838,7 +2840,10 @@
 <url><loc>https://horoooos.github.io/betbot/watch/2026-11-16-froglings-do-konca-1793342.html</loc><lastmod>2026-11-16</lastmod><priority>0.8</priority></url>
 <url><loc>https://horoooos.github.io/betbot/watch/2026-11-16-gamerlegion-lgd-gaming-1793341.html</loc><lastmod>2026-11-16</lastmod><priority>0.8</priority></url>
 <url><loc>https://horoooos.github.io/betbot/watch/2026-11-16-gayana-puerto-riko-401929708.html</loc><lastmod>2026-11-16</lastmod><priority>0.8</priority></url>
+<url><loc>https://horoooos.github.io/betbot/watch/2026-11-16-germaniya-niderlandy-401861185.html</loc><lastmod>2026-11-16</lastmod><priority>0.8</priority></url>
+<url><loc>https://horoooos.github.io/betbot/watch/2026-11-16-gibraltar-malta-401861179.html</loc><lastmod>2026-11-16</lastmod><priority>0.8</priority></url>
 <url><loc>https://horoooos.github.io/betbot/watch/2026-11-16-greece-u21-islandiya-u21-401929697.html</loc><lastmod>2026-11-16</lastmod><priority>0.8</priority></url>
+<url><loc>https://horoooos.github.io/betbot/watch/2026-11-16-gretsiya-serbiya-401861188.html</loc><lastmod>2026-11-16</lastmod><priority>0.8</priority></url>
 <url><loc>https://horoooos.github.io/betbot/watch/2026-11-16-guadeloupe-bermudskie-ostrova-401929771.html</loc><lastmod>2026-11-16</lastmod><priority>0.8</priority></url>
 <url><loc>https://horoooos.github.io/betbot/watch/2026-11-16-guyana-puerto-riko-401929708.html</loc><lastmod>2026-11-16</lastmod><priority>0.8</priority></url>
 <url><loc>https://horoooos.github.io/betbot/watch/2026-11-16-guyomar-maristani-martina-trevisan-186797.html</loc><lastmod>2026-11-16</lastmod><priority>0.8</priority></url>
@@ -2887,6 +2892,8 @@
 <url><loc>https://horoooos.github.io/betbot/watch/2026-11-16-sbornaya-tsar-benin-401927172.html</loc><lastmod>2026-11-16</lastmod><priority>0.8</priority></url>
 <url><loc>https://horoooos.github.io/betbot/watch/2026-11-16-sbornaya-zimbabve-ekvatorialnaya-gvineya-401927173.html</loc><lastmod>2026-11-16</lastmod><priority>0.8</priority></url>
 <url><loc>https://horoooos.github.io/betbot/watch/2026-11-16-sbornaya-zimbabve-equatorial-guinea-401927173.html</loc><lastmod>2026-11-16</lastmod><priority>0.8</priority></url>
+<url><loc>https://horoooos.github.io/betbot/watch/2026-11-16-severnaya-makedoniya-sloveniya-401861187.html</loc><lastmod>2026-11-16</lastmod><priority>0.8</priority></url>
+<url><loc>https://horoooos.github.io/betbot/watch/2026-11-16-shveytsariya-shotlandiya-401861186.html</loc><lastmod>2026-11-16</lastmod><priority>0.8</priority></url>
 <url><loc>https://horoooos.github.io/betbot/watch/2026-11-16-sofiya-kostoulas-nuriya-brankachcho-186796.html</loc><lastmod>2026-11-16</lastmod><priority>0.8</priority></url>
 <url><loc>https://horoooos.github.io/betbot/watch/2026-11-16-somali-ghana-401927177.html</loc><lastmod>2026-11-16</lastmod><priority>0.8</priority></url>
 <url><loc>https://horoooos.github.io/betbot/watch/2026-11-16-sporting-jax-zh-dc-power-fc-zh-401878628.html</loc><lastmod>2026-11-16</lastmod><priority>0.8</priority></url>
