@@ -1574,7 +1574,7 @@
  "value_day": "2026-11-16",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-16",
- "site_stamp": "1095|6597|2026-11-17 02|4|1f8891410f029b5e",
+ "site_stamp": "1095|6597|2026-11-17 02|4|e8cfa775af8a4e12",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -2184,30 +2184,33 @@
    }
   },
   "source": {
-   "last_success": "2026-11-16T22:42:23.442190+00:00",
-   "parsed": 344,
-   "added": 70,
+   "last_success": "2026-11-16T23:02:23.478143+00:00",
+   "parsed": 188,
+   "added": 58,
    "discovered_matches": 28,
    "pages": 17,
-   "errors": [],
+   "errors": [
+    "HTTPSConnectionPool(host='stavka.tv', port=443): Max retries exceeded with url: /matches/basketball (Caused by ConnectTimeoutError(<HTTPSConnection(host='stavka",
+    "HTTPSConnectionPool(host='stavka.tv', port=443): Max retries exceeded with url: /predictions/tennis (Caused by ConnectTimeoutError(<HTTPSConnection(host='stavka",
+    "HTTPSConnectionPool(host='stavka.tv', port=443): Max retries exceeded with url: /predictions/csgo (Caused by ConnectTimeoutError(<HTTPSConnection(host='stavka.t",
+    "HTTPSConnectionPool(host='stavka.tv', port=443): Max retries exceeded with url: /predictions/dota2 (Caused by ConnectTimeoutError(<HTTPSConnection(host='stavka.",
+    "HTTPSConnectionPool(host='stavka.tv', port=443): Max retries exceeded with url: /matches/tennis/16-11-2026-podoroska-nadia-lepchenko-varvara (Caused by ConnectT"
+   ],
    "parsed_by_sport": {
     "soccer": 50,
     "ice-hockey": 50,
-    "basketball": 50,
-    "tennis": 50,
-    "csgo": 50,
-    "dota2": 50
+    "basketball": 50
    }
   },
   "error": null,
-  "tips": 2803,
+  "tips": 2831,
   "snapshots": 41,
-  "unmapped_markets": 3777,
+  "unmapped_markets": 3807,
   "quote_matches": 14
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-17T02:00:23.496829+03:00",
-  "cursor": "78",
+  "last_poll": "2026-11-17T02:02:23.478143+03:00",
+  "cursor": "79",
   "posts": [
    {
     "post_id": 499,
@@ -2650,6 +2653,23 @@
     },
     "status": "needs_review",
     "observed_at": "2026-11-17T00:59:48.857918+03:00"
+   },
+   {
+    "post_id": 528,
+    "url": "https://vk.com/wall-228963529_528",
+    "title": "«Локомотив» и Галактионов договорились о расставании",
+    "text": "«Локомотив» и Галактионов договорились о расставании\n\nрџ“° «Локомотив» и главный тренер Михаил Галактионов достигли соглашения о расторжении контракта – официально всё будет оформлено во вторник, 17 ноября. По данным источника, клуб заплатит специалисту менее 60 млн рублей, что существенно ниже суммы, прописанной в договоре.\n\n#футбол #РПЛ #Галактионов #Локомотив #новостиспорта #спорт #главное #аиставит\n\nрџ“Љ Подробнее на сайте рџ‘‡",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": true,
+     "details_present": true,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-17T02:02:23.478143+03:00"
    }
   ],
   "status": "observing"
