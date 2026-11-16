@@ -7199,5 +7199,95 @@
   "close": {
    "_": null
   }
+ },
+ "DOTA|1793339": {
+  "id": "1793339",
+  "div": "DOTA",
+  "sport": "esports",
+  "tournament": "1win Essence · Season 3 2026",
+  "bo": 3,
+  "kickoff": "2026-11-16T22:00:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "tier": "a",
+  "status": "reviewed",
+  "home": {
+   "id": "139340",
+   "name": "LEGION",
+   "ru": "LEGION",
+   "logo": "https://cdn-api.pandascore.co/images/team/image/139340/652px_legion_dota2_allmode.png",
+   "color": "3b4a7a",
+   "score": 0,
+   "winner": false
+  },
+  "away": {
+   "id": "133882",
+   "name": "Aurora",
+   "ru": "Aurora",
+   "logo": "https://cdn-api.pandascore.co/images/team/image/133882/600px_aurora_gaming_2025_allmode.png",
+   "color": "3b4a7a",
+   "score": 0,
+   "winner": false
+  },
+  "odds": {},
+  "probs": {
+   "ES_W1": 0.5223112330743146,
+   "ES_W2": 0.4776887669256854,
+   "ES_FULL": 0.499557257680849,
+   "ES_DRY": 0.500442742319151,
+   "ES_S2:0": 0.2650999181173756,
+   "ES_S0:2": 0.23534282420177535,
+   "ES_S2:1": 0.25721131495693894,
+   "ES_S1:2": 0.24234594272391016,
+   "ES_MAP1": 0.7646571757982247,
+   "ES_MAP2": 0.7349000818826243
+  },
+  "labels": {
+   "ES_W1": "Победа: LEGION",
+   "ES_W2": "Победа: Aurora",
+   "ES_FULL": "Больше 2 карт",
+   "ES_DRY": "Всухую (2:0 или 0:2)",
+   "ES_S2:0": "Счёт по картам 2:0",
+   "ES_S0:2": "Счёт по картам 0:2",
+   "ES_S2:1": "Счёт по картам 2:1",
+   "ES_S1:2": "Счёт по картам 1:2",
+   "ES_MAP1": "LEGION возьмёт хотя бы карту",
+   "ES_MAP2": "Aurora возьмёт хотя бы карту"
+  },
+  "real": {},
+  "center": "BO3 · Эло 1609 : 1594",
+  "bar": [
+   0.5223112330743146,
+   0,
+   0.4776887669256854
+  ],
+  "model": {
+   "elo": [
+    1609.3532343141715,
+    1593.8394993879454
+   ],
+   "src": "Эло"
+  },
+  "stavka_signal": {
+   "status": "collecting",
+   "weight": 0.0,
+   "authors": 8,
+   "group": "esports:DOTA",
+   "snapshot": "DOTA|1793339",
+   "source": "https://stavka.tv"
+  },
+  "main": {
+   "key": "ES_W1",
+   "label": "Победа: LEGION",
+   "p": 0.5223,
+   "odds": 1.78,
+   "est": true,
+   "stake": 1.0
+  },
+  "bold": {},
+  "open": {},
+  "top": false,
+  "msg_id": 6483,
+  "btn": 4
  }
 }
