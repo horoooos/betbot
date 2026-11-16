@@ -13003,7 +13003,7 @@
   "kickoff": "2026-11-16T21:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Scheduled",
   "home": {
    "id": "587",
@@ -13145,7 +13145,10 @@
   "btn": 4,
   "close": {
    "A": 0.4968
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null,
+  "value_hit": null
  },
  "401883305": {
   "id": "401883305",

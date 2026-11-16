@@ -7,7 +7,6 @@
  "schedule_day": "2026-11-16",
  "content_slot": "2026-11-16-22",
  "news_seen": [
-  "https://www.sport-express.ru/tennis/wta/news/pozner-ob-andreevoy-ne-udivlyus-esli-v-buduschem-ona-stanet-pervoy-raketkoy-mira-2474578/",
   "https://www.sport-express.ru/hockey/russia/news/vlasti-chehii-ne-budut-zapreschat-svoim-sportsmenam-uchastie-v-turnirah-s-rossiyanami-2474580/",
   "https://www.sport-express.ru/hockey/world-u20/news/pozner-reshenie-kanady-ne-dopuskat-rossiyu-na-mchm-absolyutno-bezobraznoe-eto-plevok-v-lico-obschestvennosti-2474582/",
   "https://www.sport-express.ru/football/juniors/news/egipet-u-19-rossiya-u-17-schet-i-rezultat-tovarischeskogo-matcha-13-noyabrya-2026-2474594/",
@@ -506,9 +505,10 @@
   "https://www.sport-express.ru/hockey/khl/news/18-letniy-borin-stal-samym-molodym-avtorom-gola-amura-v-khl-2475653/",
   "https://www.sport-express.ru/hockey/europe/news/yaromir-yagr-zayavil-on-oficialno-ne-obyavlyal-o-zavershenii-karery-kogda-mozhet-proyti-proschalnyy-match-2475641/",
   "https://www.sport-express.ru/hockey/world/news/iihf-potrebovala-otvoda-dvuh-arbitrov-cas-po-delu-o-dopuske-sbornoy-rossii-2475631/",
-  "datamainer-v-dota-2-nachali-banit-chiterov-abyuzivshikh-upravleniye-inventarem"
+  "datamainer-v-dota-2-nachali-banit-chiterov-abyuzivshikh-upravleniye-inventarem",
+  "team-spirit-vyshla-v-final-verkhnei-setki-essence-iii-obygrav-parivision"
  ],
- "news_i": 0,
+ "news_i": 2,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1570,7 +1570,7 @@
  "value_day": "2026-11-16",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-16",
- "site_stamp": "1084|6532|2026-11-16 22|4|cc0fe97c8b3e8d7a",
+ "site_stamp": "1085|6534|2026-11-16 22|4|fcbcae3fdca573c6",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1700,7 +1700,7 @@
  "streak_day": {
   "2026-11-15": 2
  },
- "news_next": "2026-11-16T22:51:55.067222+03:00",
+ "news_next": "2026-11-16T23:20:55.416401+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1719,7 +1719,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 6532,
+ "dz_last": 6534,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -1813,7 +1813,8 @@
   "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/Autumn_season_in_Butanic_Garden_%D9%81%D8%B5%D9%84_%D9%BE%D8%A7%DB%8C%DB%8C%D8%B2_%D8%AF%D8%B1_%D8%A8%D8%A7%D8%BA_%D8%A8%D9%88%D8%AA%D8%A7%D9%86%DB%8C%DA%A9%D8%A7%D9%84_%D8%AA%D9%81%D9%84%DB%8C%D8%B3_33.jpg/1280px-Autumn_season_in_Butanic_Garden_%D9%81%D8%B5%D9%84_%D9%BE%D8%A7%DB%8C%DB%8C%D8%B2_%D8%AF%D8%B1_%D8%A8%D8%A7%D8%BA_%D8%A8%D9%88%D8%AA%D8%A7%D9%86%DB%8C%DA%A9%D8%A7%D9%84_%D8%AA%D9%81%D9%84%DB%8C%D8%B3_33.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
   "https://images.cybersport.ru/images/as-is/plain/63/63ed8c05-e496-4d9d-bd6a-f32273f4da73.jpg",
   "https://ss.sport-express.ru/userfiles/materials/224/2243981/1180x665.jpg",
-  "https://images.cybersport.ru/images/as-is/plain/b8/b8b405a6-24c6-44f6-b47c-0f3b0b86ad78.jpg"
+  "https://images.cybersport.ru/images/as-is/plain/b8/b8b405a6-24c6-44f6-b47c-0f3b0b86ad78.jpg",
+  "https://images.cybersport.ru/images/as-is/plain/c1/c17e885d-ae7a-45e3-86a3-5f6a48f21b59.jpg"
  ],
  "indexnow_day": "2026-11-16",
  "vk_wall_err": null,
@@ -1986,7 +1987,8 @@
   "6479",
   "6489",
   "6507",
-  "6524"
+  "6524",
+  "6535"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -2091,11 +2093,12 @@
   "2026-11-16:новость:79ba4cdac5bb8d3a7b1629b7",
   "2026-11-16:новость:95142be3e1a5a46718f4284c",
   "2026-11-16:новость:61208ccc69fb0fbee438a147",
-  "2026-11-16:новость:c5c187e86f9250c0b845c87b"
+  "2026-11-16:новость:c5c187e86f9250c0b845c87b",
+  "2026-11-16:новость:b7b5aa08070cab7b724b9d83"
  ],
  "dz_last_delivery": {
-  "source_id": 6524,
-  "message_id": 651,
+  "source_id": 6535,
+  "message_id": 652,
   "kind": "новость"
  },
  "learn_attempt_day": "2026-11-16",
@@ -2121,9 +2124,9 @@
   "model": {
    "weight": 0.0,
    "status": "collecting",
-   "settled_matches": 7,
+   "settled_matches": 8,
    "required_matches": 100,
-   "trained_at": "2026-11-16T18:55:54.106453+00:00"
+   "trained_at": "2026-11-16T19:51:55.416401+00:00"
   },
   "sport_models": {
    "hockey": {
@@ -2185,8 +2188,8 @@
   "quote_matches": 14
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-16T22:49:55.752824+03:00",
-  "cursor": "72",
+  "last_poll": "2026-11-16T22:51:55.416401+03:00",
+  "cursor": "73",
   "posts": [
    {
     "post_id": 499,
@@ -2527,6 +2530,23 @@
     },
     "status": "needs_review",
     "observed_at": "2026-11-16T21:49:54.070748+03:00"
+   },
+   {
+    "post_id": 522,
+    "url": "https://vk.com/wall-228963529_522",
+    "title": "Защитник ЦСКА Данилов взобрался на 3-е место в рейтинге талантов России",
+    "text": "Защитник ЦСКА Данилов взобрался на 3-е место в рейтинге талантов России\n\nрџ± Данилов в топ-3 лучших молодых футболистов России!\n\nвљЅпёЏ 19-летний защитник «ЦСКА» Кирилл Данилов занял третье место в рейтинге «55 главных талантов России-2026», составленном «Спорт-Экспрессом». Это третий в списке, а по трансферной стоимости — первое.\n\n#футбол #Данилов #новостиспорта #спорт #главное #аиставит\n\nрџ“Љ Подробнее на сайте рџ‘‡",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": true,
+     "details_present": true,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-16T22:51:55.416401+03:00"
    }
   ],
   "status": "observing"
