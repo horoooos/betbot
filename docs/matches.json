@@ -554,8 +554,8 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-16-miluoki-baks-atlanta-hoks-401909992.html",
-"hs": "78",
-"as": "84",
+"hs": "80",
+"as": "87",
 "tip": "ТМ 233.5 · 1.87",
 "top": false,
 "bot": {
@@ -908,8 +908,8 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-16-sakramento-kingz-oklahoma-siti-tander-401909993.html",
-"hs": "36",
-"as": "37",
+"hs": "39",
+"as": "40",
 "tip": "ТМ 223.5 · 1.91",
 "top": false,
 "bot": {
@@ -1221,7 +1221,15 @@ null
 ],
 "center": "Ожидаемые голы 2.9 : 3.6"
 },
-"lt": null
+"lt": {
+"fair": 1.44,
+"label": "П1 (осн. время)",
+"min_odds": 1.51,
+"minute": "2-й период",
+"p": 0.693,
+"result": null,
+"score": "2:0"
+}
 },
 {
 "sport": "esports",
