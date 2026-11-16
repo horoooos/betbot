@@ -1,97 +1,6 @@
 [
 {
 "sport": "basketball",
-"id": "401909988",
-"league": "США · NBA",
-"kickoff": "2026-11-16T01:00:00+03:00",
-"home": "Юта Джаз",
-"away": "Сан-Антонио Сперс",
-"hl": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/utah.png",
-"al": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/sa.png",
-"hid": "26",
-"aid": "24",
-"bb": "https://betboom.ru/search?query=%D0%94%D0%B6%D0%B0%D0%B7&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=basketball",
-"path": "basketball/nba",
-"url": "live.html?s=basketball&p=basketball%2Fnba&e=401909988&h=%D0%AE%D1%82%D0%B0+%D0%94%D0%B6%D0%B0%D0%B7&a=%D0%A1%D0%B0%D0%BD-%D0%90%D0%BD%D1%82%D0%BE%D0%BD%D0%B8%D0%BE+%D0%A1%D0%BF%D0%B5%D1%80%D1%81",
-"div": "NBA",
-"state": "post",
-"bo": null,
-"prediction": "predictions/2026-11-16-yuta-dzhaz-san-antonio-spers-401909988.html",
-"hs": "102",
-"as": "110",
-"tip": "ТМ 222.5 · 1.93",
-"top": false,
-"bot": {
-"main": {
-"label": "ТМ 222.5",
-"p": 0.5,
-"odds": 1.93,
-"est": false
-},
-"bold": null,
-"markets": [
-[
-"П1 (с ОТ)",
-0.113,
-7.5
-],
-[
-"П2 (с ОТ)",
-0.887,
-1.102
-],
-[
-"Ф1 (+14.5)",
-0.5,
-1.926
-],
-[
-"Ф2 (-14.5)",
-0.5,
-1.893
-],
-[
-"ТБ 215.5",
-0.66,
-null
-],
-[
-"ТМ 215.5",
-0.34,
-null
-],
-[
-"ТБ 222.5",
-0.5,
-1.893
-],
-[
-"ТМ 222.5",
-0.5,
-1.926
-],
-[
-"ТБ 229.5",
-0.34,
-null
-],
-[
-"ТМ 229.5",
-0.66,
-null
-]
-],
-"bar": [
-0.11345953586873964,
-0,
-0.8865404641312604
-],
-"center": "Ожидаемый счёт 104 : 118"
-},
-"lt": null
-},
-{
-"sport": "basketball",
 "id": "401909989",
 "league": "США · NBA",
 "kickoff": "2026-11-16T02:00:00+03:00",
@@ -196,7 +105,7 @@ null
 "path": "basketball/nba",
 "url": "live.html?s=basketball&p=basketball%2Fnba&e=401909990&h=%D0%A2%D0%BE%D1%80%D0%BE%D0%BD%D1%82%D0%BE+%D0%A0%D1%8D%D0%BF%D1%82%D0%BE%D1%80%D1%81&a=%D0%9D%D1%8C%D1%8E-%D0%99%D0%BE%D1%80%D0%BA+%D0%9D%D0%B8%D0%BA%D1%81",
 "div": "NBA",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "predictions/2026-11-16-toronto-reptors-nyu-york-niks-401909990.html",
 "hs": "108",
@@ -425,7 +334,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-16-vashington-uizards-hyuston-rokets-401909991.html",
-"hs": "83",
+"hs": "88",
 "as": "119",
 "tip": "ТМ 223.5 · 1.89",
 "top": false,
@@ -646,7 +555,7 @@ null
 "bo": null,
 "prediction": "predictions/2026-11-16-miluoki-baks-atlanta-hoks-401909992.html",
 "hs": "51",
-"as": "47",
+"as": "48",
 "tip": "ТМ 233.5 · 1.87",
 "top": false,
 "bot": {
