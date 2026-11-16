@@ -1,0 +1,13 @@
+Dota 2 hero models, textures, animations and names are Valve Corporation's content.
+Model catalog source: https://github.com/justkiddingxd/dota-loadout
+The exact source revision is pinned in ../dota-models.json. Only the 10 selected
+heroes are fetched by the browser, not the entire model collection.
+No data or backend service from datdota/broodmother is used.
+
+Map overview texture: OpenDota web repository
+https://github.com/odota/web/blob/master/public/assets/images/dota2/map/detailed_740.webp
+Terrain is a visual reconstruction based on map 7.40, not a live collision mesh.
+Buildings and players are positioned from the Valve live match frame.
+Decorative trees, rocks and lights are not live game entities.
+
+This viewer is not affiliated with or endorsed by Valve.

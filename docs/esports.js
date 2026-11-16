@@ -2,6 +2,7 @@ const q=new URLSearchParams(location.search),id=q.get('e'),div=q.get('d'),native
 const $=id=>document.getElementById(id),esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const DB='https://aistavvit-default-rtdb.europe-west1.firebasedatabase.app/esportsLive.json';
 let match=null,matches=[],arena=null,selected=null,lastId=null,busy=false;
+let nativeInfo=null;
 let heroes={};
 try {const r=await fetch("dota-heroes.json?v=2",{cache:"no-store"});if(r.ok)heroes=await r.json();}catch(e){}
 const normalized=s=>String(s||'').toLowerCase().replace(/\b(team|gaming|esports)\b/g,'').replace(/[^\p{L}\p{N}]/gu,'');
@@ -29,22 +30,26 @@ function empty(title,text){$('empty').hidden=false;$('emptyTitle').textContent=t
 async function positions(){
   if(busy||document.hidden)return;busy=true;
   try {
-    const r=await fetch(DB,{cache:'no-store'});if(!r.ok)throw Error();const data=await r.json(),games=Object.values(data?.games||{});
+    const r=await fetch(DB,{cache:'no-store'});if(!r.ok)throw Error();const data=await r.json(),games=Object.values(data?.games||{}).filter(g=>g.state===5&&g.teams?.length===2&&g.teams.every(t=>t.name?.trim()));
     const fresh=games.filter(g=>Date.now()/1000-g.at<50);
     $('available').innerHTML=fresh.map(g=>`<a class="es-game" href="esports.html?d=DOTA&game=${encodeURIComponent(g.match_id)}"><span class="es-live-dot">● Dota 2 · живая карта</span><strong>${esc(g.teams.map(t=>t.name).join(' — '))}</strong><span>${Math.floor(Math.max(0,g.game_time)/60)} мин · ${g.teams.map(t=>t.score??'—').join(' : ')} убийств</span></a>`).join('')||'<p class="es-muted">Сейчас нет доступных свежих карт. Проверяем каждые 10 секунд.</p>';
     if((match?.div||div)==='CS2'){empty('Координаты CS2 пока недоступны','Счёт серии и прогноз доступны выше. Живая карта появится при подключении потока CSTV этого турнира.');return;}
     const target=match?[normalized(match.home),normalized(match.away)].sort().join('|'):null;
     selected=native?fresh.find(g=>g.match_id===native):target?fresh.find(g=>pair(g)===target):null;
-    if(!selected){empty(native?'Карта завершилась или данные задерживаются':match?'Ждём координаты этого матча':'Выбери живую карту ниже',native?'Старые позиции не выдаём за прямую трансляцию. Ниже доступны другие текущие карты.':'Как только Valve предоставит позиции обеих команд, карта включится автоматически. Доступные сейчас карты — ниже.');return;}
-    if(native){titleAndScore({home:selected.teams[0].name,away:selected.teams[1].name,league:'Dota 2',state:'in',hs:selected.teams[0].score,as:selected.teams[1].score});}
-    if(!arena){const {createArena}=await import('./esports-3d.js?v=1');arena=createArena($('arena'),heroes);}
+    if(!selected){if(native){if(nativeInfo)titleAndScore({...nativeInfo,state:'unknown'});else{$('esTitle').textContent='Живая карта недоступна';$('scoreboard').innerHTML='<p class="es-muted">Карта завершилась или источник ещё не передаёт её данные. Выбери другую живую карту ниже.</p>';}}$('modelState').textContent='Ожидаем данные';empty(native?'Карта завершилась или данные задерживаются':match?'Ждём координаты этого матча':'Выбери живую карту ниже',native?'Старые позиции не выдаём за прямую трансляцию. Ниже доступны другие текущие карты.':'Как только Valve предоставит позиции обеих команд, карта включится автоматически. Доступные сейчас карты — ниже.');return;}
+    if(native){nativeInfo={home:selected.teams[0].name,away:selected.teams[1].name,league:'Dota 2',state:'in',hs:selected.teams[0].score,as:selected.teams[1].score};titleAndScore(nativeInfo);}
+    if(!arena){const {createArena}=await import('./esports-3d.js?v=3');arena=createArena($('arena'),heroes);}
     if(lastId!==selected.match_id){lastId=selected.match_id;}
     arena.update(selected);$('empty').hidden=true;
+    const focus=$('focusHero'),chosen=focus.value;focus.innerHTML='<option value="">Вся карта · выбрать героя…</option>'+selected.teams.map(t=>t.players.map(p=>'<option value="'+t.team+':'+p.id+'">'+esc((heroes[p.hero]?.name||p.hero)+' · '+p.name)+'</option>').join('')).join('');if([...focus.options].some(o=>o.value===chosen))focus.value=chosen;
     $('telemetry').textContent='● '+Math.floor(Math.max(0,selected.game_time)/60)+':'+String(Math.max(0,selected.game_time)%60).padStart(2,'0')+' · координаты обновлены';
     $('roster').innerHTML=selected.teams.map(t=>`<div><h3 style="color:${t.team===2?'#42e6a4':'#ff7d88'}">${esc(t.name)} · ${esc(t.score??'—')} убийств</h3>${t.players.map(p=>`<div class="es-player"><span><b>${esc(p.name)}</b> · ${esc(heroes[p.hero]?.name||'герой '+p.hero)}</span><span>${p.kills??0}/${p.deaths??0}/${p.assists??0} · ур. ${p.level??'—'}</span></div>`).join('')}</div>`).join('');
   }catch(e){empty('Не удалось обновить живую карту','Проверяем соединение. Счёт серии и разбор остаются доступны.');}finally{busy=false;}
 }
+$('focusHero').onchange=()=>{const value=$('focusHero').value;if(value){const [team,id]=value.split(':');arena?.focus(team,id);}else arena?.overview();};$('resetArena').onclick=()=>{arena?.overview();$('focusHero').value='';};
 $('camera').onclick=()=>arena?.camera();$('rotate').onclick=()=>arena?.rotate();$('zoom').onclick=()=>arena?.zoom();$('fullscreen').onclick=()=>{const view=$('arena');if(document.fullscreenElement)document.exitFullscreen();else view.requestFullscreen?.().catch(()=>{});};
 await schedule();await positions();
 setInterval(()=>{if(!document.hidden)schedule();},60000);setInterval(positions,10000);
 document.addEventListener('visibilitychange',()=>{if(!document.hidden)positions();});
+
+addEventListener('pagehide',e=>{if(!e.persisted)arena?.dispose();});
