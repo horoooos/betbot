@@ -7,17 +7,6 @@
  "schedule_day": "2026-11-16",
  "content_slot": "2026-11-16-13",
  "news_seen": [
-  "https://www.sport-express.ru/football/france/news/ismael-stal-novym-glavnym-trenerom-gavra-2474266/",
-  "https://www.sport-express.ru/football/nation-league/news/adrien-rabo-kommentariy-po-porazheniyu-francii-ot-italii-v-lige-naciy-2474268/",
-  "https://www.sport-express.ru/tennis/wta/news/mirra-andreeva-sygraet-s-peguloy-v-polufinale-itogovogo-turnira-wta-2474316/",
-  "https://www.sport-express.ru/hockey/nhl/news/los-andzheles-aylenders-schet-2-5-rezultat-matcha-nhl-13-noyabrya-2026-2474321/",
-  "https://www.sport-express.ru/football/rfpl/news/otar-kushanashvili-kommentariy-po-resheniyu-leonida-sluckogo-sosredotochitsya-na-mediynoy-deyatelnosti-vmesto-trenerstva-2474303/",
-  "team-vitality-ili-mouz-kto-pobedit-v-matche-plei-off-blast-rivals-fall-2026",
-  "virtus-pro-proshla-v-polufinal-blast-r6-major-osaka-2026",
-  "https://www.sport-express.ru/hockey/nhl/news/napadayuschiy-minnesoty-mett-boldi-kirill-kaprizov-superzvezda-ne-prosto-tak-on-delaet-vse-2474327/",
-  "https://www.sport-express.ru/hockey/nhl/news/napadayuschiy-kolorado-makkinnon-travmirovalsya-posle-stolknoveniya-s-rossiyaninom-zubom-2474326/",
-  "https://www.sport-express.ru/hockey/nhl/news/vratar-ilya-sorokin-priznan-vtoroy-zvezdoy-matcha-los-andzheles-aylenders-2474331/",
-  "https://www.sport-express.ru/tennis/wta/news/pegula-nazvala-match-s-andreevoy-osobenno-ozhidaemym-iz-za-incidenta-na-trenirovke-2474334/",
   "https://www.sport-express.ru/football/rfpl/news/kushanashvili-prizval-spartak-vernut-dzyubu-on-russkiy-messi-2474304/",
   "mouz-vybila-team-vitality-iz-blast-rivals-fall-2026",
   "smozhet-li-g2-ne-pustit-team-falcons-v-polufinal-blast-rivals-fall-2026",
@@ -516,9 +505,10 @@
   "https://www.sport-express.ru/hockey/khl/news/dobrohvalov-zayavil-chto-khl-ne-sobiraetsya-otkazyvatsya-ot-fan-sektorov-2475450/",
   "https://www.sport-express.ru/hockey/khl/news/vice-prezident-khl-dobrohvalov-dazhe-v-omske-novosibirske-i-chelyabinske-okolo-poloviny-zhiteley-nikogda-ne-byli-na-hokkee-2475449/",
   "https://www.sport-express.ru/tennis/wta/news/andreeva-o-trenere-martines-ona-mne-kak-vtoraya-mama-2475465/",
-  "https://www.sport-express.ru/football/nation-league/news/romelu-lukaku-zavershil-kareru-v-sbornoy-belgii-v-33-goda-statistika-matchi-i-goly-2475467/"
+  "https://www.sport-express.ru/football/nation-league/news/romelu-lukaku-zavershil-kareru-v-sbornoy-belgii-v-33-goda-statistika-matchi-i-goly-2475467/",
+  "https://www.sport-express.ru/football/rfpl/news/shomurodov-o-vozmozhnom-zavershenii-karery-v-rostove-nuzhno-horosho-podumat-2475469/"
  ],
- "news_i": 0,
+ "news_i": 1,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1712,7 +1702,7 @@
  "streak_day": {
   "2026-11-15": 2
  },
- "news_next": "2026-11-16T13:19:33.210398+03:00",
+ "news_next": "2026-11-16T13:53:32.990426+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1814,7 +1804,8 @@
   "https://ss.sport-express.ru/userfiles/materials/224/2243723/1180x665.jpg",
   "https://images.cybersport.ru/images/as-is/plain/b9/b9948e95-7085-4527-a5bd-c3c15a4f0352.jpg",
   "https://upload.wikimedia.org/wikipedia/commons/f/f1/Notre_Dame_Fans%2C_Notre_Dame_Stadium%2C_University_of_Notre_Dame%2C_South_Bend%2C_Indiana_%2811045887666%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-  "https://images.cybersport.ru/images/as-is/plain/ba/ba8bbf39-84fd-405c-afc0-539782639124.jpg"
+  "https://images.cybersport.ru/images/as-is/plain/ba/ba8bbf39-84fd-405c-afc0-539782639124.jpg",
+  "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a3/EC_Stadium.jpg/1280px-EC_Stadium.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
  ],
  "indexnow_day": "2026-11-16",
  "vk_wall_err": null,
@@ -1976,7 +1967,8 @@
   "6381",
   "6383",
   "6385",
-  "6388"
+  "6388",
+  "6390"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -2070,11 +2062,12 @@
   "2026-11-16:новость:11dbbf1477304c70c168a645",
   "2026-11-16:новость:1b51b2831c0fc110a5bee5fc",
   "2026-11-16:новость:a7ffd9e562eecccb83b7eb49",
-  "2026-11-16:новость:ff6396bef2d3533a0af8c094"
+  "2026-11-16:новость:ff6396bef2d3533a0af8c094",
+  "2026-11-16:новость:80fbf3a05f19cd155caa691b"
  ],
  "dz_last_delivery": {
-  "source_id": 6388,
-  "message_id": 640,
+  "source_id": 6390,
+  "message_id": 641,
   "kind": "новость"
  },
  "learn_attempt_day": "2026-11-16",
@@ -2164,8 +2157,8 @@
   "quote_matches": 13
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-16T13:19:32.754131+03:00",
-  "cursor": "62",
+  "last_poll": "2026-11-16T13:21:32.990426+03:00",
+  "cursor": "63",
   "posts": [
    {
     "post_id": 499,
@@ -2370,6 +2363,23 @@
     },
     "status": "needs_review",
     "observed_at": "2026-11-16T12:17:24.276715+03:00"
+   },
+   {
+    "post_id": 512,
+    "url": "https://vk.com/wall-228963529_512",
+    "title": "Seized поздравил FURIA с триумфом и предрек нелёгкий прощальный матч для FalleN",
+    "text": "Seized поздравил FURIA с триумфом и предрек нелёгкий прощальный матч для FalleN\n\nрџ± Бывший киберспортсмен Денис «Seized» Костин опубликовал в X эмоциональный пост после того, как «FURIA Esports» завоевала титул BLAST Rivals Fall 2026 по CS2.\n\n#киберспорт #CS2 #новостиспорта #спорт #главное #аиставит\n\nрџ“Љ Подробнее на сайте рџ‘‡",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": true,
+     "details_present": true,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-16T13:21:32.990426+03:00"
    }
   ],
   "status": "observing"
