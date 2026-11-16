@@ -7,10 +7,6 @@
  "schedule_day": "2026-11-16",
  "content_slot": "2026-11-16-10",
  "news_seen": [
-  "https://www.sport-express.ru/football/nation-league/news/rayan-sherki-kommentariy-po-porazheniyu-francii-ot-italii-v-lige-naciy-uefa-2474277/",
-  "https://www.sport-express.ru/football/nation-league/news/nikolo-kambyagi-kommentariy-po-pobede-italii-nad-franciey-v-lige-naciy-uefa-2474276/",
-  "https://www.sport-express.ru/football/nation-league/news/zidan-rasskazal-chto-ego-rasstroilo-v-matche-s-italiey-2474275/",
-  "https://www.sport-express.ru/football/nation-league/news/aleks-kral-kommentariy-po-porazheniyu-chehii-ot-ispanii-v-lige-naciy-uefa-2474272/",
   "https://www.sport-express.ru/football/nation-league/news/pedro-porro-kommentariy-po-pobede-ispanii-nad-chehiey-v-matche-ligi-naciy-uefa-2474273/",
   "https://www.sport-express.ru/football/nation-league/news/de-breyne-poluchil-nebolshoe-povrezhdenie-v-matche-s-turciey-2474270/",
   "https://www.sport-express.ru/football/nation-league/news/roberto-manchini-kommentariy-po-pobede-italii-nad-franciey-v-lige-naciy-2474269/",
@@ -506,9 +502,13 @@
   "https://www.sport-express.ru/football/england/news/romano-arsenal-blizok-k-prodleniyu-kontrakta-s-raysom-2475436/",
   "pimp-vitality-vyigrayet-meidzhor",
   "https://www.sport-express.ru/tennis/atp/news/alkaras-nazval-matchi-s-medvedevym-izmatyvayuschimi-fizicheski-i-psihologicheski-2475439/",
-  "by-owl-vozmozhno-v-budushchem-ya-prokommentiruyu-dotu-i-pobyvayu-na-the"
+  "by-owl-vozmozhno-v-budushchem-ya-prokommentiruyu-dotu-i-pobyvayu-na-the",
+  "https://www.sport-express.ru/hockey/world-u20/news/yurist-fhr-nazvala-nezakonnym-reshenie-iihf-ne-dopuskat-rossiyu-na-mchm-2475448/",
+  "https://www.sport-express.ru/hockey/khl/news/v-khl-zayavili-chto-chislo-pretendentov-na-kubok-gagarina-vyroslo-do-shesti-2475445/",
+  "https://www.sport-express.ru/hockey/khl/news/dobrohvalov-rasskazal-zarabatyvaet-li-khl-na-matche-zvezd-2475440/",
+  "https://www.sport-express.ru/football/rfpl/news/gazizov-o-vozmozhnom-matche-protiv-mediakomandy-mahachkalinskomu-dinamo-poka-eto-neinteresno-2475444/"
  ],
- "news_i": 2,
+ "news_i": 4,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1702,7 +1702,7 @@
  "streak_day": {
   "2026-11-15": 2
  },
- "news_next": "2026-11-16T11:53:23.466519+03:00",
+ "news_next": "2026-11-16T12:25:24.278683+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1802,7 +1802,8 @@
   "https://images.cybersport.ru/images/as-is/plain/0f/0fd1483b-6ab7-48f4-9352-58e5ff825449.jpg",
   "https://ss.sport-express.ru/userfiles/materials/224/2243686/1180x665.jpg",
   "https://ss.sport-express.ru/userfiles/materials/224/2243723/1180x665.jpg",
-  "https://images.cybersport.ru/images/as-is/plain/b9/b9948e95-7085-4527-a5bd-c3c15a4f0352.jpg"
+  "https://images.cybersport.ru/images/as-is/plain/b9/b9948e95-7085-4527-a5bd-c3c15a4f0352.jpg",
+  "https://upload.wikimedia.org/wikipedia/commons/f/f1/Notre_Dame_Fans%2C_Notre_Dame_Stadium%2C_University_of_Notre_Dame%2C_South_Bend%2C_Indiana_%2811045887666%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
  ],
  "indexnow_day": "2026-11-16",
  "vk_wall_err": null,
@@ -1962,7 +1963,8 @@
   "6307",
   "6317",
   "6381",
-  "6383"
+  "6383",
+  "6385"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -2054,11 +2056,12 @@
   "2026-11-15:новость:71e349e542f94098a06c4a76",
   "2026-11-15:новость:5cc063e1c40c3d0c7faaece2",
   "2026-11-16:новость:11dbbf1477304c70c168a645",
-  "2026-11-16:новость:1b51b2831c0fc110a5bee5fc"
+  "2026-11-16:новость:1b51b2831c0fc110a5bee5fc",
+  "2026-11-16:новость:a7ffd9e562eecccb83b7eb49"
  ],
  "dz_last_delivery": {
-  "source_id": 6383,
-  "message_id": 638,
+  "source_id": 6385,
+  "message_id": 639,
   "kind": "новость"
  },
  "learn_attempt_day": "2026-11-16",
@@ -2148,7 +2151,7 @@
   "quote_matches": 13
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-16T11:51:24.465792+03:00",
+  "last_poll": "2026-11-16T11:53:24.278683+03:00",
   "cursor": "60",
   "posts": [
    {
