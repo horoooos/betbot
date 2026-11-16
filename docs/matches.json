@@ -1,96 +1,5 @@
 [
 {
-"sport": "basketball",
-"id": "401909991",
-"league": "США · NBA",
-"kickoff": "2026-11-16T03:00:00+03:00",
-"home": "Вашингтон Уизардс",
-"away": "Хьюстон Рокетс",
-"hl": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/wsh.png",
-"al": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/hou.png",
-"hid": "27",
-"aid": "10",
-"bb": "https://betboom.ru/search?query=%D0%92%D0%B0%D1%88%D0%B8%D0%BD%D0%B3%D1%82%D0%BE%D0%BD&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=basketball",
-"path": "basketball/nba",
-"url": "live.html?s=basketball&p=basketball%2Fnba&e=401909991&h=%D0%92%D0%B0%D1%88%D0%B8%D0%BD%D0%B3%D1%82%D0%BE%D0%BD+%D0%A3%D0%B8%D0%B7%D0%B0%D1%80%D0%B4%D1%81&a=%D0%A5%D1%8C%D1%8E%D1%81%D1%82%D0%BE%D0%BD+%D0%A0%D0%BE%D0%BA%D0%B5%D1%82%D1%81",
-"div": "NBA",
-"state": "post",
-"bo": null,
-"prediction": "predictions/2026-11-16-vashington-uizards-hyuston-rokets-401909991.html",
-"hs": "119",
-"as": "147",
-"tip": "ТМ 223.5 · 1.89",
-"top": false,
-"bot": {
-"main": {
-"label": "ТМ 223.5",
-"p": 0.5,
-"odds": 1.89,
-"est": false
-},
-"bold": null,
-"markets": [
-[
-"П1 (с ОТ)",
-0.239,
-3.76
-],
-[
-"П2 (с ОТ)",
-0.761,
-1.29
-],
-[
-"Ф1 (+8.5)",
-0.5,
-1.885
-],
-[
-"Ф2 (-8.5)",
-0.5,
-1.935
-],
-[
-"ТБ 216.5",
-0.66,
-null
-],
-[
-"ТМ 216.5",
-0.34,
-null
-],
-[
-"ТБ 223.5",
-0.5,
-1.935
-],
-[
-"ТМ 223.5",
-0.5,
-1.885
-],
-[
-"ТБ 230.5",
-0.34,
-null
-],
-[
-"ТМ 230.5",
-0.66,
-null
-]
-],
-"bar": [
-0.23936914086644995,
-0,
-0.76063085913355
-],
-"center": "Ожидаемый счёт 108 : 116"
-},
-"lt": null
-},
-{
 "sport": "hockey",
 "id": "401892721",
 "league": "США · NHL",
@@ -591,8 +500,8 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-16-sakramento-kingz-oklahoma-siti-tander-401909993.html",
-"hs": "82",
-"as": "104",
+"hs": "84",
+"as": "107",
 "tip": "ТМ 223.5 · 1.91",
 "top": false,
 "bot": {
@@ -2211,6 +2120,31 @@ null
 "bb": "https://betboom.ru/search?query=%D0%9C%D0%B0%D0%BB%D0%B0%D0%B9%D0%B7%D0%B8%D0%B8&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
 "path": "soccer/fifa.friendly",
 "url": "live.html?s=football&p=soccer%2Ffifa.friendly&e=401930237&h=%D0%A1%D0%B1%D0%BE%D1%80%D0%BD%D0%B0%D1%8F+%D0%9C%D0%B0%D0%BB%D0%B0%D0%B9%D0%B7%D0%B8%D0%B8&a=%D0%A1%D0%B1%D0%BE%D1%80%D0%BD%D0%B0%D1%8F+%D0%99%D0%B5%D0%BC%D0%B5%D0%BD%D0%B0",
+"div": "FRI",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "football",
+"id": "401916335",
+"league": "Сборные · Товарищеские матчи",
+"kickoff": "2026-11-17T13:00:00+03:00",
+"home": "Сборная Сингапура",
+"away": "Сборная Бразилии",
+"hl": "https://a.espncdn.com/i/teamlogos/countries/500/sin.png",
+"al": "https://a.espncdn.com/i/teamlogos/countries/500/bra.png",
+"hid": "4384",
+"aid": "205",
+"bb": "https://betboom.ru/search?query=%D0%A1%D0%B8%D0%BD%D0%B3%D0%B0%D0%BF%D1%83%D1%80%D0%B0&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/fifa.friendly",
+"url": "live.html?s=football&p=soccer%2Ffifa.friendly&e=401916335&h=%D0%A1%D0%B1%D0%BE%D1%80%D0%BD%D0%B0%D1%8F+%D0%A1%D0%B8%D0%BD%D0%B3%D0%B0%D0%BF%D1%83%D1%80%D0%B0&a=%D0%A1%D0%B1%D0%BE%D1%80%D0%BD%D0%B0%D1%8F+%D0%91%D1%80%D0%B0%D0%B7%D0%B8%D0%BB%D0%B8%D0%B8",
 "div": "FRI",
 "state": "pre",
 "bo": null,
