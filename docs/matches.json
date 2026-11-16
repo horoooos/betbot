@@ -199,8 +199,8 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-16-toronto-reptors-nyu-york-niks-401909990.html",
-"hs": "97",
-"as": "98",
+"hs": "101",
+"as": "104",
 "tip": "ТМ 217.5 · 1.95",
 "top": true,
 "bot": {
@@ -426,7 +426,7 @@ null
 "bo": null,
 "prediction": "predictions/2026-11-16-vashington-uizards-hyuston-rokets-401909991.html",
 "hs": "75",
-"as": "99",
+"as": "102",
 "tip": "ТМ 223.5 · 1.89",
 "top": false,
 "bot": {
@@ -617,7 +617,15 @@ null
 ],
 "center": "Ожидаемые голы 2.8 : 3.2"
 },
-"lt": null
+"lt": {
+"fair": 1.35,
+"label": "ТБ 5.5",
+"min_odds": 1.42,
+"minute": "2-й период",
+"p": 0.741,
+"result": null,
+"score": "0:3"
+}
 },
 {
 "sport": "basketball",
@@ -637,8 +645,8 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-16-miluoki-baks-atlanta-hoks-401909992.html",
-"hs": "37",
-"as": "18",
+"hs": "40",
+"as": "21",
 "tip": "ТМ 233.5 · 1.87",
 "top": false,
 "bot": {
