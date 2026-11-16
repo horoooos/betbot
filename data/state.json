@@ -1579,7 +1579,7 @@
  "value_day": "2026-11-16",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-16",
- "site_stamp": "1093|6583|2026-11-17 00|4|3016e38a5576849c",
+ "site_stamp": "1093|6585|2026-11-17 00|4|3a5da10398e870bf",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1728,7 +1728,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 6583,
+ "dz_last": 6585,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2184,9 +2184,9 @@
    }
   },
   "source": {
-   "last_success": "2026-11-16T21:39:48.370269+00:00",
-   "parsed": 350,
-   "added": 54,
+   "last_success": "2026-11-16T21:59:48.857918+00:00",
+   "parsed": 355,
+   "added": 78,
    "discovered_matches": 29,
    "pages": 19,
    "errors": [],
@@ -2200,14 +2200,14 @@
    }
   },
   "error": null,
-  "tips": 2743,
+  "tips": 2767,
   "snapshots": 38,
-  "unmapped_markets": 3626,
+  "unmapped_markets": 3680,
   "quote_matches": 14
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-17T00:57:47.989407+03:00",
-  "cursor": "76",
+  "last_poll": "2026-11-17T00:59:48.857918+03:00",
+  "cursor": "78",
   "posts": [
    {
     "post_id": 499,
@@ -2616,6 +2616,40 @@
     },
     "status": "needs_review",
     "observed_at": "2026-11-16T23:55:55.327678+03:00"
+   },
+   {
+    "post_id": 526,
+    "url": "https://vk.com/wall-228963529_526",
+    "title": "FURIA снова на вершине: разгром Spirit в Гонконге закрепил лидерство",
+    "text": "FURIA снова на вершине: разгром Spirit в Гонконге закрепил лидерство\n\nрџ“° Бразильцы вернули себе первое место в свежем рейтинге [#alias|HLTV.org|HLTV.org], и это заслуженная награда за доминирующую игру на BLAST Rivals Fall 2026.\n\nрџЏ† Турнир проходил с 11 по 15 ноября в Гонконге, где восемь сильнейших коллективов мира боролись за внушительный призовой фонд в один миллион долларов.\n\n#киберспорт #новостиспорта #спорт #главное #аиставит\n\nрџ“Љ Подробнее на сайте рџ‘‡",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": true,
+     "details_present": true,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-17T00:59:48.857918+03:00"
+   },
+   {
+    "post_id": 527,
+    "url": "https://vk.com/wall-228963529_527",
+    "title": "Орлов осудил Кругового за непорядочную атаку на Глушенкова",
+    "text": "Орлов осудил Кругового за непорядочную атаку на Глушенкова\n\nрџ± Геннадий Орлов вспыхнул в эфире, раскритиковав «Кругового» за нападку на Максима Глушенкова.\n\n#футбол #Орлов #новостиспорта #спорт #главное #аиставит\n\nрџ“Љ Подробнее на сайте рџ‘‡",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": true,
+     "details_present": true,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-17T00:59:48.857918+03:00"
    }
   ],
   "status": "observing"
