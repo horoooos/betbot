@@ -556,7 +556,7 @@ null
 ]
 ],
 "div": "UNL",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "predictions/2026-11-16-sbornaya-germanii-sbornaya-niderlandov-401861185.html",
 "hs": "5",
@@ -675,7 +675,7 @@ null
 "min_odds": 1.42,
 "minute": "26'",
 "p": 0.737,
-"result": null,
+"result": "hit",
 "score": "0:0"
 }
 },
@@ -1000,11 +1000,11 @@ null
 ]
 ],
 "div": "UNL",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "predictions/2026-11-16-sbornaya-severnoy-makedonii-sbornaya-slovenii-401861187.html",
 "hs": "0",
-"as": "2",
+"as": "3",
 "tip": "ТМ 2.5 · 1.61",
 "top": false,
 "bot": {
@@ -1119,7 +1119,7 @@ null
 "min_odds": 1.85,
 "minute": "26'",
 "p": 0.569,
-"result": null,
+"result": "hit",
 "score": "0:0"
 }
 },
