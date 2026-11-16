@@ -2184,32 +2184,29 @@
    }
   },
   "source": {
-   "last_success": "2026-11-16T23:02:23.478143+00:00",
-   "parsed": 188,
-   "added": 58,
-   "discovered_matches": 28,
+   "last_success": "2026-11-16T23:22:23.871802+00:00",
+   "parsed": 344,
+   "added": 61,
+   "discovered_matches": 27,
    "pages": 17,
-   "errors": [
-    "HTTPSConnectionPool(host='stavka.tv', port=443): Max retries exceeded with url: /matches/basketball (Caused by ConnectTimeoutError(<HTTPSConnection(host='stavka",
-    "HTTPSConnectionPool(host='stavka.tv', port=443): Max retries exceeded with url: /predictions/tennis (Caused by ConnectTimeoutError(<HTTPSConnection(host='stavka",
-    "HTTPSConnectionPool(host='stavka.tv', port=443): Max retries exceeded with url: /predictions/csgo (Caused by ConnectTimeoutError(<HTTPSConnection(host='stavka.t",
-    "HTTPSConnectionPool(host='stavka.tv', port=443): Max retries exceeded with url: /predictions/dota2 (Caused by ConnectTimeoutError(<HTTPSConnection(host='stavka.",
-    "HTTPSConnectionPool(host='stavka.tv', port=443): Max retries exceeded with url: /matches/tennis/16-11-2026-podoroska-nadia-lepchenko-varvara (Caused by ConnectT"
-   ],
+   "errors": [],
    "parsed_by_sport": {
     "soccer": 50,
     "ice-hockey": 50,
-    "basketball": 50
+    "basketball": 50,
+    "tennis": 50,
+    "csgo": 50,
+    "dota2": 50
    }
   },
   "error": null,
-  "tips": 2831,
+  "tips": 2850,
   "snapshots": 41,
-  "unmapped_markets": 3807,
+  "unmapped_markets": 3849,
   "quote_matches": 14
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-17T02:20:23.848385+03:00",
+  "last_poll": "2026-11-17T02:22:23.871802+03:00",
   "cursor": "79",
   "posts": [
    {
