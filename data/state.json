@@ -2169,8 +2169,8 @@
   "quote_matches": 14
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-16T16:32:40.792304+03:00",
-  "cursor": 68,
+  "last_poll": "2026-11-16T16:34:40.456078+03:00",
+  "cursor": "68",
   "posts": [
    {
     "post_id": 499,
@@ -2462,7 +2462,7 @@
     "observed_at": "2026-11-16T15:30:07.358831+03:00"
    }
   ],
-  "status": "cursor_reset"
+  "status": "observing"
  },
  "mod_poll": {
   "key": "SP2|401883305",
