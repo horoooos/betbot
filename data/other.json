@@ -6763,31 +6763,31 @@
   "kickoff": "2026-11-16T17:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Mon, November 16th at 9:00 AM EST",
   "home": {
-   "id": "2984",
-   "name": "Rebeka Masarova",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/2984.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/sui.png"
    ],
+   "id": "2984",
+   "name": "Rebeka Masarova",
    "country": "Switzerland",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
    "ru": "Ребека Масарова"
   },
   "away": {
-   "id": "11455",
-   "name": "Diletta Cherubini",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/11455.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/ita.png"
    ],
+   "id": "11455",
+   "name": "Diletta Cherubini",
    "country": "Italy",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
@@ -6861,7 +6861,9 @@
   "btn": 4,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null
  },
  "WTA|186797": {
   "id": "186797",
