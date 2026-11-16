@@ -1551,7 +1551,7 @@
  "value_day": "2026-11-15",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-15",
- "site_stamp": "1062|6338|2026-11-16 03|3|8fc2a8e70860c49b",
+ "site_stamp": "1063|6340|2026-11-16 03|3|207557641c772f6c",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1610,7 +1610,9 @@
      "3e188b",
      "000000"
     ],
-    "label": "Победа: Пенарол"
+    "label": "Победа: Пенарол",
+    "win": false,
+    "score": "1:1"
    },
    {
     "sport": "hockey",
@@ -1678,7 +1680,7 @@
   ],
   "odds": 13.40676524791954,
   "day": "2026-11-15",
-  "done": false
+  "done": true
  },
  "streak_day": {
   "2026-11-15": 2
@@ -1702,7 +1704,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 6338,
+ "dz_last": 6340,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2123,7 +2125,7 @@
   "quote_matches": 13
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-16T03:52:57.168316+03:00",
+  "last_poll": "2026-11-16T03:54:57.275412+03:00",
   "cursor": "58",
   "posts": [
    {
