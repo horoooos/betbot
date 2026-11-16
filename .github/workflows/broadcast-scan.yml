@@ -1,0 +1,31 @@
+name: Find match broadcasts
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '*/5 * * * *'
+permissions:
+  contents: read
+concurrency:
+  group: broadcast-search
+  cancel-in-progress: false
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install requests pandas google-auth
+      - name: Discover event-specific public broadcasts
+        env:
+          PANDASCORE_TOKEN: ${{ secrets.PANDASCORE_TOKEN }}
+          FIREBASE_SA: ${{ secrets.FIREBASE_SA }}
+        run: python tools/broadcast_scan.py --remote --publish
+      - uses: actions/upload-artifact@v4
+        with:
+          name: broadcast-search-report
+          path: work/broadcasts-check.json

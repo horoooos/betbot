@@ -748,6 +748,7 @@ def matches_json(events: list[dict], stored: dict, now: pd.Timestamp) -> None:
                     "hid": str(e["home"].get("id") or ""), "aid": str(e["away"].get("id") or ""),
                     "bb": bb_search(h, sport),   # поиск BetBoom по команде — матч сразу в списке
                     "path": parse_qs(urlsplit(btn[1]).query).get('p',[''])[0], "url": btn[1].replace(SITE, ""),
+                    "participants": [[h, e['home'].get('name', '')], [a, e['away'].get('name', '')]],
                     "div":e.get('div'),"state":e.get('state') if identity(e) in fresh_keys else ('pre' if ko>now else 'unknown'),"bo":e.get('bo'),
                     "prediction":f"predictions/{ko.tz_convert('Europe/Moscow'):%Y-%m-%d}-{pages.slug(h+' '+a,60)}-{e['id']}.html" if m.get('msg_id') else '',
                     "hs":e['home'].get('score') if identity(e) in fresh_keys else None,

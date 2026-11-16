@@ -64,7 +64,8 @@ def _normalize(code: str, m: dict) -> dict | None:
                       "winner": winner == tid if winner else False})
     league = (m.get("league") or {}).get("name", "")
     serie = (m.get("serie") or {}).get("full_name") or (m.get("serie") or {}).get("name") or ""
-    return {"id": str(m["id"]), "div": code, "sport": "esports",
+    from .broadcasts import panda_streams
+    return {"id": str(m["id"]), "div": code, "sport": "esports", "streams": panda_streams(m),
             "tournament": " · ".join(x for x in (league, serie) if x),
             "bo": int(m.get("number_of_games") or 1),
             "kickoff": pd.Timestamp(begin).tz_convert(MSK).isoformat(),

@@ -1,0 +1,20 @@
+{
+  "youtube": [
+    {"name":"FIFA", "handle":"fifa", "sports":["football"]},
+    {"name":"UEFA", "handle":"UEFA", "sports":["football"]},
+    {"name":"AFC", "handle":"AFCAsianCup", "sports":["football"]},
+    {"name":"CONCACAF", "handle":"concacaf", "sports":["football"]},
+    {"name":"FIBA", "handle":"FIBA", "sports":["basketball"]},
+    {"name":"FIBA 3x3", "handle":"FIBA3x3", "sports":["basketball"]},
+    {"name":"IIHF", "handle":"iihf", "sports":["hockey"]},
+    {"name":"Champions Hockey League", "handle":"championshockeyleague", "sports":["hockey"]},
+    {"name":"ATP Tour", "handle":"ATPTour", "sports":["tennis"]},
+    {"name":"WTA", "handle":"WTA", "sports":["tennis"]},
+    {"name":"ITF", "handle":"ITFtennis", "sports":["tennis"]},
+    {"name":"Davis Cup", "channel_id":"UCsyvlpbK0BTEc3jec6nhPyQ", "sports":["tennis"]},
+    {"name":"ESL Dota 2", "handle":"ESLDota2", "sports":["esports"]},
+    {"name":"ESL Counter-Strike", "handle":"ESLCS", "sports":["esports"]},
+    {"name":"PGL", "handle":"PGL", "sports":["esports"]},
+    {"name":"BLAST Premier", "handle":"BLASTPremier", "sports":["esports"]}
+  ]
+}
