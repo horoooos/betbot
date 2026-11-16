@@ -35,8 +35,26 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--publish', action='store_true')
     parser.add_argument('--remote', action='store_true')
+    parser.add_argument('--probe-youtube', action='store_true')
     parser.add_argument('--out', default='work/broadcasts-check.json')
     args = parser.parse_args()
+    if args.probe_youtube:
+        html = broadcasts.get_text('https://www.youtube.com/@ESLDota2/streams?hl=en')
+        data = broadcasts.initial_json(html, 'ytInitialData')
+        tabs = [{'title': n.get('title'), 'selected': n.get('selected')}
+                for n in broadcasts.walk(data) if 'selected' in n and 'title' in n]
+        cards = []
+        for n in broadcasts.walk(data):
+            for key in ('videoRenderer', 'gridVideoRenderer', 'lockupViewModel'):
+                if key not in n:
+                    continue
+                v = n[key]
+                cards.append({k: v.get(k) for k in ('title', 'badges', 'thumbnailOverlays', 'contentImage', 'metadata')})
+                break
+            if len(cards) == 2:
+                break
+        # Public listing metadata only: never dump the full page/player response.
+        print(json.dumps({'youtube_probe': {'tabs': tabs, 'cards': cards}}, ensure_ascii=False), flush=True)
     payload = broadcasts.discover(broadcasts.load_events(remote=args.remote))
     path = Path(args.out)
     path.parent.mkdir(parents=True, exist_ok=True)

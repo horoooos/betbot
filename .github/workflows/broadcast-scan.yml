@@ -1,6 +1,11 @@
 name: Find match broadcasts
 on:
   workflow_dispatch:
+    inputs:
+      probe:
+        type: boolean
+        default: false
+        description: Diagnose public YouTube listing format
   schedule:
     - cron: '*/5 * * * *'
 permissions:
@@ -24,7 +29,8 @@ jobs:
         env:
           PANDASCORE_TOKEN: ${{ secrets.PANDASCORE_TOKEN }}
           FIREBASE_SA: ${{ secrets.FIREBASE_SA }}
-        run: python tools/broadcast_scan.py --remote --publish
+          PROBE: ${{ inputs.probe }}
+        run: python tools/broadcast_scan.py --remote --publish $([ "$PROBE" = true ] && echo --probe-youtube || true)
       - uses: actions/upload-artifact@v4
         if: always()
         with:
