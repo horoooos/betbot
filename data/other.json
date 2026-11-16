@@ -7166,5 +7166,95 @@
   "top": false,
   "msg_id": 6420,
   "btn": 4
+ },
+ "DOTA|1793338": {
+  "id": "1793338",
+  "div": "DOTA",
+  "sport": "esports",
+  "tournament": "1win Essence · Season 3 2026",
+  "bo": 3,
+  "kickoff": "2026-11-16T19:00:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "tier": "a",
+  "status": "reviewed",
+  "home": {
+   "id": "135712",
+   "name": "PARIVISION",
+   "ru": "PARIVISION",
+   "logo": "https://cdn-api.pandascore.co/images/team/image/135712/250px_parivision_allmode.png",
+   "color": "3b4a7a",
+   "score": 0,
+   "winner": false
+  },
+  "away": {
+   "id": "1669",
+   "name": "Team Spirit",
+   "ru": "Team Spirit",
+   "logo": "https://cdn-api.pandascore.co/images/team/image/1669/153px_team_spirit_2022_lightmode.png",
+   "color": "3b4a7a",
+   "score": 0,
+   "winner": false
+  },
+  "odds": {},
+  "probs": {
+   "ES_W1": 0.2188386595862859,
+   "ES_W2": 0.7811613404137141,
+   "ES_FULL": 0.42178837932265356,
+   "ES_DRY": 0.5782116206773464,
+   "ES_S2:0": 0.09135391947875447,
+   "ES_S0:2": 0.48685770119859195,
+   "ES_S2:1": 0.12748474010753139,
+   "ES_S1:2": 0.2943036392151222,
+   "ES_MAP1": 0.513142298801408,
+   "ES_MAP2": 0.9086460805212455
+  },
+  "labels": {
+   "ES_W1": "Победа: PARIVISION",
+   "ES_W2": "Победа: Team Spirit",
+   "ES_FULL": "Больше 2 карт",
+   "ES_DRY": "Всухую (2:0 или 0:2)",
+   "ES_S2:0": "Счёт по картам 2:0",
+   "ES_S0:2": "Счёт по картам 0:2",
+   "ES_S2:1": "Счёт по картам 2:1",
+   "ES_S1:2": "Счёт по картам 1:2",
+   "ES_MAP1": "PARIVISION возьмёт хотя бы карту",
+   "ES_MAP2": "Team Spirit возьмёт хотя бы карту"
+  },
+  "real": {},
+  "center": "BO3 · Эло 1568 : 1789",
+  "bar": [
+   0.2188386595862859,
+   0,
+   0.7811613404137141
+  ],
+  "model": {
+   "elo": [
+    1567.712660276653,
+    1788.7593386592403
+   ],
+   "src": "Эло"
+  },
+  "stavka_signal": {
+   "status": "collecting",
+   "weight": 0.0,
+   "authors": 12,
+   "group": "esports:DOTA",
+   "snapshot": "DOTA|1793338",
+   "source": "https://stavka.tv"
+  },
+  "main": {
+   "key": "ES_DRY",
+   "label": "Всухую (2:0 или 0:2)",
+   "p": 0.5782,
+   "odds": 1.61,
+   "est": true,
+   "stake": 1.0
+  },
+  "bold": {},
+  "open": {},
+  "top": false,
+  "msg_id": 6422,
+  "btn": 4
  }
 }
