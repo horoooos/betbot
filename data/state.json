@@ -5,7 +5,7 @@
  },
  "learned": "2026-11-16",
  "schedule_day": "2026-11-16",
- "content_slot": "2026-11-16-13",
+ "content_slot": "2026-11-16-16",
  "news_seen": [
   "https://www.sport-express.ru/hockey/nhl/news/luchshie-snaypery-nhl-13-noyabrya-2026-top-10-regulyarnogo-chempionata-lidery-po-golam-drayzaytl-kaprizov-konnor-2474340/",
   "https://www.sport-express.ru/hockey/nhl/news/luchshie-bombardiry-nhl-13-noyabrya-2026-top-10-regulyarnogo-chempionata-lidery-po-ochkam-makdevid-drayzaytl-kaprizov-2474337/",
@@ -1592,7 +1592,7 @@
  "value_day": "2026-11-16",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-16",
- "site_stamp": "1073|6404|2026-11-16 15|3|3421cb0838c7be81",
+ "site_stamp": "1073|6406|2026-11-16 16|3|799cf81678ad3f39",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1745,7 +1745,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 6404,
+ "dz_last": 6406,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2185,12 +2185,12 @@
   },
   "error": null,
   "tips": 2066,
-  "snapshots": 20,
+  "snapshots": 21,
   "unmapped_markets": 2546,
   "quote_matches": 14
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-16T15:58:07.711981+03:00",
+  "last_poll": "2026-11-16T16:00:40.468743+03:00",
   "cursor": "67",
   "posts": [
    {
@@ -2484,5 +2484,14 @@
    }
   ],
   "status": "observing"
+ },
+ "mod_poll": {
+  "key": "SP2|401883305",
+  "id": "401883305",
+  "poll": 6406,
+  "post": 6405,
+  "home": "Альбасете",
+  "away": "Сельта Фортуна",
+  "kickoff": "2026-11-16T22:30:00+03:00"
  }
 }
