@@ -199,8 +199,8 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-16-toronto-reptors-nyu-york-niks-401909990.html",
-"hs": "101",
-"as": "104",
+"hs": "104",
+"as": "106",
 "tip": "ТМ 217.5 · 1.95",
 "top": true,
 "bot": {
@@ -425,7 +425,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-16-vashington-uizards-hyuston-rokets-401909991.html",
-"hs": "75",
+"hs": "77",
 "as": "102",
 "tip": "ТМ 223.5 · 1.89",
 "top": false,
@@ -646,7 +646,7 @@ null
 "bo": null,
 "prediction": "predictions/2026-11-16-miluoki-baks-atlanta-hoks-401909992.html",
 "hs": "43",
-"as": "25",
+"as": "28",
 "tip": "ТМ 233.5 · 1.87",
 "top": false,
 "bot": {
@@ -837,7 +837,15 @@ null
 ],
 "center": "Ожидаемые голы 3.1 : 2.8"
 },
-"lt": null
+"lt": {
+"fair": 1.58,
+"label": "1X (осн. время)",
+"min_odds": 1.66,
+"minute": "2-й период",
+"p": 0.632,
+"result": null,
+"score": "0:0"
+}
 },
 {
 "sport": "hockey",
