@@ -38,9 +38,9 @@ export async function loadCharacter(heroId){
     const mixer=new THREE.AnimationMixer(body.scene),idle=THREE.AnimationClip.findByName(body.animations,definition.idle),run=THREE.AnimationClip.findByName(body.animations,definition.run);
     const idleAction=idle?mixer.clipAction(idle):null,runAction=run?mixer.clipAction(run):null;
     idleAction?.play();if(runAction){runAction.play();runAction.setEffectiveWeight(0);}
-    model.updateMatrixWorld(true);const box=new THREE.Box3().setFromObject(model),height=box.max.y-box.min.y;
+    model.updateMatrixWorld(true);const box=new THREE.Box3().setFromObject(model),size=box.getSize(new THREE.Vector3()),height=size.y;
     // Preserve proportions, while keeping a readable tactical scale on the map.
-    const scale=4.2/Math.max(.2,height);model.scale.setScalar(scale);model.position.y=-box.min.y*scale;
+    const scale=Math.min(4.2/Math.max(.2,height),7/Math.max(.2,size.x),7/Math.max(.2,size.z));model.scale.setScalar(scale);model.position.y=-box.min.y*scale;
     let blend=0;
     return {root,slug:definition.slug,parts:parts.filter(p=>p.status==='fulfilled').length,
       animate(dt,speed){blend=THREE.MathUtils.damp(blend,speed>.25?1:0,9,dt);idleAction?.setEffectiveWeight(1-blend);runAction?.setEffectiveWeight(blend);if(runAction)runAction.timeScale=THREE.MathUtils.clamp(speed/4,.5,1.6);mixer.update(dt);},

@@ -1,6 +1,6 @@
 import * as THREE from 'three';
 import {OrbitControls} from 'three/addons/controls/OrbitControls.js';
-import {loadCharacter} from './dota-character.js?v=1';
+import {loadCharacter} from './dota-character.js?v=2';
 
 // Environment is a visual reconstruction. Unit/building positions stay in Valve's frame.
 export function createArena(container,heroes={}) {

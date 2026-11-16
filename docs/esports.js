@@ -38,7 +38,7 @@ async function positions(){
     selected=native?fresh.find(g=>g.match_id===native):target?fresh.find(g=>pair(g)===target):null;
     if(!selected){if(native){if(nativeInfo)titleAndScore({...nativeInfo,state:'unknown'});else{$('esTitle').textContent='Живая карта недоступна';$('scoreboard').innerHTML='<p class="es-muted">Карта завершилась или источник ещё не передаёт её данные. Выбери другую живую карту ниже.</p>';}}$('modelState').textContent='Ожидаем данные';empty(native?'Карта завершилась или данные задерживаются':match?'Ждём координаты этого матча':'Выбери живую карту ниже',native?'Старые позиции не выдаём за прямую трансляцию. Ниже доступны другие текущие карты.':'Как только Valve предоставит позиции обеих команд, карта включится автоматически. Доступные сейчас карты — ниже.');return;}
     if(native){nativeInfo={home:selected.teams[0].name,away:selected.teams[1].name,league:'Dota 2',state:'in',hs:selected.teams[0].score,as:selected.teams[1].score};titleAndScore(nativeInfo);}
-    if(!arena){const {createArena}=await import('./esports-3d.js?v=3');arena=createArena($('arena'),heroes);}
+    if(!arena){const {createArena}=await import('./esports-3d.js?v=4');arena=createArena($('arena'),heroes);}
     if(lastId!==selected.match_id){lastId=selected.match_id;}
     arena.update(selected);$('empty').hidden=true;
     const focus=$('focusHero'),chosen=focus.value;focus.innerHTML='<option value="">Вся карта · выбрать героя…</option>'+selected.teams.map(t=>t.players.map(p=>'<option value="'+t.team+':'+p.id+'">'+esc((heroes[p.hero]?.name||p.hero)+' · '+p.name)+'</option>').join('')).join('');if([...focus.options].some(o=>o.value===chosen))focus.value=chosen;
