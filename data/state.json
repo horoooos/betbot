@@ -1570,7 +1570,7 @@
  "value_day": "2026-11-16",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-16",
- "site_stamp": "1085|6534|2026-11-16 22|4|fcbcae3fdca573c6",
+ "site_stamp": "1085|6535|2026-11-16 22|4|fcbcae3fdca573c6",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1719,7 +1719,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 6534,
+ "dz_last": 6535,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2188,8 +2188,8 @@
   "quote_matches": 14
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-16T22:51:55.416401+03:00",
-  "cursor": "73",
+  "last_poll": "2026-11-16T22:53:55.118444+03:00",
+  "cursor": "74",
   "posts": [
    {
     "post_id": 499,
@@ -2547,6 +2547,23 @@
     },
     "status": "needs_review",
     "observed_at": "2026-11-16T22:51:55.416401+03:00"
+   },
+   {
+    "post_id": 523,
+    "url": "https://vk.com/wall-228963529_523",
+    "title": "В Dota 2 начали блокировать читеров, крадущих инвентарь",
+    "text": "В Dota 2 начали блокировать читеров, крадущих инвентарь\n\nрџ“° Чит-мания в Dota 2: Valve начала блокировать коварных воров инвентаря!\n\nвљ”пёЏ Датамайнер и администратор канала DOTA_DM в Telegram подтвердили, что игроки, использующие чит для управления инвентарём соперников и тиммейтов, теперь получают блокировки аккаунтов. Это первый случай, когда Valve официально реагирует на такой тип нарушения.\n\n#киберспорт #Dota #новостиспорта #спорт #главное #аиставит\n\nрџ“Љ Подробнее на сайте рџ‘‡",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": true,
+     "details_present": true,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-16T22:53:55.118444+03:00"
    }
   ],
   "status": "observing"
