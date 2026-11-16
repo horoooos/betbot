@@ -95,8 +95,8 @@ def youtube_listing(html):
     data = initial_json(html, 'ytInitialData')
     out = {}
     for node in walk(data):
-        if 'videoRenderer' in node:
-            item = node['videoRenderer']
+        if 'videoRenderer' in node or 'gridVideoRenderer' in node:
+            item = node.get('videoRenderer') or node['gridVideoRenderer']
             live = any(x.get('style') in ('LIVE', 'BADGE_STYLE_TYPE_LIVE_NOW')
                        for x in walk([item.get('badges'), item.get('thumbnailOverlays')]))
             title = ''.join(x.get('text', '') for x in item.get('title', {}).get('runs', []))
@@ -254,14 +254,20 @@ def discover(events=None, config=None):
         if not re.fullmatch(r'[A-Za-z0-9_.-]+', identity):
             raise ValueError('Invalid configured channel')
         path = 'channel/' + identity if channel.get('channel_id') else '@' + identity
-        return channel, youtube_listing(get_text('https://www.youtube.com/' + path + '/streams?hl=en'))
+        html = get_text('https://www.youtube.com/' + path + '/streams?hl=en')
+        data = initial_json(html, 'ytInitialData')
+        # Consent/error stubs also contain ytInitialData. They aren't a valid empty listing.
+        if not data.get('metadata', {}).get('channelMetadataRenderer', {}).get('externalId'):
+            raise ValueError('No public channel listing')
+        cards = sum(any(k in node for k in ('videoRenderer', 'gridVideoRenderer', 'lockupViewModel')) for node in walk(data))
+        return channel, youtube_listing(html), cards
 
     with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:
         futures = {pool.submit(scan_channel, c): c for c in config.get('youtube', [])}
         for future in concurrent.futures.as_completed(futures):
             channel = futures[future]
             try:
-                _, videos = future.result()
+                _, videos, cards = future.result()
                 found = 0
                 for video in videos:
                     matches = [e for e in events if e.get('sport') in channel['sports']
@@ -285,7 +291,8 @@ def discover(events=None, config=None):
                         record(e)['streams'].append({**verified, 'source': channel['name'], 'official': True,
                                                      'checked_at': now, 'expires_at': now + 600})
                         found += 1
-                report.append({'source': channel['name'], 'status': 'ok', 'live_listings': len(videos), 'found': found})
+                report.append({'source': channel['name'], 'status': 'ok', 'listed_videos': cards,
+                               'live_listings': len(videos), 'found': found})
             except (requests.RequestException, ValueError, KeyError, TypeError):
                 report.append({'source': channel['name'], 'status': 'unavailable', 'found': 0})
 
