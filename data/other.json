@@ -6396,25 +6396,25 @@
   "kickoff": "2026-11-16T05:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Sun, November 15th at 9:00 PM EST",
   "clock": "0:00",
   "period": 0,
   "home": {
+   "color": "00788a",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/sj.png",
    "id": "18",
    "name": "San Jose Sharks",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/sj.png",
-   "color": "00788a",
    "score": "0",
    "record": "9-11-2",
    "periods": [],
    "ru": "Сан-Хосе"
   },
   "away": {
+   "color": "fdba31",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/nsh.png",
    "id": "27",
    "name": "Nashville Predators",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/nsh.png",
-   "color": "fdba31",
    "score": "0",
    "record": "11-4-5",
    "periods": [],
@@ -6517,7 +6517,9 @@
   "btn": 4,
   "close": {
    "HK_ML_A": 0.6038
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null
  },
  "NBA|401909993": {
   "id": "401909993",

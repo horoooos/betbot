@@ -588,7 +588,7 @@ null
 "path": "hockey/nhl",
 "url": "live.html?s=hockey&p=hockey%2Fnhl&e=401892725&h=%D0%A1%D0%B0%D0%BD-%D0%A5%D0%BE%D1%81%D0%B5&a=%D0%9D%D1%8D%D1%88%D0%B2%D0%B8%D0%BB%D0%BB",
 "div": "NHL",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "predictions/2026-11-16-san-hose-neshvill-401892725.html",
 "hs": "4",
@@ -698,7 +698,7 @@ null
 "min_odds": 1.51,
 "minute": "2-й период",
 "p": 0.693,
-"result": null,
+"result": "hit",
 "score": "2:0"
 }
 },
