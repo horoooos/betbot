@@ -7,15 +7,6 @@
  "schedule_day": "2026-11-16",
  "content_slot": "2026-11-16-23",
  "news_seen": [
-  "https://www.sport-express.ru/hockey/khl/news/goldobin-posle-porazheniya-ska-ot-minskogo-dinamo-nuzhno-steret-etot-den-iz-pamyati-2474623/",
-  "https://www.sport-express.ru/hockey/nhl/news/zaschitnik-aylenders-mettyu-shefer-ustanovil-rekord-nhl-po-matcham-s-nagruzkoy-bolee-26-minut-za-pervye-100-igr-2474636/",
-  "https://www.sport-express.ru/football/rfpl/news/guberniev-vystupil-protiv-rasshireniya-rpl-do-18-komand-2474625/",
-  "https://www.sport-express.ru/basketball/nba/news/donchich-vozglavil-reyting-pretendentov-na-mvp-nba-vembanyama-i-teytum-v-troyke-2474622/",
-  "https://www.sport-express.ru/tennis/wta/news/andreeva-obygrala-shnayder-v-matche-itogovogo-turnira-wta-2474647/",
-  "https://www.sport-express.ru/tennis/wta/news/dzhessika-pegula-pervoy-s-2019-goda-vyigrala-match-itogovogo-turnira-wta-posle-otygrannogo-matchbola-13-noyabrya-2026-2474637/",
-  "https://www.sport-express.ru/football/spain/news/vratar-andorry-ovono-diskvalificirovan-na-12-matchey-posle-smertelnogo-stolknoveniya-s-de-migelem-2474643/",
-  "https://www.sport-express.ru/hockey/nhl/news/trener-nyu-dzhersi-sheldon-kif-o-gole-vladislava-kolyachonka-i-pobede-nad-vashingtonom-eto-het-trik-yutiki-2474654/",
-  "https://www.sport-express.ru/hockey/world-u20/news/iihf-podala-apellyaciyu-v-sportivnyy-arbitrazhnyy-sud-2474650/",
   "https://www.sport-express.ru/hockey/world-u20/news/degtyarev-trebuem-sobrat-ispolkom-mok-primenit-sankcii-k-nok-kanady-i-lishit-ego-akkreditacii-2474642/",
   "https://www.sport-express.ru/hockey/khl/news/napadayuschiy-ska-nedopekin-nazval-prichiny-porazheniya-ot-minskogo-dinamo-2474641/",
   "https://www.sport-express.ru/hockey/nhl/news/vratar-minnesoty-yesper-vallstedt-lidiruet-v-sezone-nhl-po-kachestvennym-startam-statistika-13-noyabrya-2026-2474638/",
@@ -514,9 +505,10 @@
   "https://www.sport-express.ru/football/nation-league/news/greciya-serbiya-schet-i-rezultat-matcha-ligi-naciy-17-noyabrya-2026-2475678/",
   "https://www.sport-express.ru/football/nation-league/news/severnaya-makedoniya-sloveniya-shveycariya-shotlandiya-schet-i-rezultaty-matchey-ligi-naciy-16-noyabrya-2026-2475677/",
   "https://www.sport-express.ru/football/nation-league/news/germaniya-niderlandy-schet-i-rezultat-matcha-ligi-naciy-16-noyabrya-2026-2475676/",
-  "https://www.sport-express.ru/football/nation-league/news/kreyg-bellami-my-vse-budem-skuchat-po-krishtianu-ronaldu-2475679/"
+  "https://www.sport-express.ru/football/nation-league/news/kreyg-bellami-my-vse-budem-skuchat-po-krishtianu-ronaldu-2475679/",
+  "https://www.sport-express.ru/football/rfpl/news/istochnik-lokomotiv-dogovorilsya-o-rastorzhenii-kontrakta-s-galaktionovym-2475681/"
  ],
- "news_i": 4,
+ "news_i": 1,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1580,7 +1572,7 @@
  "value_day": "2026-11-16",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-16",
- "site_stamp": "1093|6585|2026-11-17 01|4|3a5da10398e870bf",
+ "site_stamp": "1094|6587|2026-11-17 01|4|9a20d559919a03c0",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1616,7 +1608,9 @@
      "000000",
      "000000"
     ],
-    "label": "Победа: Реал Гарсиласо"
+    "label": "Победа: Реал Гарсиласо",
+    "win": false,
+    "score": "2:2"
    },
    {
     "sport": "basketball",
@@ -1705,12 +1699,12 @@
   ],
   "odds": 13.33621290485708,
   "day": "2026-11-16",
-  "done": false
+  "done": true
  },
  "streak_day": {
   "2026-11-15": 2
  },
- "news_next": "2026-11-17T01:11:48.864925+03:00",
+ "news_next": "2026-11-17T01:44:48.154765+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1729,7 +1723,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 6585,
+ "dz_last": 6587,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -1827,7 +1821,8 @@
   "https://images.cybersport.ru/images/as-is/plain/c1/c17e885d-ae7a-45e3-86a3-5f6a48f21b59.jpg",
   "https://images.cybersport.ru/images/as-is/plain/6c/6cffa5e4-d127-4186-a64b-6b3c68b20c1d.jpg",
   "https://images.cybersport.ru/images/as-is/plain/e5/e587e7de-be65-4fd6-a68d-fd669741f8fe.jpg",
-  "https://upload.wikimedia.org/wikipedia/commons/c/ce/GennadyOrlov.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+  "https://upload.wikimedia.org/wikipedia/commons/c/ce/GennadyOrlov.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "https://ss.sport-express.ru/userfiles/materials/224/2244022/1180x665.jpg"
  ],
  "indexnow_day": "2026-11-17",
  "vk_wall_err": null,
@@ -2004,7 +1999,8 @@
   "6535",
   "6550",
   "6553",
-  "6569"
+  "6569",
+  "6588"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -2113,11 +2109,12 @@
   "2026-11-16:новость:b7b5aa08070cab7b724b9d83",
   "2026-11-16:новость:4f4fd119ea6c124527aff8b6",
   "2026-11-16:новость:90611de5833a739a2aafe6b0",
-  "2026-11-16:новость:b032639657d25a30449b8c28"
+  "2026-11-16:новость:b032639657d25a30449b8c28",
+  "2026-11-16:новость:8c7b7bc3749b7c0ef475d3fb"
  ],
  "dz_last_delivery": {
-  "source_id": 6569,
-  "message_id": 655,
+  "source_id": 6588,
+  "message_id": 656,
   "kind": "новость"
  },
  "learn_attempt_day": "2026-11-17",
@@ -2207,7 +2204,7 @@
   "quote_matches": 14
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-17T01:11:48.543051+03:00",
+  "last_poll": "2026-11-17T01:13:48.154765+03:00",
   "cursor": "78",
   "posts": [
    {
