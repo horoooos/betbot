@@ -2186,8 +2186,8 @@
   "quote_matches": 13
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-16T15:28:07.342248+03:00",
-  "cursor": "65",
+  "last_poll": "2026-11-16T15:30:07.358831+03:00",
+  "cursor": "67",
   "posts": [
    {
     "post_id": 499,
@@ -2443,6 +2443,40 @@
     },
     "status": "needs_review",
     "observed_at": "2026-11-16T14:25:32.934030+03:00"
+   },
+   {
+    "post_id": 515,
+    "url": "https://vk.com/wall-228963529_515",
+    "title": "Идову бросил вызов Лещуку: Медиалига доказала свою силу",
+    "text": "Идову бросил вызов Лещуку: Медиалига доказала свою силу\n\nрџ± Идову бросил вызов Лещуку: «Медиалига может удивить!»\n\nвљЅпёЏ 15 ноября на «ВТБ Арене» в Москве «10» одержал уверенную победу над «Динамо», обыграв соперников со счётом 4:2.\n\n#футбол #Лещук #новостиспорта #спорт #главное #аиставит\n\nрџ“Љ Подробнее на сайте рџ‘‡",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": true,
+     "details_present": true,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-16T15:30:07.358831+03:00"
+   },
+   {
+    "post_id": 516,
+    "url": "https://vk.com/wall-228963529_516",
+    "title": "Светлана «suns1de» раскритиковали за не переданные подарки Team Spirit",
+    "text": "Светлана «suns1de» раскритиковали за не переданные подарки Team Spirit\n\nрџ“° Китайская фанатка Team Spirit публично обвинила девушку — Светлану «suns1de» Мевлид, известную как Данила donk Крышковца, в том, что она не передала подготовленные подарки киберспортсменам во время BLAST Rivals Fall 2026.\n\n#киберспорт #новостиспорта #спорт #главное #аиставит\n\nрџ“Љ Подробнее на сайте рџ‘‡",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": true,
+     "details_present": true,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-16T15:30:07.358831+03:00"
    }
   ],
   "status": "observing"
