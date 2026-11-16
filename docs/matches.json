@@ -1126,97 +1126,6 @@ null
 "lt": null
 },
 {
-"sport": "tennis",
-"id": "186784",
-"league": "Теннис · WTA",
-"kickoff": "2026-11-16T20:25:00+03:00",
-"home": "Виктория Хименес-Касинцева",
-"away": "Кароль Монне",
-"hl": "https://a.espncdn.com/i/teamlogos/countries/500/and.png",
-"al": "https://a.espncdn.com/i/teamlogos/countries/500/fra.png",
-"hid": "7778",
-"aid": "5299",
-"bb": "https://betboom.ru/search?query=%D0%A5%D0%B8%D0%BC%D0%B5%D0%BD%D0%B5%D1%81-%D0%9A%D0%B0%D1%81%D0%B8%D0%BD%D1%86%D0%B5%D0%B2%D0%B0&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=tennis",
-"path": "tennis/wta",
-"url": "live.html?s=tennis&p=tennis%2Fwta&e=186784&h=%D0%92%D0%B8%D0%BA%D1%82%D0%BE%D1%80%D0%B8%D1%8F+%D0%A5%D0%B8%D0%BC%D0%B5%D0%BD%D0%B5%D1%81-%D0%9A%D0%B0%D1%81%D0%B8%D0%BD%D1%86%D0%B5%D0%B2%D0%B0&a=%D0%9A%D0%B0%D1%80%D0%BE%D0%BB%D1%8C+%D0%9C%D0%BE%D0%BD%D0%BD%D0%B5",
-"div": "WTA",
-"state": "pre",
-"bo": null,
-"prediction": "predictions/2026-11-16-viktoriya-himenes-kasintseva-karol-monne-186784.html",
-"hs": null,
-"as": null,
-"tip": "Будет 2 сета · ≈1.79",
-"top": false,
-"bot": {
-"main": {
-"label": "Будет 2 сета",
-"p": 0.52,
-"odds": 1.79,
-"est": true
-},
-"bold": null,
-"markets": [
-[
-"Победа: Виктория Хименес-Касинцева",
-0.351,
-2.66
-],
-[
-"Победа: Кароль Монне",
-0.649,
-1.44
-],
-[
-"Будет 3 сета",
-0.48,
-null
-],
-[
-"Будет 2 сета",
-0.52,
-null
-],
-[
-"Счёт по сетам 2:0",
-0.16,
-null
-],
-[
-"Счёт по сетам 0:2",
-0.361,
-null
-],
-[
-"Счёт по сетам 2:1",
-0.192,
-null
-],
-[
-"Счёт по сетам 1:2",
-0.288,
-null
-],
-[
-"Виктория Хименес-Касинцева возьмёт хотя бы сет",
-0.639,
-null
-],
-[
-"Кароль Монне возьмёт хотя бы сет",
-0.84,
-null
-]
-],
-"bar": [
-0.351219512195122,
-0,
-0.648780487804878
-],
-"center": "Линия winline · Эло 1424 : 1554"
-},
-"lt": null
-},
-{
 "sport": "esports",
 "id": "1793338",
 "league": "Киберспорт · Dota 2",
@@ -1395,6 +1304,97 @@ null
 0.2822757111597374
 ],
 "center": "Линия winline · Эло 1638 : 1360"
+},
+"lt": null
+},
+{
+"sport": "tennis",
+"id": "186784",
+"league": "Теннис · WTA",
+"kickoff": "2026-11-16T20:35:00+03:00",
+"home": "Виктория Хименес-Касинцева",
+"away": "Кароль Монне",
+"hl": "https://a.espncdn.com/i/teamlogos/countries/500/and.png",
+"al": "https://a.espncdn.com/i/teamlogos/countries/500/fra.png",
+"hid": "7778",
+"aid": "5299",
+"bb": "https://betboom.ru/search?query=%D0%A5%D0%B8%D0%BC%D0%B5%D0%BD%D0%B5%D1%81-%D0%9A%D0%B0%D1%81%D0%B8%D0%BD%D1%86%D0%B5%D0%B2%D0%B0&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=tennis",
+"path": "tennis/wta",
+"url": "live.html?s=tennis&p=tennis%2Fwta&e=186784&h=%D0%92%D0%B8%D0%BA%D1%82%D0%BE%D1%80%D0%B8%D1%8F+%D0%A5%D0%B8%D0%BC%D0%B5%D0%BD%D0%B5%D1%81-%D0%9A%D0%B0%D1%81%D0%B8%D0%BD%D1%86%D0%B5%D0%B2%D0%B0&a=%D0%9A%D0%B0%D1%80%D0%BE%D0%BB%D1%8C+%D0%9C%D0%BE%D0%BD%D0%BD%D0%B5",
+"div": "WTA",
+"state": "pre",
+"bo": null,
+"prediction": "predictions/2026-11-16-viktoriya-himenes-kasintseva-karol-monne-186784.html",
+"hs": null,
+"as": null,
+"tip": "Будет 2 сета · ≈1.79",
+"top": false,
+"bot": {
+"main": {
+"label": "Будет 2 сета",
+"p": 0.52,
+"odds": 1.79,
+"est": true
+},
+"bold": null,
+"markets": [
+[
+"Победа: Виктория Хименес-Касинцева",
+0.351,
+2.66
+],
+[
+"Победа: Кароль Монне",
+0.649,
+1.44
+],
+[
+"Будет 3 сета",
+0.48,
+null
+],
+[
+"Будет 2 сета",
+0.52,
+null
+],
+[
+"Счёт по сетам 2:0",
+0.16,
+null
+],
+[
+"Счёт по сетам 0:2",
+0.361,
+null
+],
+[
+"Счёт по сетам 2:1",
+0.192,
+null
+],
+[
+"Счёт по сетам 1:2",
+0.288,
+null
+],
+[
+"Виктория Хименес-Касинцева возьмёт хотя бы сет",
+0.639,
+null
+],
+[
+"Кароль Монне возьмёт хотя бы сет",
+0.84,
+null
+]
+],
+"bar": [
+0.351219512195122,
+0,
+0.648780487804878
+],
+"center": "Линия winline · Эло 1424 : 1554"
 },
 "lt": null
 },
