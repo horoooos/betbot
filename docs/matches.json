@@ -1,97 +1,6 @@
 [
 {
 "sport": "basketball",
-"id": "401909987",
-"league": "США · NBA",
-"kickoff": "2026-11-16T00:30:00+03:00",
-"home": "Клипперс",
-"away": "Шарлотт Хорнетс",
-"hl": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/lac.png",
-"al": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/cha.png",
-"hid": "12",
-"aid": "30",
-"bb": "https://betboom.ru/search?query=%D0%9A%D0%BB%D0%B8%D0%BF%D0%BF%D0%B5%D1%80%D1%81&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=basketball",
-"path": "basketball/nba",
-"url": "live.html?s=basketball&p=basketball%2Fnba&e=401909987&h=%D0%9A%D0%BB%D0%B8%D0%BF%D0%BF%D0%B5%D1%80%D1%81&a=%D0%A8%D0%B0%D1%80%D0%BB%D0%BE%D1%82%D1%82+%D0%A5%D0%BE%D1%80%D0%BD%D0%B5%D1%82%D1%81",
-"div": "NBA",
-"state": "post",
-"bo": null,
-"prediction": "predictions/2026-11-16-klippers-sharlott-hornets-401909987.html",
-"hs": "113",
-"as": "105",
-"tip": "Ф1 (+1.5) · 1.86",
-"top": false,
-"bot": {
-"main": {
-"label": "Ф1 (+1.5)",
-"p": 0.5,
-"odds": 1.86,
-"est": false
-},
-"bold": null,
-"markets": [
-[
-"П1 (с ОТ)",
-0.45,
-1.943
-],
-[
-"П2 (с ОТ)",
-0.55,
-1.901
-],
-[
-"Ф1 (+1.5)",
-0.5,
-1.862
-],
-[
-"Ф2 (-1.5)",
-0.5,
-1.962
-],
-[
-"ТБ 206.5",
-0.66,
-null
-],
-[
-"ТМ 206.5",
-0.34,
-null
-],
-[
-"ТБ 213.5",
-0.5,
-1.952
-],
-[
-"ТМ 213.5",
-0.5,
-1.87
-],
-[
-"ТБ 220.5",
-0.34,
-null
-],
-[
-"ТМ 220.5",
-0.66,
-null
-]
-],
-"bar": [
-0.4502617751698871,
-0,
-0.5497382248301129
-],
-"center": "Ожидаемый счёт 106 : 108"
-},
-"lt": null
-},
-{
-"sport": "basketball",
 "id": "401909988",
 "league": "США · NBA",
 "kickoff": "2026-11-16T01:00:00+03:00",
@@ -290,8 +199,8 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-16-toronto-reptors-nyu-york-niks-401909990.html",
-"hs": "90",
-"as": "87",
+"hs": "92",
+"as": "95",
 "tip": "ТМ 217.5 · 1.95",
 "top": true,
 "bot": {
@@ -516,8 +425,8 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-16-vashington-uizards-hyuston-rokets-401909991.html",
-"hs": "58",
-"as": "85",
+"hs": "60",
+"as": "88",
 "tip": "ТМ 223.5 · 1.89",
 "top": false,
 "bot": {
