@@ -610,7 +610,7 @@ null
 "path": "tennis/wta",
 "url": "live.html?s=tennis&p=tennis%2Fwta&e=186793&h=%D0%9B%D0%B5%D0%B9%D1%80%D0%B5+%D0%A0%D0%BE%D0%BC%D0%B5%D1%80%D0%BE+%D0%93%D0%BE%D1%80%D0%BC%D0%B0%D1%81&a=%D0%98%D0%BF%D0%B5%D0%BA+%D0%9E%D0%B7",
 "div": "WTA",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "predictions/2026-11-16-leyre-romero-gormas-ipek-oz-186793.html",
 "hs": null,
@@ -1747,7 +1747,7 @@ null
 "path": "tennis/atp",
 "url": "live.html?s=tennis&p=tennis%2Fatp&e=187512&h=%D0%94%D0%B0%D0%BD%D0%B8%D0%B8%D0%BB+%D0%9C%D0%B5%D0%B4%D0%B2%D0%B5%D0%B4%D0%B5%D0%B2&a=%D0%A4%D0%BB%D0%B0%D0%B2%D0%B8%D0%BE+%D0%9A%D0%BE%D0%B1%D0%BE%D0%BB%D0%BB%D0%B8",
 "div": "ATP",
-"state": "pre",
+"state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-16-daniil-medvedev-flavio-kobolli-187512.html",
 "hs": null,
@@ -2196,12 +2196,78 @@ null
 "div": "WTA",
 "state": "pre",
 "bo": null,
-"prediction": "",
+"prediction": "predictions/2026-11-17-valeriya-strahova-anastasiya-tihonova-186783.html",
 "hs": null,
 "as": null,
-"tip": "",
+"tip": "Победа: Анастасия Тихонова · 1.89",
 "top": false,
-"bot": null,
+"bot": {
+"main": {
+"label": "Победа: Анастасия Тихонова",
+"p": 0.503,
+"odds": 1.89,
+"est": false
+},
+"bold": null,
+"markets": [
+[
+"Победа: Валерия Страхова",
+0.497,
+1.91
+],
+[
+"Победа: Анастасия Тихонова",
+0.503,
+1.89
+],
+[
+"Будет 3 сета",
+0.5,
+null
+],
+[
+"Будет 2 сета",
+0.5,
+null
+],
+[
+"Счёт по сетам 2:0",
+0.248,
+null
+],
+[
+"Счёт по сетам 0:2",
+0.252,
+null
+],
+[
+"Счёт по сетам 2:1",
+0.249,
+null
+],
+[
+"Счёт по сетам 1:2",
+0.251,
+null
+],
+[
+"Валерия Страхова возьмёт хотя бы сет",
+0.748,
+null
+],
+[
+"Анастасия Тихонова возьмёт хотя бы сет",
+0.752,
+null
+]
+],
+"bar": [
+0.4973684210526315,
+0,
+0.5026315789473685
+],
+"center": "Линия winline · Эло 1456 : 1321"
+},
 "lt": null
 },
 {
