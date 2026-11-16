@@ -69,6 +69,9 @@ def panda_streams(raw):
             video.update(language=str(item.get('language') or '')[:20],
                          source='PandaScore', official=item.get('official') is True,
                          status='listed', access='unknown')
+            prior = out.get(video['url'], {})
+            video['language'] = video['language'] or prior.get('language', '')
+            video['official'] = video['official'] or prior.get('official', False)
             out[video['url']] = video
     return list(out.values())
 
@@ -207,7 +210,7 @@ def discover(events=None, config=None):
     def record(event):
         key = ':'.join(str(event.get(k) or '') for k in ('sport', 'div', 'id'))
         return results.setdefault(key, {k: event.get(k) for k in
-            ('sport', 'div', 'id', 'home', 'away', 'kickoff', 'participants')} | {'streams': []})
+            ('sport', 'div', 'id', 'home', 'away', 'kickoff', 'participants', 'state')} | {'streams': []})
 
     for event in events:
         record(event)
@@ -278,7 +281,7 @@ def discover(events=None, config=None):
                         if teams:
                             matches = [dict(sport=channel['sports'][0], div='', id='youtube-' + video['video_id'],
                                             home=teams[0], away=teams[1], participants=[[teams[0]], [teams[1]]],
-                                            kickoff=datetime.fromtimestamp(now).astimezone().isoformat())]
+                                            kickoff=datetime.fromtimestamp(now).astimezone().isoformat(), state='in')]
                     if not matches:
                         continue
                     try:

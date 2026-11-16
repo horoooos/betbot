@@ -49,7 +49,11 @@ def main():
                 if key not in n:
                     continue
                 v = n[key]
-                cards.append({k: v.get(k) for k in ('title', 'badges', 'thumbnailOverlays', 'contentImage', 'metadata')})
+                badges = [{k: item[k] for k in ('text', 'badgeText', 'badgeStyle', 'style', 'iconName') if k in item}
+                          for item in broadcasts.walk([v.get('badges'), v.get('thumbnailOverlays'), v.get('contentImage')])
+                          if any(k in item for k in ('badgeStyle', 'badgeText', 'style'))]
+                title = v.get('title') or v.get('metadata', {}).get('lockupMetadataViewModel', {}).get('title')
+                cards.append({'title': title, 'badges': badges[:8]})
                 break
             if len(cards) == 2:
                 break

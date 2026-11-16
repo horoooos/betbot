@@ -20,6 +20,7 @@ class BroadcastTests(unittest.TestCase):
         self.assertEqual(len(streams), 1)
         self.assertEqual(streams[0]['status'], 'listed')
         self.assertEqual(streams[0]['access'], 'unknown')
+        self.assertEqual(streams[0]['language'], 'ru')
 
     def test_match_both_names_not_substrings_or_highlights(self):
         names = [['Team Spirit', 'Spirit'], ['PARIVISION']]
