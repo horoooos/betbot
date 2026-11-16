@@ -86,7 +86,7 @@ def configure(session):
 
 def fetch_frame(game):
     r = requests.get(VALVE + 'IDOTA2MatchStats/GetRealtimeStats/v001',
-                     params={'server_steam_id': game['server_steam_id']}, timeout=12)
+                     params={'server_steam_id': game['server_steam_id']}, timeout=8)
     r.raise_for_status()
     frame = snapshot(r.json())
     if frame:
@@ -104,8 +104,8 @@ def collect():
     # Named tournament matches first; never publish anonymous player/account data.
     games = [g for g in games if g.get('radiant_name') and g.get('dire_name') and g.get('server_steam_id')]
     frames = {}
-    with concurrent.futures.ThreadPoolExecutor(max_workers=3) as pool:
-        pending = {pool.submit(fetch_frame, g): g for g in games[:12]}
+    with concurrent.futures.ThreadPoolExecutor(max_workers=5) as pool:
+        pending = {pool.submit(fetch_frame, g): g for g in games}
         for future in concurrent.futures.as_completed(pending):
             try:
                 frame = future.result()
@@ -113,7 +113,11 @@ def collect():
                     frames[frame['match_id']] = frame
             except (requests.RequestException, ValueError, KeyError, TypeError):
                 pass
-    return {'at': int(time.time()), 'games': frames, 'source': 'Valve', 'interval': 10}
+    at = int(time.time())
+    summaries = {key: {**{k: frame.get(k) for k in ('match_id','at','game_time','state')},
+                       'teams': [{k: t.get(k) for k in ('team','name','score','networth')} for t in frame['teams']]}
+                 for key,frame in frames.items()}
+    return {'at': at, 'games': frames, 'index': {'at': at, 'games': summaries}, 'source': 'Valve', 'interval': 10}
 
 
 def main():
