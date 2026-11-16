@@ -34,3 +34,21 @@ class DotaLiveTests(unittest.TestCase):
         frame['teams'][0]['players'][0]['x'] = float('nan')
         with self.assertRaises(ValueError):
             snapshot(frame)
+
+    def test_hud_preserves_real_inventory_and_does_not_invent_hp_or_cooldowns(self):
+        raw = self.frame()
+        raw['teams'][0]['players'][0].update(items=[1, 50, -1], abilities=[5357, 5358], gold=38,
+            lh_count=207, denies_count=2, accountid=12345)
+        player = snapshot(raw)['teams'][0]['players'][0]
+        self.assertEqual(player['items'], [1, 50, -1])
+        self.assertEqual(player['abilities'], [5357, 5358])
+        self.assertEqual((player['gold'],player['last_hits'],player['denies']), (38,207,2))
+        self.assertIsNone(player['hp'])
+        self.assertIsNone(player['mana'])
+        self.assertNotIn('accountid',player)
+
+    def test_gold_history_keeps_first_and_last_real_observation(self):
+        raw=self.frame();raw['graph_data']={'graph_gold':list(range(1000))}
+        graph=snapshot(raw)['gold_graph']
+        self.assertEqual((graph[0],graph[-1]),(0,999))
+        self.assertLessEqual(len(graph),121)

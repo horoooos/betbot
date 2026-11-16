@@ -36,12 +36,21 @@ def snapshot(raw, now=None):
         return x, y
     out = dict(match_id=str(match['match_id']), at=int(now or time.time()), game_time=match.get('game_time'),
                timestamp=match.get('timestamp'), state=match.get('game_state'), teams=[], buildings=[])
+    gold_graph = (raw.get('graph_data') or {}).get('graph_gold') or []
+    if gold_graph:
+        step = max(1, math.ceil(len(gold_graph) / 120))
+        out['gold_graph'] = gold_graph[::step]
+        if (len(gold_graph) - 1) % step:
+            out['gold_graph'].append(gold_graph[-1])
     for t in teams:
         out['teams'].append(dict(id=str(t.get('team_id') or ''), name=t.get('team_name') or '',
             team=t['team_number'], score=t.get('score'), networth=t.get('net_worth'), players=[dict(
                 id=str(p.get('playerid')), name=p.get('name', ''), hero=p.get('heroid'),
                 x=pos(p)[0], y=pos(p)[1], level=p.get('level'), kills=p.get('kill_count'),
-                deaths=p.get('death_count'), assists=p.get('assists_count'), networth=p.get('net_worth'))
+                deaths=p.get('death_count'), assists=p.get('assists_count'), networth=p.get('net_worth'),
+                gold=p.get('gold'), last_hits=p.get('lh_count'), denies=p.get('denies_count'),
+                abilities=(p.get('abilities') or [])[:32], items=(p.get('items') or [])[:16],
+                hp=p.get('health'), max_hp=p.get('max_health'), mana=p.get('mana'), max_mana=p.get('max_mana'))
                 for p in t.get('players') or []]))
     for b in raw.get('buildings') or []:
         out['buildings'].append(dict(x=pos(b)[0], y=pos(b)[1], team=b.get('team'), type=b.get('type'),
@@ -80,6 +89,10 @@ def fetch_frame(game):
                      params={'server_steam_id': game['server_steam_id']}, timeout=12)
     r.raise_for_status()
     frame = snapshot(r.json())
+    if frame:
+        for team in frame['teams']:
+            if not team['name']:
+                team['name'] = game.get('radiant_name' if team['team'] == 2 else 'dire_name', '')
     return frame
 
 
