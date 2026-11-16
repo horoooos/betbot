@@ -5,7 +5,7 @@
  },
  "learned": "2026-11-16",
  "schedule_day": "2026-11-16",
- "content_slot": "2026-11-16-19",
+ "content_slot": "2026-11-16-20",
  "news_seen": [
   "https://www.sport-express.ru/hockey/nhl/news/vratar-farm-kluba-kalgari-zarubin-rasskazal-o-konkurencii-s-sergeevym-2474491/",
   "https://www.sport-express.ru/hockey/nhl/news/vratar-farm-kluba-kalgari-zarubin-obyazatelno-uvidite-menya-v-nhl-2474489/",
@@ -507,13 +507,14 @@
   "https://www.sport-express.ru/football/world/news/glava-federacii-futbola-francii-diallo-vydvinut-kandidatom-ot-uefa-na-vyborah-prezidenta-fifa-2475562/",
   "team-spirit-sygrayet-s-team-nemesis-a-parivision-vstretit-sya-s-legion-na-starte",
   "https://www.sport-express.ru/football/rfpl/news/poleh-stal-luchshim-iz-igrokov-spartaka-v-reytinge-talantov-rossii-po-versii-se-zanyav-11-e-mesto-2475587/",
+  "https://www.sport-express.ru/football/rusteam/news/karpin-zayavil-chto-safonov-ili-agkacev-vyydut-v-startovom-sostave-na-match-s-venesueloy-2475610/",
   "https://www.sport-express.ru/football/rusteam/news/karpin-kto-seychas-lider-razdevalki-sbornoy-ya-2475595/",
   "https://www.sport-express.ru/football/rusteam/news/karpin-zayavil-chto-dinamo-riskuet-zdorovem-osipenko-vypuskaya-ego-na-pole-posle-otezda-iz-sbornoy-rossii-2475594/",
   "https://www.sport-express.ru/football/rusteam/news/safonov-liga-chempionov-vsegda-napolnena-emociyami-v-sbornoy-rossii-dlya-menya-vazhen-kazhdyy-sleduyuschiy-match-2475596/",
   "https://www.sport-express.ru/football/rusteam/news/glavnyy-trener-sbornoy-rossii-karpin-venesuela-po-sile-ne-ustupaet-uzbekistanu-2475593/",
   "https://www.sport-express.ru/football/nation-league/news/mat-krishtianu-ronaldu-raskritikovala-sbornuyu-portugalii-posle-porazheniya-ot-danii-v-lige-naciy-2475588/",
-  "https://www.sport-express.ru/football/rusteam/news/karpin-zayavil-chto-safonov-ili-agkacev-vyydut-v-startovom-sostave-na-match-s-venesueloy-2475610/",
-  "https://www.sport-express.ru/hockey/khl/news/glavnyy-trener-admirala-bratash-posle-porazheniya-ot-salavata-ne-provociruyte-menya-na-shtraf-300-tysyach-2475611/"
+  "https://www.sport-express.ru/hockey/khl/news/glavnyy-trener-admirala-bratash-posle-porazheniya-ot-salavata-ne-provociruyte-menya-na-shtraf-300-tysyach-2475611/",
+  "https://www.sport-express.ru/hockey/nhl/news/edmonton-stal-11-komandoy-v-istorii-nhl-s-ochkami-v-10-pervyh-gostevyh-matchah-regulyarnogo-chempionata-2026-2475612/"
  ],
  "news_i": 4,
  "oddspapi": {
@@ -1575,7 +1576,7 @@
  "value_day": "2026-11-16",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-16",
- "site_stamp": "1078|6457|2026-11-16 19|3|b508c72c6d0bf46b",
+ "site_stamp": "1078|6467|2026-11-16 20|3|30026ee5e90eca91",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1590,126 +1591,122 @@
  },
  "value_check": "2026-11-16-6",
  "express_risk": {
-  "msg": 6202,
+  "msg": 6458,
   "legs": [
+   {
+    "sport": "football",
+    "div": "PER",
+    "id": "401886121",
+    "side": "home",
+    "p": 0.5343768698032365,
+    "odds": 1.714,
+    "kickoff": "2026-11-16T23:15:00+03:00",
+    "home": "Реал Гарсиласо",
+    "away": "ADT",
+    "league": "🇵🇪 Перу · Лига 1",
+    "logos": [
+     "https://a.espncdn.com/i/teamlogos/soccer/500/11995.png",
+     "https://a.espncdn.com/i/teamlogos/soccer/500/21314.png"
+    ],
+    "colors": [
+     "000000",
+     "000000"
+    ],
+    "label": "Победа: Реал Гарсиласо"
+   },
    {
     "sport": "basketball",
     "div": "NBA",
-    "id": "401909986",
+    "id": "401909996",
     "side": "away",
-    "p": 0.5824259306153456,
-    "odds": 1.649,
-    "kickoff": "2026-11-16T00:00:00+03:00",
-    "home": "Финикс Санз",
-    "away": "Лейкерс",
+    "p": 0.5928158754081889,
+    "odds": 1.621,
+    "kickoff": "2026-11-17T03:00:00+03:00",
+    "home": "Вашингтон Уизардс",
+    "away": "Мемфис Гриззлис",
     "league": "🇺🇸 США · NBA",
     "logos": [
-     "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/phx.png",
-     "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/lal.png"
+     "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/wsh.png",
+     "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/mem.png"
     ],
     "colors": [
-     "29127a",
-     "552583"
+     "e31837",
+     "5d76a9"
     ],
-    "label": "Победа: Лейкерс (с ОТ)",
-    "win": true,
-    "score": "123:131"
+    "label": "Победа: Мемфис Гриззлис (с ОТ)"
    },
    {
-    "sport": "football",
-    "div": "URU",
-    "id": "401933376",
-    "side": "away",
-    "p": 0.556225434159633,
-    "odds": 1.667,
-    "kickoff": "2026-11-16T02:00:00+03:00",
-    "home": "Дефенсор Спортинг",
-    "away": "Пенарол",
-    "league": "🇺🇾 Уругвай · Примера",
-    "logos": [
-     "https://a.espncdn.com/i/teamlogos/soccer/500/1007.png",
-     "https://a.espncdn.com/i/teamlogos/soccer/500/2683.png"
-    ],
-    "colors": [
-     "3e188b",
-     "000000"
-    ],
-    "label": "Победа: Пенарол",
-    "win": false,
-    "score": "1:1"
-   },
-   {
-    "sport": "hockey",
-    "div": "NHL",
-    "id": "401892721",
+    "sport": "basketball",
+    "div": "NBA",
+    "id": "401909998",
     "side": "away",
     "p": 0.572012257405516,
     "odds": 1.676,
-    "kickoff": "2026-11-16T03:30:00+03:00",
-    "home": "Филадельфия",
-    "away": "Эдмонтон",
-    "league": "🇺🇸 США · NHL",
+    "kickoff": "2026-11-17T03:30:00+03:00",
+    "home": "Майами Хит",
+    "away": "Хьюстон Рокетс",
+    "league": "🇺🇸 США · NBA",
     "logos": [
-     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/phi.png",
-     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/edm.png"
+     "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/mia.png",
+     "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/hou.png"
     ],
     "colors": [
-     "fe5823",
-     "00205b"
+     "98002e",
+     "ce0e2d"
     ],
-    "label": "Победа: Эдмонтон (с ОТ)"
+    "label": "Победа: Хьюстон Рокетс (с ОТ)"
    },
    {
-    "sport": "hockey",
-    "div": "NHL",
-    "id": "401892723",
-    "side": "home",
-    "p": 0.5830164765525981,
+    "sport": "basketball",
+    "div": "NBA",
+    "id": "401910000",
+    "side": "away",
+    "p": 0.584070796460177,
     "odds": 1.645,
-    "kickoff": "2026-11-16T04:00:00+03:00",
-    "home": "Анахайм",
-    "away": "Калгари",
-    "league": "🇺🇸 США · NHL",
+    "kickoff": "2026-11-17T04:00:00+03:00",
+    "home": "Нью-Орлеан Пеликанс",
+    "away": "Голден Стэйт",
+    "league": "🇺🇸 США · NBA",
     "logos": [
-     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/ana.png",
-     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/cgy.png"
+     "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/no.png",
+     "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/gs.png"
     ],
     "colors": [
-     "fc4c02",
-     "dd1a32"
+     "0a2240",
+     "fdb927"
     ],
-    "label": "Победа: Анахайм (с ОТ)"
+    "label": "Победа: Голден Стэйт (с ОТ)"
    },
    {
-    "sport": "hockey",
-    "div": "NHL",
-    "id": "401892722",
+    "sport": "basketball",
+    "div": "NBA",
+    "id": "401909999",
     "side": "home",
-    "p": 0.5427759110881364,
-    "odds": 1.769,
-    "kickoff": "2026-11-16T04:00:00+03:00",
-    "home": "Даллас",
-    "away": "Флорида",
-    "league": "🇺🇸 США · NHL",
+    "p": 0.5514042772481319,
+    "odds": 1.741,
+    "kickoff": "2026-11-17T04:00:00+03:00",
+    "home": "Миннесота Тимбервулвз",
+    "away": "Портленд",
+    "league": "🇺🇸 США · NBA",
     "logos": [
-     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/dal.png",
-     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/fla.png"
+     "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/min.png",
+     "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/por.png"
     ],
     "colors": [
-     "20864c",
-     "e51937"
+     "266092",
+     "e03a3e"
     ],
-    "label": "Победа: Даллас (с ОТ)"
+    "label": "Победа: Миннесота Тимбервулвз (с ОТ)"
    }
   ],
-  "odds": 13.40676524791954,
-  "day": "2026-11-15",
-  "done": true
+  "odds": 13.33621290485708,
+  "day": "2026-11-16",
+  "done": false
  },
  "streak_day": {
   "2026-11-15": 2
  },
- "news_next": "2026-11-16T20:05:35.421051+03:00",
+ "news_next": "2026-11-16T20:08:13.376216+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1728,7 +1725,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 6457,
+ "dz_last": 6467,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2118,9 +2115,9 @@
   "model": {
    "weight": 0.0,
    "status": "collecting",
-   "settled_matches": 4,
+   "settled_matches": 3,
    "required_matches": 100,
-   "trained_at": "2026-11-16T16:57:35.408381+00:00"
+   "trained_at": "2026-11-16T17:02:13.376216+00:00"
   },
   "sport_models": {
    "hockey": {
@@ -2160,11 +2157,11 @@
    }
   },
   "source": {
-   "last_success": "2026-11-16T16:53:35.349642+00:00",
-   "parsed": 370,
-   "added": 70,
-   "discovered_matches": 25,
-   "pages": 19,
+   "last_success": "2026-11-16T17:02:13.376216+00:00",
+   "parsed": 360,
+   "added": 60,
+   "discovered_matches": 19,
+   "pages": 18,
    "errors": [],
    "parsed_by_sport": {
     "soccer": 50,
@@ -2176,13 +2173,13 @@
    }
   },
   "error": null,
-  "tips": 2428,
+  "tips": 2421,
   "snapshots": 29,
-  "unmapped_markets": 3074,
+  "unmapped_markets": 3071,
   "quote_matches": 14
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-16T19:59:35.421051+03:00",
+  "last_poll": "2026-11-16T20:02:13.376216+03:00",
   "cursor": "70",
   "posts": [
    {
