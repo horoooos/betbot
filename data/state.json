@@ -7,10 +7,6 @@
  "schedule_day": "2026-11-16",
  "content_slot": "2026-11-16-22",
  "news_seen": [
-  "https://www.sport-express.ru/football/juniors/news/glotov-o-het-trike-v-matche-s-kirgiziey-chto-el-na-zavtrak-omlet-na-obed-kurochku-2474533/",
-  "https://www.sport-express.ru/football/rus_d2/news/fk-nosta-mozhet-prekratit-suschestvovanie-iz-za-problem-s-finansirovaniem-novosti-13-noyabrya-2026-2474559/",
-  "https://www.sport-express.ru/football/england/news/istochnik-manchester-yunayted-potratil-12-millionov-dollarov-na-naznachenie-pochettino-2474525/",
-  "https://www.sport-express.ru/tennis/atp/news/tyago-agustan-tirante-alehandro-tabilo-schet-i-rezultat-polufinala-turnira-v-stokgolme-13-noyabrya-2026-2474544/",
   "https://www.sport-express.ru/tennis/wta/news/pozner-ob-andreevoy-ne-udivlyus-esli-v-buduschem-ona-stanet-pervoy-raketkoy-mira-2474578/",
   "https://www.sport-express.ru/hockey/russia/news/vlasti-chehii-ne-budut-zapreschat-svoim-sportsmenam-uchastie-v-turnirah-s-rossiyanami-2474580/",
   "https://www.sport-express.ru/hockey/world-u20/news/pozner-reshenie-kanady-ne-dopuskat-rossiyu-na-mchm-absolyutno-bezobraznoe-eto-plevok-v-lico-obschestvennosti-2474582/",
@@ -506,9 +502,13 @@
   "https://www.sport-express.ru/football/friendly/news/glavnyy-trener-sbornoy-venesuely-viskarrondo-sbornaya-rossii-silna-rady-chto-sygraem-na-prekrasnom-stadione-2475639/",
   "https://www.sport-express.ru/football/italy/news/la-gazzetta-dello-sport-milan-hochet-privlech-kaka-k-peregovoram-po-transferu-endrika-iz-reala-zimoy-2475633/",
   "https://www.sport-express.ru/football/nation-league/news/zhezush-ronaldu-legenda-portugalskogo-futbola-i-nacionalnoy-sbornoy-my-nikogda-ne-smozhem-zabyt-o-krishtianu-2475625/",
-  "https://www.sport-express.ru/football/rfpl/news/zaschitnik-cska-danilov-zanyal-trete-mesto-v-reytinge-glavnyh-talantov-rossii-po-versii-se-2475623/"
+  "https://www.sport-express.ru/football/rfpl/news/zaschitnik-cska-danilov-zanyal-trete-mesto-v-reytinge-glavnyh-talantov-rossii-po-versii-se-2475623/",
+  "https://www.sport-express.ru/hockey/khl/news/18-letniy-borin-stal-samym-molodym-avtorom-gola-amura-v-khl-2475653/",
+  "https://www.sport-express.ru/hockey/europe/news/yaromir-yagr-zayavil-on-oficialno-ne-obyavlyal-o-zavershenii-karery-kogda-mozhet-proyti-proschalnyy-match-2475641/",
+  "https://www.sport-express.ru/hockey/world/news/iihf-potrebovala-otvoda-dvuh-arbitrov-cas-po-delu-o-dopuske-sbornoy-rossii-2475631/",
+  "datamainer-v-dota-2-nachali-banit-chiterov-abyuzivshikh-upravleniye-inventarem"
  ],
- "news_i": 1,
+ "news_i": 0,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1700,7 +1700,7 @@
  "streak_day": {
   "2026-11-15": 2
  },
- "news_next": "2026-11-16T22:16:54.366715+03:00",
+ "news_next": "2026-11-16T22:45:54.564998+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1812,7 +1812,8 @@
   "https://ss.sport-express.ru/userfiles/materials/224/2243916/1180x665.jpg",
   "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/Autumn_season_in_Butanic_Garden_%D9%81%D8%B5%D9%84_%D9%BE%D8%A7%DB%8C%DB%8C%D8%B2_%D8%AF%D8%B1_%D8%A8%D8%A7%D8%BA_%D8%A8%D9%88%D8%AA%D8%A7%D9%86%DB%8C%DA%A9%D8%A7%D9%84_%D8%AA%D9%81%D9%84%DB%8C%D8%B3_33.jpg/1280px-Autumn_season_in_Butanic_Garden_%D9%81%D8%B5%D9%84_%D9%BE%D8%A7%DB%8C%DB%8C%D8%B2_%D8%AF%D8%B1_%D8%A8%D8%A7%D8%BA_%D8%A8%D9%88%D8%AA%D8%A7%D9%86%DB%8C%DA%A9%D8%A7%D9%84_%D8%AA%D9%81%D9%84%DB%8C%D8%B3_33.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
   "https://images.cybersport.ru/images/as-is/plain/63/63ed8c05-e496-4d9d-bd6a-f32273f4da73.jpg",
-  "https://ss.sport-express.ru/userfiles/materials/224/2243981/1180x665.jpg"
+  "https://ss.sport-express.ru/userfiles/materials/224/2243981/1180x665.jpg",
+  "https://images.cybersport.ru/images/as-is/plain/b8/b8b405a6-24c6-44f6-b47c-0f3b0b86ad78.jpg"
  ],
  "indexnow_day": "2026-11-16",
  "vk_wall_err": null,
@@ -1984,7 +1985,8 @@
   "6446",
   "6479",
   "6489",
-  "6507"
+  "6507",
+  "6524"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -2088,11 +2090,12 @@
   "2026-11-16:новость:77d586ccc267784277c187cb",
   "2026-11-16:новость:79ba4cdac5bb8d3a7b1629b7",
   "2026-11-16:новость:95142be3e1a5a46718f4284c",
-  "2026-11-16:новость:61208ccc69fb0fbee438a147"
+  "2026-11-16:новость:61208ccc69fb0fbee438a147",
+  "2026-11-16:новость:c5c187e86f9250c0b845c87b"
  ],
  "dz_last_delivery": {
-  "source_id": 6507,
-  "message_id": 650,
+  "source_id": 6524,
+  "message_id": 651,
   "kind": "новость"
  },
  "learn_attempt_day": "2026-11-16",
@@ -2182,7 +2185,7 @@
   "quote_matches": 14
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-16T22:15:54.407799+03:00",
+  "last_poll": "2026-11-16T22:17:54.564998+03:00",
   "cursor": "72",
   "posts": [
    {
