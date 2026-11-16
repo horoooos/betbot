@@ -1150,97 +1150,6 @@ null
 }
 },
 {
-"sport": "esports",
-"id": "1793338",
-"league": "Киберспорт · Dota 2",
-"kickoff": "2026-11-16T20:30:00+03:00",
-"home": "PARIVISION",
-"away": "Team Spirit",
-"hl": "https://cdn-api.pandascore.co/images/team/image/135712/250px_parivision_allmode.png",
-"al": "https://cdn-api.pandascore.co/images/team/image/1669/153px_team_spirit_2022_lightmode.png",
-"hid": "135712",
-"aid": "1669",
-"bb": "https://betboom.ru/search?query=%D0%9F%D0%B0%D1%80%D0%B8%D0%B2%D0%B8%D1%81%D0%B8%D0%BE%D0%BD&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=esports",
-"path": "",
-"url": "esports.html?e=1793338&d=DOTA",
-"div": "DOTA",
-"state": "pre",
-"bo": 3,
-"prediction": "predictions/2026-11-16-parivision-team-spirit-1793338.html",
-"hs": 0,
-"as": 0,
-"tip": "Всухую (2:0 или 0:2) · ≈1.61",
-"top": false,
-"bot": {
-"main": {
-"label": "Всухую (2:0 или 0:2)",
-"p": 0.578,
-"odds": 1.61,
-"est": true
-},
-"bold": null,
-"markets": [
-[
-"Победа: PARIVISION",
-0.219,
-null
-],
-[
-"Победа: Team Spirit",
-0.781,
-null
-],
-[
-"Больше 2 карт",
-0.422,
-null
-],
-[
-"Всухую (2:0 или 0:2)",
-0.578,
-null
-],
-[
-"Счёт по картам 2:0",
-0.091,
-null
-],
-[
-"Счёт по картам 0:2",
-0.487,
-null
-],
-[
-"Счёт по картам 2:1",
-0.127,
-null
-],
-[
-"Счёт по картам 1:2",
-0.294,
-null
-],
-[
-"PARIVISION возьмёт хотя бы карту",
-0.513,
-null
-],
-[
-"Team Spirit возьмёт хотя бы карту",
-0.909,
-null
-]
-],
-"bar": [
-0.2188386595862859,
-0,
-0.7811613404137141
-],
-"center": "BO3 · Эло 1568 : 1789"
-},
-"lt": null
-},
-{
 "sport": "tennis",
 "id": "186784",
 "league": "Теннис · WTA",
@@ -1419,6 +1328,97 @@ null
 0.2822757111597374
 ],
 "center": "Линия winline · Эло 1638 : 1360"
+},
+"lt": null
+},
+{
+"sport": "esports",
+"id": "1793338",
+"league": "Киберспорт · Dota 2",
+"kickoff": "2026-11-16T20:50:00+03:00",
+"home": "PARIVISION",
+"away": "Team Spirit",
+"hl": "https://cdn-api.pandascore.co/images/team/image/135712/250px_parivision_allmode.png",
+"al": "https://cdn-api.pandascore.co/images/team/image/1669/153px_team_spirit_2022_lightmode.png",
+"hid": "135712",
+"aid": "1669",
+"bb": "https://betboom.ru/search?query=%D0%9F%D0%B0%D1%80%D0%B8%D0%B2%D0%B8%D1%81%D0%B8%D0%BE%D0%BD&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=esports",
+"path": "",
+"url": "esports.html?e=1793338&d=DOTA",
+"div": "DOTA",
+"state": "pre",
+"bo": 3,
+"prediction": "predictions/2026-11-16-parivision-team-spirit-1793338.html",
+"hs": 0,
+"as": 0,
+"tip": "Всухую (2:0 или 0:2) · ≈1.61",
+"top": false,
+"bot": {
+"main": {
+"label": "Всухую (2:0 или 0:2)",
+"p": 0.578,
+"odds": 1.61,
+"est": true
+},
+"bold": null,
+"markets": [
+[
+"Победа: PARIVISION",
+0.219,
+null
+],
+[
+"Победа: Team Spirit",
+0.781,
+null
+],
+[
+"Больше 2 карт",
+0.422,
+null
+],
+[
+"Всухую (2:0 или 0:2)",
+0.578,
+null
+],
+[
+"Счёт по картам 2:0",
+0.091,
+null
+],
+[
+"Счёт по картам 0:2",
+0.487,
+null
+],
+[
+"Счёт по картам 2:1",
+0.127,
+null
+],
+[
+"Счёт по картам 1:2",
+0.294,
+null
+],
+[
+"PARIVISION возьмёт хотя бы карту",
+0.513,
+null
+],
+[
+"Team Spirit возьмёт хотя бы карту",
+0.909,
+null
+]
+],
+"bar": [
+0.2188386595862859,
+0,
+0.7811613404137141
+],
+"center": "BO3 · Эло 1568 : 1789"
 },
 "lt": null
 },
