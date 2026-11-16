@@ -6777,31 +6777,31 @@
   "kickoff": "2026-11-16T18:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Mon, November 16th at 10:30 AM EST",
   "home": {
-   "id": "14562",
-   "name": "Sofia Costoulas",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/14562.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/bel.png"
    ],
+   "id": "14562",
+   "name": "Sofia Costoulas",
    "country": "Belgium",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
    "ru": "София Костоулас"
   },
   "away": {
-   "id": "5168",
-   "name": "Nuria Brancaccio",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/5168.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/ita.png"
    ],
+   "id": "5168",
+   "name": "Nuria Brancaccio",
    "country": "Italy",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
@@ -6879,7 +6879,9 @@
   "btn": 4,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null
  },
  "DOTA|1793338": {
   "id": "1793338",
