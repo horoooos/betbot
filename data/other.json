@@ -6630,5 +6630,13 @@
   },
   "main_hit": false,
   "bold_hit": null
+ },
+ "DOTA|1793342": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-16T13:00:00+03:00",
+  "sport": "esports",
+  "div": "DOTA",
+  "reason": "no_odds_or_sufficient_history",
+  "retry_at": 1794820164.072242
  }
 }
