@@ -6150,25 +6150,25 @@
   "kickoff": "2026-11-16T04:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Sun, November 15th at 8:00 PM EST",
   "clock": "0.0",
   "period": 0,
   "home": {
+   "color": "00471b",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/mil.png",
    "id": "15",
    "name": "Milwaukee Bucks",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/mil.png",
-   "color": "00471b",
    "score": "0",
    "record": "1-12",
    "periods": [],
    "ru": "Милуоки Бакс"
   },
   "away": {
+   "color": "c8102e",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/atl.png",
    "id": "1",
    "name": "Atlanta Hawks",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/atl.png",
-   "color": "c8102e",
    "score": "0",
    "record": "7-6",
    "periods": [],
@@ -6251,7 +6251,9 @@
   "btn": 4,
   "close": {
    "BB_U233.5": 0.5
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null
  },
  "NHL|401892724": {
   "id": "401892724",
