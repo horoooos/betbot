@@ -1,354 +1,5 @@
 [
 {
-"sport": "basketball",
-"id": "401909993",
-"league": "США · NBA",
-"kickoff": "2026-11-16T05:00:00+03:00",
-"home": "Сакраменто Кингз",
-"away": "Оклахома-Сити Тандер",
-"hl": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/sac.png",
-"al": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/okc.png",
-"hid": "23",
-"aid": "25",
-"bb": "https://betboom.ru/search?query=%D0%A1%D0%B0%D0%BA%D1%80%D0%B0%D0%BC%D0%B5%D0%BD%D1%82%D0%BE&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=basketball",
-"path": "basketball/nba",
-"url": "live.html?s=basketball&p=basketball%2Fnba&e=401909993&h=%D0%A1%D0%B0%D0%BA%D1%80%D0%B0%D0%BC%D0%B5%D0%BD%D1%82%D0%BE+%D0%9A%D0%B8%D0%BD%D0%B3%D0%B7&a=%D0%9E%D0%BA%D0%BB%D0%B0%D1%85%D0%BE%D0%BC%D0%B0-%D0%A1%D0%B8%D1%82%D0%B8+%D0%A2%D0%B0%D0%BD%D0%B4%D0%B5%D1%80",
-"div": "NBA",
-"state": "post",
-"bo": null,
-"prediction": "predictions/2026-11-16-sakramento-kingz-oklahoma-siti-tander-401909993.html",
-"hs": "103",
-"as": "125",
-"tip": "ТМ 223.5 · 1.91",
-"top": false,
-"bot": {
-"main": {
-"label": "ТМ 223.5",
-"p": 0.5,
-"odds": 1.91,
-"est": false
-},
-"bold": null,
-"markets": [
-[
-"П1 (с ОТ)",
-0.169,
-4.61
-],
-[
-"П2 (с ОТ)",
-0.831,
-1.214
-],
-[
-"Ф1 (+11.5)",
-0.5,
-1.862
-],
-[
-"Ф2 (-11.5)",
-0.5,
-1.952
-],
-[
-"ТБ 216.5",
-0.66,
-null
-],
-[
-"ТМ 216.5",
-0.34,
-null
-],
-[
-"ТБ 223.5",
-0.5,
-1.909
-],
-[
-"ТМ 223.5",
-0.5,
-1.909
-],
-[
-"ТБ 230.5",
-0.34,
-null
-],
-[
-"ТМ 230.5",
-0.66,
-null
-]
-],
-"bar": [
-0.1689473502124051,
-0,
-0.831052649787595
-],
-"center": "Ожидаемый счёт 106 : 118"
-},
-"lt": null
-},
-{
-"sport": "hockey",
-"id": "401892724",
-"league": "США · NHL",
-"kickoff": "2026-11-16T05:00:00+03:00",
-"home": "Вегас",
-"away": "Ванкувер",
-"hl": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/vgk.png",
-"al": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/van.png",
-"hid": "37",
-"aid": "22",
-"bb": "https://betboom.ru/search?query=%D0%92%D0%B5%D0%B3%D0%B0%D1%81&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=hockey",
-"path": "hockey/nhl",
-"url": "live.html?s=hockey&p=hockey%2Fnhl&e=401892724&h=%D0%92%D0%B5%D0%B3%D0%B0%D1%81&a=%D0%92%D0%B0%D0%BD%D0%BA%D1%83%D0%B2%D0%B5%D1%80",
-"div": "NHL",
-"state": "post",
-"bo": null,
-"prediction": "predictions/2026-11-16-vegas-vankuver-401892724.html",
-"hs": "3",
-"as": "6",
-"tip": "ТБ 6.5 · 1.91",
-"top": false,
-"bot": {
-"main": {
-"label": "ТБ 6.5",
-"p": 0.5,
-"odds": 1.91,
-"est": false
-},
-"bold": null,
-"markets": [
-[
-"П1 (с ОТ и буллитами)",
-0.771,
-1.244
-],
-[
-"П2 (с ОТ и буллитами)",
-0.229,
-4.2
-],
-[
-"П1 в основное время",
-0.708,
-null
-],
-[
-"Ничья в основное время",
-0.122,
-null
-],
-[
-"П2 в основное время",
-0.17,
-null
-],
-[
-"ТБ 5.5",
-0.656,
-null
-],
-[
-"ТМ 5.5",
-0.344,
-null
-],
-[
-"ТБ 6.5",
-0.5,
-1.909
-],
-[
-"ТМ 6.5",
-0.5,
-1.909
-],
-[
-"ТБ 7.5",
-0.351,
-null
-],
-[
-"ТМ 7.5",
-0.649,
-null
-],
-[
-"ИТ1 больше 1.5",
-0.928,
-null
-],
-[
-"ИТ1 больше 2.5",
-0.803,
-null
-],
-[
-"ИТ1 больше 3.5",
-0.622,
-null
-],
-[
-"ИТ2 больше 1.5",
-0.687,
-null
-],
-[
-"ИТ2 больше 2.5",
-0.424,
-null
-]
-],
-"bar": [
-0.771489513981231,
-0,
-0.22851048601876892
-],
-"center": "Ожидаемые голы 4.3 : 2.4"
-},
-"lt": {
-"fair": 1.82,
-"label": "П2 (осн. время)",
-"min_odds": 1.91,
-"minute": "2-й период",
-"p": 0.548,
-"result": "hit",
-"score": "1:3"
-}
-},
-{
-"sport": "hockey",
-"id": "401892725",
-"league": "США · NHL",
-"kickoff": "2026-11-16T05:00:00+03:00",
-"home": "Сан-Хосе",
-"away": "Нэшвилл",
-"hl": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/sj.png",
-"al": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/nsh.png",
-"hid": "18",
-"aid": "27",
-"bb": "https://betboom.ru/search?query=%D0%A1%D0%B0%D0%BD-%D0%A5%D0%BE%D1%81%D0%B5&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=hockey",
-"path": "hockey/nhl",
-"url": "live.html?s=hockey&p=hockey%2Fnhl&e=401892725&h=%D0%A1%D0%B0%D0%BD-%D0%A5%D0%BE%D1%81%D0%B5&a=%D0%9D%D1%8D%D1%88%D0%B2%D0%B8%D0%BB%D0%BB",
-"div": "NHL",
-"state": "post",
-"bo": null,
-"prediction": "predictions/2026-11-16-san-hose-neshvill-401892725.html",
-"hs": "4",
-"as": "2",
-"tip": "П2 (с ОТ и буллитами) · 1.59",
-"top": true,
-"bot": {
-"main": {
-"label": "П2 (с ОТ и буллитами)",
-"p": 0.604,
-"odds": 1.59,
-"est": false
-},
-"bold": null,
-"markets": [
-[
-"П1 (с ОТ и буллитами)",
-0.396,
-2.42
-],
-[
-"П2 (с ОТ и буллитами)",
-0.604,
-1.588
-],
-[
-"П1 в основное время",
-0.316,
-null
-],
-[
-"Ничья в основное время",
-0.154,
-null
-],
-[
-"П2 в основное время",
-0.53,
-null
-],
-[
-"ТБ 5.5",
-0.64,
-null
-],
-[
-"ТМ 5.5",
-0.36,
-null
-],
-[
-"ТБ 6.5",
-0.483,
-1.98
-],
-[
-"ТМ 6.5",
-0.517,
-1.847
-],
-[
-"ТБ 7.5",
-0.335,
-null
-],
-[
-"ТМ 7.5",
-0.665,
-null
-],
-[
-"ИТ1 больше 1.5",
-0.79,
-null
-],
-[
-"ИТ1 больше 2.5",
-0.56,
-null
-],
-[
-"ИТ1 больше 3.5",
-0.336,
-null
-],
-[
-"ИТ2 больше 1.5",
-0.878,
-null
-],
-[
-"ИТ2 больше 2.5",
-0.703,
-null
-]
-],
-"bar": [
-0.396201198730591,
-0,
-0.6037988012694091
-],
-"center": "Ожидаемые голы 2.9 : 3.6"
-},
-"lt": {
-"fair": 1.44,
-"label": "П1 (осн. время)",
-"min_odds": 1.51,
-"minute": "2-й период",
-"p": 0.693,
-"result": "hit",
-"score": "2:0"
-}
-},
-{
 "sport": "esports",
 "id": "1793342",
 "league": "Киберспорт · Dota 2",
@@ -1662,6 +1313,56 @@ null
 "bb": "https://betboom.ru/search?query=%D0%A1%D0%B8%D0%BD%D0%B3%D0%B0%D0%BF%D1%83%D1%80%D0%B0&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
 "path": "soccer/fifa.friendly",
 "url": "live.html?s=football&p=soccer%2Ffifa.friendly&e=401916335&h=%D0%A1%D0%B1%D0%BE%D1%80%D0%BD%D0%B0%D1%8F+%D0%A1%D0%B8%D0%BD%D0%B3%D0%B0%D0%BF%D1%83%D1%80%D0%B0&a=%D0%A1%D0%B1%D0%BE%D1%80%D0%BD%D0%B0%D1%8F+%D0%91%D1%80%D0%B0%D0%B7%D0%B8%D0%BB%D0%B8%D0%B8",
+"div": "FRI",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "football",
+"id": "401930880",
+"league": "Сборные · Товарищеские матчи",
+"kickoff": "2026-11-17T15:00:00+03:00",
+"home": "Сборная Китая",
+"away": "Сборная Бахрейна",
+"hl": "https://a.espncdn.com/i/teamlogos/countries/500/chn.png",
+"al": "https://a.espncdn.com/i/teamlogos/countries/500/bhr.png",
+"hid": "658",
+"aid": "4381",
+"bb": "https://betboom.ru/search?query=%D0%A1%D0%B1%D0%BE%D1%80%D0%BD%D0%B0%D1%8F&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/fifa.friendly",
+"url": "live.html?s=football&p=soccer%2Ffifa.friendly&e=401930880&h=%D0%A1%D0%B1%D0%BE%D1%80%D0%BD%D0%B0%D1%8F+%D0%9A%D0%B8%D1%82%D0%B0%D1%8F&a=%D0%A1%D0%B1%D0%BE%D1%80%D0%BD%D0%B0%D1%8F+%D0%91%D0%B0%D1%85%D1%80%D0%B5%D0%B9%D0%BD%D0%B0",
+"div": "FRI",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "football",
+"id": "401930242",
+"league": "Сборные · Товарищеские матчи",
+"kickoff": "2026-11-17T15:00:00+03:00",
+"home": "Сборная Кыргызстана",
+"away": "Сборная Вьетнама",
+"hl": "https://a.espncdn.com/i/teamlogos/countries/500/kgz.png",
+"al": "https://a.espncdn.com/i/teamlogos/countries/500/vie.png",
+"hid": "6724",
+"aid": "7349",
+"bb": "https://betboom.ru/search?query=%D0%9A%D1%8B%D1%80%D0%B3%D1%8B%D0%B7%D1%81%D1%82%D0%B0%D0%BD%D0%B0&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/fifa.friendly",
+"url": "live.html?s=football&p=soccer%2Ffifa.friendly&e=401930242&h=%D0%A1%D0%B1%D0%BE%D1%80%D0%BD%D0%B0%D1%8F+%D0%9A%D1%8B%D1%80%D0%B3%D1%8B%D0%B7%D1%81%D1%82%D0%B0%D0%BD%D0%B0&a=%D0%A1%D0%B1%D0%BE%D1%80%D0%BD%D0%B0%D1%8F+%D0%92%D1%8C%D0%B5%D1%82%D0%BD%D0%B0%D0%BC%D0%B0",
 "div": "FRI",
 "state": "pre",
 "bo": null,
