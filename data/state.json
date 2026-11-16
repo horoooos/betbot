@@ -7,10 +7,6 @@
  "schedule_day": "2026-11-16",
  "content_slot": "2026-11-16-10",
  "news_seen": [
-  "https://www.sport-express.ru/football/nation-league/news/pedro-porro-kommentariy-po-pobede-ispanii-nad-chehiey-v-matche-ligi-naciy-uefa-2474273/",
-  "https://www.sport-express.ru/football/nation-league/news/de-breyne-poluchil-nebolshoe-povrezhdenie-v-matche-s-turciey-2474270/",
-  "https://www.sport-express.ru/football/nation-league/news/roberto-manchini-kommentariy-po-pobede-italii-nad-franciey-v-lige-naciy-2474269/",
-  "https://www.sport-express.ru/football/foreign/news/samuel-pokinet-shtab-sbornoy-argentiny-i-nachnet-samostoyatelnuyu-trenerskuyu-kareru-2474267/",
   "https://www.sport-express.ru/football/france/news/ismael-stal-novym-glavnym-trenerom-gavra-2474266/",
   "https://www.sport-express.ru/football/nation-league/news/adrien-rabo-kommentariy-po-porazheniyu-francii-ot-italii-v-lige-naciy-2474268/",
   "https://www.sport-express.ru/tennis/wta/news/mirra-andreeva-sygraet-s-peguloy-v-polufinale-itogovogo-turnira-wta-2474316/",
@@ -506,9 +502,13 @@
   "https://www.sport-express.ru/hockey/world-u20/news/yurist-fhr-nazvala-nezakonnym-reshenie-iihf-ne-dopuskat-rossiyu-na-mchm-2475448/",
   "https://www.sport-express.ru/hockey/khl/news/v-khl-zayavili-chto-chislo-pretendentov-na-kubok-gagarina-vyroslo-do-shesti-2475445/",
   "https://www.sport-express.ru/hockey/khl/news/dobrohvalov-rasskazal-zarabatyvaet-li-khl-na-matche-zvezd-2475440/",
-  "https://www.sport-express.ru/football/rfpl/news/gazizov-o-vozmozhnom-matche-protiv-mediakomandy-mahachkalinskomu-dinamo-poka-eto-neinteresno-2475444/"
+  "https://www.sport-express.ru/football/rfpl/news/gazizov-o-vozmozhnom-matche-protiv-mediakomandy-mahachkalinskomu-dinamo-poka-eto-neinteresno-2475444/",
+  "https://www.sport-express.ru/tennis/wta/news/selivanenko-o-pobede-andreevoy-na-itogovom-turnire-wta-vo-vseh-matchah-ona-ne-davala-sopernikam-vozmozhnosti-zacepitsya-2475456/",
+  "https://www.sport-express.ru/tennis/wta/news/pozner-o-pobede-andreevoy-na-itogovom-turnire-nadeyus-chto-etot-uspeh-ne-vskruzhit-ey-golovu-2475454/",
+  "https://www.sport-express.ru/tennis/wta/news/svitolina-o-porazhenii-ot-andreevoy-v-finale-itogovogo-turnira-ona-ochen-horosho-spravilas-so-slozhnymi-momentami-2475441/",
+  "seized-obratilsya-k-fallen-posle-pobedy-furia-na-blast-ne-predstavlyayu-naskolko"
  ],
- "news_i": 4,
+ "news_i": 0,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1702,7 +1702,7 @@
  "streak_day": {
   "2026-11-15": 2
  },
- "news_next": "2026-11-16T12:25:24.278683+03:00",
+ "news_next": "2026-11-16T12:52:24.310904+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1803,7 +1803,8 @@
   "https://ss.sport-express.ru/userfiles/materials/224/2243686/1180x665.jpg",
   "https://ss.sport-express.ru/userfiles/materials/224/2243723/1180x665.jpg",
   "https://images.cybersport.ru/images/as-is/plain/b9/b9948e95-7085-4527-a5bd-c3c15a4f0352.jpg",
-  "https://upload.wikimedia.org/wikipedia/commons/f/f1/Notre_Dame_Fans%2C_Notre_Dame_Stadium%2C_University_of_Notre_Dame%2C_South_Bend%2C_Indiana_%2811045887666%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+  "https://upload.wikimedia.org/wikipedia/commons/f/f1/Notre_Dame_Fans%2C_Notre_Dame_Stadium%2C_University_of_Notre_Dame%2C_South_Bend%2C_Indiana_%2811045887666%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "https://images.cybersport.ru/images/as-is/plain/ba/ba8bbf39-84fd-405c-afc0-539782639124.jpg"
  ],
  "indexnow_day": "2026-11-16",
  "vk_wall_err": null,
@@ -1964,7 +1965,8 @@
   "6317",
   "6381",
   "6383",
-  "6385"
+  "6385",
+  "6388"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -2057,11 +2059,12 @@
   "2026-11-15:новость:5cc063e1c40c3d0c7faaece2",
   "2026-11-16:новость:11dbbf1477304c70c168a645",
   "2026-11-16:новость:1b51b2831c0fc110a5bee5fc",
-  "2026-11-16:новость:a7ffd9e562eecccb83b7eb49"
+  "2026-11-16:новость:a7ffd9e562eecccb83b7eb49",
+  "2026-11-16:новость:ff6396bef2d3533a0af8c094"
  ],
  "dz_last_delivery": {
-  "source_id": 6385,
-  "message_id": 639,
+  "source_id": 6388,
+  "message_id": 640,
   "kind": "новость"
  },
  "learn_attempt_day": "2026-11-16",
@@ -2151,7 +2154,7 @@
   "quote_matches": 13
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-16T12:23:24.157253+03:00",
+  "last_poll": "2026-11-16T12:25:24.310904+03:00",
   "cursor": "62",
   "posts": [
    {
