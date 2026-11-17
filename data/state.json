@@ -1574,7 +1574,7 @@
  "value_day": "2026-11-16",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-16",
- "site_stamp": "1097|6609|2026-11-17 02|4|4e6bdb5a9cbf5693",
+ "site_stamp": "1097|6609|2026-11-17 03|4|b961a5ec69837e1a",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1587,7 +1587,7 @@
    "NBA|401909999"
   ]
  },
- "value_check": "2026-11-17-0",
+ "value_check": "2026-11-17-1",
  "express_risk": {
   "msg": 6458,
   "legs": [
@@ -1860,8 +1860,8 @@
  "vk_photos": [],
  "vk_photo_until": 1794644243.1147308,
  "vk_photo_cursor": {},
- "vk_story_last": 6141,
- "vk_story_err": null,
+ "vk_story_last": 6333,
+ "vk_story_err": "VK stories: сервер не вернул upload_result",
  "push_weekly": "2026-46",
  "vk_story_at": 1794807921.3658493,
  "vk_story_url": "https://vk.com/story-228963529_456239078",
@@ -2201,12 +2201,12 @@
   },
   "error": null,
   "tips": 2870,
-  "snapshots": 44,
+  "snapshots": 46,
   "unmapped_markets": 3894,
   "quote_matches": 14
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-17T02:58:23.448231+03:00",
+  "last_poll": "2026-11-17T03:00:23.620560+03:00",
   "cursor": "79",
   "posts": [
    {
@@ -2670,5 +2670,6 @@
    }
   ],
   "status": "observing"
- }
+ },
+ "vk_story_retry_at": 1794877279.757098
 }
