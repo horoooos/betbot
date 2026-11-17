@@ -6693,25 +6693,25 @@
   "kickoff": "2026-11-17T03:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Mon, November 16th at 7:30 PM EST",
   "clock": "0:00",
   "period": 0,
   "home": {
+   "color": "0056ae",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/nyr.png",
    "id": "13",
    "name": "New York Rangers",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/nyr.png",
-   "color": "0056ae",
    "score": "0",
    "record": "12-8-1",
    "periods": [],
    "ru": "Рейнджерс"
   },
   "away": {
+   "color": "c41230",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/mtl.png",
    "id": "10",
    "name": "Montreal Canadiens",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/mtl.png",
-   "color": "c41230",
    "score": "0",
    "record": "12-4-4",
    "periods": [],
@@ -6823,7 +6823,9 @@
   "close": {
    "HK_ML_A": 0.5107,
    "HK_O6.5": 0.4486
-  }
+  },
+  "main_hit": false,
+  "bold_hit": false
  },
  "NBA|401909997": {
   "id": "401909997",
@@ -7177,25 +7179,25 @@
   "kickoff": "2026-11-17T04:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Mon, November 16th at 8:00 PM EST",
   "clock": "0.0",
   "period": 0,
   "home": {
+   "color": "0a2240",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/no.png",
    "id": "3",
    "name": "New Orleans Pelicans",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/no.png",
-   "color": "0a2240",
    "score": "0",
    "record": "4-10",
    "periods": [],
    "ru": "Нью-Орлеан Пеликанс"
   },
   "away": {
+   "color": "fdb927",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/gs.png",
    "id": "9",
    "name": "Golden State Warriors",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/gs.png",
-   "color": "fdb927",
    "score": "0",
    "record": "8-5",
    "periods": [],
@@ -7278,7 +7280,9 @@
   "btn": 4,
   "close": {
    "BB_ML_A": 0.6147
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null
  },
  "NBA|401910001": {
   "id": "401910001",
