@@ -1860,14 +1860,14 @@
  "vk_photos": [],
  "vk_photo_until": 1794644243.1147308,
  "vk_photo_cursor": {},
- "vk_story_last": 6389,
- "vk_story_err": "VK stories: сервер не вернул upload_result",
+ "vk_story_last": 6390,
+ "vk_story_err": null,
  "push_weekly": "2026-46",
- "vk_story_at": 1794900841.691562,
- "vk_story_url": "https://vk.com/story-228963529_456239092",
+ "vk_story_at": 1794905409.1968853,
+ "vk_story_url": "https://vk.com/story-228963529_456239093",
  "vk_story_day": {
   "date": "2026-11-17",
-  "count": 14
+  "count": 15
  },
  "vk_legacy_pending": [
   {
@@ -2188,11 +2188,11 @@
    }
   },
   "source": {
-   "last_success": "2026-11-17T08:27:34.151636+00:00",
-   "parsed": 370,
-   "added": 46,
-   "discovered_matches": 32,
-   "pages": 19,
+   "last_success": "2026-11-17T08:49:33.990138+00:00",
+   "parsed": 360,
+   "added": 50,
+   "discovered_matches": 36,
+   "pages": 18,
    "errors": [],
    "parsed_by_sport": {
     "soccer": 50,
@@ -2204,13 +2204,13 @@
    }
   },
   "error": null,
-  "tips": 3302,
+  "tips": 3318,
   "snapshots": 47,
-  "unmapped_markets": 4492,
+  "unmapped_markets": 4526,
   "quote_matches": 14
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-17T11:47:33.807437+03:00",
+  "last_poll": "2026-11-17T11:49:33.990138+03:00",
   "cursor": "80",
   "posts": [
    {
@@ -2691,6 +2691,5 @@
    }
   ],
   "status": "observing"
- },
- "vk_story_retry_at": 1794905400.2983131
+ }
 }
