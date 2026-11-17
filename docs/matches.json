@@ -1712,7 +1712,7 @@ null
 "bo": null,
 "prediction": "predictions/2026-11-17-sbornaya-kuveyta-sbornaya-gondurasa-401931956.html",
 "hs": "0",
-"as": "0",
+"as": "1",
 "tip": "П2 · 1.95",
 "top": false,
 "bot": {
@@ -1826,7 +1826,15 @@ null
 ]
 ]
 },
-"lt": null
+"lt": {
+"fair": 1.31,
+"label": "ТМ 3.5",
+"min_odds": 1.38,
+"minute": "25'",
+"p": 0.761,
+"result": null,
+"score": "0:1"
+}
 },
 {
 "sport": "esports",
