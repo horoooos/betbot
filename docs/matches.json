@@ -1,145 +1,5 @@
 [
 {
-"sport": "football",
-"id": "401933375",
-"league": "Уругвай · Примера",
-"kickoff": "2026-11-17T02:00:00+03:00",
-"home": "Монтевидео Уондерерс",
-"away": "Хувентуд Лас-Пьедрас",
-"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/5501.png",
-"al": "https://a.espncdn.com/i/teamlogos/soccer/500/8416.png",
-"hid": "5501",
-"aid": "8416",
-"bb": "https://betboom.ru/search?query=%D0%9C%D0%BE%D0%BD%D1%82%D0%B5%D0%B2%D0%B8%D0%B4%D0%B5%D0%BE&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
-"path": "soccer/uru.1",
-"url": "live.html?s=football&p=soccer%2Furu.1&e=401933375&h=%D0%9C%D0%BE%D0%BD%D1%82%D0%B5%D0%B2%D0%B8%D0%B4%D0%B5%D0%BE+%D0%A3%D0%BE%D0%BD%D0%B4%D0%B5%D1%80%D0%B5%D1%80%D1%81&a=%D0%A5%D1%83%D0%B2%D0%B5%D0%BD%D1%82%D1%83%D0%B4+%D0%9B%D0%B0%D1%81-%D0%9F%D1%8C%D0%B5%D0%B4%D1%80%D0%B0%D1%81",
-"participants": [
-[
-"Монтевидео Уондерерс",
-"Montevideo Wanderers"
-],
-[
-"Хувентуд Лас-Пьедрас",
-"Juventud"
-]
-],
-"div": "URU",
-"state": "post",
-"bo": null,
-"prediction": "predictions/2026-11-17-montevideo-uonderers-huventud-las-pedras-401933375.html",
-"hs": "2",
-"as": "1",
-"tip": "П1 · 1.95",
-"top": false,
-"bot": {
-"main": {
-"label": "П1",
-"p": 0.469,
-"odds": 1.95,
-"est": false
-},
-"bold": null,
-"markets": [
-[
-"П1",
-0.469,
-1.952
-],
-[
-"Ничья",
-0.275,
-3.5
-],
-[
-"П2",
-0.257,
-3.5
-],
-[
-"1X",
-0.743,
-null
-],
-[
-"X2",
-0.531,
-null
-],
-[
-"ТБ 1.5",
-0.744,
-null
-],
-[
-"ТБ 2.5",
-0.484,
-1.952
-],
-[
-"ТМ 2.5",
-0.516,
-1.8
-],
-[
-"ТБ 3.5",
-0.266,
-null
-],
-[
-"Обе забьют — да",
-0.527,
-null
-],
-[
-"Обе забьют — нет",
-0.473,
-null
-],
-[
-"ИТ1 больше 1.5",
-0.453,
-null
-],
-[
-"ИТ2 больше 1.5",
-0.292,
-null
-],
-[
-"Ф1 (−1.5)",
-0.243,
-null
-],
-[
-"Ф2 (+1.5)",
-0.757,
-null
-]
-],
-"bar": [
-0.46854860349159744,
-0.27471588941701597,
-0.25673550709138665
-],
-"center": "Ожидаемые голы (xG) 1.5 : 1.1",
-"scores": [
-[
-"1:1",
-0.131
-],
-[
-"1:0",
-0.103
-],
-[
-"2:1",
-0.093
-]
-]
-},
-"lt": null
-},
-{
 "sport": "basketball",
 "id": "401909994",
 "league": "США · NBA",
@@ -471,7 +331,7 @@ null
 "bo": null,
 "prediction": "predictions/2026-11-17-bruklin-nets-filadelfiya-siksers-401909997.html",
 "hs": "111",
-"as": "120",
+"as": "122",
 "tip": "Ф2 (-4.5) · 1.85",
 "top": false,
 "bot": {
@@ -821,8 +681,8 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-17-minnesota-timbervulvz-portlend-401909999.html",
-"hs": "87",
-"as": "75",
+"hs": "89",
+"as": "77",
 "tip": "П1 (с ОТ) · 1.77",
 "top": true,
 "bot": {
@@ -1023,8 +883,8 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-17-denver-naggets-finiks-sanz-401910001.html",
-"hs": "45",
-"as": "46",
+"hs": "47",
+"as": "49",
 "tip": "Ф1 (-9.5) · 1.88",
 "top": false,
 "bot": {
