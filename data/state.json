@@ -2217,8 +2217,8 @@
   "quote_matches": 14
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-17T12:38:12.506499+03:00",
-  "cursor": "80",
+  "last_poll": "2026-11-17T12:40:12.615033+03:00",
+  "cursor": "81",
   "posts": [
    {
     "post_id": 499,
@@ -2695,6 +2695,23 @@
     },
     "status": "needs_review",
     "observed_at": "2026-11-17T11:35:34.042881+03:00"
+   },
+   {
+    "post_id": 530,
+    "url": "https://vk.com/wall-228963529_530",
+    "title": "Lorenof раскрыл, почему система порядочности в Dota 2 «заполняет» только негатив",
+    "text": "Lorenof раскрыл, почему система порядочности в Dota 2 «заполняет» только негатив\n\nрџ“° Lorenof — мидер «Astra Invicta», Артём Мельник, в недавнем эфире раскрыл своё отношение к системе порядочности в Dota 2. Отрывок его высказываний выложили в Telegram-канале LEGENDWP.\n\n#киберспорт #Dota #Мельник #новостиспорта #спорт #главное #аиставит\n\nрџ“Љ Подробнее на сайте рџ‘‡",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": true,
+     "details_present": true,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-17T12:40:12.615033+03:00"
    }
   ],
   "status": "observing"
