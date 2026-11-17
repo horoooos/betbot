@@ -3,7 +3,7 @@
   "1X2": 0.0,
   "OU25": 0.0
  },
- "learned": "2026-11-17",
+ "learned": "2026-11-18",
  "schedule_day": "2026-11-17",
  "content_slot": "2026-11-17-23",
  "news_seen": [
@@ -1583,7 +1583,7 @@
  "value_day": "2026-11-17",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-17",
- "site_stamp": "1123|6848|2026-11-17 23|4|153ec63b85b4b662",
+ "site_stamp": "1123|6848|2026-11-18 00|4|153ec63b85b4b662",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1596,7 +1596,7 @@
    "NBA|401910003"
   ]
  },
- "value_check": "2026-11-17-7",
+ "value_check": "2026-11-18-0",
  "express_risk": {
   "msg": 6767,
   "legs": [
@@ -1848,7 +1848,7 @@
   "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f0/Ayesha_Curry.jpg/1280px-Ayesha_Curry.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
   "https://images.cybersport.ru/images/as-is/plain/09/094a70e6-f0a5-4325-9e2f-992f4d28e70d.jpg"
  ],
- "indexnow_day": "2026-11-17",
+ "indexnow_day": "2026-11-18",
  "vk_wall_err": null,
  "shorts_day": "2026-11-17",
  "shorts_err": {
@@ -2167,22 +2167,22 @@
   "message_id": 669,
   "kind": "новость"
  },
- "learn_attempt_day": "2026-11-17",
+ "learn_attempt_day": "2026-11-18",
  "learn_diagnostics": {
   "objective": "shared_lambda_1X2_OU25",
   "rows": 8000,
-  "train_rows": 6250,
-  "validation_rows": 1750,
-  "validation_from": "2026-09-25",
+  "train_rows": 6255,
+  "validation_rows": 1745,
+  "validation_from": "2026-09-26",
   "history_from": "2026-02-21",
-  "history_until": "2026-11-15",
+  "history_until": "2026-11-16",
   "candidate_weight": 0.0,
   "weight": 0.0,
-  "train_logloss": 0.84055327660324,
-  "validation_logloss": 0.8189784477134526,
-  "validation_market_logloss": 0.8189784477134526
+  "train_logloss": 0.8408782244313493,
+  "validation_logloss": 0.8189543264526356,
+  "validation_market_logloss": 0.8189543264526356
  },
- "learned_at": "2026-11-17T00:01:59.855391+03:00",
+ "learned_at": "2026-11-18T00:00:33.701252+03:00",
  "learn_version": "shared-lambda-v2",
  "learn_error": null,
  "learn_retry_at": 0,
@@ -2254,7 +2254,7 @@
   "quote_matches": 15
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-17T23:58:33.914761+03:00",
+  "last_poll": "2026-11-18T00:00:33.701252+03:00",
   "cursor": "91",
   "posts": [
    {
