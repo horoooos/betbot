@@ -5,7 +5,7 @@
  },
  "learned": "2026-11-17",
  "schedule_day": "2026-11-17",
- "content_slot": "2026-11-17-13",
+ "content_slot": "2026-11-17-16",
  "news_seen": [
   "https://www.sport-express.ru/basketball/vtb-league/news/mba-dinamo-vladivostok-schet-i-rezultat-matcha-edinoy-ligi-vtb-14-noyabrya-2026-2474815/",
   "https://www.sport-express.ru/football/turkey/news/batrakov-rasskazal-chto-sam-predlozhil-vklyuchat-kalinku-malinku-posle-ego-golov-za-galatasaray-2474818/",
@@ -1569,7 +1569,7 @@
  "value_day": "2026-11-17",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-17",
- "site_stamp": "1108|6687|2026-11-17 15|4|3ead2ebdac39931f",
+ "site_stamp": "1108|6689|2026-11-17 16|4|3ead2ebdac39931f",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1721,7 +1721,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 6687,
+ "dz_last": 6689,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2218,12 +2218,12 @@
   },
   "error": null,
   "tips": 3574,
-  "snapshots": 51,
+  "snapshots": 53,
   "unmapped_markets": 4909,
   "quote_matches": 14
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-17T15:58:14.257810+03:00",
+  "last_poll": "2026-11-17T16:00:13.859582+03:00",
   "cursor": "86",
   "posts": [
    {
@@ -2738,5 +2738,14 @@
    }
   ],
   "status": "observing"
+ },
+ "mod_poll": {
+  "key": "UNL|401861196",
+  "id": "401861196",
+  "poll": 6689,
+  "post": 6688,
+  "home": "Сборная Bosnia-Herzegovina",
+  "away": "Сборная Румынии",
+  "kickoff": "2026-11-17T22:45:00+03:00"
  }
 }
