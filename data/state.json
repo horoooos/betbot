@@ -2207,8 +2207,8 @@
   "quote_matches": 14
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-17T11:33:33.983160+03:00",
-  "cursor": "79",
+  "last_poll": "2026-11-17T11:35:34.042881+03:00",
+  "cursor": "80",
   "posts": [
    {
     "post_id": 499,
@@ -2668,6 +2668,23 @@
     },
     "status": "needs_review",
     "observed_at": "2026-11-17T02:02:23.478143+03:00"
+   },
+   {
+    "post_id": 529,
+    "url": "https://vk.com/wall-228963529_529",
+    "title": "m0NESY рекордсмен EVP: 19 наград в CS2",
+    "text": "m0NESY рекордсмен EVP: 19 наград в CS2\n\nрџ“° m0NESY переписал историю EVP в Counter-Strike 2 – Илья «m0NESY» Осипов из «Team Falcons» стал абсолютным лидером по количеству этих наград.\n\nвљЎпёЏ По данным [#alias|HLTV.org|HLTV.org], за карьеру в CS2 он получил EVP 19 раз. Награда вручается только «исключительно ценным игрокам», что подчёркивает его вклад в каждую карту.\n\n#киберспорт #CS2 #новостиспорта #спорт #главное #аиставит\n\nрџ“Љ Подробнее на сайте рџ‘‡",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": true,
+     "details_present": true,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-17T11:35:34.042881+03:00"
    }
   ],
   "status": "observing"
