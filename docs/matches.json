@@ -1,107 +1,6 @@
 [
 {
 "sport": "tennis",
-"id": "186783",
-"league": "Теннис · WTA",
-"kickoff": "2026-11-17T00:10:00+03:00",
-"home": "Валерия Страхова",
-"away": "Анастасия Тихонова",
-"hl": "https://a.espncdn.com/i/teamlogos/countries/500/ukr.png",
-"al": "https://a.espncdn.com/i/teamlogos/countries/500/rus.png",
-"hid": "3042",
-"aid": "5626",
-"bb": "https://betboom.ru/search?query=%D0%A1%D1%82%D1%80%D0%B0%D1%85%D0%BE%D0%B2%D0%B0&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=tennis",
-"path": "tennis/wta",
-"url": "live.html?s=tennis&p=tennis%2Fwta&e=186783&h=%D0%92%D0%B0%D0%BB%D0%B5%D1%80%D0%B8%D1%8F+%D0%A1%D1%82%D1%80%D0%B0%D1%85%D0%BE%D0%B2%D0%B0&a=%D0%90%D0%BD%D0%B0%D1%81%D1%82%D0%B0%D1%81%D0%B8%D1%8F+%D0%A2%D0%B8%D1%85%D0%BE%D0%BD%D0%BE%D0%B2%D0%B0",
-"participants": [
-[
-"Валерия Страхова",
-"Valeriya Strakhova"
-],
-[
-"Анастасия Тихонова",
-"Anastasia Tikhonova"
-]
-],
-"div": "WTA",
-"state": "post",
-"bo": null,
-"prediction": "predictions/2026-11-17-valeriya-strahova-anastasiya-tihonova-186783.html",
-"hs": null,
-"as": null,
-"tip": "Победа: Анастасия Тихонова · 1.89",
-"top": false,
-"bot": {
-"main": {
-"label": "Победа: Анастасия Тихонова",
-"p": 0.503,
-"odds": 1.89,
-"est": false
-},
-"bold": null,
-"markets": [
-[
-"Победа: Валерия Страхова",
-0.497,
-1.91
-],
-[
-"Победа: Анастасия Тихонова",
-0.503,
-1.89
-],
-[
-"Будет 3 сета",
-0.5,
-null
-],
-[
-"Будет 2 сета",
-0.5,
-null
-],
-[
-"Счёт по сетам 2:0",
-0.248,
-null
-],
-[
-"Счёт по сетам 0:2",
-0.252,
-null
-],
-[
-"Счёт по сетам 2:1",
-0.249,
-null
-],
-[
-"Счёт по сетам 1:2",
-0.251,
-null
-],
-[
-"Валерия Страхова возьмёт хотя бы сет",
-0.748,
-null
-],
-[
-"Анастасия Тихонова возьмёт хотя бы сет",
-0.752,
-null
-]
-],
-"bar": [
-0.4973684210526315,
-0,
-0.5026315789473685
-],
-"center": "Линия winline · Эло 1456 : 1321"
-},
-"lt": null
-},
-{
-"sport": "tennis",
 "id": "186788",
 "league": "Теннис · WTA",
 "kickoff": "2026-11-17T01:25:00+03:00",
@@ -571,7 +470,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-17-vashington-uizards-memfis-grizzlis-401909996.html",
-"hs": "67",
+"hs": "68",
 "as": "57",
 "tip": "ТМ 232.5 · 1.95",
 "top": true,
@@ -773,8 +672,8 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-17-mayami-hit-hyuston-rokets-401909998.html",
-"hs": "24",
-"as": "13",
+"hs": "26",
+"as": "15",
 "tip": "Ф1 (+2.5) · 1.86",
 "top": false,
 "bot": {
