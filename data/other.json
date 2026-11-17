@@ -7517,5 +7517,214 @@
   "close": {
    "_": null
   }
+ },
+ "ATP|187508": {
+  "id": "187508",
+  "div": "ATP",
+  "sport": "tennis",
+  "tournament": "Nitto ATP Finals",
+  "round": "Group Stage",
+  "bo5": false,
+  "kickoff": "2026-11-17T16:00:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "detail": "Tue, November 17th at 8:00 AM EST",
+  "home": {
+   "id": "10052",
+   "name": "Arthur Fils",
+   "logo": [
+    "https://a.espncdn.com/i/headshots/tennis/players/full/10052.png",
+    "https://a.espncdn.com/i/teamlogos/countries/500/fra.png"
+   ],
+   "country": "France",
+   "color": "2d6a4f",
+   "winner": false,
+   "sets": [],
+   "set_won": [],
+   "ru": "Артур Филс"
+  },
+  "away": {
+   "id": "12657",
+   "name": "Rafael Jodar",
+   "logo": [
+    "https://a.espncdn.com/i/headshots/tennis/players/full/12657.png",
+    "https://a.espncdn.com/i/teamlogos/countries/500/esp.png"
+   ],
+   "country": "Spain",
+   "color": "2d6a4f",
+   "winner": false,
+   "sets": [],
+   "set_won": [],
+   "ru": "Рафаэль Ходар"
+  },
+  "odds": {},
+  "probs": {
+   "TN_W1": 0.493685100719536,
+   "TN_W2": 0.506314899280464,
+   "TN_3S": 0.49996455125527073,
+   "TN_2S": 0.5000354487447293,
+   "TN_S2:0": 0.2458076920251472,
+   "TN_S0:2": 0.25422775671958203,
+   "TN_S2:1": 0.24787740869438865,
+   "TN_S1:2": 0.2520871425608821,
+   "TN_SET1": 0.7457722432804179,
+   "TN_SET2": 0.7541923079748528
+  },
+  "labels": {
+   "TN_W1": "Победа: Артур Филс",
+   "TN_W2": "Победа: Рафаэль Ходар",
+   "TN_3S": "Будет 3 сета",
+   "TN_2S": "Будет 2 сета",
+   "TN_S2:0": "Счёт по сетам 2:0",
+   "TN_S0:2": "Счёт по сетам 0:2",
+   "TN_S2:1": "Счёт по сетам 2:1",
+   "TN_S1:2": "Счёт по сетам 1:2",
+   "TN_SET1": "Артур Филс возьмёт хотя бы сет",
+   "TN_SET2": "Рафаэль Ходар возьмёт хотя бы сет"
+  },
+  "real": {},
+  "center": "Рейтинг Эло 1783 : 1787",
+  "bar": [
+   0.493685100719536,
+   0,
+   0.506314899280464
+  ],
+  "model": {
+   "elo": [
+    1782.8428520494022,
+    1787.2311268445974
+   ],
+   "src": "Эло"
+  },
+  "stavka_signal": {
+   "status": "insufficient_opinions",
+   "weight": 0.0
+  },
+  "main": {
+   "key": "TN_2S",
+   "label": "Будет 2 сета",
+   "p": 0.5,
+   "odds": 1.86,
+   "est": true,
+   "stake": 1.0
+  },
+  "bold": {},
+  "open": {},
+  "top": false,
+  "msg_id": 6667,
+  "btn": 4
+ },
+ "DOTA|1793343": {
+  "id": "1793343",
+  "div": "DOTA",
+  "sport": "esports",
+  "streams": [
+   {
+    "provider": "twitch",
+    "channel": "1win_dota_ru",
+    "url": "https://www.twitch.tv/1win_dota_ru",
+    "language": "ru",
+    "source": "PandaScore",
+    "official": true,
+    "status": "listed",
+    "access": "unknown"
+   },
+   {
+    "provider": "twitch",
+    "channel": "1win_dota",
+    "url": "https://www.twitch.tv/1win_dota",
+    "language": "en",
+    "source": "PandaScore",
+    "official": true,
+    "status": "listed",
+    "access": "unknown"
+   }
+  ],
+  "tournament": "1win Essence · Season 3 2026",
+  "bo": 3,
+  "kickoff": "2026-11-17T16:00:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "tier": "a",
+  "status": "reviewed",
+  "home": {
+   "id": "1657",
+   "name": "LGD Gaming",
+   "ru": "LGD Gaming",
+   "logo": "https://cdn-api.pandascore.co/images/team/image/1657/600px_lgd_gaming_dec_2019_allmode.png",
+   "color": "3b4a7a",
+   "score": 0,
+   "winner": false
+  },
+  "away": {
+   "id": "139340",
+   "name": "LEGION",
+   "ru": "LEGION",
+   "logo": "https://cdn-api.pandascore.co/images/team/image/139340/652px_legion_dota2_allmode.png",
+   "color": "3b4a7a",
+   "score": 0,
+   "winner": false
+  },
+  "odds": {},
+  "probs": {
+   "ES_W1": 0.45302918927836017,
+   "ES_W2": 0.5469708107216398,
+   "ES_FULL": 0.4980337310406481,
+   "ES_DRY": 0.5019662689593519,
+   "ES_S2:0": 0.21962815912207143,
+   "ES_S0:2": 0.2823381098372805,
+   "ES_S2:1": 0.23340103015628863,
+   "ES_S1:2": 0.26463270088435936,
+   "ES_MAP1": 0.7176618901627194,
+   "ES_MAP2": 0.7803718408779285
+  },
+  "labels": {
+   "ES_W1": "Победа: LGD Gaming",
+   "ES_W2": "Победа: LEGION",
+   "ES_FULL": "Больше 2 карт",
+   "ES_DRY": "Всухую (2:0 или 0:2)",
+   "ES_S2:0": "Счёт по картам 2:0",
+   "ES_S0:2": "Счёт по картам 0:2",
+   "ES_S2:1": "Счёт по картам 2:1",
+   "ES_S1:2": "Счёт по картам 1:2",
+   "ES_MAP1": "LGD Gaming возьмёт хотя бы карту",
+   "ES_MAP2": "LEGION возьмёт хотя бы карту"
+  },
+  "real": {},
+  "center": "BO3 · Эло 1577 : 1609",
+  "bar": [
+   0.45302918927836017,
+   0,
+   0.5469708107216398
+  ],
+  "model": {
+   "elo": [
+    1576.6180480771043,
+    1609.3532343141715
+   ],
+   "src": "Эло"
+  },
+  "stavka_signal": {
+   "status": "collecting",
+   "weight": 0.0,
+   "authors": 8,
+   "group": "esports:DOTA",
+   "snapshot": "DOTA|1793343",
+   "source": "https://stavka.tv"
+  },
+  "main": {
+   "key": "ES_W2",
+   "label": "Победа: LEGION",
+   "p": 0.547,
+   "odds": 1.7,
+   "est": true,
+   "stake": 1.0
+  },
+  "bold": {},
+  "open": {},
+  "top": false,
+  "msg_id": 6669,
+  "btn": 4
  }
 }
