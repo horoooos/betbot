@@ -7,10 +7,6 @@
  "schedule_day": "2026-11-17",
  "content_slot": "2026-11-17-10",
  "news_seen": [
-  "https://www.sport-express.ru/hockey/nhl/news/luchshie-bombardiry-nhl-14-noyabrya-2026-top-10-regulyarnogo-chempionata-lidery-po-golam-makdevid-drayzaytl-kaprizov-2474737/",
-  "https://www.sport-express.ru/hockey/nhl/news/luchshie-snaypery-nhl-14-noyabrya-2026-top-10-regulyarnogo-chempionata-lidery-po-golam-drayzaytl-kaprizov-gote-2474722/",
-  "https://www.sport-express.ru/football/rfpl/news/kislyak-ne-obschalis-s-batrakovym-naschet-vozmozhnogo-perehoda-v-galatsaray-2474741/",
-  "https://www.sport-express.ru/football/turkey/news/eks-skaut-cska-andreev-batrakov-seychas-yavlyaetsya-otlichnoy-reklamoy-rossiyskogo-futbola-v-evrope-2474753/",
   "https://www.sport-express.ru/football/rfpl/news/musagaliev-verit-v-chempionstvo-spartaka-klubu-nuzhen-igrok-po-tipu-vendela-2474752/",
   "v-kode-dota-2-nashli-papku-pod-nazvaniyem-mishutka-yeto-ne-shutka-na-russkom",
   "https://www.sport-express.ru/hockey/nhl/news/napadayuschiy-vankuvera-pettersson-prerval-seriyu-iz-56-matchey-bez-golov-v-ravnyh-sostavah-2474749/",
@@ -506,9 +502,13 @@
   "https://www.sport-express.ru/tennis/wta/news/zhurova-o-pobede-andreevoy-na-itogovom-turnire-seychas-ona-sposobna-obygrat-lyubogo-2475763/",
   "bukmekery-nazvali-glavnogo-favorita-pgl-major-singapore-2026-boombl4-s-betboom",
   "https://www.sport-express.ru/cybersport/videogames/news/black-mesa-preobrazilas-fanatskiy-remeyk-half-life-poluchil-masshtabnoe-obnovlenie-2475753/",
-  "m0nesy-vyshel-na-pervoye-mesto-po-kolichestvu-nagrad-evp-v-cs2"
+  "m0nesy-vyshel-na-pervoye-mesto-po-kolichestvu-nagrad-evp-v-cs2",
+  "https://www.sport-express.ru/hockey/khl/news/forvard-amura-kruchinin-v-serii-bullitov-zdorovo-sygral-nash-vratar-a-abramov-nafintil-goly-2475786/",
+  "https://www.sport-express.ru/hockey/khl/news/napadayuschiy-cska-poltapov-lyuboe-porazhenie-vsegda-dosadno-no-takoe-pryam-slishkom-2475778/",
+  "https://www.sport-express.ru/hockey/nhl/news/ovechkin-proiznes-trogatelnuyu-rech-vo-vremya-poslednego-vyezda-vashingtona-v-ture-nastavnikov-2475779/",
+  "lorenof-o-poryadochnosti-v-dota-2-ya-by-bolshe-snimal-za-plokhiye-slova"
  ],
- "news_i": 2,
+ "news_i": 0,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1704,7 +1704,7 @@
  "streak_day": {
   "2026-11-15": 2
  },
- "news_next": "2026-11-17T11:38:34.104528+03:00",
+ "news_next": "2026-11-17T12:08:34.215257+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1823,7 +1823,8 @@
   "https://images.cybersport.ru/images/as-is/plain/e5/e587e7de-be65-4fd6-a68d-fd669741f8fe.jpg",
   "https://upload.wikimedia.org/wikipedia/commons/c/ce/GennadyOrlov.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
   "https://ss.sport-express.ru/userfiles/materials/224/2244022/1180x665.jpg",
-  "https://images.cybersport.ru/images/as-is/plain/a7/a72277c0-d4c2-4f8c-ad05-f501b66ccc98.jpg"
+  "https://images.cybersport.ru/images/as-is/plain/a7/a72277c0-d4c2-4f8c-ad05-f501b66ccc98.jpg",
+  "https://images.cybersport.ru/images/as-is/plain/61/61c40544-656c-4e16-ae71-9af82bb94234.jpg"
  ],
  "indexnow_day": "2026-11-17",
  "vk_wall_err": null,
@@ -2002,7 +2003,8 @@
   "6553",
   "6569",
   "6588",
-  "6646"
+  "6646",
+  "6647"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -2113,11 +2115,12 @@
   "2026-11-16:новость:90611de5833a739a2aafe6b0",
   "2026-11-16:новость:b032639657d25a30449b8c28",
   "2026-11-16:новость:8c7b7bc3749b7c0ef475d3fb",
-  "2026-11-17:новость:f9b017f25e8fd25ff04f8100"
+  "2026-11-17:новость:f9b017f25e8fd25ff04f8100",
+  "2026-11-17:новость:b0b43621d563ec953bfe02ec"
  ],
  "dz_last_delivery": {
-  "source_id": 6646,
-  "message_id": 657,
+  "source_id": 6647,
+  "message_id": 658,
   "kind": "новость"
  },
  "learn_attempt_day": "2026-11-17",
@@ -2207,7 +2210,7 @@
   "quote_matches": 14
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-17T11:37:33.361258+03:00",
+  "last_poll": "2026-11-17T11:39:34.215257+03:00",
   "cursor": "80",
   "posts": [
    {
