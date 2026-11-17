@@ -7426,31 +7426,31 @@
   "kickoff": "2026-11-17T16:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Tue, November 17th at 8:00 AM EST",
   "home": {
-   "id": "10052",
-   "name": "Arthur Fils",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/10052.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/fra.png"
    ],
+   "id": "10052",
+   "name": "Arthur Fils",
    "country": "France",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
    "ru": "Артур Филс"
   },
   "away": {
-   "id": "12657",
-   "name": "Rafael Jodar",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/12657.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/esp.png"
    ],
+   "id": "12657",
+   "name": "Rafael Jodar",
    "country": "Spain",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
@@ -7514,7 +7514,9 @@
   "btn": 4,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null
  },
  "DOTA|1793343": {
   "id": "1793343",
