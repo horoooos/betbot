@@ -8141,5 +8141,113 @@
   "close": {
    "BB_ML_A": 0.6147
   }
+ },
+ "NBA|401910001": {
+  "id": "401910001",
+  "div": "NBA",
+  "sport": "basketball",
+  "kickoff": "2026-11-17T05:00:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "detail": "Mon, November 16th at 9:00 PM EST",
+  "clock": "0.0",
+  "period": 0,
+  "home": {
+   "id": "7",
+   "name": "Denver Nuggets",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/den.png",
+   "color": "0e2240",
+   "score": "0",
+   "record": "7-4",
+   "periods": [],
+   "ru": "Денвер Наггетс"
+  },
+  "away": {
+   "id": "21",
+   "name": "Phoenix Suns",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/phx.png",
+   "color": "29127a",
+   "score": "0",
+   "record": "5-7",
+   "periods": [],
+   "ru": "Финикс Санз"
+  },
+  "odds": {
+   "H": 1.235,
+   "A": 4.33,
+   "line": 229.5,
+   "over": 1.943,
+   "under": 1.877,
+   "spread": -9.5,
+   "sp_h": 1.877,
+   "sp_a": 1.943
+  },
+  "probs": {
+   "BB_ML_H": 0.7857224683246905,
+   "BB_ML_A": 0.2142775316753095,
+   "BB_SPR_H": 0.5,
+   "BB_SPR_A": 0.5,
+   "BB_O222.5": 0.6597440535491568,
+   "BB_U222.5": 0.3402559464508432,
+   "BB_O229.5": 0.5,
+   "BB_U229.5": 0.5,
+   "BB_O236.5": 0.3402559464508432,
+   "BB_U236.5": 0.6597440535491568
+  },
+  "labels": {
+   "BB_ML_H": "П1 (с ОТ)",
+   "BB_ML_A": "П2 (с ОТ)",
+   "BB_SPR_H": "Ф1 (-9.5)",
+   "BB_SPR_A": "Ф2 (+9.5)",
+   "BB_O222.5": "ТБ 222.5",
+   "BB_U222.5": "ТМ 222.5",
+   "BB_O229.5": "ТБ 229.5",
+   "BB_U229.5": "ТМ 229.5",
+   "BB_O236.5": "ТБ 236.5",
+   "BB_U236.5": "ТМ 236.5"
+  },
+  "real": {
+   "BB_ML_H": 1.235,
+   "BB_ML_A": 4.33,
+   "BB_SPR_H": 1.877,
+   "BB_SPR_A": 1.943,
+   "BB_O229.5": 1.943,
+   "BB_U229.5": 1.877
+  },
+  "center": "Ожидаемый счёт 120 : 110",
+  "bar": [
+   0.7857224683246905,
+   0,
+   0.2142775316753095
+  ],
+  "model": {
+   "mu": 9.5,
+   "T": 229.5
+  },
+  "stavka_signal": {
+   "status": "collecting",
+   "weight": 0.0,
+   "authors": 23,
+   "group": "basketball",
+   "snapshot": "NBA|401910001",
+   "source": "https://stavka.tv"
+  },
+  "main": {
+   "key": "BB_SPR_H",
+   "label": "Ф1 (-9.5)",
+   "p": 0.5,
+   "odds": 1.88,
+   "est": false,
+   "line": -9.5,
+   "stake": 1.0
+  },
+  "bold": {},
+  "open": {
+   "BB_SPR_H": 0.5
+  },
+  "top": false,
+  "msg_id": 6617,
+  "btn": 4
  }
 }

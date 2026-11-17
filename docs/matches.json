@@ -470,8 +470,8 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-17-klivlend-chikago-bullz-401909995.html",
-"hs": "46",
-"as": "40",
+"hs": "50",
+"as": "44",
 "tip": "Ф1 (-8.5) · 1.94",
 "top": false,
 "bot": {
@@ -572,7 +572,7 @@ null
 "bo": null,
 "prediction": "predictions/2026-11-17-vashington-uizards-memfis-grizzlis-401909996.html",
 "hs": "50",
-"as": "47",
+"as": "53",
 "tip": "ТМ 232.5 · 1.95",
 "top": true,
 "bot": {
@@ -672,8 +672,8 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-17-bruklin-nets-filadelfiya-siksers-401909997.html",
-"hs": "15",
-"as": "19",
+"hs": "17",
+"as": "23",
 "tip": "Ф2 (-4.5) · 1.85",
 "top": false,
 "bot": {
@@ -773,8 +773,8 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-17-mayami-hit-hyuston-rokets-401909998.html",
-"hs": "12",
-"as": "8",
+"hs": "15",
+"as": "10",
 "tip": "Ф1 (+2.5) · 1.86",
 "top": false,
 "bot": {
@@ -1216,12 +1216,78 @@ null
 "div": "NBA",
 "state": "pre",
 "bo": null,
-"prediction": "",
+"prediction": "predictions/2026-11-17-denver-naggets-finiks-sanz-401910001.html",
 "hs": "0",
 "as": "0",
-"tip": "",
+"tip": "Ф1 (-9.5) · 1.88",
 "top": false,
-"bot": null,
+"bot": {
+"main": {
+"label": "Ф1 (-9.5)",
+"p": 0.5,
+"odds": 1.88,
+"est": false
+},
+"bold": null,
+"markets": [
+[
+"П1 (с ОТ)",
+0.786,
+1.235
+],
+[
+"П2 (с ОТ)",
+0.214,
+4.33
+],
+[
+"Ф1 (-9.5)",
+0.5,
+1.877
+],
+[
+"Ф2 (+9.5)",
+0.5,
+1.943
+],
+[
+"ТБ 222.5",
+0.66,
+null
+],
+[
+"ТМ 222.5",
+0.34,
+null
+],
+[
+"ТБ 229.5",
+0.5,
+1.943
+],
+[
+"ТМ 229.5",
+0.5,
+1.877
+],
+[
+"ТБ 236.5",
+0.34,
+null
+],
+[
+"ТМ 236.5",
+0.66,
+null
+]
+],
+"bar": [
+0.7857224683246905,
+0,
+0.2142775316753095
+],
+"center": "Ожидаемый счёт 120 : 110"
+},
 "lt": null
 },
 {
