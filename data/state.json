@@ -506,7 +506,15 @@
   "https://www.sport-express.ru/hockey/khl/news/belozerov-stal-luchshim-bombardirom-neftehimika-v-istorii-khl-2475995/",
   "https://www.sport-express.ru/hockey/khl/news/napadayuschego-metallurga-kozlova-uvezli-v-bolnicu-posle-travmy-v-matche-s-ladoy-2475993/",
   "https://www.sport-express.ru/basketball/vtb-league/news/cska-igokea-schet-i-rezultat-matcha-basket-cup-17-noyabrya-2026-2475997/",
-  "evelone-planiruyet-organizovat-yeshche-odin-turnir-2x2-po-cs2"
+  "evelone-planiruyet-organizovat-yeshche-odin-turnir-2x2-po-cs2",
+  "https://www.sport-express.ru/football/rusteam/news/karpin-pochemu-ne-sygral-karpukas-obizhatsya-mozhno-na-mamu-ili-zhenu-a-v-sbornoy-vybor-sostava-za-trenerom-2476008/",
+  "https://www.sport-express.ru/football/rusteam/news/karpin-igra-s-venesueloy-vozmozhno-luchshaya-dlya-rossii-za-god-2476005/",
+  "https://www.sport-express.ru/football/turkey/news/batrakov-nazval-potryasayuschey-tradiciyu-vklyuchat-kalinku-posle-ego-golov-2476003/",
+  "https://www.sport-express.ru/football/rusteam/news/trener-sbornoy-venesuely-viskarrondo-rossiya-polnostyu-nas-prevzoshla-2475999/",
+  "https://www.sport-express.ru/football/rusteam/news/miranchuk-vyshel-na-vosmoe-mesto-sredi-luchshih-bombardirov-sbornoy-rossii-2475996/",
+  "team-spirit-proshla-v-grand-final-essence-iii-pobediv-aurora-gaming",
+  "https://www.sport-express.ru/hockey/nhl/news/ovechkin-rasskazal-kakie-podarki-poluchil-ot-klubov-nhl-v-proschalnom-ture-posmotrim-chto-budet-dalshe-2476007/",
+  "https://www.sport-express.ru/hockey/world-u20/news/iihf-nachala-rassledovanie-vzloma-sayta-s-soobscheniem-o-sbornoy-rossii-2476006/"
  ],
  "news_i": 0,
  "oddspapi": {
@@ -1697,7 +1705,7 @@
  "streak_day": {
   "2026-11-15": 2
  },
- "news_next": "2026-11-17T22:19:02.591379+03:00",
+ "news_next": "2026-11-17T22:26:02.498103+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -2216,10 +2224,10 @@
    }
   },
   "source": {
-   "last_success": "2026-11-17T19:00:02.393641+00:00",
+   "last_success": "2026-11-17T19:20:02.498103+00:00",
    "parsed": 341,
-   "added": 81,
-   "discovered_matches": 25,
+   "added": 80,
+   "discovered_matches": 24,
    "pages": 17,
    "errors": [],
    "parsed_by_sport": {
@@ -2232,32 +2240,15 @@
    }
   },
   "error": null,
-  "tips": 4016,
+  "tips": 4042,
   "snapshots": 65,
-  "unmapped_markets": 5480,
+  "unmapped_markets": 5534,
   "quote_matches": 15
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-17T22:18:02.694934+03:00",
-  "cursor": "90",
+  "last_poll": "2026-11-17T22:20:02.498103+03:00",
+  "cursor": "91",
   "posts": [
-   {
-    "post_id": 506,
-    "url": "https://vk.com/wall-228963529_506",
-    "title": "PARIVISION уступила 100 Thieves в закрытой квалификации PGL Cluj-Napoca 2027",
-    "text": "PARIVISION уступила 100 Thieves в закрытой квалификации PGL Cluj-Napoca 2027\n\nрџ“° В закрытой отборочной на PGL Cluj-Napoca 2027 по CS2 «PARIVISION» проиграла «100 Thieves» со счётом 1:2.\n\nрџ“Љ На первой карте Inferno «PARIVISION» одержала победу 13:9, но на Dust2 соперники отыграли 13:11, а на Cache уже в конце матча «100 Thieves» вырвали победу 16:13, закрыв серию.\n\n#киберспорт #CS2 #новостиспорта #спорт #главное #аиставит\n\nрџ“Љ Подробнее на сайте рџ‘‡",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": true,
-     "details_present": true,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-16T01:41:30.651031+03:00"
-   },
    {
     "post_id": 507,
     "url": "https://vk.com/wall-228963529_507",
@@ -2750,6 +2741,23 @@
     },
     "status": "needs_review",
     "observed_at": "2026-11-17T21:17:01.499743+03:00"
+   },
+   {
+    "post_id": 540,
+    "url": "https://vk.com/wall-228963529_540",
+    "title": "Evelone анонсировал 2x2-турнир CS2 на январь 2027 года",
+    "text": "вљЎпёЏ Стример Вадим «Evelone» Козаков в прямом эфире на Twitch объявил, что планирует собрать лучших дуэтов в формате 2х2 для нового турнира по CS2. Дата уже назначена – январь 2027 года.",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": false,
+     "details_present": false,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-17T22:20:02.498103+03:00"
    }
   ],
   "status": "observing"
