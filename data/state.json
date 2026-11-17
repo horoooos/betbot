@@ -1572,7 +1572,7 @@
  "value_day": "2026-11-17",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-17",
- "site_stamp": "1121|6782|2026-11-17 21|4|c39f11d3fb25c3a9",
+ "site_stamp": "1122|6783|2026-11-17 21|4|ae8e776301da01b2",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1702,7 +1702,7 @@
  "streak_day": {
   "2026-11-15": 2
  },
- "news_next": "2026-11-17T21:17:02.075207+03:00",
+ "news_next": "2026-11-17T21:25:01.615330+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1722,7 +1722,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 6782,
+ "dz_last": 6783,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2218,11 +2218,11 @@
    }
   },
   "source": {
-   "last_success": "2026-11-17T17:57:01.645830+00:00",
-   "parsed": 350,
-   "added": 53,
+   "last_success": "2026-11-17T18:19:01.615330+00:00",
+   "parsed": 351,
+   "added": 71,
    "discovered_matches": 26,
-   "pages": 17,
+   "pages": 18,
    "errors": [],
    "parsed_by_sport": {
     "soccer": 50,
@@ -2234,13 +2234,13 @@
    }
   },
   "error": null,
-  "tips": 3914,
+  "tips": 3947,
   "snapshots": 59,
-  "unmapped_markets": 5352,
-  "quote_matches": 14
+  "unmapped_markets": 5390,
+  "quote_matches": 15
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-17T21:17:01.499743+03:00",
+  "last_poll": "2026-11-17T21:19:01.615330+03:00",
   "cursor": "90",
   "posts": [
    {
