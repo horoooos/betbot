@@ -10240,7 +10240,7 @@
   "kickoff": "2026-11-17T19:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Scheduled",
   "home": {
    "id": "841",
@@ -10381,6 +10381,9 @@
   "close": {
    "A": 0.5155,
    "O25": 0.4811
-  }
+  },
+  "main_hit": true,
+  "bold_hit": false,
+  "value_hit": null
  }
 }
