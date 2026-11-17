@@ -7302,25 +7302,25 @@
   "kickoff": "2026-11-17T05:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Mon, November 16th at 9:30 PM EST",
   "clock": "0:00",
   "period": 0,
   "home": {
+   "color": "000000",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/uta.png",
    "id": "129764",
    "name": "Utah Mammoth",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/uta.png",
-   "color": "000000",
    "score": "0",
    "record": "10-8-3",
    "periods": [],
    "ru": "Юта"
   },
   "away": {
+   "color": "003e7e",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/van.png",
    "id": "22",
    "name": "Vancouver Canucks",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/van.png",
-   "color": "003e7e",
    "score": "0",
    "record": "4-17-1",
    "periods": [],
@@ -7419,6 +7419,8 @@
   "btn": 4,
   "close": {
    "HK_O6.5": 0.5107
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null
  }
 }
