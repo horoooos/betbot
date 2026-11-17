@@ -104,7 +104,7 @@ null
 "sport": "esports",
 "id": "1793345",
 "league": "Киберспорт · Dota 2",
-"kickoff": "2026-11-17T22:07:44+03:00",
+"kickoff": "2026-11-17T22:00:00+03:00",
 "home": "LGD Gaming",
 "away": "PARIVISION",
 "hl": "https://cdn-api.pandascore.co/images/team/image/1657/600px_lgd_gaming_dec_2019_allmode.png",
@@ -125,11 +125,11 @@ null
 ]
 ],
 "div": "DOTA",
-"state": "in",
+"state": "unknown",
 "bo": 3,
 "prediction": "predictions/2026-11-17-lgd-gaming-parivision-1793345.html",
-"hs": 0,
-"as": 1,
+"hs": null,
+"as": null,
 "tip": "Победа: LGD Gaming · ≈1.81",
 "top": false,
 "bot": {
@@ -2647,6 +2647,41 @@ null
 "prediction": "",
 "hs": null,
 "as": null,
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "esports",
+"id": "1793346",
+"league": "Киберспорт · Dota 2",
+"kickoff": "2026-11-18T15:00:00+03:00",
+"home": "Aurora",
+"away": "PARIVISION",
+"hl": "https://cdn-api.pandascore.co/images/team/image/133882/600px_aurora_gaming_2025_allmode.png",
+"al": "https://cdn-api.pandascore.co/images/team/image/135712/250px_parivision_allmode.png",
+"hid": "133882",
+"aid": "135712",
+"bb": "https://betboom.ru/search?query=%D0%90%D1%83%D1%80%D0%BE%D1%80%D0%B0&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=esports",
+"path": "",
+"url": "dota.html?e=1793346&d=DOTA",
+"participants": [
+[
+"Aurora",
+"Aurora"
+],
+[
+"PARIVISION",
+"PARIVISION"
+]
+],
+"div": "DOTA",
+"state": "pre",
+"bo": 3,
+"prediction": "",
+"hs": 0,
+"as": 0,
 "tip": "",
 "top": false,
 "bot": null,
