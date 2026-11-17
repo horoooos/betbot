@@ -1,5 +1,106 @@
 [
 {
+"sport": "esports",
+"id": "1793343",
+"league": "Киберспорт · Dota 2",
+"kickoff": "2026-11-17T16:00:00+03:00",
+"home": "LGD Gaming",
+"away": "LEGION",
+"hl": "https://cdn-api.pandascore.co/images/team/image/1657/600px_lgd_gaming_dec_2019_allmode.png",
+"al": "https://cdn-api.pandascore.co/images/team/image/139340/652px_legion_dota2_allmode.png",
+"hid": "1657",
+"aid": "139340",
+"bb": "https://betboom.ru/search?query=%D0%93%D0%B0%D0%BC%D0%B8%D0%BD%D0%B3&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=esports",
+"path": "",
+"url": "dota.html?e=1793343&d=DOTA",
+"participants": [
+[
+"LGD Gaming",
+"LGD Gaming"
+],
+[
+"LEGION",
+"LEGION"
+]
+],
+"div": "DOTA",
+"state": "unknown",
+"bo": 3,
+"prediction": "predictions/2026-11-17-lgd-gaming-legion-1793343.html",
+"hs": null,
+"as": null,
+"tip": "Победа: LEGION · ≈1.70",
+"top": false,
+"bot": {
+"main": {
+"label": "Победа: LEGION",
+"p": 0.547,
+"odds": 1.7,
+"est": true
+},
+"bold": null,
+"markets": [
+[
+"Победа: LGD Gaming",
+0.453,
+null
+],
+[
+"Победа: LEGION",
+0.547,
+null
+],
+[
+"Больше 2 карт",
+0.498,
+null
+],
+[
+"Всухую (2:0 или 0:2)",
+0.502,
+null
+],
+[
+"Счёт по картам 2:0",
+0.22,
+null
+],
+[
+"Счёт по картам 0:2",
+0.282,
+null
+],
+[
+"Счёт по картам 2:1",
+0.233,
+null
+],
+[
+"Счёт по картам 1:2",
+0.265,
+null
+],
+[
+"LGD Gaming возьмёт хотя бы карту",
+0.718,
+null
+],
+[
+"LEGION возьмёт хотя бы карту",
+0.78,
+null
+]
+],
+"bar": [
+0.45302918927836017,
+0,
+0.5469708107216398
+],
+"center": "BO3 · Эло 1577 : 1609"
+},
+"lt": null
+},
+{
 "sport": "football",
 "id": "401933635",
 "league": "Сборные · Товарищеские матчи",
@@ -141,107 +242,6 @@ null
 0.107
 ]
 ]
-},
-"lt": null
-},
-{
-"sport": "esports",
-"id": "1793343",
-"league": "Киберспорт · Dota 2",
-"kickoff": "2026-11-17T16:02:52+03:00",
-"home": "LGD Gaming",
-"away": "LEGION",
-"hl": "https://cdn-api.pandascore.co/images/team/image/1657/600px_lgd_gaming_dec_2019_allmode.png",
-"al": "https://cdn-api.pandascore.co/images/team/image/139340/652px_legion_dota2_allmode.png",
-"hid": "1657",
-"aid": "139340",
-"bb": "https://betboom.ru/search?query=%D0%93%D0%B0%D0%BC%D0%B8%D0%BD%D0%B3&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=esports",
-"path": "",
-"url": "dota.html?e=1793343&d=DOTA",
-"participants": [
-[
-"LGD Gaming",
-"LGD Gaming"
-],
-[
-"LEGION",
-"LEGION"
-]
-],
-"div": "DOTA",
-"state": "in",
-"bo": 3,
-"prediction": "predictions/2026-11-17-lgd-gaming-legion-1793343.html",
-"hs": 1,
-"as": 1,
-"tip": "Победа: LEGION · ≈1.70",
-"top": false,
-"bot": {
-"main": {
-"label": "Победа: LEGION",
-"p": 0.547,
-"odds": 1.7,
-"est": true
-},
-"bold": null,
-"markets": [
-[
-"Победа: LGD Gaming",
-0.453,
-null
-],
-[
-"Победа: LEGION",
-0.547,
-null
-],
-[
-"Больше 2 карт",
-0.498,
-null
-],
-[
-"Всухую (2:0 или 0:2)",
-0.502,
-null
-],
-[
-"Счёт по картам 2:0",
-0.22,
-null
-],
-[
-"Счёт по картам 0:2",
-0.282,
-null
-],
-[
-"Счёт по картам 2:1",
-0.233,
-null
-],
-[
-"Счёт по картам 1:2",
-0.265,
-null
-],
-[
-"LGD Gaming возьмёт хотя бы карту",
-0.718,
-null
-],
-[
-"LEGION возьмёт хотя бы карту",
-0.78,
-null
-]
-],
-"bar": [
-0.45302918927836017,
-0,
-0.5469708107216398
-],
-"center": "BO3 · Эло 1577 : 1609"
 },
 "lt": null
 },
@@ -1427,107 +1427,6 @@ null
 "lt": null
 },
 {
-"sport": "tennis",
-"id": "186790",
-"league": "Теннис · WTA",
-"kickoff": "2026-11-17T19:10:00+03:00",
-"home": "Полона Херцог",
-"away": "Мириам Булгару",
-"hl": "https://a.espncdn.com/i/teamlogos/countries/500/slo.png",
-"al": "https://a.espncdn.com/i/teamlogos/countries/500/rom.png",
-"hid": "1095",
-"aid": "3568",
-"bb": "https://betboom.ru/search?query=%D0%A5%D0%B5%D1%80%D1%86%D0%BE%D0%B3&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=tennis",
-"path": "tennis/wta",
-"url": "live.html?s=tennis&p=tennis%2Fwta&e=186790&h=%D0%9F%D0%BE%D0%BB%D0%BE%D0%BD%D0%B0+%D0%A5%D0%B5%D1%80%D1%86%D0%BE%D0%B3&a=%D0%9C%D0%B8%D1%80%D0%B8%D0%B0%D0%BC+%D0%91%D1%83%D0%BB%D0%B3%D0%B0%D1%80%D1%83",
-"participants": [
-[
-"Полона Херцог",
-"Polona Hercog"
-],
-[
-"Мириам Булгару",
-"Miriam Bulgaru"
-]
-],
-"div": "WTA",
-"state": "pre",
-"bo": null,
-"prediction": "predictions/2026-11-17-polona-hertsog-miriam-bulgaru-186790.html",
-"hs": null,
-"as": null,
-"tip": "Будет 2 сета · ≈1.79",
-"top": false,
-"bot": {
-"main": {
-"label": "Будет 2 сета",
-"p": 0.521,
-"odds": 1.79,
-"est": true
-},
-"bold": null,
-"markets": [
-[
-"Победа: Полона Херцог",
-0.651,
-null
-],
-[
-"Победа: Мириам Булгару",
-0.349,
-null
-],
-[
-"Будет 3 сета",
-0.479,
-null
-],
-[
-"Будет 2 сета",
-0.521,
-null
-],
-[
-"Счёт по сетам 2:0",
-0.363,
-null
-],
-[
-"Счёт по сетам 0:2",
-0.158,
-null
-],
-[
-"Счёт по сетам 2:1",
-0.288,
-null
-],
-[
-"Счёт по сетам 1:2",
-0.191,
-null
-],
-[
-"Полона Херцог возьмёт хотя бы сет",
-0.842,
-null
-],
-[
-"Мириам Булгару возьмёт хотя бы сет",
-0.637,
-null
-]
-],
-"bar": [
-0.6510302685879211,
-0,
-0.3489697314120789
-],
-"center": "Рейтинг Эло 1552 : 1444"
-},
-"lt": null
-},
-{
 "sport": "football",
 "id": "401933615",
 "league": "Сборные · Товарищеские матчи",
@@ -1664,6 +1563,107 @@ null
 0.113
 ]
 ]
+},
+"lt": null
+},
+{
+"sport": "tennis",
+"id": "186790",
+"league": "Теннис · WTA",
+"kickoff": "2026-11-17T19:20:00+03:00",
+"home": "Полона Херцог",
+"away": "Мириам Булгару",
+"hl": "https://a.espncdn.com/i/teamlogos/countries/500/slo.png",
+"al": "https://a.espncdn.com/i/teamlogos/countries/500/rom.png",
+"hid": "1095",
+"aid": "3568",
+"bb": "https://betboom.ru/search?query=%D0%A5%D0%B5%D1%80%D1%86%D0%BE%D0%B3&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=tennis",
+"path": "tennis/wta",
+"url": "live.html?s=tennis&p=tennis%2Fwta&e=186790&h=%D0%9F%D0%BE%D0%BB%D0%BE%D0%BD%D0%B0+%D0%A5%D0%B5%D1%80%D1%86%D0%BE%D0%B3&a=%D0%9C%D0%B8%D1%80%D0%B8%D0%B0%D0%BC+%D0%91%D1%83%D0%BB%D0%B3%D0%B0%D1%80%D1%83",
+"participants": [
+[
+"Полона Херцог",
+"Polona Hercog"
+],
+[
+"Мириам Булгару",
+"Miriam Bulgaru"
+]
+],
+"div": "WTA",
+"state": "pre",
+"bo": null,
+"prediction": "predictions/2026-11-17-polona-hertsog-miriam-bulgaru-186790.html",
+"hs": null,
+"as": null,
+"tip": "Будет 2 сета · ≈1.79",
+"top": false,
+"bot": {
+"main": {
+"label": "Будет 2 сета",
+"p": 0.521,
+"odds": 1.79,
+"est": true
+},
+"bold": null,
+"markets": [
+[
+"Победа: Полона Херцог",
+0.651,
+null
+],
+[
+"Победа: Мириам Булгару",
+0.349,
+null
+],
+[
+"Будет 3 сета",
+0.479,
+null
+],
+[
+"Будет 2 сета",
+0.521,
+null
+],
+[
+"Счёт по сетам 2:0",
+0.363,
+null
+],
+[
+"Счёт по сетам 0:2",
+0.158,
+null
+],
+[
+"Счёт по сетам 2:1",
+0.288,
+null
+],
+[
+"Счёт по сетам 1:2",
+0.191,
+null
+],
+[
+"Полона Херцог возьмёт хотя бы сет",
+0.842,
+null
+],
+[
+"Мириам Булгару возьмёт хотя бы сет",
+0.637,
+null
+]
+],
+"bar": [
+0.6510302685879211,
+0,
+0.3489697314120789
+],
+"center": "Рейтинг Эло 1552 : 1444"
 },
 "lt": null
 },
@@ -2012,6 +2012,41 @@ null
 ],
 "center": "Линия winline · Эло 1452 : 1500"
 },
+"lt": null
+},
+{
+"sport": "esports",
+"id": "1793345",
+"league": "Киберспорт · Dota 2",
+"kickoff": "2026-11-17T22:00:00+03:00",
+"home": "PARIVISION",
+"away": "LGD Gaming",
+"hl": "https://cdn-api.pandascore.co/images/team/image/135712/250px_parivision_allmode.png",
+"al": "https://cdn-api.pandascore.co/images/team/image/1657/600px_lgd_gaming_dec_2019_allmode.png",
+"hid": "135712",
+"aid": "1657",
+"bb": "https://betboom.ru/search?query=%D0%9F%D0%B0%D1%80%D0%B8%D0%B2%D0%B8%D1%81%D0%B8%D0%BE%D0%BD&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=esports",
+"path": "",
+"url": "dota.html?e=1793345&d=DOTA",
+"participants": [
+[
+"PARIVISION",
+"PARIVISION"
+],
+[
+"LGD Gaming",
+"LGD Gaming"
+]
+],
+"div": "DOTA",
+"state": "pre",
+"bo": 3,
+"prediction": "",
+"hs": 0,
+"as": 0,
+"tip": "",
+"top": false,
+"bot": null,
 "lt": null
 },
 {
