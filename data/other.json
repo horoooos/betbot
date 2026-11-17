@@ -8038,5 +8038,117 @@
   "top": false,
   "msg_id": 6715,
   "btn": 4
+ },
+ "DOTA|1793340": {
+  "id": "1793340",
+  "div": "DOTA",
+  "sport": "esports",
+  "streams": [
+   {
+    "provider": "twitch",
+    "channel": "1win_dota_ru",
+    "url": "https://www.twitch.tv/1win_dota_ru",
+    "language": "ru",
+    "source": "PandaScore",
+    "official": true,
+    "status": "listed",
+    "access": "unknown"
+   },
+   {
+    "provider": "twitch",
+    "channel": "1win_dota",
+    "url": "https://www.twitch.tv/1win_dota",
+    "language": "en",
+    "source": "PandaScore",
+    "official": true,
+    "status": "listed",
+    "access": "unknown"
+   }
+  ],
+  "tournament": "1win Essence · Season 3 2026",
+  "bo": 3,
+  "kickoff": "2026-11-17T19:00:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "tier": "a",
+  "status": "reviewed",
+  "home": {
+   "id": "1669",
+   "name": "Team Spirit",
+   "ru": "Team Spirit",
+   "logo": "https://cdn-api.pandascore.co/images/team/image/1669/153px_team_spirit_2022_lightmode.png",
+   "color": "3b4a7a",
+   "score": 0,
+   "winner": false
+  },
+  "away": {
+   "id": "133882",
+   "name": "Aurora",
+   "ru": "Aurora",
+   "logo": "https://cdn-api.pandascore.co/images/team/image/133882/600px_aurora_gaming_2025_allmode.png",
+   "color": "3b4a7a",
+   "score": 0,
+   "winner": false
+  },
+  "odds": {},
+  "probs": {
+   "ES_W1": 0.7543685482798845,
+   "ES_W2": 0.24563145172011547,
+   "ES_FULL": 0.4373641143450312,
+   "ES_DRY": 0.5626358856549688,
+   "ES_S2:0": 0.4582867051203941,
+   "ES_S0:2": 0.10434918053457468,
+   "ES_S2:1": 0.29608184315949043,
+   "ES_S1:2": 0.14128227118554082,
+   "ES_MAP1": 0.8956508194654254,
+   "ES_MAP2": 0.541713294879606
+  },
+  "labels": {
+   "ES_W1": "Победа: Team Spirit",
+   "ES_W2": "Победа: Aurora",
+   "ES_FULL": "Больше 2 карт",
+   "ES_DRY": "Всухую (2:0 или 0:2)",
+   "ES_S2:0": "Счёт по картам 2:0",
+   "ES_S0:2": "Счёт по картам 0:2",
+   "ES_S2:1": "Счёт по картам 2:1",
+   "ES_S1:2": "Счёт по картам 1:2",
+   "ES_MAP1": "Team Spirit возьмёт хотя бы карту",
+   "ES_MAP2": "Aurora возьмёт хотя бы карту"
+  },
+  "real": {},
+  "center": "BO3 · Эло 1789 : 1594",
+  "bar": [
+   0.7543685482798845,
+   0,
+   0.24563145172011547
+  ],
+  "model": {
+   "elo": [
+    1788.7593386592403,
+    1593.8394993879454
+   ],
+   "src": "Эло"
+  },
+  "stavka_signal": {
+   "status": "collecting",
+   "weight": 0.0,
+   "authors": 3,
+   "group": "esports:DOTA",
+   "snapshot": "DOTA|1793340",
+   "source": "https://stavka.tv"
+  },
+  "main": {
+   "key": "ES_DRY",
+   "label": "Всухую (2:0 или 0:2)",
+   "p": 0.5626,
+   "odds": 1.65,
+   "est": true,
+   "stake": 1.0
+  },
+  "bold": {},
+  "open": {},
+  "top": false,
+  "msg_id": 6724,
+  "btn": 4
  }
 }
