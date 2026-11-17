@@ -1726,7 +1726,15 @@ null
 ]
 ]
 },
-"lt": null
+"lt": {
+"fair": 1.61,
+"label": "1X",
+"min_odds": 1.69,
+"minute": "26'",
+"p": 0.622,
+"result": null,
+"score": "0:0"
+}
 },
 {
 "sport": "football",
@@ -1893,7 +1901,7 @@ null
 ]
 ],
 "div": "FRI",
-"state": "pre",
+"state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-18-sbornaya-urugvaya-sbornaya-dominikanskoy-respubliki-401932215.html",
 "hs": "0",
