@@ -2214,8 +2214,8 @@
   "quote_matches": 14
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-17T13:44:13.489330+03:00",
-  "cursor": "81",
+  "last_poll": "2026-11-17T13:46:13.416330+03:00",
+  "cursor": "82",
   "posts": [
    {
     "post_id": 499,
@@ -2709,6 +2709,23 @@
     },
     "status": "needs_review",
     "observed_at": "2026-11-17T12:40:12.615033+03:00"
+   },
+   {
+    "post_id": 531,
+    "url": "https://vk.com/wall-228963529_531",
+    "title": "«Локомотив» выплатит Галактионову 40 млн руб неустойки",
+    "text": "рџ“° «Локомотив» готов разорить бюджет: 40 млн рублей неустойки!",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": false,
+     "details_present": false,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-17T13:46:13.416330+03:00"
    }
   ],
   "status": "observing"
