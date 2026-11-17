@@ -1860,14 +1860,14 @@
  "vk_photos": [],
  "vk_photo_until": 1794644243.1147308,
  "vk_photo_cursor": {},
- "vk_story_last": 6354,
- "vk_story_err": "VK stories: сервер не вернул upload_result",
+ "vk_story_last": 6361,
+ "vk_story_err": null,
  "push_weekly": "2026-46",
- "vk_story_at": 1794879291.7103922,
- "vk_story_url": "https://vk.com/story-228963529_456239081",
+ "vk_story_at": 1794883861.318776,
+ "vk_story_url": "https://vk.com/story-228963529_456239082",
  "vk_story_day": {
   "date": "2026-11-17",
-  "count": 3
+  "count": 4
  },
  "vk_legacy_pending": [
   {
@@ -2184,10 +2184,10 @@
    }
   },
   "source": {
-   "last_success": "2026-11-17T02:30:24.201488+00:00",
-   "parsed": 351,
-   "added": 37,
-   "discovered_matches": 35,
+   "last_success": "2026-11-17T02:50:24.950587+00:00",
+   "parsed": 361,
+   "added": 17,
+   "discovered_matches": 31,
    "pages": 19,
    "errors": [],
    "parsed_by_sport": {
@@ -2200,13 +2200,13 @@
    }
   },
   "error": null,
-  "tips": 2980,
+  "tips": 2987,
   "snapshots": 47,
-  "unmapped_markets": 4063,
+  "unmapped_markets": 4073,
   "quote_matches": 14
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-17T05:48:24.103608+03:00",
+  "last_poll": "2026-11-17T05:50:24.950587+03:00",
   "cursor": "79",
   "posts": [
    {
@@ -2670,6 +2670,5 @@
    }
   ],
   "status": "observing"
- },
- "vk_story_retry_at": 1794883853.0206816
+ }
 }
