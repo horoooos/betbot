@@ -675,107 +675,6 @@ null
 "lt": null
 },
 {
-"sport": "tennis",
-"id": "187508",
-"league": "Теннис · ATP",
-"kickoff": "2026-11-17T16:05:00+03:00",
-"home": "Артур Филс",
-"away": "Рафаэль Ходар",
-"hl": "https://a.espncdn.com/i/teamlogos/countries/500/fra.png",
-"al": "https://a.espncdn.com/i/teamlogos/countries/500/esp.png",
-"hid": "10052",
-"aid": "12657",
-"bb": "https://betboom.ru/search?query=%D0%A4%D0%B8%D0%BB%D1%81&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=tennis",
-"path": "tennis/atp",
-"url": "live.html?s=tennis&p=tennis%2Fatp&e=187508&h=%D0%90%D1%80%D1%82%D1%83%D1%80+%D0%A4%D0%B8%D0%BB%D1%81&a=%D0%A0%D0%B0%D1%84%D0%B0%D1%8D%D0%BB%D1%8C+%D0%A5%D0%BE%D0%B4%D0%B0%D1%80",
-"participants": [
-[
-"Артур Филс",
-"Arthur Fils"
-],
-[
-"Рафаэль Ходар",
-"Rafael Jodar"
-]
-],
-"div": "ATP",
-"state": "pre",
-"bo": null,
-"prediction": "predictions/2026-11-17-artur-fils-rafael-hodar-187508.html",
-"hs": null,
-"as": null,
-"tip": "Будет 2 сета · ≈1.86",
-"top": false,
-"bot": {
-"main": {
-"label": "Будет 2 сета",
-"p": 0.5,
-"odds": 1.86,
-"est": true
-},
-"bold": null,
-"markets": [
-[
-"Победа: Артур Филс",
-0.494,
-null
-],
-[
-"Победа: Рафаэль Ходар",
-0.506,
-null
-],
-[
-"Будет 3 сета",
-0.5,
-null
-],
-[
-"Будет 2 сета",
-0.5,
-null
-],
-[
-"Счёт по сетам 2:0",
-0.246,
-null
-],
-[
-"Счёт по сетам 0:2",
-0.254,
-null
-],
-[
-"Счёт по сетам 2:1",
-0.248,
-null
-],
-[
-"Счёт по сетам 1:2",
-0.252,
-null
-],
-[
-"Артур Филс возьмёт хотя бы сет",
-0.746,
-null
-],
-[
-"Рафаэль Ходар возьмёт хотя бы сет",
-0.754,
-null
-]
-],
-"bar": [
-0.493685100719536,
-0,
-0.506314899280464
-],
-"center": "Рейтинг Эло 1783 : 1787"
-},
-"lt": null
-},
-{
 "sport": "football",
 "id": "401916336",
 "league": "Сборные · Товарищеские матчи",
@@ -917,6 +816,107 @@ null
 0.099
 ]
 ]
+},
+"lt": null
+},
+{
+"sport": "tennis",
+"id": "187508",
+"league": "Теннис · ATP",
+"kickoff": "2026-11-17T16:10:00+03:00",
+"home": "Артур Филс",
+"away": "Рафаэль Ходар",
+"hl": "https://a.espncdn.com/i/teamlogos/countries/500/fra.png",
+"al": "https://a.espncdn.com/i/teamlogos/countries/500/esp.png",
+"hid": "10052",
+"aid": "12657",
+"bb": "https://betboom.ru/search?query=%D0%A4%D0%B8%D0%BB%D1%81&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=tennis",
+"path": "tennis/atp",
+"url": "live.html?s=tennis&p=tennis%2Fatp&e=187508&h=%D0%90%D1%80%D1%82%D1%83%D1%80+%D0%A4%D0%B8%D0%BB%D1%81&a=%D0%A0%D0%B0%D1%84%D0%B0%D1%8D%D0%BB%D1%8C+%D0%A5%D0%BE%D0%B4%D0%B0%D1%80",
+"participants": [
+[
+"Артур Филс",
+"Arthur Fils"
+],
+[
+"Рафаэль Ходар",
+"Rafael Jodar"
+]
+],
+"div": "ATP",
+"state": "pre",
+"bo": null,
+"prediction": "predictions/2026-11-17-artur-fils-rafael-hodar-187508.html",
+"hs": null,
+"as": null,
+"tip": "Будет 2 сета · ≈1.86",
+"top": false,
+"bot": {
+"main": {
+"label": "Будет 2 сета",
+"p": 0.5,
+"odds": 1.86,
+"est": true
+},
+"bold": null,
+"markets": [
+[
+"Победа: Артур Филс",
+0.494,
+null
+],
+[
+"Победа: Рафаэль Ходар",
+0.506,
+null
+],
+[
+"Будет 3 сета",
+0.5,
+null
+],
+[
+"Будет 2 сета",
+0.5,
+null
+],
+[
+"Счёт по сетам 2:0",
+0.246,
+null
+],
+[
+"Счёт по сетам 0:2",
+0.254,
+null
+],
+[
+"Счёт по сетам 2:1",
+0.248,
+null
+],
+[
+"Счёт по сетам 1:2",
+0.252,
+null
+],
+[
+"Артур Филс возьмёт хотя бы сет",
+0.746,
+null
+],
+[
+"Рафаэль Ходар возьмёт хотя бы сет",
+0.754,
+null
+]
+],
+"bar": [
+0.493685100719536,
+0,
+0.506314899280464
+],
+"center": "Рейтинг Эло 1783 : 1787"
 },
 "lt": null
 },
