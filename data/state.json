@@ -1572,7 +1572,7 @@
  "value_day": "2026-11-17",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-17",
- "site_stamp": "1120|6780|2026-11-17 21|4|802bd9fdeeb566ed",
+ "site_stamp": "1121|6782|2026-11-17 21|4|c39f11d3fb25c3a9",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1702,7 +1702,7 @@
  "streak_day": {
   "2026-11-15": 2
  },
- "news_next": "2026-11-17T21:11:01.961253+03:00",
+ "news_next": "2026-11-17T21:17:02.075207+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1722,7 +1722,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 6780,
+ "dz_last": 6782,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2176,9 +2176,9 @@
   "model": {
    "weight": 0.0,
    "status": "collecting",
-   "settled_matches": 20,
+   "settled_matches": 21,
    "required_matches": 100,
-   "trained_at": "2026-11-17T17:55:01.672252+00:00"
+   "trained_at": "2026-11-17T18:11:02.075207+00:00"
   },
   "sport_models": {
    "hockey": {
@@ -2240,7 +2240,7 @@
   "quote_matches": 14
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-17T21:09:01.285421+03:00",
+  "last_poll": "2026-11-17T21:11:02.075207+03:00",
   "cursor": "89",
   "posts": [
    {
