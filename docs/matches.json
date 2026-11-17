@@ -1279,7 +1279,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-17-sbornaya-iordanii-sbornaya-avstralii-401919974.html",
-"hs": "0",
+"hs": "1",
 "as": "0",
 "tip": "П2 · 1.69",
 "top": false,
@@ -1676,107 +1676,6 @@ null
 "lt": null
 },
 {
-"sport": "esports",
-"id": "1793340",
-"league": "Киберспорт · Dota 2",
-"kickoff": "2026-11-17T19:30:00+03:00",
-"home": "Team Spirit",
-"away": "Aurora",
-"hl": "https://cdn-api.pandascore.co/images/team/image/1669/153px_team_spirit_2022_lightmode.png",
-"al": "https://cdn-api.pandascore.co/images/team/image/133882/600px_aurora_gaming_2025_allmode.png",
-"hid": "1669",
-"aid": "133882",
-"bb": "https://betboom.ru/search?query=%D0%A1%D0%BF%D0%B8%D1%80%D0%B8%D1%82&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=esports",
-"path": "",
-"url": "dota.html?e=1793340&d=DOTA",
-"participants": [
-[
-"Team Spirit",
-"Team Spirit"
-],
-[
-"Aurora",
-"Aurora"
-]
-],
-"div": "DOTA",
-"state": "pre",
-"bo": 3,
-"prediction": "predictions/2026-11-17-team-spirit-aurora-1793340.html",
-"hs": 0,
-"as": 0,
-"tip": "Всухую (2:0 или 0:2) · ≈1.65",
-"top": false,
-"bot": {
-"main": {
-"label": "Всухую (2:0 или 0:2)",
-"p": 0.563,
-"odds": 1.65,
-"est": true
-},
-"bold": null,
-"markets": [
-[
-"Победа: Team Spirit",
-0.754,
-null
-],
-[
-"Победа: Aurora",
-0.246,
-null
-],
-[
-"Больше 2 карт",
-0.437,
-null
-],
-[
-"Всухую (2:0 или 0:2)",
-0.563,
-null
-],
-[
-"Счёт по картам 2:0",
-0.458,
-null
-],
-[
-"Счёт по картам 0:2",
-0.104,
-null
-],
-[
-"Счёт по картам 2:1",
-0.296,
-null
-],
-[
-"Счёт по картам 1:2",
-0.141,
-null
-],
-[
-"Team Spirit возьмёт хотя бы карту",
-0.896,
-null
-],
-[
-"Aurora возьмёт хотя бы карту",
-0.542,
-null
-]
-],
-"bar": [
-0.7543685482798845,
-0,
-0.24563145172011547
-],
-"center": "BO3 · Эло 1789 : 1594"
-},
-"lt": null
-},
-{
 "sport": "football",
 "id": "401931956",
 "league": "Сборные · Товарищеские матчи",
@@ -1918,6 +1817,107 @@ null
 0.093
 ]
 ]
+},
+"lt": null
+},
+{
+"sport": "esports",
+"id": "1793340",
+"league": "Киберспорт · Dota 2",
+"kickoff": "2026-11-17T19:35:55+03:00",
+"home": "Team Spirit",
+"away": "Aurora",
+"hl": "https://cdn-api.pandascore.co/images/team/image/1669/153px_team_spirit_2022_lightmode.png",
+"al": "https://cdn-api.pandascore.co/images/team/image/133882/600px_aurora_gaming_2025_allmode.png",
+"hid": "1669",
+"aid": "133882",
+"bb": "https://betboom.ru/search?query=%D0%A1%D0%BF%D0%B8%D1%80%D0%B8%D1%82&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=esports",
+"path": "",
+"url": "dota.html?e=1793340&d=DOTA",
+"participants": [
+[
+"Team Spirit",
+"Team Spirit"
+],
+[
+"Aurora",
+"Aurora"
+]
+],
+"div": "DOTA",
+"state": "in",
+"bo": 3,
+"prediction": "predictions/2026-11-17-team-spirit-aurora-1793340.html",
+"hs": 0,
+"as": 0,
+"tip": "Всухую (2:0 или 0:2) · ≈1.65",
+"top": false,
+"bot": {
+"main": {
+"label": "Всухую (2:0 или 0:2)",
+"p": 0.563,
+"odds": 1.65,
+"est": true
+},
+"bold": null,
+"markets": [
+[
+"Победа: Team Spirit",
+0.754,
+null
+],
+[
+"Победа: Aurora",
+0.246,
+null
+],
+[
+"Больше 2 карт",
+0.437,
+null
+],
+[
+"Всухую (2:0 или 0:2)",
+0.563,
+null
+],
+[
+"Счёт по картам 2:0",
+0.458,
+null
+],
+[
+"Счёт по картам 0:2",
+0.104,
+null
+],
+[
+"Счёт по картам 2:1",
+0.296,
+null
+],
+[
+"Счёт по картам 1:2",
+0.141,
+null
+],
+[
+"Team Spirit возьмёт хотя бы карту",
+0.896,
+null
+],
+[
+"Aurora возьмёт хотя бы карту",
+0.542,
+null
+]
+],
+"bar": [
+0.7543685482798845,
+0,
+0.24563145172011547
+],
+"center": "BO3 · Эло 1789 : 1594"
 },
 "lt": null
 },
