@@ -2217,43 +2217,9 @@
   "quote_matches": 14
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-17T14:48:14.020463+03:00",
-  "cursor": "82",
+  "last_poll": "2026-11-17T14:50:13.845995+03:00",
+  "cursor": "84",
   "posts": [
-   {
-    "post_id": 499,
-    "url": "https://vk.com/wall-228963529_499",
-    "title": "«Зенит» разгромил «Трабзонспор» и поставил рекорд посещаемости",
-    "text": "«Зенит» разгромил «Трабзонспор» и поставил рекорд посещаемости\n\nрџ“° На «Газпром Арене» в воскресенье, 15 ноября, прошёл матч Winline Суперсерии, где «Зенит» уверенно победил турецкого «Трабзонспора» со счётом 3:0.\n\nвљЅпёЏ Игра привлекла 45 089 зрителей – это новое высшее достижение для товарищеских встреч сине-бело-голубых на их домашнем поле.\n\n#футбол #Арене #Зенит #новостиспорта #спорт #главное #аиставит\n\nрџ“Љ Подробнее на сайте рџ‘‡",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": true,
-     "details_present": true,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-15T22:29:02.605345+03:00"
-   },
-   {
-    "post_id": 501,
-    "url": "https://vk.com/wall-228963529_501",
-    "title": "Проверка оформления: абзацы и хэштеги внизу",
-    "text": "Проверка оформления: абзацы и хэштеги внизу\n\nвњ… Проверяем подпись: отдельные абзацы, законченный текст и хэштеги внизу.\n\nрџ“Њ Последнее предложение анонса должно быть видно целиком.\n\n#футбол #новостиспорта #спорт #главное #аиставит\n\nрџ“Љ Подробнее на сайте рџ‘‡",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": true,
-     "details_present": true,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-15T22:29:02.605345+03:00"
-   },
    {
     "post_id": 500,
     "url": "https://vk.com/wall-228963529_500",
@@ -2729,6 +2695,40 @@
     },
     "status": "needs_review",
     "observed_at": "2026-11-17T13:46:13.416330+03:00"
+   },
+   {
+    "post_id": 532,
+    "url": "https://vk.com/wall-228963529_532",
+    "title": "TeaGuvnor отверг слухи о предстоящем патче Dota 2",
+    "text": "рџ“° TeaGuvnor бросил холодный душ по слухам о патче Dota 2! Аналитик Робсон «TeaGuvnor» Мерритт категорически опроверг предположения, что у него есть детали следующего обновления.",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": false,
+     "details_present": false,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-17T14:50:13.845995+03:00"
+   },
+   {
+    "post_id": 533,
+    "url": "https://vk.com/wall-228963529_533",
+    "title": "Галактионов покинул «Локомотив»: 40 млн выплат после поражения от «Рубина»",
+    "text": "рџ± После горького поражения от «Рубина» (0:1) в 14-м туре РПЛ «Локомотив» официально расстался с главным тренером.",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": false,
+     "details_present": false,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-17T14:50:13.845995+03:00"
    }
   ],
   "status": "observing"
