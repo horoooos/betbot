@@ -1565,12 +1565,78 @@ null
 "div": "DOTA",
 "state": "pre",
 "bo": 3,
-"prediction": "",
+"prediction": "predictions/2026-11-17-lgd-gaming-parivision-1793345.html",
 "hs": 0,
 "as": 0,
-"tip": "",
+"tip": "Победа: LGD Gaming · ≈1.81",
 "top": false,
-"bot": null,
+"bot": {
+"main": {
+"label": "Победа: LGD Gaming",
+"p": 0.513,
+"odds": 1.81,
+"est": true
+},
+"bold": null,
+"markets": [
+[
+"Победа: LGD Gaming",
+0.513,
+null
+],
+[
+"Победа: PARIVISION",
+0.487,
+null
+],
+[
+"Больше 2 карт",
+0.5,
+null
+],
+[
+"Всухую (2:0 или 0:2)",
+0.5,
+null
+],
+[
+"Счёт по картам 2:0",
+0.259,
+null
+],
+[
+"Счёт по картам 0:2",
+0.242,
+null
+],
+[
+"Счёт по картам 2:1",
+0.254,
+null
+],
+[
+"Счёт по картам 1:2",
+0.246,
+null
+],
+[
+"LGD Gaming возьмёт хотя бы карту",
+0.758,
+null
+],
+[
+"PARIVISION возьмёт хотя бы карту",
+0.741,
+null
+]
+],
+"bar": [
+0.5128130773604432,
+0,
+0.48718692263955676
+],
+"center": "BO3 · Эло 1577 : 1568"
+},
 "lt": null
 },
 {
