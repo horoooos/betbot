@@ -2240,26 +2240,9 @@
   "quote_matches": 14
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-17T21:15:01.378550+03:00",
-  "cursor": "89",
+  "last_poll": "2026-11-17T21:17:01.499743+03:00",
+  "cursor": "90",
   "posts": [
-   {
-    "post_id": 505,
-    "url": "https://vk.com/wall-228963529_505",
-    "title": "ЦСКА планирует вернуть бразильского защитника Виллиана Рошу",
-    "text": "ЦСКА планирует вернуть бразильского защитника Виллиана Рошу\n\nрџ± ЦСКА уже сделали первый шаг к возвращению Виллиана Роши – 31-летнего бразильского защитника, который сейчас играет за «Аль-Джазиру».\n\nвљЅпёЏ По словам журналиста Фелипе Силвы, армейцы напрямую связались с игроком, предложив вернуться в «красно-синие» после трех лет в Москве.\n\n#футбол #Рошу #новостиспорта #спорт #главное #аиставит\n\nрџ“Љ Подробнее на сайте рџ‘‡",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": true,
-     "details_present": true,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-16T00:38:08.121869+03:00"
-   },
    {
     "post_id": 506,
     "url": "https://vk.com/wall-228963529_506",
@@ -2752,6 +2735,23 @@
     },
     "status": "needs_review",
     "observed_at": "2026-11-17T18:00:13.924610+03:00"
+   },
+   {
+    "post_id": 539,
+    "url": "https://vk.com/wall-228963529_539",
+    "title": "Кэмерон Бузер стал четвертым новичком НБА с 25+ очками, 7 подборов, 7 передач и 7 трехочков",
+    "text": "рџ±рџ”Ґ Новый дебютант «Мемфиса» — Кэмерон Бузер — выполнил то, о чём мечтают почти все новички: 25+ очков, 7 подборов, 7 результативных передач и 7 трехочковых в одном матче!",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": false,
+     "details_present": false,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-17T21:17:01.499743+03:00"
    }
   ],
   "status": "observing"
