@@ -6832,25 +6832,25 @@
   "kickoff": "2026-11-17T03:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Mon, November 16th at 7:30 PM EST",
   "clock": "0.0",
   "period": 0,
   "home": {
+   "color": "000000",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/bkn.png",
    "id": "17",
    "name": "Brooklyn Nets",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/bkn.png",
-   "color": "000000",
    "score": "0",
    "record": "3-9",
    "periods": [],
    "ru": "Бруклин Нетс"
   },
   "away": {
+   "color": "1d428a",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/phi.png",
    "id": "20",
    "name": "Philadelphia 76ers",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/phi.png",
-   "color": "1d428a",
    "score": "0",
    "record": "11-3",
    "periods": [],
@@ -6934,7 +6934,9 @@
   "btn": 4,
   "close": {
    "BB_SPR_A": 0.5
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null
  },
  "NBA|401909998": {
   "id": "401909998",

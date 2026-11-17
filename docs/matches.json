@@ -327,11 +327,11 @@ null
 ]
 ],
 "div": "NBA",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "predictions/2026-11-17-bruklin-nets-filadelfiya-siksers-401909997.html",
 "hs": "123",
-"as": "134",
+"as": "135",
 "tip": "Ф2 (-4.5) · 1.85",
 "top": false,
 "bot": {
@@ -681,7 +681,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-17-minnesota-timbervulvz-portlend-401909999.html",
-"hs": "98",
+"hs": "100",
 "as": "82",
 "tip": "П1 (с ОТ) · 1.77",
 "top": true,
@@ -782,7 +782,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-17-nyu-orlean-pelikans-golden-steyt-401910000.html",
-"hs": "102",
+"hs": "107",
 "as": "78",
 "tip": "П2 (с ОТ) · 1.65",
 "top": true,
@@ -884,7 +884,7 @@ null
 "bo": null,
 "prediction": "predictions/2026-11-17-denver-naggets-finiks-sanz-401910001.html",
 "hs": "53",
-"as": "54",
+"as": "56",
 "tip": "Ф1 (-9.5) · 1.88",
 "top": false,
 "bot": {
@@ -1085,7 +1085,15 @@ null
 ],
 "center": "Ожидаемые голы 4.2 : 2.5"
 },
-"lt": null
+"lt": {
+"fair": 1.55,
+"label": "П1 (осн. время)",
+"min_odds": 1.63,
+"minute": "2-й период",
+"p": 0.646,
+"result": null,
+"score": "0:0"
+}
 },
 {
 "sport": "football",
