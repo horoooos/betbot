@@ -10246,7 +10246,7 @@
   "kickoff": "2026-11-17T17:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Scheduled",
   "home": {
    "id": "4398",
@@ -10396,7 +10396,10 @@
   "close": {
    "U25": 0.4334,
    "A-1.5": 0.4486
-  }
+  },
+  "main_hit": true,
+  "bold_hit": false,
+  "value_hit": null
  },
  "401932718": {
   "id": "401932718",
@@ -10838,7 +10841,10 @@
    "snapshot": "FRI|401919974"
   },
   "msg_id": 6722,
-  "btn": 4
+  "btn": 4,
+  "close": {
+   "A": 0.5618
+  }
  },
  "401930978": {
   "status": "skipped",
