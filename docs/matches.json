@@ -3147,5 +3147,75 @@ null
 "top": false,
 "bot": null,
 "lt": null
+},
+{
+"sport": "football",
+"id": "401841314",
+"league": "Бразилия · Серия A",
+"kickoff": "2026-11-19T02:30:00+03:00",
+"home": "Крузейро",
+"away": "Палмейрас",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/2022.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/2029.png",
+"hid": "2022",
+"aid": "2029",
+"bb": "https://betboom.ru/search?query=%D0%9A%D1%80%D1%83%D0%B7%D0%B5%D0%B9%D1%80%D0%BE&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/bra.1",
+"url": "live.html?s=football&p=soccer%2Fbra.1&e=401841314&h=%D0%9A%D1%80%D1%83%D0%B7%D0%B5%D0%B9%D1%80%D0%BE&a=%D0%9F%D0%B0%D0%BB%D0%BC%D0%B5%D0%B9%D1%80%D0%B0%D1%81",
+"participants": [
+[
+"Крузейро",
+"Cruzeiro"
+],
+[
+"Палмейрас",
+"Palmeiras"
+]
+],
+"div": "BRA",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "football",
+"id": "401841313",
+"league": "Бразилия · Серия A",
+"kickoff": "2026-11-19T02:30:00+03:00",
+"home": "Фламенго",
+"away": "Атлетико Паранаэнсе",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/819.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/3458.png",
+"hid": "819",
+"aid": "3458",
+"bb": "https://betboom.ru/search?query=%D0%A4%D0%BB%D0%B0%D0%BC%D0%B5%D0%BD%D0%B3%D0%BE&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/bra.1",
+"url": "live.html?s=football&p=soccer%2Fbra.1&e=401841313&h=%D0%A4%D0%BB%D0%B0%D0%BC%D0%B5%D0%BD%D0%B3%D0%BE&a=%D0%90%D1%82%D0%BB%D0%B5%D1%82%D0%B8%D0%BA%D0%BE+%D0%9F%D0%B0%D1%80%D0%B0%D0%BD%D0%B0%D1%8D%D0%BD%D1%81%D0%B5",
+"participants": [
+[
+"Фламенго",
+"Flamengo"
+],
+[
+"Атлетико Паранаэнсе",
+"Athletico-PR"
+]
+],
+"div": "BRA",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
 }
 ]
