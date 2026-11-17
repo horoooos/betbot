@@ -2247,43 +2247,9 @@
   "quote_matches": 18
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-18T01:33:50.387351+03:00",
-  "cursor": "92",
+  "last_poll": "2026-11-18T01:35:50.861594+03:00",
+  "cursor": "94",
   "posts": [
-   {
-    "post_id": 509,
-    "url": "https://vk.com/wall-228963529_509",
-    "title": "Мажич ставит на Прокопова, Чистякова и Танашева как лучших арбитров",
-    "text": "Мажич ставит на Прокопова, Чистякова и Танашева как лучших арбитров\n\nвљЅпёЏ По данным департамента судейства и инспектирования РФС, в 14 турах чемпионата России-2026/27 лучшими арбитрами признаны Андрей Прокопов – 9 назначений, а также Артём Чистяков и Инал Танашев – по 8 матчей каждый.\n\n#футбол #Прокопов #новостиспорта #спорт #главное #аиставит\n\nрџ“Љ Подробнее на сайте рџ‘‡",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": true,
-     "details_present": true,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-16T11:13:23.120470+03:00"
-   },
-   {
-    "post_id": 510,
-    "url": "https://vk.com/wall-228963529_510",
-    "title": "Юлия by_Owl мечтает стать комментатором Dota 2 и появиться на The International",
-    "text": "Юлия by_Owl мечтает стать комментатором Dota 2 и появиться на The International\n\nрџ“° Стримерша Юлия by_Owl Ивлева раскрыла, что после неудачной попытки построить модельную карьеру она вернулась к стримингу. Она рассказала, что в начале своей модели пыталась «изматываться» диетами, тренировками, уроками английского и даже плаванием в бассейне.\n\n#киберспорт #Dota #Юлия #новостиспорта #спорт #главное #аиставит\n\nрџ“Љ Подробнее на сайте рџ‘‡",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": true,
-     "details_present": true,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-16T12:17:24.276715+03:00"
-   },
    {
     "post_id": 511,
     "url": "https://vk.com/wall-228963529_511",
@@ -2759,6 +2725,40 @@
     },
     "status": "needs_review",
     "observed_at": "2026-11-18T00:29:49.933135+03:00"
+   },
+   {
+    "post_id": 542,
+    "url": "https://vk.com/wall-228963529_542",
+    "title": "Газизов признался: «Надо было сразу забрать деньги» после ухода из «Спартака»",
+    "text": "рџ“° Генеральный директор махачкалинского «Динамо» Азиз Газизов в выпуске клубного шоу «БЕТСИТИ Подкаст PRO DMX» откровенно рассказал, какие финансовые промахи сделали, когда возглавлял «Спартак».",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": false,
+     "details_present": false,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-18T01:35:50.861594+03:00"
+   },
+   {
+    "post_id": 543,
+    "url": "https://vk.com/wall-228963529_543",
+    "title": "Газизов объяснил, почему Пальцев не попал в «Спартак»",
+    "text": "рџ“° Генеральный директор махачкалинского «Динамо» Азиз Газизов в выпуске подкаста «БЕТСИТИ Подкаст PRO DMX» раскрыл, почему защитник клуба Валентин Пальцев не переехал в московский «Спартак».",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": false,
+     "details_present": false,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-18T01:35:50.861594+03:00"
    }
   ],
   "status": "observing"
