@@ -6583,25 +6583,25 @@
   "kickoff": "2026-11-17T03:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Mon, November 16th at 7:00 PM EST",
   "clock": "0.0",
   "period": 0,
   "home": {
+   "color": "008348",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/bos.png",
    "id": "2",
    "name": "Boston Celtics",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/bos.png",
-   "color": "008348",
    "score": "0",
    "record": "11-2",
    "periods": [],
    "ru": "Бостон Селтикс"
   },
   "away": {
+   "color": "0150b5",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/orl.png",
    "id": "19",
    "name": "Orlando Magic",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/orl.png",
-   "color": "0150b5",
    "score": "0",
    "record": "5-7",
    "periods": [],
@@ -6685,7 +6685,9 @@
   "btn": 4,
   "close": {
    "BB_SPR_H": 0.5
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null
  },
  "NBA|401909995": {
   "id": "401909995",
@@ -6694,25 +6696,25 @@
   "kickoff": "2026-11-17T03:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Mon, November 16th at 7:00 PM EST",
   "clock": "0.0",
   "period": 0,
   "home": {
+   "color": "860038",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/cle.png",
    "id": "5",
    "name": "Cleveland Cavaliers",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/cle.png",
-   "color": "860038",
    "score": "0",
    "record": "7-7",
    "periods": [],
    "ru": "Кливленд"
   },
   "away": {
+   "color": "ce1141",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/chi.png",
    "id": "4",
    "name": "Chicago Bulls",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/chi.png",
-   "color": "ce1141",
    "score": "0",
    "record": "3-9",
    "periods": [],
@@ -6796,7 +6798,9 @@
   "btn": 4,
   "close": {
    "BB_SPR_H": 0.5
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null
  },
  "NBA|401909996": {
   "id": "401909996",
