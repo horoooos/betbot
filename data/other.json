@@ -7418,5 +7418,113 @@
   },
   "main_hit": false,
   "bold_hit": null
+ },
+ "DOTA|1793344": {
+  "id": "1793344",
+  "div": "DOTA",
+  "sport": "esports",
+  "streams": [
+   {
+    "provider": "twitch",
+    "channel": "1win_dota_ru",
+    "url": "https://www.twitch.tv/1win_dota_ru",
+    "language": "ru",
+    "source": "PandaScore",
+    "official": true,
+    "status": "listed",
+    "access": "unknown"
+   },
+   {
+    "provider": "twitch",
+    "channel": "1win_dota",
+    "url": "https://www.twitch.tv/1win_dota",
+    "language": "en",
+    "source": "PandaScore",
+    "official": true,
+    "status": "listed",
+    "access": "unknown"
+   }
+  ],
+  "tournament": "1win Essence · Season 3 2026",
+  "bo": 3,
+  "kickoff": "2026-11-17T13:00:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "tier": "a",
+  "status": "reviewed",
+  "home": {
+   "id": "135712",
+   "name": "PARIVISION",
+   "ru": "PARIVISION",
+   "logo": "https://cdn-api.pandascore.co/images/team/image/135712/250px_parivision_allmode.png",
+   "color": "3b4a7a",
+   "score": 0,
+   "winner": false
+  },
+  "away": {
+   "id": "139517",
+   "name": "Froglings",
+   "ru": "Froglings",
+   "logo": null,
+   "color": "3b4a7a",
+   "score": 0,
+   "winner": false
+  },
+  "odds": {},
+  "probs": {
+   "ES_W1": 0.446444219944444,
+   "ES_W2": 0.553555780055556,
+   "ES_FULL": 0.49744175096610566,
+   "ES_DRY": 0.5025582490338943,
+   "ES_S2:0": 0.2155142742174258,
+   "ES_S0:2": 0.28704397481646854,
+   "ES_S2:1": 0.23092994572701828,
+   "ES_S1:2": 0.2665118052390874,
+   "ES_MAP1": 0.7129560251835314,
+   "ES_MAP2": 0.7844857257825741
+  },
+  "labels": {
+   "ES_W1": "Победа: PARIVISION",
+   "ES_W2": "Победа: Froglings",
+   "ES_FULL": "Больше 2 карт",
+   "ES_DRY": "Всухую (2:0 или 0:2)",
+   "ES_S2:0": "Счёт по картам 2:0",
+   "ES_S0:2": "Счёт по картам 0:2",
+   "ES_S2:1": "Счёт по картам 2:1",
+   "ES_S1:2": "Счёт по картам 1:2",
+   "ES_MAP1": "PARIVISION возьмёт хотя бы карту",
+   "ES_MAP2": "Froglings возьмёт хотя бы карту"
+  },
+  "real": {},
+  "center": "BO3 · Эло 1568 : 1605",
+  "bar": [
+   0.446444219944444,
+   0,
+   0.553555780055556
+  ],
+  "model": {
+   "elo": [
+    1567.712660276653,
+    1605.0703344010524
+   ],
+   "src": "Эло"
+  },
+  "stavka_signal": {
+   "status": "insufficient_opinions",
+   "weight": 0.0
+  },
+  "main": {
+   "key": "ES_W2",
+   "label": "Победа: Froglings",
+   "p": 0.5536,
+   "odds": 1.68,
+   "est": true,
+   "stake": 1.0
+  },
+  "bold": {},
+  "open": {},
+  "top": false,
+  "msg_id": 6649,
+  "btn": 4
  }
 }
