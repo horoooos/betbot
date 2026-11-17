@@ -12896,7 +12896,7 @@
   "kickoff": "2026-11-17T15:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Scheduled",
   "home": {
    "id": "6724",
@@ -13038,7 +13038,10 @@
   "btn": 4,
   "close": {
    "U25": 0.517
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null,
+  "value_hit": null
  },
  "401933635": {
   "id": "401933635",
