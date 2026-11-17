@@ -2227,26 +2227,9 @@
   "quote_matches": 14
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-17T16:56:13.197029+03:00",
-  "cursor": "86",
+  "last_poll": "2026-11-17T16:58:13.797640+03:00",
+  "cursor": "87",
   "posts": [
-   {
-    "post_id": 502,
-    "url": "https://vk.com/wall-228963529_502",
-    "title": "Рольгизер: «Никогда не видел такой плотности в Востоке» – 5:1 над СКА",
-    "text": "Рольгизер: «Никогда не видел такой плотности в Востоке» – 5:1 над СКА\n\nрџ± Нападающий «Трактора» Михаил Рольгизер в интервью «СЭ» раскрыл детали громкой победы над СКА (5:1) в рамках FONBET-чемпионата КХЛ.\n\n#хоккей #КХЛ #Рольгизер #новостиспорта #спорт #главное #аиставит\n\nрџ“Љ Подробнее на сайте рџ‘‡",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": true,
-     "details_present": true,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-15T23:35:01.878479+03:00"
-   },
    {
     "post_id": 503,
     "url": "https://vk.com/wall-228963529_503",
@@ -2739,6 +2722,23 @@
     },
     "status": "needs_review",
     "observed_at": "2026-11-17T15:52:13.472982+03:00"
+   },
+   {
+    "post_id": 536,
+    "url": "https://vk.com/wall-228963529_536",
+    "title": "Тренер «Сочи» Игорь Осинькин поддержал расширение РПЛ до 18 клубов",
+    "text": "рџ“° Игорь Осинькин, главный тренер «Сочи», в интервью «СЭ» высказался за план расширить Российскую премьер-лигу до 18 клубов. Он отметил, что идея была вынесена на общее собрание РПЛ на прошлой неделе.",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": false,
+     "details_present": false,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-17T16:58:13.797640+03:00"
    }
   ],
   "status": "observing"
