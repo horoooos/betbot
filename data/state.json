@@ -7,8 +7,6 @@
  "schedule_day": "2026-11-17",
  "content_slot": "2026-11-17-13",
  "news_seen": [
-  "https://www.sport-express.ru/football/yflrussia/news/zenit-stal-pobeditelem-yufl-u-15-2474813/",
-  "https://www.sport-express.ru/hockey/russia/news/shumi-babaev-ne-veryu-v-uspeh-apellyacii-iihf-po-resheniyu-cas-o-dopuske-nashih-sbornyh-2474811/",
   "furia-esports-obygrala-team-falcons-v-polufinale-blast-rivals-fall-2026",
   "https://www.sport-express.ru/basketball/vtb-league/news/mba-dinamo-vladivostok-schet-i-rezultat-matcha-edinoy-ligi-vtb-14-noyabrya-2026-2474815/",
   "https://www.sport-express.ru/football/turkey/news/batrakov-rasskazal-chto-sam-predlozhil-vklyuchat-kalinku-malinku-posle-ego-golov-za-galatasaray-2474818/",
@@ -506,9 +504,11 @@
   "https://www.sport-express.ru/football/friendly/news/vinisius-sdelal-het-trik-za-21-minutu-v-tovarischeskom-matche-s-singapurom-2475826/",
   "https://www.sport-express.ru/hockey/russia/news/glava-fhr-tretyak-vyrazil-soboleznovaniya-v-svyazi-so-smertyu-olimpiyskogo-chempiona-lyapkina-2475838/",
   "https://www.sport-express.ru/stavki-na-sport/prognozy/news/artyur-fis-rafael-hodar-prognoz-na-match-itogovogo-turnira-atp-17-noyabrya-2026-goda-2475843/",
-  "teaguvnor-o-vykhode-patcha-v-dota-2-da-khren-yego-znayet-voobshche-bez-ponyatiya"
+  "teaguvnor-o-vykhode-patcha-v-dota-2-da-khren-yego-znayet-voobshche-bez-ponyatiya",
+  "https://www.sport-express.ru/football/rfpl/news/mostovoy-zayavil-chto-gotov-provesti-boy-so-sluckim-2475842/",
+  "https://www.sport-express.ru/football/rfpl/news/mostovoy-nazval-vydumkami-sluhi-o-vozmozhnom-uhode-zhedsona-iz-spartaka-2475841/"
  ],
- "news_i": 0,
+ "news_i": 1,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1701,7 +1701,7 @@
  "streak_day": {
   "2026-11-15": 2
  },
- "news_next": "2026-11-17T15:11:13.916228+03:00",
+ "news_next": "2026-11-17T15:42:13.243808+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1825,7 +1825,8 @@
   "https://images.cybersport.ru/images/as-is/plain/61/61c40544-656c-4e16-ae71-9af82bb94234.jpg",
   "https://ss.sport-express.ru/userfiles/materials/224/2244177/1180x665.jpg",
   "https://ss.sport-express.ru/userfiles/materials/224/2244186/1180x665.jpg",
-  "https://images.cybersport.ru/images/as-is/plain/c9/c9124d55-587f-4671-b0c6-dbc2842fd0ef.jpg"
+  "https://images.cybersport.ru/images/as-is/plain/c9/c9124d55-587f-4671-b0c6-dbc2842fd0ef.jpg",
+  "https://upload.wikimedia.org/wikipedia/commons/7/78/Aleksandr_Mostovoi_2007.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
  ],
  "indexnow_day": "2026-11-17",
  "vk_wall_err": null,
@@ -2008,7 +2009,8 @@
   "6647",
   "6655",
   "6662",
-  "6664"
+  "6664",
+  "6675"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -2123,11 +2125,12 @@
   "2026-11-17:новость:b0b43621d563ec953bfe02ec",
   "2026-11-17:новость:769becaba03a850d6fdc998c",
   "2026-11-17:новость:89c6eaf870ab9483823d24dd",
-  "2026-11-17:новость:bf6693e0a10ed89b50271759"
+  "2026-11-17:новость:bf6693e0a10ed89b50271759",
+  "2026-11-17:новость:43bde9749f4dbc1acc7c5ed4"
  ],
  "dz_last_delivery": {
-  "source_id": 6664,
-  "message_id": 661,
+  "source_id": 6675,
+  "message_id": 662,
   "kind": "новость"
  },
  "learn_attempt_day": "2026-11-17",
@@ -2217,7 +2220,7 @@
   "quote_matches": 14
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-17T15:10:14.041268+03:00",
+  "last_poll": "2026-11-17T15:12:13.243808+03:00",
   "cursor": "84",
   "posts": [
    {
