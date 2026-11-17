@@ -1602,7 +1602,7 @@
  "value_day": "2026-11-16",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-16",
- "site_stamp": "1108|6642|2026-11-17 08|4|d7adc865164e5a7b",
+ "site_stamp": "1108|6645|2026-11-17 08|4|d7adc865164e5a7b",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1734,7 +1734,7 @@
  "streak_day": {
   "2026-11-15": 2
  },
- "news_next": "2026-11-17T08:25:34.077312+03:00",
+ "news_next": "2026-11-17T08:33:33.331137+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1889,7 +1889,7 @@
  "vk_photo_until": 1794644243.1147308,
  "vk_photo_cursor": {},
  "vk_story_last": 6382,
- "vk_story_err": null,
+ "vk_story_err": "VK stories: сервер не вернул upload_result",
  "push_weekly": "2026-46",
  "vk_story_at": 1794892318.7176096,
  "vk_story_url": "https://vk.com/story-228963529_456239087",
@@ -2234,7 +2234,7 @@
   "quote_matches": 14
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-17T08:25:33.633378+03:00",
+  "last_poll": "2026-11-17T08:27:33.331137+03:00",
   "cursor": "79",
   "posts": [
    {
@@ -2698,5 +2698,6 @@
    }
   ],
   "status": "observing"
- }
+ },
+ "vk_story_retry_at": 1794896896.7078075
 }
