@@ -778,7 +778,7 @@ null
 ]
 ],
 "div": "WTA",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "predictions/2026-11-17-nadya-podoroshka-varvara-lepchenko-186791.html",
 "hs": null,
@@ -879,11 +879,11 @@ null
 ]
 ],
 "div": "FRI",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "predictions/2026-11-17-sbornaya-oae-sbornaya-sirii-401932718.html",
 "hs": "4",
-"as": "1",
+"as": "2",
 "tip": "ТМ 2.5 · 1.91",
 "top": false,
 "bot": {
@@ -998,7 +998,7 @@ null
 "min_odds": 1.61,
 "minute": "25'",
 "p": 0.654,
-"result": null,
+"result": "hit",
 "score": "0:0"
 }
 },
@@ -1427,6 +1427,107 @@ null
 "lt": null
 },
 {
+"sport": "tennis",
+"id": "186790",
+"league": "Теннис · WTA",
+"kickoff": "2026-11-17T19:10:00+03:00",
+"home": "Полона Херцог",
+"away": "Мириам Булгару",
+"hl": "https://a.espncdn.com/i/teamlogos/countries/500/slo.png",
+"al": "https://a.espncdn.com/i/teamlogos/countries/500/rom.png",
+"hid": "1095",
+"aid": "3568",
+"bb": "https://betboom.ru/search?query=%D0%A5%D0%B5%D1%80%D1%86%D0%BE%D0%B3&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=tennis",
+"path": "tennis/wta",
+"url": "live.html?s=tennis&p=tennis%2Fwta&e=186790&h=%D0%9F%D0%BE%D0%BB%D0%BE%D0%BD%D0%B0+%D0%A5%D0%B5%D1%80%D1%86%D0%BE%D0%B3&a=%D0%9C%D0%B8%D1%80%D0%B8%D0%B0%D0%BC+%D0%91%D1%83%D0%BB%D0%B3%D0%B0%D1%80%D1%83",
+"participants": [
+[
+"Полона Херцог",
+"Polona Hercog"
+],
+[
+"Мириам Булгару",
+"Miriam Bulgaru"
+]
+],
+"div": "WTA",
+"state": "pre",
+"bo": null,
+"prediction": "predictions/2026-11-17-polona-hertsog-miriam-bulgaru-186790.html",
+"hs": null,
+"as": null,
+"tip": "Будет 2 сета · ≈1.79",
+"top": false,
+"bot": {
+"main": {
+"label": "Будет 2 сета",
+"p": 0.521,
+"odds": 1.79,
+"est": true
+},
+"bold": null,
+"markets": [
+[
+"Победа: Полона Херцог",
+0.651,
+null
+],
+[
+"Победа: Мириам Булгару",
+0.349,
+null
+],
+[
+"Будет 3 сета",
+0.479,
+null
+],
+[
+"Будет 2 сета",
+0.521,
+null
+],
+[
+"Счёт по сетам 2:0",
+0.363,
+null
+],
+[
+"Счёт по сетам 0:2",
+0.158,
+null
+],
+[
+"Счёт по сетам 2:1",
+0.288,
+null
+],
+[
+"Счёт по сетам 1:2",
+0.191,
+null
+],
+[
+"Полона Херцог возьмёт хотя бы сет",
+0.842,
+null
+],
+[
+"Мириам Булгару возьмёт хотя бы сет",
+0.637,
+null
+]
+],
+"bar": [
+0.6510302685879211,
+0,
+0.3489697314120789
+],
+"center": "Рейтинг Эло 1552 : 1444"
+},
+"lt": null
+},
+{
 "sport": "football",
 "id": "401933615",
 "league": "Сборные · Товарищеские матчи",
@@ -1563,107 +1664,6 @@ null
 0.113
 ]
 ]
-},
-"lt": null
-},
-{
-"sport": "tennis",
-"id": "186790",
-"league": "Теннис · WTA",
-"kickoff": "2026-11-17T19:15:00+03:00",
-"home": "Полона Херцог",
-"away": "Мириам Булгару",
-"hl": "https://a.espncdn.com/i/teamlogos/countries/500/slo.png",
-"al": "https://a.espncdn.com/i/teamlogos/countries/500/rom.png",
-"hid": "1095",
-"aid": "3568",
-"bb": "https://betboom.ru/search?query=%D0%A5%D0%B5%D1%80%D1%86%D0%BE%D0%B3&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=tennis",
-"path": "tennis/wta",
-"url": "live.html?s=tennis&p=tennis%2Fwta&e=186790&h=%D0%9F%D0%BE%D0%BB%D0%BE%D0%BD%D0%B0+%D0%A5%D0%B5%D1%80%D1%86%D0%BE%D0%B3&a=%D0%9C%D0%B8%D1%80%D0%B8%D0%B0%D0%BC+%D0%91%D1%83%D0%BB%D0%B3%D0%B0%D1%80%D1%83",
-"participants": [
-[
-"Полона Херцог",
-"Polona Hercog"
-],
-[
-"Мириам Булгару",
-"Miriam Bulgaru"
-]
-],
-"div": "WTA",
-"state": "pre",
-"bo": null,
-"prediction": "predictions/2026-11-17-polona-hertsog-miriam-bulgaru-186790.html",
-"hs": null,
-"as": null,
-"tip": "Будет 2 сета · ≈1.79",
-"top": false,
-"bot": {
-"main": {
-"label": "Будет 2 сета",
-"p": 0.521,
-"odds": 1.79,
-"est": true
-},
-"bold": null,
-"markets": [
-[
-"Победа: Полона Херцог",
-0.651,
-null
-],
-[
-"Победа: Мириам Булгару",
-0.349,
-null
-],
-[
-"Будет 3 сета",
-0.479,
-null
-],
-[
-"Будет 2 сета",
-0.521,
-null
-],
-[
-"Счёт по сетам 2:0",
-0.363,
-null
-],
-[
-"Счёт по сетам 0:2",
-0.158,
-null
-],
-[
-"Счёт по сетам 2:1",
-0.288,
-null
-],
-[
-"Счёт по сетам 1:2",
-0.191,
-null
-],
-[
-"Полона Херцог возьмёт хотя бы сет",
-0.842,
-null
-],
-[
-"Мириам Булгару возьмёт хотя бы сет",
-0.637,
-null
-]
-],
-"bar": [
-0.6510302685879211,
-0,
-0.3489697314120789
-],
-"center": "Рейтинг Эло 1552 : 1444"
 },
 "lt": null
 },
@@ -3245,22 +3245,22 @@ null
 "league": "Теннис · WTA",
 "kickoff": "2026-11-18T08:00:00+03:00",
 "home": "Лейре Ромеро Гормас",
-"away": "Тбд",
+"away": "Надя Подорошка",
 "hl": "https://a.espncdn.com/i/teamlogos/countries/500/esp.png",
-"al": null,
+"al": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
 "hid": "10676",
-"aid": "-4",
+"aid": "3256",
 "bb": "https://betboom.ru/search?query=%D0%93%D0%BE%D1%80%D0%BC%D0%B0%D1%81&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=tennis",
 "path": "tennis/wta",
-"url": "live.html?s=tennis&p=tennis%2Fwta&e=186807&h=%D0%9B%D0%B5%D0%B9%D1%80%D0%B5+%D0%A0%D0%BE%D0%BC%D0%B5%D1%80%D0%BE+%D0%93%D0%BE%D1%80%D0%BC%D0%B0%D1%81&a=%D0%A2%D0%B1%D0%B4",
+"url": "live.html?s=tennis&p=tennis%2Fwta&e=186807&h=%D0%9B%D0%B5%D0%B9%D1%80%D0%B5+%D0%A0%D0%BE%D0%BC%D0%B5%D1%80%D0%BE+%D0%93%D0%BE%D1%80%D0%BC%D0%B0%D1%81&a=%D0%9D%D0%B0%D0%B4%D1%8F+%D0%9F%D0%BE%D0%B4%D0%BE%D1%80%D0%BE%D1%88%D0%BA%D0%B0",
 "participants": [
 [
 "Лейре Ромеро Гормас",
 "Leyre Romero Gormaz"
 ],
 [
-"Тбд",
-"TBD"
+"Надя Подорошка",
+"Nadia Podoroska"
 ]
 ],
 "div": "WTA",

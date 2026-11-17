@@ -387,8 +387,8 @@
  "FRI|401932718": {
   "msg": 6705,
   "hs": 4,
-  "as": 1,
-  "goals": 5,
+  "as": 2,
+  "goals": 6,
   "kickoff": "2026-11-17T17:10:00+03:00",
   "lt": {
    "key": "H",
@@ -398,12 +398,13 @@
    "min_odds": 1.61,
    "minute": "25'",
    "score": "0:0",
-   "sport": "football"
+   "sport": "football",
+   "result": "hit"
   }
  },
  "WTA|186791": {
   "msg": 6706,
-  "hs": 1,
+  "hs": 2,
   "as": 0,
   "goals": 0,
   "kickoff": "2026-11-17T17:05:00+03:00"

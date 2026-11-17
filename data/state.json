@@ -1579,7 +1579,7 @@
  "value_day": "2026-11-17",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-17",
- "site_stamp": "1115|6751|2026-11-17 19|4|eee09cfd8fd697d3",
+ "site_stamp": "1117|6751|2026-11-17 19|4|854fea0e9955a841",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1711,7 +1711,7 @@
  "streak_day": {
   "2026-11-15": 2
  },
- "news_next": "2026-11-17T19:01:01.149457+03:00",
+ "news_next": "2026-11-17T19:09:01.082938+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -2182,9 +2182,9 @@
   "model": {
    "weight": 0.0,
    "status": "collecting",
-   "settled_matches": 17,
+   "settled_matches": 18,
    "required_matches": 100,
-   "trained_at": "2026-11-17T15:53:00.487151+00:00"
+   "trained_at": "2026-11-17T16:03:01.082938+00:00"
   },
   "sport_models": {
    "hockey": {
@@ -2192,35 +2192,35 @@
     "weight": 0.0,
     "settled_matches": 6,
     "required_matches": 100,
-    "trained_at": "2026-11-17T04:27:06.622990+00:00"
+    "trained_at": "2026-11-17T16:03:01.082938+00:00"
    },
    "basketball": {
     "status": "collecting",
     "weight": 0.0,
-    "settled_matches": 15,
+    "settled_matches": 16,
     "required_matches": 100,
-    "trained_at": "2026-11-17T04:27:06.622990+00:00"
+    "trained_at": "2026-11-17T16:03:01.082938+00:00"
    },
    "tennis": {
     "status": "collecting",
     "weight": 0.0,
     "settled_matches": 1,
     "required_matches": 100,
-    "trained_at": "2026-11-17T04:27:06.622990+00:00"
+    "trained_at": "2026-11-17T16:03:01.082938+00:00"
    },
    "esports:CS2": {
     "status": "collecting",
     "weight": 0.0,
     "settled_matches": 0,
     "required_matches": 100,
-    "trained_at": "2026-11-17T04:27:06.622990+00:00"
+    "trained_at": "2026-11-17T16:03:01.082938+00:00"
    },
    "esports:DOTA": {
     "status": "collecting",
     "weight": 0.0,
     "settled_matches": 0,
     "required_matches": 100,
-    "trained_at": "2026-11-17T04:27:06.622990+00:00"
+    "trained_at": "2026-11-17T16:03:01.082938+00:00"
    }
   },
   "source": {
@@ -2246,7 +2246,7 @@
   "quote_matches": 14
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-17T19:01:00.628173+03:00",
+  "last_poll": "2026-11-17T19:03:01.082938+03:00",
   "cursor": "89",
   "posts": [
    {
