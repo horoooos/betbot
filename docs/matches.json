@@ -1323,7 +1323,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-17-sbornaya-saudovskoy-aravii-sbornaya-uzbekistana-401931495.html",
-"hs": "0",
+"hs": "1",
 "as": "1",
 "tip": "ТМ 2.5 · 1.71",
 "top": false,
@@ -1433,7 +1433,15 @@ null
 ]
 ]
 },
-"lt": null
+"lt": {
+"fair": 1.5,
+"label": "X2",
+"min_odds": 1.57,
+"minute": "25'",
+"p": 0.667,
+"result": null,
+"score": "1:1"
+}
 },
 {
 "sport": "tennis",
@@ -2225,12 +2233,78 @@ null
 "div": "WTA",
 "state": "pre",
 "bo": null,
-"prediction": "",
+"prediction": "predictions/2026-11-17-mariya-lurdes-karle-veronika-eryavets-186782.html",
 "hs": null,
 "as": null,
-"tip": "",
+"tip": "Победа: Вероника Эрьявец · 1.62",
 "top": false,
-"bot": null,
+"bot": {
+"main": {
+"label": "Победа: Вероника Эрьявец",
+"p": 0.576,
+"odds": 1.62,
+"est": false
+},
+"bold": null,
+"markets": [
+[
+"Победа: Мария Лурдес Карле",
+0.424,
+2.2
+],
+[
+"Победа: Вероника Эрьявец",
+0.576,
+1.62
+],
+[
+"Будет 3 сета",
+0.495,
+null
+],
+[
+"Будет 2 сета",
+0.505,
+null
+],
+[
+"Счёт по сетам 2:0",
+0.202,
+null
+],
+[
+"Счёт по сетам 0:2",
+0.303,
+null
+],
+[
+"Счёт по сетам 2:1",
+0.222,
+null
+],
+[
+"Счёт по сетам 1:2",
+0.273,
+null
+],
+[
+"Мария Лурдес Карле возьмёт хотя бы сет",
+0.697,
+null
+],
+[
+"Вероника Эрьявец возьмёт хотя бы сет",
+0.798,
+null
+]
+],
+"bar": [
+0.42408376963350786,
+0,
+0.5759162303664922
+],
+"center": "Линия winline · Эло 1452 : 1500"
+},
 "lt": null
 },
 {
