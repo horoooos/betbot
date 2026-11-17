@@ -3561,5 +3561,40 @@ null
 "top": false,
 "bot": null,
 "lt": null
+},
+{
+"sport": "football",
+"id": "401841315",
+"league": "Бразилия · Серия A",
+"kickoff": "2026-11-19T01:30:00+03:00",
+"home": "Коритиба",
+"away": "Сантос",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/3456.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/2674.png",
+"hid": "3456",
+"aid": "2674",
+"bb": "https://betboom.ru/search?query=%D0%9A%D0%BE%D1%80%D0%B8%D1%82%D0%B8%D0%B1%D0%B0&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/bra.1",
+"url": "live.html?s=football&p=soccer%2Fbra.1&e=401841315&h=%D0%9A%D0%BE%D1%80%D0%B8%D1%82%D0%B8%D0%B1%D0%B0&a=%D0%A1%D0%B0%D0%BD%D1%82%D0%BE%D1%81",
+"participants": [
+[
+"Коритиба",
+"Coritiba"
+],
+[
+"Сантос",
+"Santos"
+]
+],
+"div": "BRA",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
 }
 ]
