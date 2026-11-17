@@ -5,7 +5,7 @@
  },
  "learned": "2026-11-17",
  "schedule_day": "2026-11-17",
- "content_slot": "2026-11-17-19",
+ "content_slot": "2026-11-17-20",
  "news_seen": [
   "https://www.sport-express.ru/football/rfpl/news/gadzhiev-gotov-zaplatit-mostovomu-i-sluckomu-po-15-20-millionov-rubley-za-boy-2474894/",
   "coldzera-o-finale-blast-rivals-fall-2026-zavtra-pora-razmazat-donk",
@@ -1590,7 +1590,7 @@
  "value_day": "2026-11-17",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-17",
- "site_stamp": "1117|6766|2026-11-17 19|4|854fea0e9955a841",
+ "site_stamp": "1117|6767|2026-11-17 20|4|055cbd0a1170160d",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1605,119 +1605,117 @@
  },
  "value_check": "2026-11-17-6",
  "express_risk": {
-  "msg": 6458,
+  "msg": 6767,
   "legs": [
    {
-    "sport": "football",
-    "div": "PER",
-    "id": "401886121",
+    "sport": "hockey",
+    "div": "NHL",
+    "id": "401892728",
     "side": "home",
-    "p": 0.5343768698032365,
-    "odds": 1.714,
-    "kickoff": "2026-11-16T23:15:00+03:00",
-    "home": "Реал Гарсиласо",
-    "away": "ADT",
-    "league": "🇵🇪 Перу · Лига 1",
+    "p": 0.5830164765525981,
+    "odds": 1.645,
+    "kickoff": "2026-11-18T03:00:00+03:00",
+    "home": "Бостон",
+    "away": "Лос-Анджелес",
+    "league": "🇺🇸 США · NHL",
     "logos": [
-     "https://a.espncdn.com/i/teamlogos/soccer/500/11995.png",
-     "https://a.espncdn.com/i/teamlogos/soccer/500/21314.png"
+     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/bos.png",
+     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/la.png"
     ],
     "colors": [
-     "000000",
-     "000000"
+     "231f20",
+     "121212"
     ],
-    "label": "Победа: Реал Гарсиласо",
-    "win": false,
-    "score": "2:2"
+    "label": "Победа: Бостон (с ОТ)"
    },
    {
-    "sport": "basketball",
-    "div": "NBA",
-    "id": "401909996",
-    "side": "away",
-    "p": 0.5928158754081889,
-    "odds": 1.621,
-    "kickoff": "2026-11-17T03:00:00+03:00",
-    "home": "Вашингтон Уизардс",
-    "away": "Мемфис Гриззлис",
-    "league": "🇺🇸 США · NBA",
+    "sport": "hockey",
+    "div": "NHL",
+    "id": "401892731",
+    "side": "home",
+    "p": 0.5635245901639344,
+    "odds": 1.704,
+    "kickoff": "2026-11-18T03:00:00+03:00",
+    "home": "Айлендерс",
+    "away": "Коламбус",
+    "league": "🇺🇸 США · NHL",
     "logos": [
-     "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/wsh.png",
-     "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/mem.png"
+     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/nyi.png",
+     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/cbj.png"
     ],
     "colors": [
-     "e31837",
-     "5d76a9"
+     "00529b",
+     "002d62"
     ],
-    "label": "Победа: Мемфис Гриззлис (с ОТ)"
+    "label": "Победа: Айлендерс (с ОТ)"
    },
    {
-    "sport": "basketball",
-    "div": "NBA",
-    "id": "401909998",
+    "sport": "hockey",
+    "div": "NHL",
+    "id": "401892729",
+    "side": "home",
+    "p": 0.5934121196882072,
+    "odds": 1.617,
+    "kickoff": "2026-11-18T03:30:00+03:00",
+    "home": "Тампа-Бэй",
+    "away": "Вашингтон",
+    "league": "🇺🇸 США · NHL",
+    "logos": [
+     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/tb.png",
+     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/wsh.png"
+    ],
+    "colors": [
+     "003e7e",
+     "d71830"
+    ],
+    "label": "Победа: Тампа-Бэй (с ОТ)"
+   },
+   {
+    "sport": "hockey",
+    "div": "NHL",
+    "id": "401892733",
     "side": "away",
     "p": 0.572012257405516,
     "odds": 1.676,
-    "kickoff": "2026-11-17T03:30:00+03:00",
-    "home": "Майами Хит",
-    "away": "Хьюстон Рокетс",
-    "league": "🇺🇸 США · NBA",
+    "kickoff": "2026-11-18T03:30:00+03:00",
+    "home": "Чикаго",
+    "away": "Торонто",
+    "league": "🇺🇸 США · NHL",
     "logos": [
-     "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/mia.png",
-     "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/hou.png"
+     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/chi.png",
+     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/tor.png"
     ],
     "colors": [
-     "98002e",
-     "ce0e2d"
+     "e31937",
+     "003e7e"
     ],
-    "label": "Победа: Хьюстон Рокетс (с ОТ)"
+    "label": "Победа: Торонто (с ОТ)"
    },
    {
     "sport": "basketball",
     "div": "NBA",
-    "id": "401910000",
+    "id": "401910002",
     "side": "away",
-    "p": 0.584070796460177,
-    "odds": 1.645,
-    "kickoff": "2026-11-17T04:00:00+03:00",
-    "home": "Нью-Орлеан Пеликанс",
-    "away": "Голден Стэйт",
+    "p": 0.5635245901639344,
+    "odds": 1.704,
+    "kickoff": "2026-11-18T03:30:00+03:00",
+    "home": "Торонто Рэпторс",
+    "away": "Нью-Йорк Никс",
     "league": "🇺🇸 США · NBA",
     "logos": [
-     "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/no.png",
-     "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/gs.png"
+     "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/tor.png",
+     "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/ny.png"
     ],
     "colors": [
-     "0a2240",
-     "fdb927"
+     "d91244",
+     "1d428a"
     ],
-    "label": "Победа: Голден Стэйт (с ОТ)"
-   },
-   {
-    "sport": "basketball",
-    "div": "NBA",
-    "id": "401909999",
-    "side": "home",
-    "p": 0.5514042772481319,
-    "odds": 1.741,
-    "kickoff": "2026-11-17T04:00:00+03:00",
-    "home": "Миннесота Тимбервулвз",
-    "away": "Портленд",
-    "league": "🇺🇸 США · NBA",
-    "logos": [
-     "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/min.png",
-     "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/por.png"
-    ],
-    "colors": [
-     "266092",
-     "e03a3e"
-    ],
-    "label": "Победа: Миннесота Тимбервулвз (с ОТ)"
+    "label": "Победа: Нью-Йорк Никс (с ОТ)"
    }
   ],
-  "odds": 13.33621290485708,
-  "day": "2026-11-16",
-  "done": true
+  "odds": 12.94461438044544,
+  "day": "2026-11-17",
+  "done": false
  },
  "streak_day": {
   "2026-11-15": 2
@@ -1742,7 +1740,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 6766,
+ "dz_last": 6767,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2257,7 +2255,7 @@
   "quote_matches": 14
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-17T19:59:01.509248+03:00",
+  "last_poll": "2026-11-17T20:01:01.653355+03:00",
   "cursor": "89",
   "posts": [
    {
