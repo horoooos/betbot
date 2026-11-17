@@ -6909,25 +6909,25 @@
   "kickoff": "2026-11-17T03:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Mon, November 16th at 7:00 PM EST",
   "clock": "0.0",
   "period": 0,
   "home": {
+   "color": "e31837",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/wsh.png",
    "id": "27",
    "name": "Washington Wizards",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/wsh.png",
-   "color": "e31837",
    "score": "0",
    "record": "4-10",
    "periods": [],
    "ru": "Вашингтон Уизардс"
   },
   "away": {
+   "color": "5d76a9",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/mem.png",
    "id": "29",
    "name": "Memphis Grizzlies",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/mem.png",
-   "color": "5d76a9",
    "score": "0",
    "record": "9-4",
    "periods": [],
@@ -7010,7 +7010,9 @@
   "btn": 4,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null
  },
  "NHL|401892726": {
   "id": "401892726",
