@@ -7515,7 +7515,10 @@
   "open": {},
   "top": false,
   "msg_id": 6667,
-  "btn": 4
+  "btn": 4,
+  "close": {
+   "_": null
+  }
  },
  "DOTA|1793343": {
   "id": "1793343",
@@ -7627,6 +7630,9 @@
   "open": {},
   "top": false,
   "msg_id": 6669,
-  "btn": 4
+  "btn": 4,
+  "close": {
+   "_": null
+  }
  }
 }

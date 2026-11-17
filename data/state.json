@@ -2223,26 +2223,9 @@
   "quote_matches": 14
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-17T15:50:13.507021+03:00",
-  "cursor": "84",
+  "last_poll": "2026-11-17T15:52:13.472982+03:00",
+  "cursor": "86",
   "posts": [
-   {
-    "post_id": 500,
-    "url": "https://vk.com/wall-228963529_500",
-    "title": "Гаврилов раскритиковал российский футбол: «Только хоккей, нет техники»",
-    "text": "Гаврилов раскритиковал российский футбол: «Только хоккей, нет техники»\n\nрџ± Гаврилов назвал российский футбол «хоккейным шоу», отказываясь от него полностью.\n\nвљЅпёЏ Бывший полузащитник «Спартака» Юрий Гаврилов в интервью «СЭ» признался, что в последние недели почти не следит за отечественными матчами. Он смотрит лишь по пять минут любой игры чемпионатов России и считает это «не особо интересным».\n\n#футбол #Гаврилов #новостиспорта #спорт #главное #аиставит\n\nрџ“Љ Подробнее на сайте рџ‘‡",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": true,
-     "details_present": true,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-15T22:29:02.605345+03:00"
-   },
    {
     "post_id": 502,
     "url": "https://vk.com/wall-228963529_502",
@@ -2735,6 +2718,23 @@
     },
     "status": "needs_review",
     "observed_at": "2026-11-17T14:50:13.845995+03:00"
+   },
+   {
+    "post_id": 534,
+    "url": "https://vk.com/wall-228963529_534",
+    "title": "Мостовой отверг слухи: Жедсон останется в «Спартаке»",
+    "text": "рџ±рџ”Ґ Мостовой в интервью «СЭ» резко опроверг слухи о желании Жедсона Фернандеша покинуть «Спартак». Он назвал их «выдумками» и подчеркнул, что у полузащитника всё в порядке.",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": false,
+     "details_present": false,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-17T15:52:13.472982+03:00"
    }
   ],
   "status": "observing"
