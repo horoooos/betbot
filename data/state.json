@@ -983,7 +983,7 @@
   },
   "used": {
    "2026-10": 41,
-   "2026-11": 204
+   "2026-11": 205
   },
   "tournaments": {
    "tennis": {
@@ -1013,7 +1013,7 @@
    }
   },
   "last": {
-   "tennis": "2026-11-17T21:50:21.055498+03:00",
+   "tennis": "2026-11-18T05:51:03.271024+03:00",
    "CS2": "2026-11-16T15:28:28.162128+03:00",
    "DOTA": "2026-11-17T17:34:32.331306+03:00"
   },
@@ -1874,14 +1874,14 @@
  "vk_photos": [],
  "vk_photo_until": 1794644243.1147308,
  "vk_photo_cursor": {},
- "vk_story_last": 6624,
- "vk_story_err": "VK stories: сервер не вернул upload_result",
+ "vk_story_last": 6629,
+ "vk_story_err": null,
  "push_weekly": "2026-46",
- "vk_story_at": 1794965674.7650106,
- "vk_story_url": "https://vk.com/story-228963529_456239097",
+ "vk_story_at": 1794970272.738816,
+ "vk_story_url": "https://vk.com/story-228963529_456239098",
  "vk_story_day": {
   "date": "2026-11-18",
-  "count": 3
+  "count": 4
  },
  "vk_legacy_pending": [
   {
@@ -2252,7 +2252,7 @@
   "quote_matches": 18
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-18T05:48:47.728273+03:00",
+  "last_poll": "2026-11-18T05:50:47.892363+03:00",
   "cursor": "94",
   "posts": [
    {
@@ -2767,6 +2767,5 @@
    }
   ],
   "status": "observing"
- },
- "vk_story_retry_at": 1794970234.2143419
+ }
 }
