@@ -316,7 +316,7 @@ null
 "sport": "tennis",
 "id": "186803",
 "league": "Теннис · WTA",
-"kickoff": "2026-11-18T19:20:00+03:00",
+"kickoff": "2026-11-18T19:30:00+03:00",
 "home": "Ребека Масарова",
 "away": "Полона Херцог",
 "hl": "https://a.espncdn.com/i/teamlogos/countries/500/sui.png",
@@ -1295,6 +1295,41 @@ null
 },
 {
 "sport": "tennis",
+"id": "186808",
+"league": "Теннис · WTA",
+"kickoff": "2026-11-19T08:00:00+03:00",
+"home": "Валерия Страхова",
+"away": "Вероника Эрьявец",
+"hl": "https://a.espncdn.com/i/teamlogos/countries/500/ukr.png",
+"al": "https://a.espncdn.com/i/teamlogos/countries/500/slo.png",
+"hid": "3042",
+"aid": "5878",
+"bb": "https://betboom.ru/search?query=%D0%A1%D1%82%D1%80%D0%B0%D1%85%D0%BE%D0%B2%D0%B0&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=tennis",
+"path": "tennis/wta",
+"url": "live.html?s=tennis&p=tennis%2Fwta&e=186808&h=%D0%92%D0%B0%D0%BB%D0%B5%D1%80%D0%B8%D1%8F+%D0%A1%D1%82%D1%80%D0%B0%D1%85%D0%BE%D0%B2%D0%B0&a=%D0%92%D0%B5%D1%80%D0%BE%D0%BD%D0%B8%D0%BA%D0%B0+%D0%AD%D1%80%D1%8C%D1%8F%D0%B2%D0%B5%D1%86",
+"participants": [
+[
+"Валерия Страхова",
+"Valeriya Strakhova"
+],
+[
+"Вероника Эрьявец",
+"Veronika Erjavec"
+]
+],
+"div": "WTA",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": null,
+"as": null,
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "tennis",
 "id": "186804",
 "league": "Теннис · WTA",
 "kickoff": "2026-11-19T08:00:00+03:00",
@@ -1385,41 +1420,6 @@ null
 [
 "Кароль Монне",
 "Carole Monnet"
-]
-],
-"div": "WTA",
-"state": "pre",
-"bo": null,
-"prediction": "",
-"hs": null,
-"as": null,
-"tip": "",
-"top": false,
-"bot": null,
-"lt": null
-},
-{
-"sport": "tennis",
-"id": "186808",
-"league": "Теннис · WTA",
-"kickoff": "2026-11-19T08:00:00+03:00",
-"home": "Валерия Страхова",
-"away": "Вероника Эрьявец",
-"hl": "https://a.espncdn.com/i/teamlogos/countries/500/ukr.png",
-"al": "https://a.espncdn.com/i/teamlogos/countries/500/slo.png",
-"hid": "3042",
-"aid": "5878",
-"bb": "https://betboom.ru/search?query=%D0%A1%D1%82%D1%80%D0%B0%D1%85%D0%BE%D0%B2%D0%B0&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=tennis",
-"path": "tennis/wta",
-"url": "live.html?s=tennis&p=tennis%2Fwta&e=186808&h=%D0%92%D0%B0%D0%BB%D0%B5%D1%80%D0%B8%D1%8F+%D0%A1%D1%82%D1%80%D0%B0%D1%85%D0%BE%D0%B2%D0%B0&a=%D0%92%D0%B5%D1%80%D0%BE%D0%BD%D0%B8%D0%BA%D0%B0+%D0%AD%D1%80%D1%8C%D1%8F%D0%B2%D0%B5%D1%86",
-"participants": [
-[
-"Валерия Страхова",
-"Valeriya Strakhova"
-],
-[
-"Вероника Эрьявец",
-"Veronika Erjavec"
 ]
 ],
 "div": "WTA",
