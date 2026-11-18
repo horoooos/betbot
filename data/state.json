@@ -7,9 +7,6 @@
  "schedule_day": "2026-11-18",
  "content_slot": "2026-11-18-10",
  "news_seen": [
-  "furia-esports-obygrala-team-spirit-i-stala-chempionom-blast-rivals-fall-2026",
-  "https://www.sport-express.ru/football/news/ispaniya-angliya-schet-i-rezultat-matcha-ligi-naciy-15-noyabrya-2026-2475075/",
-  "https://www.sport-express.ru/tennis/wta/news/selivanenko-mirra-na-podeme-provedya-vse-matchi-v-indian-uells-na-odnom-dyhanii-2475155/",
   "kscerato-stal-mvp-na-blast-rivals-fall-2026",
   "https://www.sport-express.ru/football/turkey/news/istochnik-galatasaray-hochet-podpisat-fernandesha-i-smenit-poziciyu-batrakovu-2475165/",
   "donk-o-blast-rivals-fall-2026-zhal-chto-ne-navyazali-borbu",
@@ -506,9 +503,12 @@
   "https://www.sport-express.ru/hockey/nhl/news/luchshie-snaypery-nhl-18-noyabrya-2026-top-10-regulyarnogo-chempionata-lidery-po-golam-gote-drayzaytl-kaprizov-2476109/",
   "https://www.sport-express.ru/hockey/nhl/news/san-hose-kalgari-schet-i-rezultat-matcha-regulyarnogo-chempionata-nhl-18-noyabrya-2026-2476098/",
   "https://www.sport-express.ru/football/rusteam/news/mitrofanov-o-karpine-u-valeriya-georgievicha-nadeyus-svetloe-buduschee-2476129/",
-  "https://www.sport-express.ru/football/rfpl/news/mitrofanov-o-vozmozhnom-rasshirenii-rpl-do-18-komand-net-nikakoy-idei-kotoruyu-nelzya-realizovat-2476128/"
+  "https://www.sport-express.ru/football/rfpl/news/mitrofanov-o-vozmozhnom-rasshirenii-rpl-do-18-komand-net-nikakoy-idei-kotoruyu-nelzya-realizovat-2476128/",
+  "https://www.sport-express.ru/basketball/nba/news/leykers-sharlott-klippers-yuta-schet-i-rezultaty-matchey-nba-18-noyabrya-2026-2476143/",
+  "valve-vernula-cobblestone-v-counter-strike",
+  "https://www.sport-express.ru/football/rfpl/news/grishin-ob-igre-cska-v-oborone-pri-igdisamove-beret-ne-kachestvom-a-kolichestvom-2476131/"
  ],
- "news_i": 4,
+ "news_i": 1,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1701,7 +1701,7 @@
  "streak_day": {
   "2026-11-15": 2
  },
- "news_next": "2026-11-18T10:39:49.097386+03:00",
+ "news_next": "2026-11-18T11:08:19.434524+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1840,7 +1840,8 @@
   "https://upload.wikimedia.org/wikipedia/commons/9/91/FC_Spartak_Moscow_Logotype.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
   "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/2015-11-20_-_Tarasova_and_Grishin_-_Photo_1.jpg/1280px-2015-11-20_-_Tarasova_and_Grishin_-_Photo_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
   "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/2015-11-20_-_Tarasova_and_Grishin_-_Photo_3.jpg/1280px-2015-11-20_-_Tarasova_and_Grishin_-_Photo_3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-  "https://upload.wikimedia.org/wikipedia/commons/8/8f/Cadet_Soccer_Stadium.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+  "https://upload.wikimedia.org/wikipedia/commons/8/8f/Cadet_Soccer_Stadium.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "https://upload.wikimedia.org/wikipedia/commons/e/e7/600px_blu_e_rosso_con_stella.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
  ],
  "indexnow_day": "2026-11-18",
  "vk_wall_err": null,
@@ -2037,7 +2038,8 @@
   "6883",
   "7014",
   "7016",
-  "7019"
+  "7019",
+  "7021"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -2166,11 +2168,12 @@
   "2026-11-17:новость:93b56aeff16caa7cf3d4f1d3",
   "2026-11-18:новость:0e5de42884132c7756ab4e1d",
   "2026-11-18:новость:f957e2ec812722e4d56d9c3f",
-  "2026-11-18:новость:c9b0c980ea9ac08ab55c5504"
+  "2026-11-18:новость:c9b0c980ea9ac08ab55c5504",
+  "2026-11-18:новость:2b9a9f3a0fd865a1b60fc8ed"
  ],
  "dz_last_delivery": {
-  "source_id": 7019,
-  "message_id": 675,
+  "source_id": 7021,
+  "message_id": 676,
   "kind": "новость"
  },
  "learn_attempt_day": "2026-11-18",
@@ -2260,7 +2263,7 @@
   "quote_matches": 18
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-18T10:38:48.617558+03:00",
+  "last_poll": "2026-11-18T10:41:19.434524+03:00",
   "cursor": "96",
   "posts": [
    {
