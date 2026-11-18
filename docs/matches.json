@@ -508,10 +508,10 @@ null
 ]
 ],
 "div": "FRI",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "predictions/2026-11-18-sbornaya-urugvaya-sbornaya-dominikanskoy-respubliki-401932215.html",
-"hs": "4",
+"hs": "5",
 "as": "0",
 "tip": "ТМ 3.5 · 2.05",
 "top": false,
@@ -627,7 +627,7 @@ null
 "min_odds": 1.31,
 "minute": "29'",
 "p": 0.804,
-"result": null,
+"result": "hit",
 "score": "0:0"
 }
 },
@@ -804,7 +804,7 @@ null
 "bo": null,
 "prediction": "predictions/2026-11-18-florida-edmonton-401892730.html",
 "hs": "0",
-"as": "3",
+"as": "4",
 "tip": "П2 (с ОТ и буллитами) · 2.05",
 "top": false,
 "bot": {
@@ -1404,8 +1404,8 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-18-toronto-reptors-nyu-york-niks-401910002.html",
-"hs": "46",
-"as": "35",
+"hs": "48",
+"as": "41",
 "tip": "Ф1 (+2.5) · 1.91",
 "top": true,
 "bot": {
@@ -1786,7 +1786,7 @@ null
 "bo": null,
 "prediction": "predictions/2026-11-18-minnesota-timbervulvz-portlend-401910003.html",
 "hs": "13",
-"as": "11",
+"as": "13",
 "tip": "П1 (с ОТ) · 1.74",
 "top": true,
 "bot": {
@@ -1886,8 +1886,8 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-18-san-antonio-spers-detroyt-pistons-401910004.html",
-"hs": "13",
-"as": "6",
+"hs": "18",
+"as": "9",
 "tip": "ТМ 221.5 · 1.94",
 "top": false,
 "bot": {
@@ -2118,7 +2118,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-18-minnesota-neshvill-401892735.html",
-"hs": "1",
+"hs": "2",
 "as": "0",
 "tip": "ТМ 6.5 · 1.74",
 "top": false,
