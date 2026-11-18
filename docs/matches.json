@@ -2137,5 +2137,40 @@ null
 "top": false,
 "bot": null,
 "lt": null
+},
+{
+"sport": "hockey",
+"id": "401892751",
+"league": "США · NHL",
+"kickoff": "2026-11-20T05:00:00+03:00",
+"home": "Колорадо",
+"away": "Анахайм",
+"hl": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/col.png",
+"al": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/ana.png",
+"hid": "17",
+"aid": "25",
+"bb": "https://betboom.ru/search?query=%D0%9A%D0%BE%D0%BB%D0%BE%D1%80%D0%B0%D0%B4%D0%BE&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=hockey",
+"path": "hockey/nhl",
+"url": "live.html?s=hockey&p=hockey%2Fnhl&e=401892751&h=%D0%9A%D0%BE%D0%BB%D0%BE%D1%80%D0%B0%D0%B4%D0%BE&a=%D0%90%D0%BD%D0%B0%D1%85%D0%B0%D0%B9%D0%BC",
+"participants": [
+[
+"Колорадо",
+"Colorado Avalanche"
+],
+[
+"Анахайм",
+"Anaheim Ducks"
+]
+],
+"div": "NHL",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
 }
 ]
