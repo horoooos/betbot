@@ -1567,7 +1567,7 @@
  "value_day": "2026-11-18",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-18",
- "site_stamp": "1154|7051|2026-11-18 16|4|9861985f0e989e1a",
+ "site_stamp": "1154|7053|2026-11-18 16|4|9861985f0e989e1a",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1722,7 +1722,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 7051,
+ "dz_last": 7053,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2297,43 +2297,9 @@
   "quote_matches": 18
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-18T16:20:01.496123+03:00",
-  "cursor": "105",
+  "last_poll": "2026-11-18T16:22:01.722509+03:00",
+  "cursor": "107",
   "posts": [
-   {
-    "post_id": 524,
-    "url": "https://vk.com/wall-228963529_524",
-    "title": "Team Spirit уверенно прошла в финал верхней сетки ESSENCE III",
-    "text": "Team Spirit уверенно прошла в финал верхней сетки ESSENCE III\n\nрџ± Team Spirit уверенно прошла в финал верхней сетки турнира ESSENCE III по Dota 2, обыграв PARIVISION со счётом 2:0.\n\nрџЋ® Состав Владимира No[o]ne Миненко опустился в нижнюю сетку после поражения.\n\n#киберспорт #Dota #Владимира #новостиспорта #спорт #главное #аиставит\n\nрџ“Љ Подробнее на сайте рџ‘‡",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": true,
-     "details_present": true,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-16T23:55:55.327678+03:00"
-   },
-   {
-    "post_id": 525,
-    "url": "https://vk.com/wall-228963529_525",
-    "title": "PARIVISION проиграла Heroic и выбывает из закрытой квалификации PGL Cluj-Napoca 2027",
-    "text": "PARIVISION проиграла Heroic и выбывает из закрытой квалификации PGL Cluj-Napoca 2027\n\nрџ“° PARIVISION падает в нижней сетке: 0:2 от «Heroic» и прощается с шансом на основной этап.\n\nрџЋ® В матче закрытой квалификации на PGL Cluj-Napoca 2027 команда Джами Jame Али уступила «Heroic» со счётом 0:2. На карте «Ancient» закончилась 9:13, а на «Cache» – 5:13, что полностью отразило разницу в силе.\n\n#киберспорт #новостиспорта #спорт #главное #аиставит\n\nрџ“Љ Подробнее на сайте рџ‘‡",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": true,
-     "details_present": true,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-16T23:55:55.327678+03:00"
-   },
    {
     "post_id": 526,
     "url": "https://vk.com/wall-228963529_526",
@@ -2809,6 +2775,40 @@
     },
     "status": "needs_review",
     "observed_at": "2026-11-18T15:19:21.746184+03:00"
+   },
+   {
+    "post_id": 555,
+    "url": "https://vk.com/wall-228963529_555",
+    "title": "s1mple вернулся к мейджору: путь к PGL Major Singapore 2026",
+    "text": "рџ± После более чем года борьбы с решафлами, травмами и тир-2 сценой, Александр «s1mple» Костылев наконец получил приглашение на PGL Major Singapore 2026. Это кульминация пути, начавшегося 28 июля 2025 года, когда украинский звёздный стрелок объявил о своём возвращении.",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": false,
+     "details_present": false,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-18T16:22:01.722509+03:00"
+   },
+   {
+    "post_id": 556,
+    "url": "https://vk.com/wall-228963529_556",
+    "title": "Чезганов: не хотел бить Котлярова, но получил 4-матчевую дисквализацию",
+    "text": "рџ± Форвард «Адмирала» Егор Чезганов получил четырёхматчевую дисквалификацию после эпизода с форвардом «Спартака» Ильёй Котляровым в матче «Спартак» — «Адмирал» (6:3) 14 ноября, когда конфликт произошёл на отметке 58:50.",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": false,
+     "details_present": false,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-18T16:22:01.722509+03:00"
    }
   ],
   "status": "observing"
