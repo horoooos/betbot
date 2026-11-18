@@ -316,7 +316,7 @@ null
 "sport": "tennis",
 "id": "186803",
 "league": "Теннис · WTA",
-"kickoff": "2026-11-18T19:30:00+03:00",
+"kickoff": "2026-11-18T19:35:00+03:00",
 "home": "Ребека Масарова",
 "away": "Полона Херцог",
 "hl": "https://a.espncdn.com/i/teamlogos/countries/500/sui.png",
@@ -1569,6 +1569,76 @@ null
 "prediction": "",
 "hs": null,
 "as": null,
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "football",
+"id": "401841308",
+"league": "Бразилия · Серия A",
+"kickoff": "2026-11-20T01:30:00+03:00",
+"home": "Васко да Гама",
+"away": "Интернасьонал",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/3454.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/1936.png",
+"hid": "3454",
+"aid": "1936",
+"bb": "https://betboom.ru/search?query=%D0%92%D0%B0%D1%81%D0%BA%D0%BE&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/bra.1",
+"url": "live.html?s=football&p=soccer%2Fbra.1&e=401841308&h=%D0%92%D0%B0%D1%81%D0%BA%D0%BE+%D0%B4%D0%B0+%D0%93%D0%B0%D0%BC%D0%B0&a=%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B0%D1%81%D1%8C%D0%BE%D0%BD%D0%B0%D0%BB",
+"participants": [
+[
+"Васко да Гама",
+"Vasco da Gama"
+],
+[
+"Интернасьонал",
+"Internacional"
+]
+],
+"div": "BRA",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "football",
+"id": "401841317",
+"league": "Бразилия · Серия A",
+"kickoff": "2026-11-20T01:30:00+03:00",
+"home": "Витория",
+"away": "Брагантино",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/3457.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/6079.png",
+"hid": "3457",
+"aid": "6079",
+"bb": "https://betboom.ru/search?query=%D0%92%D0%B8%D1%82%D0%BE%D1%80%D0%B8%D1%8F&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/bra.1",
+"url": "live.html?s=football&p=soccer%2Fbra.1&e=401841317&h=%D0%92%D0%B8%D1%82%D0%BE%D1%80%D0%B8%D1%8F&a=%D0%91%D1%80%D0%B0%D0%B3%D0%B0%D0%BD%D1%82%D0%B8%D0%BD%D0%BE",
+"participants": [
+[
+"Витория",
+"Vitória"
+],
+[
+"Брагантино",
+"Red Bull Bragantino"
+]
+],
+"div": "BRA",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
 "tip": "",
 "top": false,
 "bot": null,
