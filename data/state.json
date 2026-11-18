@@ -2332,43 +2332,9 @@
   "quote_matches": 18
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-19T00:47:34.409805+03:00",
-  "cursor": "119",
+  "last_poll": "2026-11-19T00:49:34.713021+03:00",
+  "cursor": "121",
   "posts": [
-   {
-    "post_id": 539,
-    "url": "https://vk.com/wall-228963529_539",
-    "title": "Кэмерон Бузер стал четвертым новичком НБА с 25+ очками, 7 подборов, 7 передач и 7 трехочков",
-    "text": "рџ±рџ”Ґ Новый дебютант «Мемфиса» — Кэмерон Бузер — выполнил то, о чём мечтают почти все новички: 25+ очков, 7 подборов, 7 результативных передач и 7 трехочковых в одном матче!",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": false,
-     "details_present": false,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-17T21:17:01.499743+03:00"
-   },
-   {
-    "post_id": 540,
-    "url": "https://vk.com/wall-228963529_540",
-    "title": "Evelone анонсировал 2x2-турнир CS2 на январь 2027 года",
-    "text": "вљЎпёЏ Стример Вадим «Evelone» Козаков в прямом эфире на Twitch объявил, что планирует собрать лучших дуэтов в формате 2х2 для нового турнира по CS2. Дата уже назначена – январь 2027 года.",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": false,
-     "details_present": false,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-17T22:20:02.498103+03:00"
-   },
    {
     "post_id": 541,
     "url": "https://vk.com/wall-228963529_541",
@@ -2844,6 +2810,40 @@
     },
     "status": "needs_review",
     "observed_at": "2026-11-18T23:44:47.490883+03:00"
+   },
+   {
+    "post_id": 569,
+    "url": "https://vk.com/wall-228963529_569",
+    "title": "Valve добавила шесть новых предметов в Dota 2, в том числе ботинок из «Армлета»",
+    "text": "рџ“° Ночью 19 ноября Valve выпустила глобальный патч 7.42, который сразу же пополнил лавку шести абсолютно уникальными предметами. Среди новинок – апгрейд для «Heaven's Halberd», новый ботинок и переработанный «Wraith Pact», теперь именуемый «Ristul's Devotion».",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": false,
+     "details_present": false,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-19T00:49:34.713021+03:00"
+   },
+   {
+    "post_id": 570,
+    "url": "https://vk.com/wall-228963529_570",
+    "title": "Valve в патче 7.42 добавила «действенность предметов» в Dota 2",
+    "text": "рџ± Новый параметр «действенность предметов» меняет правила игры: теперь эффективность атакующих артефактов масштабируется отдельным коэффициентом.",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": false,
+     "details_present": false,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-19T00:49:34.713021+03:00"
    }
   ],
   "status": "observing"
