@@ -7,9 +7,6 @@
  "schedule_day": "2026-11-18",
  "content_slot": "2026-11-18-10",
  "news_seen": [
-  "https://www.sport-express.ru/football/turkey/news/istochnik-galatasaray-hochet-podpisat-fernandesha-i-smenit-poziciyu-batrakovu-2475165/",
-  "donk-o-blast-rivals-fall-2026-zhal-chto-ne-navyazali-borbu",
-  "https://www.sport-express.ru/football/rfpl/news/vratar-dinamo-leschuk-o-matche-s-fk-10-zol-na-to-kak-my-igraem-2475176/",
   "heroic-ustupila-magic-v-kvalifikatsii-na-pgl-cluj-napoca-2027",
   "https://www.sport-express.ru/football/rfpl/news/shvarc-propustil-match-dinamo-s-fk-10-po-semeynym-obstoyatelstvam-2475186/",
   "https://www.sport-express.ru/hockey/khl/news/sibir-dinamo-schet-1-3-rezultat-matcha-khl-15-noyabrya-2026-2475185/",
@@ -506,9 +503,12 @@
   "https://www.sport-express.ru/basketball/nba/news/leykers-sharlott-klippers-yuta-schet-i-rezultaty-matchey-nba-18-noyabrya-2026-2476143/",
   "valve-vernula-cobblestone-v-counter-strike",
   "https://www.sport-express.ru/football/rfpl/news/grishin-ob-igre-cska-v-oborone-pri-igdisamove-beret-ne-kachestvom-a-kolichestvom-2476131/",
-  "valve-vypustila-stikery-komand-i-igrokov-k-pgl-major-singapore-2026"
+  "valve-vypustila-stikery-komand-i-igrokov-k-pgl-major-singapore-2026",
+  "https://www.sport-express.ru/hockey/khl/news/kuznecov-segodnya-uvidite-menya-na-odnoy-iz-aren-komandy-khl-2476185/",
+  "https://www.sport-express.ru/hockey/kubok-pervogo-kanala/news/obyavlen-sostav-sbornoy-rossiya-25-na-kubok-pervogo-kanala-v-dekabre-2026-2476130/",
+  "https://www.sport-express.ru/football/rfpl/news/krugovoy-o-slovah-v-adres-glushenkova-oni-byli-rezkimi-no-u-menya-konflikta-s-nim-net-2476157/"
  ],
- "news_i": 2,
+ "news_i": 4,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1701,7 +1701,7 @@
  "streak_day": {
   "2026-11-15": 2
  },
- "news_next": "2026-11-18T11:38:20.011298+03:00",
+ "news_next": "2026-11-18T12:06:19.209840+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1842,7 +1842,8 @@
   "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/2015-11-20_-_Tarasova_and_Grishin_-_Photo_3.jpg/1280px-2015-11-20_-_Tarasova_and_Grishin_-_Photo_3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
   "https://upload.wikimedia.org/wikipedia/commons/8/8f/Cadet_Soccer_Stadium.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
   "https://upload.wikimedia.org/wikipedia/commons/e/e7/600px_blu_e_rosso_con_stella.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-  "https://images.cybersport.ru/images/as-is/plain/dc/dc77e6fa-1718-4c8d-b0a5-fe3e9685d4de.jpg"
+  "https://images.cybersport.ru/images/as-is/plain/dc/dc77e6fa-1718-4c8d-b0a5-fe3e9685d4de.jpg",
+  "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/2021-12-08_-_FC_Zenit_Saint_Petersburg_v_Chelsea_F.C._-_Photo_115.jpg/1280px-2021-12-08_-_FC_Zenit_Saint_Petersburg_v_Chelsea_F.C._-_Photo_115.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
  ],
  "indexnow_day": "2026-11-18",
  "vk_wall_err": null,
@@ -2041,7 +2042,8 @@
   "7016",
   "7019",
   "7021",
-  "7022"
+  "7022",
+  "7024"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -2172,11 +2174,12 @@
   "2026-11-18:новость:f957e2ec812722e4d56d9c3f",
   "2026-11-18:новость:c9b0c980ea9ac08ab55c5504",
   "2026-11-18:новость:2b9a9f3a0fd865a1b60fc8ed",
-  "2026-11-18:новость:2507b97d649d380b0f260da7"
+  "2026-11-18:новость:2507b97d649d380b0f260da7",
+  "2026-11-18:новость:c08aa920e8376ed317bd74fc"
  ],
  "dz_last_delivery": {
-  "source_id": 7022,
-  "message_id": 677,
+  "source_id": 7024,
+  "message_id": 678,
   "kind": "новость"
  },
  "learn_attempt_day": "2026-11-18",
@@ -2266,7 +2269,7 @@
   "quote_matches": 18
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-18T11:37:19.654759+03:00",
+  "last_poll": "2026-11-18T11:39:19.209840+03:00",
   "cursor": "98",
   "posts": [
    {
