@@ -7854,25 +7854,25 @@
   "kickoff": "2026-11-18T06:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Tue, November 17th at 10:30 PM EST",
   "clock": "0.0",
   "period": 0,
   "home": {
+   "color": "12173f",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/lac.png",
    "id": "12",
    "name": "LA Clippers",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/lac.png",
-   "color": "12173f",
    "score": "0",
    "record": "4-8",
    "periods": [],
    "ru": "Клипперс"
   },
   "away": {
+   "color": "4e008e",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/utah.png",
    "id": "26",
    "name": "Utah Jazz",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/utah.png",
-   "color": "4e008e",
    "score": "0",
    "record": "1-13",
    "periods": [],
@@ -7955,7 +7955,9 @@
   "btn": 4,
   "close": {
    "BB_O227.5": 0.5
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null
  },
  "NBA|401910005": {
   "id": "401910005",
