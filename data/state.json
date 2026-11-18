@@ -5,7 +5,7 @@
  },
  "learned": "2026-11-18",
  "schedule_day": "2026-11-18",
- "content_slot": "2026-11-18-13",
+ "content_slot": "2026-11-18-16",
  "news_seen": [
   "daxak-o-porazhenii-team-spirit-ot-frogling-yesli-by-odna-pobeda-chto-to-znachila",
   "parivision-vyigrala-u-bet-m-33-v-kvalifikatsii-na-pgl-cluj-napoca-2027",
@@ -1567,7 +1567,7 @@
  "value_day": "2026-11-18",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-18",
- "site_stamp": "1154|7048|2026-11-18 15|4|cae9c2863643273a",
+ "site_stamp": "1154|7048|2026-11-18 16|4|3b8b36cdeef00076",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -2294,7 +2294,7 @@
   "quote_matches": 18
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-18T15:59:21.986781+03:00",
+  "last_poll": "2026-11-18T16:01:21.405217+03:00",
   "cursor": "105",
   "posts": [
    {
@@ -2814,5 +2814,14 @@
   "pid": 6655,
   "started_at": 1794992742.839963
  },
- "vk_story_retry_at": 1794996342.839963
+ "vk_story_retry_at": 1794996342.839963,
+ "mod_poll": {
+  "key": "BRA|401841315",
+  "id": "401841315",
+  "poll": 7050,
+  "post": 7049,
+  "home": "Коритиба",
+  "away": "Сантос",
+  "kickoff": "2026-11-19T01:30:00+03:00"
+ }
 }
