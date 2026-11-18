@@ -1581,7 +1581,15 @@ null
 ],
 "center": "Ожидаемые голы 3.6 : 3.0"
 },
-"lt": null
+"lt": {
+"fair": 1.22,
+"label": "ТБ 6.5",
+"min_odds": 1.28,
+"minute": "2-й период",
+"p": 0.822,
+"result": null,
+"score": "3:1"
+}
 },
 {
 "sport": "hockey",
@@ -1751,7 +1759,7 @@ null
 "bo": null,
 "prediction": "predictions/2026-11-18-minnesota-timbervulvz-portlend-401910003.html",
 "hs": "29",
-"as": "17",
+"as": "20",
 "tip": "П1 (с ОТ) · 1.74",
 "top": true,
 "bot": {
@@ -1851,7 +1859,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-18-san-antonio-spers-detroyt-pistons-401910004.html",
-"hs": "31",
+"hs": "33",
 "as": "26",
 "tip": "ТМ 221.5 · 1.94",
 "top": false,
@@ -1952,7 +1960,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-18-sent-luis-anahaym-401892734.html",
-"hs": "1",
+"hs": "2",
 "as": "1",
 "tip": "П2 (с ОТ и буллитами) · 2.05",
 "top": false,
@@ -2083,7 +2091,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-18-minnesota-neshvill-401892735.html",
-"hs": "3",
+"hs": "4",
 "as": "0",
 "tip": "ТМ 6.5 · 1.74",
 "top": false,
