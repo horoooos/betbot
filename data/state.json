@@ -1597,7 +1597,7 @@
  "value_day": "2026-11-17",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-17",
- "site_stamp": "1150|7007|2026-11-18 08|4|7f7d9ece54af1bdc",
+ "site_stamp": "1151|7010|2026-11-18 08|4|2dca8e815b35e43c",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1751,7 +1751,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 7007,
+ "dz_last": 7010,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -1903,8 +1903,8 @@
  "vk_photos": [],
  "vk_photo_until": 1794644243.1147308,
  "vk_photo_cursor": {},
- "vk_story_last": 6642,
- "vk_story_err": "VK stories: ошибка загрузки; подписанный URL скрыт",
+ "vk_story_last": 6645,
+ "vk_story_err": "VK stories: сервер не вернул upload_result",
  "push_weekly": "2026-46",
  "vk_story_at": 1794975917.5934706,
  "vk_story_url": "https://vk.com/story-228963529_456239100",
@@ -2225,37 +2225,37 @@
    "hockey": {
     "status": "collecting",
     "weight": 0.0,
-    "settled_matches": 14,
+    "settled_matches": 15,
     "required_matches": 100,
-    "trained_at": "2026-11-18T03:46:47.595388+00:00"
+    "trained_at": "2026-11-18T05:42:47.537422+00:00"
    },
    "basketball": {
     "status": "collecting",
     "weight": 0.0,
     "settled_matches": 19,
     "required_matches": 100,
-    "trained_at": "2026-11-18T03:46:47.595388+00:00"
+    "trained_at": "2026-11-18T05:42:47.537422+00:00"
    },
    "tennis": {
     "status": "collecting",
     "weight": 0.0,
     "settled_matches": 2,
     "required_matches": 100,
-    "trained_at": "2026-11-18T03:46:47.595388+00:00"
+    "trained_at": "2026-11-18T05:42:47.537422+00:00"
    },
    "esports:CS2": {
     "status": "collecting",
     "weight": 0.0,
     "settled_matches": 0,
     "required_matches": 100,
-    "trained_at": "2026-11-18T03:46:47.595388+00:00"
+    "trained_at": "2026-11-18T05:42:47.537422+00:00"
    },
    "esports:DOTA": {
     "status": "collecting",
     "weight": 0.0,
     "settled_matches": 0,
     "required_matches": 100,
-    "trained_at": "2026-11-18T03:46:47.595388+00:00"
+    "trained_at": "2026-11-18T05:42:47.537422+00:00"
    }
   },
   "source": {
@@ -2281,7 +2281,7 @@
   "quote_matches": 18
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-18T08:40:47.504455+03:00",
+  "last_poll": "2026-11-18T08:42:47.537422+03:00",
   "cursor": "94",
   "posts": [
    {
@@ -2797,5 +2797,5 @@
   ],
   "status": "observing"
  },
- "vk_story_retry_at": 1794980470.5043614
+ "vk_story_retry_at": 1794984220.5249152
 }
