@@ -1,116 +1,5 @@
 [
 {
-"sport": "esports",
-"id": "1793347",
-"league": "Киберспорт · Dota 2",
-"kickoff": "2026-11-18T19:01:21+03:00",
-"home": "Team Spirit",
-"away": "PARIVISION",
-"hl": "https://cdn-api.pandascore.co/images/team/image/1669/153px_team_spirit_2022_lightmode.png",
-"al": "https://cdn-api.pandascore.co/images/team/image/135712/250px_parivision_allmode.png",
-"hid": "1669",
-"aid": "135712",
-"bb": "https://betboom.ru/search?query=%D0%A1%D0%BF%D0%B8%D1%80%D0%B8%D1%82&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=esports",
-"path": "",
-"url": "dota.html?e=1793347&d=DOTA",
-"participants": [
-[
-"Team Spirit",
-"Team Spirit"
-],
-[
-"PARIVISION",
-"PARIVISION"
-]
-],
-"div": "DOTA",
-"state": "in",
-"bo": 5,
-"prediction": "predictions/2026-11-18-team-spirit-parivision-1793347.html",
-"hs": 1,
-"as": 2,
-"tip": "Победа: Team Spirit · ≈1.21",
-"top": false,
-"bot": {
-"main": {
-"label": "Победа: Team Spirit",
-"p": 0.766,
-"odds": 1.21,
-"est": true
-},
-"bold": null,
-"markets": [
-[
-"Победа: Team Spirit",
-0.766,
-null
-],
-[
-"Победа: PARIVISION",
-0.234,
-null
-],
-[
-"Больше 3 карт",
-0.682,
-null
-],
-[
-"Всухую (3:0 или 0:3)",
-0.318,
-null
-],
-[
-"Счёт по картам 3:0",
-0.276,
-null
-],
-[
-"Счёт по картам 0:3",
-0.043,
-null
-],
-[
-"Счёт по картам 3:1",
-0.289,
-null
-],
-[
-"Счёт по картам 1:3",
-0.083,
-null
-],
-[
-"Счёт по картам 3:2",
-0.202,
-null
-],
-[
-"Счёт по картам 2:3",
-0.108,
-null
-],
-[
-"Team Spirit возьмёт хотя бы карту",
-0.957,
-null
-],
-[
-"PARIVISION возьмёт хотя бы карту",
-0.724,
-null
-]
-],
-"bar": [
-0.7663534429028591,
-0,
-0.23364655709714088
-],
-"center": "BO5 · Эло 1816 : 1610"
-},
-"lt": null
-},
-{
 "sport": "tennis",
 "id": "186803",
 "league": "Теннис · WTA",
@@ -448,7 +337,7 @@ null
 ]
 ],
 "div": "PER",
-"state": "pre",
+"state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-18-alyansa-atletiko-melgar-401886138.html",
 "hs": "0",
