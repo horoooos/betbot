@@ -7,7 +7,6 @@
  "schedule_day": "2026-11-18",
  "content_slot": "2026-11-18-23",
  "news_seen": [
-  "https://www.sport-express.ru/tennis/wta/news/mirra-andreeva-ya-prosto-pytalas-ispolzovat-mnogo-pozitivnyh-slov-chtoby-podbodrit-sebya-2475361/",
   "https://www.sport-express.ru/tennis/wta/news/katerzhina-sinyakova-teylor-taunsend-sara-errani-yasmin-paolini-schet-i-rezultat-finala-parnogo-razryada-itogovogo-turnira-wta-2475356/",
   "https://www.sport-express.ru/tennis/wta/news/mirra-andreeva-povtorila-dostizhenie-selesh-hingis-i-sharapovoy-po-titulam-v-tineydzherskom-vozraste-2475351/",
   "https://www.sport-express.ru/tennis/wta/news/mirra-andreeva-stala-7-y-tennisistkoy-v-istorii-s-pervymi-titulami-na-turnire-bolshogo-shlema-i-itogovom-2475347/",
@@ -506,9 +505,10 @@
   "https://www.sport-express.ru/football/england/news/pochettino-obratilsya-k-bolelschikam-manchester-yunayted-eto-budet-neveroyatnyy-sezon-2476436/",
   "https://www.sport-express.ru/football/world/news/mat-messi-nazvala-niko-pasa-preemnikom-syna-v-sbornoy-argentiny-2476434/",
   "https://www.sport-express.ru/basketball/news/zhenskaya-sbornaya-belarusi-proigrala-rossii-dva-matcha-s-obschey-raznicey-76-ochkov-2476355/",
-  "v-dota-2-dobavili-shest-novykh-predmetov-teper-iz-armleta-mozhno-sobrat-botinok"
+  "v-dota-2-dobavili-shest-novykh-predmetov-teper-iz-armleta-mozhno-sobrat-botinok",
+  "v-patche-7-42-v-dota-2-vveli-novuyu-mekhaniku-deistvennost-predmetov"
  ],
- "news_i": 0,
+ "news_i": 2,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1567,7 +1567,7 @@
  "value_day": "2026-11-18",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-18",
- "site_stamp": "1159|7104|2026-11-19 00|4|bc2caaee567523d3",
+ "site_stamp": "1159|7108|2026-11-19 00|4|db8147ccae3cb181",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1697,7 +1697,7 @@
  "streak_day": {
   "2026-11-19": 1
  },
- "news_next": "2026-11-19T00:28:48.022013+03:00",
+ "news_next": "2026-11-19T00:56:34.911940+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1718,7 +1718,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 7104,
+ "dz_last": 7108,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -1861,7 +1861,8 @@
   "https://images.cybersport.ru/images/as-is/plain/d1/d1b4c28a-d6a4-4664-99ff-8dac26224494.jpg",
   "https://images.cybersport.ru/images/as-is/plain/3b/3b69abd4-7344-47cd-a4bc-13ddf80cbb0a.jpg",
   "https://images.cybersport.ru/images/as-is/plain/9a/9aa55545-4ffb-4b08-a9b0-776d215f4b2c.jpg",
-  "https://images.cybersport.ru/images/as-is/plain/5d/5db4f96c-cf81-42ba-917c-663a539efee5.jpg"
+  "https://images.cybersport.ru/images/as-is/plain/5d/5db4f96c-cf81-42ba-917c-663a539efee5.jpg",
+  "https://images.cybersport.ru/images/as-is/plain/73/73d48ac8-44cf-4c63-9dc3-354b2c8dcfb3.jpg"
  ],
  "indexnow_day": "2026-11-19",
  "vk_wall_err": null,
@@ -2082,7 +2083,8 @@
   "7089",
   "7097",
   "7100",
-  "7101"
+  "7101",
+  "7109"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -2235,11 +2237,12 @@
   "2026-11-18:новость:e55f9f7fdf2022c2b4ec52a5",
   "2026-11-18:новость:f4268acc88d18255c69f00b6",
   "2026-11-18:новость:86940fefeb269b3b3129c030",
-  "2026-11-18:новость:2cce4ea4c049b655b3a54f4c"
+  "2026-11-18:новость:2cce4ea4c049b655b3a54f4c",
+  "2026-11-18:новость:ce49ce17550824ea0d8b03c2"
  ],
  "dz_last_delivery": {
-  "source_id": 7101,
-  "message_id": 699,
+  "source_id": 7109,
+  "message_id": 700,
   "kind": "новость"
  },
  "learn_attempt_day": "2026-11-19",
@@ -2329,7 +2332,7 @@
   "quote_matches": 18
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-19T00:27:35.140328+03:00",
+  "last_poll": "2026-11-19T00:29:34.911940+03:00",
   "cursor": "119",
   "posts": [
    {
