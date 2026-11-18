@@ -2282,26 +2282,9 @@
   "quote_matches": 18
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-18T14:13:21.198202+03:00",
-  "cursor": "102",
+  "last_poll": "2026-11-18T14:15:21.128786+03:00",
+  "cursor": "103",
   "posts": [
-   {
-    "post_id": 520,
-    "url": "https://vk.com/wall-228963529_520",
-    "title": "Артига предсказал своё увольнение сразу после закрытия окна",
-    "text": "Артига предсказал своё увольнение сразу после закрытия окна\n\nрџ“° Франк Артига возглавлял «Рубин» около десяти месяцев, но 24 октября, после 0:2 от «Крыльев Советов» в 12-м туре, его уволили. На тот момент команда стояла 11-й с 12 очками.\n\n#футбол #Артига #новостиспорта #спорт #главное #аиставит\n\nрџ“Љ Подробнее на сайте рџ‘‡",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": true,
-     "details_present": true,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-16T21:49:54.070748+03:00"
-   },
    {
     "post_id": 522,
     "url": "https://vk.com/wall-228963529_522",
@@ -2794,6 +2777,23 @@
     },
     "status": "needs_review",
     "observed_at": "2026-11-18T13:13:19.451481+03:00"
+   },
+   {
+    "post_id": 552,
+    "url": "https://vk.com/wall-228963529_552",
+    "title": "CS2 завоевала звание лучшей киберспортивной игры 2026",
+    "text": "рџЋ® На церемонии Esports Awards 2026 в Майами объявили победителя в категории «Лучшая киберспортивная игра года» – шутер от Valve «Counter-Strike 2».",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": false,
+     "details_present": false,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-18T14:15:21.128786+03:00"
    }
   ],
   "status": "observing"
