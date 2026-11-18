@@ -768,7 +768,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-18-florida-edmonton-401892730.html",
-"hs": "1",
+"hs": "2",
 "as": "4",
 "tip": "П2 (с ОТ и буллитами) · 2.05",
 "top": false,
@@ -1369,8 +1369,8 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-18-toronto-reptors-nyu-york-niks-401910002.html",
-"hs": "86",
-"as": "85",
+"hs": "84",
+"as": "90",
 "tip": "Ф1 (+2.5) · 1.91",
 "top": true,
 "bot": {
@@ -2499,12 +2499,78 @@ null
 "div": "NBA",
 "state": "pre",
 "bo": null,
-"prediction": "",
+"prediction": "predictions/2026-11-18-klippers-yuta-dzhaz-401910006.html",
 "hs": "0",
 "as": "0",
-"tip": "",
+"tip": "ТБ 227.5 · 1.94",
 "top": false,
-"bot": null,
+"bot": {
+"main": {
+"label": "ТБ 227.5",
+"p": 0.5,
+"odds": 1.94,
+"est": false
+},
+"bold": null,
+"markets": [
+[
+"П1 (с ОТ)",
+0.677,
+1.437
+],
+[
+"П2 (с ОТ)",
+0.323,
+2.9
+],
+[
+"Ф1 (-5.5)",
+0.5,
+1.855
+],
+[
+"Ф2 (+5.5)",
+0.5,
+1.971
+],
+[
+"ТБ 220.5",
+0.66,
+null
+],
+[
+"ТМ 220.5",
+0.34,
+null
+],
+[
+"ТБ 227.5",
+0.5,
+1.935
+],
+[
+"ТМ 227.5",
+0.5,
+1.885
+],
+[
+"ТБ 234.5",
+0.34,
+null
+],
+[
+"ТМ 234.5",
+0.66,
+null
+]
+],
+"bar": [
+0.6766435101920499,
+0,
+0.32335648980795006
+],
+"center": "Ожидаемый счёт 116 : 111"
+},
 "lt": null
 },
 {
