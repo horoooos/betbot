@@ -1742,7 +1742,15 @@ null
 ],
 "center": "Ожидаемые голы 3.0 : 2.8"
 },
-"lt": null
+"lt": {
+"fair": 1.46,
+"label": "1X (осн. время)",
+"min_odds": 1.53,
+"minute": "2-й период",
+"p": 0.686,
+"result": null,
+"score": "0:0"
+}
 },
 {
 "sport": "hockey",
@@ -1911,8 +1919,8 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-18-klippers-yuta-dzhaz-401910006.html",
-"hs": "12",
-"as": "11",
+"hs": "13",
+"as": "12",
 "tip": "ТБ 227.5 · 1.94",
 "top": false,
 "bot": {
