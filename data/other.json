@@ -7592,25 +7592,25 @@
   "kickoff": "2026-11-18T06:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Tue, November 17th at 10:00 PM EST",
   "clock": "0:00",
   "period": 0,
   "home": {
+   "color": "344043",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/vgk.png",
    "id": "37",
    "name": "Vegas Golden Knights",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/vgk.png",
-   "color": "344043",
    "score": "0",
    "record": "13-6-3",
    "periods": [],
    "ru": "Вегас"
   },
   "away": {
+   "color": "20864c",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/dal.png",
    "id": "9",
    "name": "Dallas Stars",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/dal.png",
-   "color": "20864c",
    "score": "0",
    "record": "12-6-2",
    "periods": [],
@@ -7713,7 +7713,9 @@
   "btn": 4,
   "close": {
    "HK_ML_A": 0.4572
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null
  },
  "NHL|401892738": {
   "id": "401892738",

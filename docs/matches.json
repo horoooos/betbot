@@ -24,7 +24,7 @@
 ]
 ],
 "div": "NHL",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "predictions/2026-11-18-vegas-dallas-401892737.html",
 "hs": "3",
@@ -134,7 +134,7 @@ null
 "min_odds": 1.53,
 "minute": "2-й период",
 "p": 0.686,
-"result": null,
+"result": "hit",
 "score": "0:0"
 }
 },
@@ -407,7 +407,7 @@ null
 "bo": null,
 "prediction": "predictions/2026-11-18-leykers-sharlott-hornets-401910005.html",
 "hs": "74",
-"as": "87",
+"as": "88",
 "tip": "Ф1 (-7.5) · 1.98",
 "top": false,
 "bot": {
