@@ -7,7 +7,6 @@
  "schedule_day": "2026-11-18",
  "content_slot": "2026-11-18-20",
  "news_seen": [
-  "https://www.sport-express.ru/football/rusteam/news/magomed-adiev-podderzhal-reshenie-karpina-ne-vyzyvat-glushenkova-v-sbornuyu-rossii-2475238/",
   "https://www.sport-express.ru/football/rus_d1/news/sochi-shinnik-rezultat-matcha-19-tura-pervoy-ligi-15-noyabrya-2026-2475230/",
   "https://www.sport-express.ru/football/nation-league/news/latviya-armeniya-kipr-chernogoriya-rezultaty-matchey-gruppovogo-etapa-ligi-naciy-15-noyabrya-2026-2475226/",
   "https://www.sport-express.ru/football/rfpl/news/istochnik-cska-svyazalsya-s-roshey-po-povodu-vozvrascheniya-2475224/",
@@ -506,9 +505,10 @@
   "https://www.sport-express.ru/tennis/atp/news/karlos-alkaras-daniil-medvedev-schet-i-rezultat-matcha-itogovogo-turnira-atp-18-noyabrya-2026-2476311/",
   "https://www.sport-express.ru/tennis/wta/news/dzhonson-i-kuerri-schitayut-chto-andreeva-stanet-pervoy-raketkoy-mira-v-nachale-2027-goda-2476305/",
   "obzor-novoi-cobblestone-v-cs2-mekhaniki-obnovlennyye-pozitsii-i-tekstury",
-  "https://www.sport-express.ru/football/england/news/the-touchline-arsenal-prodlit-kontrakty-s-raysom-rayey-i-timberom-2476370/"
+  "https://www.sport-express.ru/football/england/news/the-touchline-arsenal-prodlit-kontrakty-s-raysom-rayey-i-timberom-2476370/",
+  "ne-povezlo-valve-otklonila-variant-stikera-jl-s-ot-sylkoi-k-apex-na-pgl-major"
  ],
- "news_i": 1,
+ "news_i": 2,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1697,7 +1697,7 @@
  "streak_day": {
   "2026-11-15": 2
  },
- "news_next": "2026-11-18T20:04:03.312289+03:00",
+ "news_next": "2026-11-18T20:37:04.327124+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1855,7 +1855,8 @@
   "https://images.cybersport.ru/images/as-is/plain/7d/7dec36b5-9025-43d9-8999-fac97e64aba7.jpg",
   "https://upload.wikimedia.org/wikipedia/commons/4/41/FC_Dynamo_Kyiv_Fans_-_%D0%A4%D0%B0%D0%BD%D0%B0%D1%82%D1%8B_%D0%A4%D0%9A_%D0%94%D0%B8%D0%BD%D0%B0%D0%BC%D0%BE_%D0%9A%D0%B8%D0%B5%D0%B2_%2822339181422%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
   "https://images.cybersport.ru/images/as-is/plain/79/794343ab-bec4-4fba-b22e-61a12a7e36ee.jpg",
-  "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/67/A6-EES%40PEK_%2820160426152314%29.jpg/1280px-A6-EES%40PEK_%2820160426152314%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/67/A6-EES%40PEK_%2820160426152314%29.jpg/1280px-A6-EES%40PEK_%2820160426152314%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "https://images.cybersport.ru/images/as-is/plain/c3/c31ff903-a70a-4867-b743-b0b2273ea26e.jpg"
  ],
  "indexnow_day": "2026-11-18",
  "vk_wall_err": null,
@@ -2070,7 +2071,8 @@
   "7067",
   "7068",
   "7072",
-  "7077"
+  "7077",
+  "7080"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -2217,11 +2219,12 @@
   "2026-11-18:новость:358bb6cb6f28c5fb7d588d80",
   "2026-11-18:новость:2101f507f6fb2256b07d6bd9",
   "2026-11-18:новость:26b7cf786694addbd3d83fba",
-  "2026-11-18:новость:b8fad2f77b886a388eb60307"
+  "2026-11-18:новость:b8fad2f77b886a388eb60307",
+  "2026-11-18:новость:bda67713fe4a594d07f16ea0"
  ],
  "dz_last_delivery": {
-  "source_id": 7077,
-  "message_id": 693,
+  "source_id": 7080,
+  "message_id": 694,
   "kind": "новость"
  },
  "learn_attempt_day": "2026-11-18",
@@ -2311,7 +2314,7 @@
   "quote_matches": 18
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-18T20:02:04.583644+03:00",
+  "last_poll": "2026-11-18T20:04:04.327124+03:00",
   "cursor": "113",
   "posts": [
    {
