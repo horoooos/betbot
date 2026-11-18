@@ -7,10 +7,6 @@
  "schedule_day": "2026-11-18",
  "content_slot": "2026-11-18-13",
  "news_seen": [
-  "https://www.sport-express.ru/football/nation-league/news/yamal-sygraet-pod-10-m-nomerom-za-sbornuyu-ispanii-protiv-anglii-2475203/",
-  "https://www.sport-express.ru/football/rfpl/news/agenty-zhedsona-fernandesha-oprovergli-sluhi-ob-uhode-futbolista-iz-spartaka-2475200/",
-  "https://www.sport-express.ru/basketball/nba/news/mayami-ustanovil-klubnyy-rekord-devyat-igrokov-sdelali-blok-shoty-v-odnom-matche-nba-15-noyabrya-2026-2475228/",
-  "https://www.sport-express.ru/basketball/vtb-league/news/parma-zenit-schet-i-rezultat-match-edinoy-ligi-vtb-15-noyabrya-2026-2475208/",
   "https://www.sport-express.ru/basketball/vtb-league/news/lokomotiv-kuban-uniks-schet-i-rezultat-matcha-basket-cup-15-noyabrya-2026-2475207/",
   "https://www.sport-express.ru/tennis/atp/news/zverev-o-pobede-na-starte-itogovogo-turnira-dovolen-nachalom-no-mne-esche-nuzhno-pribavlyat-2475231/",
   "https://www.sport-express.ru/tennis/atp/news/aleksandr-zverev-rafael-hodar-rezultat-matcha-gruppovogo-etapa-itogovogo-turnira-atp-15-noyabrya-2026-2475215/",
@@ -506,9 +502,13 @@
   "https://www.sport-express.ru/football/rfpl/news/zaschitnik-cska-reys-rasskazal-o-vosstanovlenii-posle-povrezhdeniya-pauza-na-sbornye-poshla-mne-na-polzu-2476218/",
   "https://www.sport-express.ru/stavki-na-sport/prognozy/news/daniil-medvedev-karlos-alkaras-prognoz-na-match-itogovogo-turnira-atp-18-noyabrya-2026-goda-2476191/",
   "na-cobblestone-v-cs2-nashli-paskhalku-s-zhutkim-poslaniyem",
-  "razbirayeshsya-v-cs2-ugadai-chempiona-pgl-major-singapore-20261-i-poluchi-shans"
+  "razbirayeshsya-v-cs2-ugadai-chempiona-pgl-major-singapore-20261-i-poluchi-shans",
+  "https://www.sport-express.ru/football/france/news/safonov-zanyal-devyatoe-mesto-v-reytinge-samyh-dorogih-vratarey-mira-po-versii-cies-2476248/",
+  "https://www.sport-express.ru/football/rusteam/news/igroki-sbornoy-rossii-ne-smogli-vyletet-iz-krasnodara-iz-za-ogranicheniy-v-aeroportu-2476241/",
+  "https://www.sport-express.ru/football/france/news/safonov-voshel-v-chislo-nominantov-na-priz-luchshemu-vrataryu-goda-globe-soccer-awards-2476238/",
+  "https://www.sport-express.ru/football/rfpl/news/zaschitnik-cska-reys-o-trenirovkah-v-snegopad-ya-polnostyu-adaptirovalsya-k-pogode-2476216/"
  ],
- "news_i": 0,
+ "news_i": 1,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1701,7 +1701,7 @@
  "streak_day": {
   "2026-11-15": 2
  },
- "news_next": "2026-11-18T14:46:21.817963+03:00",
+ "news_next": "2026-11-18T15:17:22.032597+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1849,7 +1849,8 @@
   "https://upload.wikimedia.org/wikipedia/commons/4/42/CSKA_Moscow_and_Pakistan_national_football_team_at_the_KMC_Stadium%2C_Karachi_in_1969.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
   "https://images.cybersport.ru/images/as-is/plain/86/86e852b6-a4b5-4abc-b0f1-0fd057fc095f.jpg",
   "https://upload.wikimedia.org/wikipedia/commons/0/0c/MatheusReis2021.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-  "https://images.cybersport.ru/images/as-is/plain/bd/bd2b4bd1-5b73-4069-b134-9f41baed2168.jpg"
+  "https://images.cybersport.ru/images/as-is/plain/bd/bd2b4bd1-5b73-4069-b134-9f41baed2168.jpg",
+  "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/66/Sporting_%28Sporting_CP_x_Belenenses_SAD%2C_Abril_2021%29.png/1280px-Sporting_%28Sporting_CP_x_Belenenses_SAD%2C_Abril_2021%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
  ],
  "indexnow_day": "2026-11-18",
  "vk_wall_err": null,
@@ -2054,7 +2055,8 @@
   "7027",
   "7031",
   "7033",
-  "7037"
+  "7037",
+  "7039"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -2191,11 +2193,12 @@
   "2026-11-18:новость:4b4e2caafe4a2077b3616d21",
   "2026-11-18:новость:382910e612a3b4570e45a611",
   "2026-11-18:новость:8e04924ec520e4ea5180c8c7",
-  "2026-11-18:новость:8214ca948372232e7103cb95"
+  "2026-11-18:новость:8214ca948372232e7103cb95",
+  "2026-11-18:новость:224a7fe8ba1f3b176dbbcab1"
  ],
  "dz_last_delivery": {
-  "source_id": 7037,
-  "message_id": 683,
+  "source_id": 7039,
+  "message_id": 684,
   "kind": "новость"
  },
  "learn_attempt_day": "2026-11-18",
@@ -2285,7 +2288,7 @@
   "quote_matches": 18
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-18T14:45:21.494513+03:00",
+  "last_poll": "2026-11-18T14:47:22.032597+03:00",
   "cursor": "103",
   "posts": [
    {
