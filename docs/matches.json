@@ -765,7 +765,7 @@ null
 ]
 ],
 "div": "NHL",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "predictions/2026-11-18-florida-edmonton-401892730.html",
 "hs": "2",
@@ -880,7 +880,7 @@ null
 "min_odds": 1.31,
 "minute": "2-й период",
 "p": 0.802,
-"result": null,
+"result": "hit",
 "score": "0:2"
 }
 },
@@ -909,7 +909,7 @@ null
 ]
 ],
 "div": "NHL",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "predictions/2026-11-18-aylenders-kolambus-401892731.html",
 "hs": "5",
@@ -1024,7 +1024,7 @@ null
 "min_odds": 1.5,
 "minute": "2-й период",
 "p": 0.699,
-"result": null,
+"result": "hit",
 "score": "1:0"
 }
 },
@@ -1192,7 +1192,7 @@ null
 ]
 ],
 "div": "NHL",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "predictions/2026-11-18-vinnipeg-ottava-401892736.html",
 "hs": "1",
@@ -1302,7 +1302,7 @@ null
 "min_odds": 1.51,
 "minute": "2-й период",
 "p": 0.696,
-"result": null,
+"result": "hit",
 "score": "0:0"
 }
 },
@@ -1369,7 +1369,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-18-toronto-reptors-nyu-york-niks-401910002.html",
-"hs": "87",
+"hs": "89",
 "as": "93",
 "tip": "Ф1 (+2.5) · 1.91",
 "top": true,
@@ -1759,7 +1759,7 @@ null
 "bo": null,
 "prediction": "predictions/2026-11-18-minnesota-timbervulvz-portlend-401910003.html",
 "hs": "52",
-"as": "58",
+"as": "60",
 "tip": "П1 (с ОТ) · 1.74",
 "top": true,
 "bot": {

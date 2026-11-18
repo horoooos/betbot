@@ -6418,25 +6418,25 @@
   "kickoff": "2026-11-18T03:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Tue, November 17th at 7:00 PM EST",
   "clock": "0:00",
   "period": 0,
   "home": {
+   "color": "e51937",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/fla.png",
    "id": "26",
    "name": "Florida Panthers",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/fla.png",
-   "color": "e51937",
    "score": "0",
    "record": "12-7-3",
    "periods": [],
    "ru": "Флорида"
   },
   "away": {
+   "color": "00205b",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/edm.png",
    "id": "6",
    "name": "Edmonton Oilers",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/edm.png",
-   "color": "00205b",
    "score": "0",
    "record": "16-3-3",
    "periods": [],
@@ -6548,7 +6548,9 @@
   "close": {
    "HK_ML_A": 0.4572,
    "HK_O6.5": 0.4486
-  }
+  },
+  "main_hit": true,
+  "bold_hit": true
  },
  "NHL|401892731": {
   "id": "401892731",
@@ -6557,25 +6559,25 @@
   "kickoff": "2026-11-18T03:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Tue, November 17th at 7:00 PM EST",
   "clock": "0:00",
   "period": 0,
   "home": {
+   "color": "00529b",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/nyi.png",
    "id": "12",
    "name": "New York Islanders",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/nyi.png",
-   "color": "00529b",
    "score": "0",
    "record": "9-6-4",
    "periods": [],
    "ru": "Айлендерс"
   },
   "away": {
+   "color": "002d62",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/cbj.png",
    "id": "29",
    "name": "Columbus Blue Jackets",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/cbj.png",
-   "color": "002d62",
    "score": "0",
    "record": "7-11-0",
    "periods": [],
@@ -6687,7 +6689,9 @@
   "close": {
    "HK_O5.5": 0.5107,
    "HK_ML_A": 0.4782
-  }
+  },
+  "main_hit": true,
+  "bold_hit": false
  },
  "NHL|401892732": {
   "id": "401892732",
@@ -6828,25 +6832,25 @@
   "kickoff": "2026-11-18T03:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Tue, November 17th at 7:00 PM EST",
   "clock": "0:00",
   "period": 0,
   "home": {
+   "color": "002d62",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/wpg.png",
    "id": "28",
    "name": "Winnipeg Jets",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/wpg.png",
-   "color": "002d62",
    "score": "0",
    "record": "10-8-3",
    "periods": [],
    "ru": "Виннипег"
   },
   "away": {
+   "color": "dd1a32",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/ott.png",
    "id": "14",
    "name": "Ottawa Senators",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/ott.png",
-   "color": "dd1a32",
    "score": "0",
    "record": "13-6-2",
    "periods": [],
@@ -6949,7 +6953,9 @@
   "btn": 4,
   "close": {
    "HK_ML_A": 0.5514
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null
  },
  "NHL|401892729": {
   "id": "401892729",
