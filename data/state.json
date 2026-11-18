@@ -7,10 +7,6 @@
  "schedule_day": "2026-11-18",
  "content_slot": "2026-11-18-23",
  "news_seen": [
-  "https://www.sport-express.ru/tennis/wta/news/katerzhina-sinyakova-teylor-taunsend-sara-errani-yasmin-paolini-schet-i-rezultat-finala-parnogo-razryada-itogovogo-turnira-wta-2475356/",
-  "https://www.sport-express.ru/tennis/wta/news/mirra-andreeva-povtorila-dostizhenie-selesh-hingis-i-sharapovoy-po-titulam-v-tineydzherskom-vozraste-2475351/",
-  "https://www.sport-express.ru/tennis/wta/news/mirra-andreeva-stala-7-y-tennisistkoy-v-istorii-s-pervymi-titulami-na-turnire-bolshogo-shlema-i-itogovom-2475347/",
-  "https://www.sport-express.ru/tennis/wta/news/elina-svitolina-posle-pervogo-matcha-itogovogo-turnira-wta-ya-ne-zhdala-chto-budu-igrat-v-finale-2475346/",
   "https://www.sport-express.ru/tennis/wta/news/mirra-andreeva-povtorila-dostizhenie-sharapovoy-22-letney-davnosti-dlya-tennisistok-tineydzherov-2475340/",
   "https://www.sport-express.ru/hockey/nhl/news/luchshie-bombardiry-nhl-16-noyabrya-2026-top-10-makdevid-kaprizov-kucherov-2475392/",
   "https://www.sport-express.ru/tennis/wta/news/reyting-wta-mirra-andreeva-vpervye-v-karere-stala-vtoroy-raketkoy-mira-16-noyabrya-2026-2475391/",
@@ -506,9 +502,13 @@
   "https://www.sport-express.ru/football/world/news/mat-messi-nazvala-niko-pasa-preemnikom-syna-v-sbornoy-argentiny-2476434/",
   "https://www.sport-express.ru/basketball/news/zhenskaya-sbornaya-belarusi-proigrala-rossii-dva-matcha-s-obschey-raznicey-76-ochkov-2476355/",
   "v-dota-2-dobavili-shest-novykh-predmetov-teper-iz-armleta-mozhno-sobrat-botinok",
-  "v-patche-7-42-v-dota-2-vveli-novuyu-mekhaniku-deistvennost-predmetov"
+  "v-patche-7-42-v-dota-2-vveli-novuyu-mekhaniku-deistvennost-predmetov",
+  "https://www.sport-express.ru/hockey/khl/news/kirill-petkov-kommentariy-po-pobedam-amura-na-vyezde-v-khl-2476440/",
+  "https://www.sport-express.ru/basketball/euroleague/news/beshiktash-real-schet-83-79-rezultat-matcha-regulyarnogo-chempionata-evroligi-18-noyabrya-2026-goda-2476438/",
+  "https://www.sport-express.ru/tennis/atp/news/frensis-tiafo-flavio-kobolli-rezultat-i-schet-matcha-itogovogo-turnira-atp-18-noyabrya-2026-goda-2476439/",
+  "ukrepleniyu-postroyek-v-dota-2-dobavili-vtoroi-zaryad"
  ],
- "news_i": 2,
+ "news_i": 0,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1697,7 +1697,7 @@
  "streak_day": {
   "2026-11-19": 1
  },
- "news_next": "2026-11-19T00:56:34.911940+03:00",
+ "news_next": "2026-11-19T01:29:34.935507+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1862,7 +1862,8 @@
   "https://images.cybersport.ru/images/as-is/plain/3b/3b69abd4-7344-47cd-a4bc-13ddf80cbb0a.jpg",
   "https://images.cybersport.ru/images/as-is/plain/9a/9aa55545-4ffb-4b08-a9b0-776d215f4b2c.jpg",
   "https://images.cybersport.ru/images/as-is/plain/5d/5db4f96c-cf81-42ba-917c-663a539efee5.jpg",
-  "https://images.cybersport.ru/images/as-is/plain/73/73d48ac8-44cf-4c63-9dc3-354b2c8dcfb3.jpg"
+  "https://images.cybersport.ru/images/as-is/plain/73/73d48ac8-44cf-4c63-9dc3-354b2c8dcfb3.jpg",
+  "https://images.cybersport.ru/images/as-is/plain/d0/d069123c-39c7-44f8-9289-7cd1e264a1a9.jpg"
  ],
  "indexnow_day": "2026-11-19",
  "vk_wall_err": null,
@@ -2084,7 +2085,8 @@
   "7097",
   "7100",
   "7101",
-  "7109"
+  "7109",
+  "7111"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -2238,11 +2240,12 @@
   "2026-11-18:новость:f4268acc88d18255c69f00b6",
   "2026-11-18:новость:86940fefeb269b3b3129c030",
   "2026-11-18:новость:2cce4ea4c049b655b3a54f4c",
-  "2026-11-18:новость:ce49ce17550824ea0d8b03c2"
+  "2026-11-18:новость:ce49ce17550824ea0d8b03c2",
+  "2026-11-18:новость:583cb14bb64380c292efe117"
  ],
  "dz_last_delivery": {
-  "source_id": 7109,
-  "message_id": 700,
+  "source_id": 7111,
+  "message_id": 701,
   "kind": "новость"
  },
  "learn_attempt_day": "2026-11-19",
@@ -2332,7 +2335,7 @@
   "quote_matches": 18
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-19T00:55:34.683253+03:00",
+  "last_poll": "2026-11-19T00:57:34.935507+03:00",
   "cursor": "121",
   "posts": [
    {
