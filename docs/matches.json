@@ -325,7 +325,7 @@ null
 ]
 ],
 "div": "FRI",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "predictions/2026-11-18-sbornaya-ekvadora-sbornaya-bolivia-401930899.html",
 "hs": "2",
@@ -444,7 +444,7 @@ null
 "min_odds": 1.58,
 "minute": "25'",
 "p": 0.666,
-"result": null,
+"result": "hit",
 "score": "1:0"
 }
 },
@@ -1750,7 +1750,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-18-minnesota-timbervulvz-portlend-401910003.html",
-"hs": "24",
+"hs": "29",
 "as": "17",
 "tip": "П1 (с ОТ) · 1.74",
 "top": true,
@@ -1851,8 +1851,8 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-18-san-antonio-spers-detroyt-pistons-401910004.html",
-"hs": "26",
-"as": "21",
+"hs": "31",
+"as": "23",
 "tip": "ТМ 221.5 · 1.94",
 "top": false,
 "bot": {
