@@ -1880,7 +1880,7 @@
  "vk_photo_until": 1794644243.1147308,
  "vk_photo_cursor": {},
  "vk_story_last": 6654,
- "vk_story_err": null,
+ "vk_story_err": "VK stories: сохранение не вернуло историю",
  "push_weekly": "2026-46",
  "vk_story_at": 1794991782.4634557,
  "vk_story_url": "https://vk.com/story-228963529_456239105",
@@ -2269,7 +2269,7 @@
   "quote_matches": 18
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-18T12:03:19.731063+03:00",
+  "last_poll": "2026-11-18T12:05:19.384690+03:00",
   "cursor": "98",
   "posts": [
    {
@@ -2784,5 +2784,10 @@
    }
   ],
   "status": "observing"
- }
+ },
+ "vk_story_pending": {
+  "pid": 6655,
+  "started_at": 1794992742.839963
+ },
+ "vk_story_retry_at": 1794996342.839963
 }
