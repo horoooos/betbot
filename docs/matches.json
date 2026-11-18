@@ -1184,7 +1184,15 @@ null
 ],
 "center": "Ожидаемые голы 2.9 : 3.1"
 },
-"lt": null
+"lt": {
+"fair": 1.46,
+"label": "П2 (осн. время)",
+"min_odds": 1.53,
+"minute": "2-й период",
+"p": 0.686,
+"result": null,
+"score": "0:1"
+}
 },
 {
 "sport": "hockey",
@@ -1388,8 +1396,8 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-18-toronto-reptors-nyu-york-niks-401910002.html",
-"hs": "9",
-"as": "6",
+"hs": "13",
+"as": "11",
 "tip": "Ф1 (+2.5) · 1.91",
 "top": true,
 "bot": {
