@@ -765,7 +765,15 @@ null
 ],
 "center": "Ожидаемые голы 3.5 : 2.9"
 },
-"lt": null
+"lt": {
+"fair": 1.29,
+"label": "X2 (осн. время)",
+"min_odds": 1.36,
+"minute": "2-й период",
+"p": 0.775,
+"result": null,
+"score": "0:1"
+}
 },
 {
 "sport": "hockey",
@@ -931,7 +939,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-18-aylenders-kolambus-401892731.html",
-"hs": "0",
+"hs": "1",
 "as": "0",
 "tip": "ТБ 5.5 · 1.85",
 "top": false,
@@ -1037,7 +1045,15 @@ null
 ],
 "center": "Ожидаемые голы 3.0 : 2.7"
 },
-"lt": null
+"lt": {
+"fair": 1.43,
+"label": "П1 (осн. время)",
+"min_odds": 1.5,
+"minute": "2-й период",
+"p": 0.699,
+"result": null,
+"score": "1:0"
+}
 },
 {
 "sport": "hockey",
@@ -1299,7 +1315,15 @@ null
 ],
 "center": "Ожидаемые голы 2.8 : 3.1"
 },
-"lt": null
+"lt": {
+"fair": 1.44,
+"label": "X2 (осн. время)",
+"min_odds": 1.51,
+"minute": "2-й период",
+"p": 0.696,
+"result": null,
+"score": "0:0"
+}
 },
 {
 "sport": "tennis",
@@ -1364,8 +1388,8 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-18-toronto-reptors-nyu-york-niks-401910002.html",
-"hs": "0",
-"as": "0",
+"hs": "2",
+"as": "6",
 "tip": "Ф1 (+2.5) · 1.91",
 "top": true,
 "bot": {
@@ -1470,7 +1494,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-18-tampa-bey-vashington-401892729.html",
-"hs": "0",
+"hs": "1",
 "as": "0",
 "tip": "ТБ 6.5 · 1.95",
 "top": true,
