@@ -1364,7 +1364,7 @@ null
 "bo": null,
 "prediction": "predictions/2026-11-18-sent-luis-anahaym-401892734.html",
 "hs": "7",
-"as": "5",
+"as": "6",
 "tip": "П2 (с ОТ и буллитами) · 2.05",
 "top": false,
 "bot": {
@@ -1499,7 +1499,7 @@ null
 ]
 ],
 "div": "NHL",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "predictions/2026-11-18-minnesota-neshvill-401892735.html",
 "hs": "7",
@@ -1609,7 +1609,7 @@ null
 "min_odds": 1.33,
 "minute": "2-й период",
 "p": 0.791,
-"result": null,
+"result": "hit",
 "score": "6:1"
 }
 },
@@ -1873,7 +1873,15 @@ null
 ],
 "center": "Ожидаемые голы 3.1 : 2.9"
 },
-"lt": null
+"lt": {
+"fair": 1.61,
+"label": "П2 (осн. время)",
+"min_odds": 1.69,
+"minute": "2-й период",
+"p": 0.622,
+"result": null,
+"score": "1:2"
+}
 },
 {
 "sport": "basketball",
@@ -1903,8 +1911,8 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-18-klippers-yuta-dzhaz-401910006.html",
-"hs": "0",
-"as": "0",
+"hs": "2",
+"as": "4",
 "tip": "ТБ 227.5 · 1.94",
 "top": false,
 "bot": {
