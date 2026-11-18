@@ -7,17 +7,6 @@
  "schedule_day": "2026-11-18",
  "content_slot": "2026-11-18-20",
  "news_seen": [
-  "https://www.sport-express.ru/football/rus_d1/news/sochi-shinnik-rezultat-matcha-19-tura-pervoy-ligi-15-noyabrya-2026-2475230/",
-  "https://www.sport-express.ru/football/nation-league/news/latviya-armeniya-kipr-chernogoriya-rezultaty-matchey-gruppovogo-etapa-ligi-naciy-15-noyabrya-2026-2475226/",
-  "https://www.sport-express.ru/football/rfpl/news/istochnik-cska-svyazalsya-s-roshey-po-povodu-vozvrascheniya-2475224/",
-  "https://www.sport-express.ru/tennis/wta/news/mirra-andreeva-elina-svitolina-rezultat-pervogo-seta-finala-itogovogo-turnira-wta-15-noyabrya-2026-2475309/",
-  "nix-o-smerti-dota-2-konechnaya-tochka-kogda-igru-perestanut-obnovlyat-i-po-nei",
-  "https://www.sport-express.ru/football/nation-league/news/ispaniya-angliya-rezultat-matcha-ligi-naciy-15-noyabrya-2026-2475318/",
-  "https://www.sport-express.ru/football/nation-league/news/belgiya-italiya-schet-4-1-rezultat-matcha-15-noyabrya-2026-2475317/",
-  "https://www.sport-express.ru/football/nation-league/news/horvatiya-chehiya-rezultat-matcha-ligi-naciy-15-noyabrya-2026-2475314/",
-  "https://www.sport-express.ru/football/germany/news/bavariya-ustanovila-cenu-na-olise-v-razmere-200-300-millionov-evro-na-fone-interesa-reala-2475311/",
-  "parivision-ustupila-100-thieves-na-zakrytoi-kvalifikatsii-pgl-cluj-napoca-2027",
-  "https://www.sport-express.ru/hockey/nhl/news/napadayuschiy-simon-holmstrem-stal-pervym-shvedom-s-het-trikom-za-aylenders-s-1996-goda-15-noyabrya-2026-2475323/",
   "https://www.sport-express.ru/hockey/khl/news/forvard-admirala-chezganov-poluchil-chetyrehmatchevuyu-diskvalifikaciyu-posle-igry-so-spartakom-2475312/",
   "https://www.sport-express.ru/hockey/nhl/news/vratar-aylenders-semen-varlamov-vyshel-na-48-mesto-v-istorii-nhl-po-pobedam-i-obognal-eda-dzhakomina-2475322/",
   "https://www.sport-express.ru/hockey/nhl/news/kolorado-vyigral-53-match-podryad-s-preimuschestvom-posle-dvuh-periodov-vtoroy-rezultat-v-istorii-nhl-2475321/",
@@ -506,9 +495,20 @@
   "https://www.sport-express.ru/tennis/wta/news/dzhonson-i-kuerri-schitayut-chto-andreeva-stanet-pervoy-raketkoy-mira-v-nachale-2027-goda-2476305/",
   "obzor-novoi-cobblestone-v-cs2-mekhaniki-obnovlennyye-pozitsii-i-tekstury",
   "https://www.sport-express.ru/football/england/news/the-touchline-arsenal-prodlit-kontrakty-s-raysom-rayey-i-timberom-2476370/",
-  "ne-povezlo-valve-otklonila-variant-stikera-jl-s-ot-sylkoi-k-apex-na-pgl-major"
+  "ne-povezlo-valve-otklonila-variant-stikera-jl-s-ot-sylkoi-k-apex-na-pgl-major",
+  "https://www.sport-express.ru/hockey/world-u20/news/chehiya-ne-pustit-rossiyskih-hokkeistok-na-molodezhnyy-chempionat-mira-2476379/",
+  "https://www.sport-express.ru/hockey/khl/news/avangard-admiral-3-1-schet-i-rezultat-matcha-fonbet-chempionata-khl-18-noyabrya-2026-2476358/",
+  "https://www.sport-express.ru/football/rusteam/news/glebov-ob-osipenko-est-dve-storony-karpin-i-dinamo-lyudi-vzroslye-sami-razberutsya-2476392/",
+  "https://www.sport-express.ru/football/foreign/news/novoe-pravilo-ofsayda-vengera-mogut-ne-prinyat-posle-neudachnyh-ispytaniy-2476388/",
+  "https://www.sport-express.ru/football/turkey/news/galatasaray-perenes-match-s-samsunsporom-na-drugoy-stadion-iz-za-problem-s-gazonom-2476374/",
+  "https://www.sport-express.ru/football/rusteam/news/semshov-o-miranchuke-primer-togo-kak-nuzhno-priezzhat-v-sbornuyu-rossii-2476369/",
+  "https://www.sport-express.ru/football/turkey/news/teylor-priznal-oshibku-sudi-v-matche-komandy-batrakova-2476368/",
+  "https://www.sport-express.ru/football/england/news/myu-mozhet-podat-zhalobu-v-fifa-iz-za-perehoda-dzhey-dzheya-gabriela-v-real-2476316/",
+  "https://www.sport-express.ru/football/rusteam/news/koloskov-o-nedopuske-sbornoy-rossii-k-otboru-na-evro-2028-glavnoe-chtoby-nam-razreshili-igrat-2476319/",
+  "https://www.sport-express.ru/basketball/vtb-league/news/uralmash-lokomotiv-kuban-schet-i-rezultat-matcha-regulyarnogo-chempionata-edinoy-ligi-vtb-18-noyabrya-2026-2476380/",
+  "https://www.sport-express.ru/tennis/atp/news/medvedev-ob-alkarase-chtoby-pobedit-ego-nuzhno-provesti-pochti-idealnyy-match-2476391/"
  ],
- "news_i": 2,
+ "news_i": 6,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1697,7 +1697,7 @@
  "streak_day": {
   "2026-11-15": 2
  },
- "news_next": "2026-11-18T20:37:04.327124+03:00",
+ "news_next": "2026-11-18T21:10:05.523641+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1856,7 +1856,8 @@
   "https://upload.wikimedia.org/wikipedia/commons/4/41/FC_Dynamo_Kyiv_Fans_-_%D0%A4%D0%B0%D0%BD%D0%B0%D1%82%D1%8B_%D0%A4%D0%9A_%D0%94%D0%B8%D0%BD%D0%B0%D0%BC%D0%BE_%D0%9A%D0%B8%D0%B5%D0%B2_%2822339181422%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
   "https://images.cybersport.ru/images/as-is/plain/79/794343ab-bec4-4fba-b22e-61a12a7e36ee.jpg",
   "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/67/A6-EES%40PEK_%2820160426152314%29.jpg/1280px-A6-EES%40PEK_%2820160426152314%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-  "https://images.cybersport.ru/images/as-is/plain/c3/c31ff903-a70a-4867-b743-b0b2273ea26e.jpg"
+  "https://images.cybersport.ru/images/as-is/plain/c3/c31ff903-a70a-4867-b743-b0b2273ea26e.jpg",
+  "https://ss.sport-express.ru/userfiles/materials/224/2244701/1180x665.jpg"
  ],
  "indexnow_day": "2026-11-18",
  "vk_wall_err": null,
@@ -2072,7 +2073,8 @@
   "7068",
   "7072",
   "7077",
-  "7080"
+  "7080",
+  "7083"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -2220,11 +2222,12 @@
   "2026-11-18:новость:2101f507f6fb2256b07d6bd9",
   "2026-11-18:новость:26b7cf786694addbd3d83fba",
   "2026-11-18:новость:b8fad2f77b886a388eb60307",
-  "2026-11-18:новость:bda67713fe4a594d07f16ea0"
+  "2026-11-18:новость:bda67713fe4a594d07f16ea0",
+  "2026-11-18:новость:eb58a78de746b758720a0afd"
  ],
  "dz_last_delivery": {
-  "source_id": 7080,
-  "message_id": 694,
+  "source_id": 7083,
+  "message_id": 695,
   "kind": "новость"
  },
  "learn_attempt_day": "2026-11-18",
@@ -2314,7 +2317,7 @@
   "quote_matches": 18
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-18T20:36:05.803335+03:00",
+  "last_poll": "2026-11-18T20:38:05.523641+03:00",
   "cursor": "115",
   "posts": [
    {
