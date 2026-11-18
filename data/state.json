@@ -7,7 +7,6 @@
  "schedule_day": "2026-11-18",
  "content_slot": "2026-11-18-13",
  "news_seen": [
-  "https://www.sport-express.ru/hockey/khl/news/trener-sibiri-lyuzenkov-o-keyne-paren-mozhet-igrat-horosho-ego-nado-napravit-v-pravilnoe-ruslo-2475195/",
   "https://www.sport-express.ru/football/rus_d1/news/ufa-spartak-kostroma-3-3-schet-i-rezultat-matcha-19-go-tura-ligi-pari-15-noyabrya-2026-2475197/",
   "https://www.sport-express.ru/football/rfpl/news/gazizov-poka-ni-odin-klub-rpl-ne-vystupil-protiv-rasshireniya-ligi-2475198/",
   "https://www.sport-express.ru/tennis/wta/news/andreeva-otreagirovala-na-sravneniya-ee-sezona-s-sezonom-2004-sharapovoy-2475199/",
@@ -506,9 +505,10 @@
   "https://www.sport-express.ru/tennis/atp/news/shelton-o-sedmom-porazhenii-ot-zvereva-protiv-sashi-vsegda-slozhno-mne-esche-mnogoe-nuzhno-uluchshat-2476186/",
   "patch-7-41-v-dota-2-mozhet-pobit-rekord-po-dlitelnosti-do-yetogo-ostalos-dva",
   "https://www.sport-express.ru/football/rusteam/news/pobeda-nad-venesueloy-prinesla-4-28-balla-rossiya-35-ya-v-reytinge-fifa-2476202/",
-  "https://www.sport-express.ru/football/rfpl/news/igdisamov-rasskazal-kogda-igroki-sbornoy-rossii-vernutsya-v-raspolozhenie-cska-2476199/"
+  "https://www.sport-express.ru/football/rfpl/news/igdisamov-rasskazal-kogda-igroki-sbornoy-rossii-vernutsya-v-raspolozhenie-cska-2476199/",
+  "cs2-priznali-luchshei-kibersportivnoi-igroi-na-esports-awards-2026"
  ],
- "news_i": 1,
+ "news_i": 2,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1701,7 +1701,7 @@
  "streak_day": {
   "2026-11-15": 2
  },
- "news_next": "2026-11-18T13:11:19.297265+03:00",
+ "news_next": "2026-11-18T13:45:19.451481+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1846,7 +1846,8 @@
   "https://images.cybersport.ru/images/as-is/plain/dc/dc77e6fa-1718-4c8d-b0a5-fe3e9685d4de.jpg",
   "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/2021-12-08_-_FC_Zenit_Saint_Petersburg_v_Chelsea_F.C._-_Photo_115.jpg/1280px-2021-12-08_-_FC_Zenit_Saint_Petersburg_v_Chelsea_F.C._-_Photo_115.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
   "https://images.cybersport.ru/images/as-is/plain/33/330e0115-6a5b-4e50-9ae3-e113f64c0c3f.jpg",
-  "https://upload.wikimedia.org/wikipedia/commons/4/42/CSKA_Moscow_and_Pakistan_national_football_team_at_the_KMC_Stadium%2C_Karachi_in_1969.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+  "https://upload.wikimedia.org/wikipedia/commons/4/42/CSKA_Moscow_and_Pakistan_national_football_team_at_the_KMC_Stadium%2C_Karachi_in_1969.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "https://images.cybersport.ru/images/as-is/plain/86/86e852b6-a4b5-4abc-b0f1-0fd057fc095f.jpg"
  ],
  "indexnow_day": "2026-11-18",
  "vk_wall_err": null,
@@ -2048,7 +2049,8 @@
   "7022",
   "7024",
   "7026",
-  "7027"
+  "7027",
+  "7031"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -2182,11 +2184,12 @@
   "2026-11-18:новость:2507b97d649d380b0f260da7",
   "2026-11-18:новость:c08aa920e8376ed317bd74fc",
   "2026-11-18:новость:5dd8f394150b82e286ba2e6e",
-  "2026-11-18:новость:4b4e2caafe4a2077b3616d21"
+  "2026-11-18:новость:4b4e2caafe4a2077b3616d21",
+  "2026-11-18:новость:382910e612a3b4570e45a611"
  ],
  "dz_last_delivery": {
-  "source_id": 7027,
-  "message_id": 680,
+  "source_id": 7031,
+  "message_id": 681,
   "kind": "новость"
  },
  "learn_attempt_day": "2026-11-18",
@@ -2276,43 +2279,9 @@
   "quote_matches": 18
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-18T13:11:19.290102+03:00",
-  "cursor": "100",
+  "last_poll": "2026-11-18T13:13:19.451481+03:00",
+  "cursor": "102",
   "posts": [
-   {
-    "post_id": 518,
-    "url": "https://vk.com/wall-228963529_518",
-    "title": "PARIVISION фаворит против Heroic в отборочных PGL Cluj-Napoca 2027",
-    "text": "PARIVISION фаворит против Heroic в отборочных PGL Cluj-Napoca 2027\n\nрџ“° На горизонте отборочный баттл, где PARIVISION бросает вызов Heroic в решающем поединке за место на PGL Cluj-Napoca 2027 по CS2. Матч назначен на 16 ноября в 21:00 мск и будет разыгран в формате best-of-3.\n\n#киберспорт #CS2 #новостиспорта #спорт #главное #аиставит\n\nрџ“Љ Подробнее на сайте рџ‘‡",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": true,
-     "details_present": true,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-16T17:36:40.125498+03:00"
-   },
-   {
-    "post_id": 519,
-    "url": "https://vk.com/wall-228963529_519",
-    "title": "Павел Полех вошел в топ-11 талантов России по «Спорт-Экспрессу»",
-    "text": "Павел Полех вошел в топ-11 талантов России по «Спорт-Экспрессу»\n\nрџ± Полех почти прорвался в десятку лучших молодых талантов России!\n\nвљЅпёЏ Полузащитник «Спартака» Павел Полех, 2009-го рождения, занял 11-е место в рейтинге «55 главных талантов России-2026», составленном «Спорт-Экспрессом». Это лучший результат среди красно-белых футболистов в этом списке.\n\n#футбол #Полех #СпортЭкспрессу #новостиспорта #спорт #главное #аиставит\n\nрџ“Љ Подробнее на сайте рџ‘‡",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": true,
-     "details_present": true,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-16T19:41:35.190030+03:00"
-   },
    {
     "post_id": 520,
     "url": "https://vk.com/wall-228963529_520",
@@ -2788,6 +2757,40 @@
     },
     "status": "needs_review",
     "observed_at": "2026-11-18T12:09:19.695854+03:00"
+   },
+   {
+    "post_id": 550,
+    "url": "https://vk.com/wall-228963529_550",
+    "title": "Игдисамов уточнил дату возвращения игроков сборной в «ЦСКА»",
+    "text": "вљЎпёЏ Игдисамов обещает: уже завтра футболисты сборной России снова в «ЦСКА», но только после короткого отдыха.",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": false,
+     "details_present": false,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-18T13:13:19.451481+03:00"
+   },
+   {
+    "post_id": 551,
+    "url": "https://vk.com/wall-228963529_551",
+    "title": "Patch 7.41 в Dota 2 готов побить рекорд по длительности",
+    "text": "рџ“° Долгожданный патч 7.41 уже на пороге рекорда!",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": false,
+     "details_present": false,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-18T13:13:19.451481+03:00"
    }
   ],
   "status": "observing"
