@@ -590,7 +590,8 @@
    "min_odds": 1.54,
    "minute": "2-й период",
    "score": "2:1",
-   "sport": "hockey"
+   "sport": "hockey",
+   "result": "hit"
   }
  },
  "NHL|401892735": {
@@ -651,7 +652,7 @@
  },
  "NBA|401910006": {
   "msg": 6994,
-  "hs": 7,
+  "hs": 12,
   "as": 5,
   "goals": 0,
   "kickoff": "2026-11-18T06:30:00+03:00"
