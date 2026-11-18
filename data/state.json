@@ -2338,43 +2338,9 @@
   "quote_matches": 18
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-19T01:49:35.774274+03:00",
-  "cursor": "121",
+  "last_poll": "2026-11-19T01:51:35.810390+03:00",
+  "cursor": "123",
   "posts": [
-   {
-    "post_id": 541,
-    "url": "https://vk.com/wall-228963529_541",
-    "title": "Шамиль Газизов: «Динамо» почти подписало звёздного вратаря Кабо-Верде",
-    "text": "рџ“° Шамиль Газизов, гендиректор «Динамо» (Махачкала), в подкасте «БЕТСИТИ Подкаст PRO DMX» подтвердил, что клуб был в шаге от подписания вратаря сборной Кабо-Верде — Возиньи.",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": false,
-     "details_present": false,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-18T00:29:49.933135+03:00"
-   },
-   {
-    "post_id": 542,
-    "url": "https://vk.com/wall-228963529_542",
-    "title": "Газизов признался: «Надо было сразу забрать деньги» после ухода из «Спартака»",
-    "text": "рџ“° Генеральный директор махачкалинского «Динамо» Азиз Газизов в выпуске клубного шоу «БЕТСИТИ Подкаст PRO DMX» откровенно рассказал, какие финансовые промахи сделали, когда возглавлял «Спартак».",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": false,
-     "details_present": false,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-18T01:35:50.861594+03:00"
-   },
    {
     "post_id": 543,
     "url": "https://vk.com/wall-228963529_543",
@@ -2850,6 +2816,40 @@
     },
     "status": "needs_review",
     "observed_at": "2026-11-19T00:49:34.713021+03:00"
+   },
+   {
+    "post_id": 571,
+    "url": "https://vk.com/wall-228963529_571",
+    "title": "В Dota 2 добавили второй заряд к укреплению построек",
+    "text": "рџ“° Геймплейный патч 7.42, выпущенный вечером 18 ноября, принёс в Dota 2 долгожданную правку механики укрепления построек.",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": false,
+     "details_present": false,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-19T01:51:35.810390+03:00"
+   },
+   {
+    "post_id": 572,
+    "url": "https://vk.com/wall-228963529_572",
+    "title": "Патч 7.42: новые способности Dota 2 – Realm, Pack Hunter, Scarab",
+    "text": "рџ“° Разработчики сразу добавили их сразу нескольким героям, а объёмный патчноут заставил многих пропустить детали.",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": false,
+     "details_present": false,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-19T01:51:35.810390+03:00"
    }
   ],
   "status": "observing"
