@@ -2292,10 +2292,10 @@
    }
   },
   "source": {
-   "last_success": "2026-11-18T17:16:04.976723+00:00",
-   "parsed": 345,
-   "added": 42,
-   "discovered_matches": 17,
+   "last_success": "2026-11-18T17:36:05.803335+00:00",
+   "parsed": 346,
+   "added": 58,
+   "discovered_matches": 18,
    "pages": 17,
    "errors": [],
    "parsed_by_sport": {
@@ -2308,49 +2308,15 @@
    }
   },
   "error": null,
-  "tips": 4960,
+  "tips": 4977,
   "snapshots": 84,
-  "unmapped_markets": 7344,
+  "unmapped_markets": 7385,
   "quote_matches": 18
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-18T20:34:05.308747+03:00",
-  "cursor": "113",
+  "last_poll": "2026-11-18T20:36:05.803335+03:00",
+  "cursor": "115",
   "posts": [
-   {
-    "post_id": 532,
-    "url": "https://vk.com/wall-228963529_532",
-    "title": "TeaGuvnor отверг слухи о предстоящем патче Dota 2",
-    "text": "рџ“° TeaGuvnor бросил холодный душ по слухам о патче Dota 2! Аналитик Робсон «TeaGuvnor» Мерритт категорически опроверг предположения, что у него есть детали следующего обновления.",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": false,
-     "details_present": false,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-17T14:50:13.845995+03:00"
-   },
-   {
-    "post_id": 533,
-    "url": "https://vk.com/wall-228963529_533",
-    "title": "Галактионов покинул «Локомотив»: 40 млн выплат после поражения от «Рубина»",
-    "text": "рџ± После горького поражения от «Рубина» (0:1) в 14-м туре РПЛ «Локомотив» официально расстался с главным тренером.",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": false,
-     "details_present": false,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-17T14:50:13.845995+03:00"
-   },
    {
     "post_id": 534,
     "url": "https://vk.com/wall-228963529_534",
@@ -2826,6 +2792,40 @@
     },
     "status": "needs_review",
     "observed_at": "2026-11-18T19:32:04.031486+03:00"
+   },
+   {
+    "post_id": 563,
+    "url": "https://vk.com/wall-228963529_563",
+    "title": "«Арсенал» продлил контракты с Райсом, Райей и Тимбером",
+    "text": "рџ“° Лондонский «Арсенал» официально подтвердил договорённость о продлении контрактов с тремя игроками основного состава — Декланом Райсом, Давидом Райей и Юрриеном Тимбером.",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": false,
+     "details_present": false,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-18T20:36:05.803335+03:00"
+   },
+   {
+    "post_id": 564,
+    "url": "https://vk.com/wall-228963529_564",
+    "title": "Valve отклонила стикер jL с отсылкой к apEX на PGL Major Singapore 2026",
+    "text": "рџ“° Valve отклонила вариант именного стикера, который профессиональный игрок в CS2 Юстинас «jL» Лекавичус хотел оформить в честь своего наставника — датского звёздного снайпера Дана «apEX» Мадесклера. По словам jL, идея заключалась в подписи, отсылающей к apEX, но Valve посчала её несовместимой с правилами.",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": false,
+     "details_present": false,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-18T20:36:05.803335+03:00"
    }
   ],
   "status": "observing"
