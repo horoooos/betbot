@@ -5,7 +5,7 @@
  },
  "learned": "2026-11-18",
  "schedule_day": "2026-11-18",
- "content_slot": "2026-11-18-19",
+ "content_slot": "2026-11-18-20",
  "news_seen": [
   "https://www.sport-express.ru/football/rusteam/news/magomed-adiev-podderzhal-reshenie-karpina-ne-vyzyvat-glushenkova-v-sbornuyu-rossii-2475238/",
   "https://www.sport-express.ru/football/rus_d1/news/sochi-shinnik-rezultat-matcha-19-tura-pervoy-ligi-15-noyabrya-2026-2475230/",
@@ -1567,7 +1567,7 @@
  "value_day": "2026-11-18",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-18",
- "site_stamp": "1156|7078|2026-11-18 19|4|6167efc34a623ab3",
+ "site_stamp": "1156|7079|2026-11-18 20|4|6167efc34a623ab3",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1582,121 +1582,117 @@
  },
  "value_check": "2026-11-18-6",
  "express_risk": {
-  "msg": 6767,
+  "msg": 7079,
   "legs": [
    {
-    "sport": "hockey",
-    "div": "NHL",
-    "id": "401892728",
-    "side": "home",
-    "p": 0.5830164765525981,
-    "odds": 1.645,
-    "kickoff": "2026-11-18T03:00:00+03:00",
-    "home": "Бостон",
-    "away": "Лос-Анджелес",
-    "league": "🇺🇸 США · NHL",
-    "logos": [
-     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/bos.png",
-     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/la.png"
-    ],
-    "colors": [
-     "231f20",
-     "121212"
-    ],
-    "label": "Победа: Бостон (с ОТ)",
-    "win": false,
-    "score": "0:3"
-   },
-   {
-    "sport": "hockey",
-    "div": "NHL",
-    "id": "401892731",
-    "side": "home",
-    "p": 0.5635245901639344,
-    "odds": 1.704,
-    "kickoff": "2026-11-18T03:00:00+03:00",
-    "home": "Айлендерс",
-    "away": "Коламбус",
-    "league": "🇺🇸 США · NHL",
-    "logos": [
-     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/nyi.png",
-     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/cbj.png"
-    ],
-    "colors": [
-     "00529b",
-     "002d62"
-    ],
-    "label": "Победа: Айлендерс (с ОТ)",
-    "win": true,
-    "score": "5:1"
-   },
-   {
-    "sport": "hockey",
-    "div": "NHL",
-    "id": "401892729",
-    "side": "home",
-    "p": 0.5934121196882072,
-    "odds": 1.617,
-    "kickoff": "2026-11-18T03:30:00+03:00",
-    "home": "Тампа-Бэй",
-    "away": "Вашингтон",
-    "league": "🇺🇸 США · NHL",
-    "logos": [
-     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/tb.png",
-     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/wsh.png"
-    ],
-    "colors": [
-     "003e7e",
-     "d71830"
-    ],
-    "label": "Победа: Тампа-Бэй (с ОТ)"
-   },
-   {
-    "sport": "hockey",
-    "div": "NHL",
-    "id": "401892733",
+    "sport": "basketball",
+    "div": "NBA",
+    "id": "401910010",
     "side": "away",
-    "p": 0.572012257405516,
-    "odds": 1.676,
-    "kickoff": "2026-11-18T03:30:00+03:00",
-    "home": "Чикаго",
-    "away": "Торонто",
-    "league": "🇺🇸 США · NHL",
+    "p": 0.517555266579974,
+    "odds": 1.855,
+    "kickoff": "2026-11-19T03:00:00+03:00",
+    "home": "Орландо Мэджик",
+    "away": "Филадельфия Сиксерс",
+    "league": "🇺🇸 США · NBA",
     "logos": [
-     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/chi.png",
-     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/tor.png"
+     "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/orl.png",
+     "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/phi.png"
     ],
     "colors": [
-     "e31937",
-     "003e7e"
+     "0150b5",
+     "1d428a"
     ],
-    "label": "Победа: Торонто (с ОТ)"
+    "label": "Победа: Филадельфия Сиксерс (с ОТ)"
    },
    {
     "sport": "basketball",
     "div": "NBA",
-    "id": "401910002",
+    "id": "401910011",
+    "side": "home",
+    "p": 0.5789740985271712,
+    "odds": 1.658,
+    "kickoff": "2026-11-19T03:30:00+03:00",
+    "home": "Бруклин Нетс",
+    "away": "Чикаго Буллз",
+    "league": "🇺🇸 США · NBA",
+    "logos": [
+     "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/bkn.png",
+     "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/chi.png"
+    ],
+    "colors": [
+     "000000",
+     "ce1141"
+    ],
+    "label": "Победа: Бруклин Нетс (с ОТ)"
+   },
+   {
+    "sport": "football",
+    "div": "BRA",
+    "id": "401841316",
+    "side": "home",
+    "p": 0.5354546560856728,
+    "odds": 1.769,
+    "kickoff": "2026-11-19T03:30:00+03:00",
+    "home": "Коринтианс Паранаэнсе",
+    "away": "Ботафого",
+    "league": "🇧🇷 Бразилия · Серия A",
+    "logos": [
+     "https://a.espncdn.com/i/teamlogos/soccer/500/874.png",
+     "https://a.espncdn.com/i/teamlogos/soccer/500/6086.png"
+    ],
+    "colors": [
+     "000000",
+     "000000"
+    ],
+    "label": "Победа: Коринтианс Паранаэнсе"
+   },
+   {
+    "sport": "basketball",
+    "div": "NBA",
+    "id": "401910015",
     "side": "away",
     "p": 0.5635245901639344,
     "odds": 1.704,
-    "kickoff": "2026-11-18T03:30:00+03:00",
-    "home": "Торонто Рэпторс",
-    "away": "Нью-Йорк Никс",
+    "kickoff": "2026-11-19T05:30:00+03:00",
+    "home": "Денвер Наггетс",
+    "away": "Бостон Селтикс",
     "league": "🇺🇸 США · NBA",
     "logos": [
-     "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/tor.png",
-     "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/ny.png"
+     "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/den.png",
+     "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/bos.png"
     ],
     "colors": [
-     "d91244",
-     "1d428a"
+     "0e2240",
+     "008348"
     ],
-    "label": "Победа: Нью-Йорк Никс (с ОТ)"
+    "label": "Победа: Бостон Селтикс (с ОТ)"
+   },
+   {
+    "sport": "hockey",
+    "div": "NHL",
+    "id": "401892741",
+    "side": "home",
+    "p": 0.5107273678702251,
+    "odds": 1.87,
+    "kickoff": "2026-11-19T06:00:00+03:00",
+    "home": "Юта",
+    "away": "Колорадо",
+    "league": "🇺🇸 США · NHL",
+    "logos": [
+     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/uta.png",
+     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/col.png"
+    ],
+    "colors": [
+     "000000",
+     "860038"
+    ],
+    "label": "Победа: Юта (с ОТ)"
    }
   ],
-  "odds": 12.94461438044544,
-  "day": "2026-11-17",
-  "done": true
+  "odds": 17.336741355040797,
+  "day": "2026-11-18",
+  "done": false
  },
  "streak_day": {
   "2026-11-15": 2
@@ -1722,7 +1718,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 7078,
+ "dz_last": 7079,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2315,7 +2311,7 @@
   "quote_matches": 18
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-18T19:58:05.056513+03:00",
+  "last_poll": "2026-11-18T20:00:04.945712+03:00",
   "cursor": "113",
   "posts": [
    {
