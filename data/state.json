@@ -2300,43 +2300,9 @@
   "quote_matches": 18
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-18T17:24:02.382928+03:00",
-  "cursor": "107",
+  "last_poll": "2026-11-18T17:26:02.796188+03:00",
+  "cursor": "109",
   "posts": [
-   {
-    "post_id": 526,
-    "url": "https://vk.com/wall-228963529_526",
-    "title": "FURIA снова на вершине: разгром Spirit в Гонконге закрепил лидерство",
-    "text": "FURIA снова на вершине: разгром Spirit в Гонконге закрепил лидерство\n\nрџ“° Бразильцы вернули себе первое место в свежем рейтинге [#alias|HLTV.org|HLTV.org], и это заслуженная награда за доминирующую игру на BLAST Rivals Fall 2026.\n\nрџЏ† Турнир проходил с 11 по 15 ноября в Гонконге, где восемь сильнейших коллективов мира боролись за внушительный призовой фонд в один миллион долларов.\n\n#киберспорт #новостиспорта #спорт #главное #аиставит\n\nрџ“Љ Подробнее на сайте рџ‘‡",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": true,
-     "details_present": true,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-17T00:59:48.857918+03:00"
-   },
-   {
-    "post_id": 527,
-    "url": "https://vk.com/wall-228963529_527",
-    "title": "Орлов осудил Кругового за непорядочную атаку на Глушенкова",
-    "text": "Орлов осудил Кругового за непорядочную атаку на Глушенкова\n\nрџ± Геннадий Орлов вспыхнул в эфире, раскритиковав «Кругового» за нападку на Максима Глушенкова.\n\n#футбол #Орлов #новостиспорта #спорт #главное #аиставит\n\nрџ“Љ Подробнее на сайте рџ‘‡",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": true,
-     "details_present": true,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-17T00:59:48.857918+03:00"
-   },
    {
     "post_id": 528,
     "url": "https://vk.com/wall-228963529_528",
@@ -2812,6 +2778,40 @@
     },
     "status": "needs_review",
     "observed_at": "2026-11-18T16:22:01.722509+03:00"
+   },
+   {
+    "post_id": 557,
+    "url": "https://vk.com/wall-228963529_557",
+    "title": "sh1ro и tn1r выпустили парные стикеры к PGL Major Singapore 2026",
+    "text": "рџЋ® Дмитрий sh1ro Соколов и Андрей tn1r Татаринович из «Team Spirit» запустили официальные парные стикеры к предстоящему PGL Major Singapore 2026. Идея с общим изображением принадлежит хосту команды Никите Nick Глебову.",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": false,
+     "details_present": false,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-18T17:26:02.796188+03:00"
+   },
+   {
+    "post_id": 558,
+    "url": "https://vk.com/wall-228963529_558",
+    "title": "Игдисамов раскрыл подготовку ЦСКА к матчу с «Ахматом»",
+    "text": "вљЎпёЏ ЦСКА готовится к громкому противостоянию с «Ахматом». 15-й тур РПЛ состоится 21 ноября в 19:45 мск, и главный тренер Дмитрий Игдисамов уже поделился планом.",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": false,
+     "details_present": false,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-18T17:26:02.796188+03:00"
    }
   ],
   "status": "observing"
