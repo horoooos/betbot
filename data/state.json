@@ -2263,43 +2263,9 @@
   "quote_matches": 18
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-18T11:03:19.627988+03:00",
-  "cursor": "96",
+  "last_poll": "2026-11-18T11:05:19.518223+03:00",
+  "cursor": "98",
   "posts": [
-   {
-    "post_id": 513,
-    "url": "https://vk.com/wall-228963529_513",
-    "title": "Комик Роман Косицын раскрыл «великолепные три минуты» в матче против «Динамо»",
-    "text": "Комик Роман Косицын раскрыл «великолепные три минуты» в матче против «Динамо»\n\nрџ“° 15 ноября на «ВТБ Арене» в Москве прошёл матч ФК «10» против московского «Динамо», который завершился со счётом 4:2 в пользу бело-голубых. Комик-футболист Роман Косицын, выйдя на поле, сразу же поделился своими ощущениями.\n\n#футбол #Роман #Динамо #новостиспорта #спорт #главное #аиставит\n\nрџ“Љ Подробнее на сайте рџ‘‡",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": true,
-     "details_present": true,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-16T14:25:32.934030+03:00"
-   },
-   {
-    "post_id": 514,
-    "url": "https://vk.com/wall-228963529_514",
-    "title": "Шомуродов размышляет о возвращении в «Ростов» для завершения карьеры",
-    "text": "Шомуродов размышляет о возвращении в «Ростов» для завершения карьеры\n\nрџ± Элдор Шомуродов в интервью «СЭ» откровенно поговорил о том, что может задуматься о возвращении в «Ростов», чтобы завершить свою игровую карьеру.\n\nвљЅпёЏ За три сезона в «Ростове» (2017-2020) он провёл 91 матч, забил 18 мячей и отдал 12 результативных передач, став одним из надёжных форвардов команды.\n\n#футбол #Шомуродов #Ростов #новостиспорта #спорт #главное #аиставит\n\nрџ“Љ Подробнее на сайте рџ‘‡",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": true,
-     "details_present": true,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-16T14:25:32.934030+03:00"
-   },
    {
     "post_id": 515,
     "url": "https://vk.com/wall-228963529_515",
@@ -2775,6 +2741,40 @@
     },
     "status": "needs_review",
     "observed_at": "2026-11-18T10:02:49.008376+03:00"
+   },
+   {
+    "post_id": 546,
+    "url": "https://vk.com/wall-228963529_546",
+    "title": "Митрофанов: расширение РПЛ до 18 команд реально, всё в работе",
+    "text": "рџ“° Генеральный секретарь РФС Максим Митрофанов в интервью прокомментировал предложение Шамиля Газизова о расширении высшего дивизиона до 18 команд. По его словам, на последнем собрании клубов он не наблюдал официального обсуждения, но предложение всё-таки было выдвинуто.",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": false,
+     "details_present": false,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-18T11:05:19.518223+03:00"
+   },
+   {
+    "post_id": 547,
+    "url": "https://vk.com/wall-228963529_547",
+    "title": "Гришин: Игдисамов ставит количество, а не качество в обороне ЦСКА",
+    "text": "рџ± Гришин в интервью «СЭ» раскрыл, как изменился стиль игры «ЦСКА» под руководством Дмитрия Игдисамова после 14 туров чемпионата.",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": false,
+     "details_present": false,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-18T11:05:19.518223+03:00"
    }
   ],
   "status": "observing"
