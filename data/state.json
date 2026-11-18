@@ -1567,7 +1567,7 @@
  "value_day": "2026-11-18",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-18",
- "site_stamp": "1154|7025|2026-11-18 12|4|ddf61a60f85b9efe",
+ "site_stamp": "1154|7026|2026-11-18 12|4|ddf61a60f85b9efe",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1721,7 +1721,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 7025,
+ "dz_last": 7026,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2272,43 +2272,9 @@
   "quote_matches": 18
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-18T12:07:19.264508+03:00",
-  "cursor": "98",
+  "last_poll": "2026-11-18T12:09:19.695854+03:00",
+  "cursor": "100",
   "posts": [
-   {
-    "post_id": 515,
-    "url": "https://vk.com/wall-228963529_515",
-    "title": "Идову бросил вызов Лещуку: Медиалига доказала свою силу",
-    "text": "Идову бросил вызов Лещуку: Медиалига доказала свою силу\n\nрџ± Идову бросил вызов Лещуку: «Медиалига может удивить!»\n\nвљЅпёЏ 15 ноября на «ВТБ Арене» в Москве «10» одержал уверенную победу над «Динамо», обыграв соперников со счётом 4:2.\n\n#футбол #Лещук #новостиспорта #спорт #главное #аиставит\n\nрџ“Љ Подробнее на сайте рџ‘‡",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": true,
-     "details_present": true,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-16T15:30:07.358831+03:00"
-   },
-   {
-    "post_id": 516,
-    "url": "https://vk.com/wall-228963529_516",
-    "title": "Светлана «suns1de» раскритиковали за не переданные подарки Team Spirit",
-    "text": "Светлана «suns1de» раскритиковали за не переданные подарки Team Spirit\n\nрџ“° Китайская фанатка Team Spirit публично обвинила девушку — Светлану «suns1de» Мевлид, известную как Данила donk Крышковца, в том, что она не передала подготовленные подарки киберспортсменам во время BLAST Rivals Fall 2026.\n\n#киберспорт #новостиспорта #спорт #главное #аиставит\n\nрџ“Љ Подробнее на сайте рџ‘‡",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": true,
-     "details_present": true,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-16T15:30:07.358831+03:00"
-   },
    {
     "post_id": 518,
     "url": "https://vk.com/wall-228963529_518",
@@ -2784,6 +2750,40 @@
     },
     "status": "needs_review",
     "observed_at": "2026-11-18T11:05:19.518223+03:00"
+   },
+   {
+    "post_id": 548,
+    "url": "https://vk.com/wall-228963529_548",
+    "title": "Valve добавила стикеры к PGL Major Singapore 2026 и запустила Pick'Em",
+    "text": "вљЎпёЏ Сразу в игре — новые стикеры к PGL Major Singapore 2026!",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": false,
+     "details_present": false,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-18T12:09:19.695854+03:00"
+   },
+   {
+    "post_id": 549,
+    "url": "https://vk.com/wall-228963529_549",
+    "title": "Круговой объяснил резкие слова к Глушенкову: конфликтов нет",
+    "text": "рџ“° Защитник сборной России и «ЦСКА» Данил Круговой в интервью «СЭ» прокомментировал свои недавние резкие высказывания в адрес полузащитника «Зенита» Максима Глушенкова.",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": false,
+     "details_present": false,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-18T12:09:19.695854+03:00"
    }
   ],
   "status": "observing"
