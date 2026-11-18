@@ -621,7 +621,7 @@ null
 ]
 ],
 "div": "NHL",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "predictions/2026-11-18-boston-los-andzheles-401892728.html",
 "hs": "0",
@@ -736,7 +736,7 @@ null
 "min_odds": 1.36,
 "minute": "2-й период",
 "p": 0.775,
-"result": null,
+"result": "hit",
 "score": "0:1"
 }
 },
@@ -1370,7 +1370,7 @@ null
 "bo": null,
 "prediction": "predictions/2026-11-18-toronto-reptors-nyu-york-niks-401910002.html",
 "hs": "95",
-"as": "93",
+"as": "94",
 "tip": "Ф1 (+2.5) · 1.91",
 "top": true,
 "bot": {
@@ -1476,7 +1476,7 @@ null
 "bo": null,
 "prediction": "predictions/2026-11-18-tampa-bey-vashington-401892729.html",
 "hs": "4",
-"as": "1",
+"as": "2",
 "tip": "ТБ 6.5 · 1.95",
 "top": true,
 "bot": {
@@ -1758,8 +1758,8 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-18-minnesota-timbervulvz-portlend-401910003.html",
-"hs": "54",
-"as": "60",
+"hs": "56",
+"as": "62",
 "tip": "П1 (с ОТ) · 1.74",
 "top": true,
 "bot": {
@@ -1859,8 +1859,8 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-18-san-antonio-spers-detroyt-pistons-401910004.html",
-"hs": "64",
-"as": "63",
+"hs": "66",
+"as": "65",
 "tip": "ТМ 221.5 · 1.94",
 "top": false,
 "bot": {
@@ -1961,7 +1961,7 @@ null
 "bo": null,
 "prediction": "predictions/2026-11-18-sent-luis-anahaym-401892734.html",
 "hs": "4",
-"as": "2",
+"as": "3",
 "tip": "П2 (с ОТ и буллитами) · 2.05",
 "top": false,
 "bot": {
