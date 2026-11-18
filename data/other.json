@@ -7474,25 +7474,25 @@
   "kickoff": "2026-11-18T04:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Tue, November 17th at 8:00 PM EST",
   "clock": "0.0",
   "period": 0,
   "home": {
+   "color": "000000",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/sa.png",
    "id": "24",
    "name": "San Antonio Spurs",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/sa.png",
-   "color": "000000",
    "score": "0",
    "record": "12-2",
    "periods": [],
    "ru": "Сан-Антонио Сперс"
   },
   "away": {
+   "color": "1d428a",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/det.png",
    "id": "8",
    "name": "Detroit Pistons",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/det.png",
-   "color": "1d428a",
    "score": "0",
    "record": "8-4",
    "periods": [],
@@ -7575,7 +7575,9 @@
   "btn": 4,
   "close": {
    "BB_U221.5": 0.5
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null
  },
  "NHL|401892737": {
   "id": "401892737",
