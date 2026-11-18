@@ -1,107 +1,6 @@
 [
 {
 "sport": "tennis",
-"id": "186786",
-"league": "Теннис · WTA",
-"kickoff": "2026-11-17T23:05:00+03:00",
-"home": "Деспина Папамихаил",
-"away": "Лаура Самсон",
-"hl": "https://a.espncdn.com/i/teamlogos/countries/500/gre.png",
-"al": "https://a.espncdn.com/i/teamlogos/countries/500/cze.png",
-"hid": "8068",
-"aid": "15069",
-"bb": "https://betboom.ru/search?query=%D0%9F%D0%B0%D0%BF%D0%B0%D0%BC%D0%B8%D1%85%D0%B0%D0%B8%D0%BB&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=tennis",
-"path": "tennis/wta",
-"url": "live.html?s=tennis&p=tennis%2Fwta&e=186786&h=%D0%94%D0%B5%D1%81%D0%BF%D0%B8%D0%BD%D0%B0+%D0%9F%D0%B0%D0%BF%D0%B0%D0%BC%D0%B8%D1%85%D0%B0%D0%B8%D0%BB&a=%D0%9B%D0%B0%D1%83%D1%80%D0%B0+%D0%A1%D0%B0%D0%BC%D1%81%D0%BE%D0%BD",
-"participants": [
-[
-"Деспина Папамихаил",
-"Despina Papamichail"
-],
-[
-"Лаура Самсон",
-"Laura Samson"
-]
-],
-"div": "WTA",
-"state": "post",
-"bo": null,
-"prediction": "predictions/2026-11-17-despina-papamihail-laura-samson-186786.html",
-"hs": null,
-"as": null,
-"tip": "Будет 2 сета · ≈1.61",
-"top": false,
-"bot": {
-"main": {
-"label": "Будет 2 сета",
-"p": 0.578,
-"odds": 1.61,
-"est": true
-},
-"bold": null,
-"markets": [
-[
-"Победа: Деспина Папамихаил",
-0.219,
-4.25
-],
-[
-"Победа: Лаура Самсон",
-0.781,
-1.19
-],
-[
-"Будет 3 сета",
-0.422,
-null
-],
-[
-"Будет 2 сета",
-0.578,
-null
-],
-[
-"Счёт по сетам 2:0",
-0.091,
-null
-],
-[
-"Счёт по сетам 0:2",
-0.487,
-null
-],
-[
-"Счёт по сетам 2:1",
-0.127,
-null
-],
-[
-"Счёт по сетам 1:2",
-0.294,
-null
-],
-[
-"Деспина Папамихаил возьмёт хотя бы сет",
-0.513,
-null
-],
-[
-"Лаура Самсон возьмёт хотя бы сет",
-0.909,
-null
-]
-],
-"bar": [
-0.21875,
-0,
-0.78125
-],
-"center": "Линия winline · Эло 1422 : 1695"
-},
-"lt": null
-},
-{
-"sport": "tennis",
 "id": "186794",
 "league": "Теннис · WTA",
 "kickoff": "2026-11-18T00:30:00+03:00",
@@ -757,7 +656,7 @@ null
 ]
 ],
 "div": "NHL",
-"state": "pre",
+"state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-18-boston-los-andzheles-401892728.html",
 "hs": "0",
