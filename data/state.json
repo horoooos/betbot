@@ -5,7 +5,7 @@
  },
  "learned": "2026-11-18",
  "schedule_day": "2026-11-18",
- "content_slot": "2026-11-17-23",
+ "content_slot": "2026-11-18-10",
  "news_seen": [
   "https://www.sport-express.ru/hockey/nhl/news/fhr-vyrazila-soboleznovaniya-panarinu-v-svyazi-so-smertyu-ego-dedushki-2475146/",
   "https://www.sport-express.ru/tennis/wta/news/itogovyy-turnir-wta-kto-iz-rossiyskih-tennisistok-pobezhdal-2475147/",
@@ -1567,7 +1567,7 @@
  "value_day": "2026-11-17",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-17",
- "site_stamp": "1153|7017|2026-11-18 09|4|f68856ef1bfecdf6",
+ "site_stamp": "1153|7017|2026-11-18 10|4|f68856ef1bfecdf6",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1876,7 +1876,7 @@
  "vk_photo_until": 1794644243.1147308,
  "vk_photo_cursor": {},
  "vk_story_last": 6646,
- "vk_story_err": null,
+ "vk_story_err": "VK stories: сервер не вернул upload_result",
  "push_weekly": "2026-46",
  "vk_story_at": 1794984311.114881,
  "vk_story_url": "https://vk.com/story-228963529_456239101",
@@ -2257,7 +2257,7 @@
   "quote_matches": 18
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-18T09:58:48.679422+03:00",
+  "last_poll": "2026-11-18T10:00:48.571754+03:00",
   "cursor": "94",
   "posts": [
    {
@@ -2772,5 +2772,6 @@
    }
   ],
   "status": "observing"
- }
+ },
+ "vk_story_retry_at": 1794988890.2919533
 }
