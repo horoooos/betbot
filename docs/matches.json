@@ -1091,7 +1091,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-18-filadelfiya-baffalo-401892732.html",
-"hs": "0",
+"hs": "1",
 "as": "1",
 "tip": "П2 (с ОТ и буллитами) · 1.80",
 "top": false,
@@ -1404,8 +1404,8 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-18-toronto-reptors-nyu-york-niks-401910002.html",
-"hs": "34",
-"as": "27",
+"hs": "36",
+"as": "29",
 "tip": "Ф1 (+2.5) · 1.91",
 "top": true,
 "bot": {
@@ -1747,7 +1747,15 @@ null
 ],
 "center": "Ожидаемые голы 3.1 : 3.5"
 },
-"lt": null
+"lt": {
+"fair": 1.41,
+"label": "П2 (осн. время)",
+"min_odds": 1.48,
+"minute": "2-й период",
+"p": 0.71,
+"result": null,
+"score": "0:1"
+}
 },
 {
 "sport": "basketball",
@@ -1778,7 +1786,7 @@ null
 "bo": null,
 "prediction": "predictions/2026-11-18-minnesota-timbervulvz-portlend-401910003.html",
 "hs": "2",
-"as": "0",
+"as": "3",
 "tip": "П1 (с ОТ) · 1.74",
 "top": true,
 "bot": {
@@ -1878,8 +1886,8 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-18-san-antonio-spers-detroyt-pistons-401910004.html",
-"hs": "4",
-"as": "0",
+"hs": "6",
+"as": "2",
 "tip": "ТМ 221.5 · 1.94",
 "top": false,
 "bot": {
