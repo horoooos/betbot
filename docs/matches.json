@@ -1369,8 +1369,8 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-18-toronto-reptors-nyu-york-niks-401910002.html",
-"hs": "80",
-"as": "76",
+"hs": "82",
+"as": "78",
 "tip": "Ф1 (+2.5) · 1.91",
 "top": true,
 "bot": {
@@ -1759,7 +1759,7 @@ null
 "bo": null,
 "prediction": "predictions/2026-11-18-minnesota-timbervulvz-portlend-401910003.html",
 "hs": "49",
-"as": "45",
+"as": "48",
 "tip": "П1 (с ОТ) · 1.74",
 "top": true,
 "bot": {
@@ -2200,7 +2200,15 @@ null
 ],
 "center": "Ожидаемые голы 3.6 : 2.7"
 },
-"lt": null
+"lt": {
+"fair": 1.26,
+"label": "ТБ 9.5",
+"min_odds": 1.33,
+"minute": "2-й период",
+"p": 0.791,
+"result": null,
+"score": "6:1"
+}
 },
 {
 "sport": "hockey",
