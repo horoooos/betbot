@@ -1758,8 +1758,8 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-18-minnesota-timbervulvz-portlend-401910003.html",
-"hs": "31",
-"as": "22",
+"hs": "35",
+"as": "28",
 "tip": "П1 (с ОТ) · 1.74",
 "top": true,
 "bot": {
@@ -1859,7 +1859,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-18-san-antonio-spers-detroyt-pistons-401910004.html",
-"hs": "33",
+"hs": "35",
 "as": "26",
 "tip": "ТМ 221.5 · 1.94",
 "top": false,
@@ -2061,7 +2061,15 @@ null
 ],
 "center": "Ожидаемые голы 3.4 : 3.3"
 },
-"lt": null
+"lt": {
+"fair": 1.47,
+"label": "П1 (осн. время)",
+"min_odds": 1.54,
+"minute": "2-й период",
+"p": 0.681,
+"result": null,
+"score": "2:1"
+}
 },
 {
 "sport": "hockey",
