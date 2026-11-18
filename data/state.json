@@ -7,7 +7,6 @@
  "schedule_day": "2026-11-18",
  "content_slot": "2026-11-18-23",
  "news_seen": [
-  "https://www.sport-express.ru/hockey/nhl/news/dallas-florida-schet-2-1-ot-rezultat-matcha-nhl-16-noyabrya-2026-2475363/",
   "https://www.sport-express.ru/hockey/nhl/news/anahaym-kalgari-schet-i-rezultat-matcha-regulyarnogo-chempionata-nhl-16-noyabrya-2026-2475359/",
   "https://www.sport-express.ru/hockey/nhl/news/makdevid-povtoril-rekord-gretcki-po-skorosti-dostizheniya-40-peredach-za-sezon-nhl-2475362/",
   "https://www.sport-express.ru/hockey/nhl/news/filadelfiya-edmonton-schet-2-5-rezultat-matcha-nhl-16-noyabrya-2026-2475358/",
@@ -506,9 +505,10 @@
   "https://www.sport-express.ru/cybersport/videogames/news/na-serverah-sony-zafiksirovan-massovyy-sboy-na-fone-reliza-gta-6-2476422/",
   "https://www.sport-express.ru/football/england/news/as-arsenal-ocenivaet-subimendi-v-70-millionov-evro-na-igroka-pretenduet-chelsi-2476425/",
   "https://www.sport-express.ru/hockey/khl/news/glavnyy-trener-salavata-yulaeva-kozlov-soobschil-chto-forvard-rempal-vybyl-na-neskolko-nedel-iz-za-travmy-2476424/",
-  "v-dota-2-vyshel-patch-7-42"
+  "v-dota-2-vyshel-patch-7-42",
+  "parivision-pobedila-team-spirit-i-stala-chempionom-essence-iii"
  ],
- "news_i": 0,
+ "news_i": 2,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1697,7 +1697,7 @@
  "streak_day": {
   "2026-11-15": 2
  },
- "news_next": "2026-11-18T23:27:47.874243+03:00",
+ "news_next": "2026-11-18T23:55:47.868298+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1859,7 +1859,8 @@
   "https://images.cybersport.ru/images/as-is/plain/c3/c31ff903-a70a-4867-b743-b0b2273ea26e.jpg",
   "https://ss.sport-express.ru/userfiles/materials/224/2244701/1180x665.jpg",
   "https://images.cybersport.ru/images/as-is/plain/d1/d1b4c28a-d6a4-4664-99ff-8dac26224494.jpg",
-  "https://images.cybersport.ru/images/as-is/plain/3b/3b69abd4-7344-47cd-a4bc-13ddf80cbb0a.jpg"
+  "https://images.cybersport.ru/images/as-is/plain/3b/3b69abd4-7344-47cd-a4bc-13ddf80cbb0a.jpg",
+  "https://images.cybersport.ru/images/as-is/plain/9a/9aa55545-4ffb-4b08-a9b0-776d215f4b2c.jpg"
  ],
  "indexnow_day": "2026-11-18",
  "vk_wall_err": null,
@@ -2078,7 +2079,8 @@
   "7080",
   "7083",
   "7089",
-  "7097"
+  "7097",
+  "7100"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -2229,11 +2231,12 @@
   "2026-11-18:новость:bda67713fe4a594d07f16ea0",
   "2026-11-18:новость:eb58a78de746b758720a0afd",
   "2026-11-18:новость:e55f9f7fdf2022c2b4ec52a5",
-  "2026-11-18:новость:f4268acc88d18255c69f00b6"
+  "2026-11-18:новость:f4268acc88d18255c69f00b6",
+  "2026-11-18:новость:86940fefeb269b3b3129c030"
  ],
  "dz_last_delivery": {
-  "source_id": 7097,
-  "message_id": 697,
+  "source_id": 7100,
+  "message_id": 698,
   "kind": "новость"
  },
  "learn_attempt_day": "2026-11-18",
@@ -2323,7 +2326,7 @@
   "quote_matches": 18
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-18T23:26:47.354374+03:00",
+  "last_poll": "2026-11-18T23:28:47.868298+03:00",
   "cursor": "117",
   "posts": [
    {
