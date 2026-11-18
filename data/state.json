@@ -7,8 +7,6 @@
  "schedule_day": "2026-11-18",
  "content_slot": "2026-11-18-10",
  "news_seen": [
-  "https://www.sport-express.ru/football/rfpl/news/gazizov-otpravit-v-rpl-dokument-po-povodu-rasshireniya-ligi-na-sleduyuschey-nedele-2475189/",
-  "https://www.sport-express.ru/hockey/khl/news/kapitan-sibiri-alanov-ob-evandere-keyne-istorii-ne-vsegda-mogut-byt-pravdoy-2475196/",
   "https://www.sport-express.ru/hockey/khl/news/trener-sibiri-lyuzenkov-o-keyne-paren-mozhet-igrat-horosho-ego-nado-napravit-v-pravilnoe-ruslo-2475195/",
   "https://www.sport-express.ru/football/rus_d1/news/ufa-spartak-kostroma-3-3-schet-i-rezultat-matcha-19-go-tura-ligi-pari-15-noyabrya-2026-2475197/",
   "https://www.sport-express.ru/football/rfpl/news/gazizov-poka-ni-odin-klub-rpl-ne-vystupil-protiv-rasshireniya-ligi-2475198/",
@@ -506,9 +504,11 @@
   "https://www.sport-express.ru/basketball/nba/news/grayms-stal-vtorym-igrokom-v-istorii-leykers-s-10-trehochkovymi-za-match-posle-kobe-brayanta-2476155/",
   "https://www.sport-express.ru/tennis/atp/news/karlos-alkaras-daniil-medvedev-statistika-lichnyh-vstrech-do-itogovogo-turnira-atp-2026-2476134/",
   "https://www.sport-express.ru/tennis/atp/news/shelton-o-sedmom-porazhenii-ot-zvereva-protiv-sashi-vsegda-slozhno-mne-esche-mnogoe-nuzhno-uluchshat-2476186/",
-  "patch-7-41-v-dota-2-mozhet-pobit-rekord-po-dlitelnosti-do-yetogo-ostalos-dva"
+  "patch-7-41-v-dota-2-mozhet-pobit-rekord-po-dlitelnosti-do-yetogo-ostalos-dva",
+  "https://www.sport-express.ru/football/rusteam/news/pobeda-nad-venesueloy-prinesla-4-28-balla-rossiya-35-ya-v-reytinge-fifa-2476202/",
+  "https://www.sport-express.ru/football/rfpl/news/igdisamov-rasskazal-kogda-igroki-sbornoy-rossii-vernutsya-v-raspolozhenie-cska-2476199/"
  ],
- "news_i": 0,
+ "news_i": 1,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1701,7 +1701,7 @@
  "streak_day": {
   "2026-11-15": 2
  },
- "news_next": "2026-11-18T12:40:19.264508+03:00",
+ "news_next": "2026-11-18T13:11:19.297265+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1844,7 +1844,8 @@
   "https://upload.wikimedia.org/wikipedia/commons/e/e7/600px_blu_e_rosso_con_stella.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
   "https://images.cybersport.ru/images/as-is/plain/dc/dc77e6fa-1718-4c8d-b0a5-fe3e9685d4de.jpg",
   "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/2021-12-08_-_FC_Zenit_Saint_Petersburg_v_Chelsea_F.C._-_Photo_115.jpg/1280px-2021-12-08_-_FC_Zenit_Saint_Petersburg_v_Chelsea_F.C._-_Photo_115.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-  "https://images.cybersport.ru/images/as-is/plain/33/330e0115-6a5b-4e50-9ae3-e113f64c0c3f.jpg"
+  "https://images.cybersport.ru/images/as-is/plain/33/330e0115-6a5b-4e50-9ae3-e113f64c0c3f.jpg",
+  "https://upload.wikimedia.org/wikipedia/commons/4/42/CSKA_Moscow_and_Pakistan_national_football_team_at_the_KMC_Stadium%2C_Karachi_in_1969.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
  ],
  "indexnow_day": "2026-11-18",
  "vk_wall_err": null,
@@ -2045,7 +2046,8 @@
   "7021",
   "7022",
   "7024",
-  "7026"
+  "7026",
+  "7027"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -2178,11 +2180,12 @@
   "2026-11-18:новость:2b9a9f3a0fd865a1b60fc8ed",
   "2026-11-18:новость:2507b97d649d380b0f260da7",
   "2026-11-18:новость:c08aa920e8376ed317bd74fc",
-  "2026-11-18:новость:5dd8f394150b82e286ba2e6e"
+  "2026-11-18:новость:5dd8f394150b82e286ba2e6e",
+  "2026-11-18:новость:4b4e2caafe4a2077b3616d21"
  ],
  "dz_last_delivery": {
-  "source_id": 7026,
-  "message_id": 679,
+  "source_id": 7027,
+  "message_id": 680,
   "kind": "новость"
  },
  "learn_attempt_day": "2026-11-18",
@@ -2272,7 +2275,7 @@
   "quote_matches": 18
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-18T12:39:19.206180+03:00",
+  "last_poll": "2026-11-18T12:41:19.297265+03:00",
   "cursor": "100",
   "posts": [
    {
