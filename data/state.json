@@ -3,7 +3,7 @@
   "1X2": 0.0,
   "OU25": 0.0
  },
- "learned": "2026-11-18",
+ "learned": "2026-11-19",
  "schedule_day": "2026-11-18",
  "content_slot": "2026-11-18-23",
  "news_seen": [
@@ -1567,7 +1567,7 @@
  "value_day": "2026-11-18",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-18",
- "site_stamp": "1158|7102|2026-11-18 23|4|590fcec2f481d158",
+ "site_stamp": "1158|7102|2026-11-19 00|4|4f7b4a6a9621d3c0",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1580,7 +1580,7 @@
    "NBA|401910015"
   ]
  },
- "value_check": "2026-11-18-7",
+ "value_check": "2026-11-19-0",
  "express_risk": {
   "msg": 7079,
   "legs": [
@@ -1863,7 +1863,7 @@
   "https://images.cybersport.ru/images/as-is/plain/9a/9aa55545-4ffb-4b08-a9b0-776d215f4b2c.jpg",
   "https://images.cybersport.ru/images/as-is/plain/5d/5db4f96c-cf81-42ba-917c-663a539efee5.jpg"
  ],
- "indexnow_day": "2026-11-18",
+ "indexnow_day": "2026-11-19",
  "vk_wall_err": null,
  "shorts_day": "2026-11-18",
  "shorts_err": {
@@ -2242,7 +2242,7 @@
   "message_id": 699,
   "kind": "новость"
  },
- "learn_attempt_day": "2026-11-18",
+ "learn_attempt_day": "2026-11-19",
  "learn_diagnostics": {
   "objective": "shared_lambda_1X2_OU25",
   "rows": 8000,
@@ -2254,10 +2254,10 @@
   "candidate_weight": 0.0,
   "weight": 0.0,
   "train_logloss": 0.8408782244313493,
-  "validation_logloss": 0.8189543264526356,
-  "validation_market_logloss": 0.8189543264526356
+  "validation_logloss": 0.8189543264526353,
+  "validation_market_logloss": 0.8189543264526353
  },
- "learned_at": "2026-11-18T00:00:33.701252+03:00",
+ "learned_at": "2026-11-19T00:00:48.380082+03:00",
  "learn_version": "shared-lambda-v2",
  "learn_error": null,
  "learn_retry_at": 0,
@@ -2307,29 +2307,29 @@
    }
   },
   "source": {
-   "last_success": "2026-11-18T20:40:48.087730+00:00",
-   "parsed": 330,
-   "added": 55,
-   "discovered_matches": 17,
-   "pages": 15,
+   "last_success": "2026-11-18T21:00:48.380082+00:00",
+   "parsed": 341,
+   "added": 71,
+   "discovered_matches": 20,
+   "pages": 17,
    "errors": [],
    "parsed_by_sport": {
     "soccer": 50,
     "ice-hockey": 50,
-    "basketball": 50,
+    "basketball": 45,
     "tennis": 50,
     "csgo": 50,
     "dota2": 50
    }
   },
   "error": null,
-  "tips": 5121,
+  "tips": 5136,
   "snapshots": 84,
-  "unmapped_markets": 7750,
+  "unmapped_markets": 7806,
   "quote_matches": 18
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-18T23:58:48.170835+03:00",
+  "last_poll": "2026-11-19T00:00:48.380082+03:00",
   "cursor": "119",
   "posts": [
    {
