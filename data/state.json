@@ -7,9 +7,6 @@
  "schedule_day": "2026-11-18",
  "content_slot": "2026-11-18-13",
  "news_seen": [
-  "https://www.sport-express.ru/hockey/nhl/news/napadayuschiy-floridy-sem-raynhart-nabral-700-ochko-v-nhl-i-dovel-karernyy-pokazatel-do-701-15-noyabrya-2026-2475183/",
-  "https://www.sport-express.ru/football/news/krasnoe-znamya-vtoroy-god-podryad-stalo-pobeditelem-tretey-ligi-2475218/",
-  "https://www.sport-express.ru/football/england/news/rays-nadeetsya-podpisat-novyy-kontrakt-s-arsenalom-2475213/",
   "https://www.sport-express.ru/football/nation-league/news/yamal-sygraet-pod-10-m-nomerom-za-sbornuyu-ispanii-protiv-anglii-2475203/",
   "https://www.sport-express.ru/football/rfpl/news/agenty-zhedsona-fernandesha-oprovergli-sluhi-ob-uhode-futbolista-iz-spartaka-2475200/",
   "https://www.sport-express.ru/basketball/nba/news/mayami-ustanovil-klubnyy-rekord-devyat-igrokov-sdelali-blok-shoty-v-odnom-matche-nba-15-noyabrya-2026-2475228/",
@@ -506,9 +503,12 @@
   "https://www.sport-express.ru/hockey/khl/news/salavat-yulaev-vnes-forvarda-sheldona-rempala-v-spisok-travmirovannyh-2476189/",
   "https://www.sport-express.ru/hockey/khl/news/spartak-obmenyal-malceva-i-prava-na-morozova-v-metallurg-na-ishakova-nechaeva-i-kompensaciyu-2476187/",
   "https://www.sport-express.ru/football/euro/news/rfs-ne-budet-uchastvovat-v-zherebevke-otbora-na-evro-2028-rossiya-ne-vystupit-na-etom-turnire-2476236/",
-  "https://www.sport-express.ru/football/rfpl/news/zaschitnik-cska-reys-rasskazal-o-vosstanovlenii-posle-povrezhdeniya-pauza-na-sbornye-poshla-mne-na-polzu-2476218/"
+  "https://www.sport-express.ru/football/rfpl/news/zaschitnik-cska-reys-rasskazal-o-vosstanovlenii-posle-povrezhdeniya-pauza-na-sbornye-poshla-mne-na-polzu-2476218/",
+  "https://www.sport-express.ru/stavki-na-sport/prognozy/news/daniil-medvedev-karlos-alkaras-prognoz-na-match-itogovogo-turnira-atp-18-noyabrya-2026-goda-2476191/",
+  "na-cobblestone-v-cs2-nashli-paskhalku-s-zhutkim-poslaniyem",
+  "razbirayeshsya-v-cs2-ugadai-chempiona-pgl-major-singapore-20261-i-poluchi-shans"
  ],
- "news_i": 4,
+ "news_i": 0,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1701,7 +1701,7 @@
  "streak_day": {
   "2026-11-15": 2
  },
- "news_next": "2026-11-18T14:18:21.759591+03:00",
+ "news_next": "2026-11-18T14:46:21.817963+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1848,7 +1848,8 @@
   "https://images.cybersport.ru/images/as-is/plain/33/330e0115-6a5b-4e50-9ae3-e113f64c0c3f.jpg",
   "https://upload.wikimedia.org/wikipedia/commons/4/42/CSKA_Moscow_and_Pakistan_national_football_team_at_the_KMC_Stadium%2C_Karachi_in_1969.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
   "https://images.cybersport.ru/images/as-is/plain/86/86e852b6-a4b5-4abc-b0f1-0fd057fc095f.jpg",
-  "https://upload.wikimedia.org/wikipedia/commons/0/0c/MatheusReis2021.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+  "https://upload.wikimedia.org/wikipedia/commons/0/0c/MatheusReis2021.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "https://images.cybersport.ru/images/as-is/plain/bd/bd2b4bd1-5b73-4069-b134-9f41baed2168.jpg"
  ],
  "indexnow_day": "2026-11-18",
  "vk_wall_err": null,
@@ -2052,7 +2053,8 @@
   "7026",
   "7027",
   "7031",
-  "7033"
+  "7033",
+  "7037"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -2188,11 +2190,12 @@
   "2026-11-18:новость:5dd8f394150b82e286ba2e6e",
   "2026-11-18:новость:4b4e2caafe4a2077b3616d21",
   "2026-11-18:новость:382910e612a3b4570e45a611",
-  "2026-11-18:новость:8e04924ec520e4ea5180c8c7"
+  "2026-11-18:новость:8e04924ec520e4ea5180c8c7",
+  "2026-11-18:новость:8214ca948372232e7103cb95"
  ],
  "dz_last_delivery": {
-  "source_id": 7033,
-  "message_id": 682,
+  "source_id": 7037,
+  "message_id": 683,
   "kind": "новость"
  },
  "learn_attempt_day": "2026-11-18",
@@ -2260,10 +2263,10 @@
    }
   },
   "source": {
-   "last_success": "2026-11-18T10:57:21.735791+00:00",
-   "parsed": 357,
-   "added": 45,
-   "discovered_matches": 18,
+   "last_success": "2026-11-18T11:19:21.817963+00:00",
+   "parsed": 360,
+   "added": 44,
+   "discovered_matches": 20,
    "pages": 18,
    "errors": [],
    "parsed_by_sport": {
@@ -2276,13 +2279,13 @@
    }
   },
   "error": null,
-  "tips": 4707,
+  "tips": 4722,
   "snapshots": 82,
-  "unmapped_markets": 6858,
+  "unmapped_markets": 6887,
   "quote_matches": 18
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-18T14:17:21.236582+03:00",
+  "last_poll": "2026-11-18T14:19:21.817963+03:00",
   "cursor": "103",
   "posts": [
    {
