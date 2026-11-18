@@ -1567,7 +1567,7 @@
  "value_day": "2026-11-17",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-17",
- "site_stamp": "1153|7017|2026-11-18 10|4|f68856ef1bfecdf6",
+ "site_stamp": "1154|7018|2026-11-18 10|4|ddf61a60f85b9efe",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1721,7 +1721,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 7017,
+ "dz_last": 7018,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2257,43 +2257,9 @@
   "quote_matches": 18
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-18T10:00:48.571754+03:00",
-  "cursor": "94",
+  "last_poll": "2026-11-18T10:02:49.008376+03:00",
+  "cursor": "96",
   "posts": [
-   {
-    "post_id": 511,
-    "url": "https://vk.com/wall-228963529_511",
-    "title": "Газизов: «Динамо» пока не рассматривает матчи с медиакомандами",
-    "text": "Газизов: «Динамо» пока не рассматривает матчи с медиакомандами\n\nрџ“° «Динамо» отказывается от шоу-матчей с медиакомандами!\n\nвљЅпёЏ Генеральный директор махачкалинского «Динамо» Шамиль Газизов в интервью «СЭ» чётко сказал, что клуб сейчас не планирует организовывать товарищеские встречи с медийными командами. «Сейчас нам это неинтересно», – подчеркнул он.\n\n#футбол #Газизов #Динамо #новостиспорта #спорт #главное #аиставит\n\nрџ“Љ Подробнее на сайте рџ‘‡",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": true,
-     "details_present": true,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-16T12:17:24.276715+03:00"
-   },
-   {
-    "post_id": 512,
-    "url": "https://vk.com/wall-228963529_512",
-    "title": "Seized поздравил FURIA с триумфом и предрек нелёгкий прощальный матч для FalleN",
-    "text": "Seized поздравил FURIA с триумфом и предрек нелёгкий прощальный матч для FalleN\n\nрџ± Бывший киберспортсмен Денис «Seized» Костин опубликовал в X эмоциональный пост после того, как «FURIA Esports» завоевала титул BLAST Rivals Fall 2026 по CS2.\n\n#киберспорт #CS2 #новостиспорта #спорт #главное #аиставит\n\nрџ“Љ Подробнее на сайте рџ‘‡",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": true,
-     "details_present": true,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-16T13:21:32.990426+03:00"
-   },
    {
     "post_id": 513,
     "url": "https://vk.com/wall-228963529_513",
@@ -2769,6 +2735,40 @@
     },
     "status": "needs_review",
     "observed_at": "2026-11-18T01:35:50.861594+03:00"
+   },
+   {
+    "post_id": 544,
+    "url": "https://vk.com/wall-228963529_544",
+    "title": "Гришин открыл, как Корнаухов без объяснений уволил его из академии ЦСКА",
+    "text": "вљЎпёЏГришин раскрыл, как неожиданный звонок от Корнаухова разорвал его карьеру в академии ЦСКА.",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": false,
+     "details_present": false,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-18T10:02:49.008376+03:00"
+   },
+   {
+    "post_id": 545,
+    "url": "https://vk.com/wall-228963529_545",
+    "title": "Гришин готов к новому возвращению в ЦСКА: клуб – мой дом",
+    "text": "рџ“° Бывший полузащитник и тренер «ЦСКА» Александр Гришин в интервью «СЭ» заявил, что не исключает третьего возвращения в армейский клуб. Он подчеркнул, что ЦСКА для него – родной, а «если бы не клуб, я был бы никем».",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": false,
+     "details_present": false,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-18T10:02:49.008376+03:00"
    }
   ],
   "status": "observing"
