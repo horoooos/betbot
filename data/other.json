@@ -8394,5 +8394,117 @@
   "top": false,
   "msg_id": 7063,
   "btn": 4
+ },
+ "DOTA|1793347": {
+  "id": "1793347",
+  "div": "DOTA",
+  "sport": "esports",
+  "streams": [
+   {
+    "provider": "twitch",
+    "channel": "1win_dota_ru",
+    "url": "https://www.twitch.tv/1win_dota_ru",
+    "language": "ru",
+    "source": "PandaScore",
+    "official": true,
+    "status": "listed",
+    "access": "unknown"
+   },
+   {
+    "provider": "twitch",
+    "channel": "1win_dota",
+    "url": "https://www.twitch.tv/1win_dota",
+    "language": "en",
+    "source": "PandaScore",
+    "official": true,
+    "status": "listed",
+    "access": "unknown"
+   }
+  ],
+  "tournament": "1win Essence · Season 3 2026",
+  "bo": 5,
+  "kickoff": "2026-11-18T19:00:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "tier": "a",
+  "status": "reviewed",
+  "home": {
+   "id": "1669",
+   "name": "Team Spirit",
+   "ru": "Team Spirit",
+   "logo": "https://cdn-api.pandascore.co/images/team/image/1669/153px_team_spirit_2022_lightmode.png",
+   "color": "3b4a7a",
+   "score": 0,
+   "winner": false
+  },
+  "away": {
+   "id": "135712",
+   "name": "PARIVISION",
+   "ru": "PARIVISION",
+   "logo": "https://cdn-api.pandascore.co/images/team/image/135712/250px_parivision_allmode.png",
+   "color": "3b4a7a",
+   "score": 0,
+   "winner": false
+  },
+  "odds": {},
+  "probs": {
+   "ES_W1": 0.7663534429028591,
+   "ES_W2": 0.23364655709714088,
+   "ES_FULL": 0.681613273870775,
+   "ES_DRY": 0.3183867261292251,
+   "ES_S3:0": 0.2758716129117541,
+   "ES_S0:3": 0.042515113217470965,
+   "ES_S3:1": 0.2888524454935628,
+   "ES_S1:3": 0.08302972496598807,
+   "ES_S3:2": 0.20162938449754192,
+   "ES_S2:3": 0.10810171891368206,
+   "ES_MAP1": 0.9574848867825291,
+   "ES_MAP2": 0.7241283870882459
+  },
+  "labels": {
+   "ES_W1": "Победа: Team Spirit",
+   "ES_W2": "Победа: PARIVISION",
+   "ES_FULL": "Больше 3 карт",
+   "ES_DRY": "Всухую (3:0 или 0:3)",
+   "ES_S3:0": "Счёт по картам 3:0",
+   "ES_S0:3": "Счёт по картам 0:3",
+   "ES_S3:1": "Счёт по картам 3:1",
+   "ES_S1:3": "Счёт по картам 1:3",
+   "ES_S3:2": "Счёт по картам 3:2",
+   "ES_S2:3": "Счёт по картам 2:3",
+   "ES_MAP1": "Team Spirit возьмёт хотя бы карту",
+   "ES_MAP2": "PARIVISION возьмёт хотя бы карту"
+  },
+  "real": {},
+  "center": "BO5 · Эло 1816 : 1610",
+  "bar": [
+   0.7663534429028591,
+   0,
+   0.23364655709714088
+  ],
+  "model": {
+   "elo": [
+    1816.3067975060399,
+    1609.958906709791
+   ],
+   "src": "Эло"
+  },
+  "stavka_signal": {
+   "status": "insufficient_opinions",
+   "weight": 0.0
+  },
+  "main": {
+   "key": "ES_W1",
+   "label": "Победа: Team Spirit",
+   "p": 0.7664,
+   "odds": 1.21,
+   "est": true,
+   "stake": 1.0
+  },
+  "bold": {},
+  "open": {},
+  "top": false,
+  "msg_id": 7065,
+  "btn": 4
  }
 }

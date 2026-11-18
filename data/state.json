@@ -7,7 +7,6 @@
  "schedule_day": "2026-11-18",
  "content_slot": "2026-11-18-16",
  "news_seen": [
-  "https://www.sport-express.ru/cybersport/esports/news/bilibili-gaming-obygrala-gen-g-i-vpervye-vyigrala-worlds-po-league-of-legends-2475255/",
   "https://www.sport-express.ru/cybersport/esports/news/furia-obygrala-team-spirit-so-schetom-3-0-v-finale-blast-rivals-fall-2026-2475254/",
   "https://www.sport-express.ru/hockey/world-u20/news/zaharova-nazvala-proyavleniem-neonacizma-nedopusk-rossii-na-molodezhnyy-chm-po-hokkeyu-2475289/",
   "https://www.sport-express.ru/hockey/khl/news/razin-izvinilsya-pered-bolelschikami-ska-za-igru-komandy-2475288/",
@@ -506,9 +505,10 @@
   "sh1ro-i-tn1r-dobavili-v-stikery-na-pgl-major-singapore-2026-polovinki-odnogo",
   "https://www.sport-express.ru/chess/news/glava-fshr-filatov-prizval-rfs-i-drugie-sportivnye-federacii-rossii-perehodit-v-aziyu-2476307/",
   "https://www.sport-express.ru/football/saudovskaya-araviya/news/gvardiola-otkazalsya-rassmatrivat-predlozheniya-iz-saudovskoy-aravii-2476297/",
-  "https://www.sport-express.ru/football/rfpl/news/trener-cska-igdisamov-dlya-nas-bolshaya-chest-byt-bazovym-klubom-sbornoy-rossii-2476195/"
+  "https://www.sport-express.ru/football/rfpl/news/trener-cska-igdisamov-dlya-nas-bolshaya-chest-byt-bazovym-klubom-sbornoy-rossii-2476195/",
+  "chopper-pokazal-pick-em-na-pervyi-yetap-pgl-major-singapore-2026"
  ],
- "news_i": 1,
+ "news_i": 2,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1567,7 +1567,7 @@
  "value_day": "2026-11-18",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-18",
- "site_stamp": "1155|7064|2026-11-18 17|4|2aae5bbd63978f1d",
+ "site_stamp": "1155|7066|2026-11-18 18|4|6e16ebbb1e752b17",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1580,7 +1580,7 @@
    "NBA|401910015"
   ]
  },
- "value_check": "2026-11-18-5",
+ "value_check": "2026-11-18-6",
  "express_risk": {
   "msg": 6767,
   "legs": [
@@ -1701,7 +1701,7 @@
  "streak_day": {
   "2026-11-15": 2
  },
- "news_next": "2026-11-18T17:59:02.716112+03:00",
+ "news_next": "2026-11-18T18:30:02.900721+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1722,7 +1722,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 7064,
+ "dz_last": 7066,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -1855,7 +1855,8 @@
   "https://upload.wikimedia.org/wikipedia/commons/2/2d/First_ever_ice_hockey_game_in_Australia.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
   "https://upload.wikimedia.org/wikipedia/commons/5/5d/FC_Dynamo_Kyiv_Ultras_-_%D0%A4%D0%9A_%D0%94%D0%B8%D0%BD%D0%B0%D0%BC%D0%BE_%D0%9A%D0%B8%D0%B5%D0%B2_%D0%A3%D0%BB%D1%8C%D1%82%D1%80%D0%B0%D1%81_%2822326227116%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
   "https://images.cybersport.ru/images/as-is/plain/9d/9de3c9c0-d1f0-49c6-af94-4146948538e6.jpg",
-  "https://upload.wikimedia.org/wikipedia/commons/e/e8/Maksim_Borisko.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+  "https://upload.wikimedia.org/wikipedia/commons/e/e8/Maksim_Borisko.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "https://images.cybersport.ru/images/as-is/plain/7d/7dec36b5-9025-43d9-8999-fac97e64aba7.jpg"
  ],
  "indexnow_day": "2026-11-18",
  "vk_wall_err": null,
@@ -2066,7 +2067,8 @@
   "7047",
   "7052",
   "7056",
-  "7060"
+  "7060",
+  "7067"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -2209,11 +2211,12 @@
   "2026-11-18:новость:89bb0e61c9d514c9a5969129",
   "2026-11-18:новость:6ce85d909ff773807a1e1de4",
   "2026-11-18:новость:3a19a0f1e294428acfe12d99",
-  "2026-11-18:новость:5cbd0700576399b951ed30ed"
+  "2026-11-18:новость:5cbd0700576399b951ed30ed",
+  "2026-11-18:новость:358bb6cb6f28c5fb7d588d80"
  ],
  "dz_last_delivery": {
-  "source_id": 7060,
-  "message_id": 689,
+  "source_id": 7067,
+  "message_id": 690,
   "kind": "новость"
  },
  "learn_attempt_day": "2026-11-18",
@@ -2298,12 +2301,12 @@
   },
   "error": null,
   "tips": 4847,
-  "snapshots": 82,
+  "snapshots": 83,
   "unmapped_markets": 7167,
   "quote_matches": 18
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-18T17:58:02.755104+03:00",
+  "last_poll": "2026-11-18T18:00:02.900721+03:00",
   "cursor": "109",
   "posts": [
    {
