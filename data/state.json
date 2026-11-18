@@ -2306,43 +2306,9 @@
   "quote_matches": 18
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-18T18:28:03.010631+03:00",
-  "cursor": "109",
+  "last_poll": "2026-11-18T18:30:02.813043+03:00",
+  "cursor": "111",
   "posts": [
-   {
-    "post_id": 528,
-    "url": "https://vk.com/wall-228963529_528",
-    "title": "«Локомотив» и Галактионов договорились о расставании",
-    "text": "«Локомотив» и Галактионов договорились о расставании\n\nрџ“° «Локомотив» и главный тренер Михаил Галактионов достигли соглашения о расторжении контракта – официально всё будет оформлено во вторник, 17 ноября. По данным источника, клуб заплатит специалисту менее 60 млн рублей, что существенно ниже суммы, прописанной в договоре.\n\n#футбол #РПЛ #Галактионов #Локомотив #новостиспорта #спорт #главное #аиставит\n\nрџ“Љ Подробнее на сайте рџ‘‡",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": true,
-     "details_present": true,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-17T02:02:23.478143+03:00"
-   },
-   {
-    "post_id": 529,
-    "url": "https://vk.com/wall-228963529_529",
-    "title": "m0NESY рекордсмен EVP: 19 наград в CS2",
-    "text": "m0NESY рекордсмен EVP: 19 наград в CS2\n\nрџ“° m0NESY переписал историю EVP в Counter-Strike 2 – Илья «m0NESY» Осипов из «Team Falcons» стал абсолютным лидером по количеству этих наград.\n\nвљЎпёЏ По данным [#alias|HLTV.org|HLTV.org], за карьеру в CS2 он получил EVP 19 раз. Награда вручается только «исключительно ценным игрокам», что подчёркивает его вклад в каждую карту.\n\n#киберспорт #CS2 #новостиспорта #спорт #главное #аиставит\n\nрџ“Љ Подробнее на сайте рџ‘‡",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": true,
-     "details_present": true,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-17T11:35:34.042881+03:00"
-   },
    {
     "post_id": 530,
     "url": "https://vk.com/wall-228963529_530",
@@ -2818,6 +2784,40 @@
     },
     "status": "needs_review",
     "observed_at": "2026-11-18T17:26:02.796188+03:00"
+   },
+   {
+    "post_id": 559,
+    "url": "https://vk.com/wall-228963529_559",
+    "title": "Chopper предсказал 8 команд-пролетариев PGL Major Singapore 2026",
+    "text": "рџ“° Леонид «chopper» Вишняков, бывший киберспортсмен, в своем Telegram-канале выложил собственный Pick'Em Challenge на первый этап PGL Major Singapore 2026 по CS2. Он раскрыл, какие восемь коллективов, по его мнению, заслужат место в следующей фазе турнира.",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": false,
+     "details_present": false,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-18T18:30:02.813043+03:00"
+   },
+   {
+    "post_id": 560,
+    "url": "https://vk.com/wall-228963529_560",
+    "title": "Игдисамов: ЦСКА — гордость сборной России",
+    "text": "рџ“° Главный тренер «ЦСКА» Дмитрий Игдисамов прокомментировал работу клуба в период паузы на матчи сборных, подчеркнув, что команда выступает базой для национальной сборной России.",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": false,
+     "details_present": false,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-18T18:30:02.813043+03:00"
    }
   ],
   "status": "observing"
