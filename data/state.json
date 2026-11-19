@@ -1568,7 +1568,7 @@
  "value_day": "2026-11-19",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-19",
- "site_stamp": "1184|7314|2026-11-19 22|4|bfcf5f2de2f08b45",
+ "site_stamp": "1184|7316|2026-11-19 22|4|bfcf5f2de2f08b45",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1720,7 +1720,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 7314,
+ "dz_last": 7316,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2418,43 +2418,9 @@
   "quote_matches": 19
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-19T22:07:07.047756+03:00",
-  "cursor": "144",
+  "last_poll": "2026-11-19T22:09:07.842217+03:00",
+  "cursor": "146",
   "posts": [
-   {
-    "post_id": 564,
-    "url": "https://vk.com/wall-228963529_564",
-    "title": "Valve отклонила стикер jL с отсылкой к apEX на PGL Major Singapore 2026",
-    "text": "рџ“° Valve отклонила вариант именного стикера, который профессиональный игрок в CS2 Юстинас «jL» Лекавичус хотел оформить в честь своего наставника — датского звёздного снайпера Дана «apEX» Мадесклера. По словам jL, идея заключалась в подписи, отсылающей к apEX, но Valve посчала её несовместимой с правилами.",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": false,
-     "details_present": false,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-18T20:36:05.803335+03:00"
-   },
-   {
-    "post_id": 565,
-    "url": "https://vk.com/wall-228963529_565",
-    "title": "Медведев уступил Алькарасу 2:6, 4:6 в Турине",
-    "text": "вљЎпёЏ Даниил Медведев потерпел поражение от испанца Карлоса Алькараса со счётом 2:6, 4:6 во втором туре группового этапа Итогового турнира ATP в Турине. Это был второй матч россиянина в турнире.",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": false,
-     "details_present": false,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-18T21:40:06.716529+03:00"
-   },
    {
     "post_id": 566,
     "url": "https://vk.com/wall-228963529_566",
@@ -2930,6 +2896,40 @@
     },
     "status": "needs_review",
     "observed_at": "2026-11-19T21:06:46.226449+03:00"
+   },
+   {
+    "post_id": 594,
+    "url": "https://vk.com/wall-228963529_594",
+    "title": "Расширение РПЛ до 20 клубов: зимние сборы и сокращённый летний перерыв",
+    "text": "рџ“° В рамках проекта по расширению Российской Премьер-лиги до 20 команд предложено радикально изменить календарь: часть матчей перенести в зимние месяцы и сократить традиционный летний перерыв.",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": false,
+     "details_present": false,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-19T22:09:07.842217+03:00"
+   },
+   {
+    "post_id": 595,
+    "url": "https://vk.com/wall-228963529_595",
+    "title": "Луис Энрике может уйти из «Зенита» в «Аль-Иттихад» за 35-40 млн €",
+    "text": "рџ“° Вингер «Зенита» Луис Энрике, 25-летний бразилец, уже находится в фокусе саудовского клуба «Аль-Иттихад». По сведениям ESPN Brasil, саудовцы возобновили интерес к игроку и напрямую связались с ним, готовя предложение в зимнее трансферное окно.",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": false,
+     "details_present": false,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-19T22:09:07.842217+03:00"
    }
   ],
   "status": "observing"
