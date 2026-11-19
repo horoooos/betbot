@@ -7,10 +7,6 @@
  "schedule_day": "2026-11-19",
  "content_slot": "2026-11-19-22",
  "news_seen": [
-  "https://www.sport-express.ru/football/rfpl/news/zaschitnik-cska-danilov-zanyal-trete-mesto-v-reytinge-glavnyh-talantov-rossii-po-versii-se-2475623/",
-  "https://www.sport-express.ru/hockey/khl/news/18-letniy-borin-stal-samym-molodym-avtorom-gola-amura-v-khl-2475653/",
-  "https://www.sport-express.ru/hockey/europe/news/yaromir-yagr-zayavil-on-oficialno-ne-obyavlyal-o-zavershenii-karery-kogda-mozhet-proyti-proschalnyy-match-2475641/",
-  "https://www.sport-express.ru/hockey/world/news/iihf-potrebovala-otvoda-dvuh-arbitrov-cas-po-delu-o-dopuske-sbornoy-rossii-2475631/",
   "datamainer-v-dota-2-nachali-banit-chiterov-abyuzivshikh-upravleniye-inventarem",
   "team-spirit-vyshla-v-final-verkhnei-setki-essence-iii-obygrav-parivision",
   "https://www.sport-express.ru/hockey/khl/news/seriya-bullitov-v-matche-cska-i-amura-voshla-v-top-5-samyh-prodolzhitelnyh-v-istorii-khl-2475665/",
@@ -506,9 +502,13 @@
   "https://www.sport-express.ru/football/transfers/news/manchester-yunayted-mozhet-kupit-palmera-i-holla-posle-prihoda-pochettino-2476706/",
   "https://www.sport-express.ru/football/rfpl/news/v-proekte-rasshireniya-rpl-do-20-klubov-predlozhili-provodit-matchi-na-zimnih-sborah-i-sokratit-letniy-pereryv-2476705/",
   "https://www.sport-express.ru/hockey/world/news/v-cas-otkazalis-rassmatrivat-trebovanie-iihf-ob-otvode-dvuh-sudey-po-delu-sbornyh-rossii-2476712/",
-  "https://www.sport-express.ru/football/rfpl/news/espn-brasil-luis-enrike-mozhet-pereyti-iz-zenita-v-al-ittihad-za-35-40-millionov-evro-2476693/"
+  "https://www.sport-express.ru/football/rfpl/news/espn-brasil-luis-enrike-mozhet-pereyti-iz-zenita-v-al-ittihad-za-35-40-millionov-evro-2476693/",
+  "https://www.sport-express.ru/basketball/news/brest-vstretitsya-s-gomelskimi-rysyami-v-chempionate-belarusi-po-basketbolu-2476353/",
+  "https://www.sport-express.ru/football/england/news/pochettino-o-zadachah-v-manchester-yunayted-glavnoe-sozdat-kulturu-i-dat-igrokam-raskrytsya-2476690/",
+  "https://www.sport-express.ru/football/spain/news/bellingem-priznan-luchshim-igrokom-reala-v-oktyabre-2476687/",
+  "https://www.sport-express.ru/football/rfpl/news/gerkus-pozhelal-udachi-ovchinnkovu-v-lokomotive-2476664/"
  ],
- "news_i": 4,
+ "news_i": 1,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1698,7 +1698,7 @@
  "streak_day": {
   "2026-11-19": 1
  },
- "news_next": "2026-11-19T22:06:46.626118+03:00",
+ "news_next": "2026-11-19T22:36:07.047756+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1891,7 +1891,8 @@
   "https://images.cybersport.ru/images/as-is/plain/0d/0de1ab2b-30f5-44af-a2ed-b9307e397776.jpg",
   "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/Kashima_Stadium_6.JPG/1280px-Kashima_Stadium_6.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
   "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d8/Shrewsbury_Schoolboys_v_Stafford_football_match_%281463474%29.jpg/1280px-Shrewsbury_Schoolboys_v_Stafford_football_match_%281463474%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-  "https://ss.sport-express.ru/userfiles/materials/224/2245052/1180x665.jpg"
+  "https://ss.sport-express.ru/userfiles/materials/224/2245052/1180x665.jpg",
+  "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/ATL-Madrid-Lokomotiv003.jpg/1280px-ATL-Madrid-Lokomotiv003.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
  ],
  "indexnow_day": "2026-11-19",
  "vk_wall_err": null,
@@ -2140,7 +2141,8 @@
   "7293",
   "7298",
   "7301",
-  "7311"
+  "7311",
+  "7315"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -2321,11 +2323,12 @@
   "2026-11-19:новость:da67ae2e7778a2fa09ed86fa",
   "2026-11-19:новость:bece446a94cf3a934922983b",
   "2026-11-19:новость:3b5ab2a0d18b646d04b2e21a",
-  "2026-11-19:новость:e6776ae4170ca748bb5e3708"
+  "2026-11-19:новость:e6776ae4170ca748bb5e3708",
+  "2026-11-19:новость:44693c65866a2ad4ca82b24a"
  ],
  "dz_last_delivery": {
-  "source_id": 7311,
-  "message_id": 727,
+  "source_id": 7315,
+  "message_id": 728,
   "kind": "новость"
  },
  "learn_attempt_day": "2026-11-19",
@@ -2415,7 +2418,7 @@
   "quote_matches": 19
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-19T22:05:07.043426+03:00",
+  "last_poll": "2026-11-19T22:07:07.047756+03:00",
   "cursor": "144",
   "posts": [
    {
