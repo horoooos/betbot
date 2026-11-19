@@ -2439,43 +2439,9 @@
   "quote_matches": 20
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-20T02:19:32.283972+03:00",
-  "cursor": "152",
+  "last_poll": "2026-11-20T02:21:32.670666+03:00",
+  "cursor": "154",
   "posts": [
-   {
-    "post_id": 572,
-    "url": "https://vk.com/wall-228963529_572",
-    "title": "Патч 7.42: новые способности Dota 2 – Realm, Pack Hunter, Scarab",
-    "text": "рџ“° Разработчики сразу добавили их сразу нескольким героям, а объёмный патчноут заставил многих пропустить детали.",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": false,
-     "details_present": false,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-19T01:51:35.810390+03:00"
-   },
-   {
-    "post_id": 573,
-    "url": "https://vk.com/wall-228963529_573",
-    "title": "Расулов: Шварц знает, как вывести «Динамо» на победный путь",
-    "text": "рџ±вљЅпёЏ Голкипер «Динамо» Курбан Расулов в интервью «СЭ» раскрыл, почему работа с тренером Сандро Шварцем даёт команде ощущение стабильности. По его словам, немец уже давно знаком с коллективом и умеет «делать из футболистов «Динамо» настоящую команду».",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": false,
-     "details_present": false,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-19T10:21:38.112920+03:00"
-   },
    {
     "post_id": 574,
     "url": "https://vk.com/wall-228963529_574",
@@ -2951,6 +2917,40 @@
     },
     "status": "needs_review",
     "observed_at": "2026-11-20T01:19:03.821949+03:00"
+   },
+   {
+    "post_id": 602,
+    "url": "https://vk.com/wall-228963529_602",
+    "title": "Эксперты проекта расширения РПЛ критикуют отсутствие футбола на востоке",
+    "text": "вљЎпёЏ Восток России остаётся в тени РПЛ, несмотря на планы расширения!",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": false,
+     "details_present": false,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-20T02:21:32.670666+03:00"
+   },
+   {
+    "post_id": 603,
+    "url": "https://vk.com/wall-228963529_603",
+    "title": "Заболотный дисквалифицирован до 25 декабря 2026 года",
+    "text": "рџ“° Шокирующее решение: дисквалификация Заболотного продлена до конца года!",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": false,
+     "details_present": false,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-20T02:21:32.670666+03:00"
    }
   ],
   "status": "observing"
