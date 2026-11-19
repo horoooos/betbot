@@ -7564,25 +7564,25 @@
   "kickoff": "2026-11-19T03:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Wed, November 18th at 7:30 PM EST",
   "clock": "0.0",
   "period": 0,
   "home": {
+   "color": "000000",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/bkn.png",
    "id": "17",
    "name": "Brooklyn Nets",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/bkn.png",
-   "color": "000000",
    "score": "0",
    "record": "3-10",
    "periods": [],
    "ru": "Бруклин Нетс"
   },
   "away": {
+   "color": "ce1141",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/chi.png",
    "id": "4",
    "name": "Chicago Bulls",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/chi.png",
-   "color": "ce1141",
    "score": "0",
    "record": "3-10",
    "periods": [],
@@ -7665,7 +7665,9 @@
   "btn": 4,
   "close": {
    "BB_ML_H": 0.5497
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null
  },
  "NBA|401910012": {
   "id": "401910012",

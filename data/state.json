@@ -1568,7 +1568,7 @@
  "value_day": "2026-11-18",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-18",
- "site_stamp": "1170|7212|2026-11-19 05|4|ed8efbfd82864b1e",
+ "site_stamp": "1171|7214|2026-11-19 05|4|e5e14e5e4d646015",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1627,7 +1627,9 @@
      "000000",
      "ce1141"
     ],
-    "label": "Победа: Бруклин Нетс (с ОТ)"
+    "label": "Победа: Бруклин Нетс (с ОТ)",
+    "win": false,
+    "score": "107:137"
    },
    {
     "sport": "football",
@@ -1697,7 +1699,7 @@
   ],
   "odds": 17.336741355040797,
   "day": "2026-11-18",
-  "done": false
+  "done": true
  },
  "streak_day": {
   "2026-11-19": 1
@@ -1723,7 +1725,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 7212,
+ "dz_last": 7214,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2289,35 +2291,35 @@
     "weight": 0.0,
     "settled_matches": 17,
     "required_matches": 100,
-    "trained_at": "2026-11-19T02:34:57.091033+00:00"
+    "trained_at": "2026-11-19T02:50:57.541658+00:00"
    },
    "basketball": {
     "status": "collecting",
     "weight": 0.0,
-    "settled_matches": 22,
+    "settled_matches": 23,
     "required_matches": 100,
-    "trained_at": "2026-11-19T02:34:57.091033+00:00"
+    "trained_at": "2026-11-19T02:50:57.541658+00:00"
    },
    "tennis": {
     "status": "collecting",
     "weight": 0.0,
     "settled_matches": 2,
     "required_matches": 100,
-    "trained_at": "2026-11-19T02:34:57.091033+00:00"
+    "trained_at": "2026-11-19T02:50:57.541658+00:00"
    },
    "esports:CS2": {
     "status": "collecting",
     "weight": 0.0,
     "settled_matches": 0,
     "required_matches": 100,
-    "trained_at": "2026-11-19T02:34:57.091033+00:00"
+    "trained_at": "2026-11-19T02:50:57.541658+00:00"
    },
    "esports:DOTA": {
     "status": "collecting",
     "weight": 0.0,
     "settled_matches": 0,
     "required_matches": 100,
-    "trained_at": "2026-11-19T02:34:57.091033+00:00"
+    "trained_at": "2026-11-19T02:50:57.541658+00:00"
    }
   },
   "source": {
@@ -2343,7 +2345,7 @@
   "quote_matches": 18
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-19T05:48:57.804884+03:00",
+  "last_poll": "2026-11-19T05:50:57.541658+03:00",
   "cursor": "123",
   "posts": [
    {
