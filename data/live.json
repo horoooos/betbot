@@ -1,40 +1,4 @@
 {
- "BRA|401841314": {
-  "msg": 7148,
-  "hs": 2,
-  "as": 1,
-  "goals": 3,
-  "kickoff": "2026-11-19T02:30:00+03:00",
-  "lt": {
-   "key": "1X",
-   "label": "1X",
-   "p": 0.697,
-   "fair": 1.44,
-   "min_odds": 1.51,
-   "minute": "25'",
-   "score": "0:0",
-   "sport": "football",
-   "result": "hit"
-  }
- },
- "BRA|401841313": {
-  "msg": 7149,
-  "hs": 2,
-  "as": 1,
-  "goals": 3,
-  "kickoff": "2026-11-19T02:30:00+03:00",
-  "lt": {
-   "key": "H",
-   "label": "П1",
-   "p": 0.756,
-   "fair": 1.32,
-   "min_odds": 1.39,
-   "minute": "26'",
-   "score": "1:1",
-   "sport": "football",
-   "result": "hit"
-  }
- },
  "NBA|401910007": {
   "msg": 7161,
   "hs": 121,
