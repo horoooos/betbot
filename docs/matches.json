@@ -821,7 +821,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-19-indiana-peysers-hyuston-rokets-401910008.html",
-"hs": "37",
+"hs": "38",
 "as": "51",
 "tip": "Ф2 (-9.5) · 1.93",
 "top": false,
@@ -922,7 +922,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-19-mayami-hit-miluoki-baks-401910009.html",
-"hs": "39",
+"hs": "44",
 "as": "28",
 "tip": "ТБ 235.5 · 1.91",
 "top": false,
@@ -1239,7 +1239,15 @@ null
 ]
 ]
 },
-"lt": null
+"lt": {
+"fair": 1.59,
+"label": "ТБ 1.5",
+"min_odds": 1.67,
+"minute": "27'",
+"p": 0.628,
+"result": null,
+"score": "0:0"
+}
 },
 {
 "sport": "football",
@@ -1384,7 +1392,15 @@ null
 ]
 ]
 },
-"lt": null
+"lt": {
+"fair": 1.5,
+"label": "X2",
+"min_odds": 1.58,
+"minute": "26'",
+"p": 0.665,
+"result": null,
+"score": "0:0"
+}
 },
 {
 "sport": "basketball",
@@ -1414,7 +1430,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-19-bruklin-nets-chikago-bullz-401910011.html",
-"hs": "14",
+"hs": "21",
 "as": "24",
 "tip": "П1 (с ОТ) · 1.81",
 "top": true,
@@ -1515,7 +1531,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-19-toronto-reptors-vashington-uizards-401910012.html",
-"hs": "15",
+"hs": "17",
 "as": "18",
 "tip": "П1 (с ОТ) · 1.57",
 "top": false,
