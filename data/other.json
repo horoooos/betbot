@@ -6847,25 +6847,25 @@
   "kickoff": "2026-11-19T03:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Wed, November 18th at 7:00 PM EST",
   "clock": "0.0",
   "period": 0,
   "home": {
+   "color": "860038",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/cle.png",
    "id": "5",
    "name": "Cleveland Cavaliers",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/cle.png",
-   "color": "860038",
    "score": "0",
    "record": "8-7",
    "periods": [],
    "ru": "Кливленд"
   },
   "away": {
+   "color": "5d76a9",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/mem.png",
    "id": "29",
    "name": "Memphis Grizzlies",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/mem.png",
-   "color": "5d76a9",
    "score": "0",
    "record": "10-4",
    "periods": [],
@@ -6948,7 +6948,9 @@
   "btn": 4,
   "close": {
    "BB_ML_H": 0.6462
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null
  },
  "NBA|401910008": {
   "id": "401910008",
