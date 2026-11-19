@@ -7,8 +7,6 @@
  "schedule_day": "2026-11-19",
  "content_slot": "2026-11-19-23",
  "news_seen": [
-  "https://www.sport-express.ru/hockey/khl/news/glavnyy-trener-admirala-bratash-ob-obmene-s-avtomobilistom-olson-ne-prinosil-nikakoy-polzy-komande-2475660/",
-  "https://www.sport-express.ru/hockey/nhl/news/napadayuschiy-bekett-senneke-sravnyalsya-s-meysonom-maktavishem-po-matcham-s-tremya-ochkami-za-anahaym-do-21-goda-2475664/",
   "https://www.sport-express.ru/hockey/nhl/news/konnor-makdevid-dognal-bobbi-klarka-po-peredacham-i-gordi-hou-po-matcham-s-tremya-ochkami-v-nhl-15-noyabrya-2026-2475663/",
   "https://www.sport-express.ru/basketball/nba/news/sky-news-nba-hochet-privlech-futbolnye-kluby-milan-pszh-barselona-i-real-k-finansovoy-podderzhke-nba-europe-2475662/",
   "https://www.sport-express.ru/basketball/nba/news/centrovoy-bruk-lopes-stal-samym-vozrastnym-igrokom-la-klippers-s-25-ochkami-za-match-nba-13-noyabrya-2026-2475647/",
@@ -506,9 +504,11 @@
   "https://www.sport-express.ru/football/rfpl/news/gerkus-pozhelal-udachi-ovchinnkovu-v-lokomotive-2476664/",
   "zeus-pokazal-pick-em-na-pervyi-yetap-pgl-major-singapore-2026",
   "https://www.sport-express.ru/hockey/khl/news/trener-neftehimika-grishin-ne-smog-priyti-na-press-konferenciyu-posle-matcha-so-ska-2476742/",
-  "https://www.sport-express.ru/football/rfpl/news/boyarskiy-nazval-zenit-edinstvennym-favoritom-chempionskoy-gonki-v-rpl-2476741/"
+  "https://www.sport-express.ru/football/rfpl/news/boyarskiy-nazval-zenit-edinstvennym-favoritom-chempionskoy-gonki-v-rpl-2476741/",
+  "https://www.sport-express.ru/tennis/atp/news/shelton-prokommentiroval-pobedu-nad-hodarom-na-itogovom-turnire-atp-2476764/",
+  "nix-klassno-chto-blast-slam-ix-budet-na-novom-patche-namnogo-interesneye-smotret"
  ],
- "news_i": 4,
+ "news_i": 0,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1698,7 +1698,7 @@
  "streak_day": {
   "2026-11-19": 1
  },
- "news_next": "2026-11-19T23:39:07.385349+03:00",
+ "news_next": "2026-11-20T00:13:07.744715+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1894,7 +1894,8 @@
   "https://ss.sport-express.ru/userfiles/materials/224/2245052/1180x665.jpg",
   "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/ATL-Madrid-Lokomotiv003.jpg/1280px-ATL-Madrid-Lokomotiv003.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
   "https://images.cybersport.ru/images/as-is/plain/67/67d3dce0-99ac-49fc-bfcc-7b467ee975ac.jpg",
-  "https://upload.wikimedia.org/wikipedia/commons/a/a9/Dmitry_Medvedev_16_May_2008-1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+  "https://upload.wikimedia.org/wikipedia/commons/a/a9/Dmitry_Medvedev_16_May_2008-1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "https://images.cybersport.ru/images/as-is/plain/f2/f2b6125a-e5dc-4cdf-9ece-e281e9c9cfa8.jpg"
  ],
  "indexnow_day": "2026-11-19",
  "vk_wall_err": null,
@@ -2146,7 +2147,8 @@
   "7311",
   "7315",
   "7318",
-  "7322"
+  "7322",
+  "7325"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -2330,11 +2332,12 @@
   "2026-11-19:новость:e6776ae4170ca748bb5e3708",
   "2026-11-19:новость:44693c65866a2ad4ca82b24a",
   "2026-11-19:новость:e163218099449ec6e8d0266b",
-  "2026-11-19:новость:48d402ddcfc8a27bdf37c1a7"
+  "2026-11-19:новость:48d402ddcfc8a27bdf37c1a7",
+  "2026-11-19:новость:e0d449e4f942afe50977f0e0"
  ],
  "dz_last_delivery": {
-  "source_id": 7322,
-  "message_id": 730,
+  "source_id": 7325,
+  "message_id": 731,
   "kind": "новость"
  },
  "learn_attempt_day": "2026-11-19",
@@ -2424,7 +2427,7 @@
   "quote_matches": 19
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-19T23:39:07.368834+03:00",
+  "last_poll": "2026-11-19T23:41:07.744715+03:00",
   "cursor": "149",
   "posts": [
    {
