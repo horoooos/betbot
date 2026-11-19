@@ -2397,43 +2397,9 @@
   "quote_matches": 19
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-19T17:44:13.531306+03:00",
-  "cursor": "136",
+  "last_poll": "2026-11-19T17:46:13.629463+03:00",
+  "cursor": "138",
   "posts": [
-   {
-    "post_id": 556,
-    "url": "https://vk.com/wall-228963529_556",
-    "title": "Чезганов: не хотел бить Котлярова, но получил 4-матчевую дисквализацию",
-    "text": "рџ± Форвард «Адмирала» Егор Чезганов получил четырёхматчевую дисквалификацию после эпизода с форвардом «Спартака» Ильёй Котляровым в матче «Спартак» — «Адмирал» (6:3) 14 ноября, когда конфликт произошёл на отметке 58:50.",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": false,
-     "details_present": false,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-18T16:22:01.722509+03:00"
-   },
-   {
-    "post_id": 557,
-    "url": "https://vk.com/wall-228963529_557",
-    "title": "sh1ro и tn1r выпустили парные стикеры к PGL Major Singapore 2026",
-    "text": "рџЋ® Дмитрий sh1ro Соколов и Андрей tn1r Татаринович из «Team Spirit» запустили официальные парные стикеры к предстоящему PGL Major Singapore 2026. Идея с общим изображением принадлежит хосту команды Никите Nick Глебову.",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": false,
-     "details_present": false,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-18T17:26:02.796188+03:00"
-   },
    {
     "post_id": 558,
     "url": "https://vk.com/wall-228963529_558",
@@ -2909,6 +2875,40 @@
     },
     "status": "needs_review",
     "observed_at": "2026-11-19T16:42:13.370454+03:00"
+   },
+   {
+    "post_id": 586,
+    "url": "https://vk.com/wall-228963529_586",
+    "title": "Овчинников возглавил «Локомотив»: цель – выйти из зоны вылета",
+    "text": "рџ“° Овчинников стал главным тренером «Локомотива» после предложения Бориса Ротенберга и согласования с Александром Бородюком. Он и Бородюк, будучи тренерами академии, получили задачу закрыть позицию до конца первой части чемпионата.",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": false,
+     "details_present": false,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-19T17:46:13.629463+03:00"
+   },
+   {
+    "post_id": 587,
+    "url": "https://vk.com/wall-228963529_587",
+    "title": "Dota 2: два обновления карты в патче 7.42 – дерево убрали, блокеры добавили",
+    "text": "рџ± Ночью Valve выкатила два патча карты в рамках 7.42, о чём сообщил аналитик Team Spirit Денис sikle Лерман. Первая версия убрала дерево, вторая заперла углы блокерами.",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": false,
+     "details_present": false,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-19T17:46:13.629463+03:00"
    }
   ],
   "status": "observing"
