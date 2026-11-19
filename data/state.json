@@ -5,7 +5,7 @@
  },
  "learned": "2026-11-19",
  "schedule_day": "2026-11-19",
- "content_slot": "2026-11-19-13",
+ "content_slot": "2026-11-19-16",
  "news_seen": [
   "https://www.sport-express.ru/football/nation-league/news/klopp-o-haverce-protivostoyat-emu-s-takticheskoy-tochki-zreniya-neprosto-2475516/",
   "https://www.sport-express.ru/hockey/nhl/news/ottava-namerena-obmenyat-dvukratnogo-obladatelya-kubka-stenli-burakovski-2475502/",
@@ -1568,7 +1568,7 @@
  "value_day": "2026-11-19",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-19",
- "site_stamp": "1182|7270|2026-11-19 15|4|4e146fa8c546f2d7",
+ "site_stamp": "1182|7270|2026-11-19 16|4|99aa7480179fb9f6",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -2388,7 +2388,7 @@
   "quote_matches": 19
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-19T15:58:13.520424+03:00",
+  "last_poll": "2026-11-19T16:00:13.911450+03:00",
   "cursor": "134",
   "posts": [
    {
@@ -2908,5 +2908,14 @@
   "pid": 6655,
   "started_at": 1794992742.839963
  },
- "vk_story_retry_at": 1794996342.839963
+ "vk_story_retry_at": 1794996342.839963,
+ "mod_poll": {
+  "key": "BRA|401841308",
+  "id": "401841308",
+  "poll": 7272,
+  "post": 7271,
+  "home": "Васко да Гама",
+  "away": "Интернасьонал",
+  "kickoff": "2026-11-20T01:30:00+03:00"
+ }
 }
