@@ -2424,60 +2424,9 @@
   "quote_matches": 19
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-19T23:11:07.715603+03:00",
-  "cursor": "146",
+  "last_poll": "2026-11-19T23:13:07.207731+03:00",
+  "cursor": "149",
   "posts": [
-   {
-    "post_id": 566,
-    "url": "https://vk.com/wall-228963529_566",
-    "title": "Magixx объяснил поражение Team Spirit в финале BLAST Rivals Fall 2026",
-    "text": "рџ“° Team Spirit потерпела сокрушительное поражение в финале BLAST Rivals Fall 2026 – 0:3 против FURIA Esports. На карте Ancient они уступили 11:13, на Dust2 — 5:13, а на Mirage — 8:13, и всё это в Гонконге, где 11-15 ноября разыгрывался миллион-долларовый призовой фонд.",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": false,
-     "details_present": false,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-18T21:40:06.716529+03:00"
-   },
-   {
-    "post_id": 567,
-    "url": "https://vk.com/wall-228963529_567",
-    "title": "Valve выкатил патч 7.42: новые заряды и маскировка в Dota 2",
-    "text": "рџ“° Ночью 10 ноября компания Valve запустила патч 7.42 для Dota 2, полностью пересмотрев баланс и пополнив арсенал новыми предметами. Полный перечень изменений был опубликован на официальном сайте игры.",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": false,
-     "details_present": false,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-18T23:44:47.490883+03:00"
-   },
-   {
-    "post_id": 568,
-    "url": "https://vk.com/wall-228963529_568",
-    "title": "PARIVISION захватила чемпионат ESSENCE III, победив Team Spirit 3:1",
-    "text": "рџ± PARIVISION врывается в историю Dota 2, обыграв Team Spirit со счётом 3:1 в гранд-финале ESSENCE III!",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": false,
-     "details_present": false,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-18T23:44:47.490883+03:00"
-   },
    {
     "post_id": 569,
     "url": "https://vk.com/wall-228963529_569",
@@ -2936,6 +2885,57 @@
     },
     "status": "needs_review",
     "observed_at": "2026-11-19T22:09:07.842217+03:00"
+   },
+   {
+    "post_id": 596,
+    "url": "https://vk.com/wall-228963529_596",
+    "title": "Геркус одобрил назначение Овчинникова старшим тренером «Локомотива»",
+    "text": "вљЎпёЏТренерский штурм в «Локомотиве»: Овчинников возглавил штаб.",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": false,
+     "details_present": false,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-19T23:13:07.207731+03:00"
+   },
+   {
+    "post_id": 597,
+    "url": "https://vk.com/wall-228963529_597",
+    "title": "Боярский назвал единственного фаворита РПЛ – «Зенит»",
+    "text": "вљЎпёЏ«Зенит» – единственный фаворит?",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": false,
+     "details_present": false,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-19T23:13:07.207731+03:00"
+   },
+   {
+    "post_id": 598,
+    "url": "https://vk.com/wall-228963529_598",
+    "title": "Zeus предсказал команды в Pick'Em на PGL Major Singapore 2026",
+    "text": "рџ“° Бывший киберспортсмен Даниил «Zeus» Тесленко выложил на YouTube ролик с собственным Pick'Em Challenge на первый этап PGL Major Singapore 2026. В нём он назвал, какие из 16 команд, по его мнению, пройдут в следующую стадию.",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": false,
+     "details_present": false,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-19T23:13:07.207731+03:00"
    }
   ],
   "status": "observing"
