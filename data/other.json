@@ -7306,25 +7306,25 @@
   "kickoff": "2026-11-19T03:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Wed, November 18th at 7:30 PM EST",
   "clock": "0:00",
   "period": 0,
   "home": {
+   "color": "e30526",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/det.png",
    "id": "5",
    "name": "Detroit Red Wings",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/det.png",
-   "color": "e30526",
    "score": "0",
    "record": "8-10-3",
    "periods": [],
    "ru": "Детройт"
   },
   "away": {
+   "color": "231f20",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/bos.png",
    "id": "1",
    "name": "Boston Bruins",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/bos.png",
-   "color": "231f20",
    "score": "0",
    "record": "13-7-1",
    "periods": [],
@@ -7427,7 +7427,9 @@
   "btn": 4,
   "close": {
    "HK_ML_A": 0.5
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null
  },
  "NHL|401892740": {
   "id": "401892740",

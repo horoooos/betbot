@@ -1232,7 +1232,7 @@ null
 ]
 ],
 "div": "NHL",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "predictions/2026-11-19-detroyt-boston-401892739.html",
 "hs": "1",
@@ -1342,7 +1342,7 @@ null
 "min_odds": 1.6,
 "minute": "2-й период",
 "p": 0.657,
-"result": null,
+"result": "miss",
 "score": "1:0"
 }
 },
@@ -1513,8 +1513,8 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-19-nyu-orlean-pelikans-detroyt-pistons-401910013.html",
-"hs": "92",
-"as": "107",
+"hs": "94",
+"as": "108",
 "tip": "Ф2 (-4.5) · 1.91",
 "top": false,
 "bot": {
@@ -1614,7 +1614,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-19-oklahoma-siti-tander-atlanta-hoks-401910014.html",
-"hs": "107",
+"hs": "112",
 "as": "116",
 "tip": "Ф1 (-6.5) · 1.91",
 "top": false,
@@ -1816,8 +1816,8 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-19-denver-naggets-boston-seltiks-401910015.html",
-"hs": "20",
-"as": "25",
+"hs": "22",
+"as": "27",
 "tip": "ТБ 219.5 · 1.94",
 "top": true,
 "bot": {
@@ -1919,11 +1919,11 @@ null
 ]
 ],
 "div": "NBA",
-"state": "pre",
+"state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-19-leykers-yuta-dzhaz-401910017.html",
-"hs": "0",
-"as": "0",
+"hs": "3",
+"as": "3",
 "tip": "ТМ 229.5 · 1.95",
 "top": false,
 "bot": {
@@ -2023,8 +2023,8 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-19-sakramento-kingz-finiks-sanz-401910018.html",
-"hs": "0",
-"as": "2",
+"hs": "4",
+"as": "6",
 "tip": "ТБ 227.5 · 1.95",
 "top": false,
 "bot": {
