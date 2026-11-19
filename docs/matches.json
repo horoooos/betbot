@@ -2405,5 +2405,75 @@ null
 "top": false,
 "bot": null,
 "lt": null
+},
+{
+"sport": "football",
+"id": "401878937",
+"league": "Бельгия · Про-лига",
+"kickoff": "2026-11-20T22:45:00+03:00",
+"home": "Серкль Брюгге",
+"away": "Вестерло",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/3610.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/606.png",
+"hid": "3610",
+"aid": "606",
+"bb": "https://betboom.ru/search?query=%D0%A1%D0%B5%D1%80%D0%BA%D0%BB%D1%8C&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/bel.1",
+"url": "live.html?s=football&p=soccer%2Fbel.1&e=401878937&h=%D0%A1%D0%B5%D1%80%D0%BA%D0%BB%D1%8C+%D0%91%D1%80%D1%8E%D0%B3%D0%B3%D0%B5&a=%D0%92%D0%B5%D1%81%D1%82%D0%B5%D1%80%D0%BB%D0%BE",
+"participants": [
+[
+"Серкль Брюгге",
+"Cercle Brugge KSV"
+],
+[
+"Вестерло",
+"KVC Westerlo"
+]
+],
+"div": "B1",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "football",
+"id": "401876395",
+"league": "Франция · Лига 1",
+"kickoff": "2026-11-20T22:45:00+03:00",
+"home": "Труа",
+"away": "Гавр",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/170.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/3236.png",
+"hid": "170",
+"aid": "3236",
+"bb": "https://betboom.ru/search?query=%D0%A2%D1%80%D1%83%D0%B0&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/fra.1",
+"url": "live.html?s=football&p=soccer%2Ffra.1&e=401876395&h=%D0%A2%D1%80%D1%83%D0%B0&a=%D0%93%D0%B0%D0%B2%D1%80",
+"participants": [
+[
+"Труа",
+"Troyes"
+],
+[
+"Гавр",
+"Le Havre AC"
+]
+],
+"div": "F1",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
 }
 ]
