@@ -1591,7 +1591,7 @@
  "value_day": "2026-11-18",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-18",
- "site_stamp": "1178|7233|2026-11-19 08|4|9e6795c24a4b1390",
+ "site_stamp": "1179|7235|2026-11-19 08|4|099a872ec94be1f4",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1727,7 +1727,7 @@
  "streak_day": {
   "2026-11-19": 1
  },
- "news_next": "2026-11-19T08:13:00.806504+03:00",
+ "news_next": "2026-11-19T08:21:00.562645+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1748,7 +1748,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 7233,
+ "dz_last": 7235,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2314,35 +2314,35 @@
     "weight": 0.0,
     "settled_matches": 19,
     "required_matches": 100,
-    "trained_at": "2026-11-19T03:32:57.665946+00:00"
+    "trained_at": "2026-11-19T05:15:00.562645+00:00"
    },
    "basketball": {
     "status": "collecting",
     "weight": 0.0,
-    "settled_matches": 28,
+    "settled_matches": 29,
     "required_matches": 100,
-    "trained_at": "2026-11-19T03:32:57.665946+00:00"
+    "trained_at": "2026-11-19T05:15:00.562645+00:00"
    },
    "tennis": {
     "status": "collecting",
     "weight": 0.0,
     "settled_matches": 2,
     "required_matches": 100,
-    "trained_at": "2026-11-19T03:32:57.665946+00:00"
+    "trained_at": "2026-11-19T05:15:00.562645+00:00"
    },
    "esports:CS2": {
     "status": "collecting",
     "weight": 0.0,
     "settled_matches": 0,
     "required_matches": 100,
-    "trained_at": "2026-11-19T03:32:57.665946+00:00"
+    "trained_at": "2026-11-19T05:15:00.562645+00:00"
    },
    "esports:DOTA": {
     "status": "collecting",
     "weight": 0.0,
     "settled_matches": 0,
     "required_matches": 100,
-    "trained_at": "2026-11-19T03:32:57.665946+00:00"
+    "trained_at": "2026-11-19T05:15:00.562645+00:00"
    }
   },
   "source": {
@@ -2368,7 +2368,7 @@
   "quote_matches": 18
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-19T08:13:00.253752+03:00",
+  "last_poll": "2026-11-19T08:15:00.562645+03:00",
   "cursor": "123",
   "posts": [
    {
