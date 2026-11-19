@@ -3561,5 +3561,40 @@ null
 "top": false,
 "bot": null,
 "lt": null
+},
+{
+"sport": "football",
+"id": "401877052",
+"league": "Мексика · Лига MX",
+"kickoff": "2026-11-21T06:10:00+03:00",
+"home": "Тихуана",
+"away": "Atlante",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/10125.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/226.png",
+"hid": "10125",
+"aid": "226",
+"bb": "https://betboom.ru/search?query=%D0%A2%D0%B8%D1%85%D1%83%D0%B0%D0%BD%D0%B0&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/mex.1",
+"url": "live.html?s=football&p=soccer%2Fmex.1&e=401877052&h=%D0%A2%D0%B8%D1%85%D1%83%D0%B0%D0%BD%D0%B0&a=Atlante",
+"participants": [
+[
+"Тихуана",
+"Tijuana"
+],
+[
+"Atlante",
+"Atlante"
+]
+],
+"div": "MEX",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
 }
 ]
