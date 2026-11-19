@@ -2372,43 +2372,9 @@
   "quote_matches": 19
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-19T13:29:37.940868+03:00",
-  "cursor": "128",
+  "last_poll": "2026-11-19T13:31:37.745529+03:00",
+  "cursor": "130",
   "posts": [
-   {
-    "post_id": 548,
-    "url": "https://vk.com/wall-228963529_548",
-    "title": "Valve добавила стикеры к PGL Major Singapore 2026 и запустила Pick'Em",
-    "text": "вљЎпёЏ Сразу в игре — новые стикеры к PGL Major Singapore 2026!",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": false,
-     "details_present": false,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-18T12:09:19.695854+03:00"
-   },
-   {
-    "post_id": 549,
-    "url": "https://vk.com/wall-228963529_549",
-    "title": "Круговой объяснил резкие слова к Глушенкову: конфликтов нет",
-    "text": "рџ“° Защитник сборной России и «ЦСКА» Данил Круговой в интервью «СЭ» прокомментировал свои недавние резкие высказывания в адрес полузащитника «Зенита» Максима Глушенкова.",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": false,
-     "details_present": false,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-18T12:09:19.695854+03:00"
-   },
    {
     "post_id": 550,
     "url": "https://vk.com/wall-228963529_550",
@@ -2884,6 +2850,40 @@
     },
     "status": "needs_review",
     "observed_at": "2026-11-19T12:27:38.193701+03:00"
+   },
+   {
+    "post_id": 578,
+    "url": "https://vk.com/wall-228963529_578",
+    "title": "Blob — потенциальный новый герой Dota 2 уже в декабре",
+    "text": "рџ“° Новый герой Dota 2 «Blob» уже на пороге, и датамайнеры раскрыли детали!",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": false,
+     "details_present": false,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-19T13:31:37.745529+03:00"
+   },
+   {
+    "post_id": 579,
+    "url": "https://vk.com/wall-228963529_579",
+    "title": "Левников судит Динамо-Краснодар, а Карасев – матч Рубин-Зенит",
+    "text": "рџ± После долгой паузы на сборные, РФС объявил составы арбитров для 15-го тура РПЛ – и внимание сразу привлекло имя Кирилла Левникова, которому доверили главный судейский пост в матче «Динамо» Москва — «Краснодар» (14:00 мск).",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": false,
+     "details_present": false,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-19T13:31:37.745529+03:00"
    }
   ],
   "status": "observing"
