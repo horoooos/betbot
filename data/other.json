@@ -6957,25 +6957,25 @@
   "kickoff": "2026-11-19T03:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Wed, November 18th at 7:00 PM EST",
   "clock": "0.0",
   "period": 0,
   "home": {
+   "color": "0c2340",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/ind.png",
    "id": "11",
    "name": "Indiana Pacers",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/ind.png",
-   "color": "0c2340",
    "score": "0",
    "record": "5-9",
    "periods": [],
    "ru": "Индиана Пэйсерс"
   },
   "away": {
+   "color": "ce0e2d",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/hou.png",
    "id": "10",
    "name": "Houston Rockets",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/hou.png",
-   "color": "ce0e2d",
    "score": "0",
    "record": "11-4",
    "periods": [],
@@ -7059,7 +7059,9 @@
   "btn": 4,
   "close": {
    "BB_SPR_A": 0.5
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null
  },
  "NBA|401910009": {
   "id": "401910009",

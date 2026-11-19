@@ -6586,7 +6586,7 @@
   "kickoff": "2026-11-19T03:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Scheduled",
   "home": {
    "id": "6273",
@@ -6738,6 +6738,9 @@
   "close": {
    "BTTS_Y": 0.6013,
    "H": 0.4007
-  }
+  },
+  "main_hit": false,
+  "bold_hit": false,
+  "value_hit": null
  }
 }
