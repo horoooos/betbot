@@ -1814,5 +1814,75 @@ null
 "top": false,
 "bot": null,
 "lt": null
+},
+{
+"sport": "football",
+"id": "401874492",
+"league": "Дания · Суперлига",
+"kickoff": "2026-11-20T21:00:00+03:00",
+"home": "Орхус",
+"away": "Люнгбю",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/7853.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/7860.png",
+"hid": "7853",
+"aid": "7860",
+"bb": "https://betboom.ru/search?query=%D0%9E%D1%80%D1%85%D1%83%D1%81&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/den.1",
+"url": "live.html?s=football&p=soccer%2Fden.1&e=401874492&h=%D0%9E%D1%80%D1%85%D1%83%D1%81&a=%D0%9B%D1%8E%D0%BD%D0%B3%D0%B1%D1%8E",
+"participants": [
+[
+"Орхус",
+"AGF"
+],
+[
+"Люнгбю",
+"Lyngby Boldklub"
+]
+],
+"div": "DNK",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "football",
+"id": "401843486",
+"league": "Норвегия · Элитсерия",
+"kickoff": "2026-11-20T21:00:00+03:00",
+"home": "Molde",
+"away": "Будё-Глимт",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/2715.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/2980.png",
+"hid": "2715",
+"aid": "2980",
+"bb": "https://betboom.ru/search?query=%D0%9C%D0%BE%D0%BB%D0%B4%D0%B5&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/nor.1",
+"url": "live.html?s=football&p=soccer%2Fnor.1&e=401843486&h=Molde&a=%D0%91%D1%83%D0%B4%D1%91-%D0%93%D0%BB%D0%B8%D0%BC%D1%82",
+"participants": [
+[
+"Molde",
+"Molde"
+],
+[
+"Будё-Глимт",
+"Bodo/Glimt"
+]
+],
+"div": "NOR",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
 }
 ]
