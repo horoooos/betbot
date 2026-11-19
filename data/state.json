@@ -3,7 +3,7 @@
   "1X2": 0.0,
   "OU25": 0.0
  },
- "learned": "2026-11-19",
+ "learned": "2026-11-20",
  "schedule_day": "2026-11-19",
  "content_slot": "2026-11-19-23",
  "news_seen": [
@@ -1568,7 +1568,7 @@
  "value_day": "2026-11-19",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-19",
- "site_stamp": "1186|7325|2026-11-19 23|4|f3b59507db5a7c9f",
+ "site_stamp": "1186|7325|2026-11-20 00|4|aa70292b07454ae5",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1581,7 +1581,7 @@
    "NHL|401892748"
   ]
  },
- "value_check": "2026-11-19-7",
+ "value_check": "2026-11-20-0",
  "express_risk": {
   "msg": 7294,
   "legs": [
@@ -1897,7 +1897,7 @@
   "https://upload.wikimedia.org/wikipedia/commons/a/a9/Dmitry_Medvedev_16_May_2008-1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
   "https://images.cybersport.ru/images/as-is/plain/f2/f2b6125a-e5dc-4cdf-9ece-e281e9c9cfa8.jpg"
  ],
- "indexnow_day": "2026-11-19",
+ "indexnow_day": "2026-11-20",
  "vk_wall_err": null,
  "shorts_day": "2026-11-19",
  "shorts_err": {
@@ -2340,7 +2340,7 @@
   "message_id": 731,
   "kind": "новость"
  },
- "learn_attempt_day": "2026-11-19",
+ "learn_attempt_day": "2026-11-20",
  "learn_diagnostics": {
   "objective": "shared_lambda_1X2_OU25",
   "rows": 8000,
@@ -2351,11 +2351,11 @@
   "history_until": "2026-11-16",
   "candidate_weight": 0.0,
   "weight": 0.0,
-  "train_logloss": 0.8408782244313493,
-  "validation_logloss": 0.8189543264526353,
-  "validation_market_logloss": 0.8189543264526353
+  "train_logloss": 0.8405582126267487,
+  "validation_logloss": 0.8189543264526356,
+  "validation_market_logloss": 0.8189543264526356
  },
- "learned_at": "2026-11-19T00:00:48.380082+03:00",
+ "learned_at": "2026-11-20T00:01:07.943234+03:00",
  "learn_version": "shared-lambda-v2",
  "learn_error": null,
  "learn_retry_at": 0,
@@ -2427,7 +2427,7 @@
   "quote_matches": 19
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-19T23:59:08.591624+03:00",
+  "last_poll": "2026-11-20T00:01:07.943234+03:00",
   "cursor": "149",
   "posts": [
    {
