@@ -7,7 +7,6 @@
  "schedule_day": "2026-11-19",
  "content_slot": "2026-11-19-13",
  "news_seen": [
-  "https://www.sport-express.ru/basketball/nba/news/boston-ustanovil-klubnyy-rekord-i-vyigrav-pervuyu-chetvert-u-dallasa-s-raznicey-v-33-ochka-15-noyabrya-2026-2475496/",
   "https://www.sport-express.ru/tennis/wta/news/katerzhina-sinyakova-vyigrala-40-parnyy-titul-wta-i-vo-vtoroy-raz-stala-chempionkoy-itogovogo-turnira-15-noyabrya-2026-2475504/",
   "https://www.sport-express.ru/football/nation-league/news/klopp-o-haverce-protivostoyat-emu-s-takticheskoy-tochki-zreniya-neprosto-2475516/",
   "https://www.sport-express.ru/hockey/nhl/news/ottava-namerena-obmenyat-dvukratnogo-obladatelya-kubka-stenli-burakovski-2475502/",
@@ -506,9 +505,10 @@
   "https://www.sport-express.ru/basketball/nba/news/zaschitnik-desmond-beyn-pobil-rekord-orlando-i-zabil-minimum-tri-trehochkovyh-v-devyati-matchah-podryad-18-noyabrya-2026-2476594/",
   "https://www.sport-express.ru/basketball/nba/news/forvard-yuty-brays-sensabo-stal-samym-molodym-igrokom-nba-s-40-ochkami-10-podborami-8-trehochkovymi-za-match-2476580/",
   "https://www.sport-express.ru/tennis/atp/news/marca-alkaras-mozhet-dosrochno-zavershit-itogovyy-turnir-atp-v-turine-iz-za-travmy-v-matche-protiv-medvedeva-2476574/",
-  "https://www.sport-express.ru/tennis/atp/news/daniil-medvedev-i-frensis-tiafo-kto-vyydet-v-polufinal-itogovogo-turnira-atp-2026-polnye-rasklady-gruppy-lendla-2476571/"
+  "https://www.sport-express.ru/tennis/atp/news/daniil-medvedev-i-frensis-tiafo-kto-vyydet-v-polufinal-itogovogo-turnira-atp-2026-polnye-rasklady-gruppy-lendla-2476571/",
+  "v-dota-2-nashli-sposob-vyvesti-chaos-knight-za-predely-karty-s-pomoshchyu-novoi"
  ],
- "news_i": 6,
+ "news_i": 0,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1704,7 +1704,7 @@
  "streak_day": {
   "2026-11-19": 1
  },
- "news_next": "2026-11-19T15:24:13.793176+03:00",
+ "news_next": "2026-11-19T15:54:14.109203+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1884,7 +1884,8 @@
   "https://ss.sport-express.ru/userfiles/materials/224/2244850/1180x665.jpg",
   "https://images.cybersport.ru/images/as-is/plain/fc/fc6cd692-4bf8-427c-b308-12a515ed7420.jpg",
   "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6d/Player_chasing_the_puck_during_an_ice_hockey_game_in_Hull%2C_2025.jpg/1280px-Player_chasing_the_puck_during_an_ice_hockey_game_in_Hull%2C_2025.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-  "https://ss.sport-express.ru/userfiles/materials/224/2244863/1180x665.jpg"
+  "https://ss.sport-express.ru/userfiles/materials/224/2244863/1180x665.jpg",
+  "https://images.cybersport.ru/images/as-is/plain/cc/cced48a6-9906-4b8e-8e4e-256bf4343668.jpg"
  ],
  "indexnow_day": "2026-11-19",
  "vk_wall_err": null,
@@ -2120,7 +2121,8 @@
   "7258",
   "7260",
   "7262",
-  "7264"
+  "7264",
+  "7268"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -2288,11 +2290,12 @@
   "2026-11-19:новость:62ee30af47a5dcbd15ef583a",
   "2026-11-19:новость:190f5af69afb0a1ad829e6f9",
   "2026-11-19:новость:f9bfcff405da8df82c961ff5",
-  "2026-11-19:новость:d723c034455d0b827e7cb566"
+  "2026-11-19:новость:d723c034455d0b827e7cb566",
+  "2026-11-19:новость:2f1854af520401d695590e9a"
  ],
  "dz_last_delivery": {
-  "source_id": 7264,
-  "message_id": 714,
+  "source_id": 7268,
+  "message_id": 715,
   "kind": "новость"
  },
  "learn_attempt_day": "2026-11-19",
@@ -2360,11 +2363,11 @@
    }
   },
   "source": {
-   "last_success": "2026-11-19T12:04:13.590823+00:00",
-   "parsed": 355,
-   "added": 36,
-   "discovered_matches": 20,
-   "pages": 19,
+   "last_success": "2026-11-19T12:24:14.109203+00:00",
+   "parsed": 347,
+   "added": 41,
+   "discovered_matches": 23,
+   "pages": 18,
    "errors": [],
    "parsed_by_sport": {
     "soccer": 50,
@@ -2376,13 +2379,13 @@
    }
   },
   "error": null,
-  "tips": 5730,
+  "tips": 5748,
   "snapshots": 101,
-  "unmapped_markets": 8927,
+  "unmapped_markets": 8950,
   "quote_matches": 19
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-19T15:22:13.353775+03:00",
+  "last_poll": "2026-11-19T15:24:14.109203+03:00",
   "cursor": "132",
   "posts": [
    {
