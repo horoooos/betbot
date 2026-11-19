@@ -1568,7 +1568,7 @@
  "value_day": "2026-11-19",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-19",
- "site_stamp": "1186|7325|2026-11-20 00|4|aa70292b07454ae5",
+ "site_stamp": "1186|7327|2026-11-20 00|4|aa70292b07454ae5",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1720,7 +1720,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 7325,
+ "dz_last": 7327,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2430,26 +2430,9 @@
   "quote_matches": 20
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-20T00:14:16.720259+03:00",
-  "cursor": "149",
+  "last_poll": "2026-11-20T00:16:16.058866+03:00",
+  "cursor": "150",
   "posts": [
-   {
-    "post_id": 569,
-    "url": "https://vk.com/wall-228963529_569",
-    "title": "Valve добавила шесть новых предметов в Dota 2, в том числе ботинок из «Армлета»",
-    "text": "рџ“° Ночью 19 ноября Valve выпустила глобальный патч 7.42, который сразу же пополнил лавку шести абсолютно уникальными предметами. Среди новинок – апгрейд для «Heaven's Halberd», новый ботинок и переработанный «Wraith Pact», теперь именуемый «Ristul's Devotion».",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": false,
-     "details_present": false,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-19T00:49:34.713021+03:00"
-   },
    {
     "post_id": 570,
     "url": "https://vk.com/wall-228963529_570",
@@ -2942,6 +2925,23 @@
     },
     "status": "needs_review",
     "observed_at": "2026-11-19T23:13:07.207731+03:00"
+   },
+   {
+    "post_id": 599,
+    "url": "https://vk.com/wall-228963529_599",
+    "title": "Стример Nix: BLAST Slam IX стартует на патче 7.42, будет зрелищнее",
+    "text": "рџ“° BLAST Slam IX по Dota 2 стартует уже 20 ноября и продлится до 29-го, всё онлайн.",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": false,
+     "details_present": false,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-20T00:16:16.058866+03:00"
    }
   ],
   "status": "observing"
