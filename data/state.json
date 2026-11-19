@@ -7,7 +7,6 @@
  "schedule_day": "2026-11-19",
  "content_slot": "2026-11-19-13",
  "news_seen": [
-  "https://www.sport-express.ru/hockey/khl/news/admiral-rastorg-kontrakt-s-kanadskim-napadayuschim-olsonom-2475501/",
   "https://www.sport-express.ru/hockey/nhl/news/zaschitnik-evan-bushar-oboshel-charli-haddi-i-podnyalsya-na-trete-mesto-sredi-zaschitnikov-edmontona-po-ochkam-v-nhl-2475509/",
   "https://www.sport-express.ru/hockey/world-u20/news/svischev-prizval-mok-primenit-sankcii-k-iihf-iz-za-nedopuska-rossii-na-molodezhnyy-chm-po-hokkeyu-2475490/",
   "https://www.sport-express.ru/hockey/nhl/news/napadayuschiy-edmontona-leon-drayzaytl-v-tretiy-raz-pervym-v-sezone-nhl-dostig-20-golov-takoe-udavalos-11-igrokam-2475508/",
@@ -506,9 +505,10 @@
   "chto-my-znayem-o-blob-vozmozhnom-novom-geroye-dota-2",
   "https://www.sport-express.ru/football/rus_d1/news/sudya-inal-tanashev-soobschil-chto-svyazalsya-s-pavlom-kamancevym-srazu-posle-zvonka-valeriya-skorodumova-2476560/",
   "https://www.sport-express.ru/football/world/news/dzhanni-infantino-kodzo-tasima-i-filipp-diallo-budut-uchastvovat-v-vyborah-prezidenta-fifa-2476554/",
-  "https://www.sport-express.ru/football/rfpl/news/levnikov-naznachen-glavnym-sudey-matcha-15-go-tura-rpl-dinamo-krasnodar-karasev-rassudit-rubin-i-zenit-2476555/"
+  "https://www.sport-express.ru/football/rfpl/news/levnikov-naznachen-glavnym-sudey-matcha-15-go-tura-rpl-dinamo-krasnodar-karasev-rassudit-rubin-i-zenit-2476555/",
+  "startoval-zaklyuchitelnyi-sezon-team-spirit-naslediye-spetsproyekta"
  ],
- "news_i": 1,
+ "news_i": 2,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1703,7 +1703,7 @@
  "streak_day": {
   "2026-11-19": 1
  },
- "news_next": "2026-11-19T13:46:37.305088+03:00",
+ "news_next": "2026-11-19T14:18:37.696569+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1880,7 +1880,8 @@
   "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/Football_match_between_Chirk_and_Llanrhaeadr-ym-Mochnant%2C_1948_%281488731%29.jpg/1280px-Football_match_between_Chirk_and_Llanrhaeadr-ym-Mochnant%2C_1948_%281488731%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
   "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f4/Shropshire_Youth_v_Northampton_Youth_football_match_%281460094%29.jpg/1280px-Shropshire_Youth_v_Northampton_Youth_football_match_%281460094%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
   "https://images.cybersport.ru/images/as-is/plain/ed/edf89d23-d31b-4f40-a130-870461cbb810.jpg",
-  "https://ss.sport-express.ru/userfiles/materials/224/2244850/1180x665.jpg"
+  "https://ss.sport-express.ru/userfiles/materials/224/2244850/1180x665.jpg",
+  "https://images.cybersport.ru/images/as-is/plain/fc/fc6cd692-4bf8-427c-b308-12a515ed7420.jpg"
  ],
  "indexnow_day": "2026-11-19",
  "vk_wall_err": null,
@@ -2113,7 +2114,8 @@
   "7249",
   "7253",
   "7254",
-  "7258"
+  "7258",
+  "7260"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -2278,11 +2280,12 @@
   "2026-11-19:новость:17d3621b4c6427b0182b7751",
   "2026-11-19:новость:04ad2f32da91880387c17bdc",
   "2026-11-19:новость:4aed70d1add09bf811b456c5",
-  "2026-11-19:новость:62ee30af47a5dcbd15ef583a"
+  "2026-11-19:новость:62ee30af47a5dcbd15ef583a",
+  "2026-11-19:новость:190f5af69afb0a1ad829e6f9"
  ],
  "dz_last_delivery": {
-  "source_id": 7258,
-  "message_id": 711,
+  "source_id": 7260,
+  "message_id": 712,
   "kind": "новость"
  },
  "learn_attempt_day": "2026-11-19",
@@ -2372,7 +2375,7 @@
   "quote_matches": 19
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-19T13:45:37.904807+03:00",
+  "last_poll": "2026-11-19T13:47:37.696569+03:00",
   "cursor": "130",
   "posts": [
    {
