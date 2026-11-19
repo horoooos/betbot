@@ -1568,7 +1568,7 @@
  "value_day": "2026-11-19",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-19",
- "site_stamp": "1183|7288|2026-11-19 18|4|e055b0c1d2695cd5",
+ "site_stamp": "1183|7289|2026-11-19 18|4|e055b0c1d2695cd5",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1726,7 +1726,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 7288,
+ "dz_last": 7289,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2406,43 +2406,9 @@
   "quote_matches": 19
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-19T18:54:14.533012+03:00",
-  "cursor": "138",
+  "last_poll": "2026-11-19T18:56:14.876389+03:00",
+  "cursor": "140",
   "posts": [
-   {
-    "post_id": 558,
-    "url": "https://vk.com/wall-228963529_558",
-    "title": "Игдисамов раскрыл подготовку ЦСКА к матчу с «Ахматом»",
-    "text": "вљЎпёЏ ЦСКА готовится к громкому противостоянию с «Ахматом». 15-й тур РПЛ состоится 21 ноября в 19:45 мск, и главный тренер Дмитрий Игдисамов уже поделился планом.",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": false,
-     "details_present": false,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-18T17:26:02.796188+03:00"
-   },
-   {
-    "post_id": 559,
-    "url": "https://vk.com/wall-228963529_559",
-    "title": "Chopper предсказал 8 команд-пролетариев PGL Major Singapore 2026",
-    "text": "рџ“° Леонид «chopper» Вишняков, бывший киберспортсмен, в своем Telegram-канале выложил собственный Pick'Em Challenge на первый этап PGL Major Singapore 2026 по CS2. Он раскрыл, какие восемь коллективов, по его мнению, заслужат место в следующей фазе турнира.",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": false,
-     "details_present": false,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-18T18:30:02.813043+03:00"
-   },
    {
     "post_id": 560,
     "url": "https://vk.com/wall-228963529_560",
@@ -2918,6 +2884,40 @@
     },
     "status": "needs_review",
     "observed_at": "2026-11-19T17:46:13.629463+03:00"
+   },
+   {
+    "post_id": 588,
+    "url": "https://vk.com/wall-228963529_588",
+    "title": "Team Vitality закрывает академический ростер CS2",
+    "text": "рџЋ® С шоком и тяжёлым сердцем Vitality объявила, что к концу 2026 года их молодежный состав по CS2 будет распущен.",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": false,
+     "details_present": false,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-19T18:56:14.876389+03:00"
+   },
+   {
+    "post_id": 589,
+    "url": "https://vk.com/wall-228963529_589",
+    "title": "Саркисян раскритиковал увольнение Галактионова: «Цирк шапито»",
+    "text": "рџ“° Таш Саркисян, известный телеведущий и ярый болельщик «Локомотива», назвал увольнение Михаила Галактионова настоящим «цирком шапито». Его слова прозвучали на пресс-конференции APSNY Media Weekend, где он раскритиковал клуб за «потерянное время» и «необходимость платить».",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": false,
+     "details_present": false,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-19T18:56:14.876389+03:00"
    }
   ],
   "status": "observing"
