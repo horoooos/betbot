@@ -7,9 +7,6 @@
  "schedule_day": "2026-11-19",
  "content_slot": "2026-11-19-13",
  "news_seen": [
-  "https://www.sport-express.ru/hockey/nhl/news/zaschitnik-evan-bushar-oboshel-charli-haddi-i-podnyalsya-na-trete-mesto-sredi-zaschitnikov-edmontona-po-ochkam-v-nhl-2475509/",
-  "https://www.sport-express.ru/hockey/world-u20/news/svischev-prizval-mok-primenit-sankcii-k-iihf-iz-za-nedopuska-rossii-na-molodezhnyy-chm-po-hokkeyu-2475490/",
-  "https://www.sport-express.ru/hockey/nhl/news/napadayuschiy-edmontona-leon-drayzaytl-v-tretiy-raz-pervym-v-sezone-nhl-dostig-20-golov-takoe-udavalos-11-igrokam-2475508/",
   "https://www.sport-express.ru/hockey/world-u20/news/bykov-s-sozhaleniem-otreagiroval-na-nedopusk-sbornoy-rossii-na-mchm-2027-2475488/",
   "https://www.sport-express.ru/hockey/nhl/news/napadayuschiy-san-hose-maklin-selebrini-sravnyalsya-s-deylom-haverchukom-po-chislu-matchey-s-tremya-ochkami-do-21-goda-2475507/",
   "https://www.sport-express.ru/hockey/khl/news/avtomobilist-obmenyal-chernikova-v-admiral-i-peredal-prava-na-kuznecova-2475482/",
@@ -506,9 +503,12 @@
   "https://www.sport-express.ru/football/rus_d1/news/sudya-inal-tanashev-soobschil-chto-svyazalsya-s-pavlom-kamancevym-srazu-posle-zvonka-valeriya-skorodumova-2476560/",
   "https://www.sport-express.ru/football/world/news/dzhanni-infantino-kodzo-tasima-i-filipp-diallo-budut-uchastvovat-v-vyborah-prezidenta-fifa-2476554/",
   "https://www.sport-express.ru/football/rfpl/news/levnikov-naznachen-glavnym-sudey-matcha-15-go-tura-rpl-dinamo-krasnodar-karasev-rassudit-rubin-i-zenit-2476555/",
-  "startoval-zaklyuchitelnyi-sezon-team-spirit-naslediye-spetsproyekta"
+  "startoval-zaklyuchitelnyi-sezon-team-spirit-naslediye-spetsproyekta",
+  "https://www.sport-express.ru/hockey/nhl/news/kapitan-pittsburga-sidni-krosbi-priznal-krizis-pingvinz-v-sezone-nhl-2026-27-mozhet-privesti-k-obmenam-igrokov-2476562/",
+  "https://www.sport-express.ru/hockey/nhl/news/genmenedzher-pittsburga-dubas-dopustil-masshtabnye-obmeny-veteranov-my-ne-hotim-provesti-desyatiletie-v-propasti-2476566/",
+  "https://www.sport-express.ru/hockey/khl/news/stala-izvestna-zarplata-malceva-po-novomu-kontraktu-s-metallurgom-2476558/"
  ],
- "news_i": 2,
+ "news_i": 3,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1704,7 +1704,7 @@
  "streak_day": {
   "2026-11-19": 1
  },
- "news_next": "2026-11-19T14:18:37.696569+03:00",
+ "news_next": "2026-11-19T14:52:14.034452+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1882,7 +1882,8 @@
   "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f4/Shropshire_Youth_v_Northampton_Youth_football_match_%281460094%29.jpg/1280px-Shropshire_Youth_v_Northampton_Youth_football_match_%281460094%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
   "https://images.cybersport.ru/images/as-is/plain/ed/edf89d23-d31b-4f40-a130-870461cbb810.jpg",
   "https://ss.sport-express.ru/userfiles/materials/224/2244850/1180x665.jpg",
-  "https://images.cybersport.ru/images/as-is/plain/fc/fc6cd692-4bf8-427c-b308-12a515ed7420.jpg"
+  "https://images.cybersport.ru/images/as-is/plain/fc/fc6cd692-4bf8-427c-b308-12a515ed7420.jpg",
+  "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6d/Player_chasing_the_puck_during_an_ice_hockey_game_in_Hull%2C_2025.jpg/1280px-Player_chasing_the_puck_during_an_ice_hockey_game_in_Hull%2C_2025.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
  ],
  "indexnow_day": "2026-11-19",
  "vk_wall_err": null,
@@ -2116,7 +2117,8 @@
   "7253",
   "7254",
   "7258",
-  "7260"
+  "7260",
+  "7262"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -2282,11 +2284,12 @@
   "2026-11-19:новость:04ad2f32da91880387c17bdc",
   "2026-11-19:новость:4aed70d1add09bf811b456c5",
   "2026-11-19:новость:62ee30af47a5dcbd15ef583a",
-  "2026-11-19:новость:190f5af69afb0a1ad829e6f9"
+  "2026-11-19:новость:190f5af69afb0a1ad829e6f9",
+  "2026-11-19:новость:f9bfcff405da8df82c961ff5"
  ],
  "dz_last_delivery": {
-  "source_id": 7260,
-  "message_id": 712,
+  "source_id": 7262,
+  "message_id": 713,
   "kind": "новость"
  },
  "learn_attempt_day": "2026-11-19",
@@ -2354,11 +2357,11 @@
    }
   },
   "source": {
-   "last_success": "2026-11-19T10:59:37.639334+00:00",
-   "parsed": 350,
-   "added": 46,
-   "discovered_matches": 27,
-   "pages": 19,
+   "last_success": "2026-11-19T11:20:14.034452+00:00",
+   "parsed": 351,
+   "added": 69,
+   "discovered_matches": 29,
+   "pages": 18,
    "errors": [],
    "parsed_by_sport": {
     "soccer": 50,
@@ -2370,13 +2373,13 @@
    }
   },
   "error": null,
-  "tips": 5670,
+  "tips": 5695,
   "snapshots": 101,
-  "unmapped_markets": 8826,
+  "unmapped_markets": 8870,
   "quote_matches": 19
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-19T14:18:13.700802+03:00",
+  "last_poll": "2026-11-19T14:20:14.034452+03:00",
   "cursor": "130",
   "posts": [
    {
