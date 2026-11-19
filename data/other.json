@@ -7072,25 +7072,25 @@
   "kickoff": "2026-11-19T03:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Wed, November 18th at 7:00 PM EST",
   "clock": "0.0",
   "period": 0,
   "home": {
+   "color": "98002e",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/mia.png",
    "id": "14",
    "name": "Miami Heat",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/mia.png",
-   "color": "98002e",
    "score": "0",
    "record": "8-6",
    "periods": [],
    "ru": "Майами Хит"
   },
   "away": {
+   "color": "00471b",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/mil.png",
    "id": "15",
    "name": "Milwaukee Bucks",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/mil.png",
-   "color": "00471b",
    "score": "0",
    "record": "1-13",
    "periods": [],
@@ -7173,7 +7173,9 @@
   "btn": 4,
   "close": {
    "BB_O235.5": 0.5
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null
  },
  "NBA|401910010": {
   "id": "401910010",
