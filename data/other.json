@@ -7678,25 +7678,25 @@
   "kickoff": "2026-11-19T03:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Wed, November 18th at 7:30 PM EST",
   "clock": "0.0",
   "period": 0,
   "home": {
+   "color": "d91244",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/tor.png",
    "id": "28",
    "name": "Toronto Raptors",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/tor.png",
-   "color": "d91244",
    "score": "0",
    "record": "5-9",
    "periods": [],
    "ru": "Торонто Рэпторс"
   },
   "away": {
+   "color": "e31837",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/wsh.png",
    "id": "27",
    "name": "Washington Wizards",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/wsh.png",
-   "color": "e31837",
    "score": "0",
    "record": "4-11",
    "periods": [],
@@ -7779,7 +7779,9 @@
   "btn": 4,
   "close": {
    "BB_ML_H": 0.6462
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null
  },
  "NBA|401910013": {
   "id": "401910013",
