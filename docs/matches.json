@@ -2545,5 +2545,40 @@ null
 "top": false,
 "bot": null,
 "lt": null
+},
+{
+"sport": "football",
+"id": "401888560",
+"league": "Парагвай · Примера",
+"kickoff": "2026-11-20T23:30:00+03:00",
+"home": "Sportivo Ameliano",
+"away": "Sportivo Luqueño",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/21313.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/5583.png",
+"hid": "21313",
+"aid": "5583",
+"bb": "https://betboom.ru/search?query=%D0%A1%D0%BF%D0%BE%D1%80%D1%82%D0%B8%D0%B2%D0%BE&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/par.1",
+"url": "live.html?s=football&p=soccer%2Fpar.1&e=401888560&h=Sportivo+Ameliano&a=Sportivo+Luque%C3%B1o",
+"participants": [
+[
+"Sportivo Ameliano",
+"Sportivo Ameliano"
+],
+[
+"Sportivo Luqueño",
+"Sportivo Luqueño"
+]
+],
+"div": "PAR",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
 }
 ]
