@@ -7,7 +7,6 @@
  "schedule_day": "2026-11-19",
  "content_slot": "2026-11-19-22",
  "news_seen": [
-  "datamainer-v-dota-2-nachali-banit-chiterov-abyuzivshikh-upravleniye-inventarem",
   "team-spirit-vyshla-v-final-verkhnei-setki-essence-iii-obygrav-parivision",
   "https://www.sport-express.ru/hockey/khl/news/seriya-bullitov-v-matche-cska-i-amura-voshla-v-top-5-samyh-prodolzhitelnyh-v-istorii-khl-2475665/",
   "https://www.sport-express.ru/hockey/khl/news/glavnyy-trener-admirala-bratash-ob-obmene-s-avtomobilistom-olson-ne-prinosil-nikakoy-polzy-komande-2475660/",
@@ -506,9 +505,10 @@
   "https://www.sport-express.ru/basketball/news/brest-vstretitsya-s-gomelskimi-rysyami-v-chempionate-belarusi-po-basketbolu-2476353/",
   "https://www.sport-express.ru/football/england/news/pochettino-o-zadachah-v-manchester-yunayted-glavnoe-sozdat-kulturu-i-dat-igrokam-raskrytsya-2476690/",
   "https://www.sport-express.ru/football/spain/news/bellingem-priznan-luchshim-igrokom-reala-v-oktyabre-2476687/",
-  "https://www.sport-express.ru/football/rfpl/news/gerkus-pozhelal-udachi-ovchinnkovu-v-lokomotive-2476664/"
+  "https://www.sport-express.ru/football/rfpl/news/gerkus-pozhelal-udachi-ovchinnkovu-v-lokomotive-2476664/",
+  "zeus-pokazal-pick-em-na-pervyi-yetap-pgl-major-singapore-2026"
  ],
- "news_i": 1,
+ "news_i": 2,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1568,7 +1568,7 @@
  "value_day": "2026-11-19",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-19",
- "site_stamp": "1184|7316|2026-11-19 22|4|46ae0346a254b5a4",
+ "site_stamp": "1185|7317|2026-11-19 22|4|f7585824f4cecbc8",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1698,7 +1698,7 @@
  "streak_day": {
   "2026-11-19": 1
  },
- "news_next": "2026-11-19T22:36:07.047756+03:00",
+ "news_next": "2026-11-19T23:07:07.224426+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1720,7 +1720,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 7316,
+ "dz_last": 7317,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -1892,7 +1892,8 @@
   "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/Kashima_Stadium_6.JPG/1280px-Kashima_Stadium_6.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
   "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d8/Shrewsbury_Schoolboys_v_Stafford_football_match_%281463474%29.jpg/1280px-Shrewsbury_Schoolboys_v_Stafford_football_match_%281463474%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
   "https://ss.sport-express.ru/userfiles/materials/224/2245052/1180x665.jpg",
-  "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/ATL-Madrid-Lokomotiv003.jpg/1280px-ATL-Madrid-Lokomotiv003.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/ATL-Madrid-Lokomotiv003.jpg/1280px-ATL-Madrid-Lokomotiv003.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "https://images.cybersport.ru/images/as-is/plain/67/67d3dce0-99ac-49fc-bfcc-7b467ee975ac.jpg"
  ],
  "indexnow_day": "2026-11-19",
  "vk_wall_err": null,
@@ -2142,7 +2143,8 @@
   "7298",
   "7301",
   "7311",
-  "7315"
+  "7315",
+  "7318"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -2324,11 +2326,12 @@
   "2026-11-19:новость:bece446a94cf3a934922983b",
   "2026-11-19:новость:3b5ab2a0d18b646d04b2e21a",
   "2026-11-19:новость:e6776ae4170ca748bb5e3708",
-  "2026-11-19:новость:44693c65866a2ad4ca82b24a"
+  "2026-11-19:новость:44693c65866a2ad4ca82b24a",
+  "2026-11-19:новость:e163218099449ec6e8d0266b"
  ],
  "dz_last_delivery": {
-  "source_id": 7315,
-  "message_id": 728,
+  "source_id": 7318,
+  "message_id": 729,
   "kind": "новость"
  },
  "learn_attempt_day": "2026-11-19",
@@ -2418,7 +2421,7 @@
   "quote_matches": 19
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-19T22:35:07.831083+03:00",
+  "last_poll": "2026-11-19T22:37:07.224426+03:00",
   "cursor": "146",
   "posts": [
    {
