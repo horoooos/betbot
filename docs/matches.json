@@ -421,7 +421,7 @@ null
 ]
 ],
 "div": "BRA",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "predictions/2026-11-19-kruzeyro-palmeyras-401841314.html",
 "hs": "2",
@@ -540,7 +540,7 @@ null
 "min_odds": 1.51,
 "minute": "25'",
 "p": 0.697,
-"result": null,
+"result": "hit",
 "score": "0:0"
 }
 },
@@ -1023,7 +1023,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-19-orlando-medzhik-filadelfiya-siksers-401910010.html",
-"hs": "70",
+"hs": "75",
 "as": "64",
 "tip": "П1 (с ОТ) · 1.92",
 "top": false,
@@ -1910,8 +1910,8 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-19-nyu-orlean-pelikans-detroyt-pistons-401910013.html",
-"hs": "18",
-"as": "18",
+"hs": "23",
+"as": "21",
 "tip": "Ф2 (-4.5) · 1.91",
 "top": false,
 "bot": {
@@ -2011,8 +2011,8 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-19-oklahoma-siti-tander-atlanta-hoks-401910014.html",
-"hs": "19",
-"as": "22",
+"hs": "22",
+"as": "28",
 "tip": "Ф1 (-6.5) · 1.91",
 "top": false,
 "bot": {
@@ -2112,7 +2112,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-19-dallas-maveriks-golden-steyt-401910016.html",
-"hs": "25",
+"hs": "27",
 "as": "12",
 "tip": "П1 (с ОТ) · 1.51",
 "top": false,
