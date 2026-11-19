@@ -7,7 +7,6 @@
  "schedule_day": "2026-11-19",
  "content_slot": "2026-11-19-23",
  "news_seen": [
-  "https://www.sport-express.ru/basketball/nba/news/sky-news-nba-hochet-privlech-futbolnye-kluby-milan-pszh-barselona-i-real-k-finansovoy-podderzhke-nba-europe-2475662/",
   "https://www.sport-express.ru/basketball/nba/news/centrovoy-bruk-lopes-stal-samym-vozrastnym-igrokom-la-klippers-s-25-ochkami-za-match-nba-13-noyabrya-2026-2475647/",
   "https://www.sport-express.ru/basketball/nba/news/los-andzheles-klippers-pobedil-sharlott-v-17-raz-podryad-i-povtoril-samuyu-dlinnuyu-deystvuyuschuyu-seriyu-nba-2475646/",
   "https://www.sport-express.ru/basketball/nba/news/centrovoy-nyu-yorka-karl-entoni-tauns-povtoril-klubnyy-rekord-niks-po-dabl-dablam-so-starta-sezona-nba-2475645/",
@@ -506,9 +505,10 @@
   "https://www.sport-express.ru/football/rfpl/news/boyarskiy-nazval-zenit-edinstvennym-favoritom-chempionskoy-gonki-v-rpl-2476741/",
   "https://www.sport-express.ru/tennis/atp/news/shelton-prokommentiroval-pobedu-nad-hodarom-na-itogovom-turnire-atp-2476764/",
   "nix-klassno-chto-blast-slam-ix-budet-na-novom-patche-namnogo-interesneye-smotret",
-  "https://www.sport-express.ru/football/rfpl/news/avtory-proekta-rasshireniya-rpl-do-20-klubov-ozhidayut-snizheniya-zarplat-rossiyskih-futbolistov-2476775/"
+  "https://www.sport-express.ru/football/rfpl/news/avtory-proekta-rasshireniya-rpl-do-20-klubov-ozhidayut-snizheniya-zarplat-rossiyskih-futbolistov-2476775/",
+  "lenagol0vach-o-patche-7-42-v-dota-2-ya-teper-uzhe-i-v-gta-igrat-ne-khochu-khochu"
  ],
- "news_i": 1,
+ "news_i": 2,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1698,7 +1698,7 @@
  "streak_day": {
   "2026-11-19": 1
  },
- "news_next": "2026-11-20T00:47:16.720259+03:00",
+ "news_next": "2026-11-20T01:19:16.546499+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1896,7 +1896,8 @@
   "https://images.cybersport.ru/images/as-is/plain/67/67d3dce0-99ac-49fc-bfcc-7b467ee975ac.jpg",
   "https://upload.wikimedia.org/wikipedia/commons/a/a9/Dmitry_Medvedev_16_May_2008-1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
   "https://images.cybersport.ru/images/as-is/plain/f2/f2b6125a-e5dc-4cdf-9ece-e281e9c9cfa8.jpg",
-  "https://upload.wikimedia.org/wikipedia/commons/c/c6/Football_match%2C_Chernomoretz_%28Burgas%29_-_Daniel_Sowatey.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+  "https://upload.wikimedia.org/wikipedia/commons/c/c6/Football_match%2C_Chernomoretz_%28Burgas%29_-_Daniel_Sowatey.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "https://images.cybersport.ru/images/as-is/plain/1b/1b080874-e451-4403-b565-764c163dc841.jpg"
  ],
  "indexnow_day": "2026-11-20",
  "vk_wall_err": null,
@@ -2150,7 +2151,8 @@
   "7318",
   "7322",
   "7325",
-  "7326"
+  "7326",
+  "7336"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -2336,11 +2338,12 @@
   "2026-11-19:новость:e163218099449ec6e8d0266b",
   "2026-11-19:новость:48d402ddcfc8a27bdf37c1a7",
   "2026-11-19:новость:e0d449e4f942afe50977f0e0",
-  "2026-11-19:новость:cfa479384d6fd4df9900a39a"
+  "2026-11-19:новость:cfa479384d6fd4df9900a39a",
+  "2026-11-19:новость:da57c8dba7f799bbc640a21d"
  ],
  "dz_last_delivery": {
-  "source_id": 7326,
-  "message_id": 732,
+  "source_id": 7336,
+  "message_id": 733,
   "kind": "новость"
  },
  "learn_attempt_day": "2026-11-20",
@@ -2430,7 +2433,7 @@
   "quote_matches": 20
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-20T00:46:16.064345+03:00",
+  "last_poll": "2026-11-20T00:48:16.546499+03:00",
   "cursor": "150",
   "posts": [
    {
