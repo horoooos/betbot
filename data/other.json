@@ -7945,5 +7945,13 @@
   "close": {
    "_": null
   }
+ },
+ "WTA|186804": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-20T01:00:00+03:00",
+  "sport": "tennis",
+  "div": "WTA",
+  "reason": "no_odds_or_sufficient_history",
+  "retry_at": 1795122548.591624
  }
 }
