@@ -1568,7 +1568,7 @@
  "value_day": "2026-11-18",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-18",
- "site_stamp": "1174|7220|2026-11-19 06|4|d4252c7544baf781",
+ "site_stamp": "1175|7223|2026-11-19 06|4|4edd3fe428c8080a",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1725,7 +1725,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 7220,
+ "dz_last": 7223,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2289,48 +2289,48 @@
    "hockey": {
     "status": "collecting",
     "weight": 0.0,
-    "settled_matches": 17,
+    "settled_matches": 18,
     "required_matches": 100,
-    "trained_at": "2026-11-19T03:12:57.543956+00:00"
+    "trained_at": "2026-11-19T03:16:57.594057+00:00"
    },
    "basketball": {
     "status": "collecting",
     "weight": 0.0,
     "settled_matches": 26,
     "required_matches": 100,
-    "trained_at": "2026-11-19T03:12:57.543956+00:00"
+    "trained_at": "2026-11-19T03:16:57.594057+00:00"
    },
    "tennis": {
     "status": "collecting",
     "weight": 0.0,
     "settled_matches": 2,
     "required_matches": 100,
-    "trained_at": "2026-11-19T03:12:57.543956+00:00"
+    "trained_at": "2026-11-19T03:16:57.594057+00:00"
    },
    "esports:CS2": {
     "status": "collecting",
     "weight": 0.0,
     "settled_matches": 0,
     "required_matches": 100,
-    "trained_at": "2026-11-19T03:12:57.543956+00:00"
+    "trained_at": "2026-11-19T03:16:57.594057+00:00"
    },
    "esports:DOTA": {
     "status": "collecting",
     "weight": 0.0,
     "settled_matches": 0,
     "required_matches": 100,
-    "trained_at": "2026-11-19T03:12:57.543956+00:00"
+    "trained_at": "2026-11-19T03:16:57.594057+00:00"
    }
   },
   "source": {
-   "last_success": "2026-11-19T02:56:57.279125+00:00",
-   "parsed": 329,
-   "added": 4,
-   "discovered_matches": 8,
-   "pages": 15,
+   "last_success": "2026-11-19T03:16:57.594057+00:00",
+   "parsed": 336,
+   "added": 14,
+   "discovered_matches": 14,
+   "pages": 17,
    "errors": [],
    "parsed_by_sport": {
-    "soccer": 49,
+    "soccer": 50,
     "ice-hockey": 50,
     "basketball": 50,
     "tennis": 50,
@@ -2339,13 +2339,13 @@
    }
   },
   "error": null,
-  "tips": 5337,
+  "tips": 5345,
   "snapshots": 101,
-  "unmapped_markets": 8348,
+  "unmapped_markets": 8354,
   "quote_matches": 18
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-19T06:14:57.771988+03:00",
+  "last_poll": "2026-11-19T06:16:57.594057+03:00",
   "cursor": "123",
   "posts": [
    {

@@ -7438,25 +7438,25 @@
   "kickoff": "2026-11-19T03:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Wed, November 18th at 7:30 PM EST",
   "clock": "0:00",
   "period": 0,
   "home": {
+   "color": "e30b2b",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/nj.png",
    "id": "11",
    "name": "New Jersey Devils",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/nj.png",
-   "color": "e30b2b",
    "score": "0",
    "record": "15-6-0",
    "periods": [],
    "ru": "Нью-Джерси"
   },
   "away": {
+   "color": "c41230",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/mtl.png",
    "id": "10",
    "name": "Montreal Canadiens",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/mtl.png",
-   "color": "c41230",
    "score": "0",
    "record": "12-5-4",
    "periods": [],
@@ -7559,7 +7559,9 @@
   "btn": 4,
   "close": {
    "HK_O6.5": 0.4572
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null
  },
  "NBA|401910011": {
   "id": "401910011",
