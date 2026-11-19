@@ -569,7 +569,7 @@ null
 ]
 ],
 "div": "BRA",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "predictions/2026-11-19-flamengo-atletiko-paranaense-401841313.html",
 "hs": "2",
@@ -688,7 +688,7 @@ null
 "min_odds": 1.39,
 "minute": "26'",
 "p": 0.756,
-"result": null,
+"result": "hit",
 "score": "1:1"
 }
 },
@@ -821,7 +821,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-19-indiana-peysers-hyuston-rokets-401910008.html",
-"hs": "53",
+"hs": "56",
 "as": "72",
 "tip": "Ф2 (-9.5) · 1.93",
 "top": false,
@@ -922,8 +922,8 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-19-mayami-hit-miluoki-baks-401910009.html",
-"hs": "72",
-"as": "46",
+"hs": "74",
+"as": "48",
 "tip": "ТБ 235.5 · 1.91",
 "top": false,
 "bot": {
@@ -1023,7 +1023,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-19-orlando-medzhik-filadelfiya-siksers-401910010.html",
-"hs": "69",
+"hs": "70",
 "as": "64",
 "tip": "П1 (с ОТ) · 1.92",
 "top": false,
@@ -1532,7 +1532,7 @@ null
 "bo": null,
 "prediction": "predictions/2026-11-19-toronto-reptors-vashington-uizards-401910012.html",
 "hs": "42",
-"as": "46",
+"as": "48",
 "tip": "П1 (с ОТ) · 1.57",
 "top": false,
 "bot": {
@@ -1911,7 +1911,7 @@ null
 "bo": null,
 "prediction": "predictions/2026-11-19-nyu-orlean-pelikans-detroyt-pistons-401910013.html",
 "hs": "18",
-"as": "13",
+"as": "18",
 "tip": "Ф2 (-4.5) · 1.91",
 "top": false,
 "bot": {
@@ -2012,7 +2012,7 @@ null
 "bo": null,
 "prediction": "predictions/2026-11-19-oklahoma-siti-tander-atlanta-hoks-401910014.html",
 "hs": "19",
-"as": "20",
+"as": "22",
 "tip": "Ф1 (-6.5) · 1.91",
 "top": false,
 "bot": {
@@ -2113,7 +2113,7 @@ null
 "bo": null,
 "prediction": "predictions/2026-11-19-dallas-maveriks-golden-steyt-401910016.html",
 "hs": "25",
-"as": "9",
+"as": "12",
 "tip": "П1 (с ОТ) · 1.51",
 "top": false,
 "bot": {
@@ -2212,12 +2212,83 @@ null
 "div": "NBA",
 "state": "pre",
 "bo": null,
-"prediction": "",
+"prediction": "predictions/2026-11-19-denver-naggets-boston-seltiks-401910015.html",
 "hs": "0",
 "as": "0",
-"tip": "",
-"top": false,
-"bot": null,
+"tip": "ТБ 219.5 · 1.94",
+"top": true,
+"bot": {
+"main": {
+"label": "ТБ 219.5",
+"p": 0.5,
+"odds": 1.94,
+"est": false
+},
+"bold": {
+"label": "П1 (с ОТ)",
+"p": 0.417,
+"odds": 2.15,
+"est": false
+},
+"markets": [
+[
+"П1 (с ОТ)",
+0.417,
+2.15
+],
+[
+"П2 (с ОТ)",
+0.583,
+1.735
+],
+[
+"Ф1 (+2.5)",
+0.5,
+1.909
+],
+[
+"Ф2 (-2.5)",
+0.5,
+1.909
+],
+[
+"ТБ 212.5",
+0.66,
+null
+],
+[
+"ТМ 212.5",
+0.34,
+null
+],
+[
+"ТБ 219.5",
+0.5,
+1.935
+],
+[
+"ТМ 219.5",
+0.5,
+1.885
+],
+[
+"ТБ 226.5",
+0.34,
+null
+],
+[
+"ТМ 226.5",
+0.66,
+null
+]
+],
+"bar": [
+0.4174843531794775,
+0,
+0.5825156468205225
+],
+"center": "Ожидаемый счёт 108 : 111"
+},
 "lt": null
 },
 {
