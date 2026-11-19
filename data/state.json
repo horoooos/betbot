@@ -2433,43 +2433,9 @@
   "quote_matches": 20
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-20T01:16:17.539208+03:00",
-  "cursor": "150",
+  "last_poll": "2026-11-20T01:19:03.821949+03:00",
+  "cursor": "152",
   "posts": [
-   {
-    "post_id": 570,
-    "url": "https://vk.com/wall-228963529_570",
-    "title": "Valve в патче 7.42 добавила «действенность предметов» в Dota 2",
-    "text": "рџ± Новый параметр «действенность предметов» меняет правила игры: теперь эффективность атакующих артефактов масштабируется отдельным коэффициентом.",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": false,
-     "details_present": false,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-19T00:49:34.713021+03:00"
-   },
-   {
-    "post_id": 571,
-    "url": "https://vk.com/wall-228963529_571",
-    "title": "В Dota 2 добавили второй заряд к укреплению построек",
-    "text": "рџ“° Геймплейный патч 7.42, выпущенный вечером 18 ноября, принёс в Dota 2 долгожданную правку механики укрепления построек.",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": false,
-     "details_present": false,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-19T01:51:35.810390+03:00"
-   },
    {
     "post_id": 572,
     "url": "https://vk.com/wall-228963529_572",
@@ -2945,6 +2911,40 @@
     },
     "status": "needs_review",
     "observed_at": "2026-11-20T00:16:16.058866+03:00"
+   },
+   {
+    "post_id": 600,
+    "url": "https://vk.com/wall-228963529_600",
+    "title": "LenaGol0vach в ярости: патч 7.42 и GTA VI выпустили одновременно",
+    "text": "рџ“° Стример Сергей «LenaGol0vach» Карнаухов взорвался в прямом эфире Twitch, когда в одну ночь вышли два громких события: геймплейный патч 7.42 для «Dota 2» и глобальный релиз «Grand Theft Auto VI».",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": false,
+     "details_present": false,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-20T01:19:03.821949+03:00"
+   },
+   {
+    "post_id": 601,
+    "url": "https://vk.com/wall-228963529_601",
+    "title": "Разработчики проекта расширения РПЛ прогнозируют падение зарплат",
+    "text": "рџ“° Сокращение зарплат в российском футболе может стать реальностью уже в следующем сезоне!",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": false,
+     "details_present": false,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-20T01:19:03.821949+03:00"
    }
   ],
   "status": "observing"
