@@ -7,8 +7,6 @@
  "schedule_day": "2026-11-19",
  "content_slot": "2026-11-19-16",
  "news_seen": [
-  "https://www.sport-express.ru/tennis/wta/news/putin-pozdravil-andreevu-s-pobedoy-na-itogovom-turnire-wta-2475534/",
-  "https://www.sport-express.ru/football/foreign/news/v-egipte-inostrannym-sudyam-platyat-do-6-tysyach-dollarov-v-kair-pozvali-salvadorca-bartona-2475546/",
   "https://www.sport-express.ru/football/juniors/news/trener-shabarov-ocenil-pobedu-molodezhnoy-sbornoy-rossii-nad-kirgiziey-2475545/",
   "https://www.sport-express.ru/football/juniors/news/shabarov-ob-igre-bobra-v-matche-s-kirgiziey-on-derzhit-svoy-uroven-chto-bolee-cenno-chem-sverknut-v-odnoy-vstreche-2475550/",
   "https://www.sport-express.ru/football/juniors/news/glavnyy-trener-molodezhnoy-sbornoy-rossii-shabarov-podvel-itogi-goda-dlya-komandy-2475551/",
@@ -506,9 +504,11 @@
   "https://www.sport-express.ru/basketball/vtb-league/news/antich-dopustil-chto-ikogea-mozhet-vstupit-v-edinuyu-ligu-vtb-2476606/",
   "https://www.sport-express.ru/tennis/atp/news/alkaras-otmenil-trenirovku-na-itogovom-turnire-atp-posle-prohozhdeniya-mrt-2476637/",
   "https://www.sport-express.ru/tennis/wta/news/svetlanu-kuznecovu-vtoroy-god-podryad-ne-vklyuchili-v-mezhdunarodnyy-zal-tennisnoy-slavy-2476568/",
-  "kartu-dota-2-v-patche-7-42-dvazhdy-obnovili-na-baze-dire-ubrali-derevo-a-v"
+  "kartu-dota-2-v-patche-7-42-dvazhdy-obnovili-na-baze-dire-ubrali-derevo-a-v",
+  "https://www.sport-express.ru/football/germany/news/kompani-dopustil-vozvraschenie-musialy-v-sostav-bavarii-na-match-s-kelnom-2476646/",
+  "https://www.sport-express.ru/football/rfpl/news/trener-lokomotiva-ovchinnikov-my-seychas-ne-na-svoem-meste-i-dolzhny-kak-minimum-do-pereryva-popravit-nashe-polozhenie-2476643/"
  ],
- "news_i": 0,
+ "news_i": 1,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1704,7 +1704,7 @@
  "streak_day": {
   "2026-11-19": 1
  },
- "news_next": "2026-11-19T17:25:14.111526+03:00",
+ "news_next": "2026-11-19T17:56:13.318332+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1888,7 +1888,8 @@
   "https://images.cybersport.ru/images/as-is/plain/cc/cced48a6-9906-4b8e-8e4e-256bf4343668.jpg",
   "https://upload.wikimedia.org/wikipedia/commons/f/f1/Ovchina.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
   "https://images.cybersport.ru/images/as-is/plain/7b/7be2ca35-5d31-4725-853d-c1b44dbd523f.jpg",
-  "https://images.cybersport.ru/images/as-is/plain/94/945261bc-e53b-4308-a2dd-a708f6edeb61.jpg"
+  "https://images.cybersport.ru/images/as-is/plain/94/945261bc-e53b-4308-a2dd-a708f6edeb61.jpg",
+  "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c9/Wisconsin_Badger_football_fans_in_Camp_Randall_Stadium_%288016453675%29.jpg/1280px-Wisconsin_Badger_football_fans_in_Camp_Randall_Stadium_%288016453675%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
  ],
  "indexnow_day": "2026-11-19",
  "vk_wall_err": null,
@@ -2128,7 +2129,8 @@
   "7268",
   "7269",
   "7274",
-  "7278"
+  "7278",
+  "7280"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -2300,11 +2302,12 @@
   "2026-11-19:новость:2f1854af520401d695590e9a",
   "2026-11-19:новость:4e1d84d5c1cc45f25f8f3e5e",
   "2026-11-19:новость:8571bccd8903736f7aef08cd",
-  "2026-11-19:новость:a214a0a7249073071084e9ad"
+  "2026-11-19:новость:a214a0a7249073071084e9ad",
+  "2026-11-19:новость:bcf58e3bd2144952da7aa218"
  ],
  "dz_last_delivery": {
-  "source_id": 7278,
-  "message_id": 718,
+  "source_id": 7280,
+  "message_id": 719,
   "kind": "новость"
  },
  "learn_attempt_day": "2026-11-19",
@@ -2394,7 +2397,7 @@
   "quote_matches": 19
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-19T17:24:13.946005+03:00",
+  "last_poll": "2026-11-19T17:26:13.318332+03:00",
   "cursor": "136",
   "posts": [
    {
