@@ -7,7 +7,6 @@
  "schedule_day": "2026-11-19",
  "content_slot": "2026-11-19-16",
  "news_seen": [
-  "https://www.sport-express.ru/football/nation-league/news/klopp-o-haverce-protivostoyat-emu-s-takticheskoy-tochki-zreniya-neprosto-2475516/",
   "https://www.sport-express.ru/hockey/nhl/news/ottava-namerena-obmenyat-dvukratnogo-obladatelya-kubka-stenli-burakovski-2475502/",
   "https://www.sport-express.ru/football/braziliya/news/umer-chempion-mira-po-futbolu-1958-goda-brazilec-dino-sani-2475517/",
   "https://www.sport-express.ru/hockey/world-u20/news/fetisov-zhestko-otreagiroval-na-poziciyu-kanady-v-otnoshenii-rossiyan-na-mchm-2027-druzya-golovu-vklyuchite-nemnogo-2475521/",
@@ -506,9 +505,10 @@
   "https://www.sport-express.ru/tennis/atp/news/marca-alkaras-mozhet-dosrochno-zavershit-itogovyy-turnir-atp-v-turine-iz-za-travmy-v-matche-protiv-medvedeva-2476574/",
   "https://www.sport-express.ru/tennis/atp/news/daniil-medvedev-i-frensis-tiafo-kto-vyydet-v-polufinal-itogovogo-turnira-atp-2026-polnye-rasklady-gruppy-lendla-2476571/",
   "v-dota-2-nashli-sposob-vyvesti-chaos-knight-za-predely-karty-s-pomoshchyu-novoi",
-  "https://www.sport-express.ru/football/rfpl/news/ovchinnikov-ozvuchil-igrokam-lokomotiva-cel-na-ostavshuyusya-chast-sezona-rpl-2476618/"
+  "https://www.sport-express.ru/football/rfpl/news/ovchinnikov-ozvuchil-igrokam-lokomotiva-cel-na-ostavshuyusya-chast-sezona-rpl-2476618/",
+  "v-dota-2-nashli-shest-neispolzuyemykh-predmetov-sredi-nikh-kamen-teleportatsii"
  ],
- "news_i": 1,
+ "news_i": 2,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1704,7 +1704,7 @@
  "streak_day": {
   "2026-11-19": 1
  },
- "news_next": "2026-11-19T16:24:13.470512+03:00",
+ "news_next": "2026-11-19T16:52:13.620268+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1886,7 +1886,8 @@
   "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6d/Player_chasing_the_puck_during_an_ice_hockey_game_in_Hull%2C_2025.jpg/1280px-Player_chasing_the_puck_during_an_ice_hockey_game_in_Hull%2C_2025.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
   "https://ss.sport-express.ru/userfiles/materials/224/2244863/1180x665.jpg",
   "https://images.cybersport.ru/images/as-is/plain/cc/cced48a6-9906-4b8e-8e4e-256bf4343668.jpg",
-  "https://upload.wikimedia.org/wikipedia/commons/f/f1/Ovchina.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+  "https://upload.wikimedia.org/wikipedia/commons/f/f1/Ovchina.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "https://images.cybersport.ru/images/as-is/plain/7b/7be2ca35-5d31-4725-853d-c1b44dbd523f.jpg"
  ],
  "indexnow_day": "2026-11-19",
  "vk_wall_err": null,
@@ -2124,7 +2125,8 @@
   "7262",
   "7264",
   "7268",
-  "7269"
+  "7269",
+  "7274"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -2294,11 +2296,12 @@
   "2026-11-19:новость:f9bfcff405da8df82c961ff5",
   "2026-11-19:новость:d723c034455d0b827e7cb566",
   "2026-11-19:новость:2f1854af520401d695590e9a",
-  "2026-11-19:новость:4e1d84d5c1cc45f25f8f3e5e"
+  "2026-11-19:новость:4e1d84d5c1cc45f25f8f3e5e",
+  "2026-11-19:новость:8571bccd8903736f7aef08cd"
  ],
  "dz_last_delivery": {
-  "source_id": 7269,
-  "message_id": 716,
+  "source_id": 7274,
+  "message_id": 717,
   "kind": "новость"
  },
  "learn_attempt_day": "2026-11-19",
@@ -2388,7 +2391,7 @@
   "quote_matches": 19
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-19T16:22:13.938097+03:00",
+  "last_poll": "2026-11-19T16:24:13.620268+03:00",
   "cursor": "134",
   "posts": [
    {
