@@ -5,7 +5,7 @@
  },
  "learned": "2026-11-19",
  "schedule_day": "2026-11-19",
- "content_slot": "2026-11-19-19",
+ "content_slot": "2026-11-19-20",
  "news_seen": [
   "https://www.sport-express.ru/football/nation-league/news/mat-krishtianu-ronaldu-raskritikovala-sbornuyu-portugalii-posle-porazheniya-ot-danii-v-lige-naciy-2475588/",
   "https://www.sport-express.ru/hockey/khl/news/glavnyy-trener-admirala-bratash-posle-porazheniya-ot-salavata-ne-provociruyte-menya-na-shtraf-300-tysyach-2475611/",
@@ -1568,7 +1568,7 @@
  "value_day": "2026-11-19",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-19",
- "site_stamp": "1183|7292|2026-11-19 19|4|0a2868bb12f4e00c",
+ "site_stamp": "1183|7294|2026-11-19 20|4|5bd59a7c54b00fbc",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1583,123 +1583,117 @@
  },
  "value_check": "2026-11-19-6",
  "express_risk": {
-  "msg": 7079,
+  "msg": 7294,
   "legs": [
    {
-    "sport": "basketball",
-    "div": "NBA",
-    "id": "401910010",
-    "side": "away",
-    "p": 0.517555266579974,
-    "odds": 1.855,
-    "kickoff": "2026-11-19T03:00:00+03:00",
-    "home": "Орландо Мэджик",
-    "away": "Филадельфия Сиксерс",
-    "league": "🇺🇸 США · NBA",
-    "logos": [
-     "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/orl.png",
-     "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/phi.png"
-    ],
-    "colors": [
-     "0150b5",
-     "1d428a"
-    ],
-    "label": "Победа: Филадельфия Сиксерс (с ОТ)",
-    "win": true,
-    "score": "116:121"
-   },
-   {
-    "sport": "basketball",
-    "div": "NBA",
-    "id": "401910011",
+    "sport": "hockey",
+    "div": "NHL",
+    "id": "401892743",
     "side": "home",
-    "p": 0.5789740985271712,
-    "odds": 1.658,
-    "kickoff": "2026-11-19T03:30:00+03:00",
-    "home": "Бруклин Нетс",
-    "away": "Чикаго Буллз",
-    "league": "🇺🇸 США · NBA",
+    "p": 0.5997001499250374,
+    "odds": 1.602,
+    "kickoff": "2026-11-20T03:00:00+03:00",
+    "home": "Оттава",
+    "away": "Филадельфия",
+    "league": "🇺🇸 США · NHL",
     "logos": [
-     "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/bkn.png",
-     "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/chi.png"
+     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/ott.png",
+     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/phi.png"
     ],
     "colors": [
-     "000000",
-     "ce1141"
+     "dd1a32",
+     "fe5823"
     ],
-    "label": "Победа: Бруклин Нетс (с ОТ)",
-    "win": false,
-    "score": "107:137"
-   },
-   {
-    "sport": "football",
-    "div": "BRA",
-    "id": "401841316",
-    "side": "home",
-    "p": 0.5354546560856728,
-    "odds": 1.769,
-    "kickoff": "2026-11-19T03:30:00+03:00",
-    "home": "Коринтианс Паранаэнсе",
-    "away": "Ботафого",
-    "league": "🇧🇷 Бразилия · Серия A",
-    "logos": [
-     "https://a.espncdn.com/i/teamlogos/soccer/500/874.png",
-     "https://a.espncdn.com/i/teamlogos/soccer/500/6086.png"
-    ],
-    "colors": [
-     "000000",
-     "000000"
-    ],
-    "label": "Победа: Коринтианс Паранаэнсе",
-    "win": true,
-    "score": "4:0"
-   },
-   {
-    "sport": "basketball",
-    "div": "NBA",
-    "id": "401910015",
-    "side": "away",
-    "p": 0.5635245901639344,
-    "odds": 1.704,
-    "kickoff": "2026-11-19T05:30:00+03:00",
-    "home": "Денвер Наггетс",
-    "away": "Бостон Селтикс",
-    "league": "🇺🇸 США · NBA",
-    "logos": [
-     "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/den.png",
-     "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/bos.png"
-    ],
-    "colors": [
-     "0e2240",
-     "008348"
-    ],
-    "label": "Победа: Бостон Селтикс (с ОТ)"
+    "label": "Победа: Оттава (с ОТ)"
    },
    {
     "sport": "hockey",
     "div": "NHL",
-    "id": "401892741",
+    "id": "401892746",
     "side": "home",
-    "p": 0.5107273678702251,
-    "odds": 1.87,
-    "kickoff": "2026-11-19T06:00:00+03:00",
-    "home": "Юта",
-    "away": "Колорадо",
+    "p": 0.5514042772481319,
+    "odds": 1.741,
+    "kickoff": "2026-11-20T03:00:00+03:00",
+    "home": "Вашингтон",
+    "away": "Баффало",
     "league": "🇺🇸 США · NHL",
     "logos": [
-     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/uta.png",
-     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/col.png"
+     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/wsh.png",
+     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/buf.png"
     ],
     "colors": [
-     "000000",
-     "860038"
+     "d71830",
+     "00468b"
     ],
-    "label": "Победа: Юта (с ОТ)"
+    "label": "Победа: Вашингтон (с ОТ)"
+   },
+   {
+    "sport": "hockey",
+    "div": "NHL",
+    "id": "401892744",
+    "side": "home",
+    "p": 0.5635245901639344,
+    "odds": 1.704,
+    "kickoff": "2026-11-20T03:30:00+03:00",
+    "home": "Тампа-Бэй",
+    "away": "Эдмонтон",
+    "league": "🇺🇸 США · NHL",
+    "logos": [
+     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/tb.png",
+     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/edm.png"
+    ],
+    "colors": [
+     "003e7e",
+     "00205b"
+    ],
+    "label": "Победа: Тампа-Бэй (с ОТ)"
+   },
+   {
+    "sport": "hockey",
+    "div": "NHL",
+    "id": "401892748",
+    "side": "away",
+    "p": 0.5934121196882072,
+    "odds": 1.617,
+    "kickoff": "2026-11-20T04:00:00+03:00",
+    "home": "Чикаго",
+    "away": "Коламбус",
+    "league": "🇺🇸 США · NHL",
+    "logos": [
+     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/chi.png",
+     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/cbj.png"
+    ],
+    "colors": [
+     "e31937",
+     "002d62"
+    ],
+    "label": "Победа: Коламбус (с ОТ)"
+   },
+   {
+    "sport": "hockey",
+    "div": "NHL",
+    "id": "401892751",
+    "side": "home",
+    "p": 0.5427759110881364,
+    "odds": 1.769,
+    "kickoff": "2026-11-20T05:00:00+03:00",
+    "home": "Колорадо",
+    "away": "Анахайм",
+    "league": "🇺🇸 США · NHL",
+    "logos": [
+     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/col.png",
+     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/ana.png"
+    ],
+    "colors": [
+     "860038",
+     "fc4c02"
+    ],
+    "label": "Победа: Колорадо (с ОТ)"
    }
   ],
-  "odds": 17.336741355040797,
-  "day": "2026-11-18",
-  "done": true
+  "odds": 13.594671759859345,
+  "day": "2026-11-19",
+  "done": false
  },
  "streak_day": {
   "2026-11-19": 1
@@ -1726,7 +1720,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 7292,
+ "dz_last": 7294,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2390,14 +2384,14 @@
    }
   },
   "source": {
-   "last_success": "2026-11-19T16:40:14.354496+00:00",
+   "last_success": "2026-11-19T17:00:44.998015+00:00",
    "parsed": 343,
-   "added": 71,
-   "discovered_matches": 28,
+   "added": 79,
+   "discovered_matches": 25,
    "pages": 17,
    "errors": [],
    "parsed_by_sport": {
-    "soccer": 50,
+    "soccer": 49,
     "ice-hockey": 50,
     "basketball": 50,
     "tennis": 50,
@@ -2406,49 +2400,15 @@
    }
   },
   "error": null,
-  "tips": 6014,
+  "tips": 6054,
   "snapshots": 103,
-  "unmapped_markets": 9355,
+  "unmapped_markets": 9394,
   "quote_matches": 19
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-19T19:58:45.028891+03:00",
-  "cursor": "140",
+  "last_poll": "2026-11-19T20:00:44.998015+03:00",
+  "cursor": "142",
   "posts": [
-   {
-    "post_id": 560,
-    "url": "https://vk.com/wall-228963529_560",
-    "title": "Игдисамов: ЦСКА — гордость сборной России",
-    "text": "рџ“° Главный тренер «ЦСКА» Дмитрий Игдисамов прокомментировал работу клуба в период паузы на матчи сборных, подчеркнув, что команда выступает базой для национальной сборной России.",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": false,
-     "details_present": false,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-18T18:30:02.813043+03:00"
-   },
-   {
-    "post_id": 561,
-    "url": "https://vk.com/wall-228963529_561",
-    "title": "Гендиректор «Динамо» назвал обсуждение расширения РПЛ преждевременным",
-    "text": "рџ“° Генеральный директор московского «Динамо» Павел Пивоваров заявил, что обсуждать увеличение количества команд в РПЛ с 16 до 18 преждевременно. Идея о расширении была поднята на общем собрании клубов 10 ноября гендиректором «Динамо» (Махачкалы) Шамилем Газизовым.",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": false,
-     "details_present": false,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-18T19:32:04.031486+03:00"
-   },
    {
     "post_id": 562,
     "url": "https://vk.com/wall-228963529_562",
@@ -2924,6 +2884,40 @@
     },
     "status": "needs_review",
     "observed_at": "2026-11-19T18:56:14.876389+03:00"
+   },
+   {
+    "post_id": 590,
+    "url": "https://vk.com/wall-228963529_590",
+    "title": "Баг в Dota 2: Nature's Prophet не может создавать трентов",
+    "text": "рџ“° Откровение для всех, кто любит «Nature's Prophet»: его фирменная способность «Nature's Call» полностью отказывает на карте Sanctums of the Divine.",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": false,
+     "details_present": false,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-19T20:00:44.998015+03:00"
+   },
+   {
+    "post_id": 591,
+    "url": "https://vk.com/wall-228963529_591",
+    "title": "Горшков ушёл из «Зенита» с широкой улыбкой: почему он рад",
+    "text": "рџ“° Защитник «Крыльев Советов» Юрий Горшков, бывший игрок «Зенита», в подкасте на странице клуба в «ВКонтакте» откровенно рассказал, почему прощание с петербургской командой прошло у него с широкой улыбкой.",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": false,
+     "details_present": false,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-19T20:00:44.998015+03:00"
    }
   ],
   "status": "observing"
