@@ -2353,26 +2353,9 @@
   "quote_matches": 19
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-19T10:19:37.545415+03:00",
-  "cursor": "123",
+  "last_poll": "2026-11-19T10:21:38.112920+03:00",
+  "cursor": "124",
   "posts": [
-   {
-    "post_id": 543,
-    "url": "https://vk.com/wall-228963529_543",
-    "title": "Газизов объяснил, почему Пальцев не попал в «Спартак»",
-    "text": "рџ“° Генеральный директор махачкалинского «Динамо» Азиз Газизов в выпуске подкаста «БЕТСИТИ Подкаст PRO DMX» раскрыл, почему защитник клуба Валентин Пальцев не переехал в московский «Спартак».",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": false,
-     "details_present": false,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-18T01:35:50.861594+03:00"
-   },
    {
     "post_id": 544,
     "url": "https://vk.com/wall-228963529_544",
@@ -2865,6 +2848,23 @@
     },
     "status": "needs_review",
     "observed_at": "2026-11-19T01:51:35.810390+03:00"
+   },
+   {
+    "post_id": 573,
+    "url": "https://vk.com/wall-228963529_573",
+    "title": "Расулов: Шварц знает, как вывести «Динамо» на победный путь",
+    "text": "рџ±вљЅпёЏ Голкипер «Динамо» Курбан Расулов в интервью «СЭ» раскрыл, почему работа с тренером Сандро Шварцем даёт команде ощущение стабильности. По его словам, немец уже давно знаком с коллективом и умеет «делать из футболистов «Динамо» настоящую команду».",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": false,
+     "details_present": false,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-19T10:21:38.112920+03:00"
    }
   ],
   "status": "observing"
