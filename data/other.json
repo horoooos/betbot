@@ -8592,22 +8592,22 @@
   "state": "pre",
   "completed": false,
   "tier": "a",
-  "status": "reviewed",
+  "status": "done",
   "home": {
+   "color": "3b4a7a",
+   "logo": "https://cdn-api.pandascore.co/images/team/image/135712/250px_parivision_allmode.png",
    "id": "135712",
    "name": "PARIVISION",
    "ru": "PARIVISION",
-   "logo": "https://cdn-api.pandascore.co/images/team/image/135712/250px_parivision_allmode.png",
-   "color": "3b4a7a",
    "score": 0,
    "winner": false
   },
   "away": {
+   "color": "3b4a7a",
+   "logo": "https://cdn-api.pandascore.co/images/team/image/139340/652px_legion_dota2_allmode.png",
    "id": "139340",
    "name": "LEGION",
    "ru": "LEGION",
-   "logo": "https://cdn-api.pandascore.co/images/team/image/139340/652px_legion_dota2_allmode.png",
-   "color": "3b4a7a",
    "score": 0,
    "winner": false
   },
@@ -8670,7 +8670,9 @@
   "close": {
    "_": null
   },
-  "settlement_retry_at": 1795198533.047904
+  "settlement_retry_at": 1795199492.246453,
+  "main_hit": true,
+  "bold_hit": null
  },
  "DOTA|1816458": {
   "status": "waiting_data",

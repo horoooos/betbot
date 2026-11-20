@@ -104,7 +104,7 @@ null
 "sport": "esports",
 "id": "1816457",
 "league": "Киберспорт · Dota 2",
-"kickoff": "2026-11-20T19:00:21+03:00",
+"kickoff": "2026-11-20T19:00:00+03:00",
 "home": "PARIVISION",
 "away": "LEGION",
 "hl": "https://cdn-api.pandascore.co/images/team/image/135712/250px_parivision_allmode.png",
@@ -125,11 +125,11 @@ null
 ]
 ],
 "div": "DOTA",
-"state": "in",
+"state": "unknown",
 "bo": 3,
 "prediction": "predictions/2026-11-20-parivision-legion-1816457.html",
-"hs": 1,
-"as": 0,
+"hs": null,
+"as": null,
 "tip": "Всухую (2:0 или 0:2) · ≈1.86",
 "top": false,
 "bot": {
