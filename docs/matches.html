@@ -85,6 +85,7 @@ const SP = { football: "⚽ Футбол", hockey: "🏒 Хоккей", basketba
 const EM = { football: "⚽", hockey: "🏒", basketball: "🏀", tennis: "🎾", esports: "🎮" };
 let all = [], scheduled = [], dotaFrames = [], live = {}, filter = "all", viewers = {};
 try { filter = localStorage.getItem("mfilter") || "all"; } catch (e) {}
+if(new URLSearchParams(location.search).get("s")==="esports")filter="esports";
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 const time = iso => new Date(iso).toLocaleTimeString("ru-RU", { hour: "2-digit", minute: "2-digit", timeZone: "Europe/Moscow" });
 const day = iso => { const d = new Date(iso), n = new Date(); const f = x => x.toLocaleDateString("ru-RU", { timeZone: "Europe/Moscow" });

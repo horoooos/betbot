@@ -90,6 +90,33 @@ def fetch() -> list[dict]:
     return list({(e["div"], e["id"]): e for e in out}.values())
 
 
+def pending_results(stored, events, now):
+    """A finished fixture can fall out of the limited past listing before settlement."""
+    known = {(e.get('div'), str(e.get('id'))): e for e in events}
+    recovered = []
+    if not enabled():
+        return recovered
+    attempts = 0
+    for m in sorted(stored.values(), key=lambda m: m.get('kickoff', '')):
+        if m.get('sport') != 'esports' or m.get('status') != 'reviewed':
+            continue
+        kick = pd.Timestamp(m['kickoff'])
+        existing = known.get((m.get('div'), str(m.get('id'))))
+        if existing and existing.get('completed'):
+            continue
+        if now < kick + pd.Timedelta(hours=2) or now.timestamp() < m.get('settlement_retry_at', 0) or attempts >= 6:
+            continue
+        m['settlement_retry_at'] = now.timestamp() + 900
+        attempts += 1
+        raw = _get('/matches/' + str(m['id']))
+        if not isinstance(raw, dict):
+            continue
+        event = _normalize(m['div'], raw)
+        if event and event.get('completed'):
+            recovered.append(event)
+    return recovered
+
+
 def history(refresh: bool, upcoming: list[dict] | None = None) -> list[dict]:
     """Завершённые матчи за год (все уровни — для рейтинга важны и мелкие турниры). Кэш дополняется раз в день."""
     if not enabled():

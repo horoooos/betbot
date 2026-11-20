@@ -1,5 +1,10 @@
 import assert from 'node:assert/strict';
-import {liveFrames,mergeDotaMatches,directorTarget,gameClock} from '../docs/dota-data.js';
+import {liveFrames,mergeDotaMatches,directorTarget,gameClock,sampledPosition} from '../docs/dota-data.js';
+const samples=[{at:100,x:0,y:0},{at:110,x:.1,y:.1}];
+assert.deepEqual(sampledPosition(samples,105),{x:.05,y:.05});
+assert.deepEqual(sampledPosition(samples,120),samples[1]);
+assert.deepEqual(sampledPosition([{at:100,x:0,y:0},{at:150,x:.1,y:0}],125),{at:100,x:0,y:0});
+assert.deepEqual(sampledPosition([{at:100,x:0,y:0},{at:110,x:1,y:1}],105),{at:100,x:0,y:0});
 const frame={match_id:'909',at:100,state:5,game_time:123,teams:[2,3].map(team=>({team,name:team===2?'Team Spirit':'PARIVISION',score:team,players:Array.from({length:5},(_,id)=>({id:String(id),x:team*.03+id*.001,y:.1,kills:0,networth:1000}))}))};
 assert.equal(liveFrames({games:{a:frame}},110).length,1);
 assert.equal(liveFrames({games:{a:frame}},151).length,0);

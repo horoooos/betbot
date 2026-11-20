@@ -1,10 +1,19 @@
 import copy
 import unittest
 from unittest.mock import patch, Mock
-from tools.dota_live_relay import snapshot, collect
+from tools.dota_live_relay import snapshot, collect, retain_recent_frames
 
 
 class DotaLiveTests(unittest.TestCase):
+    def test_short_empty_response_retains_frame_without_refreshing_its_timestamp(self):
+        old={'1':{'at':100,'state':5}}
+        kept=retain_recent_frames({},old,125)
+        self.assertEqual(kept['1']['at'],100)
+        self.assertTrue(kept['1']['delayed'])
+        self.assertEqual(retain_recent_frames({},old,191),{})
+        fresh={'1':{'at':126,'state':6}}
+        self.assertEqual(retain_recent_frames(fresh,old,126),fresh)
+
     def frame(self):
         return {'match': {'match_id': 123, 'game_time': 42}, 'teams': [
             {'team_number': team, 'team_name': str(team), 'players': [

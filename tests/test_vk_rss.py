@@ -10,6 +10,30 @@ from betbot import pages
 
 
 class VKRSSFeedTests(unittest.TestCase):
+    def test_ascii_xml_decodes_caption_once_before_vk_html_limit(self):
+        news = dict(id=1, title='Заголовок', t='2026-11-20T10:00:00Z', sport='football',
+                    photo='https://example.test/a.jpg', body='Полный текст.\n\n#футбол #аиставит',
+                    desc='Описание', url='news/1.html', vk_compact_rss=True)
+        xml = pages._rss([news], [], {}, pd.Timestamp('2026-11-20T10:01:00Z'), feed_name='rss-vk.xml')
+        html = ET.fromstring(xml).findtext('channel/item/{http://purl.org/rss/1.0/modules/content/}encoded')
+        self.assertIn('Полный текст.', html)
+        self.assertIn('#аиставит', html)
+        self.assertNotIn('&#', html)
+        self.assertEqual(html.count('<p>'), 1)
+        self.assertIn('<br><br>#футбол', html)
+
+    def test_results_require_photo_activation_and_final_tag(self):
+        now = pd.Timestamp('2026-11-20T12:00:00Z')
+        posts = {1:dict(t='2026-11-20T11:30:00Z', html='🎮 Итог матча\nПобеда команды.\n#итог', photo='https://example.test/result.jpg'),
+                 2:dict(t='2026-11-20T11:31:00Z', html='🎮 КАРТА!\n#live', photo='https://example.test/map.jpg')}
+        with tempfile.TemporaryDirectory() as directory, patch.object(pages, 'DATA', Path(directory)):
+            self.assertEqual(pages._vk_results(posts, now), [])
+            (Path(directory)/'vk_results_since.txt').write_text('2026-11-20T11:00:00Z')
+            results = pages._vk_results(posts, now)
+        self.assertEqual([p['id'] for p in results], [1])
+        self.assertEqual(results[0]['sport'], 'esports')
+        self.assertEqual(results[0]['kind'], 'result')
+
     def test_only_recent_illustrated_news_after_activation_are_imported(self):
         now = pd.Timestamp("2026-11-14T10:00:00Z")
         def news(title, timestamp, photo="https://example.test/photo.jpg"):

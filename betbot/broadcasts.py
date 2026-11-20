@@ -37,6 +37,11 @@ def public_video(url):
         if p.scheme != 'https' or p.username or p.password or p.port:
             return None
         host, parts = (p.hostname or '').lower(), p.path.strip('/').split('/')
+        if host in ('rutube.ru', 'www.rutube.ru'):
+            found = re.fullmatch(r'/(live/)?video/([a-fA-F0-9]{32})/(?:tvprogramm/)?', p.path)
+            if found:
+                vid = found[2].lower()
+                return dict(provider='rutube', video_id=vid, url='https://rutube.ru/' + ('live/' if found[1] else '') + 'video/' + vid + '/')
         if host in ('twitch.tv', 'www.twitch.tv') and len(parts) == 1:
             channel = parts[0].lower()
             if re.fullmatch(r'[a-z0-9_]{2,30}', channel) and channel not in {
@@ -195,7 +200,8 @@ def check_youtube(video):
     details = data.get('microformat', {}).get('playerMicroformatRenderer', {}).get('liveBroadcastDetails', {})
     if details.get('isLiveNow') is not True:
         return None
-    return {**video, 'status': 'live', 'access': 'public',
+    available = data.get('playabilityStatus', {}).get('status') == 'OK'
+    return {**video, 'status': 'live' if available else 'listed', 'access': 'public' if available else 'restricted',
             'embeddable': data.get('playabilityStatus', {}).get('playableInEmbed') is True,
             'evidence': 'Official channel LIVE listing and watch-page isLiveNow'}
 
@@ -322,7 +328,14 @@ def discover(events=None, config=None):
     for row in results.values():
         row['streams'] = list({s['url']: s for s in row['streams']}.values())
         row['searched_at'] = now
-    return {'at': now, 'interval': 300, 'sports': list(SPORTS), 'matches': list(results.values()), 'sources': report}
+    channels = []
+    for channel in config.get('channels', []):
+        video = public_video(channel.get('url'))
+        if video:
+            channels.append({**video, 'source': channel['name'], 'sports': channel['sports'],
+                             'status': 'listed', 'scope': 'channel', 'checked_at': now,
+                             'evidence': 'Official broadcaster channel; current match not verified'})
+    return {'at': now, 'interval': 300, 'sports': list(SPORTS), 'matches': list(results.values()), 'sources': report, 'channels': channels}
 
 
 def espn_streams(raw):

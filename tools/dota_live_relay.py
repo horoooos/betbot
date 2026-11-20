@@ -96,7 +96,17 @@ def fetch_frame(game):
     return frame
 
 
-def collect():
+def retain_recent_frames(fresh, previous, now, ttl=90):
+    """An empty upstream response is not evidence a match ended; keep original age."""
+    merged = dict(fresh)
+    for key, frame in (previous or {}).items():
+        age = now - frame.get('at', 0)
+        if key not in merged and 0 <= age <= ttl:
+            merged[key] = {**frame, 'delayed': True}
+    return merged
+
+
+def collect(previous=None):
     r = requests.get(VALVE + 'IDOTA2League/GetLiveGames/v001', timeout=15)
     r.raise_for_status()
     data = r.json()
@@ -114,7 +124,9 @@ def collect():
             except (requests.RequestException, ValueError, KeyError, TypeError):
                 pass
     at = int(time.time())
+    frames = retain_recent_frames(frames, previous, at)
     summaries = {key: {**{k: frame.get(k) for k in ('match_id','at','game_time','state')},
+                       'delayed': bool(frame.get('delayed')),
                        'teams': [{k: t.get(k) for k in ('team','name','score','networth','logo')} for t in frame['teams']]}
                  for key,frame in frames.items()}
     return {'at': at, 'games': frames, 'index': {'at': at, 'games': summaries}, 'source': 'Valve', 'interval': 10}
@@ -130,10 +142,18 @@ def main():
         configure(session)
     deadline = time.monotonic() + args.hours * 3600
     errors = 0
+    previous = {}
+    try:
+        response = session.get(DB + '/' + PATH + '/games.json', timeout=20)
+        if response.ok:
+            previous = response.json() or {}
+    except requests.RequestException:
+        pass
     while True:
         started = time.monotonic()
         try:
-            payload = collect()
+            payload = collect(previous)
+            previous = payload['games']
             r = session.put(DB + '/' + PATH + '.json', json=payload, timeout=20)
             if not r.ok:
                 raise RuntimeError(f'Telemetry write HTTP {r.status_code}')

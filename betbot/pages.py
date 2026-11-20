@@ -759,7 +759,9 @@ def _rss(news: list[dict], ms: list[dict], store: dict[int, dict], now: pd.Times
             # full content:encoded. Put the complete, bounded caption here too.
             # The full source article is published separately, without slicing.
             from .vk_rss import announcement
-            body='\n\n'.join('<p>'+H.escape(p).replace('\n','<br>')+'</p>' for p in announcement(n).split('\n\n'))
+            # Some importers keep only the first HTML paragraph. Keep the whole
+            # bounded caption (including footer) in one block with explicit breaks.
+            body='<p>'+H.escape(announcement(n)).replace('\n','<br>')+'</p>'
         elif feed_name == "rss-vk.xml":
             # Keep paragraph breaks inside one text node. Importers that strip
             # tags and whitespace-only nodes otherwise concatenate <p> blocks.
@@ -780,7 +782,7 @@ def _rss(news: list[dict], ms: list[dict], store: dict[int, dict], now: pd.Times
             description = announcement(n)
         items.append((pd.Timestamp(n["t"]), f"""<item><title>{x(item_title)}</title><link>{x(item_link)}</link><guid isPermaLink="true">{x(item_guid)}</guid>
 <pubDate>{format_datetime(pd.Timestamp(n['t']).to_pydatetime())}</pubDate><category>{x(SPORT_RU.get(n['sport'], 'Спорт'))}</category>
-<description>{x(description)}</description><content:encoded><![CDATA[{photo_html + body}]]></content:encoded>
+<description>{x(description)}</description><content:encoded>{x(photo_html + body)}</content:encoded>
 {f'<enclosure url="{x(n["photo"])}" type="image/jpeg" length="{int(n.get("photo_bytes") or 0)}"/>' if n.get('photo') else ''}</item>"""))
     for m in [m for m in ms if not m.get("finished")][:30]:
         post = store.get(int(m["msg"])) if str(m.get("msg", "")).isdigit() else None
@@ -806,6 +808,32 @@ def _rss(news: list[dict], ms: list[dict], store: dict[int, dict], now: pd.Times
 </channel></rss>
 """
     return xml.encode('ascii','xmlcharrefreplace').decode('ascii') if feed_name.startswith('rss-vk') else xml
+
+
+def _vk_results(store: dict, now: pd.Timestamp) -> list[dict]:
+    """RSS also delivers finished-match cards while wall photo upload is blocked."""
+    activation = DATA / 'vk_results_since.txt'
+    if not activation.exists():
+        return []
+    since = pd.Timestamp(activation.read_text(encoding='utf-8').strip())
+    out = []
+    for pid, post in store.items():
+        text = _plain(post.get('html', '')).strip()
+        if not re.search(r'(?<!\w)#итог(?!\w)', text, re.I) or not post.get('photo'):
+            continue
+        when = pd.Timestamp(post['t'])
+        if not since <= when <= now or now - when > pd.Timedelta(hours=24):
+            continue
+        lines = [line for line in text.splitlines() if line.strip()]
+        if not lines:
+            continue
+        sport = next((sport for tag, sport in NEWS_TAGS.items() if tag in text), None)
+        if not sport:
+            sport = next((s for s, icon in [('football','⚽'),('hockey','🏒'),('basketball','🏀'),('tennis','🎾'),('esports','🎮')] if icon in text), 'football')
+        out.append(dict(id=int(pid), title=lines[0], body='\n\n'.join(line for line in lines[1:] if not line.strip().startswith('#')),
+                        desc=text, sport=sport, t=when, photo=post['photo'], complete=True,
+                        kind='result', url='vk-articles/'+str(pid)+'.html'))
+    return out
 
 
 def _vk_rss(news: list[dict], now: pd.Timestamp, *, article=False) -> str:
@@ -967,8 +995,9 @@ def build(stores: dict, results: pd.DataFrame, now: pd.Timestamp, max_pages: int
     sm.append("</urlset>")
     try:
         _write(DOCS / "rss.xml", _rss(news, ms, store, now))
-        _write(DOCS / "rss-vk.xml", _vk_rss(news, now))
-        _write(DOCS / "rss-vk-article.xml", _vk_rss(news, now, article=True))
+        vk_items = news + _vk_results(store, now)
+        _write(DOCS / "rss-vk.xml", _vk_rss(vk_items, now))
+        _write(DOCS / "rss-vk-article.xml", _vk_rss(vk_items, now, article=True))
     except Exception as e:
         print(f"  ! RSS не собралась: {e}")
     _write(DOCS / "sitemap.xml", "\n".join(sm))

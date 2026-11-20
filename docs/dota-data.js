@@ -1,6 +1,19 @@
 export const normalizeTeam=s=>String(s||'').toLowerCase().replace(/\b(team|gaming|esports)\b/g,'').replace(/[^\p{L}\p{N}]/gu,'');
 export const pairKey=(a,b)=>[normalizeTeam(a),normalizeTeam(b)].sort().join('|');
 export const gameClock=seconds=>{const n=Math.max(0,Math.floor(Number(seconds)||0));return Math.floor(n/60)+':'+String(n%60).padStart(2,'0');};
+// Interpolate only between observed snapshots; hold on outages/teleports.
+export function sampledPosition(samples,at){
+  if(!samples.length)return null;
+  if(at<=samples[0].at)return samples[0];
+  for(let i=1;i<samples.length;i++){
+    const a=samples[i-1],b=samples[i];
+    if(at>=b.at)continue;
+    if(b.at-a.at>30||Math.hypot(b.x-a.x,b.y-a.y)>0.18)return a;
+    const f=(at-a.at)/(b.at-a.at);
+    return{x:a.x+(b.x-a.x)*f,y:a.y+(b.y-a.y)*f};
+  }
+  return samples.at(-1);
+}
 export function liveFrames(data,now=Date.now()/1000,requirePlayers=true){
   return Object.values(data?.games||{}).filter(g=>g.state===5&&now-g.at<50&&now-g.at>=-30&&g.teams?.length===2&&g.teams.every(t=>t.name?.trim()&&(!requirePlayers||t.players?.length===5)));
 }

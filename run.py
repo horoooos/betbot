@@ -504,6 +504,7 @@ def other_sports(state: dict, events: list[dict], now: pd.Timestamp, calib: dict
             except Exception as ex:
                 print(f"  ! обзор не удался {key}: {ex}")
             save_json(OTHER, store)
+    events = events + esports.pending_results(store, events, now)
     by_key = {f"{e['div']}|{e['id']}": e for e in events}
     for key, m in store.items():
         capture_close(m, by_key.get(key), now)
@@ -516,7 +517,8 @@ def other_sports(state: dict, events: list[dict], now: pd.Timestamp, calib: dict
                 print(f"  ! итог не удался {key}: {ex}")
             save_json(OTHER, store)
     old = now - pd.Timedelta(days=3)
-    save_json(OTHER, {k: v for k, v in store.items() if pd.Timestamp(v["kickoff"]) > old})
+    save_json(OTHER, {k: v for k, v in store.items() if pd.Timestamp(v["kickoff"]) > old
+                     or (v.get('status') == 'reviewed' and pd.Timestamp(v['kickoff']) > now-pd.Timedelta(days=30))})
 
 
 def capture_close(m: dict, e: dict | None, now: pd.Timestamp) -> None:

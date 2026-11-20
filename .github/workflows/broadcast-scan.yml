@@ -2,21 +2,27 @@ name: Find match broadcasts
 on:
   workflow_dispatch:
     inputs:
+      mode:
+        type: choice
+        default: loop
+        options: [once, loop]
+        description: One scan or continuous search
       probe:
         type: boolean
         default: false
         description: Diagnose public YouTube listing format
   schedule:
-    - cron: '*/5 * * * *'
+    - cron: '*/30 * * * *'
 permissions:
   contents: read
+  actions: write
 concurrency:
   group: broadcast-search
   cancel-in-progress: false
 jobs:
   scan:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 340
     steps:
       - uses: actions/checkout@v4
         with:
@@ -30,7 +36,13 @@ jobs:
           PANDASCORE_TOKEN: ${{ secrets.PANDASCORE_TOKEN }}
           FIREBASE_SA: ${{ secrets.FIREBASE_SA }}
           PROBE: ${{ inputs.probe }}
-        run: python tools/broadcast_scan.py --remote --publish $([ "$PROBE" = true ] && echo --probe-youtube || true)
+          MODE: ${{ inputs.mode || 'loop' }}
+        run: python tools/broadcast_scan.py --remote --publish --hours "$([ "$MODE" = loop ] && echo 5.3 || echo 0)" $([ "$PROBE" = true ] && echo --probe-youtube || true)
+      - name: Continue automatic search
+        if: success() && inputs.mode != 'once'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run broadcast-scan.yml --repo "$GITHUB_REPOSITORY" --ref main -f mode=loop
       - uses: actions/upload-artifact@v4
         if: always()
         with:

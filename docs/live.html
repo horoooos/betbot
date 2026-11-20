@@ -151,7 +151,7 @@
   @media (max-width:520px) { .bar { gap:6px; padding:10px } .team { gap:5px } .team .nm { font-size:11px; letter-spacing:-.2px } .score { font-size:26px }
     .team img { width:24px; height:24px } .team .stripe { width:3px; height:24px } #chip { font-size:17px } .league { font-size:10px; letter-spacing:1px } }
 </style>
-</head>
+<link rel="stylesheet" href="watch-video.css?v=1"></head>
 <body>
 <canvas id="scene"></canvas>
 <div id="flash"></div>
@@ -166,7 +166,7 @@
       <div class="clock"><span class="dot" id="dot"></span><span id="cl">—</span></div></div>
     <div class="team away"><span class="nm" id="an">—</span><img id="al" alt=""><span class="stripe" id="ac"></span></div>
   </div>
-  <div class="row2"><a class="pill" href="matches.html">← <span class="tx">Все матчи</span></a><div class="league" id="lg"></div><button class="pill" id="cam">🎥 ТВ</button></div>
+  <div class="row2"><a class="pill" href="matches.html">← <span class="tx">Все матчи</span></a><div class="league" id="lg"></div><button class="pill" id="videoButton">▶ Реальный эфир</button><button class="pill" id="cam">🎥 ТВ</button></div>
   <div class="legend" id="legend"></div>
   <div id="acts">
     <span class="pill" id="viewers" style="display:none;pointer-events:none">👁 0</span>
@@ -1695,5 +1695,5 @@ else {
   setInterval(() => load().catch(() => {}), SPORT === "tennis" ? 20000 : 12000);
 }
 </script>
-</body>
+<script type="module" src="watch-video.js?v=1"></script></body>
 </html>

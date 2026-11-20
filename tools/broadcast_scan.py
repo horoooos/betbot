@@ -4,6 +4,7 @@ from __future__ import annotations
 import argparse
 import json
 import sys
+import time
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
@@ -37,6 +38,7 @@ def main():
     parser.add_argument('--remote', action='store_true')
     parser.add_argument('--probe-youtube', action='store_true')
     parser.add_argument('--out', default='work/broadcasts-check.json')
+    parser.add_argument('--hours', type=float, default=0)
     args = parser.parse_args()
     if args.probe_youtube:
         html = broadcasts.get_text('https://www.youtube.com/@ESLDota2/streams?hl=en')
@@ -59,15 +61,29 @@ def main():
                 break
         # Public listing metadata only: never dump the full page/player response.
         print(json.dumps({'youtube_probe': {'tabs': tabs, 'cards': cards}}, ensure_ascii=False), flush=True)
-    payload = broadcasts.discover(broadcasts.load_events(remote=args.remote))
-    path = Path(args.out)
-    path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding='utf-8')
-    if args.publish:
-        publish(payload)
-    print(json.dumps({'at': payload['at'], 'matches': len(payload['matches']),
-                      'with_streams': sum(bool(m['streams']) for m in payload['matches']),
-                      'sources': payload['sources']}, ensure_ascii=False), flush=True)
+    deadline = time.monotonic() + args.hours * 3600
+    failures = 0
+    while True:
+        started = time.monotonic()
+        try:
+            payload = broadcasts.discover(broadcasts.load_events(remote=args.remote))
+            path = Path(args.out)
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding='utf-8')
+            if args.publish:
+                publish(payload)
+            print(json.dumps({'at': payload['at'], 'matches': len(payload['matches']),
+                              'with_streams': sum(bool(m['streams']) for m in payload['matches']),
+                              'sources': payload['sources']}, ensure_ascii=False), flush=True)
+            failures = 0
+        except Exception as exc:
+            failures += 1
+            print('Broadcast search retry: ' + type(exc).__name__, flush=True)
+            if args.hours == 0 or failures >= 10:
+                raise RuntimeError('Broadcast search failed; previous timestamps retained') from None
+        if time.monotonic() >= deadline:
+            break
+        time.sleep(max(1, 300 - (time.monotonic() - started)))
 
 
 if __name__ == '__main__':

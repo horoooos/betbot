@@ -9,6 +9,7 @@ class BroadcastTests(unittest.TestCase):
     def test_public_urls_canonical_and_not_private_or_embeds(self):
         self.assertEqual(public_video('https://twitch.tv/esl_dota2?token=secret')['url'], 'https://www.twitch.tv/esl_dota2')
         self.assertEqual(public_video('https://youtu.be/abcdefghijk?t=2')['video_id'], 'abcdefghijk')
+        self.assertEqual(public_video('https://rutube.ru/live/video/'+'a'*32+'/tvprogramm/')['provider'], 'rutube')
         for url in ['http://twitch.tv/esl', 'https://twitch.tv.evil/x', 'https://twitch.tv/videos/42',
                     'https://user:pass@twitch.tv/esl', 'https://twitch.tv:443/esl', 'https://youtube.com/embed/abcdefghijk']:
             self.assertIsNone(public_video(url), url)

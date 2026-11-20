@@ -1,4 +1,7 @@
 {
+  "channels": [
+    {"name":"МАТЧ ТВ · официальный эфир", "url":"https://rutube.ru/live/video/11bbbec75a2ceb8cf446ad16813c6eec/tvprogramm/", "sports":["football","hockey","basketball","tennis"]}
+  ],
   "youtube": [
     {"name":"FIFA", "handle":"fifa", "sports":["football"]},
     {"name":"UEFA", "handle":"UEFA", "sports":["football"]},

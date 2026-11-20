@@ -1,6 +1,7 @@
 import * as THREE from 'three';
 import {OrbitControls} from 'three/addons/controls/OrbitControls.js';
 import {loadCharacter} from './dota-character.js?v=2';
+import {sampledPosition} from './dota-data.js?v=2';
 
 // Environment is a visual reconstruction. Unit/building positions stay in Valve's frame.
 export function createArena(container,heroes={}) {
@@ -80,14 +81,14 @@ export function createArena(container,heroes={}) {
   function unit(p,team){
     const key=team+':'+p.id,group=new THREE.Group(),ring=add(group,new THREE.TorusGeometry(1.65,.1,6,32),new THREE.MeshBasicMaterial({color:tint(team)}),0,.05,0);ring.rotation.x=-Math.PI/2;
     const label=billboard(heroes[p.hero]?.name||String(p.hero),team);group.add(label);const visual=fallback(p,team);group.add(visual.root);
-    group.position.copy(coord(p));scene.add(group);const u={key,group,ring,label,visual,hero:p.hero,target:coord(p),dead:false,heading:0};group.userData.unitKey=key;
+    group.position.copy(coord(p));scene.add(group);const u={key,group,ring,label,visual,hero:p.hero,target:coord(p),samples:[],dead:false,heading:0};group.userData.unitKey=key;
     modelWanted++;modelStatus();
     loadCharacter(p.hero).then(real=>{if(u.dead){real.dispose();return;}group.remove(u.visual.root);u.visual.dispose();u.visual=real;group.add(real.root);modelLoaded++;modelStatus();}).catch(error=>{console.warn('Dota model unavailable',p.hero,error.message);});
     return u;
   }
   function update(frame){
     if(gameId!==frame.match_id){for(const u of units.values())clearUnit(u);units.clear();for(const b of structures.values())scene.remove(b);structures.clear();follow=null;gameId=frame.match_id;modelLoaded=0;modelWanted=0;}
-    const keys=new Set();for(const team of frame.teams||[])for(const p of team.players||[]){const key=team.team+':'+p.id;keys.add(key);let u=units.get(key);if(u&&u.hero!==p.hero){clearUnit(u);units.delete(key);u=null;}if(!u){u=unit(p,team.team);units.set(key,u);}u.target.copy(coord(p));}
+    const keys=new Set();for(const team of frame.teams||[])for(const p of team.players||[]){const key=team.team+':'+p.id;keys.add(key);let u=units.get(key);if(u&&u.hero!==p.hero){clearUnit(u);units.delete(key);u=null;}if(!u){u=unit(p,team.team);units.set(key,u);}u.target.copy(coord(p));if(!u.samples.length||frame.at>u.samples.at(-1).at){u.samples.push({at:frame.at,x:p.x,y:p.y});u.samples=u.samples.slice(-8);}}
     for(const [key,u] of units)if(!keys.has(key)){clearUnit(u);units.delete(key);}
     for(const b of frame.buildings||[]){const key=[b.team,b.type,b.x,b.y].join(':'),old=structures.get(key);if(old?.userData.destroyed===b.destroyed)continue;if(old)scene.remove(old);const mesh=structure(b);mesh.position.copy(coord(b));mesh.userData.destroyed=b.destroyed;structures.set(key,mesh);scene.add(mesh);}
     active=true;
@@ -103,9 +104,9 @@ export function createArena(container,heroes={}) {
   function resize(){const w=container.clientWidth,h=container.clientHeight;renderer.setSize(w,h);camera.aspect=w/h;camera.updateProjectionMatrix();}
   const observer=new ResizeObserver(resize);observer.observe(container);resize();
   renderer.setAnimationLoop(()=>{
-    const now=performance.now(),dt=Math.min(.07,(now-last)/1000);last=now;if(document.hidden)return;
+    const now=performance.now(),dt=Math.min(.07,(now-last)/1000);last=now;if(document.hidden||document.body.classList.contains('video-open'))return;
     for(const u of units.values()){
-      const before=u.group.position.clone();if(active)u.group.position.lerp(u.target,1-Math.exp(-dt*.8));const movement=u.group.position.clone().sub(before),speed=movement.length()/Math.max(.001,dt);
+      const before=u.group.position.clone();if(active){const observed=sampledPosition(u.samples,Date.now()/1000-12);if(observed)u.group.position.copy(coord(observed));}const movement=u.group.position.clone().sub(before),speed=movement.length()/Math.max(.001,dt);
       if(speed>.12){const wanted=Math.atan2(movement.x,movement.z),diff=Math.atan2(Math.sin(wanted-u.heading),Math.cos(wanted-u.heading));u.heading+=diff*(1-Math.exp(-dt*9));u.visual.root.rotation.y=u.heading;}
       if(active)u.visual.animate(dt,speed);u.label.visible=!follow||u.key===follow;u.ring.material.opacity=u.key===follow?1:.8;
     }

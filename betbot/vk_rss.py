@@ -28,7 +28,8 @@ def hashtags(news):
         if re.fullmatch(r"[А-ЯЁA-Z][\w .-]+", quoted) and len(quoted.split()) <= 3:
             tags.append("#" + re.sub(r"[^\wА-Яа-яЁё]", "", quoted))
             break
-    tags += ["#новостиспорта", "#спорт", "#главное", "#аиставит"]
+    tags += (["#итоги", "#результаты", "#статистикабота", "#спорт", "#аиставит"] if news.get('kind') == 'result'
+             else ["#новостиспорта", "#спорт", "#главное", "#аиставит"])
     return " ".join(dict.fromkeys(tags))
 
 

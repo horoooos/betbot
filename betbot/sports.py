@@ -564,7 +564,11 @@ def final(e: dict) -> dict | None:
             next((w for w in ("WALKOVER", "RETIRED", "FORFEIT") if w in status), ""), "матч не доигран")}
     try:
         if e["sport"] == "esports":  # счёт по картам
-            hs, as_ = int(e["home"]["score"] or 0), int(e["away"]["score"] or 0)
+            if e['home'].get('score') is None or e['away'].get('score') is None:
+                return None
+            hs, as_ = int(e["home"]["score"]), int(e["away"]["score"])
+            if hs + as_ == 0:
+                return None
             return {"hs": hs, "as": as_, "home_won": hs > as_, "away_won": as_ > hs, "sets": f"{hs}:{as_}"}
         if e["sport"] == "tennis":
             s1, s2 = sum(e["home"]["set_won"]), sum(e["away"]["set_won"])
