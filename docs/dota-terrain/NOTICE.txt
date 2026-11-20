@@ -6,7 +6,8 @@ No data or backend service from datdota/broodmother is used.
 
 Map overview texture: OpenDota web repository
 https://github.com/odota/web/blob/master/public/assets/images/dota2/map/detailed_740.webp
-Terrain is a visual reconstruction based on map 7.40, not a live collision mesh.
+The fallback terrain is a visual reconstruction based on map 7.40.
+The primary terrain uses original compiled-map geometry and a height field baked from its ground triangles.
 Buildings and players are positioned from the Valve live match frame.
 Decorative trees, rocks and lights are not live game entities.
 
@@ -14,3 +15,7 @@ This viewer is not affiliated with or endorsed by Valve.
 
 HUD ability and item metadata: https://github.com/odota/dotaconstants
 MIT copyright notice: ../dota-heroes-LICENSE.txt
+
+Original terrain geometry, tree placements and building models were exported from the owner's local Dota 2 install with Source 2 Viewer 21.1 (https://s2v.app).
+Powered by Source 2 Viewer (https://github.com/ValveResourceFormat/ValveResourceFormat), MIT.
+The renderer retains a simplified fallback on asset-loading failure. Static trees do not represent live tree destruction.
