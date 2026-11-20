@@ -205,7 +205,7 @@ null
 "sport": "esports",
 "id": "1816453",
 "league": "Киберспорт · Dota 2",
-"kickoff": "2026-11-20T16:43:17+03:00",
+"kickoff": "2026-11-20T17:00:00+03:00",
 "home": "GamerLegion",
 "away": "Xtreme Gaming",
 "hl": "https://cdn-api.pandascore.co/images/team/image/137588/591px_gamer_legion_2026_allmode.png",
@@ -226,11 +226,11 @@ null
 ]
 ],
 "div": "DOTA",
-"state": "in",
+"state": "unknown",
 "bo": 3,
 "prediction": "predictions/2026-11-20-gamerlegion-xtreme-gaming-1816453.html",
-"hs": 1,
-"as": 0,
+"hs": null,
+"as": null,
 "tip": "Победа: GamerLegion · ≈1.53",
 "top": false,
 "bot": {
@@ -3725,6 +3725,41 @@ null
 "lt": null
 },
 {
+"sport": "esports",
+"id": "1816454",
+"league": "Киберспорт · Dota 2",
+"kickoff": "2026-11-21T17:00:00+03:00",
+"home": "Team Nemesis",
+"away": "GamerLegion",
+"hl": "https://cdn-api.pandascore.co/images/team/image/136650/159px_team_nem_lightmode.png",
+"al": "https://cdn-api.pandascore.co/images/team/image/137588/591px_gamer_legion_2026_allmode.png",
+"hid": "136650",
+"aid": "137588",
+"bb": "https://betboom.ru/search?query=%D0%9D%D0%B5%D0%BC%D0%B5%D1%81%D0%B8%D1%81&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=esports",
+"path": "",
+"url": "dota.html?e=1816454&d=DOTA",
+"participants": [
+[
+"Team Nemesis",
+"Team Nemesis"
+],
+[
+"GamerLegion",
+"GamerLegion"
+]
+],
+"div": "DOTA",
+"state": "pre",
+"bo": 3,
+"prediction": "",
+"hs": 0,
+"as": 0,
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
 "sport": "football",
 "id": "401842882",
 "league": "Швеция · Аллсвенскан",
@@ -5889,6 +5924,41 @@ null
 "prediction": "",
 "hs": "0",
 "as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "esports",
+"id": "1816455",
+"league": "Киберспорт · Dota 2",
+"kickoff": "2026-11-21T20:00:00+03:00",
+"home": "Team Spirit",
+"away": "Xtreme Gaming",
+"hl": "https://cdn-api.pandascore.co/images/team/image/1669/153px_team_spirit_2022_lightmode.png",
+"al": "https://cdn-api.pandascore.co/images/team/image/128329/t72899.png",
+"hid": "1669",
+"aid": "128329",
+"bb": "https://betboom.ru/search?query=%D0%A1%D0%BF%D0%B8%D1%80%D0%B8%D1%82&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=esports",
+"path": "",
+"url": "dota.html?e=1816455&d=DOTA",
+"participants": [
+[
+"Team Spirit",
+"Team Spirit"
+],
+[
+"Xtreme Gaming",
+"Xtreme Gaming"
+]
+],
+"div": "DOTA",
+"state": "pre",
+"bo": 3,
+"prediction": "",
+"hs": 0,
+"as": 0,
 "tip": "",
 "top": false,
 "bot": null,
