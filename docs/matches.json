@@ -3008,7 +3008,15 @@ null
 "corners": 7.9,
 "cards": 3.6
 },
-"lt": null
+"lt": {
+"fair": 1.54,
+"label": "X2",
+"min_odds": 1.61,
+"minute": "26'",
+"p": 0.651,
+"result": null,
+"score": "1:1"
+}
 },
 {
 "sport": "football",
@@ -3039,7 +3047,7 @@ null
 "bo": null,
 "prediction": "predictions/2026-11-20-barnsli-sheffild-uensdey-401880742.html",
 "hs": "0",
-"as": "0",
+"as": "1",
 "tip": "ТМ 3.5 · ≈1.59",
 "top": false,
 "bot": {
