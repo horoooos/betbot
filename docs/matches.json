@@ -28,7 +28,7 @@
 "bo": null,
 "prediction": "predictions/2026-11-20-uestern-sidney-uonderers-adelaida-yunayted-401892138.html",
 "hs": "0",
-"as": "0",
+"as": "1",
 "tip": "П1 · 1.62",
 "top": false,
 "bot": {
@@ -5869,6 +5869,41 @@ null
 ]
 ],
 "div": "SP2",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "football",
+"id": "401875541",
+"league": "Нидерланды · Эредивизи",
+"kickoff": "2026-11-21T18:30:00+03:00",
+"home": "НЕК",
+"away": "ПСВ",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/147.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/148.png",
+"hid": "147",
+"aid": "148",
+"bb": "https://betboom.ru/search?query=%D0%9D%D0%95%D0%9A&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/ned.1",
+"url": "live.html?s=football&p=soccer%2Fned.1&e=401875541&h=%D0%9D%D0%95%D0%9A&a=%D0%9F%D0%A1%D0%92",
+"participants": [
+[
+"НЕК",
+"NEC Nijmegen"
+],
+[
+"ПСВ",
+"PSV Eindhoven"
+]
+],
+"div": "N1",
 "state": "pre",
 "bo": null,
 "prediction": "",
