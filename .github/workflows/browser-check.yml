@@ -1,0 +1,35 @@
+name: Browser playback and Dota checks
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  browser:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: npm install --ignore-scripts
+        working-directory: tools/browser-qa
+      - run: npx playwright install --with-deps chromium
+        working-directory: tools/browser-qa
+      - name: Serve the tested checkout
+        run: |
+          mkdir -p work/browser-qa
+          python -m http.server 8765 --bind 127.0.0.1 --directory docs >work/browser-qa/server.log 2>&1 &
+      - name: Test layout, player playback and real character assets
+        run: npm run check
+        working-directory: tools/browser-qa
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: browser-proof
+          path: work/browser-qa
