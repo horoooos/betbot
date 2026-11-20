@@ -8326,31 +8326,31 @@
   "kickoff": "2026-11-20T19:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Fri, November 20th at 11:30 AM EST",
   "home": {
-   "id": "4666",
-   "name": "Lucia Bronzetti",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/4666.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/ita.png"
    ],
+   "id": "4666",
+   "name": "Lucia Bronzetti",
    "country": "Italy",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
    "ru": "Лючия Бронцетти"
   },
   "away": {
-   "id": "3042",
-   "name": "Valeriya Strakhova",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/3042.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/ukr.png"
    ],
+   "id": "3042",
+   "name": "Valeriya Strakhova",
    "country": "Ukraine",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
@@ -8424,7 +8424,9 @@
   "btn": 4,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null
  },
  "DOTA|1816457": {
   "id": "1816457",
