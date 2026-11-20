@@ -6220,5 +6220,40 @@ null
 "top": false,
 "bot": null,
 "lt": null
+},
+{
+"sport": "football",
+"id": "401842889",
+"league": "Швеция · Аллсвенскан",
+"kickoff": "2026-11-21T19:30:00+03:00",
+"home": "GAIS",
+"away": "Вестерос",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/8222.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/22163.png",
+"hid": "8222",
+"aid": "22163",
+"bb": "https://betboom.ru/search?query=%D0%93%D0%B0%D0%B8%D1%81&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/swe.1",
+"url": "live.html?s=football&p=soccer%2Fswe.1&e=401842889&h=GAIS&a=%D0%92%D0%B5%D1%81%D1%82%D0%B5%D1%80%D0%BE%D1%81",
+"participants": [
+[
+"GAIS",
+"GAIS"
+],
+[
+"Вестерос",
+"Västerås SK"
+]
+],
+"div": "SWE",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
 }
 ]
