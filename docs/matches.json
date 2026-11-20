@@ -358,7 +358,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-20-toronto-los-andzheles-401892742.html",
-"hs": "1",
+"hs": "2",
 "as": "0",
 "tip": "П2 (с ОТ и буллитами) · 2.00",
 "top": false,
@@ -736,7 +736,15 @@ null
 ],
 "center": "Ожидаемые голы 3.2 : 3.3"
 },
-"lt": null
+"lt": {
+"fair": 1.55,
+"label": "П1 (осн. время)",
+"min_odds": 1.63,
+"minute": "2-й период",
+"p": 0.644,
+"result": null,
+"score": "1:0"
+}
 },
 {
 "sport": "hockey",
@@ -1033,7 +1041,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-20-vinnipeg-aylenders-401892749.html",
-"hs": "1",
+"hs": "2",
 "as": "2",
 "tip": "П2 (с ОТ и буллитами) · 1.98",
 "top": false,
