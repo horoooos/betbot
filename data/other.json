@@ -8358,22 +8358,22 @@
   "state": "pre",
   "completed": false,
   "tier": "a",
-  "status": "reviewed",
+  "status": "done",
   "home": {
+   "color": "3b4a7a",
+   "logo": "https://cdn-api.pandascore.co/images/team/image/1699/Na_vi_logo.png",
    "id": "1699",
    "name": "Natus Vincere",
    "ru": "Natus Vincere",
-   "logo": "https://cdn-api.pandascore.co/images/team/image/1699/Na_vi_logo.png",
-   "color": "3b4a7a",
    "score": 0,
    "winner": false
   },
   "away": {
+   "color": "3b4a7a",
+   "logo": "https://cdn-api.pandascore.co/images/team/image/1654/438px_og_2026_allmode.png",
    "id": "1654",
    "name": "OG",
    "ru": "OG",
-   "logo": "https://cdn-api.pandascore.co/images/team/image/1654/438px_og_2026_allmode.png",
-   "color": "3b4a7a",
    "score": 0,
    "winner": false
   },
@@ -8440,7 +8440,9 @@
   "close": {
    "_": null
   },
-  "settlement_retry_at": 1795193242.980024
+  "settlement_retry_at": 1795194202.122845,
+  "main_hit": true,
+  "bold_hit": null
  },
  "WTA|186801": {
   "id": "186801",
