@@ -3305,7 +3305,15 @@ null
 "corners": 11.0,
 "cards": 4.9
 },
-"lt": null
+"lt": {
+"fair": 1.48,
+"label": "ТБ 1.5",
+"min_odds": 1.56,
+"minute": "25'",
+"p": 0.673,
+"result": null,
+"score": "0:0"
+}
 },
 {
 "sport": "football",
@@ -4504,96 +4512,26 @@ null
 "lt": null
 },
 {
-"sport": "tennis",
-"id": "186811",
-"league": "Теннис · WTA",
-"kickoff": "2026-11-21T08:00:00+03:00",
-"home": "Лейре Ромеро Гормас",
-"away": "Лючия Бронцетти",
-"hl": "https://a.espncdn.com/i/teamlogos/countries/500/esp.png",
-"al": "https://a.espncdn.com/i/teamlogos/countries/500/ita.png",
-"hid": "10676",
-"aid": "4666",
-"bb": "https://betboom.ru/search?query=%D0%93%D0%BE%D1%80%D0%BC%D0%B0%D1%81&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=tennis",
-"path": "tennis/wta",
-"url": "live.html?s=tennis&p=tennis%2Fwta&e=186811&h=%D0%9B%D0%B5%D0%B9%D1%80%D0%B5+%D0%A0%D0%BE%D0%BC%D0%B5%D1%80%D0%BE+%D0%93%D0%BE%D1%80%D0%BC%D0%B0%D1%81&a=%D0%9B%D1%8E%D1%87%D0%B8%D1%8F+%D0%91%D1%80%D0%BE%D0%BD%D1%86%D0%B5%D1%82%D1%82%D0%B8",
-"participants": [
-[
-"Лейре Ромеро Гормас",
-"Leyre Romero Gormaz"
-],
-[
-"Лючия Бронцетти",
-"Lucia Bronzetti"
-]
-],
-"div": "WTA",
-"state": "pre",
-"bo": null,
-"prediction": "",
-"hs": null,
-"as": null,
-"tip": "",
-"top": false,
-"bot": null,
-"lt": null
-},
-{
-"sport": "tennis",
-"id": "186810",
-"league": "Теннис · WTA",
-"kickoff": "2026-11-21T08:00:00+03:00",
-"home": "Тбд",
-"away": "Тбд",
-"hl": null,
-"al": null,
-"hid": "-3",
-"aid": "-4",
-"bb": "https://betboom.ru/search?query=%D0%A2%D0%B1%D0%B4&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=tennis",
-"path": "tennis/wta",
-"url": "live.html?s=tennis&p=tennis%2Fwta&e=186810&h=%D0%A2%D0%B1%D0%B4&a=%D0%A2%D0%B1%D0%B4",
-"participants": [
-[
-"Тбд",
-"TBD"
-],
-[
-"Тбд",
-"TBD"
-]
-],
-"div": "WTA",
-"state": "pre",
-"bo": null,
-"prediction": "",
-"hs": null,
-"as": null,
-"tip": "",
-"top": false,
-"bot": null,
-"lt": null
-},
-{
 "sport": "football",
 "id": "401877550",
 "league": "Япония · J-League",
 "kickoff": "2026-11-21T08:00:00+03:00",
-"home": "Киото Санга",
-"away": "Urawa Red Diamonds",
+"home": "Kyoto Sanga",
+"away": "Урава Ред Даймондс",
 "hl": "https://a.espncdn.com/i/teamlogos/soccer/500/21361.png",
 "al": "https://a.espncdn.com/i/teamlogos/soccer/500/3385.png",
 "hid": "21361",
 "aid": "3385",
 "bb": "https://betboom.ru/search?query=%D0%9A%D0%B8%D0%BE%D1%82%D0%BE&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
 "path": "soccer/jpn.1",
-"url": "live.html?s=football&p=soccer%2Fjpn.1&e=401877550&h=%D0%9A%D0%B8%D0%BE%D1%82%D0%BE+%D0%A1%D0%B0%D0%BD%D0%B3%D0%B0&a=Urawa+Red+Diamonds",
+"url": "live.html?s=football&p=soccer%2Fjpn.1&e=401877550&h=Kyoto+Sanga&a=%D0%A3%D1%80%D0%B0%D0%B2%D0%B0+%D0%A0%D0%B5%D0%B4+%D0%94%D0%B0%D0%B9%D0%BC%D0%BE%D0%BD%D0%B4%D1%81",
 "participants": [
 [
-"Киото Санга",
+"Kyoto Sanga",
 "Kyoto Sanga"
 ],
 [
-"Urawa Red Diamonds",
+"Урава Ред Даймондс",
 "Urawa Red Diamonds"
 ]
 ],
@@ -4613,22 +4551,22 @@ null
 "id": "401877552",
 "league": "Япония · J-League",
 "kickoff": "2026-11-21T08:00:00+03:00",
-"home": "Machida Zelvia",
-"away": "V-Varen Nagasaki",
+"home": "Матида Зельвия",
+"away": "В-Варен Нагасаки",
 "hl": "https://a.espncdn.com/i/teamlogos/soccer/500/22167.png",
 "al": "https://a.espncdn.com/i/teamlogos/soccer/500/19001.png",
 "hid": "22167",
 "aid": "19001",
-"bb": "https://betboom.ru/search?query=%D0%9C%D0%B0%D1%87%D0%B8%D0%B4%D0%B0&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"bb": "https://betboom.ru/search?query=%D0%97%D0%B5%D0%BB%D1%8C%D0%B2%D0%B8%D1%8F&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
 "path": "soccer/jpn.1",
-"url": "live.html?s=football&p=soccer%2Fjpn.1&e=401877552&h=Machida+Zelvia&a=V-Varen+Nagasaki",
+"url": "live.html?s=football&p=soccer%2Fjpn.1&e=401877552&h=%D0%9C%D0%B0%D1%82%D0%B8%D0%B4%D0%B0+%D0%97%D0%B5%D0%BB%D1%8C%D0%B2%D0%B8%D1%8F&a=%D0%92-%D0%92%D0%B0%D1%80%D0%B5%D0%BD+%D0%9D%D0%B0%D0%B3%D0%B0%D1%81%D0%B0%D0%BA%D0%B8",
 "participants": [
 [
-"Machida Zelvia",
+"Матида Зельвия",
 "Machida Zelvia"
 ],
 [
-"V-Varen Nagasaki",
+"В-Варен Нагасаки",
 "V-Varen Nagasaki"
 ]
 ],
@@ -4648,22 +4586,22 @@ null
 "id": "401877531",
 "league": "Япония · J-League",
 "kickoff": "2026-11-21T08:00:00+03:00",
-"home": "Sanfrecce Hiroshima",
-"away": "Yokohama F. Marinos",
+"home": "Санфречче Хиросима",
+"away": "Иокогама Ф. Маринос",
 "hl": "https://a.espncdn.com/i/teamlogos/soccer/500/7114.png",
 "al": "https://a.espncdn.com/i/teamlogos/soccer/500/7116.png",
 "hid": "7114",
 "aid": "7116",
-"bb": "https://betboom.ru/search?query=%D0%A1%D0%B0%D0%BD%D1%84%D1%80%D0%B5%D0%BA%D1%81%D0%B5&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"bb": "https://betboom.ru/search?query=%D0%A1%D0%B0%D0%BD%D1%84%D1%80%D0%B5%D1%87%D1%87%D0%B5&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
 "path": "soccer/jpn.1",
-"url": "live.html?s=football&p=soccer%2Fjpn.1&e=401877531&h=Sanfrecce+Hiroshima&a=Yokohama+F.+Marinos",
+"url": "live.html?s=football&p=soccer%2Fjpn.1&e=401877531&h=%D0%A1%D0%B0%D0%BD%D1%84%D1%80%D0%B5%D1%87%D1%87%D0%B5+%D0%A5%D0%B8%D1%80%D0%BE%D1%81%D0%B8%D0%BC%D0%B0&a=%D0%98%D0%BE%D0%BA%D0%BE%D0%B3%D0%B0%D0%BC%D0%B0+%D0%A4.+%D0%9C%D0%B0%D1%80%D0%B8%D0%BD%D0%BE%D1%81",
 "participants": [
 [
-"Sanfrecce Hiroshima",
+"Санфречче Хиросима",
 "Sanfrecce Hiroshima"
 ],
 [
-"Yokohama F. Marinos",
+"Иокогама Ф. Маринос",
 "Yokohama F. Marinos"
 ]
 ],
@@ -9334,6 +9272,41 @@ null
 "lt": null
 },
 {
+"sport": "tennis",
+"id": "186811",
+"league": "Теннис · WTA",
+"kickoff": "2026-11-21T23:00:00+03:00",
+"home": "Лейре Ромеро Гормас",
+"away": "Лючия Бронцетти",
+"hl": "https://a.espncdn.com/i/teamlogos/countries/500/esp.png",
+"al": "https://a.espncdn.com/i/teamlogos/countries/500/ita.png",
+"hid": "10676",
+"aid": "4666",
+"bb": "https://betboom.ru/search?query=%D0%93%D0%BE%D1%80%D0%BC%D0%B0%D1%81&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=tennis",
+"path": "tennis/wta",
+"url": "live.html?s=tennis&p=tennis%2Fwta&e=186811&h=%D0%9B%D0%B5%D0%B9%D1%80%D0%B5+%D0%A0%D0%BE%D0%BC%D0%B5%D1%80%D0%BE+%D0%93%D0%BE%D1%80%D0%BC%D0%B0%D1%81&a=%D0%9B%D1%8E%D1%87%D0%B8%D1%8F+%D0%91%D1%80%D0%BE%D0%BD%D1%86%D0%B5%D1%82%D1%82%D0%B8",
+"participants": [
+[
+"Лейре Ромеро Гормас",
+"Leyre Romero Gormaz"
+],
+[
+"Лючия Бронцетти",
+"Lucia Bronzetti"
+]
+],
+"div": "WTA",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": null,
+"as": null,
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
 "sport": "football",
 "id": "401878333",
 "league": "Шотландия · Премьершип",
@@ -9573,6 +9546,41 @@ null
 "prediction": "",
 "hs": "0",
 "as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "tennis",
+"id": "186810",
+"league": "Теннис · WTA",
+"kickoff": "2026-11-22T00:30:00+03:00",
+"home": "Тбд",
+"away": "Тбд",
+"hl": null,
+"al": null,
+"hid": "-3",
+"aid": "-4",
+"bb": "https://betboom.ru/search?query=%D0%A2%D0%B1%D0%B4&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=tennis",
+"path": "tennis/wta",
+"url": "live.html?s=tennis&p=tennis%2Fwta&e=186810&h=%D0%A2%D0%B1%D0%B4&a=%D0%A2%D0%B1%D0%B4",
+"participants": [
+[
+"Тбд",
+"TBD"
+],
+[
+"Тбд",
+"TBD"
+]
+],
+"div": "WTA",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": null,
+"as": null,
 "tip": "",
 "top": false,
 "bot": null,
