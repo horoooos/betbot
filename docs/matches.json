@@ -129,7 +129,7 @@ null
 "bo": 3,
 "prediction": "predictions/2026-11-20-natus-vincere-og-1816443.html",
 "hs": 1,
-"as": 0,
+"as": 1,
 "tip": "Natus Vincere возьмёт хотя бы карту · ≈1.52",
 "top": false,
 "bot": {
@@ -7249,6 +7249,41 @@ null
 ]
 ],
 "div": "CHI",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "football",
+"id": "401921326",
+"league": "Эквадор · Лига Про",
+"kickoff": "2026-11-22T00:30:00+03:00",
+"home": "Universidad Católica (Quito)",
+"away": "Barcelona SC",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/9283.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/2686.png",
+"hid": "9283",
+"aid": "2686",
+"bb": "https://betboom.ru/search?query=%D0%A3%D0%BD%D0%B8%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D0%B4%D0%B0%D0%B4&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/ecu.1",
+"url": "live.html?s=football&p=soccer%2Fecu.1&e=401921326&h=Universidad+Cat%C3%B3lica+%28Quito%29&a=Barcelona+SC",
+"participants": [
+[
+"Universidad Católica (Quito)",
+"Universidad Católica (Quito)"
+],
+[
+"Barcelona SC",
+"Barcelona SC"
+]
+],
+"div": "ECU",
 "state": "pre",
 "bo": null,
 "prediction": "",
