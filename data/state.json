@@ -2505,10 +2505,10 @@
    }
   },
   "source": {
-   "last_success": "2026-11-20T20:23:56.359572+00:00",
-   "parsed": 338,
-   "added": 40,
-   "discovered_matches": 29,
+   "last_success": "2026-11-20T20:45:33.097665+00:00",
+   "parsed": 332,
+   "added": 71,
+   "discovered_matches": 30,
    "pages": 16,
    "errors": [],
    "parsed_by_sport": {
@@ -2521,49 +2521,15 @@
    }
   },
   "error": null,
-  "tips": 7566,
+  "tips": 7586,
   "snapshots": 141,
-  "unmapped_markets": 11854,
+  "unmapped_markets": 11905,
   "quote_matches": 20
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-20T23:43:32.207158+03:00",
-  "cursor": "188",
+  "last_poll": "2026-11-20T23:45:33.097665+03:00",
+  "cursor": "190",
   "posts": [
-   {
-    "post_id": 603,
-    "url": "https://vk.com/wall-228963529_603",
-    "title": "Заболотный дисквалифицирован до 25 декабря 2026 года",
-    "text": "рџ“° Шокирующее решение: дисквалификация Заболотного продлена до конца года!",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": false,
-     "details_present": false,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-20T02:21:32.670666+03:00"
-   },
-   {
-    "post_id": 604,
-    "url": "https://vk.com/wall-228963529_604",
-    "title": "Пуйоль стал директором международных связей «Интер Клуб д'Эскальдес»",
-    "text": "рџ“° 48-летний Карлес Пуйоль, легенда сборной Испании и «Барселоны», вернулся в мир футбола, подписав контракт с андоррским чемпионом «Интер Клуб д'Эскальдес». Он займёт пост директора по международным связям и футболу, став первым бывшим игроком мирового уровня, возглавившим структуру клуба.",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": false,
-     "details_present": false,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-20T08:48:35.275493+03:00"
-   },
    {
     "post_id": 605,
     "url": "https://vk.com/wall-228963529_605",
@@ -3039,6 +3005,40 @@
     },
     "status": "needs_review",
     "observed_at": "2026-11-20T22:39:19.909136+03:00"
+   },
+   {
+    "post_id": 638,
+    "url": "https://vk.com/wall-228963529_638",
+    "title": "Ростов разгромил Крылья 3:0: Кириченко о 14 очках в шести матчах",
+    "text": "вљЎпёЏ Ростов безупречно разгромил «Крылья Советов» 3:0, а Кириченко уже считает, что жаловаться – грех!",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": false,
+     "details_present": false,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-20T23:45:33.097665+03:00"
+   },
+   {
+    "post_id": 639,
+    "url": "https://vk.com/wall-228963529_639",
+    "title": "Зенит разыграл эпиграмму перед встречей с «Рубином»",
+    "text": "рџ“° Питерский «Зенит» в преддверии 15-го тура РПЛ решил разогреть болельщиков оригинальной эпиграммой в своём Telegram-канале. В посте клуб написал: «Танги танцует вас теперь», добавив нотку иронии и уверенности.",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": false,
+     "details_present": false,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-20T23:45:33.097665+03:00"
    }
   ],
   "status": "observing"
