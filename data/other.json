@@ -8460,31 +8460,31 @@
   "kickoff": "2026-11-20T23:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Fri, November 20th at 3:30 PM EST",
   "home": {
-   "id": "12957",
-   "name": "Guiomar Maristany Zuleta De Reales",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/12957.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/esp.png"
    ],
+   "id": "12957",
+   "name": "Guiomar Maristany Zuleta De Reales",
    "country": "Spain",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
    "ru": "Гуйомар Маристани"
   },
   "away": {
-   "id": "4291",
-   "name": "Andrea Lazaro Garcia",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/4291.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/esp.png"
    ],
+   "id": "4291",
+   "name": "Andrea Lazaro Garcia",
    "country": "Spain",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
@@ -8548,7 +8548,9 @@
   "btn": 4,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null
  },
  "WTA|186798": {
   "id": "186798",
