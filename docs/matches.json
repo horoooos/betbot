@@ -1174,7 +1174,7 @@ null
 ]
 ],
 "div": "BRA",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "predictions/2026-11-20-san-paulu-fluminense-401841309.html",
 "hs": "0",
@@ -1298,7 +1298,7 @@ null
 "min_odds": 1.54,
 "minute": "25'",
 "p": 0.681,
-"result": null,
+"result": "hit",
 "score": "0:0"
 }
 },
@@ -1619,7 +1619,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-20-memfis-grizzlis-golden-steyt-401910019.html",
-"hs": "58",
+"hs": "63",
 "as": "49",
 "tip": "ТМ 224.5 · 1.95",
 "top": false,
@@ -1922,8 +1922,8 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-20-san-antonio-spers-klippers-401910022.html",
-"hs": "61",
-"as": "65",
+"hs": "63",
+"as": "69",
 "tip": "ТБ 224.5 · 1.91",
 "top": false,
 "bot": {
@@ -2023,7 +2023,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-20-chikago-kolambus-401892748.html",
-"hs": "0",
+"hs": "1",
 "as": "2",
 "tip": "П2 (с ОТ и буллитами) · 1.62",
 "top": true,
