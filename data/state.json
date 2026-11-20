@@ -1558,7 +1558,7 @@
  "value_day": "2026-11-20",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-20",
- "site_stamp": "1214|7507|2026-11-20 14|4|86d799ea717c9eaa",
+ "site_stamp": "1215|7511|2026-11-20 14|4|cdcaa7d9c4e9e6f6",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1715,7 +1715,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 7507,
+ "dz_last": 7511,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2412,9 +2412,9 @@
   "model": {
    "weight": 0.0,
    "status": "collecting",
-   "settled_matches": 38,
+   "settled_matches": 39,
    "required_matches": 100,
-   "trained_at": "2026-11-20T02:39:57.945788+00:00"
+   "trained_at": "2026-11-20T11:59:15.172577+00:00"
   },
   "sport_models": {
    "hockey": {
@@ -2476,7 +2476,7 @@
   "quote_matches": 20
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-20T14:57:15.334869+03:00",
+  "last_poll": "2026-11-20T14:59:15.172577+03:00",
   "cursor": "166",
   "posts": [
    {

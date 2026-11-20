@@ -6118,7 +6118,7 @@
   "kickoff": "2026-11-20T13:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Scheduled",
   "home": {
    "id": "7477",
@@ -6259,6 +6259,9 @@
   "btn": 4,
   "close": {
    "H&O15": 0.5512
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null,
+  "value_hit": null
  }
 }
