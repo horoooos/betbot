@@ -1558,7 +1558,7 @@
  "value_day": "2026-11-20",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-20",
- "site_stamp": "1215|7512|2026-11-20 15|4|8d6f87fc09bc9043",
+ "site_stamp": "1215|7513|2026-11-20 15|4|8d6f87fc09bc9043",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1715,7 +1715,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 7512,
+ "dz_last": 7513,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2476,43 +2476,9 @@
   "quote_matches": 20
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-20T15:07:15.602421+03:00",
-  "cursor": "166",
+  "last_poll": "2026-11-20T15:09:15.593718+03:00",
+  "cursor": "168",
   "posts": [
-   {
-    "post_id": 586,
-    "url": "https://vk.com/wall-228963529_586",
-    "title": "Овчинников возглавил «Локомотив»: цель – выйти из зоны вылета",
-    "text": "рџ“° Овчинников стал главным тренером «Локомотива» после предложения Бориса Ротенберга и согласования с Александром Бородюком. Он и Бородюк, будучи тренерами академии, получили задачу закрыть позицию до конца первой части чемпионата.",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": false,
-     "details_present": false,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-19T17:46:13.629463+03:00"
-   },
-   {
-    "post_id": 587,
-    "url": "https://vk.com/wall-228963529_587",
-    "title": "Dota 2: два обновления карты в патче 7.42 – дерево убрали, блокеры добавили",
-    "text": "рџ± Ночью Valve выкатила два патча карты в рамках 7.42, о чём сообщил аналитик Team Spirit Денис sikle Лерман. Первая версия убрала дерево, вторая заперла углы блокерами.",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": false,
-     "details_present": false,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-19T17:46:13.629463+03:00"
-   },
    {
     "post_id": 588,
     "url": "https://vk.com/wall-228963529_588",
@@ -2988,6 +2954,40 @@
     },
     "status": "needs_review",
     "observed_at": "2026-11-20T14:05:14.674620+03:00"
+   },
+   {
+    "post_id": 616,
+    "url": "https://vk.com/wall-228963529_616",
+    "title": "Тюкавин может покинуть «Динамо» при конкретном предложении из Европы",
+    "text": "рџ± Тюкавин признался, что уход из «Динамо» зимой будет тяжёлым решением.",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": false,
+     "details_present": false,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-20T15:09:15.593718+03:00"
+   },
+   {
+    "post_id": 617,
+    "url": "https://vk.com/wall-228963529_617",
+    "title": "SirActionSlacks сравнил патч 7.42 Dota 2 с глобальной переработкой LoL",
+    "text": "рџ“° Патч 7.42 Dota 2 вышел в ночь на 19 ноября, а ведущий турниров Джейк «SirActionSlacks» Каннер уже успел сравнить его с предстоящей реинкарнацией League of Legends.",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": false,
+     "details_present": false,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-20T15:09:15.593718+03:00"
    }
   ],
   "status": "observing"
