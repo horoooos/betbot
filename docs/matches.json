@@ -1,106 +1,5 @@
 [
 {
-"sport": "tennis",
-"id": "187510",
-"league": "Теннис · ATP",
-"kickoff": "2026-11-20T16:10:00+03:00",
-"home": "Карлос Алькарас",
-"away": "Флавио Коболли",
-"hl": "https://a.espncdn.com/i/teamlogos/countries/500/esp.png",
-"al": "https://a.espncdn.com/i/teamlogos/countries/500/ita.png",
-"hid": "3782",
-"aid": "7602",
-"bb": "https://betboom.ru/search?query=%D0%90%D0%BB%D1%8C%D0%BA%D0%B0%D1%80%D0%B0%D1%81&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=tennis",
-"path": "tennis/atp",
-"url": "live.html?s=tennis&p=tennis%2Fatp&e=187510&h=%D0%9A%D0%B0%D1%80%D0%BB%D0%BE%D1%81+%D0%90%D0%BB%D1%8C%D0%BA%D0%B0%D1%80%D0%B0%D1%81&a=%D0%A4%D0%BB%D0%B0%D0%B2%D0%B8%D0%BE+%D0%9A%D0%BE%D0%B1%D0%BE%D0%BB%D0%BB%D0%B8",
-"participants": [
-[
-"Карлос Алькарас",
-"Carlos Alcaraz"
-],
-[
-"Флавио Коболли",
-"Flavio Cobolli"
-]
-],
-"div": "ATP",
-"state": "post",
-"bo": null,
-"prediction": "predictions/2026-11-20-karlos-alkaras-flavio-kobolli-187510.html",
-"hs": null,
-"as": null,
-"tip": "Будет 2 сета · ≈1.38",
-"top": false,
-"bot": {
-"main": {
-"label": "Будет 2 сета",
-"p": 0.675,
-"odds": 1.38,
-"est": true
-},
-"bold": null,
-"markets": [
-[
-"Победа: Карлос Алькарас",
-0.892,
-null
-],
-[
-"Победа: Флавио Коболли",
-0.108,
-null
-],
-[
-"Будет 3 сета",
-0.325,
-null
-],
-[
-"Будет 2 сета",
-0.675,
-null
-],
-[
-"Счёт по сетам 2:0",
-0.633,
-null
-],
-[
-"Счёт по сетам 0:2",
-0.042,
-null
-],
-[
-"Счёт по сетам 2:1",
-0.259,
-null
-],
-[
-"Счёт по сетам 1:2",
-0.067,
-null
-],
-[
-"Карлос Алькарас возьмёт хотя бы сет",
-0.958,
-null
-],
-[
-"Флавио Коболли возьмёт хотя бы сет",
-0.367,
-null
-]
-],
-"bar": [
-0.8916050887959847,
-0,
-0.10839491120401534
-],
-"center": "Рейтинг Эло 1981 : 1615"
-},
-"lt": null
-},
-{
 "sport": "esports",
 "id": "1816453",
 "league": "Киберспорт · Dota 2",
@@ -718,7 +617,7 @@ null
 "sport": "tennis",
 "id": "186800",
 "league": "Теннис · WTA",
-"kickoff": "2026-11-20T20:10:00+03:00",
+"kickoff": "2026-11-20T20:15:00+03:00",
 "home": "Лючия Бронцетти",
 "away": "Валерия Страхова",
 "hl": "https://a.espncdn.com/i/teamlogos/countries/500/ita.png",
