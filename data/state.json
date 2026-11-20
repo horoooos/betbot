@@ -4,11 +4,9 @@
   "OU25": 0.0
  },
  "learned": "2026-11-20",
- "schedule_day": "2026-11-19",
+ "schedule_day": "2026-11-20",
  "content_slot": "2026-11-19-23",
  "news_seen": [
-  "https://www.sport-express.ru/football/nation-league/news/robertson-oboshel-dalglisha-i-stal-rekordsmenom-sbornoy-shotlandii-po-chislu-matchey-2475668/",
-  "https://www.sport-express.ru/football/foreign/news/vanda-nara-obvinila-svoego-byvshego-muzha-mauro-ikardi-v-travle-v-socsetyah-s-pomoschyu-botov-2475667/",
   "furia-vernulas-na-pervoye-mesto-v-tope-komand-ot-hltv-org-posle-pobedy-na-blast",
   "https://www.sport-express.ru/hockey/women/news/sbornaya-ssha-zaschitila-titul-zhenskogo-chempionata-mira-obygrav-v-finale-kanadu-2475671/",
   "https://www.sport-express.ru/hockey/khl/news/glavnyy-trener-salavata-kozlov-vsegda-pochetno-kogda-tebya-vyzyvayut-v-sbornuyu-2475666/",
@@ -506,9 +504,11 @@
   "https://www.sport-express.ru/tennis/atp/news/aleksandr-zverev-artyur-fis-rezultat-matcha-itogovogo-turnira-atp-19-noyabrya-2026-goda-2476779/",
   "https://www.sport-express.ru/football/rusteam/news/gerkus-schitaet-chto-rfs-stoit-rassmotret-perehod-v-druguyu-konfederaciyu-2476740/",
   "https://www.sport-express.ru/football/spain/news/rossiyskiy-napadayuschiy-kotovschikov-vpervye-popal-v-zayavku-espanola-na-match-la-ligi-2476737/",
-  "https://www.sport-express.ru/football/rfpl/news/rfs-podtverdil-srok-diskvalifikacii-futbolista-antona-zabolotnogo-za-zapreschennye-veschestva-do-25-dekabrya-2026-2476771/"
+  "https://www.sport-express.ru/football/rfpl/news/rfs-podtverdil-srok-diskvalifikacii-futbolista-antona-zabolotnogo-za-zapreschennye-veschestva-do-25-dekabrya-2026-2476771/",
+  "https://www.sport-express.ru/hockey/nhl/news/napadayuschego-kirilla-kaprizova-priznali-vtoroy-zvezdoy-matcha-minnesoty-s-kalgari-2476820/",
+  "https://www.sport-express.ru/hockey/khl/news/brylin-rasskazal-o-nagruzke-na-fukale-i-situacii-s-demchenko-2476754/"
  ],
- "news_i": 1,
+ "news_i": 3,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1568,17 +1568,17 @@
  "value_day": "2026-11-19",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-19",
- "site_stamp": "1208|7451|2026-11-20 07|4|3567601f16ab5a32",
+ "site_stamp": "1208|7457|2026-11-20 08|4|3567601f16ab5a32",
  "battle": {
   "bot": 1,
   "crowd": 1
  },
  "top_picks": {
-  "day": "2026-11-19",
+  "day": "2026-11-20",
   "keys": [
-   "NHL|401892752",
-   "NHL|401892743",
-   "NHL|401892748"
+   "NBA|401909311",
+   "NBA|401909309",
+   "B1|401878937"
   ]
  },
  "value_check": "2026-11-20-2",
@@ -1702,7 +1702,7 @@
  "streak_day": {
   "2026-11-19": 1
  },
- "news_next": "2026-11-20T02:20:02.885909+03:00",
+ "news_next": "2026-11-20T08:32:30.926064+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1724,7 +1724,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 7451,
+ "dz_last": 7457,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -1903,7 +1903,8 @@
   "https://upload.wikimedia.org/wikipedia/commons/c/c6/Football_match%2C_Chernomoretz_%28Burgas%29_-_Daniel_Sowatey.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
   "https://images.cybersport.ru/images/as-is/plain/1b/1b080874-e451-4403-b565-764c163dc841.jpg",
   "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/02/MNUFC_-_Minnesota_United_v_Chicago_Fire_TCF_Bank_Stadium_%2827018264768%29.jpg/1280px-MNUFC_-_Minnesota_United_v_Chicago_Fire_TCF_Bank_Stadium_%2827018264768%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-  "https://upload.wikimedia.org/wikipedia/commons/8/85/Anton_Zabolotny.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+  "https://upload.wikimedia.org/wikipedia/commons/8/85/Anton_Zabolotny.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/66/Sergei_Brylin_-_New_Jersey_Devils.jpg/1280px-Sergei_Brylin_-_New_Jersey_Devils.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
  ],
  "indexnow_day": "2026-11-20",
  "vk_wall_err": null,
@@ -2160,7 +2161,8 @@
   "7326",
   "7336",
   "7337",
-  "7342"
+  "7342",
+  "7459"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -2349,11 +2351,12 @@
   "2026-11-19:новость:cfa479384d6fd4df9900a39a",
   "2026-11-19:новость:da57c8dba7f799bbc640a21d",
   "2026-11-19:новость:163ceca045b7ecafb6f856f4",
-  "2026-11-19:новость:3efb5200e62b84486d079605"
+  "2026-11-19:новость:3efb5200e62b84486d079605",
+  "2026-11-20:новость:c8908cecb57158e5ccc89bb8"
  ],
  "dz_last_delivery": {
-  "source_id": 7342,
-  "message_id": 735,
+  "source_id": 7459,
+  "message_id": 736,
   "kind": "новость"
  },
  "learn_attempt_day": "2026-11-20",
@@ -2443,7 +2446,7 @@
   "quote_matches": 20
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-20T07:58:31.522830+03:00",
+  "last_poll": "2026-11-20T08:00:30.926064+03:00",
   "cursor": "154",
   "posts": [
    {
