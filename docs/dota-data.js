@@ -8,7 +8,7 @@ export function sampledPosition(samples,at){
   for(let i=1;i<samples.length;i++){
     const a=samples[i-1],b=samples[i];
     if(at>=b.at)continue;
-    if(b.at-a.at>30||Math.hypot(b.x-a.x,b.y-a.y)>0.18)return a;
+    if(b.at-a.at>30||Math.hypot(b.x-a.x,b.y-a.y)/(b.at-a.at)>.08)return a;
     const f=(at-a.at)/(b.at-a.at);
     return{x:a.x+(b.x-a.x)*f,y:a.y+(b.y-a.y)*f};
   }
@@ -43,3 +43,5 @@ export function directorTarget(frame,previous,currentKey){
     if(p.key===currentKey)score-=2;
     return{key:p.key,score};}).sort((a,b)=>b.score-a.score)[0]?.key||null;
 }
+
+export function advancePlayhead(current,latest,dt){return current===null?latest:Math.min(latest,current+Math.max(0,Math.min(.25,dt)));}

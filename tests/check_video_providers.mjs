@@ -1,0 +1,13 @@
+import assert from 'node:assert/strict';
+import {videoInfo,playerUrl,parentDomains,youtubeError} from '../docs/video-providers.js';
+const origin='https://horoooos.github.io';
+const twitch=new URL(playerUrl('https://www.twitch.tv/esl_dota2',origin,['https://web.telegram.org','https://horoooos.github.io']));
+assert.deepEqual(twitch.searchParams.getAll('parent'),['horoooos.github.io','web.telegram.org']);
+assert.equal(twitch.searchParams.get('channel'),'esl_dota2');
+const youtube=new URL(playerUrl('https://youtu.be/M7lc1UVf-VE',origin));
+assert.equal(youtube.searchParams.get('origin'),origin);assert.equal(youtube.searchParams.get('enablejsapi'),'1');
+assert.equal(playerUrl('https://rutube.ru/live/video/'+'a'.repeat(32)+'/tvprogramm/',origin),'https://rutube.ru/play/embed/'+'a'.repeat(32)+'/');
+for(const url of ['javascript:alert(1)','https://www.twitch.tv.evil/esl','https://user:pass@www.twitch.tv/esl'])assert.equal(videoInfo(url),null);
+assert.equal(playerUrl('https://www.espn.com/watch/player?id=1',origin),null);
+assert(youtubeError(153).includes('адрес'));assert(youtubeError(150).includes('ограничил'));
+console.log('Player providers: real parent domains, origin, public URLs and explicit error states passed');

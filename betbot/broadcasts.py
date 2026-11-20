@@ -37,6 +37,13 @@ def public_video(url):
         if p.scheme != 'https' or p.username or p.password or p.port:
             return None
         host, parts = (p.hostname or '').lower(), p.path.strip('/').split('/')
+        # Direct public media supplied by a fixture provider, never extracted
+        # from a protected player's signed/private delivery URL.
+        if not p.query and '.' in host and not re.fullmatch(r'[\d.]+', host) and not host.endswith('.local'):
+            if p.path.lower().endswith('.m3u8'):
+                return dict(provider='hls', url='https://' + host + p.path)
+            if p.path.lower().endswith(('.mp4', '.webm')):
+                return dict(provider='html5', url='https://' + host + p.path)
         if host in ('rutube.ru', 'www.rutube.ru'):
             found = re.fullmatch(r'/(live/)?video/([a-fA-F0-9]{32})/(?:tvprogramm/)?', p.path)
             if found:

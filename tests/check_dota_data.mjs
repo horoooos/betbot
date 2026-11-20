@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import {liveFrames,mergeDotaMatches,directorTarget,gameClock,sampledPosition} from '../docs/dota-data.js';
+import {liveFrames,mergeDotaMatches,directorTarget,gameClock,sampledPosition,advancePlayhead} from '../docs/dota-data.js';
 const samples=[{at:100,x:0,y:0},{at:110,x:.1,y:.1}];
 assert.deepEqual(sampledPosition(samples,105),{x:.05,y:.05});
 assert.deepEqual(sampledPosition(samples,120),samples[1]);
@@ -19,3 +19,6 @@ const extra=structuredClone(frame);extra.match_id='910';extra.teams[0].name='Oth
 const all=mergeDotaMatches(base,[frame,extra],now);assert.equal(all.length,2);assert.equal(all.filter(m=>m.tip).length,1);assert.equal(all[1].scoreUnit,'убийства');
 const next=structuredClone(frame);next.teams[1].players[2].kills=1;assert.equal(directorTarget(next,frame,null),'3:2');
 console.log('Dota live list, freshness, deduplication and camera director checks passed');
+
+assert.deepEqual(sampledPosition([{at:100,x:0,y:0},{at:110,x:.3,y:0}],105),{x:.15,y:0});
+assert.equal(advancePlayhead(100,110,.016),100.016);assert.equal(advancePlayhead(110,110,.1),110);assert.equal(advancePlayhead(100,120,5),100.25);
