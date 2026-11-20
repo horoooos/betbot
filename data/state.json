@@ -7,9 +7,6 @@
  "schedule_day": "2026-11-20",
  "content_slot": "2026-11-19-23",
  "news_seen": [
-  "furia-vernulas-na-pervoye-mesto-v-tope-komand-ot-hltv-org-posle-pobedy-na-blast",
-  "https://www.sport-express.ru/hockey/women/news/sbornaya-ssha-zaschitila-titul-zhenskogo-chempionata-mira-obygrav-v-finale-kanadu-2475671/",
-  "https://www.sport-express.ru/hockey/khl/news/glavnyy-trener-salavata-kozlov-vsegda-pochetno-kogda-tebya-vyzyvayut-v-sbornuyu-2475666/",
   "https://www.sport-express.ru/football/rfpl/news/orlov-o-kritike-krugovogo-v-adres-glushenkova-est-chto-to-neporyadochnoe-ne-po-muzhski-2475672/",
   "https://www.sport-express.ru/basketball/nba/news/lebron-dzheyms-propustit-match-s-bruklinom-iz-za-problem-s-poyasnicey-2475675/",
   "https://www.sport-express.ru/tennis/atp/news/daniil-medvedev-flavio-kobolli-schet-i-rezultat-matcha-itogovogo-turnira-atp-16-noyabrya-2026-2475674/",
@@ -506,9 +503,12 @@
   "https://www.sport-express.ru/football/spain/news/rossiyskiy-napadayuschiy-kotovschikov-vpervye-popal-v-zayavku-espanola-na-match-la-ligi-2476737/",
   "https://www.sport-express.ru/football/rfpl/news/rfs-podtverdil-srok-diskvalifikacii-futbolista-antona-zabolotnogo-za-zapreschennye-veschestva-do-25-dekabrya-2026-2476771/",
   "https://www.sport-express.ru/hockey/nhl/news/napadayuschego-kirilla-kaprizova-priznali-vtoroy-zvezdoy-matcha-minnesoty-s-kalgari-2476820/",
-  "https://www.sport-express.ru/hockey/khl/news/brylin-rasskazal-o-nagruzke-na-fukale-i-situacii-s-demchenko-2476754/"
+  "https://www.sport-express.ru/hockey/khl/news/brylin-rasskazal-o-nagruzke-na-fukale-i-situacii-s-demchenko-2476754/",
+  "https://www.sport-express.ru/football/england/news/cimikas-mozhet-uyti-iz-liverpulya-2476791/",
+  "https://www.sport-express.ru/football/foreign/news/strahinya-pavlovich-kommentariy-po-rabote-serzhiu-konseysau-v-milane-2476789/",
+  "https://www.sport-express.ru/football/foreign/news/puyol-vernulsya-v-futbol-i-stal-direktorom-andorrskogo-kluba-2476788/"
  ],
- "news_i": 3,
+ "news_i": 4,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1568,7 +1568,7 @@
  "value_day": "2026-11-19",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-19",
- "site_stamp": "1210|7461|2026-11-20 08|4|80f31b4ff95cd482",
+ "site_stamp": "1210|7463|2026-11-20 08|4|80f31b4ff95cd482",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1702,7 +1702,7 @@
  "streak_day": {
   "2026-11-19": 1
  },
- "news_next": "2026-11-20T08:32:30.926064+03:00",
+ "news_next": "2026-11-20T09:05:35.867192+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1724,7 +1724,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 7461,
+ "dz_last": 7463,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -1904,7 +1904,8 @@
   "https://images.cybersport.ru/images/as-is/plain/1b/1b080874-e451-4403-b565-764c163dc841.jpg",
   "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/02/MNUFC_-_Minnesota_United_v_Chicago_Fire_TCF_Bank_Stadium_%2827018264768%29.jpg/1280px-MNUFC_-_Minnesota_United_v_Chicago_Fire_TCF_Bank_Stadium_%2827018264768%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
   "https://upload.wikimedia.org/wikipedia/commons/8/85/Anton_Zabolotny.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-  "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/66/Sergei_Brylin_-_New_Jersey_Devils.jpg/1280px-Sergei_Brylin_-_New_Jersey_Devils.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/66/Sergei_Brylin_-_New_Jersey_Devils.jpg/1280px-Sergei_Brylin_-_New_Jersey_Devils.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "https://upload.wikimedia.org/wikipedia/commons/7/76/025_men_at_work_UEFA_2009%2C_Rome_%D0%BC%D1%83%D0%B6%D1%81%D0%BA%D0%B0%D1%8F_%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0_%D0%A3%D0%95%D0%A4%D0%90_2009%2C_%D0%A0%D0%B8%D0%BC.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
  ],
  "indexnow_day": "2026-11-20",
  "vk_wall_err": null,
@@ -2162,7 +2163,8 @@
   "7336",
   "7337",
   "7342",
-  "7459"
+  "7459",
+  "7464"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -2352,11 +2354,12 @@
   "2026-11-19:новость:da57c8dba7f799bbc640a21d",
   "2026-11-19:новость:163ceca045b7ecafb6f856f4",
   "2026-11-19:новость:3efb5200e62b84486d079605",
-  "2026-11-20:новость:c8908cecb57158e5ccc89bb8"
+  "2026-11-20:новость:c8908cecb57158e5ccc89bb8",
+  "2026-11-20:новость:e332000d0eedf5a1f01bb51d"
  ],
  "dz_last_delivery": {
-  "source_id": 7459,
-  "message_id": 736,
+  "source_id": 7464,
+  "message_id": 737,
   "kind": "новость"
  },
  "learn_attempt_day": "2026-11-20",
@@ -2446,7 +2449,7 @@
   "quote_matches": 20
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-20T08:30:35.502759+03:00",
+  "last_poll": "2026-11-20T08:32:35.867192+03:00",
   "cursor": "154",
   "posts": [
    {
