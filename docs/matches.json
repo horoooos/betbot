@@ -1,301 +1,5 @@
 [
 {
-"sport": "football",
-"id": "401841308",
-"league": "Бразилия · Серия A",
-"kickoff": "2026-11-20T01:30:00+03:00",
-"home": "Васко да Гама",
-"away": "Интернасьонал",
-"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/3454.png",
-"al": "https://a.espncdn.com/i/teamlogos/soccer/500/1936.png",
-"hid": "3454",
-"aid": "1936",
-"bb": "https://betboom.ru/search?query=%D0%92%D0%B0%D1%81%D0%BA%D0%BE&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
-"path": "soccer/bra.1",
-"url": "live.html?s=football&p=soccer%2Fbra.1&e=401841308&h=%D0%92%D0%B0%D1%81%D0%BA%D0%BE+%D0%B4%D0%B0+%D0%93%D0%B0%D0%BC%D0%B0&a=%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B0%D1%81%D1%8C%D0%BE%D0%BD%D0%B0%D0%BB",
-"participants": [
-[
-"Васко да Гама",
-"Vasco da Gama"
-],
-[
-"Интернасьонал",
-"Internacional"
-]
-],
-"div": "BRA",
-"state": "post",
-"bo": null,
-"prediction": "predictions/2026-11-20-vasko-da-gama-internasonal-401841308.html",
-"hs": "2",
-"as": "1",
-"tip": "П1 · 1.63",
-"top": false,
-"bot": {
-"main": {
-"label": "П1",
-"p": 0.571,
-"odds": 1.63,
-"est": false
-},
-"bold": null,
-"markets": [
-[
-"П1",
-0.571,
-1.541
-],
-[
-"Ничья",
-0.239,
-4.3
-],
-[
-"П2",
-0.191,
-5.75
-],
-[
-"1X",
-0.809,
-null
-],
-[
-"X2",
-0.429,
-null
-],
-[
-"ТБ 1.5",
-0.796,
-null
-],
-[
-"ТБ 2.5",
-0.557,
-1.741
-],
-[
-"ТМ 2.5",
-0.443,
-2.0
-],
-[
-"ТБ 3.5",
-0.333,
-null
-],
-[
-"Обе забьют — да",
-0.551,
-null
-],
-[
-"Обе забьют — нет",
-0.449,
-null
-],
-[
-"ИТ1 больше 1.5",
-0.565,
-null
-],
-[
-"ИТ2 больше 1.5",
-0.27,
-null
-],
-[
-"Ф1 (−1.5)",
-0.339,
-null
-],
-[
-"Ф2 (+1.5)",
-0.661,
-null
-]
-],
-"bar": [
-0.5707881934355409,
-0.2385570269141974,
-0.19065477965026156
-],
-"center": "Ожидаемые голы (xG) 1.9 : 1.0",
-"scores": [
-[
-"1:1",
-0.113
-],
-[
-"2:1",
-0.099
-],
-[
-"2:0",
-0.098
-]
-]
-},
-"lt": {
-"fair": 1.49,
-"label": "ТБ 1.5",
-"min_odds": 1.57,
-"minute": "25'",
-"p": 0.671,
-"result": "hit",
-"score": "0:0"
-}
-},
-{
-"sport": "football",
-"id": "401841317",
-"league": "Бразилия · Серия A",
-"kickoff": "2026-11-20T01:30:00+03:00",
-"home": "Витория",
-"away": "Брагантино",
-"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/3457.png",
-"al": "https://a.espncdn.com/i/teamlogos/soccer/500/6079.png",
-"hid": "3457",
-"aid": "6079",
-"bb": "https://betboom.ru/search?query=%D0%92%D0%B8%D1%82%D0%BE%D1%80%D0%B8%D1%8F&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
-"path": "soccer/bra.1",
-"url": "live.html?s=football&p=soccer%2Fbra.1&e=401841317&h=%D0%92%D0%B8%D1%82%D0%BE%D1%80%D0%B8%D1%8F&a=%D0%91%D1%80%D0%B0%D0%B3%D0%B0%D0%BD%D1%82%D0%B8%D0%BD%D0%BE",
-"participants": [
-[
-"Витория",
-"Vitória"
-],
-[
-"Брагантино",
-"Red Bull Bragantino"
-]
-],
-"div": "BRA",
-"state": "post",
-"bo": null,
-"prediction": "predictions/2026-11-20-vitoriya-bragantino-401841317.html",
-"hs": "2",
-"as": "1",
-"tip": "Обе забьют — да · ≈1.65",
-"top": false,
-"bot": {
-"main": {
-"label": "Обе забьют — да",
-"p": 0.565,
-"odds": 1.65,
-"est": true
-},
-"bold": null,
-"markets": [
-[
-"П1",
-0.355,
-2.6
-],
-[
-"Ничья",
-0.276,
-3.35
-],
-[
-"П2",
-0.369,
-2.7
-],
-[
-"1X",
-0.631,
-null
-],
-[
-"X2",
-0.645,
-null
-],
-[
-"ТБ 1.5",
-0.767,
-null
-],
-[
-"ТБ 2.5",
-0.514,
-1.87
-],
-[
-"ТМ 2.5",
-0.486,
-1.87
-],
-[
-"ТБ 3.5",
-0.293,
-null
-],
-[
-"Обе забьют — да",
-0.565,
-null
-],
-[
-"Обе забьют — нет",
-0.435,
-null
-],
-[
-"ИТ1 больше 1.5",
-0.391,
-null
-],
-[
-"ИТ2 больше 1.5",
-0.402,
-null
-],
-[
-"Ф1 (−1.5)",
-0.165,
-null
-],
-[
-"Ф2 (+1.5)",
-0.835,
-null
-]
-],
-"bar": [
-0.35503323935297215,
-0.27579304667729054,
-0.36917371396973736
-],
-"center": "Ожидаемые голы (xG) 1.4 : 1.4",
-"scores": [
-[
-"1:1",
-0.131
-],
-[
-"1:2",
-0.084
-],
-[
-"2:1",
-0.082
-]
-]
-},
-"lt": {
-"fair": 1.47,
-"label": "Обе забьют — да",
-"min_odds": 1.54,
-"minute": "25'",
-"p": 0.682,
-"result": "hit",
-"score": "2:0"
-}
-},
-{
 "sport": "hockey",
 "id": "401892742",
 "league": "США · NHL",
@@ -1619,8 +1323,8 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-20-memfis-grizzlis-golden-steyt-401910019.html",
-"hs": "63",
-"as": "49",
+"hs": "66",
+"as": "53",
 "tip": "ТМ 224.5 · 1.95",
 "top": false,
 "bot": {
@@ -1721,7 +1425,7 @@ null
 "bo": null,
 "prediction": "predictions/2026-11-20-miluoki-baks-portlend-401910020.html",
 "hs": "58",
-"as": "60",
+"as": "63",
 "tip": "ТМ 230.5 · 1.93",
 "top": false,
 "bot": {
@@ -1821,8 +1525,8 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-20-minnesota-timbervulvz-nyu-york-niks-401910021.html",
-"hs": "61",
-"as": "75",
+"hs": "64",
+"as": "81",
 "tip": "Ф2 (-1.5) · 1.98",
 "top": false,
 "bot": {
@@ -1922,7 +1626,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-20-san-antonio-spers-klippers-401910022.html",
-"hs": "63",
+"hs": "67",
 "as": "69",
 "tip": "ТБ 224.5 · 1.91",
 "top": false,
