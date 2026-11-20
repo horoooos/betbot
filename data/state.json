@@ -2511,60 +2511,9 @@
   "quote_matches": 20
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-20T21:33:17.959506+03:00",
-  "cursor": "183",
+  "last_poll": "2026-11-20T21:35:17.377626+03:00",
+  "cursor": "186",
   "posts": [
-   {
-    "post_id": 598,
-    "url": "https://vk.com/wall-228963529_598",
-    "title": "Zeus предсказал команды в Pick'Em на PGL Major Singapore 2026",
-    "text": "рџ“° Бывший киберспортсмен Даниил «Zeus» Тесленко выложил на YouTube ролик с собственным Pick'Em Challenge на первый этап PGL Major Singapore 2026. В нём он назвал, какие из 16 команд, по его мнению, пройдут в следующую стадию.",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": false,
-     "details_present": false,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-19T23:13:07.207731+03:00"
-   },
-   {
-    "post_id": 599,
-    "url": "https://vk.com/wall-228963529_599",
-    "title": "Стример Nix: BLAST Slam IX стартует на патче 7.42, будет зрелищнее",
-    "text": "рџ“° BLAST Slam IX по Dota 2 стартует уже 20 ноября и продлится до 29-го, всё онлайн.",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": false,
-     "details_present": false,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-20T00:16:16.058866+03:00"
-   },
-   {
-    "post_id": 600,
-    "url": "https://vk.com/wall-228963529_600",
-    "title": "LenaGol0vach в ярости: патч 7.42 и GTA VI выпустили одновременно",
-    "text": "рџ“° Стример Сергей «LenaGol0vach» Карнаухов взорвался в прямом эфире Twitch, когда в одну ночь вышли два громких события: геймплейный патч 7.42 для «Dota 2» и глобальный релиз «Grand Theft Auto VI».",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": false,
-     "details_present": false,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-20T01:19:03.821949+03:00"
-   },
    {
     "post_id": 601,
     "url": "https://vk.com/wall-228963529_601",
@@ -3023,6 +2972,57 @@
     },
     "status": "needs_review",
     "observed_at": "2026-11-20T20:28:22.614887+03:00"
+   },
+   {
+    "post_id": 633,
+    "url": "https://vk.com/wall-228963529_633",
+    "title": "Kiritych и Malr1ne подшутили друг друга в матче BLAST Slam IX",
+    "text": "рџ“° На групповой стадии BLAST Slam IX трансляция зафиксировала, как Илья «Kiritych» Ульянов и Станислав «Malr1ne» Поторак обменялись острыми репликами во время встречи их команд «DO KONCA» и «Team Liquid».",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": false,
+     "details_present": false,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-20T21:35:17.377626+03:00"
+   },
+   {
+    "post_id": 634,
+    "url": "https://vk.com/wall-228963529_634",
+    "title": "PARIVISION vs LEGION: кто выйдет победителем в BLAST Slam IX?",
+    "text": "рџ“° 20 ноября в 20:00 мск в групповой стадии BLAST Slam IX по Dota 2 встретятся «PARIVISION» и «LEGION». Это первый матч обеих команд в текущем чемпионате, и всё решит, кто продолжит путь к плей-офф.",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": false,
+     "details_present": false,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-20T21:35:17.377626+03:00"
+   },
+   {
+    "post_id": 635,
+    "url": "https://vk.com/wall-228963529_635",
+    "title": "Сулейманов удвоил преимущество «Ростова» после паса Олусегуна",
+    "text": "рџ±вљЅпёЏ Тимур Сулейманов удвоил преимущество «Ростова» в матче 15-го тура РПЛ против «Крыльев Советов», отметив второй гол на 60-й минуте.",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": false,
+     "details_present": false,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-20T21:35:17.377626+03:00"
    }
   ],
   "status": "observing"
