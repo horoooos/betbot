@@ -3256,5 +3256,40 @@ null
 "top": false,
 "bot": null,
 "lt": null
+},
+{
+"sport": "football",
+"id": "401879800",
+"league": "Россия · Премьер-лига",
+"kickoff": "2026-11-21T15:15:00+03:00",
+"home": "Акрон",
+"away": "Факел",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/22271.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/21539.png",
+"hid": "22271",
+"aid": "21539",
+"bb": "https://betboom.ru/search?query=%D0%90%D0%BA%D1%80%D0%BE%D0%BD&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/rus.1",
+"url": "live.html?s=football&p=soccer%2Frus.1&e=401879800&h=%D0%90%D0%BA%D1%80%D0%BE%D0%BD&a=%D0%A4%D0%B0%D0%BA%D0%B5%D0%BB",
+"participants": [
+[
+"Акрон",
+"Akron Tolyatti"
+],
+[
+"Факел",
+"Fakel Voronezh"
+]
+],
+"div": "RUS",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
 }
 ]
