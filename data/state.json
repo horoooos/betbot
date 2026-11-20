@@ -7,8 +7,6 @@
  "schedule_day": "2026-11-20",
  "content_slot": "2026-11-20-16",
  "news_seen": [
-  "https://www.sport-express.ru/football/rfpl/news/glavnyy-trener-sochi-osinkin-vystupil-za-rasshirenie-rpl-do-18-komand-2475888/",
-  "team-spirit-protiv-aurora-gaming-kto-stanet-pervym-finalistom-na-essence-iii",
   "https://www.sport-express.ru/football/rusteam/news/rossiya-venesuela-startovye-sostavy-komand-na-tovarischeskiy-match-17-noyabrya-2026-2475905/",
   "https://www.sport-express.ru/football/france/news/eks-zaschitnik-pszh-kurzava-obyavil-o-zavershenii-karery-v-34-goda-2475898/",
   "https://www.sport-express.ru/football/nation-league/news/vant-ship-pokinet-post-glavnogo-trenera-sbornoy-kazahstana-posle-shesti-matchey-bez-pobed-2475896/",
@@ -506,9 +504,11 @@
   "https://www.sport-express.ru/tennis/wta/news/selivanenko-ob-andreevoy-mirra-odna-iz-naibolee-yarkih-i-uspeshnyh-igrokov-v-etom-sezone-2477028/",
   "https://www.sport-express.ru/tennis/wta/news/kafelnikov-schitaet-chto-andreeva-zasluzhila-nagradu-luchshey-tennisistki-sezona-2477027/",
   "https://www.sport-express.ru/tennis/atp/news/karlos-alkaras-flavio-kobolli-rezultat-matcha-gruppovogo-etapa-itogovogo-turnira-atp-20-noyabrya-2026-2477018/",
-  "autodestruction-o-blast-slam-ix-na-dannom-turnire-nevozmozhno-budet-predugadat"
+  "autodestruction-o-blast-slam-ix-na-dannom-turnire-nevozmozhno-budet-predugadat",
+  "https://www.sport-express.ru/football/england/news/pochettino-na-pervoy-press-konferencii-v-kachestve-glavnogo-trenera-manchester-yunayted-brunu-fernandesh-nash-kapitan-2477037/",
+  "https://www.sport-express.ru/football/rfpl/news/rinat-bilyaletdinov-ob-ovchinnikove-nadeyus-lokomotiv-nakonec-to-tronetsya-vmeste-s-nim-2477035/"
  ],
- "news_i": 0,
+ "news_i": 1,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1692,7 +1692,7 @@
  "streak_day": {
   "2026-11-19": 1
  },
- "news_next": "2026-11-20T18:53:22.468511+03:00",
+ "news_next": "2026-11-20T19:25:22.282655+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1915,7 +1915,8 @@
   "https://images.cybersport.ru/images/as-is/plain/c1/c106748a-0571-4506-b289-1708ab9128dd.jpg",
   "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/Brandon_Davidson_Mark_Stone.jpg/1280px-Brandon_Davidson_Mark_Stone.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
   "https://upload.wikimedia.org/wikipedia/commons/8/8e/Arsenal_players_training_before_2019_UEFA_Europa_League_final_17.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-  "https://images.cybersport.ru/images/as-is/plain/8b/8b63d28d-8d41-4ab7-aa8b-2052ba0d7cee.jpg"
+  "https://images.cybersport.ru/images/as-is/plain/8b/8b63d28d-8d41-4ab7-aa8b-2052ba0d7cee.jpg",
+  "https://upload.wikimedia.org/wikipedia/commons/c/c6/Kuban-Rubin_%282%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
  ],
  "indexnow_day": "2026-11-20",
  "vk_wall_err": null,
@@ -2193,7 +2194,8 @@
   "7536",
   "7539",
   "7542",
-  "7546"
+  "7546",
+  "7552"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -2403,11 +2405,12 @@
   "2026-11-20:новость:ed2280ecdedcb6cf37dd01e6",
   "2026-11-20:новость:9302469a491adb9e3cffc0aa",
   "2026-11-20:новость:2b6042c85c222a054219bf60",
-  "2026-11-20:новость:833306e38193f44f9882a21f"
+  "2026-11-20:новость:833306e38193f44f9882a21f",
+  "2026-11-20:новость:5ec86e8d1a5b69da3bdc508c"
  ],
  "dz_last_delivery": {
-  "source_id": 7546,
-  "message_id": 756,
+  "source_id": 7552,
+  "message_id": 757,
   "kind": "новость"
  },
  "learn_attempt_day": "2026-11-20",
@@ -2475,10 +2478,10 @@
    }
   },
   "source": {
-   "last_success": "2026-11-20T15:32:22.723697+00:00",
+   "last_success": "2026-11-20T15:54:22.282655+00:00",
    "parsed": 350,
-   "added": 59,
-   "discovered_matches": 38,
+   "added": 51,
+   "discovered_matches": 35,
    "pages": 17,
    "errors": [],
    "parsed_by_sport": {
@@ -2491,13 +2494,13 @@
    }
   },
   "error": null,
-  "tips": 7295,
+  "tips": 7316,
   "snapshots": 131,
-  "unmapped_markets": 11401,
+  "unmapped_markets": 11431,
   "quote_matches": 20
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-20T18:52:22.124579+03:00",
+  "last_poll": "2026-11-20T18:54:22.282655+03:00",
   "cursor": "179",
   "posts": [
    {
