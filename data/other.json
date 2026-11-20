@@ -8398,31 +8398,31 @@
   "kickoff": "2026-11-20T16:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Fri, November 20th at 8:00 AM EST",
   "home": {
-   "id": "3782",
-   "name": "Carlos Alcaraz",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/3782.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/esp.png"
    ],
+   "id": "3782",
+   "name": "Carlos Alcaraz",
    "country": "Spain",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
    "ru": "Карлос Алькарас"
   },
   "away": {
-   "id": "7602",
-   "name": "Flavio Cobolli",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/7602.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/ita.png"
    ],
+   "id": "7602",
+   "name": "Flavio Cobolli",
    "country": "Italy",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
@@ -8486,7 +8486,9 @@
   "btn": 4,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null
  },
  "DOTA|1816453": {
   "id": "1816453",

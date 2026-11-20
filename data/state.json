@@ -1558,7 +1558,7 @@
  "value_day": "2026-11-20",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-20",
- "site_stamp": "1221|7536|2026-11-20 17|4|dd0195844e107e45",
+ "site_stamp": "1222|7538|2026-11-20 17|4|6a579dae4fbf0528",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1715,7 +1715,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 7536,
+ "dz_last": 7538,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2488,43 +2488,9 @@
   "quote_matches": 20
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-20T17:17:15.159312+03:00",
-  "cursor": "170",
+  "last_poll": "2026-11-20T17:19:14.953071+03:00",
+  "cursor": "177",
   "posts": [
-   {
-    "post_id": 590,
-    "url": "https://vk.com/wall-228963529_590",
-    "title": "Баг в Dota 2: Nature's Prophet не может создавать трентов",
-    "text": "рџ“° Откровение для всех, кто любит «Nature's Prophet»: его фирменная способность «Nature's Call» полностью отказывает на карте Sanctums of the Divine.",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": false,
-     "details_present": false,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-19T20:00:44.998015+03:00"
-   },
-   {
-    "post_id": 591,
-    "url": "https://vk.com/wall-228963529_591",
-    "title": "Горшков ушёл из «Зенита» с широкой улыбкой: почему он рад",
-    "text": "рџ“° Защитник «Крыльев Советов» Юрий Горшков, бывший игрок «Зенита», в подкасте на странице клуба в «ВКонтакте» откровенно рассказал, почему прощание с петербургской командой прошло у него с широкой улыбкой.",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": false,
-     "details_present": false,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-19T20:00:44.998015+03:00"
-   },
    {
     "post_id": 592,
     "url": "https://vk.com/wall-228963529_592",
@@ -3000,6 +2966,40 @@
     },
     "status": "needs_review",
     "observed_at": "2026-11-20T16:15:15.261381+03:00"
+   },
+   {
+    "post_id": 622,
+    "url": "https://vk.com/wall-228963529_622",
+    "title": "Тюкавин хвалит Шварца: тренер усиливает РПЛ",
+    "text": "рџ“° Тюкавин в эксклюзивном интервью «СЭ» раскрыл, как работает с главным тренером «Динамо» Сандро Шварцем.",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": false,
+     "details_present": false,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-20T17:19:14.953071+03:00"
+   },
+   {
+    "post_id": 624,
+    "url": "https://vk.com/wall-228963529_624",
+    "title": "HLTV Awards 2026 вводит категорию «Саппорт года» вместо «Опорнику года»",
+    "text": "вљ™пёЏ На HLTV Awards 2026 появляется новая номинация — «Саппорт года», которая полностью заменит прежнюю «Опорнику года».",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": false,
+     "details_present": false,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-20T17:19:14.953071+03:00"
    }
   ],
   "status": "observing"
