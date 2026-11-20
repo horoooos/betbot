@@ -14,4 +14,4 @@ export function playerUrl(value,origin,ancestors=[]){const v=videoInfo(value);if
   if(v.provider==='youtube')return'https://www.youtube.com/embed/'+v.id+'?'+new URLSearchParams({enablejsapi:'1',origin,playsinline:'1',autoplay:'0'});
   if(v.provider==='rutube')return'https://rutube.ru/play/embed/'+v.id+'/';return null;
 }
-export function youtubeError(code){return({2:'Некорректная ссылка.',5:'Источник не смог запустить видео.',100:'Видео удалено или недоступно.',101:'Автор запретил встраивание.',150:'Автор запретил встраивание.',153:'YouTube не смог проверить адрес сайта.'})[code]||'Ошибка воспроизведения.';}
+export function youtubeError(code){return({2:'Некорректная ссылка.',5:'Источник не смог запустить видео.',100:'Видео удалено или недоступно.',101:'YouTube ограничил воспроизведение: может требоваться вход или разрешение автора.',150:'YouTube ограничил воспроизведение: может требоваться вход или разрешение автора.',153:'YouTube не смог проверить адрес сайта.'})[code]||'Ошибка воспроизведения.';}

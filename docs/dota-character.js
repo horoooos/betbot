@@ -53,7 +53,7 @@ export async function loadCharacter(heroId){
     const rootBone=[...bones.values()].find(b=>!b.parent?.isBone),anchor=new THREE.Vector3();if(rootBone){root.updateWorldMatrix(true,true);rootBone.getWorldPosition(anchor);model.worldToLocal(anchor);}const ground=model.position.y;let blend=0;
     return {root,slug:definition.slug,parts:parts.filter(p=>p.status==='fulfilled').length,
       animate(dt,speed){blend=THREE.MathUtils.damp(blend,speed>.25?1:0,9,dt);idleAction?.setEffectiveWeight(1-blend);runAction?.setEffectiveWeight(blend);if(runAction)runAction.timeScale=THREE.MathUtils.clamp(speed/4,.5,1.6);mixer.update(dt);if(rootBone){root.updateWorldMatrix(true,true);rootBone.getWorldPosition(point);model.worldToLocal(point);point.sub(anchor);model.position.set(-point.x*scale,ground-point.y*scale,-point.z*scale);}},
-      diagnostics(){return{slug:definition.slug,rejected,visibleMeshes,offset:model.position.toArray(),scale,animated:!!idleAction,run:!!runAction};},
+      diagnostics(){return{slug:definition.slug,rejected,visibleMeshes,offset:model.position.toArray(),scale,animated:!!idleAction,run:!!runAction,pose:[...bones.values()].slice(0,20).flatMap(b=>b.quaternion.toArray())};},
       dispose(){mixer.stopAllAction();root.traverse(n=>{if(n.geometry)n.geometry.dispose();});for(const m of mats.values()){m.map?.dispose();m.normalMap?.dispose();m.dispose();}}
     };
   });

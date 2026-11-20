@@ -9,5 +9,5 @@ assert.equal(youtube.searchParams.get('origin'),origin);assert.equal(youtube.sea
 assert.equal(playerUrl('https://rutube.ru/live/video/'+'a'.repeat(32)+'/tvprogramm/',origin),'https://rutube.ru/play/embed/'+'a'.repeat(32)+'/');
 for(const url of ['javascript:alert(1)','https://www.twitch.tv.evil/esl','https://user:pass@www.twitch.tv/esl'])assert.equal(videoInfo(url),null);
 assert.equal(playerUrl('https://www.espn.com/watch/player?id=1',origin),null);
-assert(youtubeError(153).includes('адрес'));assert(youtubeError(150).includes('запретил'));
+assert(youtubeError(153).includes('адрес'));assert(youtubeError(150).includes('ограничил'));
 console.log('Player providers: real parent domains, origin, public URLs and explicit error states passed');
