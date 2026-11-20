@@ -1558,7 +1558,7 @@
  "value_day": "2026-11-20",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-20",
- "site_stamp": "1232|7642|2026-11-20 23|4|ad99267ef81ef66e",
+ "site_stamp": "1233|7645|2026-11-20 23|4|f435c9d98451877e",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1617,7 +1617,9 @@
      "000099",
      "FCEE33"
     ],
-    "label": "Победа: Будё-Глимт"
+    "label": "Победа: Будё-Глимт",
+    "win": true,
+    "score": "2:4"
    },
    {
     "sport": "football",
@@ -1713,7 +1715,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 7642,
+ "dz_last": 7645,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2458,9 +2460,9 @@
   "model": {
    "weight": 0.0,
    "status": "collecting",
-   "settled_matches": 42,
+   "settled_matches": 43,
    "required_matches": 100,
-   "trained_at": "2026-11-20T19:57:20.071304+00:00"
+   "trained_at": "2026-11-20T20:05:19.196660+00:00"
   },
   "sport_models": {
    "hockey": {
@@ -2522,7 +2524,7 @@
   "quote_matches": 20
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-20T23:03:20.023864+03:00",
+  "last_poll": "2026-11-20T23:05:19.196660+03:00",
   "cursor": "188",
   "posts": [
    {
