@@ -2333,7 +2333,7 @@ null
 ]
 ],
 "div": "E2",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "predictions/2026-11-20-barnsli-sheffild-uensdey-401880742.html",
 "hs": "1",
@@ -2480,7 +2480,7 @@ null
 ]
 ],
 "div": "SP1",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "predictions/2026-11-20-atletik-espanol-401882805.html",
 "hs": "0",
@@ -2601,7 +2601,7 @@ null
 "min_odds": 1.56,
 "minute": "25'",
 "p": 0.673,
-"result": null,
+"result": "miss",
 "score": "0:0"
 }
 },
