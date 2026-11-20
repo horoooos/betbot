@@ -317,7 +317,7 @@
  "NHL|401892753": {
   "msg": 7439,
   "hs": 3,
-  "as": 3,
+  "as": 4,
   "goals": 0,
   "kickoff": "2026-11-20T06:00:00+03:00",
   "lt": {
@@ -328,7 +328,8 @@
    "min_odds": 1.33,
    "minute": "2-й период",
    "score": "0:2",
-   "sport": "hockey"
+   "sport": "hockey",
+   "result": "hit"
   }
  }
 }
