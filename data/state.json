@@ -7,7 +7,6 @@
  "schedule_day": "2026-11-20",
  "content_slot": "2026-11-20-23",
  "news_seen": [
-  "https://www.sport-express.ru/basketball/nba/news/kemeron-buzer-stal-chetvertym-novichkom-v-istorii-nba-s-25-ochkami-semyu-podborami-peredachami-i-trehochkovymi-za-match-2475975/",
   "donk-i-yatoro-poboryut-sya-za-titul-kibersport-smena-goda-na-the-game-awards",
   "https://www.sport-express.ru/football/england/news/romano-vratar-rayya-prodlit-kontrakt-s-arsenalom-do-2030-goda-2475990/",
   "https://www.sport-express.ru/football/rusteam/news/glava-rosatoma-lihachev-delaem-vse-chtoby-pomoch-snyat-ogranicheniya-so-sbornoy-rossii-2475986/",
@@ -506,9 +505,10 @@
   "https://www.sport-express.ru/football/world/news/zhurnalist-harris-vse-10-federaciy-konmebol-podderzhat-infantino-na-vyborah-prezidenta-fifa-2477114/",
   "https://www.sport-express.ru/football/rfpl/news/teper-u-vas-sred-bela-dnya-legko-uvodyat-igroka-zenit-napisal-epigrammu-k-matchu-s-rubinom-2477081/",
   "https://www.sport-express.ru/tennis/atp/news/medvedev-tiafo-rossiyanin-vyigral-pervyy-set-v-matche-itogovogo-turnira-atp-2477122/",
-  "osnovatel-complexity-gaming-poluchit-nagradu-za-vklad-v-razvitiye-pro-stseny"
+  "osnovatel-complexity-gaming-poluchit-nagradu-za-vklad-v-razvitiye-pro-stseny",
+  "https://www.sport-express.ru/football/rfpl/news/kirichenko-obratilsya-k-igrokam-rostova-posle-3-0-s-krylyami-sovetov-tyazhelaya-pobeda-gde-to-nas-prostili-2477150/"
  ],
- "news_i": 0,
+ "news_i": 1,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1558,7 +1558,7 @@
  "value_day": "2026-11-20",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-20",
- "site_stamp": "1242|7669|2026-11-21 00|4|2cd61ba2645096ad",
+ "site_stamp": "1244|7672|2026-11-21 00|4|8ff9827cc6799321",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1696,7 +1696,7 @@
  "streak_day": {
   "2026-11-20": 2
  },
- "news_next": "2026-11-21T00:26:32.845398+03:00",
+ "news_next": "2026-11-21T00:58:22.596020+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1719,7 +1719,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 7669,
+ "dz_last": 7672,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -1930,7 +1930,8 @@
   "https://images.cybersport.ru/images/as-is/plain/cf/cf6da55e-10bb-4ff2-9a3e-35f8e6f495bb.jpg",
   "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/98/FC_Spartak_Moscow_vs._FC_Krylia_Sovetov_Samara%2C_1_May_2022%2C_dear_guests_of_Spartak_%2812%29.jpg/1280px-FC_Spartak_Moscow_vs._FC_Krylia_Sovetov_Samara%2C_1_May_2022%2C_dear_guests_of_Spartak_%2812%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
   "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/70/FC_Zenit_lift_2020-21_Russian_Premier_League.jpg/1280px-FC_Zenit_lift_2020-21_Russian_Premier_League.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-  "https://images.cybersport.ru/images/as-is/plain/e1/e1d291ef-9228-4084-8559-94a07b7c4dd8.jpg"
+  "https://images.cybersport.ru/images/as-is/plain/e1/e1d291ef-9228-4084-8559-94a07b7c4dd8.jpg",
+  "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/Dmitri_Kirichenko_2016.jpg/1280px-Dmitri_Kirichenko_2016.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
  ],
  "indexnow_day": "2026-11-21",
  "vk_wall_err": null,
@@ -2219,7 +2220,8 @@
   "7628",
   "7638",
   "7651",
-  "7660"
+  "7660",
+  "7673"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -2440,11 +2442,12 @@
   "2026-11-20:новость:4e999b3efbfe46cf9d9264a6",
   "2026-11-20:новость:330ea0acfd2997fc89912795",
   "2026-11-20:новость:2c459a44b74a40a030ac4149",
-  "2026-11-20:новость:9ab135db48922235f922f60e"
+  "2026-11-20:новость:9ab135db48922235f922f60e",
+  "2026-11-20:новость:98150abbf9c1cf46ebb6c1c3"
  ],
  "dz_last_delivery": {
-  "source_id": 7660,
-  "message_id": 767,
+  "source_id": 7673,
+  "message_id": 768,
   "kind": "новость"
  },
  "learn_attempt_day": "2026-11-21",
@@ -2512,11 +2515,11 @@
    }
   },
   "source": {
-   "last_success": "2026-11-20T21:06:22.818000+00:00",
+   "last_success": "2026-11-20T21:28:22.596020+00:00",
    "parsed": 343,
-   "added": 76,
-   "discovered_matches": 67,
-   "pages": 18,
+   "added": 83,
+   "discovered_matches": 73,
+   "pages": 20,
    "errors": [],
    "parsed_by_sport": {
     "soccer": 50,
@@ -2528,13 +2531,13 @@
    }
   },
   "error": null,
-  "tips": 7607,
+  "tips": 7638,
   "snapshots": 142,
-  "unmapped_markets": 11960,
-  "quote_matches": 21
+  "unmapped_markets": 12012,
+  "quote_matches": 22
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-21T00:26:22.360590+03:00",
+  "last_poll": "2026-11-21T00:28:22.596020+03:00",
   "cursor": "190",
   "posts": [
    {
