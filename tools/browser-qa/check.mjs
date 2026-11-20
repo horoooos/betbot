@@ -1,7 +1,7 @@
 import {chromium} from 'playwright';
 import fs from 'node:fs/promises';
 import assert from 'node:assert/strict';
-const root=new URL('../../',import.meta.url),out=new URL('work/browser-qa/',root),base='http://localhost:8765';
+const root=new URL('../../',import.meta.url),out=new URL('work/browser-qa/',root),base=process.env.SITE_URL||'http://localhost:8765';
 await fs.mkdir(out,{recursive:true});const report={checks:[],players:[],pageErrors:[]};
 const browser=await chromium.launch({channel:'chrome',headless:true,args:['--enable-unsafe-swiftshader','--use-angle=swiftshader']});
 const context=await browser.newContext({viewport:{width:1280,height:900}});

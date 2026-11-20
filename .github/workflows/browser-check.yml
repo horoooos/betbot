@@ -1,6 +1,11 @@
 name: Browser playback and Dota checks
 on:
   workflow_dispatch:
+    inputs:
+      site_url:
+        description: Optional published site origin (blank tests checkout)
+        required: false
+        default: ""
 permissions:
   contents: read
 jobs:
@@ -27,6 +32,8 @@ jobs:
           python -m http.server 8765 --bind 127.0.0.1 --directory docs >work/browser-qa/server.log 2>&1 &
       - name: Test layout, player playback and real character assets
         run: npm run check
+        env:
+          SITE_URL: ${{ inputs.site_url }}
         working-directory: tools/browser-qa
       - uses: actions/upload-artifact@v4
         if: always()
