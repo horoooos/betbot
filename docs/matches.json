@@ -460,7 +460,7 @@ null
 "bo": null,
 "prediction": "predictions/2026-11-20-vashington-baffalo-401892746.html",
 "hs": "3",
-"as": "5",
+"as": "6",
 "tip": "ТБ 6.5 · 1.80",
 "top": false,
 "bot": {
@@ -604,7 +604,7 @@ null
 "bo": null,
 "prediction": "predictions/2026-11-20-karolina-monreal-401892747.html",
 "hs": "1",
-"as": "1",
+"as": "2",
 "tip": "ТБ 6.5 · 1.95",
 "top": false,
 "bot": {
@@ -1179,7 +1179,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-20-tampa-bey-edmonton-401892744.html",
-"hs": "1",
+"hs": "2",
 "as": "0",
 "tip": "ТБ 6.5 · 2.10",
 "top": false,
@@ -1323,8 +1323,8 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-20-memfis-grizzlis-golden-steyt-401910019.html",
-"hs": "82",
-"as": "64",
+"hs": "88",
+"as": "70",
 "tip": "ТМ 224.5 · 1.95",
 "top": false,
 "bot": {
@@ -1425,7 +1425,7 @@ null
 "bo": null,
 "prediction": "predictions/2026-11-20-miluoki-baks-portlend-401910020.html",
 "hs": "70",
-"as": "74",
+"as": "77",
 "tip": "ТМ 230.5 · 1.93",
 "top": false,
 "bot": {
@@ -1626,8 +1626,8 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-20-san-antonio-spers-klippers-401910022.html",
-"hs": "84",
-"as": "85",
+"hs": "86",
+"as": "87",
 "tip": "ТБ 224.5 · 1.91",
 "top": false,
 "bot": {
@@ -2111,7 +2111,15 @@ null
 ],
 "center": "Ожидаемые голы 3.6 : 3.3"
 },
-"lt": null
+"lt": {
+"fair": 1.47,
+"label": "1X (осн. время)",
+"min_odds": 1.54,
+"minute": "2-й период",
+"p": 0.681,
+"result": null,
+"score": "0:0"
+}
 },
 {
 "sport": "hockey",
@@ -2138,7 +2146,7 @@ null
 ]
 ],
 "div": "NHL",
-"state": "pre",
+"state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-20-sietl-vankuver-401892752.html",
 "hs": "0",
