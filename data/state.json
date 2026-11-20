@@ -7,8 +7,6 @@
  "schedule_day": "2026-11-20",
  "content_slot": "2026-11-20-19",
  "news_seen": [
-  "https://www.sport-express.ru/football/rusteam/news/rossiya-venesuela-startovye-sostavy-komand-na-tovarischeskiy-match-17-noyabrya-2026-2475905/",
-  "https://www.sport-express.ru/football/france/news/eks-zaschitnik-pszh-kurzava-obyavil-o-zavershenii-karery-v-34-goda-2475898/",
   "https://www.sport-express.ru/football/nation-league/news/vant-ship-pokinet-post-glavnogo-trenera-sbornoy-kazahstana-posle-shesti-matchey-bez-pobed-2475896/",
   "https://www.sport-express.ru/football/england/news/v-trenerskiy-shtab-manchester-yunayted-vpervye-v-istorii-voydet-zhenschina-2475894/",
   "https://www.sport-express.ru/football/spain/news/v-ispanii-fanata-prigovorili-k-11-mesyacam-tyurmy-za-oskorblenie-mbappe-2475891/",
@@ -506,9 +504,11 @@
   "https://www.sport-express.ru/tennis/atp/news/karlos-alkaras-flavio-kobolli-rezultat-matcha-gruppovogo-etapa-itogovogo-turnira-atp-20-noyabrya-2026-2477018/",
   "autodestruction-o-blast-slam-ix-na-dannom-turnire-nevozmozhno-budet-predugadat",
   "https://www.sport-express.ru/football/england/news/pochettino-na-pervoy-press-konferencii-v-kachestve-glavnogo-trenera-manchester-yunayted-brunu-fernandesh-nash-kapitan-2477037/",
-  "https://www.sport-express.ru/football/rfpl/news/rinat-bilyaletdinov-ob-ovchinnikove-nadeyus-lokomotiv-nakonec-to-tronetsya-vmeste-s-nim-2477035/"
+  "https://www.sport-express.ru/football/rfpl/news/rinat-bilyaletdinov-ob-ovchinnikove-nadeyus-lokomotiv-nakonec-to-tronetsya-vmeste-s-nim-2477035/",
+  "gamerlegion-pobedila-xtreme-gaming-na-gruppovom-yetape-blast-slam-ix",
+  "smozhet-li-do-konca-obygrat-team-liquid-v-matche-na-blast-slam-ix"
  ],
- "news_i": 1,
+ "news_i": 2,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1692,7 +1692,7 @@
  "streak_day": {
   "2026-11-19": 1
  },
- "news_next": "2026-11-20T19:25:22.282655+03:00",
+ "news_next": "2026-11-20T19:53:22.194760+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1916,7 +1916,8 @@
   "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/Brandon_Davidson_Mark_Stone.jpg/1280px-Brandon_Davidson_Mark_Stone.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
   "https://upload.wikimedia.org/wikipedia/commons/8/8e/Arsenal_players_training_before_2019_UEFA_Europa_League_final_17.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
   "https://images.cybersport.ru/images/as-is/plain/8b/8b63d28d-8d41-4ab7-aa8b-2052ba0d7cee.jpg",
-  "https://upload.wikimedia.org/wikipedia/commons/c/c6/Kuban-Rubin_%282%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+  "https://upload.wikimedia.org/wikipedia/commons/c/c6/Kuban-Rubin_%282%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "https://images.cybersport.ru/images/as-is/plain/f4/f4eba282-d616-43f5-8ad1-79c539929c19.jpg"
  ],
  "indexnow_day": "2026-11-20",
  "vk_wall_err": null,
@@ -2195,7 +2196,8 @@
   "7539",
   "7542",
   "7546",
-  "7552"
+  "7552",
+  "7559"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -2406,11 +2408,12 @@
   "2026-11-20:новость:9302469a491adb9e3cffc0aa",
   "2026-11-20:новость:2b6042c85c222a054219bf60",
   "2026-11-20:новость:833306e38193f44f9882a21f",
-  "2026-11-20:новость:5ec86e8d1a5b69da3bdc508c"
+  "2026-11-20:новость:5ec86e8d1a5b69da3bdc508c",
+  "2026-11-20:новость:3e14cb1660e1cbb1aeda23fc"
  ],
  "dz_last_delivery": {
-  "source_id": 7552,
-  "message_id": 757,
+  "source_id": 7559,
+  "message_id": 758,
   "kind": "новость"
  },
  "learn_attempt_day": "2026-11-20",
@@ -2500,43 +2503,9 @@
   "quote_matches": 20
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-20T19:24:22.332644+03:00",
-  "cursor": "179",
+  "last_poll": "2026-11-20T19:26:22.194760+03:00",
+  "cursor": "181",
   "posts": [
-   {
-    "post_id": 594,
-    "url": "https://vk.com/wall-228963529_594",
-    "title": "Расширение РПЛ до 20 клубов: зимние сборы и сокращённый летний перерыв",
-    "text": "рџ“° В рамках проекта по расширению Российской Премьер-лиги до 20 команд предложено радикально изменить календарь: часть матчей перенести в зимние месяцы и сократить традиционный летний перерыв.",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": false,
-     "details_present": false,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-19T22:09:07.842217+03:00"
-   },
-   {
-    "post_id": 595,
-    "url": "https://vk.com/wall-228963529_595",
-    "title": "Луис Энрике может уйти из «Зенита» в «Аль-Иттихад» за 35-40 млн €",
-    "text": "рџ“° Вингер «Зенита» Луис Энрике, 25-летний бразилец, уже находится в фокусе саудовского клуба «Аль-Иттихад». По сведениям ESPN Brasil, саудовцы возобновили интерес к игроку и напрямую связались с ним, готовя предложение в зимнее трансферное окно.",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": false,
-     "details_present": false,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-19T22:09:07.842217+03:00"
-   },
    {
     "post_id": 596,
     "url": "https://vk.com/wall-228963529_596",
@@ -3012,6 +2981,40 @@
     },
     "status": "needs_review",
     "observed_at": "2026-11-20T18:22:23.066638+03:00"
+   },
+   {
+    "post_id": 629,
+    "url": "https://vk.com/wall-228963529_629",
+    "title": "Дарья Autodestruction о патче 7.42 и непредсказуемом BLAST Slam IX",
+    "text": "рџ’Ґ Патч 7.42 уже меняет правила игры, а BLAST Slam IX превратится в полную непредсказуемость!",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": false,
+     "details_present": false,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-20T19:26:22.194760+03:00"
+   },
+   {
+    "post_id": 630,
+    "url": "https://vk.com/wall-228963529_630",
+    "title": "Билялетдинов о назначении Овчинникова: «Надеюсь, «Локомотив» тронется»",
+    "text": "рџ“° Бывший главный тренер «Локомотива» Ринат Билялетдинов прокомментировал недавнее назначение Сергея Овчинникова старшим тренером клуба.",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": false,
+     "details_present": false,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-20T19:26:22.194760+03:00"
    }
   ],
   "status": "observing"
