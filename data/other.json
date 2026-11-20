@@ -8645,5 +8645,269 @@
   },
   "main_hit": true,
   "bold_hit": null
+ },
+ "DOTA|1816452": {
+  "id": "1816452",
+  "div": "DOTA",
+  "sport": "esports",
+  "streams": [
+   {
+    "provider": "twitch",
+    "channel": "betboom_dota_ru",
+    "url": "https://www.twitch.tv/betboom_dota_ru",
+    "language": "ru",
+    "source": "PandaScore",
+    "official": false,
+    "status": "listed",
+    "access": "unknown"
+   },
+   {
+    "provider": "twitch",
+    "channel": "blastdotab",
+    "url": "https://www.twitch.tv/blastdotab",
+    "language": "en",
+    "source": "PandaScore",
+    "official": false,
+    "status": "listed",
+    "access": "unknown"
+   },
+   {
+    "provider": "twitch",
+    "channel": "betboom_dota_ru2",
+    "url": "https://www.twitch.tv/betboom_dota_ru2",
+    "language": "ru",
+    "source": "PandaScore",
+    "official": false,
+    "status": "listed",
+    "access": "unknown"
+   },
+   {
+    "provider": "twitch",
+    "channel": "blastdota",
+    "url": "https://www.twitch.tv/blastdota",
+    "language": "en",
+    "source": "PandaScore",
+    "official": true,
+    "status": "listed",
+    "access": "unknown"
+   }
+  ],
+  "tournament": "BLAST Slam · Season 9 2026",
+  "bo": 3,
+  "kickoff": "2026-11-20T14:00:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "tier": "a",
+  "status": "reviewed",
+  "home": {
+   "id": "1669",
+   "name": "Team Spirit",
+   "ru": "Team Spirit",
+   "logo": "https://cdn-api.pandascore.co/images/team/image/1669/153px_team_spirit_2022_lightmode.png",
+   "color": "3b4a7a",
+   "score": 0,
+   "winner": false
+  },
+  "away": {
+   "id": "136650",
+   "name": "Team Nemesis",
+   "ru": "Team Nemesis",
+   "logo": "https://cdn-api.pandascore.co/images/team/image/136650/159px_team_nem_lightmode.png",
+   "color": "3b4a7a",
+   "score": 0,
+   "winner": false
+  },
+  "odds": {},
+  "probs": {
+   "ES_W1": 0.7870067007202741,
+   "ES_W2": 0.21299329927972588,
+   "ES_FULL": 0.4180751670381556,
+   "ES_DRY": 0.5819248329618444,
+   "ES_S2:0": 0.4933541566308655,
+   "ES_S0:2": 0.08857067633097886,
+   "ES_S2:1": 0.2936525440894084,
+   "ES_S1:2": 0.12442262294874727,
+   "ES_MAP1": 0.9114293236690212,
+   "ES_MAP2": 0.5066458433691345
+  },
+  "labels": {
+   "ES_W1": "Победа: Team Spirit",
+   "ES_W2": "Победа: Team Nemesis",
+   "ES_FULL": "Больше 2 карт",
+   "ES_DRY": "Всухую (2:0 или 0:2)",
+   "ES_S2:0": "Счёт по картам 2:0",
+   "ES_S0:2": "Счёт по картам 0:2",
+   "ES_S2:1": "Счёт по картам 2:1",
+   "ES_S1:2": "Счёт по картам 1:2",
+   "ES_MAP1": "Team Spirit возьмёт хотя бы карту",
+   "ES_MAP2": "Team Nemesis возьмёт хотя бы карту"
+  },
+  "real": {},
+  "center": "BO3 · Эло 1818 : 1591",
+  "bar": [
+   0.7870067007202741,
+   0,
+   0.21299329927972588
+  ],
+  "model": {
+   "elo": [
+    1818.1913433597106,
+    1591.146347684044
+   ],
+   "src": "Эло"
+  },
+  "stavka_signal": {
+   "status": "collecting",
+   "weight": 0.0,
+   "authors": 5,
+   "group": "esports:DOTA",
+   "snapshot": "DOTA|1816452",
+   "source": "https://stavka.tv"
+  },
+  "main": {
+   "key": "ES_DRY",
+   "label": "Всухую (2:0 или 0:2)",
+   "p": 0.5819,
+   "odds": 1.6,
+   "est": true,
+   "stake": 1.0
+  },
+  "bold": {},
+  "open": {},
+  "top": false,
+  "msg_id": 7490,
+  "btn": 4
+ },
+ "DOTA|1816442": {
+  "id": "1816442",
+  "div": "DOTA",
+  "sport": "esports",
+  "streams": [
+   {
+    "provider": "twitch",
+    "channel": "betboom_dota_ru",
+    "url": "https://www.twitch.tv/betboom_dota_ru",
+    "language": "ru",
+    "source": "PandaScore",
+    "official": false,
+    "status": "listed",
+    "access": "unknown"
+   },
+   {
+    "provider": "twitch",
+    "channel": "blastdotab",
+    "url": "https://www.twitch.tv/blastdotab",
+    "language": "en",
+    "source": "PandaScore",
+    "official": false,
+    "status": "listed",
+    "access": "unknown"
+   },
+   {
+    "provider": "twitch",
+    "channel": "betboom_dota_ru2",
+    "url": "https://www.twitch.tv/betboom_dota_ru2",
+    "language": "ru",
+    "source": "PandaScore",
+    "official": false,
+    "status": "listed",
+    "access": "unknown"
+   },
+   {
+    "provider": "twitch",
+    "channel": "blastdota",
+    "url": "https://www.twitch.tv/blastdota",
+    "language": "en",
+    "source": "PandaScore",
+    "official": true,
+    "status": "listed",
+    "access": "unknown"
+   }
+  ],
+  "tournament": "BLAST Slam · Season 9 2026",
+  "bo": 3,
+  "kickoff": "2026-11-20T14:00:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "tier": "a",
+  "status": "reviewed",
+  "home": {
+   "id": "137073",
+   "name": "Team Yandex",
+   "ru": "Team Yandex",
+   "logo": "https://cdn-api.pandascore.co/images/team/image/137073/249px_team_yandex_allmode.png",
+   "color": "3b4a7a",
+   "score": 0,
+   "winner": false
+  },
+  "away": {
+   "id": "137885",
+   "name": "PlayTime",
+   "ru": "PlayTime",
+   "logo": "https://cdn-api.pandascore.co/images/team/image/137885/585px_play_time_allmode.png",
+   "color": "3b4a7a",
+   "score": 0,
+   "winner": false
+  },
+  "odds": {},
+  "probs": {
+   "ES_W1": 0.8985313321793509,
+   "ES_W2": 0.10146866782064912,
+   "ES_FULL": 0.3168059423916023,
+   "ES_DRY": 0.6831940576083977,
+   "ES_S2:0": 0.6442470392191976,
+   "ES_S0:2": 0.03894701838920011,
+   "ES_S2:1": 0.2542842929601531,
+   "ES_S1:2": 0.06252164943144924,
+   "ES_MAP1": 0.9610529816107999,
+   "ES_MAP2": 0.35575296078080243
+  },
+  "labels": {
+   "ES_W1": "Победа: Team Yandex",
+   "ES_W2": "Победа: PlayTime",
+   "ES_FULL": "Больше 2 карт",
+   "ES_DRY": "Всухую (2:0 или 0:2)",
+   "ES_S2:0": "Счёт по картам 2:0",
+   "ES_S0:2": "Счёт по картам 0:2",
+   "ES_S2:1": "Счёт по картам 2:1",
+   "ES_S1:2": "Счёт по картам 1:2",
+   "ES_MAP1": "Team Yandex возьмёт хотя бы карту",
+   "ES_MAP2": "PlayTime возьмёт хотя бы карту"
+  },
+  "real": {},
+  "center": "BO3 · Эло 1845 : 1466",
+  "bar": [
+   0.8985313321793509,
+   0,
+   0.10146866782064912
+  ],
+  "model": {
+   "elo": [
+    1844.614938832157,
+    1465.7344319620256
+   ],
+   "src": "Эло"
+  },
+  "stavka_signal": {
+   "status": "collecting",
+   "weight": 0.0,
+   "authors": 4,
+   "group": "esports:DOTA",
+   "snapshot": "DOTA|1816442",
+   "source": "https://stavka.tv"
+  },
+  "main": {
+   "key": "ES_DRY",
+   "label": "Всухую (2:0 или 0:2)",
+   "p": 0.6832,
+   "odds": 1.36,
+   "est": true,
+   "stake": 1.0
+  },
+  "bold": {},
+  "open": {},
+  "top": false,
+  "msg_id": 7492,
+  "btn": 4
  }
 }
