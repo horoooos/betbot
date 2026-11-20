@@ -1567,8 +1567,8 @@
  "streak_posted": 0,
  "value_day": "2026-11-20",
  "repost_done": "2026-11-02-news-strong",
- "table_day": "2026-11-19",
- "site_stamp": "1211|7486|2026-11-20 11|4|e5a0e332351f4fc1",
+ "table_day": "2026-11-20",
+ "site_stamp": "1211|7486|2026-11-20 12|4|e5a0e332351f4fc1",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1581,7 +1581,7 @@
    "B1|401878937"
   ]
  },
- "value_check": "2026-11-20-3",
+ "value_check": "2026-11-20-4",
  "express_risk": {
   "msg": 7294,
   "legs": [
@@ -1915,7 +1915,7 @@
  ],
  "indexnow_day": "2026-11-20",
  "vk_wall_err": null,
- "shorts_day": "2026-11-19",
+ "shorts_day": "2026-11-20",
  "shorts_err": {
   "vk": "видео в ВК выключено (VK_VIDEO=1 — включить)",
   "youtube": "YouTube не подключён (нет секретов YT_*)"
@@ -1980,7 +1980,7 @@
  "vk_comment_err": null,
  "vk_fresh_err": "фото стены: попытка 1: VK photos.getWallUploadServer: 9 Flood control",
  "vk_fresh_retry_at": 1794662243.1134844,
- "shorts_retry_day": "2026-11-19",
+ "shorts_retry_day": "2026-11-20",
  "dz_sent_ids": [
   "5731",
   "5735",
@@ -2462,12 +2462,12 @@
   },
   "error": null,
   "tips": 6929,
-  "snapshots": 126,
+  "snapshots": 127,
   "unmapped_markets": 10830,
   "quote_matches": 20
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-20T11:58:36.134759+03:00",
+  "last_poll": "2026-11-20T12:00:36.115242+03:00",
   "cursor": "162",
   "posts": [
    {
