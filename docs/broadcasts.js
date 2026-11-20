@@ -1,12 +1,15 @@
+import {liveFrames,gameClock} from './dota-data.js?v=2';
 import {openStream,embedUrl} from './watch-video.js?v=1';
 const DB='https://aistavvit-default-rtdb.europe-west1.firebasedatabase.app/broadcasts.json';
 const $=id=>document.getElementById(id),esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const sports={'':'Все виды спорта',football:'⚽ Футбол',hockey:'🏒 Хоккей',basketball:'🏀 Баскетбол',tennis:'🎾 Теннис',esports:'🎮 Киберспорт'};
-let data=null,filter='',busy=false,error=false;
+let data=null,filter='',busy=false,error=false,nativeGames=[],nativeBusy=false,nativeError=false;
 function current(){const now=Date.now()/1000;return(data?.matches||[]).map(m=>({...m,streams:(m.streams||[]).filter(s=>now-s.checked_at<86400&&safeUrl(s.url)).map(s=>s.expires_at>now?s:{...s,status:'stale'})})).filter(m=>m.streams.length);}
 function safeUrl(value){try{const u=new URL(value);return u.protocol==='https:'&&!u.username&&!u.password&&!u.port&&['www.youtube.com','www.twitch.tv','www.espn.com','rutube.ru'].includes(u.hostname);}catch{return false;}}
 function timeLabel(m){return m.state==='in'?'Матч идёт':m.state==='pre'&&m.kickoff?'Начало: '+new Date(m.kickoff).toLocaleString('ru-RU',{timeZone:'Europe/Moscow',day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'})+' МСК':'Статус матча уточняется';}
-function render(){
+function renderNative(){const games=liveFrames({games:Object.fromEntries(nativeGames.map(g=>[g.match_id,g]))},Date.now()/1000,false);document.getElementById('nativeMaps').hidden=!!filter&&filter!=='esports';$('nativeCount').textContent=games.length;$('nativeStatus').textContent=nativeError?'Не удалось обновить позиции. Сохраняем только ещё свежие карты.':'Живые позиции Valve · 3D-карта матча · без привязки к прогнозам бота';$('nativeGrid').innerHTML=games.map(g=>`<a class="broadcast-card native-card" href="dota.html?d=DOTA&game=${encodeURIComponent(g.match_id)}"><div class="meta"><span>DOTA 2 · ${esc(gameClock(g.game_time))}</span><span class="badge">● 3D LIVE</span></div><h2>${esc(g.teams[0].name)}<small>против</small>${esc(g.teams[1].name)}</h2><div class="native-score"><b>${esc(g.teams[0].score??'—')} : ${esc(g.teams[1].score??'—')}</b><span>убийства · открыть 3D →</span></div></a>`).join('')||'<div class="broadcast-empty">Сейчас нет свежих карт в открытом потоке Valve. Другие матчи доступны в общем списке.</div>'; }
+async function loadNative(){if(nativeBusy||document.hidden)return;nativeBusy=true;try{const r=await fetch('https://aistavvit-default-rtdb.europe-west1.firebasedatabase.app/esportsLive/index.json',{cache:'no-store'});if(!r.ok)throw Error();nativeGames=Object.values((await r.json())?.games||{});nativeError=false;}catch{nativeError=true;}finally{nativeBusy=false;renderNative();}}
+function render(){renderNative();
   const all=current(),live=all.filter(m=>m.streams.some(s=>s.status==='live'));
   $('foundCount').textContent=data?all.length:'—';$('liveCount').textContent=data?live.length:'—';$('scanTime').textContent=data?new Date(data.at*1000).toLocaleTimeString('ru-RU',{hour:'2-digit',minute:'2-digit'}):'—';
   $('sportFilters').innerHTML=Object.entries(sports).map(([key,title])=>`<button type="button" data-sport="${key}" class="${key===filter?'active':''}" aria-pressed="${key===filter}">${title}${key?' '+all.filter(m=>m.sport===key).length:' '+all.length}</button>`).join('');
@@ -26,3 +29,5 @@ render();await load();setInterval(load,60000);setInterval(render,15000);document
 import('./fb.js?v=13').then(fb=>{fb.track('broadcasts');fb.navUser(document.getElementById('navUser'));}).catch(()=>{});
 
 document.addEventListener('click',e=>{const b=e.target.closest('[data-video]');if(b)openStream({url:b.dataset.video},b.dataset.title);});
+
+loadNative();setInterval(loadNative,10000);
