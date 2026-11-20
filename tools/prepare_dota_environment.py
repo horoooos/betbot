@@ -1,5 +1,6 @@
 """Prepare small browser assets from the owner's local, unmodified Dota install.
 Input: Source 2 Viewer glTF exports in work/dota-ground and work/dota-export.
+Requires Pillow, numpy and scipy; these are offline preparation dependencies only.
 No live game state is synthesized. Valve retains ownership of game assets.
 """
 from pathlib import Path
