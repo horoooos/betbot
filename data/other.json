@@ -8688,5 +8688,688 @@
   "top": false,
   "msg_id": 7364,
   "btn": 4
+ },
+ "NHL|401892748": {
+  "id": "401892748",
+  "div": "NHL",
+  "sport": "hockey",
+  "kickoff": "2026-11-20T04:00:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "detail": "Thu, November 19th at 8:00 PM EST",
+  "clock": "0:00",
+  "period": 0,
+  "home": {
+   "id": "4",
+   "name": "Chicago Blackhawks",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/chi.png",
+   "color": "e31937",
+   "score": "0",
+   "record": "6-13-2",
+   "periods": [],
+   "ru": "Чикаго"
+  },
+  "away": {
+   "id": "29",
+   "name": "Columbus Blue Jackets",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/cbj.png",
+   "color": "002d62",
+   "score": "0",
+   "record": "7-12-0",
+   "periods": [],
+   "ru": "Коламбус"
+  },
+  "odds": {
+   "H": 2.36,
+   "A": 1.617,
+   "line": 5.5,
+   "over": 1.769,
+   "under": 2.1,
+   "spread": 1.5,
+   "sp_h": 1.521,
+   "sp_a": 2.6
+  },
+  "probs": {
+   "HK_ML_H": 0.4065978004412559,
+   "HK_ML_A": 0.5934021995587442,
+   "HK_H": 0.3218043699010395,
+   "HK_D": 0.1630642895004161,
+   "HK_A": 0.5151313405985445,
+   "HK_O4.5": 0.7053287494758699,
+   "HK_U4.5": 0.29467125052413007,
+   "HK_O5.5": 0.5427759284820979,
+   "HK_U5.5": 0.45722407151790195,
+   "HK_O6.5": 0.3821057082768584,
+   "HK_U6.5": 0.6178942917231418,
+   "HK_IT1O1.5": 0.74404350010213,
+   "HK_IT1O2.5": 0.49658127034490745,
+   "HK_IT1O3.5": 0.27712881891799157,
+   "HK_IT2O1.5": 0.8376257023853811,
+   "HK_IT2O2.5": 0.6343117005479061,
+   "HK_IT2O3.5": 0.4126943246367053,
+   "HK_H-1.5": 0.18784873629048457,
+   "HK_A+1.5": 0.8121512637095156,
+   "HK_A-1.5": 0.3504797283013576,
+   "HK_H+1.5": 0.6495202716986423
+  },
+  "labels": {
+   "HK_ML_H": "П1 (с ОТ и буллитами)",
+   "HK_ML_A": "П2 (с ОТ и буллитами)",
+   "HK_H": "П1 в основное время",
+   "HK_D": "Ничья в основное время",
+   "HK_A": "П2 в основное время",
+   "HK_O4.5": "ТБ 4.5",
+   "HK_U4.5": "ТМ 4.5",
+   "HK_O5.5": "ТБ 5.5",
+   "HK_U5.5": "ТМ 5.5",
+   "HK_O6.5": "ТБ 6.5",
+   "HK_U6.5": "ТМ 6.5",
+   "HK_IT1O1.5": "ИТ1 больше 1.5",
+   "HK_IT1O2.5": "ИТ1 больше 2.5",
+   "HK_IT1O3.5": "ИТ1 больше 3.5",
+   "HK_IT2O1.5": "ИТ2 больше 1.5",
+   "HK_IT2O2.5": "ИТ2 больше 2.5",
+   "HK_IT2O3.5": "ИТ2 больше 3.5",
+   "HK_H-1.5": "Ф1 (−1.5)",
+   "HK_A+1.5": "Ф2 (+1.5)",
+   "HK_A-1.5": "Ф2 (−1.5)",
+   "HK_H+1.5": "Ф1 (+1.5)"
+  },
+  "real": {
+   "HK_ML_H": 2.36,
+   "HK_ML_A": 1.617,
+   "HK_O5.5": 1.769,
+   "HK_U5.5": 2.1
+  },
+  "center": "Ожидаемые голы 2.7 : 3.3",
+  "bar": [
+   0.4065978004412559,
+   0,
+   0.5934021995587442
+  ],
+  "model": {
+   "lh": 2.6604357154893536,
+   "la": 3.2700754582808895
+  },
+  "stavka_signal": {
+   "status": "collecting",
+   "weight": 0.0,
+   "authors": 17,
+   "group": "hockey",
+   "snapshot": "NHL|401892748",
+   "source": "https://stavka.tv"
+  },
+  "main": {
+   "key": "HK_ML_A",
+   "label": "П2 (с ОТ и буллитами)",
+   "p": 0.5934,
+   "odds": 1.62,
+   "est": false,
+   "stake": 1.0
+  },
+  "bold": {},
+  "open": {
+   "HK_ML_A": 0.5934
+  },
+  "top": true,
+  "msg_id": 7368,
+  "btn": 4
+ },
+ "NHL|401892750": {
+  "id": "401892750",
+  "div": "NHL",
+  "sport": "hockey",
+  "kickoff": "2026-11-20T04:00:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "detail": "Thu, November 19th at 8:00 PM EST",
+  "clock": "0:00",
+  "period": 0,
+  "home": {
+   "id": "3",
+   "name": "Calgary Flames",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/cgy.png",
+   "color": "dd1a32",
+   "score": "0",
+   "record": "10-11-1",
+   "periods": [],
+   "ru": "Калгари"
+  },
+  "away": {
+   "id": "30",
+   "name": "Minnesota Wild",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/min.png",
+   "color": "124734",
+   "score": "0",
+   "record": "16-3-4",
+   "periods": [],
+   "ru": "Миннесота"
+  },
+  "odds": {
+   "H": 2.95,
+   "A": 1.42,
+   "line": 6.5,
+   "over": 2.02,
+   "under": 1.82,
+   "spread": 1.5,
+   "sp_h": 1.769,
+   "sp_a": 2.1
+  },
+  "probs": {
+   "HK_ML_H": 0.3249459613218616,
+   "HK_ML_A": 0.6750540386781385,
+   "HK_H": 0.2498658465671063,
+   "HK_D": 0.14438483606683714,
+   "HK_A": 0.6057493173660566,
+   "HK_O5.5": 0.6316720477190075,
+   "HK_U5.5": 0.3683279522809924,
+   "HK_O6.5": 0.47396269263461216,
+   "HK_U6.5": 0.526037307365388,
+   "HK_O7.5": 0.32727846541884725,
+   "HK_U7.5": 0.6727215345811529,
+   "HK_IT1O1.5": 0.742884875527683,
+   "HK_IT1O2.5": 0.4950421944986747,
+   "HK_IT1O3.5": 0.2757661283043847,
+   "HK_IT2O1.5": 0.8970966338101359,
+   "HK_IT2O2.5": 0.7395340515523341,
+   "HK_IT2O3.5": 0.5369911323135943,
+   "HK_H-1.5": 0.13988803916420947,
+   "HK_A+1.5": 0.8601119608357907,
+   "HK_A-1.5": 0.44595773426414653,
+   "HK_H+1.5": 0.5540422657358536
+  },
+  "labels": {
+   "HK_ML_H": "П1 (с ОТ и буллитами)",
+   "HK_ML_A": "П2 (с ОТ и буллитами)",
+   "HK_H": "П1 в основное время",
+   "HK_D": "Ничья в основное время",
+   "HK_A": "П2 в основное время",
+   "HK_O5.5": "ТБ 5.5",
+   "HK_U5.5": "ТМ 5.5",
+   "HK_O6.5": "ТБ 6.5",
+   "HK_U6.5": "ТМ 6.5",
+   "HK_O7.5": "ТБ 7.5",
+   "HK_U7.5": "ТМ 7.5",
+   "HK_IT1O1.5": "ИТ1 больше 1.5",
+   "HK_IT1O2.5": "ИТ1 больше 2.5",
+   "HK_IT1O3.5": "ИТ1 больше 3.5",
+   "HK_IT2O1.5": "ИТ2 больше 1.5",
+   "HK_IT2O2.5": "ИТ2 больше 2.5",
+   "HK_IT2O3.5": "ИТ2 больше 3.5",
+   "HK_H-1.5": "Ф1 (−1.5)",
+   "HK_A+1.5": "Ф2 (+1.5)",
+   "HK_A-1.5": "Ф2 (−1.5)",
+   "HK_H+1.5": "Ф1 (+1.5)"
+  },
+  "real": {
+   "HK_ML_H": 2.95,
+   "HK_ML_A": 1.42,
+   "HK_O6.5": 2.02,
+   "HK_U6.5": 1.82
+  },
+  "center": "Ожидаемые голы 2.7 : 3.9",
+  "bar": [
+   0.3249459613218616,
+   0,
+   0.6750540386781385
+  ],
+  "model": {
+   "lh": 2.654216763035556,
+   "la": 3.8564280237678896
+  },
+  "stavka_signal": {
+   "status": "collecting",
+   "weight": 0.0,
+   "authors": 10,
+   "group": "hockey",
+   "snapshot": "NHL|401892750",
+   "source": "https://stavka.tv"
+  },
+  "main": {
+   "key": "HK_O6.5",
+   "label": "ТБ 6.5",
+   "p": 0.474,
+   "odds": 2.02,
+   "est": false,
+   "stake": 1.0
+  },
+  "bold": {},
+  "open": {
+   "HK_O6.5": 0.474
+  },
+  "top": false,
+  "msg_id": 7370,
+  "btn": 4
+ },
+ "NBA|401910019": {
+  "id": "401910019",
+  "div": "NBA",
+  "sport": "basketball",
+  "kickoff": "2026-11-20T04:00:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "detail": "Thu, November 19th at 8:00 PM EST",
+  "clock": "0.0",
+  "period": 0,
+  "home": {
+   "id": "29",
+   "name": "Memphis Grizzlies",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/mem.png",
+   "color": "5d76a9",
+   "score": "0",
+   "record": "11-4",
+   "periods": [],
+   "ru": "Мемфис Гриззлис"
+  },
+  "away": {
+   "id": "9",
+   "name": "Golden State Warriors",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/gs.png",
+   "color": "fdb927",
+   "score": "0",
+   "record": "8-7",
+   "periods": [],
+   "ru": "Голден Стэйт"
+  },
+  "odds": {
+   "H": 1.461,
+   "A": 2.8,
+   "line": 224.5,
+   "over": 1.87,
+   "under": 1.952,
+   "spread": -5.5,
+   "sp_h": 1.877,
+   "sp_a": 1.943
+  },
+  "probs": {
+   "BB_ML_H": 0.6766435101920499,
+   "BB_ML_A": 0.32335648980795006,
+   "BB_SPR_H": 0.5,
+   "BB_SPR_A": 0.5,
+   "BB_O217.5": 0.6597440535491568,
+   "BB_U217.5": 0.3402559464508432,
+   "BB_O224.5": 0.5,
+   "BB_U224.5": 0.5,
+   "BB_O231.5": 0.3402559464508432,
+   "BB_U231.5": 0.6597440535491568
+  },
+  "labels": {
+   "BB_ML_H": "П1 (с ОТ)",
+   "BB_ML_A": "П2 (с ОТ)",
+   "BB_SPR_H": "Ф1 (-5.5)",
+   "BB_SPR_A": "Ф2 (+5.5)",
+   "BB_O217.5": "ТБ 217.5",
+   "BB_U217.5": "ТМ 217.5",
+   "BB_O224.5": "ТБ 224.5",
+   "BB_U224.5": "ТМ 224.5",
+   "BB_O231.5": "ТБ 231.5",
+   "BB_U231.5": "ТМ 231.5"
+  },
+  "real": {
+   "BB_ML_H": 1.461,
+   "BB_ML_A": 2.8,
+   "BB_SPR_H": 1.877,
+   "BB_SPR_A": 1.943,
+   "BB_O224.5": 1.87,
+   "BB_U224.5": 1.952
+  },
+  "center": "Ожидаемый счёт 115 : 110",
+  "bar": [
+   0.6766435101920499,
+   0,
+   0.32335648980795006
+  ],
+  "model": {
+   "mu": 5.5,
+   "T": 224.5
+  },
+  "stavka_signal": {
+   "status": "collecting",
+   "weight": 0.0,
+   "authors": 27,
+   "group": "basketball",
+   "snapshot": "NBA|401910019",
+   "source": "https://stavka.tv"
+  },
+  "main": {
+   "key": "BB_U224.5",
+   "label": "ТМ 224.5",
+   "p": 0.5,
+   "odds": 1.95,
+   "est": false,
+   "stake": 1.0
+  },
+  "bold": {},
+  "open": {
+   "BB_U224.5": 0.5
+  },
+  "top": false,
+  "msg_id": 7372,
+  "btn": 4
+ },
+ "NBA|401910020": {
+  "id": "401910020",
+  "div": "NBA",
+  "sport": "basketball",
+  "kickoff": "2026-11-20T04:00:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "detail": "Thu, November 19th at 8:00 PM EST",
+  "clock": "0.0",
+  "period": 0,
+  "home": {
+   "id": "15",
+   "name": "Milwaukee Bucks",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/mil.png",
+   "color": "00471b",
+   "score": "0",
+   "record": "1-14",
+   "periods": [],
+   "ru": "Милуоки Бакс"
+  },
+  "away": {
+   "id": "22",
+   "name": "Portland Trail Blazers",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/por.png",
+   "color": "e03a3e",
+   "score": "0",
+   "record": "9-5",
+   "periods": [],
+   "ru": "Портленд"
+  },
+  "odds": {
+   "H": 4.94,
+   "A": 1.193,
+   "line": 230.5,
+   "over": 1.893,
+   "under": 1.926,
+   "spread": 11.5,
+   "sp_h": 1.893,
+   "sp_a": 1.926
+  },
+  "probs": {
+   "BB_ML_H": 0.1689473502124051,
+   "BB_ML_A": 0.831052649787595,
+   "BB_SPR_H": 0.5,
+   "BB_SPR_A": 0.5,
+   "BB_O223.5": 0.6597440535491568,
+   "BB_U223.5": 0.3402559464508432,
+   "BB_O230.5": 0.5,
+   "BB_U230.5": 0.5,
+   "BB_O237.5": 0.3402559464508432,
+   "BB_U237.5": 0.6597440535491568
+  },
+  "labels": {
+   "BB_ML_H": "П1 (с ОТ)",
+   "BB_ML_A": "П2 (с ОТ)",
+   "BB_SPR_H": "Ф1 (+11.5)",
+   "BB_SPR_A": "Ф2 (-11.5)",
+   "BB_O223.5": "ТБ 223.5",
+   "BB_U223.5": "ТМ 223.5",
+   "BB_O230.5": "ТБ 230.5",
+   "BB_U230.5": "ТМ 230.5",
+   "BB_O237.5": "ТБ 237.5",
+   "BB_U237.5": "ТМ 237.5"
+  },
+  "real": {
+   "BB_ML_H": 4.94,
+   "BB_ML_A": 1.193,
+   "BB_SPR_H": 1.893,
+   "BB_SPR_A": 1.926,
+   "BB_O230.5": 1.893,
+   "BB_U230.5": 1.926
+  },
+  "center": "Ожидаемый счёт 110 : 121",
+  "bar": [
+   0.1689473502124051,
+   0,
+   0.831052649787595
+  ],
+  "model": {
+   "mu": -11.5,
+   "T": 230.5
+  },
+  "stavka_signal": {
+   "status": "collecting",
+   "weight": 0.0,
+   "authors": 16,
+   "group": "basketball",
+   "snapshot": "NBA|401910020",
+   "source": "https://stavka.tv"
+  },
+  "main": {
+   "key": "BB_U230.5",
+   "label": "ТМ 230.5",
+   "p": 0.5,
+   "odds": 1.93,
+   "est": false,
+   "stake": 1.0
+  },
+  "bold": {},
+  "open": {
+   "BB_U230.5": 0.5
+  },
+  "top": false,
+  "msg_id": 7374,
+  "btn": 4
+ },
+ "NBA|401910021": {
+  "id": "401910021",
+  "div": "NBA",
+  "sport": "basketball",
+  "kickoff": "2026-11-20T04:00:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "detail": "Thu, November 19th at 8:00 PM EST",
+  "clock": "0.0",
+  "period": 0,
+  "home": {
+   "id": "16",
+   "name": "Minnesota Timberwolves",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/min.png",
+   "color": "266092",
+   "score": "0",
+   "record": "11-4",
+   "periods": [],
+   "ru": "Миннесота Тимбервулвз"
+  },
+  "away": {
+   "id": "18",
+   "name": "New York Knicks",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/ny.png",
+   "color": "1d428a",
+   "score": "0",
+   "record": "8-6",
+   "periods": [],
+   "ru": "Нью-Йорк Никс"
+  },
+  "odds": {
+   "H": 1.962,
+   "A": 1.885,
+   "line": 216.5,
+   "over": 1.909,
+   "under": 1.909,
+   "spread": 1.5,
+   "sp_h": 1.84,
+   "sp_a": 1.98
+  },
+  "probs": {
+   "BB_ML_H": 0.4502617751698871,
+   "BB_ML_A": 0.5497382248301129,
+   "BB_SPR_H": 0.5,
+   "BB_SPR_A": 0.5,
+   "BB_O209.5": 0.6597440535491568,
+   "BB_U209.5": 0.3402559464508432,
+   "BB_O216.5": 0.5,
+   "BB_U216.5": 0.5,
+   "BB_O223.5": 0.3402559464508432,
+   "BB_U223.5": 0.6597440535491568
+  },
+  "labels": {
+   "BB_ML_H": "П1 (с ОТ)",
+   "BB_ML_A": "П2 (с ОТ)",
+   "BB_SPR_H": "Ф1 (+1.5)",
+   "BB_SPR_A": "Ф2 (-1.5)",
+   "BB_O209.5": "ТБ 209.5",
+   "BB_U209.5": "ТМ 209.5",
+   "BB_O216.5": "ТБ 216.5",
+   "BB_U216.5": "ТМ 216.5",
+   "BB_O223.5": "ТБ 223.5",
+   "BB_U223.5": "ТМ 223.5"
+  },
+  "real": {
+   "BB_ML_H": 1.962,
+   "BB_ML_A": 1.885,
+   "BB_SPR_H": 1.84,
+   "BB_SPR_A": 1.98,
+   "BB_O216.5": 1.909,
+   "BB_U216.5": 1.909
+  },
+  "center": "Ожидаемый счёт 108 : 109",
+  "bar": [
+   0.4502617751698871,
+   0,
+   0.5497382248301129
+  ],
+  "model": {
+   "mu": -1.5,
+   "T": 216.5
+  },
+  "stavka_signal": {
+   "status": "collecting",
+   "weight": 0.0,
+   "authors": 55,
+   "group": "basketball",
+   "snapshot": "NBA|401910021",
+   "source": "https://stavka.tv"
+  },
+  "main": {
+   "key": "BB_SPR_A",
+   "label": "Ф2 (-1.5)",
+   "p": 0.5,
+   "odds": 1.98,
+   "est": false,
+   "line": -1.5,
+   "stake": 1.0
+  },
+  "bold": {},
+  "open": {
+   "BB_SPR_A": 0.5
+  },
+  "top": false,
+  "msg_id": 7376,
+  "btn": 4
+ },
+ "NBA|401910022": {
+  "id": "401910022",
+  "div": "NBA",
+  "sport": "basketball",
+  "kickoff": "2026-11-20T04:00:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "detail": "Thu, November 19th at 8:00 PM EST",
+  "clock": "0.0",
+  "period": 0,
+  "home": {
+   "id": "24",
+   "name": "San Antonio Spurs",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/sa.png",
+   "color": "000000",
+   "score": "0",
+   "record": "12-3",
+   "periods": [],
+   "ru": "Сан-Антонио Сперс"
+  },
+  "away": {
+   "id": "12",
+   "name": "LA Clippers",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/lac.png",
+   "color": "12173f",
+   "score": "0",
+   "record": "4-9",
+   "periods": [],
+   "ru": "Клипперс"
+  },
+  "odds": {
+   "H": 1.098,
+   "A": 7.6,
+   "line": 224.5,
+   "over": 1.909,
+   "under": 1.909,
+   "spread": -15.5,
+   "sp_h": 1.926,
+   "sp_a": 1.893
+  },
+  "probs": {
+   "BB_ML_H": 0.9017636970803051,
+   "BB_ML_A": 0.09823630291969487,
+   "BB_SPR_H": 0.5,
+   "BB_SPR_A": 0.5,
+   "BB_O217.5": 0.6597440535491568,
+   "BB_U217.5": 0.3402559464508432,
+   "BB_O224.5": 0.5,
+   "BB_U224.5": 0.5,
+   "BB_O231.5": 0.3402559464508432,
+   "BB_U231.5": 0.6597440535491568
+  },
+  "labels": {
+   "BB_ML_H": "П1 (с ОТ)",
+   "BB_ML_A": "П2 (с ОТ)",
+   "BB_SPR_H": "Ф1 (-15.5)",
+   "BB_SPR_A": "Ф2 (+15.5)",
+   "BB_O217.5": "ТБ 217.5",
+   "BB_U217.5": "ТМ 217.5",
+   "BB_O224.5": "ТБ 224.5",
+   "BB_U224.5": "ТМ 224.5",
+   "BB_O231.5": "ТБ 231.5",
+   "BB_U231.5": "ТМ 231.5"
+  },
+  "real": {
+   "BB_ML_H": 1.098,
+   "BB_ML_A": 7.6,
+   "BB_SPR_H": 1.926,
+   "BB_SPR_A": 1.893,
+   "BB_O224.5": 1.909,
+   "BB_U224.5": 1.909
+  },
+  "center": "Ожидаемый счёт 120 : 104",
+  "bar": [
+   0.9017636970803051,
+   0,
+   0.09823630291969487
+  ],
+  "model": {
+   "mu": 15.5,
+   "T": 224.5
+  },
+  "stavka_signal": {
+   "status": "collecting",
+   "weight": 0.0,
+   "authors": 16,
+   "group": "basketball",
+   "snapshot": "NBA|401910022",
+   "source": "https://stavka.tv"
+  },
+  "main": {
+   "key": "BB_O224.5",
+   "label": "ТБ 224.5",
+   "p": 0.5,
+   "odds": 1.91,
+   "est": false,
+   "stake": 1.0
+  },
+  "bold": {},
+  "open": {
+   "BB_O224.5": 0.5
+  },
+  "top": false,
+  "msg_id": 7378,
+  "btn": 4
  }
 }
