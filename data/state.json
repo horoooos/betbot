@@ -7,7 +7,6 @@
  "schedule_day": "2026-11-20",
  "content_slot": "2026-11-20-20",
  "news_seen": [
-  "https://www.sport-express.ru/football/england/news/pretendent-na-post-prezidenta-fifa-mne-povezlo-zavoevat-trofey-s-tottenhemom-ne-tak-mnogo-lyudey-mogut-eto-skazat-2475923/",
   "https://www.sport-express.ru/football/rfpl/news/lokomotiv-obyavil-o-naznachenii-ovchinnikova-na-post-i-o-glavnogo-trenera-komandy-2475949/",
   "https://www.sport-express.ru/hockey/khl/news/zarplata-panika-v-lokomotive-sostavit-40-millionov-2475951/",
   "https://www.sport-express.ru/football/foreign/news/pretendent-na-post-prezidenta-fifa-nazval-glupym-postupok-infantino-po-delu-baloguna-vo-vremya-chm-2026-2475931/",
@@ -506,9 +505,10 @@
   "og-proigrala-natus-vincere-na-blast-slam-ix",
   "team-spirit-ustupila-team-nemesis-na-blast-slam-ix",
   "team-yandex-vyigrala-u-playtime-na-blast-slam-ix",
-  "parivision-ili-legion-kto-okazhet-sya-silneye-v-matche-na-blast-slam-ix"
+  "parivision-ili-legion-kto-okazhet-sya-silneye-v-matche-na-blast-slam-ix",
+  "https://www.sport-express.ru/football/rfpl/news/rostov-krylya-sovetov-suleymanov-s-pasa-oluseguna-udvoil-preimuschestvo-rostovchan-2477089/"
  ],
- "news_i": 0,
+ "news_i": 1,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1558,7 +1558,7 @@
  "value_day": "2026-11-20",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-20",
- "site_stamp": "1225|7589|2026-11-20 20|4|a22c45cf3f619544",
+ "site_stamp": "1225|7589|2026-11-20 21|4|a22c45cf3f619544",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1571,7 +1571,7 @@
    "B1|401878937"
   ]
  },
- "value_check": "2026-11-20-6",
+ "value_check": "2026-11-20-7",
  "express_risk": {
   "msg": 7574,
   "legs": [
@@ -1688,7 +1688,7 @@
  "streak_day": {
   "2026-11-20": 1
  },
- "news_next": "2026-11-20T20:58:23.073785+03:00",
+ "news_next": "2026-11-20T21:30:33.047904+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1915,7 +1915,8 @@
   "https://upload.wikimedia.org/wikipedia/commons/c/c6/Kuban-Rubin_%282%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
   "https://images.cybersport.ru/images/as-is/plain/f4/f4eba282-d616-43f5-8ad1-79c539929c19.jpg",
   "https://upload.wikimedia.org/wikipedia/commons/1/15/FC_Dynamo_Kyiv_Fans_-_%D0%A4%D0%B0%D0%BD%D0%B0%D1%82%D1%8B_%D0%A4%D0%9A_%D0%94%D0%B8%D0%BD%D0%B0%D0%BC%D0%BE_%D0%9A%D0%B8%D0%B5%D0%B2_%2822326203356%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-  "https://images.cybersport.ru/images/as-is/plain/b9/b9f48dfa-fa55-40a6-88d2-12ee93659ba0.jpg"
+  "https://images.cybersport.ru/images/as-is/plain/b9/b9f48dfa-fa55-40a6-88d2-12ee93659ba0.jpg",
+  "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/84/Krylia_Sovetov_logo.png/1280px-Krylia_Sovetov_logo.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
  ],
  "indexnow_day": "2026-11-20",
  "vk_wall_err": null,
@@ -2197,7 +2198,8 @@
   "7552",
   "7559",
   "7568",
-  "7578"
+  "7578",
+  "7590"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -2411,11 +2413,12 @@
   "2026-11-20:новость:5ec86e8d1a5b69da3bdc508c",
   "2026-11-20:новость:3e14cb1660e1cbb1aeda23fc",
   "2026-11-20:новость:6d0e9172858c16aff11f4486",
-  "2026-11-20:новость:2ab1fa655ee2d4d28c443c9f"
+  "2026-11-20:новость:2ab1fa655ee2d4d28c443c9f",
+  "2026-11-20:новость:65722140de9c087323116976"
  ],
  "dz_last_delivery": {
-  "source_id": 7578,
-  "message_id": 760,
+  "source_id": 7590,
+  "message_id": 761,
   "kind": "новость"
  },
  "learn_attempt_day": "2026-11-20",
@@ -2483,11 +2486,11 @@
    }
   },
   "source": {
-   "last_success": "2026-11-20T17:38:23.039279+00:00",
-   "parsed": 347,
-   "added": 47,
-   "discovered_matches": 29,
-   "pages": 17,
+   "last_success": "2026-11-20T18:00:33.047904+00:00",
+   "parsed": 337,
+   "added": 33,
+   "discovered_matches": 30,
+   "pages": 16,
    "errors": [],
    "parsed_by_sport": {
     "soccer": 50,
@@ -2499,13 +2502,13 @@
    }
   },
   "error": null,
-  "tips": 7410,
+  "tips": 7431,
   "snapshots": 135,
-  "unmapped_markets": 11627,
+  "unmapped_markets": 11639,
   "quote_matches": 20
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-20T20:58:22.920927+03:00",
+  "last_poll": "2026-11-20T21:00:33.047904+03:00",
   "cursor": "183",
   "posts": [
    {
