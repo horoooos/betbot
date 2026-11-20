@@ -5,7 +5,7 @@
  },
  "learned": "2026-11-20",
  "schedule_day": "2026-11-20",
- "content_slot": "2026-11-20-13",
+ "content_slot": "2026-11-20-16",
  "news_seen": [
   "https://www.sport-express.ru/football/rfpl/news/lokomotiv-obyavil-ob-uhode-mihaila-galaktionova-s-posta-glavnogo-trenera-2475830/",
   "https://www.sport-express.ru/tennis/wta/news/makarova-obyasnila-pochemu-ne-stoit-sravnivat-andreevu-s-sharapovoy-2475836/",
@@ -1558,7 +1558,7 @@
  "value_day": "2026-11-20",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-20",
- "site_stamp": "1215|7520|2026-11-20 15|4|2e62a3ce2f6a4f7f",
+ "site_stamp": "1215|7522|2026-11-20 16|4|361360958b8fd3cb",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1715,7 +1715,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 7520,
+ "dz_last": 7522,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2477,12 +2477,12 @@
   },
   "error": null,
   "tips": 7115,
-  "snapshots": 129,
+  "snapshots": 131,
   "unmapped_markets": 11148,
   "quote_matches": 20
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-20T15:59:15.309920+03:00",
+  "last_poll": "2026-11-20T16:01:15.659973+03:00",
   "cursor": "168",
   "posts": [
    {
@@ -3002,5 +3002,14 @@
   "pid": 6655,
   "started_at": 1794992742.839963
  },
- "vk_story_retry_at": 1794996342.839963
+ "vk_story_retry_at": 1794996342.839963,
+ "mod_poll": {
+  "key": "SP1|401882805",
+  "id": "401882805",
+  "poll": 7522,
+  "post": 7521,
+  "home": "Атлетик",
+  "away": "Эспаньол",
+  "kickoff": "2026-11-20T23:00:00+03:00"
+ }
 }
