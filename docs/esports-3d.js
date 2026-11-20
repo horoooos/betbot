@@ -1,10 +1,11 @@
 import * as THREE from 'three';
 import {OrbitControls} from 'three/addons/controls/OrbitControls.js';
-import {loadCharacter} from './dota-character.js?v=2';
-import {sampledPosition} from './dota-data.js?v=2';
+import {loadCharacter} from './dota-character.js?v=3';
+import {sampledPosition,advancePlayhead} from './dota-data.js?v=3';
 
 // Environment is a visual reconstruction. Unit/building positions stay in Valve's frame.
 export function createArena(container,heroes={}) {
+  let playhead=null,latestAt=null;
   const scene=new THREE.Scene();scene.background=new THREE.Color('#09121b');scene.fog=new THREE.FogExp2('#09121b',.003);
   const camera=new THREE.PerspectiveCamera(43,1,.1,420);
   const renderer=new THREE.WebGLRenderer({antialias:true,alpha:false,powerPreference:'high-performance'});
@@ -87,7 +88,7 @@ export function createArena(container,heroes={}) {
     return u;
   }
   function update(frame){
-    if(gameId!==frame.match_id){for(const u of units.values())clearUnit(u);units.clear();for(const b of structures.values())scene.remove(b);structures.clear();follow=null;gameId=frame.match_id;modelLoaded=0;modelWanted=0;}
+    if(gameId!==frame.match_id){for(const u of units.values())clearUnit(u);units.clear();for(const b of structures.values())scene.remove(b);structures.clear();follow=null;gameId=frame.match_id;modelLoaded=0;modelWanted=0;playhead=null;}latestAt=frame.at;playhead=advancePlayhead(playhead,latestAt,0);
     const keys=new Set();for(const team of frame.teams||[])for(const p of team.players||[]){const key=team.team+':'+p.id;keys.add(key);let u=units.get(key);if(u&&u.hero!==p.hero){clearUnit(u);units.delete(key);u=null;}if(!u){u=unit(p,team.team);units.set(key,u);}u.target.copy(coord(p));if(!u.samples.length||frame.at>u.samples.at(-1).at){u.samples.push({at:frame.at,x:p.x,y:p.y});u.samples=u.samples.slice(-8);}}
     for(const [key,u] of units)if(!keys.has(key)){clearUnit(u);units.delete(key);}
     for(const b of frame.buildings||[]){const key=[b.team,b.type,b.x,b.y].join(':'),old=structures.get(key);if(old?.userData.destroyed===b.destroyed)continue;if(old)scene.remove(old);const mesh=structure(b);mesh.position.copy(coord(b));mesh.userData.destroyed=b.destroyed;structures.set(key,mesh);scene.add(mesh);}
@@ -104,14 +105,15 @@ export function createArena(container,heroes={}) {
   function resize(){const w=container.clientWidth,h=container.clientHeight;renderer.setSize(w,h);camera.aspect=w/h;camera.updateProjectionMatrix();}
   const observer=new ResizeObserver(resize);observer.observe(container);resize();
   renderer.setAnimationLoop(()=>{
-    const now=performance.now(),dt=Math.min(.07,(now-last)/1000);last=now;if(document.hidden||document.body.classList.contains('video-open'))return;
+    const now=performance.now(),realDt=(now-last)/1000,dt=Math.min(.07,realDt);last=now;if(document.hidden||document.body.classList.contains('video-open'))return;
+    if(active&&latestAt!==null)playhead=advancePlayhead(playhead,latestAt,realDt);
     for(const u of units.values()){
-      const before=u.group.position.clone();if(active){const observed=sampledPosition(u.samples,Date.now()/1000-12);if(observed)u.group.position.copy(coord(observed));}const movement=u.group.position.clone().sub(before),speed=movement.length()/Math.max(.001,dt);
+      const before=u.group.position.clone();if(active){const observed=sampledPosition(u.samples,playhead);if(observed)u.group.position.copy(coord(observed));}const movement=u.group.position.clone().sub(before),speed=movement.length()/Math.max(.001,dt);
       if(speed>.12){const wanted=Math.atan2(movement.x,movement.z),diff=Math.atan2(Math.sin(wanted-u.heading),Math.cos(wanted-u.heading));u.heading+=diff*(1-Math.exp(-dt*9));u.visual.root.rotation.y=u.heading;}
       if(active)u.visual.animate(dt,speed);u.label.visible=!follow||u.key===follow;u.ring.material.opacity=u.key===follow?1:.8;
     }
     if(follow&&units.has(follow)){const next=units.get(follow).group.position.clone().add(new THREE.Vector3(0,2,0));if(flight){const progress=Math.min(1,(now-flight.at)/1400),ease=progress*progress*(3-2*progress);camera.position.lerpVectors(flight.camera,next.clone().add(flight.offset),ease);controls.target.lerpVectors(flight.target,next,ease);if(progress>=1)flight=null;}else{const delta=next.clone().sub(controls.target);camera.position.add(delta);controls.target.copy(next);}}
     controls.update();renderer.render(scene,camera);
   });
-  return {update,focus,overview,freeze(){active=false;},camera(){flight=null;top=!top;const target=controls.target;camera.position.copy(target).add(top?new THREE.Vector3(0,follow?28:145,.01):new THREE.Vector3(follow?12:63,follow?15:102,follow?20:101));controls.update();},rotate(){const offset=camera.position.clone().sub(controls.target).applyAxisAngle(new THREE.Vector3(0,1,0),Math.PI/4);camera.position.copy(controls.target).add(offset);controls.update();},zoom(){const offset=camera.position.clone().sub(controls.target);offset.multiplyScalar(offset.length()>30?.65:2);camera.position.copy(controls.target).add(offset);controls.update();},dispose(){renderer.setAnimationLoop(null);observer.disconnect();controls.dispose();for(const u of units.values())clearUnit(u);renderer.dispose();}};
+  return {update,focus,overview,inspect(){return{playhead,latestAt,loaded:modelLoaded,units:[...units.values()].map(u=>({key:u.key,x:u.group.position.x,y:u.group.position.y,z:u.group.position.z,model:u.visual.diagnostics?.()}))};},freeze(){active=false;},camera(){flight=null;top=!top;const target=controls.target;camera.position.copy(target).add(top?new THREE.Vector3(0,follow?28:145,.01):new THREE.Vector3(follow?12:63,follow?15:102,follow?20:101));controls.update();},rotate(){const offset=camera.position.clone().sub(controls.target).applyAxisAngle(new THREE.Vector3(0,1,0),Math.PI/4);camera.position.copy(controls.target).add(offset);controls.update();},zoom(){const offset=camera.position.clone().sub(controls.target);offset.multiplyScalar(offset.length()>30?.65:2);camera.position.copy(controls.target).add(offset);controls.update();},dispose(){renderer.setAnimationLoop(null);observer.disconnect();controls.dispose();for(const u of units.values())clearUnit(u);renderer.dispose();}};
 }
