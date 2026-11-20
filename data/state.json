@@ -2482,43 +2482,9 @@
   "quote_matches": 20
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-20T16:13:15.795283+03:00",
-  "cursor": "168",
+  "last_poll": "2026-11-20T16:15:15.261381+03:00",
+  "cursor": "170",
   "posts": [
-   {
-    "post_id": 588,
-    "url": "https://vk.com/wall-228963529_588",
-    "title": "Team Vitality закрывает академический ростер CS2",
-    "text": "рџЋ® С шоком и тяжёлым сердцем Vitality объявила, что к концу 2026 года их молодежный состав по CS2 будет распущен.",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": false,
-     "details_present": false,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-19T18:56:14.876389+03:00"
-   },
-   {
-    "post_id": 589,
-    "url": "https://vk.com/wall-228963529_589",
-    "title": "Саркисян раскритиковал увольнение Галактионова: «Цирк шапито»",
-    "text": "рџ“° Таш Саркисян, известный телеведущий и ярый болельщик «Локомотива», назвал увольнение Михаила Галактионова настоящим «цирком шапито». Его слова прозвучали на пресс-конференции APSNY Media Weekend, где он раскритиковал клуб за «потерянное время» и «необходимость платить».",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": false,
-     "details_present": false,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-19T18:56:14.876389+03:00"
-   },
    {
     "post_id": 590,
     "url": "https://vk.com/wall-228963529_590",
@@ -2994,6 +2960,40 @@
     },
     "status": "needs_review",
     "observed_at": "2026-11-20T15:09:15.593718+03:00"
+   },
+   {
+    "post_id": 618,
+    "url": "https://vk.com/wall-228963529_618",
+    "title": "Greater Horn of Battle не дарит мегакрипов: реальность vs описание",
+    "text": "рџ“° Оказалось, что Horn of Battle не дарит мегакрипов, а лишь обычных!",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": false,
+     "details_present": false,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-20T16:15:15.261381+03:00"
+   },
+   {
+    "post_id": 619,
+    "url": "https://vk.com/wall-228963529_619",
+    "title": "Тюкавин назвал «Акрон» самым тяжёлым соперником в РПЛ",
+    "text": "рџ“° В интервью «СЭ» нападающий «Динамо» Константин Тюкавин назвал «Акрон» самым сложным соперником сезона. 24 октября в Самаре «Акрон» обыграл «Динамо» со счётом 3:1, а единственный гол для москвичей забил Ярослав Гладышев.",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": false,
+     "details_present": false,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-20T16:15:15.261381+03:00"
    }
   ],
   "status": "observing"
