@@ -61,10 +61,12 @@ def main():
                     valid=(a>=-1e-5)&(b>=-1e-5)&(a+b<=1.00001)
                     tile=heights[top:bottom+1,left:right+1]
                     np.maximum(tile,np.where(valid,a*y[0]+b*y[1]+(1-a-b)*y[2],-np.inf),out=tile)
-                prim['attributes']={k:v for k,v in prim['attributes'].items() if k in ('POSITION','NORMAL','TEXCOORD_0')}
+                prim['attributes']={k:v for k,v in prim['attributes'].items() if k in ('POSITION','NORMAL','TEXCOORD_0','_TEXCOORD_1')}
                 for key,index in list(prim['attributes'].items())+[('indices',prim['indices'])]:
                     if index not in mapping:
                         a=dict(g['accessors'][index]);v=g['bufferViews'][a['bufferView']];data=read_accessor(g,blob,index)
+                        if key=='_TEXCOORD_1':
+                            data=np.round(np.clip(data,0,1)*255).astype(np.uint8);a['componentType']=5121;a['normalized']=True;a.pop('min',None);a.pop('max',None)
                         while len(packed)%4:packed.append(0)
                         views.append({'buffer':0,'byteOffset':len(packed),'byteLength':data.nbytes,'target':v.get('target',34962)})
                         packed.extend(data.tobytes());a['bufferView']=len(views)-1;a.pop('byteOffset',None)
