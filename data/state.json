@@ -1558,7 +1558,7 @@
  "value_day": "2026-11-20",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-20",
- "site_stamp": "1231|7633|2026-11-20 22|4|01fac0fa2c9ebb2b",
+ "site_stamp": "1232|7635|2026-11-20 22|4|818e232066b84bb0",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1594,7 +1594,9 @@
      "000000",
      "000000"
     ],
-    "label": "Победа: Орхус"
+    "label": "Победа: Орхус",
+    "win": true,
+    "score": "2:1"
    },
    {
     "sport": "football",
@@ -1711,7 +1713,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 7633,
+ "dz_last": 7635,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2453,9 +2455,9 @@
   "model": {
    "weight": 0.0,
    "status": "collecting",
-   "settled_matches": 41,
+   "settled_matches": 42,
    "required_matches": 100,
-   "trained_at": "2026-11-20T19:27:19.728371+00:00"
+   "trained_at": "2026-11-20T19:57:20.071304+00:00"
   },
   "sport_models": {
    "hockey": {
@@ -2517,7 +2519,7 @@
   "quote_matches": 20
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-20T22:55:19.363610+03:00",
+  "last_poll": "2026-11-20T22:57:20.071304+03:00",
   "cursor": "188",
   "posts": [
    {
