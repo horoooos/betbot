@@ -2470,43 +2470,9 @@
   "quote_matches": 20
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-20T14:03:14.504438+03:00",
-  "cursor": "164",
+  "last_poll": "2026-11-20T14:05:14.674620+03:00",
+  "cursor": "166",
   "posts": [
-   {
-    "post_id": 584,
-    "url": "https://vk.com/wall-228963529_584",
-    "title": "В Dota 2 нашли шесть скрытых предметов: камень телепортации и новые артефакты",
-    "text": "рџ“° После выхода патча 7.42 в файлах «Dota 2» всплыли шесть предметов, которые пока не доступны игрокам. Об этом сообщил Telegram-канал DotaFlow, и уже начали обсуждать их потенциальный баланс.",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": false,
-     "details_present": false,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-19T16:42:13.370454+03:00"
-   },
-   {
-    "post_id": 585,
-    "url": "https://vk.com/wall-228963529_585",
-    "title": "Овчинников поставил цель «Локомотиву»: выйти из зоны вылета",
-    "text": "рџ“° Старший тренер «Локомотива» Сергей Овчинников официально занял пост главы первой команды 17 ноября, заменив Михаила Галактионова, который ушёл после того, как под его руководством железнодорожники завоевали бронзовые медали в сезоне-2025/26.",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": false,
-     "details_present": false,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-19T16:42:13.370454+03:00"
-   },
    {
     "post_id": 586,
     "url": "https://vk.com/wall-228963529_586",
@@ -2982,6 +2948,40 @@
     },
     "status": "needs_review",
     "observed_at": "2026-11-20T13:03:14.595076+03:00"
+   },
+   {
+    "post_id": 614,
+    "url": "https://vk.com/wall-228963529_614",
+    "title": "Семин отверг расширение РПЛ до 20 команд: «Нет оснований»",
+    "text": "рџ“° Юрий Семин, бывший главный тренер «Локомотива», в интервью «СЭ» резко отклонил идею увеличить число участников РФПЛ до двадцати команд.",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": false,
+     "details_present": false,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-20T14:05:14.674620+03:00"
+   },
+   {
+    "post_id": 615,
+    "url": "https://vk.com/wall-228963529_615",
+    "title": "flameZ предлагает удалить Karrigan: «расслабься, тебе будет 37»",
+    "text": "рџ“° Участник состава Team Vitality Шахар «flameZ» Шушан принял участие в популярном YouTube-опросе «удали и поясни», выпущенном каналом BETBOOM ESPORTS. Формат прост: зрители задают вопросы «удали…», а игрок отвечает, обосновывая выбор.",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": false,
+     "details_present": false,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-20T14:05:14.674620+03:00"
    }
   ],
   "status": "observing"
