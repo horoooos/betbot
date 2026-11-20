@@ -8252,5 +8252,75 @@ null
 "top": false,
 "bot": null,
 "lt": null
+},
+{
+"sport": "football",
+"id": "401876816",
+"league": "Коста-Рика · Примера",
+"kickoff": "2026-11-22T02:30:00+03:00",
+"home": "Puntarenas FC",
+"away": "Herediano",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/7237.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/862.png",
+"hid": "7237",
+"aid": "862",
+"bb": "https://betboom.ru/search?query=%D0%9F%D1%83%D0%BD%D1%82%D0%B0%D1%80%D0%B5%D0%BD%D0%B0%D1%81&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/crc.1",
+"url": "live.html?s=football&p=soccer%2Fcrc.1&e=401876816&h=Puntarenas+FC&a=Herediano",
+"participants": [
+[
+"Puntarenas FC",
+"Puntarenas FC"
+],
+[
+"Herediano",
+"Herediano"
+]
+],
+"div": "CRC",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "football",
+"id": "401850694",
+"league": "Чили · Примера",
+"kickoff": "2026-11-22T02:30:00+03:00",
+"home": "Universidad de Concepción",
+"away": "Ñublense",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/5362.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/7427.png",
+"hid": "5362",
+"aid": "7427",
+"bb": "https://betboom.ru/search?query=%D0%A3%D0%BD%D0%B8%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D0%B4%D0%B0%D0%B4&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/chi.1",
+"url": "live.html?s=football&p=soccer%2Fchi.1&e=401850694&h=Universidad+de+Concepci%C3%B3n&a=%C3%91ublense",
+"participants": [
+[
+"Universidad de Concepción",
+"Universidad de Concepción"
+],
+[
+"Ñublense",
+"Ñublense"
+]
+],
+"div": "CHI",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
 }
 ]
