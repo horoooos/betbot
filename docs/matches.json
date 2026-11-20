@@ -168,11 +168,11 @@ null
 ]
 ],
 "div": "NHL",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "predictions/2026-11-20-ottava-filadelfiya-401892743.html",
 "hs": "5",
-"as": "5",
+"as": "6",
 "tip": "ТБ 6.5 · 2.10",
 "top": true,
 "bot": {
@@ -283,7 +283,7 @@ null
 "min_odds": 1.43,
 "minute": "2-й период",
 "p": 0.735,
-"result": null,
+"result": "hit",
 "score": "1:1"
 }
 },
@@ -456,7 +456,7 @@ null
 ]
 ],
 "div": "NHL",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "predictions/2026-11-20-vashington-baffalo-401892746.html",
 "hs": "3",
@@ -571,7 +571,7 @@ null
 "min_odds": 1.31,
 "minute": "2-й период",
 "p": 0.8,
-"result": null,
+"result": "hit",
 "score": "1:4"
 }
 },
@@ -600,7 +600,7 @@ null
 ]
 ],
 "div": "NHL",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "predictions/2026-11-20-karolina-monreal-401892747.html",
 "hs": "1",
@@ -710,7 +710,7 @@ null
 "min_odds": 1.57,
 "minute": "2-й период",
 "p": 0.667,
-"result": null,
+"result": "miss",
 "score": "0:0"
 }
 },
@@ -1425,7 +1425,7 @@ null
 "bo": null,
 "prediction": "predictions/2026-11-20-miluoki-baks-portlend-401910020.html",
 "hs": "70",
-"as": "77",
+"as": "80",
 "tip": "ТМ 230.5 · 1.93",
 "top": false,
 "bot": {
@@ -1525,7 +1525,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-20-minnesota-timbervulvz-nyu-york-niks-401910021.html",
-"hs": "76",
+"hs": "78",
 "as": "90",
 "tip": "Ф2 (-1.5) · 1.98",
 "top": false,
@@ -1626,8 +1626,8 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-20-san-antonio-spers-klippers-401910022.html",
-"hs": "86",
-"as": "87",
+"hs": "88",
+"as": "88",
 "tip": "ТБ 224.5 · 1.91",
 "top": false,
 "bot": {
