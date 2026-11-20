@@ -1568,7 +1568,7 @@
  "value_day": "2026-11-19",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-19",
- "site_stamp": "1203|7441|2026-11-20 06|4|c15d96a21e4587fc",
+ "site_stamp": "1205|7443|2026-11-20 06|4|2222ce4ed4c88278",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1724,7 +1724,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 7441,
+ "dz_last": 7443,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2389,35 +2389,35 @@
     "weight": 0.0,
     "settled_matches": 26,
     "required_matches": 100,
-    "trained_at": "2026-11-20T03:27:58.002100+00:00"
+    "trained_at": "2026-11-20T03:29:58.045503+00:00"
    },
    "basketball": {
     "status": "collecting",
     "weight": 0.0,
-    "settled_matches": 32,
+    "settled_matches": 33,
     "required_matches": 100,
-    "trained_at": "2026-11-20T03:27:58.002100+00:00"
+    "trained_at": "2026-11-20T03:29:58.045503+00:00"
    },
    "tennis": {
     "status": "collecting",
     "weight": 0.0,
     "settled_matches": 3,
     "required_matches": 100,
-    "trained_at": "2026-11-20T03:27:58.002100+00:00"
+    "trained_at": "2026-11-20T03:29:58.045503+00:00"
    },
    "esports:CS2": {
     "status": "collecting",
     "weight": 0.0,
     "settled_matches": 0,
     "required_matches": 100,
-    "trained_at": "2026-11-20T03:27:58.002100+00:00"
+    "trained_at": "2026-11-20T03:29:58.045503+00:00"
    },
    "esports:DOTA": {
     "status": "collecting",
     "weight": 0.0,
     "settled_matches": 0,
     "required_matches": 100,
-    "trained_at": "2026-11-20T03:27:58.002100+00:00"
+    "trained_at": "2026-11-20T03:29:58.045503+00:00"
    }
   },
   "source": {
@@ -2443,7 +2443,7 @@
   "quote_matches": 20
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-20T06:27:58.002100+03:00",
+  "last_poll": "2026-11-20T06:29:58.045503+03:00",
   "cursor": "154",
   "posts": [
    {

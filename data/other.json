@@ -7907,25 +7907,25 @@
   "kickoff": "2026-11-20T04:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Thu, November 19th at 8:00 PM EST",
   "clock": "0.0",
   "period": 0,
   "home": {
+   "color": "00471b",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/mil.png",
    "id": "15",
    "name": "Milwaukee Bucks",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/mil.png",
-   "color": "00471b",
    "score": "0",
    "record": "1-14",
    "periods": [],
    "ru": "Милуоки Бакс"
   },
   "away": {
+   "color": "e03a3e",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/por.png",
    "id": "22",
    "name": "Portland Trail Blazers",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/por.png",
-   "color": "e03a3e",
    "score": "0",
    "record": "9-5",
    "periods": [],
@@ -8008,7 +8008,9 @@
   "btn": 4,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null
  },
  "NBA|401910021": {
   "id": "401910021",
@@ -8130,25 +8132,25 @@
   "kickoff": "2026-11-20T04:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Thu, November 19th at 8:00 PM EST",
   "clock": "0.0",
   "period": 0,
   "home": {
+   "color": "000000",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/sa.png",
    "id": "24",
    "name": "San Antonio Spurs",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/sa.png",
-   "color": "000000",
    "score": "0",
    "record": "12-3",
    "periods": [],
    "ru": "Сан-Антонио Сперс"
   },
   "away": {
+   "color": "12173f",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/lac.png",
    "id": "12",
    "name": "LA Clippers",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/lac.png",
-   "color": "12173f",
    "score": "0",
    "record": "4-9",
    "periods": [],
@@ -8231,7 +8233,9 @@
   "btn": 4,
   "close": {
    "BB_O224.5": 0.5
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null
  },
  "NHL|401892751": {
   "id": "401892751",
