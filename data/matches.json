@@ -5059,7 +5059,7 @@
   "kickoff": "2026-11-20T01:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Scheduled",
   "home": {
    "id": "3457",
@@ -5202,7 +5202,10 @@
   "btn": 4,
   "close": {
    "BTTS_Y": 0.561
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null,
+  "value_hit": null
  },
  "401841309": {
   "id": "401841309",
