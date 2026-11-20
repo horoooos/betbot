@@ -1568,7 +1568,7 @@
  "value_day": "2026-11-19",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-19",
- "site_stamp": "1190|7386|2026-11-20 03|4|bf28aca47d9bc01f",
+ "site_stamp": "1191|7388|2026-11-20 03|4|6bd7f7436c956e6d",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1720,7 +1720,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 7386,
+ "dz_last": 7388,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2375,9 +2375,9 @@
   "model": {
    "weight": 0.0,
    "status": "collecting",
-   "settled_matches": 34,
+   "settled_matches": 35,
    "required_matches": 100,
-   "trained_at": "2026-11-19T21:28:16.405630+00:00"
+   "trained_at": "2026-11-20T00:29:57.269984+00:00"
   },
   "sport_models": {
    "hockey": {
@@ -2439,7 +2439,7 @@
   "quote_matches": 20
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-20T03:27:57.546721+03:00",
+  "last_poll": "2026-11-20T03:29:57.269984+03:00",
   "cursor": "154",
   "posts": [
    {
@@ -2959,14 +2959,5 @@
   "pid": 6655,
   "started_at": 1794992742.839963
  },
- "vk_story_retry_at": 1794996342.839963,
- "mod_poll": {
-  "key": "BRA|401841308",
-  "id": "401841308",
-  "poll": 7272,
-  "post": 7271,
-  "home": "Васко да Гама",
-  "away": "Интернасьонал",
-  "kickoff": "2026-11-20T01:30:00+03:00"
- }
+ "vk_story_retry_at": 1794996342.839963
 }
