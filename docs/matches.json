@@ -749,12 +749,78 @@ null
 "div": "DOTA",
 "state": "pre",
 "bo": 3,
-"prediction": "",
+"prediction": "predictions/2026-11-20-gamerlegion-xtreme-gaming-1816453.html",
 "hs": 0,
 "as": 0,
-"tip": "",
+"tip": "Победа: GamerLegion · ≈1.53",
 "top": false,
-"bot": null,
+"bot": {
+"main": {
+"label": "Победа: GamerLegion",
+"p": 0.608,
+"odds": 1.53,
+"est": true
+},
+"bold": null,
+"markets": [
+[
+"Победа: GamerLegion",
+0.608,
+null
+],
+[
+"Победа: Xtreme Gaming",
+0.392,
+null
+],
+[
+"Больше 2 карт",
+0.489,
+null
+],
+[
+"Всухую (2:0 или 0:2)",
+0.511,
+null
+],
+[
+"Счёт по картам 2:0",
+0.328,
+null
+],
+[
+"Счёт по картам 0:2",
+0.183,
+null
+],
+[
+"Счёт по картам 2:1",
+0.28,
+null
+],
+[
+"Счёт по картам 1:2",
+0.209,
+null
+],
+[
+"GamerLegion возьмёт хотя бы карту",
+0.817,
+null
+],
+[
+"Xtreme Gaming возьмёт хотя бы карту",
+0.672,
+null
+]
+],
+"bar": [
+0.6080879372823244,
+0,
+0.39191206271767565
+],
+"center": "BO3 · Эло 1574 : 1498"
+},
 "lt": null
 },
 {
@@ -784,12 +850,78 @@ null
 "div": "DOTA",
 "state": "pre",
 "bo": 3,
-"prediction": "",
+"prediction": "predictions/2026-11-20-natus-vincere-og-1816443.html",
 "hs": 0,
 "as": 0,
-"tip": "",
+"tip": "Natus Vincere возьмёт хотя бы карту · ≈1.52",
 "top": false,
-"bot": null,
+"bot": {
+"main": {
+"label": "Natus Vincere возьмёт хотя бы карту",
+"p": 0.613,
+"odds": 1.52,
+"est": true
+},
+"bold": null,
+"markets": [
+[
+"Победа: Natus Vincere",
+0.321,
+null
+],
+[
+"Победа: OG",
+0.679,
+null
+],
+[
+"Больше 2 карт",
+0.47,
+null
+],
+[
+"Всухую (2:0 или 0:2)",
+0.53,
+null
+],
+[
+"Счёт по картам 2:0",
+0.143,
+null
+],
+[
+"Счёт по картам 0:2",
+0.387,
+null
+],
+[
+"Счёт по картам 2:1",
+0.178,
+null
+],
+[
+"Счёт по картам 1:2",
+0.292,
+null
+],
+[
+"Natus Vincere возьмёт хотя бы карту",
+0.613,
+null
+],
+[
+"OG возьмёт хотя бы карту",
+0.857,
+null
+]
+],
+"bar": [
+0.32090861567415,
+0,
+0.6790913843258499
+],
+"center": "BO3 · Эло 1498 : 1628"
+},
 "lt": null
 },
 {

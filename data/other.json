@@ -8904,5 +8904,269 @@
   "close": {
    "_": null
   }
+ },
+ "DOTA|1816453": {
+  "id": "1816453",
+  "div": "DOTA",
+  "sport": "esports",
+  "streams": [
+   {
+    "provider": "twitch",
+    "channel": "betboom_dota_ru",
+    "url": "https://www.twitch.tv/betboom_dota_ru",
+    "language": "ru",
+    "source": "PandaScore",
+    "official": false,
+    "status": "listed",
+    "access": "unknown"
+   },
+   {
+    "provider": "twitch",
+    "channel": "blastdotab",
+    "url": "https://www.twitch.tv/blastdotab",
+    "language": "en",
+    "source": "PandaScore",
+    "official": false,
+    "status": "listed",
+    "access": "unknown"
+   },
+   {
+    "provider": "twitch",
+    "channel": "betboom_dota_ru2",
+    "url": "https://www.twitch.tv/betboom_dota_ru2",
+    "language": "ru",
+    "source": "PandaScore",
+    "official": false,
+    "status": "listed",
+    "access": "unknown"
+   },
+   {
+    "provider": "twitch",
+    "channel": "blastdota",
+    "url": "https://www.twitch.tv/blastdota",
+    "language": "en",
+    "source": "PandaScore",
+    "official": true,
+    "status": "listed",
+    "access": "unknown"
+   }
+  ],
+  "tournament": "BLAST Slam · Season 9 2026",
+  "bo": 3,
+  "kickoff": "2026-11-20T17:00:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "tier": "a",
+  "status": "reviewed",
+  "home": {
+   "id": "137588",
+   "name": "GamerLegion",
+   "ru": "GamerLegion",
+   "logo": "https://cdn-api.pandascore.co/images/team/image/137588/591px_gamer_legion_2026_allmode.png",
+   "color": "3b4a7a",
+   "score": 0,
+   "winner": false
+  },
+  "away": {
+   "id": "128329",
+   "name": "Xtreme Gaming",
+   "ru": "Xtreme Gaming",
+   "logo": "https://cdn-api.pandascore.co/images/team/image/128329/t72899.png",
+   "color": "3b4a7a",
+   "score": 0,
+   "winner": false
+  },
+  "odds": {},
+  "probs": {
+   "ES_W1": 0.6080879372823244,
+   "ES_W2": 0.39191206271767565,
+   "ES_FULL": 0.4894677232904062,
+   "ES_DRY": 0.5105322767095938,
+   "ES_S2:0": 0.3278343018619225,
+   "ES_S0:2": 0.18269797484767133,
+   "ES_S2:1": 0.28025363542040177,
+   "ES_S1:2": 0.2092140878700044,
+   "ES_MAP1": 0.8173020251523286,
+   "ES_MAP2": 0.6721656981380775
+  },
+  "labels": {
+   "ES_W1": "Победа: GamerLegion",
+   "ES_W2": "Победа: Xtreme Gaming",
+   "ES_FULL": "Больше 2 карт",
+   "ES_DRY": "Всухую (2:0 или 0:2)",
+   "ES_S2:0": "Счёт по картам 2:0",
+   "ES_S0:2": "Счёт по картам 0:2",
+   "ES_S2:1": "Счёт по картам 2:1",
+   "ES_S1:2": "Счёт по картам 1:2",
+   "ES_MAP1": "GamerLegion возьмёт хотя бы карту",
+   "ES_MAP2": "Xtreme Gaming возьмёт хотя бы карту"
+  },
+  "real": {},
+  "center": "BO3 · Эло 1574 : 1498",
+  "bar": [
+   0.6080879372823244,
+   0,
+   0.39191206271767565
+  ],
+  "model": {
+   "elo": [
+    1573.8751686666196,
+    1497.5640656877258
+   ],
+   "src": "Эло"
+  },
+  "stavka_signal": {
+   "status": "collecting",
+   "weight": 0.0,
+   "authors": 17,
+   "group": "esports:DOTA",
+   "snapshot": "DOTA|1816453",
+   "source": "https://stavka.tv"
+  },
+  "main": {
+   "key": "ES_W1",
+   "label": "Победа: GamerLegion",
+   "p": 0.6081,
+   "odds": 1.53,
+   "est": true,
+   "stake": 1.0
+  },
+  "bold": {},
+  "open": {},
+  "top": false,
+  "msg_id": 7517,
+  "btn": 4
+ },
+ "DOTA|1816443": {
+  "id": "1816443",
+  "div": "DOTA",
+  "sport": "esports",
+  "streams": [
+   {
+    "provider": "twitch",
+    "channel": "betboom_dota_ru",
+    "url": "https://www.twitch.tv/betboom_dota_ru",
+    "language": "ru",
+    "source": "PandaScore",
+    "official": false,
+    "status": "listed",
+    "access": "unknown"
+   },
+   {
+    "provider": "twitch",
+    "channel": "blastdotab",
+    "url": "https://www.twitch.tv/blastdotab",
+    "language": "en",
+    "source": "PandaScore",
+    "official": false,
+    "status": "listed",
+    "access": "unknown"
+   },
+   {
+    "provider": "twitch",
+    "channel": "betboom_dota_ru2",
+    "url": "https://www.twitch.tv/betboom_dota_ru2",
+    "language": "ru",
+    "source": "PandaScore",
+    "official": false,
+    "status": "listed",
+    "access": "unknown"
+   },
+   {
+    "provider": "twitch",
+    "channel": "blastdota",
+    "url": "https://www.twitch.tv/blastdota",
+    "language": "en",
+    "source": "PandaScore",
+    "official": true,
+    "status": "listed",
+    "access": "unknown"
+   }
+  ],
+  "tournament": "BLAST Slam · Season 9 2026",
+  "bo": 3,
+  "kickoff": "2026-11-20T17:00:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "tier": "a",
+  "status": "reviewed",
+  "home": {
+   "id": "1699",
+   "name": "Natus Vincere",
+   "ru": "Natus Vincere",
+   "logo": "https://cdn-api.pandascore.co/images/team/image/1699/Na_vi_logo.png",
+   "color": "3b4a7a",
+   "score": 0,
+   "winner": false
+  },
+  "away": {
+   "id": "1654",
+   "name": "OG",
+   "ru": "OG",
+   "logo": "https://cdn-api.pandascore.co/images/team/image/1654/438px_og_2026_allmode.png",
+   "color": "3b4a7a",
+   "score": 0,
+   "winner": false
+  },
+  "odds": {},
+  "probs": {
+   "ES_W1": 0.32090861567415,
+   "ES_W2": 0.6790913843258499,
+   "ES_FULL": 0.47032770761507725,
+   "ES_DRY": 0.5296722923849227,
+   "ES_S2:0": 0.14303242624737353,
+   "ES_S0:2": 0.38663986613754925,
+   "ES_S2:1": 0.17787618942677658,
+   "ES_S1:2": 0.2924515181883006,
+   "ES_MAP1": 0.6133601338624508,
+   "ES_MAP2": 0.8569675737526264
+  },
+  "labels": {
+   "ES_W1": "Победа: Natus Vincere",
+   "ES_W2": "Победа: OG",
+   "ES_FULL": "Больше 2 карт",
+   "ES_DRY": "Всухую (2:0 или 0:2)",
+   "ES_S2:0": "Счёт по картам 2:0",
+   "ES_S0:2": "Счёт по картам 0:2",
+   "ES_S2:1": "Счёт по картам 2:1",
+   "ES_S1:2": "Счёт по картам 1:2",
+   "ES_MAP1": "Natus Vincere возьмёт хотя бы карту",
+   "ES_MAP2": "OG возьмёт хотя бы карту"
+  },
+  "real": {},
+  "center": "BO3 · Эло 1498 : 1628",
+  "bar": [
+   0.32090861567415,
+   0,
+   0.6790913843258499
+  ],
+  "model": {
+   "elo": [
+    1497.6528890408883,
+    1627.8716264406412
+   ],
+   "src": "Эло"
+  },
+  "stavka_signal": {
+   "status": "collecting",
+   "weight": 0.0,
+   "authors": 9,
+   "group": "esports:DOTA",
+   "snapshot": "DOTA|1816443",
+   "source": "https://stavka.tv"
+  },
+  "main": {
+   "key": "ES_MAP1",
+   "label": "Natus Vincere возьмёт хотя бы карту",
+   "p": 0.6134,
+   "odds": 1.52,
+   "est": true,
+   "stake": 1.0
+  },
+  "bold": {},
+  "open": {},
+  "top": false,
+  "msg_id": 7519,
+  "btn": 4
  }
 }
