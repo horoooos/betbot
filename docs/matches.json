@@ -1,425 +1,5 @@
 [
 {
-"sport": "football",
-"id": "401877534",
-"league": "Япония · J-League",
-"kickoff": "2026-11-20T13:00:00+03:00",
-"home": "Касима Антлерс",
-"away": "Симидзу Эс-Палс",
-"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/7115.png",
-"al": "https://a.espncdn.com/i/teamlogos/soccer/500/7104.png",
-"hid": "7115",
-"aid": "7104",
-"bb": "https://betboom.ru/search?query=%D0%90%D0%BD%D1%82%D0%BB%D0%B5%D1%80%D1%81&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
-"path": "soccer/jpn.1",
-"url": "live.html?s=football&p=soccer%2Fjpn.1&e=401877534&h=%D0%9A%D0%B0%D1%81%D0%B8%D0%BC%D0%B0+%D0%90%D0%BD%D1%82%D0%BB%D0%B5%D1%80%D1%81&a=%D0%A1%D0%B8%D0%BC%D0%B8%D0%B4%D0%B7%D1%83+%D0%AD%D1%81-%D0%9F%D0%B0%D0%BB%D1%81",
-"participants": [
-[
-"Касима Антлерс",
-"Kashima Antlers"
-],
-[
-"Симидзу Эс-Палс",
-"Shimizu S-Pulse"
-]
-],
-"div": "JPN",
-"state": "post",
-"bo": null,
-"prediction": "predictions/2026-11-20-kasima-antlers-simidzu-es-pals-401877534.html",
-"hs": "1",
-"as": "1",
-"tip": "ТМ 2.5 · ≈1.69",
-"top": false,
-"bot": {
-"main": {
-"label": "ТМ 2.5",
-"p": 0.549,
-"odds": 1.69,
-"est": true
-},
-"bold": null,
-"markets": [
-[
-"П1",
-0.669,
-1.488
-],
-[
-"Ничья",
-0.225,
-4.3
-],
-[
-"П2",
-0.105,
-6.5
-],
-[
-"1X",
-0.895,
-null
-],
-[
-"X2",
-0.331,
-null
-],
-[
-"ТБ 1.5",
-0.716,
-null
-],
-[
-"ТБ 2.5",
-0.451,
-1.952
-],
-[
-"ТМ 2.5",
-0.549,
-1.769
-],
-[
-"ТБ 3.5",
-0.238,
-null
-],
-[
-"Обе забьют — да",
-0.393,
-null
-],
-[
-"Обе забьют — нет",
-0.607,
-null
-],
-[
-"ИТ1 больше 1.5",
-0.558,
-null
-],
-[
-"ИТ2 больше 1.5",
-0.125,
-null
-],
-[
-"Ф1 (−1.5)",
-0.412,
-null
-],
-[
-"Ф2 (+1.5)",
-0.588,
-null
-]
-],
-"bar": [
-0.6694243800812919,
-0.22517260942209377,
-0.10540301049661406
-],
-"center": "Ожидаемые голы (xG) 1.9 : 0.6",
-"scores": [
-[
-"1:0",
-0.149
-],
-[
-"2:0",
-0.147
-],
-[
-"1:1",
-0.103
-]
-]
-},
-"lt": null
-},
-{
-"sport": "football",
-"id": "401877553",
-"league": "Япония · J-League",
-"kickoff": "2026-11-20T13:00:00+03:00",
-"home": "Касива Рейсол",
-"away": "ДЖЕФ Юнайтед Итихара Тиба",
-"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/7476.png",
-"al": "https://a.espncdn.com/i/teamlogos/soccer/500/7111.png",
-"hid": "7476",
-"aid": "7111",
-"bb": "https://betboom.ru/search?query=%D0%9A%D0%B0%D1%81%D0%B8%D0%B2%D0%B0&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
-"path": "soccer/jpn.1",
-"url": "live.html?s=football&p=soccer%2Fjpn.1&e=401877553&h=%D0%9A%D0%B0%D1%81%D0%B8%D0%B2%D0%B0+%D0%A0%D0%B5%D0%B9%D1%81%D0%BE%D0%BB&a=%D0%94%D0%96%D0%95%D0%A4+%D0%AE%D0%BD%D0%B0%D0%B9%D1%82%D0%B5%D0%B4+%D0%98%D1%82%D0%B8%D1%85%D0%B0%D1%80%D0%B0+%D0%A2%D0%B8%D0%B1%D0%B0",
-"participants": [
-[
-"Касива Рейсол",
-"Kashiwa Reysol"
-],
-[
-"ДЖЕФ Юнайтед Итихара Тиба",
-"JEF United Ichihara-Chiba"
-]
-],
-"div": "JPN",
-"state": "post",
-"bo": null,
-"prediction": "predictions/2026-11-20-kasiva-reysol-dzhef-yunayted-itihara-tiba-401877553.html",
-"hs": "0",
-"as": "1",
-"tip": "П1 · 1.51",
-"top": false,
-"bot": {
-"main": {
-"label": "П1",
-"p": 0.634,
-"odds": 1.51,
-"est": false
-},
-"bold": null,
-"markets": [
-[
-"П1",
-0.634,
-1.5
-],
-[
-"Ничья",
-0.213,
-4.5
-],
-[
-"П2",
-0.153,
-6.0
-],
-[
-"1X",
-0.847,
-null
-],
-[
-"X2",
-0.366,
-null
-],
-[
-"ТБ 1.5",
-0.824,
-null
-],
-[
-"ТБ 2.5",
-0.601,
-1.69
-],
-[
-"ТМ 2.5",
-0.399,
-2.1
-],
-[
-"ТБ 3.5",
-0.377,
-null
-],
-[
-"Обе забьют — да",
-0.555,
-null
-],
-[
-"Обе забьют — нет",
-0.445,
-null
-],
-[
-"ИТ1 больше 1.5",
-0.63,
-null
-],
-[
-"ИТ2 больше 1.5",
-0.253,
-null
-],
-[
-"Ф1 (−1.5)",
-0.406,
-null
-],
-[
-"Ф2 (+1.5)",
-0.594,
-null
-]
-],
-"bar": [
-0.6340549717379709,
-0.21276004620232225,
-0.15318498205970693
-],
-"center": "Ожидаемые голы (xG) 2.1 : 1.0",
-"scores": [
-[
-"2:0",
-0.102
-],
-[
-"1:1",
-0.1
-],
-[
-"2:1",
-0.099
-]
-]
-},
-"lt": null
-},
-{
-"sport": "football",
-"id": "401877548",
-"league": "Япония · J-League",
-"kickoff": "2026-11-20T13:00:00+03:00",
-"home": "Виссел Кобе",
-"away": "Мито Холлихок",
-"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/7477.png",
-"al": "https://a.espncdn.com/i/teamlogos/soccer/500/131701.png",
-"hid": "7477",
-"aid": "131701",
-"bb": "https://betboom.ru/search?query=%D0%92%D0%B8%D1%81%D1%81%D0%B5%D0%BB&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
-"path": "soccer/jpn.1",
-"url": "live.html?s=football&p=soccer%2Fjpn.1&e=401877548&h=%D0%92%D0%B8%D1%81%D1%81%D0%B5%D0%BB+%D0%9A%D0%BE%D0%B1%D0%B5&a=%D0%9C%D0%B8%D1%82%D0%BE+%D0%A5%D0%BE%D0%BB%D0%BB%D0%B8%D1%85%D0%BE%D0%BA",
-"participants": [
-[
-"Виссел Кобе",
-"Vissel Kobe"
-],
-[
-"Мито Холлихок",
-"Mito Hollyhock"
-]
-],
-"div": "JPN",
-"state": "post",
-"bo": null,
-"prediction": "predictions/2026-11-20-vissel-kobe-mito-hollihok-401877548.html",
-"hs": "1",
-"as": "2",
-"tip": "П1 и ТБ 1.5 · ≈1.68",
-"top": false,
-"bot": {
-"main": {
-"label": "П1 и ТБ 1.5",
-"p": 0.555,
-"odds": 1.68,
-"est": true
-},
-"bold": null,
-"markets": [
-[
-"П1",
-0.658,
-1.444
-],
-[
-"Ничья",
-0.211,
-4.5
-],
-[
-"П2",
-0.131,
-7.0
-],
-[
-"1X",
-0.869,
-null
-],
-[
-"X2",
-0.342,
-null
-],
-[
-"ТБ 1.5",
-0.799,
-null
-],
-[
-"ТБ 2.5",
-0.563,
-1.741
-],
-[
-"ТМ 2.5",
-0.437,
-2.0
-],
-[
-"ТБ 3.5",
-0.339,
-null
-],
-[
-"Обе забьют — да",
-0.505,
-null
-],
-[
-"Обе забьют — нет",
-0.495,
-null
-],
-[
-"ИТ1 больше 1.5",
-0.621,
-null
-],
-[
-"ИТ2 больше 1.5",
-0.205,
-null
-],
-[
-"Ф1 (−1.5)",
-0.424,
-null
-],
-[
-"Ф2 (+1.5)",
-0.576,
-null
-]
-],
-"bar": [
-0.6584943193234997,
-0.21071478764937432,
-0.13079089302712674
-],
-"center": "Ожидаемые голы (xG) 2.1 : 0.8",
-"scores": [
-[
-"2:0",
-0.117
-],
-[
-"1:0",
-0.104
-],
-[
-"1:1",
-0.1
-]
-]
-},
-"lt": null
-},
-{
 "sport": "esports",
 "id": "1816452",
 "league": "Киберспорт · Dota 2",
@@ -7385,6 +6965,216 @@ null
 ]
 ],
 "div": "F1",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "football",
+"id": "401933755",
+"league": "Аргентина · Примера",
+"kickoff": "2026-11-21T23:00:00+03:00",
+"home": "Архентинос Хуниорс",
+"away": "Индепендьенте",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/3.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/11.png",
+"hid": "3",
+"aid": "11",
+"bb": "https://betboom.ru/search?query=%D0%90%D1%80%D1%85%D0%B5%D0%BD%D1%82%D0%B8%D0%BD%D0%BE%D1%81&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/arg.1",
+"url": "live.html?s=football&p=soccer%2Farg.1&e=401933755&h=%D0%90%D1%80%D1%85%D0%B5%D0%BD%D1%82%D0%B8%D0%BD%D0%BE%D1%81+%D0%A5%D1%83%D0%BD%D0%B8%D0%BE%D1%80%D1%81&a=%D0%98%D0%BD%D0%B4%D0%B5%D0%BF%D0%B5%D0%BD%D0%B4%D1%8C%D0%B5%D0%BD%D1%82%D0%B5",
+"participants": [
+[
+"Архентинос Хуниорс",
+"Argentinos Juniors"
+],
+[
+"Индепендьенте",
+"Independiente"
+]
+],
+"div": "ARG",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "football",
+"id": "401882798",
+"league": "Испания · Ла Лига",
+"kickoff": "2026-11-21T23:00:00+03:00",
+"home": "Реал Мадрид",
+"away": "Сельта",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/86.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/85.png",
+"hid": "86",
+"aid": "85",
+"bb": "https://betboom.ru/search?query=%D0%9C%D0%B0%D0%B4%D1%80%D0%B8%D0%B4&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/esp.1",
+"url": "live.html?s=football&p=soccer%2Fesp.1&e=401882798&h=%D0%A0%D0%B5%D0%B0%D0%BB+%D0%9C%D0%B0%D0%B4%D1%80%D0%B8%D0%B4&a=%D0%A1%D0%B5%D0%BB%D1%8C%D1%82%D0%B0",
+"participants": [
+[
+"Реал Мадрид",
+"Real Madrid"
+],
+[
+"Сельта",
+"Celta Vigo"
+]
+],
+"div": "SP1",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "football",
+"id": "401883107",
+"league": "Испания · Сегунда",
+"kickoff": "2026-11-21T23:00:00+03:00",
+"home": "Tenerife",
+"away": "Мальорка",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/245.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/84.png",
+"hid": "245",
+"aid": "84",
+"bb": "https://betboom.ru/search?query=%D0%A2%D0%B5%D0%BD%D0%B5%D1%80%D0%B8%D1%84%D0%B5&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/esp.2",
+"url": "live.html?s=football&p=soccer%2Fesp.2&e=401883107&h=Tenerife&a=%D0%9C%D0%B0%D0%BB%D1%8C%D0%BE%D1%80%D0%BA%D0%B0",
+"participants": [
+[
+"Tenerife",
+"Tenerife"
+],
+[
+"Мальорка",
+"Mallorca"
+]
+],
+"div": "SP2",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "football",
+"id": "401875546",
+"league": "Нидерланды · Эредивизи",
+"kickoff": "2026-11-21T23:00:00+03:00",
+"home": "Гронинген",
+"away": "Херенвен",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/145.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/146.png",
+"hid": "145",
+"aid": "146",
+"bb": "https://betboom.ru/search?query=%D0%93%D1%80%D0%BE%D0%BD%D0%B8%D0%BD%D0%B3%D0%B5%D0%BD&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/ned.1",
+"url": "live.html?s=football&p=soccer%2Fned.1&e=401875546&h=%D0%93%D1%80%D0%BE%D0%BD%D0%B8%D0%BD%D0%B3%D0%B5%D0%BD&a=%D0%A5%D0%B5%D1%80%D0%B5%D0%BD%D0%B2%D0%B5%D0%BD",
+"participants": [
+[
+"Гронинген",
+"FC Groningen"
+],
+[
+"Херенвен",
+"Heerenveen"
+]
+],
+"div": "N1",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "football",
+"id": "401875539",
+"league": "Нидерланды · Эредивизи",
+"kickoff": "2026-11-21T23:00:00+03:00",
+"home": "Telstar",
+"away": "Зволле",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/3735.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/2565.png",
+"hid": "3735",
+"aid": "2565",
+"bb": "https://betboom.ru/search?query=%D0%A2%D0%B5%D0%BB%D1%81%D1%82%D0%B0%D1%80&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/ned.1",
+"url": "live.html?s=football&p=soccer%2Fned.1&e=401875539&h=Telstar&a=%D0%97%D0%B2%D0%BE%D0%BB%D0%BB%D0%B5",
+"participants": [
+[
+"Telstar",
+"Telstar"
+],
+[
+"Зволле",
+"PEC Zwolle"
+]
+],
+"div": "N1",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "football",
+"id": "401878333",
+"league": "Шотландия · Премьершип",
+"kickoff": "2026-11-21T23:00:00+03:00",
+"home": "Мотеруэлл",
+"away": "Рейнджерс",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/266.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/257.png",
+"hid": "266",
+"aid": "257",
+"bb": "https://betboom.ru/search?query=%D0%9C%D0%BE%D1%82%D0%B5%D1%80%D1%83%D1%8D%D0%BB%D0%BB&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/sco.1",
+"url": "live.html?s=football&p=soccer%2Fsco.1&e=401878333&h=%D0%9C%D0%BE%D1%82%D0%B5%D1%80%D1%83%D1%8D%D0%BB%D0%BB&a=%D0%A0%D0%B5%D0%B9%D0%BD%D0%B4%D0%B6%D0%B5%D1%80%D1%81",
+"participants": [
+[
+"Мотеруэлл",
+"Motherwell"
+],
+[
+"Рейнджерс",
+"Rangers"
+]
+],
+"div": "SC0",
 "state": "pre",
 "bo": null,
 "prediction": "",
