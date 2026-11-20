@@ -1563,7 +1563,7 @@
  "value_day": "2026-11-20",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-20",
- "site_stamp": "1225|7576|2026-11-20 20|4|80c781c991be1877",
+ "site_stamp": "1225|7577|2026-11-20 20|4|80c781c991be1877",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1716,7 +1716,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 7576,
+ "dz_last": 7577,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2507,43 +2507,9 @@
   "quote_matches": 20
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-20T20:26:22.794646+03:00",
-  "cursor": "181",
+  "last_poll": "2026-11-20T20:28:22.614887+03:00",
+  "cursor": "183",
   "posts": [
-   {
-    "post_id": 596,
-    "url": "https://vk.com/wall-228963529_596",
-    "title": "Геркус одобрил назначение Овчинникова старшим тренером «Локомотива»",
-    "text": "вљЎпёЏТренерский штурм в «Локомотиве»: Овчинников возглавил штаб.",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": false,
-     "details_present": false,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-19T23:13:07.207731+03:00"
-   },
-   {
-    "post_id": 597,
-    "url": "https://vk.com/wall-228963529_597",
-    "title": "Боярский назвал единственного фаворита РПЛ – «Зенит»",
-    "text": "вљЎпёЏ«Зенит» – единственный фаворит?",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": false,
-     "details_present": false,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-19T23:13:07.207731+03:00"
-   },
    {
     "post_id": 598,
     "url": "https://vk.com/wall-228963529_598",
@@ -3019,6 +2985,40 @@
     },
     "status": "needs_review",
     "observed_at": "2026-11-20T19:26:22.194760+03:00"
+   },
+   {
+    "post_id": 631,
+    "url": "https://vk.com/wall-228963529_631",
+    "title": "Мартинс вернулся в общую группу, Зорин готовится к возвращению",
+    "text": "рџ± Мартинс уже в общей группе, а Зорин снова качается в зале – готовимся к матчу с «Динамо»!",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": false,
+     "details_present": false,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-20T20:28:22.614887+03:00"
+   },
+   {
+    "post_id": 632,
+    "url": "https://vk.com/wall-228963529_632",
+    "title": "Team Liquid против DO KONCA: кто возьмёт победу в BLAST Slam IX?",
+    "text": "рџ“° На старте групповой стадии BLAST Slam IX встречаются два тяжёлых соперника – «Team Liquid» и «DO KONCA».",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": false,
+     "details_present": false,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-20T20:28:22.614887+03:00"
    }
   ],
   "status": "observing"
