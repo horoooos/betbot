@@ -26,10 +26,11 @@ try{
     if(await page.locator('#playBroadcast').isVisible())await page.locator('#playBroadcast').click();
     await page.waitForTimeout(8000);
     const state=await page.locator('#broadcastPlayer').evaluate(n=>({state:n.dataset.playerState,time:n.dataset.playerTime,rate:n.dataset.playbackRate,status:n.querySelector('#videoStatus').textContent,frame:n.querySelector('iframe')?.getBoundingClientRect().toJSON(),referrer:n.querySelector('iframe')?.referrerPolicy}));
-    const media=[];for(const f of page.frames()){try{media.push(...await f.locator('video').evaluateAll(vs=>vs.map(v=>({time:v.currentTime,ready:v.readyState,paused:v.paused,width:v.videoWidth,height:v.videoHeight}))));}catch{}}
+    const media=[];for(const f of page.frames().filter(f=>f===page.mainFrame()||/youtube|twitch|rutube/.test(f.url()))){try{media.push(...await f.locator('video').evaluateAll(vs=>vs.map(v=>({time:v.currentTime,ready:v.readyState,paused:v.paused,width:v.videoWidth,height:v.videoHeight}))));}catch{}}
     report.players.push({provider:source.name,...state,media});assert(await page.locator('#externalBroadcast').isVisible());if(state.frame)assert(state.frame.height>=200&&state.frame.width>=200);
     await page.screenshot({path:new URL('player-'+source.name+'.png',out).pathname,fullPage:false});await page.locator('#closeBroadcast').click();assert.equal(await page.locator('#broadcastPlayer iframe').count(),0);
   }
+  assert(report.players.some(p=>p.media.some(v=>!v.paused&&v.ready>=2&&v.width>0&&v.time>1)),'No provider produced actual decoded video playback');
   const fixture=JSON.parse(await fs.readFile(new URL('tests/fixtures/dota-motion.json',root),'utf8')),frames=fixture.frames;let count=0;const start=Date.now()/1000;
   await page.route('**/esportsLive/**',async route=>{const index=route.request().url().includes('/index.json'),frame=structuredClone(frames[index?count%frames.length:(count++)%frames.length]);frame.at=start+Math.max(0,count-1)*10;frame.state=5;await route.fulfill({json:index?{at:frame.at,games:{[frame.match_id]:frame}}:frame});});
   await page.goto(base+'/dota.html?d=DOTA&game='+frames[0].match_id+'&debug=1',{waitUntil:'domcontentloaded'});
