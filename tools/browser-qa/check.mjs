@@ -3,10 +3,10 @@ import fs from 'node:fs/promises';
 import assert from 'node:assert/strict';
 const root=new URL('../../',import.meta.url),out=new URL('work/browser-qa/',root),base='http://localhost:8765';
 await fs.mkdir(out,{recursive:true});const report={checks:[],players:[],pageErrors:[]};
-const browser=await chromium.launch({headless:true,args:['--enable-unsafe-swiftshader','--use-angle=swiftshader']});
+const browser=await chromium.launch({channel:'chrome',headless:true,args:['--enable-unsafe-swiftshader','--use-angle=swiftshader']});
 const context=await browser.newContext({viewport:{width:1280,height:900}});
 await context.route('**/fb.js?*',r=>r.fulfill({contentType:'text/javascript',body:'export function track(){};export function navUser(){};export function watchPresence(){};'}));
-const page=await context.newPage();page.on('pageerror',e=>report.pageErrors.push(e.message));
+const page=await context.newPage();report.codecs=await page.evaluate(()=>{const v=document.createElement('video');return{h264:v.canPlayType('video/mp4; codecs="avc1.42E01E"'),webm:v.canPlayType('video/webm; codecs="vp8,vorbis"')};});page.on('pageerror',e=>report.pageErrors.push(e.message));
 try{
   await page.goto(base+'/broadcasts.html',{waitUntil:'domcontentloaded'});
   await page.waitForFunction(()=>document.querySelectorAll('#broadcastGrid .broadcast-card').length>0,undefined,{timeout:30000});
@@ -30,7 +30,7 @@ try{
     report.players.push({provider:source.name,...state,media});assert(await page.locator('#externalBroadcast').isVisible());if(state.frame)assert(state.frame.height>=200&&state.frame.width>=200);
     await page.screenshot({path:new URL('player-'+source.name+'.png',out).pathname,fullPage:false});await page.locator('#closeBroadcast').click();assert.equal(await page.locator('#broadcastPlayer iframe').count(),0);
   }
-  assert(report.players.some(p=>p.media.some(v=>!v.paused&&v.ready>=2&&v.width>0&&v.time>1)),'No provider produced actual decoded video playback');
+  const decoded=report.players.some(p=>p.media.some(v=>!v.paused&&v.ready>=2&&v.width>0&&v.time>1));report.checks.push({name:'decodedPlayback',passed:decoded});
   const fixture=JSON.parse(await fs.readFile(new URL('tests/fixtures/dota-motion.json',root),'utf8')),frames=fixture.frames;let count=0;const start=Date.now()/1000;
   await page.route('**/esportsLive/**',async route=>{const index=route.request().url().includes('/index.json'),frame=structuredClone(frames[index?count%frames.length:(count++)%frames.length]);frame.at=start+Math.max(0,count-1)*10;frame.state=5;await route.fulfill({json:index?{at:frame.at,games:{[frame.match_id]:frame}}:frame});});
   await page.goto(base+'/dota.html?d=DOTA&game='+frames[0].match_id+'&debug=1',{waitUntil:'domcontentloaded'});
@@ -39,6 +39,7 @@ try{
   let maxStep=0,total=0;for(let i=1;i<positions.length;i++){for(let j=0;j<positions[i].units.length;j++){const a=positions[i-1].units[j],b=positions[i].units[j],step=Math.hypot(b.x-a.x,b.z-a.z);maxStep=Math.max(maxStep,step);total+=step;assert(Number.isFinite(b.x)&&Number.isFinite(b.z)&&Number.isFinite(b.y));}}
   report.checks.push({name:'dota',maxStep,total,last:positions.at(-1)});assert(maxStep<8,'Unexpected instantaneous movement');assert(total>.01,'Characters never moved during the recorded motion test');
   await page.screenshot({path:new URL('dota-desktop.png',out).pathname,fullPage:false});await page.setViewportSize({width:390,height:844});await page.screenshot({path:new URL('dota-mobile.png',out).pathname,fullPage:false});
+  assert(decoded,'No provider produced actual decoded video playback');
   assert.equal(report.pageErrors.length,0,report.pageErrors.join('\n'));
 }catch(e){report.failure=e.stack;await page.screenshot({path:new URL('failure.png',out).pathname,fullPage:false}).catch(()=>{});process.exitCode=1;}
 finally{await fs.writeFile(new URL('report.json',out),JSON.stringify(report,null,2));await browser.close();console.log(JSON.stringify({failure:report.failure,checks:report.checks.map(c=>({name:c.name,cards:c.cards,maxStep:c.maxStep,total:c.total})),players:report.players.map(p=>({provider:p.provider,state:p.state,media:p.media})),pageErrors:report.pageErrors}));}

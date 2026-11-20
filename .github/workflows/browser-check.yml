@@ -19,7 +19,7 @@ jobs:
           python-version: '3.12'
       - run: npm install --ignore-scripts
         working-directory: tools/browser-qa
-      - run: npx playwright install --with-deps chromium
+      - run: npx playwright install --with-deps chrome
         working-directory: tools/browser-qa
       - name: Serve the tested checkout
         run: |
