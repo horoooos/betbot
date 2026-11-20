@@ -1558,7 +1558,7 @@
  "value_day": "2026-11-20",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-20",
- "site_stamp": "1235|7654|2026-11-20 23|4|5ce2512c7b0e932e",
+ "site_stamp": "1237|7657|2026-11-20 23|4|b4f9d744ea52ba49",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1640,7 +1640,9 @@
      "ef2f24",
      "ef2f24"
     ],
-    "label": "Победа: Нанси"
+    "label": "Победа: Нанси",
+    "win": true,
+    "score": "1:0"
    },
    {
     "sport": "football",
@@ -1715,7 +1717,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 7654,
+ "dz_last": 7657,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2527,7 +2529,7 @@
   "quote_matches": 20
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-20T23:55:32.713879+03:00",
+  "last_poll": "2026-11-20T23:57:32.937560+03:00",
   "cursor": "190",
   "posts": [
    {
