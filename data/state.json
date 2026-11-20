@@ -1554,11 +1554,11 @@
   "day": "2026-11-16",
   "done": true
  },
- "streak_posted": 7,
+ "streak_posted": 0,
  "value_day": "2026-11-20",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-20",
- "site_stamp": "1226|7616|2026-11-20 22|4|4e43f5259f4e187d",
+ "site_stamp": "1227|7617|2026-11-20 22|4|0d4bc84506f790f5",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1711,7 +1711,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 7616,
+ "dz_last": 7617,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2492,10 +2492,10 @@
    }
   },
   "source": {
-   "last_success": "2026-11-20T18:43:17.284040+00:00",
+   "last_success": "2026-11-20T19:03:17.327055+00:00",
    "parsed": 348,
-   "added": 49,
-   "discovered_matches": 34,
+   "added": 54,
+   "discovered_matches": 31,
    "pages": 17,
    "errors": [],
    "parsed_by_sport": {
@@ -2508,13 +2508,13 @@
    }
   },
   "error": null,
-  "tips": 7470,
+  "tips": 7486,
   "snapshots": 141,
-  "unmapped_markets": 11693,
+  "unmapped_markets": 11731,
   "quote_matches": 20
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-20T22:01:17.425572+03:00",
+  "last_poll": "2026-11-20T22:03:17.327055+03:00",
   "cursor": "186",
   "posts": [
    {
