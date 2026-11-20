@@ -1,207 +1,5 @@
 [
 {
-"sport": "esports",
-"id": "1816452",
-"league": "Киберспорт · Dota 2",
-"kickoff": "2026-11-20T14:00:00+03:00",
-"home": "Team Spirit",
-"away": "Team Nemesis",
-"hl": "https://cdn-api.pandascore.co/images/team/image/1669/153px_team_spirit_2022_lightmode.png",
-"al": "https://cdn-api.pandascore.co/images/team/image/136650/159px_team_nem_lightmode.png",
-"hid": "1669",
-"aid": "136650",
-"bb": "https://betboom.ru/search?query=%D0%A1%D0%BF%D0%B8%D1%80%D0%B8%D1%82&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=esports",
-"path": "",
-"url": "dota.html?e=1816452&d=DOTA",
-"participants": [
-[
-"Team Spirit",
-"Team Spirit"
-],
-[
-"Team Nemesis",
-"Team Nemesis"
-]
-],
-"div": "DOTA",
-"state": "unknown",
-"bo": 3,
-"prediction": "predictions/2026-11-20-team-spirit-team-nemesis-1816452.html",
-"hs": null,
-"as": null,
-"tip": "Всухую (2:0 или 0:2) · ≈1.60",
-"top": false,
-"bot": {
-"main": {
-"label": "Всухую (2:0 или 0:2)",
-"p": 0.582,
-"odds": 1.6,
-"est": true
-},
-"bold": null,
-"markets": [
-[
-"Победа: Team Spirit",
-0.787,
-null
-],
-[
-"Победа: Team Nemesis",
-0.213,
-null
-],
-[
-"Больше 2 карт",
-0.418,
-null
-],
-[
-"Всухую (2:0 или 0:2)",
-0.582,
-null
-],
-[
-"Счёт по картам 2:0",
-0.493,
-null
-],
-[
-"Счёт по картам 0:2",
-0.089,
-null
-],
-[
-"Счёт по картам 2:1",
-0.294,
-null
-],
-[
-"Счёт по картам 1:2",
-0.124,
-null
-],
-[
-"Team Spirit возьмёт хотя бы карту",
-0.911,
-null
-],
-[
-"Team Nemesis возьмёт хотя бы карту",
-0.507,
-null
-]
-],
-"bar": [
-0.7870067007202741,
-0,
-0.21299329927972588
-],
-"center": "BO3 · Эло 1818 : 1591"
-},
-"lt": null
-},
-{
-"sport": "esports",
-"id": "1816442",
-"league": "Киберспорт · Dota 2",
-"kickoff": "2026-11-20T14:00:00+03:00",
-"home": "Team Yandex",
-"away": "PlayTime",
-"hl": "https://cdn-api.pandascore.co/images/team/image/137073/249px_team_yandex_allmode.png",
-"al": "https://cdn-api.pandascore.co/images/team/image/137885/585px_play_time_allmode.png",
-"hid": "137073",
-"aid": "137885",
-"bb": "https://betboom.ru/search?query=%D0%AF%D0%BD%D0%B4%D0%B5%D0%BA%D1%81&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=esports",
-"path": "",
-"url": "dota.html?e=1816442&d=DOTA",
-"participants": [
-[
-"Team Yandex",
-"Team Yandex"
-],
-[
-"PlayTime",
-"PlayTime"
-]
-],
-"div": "DOTA",
-"state": "unknown",
-"bo": 3,
-"prediction": "predictions/2026-11-20-team-yandex-playtime-1816442.html",
-"hs": null,
-"as": null,
-"tip": "Всухую (2:0 или 0:2) · ≈1.36",
-"top": false,
-"bot": {
-"main": {
-"label": "Всухую (2:0 или 0:2)",
-"p": 0.683,
-"odds": 1.36,
-"est": true
-},
-"bold": null,
-"markets": [
-[
-"Победа: Team Yandex",
-0.899,
-null
-],
-[
-"Победа: PlayTime",
-0.101,
-null
-],
-[
-"Больше 2 карт",
-0.317,
-null
-],
-[
-"Всухую (2:0 или 0:2)",
-0.683,
-null
-],
-[
-"Счёт по картам 2:0",
-0.644,
-null
-],
-[
-"Счёт по картам 0:2",
-0.039,
-null
-],
-[
-"Счёт по картам 2:1",
-0.254,
-null
-],
-[
-"Счёт по картам 1:2",
-0.063,
-null
-],
-[
-"Team Yandex возьмёт хотя бы карту",
-0.961,
-null
-],
-[
-"PlayTime возьмёт хотя бы карту",
-0.356,
-null
-]
-],
-"bar": [
-0.8985313321793509,
-0,
-0.10146866782064912
-],
-"center": "BO3 · Эло 1845 : 1466"
-},
-"lt": null
-},
-{
 "sport": "tennis",
 "id": "187510",
 "league": "Теннис · ATP",
@@ -7315,6 +7113,76 @@ null
 ]
 ],
 "div": "NHL",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "football",
+"id": "401933732",
+"league": "США · MLS",
+"kickoff": "2026-11-22T00:00:00+03:00",
+"home": "Даллас",
+"away": "Портленд Тимберс",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/185.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/9723.png",
+"hid": "185",
+"aid": "9723",
+"bb": "https://betboom.ru/search?query=%D0%94%D0%B0%D0%BB%D0%BB%D0%B0%D1%81&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/usa.1",
+"url": "live.html?s=football&p=soccer%2Fusa.1&e=401933732&h=%D0%94%D0%B0%D0%BB%D0%BB%D0%B0%D1%81&a=%D0%9F%D0%BE%D1%80%D1%82%D0%BB%D0%B5%D0%BD%D0%B4+%D0%A2%D0%B8%D0%BC%D0%B1%D0%B5%D1%80%D1%81",
+"participants": [
+[
+"Даллас",
+"FC Dallas"
+],
+[
+"Портленд Тимберс",
+"Portland Timbers"
+]
+],
+"div": "USA",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "football",
+"id": "401850696",
+"league": "Чили · Примера",
+"kickoff": "2026-11-22T00:00:00+03:00",
+"home": "O'Higgins",
+"away": "Universidad de Chile",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/6072.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/4139.png",
+"hid": "6072",
+"aid": "4139",
+"bb": "https://betboom.ru/search?query=%D0%9E%27%D0%A5%D0%B8%D0%B3%D0%B3%D0%B8%D0%BD%D1%81&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/chi.1",
+"url": "live.html?s=football&p=soccer%2Fchi.1&e=401850696&h=O%27Higgins&a=Universidad+de+Chile",
+"participants": [
+[
+"O'Higgins",
+"O'Higgins"
+],
+[
+"Universidad de Chile",
+"Universidad de Chile"
+]
+],
+"div": "CHI",
 "state": "pre",
 "bo": null,
 "prediction": "",
