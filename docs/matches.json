@@ -1,145 +1,5 @@
 [
 {
-"sport": "football",
-"id": "401921320",
-"league": "Эквадор · Лига Про",
-"kickoff": "2026-11-20T20:00:00+03:00",
-"home": "Индепендьенте дель Валье",
-"away": "Macará",
-"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/17086.png",
-"al": "https://a.espncdn.com/i/teamlogos/soccer/500/18439.png",
-"hid": "17086",
-"aid": "18439",
-"bb": "https://betboom.ru/search?query=%D0%98%D0%BD%D0%B4%D0%B5%D0%BF%D0%B5%D0%BD%D0%B4%D1%8C%D0%B5%D0%BD%D1%82%D0%B5&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
-"path": "soccer/ecu.1",
-"url": "live.html?s=football&p=soccer%2Fecu.1&e=401921320&h=%D0%98%D0%BD%D0%B4%D0%B5%D0%BF%D0%B5%D0%BD%D0%B4%D1%8C%D0%B5%D0%BD%D1%82%D0%B5+%D0%B4%D0%B5%D0%BB%D1%8C+%D0%92%D0%B0%D0%BB%D1%8C%D0%B5&a=Macar%C3%A1",
-"participants": [
-[
-"Индепендьенте дель Валье",
-"Independiente del Valle"
-],
-[
-"Macará",
-"Macará"
-]
-],
-"div": "ECU",
-"state": "post",
-"bo": null,
-"prediction": "predictions/2026-11-20-independente-del-vale-macar-401921320.html",
-"hs": "0",
-"as": "1",
-"tip": "ТБ 2.5 · 1.67",
-"top": false,
-"bot": {
-"main": {
-"label": "ТБ 2.5",
-"p": 0.553,
-"odds": 1.67,
-"est": false
-},
-"bold": null,
-"markets": [
-[
-"П1",
-0.624,
-1.488
-],
-[
-"Ничья",
-0.224,
-3.9
-],
-[
-"П2",
-0.152,
-6.5
-],
-[
-"1X",
-0.848,
-null
-],
-[
-"X2",
-0.376,
-null
-],
-[
-"ТБ 1.5",
-0.793,
-null
-],
-[
-"ТБ 2.5",
-0.553,
-1.667
-],
-[
-"ТМ 2.5",
-0.447,
-2.1
-],
-[
-"ТБ 3.5",
-0.33,
-null
-],
-[
-"Обе забьют — да",
-0.519,
-null
-],
-[
-"Обе забьют — нет",
-0.481,
-null
-],
-[
-"ИТ1 больше 1.5",
-0.595,
-null
-],
-[
-"ИТ2 больше 1.5",
-0.226,
-null
-],
-[
-"Ф1 (−1.5)",
-0.388,
-null
-],
-[
-"Ф2 (+1.5)",
-0.612,
-null
-]
-],
-"bar": [
-0.6237433400220128,
-0.22398357506443367,
-0.1522730849135535
-],
-"center": "Ожидаемые голы (xG) 2.0 : 0.9",
-"scores": [
-[
-"2:0",
-0.111
-],
-[
-"1:1",
-0.107
-],
-[
-"1:0",
-0.103
-]
-]
-},
-"lt": null
-},
-{
 "sport": "tennis",
 "id": "186800",
 "league": "Теннис · WTA",
@@ -2431,7 +2291,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "",
-"hs": "0",
+"hs": "1",
 "as": "0",
 "tip": "",
 "top": false,
@@ -3551,7 +3411,7 @@ null
 ]
 ],
 "div": "CHI",
-"state": "pre",
+"state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-21-kobresal-audaks-italyano-401850692.html",
 "hs": "0",
@@ -10659,6 +10519,146 @@ null
 [
 "Анахайм",
 "Anaheim Ducks"
+]
+],
+"div": "NHL",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "football",
+"id": "401877048",
+"league": "Мексика · Лига MX",
+"kickoff": "2026-11-22T06:00:00+03:00",
+"home": "Тигрес УАНЛ",
+"away": "Америка",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/232.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/227.png",
+"hid": "232",
+"aid": "227",
+"bb": "https://betboom.ru/search?query=%D0%A2%D0%B8%D0%B3%D1%80%D0%B5%D1%81&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/mex.1",
+"url": "live.html?s=football&p=soccer%2Fmex.1&e=401877048&h=%D0%A2%D0%B8%D0%B3%D1%80%D0%B5%D1%81+%D0%A3%D0%90%D0%9D%D0%9B&a=%D0%90%D0%BC%D0%B5%D1%80%D0%B8%D0%BA%D0%B0",
+"participants": [
+[
+"Тигрес УАНЛ",
+"Tigres UANL"
+],
+[
+"Америка",
+"América"
+]
+],
+"div": "MEX",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "basketball",
+"id": "401910028",
+"league": "США · NBA",
+"kickoff": "2026-11-22T06:00:00+03:00",
+"home": "Сакраменто Кингз",
+"away": "Бостон Селтикс",
+"hl": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/sac.png",
+"al": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/bos.png",
+"hid": "23",
+"aid": "2",
+"bb": "https://betboom.ru/search?query=%D0%A1%D0%B0%D0%BA%D1%80%D0%B0%D0%BC%D0%B5%D0%BD%D1%82%D0%BE&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=basketball",
+"path": "basketball/nba",
+"url": "live.html?s=basketball&p=basketball%2Fnba&e=401910028&h=%D0%A1%D0%B0%D0%BA%D1%80%D0%B0%D0%BC%D0%B5%D0%BD%D1%82%D0%BE+%D0%9A%D0%B8%D0%BD%D0%B3%D0%B7&a=%D0%91%D0%BE%D1%81%D1%82%D0%BE%D0%BD+%D0%A1%D0%B5%D0%BB%D1%82%D0%B8%D0%BA%D1%81",
+"participants": [
+[
+"Сакраменто Кингз",
+"Sacramento Kings"
+],
+[
+"Бостон Селтикс",
+"Boston Celtics"
+]
+],
+"div": "NBA",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "hockey",
+"id": "401892766",
+"league": "США · NHL",
+"kickoff": "2026-11-22T06:00:00+03:00",
+"home": "Ванкувер",
+"away": "Миннесота",
+"hl": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/van.png",
+"al": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/min.png",
+"hid": "22",
+"aid": "30",
+"bb": "https://betboom.ru/search?query=%D0%92%D0%B0%D0%BD%D0%BA%D1%83%D0%B2%D0%B5%D1%80&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=hockey",
+"path": "hockey/nhl",
+"url": "live.html?s=hockey&p=hockey%2Fnhl&e=401892766&h=%D0%92%D0%B0%D0%BD%D0%BA%D1%83%D0%B2%D0%B5%D1%80&a=%D0%9C%D0%B8%D0%BD%D0%BD%D0%B5%D1%81%D0%BE%D1%82%D0%B0",
+"participants": [
+[
+"Ванкувер",
+"Vancouver Canucks"
+],
+[
+"Миннесота",
+"Minnesota Wild"
+]
+],
+"div": "NHL",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "hockey",
+"id": "401892767",
+"league": "США · NHL",
+"kickoff": "2026-11-22T06:00:00+03:00",
+"home": "Сан-Хосе",
+"away": "Сиэтл",
+"hl": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/sj.png",
+"al": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/sea.png",
+"hid": "18",
+"aid": "124292",
+"bb": "https://betboom.ru/search?query=%D0%A1%D0%B0%D0%BD-%D0%A5%D0%BE%D1%81%D0%B5&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=hockey",
+"path": "hockey/nhl",
+"url": "live.html?s=hockey&p=hockey%2Fnhl&e=401892767&h=%D0%A1%D0%B0%D0%BD-%D0%A5%D0%BE%D1%81%D0%B5&a=%D0%A1%D0%B8%D1%8D%D1%82%D0%BB",
+"participants": [
+[
+"Сан-Хосе",
+"San Jose Sharks"
+],
+[
+"Сиэтл",
+"Seattle Kraken"
 ]
 ],
 "div": "NHL",
