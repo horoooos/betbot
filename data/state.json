@@ -7,7 +7,6 @@
  "schedule_day": "2026-11-20",
  "content_slot": "2026-11-20-10",
  "news_seen": [
-  "https://www.sport-express.ru/tennis/atp/news/daniil-medvedev-posle-pobedy-nad-kobolli-mne-udalos-horosho-podavat-2475691/",
   "https://www.sport-express.ru/football/nation-league/news/havi-posle-0-5-ot-germanii-v-matche-ligi-naciy-esli-u-nas-net-duha-to-sorevnovatsya-nevozmozhno-2475690/",
   "https://www.sport-express.ru/football/nation-league/news/yurgen-klopp-posle-matcha-germaniya-niderlandy-eto-byl-neveroyatnyy-rezultat-v-ochen-tyazheloy-igre-2475687/",
   "https://www.sport-express.ru/football/england/news/espn-arsenal-blizok-k-prodleniyu-kontraktov-s-rayey-i-inkape-2475720/",
@@ -506,9 +505,10 @@
   "https://www.sport-express.ru/stavki-na-sport/prognozy/news/daniil-medvedev-frensis-tiafo-prognoz-na-match-itogovogo-turnira-20-noyabrya-2026-goda-2476785/",
   "kak-izmenilis-igroki-dota-2-v-promezhutok-mezhdu-gta-v-i-gta-vi",
   "https://www.sport-express.ru/football/rus_d1/news/novoe-sudebnoe-zasedanie-po-delu-torpedo-proydet-2-dekabrya-2476904/",
-  "https://www.sport-express.ru/football/rfpl/news/s-zaschitnika-lokomotiva-georgiya-dzhikii-vzyskali-pochti-89-tysyach-rubley-dolga-za-kapremont-2476905/"
+  "https://www.sport-express.ru/football/rfpl/news/s-zaschitnika-lokomotiva-georgiya-dzhikii-vzyskali-pochti-89-tysyach-rubley-dolga-za-kapremont-2476905/",
+  "analitiki-uvereny-v-pobede-team-spirit-nad-nemesis-na-blast-slam-ix"
  ],
- "news_i": 1,
+ "news_i": 2,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1702,7 +1702,7 @@
  "streak_day": {
   "2026-11-19": 1
  },
- "news_next": "2026-11-20T12:41:36.749048+03:00",
+ "news_next": "2026-11-20T13:16:14.694476+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1912,7 +1912,8 @@
   "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/Alex_Ovechkin_2017-05-06.jpg/1280px-Alex_Ovechkin_2017-05-06.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
   "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e5/FC_Dynamo_Kyiv_vs_FC_K%C3%B8benhavn_24-10-2019_%281%29.jpg/1280px-FC_Dynamo_Kyiv_vs_FC_K%C3%B8benhavn_24-10-2019_%281%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
   "https://images.cybersport.ru/images/as-is/plain/ab/ab3c4ac4-6b0b-422c-b55c-3f4ac7820911.jpg",
-  "https://upload.wikimedia.org/wikipedia/commons/9/96/Georgiy_Dzhikiya_2022.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+  "https://upload.wikimedia.org/wikipedia/commons/9/96/Georgiy_Dzhikiya_2022.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "https://images.cybersport.ru/images/as-is/plain/ab/ab8a5522-f2ba-4b94-b96c-ac2ffd4d0e7f.jpg"
  ],
  "indexnow_day": "2026-11-20",
  "vk_wall_err": null,
@@ -2178,7 +2179,8 @@
   "7475",
   "7477",
   "7479",
-  "7488"
+  "7488",
+  "7489"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -2376,11 +2378,12 @@
   "2026-11-20:новость:ba14d4da83c6a29463e6a0e1",
   "2026-11-20:новость:d73e1451f7d3e034416e952a",
   "2026-11-20:новость:b9b96864193ab0a87b983cfe",
-  "2026-11-20:новость:6c05c1781c7d56d5d09ebd71"
+  "2026-11-20:новость:6c05c1781c7d56d5d09ebd71",
+  "2026-11-20:новость:bd4a0bbbd9fbf443e1a0fee6"
  ],
  "dz_last_delivery": {
-  "source_id": 7488,
-  "message_id": 744,
+  "source_id": 7489,
+  "message_id": 745,
   "kind": "новость"
  },
  "learn_attempt_day": "2026-11-20",
@@ -2470,7 +2473,7 @@
   "quote_matches": 20
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-20T12:41:14.557075+03:00",
+  "last_poll": "2026-11-20T12:43:14.694476+03:00",
   "cursor": "162",
   "posts": [
    {
