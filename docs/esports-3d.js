@@ -70,7 +70,7 @@ export function createArena(container,heroes={}) {
   function billboard(text,team){
     const c=document.createElement('canvas');c.width=512;c.height=112;const g=c.getContext('2d');
     g.fillStyle='rgba(5,12,19,.85)';g.beginPath();g.roundRect(5,5,502,98,18);g.fill();g.fillStyle=tint(team);g.fillRect(10,10,8,88);g.fillStyle='#fff';g.font='bold 38px sans-serif';g.textAlign='center';g.fillText(text.slice(0,23),260,67);
-    const texture=new THREE.CanvasTexture(c);texture.colorSpace=THREE.SRGBColorSpace;const sprite=new THREE.Sprite(new THREE.SpriteMaterial({map:texture,depthTest:false}));sprite.scale.set(10,2.2,1);sprite.position.y=7;return sprite;
+    const texture=new THREE.CanvasTexture(c);texture.colorSpace=THREE.SRGBColorSpace;const sprite=new THREE.Sprite(new THREE.SpriteMaterial({map:texture,depthTest:false}));sprite.scale.set(6.5,1.4,1);sprite.position.y=7;return sprite;
   }
   function fallback(p,team){
     const g=new THREE.Group(),bodyMat=mat(['#345b9e','#863b42','#466a45','#7b6190','#ad8246'][Number(p.hero)%5]);
@@ -117,6 +117,7 @@ export function createArena(container,heroes={}) {
       if(active)u.visual.animate(dt,speed);u.label.visible=!follow||u.key===follow;u.ring.material.opacity=u.key===follow?1:.8;
     }
     if(follow&&units.has(follow)){const next=units.get(follow).group.position.clone().add(new THREE.Vector3(0,2,0));if(flight){const progress=Math.min(1,(now-flight.at)/1400),ease=progress*progress*(3-2*progress);camera.position.lerpVectors(flight.camera,next.clone().add(flight.offset),ease);controls.target.lerpVectors(flight.target,next,ease);if(progress>=1)flight=null;}else{const delta=next.clone().sub(controls.target);camera.position.add(delta);controls.target.copy(next);}}
+    environment.focus(follow&&units.has(follow)?units.get(follow).group.position:null);
     for(const b of structures.values())b.position.y=environment.height(b.position.x,b.position.z);
     controls.update();renderer.render(scene,camera);
   });
