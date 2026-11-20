@@ -2494,43 +2494,9 @@
   "quote_matches": 20
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-20T18:20:22.194913+03:00",
-  "cursor": "177",
+  "last_poll": "2026-11-20T18:22:23.066638+03:00",
+  "cursor": "179",
   "posts": [
-   {
-    "post_id": 592,
-    "url": "https://vk.com/wall-228963529_592",
-    "title": "Смородская: Галактионов уйдет, но найдет работу в РПЛ",
-    "text": "рџ“° Бывший президент «Локомотива» Ольга Смородская прокомментировала уход Михаила Галактионова, который с ноября 2022 года возглавлял команду.",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": false,
-     "details_present": false,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-19T21:04:46.671098+03:00"
-   },
-   {
-    "post_id": 593,
-    "url": "https://vk.com/wall-228963529_593",
-    "title": "Satanic раскрыл, почему PARIVISION падает против Team Spirit",
-    "text": "рџ“° Почему PARIVISION «теряется» в быстрых схватках с Team Spirit?",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": false,
-     "details_present": false,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-19T21:06:46.226449+03:00"
-   },
    {
     "post_id": 594,
     "url": "https://vk.com/wall-228963529_594",
@@ -3006,6 +2972,40 @@
     },
     "status": "needs_review",
     "observed_at": "2026-11-20T17:19:14.953071+03:00"
+   },
+   {
+    "post_id": 627,
+    "url": "https://vk.com/wall-228963529_627",
+    "title": "Марка Стоуна сделали лучшим бомбардиром «Голден Найтс» с 418 очками",
+    "text": "рџ“° Стоун прорвал клубный потолок и стал лучшим бомбардиром «Вегаса»!",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": false,
+     "details_present": false,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-20T18:22:23.066638+03:00"
+   },
+   {
+    "post_id": 628,
+    "url": "https://vk.com/wall-228963529_628",
+    "title": "Карседо вернулся в «Спартак»: избавление от чувства незавершённости",
+    "text": "рџ± Карседо вернулся в «Спартак», чтобы закрыть незавершённую главу!",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": false,
+     "details_present": false,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-20T18:22:23.066638+03:00"
    }
   ],
   "status": "observing"
