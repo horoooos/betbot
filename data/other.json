@@ -7252,25 +7252,25 @@
   "kickoff": "2026-11-20T03:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Thu, November 19th at 7:00 PM EST",
   "clock": "0:00",
   "period": 0,
   "home": {
+   "color": "002d62",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/wpg.png",
    "id": "28",
    "name": "Winnipeg Jets",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/wpg.png",
-   "color": "002d62",
    "score": "0",
    "record": "10-9-3",
    "periods": [],
    "ru": "Виннипег"
   },
   "away": {
+   "color": "00529b",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/nyi.png",
    "id": "12",
    "name": "New York Islanders",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/nyi.png",
-   "color": "00529b",
    "score": "0",
    "record": "10-6-4",
    "periods": [],
@@ -7373,7 +7373,9 @@
   "btn": 4,
   "close": {
    "HK_ML_A": 0.4826
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null
  },
  "NHL|401892744": {
   "id": "401892744",
