@@ -453,22 +453,22 @@
   "state": "pre",
   "completed": false,
   "tier": "a",
-  "status": "reviewed",
+  "status": "done",
   "home": {
+   "color": "3b4a7a",
+   "logo": "https://cdn-api.pandascore.co/images/team/image/1669/153px_team_spirit_2022_lightmode.png",
    "id": "1669",
    "name": "Team Spirit",
    "ru": "Team Spirit",
-   "logo": "https://cdn-api.pandascore.co/images/team/image/1669/153px_team_spirit_2022_lightmode.png",
-   "color": "3b4a7a",
    "score": 0,
    "winner": false
   },
   "away": {
+   "color": "3b4a7a",
+   "logo": "https://cdn-api.pandascore.co/images/team/image/133882/600px_aurora_gaming_2025_allmode.png",
    "id": "133882",
    "name": "Aurora",
    "ru": "Aurora",
-   "logo": "https://cdn-api.pandascore.co/images/team/image/133882/600px_aurora_gaming_2025_allmode.png",
-   "color": "3b4a7a",
    "score": 0,
    "winner": false
   },
@@ -534,7 +534,10 @@
   "btn": 4,
   "close": {
    "_": null
-  }
+  },
+  "settlement_retry_at": 1795181655.246878,
+  "main_hit": true,
+  "bold_hit": null
  },
  "WTA|186782": {
   "id": "186782",
@@ -684,22 +687,22 @@
   "state": "pre",
   "completed": false,
   "tier": "a",
-  "status": "reviewed",
+  "status": "done",
   "home": {
+   "color": "3b4a7a",
+   "logo": "https://cdn-api.pandascore.co/images/team/image/1657/600px_lgd_gaming_dec_2019_allmode.png",
    "id": "1657",
    "name": "LGD Gaming",
    "ru": "LGD Gaming",
-   "logo": "https://cdn-api.pandascore.co/images/team/image/1657/600px_lgd_gaming_dec_2019_allmode.png",
-   "color": "3b4a7a",
    "score": 0,
    "winner": false
   },
   "away": {
+   "color": "3b4a7a",
+   "logo": "https://cdn-api.pandascore.co/images/team/image/135712/250px_parivision_allmode.png",
    "id": "135712",
    "name": "PARIVISION",
    "ru": "PARIVISION",
-   "logo": "https://cdn-api.pandascore.co/images/team/image/135712/250px_parivision_allmode.png",
-   "color": "3b4a7a",
    "score": 0,
    "winner": false
   },
@@ -761,7 +764,10 @@
   "btn": 4,
   "close": {
    "_": null
-  }
+  },
+  "settlement_retry_at": 1795181655.246878,
+  "main_hit": false,
+  "bold_hit": null
  },
  "ATP|187503": {
   "id": "187503",
@@ -3080,22 +3086,22 @@
   "state": "pre",
   "completed": false,
   "tier": "a",
-  "status": "reviewed",
+  "status": "done",
   "home": {
+   "color": "3b4a7a",
+   "logo": "https://cdn-api.pandascore.co/images/team/image/133882/600px_aurora_gaming_2025_allmode.png",
    "id": "133882",
    "name": "Aurora",
    "ru": "Aurora",
-   "logo": "https://cdn-api.pandascore.co/images/team/image/133882/600px_aurora_gaming_2025_allmode.png",
-   "color": "3b4a7a",
    "score": 0,
    "winner": false
   },
   "away": {
+   "color": "3b4a7a",
+   "logo": "https://cdn-api.pandascore.co/images/team/image/135712/250px_parivision_allmode.png",
    "id": "135712",
    "name": "PARIVISION",
    "ru": "PARIVISION",
-   "logo": "https://cdn-api.pandascore.co/images/team/image/135712/250px_parivision_allmode.png",
-   "color": "3b4a7a",
    "score": 0,
    "winner": false
   },
@@ -3161,7 +3167,10 @@
   "btn": 4,
   "close": {
    "_": null
-  }
+  },
+  "settlement_retry_at": 1795181655.246878,
+  "main_hit": false,
+  "bold_hit": null
  },
  "ATP|187509": {
   "id": "187509",
@@ -3522,22 +3531,22 @@
   "state": "pre",
   "completed": false,
   "tier": "a",
-  "status": "reviewed",
+  "status": "done",
   "home": {
+   "color": "3b4a7a",
+   "logo": "https://cdn-api.pandascore.co/images/team/image/1669/153px_team_spirit_2022_lightmode.png",
    "id": "1669",
    "name": "Team Spirit",
    "ru": "Team Spirit",
-   "logo": "https://cdn-api.pandascore.co/images/team/image/1669/153px_team_spirit_2022_lightmode.png",
-   "color": "3b4a7a",
    "score": 0,
    "winner": false
   },
   "away": {
+   "color": "3b4a7a",
+   "logo": "https://cdn-api.pandascore.co/images/team/image/135712/250px_parivision_allmode.png",
    "id": "135712",
    "name": "PARIVISION",
    "ru": "PARIVISION",
-   "logo": "https://cdn-api.pandascore.co/images/team/image/135712/250px_parivision_allmode.png",
-   "color": "3b4a7a",
    "score": 0,
    "winner": false
   },
@@ -3603,7 +3612,10 @@
   "btn": 4,
   "close": {
    "_": null
-  }
+  },
+  "settlement_retry_at": 1795181655.246878,
+  "main_hit": false,
+  "bold_hit": null
  },
  "WTA|186807": {
   "id": "186807",
@@ -8451,7 +8463,8 @@
   "btn": 4,
   "close": {
    "_": null
-  }
+  },
+  "settlement_retry_at": 1795181655.246878
  },
  "DOTA|1816442": {
   "id": "1816442",
@@ -8505,22 +8518,22 @@
   "state": "pre",
   "completed": false,
   "tier": "a",
-  "status": "reviewed",
+  "status": "done",
   "home": {
+   "color": "3b4a7a",
+   "logo": "https://cdn-api.pandascore.co/images/team/image/137073/249px_team_yandex_allmode.png",
    "id": "137073",
    "name": "Team Yandex",
    "ru": "Team Yandex",
-   "logo": "https://cdn-api.pandascore.co/images/team/image/137073/249px_team_yandex_allmode.png",
-   "color": "3b4a7a",
    "score": 0,
    "winner": false
   },
   "away": {
+   "color": "3b4a7a",
+   "logo": "https://cdn-api.pandascore.co/images/team/image/137885/585px_play_time_allmode.png",
    "id": "137885",
    "name": "PlayTime",
    "ru": "PlayTime",
-   "logo": "https://cdn-api.pandascore.co/images/team/image/137885/585px_play_time_allmode.png",
-   "color": "3b4a7a",
    "score": 0,
    "winner": false
   },
@@ -8586,7 +8599,10 @@
   "btn": 4,
   "close": {
    "_": null
-  }
+  },
+  "settlement_retry_at": 1795181655.246878,
+  "main_hit": true,
+  "bold_hit": null
  },
  "ATP|187510": {
   "id": "187510",
