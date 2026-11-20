@@ -7,8 +7,6 @@
  "schedule_day": "2026-11-20",
  "content_slot": "2026-11-20-13",
  "news_seen": [
-  "https://www.sport-express.ru/football/rusteam/news/eks-igrok-cska-efremov-otlichno-chto-armeycy-ezdyat-v-sbornuyu-yavlyayutsya-ee-liderami-2475800/",
-  "https://www.sport-express.ru/football/transfers/news/fanatik-skauty-bavarii-i-barselony-posmotryat-za-igroy-batrakova-v-matche-galatasaraya-v-lige-chempionov-2475798/",
   "https://www.sport-express.ru/hockey/russia/news/umer-olimpiyskiy-chempion-po-hokkeyu-yuriy-lyapkin-2475813/",
   "https://www.sport-express.ru/basketball/nba/news/memfis-vyigral-sem-pervyh-gostevyh-matchey-sezona-nba-i-prodlil-klubnoe-dostizhenie-statistika-16-noyabrya-2026-2475804/",
   "https://www.sport-express.ru/hockey/women/news/amerikanskaya-hokkeistka-teylor-foks-pobila-derzhavshiysya-36-let-rekord-zhenskih-chempionatov-mira-po-hokkeyu-po-peredacham-2475805/",
@@ -506,9 +504,11 @@
   "https://www.sport-express.ru/football/italy/news/corriere-dello-sport-yuventus-nameren-podpisat-gustavo-varelu-2476902/",
   "https://www.sport-express.ru/football/rus_d1/news/kamancev-soobschil-chto-arbitra-ziyakova-snyali-s-matcha-nizhniy-novgorod-torpedo-2476895/",
   "https://www.sport-express.ru/football/rus_d1/news/predsedatel-sudeyskogo-komiteta-pavel-kamancev-obyasnil-pochemu-rfs-podderzhivaet-sudey-nesmotrya-na-kritiku-2476896/",
-  "https://www.sport-express.ru/football/rfpl/news/tyukavin-o-vozmozhnom-uhode-iz-dinamo-zimoy-eto-budet-ochen-tyazheloe-reshenie-2476860/"
+  "https://www.sport-express.ru/football/rfpl/news/tyukavin-o-vozmozhnom-uhode-iz-dinamo-zimoy-eto-budet-ochen-tyazheloe-reshenie-2476860/",
+  "dyrachyo-o-blast-slam-ix-ochevidno-chto-favority-yeto-team-spirit-team-yandex-i",
+  "lol-2-protiv-kirpicha-siractionslacks-sravnil-patch-7-42-dlya-dota-2-i"
  ],
- "news_i": 1,
+ "news_i": 2,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1692,7 +1692,7 @@
  "streak_day": {
   "2026-11-19": 1
  },
- "news_next": "2026-11-20T14:48:13.973110+03:00",
+ "news_next": "2026-11-20T15:20:15.227376+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1907,7 +1907,8 @@
   "https://images.cybersport.ru/images/as-is/plain/ab/ab8a5522-f2ba-4b94-b96c-ac2ffd4d0e7f.jpg",
   "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/Nogomet_Maribor_-_Lokomotiva_v_jugoslovanskem_pokalu_1961_%281%29.jpg/1280px-Nogomet_Maribor_-_Lokomotiva_v_jugoslovanskem_pokalu_1961_%281%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
   "https://images.cybersport.ru/images/as-is/plain/68/684716e6-236a-4fb1-b4f4-97b436553353.jpg",
-  "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/FC_Dynamo_Kyiv_vs_FC_K%C3%B8benhavn_24-10-2019_%284%29.jpg/1280px-FC_Dynamo_Kyiv_vs_FC_K%C3%B8benhavn_24-10-2019_%284%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/FC_Dynamo_Kyiv_vs_FC_K%C3%B8benhavn_24-10-2019_%284%29.jpg/1280px-FC_Dynamo_Kyiv_vs_FC_K%C3%B8benhavn_24-10-2019_%284%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "https://images.cybersport.ru/images/as-is/plain/24/24873a3a-2432-4df2-92fc-cc86e669d809.jpg"
  ],
  "indexnow_day": "2026-11-20",
  "vk_wall_err": null,
@@ -2177,7 +2178,8 @@
   "7489",
   "7496",
   "7499",
-  "7503"
+  "7503",
+  "7505"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -2379,11 +2381,12 @@
   "2026-11-20:новость:bd4a0bbbd9fbf443e1a0fee6",
   "2026-11-20:новость:9c806c5964be26e7ff514f91",
   "2026-11-20:новость:2df68e7d7c290901530f118b",
-  "2026-11-20:новость:f704875cb373c8ecd642dfb5"
+  "2026-11-20:новость:f704875cb373c8ecd642dfb5",
+  "2026-11-20:новость:b8c3dcd2ad04c94a100cb350"
  ],
  "dz_last_delivery": {
-  "source_id": 7503,
-  "message_id": 748,
+  "source_id": 7505,
+  "message_id": 749,
   "kind": "новость"
  },
  "learn_attempt_day": "2026-11-20",
@@ -2473,7 +2476,7 @@
   "quote_matches": 20
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-20T14:47:15.405243+03:00",
+  "last_poll": "2026-11-20T14:49:15.227376+03:00",
   "cursor": "166",
   "posts": [
    {
