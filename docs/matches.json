@@ -1017,7 +1017,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-20-fk-annesi-klermon-401876691.html",
-"hs": "3",
+"hs": "4",
 "as": "0",
 "tip": "ТМ 2.5 · 1.77",
 "top": false,
@@ -1312,7 +1312,7 @@ null
 "bo": null,
 "prediction": "predictions/2026-11-20-gengam-rodez-401876690.html",
 "hs": "1",
-"as": "1",
+"as": "2",
 "tip": "П1 · 2.01",
 "top": false,
 "bot": {
@@ -1606,7 +1606,7 @@ null
 "bo": null,
 "prediction": "predictions/2026-11-20-red-star-po-401876685.html",
 "hs": "1",
-"as": "0",
+"as": "1",
 "tip": "П1 · 2.02",
 "top": false,
 "bot": {
@@ -3464,7 +3464,7 @@ null
 "sport": "tennis",
 "id": "186799",
 "league": "Теннис · WTA",
-"kickoff": "2026-11-20T23:30:00+03:00",
+"kickoff": "2026-11-20T23:35:00+03:00",
 "home": "Гуйомар Маристани",
 "away": "Андреа Лазаро Гарсиа",
 "hl": "https://a.espncdn.com/i/teamlogos/countries/500/esp.png",
@@ -3733,12 +3733,122 @@ null
 "div": "COL",
 "state": "pre",
 "bo": null,
-"prediction": "",
+"prediction": "predictions/2026-11-21-independente-medelin-independente-santa-fe-401934708.html",
 "hs": "0",
 "as": "0",
-"tip": "",
+"tip": "П1 · 2.05",
 "top": false,
-"bot": null,
+"bot": {
+"main": {
+"label": "П1",
+"p": 0.454,
+"odds": 2.05,
+"est": false
+},
+"bold": {
+"label": "ТБ 2.5",
+"p": 0.445,
+"odds": 2.1,
+"est": false
+},
+"markets": [
+[
+"П1",
+0.454,
+2.05
+],
+[
+"Ничья",
+0.286,
+3.2
+],
+[
+"П2",
+0.26,
+3.6
+],
+[
+"1X",
+0.74,
+null
+],
+[
+"X2",
+0.546,
+null
+],
+[
+"ТБ 1.5",
+0.713,
+null
+],
+[
+"ТБ 2.5",
+0.444,
+2.1
+],
+[
+"ТМ 2.5",
+0.556,
+1.69
+],
+[
+"ТБ 3.5",
+0.233,
+null
+],
+[
+"Обе забьют — да",
+0.498,
+null
+],
+[
+"Обе забьют — нет",
+0.502,
+null
+],
+[
+"ИТ1 больше 1.5",
+0.419,
+null
+],
+[
+"ИТ2 больше 1.5",
+0.273,
+null
+],
+[
+"Ф1 (−1.5)",
+0.226,
+null
+],
+[
+"Ф2 (+1.5)",
+0.774,
+null
+]
+],
+"bar": [
+0.45387572793647074,
+0.2861877210530381,
+0.2599365510104914
+],
+"center": "Ожидаемые голы (xG) 1.4 : 1.0",
+"scores": [
+[
+"1:1",
+0.136
+],
+[
+"1:0",
+0.113
+],
+[
+"0:0",
+0.096
+]
+]
+},
 "lt": null
 },
 {
@@ -4516,7 +4626,7 @@ null
 "id": "401877550",
 "league": "Япония · J-League",
 "kickoff": "2026-11-21T08:00:00+03:00",
-"home": "Kyoto Sanga",
+"home": "Киото Санга",
 "away": "Урава Ред Даймондс",
 "hl": "https://a.espncdn.com/i/teamlogos/soccer/500/21361.png",
 "al": "https://a.espncdn.com/i/teamlogos/soccer/500/3385.png",
@@ -4524,10 +4634,10 @@ null
 "aid": "3385",
 "bb": "https://betboom.ru/search?query=%D0%9A%D0%B8%D0%BE%D1%82%D0%BE&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
 "path": "soccer/jpn.1",
-"url": "live.html?s=football&p=soccer%2Fjpn.1&e=401877550&h=Kyoto+Sanga&a=%D0%A3%D1%80%D0%B0%D0%B2%D0%B0+%D0%A0%D0%B5%D0%B4+%D0%94%D0%B0%D0%B9%D0%BC%D0%BE%D0%BD%D0%B4%D1%81",
+"url": "live.html?s=football&p=soccer%2Fjpn.1&e=401877550&h=%D0%9A%D0%B8%D0%BE%D1%82%D0%BE+%D0%A1%D0%B0%D0%BD%D0%B3%D0%B0&a=%D0%A3%D1%80%D0%B0%D0%B2%D0%B0+%D0%A0%D0%B5%D0%B4+%D0%94%D0%B0%D0%B9%D0%BC%D0%BE%D0%BD%D0%B4%D1%81",
 "participants": [
 [
-"Kyoto Sanga",
+"Киото Санга",
 "Kyoto Sanga"
 ],
 [
@@ -4552,21 +4662,21 @@ null
 "league": "Япония · J-League",
 "kickoff": "2026-11-21T08:00:00+03:00",
 "home": "Матида Зельвия",
-"away": "В-Варен Нагасаки",
+"away": "V-Varen Nagasaki",
 "hl": "https://a.espncdn.com/i/teamlogos/soccer/500/22167.png",
 "al": "https://a.espncdn.com/i/teamlogos/soccer/500/19001.png",
 "hid": "22167",
 "aid": "19001",
 "bb": "https://betboom.ru/search?query=%D0%97%D0%B5%D0%BB%D1%8C%D0%B2%D0%B8%D1%8F&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
 "path": "soccer/jpn.1",
-"url": "live.html?s=football&p=soccer%2Fjpn.1&e=401877552&h=%D0%9C%D0%B0%D1%82%D0%B8%D0%B4%D0%B0+%D0%97%D0%B5%D0%BB%D1%8C%D0%B2%D0%B8%D1%8F&a=%D0%92-%D0%92%D0%B0%D1%80%D0%B5%D0%BD+%D0%9D%D0%B0%D0%B3%D0%B0%D1%81%D0%B0%D0%BA%D0%B8",
+"url": "live.html?s=football&p=soccer%2Fjpn.1&e=401877552&h=%D0%9C%D0%B0%D1%82%D0%B8%D0%B4%D0%B0+%D0%97%D0%B5%D0%BB%D1%8C%D0%B2%D0%B8%D1%8F&a=V-Varen+Nagasaki",
 "participants": [
 [
 "Матида Зельвия",
 "Machida Zelvia"
 ],
 [
-"В-Варен Нагасаки",
+"V-Varen Nagasaki",
 "V-Varen Nagasaki"
 ]
 ],
