@@ -69,103 +69,103 @@
 {
 "kind": "express_risk",
 "title": "Экспресс на яйцах",
-"day": "2026-11-19",
-"odds": 13.594671759859345,
-"p": 0.06,
-"status": "lost",
+"day": "2026-11-20",
+"odds": 11.795316293761,
+"p": 0.0634,
+"status": "wait",
 "won": 0,
 "n": 5,
-"post": "https://t.me/aistavvit/7294",
+"post": "https://t.me/aistavvit/7574",
 "legs": [
 {
-"sport": "hockey",
-"id": "401892743",
-"home": "Оттава",
-"away": "Филадельфия",
-"league": "🇺🇸 США · NHL",
-"kickoff": "2026-11-20T03:00:00+03:00",
-"label": "Победа: Оттава (с ОТ)",
-"odds": 1.602,
-"p": 0.5997001499250374,
+"sport": "football",
+"id": "401874492",
+"home": "Орхус",
+"away": "Люнгбю",
+"league": "🇩🇰 Дания · Суперлига",
+"kickoff": "2026-11-20T21:00:00+03:00",
+"label": "Победа: Орхус",
+"odds": 1.645,
+"p": 0.574657544196046,
 "logos": [
-"https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/ott.png",
-"https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/phi.png"
-],
-"win": false,
-"score": "5:6",
-"url": "live.html?s=hockey&p=hockey%2Fnhl&e=401892743&h=%D0%9E%D1%82%D1%82%D0%B0%D0%B2%D0%B0&a=%D0%A4%D0%B8%D0%BB%D0%B0%D0%B4%D0%B5%D0%BB%D1%8C%D1%84%D0%B8%D1%8F"
-},
-{
-"sport": "hockey",
-"id": "401892746",
-"home": "Вашингтон",
-"away": "Баффало",
-"league": "🇺🇸 США · NHL",
-"kickoff": "2026-11-20T03:00:00+03:00",
-"label": "Победа: Вашингтон (с ОТ)",
-"odds": 1.741,
-"p": 0.5514042772481319,
-"logos": [
-"https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/wsh.png",
-"https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/buf.png"
-],
-"win": false,
-"score": "3:6",
-"url": "live.html?s=hockey&p=hockey%2Fnhl&e=401892746&h=%D0%92%D0%B0%D1%88%D0%B8%D0%BD%D0%B3%D1%82%D0%BE%D0%BD&a=%D0%91%D0%B0%D1%84%D1%84%D0%B0%D0%BB%D0%BE"
-},
-{
-"sport": "hockey",
-"id": "401892744",
-"home": "Тампа-Бэй",
-"away": "Эдмонтон",
-"league": "🇺🇸 США · NHL",
-"kickoff": "2026-11-20T03:30:00+03:00",
-"label": "Победа: Тампа-Бэй (с ОТ)",
-"odds": 1.704,
-"p": 0.5635245901639344,
-"logos": [
-"https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/tb.png",
-"https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/edm.png"
+"https://a.espncdn.com/i/teamlogos/soccer/500/7853.png",
+"https://a.espncdn.com/i/teamlogos/soccer/500/7860.png"
 ],
 "win": null,
 "score": null,
-"url": "live.html?s=hockey&p=hockey%2Fnhl&e=401892744&h=%D0%A2%D0%B0%D0%BC%D0%BF%D0%B0-%D0%91%D1%8D%D0%B9&a=%D0%AD%D0%B4%D0%BC%D0%BE%D0%BD%D1%82%D0%BE%D0%BD"
+"url": "live.html?s=football&p=soccer%2Fden.1&e=401874492&h=%D0%9E%D1%80%D1%85%D1%83%D1%81&a=%D0%9B%D1%8E%D0%BD%D0%B3%D0%B1%D1%8E"
 },
 {
-"sport": "hockey",
-"id": "401892748",
-"home": "Чикаго",
-"away": "Коламбус",
-"league": "🇺🇸 США · NHL",
-"kickoff": "2026-11-20T04:00:00+03:00",
-"label": "Победа: Коламбус (с ОТ)",
-"odds": 1.617,
-"p": 0.5934121196882072,
+"sport": "football",
+"id": "401843486",
+"home": "Молде",
+"away": "Будё-Глимт",
+"league": "🇳🇴 Норвегия · Элитсерия",
+"kickoff": "2026-11-20T21:00:00+03:00",
+"label": "Победа: Будё-Глимт",
+"odds": 1.645,
+"p": 0.5746300818847866,
 "logos": [
-"https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/chi.png",
-"https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/cbj.png"
+"https://a.espncdn.com/i/teamlogos/soccer/500/2715.png",
+"https://a.espncdn.com/i/teamlogos/soccer/500/2980.png"
 ],
 "win": null,
 "score": null,
-"url": "live.html?s=hockey&p=hockey%2Fnhl&e=401892748&h=%D0%A7%D0%B8%D0%BA%D0%B0%D0%B3%D0%BE&a=%D0%9A%D0%BE%D0%BB%D0%B0%D0%BC%D0%B1%D1%83%D1%81"
+"url": "live.html?s=football&p=soccer%2Fnor.1&e=401843486&h=%D0%9C%D0%BE%D0%BB%D0%B4%D0%B5&a=%D0%91%D1%83%D0%B4%D1%91-%D0%93%D0%BB%D0%B8%D0%BC%D1%82"
 },
 {
-"sport": "hockey",
-"id": "401892751",
-"home": "Колорадо",
-"away": "Анахайм",
-"league": "🇺🇸 США · NHL",
-"kickoff": "2026-11-20T05:00:00+03:00",
-"label": "Победа: Колорадо (с ОТ)",
-"odds": 1.769,
-"p": 0.5427759110881364,
+"sport": "football",
+"id": "401876687",
+"home": "Нанси",
+"away": "Дижон",
+"league": "🇫🇷 Франция · Лига 2",
+"kickoff": "2026-11-20T22:00:00+03:00",
+"label": "Победа: Нанси",
+"odds": 1.69,
+"p": 0.5569776407093293,
 "logos": [
-"https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/col.png",
-"https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/ana.png"
+"https://a.espncdn.com/i/teamlogos/soccer/500/3267.png",
+"https://a.espncdn.com/i/teamlogos/soccer/500/3170.png"
 ],
 "win": null,
 "score": null,
-"url": "live.html?s=hockey&p=hockey%2Fnhl&e=401892751&h=%D0%9A%D0%BE%D0%BB%D0%BE%D1%80%D0%B0%D0%B4%D0%BE&a=%D0%90%D0%BD%D0%B0%D1%85%D0%B0%D0%B9%D0%BC"
+"url": "live.html?s=football&p=soccer%2Ffra.2&e=401876687&h=%D0%9D%D0%B0%D0%BD%D1%81%D0%B8&a=%D0%94%D0%B8%D0%B6%D0%BE%D0%BD"
+},
+{
+"sport": "football",
+"id": "401899543",
+"home": "Верона",
+"away": "Чезена",
+"league": "🇮🇹 Италия · Серия B",
+"kickoff": "2026-11-20T22:30:00+03:00",
+"label": "Победа: Верона",
+"odds": 1.606,
+"p": 0.5887262646436343,
+"logos": [
+"https://a.espncdn.com/i/teamlogos/soccer/500/119.png",
+"https://a.espncdn.com/i/teamlogos/soccer/500/3337.png"
+],
+"win": null,
+"score": null,
+"url": "live.html?s=football&p=soccer%2Fita.2&e=401899543&h=%D0%92%D0%B5%D1%80%D0%BE%D0%BD%D0%B0&a=%D0%A7%D0%B5%D0%B7%D0%B5%D0%BD%D0%B0"
+},
+{
+"sport": "football",
+"id": "401878519",
+"home": "Инвернесс Каледониан Тисл",
+"away": "Эйр Юнайтед",
+"league": "🏴󠁧󠁢󠁳󠁣󠁴󠁿 Шотландия · Чемпионшип",
+"kickoff": "2026-11-20T22:30:00+03:00",
+"label": "Победа: Инвернесс Каледониан Тисл",
+"odds": 1.606,
+"p": 0.5856842046547949,
+"logos": [
+"https://a.espncdn.com/i/teamlogos/soccer/500/253.png",
+"https://a.espncdn.com/i/teamlogos/soccer/500/248.png"
+],
+"win": null,
+"score": null,
+"url": "live.html?s=football&p=soccer%2Fsco.2&e=401878519&h=%D0%98%D0%BD%D0%B2%D0%B5%D1%80%D0%BD%D0%B5%D1%81%D1%81+%D0%9A%D0%B0%D0%BB%D0%B5%D0%B4%D0%BE%D0%BD%D0%B8%D0%B0%D0%BD+%D0%A2%D0%B8%D1%81%D0%BB&a=%D0%AD%D0%B9%D1%80+%D0%AE%D0%BD%D0%B0%D0%B9%D1%82%D0%B5%D0%B4"
 }
 ]
 }
