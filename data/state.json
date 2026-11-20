@@ -7,8 +7,6 @@
  "schedule_day": "2026-11-20",
  "content_slot": "2026-11-20-10",
  "news_seen": [
-  "https://www.sport-express.ru/basketball/nba/news/vashington-memfis-boston-orlando-schet-i-rezultaty-matchey-nba-17-noyabrya-2026-2475703/",
-  "https://www.sport-express.ru/basketball/nba/news/igroki-chikago-i-bruklina-buzelis-i-maynott-oshtrafovany-za-nepristoynye-zhesty-2475699/",
   "https://www.sport-express.ru/basketball/nba/news/forvard-memfisa-dzhi-dzhi-dzhekson-vybyl-iz-za-pereloma-stopy-2475693/",
   "https://www.sport-express.ru/tennis/wta/news/mirra-andreeva-zapisala-rolik-pod-pesnyu-diva-s-trofeem-itogovogo-turnira-wta-2475717/",
   "https://www.sport-express.ru/tennis/atp/news/daniil-medvedev-karlos-alkaras-potryasayuschiy-igrok-i-on-mozhet-pobedit-lyubogo-gde-ugodno-2475698/",
@@ -506,9 +504,11 @@
   "https://www.sport-express.ru/football/rfpl/news/karasev-poluchil-300-e-naznachenie-sudey-v-rpl-do-rekorda-bezborodova-shest-matchey-2476861/",
   "https://www.sport-express.ru/football/rfpl/news/tyukavin-o-dinamo-smotret-v-tablicu-seychas-priyatno-no-esche-nichego-ne-resheno-2476850/",
   "https://www.sport-express.ru/hockey/khl/news/zaschitnik-lokomotiva-sergeev-stal-samym-proveryaemym-na-doping-hokkeistom-v-2026-godu-2476886/",
-  "https://www.sport-express.ru/hockey/nhl/news/ovechkin-o-porazheniyah-vashingtona-nuzhno-ne-opuskat-ruki-i-prodolzhat-borotsya-2476883/"
+  "https://www.sport-express.ru/hockey/nhl/news/ovechkin-o-porazheniyah-vashingtona-nuzhno-ne-opuskat-ruki-i-prodolzhat-borotsya-2476883/",
+  "https://www.sport-express.ru/football/rus_d1/news/pavel-kamancev-zayavil-chto-match-torpedo-s-kamazom-ne-vliyal-na-polozhenie-komandy-v-tablice-pervoy-ligi-2476892/",
+  "https://www.sport-express.ru/football/rfpl/news/tyukavin-dopustil-perehod-v-turciyu-pochemu-by-i-net-2476859/"
  ],
- "news_i": 3,
+ "news_i": 4,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1702,7 +1702,7 @@
  "streak_day": {
   "2026-11-19": 1
  },
- "news_next": "2026-11-20T11:13:36.770184+03:00",
+ "news_next": "2026-11-20T11:42:36.103874+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1909,7 +1909,8 @@
   "https://upload.wikimedia.org/wikipedia/commons/8/87/Konstantin_Tyukavin_2020.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
   "https://ss.sport-express.ru/userfiles/materials/224/2245175/1180x665.jpg",
   "https://upload.wikimedia.org/wikipedia/commons/8/84/Konstantin_Tyukavin_2021.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-  "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/Alex_Ovechkin_2017-05-06.jpg/1280px-Alex_Ovechkin_2017-05-06.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/Alex_Ovechkin_2017-05-06.jpg/1280px-Alex_Ovechkin_2017-05-06.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e5/FC_Dynamo_Kyiv_vs_FC_K%C3%B8benhavn_24-10-2019_%281%29.jpg/1280px-FC_Dynamo_Kyiv_vs_FC_K%C3%B8benhavn_24-10-2019_%281%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
  ],
  "indexnow_day": "2026-11-20",
  "vk_wall_err": null,
@@ -2172,7 +2173,8 @@
   "7468",
   "7470",
   "7471",
-  "7475"
+  "7475",
+  "7477"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -2367,11 +2369,12 @@
   "2026-11-20:новость:726b2dc5d8deebc8ad05ac93",
   "2026-11-20:новость:6582fefd2fac501009d52de1",
   "2026-11-20:новость:07ee8da72f237d7770060073",
-  "2026-11-20:новость:ba14d4da83c6a29463e6a0e1"
+  "2026-11-20:новость:ba14d4da83c6a29463e6a0e1",
+  "2026-11-20:новость:d73e1451f7d3e034416e952a"
  ],
  "dz_last_delivery": {
-  "source_id": 7475,
-  "message_id": 741,
+  "source_id": 7477,
+  "message_id": 742,
   "kind": "новость"
  },
  "learn_attempt_day": "2026-11-20",
@@ -2461,7 +2464,7 @@
   "quote_matches": 20
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-20T11:12:36.031583+03:00",
+  "last_poll": "2026-11-20T11:14:36.103874+03:00",
   "cursor": "160",
   "posts": [
    {
