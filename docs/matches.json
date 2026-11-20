@@ -359,7 +359,7 @@ null
 "bo": null,
 "prediction": "predictions/2026-11-20-toronto-los-andzheles-401892742.html",
 "hs": "3",
-"as": "0",
+"as": "1",
 "tip": "П2 (с ОТ и буллитами) · 2.00",
 "top": false,
 "bot": {
@@ -464,7 +464,15 @@ null
 ],
 "center": "Ожидаемые голы 3.3 : 3.2"
 },
-"lt": null
+"lt": {
+"fair": 1.23,
+"label": "ТБ 6.5",
+"min_odds": 1.3,
+"minute": "2-й период",
+"p": 0.81,
+"result": null,
+"score": "3:1"
+}
 },
 {
 "sport": "hockey",
@@ -1600,7 +1608,15 @@ null
 ],
 "center": "Ожидаемые голы 3.4 : 3.0"
 },
-"lt": null
+"lt": {
+"fair": 1.42,
+"label": "1X (осн. время)",
+"min_odds": 1.49,
+"minute": "2-й период",
+"p": 0.704,
+"result": null,
+"score": "0:0"
+}
 },
 {
 "sport": "basketball",
@@ -1630,8 +1646,8 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-20-memfis-grizzlis-golden-steyt-401910019.html",
-"hs": "3",
-"as": "0",
+"hs": "8",
+"as": "2",
 "tip": "ТМ 224.5 · 1.95",
 "top": false,
 "bot": {
@@ -1731,8 +1747,8 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-20-miluoki-baks-portlend-401910020.html",
-"hs": "0",
-"as": "0",
+"hs": "3",
+"as": "5",
 "tip": "ТМ 230.5 · 1.93",
 "top": false,
 "bot": {
@@ -1832,8 +1848,8 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-20-minnesota-timbervulvz-nyu-york-niks-401910021.html",
-"hs": "3",
-"as": "0",
+"hs": "7",
+"as": "2",
 "tip": "Ф2 (-1.5) · 1.98",
 "top": false,
 "bot": {
@@ -1933,8 +1949,8 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-20-san-antonio-spers-klippers-401910022.html",
-"hs": "2",
-"as": "4",
+"hs": "5",
+"as": "7",
 "tip": "ТБ 224.5 · 1.91",
 "top": false,
 "bot": {
@@ -2035,7 +2051,7 @@ null
 "bo": null,
 "prediction": "predictions/2026-11-20-chikago-kolambus-401892748.html",
 "hs": "0",
-"as": "0",
+"as": "1",
 "tip": "П2 (с ОТ и буллитами) · 1.62",
 "top": true,
 "bot": {
@@ -2166,7 +2182,7 @@ null
 "bo": null,
 "prediction": "predictions/2026-11-20-kalgari-minnesota-401892750.html",
 "hs": "0",
-"as": "0",
+"as": "1",
 "tip": "ТБ 6.5 · 2.02",
 "top": false,
 "bot": {
