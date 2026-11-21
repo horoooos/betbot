@@ -561,7 +561,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-21-gannover-groyter-401885054.html",
-"hs": "1",
+"hs": "2",
 "as": "1",
 "tip": "П1 · 1.70",
 "top": false,
@@ -881,7 +881,7 @@ null
 "bo": null,
 "prediction": "predictions/2026-11-21-blekpul-uigan-401880741.html",
 "hs": "1",
-"as": "1",
+"as": "2",
 "tip": "ТМ 2.5 · 2.07",
 "top": false,
 "bot": {
@@ -1170,7 +1170,7 @@ null
 "bo": null,
 "prediction": "predictions/2026-11-21-dzhillingem-kru-aleksandra-401881259.html",
 "hs": "2",
-"as": "1",
+"as": "2",
 "tip": "ТМ 2.5 · 1.81",
 "top": false,
 "bot": {
@@ -1729,28 +1729,28 @@ null
 "league": "Англия · Чемпионшип",
 "kickoff": "2026-11-21T15:30:00+03:00",
 "home": "Норвич Сити",
-"away": "Cardiff City",
+"away": "Кардифф Сити",
 "hl": "https://a.espncdn.com/i/teamlogos/soccer/500/381.png",
 "al": "https://a.espncdn.com/i/teamlogos/soccer/500/347.png",
 "hid": "381",
 "aid": "347",
 "bb": "https://betboom.ru/search?query=%D0%9D%D0%BE%D1%80%D0%B2%D0%B8%D1%87&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
 "path": "soccer/eng.2",
-"url": "live.html?s=football&p=soccer%2Feng.2&e=401880155&h=%D0%9D%D0%BE%D1%80%D0%B2%D0%B8%D1%87+%D0%A1%D0%B8%D1%82%D0%B8&a=Cardiff+City",
+"url": "live.html?s=football&p=soccer%2Feng.2&e=401880155&h=%D0%9D%D0%BE%D1%80%D0%B2%D0%B8%D1%87+%D0%A1%D0%B8%D1%82%D0%B8&a=%D0%9A%D0%B0%D1%80%D0%B4%D0%B8%D1%84%D1%84+%D0%A1%D0%B8%D1%82%D0%B8",
 "participants": [
 [
 "Норвич Сити",
 "Norwich City"
 ],
 [
-"Cardiff City",
+"Кардифф Сити",
 "Cardiff City"
 ]
 ],
 "div": "E1",
 "state": "in",
 "bo": null,
-"prediction": "predictions/2026-11-21-norvich-siti-cardiff-city-401880155.html",
+"prediction": "predictions/2026-11-21-norvich-siti-kardiff-siti-401880155.html",
 "hs": "1",
 "as": "1",
 "tip": "П1 · 1.74",
@@ -4127,107 +4127,6 @@ null
 "lt": null
 },
 {
-"sport": "esports",
-"id": "1816444",
-"league": "Киберспорт · Dota 2",
-"kickoff": "2026-11-21T17:00:00+03:00",
-"home": "Team Yandex",
-"away": "Natus Vincere",
-"hl": "https://cdn-api.pandascore.co/images/team/image/137073/249px_team_yandex_allmode.png",
-"al": "https://cdn-api.pandascore.co/images/team/image/1699/Na_vi_logo.png",
-"hid": "137073",
-"aid": "1699",
-"bb": "https://betboom.ru/search?query=%D0%AF%D0%BD%D0%B4%D0%B5%D0%BA%D1%81&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=esports",
-"path": "",
-"url": "dota.html?e=1816444&d=DOTA",
-"participants": [
-[
-"Team Yandex",
-"Team Yandex"
-],
-[
-"Natus Vincere",
-"Natus Vincere"
-]
-],
-"div": "DOTA",
-"state": "pre",
-"bo": 3,
-"prediction": "predictions/2026-11-21-team-yandex-natus-vincere-1816444.html",
-"hs": 0,
-"as": 0,
-"tip": "Всухую (2:0 или 0:2) · ≈1.41",
-"top": false,
-"bot": {
-"main": {
-"label": "Всухую (2:0 или 0:2)",
-"p": 0.662,
-"odds": 1.41,
-"est": true
-},
-"bold": null,
-"markets": [
-[
-"Победа: Team Yandex",
-0.881,
-null
-],
-[
-"Победа: Natus Vincere",
-0.119,
-null
-],
-[
-"Больше 2 карт",
-0.338,
-null
-],
-[
-"Всухую (2:0 или 0:2)",
-0.662,
-null
-],
-[
-"Счёт по картам 2:0",
-0.615,
-null
-],
-[
-"Счёт по картам 0:2",
-0.047,
-null
-],
-[
-"Счёт по картам 2:1",
-0.265,
-null
-],
-[
-"Счёт по картам 1:2",
-0.073,
-null
-],
-[
-"Team Yandex возьмёт хотя бы карту",
-0.953,
-null
-],
-[
-"Natus Vincere возьмёт хотя бы карту",
-0.385,
-null
-]
-],
-"bar": [
-0.8805105797194176,
-0,
-0.1194894202805824
-],
-"center": "BO3 · Эло 1845 : 1498"
-},
-"lt": null
-},
-{
 "sport": "football",
 "id": "401842882",
 "league": "Швеция · Аллсвенскан",
@@ -6423,26 +6322,127 @@ null
 "lt": null
 },
 {
+"sport": "esports",
+"id": "1816444",
+"league": "Киберспорт · Dota 2",
+"kickoff": "2026-11-21T18:00:00+03:00",
+"home": "Team Yandex",
+"away": "Natus Vincere",
+"hl": "https://cdn-api.pandascore.co/images/team/image/137073/249px_team_yandex_allmode.png",
+"al": "https://cdn-api.pandascore.co/images/team/image/1699/Na_vi_logo.png",
+"hid": "137073",
+"aid": "1699",
+"bb": "https://betboom.ru/search?query=%D0%AF%D0%BD%D0%B4%D0%B5%D0%BA%D1%81&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=esports",
+"path": "",
+"url": "dota.html?e=1816444&d=DOTA",
+"participants": [
+[
+"Team Yandex",
+"Team Yandex"
+],
+[
+"Natus Vincere",
+"Natus Vincere"
+]
+],
+"div": "DOTA",
+"state": "pre",
+"bo": 3,
+"prediction": "predictions/2026-11-21-team-yandex-natus-vincere-1816444.html",
+"hs": 0,
+"as": 0,
+"tip": "Всухую (2:0 или 0:2) · ≈1.41",
+"top": false,
+"bot": {
+"main": {
+"label": "Всухую (2:0 или 0:2)",
+"p": 0.662,
+"odds": 1.41,
+"est": true
+},
+"bold": null,
+"markets": [
+[
+"Победа: Team Yandex",
+0.881,
+null
+],
+[
+"Победа: Natus Vincere",
+0.119,
+null
+],
+[
+"Больше 2 карт",
+0.338,
+null
+],
+[
+"Всухую (2:0 или 0:2)",
+0.662,
+null
+],
+[
+"Счёт по картам 2:0",
+0.615,
+null
+],
+[
+"Счёт по картам 0:2",
+0.047,
+null
+],
+[
+"Счёт по картам 2:1",
+0.265,
+null
+],
+[
+"Счёт по картам 1:2",
+0.073,
+null
+],
+[
+"Team Yandex возьмёт хотя бы карту",
+0.953,
+null
+],
+[
+"Natus Vincere возьмёт хотя бы карту",
+0.385,
+null
+]
+],
+"bar": [
+0.8805105797194176,
+0,
+0.1194894202805824
+],
+"center": "BO3 · Эло 1845 : 1498"
+},
+"lt": null
+},
+{
 "sport": "football",
 "id": "401843489",
 "league": "Норвегия · Элитсерия",
 "kickoff": "2026-11-21T18:00:00+03:00",
 "home": "Hamarkameratene",
-"away": "Fredrikstad",
+"away": "Фредрикстад",
 "hl": "https://a.espncdn.com/i/teamlogos/soccer/500/21380.png",
 "al": "https://a.espncdn.com/i/teamlogos/soccer/500/3039.png",
 "hid": "21380",
 "aid": "3039",
 "bb": "https://betboom.ru/search?query=%D0%A5%D0%B0%D0%BC%D0%B0%D1%80%D0%BA%D0%B0%D0%BC%D0%B5%D1%80%D0%B0%D1%82%D0%B5%D0%BD%D0%B5&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
 "path": "soccer/nor.1",
-"url": "live.html?s=football&p=soccer%2Fnor.1&e=401843489&h=Hamarkameratene&a=Fredrikstad",
+"url": "live.html?s=football&p=soccer%2Fnor.1&e=401843489&h=Hamarkameratene&a=%D0%A4%D1%80%D0%B5%D0%B4%D1%80%D0%B8%D0%BA%D1%81%D1%82%D0%B0%D0%B4",
 "participants": [
 [
 "Hamarkameratene",
 "Hamarkameratene"
 ],
 [
-"Fredrikstad",
+"Фредрикстад",
 "Fredrikstad"
 ]
 ],
@@ -6673,21 +6673,21 @@ null
 "league": "Шотландия · Чемпионшип",
 "kickoff": "2026-11-21T18:00:00+03:00",
 "home": "Данфермлин Атлетик",
-"away": "Greenock Morton",
+"away": "Гринок Мортон",
 "hl": "https://a.espncdn.com/i/teamlogos/soccer/500/265.png",
 "al": "https://a.espncdn.com/i/teamlogos/soccer/500/411.png",
 "hid": "265",
 "aid": "411",
 "bb": "https://betboom.ru/search?query=%D0%94%D0%B0%D0%BD%D1%84%D0%B5%D1%80%D0%BC%D0%BB%D0%B8%D0%BD&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
 "path": "soccer/sco.2",
-"url": "live.html?s=football&p=soccer%2Fsco.2&e=401878520&h=%D0%94%D0%B0%D0%BD%D1%84%D0%B5%D1%80%D0%BC%D0%BB%D0%B8%D0%BD+%D0%90%D1%82%D0%BB%D0%B5%D1%82%D0%B8%D0%BA&a=Greenock+Morton",
+"url": "live.html?s=football&p=soccer%2Fsco.2&e=401878520&h=%D0%94%D0%B0%D0%BD%D1%84%D0%B5%D1%80%D0%BC%D0%BB%D0%B8%D0%BD+%D0%90%D1%82%D0%BB%D0%B5%D1%82%D0%B8%D0%BA&a=%D0%93%D1%80%D0%B8%D0%BD%D0%BE%D0%BA+%D0%9C%D0%BE%D1%80%D1%82%D0%BE%D0%BD",
 "participants": [
 [
 "Данфермлин Атлетик",
 "Dunfermline Athletic"
 ],
 [
-"Greenock Morton",
+"Гринок Мортон",
 "Greenock Morton"
 ]
 ],
@@ -6708,21 +6708,21 @@ null
 "league": "Шотландия · Чемпионшип",
 "kickoff": "2026-11-21T18:00:00+03:00",
 "home": "Куинз Парк",
-"away": "Livingston",
+"away": "Ливингстон",
 "hl": "https://a.espncdn.com/i/teamlogos/soccer/500/422.png",
 "al": "https://a.espncdn.com/i/teamlogos/soccer/500/259.png",
 "hid": "422",
 "aid": "259",
 "bb": "https://betboom.ru/search?query=%D0%9A%D1%83%D0%B8%D0%BD%D0%B7&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
 "path": "soccer/sco.2",
-"url": "live.html?s=football&p=soccer%2Fsco.2&e=401878518&h=%D0%9A%D1%83%D0%B8%D0%BD%D0%B7+%D0%9F%D0%B0%D1%80%D0%BA&a=Livingston",
+"url": "live.html?s=football&p=soccer%2Fsco.2&e=401878518&h=%D0%9A%D1%83%D0%B8%D0%BD%D0%B7+%D0%9F%D0%B0%D1%80%D0%BA&a=%D0%9B%D0%B8%D0%B2%D0%B8%D0%BD%D0%B3%D1%81%D1%82%D0%BE%D0%BD",
 "participants": [
 [
 "Куинз Парк",
 "Queen's Park"
 ],
 [
-"Livingston",
+"Ливингстон",
 "Livingston"
 ]
 ],
