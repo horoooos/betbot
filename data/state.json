@@ -7,7 +7,6 @@
  "schedule_day": "2026-11-21",
  "content_slot": "2026-11-21-20",
  "news_seen": [
-  "https://www.sport-express.ru/football/rusteam/news/galickiy-posetil-razdevalku-sbornoy-rossii-posle-pobedy-nad-venesueloy-2476283/",
   "https://www.sport-express.ru/football/england/news/aston-villa-prodlila-kontrakt-s-poluzaschitnikom-onana-2476252/",
   "https://www.sport-express.ru/football/nation-league/news/napadayuschiy-nanni-stal-pervym-v-istorii-sbornoy-san-marino-avtorom-dublya-statistika-17-noyabrya-2026-2476259/",
   "https://www.sport-express.ru/football/nation-league/news/napadayuschiy-sbornoy-norvegii-erling-holann-dovel-svoy-rekord-po-chislu-golov-v-lige-naciy-uefa-do-25-myachey-2476258/",
@@ -506,9 +505,10 @@
   "https://www.sport-express.ru/football/italy/news/komo-kalyari-schet-i-rezultat-matcha-12-tura-serii-a-21-noyabrya-2026-2477384/",
   "https://www.sport-express.ru/football/rfpl/news/rubin-zenit-hodzha-zabil-tretiy-gol-v-vorota-peterburgskoy-komandy-2477385/",
   "https://www.sport-express.ru/football/rus_d1/news/sochi-veles-shinnik-neftehimik-schet-i-rezultaty-matchey-18-tura-fnl-21-noyabrya-2026-2477383/",
-  "https://www.sport-express.ru/football/rfpl/news/cska-ahmat-startovye-sostavy-na-match-15-tura-rpl-21-noyabrya-2026-2477380/"
+  "https://www.sport-express.ru/football/rfpl/news/cska-ahmat-startovye-sostavy-na-match-15-tura-rpl-21-noyabrya-2026-2477380/",
+  "https://www.sport-express.ru/football/rfpl/news/bulykin-kuzmin-zasluzhil-polnocennyy-shans-v-rubine-2477398/"
  ],
- "news_i": 4,
+ "news_i": 1,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1680,7 +1680,7 @@
  "streak_day": {
   "2026-11-20": 2
  },
- "news_next": "2026-11-21T20:20:12.804839+03:00",
+ "news_next": "2026-11-21T20:51:16.280345+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1928,7 +1928,8 @@
   "https://images.cybersport.ru/images/as-is/plain/3f/3f005337-a5ed-41be-a15b-cef45d73c17d.jpg",
   "https://upload.wikimedia.org/wikipedia/commons/9/94/2015_UEFA_Super_Cup_105.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
   "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e5/Wisconsin_Badgers_football_fans_09-15-2012_089_%287997657762%29.jpg/1280px-Wisconsin_Badgers_football_fans_09-15-2012_089_%287997657762%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-  "https://upload.wikimedia.org/wikipedia/commons/4/4f/Joao_Victor_2011.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+  "https://upload.wikimedia.org/wikipedia/commons/4/4f/Joao_Victor_2011.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/Stonebridge_Road_Football_Stadium%2C_Northfleet_-_geograph.org.uk_-_5740557.jpg/1280px-Stonebridge_Road_Football_Stadium%2C_Northfleet_-_geograph.org.uk_-_5740557.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
  ],
  "indexnow_day": "2026-11-21",
  "vk_wall_err": null,
@@ -2230,7 +2231,8 @@
   "8108",
   "8143",
   "8192",
-  "8234"
+  "8234",
+  "8299"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -2464,11 +2466,12 @@
   "2026-11-21:новость:e6f7bd71910d42f5fa0f24b9",
   "2026-11-21:новость:2c261509369e79d375b43d0d",
   "2026-11-21:новость:1d4ae436e06374860b6b0db0",
-  "2026-11-21:новость:fcd7e369f898a23b20ca266b"
+  "2026-11-21:новость:fcd7e369f898a23b20ca266b",
+  "2026-11-21:новость:de0ab243c0ba229aa603a683"
  ],
  "dz_last_delivery": {
-  "source_id": 8234,
-  "message_id": 780,
+  "source_id": 8299,
+  "message_id": 781,
   "kind": "новость"
  },
  "learn_attempt_day": "2026-11-21",
@@ -2558,7 +2561,7 @@
   "quote_matches": 23
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-21T20:19:16.970696+03:00",
+  "last_poll": "2026-11-21T20:21:16.280345+03:00",
   "cursor": "226",
   "posts": [
    {
