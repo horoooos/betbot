@@ -1,41 +1,6 @@
 [
 {
 "sport": "football",
-"id": "401879800",
-"league": "Россия · Премьер-лига",
-"kickoff": "2026-11-21T15:15:00+03:00",
-"home": "Акрон",
-"away": "Факел",
-"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/22271.png",
-"al": "https://a.espncdn.com/i/teamlogos/soccer/500/21539.png",
-"hid": "22271",
-"aid": "21539",
-"bb": "https://betboom.ru/search?query=%D0%90%D0%BA%D1%80%D0%BE%D0%BD&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
-"path": "soccer/rus.1",
-"url": "live.html?s=football&p=soccer%2Frus.1&e=401879800&h=%D0%90%D0%BA%D1%80%D0%BE%D0%BD&a=%D0%A4%D0%B0%D0%BA%D0%B5%D0%BB",
-"participants": [
-[
-"Акрон",
-"Akron Tolyatti"
-],
-[
-"Факел",
-"Fakel Voronezh"
-]
-],
-"div": "RUS",
-"state": "post",
-"bo": null,
-"prediction": "",
-"hs": "0",
-"as": "2",
-"tip": "",
-"top": false,
-"bot": null,
-"lt": null
-},
-{
-"sport": "football",
 "id": "401880741",
 "league": "Англия · Лига 1",
 "kickoff": "2026-11-21T15:30:00+03:00",
@@ -4533,7 +4498,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-21-bredford-siti-donkaster-401880740.html",
-"hs": "0",
+"hs": "1",
 "as": "0",
 "tip": "П1 · 1.64",
 "top": false,
@@ -7587,7 +7552,7 @@ null
 "bo": null,
 "prediction": "predictions/2026-11-21-chelsi-lids-yunayted-401879236.html",
 "hs": "1",
-"as": "1",
+"as": "2",
 "tip": "П1 · 1.87",
 "top": false,
 "bot": {
@@ -10109,7 +10074,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-21-kilmarnok-aberdin-401878334.html",
-"hs": "1",
+"hs": "2",
 "as": "3",
 "tip": "ТБ 2.5 · 1.66",
 "top": false,
@@ -11117,7 +11082,7 @@ null
 "bo": null,
 "prediction": "predictions/2026-11-21-nek-psv-401875541.html",
 "hs": "0",
-"as": "2",
+"as": "3",
 "tip": "П2 · 1.72",
 "top": false,
 "bot": {
@@ -11690,7 +11655,7 @@ null
 ]
 ],
 "div": "I2",
-"state": "pre",
+"state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-21-katandzaro-palermo-401899545.html",
 "hs": "0",
@@ -11813,107 +11778,6 @@ null
 "lt": null
 },
 {
-"sport": "esports",
-"id": "1816445",
-"league": "Киберспорт · Dota 2",
-"kickoff": "2026-11-21T19:15:00+03:00",
-"home": "PlayTime",
-"away": "OG",
-"hl": "https://cdn-api.pandascore.co/images/team/image/137885/585px_play_time_allmode.png",
-"al": "https://cdn-api.pandascore.co/images/team/image/1654/438px_og_2026_allmode.png",
-"hid": "137885",
-"aid": "1654",
-"bb": "https://betboom.ru/search?query=%D0%9F%D0%BB%D1%8D%D0%B9%D1%82%D0%B8%D0%BC%D0%B5&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=esports",
-"path": "",
-"url": "dota.html?e=1816445&d=DOTA",
-"participants": [
-[
-"PlayTime",
-"PlayTime"
-],
-[
-"OG",
-"OG"
-]
-],
-"div": "DOTA",
-"state": "pre",
-"bo": 3,
-"prediction": "predictions/2026-11-21-playtime-og-1816445.html",
-"hs": 0,
-"as": 0,
-"tip": "Всухую (2:0 или 0:2) · ≈1.71",
-"top": false,
-"bot": {
-"main": {
-"label": "Всухую (2:0 или 0:2)",
-"p": 0.545,
-"odds": 1.71,
-"est": true
-},
-"bold": null,
-"markets": [
-[
-"Победа: PlayTime",
-0.282,
-null
-],
-[
-"Победа: OG",
-0.718,
-null
-],
-[
-"Больше 2 карт",
-0.455,
-null
-],
-[
-"Всухую (2:0 или 0:2)",
-0.545,
-null
-],
-[
-"Счёт по картам 2:0",
-0.123,
-null
-],
-[
-"Счёт по картам 0:2",
-0.422,
-null
-],
-[
-"Счёт по картам 2:1",
-0.159,
-null
-],
-[
-"Счёт по картам 1:2",
-0.296,
-null
-],
-[
-"PlayTime возьмёт хотя бы карту",
-0.578,
-null
-],
-[
-"OG возьмёт хотя бы карту",
-0.877,
-null
-]
-],
-"bar": [
-0.2822482574497918,
-0,
-0.7177517425502082
-],
-"center": "BO3 · Эло 1466 : 1628"
-},
-"lt": null
-},
-{
 "sport": "football",
 "id": "401876398",
 "league": "Франция · Лига 1",
@@ -11938,7 +11802,7 @@ null
 ]
 ],
 "div": "F1",
-"state": "pre",
+"state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-21-nitstsa-pszh-401876398.html",
 "hs": "0",
@@ -12052,6 +11916,107 @@ null
 ],
 "corners": 9.4,
 "cards": 3.0
+},
+"lt": null
+},
+{
+"sport": "esports",
+"id": "1816445",
+"league": "Киберспорт · Dota 2",
+"kickoff": "2026-11-21T19:15:06+03:00",
+"home": "PlayTime",
+"away": "OG",
+"hl": "https://cdn-api.pandascore.co/images/team/image/137885/585px_play_time_allmode.png",
+"al": "https://cdn-api.pandascore.co/images/team/image/1654/438px_og_2026_allmode.png",
+"hid": "137885",
+"aid": "1654",
+"bb": "https://betboom.ru/search?query=%D0%9F%D0%BB%D1%8D%D0%B9%D1%82%D0%B8%D0%BC%D0%B5&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=esports",
+"path": "",
+"url": "dota.html?e=1816445&d=DOTA",
+"participants": [
+[
+"PlayTime",
+"PlayTime"
+],
+[
+"OG",
+"OG"
+]
+],
+"div": "DOTA",
+"state": "in",
+"bo": 3,
+"prediction": "predictions/2026-11-21-playtime-og-1816445.html",
+"hs": 0,
+"as": 0,
+"tip": "Всухую (2:0 или 0:2) · ≈1.71",
+"top": false,
+"bot": {
+"main": {
+"label": "Всухую (2:0 или 0:2)",
+"p": 0.545,
+"odds": 1.71,
+"est": true
+},
+"bold": null,
+"markets": [
+[
+"Победа: PlayTime",
+0.282,
+null
+],
+[
+"Победа: OG",
+0.718,
+null
+],
+[
+"Больше 2 карт",
+0.455,
+null
+],
+[
+"Всухую (2:0 или 0:2)",
+0.545,
+null
+],
+[
+"Счёт по картам 2:0",
+0.123,
+null
+],
+[
+"Счёт по картам 0:2",
+0.422,
+null
+],
+[
+"Счёт по картам 2:1",
+0.159,
+null
+],
+[
+"Счёт по картам 1:2",
+0.296,
+null
+],
+[
+"PlayTime возьмёт хотя бы карту",
+0.578,
+null
+],
+[
+"OG возьмёт хотя бы карту",
+0.877,
+null
+]
+],
+"bar": [
+0.2822482574497918,
+0,
+0.7177517425502082
+],
+"center": "BO3 · Эло 1466 : 1628"
 },
 "lt": null
 },
