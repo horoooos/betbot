@@ -7,7 +7,6 @@
  "schedule_day": "2026-11-21",
  "content_slot": "2026-11-21-23",
  "news_seen": [
-  "https://www.sport-express.ru/hockey/khl/news/lokomotiv-podpisal-kontrakt-s-napadayuschim-frezom-do-konca-sezona-2476294/",
   "https://www.sport-express.ru/artistic-gymnastics/news/melnikova-nazvala-osnovnye-otlichiya-bolelschikov-v-rossii-i-ssha-2476292/",
   "https://www.sport-express.ru/hockey/khl/news/trenerskiy-shtab-minskogo-dinamo-vystupaet-protiv-priglasheniya-kuznecova-2476254/",
   "https://www.sport-express.ru/hockey/khl/news/orehovskiy-stanet-glavnym-trenerom-moskovskogo-dinamo-yakubov-stanet-ego-assistentom-2476239/",
@@ -506,9 +505,10 @@
   "og-vybila-playtime-iz-blast-slam-ix",
   "team-yandex-i-navi-poshli-v-razmen-tronami-watson-okazalsya-bystreye",
   "https://www.sport-express.ru/football/rfpl/news/melkadze-nazval-stoprocentnym-penalti-v-matche-ahmata-s-cska-2477453/",
-  "v-gosdume-proidet-kruglyi-stol-gde-obsudyat-problemu-blokirovok-v-rf-v-nem"
+  "v-gosdume-proidet-kruglyi-stol-gde-obsudyat-problemu-blokirovok-v-rf-v-nem",
+  "https://www.sport-express.ru/football/rfpl/news/trener-cska-igdisamov-na-igru-s-ahmatom-povliyal-penalti-kotorogo-ne-bylo-ochen-strannoe-naznachenie-2477462/"
  ],
- "news_i": 0,
+ "news_i": 1,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1552,7 +1552,7 @@
  "value_day": "2026-11-21",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-21",
- "site_stamp": "1382|8463|2026-11-21 23|4|c05b5af47ca8ea8f",
+ "site_stamp": "1383|8467|2026-11-21 23|4|d238c6fa81737263",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1682,7 +1682,7 @@
  "streak_day": {
   "2026-11-20": 2
  },
- "news_next": "2026-11-21T23:16:11.996697+03:00",
+ "news_next": "2026-11-21T23:47:50.501017+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1706,7 +1706,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 8463,
+ "dz_last": 8467,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -1935,7 +1935,8 @@
   "https://upload.wikimedia.org/wikipedia/commons/2/2e/AdvocaatZenit.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
   "https://upload.wikimedia.org/wikipedia/commons/7/70/Bulykin_%28original%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
   "https://upload.wikimedia.org/wikipedia/commons/2/20/KuzminLoko.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-  "https://images.cybersport.ru/images/as-is/plain/45/4583cecf-c248-464f-acc7-3d29d6200781.jpg"
+  "https://images.cybersport.ru/images/as-is/plain/45/4583cecf-c248-464f-acc7-3d29d6200781.jpg",
+  "https://upload.wikimedia.org/wikipedia/commons/8/8c/Mehmet_Nazif%27s_%28Ger%C3%A7in%29_injury_in_Fenerbah%C3%A7e-Galatasaray_match_in_10_May_1929.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
  ],
  "indexnow_day": "2026-11-21",
  "vk_wall_err": null,
@@ -2242,7 +2243,8 @@
   "8324",
   "8359",
   "8402",
-  "8434"
+  "8434",
+  "8468"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -2481,11 +2483,12 @@
   "2026-11-21:новость:d0d44a652e72ad154ae9e310",
   "2026-11-21:новость:b073229187e06154490977dd",
   "2026-11-21:новость:0d6f30fb39c6744dd528fc52",
-  "2026-11-21:новость:de0739767eb1635954ad9652"
+  "2026-11-21:новость:de0739767eb1635954ad9652",
+  "2026-11-21:новость:33f8d23de28510e295d3c239"
  ],
  "dz_last_delivery": {
-  "source_id": 8434,
-  "message_id": 785,
+  "source_id": 8468,
+  "message_id": 786,
   "kind": "новость"
  },
  "learn_attempt_day": "2026-11-21",
@@ -2511,9 +2514,9 @@
   "model": {
    "weight": 0.0,
    "status": "collecting",
-   "settled_matches": 74,
+   "settled_matches": 75,
    "required_matches": 100,
-   "trained_at": "2026-11-21T19:36:18.939705+00:00"
+   "trained_at": "2026-11-21T20:16:50.501017+00:00"
   },
   "sport_models": {
    "hockey": {
@@ -2575,77 +2578,9 @@
   "quote_matches": 23
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-21T23:10:10.930430+03:00",
-  "cursor": "232",
+  "last_poll": "2026-11-21T23:16:50.501017+03:00",
+  "cursor": "241",
   "posts": [
-   {
-    "post_id": 628,
-    "url": "https://vk.com/wall-228963529_628",
-    "title": "Карседо вернулся в «Спартак»: избавление от чувства незавершённости",
-    "text": "рџ± Карседо вернулся в «Спартак», чтобы закрыть незавершённую главу!",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": false,
-     "details_present": false,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-20T18:22:23.066638+03:00"
-   },
-   {
-    "post_id": 629,
-    "url": "https://vk.com/wall-228963529_629",
-    "title": "Дарья Autodestruction о патче 7.42 и непредсказуемом BLAST Slam IX",
-    "text": "рџ’Ґ Патч 7.42 уже меняет правила игры, а BLAST Slam IX превратится в полную непредсказуемость!",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": false,
-     "details_present": false,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-20T19:26:22.194760+03:00"
-   },
-   {
-    "post_id": 630,
-    "url": "https://vk.com/wall-228963529_630",
-    "title": "Билялетдинов о назначении Овчинникова: «Надеюсь, «Локомотив» тронется»",
-    "text": "рџ“° Бывший главный тренер «Локомотива» Ринат Билялетдинов прокомментировал недавнее назначение Сергея Овчинникова старшим тренером клуба.",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": false,
-     "details_present": false,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-20T19:26:22.194760+03:00"
-   },
-   {
-    "post_id": 631,
-    "url": "https://vk.com/wall-228963529_631",
-    "title": "Мартинс вернулся в общую группу, Зорин готовится к возвращению",
-    "text": "рџ± Мартинс уже в общей группе, а Зорин снова качается в зале – готовимся к матчу с «Динамо»!",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": false,
-     "details_present": false,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-20T20:28:22.614887+03:00"
-   },
    {
     "post_id": 632,
     "url": "https://vk.com/wall-228963529_632",
@@ -3087,6 +3022,74 @@
     },
     "status": "needs_review",
     "observed_at": "2026-11-21T22:11:32.140546+03:00"
+   },
+   {
+    "post_id": 682,
+    "url": "https://vk.com/wall-228963529_682",
+    "title": "Кузьмин поздравил «Рубин» после триумфа над «Зенитом» (3:1)",
+    "text": "рџ“° «Рубин» разгромил «Зенит» со счётом 3:1 в 15-м туре РПЛ, и главный тренер Олег Кузьмин сразу же обратился к своим игрокам. Победа стала четвёртым поражением для лидера чемпионата, который теперь имеет 31 очко.",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": false,
+     "details_present": false,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-21T23:16:50.501017+03:00"
+   },
+   {
+    "post_id": 686,
+    "url": "https://vk.com/wall-228963529_686",
+    "title": "LIVE-прогноз не зашёл: ТБ 1.5 · итог 0:1",
+    "text": "рџ“Љ LIVE-прогнозы бота: 112 из 158.",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": false,
+     "details_present": false,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-21T23:16:50.501017+03:00"
+   },
+   {
+    "post_id": 688,
+    "url": "https://vk.com/wall-228963529_688",
+    "title": "Стримеры и киберспортсмены обсудят блокировки в Госдуме",
+    "text": "рџ“° 3 декабря в стенах Государственной думы состоится уникальный круглый стол, где стримеры, киберспортсмены и общественные деятели соберутся обсудить растущую проблему блокировок онлайн-сервисов в России.",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": false,
+     "details_present": false,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-21T23:16:50.501017+03:00"
+   },
+   {
+    "post_id": 689,
+    "url": "https://vk.com/wall-228963529_689",
+    "title": "LIVE-прогноз не зашёл: X2 · итог 3:1",
+    "text": "рџ“Љ LIVE-прогнозы бота: 112 из 157.",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": false,
+     "details_present": false,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-21T23:16:50.501017+03:00"
    }
   ],
   "status": "observing"
