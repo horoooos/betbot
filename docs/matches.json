@@ -548,8 +548,8 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-21-denver-naggets-hyuston-rokets-401909312.html",
-"hs": "108",
-"as": "109",
+"hs": "117",
+"as": "115",
 "tip": "Ф2 (-1.5) · 1.91",
 "top": false,
 "bot": {
@@ -646,11 +646,11 @@ null
 ]
 ],
 "div": "NBA",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "predictions/2026-11-21-leykers-sakramento-kingz-401909313.html",
-"hs": "101",
-"as": "99",
+"hs": "106",
+"as": "104",
 "tip": "ТМ 229.5 · 1.87",
 "top": false,
 "bot": {
@@ -8107,6 +8107,41 @@ null
 ]
 ],
 "div": "RUS",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "football",
+"id": "401875545",
+"league": "Нидерланды · Эредивизи",
+"kickoff": "2026-11-22T14:15:00+03:00",
+"home": "Твенте",
+"away": "Виллем II",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/152.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/156.png",
+"hid": "152",
+"aid": "156",
+"bb": "https://betboom.ru/search?query=%D0%A2%D0%B2%D0%B5%D0%BD%D1%82%D0%B5&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/ned.1",
+"url": "live.html?s=football&p=soccer%2Fned.1&e=401875545&h=%D0%A2%D0%B2%D0%B5%D0%BD%D1%82%D0%B5&a=%D0%92%D0%B8%D0%BB%D0%BB%D0%B5%D0%BC+II",
+"participants": [
+[
+"Твенте",
+"FC Twente"
+],
+[
+"Виллем II",
+"Willem II"
+]
+],
+"div": "N1",
 "state": "pre",
 "bo": null,
 "prediction": "",
