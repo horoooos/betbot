@@ -7730,25 +7730,25 @@
   "kickoff": "2026-11-21T21:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Sat, November 21st at 1:00 PM EST",
   "clock": "0:00",
   "period": 0,
   "home": {
+   "color": "e30426",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/car.png",
    "id": "7",
    "name": "Carolina Hurricanes",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/car.png",
-   "color": "e30426",
    "score": "0",
    "record": "16-3-3",
    "periods": [],
    "ru": "Каролина"
   },
   "away": {
+   "color": "00205b",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/edm.png",
    "id": "6",
    "name": "Edmonton Oilers",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/edm.png",
-   "color": "00205b",
    "score": "0",
    "record": "17-4-3",
    "periods": [],
@@ -7851,7 +7851,9 @@
   "btn": 4,
   "close": {
    "HK_O6.5": 0.4572
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null
  },
  "NBA|401910023": {
   "id": "401910023",
