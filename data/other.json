@@ -7399,22 +7399,22 @@
   "state": "pre",
   "completed": false,
   "tier": "a",
-  "status": "reviewed",
+  "status": "done",
   "home": {
+   "color": "3b4a7a",
+   "logo": "https://cdn-api.pandascore.co/images/team/image/1669/153px_team_spirit_2022_lightmode.png",
    "id": "1669",
    "name": "Team Spirit",
    "ru": "Team Spirit",
-   "logo": "https://cdn-api.pandascore.co/images/team/image/1669/153px_team_spirit_2022_lightmode.png",
-   "color": "3b4a7a",
    "score": 0,
    "winner": false
   },
   "away": {
+   "color": "3b4a7a",
+   "logo": "https://cdn-api.pandascore.co/images/team/image/128329/t72899.png",
    "id": "128329",
    "name": "Xtreme Gaming",
    "ru": "Xtreme Gaming",
-   "logo": "https://cdn-api.pandascore.co/images/team/image/128329/t72899.png",
-   "color": "3b4a7a",
    "score": 0,
    "winner": false
   },
@@ -7481,7 +7481,9 @@
   "close": {
    "_": null
   },
-  "settlement_retry_at": 1795302642.854904
+  "settlement_retry_at": 1795303688.68973,
+  "main_hit": false,
+  "bold_hit": null
  },
  "DOTA|1816445": {
   "id": "1816445",
