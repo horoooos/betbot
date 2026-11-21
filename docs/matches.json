@@ -2293,7 +2293,7 @@ null
 ]
 ],
 "div": "T1",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "predictions/2026-11-21-amedspor-kaykur-rizespor-401888369.html",
 "hs": "0",
@@ -2419,7 +2419,7 @@ null
 "min_odds": 1.59,
 "minute": "26'",
 "p": 0.659,
-"result": null,
+"result": "hit",
 "score": "0:1"
 }
 },
@@ -2448,7 +2448,7 @@ null
 ]
 ],
 "div": "T1",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "predictions/2026-11-21-galatasaray-samsunspor-401888245.html",
 "hs": "2",
@@ -2569,7 +2569,7 @@ null
 "min_odds": 1.34,
 "minute": "25'",
 "p": 0.785,
-"result": null,
+"result": "hit",
 "score": "1:0"
 }
 },
@@ -2598,7 +2598,7 @@ null
 ]
 ],
 "div": "F2",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "predictions/2026-11-21-stad-laval-monpele-401876689.html",
 "hs": "1",
@@ -4813,7 +4813,15 @@ null
 "corners": 11.3,
 "cards": 3.7
 },
-"lt": null
+"lt": {
+"fair": 1.54,
+"label": "X2",
+"min_odds": 1.62,
+"minute": "25'",
+"p": 0.648,
+"result": null,
+"score": "0:0"
+}
 },
 {
 "sport": "football",
