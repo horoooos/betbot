@@ -1,432 +1,6 @@
 [
 {
 "sport": "football",
-"id": "401885051",
-"league": "Германия · 2. Бундеслига",
-"kickoff": "2026-11-21T15:00:00+03:00",
-"home": "Нюрнберг",
-"away": "TSV Eintracht Braunschweig",
-"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/269.png",
-"al": "https://a.espncdn.com/i/teamlogos/soccer/500/3067.png",
-"hid": "269",
-"aid": "3067",
-"bb": "https://betboom.ru/search?query=%D0%9D%D1%8E%D1%80%D0%BD%D0%B1%D0%B5%D1%80%D0%B3&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
-"path": "soccer/ger.2",
-"url": "live.html?s=football&p=soccer%2Fger.2&e=401885051&h=%D0%9D%D1%8E%D1%80%D0%BD%D0%B1%D0%B5%D1%80%D0%B3&a=TSV+Eintracht+Braunschweig",
-"participants": [
-[
-"Нюрнберг",
-"1. FC Nürnberg"
-],
-[
-"TSV Eintracht Braunschweig",
-"TSV Eintracht Braunschweig"
-]
-],
-"div": "D2",
-"state": "post",
-"bo": null,
-"prediction": "predictions/2026-11-21-nyurnberg-tsv-eintracht-braunschweig-401885051.html",
-"hs": "1",
-"as": "2",
-"tip": "П1 · 1.67",
-"top": false,
-"bot": {
-"main": {
-"label": "П1",
-"p": 0.55,
-"odds": 1.67,
-"est": false
-},
-"bold": null,
-"markets": [
-[
-"П1",
-0.55,
-1.769
-],
-[
-"Ничья",
-0.226,
-4.1
-],
-[
-"П2",
-0.224,
-3.95
-],
-[
-"1X",
-0.776,
-null
-],
-[
-"X2",
-0.45,
-null
-],
-[
-"ТБ 1.5",
-0.854,
-null
-],
-[
-"ТБ 2.5",
-0.65,
-null
-],
-[
-"ТМ 2.5",
-0.35,
-null
-],
-[
-"ТБ 3.5",
-0.43,
-2.2
-],
-[
-"Обе забьют — да",
-0.637,
-null
-],
-[
-"Обе забьют — нет",
-0.363,
-null
-],
-[
-"ИТ1 больше 1.5",
-0.613,
-null
-],
-[
-"ИТ2 больше 1.5",
-0.364,
-null
-],
-[
-"Ф1 (−1.5)",
-0.335,
-null
-],
-[
-"Ф2 (+1.5)",
-0.665,
-null
-]
-],
-"bar": [
-0.5497883560697174,
-0.2259014491579149,
-0.22431019477236738
-],
-"center": "Ожидаемые голы (xG) 2.1 : 1.3",
-"scores": [
-[
-"1:1",
-0.1
-],
-[
-"2:1",
-0.096
-],
-[
-"2:0",
-0.076
-]
-],
-"corners": 10.7,
-"cards": 4.6
-},
-"lt": null
-},
-{
-"sport": "football",
-"id": "401885054",
-"league": "Германия · 2. Бундеслига",
-"kickoff": "2026-11-21T15:00:00+03:00",
-"home": "Ганновер",
-"away": "Гройтер",
-"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/2428.png",
-"al": "https://a.espncdn.com/i/teamlogos/soccer/500/3070.png",
-"hid": "2428",
-"aid": "3070",
-"bb": "https://betboom.ru/search?query=%D0%93%D0%B0%D0%BD%D0%BD%D0%BE%D0%B2%D0%B5%D1%80&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
-"path": "soccer/ger.2",
-"url": "live.html?s=football&p=soccer%2Fger.2&e=401885054&h=%D0%93%D0%B0%D0%BD%D0%BD%D0%BE%D0%B2%D0%B5%D1%80&a=%D0%93%D1%80%D0%BE%D0%B9%D1%82%D0%B5%D1%80",
-"participants": [
-[
-"Ганновер",
-"Hannover 96"
-],
-[
-"Гройтер",
-"SpVgg Greuther Fürth"
-]
-],
-"div": "D2",
-"state": "post",
-"bo": null,
-"prediction": "predictions/2026-11-21-gannover-groyter-401885054.html",
-"hs": "2",
-"as": "1",
-"tip": "П1 · 1.70",
-"top": false,
-"bot": {
-"main": {
-"label": "П1",
-"p": 0.54,
-"odds": 1.7,
-"est": false
-},
-"bold": null,
-"markets": [
-[
-"П1",
-0.54,
-1.625
-],
-[
-"Ничья",
-0.233,
-4.3
-],
-[
-"П2",
-0.227,
-4.7
-],
-[
-"1X",
-0.773,
-null
-],
-[
-"X2",
-0.46,
-null
-],
-[
-"ТБ 1.5",
-0.839,
-null
-],
-[
-"ТБ 2.5",
-0.623,
-null
-],
-[
-"ТМ 2.5",
-0.377,
-null
-],
-[
-"ТБ 3.5",
-0.401,
-2.3
-],
-[
-"Обе забьют — да",
-0.619,
-null
-],
-[
-"Обе забьют — нет",
-0.381,
-null
-],
-[
-"ИТ1 больше 1.5",
-0.589,
-null
-],
-[
-"ИТ2 больше 1.5",
-0.35,
-null
-],
-[
-"Ф1 (−1.5)",
-0.322,
-null
-],
-[
-"Ф2 (+1.5)",
-0.678,
-null
-]
-],
-"bar": [
-0.5396769802935931,
-0.23299167299927584,
-0.2273313467071305
-],
-"center": "Ожидаемые голы (xG) 2.0 : 1.2",
-"scores": [
-[
-"1:1",
-0.106
-],
-[
-"2:1",
-0.097
-],
-[
-"2:0",
-0.079
-]
-],
-"corners": 11.4,
-"cards": 3.6
-},
-"lt": null
-},
-{
-"sport": "football",
-"id": "401885056",
-"league": "Германия · 2. Бундеслига",
-"kickoff": "2026-11-21T15:00:00+03:00",
-"home": "Вольфсбург",
-"away": "Хольштайн Киль",
-"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/138.png",
-"al": "https://a.espncdn.com/i/teamlogos/soccer/500/7884.png",
-"hid": "138",
-"aid": "7884",
-"bb": "https://betboom.ru/search?query=%D0%92%D0%BE%D0%BB%D1%8C%D1%84%D1%81%D0%B1%D1%83%D1%80%D0%B3&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
-"path": "soccer/ger.2",
-"url": "live.html?s=football&p=soccer%2Fger.2&e=401885056&h=%D0%92%D0%BE%D0%BB%D1%8C%D1%84%D1%81%D0%B1%D1%83%D1%80%D0%B3&a=%D0%A5%D0%BE%D0%BB%D1%8C%D1%88%D1%82%D0%B0%D0%B9%D0%BD+%D0%9A%D0%B8%D0%BB%D1%8C",
-"participants": [
-[
-"Вольфсбург",
-"VfL Wolfsburg"
-],
-[
-"Хольштайн Киль",
-"Holstein Kiel"
-]
-],
-"div": "D2",
-"state": "post",
-"bo": null,
-"prediction": "predictions/2026-11-21-volfsburg-holshtayn-kil-401885056.html",
-"hs": "3",
-"as": "0",
-"tip": "П1 · 1.67",
-"top": false,
-"bot": {
-"main": {
-"label": "П1",
-"p": 0.552,
-"odds": 1.67,
-"est": false
-},
-"bold": null,
-"markets": [
-[
-"П1",
-0.552,
-1.571
-],
-[
-"Ничья",
-0.221,
-4.6
-],
-[
-"П2",
-0.227,
-4.9
-],
-[
-"1X",
-0.773,
-null
-],
-[
-"X2",
-0.448,
-null
-],
-[
-"ТБ 1.5",
-0.867,
-null
-],
-[
-"ТБ 2.5",
-0.672,
-null
-],
-[
-"ТМ 2.5",
-0.328,
-null
-],
-[
-"ТБ 3.5",
-0.455,
-2.0
-],
-[
-"Обе забьют — да",
-0.655,
-null
-],
-[
-"Обе забьют — нет",
-0.345,
-null
-],
-[
-"ИТ1 больше 1.5",
-0.629,
-null
-],
-[
-"ИТ2 больше 1.5",
-0.383,
-null
-],
-[
-"Ф1 (−1.5)",
-0.34,
-null
-],
-[
-"Ф2 (+1.5)",
-0.66,
-null
-]
-],
-"bar": [
-0.5517998704343635,
-0.22124265415160488,
-0.22695747541403122
-],
-"center": "Ожидаемые голы (xG) 2.1 : 1.3",
-"scores": [
-[
-"1:1",
-0.096
-],
-[
-"2:1",
-0.095
-],
-[
-"2:0",
-0.071
-]
-],
-"corners": 13.6,
-"cards": 4.6
-},
-"lt": null
-},
-{
-"sport": "football",
 "id": "401879800",
 "league": "Россия · Премьер-лига",
 "kickoff": "2026-11-21T15:15:00+03:00",
@@ -3527,7 +3101,7 @@ null
 ]
 ],
 "div": "I2",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "predictions/2026-11-21-zyuydtirol-kremoneze-401899540.html",
 "hs": "1",
@@ -4823,7 +4397,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "",
-"hs": "2",
+"hs": "3",
 "as": "1",
 "tip": "",
 "top": false,
@@ -11689,7 +11263,7 @@ null
 ]
 ],
 "div": "AUT",
-"state": "pre",
+"state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-21-lask-tsv-hartberg-401881749.html",
 "hs": "0",
@@ -11829,7 +11403,7 @@ null
 ]
 ],
 "div": "AUT",
-"state": "pre",
+"state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-21-tirol-austriya-401881744.html",
 "hs": "0",
@@ -11969,7 +11543,7 @@ null
 ]
 ],
 "div": "T1",
-"state": "pre",
+"state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-21-kodzhaelispor-fenerbahche-401888244.html",
 "hs": "0",
@@ -18489,6 +18063,111 @@ null
 ]
 ],
 "div": "ECU",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "football",
+"id": "401933761",
+"league": "Аргентина · Примера",
+"kickoff": "2026-11-23T01:00:00+03:00",
+"home": "Ривер Плейт",
+"away": "Ланус",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/16.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/12.png",
+"hid": "16",
+"aid": "12",
+"bb": "https://betboom.ru/search?query=%D0%A0%D0%B8%D0%B2%D0%B5%D1%80&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/arg.1",
+"url": "live.html?s=football&p=soccer%2Farg.1&e=401933761&h=%D0%A0%D0%B8%D0%B2%D0%B5%D1%80+%D0%9F%D0%BB%D0%B5%D0%B9%D1%82&a=%D0%9B%D0%B0%D0%BD%D1%83%D1%81",
+"participants": [
+[
+"Ривер Плейт",
+"River Plate"
+],
+[
+"Ланус",
+"Lanús"
+]
+],
+"div": "ARG",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "football",
+"id": "401876887",
+"league": "Коста-Рика · Примера",
+"kickoff": "2026-11-23T01:00:00+03:00",
+"home": "Inter de San Carlos",
+"away": "Sporting San José",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/131790.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/20705.png",
+"hid": "131790",
+"aid": "20705",
+"bb": "https://betboom.ru/search?query=%D0%9A%D0%B0%D1%80%D0%BB%D0%BE%D1%81&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/crc.1",
+"url": "live.html?s=football&p=soccer%2Fcrc.1&e=401876887&h=Inter+de+San+Carlos&a=Sporting+San+Jos%C3%A9",
+"participants": [
+[
+"Inter de San Carlos",
+"Inter de San Carlos"
+],
+[
+"Sporting San José",
+"Sporting San José"
+]
+],
+"div": "CRC",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "hockey",
+"id": "401892769",
+"league": "США · NHL",
+"kickoff": "2026-11-23T01:00:00+03:00",
+"home": "Тампа-Бэй",
+"away": "Баффало",
+"hl": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/tb.png",
+"al": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/buf.png",
+"hid": "20",
+"aid": "2",
+"bb": "https://betboom.ru/search?query=%D0%A2%D0%B0%D0%BC%D0%BF%D0%B0-%D0%91%D1%8D%D0%B9&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=hockey",
+"path": "hockey/nhl",
+"url": "live.html?s=hockey&p=hockey%2Fnhl&e=401892769&h=%D0%A2%D0%B0%D0%BC%D0%BF%D0%B0-%D0%91%D1%8D%D0%B9&a=%D0%91%D0%B0%D1%84%D1%84%D0%B0%D0%BB%D0%BE",
+"participants": [
+[
+"Тампа-Бэй",
+"Tampa Bay Lightning"
+],
+[
+"Баффало",
+"Buffalo Sabres"
+]
+],
+"div": "NHL",
 "state": "pre",
 "bo": null,
 "prediction": "",

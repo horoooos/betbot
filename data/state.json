@@ -5,7 +5,7 @@
  },
  "learned": "2026-11-21",
  "schedule_day": "2026-11-21",
- "content_slot": "2026-11-21-16",
+ "content_slot": "2026-11-21-19",
  "news_seen": [
   "na-cobblestone-v-cs2-nashli-paskhalku-s-zhutkim-poslaniyem",
   "razbirayeshsya-v-cs2-ugadai-chempiona-pgl-major-singapore-20261-i-poluchi-shans",
@@ -1550,7 +1550,7 @@
  "value_day": "2026-11-21",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-21",
- "site_stamp": "1311|8165|2026-11-21 18|4|6d48071af5865a96",
+ "site_stamp": "1313|8170|2026-11-21 19|4|2244dfd960d05875",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1712,7 +1712,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 8165,
+ "dz_last": 8170,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2538,14 +2538,14 @@
    }
   },
   "source": {
-   "last_success": "2026-11-21T15:39:18.593993+00:00",
-   "parsed": 355,
-   "added": 83,
-   "discovered_matches": 39,
+   "last_success": "2026-11-21T16:03:41.415749+00:00",
+   "parsed": 360,
+   "added": 89,
+   "discovered_matches": 45,
    "pages": 18,
    "errors": [],
    "parsed_by_sport": {
-    "soccer": 45,
+    "soccer": 50,
     "ice-hockey": 50,
     "basketball": 50,
     "tennis": 50,
@@ -2554,13 +2554,13 @@
    }
   },
   "error": null,
-  "tips": 9179,
-  "snapshots": 176,
-  "unmapped_markets": 13729,
+  "tips": 9224,
+  "snapshots": 179,
+  "unmapped_markets": 13773,
   "quote_matches": 23
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-21T18:59:08.570555+03:00",
+  "last_poll": "2026-11-21T19:03:41.415749+03:00",
   "cursor": "222",
   "posts": [
    {
