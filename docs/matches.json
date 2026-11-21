@@ -2898,7 +2898,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-21-latsio-lechche-401874981.html",
-"hs": "1",
+"hs": "2",
 "as": "0",
 "tip": "ТБ 2.5 · 1.55",
 "top": false,
@@ -5542,7 +5542,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-21-leyton-orient-uimbldon-401880736.html",
-"hs": "0",
+"hs": "1",
 "as": "0",
 "tip": "П1 · 1.74",
 "top": false,
@@ -7819,7 +7819,15 @@ null
 "corners": 9.0,
 "cards": 3.9
 },
-"lt": null
+"lt": {
+"fair": 1.62,
+"label": "ТБ 2.5",
+"min_odds": 1.7,
+"minute": "26'",
+"p": 0.618,
+"result": null,
+"score": "1:0"
+}
 },
 {
 "sport": "football",
@@ -7966,7 +7974,15 @@ null
 "corners": 8.9,
 "cards": 4.3
 },
-"lt": null
+"lt": {
+"fair": 1.55,
+"label": "ТБ 1.5",
+"min_odds": 1.63,
+"minute": "25'",
+"p": 0.644,
+"result": null,
+"score": "0:0"
+}
 },
 {
 "sport": "football",
@@ -8113,7 +8129,15 @@ null
 "corners": 10.9,
 "cards": 4.4
 },
-"lt": null
+"lt": {
+"fair": 1.56,
+"label": "ТБ 1.5",
+"min_odds": 1.63,
+"minute": "25'",
+"p": 0.643,
+"result": null,
+"score": "0:0"
+}
 },
 {
 "sport": "football",
@@ -8255,7 +8279,15 @@ null
 "corners": 8.3,
 "cards": 2.9
 },
-"lt": null
+"lt": {
+"fair": 1.5,
+"label": "ТБ 3.5",
+"min_odds": 1.58,
+"minute": "25'",
+"p": 0.666,
+"result": null,
+"score": "1:1"
+}
 },
 {
 "sport": "football",
@@ -8397,7 +8429,15 @@ null
 "corners": 9.6,
 "cards": 4.2
 },
-"lt": null
+"lt": {
+"fair": 1.54,
+"label": "ТМ 3.5",
+"min_odds": 1.61,
+"minute": "25'",
+"p": 0.651,
+"result": null,
+"score": "1:0"
+}
 },
 {
 "sport": "football",
@@ -8539,7 +8579,15 @@ null
 "corners": 10.3,
 "cards": 3.2
 },
-"lt": null
+"lt": {
+"fair": 1.47,
+"label": "1X",
+"min_odds": 1.54,
+"minute": "25'",
+"p": 0.68,
+"result": null,
+"score": "1:1"
+}
 },
 {
 "sport": "football",
@@ -8681,7 +8729,15 @@ null
 "corners": 9.7,
 "cards": 3.9
 },
-"lt": null
+"lt": {
+"fair": 1.44,
+"label": "1X",
+"min_odds": 1.51,
+"minute": "26'",
+"p": 0.694,
+"result": null,
+"score": "0:0"
+}
 },
 {
 "sport": "football",
@@ -8823,7 +8879,15 @@ null
 "corners": 11.6,
 "cards": 3.2
 },
-"lt": null
+"lt": {
+"fair": 1.53,
+"label": "П1",
+"min_odds": 1.61,
+"minute": "26'",
+"p": 0.652,
+"result": null,
+"score": "0:0"
+}
 },
 {
 "sport": "football",
@@ -8970,7 +9034,15 @@ null
 "corners": 10.0,
 "cards": 4.6
 },
-"lt": null
+"lt": {
+"fair": 1.55,
+"label": "ТБ 3.5",
+"min_odds": 1.63,
+"minute": "25'",
+"p": 0.646,
+"result": null,
+"score": "2:0"
+}
 },
 {
 "sport": "football",
@@ -9112,7 +9184,15 @@ null
 "corners": 9.1,
 "cards": 3.8
 },
-"lt": null
+"lt": {
+"fair": 1.46,
+"label": "1X",
+"min_odds": 1.53,
+"minute": "25'",
+"p": 0.684,
+"result": null,
+"score": "0:0"
+}
 },
 {
 "sport": "football",
@@ -9254,7 +9334,15 @@ null
 "corners": 10.2,
 "cards": 3.5
 },
-"lt": null
+"lt": {
+"fair": 1.44,
+"label": "X2",
+"min_odds": 1.51,
+"minute": "25'",
+"p": 0.694,
+"result": null,
+"score": "1:1"
+}
 },
 {
 "sport": "football",
@@ -9396,7 +9484,15 @@ null
 "corners": 12.5,
 "cards": 3.4
 },
-"lt": null
+"lt": {
+"fair": 1.32,
+"label": "1X",
+"min_odds": 1.39,
+"minute": "26'",
+"p": 0.758,
+"result": null,
+"score": "0:1"
+}
 },
 {
 "sport": "football",
@@ -9538,7 +9634,15 @@ null
 "corners": 10.9,
 "cards": 4.2
 },
-"lt": null
+"lt": {
+"fair": 1.51,
+"label": "ТМ 2.5",
+"min_odds": 1.58,
+"minute": "26'",
+"p": 0.664,
+"result": null,
+"score": "0:0"
+}
 },
 {
 "sport": "football",
