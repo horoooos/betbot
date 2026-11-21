@@ -3142,7 +3142,7 @@ null
 ]
 ],
 "div": "N1",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "predictions/2026-11-21-groningen-herenven-401875546.html",
 "hs": "1",
@@ -3263,7 +3263,7 @@ null
 "min_odds": 1.55,
 "minute": "29'",
 "p": 0.676,
-"result": null,
+"result": "hit",
 "score": "0:0"
 }
 },
@@ -3292,7 +3292,7 @@ null
 ]
 ],
 "div": "N1",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "predictions/2026-11-21-telstar-zvolle-401875539.html",
 "hs": "1",
@@ -3418,7 +3418,7 @@ null
 "min_odds": 1.62,
 "minute": "28'",
 "p": 0.646,
-"result": null,
+"result": "hit",
 "score": "1:1"
 }
 },
@@ -3447,11 +3447,11 @@ null
 ]
 ],
 "div": "SC0",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "predictions/2026-11-21-moteruell-reyndzhers-401878333.html",
 "hs": "1",
-"as": "1",
+"as": "2",
 "tip": "П2 · 1.54",
 "top": false,
 "bot": {
@@ -3982,7 +3982,7 @@ null
 "bo": null,
 "prediction": "predictions/2026-11-21-vitoriya-braga-401931814.html",
 "hs": "0",
-"as": "1",
+"as": "2",
 "tip": "ТМ 2.5 · 1.69",
 "top": false,
 "bot": {
@@ -4679,7 +4679,7 @@ null
 "sport": "tennis",
 "id": "186810",
 "league": "Теннис · WTA",
-"kickoff": "2026-11-22T01:00:00+03:00",
+"kickoff": "2026-11-22T01:10:00+03:00",
 "home": "Гуйомар Маристани",
 "away": "Ребека Масарова",
 "hl": "https://a.espncdn.com/i/teamlogos/countries/500/esp.png",
@@ -4948,12 +4948,122 @@ null
 "div": "MEX",
 "state": "pre",
 "bo": null,
-"prediction": "",
+"prediction": "predictions/2026-11-22-pachuka-toluka-401877050.html",
 "hs": "0",
 "as": "0",
-"tip": "",
+"tip": "ТМ 3.5 · ≈1.68",
 "top": false,
-"bot": null,
+"bot": {
+"main": {
+"label": "ТМ 3.5",
+"p": 0.553,
+"odds": 1.68,
+"est": true
+},
+"bold": {
+"label": "П2",
+"p": 0.417,
+"odds": 2.3,
+"est": false
+},
+"markets": [
+[
+"П1",
+0.343,
+2.55
+],
+[
+"Ничья",
+0.24,
+3.9
+],
+[
+"П2",
+0.417,
+2.45
+],
+[
+"1X",
+0.583,
+null
+],
+[
+"X2",
+0.657,
+null
+],
+[
+"ТБ 1.5",
+0.863,
+null
+],
+[
+"ТБ 2.5",
+0.665,
+null
+],
+[
+"ТМ 2.5",
+0.335,
+null
+],
+[
+"ТБ 3.5",
+0.447,
+2.15
+],
+[
+"Обе забьют — да",
+0.678,
+null
+],
+[
+"Обе забьют — нет",
+0.322,
+null
+],
+[
+"ИТ1 больше 1.5",
+0.482,
+null
+],
+[
+"ИТ2 больше 1.5",
+0.538,
+null
+],
+[
+"Ф1 (−1.5)",
+0.172,
+null
+],
+[
+"Ф2 (+1.5)",
+0.828,
+null
+]
+],
+"bar": [
+0.34276412575614434,
+0.23994431317737036,
+0.41729156106648524
+],
+"center": "Ожидаемые голы (xG) 1.6 : 1.8",
+"scores": [
+[
+"1:1",
+0.103
+],
+[
+"1:2",
+0.086
+],
+[
+"2:1",
+0.077
+]
+]
+},
 "lt": null
 },
 {

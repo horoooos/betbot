@@ -992,7 +992,8 @@
    "min_odds": 1.55,
    "minute": "29'",
    "score": "0:0",
-   "sport": "football"
+   "sport": "football",
+   "result": "hit"
   }
  },
  "N1|401875539": {
@@ -1009,7 +1010,8 @@
    "min_odds": 1.62,
    "minute": "28'",
    "score": "1:1",
-   "sport": "football"
+   "sport": "football",
+   "result": "hit"
   }
  },
  "ARG|401933755": {
@@ -1073,8 +1075,8 @@
  "TPO|401931814": {
   "msg": 8488,
   "hs": 0,
-  "as": 1,
-  "goals": 1,
+  "as": 2,
+  "goals": 2,
   "kickoff": "2026-11-21T23:30:00+03:00",
   "lt": {
    "key": "1X",
