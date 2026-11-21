@@ -8728,7 +8728,7 @@
   "kickoff": "2026-11-21T08:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Scheduled",
   "home": {
    "id": "3393",
@@ -8870,7 +8870,10 @@
   "close": {
    "BTTS_Y": 0.4878,
    "A": 0.4139
-  }
+  },
+  "main_hit": false,
+  "bold_hit": false,
+  "value_hit": null
  },
  "401877549": {
   "id": "401877549",
