@@ -1552,7 +1552,7 @@
  "value_day": "2026-11-21",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-21",
- "site_stamp": "1391|8502|2026-11-22 00|4|ddd56c97bedadad2",
+ "site_stamp": "1391|8510|2026-11-22 00|4|ddd56c97bedadad2",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1706,7 +1706,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 8502,
+ "dz_last": 8510,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2559,65 +2559,36 @@
    }
   },
   "source": {
-   "last_success": "2026-11-21T20:57:42.519388+00:00",
-   "parsed": 326,
-   "added": 91,
-   "discovered_matches": 31,
-   "pages": 16,
-   "errors": [],
+   "last_success": "2026-11-21T21:19:09.698718+00:00",
+   "parsed": 269,
+   "added": 97,
+   "discovered_matches": 30,
+   "pages": 15,
+   "errors": [
+    "HTTPSConnectionPool(host='stavka.tv', port=443): Max retries exceeded with url: /matches/soccer (Caused by ConnectTimeoutError(<HTTPSConnection(host='stavka.tv'",
+    "HTTPSConnectionPool(host='stavka.tv', port=443): Max retries exceeded with url: /matches/basketball (Caused by ConnectTimeoutError(<HTTPSConnection(host='stavka",
+    "HTTPSConnectionPool(host='stavka.tv', port=443): Max retries exceeded with url: /predictions/dota2 (Caused by ConnectTimeoutError(<HTTPSConnection(host='stavka.",
+    "HTTPSConnectionPool(host='stavka.tv', port=443): Max retries exceeded with url: /matches/dota2 (Caused by ConnectTimeoutError(<HTTPSConnection(host='stavka.tv',",
+    "HTTPSConnectionPool(host='stavka.tv', port=443): Max retries exceeded with url: /matches/basketball/22-11-2026-san-antonio-spurs-new-orleans-pelicans (Caused by"
+   ],
    "parsed_by_sport": {
     "soccer": 50,
     "ice-hockey": 50,
-    "basketball": 50,
+    "basketball": 49,
     "tennis": 50,
-    "csgo": 50,
-    "dota2": 50
+    "csgo": 50
    }
   },
   "error": null,
-  "tips": 9603,
+  "tips": 9636,
   "snapshots": 194,
-  "unmapped_markets": 14401,
+  "unmapped_markets": 14465,
   "quote_matches": 23
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-22T00:13:04.311732+03:00",
-  "cursor": "241",
+  "last_poll": "2026-11-22T00:19:09.698718+03:00",
+  "cursor": "248",
   "posts": [
-   {
-    "post_id": 632,
-    "url": "https://vk.com/wall-228963529_632",
-    "title": "Team Liquid против DO KONCA: кто возьмёт победу в BLAST Slam IX?",
-    "text": "рџ“° На старте групповой стадии BLAST Slam IX встречаются два тяжёлых соперника – «Team Liquid» и «DO KONCA».",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": false,
-     "details_present": false,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-20T20:28:22.614887+03:00"
-   },
-   {
-    "post_id": 633,
-    "url": "https://vk.com/wall-228963529_633",
-    "title": "Kiritych и Malr1ne подшутили друг друга в матче BLAST Slam IX",
-    "text": "рџ“° На групповой стадии BLAST Slam IX трансляция зафиксировала, как Илья «Kiritych» Ульянов и Станислав «Malr1ne» Поторак обменялись острыми репликами во время встречи их команд «DO KONCA» и «Team Liquid».",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": false,
-     "details_present": false,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-20T21:35:17.377626+03:00"
-   },
    {
     "post_id": 634,
     "url": "https://vk.com/wall-228963529_634",
@@ -3093,6 +3064,40 @@
     },
     "status": "needs_review",
     "observed_at": "2026-11-21T23:16:50.501017+03:00"
+   },
+   {
+    "post_id": 693,
+    "url": "https://vk.com/wall-228963529_693",
+    "title": "Круговой: «Пенальти не было», но судья дал его ЦСКА против «Ахмата»",
+    "text": "вљЅпёЏ В 15-м туре РПЛ «Ахмат» одержал победу над «ЦСКА» со счётом 2:1. На 52-й минуте Лечи Садулаев реализовал пенальти, который судья назначил после столкновения Данила Кругового с Георгием Мелкадзе.",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": false,
+     "details_present": false,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-22T00:19:09.698718+03:00"
+   },
+   {
+    "post_id": 696,
+    "url": "https://vk.com/wall-228963529_696",
+    "title": "Игдисамов: «Пенальти, которого не было», решило поражение ЦСКА от «Ахмата»",
+    "text": "рџ“° ЦСКА уступил «Ахмату» со счётом 1:2 в 15-м туре Российской премьер-лиги, получив второе поражение подряд. Главный тренер Дмитрий Игдисамов сразу же оценил игру, отметив, что команда выглядела уверенно в первом тайме.",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": false,
+     "details_present": false,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-22T00:19:09.698718+03:00"
    }
   ],
   "status": "observing"

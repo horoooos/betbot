@@ -1,148 +1,6 @@
 [
 {
 "sport": "football",
-"id": "401878939",
-"league": "Бельгия · Про-лига",
-"kickoff": "2026-11-21T20:15:00+03:00",
-"home": "Генк",
-"away": "ФК «Ла-Лувьер»",
-"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/938.png",
-"al": "https://a.espncdn.com/i/teamlogos/soccer/500/131235.png",
-"hid": "938",
-"aid": "131235",
-"bb": "https://betboom.ru/search?query=%D0%93%D0%B5%D0%BD%D0%BA&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
-"path": "soccer/bel.1",
-"url": "live.html?s=football&p=soccer%2Fbel.1&e=401878939&h=%D0%93%D0%B5%D0%BD%D0%BA&a=%D0%A4%D0%9A+%C2%AB%D0%9B%D0%B0-%D0%9B%D1%83%D0%B2%D1%8C%D0%B5%D1%80%C2%BB",
-"participants": [
-[
-"Генк",
-"Racing Genk"
-],
-[
-"ФК «Ла-Лувьер»",
-"RAAL La Louvière"
-]
-],
-"div": "B1",
-"state": "post",
-"bo": null,
-"prediction": "predictions/2026-11-21-genk-fk-la-luver-401878939.html",
-"hs": "3",
-"as": "0",
-"tip": "ТБ 2.5 · 1.54",
-"top": false,
-"bot": {
-"main": {
-"label": "ТБ 2.5",
-"p": 0.607,
-"odds": 1.54,
-"est": false
-},
-"bold": null,
-"markets": [
-[
-"П1",
-0.649,
-1.435
-],
-[
-"Ничья",
-0.207,
-4.9
-],
-[
-"П2",
-0.144,
-6.5
-],
-[
-"1X",
-0.856,
-null
-],
-[
-"X2",
-0.351,
-null
-],
-[
-"ТБ 1.5",
-0.828,
-null
-],
-[
-"ТБ 2.5",
-0.607,
-1.541
-],
-[
-"ТМ 2.5",
-0.393,
-2.35
-],
-[
-"ТБ 3.5",
-0.384,
-null
-],
-[
-"Обе забьют — да",
-0.551,
-null
-],
-[
-"Обе забьют — нет",
-0.449,
-null
-],
-[
-"ИТ1 больше 1.5",
-0.643,
-null
-],
-[
-"ИТ2 больше 1.5",
-0.245,
-null
-],
-[
-"Ф1 (−1.5)",
-0.422,
-null
-],
-[
-"Ф2 (+1.5)",
-0.578,
-null
-]
-],
-"bar": [
-0.6493924252068805,
-0.20681495883072082,
-0.1437926159623985
-],
-"center": "Ожидаемые голы (xG) 2.2 : 0.9",
-"scores": [
-[
-"2:0",
-0.104
-],
-[
-"2:1",
-0.099
-],
-[
-"1:1",
-0.097
-]
-],
-"corners": 9.5,
-"cards": 3.7
-},
-"lt": null
-},
-{
-"sport": "football",
 "id": "401879232",
 "league": "Англия · Премьер-лига",
 "kickoff": "2026-11-21T20:30:00+03:00",
@@ -3162,7 +3020,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-21-napoli-torino-401875067.html",
-"hs": "0",
+"hs": "1",
 "as": "0",
 "tip": "ТБ 2.5 · 1.66",
 "top": false,
@@ -4478,7 +4336,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-21-groningen-herenven-401875546.html",
-"hs": "0",
+"hs": "1",
 "as": "1",
 "tip": "ТМ 3.5 · ≈1.67",
 "top": false,
@@ -4629,7 +4487,7 @@ null
 "bo": null,
 "prediction": "predictions/2026-11-21-telstar-zvolle-401875539.html",
 "hs": "1",
-"as": "2",
+"as": "3",
 "tip": "П1 · 2.06",
 "top": false,
 "bot": {
@@ -5573,7 +5431,15 @@ null
 ],
 "center": "Ожидаемые голы 3.2 : 2.7"
 },
-"lt": null
+"lt": {
+"fair": 1.39,
+"label": "П1 (осн. время)",
+"min_odds": 1.46,
+"minute": "2-й период",
+"p": 0.717,
+"result": null,
+"score": "1:0"
+}
 },
 {
 "sport": "football",
@@ -5861,107 +5727,6 @@ null
 "lt": null
 },
 {
-"sport": "tennis",
-"id": "186810",
-"league": "Теннис · WTA",
-"kickoff": "2026-11-22T00:30:00+03:00",
-"home": "Гуйомар Маристани",
-"away": "Ребека Масарова",
-"hl": "https://a.espncdn.com/i/teamlogos/countries/500/esp.png",
-"al": "https://a.espncdn.com/i/teamlogos/countries/500/sui.png",
-"hid": "12957",
-"aid": "2984",
-"bb": "https://betboom.ru/search?query=%D0%9C%D0%B0%D1%80%D0%B8%D1%81%D1%82%D0%B0%D0%BD%D0%B8&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=tennis",
-"path": "tennis/wta",
-"url": "live.html?s=tennis&p=tennis%2Fwta&e=186810&h=%D0%93%D1%83%D0%B9%D0%BE%D0%BC%D0%B0%D1%80+%D0%9C%D0%B0%D1%80%D0%B8%D1%81%D1%82%D0%B0%D0%BD%D0%B8&a=%D0%A0%D0%B5%D0%B1%D0%B5%D0%BA%D0%B0+%D0%9C%D0%B0%D1%81%D0%B0%D1%80%D0%BE%D0%B2%D0%B0",
-"participants": [
-[
-"Гуйомар Маристани",
-"Guiomar Maristany Zuleta De Reales"
-],
-[
-"Ребека Масарова",
-"Rebeka Masarova"
-]
-],
-"div": "WTA",
-"state": "pre",
-"bo": null,
-"prediction": "predictions/2026-11-22-guyomar-maristani-rebeka-masarova-186810.html",
-"hs": null,
-"as": null,
-"tip": "Будет 2 сета · ≈1.76",
-"top": false,
-"bot": {
-"main": {
-"label": "Будет 2 сета",
-"p": 0.53,
-"odds": 1.76,
-"est": true
-},
-"bold": null,
-"markets": [
-[
-"Победа: Гуйомар Маристани",
-0.679,
-null
-],
-[
-"Победа: Ребека Масарова",
-0.321,
-null
-],
-[
-"Будет 3 сета",
-0.47,
-null
-],
-[
-"Будет 2 сета",
-0.53,
-null
-],
-[
-"Счёт по сетам 2:0",
-0.387,
-null
-],
-[
-"Счёт по сетам 0:2",
-0.143,
-null
-],
-[
-"Счёт по сетам 2:1",
-0.292,
-null
-],
-[
-"Счёт по сетам 1:2",
-0.178,
-null
-],
-[
-"Гуйомар Маристани возьмёт хотя бы сет",
-0.857,
-null
-],
-[
-"Ребека Масарова возьмёт хотя бы сет",
-0.613,
-null
-]
-],
-"bar": [
-0.6790041356686857,
-0,
-0.32099586433131433
-],
-"center": "Рейтинг Эло 1708 : 1578"
-},
-"lt": null
-},
-{
 "sport": "football",
 "id": "401921326",
 "league": "Эквадор · Лига Про",
@@ -6098,6 +5863,107 @@ null
 0.103
 ]
 ]
+},
+"lt": null
+},
+{
+"sport": "tennis",
+"id": "186810",
+"league": "Теннис · WTA",
+"kickoff": "2026-11-22T00:40:00+03:00",
+"home": "Гуйомар Маристани",
+"away": "Ребека Масарова",
+"hl": "https://a.espncdn.com/i/teamlogos/countries/500/esp.png",
+"al": "https://a.espncdn.com/i/teamlogos/countries/500/sui.png",
+"hid": "12957",
+"aid": "2984",
+"bb": "https://betboom.ru/search?query=%D0%9C%D0%B0%D1%80%D0%B8%D1%81%D1%82%D0%B0%D0%BD%D0%B8&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=tennis",
+"path": "tennis/wta",
+"url": "live.html?s=tennis&p=tennis%2Fwta&e=186810&h=%D0%93%D1%83%D0%B9%D0%BE%D0%BC%D0%B0%D1%80+%D0%9C%D0%B0%D1%80%D0%B8%D1%81%D1%82%D0%B0%D0%BD%D0%B8&a=%D0%A0%D0%B5%D0%B1%D0%B5%D0%BA%D0%B0+%D0%9C%D0%B0%D1%81%D0%B0%D1%80%D0%BE%D0%B2%D0%B0",
+"participants": [
+[
+"Гуйомар Маристани",
+"Guiomar Maristany Zuleta De Reales"
+],
+[
+"Ребека Масарова",
+"Rebeka Masarova"
+]
+],
+"div": "WTA",
+"state": "pre",
+"bo": null,
+"prediction": "predictions/2026-11-22-guyomar-maristani-rebeka-masarova-186810.html",
+"hs": null,
+"as": null,
+"tip": "Будет 2 сета · ≈1.76",
+"top": false,
+"bot": {
+"main": {
+"label": "Будет 2 сета",
+"p": 0.53,
+"odds": 1.76,
+"est": true
+},
+"bold": null,
+"markets": [
+[
+"Победа: Гуйомар Маристани",
+0.679,
+null
+],
+[
+"Победа: Ребека Масарова",
+0.321,
+null
+],
+[
+"Будет 3 сета",
+0.47,
+null
+],
+[
+"Будет 2 сета",
+0.53,
+null
+],
+[
+"Счёт по сетам 2:0",
+0.387,
+null
+],
+[
+"Счёт по сетам 0:2",
+0.143,
+null
+],
+[
+"Счёт по сетам 2:1",
+0.292,
+null
+],
+[
+"Счёт по сетам 1:2",
+0.178,
+null
+],
+[
+"Гуйомар Маристани возьмёт хотя бы сет",
+0.857,
+null
+],
+[
+"Ребека Масарова возьмёт хотя бы сет",
+0.613,
+null
+]
+],
+"bar": [
+0.6790041356686857,
+0,
+0.32099586433131433
+],
+"center": "Рейтинг Эло 1708 : 1578"
 },
 "lt": null
 },
