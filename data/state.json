@@ -1552,7 +1552,7 @@
  "value_day": "2026-11-21",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-21",
- "site_stamp": "1414|8596|2026-11-22 02|4|9d6a71b020ee9e85",
+ "site_stamp": "1415|8601|2026-11-22 02|4|0745b314898d00e7",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1708,7 +1708,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 8596,
+ "dz_last": 8601,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2573,10 +2573,10 @@
    }
   },
   "source": {
-   "last_success": "2026-11-21T23:13:08.689730+00:00",
-   "parsed": 345,
-   "added": 112,
-   "discovered_matches": 53,
+   "last_success": "2026-11-21T23:34:53.107749+00:00",
+   "parsed": 344,
+   "added": 88,
+   "discovered_matches": 49,
    "pages": 17,
    "errors": [],
    "parsed_by_sport": {
@@ -2589,49 +2589,15 @@
    }
   },
   "error": null,
-  "tips": 9810,
-  "snapshots": 203,
-  "unmapped_markets": 14791,
+  "tips": 9851,
+  "snapshots": 204,
+  "unmapped_markets": 14838,
   "quote_matches": 24
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-22T02:28:07.517377+03:00",
-  "cursor": "258",
+  "last_poll": "2026-11-22T02:34:53.107749+03:00",
+  "cursor": "260",
   "posts": [
-   {
-    "post_id": 636,
-    "url": "https://vk.com/wall-228963529_636",
-    "title": "Puppey стал тренером года и PARIVISION сразу выиграли ESSENCE III",
-    "text": "рџЏ† 18 ноября 2026 года Клемент «Puppey» Иванов был удостоен награды «Тренер года» на церемонии Esports Awards, а уже вечером того же дня его команда взяла титул чемпионов турнира ESSENCE III.",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": false,
-     "details_present": false,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-20T22:39:19.909136+03:00"
-   },
-   {
-    "post_id": 637,
-    "url": "https://vk.com/wall-228963529_637",
-    "title": "Олусегун открыл счет, «Ростов» ведет в матче с «Крыльями»",
-    "text": "вљЎпёЏ«Ростов» уже в первом тайме взял инициативу в свои руки – хозяева ведут в матче 15-го тура РПЛ против «Крыльев Советов».",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": false,
-     "details_present": false,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-20T22:39:19.909136+03:00"
-   },
    {
     "post_id": 638,
     "url": "https://vk.com/wall-228963529_638",
@@ -3107,6 +3073,40 @@
     },
     "status": "needs_review",
     "observed_at": "2026-11-22T01:28:56.979694+03:00"
+   },
+   {
+    "post_id": 708,
+    "url": "https://vk.com/wall-228963529_708",
+    "title": "«Ахмат» расстался с Черчесовым без отступных",
+    "text": "рџ“° «Ахмат» и Черчесов разошлись без единой копейки!",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": false,
+     "details_present": false,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-22T02:34:53.107749+03:00"
+   },
+   {
+    "post_id": 709,
+    "url": "https://vk.com/wall-228963529_709",
+    "title": "Барко пропустит матч «Спартака» с «Динамо» из-за травмы",
+    "text": "рџ± Барко не выйдет на поле в Махачкале – небольшое повреждение сорвало его полет.",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": false,
+     "details_present": false,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-22T02:34:53.107749+03:00"
    }
   ],
   "status": "observing"
