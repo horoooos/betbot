@@ -22849,7 +22849,7 @@
   "kickoff": "2026-11-21T19:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Scheduled",
   "home": {
    "id": "4411",
@@ -22982,7 +22982,10 @@
   "btn": 4,
   "close": {
    "BTTS_Y": 0.6194
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null,
+  "value_hit": null
  },
  "401881744": {
   "id": "401881744",
@@ -22991,7 +22994,7 @@
   "kickoff": "2026-11-21T19:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Scheduled",
   "home": {
    "id": "18794",
@@ -23124,7 +23127,10 @@
   "btn": 4,
   "close": {
    "H": 0.5064
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null,
+  "value_hit": null
  },
  "401899545": {
   "id": "401899545",
@@ -25566,7 +25572,11 @@
   },
   "extra": null,
   "msg_id": 8268,
-  "btn": 4
+  "btn": 4,
+  "close": {
+   "U25": 0.5429,
+   "H": 0.5036
+  }
  },
  "401899544": {
   "id": "401899544",
