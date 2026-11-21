@@ -1550,7 +1550,7 @@
  "value_day": "2026-11-21",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-21",
- "site_stamp": "1365|8323|2026-11-21 20|4|d05601e35b9e2f71",
+ "site_stamp": "1366|8334|2026-11-21 21|4|2a7fa10d7195f388",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1563,7 +1563,7 @@
    "NHL|401892761"
   ]
  },
- "value_check": "2026-11-21-6",
+ "value_check": "2026-11-21-7",
  "express_risk": {
   "msg": 8267,
   "legs": [
@@ -1704,7 +1704,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 8323,
+ "dz_last": 8334,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2500,9 +2500,9 @@
   "model": {
    "weight": 0.0,
    "status": "collecting",
-   "settled_matches": 69,
+   "settled_matches": 70,
    "required_matches": 100,
-   "trained_at": "2026-11-21T17:14:45.173483+00:00"
+   "trained_at": "2026-11-21T18:00:45.978604+00:00"
   },
   "sport_models": {
    "hockey": {
@@ -2564,7 +2564,7 @@
   "quote_matches": 23
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-21T20:55:13.927562+03:00",
+  "last_poll": "2026-11-21T21:00:45.978604+03:00",
   "cursor": "226",
   "posts": [
    {

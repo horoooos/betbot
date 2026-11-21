@@ -744,7 +744,8 @@
    "min_odds": 1.56,
    "minute": "25'",
    "score": "0:0",
-   "sport": "football"
+   "sport": "football",
+   "result": "hit"
   }
  },
  "F1|401876398": {
@@ -827,7 +828,17 @@
   "hs": 0,
   "as": 0,
   "goals": 0,
-  "kickoff": "2026-11-21T20:30:00+03:00"
+  "kickoff": "2026-11-21T20:30:00+03:00",
+  "lt": {
+   "key": "1X",
+   "label": "1X",
+   "p": 0.669,
+   "fair": 1.49,
+   "min_odds": 1.57,
+   "minute": "27'",
+   "score": "0:0",
+   "sport": "football"
+  }
  },
  "N1|401875543": {
   "msg": 8315,
