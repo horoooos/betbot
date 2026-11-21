@@ -7,7 +7,6 @@
  "schedule_day": "2026-11-21",
  "content_slot": "2026-11-21-16",
  "news_seen": [
-  "https://www.sport-express.ru/stavki-na-sport/prognozy/news/daniil-medvedev-karlos-alkaras-prognoz-na-match-itogovogo-turnira-atp-18-noyabrya-2026-goda-2476191/",
   "na-cobblestone-v-cs2-nashli-paskhalku-s-zhutkim-poslaniyem",
   "razbirayeshsya-v-cs2-ugadai-chempiona-pgl-major-singapore-20261-i-poluchi-shans",
   "https://www.sport-express.ru/football/france/news/safonov-zanyal-devyatoe-mesto-v-reytinge-samyh-dorogih-vratarey-mira-po-versii-cies-2476248/",
@@ -506,9 +505,10 @@
   "https://www.sport-express.ru/football/england/news/manchester-siti-fulhem-schet-i-rezultat-matcha-11-tura-apl-21-noyabrya-2026-2477348/",
   "https://www.sport-express.ru/football/rfpl/news/glavnyy-trener-baltiki-andrey-talalaev-podvel-itogi-pervogo-kruga-rpl-2026-27-kommentariy-21-noyabrya-2477351/",
   "aurora-gaming-vyigrala-u-astra-invicta-na-blast-slam-ix",
-  "dyrachyo-o-team-spirit-poigraite-v-gta-vi-otdokhnite-vernites-k-dreamleague-s"
+  "dyrachyo-o-team-spirit-poigraite-v-gta-vi-otdokhnite-vernites-k-dreamleague-s",
+  "https://www.sport-express.ru/football/rfpl/news/rubin-zenit-luis-enrike-sokratil-otstavanie-peterburzhcev-do-minimuma-2477379/"
  ],
- "news_i": 2,
+ "news_i": 4,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1550,7 +1550,7 @@
  "value_day": "2026-11-21",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-21",
- "site_stamp": "1303|8140|2026-11-21 18|4|92621980a139179c",
+ "site_stamp": "1303|8142|2026-11-21 18|4|92621980a139179c",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1688,7 +1688,7 @@
  "streak_day": {
   "2026-11-20": 2
  },
- "news_next": "2026-11-21T18:46:35.468159+03:00",
+ "news_next": "2026-11-21T19:20:38.167307+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1712,7 +1712,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 8140,
+ "dz_last": 8142,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -1933,7 +1933,8 @@
   "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/49/Football_match_-_Wales_versus_Ireland_in_Cardiff_%281473965%29.jpg/1280px-Football_match_-_Wales_versus_Ireland_in_Cardiff_%281473965%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
   "https://images.cybersport.ru/images/as-is/plain/bd/bd84c23e-b210-46ae-a434-79982105c9f0.jpg",
   "https://upload.wikimedia.org/wikipedia/commons/9/90/Andrei_Talalayev_2011.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-  "https://images.cybersport.ru/images/as-is/plain/3f/3f005337-a5ed-41be-a15b-cef45d73c17d.jpg"
+  "https://images.cybersport.ru/images/as-is/plain/3f/3f005337-a5ed-41be-a15b-cef45d73c17d.jpg",
+  "https://upload.wikimedia.org/wikipedia/commons/9/94/2015_UEFA_Super_Cup_105.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
  ],
  "indexnow_day": "2026-11-21",
  "vk_wall_err": null,
@@ -2232,7 +2233,8 @@
   "7902",
   "8022",
   "8056",
-  "8108"
+  "8108",
+  "8143"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -2463,11 +2465,12 @@
   "2026-11-21:новость:77899e72458bab34ca5f0f8b",
   "2026-11-21:новость:d5cc906aa45bd19f7c3d9a3e",
   "2026-11-21:новость:d2caa690bf7418f72a39efa2",
-  "2026-11-21:новость:e6f7bd71910d42f5fa0f24b9"
+  "2026-11-21:новость:e6f7bd71910d42f5fa0f24b9",
+  "2026-11-21:новость:2c261509369e79d375b43d0d"
  ],
  "dz_last_delivery": {
-  "source_id": 8108,
-  "message_id": 777,
+  "source_id": 8143,
+  "message_id": 778,
   "kind": "новость"
  },
  "learn_attempt_day": "2026-11-21",
@@ -2557,7 +2560,7 @@
   "quote_matches": 23
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-21T18:45:36.677307+03:00",
+  "last_poll": "2026-11-21T18:47:38.167307+03:00",
   "cursor": "220",
   "posts": [
    {
