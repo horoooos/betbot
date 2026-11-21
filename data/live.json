@@ -1046,7 +1046,8 @@
    "min_odds": 1.75,
    "minute": "29'",
    "score": "0:1",
-   "sport": "football"
+   "sport": "football",
+   "result": "hit"
   }
  },
  "WTA|186811": {
@@ -1059,8 +1060,8 @@
  "BRA|401841327": {
   "msg": 8487,
   "hs": 0,
-  "as": 0,
-  "goals": 0,
+  "as": 1,
+  "goals": 1,
   "kickoff": "2026-11-21T23:30:00+03:00",
   "lt": {
    "key": "O1.5",

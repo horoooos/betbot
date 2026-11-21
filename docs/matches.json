@@ -2452,7 +2452,7 @@ null
 ]
 ],
 "div": "SP1",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "predictions/2026-11-21-real-madrid-selta-401882798.html",
 "hs": "2",
@@ -2573,7 +2573,7 @@ null
 "min_odds": 1.75,
 "minute": "29'",
 "p": 0.598,
-"result": null,
+"result": "hit",
 "score": "0:1"
 }
 },
@@ -3301,7 +3301,7 @@ null
 "bo": null,
 "prediction": "predictions/2026-11-21-baiya-koritiba-401841327.html",
 "hs": "0",
-"as": "0",
+"as": "1",
 "tip": "П1 · 1.53",
 "top": true,
 "bot": {
@@ -3448,7 +3448,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-21-alianza-lima-fc-cajamarca-401886135.html",
-"hs": "2",
+"hs": "3",
 "as": "0",
 "tip": "ТМ 3.5 · 1.61",
 "top": false,
@@ -4286,7 +4286,7 @@ null
 "sport": "tennis",
 "id": "186810",
 "league": "Теннис · WTA",
-"kickoff": "2026-11-22T01:10:00+03:00",
+"kickoff": "2026-11-22T01:20:00+03:00",
 "home": "Гуйомар Маристани",
 "away": "Ребека Масарова",
 "hl": "https://a.espncdn.com/i/teamlogos/countries/500/esp.png",
