@@ -991,7 +991,7 @@
   },
   "used": {
    "2026-10": 41,
-   "2026-11": 228
+   "2026-11": 230
   },
   "tournaments": {
    "tennis": {
@@ -1013,7 +1013,7 @@
   },
   "last": {
    "tennis": "2026-11-20T22:00:01.670048+03:00",
-   "CS2": "2026-11-19T05:33:13.581858+03:00",
+   "CS2": "2026-11-19T08:34:56.581073+03:00",
    "DOTA": "2026-11-19T16:34:32.512415+03:00"
   },
   "ver": 3
@@ -2527,10 +2527,10 @@
    }
   },
   "source": {
-   "last_success": "2026-11-21T01:14:21.297613+00:00",
-   "parsed": 371,
-   "added": 66,
-   "discovered_matches": 79,
+   "last_success": "2026-11-21T01:34:23.040920+00:00",
+   "parsed": 365,
+   "added": 49,
+   "discovered_matches": 80,
    "pages": 19,
    "errors": [],
    "parsed_by_sport": {
@@ -2543,13 +2543,13 @@
    }
   },
   "error": null,
-  "tips": 7944,
+  "tips": 7973,
   "snapshots": 149,
-  "unmapped_markets": 12505,
+  "unmapped_markets": 12525,
   "quote_matches": 23
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-21T04:32:22.774593+03:00",
+  "last_poll": "2026-11-21T04:34:23.040920+03:00",
   "cursor": "194",
   "posts": [
    {
