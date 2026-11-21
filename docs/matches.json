@@ -2428,7 +2428,7 @@ null
 ]
 ],
 "div": "BRA",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "predictions/2026-11-21-palmeyras-flamengo-401841322.html",
 "hs": "1",
@@ -2552,7 +2552,7 @@ null
 "min_odds": 1.56,
 "minute": "26'",
 "p": 0.675,
-"result": null,
+"result": "hit",
 "score": "1:0"
 }
 },
@@ -2581,7 +2581,7 @@ null
 ]
 ],
 "div": "D2",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "predictions/2026-11-21-st-pauli-bohum-401885055.html",
 "hs": "2",
@@ -2732,7 +2732,7 @@ null
 "bo": null,
 "prediction": "predictions/2026-11-21-mehelen-bryugge-401878935.html",
 "hs": "0",
-"as": "4",
+"as": "5",
 "tip": "П2 и ТБ 1.5 · ≈1.53",
 "top": false,
 "bot": {
