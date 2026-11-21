@@ -470,7 +470,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-21-deportivo-recoleta-guarani-401888559.html",
-"hs": "1",
+"hs": "2",
 "as": "2",
 "tip": "ТМ 2.5 · 1.91",
 "top": false,
@@ -887,7 +887,7 @@ null
 ]
 ],
 "div": "WTA",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "predictions/2026-11-21-rebeka-masarova-laura-samson-186798.html",
 "hs": null,
@@ -1092,7 +1092,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-21-bruklin-nets-orlando-medzhik-401909306.html",
-"hs": "15",
+"hs": "17",
 "as": "11",
 "tip": "Ф2 (-6.5) · 1.89",
 "top": false,
@@ -1295,7 +1295,7 @@ null
 "bo": null,
 "prediction": "predictions/2026-11-21-detroyt-pistons-toronto-reptors-401909308.html",
 "hs": "7",
-"as": "9",
+"as": "11",
 "tip": "Ф1 (-6.5) · 1.89",
 "top": false,
 "bot": {
@@ -7215,22 +7215,22 @@ null
 "league": "Теннис · WTA",
 "kickoff": "2026-11-22T00:30:00+03:00",
 "home": "Гуйомар Маристани",
-"away": "Тбд",
+"away": "Ребека Масарова",
 "hl": "https://a.espncdn.com/i/teamlogos/countries/500/esp.png",
-"al": null,
+"al": "https://a.espncdn.com/i/teamlogos/countries/500/sui.png",
 "hid": "12957",
-"aid": "-4",
+"aid": "2984",
 "bb": "https://betboom.ru/search?query=%D0%9C%D0%B0%D1%80%D0%B8%D1%81%D1%82%D0%B0%D0%BD%D0%B8&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=tennis",
 "path": "tennis/wta",
-"url": "live.html?s=tennis&p=tennis%2Fwta&e=186810&h=%D0%93%D1%83%D0%B9%D0%BE%D0%BC%D0%B0%D1%80+%D0%9C%D0%B0%D1%80%D0%B8%D1%81%D1%82%D0%B0%D0%BD%D0%B8&a=%D0%A2%D0%B1%D0%B4",
+"url": "live.html?s=tennis&p=tennis%2Fwta&e=186810&h=%D0%93%D1%83%D0%B9%D0%BE%D0%BC%D0%B0%D1%80+%D0%9C%D0%B0%D1%80%D0%B8%D1%81%D1%82%D0%B0%D0%BD%D0%B8&a=%D0%A0%D0%B5%D0%B1%D0%B5%D0%BA%D0%B0+%D0%9C%D0%B0%D1%81%D0%B0%D1%80%D0%BE%D0%B2%D0%B0",
 "participants": [
 [
 "Гуйомар Маристани",
 "Guiomar Maristany Zuleta De Reales"
 ],
 [
-"Тбд",
-"TBD"
+"Ребека Масарова",
+"Rebeka Masarova"
 ]
 ],
 "div": "WTA",
