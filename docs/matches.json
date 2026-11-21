@@ -173,7 +173,7 @@ null
 "bo": null,
 "prediction": "",
 "hs": "0",
-"as": "1",
+"as": "2",
 "tip": "",
 "top": false,
 "bot": null,
@@ -9441,6 +9441,216 @@ null
 ]
 ],
 "div": "I1",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "football",
+"id": "401878941",
+"league": "Бельгия · Про-лига",
+"kickoff": "2026-11-22T20:30:00+03:00",
+"home": "Андерлехт",
+"away": "Ауд-Хеверле Лёвен",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/441.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/5579.png",
+"hid": "441",
+"aid": "5579",
+"bb": "https://betboom.ru/search?query=%D0%90%D0%BD%D0%B4%D0%B5%D1%80%D0%BB%D0%B5%D1%85%D1%82&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/bel.1",
+"url": "live.html?s=football&p=soccer%2Fbel.1&e=401878941&h=%D0%90%D0%BD%D0%B4%D0%B5%D1%80%D0%BB%D0%B5%D1%85%D1%82&a=%D0%90%D1%83%D0%B4-%D0%A5%D0%B5%D0%B2%D0%B5%D1%80%D0%BB%D0%B5+%D0%9B%D1%91%D0%B2%D0%B5%D0%BD",
+"participants": [
+[
+"Андерлехт",
+"Anderlecht"
+],
+[
+"Ауд-Хеверле Лёвен",
+"OH Leuven"
+]
+],
+"div": "B1",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "football",
+"id": "401896724",
+"league": "Греция · Суперлига",
+"kickoff": "2026-11-22T20:30:00+03:00",
+"home": "PAOK",
+"away": "Kifisia",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/21969.png",
+"hid": "605",
+"aid": "21969",
+"bb": "https://betboom.ru/search?query=%D0%9F%D0%B0%D0%BE%D0%BA&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/gre.1",
+"url": "live.html?s=football&p=soccer%2Fgre.1&e=401896724&h=PAOK&a=Kifisia",
+"participants": [
+[
+"PAOK",
+"PAOK"
+],
+[
+"Kifisia",
+"Kifisia"
+]
+],
+"div": "G1",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "football",
+"id": "401882801",
+"league": "Испания · Ла Лига",
+"kickoff": "2026-11-22T20:30:00+03:00",
+"home": "Осасуна",
+"away": "Малага",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/97.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/99.png",
+"hid": "97",
+"aid": "99",
+"bb": "https://betboom.ru/search?query=%D0%9E%D1%81%D0%B0%D1%81%D1%83%D0%BD%D0%B0&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/esp.1",
+"url": "live.html?s=football&p=soccer%2Fesp.1&e=401882801&h=%D0%9E%D1%81%D0%B0%D1%81%D1%83%D0%BD%D0%B0&a=%D0%9C%D0%B0%D0%BB%D0%B0%D0%B3%D0%B0",
+"participants": [
+[
+"Осасуна",
+"Osasuna"
+],
+[
+"Малага",
+"Málaga"
+]
+],
+"div": "SP1",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "football",
+"id": "401883109",
+"league": "Испания · Сегунда",
+"kickoff": "2026-11-22T20:30:00+03:00",
+"home": "Жирона",
+"away": "Эйбар",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/9812.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/3752.png",
+"hid": "9812",
+"aid": "3752",
+"bb": "https://betboom.ru/search?query=%D0%96%D0%B8%D1%80%D0%BE%D0%BD%D0%B0&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/esp.2",
+"url": "live.html?s=football&p=soccer%2Fesp.2&e=401883109&h=%D0%96%D0%B8%D1%80%D0%BE%D0%BD%D0%B0&a=%D0%AD%D0%B9%D0%B1%D0%B0%D1%80",
+"participants": [
+[
+"Жирона",
+"Girona"
+],
+[
+"Эйбар",
+"Eibar"
+]
+],
+"div": "SP2",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "football",
+"id": "401883304",
+"league": "Испания · Сегунда",
+"kickoff": "2026-11-22T20:30:00+03:00",
+"home": "Сельта Фортуна",
+"away": "Реал Вальядолид",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/131858.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/95.png",
+"hid": "131858",
+"aid": "95",
+"bb": "https://betboom.ru/search?query=%D0%A4%D0%BE%D1%80%D1%82%D1%83%D0%BD%D0%B0&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/esp.2",
+"url": "live.html?s=football&p=soccer%2Fesp.2&e=401883304&h=%D0%A1%D0%B5%D0%BB%D1%8C%D1%82%D0%B0+%D0%A4%D0%BE%D1%80%D1%82%D1%83%D0%BD%D0%B0&a=%D0%A0%D0%B5%D0%B0%D0%BB+%D0%92%D0%B0%D0%BB%D1%8C%D1%8F%D0%B4%D0%BE%D0%BB%D0%B8%D0%B4",
+"participants": [
+[
+"Сельта Фортуна",
+"RC Celta Fortuna"
+],
+[
+"Реал Вальядолид",
+"Real Valladolid"
+]
+],
+"div": "SP2",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "hockey",
+"id": "401892768",
+"league": "США · NHL",
+"kickoff": "2026-11-22T20:30:00+03:00",
+"home": "Рейнджерс",
+"away": "Каролина",
+"hl": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/nyr.png",
+"al": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/car.png",
+"hid": "13",
+"aid": "7",
+"bb": "https://betboom.ru/search?query=%D0%A0%D0%B5%D0%B9%D0%BD%D0%B4%D0%B6%D0%B5%D1%80%D1%81&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=hockey",
+"path": "hockey/nhl",
+"url": "live.html?s=hockey&p=hockey%2Fnhl&e=401892768&h=%D0%A0%D0%B5%D0%B9%D0%BD%D0%B4%D0%B6%D0%B5%D1%80%D1%81&a=%D0%9A%D0%B0%D1%80%D0%BE%D0%BB%D0%B8%D0%BD%D0%B0",
+"participants": [
+[
+"Рейнджерс",
+"New York Rangers"
+],
+[
+"Каролина",
+"Carolina Hurricanes"
+]
+],
+"div": "NHL",
 "state": "pre",
 "bo": null,
 "prediction": "",
