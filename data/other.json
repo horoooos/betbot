@@ -7465,22 +7465,22 @@
   "state": "pre",
   "completed": false,
   "tier": "a",
-  "status": "reviewed",
+  "status": "done",
   "home": {
+   "color": "3b4a7a",
+   "logo": "https://cdn-api.pandascore.co/images/team/image/137073/249px_team_yandex_allmode.png",
    "id": "137073",
    "name": "Team Yandex",
    "ru": "Team Yandex",
-   "logo": "https://cdn-api.pandascore.co/images/team/image/137073/249px_team_yandex_allmode.png",
-   "color": "3b4a7a",
    "score": 0,
    "winner": false
   },
   "away": {
+   "color": "3b4a7a",
+   "logo": "https://cdn-api.pandascore.co/images/team/image/1699/Na_vi_logo.png",
    "id": "1699",
    "name": "Natus Vincere",
    "ru": "Natus Vincere",
-   "logo": "https://cdn-api.pandascore.co/images/team/image/1699/Na_vi_logo.png",
-   "color": "3b4a7a",
    "score": 0,
    "winner": false
   },
@@ -7547,7 +7547,9 @@
   "close": {
    "_": null
   },
-  "settlement_retry_at": 1795284337.714799
+  "settlement_retry_at": 1795285274.998768,
+  "main_hit": true,
+  "bold_hit": null
  },
  "DOTA|1816455": {
   "id": "1816455",

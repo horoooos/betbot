@@ -1550,7 +1550,7 @@
  "value_day": "2026-11-21",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-21",
- "site_stamp": "1366|8334|2026-11-21 21|4|2a7fa10d7195f388",
+ "site_stamp": "1367|8337|2026-11-21 21|4|7af515e64482d0f2",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1704,7 +1704,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 8334,
+ "dz_last": 8337,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2564,43 +2564,9 @@
   "quote_matches": 23
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-21T21:00:45.978604+03:00",
-  "cursor": "226",
+  "last_poll": "2026-11-21T21:06:14.998768+03:00",
+  "cursor": "229",
   "posts": [
-   {
-    "post_id": 619,
-    "url": "https://vk.com/wall-228963529_619",
-    "title": "Тюкавин назвал «Акрон» самым тяжёлым соперником в РПЛ",
-    "text": "рџ“° В интервью «СЭ» нападающий «Динамо» Константин Тюкавин назвал «Акрон» самым сложным соперником сезона. 24 октября в Самаре «Акрон» обыграл «Динамо» со счётом 3:1, а единственный гол для москвичей забил Ярослав Гладышев.",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": false,
-     "details_present": false,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-20T16:15:15.261381+03:00"
-   },
-   {
-    "post_id": 622,
-    "url": "https://vk.com/wall-228963529_622",
-    "title": "Тюкавин хвалит Шварца: тренер усиливает РПЛ",
-    "text": "рџ“° Тюкавин в эксклюзивном интервью «СЭ» раскрыл, как работает с главным тренером «Динамо» Сандро Шварцем.",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": false,
-     "details_present": false,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-20T17:19:14.953071+03:00"
-   },
    {
     "post_id": 624,
     "url": "https://vk.com/wall-228963529_624",
@@ -3076,6 +3042,40 @@
     },
     "status": "needs_review",
     "observed_at": "2026-11-21T20:02:41.769370+03:00"
+   },
+   {
+    "post_id": 677,
+    "url": "https://vk.com/wall-228963529_677",
+    "title": "Булыкин: Кузьмин заслужил шанс после победы «Рубина» над «Зенитом»",
+    "text": "рџ“° «Рубин» под руководством Олега Кузьмина одержал уверенную победу над «Зенитом» в 15-м туре РПЛ со счётом 3:1, собрав 21 очко и зайдя на седьмое место в таблице.",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": false,
+     "details_present": false,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-21T21:06:14.998768+03:00"
+   },
+   {
+    "post_id": 678,
+    "url": "https://vk.com/wall-228963529_678",
+    "title": "ЦСКА и «Ахмат» объявили стартовые составы на 15-й тур РПЛ",
+    "text": "рџ± ЦСКА готов к битве с «Ахматом» на «ВЭБ Арене», старт в 19:45 по московскому времени!",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": false,
+     "details_present": false,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-21T21:06:14.998768+03:00"
    }
   ],
   "status": "observing"
