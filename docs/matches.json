@@ -991,7 +991,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-21-atlanta-hoks-sharlott-hornets-401909305.html",
-"hs": "43",
+"hs": "45",
 "as": "50",
 "tip": "ТБ 219.5 · 1.95",
 "top": false,
@@ -1092,8 +1092,8 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-21-bruklin-nets-orlando-medzhik-401909306.html",
-"hs": "21",
-"as": "20",
+"hs": "23",
+"as": "23",
 "tip": "Ф2 (-6.5) · 1.89",
 "top": false,
 "bot": {
@@ -1193,8 +1193,8 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-21-klivlend-indiana-peysers-401909307.html",
-"hs": "21",
-"as": "17",
+"hs": "23",
+"as": "20",
 "tip": "ТМ 234.5 · 1.93",
 "top": false,
 "bot": {
@@ -1294,8 +1294,8 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-21-detroyt-pistons-toronto-reptors-401909308.html",
-"hs": "9",
-"as": "14",
+"hs": "15",
+"as": "16",
 "tip": "Ф1 (-6.5) · 1.89",
 "top": false,
 "bot": {
@@ -1881,12 +1881,117 @@ null
 "div": "CRC",
 "state": "pre",
 "bo": null,
-"prediction": "",
+"prediction": "predictions/2026-11-21-escorpiones-bel-n-ad-san-carlos-401876818.html",
 "hs": "0",
 "as": "0",
-"tip": "",
+"tip": "ТМ 2.5 · 2.00",
 "top": false,
-"bot": null,
+"bot": {
+"main": {
+"label": "ТМ 2.5",
+"p": 0.462,
+"odds": 2.0,
+"est": false
+},
+"bold": null,
+"markets": [
+[
+"П1",
+0.222,
+4.2
+],
+[
+"Ничья",
+0.253,
+3.65
+],
+[
+"П2",
+0.525,
+1.769
+],
+[
+"1X",
+0.475,
+null
+],
+[
+"X2",
+0.778,
+null
+],
+[
+"ТБ 1.5",
+0.783,
+null
+],
+[
+"ТБ 2.5",
+0.538,
+1.714
+],
+[
+"ТМ 2.5",
+0.462,
+2.0
+],
+[
+"ТБ 3.5",
+0.315,
+null
+],
+[
+"Обе забьют — да",
+0.554,
+null
+],
+[
+"Обе забьют — нет",
+0.446,
+null
+],
+[
+"ИТ1 больше 1.5",
+0.291,
+null
+],
+[
+"ИТ2 больше 1.5",
+0.525,
+null
+],
+[
+"Ф1 (−1.5)",
+0.086,
+null
+],
+[
+"Ф2 (+1.5)",
+0.914,
+null
+]
+],
+"bar": [
+0.22201795341643601,
+0.2527969631329576,
+0.5251850834506065
+],
+"center": "Ожидаемые голы (xG) 1.1 : 1.8",
+"scores": [
+[
+"1:1",
+0.12
+],
+[
+"1:2",
+0.098
+],
+[
+"0:1",
+0.095
+]
+]
+},
 "lt": null
 },
 {
