@@ -7,11 +7,6 @@
  "schedule_day": "2026-11-21",
  "content_slot": "2026-11-21-22",
  "news_seen": [
-  "https://www.sport-express.ru/hockey/russia/news/proschanie-s-yuriem-lyapkinym-proydet-19-noyabrya-v-balashihe-2476308/",
-  "https://www.sport-express.ru/hockey/europe/news/byvshiy-zaschitnik-sibiri-gordeev-podpisal-kontrakt-s-milano-2476301/",
-  "https://www.sport-express.ru/hockey/nhl/news/napadayuschiy-vinnipega-viggo-bork-stal-vtorym-samym-molodym-shvedom-s-pervym-golom-v-nhl-17-noyabrya-2026-2476324/",
-  "https://www.sport-express.ru/hockey/nhl/news/forvard-tayler-bushe-stal-vtorym-igrokom-ottavy-s-pobednym-golom-v-debyutnom-matche-nhl-17-noyabrya-2026-2476322/",
-  "https://www.sport-express.ru/hockey/nhl/news/vratar-ottavy-linus-ullmark-obnovil-rekord-shvedskih-vratarey-nhl-po-skorosti-dostizheniya-desyati-pobed-za-sezon-2476321/",
   "https://www.sport-express.ru/hockey/khl/news/lokomotiv-podpisal-kontrakt-s-napadayuschim-frezom-do-konca-sezona-2476294/",
   "https://www.sport-express.ru/artistic-gymnastics/news/melnikova-nazvala-osnovnye-otlichiya-bolelschikov-v-rossii-i-ssha-2476292/",
   "https://www.sport-express.ru/hockey/khl/news/trenerskiy-shtab-minskogo-dinamo-vystupaet-protiv-priglasheniya-kuznecova-2476254/",
@@ -510,9 +505,10 @@
   "https://www.sport-express.ru/tennis/atp/news/karlos-alkaras-stal-vtorym-ispancem-posle-rafaelya-nadalya-s-dvumya-finalami-itogovogo-turnira-atp-21-noyabrya-2026-2477450/",
   "og-vybila-playtime-iz-blast-slam-ix",
   "team-yandex-i-navi-poshli-v-razmen-tronami-watson-okazalsya-bystreye",
-  "https://www.sport-express.ru/football/rfpl/news/melkadze-nazval-stoprocentnym-penalti-v-matche-ahmata-s-cska-2477453/"
+  "https://www.sport-express.ru/football/rfpl/news/melkadze-nazval-stoprocentnym-penalti-v-matche-ahmata-s-cska-2477453/",
+  "v-gosdume-proidet-kruglyi-stol-gde-obsudyat-problemu-blokirovok-v-rf-v-nem"
  ],
- "news_i": 4,
+ "news_i": 0,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1543,18 +1539,20 @@
      "ef2f24",
      "000000"
     ],
-    "label": "Победа: Фейеноорд"
+    "label": "Победа: Фейеноорд",
+    "win": false,
+    "score": "2:3"
    }
   ],
   "odds": 1.5740883119999998,
   "day": "2026-11-21",
-  "done": false
+  "done": true
  },
  "streak_posted": 0,
  "value_day": "2026-11-21",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-21",
- "site_stamp": "1378|8426|2026-11-21 22|4|fcbeb9820d84005c",
+ "site_stamp": "1381|8433|2026-11-21 22|4|8fc21d4321132a58",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1684,7 +1682,7 @@
  "streak_day": {
   "2026-11-20": 2
  },
- "news_next": "2026-11-21T22:38:18.939705+03:00",
+ "news_next": "2026-11-21T23:16:11.996697+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1708,7 +1706,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 8426,
+ "dz_last": 8433,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -1936,7 +1934,8 @@
   "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/Stonebridge_Road_Football_Stadium%2C_Northfleet_-_geograph.org.uk_-_5740557.jpg/1280px-Stonebridge_Road_Football_Stadium%2C_Northfleet_-_geograph.org.uk_-_5740557.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
   "https://upload.wikimedia.org/wikipedia/commons/2/2e/AdvocaatZenit.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
   "https://upload.wikimedia.org/wikipedia/commons/7/70/Bulykin_%28original%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-  "https://upload.wikimedia.org/wikipedia/commons/2/20/KuzminLoko.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+  "https://upload.wikimedia.org/wikipedia/commons/2/20/KuzminLoko.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "https://images.cybersport.ru/images/as-is/plain/45/4583cecf-c248-464f-acc7-3d29d6200781.jpg"
  ],
  "indexnow_day": "2026-11-21",
  "vk_wall_err": null,
@@ -2242,7 +2241,8 @@
   "8299",
   "8324",
   "8359",
-  "8402"
+  "8402",
+  "8434"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -2480,11 +2480,12 @@
   "2026-11-21:новость:de0ab243c0ba229aa603a683",
   "2026-11-21:новость:d0d44a652e72ad154ae9e310",
   "2026-11-21:новость:b073229187e06154490977dd",
-  "2026-11-21:новость:0d6f30fb39c6744dd528fc52"
+  "2026-11-21:новость:0d6f30fb39c6744dd528fc52",
+  "2026-11-21:новость:de0739767eb1635954ad9652"
  ],
  "dz_last_delivery": {
-  "source_id": 8402,
-  "message_id": 784,
+  "source_id": 8434,
+  "message_id": 785,
   "kind": "новость"
  },
  "learn_attempt_day": "2026-11-21",
@@ -2552,11 +2553,11 @@
    }
   },
   "source": {
-   "last_success": "2026-11-21T19:17:33.937264+00:00",
-   "parsed": 353,
-   "added": 89,
-   "discovered_matches": 36,
-   "pages": 18,
+   "last_success": "2026-11-21T19:43:11.996697+00:00",
+   "parsed": 343,
+   "added": 81,
+   "discovered_matches": 29,
+   "pages": 17,
    "errors": [],
    "parsed_by_sport": {
     "soccer": 50,
@@ -2568,13 +2569,13 @@
    }
   },
   "error": null,
-  "tips": 9496,
+  "tips": 9522,
   "snapshots": 194,
-  "unmapped_markets": 14186,
+  "unmapped_markets": 14241,
   "quote_matches": 23
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-21T22:36:18.939705+03:00",
+  "last_poll": "2026-11-21T22:43:11.996697+03:00",
   "cursor": "232",
   "posts": [
    {

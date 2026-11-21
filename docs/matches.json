@@ -732,107 +732,6 @@ null
 }
 },
 {
-"sport": "esports",
-"id": "1816445",
-"league": "Киберспорт · Dota 2",
-"kickoff": "2026-11-21T19:15:06+03:00",
-"home": "PlayTime",
-"away": "OG",
-"hl": "https://cdn-api.pandascore.co/images/team/image/137885/585px_play_time_allmode.png",
-"al": "https://cdn-api.pandascore.co/images/team/image/1654/438px_og_2026_allmode.png",
-"hid": "137885",
-"aid": "1654",
-"bb": "https://betboom.ru/search?query=%D0%9F%D0%BB%D1%8D%D0%B9%D1%82%D0%B8%D0%BC%D0%B5&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=esports",
-"path": "",
-"url": "dota.html?e=1816445&d=DOTA",
-"participants": [
-[
-"PlayTime",
-"PlayTime"
-],
-[
-"OG",
-"OG"
-]
-],
-"div": "DOTA",
-"state": "in",
-"bo": 3,
-"prediction": "predictions/2026-11-21-playtime-og-1816445.html",
-"hs": 1,
-"as": 1,
-"tip": "Всухую (2:0 или 0:2) · ≈1.71",
-"top": false,
-"bot": {
-"main": {
-"label": "Всухую (2:0 или 0:2)",
-"p": 0.545,
-"odds": 1.71,
-"est": true
-},
-"bold": null,
-"markets": [
-[
-"Победа: PlayTime",
-0.282,
-null
-],
-[
-"Победа: OG",
-0.718,
-null
-],
-[
-"Больше 2 карт",
-0.455,
-null
-],
-[
-"Всухую (2:0 или 0:2)",
-0.545,
-null
-],
-[
-"Счёт по картам 2:0",
-0.123,
-null
-],
-[
-"Счёт по картам 0:2",
-0.422,
-null
-],
-[
-"Счёт по картам 2:1",
-0.159,
-null
-],
-[
-"Счёт по картам 1:2",
-0.296,
-null
-],
-[
-"PlayTime возьмёт хотя бы карту",
-0.578,
-null
-],
-[
-"OG возьмёт хотя бы карту",
-0.877,
-null
-]
-],
-"bar": [
-0.2822482574497918,
-0,
-0.7177517425502082
-],
-"center": "BO3 · Эло 1466 : 1628"
-},
-"lt": null
-},
-{
 "sport": "football",
 "id": "401842889",
 "league": "Швеция · Аллсвенскан",
@@ -1156,6 +1055,107 @@ null
 "result": "miss",
 "score": "0:0"
 }
+},
+{
+"sport": "esports",
+"id": "1816445",
+"league": "Киберспорт · Dota 2",
+"kickoff": "2026-11-21T20:00:00+03:00",
+"home": "PlayTime",
+"away": "OG",
+"hl": "https://cdn-api.pandascore.co/images/team/image/137885/585px_play_time_allmode.png",
+"al": "https://cdn-api.pandascore.co/images/team/image/1654/438px_og_2026_allmode.png",
+"hid": "137885",
+"aid": "1654",
+"bb": "https://betboom.ru/search?query=%D0%9F%D0%BB%D1%8D%D0%B9%D1%82%D0%B8%D0%BC%D0%B5&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=esports",
+"path": "",
+"url": "dota.html?e=1816445&d=DOTA",
+"participants": [
+[
+"PlayTime",
+"PlayTime"
+],
+[
+"OG",
+"OG"
+]
+],
+"div": "DOTA",
+"state": "unknown",
+"bo": 3,
+"prediction": "predictions/2026-11-21-playtime-og-1816445.html",
+"hs": null,
+"as": null,
+"tip": "Всухую (2:0 или 0:2) · ≈1.71",
+"top": false,
+"bot": {
+"main": {
+"label": "Всухую (2:0 или 0:2)",
+"p": 0.545,
+"odds": 1.71,
+"est": true
+},
+"bold": null,
+"markets": [
+[
+"Победа: PlayTime",
+0.282,
+null
+],
+[
+"Победа: OG",
+0.718,
+null
+],
+[
+"Больше 2 карт",
+0.455,
+null
+],
+[
+"Всухую (2:0 или 0:2)",
+0.545,
+null
+],
+[
+"Счёт по картам 2:0",
+0.123,
+null
+],
+[
+"Счёт по картам 0:2",
+0.422,
+null
+],
+[
+"Счёт по картам 2:1",
+0.159,
+null
+],
+[
+"Счёт по картам 1:2",
+0.296,
+null
+],
+[
+"PlayTime возьмёт хотя бы карту",
+0.578,
+null
+],
+[
+"OG возьмёт хотя бы карту",
+0.877,
+null
+]
+],
+"bar": [
+0.2822482574497918,
+0,
+0.7177517425502082
+],
+"center": "BO3 · Эло 1466 : 1628"
+},
+"lt": null
 },
 {
 "sport": "football",
@@ -2211,7 +2211,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-21-utreht-kambyur-401875544.html",
-"hs": "0",
+"hs": "1",
 "as": "2",
 "tip": "П1 · 1.90",
 "top": false,
@@ -2358,7 +2358,7 @@ null
 ]
 ],
 "div": "N1",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "predictions/2026-11-21-feyenoord-ekselsior-401875543.html",
 "hs": "2",
@@ -2479,7 +2479,7 @@ null
 "min_odds": 1.38,
 "minute": "26'",
 "p": 0.763,
-"result": null,
+"result": "miss",
 "score": "1:1"
 }
 },
@@ -2508,7 +2508,7 @@ null
 ]
 ],
 "div": "SC0",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "predictions/2026-11-21-dandi-hart-of-midlotian-401878337.html",
 "hs": "0",
@@ -2811,8 +2811,8 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-21-filadelfiya-siksers-miluoki-baks-401910023.html",
-"hs": "78",
-"as": "73",
+"hs": "91",
+"as": "81",
 "tip": "Ф1 (-10.5) · 1.93",
 "top": false,
 "bot": {
@@ -2912,7 +2912,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-21-karolina-edmonton-401892754.html",
-"hs": "2",
+"hs": "4",
 "as": "3",
 "tip": "ТБ 6.5 · 2.10",
 "top": false,
@@ -3153,7 +3153,7 @@ null
 "bo": null,
 "prediction": "predictions/2026-11-21-grazer-ak-rapid-401881746.html",
 "hs": "0",
-"as": "1",
+"as": "2",
 "tip": "П2 и ТБ 1.5 · ≈1.61",
 "top": false,
 "bot": {
@@ -3871,7 +3871,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-21-palmeyras-flamengo-401841322.html",
-"hs": "0",
+"hs": "1",
 "as": "0",
 "tip": "ТМ 2.5 · ≈1.68",
 "top": false,
@@ -4132,112 +4132,6 @@ null
 ],
 "corners": 9.0,
 "cards": 4.7
-},
-"lt": null
-},
-{
-"sport": "tennis",
-"id": "187527",
-"league": "Теннис · ATP",
-"kickoff": "2026-11-21T22:40:00+03:00",
-"home": "Александр Зверев",
-"away": "Даниил Медведев",
-"hl": "https://a.espncdn.com/i/teamlogos/countries/500/ger.png",
-"al": "https://a.espncdn.com/i/teamlogos/countries/500/rus.png",
-"hid": "2375",
-"aid": "2383",
-"bb": "https://betboom.ru/search?query=%D0%97%D0%B2%D0%B5%D1%80%D0%B5%D0%B2&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=tennis",
-"path": "tennis/atp",
-"url": "live.html?s=tennis&p=tennis%2Fatp&e=187527&h=%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80+%D0%97%D0%B2%D0%B5%D1%80%D0%B5%D0%B2&a=%D0%94%D0%B0%D0%BD%D0%B8%D0%B8%D0%BB+%D0%9C%D0%B5%D0%B4%D0%B2%D0%B5%D0%B4%D0%B5%D0%B2",
-"participants": [
-[
-"Александр Зверев",
-"Alexander Zverev"
-],
-[
-"Даниил Медведев",
-"Daniil Medvedev"
-]
-],
-"div": "ATP",
-"state": "pre",
-"bo": null,
-"prediction": "predictions/2026-11-21-aleksandr-zverev-daniil-medvedev-187527.html",
-"hs": null,
-"as": null,
-"tip": "Будет 2 сета · ≈1.83",
-"top": false,
-"bot": {
-"main": {
-"label": "Будет 2 сета",
-"p": 0.509,
-"odds": 1.83,
-"est": true
-},
-"bold": {
-"label": "Победа: Даниил Медведев",
-"p": 0.402,
-"odds": 2.35,
-"est": false
-},
-"markets": [
-[
-"Победа: Александр Зверев",
-0.598,
-1.58
-],
-[
-"Победа: Даниил Медведев",
-0.402,
-2.35
-],
-[
-"Будет 3 сета",
-0.491,
-null
-],
-[
-"Будет 2 сета",
-0.509,
-null
-],
-[
-"Счёт по сетам 2:0",
-0.32,
-null
-],
-[
-"Счёт по сетам 0:2",
-0.189,
-null
-],
-[
-"Счёт по сетам 2:1",
-0.278,
-null
-],
-[
-"Счёт по сетам 1:2",
-0.213,
-null
-],
-[
-"Александр Зверев возьмёт хотя бы сет",
-0.811,
-null
-],
-[
-"Даниил Медведев возьмёт хотя бы сет",
-0.68,
-null
-]
-],
-"bar": [
-0.5979643765903307,
-0,
-0.40203562340966925
-],
-"center": "Линия winline · Эло 1955 : 1857"
 },
 "lt": null
 },
@@ -4669,6 +4563,112 @@ null
 ],
 "corners": 9.4,
 "cards": 2.9
+},
+"lt": null
+},
+{
+"sport": "tennis",
+"id": "187527",
+"league": "Теннис · ATP",
+"kickoff": "2026-11-21T22:45:00+03:00",
+"home": "Александр Зверев",
+"away": "Даниил Медведев",
+"hl": "https://a.espncdn.com/i/teamlogos/countries/500/ger.png",
+"al": "https://a.espncdn.com/i/teamlogos/countries/500/rus.png",
+"hid": "2375",
+"aid": "2383",
+"bb": "https://betboom.ru/search?query=%D0%97%D0%B2%D0%B5%D1%80%D0%B5%D0%B2&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=tennis",
+"path": "tennis/atp",
+"url": "live.html?s=tennis&p=tennis%2Fatp&e=187527&h=%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80+%D0%97%D0%B2%D0%B5%D1%80%D0%B5%D0%B2&a=%D0%94%D0%B0%D0%BD%D0%B8%D0%B8%D0%BB+%D0%9C%D0%B5%D0%B4%D0%B2%D0%B5%D0%B4%D0%B5%D0%B2",
+"participants": [
+[
+"Александр Зверев",
+"Alexander Zverev"
+],
+[
+"Даниил Медведев",
+"Daniil Medvedev"
+]
+],
+"div": "ATP",
+"state": "pre",
+"bo": null,
+"prediction": "predictions/2026-11-21-aleksandr-zverev-daniil-medvedev-187527.html",
+"hs": null,
+"as": null,
+"tip": "Будет 2 сета · ≈1.83",
+"top": false,
+"bot": {
+"main": {
+"label": "Будет 2 сета",
+"p": 0.509,
+"odds": 1.83,
+"est": true
+},
+"bold": {
+"label": "Победа: Даниил Медведев",
+"p": 0.402,
+"odds": 2.35,
+"est": false
+},
+"markets": [
+[
+"Победа: Александр Зверев",
+0.598,
+1.58
+],
+[
+"Победа: Даниил Медведев",
+0.402,
+2.35
+],
+[
+"Будет 3 сета",
+0.491,
+null
+],
+[
+"Будет 2 сета",
+0.509,
+null
+],
+[
+"Счёт по сетам 2:0",
+0.32,
+null
+],
+[
+"Счёт по сетам 0:2",
+0.189,
+null
+],
+[
+"Счёт по сетам 2:1",
+0.278,
+null
+],
+[
+"Счёт по сетам 1:2",
+0.213,
+null
+],
+[
+"Александр Зверев возьмёт хотя бы сет",
+0.811,
+null
+],
+[
+"Даниил Медведев возьмёт хотя бы сет",
+0.68,
+null
+]
+],
+"bar": [
+0.5979643765903307,
+0,
+0.40203562340966925
+],
+"center": "Линия winline · Эло 1955 : 1857"
 },
 "lt": null
 },

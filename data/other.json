@@ -7583,7 +7583,7 @@
   "close": {
    "_": null
   },
-  "settlement_retry_at": 1795289896.484063
+  "settlement_retry_at": 1795291091.996697
  },
  "DOTA|1816445": {
   "id": "1816445",
@@ -7637,22 +7637,22 @@
   "state": "pre",
   "completed": false,
   "tier": "a",
-  "status": "reviewed",
+  "status": "done",
   "home": {
+   "color": "3b4a7a",
+   "logo": "https://cdn-api.pandascore.co/images/team/image/137885/585px_play_time_allmode.png",
    "id": "137885",
    "name": "PlayTime",
    "ru": "PlayTime",
-   "logo": "https://cdn-api.pandascore.co/images/team/image/137885/585px_play_time_allmode.png",
-   "color": "3b4a7a",
    "score": 0,
    "winner": false
   },
   "away": {
+   "color": "3b4a7a",
+   "logo": "https://cdn-api.pandascore.co/images/team/image/1654/438px_og_2026_allmode.png",
    "id": "1654",
    "name": "OG",
    "ru": "OG",
-   "logo": "https://cdn-api.pandascore.co/images/team/image/1654/438px_og_2026_allmode.png",
-   "color": "3b4a7a",
    "score": 0,
    "winner": false
   },
@@ -7719,7 +7719,9 @@
   "close": {
    "_": null
   },
-  "settlement_retry_at": 1795289896.484063
+  "settlement_retry_at": 1795291091.996697,
+  "main_hit": false,
+  "bold_hit": null
  },
  "NHL|401892754": {
   "id": "401892754",
