@@ -1550,7 +1550,7 @@
  "value_day": "2026-11-21",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-21",
- "site_stamp": "1309|8154|2026-11-21 18|4|8461819a2197e79a",
+ "site_stamp": "1311|8165|2026-11-21 18|4|6d48071af5865a96",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1712,7 +1712,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 8154,
+ "dz_last": 8165,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2496,9 +2496,9 @@
   "model": {
    "weight": 0.0,
    "status": "collecting",
-   "settled_matches": 58,
+   "settled_matches": 59,
    "required_matches": 100,
-   "trained_at": "2026-11-21T15:52:22.337816+00:00"
+   "trained_at": "2026-11-21T15:59:08.570555+00:00"
   },
   "sport_models": {
    "hockey": {
@@ -2560,26 +2560,9 @@
   "quote_matches": 23
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-21T18:56:42.143055+03:00",
-  "cursor": "220",
+  "last_poll": "2026-11-21T18:59:08.570555+03:00",
+  "cursor": "222",
   "posts": [
-   {
-    "post_id": 615,
-    "url": "https://vk.com/wall-228963529_615",
-    "title": "flameZ предлагает удалить Karrigan: «расслабься, тебе будет 37»",
-    "text": "рџ“° Участник состава Team Vitality Шахар «flameZ» Шушан принял участие в популярном YouTube-опросе «удали и поясни», выпущенном каналом BETBOOM ESPORTS. Формат прост: зрители задают вопросы «удали…», а игрок отвечает, обосновывая выбор.",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": false,
-     "details_present": false,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-20T14:05:14.674620+03:00"
-   },
    {
     "post_id": 616,
     "url": "https://vk.com/wall-228963529_616",
@@ -3072,6 +3055,23 @@
     },
     "status": "needs_review",
     "observed_at": "2026-11-21T17:56:55.061568+03:00"
+   },
+   {
+    "post_id": 671,
+    "url": "https://vk.com/wall-228963529_671",
+    "title": "Dyrachyo советует Team Spirit взять паузу и сыграть в GTA VI",
+    "text": "рџ± Дотер Дьярчо бросил вызов Team Spirit: «Пауза, GTA VI, а потом — DreamLeague с новыми силами!гЂЌ.",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": false,
+     "details_present": false,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-21T18:59:08.570555+03:00"
    }
   ],
   "status": "observing"
