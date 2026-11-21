@@ -1028,14 +1028,15 @@
    "min_odds": 1.66,
    "minute": "30'",
    "score": "0:0",
-   "sport": "football"
+   "sport": "football",
+   "result": "hit"
   }
  },
  "SP1|401882798": {
   "msg": 8456,
-  "hs": 1,
+  "hs": 2,
   "as": 1,
-  "goals": 2,
+  "goals": 3,
   "kickoff": "2026-11-21T23:00:00+03:00",
   "lt": {
    "key": "U3.5",
@@ -1091,7 +1092,7 @@
  },
  "NHL|401892755": {
   "msg": 8491,
-  "hs": 1,
+  "hs": 2,
   "as": 3,
   "goals": 0,
   "kickoff": "2026-11-21T23:30:00+03:00",
