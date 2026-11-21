@@ -7087,25 +7087,25 @@
   "kickoff": "2026-11-21T03:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Fri, November 20th at 7:00 PM EST",
   "clock": "0.0",
   "period": 0,
   "home": {
+   "color": "c8102e",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/atl.png",
    "id": "1",
    "name": "Atlanta Hawks",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/atl.png",
-   "color": "c8102e",
    "score": "0",
    "record": "9-6",
    "periods": [],
    "ru": "Атланта Хокс"
   },
   "away": {
+   "color": "008ca8",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/cha.png",
    "id": "30",
    "name": "Charlotte Hornets",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/cha.png",
-   "color": "008ca8",
    "score": "0",
    "record": "4-10",
    "periods": [],
@@ -7188,7 +7188,9 @@
   "btn": 4,
   "close": {
    "BB_O219.5": 0.5
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null
  },
  "NBA|401909306": {
   "id": "401909306",
