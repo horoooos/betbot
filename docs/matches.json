@@ -846,7 +846,7 @@ null
 "bo": null,
 "prediction": "",
 "hs": "0",
-"as": "0",
+"as": "1",
 "tip": "",
 "top": false,
 "bot": null,
@@ -2048,10 +2048,10 @@ null
 ]
 ],
 "div": "SP1",
-"state": "pre",
+"state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-21-alaves-deportivo-la-korunya-401882806.html",
-"hs": "0",
+"hs": "1",
 "as": "0",
 "tip": "ТМ 2.5 · 1.56",
 "top": false,
@@ -2193,7 +2193,7 @@ null
 ]
 ],
 "div": "SP2",
-"state": "pre",
+"state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-21-cd-sabadell-granada-401882299.html",
 "hs": "0",
@@ -2335,7 +2335,7 @@ null
 ]
 ],
 "div": "NOR",
-"state": "pre",
+"state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-21-tromse-viking-401843483.html",
 "hs": "0",
@@ -2475,7 +2475,7 @@ null
 ]
 ],
 "div": "T1",
-"state": "pre",
+"state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-21-amedspor-kaykur-rizespor-401888369.html",
 "hs": "0",
@@ -2622,7 +2622,7 @@ null
 ]
 ],
 "div": "T1",
-"state": "pre",
+"state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-21-galatasaray-samsunspor-401888245.html",
 "hs": "0",
@@ -2764,7 +2764,7 @@ null
 ]
 ],
 "div": "F2",
-"state": "pre",
+"state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-21-stad-laval-monpele-401876689.html",
 "hs": "0",
@@ -11448,6 +11448,146 @@ null
 ]
 ],
 "div": "NOR",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "football",
+"id": "401933759",
+"league": "Аргентина · Примера",
+"kickoff": "2026-11-22T22:00:00+03:00",
+"home": "Росарио Сентраль",
+"away": "Gimnasia (Mendoza)",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/17.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/11972.png",
+"hid": "17",
+"aid": "11972",
+"bb": "https://betboom.ru/search?query=%D0%A1%D0%B5%D0%BD%D1%82%D1%80%D0%B0%D0%BB%D1%8C&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/arg.1",
+"url": "live.html?s=football&p=soccer%2Farg.1&e=401933759&h=%D0%A0%D0%BE%D1%81%D0%B0%D1%80%D0%B8%D0%BE+%D0%A1%D0%B5%D0%BD%D1%82%D1%80%D0%B0%D0%BB%D1%8C&a=Gimnasia+%28Mendoza%29",
+"participants": [
+[
+"Росарио Сентраль",
+"Rosario Central"
+],
+[
+"Gimnasia (Mendoza)",
+"Gimnasia (Mendoza)"
+]
+],
+"div": "ARG",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "football",
+"id": "401841318",
+"league": "Бразилия · Серия A",
+"kickoff": "2026-11-22T22:00:00+03:00",
+"home": "Атлетико Паранаэнсе",
+"away": "Ремо",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/3458.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/4936.png",
+"hid": "3458",
+"aid": "4936",
+"bb": "https://betboom.ru/search?query=%D0%9F%D0%B0%D1%80%D0%B0%D0%BD%D0%B0%D1%8D%D0%BD%D1%81%D0%B5&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/bra.1",
+"url": "live.html?s=football&p=soccer%2Fbra.1&e=401841318&h=%D0%90%D1%82%D0%BB%D0%B5%D1%82%D0%B8%D0%BA%D0%BE+%D0%9F%D0%B0%D1%80%D0%B0%D0%BD%D0%B0%D1%8D%D0%BD%D1%81%D0%B5&a=%D0%A0%D0%B5%D0%BC%D0%BE",
+"participants": [
+[
+"Атлетико Паранаэнсе",
+"Athletico-PR"
+],
+[
+"Ремо",
+"Remo"
+]
+],
+"div": "BRA",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "football",
+"id": "401912682",
+"league": "Бразилия · Серия B",
+"kickoff": "2026-11-22T22:00:00+03:00",
+"home": "Criciúma",
+"away": "Форталеза Сипакира",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/9971.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/6272.png",
+"hid": "9971",
+"aid": "6272",
+"bb": "https://betboom.ru/search?query=%D0%9A%D1%80%D0%B8%D1%81%D0%B8%D1%83%D0%BC%D0%B0&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/bra.2",
+"url": "live.html?s=football&p=soccer%2Fbra.2&e=401912682&h=Crici%C3%BAma&a=%D0%A4%D0%BE%D1%80%D1%82%D0%B0%D0%BB%D0%B5%D0%B7%D0%B0+%D0%A1%D0%B8%D0%BF%D0%B0%D0%BA%D0%B8%D1%80%D0%B0",
+"participants": [
+[
+"Criciúma",
+"Criciúma"
+],
+[
+"Форталеза Сипакира",
+"Fortaleza"
+]
+],
+"div": "BRA2",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "football",
+"id": "401921333",
+"league": "Эквадор · Лига Про",
+"kickoff": "2026-11-22T22:00:00+03:00",
+"home": "Orense",
+"away": "Mushuc Runa",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/20695.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/17176.png",
+"hid": "20695",
+"aid": "17176",
+"bb": "https://betboom.ru/search?query=%D0%9E%D1%80%D0%B5%D0%BD%D1%81%D0%B5&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/ecu.1",
+"url": "live.html?s=football&p=soccer%2Fecu.1&e=401921333&h=Orense&a=Mushuc+Runa",
+"participants": [
+[
+"Orense",
+"Orense"
+],
+[
+"Mushuc Runa",
+"Mushuc Runa"
+]
+],
+"div": "ECU",
 "state": "pre",
 "bo": null,
 "prediction": "",

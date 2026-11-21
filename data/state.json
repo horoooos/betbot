@@ -5,7 +5,7 @@
  },
  "learned": "2026-11-21",
  "schedule_day": "2026-11-21",
- "content_slot": "2026-11-21-13",
+ "content_slot": "2026-11-21-16",
  "news_seen": [
   "https://www.sport-express.ru/tennis/atp/news/karlos-alkaras-daniil-medvedev-statistika-lichnyh-vstrech-do-itogovogo-turnira-atp-2026-2476134/",
   "https://www.sport-express.ru/tennis/atp/news/shelton-o-sedmom-porazhenii-ot-zvereva-protiv-sashi-vsegda-slozhno-mne-esche-mnogoe-nuzhno-uluchshat-2476186/",
@@ -1550,7 +1550,7 @@
  "value_day": "2026-11-21",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-21",
- "site_stamp": "1283|7895|2026-11-21 15|4|236a428edc65ded5",
+ "site_stamp": "1283|7900|2026-11-21 16|4|60dad5752856b5ce",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1712,7 +1712,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 7895,
+ "dz_last": 7900,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2540,12 +2540,12 @@
   },
   "error": null,
   "tips": 8904,
-  "snapshots": 161,
+  "snapshots": 164,
   "unmapped_markets": 13444,
   "quote_matches": 23
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-21T15:58:00.858580+03:00",
+  "last_poll": "2026-11-21T16:02:59.127755+03:00",
   "cursor": "209",
   "posts": [
    {
@@ -3065,5 +3065,14 @@
   "pid": 6655,
   "started_at": 1794992742.839963
  },
- "vk_story_retry_at": 1794996342.839963
+ "vk_story_retry_at": 1794996342.839963,
+ "mod_poll": {
+  "key": "E0|401879238",
+  "id": "401879238",
+  "poll": 7897,
+  "post": 7896,
+  "home": "Борнмут",
+  "away": "Ноттингем Форест",
+  "kickoff": "2026-11-21T18:00:00+03:00"
+ }
 }
