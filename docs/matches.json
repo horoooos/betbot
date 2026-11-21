@@ -3608,7 +3608,7 @@ null
 "bo": null,
 "prediction": "predictions/2026-11-21-union-berlin-rb-leyptsig-401884732.html",
 "hs": "1",
-"as": "4",
+"as": "5",
 "tip": "П2 и ТБ 1.5 · ≈1.66",
 "top": false,
 "bot": {
@@ -3754,7 +3754,7 @@ null
 ]
 ],
 "div": "D1",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "predictions/2026-11-21-bayer-paderborn-07-401884735.html",
 "hs": "4",
@@ -3875,7 +3875,7 @@ null
 "min_odds": 1.36,
 "minute": "27'",
 "p": 0.772,
-"result": null,
+"result": "hit",
 "score": "1:0"
 }
 },
@@ -3904,7 +3904,7 @@ null
 ]
 ],
 "div": "D1",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "predictions/2026-11-21-borussiya-m-borussiya-d-401884731.html",
 "hs": "0",
@@ -4025,7 +4025,7 @@ null
 "min_odds": 1.7,
 "minute": "26'",
 "p": 0.619,
-"result": null,
+"result": "hit",
 "score": "0:0"
 }
 },
@@ -4054,7 +4054,7 @@ null
 ]
 ],
 "div": "D1",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "predictions/2026-11-21-eintracht-frankfurt-hoffenhaym-401884734.html",
 "hs": "1",
@@ -4180,7 +4180,7 @@ null
 "min_odds": 1.62,
 "minute": "25'",
 "p": 0.648,
-"result": null,
+"result": "miss",
 "score": "0:0"
 }
 },
@@ -4209,7 +4209,7 @@ null
 ]
 ],
 "div": "D1",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "predictions/2026-11-21-elfersberg-frayburg-401884728.html",
 "hs": "0",
@@ -4330,7 +4330,7 @@ null
 "min_odds": 1.6,
 "minute": "26'",
 "p": 0.655,
-"result": null,
+"result": "hit",
 "score": "0:0"
 }
 },
@@ -5082,7 +5082,7 @@ null
 "bo": null,
 "prediction": "predictions/2026-11-21-leyton-orient-uimbldon-401880736.html",
 "hs": "3",
-"as": "0",
+"as": "1",
 "tip": "П1 · 1.74",
 "top": false,
 "bot": {
@@ -5518,7 +5518,7 @@ null
 "bo": null,
 "prediction": "predictions/2026-11-21-oksford-yunayted-uikom-uonderers-401880733.html",
 "hs": "0",
-"as": "2",
+"as": "3",
 "tip": "ТБ 2.5 · 1.67",
 "top": false,
 "bot": {
@@ -6237,7 +6237,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-21-chesterfild-shrusberi-taun-401881261.html",
-"hs": "3",
+"hs": "4",
 "as": "1",
 "tip": "П1 · 1.60",
 "top": false,
@@ -6673,7 +6673,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-21-nortgempton-taun-rochdeyl-401881256.html",
-"hs": "1",
+"hs": "2",
 "as": "2",
 "tip": "П1 · 1.76",
 "top": false,
@@ -9638,7 +9638,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-21-seltik-sent-mirren-401878338.html",
-"hs": "3",
+"hs": "4",
 "as": "0",
 "tip": "Обе забьют — да · ≈1.71",
 "top": false,
@@ -10643,7 +10643,7 @@ null
 "bo": null,
 "prediction": "predictions/2026-11-21-reyt-rovers-partik-tisl-401878517.html",
 "hs": "0",
-"as": "0",
+"as": "1",
 "tip": "ТМ 2.5 · 1.74",
 "top": false,
 "bot": {
@@ -11628,7 +11628,15 @@ null
 "corners": 10.1,
 "cards": 4.4
 },
-"lt": null
+"lt": {
+"fair": 1.49,
+"label": "ТБ 1.5",
+"min_odds": 1.56,
+"minute": "25'",
+"p": 0.671,
+"result": null,
+"score": "0:0"
+}
 },
 {
 "sport": "football",
@@ -11658,7 +11666,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-21-katandzaro-palermo-401899545.html",
-"hs": "0",
+"hs": "1",
 "as": "0",
 "tip": "П2 · 1.71",
 "top": false,
@@ -11805,7 +11813,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-21-nitstsa-pszh-401876398.html",
-"hs": "0",
+"hs": "1",
 "as": "0",
 "tip": "П2 и ТБ 1.5 · ≈1.59",
 "top": false,

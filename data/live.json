@@ -373,8 +373,8 @@
  "D1|401884732": {
   "msg": 8048,
   "hs": 1,
-  "as": 4,
-  "goals": 5,
+  "as": 5,
+  "goals": 6,
   "kickoff": "2026-11-21T17:30:00+03:00",
   "lt": {
    "key": "U3.5",
@@ -401,7 +401,8 @@
    "min_odds": 1.36,
    "minute": "27'",
    "score": "1:0",
-   "sport": "football"
+   "sport": "football",
+   "result": "hit"
   }
  },
  "D1|401884731": {
@@ -418,7 +419,8 @@
    "min_odds": 1.7,
    "minute": "26'",
    "score": "0:0",
-   "sport": "football"
+   "sport": "football",
+   "result": "hit"
   }
  },
  "D1|401884734": {
@@ -435,7 +437,8 @@
    "min_odds": 1.62,
    "minute": "25'",
    "score": "0:0",
-   "sport": "football"
+   "sport": "football",
+   "result": "miss"
   }
  },
  "D1|401884728": {
@@ -452,7 +455,8 @@
    "min_odds": 1.6,
    "minute": "26'",
    "score": "0:0",
-   "sport": "football"
+   "sport": "football",
+   "result": "hit"
   }
  },
  "DOTA|1816444": {
@@ -722,13 +726,23 @@
   "hs": 0,
   "as": 0,
   "goals": 0,
-  "kickoff": "2026-11-21T19:00:00+03:00"
+  "kickoff": "2026-11-21T19:00:00+03:00",
+  "lt": {
+   "key": "O1.5",
+   "label": "ТБ 1.5",
+   "p": 0.671,
+   "fair": 1.49,
+   "min_odds": 1.56,
+   "minute": "25'",
+   "score": "0:0",
+   "sport": "football"
+  }
  },
  "F1|401876398": {
   "msg": 8185,
-  "hs": 0,
+  "hs": 1,
   "as": 0,
-  "goals": 0,
+  "goals": 1,
   "kickoff": "2026-11-21T19:15:00+03:00"
  },
  "DOTA|1816445": {
