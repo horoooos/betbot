@@ -24,7 +24,7 @@
 ]
 ],
 "div": "ARG",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "predictions/2026-11-21-veles-sarsfild-belgrano-c-rdoba-401933760.html",
 "hs": "2",
@@ -148,7 +148,7 @@ null
 "min_odds": 1.58,
 "minute": "25'",
 "p": 0.664,
-"result": null,
+"result": "hit",
 "score": "0:1"
 }
 },
@@ -702,7 +702,7 @@ null
 "bo": null,
 "prediction": "predictions/2026-11-21-atlanta-hoks-sharlott-hornets-401909305.html",
 "hs": "87",
-"as": "76",
+"as": "78",
 "tip": "ТБ 219.5 · 1.95",
 "top": false,
 "bot": {
@@ -1246,7 +1246,7 @@ null
 "bo": null,
 "prediction": "predictions/2026-11-21-chikago-bullz-vashington-uizards-401909309.html",
 "hs": "44",
-"as": "31",
+"as": "33",
 "tip": "Ф2 (+2.5) · 1.84",
 "top": true,
 "bot": {
@@ -1351,8 +1351,8 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-21-oklahoma-siti-tander-nyu-orlean-pelikans-401909310.html",
-"hs": "40",
-"as": "46",
+"hs": "43",
+"as": "51",
 "tip": "ТМ 229.5 · 1.91",
 "top": false,
 "bot": {
