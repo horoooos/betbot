@@ -3358,7 +3358,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-21-kalgari-chikago-401892755.html",
-"hs": "2",
+"hs": "3",
 "as": "3",
 "tip": "ТБ 5.5 · 1.80",
 "top": false,
@@ -3643,7 +3643,7 @@ null
 "bo": null,
 "prediction": "predictions/2026-11-22-o-higgins-universidad-de-chili-401850696.html",
 "hs": "0",
-"as": "0",
+"as": "1",
 "tip": "ТМ 2.5 · 2.00",
 "top": false,
 "bot": {
@@ -4045,107 +4045,6 @@ null
 "lt": null
 },
 {
-"sport": "tennis",
-"id": "186810",
-"league": "Теннис · WTA",
-"kickoff": "2026-11-22T01:40:00+03:00",
-"home": "Гуйомар Маристани",
-"away": "Ребека Масарова",
-"hl": "https://a.espncdn.com/i/teamlogos/countries/500/esp.png",
-"al": "https://a.espncdn.com/i/teamlogos/countries/500/sui.png",
-"hid": "12957",
-"aid": "2984",
-"bb": "https://betboom.ru/search?query=%D0%9C%D0%B0%D1%80%D0%B8%D1%81%D1%82%D0%B0%D0%BD%D0%B8&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=tennis",
-"path": "tennis/wta",
-"url": "live.html?s=tennis&p=tennis%2Fwta&e=186810&h=%D0%93%D1%83%D0%B9%D0%BE%D0%BC%D0%B0%D1%80+%D0%9C%D0%B0%D1%80%D0%B8%D1%81%D1%82%D0%B0%D0%BD%D0%B8&a=%D0%A0%D0%B5%D0%B1%D0%B5%D0%BA%D0%B0+%D0%9C%D0%B0%D1%81%D0%B0%D1%80%D0%BE%D0%B2%D0%B0",
-"participants": [
-[
-"Гуйомар Маристани",
-"Guiomar Maristany Zuleta De Reales"
-],
-[
-"Ребека Масарова",
-"Rebeka Masarova"
-]
-],
-"div": "WTA",
-"state": "pre",
-"bo": null,
-"prediction": "predictions/2026-11-22-guyomar-maristani-rebeka-masarova-186810.html",
-"hs": null,
-"as": null,
-"tip": "Будет 2 сета · ≈1.76",
-"top": false,
-"bot": {
-"main": {
-"label": "Будет 2 сета",
-"p": 0.53,
-"odds": 1.76,
-"est": true
-},
-"bold": null,
-"markets": [
-[
-"Победа: Гуйомар Маристани",
-0.679,
-null
-],
-[
-"Победа: Ребека Масарова",
-0.321,
-null
-],
-[
-"Будет 3 сета",
-0.47,
-null
-],
-[
-"Будет 2 сета",
-0.53,
-null
-],
-[
-"Счёт по сетам 2:0",
-0.387,
-null
-],
-[
-"Счёт по сетам 0:2",
-0.143,
-null
-],
-[
-"Счёт по сетам 2:1",
-0.292,
-null
-],
-[
-"Счёт по сетам 1:2",
-0.178,
-null
-],
-[
-"Гуйомар Маристани возьмёт хотя бы сет",
-0.857,
-null
-],
-[
-"Ребека Масарова возьмёт хотя бы сет",
-0.613,
-null
-]
-],
-"bar": [
-0.6790041356686857,
-0,
-0.32099586433131433
-],
-"center": "Рейтинг Эло 1708 : 1578"
-},
-"lt": null
-},
-{
 "sport": "football",
 "id": "401877050",
 "league": "Мексика · Лига MX",
@@ -4287,6 +4186,107 @@ null
 0.077
 ]
 ]
+},
+"lt": null
+},
+{
+"sport": "tennis",
+"id": "186810",
+"league": "Теннис · WTA",
+"kickoff": "2026-11-22T01:50:00+03:00",
+"home": "Гуйомар Маристани",
+"away": "Ребека Масарова",
+"hl": "https://a.espncdn.com/i/teamlogos/countries/500/esp.png",
+"al": "https://a.espncdn.com/i/teamlogos/countries/500/sui.png",
+"hid": "12957",
+"aid": "2984",
+"bb": "https://betboom.ru/search?query=%D0%9C%D0%B0%D1%80%D0%B8%D1%81%D1%82%D0%B0%D0%BD%D0%B8&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=tennis",
+"path": "tennis/wta",
+"url": "live.html?s=tennis&p=tennis%2Fwta&e=186810&h=%D0%93%D1%83%D0%B9%D0%BE%D0%BC%D0%B0%D1%80+%D0%9C%D0%B0%D1%80%D0%B8%D1%81%D1%82%D0%B0%D0%BD%D0%B8&a=%D0%A0%D0%B5%D0%B1%D0%B5%D0%BA%D0%B0+%D0%9C%D0%B0%D1%81%D0%B0%D1%80%D0%BE%D0%B2%D0%B0",
+"participants": [
+[
+"Гуйомар Маристани",
+"Guiomar Maristany Zuleta De Reales"
+],
+[
+"Ребека Масарова",
+"Rebeka Masarova"
+]
+],
+"div": "WTA",
+"state": "pre",
+"bo": null,
+"prediction": "predictions/2026-11-22-guyomar-maristani-rebeka-masarova-186810.html",
+"hs": null,
+"as": null,
+"tip": "Будет 2 сета · ≈1.76",
+"top": false,
+"bot": {
+"main": {
+"label": "Будет 2 сета",
+"p": 0.53,
+"odds": 1.76,
+"est": true
+},
+"bold": null,
+"markets": [
+[
+"Победа: Гуйомар Маристани",
+0.679,
+null
+],
+[
+"Победа: Ребека Масарова",
+0.321,
+null
+],
+[
+"Будет 3 сета",
+0.47,
+null
+],
+[
+"Будет 2 сета",
+0.53,
+null
+],
+[
+"Счёт по сетам 2:0",
+0.387,
+null
+],
+[
+"Счёт по сетам 0:2",
+0.143,
+null
+],
+[
+"Счёт по сетам 2:1",
+0.292,
+null
+],
+[
+"Счёт по сетам 1:2",
+0.178,
+null
+],
+[
+"Гуйомар Маристани возьмёт хотя бы сет",
+0.857,
+null
+],
+[
+"Ребека Масарова возьмёт хотя бы сет",
+0.613,
+null
+]
+],
+"bar": [
+0.6790041356686857,
+0,
+0.32099586433131433
+],
+"center": "Рейтинг Эло 1708 : 1578"
 },
 "lt": null
 },
@@ -7408,21 +7408,21 @@ null
 "league": "Норвегия · Элитсерия",
 "kickoff": "2026-11-22T19:00:00+03:00",
 "home": "Kristiansund BK",
-"away": "Sandefjord",
+"away": "Саннефьорд",
 "hl": "https://a.espncdn.com/i/teamlogos/soccer/500/6672.png",
 "al": "https://a.espncdn.com/i/teamlogos/soccer/500/3279.png",
 "hid": "6672",
 "aid": "3279",
 "bb": "https://betboom.ru/search?query=%D0%9A%D1%80%D0%B8%D1%81%D1%82%D0%B8%D0%B0%D0%BD%D1%81%D1%83%D0%BD%D0%B4&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
 "path": "soccer/nor.1",
-"url": "live.html?s=football&p=soccer%2Fnor.1&e=401843487&h=Kristiansund+BK&a=Sandefjord",
+"url": "live.html?s=football&p=soccer%2Fnor.1&e=401843487&h=Kristiansund+BK&a=%D0%A1%D0%B0%D0%BD%D0%BD%D0%B5%D1%84%D1%8C%D0%BE%D1%80%D0%B4",
 "participants": [
 [
 "Kristiansund BK",
 "Kristiansund BK"
 ],
 [
-"Sandefjord",
+"Саннефьорд",
 "Sandefjord"
 ]
 ],
@@ -7687,7 +7687,7 @@ null
 "id": "401896809",
 "league": "Греция · Суперлига",
 "kickoff": "2026-11-22T20:00:00+03:00",
-"home": "Olympiacos",
+"home": "Олимпиакос",
 "away": "Iraklis",
 "hl": "https://a.espncdn.com/i/teamlogos/soccer/500/435.png",
 "al": "https://a.espncdn.com/i/teamlogos/soccer/500/2575.png",
@@ -7695,10 +7695,10 @@ null
 "aid": "2575",
 "bb": "https://betboom.ru/search?query=%D0%9E%D0%BB%D0%B8%D0%BC%D0%BF%D0%B8%D0%B0%D0%BA%D0%BE%D1%81&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
 "path": "soccer/gre.1",
-"url": "live.html?s=football&p=soccer%2Fgre.1&e=401896809&h=Olympiacos&a=Iraklis",
+"url": "live.html?s=football&p=soccer%2Fgre.1&e=401896809&h=%D0%9E%D0%BB%D0%B8%D0%BC%D0%BF%D0%B8%D0%B0%D0%BA%D0%BE%D1%81&a=Iraklis",
 "participants": [
 [
-"Olympiacos",
+"Олимпиакос",
 "Olympiacos"
 ],
 [
