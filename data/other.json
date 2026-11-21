@@ -7310,25 +7310,25 @@
   "kickoff": "2026-11-21T03:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Fri, November 20th at 7:30 PM EST",
   "clock": "0.0",
   "period": 0,
   "home": {
+   "color": "860038",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/cle.png",
    "id": "5",
    "name": "Cleveland Cavaliers",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/cle.png",
-   "color": "860038",
    "score": "0",
    "record": "8-8",
    "periods": [],
    "ru": "Кливленд"
   },
   "away": {
+   "color": "0c2340",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/ind.png",
    "id": "11",
    "name": "Indiana Pacers",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/ind.png",
-   "color": "0c2340",
    "score": "0",
    "record": "5-10",
    "periods": [],
@@ -7411,7 +7411,9 @@
   "btn": 4,
   "close": {
    "BB_U234.5": 0.5
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null
  },
  "NBA|401909308": {
   "id": "401909308",
