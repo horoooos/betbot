@@ -2376,8 +2376,8 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-21-filadelfiya-siksers-miluoki-baks-401910023.html",
-"hs": "106",
-"as": "103",
+"hs": "117",
+"as": "110",
 "tip": "Ф1 (-10.5) · 1.93",
 "top": false,
 "bot": {
@@ -4137,7 +4137,15 @@ null
 "corners": 9.4,
 "cards": 2.9
 },
-"lt": null
+"lt": {
+"fair": 1.48,
+"label": "ТБ 1.5",
+"min_odds": 1.56,
+"minute": "25'",
+"p": 0.674,
+"result": null,
+"score": "0:0"
+}
 },
 {
 "sport": "tennis",
@@ -4385,7 +4393,15 @@ null
 "corners": 10.4,
 "cards": 3.6
 },
-"lt": null
+"lt": {
+"fair": 1.53,
+"label": "П1",
+"min_odds": 1.61,
+"minute": "25'",
+"p": 0.654,
+"result": null,
+"score": "0:0"
+}
 },
 {
 "sport": "football",
@@ -4532,7 +4548,15 @@ null
 "corners": 9.8,
 "cards": 3.6
 },
-"lt": null
+"lt": {
+"fair": 1.49,
+"label": "ТМ 2.5",
+"min_odds": 1.56,
+"minute": "25'",
+"p": 0.672,
+"result": null,
+"score": "0:0"
+}
 },
 {
 "sport": "football",
@@ -4679,7 +4703,15 @@ null
 "corners": 10.2,
 "cards": 3.9
 },
-"lt": null
+"lt": {
+"fair": 1.52,
+"label": "X2",
+"min_odds": 1.6,
+"minute": "25'",
+"p": 0.657,
+"result": null,
+"score": "0:0"
+}
 },
 {
 "sport": "football",
@@ -4710,7 +4742,7 @@ null
 "bo": null,
 "prediction": "predictions/2026-11-21-strasbur-brest-401876396.html",
 "hs": "0",
-"as": "0",
+"as": "1",
 "tip": "ТБ 2.5 · 1.62",
 "top": false,
 "bot": {
@@ -4826,7 +4858,15 @@ null
 "corners": 8.5,
 "cards": 3.2
 },
-"lt": null
+"lt": {
+"fair": 1.48,
+"label": "ТМ 3.5",
+"min_odds": 1.55,
+"minute": "25'",
+"p": 0.676,
+"result": null,
+"score": "0:1"
+}
 },
 {
 "sport": "football",
@@ -4993,7 +5033,7 @@ null
 ]
 ],
 "div": "SP1",
-"state": "pre",
+"state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-21-real-madrid-selta-401882798.html",
 "hs": "0",
@@ -5135,7 +5175,7 @@ null
 ]
 ],
 "div": "SP2",
-"state": "pre",
+"state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-21-tenerife-malorka-401883107.html",
 "hs": "0",
@@ -5575,7 +5615,7 @@ null
 "bo": null,
 "prediction": "predictions/2026-11-21-moteruell-reyndzhers-401878333.html",
 "hs": "0",
-"as": "0",
+"as": "1",
 "tip": "П2 · 1.54",
 "top": false,
 "bot": {
@@ -5713,7 +5753,7 @@ null
 ]
 ],
 "div": "WTA",
-"state": "pre",
+"state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-21-leyre-romero-gormas-lyuchiya-brontsetti-186811.html",
 "hs": null,
