@@ -2811,8 +2811,8 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-21-filadelfiya-siksers-miluoki-baks-401910023.html",
-"hs": "98",
-"as": "92",
+"hs": "105",
+"as": "96",
 "tip": "Ф1 (-10.5) · 1.93",
 "top": false,
 "bot": {
@@ -2913,7 +2913,7 @@ null
 "bo": null,
 "prediction": "predictions/2026-11-21-karolina-edmonton-401892754.html",
 "hs": "4",
-"as": "3",
+"as": "4",
 "tip": "ТБ 6.5 · 2.10",
 "top": false,
 "bot": {
@@ -3986,7 +3986,15 @@ null
 ]
 ]
 },
-"lt": null
+"lt": {
+"fair": 1.48,
+"label": "Обе забьют — да",
+"min_odds": 1.56,
+"minute": "26'",
+"p": 0.675,
+"result": null,
+"score": "1:0"
+}
 },
 {
 "sport": "football",
@@ -4306,7 +4314,7 @@ null
 "bo": null,
 "prediction": "predictions/2026-11-21-zyulte-varegem-antverpen-401878938.html",
 "hs": "0",
-"as": "0",
+"as": "1",
 "tip": "ТБ 2.5 · 1.68",
 "top": false,
 "bot": {
@@ -9828,21 +9836,21 @@ null
 "league": "Греция · Суперлига",
 "kickoff": "2026-11-22T20:00:00+03:00",
 "home": "Olympiacos",
-"away": "Iraklis",
+"away": "Ираклис",
 "hl": "https://a.espncdn.com/i/teamlogos/soccer/500/435.png",
 "al": "https://a.espncdn.com/i/teamlogos/soccer/500/2575.png",
 "hid": "435",
 "aid": "2575",
 "bb": "https://betboom.ru/search?query=%D0%9E%D0%BB%D0%B8%D0%BC%D0%BF%D0%B8%D0%B0%D0%BA%D0%BE%D1%81&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
 "path": "soccer/gre.1",
-"url": "live.html?s=football&p=soccer%2Fgre.1&e=401896809&h=Olympiacos&a=Iraklis",
+"url": "live.html?s=football&p=soccer%2Fgre.1&e=401896809&h=Olympiacos&a=%D0%98%D1%80%D0%B0%D0%BA%D0%BB%D0%B8%D1%81",
 "participants": [
 [
 "Olympiacos",
 "Olympiacos"
 ],
 [
-"Iraklis",
+"Ираклис",
 "Iraklis"
 ]
 ],
@@ -10247,7 +10255,7 @@ null
 "id": "401843484",
 "league": "Норвегия · Элитсерия",
 "kickoff": "2026-11-22T21:15:00+03:00",
-"home": "Sarpsborg FK",
+"home": "Сарпсборг",
 "away": "Лиллестрём",
 "hl": "https://a.espncdn.com/i/teamlogos/soccer/500/5002.png",
 "al": "https://a.espncdn.com/i/teamlogos/soccer/500/987.png",
@@ -10255,10 +10263,10 @@ null
 "aid": "987",
 "bb": "https://betboom.ru/search?query=%D0%A1%D0%B0%D1%80%D0%BF%D1%81%D0%B1%D0%BE%D1%80%D0%B3&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
 "path": "soccer/nor.1",
-"url": "live.html?s=football&p=soccer%2Fnor.1&e=401843484&h=Sarpsborg+FK&a=%D0%9B%D0%B8%D0%BB%D0%BB%D0%B5%D1%81%D1%82%D1%80%D1%91%D0%BC",
+"url": "live.html?s=football&p=soccer%2Fnor.1&e=401843484&h=%D0%A1%D0%B0%D1%80%D0%BF%D1%81%D0%B1%D0%BE%D1%80%D0%B3&a=%D0%9B%D0%B8%D0%BB%D0%BB%D0%B5%D1%81%D1%82%D1%80%D1%91%D0%BC",
 "participants": [
 [
-"Sarpsborg FK",
+"Сарпсборг",
 "Sarpsborg FK"
 ],
 [
@@ -10352,7 +10360,7 @@ null
 "id": "401912682",
 "league": "Бразилия · Серия B",
 "kickoff": "2026-11-22T22:00:00+03:00",
-"home": "Criciúma",
+"home": "Крисиума",
 "away": "Форталеза Сипакира",
 "hl": "https://a.espncdn.com/i/teamlogos/soccer/500/9971.png",
 "al": "https://a.espncdn.com/i/teamlogos/soccer/500/6272.png",
@@ -10360,10 +10368,10 @@ null
 "aid": "6272",
 "bb": "https://betboom.ru/search?query=%D0%9A%D1%80%D0%B8%D1%81%D0%B8%D1%83%D0%BC%D0%B0&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
 "path": "soccer/bra.2",
-"url": "live.html?s=football&p=soccer%2Fbra.2&e=401912682&h=Crici%C3%BAma&a=%D0%A4%D0%BE%D1%80%D1%82%D0%B0%D0%BB%D0%B5%D0%B7%D0%B0+%D0%A1%D0%B8%D0%BF%D0%B0%D0%BA%D0%B8%D1%80%D0%B0",
+"url": "live.html?s=football&p=soccer%2Fbra.2&e=401912682&h=%D0%9A%D1%80%D0%B8%D1%81%D0%B8%D1%83%D0%BC%D0%B0&a=%D0%A4%D0%BE%D1%80%D1%82%D0%B0%D0%BB%D0%B5%D0%B7%D0%B0+%D0%A1%D0%B8%D0%BF%D0%B0%D0%BA%D0%B8%D1%80%D0%B0",
 "participants": [
 [
-"Criciúma",
+"Крисиума",
 "Criciúma"
 ],
 [
