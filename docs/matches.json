@@ -204,7 +204,7 @@ null
 ]
 ],
 "div": "T1",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "predictions/2026-11-21-genchlerbirligi-gaziantep-401888247.html",
 "hs": "1",
@@ -330,7 +330,7 @@ null
 "min_odds": 1.59,
 "minute": "25'",
 "p": 0.658,
-"result": null,
+"result": "miss",
 "score": "1:0"
 }
 },
@@ -3026,12 +3026,78 @@ null
 "div": "ATP",
 "state": "pre",
 "bo": null,
-"prediction": "",
+"prediction": "predictions/2026-11-21-karlos-alkaras-ben-shelton-187528.html",
 "hs": null,
 "as": null,
-"tip": "",
+"tip": "Будет 2 сета · ≈1.60",
 "top": false,
-"bot": null,
+"bot": {
+"main": {
+"label": "Будет 2 сета",
+"p": 0.58,
+"odds": 1.6,
+"est": true
+},
+"bold": null,
+"markets": [
+[
+"Победа: Карлос Алькарас",
+0.784,
+1.21
+],
+[
+"Победа: Бен Шелтон",
+0.216,
+4.4
+],
+[
+"Будет 3 сета",
+0.42,
+null
+],
+[
+"Будет 2 сета",
+0.58,
+null
+],
+[
+"Счёт по сетам 2:0",
+0.49,
+null
+],
+[
+"Счёт по сетам 0:2",
+0.09,
+null
+],
+[
+"Счёт по сетам 2:1",
+0.294,
+null
+],
+[
+"Счёт по сетам 1:2",
+0.126,
+null
+],
+[
+"Карлос Алькарас возьмёт хотя бы сет",
+0.91,
+null
+],
+[
+"Бен Шелтон возьмёт хотя бы сет",
+0.51,
+null
+]
+],
+"bar": [
+0.7843137254901962,
+0,
+0.21568627450980382
+],
+"center": "Линия winline · Эло 2017 : 1871"
+},
 "lt": null
 },
 {
