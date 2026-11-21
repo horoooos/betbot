@@ -1550,7 +1550,7 @@
  "value_day": "2026-11-21",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-21",
- "site_stamp": "1299|8066|2026-11-21 17|4|7e35fda98b587416",
+ "site_stamp": "1300|8073|2026-11-21 17|4|6f391ac58b263dac",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1712,7 +1712,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 8066,
+ "dz_last": 8073,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2532,10 +2532,10 @@
    }
   },
   "source": {
-   "last_success": "2026-11-21T14:35:55.465015+00:00",
-   "parsed": 351,
-   "added": 67,
-   "discovered_matches": 62,
+   "last_success": "2026-11-21T14:56:55.061568+00:00",
+   "parsed": 358,
+   "added": 44,
+   "discovered_matches": 40,
    "pages": 18,
    "errors": [],
    "parsed_by_sport": {
@@ -2548,49 +2548,15 @@
    }
   },
   "error": null,
-  "tips": 9077,
+  "tips": 9099,
   "snapshots": 174,
-  "unmapped_markets": 13633,
+  "unmapped_markets": 13655,
   "quote_matches": 23
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-21T17:54:26.662065+03:00",
-  "cursor": "217",
+  "last_poll": "2026-11-21T17:56:55.061568+03:00",
+  "cursor": "220",
   "posts": [
-   {
-    "post_id": 613,
-    "url": "https://vk.com/wall-228963529_613",
-    "title": "Георгий Джикия обязан выплатить почти 89 тыс. руб. за капремонт",
-    "text": "рџ± Джикия поплатился за просрочку: почти 89 тыс. рублей взыскали в суде!",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": false,
-     "details_present": false,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-20T13:03:14.595076+03:00"
-   },
-   {
-    "post_id": 614,
-    "url": "https://vk.com/wall-228963529_614",
-    "title": "Семин отверг расширение РПЛ до 20 команд: «Нет оснований»",
-    "text": "рџ“° Юрий Семин, бывший главный тренер «Локомотива», в интервью «СЭ» резко отклонил идею увеличить число участников РФПЛ до двадцати команд.",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": false,
-     "details_present": false,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-20T14:05:14.674620+03:00"
-   },
    {
     "post_id": 615,
     "url": "https://vk.com/wall-228963529_615",
@@ -3066,6 +3032,40 @@
     },
     "status": "needs_review",
     "observed_at": "2026-11-21T16:49:01.072081+03:00"
+   },
+   {
+    "post_id": 668,
+    "url": "https://vk.com/wall-228963529_668",
+    "title": "TORONTOTOKYO: CS2 продержится дольше, чем Dota 2",
+    "text": "рџ± «CS2 будет жить подольше, чем Dota 2», – броско заявляет бывший тренер BETBOOM TEAM Александр «TORONTOTOKYO» Хертек, сравнивая две крупнейшие киберспортивные сцены.",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": false,
+     "details_present": false,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-21T17:56:55.061568+03:00"
+   },
+   {
+    "post_id": 669,
+    "url": "https://vk.com/wall-228963529_669",
+    "title": "«Балтика» выиграла у «Оренбурга» 2:0 и уверенно завершила первый круг",
+    "text": "рџ“° Тренер «Балтики» Андрей Талалаев рад, что команда одержала уверенную победу над «Оренбургом» со счётом 2:0 в матче 15-го тура РПЛ.",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": false,
+     "details_present": false,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-21T17:56:55.061568+03:00"
    }
   ],
   "status": "observing"
