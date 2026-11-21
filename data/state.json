@@ -5,7 +5,7 @@
  },
  "learned": "2026-11-21",
  "schedule_day": "2026-11-21",
- "content_slot": "2026-11-21-19",
+ "content_slot": "2026-11-21-20",
  "news_seen": [
   "https://www.sport-express.ru/football/rusteam/news/galickiy-posetil-razdevalku-sbornoy-rossii-posle-pobedy-nad-venesueloy-2476283/",
   "https://www.sport-express.ru/football/england/news/aston-villa-prodlila-kontrakt-s-poluzaschitnikom-onana-2476252/",
@@ -1550,7 +1550,7 @@
  "value_day": "2026-11-21",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-21",
- "site_stamp": "1347|8266|2026-11-21 19|4|6a2e8f28960ff899",
+ "site_stamp": "1359|8293|2026-11-21 20|4|8c74c0f7ca0b7065",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1565,125 +1565,117 @@
  },
  "value_check": "2026-11-21-6",
  "express_risk": {
-  "msg": 7574,
+  "msg": 8267,
   "legs": [
    {
-    "sport": "football",
-    "div": "DNK",
-    "id": "401874492",
+    "sport": "hockey",
+    "div": "NHL",
+    "id": "401892755",
     "side": "home",
-    "p": 0.574657544196046,
-    "odds": 1.645,
-    "kickoff": "2026-11-20T21:00:00+03:00",
-    "home": "Орхус",
-    "away": "Люнгбю",
-    "league": "🇩🇰 Дания · Суперлига",
+    "p": 0.5934121196882072,
+    "odds": 1.617,
+    "kickoff": "2026-11-21T23:30:00+03:00",
+    "home": "Калгари",
+    "away": "Чикаго",
+    "league": "🇺🇸 США · NHL",
     "logos": [
-     "https://a.espncdn.com/i/teamlogos/soccer/500/7853.png",
-     "https://a.espncdn.com/i/teamlogos/soccer/500/7860.png"
+     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/cgy.png",
+     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/chi.png"
+    ],
+    "colors": [
+     "dd1a32",
+     "e31937"
+    ],
+    "label": "Победа: Калгари (с ОТ)"
+   },
+   {
+    "sport": "hockey",
+    "div": "NHL",
+    "id": "401892756",
+    "side": "home",
+    "p": 0.5635245901639344,
+    "odds": 1.704,
+    "kickoff": "2026-11-22T02:00:00+03:00",
+    "home": "Флорида",
+    "away": "Баффало",
+    "league": "🇺🇸 США · NHL",
+    "logos": [
+     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/fla.png",
+     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/buf.png"
+    ],
+    "colors": [
+     "e51937",
+     "00468b"
+    ],
+    "label": "Победа: Флорида (с ОТ)"
+   },
+   {
+    "sport": "hockey",
+    "div": "NHL",
+    "id": "401892760",
+    "side": "home",
+    "p": 0.5830164765525981,
+    "odds": 1.645,
+    "kickoff": "2026-11-22T03:00:00+03:00",
+    "home": "Монреаль",
+    "away": "Филадельфия",
+    "league": "🇺🇸 США · NHL",
+    "logos": [
+     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/mtl.png",
+     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/phi.png"
+    ],
+    "colors": [
+     "c41230",
+     "fe5823"
+    ],
+    "label": "Победа: Монреаль (с ОТ)"
+   },
+   {
+    "sport": "basketball",
+    "div": "NBA",
+    "id": "401910024",
+    "side": "home",
+    "p": 0.584070796460177,
+    "odds": 1.645,
+    "kickoff": "2026-11-22T03:30:00+03:00",
+    "home": "Нью-Йорк Никс",
+    "away": "Портленд",
+    "league": "🇺🇸 США · NBA",
+    "logos": [
+     "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/ny.png",
+     "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/por.png"
+    ],
+    "colors": [
+     "1d428a",
+     "e03a3e"
+    ],
+    "label": "Победа: Нью-Йорк Никс (с ОТ)"
+   },
+   {
+    "sport": "hockey",
+    "div": "NHL",
+    "id": "401892765",
+    "side": "home",
+    "p": 0.5934121196882072,
+    "odds": 1.617,
+    "kickoff": "2026-11-22T05:00:00+03:00",
+    "home": "Юта",
+    "away": "Анахайм",
+    "league": "🇺🇸 США · NHL",
+    "logos": [
+     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/uta.png",
+     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/ana.png"
     ],
     "colors": [
      "000000",
-     "000000"
+     "fc4c02"
     ],
-    "label": "Победа: Орхус",
-    "win": true,
-    "score": "2:1"
-   },
-   {
-    "sport": "football",
-    "div": "NOR",
-    "id": "401843486",
-    "side": "away",
-    "p": 0.5746300818847866,
-    "odds": 1.645,
-    "kickoff": "2026-11-20T21:00:00+03:00",
-    "home": "Молде",
-    "away": "Будё-Глимт",
-    "league": "🇳🇴 Норвегия · Элитсерия",
-    "logos": [
-     "https://a.espncdn.com/i/teamlogos/soccer/500/2715.png",
-     "https://a.espncdn.com/i/teamlogos/soccer/500/2980.png"
-    ],
-    "colors": [
-     "000099",
-     "FCEE33"
-    ],
-    "label": "Победа: Будё-Глимт",
-    "win": true,
-    "score": "2:4"
-   },
-   {
-    "sport": "football",
-    "div": "F2",
-    "id": "401876687",
-    "side": "home",
-    "p": 0.5569776407093293,
-    "odds": 1.69,
-    "kickoff": "2026-11-20T22:00:00+03:00",
-    "home": "Нанси",
-    "away": "Дижон",
-    "league": "🇫🇷 Франция · Лига 2",
-    "logos": [
-     "https://a.espncdn.com/i/teamlogos/soccer/500/3267.png",
-     "https://a.espncdn.com/i/teamlogos/soccer/500/3170.png"
-    ],
-    "colors": [
-     "ef2f24",
-     "ef2f24"
-    ],
-    "label": "Победа: Нанси",
-    "win": true,
-    "score": "1:0"
-   },
-   {
-    "sport": "football",
-    "div": "I2",
-    "id": "401899543",
-    "side": "home",
-    "p": 0.5887262646436343,
-    "odds": 1.606,
-    "kickoff": "2026-11-20T22:30:00+03:00",
-    "home": "Верона",
-    "away": "Чезена",
-    "league": "🇮🇹 Италия · Серия B",
-    "logos": [
-     "https://a.espncdn.com/i/teamlogos/soccer/500/119.png",
-     "https://a.espncdn.com/i/teamlogos/soccer/500/3337.png"
-    ],
-    "colors": [
-     "00239c",
-     "1a1a1a"
-    ],
-    "label": "Победа: Верона"
-   },
-   {
-    "sport": "football",
-    "div": "SC1",
-    "id": "401878519",
-    "side": "home",
-    "p": 0.5856842046547949,
-    "odds": 1.606,
-    "kickoff": "2026-11-20T22:30:00+03:00",
-    "home": "Инвернесс Каледониан Тисл",
-    "away": "Эйр Юнайтед",
-    "league": "🏴󠁧󠁢󠁳󠁣󠁴󠁿 Шотландия · Чемпионшип",
-    "logos": [
-     "https://a.espncdn.com/i/teamlogos/soccer/500/253.png",
-     "https://a.espncdn.com/i/teamlogos/soccer/500/248.png"
-    ],
-    "colors": [
-     "000099",
-     "000099"
-    ],
-    "label": "Победа: Инвернесс Каледониан Тисл",
-    "win": false,
-    "score": "0:0"
+    "label": "Победа: Юта (с ОТ)"
    }
   ],
-  "odds": 11.795316293761,
-  "day": "2026-11-20",
-  "done": true
+  "odds": 12.056505117287399,
+  "day": "2026-11-21",
+  "done": false
  },
  "streak_day": {
   "2026-11-20": 2
@@ -1712,7 +1704,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 8266,
+ "dz_last": 8293,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2502,9 +2494,9 @@
   "model": {
    "weight": 0.0,
    "status": "collecting",
-   "settled_matches": 61,
+   "settled_matches": 65,
    "required_matches": 100,
-   "trained_at": "2026-11-21T16:55:48.584124+00:00"
+   "trained_at": "2026-11-21T17:02:41.769370+00:00"
   },
   "sport_models": {
    "hockey": {
@@ -2566,60 +2558,9 @@
   "quote_matches": 23
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-21T19:55:48.584124+03:00",
-  "cursor": "222",
+  "last_poll": "2026-11-21T20:02:41.769370+03:00",
+  "cursor": "226",
   "posts": [
-   {
-    "post_id": 616,
-    "url": "https://vk.com/wall-228963529_616",
-    "title": "Тюкавин может покинуть «Динамо» при конкретном предложении из Европы",
-    "text": "рџ± Тюкавин признался, что уход из «Динамо» зимой будет тяжёлым решением.",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": false,
-     "details_present": false,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-20T15:09:15.593718+03:00"
-   },
-   {
-    "post_id": 617,
-    "url": "https://vk.com/wall-228963529_617",
-    "title": "SirActionSlacks сравнил патч 7.42 Dota 2 с глобальной переработкой LoL",
-    "text": "рџ“° Патч 7.42 Dota 2 вышел в ночь на 19 ноября, а ведущий турниров Джейк «SirActionSlacks» Каннер уже успел сравнить его с предстоящей реинкарнацией League of Legends.",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": false,
-     "details_present": false,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-20T15:09:15.593718+03:00"
-   },
-   {
-    "post_id": 618,
-    "url": "https://vk.com/wall-228963529_618",
-    "title": "Greater Horn of Battle не дарит мегакрипов: реальность vs описание",
-    "text": "рџ“° Оказалось, что Horn of Battle не дарит мегакрипов, а лишь обычных!",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": false,
-     "details_present": false,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-20T16:15:15.261381+03:00"
-   },
    {
     "post_id": 619,
     "url": "https://vk.com/wall-228963529_619",
@@ -3078,6 +3019,57 @@
     },
     "status": "needs_review",
     "observed_at": "2026-11-21T18:59:08.570555+03:00"
+   },
+   {
+    "post_id": 672,
+    "url": "https://vk.com/wall-228963529_672",
+    "title": "Луис Энрике сократил отставание «Зенита» до минимума в матче с «Рубином»",
+    "text": "вљЎпёЏ«Зенит» врезался в «Рубин», но Луис Энрике спас ситуацию!",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": false,
+     "details_present": false,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-21T20:02:41.769370+03:00"
+   },
+   {
+    "post_id": 674,
+    "url": "https://vk.com/wall-228963529_674",
+    "title": "Кокшаров получил перелом: форвард «Факела» может пропустить сезон",
+    "text": "рџ“° Вчера в Воронеже «Факел» потерял одного из своих главных атакующих орудий – нападающего Александра Кокшарова, которому поставили диагноз «перелом средней трети большеберцовой кости».",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": false,
+     "details_present": false,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-21T20:02:41.769370+03:00"
+   },
+   {
+    "post_id": 675,
+    "url": "https://vk.com/wall-228963529_675",
+    "title": "LIVE-прогноз не зашёл: П1 · итог 1:1",
+    "text": "рџ“Љ LIVE-прогнозы бота: 112 из 156.",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": false,
+     "details_present": false,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-21T20:02:41.769370+03:00"
    }
   ],
   "status": "observing"

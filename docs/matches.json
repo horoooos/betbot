@@ -1,892 +1,5 @@
 [
 {
-"sport": "football",
-"id": "401882806",
-"league": "Испания · Ла Лига",
-"kickoff": "2026-11-21T16:00:00+03:00",
-"home": "Алавес",
-"away": "Депортиво Ла-Корунья",
-"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/96.png",
-"al": "https://a.espncdn.com/i/teamlogos/soccer/500/90.png",
-"hid": "96",
-"aid": "90",
-"bb": "https://betboom.ru/search?query=%D0%90%D0%BB%D0%B0%D0%B2%D0%B5%D1%81&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
-"path": "soccer/esp.1",
-"url": "live.html?s=football&p=soccer%2Fesp.1&e=401882806&h=%D0%90%D0%BB%D0%B0%D0%B2%D0%B5%D1%81&a=%D0%94%D0%B5%D0%BF%D0%BE%D1%80%D1%82%D0%B8%D0%B2%D0%BE+%D0%9B%D0%B0-%D0%9A%D0%BE%D1%80%D1%83%D0%BD%D1%8C%D1%8F",
-"participants": [
-[
-"Алавес",
-"Alavés"
-],
-[
-"Депортиво Ла-Корунья",
-"Deportivo"
-]
-],
-"div": "SP1",
-"state": "post",
-"bo": null,
-"prediction": "predictions/2026-11-21-alaves-deportivo-la-korunya-401882806.html",
-"hs": "3",
-"as": "1",
-"tip": "ТМ 2.5 · 1.56",
-"top": false,
-"bot": {
-"main": {
-"label": "ТМ 2.5",
-"p": 0.612,
-"odds": 1.56,
-"est": false
-},
-"bold": {
-"label": "П1",
-"p": 0.414,
-"odds": 2.3,
-"est": false
-},
-"markets": [
-[
-"П1",
-0.414,
-2.3
-],
-[
-"Ничья",
-0.306,
-3.1
-],
-[
-"П2",
-0.28,
-3.4
-],
-[
-"1X",
-0.72,
-null
-],
-[
-"X2",
-0.586,
-null
-],
-[
-"ТБ 1.5",
-0.666,
-null
-],
-[
-"ТБ 2.5",
-0.388,
-2.45
-],
-[
-"ТМ 2.5",
-0.612,
-1.556
-],
-[
-"ТБ 3.5",
-0.189,
-null
-],
-[
-"Обе забьют — да",
-0.459,
-null
-],
-[
-"Обе забьют — нет",
-0.541,
-null
-],
-[
-"ИТ1 больше 1.5",
-0.357,
-null
-],
-[
-"ИТ2 больше 1.5",
-0.259,
-null
-],
-[
-"Ф1 (−1.5)",
-0.189,
-null
-],
-[
-"Ф2 (+1.5)",
-0.811,
-null
-]
-],
-"bar": [
-0.4138794971264331,
-0.30587001236806916,
-0.28025049050549766
-],
-"center": "Ожидаемые голы (xG) 1.3 : 1.0",
-"scores": [
-[
-"1:1",
-0.142
-],
-[
-"1:0",
-0.123
-],
-[
-"0:0",
-0.117
-]
-]
-},
-"lt": {
-"fair": 1.29,
-"label": "П1",
-"min_odds": 1.36,
-"minute": "26'",
-"p": 0.773,
-"result": "hit",
-"score": "1:0"
-}
-},
-{
-"sport": "football",
-"id": "401882299",
-"league": "Испания · Сегунда",
-"kickoff": "2026-11-21T16:00:00+03:00",
-"home": "CD Sabadell",
-"away": "Granada",
-"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/11487.png",
-"al": "https://a.espncdn.com/i/teamlogos/soccer/500/3747.png",
-"hid": "11487",
-"aid": "3747",
-"bb": "https://betboom.ru/search?query=%D0%A1%D0%B0%D0%B1%D0%B0%D0%B4%D0%B5%D0%BB%D0%BB&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
-"path": "soccer/esp.2",
-"url": "live.html?s=football&p=soccer%2Fesp.2&e=401882299&h=CD+Sabadell&a=Granada",
-"participants": [
-[
-"CD Sabadell",
-"CD Sabadell"
-],
-[
-"Granada",
-"Granada"
-]
-],
-"div": "SP2",
-"state": "post",
-"bo": null,
-"prediction": "predictions/2026-11-21-cd-sabadell-granada-401882299.html",
-"hs": "1",
-"as": "1",
-"tip": "ТМ 2.5 · 1.58",
-"top": false,
-"bot": {
-"main": {
-"label": "ТМ 2.5",
-"p": 0.587,
-"odds": 1.58,
-"est": false
-},
-"bold": null,
-"markets": [
-[
-"П1",
-0.38,
-2.5
-],
-[
-"Ничья",
-0.302,
-3.0
-],
-[
-"П2",
-0.318,
-3.05
-],
-[
-"1X",
-0.682,
-null
-],
-[
-"X2",
-0.62,
-null
-],
-[
-"ТБ 1.5",
-0.687,
-null
-],
-[
-"ТБ 2.5",
-0.413,
-2.25
-],
-[
-"ТМ 2.5",
-0.587,
-1.606
-],
-[
-"ТБ 3.5",
-0.207,
-null
-],
-[
-"Обе забьют — да",
-0.483,
-null
-],
-[
-"Обе забьют — нет",
-0.517,
-null
-],
-[
-"ИТ1 больше 1.5",
-0.348,
-null
-],
-[
-"ИТ2 больше 1.5",
-0.302,
-null
-],
-[
-"Ф1 (−1.5)",
-0.17,
-null
-],
-[
-"Ф2 (+1.5)",
-0.83,
-null
-]
-],
-"bar": [
-0.3802057903724265,
-0.30165982214246456,
-0.31813438748510897
-],
-"center": "Ожидаемые голы (xG) 1.2 : 1.1",
-"scores": [
-[
-"1:1",
-0.142
-],
-[
-"1:0",
-0.109
-],
-[
-"0:0",
-0.108
-]
-],
-"corners": 7.5,
-"cards": 5.0
-},
-"lt": null
-},
-{
-"sport": "football",
-"id": "401843483",
-"league": "Норвегия · Элитсерия",
-"kickoff": "2026-11-21T16:00:00+03:00",
-"home": "Тромсё",
-"away": "Викинг",
-"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/5270.png",
-"al": "https://a.espncdn.com/i/teamlogos/soccer/500/510.png",
-"hid": "5270",
-"aid": "510",
-"bb": "https://betboom.ru/search?query=%D0%A2%D1%80%D0%BE%D0%BC%D1%81%D1%91&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
-"path": "soccer/nor.1",
-"url": "live.html?s=football&p=soccer%2Fnor.1&e=401843483&h=%D0%A2%D1%80%D0%BE%D0%BC%D1%81%D1%91&a=%D0%92%D0%B8%D0%BA%D0%B8%D0%BD%D0%B3",
-"participants": [
-[
-"Тромсё",
-"Tromso"
-],
-[
-"Викинг",
-"Viking FK"
-]
-],
-"div": "NOR",
-"state": "post",
-"bo": null,
-"prediction": "predictions/2026-11-21-tromse-viking-401843483.html",
-"hs": "3",
-"as": "2",
-"tip": "П2 · 1.80",
-"top": false,
-"bot": {
-"main": {
-"label": "П2",
-"p": 0.532,
-"odds": 1.8,
-"est": false
-},
-"bold": null,
-"markets": [
-[
-"П1",
-0.24,
-3.75
-],
-[
-"Ничья",
-0.228,
-4.1
-],
-[
-"П2",
-0.532,
-1.8
-],
-[
-"1X",
-0.468,
-null
-],
-[
-"X2",
-0.76,
-null
-],
-[
-"ТБ 1.5",
-0.858,
-null
-],
-[
-"ТБ 2.5",
-0.656,
-null
-],
-[
-"ТМ 2.5",
-0.344,
-null
-],
-[
-"ТБ 3.5",
-0.437,
-2.1
-],
-[
-"Обе забьют — да",
-0.648,
-null
-],
-[
-"Обе забьют — нет",
-0.352,
-null
-],
-[
-"ИТ1 больше 1.5",
-0.384,
-null
-],
-[
-"ИТ2 больше 1.5",
-0.606,
-null
-],
-[
-"Ф1 (−1.5)",
-0.104,
-null
-],
-[
-"Ф2 (+1.5)",
-0.896,
-null
-]
-],
-"bar": [
-0.23953855620282988,
-0.22813909875196423,
-0.5323223450452058
-],
-"center": "Ожидаемые голы (xG) 1.3 : 2.0",
-"scores": [
-[
-"1:1",
-0.1
-],
-[
-"1:2",
-0.095
-],
-[
-"0:2",
-0.071
-]
-]
-},
-"lt": null
-},
-{
-"sport": "football",
-"id": "401888369",
-"league": "Турция · Суперлига",
-"kickoff": "2026-11-21T16:00:00+03:00",
-"home": "Амедспор",
-"away": "Кайкур Ризеспор",
-"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/132335.png",
-"al": "https://a.espncdn.com/i/teamlogos/soccer/500/7656.png",
-"hid": "132335",
-"aid": "7656",
-"bb": "https://betboom.ru/search?query=%D0%90%D0%BC%D0%B5%D0%B4%D1%81%D0%BF%D0%BE%D1%80&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
-"path": "soccer/tur.1",
-"url": "live.html?s=football&p=soccer%2Ftur.1&e=401888369&h=%D0%90%D0%BC%D0%B5%D0%B4%D1%81%D0%BF%D0%BE%D1%80&a=%D0%9A%D0%B0%D0%B9%D0%BA%D1%83%D1%80+%D0%A0%D0%B8%D0%B7%D0%B5%D1%81%D0%BF%D0%BE%D1%80",
-"participants": [
-[
-"Амедспор",
-"Amed SFK"
-],
-[
-"Кайкур Ризеспор",
-"Caykur Rizespor"
-]
-],
-"div": "T1",
-"state": "post",
-"bo": null,
-"prediction": "predictions/2026-11-21-amedspor-kaykur-rizespor-401888369.html",
-"hs": "0",
-"as": "2",
-"tip": "П1 · 1.68",
-"top": false,
-"bot": {
-"main": {
-"label": "П1",
-"p": 0.548,
-"odds": 1.68,
-"est": false
-},
-"bold": {
-"label": "ТМ 2.5",
-"p": 0.401,
-"odds": 2.31,
-"est": false
-},
-"markets": [
-[
-"П1",
-0.548,
-1.833
-],
-[
-"Ничья",
-0.236,
-4.0
-],
-[
-"П2",
-0.216,
-3.85
-],
-[
-"1X",
-0.784,
-null
-],
-[
-"X2",
-0.452,
-null
-],
-[
-"ТБ 1.5",
-0.823,
-null
-],
-[
-"ТБ 2.5",
-0.599,
-null
-],
-[
-"ТМ 2.5",
-0.401,
-null
-],
-[
-"ТБ 3.5",
-0.375,
-2.35
-],
-[
-"Обе забьют — да",
-0.595,
-null
-],
-[
-"Обе забьют — нет",
-0.405,
-null
-],
-[
-"ИТ1 больше 1.5",
-0.578,
-null
-],
-[
-"ИТ2 больше 1.5",
-0.322,
-null
-],
-[
-"Ф1 (−1.5)",
-0.326,
-null
-],
-[
-"Ф2 (+1.5)",
-0.674,
-null
-]
-],
-"bar": [
-0.5483123275791671,
-0.2359069809183367,
-0.21578069150249624
-],
-"center": "Ожидаемые голы (xG) 1.9 : 1.2",
-"scores": [
-[
-"1:1",
-0.109
-],
-[
-"2:1",
-0.098
-],
-[
-"2:0",
-0.085
-]
-],
-"corners": 9.2,
-"cards": 4.5
-},
-"lt": {
-"fair": 1.52,
-"label": "ТМ 3.5",
-"min_odds": 1.59,
-"minute": "26'",
-"p": 0.659,
-"result": "hit",
-"score": "0:1"
-}
-},
-{
-"sport": "football",
-"id": "401888245",
-"league": "Турция · Суперлига",
-"kickoff": "2026-11-21T16:00:00+03:00",
-"home": "Галатасарай",
-"away": "Самсунспор",
-"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/432.png",
-"al": "https://a.espncdn.com/i/teamlogos/soccer/500/11429.png",
-"hid": "432",
-"aid": "11429",
-"bb": "https://betboom.ru/search?query=%D0%93%D0%B0%D0%BB%D0%B0%D1%82%D0%B0%D1%81%D0%B0%D1%80%D0%B0%D0%B9&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
-"path": "soccer/tur.1",
-"url": "live.html?s=football&p=soccer%2Ftur.1&e=401888245&h=%D0%93%D0%B0%D0%BB%D0%B0%D1%82%D0%B0%D1%81%D0%B0%D1%80%D0%B0%D0%B9&a=%D0%A1%D0%B0%D0%BC%D1%81%D1%83%D0%BD%D1%81%D0%BF%D0%BE%D1%80",
-"participants": [
-[
-"Галатасарай",
-"Galatasaray"
-],
-[
-"Самсунспор",
-"Samsunspor"
-]
-],
-"div": "T1",
-"state": "post",
-"bo": null,
-"prediction": "predictions/2026-11-21-galatasaray-samsunspor-401888245.html",
-"hs": "2",
-"as": "1",
-"tip": "Обе забьют — да · ≈1.66",
-"top": false,
-"bot": {
-"main": {
-"label": "Обе забьют — да",
-"p": 0.56,
-"odds": 1.66,
-"est": true
-},
-"bold": null,
-"markets": [
-[
-"П1",
-0.758,
-null
-],
-[
-"Ничья",
-0.152,
-null
-],
-[
-"П2",
-0.09,
-null
-],
-[
-"1X",
-0.91,
-null
-],
-[
-"X2",
-0.242,
-null
-],
-[
-"ТБ 1.5",
-0.885,
-null
-],
-[
-"ТБ 2.5",
-0.708,
-null
-],
-[
-"ТМ 2.5",
-0.292,
-null
-],
-[
-"ТБ 3.5",
-0.498,
-null
-],
-[
-"Обе забьют — да",
-0.56,
-null
-],
-[
-"Обе забьют — нет",
-0.44,
-null
-],
-[
-"ИТ1 больше 1.5",
-0.763,
-null
-],
-[
-"ИТ2 больше 1.5",
-0.227,
-null
-],
-[
-"Ф1 (−1.5)",
-0.559,
-null
-],
-[
-"Ф2 (+1.5)",
-0.441,
-null
-]
-],
-"bar": [
-0.7579027403756485,
-0.15193280744845034,
-0.0901644521759015
-],
-"center": "Ожидаемые голы (xG) 2.8 : 0.9",
-"scores": [
-[
-"2:0",
-0.098
-],
-[
-"3:0",
-0.09
-],
-[
-"2:1",
-0.088
-]
-],
-"corners": 11.2,
-"cards": 3.9
-},
-"lt": {
-"fair": 1.27,
-"label": "ТБ 2.5",
-"min_odds": 1.34,
-"minute": "25'",
-"p": 0.785,
-"result": "hit",
-"score": "1:0"
-}
-},
-{
-"sport": "football",
-"id": "401876689",
-"league": "Франция · Лига 2",
-"kickoff": "2026-11-21T16:00:00+03:00",
-"home": "Стад Лаваль",
-"away": "Монпелье",
-"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/3266.png",
-"al": "https://a.espncdn.com/i/teamlogos/soccer/500/274.png",
-"hid": "3266",
-"aid": "274",
-"bb": "https://betboom.ru/search?query=%D0%9B%D0%B0%D0%B2%D0%B0%D0%BB%D1%8C&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
-"path": "soccer/fra.2",
-"url": "live.html?s=football&p=soccer%2Ffra.2&e=401876689&h=%D0%A1%D1%82%D0%B0%D0%B4+%D0%9B%D0%B0%D0%B2%D0%B0%D0%BB%D1%8C&a=%D0%9C%D0%BE%D0%BD%D0%BF%D0%B5%D0%BB%D1%8C%D0%B5",
-"participants": [
-[
-"Стад Лаваль",
-"Stade Laval"
-],
-[
-"Монпелье",
-"Montpellier"
-]
-],
-"div": "F2",
-"state": "post",
-"bo": null,
-"prediction": "predictions/2026-11-21-stad-laval-monpele-401876689.html",
-"hs": "1",
-"as": "0",
-"tip": "ТМ 2.5 · 2.00",
-"top": false,
-"bot": {
-"main": {
-"label": "ТМ 2.5",
-"p": 0.463,
-"odds": 2.0,
-"est": false
-},
-"bold": {
-"label": "П2",
-"p": 0.451,
-"odds": 2.02,
-"est": false
-},
-"markets": [
-[
-"П1",
-0.283,
-3.3
-],
-[
-"Ничья",
-0.265,
-3.65
-],
-[
-"П2",
-0.451,
-2.05
-],
-[
-"1X",
-0.549,
-null
-],
-[
-"X2",
-0.717,
-null
-],
-[
-"ТБ 1.5",
-0.783,
-null
-],
-[
-"ТБ 2.5",
-0.537,
-1.741
-],
-[
-"ТМ 2.5",
-0.463,
-2.0
-],
-[
-"ТБ 3.5",
-0.314,
-null
-],
-[
-"Обе забьют — да",
-0.573,
-null
-],
-[
-"Обе забьют — нет",
-0.427,
-null
-],
-[
-"ИТ1 больше 1.5",
-0.347,
-null
-],
-[
-"ИТ2 больше 1.5",
-0.475,
-null
-],
-[
-"Ф1 (−1.5)",
-0.121,
-null
-],
-[
-"Ф2 (+1.5)",
-0.879,
-null
-]
-],
-"bar": [
-0.2834547795592314,
-0.26510158040071186,
-0.45144364004005666
-],
-"center": "Ожидаемые голы (xG) 1.2 : 1.6",
-"scores": [
-[
-"1:1",
-0.125
-],
-[
-"1:2",
-0.093
-],
-[
-"0:1",
-0.085
-]
-],
-"corners": 9.7,
-"cards": 3.9
-},
-"lt": null
-},
-{
 "sport": "tennis",
 "id": "187528",
 "league": "Теннис · ATP",
@@ -3324,11 +2437,11 @@ null
 ]
 ],
 "div": "E2",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "predictions/2026-11-21-bredford-siti-donkaster-401880740.html",
 "hs": "2",
-"as": "1",
+"as": "2",
 "tip": "П1 · 1.64",
 "top": false,
 "bot": {
@@ -3471,7 +2584,7 @@ null
 ]
 ],
 "div": "E2",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "predictions/2026-11-21-berton-albion-luton-taun-401880739.html",
 "hs": "1",
@@ -4343,7 +3456,7 @@ null
 ]
 ],
 "div": "E2",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "predictions/2026-11-21-oksford-yunayted-uikom-uonderers-401880733.html",
 "hs": "4",
@@ -4774,7 +3887,7 @@ null
 ]
 ],
 "div": "E3",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "predictions/2026-11-21-barnet-port-veyl-401881263.html",
 "hs": "2",
@@ -6377,7 +5490,7 @@ null
 ]
 ],
 "div": "E0",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "predictions/2026-11-21-chelsi-lids-yunayted-401879236.html",
 "hs": "1",
@@ -6503,7 +5616,7 @@ null
 "min_odds": 1.63,
 "minute": "25'",
 "p": 0.643,
-"result": null,
+"result": "hit",
 "score": "0:0"
 }
 },
@@ -6532,7 +5645,7 @@ null
 ]
 ],
 "div": "E0",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "predictions/2026-11-21-koventri-siti-kristal-pelas-401879235.html",
 "hs": "3",
@@ -6653,7 +5766,7 @@ null
 "min_odds": 1.58,
 "minute": "25'",
 "p": 0.666,
-"result": null,
+"result": "hit",
 "score": "1:1"
 }
 },
@@ -6832,7 +5945,7 @@ null
 ]
 ],
 "div": "E1",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "predictions/2026-11-21-bolton-uonderers-portsmut-401880160.html",
 "hs": "1",
@@ -6953,7 +6066,7 @@ null
 "min_odds": 1.54,
 "minute": "25'",
 "p": 0.68,
-"result": null,
+"result": "hit",
 "score": "1:1"
 }
 },
@@ -7437,7 +6550,7 @@ null
 ]
 ],
 "div": "E1",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "predictions/2026-11-21-stok-siti-birmingem-siti-401880152.html",
 "hs": "1",
@@ -7558,7 +6671,7 @@ null
 "min_odds": 1.53,
 "minute": "25'",
 "p": 0.684,
-"result": null,
+"result": "hit",
 "score": "0:0"
 }
 },
@@ -7587,7 +6700,7 @@ null
 ]
 ],
 "div": "E1",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "predictions/2026-11-21-suonsi-siti-vest-bromvich-albion-401880151.html",
 "hs": "2",
@@ -7708,7 +6821,7 @@ null
 "min_odds": 1.51,
 "minute": "25'",
 "p": 0.694,
-"result": null,
+"result": "hit",
 "score": "1:1"
 }
 },
@@ -7737,7 +6850,7 @@ null
 ]
 ],
 "div": "E1",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "predictions/2026-11-21-vest-hem-preston-nort-end-401880150.html",
 "hs": "1",
@@ -7858,7 +6971,7 @@ null
 "min_odds": 1.39,
 "minute": "26'",
 "p": 0.758,
-"result": null,
+"result": "hit",
 "score": "0:1"
 }
 },
@@ -8037,7 +7150,7 @@ null
 ]
 ],
 "div": "B1",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "predictions/2026-11-21-sharlerua-sent-tryuyden-401878940.html",
 "hs": "2",
@@ -8160,21 +7273,21 @@ null
 "league": "Норвегия · Элитсерия",
 "kickoff": "2026-11-21T18:00:00+03:00",
 "home": "Hamarkameratene",
-"away": "Фредрикстад",
+"away": "Fredrikstad",
 "hl": "https://a.espncdn.com/i/teamlogos/soccer/500/21380.png",
 "al": "https://a.espncdn.com/i/teamlogos/soccer/500/3039.png",
 "hid": "21380",
 "aid": "3039",
 "bb": "https://betboom.ru/search?query=%D0%A5%D0%B0%D0%BC%D0%B0%D1%80%D0%BA%D0%B0%D0%BC%D0%B5%D1%80%D0%B0%D1%82%D0%B5%D0%BD%D0%B5&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
 "path": "soccer/nor.1",
-"url": "live.html?s=football&p=soccer%2Fnor.1&e=401843489&h=Hamarkameratene&a=%D0%A4%D1%80%D0%B5%D0%B4%D1%80%D0%B8%D0%BA%D1%81%D1%82%D0%B0%D0%B4",
+"url": "live.html?s=football&p=soccer%2Fnor.1&e=401843489&h=Hamarkameratene&a=Fredrikstad",
 "participants": [
 [
 "Hamarkameratene",
 "Hamarkameratene"
 ],
 [
-"Фредрикстад",
+"Fredrikstad",
 "Fredrikstad"
 ]
 ],
@@ -8323,7 +7436,7 @@ null
 "bo": null,
 "prediction": "predictions/2026-11-21-kokimbo-unido-everton-cd-401850699.html",
 "hs": "1",
-"as": "2",
+"as": "1",
 "tip": "ТМ 2.5 · 2.00",
 "top": false,
 "bot": {
@@ -9468,7 +8581,7 @@ null
 ]
 ],
 "div": "SC1",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "predictions/2026-11-21-reyt-rovers-partik-tisl-401878517.html",
 "hs": "0",
@@ -9769,7 +8882,7 @@ null
 "bo": null,
 "prediction": "predictions/2026-11-21-real-sociedad-ii-c-diz-401883108.html",
 "hs": "0",
-"as": "1",
+"as": "2",
 "tip": "П1 · 1.92",
 "top": false,
 "bot": {
@@ -9911,7 +9024,7 @@ null
 "bo": null,
 "prediction": "predictions/2026-11-21-nek-psv-401875541.html",
 "hs": "0",
-"as": "3",
+"as": "4",
 "tip": "П2 · 1.72",
 "top": false,
 "bot": {
@@ -10496,7 +9609,7 @@ null
 "bo": null,
 "prediction": "predictions/2026-11-21-katandzaro-palermo-401899545.html",
 "hs": "1",
-"as": "0",
+"as": "1",
 "tip": "П2 · 1.71",
 "top": false,
 "bot": {
@@ -11065,7 +10178,7 @@ null
 ]
 ],
 "div": "I1",
-"state": "pre",
+"state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-21-parma-roma-401874967.html",
 "hs": "0",
@@ -11207,7 +10320,7 @@ null
 ]
 ],
 "div": "NOR",
-"state": "pre",
+"state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-21-volerenga-start-401843485.html",
 "hs": "0",
@@ -12743,12 +11856,122 @@ null
 "div": "ARG",
 "state": "pre",
 "bo": null,
-"prediction": "",
+"prediction": "predictions/2026-11-21-defensa-i-hustisiya-barrakas-sentral-401933758.html",
 "hs": "0",
 "as": "0",
-"tip": "",
+"tip": "ТМ 2.5 · ≈1.53",
 "top": false,
-"bot": null,
+"bot": {
+"main": {
+"label": "ТМ 2.5",
+"p": 0.607,
+"odds": 1.53,
+"est": true
+},
+"bold": {
+"label": "П1",
+"p": 0.447,
+"odds": 2.15,
+"est": false
+},
+"markets": [
+[
+"П1",
+0.447,
+2.05
+],
+[
+"Ничья",
+0.3,
+3.2
+],
+[
+"П2",
+0.253,
+3.85
+],
+[
+"1X",
+0.747,
+null
+],
+[
+"X2",
+0.553,
+null
+],
+[
+"ТБ 1.5",
+0.67,
+null
+],
+[
+"ТБ 2.5",
+0.393,
+2.25
+],
+[
+"ТМ 2.5",
+0.607,
+1.588
+],
+[
+"ТБ 3.5",
+0.192,
+null
+],
+[
+"Обе забьют — да",
+0.456,
+null
+],
+[
+"Обе забьют — нет",
+0.544,
+null
+],
+[
+"ИТ1 больше 1.5",
+0.382,
+null
+],
+[
+"ИТ2 больше 1.5",
+0.24,
+null
+],
+[
+"Ф1 (−1.5)",
+0.213,
+null
+],
+[
+"Ф2 (+1.5)",
+0.787,
+null
+]
+],
+"bar": [
+0.4468922278609801,
+0.3002621778942017,
+0.25284559424481795
+],
+"center": "Ожидаемые голы (xG) 1.3 : 0.9",
+"scores": [
+[
+"1:1",
+0.14
+],
+[
+"1:0",
+0.128
+],
+[
+"0:0",
+0.115
+]
+]
+},
 "lt": null
 },
 {
@@ -12778,12 +12001,78 @@ null
 "div": "NBA",
 "state": "pre",
 "bo": null,
-"prediction": "",
+"prediction": "predictions/2026-11-21-filadelfiya-siksers-miluoki-baks-401910023.html",
 "hs": "0",
 "as": "0",
-"tip": "",
+"tip": "Ф1 (-10.5) · 1.93",
 "top": false,
-"bot": null,
+"bot": {
+"main": {
+"label": "Ф1 (-10.5)",
+"p": 0.5,
+"odds": 1.93,
+"est": false
+},
+"bold": null,
+"markets": [
+[
+"П1 (с ОТ)",
+0.809,
+1.193
+],
+[
+"П2 (с ОТ)",
+0.191,
+4.94
+],
+[
+"Ф1 (-10.5)",
+0.5,
+1.926
+],
+[
+"Ф2 (+10.5)",
+0.5,
+1.893
+],
+[
+"ТБ 221.5",
+0.66,
+null
+],
+[
+"ТМ 221.5",
+0.34,
+null
+],
+[
+"ТБ 228.5",
+0.5,
+null
+],
+[
+"ТМ 228.5",
+0.5,
+null
+],
+[
+"ТБ 235.5",
+0.34,
+null
+],
+[
+"ТМ 235.5",
+0.66,
+null
+]
+],
+"bar": [
+0.8092130471474893,
+0,
+0.19078695285251068
+],
+"center": "Ожидаемый счёт 120 : 109"
+},
 "lt": null
 },
 {
@@ -12813,12 +12102,108 @@ null
 "div": "NHL",
 "state": "pre",
 "bo": null,
-"prediction": "",
+"prediction": "predictions/2026-11-21-karolina-edmonton-401892754.html",
 "hs": "0",
 "as": "0",
-"tip": "",
+"tip": "ТБ 6.5 · 2.10",
 "top": false,
-"bot": null,
+"bot": {
+"main": {
+"label": "ТБ 6.5",
+"p": 0.457,
+"odds": 2.1,
+"est": false
+},
+"bold": null,
+"markets": [
+[
+"П1 (с ОТ и буллитами)",
+0.657,
+1.459
+],
+[
+"П2 (с ОТ и буллитами)",
+0.343,
+2.8
+],
+[
+"П1 в основное время",
+0.58,
+null
+],
+[
+"Ничья в основное время",
+0.15,
+null
+],
+[
+"П2 в основное время",
+0.271,
+null
+],
+[
+"ТБ 5.5",
+0.616,
+null
+],
+[
+"ТМ 5.5",
+0.384,
+null
+],
+[
+"ТБ 6.5",
+0.457,
+2.1
+],
+[
+"ТМ 6.5",
+0.543,
+1.769
+],
+[
+"ТБ 7.5",
+0.312,
+null
+],
+[
+"ТМ 7.5",
+0.688,
+null
+],
+[
+"ИТ1 больше 1.5",
+0.885,
+null
+],
+[
+"ИТ1 больше 2.5",
+0.717,
+null
+],
+[
+"ИТ1 больше 3.5",
+0.508,
+null
+],
+[
+"ИТ2 больше 1.5",
+0.749,
+null
+],
+[
+"ИТ2 больше 2.5",
+0.503,
+null
+]
+],
+"bar": [
+0.6574365665509735,
+0,
+0.34256343344902646
+],
+"center": "Ожидаемые голы 3.7 : 2.7"
+},
 "lt": null
 },
 {
@@ -12966,7 +12351,7 @@ null
 "id": "401921364",
 "league": "Эквадор · Лига Про",
 "kickoff": "2026-11-21T22:00:00+03:00",
-"home": "Técnico Universitario",
+"home": "Текнико Университарио",
 "away": "Депортиво Куэнка",
 "hl": "https://a.espncdn.com/i/teamlogos/soccer/500/9292.png",
 "al": "https://a.espncdn.com/i/teamlogos/soccer/500/4812.png",
@@ -12974,10 +12359,10 @@ null
 "aid": "4812",
 "bb": "https://betboom.ru/search?query=%D0%A3%D0%BD%D0%B8%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D1%82%D0%B0%D1%80%D0%B8%D0%BE&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
 "path": "soccer/ecu.1",
-"url": "live.html?s=football&p=soccer%2Fecu.1&e=401921364&h=T%C3%A9cnico+Universitario&a=%D0%94%D0%B5%D0%BF%D0%BE%D1%80%D1%82%D0%B8%D0%B2%D0%BE+%D0%9A%D1%83%D1%8D%D0%BD%D0%BA%D0%B0",
+"url": "live.html?s=football&p=soccer%2Fecu.1&e=401921364&h=%D0%A2%D0%B5%D0%BA%D0%BD%D0%B8%D0%BA%D0%BE+%D0%A3%D0%BD%D0%B8%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D1%82%D0%B0%D1%80%D0%B8%D0%BE&a=%D0%94%D0%B5%D0%BF%D0%BE%D1%80%D1%82%D0%B8%D0%B2%D0%BE+%D0%9A%D1%83%D1%8D%D0%BD%D0%BA%D0%B0",
 "participants": [
 [
-"Técnico Universitario",
+"Текнико Университарио",
 "Técnico Universitario"
 ],
 [
@@ -17991,6 +17376,41 @@ null
 ]
 ],
 "div": "BRA",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "basketball",
+"id": "401910030",
+"league": "США · NBA",
+"kickoff": "2026-11-23T02:00:00+03:00",
+"home": "Майами Хит",
+"away": "Оклахома-Сити Тандер",
+"hl": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/mia.png",
+"al": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/okc.png",
+"hid": "14",
+"aid": "25",
+"bb": "https://betboom.ru/search?query=%D0%9C%D0%B0%D0%B9%D0%B0%D0%BC%D0%B8&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=basketball",
+"path": "basketball/nba",
+"url": "live.html?s=basketball&p=basketball%2Fnba&e=401910030&h=%D0%9C%D0%B0%D0%B9%D0%B0%D0%BC%D0%B8+%D0%A5%D0%B8%D1%82&a=%D0%9E%D0%BA%D0%BB%D0%B0%D1%85%D0%BE%D0%BC%D0%B0-%D0%A1%D0%B8%D1%82%D0%B8+%D0%A2%D0%B0%D0%BD%D0%B4%D0%B5%D1%80",
+"participants": [
+[
+"Майами Хит",
+"Miami Heat"
+],
+[
+"Оклахома-Сити Тандер",
+"Oklahoma City Thunder"
+]
+],
+"div": "NBA",
 "state": "pre",
 "bo": null,
 "prediction": "",

@@ -517,7 +517,8 @@
    "min_odds": 1.63,
    "minute": "25'",
    "score": "0:0",
-   "sport": "football"
+   "sport": "football",
+   "result": "hit"
   }
  },
  "E0|401879235": {
@@ -534,7 +535,8 @@
    "min_odds": 1.58,
    "minute": "25'",
    "score": "1:1",
-   "sport": "football"
+   "sport": "football",
+   "result": "hit"
   }
  },
  "E0|401878754": {
@@ -569,7 +571,8 @@
    "min_odds": 1.54,
    "minute": "25'",
    "score": "1:1",
-   "sport": "football"
+   "sport": "football",
+   "result": "hit"
   }
  },
  "E1|401880158": {
@@ -640,7 +643,8 @@
    "min_odds": 1.53,
    "minute": "25'",
    "score": "0:0",
-   "sport": "football"
+   "sport": "football",
+   "result": "hit"
   }
  },
  "E1|401880151": {
@@ -657,7 +661,8 @@
    "min_odds": 1.51,
    "minute": "25'",
    "score": "1:1",
-   "sport": "football"
+   "sport": "football",
+   "result": "hit"
   }
  },
  "E1|401880150": {
@@ -674,7 +679,8 @@
    "min_odds": 1.39,
    "minute": "26'",
    "score": "0:1",
-   "sport": "football"
+   "sport": "football",
+   "result": "hit"
   }
  },
  "E1|401880149": {
@@ -715,8 +721,8 @@
  "N1|401875541": {
   "msg": 8133,
   "hs": 0,
-  "as": 3,
-  "goals": 3,
+  "as": 4,
+  "goals": 4,
   "kickoff": "2026-11-21T18:30:00+03:00",
   "lt": {
    "key": "BTTS",
@@ -769,5 +775,12 @@
   "as": 0,
   "goals": 0,
   "kickoff": "2026-11-21T19:15:06+03:00"
+ },
+ "I1|401874967": {
+  "msg": 8286,
+  "hs": 0,
+  "as": 0,
+  "goals": 0,
+  "kickoff": "2026-11-21T20:00:00+03:00"
  }
 }

@@ -15325,7 +15325,7 @@
   "kickoff": "2026-11-21T18:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Scheduled",
   "home": {
    "id": "363",
@@ -15492,7 +15492,10 @@
   "close": {
    "H": 0.488,
    "U25": 0.4843
-  }
+  },
+  "main_hit": false,
+  "bold_hit": false,
+  "value_hit": null
  },
  "401879235": {
   "id": "401879235",
@@ -15501,7 +15504,7 @@
   "kickoff": "2026-11-21T18:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Scheduled",
   "home": {
    "id": "388",
@@ -15660,7 +15663,10 @@
   "btn": 4,
   "close": {
    "O25": 0.5565
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null,
+  "value_hit": null
  },
  "401878754": {
   "id": "401878754",
@@ -15840,7 +15846,7 @@
   "kickoff": "2026-11-21T18:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Scheduled",
   "home": {
    "id": "358",
@@ -15992,7 +15998,10 @@
   "btn": 4,
   "close": {
    "U25": 0.4752
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null,
+  "value_hit": null
  },
  "401880158": {
   "id": "401880158",
@@ -16509,7 +16518,7 @@
   "kickoff": "2026-11-21T18:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Scheduled",
   "home": {
    "id": "336",
@@ -16668,7 +16677,10 @@
   "btn": 4,
   "close": {
    "U25": 0.5521
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null,
+  "value_hit": null
  },
  "401880151": {
   "id": "401880151",
@@ -16677,7 +16689,7 @@
   "kickoff": "2026-11-21T18:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Scheduled",
   "home": {
    "id": "318",
@@ -16829,7 +16841,10 @@
   "btn": 4,
   "close": {
    "U25": 0.5056
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null,
+  "value_hit": null
  },
  "401880150": {
   "id": "401880150",
@@ -16838,7 +16853,7 @@
   "kickoff": "2026-11-21T18:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Scheduled",
   "home": {
    "id": "371",
@@ -16990,7 +17005,10 @@
   "btn": 4,
   "close": {
    "BTTS_Y": 0.5156
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null,
+  "value_hit": null
  },
  "401880149": {
   "id": "401880149",
@@ -17163,7 +17181,7 @@
   "kickoff": "2026-11-21T18:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Scheduled",
   "home": {
    "id": "387",
@@ -17324,7 +17342,10 @@
   "close": {
    "H": 0.563,
    "U25": 0.4728
-  }
+  },
+  "main_hit": false,
+  "bold_hit": false,
+  "value_hit": null
  },
  "401880739": {
   "id": "401880739",
@@ -17333,7 +17354,7 @@
   "kickoff": "2026-11-21T18:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Scheduled",
   "home": {
    "id": "2567",
@@ -17494,7 +17515,10 @@
   "close": {
    "A": 0.6246,
    "U25": 0.4525
-  }
+  },
+  "main_hit": true,
+  "bold_hit": false,
+  "value_hit": null
  },
  "401880738": {
   "id": "401880738",
@@ -18350,7 +18374,7 @@
   "kickoff": "2026-11-21T18:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Scheduled",
   "home": {
    "id": "311",
@@ -18511,7 +18535,10 @@
   "close": {
    "O25": 0.5861,
    "H": 0.4321
-  }
+  },
+  "main_hit": true,
+  "bold_hit": true,
+  "value_hit": null
  },
  "401880732": {
   "id": "401880732",
@@ -18848,7 +18875,7 @@
   "kickoff": "2026-11-21T18:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Scheduled",
   "home": {
    "id": "280",
@@ -19009,7 +19036,10 @@
   "close": {
    "U25": 0.4899,
    "H": 0.4702
-  }
+  },
+  "main_hit": false,
+  "bold_hit": true,
+  "value_hit": null
  },
  "401881262": {
   "id": "401881262",
@@ -20357,7 +20387,7 @@
   "kickoff": "2026-11-21T18:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Scheduled",
   "home": {
    "id": "3616",
@@ -20515,7 +20545,10 @@
   "btn": 4,
   "close": {
    "H": 0.465
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null,
+  "value_hit": null
  },
  "401878338": {
   "id": "401878338",
@@ -21667,7 +21700,7 @@
   "kickoff": "2026-11-21T18:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Scheduled",
   "home": {
    "id": "249",
@@ -21828,7 +21861,10 @@
   "close": {
    "U25": 0.5266,
    "A": 0.3735
-  }
+  },
+  "main_hit": true,
+  "bold_hit": true,
+  "value_hit": null
  },
  "401843489": {
   "id": "401843489",
@@ -25341,6 +25377,153 @@
    }
   },
   "msg_id": 8221,
+  "btn": 4
+ },
+ "401933758": {
+  "id": "401933758",
+  "div": "ARG",
+  "slug": "arg.1",
+  "kickoff": "2026-11-21T21:00:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "detail": "Scheduled",
+  "home": {
+   "id": "8950",
+   "name": "Defensa y Justicia",
+   "short": "Def. y Jus.",
+   "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/8950.png",
+   "color": "ffff00",
+   "alt": "288A00",
+   "form": "LDWLW",
+   "score": "0",
+   "ru": "Дефенса и Хустисия"
+  },
+  "away": {
+   "id": "10060",
+   "name": "Barracas Central",
+   "short": "Barracas",
+   "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/10060.png",
+   "color": "000000",
+   "alt": "000000",
+   "form": "DDWDW",
+   "score": "0",
+   "ru": "Барракас Сентраль"
+  },
+  "odds": {
+   "H": 2.05,
+   "D": 3.2,
+   "A": 3.85,
+   "line": 2.5,
+   "over": 2.25,
+   "under": 1.588,
+   "spread_h": [
+    -0.5,
+    1.952
+   ],
+   "spread_a": [
+    0.5,
+    1.741
+   ]
+  },
+  "venue": "Norberto Tomaghello",
+  "clock": "0'",
+  "goals": [],
+  "open": {
+   "U25": 0.587,
+   "H": 0.4609
+  },
+  "top": false,
+  "lam": [
+   1.3259457814894189,
+   0.9333440345288307
+  ],
+  "probs": {
+   "H": 0.4468922278609801,
+   "D": 0.3002621778942017,
+   "A": 0.25284559424481795,
+   "1X": 0.7471544057551817,
+   "12": 0.6997378221057984,
+   "X2": 0.55310777213902,
+   "BTTS_Y": 0.45597496196004694,
+   "BTTS_N": 0.5440250380399528,
+   "O15": 0.669988414285256,
+   "U15": 0.3300115857147441,
+   "O25": 0.3931377828771688,
+   "U25": 0.6068622171228312,
+   "O35": 0.19242845434005218,
+   "U35": 0.8075715456599478,
+   "H_O05": 0.7344482694007524,
+   "H_O15": 0.3823410724454649,
+   "A_O05": 0.606763485288895,
+   "A_O15": 0.23973853012437624,
+   "H-1.5": 0.21348005139051193,
+   "A+1.5": 0.7865199486094879,
+   "A-1.5": 0.09160602869325062,
+   "H+1.5": 0.9083939713067494,
+   "H-2.5": 0.07744891017348814,
+   "A-2.5": 0.02420441074642135,
+   "H+2.5": 0.9757955892535785,
+   "A+2.5": 0.9225510898265118,
+   "O45": 0.07906331885410998,
+   "U45": 0.9209366811458899,
+   "H_O25": 0.14890354622800148,
+   "A_O25": 0.06845825391136856,
+   "H&O15": 0.3187693911796358,
+   "A&O15": 0.16572005248181843,
+   "H&BTTS": 0.16841892042027504,
+   "A&BTTS": 0.10205707091597037,
+   "1X&U35": 0.6005025425425624,
+   "X2&U35": 0.4614029088174535,
+   "BTTS&O25": 0.31640426353037887,
+   "HT_H": 0.32268227842692254,
+   "HT_D": 0.472809965008878,
+   "HT_A": 0.20450775656419956,
+   "HT_O05": 0.6309526090694675,
+   "HT_U05": 0.36904739093053257,
+   "HT_O15": 0.27763065495106587,
+   "HT_U15": 0.722369345048934
+  },
+  "scores": [
+   [
+    "1:1",
+    0.13957069842966816
+   ],
+   [
+    "1:0",
+    0.12812283668134428
+   ],
+   [
+    "0:0",
+    0.1147632072704
+   ]
+  ],
+  "main": {
+   "key": "U25",
+   "label": "ТМ 2.5",
+   "p": 0.6069,
+   "odds": 1.53,
+   "est": true,
+   "stake": 1.0
+  },
+  "bold": {
+   "key": "H",
+   "label": "П1",
+   "p": 0.4469,
+   "odds": 2.15,
+   "est": false,
+   "stake": 1.0
+  },
+  "value": null,
+  "odds_src": "среднее по букмекерам",
+  "model_w": 0.0,
+  "learned_n": 1347,
+  "stavka_signal": {
+   "status": "insufficient_opinions",
+   "weight": 0.0
+  },
+  "extra": null,
+  "msg_id": 8268,
   "btn": 4
  }
 }
