@@ -1,348 +1,6 @@
 [
 {
 "sport": "football",
-"id": "401877053",
-"league": "Мексика · Лига MX",
-"kickoff": "2026-11-21T06:00:00+03:00",
-"home": "Хуарес",
-"away": "Атлас",
-"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/17851.png",
-"al": "https://a.espncdn.com/i/teamlogos/soccer/500/216.png",
-"hid": "17851",
-"aid": "216",
-"bb": "https://betboom.ru/search?query=%D0%A5%D1%83%D0%B0%D1%80%D0%B5%D1%81&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
-"path": "soccer/mex.1",
-"url": "live.html?s=football&p=soccer%2Fmex.1&e=401877053&h=%D0%A5%D1%83%D0%B0%D1%80%D0%B5%D1%81&a=%D0%90%D1%82%D0%BB%D0%B0%D1%81",
-"participants": [
-[
-"Хуарес",
-"FC Juárez"
-],
-[
-"Атлас",
-"Atlas"
-]
-],
-"div": "MEX",
-"state": "post",
-"bo": null,
-"prediction": "predictions/2026-11-21-huares-atlas-401877053.html",
-"hs": "3",
-"as": "3",
-"tip": "П2 · 2.05",
-"top": false,
-"bot": {
-"main": {
-"label": "П2",
-"p": 0.468,
-"odds": 2.05,
-"est": false
-},
-"bold": null,
-"markets": [
-[
-"П1",
-0.266,
-3.75
-],
-[
-"Ничья",
-0.266,
-3.7
-],
-[
-"П2",
-0.468,
-1.909
-],
-[
-"1X",
-0.532,
-null
-],
-[
-"X2",
-0.734,
-null
-],
-[
-"ТБ 1.5",
-0.772,
-null
-],
-[
-"ТБ 2.5",
-0.522,
-1.667
-],
-[
-"ТМ 2.5",
-0.478,
-2.15
-],
-[
-"ТБ 3.5",
-0.3,
-null
-],
-[
-"Обе забьют — да",
-0.558,
-null
-],
-[
-"Обе забьют — нет",
-0.442,
-null
-],
-[
-"ИТ1 больше 1.5",
-0.323,
-null
-],
-[
-"ИТ2 больше 1.5",
-0.477,
-null
-],
-[
-"Ф1 (−1.5)",
-0.11,
-null
-],
-[
-"Ф2 (+1.5)",
-0.89,
-null
-]
-],
-"bar": [
-0.2662383550376336,
-0.26623108177167887,
-0.4675305631906876
-],
-"center": "Ожидаемые голы (xG) 1.2 : 1.6",
-"scores": [
-[
-"1:1",
-0.127
-],
-[
-"1:2",
-0.094
-],
-[
-"0:1",
-0.092
-]
-]
-},
-"lt": null
-},
-{
-"sport": "basketball",
-"id": "401909312",
-"league": "США · NBA",
-"kickoff": "2026-11-21T06:00:00+03:00",
-"home": "Денвер Наггетс",
-"away": "Хьюстон Рокетс",
-"hl": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/den.png",
-"al": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/hou.png",
-"hid": "7",
-"aid": "10",
-"bb": "https://betboom.ru/search?query=%D0%9D%D0%B0%D0%B3%D0%B3%D0%B5%D1%82%D1%81&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=basketball",
-"path": "basketball/nba",
-"url": "live.html?s=basketball&p=basketball%2Fnba&e=401909312&h=%D0%94%D0%B5%D0%BD%D0%B2%D0%B5%D1%80+%D0%9D%D0%B0%D0%B3%D0%B3%D0%B5%D1%82%D1%81&a=%D0%A5%D1%8C%D1%8E%D1%81%D1%82%D0%BE%D0%BD+%D0%A0%D0%BE%D0%BA%D0%B5%D1%82%D1%81",
-"participants": [
-[
-"Денвер Наггетс",
-"Denver Nuggets"
-],
-[
-"Хьюстон Рокетс",
-"Houston Rockets"
-]
-],
-"div": "NBA",
-"state": "post",
-"bo": null,
-"prediction": "predictions/2026-11-21-denver-naggets-hyuston-rokets-401909312.html",
-"hs": "133",
-"as": "124",
-"tip": "Ф2 (-1.5) · 1.91",
-"top": false,
-"bot": {
-"main": {
-"label": "Ф2 (-1.5)",
-"p": 0.5,
-"odds": 1.91,
-"est": false
-},
-"bold": null,
-"markets": [
-[
-"П1 (с ОТ)",
-0.45,
-2.01
-],
-[
-"П2 (с ОТ)",
-0.55,
-1.833
-],
-[
-"Ф1 (+1.5)",
-0.5,
-1.909
-],
-[
-"Ф2 (-1.5)",
-0.5,
-1.909
-],
-[
-"ТБ 220.5",
-0.66,
-null
-],
-[
-"ТМ 220.5",
-0.34,
-null
-],
-[
-"ТБ 227.5",
-0.5,
-1.877
-],
-[
-"ТМ 227.5",
-0.5,
-1.943
-],
-[
-"ТБ 234.5",
-0.34,
-null
-],
-[
-"ТМ 234.5",
-0.66,
-null
-]
-],
-"bar": [
-0.4502617751698871,
-0,
-0.5497382248301129
-],
-"center": "Ожидаемый счёт 113 : 114"
-},
-"lt": null
-},
-{
-"sport": "basketball",
-"id": "401909313",
-"league": "США · NBA",
-"kickoff": "2026-11-21T06:00:00+03:00",
-"home": "Лейкерс",
-"away": "Сакраменто Кингз",
-"hl": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/lal.png",
-"al": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/sac.png",
-"hid": "13",
-"aid": "23",
-"bb": "https://betboom.ru/search?query=%D0%9B%D0%B5%D0%B9%D0%BA%D0%B5%D1%80%D1%81&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=basketball",
-"path": "basketball/nba",
-"url": "live.html?s=basketball&p=basketball%2Fnba&e=401909313&h=%D0%9B%D0%B5%D0%B9%D0%BA%D0%B5%D1%80%D1%81&a=%D0%A1%D0%B0%D0%BA%D1%80%D0%B0%D0%BC%D0%B5%D0%BD%D1%82%D0%BE+%D0%9A%D0%B8%D0%BD%D0%B3%D0%B7",
-"participants": [
-[
-"Лейкерс",
-"Los Angeles Lakers"
-],
-[
-"Сакраменто Кингз",
-"Sacramento Kings"
-]
-],
-"div": "NBA",
-"state": "post",
-"bo": null,
-"prediction": "predictions/2026-11-21-leykers-sakramento-kingz-401909313.html",
-"hs": "106",
-"as": "104",
-"tip": "ТМ 229.5 · 1.87",
-"top": false,
-"bot": {
-"main": {
-"label": "ТМ 229.5",
-"p": 0.5,
-"odds": 1.87,
-"est": false
-},
-"bold": null,
-"markets": [
-[
-"П1 (с ОТ)",
-0.887,
-1.112
-],
-[
-"П2 (с ОТ)",
-0.113,
-7.0
-],
-[
-"Ф1 (-14.5)",
-0.5,
-1.952
-],
-[
-"Ф2 (+14.5)",
-0.5,
-1.87
-],
-[
-"ТБ 222.5",
-0.66,
-null
-],
-[
-"ТМ 222.5",
-0.34,
-null
-],
-[
-"ТБ 229.5",
-0.5,
-1.952
-],
-[
-"ТМ 229.5",
-0.5,
-1.87
-],
-[
-"ТБ 236.5",
-0.34,
-null
-],
-[
-"ТМ 236.5",
-0.66,
-null
-]
-],
-"bar": [
-0.8865404641312604,
-0,
-0.11345953586873958
-],
-"center": "Ожидаемый счёт 122 : 108"
-},
-"lt": null
-},
-{
-"sport": "football",
 "id": "401877052",
 "league": "Мексика · Лига MX",
 "kickoff": "2026-11-21T06:10:00+03:00",
@@ -786,7 +444,7 @@ null
 ]
 ],
 "div": "JPN",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "predictions/2026-11-21-matida-zelviya-v-varen-nagasaki-401877552.html",
 "hs": "0",
@@ -926,7 +584,7 @@ null
 ]
 ],
 "div": "JPN",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "predictions/2026-11-21-sanfrechche-hirosima-iokogama-f-marinos-401877531.html",
 "hs": "2",
@@ -8081,6 +7739,286 @@ null
 ]
 ],
 "div": "D2",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "football",
+"id": "401874575",
+"league": "Дания · Суперлига",
+"kickoff": "2026-11-22T16:00:00+03:00",
+"home": "Хорсенс",
+"away": "Силькеборг",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/3585.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/607.png",
+"hid": "3585",
+"aid": "607",
+"bb": "https://betboom.ru/search?query=%D0%A5%D0%BE%D1%80%D1%81%D0%B5%D0%BD%D1%81&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/den.1",
+"url": "live.html?s=football&p=soccer%2Fden.1&e=401874575&h=%D0%A5%D0%BE%D1%80%D1%81%D0%B5%D0%BD%D1%81&a=%D0%A1%D0%B8%D0%BB%D1%8C%D0%BA%D0%B5%D0%B1%D0%BE%D1%80%D0%B3",
+"participants": [
+[
+"Хорсенс",
+"AC Horsens"
+],
+[
+"Силькеборг",
+"Silkeborg IF"
+]
+],
+"div": "DNK",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "football",
+"id": "401874558",
+"league": "Дания · Суперлига",
+"kickoff": "2026-11-22T16:00:00+03:00",
+"home": "Виборг",
+"away": "Раннерс",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/3153.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/3132.png",
+"hid": "3153",
+"aid": "3132",
+"bb": "https://betboom.ru/search?query=%D0%92%D0%B8%D0%B1%D0%BE%D1%80%D0%B3&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/den.1",
+"url": "live.html?s=football&p=soccer%2Fden.1&e=401874558&h=%D0%92%D0%B8%D0%B1%D0%BE%D1%80%D0%B3&a=%D0%A0%D0%B0%D0%BD%D0%BD%D0%B5%D1%80%D1%81",
+"participants": [
+[
+"Виборг",
+"Viborg FF"
+],
+[
+"Раннерс",
+"Randers FC"
+]
+],
+"div": "DNK",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "football",
+"id": "401882804",
+"league": "Испания · Ла Лига",
+"kickoff": "2026-11-22T16:00:00+03:00",
+"home": "Барселона",
+"away": "Вильярреал",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/83.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/102.png",
+"hid": "83",
+"aid": "102",
+"bb": "https://betboom.ru/search?query=%D0%91%D0%B0%D1%80%D1%81%D0%B5%D0%BB%D0%BE%D0%BD%D0%B0&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/esp.1",
+"url": "live.html?s=football&p=soccer%2Fesp.1&e=401882804&h=%D0%91%D0%B0%D1%80%D1%81%D0%B5%D0%BB%D0%BE%D0%BD%D0%B0&a=%D0%92%D0%B8%D0%BB%D1%8C%D1%8F%D1%80%D1%80%D0%B5%D0%B0%D0%BB",
+"participants": [
+[
+"Барселона",
+"Barcelona"
+],
+[
+"Вильярреал",
+"Villarreal"
+]
+],
+"div": "SP1",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "football",
+"id": "401882300",
+"league": "Испания · Сегунда",
+"kickoff": "2026-11-22T16:00:00+03:00",
+"home": "Кордова",
+"away": "Овьедо",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/8447.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/92.png",
+"hid": "8447",
+"aid": "92",
+"bb": "https://betboom.ru/search?query=%D0%9A%D0%BE%D1%80%D0%B4%D0%BE%D0%B2%D0%B0&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/esp.2",
+"url": "live.html?s=football&p=soccer%2Fesp.2&e=401882300&h=%D0%9A%D0%BE%D1%80%D0%B4%D0%BE%D0%B2%D0%B0&a=%D0%9E%D0%B2%D1%8C%D0%B5%D0%B4%D0%BE",
+"participants": [
+[
+"Кордова",
+"Córdoba"
+],
+[
+"Овьедо",
+"Real Oviedo"
+]
+],
+"div": "SP2",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "football",
+"id": "401888248",
+"league": "Турция · Суперлига",
+"kickoff": "2026-11-22T16:00:00+03:00",
+"home": "Касымпаша",
+"away": "Аланьяспор",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/6870.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/9078.png",
+"hid": "6870",
+"aid": "9078",
+"bb": "https://betboom.ru/search?query=%D0%9A%D0%B0%D1%81%D1%8B%D0%BC%D0%BF%D0%B0%D1%88%D0%B0&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/tur.1",
+"url": "live.html?s=football&p=soccer%2Ftur.1&e=401888248&h=%D0%9A%D0%B0%D1%81%D1%8B%D0%BC%D0%BF%D0%B0%D1%88%D0%B0&a=%D0%90%D0%BB%D0%B0%D0%BD%D1%8C%D1%8F%D1%81%D0%BF%D0%BE%D1%80",
+"participants": [
+[
+"Касымпаша",
+"Kasimpasa"
+],
+[
+"Аланьяспор",
+"Alanyaspor"
+]
+],
+"div": "T1",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "football",
+"id": "401888246",
+"league": "Турция · Суперлига",
+"kickoff": "2026-11-22T16:00:00+03:00",
+"home": "Коньяспор",
+"away": "Бешикташ",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/7648.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/1895.png",
+"hid": "7648",
+"aid": "1895",
+"bb": "https://betboom.ru/search?query=%D0%9A%D0%BE%D0%BD%D1%8C%D1%8F%D1%81%D0%BF%D0%BE%D1%80&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/tur.1",
+"url": "live.html?s=football&p=soccer%2Ftur.1&e=401888246&h=%D0%9A%D0%BE%D0%BD%D1%8C%D1%8F%D1%81%D0%BF%D0%BE%D1%80&a=%D0%91%D0%B5%D1%88%D0%B8%D0%BA%D1%82%D0%B0%D1%88",
+"participants": [
+[
+"Коньяспор",
+"Konyaspor"
+],
+[
+"Бешикташ",
+"Besiktas"
+]
+],
+"div": "T1",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "football",
+"id": "401842887",
+"league": "Швеция · Аллсвенскан",
+"kickoff": "2026-11-22T16:00:00+03:00",
+"home": "Хеккен",
+"away": "IF Elfsborg",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/7834.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/529.png",
+"hid": "7834",
+"aid": "529",
+"bb": "https://betboom.ru/search?query=%D0%A5%D0%B5%D0%BA%D0%BA%D0%B5%D0%BD&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/swe.1",
+"url": "live.html?s=football&p=soccer%2Fswe.1&e=401842887&h=%D0%A5%D0%B5%D0%BA%D0%BA%D0%B5%D0%BD&a=IF+Elfsborg",
+"participants": [
+[
+"Хеккен",
+"BK Häcken"
+],
+[
+"IF Elfsborg",
+"IF Elfsborg"
+]
+],
+"div": "SWE",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "football",
+"id": "401842885",
+"league": "Швеция · Аллсвенскан",
+"kickoff": "2026-11-22T16:00:00+03:00",
+"home": "IK Sirius",
+"away": "Djurgården",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/8547.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/2339.png",
+"hid": "8547",
+"aid": "2339",
+"bb": "https://betboom.ru/search?query=%D0%A1%D0%B8%D1%80%D0%B8%D1%83%D1%81&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/swe.1",
+"url": "live.html?s=football&p=soccer%2Fswe.1&e=401842885&h=IK+Sirius&a=Djurg%C3%A5rden",
+"participants": [
+[
+"IK Sirius",
+"IK Sirius"
+],
+[
+"Djurgården",
+"Djurgården"
+]
+],
+"div": "SWE",
 "state": "pre",
 "bo": null,
 "prediction": "",
