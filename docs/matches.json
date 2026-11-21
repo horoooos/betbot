@@ -1,146 +1,6 @@
 [
 {
 "sport": "football",
-"id": "401877052",
-"league": "Мексика · Лига MX",
-"kickoff": "2026-11-21T06:10:00+03:00",
-"home": "Тихуана",
-"away": "Atlante",
-"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/10125.png",
-"al": "https://a.espncdn.com/i/teamlogos/soccer/500/226.png",
-"hid": "10125",
-"aid": "226",
-"bb": "https://betboom.ru/search?query=%D0%A2%D0%B8%D1%85%D1%83%D0%B0%D0%BD%D0%B0&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
-"path": "soccer/mex.1",
-"url": "live.html?s=football&p=soccer%2Fmex.1&e=401877052&h=%D0%A2%D0%B8%D1%85%D1%83%D0%B0%D0%BD%D0%B0&a=Atlante",
-"participants": [
-[
-"Тихуана",
-"Tijuana"
-],
-[
-"Atlante",
-"Atlante"
-]
-],
-"div": "MEX",
-"state": "post",
-"bo": null,
-"prediction": "predictions/2026-11-21-tihuana-atlante-401877052.html",
-"hs": "1",
-"as": "0",
-"tip": "П1 · 1.62",
-"top": false,
-"bot": {
-"main": {
-"label": "П1",
-"p": 0.593,
-"odds": 1.62,
-"est": false
-},
-"bold": null,
-"markets": [
-[
-"П1",
-0.593,
-1.556
-],
-[
-"Ничья",
-0.226,
-4.2
-],
-[
-"П2",
-0.181,
-5.5
-],
-[
-"1X",
-0.819,
-null
-],
-[
-"X2",
-0.407,
-null
-],
-[
-"ТБ 1.5",
-0.82,
-null
-],
-[
-"ТБ 2.5",
-0.594,
-1.714
-],
-[
-"ТМ 2.5",
-0.406,
-2.05
-],
-[
-"ТБ 3.5",
-0.37,
-null
-],
-[
-"Обе забьют — да",
-0.572,
-null
-],
-[
-"Обе забьют — нет",
-0.428,
-null
-],
-[
-"ИТ1 больше 1.5",
-0.602,
-null
-],
-[
-"ИТ2 больше 1.5",
-0.282,
-null
-],
-[
-"Ф1 (−1.5)",
-0.365,
-null
-],
-[
-"Ф2 (+1.5)",
-0.635,
-null
-]
-],
-"bar": [
-0.5928244804812386,
-0.22596938538465752,
-0.18120613413410344
-],
-"center": "Ожидаемые голы (xG) 2.0 : 1.0",
-"scores": [
-[
-"1:1",
-0.106
-],
-[
-"2:1",
-0.099
-],
-[
-"2:0",
-0.095
-]
-]
-},
-"lt": null
-},
-{
-"sport": "football",
 "id": "401892137",
 "league": "Австралия · A-League",
 "kickoff": "2026-11-21T07:00:00+03:00",
@@ -304,7 +164,7 @@ null
 ]
 ],
 "div": "JPN",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "predictions/2026-11-21-kioto-sanga-urava-red-daymonds-401877550.html",
 "hs": "2",
@@ -1018,7 +878,7 @@ null
 "bo": null,
 "prediction": "predictions/2026-11-21-sereso-osaka-tokio-401877549.html",
 "hs": "0",
-"as": "1",
+"as": "2",
 "tip": "П2 · 1.65",
 "top": false,
 "bot": {
@@ -1294,7 +1154,7 @@ null
 ]
 ],
 "div": "JPN",
-"state": "pre",
+"state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-21-gamba-osaka-fadzhiano-okayama-401877532.html",
 "hs": "0",

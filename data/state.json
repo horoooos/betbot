@@ -5,7 +5,7 @@
  },
  "learned": "2026-11-21",
  "schedule_day": "2026-11-21",
- "content_slot": "2026-11-20-23",
+ "content_slot": "2026-11-21-10",
  "news_seen": [
   "https://www.sport-express.ru/hockey/nhl/news/bolelschiki-tampy-poprivetstvovali-ovechkina-na-amali-arene-2476055/",
   "https://www.sport-express.ru/hockey/nhl/news/minnesota-neshvill-maksim-shabanov-zabrosil-9-yu-shaybu-v-sezone-nhl-2476053/",
@@ -1480,85 +1480,81 @@
   ]
  },
  "express": {
-  "msg": 6380,
+  "msg": 7795,
   "legs": [
    {
-    "sport": "football",
-    "div": "UNL",
-    "id": "401861182",
+    "sport": "basketball",
+    "div": "NBA",
+    "id": "401910023",
     "side": "home",
-    "p": 0.7622391352050539,
-    "odds": 1.211,
-    "kickoff": "2026-11-16T20:00:00+03:00",
-    "home": "Сборная Исландии",
-    "away": "Сборная Люксембурга",
-    "league": "🌍 Сборные · Лига наций",
+    "p": 0.6244560487380331,
+    "odds": 1.154,
+    "kickoff": "2026-11-21T21:00:00+03:00",
+    "home": "Филадельфия Сиксерс",
+    "away": "Милуоки Бакс",
+    "league": "🇺🇸 США · NBA",
     "logos": [
-     "https://a.espncdn.com/i/teamlogos/countries/500/isl.png",
-     "https://a.espncdn.com/i/teamlogos/countries/500/lux.png"
+     "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/phi.png",
+     "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/mil.png"
     ],
     "colors": [
-     "0c2fff",
-     "E70000"
+     "1d428a",
+     "00471b"
     ],
-    "label": "Победа: Сборная Исландии",
-    "win": true,
-    "score": "3:0"
+    "label": "Победа: Филадельфия Сиксерс (с ОТ)"
    },
    {
     "sport": "football",
-    "div": "UNL",
-    "id": "401861188",
+    "div": "SP1",
+    "id": "401882798",
     "side": "home",
-    "p": 0.6523630037692084,
-    "odds": 1.417,
-    "kickoff": "2026-11-16T22:45:00+03:00",
-    "home": "Сборная Греции",
-    "away": "Сборная Сербии",
-    "league": "🌍 Сборные · Лига наций",
+    "p": 0.6165861679169664,
+    "odds": 1.154,
+    "kickoff": "2026-11-21T23:00:00+03:00",
+    "home": "Реал Мадрид",
+    "away": "Сельта",
+    "league": "🇪🇸 Испания · Ла Лига",
     "logos": [
-     "https://a.espncdn.com/i/teamlogos/countries/500/gre.png",
-     "https://a.espncdn.com/i/teamlogos/countries/500/sba.png"
+     "https://a.espncdn.com/i/teamlogos/soccer/500/86.png",
+     "https://a.espncdn.com/i/teamlogos/soccer/500/85.png"
     ],
     "colors": [
-     "295da8",
-     "E70000"
+     "ffffff",
+     "6cace4"
     ],
-    "label": "Победа: Сборная Греции"
+    "label": "Победа: Реал Мадрид"
    },
    {
     "sport": "football",
-    "div": "UNL",
-    "id": "401861179",
-    "side": "away",
-    "p": 0.6194690265486725,
-    "odds": 1.5,
-    "kickoff": "2026-11-16T22:45:00+03:00",
-    "home": "Сборная Гибралтара",
-    "away": "Сборная Мальты",
-    "league": "🌍 Сборные · Лига наций",
+    "div": "N1",
+    "id": "401875543",
+    "side": "home",
+    "p": 0.6018054162487463,
+    "odds": 1.182,
+    "kickoff": "2026-11-21T20:45:00+03:00",
+    "home": "Фейеноорд",
+    "away": "Эксельсиор",
+    "league": "🇳🇱 Нидерланды · Эредивизи",
     "logos": [
-     "https://a.espncdn.com/i/teamlogos/countries/500/gib.png",
-     "https://a.espncdn.com/i/teamlogos/countries/500/mlt.png"
+     "https://a.espncdn.com/i/teamlogos/soccer/500/142.png",
+     "https://a.espncdn.com/i/teamlogos/soccer/500/2566.png"
     ],
     "colors": [
-     "DE2918",
-     "DE2400"
+     "ef2f24",
+     "000000"
     ],
-    "label": "Победа: Сборная Мальты",
-    "win": false,
-    "score": "1:1"
+    "label": "Победа: Фейеноорд"
    }
   ],
-  "odds": 2.5739805000000002,
-  "day": "2026-11-16",
-  "done": true
+  "odds": 1.5740883119999998,
+  "day": "2026-11-21",
+  "done": false
  },
  "streak_posted": 0,
  "value_day": "2026-11-20",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-20",
- "site_stamp": "1274|7791|2026-11-21 09|4|6f50cecddc9648bc",
+ "site_stamp": "1277|7796|2026-11-21 10|4|f82723f39f74314a",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1719,7 +1715,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 7791,
+ "dz_last": 7796,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2521,10 +2517,10 @@
    }
   },
   "source": {
-   "last_success": "2026-11-21T06:48:12.494043+00:00",
-   "parsed": 363,
-   "added": 75,
-   "discovered_matches": 72,
+   "last_success": "2026-11-21T07:19:03.959883+00:00",
+   "parsed": 370,
+   "added": 98,
+   "discovered_matches": 79,
    "pages": 19,
    "errors": [],
    "parsed_by_sport": {
@@ -2537,13 +2533,13 @@
    }
   },
   "error": null,
-  "tips": 8319,
+  "tips": 8366,
   "snapshots": 153,
-  "unmapped_markets": 12925,
+  "unmapped_markets": 12976,
   "quote_matches": 23
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-21T10:04:00.084588+03:00",
+  "last_poll": "2026-11-21T10:19:03.959883+03:00",
   "cursor": "196",
   "posts": [
    {
