@@ -7583,7 +7583,7 @@
   "close": {
    "_": null
   },
-  "settlement_retry_at": 1795292267.813535
+  "settlement_retry_at": 1795293518.526685
  },
  "DOTA|1816445": {
   "id": "1816445",
@@ -8330,6 +8330,10 @@
   },
   "top": false,
   "msg_id": 8419,
-  "btn": 4
+  "btn": 4,
+  "close": {
+   "HK_O5.5": 0.5325,
+   "HK_ML_A": 0.4066
+  }
  }
 }
