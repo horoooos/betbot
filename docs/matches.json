@@ -1769,7 +1769,7 @@ null
 ]
 ],
 "div": "D1",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "predictions/2026-11-21-shalke-04-shtutgart-401884729.html",
 "hs": "0",
@@ -1890,7 +1890,7 @@ null
 "min_odds": 1.71,
 "minute": "25'",
 "p": 0.613,
-"result": null,
+"result": "hit",
 "score": "0:0"
 }
 },
@@ -2219,7 +2219,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-21-castell-n-eldense-401882301.html",
-"hs": "1",
+"hs": "2",
 "as": "0",
 "tip": "ТБ 2.5 · 1.53",
 "top": false,
@@ -2662,7 +2662,7 @@ null
 "bo": null,
 "prediction": "predictions/2026-11-21-dandi-hart-of-midlotian-401878337.html",
 "hs": "0",
-"as": "4",
+"as": "5",
 "tip": "П2 · 2.00",
 "top": false,
 "bot": {
@@ -2961,8 +2961,8 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-21-filadelfiya-siksers-miluoki-baks-401910023.html",
-"hs": "60",
-"as": "59",
+"hs": "63",
+"as": "68",
 "tip": "Ф1 (-10.5) · 1.93",
 "top": false,
 "bot": {
@@ -3063,7 +3063,7 @@ null
 "bo": null,
 "prediction": "predictions/2026-11-21-karolina-edmonton-401892754.html",
 "hs": "1",
-"as": "2",
+"as": "3",
 "tip": "ТБ 6.5 · 2.10",
 "top": false,
 "bot": {
@@ -3584,7 +3584,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-21-nyu-inglend-revolyushn-filadelfiya-yunion-401933733.html",
-"hs": "0",
+"hs": "1",
 "as": "0",
 "tip": "ТМ 3.5 · ≈1.51",
 "top": false,

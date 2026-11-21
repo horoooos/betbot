@@ -7685,7 +7685,7 @@
   "close": {
    "_": null
   },
-  "settlement_retry_at": 1795288677.95279
+  "settlement_retry_at": 1795289896.484063
  },
  "DOTA|1816445": {
   "id": "1816445",
@@ -7821,7 +7821,7 @@
   "close": {
    "_": null
   },
-  "settlement_retry_at": 1795288677.95279
+  "settlement_retry_at": 1795289896.484063
  },
  "NHL|401892754": {
   "id": "401892754",
@@ -8178,7 +8178,10 @@
   "open": {},
   "top": false,
   "msg_id": 8355,
-  "btn": 4
+  "btn": 4,
+  "close": {
+   "_": null
+  }
  },
  "WTA|186811": {
   "id": "186811",
