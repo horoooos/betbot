@@ -7,8 +7,6 @@
  "schedule_day": "2026-11-21",
  "content_slot": "2026-11-21-10",
  "news_seen": [
-  "https://www.sport-express.ru/hockey/nhl/news/bolelschiki-tampy-poprivetstvovali-ovechkina-na-amali-arene-2476055/",
-  "https://www.sport-express.ru/hockey/nhl/news/minnesota-neshvill-maksim-shabanov-zabrosil-9-yu-shaybu-v-sezone-nhl-2476053/",
   "https://www.sport-express.ru/hockey/nhl/news/florida-edmonton-vasiliy-podkolzin-oformil-dubl-v-matche-nhl-2476052/",
   "https://www.sport-express.ru/football/news/byvshiy-glava-federacii-futbola-yaponii-tasima-podal-zayavku-na-vybory-prezidenta-fifa-2476087/",
   "https://www.sport-express.ru/football/nation-league/news/harri-uilson-kommentariy-po-porazheniyu-uelsa-ot-portugalii-v-lige-naciy-2476056/",
@@ -507,9 +505,10 @@
   "https://www.sport-express.ru/basketball/nba/news/hyuston-denver-leykers-sakramento-schet-i-rezultaty-matchey-kubka-nba-21-noyabrya-2026-2477209/",
   "https://www.sport-express.ru/basketball/nba/news/trener-bruklina-fernandes-obyasnil-pochemu-demin-nachal-match-s-orlando-v-zapase-2477224/",
   "v-dota-2-ispravil-bag-s-morphling-iz-za-kotorogo-on-mog-sedat-trekh-soyuznikov",
-  "https://www.sport-express.ru/football/rus_d1/news/ska-habarovsk-rotor-schet-i-rezultat-matcha-18-tura-pervoy-ligi-21-noyabrya-2026-2477234/"
+  "https://www.sport-express.ru/football/rus_d1/news/ska-habarovsk-rotor-schet-i-rezultat-matcha-18-tura-pervoy-ligi-21-noyabrya-2026-2477234/",
+  "https://www.sport-express.ru/football/rfpl/news/zhurova-ob-idee-rasshirit-rpl-zhelaniya-klubov-mne-ponyatny-no-vazhno-uchityvat-ekonomicheskuyu-sostavlyayuschuyu-2477251/"
  ],
- "news_i": 0,
+ "news_i": 1,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1555,7 +1554,7 @@
  "value_day": "2026-11-20",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-20",
- "site_stamp": "1277|7798|2026-11-21 10|4|6958fbf1435768ba",
+ "site_stamp": "1278|7799|2026-11-21 10|4|84067a7321c79f0d",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1693,7 +1692,7 @@
  "streak_day": {
   "2026-11-20": 2
  },
- "news_next": "2026-11-21T10:54:03.685064+03:00",
+ "news_next": "2026-11-21T11:24:03.818271+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1716,7 +1715,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 7798,
+ "dz_last": 7799,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -1930,7 +1929,8 @@
   "https://images.cybersport.ru/images/as-is/plain/e1/e1d291ef-9228-4084-8559-94a07b7c4dd8.jpg",
   "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/Dmitri_Kirichenko_2016.jpg/1280px-Dmitri_Kirichenko_2016.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
   "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/71/FC_Spartak_Moscow_vs._FC_Krylia_Sovetov_Samara%2C_1_May_2022_%2802%29.jpg/1280px-FC_Spartak_Moscow_vs._FC_Krylia_Sovetov_Samara%2C_1_May_2022_%2802%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-  "https://images.cybersport.ru/images/as-is/plain/14/1441056a-cfd4-45d3-9ebb-10b504455e44.jpg"
+  "https://images.cybersport.ru/images/as-is/plain/14/1441056a-cfd4-45d3-9ebb-10b504455e44.jpg",
+  "https://upload.wikimedia.org/wikipedia/commons/c/c5/Arsenal_v_Dynamo_Kyiv_2007.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
  ],
  "indexnow_day": "2026-11-21",
  "vk_wall_err": null,
@@ -2222,7 +2222,8 @@
   "7660",
   "7673",
   "7687",
-  "7789"
+  "7789",
+  "7800"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -2446,11 +2447,12 @@
   "2026-11-20:новость:9ab135db48922235f922f60e",
   "2026-11-20:новость:98150abbf9c1cf46ebb6c1c3",
   "2026-11-20:новость:976196ce7f4d124f94db7353",
-  "2026-11-21:новость:f8dad7905cb977ffc7e206eb"
+  "2026-11-21:новость:f8dad7905cb977ffc7e206eb",
+  "2026-11-21:новость:80bfc1b087974685dae5dc16"
  ],
  "dz_last_delivery": {
-  "source_id": 7789,
-  "message_id": 770,
+  "source_id": 7800,
+  "message_id": 771,
   "kind": "новость"
  },
  "learn_attempt_day": "2026-11-21",
@@ -2540,7 +2542,7 @@
   "quote_matches": 23
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-21T10:54:03.322289+03:00",
+  "last_poll": "2026-11-21T10:56:03.818271+03:00",
   "cursor": "198",
   "posts": [
    {
