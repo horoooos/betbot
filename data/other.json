@@ -7399,25 +7399,25 @@
   "kickoff": "2026-11-21T06:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Fri, November 20th at 10:00 PM EST",
   "clock": "0.0",
   "period": 0,
   "home": {
+   "color": "0e2240",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/den.png",
    "id": "7",
    "name": "Denver Nuggets",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/den.png",
-   "color": "0e2240",
    "score": "0",
    "record": "8-5",
    "periods": [],
    "ru": "Денвер Наггетс"
   },
   "away": {
+   "color": "ce0e2d",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/hou.png",
    "id": "10",
    "name": "Houston Rockets",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/hou.png",
-   "color": "ce0e2d",
    "score": "0",
    "record": "12-4",
    "periods": [],
@@ -7501,7 +7501,9 @@
   "btn": 4,
   "close": {
    "BB_SPR_A": 0.5
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null
  },
  "NBA|401909313": {
   "id": "401909313",

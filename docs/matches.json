@@ -1,146 +1,6 @@
 [
 {
 "sport": "football",
-"id": "401934707",
-"league": "Колумбия · Примера A",
-"kickoff": "2026-11-21T04:40:00+03:00",
-"home": "Deportivo Cali",
-"away": "Мильонариос",
-"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/2672.png",
-"al": "https://a.espncdn.com/i/teamlogos/soccer/500/5484.png",
-"hid": "2672",
-"aid": "5484",
-"bb": "https://betboom.ru/search?query=%D0%94%D0%B5%D0%BF%D0%BE%D1%80%D1%82%D0%B8%D0%B2%D0%BE&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
-"path": "soccer/col.1",
-"url": "live.html?s=football&p=soccer%2Fcol.1&e=401934707&h=Deportivo+Cali&a=%D0%9C%D0%B8%D0%BB%D1%8C%D0%BE%D0%BD%D0%B0%D1%80%D0%B8%D0%BE%D1%81",
-"participants": [
-[
-"Deportivo Cali",
-"Deportivo Cali"
-],
-[
-"Мильонариос",
-"Millonarios"
-]
-],
-"div": "COL",
-"state": "post",
-"bo": null,
-"prediction": "predictions/2026-11-21-deportivo-cali-milonarios-401934707.html",
-"hs": "0",
-"as": "0",
-"tip": "ТБ 1.5 · 1.50",
-"top": false,
-"bot": {
-"main": {
-"label": "ТБ 1.5",
-"p": 0.625,
-"odds": 1.5,
-"est": false
-},
-"bold": null,
-"markets": [
-[
-"П1",
-0.369,
-2.5
-],
-[
-"Ничья",
-0.323,
-2.85
-],
-[
-"П2",
-0.308,
-3.0
-],
-[
-"1X",
-0.692,
-null
-],
-[
-"X2",
-0.631,
-null
-],
-[
-"ТБ 1.5",
-0.624,
-1.5
-],
-[
-"ТБ 2.5",
-0.343,
-null
-],
-[
-"ТМ 2.5",
-0.657,
-null
-],
-[
-"ТБ 3.5",
-0.157,
-null
-],
-[
-"Обе забьют — да",
-0.426,
-null
-],
-[
-"Обе забьют — нет",
-0.574,
-null
-],
-[
-"ИТ1 больше 1.5",
-0.3,
-null
-],
-[
-"ИТ2 больше 1.5",
-0.256,
-null
-],
-[
-"Ф1 (−1.5)",
-0.154,
-null
-],
-[
-"Ф2 (+1.5)",
-0.846,
-null
-]
-],
-"bar": [
-0.36939207652115574,
-0.3226245277983761,
-0.30798339568046856
-],
-"center": "Ожидаемые голы (xG) 1.1 : 1.0",
-"scores": [
-[
-"1:1",
-0.145
-],
-[
-"0:0",
-0.136
-],
-[
-"1:0",
-0.127
-]
-]
-},
-"lt": null
-},
-{
-"sport": "football",
 "id": "401876818",
 "league": "Коста-Рика · Примера",
 "kickoff": "2026-11-21T05:00:00+03:00",
@@ -545,11 +405,11 @@ null
 ]
 ],
 "div": "NBA",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "predictions/2026-11-21-denver-naggets-hyuston-rokets-401909312.html",
-"hs": "131",
-"as": "121",
+"hs": "133",
+"as": "124",
 "tip": "Ф2 (-1.5) · 1.91",
 "top": false,
 "bot": {
@@ -1031,7 +891,7 @@ null
 "bo": null,
 "prediction": "predictions/2026-11-21-kioto-sanga-urava-red-daymonds-401877550.html",
 "hs": "0",
-"as": "0",
+"as": "1",
 "tip": "П2 · 2.10",
 "top": false,
 "bot": {
