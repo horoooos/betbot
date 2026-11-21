@@ -1552,7 +1552,7 @@
  "value_day": "2026-11-21",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-21",
- "site_stamp": "1413|8596|2026-11-22 02|4|343f4bea5ccce987",
+ "site_stamp": "1414|8596|2026-11-22 02|4|9d6a71b020ee9e85",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1588,7 +1588,9 @@
      "dd1a32",
      "e31937"
     ],
-    "label": "Победа: Калгари (с ОТ)"
+    "label": "Победа: Калгари (с ОТ)",
+    "win": false,
+    "score": "3:4"
    },
    {
     "sport": "hockey",
@@ -1677,7 +1679,7 @@
   ],
   "odds": 12.056505117287399,
   "day": "2026-11-21",
-  "done": false
+  "done": true
  },
  "streak_day": {
   "2026-11-22": 2
@@ -2539,35 +2541,35 @@
     "weight": 0.0,
     "settled_matches": 32,
     "required_matches": 100,
-    "trained_at": "2026-11-21T22:49:10.061890+00:00"
+    "trained_at": "2026-11-21T23:28:07.517377+00:00"
    },
    "basketball": {
     "status": "collecting",
     "weight": 0.0,
     "settled_matches": 44,
     "required_matches": 100,
-    "trained_at": "2026-11-21T22:49:10.061890+00:00"
+    "trained_at": "2026-11-21T23:28:07.517377+00:00"
    },
    "tennis": {
     "status": "collecting",
     "weight": 0.0,
-    "settled_matches": 3,
+    "settled_matches": 4,
     "required_matches": 100,
-    "trained_at": "2026-11-21T22:49:10.061890+00:00"
+    "trained_at": "2026-11-21T23:28:07.517377+00:00"
    },
    "esports:CS2": {
     "status": "collecting",
     "weight": 0.0,
     "settled_matches": 0,
     "required_matches": 100,
-    "trained_at": "2026-11-21T22:49:10.061890+00:00"
+    "trained_at": "2026-11-21T23:28:07.517377+00:00"
    },
    "esports:DOTA": {
     "status": "collecting",
     "weight": 0.0,
     "settled_matches": 0,
     "required_matches": 100,
-    "trained_at": "2026-11-21T22:49:10.061890+00:00"
+    "trained_at": "2026-11-21T23:28:07.517377+00:00"
    }
   },
   "source": {
@@ -2593,7 +2595,7 @@
   "quote_matches": 24
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-22T02:26:07.804804+03:00",
+  "last_poll": "2026-11-22T02:28:07.517377+03:00",
   "cursor": "258",
   "posts": [
    {
