@@ -807,7 +807,7 @@ null
 ]
 ],
 "div": "RUS",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "",
 "hs": "0",
@@ -1135,7 +1135,7 @@ null
 "bo": null,
 "prediction": "predictions/2026-11-21-dzhillingem-kru-aleksandra-401881259.html",
 "hs": "2",
-"as": "2",
+"as": "3",
 "tip": "ТМ 2.5 · 1.81",
 "top": false,
 "bot": {
@@ -2606,7 +2606,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-21-galatasaray-samsunspor-401888245.html",
-"hs": "1",
+"hs": "2",
 "as": "0",
 "tip": "Обе забьют — да · ≈1.66",
 "top": false,
@@ -3102,7 +3102,7 @@ null
 ]
 ],
 "div": "I1",
-"state": "pre",
+"state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-21-komo-kalyari-401875056.html",
 "hs": "0",
@@ -3244,7 +3244,7 @@ null
 ]
 ],
 "div": "I1",
-"state": "pre",
+"state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-21-latsio-lechche-401874981.html",
 "hs": "0",
@@ -3386,11 +3386,11 @@ null
 ]
 ],
 "div": "I2",
-"state": "pre",
+"state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-21-askoli-vichentsa-401899548.html",
 "hs": "0",
-"as": "0",
+"as": "1",
 "tip": "П1 · 1.75",
 "top": false,
 "bot": {
@@ -3533,7 +3533,7 @@ null
 ]
 ],
 "div": "I2",
-"state": "pre",
+"state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-21-karrareze-virtus-entella-401899546.html",
 "hs": "0",
@@ -3680,7 +3680,7 @@ null
 ]
 ],
 "div": "I2",
-"state": "pre",
+"state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-21-modena-yuve-stabiya-401899542.html",
 "hs": "0",
@@ -3827,10 +3827,10 @@ null
 ]
 ],
 "div": "I2",
-"state": "pre",
+"state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-21-sampdoriya-benevento-401899541.html",
-"hs": "0",
+"hs": "1",
 "as": "0",
 "tip": "ТМ 2.5 · 1.73",
 "top": false,
@@ -3969,7 +3969,7 @@ null
 ]
 ],
 "div": "I2",
-"state": "pre",
+"state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-21-zyuydtirol-kremoneze-401899540.html",
 "hs": "0",
@@ -4116,7 +4116,7 @@ null
 ]
 ],
 "div": "SWE",
-"state": "pre",
+"state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-21-aik-degerfors-401842882.html",
 "hs": "0",
@@ -4261,7 +4261,7 @@ null
 ]
 ],
 "div": "SWE",
-"state": "pre",
+"state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-21-melbyu-rusengord-401842886.html",
 "hs": "0",
@@ -11016,8 +11016,8 @@ null
 "state": "pre",
 "bo": null,
 "prediction": "predictions/2026-11-21-danfermlin-atletik-greenock-morton-401878520.html",
-"hs": "0",
-"as": "0",
+"hs": null,
+"as": null,
 "tip": "ТБ 2.5 · 1.63",
 "top": false,
 "bot": {
@@ -11446,12 +11446,119 @@ null
 "div": "SP1",
 "state": "pre",
 "bo": null,
-"prediction": "",
+"prediction": "predictions/2026-11-21-rayo-valekano-valensiya-401882799.html",
 "hs": "0",
 "as": "0",
-"tip": "",
+"tip": "П1 · 1.91",
 "top": false,
-"bot": null,
+"bot": {
+"main": {
+"label": "П1",
+"p": 0.489,
+"odds": 1.91,
+"est": false
+},
+"bold": null,
+"markets": [
+[
+"П1",
+0.489,
+1.952
+],
+[
+"Ничья",
+0.274,
+3.45
+],
+[
+"П2",
+0.237,
+4.1
+],
+[
+"1X",
+0.763,
+null
+],
+[
+"X2",
+0.511,
+null
+],
+[
+"ТБ 1.5",
+0.733,
+null
+],
+[
+"ТБ 2.5",
+0.47,
+2.0
+],
+[
+"ТМ 2.5",
+0.53,
+1.8
+],
+[
+"ТБ 3.5",
+0.254,
+null
+],
+[
+"Обе забьют — да",
+0.509,
+null
+],
+[
+"Обе забьют — нет",
+0.491,
+null
+],
+[
+"ИТ1 больше 1.5",
+0.458,
+null
+],
+[
+"ИТ2 больше 1.5",
+0.267,
+null
+],
+[
+"Ф1 (−1.5)",
+0.257,
+null
+],
+[
+"Ф2 (+1.5)",
+0.743,
+null
+]
+],
+"bar": [
+0.4890691191918077,
+0.2743751579113976,
+0.23655572289679458
+],
+"center": "Ожидаемые голы (xG) 1.5 : 1.0",
+"scores": [
+[
+"1:1",
+0.131
+],
+[
+"1:0",
+0.111
+],
+[
+"2:1",
+0.094
+]
+],
+"corners": 10.7,
+"cards": 4.5
+},
 "lt": null
 },
 {
@@ -11481,12 +11588,119 @@ null
 "div": "SP2",
 "state": "pre",
 "bo": null,
-"prediction": "",
+"prediction": "predictions/2026-11-21-real-sociedad-ii-c-diz-401883108.html",
 "hs": "0",
 "as": "0",
-"tip": "",
+"tip": "П1 · 1.92",
 "top": false,
-"bot": null,
+"bot": {
+"main": {
+"label": "П1",
+"p": 0.478,
+"odds": 1.92,
+"est": false
+},
+"bold": null,
+"markets": [
+[
+"П1",
+0.479,
+1.714
+],
+[
+"Ничья",
+0.263,
+3.95
+],
+[
+"П2",
+0.259,
+4.5
+],
+[
+"1X",
+0.741,
+null
+],
+[
+"X2",
+0.521,
+null
+],
+[
+"ТБ 1.5",
+0.778,
+null
+],
+[
+"ТБ 2.5",
+0.53,
+1.69
+],
+[
+"ТМ 2.5",
+0.47,
+2.1
+],
+[
+"ТБ 3.5",
+0.307,
+null
+],
+[
+"Обе забьют — да",
+0.561,
+null
+],
+[
+"Обе забьют — нет",
+0.439,
+null
+],
+[
+"ИТ1 больше 1.5",
+0.489,
+null
+],
+[
+"ИТ2 больше 1.5",
+0.321,
+null
+],
+[
+"Ф1 (−1.5)",
+0.257,
+null
+],
+[
+"Ф2 (+1.5)",
+0.743,
+null
+]
+],
+"bar": [
+0.4785070892533544,
+0.2629558662151355,
+0.25853704453150994
+],
+"center": "Ожидаемые голы (xG) 1.6 : 1.2",
+"scores": [
+[
+"1:1",
+0.125
+],
+[
+"2:1",
+0.095
+],
+[
+"1:0",
+0.091
+]
+],
+"corners": 9.6,
+"cards": 5.0
+},
 "lt": null
 },
 {
