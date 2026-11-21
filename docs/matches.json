@@ -1861,7 +1861,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-21-alaves-deportivo-la-korunya-401882806.html",
-"hs": "2",
+"hs": "3",
 "as": "1",
 "tip": "ТМ 2.5 · 1.56",
 "top": false,
@@ -2157,7 +2157,7 @@ null
 "bo": null,
 "prediction": "predictions/2026-11-21-tromse-viking-401843483.html",
 "hs": "3",
-"as": "0",
+"as": "1",
 "tip": "П2 · 1.80",
 "top": false,
 "bot": {
@@ -4990,6 +4990,107 @@ null
 "tip": "",
 "top": false,
 "bot": null,
+"lt": null
+},
+{
+"sport": "esports",
+"id": "1816444",
+"league": "Киберспорт · Dota 2",
+"kickoff": "2026-11-21T17:50:00+03:00",
+"home": "Team Yandex",
+"away": "Natus Vincere",
+"hl": "https://cdn-api.pandascore.co/images/team/image/137073/249px_team_yandex_allmode.png",
+"al": "https://cdn-api.pandascore.co/images/team/image/1699/Na_vi_logo.png",
+"hid": "137073",
+"aid": "1699",
+"bb": "https://betboom.ru/search?query=%D0%AF%D0%BD%D0%B4%D0%B5%D0%BA%D1%81&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=esports",
+"path": "",
+"url": "dota.html?e=1816444&d=DOTA",
+"participants": [
+[
+"Team Yandex",
+"Team Yandex"
+],
+[
+"Natus Vincere",
+"Natus Vincere"
+]
+],
+"div": "DOTA",
+"state": "pre",
+"bo": 3,
+"prediction": "predictions/2026-11-21-team-yandex-natus-vincere-1816444.html",
+"hs": 0,
+"as": 0,
+"tip": "Всухую (2:0 или 0:2) · ≈1.41",
+"top": false,
+"bot": {
+"main": {
+"label": "Всухую (2:0 или 0:2)",
+"p": 0.662,
+"odds": 1.41,
+"est": true
+},
+"bold": null,
+"markets": [
+[
+"Победа: Team Yandex",
+0.881,
+null
+],
+[
+"Победа: Natus Vincere",
+0.119,
+null
+],
+[
+"Больше 2 карт",
+0.338,
+null
+],
+[
+"Всухую (2:0 или 0:2)",
+0.662,
+null
+],
+[
+"Счёт по картам 2:0",
+0.615,
+null
+],
+[
+"Счёт по картам 0:2",
+0.047,
+null
+],
+[
+"Счёт по картам 2:1",
+0.265,
+null
+],
+[
+"Счёт по картам 1:2",
+0.073,
+null
+],
+[
+"Team Yandex возьмёт хотя бы карту",
+0.953,
+null
+],
+[
+"Natus Vincere возьмёт хотя бы карту",
+0.385,
+null
+]
+],
+"bar": [
+0.8805105797194176,
+0,
+0.1194894202805824
+],
+"center": "BO3 · Эло 1845 : 1498"
+},
 "lt": null
 },
 {
@@ -9740,107 +9841,6 @@ null
 ],
 "corners": 10.5,
 "cards": 3.2
-},
-"lt": null
-},
-{
-"sport": "esports",
-"id": "1816444",
-"league": "Киберспорт · Dota 2",
-"kickoff": "2026-11-21T18:00:00+03:00",
-"home": "Team Yandex",
-"away": "Natus Vincere",
-"hl": "https://cdn-api.pandascore.co/images/team/image/137073/249px_team_yandex_allmode.png",
-"al": "https://cdn-api.pandascore.co/images/team/image/1699/Na_vi_logo.png",
-"hid": "137073",
-"aid": "1699",
-"bb": "https://betboom.ru/search?query=%D0%AF%D0%BD%D0%B4%D0%B5%D0%BA%D1%81&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=esports",
-"path": "",
-"url": "dota.html?e=1816444&d=DOTA",
-"participants": [
-[
-"Team Yandex",
-"Team Yandex"
-],
-[
-"Natus Vincere",
-"Natus Vincere"
-]
-],
-"div": "DOTA",
-"state": "pre",
-"bo": 3,
-"prediction": "predictions/2026-11-21-team-yandex-natus-vincere-1816444.html",
-"hs": 0,
-"as": 0,
-"tip": "Всухую (2:0 или 0:2) · ≈1.41",
-"top": false,
-"bot": {
-"main": {
-"label": "Всухую (2:0 или 0:2)",
-"p": 0.662,
-"odds": 1.41,
-"est": true
-},
-"bold": null,
-"markets": [
-[
-"Победа: Team Yandex",
-0.881,
-null
-],
-[
-"Победа: Natus Vincere",
-0.119,
-null
-],
-[
-"Больше 2 карт",
-0.338,
-null
-],
-[
-"Всухую (2:0 или 0:2)",
-0.662,
-null
-],
-[
-"Счёт по картам 2:0",
-0.615,
-null
-],
-[
-"Счёт по картам 0:2",
-0.047,
-null
-],
-[
-"Счёт по картам 2:1",
-0.265,
-null
-],
-[
-"Счёт по картам 1:2",
-0.073,
-null
-],
-[
-"Team Yandex возьмёт хотя бы карту",
-0.953,
-null
-],
-[
-"Natus Vincere возьмёт хотя бы карту",
-0.385,
-null
-]
-],
-"bar": [
-0.8805105797194176,
-0,
-0.1194894202805824
-],
-"center": "BO3 · Эло 1845 : 1498"
 },
 "lt": null
 },
