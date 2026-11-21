@@ -8129,10 +8129,10 @@ null
 ]
 ],
 "div": "F1",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "predictions/2026-11-21-nitstsa-pszh-401876398.html",
-"hs": "1",
+"hs": "2",
 "as": "3",
 "tip": "П2 и ТБ 1.5 · ≈1.59",
 "top": false,
@@ -8250,7 +8250,7 @@ null
 "min_odds": 1.69,
 "minute": "28'",
 "p": 0.623,
-"result": null,
+"result": "hit",
 "score": "1:0"
 }
 },
@@ -8383,7 +8383,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-21-gais-vesteros-401842889.html",
-"hs": "2",
+"hs": "3",
 "as": "1",
 "tip": "П1 · 2.02",
 "top": false,
@@ -10027,7 +10027,7 @@ null
 "bo": null,
 "prediction": "predictions/2026-11-21-dandi-hart-of-midlotian-401878337.html",
 "hs": "0",
-"as": "2",
+"as": "3",
 "tip": "П2 · 2.00",
 "top": false,
 "bot": {
@@ -10319,7 +10319,7 @@ null
 "bo": null,
 "prediction": "predictions/2026-11-21-filadelfiya-siksers-miluoki-baks-401910023.html",
 "hs": "8",
-"as": "7",
+"as": "15",
 "tip": "Ф1 (-10.5) · 1.93",
 "top": false,
 "bot": {

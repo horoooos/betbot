@@ -23315,7 +23315,7 @@
   "kickoff": "2026-11-21T19:15:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Scheduled",
   "home": {
    "id": "2502",
@@ -23474,7 +23474,10 @@
   "btn": 4,
   "close": {
    "A&O15": 0.5912
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null,
+  "value_hit": null
  },
  "401842889": {
   "id": "401842889",
