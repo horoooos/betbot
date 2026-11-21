@@ -7,10 +7,6 @@
  "schedule_day": "2026-11-21",
  "content_slot": "2026-11-21-10",
  "news_seen": [
-  "https://www.sport-express.ru/hockey/nhl/news/florida-edmonton-vasiliy-podkolzin-oformil-dubl-v-matche-nhl-2476052/",
-  "https://www.sport-express.ru/football/news/byvshiy-glava-federacii-futbola-yaponii-tasima-podal-zayavku-na-vybory-prezidenta-fifa-2476087/",
-  "https://www.sport-express.ru/football/nation-league/news/harri-uilson-kommentariy-po-porazheniyu-uelsa-ot-portugalii-v-lige-naciy-2476056/",
-  "https://www.sport-express.ru/football/friendly/news/urugvay-dominikana-schet-5-0-rezultat-tovarischeskogo-matcha-18-noyabrya-2026-goda-2476064/",
   "https://www.sport-express.ru/football/nation-league/news/bellami-nazval-prichiny-porazheniya-uelsa-ot-portugalii-2476054/",
   "https://www.sport-express.ru/football/nation-league/news/brian-rimer-kommentariy-po-porazheniyu-danii-ot-norvegii-v-lige-naciy-uefa-2476051/",
   "https://www.sport-express.ru/football/nation-league/news/mads-hermansen-kommentariy-po-porazheniyu-danii-ot-norvegii-v-matche-ligi-naciy-uefa-2476049/",
@@ -508,7 +504,9 @@
   "https://www.sport-express.ru/football/rus_d1/news/ska-habarovsk-rotor-schet-i-rezultat-matcha-18-tura-pervoy-ligi-21-noyabrya-2026-2477234/",
   "https://www.sport-express.ru/football/rfpl/news/zhurova-ob-idee-rasshirit-rpl-zhelaniya-klubov-mne-ponyatny-no-vazhno-uchityvat-ekonomicheskuyu-sostavlyayuschuyu-2477251/",
   "https://www.sport-express.ru/football/rusteam/news/miranchuk-schitaet-chto-reshenie-cas-po-hokkeyu-ne-povliyaet-na-dopusk-sbornoy-rossii-po-futbolu-2477254/",
-  "https://www.sport-express.ru/basketball/nba/news/demin-o-vyhode-so-skameyki-zapasnyh-ya-gotov-delat-vse-neobhodimoe-dlya-uspeha-bruklina-2477252/"
+  "https://www.sport-express.ru/basketball/nba/news/demin-o-vyhode-so-skameyki-zapasnyh-ya-gotov-delat-vse-neobhodimoe-dlya-uspeha-bruklina-2477252/",
+  "yekindar-o-vozmozhnom-ukhode-karrigan-iz-falcons-posle-meidzhora-ne-uveren-chto",
+  "https://www.sport-express.ru/football/rfpl/news/guberniev-dinamo-favorit-v-igre-s-krasnodarom-po-organizacii-igry-komanda-shvarca-luchshe-2477258/"
  ],
  "news_i": 1,
  "oddspapi": {
@@ -1694,7 +1692,7 @@
  "streak_day": {
   "2026-11-20": 2
  },
- "news_next": "2026-11-21T11:39:57.023351+03:00",
+ "news_next": "2026-11-21T12:08:56.906089+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1932,7 +1930,8 @@
   "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/Dmitri_Kirichenko_2016.jpg/1280px-Dmitri_Kirichenko_2016.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
   "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/71/FC_Spartak_Moscow_vs._FC_Krylia_Sovetov_Samara%2C_1_May_2022_%2802%29.jpg/1280px-FC_Spartak_Moscow_vs._FC_Krylia_Sovetov_Samara%2C_1_May_2022_%2802%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
   "https://images.cybersport.ru/images/as-is/plain/14/1441056a-cfd4-45d3-9ebb-10b504455e44.jpg",
-  "https://upload.wikimedia.org/wikipedia/commons/c/c5/Arsenal_v_Dynamo_Kyiv_2007.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+  "https://upload.wikimedia.org/wikipedia/commons/c/c5/Arsenal_v_Dynamo_Kyiv_2007.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "https://upload.wikimedia.org/wikipedia/commons/f/fd/Supporters_of_FC_Dynamo_Kyiv-Junior_Moraes.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
  ],
  "indexnow_day": "2026-11-21",
  "vk_wall_err": null,
@@ -2225,7 +2224,8 @@
   "7673",
   "7687",
   "7789",
-  "7800"
+  "7800",
+  "7805"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -2450,11 +2450,12 @@
   "2026-11-20:новость:98150abbf9c1cf46ebb6c1c3",
   "2026-11-20:новость:976196ce7f4d124f94db7353",
   "2026-11-21:новость:f8dad7905cb977ffc7e206eb",
-  "2026-11-21:новость:80bfc1b087974685dae5dc16"
+  "2026-11-21:новость:80bfc1b087974685dae5dc16",
+  "2026-11-21:новость:15cdf7cfced7650b9ad4bfd8"
  ],
  "dz_last_delivery": {
-  "source_id": 7800,
-  "message_id": 771,
+  "source_id": 7805,
+  "message_id": 772,
   "kind": "новость"
  },
  "learn_attempt_day": "2026-11-21",
@@ -2522,10 +2523,10 @@
    }
   },
   "source": {
-   "last_success": "2026-11-21T08:21:56.166945+00:00",
+   "last_success": "2026-11-21T08:41:56.906089+00:00",
    "parsed": 370,
-   "added": 66,
-   "discovered_matches": 72,
+   "added": 75,
+   "discovered_matches": 75,
    "pages": 19,
    "errors": [],
    "parsed_by_sport": {
@@ -2538,13 +2539,13 @@
    }
   },
   "error": null,
-  "tips": 8474,
+  "tips": 8507,
   "snapshots": 154,
-  "unmapped_markets": 13050,
+  "unmapped_markets": 13092,
   "quote_matches": 23
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-21T11:39:56.983197+03:00",
+  "last_poll": "2026-11-21T11:41:56.906089+03:00",
   "cursor": "200",
   "posts": [
    {
