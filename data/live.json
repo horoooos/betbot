@@ -258,7 +258,8 @@
    "min_odds": 1.35,
    "minute": "25'",
    "score": "0:0",
-   "sport": "football"
+   "sport": "football",
+   "result": "hit"
   }
  },
  "E1|401880153": {
@@ -275,7 +276,8 @@
    "min_odds": 1.6,
    "minute": "25'",
    "score": "0:0",
-   "sport": "football"
+   "sport": "football",
+   "result": "hit"
   }
  },
  "SP1|401882806": {
@@ -355,6 +357,16 @@
   "hs": 0,
   "as": 0,
   "goals": 0,
-  "kickoff": "2026-11-21T17:00:00+03:00"
+  "kickoff": "2026-11-21T17:00:00+03:00",
+  "lt": {
+   "key": "H",
+   "label": "П1",
+   "p": 0.659,
+   "fair": 1.52,
+   "min_odds": 1.59,
+   "minute": "26'",
+   "score": "0:0",
+   "sport": "football"
+  }
  }
 }

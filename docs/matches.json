@@ -1273,7 +1273,7 @@ null
 ]
 ],
 "div": "E3",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "predictions/2026-11-21-nyuport-kaunti-suindon-taun-401881257.html",
 "hs": "2",
@@ -1713,7 +1713,7 @@ null
 ]
 ],
 "div": "E1",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "predictions/2026-11-21-norvich-siti-cardiff-city-401880155.html",
 "hs": "2",
@@ -1834,7 +1834,7 @@ null
 "min_odds": 1.35,
 "minute": "25'",
 "p": 0.779,
-"result": null,
+"result": "hit",
 "score": "0:0"
 }
 },
@@ -1863,7 +1863,7 @@ null
 ]
 ],
 "div": "E1",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "predictions/2026-11-21-sautgempton-derbi-kaunti-401880153.html",
 "hs": "2",
@@ -1984,7 +1984,7 @@ null
 "min_odds": 1.6,
 "minute": "25'",
 "p": 0.655,
-"result": null,
+"result": "hit",
 "score": "0:0"
 }
 },
@@ -3359,7 +3359,15 @@ null
 "corners": 8.3,
 "cards": 3.7
 },
-"lt": null
+"lt": {
+"fair": 1.52,
+"label": "П1",
+"min_odds": 1.59,
+"minute": "26'",
+"p": 0.659,
+"result": null,
+"score": "0:0"
+}
 },
 {
 "sport": "football",
@@ -3389,7 +3397,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-21-askoli-vichentsa-401899548.html",
-"hs": "0",
+"hs": "1",
 "as": "1",
 "tip": "П1 · 1.75",
 "top": false,
@@ -3830,7 +3838,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-21-sampdoriya-benevento-401899541.html",
-"hs": "1",
+"hs": "2",
 "as": "1",
 "tip": "ТМ 2.5 · 1.73",
 "top": false,
