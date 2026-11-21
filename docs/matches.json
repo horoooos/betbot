@@ -1,146 +1,6 @@
 [
 {
 "sport": "football",
-"id": "401850695",
-"league": "Чили · Примера",
-"kickoff": "2026-11-21T02:30:00+03:00",
-"home": "Palestino",
-"away": "Унион Ла-Калера",
-"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/4422.png",
-"al": "https://a.espncdn.com/i/teamlogos/soccer/500/10144.png",
-"hid": "4422",
-"aid": "10144",
-"bb": "https://betboom.ru/search?query=%D0%9F%D0%B0%D0%BB%D0%B5%D1%81%D1%82%D0%B8%D0%BD%D0%BE&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
-"path": "soccer/chi.1",
-"url": "live.html?s=football&p=soccer%2Fchi.1&e=401850695&h=Palestino&a=%D0%A3%D0%BD%D0%B8%D0%BE%D0%BD+%D0%9B%D0%B0-%D0%9A%D0%B0%D0%BB%D0%B5%D1%80%D0%B0",
-"participants": [
-[
-"Palestino",
-"Palestino"
-],
-[
-"Унион Ла-Калера",
-"Unión La Calera"
-]
-],
-"div": "CHI",
-"state": "post",
-"bo": null,
-"prediction": "predictions/2026-11-21-palestino-union-la-kalera-401850695.html",
-"hs": "0",
-"as": "1",
-"tip": "П1 · 2.00",
-"top": false,
-"bot": {
-"main": {
-"label": "П1",
-"p": 0.469,
-"odds": 2.0,
-"est": false
-},
-"bold": null,
-"markets": [
-[
-"П1",
-0.469,
-2.0
-],
-[
-"Ничья",
-0.27,
-3.6
-],
-[
-"П2",
-0.261,
-3.55
-],
-[
-"1X",
-0.739,
-null
-],
-[
-"X2",
-0.531,
-null
-],
-[
-"ТБ 1.5",
-0.758,
-null
-],
-[
-"ТБ 2.5",
-0.503,
-1.87
-],
-[
-"ТМ 2.5",
-0.497,
-1.87
-],
-[
-"ТБ 3.5",
-0.283,
-null
-],
-[
-"Обе забьют — да",
-0.542,
-null
-],
-[
-"Обе забьют — нет",
-0.458,
-null
-],
-[
-"ИТ1 больше 1.5",
-0.465,
-null
-],
-[
-"ИТ2 больше 1.5",
-0.307,
-null
-],
-[
-"Ф1 (−1.5)",
-0.246,
-null
-],
-[
-"Ф2 (+1.5)",
-0.754,
-null
-]
-],
-"bar": [
-0.46885137643222874,
-0.2703406435745187,
-0.26080797999325267
-],
-"center": "Ожидаемые голы (xG) 1.6 : 1.1",
-"scores": [
-[
-"1:1",
-0.129
-],
-[
-"1:0",
-0.097
-],
-[
-"2:1",
-0.094
-]
-]
-},
-"lt": null
-},
-{
-"sport": "football",
 "id": "401934690",
 "league": "Колумбия · Примера A",
 "kickoff": "2026-11-21T02:35:00+03:00",
@@ -949,7 +809,7 @@ null
 ]
 ],
 "div": "NBA",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "predictions/2026-11-21-chikago-bullz-vashington-uizards-401909309.html",
 "hs": "94",
@@ -1156,7 +1016,7 @@ null
 ]
 ],
 "div": "COL",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "predictions/2026-11-21-deportivo-kali-milonarios-401934707.html",
 "hs": "0",
@@ -1439,8 +1299,8 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-21-yuta-dzhaz-finiks-sanz-401909311.html",
-"hs": "32",
-"as": "44",
+"hs": "45",
+"as": "58",
 "tip": "Ф2 (-4.5) · 1.87",
 "top": true,
 "bot": {
@@ -1680,8 +1540,8 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-21-denver-naggets-hyuston-rokets-401909312.html",
-"hs": "20",
-"as": "21",
+"hs": "26",
+"as": "26",
 "tip": "Ф2 (-1.5) · 1.91",
 "top": false,
 "bot": {
@@ -1781,8 +1641,8 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-21-leykers-sakramento-kingz-401909313.html",
-"hs": "18",
-"as": "18",
+"hs": "22",
+"as": "23",
 "tip": "ТМ 229.5 · 1.87",
 "top": false,
 "bot": {
@@ -2384,7 +2244,7 @@ null
 "id": "401877532",
 "league": "Япония · J-League",
 "kickoff": "2026-11-21T10:00:00+03:00",
-"home": "Gamba Osaka",
+"home": "Гамба Осака",
 "away": "Фаджиано Окаяма",
 "hl": "https://a.espncdn.com/i/teamlogos/soccer/500/7102.png",
 "al": "https://a.espncdn.com/i/teamlogos/soccer/500/22522.png",
@@ -2392,10 +2252,10 @@ null
 "aid": "22522",
 "bb": "https://betboom.ru/search?query=%D0%93%D0%B0%D0%BC%D0%B1%D0%B0&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
 "path": "soccer/jpn.1",
-"url": "live.html?s=football&p=soccer%2Fjpn.1&e=401877532&h=Gamba+Osaka&a=%D0%A4%D0%B0%D0%B4%D0%B6%D0%B8%D0%B0%D0%BD%D0%BE+%D0%9E%D0%BA%D0%B0%D1%8F%D0%BC%D0%B0",
+"url": "live.html?s=football&p=soccer%2Fjpn.1&e=401877532&h=%D0%93%D0%B0%D0%BC%D0%B1%D0%B0+%D0%9E%D1%81%D0%B0%D0%BA%D0%B0&a=%D0%A4%D0%B0%D0%B4%D0%B6%D0%B8%D0%B0%D0%BD%D0%BE+%D0%9E%D0%BA%D0%B0%D1%8F%D0%BC%D0%B0",
 "participants": [
 [
-"Gamba Osaka",
+"Гамба Осака",
 "Gamba Osaka"
 ],
 [
@@ -2419,18 +2279,18 @@ null
 "id": "401892135",
 "league": "Австралия · A-League",
 "kickoff": "2026-11-21T11:40:00+03:00",
-"home": "Brisbane Roar FC",
+"home": "Брисбен Роар",
 "away": "Sydney FC",
 "hl": "https://a.espncdn.com/i/teamlogos/soccer/500/5326.png",
 "al": "https://a.espncdn.com/i/teamlogos/soccer/500/5327.png",
 "hid": "5326",
 "aid": "5327",
-"bb": "https://betboom.ru/search?query=%D0%91%D1%80%D0%B8%D1%81%D0%B1%D0%B0%D0%BD%D0%B5&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"bb": "https://betboom.ru/search?query=%D0%91%D1%80%D0%B8%D1%81%D0%B1%D0%B5%D0%BD&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
 "path": "soccer/aus.1",
-"url": "live.html?s=football&p=soccer%2Faus.1&e=401892135&h=Brisbane+Roar+FC&a=Sydney+FC",
+"url": "live.html?s=football&p=soccer%2Faus.1&e=401892135&h=%D0%91%D1%80%D0%B8%D1%81%D0%B1%D0%B5%D0%BD+%D0%A0%D0%BE%D0%B0%D1%80&a=Sydney+FC",
 "participants": [
 [
-"Brisbane Roar FC",
+"Брисбен Роар",
 "Brisbane Roar FC"
 ],
 [
