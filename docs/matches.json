@@ -425,21 +425,21 @@ null
 "league": "Япония · J-League",
 "kickoff": "2026-11-21T08:00:00+03:00",
 "home": "Токио Верди",
-"away": "Нагоя Грампус",
+"away": "Nagoya Grampus",
 "hl": "https://a.espncdn.com/i/teamlogos/soccer/500/3393.png",
 "al": "https://a.espncdn.com/i/teamlogos/soccer/500/7108.png",
 "hid": "3393",
 "aid": "7108",
 "bb": "https://betboom.ru/search?query=%D0%A2%D0%BE%D0%BA%D0%B8%D0%BE&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
 "path": "soccer/jpn.1",
-"url": "live.html?s=football&p=soccer%2Fjpn.1&e=401877533&h=%D0%A2%D0%BE%D0%BA%D0%B8%D0%BE+%D0%92%D0%B5%D1%80%D0%B4%D0%B8&a=%D0%9D%D0%B0%D0%B3%D0%BE%D1%8F+%D0%93%D1%80%D0%B0%D0%BC%D0%BF%D1%83%D1%81",
+"url": "live.html?s=football&p=soccer%2Fjpn.1&e=401877533&h=%D0%A2%D0%BE%D0%BA%D0%B8%D0%BE+%D0%92%D0%B5%D1%80%D0%B4%D0%B8&a=Nagoya+Grampus",
 "participants": [
 [
 "Токио Верди",
 "Tokyo Verdy 1969"
 ],
 [
-"Нагоя Грампус",
+"Nagoya Grampus",
 "Nagoya Grampus"
 ]
 ],
@@ -1460,21 +1460,21 @@ null
 "league": "Германия · 2. Бундеслига",
 "kickoff": "2026-11-21T15:00:00+03:00",
 "home": "Ганновер",
-"away": "SpVgg Greuther Fürth",
+"away": "Гройтер",
 "hl": "https://a.espncdn.com/i/teamlogos/soccer/500/2428.png",
 "al": "https://a.espncdn.com/i/teamlogos/soccer/500/3070.png",
 "hid": "2428",
 "aid": "3070",
 "bb": "https://betboom.ru/search?query=%D0%93%D0%B0%D0%BD%D0%BD%D0%BE%D0%B2%D0%B5%D1%80&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
 "path": "soccer/ger.2",
-"url": "live.html?s=football&p=soccer%2Fger.2&e=401885054&h=%D0%93%D0%B0%D0%BD%D0%BD%D0%BE%D0%B2%D0%B5%D1%80&a=SpVgg+Greuther+F%C3%BCrth",
+"url": "live.html?s=football&p=soccer%2Fger.2&e=401885054&h=%D0%93%D0%B0%D0%BD%D0%BD%D0%BE%D0%B2%D0%B5%D1%80&a=%D0%93%D1%80%D0%BE%D0%B9%D1%82%D0%B5%D1%80",
 "participants": [
 [
 "Ганновер",
 "Hannover 96"
 ],
 [
-"SpVgg Greuther Fürth",
+"Гройтер",
 "SpVgg Greuther Fürth"
 ]
 ],
@@ -8304,6 +8304,41 @@ null
 ]
 ],
 "div": "F1",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "football",
+"id": "401884733",
+"league": "Германия · Бундеслига",
+"kickoff": "2026-11-22T17:30:00+03:00",
+"home": "Аугсбург",
+"away": "Майнц 05",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/3841.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/2950.png",
+"hid": "3841",
+"aid": "2950",
+"bb": "https://betboom.ru/search?query=%D0%90%D1%83%D0%B3%D1%81%D0%B1%D1%83%D1%80%D0%B3&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/ger.1",
+"url": "live.html?s=football&p=soccer%2Fger.1&e=401884733&h=%D0%90%D1%83%D0%B3%D1%81%D0%B1%D1%83%D1%80%D0%B3&a=%D0%9C%D0%B0%D0%B9%D0%BD%D1%86+05",
+"participants": [
+[
+"Аугсбург",
+"FC Augsburg"
+],
+[
+"Майнц 05",
+"Mainz"
+]
+],
+"div": "D1",
 "state": "pre",
 "bo": null,
 "prediction": "",
