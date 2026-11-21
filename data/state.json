@@ -506,7 +506,9 @@
   "https://www.sport-express.ru/basketball/nba/news/trener-bruklina-fernandes-obyasnil-pochemu-demin-nachal-match-s-orlando-v-zapase-2477224/",
   "v-dota-2-ispravil-bag-s-morphling-iz-za-kotorogo-on-mog-sedat-trekh-soyuznikov",
   "https://www.sport-express.ru/football/rus_d1/news/ska-habarovsk-rotor-schet-i-rezultat-matcha-18-tura-pervoy-ligi-21-noyabrya-2026-2477234/",
-  "https://www.sport-express.ru/football/rfpl/news/zhurova-ob-idee-rasshirit-rpl-zhelaniya-klubov-mne-ponyatny-no-vazhno-uchityvat-ekonomicheskuyu-sostavlyayuschuyu-2477251/"
+  "https://www.sport-express.ru/football/rfpl/news/zhurova-ob-idee-rasshirit-rpl-zhelaniya-klubov-mne-ponyatny-no-vazhno-uchityvat-ekonomicheskuyu-sostavlyayuschuyu-2477251/",
+  "https://www.sport-express.ru/football/rusteam/news/miranchuk-schitaet-chto-reshenie-cas-po-hokkeyu-ne-povliyaet-na-dopusk-sbornoy-rossii-po-futbolu-2477254/",
+  "https://www.sport-express.ru/basketball/nba/news/demin-o-vyhode-so-skameyki-zapasnyh-ya-gotov-delat-vse-neobhodimoe-dlya-uspeha-bruklina-2477252/"
  ],
  "news_i": 1,
  "oddspapi": {
@@ -1692,7 +1694,7 @@
  "streak_day": {
   "2026-11-20": 2
  },
- "news_next": "2026-11-21T11:24:03.818271+03:00",
+ "news_next": "2026-11-21T11:31:56.408997+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -2542,26 +2544,9 @@
   "quote_matches": 23
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-21T11:23:57.110358+03:00",
-  "cursor": "198",
+  "last_poll": "2026-11-21T11:25:56.408997+03:00",
+  "cursor": "200",
   "posts": [
-   {
-    "post_id": 609,
-    "url": "https://vk.com/wall-228963529_609",
-    "title": "Овечкин: «Не опускаем руки» после четвертого поражения «Вашингтона»",
-    "text": "рџ“° Капитан «Вашингтона» Александр Овечкин отреагировал на четвертое подряд поражение команды в регулярном чемпионате НХЛ. В ночь на 20 ноября «Кэпиталз» потерпели 3:6 от «Баффало», что стало их четвертой неудачей подряд.",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": false,
-     "details_present": false,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-20T10:56:36.709234+03:00"
-   },
    {
     "post_id": 610,
     "url": "https://vk.com/wall-228963529_610",
@@ -3054,6 +3039,23 @@
     },
     "status": "needs_review",
     "observed_at": "2026-11-21T10:34:45.815511+03:00"
+   },
+   {
+    "post_id": 649,
+    "url": "https://vk.com/wall-228963529_649",
+    "title": "Журова: расширение РПЛ до 20 команд возможно только при финансовой стабильности",
+    "text": "вљЎпёЏ Журова о расширении РПЛ: мечта клубов vs реальность финансов.",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": false,
+     "details_present": false,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-21T11:25:56.408997+03:00"
    }
   ],
   "status": "observing"
