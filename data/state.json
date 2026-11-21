@@ -7,8 +7,6 @@
  "schedule_day": "2026-11-21",
  "content_slot": "2026-11-21-16",
  "news_seen": [
-  "https://www.sport-express.ru/football/euro/news/rfs-ne-budet-uchastvovat-v-zherebevke-otbora-na-evro-2028-rossiya-ne-vystupit-na-etom-turnire-2476236/",
-  "https://www.sport-express.ru/football/rfpl/news/zaschitnik-cska-reys-rasskazal-o-vosstanovlenii-posle-povrezhdeniya-pauza-na-sbornye-poshla-mne-na-polzu-2476218/",
   "https://www.sport-express.ru/stavki-na-sport/prognozy/news/daniil-medvedev-karlos-alkaras-prognoz-na-match-itogovogo-turnira-atp-18-noyabrya-2026-goda-2476191/",
   "na-cobblestone-v-cs2-nashli-paskhalku-s-zhutkim-poslaniyem",
   "razbirayeshsya-v-cs2-ugadai-chempiona-pgl-major-singapore-20261-i-poluchi-shans",
@@ -506,9 +504,11 @@
   "https://www.sport-express.ru/football/rus_d1/news/belenov-nikto-v-ufe-ne-sobiraetsya-boykotirovat-dazhe-trenirovku-2477354/",
   "https://www.sport-express.ru/football/rus_d1/news/glavnyy-trener-torpedo-vashkevich-o-0-3-v-matche-s-nizhnim-novgorodom-plan-na-chetvertoy-minute-prishlos-menyat-2477352/",
   "https://www.sport-express.ru/football/england/news/manchester-siti-fulhem-schet-i-rezultat-matcha-11-tura-apl-21-noyabrya-2026-2477348/",
-  "https://www.sport-express.ru/football/rfpl/news/glavnyy-trener-baltiki-andrey-talalaev-podvel-itogi-pervogo-kruga-rpl-2026-27-kommentariy-21-noyabrya-2477351/"
+  "https://www.sport-express.ru/football/rfpl/news/glavnyy-trener-baltiki-andrey-talalaev-podvel-itogi-pervogo-kruga-rpl-2026-27-kommentariy-21-noyabrya-2477351/",
+  "aurora-gaming-vyigrala-u-astra-invicta-na-blast-slam-ix",
+  "dyrachyo-o-team-spirit-poigraite-v-gta-vi-otdokhnite-vernites-k-dreamleague-s"
  ],
- "news_i": 1,
+ "news_i": 2,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1550,7 +1550,7 @@
  "value_day": "2026-11-21",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-21",
- "site_stamp": "1302|8106|2026-11-21 18|4|0073d665a1beb428",
+ "site_stamp": "1302|8107|2026-11-21 18|4|0073d665a1beb428",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1688,7 +1688,7 @@
  "streak_day": {
   "2026-11-20": 2
  },
- "news_next": "2026-11-21T18:14:56.053091+03:00",
+ "news_next": "2026-11-21T18:46:35.468159+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1712,7 +1712,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 8106,
+ "dz_last": 8107,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -1932,7 +1932,8 @@
   "https://images.cybersport.ru/images/as-is/plain/1d/1d8fee7d-f881-42de-a8d4-333c808c5990.jpg",
   "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/49/Football_match_-_Wales_versus_Ireland_in_Cardiff_%281473965%29.jpg/1280px-Football_match_-_Wales_versus_Ireland_in_Cardiff_%281473965%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
   "https://images.cybersport.ru/images/as-is/plain/bd/bd84c23e-b210-46ae-a434-79982105c9f0.jpg",
-  "https://upload.wikimedia.org/wikipedia/commons/9/90/Andrei_Talalayev_2011.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+  "https://upload.wikimedia.org/wikipedia/commons/9/90/Andrei_Talalayev_2011.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "https://images.cybersport.ru/images/as-is/plain/3f/3f005337-a5ed-41be-a15b-cef45d73c17d.jpg"
  ],
  "indexnow_day": "2026-11-21",
  "vk_wall_err": null,
@@ -2230,7 +2231,8 @@
   "7868",
   "7902",
   "8022",
-  "8056"
+  "8056",
+  "8108"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -2460,11 +2462,12 @@
   "2026-11-21:новость:20f1c367d9ede197fb8dad7f",
   "2026-11-21:новость:77899e72458bab34ca5f0f8b",
   "2026-11-21:новость:d5cc906aa45bd19f7c3d9a3e",
-  "2026-11-21:новость:d2caa690bf7418f72a39efa2"
+  "2026-11-21:новость:d2caa690bf7418f72a39efa2",
+  "2026-11-21:новость:e6f7bd71910d42f5fa0f24b9"
  ],
  "dz_last_delivery": {
-  "source_id": 8056,
-  "message_id": 776,
+  "source_id": 8108,
+  "message_id": 777,
   "kind": "новость"
  },
  "learn_attempt_day": "2026-11-21",
@@ -2549,12 +2552,12 @@
   },
   "error": null,
   "tips": 9099,
-  "snapshots": 175,
+  "snapshots": 176,
   "unmapped_markets": 13655,
   "quote_matches": 23
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-21T18:14:06.906196+03:00",
+  "last_poll": "2026-11-21T18:16:35.468159+03:00",
   "cursor": "220",
   "posts": [
    {
