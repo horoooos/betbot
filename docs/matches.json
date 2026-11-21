@@ -701,8 +701,8 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-21-atlanta-hoks-sharlott-hornets-401909305.html",
-"hs": "99",
-"as": "86",
+"hs": "107",
+"as": "94",
 "tip": "ТБ 219.5 · 1.95",
 "top": false,
 "bot": {
@@ -803,7 +803,7 @@ null
 "bo": null,
 "prediction": "predictions/2026-11-21-bruklin-nets-orlando-medzhik-401909306.html",
 "hs": "63",
-"as": "67",
+"as": "72",
 "tip": "Ф2 (-6.5) · 1.89",
 "top": false,
 "bot": {
@@ -903,8 +903,8 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-21-klivlend-indiana-peysers-401909307.html",
-"hs": "77",
-"as": "73",
+"hs": "87",
+"as": "77",
 "tip": "ТМ 234.5 · 1.93",
 "top": false,
 "bot": {
@@ -1004,8 +1004,8 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-21-detroyt-pistons-toronto-reptors-401909308.html",
-"hs": "55",
-"as": "67",
+"hs": "57",
+"as": "69",
 "tip": "Ф1 (-6.5) · 1.89",
 "top": false,
 "bot": {
@@ -1246,7 +1246,7 @@ null
 "bo": null,
 "prediction": "predictions/2026-11-21-chikago-bullz-vashington-uizards-401909309.html",
 "hs": "60",
-"as": "50",
+"as": "52",
 "tip": "Ф2 (+2.5) · 1.84",
 "top": true,
 "bot": {
@@ -1351,7 +1351,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-21-oklahoma-siti-tander-nyu-orlean-pelikans-401909310.html",
-"hs": "54",
+"hs": "56",
 "as": "64",
 "tip": "ТМ 229.5 · 1.91",
 "top": false,
@@ -2174,12 +2174,117 @@ null
 "div": "MEX",
 "state": "pre",
 "bo": null,
-"prediction": "",
+"prediction": "predictions/2026-11-21-tihuana-atlante-401877052.html",
 "hs": "0",
 "as": "0",
-"tip": "",
+"tip": "П1 · 1.62",
 "top": false,
-"bot": null,
+"bot": {
+"main": {
+"label": "П1",
+"p": 0.593,
+"odds": 1.62,
+"est": false
+},
+"bold": null,
+"markets": [
+[
+"П1",
+0.593,
+1.556
+],
+[
+"Ничья",
+0.226,
+4.2
+],
+[
+"П2",
+0.181,
+5.5
+],
+[
+"1X",
+0.819,
+null
+],
+[
+"X2",
+0.407,
+null
+],
+[
+"ТБ 1.5",
+0.82,
+null
+],
+[
+"ТБ 2.5",
+0.594,
+1.714
+],
+[
+"ТМ 2.5",
+0.406,
+2.05
+],
+[
+"ТБ 3.5",
+0.37,
+null
+],
+[
+"Обе забьют — да",
+0.572,
+null
+],
+[
+"Обе забьют — нет",
+0.428,
+null
+],
+[
+"ИТ1 больше 1.5",
+0.602,
+null
+],
+[
+"ИТ2 больше 1.5",
+0.282,
+null
+],
+[
+"Ф1 (−1.5)",
+0.365,
+null
+],
+[
+"Ф2 (+1.5)",
+0.635,
+null
+]
+],
+"bar": [
+0.5928244804812386,
+0.22596938538465752,
+0.18120613413410344
+],
+"center": "Ожидаемые голы (xG) 2.0 : 1.0",
+"scores": [
+[
+"1:1",
+0.106
+],
+[
+"2:1",
+0.099
+],
+[
+"2:0",
+0.095
+]
+]
+},
 "lt": null
 },
 {
