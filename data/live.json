@@ -481,7 +481,8 @@
    "min_odds": 1.7,
    "minute": "26'",
    "score": "1:0",
-   "sport": "football"
+   "sport": "football",
+   "result": "miss"
   }
  },
  "E0|401878756": {
@@ -498,14 +499,15 @@
    "min_odds": 1.63,
    "minute": "25'",
    "score": "0:0",
-   "sport": "football"
+   "sport": "football",
+   "result": "miss"
   }
  },
  "E0|401879236": {
   "msg": 8084,
   "hs": 1,
-  "as": 3,
-  "goals": 4,
+  "as": 4,
+  "goals": 5,
   "kickoff": "2026-11-21T18:00:00+03:00",
   "lt": {
    "key": "O1.5",
@@ -549,7 +551,8 @@
    "min_odds": 1.61,
    "minute": "25'",
    "score": "1:0",
-   "sport": "football"
+   "sport": "football",
+   "result": "hit"
   }
  },
  "E1|401880160": {
@@ -583,7 +586,8 @@
    "min_odds": 1.51,
    "minute": "26'",
    "score": "0:0",
-   "sport": "football"
+   "sport": "football",
+   "result": "miss"
   }
  },
  "E1|401880157": {
@@ -618,7 +622,8 @@
    "min_odds": 1.63,
    "minute": "25'",
    "score": "2:0",
-   "sport": "football"
+   "sport": "football",
+   "result": "hit"
   }
  },
  "E1|401880152": {
@@ -686,7 +691,8 @@
    "min_odds": 1.58,
    "minute": "26'",
    "score": "0:0",
-   "sport": "football"
+   "sport": "football",
+   "result": "miss"
   }
  },
  "SP1|401882799": {

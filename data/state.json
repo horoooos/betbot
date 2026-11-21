@@ -1550,7 +1550,7 @@
  "value_day": "2026-11-21",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-21",
- "site_stamp": "1322|8232|2026-11-21 19|4|90be77fbd02932af",
+ "site_stamp": "1347|8266|2026-11-21 19|4|6a2e8f28960ff899",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1712,7 +1712,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 8232,
+ "dz_last": 8266,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2502,9 +2502,9 @@
   "model": {
    "weight": 0.0,
    "status": "collecting",
-   "settled_matches": 60,
+   "settled_matches": 61,
    "required_matches": 100,
-   "trained_at": "2026-11-21T16:25:49.673295+00:00"
+   "trained_at": "2026-11-21T16:55:48.584124+00:00"
   },
   "sport_models": {
    "hockey": {
@@ -2566,7 +2566,7 @@
   "quote_matches": 23
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-21T19:51:12.804839+03:00",
+  "last_poll": "2026-11-21T19:55:48.584124+03:00",
   "cursor": "222",
   "posts": [
    {
@@ -3086,14 +3086,5 @@
   "pid": 6655,
   "started_at": 1794992742.839963
  },
- "vk_story_retry_at": 1794996342.839963,
- "mod_poll": {
-  "key": "E0|401879238",
-  "id": "401879238",
-  "poll": 7897,
-  "post": 7896,
-  "home": "Борнмут",
-  "away": "Ноттингем Форест",
-  "kickoff": "2026-11-21T18:00:00+03:00"
- }
+ "vk_story_retry_at": 1794996342.839963
 }
