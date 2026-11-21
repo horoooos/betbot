@@ -913,7 +913,8 @@
    "min_odds": 1.61,
    "minute": "25'",
    "score": "0:0",
-   "sport": "football"
+   "sport": "football",
+   "result": "miss"
   }
  },
  "F1|401876403": {
@@ -948,7 +949,8 @@
    "min_odds": 1.6,
    "minute": "25'",
    "score": "0:0",
-   "sport": "football"
+   "sport": "football",
+   "result": "hit"
   }
  },
  "F1|401876396": {
@@ -965,7 +967,8 @@
    "min_odds": 1.55,
    "minute": "25'",
    "score": "0:1",
-   "sport": "football"
+   "sport": "football",
+   "result": "hit"
   }
  },
  "ATP|187527": {
@@ -1087,7 +1090,7 @@
  "NHL|401892755": {
   "msg": 8491,
   "hs": 1,
-  "as": 2,
+  "as": 3,
   "goals": 0,
   "kickoff": "2026-11-21T23:30:00+03:00",
   "lt": {
