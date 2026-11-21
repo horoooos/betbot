@@ -548,8 +548,8 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-21-denver-naggets-hyuston-rokets-401909312.html",
-"hs": "117",
-"as": "115",
+"hs": "131",
+"as": "121",
 "tip": "Ф2 (-1.5) · 1.91",
 "top": false,
 "bot": {
@@ -1310,7 +1310,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-21-sanfrechche-hirosima-iokogama-f-marinos-401877531.html",
-"hs": "0",
+"hs": "1",
 "as": "0",
 "tip": "Обе забьют — да · ≈1.59",
 "top": false,
@@ -8142,6 +8142,41 @@ null
 ]
 ],
 "div": "N1",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "football",
+"id": "401875008",
+"league": "Италия · Серия A",
+"kickoff": "2026-11-22T14:30:00+03:00",
+"home": "Ювентус",
+"away": "Венеция",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/111.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/17530.png",
+"hid": "111",
+"aid": "17530",
+"bb": "https://betboom.ru/search?query=%D0%AE%D0%B2%D0%B5%D0%BD%D1%82%D1%83%D1%81&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/ita.1",
+"url": "live.html?s=football&p=soccer%2Fita.1&e=401875008&h=%D0%AE%D0%B2%D0%B5%D0%BD%D1%82%D1%83%D1%81&a=%D0%92%D0%B5%D0%BD%D0%B5%D1%86%D0%B8%D1%8F",
+"participants": [
+[
+"Ювентус",
+"Juventus"
+],
+[
+"Венеция",
+"Venezia"
+]
+],
+"div": "I1",
 "state": "pre",
 "bo": null,
 "prediction": "",
