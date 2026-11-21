@@ -7751,5 +7751,113 @@
   "close": {
    "BB_U229.5": 0.5
   }
+ },
+ "NBA|401909311": {
+  "id": "401909311",
+  "div": "NBA",
+  "sport": "basketball",
+  "kickoff": "2026-11-21T05:30:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "detail": "Fri, November 20th at 9:30 PM EST",
+  "clock": "0.0",
+  "period": 0,
+  "home": {
+   "id": "26",
+   "name": "Utah Jazz",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/utah.png",
+   "color": "4e008e",
+   "score": "0",
+   "record": "3-13",
+   "periods": [],
+   "ru": "Юта Джаз"
+  },
+  "away": {
+   "id": "21",
+   "name": "Phoenix Suns",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/phx.png",
+   "color": "29127a",
+   "score": "0",
+   "record": "7-7",
+   "periods": [],
+   "ru": "Финикс Санз"
+  },
+  "odds": {
+   "H": 2.6,
+   "A": 1.521,
+   "line": 225.5,
+   "over": 1.909,
+   "under": 1.909,
+   "spread": 4.5,
+   "sp_h": 1.952,
+   "sp_a": 1.87
+  },
+  "probs": {
+   "BB_ML_H": 0.3538302333272762,
+   "BB_ML_A": 0.6461697666727237,
+   "BB_SPR_H": 0.5,
+   "BB_SPR_A": 0.5,
+   "BB_O218.5": 0.6597440535491568,
+   "BB_U218.5": 0.3402559464508432,
+   "BB_O225.5": 0.5,
+   "BB_U225.5": 0.5,
+   "BB_O232.5": 0.3402559464508432,
+   "BB_U232.5": 0.6597440535491568
+  },
+  "labels": {
+   "BB_ML_H": "П1 (с ОТ)",
+   "BB_ML_A": "П2 (с ОТ)",
+   "BB_SPR_H": "Ф1 (+4.5)",
+   "BB_SPR_A": "Ф2 (-4.5)",
+   "BB_O218.5": "ТБ 218.5",
+   "BB_U218.5": "ТМ 218.5",
+   "BB_O225.5": "ТБ 225.5",
+   "BB_U225.5": "ТМ 225.5",
+   "BB_O232.5": "ТБ 232.5",
+   "BB_U232.5": "ТМ 232.5"
+  },
+  "real": {
+   "BB_ML_H": 2.6,
+   "BB_ML_A": 1.521,
+   "BB_SPR_H": 1.952,
+   "BB_SPR_A": 1.87,
+   "BB_O225.5": 1.909,
+   "BB_U225.5": 1.909
+  },
+  "center": "Ожидаемый счёт 110 : 115",
+  "bar": [
+   0.3538302333272762,
+   0,
+   0.6461697666727237
+  ],
+  "model": {
+   "mu": -4.5,
+   "T": 225.5
+  },
+  "stavka_signal": {
+   "status": "collecting",
+   "weight": 0.0,
+   "authors": 32,
+   "group": "basketball",
+   "snapshot": "NBA|401909311",
+   "source": "https://stavka.tv"
+  },
+  "main": {
+   "key": "BB_SPR_A",
+   "label": "Ф2 (-4.5)",
+   "p": 0.5,
+   "odds": 1.87,
+   "est": false,
+   "line": -4.5,
+   "stake": 1.0
+  },
+  "bold": {},
+  "open": {
+   "BB_SPR_A": 0.5
+  },
+  "top": true,
+  "msg_id": 7730,
+  "btn": 4
  }
 }
