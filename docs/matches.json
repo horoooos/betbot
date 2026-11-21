@@ -1,106 +1,5 @@
 [
 {
-"sport": "basketball",
-"id": "401909311",
-"league": "США · NBA",
-"kickoff": "2026-11-21T05:30:00+03:00",
-"home": "Юта Джаз",
-"away": "Финикс Санз",
-"hl": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/utah.png",
-"al": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/phx.png",
-"hid": "26",
-"aid": "21",
-"bb": "https://betboom.ru/search?query=%D0%94%D0%B6%D0%B0%D0%B7&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=basketball",
-"path": "basketball/nba",
-"url": "live.html?s=basketball&p=basketball%2Fnba&e=401909311&h=%D0%AE%D1%82%D0%B0+%D0%94%D0%B6%D0%B0%D0%B7&a=%D0%A4%D0%B8%D0%BD%D0%B8%D0%BA%D1%81+%D0%A1%D0%B0%D0%BD%D0%B7",
-"participants": [
-[
-"Юта Джаз",
-"Utah Jazz"
-],
-[
-"Финикс Санз",
-"Phoenix Suns"
-]
-],
-"div": "NBA",
-"state": "post",
-"bo": null,
-"prediction": "predictions/2026-11-21-yuta-dzhaz-finiks-sanz-401909311.html",
-"hs": "101",
-"as": "111",
-"tip": "Ф2 (-4.5) · 1.87",
-"top": true,
-"bot": {
-"main": {
-"label": "Ф2 (-4.5)",
-"p": 0.5,
-"odds": 1.87,
-"est": false
-},
-"bold": null,
-"markets": [
-[
-"П1 (с ОТ)",
-0.354,
-2.6
-],
-[
-"П2 (с ОТ)",
-0.646,
-1.521
-],
-[
-"Ф1 (+4.5)",
-0.5,
-1.952
-],
-[
-"Ф2 (-4.5)",
-0.5,
-1.87
-],
-[
-"ТБ 218.5",
-0.66,
-null
-],
-[
-"ТМ 218.5",
-0.34,
-null
-],
-[
-"ТБ 225.5",
-0.5,
-1.909
-],
-[
-"ТМ 225.5",
-0.5,
-1.909
-],
-[
-"ТБ 232.5",
-0.34,
-null
-],
-[
-"ТМ 232.5",
-0.66,
-null
-]
-],
-"bar": [
-0.3538302333272762,
-0,
-0.6461697666727237
-],
-"center": "Ожидаемый счёт 110 : 115"
-},
-"lt": null
-},
-{
 "sport": "football",
 "id": "401877053",
 "league": "Мексика · Лига MX",
@@ -1031,7 +930,7 @@ null
 "bo": null,
 "prediction": "predictions/2026-11-21-sanfrechche-hirosima-iokogama-f-marinos-401877531.html",
 "hs": "1",
-"as": "0",
+"as": "1",
 "tip": "Обе забьют — да · ≈1.59",
 "top": false,
 "bot": {
@@ -8042,6 +7941,146 @@ null
 ]
 ],
 "div": "E1",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "football",
+"id": "401878942",
+"league": "Бельгия · Про-лига",
+"kickoff": "2026-11-22T15:30:00+03:00",
+"home": "Васланд-Беверен",
+"away": "Гент",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/13450.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/3611.png",
+"hid": "13450",
+"aid": "3611",
+"bb": "https://betboom.ru/search?query=%D0%92%D0%B0%D1%81%D0%BB%D0%B0%D0%BD%D0%B4-%D0%91%D0%B5%D0%B2%D0%B5%D1%80%D0%B5%D0%BD&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/bel.1",
+"url": "live.html?s=football&p=soccer%2Fbel.1&e=401878942&h=%D0%92%D0%B0%D1%81%D0%BB%D0%B0%D0%BD%D0%B4-%D0%91%D0%B5%D0%B2%D0%B5%D1%80%D0%B5%D0%BD&a=%D0%93%D0%B5%D0%BD%D1%82",
+"participants": [
+[
+"Васланд-Беверен",
+"Waasland-Beveren"
+],
+[
+"Гент",
+"KAA Gent"
+]
+],
+"div": "B1",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "football",
+"id": "401885048",
+"league": "Германия · 2. Бундеслига",
+"kickoff": "2026-11-22T15:30:00+03:00",
+"home": "Энерги Котбус",
+"away": "Hertha Berlin",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/123.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/129.png",
+"hid": "123",
+"aid": "129",
+"bb": "https://betboom.ru/search?query=%D0%AD%D0%BD%D0%B5%D1%80%D0%B3%D0%B8&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/ger.2",
+"url": "live.html?s=football&p=soccer%2Fger.2&e=401885048&h=%D0%AD%D0%BD%D0%B5%D1%80%D0%B3%D0%B8+%D0%9A%D0%BE%D1%82%D0%B1%D1%83%D1%81&a=Hertha+Berlin",
+"participants": [
+[
+"Энерги Котбус",
+"Energie Cottbus"
+],
+[
+"Hertha Berlin",
+"Hertha Berlin"
+]
+],
+"div": "D2",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "football",
+"id": "401885052",
+"league": "Германия · 2. Бундеслига",
+"kickoff": "2026-11-22T15:30:00+03:00",
+"home": "Кайзерслаутерн",
+"away": "Динамо",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/130.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/7017.png",
+"hid": "130",
+"aid": "7017",
+"bb": "https://betboom.ru/search?query=%D0%9A%D0%B0%D0%B9%D0%B7%D0%B5%D1%80%D1%81%D0%BB%D0%B0%D1%83%D1%82%D0%B5%D1%80%D0%BD&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/ger.2",
+"url": "live.html?s=football&p=soccer%2Fger.2&e=401885052&h=%D0%9A%D0%B0%D0%B9%D0%B7%D0%B5%D1%80%D1%81%D0%BB%D0%B0%D1%83%D1%82%D0%B5%D1%80%D0%BD&a=%D0%94%D0%B8%D0%BD%D0%B0%D0%BC%D0%BE",
+"participants": [
+[
+"Кайзерслаутерн",
+"Kaiserslautern"
+],
+[
+"Динамо",
+"Dynamo Dresden"
+]
+],
+"div": "D2",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "football",
+"id": "401885050",
+"league": "Германия · 2. Бундеслига",
+"kickoff": "2026-11-22T15:30:00+03:00",
+"home": "Карлсруэ",
+"away": "VfL Osnabruck",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/4471.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/7013.png",
+"hid": "4471",
+"aid": "7013",
+"bb": "https://betboom.ru/search?query=%D0%9A%D0%B0%D1%80%D0%BB%D1%81%D1%80%D1%83%D1%8D&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/ger.2",
+"url": "live.html?s=football&p=soccer%2Fger.2&e=401885050&h=%D0%9A%D0%B0%D1%80%D0%BB%D1%81%D1%80%D1%83%D1%8D&a=VfL+Osnabruck",
+"participants": [
+[
+"Карлсруэ",
+"Karlsruher SC"
+],
+[
+"VfL Osnabruck",
+"VfL Osnabruck"
+]
+],
+"div": "D2",
 "state": "pre",
 "bo": null,
 "prediction": "",
