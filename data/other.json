@@ -7557,31 +7557,31 @@
   "kickoff": "2026-11-21T16:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Sat, November 21st at 8:30 AM EST",
   "home": {
-   "id": "3782",
-   "name": "Carlos Alcaraz",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/3782.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/esp.png"
    ],
+   "id": "3782",
+   "name": "Carlos Alcaraz",
    "country": "Spain",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
    "ru": "Карлос Алькарас"
   },
   "away": {
-   "id": "9250",
-   "name": "Ben Shelton",
+   "color": "2d6a4f",
    "logo": [
     "https://a.espncdn.com/i/headshots/tennis/players/full/9250.png",
     "https://a.espncdn.com/i/teamlogos/countries/500/usa.png"
    ],
+   "id": "9250",
+   "name": "Ben Shelton",
    "country": "USA",
-   "color": "2d6a4f",
    "winner": false,
    "sets": [],
    "set_won": [],
@@ -7659,7 +7659,9 @@
   "btn": 4,
   "close": {
    "_": null
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null
  },
  "DOTA|1816454": {
   "id": "1816454",
