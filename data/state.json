@@ -1555,7 +1555,7 @@
  "value_day": "2026-11-21",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-21",
- "site_stamp": "1281|7808|2026-11-21 12|4|2ac643b9a56b3c6c",
+ "site_stamp": "1281|7810|2026-11-21 12|4|2cfebb75d4c964df",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1716,7 +1716,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 7808,
+ "dz_last": 7810,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2546,26 +2546,9 @@
   "quote_matches": 23
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-21T12:27:15.316592+03:00",
-  "cursor": "200",
+  "last_poll": "2026-11-21T12:29:15.262971+03:00",
+  "cursor": "202",
   "posts": [
-   {
-    "post_id": 610,
-    "url": "https://vk.com/wall-228963529_610",
-    "title": "Тюкавин готов к турецкому переходу: «Почему бы и нет?»",
-    "text": "рџ“° Тюкавин, нападающий «Динамо», в свежем интервью «СЭ» откровенно сказал, что мечтает попробовать себя в турецком чемпионате. Он упомянул, что часто наблюдает за игрой своего бывшего товарища по России, Ильи Батракова, сейчас выступающего в Турции, и задаётся вопросом: «Почему бы и мне туда?».",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": false,
-     "details_present": false,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-20T11:58:36.134759+03:00"
-   },
    {
     "post_id": 611,
     "url": "https://vk.com/wall-228963529_611",
@@ -3058,6 +3041,23 @@
     },
     "status": "needs_review",
     "observed_at": "2026-11-21T11:25:56.408997+03:00"
+   },
+   {
+    "post_id": 651,
+    "url": "https://vk.com/wall-228963529_651",
+    "title": "Губерниев назвал «Динамо» фаворитом против «Краснодара»",
+    "text": "вљЎпёЏ Губерниев предсказывает захватывающий дуэль на ВТБ Арене.",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": false,
+     "details_present": false,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-21T12:29:15.262971+03:00"
    }
   ],
   "status": "observing"
