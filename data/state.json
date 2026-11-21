@@ -1548,11 +1548,11 @@
   "day": "2026-11-21",
   "done": true
  },
- "streak_posted": 7,
+ "streak_posted": 0,
  "value_day": "2026-11-21",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-21",
- "site_stamp": "1393|8520|2026-11-22 00|4|8870bcb640c25583",
+ "site_stamp": "1397|8528|2026-11-22 00|4|0baa3f2b5c07df91",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1706,7 +1706,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 8520,
+ "dz_last": 8528,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2520,9 +2520,9 @@
   "model": {
    "weight": 0.0,
    "status": "collecting",
-   "settled_matches": 75,
+   "settled_matches": 76,
    "required_matches": 100,
-   "trained_at": "2026-11-21T20:16:50.501017+00:00"
+   "trained_at": "2026-11-21T21:40:20.809442+00:00"
   },
   "sport_models": {
    "hockey": {
@@ -2562,34 +2562,29 @@
    }
   },
   "source": {
-   "last_success": "2026-11-21T21:19:09.698718+00:00",
-   "parsed": 269,
+   "last_success": "2026-11-21T21:40:20.809442+00:00",
+   "parsed": 330,
    "added": 97,
-   "discovered_matches": 30,
-   "pages": 15,
-   "errors": [
-    "HTTPSConnectionPool(host='stavka.tv', port=443): Max retries exceeded with url: /matches/soccer (Caused by ConnectTimeoutError(<HTTPSConnection(host='stavka.tv'",
-    "HTTPSConnectionPool(host='stavka.tv', port=443): Max retries exceeded with url: /matches/basketball (Caused by ConnectTimeoutError(<HTTPSConnection(host='stavka",
-    "HTTPSConnectionPool(host='stavka.tv', port=443): Max retries exceeded with url: /predictions/dota2 (Caused by ConnectTimeoutError(<HTTPSConnection(host='stavka.",
-    "HTTPSConnectionPool(host='stavka.tv', port=443): Max retries exceeded with url: /matches/dota2 (Caused by ConnectTimeoutError(<HTTPSConnection(host='stavka.tv',",
-    "HTTPSConnectionPool(host='stavka.tv', port=443): Max retries exceeded with url: /matches/basketball/22-11-2026-san-antonio-spurs-new-orleans-pelicans (Caused by"
-   ],
+   "discovered_matches": 52,
+   "pages": 16,
+   "errors": [],
    "parsed_by_sport": {
     "soccer": 50,
     "ice-hockey": 50,
-    "basketball": 49,
+    "basketball": 50,
     "tennis": 50,
-    "csgo": 50
+    "csgo": 50,
+    "dota2": 50
    }
   },
   "error": null,
-  "tips": 9636,
+  "tips": 9658,
   "snapshots": 194,
-  "unmapped_markets": 14465,
+  "unmapped_markets": 14540,
   "quote_matches": 23
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-22T00:33:56.404932+03:00",
+  "last_poll": "2026-11-22T00:40:20.809442+03:00",
   "cursor": "248",
   "posts": [
    {

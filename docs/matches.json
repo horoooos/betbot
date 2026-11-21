@@ -1984,7 +1984,7 @@ null
 ]
 ],
 "div": "B1",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "predictions/2026-11-21-mehelen-bryugge-401878935.html",
 "hs": "1",
@@ -2126,7 +2126,7 @@ null
 ]
 ],
 "div": "B1",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "predictions/2026-11-21-zyulte-varegem-antverpen-401878938.html",
 "hs": "2",
@@ -2273,7 +2273,7 @@ null
 ]
 ],
 "div": "I1",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "predictions/2026-11-21-napoli-torino-401875067.html",
 "hs": "1",
@@ -2394,7 +2394,7 @@ null
 "min_odds": 1.56,
 "minute": "25'",
 "p": 0.674,
-"result": null,
+"result": "miss",
 "score": "0:0"
 }
 },
@@ -2679,7 +2679,7 @@ null
 ]
 ],
 "div": "F1",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "predictions/2026-11-21-lans-tuluza-401876403.html",
 "hs": "1",
@@ -2805,7 +2805,7 @@ null
 "min_odds": 1.56,
 "minute": "25'",
 "p": 0.672,
-"result": null,
+"result": "hit",
 "score": "0:0"
 }
 },
@@ -3148,7 +3148,7 @@ null
 "bo": null,
 "prediction": "predictions/2026-11-21-arhentinos-huniors-independente-401933755.html",
 "hs": "1",
-"as": "1",
+"as": "2",
 "tip": "П1 · 2.12",
 "top": false,
 "bot": {
@@ -3593,7 +3593,7 @@ null
 "bo": null,
 "prediction": "predictions/2026-11-21-groningen-herenven-401875546.html",
 "hs": "1",
-"as": "2",
+"as": "3",
 "tip": "ТМ 3.5 · ≈1.67",
 "top": false,
 "bot": {
@@ -4582,7 +4582,7 @@ null
 "bo": null,
 "prediction": "predictions/2026-11-21-kalgari-chikago-401892755.html",
 "hs": "1",
-"as": "0",
+"as": "2",
 "tip": "ТБ 5.5 · 1.80",
 "top": false,
 "bot": {
@@ -5126,7 +5126,7 @@ null
 "sport": "tennis",
 "id": "186810",
 "league": "Теннис · WTA",
-"kickoff": "2026-11-22T00:40:00+03:00",
+"kickoff": "2026-11-22T01:00:00+03:00",
 "home": "Гуйомар Маристани",
 "away": "Ребека Масарова",
 "hl": "https://a.espncdn.com/i/teamlogos/countries/500/esp.png",
