@@ -1550,7 +1550,7 @@
  "value_day": "2026-11-21",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-21",
- "site_stamp": "1372|8401|2026-11-21 22|4|9a6100345472e498",
+ "site_stamp": "1373|8406|2026-11-21 22|4|a3961350999a9815",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1704,7 +1704,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 8401,
+ "dz_last": 8406,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2565,48 +2565,14 @@
   },
   "error": null,
   "tips": 9449,
-  "snapshots": 190,
+  "snapshots": 193,
   "unmapped_markets": 14144,
   "quote_matches": 23
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-21T22:02:57.952790+03:00",
-  "cursor": "229",
+  "last_poll": "2026-11-21T22:11:32.140546+03:00",
+  "cursor": "232",
   "posts": [
-   {
-    "post_id": 624,
-    "url": "https://vk.com/wall-228963529_624",
-    "title": "HLTV Awards 2026 вводит категорию «Саппорт года» вместо «Опорнику года»",
-    "text": "вљ™пёЏ На HLTV Awards 2026 появляется новая номинация — «Саппорт года», которая полностью заменит прежнюю «Опорнику года».",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": false,
-     "details_present": false,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-20T17:19:14.953071+03:00"
-   },
-   {
-    "post_id": 627,
-    "url": "https://vk.com/wall-228963529_627",
-    "title": "Марка Стоуна сделали лучшим бомбардиром «Голден Найтс» с 418 очками",
-    "text": "рџ“° Стоун прорвал клубный потолок и стал лучшим бомбардиром «Вегаса»!",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": false,
-     "details_present": false,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-20T18:22:23.066638+03:00"
-   },
    {
     "post_id": 628,
     "url": "https://vk.com/wall-228963529_628",
@@ -3082,6 +3048,40 @@
     },
     "status": "needs_review",
     "observed_at": "2026-11-21T21:06:14.998768+03:00"
+   },
+   {
+    "post_id": 680,
+    "url": "https://vk.com/wall-228963529_680",
+    "title": "Булыкин раскритиковал «Зенит»: игроки не выкладываются на сто процентов",
+    "text": "рџ±вљЎпёЏ«Зенит» снова в падении: Булыкин о том, почему команда теряет очки!",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": false,
+     "details_present": false,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-21T22:11:32.140546+03:00"
+   },
+   {
+    "post_id": 681,
+    "url": "https://vk.com/wall-228963529_681",
+    "title": "Зенит впервые с 2009 года потерпел четыре поражения в первом круге",
+    "text": "рџ“° «Зенит» под руководством Сергея Семака впервые с 2009 года потерпел четыре поражения в первом круге Российской Премьер-лиги. За 15 туров команда уступила «Родине» (1:2), «Спартаку» (0:2), ЦСКА (1:2) и «Рубину» (1:3).",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": false,
+     "details_present": false,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-21T22:11:32.140546+03:00"
    }
   ],
   "status": "observing"
