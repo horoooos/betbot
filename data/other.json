@@ -7461,22 +7461,22 @@
   "state": "pre",
   "completed": false,
   "tier": "a",
-  "status": "reviewed",
+  "status": "done",
   "home": {
+   "color": "3b4a7a",
+   "logo": "https://cdn-api.pandascore.co/images/team/image/133882/600px_aurora_gaming_2025_allmode.png",
    "id": "133882",
    "name": "Aurora",
    "ru": "Aurora",
-   "logo": "https://cdn-api.pandascore.co/images/team/image/133882/600px_aurora_gaming_2025_allmode.png",
-   "color": "3b4a7a",
    "score": 0,
    "winner": false
   },
   "away": {
+   "color": "3b4a7a",
+   "logo": "https://cdn-api.pandascore.co/images/team/image/139432/664px_astra_invicta_lightmode.png",
    "id": "139432",
    "name": "Astra Invicta",
    "ru": "Astra Invicta",
-   "logo": "https://cdn-api.pandascore.co/images/team/image/139432/664px_astra_invicta_lightmode.png",
-   "color": "3b4a7a",
    "score": 0,
    "winner": false
   },
@@ -7543,7 +7543,9 @@
   "close": {
    "_": null
   },
-  "settlement_retry_at": 1795272243.829552
+  "settlement_retry_at": 1795273256.053091,
+  "main_hit": false,
+  "bold_hit": null
  },
  "ATP|187528": {
   "id": "187528",
