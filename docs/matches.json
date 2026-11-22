@@ -1,146 +1,6 @@
 [
 {
 "sport": "football",
-"id": "401934689",
-"league": "Колумбия · Примера A",
-"kickoff": "2026-11-22T04:15:00+03:00",
-"home": "Онсе Кальдас",
-"away": "Атлетико Насьональ",
-"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/2919.png",
-"al": "https://a.espncdn.com/i/teamlogos/soccer/500/5264.png",
-"hid": "2919",
-"aid": "5264",
-"bb": "https://betboom.ru/search?query=%D0%9A%D0%B0%D0%BB%D1%8C%D0%B4%D0%B0%D1%81&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
-"path": "soccer/col.1",
-"url": "live.html?s=football&p=soccer%2Fcol.1&e=401934689&h=%D0%9E%D0%BD%D1%81%D0%B5+%D0%9A%D0%B0%D0%BB%D1%8C%D0%B4%D0%B0%D1%81&a=%D0%90%D1%82%D0%BB%D0%B5%D1%82%D0%B8%D0%BA%D0%BE+%D0%9D%D0%B0%D1%81%D1%8C%D0%BE%D0%BD%D0%B0%D0%BB%D1%8C",
-"participants": [
-[
-"Онсе Кальдас",
-"Once Caldas"
-],
-[
-"Атлетико Насьональ",
-"Atlético Nacional"
-]
-],
-"div": "COL",
-"state": "post",
-"bo": null,
-"prediction": "predictions/2026-11-22-onse-kaldas-atletiko-nasonal-401934689.html",
-"hs": "0",
-"as": "0",
-"tip": "ТМ 2.5 · 1.77",
-"top": false,
-"bot": {
-"main": {
-"label": "ТМ 2.5",
-"p": 0.535,
-"odds": 1.77,
-"est": false
-},
-"bold": null,
-"markets": [
-[
-"П1",
-0.324,
-2.9
-],
-[
-"Ничья",
-0.287,
-3.1
-],
-[
-"П2",
-0.389,
-2.4
-],
-[
-"1X",
-0.611,
-null
-],
-[
-"X2",
-0.676,
-null
-],
-[
-"ТБ 1.5",
-0.73,
-null
-],
-[
-"ТБ 2.5",
-0.465,
-2.0
-],
-[
-"ТМ 2.5",
-0.535,
-1.769
-],
-[
-"ТБ 3.5",
-0.25,
-null
-],
-[
-"Обе забьют — да",
-0.525,
-null
-],
-[
-"Обе забьют — нет",
-0.475,
-null
-],
-[
-"ИТ1 больше 1.5",
-0.337,
-null
-],
-[
-"ИТ2 больше 1.5",
-0.386,
-null
-],
-[
-"Ф1 (−1.5)",
-0.139,
-null
-],
-[
-"Ф2 (+1.5)",
-0.861,
-null
-]
-],
-"bar": [
-0.323583131890379,
-0.2873243908001496,
-0.38909247730947155
-],
-"center": "Ожидаемые голы (xG) 1.2 : 1.3",
-"scores": [
-[
-"1:1",
-0.137
-],
-[
-"0:1",
-0.096
-],
-[
-"0:0",
-0.089
-]
-]
-},
-"lt": null
-},
-{
-"sport": "football",
 "id": "401892134",
 "league": "Австралия · A-League",
 "kickoff": "2026-11-22T05:00:00+03:00",
@@ -776,8 +636,8 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-22-sakramento-kingz-boston-seltiks-401910028.html",
-"hs": "79",
-"as": "77",
+"hs": "84",
+"as": "82",
 "tip": "Ф2 (-12.5) · 1.93",
 "top": false,
 "bot": {
