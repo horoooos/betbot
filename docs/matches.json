@@ -3061,7 +3061,7 @@ null
 "bo": null,
 "prediction": "predictions/2026-11-22-kortreyk-yunion-401878936.html",
 "hs": "0",
-"as": "0",
+"as": "1",
 "tip": "ТБ 2.5 · 1.59",
 "top": false,
 "bot": {
@@ -3629,7 +3629,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-22-rasing-santander-real-sosedad-401882800.html",
-"hs": "2",
+"hs": "3",
 "as": "2",
 "tip": "П2 · 1.99",
 "top": false,
@@ -5266,7 +5266,7 @@ null
 "bo": null,
 "prediction": "predictions/2026-11-22-loryan-renn-401876401.html",
 "hs": "0",
-"as": "0",
+"as": "1",
 "tip": "ТМ 2.5 · 1.91",
 "top": false,
 "bot": {
@@ -5377,7 +5377,15 @@ null
 "corners": 11.1,
 "cards": 3.9
 },
-"lt": null
+"lt": {
+"fair": 1.66,
+"label": "Обе забьют — да",
+"min_odds": 1.74,
+"minute": "30'",
+"p": 0.602,
+"result": null,
+"score": "0:1"
+}
 },
 {
 "sport": "football",
@@ -5407,7 +5415,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-22-liverpul-manchester-yunayted-401878755.html",
-"hs": "0",
+"hs": "2",
 "as": "0",
 "tip": "П1 · 1.74",
 "top": false,
@@ -6224,107 +6232,6 @@ null
 ],
 "corners": 10.1,
 "cards": 3.8
-},
-"lt": null
-},
-{
-"sport": "esports",
-"id": "1816470",
-"league": "Киберспорт · Dota 2",
-"kickoff": "2026-11-22T20:00:00+03:00",
-"home": "LGD Gaming",
-"away": "Astra Invicta",
-"hl": "https://cdn-api.pandascore.co/images/team/image/1657/600px_lgd_gaming_dec_2019_allmode.png",
-"al": "https://cdn-api.pandascore.co/images/team/image/139432/664px_astra_invicta_lightmode.png",
-"hid": "1657",
-"aid": "139432",
-"bb": "https://betboom.ru/search?query=%D0%93%D0%B0%D0%BC%D0%B8%D0%BD%D0%B3&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=esports",
-"path": "",
-"url": "dota.html?e=1816470&d=DOTA",
-"participants": [
-[
-"LGD Gaming",
-"LGD Gaming"
-],
-[
-"Astra Invicta",
-"Astra Invicta"
-]
-],
-"div": "DOTA",
-"state": "pre",
-"bo": 3,
-"prediction": "predictions/2026-11-22-lgd-gaming-astra-invicta-1816470.html",
-"hs": 0,
-"as": 0,
-"tip": "Всухую (2:0 или 0:2) · ≈1.69",
-"top": false,
-"bot": {
-"main": {
-"label": "Всухую (2:0 или 0:2)",
-"p": 0.552,
-"odds": 1.69,
-"est": true
-},
-"bold": null,
-"markets": [
-[
-"Победа: LGD Gaming",
-0.733,
-null
-],
-[
-"Победа: Astra Invicta",
-0.267,
-null
-],
-[
-"Больше 2 карт",
-0.448,
-null
-],
-[
-"Всухую (2:0 или 0:2)",
-0.552,
-null
-],
-[
-"Счёт по картам 2:0",
-0.436,
-null
-],
-[
-"Счёт по картам 0:2",
-0.115,
-null
-],
-[
-"Счёт по картам 2:1",
-0.296,
-null
-],
-[
-"Счёт по картам 1:2",
-0.152,
-null
-],
-[
-"LGD Gaming возьмёт хотя бы карту",
-0.885,
-null
-],
-[
-"Astra Invicta возьмёт хотя бы карту",
-0.564,
-null
-]
-],
-"bar": [
-0.7327192537449505,
-0,
-0.2672807462550495
-],
-"center": "BO3 · Эло 1616 : 1441"
 },
 "lt": null
 },
@@ -7383,6 +7290,107 @@ null
 0.5934166808371613
 ],
 "center": "Ожидаемые голы 2.9 : 3.6"
+},
+"lt": null
+},
+{
+"sport": "esports",
+"id": "1816470",
+"league": "Киберспорт · Dota 2",
+"kickoff": "2026-11-22T21:00:00+03:00",
+"home": "LGD Gaming",
+"away": "Astra Invicta",
+"hl": "https://cdn-api.pandascore.co/images/team/image/1657/600px_lgd_gaming_dec_2019_allmode.png",
+"al": "https://cdn-api.pandascore.co/images/team/image/139432/664px_astra_invicta_lightmode.png",
+"hid": "1657",
+"aid": "139432",
+"bb": "https://betboom.ru/search?query=%D0%93%D0%B0%D0%BC%D0%B8%D0%BD%D0%B3&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=esports",
+"path": "",
+"url": "dota.html?e=1816470&d=DOTA",
+"participants": [
+[
+"LGD Gaming",
+"LGD Gaming"
+],
+[
+"Astra Invicta",
+"Astra Invicta"
+]
+],
+"div": "DOTA",
+"state": "pre",
+"bo": 3,
+"prediction": "predictions/2026-11-22-lgd-gaming-astra-invicta-1816470.html",
+"hs": 0,
+"as": 0,
+"tip": "Всухую (2:0 или 0:2) · ≈1.69",
+"top": false,
+"bot": {
+"main": {
+"label": "Всухую (2:0 или 0:2)",
+"p": 0.552,
+"odds": 1.69,
+"est": true
+},
+"bold": null,
+"markets": [
+[
+"Победа: LGD Gaming",
+0.733,
+null
+],
+[
+"Победа: Astra Invicta",
+0.267,
+null
+],
+[
+"Больше 2 карт",
+0.448,
+null
+],
+[
+"Всухую (2:0 или 0:2)",
+0.552,
+null
+],
+[
+"Счёт по картам 2:0",
+0.436,
+null
+],
+[
+"Счёт по картам 0:2",
+0.115,
+null
+],
+[
+"Счёт по картам 2:1",
+0.296,
+null
+],
+[
+"Счёт по картам 1:2",
+0.152,
+null
+],
+[
+"LGD Gaming возьмёт хотя бы карту",
+0.885,
+null
+],
+[
+"Astra Invicta возьмёт хотя бы карту",
+0.564,
+null
+]
+],
+"bar": [
+0.7327192537449505,
+0,
+0.2672807462550495
+],
+"center": "BO3 · Эло 1616 : 1441"
 },
 "lt": null
 },
