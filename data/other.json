@@ -8586,22 +8586,22 @@
   "state": "pre",
   "completed": false,
   "tier": "a",
-  "status": "reviewed",
+  "status": "done",
   "home": {
+   "color": "3b4a7a",
+   "logo": "https://cdn-api.pandascore.co/images/team/image/1657/600px_lgd_gaming_dec_2019_allmode.png",
    "id": "1657",
    "name": "LGD Gaming",
    "ru": "LGD Gaming",
-   "logo": "https://cdn-api.pandascore.co/images/team/image/1657/600px_lgd_gaming_dec_2019_allmode.png",
-   "color": "3b4a7a",
    "score": 0,
    "winner": false
   },
   "away": {
+   "color": "3b4a7a",
+   "logo": "https://cdn-api.pandascore.co/images/team/image/139432/664px_astra_invicta_lightmode.png",
    "id": "139432",
    "name": "Astra Invicta",
    "ru": "Astra Invicta",
-   "logo": "https://cdn-api.pandascore.co/images/team/image/139432/664px_astra_invicta_lightmode.png",
-   "color": "3b4a7a",
    "score": 0,
    "winner": false
   },
@@ -8668,7 +8668,9 @@
   "close": {
    "_": null
   },
-  "settlement_retry_at": 1795384587.923496
+  "settlement_retry_at": 1795385547.774813,
+  "main_hit": false,
+  "bold_hit": null
  },
  "DOTA|1816469": {
   "id": "1816469",
