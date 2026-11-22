@@ -1,0 +1,37 @@
+name: Render VK RSS formatting preview
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Build preview from published RSS text
+        run: |
+          mkdir -p work
+          python - <<'PY'
+          import urllib.request,xml.etree.ElementTree as ET,html
+          from pathlib import Path
+          from html.parser import HTMLParser
+          class Reader(HTMLParser):
+              def __init__(self):super().__init__(convert_charrefs=True);self.parts=[]
+              def handle_data(self,data):
+                  if data.strip():self.parts.append(data)
+          raw=urllib.request.urlopen('https://horoooos.github.io/betbot/rss-vk-article.xml',timeout=25).read()
+          item=ET.fromstring(raw).find('channel/item');reader=Reader();reader.feed(item.findtext('{http://purl.org/rss/1.0/modules/content/}encoded'))
+          body=reader.parts[0];assert '#аиставит' in body and 'Подробнее на сайте' in body
+          picture=item.find('enclosure').attrib['url']
+          output='<html><meta charset="utf-8"><style>body{background:#10172c;color:#eef2ff;font:21px/1.6 Arial;padding:36px;max-width:780px;margin:auto}aside{color:#ffc400;font-size:16px}img{width:100%;border-radius:14px}article{white-space:pre-line}h1{font-size:28px}</style><aside>Предпросмотр форматтера RSS. Это не скриншот публикации VK.</aside><h1>'+html.escape(item.findtext('title'))+'</h1><img src="'+html.escape(picture)+'"><article>'+html.escape(body)+'</article></html>'
+          Path('work/rss-preview.html').write_text(output,encoding='utf-8')
+          PY
+      - name: Render in Chrome
+        run: google-chrome --headless --no-sandbox --disable-gpu --hide-scrollbars --window-size=900,1200 --virtual-time-budget=10000 --screenshot=work/rss-preview.png "file://$PWD/work/rss-preview.html"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: rss-format-preview
+          path: work/rss-preview.*
