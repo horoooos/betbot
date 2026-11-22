@@ -1,5 +1,7 @@
 import unittest
-from betbot import pro,content
+from betbot import pro,content,markets
+from unittest.mock import patch
+import run as runner
 import pandas as pd
 
 class StakeGateTests(unittest.TestCase):
@@ -8,6 +10,20 @@ class StakeGateTests(unittest.TestCase):
         self.assertEqual(pro.stake({'p':.7,'odds':2.0,'est':True}),0)
         self.assertEqual(pro.stake({'p':.5,'odds':2.02,'est':False}),0)
         self.assertEqual(pro.stake({'p':float('nan'),'odds':2.0}),0)
+    def test_invalid_quote_fails_closed(self):
+        self.assertEqual(pro.stake({'p':None,'odds':'bad'}),0)
+
+    def test_a_qualified_real_market_is_not_displaced_by_negative_edge(self):
+        main,bold=markets.choose(['H','A'],{'H':.55,'A':.5},{'H':1.5,'A':2.1},lambda k: .9 if k=='H' else .5)
+        self.assertEqual(main,'A')
+
+    def test_negative_edge_review_does_not_send_a_forecast(self):
+        tip={'key':'H','p':.5,'odds':1.9,'est':False}
+        probs={'H':.5,'A':.3,'D':.2,'scores':{}}
+        with patch.object(runner,'find_fixture',return_value=None),patch.object(runner,'market',return_value={}),patch.object(runner,'lambdas',return_value=(1,1)),patch.object(runner.mk,'all_markets',return_value=probs),patch.object(runner.stavka,'adjust',return_value=(probs,{})),patch.object(runner.mk,'tips',return_value=(tip,{})),patch.object(runner.telegram,'send_photo') as send:
+            self.assertIsNone(runner.review({}, {}, lambda:None,lambda:None,{},{}))
+            send.assert_not_called()
+
     def test_genuine_edge_gets_bounded_fractional_kelly(self):
         self.assertGreater(pro.stake({'p':.6,'odds':1.9,'est':False}),0)
         self.assertLessEqual(pro.stake({'p':.9,'odds':3.,'est':False}),3)

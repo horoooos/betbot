@@ -39,7 +39,10 @@ def stake(tip: dict) -> float:
     """Сколько % банка ставить. Реальный кэф и перевес от 3% — Келли (1–3%); иначе ставка 0%."""
     if not tip or tip.get("est"):
         return 0.0
-    p, o = tip["p"], tip["odds"]
+    try:
+        p, o = float(tip.get("p")), float(tip.get("odds"))
+    except (TypeError, ValueError):
+        return 0.0
     edge = p * o - 1
     if not np.isfinite(p) or not np.isfinite(o) or not 0 < p < 1 or edge < MIN_BET_EDGE or o <= 1:
         return 0.0
