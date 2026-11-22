@@ -28,7 +28,7 @@
 "bo": null,
 "prediction": "predictions/2026-11-22-erzurumspor-geztepe-401888243.html",
 "hs": "0",
-"as": "0",
+"as": "1",
 "tip": "ТМ 2.5 · 1.79",
 "top": false,
 "bot": {
@@ -509,7 +509,7 @@ null
 ]
 ],
 "div": "E1",
-"state": "pre",
+"state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-22-bernli-blekbern-rovers-401880159.html",
 "hs": "0",
@@ -6057,6 +6057,111 @@ null
 ]
 ],
 "div": "T1",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "football",
+"id": "401874538",
+"league": "Дания · Суперлига",
+"kickoff": "2026-11-23T21:00:00+03:00",
+"home": "Brøndby IF",
+"away": "Мидтъюлланн",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/575.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/572.png",
+"hid": "575",
+"aid": "572",
+"bb": "https://betboom.ru/search?query=%D0%91%D1%80%D0%BD%D0%B4%D0%B1%D0%B8&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/den.1",
+"url": "live.html?s=football&p=soccer%2Fden.1&e=401874538&h=Br%C3%B8ndby+IF&a=%D0%9C%D0%B8%D0%B4%D1%82%D1%8A%D1%8E%D0%BB%D0%BB%D0%B0%D0%BD%D0%BD",
+"participants": [
+[
+"Brøndby IF",
+"Brøndby IF"
+],
+[
+"Мидтъюлланн",
+"FC Midtjylland"
+]
+],
+"div": "DNK",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "football",
+"id": "401842888",
+"league": "Швеция · Аллсвенскан",
+"kickoff": "2026-11-23T21:00:00+03:00",
+"home": "Хаммарбю",
+"away": "IFK Göteborg",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/2495.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/2556.png",
+"hid": "2495",
+"aid": "2556",
+"bb": "https://betboom.ru/search?query=%D0%A5%D0%B0%D0%BC%D0%BC%D0%B0%D1%80%D0%B1%D1%8E&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/swe.1",
+"url": "live.html?s=football&p=soccer%2Fswe.1&e=401842888&h=%D0%A5%D0%B0%D0%BC%D0%BC%D0%B0%D1%80%D0%B1%D1%8E&a=IFK+G%C3%B6teborg",
+"participants": [
+[
+"Хаммарбю",
+"Hammarby IF"
+],
+[
+"IFK Göteborg",
+"IFK Göteborg"
+]
+],
+"div": "SWE",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "football",
+"id": "401842884",
+"league": "Швеция · Аллсвенскан",
+"kickoff": "2026-11-23T21:00:00+03:00",
+"home": "Örgryte IS",
+"away": "Kalmar FF",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/131552.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/3052.png",
+"hid": "131552",
+"aid": "3052",
+"bb": "https://betboom.ru/search?query=%D0%9E%D1%80%D0%B3%D1%80%D0%B8%D1%82%D0%B5&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/swe.1",
+"url": "live.html?s=football&p=soccer%2Fswe.1&e=401842884&h=%C3%96rgryte+IS&a=Kalmar+FF",
+"participants": [
+[
+"Örgryte IS",
+"Örgryte IS"
+],
+[
+"Kalmar FF",
+"Kalmar FF"
+]
+],
+"div": "SWE",
 "state": "pre",
 "bo": null,
 "prediction": "",
