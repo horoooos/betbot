@@ -13,7 +13,8 @@ def report():
     rows={};now=pd.Timestamp.now(tz='UTC')
     for ago in range(7):
         day=(now-pd.Timedelta(days=ago)).strftime('%Y-%m-%d')
-        r=requests.get(push.DB+'/visits/'+day+'.json',params={'access_token':token},timeout=20)
+        try:r=requests.get(push.DB+'/visits/'+day+'.json',params={'access_token':token},timeout=20)
+        except requests.RequestException:raise RuntimeError('Analytics unavailable; credentials hidden') from None
         if not r.ok:raise RuntimeError('Analytics read unavailable; credentials hidden')
         rows[day]=r.json() or {}
     return {'status':'ok','at':now.isoformat(),'period_days':7,**growth.summarize_visits(rows)}

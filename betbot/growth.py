@@ -125,17 +125,19 @@ def build(news, matches, now):
     return urls
 
 def summarize_visits(days):
-    sources={};events={'share':0,'follow':0,'unfollow':0,'telegram_click':0};visitors=set();returning=set()
+    sources={};content={};events={'share':0,'follow':0,'unfollow':0,'telegram_click':0};visitors=set();returning=set()
     for day,rows in sorted((days or {}).items()):
         for vid,row in (rows or {}).items():
             if not isinstance(row,dict):continue
             source=str(row.get('r','Прямой заход'))[:40];s=sources.setdefault(source,{'visitor_days':0,'follow':0,'share':0,'telegram_click':0})
             s['visitor_days']+=1
+            material=str(row.get('c') or row.get('p') or 'не указан')[:120];content.setdefault(material,{'visitor_days':0,'follow':0,'share':0});content[material]['visitor_days']+=1
             if vid in visitors:returning.add(vid)
             visitors.add(vid)
             for event,count in (row.get('a') or {}).items():
                 if event in events and isinstance(count,(int,float)) and 0<=count<=1000:
                     events[event]+=count
                     if event in s:s[event]+=count
-    return {'unique_visitors':len(visitors),'returning_visitors':len(returning),'sources':sources,'events':events,
+                    if event in content[material]:content[material][event]+=count
+    return {'unique_visitors':len(visitors),'returning_visitors':len(returning),'sources':sources,'content':dict(sorted(content.items(),key=lambda x:-x[1]['visitor_days'])[:30]),'events':events,
             'note':'События браузера, а не подтверждённые подписки Telegram. Источники считаются по дням; блокировщики могут уменьшать счётчики.'}

@@ -13,9 +13,6 @@ jobs:
         with:
           python-version: '3.12'
       - run: pip install -r requirements.txt
-      - run: python tools/growth_service_check.py
-        env:
-          FIREBASE_SA: ${{ secrets.FIREBASE_SA }}
       - run: python -m unittest discover -s tests
       - run: python tools/growth_check.py --video
       - name: Check original video dimensions and duration
@@ -36,6 +33,9 @@ jobs:
         run: |
           python -m http.server 8766 --bind 127.0.0.1 --directory work/growth-preview >work/growth-preview/server.log 2>&1 &
           node tools/browser-qa/growth.mjs
+      - run: python tools/growth_service_check.py
+        env:
+          FIREBASE_SA: ${{ secrets.FIREBASE_SA }}
       - uses: actions/upload-artifact@v4
         if: always()
         with:

@@ -7,7 +7,7 @@ import pandas as pd
 SITE='https://horoooos.github.io/betbot/'
 
 def news_buttons(source_id=None,source='telegram'):
-    buttons=[('📰 Все новости',SITE+'news/?'+urlencode({'utm_source':source,'utm_medium':'news'})),('🔔 Мой спорт',SITE+'follow.html?'+urlencode({'utm_source':source,'utm_medium':'news'}))]
+    buttons=[('📰 Все новости',SITE+'news/?'+urlencode({'utm_source':source,'utm_medium':'news','utm_content':str(source_id or '')})),('🔔 Мой спорт',SITE+'follow.html?'+urlencode({'utm_source':source,'utm_medium':'news','utm_content':str(source_id or '')}))]
     if source_id:
         buttons.append(('↗ Поделиться', 'https://t.me/share/url?'+urlencode({'url':f'https://t.me/aistavvit/{int(source_id)}'})))
     return buttons

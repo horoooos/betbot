@@ -54,7 +54,7 @@ export const device = () => { const ua = navigator.userAgent || ""; return /iPad
 export function track(page, match = null) {
   const vid = visitorId(), day = new Date().toISOString().slice(0, 10), src = source(), dev = device();
   if (ls.get("aiday") !== day) {   // один раз в день: уникальный посетитель + откуда пришёл
-    update(ref(db, `visits/${day}/${vid}`), { t: Date.now(), r: src, d: dev, p: String(page).slice(0, 40) }).catch(() => {}); ls.set("aiday", day);
+    update(ref(db, `visits/${day}/${vid}`), { t: Date.now(), r: src, d: dev, p: String(page).slice(0, 40), c: (new URLSearchParams(location.search).get("utm_content")||location.pathname).slice(0,120) }).catch(() => {}); ls.set("aiday", day);
   }
   const conn = push(ref(db, "online")).key, started = Date.now();
   const me = ref(db, `online/${conn}`), pm = match ? ref(db, `presence/${match}/${conn}`) : null;
@@ -588,7 +588,7 @@ if (typeof document !== "undefined") { if (document.readyState === "loading") do
 export async function growthEvent(name) {
   if (!["share","follow","unfollow","telegram_click"].includes(name)) return;
   const day=new Date().toISOString().slice(0,10), vid=visitorId();
-  await update(ref(db,`visits/${day}/${vid}`),{r:source(),t:Date.now(),p:location.pathname.slice(0,120)}).catch(()=>{});
+  await update(ref(db,`visits/${day}/${vid}`),{r:source(),t:Date.now(),p:location.pathname.slice(0,120),c:(new URLSearchParams(location.search).get("utm_content")||location.pathname).slice(0,120)}).catch(()=>{});
   await update(ref(db,`visits/${day}/${vid}/a`),{[name]:increment(1)}).catch(()=>{});
 }
 export async function getInterests() {
