@@ -34,6 +34,14 @@ class VKRSSFeedTests(unittest.TestCase):
             self.assertFalse(is_news({'title':title,'body':'Матч завершён.','sport':'football'}))
         self.assertTrue(is_news({'title':'Тренер рассказал о матче','body':'Полная новость.','sport':'football'}))
 
+    def test_source_is_not_ready_until_article_and_cover_are_public(self):
+        from betbot.vk_rss import public_source_ready
+        page=Mock(status_code=200,text='<meta name="vk-source-format" content="full-news-2"><img src="https://example.test/photo.jpg">')
+        with patch('requests.get',return_value=page),patch('requests.head',return_value=Mock(status_code=404,headers={})):
+            self.assertFalse(public_source_ready('https://example.test/article','https://example.test/photo.jpg'))
+        with patch('requests.get',return_value=page),patch('requests.head',return_value=Mock(status_code=200,headers={'Content-Type':'image/jpeg'})):
+            self.assertTrue(public_source_ready('https://example.test/article','https://example.test/photo.jpg'))
+
     def test_news_only_filter_rejects_results_even_if_caller_passes_them(self):
         now=pd.Timestamp('2026-11-20T10:01:00Z')
         result=dict(id=2,title='Итог матча',t=now,sport='football',photo='https://example.test/a.jpg',body='Счёт',url='result.html',kind='result')

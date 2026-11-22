@@ -58,7 +58,7 @@ def article_page(news):
     """ASCII transport survives importers guessing Windows-1251 for HTML."""
     from html import escape
     title = re.sub(r'^[^\wА-Яа-яЁё«"]+', '', news['title'])
-    content = wall_description(news)
+    content = wall_description({**news,'vk_native_link':False})
     description = announcement(news)
     paragraphs = ''.join('<p>'+escape(p).replace('\n','<br>')+'</p>' for p in content.split('\n\n') if p.strip())
     short = news.get('rss_link', '')
@@ -69,7 +69,9 @@ def article_page(news):
             '<meta name="viewport" content="width=device-width,initial-scale=1">'
             '<title>'+escape(title)+'</title><meta property="og:title" content="'+escape(title,quote=True)+'">'
             '<meta name="description" content="'+escape(description,quote=True)+'"><meta property="og:description" content="'+escape(description,quote=True)+'">'
-            '<meta property="og:type" content="article"><meta property="og:image" content="'+escape(news['photo'],quote=True)+'">'
+            '<meta property="og:type" content="article"><meta name="vk-source-format" content="full-news-2"><meta property="og:image" content="'+escape(news['photo'],quote=True)+'">'
+            '<meta property="og:image:secure_url" content="'+escape(news['photo'],quote=True)+'"><meta property="og:image:type" content="image/jpeg">'
+            '<meta property="og:image:width" content="'+str(news.get('photo_width',800))+'"><meta property="og:image:height" content="'+str(news.get('photo_height',450))+'">'
             '<style>body{max-width:760px;margin:32px auto;padding:0 20px;font:18px/1.65 system-ui}img{width:100%}p{margin:1.2em 0}</style>'
             '</head><body><article><h1>'+escape(title)+'</h1><img src="'+escape(news['photo'],quote=True)+'">'+paragraphs+'</article></body></html>')
     return html.encode('ascii','xmlcharrefreplace').decode('ascii')
@@ -82,7 +84,7 @@ def wall_description(news):
     # Move the prepared footer once, keeping every paragraph of the news.
     marker = '\n\n'+SPORTS.get(news.get('sport'),'#спорт')
     body = body.split(marker,1)[0]
-    footer = f"\n\n📊 Подробнее на сайте 👉 {short}" if short else ''
+    footer = ("\n\n📊 Подробнее на сайте 👇" if news.get("vk_native_link") else f"\n\n📊 Подробнее на сайте 👉 {short}") if short else ''
     return body+'\n\n'+hashtags(news)+footer
 
 
@@ -123,19 +125,12 @@ def announcement(news, limit=420):
     return summary+'\n\n'+footer
 
 
-def import_caption(news, max_html_bytes=1900):
-    """One ASCII HTML text node: legacy importers must not re-decode UTF-8.
-
-    Keep the footer inside the first text node, and budget transport bytes before
-    HTML entity decoding. The source article remains complete.
-    """
+def import_caption(news):
+    """Full news in one ASCII HTML text node, without clipping or teaser limits."""
     from html import escape
-    for limit in range(420, 159, -20):
-        caption=announcement(news,limit=limit)
-        encoded=escape(caption).encode('ascii','xmlcharrefreplace').decode('ascii')
-        if len(encoded.encode('ascii'))<=max_html_bytes:
-            return '<p style="white-space:pre-line">'+encoded+'</p>'
-    raise ValueError('VK caption footer exceeds import transport budget')
+    content=wall_description(news)
+    encoded=escape(content).encode('ascii','xmlcharrefreplace').decode('ascii')
+    return '<p style="white-space:pre-line">'+encoded+'</p>'
 
 
 def is_news(entry):
@@ -145,3 +140,16 @@ def is_news(entry):
         return False
     raw=str(entry.get('title',''))+'\n'+str(entry.get('body',''))+'\n'+SPORTS.get(entry.get('sport'),'#спорт')
     return delivery_kind(raw)=='новость'
+
+
+def public_source_ready(source, photo):
+    """Do not advertise an article/cover before Pages has actually deployed it."""
+    import requests,time
+    try:
+        page=requests.get(source,params={'ready_check':int(time.time())},timeout=10)
+        if page.status_code!=200 or 'name="vk-source-format" content="full-news-2"' not in page.text or photo not in page.text:
+            return False
+        cover=requests.head(photo,params={'ready_check':int(time.time())},timeout=10,allow_redirects=True)
+        return cover.status_code==200 and cover.headers.get('Content-Type','').lower().startswith('image/')
+    except requests.RequestException:
+        return False

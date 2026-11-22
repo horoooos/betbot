@@ -787,7 +787,7 @@ def _rss(news: list[dict], ms: list[dict], store: dict[int, dict], now: pd.Times
         items.append((pd.Timestamp(n["t"]), f"""<item><title>{x(item_title)}</title><link>{x(item_link)}</link><guid isPermaLink="true">{x(item_guid)}</guid>
 <pubDate>{format_datetime(pd.Timestamp(n['t']).to_pydatetime())}</pubDate><category>{x(SPORT_RU.get(n['sport'], 'Спорт'))}</category>
 <description>{x(description)}</description><content:encoded>{('<![CDATA['+(photo_html+body).replace(']]>',']]&gt;')+']]>') if is_vk and n.get('vk_compact_rss') else x(photo_html + body)}</content:encoded>
-{f'<enclosure url="{x(n["photo"])}" type="image/jpeg" length="{int(n.get("photo_bytes") or 0)}"/>' if n.get('photo') else ''}</item>"""))
+{f'<enclosure url="{x(n["photo"])}" type="image/jpeg" length="{int(n.get("photo_bytes") or 0)}"/><media:content url="{x(n["photo"])}" type="image/jpeg" medium="image"/><media:thumbnail url="{x(n["photo"])}"/>' if n.get('photo') else ''}</item>"""))
     for m in [m for m in ms if not m.get("finished")][:30]:
         post = store.get(int(m["msg"])) if str(m.get("msg", "")).isdigit() else None
         when = pd.Timestamp(post["t"]) if post else pd.Timestamp(m["kickoff"]) - pd.Timedelta(hours=1)
@@ -802,7 +802,7 @@ def _rss(news: list[dict], ms: list[dict], store: dict[int, dict], now: pd.Times
 {f'<enclosure url="{x(photo)}" type="image/jpeg" length="0"/>' if photo else ''}</item>"""))
     items.sort(key=lambda it: it[0], reverse=True)
     xml = f"""<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/">
 <channel><title>{'АИ СТАВИТ — свежие новости спорта' if feed_name.startswith('rss-vk') else 'АИ СТАВИТ — прогнозы на спорт и новости'}</title><link>{SITE}</link>
 <description>{'Свежие новости спорта с иллюстрациями к публикациям.' if feed_name.startswith('rss-vk') else 'Бесплатные прогнозы на футбол, хоккей, НБА и теннис от искусственного интеллекта, честная статистика и свежие новости спорта.'}</description>
 <language>ru</language><lastBuildDate>{format_datetime(now.to_pydatetime())}</lastBuildDate>
@@ -903,6 +903,11 @@ def _vk_rss(news: list[dict], now: pd.Timestamp, *, article=False) -> str:
                 print(f"  ! VK RSS: изображение новости {n['id']} пока недоступно")
                 continue
         n={**n, "photo": SITE + f"rss-images/{int(n['id'])}.jpg", "photo_bytes": image.stat().st_size}
+        from PIL import Image
+        try:
+            with Image.open(image) as picture:n['photo_width'],n['photo_height']=picture.size
+        except OSError:
+            n['photo_width'],n['photo_height']=800,450
         # Also fix queued older entries; keep their GUIDs/links unchanged so
         # already imported posts are not deliberately published a second time.
         if caption_since is not None and now>=caption_since:
@@ -920,7 +925,14 @@ def _vk_rss(news: list[dict], now: pd.Timestamp, *, article=False) -> str:
             if n.get('vk_native_link'):
                 from .vk import _short, ShortLinkError
                 try:
-                    source_short=_short(SITE+path,{'vk_shortlinks':links})
+                    source_url=SITE+path
+                    if (DATA/'vk_rss_full_since.txt').exists():
+                        from .vk_rss import public_source_ready
+                        source_url+='?v=full-news-2'
+                        if not public_source_ready(source_url,n['photo']):
+                            print(f"  VK RSS: источник {n['id']} ожидает публикации страницы и обложки")
+                            continue
+                    source_short=_short(source_url,{'vk_shortlinks':links})
                 except ShortLinkError:
                     print(f"  ! VK RSS: новость {n['id']} ожидает короткий адрес источника")
                     continue
