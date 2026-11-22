@@ -2063,11 +2063,11 @@ null
 ]
 ],
 "div": "ARG",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "predictions/2026-11-22-rosario-sentral-gimnasia-mendoza-401933759.html",
 "hs": "3",
-"as": "0",
+"as": "1",
 "tip": "ТБ 2.5 · ≈1.68",
 "top": false,
 "bot": {
@@ -2182,7 +2182,7 @@ null
 "min_odds": 1.65,
 "minute": "26'",
 "p": 0.638,
-"result": null,
+"result": "hit",
 "score": "2:0"
 }
 },
@@ -2753,7 +2753,7 @@ null
 "bo": null,
 "prediction": "",
 "hs": "16",
-"as": "10",
+"as": "12",
 "tip": "",
 "top": false,
 "bot": null,
