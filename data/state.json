@@ -2013,14 +2013,14 @@
  "vk_photos": [],
  "vk_photo_until": 1794644243.1147308,
  "vk_photo_cursor": {},
- "vk_story_last": 9037,
- "vk_story_err": "VK stories: сервер не вернул upload_result",
+ "vk_story_last": 9038,
+ "vk_story_err": null,
  "push_weekly": "2026-47",
- "vk_story_at": 1795385434.0850306,
- "vk_story_url": "https://vk.com/story-228963529_456239110",
+ "vk_story_at": 1795390064.1830974,
+ "vk_story_url": "https://vk.com/story-228963529_456239111",
  "vk_story_day": {
   "date": "2026-11-22",
-  "count": 5
+  "count": 6
  },
  "vk_legacy_pending": [
   {
@@ -2697,7 +2697,7 @@
   "quote_matches": 30
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-23T02:25:18.780395+03:00",
+  "last_poll": "2026-11-23T02:27:18.341105+03:00",
   "cursor": "339",
   "posts": [
    {
@@ -3579,6 +3579,5 @@
   "daily": {
    "day": "2026-11-23"
   }
- },
- "vk_story_retry_at": 1795389999.7384458
+ }
 }
