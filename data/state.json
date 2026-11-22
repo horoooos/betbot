@@ -7,8 +7,6 @@
  "schedule_day": "2026-11-22",
  "content_slot": "2026-11-22-13",
  "news_seen": [
-  "https://www.sport-express.ru/football/transfers/news/lion-hochet-dosrochno-rastorgnut-arendu-opendy-iz-yuventusa-2476462/",
-  "https://www.sport-express.ru/football/france/news/kvaracheliya-priznan-chelovekom-2026-goda-po-versii-zhurnala-gq-2476461/",
   "https://www.sport-express.ru/football/braziliya/news/flamengo-atletiko-paranaense-schet-2-1-rezultat-matcha-chempionata-brazilii-19-noyabrya-2026-goda-2476459/",
   "https://www.sport-express.ru/football/france/news/zhonatan-kloss-kommentariy-po-nepopadaniyu-v-sbornuyu-francii-2476460/",
   "https://www.sport-express.ru/football/italy/news/prezident-intera-marotta-predlozhil-vvesti-v-shkolah-uroki-futbola-2476457/",
@@ -506,9 +504,11 @@
   "https://www.sport-express.ru/hockey/russia/news/umer-sovetnik-prezidenta-fhr-po-sudeystvu-anatoliy-barinov-2477627/",
   "https://www.sport-express.ru/football/rfpl/news/dinamo-krasnodar-osipenko-poluchil-krasnuyu-kartochku-2477637/",
   "https://www.sport-express.ru/football/england/news/teamtalk-maktominey-mozhet-vernutsya-v-manchester-yunayted-v-2027-godu-2477635/",
-  "https://www.sport-express.ru/football/rfpl/news/semin-o-penalti-v-matche-cska-ahmat-ne-ponimayu-kogda-naznachayutsya-11-metrovye-s-var-vse-stalo-huzhe-2477634/"
+  "https://www.sport-express.ru/football/rfpl/news/semin-o-penalti-v-matche-cska-ahmat-ne-ponimayu-kogda-naznachayutsya-11-metrovye-s-var-vse-stalo-huzhe-2477634/",
+  "https://www.sport-express.ru/football/france/news/u-napadayuschego-pszh-due-diagnostirovan-razryv-krestoobraznoy-svyazki-kolena-2477639/",
+  "https://www.sport-express.ru/football/rfpl/news/dinamo-krasnodar-nichya-posle-pervogo-tayma-2477638/"
  ],
- "news_i": 4,
+ "news_i": 1,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1682,7 +1682,7 @@
  "streak_day": {
   "2026-11-22": 2
  },
- "news_next": "2026-11-22T15:14:00.572626+03:00",
+ "news_next": "2026-11-22T15:43:12.386577+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1951,7 +1951,8 @@
   "https://upload.wikimedia.org/wikipedia/commons/0/0f/Iran_women%27s_football_league_Malavan_women.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
   "https://ss.sport-express.ru/userfiles/materials/224/2245743/1180x665.jpg",
   "https://ss.sport-express.ru/userfiles/materials/224/2245744/1180x665.jpg",
-  "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/53/FC_Akhmat_mascot.jpg/1280px-FC_Akhmat_mascot.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/53/FC_Akhmat_mascot.jpg/1280px-FC_Akhmat_mascot.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/2018-08-19_BFC_Dynamo_vs._1._FC_K%C3%B6ln_%28DFB-Pokal%29_by_Sandro_Halank%E2%80%93009.jpg/1280px-2018-08-19_BFC_Dynamo_vs._1._FC_K%C3%B6ln_%28DFB-Pokal%29_by_Sandro_Halank%E2%80%93009.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
  ],
  "indexnow_day": "2026-11-22",
  "vk_wall_err": null,
@@ -2274,7 +2275,8 @@
   "8728",
   "8736",
   "8741",
-  "8755"
+  "8755",
+  "8776"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -2529,11 +2531,12 @@
   "2026-11-22:новость:4cc9080cc18a92a8eb5084e3",
   "2026-11-22:новость:0a3ce487ed80366a5a46cb1d",
   "2026-11-22:новость:b48bdfceac3781482271c98c",
-  "2026-11-22:новость:569508aeb2b3474174ad8300"
+  "2026-11-22:новость:569508aeb2b3474174ad8300",
+  "2026-11-22:новость:52a6e13bf154385c0944b118"
  ],
  "dz_last_delivery": {
-  "source_id": 8755,
-  "message_id": 801,
+  "source_id": 8776,
+  "message_id": 802,
   "kind": "новость"
  },
  "learn_attempt_day": "2026-11-22",
@@ -2623,43 +2626,9 @@
   "quote_matches": 25
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-22T15:13:13.142597+03:00",
-  "cursor": "296",
+  "last_poll": "2026-11-22T15:15:12.386577+03:00",
+  "cursor": "298",
   "posts": [
-   {
-    "post_id": 669,
-    "url": "https://vk.com/wall-228963529_669",
-    "title": "«Балтика» выиграла у «Оренбурга» 2:0 и уверенно завершила первый круг",
-    "text": "рџ“° Тренер «Балтики» Андрей Талалаев рад, что команда одержала уверенную победу над «Оренбургом» со счётом 2:0 в матче 15-го тура РПЛ.",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": false,
-     "details_present": false,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-21T17:56:55.061568+03:00"
-   },
-   {
-    "post_id": 671,
-    "url": "https://vk.com/wall-228963529_671",
-    "title": "Dyrachyo советует Team Spirit взять паузу и сыграть в GTA VI",
-    "text": "рџ± Дотер Дьярчо бросил вызов Team Spirit: «Пауза, GTA VI, а потом — DreamLeague с новыми силами!гЂЌ.",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": false,
-     "details_present": false,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-21T18:59:08.570555+03:00"
-   },
    {
     "post_id": 672,
     "url": "https://vk.com/wall-228963529_672",
@@ -3135,6 +3104,40 @@
     },
     "status": "needs_review",
     "observed_at": "2026-11-22T14:16:30.386741+03:00"
+   },
+   {
+    "post_id": 746,
+    "url": "https://vk.com/wall-228963529_746",
+    "title": "Семин раскритиковал спорный пенальти в матче «ЦСКА» — «Ахмат»",
+    "text": "рџ± Спорный пенальти в матче «ЦСКА» — «Ахмат»: Юрий Семин не может понять решение арбитра.",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": false,
+     "details_present": false,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-22T15:15:12.386577+03:00"
+   },
+   {
+    "post_id": 747,
+    "url": "https://vk.com/wall-228963529_747",
+    "title": "Слуцкий назвал совмещение ЦСКА и сборной главной ошибкой карьеры",
+    "text": "вљЎпёЏ Слуцкий признался: совмещение ЦСКА и сборной – главная ошибка в его профессиональном пути.",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": false,
+     "details_present": false,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-22T15:15:12.386577+03:00"
    }
   ],
   "status": "observing"
