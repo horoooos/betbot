@@ -36,7 +36,9 @@ def build_teams(ms: list[dict], news: list[dict], now: pd.Timestamp) -> list[str
         for side, logo in (("home", "hl"), ("away", "al")):
             t = teams.setdefault((u["sport"], u[side]), {"name": u[side], "sport": u["sport"], "logo": None, "leagues": set(), "preds": []})
             if t:
-                t.setdefault("next", []).append(u)
+                t.setdefault("events", []).append(u)
+                if u.get("state") != "post" and pd.Timestamp(u["kickoff"]) >= now - pd.Timedelta(hours=8):
+                    t.setdefault("next", []).append(u)
                 t["logo"] = t["logo"] or u.get(logo)
                 t["leagues"].add(u["league"])
     urls = []
@@ -119,6 +121,7 @@ def _team_page(t: dict, news: list[dict], url: str) -> str:
     hits = sum(1 for m in done if m.get("hit"))
     nxt = sorted(t.get("next", []), key=lambda u: u["kickoff"])[:6]
     about = [n for n in news if name.lower() in n["title"].lower()][:6]
+    played = sorted([u for u in t.get("events", []) if u.get("state")=="post"],key=lambda u:u["kickoff"],reverse=True)[:8]
     league = ", ".join(sorted(t["leagues"]))[:120]
     crumbs, bc = _crumbs("../", [("Главная", ""), ("Команды", "teams/"), (name, None)])
 
@@ -126,7 +129,7 @@ def _team_page(t: dict, news: list[dict], url: str) -> str:
         k = pd.Timestamp(u["kickoff"]).tz_convert("Europe/Moscow")
         return (f'<a class="card mc" href="../{H.escape(u["url"])}"><div class="t"><span>{EMOJI.get(u["sport"], "")} {H.escape(u["league"])}</span>'
                 f'<span>{k.day} {MONTHS[k.month - 1]}, {k:%H:%M}</span></div><b>{H.escape(u["home"])} — {H.escape(u["away"])}</b>'
-                f'<span class="p">{"🎯 " + H.escape(u["tip"]) if u.get("tip") else "📺 Смотреть онлайн"}</span></a>')
+                f'<span class="p">{("Итог " + H.escape(str(u.get("hs", "—"))) + ":" + H.escape(str(u.get("as", "—")))) if u.get("state")=="post" else ("🎯 " + H.escape(u["tip"]) if u.get("tip") else "📺 Смотреть онлайн")}</span></a>')
 
     logo = f'<img src="{H.escape(t["logo"])}" alt="{H.escape(name)}" style="width:72px;height:72px;object-fit:contain;background:#fff;border-radius:50%;padding:6px">' if t["logo"] else ""
     stat = f"Бот давал прогнозы на {len(preds)} матчей с участием команды «{name}»" + (f": из {len(done)} рассчитанных зашло {hits} ({round(hits / len(done) * 100)}%)." if done else ".")
@@ -145,6 +148,7 @@ def _team_page(t: dict, news: list[dict], url: str) -> str:
 <h1 style="margin:4px 0">{H.escape(name)}: <span>матчи, результаты и новости</span></h1><p class="muted small">{H.escape(stat)}</p>{live_btn}<a class="btn gold" href="{follow}">Следить за командой</a></div></div>
 <h2>📝 {H.escape(name)}: разбор и прогноз</h2><div class="card">{text}</div>
 {('<h2>📅 Ближайшие матчи</h2><div class="grid">' + "".join(nxt_card(u) for u in nxt) + "</div>") if nxt else ""}
+{('<h2>Последние результаты</h2><div class="grid">' + "".join(nxt_card(u) for u in played) + "</div>") if played else ""}
 <h2>🎯 Прогнозы бота на матчи «{H.escape(name)}»</h2><div class="grid">{"".join(_match_card(m, "../") for m in preds[:24])}</div>
 {('<h2>📰 Новости</h2><div class="grid">' + "".join(_news_card(n, "../") for n in about) + "</div>") if about else ""}
 {faq_html}
@@ -157,6 +161,8 @@ def _team_page(t: dict, news: list[dict], url: str) -> str:
             + f". Ставки от ИИ, форма команды, статистика прогнозов{' (' + short + ')' if short else ''}. {SPORT_RU.get(sport, '')}"
             + (f", {league}" if league else "") + ". Бесплатно.")
     title = (f"{name}: прогноз на матч с {opp} {nk:%d.%m} — ставка и статистика" if nxt else f"{name}: прогнозы на матчи и статистика ставок") + " · АИ СТАВИТ"
+    title = name + " — матчи, результаты и новости · АИ СТАВИТ"
+    desc = name + ": расписание ближайших матчей, результаты и новости. " + SPORT_RU.get(sport, "")
     lds = [ld, bc]
     if faq:
         lds.append({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
@@ -208,7 +214,7 @@ document.getElementById("tq").oninput = e => { const q = e.target.value.trim().t
   document.querySelectorAll(".tlg").forEach(g => g.style.display = [...g.querySelectorAll(".tt")].some(a => a.style.display !== "none") ? "" : "none");
   document.querySelectorAll(".tsec").forEach(s => s.style.display = [...s.querySelectorAll(".tlg")].some(g => g.style.display !== "none") ? "" : "none"); };
 </script>"""
-    body = f"""{style}{crumbs}<h1>Команды и игроки: <span>прогнозы на матчи</span></h1>
+    body = f"""{style}{crumbs}<h1>Команды и игроки: <span>матчи и новости</span></h1>
 <p class="lead">Команды и теннисисты, на которых бот давал прогнозы: ближайшие матчи, все прогнозы с результатами и новости. Любую другую команду или игрока ищите в <a href="../leagues.html" style="color:var(--gold)">поиске по всем турнирам</a>.</p>
 <div class="tfind"><input id="tq" type="search" placeholder="Быстрый поиск по названию…" autocomplete="off"></div>
 <div class="ttabs">{"".join(tabs)}<a href="../leagues.html">🏆 Все турниры и таблицы</a></div>{blocks}{script}"""

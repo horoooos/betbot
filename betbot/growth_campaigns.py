@@ -4,6 +4,7 @@ import hashlib
 import json
 import os
 import re
+from urllib.parse import urlsplit,urlunsplit,parse_qsl,urlencode
 from pathlib import Path
 import pandas as pd
 from . import growth
@@ -48,13 +49,14 @@ def run(state,now,checkpoint=lambda:None):
         if chosen:
             record.update(video_day=day,video_status='rendering');checkpoint()
             try:
-                from . import news_video
+                from . import news_video,shorts
                 clip=news_video.render(chosen[0])
                 if not clip:raise RuntimeError('Video render unavailable')
                 out=pages.DOCS/'media'/f'news-{day}.mp4';out.parent.mkdir(exist_ok=True);out.write_bytes(clip)
+                for old in sorted(out.parent.glob('news-20*.mp4'),reverse=True)[6:]:old.unlink()
                 record['video_status']='sending';checkpoint()
                 n=chosen[0];tag={'football':'#футбол','hockey':'#хоккей','basketball':'#баскетбол','tennis':'#теннис','esports':'#киберспорт'}[n['sport']]
-                mid=telegram.send_video(clip,'📰 <b>'+html.escape(n['title'])+'</b>\n\n'+growth.SITE+n['url']+'\n\n'+tag,width=1080,height=1920,duration=14)
+                mid=telegram.send_video(clip,'📰 <b>'+html.escape(n['title'])+'</b>\n\n'+growth.SITE+n['url']+'\n\n'+tag,width=1080,height=1920,duration=int(len(news_video.frames(n))*shorts.SCENE-(len(news_video.frames(n))-1)*shorts.FADE))
                 record.update(video_status='published',video_message=mid)
                 if all(os.environ.get(k) for k in ('YT_CLIENT_ID','YT_CLIENT_SECRET','YT_REFRESH_TOKEN')):
                     from . import shorts
@@ -88,6 +90,11 @@ def notify(events,news,state,now,checkpoint=lambda:None):
         candidates.append({'id':mid+':'+kind,'match':mid,'kind':kind,'sport':sport,'home':home,'away':away,'league':league,
             'title':('Матч начался: ' if st=='in' else 'Матч завершён: ')+home+' — '+away+score,
             'link':growth.SITE+'matches.html'})
+        from . import live
+        try:
+            tracker=live._tracker(e,sport,home,away)
+            if tracker:candidates[-1]['link']=tracker[1]
+        except (KeyError,ValueError,TypeError):pass
     for n in growth.select_digest(news,now,30):
         if pd.Timestamp(n['t'])<pd.Timestamp(started):continue
         candidates.append({'id':'news:'+str(n['id']),'kind':'news','sport':n['sport'],'title':n['title'],'link':growth.SITE+n['url'],'news':n})
@@ -112,7 +119,9 @@ def notify(events,news,state,now,checkpoint=lambda:None):
             sent[receipt]=now.isoformat()
             if c['kind']=='news':daily[subscriber_id]=daily.get(subscriber_id,0)+1
             checkpoint()
-            push._send(token,key,subscriber['t'],c['title'],'Ваши выбранные спортивные события',c['link'],'interest-'+c['id'])
+            u=urlsplit(c['link']);query=dict(parse_qsl(u.query));query.update(utm_source='push',utm_medium='interest')
+            link=urlunsplit((u.scheme,u.netloc,u.path,urlencode(query),u.fragment))
+            push._send(token,key,subscriber['t'],c['title'],'Ваши выбранные спортивные события',link,'interest-'+c['id'])
     cutoff=now-pd.Timedelta(days=7)
     record['sent']={k:v for k,v in sent.items() if pd.Timestamp(v)>=cutoff}
     active={str(e.get('id')) for e in events};record['matches']={k:v for k,v in previous.items() if k in active}

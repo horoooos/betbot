@@ -224,7 +224,7 @@ def page(prefix: str, title: str, desc: str, canon: str, body: str, on: str = ""
 <br>Прогнозы: <a href="{prefix}prognozy/futbol-segodnya.html">на футбол сегодня</a> · <a href="{prefix}prognozy/ekspress-dnya.html">экспресс дня</a> · <a href="{prefix}itogi/">итоги дня</a> · <a href="{prefix}prognozy/rpl.html">РПЛ</a> · <a href="{prefix}prognozy/apl.html">АПЛ</a> · <a href="{prefix}prognozy/liga-chempionov.html">Лига чемпионов</a> · <a href="{prefix}prognozy/hokkej-nhl.html">хоккей</a> · <a href="{prefix}prognozy/nba.html">НБА</a> · <a href="{prefix}prognozy/tennis.html">теннис</a> · <a href="{prefix}prognozy/kibersport.html">киберспорт</a> · <a href="{prefix}watch/">смотреть онлайн</a>
 <br>Мы в соцсетях: {SOCIAL_LINKS} · <a href="https://vk.me/aistavvit" rel="noopener">написать в поддержку</a></footer>
 </main><div class="sticky"><a class="a" href="{prefix}matches.html">📺 Онлайн</a><a class="b" href="https://t.me/{CH}">📲 Канал</a></div>
-<script type="module">import("{prefix}fb.js?v=12").then(fb => {{ fb.navUser(document.getElementById("navUser")); fb.track("{on or 'page'}");
+<script type="module">import("{prefix or './'}fb.js?v=12").then(fb => {{ fb.navUser(document.getElementById("navUser")); fb.track("{on or 'page'}");
   fb.countView(document.querySelector("[data-view]")); fb.showViews();
   const v = document.getElementById("votes"); if (v) fb.voteWidget(v, v.dataset.m, {{ finished: v.dataset.f === "1", botHit: v.dataset.h === "" ? null : v.dataset.h === "1" }}); }}).catch(() => {{}});</script>
 </body></html>"""

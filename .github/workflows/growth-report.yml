@@ -23,5 +23,5 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: audience-report
-          path: work/growth-report.json
+          path: work/growth-report.*
           retention-days: 30

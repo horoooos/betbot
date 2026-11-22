@@ -55,6 +55,24 @@ class GrowthTests(unittest.TestCase):
         self.assertEqual(r['sources']['telegram']['visitor_days'],2)
         self.assertEqual(r['events']['follow'],1);self.assertNotIn('telegram_subscribers',r)
 
+    def test_news_notifications_respect_daily_cap_and_opt_out(self):
+        from betbot import push
+        subscriber={'t':'device','interests':{'topics':{growth.topic_key('sport','football'):True},'events':{'news':True}}}
+        rows=[{**news(i),'t':NOW-pd.Timedelta(minutes=i)} for i in range(1,9)]
+        state={'growth_notify':{'started_at':(NOW-pd.Timedelta(hours=1)).isoformat()}}
+        with patch.object(push,'enabled',return_value=True),patch.object(push,'_token',return_value='server'),patch.object(push,'_subscribers',return_value={'key':subscriber}),patch.object(push,'_send',return_value=True) as send:
+            campaigns.notify([],rows,state,NOW);campaigns.notify([],rows,state,NOW)
+            self.assertEqual(send.call_count,5)
+            subscriber['interests']['events']['news']=False
+            campaigns.notify([],[{**news(10),'t':NOW}],state,NOW)
+            self.assertEqual(send.call_count,5)
+
+    def test_interest_only_devices_do_not_receive_unselected_weekly_broadcasts(self):
+        from betbot import push
+        with patch.object(push,'enabled',return_value=True),patch.object(push,'_token',return_value='server'),patch.object(push,'_subscribers',return_value={'key':{'t':'device','interests':{'topics':{'x':True}}}}),patch.object(push,'_send') as send:
+            self.assertEqual(push.notify_all('title','body','url'),0)
+            send.assert_not_called()
+
     def test_digest_ambiguous_send_does_not_repeat(self):
         from betbot import telegram,pages
         with tempfile.TemporaryDirectory() as tmp,patch.object(campaigns,'DIGEST',Path(tmp)/'digest.json'),patch.object(pages,'DOCS',Path(tmp)),patch.object(campaigns,'_news',return_value=[news(1),news(2),news(3)]),patch.object(telegram,'send_photo',side_effect=TimeoutError) as send:
