@@ -24,7 +24,8 @@ class VKAnnouncementTests(unittest.TestCase):
         self.assertLessEqual(len(teaser),420)
         self.assertTrue(teaser.startswith(first))
         self.assertEqual(teaser.count('vk.cc/example'),1)
-        self.assertNotIn('Публика и',teaser)
+        self.assertIn('Публика и зрители обсуждали завершившуюся встречу.',teaser)
+        self.assertLessEqual(teaser.count('Публика и'),2)
         self.assertIn('#киберспорт',teaser)
 
     def test_long_first_paragraph_stops_at_complete_sentences(self):

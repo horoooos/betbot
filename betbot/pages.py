@@ -761,7 +761,8 @@ def _rss(news: list[dict], ms: list[dict], store: dict[int, dict], now: pd.Times
             from .vk_rss import announcement
             # Some importers keep only the first HTML paragraph. Keep the whole
             # bounded caption (including footer) in one block with explicit breaks.
-            body='<p>'+H.escape(announcement(n)).replace('\n','<br>')+'</p>'
+            from .vk_rss import import_caption
+            body=import_caption(n)
         elif feed_name == "rss-vk.xml":
             # Keep paragraph breaks inside one text node. Importers that strip
             # tags and whitespace-only nodes otherwise concatenate <p> blocks.
@@ -779,10 +780,10 @@ def _rss(news: list[dict], ms: list[dict], store: dict[int, dict], now: pd.Times
         description = _plain(n['body']) if feed_name.startswith('rss-vk') else n['desc']
         if is_vk:
             from .vk_rss import announcement
-            description = announcement(n)
+            description = H.unescape(re.sub(r"<[^>]+>", "", body)) if n.get("vk_compact_rss") else announcement(n)
         items.append((pd.Timestamp(n["t"]), f"""<item><title>{x(item_title)}</title><link>{x(item_link)}</link><guid isPermaLink="true">{x(item_guid)}</guid>
 <pubDate>{format_datetime(pd.Timestamp(n['t']).to_pydatetime())}</pubDate><category>{x(SPORT_RU.get(n['sport'], 'Спорт'))}</category>
-<description>{x(description)}</description><content:encoded>{x(photo_html + body)}</content:encoded>
+<description>{x(description)}</description><content:encoded>{('<![CDATA['+(photo_html+body).replace(']]>',']]&gt;')+']]>') if is_vk and n.get('vk_compact_rss') else x(photo_html + body)}</content:encoded>
 {f'<enclosure url="{x(n["photo"])}" type="image/jpeg" length="{int(n.get("photo_bytes") or 0)}"/>' if n.get('photo') else ''}</item>"""))
     for m in [m for m in ms if not m.get("finished")][:30]:
         post = store.get(int(m["msg"])) if str(m.get("msg", "")).isdigit() else None
@@ -844,7 +845,7 @@ def _vk_rss(news: list[dict], now: pd.Timestamp, *, article=False) -> str:
     article_since = DATA / "vk_rss_article_since.txt"
     if article and article_since.exists():
         since = max(since, pd.Timestamp(article_since.read_text(encoding="utf-8").strip()))
-    selected = [n for n in news if n.get("photo") and n.get("complete", True) and since <= pd.Timestamp(n["t"]) <= now
+    selected = [n for n in news if n.get("kind", "news") == "news" and n.get("photo") and n.get("complete", True) and since <= pd.Timestamp(n["t"]) <= now
                 and now - pd.Timestamp(n["t"]) <= pd.Timedelta(hours=24)]
     probe = DATA / "vk_rss_probe.json"
     if probe.exists():
@@ -995,7 +996,7 @@ def build(stores: dict, results: pd.DataFrame, now: pd.Timestamp, max_pages: int
     sm.append("</urlset>")
     try:
         _write(DOCS / "rss.xml", _rss(news, ms, store, now))
-        vk_items = news + _vk_results(store, now)
+        vk_items = news
         _write(DOCS / "rss-vk.xml", _vk_rss(vk_items, now))
         _write(DOCS / "rss-vk-article.xml", _vk_rss(vk_items, now, article=True))
     except Exception as e:

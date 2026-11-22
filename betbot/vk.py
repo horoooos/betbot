@@ -440,6 +440,10 @@ def crosspost(state: dict, checkpoint=None) -> int:
     for pid in fresh:
         p = posts[str(pid)]
         text = _text(p.get("html", ""))
+        from .dzen import delivery_kind
+        if delivery_kind(p.get("html", "")) != "новость":
+            state["vk_last"] = pid
+            continue
         started = "МАТЧ НАЧАЛСЯ" in text
         if len(text) < 20 or ("#live" in p.get("html", "") and not started):   # голы и прочий live в ВК не дублируем
             state["vk_last"] = pid

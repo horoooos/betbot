@@ -11,6 +11,7 @@ from scipy.stats import poisson
 
 MAXG = 10
 RHO = -0.08
+MIN_BET_EDGE = 0.03
 MARGIN = 0.93  # если реального коэффициента нет — считаем «справедливый» минус типичная маржа
 
 # key: (группа, название, условие выигрыша по счёту i:j)
@@ -220,7 +221,7 @@ def choose(keys: list[str], probs: dict, real: dict, score, main_pool: list[str]
         return score(k) * odds(k)
 
     pool = main_pool or keys
-    real_main = [k for k in keys if real.get(k) and real[k] >= MIN_ODDS and probs[k] >= MAIN_MIN_P]
+    real_main = [k for k in keys if real.get(k) and real[k] >= MIN_ODDS and probs[k] >= MAIN_MIN_P and probs[k] * real[k] >= 1 + MIN_BET_EDGE]
     if real_main:
         main_k = max(real_main, key=lambda k: (round(ev(k), 3), score(k)))
     else:
@@ -230,7 +231,7 @@ def choose(keys: list[str], probs: dict, real: dict, score, main_pool: list[str]
         main_k = max(est or fallback or [k for k in pool if k in probs], key=score)
     # смелый не должен спорить с основным: П1 основным и П2 смелым — это ставка против самого себя
     # смелый — только с настоящим кэфом букмекера и шансом от 40%: на «расчётных» кэфах он заходил в 31% случаев
-    bold = [k for k in keys if k != main_k and real.get(k) and 2.0 <= real[k] <= 3.6 and probs[k] >= BOLD_MIN_P
+    bold = [k for k in keys if k != main_k and real.get(k) and 2.0 <= real[k] <= 3.6 and probs[k] >= BOLD_MIN_P and probs[k] * real[k] >= 1 + MIN_BET_EDGE
             and (fits is None or fits(main_k, k))]
     bold_k = max(bold, key=ev) if bold else None
     return main_k, bold_k

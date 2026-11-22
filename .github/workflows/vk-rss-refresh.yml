@@ -31,7 +31,7 @@ jobs:
           from betbot import pages
           store = {int(k): v for k, v in json.loads(Path('data/channel.json').read_text(encoding='utf-8'))['posts'].items()}
           now = pd.Timestamp.now(tz='UTC')
-          items = pages._news(store) + pages._vk_results(store, now)
+          items = pages._news(store)
           Path('docs/rss-vk.xml').write_text(pages._vk_rss(items, now), encoding='utf-8')
           Path('docs/rss-vk-article.xml').write_text(pages._vk_rss(items, now, article=True), encoding='utf-8')
           PY

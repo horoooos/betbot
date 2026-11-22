@@ -43,7 +43,7 @@ class VKPhotoTests(unittest.TestCase):
         marker.parent.mkdir(parents=True)
         channel = root / "channel.json"
         channel.write_text(json.dumps({"posts": {"5401": {
-            "html": "Проверка публикации: команда А — команда Б.",
+            "html": "Проверка публикации: команда А — команда Б.\n\n#футбол",
             "t": "2000-01-01T00:00:00+00:00",
         }}}, ensure_ascii=False), encoding="utf-8")
 

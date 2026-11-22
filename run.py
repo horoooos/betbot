@@ -337,6 +337,11 @@ def review(ev: dict, w: dict, fx_loader, hist_loader, calib: dict, state: dict) 
     for t in (main, bold):
         if t:
             t["stake"] = pro.stake(t)
+    if not main or main.get("stake", 0) <= 0:
+        print("  прогноз пропущен: нет реального коэффициента с перевесом от 3%")
+        return None
+    if bold and bold.get("stake", 0) <= 0:
+        bold = {}
     m = {**ev, "open": pro.snapshot(ev, [main.get("key"), (bold or {}).get("key")]),
          "top": pro.is_top(state, ev["div"], ev["id"]), "lam": list(lam), "probs": probs, "scores": scores, "main": main, "bold": bold,
          "value": value_pick(probs, mkt), "odds_src": mkt["src"] if mkt else "нет, только модель",
@@ -412,6 +417,12 @@ def other_review(e: dict, calib: dict, ctx: dict, state: dict) -> dict | None:
     for t in (m["main"], m["bold"]):
         if t:
             t["stake"] = pro.stake(t)
+    if not m["main"] or m["main"].get("stake", 0) <= 0:
+        print("  прогноз пропущен: нет реального коэффициента с перевесом от 3%")
+        return None
+    if m.get("bold") and m["bold"].get("stake", 0) <= 0:
+        m["bold"] = {}
+
     m["open"] = pro.snapshot(e, [m["main"].get("key"), (m["bold"] or {}).get("key")])
     m["top"] = pro.is_top(state, e["div"], e["id"])
     kick = pd.Timestamp(e["kickoff"])

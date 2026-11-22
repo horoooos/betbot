@@ -20,6 +20,7 @@ from .texts import MONTHS
 
 KELLY_FRACTION = 0.25         # четверть Келли — стандарт осторожных игроков
 STAKE_MIN, STAKE_MAX = 1.0, 3.0  # % банка
+MIN_BET_EDGE = mk.MIN_BET_EDGE
 BANK_START = 10_000
 FOOTER = "<i>⚠️ 18+. Прогноз — не гарантия. Ставьте только то, что не жалко потерять.</i>"
 # Журнал value-ставок: каждая сохраняется с кэфом на момент публикации и потом рассчитывается по итогу матча.
@@ -35,13 +36,13 @@ def _pct(p: float) -> str:
 # ── размер ставки и виртуальный банк ────────────────────────────────────────
 
 def stake(tip: dict) -> float:
-    """Сколько % банка ставить. Есть перевес по настоящему кэфу — по Келли (1–3%), нет — минимум 1%."""
+    """Сколько % банка ставить. Реальный кэф и перевес от 3% — Келли (1–3%); иначе ставка 0%."""
     if not tip or tip.get("est"):
-        return STAKE_MIN
+        return 0.0
     p, o = tip["p"], tip["odds"]
     edge = p * o - 1
-    if edge <= 0 or o <= 1:
-        return STAKE_MIN
+    if not np.isfinite(p) or not np.isfinite(o) or not 0 < p < 1 or edge < MIN_BET_EDGE or o <= 1:
+        return 0.0
     kelly = KELLY_FRACTION * edge / (o - 1) * 100
     return round(float(np.clip(kelly, STAKE_MIN, STAKE_MAX)), 1)
 
@@ -420,7 +421,7 @@ def post_top(state: dict, football: list[dict], other: list[dict], now: pd.Times
             t = _quick_tip(e)
         except Exception:
             t = None
-        if t and not t.get("est") and t["odds"] >= 1.45:
+        if t and stake(t) > 0 and t["odds"] >= 1.45:
             rank = ORDER.get(e["div"], 40) if e["div"] in ALL else 10  # топ-лиги чуть приоритетнее
             cands.append((t["p"] - rank / 1000, e, t))
     cands.sort(key=lambda x: -x[0])
