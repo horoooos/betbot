@@ -602,7 +602,7 @@ null
 ]
 ],
 "div": "MEX",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "predictions/2026-11-22-pachuka-toluka-401877050.html",
 "hs": "2",
@@ -751,7 +751,7 @@ null
 "bo": null,
 "prediction": "predictions/2026-11-22-santos-leon-401877051.html",
 "hs": "1",
-"as": "1",
+"as": "2",
 "tip": "ТБ 2.5 · ≈1.52",
 "top": false,
 "bot": {
@@ -1996,8 +1996,8 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-22-toronto-kolambus-401892759.html",
-"hs": "0",
-"as": "0",
+"hs": "1",
+"as": "1",
 "tip": "П2 (с ОТ и буллитами) · 1.98",
 "top": false,
 "bot": {
@@ -2377,7 +2377,15 @@ null
 ],
 "center": "Ожидаемые голы 3.2 : 2.5"
 },
-"lt": null
+"lt": {
+"fair": 1.34,
+"label": "X2 (осн. время)",
+"min_odds": 1.4,
+"minute": "2-й период",
+"p": 0.749,
+"result": null,
+"score": "0:1"
+}
 },
 {
 "sport": "hockey",
@@ -2652,7 +2660,15 @@ null
 ],
 "center": "Ожидаемые голы 2.9 : 3.5"
 },
-"lt": null
+"lt": {
+"fair": 1.32,
+"label": "1X (осн. время)",
+"min_odds": 1.39,
+"minute": "2-й период",
+"p": 0.756,
+"result": null,
+"score": "4:3"
+}
 },
 {
 "sport": "hockey",
@@ -2682,7 +2698,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-22-vinnipeg-vegas-401892764.html",
-"hs": "1",
+"hs": "2",
 "as": "2",
 "tip": "П2 (с ОТ и буллитами) · 1.74",
 "top": false,
@@ -2783,7 +2799,15 @@ null
 ],
 "center": "Ожидаемые голы 3.1 : 3.5"
 },
-"lt": null
+"lt": {
+"fair": 1.48,
+"label": "X2 (осн. время)",
+"min_odds": 1.55,
+"minute": "2-й период",
+"p": 0.678,
+"result": null,
+"score": "2:2"
+}
 },
 {
 "sport": "basketball",
@@ -2813,8 +2837,8 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-22-nyu-york-niks-portlend-401910024.html",
-"hs": "13",
-"as": "2",
+"hs": "24",
+"as": "13",
 "tip": "Ф2 (-1.5) · 1.95",
 "top": false,
 "bot": {
