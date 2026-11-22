@@ -7,7 +7,6 @@
  "schedule_day": "2026-11-22",
  "content_slot": "2026-11-22-10",
  "news_seen": [
-  "https://www.sport-express.ru/football/england/news/as-arsenal-ocenivaet-subimendi-v-70-millionov-evro-na-igroka-pretenduet-chelsi-2476425/",
   "https://www.sport-express.ru/hockey/khl/news/glavnyy-trener-salavata-yulaeva-kozlov-soobschil-chto-forvard-rempal-vybyl-na-neskolko-nedel-iz-za-travmy-2476424/",
   "v-dota-2-vyshel-patch-7-42",
   "parivision-pobedila-team-spirit-i-stala-chempionom-essence-iii",
@@ -506,9 +505,10 @@
   "https://www.sport-express.ru/football/rfpl/news/v-cska-zayavili-chto-akinfeev-veroyatno-ne-sygraet-do-konca-2026-goda-2477563/",
   "https://www.sport-express.ru/football/rfpl/news/orlov-diveev-stoyal-kak-stolb-eto-zhe-elementarnaya-oshibka-2477559/",
   "glava-lynn-vision-komandu-zakroyut-yesli-ona-ne-vyidet-na-tretii-yetap-meidzhora",
-  "https://www.sport-express.ru/football/rfpl/news/bezuglov-o-slovah-karpina-kogda-trenery-rassuzhdayut-o-medicine-to-eto-vyglyadit-chasto-smeshno-2477574/"
+  "https://www.sport-express.ru/football/rfpl/news/bezuglov-o-slovah-karpina-kogda-trenery-rassuzhdayut-o-medicine-to-eto-vyglyadit-chasto-smeshno-2477574/",
+  "https://www.sport-express.ru/football/rfpl/news/bezuglov-v-sbornoy-rossii-reshenie-ob-uchastii-igroka-v-sbore-po-sostoyaniyu-zdorovya-prinimayut-ne-vrachi-veroyatno-glavnyy-trener-2477587/"
  ],
- "news_i": 1,
+ "news_i": 4,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1682,7 +1682,7 @@
  "streak_day": {
   "2026-11-22": 2
  },
- "news_next": "2026-11-22T12:26:52.862091+03:00",
+ "news_next": "2026-11-22T12:58:06.530635+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1946,7 +1946,8 @@
   "https://upload.wikimedia.org/wikipedia/commons/5/53/Gennady_Orlov_2022.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
   "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/17.02.2026._%C2%AB%D0%97%D0%B5%D0%BD%D0%B8%D1%82%C2%BB_%E2%80%94_%C2%AB%D0%9A%D1%80%D0%B0%D1%81%D0%BD%D0%BE%D0%B4%D0%B0%D1%80%C2%BB_4.jpg/1280px-17.02.2026._%C2%AB%D0%97%D0%B5%D0%BD%D0%B8%D1%82%C2%BB_%E2%80%94_%C2%AB%D0%9A%D1%80%D0%B0%D1%81%D0%BD%D0%BE%D0%B4%D0%B0%D1%80%C2%BB_4.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
   "https://images.cybersport.ru/images/as-is/plain/0d/0decb423-0465-4e87-a451-054a6ac6579d.jpg",
-  "https://upload.wikimedia.org/wikipedia/commons/e/e5/Karpin.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+  "https://upload.wikimedia.org/wikipedia/commons/e/e5/Karpin.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "https://upload.wikimedia.org/wikipedia/commons/9/93/CSKA-MC_%286%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
  ],
  "indexnow_day": "2026-11-22",
  "vk_wall_err": null,
@@ -2264,7 +2265,8 @@
   "8715",
   "8717",
   "8719",
-  "8721"
+  "8721",
+  "8724"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -2514,11 +2516,12 @@
   "2026-11-22:новость:97a6429c444bf4a71ebddc60",
   "2026-11-22:новость:f7fb2117b779fa0a3888b6aa",
   "2026-11-22:новость:503e318eeaf9b55634c3b4c6",
-  "2026-11-22:новость:cf1d30d65dc8b53972c8dad2"
+  "2026-11-22:новость:cf1d30d65dc8b53972c8dad2",
+  "2026-11-22:новость:c69d8ddd2936bd94220666be"
  ],
  "dz_last_delivery": {
-  "source_id": 8721,
-  "message_id": 796,
+  "source_id": 8724,
+  "message_id": 797,
   "kind": "новость"
  },
  "learn_attempt_day": "2026-11-22",
@@ -2608,7 +2611,7 @@
   "quote_matches": 25
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-22T12:25:06.177326+03:00",
+  "last_poll": "2026-11-22T12:27:06.530635+03:00",
   "cursor": "292",
   "posts": [
    {
