@@ -80,7 +80,8 @@ def article_page(news):
 def wall_description(news):
     """Full article with one footer; the wall teaser is built separately."""
     short = news.get('rss_link','').removeprefix('https://')
-    body = news['body']
+    from .postimg import plain
+    body = plain(news['body'])
     # Move the prepared footer once, keeping every paragraph of the news.
     marker = '\n\n'+SPORTS.get(news.get('sport'),'#спорт')
     body = body.split(marker,1)[0]
@@ -89,7 +90,7 @@ def wall_description(news):
 
 
 def announcement(news, limit=420):
-    """Wall teaser: complete paragraphs/sentences, full article stays elsewhere."""
+    """Short metadata summary; the RSS content field carries the full news."""
     from html import unescape
     short=news.get('rss_link','').removeprefix('https://')
     if news.get('vk_native_link'):
