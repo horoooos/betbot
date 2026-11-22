@@ -136,3 +136,12 @@ def import_caption(news, max_html_bytes=1900):
         if len(encoded.encode('ascii'))<=max_html_bytes:
             return '<p style="white-space:pre-line">'+encoded+'</p>'
     raise ValueError('VK caption footer exceeds import transport budget')
+
+
+def is_news(entry):
+    """Do not trust a sport hashtag or a caller's omitted kind field."""
+    from .dzen import delivery_kind
+    if entry.get('kind', 'news') != 'news':
+        return False
+    raw=str(entry.get('title',''))+'\n'+str(entry.get('body',''))+'\n'+SPORTS.get(entry.get('sport'),'#спорт')
+    return delivery_kind(raw)=='новость'

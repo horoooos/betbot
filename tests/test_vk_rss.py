@@ -28,6 +28,12 @@ class VKRSSFeedTests(unittest.TestCase):
         self.assertIn('Полный текст.', parser.nodes[0]);self.assertIn('#аиставит',parser.nodes[0])
         self.assertIn('Подробнее на сайте',parser.nodes[0]);self.assertIn('vk.cc/example',parser.nodes[0])
 
+    def test_sport_tag_does_not_turn_a_result_or_live_forecast_into_news(self):
+        from betbot.vk_rss import is_news
+        for title in ['ИТОГ · Испания · Сегунда · МИМО','LIVE-прогноз зашёл: ТМ 2.5','ПРОГНОЗ на матч','СТАТИСТИКА БОТА']:
+            self.assertFalse(is_news({'title':title,'body':'Матч завершён.','sport':'football'}))
+        self.assertTrue(is_news({'title':'Тренер рассказал о матче','body':'Полная новость.','sport':'football'}))
+
     def test_news_only_filter_rejects_results_even_if_caller_passes_them(self):
         now=pd.Timestamp('2026-11-20T10:01:00Z')
         result=dict(id=2,title='Итог матча',t=now,sport='football',photo='https://example.test/a.jpg',body='Счёт',url='result.html',kind='result')
