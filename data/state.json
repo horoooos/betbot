@@ -1520,7 +1520,9 @@
      "5699eb",
      "000000"
     ],
-    "label": "Победа: Трабзонспор"
+    "label": "Победа: Трабзонспор",
+    "win": true,
+    "score": "1:0"
    },
    {
     "sport": "football",
@@ -1548,13 +1550,13 @@
   ],
   "odds": 1.43037225,
   "day": "2026-11-22",
-  "done": false
+  "done": true
  },
  "streak_posted": 0,
  "value_day": "2026-11-22",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-22",
- "site_stamp": "1481|9046|2026-11-22 20|4|0c9ee045b5fdbb64",
+ "site_stamp": "1483|9052|2026-11-22 20|4|7e68f5ffe17c9eb7",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1708,7 +1710,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 9046,
+ "dz_last": 9052,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2655,7 +2657,7 @@
   "quote_matches": 25
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-22T20:50:05.830174+03:00",
+  "last_poll": "2026-11-22T20:52:05.378401+03:00",
   "cursor": "327",
   "posts": [
    {
