@@ -6,6 +6,11 @@ on:
         description: Optional published site origin (blank tests checkout)
         required: false
         default: ""
+      scope:
+        type: choice
+        options: [all, dota]
+        default: all
+        description: Full suite or Dota environment only
 permissions:
   contents: read
 jobs:
@@ -34,6 +39,7 @@ jobs:
         run: npm run check
         env:
           SITE_URL: ${{ inputs.site_url }}
+          QA_SCOPE: ${{ inputs.scope }}
         working-directory: tools/browser-qa
       - uses: actions/upload-artifact@v4
         if: always()

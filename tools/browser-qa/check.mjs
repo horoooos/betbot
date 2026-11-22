@@ -19,7 +19,7 @@ try{
   const registry=await (await context.request.get('https://aistavvit-default-rtdb.europe-west1.firebasedatabase.app/broadcasts.json')).json();
   const active=registry.matches.filter(m=>m.state==='in').flatMap(m=>m.streams||[]);const twitch=(active.find(s=>s.provider==='twitch')||registry.matches.flatMap(m=>m.streams||[]).find(s=>s.provider==='twitch'))?.url;
   const sources=[{name:'hls',url:'https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8'},{name:'youtube',url:'https://www.youtube.com/watch?v=M7lc1UVf-VE'},{name:'twitch',url:twitch},{name:'rutube',url:registry.channels?.find(c=>c.provider==='rutube')?.url}].filter(s=>s.url);
-  for(const source of sources){
+  const testVideo=process.env.QA_SCOPE!=='dota';for(const source of testVideo?sources:[]){
     await page.evaluate(async s=>{const m=await import('./watch-video.js?v=2');m.openStream({url:s.url},'Проверка плеера · '+s.name);},source);
     await page.waitForSelector('#broadcastPlayer iframe,#broadcastPlayer video',{timeout:35000}).catch(()=>{});
     await page.waitForFunction(()=>['ready','playing','error','slow','blocked'].includes(document.querySelector('#broadcastPlayer')?.dataset.playerState),undefined,{timeout:40000}).catch(()=>{});
@@ -30,16 +30,16 @@ try{
     report.players.push({provider:source.name,...state,media});assert(await page.locator('#externalBroadcast').isVisible());if(state.frame)assert(state.frame.height>=200&&state.frame.width>=200);
     await page.screenshot({path:new URL('player-'+source.name+'.png',out).pathname,fullPage:false});await page.locator('#closeBroadcast').click();assert.equal(await page.locator('#broadcastPlayer iframe').count(),0);
   }
-  const decoded=report.players.some(p=>p.media.some(v=>!v.paused&&v.ready>=2&&v.width>0&&v.time>1));report.checks.push({name:'decodedPlayback',passed:decoded});
+  const decoded=report.players.some(p=>p.media.some(v=>!v.paused&&v.ready>=2&&v.width>0&&v.time>1));if(testVideo)report.checks.push({name:'decodedPlayback',passed:decoded});
   const fixture=JSON.parse(await fs.readFile(new URL('tests/fixtures/dota-motion.json',root),'utf8')),frames=fixture.frames;let count=0;const start=Date.now()/1000;
   await page.route('**/esportsLive/**',async route=>{const index=route.request().url().includes('/index.json'),frame=structuredClone(frames[index?count%frames.length:(count++)%frames.length]);frame.at=start+Math.max(0,count-1)*10;frame.state=5;await route.fulfill({json:index?{at:frame.at,games:{[frame.match_id]:frame}}:frame});});
   await page.goto(base+'/dota.html?d=DOTA&game='+frames[0].match_id+'&debug=1',{waitUntil:'domcontentloaded'});
-  await page.waitForFunction(()=>window.__dotaProbe?.().loaded>=2,undefined,{timeout:180000});
-  await page.waitForTimeout(21000);const positions=[];for(let i=0;i<30;i++){positions.push(await page.evaluate(()=>window.__dotaProbe()));await page.waitForTimeout(100);}
+  await page.waitForFunction(()=>window.__dotaProbe?.().loaded===10,undefined,{timeout:180000});
+  await page.waitForFunction(()=>window.__dotaProbe?.().environment?.ready,undefined,{timeout:180000});await page.waitForFunction(()=>window.__dotaProbe?.().environment?.trees>=2214,undefined,{timeout:120000});await page.waitForTimeout(21000);const positions=[];for(let i=0;i<30;i++){positions.push(await page.evaluate(()=>window.__dotaProbe()));await page.waitForTimeout(100);}
   let maxStep=0,total=0;for(let i=1;i<positions.length;i++){for(let j=0;j<positions[i].units.length;j++){const a=positions[i-1].units[j],b=positions[i].units[j],step=Math.hypot(b.x-a.x,b.z-a.z);maxStep=Math.max(maxStep,step);total+=step;assert(Number.isFinite(b.x)&&Number.isFinite(b.z)&&Number.isFinite(b.y));}}
-  const poseChanged=positions.some((p,i)=>i>0&&p.units.some((u,j)=>u.model?.pose?.some((v,k)=>Math.abs(v-(positions[i-1].units[j].model?.pose?.[k]??v))>1e-6)));report.checks.push({name:'dota',maxStep,total,poseChanged,last:positions.at(-1)});assert(poseChanged,'No skeletal animation changed in the character sample');assert(maxStep<8,'Unexpected instantaneous movement');assert(total>.01,'Characters never moved during the recorded motion test');
+  const poseChanged=positions.some((p,i)=>i>0&&p.units.some((u,j)=>u.model?.pose?.some((v,k)=>Math.abs(v-(positions[i-1].units[j].model?.pose?.[k]??v))>1e-6)));report.checks.push({name:'dota',maxStep,total,poseChanged,last:positions.at(-1)});assert(positions.at(-1).units.some(u=>u.y>.1),'Characters were not placed on the terrain');assert(poseChanged,'No skeletal animation changed in the character sample');assert(maxStep<8,'Unexpected instantaneous movement');assert(total>.01,'Characters never moved during the recorded motion test');
   await page.screenshot({path:new URL('dota-desktop.png',out).pathname,fullPage:false});for(let i=0;i<10;i++){await page.locator('#radiantRoster [data-player],#direRoster [data-player]').nth(i).click();await page.waitForTimeout(700);await page.screenshot({path:new URL('hero-'+i+'.png',out).pathname,fullPage:false});}await page.setViewportSize({width:390,height:844});await page.screenshot({path:new URL('dota-mobile.png',out).pathname,fullPage:false});
-  assert(decoded,'No provider produced actual decoded video playback');
+  assert(!testVideo||decoded,'No provider produced actual decoded video playback');
   const ownErrors=report.pageErrors.filter(e=>/(localhost:8765|horoooos.github.io).*\/(dota-|esports-3d|broadcasts|watch-video)/.test(e.stack||''));assert.equal(ownErrors.length,0,JSON.stringify(ownErrors));
 }catch(e){report.failure=e.stack;await page.screenshot({path:new URL('failure.png',out).pathname,fullPage:false}).catch(()=>{});process.exitCode=1;}
 finally{await fs.writeFile(new URL('report.json',out),JSON.stringify(report,null,2));await browser.close();console.log(JSON.stringify({failure:report.failure,checks:report.checks.map(c=>({name:c.name,cards:c.cards,maxStep:c.maxStep,total:c.total})),players:report.players.map(p=>({provider:p.provider,state:p.state,media:p.media})),pageErrors:report.pageErrors}));}
