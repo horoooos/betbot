@@ -2619,9 +2619,9 @@
   "model": {
    "weight": 0.0,
    "status": "insufficient_temporal_split",
-   "settled_matches": 102,
+   "settled_matches": 103,
    "required_matches": 100,
-   "trained_at": "2026-11-22T19:31:10.040058+00:00"
+   "trained_at": "2026-11-22T21:41:27.923496+00:00"
   },
   "sport_models": {
    "hockey": {
@@ -2661,29 +2661,29 @@
    }
   },
   "source": {
-   "last_success": "2026-11-22T21:21:27.221542+00:00",
-   "parsed": 344,
-   "added": 124,
-   "discovered_matches": 34,
+   "last_success": "2026-11-22T21:41:27.923496+00:00",
+   "parsed": 352,
+   "added": 115,
+   "discovered_matches": 32,
    "pages": 20,
    "errors": [],
    "parsed_by_sport": {
     "soccer": 50,
-    "ice-hockey": 49,
+    "ice-hockey": 50,
     "basketball": 50,
-    "tennis": 50,
+    "tennis": 49,
     "csgo": 50,
     "dota2": 50
    }
   },
   "error": null,
-  "tips": 11496,
+  "tips": 11533,
   "snapshots": 242,
-  "unmapped_markets": 17057,
+  "unmapped_markets": 17135,
   "quote_matches": 30
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-23T00:39:26.964517+03:00",
+  "last_poll": "2026-11-23T00:41:27.923496+03:00",
   "cursor": "335",
   "posts": [
    {
@@ -3287,7 +3287,7 @@
    "401875047": "post",
    "401874960": "post",
    "401874989": "post",
-   "401875001": "in",
+   "401875001": "post",
    "401875009": "pre",
    "401899545": "post",
    "401899544": "post",
