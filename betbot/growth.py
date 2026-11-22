@@ -93,7 +93,7 @@ def build(news, matches, now):
     urls=['follow.html','tournaments/','digest/']
     cards=[]
     for (sp,name),rows in sorted(leagues.items()):
-        t=topic('league',sp,name);url='tournaments/'+t['id']+'.html';t['url']=url
+        t=topic('league',sp,name);url='tournaments/'+t['id']+'.html';t['url']=url;catalog[t['id']]['url']=url
         games=sorted(rows.values(),key=lambda m:str(m.get('kickoff','')),reverse=True)[:24]
         body='<p class="tag">'+html.escape(SPORTS.get(sp,sp))+'</p><h1>'+html.escape(name)+'</h1><p class="muted">Матчи, результаты и новости турнира. Обновляется автоматически.</p>'
         body+='<a class="btn gold" href="../follow.html?topic='+t['id']+'">Следить за турниром</a><div class="grid" style="margin-top:20px">'
@@ -130,10 +130,11 @@ def summarize_visits(days):
         for vid,row in (rows or {}).items():
             if not isinstance(row,dict):continue
             source=str(row.get('r','Прямой заход'))[:40];s=sources.setdefault(source,{'visitor_days':0,'follow':0,'share':0,'telegram_click':0})
-            s['visitor_days']+=1
-            material=str(row.get('c') or row.get('p') or 'не указан')[:120];content.setdefault(material,{'visitor_days':0,'follow':0,'share':0});content[material]['visitor_days']+=1
-            if vid in visitors:returning.add(vid)
-            visitors.add(vid)
+            if row.get('kind')!='event':s['visitor_days']+=1
+            material=str(row.get('c') or row.get('p') or 'не указан')[:120];content.setdefault(material,{'visitor_days':0,'follow':0,'share':0});content[material]['visitor_days']+=int(row.get('kind')!='event')
+            if row.get('kind')!='event':
+                if vid in visitors:returning.add(vid)
+                visitors.add(vid)
             for event,count in (row.get('a') or {}).items():
                 if event in events and isinstance(count,(int,float)) and 0<=count<=1000:
                     events[event]+=count

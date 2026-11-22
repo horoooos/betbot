@@ -9,11 +9,13 @@ from pathlib import Path
 import pandas as pd
 from . import growth
 
-DIGEST=growth.ROOT/'data/growth_digest.json'
+DIGEST=growth.ROOT/'data/state.json'
 
 def saved_digest():
     if not DIGEST.exists():return None
-    n=json.loads(DIGEST.read_text(encoding='utf-8'));n['t']=pd.Timestamp(n['t']);return n
+    data=json.loads(DIGEST.read_text(encoding='utf-8'));n=(data.get('growth') or {}).get('digest')
+    if not n:return None
+    n={**n};n['t']=pd.Timestamp(n['t']);return n
 
 def _news():
     from . import pages
@@ -30,7 +32,7 @@ def run(state,now,checkpoint=lambda:None):
         if item:
             cover=pages.DOCS/'share'/f'digest-{day}.jpg';growth.share_card(item['title'],'Главные спортивные новости дня',cover)
             item['photo']=growth.SITE+'share/'+cover.name
-            DIGEST.write_text(json.dumps({**item,'t':item['t'].isoformat()},ensure_ascii=False,indent=2),encoding='utf-8')
+            record['digest']={**item,'t':item['t'].isoformat()}
             record.update(digest_day=day,digest_status='sending');checkpoint()
             try:
                 titles=[n for n in growth.select_digest(news,now)]

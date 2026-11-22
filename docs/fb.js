@@ -4,7 +4,7 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/fireba
 import { getAuth, onAuthStateChanged, GoogleAuthProvider, signInWithPopup, signInWithRedirect, getRedirectResult, signInWithEmailAndPassword,
   createUserWithEmailAndPassword, signOut, sendPasswordResetEmail } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
 import { getDatabase, ref, set, get, push, remove, update, onValue, onDisconnect, serverTimestamp, query, orderByChild, equalTo, limitToLast,
-  endBefore, onChildAdded, onChildRemoved, onChildChanged, runTransaction, increment } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
+  endBefore, onChildAdded, onChildRemoved, onChildChanged, runTransaction } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
 
 const app = initializeApp({
   apiKey: "AIzaSyCijCZYGyEgmYNmb2GQMKkGpSHF2j_JZuA",
@@ -54,7 +54,7 @@ export const device = () => { const ua = navigator.userAgent || ""; return /iPad
 export function track(page, match = null) {
   const vid = visitorId(), day = new Date().toISOString().slice(0, 10), src = source(), dev = device();
   if (ls.get("aiday") !== day) {   // один раз в день: уникальный посетитель + откуда пришёл
-    update(ref(db, `visits/${day}/${vid}`), { t: Date.now(), r: src, d: dev, p: String(page).slice(0, 40), c: (new URLSearchParams(location.search).get("utm_content")||location.pathname).slice(0,120) }).catch(() => {}); ls.set("aiday", day);
+    set(ref(db, `visits/${day}/${vid}`), { t: Date.now(), r: src, d: dev, p: String(page).slice(0, 40), c: (new URLSearchParams(location.search).get("utm_content")||location.pathname).slice(0,120) }).catch(() => {}); ls.set("aiday", day);
   }
   const conn = push(ref(db, "online")).key, started = Date.now();
   const me = ref(db, `online/${conn}`), pm = match ? ref(db, `presence/${match}/${conn}`) : null;
@@ -587,9 +587,8 @@ if (typeof document !== "undefined") { if (document.readyState === "loading") do
 // Explicit user actions only; aggregate counts contain no account profile or text.
 export async function growthEvent(name) {
   if (!["share","follow","unfollow","telegram_click"].includes(name)) return;
-  const day=new Date().toISOString().slice(0,10), vid=visitorId();
-  await update(ref(db,`visits/${day}/${vid}`),{r:source(),t:Date.now(),p:location.pathname.slice(0,120),c:(new URLSearchParams(location.search).get("utm_content")||location.pathname).slice(0,120)}).catch(()=>{});
-  await update(ref(db,`visits/${day}/${vid}/a`),{[name]:increment(1)}).catch(()=>{});
+  const day=new Date().toISOString().slice(0,10), key="event-"+name+"-"+(crypto.randomUUID?.()||Date.now()+"-"+Math.random().toString(36).slice(2));
+  await set(ref(db,`visits/${day}/${key}`),{t:Date.now(),r:source(),d:device(),p:location.pathname.slice(0,120),c:(new URLSearchParams(location.search).get("utm_content")||location.pathname).slice(0,120),kind:"event",a:{[name]:1}}).catch(()=>{});
 }
 export async function getInterests() {
   if (!pushTok && ls.get("aiInterestToken")) pushTok=ls.get("aiInterestToken");

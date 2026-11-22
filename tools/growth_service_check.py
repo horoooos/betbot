@@ -28,11 +28,15 @@ try:
     assert r.json()['interests']==row['interests'];report['backend_interest_read']=True
     r=requests.put(push.DB+'/'+paths[1]+'.json',json={'r':'qa','d':'Компьютер','p':'growth-qa','t':int(time.time()*1000),'a':{'follow':1}},timeout=20)
     if not r.ok:raise RuntimeError('Firebase service check rejected: '+str(r.status_code)+' '+r.text[:120])
-    r=requests.patch(push.DB+'/'+paths[1]+'/a.json',json={'follow':{'.sv':{'increment':1}}},timeout=20)
+    row['interests']={'topics':{},'events':{'news':False}}
+    r=requests.patch(push.DB+'/'+paths[0]+'.json',json={'interests':row['interests']},timeout=20)
     if not r.ok:raise RuntimeError('Firebase service check rejected: '+str(r.status_code)+' '+r.text[:120])
     r=requests.get(push.DB+'/'+paths[1]+'.json',params={'access_token':token},timeout=20)
     if not r.ok:raise RuntimeError('Firebase service check rejected: '+str(r.status_code)+' '+r.text[:120])
-    assert r.json()['a']['follow']==2;report['client_event_increment']=True
+    assert r.json()['a']['follow']==1;report['client_event_write']=True
+    r=requests.get(push.DB+'/'+paths[0]+'.json',params={'access_token':token},timeout=20)
+    if not r.ok:raise RuntimeError('Subscription update read unavailable')
+    assert not r.json()['interests'].get('topics');report['client_interest_unsubscribe']=True
 except requests.RequestException:
     raise RuntimeError("Firebase service check unavailable; credentials hidden") from None
 finally:
