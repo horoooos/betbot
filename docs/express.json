@@ -2,67 +2,67 @@
 {
 "kind": "express",
 "title": "Экспресс дня",
-"day": "2026-11-21",
-"odds": 1.5740883119999998,
-"p": 0.2317,
-"status": "lost",
+"day": "2026-11-22",
+"odds": 1.43037225,
+"p": 0.2492,
+"status": "wait",
 "won": 0,
 "n": 3,
-"post": "https://t.me/aistavvit/7795",
+"post": "https://t.me/aistavvit/8714",
 "legs": [
 {
-"sport": "basketball",
-"id": "401910023",
-"home": "Филадельфия Сиксерс",
-"away": "Милуоки Бакс",
-"league": "🇺🇸 США · NBA",
-"kickoff": "2026-11-21T21:00:00+03:00",
-"label": "Победа: Филадельфия Сиксерс (с ОТ)",
-"odds": 1.154,
-"p": 0.6244560487380331,
-"logos": [
-"https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/phi.png",
-"https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/mil.png"
-],
-"win": null,
-"score": null,
-"url": "live.html?s=basketball&p=basketball%2Fnba&e=401910023&h=%D0%A4%D0%B8%D0%BB%D0%B0%D0%B4%D0%B5%D0%BB%D1%8C%D1%84%D0%B8%D1%8F+%D0%A1%D0%B8%D0%BA%D1%81%D0%B5%D1%80%D1%81&a=%D0%9C%D0%B8%D0%BB%D1%83%D0%BE%D0%BA%D0%B8+%D0%91%D0%B0%D0%BA%D1%81"
-},
-{
 "sport": "football",
-"id": "401882798",
-"home": "Реал Мадрид",
-"away": "Сельта",
-"league": "🇪🇸 Испания · Ла Лига",
-"kickoff": "2026-11-21T23:00:00+03:00",
-"label": "Победа: Реал Мадрид",
-"odds": 1.154,
-"p": 0.6165861679169664,
-"logos": [
-"https://a.espncdn.com/i/teamlogos/soccer/500/86.png",
-"https://a.espncdn.com/i/teamlogos/soccer/500/85.png"
-],
-"win": null,
-"score": null,
-"url": "live.html?s=football&p=soccer%2Fesp.1&e=401882798&h=%D0%A0%D0%B5%D0%B0%D0%BB+%D0%9C%D0%B0%D0%B4%D1%80%D0%B8%D0%B4&a=%D0%A1%D0%B5%D0%BB%D1%8C%D1%82%D0%B0"
-},
-{
-"sport": "football",
-"id": "401875543",
-"home": "Фейеноорд",
-"away": "Эксельсиор",
+"id": "401875545",
+"home": "Твенте",
+"away": "Виллем II",
 "league": "🇳🇱 Нидерланды · Эредивизи",
-"kickoff": "2026-11-21T20:45:00+03:00",
-"label": "Победа: Фейеноорд",
-"odds": 1.182,
-"p": 0.6018054162487463,
+"kickoff": "2026-11-22T14:15:00+03:00",
+"label": "Победа: Твенте",
+"odds": 1.083,
+"p": 0.6553652569031807,
 "logos": [
-"https://a.espncdn.com/i/teamlogos/soccer/500/142.png",
-"https://a.espncdn.com/i/teamlogos/soccer/500/2566.png"
+"https://a.espncdn.com/i/teamlogos/soccer/500/152.png",
+"https://a.espncdn.com/i/teamlogos/soccer/500/156.png"
 ],
-"win": false,
-"score": "2:3",
-"url": "live.html?s=football&p=soccer%2Fned.1&e=401875543&h=%D0%A4%D0%B5%D0%B9%D0%B5%D0%BD%D0%BE%D0%BE%D1%80%D0%B4&a=%D0%AD%D0%BA%D1%81%D0%B5%D0%BB%D1%8C%D1%81%D0%B8%D0%BE%D1%80"
+"win": null,
+"score": null,
+"url": "live.html?s=football&p=soccer%2Fned.1&e=401875545&h=%D0%A2%D0%B2%D0%B5%D0%BD%D1%82%D0%B5&a=%D0%92%D0%B8%D0%BB%D0%BB%D0%B5%D0%BC+II"
+},
+{
+"sport": "football",
+"id": "401888249",
+"home": "Трабзонспор",
+"away": "Эюпспор",
+"league": "🇹🇷 Турция · Суперлига",
+"kickoff": "2026-11-22T19:00:00+03:00",
+"label": "Победа: Трабзонспор",
+"odds": 1.125,
+"p": 0.6309235558630232,
+"logos": [
+"https://a.espncdn.com/i/teamlogos/soccer/500/997.png",
+"https://a.espncdn.com/i/teamlogos/soccer/500/20729.png"
+],
+"win": null,
+"score": null,
+"url": "live.html?s=football&p=soccer%2Ftur.1&e=401888249&h=%D0%A2%D1%80%D0%B0%D0%B1%D0%B7%D0%BE%D0%BD%D1%81%D0%BF%D0%BE%D1%80&a=%D0%AD%D1%8E%D0%BF%D1%81%D0%BF%D0%BE%D1%80"
+},
+{
+"sport": "football",
+"id": "401875547",
+"home": "Аякс",
+"away": "АДО Ден Хааг",
+"league": "🇳🇱 Нидерланды · Эредивизи",
+"kickoff": "2026-11-22T16:30:00+03:00",
+"label": "Победа: Аякс",
+"odds": 1.174,
+"p": 0.6026113157013726,
+"logos": [
+"https://a.espncdn.com/i/teamlogos/soccer/500/139.png",
+"https://a.espncdn.com/i/teamlogos/soccer/500/2726.png"
+],
+"win": null,
+"score": null,
+"url": "live.html?s=football&p=soccer%2Fned.1&e=401875547&h=%D0%90%D1%8F%D0%BA%D1%81&a=%D0%90%D0%94%D0%9E+%D0%94%D0%B5%D0%BD+%D0%A5%D0%B0%D0%B0%D0%B3"
 }
 ]
 },

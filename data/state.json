@@ -5,7 +5,7 @@
  },
  "learned": "2026-11-22",
  "schedule_day": "2026-11-22",
- "content_slot": "2026-11-21-23",
+ "content_slot": "2026-11-22-10",
  "news_seen": [
   "https://www.sport-express.ru/tennis/wta/news/beloruska-laskevich-podnyalas-srazu-na-113-mest-v-reytinge-wta-2476346/",
   "https://www.sport-express.ru/football/spain/news/ryudiger-o-treh-trenerah-reala-arbeloa-podaril-mne-uverennost-kotoraya-byla-tak-neobhodima-2476405/",
@@ -1486,83 +1486,81 @@
   ]
  },
  "express": {
-  "msg": 7795,
+  "msg": 8714,
   "legs": [
    {
-    "sport": "basketball",
-    "div": "NBA",
-    "id": "401910023",
+    "sport": "football",
+    "div": "N1",
+    "id": "401875545",
     "side": "home",
-    "p": 0.6244560487380331,
-    "odds": 1.154,
-    "kickoff": "2026-11-21T21:00:00+03:00",
-    "home": "Филадельфия Сиксерс",
-    "away": "Милуоки Бакс",
-    "league": "🇺🇸 США · NBA",
+    "p": 0.6553652569031807,
+    "odds": 1.083,
+    "kickoff": "2026-11-22T14:15:00+03:00",
+    "home": "Твенте",
+    "away": "Виллем II",
+    "league": "🇳🇱 Нидерланды · Эредивизи",
     "logos": [
-     "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/phi.png",
-     "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/mil.png"
+     "https://a.espncdn.com/i/teamlogos/soccer/500/152.png",
+     "https://a.espncdn.com/i/teamlogos/soccer/500/156.png"
     ],
     "colors": [
-     "1d428a",
-     "00471b"
+     "F31522",
+     "1a316b"
     ],
-    "label": "Победа: Филадельфия Сиксерс (с ОТ)"
+    "label": "Победа: Твенте"
    },
    {
     "sport": "football",
-    "div": "SP1",
-    "id": "401882798",
+    "div": "T1",
+    "id": "401888249",
     "side": "home",
-    "p": 0.6165861679169664,
-    "odds": 1.154,
-    "kickoff": "2026-11-21T23:00:00+03:00",
-    "home": "Реал Мадрид",
-    "away": "Сельта",
-    "league": "🇪🇸 Испания · Ла Лига",
+    "p": 0.6309235558630232,
+    "odds": 1.125,
+    "kickoff": "2026-11-22T19:00:00+03:00",
+    "home": "Трабзонспор",
+    "away": "Эюпспор",
+    "league": "🇹🇷 Турция · Суперлига",
     "logos": [
-     "https://a.espncdn.com/i/teamlogos/soccer/500/86.png",
-     "https://a.espncdn.com/i/teamlogos/soccer/500/85.png"
+     "https://a.espncdn.com/i/teamlogos/soccer/500/997.png",
+     "https://a.espncdn.com/i/teamlogos/soccer/500/20729.png"
     ],
     "colors": [
-     "ffffff",
-     "6cace4"
+     "5699eb",
+     "000000"
     ],
-    "label": "Победа: Реал Мадрид"
+    "label": "Победа: Трабзонспор"
    },
    {
     "sport": "football",
     "div": "N1",
-    "id": "401875543",
+    "id": "401875547",
     "side": "home",
-    "p": 0.6018054162487463,
-    "odds": 1.182,
-    "kickoff": "2026-11-21T20:45:00+03:00",
-    "home": "Фейеноорд",
-    "away": "Эксельсиор",
+    "p": 0.6026113157013726,
+    "odds": 1.174,
+    "kickoff": "2026-11-22T16:30:00+03:00",
+    "home": "Аякс",
+    "away": "АДО Ден Хааг",
     "league": "🇳🇱 Нидерланды · Эредивизи",
     "logos": [
-     "https://a.espncdn.com/i/teamlogos/soccer/500/142.png",
-     "https://a.espncdn.com/i/teamlogos/soccer/500/2566.png"
+     "https://a.espncdn.com/i/teamlogos/soccer/500/139.png",
+     "https://a.espncdn.com/i/teamlogos/soccer/500/2726.png"
     ],
     "colors": [
-     "ef2f24",
-     "000000"
+     "DF1B27",
+     "307B64"
     ],
-    "label": "Победа: Фейеноорд",
-    "win": false,
-    "score": "2:3"
+    "label": "Победа: Аякс"
    }
   ],
-  "odds": 1.5740883119999998,
-  "day": "2026-11-21",
-  "done": true
+  "odds": 1.43037225,
+  "day": "2026-11-22",
+  "done": false
  },
  "streak_posted": 0,
  "value_day": "2026-11-21",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-21",
- "site_stamp": "1445|8713|2026-11-22 09|4|6cf637980c95fe8c",
+ "site_stamp": "1445|8714|2026-11-22 10|4|6cf637980c95fe8c",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1694,7 +1692,7 @@
  "streak_day": {
   "2026-11-22": 2
  },
- "news_next": "2026-11-22T10:00:50.707246+03:00",
+ "news_next": "2026-11-22T10:06:50.967046+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1718,7 +1716,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 8713,
+ "dz_last": 8714,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2608,7 +2606,7 @@
   "quote_matches": 25
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-22T09:58:50.348775+03:00",
+  "last_poll": "2026-11-22T10:00:50.967046+03:00",
   "cursor": "283",
   "posts": [
    {
