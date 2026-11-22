@@ -8668,7 +8668,7 @@
   "close": {
    "_": null
   },
-  "settlement_retry_at": 1795378810.397623
+  "settlement_retry_at": 1795379770.017515
  },
  "DOTA|1816469": {
   "id": "1816469",
@@ -8722,22 +8722,22 @@
   "state": "pre",
   "completed": false,
   "tier": "a",
-  "status": "reviewed",
+  "status": "done",
   "home": {
+   "color": "3b4a7a",
+   "logo": "https://cdn-api.pandascore.co/images/team/image/134536/800px_1win_team_2024_allmode.png",
    "id": "134536",
    "name": "1w Team",
    "ru": "1w Team",
-   "logo": "https://cdn-api.pandascore.co/images/team/image/134536/800px_1win_team_2024_allmode.png",
-   "color": "3b4a7a",
    "score": 0,
    "winner": false
   },
   "away": {
+   "color": "3b4a7a",
+   "logo": "https://cdn-api.pandascore.co/images/team/image/133882/600px_aurora_gaming_2025_allmode.png",
    "id": "133882",
    "name": "Aurora",
    "ru": "Aurora",
-   "logo": "https://cdn-api.pandascore.co/images/team/image/133882/600px_aurora_gaming_2025_allmode.png",
-   "color": "3b4a7a",
    "score": 0,
    "winner": false
   },
@@ -8804,7 +8804,9 @@
   "close": {
    "_": null
   },
-  "settlement_retry_at": 1795378810.397623
+  "settlement_retry_at": 1795379770.017515,
+  "main_hit": true,
+  "bold_hit": null
  },
  "ATP|187529": {
   "id": "187529",
@@ -9073,6 +9075,6 @@
   "sport": "tennis",
   "div": "WTA",
   "reason": "no_odds_or_sufficient_history",
-  "retry_at": 1795378869.93116
+  "retry_at": 1795379470.017515
  }
 }
