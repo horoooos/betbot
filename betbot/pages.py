@@ -784,7 +784,7 @@ def _rss(news: list[dict], ms: list[dict], store: dict[int, dict], now: pd.Times
         items.append((pd.Timestamp(n["t"]), f"""<item><title>{x(item_title)}</title><link>{x(item_link)}</link><guid isPermaLink="true">{x(item_guid)}</guid>
 <pubDate>{format_datetime(pd.Timestamp(n['t']).to_pydatetime())}</pubDate><category>{x(SPORT_RU.get(n['sport'], 'Спорт'))}</category>
 <description>{x(description)}</description><content:encoded>{('<![CDATA['+(photo_html+body).replace(']]>',']]&gt;')+']]>') if is_vk and n.get('vk_compact_rss') else x(photo_html + body)}</content:encoded>
-{f'<enclosure url="{x(n["photo"])}" type="image/jpeg" length="{int(n.get("photo_bytes") or 0)}"/><media:content url="{x(n["photo"])}" type="image/jpeg" medium="image"/><media:thumbnail url="{x(n["photo"])}"/>' if n.get('photo') else ''}</item>"""))
+{f'<enclosure url="{x(n["photo"])}" type="image/jpeg" length="{int(n.get("photo_bytes") or 0)}"/><img>{x(n["photo"])}</img><media:content url="{x(n["photo"])}" type="image/jpeg" medium="image"/><media:thumbnail url="{x(n["photo"])}"/>' if n.get('photo') else ''}</item>"""))
     for m in [m for m in ms if not m.get("finished")][:30]:
         post = store.get(int(m["msg"])) if str(m.get("msg", "")).isdigit() else None
         when = pd.Timestamp(post["t"]) if post else pd.Timestamp(m["kickoff"]) - pd.Timedelta(hours=1)

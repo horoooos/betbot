@@ -69,7 +69,7 @@ def article_page(news):
             '<meta name="viewport" content="width=device-width,initial-scale=1">'
             '<title>'+escape(title)+'</title><meta property="og:title" content="'+escape(title,quote=True)+'">'
             '<meta name="description" content="'+escape(description,quote=True)+'"><meta property="og:description" content="'+escape(description,quote=True)+'">'
-            '<meta property="og:type" content="article"><meta name="vk-source-format" content="full-news-2"><meta property="og:image" content="'+escape(news['photo'],quote=True)+'">'
+            '<link rel="image_src" href="'+escape(news['photo'],quote=True)+'"><meta property="og:type" content="article"><meta name="vk-source-format" content="full-news-2"><meta property="og:image" content="'+escape(news['photo'],quote=True)+'">'
             '<meta property="og:image:secure_url" content="'+escape(news['photo'],quote=True)+'"><meta property="og:image:type" content="image/jpeg">'
             '<meta property="og:image:width" content="'+str(news.get('photo_width',800))+'"><meta property="og:image:height" content="'+str(news.get('photo_height',450))+'">'
             '<style>body{max-width:760px;margin:32px auto;padding:0 20px;font:18px/1.65 system-ui}img{width:100%}p{margin:1.2em 0}</style>'
