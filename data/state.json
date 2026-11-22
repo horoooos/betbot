@@ -3,7 +3,7 @@
   "1X2": 0.0,
   "OU25": 0.0
  },
- "learned": "2026-11-22",
+ "learned": "2026-11-23",
  "schedule_day": "2026-11-22",
  "content_slot": "2026-11-22-23",
  "news_seen": [
@@ -1556,7 +1556,7 @@
  "value_day": "2026-11-22",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-22",
- "site_stamp": "1507|9132|2026-11-22 23|4|ed43e7315f9c5f72",
+ "site_stamp": "1508|9134|2026-11-23 00|4|3ebe40f73bfa126d",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1569,7 +1569,7 @@
    "I1|401874989"
   ]
  },
- "value_check": "2026-11-22-7",
+ "value_check": "2026-11-23-0",
  "express_risk": {
   "msg": 9019,
   "legs": [
@@ -1710,7 +1710,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 9132,
+ "dz_last": 9134,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -1973,7 +1973,7 @@
   "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/Football_match_between_Chirk_and_Llanrhaeadr-ym-Mochnant%2C_1948_%281488733%29.jpg/1280px-Football_match_between_Chirk_and_Llanrhaeadr-ym-Mochnant%2C_1948_%281488733%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
   "https://images.cybersport.ru/images/as-is/plain/06/060f6bde-31c1-4047-a0fd-ac0380d65ab8.jpg"
  ],
- "indexnow_day": "2026-11-22",
+ "indexnow_day": "2026-11-23",
  "vk_wall_err": null,
  "shorts_day": "2026-11-22",
  "shorts_err": {
@@ -2590,7 +2590,7 @@
   "message_id": 818,
   "kind": "новость"
  },
- "learn_attempt_day": "2026-11-22",
+ "learn_attempt_day": "2026-11-23",
  "learn_diagnostics": {
   "objective": "shared_lambda_1X2_OU25",
   "rows": 8000,
@@ -2601,11 +2601,11 @@
   "history_until": "2026-11-20",
   "candidate_weight": 0.0,
   "weight": 0.0,
-  "train_logloss": 0.840556254730724,
+  "train_logloss": 0.8405067323668388,
   "validation_logloss": 0.8172999869548824,
   "validation_market_logloss": 0.8172999869548824
  },
- "learned_at": "2026-11-22T00:04:06.500232+03:00",
+ "learned_at": "2026-11-23T00:01:10.518666+03:00",
  "learn_version": "shared-lambda-v2",
  "learn_error": null,
  "learn_retry_at": 0,
@@ -2655,15 +2655,15 @@
    }
   },
   "source": {
-   "last_success": "2026-11-22T20:39:10.730532+00:00",
-   "parsed": 347,
-   "added": 60,
-   "discovered_matches": 24,
-   "pages": 18,
+   "last_success": "2026-11-22T21:01:10.518666+00:00",
+   "parsed": 326,
+   "added": 93,
+   "discovered_matches": 31,
+   "pages": 20,
    "errors": [],
    "parsed_by_sport": {
     "soccer": 50,
-    "ice-hockey": 50,
+    "ice-hockey": 49,
     "basketball": 50,
     "tennis": 50,
     "csgo": 50,
@@ -2671,13 +2671,13 @@
    }
   },
   "error": null,
-  "tips": 11425,
-  "snapshots": 240,
-  "unmapped_markets": 16911,
-  "quote_matches": 25
+  "tips": 11450,
+  "snapshots": 242,
+  "unmapped_markets": 16979,
+  "quote_matches": 29
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-22T23:59:10.424257+03:00",
+  "last_poll": "2026-11-23T00:01:10.518666+03:00",
   "cursor": "335",
   "posts": [
    {
@@ -3255,43 +3255,11 @@
   "started_at": "2026-11-22T22:59:10.779082+03:00",
   "sent": {},
   "matches": {
-   "401879238": "post",
-   "401878756": "post",
-   "401879236": "post",
-   "401879235": "post",
-   "401878754": "post",
    "401879232": "post",
    "401879234": "post",
    "401878755": "post",
    "401879237": "pre",
-   "401880160": "post",
-   "401880158": "post",
-   "401880157": "post",
-   "401880154": "post",
-   "401880152": "post",
-   "401880151": "post",
-   "401880150": "post",
-   "401880149": "post",
    "401880159": "post",
-   "401880740": "post",
-   "401880739": "post",
-   "401880738": "post",
-   "401880737": "post",
-   "401880736": "post",
-   "401880735": "post",
-   "401880734": "post",
-   "401880733": "post",
-   "401880732": "post",
-   "401881264": "post",
-   "401881263": "post",
-   "401881262": "post",
-   "401881261": "post",
-   "401881260": "post",
-   "401881258": "post",
-   "401881256": "post",
-   "401881255": "post",
-   "401881254": "post",
-   "401881253": "post",
    "401882799": "post",
    "401882797": "post",
    "401882798": "post",
@@ -3354,7 +3322,6 @@
    "401888246": "post",
    "401888249": "post",
    "401888370": "pre",
-   "401878940": "post",
    "401878939": "post",
    "401878935": "post",
    "401878938": "post",
@@ -3369,15 +3336,8 @@
    "401896809": "post",
    "401896724": "post",
    "401896728": "pre",
-   "401878338": "post",
-   "401878336": "post",
-   "401878335": "post",
-   "401878334": "post",
    "401878337": "post",
    "401878333": "post",
-   "401878521": "post",
-   "401878518": "post",
-   "401878517": "post",
    "401879803": "post",
    "401879807": "post",
    "401879806": "post",
@@ -3399,7 +3359,6 @@
    "401842883": "post",
    "401842888": "pre",
    "401842884": "pre",
-   "401843489": "post",
    "401843485": "post",
    "401843490": "post",
    "401843487": "post",
@@ -3408,7 +3367,7 @@
    "401841322": "post",
    "401841327": "post",
    "401841325": "post",
-   "401841318": "in",
+   "401841318": "post",
    "401841324": "pre",
    "401841321": "pre",
    "401841323": "pre",
@@ -3437,7 +3396,6 @@
    "401877046": "pre",
    "401934476": "post",
    "401934689": "post",
-   "401850699": "post",
    "401850696": "post",
    "401850694": "post",
    "401850697": "post",
@@ -3453,8 +3411,8 @@
    "401921363": "post",
    "401921333": "in",
    "401921327": "pre",
-   "401888645": "pre",
-   "401888646": "pre",
+   "401888645": "in",
+   "401888646": "in",
    "401888561": "pre",
    "401888562": "pre",
    "401876816": "post",
@@ -3604,7 +3562,7 @@
    "401876819": "pre"
   },
   "daily": {
-   "day": "2026-11-22"
+   "day": "2026-11-23"
   }
  },
  "vk_story_retry_at": 1795383461.0906632
