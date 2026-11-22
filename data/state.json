@@ -1556,7 +1556,7 @@
  "value_day": "2026-11-22",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-22",
- "site_stamp": "1509|9136|2026-11-23 00|4|d443c2ca6044c242",
+ "site_stamp": "1509|9138|2026-11-23 00|4|d443c2ca6044c242",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1710,7 +1710,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 9136,
+ "dz_last": 9138,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2009,14 +2009,14 @@
  "vk_photos": [],
  "vk_photo_until": 1794644243.1147308,
  "vk_photo_cursor": {},
- "vk_story_last": 8927,
- "vk_story_err": "VK stories: сервер не вернул upload_result",
+ "vk_story_last": 8957,
+ "vk_story_err": null,
  "push_weekly": "2026-47",
- "vk_story_at": 1795378943.771778,
- "vk_story_url": "https://vk.com/story-228963529_456239107",
+ "vk_story_at": 1795383515.9567914,
+ "vk_story_url": "https://vk.com/story-228963529_456239108",
  "vk_story_day": {
   "date": "2026-11-22",
-  "count": 2
+  "count": 3
  },
  "vk_legacy_pending": [
   {
@@ -2683,7 +2683,7 @@
   "quote_matches": 30
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-23T00:35:27.291463+03:00",
+  "last_poll": "2026-11-23T00:37:27.360834+03:00",
   "cursor": "335",
   "posts": [
    {
@@ -3567,6 +3567,5 @@
   "daily": {
    "day": "2026-11-23"
   }
- },
- "vk_story_retry_at": 1795383461.0906632
+ }
 }
