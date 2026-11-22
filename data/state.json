@@ -7,10 +7,6 @@
  "schedule_day": "2026-11-22",
  "content_slot": "2026-11-22-13",
  "news_seen": [
-  "https://www.sport-express.ru/hockey/nhl/news/forvard-chikago-bedard-prohodit-obsledovaniya-po-povodu-travmy-plecha-2476478/",
-  "https://www.sport-express.ru/hockey/nhl/news/kalgari-renglers-koachella-velli-fayrberds-schet-4-3-rezultat-matcha-ahl-19-noyabrya-2026-goda-2476477/",
-  "https://www.sport-express.ru/hockey/nhl/news/detroyt-boston-schet-1-4-rezultat-matcha-regulyarnogo-chempionata-nhl-19-noyabrya-2026-goda-2476468/",
-  "https://www.sport-express.ru/hockey/khl/news/dmitriy-kvartalnov-rasskazal-kogda-vernutsya-napadayuschie-rihard-panik-i-bayron-frez-2476451/",
   "https://www.sport-express.ru/football/england/news/istochnik-kristal-pelas-blizok-k-podpisaniyu-trenera-po-standartam-chelsi-kuevy-2476481/",
   "https://www.sport-express.ru/football/transfers/news/the-sun-pochettino-hotel-by-videt-niko-pasa-v-manchester-yunayted-2476474/",
   "https://www.sport-express.ru/football/world/news/bbc-futbolnaya-associaciya-anglii-rassmatrivala-vozmozhnost-podachi-iska-protiv-pereizbraniya-infantino-2476472/",
@@ -506,9 +502,13 @@
   "https://www.sport-express.ru/hockey/nhl/news/patrik-keyn-oboshel-dzho-mallena-i-vyshel-na-chetvertoe-mesto-po-golam-sredi-hokkeistov-iz-ssha-v-nhl-22-noyabrya-2026-2477583/",
   "https://www.sport-express.ru/hockey/nhl/news/forvard-roman-kancerov-zabil-10-golov-za-23-matcha-i-povtoril-sedmoy-rezultat-novichkov-chikago-22-noyabrya-2026-2477582/",
   "https://www.sport-express.ru/hockey/nhl/news/igrok-chikago-sem-rinzel-stal-chetvertym-zaschitnikom-v-istorii-nhl-s-pyatyu-matchami-podryad-s-dvumya-peredachami-2477581/",
-  "https://www.sport-express.ru/football/rfpl/news/sluckiy-zayavil-chto-seychas-ne-hochet-rabotat-trenerom-2477621/"
+  "https://www.sport-express.ru/football/rfpl/news/sluckiy-zayavil-chto-seychas-ne-hochet-rabotat-trenerom-2477621/",
+  "https://www.sport-express.ru/basketball/nba/news/centrovoy-san-antonio-viktor-vembanyama-pervym-v-istorii-nba-nabral-50-ochkov-s-5-blok-shotami-i-5-trehochkovymi-2477608/",
+  "parivision-ili-team-liquid-kto-stanet-liderom-gruppy-c-na-blast-slam-ix",
+  "https://www.sport-express.ru/football/france/news/lequipe-due-propustit-neskolko-mesyacev-iz-za-travmy-krestoobraznoy-svyazki-kolena-2477625/",
+  "https://www.sport-express.ru/football/rfpl/news/sluckiy-nazval-glavnoy-oshibkoy-v-karere-sovmeschenie-raboty-v-cska-i-sbornoy-rossii-2477623/"
  ],
- "news_i": 4,
+ "news_i": 1,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1682,7 +1682,7 @@
  "streak_day": {
   "2026-11-22": 2
  },
- "news_next": "2026-11-22T14:04:40.624158+03:00",
+ "news_next": "2026-11-22T14:39:45.253740+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1949,7 +1949,8 @@
   "https://upload.wikimedia.org/wikipedia/commons/e/e5/Karpin.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
   "https://upload.wikimedia.org/wikipedia/commons/9/93/CSKA-MC_%286%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
   "https://upload.wikimedia.org/wikipedia/commons/0/0f/Iran_women%27s_football_league_Malavan_women.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-  "https://ss.sport-express.ru/userfiles/materials/224/2245743/1180x665.jpg"
+  "https://ss.sport-express.ru/userfiles/materials/224/2245743/1180x665.jpg",
+  "https://ss.sport-express.ru/userfiles/materials/224/2245744/1180x665.jpg"
  ],
  "indexnow_day": "2026-11-22",
  "vk_wall_err": null,
@@ -2270,7 +2271,8 @@
   "8721",
   "8724",
   "8728",
-  "8736"
+  "8736",
+  "8741"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -2523,11 +2525,12 @@
   "2026-11-22:новость:cf1d30d65dc8b53972c8dad2",
   "2026-11-22:новость:c69d8ddd2936bd94220666be",
   "2026-11-22:новость:4cc9080cc18a92a8eb5084e3",
-  "2026-11-22:новость:0a3ce487ed80366a5a46cb1d"
+  "2026-11-22:новость:0a3ce487ed80366a5a46cb1d",
+  "2026-11-22:новость:b48bdfceac3781482271c98c"
  ],
  "dz_last_delivery": {
-  "source_id": 8736,
-  "message_id": 799,
+  "source_id": 8741,
+  "message_id": 800,
   "kind": "новость"
  },
  "learn_attempt_day": "2026-11-22",
@@ -2612,12 +2615,12 @@
   },
   "error": null,
   "tips": 10645,
-  "snapshots": 211,
+  "snapshots": 212,
   "unmapped_markets": 15833,
   "quote_matches": 25
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-22T14:02:46.410512+03:00",
+  "last_poll": "2026-11-22T14:08:45.253740+03:00",
   "cursor": "294",
   "posts": [
    {
