@@ -7,7 +7,6 @@
  "schedule_day": "2026-11-22",
  "content_slot": "2026-11-22-22",
  "news_seen": [
-  "https://www.sport-express.ru/football/england/news/poluzaschitnik-mihail-mudrik-meldoniy-mog-popast-v-moy-organizm-tolko-na-ukraine-2476505/",
   "https://www.sport-express.ru/cybersport/videogames/news/gta-6-vyshla-19-noyabrya-2026-goda-sostoyalsya-mirovoy-reliz-igry-na-ps5-i-xbox-2476539/",
   "https://www.sport-express.ru/cybersport/videogames/news/gta-izmenila-vse-specproekt-ob-istorii-serii-k-vyhodu-gta-6-2476393/",
   "https://www.sport-express.ru/hockey/nhl/news/dmitriy-simashev-stal-3-m-zaschitnikom-v-istorii-yuty-s-golom-v-menshinstve-2476544/",
@@ -506,9 +505,10 @@
   "https://www.sport-express.ru/tennis/atp/news/daniil-medvedev-zarabotal-bolee-5-6-milliona-dollarov-prizovyh-v-sezone-2026-rasklad-dohodov-tennisista-iz-rossii-2477746/",
   "furia-okazalas-samoi-vozrastnoi-komandoi-na-pgl-major-singapore-2026",
   "https://www.sport-express.ru/football/england/news/maurisio-pochettino-povtoril-antirekord-trenerov-myu-debyut-protiv-liverpulem-zakonchilsya-razgromom-0-4-2477790/",
-  "https://www.sport-express.ru/football/rfpl/news/ovchinnikov-poblagodaril-rotenberga-posle-pobedy-nad-rodinoy-komanda-videla-chto-rukovodstvo-ih-ne-brosaet-2477776/"
+  "https://www.sport-express.ru/football/rfpl/news/ovchinnikov-poblagodaril-rotenberga-posle-pobedy-nad-rodinoy-komanda-videla-chto-rukovodstvo-ih-ne-brosaet-2477776/",
+  "9class-nazval-svoi-silnyye-storony-v-dota-2"
  ],
- "news_i": 1,
+ "news_i": 2,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1556,7 +1556,7 @@
  "value_day": "2026-11-22",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-22",
- "site_stamp": "1501|9108|2026-11-22 22|4|423fd7cbdc6585ec",
+ "site_stamp": "1501|9108|2026-11-22 22|4|92ccad61b7526d3f",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1686,7 +1686,7 @@
  "streak_day": {
   "2026-11-22": 2
  },
- "news_next": "2026-11-22T22:32:10.430448+03:00",
+ "news_next": "2026-11-22T23:00:10.081247+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1968,7 +1968,8 @@
   "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c1/Nagoya_City_Minato_Soccer_Stadium_-_3.jpg/1280px-Nagoya_City_Minato_Soccer_Stadium_-_3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
   "https://ss.sport-express.ru/userfiles/materials/224/2245825/1180x665.jpg",
   "https://images.cybersport.ru/images/as-is/plain/d5/d5f55c2c-465e-4d93-baf5-f522d53ac404.jpg",
-  "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/07/Nogomet_Maribor_-_Lokomotiva_v_jugoslovanskem_pokalu_1961_%282%29.jpg/1280px-Nogomet_Maribor_-_Lokomotiva_v_jugoslovanskem_pokalu_1961_%282%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/07/Nogomet_Maribor_-_Lokomotiva_v_jugoslovanskem_pokalu_1961_%282%29.jpg/1280px-Nogomet_Maribor_-_Lokomotiva_v_jugoslovanskem_pokalu_1961_%282%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "https://images.cybersport.ru/images/as-is/plain/5b/5b69e408-532f-4835-a446-1ca7fc2d02e2.jpg"
  ],
  "indexnow_day": "2026-11-22",
  "vk_wall_err": null,
@@ -2304,7 +2305,8 @@
   "9038",
   "9064",
   "9084",
-  "9092"
+  "9092",
+  "9109"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -2572,11 +2574,12 @@
   "2026-11-22:новость:55751a4b33b964b26c81f8df",
   "2026-11-22:новость:aa33b52c4587d0738fb7c5d7",
   "2026-11-22:новость:c88fec09d12e2a0bcbebb734",
-  "2026-11-22:новость:08745b02d78173bcf4ae225a"
+  "2026-11-22:новость:08745b02d78173bcf4ae225a",
+  "2026-11-22:новость:8168baa95ddd333d7a79fb85"
  ],
  "dz_last_delivery": {
-  "source_id": 9092,
-  "message_id": 814,
+  "source_id": 9109,
+  "message_id": 815,
   "kind": "новость"
  },
  "learn_attempt_day": "2026-11-22",
@@ -2666,7 +2669,7 @@
   "quote_matches": 25
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-22T22:31:10.040058+03:00",
+  "last_poll": "2026-11-22T22:33:10.081247+03:00",
   "cursor": "330",
   "posts": [
    {
