@@ -515,7 +515,8 @@
   "https://www.sport-express.ru/hockey/nhl/news/san-hose-sietl-schet-i-rezultat-matcha-nhl-22-noyabrya-2026-2477530/",
   "https://www.sport-express.ru/hockey/nhl/news/vankuver-minnesota-schet-i-rezultat-matcha-nhl-22-noyabrya-2026-2477533/",
   "https://www.sport-express.ru/hockey/nhl/news/luchshie-snaypery-nhl-22-noyabrya-2026-top-10-regulyarnogo-chempionata-lidery-po-golam-drayzaytl-gote-kaprizov-2477535/",
-  "https://www.sport-express.ru/hockey/nhl/news/kirill-kaprizov-povtoril-rekord-minnesoty-po-prodolzhitelnosti-rezultativnoy-serii-v-nhl-2477538/"
+  "https://www.sport-express.ru/hockey/nhl/news/kirill-kaprizov-povtoril-rekord-minnesoty-po-prodolzhitelnosti-rezultativnoy-serii-v-nhl-2477538/",
+  "https://www.sport-express.ru/hockey/nhl/news/luchshie-bombardiry-nhl-22-noyabrya-2026-top-10-regulyarnogo-chempionata-lidery-po-golam-makdevid-drayzaytl-kaprizov-2477541/"
  ],
  "news_i": 4,
  "oddspapi": {
@@ -1693,7 +1694,7 @@
  "streak_day": {
   "2026-11-22": 2
  },
- "news_next": "2026-11-22T09:54:49.398838+03:00",
+ "news_next": "2026-11-22T10:00:50.707246+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -2607,26 +2608,9 @@
   "quote_matches": 25
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-22T09:52:50.066980+03:00",
-  "cursor": "281",
+  "last_poll": "2026-11-22T09:54:50.707246+03:00",
+  "cursor": "283",
   "posts": [
-   {
-    "post_id": 640,
-    "url": "https://vk.com/wall-228963529_640",
-    "title": "Джейсон Лейк станет первым лауреатом награды HLTV Awards 2026",
-    "text": "рџ“° История делает новый поворот: первый в HLTV Awards получит награду за развитие CS.",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": false,
-     "details_present": false,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-21T00:48:23.592545+03:00"
-   },
    {
     "post_id": 641,
     "url": "https://vk.com/wall-228963529_641",
@@ -3119,6 +3103,23 @@
     },
     "status": "needs_review",
     "observed_at": "2026-11-22T08:55:55.701190+03:00"
+   },
+   {
+    "post_id": 732,
+    "url": "https://vk.com/wall-228963529_732",
+    "title": "LIVE-прогноз зашёл: 1X · итог 1:1",
+    "text": "рџ“Љ LIVE-прогнозы бота: 114 из 161.",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": false,
+     "details_present": false,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-22T09:54:50.707246+03:00"
    }
   ],
   "status": "observing"
