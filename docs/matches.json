@@ -513,7 +513,7 @@ null
 "bo": null,
 "prediction": "predictions/2026-11-22-bernli-blekbern-rovers-401880159.html",
 "hs": "2",
-"as": "1",
+"as": "2",
 "tip": "П1 · 1.88",
 "top": false,
 "bot": {
@@ -810,7 +810,7 @@ null
 "bo": null,
 "prediction": "predictions/2026-11-22-energi-kotbus-hertha-berlin-401885048.html",
 "hs": "0",
-"as": "1",
+"as": "2",
 "tip": "П2 · 1.58",
 "top": false,
 "bot": {
@@ -1977,7 +1977,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-22-konyaspor-beshiktash-401888246.html",
-"hs": "0",
+"hs": "1",
 "as": "2",
 "tip": "П2 · 1.60",
 "top": false,
@@ -7579,6 +7579,111 @@ null
 ]
 ],
 "div": "URU",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "football",
+"id": "401875009",
+"league": "Италия · Серия A",
+"kickoff": "2026-11-23T22:45:00+03:00",
+"home": "Монца",
+"away": "Фиорентина",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/4007.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/109.png",
+"hid": "4007",
+"aid": "109",
+"bb": "https://betboom.ru/search?query=%D0%9C%D0%BE%D0%BD%D1%86%D0%B0&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/ita.1",
+"url": "live.html?s=football&p=soccer%2Fita.1&e=401875009&h=%D0%9C%D0%BE%D0%BD%D1%86%D0%B0&a=%D0%A4%D0%B8%D0%BE%D1%80%D0%B5%D0%BD%D1%82%D0%B8%D0%BD%D0%B0",
+"participants": [
+[
+"Монца",
+"Monza"
+],
+[
+"Фиорентина",
+"Fiorentina"
+]
+],
+"div": "I1",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "football",
+"id": "401876686",
+"league": "Франция · Лига 2",
+"kickoff": "2026-11-23T22:45:00+03:00",
+"home": "Нант",
+"away": "Grenoble",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/165.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/6994.png",
+"hid": "165",
+"aid": "6994",
+"bb": "https://betboom.ru/search?query=%D0%9D%D0%B0%D0%BD%D1%82&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/fra.2",
+"url": "live.html?s=football&p=soccer%2Ffra.2&e=401876686&h=%D0%9D%D0%B0%D0%BD%D1%82&a=Grenoble",
+"participants": [
+[
+"Нант",
+"Nantes"
+],
+[
+"Grenoble",
+"Grenoble"
+]
+],
+"div": "F2",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "football",
+"id": "401876683",
+"league": "Франция · Лига 2",
+"kickoff": "2026-11-23T22:45:00+03:00",
+"home": "Sochaux",
+"away": "Dunkerque",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/272.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/7732.png",
+"hid": "272",
+"aid": "7732",
+"bb": "https://betboom.ru/search?query=%D0%A1%D0%BE%D1%87%D0%B0%D1%83%D0%BA%D1%81&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/fra.2",
+"url": "live.html?s=football&p=soccer%2Ffra.2&e=401876683&h=Sochaux&a=Dunkerque",
+"participants": [
+[
+"Sochaux",
+"Sochaux"
+],
+[
+"Dunkerque",
+"Dunkerque"
+]
+],
+"div": "F2",
 "state": "pre",
 "bo": null,
 "prediction": "",
