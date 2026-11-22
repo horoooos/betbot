@@ -1276,7 +1276,7 @@ null
 ]
 ],
 "div": "BRA",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "predictions/2026-11-22-shapekoense-kruzeyro-401841325.html",
 "hs": "1",
@@ -1395,7 +1395,7 @@ null
 "min_odds": 1.64,
 "minute": "28'",
 "p": 0.64,
-"result": null,
+"result": "miss",
 "score": "0:0"
 }
 },
@@ -2421,7 +2421,7 @@ null
 "bo": null,
 "prediction": "predictions/2026-11-22-nyu-york-niks-portlend-401910024.html",
 "hs": "66",
-"as": "43",
+"as": "51",
 "tip": "Ф2 (-1.5) · 1.95",
 "top": false,
 "bot": {
@@ -2661,8 +2661,8 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-22-dallas-maveriks-klippers-401910025.html",
-"hs": "37",
-"as": "33",
+"hs": "44",
+"as": "40",
 "tip": "ТМ 230.5 · 1.89",
 "top": false,
 "bot": {
@@ -2762,8 +2762,8 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-22-minnesota-timbervulvz-memfis-grizzlis-401910026.html",
-"hs": "36",
-"as": "39",
+"hs": "44",
+"as": "42",
 "tip": "ТБ 228.5 · 1.91",
 "top": false,
 "bot": {
@@ -2863,8 +2863,8 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-22-san-antonio-spers-nyu-orlean-pelikans-401910027.html",
-"hs": "48",
-"as": "34",
+"hs": "49",
+"as": "42",
 "tip": "ТМ 229.5 · 1.89",
 "top": false,
 "bot": {

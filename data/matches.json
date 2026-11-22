@@ -29695,7 +29695,7 @@
   "kickoff": "2026-11-22T03:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Scheduled",
   "home": {
    "id": "9318",
@@ -29828,7 +29828,10 @@
   "btn": 4,
   "close": {
    "A": 0.6323
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null,
+  "value_hit": null
  },
  "401877049": {
   "id": "401877049",
@@ -30257,7 +30260,11 @@
    "weight": 0.0
   },
   "msg_id": 8636,
-  "btn": 4
+  "btn": 4,
+  "close": {
+   "H": 0.4936,
+   "U25": 0.444
+  }
  },
  "401876817": {
   "status": "skipped",
@@ -30413,6 +30420,10 @@
    "snapshot": "AUS|401892134"
   },
   "msg_id": 8638,
-  "btn": 4
+  "btn": 4,
+  "close": {
+   "H": 0.5067,
+   "U25": 0.4362
+  }
  }
 }
