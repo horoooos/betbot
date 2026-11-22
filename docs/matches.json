@@ -5210,7 +5210,7 @@ null
 ]
 ],
 "div": "NOR",
-"state": "pre",
+"state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-22-kfum-oslo-brann-401843488.html",
 "hs": "0",
@@ -5495,11 +5495,11 @@ null
 ]
 ],
 "div": "RUS",
-"state": "pre",
+"state": "in",
 "bo": null,
 "prediction": "",
 "hs": "0",
-"as": "0",
+"as": "1",
 "tip": "",
 "top": false,
 "bot": null,
@@ -5533,7 +5533,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-22-trabzonspor-eyupspor-401888249.html",
-"hs": "0",
+"hs": "1",
 "as": "0",
 "tip": "Обе забьют — да · ≈1.83",
 "top": false,
@@ -7018,12 +7018,78 @@ null
 "div": "ATP",
 "state": "pre",
 "bo": null,
-"prediction": "",
+"prediction": "predictions/2026-11-22-aleksandr-zverev-karlos-alkaras-187529.html",
 "hs": null,
 "as": null,
-"tip": "",
+"tip": "Будет 2 сета · ≈1.78",
 "top": false,
-"bot": null,
+"bot": {
+"main": {
+"label": "Будет 2 сета",
+"p": 0.522,
+"odds": 1.78,
+"est": true
+},
+"bold": null,
+"markets": [
+[
+"Победа: Александр Зверев",
+0.345,
+2.75
+],
+[
+"Победа: Карлос Алькарас",
+0.655,
+1.45
+],
+[
+"Будет 3 сета",
+0.478,
+null
+],
+[
+"Будет 2 сета",
+0.522,
+null
+],
+[
+"Счёт по сетам 2:0",
+0.156,
+null
+],
+[
+"Счёт по сетам 0:2",
+0.366,
+null
+],
+[
+"Счёт по сетам 2:1",
+0.189,
+null
+],
+[
+"Счёт по сетам 1:2",
+0.289,
+null
+],
+[
+"Александр Зверев возьмёт хотя бы сет",
+0.634,
+null
+],
+[
+"Карлос Алькарас возьмёт хотя бы сет",
+0.844,
+null
+]
+],
+"bar": [
+0.3452380952380952,
+0,
+0.6547619047619049
+],
+"center": "Линия winline · Эло 1949 : 2055"
+},
 "lt": null
 },
 {
