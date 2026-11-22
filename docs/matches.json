@@ -951,7 +951,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-22-kayzerslautern-dinamo-401885052.html",
-"hs": "1",
+"hs": "2",
 "as": "2",
 "tip": "ТБ 2.5 · 1.67",
 "top": false,
@@ -1246,7 +1246,7 @@ null
 "bo": null,
 "prediction": "predictions/2026-11-22-horsens-silkeborg-401874575.html",
 "hs": "1",
-"as": "1",
+"as": "0",
 "tip": "ТБ 2.5 · ≈1.56",
 "top": false,
 "bot": {
@@ -2132,7 +2132,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-22-hekken-elfsborg-401842887.html",
-"hs": "1",
+"hs": "2",
 "as": "1",
 "tip": "П1 · 1.90",
 "top": false,
@@ -3175,7 +3175,7 @@ null
 "bo": null,
 "prediction": "predictions/2026-11-22-levadiakos-atromitos-401896727.html",
 "hs": "0",
-"as": "1",
+"as": "0",
 "tip": "ТМ 2.5 · 1.53",
 "top": false,
 "bot": {
@@ -3601,7 +3601,7 @@ null
 "bo": null,
 "prediction": "predictions/2026-11-22-avellino-mantova-401899547.html",
 "hs": "0",
-"as": "0",
+"as": "1",
 "tip": "ТМ 2.5 · 1.79",
 "top": false,
 "bot": {
@@ -4806,12 +4806,119 @@ null
 "div": "SP1",
 "state": "pre",
 "bo": null,
-"prediction": "",
+"prediction": "predictions/2026-11-22-rasing-santander-real-sosedad-401882800.html",
 "hs": "0",
 "as": "0",
-"tip": "",
+"tip": "П2 · 1.99",
 "top": false,
-"bot": null,
+"bot": {
+"main": {
+"label": "П2",
+"p": 0.474,
+"odds": 1.99,
+"est": false
+},
+"bold": null,
+"markets": [
+[
+"П1",
+0.299,
+3.25
+],
+[
+"Ничья",
+0.227,
+4.0
+],
+[
+"П2",
+0.474,
+2.05
+],
+[
+"1X",
+0.526,
+null
+],
+[
+"X2",
+0.701,
+null
+],
+[
+"ТБ 1.5",
+0.886,
+null
+],
+[
+"ТБ 2.5",
+0.705,
+null
+],
+[
+"ТМ 2.5",
+0.295,
+null
+],
+[
+"ТБ 3.5",
+0.494,
+1.952
+],
+[
+"Обе забьют — да",
+0.702,
+null
+],
+[
+"Обе забьют — нет",
+0.298,
+null
+],
+[
+"ИТ1 больше 1.5",
+0.477,
+null
+],
+[
+"ИТ2 больше 1.5",
+0.605,
+null
+],
+[
+"Ф1 (−1.5)",
+0.146,
+null
+],
+[
+"Ф2 (+1.5)",
+0.854,
+null
+]
+],
+"bar": [
+0.29944475083586275,
+0.22671743105840717,
+0.47383781810573006
+],
+"center": "Ожидаемые голы (xG) 1.6 : 2.0",
+"scores": [
+[
+"1:1",
+0.092
+],
+[
+"1:2",
+0.087
+],
+[
+"2:2",
+0.07
+]
+],
+"corners": 13.5,
+"cards": 5.3
+},
 "lt": null
 },
 {
@@ -4841,12 +4948,124 @@ null
 "div": "SP2",
 "state": "pre",
 "bo": null,
-"prediction": "",
+"prediction": "predictions/2026-11-22-sporting-las-palmas-401882298.html",
 "hs": "0",
 "as": "0",
-"tip": "",
+"tip": "ТМ 2.5 · 1.85",
 "top": false,
-"bot": null,
+"bot": {
+"main": {
+"label": "ТМ 2.5",
+"p": 0.5,
+"odds": 1.85,
+"est": false
+},
+"bold": {
+"label": "П1",
+"p": 0.446,
+"odds": 2.05,
+"est": false
+},
+"markets": [
+[
+"П1",
+0.446,
+2.25
+],
+[
+"Ничья",
+0.274,
+3.3
+],
+[
+"П2",
+0.279,
+3.2
+],
+[
+"1X",
+0.721,
+null
+],
+[
+"X2",
+0.554,
+null
+],
+[
+"ТБ 1.5",
+0.756,
+null
+],
+[
+"ТБ 2.5",
+0.5,
+1.952
+],
+[
+"ТМ 2.5",
+0.5,
+1.8
+],
+[
+"ТБ 3.5",
+0.28,
+null
+],
+[
+"Обе забьют — да",
+0.544,
+null
+],
+[
+"Обе забьют — нет",
+0.456,
+null
+],
+[
+"ИТ1 больше 1.5",
+0.448,
+null
+],
+[
+"ИТ2 больше 1.5",
+0.321,
+null
+],
+[
+"Ф1 (−1.5)",
+0.228,
+null
+],
+[
+"Ф2 (+1.5)",
+0.772,
+null
+]
+],
+"bar": [
+0.446435275548759,
+0.27413587522049476,
+0.2794288492307461
+],
+"center": "Ожидаемые голы (xG) 1.5 : 1.2",
+"scores": [
+[
+"1:1",
+0.131
+],
+[
+"1:0",
+0.095
+],
+[
+"2:1",
+0.092
+]
+],
+"corners": 9.3,
+"cards": 5.0
+},
 "lt": null
 },
 {
@@ -5345,21 +5564,21 @@ null
 "league": "Греция · Суперлига",
 "kickoff": "2026-11-22T20:00:00+03:00",
 "home": "Олимпиакос",
-"away": "Ираклис",
+"away": "Iraklis",
 "hl": "https://a.espncdn.com/i/teamlogos/soccer/500/435.png",
 "al": "https://a.espncdn.com/i/teamlogos/soccer/500/2575.png",
 "hid": "435",
 "aid": "2575",
 "bb": "https://betboom.ru/search?query=%D0%9E%D0%BB%D0%B8%D0%BC%D0%BF%D0%B8%D0%B0%D0%BA%D0%BE%D1%81&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
 "path": "soccer/gre.1",
-"url": "live.html?s=football&p=soccer%2Fgre.1&e=401896809&h=%D0%9E%D0%BB%D0%B8%D0%BC%D0%BF%D0%B8%D0%B0%D0%BA%D0%BE%D1%81&a=%D0%98%D1%80%D0%B0%D0%BA%D0%BB%D0%B8%D1%81",
+"url": "live.html?s=football&p=soccer%2Fgre.1&e=401896809&h=%D0%9E%D0%BB%D0%B8%D0%BC%D0%BF%D0%B8%D0%B0%D0%BA%D0%BE%D1%81&a=Iraklis",
 "participants": [
 [
 "Олимпиакос",
 "Olympiacos"
 ],
 [
-"Ираклис",
+"Iraklis",
 "Iraklis"
 ]
 ],
@@ -5904,7 +6123,7 @@ null
 "id": "401912682",
 "league": "Бразилия · Серия B",
 "kickoff": "2026-11-22T22:00:00+03:00",
-"home": "Крисиума",
+"home": "Criciúma",
 "away": "Форталеза Сипакира",
 "hl": "https://a.espncdn.com/i/teamlogos/soccer/500/9971.png",
 "al": "https://a.espncdn.com/i/teamlogos/soccer/500/6272.png",
@@ -5912,10 +6131,10 @@ null
 "aid": "6272",
 "bb": "https://betboom.ru/search?query=%D0%9A%D1%80%D0%B8%D1%81%D0%B8%D1%83%D0%BC%D0%B0&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
 "path": "soccer/bra.2",
-"url": "live.html?s=football&p=soccer%2Fbra.2&e=401912682&h=%D0%9A%D1%80%D0%B8%D1%81%D0%B8%D1%83%D0%BC%D0%B0&a=%D0%A4%D0%BE%D1%80%D1%82%D0%B0%D0%BB%D0%B5%D0%B7%D0%B0+%D0%A1%D0%B8%D0%BF%D0%B0%D0%BA%D0%B8%D1%80%D0%B0",
+"url": "live.html?s=football&p=soccer%2Fbra.2&e=401912682&h=Crici%C3%BAma&a=%D0%A4%D0%BE%D1%80%D1%82%D0%B0%D0%BB%D0%B5%D0%B7%D0%B0+%D0%A1%D0%B8%D0%BF%D0%B0%D0%BA%D0%B8%D1%80%D0%B0",
 "participants": [
 [
-"Крисиума",
+"Criciúma",
 "Criciúma"
 ],
 [
@@ -5940,21 +6159,21 @@ null
 "league": "Эквадор · Лига Про",
 "kickoff": "2026-11-22T22:00:00+03:00",
 "home": "Orense",
-"away": "Мушук Руна",
+"away": "Mushuc Runa",
 "hl": "https://a.espncdn.com/i/teamlogos/soccer/500/20695.png",
 "al": "https://a.espncdn.com/i/teamlogos/soccer/500/17176.png",
 "hid": "20695",
 "aid": "17176",
 "bb": "https://betboom.ru/search?query=%D0%9E%D1%80%D0%B5%D0%BD%D1%81%D0%B5&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
 "path": "soccer/ecu.1",
-"url": "live.html?s=football&p=soccer%2Fecu.1&e=401921333&h=Orense&a=%D0%9C%D1%83%D1%88%D1%83%D0%BA+%D0%A0%D1%83%D0%BD%D0%B0",
+"url": "live.html?s=football&p=soccer%2Fecu.1&e=401921333&h=Orense&a=Mushuc+Runa",
 "participants": [
 [
 "Orense",
 "Orense"
 ],
 [
-"Мушук Руна",
+"Mushuc Runa",
 "Mushuc Runa"
 ]
 ],
@@ -6115,21 +6334,21 @@ null
 "league": "Перу · Лига 1",
 "kickoff": "2026-11-22T23:00:00+03:00",
 "home": "Спорт Уанкайо",
-"away": "Университарио",
+"away": "Universitario",
 "hl": "https://a.espncdn.com/i/teamlogos/soccer/500/10318.png",
 "al": "https://a.espncdn.com/i/teamlogos/soccer/500/2685.png",
 "hid": "10318",
 "aid": "2685",
 "bb": "https://betboom.ru/search?query=%D0%A3%D0%B0%D0%BD%D0%BA%D0%B0%D0%B9%D0%BE&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
 "path": "soccer/per.1",
-"url": "live.html?s=football&p=soccer%2Fper.1&e=401886136&h=%D0%A1%D0%BF%D0%BE%D1%80%D1%82+%D0%A3%D0%B0%D0%BD%D0%BA%D0%B0%D0%B9%D0%BE&a=%D0%A3%D0%BD%D0%B8%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D1%82%D0%B0%D1%80%D0%B8%D0%BE",
+"url": "live.html?s=football&p=soccer%2Fper.1&e=401886136&h=%D0%A1%D0%BF%D0%BE%D1%80%D1%82+%D0%A3%D0%B0%D0%BD%D0%BA%D0%B0%D0%B9%D0%BE&a=Universitario",
 "participants": [
 [
 "Спорт Уанкайо",
 "Sport Huancayo"
 ],
 [
-"Университарио",
+"Universitario",
 "Universitario"
 ]
 ],
