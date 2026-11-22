@@ -33,7 +33,7 @@ def inspect(post,items):
                 details_present='подробнее на сайте' in text.lower(),
                 one_short_link=len(links)==1,long_source_absent='horoooos.github.io' not in text,
                 image_present=image)
-    return dict(post_id=post.get('id'),url=f"https://vk.com/wall-{vk.GROUP_ID}_{post.get('id')}",
+    return dict(post_id=post.get('id'),published_at=post.get('date'),url=f"https://vk.com/wall-{vk.GROUP_ID}_{post.get('id')}",
                 title=matched['title'],text=text[:4096],checks=checks,
                 status='verified' if all(checks.values()) else 'needs_review')
 
