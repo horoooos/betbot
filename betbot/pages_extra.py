@@ -34,7 +34,7 @@ def build_teams(ms: list[dict], news: list[dict], now: pd.Timestamp) -> list[str
                 t["leagues"].add(m["league"])
     for u in upcoming:
         for side, logo in (("home", "hl"), ("away", "al")):
-            t = teams.get((u["sport"], u[side]))
+            t = teams.setdefault((u["sport"], u[side]), {"name": u[side], "sport": u["sport"], "logo": None, "leagues": set(), "preds": []})
             if t:
                 t.setdefault("next", []).append(u)
                 t["logo"] = t["logo"] or u.get(logo)
@@ -65,13 +65,13 @@ def _team_text(t: dict, preds: list[dict], done: list[dict], nxt: list[dict], no
         k = pd.Timestamp(u["kickoff"]).tz_convert("Europe/Moscow")
         when = f"{k.day} {MONTHS[k.month - 1]} в {k:%H:%M} МСК"
         tip = (f"Прогноз бота: <b>{H.escape(u['tip'])}</b>." if u.get("tip")
-               else "Прогноз бот опубликует примерно за час до начала — с шансом и коэффициентом.")
+               else "Прогноз появится только при достаточных данных и подходящем коэффициенте.")
         lg = f", {H.escape(u['league'])}" if u.get("league") else ""
         paras.append(f"<p>Ближайший матч — <b>{H.escape(u['home'])} — {H.escape(u['away'])}</b>, {when}{lg}. {tip} "
                      f"Матч можно смотреть онлайн на нашем сайте.</p>")
         faq.append((f"{name}: какой прогноз на ближайший матч?",
                     f"Прогноз бота на матч {u['home']} — {u['away']}: {u['tip']}." if u.get("tip")
-                    else f"Прогноз на матч {u['home']} — {u['away']} выйдет примерно за час до начала, {when}."))
+                    else f"Матч состоится {when}. Публикация прогноза не гарантируется."))
         faq.append((f"{name}: когда следующий матч?", f"{u['home']} — {u['away']}, {when}."))
     res, totals = [], []   # форма и тоталы по сыгранным матчам
     for m in done:
@@ -135,10 +135,14 @@ def _team_page(t: dict, news: list[dict], url: str) -> str:
                 if link else "")
     now_s = f"{pd.Timestamp.now(tz='Europe/Moscow'):%d.%m.%Y}"
     text, faq, short = _team_text(t, preds, done, nxt, now_s)
+    from .growth import topic_key, share_card
+    follow = "../follow.html?topic=" + topic_key("team", sport, name)
+    share_image = "share/" + topic_key("team",sport,name) + ".jpg"
+    if not (DOCS/share_image).exists():share_card(name,"Матчи · результаты · новости",DOCS/share_image)
     faq_html = ('<h2>Вопросы</h2>' + "".join(f"<h3>{H.escape(q)}</h3><p>{H.escape(x)}</p>" for q, x in faq)) if faq else ""
     body = f"""{crumbs}<div class="card" style="display:flex;gap:16px;align-items:center;margin-top:10px">{logo}<div>
 <span class="tag">{EMOJI.get(sport, "")} {SPORT_RU.get(sport, "")}{" · " + H.escape(league) if league else ""}</span>
-<h1 style="margin:4px 0">{H.escape(name)}: <span>прогноз и ставки на матчи</span></h1><p class="muted small">{H.escape(stat)}</p>{live_btn}</div></div>
+<h1 style="margin:4px 0">{H.escape(name)}: <span>матчи, результаты и новости</span></h1><p class="muted small">{H.escape(stat)}</p>{live_btn}<a class="btn gold" href="{follow}">Следить за командой</a></div></div>
 <h2>📝 {H.escape(name)}: разбор и прогноз</h2><div class="card">{text}</div>
 {('<h2>📅 Ближайшие матчи</h2><div class="grid">' + "".join(nxt_card(u) for u in nxt) + "</div>") if nxt else ""}
 <h2>🎯 Прогнозы бота на матчи «{H.escape(name)}»</h2><div class="grid">{"".join(_match_card(m, "../") for m in preds[:24])}</div>
@@ -157,14 +161,14 @@ def _team_page(t: dict, news: list[dict], url: str) -> str:
     if faq:
         lds.append({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
             {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in faq]})
-    return page("../", title, desc, SITE + url, body, "teams", t["logo"], lds)
+    return page("../", title, desc, SITE + url, body, "teams", SITE + share_image, lds)
 
 
 def _teams_index(teams: dict) -> str:
     """Каталог команд плитками: логотип, название, сколько прогнозов; быстрый фильтр и вкладки по видам спорта."""
     crumbs, bc = _crumbs("../", [("Главная", ""), ("Команды", None)])
     blocks, tabs = "", []
-    for sp in ("football", "hockey", "basketball", "tennis"):
+    for sp in ("football", "hockey", "basketball", "tennis", "esports"):
         by = defaultdict(list)
         for (s, name), t in teams.items():
             if s == sp:

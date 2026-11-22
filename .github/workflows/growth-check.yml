@@ -1,0 +1,41 @@
+name: Verify discovery and subscriptions
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r requirements.txt
+      - run: python -m unittest discover -s tests
+      - run: python tools/growth_check.py --video
+      - name: Check original video dimensions and duration
+        run: |
+          python - <<'PY'
+          import imageio_ffmpeg,subprocess,re
+          p=subprocess.run([imageio_ffmpeg.get_ffmpeg_exe(),'-i','work/growth-preview/news-preview.mp4'],capture_output=True,text=True)
+          assert '1080x1920' in p.stderr,p.stderr
+          assert re.search(r'Duration: 00:00:(?:1[0-9]|2[0-9])',p.stderr),p.stderr
+          print('Original vertical video decoded: 1080x1920, duration verified')
+          PY
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm install --ignore-scripts && npx playwright install --with-deps chrome
+        working-directory: tools/browser-qa
+      - name: Check browser settings and pages
+        run: |
+          python -m http.server 8766 --bind 127.0.0.1 --directory work/growth-preview >work/growth-preview/server.log 2>&1 &
+          node tools/browser-qa/growth.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: growth-proof
+          path: work/growth-preview
+          retention-days: 7
