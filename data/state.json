@@ -1554,7 +1554,7 @@
  "value_day": "2026-11-22",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-22",
- "site_stamp": "1471|8991|2026-11-22 19|4|bd800072b48932a1",
+ "site_stamp": "1472|9006|2026-11-22 19|4|8800f45e0ba06de7",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1710,7 +1710,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 8991,
+ "dz_last": 9006,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2651,43 +2651,9 @@
   "quote_matches": 25
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-22T19:25:13.904855+03:00",
-  "cursor": "313",
+  "last_poll": "2026-11-22T19:31:36.997382+03:00",
+  "cursor": "317",
   "posts": [
-   {
-    "post_id": 682,
-    "url": "https://vk.com/wall-228963529_682",
-    "title": "Кузьмин поздравил «Рубин» после триумфа над «Зенитом» (3:1)",
-    "text": "рџ“° «Рубин» разгромил «Зенит» со счётом 3:1 в 15-м туре РПЛ, и главный тренер Олег Кузьмин сразу же обратился к своим игрокам. Победа стала четвёртым поражением для лидера чемпионата, который теперь имеет 31 очко.",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": false,
-     "details_present": false,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-21T23:16:50.501017+03:00"
-   },
-   {
-    "post_id": 686,
-    "url": "https://vk.com/wall-228963529_686",
-    "title": "LIVE-прогноз не зашёл: ТБ 1.5 · итог 0:1",
-    "text": "рџ“Љ LIVE-прогнозы бота: 112 из 158.",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": false,
-     "details_present": false,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-21T23:16:50.501017+03:00"
-   },
    {
     "post_id": 688,
     "url": "https://vk.com/wall-228963529_688",
@@ -3163,6 +3129,40 @@
     },
     "status": "needs_review",
     "observed_at": "2026-11-22T18:27:12.099453+03:00"
+   },
+   {
+    "post_id": 764,
+    "url": "https://vk.com/wall-228963529_764",
+    "title": "Слуцкий назвал Уткина любимым комментатором",
+    "text": "рџ“° Российский тренер Леонид Слуцкий в интервью «СЭ» откровенно признался, что его любимый комментатор – Василий Уткин. По его словам, появление «совершенно иной манеры» у Уткина стало настоящей революцией в футбольных трансляциях.",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": false,
+     "details_present": false,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-22T19:31:36.997382+03:00"
+   },
+   {
+    "post_id": 766,
+    "url": "https://vk.com/wall-228963529_766",
+    "title": "«Динамо» (Москва) уверенно возглавило таблицу после 15-го тура",
+    "text": "вљЅпёЏ Московское «Динамо» (Москва) уверенно возглавило турнирную таблицу РПЛ после завершения первого круга сезона-2026/27, собрав 32 очка.",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": false,
+     "details_present": false,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-22T19:31:36.997382+03:00"
    }
   ],
   "status": "observing"
