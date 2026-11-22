@@ -7,10 +7,6 @@
  "schedule_day": "2026-11-22",
  "content_slot": "2026-11-22-16",
  "news_seen": [
-  "https://www.sport-express.ru/football/france/news/zhonatan-kloss-kommentariy-po-nepopadaniyu-v-sbornuyu-francii-2476460/",
-  "https://www.sport-express.ru/football/italy/news/prezident-intera-marotta-predlozhil-vvesti-v-shkolah-uroki-futbola-2476457/",
-  "https://www.sport-express.ru/football/england/news/arsenal-hochet-podpisat-poluzaschitnika-sbornoy-anglii-aleksa-skotta-2476456/",
-  "https://www.sport-express.ru/football/france/news/novyy-trener-gavra-ismael-vperedi-esche-72-ochka-vse-vozmozhno-2476454/",
   "https://www.sport-express.ru/football/spain/news/hose-kampanya-pereshel-v-zamoru-iz-tretego-diviziona-ispanii-2476452/",
   "https://www.sport-express.ru/basketball/nba/news/zaschitnik-san-antonio-harper-propustit-igru-s-klippers-iz-za-travmy-2476471/",
   "https://www.sport-express.ru/basketball/nba/news/bruklin-chikago-schet-107-137-rezultat-matcha-regulyarnogo-chempionata-nba-19-noyabrya-2026-goda-2476466/",
@@ -506,9 +502,13 @@
   "https://www.sport-express.ru/football/rfpl/news/semin-o-penalti-v-matche-cska-ahmat-ne-ponimayu-kogda-naznachayutsya-11-metrovye-s-var-vse-stalo-huzhe-2477634/",
   "https://www.sport-express.ru/football/france/news/u-napadayuschego-pszh-due-diagnostirovan-razryv-krestoobraznoy-svyazki-kolena-2477639/",
   "https://www.sport-express.ru/football/rfpl/news/dinamo-krasnodar-nichya-posle-pervogo-tayma-2477638/",
-  "lorenof-protiv-sumail-kto-okazhet-sya-silneye-na-blast-slam-ix"
+  "lorenof-protiv-sumail-kto-okazhet-sya-silneye-na-blast-slam-ix",
+  "https://www.sport-express.ru/hockey/vhl/news/byvshego-hokkeista-rubina-sakketti-zastrelil-policeyskiy-v-ssha-2477649/",
+  "https://www.sport-express.ru/hockey/nhl/news/trener-minnesoty-hayns-o-kaprizove-on-vykladyvaetsya-na-polnuyu-kazhdyy-vecher-2477643/",
+  "https://www.sport-express.ru/football/spain/news/barselona-vilyarreal-yamal-ne-realizoval-penalti-na-23-y-minute-2477658/",
+  "https://www.sport-express.ru/football/rfpl/news/gendirektor-dinamo-pivovarov-ne-hochu-kommentirovat-slova-karpina-o-nedoverii-k-klubam-2477656/"
  ],
- "news_i": 2,
+ "news_i": 4,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1552,7 +1552,7 @@
  "value_day": "2026-11-22",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-22",
- "site_stamp": "1447|8826|2026-11-22 16|4|6682e08ed43b141c",
+ "site_stamp": "1448|8828|2026-11-22 16|4|b8bcc9f872bf5d91",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1684,7 +1684,7 @@
  "streak_day": {
   "2026-11-22": 2
  },
- "news_next": "2026-11-22T16:21:16.297398+03:00",
+ "news_next": "2026-11-22T16:54:14.277413+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1708,7 +1708,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 8826,
+ "dz_last": 8828,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -1955,7 +1955,8 @@
   "https://ss.sport-express.ru/userfiles/materials/224/2245744/1180x665.jpg",
   "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/53/FC_Akhmat_mascot.jpg/1280px-FC_Akhmat_mascot.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
   "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/2018-08-19_BFC_Dynamo_vs._1._FC_K%C3%B6ln_%28DFB-Pokal%29_by_Sandro_Halank%E2%80%93009.jpg/1280px-2018-08-19_BFC_Dynamo_vs._1._FC_K%C3%B6ln_%28DFB-Pokal%29_by_Sandro_Halank%E2%80%93009.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-  "https://images.cybersport.ru/images/as-is/plain/7c/7c37f704-0916-4127-96e3-e20ed96d283a.jpg"
+  "https://images.cybersport.ru/images/as-is/plain/7c/7c37f704-0916-4127-96e3-e20ed96d283a.jpg",
+  "https://upload.wikimedia.org/wikipedia/commons/0/06/Ipswich_football_stadium_-_geograph.org.uk_-_2083170.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
  ],
  "indexnow_day": "2026-11-22",
  "vk_wall_err": null,
@@ -2280,7 +2281,8 @@
   "8741",
   "8755",
   "8776",
-  "8794"
+  "8794",
+  "8829"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -2537,11 +2539,12 @@
   "2026-11-22:новость:b48bdfceac3781482271c98c",
   "2026-11-22:новость:569508aeb2b3474174ad8300",
   "2026-11-22:новость:52a6e13bf154385c0944b118",
-  "2026-11-22:новость:c0554dfbaa3daa0448932dc7"
+  "2026-11-22:новость:c0554dfbaa3daa0448932dc7",
+  "2026-11-22:новость:b691fe15b22cc64ddf480083"
  ],
  "dz_last_delivery": {
-  "source_id": 8794,
-  "message_id": 803,
+  "source_id": 8829,
+  "message_id": 804,
   "kind": "новость"
  },
  "learn_attempt_day": "2026-11-22",
@@ -2567,9 +2570,9 @@
   "model": {
    "weight": 0.0,
    "status": "collecting",
-   "settled_matches": 83,
+   "settled_matches": 84,
    "required_matches": 100,
-   "trained_at": "2026-11-22T03:55:10.452910+00:00"
+   "trained_at": "2026-11-22T13:24:14.277413+00:00"
   },
   "sport_models": {
    "hockey": {
@@ -2631,43 +2634,9 @@
   "quote_matches": 25
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-22T16:17:25.696500+03:00",
-  "cursor": "298",
+  "last_poll": "2026-11-22T16:24:14.277413+03:00",
+  "cursor": "300",
   "posts": [
-   {
-    "post_id": 672,
-    "url": "https://vk.com/wall-228963529_672",
-    "title": "Луис Энрике сократил отставание «Зенита» до минимума в матче с «Рубином»",
-    "text": "вљЎпёЏ«Зенит» врезался в «Рубин», но Луис Энрике спас ситуацию!",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": false,
-     "details_present": false,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-21T20:02:41.769370+03:00"
-   },
-   {
-    "post_id": 674,
-    "url": "https://vk.com/wall-228963529_674",
-    "title": "Кокшаров получил перелом: форвард «Факела» может пропустить сезон",
-    "text": "рџ“° Вчера в Воронеже «Факел» потерял одного из своих главных атакующих орудий – нападающего Александра Кокшарова, которому поставили диагноз «перелом средней трети большеберцовой кости».",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": false,
-     "details_present": false,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-21T20:02:41.769370+03:00"
-   },
    {
     "post_id": 675,
     "url": "https://vk.com/wall-228963529_675",
@@ -3143,6 +3112,40 @@
     },
     "status": "needs_review",
     "observed_at": "2026-11-22T15:15:12.386577+03:00"
+   },
+   {
+    "post_id": 748,
+    "url": "https://vk.com/wall-228963529_748",
+    "title": "SumaiL против Astra Invicta: кто выйдет победителем в BLAST Slam IX?",
+    "text": "рџ“° СумайЛ готов разнести Astra Invicta на BLAST Slam IX!",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": false,
+     "details_present": false,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-22T16:24:14.277413+03:00"
+   },
+   {
+    "post_id": 749,
+    "url": "https://vk.com/wall-228963529_749",
+    "title": "«Динамо» осталось в меньшинстве после ничьей с «Краснодаром»",
+    "text": "вљЎпёЏ Первый тайм 15-го тура РПЛ подарил зрителям настоящую драму на поле.",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": false,
+     "details_present": false,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-22T16:24:14.277413+03:00"
    }
   ],
   "status": "observing"
