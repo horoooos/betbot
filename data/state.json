@@ -2697,26 +2697,9 @@
   "quote_matches": 30
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-23T02:53:18.228585+03:00",
-  "cursor": "339",
+  "last_poll": "2026-11-23T02:55:19.049847+03:00",
+  "cursor": "340",
   "posts": [
-   {
-    "post_id": 743,
-    "url": "https://vk.com/wall-228963529_743",
-    "title": "Безуглов объяснил, почему Данилова держат в сборе, а не в «ЦСКА»",
-    "text": "рџ“° Главный врач «ЦСКА» Эдуард Безуглов в интервью «СЭ» раскрыл, почему сборная России удержала 19-летнего защитника клуба в расположении национальной команды во время первого осеннего сбора. По его словам, решение о том, где будет находиться игрок, принимается не врачами, а главным тренером сборной.",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": false,
-     "details_present": false,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-22T13:08:51.811071+03:00"
-   },
    {
     "post_id": 744,
     "url": "https://vk.com/wall-228963529_744",
@@ -3233,6 +3216,25 @@
     },
     "status": "needs_review",
     "observed_at": "2026-11-23T01:53:18.497789+03:00"
+   },
+   {
+    "post_id": 789,
+    "published_at": 1795391657,
+    "url": "https://vk.com/wall-228963529_789",
+    "title": "1w Team обыграла Aurora Gaming и вышла в плей-офф BLAST Slam IX",
+    "text": "рџ”Ґ 1w Team без труда прошла групповую битву, обыграв Aurora Gaming со счётом 2:0 на этапе BLAST Slam IX по Dota 2.\n\nрџ“Њ После этого в следующем раунде Оливер Skiter Лепко встретится с «Astra Invicta — LGD Gaming», признанным фаворитом группы.\n\nрџ—“ По расписанию встреча с LGD запланирована на 23 ноября в 20:00 мск, а сам турнир длится с 20 по 29 ноября и проходит полностью онлайн.\n\nПодписывайтесь на «АИ СТАВИТ» — спортивные новости каждый день.\n\n#киберспорт #Dota #новостиспорта #спорт #главное #аиставит\n\nрџ“Љ Подробнее на сайте рџ‘‡",
+    "checks": {
+     "encoding_clean": false,
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": true,
+     "details_present": true,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-23T02:55:19.049847+03:00"
    }
   ],
   "status": "observing"
