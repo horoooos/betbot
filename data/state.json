@@ -1497,7 +1497,9 @@
      "F31522",
      "1a316b"
     ],
-    "label": "Победа: Твенте"
+    "label": "Победа: Твенте",
+    "win": true,
+    "score": "2:1"
    },
    {
     "sport": "football",
@@ -1550,7 +1552,7 @@
  "value_day": "2026-11-22",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-22",
- "site_stamp": "1446|8817|2026-11-22 16|4|ccbb340a2a1cfd97",
+ "site_stamp": "1447|8823|2026-11-22 16|4|6682e08ed43b141c",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1706,7 +1708,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 8817,
+ "dz_last": 8823,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2624,12 +2626,12 @@
   },
   "error": null,
   "tips": 10814,
-  "snapshots": 217,
+  "snapshots": 223,
   "unmapped_markets": 16014,
   "quote_matches": 25
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-22T16:01:28.761635+03:00",
+  "last_poll": "2026-11-22T16:10:38.556861+03:00",
   "cursor": "298",
   "posts": [
    {
