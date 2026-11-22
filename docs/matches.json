@@ -3923,7 +3923,7 @@ null
 "bo": null,
 "prediction": "predictions/2026-11-22-senneryyusk-odense-401874541.html",
 "hs": "0",
-"as": "0",
+"as": "1",
 "tip": "ТБ 2.5 · ≈1.54",
 "top": false,
 "bot": {
@@ -5081,7 +5081,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-22-olesunn-rusenborg-401843490.html",
-"hs": "0",
+"hs": "1",
 "as": "0",
 "tip": "П2 · 1.66",
 "top": false,
@@ -5658,7 +5658,15 @@ null
 "corners": 8.7,
 "cards": 4.0
 },
-"lt": null
+"lt": {
+"fair": 1.29,
+"label": "ТБ 2.5",
+"min_odds": 1.35,
+"minute": "25'",
+"p": 0.777,
+"result": null,
+"score": "1:0"
+}
 },
 {
 "sport": "football",
@@ -5688,7 +5696,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-22-aretstso-padova-401899549.html",
-"hs": "0",
+"hs": "1",
 "as": "0",
 "tip": "ТМ 2.5 · 1.75",
 "top": false,
