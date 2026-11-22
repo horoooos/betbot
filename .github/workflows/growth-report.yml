@@ -1,0 +1,27 @@
+name: Weekly audience report
+on:
+  schedule:
+    - cron: '15 6 * * 1'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install requests pandas google-auth
+      - run: python tools/growth_report.py
+        env:
+          FIREBASE_SA: ${{ secrets.FIREBASE_SA }}
+      - uses: actions/upload-artifact@v4
+        with:
+          name: audience-report
+          path: work/growth-report.*
+          retention-days: 30

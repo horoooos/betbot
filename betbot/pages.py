@@ -220,11 +220,11 @@ def page(prefix: str, title: str, desc: str, canon: str, body: str, on: str = ""
 {body}
 <footer>АИ СТАВИТ — бесплатные прогнозы на спорт от искусственного интеллекта и честная статистика. Прогноз — не гарантия выигрыша. 18+.
 <br><a href="https://t.me/{CH}">Telegram-канал @{CH}</a> · <a href="{prefix}./">Статистика бота</a> · <a href="{prefix}matches.html">Матчи онлайн</a> · <a href="{prefix}news/">Новости спорта</a> · <a href="{prefix}predictions/">Прогнозы на матчи</a>
-<br><a href="{prefix}leagues.html">Команды, игроки и турниры</a> · <a href="{prefix}teams/">Прогнозы по командам</a> · <a href="{prefix}tools.html">Калькуляторы ставок</a> · <a href="{prefix}school/">Школа ставок</a> · <a href="{prefix}top.html">Рейтинг прогнозистов</a>
+<br><a href="{prefix}leagues.html">Справочник спорта</a> · <a href="{prefix}teams/">Команды и игроки</a> · <a href="{prefix}tournaments/">Турниры</a> · <a href="{prefix}follow.html">Мой спорт</a> · <a href="{prefix}digest/">Главное за день</a> · <a href="{prefix}tools.html">Калькуляторы ставок</a> · <a href="{prefix}school/">Школа ставок</a> · <a href="{prefix}top.html">Рейтинг прогнозистов</a>
 <br>Прогнозы: <a href="{prefix}prognozy/futbol-segodnya.html">на футбол сегодня</a> · <a href="{prefix}prognozy/ekspress-dnya.html">экспресс дня</a> · <a href="{prefix}itogi/">итоги дня</a> · <a href="{prefix}prognozy/rpl.html">РПЛ</a> · <a href="{prefix}prognozy/apl.html">АПЛ</a> · <a href="{prefix}prognozy/liga-chempionov.html">Лига чемпионов</a> · <a href="{prefix}prognozy/hokkej-nhl.html">хоккей</a> · <a href="{prefix}prognozy/nba.html">НБА</a> · <a href="{prefix}prognozy/tennis.html">теннис</a> · <a href="{prefix}prognozy/kibersport.html">киберспорт</a> · <a href="{prefix}watch/">смотреть онлайн</a>
 <br>Мы в соцсетях: {SOCIAL_LINKS} · <a href="https://vk.me/aistavvit" rel="noopener">написать в поддержку</a></footer>
 </main><div class="sticky"><a class="a" href="{prefix}matches.html">📺 Онлайн</a><a class="b" href="https://t.me/{CH}">📲 Канал</a></div>
-<script type="module">import("{prefix}fb.js?v=12").then(fb => {{ fb.navUser(document.getElementById("navUser")); fb.track("{on or 'page'}");
+<script type="module">import("{prefix or './'}fb.js?v=12").then(fb => {{ fb.navUser(document.getElementById("navUser")); fb.track("{on or 'page'}");
   fb.countView(document.querySelector("[data-view]")); fb.showViews();
   const v = document.getElementById("votes"); if (v) fb.voteWidget(v, v.dataset.m, {{ finished: v.dataset.f === "1", botHit: v.dataset.h === "" ? null : v.dataset.h === "1" }}); }}).catch(() => {{}});</script>
 </body></html>"""
@@ -257,6 +257,8 @@ def _news(store: dict[int, dict]) -> list[dict]:
                 conts[parent] = re.sub(r"\s*<a[^>]*>#[^<]+</a>\s*$", "", c.strip()).strip()
     for p in store.values():
         from .dzen import delivery_kind
+        if any(marker in p.get("html", "") for marker in ("#новостивидео", "#дайджестновостей")):
+            continue
         if delivery_kind(p.get("html", "")) != "новость":
             continue
         plain = _plain(p["html"]).strip()
@@ -845,6 +847,10 @@ def _vk_rss(news: list[dict], now: pd.Timestamp, *, article=False) -> str:
     article_since = DATA / "vk_rss_article_since.txt"
     if article and article_since.exists():
         since = max(since, pd.Timestamp(article_since.read_text(encoding="utf-8").strip()))
+    from .growth_campaigns import saved_digest
+    digest=saved_digest()
+    if digest:
+        news=[n for n in news if n['title']!=digest['title']]+[digest]
     from .vk_rss import is_news
     selected = [n for n in news if is_news(n) and n.get("photo") and n.get("complete", True) and since <= pd.Timestamp(n["t"]) <= now
                 and now - pd.Timestamp(n["t"]) <= pd.Timedelta(hours=24)]
@@ -959,6 +965,8 @@ def build(stores: dict, results: pd.DataFrame, now: pd.Timestamp, max_pages: int
     changed += _write(DOCS / "predictions" / "index.html", _pred_index(ms, now))
     from . import pages_extra
     extra = pages_extra.build_teams(ms, news, now) + pages_extra.build_school()
+    from . import growth
+    extra += growth.build(news, ms, now)
     _write(DOCS / "tools.html", pages_extra.build_tools())
     extra += ["tools.html", "top.html", "leagues.html"]
     try:   # подборки под запросы «прогнозы на футбол сегодня», «прогнозы на РПЛ», «экспресс дня» и т.д.

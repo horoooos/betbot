@@ -54,7 +54,7 @@ export const device = () => { const ua = navigator.userAgent || ""; return /iPad
 export function track(page, match = null) {
   const vid = visitorId(), day = new Date().toISOString().slice(0, 10), src = source(), dev = device();
   if (ls.get("aiday") !== day) {   // один раз в день: уникальный посетитель + откуда пришёл
-    set(ref(db, `visits/${day}/${vid}`), { t: Date.now(), r: src, d: dev, p: String(page).slice(0, 40) }).catch(() => {}); ls.set("aiday", day);
+    set(ref(db, `visits/${day}/${vid}`), { t: Date.now(), r: src, d: dev, p: String(page).slice(0, 40), c: (new URLSearchParams(location.search).get("utm_content")||location.pathname).slice(0,120) }).catch(() => {}); ls.set("aiday", day);
   }
   const conn = push(ref(db, "online")).key, started = Date.now();
   const me = ref(db, `online/${conn}`), pm = match ? ref(db, `presence/${match}/${conn}`) : null;
@@ -583,3 +583,25 @@ function social() { socialCss(); socialIcons(document.querySelector("footer")); 
 
 const boot = () => { telegramApp(); supportButton(); searchButton(); onlineBadge(); bellButton(); reveal(); social(); };
 if (typeof document !== "undefined") { if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", boot); else boot(); }
+
+// Explicit user actions only; aggregate counts contain no account profile or text.
+export async function growthEvent(name) {
+  if (!["share","follow","unfollow","telegram_click"].includes(name)) return;
+  const day=new Date().toISOString().slice(0,10), key="event-"+name+"-"+(crypto.randomUUID?.()||Date.now()+"-"+Math.random().toString(36).slice(2));
+  await set(ref(db,`visits/${day}/${key}`),{t:Date.now(),r:source(),d:device(),p:location.pathname.slice(0,120),c:(new URLSearchParams(location.search).get("utm_content")||location.pathname).slice(0,120),kind:"event",a:{[name]:1}}).catch(()=>{});
+}
+export async function getInterests() {
+  if (!pushTok && ls.get("aiInterestToken")) pushTok=ls.get("aiInterestToken");
+  if (!pushTok) return {topics:{},events:{}};
+  const local=()=>{try{return JSON.parse(ls.get("aiInterests")||"null")||{topics:{},events:{}};}catch{return {topics:{},events:{}};}};
+  try{const s=await get(ref(db,`push/${pushKey(pushTok)}/interests`));return s.val()||local();}catch{return local();}
+}
+export async function pushInterests(topics,events,requestPermission=true) {
+  if (!pushTok && ls.get("aiInterestToken")) pushTok=ls.get("aiInterestToken");
+  if (!requestPermission&&!pushTok)return true;
+  const t=requestPermission?await pushToken():pushTok;
+  await update(ref(db,`push/${pushKey(t)}`),{t,ts:serverTimestamp(),interests:{topics,events}});
+  ls.set("aiInterestToken",t);ls.set("aiInterests",JSON.stringify({topics,events}));return true;
+}
+document.addEventListener("click",e=>{const a=e.target.closest?.("a");if(a&&/^https:\/\/t\.me\/aistavvit(?:[/?#]|$)/.test(a.href))growthEvent("telegram_click");});
+import('./growth.js?v=1').then(m=>m.mount({pushInterests,getInterests,growthEvent})).catch(()=>{});

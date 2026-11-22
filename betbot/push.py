@@ -95,7 +95,7 @@ def notify_all(title: str, body: str, link: str, tag: str = "ai-weekly") -> int:
         return 0
     n = 0
     for key, s in list(_subscribers(tok).items()):
-        if isinstance(s, dict) and s.get("t"):
+        if isinstance(s, dict) and s.get("t") and (s.get("d") or s.get("weekly")):
             n += _send(tok, key, s["t"], title, body, link, tag)
     print(f"  push: «{title}» → {n} устройств")
     return n
