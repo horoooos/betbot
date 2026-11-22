@@ -2663,60 +2663,9 @@
   "quote_matches": 25
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-22T21:37:10.888966+03:00",
-  "cursor": "327",
+  "last_poll": "2026-11-22T21:39:10.361368+03:00",
+  "cursor": "330",
   "posts": [
-   {
-    "post_id": 705,
-    "url": "https://vk.com/wall-228963529_705",
-    "title": "Гусев стал первым российским тренером с двойной победой над ЦСКА в РПЛ",
-    "text": "рџ“° Гусев снова заставил ЦСКА плакать: две победы подряд в первых встречах!",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": false,
-     "details_present": false,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-22T01:28:56.979694+03:00"
-   },
-   {
-    "post_id": 706,
-    "url": "https://vk.com/wall-228963529_706",
-    "title": "Травма Куинна Хьюза: защитник «Миннесоты» пропустит два матча",
-    "text": "рџ“° Тяжелый удар: Куинн Хьюз вышел из игры с травмой!",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": false,
-     "details_present": false,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-22T01:28:56.979694+03:00"
-   },
-   {
-    "post_id": 708,
-    "url": "https://vk.com/wall-228963529_708",
-    "title": "«Ахмат» расстался с Черчесовым без отступных",
-    "text": "рџ“° «Ахмат» и Черчесов разошлись без единой копейки!",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": false,
-     "details_present": false,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-22T02:34:53.107749+03:00"
-   },
    {
     "post_id": 709,
     "url": "https://vk.com/wall-228963529_709",
@@ -3175,6 +3124,63 @@
     },
     "status": "needs_review",
     "observed_at": "2026-11-22T20:40:08.021346+03:00"
+   },
+   {
+    "post_id": 777,
+    "published_at": 1795372637,
+    "url": "https://vk.com/wall-228963529_777",
+    "title": "Пуси открыл счёт в РПЛ за 22 матча, благодарит тренера",
+    "text": "рџ“° Нападающий «Факела» Белайди Пуси наконец-то открыл свой счёт в Российской Премьер-лиге, забив гол в матче 15-го тура против тольяттинского «Акрона».\n\n#футбол #РПЛ #Пуси #новостиспорта #спорт #главное #аиставит\n\nрџ“Љ Подробнее на сайте рџ‘‡",
+    "checks": {
+     "encoding_clean": false,
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": true,
+     "details_present": true,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-22T21:39:10.361368+03:00"
+   },
+   {
+    "post_id": 778,
+    "published_at": 1795372638,
+    "url": "https://vk.com/wall-228963529_778",
+    "title": "Медведев собрал $5,66 млн призовых в сезоне-2026",
+    "text": "рџ“° Даниил Медведев завершил сезон-2026 с рекордными призовыми — $5 662 763, учитывая одиночные и парные турниры. Это больше, чем любой его доход в предыдущие годы.\n\n#теннис #ATP #Медведев #новостиспорта #спорт #главное #аиставит\n\nрџ“Љ Подробнее на сайте рџ‘‡",
+    "checks": {
+     "encoding_clean": false,
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": true,
+     "details_present": true,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-22T21:39:10.361368+03:00"
+   },
+   {
+    "post_id": 779,
+    "published_at": 1795372647,
+    "url": "https://vk.com/wall-228963529_779",
+    "title": "FURIA – самая возрастная команда на PGL Major Singapore 2026",
+    "text": "рџ“° FURIA уже в среднем старше всех соперников – 27,8 года!\n\nрџЋ® Средний возраст состава \"FURIA Esports\" по CS2 составил 27,8 лет, что делает её самым «зрелым» коллективом на предстоящем PGL Major Singapore 2026. По данным Esports Charts эта цифра выше любой другой команды-участницы.\n\n#киберспорт #CS2 #новостиспорта #спорт #главное #аиставит\n\nрџ“Љ Подробнее на сайте рџ‘‡",
+    "checks": {
+     "encoding_clean": false,
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": true,
+     "details_present": true,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-22T21:39:10.361368+03:00"
    }
   ],
   "status": "observing"
