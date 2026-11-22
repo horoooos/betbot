@@ -1549,8 +1549,8 @@
  "streak_posted": 0,
  "value_day": "2026-11-22",
  "repost_done": "2026-11-02-news-strong",
- "table_day": "2026-11-21",
- "site_stamp": "1445|8722|2026-11-22 11|4|6cf637980c95fe8c",
+ "table_day": "2026-11-22",
+ "site_stamp": "1445|8722|2026-11-22 12|4|6cf637980c95fe8c",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1563,7 +1563,7 @@
    "I1|401874989"
   ]
  },
- "value_check": "2026-11-22-3",
+ "value_check": "2026-11-22-4",
  "express_risk": {
   "msg": 8267,
   "legs": [
@@ -1950,7 +1950,7 @@
  ],
  "indexnow_day": "2026-11-22",
  "vk_wall_err": null,
- "shorts_day": "2026-11-21",
+ "shorts_day": "2026-11-22",
  "shorts_err": {
   "vk": "видео в ВК выключено (VK_VIDEO=1 — включить)",
   "youtube": "YouTube не подключён (нет секретов YT_*)"
@@ -2015,7 +2015,7 @@
  "vk_comment_err": null,
  "vk_fresh_err": "фото стены: попытка 1: VK photos.getWallUploadServer: 9 Flood control",
  "vk_fresh_retry_at": 1794662243.1134844,
- "shorts_retry_day": "2026-11-21",
+ "shorts_retry_day": "2026-11-22",
  "dz_sent_ids": [
   "5731",
   "5735",
@@ -2608,43 +2608,9 @@
   "quote_matches": 25
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-22T11:59:52.725250+03:00",
-  "cursor": "288",
+  "last_poll": "2026-11-22T12:05:34.498191+03:00",
+  "cursor": "292",
   "posts": [
-   {
-    "post_id": 646,
-    "url": "https://vk.com/wall-228963529_646",
-    "title": "Valve закрыла баг Morphling, позволяющий съедать трёх союзников",
-    "text": "рџ“° Valve после выхода патча 7.42 окончательно закрыла баги, связанные с героями Morphling и Brewmaster, убрав возможности, которые ломали баланс.",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": false,
-     "details_present": false,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-21T10:34:45.815511+03:00"
-   },
-   {
-    "post_id": 649,
-    "url": "https://vk.com/wall-228963529_649",
-    "title": "Журова: расширение РПЛ до 20 команд возможно только при финансовой стабильности",
-    "text": "вљЎпёЏ Журова о расширении РПЛ: мечта клубов vs реальность финансов.",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": false,
-     "details_present": false,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-21T11:25:56.408997+03:00"
-   },
    {
     "post_id": 651,
     "url": "https://vk.com/wall-228963529_651",
@@ -3120,6 +3086,40 @@
     },
     "status": "needs_review",
     "observed_at": "2026-11-22T11:00:43.001581+03:00"
+   },
+   {
+    "post_id": 740,
+    "url": "https://vk.com/wall-228963529_740",
+    "title": "Орлов раскритиковал Дивеева за элементарную ошибку в матче с «Рубином»",
+    "text": "рџ“° Комментатор Геннадий Орлов в интервью «СЭ» не держал язык за зубами: защитник «Зенита» Игорь Дивеев в матче против «Рубина» стоял «как столб» и совершил элементарную ошибку, которая привела к голу соперника.",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": false,
+     "details_present": false,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-22T12:05:34.498191+03:00"
+   },
+   {
+    "post_id": 741,
+    "url": "https://vk.com/wall-228963529_741",
+    "title": "Lynn Vision закроет CS2-команду без выхода в третий этап мейджора",
+    "text": "рџ“° Глава Lynn Vision Gaming бросил тревожный вызов: если команда не прорвётся в третий этап PGL Major Singapore 2026, подразделение по CS2 будет закрыто.",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": false,
+     "details_present": false,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-22T12:05:34.498191+03:00"
    }
   ],
   "status": "observing"
