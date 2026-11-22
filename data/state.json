@@ -512,7 +512,8 @@
   "https://www.sport-express.ru/tennis/atp/news/aleksandr-zverev-chest-daniilu-medvedevu-on-provel-fantasticheskiy-itogovyy-turnir-i-fantasticheskiy-sezon-2477491/",
   "https://www.sport-express.ru/hockey/nhl/news/neshvill-pittsburg-schet-4-3-rezultat-matcha-nhl-22-noyabrya-2026-2477497/",
   "https://www.sport-express.ru/hockey/nhl/news/neshvill-pittsburg-andrey-kuzmenko-zabil-1-y-gol-v-sezone-nhl-video-shayby-22-noyabrya-2026-2477488/",
-  "https://www.sport-express.ru/hockey/nhl/news/san-hose-sietl-schet-i-rezultat-matcha-nhl-22-noyabrya-2026-2477530/"
+  "https://www.sport-express.ru/hockey/nhl/news/san-hose-sietl-schet-i-rezultat-matcha-nhl-22-noyabrya-2026-2477530/",
+  "https://www.sport-express.ru/hockey/nhl/news/vankuver-minnesota-schet-i-rezultat-matcha-nhl-22-noyabrya-2026-2477533/"
  ],
  "news_i": 4,
  "oddspapi": {
@@ -1558,7 +1559,7 @@
  "value_day": "2026-11-21",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-21",
- "site_stamp": "1444|8711|2026-11-22 08|4|29ebdf36729a642b",
+ "site_stamp": "1445|8713|2026-11-22 08|4|6cf637980c95fe8c",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1690,7 +1691,7 @@
  "streak_day": {
   "2026-11-22": 2
  },
- "news_next": "2026-11-22T08:54:16.145590+03:00",
+ "news_next": "2026-11-22T09:01:55.701190+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1714,7 +1715,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 8711,
+ "dz_last": 8713,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2548,37 +2549,37 @@
    "hockey": {
     "status": "collecting",
     "weight": 0.0,
-    "settled_matches": 42,
+    "settled_matches": 43,
     "required_matches": 100,
-    "trained_at": "2026-11-22T05:48:16.145590+00:00"
+    "trained_at": "2026-11-22T05:55:55.701190+00:00"
    },
    "basketball": {
     "status": "collecting",
     "weight": 0.0,
     "settled_matches": 48,
     "required_matches": 100,
-    "trained_at": "2026-11-22T05:48:16.145590+00:00"
+    "trained_at": "2026-11-22T05:55:55.701190+00:00"
    },
    "tennis": {
     "status": "collecting",
     "weight": 0.0,
     "settled_matches": 4,
     "required_matches": 100,
-    "trained_at": "2026-11-22T05:48:16.145590+00:00"
+    "trained_at": "2026-11-22T05:55:55.701190+00:00"
    },
    "esports:CS2": {
     "status": "collecting",
     "weight": 0.0,
     "settled_matches": 0,
     "required_matches": 100,
-    "trained_at": "2026-11-22T05:48:16.145590+00:00"
+    "trained_at": "2026-11-22T05:55:55.701190+00:00"
    },
    "esports:DOTA": {
     "status": "collecting",
     "weight": 0.0,
     "settled_matches": 0,
     "required_matches": 100,
-    "trained_at": "2026-11-22T05:48:16.145590+00:00"
+    "trained_at": "2026-11-22T05:55:55.701190+00:00"
    }
   },
   "source": {
@@ -2604,26 +2605,9 @@
   "quote_matches": 25
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-22T08:48:16.145590+03:00",
-  "cursor": "277",
+  "last_poll": "2026-11-22T08:55:55.701190+03:00",
+  "cursor": "281",
   "posts": [
-   {
-    "post_id": 639,
-    "url": "https://vk.com/wall-228963529_639",
-    "title": "Зенит разыграл эпиграмму перед встречей с «Рубином»",
-    "text": "рџ“° Питерский «Зенит» в преддверии 15-го тура РПЛ решил разогреть болельщиков оригинальной эпиграммой в своём Telegram-канале. В посте клуб написал: «Танги танцует вас теперь», добавив нотку иронии и уверенности.",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": false,
-     "details_present": false,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-20T23:45:33.097665+03:00"
-   },
    {
     "post_id": 640,
     "url": "https://vk.com/wall-228963529_640",
@@ -3116,6 +3100,23 @@
     },
     "status": "needs_review",
     "observed_at": "2026-11-22T07:49:11.217216+03:00"
+   },
+   {
+    "post_id": 729,
+    "url": "https://vk.com/wall-228963529_729",
+    "title": "Ахмат победил ЦСКА 2:1: Гусев предвидел усталость соперника",
+    "text": "рџ“° «Ахмат» одержал уверенную победу над «ЦСКА» со счётом 2:1 в гостях, матч прошёл в 15-м туре чемпионата России.",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": false,
+     "details_present": false,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-22T08:55:55.701190+03:00"
    }
   ],
   "status": "observing"
