@@ -602,7 +602,7 @@ null
 ]
 ],
 "div": "NHL",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "predictions/2026-11-22-florida-baffalo-401892756.html",
 "hs": "4",
@@ -717,7 +717,7 @@ null
 "min_odds": 1.54,
 "minute": "2-й период",
 "p": 0.682,
-"result": null,
+"result": "hit",
 "score": "1:1"
 }
 },
@@ -746,7 +746,7 @@ null
 ]
 ],
 "div": "NHL",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "predictions/2026-11-22-neshvill-pittsburg-401892757.html",
 "hs": "4",
@@ -861,7 +861,7 @@ null
 "min_odds": 1.79,
 "minute": "2-й период",
 "p": 0.588,
-"result": null,
+"result": "miss",
 "score": "1:2"
 }
 },
@@ -1859,7 +1859,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-22-ottava-los-andzheles-401892761.html",
-"hs": "0",
+"hs": "1",
 "as": "1",
 "tip": "ТБ 5.5 · 1.89",
 "top": true,
@@ -2661,8 +2661,8 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-22-dallas-maveriks-klippers-401910025.html",
-"hs": "23",
-"as": "26",
+"hs": "32",
+"as": "33",
 "tip": "ТМ 230.5 · 1.89",
 "top": false,
 "bot": {
@@ -2762,8 +2762,8 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-22-minnesota-timbervulvz-memfis-grizzlis-401910026.html",
-"hs": "28",
-"as": "34",
+"hs": "30",
+"as": "39",
 "tip": "ТБ 228.5 · 1.91",
 "top": false,
 "bot": {
@@ -2863,8 +2863,8 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-22-san-antonio-spers-nyu-orlean-pelikans-401910027.html",
-"hs": "32",
-"as": "29",
+"hs": "38",
+"as": "31",
 "tip": "ТМ 229.5 · 1.89",
 "top": false,
 "bot": {
