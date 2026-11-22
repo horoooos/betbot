@@ -1000,7 +1000,7 @@
   },
   "last": {
    "tennis": "2026-11-22T04:35:12.633818+03:00",
-   "CS2": "2026-11-20T11:57:36.586579+03:00",
+   "CS2": "2026-11-20T15:01:02.656198+03:00",
    "DOTA": "2026-11-20T13:57:12.508072+03:00"
   },
   "ver": 3
@@ -1547,10 +1547,10 @@
   "done": false
  },
  "streak_posted": 0,
- "value_day": "2026-11-21",
+ "value_day": "2026-11-22",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-21",
- "site_stamp": "1445|8718|2026-11-22 10|4|6cf637980c95fe8c",
+ "site_stamp": "1445|8718|2026-11-22 11|4|6cf637980c95fe8c",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -2602,43 +2602,9 @@
   "quote_matches": 25
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-22T10:54:36.558047+03:00",
-  "cursor": "283",
+  "last_poll": "2026-11-22T11:00:43.001581+03:00",
+  "cursor": "288",
   "posts": [
-   {
-    "post_id": 641,
-    "url": "https://vk.com/wall-228963529_641",
-    "title": "Кириченко назвал победу над «Крыльями» тяжёлой, но важной",
-    "text": "рџ“° В 15-м туре РПЛ «Ростов» одержал уверённую 3:0 над «Крыльями Советов» в домашнем матче. Главный тренер Дмитрий Кириченко сразу же собрал игроков в раздевалке, чтобы обсудить, что за победой скрывается гораздо больше, чем кажется на первый взгляд.",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": false,
-     "details_present": false,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-21T00:48:23.592545+03:00"
-   },
-   {
-    "post_id": 642,
-    "url": "https://vk.com/wall-228963529_642",
-    "title": "«Крылья Советов» прогорели 0:3 от «Ростова»: Булатов о полезном поражении",
-    "text": "рџ“° «Крылья Советов» потерпели сокрушительное 0:3 от «Ростова» в 15-м туре РПЛ, а главный тренер Сергей Булатов сразу же подытожил матч в эфире «Матч Премьер». По его словам, не реализованные моменты и падение настроения привели к крупному поражению, которое, однако, оказалось «очень-очень полезным».",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": false,
-     "details_present": false,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-21T01:52:52.541156+03:00"
-   },
    {
     "post_id": 646,
     "url": "https://vk.com/wall-228963529_646",
@@ -3114,6 +3080,40 @@
     },
     "status": "needs_review",
     "observed_at": "2026-11-22T09:54:50.707246+03:00"
+   },
+   {
+    "post_id": 735,
+    "url": "https://vk.com/wall-228963529_735",
+    "title": "Орлов раскритиковал Мантуана после разгрома «Зенита» от «Рубина» 1:3",
+    "text": "рџ“° «Зенит» потерпел сокрушительное поражение от «Рубина» со счётом 1:3 в 15-м туре РПЛ, и известный комментатор Геннадий Орлов не смог удержаться от резкой оценки игры защитника Густаво Мантуана.",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": false,
+     "details_present": false,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-22T11:00:43.001581+03:00"
+   },
+   {
+    "post_id": 736,
+    "url": "https://vk.com/wall-228963529_736",
+    "title": "LIVE-прогноз не зашёл: ТБ 1.5 · итог 0:1",
+    "text": "рџ“Љ LIVE-прогнозы бота: 114 из 162.",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": false,
+     "details_present": false,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-22T11:00:43.001581+03:00"
    }
   ],
   "status": "observing"
