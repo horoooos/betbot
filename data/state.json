@@ -1541,7 +1541,9 @@
      "DF1B27",
      "307B64"
     ],
-    "label": "Победа: Аякс"
+    "label": "Победа: Аякс",
+    "win": true,
+    "score": "3:0"
    }
   ],
   "odds": 1.43037225,
@@ -1552,7 +1554,7 @@
  "value_day": "2026-11-22",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-22",
- "site_stamp": "1461|8936|2026-11-22 18|4|8bfa6e70eaa3e44e",
+ "site_stamp": "1465|8946|2026-11-22 18|4|c0a2ee2138d5c38e",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1708,7 +1710,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 8936,
+ "dz_last": 8946,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2638,65 +2640,14 @@
   },
   "error": null,
   "tips": 11000,
-  "snapshots": 225,
+  "snapshots": 227,
   "unmapped_markets": 16274,
   "quote_matches": 25
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-22T18:20:00.749325+03:00",
-  "cursor": "303",
+  "last_poll": "2026-11-22T18:27:12.099453+03:00",
+  "cursor": "313",
   "posts": [
-   {
-    "post_id": 678,
-    "url": "https://vk.com/wall-228963529_678",
-    "title": "ЦСКА и «Ахмат» объявили стартовые составы на 15-й тур РПЛ",
-    "text": "рџ± ЦСКА готов к битве с «Ахматом» на «ВЭБ Арене», старт в 19:45 по московскому времени!",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": false,
-     "details_present": false,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-21T21:06:14.998768+03:00"
-   },
-   {
-    "post_id": 680,
-    "url": "https://vk.com/wall-228963529_680",
-    "title": "Булыкин раскритиковал «Зенит»: игроки не выкладываются на сто процентов",
-    "text": "рџ±вљЎпёЏ«Зенит» снова в падении: Булыкин о том, почему команда теряет очки!",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": false,
-     "details_present": false,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-21T22:11:32.140546+03:00"
-   },
-   {
-    "post_id": 681,
-    "url": "https://vk.com/wall-228963529_681",
-    "title": "Зенит впервые с 2009 года потерпел четыре поражения в первом круге",
-    "text": "рџ“° «Зенит» под руководством Сергея Семака впервые с 2009 года потерпел четыре поражения в первом круге Российской Премьер-лиги. За 15 туров команда уступила «Родине» (1:2), «Спартаку» (0:2), ЦСКА (1:2) и «Рубину» (1:3).",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": false,
-     "details_present": false,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-21T22:11:32.140546+03:00"
-   },
    {
     "post_id": 682,
     "url": "https://vk.com/wall-228963529_682",
@@ -3155,6 +3106,57 @@
     },
     "status": "needs_review",
     "observed_at": "2026-11-22T17:21:17.615353+03:00"
+   },
+   {
+    "post_id": 753,
+    "url": "https://vk.com/wall-228963529_753",
+    "title": "LIVE-прогноз зашёл: П1 · итог 3:0",
+    "text": "рџ“Љ LIVE-прогнозы бота: 120 из 168.",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": false,
+     "details_present": false,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-22T18:27:12.099453+03:00"
+   },
+   {
+    "post_id": 760,
+    "url": "https://vk.com/wall-228963529_760",
+    "title": "Николаев: пенальти в ворота ЦСКА от «Ахмата» был ошибкой",
+    "text": "рџ± Николаев раскритиковал судейское решение, назвав пенальти в матче ЦСКА-«Ахмат» (1:2) «абсолютно игровым эпизодом», который не требовал вмешательства ВАР.",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": false,
+     "details_present": false,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-22T18:27:12.099453+03:00"
+   },
+   {
+    "post_id": 761,
+    "url": "https://vk.com/wall-228963529_761",
+    "title": "Оздоев: единство «Краснодара» — главный козырь в борьбе за золото РПЛ",
+    "text": "рџ“° Полузащитник «Краснодара» Магомед Оздоев назвал сплочённость команды главным преимуществом в гонке за чемпионский титул. По его словам, именно единение позволяет коллективу уверенно бороться за самые высокие места и «прибавлять» в каждом матче.",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": false,
+     "details_present": false,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-22T18:27:12.099453+03:00"
    }
   ],
   "status": "observing"

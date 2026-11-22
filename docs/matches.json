@@ -2079,7 +2079,7 @@ null
 ]
 ],
 "div": "AUT",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "predictions/2026-11-22-rayndorf-altah-shturm-401881745.html",
 "hs": "1",
@@ -2219,11 +2219,11 @@ null
 ]
 ],
 "div": "AUT",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "predictions/2026-11-22-volfsberg-rid-401881748.html",
 "hs": "1",
-"as": "1",
+"as": "2",
 "tip": "Обе забьют — да · ≈1.51",
 "top": false,
 "bot": {
@@ -2359,7 +2359,7 @@ null
 ]
 ],
 "div": "N1",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "predictions/2026-11-22-ayaks-ado-den-haag-401875547.html",
 "hs": "3",
@@ -2480,7 +2480,7 @@ null
 "min_odds": 1.79,
 "minute": "34'",
 "p": 0.585,
-"result": null,
+"result": "hit",
 "score": "2:0"
 }
 },
@@ -2509,7 +2509,7 @@ null
 ]
 ],
 "div": "N1",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "predictions/2026-11-22-sparta-rotterdam-az-401875540.html",
 "hs": "1",
@@ -2630,7 +2630,7 @@ null
 "min_odds": 1.76,
 "minute": "27'",
 "p": 0.597,
-"result": null,
+"result": "miss",
 "score": "1:1"
 }
 },
@@ -2659,7 +2659,7 @@ null
 ]
 ],
 "div": "RUS",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "",
 "hs": "1",
@@ -3436,7 +3436,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-22-parizh-anzhe-401876397.html",
-"hs": "2",
+"hs": "3",
 "as": "0",
 "tip": "ТБ 2.5 · 1.58",
 "top": false,
@@ -4512,7 +4512,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-22-rasing-santander-real-sosedad-401882800.html",
-"hs": "0",
+"hs": "2",
 "as": "0",
 "tip": "П2 · 1.99",
 "top": false,
