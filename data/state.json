@@ -7,7 +7,6 @@
  "schedule_day": "2026-11-22",
  "content_slot": "2026-11-22-13",
  "news_seen": [
-  "https://www.sport-express.ru/football/braziliya/news/flamengo-atletiko-paranaense-schet-2-1-rezultat-matcha-chempionata-brazilii-19-noyabrya-2026-goda-2476459/",
   "https://www.sport-express.ru/football/france/news/zhonatan-kloss-kommentariy-po-nepopadaniyu-v-sbornuyu-francii-2476460/",
   "https://www.sport-express.ru/football/italy/news/prezident-intera-marotta-predlozhil-vvesti-v-shkolah-uroki-futbola-2476457/",
   "https://www.sport-express.ru/football/england/news/arsenal-hochet-podpisat-poluzaschitnika-sbornoy-anglii-aleksa-skotta-2476456/",
@@ -506,9 +505,10 @@
   "https://www.sport-express.ru/football/england/news/teamtalk-maktominey-mozhet-vernutsya-v-manchester-yunayted-v-2027-godu-2477635/",
   "https://www.sport-express.ru/football/rfpl/news/semin-o-penalti-v-matche-cska-ahmat-ne-ponimayu-kogda-naznachayutsya-11-metrovye-s-var-vse-stalo-huzhe-2477634/",
   "https://www.sport-express.ru/football/france/news/u-napadayuschego-pszh-due-diagnostirovan-razryv-krestoobraznoy-svyazki-kolena-2477639/",
-  "https://www.sport-express.ru/football/rfpl/news/dinamo-krasnodar-nichya-posle-pervogo-tayma-2477638/"
+  "https://www.sport-express.ru/football/rfpl/news/dinamo-krasnodar-nichya-posle-pervogo-tayma-2477638/",
+  "lorenof-protiv-sumail-kto-okazhet-sya-silneye-na-blast-slam-ix"
  ],
- "news_i": 1,
+ "news_i": 2,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1550,7 +1550,7 @@
  "value_day": "2026-11-22",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-22",
- "site_stamp": "1446|8792|2026-11-22 15|4|4467599b412f0e11",
+ "site_stamp": "1446|8793|2026-11-22 15|4|4467599b412f0e11",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1682,7 +1682,7 @@
  "streak_day": {
   "2026-11-22": 2
  },
- "news_next": "2026-11-22T15:43:12.386577+03:00",
+ "news_next": "2026-11-22T16:21:16.297398+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1706,7 +1706,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 8792,
+ "dz_last": 8793,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -1952,7 +1952,8 @@
   "https://ss.sport-express.ru/userfiles/materials/224/2245743/1180x665.jpg",
   "https://ss.sport-express.ru/userfiles/materials/224/2245744/1180x665.jpg",
   "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/53/FC_Akhmat_mascot.jpg/1280px-FC_Akhmat_mascot.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-  "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/2018-08-19_BFC_Dynamo_vs._1._FC_K%C3%B6ln_%28DFB-Pokal%29_by_Sandro_Halank%E2%80%93009.jpg/1280px-2018-08-19_BFC_Dynamo_vs._1._FC_K%C3%B6ln_%28DFB-Pokal%29_by_Sandro_Halank%E2%80%93009.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/2018-08-19_BFC_Dynamo_vs._1._FC_K%C3%B6ln_%28DFB-Pokal%29_by_Sandro_Halank%E2%80%93009.jpg/1280px-2018-08-19_BFC_Dynamo_vs._1._FC_K%C3%B6ln_%28DFB-Pokal%29_by_Sandro_Halank%E2%80%93009.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "https://images.cybersport.ru/images/as-is/plain/7c/7c37f704-0916-4127-96e3-e20ed96d283a.jpg"
  ],
  "indexnow_day": "2026-11-22",
  "vk_wall_err": null,
@@ -2276,7 +2277,8 @@
   "8736",
   "8741",
   "8755",
-  "8776"
+  "8776",
+  "8794"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -2532,11 +2534,12 @@
   "2026-11-22:новость:0a3ce487ed80366a5a46cb1d",
   "2026-11-22:новость:b48bdfceac3781482271c98c",
   "2026-11-22:новость:569508aeb2b3474174ad8300",
-  "2026-11-22:новость:52a6e13bf154385c0944b118"
+  "2026-11-22:новость:52a6e13bf154385c0944b118",
+  "2026-11-22:новость:c0554dfbaa3daa0448932dc7"
  ],
  "dz_last_delivery": {
-  "source_id": 8776,
-  "message_id": 802,
+  "source_id": 8794,
+  "message_id": 803,
   "kind": "новость"
  },
  "learn_attempt_day": "2026-11-22",
@@ -2626,7 +2629,7 @@
   "quote_matches": 25
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-22T15:41:44.202333+03:00",
+  "last_poll": "2026-11-22T15:48:16.297398+03:00",
   "cursor": "298",
   "posts": [
    {
