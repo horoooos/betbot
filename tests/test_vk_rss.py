@@ -34,6 +34,14 @@ class VKRSSFeedTests(unittest.TestCase):
             self.assertFalse(is_news({'title':title,'body':'Матч завершён.','sport':'football'}))
         self.assertTrue(is_news({'title':'Тренер рассказал о матче','body':'Полная новость.','sport':'football'}))
 
+    def test_full_content_does_not_print_telegram_html_tags(self):
+        from betbot.vk_rss import import_caption
+        from html import unescape
+        source=dict(title='Новость',sport='football',body='Первый <b>абзац</b>.\n\nВторой <a href="https://example.test">абзац</a>.',rss_link='https://vk.cc/test')
+        text=unescape(__import__('re').sub('<[^>]+>','',import_caption(source)))
+        self.assertIn('Первый абзац.\n\nВторой абзац.',text)
+        self.assertNotIn('<b>',text);self.assertIn('#аиставит',text)
+
     def test_source_is_not_ready_until_article_and_cover_are_public(self):
         from betbot.vk_rss import public_source_ready
         page=Mock(status_code=200,text='<meta name="vk-source-format" content="full-news-2"><img src="https://example.test/photo.jpg">')

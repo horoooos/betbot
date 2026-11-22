@@ -758,12 +758,9 @@ def _rss(news: list[dict], ms: list[dict], store: dict[int, dict], now: pd.Times
         item_title = re.sub(r'^[^\wА-Яа-яЁё«"]+', '', n['title']) if is_vk else n['title']
         item_guid = n.get('vk_guid',SITE+n['url']) if is_vk else SITE+n['url']
         if is_vk and n.get('vk_compact_rss'):
-            # Native VK ignores description for its wall text and clips the
-            # full content:encoded. Put the complete, bounded caption here too.
-            # The full source article is published separately, without slicing.
+            # Keep the complete article and footer in one HTML text node.
+            # Character references stay inside CDATA until the HTML decoder.
             from .vk_rss import announcement
-            # Some importers keep only the first HTML paragraph. Keep the whole
-            # bounded caption (including footer) in one block with explicit breaks.
             from .vk_rss import import_caption
             body=import_caption(n)
         elif feed_name == "rss-vk.xml":
