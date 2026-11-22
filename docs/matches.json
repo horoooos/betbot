@@ -3638,7 +3638,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-22-augsburg-maynts-05-401884733.html",
-"hs": "2",
+"hs": "3",
 "as": "0",
 "tip": "ТМ 3.5 · ≈1.68",
 "top": false,
@@ -4474,7 +4474,15 @@ null
 "corners": 13.5,
 "cards": 5.3
 },
-"lt": null
+"lt": {
+"fair": 1.34,
+"label": "ТБ 3.5",
+"min_odds": 1.4,
+"minute": "27'",
+"p": 0.749,
+"result": null,
+"score": "2:0"
+}
 },
 {
 "sport": "football",
@@ -4648,7 +4656,7 @@ null
 ]
 ],
 "div": "G1",
-"state": "pre",
+"state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-22-panatinaikos-ofi-401896726.html",
 "hs": "0",

@@ -7,10 +7,6 @@
  "schedule_day": "2026-11-22",
  "content_slot": "2026-11-22-16",
  "news_seen": [
-  "https://www.sport-express.ru/football/transfers/news/teamtalk-barselona-nacelilas-na-zaschitnika-braytona-vushkovicha-2476482/",
-  "https://www.sport-express.ru/hockey/nhl/news/yuta-kolorado-dmitriy-simashev-zabil-5-y-gol-v-sezone-nhl-video-shayby-19-noyabrya-2026-2476486/",
-  "https://www.sport-express.ru/basketball/nba/news/denver-boston-sakramento-finiks-schet-i-rezultaty-matchey-nba-19-noyabrya-2026-2476485/",
-  "https://www.sport-express.ru/football/rfpl/news/vratar-kurban-rasulov-schitaet-detskimi-oshibki-dinamo-v-matche-s-fk-10-2476492/",
   "https://www.sport-express.ru/cybersport/videogames/news/gta-stala-samoy-zhelannoy-igrovoy-vselennoy-sredi-rossiyan-issledovanie-2476394/",
   "https://www.sport-express.ru/football/rus_d1/news/fifa-snyala-s-sochi-zapret-na-transfery-2476496/",
   "https://www.sport-express.ru/hockey/nhl/news/genmenedzher-pittsburga-dubas-vse-chto-my-delaem-dolzhno-byt-ochen-orientirovano-na-buduschee-kluba-2476499/",
@@ -506,9 +502,13 @@
   "https://www.sport-express.ru/football/rfpl/news/ozdoev-o-borbe-za-zoloto-rpl-krasnodar-budet-pribavlyat-2477690/",
   "https://www.sport-express.ru/tennis/atp/news/kafelnikov-ozhidaet-yarkogo-finala-mezhdu-zverevym-i-alkarasom-shansy-50-na-50-2477697/",
   "yekindar-pokazal-pick-em-na-pervyi-yetap-pgl-major-singapore-2026",
-  "https://www.sport-express.ru/football/rfpl/news/sluckiy-nazval-utkina-svoim-lyubimym-kommentatorom-2477689/"
+  "https://www.sport-express.ru/football/rfpl/news/sluckiy-nazval-utkina-svoim-lyubimym-kommentatorom-2477689/",
+  "https://www.sport-express.ru/hockey/nhl/news/kapitan-toronto-oston-mettyus-povtoril-samuyu-dlinnuyu-deystvuyuschuyu-seriyu-golov-doma-protiv-odnoy-komandy-nhl-2477683/",
+  "https://www.sport-express.ru/hockey/nhl/news/vratar-linus-ullmark-povtoril-klubnyy-rekord-ottavy-po-pobedam-doma-na-starte-sezona-nhl-21-noyabrya-2026-2477682/",
+  "https://www.sport-express.ru/hockey/nhl/news/napadayuschiy-tim-shtyucle-oboshel-yohena-hehta-po-peredacham-i-sravnyalsya-s-marko-shturmom-po-matcham-s-dvumya-golami-v-nhl-2477681/",
+  "https://www.sport-express.ru/football/rfpl/news/dinamo-vyigralo-pervyy-krug-rpl-sezona-2026-27-turnirnaya-tablica-posle-15-go-tura-2477709/"
  ],
- "news_i": 1,
+ "news_i": 4,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -999,7 +999,7 @@
    }
   },
   "last": {
-   "tennis": "2026-11-22T10:42:05.054676+03:00",
+   "tennis": "2026-11-22T13:42:25.419971+03:00",
    "CS2": "2026-11-20T21:07:30.778134+03:00",
    "DOTA": "2026-11-20T20:03:07.980275+03:00"
   },
@@ -1554,7 +1554,7 @@
  "value_day": "2026-11-22",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-22",
- "site_stamp": "1465|8954|2026-11-22 18|4|97ea7dd5742a6c7a",
+ "site_stamp": "1465|8956|2026-11-22 18|4|97ea7dd5742a6c7a",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1686,7 +1686,7 @@
  "streak_day": {
   "2026-11-22": 2
  },
- "news_next": "2026-11-22T18:41:27.580249+03:00",
+ "news_next": "2026-11-22T19:13:03.325042+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1710,7 +1710,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 8954,
+ "dz_last": 8956,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -1961,7 +1961,8 @@
   "https://upload.wikimedia.org/wikipedia/commons/0/06/Ipswich_football_stadium_-_geograph.org.uk_-_2083170.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
   "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/Wisconsin_Badgers_football_fans_09-15-2012_322_%287997681624%29.jpg/1280px-Wisconsin_Badgers_football_fans_09-15-2012_322_%287997681624%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
   "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/72/2019-10-23_Fu%C3%9Fball%2C_M%C3%A4nner%2C_UEFA_Champions_League%2C_RB_Leipzig_-_FC_Zenit_St._Petersburg_1DX_2767_by_Stepro.jpg/1280px-2019-10-23_Fu%C3%9Fball%2C_M%C3%A4nner%2C_UEFA_Champions_League%2C_RB_Leipzig_-_FC_Zenit_St._Petersburg_1DX_2767_by_Stepro.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-  "https://upload.wikimedia.org/wikipedia/commons/5/53/Leonid_Slutsky_2012.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+  "https://upload.wikimedia.org/wikipedia/commons/5/53/Leonid_Slutsky_2012.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "https://upload.wikimedia.org/wikipedia/commons/3/3e/FC_Dynamo_Kyiv_Fans_-_%D0%A4%D0%B0%D0%BD%D0%B0%D1%82%D1%8B_%D0%A4%D0%9A_%D0%94%D0%B8%D0%BD%D0%B0%D0%BC%D0%BE_%D0%9A%D0%B8%D0%B5%D0%B2_%2822352221975%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
  ],
  "indexnow_day": "2026-11-22",
  "vk_wall_err": null,
@@ -2290,7 +2291,8 @@
   "8829",
   "8855",
   "8889",
-  "8928"
+  "8928",
+  "8957"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -2551,11 +2553,12 @@
   "2026-11-22:новость:b691fe15b22cc64ddf480083",
   "2026-11-22:новость:08eea4c91788ed7bdba676cc",
   "2026-11-22:новость:a5db4774fdde2d8d29d0f8f6",
-  "2026-11-22:новость:9d5fecadc2c9608011b32196"
+  "2026-11-22:новость:9d5fecadc2c9608011b32196",
+  "2026-11-22:новость:4a0fc1ca4b70624c7001943f"
  ],
  "dz_last_delivery": {
-  "source_id": 8928,
-  "message_id": 807,
+  "source_id": 8957,
+  "message_id": 808,
   "kind": "новость"
  },
  "learn_attempt_day": "2026-11-22",
@@ -2640,12 +2643,12 @@
   },
   "error": null,
   "tips": 11028,
-  "snapshots": 227,
+  "snapshots": 228,
   "unmapped_markets": 16312,
   "quote_matches": 25
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-22T18:34:26.188970+03:00",
+  "last_poll": "2026-11-22T18:42:03.325042+03:00",
   "cursor": "313",
   "posts": [
    {
