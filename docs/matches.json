@@ -1,146 +1,6 @@
 [
 {
 "sport": "football",
-"id": "401921326",
-"league": "Эквадор · Лига Про",
-"kickoff": "2026-11-22T00:30:00+03:00",
-"home": "Universidad Católica (Quito)",
-"away": "Barcelona SC",
-"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/9283.png",
-"al": "https://a.espncdn.com/i/teamlogos/soccer/500/2686.png",
-"hid": "9283",
-"aid": "2686",
-"bb": "https://betboom.ru/search?query=%D0%A3%D0%BD%D0%B8%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D0%B4%D0%B0%D0%B4&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
-"path": "soccer/ecu.1",
-"url": "live.html?s=football&p=soccer%2Fecu.1&e=401921326&h=Universidad+Cat%C3%B3lica+%28Quito%29&a=Barcelona+SC",
-"participants": [
-[
-"Universidad Católica (Quito)",
-"Universidad Católica (Quito)"
-],
-[
-"Barcelona SC",
-"Barcelona SC"
-]
-],
-"div": "ECU",
-"state": "post",
-"bo": null,
-"prediction": "predictions/2026-11-22-universidad-cat-lica-quito-barcelona-sc-401921326.html",
-"hs": "0",
-"as": "1",
-"tip": "П1 · 1.65",
-"top": false,
-"bot": {
-"main": {
-"label": "П1",
-"p": 0.558,
-"odds": 1.65,
-"est": false
-},
-"bold": null,
-"markets": [
-[
-"П1",
-0.558,
-1.645
-],
-[
-"Ничья",
-0.25,
-3.9
-],
-[
-"П2",
-0.192,
-4.6
-],
-[
-"1X",
-0.808,
-null
-],
-[
-"X2",
-0.442,
-null
-],
-[
-"ТБ 1.5",
-0.766,
-null
-],
-[
-"ТБ 2.5",
-0.514,
-1.833
-],
-[
-"ТМ 2.5",
-0.486,
-1.909
-],
-[
-"ТБ 3.5",
-0.293,
-null
-],
-[
-"Обе забьют — да",
-0.52,
-null
-],
-[
-"Обе забьют — нет",
-0.48,
-null
-],
-[
-"ИТ1 больше 1.5",
-0.531,
-null
-],
-[
-"ИТ2 больше 1.5",
-0.248,
-null
-],
-[
-"Ф1 (−1.5)",
-0.321,
-null
-],
-[
-"Ф2 (+1.5)",
-0.679,
-null
-]
-],
-"bar": [
-0.558360355207607,
-0.249849513900437,
-0.19179013089195596
-],
-"center": "Ожидаемые голы (xG) 1.8 : 1.0",
-"scores": [
-[
-"1:1",
-0.119
-],
-[
-"1:0",
-0.107
-],
-[
-"2:0",
-0.103
-]
-]
-},
-"lt": null
-},
-{
-"sport": "football",
 "id": "401913961",
 "league": "Южная Америка · Южноамериканский кубок",
 "kickoff": "2026-11-22T01:30:00+03:00",
@@ -1131,7 +991,7 @@ null
 ]
 ],
 "div": "CRC",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "predictions/2026-11-22-puntarenas-erediano-401876816.html",
 "hs": "2",
@@ -1271,7 +1131,7 @@ null
 ]
 ],
 "div": "CHI",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "predictions/2026-11-22-universidad-de-konsepson-nyublense-401850694.html",
 "hs": "2",
@@ -2560,8 +2420,8 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-22-nyu-york-niks-portlend-401910024.html",
-"hs": "55",
-"as": "38",
+"hs": "58",
+"as": "40",
 "tip": "Ф2 (-1.5) · 1.95",
 "top": false,
 "bot": {
@@ -2801,8 +2661,8 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-22-dallas-maveriks-klippers-401910025.html",
-"hs": "14",
-"as": "17",
+"hs": "18",
+"as": "20",
 "tip": "ТМ 230.5 · 1.89",
 "top": false,
 "bot": {
@@ -2902,8 +2762,8 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-22-minnesota-timbervulvz-memfis-grizzlis-401910026.html",
-"hs": "20",
-"as": "28",
+"hs": "23",
+"as": "32",
 "tip": "ТБ 228.5 · 1.91",
 "top": false,
 "bot": {
@@ -3003,8 +2863,8 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-22-san-antonio-spers-nyu-orlean-pelikans-401910027.html",
-"hs": "17",
-"as": "13",
+"hs": "20",
+"as": "19",
 "tip": "ТМ 229.5 · 1.89",
 "top": false,
 "bot": {
