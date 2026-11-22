@@ -109,14 +109,30 @@ def announcement(news, limit=420):
             chosen.append(completed)
             if len(chosen)==2:break
         else:
-            if not chosen:
+            if remaining > 0:
+                part=[]
                 sentences=re.findall(r'.*?[.!?…](?:[»”"\')\]]*)(?=\s|$)',paragraph,flags=re.S)
-                for sentence in sentences:
+                for sentence in sentences[:2]:
                     sentence=sentence.strip()
-                    candidate=' '.join(chosen+[sentence])
-                    if len(candidate)>budget:break
-                    chosen.append(sentence)
-                if chosen:chosen=[' '.join(chosen)]
+                    candidate=' '.join(part+[sentence])
+                    if len(candidate)>remaining:break
+                    part.append(sentence)
+                if part:chosen.append(' '.join(part))
             break
     summary='\n\n'.join(chosen) or 'Полный материал и подробности — в статье.'
     return summary+'\n\n'+footer
+
+
+def import_caption(news, max_html_bytes=1900):
+    """One ASCII HTML text node: legacy importers must not re-decode UTF-8.
+
+    Keep the footer inside the first text node, and budget transport bytes before
+    HTML entity decoding. The source article remains complete.
+    """
+    from html import escape
+    for limit in range(420, 159, -20):
+        caption=announcement(news,limit=limit)
+        encoded=escape(caption).encode('ascii','xmlcharrefreplace').decode('ascii')
+        if len(encoded.encode('ascii'))<=max_html_bytes:
+            return '<p style="white-space:pre-line">'+encoded+'</p>'
+    raise ValueError('VK caption footer exceeds import transport budget')

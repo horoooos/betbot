@@ -10,17 +10,32 @@ from betbot import pages
 
 
 class VKRSSFeedTests(unittest.TestCase):
-    def test_ascii_xml_decodes_caption_once_before_vk_html_limit(self):
+    def test_vk_first_html_text_node_keeps_footer_and_is_ascii_transport(self):
+        from html import unescape
+        from html.parser import HTMLParser
         news = dict(id=1, title='Заголовок', t='2026-11-20T10:00:00Z', sport='football',
                     photo='https://example.test/a.jpg', body='Полный текст.\n\n#футбол #аиставит',
-                    desc='Описание', url='news/1.html', vk_compact_rss=True)
+                    desc='Описание', url='news/1.html', vk_compact_rss=True, rss_link='https://vk.cc/example')
         xml = pages._rss([news], [], {}, pd.Timestamp('2026-11-20T10:01:00Z'), feed_name='rss-vk.xml')
-        html = ET.fromstring(xml).findtext('channel/item/{http://purl.org/rss/1.0/modules/content/}encoded')
-        self.assertIn('Полный текст.', html)
-        self.assertIn('#аиставит', html)
-        self.assertNotIn('&#', html)
-        self.assertEqual(html.count('<p>'), 1)
-        self.assertIn('<br><br>#футбол', html)
+        content = ET.fromstring(xml).findtext('channel/item/{http://purl.org/rss/1.0/modules/content/}encoded')
+        self.assertTrue(content.isascii())
+        self.assertNotIn('<br',content)
+        class FirstNode(HTMLParser):
+            def __init__(self):super().__init__(convert_charrefs=True);self.nodes=[]
+            def handle_data(self,data):
+                if data.strip():self.nodes.append(data)
+        parser=FirstNode();parser.feed(content)
+        self.assertIn('Полный текст.', parser.nodes[0]);self.assertIn('#аиставит',parser.nodes[0])
+        self.assertIn('Подробнее на сайте',parser.nodes[0]);self.assertIn('vk.cc/example',parser.nodes[0])
+
+    def test_news_only_filter_rejects_results_even_if_caller_passes_them(self):
+        now=pd.Timestamp('2026-11-20T10:01:00Z')
+        result=dict(id=2,title='Итог матча',t=now,sport='football',photo='https://example.test/a.jpg',body='Счёт',url='result.html',kind='result')
+        with tempfile.TemporaryDirectory() as directory:
+            root=Path(directory);(root/'vk_rss_since.txt').write_text('2026-11-19T00:00:00Z')
+            with patch.object(pages,'DATA',root),patch.object(pages,'DOCS',root/'docs'):
+                self.assertEqual(ET.fromstring(pages._vk_rss([result],now)).findall('channel/item'),[])
+
 
     def test_results_require_photo_activation_and_final_tag(self):
         now = pd.Timestamp('2026-11-20T12:00:00Z')

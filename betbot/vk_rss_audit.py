@@ -27,7 +27,7 @@ def inspect(post,items):
     tags=re.findall(r'#[\wА-Яа-яЁё]+',matched['description'])
     links=set(re.findall(r'(?:https?://)?vk\.cc/[A-Za-z0-9]+',text))
     image=any(a.get('type')=='photo' or bool((a.get('article') or {}).get('photo') or (a.get('article') or {}).get('cover') or (a.get('link') or {}).get('photo')) for a in attachments)
-    checks=dict(expected_caption_present=bool(expected) and expected in actual,
+    checks=dict(encoding_clean=not bool(re.search(r'[рР]џ|(?:Р[^\s]){3,}|\ufffd',text+' '.join(titles))),expected_caption_present=bool(expected) and expected in actual,
                 complete_layout=body==expected,
                 hashtags_present=bool(tags) and all(t in text for t in tags),
                 details_present='подробнее на сайте' in text.lower(),

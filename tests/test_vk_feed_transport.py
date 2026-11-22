@@ -39,12 +39,13 @@ class VKFeedTransportTests(unittest.TestCase):
                     self.assertIn('#аиставит',text)
                     self.assertLess(text.index('#аиставит'),text.index('Подробнее на сайте'))
                     self.assertTrue(text.endswith('📊 Подробнее на сайте 👇'))
-                    self.assertNotIn('Расулов подчеркнул',text)
+                    self.assertIn('Расулов подчеркнул важность игры вратаря.',text)
+                    self.assertLessEqual(text.count('Расулов подчеркнул'),2)
                     self.assertEqual(len(body.select('img')),1)
                     self.assertNotIn('horoooos.github.io',text)
             source=unescape((docs/'vk-articles/6219.html').read_text(encoding='ascii'))
             self.assertIn(tail,source)
-            self.assertEqual(source.count('Расулов подчеркнул важность игры вратаря.'),70)
+            self.assertEqual(BeautifulSoup(source,'html.parser').select_one('article').get_text().count('Расулов подчеркнул важность игры вратаря.'),70)
 
     def test_canonical_page_metadata_also_survives_a_legacy_decoder(self):
         title='Андреева и Шарапова — русский заголовок'

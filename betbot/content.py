@@ -14,7 +14,7 @@ from html import escape
 
 import pandas as pd
 
-from . import card, fun, sports, telegram
+from . import card, fun, sports, telegram, pro
 from . import markets as mk
 from .leagues import ALL, ORDER, title
 from .sports import EMOJI, SPORT_RU
@@ -87,7 +87,7 @@ def _favourites(football: list[dict], other: list[dict], now: pd.Timestamp, hour
         ph, pa = float(p[0]), float(p[-1])
         side, prob, odds = ("home", ph, o["H"]) if ph >= pa else ("away", pa, o["A"])
         prob = min(max(prob * ratio, 0.05), 0.95)   # поправка по истории экспрессов
-        if 0.6 <= prob <= 0.82:
+        if 0.6 <= prob <= 0.82 and pro.stake({"p": float(prob), "odds": float(odds), "est": False}) > 0:
             team = e[side]["ru"]
             legs.append({"sport": e.get("sport", "football"), "div": e["div"], "id": e["id"], "side": side,
                          "p": prob, "odds": float(odds), "kickoff": e["kickoff"],
@@ -144,7 +144,7 @@ def _risky_legs(football: list[dict], other: list[dict], now: pd.Timestamp) -> l
             continue
         p = mk.fair([o["H"], o["D"], o["A"]]) if o.get("D") else mk.fair([o["H"], o["A"]])
         for side, prob, odds in (("home", float(p[0]), float(o["H"])), ("away", float(p[-1]), float(o["A"]))):
-            if 0.38 <= prob <= 0.62 and 1.6 <= odds <= 2.7:
+            if 0.38 <= prob <= 0.62 and 1.6 <= odds <= 2.7 and pro.stake({"p": prob, "odds": odds, "est": False}) > 0:
                 team = e[side]["ru"]
                 legs.append({"sport": e.get("sport", "football"), "div": e["div"], "id": e["id"], "side": side,
                              "p": prob, "odds": odds, "kickoff": e["kickoff"],
