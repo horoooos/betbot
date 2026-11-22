@@ -1001,7 +1001,7 @@
   "last": {
    "tennis": "2026-11-22T01:33:52.308936+03:00",
    "CS2": "2026-11-20T08:57:21.079016+03:00",
-   "DOTA": "2026-11-20T07:48:48.751597+03:00"
+   "DOTA": "2026-11-20T10:55:41.799747+03:00"
   },
   "ver": 3
  },
@@ -1552,7 +1552,7 @@
  "value_day": "2026-11-21",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-21",
- "site_stamp": "1438|8692|2026-11-22 06|4|cc3e12f7b47ff65a",
+ "site_stamp": "1439|8693|2026-11-22 06|4|500bcd00fa807fa6",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1708,7 +1708,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 8692,
+ "dz_last": 8693,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2531,9 +2531,9 @@
   "model": {
    "weight": 0.0,
    "status": "collecting",
-   "settled_matches": 82,
+   "settled_matches": 83,
    "required_matches": 100,
-   "trained_at": "2026-11-21T22:08:13.748867+00:00"
+   "trained_at": "2026-11-22T03:55:10.452910+00:00"
   },
   "sport_models": {
    "hockey": {
@@ -2595,7 +2595,7 @@
   "quote_matches": 25
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-22T06:48:17.686347+03:00",
+  "last_poll": "2026-11-22T06:55:10.452910+03:00",
   "cursor": "274",
   "posts": [
    {
