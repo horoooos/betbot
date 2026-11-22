@@ -801,7 +801,9 @@ def main():
         print('  ! продвижение:',type(exc).__name__)
     try:
         from betbot import growth_campaigns
-        growth_campaigns.run(state,now,lambda:save_json(STATE,state))
+        launch_file=Path(__file__).resolve().parent / "data/growth_launch.txt"
+        launch=launch_file.read_text(encoding="utf-8").strip() if launch_file.exists() else ""
+        growth_campaigns.run(state,now,lambda:save_json(STATE,state),force_video=launch)
         growth_campaigns.notify(events+other,growth_campaigns._news(),state,now,lambda:save_json(STATE,state))
     except Exception as exc:
         print('  ! подборки и подписки:',type(exc).__name__)

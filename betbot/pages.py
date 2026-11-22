@@ -220,7 +220,7 @@ def page(prefix: str, title: str, desc: str, canon: str, body: str, on: str = ""
 {body}
 <footer>АИ СТАВИТ — бесплатные прогнозы на спорт от искусственного интеллекта и честная статистика. Прогноз — не гарантия выигрыша. 18+.
 <br><a href="https://t.me/{CH}">Telegram-канал @{CH}</a> · <a href="{prefix}./">Статистика бота</a> · <a href="{prefix}matches.html">Матчи онлайн</a> · <a href="{prefix}news/">Новости спорта</a> · <a href="{prefix}predictions/">Прогнозы на матчи</a>
-<br><a href="{prefix}leagues.html">Команды, игроки и турниры</a> · <a href="{prefix}teams/">Команды и игроки</a> · <a href="{prefix}tournaments/">Турниры</a> · <a href="{prefix}follow.html">Мой спорт</a> · <a href="{prefix}digest/">Главное за день</a> · <a href="{prefix}tools.html">Калькуляторы ставок</a> · <a href="{prefix}school/">Школа ставок</a> · <a href="{prefix}top.html">Рейтинг прогнозистов</a>
+<br><a href="{prefix}leagues.html">Справочник спорта</a> · <a href="{prefix}teams/">Команды и игроки</a> · <a href="{prefix}tournaments/">Турниры</a> · <a href="{prefix}follow.html">Мой спорт</a> · <a href="{prefix}digest/">Главное за день</a> · <a href="{prefix}tools.html">Калькуляторы ставок</a> · <a href="{prefix}school/">Школа ставок</a> · <a href="{prefix}top.html">Рейтинг прогнозистов</a>
 <br>Прогнозы: <a href="{prefix}prognozy/futbol-segodnya.html">на футбол сегодня</a> · <a href="{prefix}prognozy/ekspress-dnya.html">экспресс дня</a> · <a href="{prefix}itogi/">итоги дня</a> · <a href="{prefix}prognozy/rpl.html">РПЛ</a> · <a href="{prefix}prognozy/apl.html">АПЛ</a> · <a href="{prefix}prognozy/liga-chempionov.html">Лига чемпионов</a> · <a href="{prefix}prognozy/hokkej-nhl.html">хоккей</a> · <a href="{prefix}prognozy/nba.html">НБА</a> · <a href="{prefix}prognozy/tennis.html">теннис</a> · <a href="{prefix}prognozy/kibersport.html">киберспорт</a> · <a href="{prefix}watch/">смотреть онлайн</a>
 <br>Мы в соцсетях: {SOCIAL_LINKS} · <a href="https://vk.me/aistavvit" rel="noopener">написать в поддержку</a></footer>
 </main><div class="sticky"><a class="a" href="{prefix}matches.html">📺 Онлайн</a><a class="b" href="https://t.me/{CH}">📲 Канал</a></div>
@@ -257,6 +257,8 @@ def _news(store: dict[int, dict]) -> list[dict]:
                 conts[parent] = re.sub(r"\s*<a[^>]*>#[^<]+</a>\s*$", "", c.strip()).strip()
     for p in store.values():
         from .dzen import delivery_kind
+        if any(marker in p.get("html", "") for marker in ("#новостивидео", "#дайджестновостей")):
+            continue
         if delivery_kind(p.get("html", "")) != "новость":
             continue
         plain = _plain(p["html"]).strip()

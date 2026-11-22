@@ -73,6 +73,27 @@ class GrowthTests(unittest.TestCase):
             self.assertEqual(push.notify_all('title','body','url'),0)
             send.assert_not_called()
 
+    def test_event_records_are_not_counted_as_new_visitors(self):
+        r=growth.summarize_visits({'day':{'person':{'r':'telegram'},'action':{'r':'telegram','kind':'event','a':{'follow':1}}}})
+        self.assertEqual(r['unique_visitors'],1)
+        self.assertEqual(r['sources']['telegram']['visitor_days'],1)
+        self.assertEqual(r['events']['follow'],1)
+
+    def test_launch_video_sends_once_even_off_schedule(self):
+        from betbot import telegram,pages,news_video
+        with tempfile.TemporaryDirectory() as tmp,patch.object(pages,'DOCS',Path(tmp)),patch.object(campaigns,'_news',return_value=[news(1)]),patch.object(news_video,'render',return_value=b'video'),patch.object(telegram,'send_video',return_value=1) as send:
+            state={'growth':{'digest_day':NOW.strftime('%Y-%m-%d')}}
+            campaigns.run(state,NOW,force_video='launch');campaigns.run(state,NOW,force_video='launch')
+            self.assertEqual(send.call_count,1)
+            self.assertIn('#новостивидео',send.call_args.args[1])
+
+    def test_news_video_and_digest_are_not_duplicate_short_articles(self):
+        from betbot import pages,dzen
+        for marker in ('#новостивидео','#дайджестновостей'):
+            text='Свежая спортивная новость\n\nТекст новости.\n\n'+marker+'\n\n#футбол'
+            self.assertEqual(dzen.delivery_kind(text),'новость')
+            self.assertEqual(pages._news({1:{'id':1,'html':text,'t':NOW.isoformat()}}),[])
+
     def test_digest_ambiguous_send_does_not_repeat(self):
         from betbot import telegram,pages
         with tempfile.TemporaryDirectory() as tmp,patch.object(campaigns,'DIGEST',Path(tmp)/'digest.json'),patch.object(pages,'DOCS',Path(tmp)),patch.object(campaigns,'_news',return_value=[news(1),news(2),news(3)]),patch.object(telegram,'send_photo',side_effect=TimeoutError) as send:

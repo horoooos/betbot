@@ -23,7 +23,7 @@ def _news():
     store={int(k):v for k,v in json.loads(p.read_text(encoding='utf-8')).get('posts',{}).items()}
     return [n for n in pages._news(store) if not n['title'].startswith('Главное в спорте за')]
 
-def run(state,now,checkpoint=lambda:None):
+def run(state,now,checkpoint=lambda:None,force_video=""):
     from . import telegram,pages,promotion
     now=pd.Timestamp(now).tz_convert('Europe/Moscow');day=now.strftime('%Y-%m-%d');record=state.setdefault('growth',{})
     news=_news()
@@ -40,16 +40,21 @@ def run(state,now,checkpoint=lambda:None):
                 # Full article remains accessible even if five long titles exceed a caption.
                 while len(caption)>850 and len(titles)>1:
                     titles.pop();caption='<b>'+html.escape(item['title'])+'</b>\n\n'+'\n\n'.join('• '+html.escape(n['title']) for n in titles)
-                caption+='\n\nПолные новости — в выпуске на сайте.\n\n'+{'football':'#футбол','hockey':'#хоккей','basketball':'#баскетбол','tennis':'#теннис','esports':'#киберспорт'}[item['sport']]
+                caption+='\n\nПолные новости — в выпуске на сайте.\n\n#дайджестновостей\n\n'+{'football':'#футбол','hockey':'#хоккей','basketball':'#баскетбол','tennis':'#теннис','esports':'#киберспорт'}[item['sport']]
                 mid=telegram.send_photo(cover.read_bytes(),caption,button=[('Читать выпуск',growth.SITE+item['url']+'?utm_source=telegram&utm_medium=digest'),('Мой спорт',growth.SITE+'follow.html')])
                 record.update(digest_status='published',digest_message=mid)
             except Exception as e:record.update(digest_status='delivery_requires_review',digest_error=type(e).__name__)
             checkpoint()
     # Three original text-based news videos per week, independent of betting clips.
-    if now.weekday() in (1,3,5) and now.hour>=14 and record.get('video_day')!=day:
+    if force_video and record.get('video_day')==day:
+        record['video_launch']=force_video;checkpoint()
+    launch=bool(force_video and record.get('video_launch')!=force_video)
+    if (launch or now.weekday() in (1,3,5) and now.hour>=14) and record.get('video_day')!=day:
         chosen=growth.select_digest(news,now,1)
         if chosen:
-            record.update(video_day=day,video_status='rendering');checkpoint()
+            record.update(video_day=day,video_status='rendering')
+            if launch:record['video_launch']=force_video
+            checkpoint()
             try:
                 from . import news_video,shorts
                 clip=news_video.render(chosen[0])
@@ -58,7 +63,7 @@ def run(state,now,checkpoint=lambda:None):
                 for old in sorted(out.parent.glob('news-20*.mp4'),reverse=True)[6:]:old.unlink()
                 record['video_status']='sending';checkpoint()
                 n=chosen[0];tag={'football':'#футбол','hockey':'#хоккей','basketball':'#баскетбол','tennis':'#теннис','esports':'#киберспорт'}[n['sport']]
-                mid=telegram.send_video(clip,'📰 <b>'+html.escape(n['title'])+'</b>\n\n'+growth.SITE+n['url']+'\n\n'+tag,width=1080,height=1920,duration=int(len(news_video.frames(n))*shorts.SCENE-(len(news_video.frames(n))-1)*shorts.FADE))
+                mid=telegram.send_video(clip,'📰 <b>'+html.escape(n['title'])+'</b>\n\n'+growth.SITE+n['url']+'\n\n#новостивидео\n\n'+tag,width=1080,height=1920,duration=int(len(news_video.frames(n))*shorts.SCENE-(len(news_video.frames(n))-1)*shorts.FADE))
                 record.update(video_status='published',video_message=mid)
                 if all(os.environ.get(k) for k in ('YT_CLIENT_ID','YT_CLIENT_SECRET','YT_REFRESH_TOKEN')):
                     from . import shorts

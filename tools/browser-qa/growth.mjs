@@ -15,7 +15,7 @@ try{
  await page.waitForFunction(()=>window.__saved&&Object.keys(window.__saved.topics).length===1);
  assert.equal(await page.evaluate(()=>window.__events.includes('follow')),true);report.checks.push('explicit opt-in and selection validation');
  await page.screenshot({path:new URL('follow-desktop.png',out).pathname,fullPage:false});
- await page.setViewportSize({width:390,height:844});assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);await page.screenshot({path:new URL('follow-mobile.png',out).pathname,fullPage:false});
+ await page.setViewportSize({width:390,height:844});assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);await page.evaluate(()=>scrollTo(0,0));await page.screenshot({path:new URL('follow-mobile.png',out).pathname,fullPage:true});
  await page.getByRole('button',{name:'Отключить подписки'}).click();await page.waitForFunction(()=>Object.keys(window.__saved.topics).length===0);report.checks.push('unsubscribe clears selected interests');
  const topics=await (await context.request.get(base+'/topics.json')).json();const team=topics.topics.find(t=>t.kind==='team');const league=topics.topics.find(t=>t.kind==='league');
  await page.goto(base+'/'+team.url,{waitUntil:'networkidle'});assert.equal(await page.getByRole('link',{name:'Следить за командой'}).count(),1);assert(await page.locator('meta[property="og:image"]').getAttribute('content'));await page.screenshot({path:new URL('team-mobile.png',out).pathname});

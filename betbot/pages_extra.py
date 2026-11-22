@@ -133,6 +133,7 @@ def _team_page(t: dict, news: list[dict], url: str) -> str:
 
     logo = f'<img src="{H.escape(t["logo"])}" alt="{H.escape(name)}" style="width:72px;height:72px;object-fit:contain;background:#fff;border-radius:50%;padding:6px">' if t["logo"] else ""
     stat = f"Бот давал прогнозы на {len(preds)} матчей с участием команды «{name}»" + (f": из {len(done)} рассчитанных зашло {hits} ({round(hits / len(done) * 100)}%)." if done else ".")
+    if not preds:stat = f"Расписание, результаты и новости. В базе {len(t.get('events', []))} матчей."
     link = directory.team_link(sport, name, "../")
     live_btn = (f'<a class="btn gold" href="{H.escape(link)}" style="margin-top:8px">📊 {"Профиль, рейтинг и матчи" if sport == "tennis" else "Расписание, состав, таблица и статистика"} →</a>'
                 if link else "")
@@ -145,11 +146,11 @@ def _team_page(t: dict, news: list[dict], url: str) -> str:
     faq_html = ('<h2>Вопросы</h2>' + "".join(f"<h3>{H.escape(q)}</h3><p>{H.escape(x)}</p>" for q, x in faq)) if faq else ""
     body = f"""{crumbs}<div class="card" style="display:flex;gap:16px;align-items:center;margin-top:10px">{logo}<div>
 <span class="tag">{EMOJI.get(sport, "")} {SPORT_RU.get(sport, "")}{" · " + H.escape(league) if league else ""}</span>
-<h1 style="margin:4px 0">{H.escape(name)}: <span>матчи, результаты и новости</span></h1><p class="muted small">{H.escape(stat)}</p>{live_btn}<a class="btn gold" href="{follow}">Следить за командой</a></div></div>
-<h2>📝 {H.escape(name)}: разбор и прогноз</h2><div class="card">{text}</div>
+<h1 style="margin:4px 0">{H.escape(name)}: <span>матчи, результаты и новости</span></h1><p class="muted small">{H.escape(stat)}</p>{live_btn}<a class="btn gold" href="{follow}">{"Следить за игроком" if sport == "tennis" else "Следить за командой"}</a></div></div>
+{('<h2>Форма и статистика</h2><div class="card">' + text + "</div>") if preds else ""}
 {('<h2>📅 Ближайшие матчи</h2><div class="grid">' + "".join(nxt_card(u) for u in nxt) + "</div>") if nxt else ""}
 {('<h2>Последние результаты</h2><div class="grid">' + "".join(nxt_card(u) for u in played) + "</div>") if played else ""}
-<h2>🎯 Прогнозы бота на матчи «{H.escape(name)}»</h2><div class="grid">{"".join(_match_card(m, "../") for m in preds[:24])}</div>
+{('<h2>Прогнозы бота</h2><div class="grid">' + "".join(_match_card(m, "../") for m in preds[:24]) + "</div>") if preds else ""}
 {('<h2>📰 Новости</h2><div class="grid">' + "".join(_news_card(n, "../") for n in about) + "</div>") if about else ""}
 {faq_html}
 <div class="row" style="margin-top:16px"><a class="btn red" href="../matches.html">📺 Матчи онлайн</a><a class="btn gold" href="https://t.me/aistavvit">📲 Прогнозы в Telegram</a></div>"""
