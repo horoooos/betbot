@@ -2389,7 +2389,7 @@ null
 ]
 ],
 "div": "E0",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "predictions/2026-11-22-liverpul-manchester-yunayted-401878755.html",
 "hs": "4",
@@ -2510,7 +2510,7 @@ null
 "min_odds": 1.61,
 "minute": "32'",
 "p": 0.653,
-"result": null,
+"result": "hit",
 "score": "2:0"
 }
 },
@@ -2974,7 +2974,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-22-norshellann-kopengagen-401874493.html",
-"hs": "1",
+"hs": "2",
 "as": "0",
 "tip": "ТБ 2.5 · ≈1.57",
 "top": false,
@@ -3114,7 +3114,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-22-milan-frozinone-401874989.html",
-"hs": "3",
+"hs": "4",
 "as": "1",
 "tip": "П1 · 1.52",
 "top": true,
@@ -4585,7 +4585,7 @@ null
 "bo": null,
 "prediction": "predictions/2026-11-22-lommel-standard-401878934.html",
 "hs": "0",
-"as": "0",
+"as": "1",
 "tip": "П2 · 2.05",
 "top": false,
 "bot": {

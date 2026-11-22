@@ -893,7 +893,8 @@
    "min_odds": 1.61,
    "minute": "32'",
    "score": "2:0",
-   "sport": "football"
+   "sport": "football",
+   "result": "hit"
   }
  },
  "D1|401884730": {
@@ -915,9 +916,9 @@
  },
  "I1|401874989": {
   "msg": 9026,
-  "hs": 3,
+  "hs": 4,
   "as": 1,
-  "goals": 4,
+  "goals": 5,
   "kickoff": "2026-11-22T20:00:00+03:00",
   "lt": {
    "key": "O4.5",
