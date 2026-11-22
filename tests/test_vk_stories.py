@@ -68,7 +68,7 @@ class StoryTests(unittest.TestCase):
             channel.write_text(json.dumps({"posts": {"101": {"html": "Новость спорта", "t": datetime.now(timezone.utc).isoformat()}}}), encoding="utf-8")
             with patch.dict(os.environ, {"VK_STORIES_ENABLED": "1", "VK_TOKEN": "group"}), \
                     patch.object(vk, "CHANNEL", channel), \
-                    patch("betbot.dzen.kind", return_value="новость"), \
+                    patch("betbot.dzen.delivery_kind", return_value="новость"), \
                     patch("betbot.postimg.image_for", return_value=self.image()), \
                     patch.object(vk_stories, "publish_image", side_effect=created) as publish, \
                     patch.object(vk_stories, "verify_story", return_value=story) as verify:
@@ -83,6 +83,15 @@ class StoryTests(unittest.TestCase):
                 self.assertNotIn("vk_story_pending", state)
                 self.assertEqual(vk_stories.crosspost(state), 0)
                 self.assertEqual(publish.call_count, 1)
+
+    def test_expired_pending_story_does_not_block_or_republish_forever(self):
+        state={'vk_story_last':100,'vk_story_pending':{'pid':101,'id':123,'owner_id':-vk.GROUP_ID,'started_at':1},'vk_story_retry_at':999999999999}
+        with tempfile.TemporaryDirectory() as folder:
+            channel=Path(folder)/'channel.json';channel.write_text(json.dumps({'posts':{'101':{'html':'ИТОГ матча #итог','t':'2026-01-01T00:00:00Z'}}}))
+            with patch.dict(os.environ,{'VK_STORIES_ENABLED':'1','VK_TOKEN':'group'}),patch.object(vk,'CHANNEL',channel),patch.object(vk_stories,'publish_image') as publish,patch.object(vk_stories,'verify_story') as verify:
+                self.assertEqual(vk_stories.crosspost(state),0)
+                self.assertEqual(state['vk_story_last'],101);self.assertNotIn('vk_story_pending',state)
+                publish.assert_not_called();verify.assert_not_called()
 
 
 if __name__ == "__main__":

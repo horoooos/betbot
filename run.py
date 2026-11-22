@@ -794,6 +794,11 @@ def main():
         directory.export(events + other)
     except Exception as e:
         print(f"  ! справочник команд не обновился: {e}")
+    try:
+        from betbot import promotion
+        promotion.run(state,now,read_results(),BRAND,lambda:save_json(STATE,state))
+    except Exception as exc:
+        print('  ! продвижение:',type(exc).__name__)
     site_res = read_results()
     # сайт пересобирается сразу после каждого нового поста в канале (новость, прогноз, итог),
     # после каждого нового результата и хотя бы раз в час

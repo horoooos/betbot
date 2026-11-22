@@ -86,7 +86,7 @@ def wall_description(news):
     marker = '\n\n'+SPORTS.get(news.get('sport'),'#спорт')
     body = body.split(marker,1)[0]
     footer = ("\n\n📊 Подробнее на сайте 👇" if news.get("vk_native_link") else f"\n\n📊 Подробнее на сайте 👉 {short}") if short else ''
-    return body+'\n\n'+hashtags(news)+footer
+    return body+'\n\nПодписывайтесь на «АИ СТАВИТ» — спортивные новости каждый день.'+'\n\n'+hashtags(news)+footer
 
 
 def announcement(news, limit=420):

@@ -416,6 +416,11 @@ def run(state: dict, now: pd.Timestamp, brand: str) -> None:
                 telegram.send(f"📖 <b>Продолжение</b>\n\n{rest}\n\n{TAGS[sport]}", reply_to=mid, silent=True)
             # канал для Дзена: новость — картинкой (видео Дзен не берёт), с тем же текстом
             try:
+                from . import promotion
+                promotion.attach_news_links(mid)
+            except Exception as exc:
+                print('  ! кнопки новости:',type(exc).__name__)
+            try:
                 from . import dzen
                 dzen.post_news(png, caption, mid, state=state)
             except Exception as ex:

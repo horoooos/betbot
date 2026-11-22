@@ -512,10 +512,10 @@ def run(state: dict, now: pd.Timestamp, res: pd.DataFrame, brand: str = "@aistav
     except Exception as e:
         print(f"  ! ролик в Telegram не отправлен: {e}")
     import os as _os
-    if _os.environ.get("VK_VIDEO") == "1":   # видео в ВК — только по явному включению (антифлуд)
+    if _os.environ.get("VK_VIDEO") == "1" and kind == "news":   # видео в ВК — только по явному включению (антифлуд)
         errs["vk"] = _vk_video(clip, t["vk_name"], t["vk_desc"])
     else:
-        errs["vk"] = "видео в ВК выключено (VK_VIDEO=1 — включить)"
+        errs["vk"] = "В VK только новости; ролики с прогнозами и итогами не отправляются"
     errs["youtube"] = _youtube(clip, t)
     _dzen(state, clip, t)
     state["shorts_err"] = {k: v for k, v in errs.items() if v} or None
