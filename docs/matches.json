@@ -1,106 +1,5 @@
 [
 {
-"sport": "tennis",
-"id": "187529",
-"league": "Теннис · ATP",
-"kickoff": "2026-11-22T20:15:00+03:00",
-"home": "Александр Зверев",
-"away": "Карлос Алькарас",
-"hl": "https://a.espncdn.com/i/teamlogos/countries/500/ger.png",
-"al": "https://a.espncdn.com/i/teamlogos/countries/500/esp.png",
-"hid": "2375",
-"aid": "3782",
-"bb": "https://betboom.ru/search?query=%D0%97%D0%B2%D0%B5%D1%80%D0%B5%D0%B2&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=tennis",
-"path": "tennis/atp",
-"url": "live.html?s=tennis&p=tennis%2Fatp&e=187529&h=%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80+%D0%97%D0%B2%D0%B5%D1%80%D0%B5%D0%B2&a=%D0%9A%D0%B0%D1%80%D0%BB%D0%BE%D1%81+%D0%90%D0%BB%D1%8C%D0%BA%D0%B0%D1%80%D0%B0%D1%81",
-"participants": [
-[
-"Александр Зверев",
-"Alexander Zverev"
-],
-[
-"Карлос Алькарас",
-"Carlos Alcaraz"
-]
-],
-"div": "ATP",
-"state": "post",
-"bo": null,
-"prediction": "predictions/2026-11-22-aleksandr-zverev-karlos-alkaras-187529.html",
-"hs": null,
-"as": null,
-"tip": "Будет 2 сета · ≈1.78",
-"top": false,
-"bot": {
-"main": {
-"label": "Будет 2 сета",
-"p": 0.522,
-"odds": 1.78,
-"est": true
-},
-"bold": null,
-"markets": [
-[
-"Победа: Александр Зверев",
-0.345,
-2.75
-],
-[
-"Победа: Карлос Алькарас",
-0.655,
-1.45
-],
-[
-"Будет 3 сета",
-0.478,
-null
-],
-[
-"Будет 2 сета",
-0.522,
-null
-],
-[
-"Счёт по сетам 2:0",
-0.156,
-null
-],
-[
-"Счёт по сетам 0:2",
-0.366,
-null
-],
-[
-"Счёт по сетам 2:1",
-0.189,
-null
-],
-[
-"Счёт по сетам 1:2",
-0.289,
-null
-],
-[
-"Александр Зверев возьмёт хотя бы сет",
-0.634,
-null
-],
-[
-"Карлос Алькарас возьмёт хотя бы сет",
-0.844,
-null
-]
-],
-"bar": [
-0.3452380952380952,
-0,
-0.6547619047619049
-],
-"center": "Линия winline · Эло 1949 : 2055"
-},
-"lt": null
-},
-{
 "sport": "football",
 "id": "401878941",
 "league": "Бельгия · Про-лига",
@@ -2220,7 +2119,7 @@ null
 "bo": null,
 "prediction": "",
 "hs": "35",
-"as": "30",
+"as": "31",
 "tip": "",
 "top": false,
 "bot": null,
