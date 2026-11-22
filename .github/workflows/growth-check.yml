@@ -13,6 +13,9 @@ jobs:
         with:
           python-version: '3.12'
       - run: pip install -r requirements.txt
+      - run: python tools/growth_service_check.py
+        env:
+          FIREBASE_SA: ${{ secrets.FIREBASE_SA }}
       - run: python -m unittest discover -s tests
       - run: python tools/growth_check.py --video
       - name: Check original video dimensions and duration
