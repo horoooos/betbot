@@ -1552,7 +1552,7 @@
  "value_day": "2026-11-21",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-21",
- "site_stamp": "1428|8674|2026-11-22 05|4|e0516bc98f46f330",
+ "site_stamp": "1431|8680|2026-11-22 05|4|d85e9351aa0ecb9b",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1708,7 +1708,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 8674,
+ "dz_last": 8680,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2539,37 +2539,37 @@
    "hockey": {
     "status": "collecting",
     "weight": 0.0,
-    "settled_matches": 36,
+    "settled_matches": 38,
     "required_matches": 100,
-    "trained_at": "2026-11-22T02:44:45.916810+00:00"
+    "trained_at": "2026-11-22T02:51:47.129526+00:00"
    },
    "basketball": {
     "status": "collecting",
     "weight": 0.0,
     "settled_matches": 44,
     "required_matches": 100,
-    "trained_at": "2026-11-22T02:44:45.916810+00:00"
+    "trained_at": "2026-11-22T02:51:47.129526+00:00"
    },
    "tennis": {
     "status": "collecting",
     "weight": 0.0,
     "settled_matches": 4,
     "required_matches": 100,
-    "trained_at": "2026-11-22T02:44:45.916810+00:00"
+    "trained_at": "2026-11-22T02:51:47.129526+00:00"
    },
    "esports:CS2": {
     "status": "collecting",
     "weight": 0.0,
     "settled_matches": 0,
     "required_matches": 100,
-    "trained_at": "2026-11-22T02:44:45.916810+00:00"
+    "trained_at": "2026-11-22T02:51:47.129526+00:00"
    },
    "esports:DOTA": {
     "status": "collecting",
     "weight": 0.0,
     "settled_matches": 0,
     "required_matches": 100,
-    "trained_at": "2026-11-22T02:44:45.916810+00:00"
+    "trained_at": "2026-11-22T02:51:47.129526+00:00"
    }
   },
   "source": {
@@ -2595,8 +2595,8 @@
   "quote_matches": 24
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-22T05:44:45.916810+03:00",
-  "cursor": 269,
+  "last_poll": "2026-11-22T05:51:47.129526+03:00",
+  "cursor": "269",
   "posts": [
    {
     "post_id": 638,
@@ -3109,7 +3109,7 @@
     "observed_at": "2026-11-22T02:34:53.107749+03:00"
    }
   ],
-  "status": "cursor_reset"
+  "status": "observing"
  },
  "vk_story_pending": {
   "pid": 6655,

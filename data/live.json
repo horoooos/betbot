@@ -1130,7 +1130,8 @@
    "min_odds": 1.37,
    "minute": "2-й период",
    "score": "1:2",
-   "sport": "hockey"
+   "sport": "hockey",
+   "result": "miss"
   }
  },
  "NHL|401892761": {
@@ -1147,7 +1148,8 @@
    "min_odds": 1.4,
    "minute": "2-й период",
    "score": "0:1",
-   "sport": "hockey"
+   "sport": "hockey",
+   "result": "miss"
   }
  },
  "NHL|401892762": {
@@ -1200,7 +1202,8 @@
    "min_odds": 1.63,
    "minute": "2-й период",
    "score": "2:1",
-   "sport": "hockey"
+   "sport": "hockey",
+   "result": "miss"
   }
  },
  "NHL|401892760": {
@@ -1241,27 +1244,27 @@
  "NBA|401910024": {
   "msg": 8629,
   "hs": 94,
-  "as": 91,
+  "as": 96,
   "goals": 0,
   "kickoff": "2026-11-22T03:30:00+03:00"
  },
  "NBA|401910025": {
   "msg": 8646,
-  "hs": 68,
-  "as": 66,
+  "hs": 78,
+  "as": 72,
   "goals": 0,
   "kickoff": "2026-11-22T04:00:00+03:00"
  },
  "NBA|401910026": {
   "msg": 8647,
-  "hs": 79,
-  "as": 62,
+  "hs": 89,
+  "as": 69,
   "goals": 0,
   "kickoff": "2026-11-22T04:00:00+03:00"
  },
  "NBA|401910027": {
   "msg": 8648,
-  "hs": 78,
+  "hs": 82,
   "as": 60,
   "goals": 0,
   "kickoff": "2026-11-22T04:00:00+03:00"
