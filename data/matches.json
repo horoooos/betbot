@@ -30129,7 +30129,7 @@
   "kickoff": "2026-11-22T05:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Scheduled",
   "home": {
    "id": "221",
@@ -30270,7 +30270,10 @@
   "close": {
    "H": 0.4936,
    "U25": 0.444
-  }
+  },
+  "main_hit": true,
+  "bold_hit": false,
+  "value_hit": null
  },
  "401876817": {
   "status": "skipped",
