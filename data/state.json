@@ -5,7 +5,7 @@
  },
  "learned": "2026-11-22",
  "schedule_day": "2026-11-22",
- "content_slot": "2026-11-22-13",
+ "content_slot": "2026-11-22-16",
  "news_seen": [
   "https://www.sport-express.ru/football/france/news/zhonatan-kloss-kommentariy-po-nepopadaniyu-v-sbornuyu-francii-2476460/",
   "https://www.sport-express.ru/football/italy/news/prezident-intera-marotta-predlozhil-vvesti-v-shkolah-uroki-futbola-2476457/",
@@ -1001,7 +1001,7 @@
   "last": {
    "tennis": "2026-11-22T10:42:05.054676+03:00",
    "CS2": "2026-11-20T18:03:31.455851+03:00",
-   "DOTA": "2026-11-20T16:57:24.974457+03:00"
+   "DOTA": "2026-11-20T20:03:07.980275+03:00"
   },
   "ver": 3
  },
@@ -1550,7 +1550,7 @@
  "value_day": "2026-11-22",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-22",
- "site_stamp": "1446|8796|2026-11-22 15|4|4467599b412f0e11",
+ "site_stamp": "1446|8817|2026-11-22 16|4|ccbb340a2a1cfd97",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1706,7 +1706,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 8796,
+ "dz_last": 8817,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2629,7 +2629,7 @@
   "quote_matches": 25
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-22T15:55:03.049832+03:00",
+  "last_poll": "2026-11-22T16:01:28.761635+03:00",
   "cursor": "298",
   "posts": [
    {
@@ -3149,5 +3149,14 @@
   "pid": 6655,
   "started_at": 1794992742.839963
  },
- "vk_story_retry_at": 1794996342.839963
+ "vk_story_retry_at": 1794996342.839963,
+ "mod_poll": {
+  "key": "E0|401878755",
+  "id": "401878755",
+  "poll": 8798,
+  "post": 8797,
+  "home": "Ливерпуль",
+  "away": "Манчестер Юнайтед",
+  "kickoff": "2026-11-22T19:30:00+03:00"
+ }
 }
