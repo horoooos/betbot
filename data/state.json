@@ -2010,8 +2010,8 @@
  "vk_photos": [],
  "vk_photo_until": 1794644243.1147308,
  "vk_photo_cursor": {},
- "vk_story_last": 9016,
- "vk_story_err": null,
+ "vk_story_last": 9037,
+ "vk_story_err": "VK stories: сервер не вернул upload_result",
  "push_weekly": "2026-47",
  "vk_story_at": 1795385434.0850306,
  "vk_story_url": "https://vk.com/story-228963529_456239110",
@@ -2670,9 +2670,9 @@
    }
   },
   "source": {
-   "last_success": "2026-11-22T22:03:27.479479+00:00",
-   "parsed": 354,
-   "added": 100,
+   "last_success": "2026-11-22T22:26:04.640934+00:00",
+   "parsed": 355,
+   "added": 102,
    "discovered_matches": 30,
    "pages": 20,
    "errors": [],
@@ -2680,19 +2680,19 @@
     "soccer": 50,
     "ice-hockey": 50,
     "basketball": 50,
-    "tennis": 49,
+    "tennis": 50,
     "csgo": 50,
     "dota2": 50
    }
   },
   "error": null,
-  "tips": 11568,
+  "tips": 11598,
   "snapshots": 244,
-  "unmapped_markets": 17200,
+  "unmapped_markets": 17272,
   "quote_matches": 30
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-23T01:23:27.248184+03:00",
+  "last_poll": "2026-11-23T01:26:04.640934+03:00",
   "cursor": "337",
   "posts": [
    {
@@ -3575,5 +3575,6 @@
   "daily": {
    "day": "2026-11-23"
   }
- }
+ },
+ "vk_story_retry_at": 1795389999.7384458
 }
