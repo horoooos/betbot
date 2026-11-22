@@ -1554,7 +1554,7 @@
  "value_day": "2026-11-22",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-22",
- "site_stamp": "1479|9042|2026-11-22 20|4|c143fd9fc00ba599",
+ "site_stamp": "1481|9046|2026-11-22 20|4|0c9ee045b5fdbb64",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1708,7 +1708,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 9042,
+ "dz_last": 9046,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2591,9 +2591,9 @@
   "model": {
    "weight": 0.0,
    "status": "collecting",
-   "settled_matches": 93,
+   "settled_matches": 95,
    "required_matches": 100,
-   "trained_at": "2026-11-22T16:02:43.786435+00:00"
+   "trained_at": "2026-11-22T17:40:08.021346+00:00"
   },
   "sport_models": {
    "hockey": {
@@ -2655,77 +2655,9 @@
   "quote_matches": 25
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-22T20:34:17.582308+03:00",
-  "cursor": "319",
+  "last_poll": "2026-11-22T20:40:08.021346+03:00",
+  "cursor": "327",
   "posts": [
-   {
-    "post_id": 688,
-    "url": "https://vk.com/wall-228963529_688",
-    "title": "Стримеры и киберспортсмены обсудят блокировки в Госдуме",
-    "text": "рџ“° 3 декабря в стенах Государственной думы состоится уникальный круглый стол, где стримеры, киберспортсмены и общественные деятели соберутся обсудить растущую проблему блокировок онлайн-сервисов в России.",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": false,
-     "details_present": false,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-21T23:16:50.501017+03:00"
-   },
-   {
-    "post_id": 689,
-    "url": "https://vk.com/wall-228963529_689",
-    "title": "LIVE-прогноз не зашёл: X2 · итог 3:1",
-    "text": "рџ“Љ LIVE-прогнозы бота: 112 из 157.",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": false,
-     "details_present": false,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-21T23:16:50.501017+03:00"
-   },
-   {
-    "post_id": 693,
-    "url": "https://vk.com/wall-228963529_693",
-    "title": "Круговой: «Пенальти не было», но судья дал его ЦСКА против «Ахмата»",
-    "text": "вљЅпёЏ В 15-м туре РПЛ «Ахмат» одержал победу над «ЦСКА» со счётом 2:1. На 52-й минуте Лечи Садулаев реализовал пенальти, который судья назначил после столкновения Данила Кругового с Георгием Мелкадзе.",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": false,
-     "details_present": false,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-22T00:19:09.698718+03:00"
-   },
-   {
-    "post_id": 696,
-    "url": "https://vk.com/wall-228963529_696",
-    "title": "Игдисамов: «Пенальти, которого не было», решило поражение ЦСКА от «Ахмата»",
-    "text": "рџ“° ЦСКА уступил «Ахмату» со счётом 1:2 в 15-м туре Российской премьер-лиги, получив второе поражение подряд. Главный тренер Дмитрий Игдисамов сразу же оценил игру, отметив, что команда выглядела уверенно в первом тайме.",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": false,
-     "details_present": false,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-22T00:19:09.698718+03:00"
-   },
    {
     "post_id": 705,
     "url": "https://vk.com/wall-228963529_705",
@@ -3167,6 +3099,74 @@
     },
     "status": "needs_review",
     "observed_at": "2026-11-22T19:31:36.997382+03:00"
+   },
+   {
+    "post_id": 769,
+    "url": "https://vk.com/wall-228963529_769",
+    "title": "LIVE-прогноз зашёл: ТБ 1.5 · итог 2:2",
+    "text": "рџ“Љ LIVE-прогнозы бота: 136 из 190.",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": false,
+     "details_present": false,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-22T20:40:08.021346+03:00"
+   },
+   {
+    "post_id": 771,
+    "url": "https://vk.com/wall-228963529_771",
+    "title": "LIVE-прогноз зашёл: X2 · итог 2:3",
+    "text": "рџ“Љ LIVE-прогнозы бота: 137 из 191.",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": false,
+     "details_present": false,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-22T20:40:08.021346+03:00"
+   },
+   {
+    "post_id": 772,
+    "url": "https://vk.com/wall-228963529_772",
+    "title": "Santa: Патч 7.42 задаст новую мету на BLAST Slam IX",
+    "text": "рџ“° Патч 7.42 уже меняет правила игры на BLAST Slam IX!",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": false,
+     "details_present": false,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-22T20:40:08.021346+03:00"
+   },
+   {
+    "post_id": 773,
+    "url": "https://vk.com/wall-228963529_773",
+    "title": "«Динамо» спасло ничью у «Спартака» в последних минутах",
+    "text": "рџ“° На 14-й минуте красно-белые открыли счёт, когда полузащитник Роман Зобнин точно пробил в сетку соперника.",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": false,
+     "details_present": false,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-22T20:40:08.021346+03:00"
    }
   ],
   "status": "observing"

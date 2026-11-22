@@ -36026,7 +36026,7 @@
   "kickoff": "2026-11-22T18:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Scheduled",
   "home": {
    "id": "443",
@@ -36178,7 +36178,10 @@
   "btn": 4,
   "close": {
    "U35": 0.5295
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null,
+  "value_hit": null
  },
  "401842883": {
   "id": "401842883",
@@ -36341,7 +36344,7 @@
   "kickoff": "2026-11-22T18:45:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Scheduled",
   "home": {
    "id": "3706",
@@ -36499,7 +36502,10 @@
   "btn": 4,
   "close": {
    "H": 0.5606
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null,
+  "value_hit": null
  },
  "401888249": {
   "id": "401888249",
