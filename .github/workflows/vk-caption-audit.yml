@@ -1,0 +1,46 @@
+name: Verify native VK news captions
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 9
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install requests pandas pillow
+      - name: Observe actual native import events without posting
+        env:
+          VK_TOKEN: ${{ secrets.VK_TOKEN }}
+        run: |
+          python -u - <<'PY'
+          import json,time
+          from pathlib import Path
+          import requests,pandas as pd
+          from betbot import vk_rss_audit as audit
+          state=json.loads(Path('data/state.json').read_text(encoding='utf-8'))
+          started=time.time();out=Path('work/vk-caption-audit.json');out.parent.mkdir(exist_ok=True)
+          known={str(p['post_id']) for p in state.get('vk_rss_audit',{}).get('posts',[])}
+          for index in range(20):
+              response=requests.get('https://horoooos.github.io/betbot/rss-vk-article.xml',params={'audit':int(time.time())},timeout=25)
+              response.raise_for_status();audit.FEED=Path('work/audit-feed.xml');audit.FEED.write_bytes(response.content)
+              try:audit.poll(state,pd.Timestamp.now(tz='UTC'))
+              except Exception as e:print('Poll unavailable:',type(e).__name__,flush=True)
+              receipts=[p for p in state.get('vk_rss_audit',{}).get('posts',[]) if str(p['post_id']) not in known]
+              report={'started_at':started,'new_receipts':receipts,'last_poll':state.get('vk_rss_audit',{}).get('last_poll')}
+              out.write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding='utf-8')
+              print('Observed new receipts:',len(receipts),flush=True)
+              if any(p['status']=='verified' and (p.get('published_at') or 0)>=started-120 for p in receipts):break
+              time.sleep(15)
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: vk-caption-audit
+          path: work/vk-caption-audit.json
