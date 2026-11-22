@@ -2454,7 +2454,7 @@ null
 ]
 ],
 "div": "SP1",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "predictions/2026-11-22-rasing-santander-real-sosedad-401882800.html",
 "hs": "3",
@@ -2575,7 +2575,7 @@ null
 "min_odds": 1.4,
 "minute": "27'",
 "p": 0.749,
-"result": null,
+"result": "hit",
 "score": "2:0"
 }
 },
@@ -2604,7 +2604,7 @@ null
 ]
 ],
 "div": "SP2",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "predictions/2026-11-22-sporting-las-palmas-401882298.html",
 "hs": "0",
@@ -5083,7 +5083,7 @@ null
 "sport": "tennis",
 "id": "187529",
 "league": "Теннис · ATP",
-"kickoff": "2026-11-22T20:10:00+03:00",
+"kickoff": "2026-11-22T20:15:00+03:00",
 "home": "Александр Зверев",
 "away": "Карлос Алькарас",
 "hl": "https://a.espncdn.com/i/teamlogos/countries/500/ger.png",
@@ -6265,12 +6265,119 @@ null
 "div": "B1",
 "state": "pre",
 "bo": null,
-"prediction": "",
+"prediction": "predictions/2026-11-22-lommel-standard-401878934.html",
 "hs": "0",
 "as": "0",
-"tip": "",
+"tip": "П2 · 2.05",
 "top": false,
-"bot": null,
+"bot": {
+"main": {
+"label": "П2",
+"p": 0.452,
+"odds": 2.05,
+"est": false
+},
+"bold": null,
+"markets": [
+[
+"П1",
+0.298,
+3.15
+],
+[
+"Ничья",
+0.251,
+3.75
+],
+[
+"П2",
+0.452,
+2.1
+],
+[
+"1X",
+0.548,
+null
+],
+[
+"X2",
+0.702,
+null
+],
+[
+"ТБ 1.5",
+0.826,
+null
+],
+[
+"ТБ 2.5",
+0.603,
+null
+],
+[
+"ТМ 2.5",
+0.397,
+null
+],
+[
+"ТБ 3.5",
+0.379,
+2.25
+],
+[
+"Обе забьют — да",
+0.625,
+null
+],
+[
+"Обе забьют — нет",
+0.375,
+null
+],
+[
+"ИТ1 больше 1.5",
+0.401,
+null
+],
+[
+"ИТ2 больше 1.5",
+0.519,
+null
+],
+[
+"Ф1 (−1.5)",
+0.136,
+null
+],
+[
+"Ф2 (+1.5)",
+0.864,
+null
+]
+],
+"bar": [
+0.2977510131891233,
+0.250702021726437,
+0.45154696508443953
+],
+"center": "Ожидаемые голы (xG) 1.4 : 1.7",
+"scores": [
+[
+"1:1",
+0.115
+],
+[
+"1:2",
+0.092
+],
+[
+"2:1",
+0.073
+]
+],
+"corners": 12.1,
+"cards": 3.3
+},
 "lt": null
 },
 {
@@ -6300,12 +6407,122 @@ null
 "div": "NOR",
 "state": "pre",
 "bo": null,
-"prediction": "",
+"prediction": "predictions/2026-11-22-sarpsborg-lillestrem-401843484.html",
 "hs": "0",
 "as": "0",
-"tip": "",
+"tip": "ТМ 3.5 · ≈1.71",
 "top": false,
-"bot": null,
+"bot": {
+"main": {
+"label": "ТМ 3.5",
+"p": 0.543,
+"odds": 1.71,
+"est": true
+},
+"bold": {
+"label": "П1",
+"p": 0.423,
+"odds": 2.25,
+"est": false
+},
+"markets": [
+[
+"П1",
+0.423,
+2.0
+],
+[
+"Ничья",
+0.238,
+4.1
+],
+[
+"П2",
+0.34,
+3.2
+],
+[
+"1X",
+0.66,
+null
+],
+[
+"X2",
+0.577,
+null
+],
+[
+"ТБ 1.5",
+0.868,
+null
+],
+[
+"ТБ 2.5",
+0.673,
+null
+],
+[
+"ТМ 2.5",
+0.327,
+null
+],
+[
+"ТБ 3.5",
+0.457,
+1.909
+],
+[
+"Обе забьют — да",
+0.684,
+null
+],
+[
+"Обе забьют — нет",
+0.316,
+null
+],
+[
+"ИТ1 больше 1.5",
+0.548,
+null
+],
+[
+"ИТ2 больше 1.5",
+0.486,
+null
+],
+[
+"Ф1 (−1.5)",
+0.232,
+null
+],
+[
+"Ф2 (+1.5)",
+0.768,
+null
+]
+],
+"bar": [
+0.422634337422599,
+0.23773596221415516,
+0.33962970036324586
+],
+"center": "Ожидаемые голы (xG) 1.8 : 1.6",
+"scores": [
+[
+"1:1",
+0.101
+],
+[
+"2:1",
+0.086
+],
+[
+"1:2",
+0.076
+]
+]
+},
 "lt": null
 },
 {
@@ -8853,6 +9070,41 @@ null
 ]
 ],
 "div": "BRA",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "football",
+"id": "401888562",
+"league": "Парагвай · Примера",
+"kickoff": "2026-11-24T02:15:00+03:00",
+"home": "Nacional Asunción",
+"away": "Cerro Porteño",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/5584.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/2671.png",
+"hid": "5584",
+"aid": "2671",
+"bb": "https://betboom.ru/search?query=%D0%9D%D0%B0%D1%81%D0%B8%D0%BE%D0%BD%D0%B0%D0%BB&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/par.1",
+"url": "live.html?s=football&p=soccer%2Fpar.1&e=401888562&h=Nacional+Asunci%C3%B3n&a=Cerro+Porte%C3%B1o",
+"participants": [
+[
+"Nacional Asunción",
+"Nacional Asunción"
+],
+[
+"Cerro Porteño",
+"Cerro Porteño"
+]
+],
+"div": "PAR",
 "state": "pre",
 "bo": null,
 "prediction": "",
