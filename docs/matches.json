@@ -664,7 +664,7 @@ null
 ]
 ],
 "div": "B1",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "predictions/2026-11-22-vasland-beveren-gent-401878942.html",
 "hs": "1",
@@ -806,11 +806,11 @@ null
 ]
 ],
 "div": "D2",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "predictions/2026-11-22-energi-kotbus-hertha-berlin-401885048.html",
 "hs": "0",
-"as": "2",
+"as": "4",
 "tip": "П2 · 1.58",
 "top": false,
 "bot": {
@@ -948,7 +948,7 @@ null
 ]
 ],
 "div": "D2",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "predictions/2026-11-22-kayzerslautern-dinamo-401885052.html",
 "hs": "2",
@@ -1095,7 +1095,7 @@ null
 ]
 ],
 "div": "D2",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "predictions/2026-11-22-karlsrue-vfl-osnabruck-401885050.html",
 "hs": "0",
@@ -1530,7 +1530,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-22-barselona-vilyarreal-401882804.html",
-"hs": "0",
+"hs": "2",
 "as": "2",
 "tip": "П1 · 1.20",
 "top": false,
@@ -1977,7 +1977,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-22-konyaspor-beshiktash-401888246.html",
-"hs": "1",
+"hs": "2",
 "as": "2",
 "tip": "П2 · 1.60",
 "top": false,
@@ -3144,7 +3144,15 @@ null
 "corners": 10.5,
 "cards": 3.8
 },
-"lt": null
+"lt": {
+"fair": 1.55,
+"label": "ТБ 1.5",
+"min_odds": 1.63,
+"minute": "26'",
+"p": 0.645,
+"result": null,
+"score": "0:0"
+}
 },
 {
 "sport": "football",
@@ -3428,7 +3436,15 @@ null
 "corners": 9.4,
 "cards": 3.1
 },
-"lt": null
+"lt": {
+"fair": 1.71,
+"label": "ТБ 1.5",
+"min_odds": 1.79,
+"minute": "26'",
+"p": 0.586,
+"result": null,
+"score": "0:0"
+}
 },
 {
 "sport": "football",
@@ -3570,7 +3586,15 @@ null
 "corners": 8.9,
 "cards": 4.0
 },
-"lt": null
+"lt": {
+"fair": 1.51,
+"label": "1X",
+"min_odds": 1.58,
+"minute": "26'",
+"p": 0.663,
+"result": null,
+"score": "0:0"
+}
 },
 {
 "sport": "football",
@@ -3859,7 +3883,15 @@ null
 "corners": 9.8,
 "cards": 3.2
 },
-"lt": null
+"lt": {
+"fair": 1.53,
+"label": "ТБ 1.5",
+"min_odds": 1.61,
+"minute": "27'",
+"p": 0.652,
+"result": null,
+"score": "0:0"
+}
 },
 {
 "sport": "esports",
