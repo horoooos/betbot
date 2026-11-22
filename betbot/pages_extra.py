@@ -156,12 +156,6 @@ def _team_page(t: dict, news: list[dict], url: str) -> str:
 <div class="row" style="margin-top:16px"><a class="btn red" href="../matches.html">📺 Матчи онлайн</a><a class="btn gold" href="https://t.me/aistavvit">📲 Прогнозы в Telegram</a></div>"""
     ld = {"@context": "https://schema.org", "@type": "SportsTeam", "name": name, "sport": SPORT_RU.get(sport, ""), "url": SITE + url,
           **({"logo": t["logo"]} if t["logo"] else {})}
-    nk = pd.Timestamp(nxt[0]["kickoff"]).tz_convert("Europe/Moscow") if nxt else None
-    opp = (nxt[0]["away"] if nxt[0]["home"] == name else nxt[0]["home"]) if nxt else ""
-    desc = (f"{name} — прогноз и ставки" + (f": ближайший матч {nxt[0]['home']} — {nxt[0]['away']} {nk.day} {MONTHS[nk.month - 1]}" if nxt else "")
-            + f". Ставки от ИИ, форма команды, статистика прогнозов{' (' + short + ')' if short else ''}. {SPORT_RU.get(sport, '')}"
-            + (f", {league}" if league else "") + ". Бесплатно.")
-    title = (f"{name}: прогноз на матч с {opp} {nk:%d.%m} — ставка и статистика" if nxt else f"{name}: прогнозы на матчи и статистика ставок") + " · АИ СТАВИТ"
     title = name + " — матчи, результаты и новости · АИ СТАВИТ"
     desc = name + ": расписание ближайших матчей, результаты и новости. " + SPORT_RU.get(sport, "")
     lds = [ld, bc]
@@ -190,7 +184,7 @@ def _teams_index(teams: dict) -> str:
             tiles = "".join(
                 f'<a class="tt" href="../{team_url(sp, n)}" data-n="{H.escape(n.lower())}">'
                 + (f'<img src="{H.escape(t["logo"])}" alt="" loading="lazy">' if t.get("logo") else f'<span class="ph">{EMOJI[sp]}</span>')
-                + f'<span><b>{H.escape(n)}</b><small>{len(t["preds"])} прогн.</small></span></a>'
+                + f'<span><b>{H.escape(n)}</b><small>{len(t.get("events", [])) or len(t["preds"])} матч.</small></span></a>'
                 for n, t in sorted(by[lg]))
             blocks += f'<div class="tlg"><h3>{H.escape(lg)} <span>{len(by[lg])}</span></h3><div class="tgrid">{tiles}</div></div>'
         blocks += "</section>"
@@ -216,7 +210,7 @@ document.getElementById("tq").oninput = e => { const q = e.target.value.trim().t
   document.querySelectorAll(".tsec").forEach(s => s.style.display = [...s.querySelectorAll(".tlg")].some(g => g.style.display !== "none") ? "" : "none"); };
 </script>"""
     body = f"""{style}{crumbs}<h1>Команды и игроки: <span>матчи и новости</span></h1>
-<p class="lead">Команды и теннисисты, на которых бот давал прогнозы: ближайшие матчи, все прогнозы с результатами и новости. Любую другую команду или игрока ищите в <a href="../leagues.html" style="color:var(--gold)">поиске по всем турнирам</a>.</p>
+<p class="lead">Команды и игроки из расписания: ближайшие матчи, результаты и новости. Прогнозы показываются, когда бот их публиковал. Любую другую команду или игрока ищите в <a href="../leagues.html" style="color:var(--gold)">поиске по всем турнирам</a>.</p>
 <div class="tfind"><input id="tq" type="search" placeholder="Быстрый поиск по названию…" autocomplete="off"></div>
 <div class="ttabs">{"".join(tabs)}<a href="../leagues.html">🏆 Все турниры и таблицы</a></div>{blocks}{script}"""
     return page("../", "Прогнозы на матчи команд: футбол, хоккей, НБА, теннис — АИ СТАВИТ",
