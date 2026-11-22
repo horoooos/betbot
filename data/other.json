@@ -7510,25 +7510,25 @@
   "kickoff": "2026-11-22T03:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Sat, November 21st at 7:00 PM EST",
   "clock": "0:00",
   "period": 0,
   "home": {
+   "color": "c41230",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/mtl.png",
    "id": "10",
    "name": "Montreal Canadiens",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/mtl.png",
-   "color": "c41230",
    "score": "0",
    "record": "14-5-4",
    "periods": [],
    "ru": "Монреаль"
   },
   "away": {
+   "color": "fe5823",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/phi.png",
    "id": "15",
    "name": "Philadelphia Flyers",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/phi.png",
-   "color": "fe5823",
    "score": "0",
    "record": "8-11-6",
    "periods": [],
@@ -7640,7 +7640,9 @@
   "close": {
    "HK_O5.5": 0.5325,
    "HK_ML_A": 0.4066
-  }
+  },
+  "main_hit": true,
+  "bold_hit": true
  },
  "NHL|401892761": {
   "id": "401892761",
@@ -7911,25 +7913,25 @@
   "kickoff": "2026-11-22T03:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Sat, November 21st at 7:00 PM EST",
   "clock": "0:00",
   "period": 0,
   "home": {
+   "color": "0070b9",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/stl.png",
    "id": "19",
    "name": "St. Louis Blues",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/stl.png",
-   "color": "0070b9",
    "score": "0",
    "record": "11-9-2",
    "periods": [],
    "ru": "Сент-Луис"
   },
   "away": {
+   "color": "e30b2b",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/nj.png",
    "id": "11",
    "name": "New Jersey Devils",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/nj.png",
-   "color": "e30b2b",
    "score": "0",
    "record": "15-7-0",
    "periods": [],
@@ -8041,7 +8043,9 @@
   "close": {
    "HK_ML_A": 0.583,
    "HK_O6.5": 0.4572
-  }
+  },
+  "main_hit": false,
+  "bold_hit": true
  },
  "NHL|401892764": {
   "id": "401892764",
