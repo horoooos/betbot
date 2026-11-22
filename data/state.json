@@ -7,7 +7,6 @@
  "schedule_day": "2026-11-22",
  "content_slot": "2026-11-22-20",
  "news_seen": [
-  "https://www.sport-express.ru/cybersport/esports/news/aleksey-miranchuk-ne-ponimayu-haypa-vokrug-gta-hotya-v-detstve-vse-rubilis-v-nee-2476535/",
   "https://www.sport-express.ru/football/rus_d1/news/skorodumov-rasskazal-kak-predlagal-sude-tanashevu-dva-milliona-rubley-za-pomosch-torpedo-2476534/",
   "https://www.sport-express.ru/football/turkey/news/aleksey-miranchuk-ob-igre-batrakova-raduyus-ego-uspeham-v-turcii-2476518/",
   "https://www.sport-express.ru/football/rus_d1/news/skorodumov-nazval-dvuh-arbitrov-kotorye-otkazalis-ot-sotrudnichestva-s-nim-2476516/",
@@ -506,9 +505,10 @@
   "https://www.sport-express.ru/hockey/nhl/news/sebastyan-aho-oboshel-aleksandra-barkova-po-chislu-matchey-s-3-ochkami-i-vyshel-na-chetvertoe-mesto-sredi-finnov-v-nhl-2477740/",
   "https://www.sport-express.ru/hockey/khl/news/trener-barysa-kravec-zhurnalistu-posle-porazheniya-ot-minskogo-dinamo-vy-v-svoem-ume-voobsche-2477717/",
   "https://www.sport-express.ru/hockey/nhl/news/kirill-kaprizov-sravnyalsya-s-rayanom-suterom-po-chislu-matchey-nhl-s-neskolkimi-peredachami-za-minnesotu-22-noyabrya-2026-2477713/",
-  "https://www.sport-express.ru/football/rfpl/news/napadayuschiy-fakela-pusi-trener-byl-na-moey-storone-i-doveryal-blagodarya-etomu-ya-zabil-2477738/"
+  "https://www.sport-express.ru/football/rfpl/news/napadayuschiy-fakela-pusi-trener-byl-na-moey-storone-i-doveryal-blagodarya-etomu-ya-zabil-2477738/",
+  "https://www.sport-express.ru/tennis/atp/news/daniil-medvedev-zarabotal-bolee-5-6-milliona-dollarov-prizovyh-v-sezone-2026-rasklad-dohodov-tennisista-iz-rossii-2477746/"
  ],
- "news_i": 4,
+ "news_i": 6,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1556,7 +1556,7 @@
  "value_day": "2026-11-22",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-22",
- "site_stamp": "1483|9052|2026-11-22 20|4|7e68f5ffe17c9eb7",
+ "site_stamp": "1486|9060|2026-11-22 20|4|6c47541b1819f7bd",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1686,7 +1686,7 @@
  "streak_day": {
   "2026-11-22": 2
  },
- "news_next": "2026-11-22T20:52:42.596580+03:00",
+ "news_next": "2026-11-22T21:30:35.390201+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1710,7 +1710,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 9052,
+ "dz_last": 9060,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -1965,7 +1965,8 @@
   "https://upload.wikimedia.org/wikipedia/commons/3/3e/FC_Dynamo_Kyiv_Fans_-_%D0%A4%D0%B0%D0%BD%D0%B0%D1%82%D1%8B_%D0%A4%D0%9A_%D0%94%D0%B8%D0%BD%D0%B0%D0%BC%D0%BE_%D0%9A%D0%B8%D0%B5%D0%B2_%2822352221975%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
   "https://ss.sport-express.ru/userfiles/materials/224/2245811/1180x665.jpg",
   "https://images.cybersport.ru/images/as-is/plain/2a/2a3d84f6-31b7-425c-b4b8-e5bfdb70fcc2.jpg",
-  "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c1/Nagoya_City_Minato_Soccer_Stadium_-_3.jpg/1280px-Nagoya_City_Minato_Soccer_Stadium_-_3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c1/Nagoya_City_Minato_Soccer_Stadium_-_3.jpg/1280px-Nagoya_City_Minato_Soccer_Stadium_-_3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "https://ss.sport-express.ru/userfiles/materials/224/2245825/1180x665.jpg"
  ],
  "indexnow_day": "2026-11-22",
  "vk_wall_err": null,
@@ -2298,7 +2299,8 @@
   "8957",
   "8990",
   "9016",
-  "9038"
+  "9038",
+  "9064"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -2563,11 +2565,12 @@
   "2026-11-22:новость:4a0fc1ca4b70624c7001943f",
   "2026-11-22:новость:0539c4b8fb1d89b0f11f4d7a",
   "2026-11-22:новость:270c02353833ffd269dea30a",
-  "2026-11-22:новость:55751a4b33b964b26c81f8df"
+  "2026-11-22:новость:55751a4b33b964b26c81f8df",
+  "2026-11-22:новость:aa33b52c4587d0738fb7c5d7"
  ],
  "dz_last_delivery": {
-  "source_id": 9038,
-  "message_id": 811,
+  "source_id": 9064,
+  "message_id": 812,
   "kind": "новость"
  },
  "learn_attempt_day": "2026-11-22",
@@ -2593,9 +2596,9 @@
   "model": {
    "weight": 0.0,
    "status": "collecting",
-   "settled_matches": 95,
+   "settled_matches": 96,
    "required_matches": 100,
-   "trained_at": "2026-11-22T17:40:08.021346+00:00"
+   "trained_at": "2026-11-22T17:58:35.390201+00:00"
   },
   "sport_models": {
    "hockey": {
@@ -2657,7 +2660,7 @@
   "quote_matches": 25
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-22T20:52:05.378401+03:00",
+  "last_poll": "2026-11-22T20:58:35.390201+03:00",
   "cursor": "327",
   "posts": [
    {
