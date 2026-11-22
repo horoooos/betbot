@@ -906,9 +906,9 @@
  },
  "E0|401879234": {
   "msg": 8858,
-  "hs": 0,
+  "hs": 1,
   "as": 0,
-  "goals": 0,
+  "goals": 1,
   "kickoff": "2026-11-22T17:00:00+03:00",
   "lt": {
    "key": "O1.5",
@@ -935,7 +935,8 @@
    "min_odds": 1.79,
    "minute": "26'",
    "score": "0:0",
-   "sport": "football"
+   "sport": "football",
+   "result": "hit"
   }
  },
  "I1|401874960": {
@@ -952,7 +953,8 @@
    "min_odds": 1.58,
    "minute": "26'",
    "score": "0:0",
-   "sport": "football"
+   "sport": "football",
+   "result": "miss"
   }
  },
  "F1|401876397": {

@@ -34031,7 +34031,7 @@
   "kickoff": "2026-11-22T17:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Scheduled",
   "home": {
    "id": "107",
@@ -34192,7 +34192,10 @@
   "btn": 4,
   "close": {
    "H": 0.5242
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null,
+  "value_hit": null
  },
  "401899547": {
   "id": "401899547",
@@ -34201,7 +34204,7 @@
   "kickoff": "2026-11-22T17:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Scheduled",
   "home": {
    "id": "4055",
@@ -34362,7 +34365,10 @@
   "close": {
    "U25": 0.4882,
    "H": 0.4225
-  }
+  },
+  "main_hit": false,
+  "bold_hit": true,
+  "value_hit": null
  },
  "401876397": {
   "id": "401876397",
@@ -34701,7 +34707,7 @@
   "kickoff": "2026-11-22T17:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Scheduled",
   "home": {
    "id": "3997",
@@ -34863,7 +34869,10 @@
   "btn": 4,
   "close": {
    "U25": 0.5474
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null,
+  "value_hit": null
  },
  "401884733": {
   "id": "401884733",
@@ -36623,7 +36632,11 @@
    }
   },
   "msg_id": 8912,
-  "btn": 4
+  "btn": 4,
+  "close": {
+   "BTTS_Y": 0.4912,
+   "H-2.5": 0.5435
+  }
  },
  "401879802": {
   "status": "skipped",
@@ -36766,7 +36779,10 @@
   },
   "extra": null,
   "msg_id": 8914,
-  "btn": 4
+  "btn": 4,
+  "close": {
+   "A": 0.5395
+  }
  },
  "401843490": {
   "id": "401843490",
@@ -36905,7 +36921,10 @@
   },
   "extra": null,
   "msg_id": 8916,
-  "btn": 4
+  "btn": 4,
+  "close": {
+   "A": 0.5817
+  }
  },
  "401843488": {
   "id": "401843488",
@@ -37052,7 +37071,11 @@
   },
   "extra": null,
   "msg_id": 8918,
-  "btn": 4
+  "btn": 4,
+  "close": {
+   "U35": 0.5771,
+   "A": 0.4292
+  }
  },
  "401843487": {
   "id": "401843487",
@@ -37198,7 +37221,10 @@
   },
   "extra": null,
   "msg_id": 8920,
-  "btn": 4
+  "btn": 4,
+  "close": {
+   "U35": 0.5769
+  }
  },
  "401899549": {
   "id": "401899549",
