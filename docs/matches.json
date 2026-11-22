@@ -4199,7 +4199,15 @@ null
 ],
 "center": "Ожидаемые голы 2.9 : 3.6"
 },
-"lt": null
+"lt": {
+"fair": 1.42,
+"label": "X2 (осн. время)",
+"min_odds": 1.49,
+"minute": "2-й период",
+"p": 0.703,
+"result": null,
+"score": "1:1"
+}
 },
 {
 "sport": "football",
@@ -6480,41 +6488,6 @@ null
 "prediction": "",
 "hs": "0",
 "as": "0",
-"tip": "",
-"top": false,
-"bot": null,
-"lt": null
-},
-{
-"sport": "tennis",
-"id": "186819",
-"league": "Теннис · WTA",
-"kickoff": "2026-11-23T08:00:00+03:00",
-"home": "Викториа Босио",
-"away": "Лаура Самсон",
-"hl": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
-"al": "https://a.espncdn.com/i/teamlogos/countries/500/cze.png",
-"hid": "2035",
-"aid": "15069",
-"bb": "https://betboom.ru/search?query=%D0%91%D0%BE%D1%81%D0%B8%D0%BE&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=tennis",
-"path": "tennis/wta",
-"url": "live.html?s=tennis&p=tennis%2Fwta&e=186819&h=%D0%92%D0%B8%D0%BA%D1%82%D0%BE%D1%80%D0%B8%D0%B0+%D0%91%D0%BE%D1%81%D0%B8%D0%BE&a=%D0%9B%D0%B0%D1%83%D1%80%D0%B0+%D0%A1%D0%B0%D0%BC%D1%81%D0%BE%D0%BD",
-"participants": [
-[
-"Викториа Босио",
-"Victoria Bosio"
-],
-[
-"Лаура Самсон",
-"Laura Samson"
-]
-],
-"div": "WTA",
-"state": "pre",
-"bo": null,
-"prediction": "",
-"hs": null,
-"as": null,
 "tip": "",
 "top": false,
 "bot": null,
