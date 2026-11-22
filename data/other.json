@@ -1,120 +1,4 @@
 {
- "WTA|186808": {
-  "id": "186808",
-  "div": "WTA",
-  "sport": "tennis",
-  "tournament": "LP Open by IND",
-  "round": "Round 2",
-  "bo5": false,
-  "kickoff": "2026-11-19T19:00:00+03:00",
-  "state": "pre",
-  "completed": false,
-  "status": "done",
-  "detail": "Thu, November 19th at 11:00 AM EST",
-  "home": {
-   "color": "2d6a4f",
-   "logo": [
-    "https://a.espncdn.com/i/headshots/tennis/players/full/3042.png",
-    "https://a.espncdn.com/i/teamlogos/countries/500/ukr.png"
-   ],
-   "id": "3042",
-   "name": "Valeriya Strakhova",
-   "country": "Ukraine",
-   "winner": false,
-   "sets": [],
-   "set_won": [],
-   "ru": "Валерия Страхова"
-  },
-  "away": {
-   "color": "2d6a4f",
-   "logo": [
-    "https://a.espncdn.com/i/headshots/tennis/players/full/5878.png",
-    "https://a.espncdn.com/i/teamlogos/countries/500/slo.png"
-   ],
-   "id": "5878",
-   "name": "Veronika Erjavec",
-   "country": "Slovenia",
-   "winner": false,
-   "sets": [],
-   "set_won": [],
-   "ru": "Вероника Эрьявец"
-  },
-  "odds": {
-   "H": 3.65,
-   "A": 1.24,
-   "src": "winline",
-   "source_url": "https://stavka.tv/matches/tennis/18-11-2026-strakhova-valeriya-erjavec-veronika",
-   "observed_at": "2026-11-19T14:54:13.826124+00:00",
-   "price_kind": "public_displayed"
-  },
-  "probs": {
-   "TN_W1": 0.25357873210633947,
-   "TN_W2": 0.7464212678936606,
-   "TN_3S": 0.4415584305157808,
-   "TN_2S": 0.5584415694842193,
-   "TN_S2:0": 0.10827990390282757,
-   "TN_S0:2": 0.4501616655813917,
-   "TN_S2:1": 0.1452988282035119,
-   "TN_S1:2": 0.2962596023122689,
-   "TN_SET1": 0.5498383344186083,
-   "TN_SET2": 0.8917200960971724
-  },
-  "labels": {
-   "TN_W1": "Победа: Валерия Страхова",
-   "TN_W2": "Победа: Вероника Эрьявец",
-   "TN_3S": "Будет 3 сета",
-   "TN_2S": "Будет 2 сета",
-   "TN_S2:0": "Счёт по сетам 2:0",
-   "TN_S0:2": "Счёт по сетам 0:2",
-   "TN_S2:1": "Счёт по сетам 2:1",
-   "TN_S1:2": "Счёт по сетам 1:2",
-   "TN_SET1": "Валерия Страхова возьмёт хотя бы сет",
-   "TN_SET2": "Вероника Эрьявец возьмёт хотя бы сет"
-  },
-  "real": {
-   "TN_W1": 3.65,
-   "TN_W2": 1.24
-  },
-  "center": "Линия winline · Эло 1440 : 1517",
-  "bar": [
-   0.25357873210633947,
-   0,
-   0.7464212678936606
-  ],
-  "model": {
-   "elo": [
-    1439.5414497315787,
-    1517.354113331694
-   ],
-   "src": "winline"
-  },
-  "stavka_signal": {
-   "status": "collecting",
-   "weight": 0.0,
-   "authors": 4,
-   "group": "tennis",
-   "snapshot": "WTA|186808",
-   "source": "https://stavka.tv"
-  },
-  "main": {
-   "key": "TN_2S",
-   "label": "Будет 2 сета",
-   "p": 0.5584,
-   "odds": 1.67,
-   "est": true,
-   "stake": 1.0
-  },
-  "bold": {},
-  "open": {},
-  "top": false,
-  "msg_id": 7284,
-  "btn": 4,
-  "close": {
-   "_": null
-  },
-  "main_hit": true,
-  "bold_hit": null
- },
  "WTA|186806": {
   "id": "186806",
   "div": "WTA",
@@ -8711,7 +8595,8 @@
   "btn": 4,
   "close": {
    "_": null
-  }
+  },
+  "settlement_retry_at": 1795364263.786435
  },
  "DOTA|1816459": {
   "id": "1816459",
@@ -8846,6 +8731,271 @@
   "btn": 4,
   "close": {
    "_": null
-  }
+  },
+  "settlement_retry_at": 1795364263.786435
+ },
+ "DOTA|1816470": {
+  "id": "1816470",
+  "div": "DOTA",
+  "sport": "esports",
+  "streams": [
+   {
+    "provider": "twitch",
+    "channel": "betboom_dota_ru",
+    "url": "https://www.twitch.tv/betboom_dota_ru",
+    "language": "ru",
+    "source": "PandaScore",
+    "official": false,
+    "status": "listed",
+    "access": "unknown"
+   },
+   {
+    "provider": "twitch",
+    "channel": "blastdotab",
+    "url": "https://www.twitch.tv/blastdotab",
+    "language": "en",
+    "source": "PandaScore",
+    "official": false,
+    "status": "listed",
+    "access": "unknown"
+   },
+   {
+    "provider": "twitch",
+    "channel": "betboom_dota_ru2",
+    "url": "https://www.twitch.tv/betboom_dota_ru2",
+    "language": "ru",
+    "source": "PandaScore",
+    "official": false,
+    "status": "listed",
+    "access": "unknown"
+   },
+   {
+    "provider": "twitch",
+    "channel": "blastdota",
+    "url": "https://www.twitch.tv/blastdota",
+    "language": "en",
+    "source": "PandaScore",
+    "official": true,
+    "status": "listed",
+    "access": "unknown"
+   }
+  ],
+  "tournament": "BLAST Slam · Season 9 2026",
+  "bo": 3,
+  "kickoff": "2026-11-22T20:00:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "tier": "a",
+  "status": "reviewed",
+  "home": {
+   "id": "1657",
+   "name": "LGD Gaming",
+   "ru": "LGD Gaming",
+   "logo": "https://cdn-api.pandascore.co/images/team/image/1657/600px_lgd_gaming_dec_2019_allmode.png",
+   "color": "3b4a7a",
+   "score": 0,
+   "winner": false
+  },
+  "away": {
+   "id": "139432",
+   "name": "Astra Invicta",
+   "ru": "Astra Invicta",
+   "logo": "https://cdn-api.pandascore.co/images/team/image/139432/664px_astra_invicta_lightmode.png",
+   "color": "3b4a7a",
+   "score": 0,
+   "winner": false
+  },
+  "odds": {},
+  "probs": {
+   "ES_W1": 0.7327192537449505,
+   "ES_W2": 0.2672807462550495,
+   "ES_FULL": 0.44836571658917224,
+   "ES_DRY": 0.5516342834108278,
+   "ES_S2:0": 0.4364942766855158,
+   "ES_S0:2": 0.11514000672531195,
+   "ES_S2:1": 0.2962249770594346,
+   "ES_S1:2": 0.15214073952973753,
+   "ES_MAP1": 0.884859993274688,
+   "ES_MAP2": 0.5635057233144842
+  },
+  "labels": {
+   "ES_W1": "Победа: LGD Gaming",
+   "ES_W2": "Победа: Astra Invicta",
+   "ES_FULL": "Больше 2 карт",
+   "ES_DRY": "Всухую (2:0 или 0:2)",
+   "ES_S2:0": "Счёт по картам 2:0",
+   "ES_S0:2": "Счёт по картам 0:2",
+   "ES_S2:1": "Счёт по картам 2:1",
+   "ES_S1:2": "Счёт по картам 1:2",
+   "ES_MAP1": "LGD Gaming возьмёт хотя бы карту",
+   "ES_MAP2": "Astra Invicta возьмёт хотя бы карту"
+  },
+  "real": {},
+  "center": "BO3 · Эло 1616 : 1441",
+  "bar": [
+   0.7327192537449505,
+   0,
+   0.2672807462550495
+  ],
+  "model": {
+   "elo": [
+    1615.7068471714158,
+    1440.5188757716328
+   ],
+   "src": "Эло"
+  },
+  "stavka_signal": {
+   "status": "collecting",
+   "weight": 0.0,
+   "authors": 20,
+   "group": "esports:DOTA",
+   "snapshot": "DOTA|1816470",
+   "source": "https://stavka.tv"
+  },
+  "main": {
+   "key": "ES_DRY",
+   "label": "Всухую (2:0 или 0:2)",
+   "p": 0.5516,
+   "odds": 1.69,
+   "est": true,
+   "stake": 1.0
+  },
+  "bold": {},
+  "open": {},
+  "top": false,
+  "msg_id": 8976,
+  "btn": 4
+ },
+ "DOTA|1816469": {
+  "id": "1816469",
+  "div": "DOTA",
+  "sport": "esports",
+  "streams": [
+   {
+    "provider": "twitch",
+    "channel": "betboom_dota_ru",
+    "url": "https://www.twitch.tv/betboom_dota_ru",
+    "language": "ru",
+    "source": "PandaScore",
+    "official": false,
+    "status": "listed",
+    "access": "unknown"
+   },
+   {
+    "provider": "twitch",
+    "channel": "blastdotab",
+    "url": "https://www.twitch.tv/blastdotab",
+    "language": "en",
+    "source": "PandaScore",
+    "official": false,
+    "status": "listed",
+    "access": "unknown"
+   },
+   {
+    "provider": "twitch",
+    "channel": "betboom_dota_ru2",
+    "url": "https://www.twitch.tv/betboom_dota_ru2",
+    "language": "ru",
+    "source": "PandaScore",
+    "official": false,
+    "status": "listed",
+    "access": "unknown"
+   },
+   {
+    "provider": "twitch",
+    "channel": "blastdota",
+    "url": "https://www.twitch.tv/blastdota",
+    "language": "en",
+    "source": "PandaScore",
+    "official": true,
+    "status": "listed",
+    "access": "unknown"
+   }
+  ],
+  "tournament": "BLAST Slam · Season 9 2026",
+  "bo": 3,
+  "kickoff": "2026-11-22T20:00:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "tier": "a",
+  "status": "reviewed",
+  "home": {
+   "id": "134536",
+   "name": "1w Team",
+   "ru": "1w Team",
+   "logo": "https://cdn-api.pandascore.co/images/team/image/134536/800px_1win_team_2024_allmode.png",
+   "color": "3b4a7a",
+   "score": 0,
+   "winner": false
+  },
+  "away": {
+   "id": "133882",
+   "name": "Aurora",
+   "ru": "Aurora",
+   "logo": "https://cdn-api.pandascore.co/images/team/image/133882/600px_aurora_gaming_2025_allmode.png",
+   "color": "3b4a7a",
+   "score": 0,
+   "winner": false
+  },
+  "odds": {},
+  "probs": {
+   "ES_W1": 0.6634294715544515,
+   "ES_W2": 0.33657052844554847,
+   "ES_FULL": 0.47546226132662484,
+   "ES_DRY": 0.5245377386733752,
+   "ES_S2:0": 0.3730337976158481,
+   "ES_S0:2": 0.15150394105752707,
+   "ES_S2:1": 0.2903956739386035,
+   "ES_S1:2": 0.18506658738802137,
+   "ES_MAP1": 0.8484960589424729,
+   "ES_MAP2": 0.6269662023841519
+  },
+  "labels": {
+   "ES_W1": "Победа: 1w Team",
+   "ES_W2": "Победа: Aurora",
+   "ES_FULL": "Больше 2 карт",
+   "ES_DRY": "Всухую (2:0 или 0:2)",
+   "ES_S2:0": "Счёт по картам 2:0",
+   "ES_S0:2": "Счёт по картам 0:2",
+   "ES_S2:1": "Счёт по картам 2:1",
+   "ES_S1:2": "Счёт по картам 1:2",
+   "ES_MAP1": "1w Team возьмёт хотя бы карту",
+   "ES_MAP2": "Aurora возьмёт хотя бы карту"
+  },
+  "real": {},
+  "center": "BO3 · Эло 1706 : 1589",
+  "bar": [
+   0.6634294715544515,
+   0,
+   0.33657052844554847
+  ],
+  "model": {
+   "elo": [
+    1706.4413408881085,
+    1588.5538706199457
+   ],
+   "src": "Эло"
+  },
+  "stavka_signal": {
+   "status": "collecting",
+   "weight": 0.0,
+   "authors": 17,
+   "group": "esports:DOTA",
+   "snapshot": "DOTA|1816469",
+   "source": "https://stavka.tv"
+  },
+  "main": {
+   "key": "ES_DRY",
+   "label": "Всухую (2:0 или 0:2)",
+   "p": 0.5245,
+   "odds": 1.77,
+   "est": true,
+   "stake": 1.0
+  },
+  "bold": {},
+  "open": {},
+  "top": false,
+  "msg_id": 8978,
+  "btn": 4
  }
 }
