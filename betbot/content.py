@@ -726,21 +726,26 @@ DESCRIPTION = ("🤖 Бесплатные прогнозы на спорт от 
 
 
 def invite(res: pd.DataFrame, brand: str, channel: str = "@aistavvit") -> int:
-    """📣 Пост-приглашение «Почему стоит подписаться» — удобно пересылать и отдавать партнёрам по взаимопиару."""
-    n = len(res) if res is not None else 0
-    hit = res["main_hit"].astype(str).str.lower().isin(["true", "1", "1.0"]) if n else pd.Series(dtype=bool)
-    days = res["date"].nunique() if n else 0
-    stats = [(f"{n}", "прогнозов"), (f"{100 * hit.mean():.0f}%" if n else "—", "основной зашёл"), ("5", "видов спорта")]
-    bullets = ["Прогноз и разбор за час до каждого матча", "Live: старт, голы и итог прямо в ленте",
-               "Экспресс дня и «экспресс на яйцах» с кэфом 10+", "Честно считаем каждый прогноз — и промахи тоже"]
-    png = card.invite_card(stats, bullets, channel, brand)
-    text = (f"📣 <b>ПОЧЕМУ СТОИТ ПОДПИСАТЬСЯ НА</b> {channel}\n\n"
-            f"🤖 Бот на базе ИИ разбирает матчи по футболу, хоккею, NBA, теннису и киберспорту — и даёт прогнозы бесплатно.\n\n"
-            f"✅ Прогноз и полный разбор за час до каждого матча\n"
-            f"🔴 Live: старт, голы и итог прямо в ленте\n"
-            f"🔥 Экспресс дня в 10:00 и 🥚 экспресс на яйцах (кэф 10+) в 20:00\n"
-            f"🧠 Ликбезы с викторинами, итоги недели и разбор провалов\n\n"
-            f"📊 <b>Честная статистика:</b> {n} прогнозов за {days} дн., основной зашёл в "
-            f"{100 * hit.mean():.0f}% случаев" + (". Все прогнозы — с плюсами и минусами — на сайте: horoooos.github.io/betbot" if n else "")
-            + f"\n\n👉 Подписывайся: {channel}\n<i>⚠️ 18+. Прогноз — не гарантия. Ставьте только то, что не жалко потерять.</i>")
-    return _post(png, text)
+    """Shareable invitation with losses and quote-based ROI disclosed."""
+    n=len(res) if res is not None else 0
+    hit=pro._truthy(res['main_hit']) if n else pd.Series(dtype=bool)
+    real=res.copy() if n else pd.DataFrame()
+    if n and 'main_est' in real:real=real[~pro._truthy(real['main_est'])]
+    if n:real=real[real['main_hit'].notna() & (pd.to_numeric(real['main_odds'],errors='coerce')>1)]
+    roi=None
+    if len(real):
+        won=pro._truthy(real['main_hit']);profit=won.astype(float)*pd.to_numeric(real['main_odds'])-1
+        roi=100*profit.mean()
+    roi_text=f'{roi:+.1f}%' if roi is not None else '—'
+    stats=[(str(n),'прогнозов в журнале'),(f'{100*hit.mean():.0f}%' if n else '—','успешных основных'),(roi_text,'ROI по котировкам')]
+    bullets=['Свежие спортивные новости и актуальные матчи','Прогнозы при реальной котировке и перевесе модели','Публичный журнал: выигрыши и проигрыши','Сайт и Telegram без платной подписки']
+    png=card.invite_card(stats,bullets,channel,brand)
+    text=(f'📣 <b>АИ СТАВИТ — СПОРТ КАЖДЫЙ ДЕНЬ</b>\n\n'
+          '📰 Футбол, хоккей, баскетбол, теннис и киберспорт: новости, расписание и доступные трансляции.\n\n'
+          '🤖 Бот анализирует матчи. Рекомендация ставки появляется только при реальном коэффициенте и расчётном перевесе.\n\n'
+          f'📊 В открытом журнале {n} прогнозов: учитываем и выигрыши, и проигрыши. '
+          +(f'ROI основных по опубликованным реальным котировкам при равной ставке: {roi_text}. Это расчёт истории, не доход счёта. ' if roi is not None else '')
+          +'Проходимость не равна прибыли.\n\n'
+          +f'👉 Новости и матчи: {channel}\n🌐 https://horoooos.github.io/betbot/\n\n'
+          +'Поделитесь каналом с теми, кому интересен спорт.\n'+FOOTER)
+    return _post(png,text)

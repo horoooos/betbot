@@ -26,7 +26,7 @@ def portrait(image: bytes, text: str = "", test: bool = False) -> bytes:
     for line in lines:
         draw.text((60, y), line, font=card.font(34), fill="white")
         y += 47
-    draw.text((60, 1740), "Тест истории" if test else "Спортивные новости и прогнозы",
+    draw.text((60, 1740), "Тест истории" if test else "Спортивные новости каждый день",
               font=card.font(32), fill="#ffc400")
     draw.text((60, 1800), "horoooos.github.io/betbot", font=card.font(30), fill="white")
     result = BytesIO()
@@ -122,6 +122,20 @@ def crosspost(state: dict, checkpoint=None) -> int:
         state["vk_story_last"] = newest
         print(f"ВК истории: включены после поста {newest}")
         return 0
+    previous = state.get("vk_story_pending")
+    if isinstance(previous, dict):
+        started = previous.get('started_at')
+        expired = bool(started and now-float(started)>86400)
+        if not started:
+            original=posts.get(str(previous.get('pid')), {})
+            try:expired=now-datetime.fromisoformat(original['t'].replace('Z','+00:00')).timestamp()>172800
+            except (KeyError,ValueError,TypeError):pass
+        if expired:
+            # Expired stories cannot be verified; advance without reposting them.
+            state['vk_story_last']=max(int(state['vk_story_last']),int(previous.get('pid') or 0))
+            state['vk_story_expired_pending']={'pid':previous.get('pid'),'cleared_at':now}
+            state.pop('vk_story_pending',None);state.pop('vk_story_retry_at',None)
+            state['vk_story_err']=None;checkpoint()
     if now < float(state.get("vk_story_retry_at") or 0):
         return 0
 
@@ -159,13 +173,13 @@ def crosspost(state: dict, checkpoint=None) -> int:
     from . import dzen, postimg
     for pid in sorted(int(k) for k in posts if int(k) > int(state["vk_story_last"])):
         post = posts[str(pid)]
-        kind = dzen.kind(post.get("html", ""))
-        if not kind or vk._service(vk._text(post.get("html", ""))):
+        kind = dzen.delivery_kind(post.get("html", ""))
+        if kind != "новость" or vk._service(vk._text(post.get("html", ""))):
             state["vk_story_last"] = pid
             continue
         try:
             timestamp = datetime.fromisoformat(post["t"].replace("Z", "+00:00")).timestamp()
-            if now - timestamp > 86400:
+            if now - timestamp > 6*3600:
                 state["vk_story_last"] = pid
                 continue
             image = postimg.image_for(post, kind, posts)
@@ -177,7 +191,7 @@ def crosspost(state: dict, checkpoint=None) -> int:
                 checkpoint()
 
             def saved(story):
-                state["vk_story_pending"] = {"pid": pid, "id": story["id"], "owner_id": story["owner_id"]}
+                state["vk_story_pending"] = {"pid": pid, "id": story["id"], "owner_id": story["owner_id"], "started_at": now}
                 checkpoint()
 
             story = publish_image(image, post.get("html", ""), on_saving=saving, on_saved=saved)
