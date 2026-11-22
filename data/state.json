@@ -2620,43 +2620,9 @@
   "quote_matches": 25
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-22T14:10:45.995785+03:00",
-  "cursor": "294",
+  "last_poll": "2026-11-22T14:16:30.386741+03:00",
+  "cursor": "296",
   "posts": [
-   {
-    "post_id": 666,
-    "url": "https://vk.com/wall-228963529_666",
-    "title": "Слуцкий назвал Селюка, Мостового и Бубнова фриками российского футбола",
-    "text": "рџ“° Слуцкий в интервью Sport24 откровенно раскрыл, как относится к тройке самых громких агентов и бывших игроков: Дмитрию Селюку, Александру Мостовому и Александру Бубнову.",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": false,
-     "details_present": false,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-21T16:49:01.072081+03:00"
-   },
-   {
-    "post_id": 668,
-    "url": "https://vk.com/wall-228963529_668",
-    "title": "TORONTOTOKYO: CS2 продержится дольше, чем Dota 2",
-    "text": "рџ± «CS2 будет жить подольше, чем Dota 2», – броско заявляет бывший тренер BETBOOM TEAM Александр «TORONTOTOKYO» Хертек, сравнивая две крупнейшие киберспортивные сцены.",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": false,
-     "details_present": false,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-21T17:56:55.061568+03:00"
-   },
    {
     "post_id": 669,
     "url": "https://vk.com/wall-228963529_669",
@@ -3132,6 +3098,40 @@
     },
     "status": "needs_review",
     "observed_at": "2026-11-22T13:08:51.811071+03:00"
+   },
+   {
+    "post_id": 744,
+    "url": "https://vk.com/wall-228963529_744",
+    "title": "Слуцкий: «Не спешу возвращаться в тренерскую работу, хочу отдохнуть»",
+    "text": "рџ“° Слуцкий откровенно: «Не спешу возвращаться в тренерскую работу, хочу отдохнуть»",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": false,
+     "details_present": false,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-22T14:16:30.386741+03:00"
+   },
+   {
+    "post_id": 745,
+    "url": "https://vk.com/wall-228963529_745",
+    "title": "«Зенит» разгромлен «Рубином»: 1:3 в 15-м туре",
+    "text": "рџ“° В 15-м туре РПЛ «Зенит» потерпел сокрушительное поражение на своем поле – хозяева пропустили три гола и лишь один смог ответить, итог 1:3 против «Рубина».",
+    "checks": {
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": false,
+     "details_present": false,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-22T14:16:30.386741+03:00"
    }
   ],
   "status": "observing"
