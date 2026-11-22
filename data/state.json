@@ -2667,10 +2667,10 @@
    }
   },
   "source": {
-   "last_success": "2026-11-22T21:41:27.923496+00:00",
-   "parsed": 352,
-   "added": 115,
-   "discovered_matches": 32,
+   "last_success": "2026-11-22T22:03:27.479479+00:00",
+   "parsed": 354,
+   "added": 100,
+   "discovered_matches": 30,
    "pages": 20,
    "errors": [],
    "parsed_by_sport": {
@@ -2683,13 +2683,13 @@
    }
   },
   "error": null,
-  "tips": 11533,
+  "tips": 11568,
   "snapshots": 243,
-  "unmapped_markets": 17135,
+  "unmapped_markets": 17200,
   "quote_matches": 30
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-23T01:01:26.977852+03:00",
+  "last_poll": "2026-11-23T01:03:27.479479+03:00",
   "cursor": "337",
   "posts": [
    {
@@ -3427,7 +3427,7 @@
    "401888562": "pre",
    "401876816": "post",
    "401876817": "post",
-   "401876887": "pre",
+   "401876887": "in",
    "401892134": "post",
    "401913961": "post",
    "401931814": "post",
