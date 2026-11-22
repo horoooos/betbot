@@ -1095,7 +1095,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-22-horsens-silkeborg-401874575.html",
-"hs": "2",
+"hs": "3",
 "as": "1",
 "tip": "ТБ 2.5 · ≈1.56",
 "top": false,
@@ -2698,7 +2698,7 @@ null
 "bo": null,
 "prediction": "predictions/2026-11-22-sparta-rotterdam-az-401875540.html",
 "hs": "1",
-"as": "2",
+"as": "3",
 "tip": "П2 · 1.72",
 "top": false,
 "bot": {
@@ -3174,7 +3174,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-22-bolonya-udineze-401875047.html",
-"hs": "0",
+"hs": "1",
 "as": "0",
 "tip": "П1 · 1.71",
 "top": false,
@@ -5264,12 +5264,119 @@ null
 "div": "N1",
 "state": "pre",
 "bo": null,
-"prediction": "",
+"prediction": "predictions/2026-11-22-gou-ehed-iglz-fortuna-sittard-401875542.html",
 "hs": "0",
 "as": "0",
-"tip": "",
+"tip": "П1 · 1.62",
 "top": false,
-"bot": null,
+"bot": {
+"main": {
+"label": "П1",
+"p": 0.574,
+"odds": 1.62,
+"est": false
+},
+"bold": null,
+"markets": [
+[
+"П1",
+0.574,
+1.769
+],
+[
+"Ничья",
+0.223,
+4.0
+],
+[
+"П2",
+0.204,
+4.1
+],
+[
+"1X",
+0.796,
+null
+],
+[
+"X2",
+0.426,
+null
+],
+[
+"ТБ 1.5",
+0.848,
+null
+],
+[
+"ТБ 2.5",
+0.639,
+null
+],
+[
+"ТМ 2.5",
+0.361,
+null
+],
+[
+"ТБ 3.5",
+0.418,
+2.25
+],
+[
+"Обе забьют — да",
+0.619,
+null
+],
+[
+"Обе забьют — нет",
+0.381,
+null
+],
+[
+"ИТ1 больше 1.5",
+0.62,
+null
+],
+[
+"ИТ2 больше 1.5",
+0.335,
+null
+],
+[
+"Ф1 (−1.5)",
+0.355,
+null
+],
+[
+"Ф2 (+1.5)",
+0.645,
+null
+]
+],
+"bar": [
+0.5736971853531477,
+0.2226513707948183,
+0.20365144385203374
+],
+"center": "Ожидаемые голы (xG) 2.1 : 1.2",
+"scores": [
+[
+"1:1",
+0.101
+],
+[
+"2:1",
+0.098
+],
+[
+"2:0",
+0.082
+]
+],
+"corners": 10.8,
+"cards": 2.4
+},
 "lt": null
 },
 {
