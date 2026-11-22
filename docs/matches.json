@@ -1852,7 +1852,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-22-vellington-feniks-makartur-401892134.html",
-"hs": "0",
+"hs": "1",
 "as": "2",
 "tip": "П1 · 1.83",
 "top": false,
@@ -2462,7 +2462,7 @@ null
 "bo": null,
 "prediction": "predictions/2026-11-22-sakramento-kingz-boston-seltiks-401910028.html",
 "hs": "30",
-"as": "34",
+"as": "37",
 "tip": "Ф2 (-12.5) · 1.93",
 "top": false,
 "bot": {
@@ -2663,7 +2663,15 @@ null
 ],
 "center": "Ожидаемые голы 2.5 : 4.1"
 },
-"lt": null
+"lt": {
+"fair": 1.62,
+"label": "П2 (осн. время)",
+"min_odds": 1.7,
+"minute": "2-й период",
+"p": 0.618,
+"result": null,
+"score": "0:0"
+}
 },
 {
 "sport": "hockey",
