@@ -256,6 +256,9 @@ def _news(store: dict[int, dict]) -> list[dict]:
             if parent:
                 conts[parent] = re.sub(r"\s*<a[^>]*>#[^<]+</a>\s*$", "", c.strip()).strip()
     for p in store.values():
+        from .dzen import delivery_kind
+        if delivery_kind(p.get("html", "")) != "новость":
+            continue
         plain = _plain(p["html"]).strip()
         tail = plain.rsplit("\n", 1)[-1].strip()
         if tail not in NEWS_TAGS or p.get("reply") or p["id"] in skip:
@@ -845,7 +848,8 @@ def _vk_rss(news: list[dict], now: pd.Timestamp, *, article=False) -> str:
     article_since = DATA / "vk_rss_article_since.txt"
     if article and article_since.exists():
         since = max(since, pd.Timestamp(article_since.read_text(encoding="utf-8").strip()))
-    selected = [n for n in news if n.get("kind", "news") == "news" and n.get("photo") and n.get("complete", True) and since <= pd.Timestamp(n["t"]) <= now
+    from .vk_rss import is_news
+    selected = [n for n in news if is_news(n) and n.get("photo") and n.get("complete", True) and since <= pd.Timestamp(n["t"]) <= now
                 and now - pd.Timestamp(n["t"]) <= pd.Timedelta(hours=24)]
     probe = DATA / "vk_rss_probe.json"
     if probe.exists():
