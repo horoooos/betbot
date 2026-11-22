@@ -2392,7 +2392,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-22-liverpul-manchester-yunayted-401878755.html",
-"hs": "3",
+"hs": "4",
 "as": "0",
 "tip": "П1 · 1.74",
 "top": false,
@@ -2693,7 +2693,7 @@ null
 "bo": null,
 "prediction": "predictions/2026-11-22-manta-peskara-401921363.html",
 "hs": "2",
-"as": "0",
+"as": "1",
 "tip": "ТМ 2.5 · 1.67",
 "top": false,
 "bot": {
@@ -2832,7 +2832,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-22-olimpiakos-iraklis-401896809.html",
-"hs": "2",
+"hs": "4",
 "as": "2",
 "tip": "ТМ 3.5 · ≈1.58",
 "top": false,
@@ -3800,7 +3800,7 @@ null
 "bo": null,
 "prediction": "predictions/2026-11-22-zhirona-eybar-401883109.html",
 "hs": "1",
-"as": "0",
+"as": "1",
 "tip": "П1 · 1.77",
 "top": false,
 "bot": {
@@ -4573,7 +4573,7 @@ null
 ]
 ],
 "div": "B1",
-"state": "pre",
+"state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-22-lommel-standard-401878934.html",
 "hs": "0",
@@ -4715,7 +4715,7 @@ null
 ]
 ],
 "div": "NOR",
-"state": "pre",
+"state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-22-sarpsborg-lillestrem-401843484.html",
 "hs": "0",
@@ -6487,531 +6487,6 @@ null
 },
 {
 "sport": "tennis",
-"id": "186814",
-"league": "Теннис · WTA",
-"kickoff": "2026-11-23T08:00:00+03:00",
-"home": "Гуйомар Маристани",
-"away": "Луна Мариа Синалли",
-"hl": "https://a.espncdn.com/i/teamlogos/countries/500/esp.png",
-"al": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
-"hid": "12957",
-"aid": "17421",
-"bb": "https://betboom.ru/search?query=%D0%9C%D0%B0%D1%80%D0%B8%D1%81%D1%82%D0%B0%D0%BD%D0%B8&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=tennis",
-"path": "tennis/wta",
-"url": "live.html?s=tennis&p=tennis%2Fwta&e=186814&h=%D0%93%D1%83%D0%B9%D0%BE%D0%BC%D0%B0%D1%80+%D0%9C%D0%B0%D1%80%D0%B8%D1%81%D1%82%D0%B0%D0%BD%D0%B8&a=%D0%9B%D1%83%D0%BD%D0%B0+%D0%9C%D0%B0%D1%80%D0%B8%D0%B0+%D0%A1%D0%B8%D0%BD%D0%B0%D0%BB%D0%BB%D0%B8",
-"participants": [
-[
-"Гуйомар Маристани",
-"Guiomar Maristany Zuleta De Reales"
-],
-[
-"Луна Мариа Синалли",
-"Luna Maria Cinalli"
-]
-],
-"div": "WTA",
-"state": "pre",
-"bo": null,
-"prediction": "",
-"hs": null,
-"as": null,
-"tip": "",
-"top": false,
-"bot": null,
-"lt": null
-},
-{
-"sport": "tennis",
-"id": "186828",
-"league": "Теннис · WTA",
-"kickoff": "2026-11-23T08:00:00+03:00",
-"home": "Сол Аилин Ларрэйа Гуиди",
-"away": "Мария Лурдес Карле",
-"hl": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
-"al": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
-"hid": "15617",
-"aid": "3220",
-"bb": "https://betboom.ru/search?query=%D0%93%D1%83%D0%B8%D0%B4%D0%B8&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=tennis",
-"path": "tennis/wta",
-"url": "live.html?s=tennis&p=tennis%2Fwta&e=186828&h=%D0%A1%D0%BE%D0%BB+%D0%90%D0%B8%D0%BB%D0%B8%D0%BD+%D0%9B%D0%B0%D1%80%D1%80%D1%8D%D0%B9%D0%B0+%D0%93%D1%83%D0%B8%D0%B4%D0%B8&a=%D0%9C%D0%B0%D1%80%D0%B8%D1%8F+%D0%9B%D1%83%D1%80%D0%B4%D0%B5%D1%81+%D0%9A%D0%B0%D1%80%D0%BB%D0%B5",
-"participants": [
-[
-"Сол Аилин Ларрэйа Гуиди",
-"Sol Ailin Larraya Guidi"
-],
-[
-"Мария Лурдес Карле",
-"Maria Lourdes Carle"
-]
-],
-"div": "WTA",
-"state": "pre",
-"bo": null,
-"prediction": "",
-"hs": null,
-"as": null,
-"tip": "",
-"top": false,
-"bot": null,
-"lt": null
-},
-{
-"sport": "tennis",
-"id": "186827",
-"league": "Теннис · WTA",
-"kickoff": "2026-11-23T08:00:00+03:00",
-"home": "Надя Подорошка",
-"away": "Лейре Ромеро Гормас",
-"hl": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
-"al": "https://a.espncdn.com/i/teamlogos/countries/500/esp.png",
-"hid": "3256",
-"aid": "10676",
-"bb": "https://betboom.ru/search?query=%D0%9F%D0%BE%D0%B4%D0%BE%D1%80%D0%BE%D1%88%D0%BA%D0%B0&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=tennis",
-"path": "tennis/wta",
-"url": "live.html?s=tennis&p=tennis%2Fwta&e=186827&h=%D0%9D%D0%B0%D0%B4%D1%8F+%D0%9F%D0%BE%D0%B4%D0%BE%D1%80%D0%BE%D1%88%D0%BA%D0%B0&a=%D0%9B%D0%B5%D0%B9%D1%80%D0%B5+%D0%A0%D0%BE%D0%BC%D0%B5%D1%80%D0%BE+%D0%93%D0%BE%D1%80%D0%BC%D0%B0%D1%81",
-"participants": [
-[
-"Надя Подорошка",
-"Nadia Podoroska"
-],
-[
-"Лейре Ромеро Гормас",
-"Leyre Romero Gormaz"
-]
-],
-"div": "WTA",
-"state": "pre",
-"bo": null,
-"prediction": "",
-"hs": null,
-"as": null,
-"tip": "",
-"top": false,
-"bot": null,
-"lt": null
-},
-{
-"sport": "tennis",
-"id": "186826",
-"league": "Теннис · WTA",
-"kickoff": "2026-11-23T08:00:00+03:00",
-"home": "Солана Сьерра",
-"away": "Виктория Хименес-Касинцева",
-"hl": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
-"al": "https://a.espncdn.com/i/teamlogos/countries/500/and.png",
-"hid": "6500",
-"aid": "7778",
-"bb": "https://betboom.ru/search?query=%D0%A1%D1%8C%D0%B5%D1%80%D1%80%D0%B0&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=tennis",
-"path": "tennis/wta",
-"url": "live.html?s=tennis&p=tennis%2Fwta&e=186826&h=%D0%A1%D0%BE%D0%BB%D0%B0%D0%BD%D0%B0+%D0%A1%D1%8C%D0%B5%D1%80%D1%80%D0%B0&a=%D0%92%D0%B8%D0%BA%D1%82%D0%BE%D1%80%D0%B8%D1%8F+%D0%A5%D0%B8%D0%BC%D0%B5%D0%BD%D0%B5%D1%81-%D0%9A%D0%B0%D1%81%D0%B8%D0%BD%D1%86%D0%B5%D0%B2%D0%B0",
-"participants": [
-[
-"Солана Сьерра",
-"Solana Sierra"
-],
-[
-"Виктория Хименес-Касинцева",
-"Victoria Jimenez Kasintseva"
-]
-],
-"div": "WTA",
-"state": "pre",
-"bo": null,
-"prediction": "",
-"hs": null,
-"as": null,
-"tip": "",
-"top": false,
-"bot": null,
-"lt": null
-},
-{
-"sport": "tennis",
-"id": "186825",
-"league": "Теннис · WTA",
-"kickoff": "2026-11-23T08:00:00+03:00",
-"home": "Ребека Масарова",
-"away": "София Костоулас",
-"hl": "https://a.espncdn.com/i/teamlogos/countries/500/sui.png",
-"al": "https://a.espncdn.com/i/teamlogos/countries/500/bel.png",
-"hid": "2984",
-"aid": "14562",
-"bb": "https://betboom.ru/search?query=%D0%9C%D0%B0%D1%81%D0%B0%D1%80%D0%BE%D0%B2%D0%B0&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=tennis",
-"path": "tennis/wta",
-"url": "live.html?s=tennis&p=tennis%2Fwta&e=186825&h=%D0%A0%D0%B5%D0%B1%D0%B5%D0%BA%D0%B0+%D0%9C%D0%B0%D1%81%D0%B0%D1%80%D0%BE%D0%B2%D0%B0&a=%D0%A1%D0%BE%D1%84%D0%B8%D1%8F+%D0%9A%D0%BE%D1%81%D1%82%D0%BE%D1%83%D0%BB%D0%B0%D1%81",
-"participants": [
-[
-"Ребека Масарова",
-"Rebeka Masarova"
-],
-[
-"София Костоулас",
-"Sofia Costoulas"
-]
-],
-"div": "WTA",
-"state": "pre",
-"bo": null,
-"prediction": "",
-"hs": null,
-"as": null,
-"tip": "",
-"top": false,
-"bot": null,
-"lt": null
-},
-{
-"sport": "tennis",
-"id": "186824",
-"league": "Теннис · WTA",
-"kickoff": "2026-11-23T08:00:00+03:00",
-"home": "Берта Бонарди",
-"away": "Кароль Монне",
-"hl": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
-"al": "https://a.espncdn.com/i/teamlogos/countries/500/fra.png",
-"hid": "17419",
-"aid": "5299",
-"bb": "https://betboom.ru/search?query=%D0%91%D0%BE%D0%BD%D0%B0%D1%80%D0%B4%D0%B8&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=tennis",
-"path": "tennis/wta",
-"url": "live.html?s=tennis&p=tennis%2Fwta&e=186824&h=%D0%91%D0%B5%D1%80%D1%82%D0%B0+%D0%91%D0%BE%D0%BD%D0%B0%D1%80%D0%B4%D0%B8&a=%D0%9A%D0%B0%D1%80%D0%BE%D0%BB%D1%8C+%D0%9C%D0%BE%D0%BD%D0%BD%D0%B5",
-"participants": [
-[
-"Берта Бонарди",
-"Berta Bonardi"
-],
-[
-"Кароль Монне",
-"Carole Monnet"
-]
-],
-"div": "WTA",
-"state": "pre",
-"bo": null,
-"prediction": "",
-"hs": null,
-"as": null,
-"tip": "",
-"top": false,
-"bot": null,
-"lt": null
-},
-{
-"sport": "tennis",
-"id": "186822",
-"league": "Теннис · WTA",
-"kickoff": "2026-11-23T08:00:00+03:00",
-"home": "Мартина Тревизан",
-"away": "Эйана Акли",
-"hl": "https://a.espncdn.com/i/teamlogos/countries/500/ita.png",
-"al": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
-"hid": "1374",
-"aid": "15775",
-"bb": "https://betboom.ru/search?query=%D0%A2%D1%80%D0%B5%D0%B2%D0%B8%D0%B7%D0%B0%D0%BD&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=tennis",
-"path": "tennis/wta",
-"url": "live.html?s=tennis&p=tennis%2Fwta&e=186822&h=%D0%9C%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%B0+%D0%A2%D1%80%D0%B5%D0%B2%D0%B8%D0%B7%D0%B0%D0%BD&a=%D0%AD%D0%B9%D0%B0%D0%BD%D0%B0+%D0%90%D0%BA%D0%BB%D0%B8",
-"participants": [
-[
-"Мартина Тревизан",
-"Martina Trevisan"
-],
-[
-"Эйана Акли",
-"Ayana Akli"
-]
-],
-"div": "WTA",
-"state": "pre",
-"bo": null,
-"prediction": "",
-"hs": null,
-"as": null,
-"tip": "",
-"top": false,
-"bot": null,
-"lt": null
-},
-{
-"sport": "tennis",
-"id": "186813",
-"league": "Теннис · WTA",
-"kickoff": "2026-11-23T08:00:00+03:00",
-"home": "Нурия Бранкаччо",
-"away": "Анастасия Золотарёва",
-"hl": "https://a.espncdn.com/i/teamlogos/countries/500/ita.png",
-"al": "https://a.espncdn.com/i/teamlogos/countries/500/rus.png",
-"hid": "5168",
-"aid": "6209",
-"bb": "https://betboom.ru/search?query=%D0%91%D1%80%D0%B0%D0%BD%D0%BA%D0%B0%D1%87%D1%87%D0%BE&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=tennis",
-"path": "tennis/wta",
-"url": "live.html?s=tennis&p=tennis%2Fwta&e=186813&h=%D0%9D%D1%83%D1%80%D0%B8%D1%8F+%D0%91%D1%80%D0%B0%D0%BD%D0%BA%D0%B0%D1%87%D1%87%D0%BE&a=%D0%90%D0%BD%D0%B0%D1%81%D1%82%D0%B0%D1%81%D0%B8%D1%8F+%D0%97%D0%BE%D0%BB%D0%BE%D1%82%D0%B0%D1%80%D1%91%D0%B2%D0%B0",
-"participants": [
-[
-"Нурия Бранкаччо",
-"Nuria Brancaccio"
-],
-[
-"Анастасия Золотарёва",
-"Anastasia Zolotareva"
-]
-],
-"div": "WTA",
-"state": "pre",
-"bo": null,
-"prediction": "",
-"hs": null,
-"as": null,
-"tip": "",
-"top": false,
-"bot": null,
-"lt": null
-},
-{
-"sport": "tennis",
-"id": "186815",
-"league": "Теннис · WTA",
-"kickoff": "2026-11-23T08:00:00+03:00",
-"home": "Деспина Папамихаил",
-"away": "Хулия Риера",
-"hl": "https://a.espncdn.com/i/teamlogos/countries/500/gre.png",
-"al": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
-"hid": "8068",
-"aid": "5749",
-"bb": "https://betboom.ru/search?query=%D0%9F%D0%B0%D0%BF%D0%B0%D0%BC%D0%B8%D1%85%D0%B0%D0%B8%D0%BB&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=tennis",
-"path": "tennis/wta",
-"url": "live.html?s=tennis&p=tennis%2Fwta&e=186815&h=%D0%94%D0%B5%D1%81%D0%BF%D0%B8%D0%BD%D0%B0+%D0%9F%D0%B0%D0%BF%D0%B0%D0%BC%D0%B8%D1%85%D0%B0%D0%B8%D0%BB&a=%D0%A5%D1%83%D0%BB%D0%B8%D1%8F+%D0%A0%D0%B8%D0%B5%D1%80%D0%B0",
-"participants": [
-[
-"Деспина Папамихаил",
-"Despina Papamichail"
-],
-[
-"Хулия Риера",
-"Julia Riera"
-]
-],
-"div": "WTA",
-"state": "pre",
-"bo": null,
-"prediction": "",
-"hs": null,
-"as": null,
-"tip": "",
-"top": false,
-"bot": null,
-"lt": null
-},
-{
-"sport": "tennis",
-"id": "186816",
-"league": "Теннис · WTA",
-"kickoff": "2026-11-23T08:00:00+03:00",
-"home": "Полона Херцог",
-"away": "Ипек Оз",
-"hl": "https://a.espncdn.com/i/teamlogos/countries/500/slo.png",
-"al": "https://a.espncdn.com/i/teamlogos/countries/500/tur.png",
-"hid": "1095",
-"aid": "10197",
-"bb": "https://betboom.ru/search?query=%D0%A5%D0%B5%D1%80%D1%86%D0%BE%D0%B3&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=tennis",
-"path": "tennis/wta",
-"url": "live.html?s=tennis&p=tennis%2Fwta&e=186816&h=%D0%9F%D0%BE%D0%BB%D0%BE%D0%BD%D0%B0+%D0%A5%D0%B5%D1%80%D1%86%D0%BE%D0%B3&a=%D0%98%D0%BF%D0%B5%D0%BA+%D0%9E%D0%B7",
-"participants": [
-[
-"Полона Херцог",
-"Polona Hercog"
-],
-[
-"Ипек Оз",
-"Ipek Oz"
-]
-],
-"div": "WTA",
-"state": "pre",
-"bo": null,
-"prediction": "",
-"hs": null,
-"as": null,
-"tip": "",
-"top": false,
-"bot": null,
-"lt": null
-},
-{
-"sport": "tennis",
-"id": "186817",
-"league": "Теннис · WTA",
-"kickoff": "2026-11-23T08:00:00+03:00",
-"home": "Тбд",
-"away": "Ариана Гирлингс",
-"hl": null,
-"al": "https://a.espncdn.com/i/teamlogos/countries/500/esp.png",
-"hid": "-3",
-"aid": "14607",
-"bb": "https://betboom.ru/search?query=%D0%A2%D0%B1%D0%B4&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=tennis",
-"path": "tennis/wta",
-"url": "live.html?s=tennis&p=tennis%2Fwta&e=186817&h=%D0%A2%D0%B1%D0%B4&a=%D0%90%D1%80%D0%B8%D0%B0%D0%BD%D0%B0+%D0%93%D0%B8%D1%80%D0%BB%D0%B8%D0%BD%D0%B3%D1%81",
-"participants": [
-[
-"Тбд",
-"TBD"
-],
-[
-"Ариана Гирлингс",
-"Ariana Geerlings"
-]
-],
-"div": "WTA",
-"state": "pre",
-"bo": null,
-"prediction": "",
-"hs": null,
-"as": null,
-"tip": "",
-"top": false,
-"bot": null,
-"lt": null
-},
-{
-"sport": "tennis",
-"id": "186818",
-"league": "Теннис · WTA",
-"kickoff": "2026-11-23T08:00:00+03:00",
-"home": "Лючия Бронцетти",
-"away": "Алисиа Херреро Линана",
-"hl": "https://a.espncdn.com/i/teamlogos/countries/500/ita.png",
-"al": "https://a.espncdn.com/i/teamlogos/countries/500/esp.png",
-"hid": "4666",
-"aid": "4629",
-"bb": "https://betboom.ru/search?query=%D0%91%D1%80%D0%BE%D0%BD%D1%86%D0%B5%D1%82%D1%82%D0%B8&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=tennis",
-"path": "tennis/wta",
-"url": "live.html?s=tennis&p=tennis%2Fwta&e=186818&h=%D0%9B%D1%8E%D1%87%D0%B8%D1%8F+%D0%91%D1%80%D0%BE%D0%BD%D1%86%D0%B5%D1%82%D1%82%D0%B8&a=%D0%90%D0%BB%D0%B8%D1%81%D0%B8%D0%B0+%D0%A5%D0%B5%D1%80%D1%80%D0%B5%D1%80%D0%BE+%D0%9B%D0%B8%D0%BD%D0%B0%D0%BD%D0%B0",
-"participants": [
-[
-"Лючия Бронцетти",
-"Lucia Bronzetti"
-],
-[
-"Алисиа Херреро Линана",
-"Alicia Herrero Linana"
-]
-],
-"div": "WTA",
-"state": "pre",
-"bo": null,
-"prediction": "",
-"hs": null,
-"as": null,
-"tip": "",
-"top": false,
-"bot": null,
-"lt": null
-},
-{
-"sport": "tennis",
-"id": "186823",
-"league": "Теннис · WTA",
-"kickoff": "2026-11-23T08:00:00+03:00",
-"home": "Варвара Лепченко",
-"away": "Тбд",
-"hl": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
-"al": null,
-"hid": "423",
-"aid": "-4",
-"bb": "https://betboom.ru/search?query=%D0%9B%D0%B5%D0%BF%D1%87%D0%B5%D0%BD%D0%BA%D0%BE&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=tennis",
-"path": "tennis/wta",
-"url": "live.html?s=tennis&p=tennis%2Fwta&e=186823&h=%D0%92%D0%B0%D1%80%D0%B2%D0%B0%D1%80%D0%B0+%D0%9B%D0%B5%D0%BF%D1%87%D0%B5%D0%BD%D0%BA%D0%BE&a=%D0%A2%D0%B1%D0%B4",
-"participants": [
-[
-"Варвара Лепченко",
-"Varvara Lepchenko"
-],
-[
-"Тбд",
-"TBD"
-]
-],
-"div": "WTA",
-"state": "pre",
-"bo": null,
-"prediction": "",
-"hs": null,
-"as": null,
-"tip": "",
-"top": false,
-"bot": null,
-"lt": null
-},
-{
-"sport": "tennis",
-"id": "186821",
-"league": "Теннис · WTA",
-"kickoff": "2026-11-23T08:00:00+03:00",
-"home": "Тбд",
-"away": "Ирен Бурильо",
-"hl": null,
-"al": "https://a.espncdn.com/i/teamlogos/countries/500/esp.png",
-"hid": "-3",
-"aid": "4546",
-"bb": "https://betboom.ru/search?query=%D0%A2%D0%B1%D0%B4&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=tennis",
-"path": "tennis/wta",
-"url": "live.html?s=tennis&p=tennis%2Fwta&e=186821&h=%D0%A2%D0%B1%D0%B4&a=%D0%98%D1%80%D0%B5%D0%BD+%D0%91%D1%83%D1%80%D0%B8%D0%BB%D1%8C%D0%BE",
-"participants": [
-[
-"Тбд",
-"TBD"
-],
-[
-"Ирен Бурильо",
-"Irene Burillo"
-]
-],
-"div": "WTA",
-"state": "pre",
-"bo": null,
-"prediction": "",
-"hs": null,
-"as": null,
-"tip": "",
-"top": false,
-"bot": null,
-"lt": null
-},
-{
-"sport": "tennis",
-"id": "186820",
-"league": "Теннис · WTA",
-"kickoff": "2026-11-23T08:00:00+03:00",
-"home": "Тбд",
-"away": "Вероника Эрьявец",
-"hl": null,
-"al": "https://a.espncdn.com/i/teamlogos/countries/500/slo.png",
-"hid": "-3",
-"aid": "5878",
-"bb": "https://betboom.ru/search?query=%D0%A2%D0%B1%D0%B4&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=tennis",
-"path": "tennis/wta",
-"url": "live.html?s=tennis&p=tennis%2Fwta&e=186820&h=%D0%A2%D0%B1%D0%B4&a=%D0%92%D0%B5%D1%80%D0%BE%D0%BD%D0%B8%D0%BA%D0%B0+%D0%AD%D1%80%D1%8C%D1%8F%D0%B2%D0%B5%D1%86",
-"participants": [
-[
-"Тбд",
-"TBD"
-],
-[
-"Вероника Эрьявец",
-"Veronika Erjavec"
-]
-],
-"div": "WTA",
-"state": "pre",
-"bo": null,
-"prediction": "",
-"hs": null,
-"as": null,
-"tip": "",
-"top": false,
-"bot": null,
-"lt": null
-},
-{
-"sport": "tennis",
 "id": "186819",
 "league": "Теннис · WTA",
 "kickoff": "2026-11-23T08:00:00+03:00",
@@ -7116,6 +6591,76 @@ null
 "lt": null
 },
 {
+"sport": "tennis",
+"id": "186822",
+"league": "Теннис · WTA",
+"kickoff": "2026-11-23T17:00:00+03:00",
+"home": "Мартина Тревизан",
+"away": "Эйана Акли",
+"hl": "https://a.espncdn.com/i/teamlogos/countries/500/ita.png",
+"al": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
+"hid": "1374",
+"aid": "15775",
+"bb": "https://betboom.ru/search?query=%D0%A2%D1%80%D0%B5%D0%B2%D0%B8%D0%B7%D0%B0%D0%BD&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=tennis",
+"path": "tennis/wta",
+"url": "live.html?s=tennis&p=tennis%2Fwta&e=186822&h=%D0%9C%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%B0+%D0%A2%D1%80%D0%B5%D0%B2%D0%B8%D0%B7%D0%B0%D0%BD&a=%D0%AD%D0%B9%D0%B0%D0%BD%D0%B0+%D0%90%D0%BA%D0%BB%D0%B8",
+"participants": [
+[
+"Мартина Тревизан",
+"Martina Trevisan"
+],
+[
+"Эйана Акли",
+"Ayana Akli"
+]
+],
+"div": "WTA",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": null,
+"as": null,
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "tennis",
+"id": "186824",
+"league": "Теннис · WTA",
+"kickoff": "2026-11-23T17:00:00+03:00",
+"home": "Берта Бонарди",
+"away": "Кароль Монне",
+"hl": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+"al": "https://a.espncdn.com/i/teamlogos/countries/500/fra.png",
+"hid": "17419",
+"aid": "5299",
+"bb": "https://betboom.ru/search?query=%D0%91%D0%BE%D0%BD%D0%B0%D1%80%D0%B4%D0%B8&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=tennis",
+"path": "tennis/wta",
+"url": "live.html?s=tennis&p=tennis%2Fwta&e=186824&h=%D0%91%D0%B5%D1%80%D1%82%D0%B0+%D0%91%D0%BE%D0%BD%D0%B0%D1%80%D0%B4%D0%B8&a=%D0%9A%D0%B0%D1%80%D0%BE%D0%BB%D1%8C+%D0%9C%D0%BE%D0%BD%D0%BD%D0%B5",
+"participants": [
+[
+"Берта Бонарди",
+"Berta Bonardi"
+],
+[
+"Кароль Монне",
+"Carole Monnet"
+]
+],
+"div": "WTA",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": null,
+"as": null,
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
 "sport": "football",
 "id": "401896728",
 "league": "Греция · Суперлига",
@@ -7151,6 +6696,76 @@ null
 "lt": null
 },
 {
+"sport": "tennis",
+"id": "186816",
+"league": "Теннис · WTA",
+"kickoff": "2026-11-23T18:30:00+03:00",
+"home": "Полона Херцог",
+"away": "Ипек Оз",
+"hl": "https://a.espncdn.com/i/teamlogos/countries/500/slo.png",
+"al": "https://a.espncdn.com/i/teamlogos/countries/500/tur.png",
+"hid": "1095",
+"aid": "10197",
+"bb": "https://betboom.ru/search?query=%D0%A5%D0%B5%D1%80%D1%86%D0%BE%D0%B3&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=tennis",
+"path": "tennis/wta",
+"url": "live.html?s=tennis&p=tennis%2Fwta&e=186816&h=%D0%9F%D0%BE%D0%BB%D0%BE%D0%BD%D0%B0+%D0%A5%D0%B5%D1%80%D1%86%D0%BE%D0%B3&a=%D0%98%D0%BF%D0%B5%D0%BA+%D0%9E%D0%B7",
+"participants": [
+[
+"Полона Херцог",
+"Polona Hercog"
+],
+[
+"Ипек Оз",
+"Ipek Oz"
+]
+],
+"div": "WTA",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": null,
+"as": null,
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "tennis",
+"id": "186817",
+"league": "Теннис · WTA",
+"kickoff": "2026-11-23T18:30:00+03:00",
+"home": "Жосефина Естевез",
+"away": "Ариана Гирлингс",
+"hl": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+"al": "https://a.espncdn.com/i/teamlogos/countries/500/esp.png",
+"hid": "11997",
+"aid": "14607",
+"bb": "https://betboom.ru/search?query=%D0%95%D1%81%D1%82%D0%B5%D0%B2%D0%B5%D0%B7&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=tennis",
+"path": "tennis/wta",
+"url": "live.html?s=tennis&p=tennis%2Fwta&e=186817&h=%D0%96%D0%BE%D1%81%D0%B5%D1%84%D0%B8%D0%BD%D0%B0+%D0%95%D1%81%D1%82%D0%B5%D0%B2%D0%B5%D0%B7&a=%D0%90%D1%80%D0%B8%D0%B0%D0%BD%D0%B0+%D0%93%D0%B8%D1%80%D0%BB%D0%B8%D0%BD%D0%B3%D1%81",
+"participants": [
+[
+"Жосефина Естевез",
+"Josefina Estevez"
+],
+[
+"Ариана Гирлингс",
+"Ariana Geerlings"
+]
+],
+"div": "WTA",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": null,
+"as": null,
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
 "sport": "esports",
 "id": "1816461",
 "league": "Киберспорт · Dota 2",
@@ -7180,6 +6795,76 @@ null
 "prediction": "",
 "hs": 0,
 "as": 0,
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "tennis",
+"id": "186813",
+"league": "Теннис · WTA",
+"kickoff": "2026-11-23T20:00:00+03:00",
+"home": "Нурия Бранкаччо",
+"away": "Анастасия Золотарёва",
+"hl": "https://a.espncdn.com/i/teamlogos/countries/500/ita.png",
+"al": "https://a.espncdn.com/i/teamlogos/countries/500/rus.png",
+"hid": "5168",
+"aid": "6209",
+"bb": "https://betboom.ru/search?query=%D0%91%D1%80%D0%B0%D0%BD%D0%BA%D0%B0%D1%87%D1%87%D0%BE&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=tennis",
+"path": "tennis/wta",
+"url": "live.html?s=tennis&p=tennis%2Fwta&e=186813&h=%D0%9D%D1%83%D1%80%D0%B8%D1%8F+%D0%91%D1%80%D0%B0%D0%BD%D0%BA%D0%B0%D1%87%D1%87%D0%BE&a=%D0%90%D0%BD%D0%B0%D1%81%D1%82%D0%B0%D1%81%D0%B8%D1%8F+%D0%97%D0%BE%D0%BB%D0%BE%D1%82%D0%B0%D1%80%D1%91%D0%B2%D0%B0",
+"participants": [
+[
+"Нурия Бранкаччо",
+"Nuria Brancaccio"
+],
+[
+"Анастасия Золотарёва",
+"Anastasia Zolotareva"
+]
+],
+"div": "WTA",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": null,
+"as": null,
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "tennis",
+"id": "186823",
+"league": "Теннис · WTA",
+"kickoff": "2026-11-23T20:00:00+03:00",
+"home": "Варвара Лепченко",
+"away": "Абигаил Ренчели",
+"hl": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
+"al": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
+"hid": "423",
+"aid": "17328",
+"bb": "https://betboom.ru/search?query=%D0%9B%D0%B5%D0%BF%D1%87%D0%B5%D0%BD%D0%BA%D0%BE&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=tennis",
+"path": "tennis/wta",
+"url": "live.html?s=tennis&p=tennis%2Fwta&e=186823&h=%D0%92%D0%B0%D1%80%D0%B2%D0%B0%D1%80%D0%B0+%D0%9B%D0%B5%D0%BF%D1%87%D0%B5%D0%BD%D0%BA%D0%BE&a=%D0%90%D0%B1%D0%B8%D0%B3%D0%B0%D0%B8%D0%BB+%D0%A0%D0%B5%D0%BD%D1%87%D0%B5%D0%BB%D0%B8",
+"participants": [
+[
+"Варвара Лепченко",
+"Varvara Lepchenko"
+],
+[
+"Абигаил Ренчели",
+"Abigail Rencheli"
+]
+],
+"div": "WTA",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": null,
+"as": null,
 "tip": "",
 "top": false,
 "bot": null,
@@ -7320,6 +7005,41 @@ null
 "prediction": "",
 "hs": "0",
 "as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "tennis",
+"id": "186815",
+"league": "Теннис · WTA",
+"kickoff": "2026-11-23T22:00:00+03:00",
+"home": "Деспина Папамихаил",
+"away": "Хулия Риера",
+"hl": "https://a.espncdn.com/i/teamlogos/countries/500/gre.png",
+"al": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+"hid": "8068",
+"aid": "5749",
+"bb": "https://betboom.ru/search?query=%D0%9F%D0%B0%D0%BF%D0%B0%D0%BC%D0%B8%D1%85%D0%B0%D0%B8%D0%BB&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=tennis",
+"path": "tennis/wta",
+"url": "live.html?s=tennis&p=tennis%2Fwta&e=186815&h=%D0%94%D0%B5%D1%81%D0%BF%D0%B8%D0%BD%D0%B0+%D0%9F%D0%B0%D0%BF%D0%B0%D0%BC%D0%B8%D1%85%D0%B0%D0%B8%D0%BB&a=%D0%A5%D1%83%D0%BB%D0%B8%D1%8F+%D0%A0%D0%B8%D0%B5%D1%80%D0%B0",
+"participants": [
+[
+"Деспина Папамихаил",
+"Despina Papamichail"
+],
+[
+"Хулия Риера",
+"Julia Riera"
+]
+],
+"div": "WTA",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": null,
+"as": null,
 "tip": "",
 "top": false,
 "bot": null,
