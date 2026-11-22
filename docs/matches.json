@@ -2314,7 +2314,7 @@ null
 ]
 ],
 "div": "CHI",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "predictions/2026-11-22-uachipato-deportes-konsepson-401850697.html",
 "hs": "0",
@@ -3617,7 +3617,7 @@ null
 "bo": null,
 "prediction": "predictions/2026-11-22-kristiansund-sanneford-401843487.html",
 "hs": "2",
-"as": "1",
+"as": "2",
 "tip": "ТМ 3.5 · ≈1.63",
 "top": false,
 "bot": {
@@ -4093,7 +4093,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-22-loryan-renn-401876401.html",
-"hs": "0",
+"hs": "1",
 "as": "1",
 "tip": "ТМ 2.5 · 1.91",
 "top": false,
@@ -4962,10 +4962,10 @@ null
 ]
 ],
 "div": "I1",
-"state": "pre",
+"state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-22-milan-frozinone-401874989.html",
-"hs": "0",
+"hs": "1",
 "as": "0",
 "tip": "П1 · 1.52",
 "top": true,
@@ -5076,107 +5076,6 @@ null
 ],
 "corners": 10.1,
 "cards": 3.8
-},
-"lt": null
-},
-{
-"sport": "esports",
-"id": "1816469",
-"league": "Киберспорт · Dota 2",
-"kickoff": "2026-11-22T20:00:00+03:00",
-"home": "1w Team",
-"away": "Aurora",
-"hl": "https://cdn-api.pandascore.co/images/team/image/134536/800px_1win_team_2024_allmode.png",
-"al": "https://cdn-api.pandascore.co/images/team/image/133882/600px_aurora_gaming_2025_allmode.png",
-"hid": "134536",
-"aid": "133882",
-"bb": "https://betboom.ru/search?query=%D0%A2%D0%B5%D0%B0%D0%BC&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=esports",
-"path": "",
-"url": "dota.html?e=1816469&d=DOTA",
-"participants": [
-[
-"1w Team",
-"1w Team"
-],
-[
-"Aurora",
-"Aurora"
-]
-],
-"div": "DOTA",
-"state": "pre",
-"bo": 3,
-"prediction": "predictions/2026-11-22-1w-team-aurora-1816469.html",
-"hs": 0,
-"as": 0,
-"tip": "Всухую (2:0 или 0:2) · ≈1.77",
-"top": false,
-"bot": {
-"main": {
-"label": "Всухую (2:0 или 0:2)",
-"p": 0.524,
-"odds": 1.77,
-"est": true
-},
-"bold": null,
-"markets": [
-[
-"Победа: 1w Team",
-0.663,
-null
-],
-[
-"Победа: Aurora",
-0.337,
-null
-],
-[
-"Больше 2 карт",
-0.475,
-null
-],
-[
-"Всухую (2:0 или 0:2)",
-0.525,
-null
-],
-[
-"Счёт по картам 2:0",
-0.373,
-null
-],
-[
-"Счёт по картам 0:2",
-0.152,
-null
-],
-[
-"Счёт по картам 2:1",
-0.29,
-null
-],
-[
-"Счёт по картам 1:2",
-0.185,
-null
-],
-[
-"1w Team возьмёт хотя бы карту",
-0.848,
-null
-],
-[
-"Aurora возьмёт хотя бы карту",
-0.627,
-null
-]
-],
-"bar": [
-0.6634294715544515,
-0,
-0.33657052844554847
-],
-"center": "BO3 · Эло 1706 : 1589"
 },
 "lt": null
 },
@@ -6235,6 +6134,107 @@ null
 0.2672807462550495
 ],
 "center": "BO3 · Эло 1616 : 1441"
+},
+"lt": null
+},
+{
+"sport": "esports",
+"id": "1816469",
+"league": "Киберспорт · Dota 2",
+"kickoff": "2026-11-22T21:00:00+03:00",
+"home": "1w Team",
+"away": "Aurora",
+"hl": "https://cdn-api.pandascore.co/images/team/image/134536/800px_1win_team_2024_allmode.png",
+"al": "https://cdn-api.pandascore.co/images/team/image/133882/600px_aurora_gaming_2025_allmode.png",
+"hid": "134536",
+"aid": "133882",
+"bb": "https://betboom.ru/search?query=%D0%A2%D0%B5%D0%B0%D0%BC&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=esports",
+"path": "",
+"url": "dota.html?e=1816469&d=DOTA",
+"participants": [
+[
+"1w Team",
+"1w Team"
+],
+[
+"Aurora",
+"Aurora"
+]
+],
+"div": "DOTA",
+"state": "pre",
+"bo": 3,
+"prediction": "predictions/2026-11-22-1w-team-aurora-1816469.html",
+"hs": 0,
+"as": 0,
+"tip": "Всухую (2:0 или 0:2) · ≈1.77",
+"top": false,
+"bot": {
+"main": {
+"label": "Всухую (2:0 или 0:2)",
+"p": 0.524,
+"odds": 1.77,
+"est": true
+},
+"bold": null,
+"markets": [
+[
+"Победа: 1w Team",
+0.663,
+null
+],
+[
+"Победа: Aurora",
+0.337,
+null
+],
+[
+"Больше 2 карт",
+0.475,
+null
+],
+[
+"Всухую (2:0 или 0:2)",
+0.525,
+null
+],
+[
+"Счёт по картам 2:0",
+0.373,
+null
+],
+[
+"Счёт по картам 0:2",
+0.152,
+null
+],
+[
+"Счёт по картам 2:1",
+0.29,
+null
+],
+[
+"Счёт по картам 1:2",
+0.185,
+null
+],
+[
+"1w Team возьмёт хотя бы карту",
+0.848,
+null
+],
+[
+"Aurora возьмёт хотя бы карту",
+0.627,
+null
+]
+],
+"bar": [
+0.6634294715544515,
+0,
+0.33657052844554847
+],
+"center": "BO3 · Эло 1706 : 1589"
 },
 "lt": null
 },
