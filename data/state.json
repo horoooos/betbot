@@ -2898,7 +2898,7 @@
   "quote_matches": 46
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-24T00:43:59.125120+03:00",
+  "last_poll": "2026-11-24T00:45:59.223111+03:00",
   "cursor": "369",
   "posts": [
    {
@@ -3540,7 +3540,6 @@
    "401884730": "post",
    "401876686": "post",
    "401876683": "post",
-   "401875542": "post",
    "401888249": "post",
    "401888370": "post",
    "401878941": "post",
@@ -4938,7 +4937,7 @@
     "profit_pct": -0.5
    },
    "football|F2|401876683": {
-    "status": "open",
+    "status": "settled",
     "id": "401876683",
     "sport": "football",
     "div": "F2",
@@ -4977,7 +4976,10 @@
        "price_kind": "author_recorded"
       }
      ]
-    }
+    },
+    "settled_at": "2026-11-23T21:45:59.223111+00:00",
+    "hit": true,
+    "profit_pct": 0.4
    },
    "football|E0|401879237": {
     "status": "open",
