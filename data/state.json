@@ -3,7 +3,7 @@
   "1X2": 0.0,
   "OU25": 0.0
  },
- "learned": "2026-11-23",
+ "learned": "2026-11-24",
  "schedule_day": "2026-11-23",
  "content_slot": "2026-11-23-23",
  "news_seen": [
@@ -1563,7 +1563,7 @@
  "value_day": "2026-11-23",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-23",
- "site_stamp": "1510|9229|2026-11-23 23|6|45054d0cfe28c648",
+ "site_stamp": "1510|9229|2026-11-24 00|6|45054d0cfe28c648",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1576,7 +1576,7 @@
    "I1|401874989"
   ]
  },
- "value_check": "2026-11-23-7",
+ "value_check": "2026-11-24-0",
  "express_risk": {
   "msg": 9019,
   "legs": [
@@ -2014,7 +2014,7 @@
   "https://images.cybersport.ru/images/as-is/plain/bf/bf0a70ee-0b2d-4b4a-82bc-44936d845b54.jpg",
   "https://images.cybersport.ru/images/as-is/plain/1c/1c123d29-a9e8-4bff-89cb-acf3fee39441.jpg"
  ],
- "indexnow_day": "2026-11-23",
+ "indexnow_day": "2026-11-24",
  "vk_wall_err": null,
  "shorts_day": "2026-11-23",
  "shorts_err": {
@@ -2697,22 +2697,22 @@
   "message_id": 852,
   "kind": "новость"
  },
- "learn_attempt_day": "2026-11-23",
+ "learn_attempt_day": "2026-11-24",
  "learn_diagnostics": {
   "objective": "shared_lambda_1X2_OU25",
   "rows": 8000,
-  "train_rows": 6293,
-  "validation_rows": 1707,
-  "validation_from": "2026-10-01",
-  "history_from": "2026-02-21",
-  "history_until": "2026-11-20",
+  "train_rows": 6139,
+  "validation_rows": 1861,
+  "validation_from": "2026-10-03",
+  "history_from": "2026-02-24",
+  "history_until": "2026-11-22",
   "candidate_weight": 0.0,
   "weight": 0.0,
-  "train_logloss": 0.8405067323668388,
-  "validation_logloss": 0.8172999869548824,
-  "validation_market_logloss": 0.8172999869548824
+  "train_logloss": 0.8412498472044128,
+  "validation_logloss": 0.8173070859484345,
+  "validation_market_logloss": 0.8173070859484345
  },
- "learned_at": "2026-11-23T00:01:10.518666+03:00",
+ "learned_at": "2026-11-24T00:00:19.130777+03:00",
  "learn_version": "shared-lambda-v2",
  "learn_error": null,
  "learn_retry_at": 0,
@@ -2893,7 +2893,7 @@
   "quote_matches": 42
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-23T23:58:19.149009+03:00",
+  "last_poll": "2026-11-24T00:00:19.130777+03:00",
   "cursor": "367",
   "posts": [
    {
@@ -3540,17 +3540,14 @@
    "401875542": "post",
    "401888249": "post",
    "401888370": "post",
-   "401878936": "post",
    "401878941": "post",
    "401878934": "post",
-   "401896725": "post",
    "401896726": "post",
    "401896809": "post",
    "401896724": "post",
    "401896728": "post",
    "401879802": "post",
    "401881747": "post",
-   "401874541": "post",
    "401874493": "post",
    "401874538": "post",
    "401842883": "post",
@@ -3578,7 +3575,6 @@
    "401933728": "pre",
    "401877047": "post",
    "401877046": "post",
-   "401850697": "post",
    "401850693": "post",
    "401850698": "post",
    "401934684": "in",
@@ -3590,7 +3586,7 @@
    "401921327": "post",
    "401888645": "post",
    "401888646": "post",
-   "401888561": "pre",
+   "401888561": "in",
    "401888562": "pre",
    "401876887": "post",
    "401892768": "post",
@@ -3753,10 +3749,11 @@
    "401934688": "pre",
    "1816479": "pre",
    "1816480": "pre",
-   "401934706": "pre"
+   "401934706": "pre",
+   "401933738": "pre"
   },
   "daily": {
-   "day": "2026-11-23"
+   "day": "2026-11-24"
   }
  },
  "mod_poll": {
