@@ -2723,7 +2723,7 @@
   "external_sources": {
    "providers": {
     "legalbet": {
-     "at": "2026-11-23T21:21:58.887228+00:00",
+     "at": "2026-11-23T21:51:59.727218+00:00",
      "status": "ok",
      "discovered": 3,
      "pages": 3,
@@ -2734,29 +2734,29 @@
      "contexts": 3
     },
     "livesport": {
-     "at": "2026-11-23T21:21:58.887228+00:00",
+     "at": "2026-11-23T21:51:59.727218+00:00",
      "status": "ok",
      "discovered": 8,
      "pages": 6,
      "opinions": 8,
-     "mapped": 1,
+     "mapped": 4,
      "articles_available": 15,
-     "next_offset": 9,
+     "next_offset": 7,
      "contexts": 6
     },
     "metaratings": {
-     "at": "2026-11-23T21:21:58.887228+00:00",
+     "at": "2026-11-23T21:51:59.727218+00:00",
      "status": "ok",
-     "discovered": 15,
+     "discovered": 14,
      "pages": 6,
      "opinions": 24,
-     "mapped": 6,
+     "mapped": 7,
      "articles_available": 37,
-     "next_offset": 6,
+     "next_offset": 12,
      "contexts": 6
     },
     "rb": {
-     "at": "2026-11-23T21:21:58.887228+00:00",
+     "at": "2026-11-23T21:51:59.727218+00:00",
      "status": "markup_changed",
      "discovered": 0,
      "pages": 0,
@@ -2765,21 +2765,21 @@
      "articles_available": 0
     },
     "vseprosport": {
-     "at": "2026-11-23T21:21:58.887228+00:00",
+     "at": "2026-11-23T21:51:59.727218+00:00",
      "status": "ok",
      "discovered": 9,
-     "pages": 2,
+     "pages": 4,
      "opinions": 0,
      "mapped": 0,
      "articles_available": 10,
-     "next_offset": 8,
-     "page_errors": 4,
-     "contexts": 2
+     "next_offset": 14,
+     "page_errors": 2,
+     "contexts": 4
     }
    },
-   "opinions": 18,
+   "opinions": 21,
    "snapshots": 0,
-   "contexts": 37,
+   "contexts": 40,
    "model": {
     "weight": 0.0,
     "status": "collecting",
@@ -2898,7 +2898,7 @@
   "quote_matches": 46
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-24T00:49:59.740938+03:00",
+  "last_poll": "2026-11-24T00:51:59.727218+03:00",
   "cursor": "369",
   "posts": [
    {
