@@ -2705,6 +2705,113 @@
  "learn_error": null,
  "learn_retry_at": 0,
  "stavka": {
+  "external_sources": {
+   "providers": {
+    "legalbet": {
+     "at": "2026-11-23T18:17:22.272097+00:00",
+     "status": "ok",
+     "discovered": 2,
+     "pages": 2,
+     "opinions": 2,
+     "mapped": 0,
+     "articles_available": 7,
+     "next_offset": 2,
+     "contexts": 2
+    },
+    "livesport": {
+     "at": "2026-11-23T18:17:22.272097+00:00",
+     "status": "ok",
+     "discovered": 5,
+     "pages": 5,
+     "opinions": 6,
+     "mapped": 4,
+     "articles_available": 11,
+     "next_offset": 5,
+     "contexts": 5
+    },
+    "metaratings": {
+     "at": "2026-11-23T18:17:22.272097+00:00",
+     "status": "ok",
+     "discovered": 17,
+     "pages": 6,
+     "opinions": 24,
+     "mapped": 8,
+     "articles_available": 37,
+     "next_offset": 6,
+     "contexts": 6
+    },
+    "rb": {
+     "at": "2026-11-23T18:17:22.272097+00:00",
+     "status": "ok",
+     "discovered": 0,
+     "pages": 0,
+     "opinions": 0,
+     "mapped": 0,
+     "articles_available": 1,
+     "next_offset": 0,
+     "contexts": 0
+    },
+    "vseprosport": {
+     "at": "2026-11-23T18:17:22.272097+00:00",
+     "status": "ok",
+     "discovered": 9,
+     "pages": 5,
+     "opinions": 0,
+     "mapped": 0,
+     "articles_available": 10,
+     "next_offset": 6,
+     "page_errors": 1,
+     "contexts": 4
+    }
+   },
+   "opinions": 11,
+   "snapshots": 0,
+   "contexts": 17,
+   "model": {
+    "weight": 0.0,
+    "status": "collecting",
+    "settled_matches": 0,
+    "required_matches": 100,
+    "trained_at": "2026-11-23T18:17:22.272097+00:00"
+   },
+   "sport_models": {
+    "hockey": {
+     "status": "collecting",
+     "weight": 0.0,
+     "settled_matches": 0,
+     "required_matches": 100,
+     "trained_at": "2026-11-23T18:17:22.272097+00:00"
+    },
+    "basketball": {
+     "status": "collecting",
+     "weight": 0.0,
+     "settled_matches": 0,
+     "required_matches": 100,
+     "trained_at": "2026-11-23T18:17:22.272097+00:00"
+    },
+    "tennis": {
+     "status": "collecting",
+     "weight": 0.0,
+     "settled_matches": 0,
+     "required_matches": 100,
+     "trained_at": "2026-11-23T18:17:22.272097+00:00"
+    },
+    "esports:CS2": {
+     "status": "collecting",
+     "weight": 0.0,
+     "settled_matches": 0,
+     "required_matches": 100,
+     "trained_at": "2026-11-23T18:17:22.272097+00:00"
+    },
+    "esports:DOTA": {
+     "status": "collecting",
+     "weight": 0.0,
+     "settled_matches": 0,
+     "required_matches": 100,
+     "trained_at": "2026-11-23T18:17:22.272097+00:00"
+    }
+   }
+  },
   "model": {
    "weight": 0.0,
    "status": "baseline_better",
@@ -2778,7 +2885,7 @@
   "quote_matches": 34
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-23T21:15:22.261205+03:00",
+  "last_poll": "2026-11-23T21:17:22.272097+03:00",
   "cursor": "364",
   "posts": [
    {
