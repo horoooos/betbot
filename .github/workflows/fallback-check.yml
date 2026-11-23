@@ -3,6 +3,10 @@ on:
   push:
     branches: [codex/permanent-source-fallback]
   workflow_dispatch:
+    inputs:
+      published:
+        type: boolean
+        default: false
 permissions:
   contents: read
 jobs:
@@ -31,6 +35,8 @@ jobs:
         run: |
           python -m http.server 8768 --bind 127.0.0.1 --directory work/fallback-site >work/fallback-http.log 2>&1 &
           node tools/browser-qa/fallback.mjs
+        env:
+          FALLBACK_SITE: ${{ inputs.published && 'https://horoooos.github.io/betbot' || '' }}
       - uses: actions/upload-artifact@v4
         if: always()
         with:

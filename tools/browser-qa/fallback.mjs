@@ -13,9 +13,14 @@ try{
   for(const s of ['Временный прогноз','временный режим',' · эксперимент'])assert(!body.includes(s));
   assert(await p.locator('a[href="https://t.me/aistavvit/'+m.message_id+'"]').count()>0,'Missing Telegram link');
  }
+ if(process.env.FALLBACK_SITE){
+  const matches=await (await p.request.get(base+'/matches.json?check='+Date.now())).json();
+  for(const m of report){const found=matches.find(x=>String(x.id)===String(m.id));assert(found&&found.bot&&found.bot.main,'Prediction missing in matches.json: '+m.id);}
+ }
  await p.screenshot({path:new URL('prediction-desktop.png',out).pathname,fullPage:true});
  await p.setViewportSize({width:390,height:844});assert.equal(await p.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);await p.screenshot({path:new URL('prediction-mobile.png',out).pathname,fullPage:true});
  await p.goto(base+'/predictions/?check='+Date.now(),{waitUntil:'domcontentloaded'});
  assert(await p.locator('a[href]').count()>0);await p.screenshot({path:new URL('predictions-list.png',out).pathname,fullPage:true});
+ assert.deepEqual(errors,[]);
  await fs.writeFile(new URL('report.json',out),JSON.stringify({checked:report,errors},null,2));
 }finally{await b.close();}
