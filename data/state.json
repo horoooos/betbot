@@ -7,10 +7,6 @@
  "schedule_day": "2026-11-23",
  "content_slot": "2026-11-23-20",
  "news_seen": [
-  "https://www.sport-express.ru/hockey/nhl/news/ovechkin-stal-rekordsmenom-vashingtona-po-golevym-peredacham-2476792/",
-  "https://www.sport-express.ru/hockey/khl/news/brikun-ocenil-vyezdnuyu-seriyu-minskogo-dinamo-posle-dvuh-pobed-v-treh-matchah-2476758/",
-  "https://www.sport-express.ru/hockey/khl/news/brikun-schitaet-chto-enas-i-limozh-esche-pomogut-minskomu-dinamo-2476759/",
-  "https://www.sport-express.ru/hockey/nhl/news/kaprizov-prodlil-rezultativnuyu-seriyu-do-13-matchey-2476790/",
   "https://www.sport-express.ru/hockey/khl/news/brylin-rasschityvaet-usilit-ataku-minskogo-dinamo-s-pomoschyu-da-kosty-2476753/",
   "https://www.sport-express.ru/football/rfpl/news/karasev-poluchil-300-e-naznachenie-sudey-v-rpl-do-rekorda-bezborodova-shest-matchey-2476861/",
   "https://www.sport-express.ru/football/rfpl/news/tyukavin-o-dinamo-smotret-v-tablicu-seychas-priyatno-no-esche-nichego-ne-resheno-2476850/",
@@ -506,9 +502,13 @@
   "https://www.sport-express.ru/football/rus_d1/news/chelyabinsk-leningradec-rezultat-matcha-18-tura-pervoy-ligi-23-noyabrya-2026-2478090/",
   "https://www.sport-express.ru/football/rfpl/news/komlichenko-zayavil-chto-popadanie-v-top-8-rpl-po-itogam-sezona-budet-uspehom-dlya-lokomotiva-2478045/",
   "og-vybila-natus-vincere-iz-blast-slam-ix",
-  "https://www.sport-express.ru/football/rfpl/news/rostov-luchshiy-v-rpl-s-momenta-naznacheniya-kirichenko-po-nabrannym-ochkam-porazheniyam-i-propuschennym-golam-2478094/"
+  "https://www.sport-express.ru/football/rfpl/news/rostov-luchshiy-v-rpl-s-momenta-naznacheniya-kirichenko-po-nabrannym-ochkam-porazheniyam-i-propuschennym-golam-2478094/",
+  "team-nemesis-pokinula-blast-slam-ix-ustupiv-xtreme-gaming",
+  "https://www.sport-express.ru/hockey/khl/news/nesterov-obyasnil-pochemu-cska-ne-stoit-pereocenivat-pobednuyu-seriyu-i-liderstvo-v-khl-2478098/",
+  "https://www.sport-express.ru/hockey/khl/news/zaschitnik-cska-nesterov-obyasnil-pochemu-ne-rassmatrival-predlozheniya-drugih-klubov-2478097/",
+  "https://www.sport-express.ru/hockey/khl/news/usov-vyigral-golosovanie-sredi-geroev-overtaymov-i-stal-pervym-uchastnikom-fonbet-matcha-zvezd-khl-v-minske-2478099/"
  ],
- "news_i": 1,
+ "news_i": 3,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1688,7 +1688,7 @@
  "streak_day": {
   "2026-11-22": 2
  },
- "news_next": "2026-11-23T20:05:21.632851+03:00",
+ "news_next": "2026-11-23T20:35:21.410618+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1998,7 +1998,8 @@
   "https://images.cybersport.ru/images/as-is/plain/14/1404ba02-776b-4fc1-a630-1bd5fa5af175.jpg",
   "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3c/Deux_fans_du_football_au_Stade_Omnisports_Roumd%C3%A9_Adjia_%C3%A0_Garoua_au_Cameroun.jpg/1280px-Deux_fans_du_football_au_Stade_Omnisports_Roumd%C3%A9_Adjia_%C3%A0_Garoua_au_Cameroun.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
   "https://ss.sport-express.ru/userfiles/materials/224/2246115/1180x665.jpg",
-  "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a9/CSKA_vs_Rostov%2C_2025_Russian_Cup_Super_Final_June_1%2C_2025.jpg/1280px-CSKA_vs_Rostov%2C_2025_Russian_Cup_Super_Final_June_1%2C_2025.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a9/CSKA_vs_Rostov%2C_2025_Russian_Cup_Super_Final_June_1%2C_2025.jpg/1280px-CSKA_vs_Rostov%2C_2025_Russian_Cup_Super_Final_June_1%2C_2025.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/2016_NHL_All-Star_Game_%2824151146473%29.jpg/1280px-2016_NHL_All-Star_Game_%2824151146473%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
  ],
  "indexnow_day": "2026-11-23",
  "vk_wall_err": null,
@@ -2364,7 +2365,8 @@
   "9180",
   "9183",
   "9184",
-  "9186"
+  "9186",
+  "9187"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -2662,11 +2664,12 @@
   "2026-11-23:новость:15259d3d4a8ee91229b53e1c",
   "2026-11-23:новость:9761facf3c8d9e569eb9f5a0",
   "2026-11-23:новость:6e35fb8d248fe9fdb17ca7cc",
-  "2026-11-23:новость:2e88c5134aee1cf6d52a5b86"
+  "2026-11-23:новость:2e88c5134aee1cf6d52a5b86",
+  "2026-11-23:новость:1f993528b4d095a71ed72f34"
  ],
  "dz_last_delivery": {
-  "source_id": 9186,
-  "message_id": 845,
+  "source_id": 9187,
+  "message_id": 846,
   "kind": "новость"
  },
  "learn_attempt_day": "2026-11-23",
@@ -2740,11 +2743,11 @@
    }
   },
   "source": {
-   "last_success": "2026-11-23T16:45:21.704127+00:00",
-   "parsed": 370,
+   "last_success": "2026-11-23T17:07:21.410618+00:00",
+   "parsed": 356,
    "added": 90,
-   "discovered_matches": 39,
-   "pages": 19,
+   "discovered_matches": 33,
+   "pages": 18,
    "errors": [],
    "parsed_by_sport": {
     "soccer": 50,
@@ -2756,13 +2759,13 @@
    }
   },
   "error": null,
-  "tips": 13033,
+  "tips": 13064,
   "snapshots": 260,
-  "unmapped_markets": 19404,
+  "unmapped_markets": 19463,
   "quote_matches": 32
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-23T20:05:21.341736+03:00",
+  "last_poll": "2026-11-23T20:07:21.410618+03:00",
   "cursor": "360",
   "posts": [
    {
