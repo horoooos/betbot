@@ -2866,9 +2866,9 @@
    }
   },
   "source": {
-   "last_success": "2026-11-23T18:50:00.735829+00:00",
-   "parsed": 358,
-   "added": 105,
+   "last_success": "2026-11-23T19:12:00.263916+00:00",
+   "parsed": 350,
+   "added": 126,
    "discovered_matches": 36,
    "pages": 18,
    "errors": [],
@@ -2882,13 +2882,13 @@
    }
   },
   "error": null,
-  "tips": 13294,
+  "tips": 13334,
   "snapshots": 268,
-  "unmapped_markets": 19794,
-  "quote_matches": 38
+  "unmapped_markets": 19880,
+  "quote_matches": 39
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-23T22:10:00.147564+03:00",
+  "last_poll": "2026-11-23T22:12:00.263916+03:00",
   "cursor": "366",
   "posts": [
    {
@@ -3836,7 +3836,7 @@
   },
   "football|SP2|401883110": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-23T19:02:21.704279+00:00",
+   "checked_at": "2026-11-23T19:12:29.168515+00:00",
    "kickoff": "2026-11-23T22:30:00+03:00",
    "sport": "football",
    "id": "401883110",
@@ -3851,7 +3851,7 @@
   },
   "football|URU|401934684": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-23T19:02:21.914578+00:00",
+   "checked_at": "2026-11-23T19:12:29.397076+00:00",
    "kickoff": "2026-11-23T22:30:00+03:00",
    "sport": "football",
    "id": "401934684",
@@ -3859,9 +3859,9 @@
    "away": "Defensor Sporting",
    "priced_markets": 6,
    "market": "Обе забьют — да",
-   "probability": 0.5502,
-   "odds": 1.69,
-   "edge": -0.07016,
+   "probability": 0.5523,
+   "odds": 1.68,
+   "edge": -0.07214,
    "estimated": true
   },
   "football|I1|401875009": {
