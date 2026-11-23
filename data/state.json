@@ -1556,7 +1556,7 @@
  "value_day": "2026-11-23",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-23",
- "site_stamp": "1510|9173|2026-11-23 16|4|5253949dd79fae6b",
+ "site_stamp": "1510|9174|2026-11-23 17|4|8b9cdb9762f4e069",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1712,7 +1712,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 9173,
+ "dz_last": 9174,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2720,15 +2720,15 @@
    }
   },
   "source": {
-   "last_success": "2026-11-23T13:40:53.625936+00:00",
-   "parsed": 390,
-   "added": 88,
-   "discovered_matches": 40,
-   "pages": 21,
+   "last_success": "2026-11-23T14:00:53.686074+00:00",
+   "parsed": 379,
+   "added": 130,
+   "discovered_matches": 39,
+   "pages": 20,
    "errors": [],
    "parsed_by_sport": {
     "soccer": 50,
-    "ice-hockey": 50,
+    "ice-hockey": 49,
     "basketball": 50,
     "tennis": 50,
     "csgo": 50,
@@ -2736,13 +2736,13 @@
    }
   },
   "error": null,
-  "tips": 12730,
+  "tips": 12757,
   "snapshots": 256,
-  "unmapped_markets": 18934,
+  "unmapped_markets": 19037,
   "quote_matches": 31
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-23T16:58:53.320955+03:00",
+  "last_poll": "2026-11-23T17:00:53.686074+03:00",
   "cursor": "354",
   "posts": [
    {
@@ -3319,7 +3319,11 @@
    "vk_rss": "news_articles_only",
    "site": "enabled",
    "youtube": "requires_authorization"
-  }
+  },
+  "status": "published",
+  "attempted_at": "2026-11-23T17:00:53.686074+03:00",
+  "next_at": "2026-11-30T17:00:53.686074+03:00",
+  "message_id": 9174
  },
  "vk_story_expired_pending": {
   "pid": 6655,
@@ -3574,8 +3578,8 @@
    "1789259": "pre",
    "1789256": "pre",
    "1789255": "pre",
-   "1816456": "pre",
-   "1816446": "pre",
+   "1816456": "in",
+   "1816446": "in",
    "1816461": "pre",
    "401876819": "pre",
    "1816471": "pre",
@@ -3611,7 +3615,16 @@
    "401880829": "pre",
    "401881358": "pre",
    "401881354": "pre",
-   "401878348": "pre"
+   "401878348": "pre",
+   "401880141": "pre",
+   "401878345": "pre",
+   "401915295": "pre",
+   "401915296": "pre",
+   "401915294": "pre",
+   "401915379": "pre",
+   "401915299": "pre",
+   "401915298": "pre",
+   "401915297": "pre"
   },
   "daily": {
    "day": "2026-11-23"
