@@ -463,16 +463,19 @@ def tick(events, now):
         train(store,now)
     if other_changed or not store.get('sport_models'):
         stavka_sports.train(store,now)
+    from . import intelligence
+    try:external_status=intelligence.tick(store,events,now)
+    except Exception as exc:external_status={'status':'unavailable','error':type(exc).__name__}
     _runtime=store
     save(store)
-    return {'model':store['model'],'sport_models':store.get('sport_models',{}),'source':store.get('source_status'),'error':store.get('source_error'),
+    return {'external_sources':external_status,'model':store['model'],'sport_models':store.get('sport_models',{}),'source':store.get('source_status'),'error':store.get('source_error'),
             'tips':len(store['tips']),'snapshots':len(store['samples']),
             'unmapped_markets':len(store.get('market_observations',{})),'quote_matches':len(store.get('quotes',{}))}
 
 
-def adjust(event, lam, probs, now):
+def adjust(event, lam, probs, now, store=None, persist=True):
     """Freeze one baseline per match, then use only a previously validated weight."""
-    store=_runtime
+    store=store if store is not None else _runtime
     if store is None or event.get('state')!='pre' or utc(now)>=utc(event['kickoff'])-pd.Timedelta(minutes=5):
         return probs, {'status':'no_prematch_context','weight':0.0}
     votes,opinions=votes_for(store,event,now)
@@ -494,6 +497,6 @@ def adjust(event, lam, probs, now):
             result[k]=mk._p(m,condition)
         result['scores']=sorted(((float(m[i,j]),f'{i}:{j}') for i in range(6) for j in range(6)),reverse=True)[:3]
         result['scores']=[(score,p) for p,score in result['scores']]
-    save(store)
+    if persist:save(store)
     return result,dict(status=model['status'],weight=weight,authors=len({t['author'] for t in opinions}),
                        votes=votes,source='https://stavka.tv',snapshot=key)
