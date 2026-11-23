@@ -1556,7 +1556,7 @@
  "value_day": "2026-11-23",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-23",
- "site_stamp": "1510|9186|2026-11-23 20|4|1c9697e05b773a3e",
+ "site_stamp": "1510|9188|2026-11-23 20|5|1c9697e05b773a3e",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1712,7 +1712,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 9186,
+ "dz_last": 9188,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2765,7 +2765,7 @@
   "quote_matches": 32
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-23T20:07:21.410618+03:00",
+  "last_poll": "2026-11-23T20:09:21.024999+03:00",
   "cursor": "360",
   "posts": [
    {
@@ -3571,7 +3571,7 @@
    "186816": "post",
    "186817": "post",
    "186813": "in",
-   "186823": "pre",
+   "186823": "in",
    "186815": "pre",
    "186814": "pre",
    "186828": "pre",
@@ -3664,5 +3664,49 @@
   "home": "Брентфорд",
   "away": "Эвертон",
   "kickoff": "2026-11-23T23:00:00+03:00"
+ },
+ "forecast_decisions": {
+  "football|DNK|401874538": {
+   "reason": "no_real_odds",
+   "checked_at": "2026-11-23T17:09:42.937620+00:00",
+   "kickoff": "2026-11-23T21:00:00+03:00",
+   "sport": "football",
+   "id": "401874538",
+   "home": "Брондбю",
+   "away": "Мидтъюлланн",
+   "market": "ТМ 3.5",
+   "probability": 0.5665,
+   "odds": 1.64,
+   "edge": -0.07094,
+   "estimated": true
+  },
+  "football|SWE|401842888": {
+   "reason": "no_real_odds",
+   "checked_at": "2026-11-23T17:09:42.989909+00:00",
+   "kickoff": "2026-11-23T21:00:00+03:00",
+   "sport": "football",
+   "id": "401842888",
+   "home": "Хаммарбю",
+   "away": "IFK Göteborg",
+   "market": "Обе забьют — да",
+   "probability": 0.5696,
+   "odds": 1.63,
+   "edge": -0.07155,
+   "estimated": true
+  },
+  "football|SWE|401842884": {
+   "reason": "no_real_odds",
+   "checked_at": "2026-11-23T17:09:43.039886+00:00",
+   "kickoff": "2026-11-23T21:00:00+03:00",
+   "sport": "football",
+   "id": "401842884",
+   "home": "Örgryte IS",
+   "away": "Кальмар",
+   "market": "Обе забьют — да",
+   "probability": 0.5822,
+   "odds": 1.6,
+   "edge": -0.06848,
+   "estimated": true
+  }
  }
 }

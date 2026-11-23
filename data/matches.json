@@ -38299,15 +38299,27 @@
   "kickoff": "2026-11-23T20:00:00+03:00"
  },
  "401874538": {
-  "status": "skipped",
-  "kickoff": "2026-11-23T21:00:00+03:00"
+  "status": "waiting_data",
+  "kickoff": "2026-11-23T21:00:00+03:00",
+  "sport": "football",
+  "div": "DNK",
+  "reason": "no_real_odds",
+  "retry_at": 1795454361.024999
  },
  "401842888": {
-  "status": "skipped",
-  "kickoff": "2026-11-23T21:00:00+03:00"
+  "status": "waiting_data",
+  "kickoff": "2026-11-23T21:00:00+03:00",
+  "sport": "football",
+  "div": "SWE",
+  "reason": "no_real_odds",
+  "retry_at": 1795454361.024999
  },
  "401842884": {
-  "status": "skipped",
-  "kickoff": "2026-11-23T21:00:00+03:00"
+  "status": "waiting_data",
+  "kickoff": "2026-11-23T21:00:00+03:00",
+  "sport": "football",
+  "div": "SWE",
+  "reason": "no_real_odds",
+  "retry_at": 1795454361.024999
  }
 }
