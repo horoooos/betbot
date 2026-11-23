@@ -1556,7 +1556,7 @@
  "value_day": "2026-11-22",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-22",
- "site_stamp": "1510|9142|2026-11-23 03|4|05a83ca468544048",
+ "site_stamp": "1510|9142|2026-11-23 03|4|38a7af2feaecd46c",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -2013,14 +2013,14 @@
  "vk_photos": [],
  "vk_photo_until": 1794644243.1147308,
  "vk_photo_cursor": {},
- "vk_story_last": 9092,
+ "vk_story_last": 9109,
  "vk_story_err": null,
  "push_weekly": "2026-47",
- "vk_story_at": 1795392945.9897792,
- "vk_story_url": "https://vk.com/story-228963529_456239114",
+ "vk_story_at": 1795393950.590237,
+ "vk_story_url": "https://vk.com/story-228963529_456239115",
  "vk_story_day": {
   "date": "2026-11-23",
-  "count": 2
+  "count": 3
  },
  "vk_legacy_pending": [
   {
@@ -2675,10 +2675,10 @@
    }
   },
   "source": {
-   "last_success": "2026-11-23T00:11:19.564544+00:00",
-   "parsed": 368,
-   "added": 61,
-   "discovered_matches": 33,
+   "last_success": "2026-11-23T00:31:19.951848+00:00",
+   "parsed": 363,
+   "added": 25,
+   "discovered_matches": 36,
    "pages": 21,
    "errors": [],
    "parsed_by_sport": {
@@ -2691,13 +2691,13 @@
    }
   },
   "error": null,
-  "tips": 11732,
-  "snapshots": 252,
-  "unmapped_markets": 17521,
+  "tips": 11734,
+  "snapshots": 253,
+  "unmapped_markets": 17544,
   "quote_matches": 30
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-23T03:29:19.897216+03:00",
+  "last_poll": "2026-11-23T03:31:19.951848+03:00",
   "cursor": "340",
   "posts": [
    {
@@ -3359,7 +3359,7 @@
    "401843484": "post",
    "401841318": "post",
    "401841324": "post",
-   "401841321": "in",
+   "401841321": "post",
    "401841323": "pre",
    "401841326": "pre",
    "401841320": "pre",
