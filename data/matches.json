@@ -37514,5 +37514,21 @@
   "div": "SWE",
   "reason": "no_qualified_real_market",
   "retry_at": 1795456762.588195
+ },
+ "401883110": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-23T22:30:00+03:00",
+  "sport": "football",
+  "div": "SP2",
+  "reason": "no_qualified_real_market",
+  "retry_at": 1795459162.466819
+ },
+ "401934684": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-23T22:30:00+03:00",
+  "sport": "football",
+  "div": "URU",
+  "reason": "no_qualified_real_market",
+  "retry_at": 1795459162.466819
  }
 }
