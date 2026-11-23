@@ -1,0 +1,33 @@
+name: Verify mandatory news images
+on:
+  push:
+    branches: [codex/news-image-gate]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - run: pip install -r requirements.txt
+      - run: python -m unittest discover -s tests
+      - run: python tools/image_gate_smoke.py
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm install --ignore-scripts && npx playwright install --with-deps chrome
+        working-directory: tools/browser-qa
+      - name: Inspect verified news cover in browser
+        working-directory: tools/browser-qa
+        run: node -e "const {chromium}=require('playwright');(async()=>{const b=await chromium.launch({channel:'chrome'});const p=await b.newPage({viewport:{width:1400,height:850}});await p.goto('file://'+process.env.GITHUB_WORKSPACE+'/work/image-proof/index.html');await p.waitForFunction(()=>[...document.images].every(i=>i.complete&&i.naturalWidth>0));await p.screenshot({path:process.env.GITHUB_WORKSPACE+'/work/image-proof/cover-check.png',fullPage:true});await b.close()})()"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: image-proof
+          path: work/image-proof

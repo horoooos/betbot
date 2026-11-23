@@ -1,3 +1,4 @@
+from image_fixture import JPEG
 import json
 import html
 import os
@@ -35,8 +36,8 @@ class VKRSSFormattingTests(unittest.TestCase):
             (root / "vk_rss_format_since.txt").write_text("2026-11-14T10:00:00Z")
             image = root / "docs/rss-images/1.jpg"
             image.parent.mkdir(parents=True)
-            image.write_bytes(b"jpeg")
-            with patch.object(pages, "DATA", root), patch.object(pages, "DOCS", root / "docs"), \
+            image.write_bytes(JPEG)
+            with patch('betbot.vk_rss.public_image_ready',return_value=True), patch.object(pages, 'DATA', root), patch.object(pages, "DOCS", root / "docs"), \
                     patch.dict(os.environ, {"VK_TOKEN": "group", "VK_USER_TOKEN": ""}), \
                     patch.object(vk, "_call", return_value={"short_url": "https://vk.cc/example"}) as api:
                 feed = ET.fromstring(pages._vk_rss([self.news()], pd.Timestamp("2026-11-14T11:00:00Z")))
@@ -72,7 +73,7 @@ class VKRSSFormattingTests(unittest.TestCase):
             root = Path(directory)
             (root / "vk_rss_since.txt").write_text("2026-11-14T09:00:00Z")
             (root / "vk_rss_format_since.txt").write_text("2026-11-14T10:00:00Z")
-            with patch.object(pages, "DATA", root), patch.object(pages, "DOCS", root / "docs"), \
+            with patch('betbot.vk_rss.public_image_ready',return_value=True), patch.object(pages, 'DATA', root), patch.object(pages, "DOCS", root / "docs"), \
                     patch.object(vk, "_short", side_effect=vk.ShortLinkError("unavailable")):
                 feed = ET.fromstring(pages._vk_rss([self.news()], pd.Timestamp("2026-11-14T11:00:00Z")))
             self.assertFalse(feed.findall("channel/item"))

@@ -143,6 +143,36 @@ def is_news(entry):
     return delivery_kind(raw)=='новость'
 
 
+def image_valid(data):
+    """Decode full image bytes; HTML, empty files, corrupt JPEGs and tiny icons fail."""
+    from io import BytesIO
+    from PIL import Image
+    if not isinstance(data,bytes) or not 1000<=len(data)<=20_000_000:return False
+    try:
+        with Image.open(BytesIO(data)) as im:
+            if im.width<320 or im.height<180:return False
+            im.verify()
+        with Image.open(BytesIO(data)) as im:im.load()
+        return True
+    except (OSError,ValueError,Image.DecompressionBombError):return False
+
+
+_PUBLIC_IMAGE_CHECKS={}
+
+def public_image_ready(photo,cache=False):
+    """A successful HEAD is insufficient: VK needs a downloadable decodable cover."""
+    import requests,time
+    if cache and photo in _PUBLIC_IMAGE_CHECKS and time.monotonic()-_PUBLIC_IMAGE_CHECKS[photo]<90:return True
+    if not photo or not str(photo).startswith('https://'):return False
+    try:
+        cover=requests.get(photo,timeout=12,headers={'User-Agent':'AIStavitBot/1.0'},allow_redirects=True)
+        ready=(cover.status_code==200 and cover.headers.get('Content-Type','').lower().startswith('image/')
+               and image_valid(cover.content))
+        if cache and ready:_PUBLIC_IMAGE_CHECKS[photo]=time.monotonic()
+        return ready
+    except requests.RequestException:return False
+
+
 def public_source_ready(source, photo):
     """Do not advertise an article/cover before Pages has actually deployed it."""
     import requests,time
@@ -150,7 +180,5 @@ def public_source_ready(source, photo):
         page=requests.get(source,params={'ready_check':int(time.time())},timeout=10)
         if page.status_code!=200 or 'name="vk-source-format" content="full-news-2"' not in page.text or photo not in page.text:
             return False
-        cover=requests.head(photo,params={'ready_check':int(time.time())},timeout=10,allow_redirects=True)
-        return cover.status_code==200 and cover.headers.get('Content-Type','').lower().startswith('image/')
-    except requests.RequestException:
-        return False
+        return public_image_ready(photo,cache=True)
+    except requests.RequestException:return False

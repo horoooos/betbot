@@ -1,3 +1,4 @@
+from image_fixture import JPEG
 import tempfile
 import unittest
 import xml.etree.ElementTree as ET
@@ -45,9 +46,11 @@ class VKRSSFeedTests(unittest.TestCase):
     def test_source_is_not_ready_until_article_and_cover_are_public(self):
         from betbot.vk_rss import public_source_ready
         page=Mock(status_code=200,text='<meta name="vk-source-format" content="full-news-2"><img src="https://example.test/photo.jpg">')
-        with patch('requests.get',return_value=page),patch('requests.head',return_value=Mock(status_code=404,headers={})):
+        missing=Mock(status_code=404,headers={},content=b'')
+        cover=Mock(status_code=200,headers={'Content-Type':'image/jpeg'},content=JPEG)
+        with patch('requests.get',side_effect=[page,missing]):
             self.assertFalse(public_source_ready('https://example.test/article','https://example.test/photo.jpg'))
-        with patch('requests.get',return_value=page),patch('requests.head',return_value=Mock(status_code=200,headers={'Content-Type':'image/jpeg'})):
+        with patch('requests.get',side_effect=[page,cover]):
             self.assertTrue(public_source_ready('https://example.test/article','https://example.test/photo.jpg'))
 
     def test_news_only_filter_rejects_results_even_if_caller_passes_them(self):
@@ -55,7 +58,7 @@ class VKRSSFeedTests(unittest.TestCase):
         result=dict(id=2,title='Итог матча',t=now,sport='football',photo='https://example.test/a.jpg',body='Счёт',url='result.html',kind='result')
         with tempfile.TemporaryDirectory() as directory:
             root=Path(directory);(root/'vk_rss_since.txt').write_text('2026-11-19T00:00:00Z')
-            with patch.object(pages,'DATA',root),patch.object(pages,'DOCS',root/'docs'):
+            with patch('betbot.vk_rss.public_image_ready',return_value=True), patch.object(pages,'DATA',root),patch.object(pages,'DOCS',root/'docs'):
                 self.assertEqual(ET.fromstring(pages._vk_rss([result],now)).findall('channel/item'),[])
 
 
@@ -63,7 +66,7 @@ class VKRSSFeedTests(unittest.TestCase):
         now = pd.Timestamp('2026-11-20T12:00:00Z')
         posts = {1:dict(t='2026-11-20T11:30:00Z', html='🎮 Итог матча\nПобеда команды.\n#итог', photo='https://example.test/result.jpg'),
                  2:dict(t='2026-11-20T11:31:00Z', html='🎮 КАРТА!\n#live', photo='https://example.test/map.jpg')}
-        with tempfile.TemporaryDirectory() as directory, patch.object(pages, 'DATA', Path(directory)):
+        with tempfile.TemporaryDirectory() as directory, patch('betbot.vk_rss.public_image_ready',return_value=True), patch.object(pages, 'DATA', Path(directory)):
             self.assertEqual(pages._vk_results(posts, now), [])
             (Path(directory)/'vk_results_since.txt').write_text('2026-11-20T11:00:00Z')
             results = pages._vk_results(posts, now)
@@ -81,16 +84,16 @@ class VKRSSFeedTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
             (root / "vk_rss_since.txt").write_text("2026-11-14T09:00:00Z", encoding="utf-8")
-            with patch.object(pages, "DATA", root), patch.object(pages, "DOCS", root / "docs"), \
+            with patch('betbot.vk_rss.public_image_ready',return_value=True), patch.object(pages, 'DATA', root), patch.object(pages, "DOCS", root / "docs"), \
                     patch.object(pages.requests, "get", return_value=Mock(content=b"source")) as download, \
-                    patch("betbot.postimg.as_jpeg", return_value=b"jpeg"):
+                    patch("betbot.postimg.as_jpeg", return_value=JPEG):
                 feed = ET.fromstring(pages._vk_rss(entries, now))
                 pages._vk_rss(entries, now)
                 self.assertEqual(download.call_count, 1)
         items = feed.findall("channel/item")
         self.assertEqual([item.findtext("title") for item in items], ["fresh"])
         self.assertEqual(items[0].find("enclosure").attrib["url"], pages.SITE + "rss-images/123.jpg")
-        self.assertEqual(items[0].find("enclosure").attrib["length"], "4")
+        self.assertEqual(items[0].find("enclosure").attrib["length"], str(len(JPEG)))
         self.assertIn(f'<img src="{pages.SITE}rss-images/123.jpg">', items[0].findtext("{http://purl.org/rss/1.0/modules/content/}encoded"))
         self.assertEqual(feed.find("channel/{http://www.w3.org/2005/Atom}link").attrib["href"], pages.SITE + "rss-vk.xml")
         self.assertNotIn("прогноз", feed.findtext("channel/description").lower())

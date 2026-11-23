@@ -1,3 +1,4 @@
+from image_fixture import JPEG
 import json
 import re
 import tempfile
@@ -59,8 +60,8 @@ class AuditRegressionTests(unittest.TestCase):
             root=Path(directory)
             (root/'vk_rss_since.txt').write_text('2026-11-14T09:00:00Z')
             (root/'vk_rss_format_since.txt').write_text('2026-11-14T09:00:00Z')
-            image=root/'docs/rss-images/1.jpg';image.parent.mkdir(parents=True);image.write_bytes(b'jpeg')
-            with patch.object(pages,'DATA',root),patch.object(pages,'DOCS',root/'docs'),patch('betbot.vk._short',return_value='vk.cc/test'):
+            image=root/'docs/rss-images/1.jpg';image.parent.mkdir(parents=True);image.write_bytes(JPEG)
+            with patch('betbot.vk_rss.public_image_ready',return_value=True), patch.object(pages,'DATA',root),patch.object(pages,'DOCS',root/'docs'),patch('betbot.vk._short',return_value='vk.cc/test'):
                 item=ET.fromstring(pages._vk_rss([news],pd.Timestamp('2026-11-15T11:00:00Z'),article=True)).find('channel/item')
         self.assertEqual(item.findtext('link'),pages.SITE+'vk-articles/1.html')
         self.assertEqual(item.findtext('title'),'Team Spirit разгромили в финале')
