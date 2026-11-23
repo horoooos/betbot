@@ -7,9 +7,6 @@
  "schedule_day": "2026-11-23",
  "content_slot": "2026-11-23-13",
  "news_seen": [
-  "https://www.sport-express.ru/football/rfpl/news/gerkus-pozhelal-udachi-ovchinnkovu-v-lokomotive-2476664/",
-  "zeus-pokazal-pick-em-na-pervyi-yetap-pgl-major-singapore-2026",
-  "https://www.sport-express.ru/hockey/khl/news/trener-neftehimika-grishin-ne-smog-priyti-na-press-konferenciyu-posle-matcha-so-ska-2476742/",
   "https://www.sport-express.ru/football/rfpl/news/boyarskiy-nazval-zenit-edinstvennym-favoritom-chempionskoy-gonki-v-rpl-2476741/",
   "https://www.sport-express.ru/tennis/atp/news/shelton-prokommentiroval-pobedu-nad-hodarom-na-itogovom-turnire-atp-2476764/",
   "nix-klassno-chto-blast-slam-ix-budet-na-novom-patche-namnogo-interesneye-smotret",
@@ -506,9 +503,12 @@
   "https://www.sport-express.ru/football/spain/news/endrik-poluchil-travmu-pered-matchem-reala-s-psv-v-lige-chempionov-2477995/",
   "https://www.sport-express.ru/football/england/news/the-touchline-manchester-siti-sohranit-maresku-do-konca-sezona-nezavisimo-ot-rezultatov-2477992/",
   "https://www.sport-express.ru/football/rfpl/news/v-lokomotive-obyasnili-pochemu-klub-rassmatrivaet-tolko-rossiyskih-trenerov-2477990/",
-  "grossmeister-sindarov-pro-cs2-dumayu-chto-ya-ne-takoi-uzh-plokhoi-igrok"
+  "grossmeister-sindarov-pro-cs2-dumayu-chto-ya-ne-takoi-uzh-plokhoi-igrok",
+  "https://www.sport-express.ru/hockey/nhl/news/konnor-makdevid-sdelal-45-peredach-za-26-matchey-nhl-bystree-byl-tolko-ueyn-gretcki-statistika-22-noyabrya-2026-2477959/",
+  "https://www.sport-express.ru/hockey/khl/news/admiral-podpisal-kontrakt-s-der-arguchincevym-do-konca-sezona-2477925/",
+  "https://www.sport-express.ru/football/rfpl/news/rykov-prokommentiroval-udalenie-osipenko-v-matche-dinamo-krasnodar-2478009/"
  ],
- "news_i": 2,
+ "news_i": 4,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1688,7 +1688,7 @@
  "streak_day": {
   "2026-11-22": 2
  },
- "news_next": "2026-11-23T15:57:53.849517+03:00",
+ "news_next": "2026-11-23T16:27:53.230369+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1990,7 +1990,8 @@
   "https://upload.wikimedia.org/wikipedia/commons/9/99/FC_Dynamo_Kyiv_Fans_-_%D0%A4%D0%B0%D0%BD%D0%B0%D1%82%D1%8B_%D0%A4%D0%9A_%D0%94%D0%B8%D0%BD%D0%B0%D0%BC%D0%BE_%D0%9A%D0%B8%D0%B5%D0%B2_%2822362899431%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
   "https://images.cybersport.ru/images/as-is/plain/c3/c3cfbdeb-f47e-42bf-bdbb-0d04119d3187.jpg",
   "https://upload.wikimedia.org/wikipedia/commons/3/33/StateLibQld_1_42911_Football_match_played_between_Cooroy_and_Nambour_in_Cooroy%2C_1912.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-  "https://images.cybersport.ru/images/as-is/plain/9f/9f98b0c4-963c-41c0-8db5-91d50df2cb93.jpg"
+  "https://images.cybersport.ru/images/as-is/plain/9f/9f98b0c4-963c-41c0-8db5-91d50df2cb93.jpg",
+  "https://upload.wikimedia.org/wikipedia/commons/9/9b/Kirill_Levnikov_2016.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
  ],
  "indexnow_day": "2026-11-23",
  "vk_wall_err": null,
@@ -2347,7 +2348,8 @@
   "9165",
   "9167",
   "9168",
-  "9169"
+  "9169",
+  "9170"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -2636,11 +2638,12 @@
   "2026-11-23:новость:9bbe5cfa65e2b8a6cfde0afb",
   "2026-11-23:новость:25c179adc6056dd274ea5e7f",
   "2026-11-23:новость:7828a1823a12e4fce219b913",
-  "2026-11-23:новость:dcce707616ba61dfa3772545"
+  "2026-11-23:новость:dcce707616ba61dfa3772545",
+  "2026-11-23:новость:3c616293845b46d0fd4cd4fa"
  ],
  "dz_last_delivery": {
-  "source_id": 9169,
-  "message_id": 835,
+  "source_id": 9170,
+  "message_id": 836,
   "kind": "новость"
  },
  "learn_attempt_day": "2026-11-23",
@@ -2736,7 +2739,7 @@
   "quote_matches": 31
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-23T15:56:53.847318+03:00",
+  "last_poll": "2026-11-23T15:58:53.230369+03:00",
   "cursor": "352",
   "posts": [
    {
