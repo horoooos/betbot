@@ -2887,7 +2887,7 @@
   "quote_matches": 40
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-23T22:56:11.954121+03:00",
+  "last_poll": "2026-11-23T22:58:12.752753+03:00",
   "cursor": "366",
   "posts": [
    {
@@ -3955,6 +3955,21 @@
    "odds": 1.57,
    "edge": -0.07229,
    "estimated": true
+  },
+  "football|PAR|401888561": {
+   "reason": "edge_below_minimum",
+   "checked_at": "2026-11-23T19:58:34.053522+00:00",
+   "kickoff": "2026-11-24T00:00:00+03:00",
+   "sport": "football",
+   "id": "401888561",
+   "home": "2 de Mayo",
+   "away": "Sportivo San Lorenzo",
+   "priced_markets": 6,
+   "market": "П1",
+   "probability": 0.5601,
+   "odds": 1.65,
+   "edge": -0.07583,
+   "estimated": false
   }
  },
  "source_trial": {
