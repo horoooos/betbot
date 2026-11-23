@@ -37530,5 +37530,29 @@
   "div": "URU",
   "reason": "no_qualified_real_market",
   "retry_at": 1795459762.799696
+ },
+ "401875009": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-23T22:45:00+03:00",
+  "sport": "football",
+  "div": "I1",
+  "reason": "no_qualified_real_market",
+  "retry_at": 1795460002.021977
+ },
+ "401876686": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-23T22:45:00+03:00",
+  "sport": "football",
+  "div": "F2",
+  "reason": "edge_below_minimum",
+  "retry_at": 1795460002.021977
+ },
+ "401876683": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-23T22:45:00+03:00",
+  "sport": "football",
+  "div": "F2",
+  "reason": "no_qualified_real_market",
+  "retry_at": 1795460002.021977
  }
 }
