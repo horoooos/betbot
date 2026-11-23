@@ -5,7 +5,7 @@
  },
  "learned": "2026-11-23",
  "schedule_day": "2026-11-23",
- "content_slot": "2026-11-23-19",
+ "content_slot": "2026-11-23-20",
  "news_seen": [
   "https://www.sport-express.ru/hockey/nhl/news/ovechkin-stal-rekordsmenom-vashingtona-po-golevym-peredacham-2476792/",
   "https://www.sport-express.ru/hockey/khl/news/brikun-ocenil-vyezdnuyu-seriyu-minskogo-dinamo-posle-dvuh-pobed-v-treh-matchah-2476758/",
@@ -1556,7 +1556,7 @@
  "value_day": "2026-11-23",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-23",
- "site_stamp": "1510|9185|2026-11-23 19|4|1bd23ff4441c8670",
+ "site_stamp": "1510|9186|2026-11-23 20|4|1bd23ff4441c8670",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1712,7 +1712,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 9185,
+ "dz_last": 9186,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2363,7 +2363,8 @@
   "9178",
   "9180",
   "9183",
-  "9184"
+  "9184",
+  "9186"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -2660,11 +2661,12 @@
   "2026-11-23:новость:2d28957af35f4b2343eaf2f2",
   "2026-11-23:новость:15259d3d4a8ee91229b53e1c",
   "2026-11-23:новость:9761facf3c8d9e569eb9f5a0",
-  "2026-11-23:новость:6e35fb8d248fe9fdb17ca7cc"
+  "2026-11-23:новость:6e35fb8d248fe9fdb17ca7cc",
+  "2026-11-23:новость:2e88c5134aee1cf6d52a5b86"
  ],
  "dz_last_delivery": {
-  "source_id": 9184,
-  "message_id": 843,
+  "source_id": 9186,
+  "message_id": 845,
   "kind": "новость"
  },
  "learn_attempt_day": "2026-11-23",
@@ -2760,47 +2762,9 @@
   "quote_matches": 32
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-23T19:59:21.790840+03:00",
-  "cursor": "358",
+  "last_poll": "2026-11-23T20:01:21.517040+03:00",
+  "cursor": "360",
   "posts": [
-   {
-    "post_id": 778,
-    "published_at": 1795372638,
-    "url": "https://vk.com/wall-228963529_778",
-    "title": "Медведев собрал $5,66 млн призовых в сезоне-2026",
-    "text": "рџ“° Даниил Медведев завершил сезон-2026 с рекордными призовыми — $5 662 763, учитывая одиночные и парные турниры. Это больше, чем любой его доход в предыдущие годы.\n\n#теннис #ATP #Медведев #новостиспорта #спорт #главное #аиставит\n\nрџ“Љ Подробнее на сайте рџ‘‡",
-    "checks": {
-     "encoding_clean": false,
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": true,
-     "details_present": true,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-22T21:39:10.361368+03:00"
-   },
-   {
-    "post_id": 779,
-    "published_at": 1795372647,
-    "url": "https://vk.com/wall-228963529_779",
-    "title": "FURIA – самая возрастная команда на PGL Major Singapore 2026",
-    "text": "рџ“° FURIA уже в среднем старше всех соперников – 27,8 года!\n\nрџЋ® Средний возраст состава \"FURIA Esports\" по CS2 составил 27,8 лет, что делает её самым «зрелым» коллективом на предстоящем PGL Major Singapore 2026. По данным Esports Charts эта цифра выше любой другой команды-участницы.\n\n#киберспорт #CS2 #новостиспорта #спорт #главное #аиставит\n\nрџ“Љ Подробнее на сайте рџ‘‡",
-    "checks": {
-     "encoding_clean": false,
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": true,
-     "details_present": true,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-22T21:39:10.361368+03:00"
-   },
    {
     "post_id": 780,
     "published_at": 1795376393,
@@ -3332,6 +3296,44 @@
     },
     "status": "needs_review",
     "observed_at": "2026-11-23T18:57:21.354034+03:00"
+   },
+   {
+    "post_id": 808,
+    "published_at": 1795453216,
+    "url": "https://vk.com/wall-228963529_808",
+    "title": "Комличенко: цель «Локомотива» – попасть в топ-8 РПЛ к концу сезона",
+    "text": "рџ“° Нападающий «Локомотива» Николай Комличенко в интервью «СЭ» откровенно сказал, что для команды уже сейчас важен не просто выживание, а конкретный результат – занять в турнирной таблице места в топ-8.\n\nрџ® Перед этим матчем на «Газпром Арене» уже планировалась встреча «Зенита» и «Крыльев-Сочи», а группа TURBOSH РФС подготовила рекомендации по строительству небольших стадионов до 10 тысяч мест, что может изменить инфраструктуру лиги в дальнейшем.\n\nПодписывайтесь на «АИ СТАВИТ» — спортивные новости каждый день.\n\n#футбол #РПЛ #Комличенко #Локомотива #новостиспорта #спорт #главное #аиставит\n\nрџ“Љ Подробнее на сайте рџ‘‡",
+    "checks": {
+     "encoding_clean": false,
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": true,
+     "details_present": true,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-23T20:01:21.517040+03:00"
+   },
+   {
+    "post_id": 809,
+    "published_at": 1795453216,
+    "url": "https://vk.com/wall-228963529_809",
+    "title": "РФС выпустил рекомендации по строительству стадионов до 10 тыс. мест",
+    "text": "рџ“° Российский футбольный союз (РФС) опубликовал комплект рекомендаций, ориентированных на арены первой категории по своему стандарту. Документ описывает требования к расположению, зрительским зонам, полям, раздевалкам и медицинским помещениям.\n\nрџЏџ В рекомендациях прописано, что остановки общественного транспорта должны находиться не дальше 800 м от входов, а пропускная способность входных групп – 70 % зрителей за 30 минут.\n\nрџ“Љ Минимальная площадь блока раздевалки каждой команды фиксируется в 200 мВІ, а также предусмотрены отдельные помещения для медиков, оборудования трансляций и системы ВАР. Технические параметры включают схемы размещения камер и кабелей для телевизионных передач.\n\nрџ’¬ Особое внимание уделено безопасности и доступности: рекомендации описывают меры по защите болельщиков, создание безбарьерных зон и организацию питания. В отдельном разделе раскрыты вопросы энергоэффективности и эксплуатации стадионов.\n\nрџ—“ Документ предназначен для заказчиков, инвесторов, проектировщиков и служб эксплуатации, а также может применяться при реконструкции уже существующих арен. При этом РФС подчёркивает, что рекомендации носят советный характер и не заменяют действующие строительные нормы.\n\nрџЋЇ Как отметил президент РФС Комличенко, попадание «Локомотива» в топ-8 РПЛ по итогам сезона станет успехом, а новые стадионы, построенные по этим рекомендациям, помогут клубу и другим командам укрепить позиции в высшем дивизионе.\n\nПодписывайтесь на «АИ СТАВИТ» — спортивные новости каждый день.\n\n#футбол #новостиспорта #спорт #главное #аиставит\n\nрџ“Љ Подробнее на сайте рџ‘‡",
+    "checks": {
+     "encoding_clean": false,
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": true,
+     "details_present": true,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-23T20:01:21.517040+03:00"
    }
   ],
   "status": "observing"
@@ -3355,27 +3357,27 @@
  },
  "growth": {
   "digest": {
-   "id": 8820261122,
-   "title": "Главное в спорте за 22.11",
-   "sport": "esports",
-   "t": "2026-11-22T22:59:10.779082+03:00",
-   "photo": "https://horoooos.github.io/betbot/share/digest-2026-11-22.jpg",
+   "id": 8820261123,
+   "title": "Главное в спорте за 23.11",
+   "sport": "football",
+   "t": "2026-11-23T20:01:21.517040+03:00",
+   "photo": "https://horoooos.github.io/betbot/share/digest-2026-11-23.jpg",
    "digest": true,
    "complete": true,
-   "url": "digest/2026-11-22.html",
-   "body": "<b>9Class раскрыл, почему его лейнинг – главная сила в Dota 2</b>\nСаппорт четвёртой позиции команды «PARIVISION», Эдгар «9Class» Налтакян, дал интервью на русскоязычной трансляции BLAST Slam IX, где откровенно рассказал о своих сильных сторонах.\n<a href=\"https://horoooos.github.io/betbot/news/9109-9class-raskryl-pochemu-ego-leyning-glavnaya-sila-v-dota-2.html\">Читать новость полностью</a>\n\n<b>Овчинников благодарит Ротенберга после победы «Локомотива» над «Родиной»</b>\n😱 «Локомотив» вырвал победу, а Овчинников признал, что без поддержки руководства всё могло сложиться иначе.\n<a href=\"https://horoooos.github.io/betbot/news/9092-ovchinnikov-blagodarit-rotenberga-posle-pobedy-lokomotiva-nad-rodinoy.html\">Читать новость полностью</a>\n\n<b>Медведев собрал $5,66 млн призовых в сезоне-2026</b>\nДаниил Медведев завершил сезон-2026 с рекордными призовыми — $5 662 763, учитывая одиночные и парные турниры. Это больше, чем любой его доход в предыдущие годы.\n<a href=\"https://horoooos.github.io/betbot/news/9064-medvedev-sobral-5-66-mln-prizovyh-v-sezone-2026.html\">Читать новость полностью</a>\n\n<b>Травма Куинна Хьюза: защитник «Миннесоты» пропустит два матча</b>\nТяжелый удар: Куинн Хьюз вышел из игры с травмой!\n<a href=\"https://horoooos.github.io/betbot/news/8555-travma-kuinna-hyuza-zaschitnik-minnesoty-propustit-dva-matcha.html\">Читать новость полностью</a>\n\n<b>FURIA – самая возрастная команда на PGL Major Singapore 2026</b>\nFURIA уже в среднем старше всех соперников – 27,8 года!\n<a href=\"https://horoooos.github.io/betbot/news/9084-furia-samaya-vozrastnaya-komanda-na-pgl-major-singapore-2026.html\">Читать новость полностью</a>",
+   "url": "digest/2026-11-23.html",
+   "body": "<b>«Ростов» лидирует в РПЛ по очкам, поражениям и пропущенным голам</b>\n«Ростов» под Кириченко – рекордный шесть матчей без поражений!\n<a href=\"https://horoooos.github.io/betbot/news/9184-rostov-lidiruet-v-rpl-po-ochkam-porazheniyam-i-propuschennym-golam.html\">Читать новость полностью</a>\n\n<b>Solo предлагает ввести отдельную роль лесника в Dota 2</b>\nSolo мечтает о леснике: «Это бы запустило новую эпоху в Dota 2»\n<a href=\"https://horoooos.github.io/betbot/news/9178-solo-predlagaet-vvesti-otdelnuyu-rol-lesnika-v-dota-2.html\">Читать новость полностью</a>\n\n<b>Монтгомери о голе Бучневича: мы сравняем счёт</b>\n⚡️🔥 Бучневич в последний момент спас «Сент-Луис», а тренер уже видел победу!\n<a href=\"https://horoooos.github.io/betbot/news/9163-montgomeri-o-gole-buchnevicha-my-sravnyaem-schet.html\">Читать новость полностью</a>\n\n<b>Алькарас стал самым молодым, выигравшим все турниры Большого шлема и ATP Finals</b>\n😱 23-летний Карлос Алькарас в Турине завершил уникальное достижение — выиграл все четыре турнира Большого шлема и Итоговый турнир ATP.\n<a href=\"https://horoooos.github.io/betbot/news/9155-alkaras-stal-samym-molodym-vyigravshim-vse-turniry-bolshogo-shlema-i-a.html\">Читать новость полностью</a>\n\n<b>Комличенко: цель «Локомотива» – попасть в топ-8 РПЛ к концу сезона</b>\nНападающий «Локомотива» Николай Комличенко в интервью «СЭ» откровенно сказал, что для команды уже сейчас важен не просто выживание, а конкретный результат – занять в турнирной таблице места в топ-8.\n<a href=\"https://horoooos.github.io/betbot/news/9183-komlichenko-tsel-lokomotiva-popast-v-top-8-rpl-k-kontsu-sezona.html\">Читать новость полностью</a>",
    "items": [
-    "9109",
-    "9092",
-    "9064",
-    "8555",
-    "9084"
+    "9184",
+    "9178",
+    "9163",
+    "9155",
+    "9183"
    ],
    "desc": "Главные спортивные новости за последние 24 часа. Полные материалы и источники внутри."
   },
-  "digest_day": "2026-11-22",
+  "digest_day": "2026-11-23",
   "digest_status": "published",
-  "digest_message": 9113,
+  "digest_message": 9186,
   "video_day": "2026-11-22",
   "video_status": "published",
   "video_launch": "news-video-launch-2026-11-22",
@@ -3423,7 +3425,7 @@
    "401888248": "post",
    "401888246": "post",
    "401888249": "post",
-   "401888370": "pre",
+   "401888370": "in",
    "401878942": "post",
    "401878936": "post",
    "401878941": "post",
@@ -3434,7 +3436,6 @@
    "401896809": "post",
    "401896724": "post",
    "401896728": "post",
-   "401879807": "post",
    "401879806": "post",
    "401879802": "post",
    "401881745": "post",
