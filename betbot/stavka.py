@@ -196,6 +196,14 @@ def match_event(row, events):
     return hits[0] if len(hits) == 1 else None
 
 
+# Verified canonical page slugs. Avoid fuzzy matching clubs with similar names.
+MATCH_SLUG_ALIASES={
+    'Brøndby IF':{'broendby'},'FC Midtjylland':{'midtjylland'},
+    'Hammarby IF':{'hammarby'},'IFK Göteborg':{'goteborg'},
+    'Örgryte IS':{'orgryteis'},'Kalmar FF':{'kalmar'},
+    'Juventud':{'juventuddelaspiedras'},'Levante':{'levanteud'},'Elche':{'elchecf'}}
+
+
 def event_for_url(url, events):
     """Conservative English slug discovery; final tips still need name matching."""
     try:
@@ -214,7 +222,7 @@ def event_for_url(url, events):
         variants=[]
         for side in ('home','away'):
             tokens=re.findall('[a-z0-9]+',normalized(e[side].get('name','')))
-            forms={''.join(tokens)}
+            forms={''.join(tokens)} | MATCH_SLUG_ALIASES.get(e[side].get('name',''),set())
             if e.get('sport')=='tennis':forms.add(''.join(reversed(tokens)))
             variants.append({v for v in forms if len(v)>=4})
         if any(h+a==slug for h in variants[0] for a in variants[1]):

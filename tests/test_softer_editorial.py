@@ -61,3 +61,10 @@ class SofterEditorialTests(unittest.TestCase):
         self.assertIn('2:1',result['text'])
         self.assertIn('\n\n',result['text'])
         self.assertIn(editorial.HUMANIZE_STYLE,ask.call_args[0][0][0]['content'])
+
+    def test_verified_slug_aliases_find_the_same_fixture_without_fuzzy_matching(self):
+        e={**EVENT,'home':{'name':'Brøndby IF','ru':'Брондбю'},'away':{'name':'FC Midtjylland','ru':'Мидтьюлланн'}}
+        url='https://stavka.tv/matches/soccer/23-11-2026-broendby-midtjylland'
+        self.assertIs(stavka.event_for_url(url,[e]),e)
+        self.assertIsNone(stavka.event_for_url(url,[e,{**e,'id':'other'}]))
+        self.assertIsNone(stavka.event_for_url(url.replace('broendby','broendby-reserves'),[e]))
