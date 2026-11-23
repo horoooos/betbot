@@ -6315,5 +6315,37 @@
   "div": "WTA",
   "reason": "no_odds_or_sufficient_history",
   "retry_at": 1795447400.08817
+ },
+ "WTA|186813": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-23T20:00:00+03:00",
+  "sport": "tennis",
+  "div": "WTA",
+  "reason": "no_odds_or_sufficient_history",
+  "retry_at": 1795450161.889548
+ },
+ "WTA|186823": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-23T20:00:00+03:00",
+  "sport": "tennis",
+  "div": "WTA",
+  "reason": "no_odds_or_sufficient_history",
+  "retry_at": 1795450161.889548
+ },
+ "DOTA|1816471": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-23T20:00:00+03:00",
+  "sport": "esports",
+  "div": "DOTA",
+  "reason": "no_odds_or_sufficient_history",
+  "retry_at": 1795450161.889548
+ },
+ "DOTA|1816461": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-23T20:00:00+03:00",
+  "sport": "esports",
+  "div": "DOTA",
+  "reason": "no_odds_or_sufficient_history",
+  "retry_at": 1795450161.889548
  }
 }
