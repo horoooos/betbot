@@ -2873,10 +2873,10 @@
    }
   },
   "source": {
-   "last_success": "2026-11-23T18:27:22.836107+00:00",
-   "parsed": 352,
-   "added": 120,
-   "discovered_matches": 35,
+   "last_success": "2026-11-23T18:50:00.735829+00:00",
+   "parsed": 358,
+   "added": 105,
+   "discovered_matches": 36,
    "pages": 18,
    "errors": [],
    "parsed_by_sport": {
@@ -2889,13 +2889,13 @@
    }
   },
   "error": null,
-  "tips": 13238,
+  "tips": 13294,
   "snapshots": 266,
-  "unmapped_markets": 19745,
-  "quote_matches": 36
+  "unmapped_markets": 19794,
+  "quote_matches": 38
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-23T21:47:22.495378+03:00",
+  "last_poll": "2026-11-23T21:50:00.735829+03:00",
   "cursor": "364",
   "posts": [
    {
@@ -3852,7 +3852,7 @@
   },
   "football|SP2|401883110": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-23T18:39:43.547126+00:00",
+   "checked_at": "2026-11-23T18:50:30.785499+00:00",
    "kickoff": "2026-11-23T22:30:00+03:00",
    "sport": "football",
    "id": "401883110",
@@ -3867,7 +3867,7 @@
   },
   "football|URU|401934684": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-23T18:39:43.781371+00:00",
+   "checked_at": "2026-11-23T18:50:31.029299+00:00",
    "kickoff": "2026-11-23T22:30:00+03:00",
    "sport": "football",
    "id": "401934684",
