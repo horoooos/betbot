@@ -38628,7 +38628,7 @@
   "kickoff": "2026-11-23T23:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Scheduled",
   "home": {
    "id": "337",
@@ -39820,7 +39820,10 @@
   "original_msg_id": 9205,
   "close": {
    "H": 0.4541
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null,
+  "value_hit": null
  },
  "401882802": {
   "id": "401882802",
@@ -41165,7 +41168,7 @@
   "sport": "football",
   "div": "BRA",
   "reason": "edge_below_minimum",
-  "retry_at": 1795471439.182496
+  "retry_at": 1795472039.706446
  },
  "401934683": {
   "status": "waiting_data",
@@ -41173,7 +41176,7 @@
   "sport": "football",
   "div": "URU",
   "reason": "no_qualified_real_market",
-  "retry_at": 1795471439.182496
+  "retry_at": 1795472039.706446
  },
  "401841326": {
   "id": "401841326",
