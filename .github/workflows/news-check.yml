@@ -1,0 +1,49 @@
+name: Verify news layout and forecast retries
+on:
+  push:
+    branches: [codex/news-and-review-retry]
+  workflow_dispatch:
+    inputs:
+      published:
+        type: boolean
+        default: false
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r requirements.txt
+      - run: python -m unittest discover -s tests
+      - name: Build isolated news page from current channel data
+        run: |
+          python - <<'PY'
+          import json,shutil
+          from pathlib import Path
+          from betbot import pages
+          out=Path('work/news-preview');(out/'news').mkdir(parents=True,exist_ok=True)
+          posts=json.loads(Path('data/channel.json').read_text(encoding='utf-8'))['posts']
+          news=pages._news({int(k):v for k,v in posts.items()})
+          (out/'news/index.html').write_text(pages._news_index(news),encoding='utf-8')
+          for f in ['site.css','fb.js']:shutil.copy2(Path('docs')/f,out/f)
+          PY
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm install --ignore-scripts && npx playwright install --with-deps chrome
+        working-directory: tools/browser-qa
+      - run: |
+          python -m http.server 8767 --bind 127.0.0.1 --directory work/news-preview >work/news-server.log 2>&1 &
+          node tools/browser-qa/news.mjs
+        env:
+          NEWS_SITE: ${{ inputs.published && 'https://horoooos.github.io/betbot' || '' }}
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: news-proof
+          path: work/news-proof

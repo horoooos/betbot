@@ -324,6 +324,8 @@ def review(ev: dict, w: dict, fx_loader, hist_loader, calib: dict, state: dict) 
     mkt = market(ev, row)
     lam = lambdas(ev, row, mkt, w.get("1X2", 0.0), hist_loader)
     if lam is None:
+        from betbot import forecast_gate
+        forecast_gate.record(state,ev,'insufficient_history_or_odds')
         print(f"  нет коэффициентов и истории: {ev['home']['name']} — {ev['away']['name']}")
         return None
     probs = mk.all_markets(*lam)
@@ -338,6 +340,8 @@ def review(ev: dict, w: dict, fx_loader, hist_loader, calib: dict, state: dict) 
         if t:
             t["stake"] = pro.stake(t)
     if not main or main.get("stake", 0) <= 0:
+        from betbot import forecast_gate
+        forecast_gate.record(state,ev,forecast_gate.reason(main),main)
         print("  прогноз пропущен: нет реального коэффициента с перевесом от 3%")
         return None
     if bold and bold.get("stake", 0) <= 0:
@@ -370,6 +374,8 @@ def review(ev: dict, w: dict, fx_loader, hist_loader, calib: dict, state: dict) 
             print(f"  ! push прогноза дня не удался: {e}")
     telegram.send(texts.review(m, s), reply_to=m["msg_id"], silent=True)
     m["status"] = "reviewed"
+    from betbot import forecast_gate
+    forecast_gate.record(state,ev,"published",main)
     print(f"  обзор: {ev['home']['ru']} — {ev['away']['ru']} → {main['label']}")
     return m
 
@@ -405,6 +411,8 @@ def other_review(e: dict, calib: dict, ctx: dict, state: dict) -> dict | None:
     hist, ratings = ctx.get(e["sport"], ([], {}))
     a = sports.analyse(e, ratings)
     if a is None:
+        from betbot import forecast_gate
+        forecast_gate.record(state,e,"insufficient_history_or_odds")
         return None
     source_signal={"status":"unavailable","weight":0.0}
     try:
@@ -418,6 +426,8 @@ def other_review(e: dict, calib: dict, ctx: dict, state: dict) -> dict | None:
         if t:
             t["stake"] = pro.stake(t)
     if not m["main"] or m["main"].get("stake", 0) <= 0:
+        from betbot import forecast_gate
+        forecast_gate.record(state,e,forecast_gate.reason(m["main"]),m["main"])
         print("  прогноз пропущен: нет реального коэффициента с перевесом от 3%")
         return None
     if m.get("bold") and m["bold"].get("stake", 0) <= 0:
@@ -447,6 +457,8 @@ def other_review(e: dict, calib: dict, ctx: dict, state: dict) -> dict | None:
         text = reviews.history_review(m, hist, ratings)
     telegram.send(text, reply_to=m["msg_id"], silent=True)
     m["status"] = "reviewed"
+    from betbot import forecast_gate
+    forecast_gate.record(state,e,"published",m["main"])
     print(f"  обзор ({e['sport']}): {e['home']['ru']} — {e['away']['ru']} → {m['main']['label']}")
     return m
 
@@ -475,14 +487,9 @@ def other_settle(m: dict, e: dict) -> None:
 
 
 def other_review_due(e: dict, previous: dict | None, now: pd.Timestamp, lead: pd.Timedelta) -> bool:
-    kick=pd.Timestamp(e['kickoff'])
-    if e.get('state')!='pre' or 'ru' not in e.get('home',{}) or not now<kick<=now+lead:
-        return False
-    if e.get('sport') in ('esports','tennis') and kick-now<=pd.Timedelta(minutes=5):
-        return False
-    if not previous:return True
-    return (e.get('sport') in ('esports','tennis') and previous.get('status') in ('skipped','waiting_data')
-            and now.timestamp()>=float(previous.get('retry_at',0)))
+    from betbot import forecast_gate
+    return 'ru' in e.get('home',{}) and forecast_gate.due(e,previous,now,lead)
+
 
 
 def other_sports(state: dict, events: list[dict], now: pd.Timestamp, calib: dict, daily: bool) -> None:
@@ -507,11 +514,9 @@ def other_sports(state: dict, events: list[dict], now: pd.Timestamp, calib: dict
                 result=other_review(e, calib, ctx, state)
                 if result:
                     store[key]=result
-                elif e['sport'] in ('esports','tennis'):
-                    store[key]={'status':'waiting_data','kickoff':e['kickoff'],'sport':e['sport'],'div':e['div'],
-                                'reason':'no_odds_or_sufficient_history','retry_at':now.timestamp()+600}
                 else:
-                    store[key]={'status':'skipped','kickoff':e['kickoff']}
+                    from betbot import forecast_gate
+                    store[key]=forecast_gate.waiting(e,state,now)
             except Exception as ex:
                 print(f"  ! обзор не удался {key}: {ex}")
             save_json(OTHER, store)
@@ -663,13 +668,14 @@ def main():
     calib = mk.calibration(read_results())  # чему бот научился на своих прошлых прогнозах
     for ev in sorted(events, key=lambda e: e["kickoff"]):
         kick = pd.Timestamp(ev["kickoff"])
-        if ev["state"] == "pre" and ev["id"] not in matches and now < kick <= now + lead:
+        from betbot import forecast_gate
+        if forecast_gate.due(ev,matches.get(ev["id"]),now,lead):
             try:
                 m = review(ev, w, fx_loader, hist_loader, calib, state)
             except Exception as e:  # один сломанный матч не должен ронять весь запуск
                 print(f"  ! обзор не удался {ev['id']}: {e}")
                 continue
-            matches[ev["id"]] = m or {"status": "skipped", "kickoff": ev["kickoff"]}
+            matches[ev["id"]] = m or forecast_gate.waiting(ev,state,now)
             save_json(MATCHES, matches)
 
     by_id = {e["id"]: e for e in events}

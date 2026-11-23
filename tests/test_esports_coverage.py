@@ -59,4 +59,4 @@ class EsportsCoverageTests(unittest.TestCase):
         for minutes in (-1,4,90):
             self.assertFalse(due(dict(event,kickoff=(now+pd.Timedelta(minutes=minutes)).isoformat()),None,now,lead))
         self.assertTrue(due(dict(event,sport='tennis'),{'status':'skipped'},now,lead))
-        self.assertFalse(due(dict(event,sport='hockey'),{'status':'skipped'},now,lead))
+        self.assertTrue(due(dict(event,sport='hockey'),{'status':'skipped'},now,lead))
