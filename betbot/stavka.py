@@ -386,6 +386,7 @@ def votes_for(store, event, at):
           and abs((utc(t['kickoff'])-utc(event['kickoff'])).total_seconds())<=300]
     # A prolific author gets at most one vote per market family, never N votes.
     families=[('H','D','A'),('O25','U25')]
+    if store.get('multi_market'):families += [('O15','U15'),('O35','U35'),('O45','U45'),('BTTS_Y','BTTS_N')]
     votes={}
     kept=[]
     for family in families:
@@ -401,12 +402,17 @@ def votes_for(store, event, at):
     return votes,kept
 
 
-def adjusted_matrix(lam, votes, weight):
+def adjusted_matrix(lam, votes, weight, extended=False):
     m=mk.matrix(*lam).copy()
     if not 0<=weight<=.5:
         raise ValueError('Invalid external signal weight')
     x=np.arange(m.shape[0]);i,j=np.meshgrid(x,x,indexing='ij')
-    for keys,masks in [(('H','D','A'),(i>j,i==j,i<j)),(('O25','U25'),(i+j>2.5,i+j<2.5))]:
+    families=[(('H','D','A'),(i>j,i==j,i<j)),(('O25','U25'),(i+j>2.5,i+j<2.5))]
+    if extended:
+        for line in (1.5,3.5,4.5):
+            suffix=str(line).replace('.','');families.append((('O'+suffix,'U'+suffix),(i+j>line,i+j<line)))
+        yes=(i>0)&(j>0);families.append((('BTTS_Y','BTTS_N'),(yes,~yes)))
+    for keys,masks in families:
         counts=np.array([votes.get(k,0.0) for k in keys],float)
         if counts.sum()<=0:
             continue
@@ -432,7 +438,7 @@ def train(store, now):
     if len(training)<60 or len(validation)<20:
         model['status']='insufficient_temporal_split';store['model']=model;return model
     def loss(rows,w):
-        return float(np.mean([-math.log(max(adjusted_matrix(s['lam'],s['votes'],w)[tuple(s['score'])],1e-12)) for s in rows]))
+        return float(np.mean([-math.log(max(adjusted_matrix(s['lam'],s['votes'],w,extended=store.get('multi_market',False))[tuple(s['score'])],1e-12)) for s in rows]))
     grid=[(loss(training,float(w)),float(w)) for w in np.linspace(0,.5,11)]
     candidate=min(grid)[1]
     baseline=loss(validation,0.0);control=loss(validation,candidate)
@@ -492,7 +498,7 @@ def adjust(event, lam, probs, now, store=None, persist=True):
         weight=0.0
     result=dict(probs)
     if weight:
-        m=adjusted_matrix(lam,votes,weight)
+        m=adjusted_matrix(lam,votes,weight,extended=store.get('multi_market',False))
         for k,(_,_,condition) in mk.MARKETS.items():
             result[k]=mk._p(m,condition)
         result['scores']=sorted(((float(m[i,j]),f'{i}:{j}') for i in range(6) for j in range(6)),reverse=True)[:3]

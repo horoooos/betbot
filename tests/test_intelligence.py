@@ -93,3 +93,17 @@ class IntelligenceTests(unittest.TestCase):
             iq.enrich(store,[due],NOW,clock=lambda:NOW+pd.Timedelta(minutes=7))
         self.assertEqual(store['dossiers']['E0|123']['status'],'too_late')
         self.assertNotIn('facts',store['dossiers']['E0|123'])
+
+    def test_external_totals_and_btts_really_reach_the_model(self):
+        import numpy as np
+        root={};store=iq.pool(root)
+        for i in range(3):
+            store['tips'][str(i)]={'author':str(i),'event_id':'123','div':'E0','kickoff':E['kickoff'],
+               'published_at':'2026-11-23T10:00:00Z','observed_at':NOW.isoformat(),'key':'O35','odds':2.2,'source':URL}
+        votes,opinions=stavka.votes_for(store,E,NOW)
+        self.assertEqual(votes['O35'],3);self.assertEqual(len(opinions),3)
+        old=stavka.adjusted_matrix((1.6,1.1),votes,.3)
+        new=stavka.adjusted_matrix((1.6,1.1),votes,.3,extended=True)
+        mask=np.add.outer(np.arange(old.shape[0]),np.arange(old.shape[1]))>3.5
+        self.assertGreater(new[mask].sum(),old[mask].sum());self.assertAlmostEqual(float(new.sum()),1)
+        self.assertTrue(np.isfinite(new).all());self.assertTrue((new>=0).all())

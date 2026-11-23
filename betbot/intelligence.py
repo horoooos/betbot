@@ -237,7 +237,7 @@ def collect_provider(provider,events,now,session=requests,offset=0,clock=None):
 
 
 def pool(root):
-    return root.setdefault('external_sources',dict(version=1,tips={},samples={},model={'status':'collecting','weight':0.0},sport_models={}))
+    return root.setdefault('external_sources',dict(version=1,multi_market=True,tips={},samples={},model={'status':'collecting','weight':0.0},sport_models={}))
 
 
 def tick(root,events,now):

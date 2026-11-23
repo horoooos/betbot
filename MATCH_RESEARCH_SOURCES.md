@@ -32,7 +32,7 @@ bot loop preserves it without a workflow restart. Providers have independent
 health reports. Article context, unsupported markets, usable opinions, and factual
 dossiers are distinct. Published forecasts retain a `research` provenance record.
 
-The external pool has separate football and per-sport models. It starts with
+The external pool has separate football and per-sport models. Football handles 1X2, totals 1.5/2.5/3.5/4.5 and both-teams-to-score as explicit market families; unsupported units remain observations. It starts with
 weight zero. Existing chronological train/validation checks and minimum sample
 requirements apply, and only outcomes observed before validation can train a model.
 If a new model is validated it replaces the old external signal for that forecast;
