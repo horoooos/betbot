@@ -18,7 +18,7 @@ CHANNEL = os.environ.get("TELEGRAM_CHAT_ID", "")
 if not CHANNEL.startswith("@"):  # в секрете может быть числовой id — тогда берём публичное имя канала
     CHANNEL = "@aistavvit"
 SITE = "https://horoooos.github.io/betbot/"
-RENDER_VERSION = 4
+RENDER_VERSION = 5
 
 
 def _hits(col: pd.Series) -> pd.Series:
