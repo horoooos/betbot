@@ -15,6 +15,7 @@ class SofterEditorialTests(unittest.TestCase):
         self.assertGreater(pro.stake({'p':.5,'odds':2.04,'est':False}),0)
         self.assertEqual(pro.stake({'p':.5,'odds':1.9,'est':False}),0)
         self.assertEqual(pro.stake({'p':.8,'odds':2,'est':True}),0)
+        self.assertNotIn('без явного перевеса',pro.stake_line({'stake':1.0}))
         chosen,_=markets.choose(['H','A'],{'H':.75,'A':.25},{'H':1.4,'A':3.},lambda k:{'H':.75,'A':.25}[k])
         self.assertEqual(chosen,'H')
     def test_football_gets_a_complete_same_book_three_way_header(self):

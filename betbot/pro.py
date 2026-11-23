@@ -52,7 +52,7 @@ def stake(tip: dict) -> float:
 
 def stake_line(tip: dict) -> str:
     s = tip.get("stake", STAKE_MIN)
-    why = "есть перевес над линией" if s > STAKE_MIN else "без явного перевеса — минимальная"
+    why = "есть перевес над линией" if s > STAKE_MIN else "небольшой перевес — минимальная ставка"
     return f"💰 Ставка: <b>{s:g}% банка</b> ({why})"
 
 
