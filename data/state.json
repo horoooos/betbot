@@ -7,7 +7,6 @@
  "schedule_day": "2026-11-23",
  "content_slot": "2026-11-23-10",
  "news_seen": [
-  "https://www.sport-express.ru/hockey/khl/news/glotov-stal-novym-kapitanom-ska-plotnikov-otsutstvuet-v-sostave-na-match-s-neftehimikom-2476674/",
   "https://www.sport-express.ru/hockey/nhl/news/napadayuschiy-yuty-vinsent-trochek-stal-vosmym-hokkeistom-drafta-nhl-2011-s-400-rezultativnymi-peredachami-2476671/",
   "https://www.sport-express.ru/hockey/nhl/news/vratar-dzheykob-fauler-povtoril-dostizheniya-kena-draydena-i-zhaka-planta-po-skorosti-desyati-pobed-za-sezon-v-monreale-2476670/",
   "https://www.sport-express.ru/hockey/nhl/news/leyn-hatson-povtoril-dostizhenie-brayana-licha-po-matcham-s-tremya-peredachami-sredi-zaschitnikov-nhl-do-23-let-2476669/",
@@ -506,9 +505,10 @@
   "https://www.sport-express.ru/tennis/atp/news/alkaras-o-liderstve-zvereva-v-reytinge-atp-on-zasluzhil-etu-poziciyu-2477908/",
   "https://www.sport-express.ru/football/rfpl/news/kobelev-raskritikoval-transfery-karpina-v-dinamo-nikto-ne-igraet-odin-osipenko-kotoryy-privozit-iz-igry-v-igru-2477911/",
   "https://www.sport-express.ru/tennis/atp/news/alkaras-stal-samym-molodym-tennisistom-vyigravshim-vse-turniry-bolshogo-shlema-i-itogovyy-turnir-atp-2477914/",
-  "svg-mnogiye-razrabotchiki-uvolnyalis-iz-komandy-dota-2-iz-za-reaktsii"
+  "svg-mnogiye-razrabotchiki-uvolnyalis-iz-komandy-dota-2-iz-za-reaktsii",
+  "https://www.sport-express.ru/football/rfpl/news/silkin-o-dinamo-komanda-pribavila-v-organizacii-igry-no-nuzhna-stabilnost-2477928/"
  ],
- "news_i": 0,
+ "news_i": 1,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1688,7 +1688,7 @@
  "streak_day": {
   "2026-11-22": 2
  },
- "news_next": "2026-11-23T12:21:40.080740+03:00",
+ "news_next": "2026-11-23T12:50:41.359423+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1983,7 +1983,8 @@
   "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/73/FC_Dynamo_Kyiv_vs_FC_K%C3%B8benhavn_24-10-2019_%283%29.jpg/1280px-FC_Dynamo_Kyiv_vs_FC_K%C3%B8benhavn_24-10-2019_%283%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
   "https://upload.wikimedia.org/wikipedia/commons/f/f2/Andrei_Kobelev.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
   "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/Carlos_Alcaraz_Gonz%C3%A1lez.jpg/1280px-Carlos_Alcaraz_Gonz%C3%A1lez.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-  "https://images.cybersport.ru/images/as-is/plain/03/03f8240a-5dee-43a7-a8ef-57f8d5349594.jpg"
+  "https://images.cybersport.ru/images/as-is/plain/03/03f8240a-5dee-43a7-a8ef-57f8d5349594.jpg",
+  "https://upload.wikimedia.org/wikipedia/commons/8/86/Silkin.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
  ],
  "indexnow_day": "2026-11-23",
  "vk_wall_err": null,
@@ -2333,7 +2334,8 @@
   "9152",
   "9153",
   "9155",
-  "9156"
+  "9156",
+  "9159"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -2615,11 +2617,12 @@
   "2026-11-23:новость:5b5cc129a1eb5fb99d288b2e",
   "2026-11-23:новость:8ceaf493d8241b9cc567fa9e",
   "2026-11-23:новость:8e25da822cc9bc0e7f5f7b2b",
-  "2026-11-23:новость:d13fd7cd450cd3ef4cd98582"
+  "2026-11-23:новость:d13fd7cd450cd3ef4cd98582",
+  "2026-11-23:новость:5de74784b3381ac2c7524532"
  ],
  "dz_last_delivery": {
-  "source_id": 9156,
-  "message_id": 828,
+  "source_id": 9159,
+  "message_id": 829,
   "kind": "новость"
  },
  "learn_attempt_day": "2026-11-23",
@@ -2715,7 +2718,7 @@
   "quote_matches": 31
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-23T12:19:41.993268+03:00",
+  "last_poll": "2026-11-23T12:21:41.359423+03:00",
   "cursor": "344",
   "posts": [
    {
