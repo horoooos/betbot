@@ -2775,7 +2775,7 @@
   "quote_matches": 33
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-23T20:47:21.950385+03:00",
+  "last_poll": "2026-11-23T20:49:22.588195+03:00",
   "cursor": "360",
   "posts": [
    {
@@ -3677,22 +3677,22 @@
  "forecast_decisions": {
   "football|DNK|401874538": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-23T17:39:42.063689+00:00",
+   "checked_at": "2026-11-23T17:49:43.064326+00:00",
    "kickoff": "2026-11-23T21:00:00+03:00",
    "sport": "football",
    "id": "401874538",
    "home": "Брондбю",
    "away": "Мидтъюлланн",
    "priced_markets": 3,
-   "market": "ТМ 3.5",
-   "probability": 0.5665,
-   "odds": 1.64,
-   "edge": -0.07094,
+   "market": "ТБ 2.5",
+   "probability": 0.6531,
+   "odds": 1.42,
+   "edge": -0.0726,
    "estimated": true
   },
   "football|SWE|401842888": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-23T17:39:42.115367+00:00",
+   "checked_at": "2026-11-23T17:49:43.115975+00:00",
    "kickoff": "2026-11-23T21:00:00+03:00",
    "sport": "football",
    "id": "401842888",
@@ -3707,7 +3707,7 @@
   },
   "football|SWE|401842884": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-23T17:39:42.164377+00:00",
+   "checked_at": "2026-11-23T17:49:43.166332+00:00",
    "kickoff": "2026-11-23T21:00:00+03:00",
    "sport": "football",
    "id": "401842884",
