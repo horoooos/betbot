@@ -18,6 +18,7 @@ class ReviewRetryTests(unittest.TestCase):
             self.assertFalse(gate.due({'state':'pre','kickoff':now+pd.Timedelta(minutes=minutes)},None,now,lead))
     def test_reasons_do_not_confuse_model_only_odds_with_no_edge(self):
         self.assertEqual(gate.reason({'est':True}),'no_real_odds')
+        self.assertEqual(gate.reason({'est':True},{'H':1.8}),'no_qualified_real_market')
         self.assertEqual(gate.reason({'p':.5,'odds':1.9}),'edge_below_minimum')
         state={};event={'id':'1','sport':'tennis','div':'ATP','kickoff':'2026-11-23T13:00:00Z'}
         gate.record(state,event,'no_real_odds',{'p':.5,'odds':1.86,'est':True})

@@ -9,20 +9,21 @@ def due(event, previous, now, lead):
     if previous.get('msg_id') or previous.get('status') not in ('skipped','waiting_data'):return False
     return now.timestamp()>=float(previous.get('retry_at') or 0)
 
-def reason(tip):
+def reason(tip, real=None):
     if not tip:return 'no_supported_market'
-    if tip.get('est'):return 'no_real_odds'
+    if tip.get('est'):return 'no_qualified_real_market' if real else 'no_real_odds'
     try:p,o=float(tip['p']),float(tip['odds'])
     except (KeyError,TypeError,ValueError):return 'invalid_probability_or_odds'
     if not math.isfinite(p) or not math.isfinite(o) or not 0<p<1 or o<=1:return 'invalid_probability_or_odds'
     return 'edge_below_minimum'
 
-def record(state,event,why,tip=None):
+def record(state,event,why,tip=None,real=None):
     now=pd.Timestamp.now(tz='UTC');key=f"{event.get('sport','football')}|{event.get('div','')}|{event.get('id','')}"
     item={'reason':why,'checked_at':now.isoformat(),'kickoff':str(event.get('kickoff','')),
           'sport':event.get('sport','football'),'id':str(event.get('id','')),
           'home':(event.get('home') or {}).get('ru') or (event.get('home') or {}).get('name',''),
           'away':(event.get('away') or {}).get('ru') or (event.get('away') or {}).get('name','')}
+    if real is not None:item['priced_markets']=len(real)
     if tip:
         item['market']=tip.get('label') or tip.get('key')
         try:
