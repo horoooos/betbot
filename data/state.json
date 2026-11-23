@@ -2883,10 +2883,10 @@
    }
   },
   "source": {
-   "last_success": "2026-11-23T23:22:17.925958+00:00",
-   "parsed": 379,
-   "added": 126,
-   "discovered_matches": 54,
+   "last_success": "2026-11-23T23:42:18.773195+00:00",
+   "parsed": 382,
+   "added": 87,
+   "discovered_matches": 55,
    "pages": 21,
    "errors": [],
    "parsed_by_sport": {
@@ -2899,13 +2899,13 @@
    }
   },
   "error": null,
-  "tips": 13797,
+  "tips": 13817,
   "snapshots": 282,
-  "unmapped_markets": 20785,
+  "unmapped_markets": 20852,
   "quote_matches": 49
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-24T02:40:18.831814+03:00",
+  "last_poll": "2026-11-24T02:42:18.773195+03:00",
   "cursor": "370",
   "posts": [
    {
@@ -4010,7 +4010,7 @@
   },
   "football|BRA|401841320": {
    "reason": "edge_below_minimum",
-   "checked_at": "2026-11-23T23:30:39.722298+00:00",
+   "checked_at": "2026-11-23T23:42:48.646105+00:00",
    "kickoff": "2026-11-24T03:00:00+03:00",
    "sport": "football",
    "id": "401841320",
