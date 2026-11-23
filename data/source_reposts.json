@@ -27,9 +27,13 @@
       "analysis_done": true
     },
     "9199": {
-      "status": "sending",
+      "status": "done",
       "at": "2026-11-23T19:48:06.269882+00:00",
-      "action": "restore"
+      "action": "restore",
+      "message_id": 9213,
+      "event_id": "401876686",
+      "original_kickoff": "2026-11-23T22:45:00+03:00",
+      "source_strategy": "external_trial"
     }
   }
 }
