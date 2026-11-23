@@ -199,7 +199,7 @@ def parse(provider,markup,url,events,now):
     return rows
 
 
-def collect_provider(provider,events,now,session=requests,offset=0):
+def collect_provider(provider,events,now,session=requests,offset=0,clock=None):
     host,listing,_=PROVIDERS[provider];report={'at':stavka.utc(now).isoformat(),'status':'unavailable','discovered':0,'pages':0,'opinions':0,'mapped':0};rows=[]
     try:
         robots=fetch(provider,host+'/robots.txt',session);rp=RobotFileParser();rp.parse(robots.splitlines())
@@ -225,7 +225,10 @@ def collect_provider(provider,events,now,session=requests,offset=0):
         selected=(urls[start:]+urls[:start])[:6]
         report['next_offset']=start+len(selected)
         for url in selected:
-            try:rows.extend(parse(provider,fetch(provider,url,session),url,events,now));report['pages']+=1
+            try:
+                markup=fetch(provider,url,session)
+                observed=(clock or (lambda:pd.Timestamp.now(tz='UTC')))()
+                rows.extend(parse(provider,markup,url,events,observed));report['pages']+=1
             except (requests.RequestException,ValueError,UnicodeError):report['page_errors']=report.get('page_errors',0)+1
         report.update(status='ok',opinions=sum(r.get('kind')!='context' for r in rows),mapped=sum(bool(r.get('key')) for r in rows),contexts=sum(r.get('kind')=='context' for r in rows))
     except (requests.RequestException,ValueError,UnicodeError) as exc:
@@ -279,7 +282,7 @@ def adjust_sport(event,analysis,now):
     return result,info
 
 
-def enrich(store,events,now):
+def enrich(store,events,now,clock=None):
     """Point-in-time factual dossiers for due ESPN matches; no heuristic probability boosts."""
     from . import espn
     cache=store.setdefault('dossiers',{})
@@ -296,8 +299,10 @@ def enrich(store,events,now):
         e,key,slug=item;sport={'football':'soccer','hockey':'hockey','basketball':'basketball'}[e.get('sport','football')]
         try:
             data=espn.summary(slug,e['id'],sport)
+            observed=(clock or (lambda:pd.Timestamp.now(tz='UTC')))()
+            if stavka.utc(e['kickoff'])<=stavka.utc(observed)+pd.Timedelta(minutes=5):return key,{'observed_at':stavka.utc(observed).isoformat(),'status':'too_late'}
             facts={k:data[k] for k in ('table','last5','h2h','lineups','injuries','leaders','venue','city') if data.get(k)}
-            result={'observed_at':stavka.utc(now).isoformat(),'kickoff':stavka.utc(e['kickoff']).isoformat(),
+            result={'observed_at':stavka.utc(observed).isoformat(),'kickoff':stavka.utc(e['kickoff']).isoformat(),
                     'source':espn.SUMMARY.format(sport=sport,slug=slug,id=e['id']),
                     'status':'available' if facts else 'empty','facts':facts}
         except Exception as exc:result={'observed_at':stavka.utc(now).isoformat(),'status':'unavailable','error':type(exc).__name__}

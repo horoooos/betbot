@@ -79,8 +79,17 @@ class IntelligenceTests(unittest.TestCase):
         due={**E,'kickoff':(NOW+pd.Timedelta(hours=1)).isoformat(),'slug':'eng.1'}
         past={**due,'id':'past','state':'post'};store={}
         with patch.object(espn,'summary',return_value={'injuries':{'1':[('Игрок','Out')]},'lineups':{}}) as summary:
-            iq.enrich(store,[due,past],NOW);iq.enrich(store,[due,past],NOW+pd.Timedelta(minutes=1))
+            iq.enrich(store,[due,past],NOW,clock=lambda:NOW);iq.enrich(store,[due,past],NOW+pd.Timedelta(minutes=1),clock=lambda:NOW+pd.Timedelta(minutes=1))
         self.assertEqual(summary.call_count,1)
         dossier=store['dossiers']['E0|123'];self.assertIn('injuries',dossier['facts'])
         self.assertNotIn('lineups',dossier['facts']);self.assertNotIn('E0|past',store['dossiers'])
         self.assertEqual(dossier['observed_at'],NOW.isoformat())
+
+    def test_late_network_response_cannot_be_stamped_as_prematch_information(self):
+        from betbot import espn
+        due={**E,'kickoff':(NOW+pd.Timedelta(minutes=6)).isoformat(),'slug':'eng.1'}
+        store={}
+        with patch.object(espn,'summary',return_value={'lineups':{'1':{'starters':['player']}}}):
+            iq.enrich(store,[due],NOW,clock=lambda:NOW+pd.Timedelta(minutes=7))
+        self.assertEqual(store['dossiers']['E0|123']['status'],'too_late')
+        self.assertNotIn('facts',store['dossiers']['E0|123'])
