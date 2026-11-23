@@ -7,9 +7,6 @@
  "schedule_day": "2026-11-23",
  "content_slot": "2026-11-23-16",
  "news_seen": [
-  "https://www.sport-express.ru/hockey/nhl/news/napadayuschiy-kirill-kaprizov-povtoril-sobstvennyy-rekord-v-minnesote-po-serii-matchey-s-2-peredachami-2476833/",
-  "https://www.sport-express.ru/hockey/nhl/news/andrey-vasilevskiy-priznan-pervoy-zvezdoy-matcha-tampa-edmonton-ilya-miheev-tretey-2476817/",
-  "https://www.sport-express.ru/hockey/nhl/news/golkiper-aylenders-varlamov-priznan-tretey-zvezdoy-matcha-s-vinnipegom-2476815/",
   "https://www.sport-express.ru/hockey/khl/news/brylin-obyasnil-pochemu-molodezhi-minskogo-dinamo-nuzhna-praktika-v-farm-klubah-2476755/",
   "https://www.sport-express.ru/hockey/nhl/news/vratarya-kochetkova-priznali-tretey-zvezdoy-matcha-karolina-monreal-2476813/",
   "https://www.sport-express.ru/hockey/nhl/news/tampa-edmonton-nikita-kucherov-zabil-9-y-gol-v-sezone-nhl-video-shayby-20-noyabrya-2026-2476810/",
@@ -506,9 +503,12 @@
   "https://www.sport-express.ru/hockey/nhl/news/forvard-ska-bardakov-obyasnil-neudachi-v-nhl-2478019/",
   "https://www.sport-express.ru/hockey/khl/news/napadayuschiy-bardakov-zayavil-chto-razin-hochet-sohranit-ego-v-ska-na-sleduyuschiy-sezon-2478015/",
   "https://www.sport-express.ru/football/rfpl/news/pered-matchem-zenit-krylya-na-gazprom-arene-vystupit-gruppa-turbosh-2478037/",
-  "https://www.sport-express.ru/football/rfpl/news/orlov-o-slovah-krugovogo-pro-glushenkova-tak-govorit-pro-svoih-tovarischey-po-komande-nelzya-2478038/"
+  "https://www.sport-express.ru/football/rfpl/news/orlov-o-slovah-krugovogo-pro-glushenkova-tak-govorit-pro-svoih-tovarischey-po-komande-nelzya-2478038/",
+  "https://www.sport-express.ru/tennis/news/kalinskaya-propustit-trofei-severnoy-palmiry-iz-za-travmy-2478031/",
+  "plei-off-winline-epic-standoff-2-jumble-rumble-major-2-provedut-na-versii",
+  "solo-o-vozmozhnom-vvedenii-roli-lesnika-v-dota-2-eto-tochno-by-vdokhnulo-kakuyu"
  ],
- "news_i": 4,
+ "news_i": 0,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1688,7 +1688,7 @@
  "streak_day": {
   "2026-11-22": 2
  },
- "news_next": "2026-11-23T17:58:27.272063+03:00",
+ "news_next": "2026-11-23T18:30:27.630225+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1994,7 +1994,8 @@
   "https://upload.wikimedia.org/wikipedia/commons/9/9b/Kirill_Levnikov_2016.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
   "https://images.cybersport.ru/images/as-is/plain/2c/2c091e61-3648-4b38-9309-c6d100389f56.jpg",
   "https://images.cybersport.ru/images/as-is/plain/a6/a63911e9-4ba7-408f-9836-9a8b6ce3e2bd.jpg",
-  "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/da/Washington_Football_fans_2020-10-25.jpg/1280px-Washington_Football_fans_2020-10-25.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/da/Washington_Football_fans_2020-10-25.jpg/1280px-Washington_Football_fans_2020-10-25.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "https://images.cybersport.ru/images/as-is/plain/14/1404ba02-776b-4fc1-a630-1bd5fa5af175.jpg"
  ],
  "indexnow_day": "2026-11-23",
  "vk_wall_err": null,
@@ -2355,7 +2356,8 @@
   "9170",
   "9173",
   "9175",
-  "9176"
+  "9176",
+  "9178"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -2648,11 +2650,12 @@
   "2026-11-23:новость:3c616293845b46d0fd4cd4fa",
   "2026-11-23:новость:6aeac7818e581a459dd194b8",
   "2026-11-23:новость:f79fc0ed33e3d1c0027a51c0",
-  "2026-11-23:новость:a00866884b22a471b1d9b8bf"
+  "2026-11-23:новость:a00866884b22a471b1d9b8bf",
+  "2026-11-23:новость:2d28957af35f4b2343eaf2f2"
  ],
  "dz_last_delivery": {
-  "source_id": 9176,
-  "message_id": 839,
+  "source_id": 9178,
+  "message_id": 840,
   "kind": "новость"
  },
  "learn_attempt_day": "2026-11-23",
@@ -2748,7 +2751,7 @@
   "quote_matches": 31
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-23T17:57:27.559719+03:00",
+  "last_poll": "2026-11-23T17:59:27.630225+03:00",
   "cursor": "356",
   "posts": [
    {
