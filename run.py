@@ -157,7 +157,7 @@ def market(ev: dict, row: pd.Series | None) -> dict | None:
             if o.get(key) and ok(o[key][1]):
                 _real_max(real, mk.handicap_key(side, o[key][0]), o[key][1])
         return {"p1x2": mk.fair([o["H"], o["D"], o["A"]]), "line": line, "p_over": p_over, "real": real,
-                "max": {}, "src": "DraftKings"}
+                "max": {}, "src": o.get("src") or "DraftKings"}
     return None
 
 
@@ -320,8 +320,12 @@ def morning(state: dict, events: list[dict], other: list[dict], now: pd.Timestam
 
 
 def review(ev: dict, w: dict, fx_loader, hist_loader, calib: dict, state: dict) -> dict | None:
+    from betbot import stavka_markets
     row = find_fixture(ev, fx_loader())
     mkt = market(ev, row)
+    if mkt is None:
+        ev=stavka_markets.ensure(ev,pd.Timestamp.now(tz=MSK))
+        mkt=market(ev,row)
     lam = lambdas(ev, row, mkt, w.get("1X2", 0.0), hist_loader)
     if lam is None:
         from betbot import forecast_gate
@@ -342,7 +346,7 @@ def review(ev: dict, w: dict, fx_loader, hist_loader, calib: dict, state: dict) 
     if not main or main.get("stake", 0) <= 0:
         from betbot import forecast_gate
         forecast_gate.record(state,ev,forecast_gate.reason(main,(mkt or {}).get("real")),main,real=(mkt or {}).get("real",{}))
-        print("  прогноз пропущен: нет реального коэффициента с перевесом от 3%")
+        print("  прогноз пропущен: нет реального коэффициента с перевесом от 1%")
         return None
     if bold and bold.get("stake", 0) <= 0:
         bold = {}
@@ -407,7 +411,7 @@ def add_result(m: dict, score: str, sport: str) -> dict:
 def other_review(e: dict, calib: dict, ctx: dict, state: dict) -> dict | None:
     """Пост перед матчем (хоккей, баскетбол, теннис, киберспорт): картинка + прогноз, полный разбор — ответом."""
     from betbot import stavka_markets
-    e=stavka_markets.supplement(e,pd.Timestamp.now(tz=MSK))
+    e=stavka_markets.ensure(e,pd.Timestamp.now(tz=MSK))
     hist, ratings = ctx.get(e["sport"], ([], {}))
     a = sports.analyse(e, ratings)
     if a is None:
@@ -428,7 +432,7 @@ def other_review(e: dict, calib: dict, ctx: dict, state: dict) -> dict | None:
     if not m["main"] or m["main"].get("stake", 0) <= 0:
         from betbot import forecast_gate
         forecast_gate.record(state,e,forecast_gate.reason(m["main"],a.get("real")),m["main"],real=a.get("real",{}))
-        print("  прогноз пропущен: нет реального коэффициента с перевесом от 3%")
+        print("  прогноз пропущен: нет реального коэффициента с перевесом от 1%")
         return None
     if m.get("bold") and m["bold"].get("stake", 0) <= 0:
         m["bold"] = {}

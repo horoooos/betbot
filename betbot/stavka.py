@@ -21,7 +21,7 @@ from . import markets as mk, names
 BASE = 'https://stavka.tv'
 PATH = Path(__file__).resolve().parent.parent / 'data/stavka_learning.json'
 VERSION = 1
-COLLECTOR_VERSION = 2
+COLLECTOR_VERSION = 3
 MIN_MATCHES = 100
 MONTHS = ['янв', 'фев', 'мар', 'апр', 'мая', 'июн', 'июл', 'авг', 'сен', 'окт', 'ноя', 'дек']
 _runtime = None
@@ -286,11 +286,15 @@ def collect(store, events, now, session=None):
                 parsed_by_sport[url.rsplit('/',1)[-1]]=len(got)
                 urls.update(r['source'] for r in got if match_event(r,upcoming))
                 for row in got:
-                    if match_event(row,upcoming):contexts.setdefault(row['source'],row)
+                    if match_event(row,upcoming):
+                        contexts.setdefault(row['source'],row)
+                        matched=match_event(row,upcoming)
+                        store.setdefault('match_pages',{})[f"{matched['div']}|{matched['id']}"]=row['source']
             else:
                 for a in soup.select('a[href*="/matches/"]'):
                     event=event_for_url(a['href'],upcoming)
                     if event:
+                        store.setdefault('match_pages',{})[f"{event['div']}|{event['id']}"]=public_url(a['href'])
                         source=public_url(a['href']);urls.add(source)
                         contexts.setdefault(source,dict(source=source,home=event['home'].get('ru',event['home']['name']),away=event['away'].get('ru',event['away']['name'])))
         selected=[]
