@@ -1570,7 +1570,7 @@
  "value_day": "2026-11-23",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-23",
- "site_stamp": "1516|9262|2026-11-24 02|6|82cd7866cea10a87",
+ "site_stamp": "1516|9264|2026-11-24 02|6|7212f468d2c838cd",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1726,7 +1726,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 9262,
+ "dz_last": 9264,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2905,7 +2905,7 @@
   "quote_matches": 49
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-24T02:56:18.123915+03:00",
+  "last_poll": "2026-11-24T02:58:18.016270+03:00",
   "cursor": "370",
   "posts": [
    {
@@ -4176,6 +4176,50 @@
    "odds": 1.41,
    "edge": -0.06982,
    "estimated": true
+  },
+  "football|USA|401933728": {
+   "reason": "no_qualified_real_market",
+   "checked_at": "2026-11-23T23:58:39.117384+00:00",
+   "kickoff": "2026-11-24T04:00:00+03:00",
+   "sport": "football",
+   "id": "401933728",
+   "home": "Сент-Луис Сити",
+   "away": "Лос-Анджелес",
+   "priced_markets": 6,
+   "market": "Обе забьют — да",
+   "probability": 0.5904,
+   "odds": 1.58,
+   "edge": -0.06717,
+   "estimated": true
+  },
+  "basketball|NBA|401910041": {
+   "reason": "no_qualified_real_market",
+   "checked_at": "2026-11-23T23:58:39.530804+00:00",
+   "kickoff": "2026-11-24T04:00:00+03:00",
+   "sport": "basketball",
+   "id": "401910041",
+   "home": "Чикаго Буллз",
+   "away": "Кливленд",
+   "priced_markets": 6,
+   "market": "ТМ 247.5",
+   "probability": 0.6597,
+   "odds": 1.41,
+   "edge": -0.06982,
+   "estimated": true
+  },
+  "basketball|NBA|401910042": {
+   "reason": "published",
+   "checked_at": "2026-11-23T23:58:52.652961+00:00",
+   "kickoff": "2026-11-24T04:00:00+03:00",
+   "sport": "basketball",
+   "id": "401910042",
+   "home": "Нью-Орлеан Пеликанс",
+   "away": "Финикс Санз",
+   "market": "П2 (с ОТ)",
+   "probability": 0.6147,
+   "odds": 1.65,
+   "edge": 0.01425,
+   "estimated": false
   }
  },
  "source_trial": {

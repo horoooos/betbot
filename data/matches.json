@@ -41394,5 +41394,13 @@
   "div": "BRA",
   "reason": "edge_below_minimum",
   "retry_at": 1795478658.271705
+ },
+ "401933728": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-24T04:00:00+03:00",
+  "sport": "football",
+  "div": "USA",
+  "reason": "no_qualified_real_market",
+  "retry_at": 1795478898.01627
  }
 }

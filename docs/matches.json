@@ -1560,41 +1560,6 @@ null
 },
 {
 "sport": "basketball",
-"id": "401910041",
-"league": "США · NBA",
-"kickoff": "2026-11-24T04:00:00+03:00",
-"home": "Чикаго Буллз",
-"away": "Кливленд",
-"hl": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/chi.png",
-"al": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/cle.png",
-"hid": "4",
-"aid": "5",
-"bb": "https://betboom.ru/search?query=%D0%A7%D0%B8%D0%BA%D0%B0%D0%B3%D0%BE&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=basketball",
-"path": "basketball/nba",
-"url": "live.html?s=basketball&p=basketball%2Fnba&e=401910041&h=%D0%A7%D0%B8%D0%BA%D0%B0%D0%B3%D0%BE+%D0%91%D1%83%D0%BB%D0%BB%D0%B7&a=%D0%9A%D0%BB%D0%B8%D0%B2%D0%BB%D0%B5%D0%BD%D0%B4",
-"participants": [
-[
-"Чикаго Буллз",
-"Chicago Bulls"
-],
-[
-"Кливленд",
-"Cleveland Cavaliers"
-]
-],
-"div": "NBA",
-"state": "pre",
-"bo": null,
-"prediction": "",
-"hs": "0",
-"as": "0",
-"tip": "",
-"top": false,
-"bot": null,
-"lt": null
-},
-{
-"sport": "basketball",
 "id": "401910042",
 "league": "США · NBA",
 "kickoff": "2026-11-24T04:00:00+03:00",
@@ -1615,6 +1580,107 @@ null
 [
 "Финикс Санз",
 "Phoenix Suns"
+]
+],
+"div": "NBA",
+"state": "pre",
+"bo": null,
+"prediction": "predictions/2026-11-24-nyu-orlean-pelikans-finiks-sanz-401910042.html",
+"hs": "0",
+"as": "0",
+"tip": "П2 (с ОТ) · 1.65",
+"top": false,
+"bot": {
+"main": {
+"label": "П2 (с ОТ)",
+"p": 0.615,
+"odds": 1.65,
+"est": false
+},
+"bold": null,
+"markets": [
+[
+"П1 (с ОТ)",
+0.385,
+2.31
+],
+[
+"П2 (с ОТ)",
+0.615,
+1.645
+],
+[
+"Ф1 (+3.5)",
+0.5,
+1.87
+],
+[
+"Ф2 (-3.5)",
+0.5,
+1.952
+],
+[
+"ТБ 225.5",
+0.66,
+null
+],
+[
+"ТМ 225.5",
+0.34,
+null
+],
+[
+"ТБ 232.5",
+0.5,
+1.926
+],
+[
+"ТМ 232.5",
+0.5,
+1.893
+],
+[
+"ТБ 239.5",
+0.34,
+null
+],
+[
+"ТМ 239.5",
+0.66,
+null
+]
+],
+"bar": [
+0.3852707488552771,
+0,
+0.6147292511447229
+],
+"center": "Ожидаемый счёт 114 : 118"
+},
+"lt": null
+},
+{
+"sport": "basketball",
+"id": "401910041",
+"league": "США · NBA",
+"kickoff": "2026-11-24T04:00:00+03:00",
+"home": "Чикаго Буллз",
+"away": "Кливленд",
+"hl": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/chi.png",
+"al": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/cle.png",
+"hid": "4",
+"aid": "5",
+"bb": "https://betboom.ru/search?query=%D0%A7%D0%B8%D0%BA%D0%B0%D0%B3%D0%BE&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=basketball",
+"path": "basketball/nba",
+"url": "live.html?s=basketball&p=basketball%2Fnba&e=401910041&h=%D0%A7%D0%B8%D0%BA%D0%B0%D0%B3%D0%BE+%D0%91%D1%83%D0%BB%D0%BB%D0%B7&a=%D0%9A%D0%BB%D0%B8%D0%B2%D0%BB%D0%B5%D0%BD%D0%B4",
+"participants": [
+[
+"Чикаго Буллз",
+"Chicago Bulls"
+],
+[
+"Кливленд",
+"Cleveland Cavaliers"
 ]
 ],
 "div": "NBA",

@@ -7473,5 +7473,124 @@
   "div": "NBA",
   "reason": "no_qualified_real_market",
   "retry_at": 1795478418.92017
+ },
+ "NBA|401910041": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-24T04:00:00+03:00",
+  "sport": "basketball",
+  "div": "NBA",
+  "reason": "no_qualified_real_market",
+  "retry_at": 1795478898.01627
+ },
+ "NBA|401910042": {
+  "id": "401910042",
+  "div": "NBA",
+  "sport": "basketball",
+  "kickoff": "2026-11-24T04:00:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "detail": "Mon, November 23rd at 8:00 PM EST",
+  "clock": "0.0",
+  "period": 0,
+  "home": {
+   "id": "3",
+   "name": "New Orleans Pelicans",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/no.png",
+   "color": "0a2240",
+   "score": "0",
+   "record": "5-13",
+   "periods": [],
+   "ru": "Нью-Орлеан Пеликанс"
+  },
+  "away": {
+   "id": "21",
+   "name": "Phoenix Suns",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/phx.png",
+   "color": "29127a",
+   "score": "0",
+   "record": "8-7",
+   "periods": [],
+   "ru": "Финикс Санз"
+  },
+  "odds": {
+   "H": 2.31,
+   "A": 1.645,
+   "line": 232.5,
+   "over": 1.926,
+   "under": 1.893,
+   "spread": 3.5,
+   "sp_h": 1.87,
+   "sp_a": 1.952
+  },
+  "probs": {
+   "BB_ML_H": 0.3852707488552771,
+   "BB_ML_A": 0.6147292511447229,
+   "BB_SPR_H": 0.5,
+   "BB_SPR_A": 0.5,
+   "BB_O225.5": 0.6597440535491568,
+   "BB_U225.5": 0.3402559464508432,
+   "BB_O232.5": 0.5,
+   "BB_U232.5": 0.5,
+   "BB_O239.5": 0.3402559464508432,
+   "BB_U239.5": 0.6597440535491568
+  },
+  "labels": {
+   "BB_ML_H": "П1 (с ОТ)",
+   "BB_ML_A": "П2 (с ОТ)",
+   "BB_SPR_H": "Ф1 (+3.5)",
+   "BB_SPR_A": "Ф2 (-3.5)",
+   "BB_O225.5": "ТБ 225.5",
+   "BB_U225.5": "ТМ 225.5",
+   "BB_O232.5": "ТБ 232.5",
+   "BB_U232.5": "ТМ 232.5",
+   "BB_O239.5": "ТБ 239.5",
+   "BB_U239.5": "ТМ 239.5"
+  },
+  "real": {
+   "BB_ML_H": 2.31,
+   "BB_ML_A": 1.645,
+   "BB_SPR_H": 1.87,
+   "BB_SPR_A": 1.952,
+   "BB_O232.5": 1.926,
+   "BB_U232.5": 1.893
+  },
+  "center": "Ожидаемый счёт 114 : 118",
+  "bar": [
+   0.3852707488552771,
+   0,
+   0.6147292511447229
+  ],
+  "model": {
+   "mu": -3.5,
+   "T": 232.5
+  },
+  "stavka_signal": {
+   "status": "collecting",
+   "weight": 0.0,
+   "authors": 40,
+   "group": "basketball",
+   "snapshot": "NBA|401910042",
+   "source": "https://stavka.tv"
+  },
+  "research": {
+   "articles": [],
+   "dossier": null
+  },
+  "main": {
+   "key": "BB_ML_A",
+   "label": "П2 (с ОТ)",
+   "p": 0.6147,
+   "odds": 1.65,
+   "est": false,
+   "stake": 1.0
+  },
+  "bold": {},
+  "open": {
+   "BB_ML_A": 0.6147
+  },
+  "top": false,
+  "msg_id": 9263,
+  "btn": 4
  }
 }
