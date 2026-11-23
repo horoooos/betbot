@@ -41961,5 +41961,13 @@
   "extra": null,
   "msg_id": 9243,
   "btn": 4
+ },
+ "401888562": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-24T02:15:00+03:00",
+  "sport": "football",
+  "div": "PAR",
+  "reason": "edge_below_minimum",
+  "retry_at": 1795472639.528042
  }
 }

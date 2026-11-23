@@ -509,7 +509,8 @@
   "https://www.sport-express.ru/football/rfpl/news/fk-rostov-fonbet-i-roman-naguchev-predstavili-kollekciyu-futbolok-k-desyatiletiyu-pobedy-nad-bavariey-2478183/",
   "https://www.sport-express.ru/football/champions-league/news/massimiliano-allegri-napoli-opredelenno-nuzhno-kak-minimum-tri-pobedy-dlya-vyhoda-v-pley-off-lch-matematicheski-2478185/",
   "https://www.sport-express.ru/hockey/nhl/news/napadayuschiy-vashingtona-kayru-propustit-kak-minimum-nedelyu-iz-za-travmy-2478188/",
-  "https://www.sport-express.ru/hockey/nhl/news/vashington-podpisal-dvuhletniy-kontrakt-s-zaschitnikom-sent-ivani-2478187/"
+  "https://www.sport-express.ru/hockey/nhl/news/vashington-podpisal-dvuhletniy-kontrakt-s-zaschitnikom-sent-ivani-2478187/",
+  "https://www.sport-express.ru/football/women/news/fifa-primet-okonchatelnoe-reshenie-po-povodu-dinamicheskogo-cenoobrazovaniya-na-bilety-na-matchi-zhenskogo-chm-2035-2478190/"
  ],
  "news_i": 4,
  "oddspapi": {
@@ -1698,7 +1699,7 @@
  "streak_day": {
   "2026-11-22": 2
  },
- "news_next": "2026-11-24T01:11:59.849210+03:00",
+ "news_next": "2026-11-24T01:19:59.528042+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -2901,7 +2902,7 @@
   "quote_matches": 47
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-24T01:11:59.346359+03:00",
+  "last_poll": "2026-11-24T01:13:59.528042+03:00",
   "cursor": "369",
   "posts": [
    {
@@ -4000,6 +4001,21 @@
    "probability": 0.4082,
    "odds": 2.4,
    "edge": -0.02032,
+   "estimated": false
+  },
+  "football|PAR|401888562": {
+   "reason": "edge_below_minimum",
+   "checked_at": "2026-11-23T22:14:19.325512+00:00",
+   "kickoff": "2026-11-24T02:15:00+03:00",
+   "sport": "football",
+   "id": "401888562",
+   "home": "Насьональ",
+   "away": "Cerro Porteño",
+   "priced_markets": 6,
+   "market": "ТМ 2.5",
+   "probability": 0.5263,
+   "odds": 1.74,
+   "edge": -0.08424,
    "estimated": false
   }
  },
