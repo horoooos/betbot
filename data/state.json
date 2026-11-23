@@ -514,7 +514,9 @@
   "https://www.sport-express.ru/hockey/vhl/news/v-matche-olimpbet-vhl-vratar-privez-gol-v-svoi-vorota-pytayas-porazit-chuzhie-2478117/",
   "https://www.sport-express.ru/hockey/khl/news/napadayuschiy-nekolenko-priznal-chto-polozhenie-sibiri-v-tablice-khl-davit-na-igrokov-2478091/",
   "https://www.sport-express.ru/basketball/nba/news/filadelfiya-vyigrala-pervye-12-klatch-matchey-sezona-tretiy-takoy-start-v-nba-s-1997-goda-2026-27-2478130/",
-  "https://www.sport-express.ru/tennis/atp/news/kafelnikov-nazval-uspeshnym-sezon-2026-dlya-medvedeva-2478116/"
+  "https://www.sport-express.ru/tennis/atp/news/kafelnikov-nazval-uspeshnym-sezon-2026-dlya-medvedeva-2478116/",
+  "https://www.sport-express.ru/basketball/nba/news/boston-vpervye-s-2021-goda-poterpel-chetyre-porazheniya-podryad-v-nba-statistika-sezona-2026-27-2478132/",
+  "https://www.sport-express.ru/basketball/nba/news/filadelfiya-vpervye-za-25-let-vyigrala-14-iz-17-startovyh-matchey-nba-statistika-sezona-2026-27-2478131/"
  ],
  "news_i": 0,
  "oddspapi": {
@@ -1703,7 +1705,7 @@
  "streak_day": {
   "2026-11-22": 2
  },
- "news_next": "2026-11-23T21:45:22.799696+03:00",
+ "news_next": "2026-11-23T21:53:22.495378+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -2716,7 +2718,7 @@
   "external_sources": {
    "providers": {
     "legalbet": {
-     "at": "2026-11-23T18:17:22.272097+00:00",
+     "at": "2026-11-23T18:47:22.495378+00:00",
      "status": "ok",
      "discovered": 2,
      "pages": 2,
@@ -2727,7 +2729,7 @@
      "contexts": 2
     },
     "livesport": {
-     "at": "2026-11-23T18:17:22.272097+00:00",
+     "at": "2026-11-23T18:47:22.495378+00:00",
      "status": "ok",
      "discovered": 5,
      "pages": 5,
@@ -2738,18 +2740,18 @@
      "contexts": 5
     },
     "metaratings": {
-     "at": "2026-11-23T18:17:22.272097+00:00",
+     "at": "2026-11-23T18:47:22.495378+00:00",
      "status": "ok",
      "discovered": 17,
      "pages": 6,
      "opinions": 24,
-     "mapped": 8,
+     "mapped": 4,
      "articles_available": 37,
-     "next_offset": 6,
+     "next_offset": 12,
      "contexts": 6
     },
     "rb": {
-     "at": "2026-11-23T18:17:22.272097+00:00",
+     "at": "2026-11-23T18:47:22.495378+00:00",
      "status": "ok",
      "discovered": 0,
      "pages": 0,
@@ -2760,21 +2762,21 @@
      "contexts": 0
     },
     "vseprosport": {
-     "at": "2026-11-23T18:17:22.272097+00:00",
+     "at": "2026-11-23T18:47:22.495378+00:00",
      "status": "ok",
      "discovered": 9,
-     "pages": 5,
+     "pages": 3,
      "opinions": 0,
      "mapped": 0,
      "articles_available": 10,
-     "next_offset": 6,
-     "page_errors": 1,
-     "contexts": 4
+     "next_offset": 12,
+     "page_errors": 3,
+     "contexts": 3
     }
    },
-   "opinions": 11,
+   "opinions": 14,
    "snapshots": 0,
-   "contexts": 17,
+   "contexts": 23,
    "model": {
     "weight": 0.0,
     "status": "collecting",
@@ -2893,7 +2895,7 @@
   "quote_matches": 36
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-23T21:45:21.989198+03:00",
+  "last_poll": "2026-11-23T21:47:22.495378+03:00",
   "cursor": "364",
   "posts": [
    {
