@@ -7,12 +7,6 @@
  "schedule_day": "2026-11-23",
  "content_slot": "2026-11-23-23",
  "news_seen": [
-  "https://www.sport-express.ru/kazakhstan/football/news/aktobe-prodlil-kontrakt-s-cherevchenko-do-konca-2027-goda-2476903/",
-  "https://www.sport-express.ru/football/italy/news/corriere-dello-sport-yuventus-nameren-podpisat-gustavo-varelu-2476902/",
-  "https://www.sport-express.ru/football/rus_d1/news/kamancev-soobschil-chto-arbitra-ziyakova-snyali-s-matcha-nizhniy-novgorod-torpedo-2476895/",
-  "https://www.sport-express.ru/football/rus_d1/news/predsedatel-sudeyskogo-komiteta-pavel-kamancev-obyasnil-pochemu-rfs-podderzhivaet-sudey-nesmotrya-na-kritiku-2476896/",
-  "https://www.sport-express.ru/football/rfpl/news/tyukavin-o-vozmozhnom-uhode-iz-dinamo-zimoy-eto-budet-ochen-tyazheloe-reshenie-2476860/",
-  "dyrachyo-o-blast-slam-ix-ochevidno-chto-favority-yeto-team-spirit-team-yandex-i",
   "lol-2-protiv-kirpicha-siractionslacks-sravnil-patch-7-42-dlya-dota-2-i",
   "https://www.sport-express.ru/hockey/khl/news/vyberi-pervogo-uchastnika-fonbet-matcha-zvezd-khl-2027-2476984/",
   "https://www.sport-express.ru/hockey/nhl/news/rezultativnaya-seriya-konnora-makdevida-zavershilas-na-23-matchah-chetvertyy-pokazatel-so-starta-sezona-v-nhl-2476944/",
@@ -511,9 +505,10 @@
   "https://www.sport-express.ru/cybersport/videogames/news/igroki-gta-6-na-ps5-pozhalovalis-na-vylety-s-oshibkoy-ce-108255-1-2478164/",
   "https://www.sport-express.ru/cybersport/videogames/news/prodazhi-gta-6-za-pervye-sutki-ocenili-v-3-79-milliarda-dollarov-2478161/",
   "https://www.sport-express.ru/cybersport/esports/news/donk-i-niko-mogut-dognat-magisk-po-chislu-eysov-na-meydzhorah-counter-strike-2478160/",
-  "https://www.sport-express.ru/football/champions-league/news/espn-pszh-safonova-glavnyy-favorit-ligi-chempionov-komo-vyshe-intera-i-atletiko-2478181/"
+  "https://www.sport-express.ru/football/champions-league/news/espn-pszh-safonova-glavnyy-favorit-ligi-chempionov-komo-vyshe-intera-i-atletiko-2478181/",
+  "https://www.sport-express.ru/football/rfpl/news/fk-rostov-fonbet-i-roman-naguchev-predstavili-kollekciyu-futbolok-k-desyatiletiyu-pobedy-nad-bavariey-2478183/"
  ],
- "news_i": 2,
+ "news_i": 4,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1700,7 +1695,7 @@
  "streak_day": {
   "2026-11-22": 2
  },
- "news_next": "2026-11-24T00:25:58.647546+03:00",
+ "news_next": "2026-11-24T00:52:59.573382+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -2017,7 +2012,8 @@
   "https://images.cybersport.ru/images/as-is/plain/e1/e1498707-3dff-481d-8e7d-3e8adc415126.jpg",
   "https://ss.sport-express.ru/userfiles/materials/224/2246198/1180x665.jpg",
   "https://images.cybersport.ru/images/as-is/plain/bf/bf0a70ee-0b2d-4b4a-82bc-44936d845b54.jpg",
-  "https://images.cybersport.ru/images/as-is/plain/1c/1c123d29-a9e8-4bff-89cb-acf3fee39441.jpg"
+  "https://images.cybersport.ru/images/as-is/plain/1c/1c123d29-a9e8-4bff-89cb-acf3fee39441.jpg",
+  "https://ss.sport-express.ru/userfiles/materials/224/2246233/1180x665.jpg"
  ],
  "indexnow_day": "2026-11-24",
  "vk_wall_err": null,
@@ -2390,7 +2386,8 @@
   "9193",
   "9203",
   "9221",
-  "9228"
+  "9228",
+  "9232"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -2695,11 +2692,12 @@
   "2026-11-23:новость:fb7f85da8dc8c7c4755d60b2",
   "2026-11-23:новость:9bad2638530e606c0eb1bf1b",
   "2026-11-23:новость:d6314019c411d2263d7a6675",
-  "2026-11-23:новость:fc8eb7cc7f36a6ffba8936d9"
+  "2026-11-23:новость:fc8eb7cc7f36a6ffba8936d9",
+  "2026-11-23:новость:ae206e19bb065a852abf1236"
  ],
  "dz_last_delivery": {
-  "source_id": 9228,
-  "message_id": 852,
+  "source_id": 9232,
+  "message_id": 853,
   "kind": "новость"
  },
  "learn_attempt_day": "2026-11-24",
@@ -2900,7 +2898,7 @@
   "quote_matches": 45
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-24T00:23:59.536744+03:00",
+  "last_poll": "2026-11-24T00:25:59.573382+03:00",
   "cursor": "369",
   "posts": [
    {
