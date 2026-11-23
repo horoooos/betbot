@@ -5,7 +5,7 @@
  },
  "learned": "2026-11-23",
  "schedule_day": "2026-11-23",
- "content_slot": "2026-11-23-13",
+ "content_slot": "2026-11-23-16",
  "news_seen": [
   "https://www.sport-express.ru/football/rfpl/news/boyarskiy-nazval-zenit-edinstvennym-favoritom-chempionskoy-gonki-v-rpl-2476741/",
   "https://www.sport-express.ru/tennis/atp/news/shelton-prokommentiroval-pobedu-nad-hodarom-na-itogovom-turnire-atp-2476764/",
@@ -1556,7 +1556,7 @@
  "value_day": "2026-11-23",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-23",
- "site_stamp": "1510|9169|2026-11-23 15|4|1875a2cb104472b8",
+ "site_stamp": "1510|9172|2026-11-23 16|4|5253949dd79fae6b",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1712,7 +1712,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 9169,
+ "dz_last": 9172,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2734,12 +2734,12 @@
   },
   "error": null,
   "tips": 12637,
-  "snapshots": 253,
+  "snapshots": 256,
   "unmapped_markets": 18839,
   "quote_matches": 31
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-23T15:58:53.230369+03:00",
+  "last_poll": "2026-11-23T16:00:53.066253+03:00",
   "cursor": "352",
   "posts": [
    {
@@ -3585,10 +3585,24 @@
    "401902004": "pre",
    "401915380": "pre",
    "401915300": "pre",
-   "401899536": "pre"
+   "401899536": "pre",
+   "401899539": "pre",
+   "401899538": "pre",
+   "401899532": "pre",
+   "401899535": "pre",
+   "401899530": "pre"
   },
   "daily": {
    "day": "2026-11-23"
   }
+ },
+ "mod_poll": {
+  "key": "E0|401879237",
+  "id": "401879237",
+  "poll": 9172,
+  "post": 9171,
+  "home": "Брентфорд",
+  "away": "Эвертон",
+  "kickoff": "2026-11-23T23:00:00+03:00"
  }
 }
