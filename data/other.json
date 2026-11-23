@@ -6620,5 +6620,849 @@
   "top": false,
   "msg_id": 9252,
   "btn": 4
+ },
+ "NHL|401892774": {
+  "id": "401892774",
+  "div": "NHL",
+  "sport": "hockey",
+  "kickoff": "2026-11-24T03:30:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "detail": "Mon, November 23rd at 7:30 PM EST",
+  "clock": "0:00",
+  "period": 0,
+  "home": {
+   "id": "10",
+   "name": "Montreal Canadiens",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/mtl.png",
+   "color": "c41230",
+   "score": "0",
+   "record": "14-6-4",
+   "periods": [],
+   "ru": "Монреаль"
+  },
+  "away": {
+   "id": "8",
+   "name": "Los Angeles Kings",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/la.png",
+   "color": "121212",
+   "score": "0",
+   "record": "7-12-2",
+   "periods": [],
+   "ru": "Лос-Анджелес"
+  },
+  "odds": {
+   "H": 1.645,
+   "A": 2.3,
+   "line": 6.5,
+   "over": 2.05,
+   "under": 1.8,
+   "spread": -1.5,
+   "sp_h": 2.6,
+   "sp_a": 1.521
+  },
+  "probs": {
+   "HK_ML_H": 0.5830168889448026,
+   "HK_ML_A": 0.41698311105519714,
+   "HK_H": 0.5012045966113887,
+   "HK_D": 0.1573313314104114,
+   "HK_A": 0.34146407197819967,
+   "HK_O5.5": 0.6256169921154208,
+   "HK_U5.5": 0.37438300788457907,
+   "HK_O6.5": 0.4675401558912355,
+   "HK_U6.5": 0.5324598441087643,
+   "HK_O7.5": 0.32150718022811925,
+   "HK_U7.5": 0.6784928197718806,
+   "HK_IT1O1.5": 0.8634999802179616,
+   "HK_IT1O2.5": 0.6779988045562543,
+   "HK_IT1O3.5": 0.46185765955550656,
+   "HK_IT2O1.5": 0.7964459034650442,
+   "HK_IT2O2.5": 0.5701990931613646,
+   "HK_IT2O3.5": 0.3461281262043332,
+   "HK_H-1.5": 0.3444164597904441,
+   "HK_A+1.5": 0.6555835402095559,
+   "HK_A-1.5": 0.20819617603120008,
+   "HK_H+1.5": 0.7918038239687998
+  },
+  "labels": {
+   "HK_ML_H": "П1 (с ОТ и буллитами)",
+   "HK_ML_A": "П2 (с ОТ и буллитами)",
+   "HK_H": "П1 в основное время",
+   "HK_D": "Ничья в основное время",
+   "HK_A": "П2 в основное время",
+   "HK_O5.5": "ТБ 5.5",
+   "HK_U5.5": "ТМ 5.5",
+   "HK_O6.5": "ТБ 6.5",
+   "HK_U6.5": "ТМ 6.5",
+   "HK_O7.5": "ТБ 7.5",
+   "HK_U7.5": "ТМ 7.5",
+   "HK_IT1O1.5": "ИТ1 больше 1.5",
+   "HK_IT1O2.5": "ИТ1 больше 2.5",
+   "HK_IT1O3.5": "ИТ1 больше 3.5",
+   "HK_IT2O1.5": "ИТ2 больше 1.5",
+   "HK_IT2O2.5": "ИТ2 больше 2.5",
+   "HK_IT2O3.5": "ИТ2 больше 3.5",
+   "HK_H-1.5": "Ф1 (−1.5)",
+   "HK_A+1.5": "Ф2 (+1.5)",
+   "HK_A-1.5": "Ф2 (−1.5)",
+   "HK_H+1.5": "Ф1 (+1.5)"
+  },
+  "real": {
+   "HK_ML_H": 1.645,
+   "HK_ML_A": 2.3,
+   "HK_O6.5": 2.05,
+   "HK_U6.5": 1.8
+  },
+  "center": "Ожидаемые голы 3.5 : 3.0",
+  "bar": [
+   0.5830168889448026,
+   0,
+   0.41698311105519714
+  ],
+  "model": {
+   "lh": 3.4955219700858065,
+   "la": 2.9711486317478615
+  },
+  "stavka_signal": {
+   "status": "collecting",
+   "weight": 0.0,
+   "authors": 25,
+   "group": "hockey",
+   "snapshot": "NHL|401892774",
+   "source": "https://stavka.tv"
+  },
+  "research": {
+   "articles": [
+    {
+     "id": "40b75a2b4693da2dec3cb38d",
+     "kind": "context",
+     "provider": "livesport",
+     "source": "https://www.livesport.ru/tips/hockey/2026/11/24/montreal-canadiens-losangeleskings/",
+     "sport": "hockey",
+     "div": "NHL",
+     "event_id": "401892774",
+     "kickoff": "2026-11-24T00:30:00+00:00",
+     "published_at": "2026-11-23T03:30:00+00:00",
+     "observed_at": "2026-11-23T18:17:45.948817+00:00",
+     "tables": [
+      [
+       [
+        "",
+        "Букмекер",
+        "1",
+        "x",
+        "2",
+        "Новым игрокам",
+        ""
+       ],
+       [
+        "",
+        "",
+        "2.10",
+        "4.30",
+        "2.90",
+        "Фрибет",
+        "15 000 ₽"
+       ],
+       [
+        "",
+        "",
+        "2.08",
+        "4.40",
+        "2.87",
+        "Фрибет",
+        "30 000 ₽"
+       ],
+       [
+        "",
+        "",
+        "2.07",
+        "4.40",
+        "2.90",
+        "Фрибет всем",
+        "10 000 ₽"
+       ],
+       [
+        "",
+        "",
+        "2.07",
+        "4.24",
+        "2.98",
+        "Фрибет",
+        "1000 ₽"
+       ]
+      ]
+     ]
+    },
+    {
+     "id": "5eccacc155cd2beb5f8af82e",
+     "kind": "context",
+     "provider": "metaratings",
+     "source": "https://metaratings.ru/prognozy/hokkey/monreal-kanadiens-los-andzheles-kingz-prognoz-na-match-nhl-24-noyabrya-2026-goda/",
+     "sport": "hockey",
+     "div": "NHL",
+     "event_id": "401892774",
+     "kickoff": "2026-11-24T00:30:00+00:00",
+     "published_at": "2026-11-23T14:41:49+00:00",
+     "observed_at": "2026-11-23T18:47:45.952391+00:00",
+     "tables": []
+    }
+   ],
+   "dossier": null
+  },
+  "main": {
+   "key": "HK_ML_A",
+   "label": "П2 (с ОТ и буллитами)",
+   "p": 0.417,
+   "odds": 2.3,
+   "est": false,
+   "stake": 0.5,
+   "strategy": "external_trial",
+   "selection_mode": "external_fallback",
+   "trial_expires_at": null,
+   "probability_origin": "baseline_model",
+   "model_edge": -0.04094,
+   "source_count": 13,
+   "source_refs": [
+    {
+     "author": "/predictors/aleksey-soldatov",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/24-11-2026-montreal-canadiens-los-angeles-kings",
+     "published_at": "2026-11-23T01:22:00+00:00",
+     "observed_at": "2026-11-23T01:31:21.910712+00:00",
+     "odds": 2.2,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/valeriy-kovalev",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/24-11-2026-montreal-canadiens-los-angeles-kings",
+     "published_at": "2026-11-23T05:25:00+00:00",
+     "observed_at": "2026-11-23T05:41:38.433135+00:00",
+     "odds": 2.15,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/luciferik",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/24-11-2026-montreal-canadiens-los-angeles-kings",
+     "published_at": "2026-11-23T09:57:00+00:00",
+     "observed_at": "2026-11-23T11:54:52.185746+00:00",
+     "odds": 2.2,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/valerii-alatarcev",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/24-11-2026-montreal-canadiens-los-angeles-kings",
+     "published_at": "2026-11-23T13:31:00+00:00",
+     "observed_at": "2026-11-23T13:40:53.625936+00:00",
+     "odds": 2.2,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/padenie-materatstsi",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/24-11-2026-montreal-canadiens-los-angeles-kings",
+     "published_at": "2026-11-23T17:01:00+00:00",
+     "observed_at": "2026-11-23T17:07:21.410618+00:00",
+     "odds": 2.18,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/liza-ov",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/24-11-2026-montreal-canadiens-los-angeles-kings",
+     "published_at": "2026-11-23T17:39:00+00:00",
+     "observed_at": "2026-11-23T17:47:21.950385+00:00",
+     "odds": 2.18,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/max-wolman",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/24-11-2026-montreal-canadiens-los-angeles-kings",
+     "published_at": "2026-11-23T18:03:00+00:00",
+     "observed_at": "2026-11-23T18:07:22.210171+00:00",
+     "odds": 2.18,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/diman3-diman3",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/24-11-2026-montreal-canadiens-los-angeles-kings",
+     "published_at": "2026-11-23T19:28:00+00:00",
+     "observed_at": "2026-11-23T19:32:11.991055+00:00",
+     "odds": 2.25,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/yuriy-alimov",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/24-11-2026-montreal-canadiens-los-angeles-kings",
+     "published_at": "2026-11-23T19:41:00+00:00",
+     "observed_at": "2026-11-23T19:52:12.015171+00:00",
+     "odds": 2.25,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/viktoriy-sku",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/24-11-2026-montreal-canadiens-los-angeles-kings",
+     "published_at": "2026-11-23T20:30:00+00:00",
+     "observed_at": "2026-11-23T20:32:47.453052+00:00",
+     "odds": 2.2,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/andrei-sanin-1",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/24-11-2026-montreal-canadiens-los-angeles-kings",
+     "published_at": "2026-11-23T22:10:00+00:00",
+     "observed_at": "2026-11-23T22:17:59.724065+00:00",
+     "odds": 2.2,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/andrey-shulgin-1",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/24-11-2026-montreal-canadiens-los-angeles-kings",
+     "published_at": "2026-11-23T22:11:00+00:00",
+     "observed_at": "2026-11-23T22:17:59.724065+00:00",
+     "odds": 2.2,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/its-simple",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/24-11-2026-montreal-canadiens-los-angeles-kings",
+     "published_at": "2026-11-23T23:19:00+00:00",
+     "observed_at": "2026-11-23T23:22:17.925958+00:00",
+     "odds": 2.2,
+     "price_kind": "author_recorded"
+    }
+   ]
+  },
+  "bold": {},
+  "open": {
+   "HK_ML_A": 0.417
+  },
+  "top": false,
+  "msg_id": 9256,
+  "btn": 4
+ },
+ "NHL|401892775": {
+  "id": "401892775",
+  "div": "NHL",
+  "sport": "hockey",
+  "kickoff": "2026-11-24T03:30:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "detail": "Mon, November 23rd at 7:30 PM EST",
+  "clock": "0:00",
+  "period": 0,
+  "home": {
+   "id": "14",
+   "name": "Ottawa Senators",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/ott.png",
+   "color": "dd1a32",
+   "score": "0",
+   "record": "15-6-3",
+   "periods": [],
+   "ru": "Оттава"
+  },
+  "away": {
+   "id": "3",
+   "name": "Calgary Flames",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/cgy.png",
+   "color": "dd1a32",
+   "score": "0",
+   "record": "10-12-2",
+   "periods": [],
+   "ru": "Калгари"
+  },
+  "odds": {
+   "H": 1.388,
+   "A": 3.1,
+   "line": 5.5,
+   "over": 1.833,
+   "under": 2.0,
+   "spread": -1.5,
+   "sp_h": 2.05,
+   "sp_a": 1.8
+  },
+  "probs": {
+   "HK_ML_H": 0.6907382552531469,
+   "HK_ML_A": 0.3092617447468531,
+   "HK_H": 0.611983714408955,
+   "HK_D": 0.15145104008498436,
+   "HK_A": 0.2365652455060606,
+   "HK_O4.5": 0.6874731623828183,
+   "HK_U4.5": 0.31252683761718153,
+   "HK_O5.5": 0.521785578063506,
+   "HK_U5.5": 0.478214421936494,
+   "HK_O6.5": 0.3615200121885441,
+   "HK_U6.5": 0.6384799878114559,
+   "HK_IT1O1.5": 0.8642632067567899,
+   "HK_IT1O2.5": 0.6793327406440948,
+   "HK_IT1O3.5": 0.46341083706619135,
+   "HK_IT2O1.5": 0.6693437649938954,
+   "HK_IT2O2.5": 0.4041824839054292,
+   "HK_IT2O3.5": 0.2008125239316686,
+   "HK_H-1.5": 0.4424890329999158,
+   "HK_A+1.5": 0.5575109670000843,
+   "HK_A-1.5": 0.125226958927605,
+   "HK_H+1.5": 0.8747730410723947
+  },
+  "labels": {
+   "HK_ML_H": "П1 (с ОТ и буллитами)",
+   "HK_ML_A": "П2 (с ОТ и буллитами)",
+   "HK_H": "П1 в основное время",
+   "HK_D": "Ничья в основное время",
+   "HK_A": "П2 в основное время",
+   "HK_O4.5": "ТБ 4.5",
+   "HK_U4.5": "ТМ 4.5",
+   "HK_O5.5": "ТБ 5.5",
+   "HK_U5.5": "ТМ 5.5",
+   "HK_O6.5": "ТБ 6.5",
+   "HK_U6.5": "ТМ 6.5",
+   "HK_IT1O1.5": "ИТ1 больше 1.5",
+   "HK_IT1O2.5": "ИТ1 больше 2.5",
+   "HK_IT1O3.5": "ИТ1 больше 3.5",
+   "HK_IT2O1.5": "ИТ2 больше 1.5",
+   "HK_IT2O2.5": "ИТ2 больше 2.5",
+   "HK_IT2O3.5": "ИТ2 больше 3.5",
+   "HK_H-1.5": "Ф1 (−1.5)",
+   "HK_A+1.5": "Ф2 (+1.5)",
+   "HK_A-1.5": "Ф2 (−1.5)",
+   "HK_H+1.5": "Ф1 (+1.5)"
+  },
+  "real": {
+   "HK_ML_H": 1.388,
+   "HK_ML_A": 3.1,
+   "HK_O5.5": 1.833,
+   "HK_U5.5": 2.0
+  },
+  "center": "Ожидаемые голы 3.5 : 2.3",
+  "bar": [
+   0.6907382552531469,
+   0,
+   0.3092617447468531
+  ],
+  "model": {
+   "lh": 3.502752814882147,
+   "la": 2.3009010871301703
+  },
+  "stavka_signal": {
+   "status": "collecting",
+   "weight": 0.0,
+   "authors": 15,
+   "group": "hockey",
+   "snapshot": "NHL|401892775",
+   "source": "https://stavka.tv"
+  },
+  "research": {
+   "articles": [
+    {
+     "id": "b756977b559502e612207b58",
+     "kind": "context",
+     "provider": "vseprosport",
+     "source": "https://www.vseprosport.ru/news/2026/11/23/ottava-kalgari-prognoz-kf-1-99-i-stavki-na-match-nhl-24-nojabrja-2026-goda",
+     "sport": "hockey",
+     "div": "NHL",
+     "event_id": "401892775",
+     "kickoff": "2026-11-24T00:30:00+00:00",
+     "published_at": "2026-11-23T07:52:48+00:00",
+     "observed_at": "2026-11-23T18:17:56.027309+00:00",
+     "tables": []
+    },
+    {
+     "id": "d27bc3efdfb69c0327e956d5",
+     "kind": "context",
+     "provider": "metaratings",
+     "source": "https://metaratings.ru/prognozy/hokkey/ottava-kalgari-prognoz-na-match-nhl-24-noyabrya-2026-goda/",
+     "sport": "hockey",
+     "div": "NHL",
+     "event_id": "401892775",
+     "kickoff": "2026-11-24T00:30:00+00:00",
+     "published_at": "2026-11-22T10:15:00+00:00",
+     "observed_at": "2026-11-23T19:18:28.852207+00:00",
+     "tables": []
+    }
+   ],
+   "dossier": null
+  },
+  "main": {
+   "key": "HK_ML_A",
+   "label": "П2 (с ОТ и буллитами)",
+   "p": 0.3093,
+   "odds": 3.1,
+   "est": false,
+   "stake": 0.5,
+   "strategy": "external_trial",
+   "selection_mode": "external_fallback",
+   "trial_expires_at": null,
+   "probability_origin": "baseline_model",
+   "model_edge": -0.04129,
+   "source_count": 5,
+   "source_refs": [
+    {
+     "author": "/predictors/yunost-85",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/24-11-2026-ottawa-senators-calgary-flames",
+     "published_at": "2026-11-23T06:58:00+00:00",
+     "observed_at": "2026-11-23T07:03:40.715662+00:00",
+     "odds": 2.7,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/igor-dz",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/24-11-2026-ottawa-senators-calgary-flames",
+     "published_at": "2026-11-23T16:23:00+00:00",
+     "observed_at": "2026-11-23T16:25:21.426084+00:00",
+     "odds": 2.9,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/ivan-ivanov-290",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/24-11-2026-ottawa-senators-calgary-flames",
+     "published_at": "2026-11-23T18:06:00+00:00",
+     "observed_at": "2026-11-23T18:07:22.210171+00:00",
+     "odds": 2.9,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/aleksei-borisov-15",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/24-11-2026-ottawa-senators-calgary-flames",
+     "published_at": "2026-11-23T18:07:00+00:00",
+     "observed_at": "2026-11-23T18:07:22.210171+00:00",
+     "odds": 2.9,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/vadim-ostapenko-2",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/24-11-2026-ottawa-senators-calgary-flames",
+     "published_at": "2026-11-23T19:40:00+00:00",
+     "observed_at": "2026-11-23T19:52:12.015171+00:00",
+     "odds": 2.9,
+     "price_kind": "author_recorded"
+    }
+   ]
+  },
+  "bold": {},
+  "open": {
+   "HK_ML_A": 0.3093
+  },
+  "top": false,
+  "msg_id": 9258,
+  "btn": 4
+ },
+ "NHL|401892776": {
+  "id": "401892776",
+  "div": "NHL",
+  "sport": "hockey",
+  "kickoff": "2026-11-24T03:30:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "detail": "Mon, November 23rd at 7:30 PM EST",
+  "clock": "0:00",
+  "period": 0,
+  "home": {
+   "id": "12",
+   "name": "New York Islanders",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/nyi.png",
+   "color": "00529b",
+   "score": "0",
+   "record": "11-6-5",
+   "periods": [],
+   "ru": "Айлендерс"
+  },
+  "away": {
+   "id": "21",
+   "name": "Toronto Maple Leafs",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/tor.png",
+   "color": "003e7e",
+   "score": "0",
+   "record": "8-14-3",
+   "periods": [],
+   "ru": "Торонто"
+  },
+  "odds": {
+   "H": 1.617,
+   "A": 2.36,
+   "line": 6.5,
+   "over": 1.926,
+   "under": 1.893,
+   "spread": -1.5,
+   "sp_h": 2.54,
+   "sp_a": 1.541
+  },
+  "probs": {
+   "HK_ML_H": 0.5934095289340473,
+   "HK_ML_A": 0.4065904710659525,
+   "HK_H": 0.5131891597973228,
+   "HK_D": 0.15426994064754707,
+   "HK_A": 0.3325408995551299,
+   "HK_O5.5": 0.6514068329744828,
+   "HK_U5.5": 0.34859316702551724,
+   "HK_O6.5": 0.49567492375454053,
+   "HK_U6.5": 0.5043250762454592,
+   "HK_O7.5": 0.3477929977978467,
+   "HK_U7.5": 0.652207002202153,
+   "HK_IT1O1.5": 0.8765581616971014,
+   "HK_IT1O2.5": 0.701210443846234,
+   "HK_IT1O3.5": 0.48934661311298683,
+   "HK_IT2O1.5": 0.8041118538494466,
+   "HK_IT2O2.5": 0.5816799511002136,
+   "HK_IT2O3.5": 0.3575871030998587,
+   "HK_H-1.5": 0.35758763935286697,
+   "HK_A+1.5": 0.6424123606471326,
+   "HK_A-1.5": 0.20279666958390666,
+   "HK_H+1.5": 0.797203330416093
+  },
+  "labels": {
+   "HK_ML_H": "П1 (с ОТ и буллитами)",
+   "HK_ML_A": "П2 (с ОТ и буллитами)",
+   "HK_H": "П1 в основное время",
+   "HK_D": "Ничья в основное время",
+   "HK_A": "П2 в основное время",
+   "HK_O5.5": "ТБ 5.5",
+   "HK_U5.5": "ТМ 5.5",
+   "HK_O6.5": "ТБ 6.5",
+   "HK_U6.5": "ТМ 6.5",
+   "HK_O7.5": "ТБ 7.5",
+   "HK_U7.5": "ТМ 7.5",
+   "HK_IT1O1.5": "ИТ1 больше 1.5",
+   "HK_IT1O2.5": "ИТ1 больше 2.5",
+   "HK_IT1O3.5": "ИТ1 больше 3.5",
+   "HK_IT2O1.5": "ИТ2 больше 1.5",
+   "HK_IT2O2.5": "ИТ2 больше 2.5",
+   "HK_IT2O3.5": "ИТ2 больше 3.5",
+   "HK_H-1.5": "Ф1 (−1.5)",
+   "HK_A+1.5": "Ф2 (+1.5)",
+   "HK_A-1.5": "Ф2 (−1.5)",
+   "HK_H+1.5": "Ф1 (+1.5)"
+  },
+  "real": {
+   "HK_ML_H": 1.617,
+   "HK_ML_A": 2.36,
+   "HK_O6.5": 1.926,
+   "HK_U6.5": 1.893
+  },
+  "center": "Ожидаемые голы 3.6 : 3.0",
+  "bar": [
+   0.5934095289340473,
+   0,
+   0.4065904710659525
+  ],
+  "model": {
+   "lh": 3.624749155505454,
+   "la": 3.022401623561082
+  },
+  "stavka_signal": {
+   "status": "collecting",
+   "weight": 0.0,
+   "authors": 19,
+   "group": "hockey",
+   "snapshot": "NHL|401892776",
+   "source": "https://stavka.tv"
+  },
+  "research": {
+   "articles": [
+    {
+     "id": "6e60d85eb29f43c085f5d346",
+     "kind": "context",
+     "provider": "metaratings",
+     "source": "https://metaratings.ru/prognozy/hokkey/nyu-jork-ajlenders-toronto-prognoz-na-match-nhl-24-noyabrya-2026-goda/",
+     "sport": "hockey",
+     "div": "NHL",
+     "event_id": "401892776",
+     "kickoff": "2026-11-24T00:30:00+00:00",
+     "published_at": "2026-11-23T14:41:15+00:00",
+     "observed_at": "2026-11-23T18:47:47.197220+00:00",
+     "tables": []
+    }
+   ],
+   "dossier": null
+  },
+  "main": {
+   "key": "HK_ML_H",
+   "label": "П1 (с ОТ и буллитами)",
+   "p": 0.5934,
+   "odds": 1.62,
+   "est": false,
+   "stake": 0.5,
+   "strategy": "external_trial",
+   "selection_mode": "external_fallback",
+   "trial_expires_at": null,
+   "probability_origin": "baseline_model",
+   "model_edge": -0.03868,
+   "source_count": 13,
+   "source_refs": [
+    {
+     "author": "/predictors/nenastradamus-zatovanga",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/24-11-2026-new-york-islanders-toronto-maple-leafs",
+     "published_at": "2026-11-23T03:05:00+00:00",
+     "observed_at": "2026-11-23T03:15:22.000816+00:00",
+     "odds": 1.62,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/nikodim-kadilov",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/24-11-2026-new-york-islanders-toronto-maple-leafs",
+     "published_at": "2026-11-23T03:07:00+00:00",
+     "observed_at": "2026-11-23T03:15:22.000816+00:00",
+     "odds": 1.62,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/sergei-exp",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/24-11-2026-new-york-islanders-toronto-maple-leafs",
+     "published_at": "2026-11-23T05:57:00+00:00",
+     "observed_at": "2026-11-23T06:03:38.117757+00:00",
+     "odds": 1.65,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/vyacheslav-nezhdanov",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/24-11-2026-new-york-islanders-toronto-maple-leafs",
+     "published_at": "2026-11-23T07:24:00+00:00",
+     "observed_at": "2026-11-23T07:25:40.420408+00:00",
+     "odds": 1.65,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/optimist-fsj6827",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/24-11-2026-new-york-islanders-toronto-maple-leafs",
+     "published_at": "2026-11-23T10:27:00+00:00",
+     "observed_at": "2026-11-23T10:30:51.758715+00:00",
+     "odds": 1.62,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/wikiexo",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/24-11-2026-new-york-islanders-toronto-maple-leafs",
+     "published_at": "2026-11-23T15:00:00+00:00",
+     "observed_at": "2026-11-23T15:05:19.977743+00:00",
+     "odds": 1.65,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/andrei-chernoshei-1",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/24-11-2026-new-york-islanders-toronto-maple-leafs",
+     "published_at": "2026-11-23T17:40:00+00:00",
+     "observed_at": "2026-11-23T17:47:21.950385+00:00",
+     "odds": 1.6,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/ayder-resutov",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/24-11-2026-new-york-islanders-toronto-maple-leafs",
+     "published_at": "2026-11-23T17:42:00+00:00",
+     "observed_at": "2026-11-23T17:47:21.950385+00:00",
+     "odds": 1.6,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/andrei-ibrakadabra",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/24-11-2026-new-york-islanders-toronto-maple-leafs",
+     "published_at": "2026-11-23T18:07:00+00:00",
+     "observed_at": "2026-11-23T18:07:22.210171+00:00",
+     "odds": 1.6,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/aleksandr-tkacenko-5",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/24-11-2026-new-york-islanders-toronto-maple-leafs",
+     "published_at": "2026-11-23T18:07:00+00:00",
+     "observed_at": "2026-11-23T18:07:22.210171+00:00",
+     "odds": 1.6,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/aleksandr-taktasev",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/24-11-2026-new-york-islanders-toronto-maple-leafs",
+     "published_at": "2026-11-23T18:27:00+00:00",
+     "observed_at": "2026-11-23T18:50:00.735829+00:00",
+     "odds": 1.6,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/quick",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/24-11-2026-new-york-islanders-toronto-maple-leafs",
+     "published_at": "2026-11-23T19:20:00+00:00",
+     "observed_at": "2026-11-23T19:32:11.991055+00:00",
+     "odds": 1.6,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/sergei-k-14",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/24-11-2026-new-york-islanders-toronto-maple-leafs",
+     "published_at": "2026-11-23T19:20:00+00:00",
+     "observed_at": "2026-11-23T19:32:11.991055+00:00",
+     "odds": 1.6,
+     "price_kind": "author_recorded"
+    }
+   ]
+  },
+  "bold": {},
+  "open": {
+   "HK_ML_H": 0.5934
+  },
+  "top": false,
+  "msg_id": 9260,
+  "btn": 4
+ },
+ "NHL|401892777": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-24T03:30:00+03:00",
+  "sport": "hockey",
+  "div": "NHL",
+  "reason": "no_qualified_real_market",
+  "retry_at": 1795477098.385305
+ },
+ "NBA|401910038": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-24T03:30:00+03:00",
+  "sport": "basketball",
+  "div": "NBA",
+  "reason": "no_qualified_real_market",
+  "retry_at": 1795477098.385305
+ },
+ "NBA|401910039": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-24T03:30:00+03:00",
+  "sport": "basketball",
+  "div": "NBA",
+  "reason": "no_qualified_real_market",
+  "retry_at": 1795477098.385305
+ },
+ "NBA|401910040": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-24T03:30:00+03:00",
+  "sport": "basketball",
+  "div": "NBA",
+  "reason": "no_qualified_real_market",
+  "retry_at": 1795477098.385305
  }
 }
