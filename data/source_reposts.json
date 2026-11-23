@@ -1,9 +1,13 @@
 {
   "reposts": {
     "9195": {
-      "status": "sending",
+      "status": "done",
       "at": "2026-11-23T19:48:06.269882+00:00",
-      "action": "restore"
+      "action": "restore",
+      "message_id": 9209,
+      "event_id": "401883110",
+      "original_kickoff": "2026-11-23T22:30:00+03:00",
+      "source_strategy": "external_trial"
     }
   }
 }
