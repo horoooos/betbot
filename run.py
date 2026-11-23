@@ -341,7 +341,7 @@ def review(ev: dict, w: dict, fx_loader, hist_loader, calib: dict, state: dict) 
             t["stake"] = pro.stake(t)
     if not main or main.get("stake", 0) <= 0:
         from betbot import forecast_gate
-        forecast_gate.record(state,ev,forecast_gate.reason(main),main)
+        forecast_gate.record(state,ev,forecast_gate.reason(main,(mkt or {}).get("real")),main,real=(mkt or {}).get("real",{}))
         print("  прогноз пропущен: нет реального коэффициента с перевесом от 3%")
         return None
     if bold and bold.get("stake", 0) <= 0:
@@ -427,7 +427,7 @@ def other_review(e: dict, calib: dict, ctx: dict, state: dict) -> dict | None:
             t["stake"] = pro.stake(t)
     if not m["main"] or m["main"].get("stake", 0) <= 0:
         from betbot import forecast_gate
-        forecast_gate.record(state,e,forecast_gate.reason(m["main"]),m["main"])
+        forecast_gate.record(state,e,forecast_gate.reason(m["main"],a.get("real")),m["main"],real=a.get("real",{}))
         print("  прогноз пропущен: нет реального коэффициента с перевесом от 3%")
         return None
     if m.get("bold") and m["bold"].get("stake", 0) <= 0:
