@@ -1,40 +1,5 @@
 [
 {
-"sport": "football",
-"id": "401896728",
-"league": "Греция · Суперлига",
-"kickoff": "2026-11-23T18:00:00+03:00",
-"home": "Астерас",
-"away": "Aris",
-"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/8354.png",
-"al": "https://a.espncdn.com/i/teamlogos/soccer/500/11553.png",
-"hid": "8354",
-"aid": "11553",
-"bb": "https://betboom.ru/search?query=%D0%90%D1%81%D1%82%D0%B5%D1%80%D0%B0%D1%81&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
-"path": "soccer/gre.1",
-"url": "live.html?s=football&p=soccer%2Fgre.1&e=401896728&h=%D0%90%D1%81%D1%82%D0%B5%D1%80%D0%B0%D1%81&a=Aris",
-"participants": [
-[
-"Астерас",
-"Asteras Tripoli"
-],
-[
-"Aris",
-"Aris"
-]
-],
-"div": "G1",
-"state": "post",
-"bo": null,
-"prediction": "",
-"hs": "0",
-"as": "1",
-"tip": "",
-"top": false,
-"bot": null,
-"lt": null
-},
-{
 "sport": "tennis",
 "id": "186817",
 "league": "Теннис · WTA",
@@ -3454,6 +3419,76 @@
 ]
 ],
 "div": "NBA",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "basketball",
+"id": "401909315",
+"league": "США · NBA",
+"kickoff": "2026-11-25T04:00:00+03:00",
+"home": "Вашингтон Уизардс",
+"away": "Бостон Селтикс",
+"hl": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/wsh.png",
+"al": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/bos.png",
+"hid": "27",
+"aid": "2",
+"bb": "https://betboom.ru/search?query=%D0%92%D0%B0%D1%88%D0%B8%D0%BD%D0%B3%D1%82%D0%BE%D0%BD&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=basketball",
+"path": "basketball/nba",
+"url": "live.html?s=basketball&p=basketball%2Fnba&e=401909315&h=%D0%92%D0%B0%D1%88%D0%B8%D0%BD%D0%B3%D1%82%D0%BE%D0%BD+%D0%A3%D0%B8%D0%B7%D0%B0%D1%80%D0%B4%D1%81&a=%D0%91%D0%BE%D1%81%D1%82%D0%BE%D0%BD+%D0%A1%D0%B5%D0%BB%D1%82%D0%B8%D0%BA%D1%81",
+"participants": [
+[
+"Вашингтон Уизардс",
+"Washington Wizards"
+],
+[
+"Бостон Селтикс",
+"Boston Celtics"
+]
+],
+"div": "NBA",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "hockey",
+"id": "401892780",
+"league": "США · NHL",
+"kickoff": "2026-11-25T04:00:00+03:00",
+"home": "Эдмонтон",
+"away": "Вегас",
+"hl": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/edm.png",
+"al": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/vgk.png",
+"hid": "6",
+"aid": "37",
+"bb": "https://betboom.ru/search?query=%D0%AD%D0%B4%D0%BC%D0%BE%D0%BD%D1%82%D0%BE%D0%BD&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=hockey",
+"path": "hockey/nhl",
+"url": "live.html?s=hockey&p=hockey%2Fnhl&e=401892780&h=%D0%AD%D0%B4%D0%BC%D0%BE%D0%BD%D1%82%D0%BE%D0%BD&a=%D0%92%D0%B5%D0%B3%D0%B0%D1%81",
+"participants": [
+[
+"Эдмонтон",
+"Edmonton Oilers"
+],
+[
+"Вегас",
+"Vegas Golden Knights"
+]
+],
+"div": "NHL",
 "state": "pre",
 "bo": null,
 "prediction": "",
