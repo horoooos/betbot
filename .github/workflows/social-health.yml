@@ -2,6 +2,10 @@ name: Verify owned social channels
 on:
   workflow_dispatch:
     inputs:
+      send_dzen_probe:
+        type: boolean
+        default: false
+        description: Send one clearly marked news-format probe to the owned mirror
       update_news_buttons:
         type: boolean
         default: false
@@ -24,6 +28,7 @@ jobs:
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           APPLY_BUTTONS: ${{ inputs.update_news_buttons }}
+          SEND_DZEN_PROBE: ${{ inputs.send_dzen_probe }}
         run: |
           python -u - <<'PY'
           import os,json
@@ -57,6 +62,26 @@ jobs:
                       telegram._call('editMessageReplyMarkup',chat_id=dzen.TARGET,message_id=last['message_id'],reply_markup=promotion.news_keyboard(last.get('source_id')))
                       report['mirror_news_buttons']=True
                   except Exception as e:report['mirror_news_buttons_error']=type(e).__name__
+          if os.environ.get('SEND_DZEN_PROBE')=='true':
+              import requests,io,re
+              from PIL import Image
+              from betbot import pages,postimg
+              posts=json.loads(Path('data/channel.json').read_text(encoding='utf-8'))['posts']
+              news=pages._news({int(k):v for k,v in posts.items()})
+              n=next(n for n in news if n.get('photo') and n.get('complete',True))
+              body=postimg.plain(n['body']).strip().split('\n\n')[0]
+              caption='Проверка синхронизации · Дзен\n\n'+n['title']+'\n\n'+body
+              if len(caption)>1000:
+                  sentences=re.findall(r'.*?[.!?…](?=\s|$)',body,flags=re.S)
+                  body=next((v.strip() for v in sentences if len(v)+len(n['title'])<900),'Полная новость доступна в основном канале АИ СТАВИТ.')
+                  caption='Проверка синхронизации · Дзен\n\n'+n['title']+'\n\n'+body
+              try:
+                  response=requests.get(n['photo'],timeout=25)
+                  if not response.ok:raise RuntimeError('Source cover unavailable')
+                  im=Image.open(io.BytesIO(response.content)).convert('RGB');data=io.BytesIO();im.save(data,'JPEG',quality=92)
+              except Exception:raise RuntimeError('Probe image unavailable; source URL hidden') from None
+              sent=telegram._call('sendPhoto',chat_id=dzen.TARGET,files={'photo':('news.jpg',data.getvalue(),'image/jpeg')},caption=caption)
+              report['dzen_format_probe']={'message_url':'https://t.me/aistavvit_dzen/'+str(sent['message_id']),'source_id':n['id'],'title':n['title'],'has_photo':bool(sent.get('photo')),'buttons':False,'external_links':False}
           out=Path('work/social-health.json');out.parent.mkdir(exist_ok=True);out.write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding='utf-8');print(json.dumps(report,ensure_ascii=False))
           PY
       - uses: actions/upload-artifact@v4
