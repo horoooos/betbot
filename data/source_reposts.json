@@ -33,7 +33,11 @@
       "message_id": 9213,
       "event_id": "401876686",
       "original_kickoff": "2026-11-23T22:45:00+03:00",
-      "source_strategy": "external_trial"
+      "source_strategy": "external_trial",
+      "analysis_messages": [
+        9214
+      ],
+      "analysis_done": true
     }
   }
 }
