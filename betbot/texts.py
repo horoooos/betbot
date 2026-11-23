@@ -46,6 +46,7 @@ def tip_line(t: dict) -> str:
     if not t:
         return ""
     approx = "≈" if t.get("est") else ""
+    if t.get('strategy')=='external_trial':return f"{escape(t['label'])} · кэф {t['odds']:.2f} · модель: {pct(t['p'])}"
     return f"{escape(t['label'])} — {pct(t['p'])} · кэф {approx}{t['odds']:.2f}"
 
 
@@ -79,6 +80,7 @@ def schedule(matches: list[dict], day: pd.Timestamp, extra: str = "") -> str:
 # ── обзор перед матчем ──────────────────────────────────────────────────────
 
 def caption(m: dict, venue: str | None) -> str:
+    from .source_trial import note as trial_note
     h, a = escape(m["home"]["ru"]), escape(m["away"]["ru"])
     head = "⭐ <b>ПРОГНОЗ ДНЯ</b>" if m.get("top") else "🎯 <b>ПРОГНОЗ</b>"
     lines = [f"{head} · {escape(league_plain(m['div']))} · {ts(m):%H:%M} МСК", f"⚽️ <b>{h} — {a}</b>",
@@ -88,7 +90,7 @@ def caption(m: dict, venue: str | None) -> str:
     p = m.get("probs") or {}
     if p.get("H") is not None:
         lines += ["", fun.chances([("П1", p["H"]), ("Х", p["D"]), ("П2", p["A"])])]
-    lines += ["", f"🎯 <b>Основной прогноз:</b> {tip_line(m['main'])}", fun.confidence(m["main"]["p"]), stake_line(m["main"])]
+    lines += ["", f"🎯 <b>Основной прогноз:</b> {tip_line(m['main'])}", (trial_note(m['main']) if m['main'].get('strategy')=='external_trial' else fun.confidence(m["main"]["p"])), stake_line(m["main"])]
     if m.get("bold"):
         lines.append(f"🔥 <b>Смелый прогноз:</b> {tip_line(m['bold'])}")
     if m.get("value"):
