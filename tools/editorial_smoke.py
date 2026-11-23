@@ -29,9 +29,13 @@ n=next(n for n in items if len(news._clean(n['body']))>600)
 body=news._clean(n['body']);item={'title':n['title'],'desc':body[:600],'body':body}
 # Limit model discovery to the first free configured candidate per provider.
 models=news._models
-with patch.object(news,'_models',side_effect=lambda *a:models(*a)[:1]):
+ask=news._ask
+captured=[]
+def capture(messages):
+    answer=ask(messages);captured.append(answer);return answer
+with patch.object(news,'_models',side_effect=lambda *a:models(*a)[:1]),patch.object(news,'_ask',side_effect=capture):
     result=news._rewrite(item)
-report['editorial']={'source_title':n['title'],'result':result}
+report['editorial']={'source_title':n['title'],'result':result,'input':item,'raw':captured}
 (out/'editorial-live.json').write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding='utf-8')
 assert result,'No validated editorial response from free providers'
 assert '/humanize' not in result['text']
