@@ -46,7 +46,11 @@
       "message_id": 9201,
       "event_id": "401876683",
       "original_kickoff": "2026-11-23T22:45:00+03:00",
-      "source_strategy": "external_trial"
+      "source_strategy": "external_trial",
+      "analysis_messages": [
+        9215
+      ],
+      "analysis_done": true
     }
   }
 }
