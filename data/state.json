@@ -1568,7 +1568,7 @@
  "value_day": "2026-11-23",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-23",
- "site_stamp": "1510|9230|2026-11-24 00|6|088fc2621e2925af",
+ "site_stamp": "1510|9231|2026-11-24 00|6|088fc2621e2925af",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1724,7 +1724,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 9230,
+ "dz_last": 9231,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2725,7 +2725,7 @@
   "external_sources": {
    "providers": {
     "legalbet": {
-     "at": "2026-11-23T20:50:19.019255+00:00",
+     "at": "2026-11-23T21:21:58.887228+00:00",
      "status": "ok",
      "discovered": 3,
      "pages": 3,
@@ -2736,27 +2736,29 @@
      "contexts": 3
     },
     "livesport": {
-     "at": "2026-11-23T20:50:19.019255+00:00",
+     "at": "2026-11-23T21:21:58.887228+00:00",
      "status": "ok",
-     "discovered": 9,
+     "discovered": 8,
      "pages": 6,
-     "opinions": 10,
-     "mapped": 2,
-     "articles_available": 17,
-     "next_offset": 11,
-     "contexts": 5
+     "opinions": 8,
+     "mapped": 1,
+     "articles_available": 15,
+     "next_offset": 9,
+     "contexts": 6
     },
     "metaratings": {
-     "at": "2026-11-23T20:50:19.019255+00:00",
-     "status": "unavailable",
-     "discovered": 0,
-     "pages": 0,
-     "opinions": 0,
-     "mapped": 0,
-     "error": "ReadTimeout"
+     "at": "2026-11-23T21:21:58.887228+00:00",
+     "status": "ok",
+     "discovered": 15,
+     "pages": 6,
+     "opinions": 24,
+     "mapped": 6,
+     "articles_available": 37,
+     "next_offset": 6,
+     "contexts": 6
     },
     "rb": {
-     "at": "2026-11-23T20:50:19.019255+00:00",
+     "at": "2026-11-23T21:21:58.887228+00:00",
      "status": "markup_changed",
      "discovered": 0,
      "pages": 0,
@@ -2765,16 +2767,16 @@
      "articles_available": 0
     },
     "vseprosport": {
-     "at": "2026-11-23T20:50:19.019255+00:00",
+     "at": "2026-11-23T21:21:58.887228+00:00",
      "status": "ok",
-     "discovered": 8,
-     "pages": 3,
+     "discovered": 9,
+     "pages": 2,
      "opinions": 0,
      "mapped": 0,
      "articles_available": 10,
-     "next_offset": 11,
-     "page_errors": 3,
-     "contexts": 3
+     "next_offset": 8,
+     "page_errors": 4,
+     "contexts": 2
     }
    },
    "opinions": 18,
@@ -2898,7 +2900,7 @@
   "quote_matches": 45
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-24T00:19:58.647546+03:00",
+  "last_poll": "2026-11-24T00:21:58.887228+03:00",
   "cursor": "369",
   "posts": [
    {
@@ -3580,7 +3582,7 @@
    "401877046": "post",
    "401850693": "post",
    "401850698": "post",
-   "401934684": "in",
+   "401934684": "post",
    "401934683": "pre",
    "401886136": "post",
    "401886120": "post",
