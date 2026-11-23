@@ -26,6 +26,7 @@ def record(state,event,why,tip=None,real=None):
     if real is not None:item['priced_markets']=len(real)
     if tip:
         item['market']=tip.get('label') or tip.get('key')
+        if tip.get('strategy'):item['strategy']=tip['strategy'];item['source_count']=tip.get('source_count',0)
         try:
             p,o=float(tip['p']),float(tip['odds'])
             if math.isfinite(p) and math.isfinite(o):item.update(probability=p,odds=o,edge=round(p*o-1,5),estimated=bool(tip.get('est')))

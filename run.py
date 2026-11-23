@@ -346,6 +346,10 @@ def review(ev: dict, w: dict, fx_loader, hist_loader, calib: dict, state: dict) 
     for t in (main, bold):
         if t:
             t["stake"] = pro.stake(t)
+    if not main or main.get("stake",0)<=0:
+        from betbot import source_trial
+        replacement=source_trial.select(ev,probs,(mkt or {}).get('real',{}),{k:mk.label(k) for k in mk.MARKETS},state,pd.Timestamp.now(tz=MSK))
+        if replacement:main,bold=replacement,{}
     if not main or main.get("stake", 0) <= 0:
         from betbot import forecast_gate
         forecast_gate.record(state,ev,forecast_gate.reason(main,(mkt or {}).get("real")),main,real=(mkt or {}).get("real",{}))
@@ -363,15 +367,18 @@ def review(ev: dict, w: dict, fx_loader, hist_loader, calib: dict, state: dict) 
             m["extra"] = extras.corners_cards(hist_loader(), ev["div"], row["HomeTeam"], row["AwayTeam"])
         except Exception as e:
             print(f"  ! угловые/карточки не посчитались: {e}")
+    if main.get('strategy')=='external_trial':m['top']=False
     s = summary(ev["slug"], ev["id"])
     kick = pd.Timestamp(ev["kickoff"])
     tip = f"{main['label']} · {texts.pct(main['p'])}"
     png = card.match_card(texts.league_plain(ev["div"]), texts.when(kick), ev["home"], ev["away"],
-                          (probs["H"], probs["D"], probs["A"]), main["label"], f"xG {lam[0]:.1f} : {lam[1]:.1f} · шанс {texts.pct(main['p'])}",
+                          (probs["H"], probs["D"], probs["A"]), main["label"], ("Внешние мнения · временный режим" if main.get("strategy")=="external_trial" else f"xG {lam[0]:.1f} : {lam[1]:.1f} · шанс {texts.pct(main['p'])}"),
                           BRAND, odds=f"{'≈' if main.get('est') else ''}{main['odds']:.2f}")
     m["msg_id"] = telegram.send_photo(png, texts.caption(m, s.get("venue") or ev.get("venue")),
                                       button=live.buttons(ev, "football", ev["home"]["ru"], ev["away"]["ru"]))
     m["btn"] = 2
+    from betbot import source_trial
+    source_trial.published(state,ev,main,m['msg_id'],pd.Timestamp.now(tz=MSK))
     if m.get("top"):   # 🔥 прогноз дня — push подписчикам сайта
         try:
             push.notify_daily(f"🔥 Прогноз дня: {ev['home']['ru']} — {ev['away']['ru']}",
@@ -379,7 +386,9 @@ def review(ev: dict, w: dict, fx_loader, hist_loader, calib: dict, state: dict) 
                               live.buttons(ev, "football", ev["home"]["ru"], ev["away"]["ru"])[0][1])
         except Exception as e:
             print(f"  ! push прогноза дня не удался: {e}")
-    telegram.send(texts.review(m, s), reply_to=m["msg_id"], silent=True)
+    review_text=texts.review(m,s)
+    if main.get('strategy')=='external_trial':review_text=source_trial.explanation(main)+'\n\n'+review_text
+    telegram.send(review_text,reply_to=m['msg_id'],silent=True)
     m["status"] = "reviewed"
     from betbot import forecast_gate
     forecast_gate.record(state,ev,"published",main)
@@ -399,6 +408,7 @@ def add_result(m: dict, score: str, sport: str) -> dict:
            "value_odds": (m.get("value") or {}).get("odds"), "value_hit": m.get("value_hit"),
            "main_stake": m["main"].get("stake", pro.STAKE_MIN), "main_clv": pro.clv(m, m["main"]["key"]),
            "bold_clv": pro.clv(m, bold.get("key"))}
+    row['strategy']=m['main'].get('strategy','model_value')
     res = pd.concat([read_results(), pd.DataFrame([row])], ignore_index=True)
     res["sport"] = res["sport"].fillna("football")
     res = res.drop_duplicates(["sport", "id"], keep="last")
@@ -436,6 +446,10 @@ def other_review(e: dict, calib: dict, ctx: dict, state: dict) -> dict | None:
     for t in (m["main"], m["bold"]):
         if t:
             t["stake"] = pro.stake(t)
+    if not m['main'] or m['main'].get('stake',0)<=0:
+        from betbot import source_trial
+        replacement=source_trial.select(e,a['probs'],a.get('real',{}),a['labels'],state,pd.Timestamp.now(tz=MSK))
+        if replacement:m['main'],m['bold']=replacement,{}
     if not m["main"] or m["main"].get("stake", 0) <= 0:
         from betbot import forecast_gate
         forecast_gate.record(state,e,forecast_gate.reason(m["main"],a.get("real")),m["main"],real=a.get("real",{}))
@@ -446,14 +460,17 @@ def other_review(e: dict, calib: dict, ctx: dict, state: dict) -> dict | None:
 
     m["open"] = pro.snapshot(e, [m["main"].get("key"), (m["bold"] or {}).get("key")])
     m["top"] = pro.is_top(state, e["div"], e["id"])
+    if m['main'].get('strategy')=='external_trial':m['top']=False
     kick = pd.Timestamp(e["kickoff"])
     tip = f"{m['main']['label']} · {texts.pct(m['main']['p'])}"
     png = card.match_card(sports.league_plain(e["div"]), texts.when(kick), e["home"], e["away"], a["bar"], m["main"]["label"],
-                          a["center"], BRAND, sport=e["sport"],
+                          ("Внешние мнения · временный режим" if m["main"].get("strategy")=="external_trial" else a["center"]), BRAND, sport=e["sport"],
                           odds=f"{'≈' if m['main'].get('est') else ''}{m['main']['odds']:.2f}")
     m["msg_id"] = telegram.send_photo(png, sports.caption(m, texts.when(kick)),
                                       button=live.buttons(e, e["sport"], e["home"]["ru"], e["away"]["ru"]))
     m["btn"] = 2
+    from betbot import source_trial
+    source_trial.published(state,e,m['main'],m['msg_id'],pd.Timestamp.now(tz=MSK))
     if m.get("top"):
         try:
             push.notify_daily(f"🔥 Прогноз дня: {e['home']['ru']} — {e['away']['ru']}",
@@ -466,6 +483,7 @@ def other_review(e: dict, calib: dict, ctx: dict, state: dict) -> dict | None:
         text = reviews.team_review(m, summary(slug, e["id"], sport))
     else:
         text = reviews.history_review(m, hist, ratings)
+    if m['main'].get('strategy')=='external_trial':text=source_trial.explanation(m['main'])+'\n\n'+text
     telegram.send(text, reply_to=m["msg_id"], silent=True)
     m["status"] = "reviewed"
     from betbot import forecast_gate
@@ -636,6 +654,8 @@ def main():
         state["stavka"] = {"error": str(exc)[:240]}
         print(f"  ! Внешние сигналы: сбор отложен: {exc}")
 
+    from betbot import source_trial
+    source_trial.settle(state,read_results(),now)
     if state.get("schedule_day") != today and now.hour >= MORNING_HOUR:
         state["schedule_day"] = today  # даже если утренний пост упадёт — не повторяем его каждые 2 минуты
         try:

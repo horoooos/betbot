@@ -649,11 +649,13 @@ def _pct(p: float) -> str:
 
 
 def _tip(t: dict) -> str:
+    if t.get('strategy')=='external_trial':return f"{escape(t['label'])} · кэф {t['odds']:.2f} · модель: {_pct(t['p'])}"
     return f"{escape(t['label'])} — {_pct(t['p'])} · кэф {'≈' if t.get('est') else ''}{t['odds']:.2f}"
 
 
 def caption(m: dict, when: str) -> str:
     """Пост перед игрой (хоккей/баскетбол) — помещается в подпись к картинке."""
+    from .source_trial import note as trial_note
     h, a = escape(m["home"]["ru"]), escape(m["away"]["ru"])
     head = "⭐ <b>ПРОГНОЗ ДНЯ</b>" if m.get("top") else "🎯 <b>ПРОГНОЗ</b>"
     lines = [f"{head} · {escape(league_plain(m['div']))} · {pd.Timestamp(m['kickoff']):%H:%M} МСК",
@@ -666,7 +668,7 @@ def caption(m: dict, when: str) -> str:
     if m.get("bar"):
         b = m["bar"]
         lines += ["", fun.chances([(m["home"]["ru"][:14], b[0]), ("Ничья", b[1]), (m["away"]["ru"][:14], b[2])])]
-    lines += ["", f"🎯 <b>Основной прогноз:</b> {_tip(m['main'])}", fun.confidence(m["main"]["p"]), mk.stake_text(m["main"])]
+    lines += ["", f"🎯 <b>Основной прогноз:</b> {_tip(m['main'])}", (trial_note(m['main']) if m['main'].get('strategy')=='external_trial' else fun.confidence(m["main"]["p"])), mk.stake_text(m["main"])]
     if m.get("bold"):
         lines.append(f"🔥 <b>Смелый прогноз:</b> {_tip(m['bold'])}")
     lines += ["", "👇 <i>Полный разбор — в ответе к посту</i>"]
