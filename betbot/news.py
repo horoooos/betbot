@@ -387,6 +387,12 @@ def run(state: dict, now: pd.Timestamp, brand: str) -> None:
             tag = TAGS[sport].lstrip("#").capitalize()
             # без нейросети: фото источника или открытое фото по теме, а если нет — фирменный фон с иконкой спорта
             png = card.news_card(item["photo"], news["title"], tag, brand, sport, "", credit=credit)
+            from .vk_rss import image_valid
+            if not image_valid(png):
+                seen.remove(item['id'])
+                state['news_next']=(now+pd.Timedelta(minutes=6)).isoformat()
+                print('  ! Новость отложена: готовая картинка повреждена или отсутствует')
+                return
             emo = news["emoji"] or EMOJI[sport]
             body = news["text"]
             if body.startswith(emo):  # тот же эмодзи и в заголовке, и в начале текста — второй убираем

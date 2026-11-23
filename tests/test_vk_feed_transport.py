@@ -1,3 +1,4 @@
+from image_fixture import JPEG
 import tempfile
 import re
 import json
@@ -24,12 +25,12 @@ class VKFeedTransportTests(unittest.TestCase):
             # This item predates the rollout but may still be waiting in VK's
             # import queue. Its actual content must be bounded as well.
             (root/'vk_rss_caption_since.txt').write_text('2026-11-15T12:30:00Z')
-            (images/'6219.jpg').write_bytes(b'jpeg')
+            (images/'6219.jpg').write_bytes(JPEG)
             tail='Заключительная фраза полной статьи сохранена целиком.'
             news=dict(id=6219,title='Унаи Симон получил трофей',sport='football',photo='https://example.test/image.jpg',
                 url='news/6219.html',body='Первый законченный абзац.\n\n'+'Расулов подчеркнул важность игры вратаря. '*70+'\n\n'+tail,
                 desc='Новость',complete=True,t='2026-11-15T12:00:00Z')
-            with patch.object(pages,'DATA',root),patch.object(pages,'DOCS',docs),patch('betbot.vk._short',return_value='vk.cc/test'):
+            with patch('betbot.vk_rss.public_image_ready',return_value=True), patch.object(pages,'DATA',root),patch.object(pages,'DOCS',docs),patch('betbot.vk._short',return_value='vk.cc/test'):
                 for article in (False,True):
                     item=ET.fromstring(pages._vk_rss([news],pd.Timestamp('2026-11-15T13:00:00Z'),article=article)).find('channel/item')
                     body=BeautifulSoup(item.findtext('{http://purl.org/rss/1.0/modules/content/}encoded'),'html.parser')
@@ -66,10 +67,10 @@ class VKFeedTransportTests(unittest.TestCase):
             images=docs/'rss-images';images.mkdir(parents=True)
             news=[]
             for i,hour in [(1,11),(2,13)]:
-                (images/f'{i}.jpg').write_bytes(b'jpeg')
+                (images/f'{i}.jpg').write_bytes(JPEG)
                 news.append(dict(id=i,title='🎾 Андреева сравнили с Шараповой',sport='tennis',photo='https://example.test/photo.jpg',
                     url=f'news/{i}.html',body='Первый абзац.\n\nЗаключительный абзац.',desc='Новость',complete=True,t=f'2026-11-15T{hour}:00:00Z'))
-            with patch.object(pages,'DATA',root),patch.object(pages,'DOCS',docs),patch('betbot.vk._short',return_value='vk.cc/test'):
+            with patch('betbot.vk_rss.public_image_ready',return_value=True), patch.object(pages,'DATA',root),patch.object(pages,'DOCS',docs),patch('betbot.vk._short',return_value='vk.cc/test'):
                 for article in (False,True):
                     wire=pages._vk_rss(news,pd.Timestamp('2026-11-15T14:00:00Z'),article=article)
                     self.assertTrue(wire.isascii())
@@ -95,13 +96,13 @@ class VKFeedTransportTests(unittest.TestCase):
             root=Path(directory);docs=root/'docs';images=docs/'rss-images';images.mkdir(parents=True)
             for name in ('vk_rss_since.txt','vk_rss_format_since.txt','vk_rss_ascii_since.txt','vk_rss_unified_since.txt','vk_rss_footer_since.txt'):
                 (root/name).write_text('2026-11-15T00:00:00Z')
-            (images/'2.jpg').write_bytes(b'jpeg')
+            (images/'2.jpg').write_bytes(JPEG)
             news=dict(id=2,title='Синнер обратился к зрителям',sport='tennis',photo='https://example.test/image.jpg',
                 url='news/2.html',body='🎾 Первое завершённое предложение.\n\n'+'Полный текст новости. '*100,
                 desc='Новость',complete=True,t='2026-11-15T12:00:00Z')
             def shorten(method,**params):
                 return {'short_url':'https://vk.cc/source' if '/vk-articles/' in params['url'] else 'https://vk.cc/article'}
-            with patch.object(pages,'DATA',root),patch.object(pages,'DOCS',docs),patch.dict(os.environ,{'VK_TOKEN':'group'}),patch('betbot.vk._call',side_effect=shorten) as api:
+            with patch('betbot.vk_rss.public_image_ready',return_value=True), patch.object(pages,'DATA',root),patch.object(pages,'DOCS',docs),patch.dict(os.environ,{'VK_TOKEN':'group'}),patch('betbot.vk._call',side_effect=shorten) as api:
                 for article in (False,True):
                     item=ET.fromstring(pages._vk_rss([news],pd.Timestamp('2026-11-15T13:00:00Z'),article=article)).find('channel/item')
                     self.assertEqual(item.findtext('link'),'https://vk.cc/source')

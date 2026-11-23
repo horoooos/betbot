@@ -1,3 +1,4 @@
+from image_fixture import JPEG
 import json
 import html
 import tempfile
@@ -21,8 +22,8 @@ class EditorialDeliveryTests(unittest.TestCase):
             (root / 'vk_rss_since.txt').write_text('2026-11-14T09:00:00Z')
             image = root / 'docs/rss-images/100.jpg'
             image.parent.mkdir(parents=True)
-            image.write_bytes(b'jpeg')
-            with patch.object(pages, 'DATA', root), patch.object(pages, 'DOCS', root / 'docs'):
+            image.write_bytes(JPEG)
+            with patch('betbot.vk_rss.public_image_ready',return_value=True), patch.object(pages, 'DATA', root), patch.object(pages, 'DOCS', root / 'docs'):
                 partial = pages._news({100: main})
                 self.assertFalse(partial[0]['complete'])
                 self.assertFalse(ET.fromstring(pages._vk_rss(partial, pd.Timestamp('2026-11-14T11:00:00Z'))).findall('channel/item'))

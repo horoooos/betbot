@@ -721,6 +721,7 @@ def _rss(news: list[dict], ms: list[dict], store: dict[int, dict], now: pd.Times
     x = lambda s: H.escape(str(s or ""), quote=False)
     items = []
     for n in news[:40]:
+        if feed_name.startswith('rss-vk') and not n.get('photo'):continue
         # ASCII-safe source metadata; new native-source links may use vk.cc.
         is_vk = feed_name.startswith('rss-vk')
         item_link = SITE+n['vk_article_url'] if is_vk and n.get('vk_article_url') else (SITE+n['url'] if feed_name=='rss-vk-article.xml' else n.get('rss_link') or SITE+n['url'])
@@ -859,14 +860,17 @@ def _vk_rss(news: list[dict], now: pd.Timestamp, *, article=False) -> str:
                 print(f"  ! VK RSS: новость {n['id']} ожидает короткую ссылку")
                 continue
         image = DOCS / "rss-images" / f"{int(n['id'])}.jpg"
+        from .vk_rss import image_valid,public_image_ready
+        if image.exists() and not image_valid(image.read_bytes()):
+            image.unlink()
         if not image.exists():
             from .postimg import as_jpeg
             try:
                 response = requests.get(n["photo"], headers=UA, timeout=15)
                 response.raise_for_status()
                 data = as_jpeg(response.content)
-                if not data:
-                    raise ValueError("not an image")
+                if not image_valid(data):
+                    raise ValueError("not a valid full-size image")
                 image.parent.mkdir(parents=True, exist_ok=True)
                 temporary = image.with_suffix(".tmp")
                 temporary.write_bytes(data)
@@ -879,7 +883,8 @@ def _vk_rss(news: list[dict], now: pd.Timestamp, *, article=False) -> str:
         try:
             with Image.open(image) as picture:n['photo_width'],n['photo_height']=picture.size
         except OSError:
-            n['photo_width'],n['photo_height']=800,450
+            print(f"  VK RSS: повреждена обложка {n['id']} — новость отложена")
+            continue
         # Also fix queued older entries; keep their GUIDs/links unchanged so
         # already imported posts are not deliberately published a second time.
         if caption_since is not None and now>=caption_since:
@@ -912,6 +917,9 @@ def _vk_rss(news: list[dict], now: pd.Timestamp, *, article=False) -> str:
             if unified_since is not None and unified:
                 # Every URI VK may use now points to the same ASCII-safe source.
                 n['vk_guid']=SITE+path
+        if not public_image_ready(n['photo'],cache=True):
+            print(f"  VK RSS: обложка {n['id']} не подтверждена на сайте — новость отложена")
+            continue
         illustrated.append(n)
     if links != old_links:
         links_file.write_text(json.dumps(links, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
