@@ -7,9 +7,6 @@
  "schedule_day": "2026-11-23",
  "content_slot": "2026-11-23-13",
  "news_seen": [
-  "https://www.sport-express.ru/football/rfpl/news/espn-brasil-luis-enrike-mozhet-pereyti-iz-zenita-v-al-ittihad-za-35-40-millionov-evro-2476693/",
-  "https://www.sport-express.ru/basketball/news/brest-vstretitsya-s-gomelskimi-rysyami-v-chempionate-belarusi-po-basketbolu-2476353/",
-  "https://www.sport-express.ru/football/england/news/pochettino-o-zadachah-v-manchester-yunayted-glavnoe-sozdat-kulturu-i-dat-igrokam-raskrytsya-2476690/",
   "https://www.sport-express.ru/football/spain/news/bellingem-priznan-luchshim-igrokom-reala-v-oktyabre-2476687/",
   "https://www.sport-express.ru/football/rfpl/news/gerkus-pozhelal-udachi-ovchinnkovu-v-lokomotive-2476664/",
   "zeus-pokazal-pick-em-na-pervyi-yetap-pgl-major-singapore-2026",
@@ -506,9 +503,12 @@
   "https://www.sport-express.ru/basketball/nba/news/zaschitnik-dzhosh-giddi-pervym-za-60-let-v-chikago-nabral-20-ochkov-s-20-peredachami-i-10-podborami-22-noyabrya-2026-2477958/",
   "https://www.sport-express.ru/tennis/wta/news/tarpischev-andreeva-tochno-zasluzhila-byt-priznannoy-luchshey-tennisistkoy-goda-2477930/",
   "electronic-o-100-thieves-na-meidzhore-do-plei-off-oni-kak-budto-by-dokhodyat",
-  "team-liquid-ili-do-konca-kto-pokinet-blast-slam-ix"
+  "team-liquid-ili-do-konca-kto-pokinet-blast-slam-ix",
+  "https://www.sport-express.ru/football/spain/news/endrik-poluchil-travmu-pered-matchem-reala-s-psv-v-lige-chempionov-2477995/",
+  "https://www.sport-express.ru/football/england/news/the-touchline-manchester-siti-sohranit-maresku-do-konca-sezona-nezavisimo-ot-rezultatov-2477992/",
+  "https://www.sport-express.ru/football/rfpl/news/v-lokomotive-obyasnili-pochemu-klub-rassmatrivaet-tolko-rossiyskih-trenerov-2477990/"
  ],
- "news_i": 0,
+ "news_i": 1,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1688,7 +1688,7 @@
  "streak_day": {
   "2026-11-22": 2
  },
- "news_next": "2026-11-23T14:55:51.439952+03:00",
+ "news_next": "2026-11-23T15:29:52.048754+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1988,7 +1988,8 @@
   "https://images.cybersport.ru/images/as-is/plain/cd/cd56e194-33d4-45ba-b83f-da7236a695dd.jpg",
   "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/101_Hudson_St_fr_Montgomery_jeh.jpg/1280px-101_Hudson_St_fr_Montgomery_jeh.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
   "https://upload.wikimedia.org/wikipedia/commons/9/99/FC_Dynamo_Kyiv_Fans_-_%D0%A4%D0%B0%D0%BD%D0%B0%D1%82%D1%8B_%D0%A4%D0%9A_%D0%94%D0%B8%D0%BD%D0%B0%D0%BC%D0%BE_%D0%9A%D0%B8%D0%B5%D0%B2_%2822362899431%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-  "https://images.cybersport.ru/images/as-is/plain/c3/c3cfbdeb-f47e-42bf-bdbb-0d04119d3187.jpg"
+  "https://images.cybersport.ru/images/as-is/plain/c3/c3cfbdeb-f47e-42bf-bdbb-0d04119d3187.jpg",
+  "https://upload.wikimedia.org/wikipedia/commons/3/33/StateLibQld_1_42911_Football_match_played_between_Cooroy_and_Nambour_in_Cooroy%2C_1912.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
  ],
  "indexnow_day": "2026-11-23",
  "vk_wall_err": null,
@@ -2343,7 +2344,8 @@
   "9160",
   "9163",
   "9165",
-  "9167"
+  "9167",
+  "9168"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -2630,11 +2632,12 @@
   "2026-11-23:новость:469bd412a01d227658e80310",
   "2026-11-23:новость:c218d1702e5cffc15b1c185b",
   "2026-11-23:новость:9bbe5cfa65e2b8a6cfde0afb",
-  "2026-11-23:новость:25c179adc6056dd274ea5e7f"
+  "2026-11-23:новость:25c179adc6056dd274ea5e7f",
+  "2026-11-23:новость:7828a1823a12e4fce219b913"
  ],
  "dz_last_delivery": {
-  "source_id": 9167,
-  "message_id": 833,
+  "source_id": 9168,
+  "message_id": 834,
   "kind": "новость"
  },
  "learn_attempt_day": "2026-11-23",
@@ -2730,7 +2733,7 @@
   "quote_matches": 31
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-23T14:54:52.185746+03:00",
+  "last_poll": "2026-11-23T14:56:52.048754+03:00",
   "cursor": "350",
   "posts": [
    {
