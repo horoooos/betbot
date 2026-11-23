@@ -1698,7 +1698,7 @@
  "streak_day": {
   "2026-11-22": 2
  },
- "news_next": "2026-11-24T01:05:59.461322+03:00",
+ "news_next": "2026-11-24T01:11:59.849210+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -2896,12 +2896,12 @@
   },
   "error": null,
   "tips": 13652,
-  "snapshots": 270,
+  "snapshots": 271,
   "unmapped_markets": 20488,
   "quote_matches": 47
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-24T01:03:59.706446+03:00",
+  "last_poll": "2026-11-24T01:05:59.849210+03:00",
   "cursor": "369",
   "posts": [
    {
@@ -4987,7 +4987,7 @@
     "profit_pct": 0.4
    },
    "football|E0|401879237": {
-    "status": "open",
+    "status": "settled",
     "id": "401879237",
     "sport": "football",
     "div": "E0",
@@ -5341,7 +5341,10 @@
        "price_kind": "author_recorded"
       }
      ]
-    }
+    },
+    "settled_at": "2026-11-23T22:05:59.849210+00:00",
+    "hit": true,
+    "profit_pct": 0.56
    },
    "football|SP1|401882802": {
     "status": "settled",
