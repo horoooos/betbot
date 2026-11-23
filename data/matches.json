@@ -41972,5 +41972,13 @@
   "div": "PAR",
   "reason": "no_qualified_real_market",
   "retry_at": 1795475279.556344
+ },
+ "401841320": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-24T03:00:00+03:00",
+  "sport": "football",
+  "div": "BRA",
+  "reason": "edge_below_minimum",
+  "retry_at": 1795475399.573163
  }
 }
