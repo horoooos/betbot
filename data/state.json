@@ -7,8 +7,6 @@
  "schedule_day": "2026-11-23",
  "content_slot": "2026-11-23-20",
  "news_seen": [
-  "https://www.sport-express.ru/hockey/khl/news/zaschitnik-lokomotiva-sergeev-stal-samym-proveryaemym-na-doping-hokkeistom-v-2026-godu-2476886/",
-  "https://www.sport-express.ru/hockey/nhl/news/ovechkin-o-porazheniyah-vashingtona-nuzhno-ne-opuskat-ruki-i-prodolzhat-borotsya-2476883/",
   "https://www.sport-express.ru/football/rus_d1/news/pavel-kamancev-zayavil-chto-match-torpedo-s-kamazom-ne-vliyal-na-polozhenie-komandy-v-tablice-pervoy-ligi-2476892/",
   "https://www.sport-express.ru/football/rfpl/news/tyukavin-dopustil-perehod-v-turciyu-pochemu-by-i-net-2476859/",
   "https://www.sport-express.ru/stavki-na-sport/prognozy/news/daniil-medvedev-frensis-tiafo-prognoz-na-match-itogovogo-turnira-20-noyabrya-2026-goda-2476785/",
@@ -506,9 +504,11 @@
   "https://www.sport-express.ru/hockey/khl/news/usov-vyigral-golosovanie-sredi-geroev-overtaymov-i-stal-pervym-uchastnikom-fonbet-matcha-zvezd-khl-v-minske-2478099/",
   "https://www.sport-express.ru/football/spain/news/la-liga-soobschila-o-krazhe-personalnyh-dannyh-bolelschikov-v-rezultate-kiberataki-2478102/",
   "https://www.sport-express.ru/football/foreign/news/v-chili-sudya-vytrebovala-16-millionov-peso-za-uvolnenie-2478100/",
-  "https://www.sport-express.ru/football/rfpl/news/granat-esli-rostov-prodolzhit-v-tom-zhe-duhe-ne-udivlyus-ih-popadaniyu-v-pyaterku-2478092/"
+  "https://www.sport-express.ru/football/rfpl/news/granat-esli-rostov-prodolzhit-v-tom-zhe-duhe-ne-udivlyus-ih-popadaniyu-v-pyaterku-2478092/",
+  "https://www.sport-express.ru/basketball/nba/news/pervyy-mesyac-sezona-nba-stal-samym-prosmatrivaemym-v-istorii-2478113/",
+  "u-vserossiiskoi-kibersportivnoi-studencheskoi-ligi-poyavilsya-partner-kotoryi"
  ],
- "news_i": 4,
+ "news_i": 0,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1695,7 +1695,7 @@
  "streak_day": {
   "2026-11-22": 2
  },
- "news_next": "2026-11-23T21:04:22.169582+03:00",
+ "news_next": "2026-11-23T21:38:22.841731+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -2007,7 +2007,8 @@
   "https://ss.sport-express.ru/userfiles/materials/224/2246115/1180x665.jpg",
   "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a9/CSKA_vs_Rostov%2C_2025_Russian_Cup_Super_Final_June_1%2C_2025.jpg/1280px-CSKA_vs_Rostov%2C_2025_Russian_Cup_Super_Final_June_1%2C_2025.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
   "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/2016_NHL_All-Star_Game_%2824151146473%29.jpg/1280px-2016_NHL_All-Star_Game_%2824151146473%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-  "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Kashima_soccer_Stadium_station_Inside_the_station.jpg/1280px-Kashima_soccer_Stadium_station_Inside_the_station.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Kashima_soccer_Stadium_station_Inside_the_station.jpg/1280px-Kashima_soccer_Stadium_station_Inside_the_station.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "https://images.cybersport.ru/images/as-is/plain/5d/5de6aa81-e3ee-4f97-8c65-19385f1ddb95.jpg"
  ],
  "indexnow_day": "2026-11-23",
  "vk_wall_err": null,
@@ -2375,7 +2376,8 @@
   "9184",
   "9186",
   "9187",
-  "9189"
+  "9189",
+  "9191"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -2675,11 +2677,12 @@
   "2026-11-23:новость:6e35fb8d248fe9fdb17ca7cc",
   "2026-11-23:новость:2e88c5134aee1cf6d52a5b86",
   "2026-11-23:новость:1f993528b4d095a71ed72f34",
-  "2026-11-23:новость:c18e8f8809056d5bde560898"
+  "2026-11-23:новость:c18e8f8809056d5bde560898",
+  "2026-11-23:новость:846e7512a771db1ccbcb08e2"
  ],
  "dz_last_delivery": {
-  "source_id": 9189,
-  "message_id": 847,
+  "source_id": 9191,
+  "message_id": 848,
   "kind": "новость"
  },
  "learn_attempt_day": "2026-11-23",
@@ -2775,28 +2778,9 @@
   "quote_matches": 33
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-23T21:03:22.518797+03:00",
-  "cursor": "363",
+  "last_poll": "2026-11-23T21:05:22.841731+03:00",
+  "cursor": "364",
   "posts": [
-   {
-    "post_id": 783,
-    "published_at": 1795380269,
-    "url": "https://vk.com/wall-228963529_783",
-    "title": "«Локомотив» готов к усилению: Акавов о новых игроках",
-    "text": "вљЎпёЏ«Локомотив» готов к новому рывку после победы над «Родиной»!\n\nвљЅпёЏ Спортивный директор «Локомотива» Нариман Акавов подтвердил, что клуб будет искать новых футболистов после 1:0 над «Родиной» в 15-м туре РПЛ.\n\nрџ’¬ Будут рассматриваться и российские игроки, и иностранцы, но мы придерживаемся позиции с акцентом на российских футболистов», — отметил Акавов, подчеркнув приоритет отечественного рынка.\n\nрџЋЇ Акавов также охарактеризовал Овчинникова как «харизматичного человека с тренерским опытом», намекая, что бывший игрок может стать важной фигурой в будущих планах.\n\nПодписывайтесь на «АИ СТАВИТ» — спортивные новости каждый день.\n\n#футбол #РПЛ #Акавов #Локомотив #новостиспорта #спорт #главное #аиставит\n\nрџ“Љ Подробнее на сайте рџ‘‡",
-    "checks": {
-     "encoding_clean": false,
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": true,
-     "details_present": true,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-22T23:45:10.120853+03:00"
-   },
    {
     "post_id": 784,
     "published_at": 1795380269,
@@ -3347,6 +3331,25 @@
     },
     "status": "needs_review",
     "observed_at": "2026-11-23T21:03:22.518797+03:00"
+   },
+   {
+    "post_id": 813,
+    "published_at": 1795457041,
+    "url": "https://vk.com/wall-228963529_813",
+    "title": "Гранат похвалил Кириченко за шесть матчей без поражений «Ростова»",
+    "text": "рџ“° «Ростов» под руководством Дмитрия Кириченко уже шесть матчей РПЛ подряд без единого поражения!\n\nвљЅпёЏ Когда 26 сентября клуб передал бразды правления Кириченко, «Ростов» стоял 12-м местом с восемью очками после девяти туров.\n\nрџ“Љ С тех пор команда одержала четыре победы и две ничьи, в числе которых драматичная ничья с «Зенитом» и убедительная 3:0 победа над «Крыльями» в завершающем матче первого круга.\n\nрџ’¬ По итогам первого круга «Ростов» занял шестое место, собрав 22 очка в 15 матчах, от пятерки отставая всего на четыре очка.\n\nрџ—“ «Руководители клуба доверили пост тренера своему специалисту, и он показывает результат», – отметил бывший сборный защитник Владимир Гранат. Он уверен, что если такие результаты сохранятся, попадание в пятерку не удивит.\n\nрџЏџ В 16-м туре 29 ноября «Ростов» примет «Краснодар» в 15:15 по московскому времени, матч, который может стать решающим в борьбе за топ-5.\n\nвљЎпёЏ РФС уже выпустил рекомендации по строительству стадионов до 10 тысяч зрителей, а по набранным очкам, поражениям и пропущенным голам «Ростов» стал лучшим в РПЛ с момента назначения Кириченко.\n\nПодписывайтесь на «АИ СТАВИТ» — спортивные новости каждый день.\n\n#футбол #РПЛ #Кириченко #Ростова #новостиспорта #спорт #главное #аиставит\n\nрџ“Љ Подробнее на сайте рџ‘‡",
+    "checks": {
+     "encoding_clean": false,
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": true,
+     "details_present": true,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-23T21:05:22.841731+03:00"
    }
   ],
   "status": "observing"
