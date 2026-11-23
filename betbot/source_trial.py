@@ -127,3 +127,19 @@ def public_text(text):
     text=text.replace('🧪 Учёт в виртуальном банке:','💰 Виртуальный банк:').replace(' · эксперимент','')
     text=re.sub(r'<a[^>]+>Источник \d+</a>(?:\s*·\s*)?','',text)
     return re.sub(r'\n{3,}','\n\n',without_links(text)).strip()
+
+
+def recovery_analysis(m):
+    """Rebuild the original analysis from frozen forecast data, not live match facts."""
+    from . import sports,texts,reviews
+    tip=m['main'];facts=((m.get('research') or {}).get('dossier') or {}).get('facts',{})
+    summary={'table':{},'last5':{},'h2h':[],'h2h_summary':'','lineups':{},'goals':[],'reds':[],
+             'stats':{},'venue':None,'city':None,'injuries':{},'leaders':{}}
+    summary.update(facts)
+    try:
+        if m.get('sport','football')=='football':body=texts.review(m,summary)
+        elif m['sport'] in ('hockey','basketball'):body=reviews.team_review(m,summary)
+        else:body=reviews.history_review(m,[],{})
+    except (KeyError,ValueError,TypeError):
+        body=f"Исход: {tip['label']}. Оценка модели: {tip['p']*100:.0f}%. Коэффициент исходного прогноза: {tip['odds']:.2f}."
+    return public_text(explanation(tip)+'\n\n'+body)

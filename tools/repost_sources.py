@@ -5,7 +5,7 @@ sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
 import pandas as pd
 import requests
 from bs4 import BeautifulSoup
-from betbot import card,texts,sports,source_trial as tr,telegram,vk_rss
+from betbot import card,sports,texts,source_trial as tr,telegram,vk_rss
 ROOT=Path(__file__).resolve().parents[1]
 API='https://api.github.com/repos/horoooos/betbot/'
 client=requests.Session();client.headers.update({'Authorization':'Bearer '+os.environ['GH_TOKEN'],'Accept':'application/vnd.github+json'})
@@ -66,15 +66,18 @@ for m in records.values():
     else:mid=telegram.send_photo(png,caption,button=None)
     data['reposts'][key].update(status='done',message_id=mid,event_id=str(m['id']),original_kickoff=m['kickoff'],source_strategy=tip['strategy']);sha=save(data,sha)
     replies=[p for p in posts.values() if str(p.get('reply'))==str(old) and 0<=(pd.Timestamp(p['t'])-pd.Timestamp(m['kickoff'])+pd.Timedelta(hours=2)).total_seconds()<4*3600 and '#итог' not in p.get('html','') and '#live' not in p.get('html','')]
-    if present and replies:
+    edited=0
+    if replies:
         for p in replies:
             if exists(int(p['id'])):
-                try:telegram._call('editMessageText',message_id=int(p['id']),text=clean(p['html']),parse_mode='HTML',disable_web_page_preview=True,reply_markup=json.dumps({'inline_keyboard':[]}))
+                try:
+                    telegram._call('editMessageText',message_id=int(p['id']),text=clean(p['html']),parse_mode='HTML',disable_web_page_preview=True,reply_markup=json.dumps({'inline_keyboard':[]}));edited+=1
                 except RuntimeError as exc:
                     if 'not modified' not in str(exc):raise
-    else:
-        body=tr.explanation(tip)+'\n\n'+f"Оценка модели выбранного исхода: {tip['p']*100:.0f}%. Исход и коэффициент сохранены из исходной публикации."
-        telegram.send(body,reply_to=mid,silent=True)
+    if not present or not edited:
+        body=tr.recovery_analysis(m)
+        data['reposts'][key]['analysis_messages']=telegram.send(body,reply_to=mid,silent=True)
+    data['reposts'][key]['analysis_done']=True;sha=save(data,sha)
     report.append({'original':old,'message_id':mid,'action':'edit' if present else 'restore','url':f'https://t.me/aistavvit/{mid}'})
 Path('work').mkdir(exist_ok=True);Path('work/repost-report.json').write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding='utf-8')
 print(json.dumps(report,ensure_ascii=False))
