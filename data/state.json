@@ -7,9 +7,6 @@
  "schedule_day": "2026-11-23",
  "content_slot": "2026-11-23-13",
  "news_seen": [
-  "https://www.sport-express.ru/hockey/nhl/news/vratar-dzheykob-fauler-povtoril-dostizheniya-kena-draydena-i-zhaka-planta-po-skorosti-desyati-pobed-za-sezon-v-monreale-2476670/",
-  "https://www.sport-express.ru/hockey/nhl/news/leyn-hatson-povtoril-dostizhenie-brayana-licha-po-matcham-s-tremya-peredachami-sredi-zaschitnikov-nhl-do-23-let-2476669/",
-  "https://www.sport-express.ru/football/england/news/vladelcy-lestera-otkazalis-ot-prodazhi-kluba-2476694/",
   "https://www.sport-express.ru/football/rfpl/news/smorodskaya-schitaet-chto-galaktionov-budet-vostrebovan-v-rpl-2476692/",
   "https://www.sport-express.ru/tennis/atp/news/medvedev-zayavil-chto-hochet-vernutsya-na-pervuyu-strochku-reytinga-atr-2476695/",
   "https://www.sport-express.ru/cybersport/esports/news/rossiyskie-kibersportsmeny-voshli-v-top-9-thaiger-uppercut-2026-po-tekken-8-rezultaty-turnira-v-tailande-2476682/",
@@ -506,9 +503,12 @@
   "https://www.sport-express.ru/tennis/atp/news/alkaras-stal-samym-molodym-tennisistom-vyigravshim-vse-turniry-bolshogo-shlema-i-itogovyy-turnir-atp-2477914/",
   "svg-mnogiye-razrabotchiki-uvolnyalis-iz-komandy-dota-2-iz-za-reaktsii",
   "https://www.sport-express.ru/football/rfpl/news/silkin-o-dinamo-komanda-pribavila-v-organizacii-igry-no-nuzhna-stabilnost-2477928/",
-  "dupreeh-postavil-na-vykhod-parivision-na-vtoroi-yetap-pgl-major-singapore-2026"
+  "dupreeh-postavil-na-vykhod-parivision-na-vtoroi-yetap-pgl-major-singapore-2026",
+  "https://www.sport-express.ru/hockey/nhl/news/kancerov-posle-pervogo-het-trika-v-nhl-nadeyus-moya-mama-tozhe-mnoy-gorditsya-2477941/",
+  "https://www.sport-express.ru/hockey/khl/news/luchshie-igroki-11-y-nedeli-khl-2026-27-krasotkin-culygin-livo-i-pustovoy-2477940/",
+  "https://www.sport-express.ru/hockey/nhl/news/montgomeri-o-gole-buchnevicha-edmontonu-v-tot-moment-ya-ponyal-chto-my-sravnyaem-schet-2477935/"
  ],
- "news_i": 2,
+ "news_i": 3,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1688,7 +1688,7 @@
  "streak_day": {
   "2026-11-22": 2
  },
- "news_next": "2026-11-23T13:21:50.135566+03:00",
+ "news_next": "2026-11-23T13:51:51.545652+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1985,7 +1985,8 @@
   "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/Carlos_Alcaraz_Gonz%C3%A1lez.jpg/1280px-Carlos_Alcaraz_Gonz%C3%A1lez.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
   "https://images.cybersport.ru/images/as-is/plain/03/03f8240a-5dee-43a7-a8ef-57f8d5349594.jpg",
   "https://upload.wikimedia.org/wikipedia/commons/8/86/Silkin.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-  "https://images.cybersport.ru/images/as-is/plain/cd/cd56e194-33d4-45ba-b83f-da7236a695dd.jpg"
+  "https://images.cybersport.ru/images/as-is/plain/cd/cd56e194-33d4-45ba-b83f-da7236a695dd.jpg",
+  "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/101_Hudson_St_fr_Montgomery_jeh.jpg/1280px-101_Hudson_St_fr_Montgomery_jeh.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
  ],
  "indexnow_day": "2026-11-23",
  "vk_wall_err": null,
@@ -2337,7 +2338,8 @@
   "9155",
   "9156",
   "9159",
-  "9160"
+  "9160",
+  "9163"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -2621,11 +2623,12 @@
   "2026-11-23:новость:8e25da822cc9bc0e7f5f7b2b",
   "2026-11-23:новость:d13fd7cd450cd3ef4cd98582",
   "2026-11-23:новость:5de74784b3381ac2c7524532",
-  "2026-11-23:новость:469bd412a01d227658e80310"
+  "2026-11-23:новость:469bd412a01d227658e80310",
+  "2026-11-23:новость:c218d1702e5cffc15b1c185b"
  ],
  "dz_last_delivery": {
-  "source_id": 9160,
-  "message_id": 830,
+  "source_id": 9163,
+  "message_id": 831,
   "kind": "новость"
  },
  "learn_attempt_day": "2026-11-23",
@@ -2721,7 +2724,7 @@
   "quote_matches": 31
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-23T13:20:51.323743+03:00",
+  "last_poll": "2026-11-23T13:22:51.545652+03:00",
   "cursor": "346",
   "posts": [
    {
