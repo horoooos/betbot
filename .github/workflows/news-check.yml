@@ -1,7 +1,7 @@
 name: Verify news layout and forecast retries
 on:
   push:
-    branches: [codex/news-and-review-retry]
+    branches: [codex/news-and-review-retry, codex/softer-filter-stavka-editorial]
   workflow_dispatch:
     inputs:
       published:
@@ -12,7 +12,7 @@ permissions:
 jobs:
   check:
     runs-on: ubuntu-24.04
-    timeout-minutes: 10
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -32,6 +32,12 @@ jobs:
           (out/'news/index.html').write_text(pages._news_index(news),encoding='utf-8')
           for f in ['site.css','fb.js']:shutil.copy2(Path('docs')/f,out/f)
           PY
+      - name: Read-only live quotes and editorial preview
+        if: github.ref_name == 'codex/softer-filter-stavka-editorial'
+        run: python tools/editorial_smoke.py
+        env:
+          GROQ_KEY: ${{ secrets.GROQ_KEY }}
+          OPENROUTER_KEY: ${{ secrets.OPENROUTER_KEY }}
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
@@ -42,6 +48,10 @@ jobs:
           node tools/browser-qa/news.mjs
         env:
           NEWS_SITE: ${{ inputs.published && 'https://horoooos.github.io/betbot' || '' }}
+      - name: Capture editorial preview
+        if: github.ref_name == 'codex/softer-filter-stavka-editorial'
+        working-directory: tools/browser-qa
+        run: node -e "const {chromium}=require('playwright');(async()=>{const b=await chromium.launch({channel:'chrome'});const p=await b.newPage({viewport:{width:900,height:1100}});await p.goto('file://'+process.env.GITHUB_WORKSPACE+'/work/news-proof/editorial.html');await p.screenshot({path:process.env.GITHUB_WORKSPACE+'/work/news-proof/editorial-preview.png',fullPage:true});await b.close()})()"
       - uses: actions/upload-artifact@v4
         if: always()
         with:

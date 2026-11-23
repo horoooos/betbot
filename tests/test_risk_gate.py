@@ -8,7 +8,8 @@ class StakeGateTests(unittest.TestCase):
     def test_market_margin_and_estimated_prices_are_not_stakes(self):
         self.assertEqual(pro.stake({'p':.5,'odds':1.90,'est':False}),0)
         self.assertEqual(pro.stake({'p':.7,'odds':2.0,'est':True}),0)
-        self.assertEqual(pro.stake({'p':.5,'odds':2.02,'est':False}),0)
+        self.assertEqual(pro.stake({'p':.5,'odds':2.01,'est':False}),0)
+        self.assertGreater(pro.stake({'p':.5,'odds':2.04,'est':False}),0)
         self.assertEqual(pro.stake({'p':float('nan'),'odds':2.0}),0)
     def test_invalid_quote_fails_closed(self):
         self.assertEqual(pro.stake({'p':None,'odds':'bad'}),0)

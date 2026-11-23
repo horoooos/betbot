@@ -38,9 +38,13 @@ def modeled_key(key,event):
 
 
 def parse_quotes(html,source,event,now):
-    """Two displayed match-winner prices from one explicitly named bookmaker."""
+    """A complete winner market from one explicitly named bookmaker."""
     from .stavka import utc
-    if event.get('sport')!='tennis' or event.get('state')!='pre' or utc(event['kickoff'])<=utc(now)+pd.Timedelta(minutes=5):return None
+    if event.get('sport','football') not in ('football','tennis','esports','hockey','basketball') or event.get('state')!='pre' or utc(event['kickoff'])<=utc(now)+pd.Timedelta(minutes=5):return None
+    source_day=re.search(r'/matches/[^/]+/(\d{2}-\d{2}-\d{4})-',source)
+    if source_day:
+        day=pd.to_datetime(source_day[1],format='%d-%m-%Y').date()
+        if day not in {utc(event['kickoff']).date(),utc(event['kickoff']).tz_convert('Europe/Moscow').date()}:return None
     soup=BeautifulSoup(html,'html.parser')
     headers=soup.select('.MatchHeaderRates')
     if len(headers)!=1:return None
@@ -48,18 +52,28 @@ def parse_quotes(html,source,event,now):
     for button in headers[0].select('button'):
         label=button.select_one('.outcome');rate=button.select_one('.rate');logo=button.select_one('img[alt]')
         if not label or not rate or not logo:continue
-        key={'П1':'H','П2':'A'}.get(label.get_text(strip=True))
+        key={'П1':'H','П2':'A','X':'D','Х':'D','Н':'D'}.get(label.get_text(strip=True))
         if not key:continue
         try:price=float(rate.get_text(strip=True).replace(',','.'))
         except ValueError:continue
         book=logo['alt'].strip().lower()
         if not book or not math.isfinite(price) or not 1.01<price<=100 or key in prices:return None
         prices[key]=price;books.add(book)
-    if set(prices)!={'H','A'} or len(books)!=1:return None
+    expected={'H','D','A'} if event.get('sport','football')=='football' else {'H','A'}
+    # Main three-way hockey/basketball headers describe regulation time, not our ML markets.
+    # BO2 also has a draw and must not be treated as a two-way series winner.
+    if event.get('sport')=='esports' and event.get('bo')==2:return None
+    if set(prices)!=expected or len(books)!=1:return None
     # A malformed/swapped pair must not seed the model. Do not combine books.
     if not .9<=sum(1/p for p in prices.values())<=1.3:return None
     return dict(odds=prices,bookmaker=books.pop(),source=source,price_kind='public_displayed',
                 event_id=str(event['id']),div=event['div'],kickoff=utc(event['kickoff']).isoformat(),observed_at=utc(now).isoformat())
+
+
+def complete_odds(event):
+    odds=event.get('odds') or {}
+    keys=('H','D','A') if event.get('sport','football')=='football' else ('H','A')
+    return all(isinstance(odds.get(k),(int,float)) and math.isfinite(odds[k]) and odds[k]>1 for k in keys)
 
 
 def supplement(event,now,store=None):
@@ -68,7 +82,7 @@ def supplement(event,now,store=None):
     from .stavka import utc
     store=store if store is not None else stavka._runtime
     old=event.get('odds') or {}
-    if old.get('H') or old.get('A') or not store or event.get('sport')!='tennis' or event.get('state')!='pre':return event
+    if complete_odds(event) or not store or event.get('state')!='pre':return event
     quote=store.get('quotes',{}).get(f"{event['div']}|{event['id']}")
     if not quote or quote.get('price_kind')!='public_displayed':return event
     age=utc(now)-utc(quote['observed_at'])
@@ -77,3 +91,42 @@ def supplement(event,now,store=None):
     odds={**old,**quote['odds'],'src':quote['bookmaker'],
           'source_url':quote['source'],'observed_at':quote['observed_at'],'price_kind':'public_displayed'}
     return {**event,'odds':odds}
+
+
+def ensure(event,now,store=None,session=None):
+    """Fetch a verified match page only when live prices are missing; five-minute backoff."""
+    from . import stavka
+    store=store if store is not None else stavka._runtime
+    if event.get('state')!='pre' or stavka.utc(event['kickoff'])<=stavka.utc(now)+pd.Timedelta(minutes=5):return event
+    if store is None:
+        try:store=stavka.load();stavka._runtime=store
+        except (OSError,ValueError):return event
+    filled=supplement(event,now,store)
+    if complete_odds(filled):return filled
+    key=f"{event['div']}|{event['id']}";attempts=store.setdefault('quote_attempts',{})
+    if attempts.get(key) and stavka.utc(now)-stavka.utc(attempts[key])<pd.Timedelta(minutes=5):return filled
+    attempts[key]=stavka.utc(now).isoformat()
+    try:
+        url=store.get('match_pages',{}).get(key)
+        if not url:
+            known=[t['source'] for t in store.get('tips',{}).values() if str(t.get('event_id'))==str(event['id']) and t.get('div')==event['div']]
+            url=known[0] if known else None
+        client=session or __import__('requests')
+        if not url:
+            slug=next((slug for slug,sport in stavka.SOURCE_SPORTS.items() if sport==event.get('sport','football') and (sport!='esports' or slug=={'CS2':'csgo','DOTA':'dota2'}.get(event['div']))),None)
+            if not slug:return filled
+            markup=stavka.fetch(stavka.BASE+'/matches/'+slug,client)
+            soup=BeautifulSoup(markup,'html.parser')
+            matches=[stavka.public_url(a['href']) for a in soup.select('a[href*="/matches/"]') if stavka.event_for_url(a['href'],[event])]
+            url=next(iter(dict.fromkeys(matches)),None)
+        if not url:return filled
+        url=stavka.public_url(url)
+        markup=stavka.fetch(url,client)
+        quote=parse_quotes(markup,url,event,now)
+        if quote:
+            store.setdefault('quotes',{})[key]=quote;store.setdefault('match_pages',{})[key]=url
+        store.setdefault('quote_status',{})[key]={'at':stavka.utc(now).isoformat(),'status':'fresh' if quote else 'no_supported_header'}
+    except Exception as exc:
+        store.setdefault('quote_status',{})[key]={'at':stavka.utc(now).isoformat(),'status':'unavailable','error':type(exc).__name__}
+    finally:stavka.save(store)
+    return supplement(event,now,store)
