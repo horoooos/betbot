@@ -36677,12 +36677,1052 @@
   "retry_at": 1795456762.588195
  },
  "401883110": {
-  "status": "waiting_data",
-  "kickoff": "2026-11-23T22:30:00+03:00",
-  "sport": "football",
+  "id": "401883110",
   "div": "SP2",
-  "reason": "no_qualified_real_market",
-  "retry_at": 1795461720.263916
+  "slug": "esp.2",
+  "kickoff": "2026-11-23T22:30:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "detail": "Scheduled",
+  "home": {
+   "id": "5404",
+   "name": "Ceuta",
+   "short": "Ceuta",
+   "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/5404.png",
+   "color": "000000",
+   "alt": "000000",
+   "form": "LLLWL",
+   "score": "0",
+   "ru": "Ceuta"
+  },
+  "away": {
+   "id": "6832",
+   "name": "Almería",
+   "short": "Almería",
+   "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/6832.png",
+   "color": "C8142F",
+   "alt": "1a1a1a",
+   "form": "WWDWD",
+   "score": "0",
+   "ru": "Almería"
+  },
+  "odds": {
+   "H": 3.6,
+   "D": 3.65,
+   "A": 1.952,
+   "line": 2.5,
+   "over": 1.714,
+   "under": 2.05,
+   "spread_h": [
+    0.5,
+    1.8
+   ],
+   "spread_a": [
+    -0.5,
+    1.909
+   ]
+  },
+  "venue": "Estadio Alfonso Murube",
+  "clock": "0'",
+  "goals": [],
+  "open": {
+   "A": 0.4808
+  },
+  "top": false,
+  "lam": [
+   1.259311826373444,
+   1.7296185470566066
+  ],
+  "probs": {
+   "H": 0.27037158207316037,
+   "D": 0.25384289149690703,
+   "A": 0.47578552642993255,
+   "1X": 0.5242144735700679,
+   "12": 0.7461571085030931,
+   "X2": 0.72962841792684,
+   "BTTS_Y": 0.5979116124955507,
+   "BTTS_N": 0.40208838750445,
+   "O15": 0.8079637902542622,
+   "U15": 0.19203620974573815,
+   "O25": 0.5743243332535687,
+   "U25": 0.4256756667464319,
+   "O35": 0.35028660892766234,
+   "U35": 0.6497133910723375,
+   "H_O05": 0.7161506746407006,
+   "H_O15": 0.35869586230761014,
+   "A_O05": 0.8226475706985065,
+   "A_O15": 0.5158955196130967,
+   "H-1.5": 0.11656000172610148,
+   "A+1.5": 0.8834399982738987,
+   "A-1.5": 0.26125494957208173,
+   "H+1.5": 0.7387450504279185,
+   "H-2.5": 0.03851365481464966,
+   "A-2.5": 0.11402821370903508,
+   "H+2.5": 0.8859717862909652,
+   "A+2.5": 0.9614863451853505,
+   "O45": 0.18287831916970052,
+   "U45": 0.8171216808302993,
+   "H_O25": 0.13362232602503027,
+   "A_O25": 0.25061350116060593,
+   "H&O15": 0.21574810248865928,
+   "A&O15": 0.39748616342503956,
+   "H&BTTS": 0.15213251992801033,
+   "A&BTTS": 0.2510495682269766,
+   "1X&U35": 0.3578740761281584,
+   "X2&U35": 0.46937467870233074,
+   "BTTS&O25": 0.47948961589374245,
+   "HT_H": 0.2320124246863417,
+   "HT_D": 0.4071453274641656,
+   "HT_A": 0.36084224784949287,
+   "HT_O05": 0.7302720035645837,
+   "HT_U05": 0.26972799643541645,
+   "HT_O15": 0.398234078409744,
+   "HT_U15": 0.6017659215902561
+  },
+  "scores": [
+   [
+    "1:1",
+    0.11842199660180755
+   ],
+   [
+    "1:2",
+    0.09482633412127815
+   ],
+   [
+    "0:1",
+    0.07829936300489299
+   ]
+  ],
+  "main": {
+   "key": "A",
+   "label": "П2",
+   "p": 0.4758,
+   "odds": 1.92,
+   "est": false,
+   "stake": 0.5,
+   "strategy": "external_trial",
+   "trial_expires_at": "2026-11-30T19:13:32.625360+00:00",
+   "probability_origin": "baseline_model",
+   "model_edge": -0.08649,
+   "source_count": 25,
+   "source_refs": [
+    {
+     "author": "/predictors/artem-lasin",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/23-11-2026-ceuta-almeria",
+     "published_at": "2026-11-22T18:45:00+00:00",
+     "observed_at": "2026-11-22T23:29:18.697660+00:00",
+     "odds": 1.9,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/vladislav-temnikov",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/23-11-2026-ceuta-almeria",
+     "published_at": "2026-11-22T21:37:00+00:00",
+     "observed_at": "2026-11-22T23:29:18.697660+00:00",
+     "odds": 1.9,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/aleksandr-novikov-63",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/23-11-2026-ceuta-almeria",
+     "published_at": "2026-11-22T21:37:00+00:00",
+     "observed_at": "2026-11-22T23:29:18.697660+00:00",
+     "odds": 1.9,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/a-110",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/23-11-2026-ceuta-almeria",
+     "published_at": "2026-11-22T21:37:00+00:00",
+     "observed_at": "2026-11-22T23:29:18.697660+00:00",
+     "odds": 1.9,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/kanikuly-bonifaciia-4",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/23-11-2026-ceuta-almeria",
+     "published_at": "2026-11-22T21:38:00+00:00",
+     "observed_at": "2026-11-22T23:29:18.697660+00:00",
+     "odds": 1.9,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/maksim-bobkov",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/23-11-2026-ceuta-almeria",
+     "published_at": "2026-11-22T22:02:00+00:00",
+     "observed_at": "2026-11-22T23:29:18.697660+00:00",
+     "odds": 1.9,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/aleksey-kovalenko-4",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/23-11-2026-ceuta-almeria",
+     "published_at": "2026-11-22T22:18:00+00:00",
+     "observed_at": "2026-11-22T23:29:18.697660+00:00",
+     "odds": 1.9,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/gennadiy-sovetskikh",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/23-11-2026-ceuta-almeria",
+     "published_at": "2026-11-22T23:15:00+00:00",
+     "observed_at": "2026-11-22T23:29:18.697660+00:00",
+     "odds": 1.9,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/igor-prokopenko-2",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/23-11-2026-ceuta-almeria",
+     "published_at": "2026-11-22T23:27:00+00:00",
+     "observed_at": "2026-11-22T23:29:18.697660+00:00",
+     "odds": 1.9,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/maks-mel-1",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/23-11-2026-ceuta-almeria",
+     "published_at": "2026-11-23T01:46:00+00:00",
+     "observed_at": "2026-11-23T01:53:21.353416+00:00",
+     "odds": 1.9,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/marina-sol",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/23-11-2026-ceuta-almeria",
+     "published_at": "2026-11-23T02:46:00+00:00",
+     "observed_at": "2026-11-23T03:57:56.074533+00:00",
+     "odds": 1.9,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/nowkam",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/23-11-2026-ceuta-almeria",
+     "published_at": "2026-11-23T02:55:00+00:00",
+     "observed_at": "2026-11-23T03:57:56.074533+00:00",
+     "odds": 1.9,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/valerii-tumanov",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/23-11-2026-ceuta-almeria",
+     "published_at": "2026-11-23T02:56:00+00:00",
+     "observed_at": "2026-11-23T03:57:56.074533+00:00",
+     "odds": 1.9,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/trezvyi-master",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/23-11-2026-ceuta-almeria",
+     "published_at": "2026-11-23T03:58:00+00:00",
+     "observed_at": "2026-11-23T06:23:39.710669+00:00",
+     "odds": 1.9,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/andrei-suxov-6",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/23-11-2026-ceuta-almeria",
+     "published_at": "2026-11-23T04:00:00+00:00",
+     "observed_at": "2026-11-23T06:23:39.710669+00:00",
+     "odds": 1.9,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/georgii-domnikov",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/23-11-2026-ceuta-almeria",
+     "published_at": "2026-11-23T04:53:00+00:00",
+     "observed_at": "2026-11-23T06:23:39.710669+00:00",
+     "odds": 1.9,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/igor-batalov-1",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/23-11-2026-ceuta-almeria",
+     "published_at": "2026-11-23T06:02:00+00:00",
+     "observed_at": "2026-11-23T06:23:39.710669+00:00",
+     "odds": 1.9,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/sergei-lapsin",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/23-11-2026-ceuta-almeria",
+     "published_at": "2026-11-23T06:13:00+00:00",
+     "observed_at": "2026-11-23T06:23:39.710669+00:00",
+     "odds": 1.9,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/kapral-1",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/23-11-2026-ceuta-almeria",
+     "published_at": "2026-11-23T07:41:00+00:00",
+     "observed_at": "2026-11-23T08:49:40.080740+00:00",
+     "odds": 1.9,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/atario-malen",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/23-11-2026-ceuta-almeria",
+     "published_at": "2026-11-23T07:49:00+00:00",
+     "observed_at": "2026-11-23T08:49:40.080740+00:00",
+     "odds": 1.83,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/poligraf-poligrafyc-2",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/23-11-2026-ceuta-almeria",
+     "published_at": "2026-11-23T08:15:00+00:00",
+     "observed_at": "2026-11-23T08:49:40.080740+00:00",
+     "odds": 1.83,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/dmitrii-reznikov",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/23-11-2026-ceuta-almeria",
+     "published_at": "2026-11-23T09:38:00+00:00",
+     "observed_at": "2026-11-23T11:12:51.453896+00:00",
+     "odds": 1.9,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/mixail-gunin-3",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/23-11-2026-ceuta-almeria",
+     "published_at": "2026-11-23T11:01:00+00:00",
+     "observed_at": "2026-11-23T11:12:51.453896+00:00",
+     "odds": 1.92,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/dmitriy-zakharov-20",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/23-11-2026-ceuta-almeria",
+     "published_at": "2026-11-23T15:50:00+00:00",
+     "observed_at": "2026-11-23T18:07:22.210171+00:00",
+     "odds": 1.94,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/diman-diman-1",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/23-11-2026-ceuta-almeria",
+     "published_at": "2026-11-23T18:03:00+00:00",
+     "observed_at": "2026-11-23T18:07:22.210171+00:00",
+     "odds": 1.94,
+     "price_kind": "author_recorded"
+    }
+   ]
+  },
+  "bold": {},
+  "value": null,
+  "odds_src": "среднее по букмекерам",
+  "model_w": 0.0,
+  "learned_n": 1510,
+  "stavka_signal": {
+   "status": "baseline_better",
+   "weight": 0.0,
+   "authors": 28,
+   "votes": {
+    "A": 24.876833164189975,
+    "D": 1.9876116559601287,
+    "H": 1.1237693675960516
+   },
+   "source": "https://stavka.tv",
+   "snapshot": "SP2|401883110"
+  },
+  "research": {
+   "articles": [],
+   "dossier": {
+    "observed_at": "2026-11-23T19:22:18.502997+00:00",
+    "kickoff": "2026-11-23T19:30:00+00:00",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.2/summary?event=401883110",
+    "status": "available",
+    "facts": {
+     "table": {
+      "4438": {
+       "rank": "1",
+       "gp": "14",
+       "w": "10",
+       "d": "3",
+       "l": "1",
+       "gd": "+21",
+       "pts": "33",
+       "of": 22,
+       "raw": {
+        "GP": "14",
+        "L": "1",
+        "GD": "+21",
+        "P": "33",
+        "D": "3",
+        "W": "10",
+        "R": "1",
+        "Total": "10-3-1"
+       },
+       "group": "Spanish LALIGA 2 Standings"
+      },
+      "6832": {
+       "rank": "2",
+       "gp": "14",
+       "w": "10",
+       "d": "2",
+       "l": "2",
+       "gd": "+15",
+       "pts": "32",
+       "of": 22,
+       "raw": {
+        "GP": "14",
+        "L": "2",
+        "GD": "+15",
+        "P": "32",
+        "D": "2",
+        "W": "10",
+        "R": "2",
+        "Total": "10-2-2"
+       },
+       "group": "Spanish LALIGA 2 Standings"
+      },
+      "9812": {
+       "rank": "3",
+       "gp": "15",
+       "w": "8",
+       "d": "3",
+       "l": "4",
+       "gd": "+12",
+       "pts": "27",
+       "of": 22,
+       "raw": {
+        "GP": "15",
+        "L": "4",
+        "GD": "+12",
+        "P": "27",
+        "D": "3",
+        "W": "8",
+        "R": "3",
+        "Total": "8-3-4"
+       },
+       "group": "Spanish LALIGA 2 Standings"
+      },
+      "3747": {
+       "rank": "4",
+       "gp": "14",
+       "w": "8",
+       "d": "3",
+       "l": "3",
+       "gd": "+7",
+       "pts": "27",
+       "of": 22,
+       "raw": {
+        "GP": "14",
+        "L": "3",
+        "GD": "+7",
+        "P": "27",
+        "D": "3",
+        "W": "8",
+        "R": "4",
+        "Total": "8-3-3"
+       },
+       "group": "Spanish LALIGA 2 Standings"
+      },
+      "12597": {
+       "rank": "5",
+       "gp": "15",
+       "w": "8",
+       "d": "3",
+       "l": "4",
+       "gd": "+4",
+       "pts": "27",
+       "of": 22,
+       "raw": {
+        "GP": "15",
+        "L": "4",
+        "GD": "+4",
+        "P": "27",
+        "D": "3",
+        "W": "8",
+        "R": "5",
+        "Total": "8-3-4"
+       },
+       "group": "Spanish LALIGA 2 Standings"
+      },
+      "84": {
+       "rank": "6",
+       "gp": "14",
+       "w": "6",
+       "d": "6",
+       "l": "2",
+       "gd": "+8",
+       "pts": "24",
+       "of": 22,
+       "raw": {
+        "GP": "14",
+        "L": "2",
+        "GD": "+8",
+        "P": "24",
+        "D": "6",
+        "W": "6",
+        "R": "6",
+        "Total": "6-6-2"
+       },
+       "group": "Spanish LALIGA 2 Standings"
+      },
+      "3752": {
+       "rank": "7",
+       "gp": "14",
+       "w": "7",
+       "d": "3",
+       "l": "4",
+       "gd": "+6",
+       "pts": "24",
+       "of": 22,
+       "raw": {
+        "GP": "14",
+        "L": "4",
+        "GD": "+6",
+        "P": "24",
+        "D": "3",
+        "W": "7",
+        "R": "7",
+        "Total": "7-3-4"
+       },
+       "group": "Spanish LALIGA 2 Standings"
+      },
+      "8447": {
+       "rank": "8",
+       "gp": "15",
+       "w": "7",
+       "d": "2",
+       "l": "6",
+       "gd": "+3",
+       "pts": "23",
+       "of": 22,
+       "raw": {
+        "GP": "15",
+        "L": "6",
+        "GD": "+3",
+        "P": "23",
+        "D": "2",
+        "W": "7",
+        "R": "8",
+        "Total": "7-2-6"
+       },
+       "group": "Spanish LALIGA 2 Standings"
+      },
+      "98": {
+       "rank": "9",
+       "gp": "15",
+       "w": "7",
+       "d": "2",
+       "l": "6",
+       "gd": "-1",
+       "pts": "23",
+       "of": 22,
+       "raw": {
+        "GP": "15",
+        "L": "6",
+        "GD": "-1",
+        "P": "23",
+        "D": "2",
+        "W": "7",
+        "R": "9",
+        "Total": "7-2-6"
+       },
+       "group": "Spanish LALIGA 2 Standings"
+      },
+      "3788": {
+       "rank": "10",
+       "gp": "15",
+       "w": "7",
+       "d": "2",
+       "l": "6",
+       "gd": "-3",
+       "pts": "23",
+       "of": 22,
+       "raw": {
+        "GP": "15",
+        "L": "6",
+        "GD": "-3",
+        "P": "23",
+        "D": "2",
+        "W": "7",
+        "R": "10",
+        "Total": "7-2-6"
+       },
+       "group": "Spanish LALIGA 2 Standings"
+      },
+      "92": {
+       "rank": "11",
+       "gp": "15",
+       "w": "6",
+       "d": "3",
+       "l": "6",
+       "gd": "-1",
+       "pts": "21",
+       "of": 22,
+       "raw": {
+        "GP": "15",
+        "L": "6",
+        "GD": "-1",
+        "P": "21",
+        "D": "3",
+        "W": "6",
+        "R": "11",
+        "Total": "6-3-6"
+       },
+       "group": "Spanish LALIGA 2 Standings"
+      },
+      "95": {
+       "rank": "12",
+       "gp": "15",
+       "w": "5",
+       "d": "4",
+       "l": "6",
+       "gd": "+1",
+       "pts": "19",
+       "of": 22,
+       "raw": {
+        "GP": "15",
+        "L": "6",
+        "GD": "+1",
+        "P": "19",
+        "D": "4",
+        "W": "5",
+        "R": "12",
+        "Total": "5-4-6"
+       },
+       "group": "Spanish LALIGA 2 Standings"
+      },
+      "245": {
+       "rank": "13",
+       "gp": "14",
+       "w": "4",
+       "d": "7",
+       "l": "3",
+       "gd": "0",
+       "pts": "19",
+       "of": 22,
+       "raw": {
+        "GP": "14",
+        "L": "3",
+        "GD": "0",
+        "P": "19",
+        "D": "7",
+        "W": "4",
+        "R": "13",
+        "Total": "4-7-3"
+       },
+       "group": "Spanish LALIGA 2 Standings"
+      },
+      "11487": {
+       "rank": "14",
+       "gp": "15",
+       "w": "4",
+       "d": "7",
+       "l": "4",
+       "gd": "-1",
+       "pts": "19",
+       "of": 22,
+       "raw": {
+        "GP": "15",
+        "L": "4",
+        "GD": "-1",
+        "P": "19",
+        "D": "7",
+        "W": "4",
+        "R": "14",
+        "Total": "4-7-4"
+       },
+       "group": "Spanish LALIGA 2 Standings"
+      },
+      "17534": {
+       "rank": "15",
+       "gp": "15",
+       "w": "5",
+       "d": "3",
+       "l": "7",
+       "gd": "-8",
+       "pts": "18",
+       "of": 22,
+       "raw": {
+        "GP": "15",
+        "L": "7",
+        "GD": "-8",
+        "P": "18",
+        "D": "3",
+        "W": "5",
+        "R": "15",
+        "Total": "5-3-7"
+       },
+       "group": "Spanish LALIGA 2 Standings"
+      },
+      "7320": {
+       "rank": "16",
+       "gp": "15",
+       "w": "5",
+       "d": "2",
+       "l": "8",
+       "gd": "-6",
+       "pts": "17",
+       "of": 22,
+       "raw": {
+        "GP": "15",
+        "L": "8",
+        "GD": "-6",
+        "P": "17",
+        "D": "2",
+        "W": "5",
+        "R": "16",
+        "Total": "5-2-8"
+       },
+       "group": "Spanish LALIGA 2 Standings"
+      },
+      "3842": {
+       "rank": "17",
+       "gp": "15",
+       "w": "3",
+       "d": "5",
+       "l": "7",
+       "gd": "+1",
+       "pts": "14",
+       "of": 22,
+       "raw": {
+        "GP": "15",
+        "L": "7",
+        "GD": "+1",
+        "P": "14",
+        "D": "5",
+        "W": "3",
+        "R": "17",
+        "Total": "3-5-7"
+       },
+       "group": "Spanish LALIGA 2 Standings"
+      },
+      "131858": {
+       "rank": "18",
+       "gp": "15",
+       "w": "3",
+       "d": "5",
+       "l": "7",
+       "gd": "-7",
+       "pts": "14",
+       "of": 22,
+       "raw": {
+        "GP": "15",
+        "L": "7",
+        "GD": "-7",
+        "P": "14",
+        "D": "5",
+        "W": "3",
+        "R": "18",
+        "Total": "3-5-7"
+       },
+       "group": "Spanish LALIGA 2 Standings"
+      },
+      "20983": {
+       "rank": "19",
+       "gp": "15",
+       "w": "3",
+       "d": "4",
+       "l": "8",
+       "gd": "-10",
+       "pts": "13",
+       "of": 22,
+       "raw": {
+        "GP": "15",
+        "L": "8",
+        "GD": "-10",
+        "P": "13",
+        "D": "4",
+        "W": "3",
+        "R": "19",
+        "Total": "3-4-8"
+       },
+       "group": "Spanish LALIGA 2 Standings"
+      },
+      "2737": {
+       "rank": "20",
+       "gp": "15",
+       "w": "4",
+       "d": "1",
+       "l": "10",
+       "gd": "-11",
+       "pts": "13",
+       "of": 22,
+       "raw": {
+        "GP": "15",
+        "L": "10",
+        "GD": "-11",
+        "P": "13",
+        "D": "1",
+        "W": "4",
+        "R": "20",
+        "Total": "4-1-10"
+       },
+       "group": "Spanish LALIGA 2 Standings"
+      },
+      "20179": {
+       "rank": "21",
+       "gp": "14",
+       "w": "3",
+       "d": "2",
+       "l": "9",
+       "gd": "-8",
+       "pts": "11",
+       "of": 22,
+       "raw": {
+        "GP": "14",
+        "L": "9",
+        "GD": "-8",
+        "P": "11",
+        "D": "2",
+        "W": "3",
+        "R": "21",
+        "Total": "3-2-9"
+       },
+       "group": "Spanish LALIGA 2 Standings"
+      },
+      "5404": {
+       "rank": "22",
+       "gp": "14",
+       "w": "1",
+       "d": "2",
+       "l": "11",
+       "gd": "-22",
+       "pts": "5",
+       "of": 22,
+       "raw": {
+        "GP": "14",
+        "L": "11",
+        "GD": "-22",
+        "P": "5",
+        "D": "2",
+        "W": "1",
+        "R": "22",
+        "Total": "1-2-11"
+       },
+       "group": "Spanish LALIGA 2 Standings"
+      }
+     },
+     "last5": {
+      "5404": [
+       {
+        "res": "L",
+        "gf": 1,
+        "ga": 3,
+        "opp": "Cádiz",
+        "home": false,
+        "date": "2026-10-25"
+       },
+       {
+        "res": "W",
+        "gf": 2,
+        "ga": 1,
+        "opp": "Poblense",
+        "home": false,
+        "date": "2026-10-29"
+       },
+       {
+        "res": "L",
+        "gf": 0,
+        "ga": 2,
+        "opp": "Sporting Gijón",
+        "home": true,
+        "date": "2026-11-01"
+       },
+       {
+        "res": "L",
+        "gf": 0,
+        "ga": 3,
+        "opp": "Córdoba",
+        "home": false,
+        "date": "2026-11-07"
+       },
+       {
+        "res": "L",
+        "gf": 0,
+        "ga": 2,
+        "opp": "Tenerife",
+        "home": false,
+        "date": "2026-11-15"
+       }
+      ],
+      "6832": [
+       {
+        "res": "D",
+        "gf": 2,
+        "ga": 2,
+        "opp": "Real Oviedo",
+        "home": true,
+        "date": "2026-10-24"
+       },
+       {
+        "res": "W",
+        "gf": 2,
+        "ga": 1,
+        "opp": "UD Castellonense",
+        "home": false,
+        "date": "2026-10-27"
+       },
+       {
+        "res": "D",
+        "gf": 1,
+        "ga": 1,
+        "opp": "Eibar",
+        "home": false,
+        "date": "2026-10-31"
+       },
+       {
+        "res": "W",
+        "gf": 1,
+        "ga": 0,
+        "opp": "Girona",
+        "home": false,
+        "date": "2026-11-08"
+       },
+       {
+        "res": "W",
+        "gf": 2,
+        "ga": 1,
+        "opp": "FC Andorra",
+        "home": true,
+        "date": "2026-11-14"
+       }
+      ]
+     },
+     "h2h": [
+      {
+       "date": "2026-02-01",
+       "home_id": "6832",
+       "hs": "4",
+       "as": "2"
+      },
+      {
+       "date": "2025-11-26",
+       "home_id": "5404",
+       "hs": "3",
+       "as": "2"
+      }
+     ],
+     "lineups": {
+      "5404": {
+       "formation": "4-2-3-1",
+       "starters": [
+        "Guillermo",
+        "Yann Bodiger",
+        "Carlos Hernández",
+        "Matos",
+        "Alex Petxarromán",
+        "Kuki Zalazar",
+        "Marino Illescas",
+        "Alejandro Meléndez",
+        "Jordi Escobar",
+        "Cedric Teguia",
+        "Edgar Sevikyan"
+       ]
+      },
+      "6832": {
+       "formation": "4-2-3-1",
+       "starters": [
+        "Andrés Fernández",
+        "Federico Bonini",
+        "Chumi",
+        "Álex Muñoz",
+        "Marcos Luna Marcos Ruiz",
+        "Sergio Arribas",
+        "Javi Muñoz",
+        "Stefan Dzodic",
+        "Miguel de la Fuente",
+        "Brian Cipenga",
+        "Quim Junyent"
+       ]
+      }
+     },
+     "leaders": {
+      "5404": [
+       [
+        "Goals",
+        "Carlos Hernández",
+        "Matches: 14, Goals: 4"
+       ],
+       [
+        "Assists",
+        "Kialy Kone",
+        "Matches: 7, Assists: 3"
+       ],
+       [
+        "Total Shots",
+        "Kuki Zalazar",
+        "41"
+       ]
+      ],
+      "6832": [
+       [
+        "Goals",
+        "Miguel de la Fuente",
+        "Matches: 14, Goals: 9"
+       ],
+       [
+        "Assists",
+        "Brian Cipenga",
+        "Matches: 12, Assists: 4"
+       ],
+       [
+        "Total Shots",
+        "Miguel de la Fuente",
+        "33"
+       ]
+      ]
+     },
+     "venue": "Estadio Alfonso Murube",
+     "city": "Ceuta"
+    }
+   }
+  },
+  "extra": {
+   "corners": {
+    "home": 6.488530839231548,
+    "away": 3.163929221435794,
+    "total": 9.652460060667343,
+    "lines": {
+     "8.5": 0.6267230601377369,
+     "9.5": 0.4979073162837272,
+     "10.5": 0.3735684340101282
+    }
+   },
+   "cards": {
+    "total": 5.5,
+    "lines": {
+     "3.5": 0.7983008012974713,
+     "4.5": 0.6424819975720746,
+     "5.5": 0.4710813134741374
+    }
+   }
+  },
+  "msg_id": 9195,
+  "btn": 4,
+  "close": {
+   "A": 0.4808
+  }
  },
  "401934684": {
   "status": "waiting_data",
@@ -36690,7 +37730,7 @@
   "sport": "football",
   "div": "URU",
   "reason": "no_qualified_real_market",
-  "retry_at": 1795461720.263916
+  "retry_at": 1795462440.686349
  },
  "401875009": {
   "status": "waiting_data",

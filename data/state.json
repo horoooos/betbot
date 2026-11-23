@@ -1563,7 +1563,7 @@
  "value_day": "2026-11-23",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-23",
- "site_stamp": "1510|9194|2026-11-23 22|5|5100c36c5ed9a595",
+ "site_stamp": "1510|9196|2026-11-23 22|5|b42813cba720f0e7",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1719,7 +1719,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 9194,
+ "dz_last": 9196,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2888,7 +2888,7 @@
   "quote_matches": 39
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-23T22:22:00.020283+03:00",
+  "last_poll": "2026-11-23T22:24:00.686349+03:00",
   "cursor": "366",
   "posts": [
    {
@@ -3836,23 +3836,24 @@
    "estimated": true
   },
   "football|SP2|401883110": {
-   "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-23T19:12:29.168515+00:00",
+   "reason": "published",
+   "checked_at": "2026-11-23T19:24:35.699791+00:00",
    "kickoff": "2026-11-23T22:30:00+03:00",
    "sport": "football",
    "id": "401883110",
    "home": "Ceuta",
    "away": "Almería",
-   "priced_markets": 6,
-   "market": "Обе забьют — да",
-   "probability": 0.5979,
-   "odds": 1.56,
-   "edge": -0.06728,
-   "estimated": true
+   "market": "П2",
+   "strategy": "external_trial",
+   "source_count": 25,
+   "probability": 0.4758,
+   "odds": 1.92,
+   "edge": -0.08646,
+   "estimated": false
   },
   "football|URU|401934684": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-23T19:12:29.397076+00:00",
+   "checked_at": "2026-11-23T19:24:35.968629+00:00",
    "kickoff": "2026-11-23T22:30:00+03:00",
    "sport": "football",
    "id": "401934684",
@@ -3860,9 +3861,9 @@
    "away": "Defensor Sporting",
    "priced_markets": 6,
    "market": "Обе забьют — да",
-   "probability": 0.5523,
+   "probability": 0.5551,
    "odds": 1.68,
-   "edge": -0.07214,
+   "edge": -0.06743,
    "estimated": true
   },
   "football|I1|401875009": {
@@ -3954,6 +3955,259 @@
    "odds": 1.57,
    "edge": -0.07229,
    "estimated": true
+  }
+ },
+ "source_trial": {
+  "picks": {
+   "football|SP2|401883110": {
+    "status": "open",
+    "id": "401883110",
+    "sport": "football",
+    "div": "SP2",
+    "kickoff": "2026-11-23T22:30:00+03:00",
+    "published_at": "2026-11-23T19:24:32.174415+00:00",
+    "msg_id": 9195,
+    "tip": {
+     "key": "A",
+     "label": "П2",
+     "p": 0.4758,
+     "odds": 1.92,
+     "est": false,
+     "stake": 0.5,
+     "strategy": "external_trial",
+     "trial_expires_at": "2026-11-30T19:13:32.625360+00:00",
+     "probability_origin": "baseline_model",
+     "model_edge": -0.08649,
+     "source_count": 25,
+     "source_refs": [
+      {
+       "author": "/predictors/artem-lasin",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/23-11-2026-ceuta-almeria",
+       "published_at": "2026-11-22T18:45:00+00:00",
+       "observed_at": "2026-11-22T23:29:18.697660+00:00",
+       "odds": 1.9,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/vladislav-temnikov",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/23-11-2026-ceuta-almeria",
+       "published_at": "2026-11-22T21:37:00+00:00",
+       "observed_at": "2026-11-22T23:29:18.697660+00:00",
+       "odds": 1.9,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/aleksandr-novikov-63",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/23-11-2026-ceuta-almeria",
+       "published_at": "2026-11-22T21:37:00+00:00",
+       "observed_at": "2026-11-22T23:29:18.697660+00:00",
+       "odds": 1.9,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/a-110",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/23-11-2026-ceuta-almeria",
+       "published_at": "2026-11-22T21:37:00+00:00",
+       "observed_at": "2026-11-22T23:29:18.697660+00:00",
+       "odds": 1.9,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/kanikuly-bonifaciia-4",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/23-11-2026-ceuta-almeria",
+       "published_at": "2026-11-22T21:38:00+00:00",
+       "observed_at": "2026-11-22T23:29:18.697660+00:00",
+       "odds": 1.9,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/maksim-bobkov",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/23-11-2026-ceuta-almeria",
+       "published_at": "2026-11-22T22:02:00+00:00",
+       "observed_at": "2026-11-22T23:29:18.697660+00:00",
+       "odds": 1.9,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/aleksey-kovalenko-4",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/23-11-2026-ceuta-almeria",
+       "published_at": "2026-11-22T22:18:00+00:00",
+       "observed_at": "2026-11-22T23:29:18.697660+00:00",
+       "odds": 1.9,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/gennadiy-sovetskikh",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/23-11-2026-ceuta-almeria",
+       "published_at": "2026-11-22T23:15:00+00:00",
+       "observed_at": "2026-11-22T23:29:18.697660+00:00",
+       "odds": 1.9,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/igor-prokopenko-2",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/23-11-2026-ceuta-almeria",
+       "published_at": "2026-11-22T23:27:00+00:00",
+       "observed_at": "2026-11-22T23:29:18.697660+00:00",
+       "odds": 1.9,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/maks-mel-1",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/23-11-2026-ceuta-almeria",
+       "published_at": "2026-11-23T01:46:00+00:00",
+       "observed_at": "2026-11-23T01:53:21.353416+00:00",
+       "odds": 1.9,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/marina-sol",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/23-11-2026-ceuta-almeria",
+       "published_at": "2026-11-23T02:46:00+00:00",
+       "observed_at": "2026-11-23T03:57:56.074533+00:00",
+       "odds": 1.9,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/nowkam",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/23-11-2026-ceuta-almeria",
+       "published_at": "2026-11-23T02:55:00+00:00",
+       "observed_at": "2026-11-23T03:57:56.074533+00:00",
+       "odds": 1.9,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/valerii-tumanov",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/23-11-2026-ceuta-almeria",
+       "published_at": "2026-11-23T02:56:00+00:00",
+       "observed_at": "2026-11-23T03:57:56.074533+00:00",
+       "odds": 1.9,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/trezvyi-master",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/23-11-2026-ceuta-almeria",
+       "published_at": "2026-11-23T03:58:00+00:00",
+       "observed_at": "2026-11-23T06:23:39.710669+00:00",
+       "odds": 1.9,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/andrei-suxov-6",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/23-11-2026-ceuta-almeria",
+       "published_at": "2026-11-23T04:00:00+00:00",
+       "observed_at": "2026-11-23T06:23:39.710669+00:00",
+       "odds": 1.9,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/georgii-domnikov",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/23-11-2026-ceuta-almeria",
+       "published_at": "2026-11-23T04:53:00+00:00",
+       "observed_at": "2026-11-23T06:23:39.710669+00:00",
+       "odds": 1.9,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/igor-batalov-1",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/23-11-2026-ceuta-almeria",
+       "published_at": "2026-11-23T06:02:00+00:00",
+       "observed_at": "2026-11-23T06:23:39.710669+00:00",
+       "odds": 1.9,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/sergei-lapsin",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/23-11-2026-ceuta-almeria",
+       "published_at": "2026-11-23T06:13:00+00:00",
+       "observed_at": "2026-11-23T06:23:39.710669+00:00",
+       "odds": 1.9,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/kapral-1",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/23-11-2026-ceuta-almeria",
+       "published_at": "2026-11-23T07:41:00+00:00",
+       "observed_at": "2026-11-23T08:49:40.080740+00:00",
+       "odds": 1.9,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/atario-malen",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/23-11-2026-ceuta-almeria",
+       "published_at": "2026-11-23T07:49:00+00:00",
+       "observed_at": "2026-11-23T08:49:40.080740+00:00",
+       "odds": 1.83,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/poligraf-poligrafyc-2",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/23-11-2026-ceuta-almeria",
+       "published_at": "2026-11-23T08:15:00+00:00",
+       "observed_at": "2026-11-23T08:49:40.080740+00:00",
+       "odds": 1.83,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/dmitrii-reznikov",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/23-11-2026-ceuta-almeria",
+       "published_at": "2026-11-23T09:38:00+00:00",
+       "observed_at": "2026-11-23T11:12:51.453896+00:00",
+       "odds": 1.9,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/mixail-gunin-3",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/23-11-2026-ceuta-almeria",
+       "published_at": "2026-11-23T11:01:00+00:00",
+       "observed_at": "2026-11-23T11:12:51.453896+00:00",
+       "odds": 1.92,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/dmitriy-zakharov-20",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/23-11-2026-ceuta-almeria",
+       "published_at": "2026-11-23T15:50:00+00:00",
+       "observed_at": "2026-11-23T18:07:22.210171+00:00",
+       "odds": 1.94,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/diman-diman-1",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/23-11-2026-ceuta-almeria",
+       "published_at": "2026-11-23T18:03:00+00:00",
+       "observed_at": "2026-11-23T18:07:22.210171+00:00",
+       "odds": 1.94,
+       "price_kind": "author_recorded"
+      }
+     ]
+    }
+   }
   }
  }
 }
