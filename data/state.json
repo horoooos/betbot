@@ -1563,7 +1563,7 @@
  "value_day": "2026-11-23",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-23",
- "site_stamp": "1512|9237|2026-11-24 00|6|d8ac3f2a0e9a27d3",
+ "site_stamp": "1513|9237|2026-11-24 00|6|11f9c548a830021a",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -2828,15 +2828,15 @@
   "model": {
    "weight": 0.0,
    "status": "baseline_better",
-   "settled_matches": 112,
+   "settled_matches": 113,
    "required_matches": 100,
-   "trained_at": "2026-11-23T21:37:59.627921+00:00",
+   "trained_at": "2026-11-23T21:41:59.792168+00:00",
    "candidate_weight": 0.0,
    "train_matches": 83,
-   "validation_matches": 29,
+   "validation_matches": 30,
    "validation_from": "2026-11-22T00:00:00+00:00",
-   "validation_logloss": 3.0286949283970674,
-   "validation_baseline_logloss": 3.0286949283970674
+   "validation_logloss": 3.065585982051817,
+   "validation_baseline_logloss": 3.065585982051817
   },
   "sport_models": {
    "hockey": {
@@ -2898,7 +2898,7 @@
   "quote_matches": 46
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-24T00:39:59.359000+03:00",
+  "last_poll": "2026-11-24T00:41:59.792168+03:00",
   "cursor": "369",
   "posts": [
    {
@@ -3538,7 +3538,7 @@
    "401875009": "post",
    "401899549": "post",
    "401884730": "post",
-   "401876686": "in",
+   "401876686": "post",
    "401876683": "in",
    "401875542": "post",
    "401888249": "post",
@@ -3970,7 +3970,7 @@
   },
   "football|BRA|401841323": {
    "reason": "edge_below_minimum",
-   "checked_at": "2026-11-23T21:30:20.941844+00:00",
+   "checked_at": "2026-11-23T21:42:19.740287+00:00",
    "kickoff": "2026-11-24T01:30:00+03:00",
    "sport": "football",
    "id": "401841323",
@@ -3985,7 +3985,7 @@
   },
   "football|URU|401934683": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-23T21:30:21.352388+00:00",
+   "checked_at": "2026-11-23T21:42:20.203069+00:00",
    "kickoff": "2026-11-24T01:30:00+03:00",
    "sport": "football",
    "id": "401934683",
