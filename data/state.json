@@ -7,7 +7,6 @@
  "schedule_day": "2026-11-23",
  "content_slot": "2026-11-23-13",
  "news_seen": [
-  "https://www.sport-express.ru/football/rfpl/news/smorodskaya-schitaet-chto-galaktionov-budet-vostrebovan-v-rpl-2476692/",
   "https://www.sport-express.ru/tennis/atp/news/medvedev-zayavil-chto-hochet-vernutsya-na-pervuyu-strochku-reytinga-atr-2476695/",
   "https://www.sport-express.ru/cybersport/esports/news/rossiyskie-kibersportsmeny-voshli-v-top-9-thaiger-uppercut-2026-po-tekken-8-rezultaty-turnira-v-tailande-2476682/",
   "https://www.sport-express.ru/cybersport/esports/news/zhenskaya-kiberbitva-po-cs2-i-mlbb-proydet-v-noyabre-2026-goda-komandy-razygrayut-prizovoy-fond-v-2-mln-rubley-2476677/",
@@ -506,9 +505,10 @@
   "dupreeh-postavil-na-vykhod-parivision-na-vtoroi-yetap-pgl-major-singapore-2026",
   "https://www.sport-express.ru/hockey/nhl/news/kancerov-posle-pervogo-het-trika-v-nhl-nadeyus-moya-mama-tozhe-mnoy-gorditsya-2477941/",
   "https://www.sport-express.ru/hockey/khl/news/luchshie-igroki-11-y-nedeli-khl-2026-27-krasotkin-culygin-livo-i-pustovoy-2477940/",
-  "https://www.sport-express.ru/hockey/nhl/news/montgomeri-o-gole-buchnevicha-edmontonu-v-tot-moment-ya-ponyal-chto-my-sravnyaem-schet-2477935/"
+  "https://www.sport-express.ru/hockey/nhl/news/montgomeri-o-gole-buchnevicha-edmontonu-v-tot-moment-ya-ponyal-chto-my-sravnyaem-schet-2477935/",
+  "https://www.sport-express.ru/football/rfpl/news/gazizov-podvel-itogi-pervogo-kruga-dlya-mahachkalinskogo-dinamo-postavlyu-chetverku-2477971/"
  ],
- "news_i": 3,
+ "news_i": 4,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1688,7 +1688,7 @@
  "streak_day": {
   "2026-11-22": 2
  },
- "news_next": "2026-11-23T13:51:51.545652+03:00",
+ "news_next": "2026-11-23T14:23:51.161351+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1986,7 +1986,8 @@
   "https://images.cybersport.ru/images/as-is/plain/03/03f8240a-5dee-43a7-a8ef-57f8d5349594.jpg",
   "https://upload.wikimedia.org/wikipedia/commons/8/86/Silkin.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
   "https://images.cybersport.ru/images/as-is/plain/cd/cd56e194-33d4-45ba-b83f-da7236a695dd.jpg",
-  "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/101_Hudson_St_fr_Montgomery_jeh.jpg/1280px-101_Hudson_St_fr_Montgomery_jeh.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/101_Hudson_St_fr_Montgomery_jeh.jpg/1280px-101_Hudson_St_fr_Montgomery_jeh.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "https://upload.wikimedia.org/wikipedia/commons/9/99/FC_Dynamo_Kyiv_Fans_-_%D0%A4%D0%B0%D0%BD%D0%B0%D1%82%D1%8B_%D0%A4%D0%9A_%D0%94%D0%B8%D0%BD%D0%B0%D0%BC%D0%BE_%D0%9A%D0%B8%D0%B5%D0%B2_%2822362899431%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
  ],
  "indexnow_day": "2026-11-23",
  "vk_wall_err": null,
@@ -2339,7 +2340,8 @@
   "9156",
   "9159",
   "9160",
-  "9163"
+  "9163",
+  "9165"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -2624,11 +2626,12 @@
   "2026-11-23:новость:d13fd7cd450cd3ef4cd98582",
   "2026-11-23:новость:5de74784b3381ac2c7524532",
   "2026-11-23:новость:469bd412a01d227658e80310",
-  "2026-11-23:новость:c218d1702e5cffc15b1c185b"
+  "2026-11-23:новость:c218d1702e5cffc15b1c185b",
+  "2026-11-23:новость:9bbe5cfa65e2b8a6cfde0afb"
  ],
  "dz_last_delivery": {
-  "source_id": 9163,
-  "message_id": 831,
+  "source_id": 9165,
+  "message_id": 832,
   "kind": "новость"
  },
  "learn_attempt_day": "2026-11-23",
@@ -2702,10 +2705,10 @@
    }
   },
   "source": {
-   "last_success": "2026-11-23T10:30:51.758715+00:00",
+   "last_success": "2026-11-23T10:52:51.161351+00:00",
    "parsed": 390,
-   "added": 76,
-   "discovered_matches": 38,
+   "added": 67,
+   "discovered_matches": 39,
    "pages": 21,
    "errors": [],
    "parsed_by_sport": {
@@ -2718,13 +2721,13 @@
    }
   },
   "error": null,
-  "tips": 12462,
+  "tips": 12477,
   "snapshots": 253,
-  "unmapped_markets": 18473,
+  "unmapped_markets": 18525,
   "quote_matches": 31
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-23T13:50:51.068451+03:00",
+  "last_poll": "2026-11-23T13:52:51.161351+03:00",
   "cursor": "348",
   "posts": [
    {
