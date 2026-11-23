@@ -2748,43 +2748,9 @@
   "quote_matches": 31
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-23T17:49:27.399277+03:00",
-  "cursor": "354",
+  "last_poll": "2026-11-23T17:51:27.701934+03:00",
+  "cursor": "356",
   "posts": [
-   {
-    "post_id": 771,
-    "url": "https://vk.com/wall-228963529_771",
-    "title": "LIVE-прогноз зашёл: X2 · итог 2:3",
-    "text": "рџ“Љ LIVE-прогнозы бота: 137 из 191.",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": false,
-     "details_present": false,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-22T20:40:08.021346+03:00"
-   },
-   {
-    "post_id": 772,
-    "url": "https://vk.com/wall-228963529_772",
-    "title": "Santa: Патч 7.42 задаст новую мету на BLAST Slam IX",
-    "text": "рџ“° Патч 7.42 уже меняет правила игры на BLAST Slam IX!",
-    "checks": {
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": false,
-     "details_present": false,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-22T20:40:08.021346+03:00"
-   },
    {
     "post_id": 773,
     "url": "https://vk.com/wall-228963529_773",
@@ -3314,6 +3280,44 @@
     },
     "status": "needs_review",
     "observed_at": "2026-11-23T16:46:53.555509+03:00"
+   },
+   {
+    "post_id": 804,
+    "published_at": 1795445445,
+    "url": "https://vk.com/wall-228963529_804",
+    "title": "LenaGol0vach предрекает гибель Dota 2 в ближайшие годы",
+    "text": "рџ“° На своей личной трансляции в Twitch стример Сергей «LenaGol0vach» Карнаухов резко раскритиковал состояние «Dota 2». Он заявил, что в течение года-двух разработчики Valve окончательно «похоронят» игру, сделав её непригодной для любого матча.\n\nрџЋ® По словам LenaGol0vach, текущие патчи лишь добавляют «всю эту ерунду», а баги, абузы и «поиски по 15-минутным таймерам» превращают процесс в сплошной негатив.\n\nрџ’¬ По его мнению, игра перестала развиваться и деградировала до уровня, когда «в неё уже играть в падлу».\n\nрџ’¬ Аналитик Авери SVG Сильверман, упомянутый в статье, подтвердил, что Valve негативно реагирует на любую критику, что лишь усиливает недовольство сообщества и подталкивает к таким резким заявлениям, как у LenaGol0vach.\n\nПодписывайтесь на «АИ СТАВИТ» — спортивные новости каждый день.\n\n#киберспорт #Dota #новостиспорта #спорт #главное #аиставит\n\nрџ“Љ Подробнее на сайте рџ‘‡",
+    "checks": {
+     "encoding_clean": false,
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": true,
+     "details_present": true,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-23T17:51:27.701934+03:00"
+   },
+   {
+    "post_id": 805,
+    "published_at": 1795445445,
+    "url": "https://vk.com/wall-228963529_805",
+    "title": "Jame Али назвал Сингапур «некст-левел» местом PGL Major 2026",
+    "text": "рџ“° PGL Major Singapore 2026 уже в полном разгаре: в Сингапуре с 24 ноября по 13 декабря разыграют титул на сцене CS2, где 32 команды будут бороться за призовой фонд в $1,25 млн.\n\nрџ’¬ Капитан состава «PARIVISION» Джами Jame Али поделился своими впечатлениями от города в Telegram-канале: «Удалось один день погулять в Сингапуре — часа два. Город, конечно, некст-левел».\n\nрџ’Є Сегодня, 23 ноября, у команды последний день перед стартом мейджора. Игроки проводят интенсивные тренировки, пытаясь довести форму до пика, а капитан обещает «завтра уже посмотрим, в каком состоянии наша команда».\n\nрџ“Љ «PARIVISION» начнёт своё выступление с первой стадии турнира, дебютный матч будет против «DENDELE CS».\n\nПодписывайтесь на «АИ СТАВИТ» — спортивные новости каждый день.\n\n#киберспорт #CS2 #новостиспорта #спорт #главное #аиставит\n\nрџ“Љ Подробнее на сайте рџ‘‡",
+    "checks": {
+     "encoding_clean": false,
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": true,
+     "details_present": true,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-23T17:51:27.701934+03:00"
    }
   ],
   "status": "observing"
