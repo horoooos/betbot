@@ -1563,7 +1563,7 @@
  "value_day": "2026-11-23",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-23",
- "site_stamp": "1511|9234|2026-11-24 00|6|a081c983be5c2ca5",
+ "site_stamp": "1511|9234|2026-11-24 00|6|b7615d72aeda08d3",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -2898,7 +2898,7 @@
   "quote_matches": 45
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-24T00:31:59.518122+03:00",
+  "last_poll": "2026-11-24T00:33:58.947983+03:00",
   "cursor": "369",
   "posts": [
    {
@@ -4002,7 +4002,7 @@
  "source_trial": {
   "picks": {
    "football|SP2|401883110": {
-    "status": "open",
+    "status": "settled",
     "id": "401883110",
     "sport": "football",
     "div": "SP2",
@@ -4248,7 +4248,10 @@
        "price_kind": "author_recorded"
       }
      ]
-    }
+    },
+    "settled_at": "2026-11-23T21:33:58.947983+00:00",
+    "hit": true,
+    "profit_pct": 0.46
    },
    "football|I1|401875009": {
     "status": "open",
