@@ -1,978 +1,4 @@
 {
- "401883112": {
-  "id": "401883112",
-  "div": "SP2",
-  "slug": "esp.2",
-  "kickoff": "2026-11-20T22:30:00+03:00",
-  "state": "pre",
-  "completed": false,
-  "status": "done",
-  "detail": "Scheduled",
-  "home": {
-   "id": "20179",
-   "name": "FC Andorra",
-   "short": "FC Andorra",
-   "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/20179.png",
-   "color": "000000",
-   "alt": "C60000",
-   "form": "LDWLL",
-   "score": "0",
-   "ru": "Андорра"
-  },
-  "away": {
-   "id": "17534",
-   "name": "Leganés",
-   "short": "Leganés",
-   "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/17534.png",
-   "color": "6cace4",
-   "alt": "32cd32",
-   "form": "WWLLD",
-   "score": "0",
-   "ru": "Леганес"
-  },
-  "odds": {
-   "H": 1.87,
-   "D": 3.75,
-   "A": 3.95,
-   "line": 2.5,
-   "over": 1.714,
-   "under": 2.05,
-   "spread_h": [
-    -0.5,
-    1.8
-   ],
-   "spread_a": [
-    0.5,
-    1.909
-   ]
-  },
-  "venue": "Estadi de la FAF d'Encamp",
-  "clock": "0'",
-  "goals": [],
-  "open": {
-   "H": 0.5064
-  },
-  "top": false,
-  "lam": [
-   1.6843780387137728,
-   1.0862306472906111
-  ],
-  "probs": {
-   "H": 0.5043429447467138,
-   "D": 0.2599100014772859,
-   "A": 0.2357470537760003,
-   "1X": 0.7642529462239998,
-   "12": 0.7400899985227137,
-   "X2": 0.4956570552532861,
-   "BTTS_Y": 0.5487439145558434,
-   "BTTS_N": 0.45125608544415674,
-   "O15": 0.773035735756786,
-   "U15": 0.22696426424321375,
-   "O25": 0.5235101022950261,
-   "U25": 0.4764898977049738,
-   "O35": 0.3015295151363491,
-   "U35": 0.6984704848636512,
-   "H_O05": 0.8144398828224467,
-   "H_O15": 0.5018864965874222,
-   "A_O05": 0.6625137884653717,
-   "A_O15": 0.29592592245845645,
-   "H-1.5": 0.2771817586738167,
-   "A+1.5": 0.7228182413261834,
-   "A-1.5": 0.09250921716672866,
-   "H+1.5": 0.9074907828332712,
-   "H-2.5": 0.12014296704501826,
-   "A-2.5": 0.02720038648370985,
-   "H+2.5": 0.97279961351629,
-   "A+2.5": 0.8798570329549817,
-   "O45": 0.14777417940980297,
-   "U45": 0.8522258205901972,
-   "H_O25": 0.2386574667374726,
-   "A_O25": 0.0968264349676685,
-   "H&O15": 0.4080267488337868,
-   "A&O15": 0.17688922871373858,
-   "H&BTTS": 0.23864697648011038,
-   "A&BTTS": 0.12197717986647186,
-   "1X&U35": 0.527061613573327,
-   "X2&U35": 0.36694365574133236,
-   "BTTS&O25": 0.4249993733728599,
-   "HT_H": 0.37337042788709834,
-   "HT_D": 0.42124150023817486,
-   "HT_A": 0.20538807187472655,
-   "HT_O05": 0.7040500080606945,
-   "HT_U05": 0.29594999193930577,
-   "HT_O15": 0.3627278836077997,
-   "HT_U15": 0.6372721163921999
-  },
-  "scores": [
-   [
-    "1:1",
-    0.12374454118298359
-   ],
-   [
-    "2:1",
-    0.0964965683237637
-   ],
-   [
-    "1:0",
-    0.0963161959129273
-   ]
-  ],
-  "main": {
-   "key": "H",
-   "label": "П1",
-   "p": 0.5043,
-   "odds": 1.82,
-   "est": false,
-   "stake": 1.0
-  },
-  "bold": {},
-  "value": null,
-  "odds_src": "среднее по букмекерам",
-  "model_w": 0.0,
-  "learned_n": 1226,
-  "stavka_signal": {
-   "status": "collecting",
-   "weight": 0.0,
-   "authors": 17,
-   "votes": {
-    "H": 6.098869169909141,
-    "D": 3.0,
-    "A": 1.0,
-    "O25": 6.020296821636233,
-    "U25": 0.9769276622155927
-   },
-   "source": "https://stavka.tv",
-   "snapshot": "SP2|401883112"
-  },
-  "extra": {
-   "corners": {
-    "home": 5.2979747219413555,
-    "away": 3.2745561172901927,
-    "total": 8.572530839231549,
-    "lines": {
-     "8.5": 0.48684631450676963,
-     "9.5": 0.3564649166359841,
-     "10.5": 0.2446950612250406
-    }
-   },
-   "cards": {
-    "total": 5.825,
-    "lines": {
-     "3.5": 0.8324835987075634,
-     "4.5": 0.6908366837876341,
-     "5.5": 0.5258180279059161
-    }
-   }
-  },
-  "msg_id": 7593,
-  "btn": 4,
-  "close": {
-   "H": 0.5136
-  },
-  "main_hit": false,
-  "bold_hit": null,
-  "value_hit": null
- },
- "401899543": {
-  "id": "401899543",
-  "div": "I2",
-  "slug": "ita.2",
-  "kickoff": "2026-11-20T22:30:00+03:00",
-  "state": "pre",
-  "completed": false,
-  "status": "done",
-  "detail": "Scheduled",
-  "home": {
-   "id": "119",
-   "name": "Hellas Verona",
-   "short": "Verona",
-   "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/119.png",
-   "color": "00239c",
-   "alt": "ffffff",
-   "form": "DWWDD",
-   "score": "0",
-   "ru": "Верона"
-  },
-  "away": {
-   "id": "3337",
-   "name": "Cesena",
-   "short": "Cesena",
-   "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/3337.png",
-   "color": "1a1a1a",
-   "alt": "000099",
-   "form": "WDWLD",
-   "score": "0",
-   "ru": "Чезена"
-  },
-  "odds": {
-   "H": 1.606,
-   "D": 3.95,
-   "A": 5.5,
-   "line": 2.5,
-   "over": 1.741,
-   "under": 2.05,
-   "spread_h": [
-    -0.5,
-    1.571
-   ],
-   "spread_a": [
-    0.5,
-    2.25
-   ]
-  },
-  "venue": "Stadio Marcantonio Bentegodi",
-  "clock": "0'",
-  "goals": [],
-  "open": {
-   "H": 0.5894,
-   "U25": 0.4601
-  },
-  "top": false,
-  "lam": [
-   1.8207121574536065,
-   1.0433692821218057
-  ],
-  "probs": {
-   "H": 0.5471358038567978,
-   "D": 0.24643223357753577,
-   "A": 0.2064319625656662,
-   "1X": 0.7935680374343334,
-   "12": 0.7535677664224638,
-   "X2": 0.4528641961432022,
-   "BTTS_Y": 0.5515268704739387,
-   "BTTS_N": 0.4484731295260609,
-   "O15": 0.7882773661028581,
-   "U15": 0.21172263389714113,
-   "O25": 0.5456785815772968,
-   "U25": 0.45432141842270285,
-   "O35": 0.322346255043822,
-   "U35": 0.6776537449561778,
-   "H_O05": 0.8380890328454018,
-   "H_O15": 0.5432957665219548,
-   "A_O05": 0.6477341971858842,
-   "A_O15": 0.2801908793876598,
-   "H-1.5": 0.31664764838714377,
-   "A+1.5": 0.6833523516128555,
-   "A-1.5": 0.07805016638701642,
-   "H+1.5": 0.9219498336129831,
-   "H-2.5": 0.14608253113679937,
-   "A-2.5": 0.02203782516328593,
-   "H+2.5": 0.9779621748367135,
-   "A+2.5": 0.8539174688632001,
-   "O45": 0.16243576222339165,
-   "U45": 0.8375642377766082,
-   "H_O25": 0.27492892455667534,
-   "A_O25": 0.08844917556775946,
-   "H&O15": 0.45195816084470103,
-   "A&O15": 0.15559061212327363,
-   "H&BTTS": 0.26057364148533446,
-   "A&BTTS": 0.11022463585372046,
-   "1X&U35": 0.5284459840627416,
-   "X2&U35": 0.3319286401187113,
-   "BTTS&O25": 0.43450963169131585,
-   "HT_H": 0.40298373146294614,
-   "HT_D": 0.4092113475827237,
-   "HT_A": 0.1878049209543304,
-   "HT_O05": 0.7159275463657223,
-   "HT_U05": 0.2840724536342776,
-   "HT_O15": 0.37769799332252657,
-   "HT_U15": 0.6223020066774737
-  },
-  "scores": [
-   [
-    "1:1",
-    0.11701723878262323
-   ],
-   [
-    "2:1",
-    0.09863643948295081
-   ],
-   [
-    "1:0",
-    0.0951776430120968
-   ]
-  ],
-  "main": {
-   "key": "H",
-   "label": "П1",
-   "p": 0.5471,
-   "odds": 1.68,
-   "est": false,
-   "stake": 1.0
-  },
-  "bold": {
-   "key": "U25",
-   "label": "ТМ 2.5",
-   "p": 0.4543,
-   "odds": 2.05,
-   "est": false,
-   "stake": 1.0
-  },
-  "value": null,
-  "odds_src": "среднее по букмекерам",
-  "model_w": 0.0,
-  "learned_n": 1226,
-  "stavka_signal": {
-   "status": "collecting",
-   "weight": 0.0,
-   "authors": 4,
-   "votes": {
-    "H": 3.0,
-    "D": 1.0
-   },
-   "source": "https://stavka.tv",
-   "snapshot": "I2|401899543"
-  },
-  "extra": {
-   "corners": {
-    "home": 7.056391059263935,
-    "away": 3.541297581996649,
-    "total": 10.597688641260584,
-    "lines": {
-     "8.5": 0.7303291152764619,
-     "9.5": 0.6142859218053215,
-     "10.5": 0.49130695847085004
-    }
-   },
-   "cards": {
-    "total": 3.588636363636364,
-    "lines": {
-     "3.5": 0.48236719029408226,
-     "4.5": 0.29138995492936826,
-     "5.5": 0.1543203846380572
-    }
-   }
-  },
-  "msg_id": 7595,
-  "btn": 4,
-  "close": {
-   "H": 0.5884,
-   "U25": 0.4793
-  },
-  "main_hit": false,
-  "bold_hit": true,
-  "value_hit": null
- },
- "401884736": {
-  "id": "401884736",
-  "div": "D1",
-  "slug": "ger.1",
-  "kickoff": "2026-11-20T22:30:00+03:00",
-  "state": "pre",
-  "completed": false,
-  "status": "done",
-  "detail": "Scheduled",
-  "home": {
-   "id": "132",
-   "name": "Bayern Munich",
-   "short": "Bayern",
-   "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/132.png",
-   "color": "dc052d",
-   "alt": "1a1a1a",
-   "form": "WWDWW",
-   "score": "0",
-   "ru": "Бавария"
-  },
-  "away": {
-   "id": "122",
-   "name": "FC Cologne",
-   "short": "Cologne",
-   "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/122.png",
-   "color": "ffffff",
-   "alt": "DA0308",
-   "form": "LDWDL",
-   "score": "0",
-   "ru": "Кёльн"
-  },
-  "odds": {
-   "H": 1.062,
-   "D": 11.0,
-   "A": 20.0,
-   "line": 4.5,
-   "over": 1.769,
-   "under": 2.0,
-   "spread_h": [
-    -3.5,
-    2.15
-   ],
-   "spread_a": [
-    3.5,
-    1.625
-   ]
-  },
-  "venue": "Allianz Arena",
-  "clock": "0'",
-  "goals": [],
-  "open": {
-   "BTTS_Y": 0.6076
-  },
-  "top": false,
-  "lam": [
-   3.7624980867689106,
-   0.807996054713841
-  ],
-  "probs": {
-   "H": 0.8816331221924152,
-   "D": 0.08074579552411329,
-   "A": 0.03762108228347128,
-   "1X": 0.9623789177165283,
-   "12": 0.9192542044758865,
-   "X2": 0.11836687780758458,
-   "BTTS_Y": 0.5438760943106156,
-   "BTTS_N": 0.4561239056893845,
-   "O15": 0.9447486348559596,
-   "U15": 0.05525136514403997,
-   "O25": 0.8339001211220654,
-   "U25": 0.1660998788779342,
-   "O35": 0.6688654845784258,
-   "U35": 0.331134515421574,
-   "H_O05": 0.976732747166207,
-   "H_O15": 0.889189752894694,
-   "A_O05": 0.554249568214253,
-   "A_O15": 0.19408497794437854,
-   "H-1.5": 0.7468660708144129,
-   "A+1.5": 0.2531339291855871,
-   "A-1.5": 0.010660580419482537,
-   "H+1.5": 0.989339419580517,
-   "H-2.5": 0.5642717676821501,
-   "A-2.5": 0.0022397847664434633,
-   "H+2.5": 0.9977602152335561,
-   "A+2.5": 0.43572823231785,
-   "O45": 0.4802930247123157,
-   "U45": 0.5197069752876842,
-   "H_O25": 0.7244995786663994,
-   "A_O25": 0.048579193951535635,
-   "H&O15": 0.8451331856290949,
-   "A&O15": 0.0317634326329066,
-   "H&BTTS": 0.44877646933682347,
-   "A&BTTS": 0.027247608379833702,
-   "1X&U35": 0.30824150499350206,
-   "X2&U35": 0.06983906695404822,
-   "BTTS&O25": 0.5098238167147944,
-   "HT_H": 0.7001491132550208,
-   "HT_D": 0.23216529971506336,
-   "HT_A": 0.06768558702991548,
-   "HT_O05": 0.8658297281942166,
-   "HT_U05": 0.13417027180578295,
-   "HT_O15": 0.6154265243362131,
-   "HT_U15": 0.38457347566378663
-  },
-  "scores": [
-   [
-    "3:0",
-    0.09206922650866518
-   ],
-   [
-    "4:0",
-    0.08660257214728655
-   ],
-   [
-    "3:1",
-    0.07439157177955644
-   ]
-  ],
-  "main": {
-   "key": "BTTS_Y",
-   "label": "Обе забьют — да",
-   "p": 0.5439,
-   "odds": 1.71,
-   "est": true,
-   "stake": 1.0
-  },
-  "bold": {},
-  "value": null,
-  "odds_src": "среднее по букмекерам",
-  "model_w": 0.0,
-  "learned_n": 1226,
-  "stavka_signal": {
-   "status": "insufficient_opinions",
-   "weight": 0.0
-  },
-  "extra": {
-   "corners": {
-    "home": 7.638114729608603,
-    "away": 4.107893636092022,
-    "total": 11.746008365700625,
-    "lines": {
-     "8.5": 0.827615740619968,
-     "9.5": 0.7347141602629135,
-     "10.5": 0.6255918862568367
-    }
-   },
-   "cards": {
-    "total": 3.875,
-    "lines": {
-     "3.5": 0.5417358423467031,
-     "4.5": 0.34675835549513034,
-     "5.5": 0.1956508031851607
-    }
-   }
-  },
-  "msg_id": 7597,
-  "btn": 4,
-  "close": {
-   "BTTS_Y": 0.5824
-  },
-  "main_hit": true,
-  "bold_hit": null,
-  "value_hit": null
- },
- "401878519": {
-  "id": "401878519",
-  "div": "SC1",
-  "slug": "sco.2",
-  "kickoff": "2026-11-20T22:30:00+03:00",
-  "state": "pre",
-  "completed": false,
-  "status": "done",
-  "detail": "Scheduled",
-  "home": {
-   "id": "253",
-   "name": "Inverness Caledonian Thistle",
-   "short": "Inverness CT",
-   "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/253.png",
-   "color": "000099",
-   "alt": "1a1a1a",
-   "form": "DDWLW",
-   "score": "0",
-   "ru": "Инвернесс Каледониан Тисл"
-  },
-  "away": {
-   "id": "248",
-   "name": "Ayr United",
-   "short": "Ayr",
-   "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/248.png",
-   "color": "000099",
-   "alt": "C60000",
-   "form": "WLWWL",
-   "score": "0",
-   "ru": "Эйр Юнайтед"
-  },
-  "odds": {
-   "H": 1.606,
-   "D": 4.0,
-   "A": 5.25,
-   "line": 2.5,
-   "over": 1.8,
-   "under": 1.909,
-   "spread_h": [
-    -0.5,
-    1.556
-   ],
-   "spread_a": [
-    0.5,
-    2.25
-   ]
-  },
-  "venue": "Caledonian Stadium",
-  "clock": "0'",
-  "goals": [],
-  "open": {
-   "H": 0.5838
-  },
-  "top": false,
-  "lam": [
-   1.81554132078153,
-   0.9450338465976418
-  ],
-  "probs": {
-   "H": 0.5697896658535514,
-   "D": 0.2455989417597388,
-   "A": 0.1846113923867097,
-   "1X": 0.8153886076132902,
-   "12": 0.7544010582402613,
-   "X2": 0.4302103341464487,
-   "BTTS_Y": 0.5205212885541579,
-   "BTTS_N": 0.47947871144584214,
-   "O15": 0.7708050512025162,
-   "U15": 0.22919494879748387,
-   "O25": 0.5210942815536702,
-   "U25": 0.4789057184463298,
-   "O35": 0.29930201891513075,
-   "U35": 0.7006979810848692,
-   "H_O05": 0.8372496642499939,
-   "H_O15": 0.5417697047247907,
-   "A_O05": 0.6113335821521891,
-   "A_O15": 0.2440306622501456,
-   "H-1.5": 0.3325409031291213,
-   "A+1.5": 0.6674590968708786,
-   "A-1.5": 0.0652806072015229,
-   "H+1.5": 0.9347193927984773,
-   "H-2.5": 0.15430695782073425,
-   "A-2.5": 0.016988865230068113,
-   "H+2.5": 0.9830111347699321,
-   "A+2.5": 0.8456930421792657,
-   "O45": 0.1462334657759327,
-   "U45": 0.8537665342240673,
-   "H_O25": 0.2735416667343603,
-   "A_O25": 0.070473816619359,
-   "H&O15": 0.46362898059156593,
-   "A&O15": 0.13351517100318624,
-   "H&BTTS": 0.25306129015771517,
-   "A&BTTS": 0.0937990987886788,
-   "1X&U35": 0.5611748094061023,
-   "X2&U35": 0.3286743178893783,
-   "BTTS&O25": 0.40330818449552164,
-   "HT_H": 0.4147197971972674,
-   "HT_D": 0.41415567870050285,
-   "HT_A": 0.17112452410222984,
-   "HT_O05": 0.7032433922976702,
-   "HT_U05": 0.29675660770233037,
-   "HT_O15": 0.3606150422786397,
-   "HT_U15": 0.6393849577213601
-  },
-  "scores": [
-   [
-    "1:1",
-    0.11721310405863629
-   ],
-   [
-    "1:0",
-    0.1061606852619854
-   ],
-   [
-    "2:0",
-    0.10425123069208715
-   ]
-  ],
-  "main": {
-   "key": "H",
-   "label": "П1",
-   "p": 0.5698,
-   "odds": 1.59,
-   "est": false,
-   "stake": 1.0
-  },
-  "bold": {},
-  "value": null,
-  "odds_src": "среднее по букмекерам",
-  "model_w": 0.0,
-  "learned_n": 1226,
-  "stavka_signal": {
-   "status": "insufficient_opinions",
-   "weight": 0.0
-  },
-  "extra": {
-   "corners": {
-    "home": 6.446745640013164,
-    "away": 3.6298190194142816,
-    "total": 10.076564659427445,
-    "lines": {
-     "8.5": 0.675735092656451,
-     "9.5": 0.5516118813176354,
-     "10.5": 0.42653832483850085
-    }
-   },
-   "cards": {
-    "total": 3.966666666666667,
-    "lines": {
-     "3.5": 0.5599906711457463,
-     "4.5": 0.3646511404015398,
-     "5.5": 0.20968177934446897
-    }
-   }
-  },
-  "msg_id": 7599,
-  "btn": 4,
-  "close": {
-   "H": 0.5826
-  },
-  "main_hit": false,
-  "bold_hit": null,
-  "value_hit": null
- },
- "401934702": {
-  "id": "401934702",
-  "div": "URU",
-  "slug": "uru.1",
-  "kickoff": "2026-11-20T22:30:00+03:00",
-  "state": "pre",
-  "completed": false,
-  "status": "done",
-  "detail": "Scheduled",
-  "home": {
-   "id": "5490",
-   "name": "Cerro",
-   "short": "Cerro",
-   "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/5490.png",
-   "color": "6bc7f5",
-   "alt": "000000",
-   "form": "WLLDW",
-   "score": "0",
-   "ru": "Серро Портеньо"
-  },
-  "away": {
-   "id": "2684",
-   "name": "Nacional",
-   "short": "Nacional",
-   "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/2684.png",
-   "color": "345BBC",
-   "alt": "C60000",
-   "form": "DWLWW",
-   "score": "0",
-   "ru": "Насьонал"
-  },
-  "odds": {
-   "H": 4.5,
-   "D": 3.7,
-   "A": 1.69,
-   "line": 2.5,
-   "over": 1.87,
-   "under": 1.87,
-   "spread_h": [
-    0.5,
-    2.1
-   ],
-   "spread_a": [
-    -0.5,
-    1.667
-   ]
-  },
-  "venue": "Estadio Luis Tróccoli",
-  "clock": "0'",
-  "goals": [],
-  "open": {
-   "U25": 0.4977
-  },
-  "top": false,
-  "lam": [
-   0.9609496998480845,
-   1.7224517307119616
-  ],
-  "probs": {
-   "H": 0.20029733171560407,
-   "D": 0.25588600390806265,
-   "A": 0.5438166643763338,
-   "1X": 0.456183335623667,
-   "12": 0.7441139960919376,
-   "X2": 0.7997026682843963,
-   "BTTS_Y": 0.5162210099251492,
-   "BTTS_N": 0.483778990074851,
-   "O15": 0.7573594068836441,
-   "U15": 0.24264059311635605,
-   "O25": 0.50229971476205,
-   "U25": 0.49770028523795007,
-   "O35": 0.2822503313414495,
-   "U35": 0.7177496686585507,
-   "H_O05": 0.6174705721542191,
-   "H_O15": 0.24987903328275587,
-   "A_O05": 0.8213719675472431,
-   "A_O15": 0.5136938038953188,
-   "H-1.5": 0.07210187274453618,
-   "A+1.5": 0.9278981272554643,
-   "A-1.5": 0.30686299878584006,
-   "H+1.5": 0.6931370012141597,
-   "H-2.5": 0.01911879166488742,
-   "A-2.5": 0.1366353818256235,
-   "H+2.5": 0.8633646181743764,
-   "A+2.5": 0.9808812083351129,
-   "O45": 0.13463012377527542,
-   "U45": 0.8653698762247246,
-   "H_O25": 0.07326054381014215,
-   "A_O25": 0.24871341115305132,
-   "H&O15": 0.14368316955302998,
-   "A&O15": 0.4351687036462386,
-   "H&BTTS": 0.09904776948653432,
-   "A&BTTS": 0.23866570675423934,
-   "1X&U35": 0.3521368506002525,
-   "X2&U35": 0.5651391691082586,
-   "BTTS&O25": 0.39407312909887604,
-   "HT_H": 0.18025211809269787,
-   "HT_D": 0.42387659723994014,
-   "HT_A": 0.39587128466736227,
-   "HT_O05": 0.6930498034660214,
-   "HT_U05": 0.3069501965339789,
-   "HT_O15": 0.3481084833561193,
-   "HT_U15": 0.651891516643881
-  },
-  "scores": [
-   [
-    "1:1",
-    0.1221478808262731
-   ],
-   [
-    "0:1",
-    0.10864796073009461
-   ],
-   [
-    "0:2",
-    0.10136279802604992
-   ]
-  ],
-  "main": {
-   "key": "U25",
-   "label": "ТМ 2.5",
-   "p": 0.4977,
-   "odds": 1.87,
-   "est": false,
-   "stake": 1.0
-  },
-  "bold": {},
-  "value": null,
-  "odds_src": "DraftKings",
-  "model_w": 0.0,
-  "learned_n": 1226,
-  "stavka_signal": {
-   "status": "insufficient_opinions",
-   "weight": 0.0
-  },
-  "msg_id": 7601,
-  "btn": 4,
-  "close": {
-   "U25": 0.4977
-  },
-  "main_hit": true,
-  "bold_hit": null,
-  "value_hit": null
- },
- "401934685": {
-  "id": "401934685",
-  "div": "URU",
-  "slug": "uru.1",
-  "kickoff": "2026-11-20T22:30:00+03:00",
-  "state": "pre",
-  "completed": false,
-  "status": "done",
-  "detail": "Scheduled",
-  "home": {
-   "id": "5492",
-   "name": "Liverpool",
-   "short": "Liverpool",
-   "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/5492.png",
-   "color": "C60000",
-   "alt": "C60000",
-   "form": "WWWWD",
-   "score": "0",
-   "ru": "Ливерпуль"
-  },
-  "away": {
-   "id": "5501",
-   "name": "Montevideo Wanderers",
-   "short": "Wanderers",
-   "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/5501.png",
-   "color": "1a1a1a",
-   "alt": "fafafc",
-   "form": "WDLLL",
-   "score": "0",
-   "ru": "Монтевидео Уондерерс"
-  },
-  "odds": {
-   "H": 2.0,
-   "D": 3.45,
-   "A": 3.5,
-   "line": 2.5,
-   "over": 1.8,
-   "under": 1.952,
-   "spread_h": [
-    -0.5,
-    1.952
-   ],
-   "spread_a": [
-    0.5,
-    1.769
-   ]
-  },
-  "venue": "Estadio Luis Franzini",
-  "clock": "0'",
-  "goals": [],
-  "open": {
-   "H": 0.4658
-  },
-  "top": false,
-  "lam": [
-   1.5959195735253764,
-   1.157654219833956
-  ],
-  "probs": {
-   "H": 0.4657753204120432,
-   "D": 0.26712137938542563,
-   "A": 0.2671033002025314,
-   "1X": 0.7328966997974684,
-   "12": 0.7328786206145742,
-   "X2": 0.5342246795879569,
-   "BTTS_Y": 0.5561701735573612,
-   "BTTS_N": 0.44382982644263863,
-   "O15": 0.7703127937128258,
-   "U15": 0.2296872062871741,
-   "O25": 0.5194062554558316,
-   "U25": 0.48059374454416826,
-   "O35": 0.29775129341335954,
-   "U35": 0.7022487065866406,
-   "H_O05": 0.7972777722777863,
-   "H_O15": 0.47374940106723756,
-   "A_O05": 0.6857775725802464,
-   "A_O15": 0.3220166535113002,
-   "H-1.5": 0.2458145256092361,
-   "A+1.5": 0.7541854743907639,
-   "A-1.5": 0.1101328008952744,
-   "H+1.5": 0.8898671991047254,
-   "H-2.5": 0.10166314620789331,
-   "A-2.5": 0.03428298720128925,
-   "H+2.5": 0.9657170127987107,
-   "A+2.5": 0.8983368537921067,
-   "O45": 0.14516546975130706,
-   "U45": 0.8548345302486929,
-   "H_O25": 0.2155867709643877,
-   "A_O25": 0.11146197202587808,
-   "H&O15": 0.37353040848361974,
-   "A&O15": 0.202775834543109,
-   "H&BTTS": 0.224667721691618,
-   "A&BTTS": 0.13749590117964605,
-   "1X&U35": 0.5106455654227767,
-   "X2&U35": 0.3918199057321351,
-   "BTTS&O25": 0.4290682376884187,
-   "HT_H": 0.34884051706194147,
-   "HT_D": 0.4259088331939997,
-   "HT_A": 0.22525064974405887,
-   "HT_O05": 0.7016886356499202,
-   "HT_U05": 0.2983113643500795,
-   "HT_O15": 0.3601282765694571,
-   "HT_U15": 0.6398717234305427
-  },
-  "scores": [
-   [
-    "1:1",
-    0.12710193586894297
-   ],
-   [
-    "2:1",
-    0.09390947559546907
-   ],
-   [
-    "1:0",
-    0.0922449119284235
-   ]
-  ],
-  "main": {
-   "key": "H",
-   "label": "П1",
-   "p": 0.4658,
-   "odds": 2.0,
-   "est": false,
-   "stake": 1.0
-  },
-  "bold": {},
-  "value": null,
-  "odds_src": "DraftKings",
-  "model_w": 0.0,
-  "learned_n": 1226,
-  "stavka_signal": {
-   "status": "insufficient_opinions",
-   "weight": 0.0
-  },
-  "msg_id": 7603,
-  "btn": 4,
-  "close": {
-   "H": 0.4378
-  },
-  "main_hit": false,
-  "bold_hit": null,
-  "value_hit": null
- },
- "401934701": {
-  "status": "skipped",
-  "kickoff": "2026-11-20T22:30:00+03:00"
- },
  "401876395": {
   "id": "401876395",
   "div": "F1",
@@ -40748,20 +39774,2515 @@
   "btn": 4
  },
  "401879237": {
-  "status": "waiting_data",
-  "kickoff": "2026-11-23T23:00:00+03:00",
-  "sport": "football",
+  "id": "401879237",
   "div": "E0",
-  "reason": "no_qualified_real_market",
-  "retry_at": 1795462200.857284
+  "slug": "eng.1",
+  "kickoff": "2026-11-23T23:00:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "detail": "Scheduled",
+  "home": {
+   "id": "337",
+   "name": "Brentford",
+   "short": "Brentford",
+   "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/337.png",
+   "color": "f42727",
+   "alt": "0f1c3f",
+   "form": "DWLDL",
+   "score": "0",
+   "ru": "Брентфорд"
+  },
+  "away": {
+   "id": "368",
+   "name": "Everton",
+   "short": "Everton",
+   "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/368.png",
+   "color": "0606fa",
+   "alt": "ffffff",
+   "form": "DWWLL",
+   "score": "0",
+   "ru": "Эвертон"
+  },
+  "odds": {
+   "H": 2.2,
+   "D": 3.4,
+   "A": 3.3,
+   "line": 2.5,
+   "over": 1.87,
+   "under": 1.952,
+   "spread_h": [
+    -0.5,
+    2.1
+   ],
+   "spread_a": [
+    0.5,
+    1.645
+   ]
+  },
+  "venue": "Gtech Community Stadium",
+  "clock": "0'",
+  "goals": [],
+  "open": {
+   "H": 0.4348
+  },
+  "top": false,
+  "lam": [
+   1.600981058585642,
+   1.2556659542578998
+  ],
+  "probs": {
+   "H": 0.44512046208624245,
+   "D": 0.264247155633985,
+   "A": 0.29063238227977267,
+   "1X": 0.7093676177202274,
+   "12": 0.7357528443660152,
+   "X2": 0.5548795379137574,
+   "BTTS_Y": 0.5801174494479264,
+   "BTTS_N": 0.41988255055207363,
+   "O15": 0.7876336780826381,
+   "U15": 0.21236632191736177,
+   "O25": 0.543938570174705,
+   "U25": 0.45606142982529496,
+   "O35": 0.32068781172391597,
+   "U35": 0.6793121882760841,
+   "H_O05": 0.7983012492526448,
+   "H_O15": 0.4753853697657428,
+   "A_O05": 0.7151139082932695,
+   "A_O15": 0.35739214209553427,
+   "H-1.5": 0.23316960062962944,
+   "A+1.5": 0.7668303993703703,
+   "A-1.5": 0.12639035086448466,
+   "H+1.5": 0.8736096491355152,
+   "H-2.5": 0.09597309568120085,
+   "A-2.5": 0.04199492701882712,
+   "H+2.5": 0.9580050729811728,
+   "A+2.5": 0.9040269043187991,
+   "O45": 0.1612506586630405,
+   "U45": 0.8387493413369594,
+   "H_O25": 0.2168942664782157,
+   "A_O25": 0.13280262063978387,
+   "H&O15": 0.3623673423286453,
+   "A&O15": 0.2277214720220198,
+   "H&BTTS": 0.22693666228152407,
+   "A&BTTS": 0.15563592343442936,
+   "1X&U35": 0.4796180136450604,
+   "X2&U35": 0.39115162837585316,
+   "BTTS&O25": 0.4553622876051089,
+   "HT_H": 0.3385763974561015,
+   "HT_D": 0.41907767748861713,
+   "HT_A": 0.24234592505528108,
+   "HT_O05": 0.7144800562618547,
+   "HT_U05": 0.2855199437381458,
+   "HT_O15": 0.377033215732841,
+   "HT_U15": 0.6229667842671589
+  },
+  "scores": [
+   [
+    "1:1",
+    0.12475516184281764
+   ],
+   [
+    "2:1",
+    0.09246789401441542
+   ],
+   [
+    "1:0",
+    0.08275311975759715
+   ]
+  ],
+  "main": {
+   "key": "H",
+   "label": "П1",
+   "p": 0.4451,
+   "odds": 2.12,
+   "est": false,
+   "stake": 0.5,
+   "strategy": "external_trial",
+   "trial_expires_at": "2026-11-30T19:13:32.625360+00:00",
+   "probability_origin": "baseline_model",
+   "model_edge": -0.05634,
+   "source_count": 37,
+   "source_refs": [
+    {
+     "author": "/predictors/sasha-k",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/23-11-2026-brentford-everton",
+     "published_at": "2026-11-22T14:58:00+00:00",
+     "observed_at": "2026-11-23T01:31:21.910712+00:00",
+     "odds": 2.28,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/nikita-subin",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/23-11-2026-brentford-everton",
+     "published_at": "2026-11-22T15:33:00+00:00",
+     "observed_at": "2026-11-22T15:34:26.188970+00:00",
+     "odds": 2.28,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/vasilii-saxov",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/23-11-2026-brentford-everton",
+     "published_at": "2026-11-22T18:29:00+00:00",
+     "observed_at": "2026-11-22T18:33:10.716309+00:00",
+     "odds": 2.28,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/tatyana-ryaskina",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/23-11-2026-brentford-everton",
+     "published_at": "2026-11-22T19:02:00+00:00",
+     "observed_at": "2026-11-22T19:15:10.670676+00:00",
+     "odds": 2.28,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/maksimka-kaper",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/23-11-2026-brentford-everton",
+     "published_at": "2026-11-22T21:33:00+00:00",
+     "observed_at": "2026-11-22T21:41:27.923496+00:00",
+     "odds": 2.28,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/aleksandr-novikov-63",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/23-11-2026-brentford-everton",
+     "published_at": "2026-11-22T21:38:00+00:00",
+     "observed_at": "2026-11-22T21:41:27.923496+00:00",
+     "odds": 2.28,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/vladimir-nevozmutimyy",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/23-11-2026-brentford-everton",
+     "published_at": "2026-11-22T21:52:00+00:00",
+     "observed_at": "2026-11-22T22:03:27.479479+00:00",
+     "odds": 2.28,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/gennadiy-sovetskikh",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/23-11-2026-brentford-everton",
+     "published_at": "2026-11-22T23:16:00+00:00",
+     "observed_at": "2026-11-22T23:29:18.697660+00:00",
+     "odds": 2.28,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/elena-alieva",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/23-11-2026-brentford-everton",
+     "published_at": "2026-11-22T23:27:00+00:00",
+     "observed_at": "2026-11-22T23:51:18.309695+00:00",
+     "odds": 2.28,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/olga-64",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/23-11-2026-brentford-everton",
+     "published_at": "2026-11-22T23:31:00+00:00",
+     "observed_at": "2026-11-22T23:51:18.309695+00:00",
+     "odds": 2.28,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/timaeustereschencko",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/23-11-2026-brentford-everton",
+     "published_at": "2026-11-23T00:57:00+00:00",
+     "observed_at": "2026-11-23T01:11:21.435727+00:00",
+     "odds": 2.28,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/moro",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/23-11-2026-brentford-everton",
+     "published_at": "2026-11-23T02:15:00+00:00",
+     "observed_at": "2026-11-23T02:33:21.941888+00:00",
+     "odds": 2.28,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/ilya-kozhemyakin-4",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/23-11-2026-brentford-everton",
+     "published_at": "2026-11-23T03:11:00+00:00",
+     "observed_at": "2026-11-23T03:15:22.000816+00:00",
+     "odds": 2.32,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/aleksandr-saulov",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/23-11-2026-brentford-everton",
+     "published_at": "2026-11-23T03:28:00+00:00",
+     "observed_at": "2026-11-23T03:37:21.292710+00:00",
+     "odds": 2.32,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/odu-van-cik",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/23-11-2026-brentford-everton",
+     "published_at": "2026-11-23T03:34:00+00:00",
+     "observed_at": "2026-11-23T03:37:21.292710+00:00",
+     "odds": 2.32,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/aleksandr-mamaev-8",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/23-11-2026-brentford-everton",
+     "published_at": "2026-11-23T03:35:00+00:00",
+     "observed_at": "2026-11-23T03:37:21.292710+00:00",
+     "odds": 2.32,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/andrei-cepelev-2",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/23-11-2026-brentford-everton",
+     "published_at": "2026-11-23T04:31:00+00:00",
+     "observed_at": "2026-11-23T04:39:12.020997+00:00",
+     "odds": 2.32,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/andrei-malko-1",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/23-11-2026-brentford-everton",
+     "published_at": "2026-11-23T04:56:00+00:00",
+     "observed_at": "2026-11-23T04:59:12.617834+00:00",
+     "odds": 2.32,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/aleksandr-vanturin-7",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/23-11-2026-brentford-everton",
+     "published_at": "2026-11-23T05:11:00+00:00",
+     "observed_at": "2026-11-23T05:19:38.955271+00:00",
+     "odds": 2.32,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/venom-li",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/23-11-2026-brentford-everton",
+     "published_at": "2026-11-23T06:18:00+00:00",
+     "observed_at": "2026-11-23T06:23:39.710669+00:00",
+     "odds": 2.32,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/vse-budet-xoroso",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/23-11-2026-brentford-everton",
+     "published_at": "2026-11-23T06:18:00+00:00",
+     "observed_at": "2026-11-23T06:23:39.710669+00:00",
+     "odds": 2.32,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/vasilii-konkov",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/23-11-2026-brentford-everton",
+     "published_at": "2026-11-23T06:40:00+00:00",
+     "observed_at": "2026-11-23T08:27:40.832796+00:00",
+     "odds": 2.32,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/vitaliy-zakharov-1",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/23-11-2026-brentford-everton",
+     "published_at": "2026-11-23T07:40:00+00:00",
+     "observed_at": "2026-11-23T07:47:40.660089+00:00",
+     "odds": 2.32,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/gleb-lapuxin-1",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/23-11-2026-brentford-everton",
+     "published_at": "2026-11-23T08:02:00+00:00",
+     "observed_at": "2026-11-23T08:07:40.767107+00:00",
+     "odds": 2.32,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/fail-akhmetov",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/23-11-2026-brentford-everton",
+     "published_at": "2026-11-23T08:02:00+00:00",
+     "observed_at": "2026-11-23T08:07:40.767107+00:00",
+     "odds": 2.32,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/sergei-kitaev-2-akk",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/23-11-2026-brentford-everton",
+     "published_at": "2026-11-23T09:44:00+00:00",
+     "observed_at": "2026-11-23T09:50:50.135566+00:00",
+     "odds": 2.32,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/vadim-fairuzov",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/23-11-2026-brentford-everton",
+     "published_at": "2026-11-23T09:45:00+00:00",
+     "observed_at": "2026-11-23T09:50:50.135566+00:00",
+     "odds": 2.32,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/anton-bordovskiy",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/23-11-2026-brentford-everton",
+     "published_at": "2026-11-23T11:25:00+00:00",
+     "observed_at": "2026-11-23T11:32:52.837429+00:00",
+     "odds": 2.32,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/viktoriy-sku",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/23-11-2026-brentford-everton",
+     "published_at": "2026-11-23T12:11:00+00:00",
+     "observed_at": "2026-11-23T12:14:53.651152+00:00",
+     "odds": 2.23,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/pavel-batyrsin-1",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/23-11-2026-brentford-everton",
+     "published_at": "2026-11-23T12:32:00+00:00",
+     "observed_at": "2026-11-23T12:34:53.667254+00:00",
+     "odds": 2.23,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/andrey-malko-1",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/23-11-2026-brentford-everton",
+     "published_at": "2026-11-23T13:15:00+00:00",
+     "observed_at": "2026-11-23T13:18:53.808089+00:00",
+     "odds": 2.23,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/uglovoi-multik",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/23-11-2026-brentford-everton",
+     "published_at": "2026-11-23T13:55:00+00:00",
+     "observed_at": "2026-11-23T14:00:53.686074+00:00",
+     "odds": 2.23,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/geralt-riviiskii",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/23-11-2026-brentford-everton",
+     "published_at": "2026-11-23T14:57:00+00:00",
+     "observed_at": "2026-11-23T15:05:19.977743+00:00",
+     "odds": 2.3,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/ilya-serbin-4",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/23-11-2026-brentford-everton",
+     "published_at": "2026-11-23T15:59:00+00:00",
+     "observed_at": "2026-11-23T16:05:21.163281+00:00",
+     "odds": 2.33,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/artem-bannikov-1",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/23-11-2026-brentford-everton",
+     "published_at": "2026-11-23T16:36:00+00:00",
+     "observed_at": "2026-11-23T16:45:21.704127+00:00",
+     "odds": 2.33,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/arsenii-paxomov-1",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/23-11-2026-brentford-everton",
+     "published_at": "2026-11-23T18:22:00+00:00",
+     "observed_at": "2026-11-23T18:27:22.836107+00:00",
+     "odds": 2.33,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/valek-valek",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/23-11-2026-brentford-everton",
+     "published_at": "2026-11-23T18:44:00+00:00",
+     "observed_at": "2026-11-23T18:50:00.735829+00:00",
+     "odds": 2.33,
+     "price_kind": "author_recorded"
+    }
+   ]
+  },
+  "bold": {},
+  "value": null,
+  "odds_src": "среднее по букмекерам",
+  "model_w": 0.0,
+  "learned_n": 1510,
+  "stavka_signal": {
+   "status": "baseline_better",
+   "weight": 0.0,
+   "authors": 114,
+   "votes": {
+    "H": 37.27024580599002,
+    "A": 17.862351390461956,
+    "D": 25.913365195148504,
+    "O25": 16.93761226454309,
+    "U25": 16.117863942449944
+   },
+   "source": "https://stavka.tv",
+   "snapshot": "E0|401879237"
+  },
+  "research": {
+   "articles": [
+    {
+     "id": "188c4572d27a47428fae20c0",
+     "kind": "context",
+     "provider": "livesport",
+     "source": "https://www.livesport.ru/tips/football/2026/11/23/brentford-everton/",
+     "sport": "football",
+     "div": "E0",
+     "event_id": "401879237",
+     "kickoff": "2026-11-23T20:00:00+00:00",
+     "published_at": "2026-11-22T23:00:00+00:00",
+     "observed_at": "2026-11-23T18:17:42.927259+00:00",
+     "tables": [
+      [
+       [
+        "",
+        "Букмекер",
+        "1",
+        "x",
+        "2",
+        "Новым игрокам",
+        ""
+       ],
+       [
+        "",
+        "",
+        "2.31",
+        "3.47",
+        "3.03",
+        "Фрибет",
+        "30 000 ₽"
+       ],
+       [
+        "",
+        "",
+        "2.33",
+        "3.45",
+        "3.05",
+        "Фрибет всем",
+        "10 000 ₽"
+       ],
+       [
+        "",
+        "",
+        "2.07",
+        "3.50",
+        "3.30",
+        "Фрибет",
+        "1000 ₽"
+       ]
+      ]
+     ]
+    },
+    {
+     "id": "872dee668768de29e21446a7",
+     "kind": "context",
+     "provider": "metaratings",
+     "source": "https://metaratings.ru/prognozy/futbol/brentford-everton-prognoz-na-match-apl-23-noyabrya-2026-goda/",
+     "sport": "football",
+     "div": "E0",
+     "event_id": "401879237",
+     "kickoff": "2026-11-23T20:00:00+00:00",
+     "published_at": "2026-11-21T21:45:00+00:00",
+     "observed_at": "2026-11-23T18:17:48.408123+00:00",
+     "tables": []
+    }
+   ],
+   "dossier": {
+    "observed_at": "2026-11-23T19:22:18.675592+00:00",
+    "kickoff": "2026-11-23T20:00:00+00:00",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/summary?event=401879237",
+    "status": "available",
+    "facts": {
+     "table": {
+      "359": {
+       "rank": "1",
+       "gp": "11",
+       "w": "9",
+       "d": "1",
+       "l": "1",
+       "gd": "+10",
+       "pts": "28",
+       "of": 20,
+       "raw": {
+        "GP": "11",
+        "L": "1",
+        "GD": "+10",
+        "P": "28",
+        "D": "1",
+        "W": "9",
+        "R": "1",
+        "Total": "9-1-1"
+       },
+       "group": "English Premier League Standings"
+      },
+      "331": {
+       "rank": "2",
+       "gp": "11",
+       "w": "7",
+       "d": "1",
+       "l": "3",
+       "gd": "+17",
+       "pts": "22",
+       "of": 20,
+       "raw": {
+        "GP": "11",
+        "L": "3",
+        "GD": "+17",
+        "P": "22",
+        "D": "1",
+        "W": "7",
+        "R": "2",
+        "Total": "7-1-3"
+       },
+       "group": "English Premier League Standings"
+      },
+      "382": {
+       "rank": "3",
+       "gp": "11",
+       "w": "7",
+       "d": "1",
+       "l": "3",
+       "gd": "+8",
+       "pts": "22",
+       "of": 20,
+       "raw": {
+        "GP": "11",
+        "L": "3",
+        "GD": "+8",
+        "P": "22",
+        "D": "1",
+        "W": "7",
+        "R": "3",
+        "Total": "7-1-3"
+       },
+       "group": "English Premier League Standings"
+      },
+      "364": {
+       "rank": "4",
+       "gp": "11",
+       "w": "6",
+       "d": "3",
+       "l": "2",
+       "gd": "+8",
+       "pts": "21",
+       "of": 20,
+       "raw": {
+        "GP": "11",
+        "L": "2",
+        "GD": "+8",
+        "P": "21",
+        "D": "3",
+        "W": "6",
+        "R": "4",
+        "Total": "6-3-2"
+       },
+       "group": "English Premier League Standings"
+      },
+      "349": {
+       "rank": "5",
+       "gp": "11",
+       "w": "5",
+       "d": "3",
+       "l": "3",
+       "gd": "+4",
+       "pts": "18",
+       "of": 20,
+       "raw": {
+        "GP": "11",
+        "L": "3",
+        "GD": "+4",
+        "P": "18",
+        "D": "3",
+        "W": "5",
+        "R": "5",
+        "Total": "5-3-3"
+       },
+       "group": "English Premier League Standings"
+      },
+      "357": {
+       "rank": "6",
+       "gp": "11",
+       "w": "4",
+       "d": "5",
+       "l": "2",
+       "gd": "+5",
+       "pts": "17",
+       "of": 20,
+       "raw": {
+        "GP": "11",
+        "L": "2",
+        "GD": "+5",
+        "P": "17",
+        "D": "5",
+        "W": "4",
+        "R": "6",
+        "Total": "4-5-2"
+       },
+       "group": "English Premier League Standings"
+      },
+      "368": {
+       "rank": "7",
+       "gp": "10",
+       "w": "4",
+       "d": "4",
+       "l": "2",
+       "gd": "+2",
+       "pts": "16",
+       "of": 20,
+       "raw": {
+        "GP": "10",
+        "L": "2",
+        "GD": "+2",
+        "P": "16",
+        "D": "4",
+        "W": "4",
+        "R": "7",
+        "Total": "4-4-2"
+       },
+       "group": "English Premier League Standings"
+      },
+      "363": {
+       "rank": "8",
+       "gp": "11",
+       "w": "5",
+       "d": "1",
+       "l": "5",
+       "gd": "0",
+       "pts": "16",
+       "of": 20,
+       "raw": {
+        "GP": "11",
+        "L": "5",
+        "GD": "0",
+        "P": "16",
+        "D": "1",
+        "W": "5",
+        "R": "8",
+        "Total": "5-1-5"
+       },
+       "group": "English Premier League Standings"
+      },
+      "367": {
+       "rank": "9",
+       "gp": "11",
+       "w": "4",
+       "d": "3",
+       "l": "4",
+       "gd": "+1",
+       "pts": "15",
+       "of": 20,
+       "raw": {
+        "GP": "11",
+        "L": "4",
+        "GD": "+1",
+        "P": "15",
+        "D": "3",
+        "W": "4",
+        "R": "9",
+        "Total": "4-3-4"
+       },
+       "group": "English Premier League Standings"
+      },
+      "337": {
+       "rank": "10",
+       "gp": "10",
+       "w": "3",
+       "d": "5",
+       "l": "2",
+       "gd": "+5",
+       "pts": "14",
+       "of": 20,
+       "raw": {
+        "GP": "10",
+        "L": "2",
+        "GD": "+5",
+        "P": "14",
+        "D": "5",
+        "W": "3",
+        "R": "10",
+        "Total": "3-5-2"
+       },
+       "group": "English Premier League Standings"
+      },
+      "306": {
+       "rank": "11",
+       "gp": "11",
+       "w": "3",
+       "d": "5",
+       "l": "3",
+       "gd": "+2",
+       "pts": "14",
+       "of": 20,
+       "raw": {
+        "GP": "11",
+        "L": "3",
+        "GD": "+2",
+        "P": "14",
+        "D": "5",
+        "W": "3",
+        "R": "11",
+        "Total": "3-5-3"
+       },
+       "group": "English Premier League Standings"
+      },
+      "362": {
+       "rank": "12",
+       "gp": "11",
+       "w": "3",
+       "d": "5",
+       "l": "3",
+       "gd": "-3",
+       "pts": "14",
+       "of": 20,
+       "raw": {
+        "GP": "11",
+        "L": "3",
+        "GD": "-3",
+        "P": "14",
+        "D": "5",
+        "W": "3",
+        "R": "12",
+        "Total": "3-5-3"
+       },
+       "group": "English Premier League Standings"
+      },
+      "361": {
+       "rank": "13",
+       "gp": "11",
+       "w": "3",
+       "d": "4",
+       "l": "4",
+       "gd": "-3",
+       "pts": "13",
+       "of": 20,
+       "raw": {
+        "GP": "11",
+        "L": "4",
+        "GD": "-3",
+        "P": "13",
+        "D": "4",
+        "W": "3",
+        "R": "13",
+        "Total": "3-4-4"
+       },
+       "group": "English Premier League Standings"
+      },
+      "388": {
+       "rank": "14",
+       "gp": "11",
+       "w": "4",
+       "d": "0",
+       "l": "7",
+       "gd": "-8",
+       "pts": "12",
+       "of": 20,
+       "raw": {
+        "GP": "11",
+        "L": "7",
+        "GD": "-8",
+        "P": "12",
+        "D": "0",
+        "W": "4",
+        "R": "14",
+        "Total": "4-0-7"
+       },
+       "group": "English Premier League Standings"
+      },
+      "370": {
+       "rank": "15",
+       "gp": "11",
+       "w": "2",
+       "d": "5",
+       "l": "4",
+       "gd": "-2",
+       "pts": "11",
+       "of": 20,
+       "raw": {
+        "GP": "11",
+        "L": "4",
+        "GD": "-2",
+        "P": "11",
+        "D": "5",
+        "W": "2",
+        "R": "15",
+        "Total": "2-5-4"
+       },
+       "group": "English Premier League Standings"
+      },
+      "373": {
+       "rank": "16",
+       "gp": "11",
+       "w": "3",
+       "d": "2",
+       "l": "6",
+       "gd": "-7",
+       "pts": "11",
+       "of": 20,
+       "raw": {
+        "GP": "11",
+        "L": "6",
+        "GD": "-7",
+        "P": "11",
+        "D": "2",
+        "W": "3",
+        "R": "16",
+        "Total": "3-2-6"
+       },
+       "group": "English Premier League Standings"
+      },
+      "393": {
+       "rank": "17",
+       "gp": "11",
+       "w": "2",
+       "d": "3",
+       "l": "6",
+       "gd": "-6",
+       "pts": "9",
+       "of": 20,
+       "raw": {
+        "GP": "11",
+        "L": "6",
+        "GD": "-6",
+        "P": "9",
+        "D": "3",
+        "W": "2",
+        "R": "17",
+        "Total": "2-3-6"
+       },
+       "group": "English Premier League Standings"
+      },
+      "366": {
+       "rank": "18",
+       "gp": "11",
+       "w": "2",
+       "d": "3",
+       "l": "6",
+       "gd": "-9",
+       "pts": "9",
+       "of": 20,
+       "raw": {
+        "GP": "11",
+        "L": "6",
+        "GD": "-9",
+        "P": "9",
+        "D": "3",
+        "W": "2",
+        "R": "18",
+        "Total": "2-3-6"
+       },
+       "group": "English Premier League Standings"
+      },
+      "360": {
+       "rank": "19",
+       "gp": "11",
+       "w": "1",
+       "d": "5",
+       "l": "5",
+       "gd": "-9",
+       "pts": "8",
+       "of": 20,
+       "raw": {
+        "GP": "11",
+        "L": "5",
+        "GD": "-9",
+        "P": "8",
+        "D": "5",
+        "W": "1",
+        "R": "19",
+        "Total": "1-5-5"
+       },
+       "group": "English Premier League Standings"
+      },
+      "384": {
+       "rank": "20",
+       "gp": "11",
+       "w": "2",
+       "d": "1",
+       "l": "8",
+       "gd": "-15",
+       "pts": "7",
+       "of": 20,
+       "raw": {
+        "GP": "11",
+        "L": "8",
+        "GD": "-15",
+        "P": "7",
+        "D": "1",
+        "W": "2",
+        "R": "20",
+        "Total": "2-1-8"
+       },
+       "group": "English Premier League Standings"
+      }
+     },
+     "last5": {
+      "337": [
+       {
+        "res": "L",
+        "gf": 1,
+        "ga": 2,
+        "opp": "Liverpool",
+        "home": true,
+        "date": "2026-10-17"
+       },
+       {
+        "res": "D",
+        "gf": 1,
+        "ga": 1,
+        "opp": "Hull City",
+        "home": false,
+        "date": "2026-10-25"
+       },
+       {
+        "res": "L",
+        "gf": 2,
+        "ga": 3,
+        "opp": "Sunderland",
+        "home": false,
+        "date": "2026-10-28"
+       },
+       {
+        "res": "W",
+        "gf": 2,
+        "ga": 0,
+        "opp": "Nottingham Forest",
+        "home": true,
+        "date": "2026-10-31"
+       },
+       {
+        "res": "L",
+        "gf": 0,
+        "ga": 2,
+        "opp": "Brighton & Hove Albion",
+        "home": false,
+        "date": "2026-11-08"
+       }
+      ],
+      "368": [
+       {
+        "res": "L",
+        "gf": 0,
+        "ga": 2,
+        "opp": "Chelsea",
+        "home": true,
+        "date": "2026-10-17"
+       },
+       {
+        "res": "L",
+        "gf": 0,
+        "ga": 2,
+        "opp": "Arsenal",
+        "home": false,
+        "date": "2026-10-24"
+       },
+       {
+        "res": "W",
+        "gf": 3,
+        "ga": 1,
+        "opp": "Newcastle United",
+        "home": true,
+        "date": "2026-10-29"
+       },
+       {
+        "res": "W",
+        "gf": 1,
+        "ga": 0,
+        "opp": "Newcastle United",
+        "home": false,
+        "date": "2026-11-02"
+       },
+       {
+        "res": "W",
+        "gf": 3,
+        "ga": 1,
+        "opp": "Coventry City",
+        "home": true,
+        "date": "2026-11-06"
+       }
+      ]
+     },
+     "h2h": [
+      {
+       "date": "2026-04-11",
+       "home_id": "337",
+       "hs": "2",
+       "as": "2"
+      },
+      {
+       "date": "2026-01-04",
+       "home_id": "368",
+       "hs": "2",
+       "as": "4"
+      },
+      {
+       "date": "2025-02-26",
+       "home_id": "337",
+       "hs": "1",
+       "as": "1"
+      },
+      {
+       "date": "2024-11-23",
+       "home_id": "368",
+       "hs": "0",
+       "as": "0"
+      },
+      {
+       "date": "2024-04-27",
+       "home_id": "368",
+       "hs": "1",
+       "as": "0"
+      }
+     ],
+     "lineups": {
+      "337": {
+       "formation": "4-2-3-1",
+       "starters": [
+        "Caoimhín Kelleher",
+        "Michael Kayode",
+        "Sepp van den Berg",
+        "Kristoffer Ajer",
+        "Keane Lewis-Potter",
+        "Jaidon Anthony",
+        "Vitaly Janelt",
+        "Mikkel Damsgaard",
+        "Yehor Yarmoliuk",
+        "Dango Ouattara",
+        "Callum Wilson"
+       ]
+      },
+      "368": {
+       "formation": "4-2-3-1",
+       "starters": [
+        "Jordan Pickford",
+        "Jake O'Brien",
+        "Vitaliy Mykolenko",
+        "James Tarkowski",
+        "Jarrad Branthwaite",
+        "Kiernan Dewsbury-Hall",
+        "Harrison Armstrong",
+        "Merlin Röhl",
+        "Tyrique George",
+        "James Garner",
+        "Thierno Barry"
+       ]
+      }
+     },
+     "leaders": {
+      "337": [
+       [
+        "Goals",
+        "Kevin Schade",
+        "Matches: 10, Goals: 3"
+       ],
+       [
+        "Assists",
+        "Igor Thiago",
+        "Matches: 10, Assists: 2"
+       ],
+       [
+        "Total Shots",
+        "Igor Thiago",
+        "21"
+       ]
+      ],
+      "368": [
+       [
+        "Goals",
+        "Thierno Barry",
+        "Matches: 10, Goals: 6"
+       ],
+       [
+        "Assists",
+        "James Tarkowski",
+        "Matches: 10, Assists: 1"
+       ],
+       [
+        "Total Shots",
+        "Thierno Barry",
+        "36"
+       ]
+      ]
+     },
+     "venue": "Gtech Community Stadium",
+     "city": "Brentford"
+    }
+   }
+  },
+  "extra": {
+   "corners": {
+    "home": 4.279612131464476,
+    "away": 4.963600773320445,
+    "total": 9.24321290478492,
+    "lines": {
+     "8.5": 0.575932815091958,
+     "9.5": 0.444601825627289,
+     "10.5": 0.3232097959654885
+    }
+   },
+   "cards": {
+    "total": 3.825,
+    "lines": {
+     "3.5": 0.5316163148244186,
+     "4.5": 0.3370184266128835,
+     "5.5": 0.18815104213105893
+    }
+   }
+  },
+  "msg_id": 9205,
+  "btn": 4
  },
  "401882802": {
-  "status": "waiting_data",
-  "kickoff": "2026-11-23T23:00:00+03:00",
-  "sport": "football",
+  "id": "401882802",
   "div": "SP1",
-  "reason": "no_qualified_real_market",
-  "retry_at": 1795462200.857284
+  "slug": "esp.1",
+  "kickoff": "2026-11-23T23:00:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "detail": "Scheduled",
+  "home": {
+   "id": "1538",
+   "name": "Levante",
+   "short": "Levante",
+   "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/1538.png",
+   "color": "C8142F",
+   "alt": "000000",
+   "form": "WDLLW",
+   "score": "0",
+   "ru": "Леванте"
+  },
+  "away": {
+   "id": "3751",
+   "name": "Elche",
+   "short": "Elche",
+   "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/3751.png",
+   "color": "288A00",
+   "alt": "4B2B67",
+   "form": "LLWWD",
+   "score": "0",
+   "ru": "Эльче"
+  },
+  "odds": {
+   "H": 2.1,
+   "D": 3.55,
+   "A": 3.4,
+   "line": 2.5,
+   "over": 1.714,
+   "under": 2.1,
+   "spread_h": [
+    -0.5,
+    2.0
+   ],
+   "spread_a": [
+    0.5,
+    1.714
+   ]
+  },
+  "venue": "Estadi Ciutat de València",
+  "clock": "0'",
+  "goals": [],
+  "open": {
+   "H": 0.4549
+  },
+  "top": false,
+  "lam": [
+   1.6162311340328854,
+   1.3139434820908238
+  ],
+  "probs": {
+   "H": 0.4362600411704578,
+   "D": 0.2613548140395936,
+   "A": 0.3023851447899482,
+   "1X": 0.6976148552100517,
+   "12": 0.738645185960407,
+   "X2": 0.563739958829542,
+   "BTTS_Y": 0.595053536219225,
+   "BTTS_N": 0.4049464637807756,
+   "O15": 0.7992467881115806,
+   "U15": 0.20075321188841977,
+   "O25": 0.5609849830638614,
+   "U25": 0.439015016936139,
+   "O35": 0.33712774335027,
+   "U35": 0.6628722566497298,
+   "H_O05": 0.8013538157862983,
+   "H_O15": 0.48029566820328057,
+   "A_O05": 0.7312418380316911,
+   "A_O15": 0.37810880285472065,
+   "H-1.5": 0.22860013156487832,
+   "A+1.5": 0.7713998684351219,
+   "A-1.5": 0.13526077743591855,
+   "H+1.5": 0.8647392225640816,
+   "H-2.5": 0.0943774437022134,
+   "A-2.5": 0.046550821334816674,
+   "H+2.5": 0.9534491786651835,
+   "A+2.5": 0.9056225562977869,
+   "O45": 0.17314254298919923,
+   "U45": 0.8268574570108008,
+   "H_O25": 0.22084358122398215,
+   "A_O25": 0.14611037791385612,
+   "H&O15": 0.35904314259103887,
+   "A&O15": 0.2413067138821831,
+   "H&BTTS": 0.2299597616033845,
+   "A&BTTS": 0.16619684297748188,
+   "1X&U35": 0.4610386139369571,
+   "X2&U35": 0.3867378622882376,
+   "BTTS&O25": 0.4726071990449949,
+   "HT_H": 0.3347899641644057,
+   "HT_D": 0.4139383028410541,
+   "HT_A": 0.25127173299454014,
+   "HT_O05": 0.7232814117233599,
+   "HT_U05": 0.27671858827664003,
+   "HT_O15": 0.38894809681169146,
+   "HT_U15": 0.6110519031883086
+  },
+  "scores": [
+   [
+    "1:1",
+    0.12244633717422931
+   ],
+   [
+    "2:1",
+    0.09162110295799893
+   ],
+   [
+    "1:0",
+    0.07721689857941895
+   ]
+  ],
+  "main": {
+   "key": "H",
+   "label": "П1",
+   "p": 0.4363,
+   "odds": 2.15,
+   "est": false,
+   "stake": 0.5,
+   "strategy": "external_trial",
+   "trial_expires_at": "2026-11-30T19:13:32.625360+00:00",
+   "probability_origin": "baseline_model",
+   "model_edge": -0.06204,
+   "source_count": 50,
+   "source_refs": [
+    {
+     "author": "/predictors/demid-b",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/23-11-2026-levante-ud-elche-cf",
+     "published_at": "2026-11-22T16:10:00+00:00",
+     "observed_at": "2026-11-22T16:17:56.025364+00:00",
+     "odds": 2.2,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/vasilii-saxov",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/23-11-2026-levante-ud-elche-cf",
+     "published_at": "2026-11-22T18:29:00+00:00",
+     "observed_at": "2026-11-22T18:33:10.716309+00:00",
+     "odds": 2.2,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/ilyukha-murzaleev",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/23-11-2026-levante-ud-elche-cf",
+     "published_at": "2026-11-22T19:29:00+00:00",
+     "observed_at": "2026-11-22T19:35:10.864966+00:00",
+     "odds": 2.2,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/anton-sorin-1",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/23-11-2026-levante-ud-elche-cf",
+     "published_at": "2026-11-22T20:05:00+00:00",
+     "observed_at": "2026-11-22T20:19:10.542534+00:00",
+     "odds": 2.2,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/maksim-builov",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/23-11-2026-levante-ud-elche-cf",
+     "published_at": "2026-11-22T20:42:00+00:00",
+     "observed_at": "2026-11-22T21:01:10.518666+00:00",
+     "odds": 2.2,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/deniska-rediska",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/23-11-2026-levante-ud-elche-cf",
+     "published_at": "2026-11-22T21:17:00+00:00",
+     "observed_at": "2026-11-22T21:21:27.221542+00:00",
+     "odds": 2.2,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/nikolay-mantyshev",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/23-11-2026-levante-ud-elche-cf",
+     "published_at": "2026-11-22T21:18:00+00:00",
+     "observed_at": "2026-11-22T21:21:27.221542+00:00",
+     "odds": 2.2,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/maksimka-kaper",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/23-11-2026-levante-ud-elche-cf",
+     "published_at": "2026-11-22T21:34:00+00:00",
+     "observed_at": "2026-11-22T21:41:27.923496+00:00",
+     "odds": 2.2,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/aleksandr-novikov-63",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/23-11-2026-levante-ud-elche-cf",
+     "published_at": "2026-11-22T21:38:00+00:00",
+     "observed_at": "2026-11-22T21:41:27.923496+00:00",
+     "odds": 2.2,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/kanikuly-bonifaciia-4",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/23-11-2026-levante-ud-elche-cf",
+     "published_at": "2026-11-22T21:38:00+00:00",
+     "observed_at": "2026-11-22T21:41:27.923496+00:00",
+     "odds": 2.2,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/eduard-fedorov",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/23-11-2026-levante-ud-elche-cf",
+     "published_at": "2026-11-22T21:39:00+00:00",
+     "observed_at": "2026-11-22T21:41:27.923496+00:00",
+     "odds": 2.2,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/vladimir-nevozmutimyy",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/23-11-2026-levante-ud-elche-cf",
+     "published_at": "2026-11-22T21:56:00+00:00",
+     "observed_at": "2026-11-22T22:03:27.479479+00:00",
+     "odds": 2.2,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/evgeniy-krasnykh",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/23-11-2026-levante-ud-elche-cf",
+     "published_at": "2026-11-22T22:25:00+00:00",
+     "observed_at": "2026-11-22T22:47:18.194811+00:00",
+     "odds": 2.2,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "expert:роман петренко",
+     "provider": "livesport",
+     "source": "https://www.livesport.ru/tips/football/2026/11/23/levante-elche/",
+     "published_at": "2026-11-22T23:00:00+00:00",
+     "observed_at": "2026-11-23T18:17:45.167540+00:00",
+     "odds": 2.15,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/timaeustereschencko",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/23-11-2026-levante-ud-elche-cf",
+     "published_at": "2026-11-23T00:58:00+00:00",
+     "observed_at": "2026-11-23T01:11:21.435727+00:00",
+     "odds": 2.2,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/maks-mel-1",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/23-11-2026-levante-ud-elche-cf",
+     "published_at": "2026-11-23T01:40:00+00:00",
+     "observed_at": "2026-11-23T01:53:21.353416+00:00",
+     "odds": 2.2,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/tsizhi-ihor",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/23-11-2026-levante-ud-elche-cf",
+     "published_at": "2026-11-23T02:22:00+00:00",
+     "observed_at": "2026-11-23T02:33:21.941888+00:00",
+     "odds": 2.2,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/nenastradamus-zatovanga",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/23-11-2026-levante-ud-elche-cf",
+     "published_at": "2026-11-23T03:04:00+00:00",
+     "observed_at": "2026-11-23T03:15:22.000816+00:00",
+     "odds": 2.2,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/nikodim-kadilov",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/23-11-2026-levante-ud-elche-cf",
+     "published_at": "2026-11-23T03:06:00+00:00",
+     "observed_at": "2026-11-23T03:15:22.000816+00:00",
+     "odds": 2.2,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/yurii-mititel",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/23-11-2026-levante-ud-elche-cf",
+     "published_at": "2026-11-23T03:09:00+00:00",
+     "observed_at": "2026-11-23T03:15:22.000816+00:00",
+     "odds": 2.2,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/aleksandr-saulov",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/23-11-2026-levante-ud-elche-cf",
+     "published_at": "2026-11-23T03:29:00+00:00",
+     "observed_at": "2026-11-23T03:37:21.292710+00:00",
+     "odds": 2.2,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/zuec",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/23-11-2026-levante-ud-elche-cf",
+     "published_at": "2026-11-23T03:30:00+00:00",
+     "observed_at": "2026-11-23T03:37:21.292710+00:00",
+     "odds": 2.2,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/valeriy-kulikov",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/23-11-2026-levante-ud-elche-cf",
+     "published_at": "2026-11-23T03:34:00+00:00",
+     "observed_at": "2026-11-23T03:37:21.292710+00:00",
+     "odds": 2.2,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/evgenii-kalasnik",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/23-11-2026-levante-ud-elche-cf",
+     "published_at": "2026-11-23T04:19:00+00:00",
+     "observed_at": "2026-11-23T04:39:12.020997+00:00",
+     "odds": 2.2,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/aleksandr-vanturin-7",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/23-11-2026-levante-ud-elche-cf",
+     "published_at": "2026-11-23T05:12:00+00:00",
+     "observed_at": "2026-11-23T05:19:38.955271+00:00",
+     "odds": 2.2,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/vladimir-troshchenko",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/23-11-2026-levante-ud-elche-cf",
+     "published_at": "2026-11-23T06:00:00+00:00",
+     "observed_at": "2026-11-23T06:03:38.117757+00:00",
+     "odds": 2.2,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/vitaliy-zakharov-1",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/23-11-2026-levante-ud-elche-cf",
+     "published_at": "2026-11-23T07:39:00+00:00",
+     "observed_at": "2026-11-23T07:47:40.660089+00:00",
+     "odds": 2.2,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/fail-akhmetov",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/23-11-2026-levante-ud-elche-cf",
+     "published_at": "2026-11-23T08:04:00+00:00",
+     "observed_at": "2026-11-23T08:07:40.767107+00:00",
+     "odds": 2.2,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/golden-boy-1",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/23-11-2026-levante-ud-elche-cf",
+     "published_at": "2026-11-23T08:59:00+00:00",
+     "observed_at": "2026-11-23T09:09:41.675913+00:00",
+     "odds": 2.2,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/xxz-xxz",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/23-11-2026-levante-ud-elche-cf",
+     "published_at": "2026-11-23T09:03:00+00:00",
+     "observed_at": "2026-11-23T09:09:41.675913+00:00",
+     "odds": 2.2,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/putrov-aleksandr",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/23-11-2026-levante-ud-elche-cf",
+     "published_at": "2026-11-23T09:26:00+00:00",
+     "observed_at": "2026-11-23T09:30:20.909343+00:00",
+     "odds": 2.2,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/artem-kaperov",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/23-11-2026-levante-ud-elche-cf",
+     "published_at": "2026-11-23T09:30:00+00:00",
+     "observed_at": "2026-11-23T09:30:20.909343+00:00",
+     "odds": 2.2,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/georgii-domnikov",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/23-11-2026-levante-ud-elche-cf",
+     "published_at": "2026-11-23T09:39:00+00:00",
+     "observed_at": "2026-11-23T11:54:52.185746+00:00",
+     "odds": 2.2,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/dencik-a-familiya-redkaya",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/23-11-2026-levante-ud-elche-cf",
+     "published_at": "2026-11-23T11:09:00+00:00",
+     "observed_at": "2026-11-23T11:12:51.453896+00:00",
+     "odds": 2.2,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/vitalij-krichfaluschij",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/23-11-2026-levante-ud-elche-cf",
+     "published_at": "2026-11-23T11:47:00+00:00",
+     "observed_at": "2026-11-23T11:54:52.185746+00:00",
+     "odds": 2.2,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/gleb-evstratov-1",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/23-11-2026-levante-ud-elche-cf",
+     "published_at": "2026-11-23T11:50:00+00:00",
+     "observed_at": "2026-11-23T11:54:52.185746+00:00",
+     "odds": 2.2,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/ektor-trast",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/23-11-2026-levante-ud-elche-cf",
+     "published_at": "2026-11-23T13:54:00+00:00",
+     "observed_at": "2026-11-23T14:00:53.686074+00:00",
+     "odds": 2.2,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/valya-zena",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/23-11-2026-levante-ud-elche-cf",
+     "published_at": "2026-11-23T13:54:00+00:00",
+     "observed_at": "2026-11-23T14:00:53.686074+00:00",
+     "odds": 2.2,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/uglovoi-multik",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/23-11-2026-levante-ud-elche-cf",
+     "published_at": "2026-11-23T13:57:00+00:00",
+     "observed_at": "2026-11-23T14:00:53.686074+00:00",
+     "odds": 2.2,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/vyacheslav-lelya",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/23-11-2026-levante-ud-elche-cf",
+     "published_at": "2026-11-23T14:37:00+00:00",
+     "observed_at": "2026-11-23T14:43:27.244203+00:00",
+     "odds": 2.2,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/ares-avetisyan",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/23-11-2026-levante-ud-elche-cf",
+     "published_at": "2026-11-23T14:58:00+00:00",
+     "observed_at": "2026-11-23T15:05:19.977743+00:00",
+     "odds": 2.2,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/geralt-riviiskii",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/23-11-2026-levante-ud-elche-cf",
+     "published_at": "2026-11-23T14:59:00+00:00",
+     "observed_at": "2026-11-23T15:05:19.977743+00:00",
+     "odds": 2.2,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/veniamin-skotarev",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/23-11-2026-levante-ud-elche-cf",
+     "published_at": "2026-11-23T15:41:00+00:00",
+     "observed_at": "2026-11-23T15:45:21.147897+00:00",
+     "odds": 2.23,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/ruslan-afandiyev",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/23-11-2026-levante-ud-elche-cf",
+     "published_at": "2026-11-23T16:32:00+00:00",
+     "observed_at": "2026-11-23T16:45:21.704127+00:00",
+     "odds": 2.23,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/aleksandr-petrov-200",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/23-11-2026-levante-ud-elche-cf",
+     "published_at": "2026-11-23T17:06:00+00:00",
+     "observed_at": "2026-11-23T17:07:21.410618+00:00",
+     "odds": 2.23,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/ali-aslan",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/23-11-2026-levante-ud-elche-cf",
+     "published_at": "2026-11-23T17:23:00+00:00",
+     "observed_at": "2026-11-23T17:29:21.936116+00:00",
+     "odds": 2.23,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/misa-steskin",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/23-11-2026-levante-ud-elche-cf",
+     "published_at": "2026-11-23T17:39:00+00:00",
+     "observed_at": "2026-11-23T17:47:21.950385+00:00",
+     "odds": 2.23,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/aleksei-borisov-15",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/23-11-2026-levante-ud-elche-cf",
+     "published_at": "2026-11-23T18:04:00+00:00",
+     "observed_at": "2026-11-23T18:07:22.210171+00:00",
+     "odds": 2.23,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/ivan-yavnov",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/23-11-2026-levante-ud-elche-cf",
+     "published_at": "2026-11-23T18:05:00+00:00",
+     "observed_at": "2026-11-23T18:07:22.210171+00:00",
+     "odds": 2.23,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/roman-lakomov",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/23-11-2026-levante-ud-elche-cf",
+     "published_at": "2026-11-23T18:44:00+00:00",
+     "observed_at": "2026-11-23T18:50:00.735829+00:00",
+     "odds": 2.23,
+     "price_kind": "author_recorded"
+    }
+   ]
+  },
+  "bold": {},
+  "value": null,
+  "odds_src": "среднее по букмекерам",
+  "model_w": 0.0,
+  "learned_n": 1510,
+  "stavka_signal": {
+   "status": "baseline_better",
+   "weight": 0.0,
+   "authors": 99,
+   "votes": {
+    "D": 24.949350277790213,
+    "H": 49.66873514385142,
+    "A": 3.9915520997618907,
+    "U25": 11.050880447511629,
+    "O25": 9.968677276017734
+   },
+   "source": "https://stavka.tv",
+   "snapshot": "SP1|401882802"
+  },
+  "research": {
+   "articles": [
+    {
+     "id": "694bbb3fcf241e9344a20204",
+     "kind": "context",
+     "provider": "livesport",
+     "source": "https://www.livesport.ru/tips/football/2026/11/23/levante-elche/",
+     "sport": "football",
+     "div": "SP1",
+     "event_id": "401882802",
+     "kickoff": "2026-11-23T20:00:00+00:00",
+     "published_at": "2026-11-22T23:00:00+00:00",
+     "observed_at": "2026-11-23T18:17:45.167540+00:00",
+     "tables": [
+      [
+       [
+        "",
+        "Букмекер",
+        "1",
+        "x",
+        "2",
+        "Новым игрокам",
+        ""
+       ],
+       [
+        "",
+        "",
+        "2.17",
+        "3.65",
+        "3.18",
+        "Фрибет",
+        "30 000 ₽"
+       ],
+       [
+        "",
+        "",
+        "2.16",
+        "3.60",
+        "3.25",
+        "Фрибет всем",
+        "10 000 ₽"
+       ],
+       [
+        "",
+        "",
+        "2.19",
+        "3.60",
+        "3.15",
+        "Фрибет",
+        "1000 ₽"
+       ]
+      ]
+     ]
+    },
+    {
+     "id": "bc7733249b8ca436bd0f20e4",
+     "kind": "context",
+     "provider": "metaratings",
+     "source": "https://metaratings.ru/prognozy/futbol/levante-elche-prognoz-na-match-la-ligi-23-noyabrya-2026-goda/",
+     "sport": "football",
+     "div": "SP1",
+     "event_id": "401882802",
+     "kickoff": "2026-11-23T20:00:00+00:00",
+     "published_at": "2026-11-22T09:16:10+00:00",
+     "observed_at": "2026-11-23T18:17:49.531783+00:00",
+     "tables": []
+    }
+   ],
+   "dossier": {
+    "observed_at": "2026-11-23T19:24:18.563174+00:00",
+    "kickoff": "2026-11-23T20:00:00+00:00",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/summary?event=401882802",
+    "status": "available",
+    "facts": {
+     "table": {
+      "83": {
+       "rank": "1",
+       "gp": "13",
+       "w": "12",
+       "d": "0",
+       "l": "1",
+       "gd": "+36",
+       "pts": "36",
+       "of": 20,
+       "raw": {
+        "GP": "13",
+        "L": "1",
+        "GD": "+36",
+        "P": "36",
+        "D": "0",
+        "W": "12",
+        "R": "1",
+        "Total": "12-0-1"
+       },
+       "group": "Spanish LALIGA Standings"
+      },
+      "86": {
+       "rank": "2",
+       "gp": "13",
+       "w": "11",
+       "d": "0",
+       "l": "2",
+       "gd": "+22",
+       "pts": "33",
+       "of": 20,
+       "raw": {
+        "GP": "13",
+        "L": "2",
+        "GD": "+22",
+        "P": "33",
+        "D": "0",
+        "W": "11",
+        "R": "2",
+        "Total": "11-0-2"
+       },
+       "group": "Spanish LALIGA Standings"
+      },
+      "1068": {
+       "rank": "3",
+       "gp": "13",
+       "w": "10",
+       "d": "1",
+       "l": "2",
+       "gd": "+16",
+       "pts": "31",
+       "of": 20,
+       "raw": {
+        "GP": "13",
+        "L": "2",
+        "GD": "+16",
+        "P": "31",
+        "D": "1",
+        "W": "10",
+        "R": "3",
+        "Total": "10-1-2"
+       },
+       "group": "Spanish LALIGA Standings"
+      },
+      "244": {
+       "rank": "4",
+       "gp": "13",
+       "w": "8",
+       "d": "3",
+       "l": "2",
+       "gd": "+5",
+       "pts": "27",
+       "of": 20,
+       "raw": {
+        "GP": "13",
+        "L": "2",
+        "GD": "+5",
+        "P": "27",
+        "D": "3",
+        "W": "8",
+        "R": "4",
+        "Total": "8-3-2"
+       },
+       "group": "Spanish LALIGA Standings"
+      },
+      "89": {
+       "rank": "5",
+       "gp": "13",
+       "w": "7",
+       "d": "1",
+       "l": "5",
+       "gd": "0",
+       "pts": "22",
+       "of": 20,
+       "raw": {
+        "GP": "13",
+        "L": "5",
+        "GD": "0",
+        "P": "22",
+        "D": "1",
+        "W": "7",
+        "R": "5",
+        "Total": "7-1-5"
+       },
+       "group": "Spanish LALIGA Standings"
+      },
+      "243": {
+       "rank": "6",
+       "gp": "13",
+       "w": "5",
+       "d": "4",
+       "l": "4",
+       "gd": "-2",
+       "pts": "19",
+       "of": 20,
+       "raw": {
+        "GP": "13",
+        "L": "4",
+        "GD": "-2",
+        "P": "19",
+        "D": "4",
+        "W": "5",
+        "R": "6",
+        "Total": "5-4-4"
+       },
+       "group": "Spanish LALIGA Standings"
+      },
+      "87": {
+       "rank": "7",
+       "gp": "13",
+       "w": "5",
+       "d": "2",
+       "l": "6",
+       "gd": "-12",
+       "pts": "17",
+       "of": 20,
+       "raw": {
+        "GP": "13",
+        "L": "6",
+        "GD": "-12",
+        "P": "17",
+        "D": "2",
+        "W": "5",
+        "R": "7",
+        "Total": "5-2-6"
+       },
+       "group": "Spanish LALIGA Standings"
+      },
+      "93": {
+       "rank": "8",
+       "gp": "12",
+       "w": "4",
+       "d": "4",
+       "l": "4",
+       "gd": "+3",
+       "pts": "16",
+       "of": 20,
+       "raw": {
+        "GP": "12",
+        "L": "4",
+        "GD": "+3",
+        "P": "16",
+        "D": "4",
+        "W": "4",
+        "R": "8",
+        "Total": "4-4-4"
+       },
+       "group": "Spanish LALIGA Standings"
+      },
+      "96": {
+       "rank": "9",
+       "gp": "13",
+       "w": "4",
+       "d": "4",
+       "l": "5",
+       "gd": "0",
+       "pts": "16",
+       "of": 20,
+       "raw": {
+        "GP": "13",
+        "L": "5",
+        "GD": "0",
+        "P": "16",
+        "D": "4",
+        "W": "4",
+        "R": "9",
+        "Total": "4-4-5"
+       },
+       "group": "Spanish LALIGA Standings"
+      },
+      "102": {
+       "rank": "10",
+       "gp": "13",
+       "w": "4",
+       "d": "3",
+       "l": "6",
+       "gd": "+1",
+       "pts": "15",
+       "of": 20,
+       "raw": {
+        "GP": "13",
+        "L": "6",
+        "GD": "+1",
+        "P": "15",
+        "D": "3",
+        "W": "4",
+        "R": "10",
+        "Total": "4-3-6"
+       },
+       "group": "Spanish LALIGA Standings"
+      },
+      "88": {
+       "rank": "11",
+       "gp": "13",
+       "w": "4",
+       "d": "3",
+       "l": "6",
+       "gd": "0",
+       "pts": "15",
+       "of": 20,
+       "raw": {
+        "GP": "13",
+        "L": "6",
+        "GD": "0",
+        "P": "15",
+        "D": "3",
+        "W": "4",
+        "R": "11",
+        "Total": "4-3-6"
+       },
+       "group": "Spanish LALIGA Standings"
+      },
+      "90": {
+       "rank": "12",
+       "gp": "13",
+       "w": "3",
+       "d": "6",
+       "l": "4",
+       "gd": "-1",
+       "pts": "15",
+       "of": 20,
+       "raw": {
+        "GP": "13",
+        "L": "4",
+        "GD": "-1",
+        "P": "15",
+        "D": "6",
+        "W": "3",
+        "R": "12",
+        "Total": "3-6-4"
+       },
+       "group": "Spanish LALIGA Standings"
+      },
+      "97": {
+       "rank": "13",
+       "gp": "13",
+       "w": "4",
+       "d": "3",
+       "l": "6",
+       "gd": "-10",
+       "pts": "15",
+       "of": 20,
+       "raw": {
+        "GP": "13",
+        "L": "6",
+        "GD": "-10",
+        "P": "15",
+        "D": "3",
+        "W": "4",
+        "R": "13",
+        "Total": "4-3-6"
+       },
+       "group": "Spanish LALIGA Standings"
+      },
+      "85": {
+       "rank": "14",
+       "gp": "13",
+       "w": "2",
+       "d": "7",
+       "l": "4",
+       "gd": "-1",
+       "pts": "13",
+       "of": 20,
+       "raw": {
+        "GP": "13",
+        "L": "4",
+        "GD": "-1",
+        "P": "13",
+        "D": "7",
+        "W": "2",
+        "R": "14",
+        "Total": "2-7-4"
+       },
+       "group": "Spanish LALIGA Standings"
+      },
+      "101": {
+       "rank": "15",
+       "gp": "12",
+       "w": "3",
+       "d": "3",
+       "l": "6",
+       "gd": "-7",
+       "pts": "12",
+       "of": 20,
+       "raw": {
+        "GP": "12",
+        "L": "6",
+        "GD": "-7",
+        "P": "12",
+        "D": "3",
+        "W": "3",
+        "R": "15",
+        "Total": "3-3-6"
+       },
+       "group": "Spanish LALIGA Standings"
+      },
+      "94": {
+       "rank": "16",
+       "gp": "13",
+       "w": "3",
+       "d": "3",
+       "l": "7",
+       "gd": "-11",
+       "pts": "12",
+       "of": 20,
+       "raw": {
+        "GP": "13",
+        "L": "7",
+        "GD": "-11",
+        "P": "12",
+        "D": "3",
+        "W": "3",
+        "R": "16",
+        "Total": "3-3-7"
+       },
+       "group": "Spanish LALIGA Standings"
+      },
+      "2922": {
+       "rank": "17",
+       "gp": "13",
+       "w": "3",
+       "d": "3",
+       "l": "7",
+       "gd": "-13",
+       "pts": "12",
+       "of": 20,
+       "raw": {
+        "GP": "13",
+        "L": "7",
+        "GD": "-13",
+        "P": "12",
+        "D": "3",
+        "W": "3",
+        "R": "17",
+        "Total": "3-3-7"
+       },
+       "group": "Spanish LALIGA Standings"
+      },
+      "1538": {
+       "rank": "18",
+       "gp": "12",
+       "w": "2",
+       "d": "5",
+       "l": "5",
+       "gd": "-5",
+       "pts": "11",
+       "of": 20,
+       "raw": {
+        "GP": "12",
+        "L": "5",
+        "GD": "-5",
+        "P": "11",
+        "D": "5",
+        "W": "2",
+        "R": "18",
+        "Total": "2-5-5"
+       },
+       "group": "Spanish LALIGA Standings"
+      },
+      "3751": {
+       "rank": "19",
+       "gp": "12",
+       "w": "2",
+       "d": "4",
+       "l": "6",
+       "gd": "-6",
+       "pts": "10",
+       "of": 20,
+       "raw": {
+        "GP": "12",
+        "L": "6",
+        "GD": "-6",
+        "P": "10",
+        "D": "4",
+        "W": "2",
+        "R": "19",
+        "Total": "2-4-6"
+       },
+       "group": "Spanish LALIGA Standings"
+      },
+      "99": {
+       "rank": "20",
+       "gp": "13",
+       "w": "0",
+       "d": "5",
+       "l": "8",
+       "gd": "-15",
+       "pts": "5",
+       "of": 20,
+       "raw": {
+        "GP": "13",
+        "L": "8",
+        "GD": "-15",
+        "P": "5",
+        "D": "5",
+        "W": "0",
+        "R": "20",
+        "Total": "0-5-8"
+       },
+       "group": "Spanish LALIGA Standings"
+      }
+     },
+     "last5": {
+      "1538": [
+       {
+        "res": "W",
+        "gf": 3,
+        "ga": 1,
+        "opp": "Athletic Club",
+        "home": true,
+        "date": "2026-10-21"
+       },
+       {
+        "res": "L",
+        "gf": 1,
+        "ga": 2,
+        "opp": "Real Sociedad",
+        "home": false,
+        "date": "2026-10-25"
+       },
+       {
+        "res": "L",
+        "gf": 0,
+        "ga": 2,
+        "opp": "Atlético Madrid",
+        "home": true,
+        "date": "2026-10-31"
+       },
+       {
+        "res": "D",
+        "gf": 0,
+        "ga": 0,
+        "opp": "Celta Vigo",
+        "home": false,
+        "date": "2026-11-08"
+       },
+       {
+        "res": "W",
+        "gf": 2,
+        "ga": 1,
+        "opp": "CD Tarancon",
+        "home": false,
+        "date": "2026-11-12"
+       }
+      ],
+      "3751": [
+       {
+        "res": "D",
+        "gf": 0,
+        "ga": 0,
+        "opp": "Villarreal",
+        "home": false,
+        "date": "2026-10-17"
+       },
+       {
+        "res": "W",
+        "gf": 3,
+        "ga": 0,
+        "opp": "Rayo Vallecano",
+        "home": false,
+        "date": "2026-10-24"
+       },
+       {
+        "res": "W",
+        "gf": 3,
+        "ga": 1,
+        "opp": "Atlético Pinatarense",
+        "home": false,
+        "date": "2026-10-27"
+       },
+       {
+        "res": "L",
+        "gf": 0,
+        "ga": 1,
+        "opp": "Valencia",
+        "home": true,
+        "date": "2026-11-01"
+       },
+       {
+        "res": "L",
+        "gf": 0,
+        "ga": 2,
+        "opp": "Real Betis",
+        "home": true,
+        "date": "2026-11-08"
+       }
+      ]
+     },
+     "h2h": [
+      {
+       "date": "2026-01-23",
+       "home_id": "1538",
+       "hs": "3",
+       "as": "2"
+      },
+      {
+       "date": "2025-08-29",
+       "home_id": "3751",
+       "hs": "2",
+       "as": "0"
+      },
+      {
+       "date": "2025-05-10",
+       "home_id": "3751",
+       "hs": "1",
+       "as": "3"
+      },
+      {
+       "date": "2024-11-16",
+       "home_id": "1538",
+       "hs": "1",
+       "as": "1"
+      },
+      {
+       "date": "2024-03-24",
+       "home_id": "1538",
+       "hs": "3",
+       "as": "2"
+      }
+     ],
+     "lineups": {
+      "1538": {
+       "formation": "4-2-3-1",
+       "starters": [
+        "Mathew Ryan",
+        "Jeremy Toljan",
+        "Adrián de la Fuente",
+        "Manu Sánchez",
+        "Aïssa Mandi",
+        "Dani Requena",
+        "Jon Ander Olasagasti",
+        "Thiago Fernández",
+        "Orio Rey",
+        "Roger Brugué",
+        "Iván Romero"
+       ]
+      },
+      "3751": {
+       "formation": "4-3-3",
+       "starters": [
+        "Matías Dituro",
+        "Roy Revivo",
+        "Federico Redondo",
+        "Víctor Chust",
+        "Buba Sangaré",
+        "Gonzalo Villar",
+        "Abiel Osorio",
+        "Javier Morcillo",
+        "Germán Valera",
+        "Fer Niño",
+        "Lucas Cepeda"
+       ]
+      }
+     },
+     "leaders": {
+      "1538": [
+       [
+        "Goals",
+        "Roger Brugué",
+        "Matches: 11, Goals: 5"
+       ],
+       [
+        "Assists",
+        "Jon Ander Olasagasti",
+        "Matches: 12, Assists: 1"
+       ],
+       [
+        "Total Shots",
+        "Roger Brugué",
+        "26"
+       ]
+      ],
+      "3751": [
+       [
+        "Goals",
+        "Fer Niño",
+        "Matches: 12, Goals: 6"
+       ],
+       [
+        "Assists",
+        "José Antonio Morente",
+        "Matches: 12, Assists: 3"
+       ],
+       [
+        "Total Shots",
+        "Fer Niño",
+        "22"
+       ]
+      ]
+     },
+     "venue": "Estadi Ciutat de València",
+     "city": "Manises"
+    }
+   }
+  },
+  "extra": {
+   "corners": {
+    "home": 4.138435538387252,
+    "away": 4.5166296475132794,
+    "total": 8.655065185900533,
+    "lines": {
+     "8.5": 0.4981113886332038,
+     "9.5": 0.36724654080127717,
+     "10.5": 0.25398216194844947
+    }
+   },
+   "cards": {
+    "total": 4.125,
+    "lines": {
+     "3.5": 0.59056163464606,
+     "4.5": 0.3955682705358279,
+     "5.5": 0.2346987451448863
+    }
+   }
+  },
+  "msg_id": 9207,
+  "btn": 4
  },
  "401933756": {
   "status": "waiting_data",
@@ -40769,6 +42290,6 @@
   "sport": "football",
   "div": "ARG",
   "reason": "no_qualified_real_market",
-  "retry_at": 1795462200.857284
+  "retry_at": 1795462812.919392
  }
 }
