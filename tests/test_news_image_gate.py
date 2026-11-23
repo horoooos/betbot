@@ -23,7 +23,7 @@ class NewsImageGateTests(unittest.TestCase):
     def test_pending_cover_is_not_in_feed_and_can_return_on_retry_without_new_guid(self):
         now=pd.Timestamp('2026-11-23T18:00:00Z')
         n={'id':1,'title':'Тренер рассказал о матче','t':now.isoformat(),'sport':'football','body':'Подробности новости.','desc':'Описание','url':'news/1.html','photo':'https://example.test/source.jpg'}
-        with tempfile.TemporaryDirectory() as d:
+        with tempfile.TemporaryDirectory() as d,patch('betbot.growth_campaigns.saved_digest',return_value=None):
             root=Path(d);docs=root/'docs';image=docs/'rss-images/1.jpg';image.parent.mkdir(parents=True);image.write_bytes(JPEG)
             (root/'vk_rss_since.txt').write_text('2026-11-23T00:00:00Z')
             with patch.object(pages,'DATA',root),patch.object(pages,'DOCS',docs):
@@ -36,7 +36,7 @@ class NewsImageGateTests(unittest.TestCase):
     def test_corrupt_cached_photo_is_replaced_before_feed_admission(self):
         now=pd.Timestamp('2026-11-23T18:00:00Z')
         n={'id':1,'title':'Тренер рассказал о матче','t':now.isoformat(),'sport':'football','body':'Подробности новости.','desc':'Описание','url':'news/1.html','photo':'https://example.test/source.jpg'}
-        with tempfile.TemporaryDirectory() as d:
+        with tempfile.TemporaryDirectory() as d,patch('betbot.growth_campaigns.saved_digest',return_value=None):
             root=Path(d);docs=root/'docs';image=docs/'rss-images/1.jpg';image.parent.mkdir(parents=True);image.write_bytes(b'corrupt jpeg')
             (root/'vk_rss_since.txt').write_text('2026-11-23T00:00:00Z')
             with patch.object(pages,'DATA',root),patch.object(pages,'DOCS',docs),patch.object(vk_rss,'public_image_ready',return_value=True),patch('requests.get',return_value=Mock(content=JPEG)) as get:
