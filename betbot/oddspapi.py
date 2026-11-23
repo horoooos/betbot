@@ -37,21 +37,31 @@ def enabled() -> bool:
     return bool(os.environ.get("ODDSPAPI_KEY"))
 
 
+def budget_status(state: dict, now=None) -> dict:
+    now=pd.Timestamp.now(tz=MSK) if now is None else pd.Timestamp(now).tz_convert(MSK)
+    month=now.strftime('%Y-%m');used=int(state.setdefault('oddspapi',{}).setdefault('used',{}).get(month,0))
+    status={'month':month,'used':used,'budget':BUDGET,'remaining':max(0,BUDGET-used),
+            'status':'monthly_budget_exhausted' if used>=BUDGET else 'available'}
+    state['oddspapi']['budget_status']=status
+    return status
+
+
 def _get(state: dict, path: str, **params):
     """Запрос с учётом месячного лимита. None — если лимит исчерпан или ошибка."""
     month = pd.Timestamp.now(tz=MSK).strftime("%Y-%m")
     used = state.setdefault("oddspapi", {}).setdefault("used", {})
-    if used.get(month, 0) >= BUDGET:
+    if budget_status(state)["remaining"] == 0:
         return None
     used[month] = used.get(month, 0) + 1
+    budget_status(state)
     try:
         r = requests.get(f"{API}{path}", params={**params, "apiKey": os.environ["ODDSPAPI_KEY"]}, timeout=30)
         time.sleep(1.1)  # у каждого метода пауза между запросами ~1 с
         if r.status_code == 200:
             return r.json()
-        print(f"  ! OddsPapi {path}: {r.status_code} {r.text[:400]}")
+        print(f"  ! OddsPapi {path}: HTTP {r.status_code}")
     except Exception as e:
-        print(f"  ! OddsPapi {path}: {e}")
+        print(f"  ! OddsPapi {path}: {type(e).__name__}")
     return None
 
 
@@ -141,6 +151,8 @@ def _tournaments(state: dict, key: str, sport_id: int) -> list[int]:
 def refresh(state: dict) -> None:
     """Обновляет линию, если пора (раз в REFRESH_HOURS). Результат — в кэше на диске."""
     if not enabled():
+        return
+    if budget_status(state)["remaining"] == 0:
         return
     meta = _meta(state)
     if not meta.get("sports") or not meta.get("winner"):
