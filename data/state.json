@@ -2729,9 +2729,9 @@
    }
   },
   "source": {
-   "last_success": "2026-11-23T14:43:27.244203+00:00",
-   "parsed": 380,
-   "added": 84,
+   "last_success": "2026-11-23T15:05:19.977743+00:00",
+   "parsed": 376,
+   "added": 90,
    "discovered_matches": 40,
    "pages": 21,
    "errors": [],
@@ -2745,13 +2745,13 @@
    }
   },
   "error": null,
-  "tips": 12827,
+  "tips": 12873,
   "snapshots": 256,
-  "unmapped_markets": 19116,
+  "unmapped_markets": 19160,
   "quote_matches": 31
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-23T18:02:04.358818+03:00",
+  "last_poll": "2026-11-23T18:05:19.977743+03:00",
   "cursor": "356",
   "posts": [
    {
@@ -3423,7 +3423,7 @@
    "401896726": "post",
    "401896809": "post",
    "401896724": "post",
-   "401896728": "pre",
+   "401896728": "in",
    "401879807": "post",
    "401879806": "post",
    "401879802": "post",
