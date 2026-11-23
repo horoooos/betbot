@@ -7,8 +7,6 @@
  "schedule_day": "2026-11-23",
  "content_slot": "2026-11-23-23",
  "news_seen": [
-  "https://www.sport-express.ru/football/rusteam/news/aleksey-miranchuk-v-2027-godu-bylo-by-zdorovo-sygrat-s-evropeyskoy-sbornoy-2476936/",
-  "https://www.sport-express.ru/football/france/news/istochnik-golovin-propustit-match-s-oserom-iz-za-travmy-2476925/",
   "https://www.sport-express.ru/football/transfers/news/istochnik-bornmut-mozhet-prodat-aleksa-skotta-v-chelsi-za-summu-bolee-100-millionov-evro-2476920/",
   "https://www.sport-express.ru/football/rusteam/news/deputat-gosdumy-svetlana-zhurova-perehod-rfs-v-aziyu-vryad-li-mozhno-budet-nazvat-horoshim-shagom-2476909/",
   "https://www.sport-express.ru/football/spain/news/romano-kurtua-prodlit-kontrakt-s-realom-do-2028-goda-2476907/",
@@ -506,9 +504,11 @@
   "https://www.sport-express.ru/hockey/vhl/news/napadayuschiy-norilska-mihail-shalagin-ustanovil-rekord-vhl-i-nabiral-ochki-v-18-matchah-podryad-23-noyabrya-2026-2478153/",
   "https://www.sport-express.ru/football/transfers/news/bavariya-rassmatrivaet-vozmozhnost-vozvrascheniya-shupo-motinga-na-zamenu-keynu-2478159/",
   "https://www.sport-express.ru/football/africa-cup/news/marca-cas-priznaet-marokko-pobeditelem-kubka-afriki-2025-2478163/",
-  "https://www.sport-express.ru/football/rfpl/news/cska-obratilsya-v-esk-po-penalti-v-matche-s-ahmatom-2478141/"
+  "https://www.sport-express.ru/football/rfpl/news/cska-obratilsya-v-esk-po-penalti-v-matche-s-ahmatom-2478141/",
+  "https://www.sport-express.ru/basketball/world/muzhchiny/news/centrovoy-zhalgirisa-yonas-valanchyunas-propustit-match-sbornoy-litvy-s-serbiey-v-otbore-chm-2027-2478139/",
+  "team-liquid-proshla-v-setku-poslednego-shansa-na-blast-slam-ix-odolev-do-konca"
  ],
- "news_i": 4,
+ "news_i": 0,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1563,7 +1563,7 @@
  "value_day": "2026-11-23",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-23",
- "site_stamp": "1510|9218|2026-11-23 23|6|f8697d90f94b21ac",
+ "site_stamp": "1510|9220|2026-11-23 23|6|a49b43b7a78473d5",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1695,7 +1695,7 @@
  "streak_day": {
   "2026-11-22": 2
  },
- "news_next": "2026-11-23T23:01:00.735417+03:00",
+ "news_next": "2026-11-23T23:34:12.390846+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1719,7 +1719,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 9218,
+ "dz_last": 9220,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2010,7 +2010,8 @@
   "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Kashima_soccer_Stadium_station_Inside_the_station.jpg/1280px-Kashima_soccer_Stadium_station_Inside_the_station.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
   "https://images.cybersport.ru/images/as-is/plain/5d/5de6aa81-e3ee-4f97-8c65-19385f1ddb95.jpg",
   "https://images.cybersport.ru/images/as-is/plain/e1/e1498707-3dff-481d-8e7d-3e8adc415126.jpg",
-  "https://ss.sport-express.ru/userfiles/materials/224/2246198/1180x665.jpg"
+  "https://ss.sport-express.ru/userfiles/materials/224/2246198/1180x665.jpg",
+  "https://images.cybersport.ru/images/as-is/plain/bf/bf0a70ee-0b2d-4b4a-82bc-44936d845b54.jpg"
  ],
  "indexnow_day": "2026-11-23",
  "vk_wall_err": null,
@@ -2381,7 +2382,8 @@
   "9189",
   "9191",
   "9193",
-  "9203"
+  "9203",
+  "9221"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -2684,11 +2686,12 @@
   "2026-11-23:новость:c18e8f8809056d5bde560898",
   "2026-11-23:новость:846e7512a771db1ccbcb08e2",
   "2026-11-23:новость:fb7f85da8dc8c7c4755d60b2",
-  "2026-11-23:новость:9bad2638530e606c0eb1bf1b"
+  "2026-11-23:новость:9bad2638530e606c0eb1bf1b",
+  "2026-11-23:новость:d6314019c411d2263d7a6675"
  ],
  "dz_last_delivery": {
-  "source_id": 9203,
-  "message_id": 850,
+  "source_id": 9221,
+  "message_id": 851,
   "kind": "новость"
  },
  "learn_attempt_day": "2026-11-23",
@@ -2887,7 +2890,7 @@
   "quote_matches": 40
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-23T23:00:12.491220+03:00",
+  "last_poll": "2026-11-23T23:02:12.390846+03:00",
   "cursor": "366",
   "posts": [
    {
@@ -3514,11 +3517,11 @@
   "sent": {},
   "matches": {
    "401878755": "post",
-   "401879237": "pre",
+   "401879237": "in",
    "401882800": "post",
    "401882801": "post",
    "401882803": "post",
-   "401882802": "pre",
+   "401882802": "in",
    "401882298": "post",
    "401883109": "post",
    "401883304": "post",
@@ -3566,7 +3569,7 @@
    "401933759": "post",
    "401933761": "post",
    "401933762": "post",
-   "401933756": "pre",
+   "401933756": "in",
    "401933731": "post",
    "401933730": "post",
    "401933729": "post",
