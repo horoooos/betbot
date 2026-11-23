@@ -37554,5 +37554,29 @@
   "div": "F2",
   "reason": "no_qualified_real_market",
   "retry_at": 1795460640.064266
+ },
+ "401879237": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-23T23:00:00+03:00",
+  "sport": "football",
+  "div": "E0",
+  "reason": "no_qualified_real_market",
+  "retry_at": 1795460880.893577
+ },
+ "401882802": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-23T23:00:00+03:00",
+  "sport": "football",
+  "div": "SP1",
+  "reason": "no_qualified_real_market",
+  "retry_at": 1795460880.893577
+ },
+ "401933756": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-23T23:00:00+03:00",
+  "sport": "football",
+  "div": "ARG",
+  "reason": "no_qualified_real_market",
+  "retry_at": 1795460880.893577
  }
 }

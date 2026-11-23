@@ -2888,7 +2888,7 @@
   "quote_matches": 38
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-23T21:56:00.434490+03:00",
+  "last_poll": "2026-11-23T21:58:00.893577+03:00",
   "cursor": "364",
   "posts": [
    {
@@ -3916,6 +3916,51 @@
    "probability": 0.56,
    "odds": 1.66,
    "edge": -0.0704,
+   "estimated": true
+  },
+  "football|E0|401879237": {
+   "reason": "no_qualified_real_market",
+   "checked_at": "2026-11-23T18:58:22.286919+00:00",
+   "kickoff": "2026-11-23T23:00:00+03:00",
+   "sport": "football",
+   "id": "401879237",
+   "home": "Брентфорд",
+   "away": "Эвертон",
+   "priced_markets": 5,
+   "market": "Обе забьют — да",
+   "probability": 0.5801,
+   "odds": 1.6,
+   "edge": -0.07184,
+   "estimated": true
+  },
+  "football|SP1|401882802": {
+   "reason": "no_qualified_real_market",
+   "checked_at": "2026-11-23T18:58:22.706671+00:00",
+   "kickoff": "2026-11-23T23:00:00+03:00",
+   "sport": "football",
+   "id": "401882802",
+   "home": "Леванте",
+   "away": "Эльче",
+   "priced_markets": 5,
+   "market": "Обе забьют — да",
+   "probability": 0.5951,
+   "odds": 1.56,
+   "edge": -0.07164,
+   "estimated": true
+  },
+  "football|ARG|401933756": {
+   "reason": "no_qualified_real_market",
+   "checked_at": "2026-11-23T18:58:22.916070+00:00",
+   "kickoff": "2026-11-23T23:00:00+03:00",
+   "sport": "football",
+   "id": "401933756",
+   "home": "Химнасия Ла-Плата",
+   "away": "Ньюэллс Олд Бойз",
+   "priced_markets": 3,
+   "market": "ТМ 2.5",
+   "probability": 0.5909,
+   "odds": 1.57,
+   "edge": -0.07229,
    "estimated": true
   }
  }
