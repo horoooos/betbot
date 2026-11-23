@@ -40,9 +40,13 @@
       "analysis_done": true
     },
     "9201": {
-      "status": "sending",
+      "status": "done",
       "at": "2026-11-23T19:48:06.269882+00:00",
-      "action": "edit"
+      "action": "edit",
+      "message_id": 9201,
+      "event_id": "401876683",
+      "original_kickoff": "2026-11-23T22:45:00+03:00",
+      "source_strategy": "external_trial"
     }
   }
 }
