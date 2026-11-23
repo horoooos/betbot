@@ -2448,5 +2448,75 @@
 "top": false,
 "bot": null,
 "lt": null
+},
+{
+"sport": "football",
+"id": "401915380",
+"league": "Европа · Лига чемпионов",
+"kickoff": "2026-11-24T20:45:00+03:00",
+"home": "Будё-Глимт",
+"away": "ЛАСК",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/2980.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/4411.png",
+"hid": "2980",
+"aid": "4411",
+"bb": "https://betboom.ru/search?query=%D0%91%D1%83%D0%B4%D1%91-%D0%93%D0%BB%D0%B8%D0%BC%D1%82&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/uefa.champions",
+"url": "live.html?s=football&p=soccer%2Fuefa.champions&e=401915380&h=%D0%91%D1%83%D0%B4%D1%91-%D0%93%D0%BB%D0%B8%D0%BC%D1%82&a=%D0%9B%D0%90%D0%A1%D0%9A",
+"participants": [
+[
+"Будё-Глимт",
+"Bodo/Glimt"
+],
+[
+"ЛАСК",
+"LASK Linz"
+]
+],
+"div": "UCL",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "football",
+"id": "401915300",
+"league": "Европа · Лига чемпионов",
+"kickoff": "2026-11-24T20:45:00+03:00",
+"home": "Галатасарай",
+"away": "Астон Вилла",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/432.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/362.png",
+"hid": "432",
+"aid": "362",
+"bb": "https://betboom.ru/search?query=%D0%93%D0%B0%D0%BB%D0%B0%D1%82%D0%B0%D1%81%D0%B0%D1%80%D0%B0%D0%B9&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/uefa.champions",
+"url": "live.html?s=football&p=soccer%2Fuefa.champions&e=401915300&h=%D0%93%D0%B0%D0%BB%D0%B0%D1%82%D0%B0%D1%81%D0%B0%D1%80%D0%B0%D0%B9&a=%D0%90%D1%81%D1%82%D0%BE%D0%BD+%D0%92%D0%B8%D0%BB%D0%BB%D0%B0",
+"participants": [
+[
+"Галатасарай",
+"Galatasaray"
+],
+[
+"Астон Вилла",
+"Aston Villa"
+]
+],
+"div": "UCL",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
 }
 ]
