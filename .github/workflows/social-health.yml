@@ -37,6 +37,15 @@ jobs:
                   member=telegram._call('getChatMember',chat_id=target,user_id=me['id'])
                   report['targets'].append({'username':chat.get('username'),'role':member.get('status'),'can_post':member.get('can_post_messages')})
               except Exception as e:report['targets'].append({'error':type(e).__name__})
+          try:
+              admins=telegram._call('getChatAdministrators',chat_id=dzen.TARGET,return_bots=True)
+              bots=[a for a in admins if a.get('user',{}).get('is_bot')]
+              sync=next((a for a in bots if a.get('user',{}).get('username','').lower()=='zen_sync_bot'),None)
+              report['dzen_sync']={'checked_with_return_bots':True,'present':bool(sync),'role':sync.get('status') if sync else None}
+              report['dzen_sync']['bot_admin_usernames']=[a.get('user',{}).get('username') for a in bots]
+              state=json.loads(Path('data/state.json').read_text(encoding='utf-8'))
+              report['mirror_delivery']={k:state.get(k) for k in ['dz_last','dz_err','dz_last_delivery']}
+          except Exception as exc:report['dzen_sync']={'error':type(exc).__name__}
           if os.environ.get('APPLY_BUTTONS')=='true':
               posts=json.loads(Path('data/channel.json').read_text(encoding='utf-8'))['posts']
               pid=max(int(k) for k,p in posts.items() if dzen.delivery_kind(p.get('html',''))=='новость' and not p.get('reply'))
