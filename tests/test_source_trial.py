@@ -52,7 +52,8 @@ class SourceTrialTests(unittest.TestCase):
   t=select({'tips':{'a':tip('a'),'b':tip('b')}})
   m={**E,'main':t,'bold':{},'value':{},'probs':{'H':.45,'D':.3,'A':.25}}
   text=texts.caption(m,None)
-  self.assertIn('Временный прогноз',text);self.assertIn('Перевес не подтверждён',text)
+  self.assertIn('Учтено внешних мнений',text)
+  for word in ['Временный прогноз','тестовый','эксперимент']:self.assertNotIn(word,text)
   self.assertIn('модель: 45%',text);self.assertNotIn('выгодно с кэфа',text)
   self.assertLess(len(text),1024)
 class TrialExpiryTests(unittest.TestCase):
@@ -63,3 +64,38 @@ class TrialExpiryTests(unittest.TestCase):
     self.assertIsNotNone(tr.config(NOW));self.assertIsNone(tr.config(NOW+pd.Timedelta(days=8)))
     self.assertIsNone(tr.config(NOW-pd.Timedelta(days=1)))
     path.write_text('{bad');self.assertIsNone(tr.config(NOW))
+
+ def test_permanent_fallback_remains_enabled_after_the_old_expiry(self):
+  with tempfile.TemporaryDirectory() as d:
+   path=Path(d)/'config.json'
+   c={**C,'permanent':True,'fallback_only':True,'expires_at':None}
+   path.write_text(json.dumps(c))
+   with patch.object(tr,'CONFIG',path):
+    self.assertIsNotNone(tr.config(NOW+pd.Timedelta(days=365)))
+    c['enabled']=False;path.write_text(json.dumps(c));self.assertIsNone(tr.config(NOW))
+    c['enabled']=True;c['permanent']=False;path.write_text(json.dumps(c));self.assertIsNone(tr.config(NOW))
+ def test_permanent_mode_cannot_silently_replace_the_regular_selector(self):
+  with tempfile.TemporaryDirectory() as d:
+   path=Path(d)/'config.json';path.write_text(json.dumps({**C,'permanent':True,'fallback_only':False}))
+   with patch.object(tr,'CONFIG',path):self.assertIsNone(tr.config(NOW))
+
+class SourcePresentationTests(unittest.TestCase):
+ def test_reposted_message_alias_changes_only_navigation(self):
+  with tempfile.TemporaryDirectory() as d:
+   p=Path(d)/'reposts.json';p.write_text(json.dumps({'reposts':{'10':{'status':'done','message_id':20}}}))
+   records={'a':{'id':'1','msg_id':10,'main':{'strategy':'external_trial','stake':.5,'odds':2.0}},'b':{'msg_id':10,'main':{'strategy':'model_value'}}}
+   with patch.object(tr,'REPOSTS',p):tr.remap(records);tr.remap(records)
+   self.assertEqual(records['a']['msg_id'],20);self.assertEqual(records['a']['original_msg_id'],10)
+   self.assertEqual(records['a']['main']['stake'],.5);self.assertEqual(records['b']['msg_id'],10)
+ def test_public_source_analysis_has_no_outbound_links_or_test_labels(self):
+  tip={'strategy':'external_trial','stake':.5,'odds':2.0,'source_count':2,'source_refs':[{'source':'https://example.test/a'}]}
+  text=tr.explanation(tip)
+  for word in ['href=','https://','тестовый','эксперимент','Временный']:self.assertNotIn(word,text)
+  self.assertEqual(tr.without_links('<b>Разбор</b> <a href="https://example.test">источник</a> https://example.test/a'),'<b>Разбор</b> источник')
+
+ def test_old_cached_captions_are_cleaned_without_changing_the_pick(self):
+  text='🎯 Прогноз\nП2 · кэф 1.92\n\n🧪 <b>Временный прогноз по внешним мнениям</b> · 25 мн.\nПроценты — оценка модели. Перевес не подтверждён; результат учитывается для обучения.\n\n🧪 Учёт в виртуальном банке: 0.5% · эксперимент'
+  cleaned=tr.public_text(text)
+  self.assertIn('П2 · кэф 1.92',cleaned)
+  self.assertIn('0.5%',cleaned)
+  self.assertNotIn('Временный',cleaned);self.assertNotIn('эксперимент',cleaned)

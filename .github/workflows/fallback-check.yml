@@ -1,0 +1,47 @@
+name: Verify permanent fallback and site
+on:
+  push:
+    branches: [codex/permanent-source-fallback]
+  workflow_dispatch:
+    inputs:
+      published:
+        type: boolean
+        default: false
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - run: pip install -r requirements.txt
+      - run: python -m unittest discover -s tests
+      - run: python tools/source_trial_smoke.py
+      - run: python tools/fallback_site_smoke.py
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm install --ignore-scripts && npx playwright install --with-deps chrome
+        working-directory: tools/browser-qa
+      - name: Inspect temporary forecast in browser
+        working-directory: tools/browser-qa
+        run: node -e "const {chromium}=require('playwright');(async()=>{const b=await chromium.launch({channel:'chrome'});const p=await b.newPage({viewport:{width:1400,height:850}});await p.goto('file://'+process.env.GITHUB_WORKSPACE+'/work/trial-proof/index.html');await p.waitForFunction(()=>[...document.images].every(i=>i.complete&&i.naturalWidth>0));await p.screenshot({path:process.env.GITHUB_WORKSPACE+'/work/trial-proof/forecast-check.png',fullPage:true});await b.close()})()"
+      - name: Verify prediction pages on desktop and mobile
+        run: |
+          python -m http.server 8768 --bind 127.0.0.1 --directory work/fallback-site >work/fallback-http.log 2>&1 &
+          node tools/browser-qa/fallback.mjs
+        env:
+          FALLBACK_SITE: ${{ inputs.published && 'https://horoooos.github.io/betbot' || '' }}
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: fallback-proof
+          path: |
+            work/trial-proof
+            work/fallback-proof
+            work/fallback-site/report.json

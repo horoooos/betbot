@@ -372,10 +372,10 @@ def review(ev: dict, w: dict, fx_loader, hist_loader, calib: dict, state: dict) 
     kick = pd.Timestamp(ev["kickoff"])
     tip = f"{main['label']} · {texts.pct(main['p'])}"
     png = card.match_card(texts.league_plain(ev["div"]), texts.when(kick), ev["home"], ev["away"],
-                          (probs["H"], probs["D"], probs["A"]), main["label"], ("Внешние мнения · временный режим" if main.get("strategy")=="external_trial" else f"xG {lam[0]:.1f} : {lam[1]:.1f} · шанс {texts.pct(main['p'])}"),
+                          (probs["H"], probs["D"], probs["A"]), main["label"], f"xG {lam[0]:.1f} : {lam[1]:.1f} · шанс {texts.pct(main['p'])}",
                           BRAND, odds=f"{'≈' if main.get('est') else ''}{main['odds']:.2f}")
     m["msg_id"] = telegram.send_photo(png, texts.caption(m, s.get("venue") or ev.get("venue")),
-                                      button=live.buttons(ev, "football", ev["home"]["ru"], ev["away"]["ru"]))
+                                      button=None if main.get("strategy")=="external_trial" else live.buttons(ev, "football", ev["home"]["ru"], ev["away"]["ru"]))
     m["btn"] = 2
     from betbot import source_trial
     source_trial.published(state,ev,main,m['msg_id'],pd.Timestamp.now(tz=MSK))
@@ -387,7 +387,7 @@ def review(ev: dict, w: dict, fx_loader, hist_loader, calib: dict, state: dict) 
         except Exception as e:
             print(f"  ! push прогноза дня не удался: {e}")
     review_text=texts.review(m,s)
-    if main.get('strategy')=='external_trial':review_text=source_trial.explanation(main)+'\n\n'+review_text
+    if main.get('strategy')=='external_trial':review_text=source_trial.without_links(source_trial.explanation(main)+'\n\n'+review_text)
     telegram.send(review_text,reply_to=m['msg_id'],silent=True)
     m["status"] = "reviewed"
     from betbot import forecast_gate
@@ -464,10 +464,10 @@ def other_review(e: dict, calib: dict, ctx: dict, state: dict) -> dict | None:
     kick = pd.Timestamp(e["kickoff"])
     tip = f"{m['main']['label']} · {texts.pct(m['main']['p'])}"
     png = card.match_card(sports.league_plain(e["div"]), texts.when(kick), e["home"], e["away"], a["bar"], m["main"]["label"],
-                          ("Внешние мнения · временный режим" if m["main"].get("strategy")=="external_trial" else a["center"]), BRAND, sport=e["sport"],
+                          a["center"], BRAND, sport=e["sport"],
                           odds=f"{'≈' if m['main'].get('est') else ''}{m['main']['odds']:.2f}")
     m["msg_id"] = telegram.send_photo(png, sports.caption(m, texts.when(kick)),
-                                      button=live.buttons(e, e["sport"], e["home"]["ru"], e["away"]["ru"]))
+                                      button=None if m["main"].get("strategy")=="external_trial" else live.buttons(e, e["sport"], e["home"]["ru"], e["away"]["ru"]))
     m["btn"] = 2
     from betbot import source_trial
     source_trial.published(state,e,m['main'],m['msg_id'],pd.Timestamp.now(tz=MSK))
@@ -483,7 +483,7 @@ def other_review(e: dict, calib: dict, ctx: dict, state: dict) -> dict | None:
         text = reviews.team_review(m, summary(slug, e["id"], sport))
     else:
         text = reviews.history_review(m, hist, ratings)
-    if m['main'].get('strategy')=='external_trial':text=source_trial.explanation(m['main'])+'\n\n'+text
+    if m['main'].get('strategy')=='external_trial':text=source_trial.without_links(source_trial.explanation(m['main'])+'\n\n'+text)
     telegram.send(text, reply_to=m["msg_id"], silent=True)
     m["status"] = "reviewed"
     from betbot import forecast_gate
@@ -523,6 +523,8 @@ def other_review_due(e: dict, previous: dict | None, now: pd.Timestamp, lead: pd
 
 def other_sports(state: dict, events: list[dict], now: pd.Timestamp, calib: dict, daily: bool) -> None:
     store = load_json(OTHER, {})
+    from betbot import source_trial
+    source_trial.remap(store)
     lead = pd.Timedelta(minutes=60 + gap_minutes(now))
     ctx = {}  # история и рейтинг Эло для тенниса и киберспорта — загружаем, только когда нужны
     try:
@@ -617,6 +619,8 @@ def main():
     except Exception as exc:
         print(f'  ! проверка фактических RSS-постов VK: {exc}')
     matches = load_json(MATCHES, {})
+    from betbot import source_trial
+    source_trial.remap(matches)
     today = str(now.date())
 
     daily = state.get("learn_attempt_day", state.get("learned")) != today
