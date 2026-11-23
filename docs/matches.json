@@ -341,7 +341,7 @@ null
 ]
 ],
 "div": "I1",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "predictions/2026-11-23-montsa-fiorentina-401875009.html",
 "hs": "3",
@@ -462,7 +462,7 @@ null
 "min_odds": 1.62,
 "minute": "25'",
 "p": 0.648,
-"result": null,
+"result": "miss",
 "score": "0:0"
 }
 },
@@ -928,7 +928,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "",
-"hs": "1",
+"hs": "2",
 "as": "1",
 "tip": "",
 "top": false,
