@@ -7,9 +7,6 @@
  "schedule_day": "2026-11-23",
  "content_slot": "2026-11-23-20",
  "news_seen": [
-  "https://www.sport-express.ru/hockey/khl/news/brylin-rasschityvaet-usilit-ataku-minskogo-dinamo-s-pomoschyu-da-kosty-2476753/",
-  "https://www.sport-express.ru/football/rfpl/news/karasev-poluchil-300-e-naznachenie-sudey-v-rpl-do-rekorda-bezborodova-shest-matchey-2476861/",
-  "https://www.sport-express.ru/football/rfpl/news/tyukavin-o-dinamo-smotret-v-tablicu-seychas-priyatno-no-esche-nichego-ne-resheno-2476850/",
   "https://www.sport-express.ru/hockey/khl/news/zaschitnik-lokomotiva-sergeev-stal-samym-proveryaemym-na-doping-hokkeistom-v-2026-godu-2476886/",
   "https://www.sport-express.ru/hockey/nhl/news/ovechkin-o-porazheniyah-vashingtona-nuzhno-ne-opuskat-ruki-i-prodolzhat-borotsya-2476883/",
   "https://www.sport-express.ru/football/rus_d1/news/pavel-kamancev-zayavil-chto-match-torpedo-s-kamazom-ne-vliyal-na-polozhenie-komandy-v-tablice-pervoy-ligi-2476892/",
@@ -506,9 +503,12 @@
   "team-nemesis-pokinula-blast-slam-ix-ustupiv-xtreme-gaming",
   "https://www.sport-express.ru/hockey/khl/news/nesterov-obyasnil-pochemu-cska-ne-stoit-pereocenivat-pobednuyu-seriyu-i-liderstvo-v-khl-2478098/",
   "https://www.sport-express.ru/hockey/khl/news/zaschitnik-cska-nesterov-obyasnil-pochemu-ne-rassmatrival-predlozheniya-drugih-klubov-2478097/",
-  "https://www.sport-express.ru/hockey/khl/news/usov-vyigral-golosovanie-sredi-geroev-overtaymov-i-stal-pervym-uchastnikom-fonbet-matcha-zvezd-khl-v-minske-2478099/"
+  "https://www.sport-express.ru/hockey/khl/news/usov-vyigral-golosovanie-sredi-geroev-overtaymov-i-stal-pervym-uchastnikom-fonbet-matcha-zvezd-khl-v-minske-2478099/",
+  "https://www.sport-express.ru/football/spain/news/la-liga-soobschila-o-krazhe-personalnyh-dannyh-bolelschikov-v-rezultate-kiberataki-2478102/",
+  "https://www.sport-express.ru/football/foreign/news/v-chili-sudya-vytrebovala-16-millionov-peso-za-uvolnenie-2478100/",
+  "https://www.sport-express.ru/football/rfpl/news/granat-esli-rostov-prodolzhit-v-tom-zhe-duhe-ne-udivlyus-ih-popadaniyu-v-pyaterku-2478092/"
  ],
- "news_i": 3,
+ "news_i": 4,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1695,7 +1695,7 @@
  "streak_day": {
   "2026-11-22": 2
  },
- "news_next": "2026-11-23T20:35:21.410618+03:00",
+ "news_next": "2026-11-23T21:04:22.169582+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -2006,7 +2006,8 @@
   "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3c/Deux_fans_du_football_au_Stade_Omnisports_Roumd%C3%A9_Adjia_%C3%A0_Garoua_au_Cameroun.jpg/1280px-Deux_fans_du_football_au_Stade_Omnisports_Roumd%C3%A9_Adjia_%C3%A0_Garoua_au_Cameroun.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
   "https://ss.sport-express.ru/userfiles/materials/224/2246115/1180x665.jpg",
   "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a9/CSKA_vs_Rostov%2C_2025_Russian_Cup_Super_Final_June_1%2C_2025.jpg/1280px-CSKA_vs_Rostov%2C_2025_Russian_Cup_Super_Final_June_1%2C_2025.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-  "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/2016_NHL_All-Star_Game_%2824151146473%29.jpg/1280px-2016_NHL_All-Star_Game_%2824151146473%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/2016_NHL_All-Star_Game_%2824151146473%29.jpg/1280px-2016_NHL_All-Star_Game_%2824151146473%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Kashima_soccer_Stadium_station_Inside_the_station.jpg/1280px-Kashima_soccer_Stadium_station_Inside_the_station.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
  ],
  "indexnow_day": "2026-11-23",
  "vk_wall_err": null,
@@ -2373,7 +2374,8 @@
   "9183",
   "9184",
   "9186",
-  "9187"
+  "9187",
+  "9189"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -2672,11 +2674,12 @@
   "2026-11-23:новость:9761facf3c8d9e569eb9f5a0",
   "2026-11-23:новость:6e35fb8d248fe9fdb17ca7cc",
   "2026-11-23:новость:2e88c5134aee1cf6d52a5b86",
-  "2026-11-23:новость:1f993528b4d095a71ed72f34"
+  "2026-11-23:новость:1f993528b4d095a71ed72f34",
+  "2026-11-23:новость:c18e8f8809056d5bde560898"
  ],
  "dz_last_delivery": {
-  "source_id": 9187,
-  "message_id": 846,
+  "source_id": 9189,
+  "message_id": 847,
   "kind": "новость"
  },
  "learn_attempt_day": "2026-11-23",
@@ -2772,7 +2775,7 @@
   "quote_matches": 32
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-23T20:33:22.598641+03:00",
+  "last_poll": "2026-11-23T20:35:22.169582+03:00",
   "cursor": "360",
   "posts": [
    {
