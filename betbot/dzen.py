@@ -16,7 +16,7 @@ from datetime import datetime, timezone
 from html import unescape
 from pathlib import Path
 
-from . import telegram, promotion
+from . import telegram
 
 TARGET = "@aistavvit_dzen"
 CHANNEL = Path(__file__).resolve().parent.parent / "data" / "channel.json"
@@ -110,7 +110,7 @@ def post_news(png: bytes, caption: str, source_id: int | None = None, *, state: 
     tags = hashtags(caption, "новость", limit=10)
     if len(cap) + len(tags) + 2 <= 1024:   # хештеги по теме (команды, игроки, лига) — в конец подписи
         cap += "\n" + tags
-    result = telegram._call("sendPhoto", chat_id=TARGET, files={"photo": ("news.png", png, "image/png")}, caption=cap[:1024], parse_mode="HTML", reply_markup=promotion.news_keyboard(source_id))
+    result = telegram._call("sendPhoto", chat_id=TARGET, files={"photo": ("news.png", png, "image/png")}, caption=cap[:1024], parse_mode="HTML")
     _remember(state, source_id, key, result, "новость")
 
 
@@ -208,14 +208,14 @@ def crosspost(state: dict, checkpoint=None) -> int:
                 cap = _caption(text, tags, f"\n\n📖 Полностью: t.me/aistavvit/{pid}")
                 if post.get("photo") and k != "начало":
                     result = telegram._call("copyMessage", chat_id=TARGET, from_chat_id=os.environ["TELEGRAM_CHAT_ID"], message_id=pid,
-                                   caption=cap, reply_markup=promotion.news_keyboard(pid))
+                                   caption=cap, reply_markup=json.dumps({"inline_keyboard": []}))
                 else:
                     # Start cards are redrawn from sanitized text so the original
                     # forecast cannot remain embedded in the copied image.
                     img = postimg._card(text, "начало") if k == "начало" else postimg.image_for(post, k, posts)
                     if not img:
                         raise RuntimeError("Картинка публикации не получена")
-                    result = telegram._call("sendPhoto", chat_id=TARGET, files={"photo": ("post.png", img, "image/png")}, caption=cap, reply_markup=promotion.news_keyboard(pid))
+                    result = telegram._call("sendPhoto", chat_id=TARGET, files={"photo": ("post.png", img, "image/png")}, caption=cap)
                 _remember(state, pid, key, result, k)
                 done += 1
             except Exception as e:

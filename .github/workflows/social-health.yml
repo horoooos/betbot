@@ -2,6 +2,10 @@ name: Verify owned social channels
 on:
   workflow_dispatch:
     inputs:
+      clear_dzen_buttons:
+        type: boolean
+        default: false
+        description: Remove only inline buttons from the latest 50 mirror posts
       send_dzen_probe:
         type: boolean
         default: false
@@ -29,6 +33,7 @@ jobs:
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           APPLY_BUTTONS: ${{ inputs.update_news_buttons }}
           SEND_DZEN_PROBE: ${{ inputs.send_dzen_probe }}
+          CLEAR_DZEN_BUTTONS: ${{ inputs.clear_dzen_buttons }}
         run: |
           python -u - <<'PY'
           import os,json
@@ -59,9 +64,20 @@ jobs:
               state=json.loads(Path('data/state.json').read_text(encoding='utf-8'));last=state.get('dz_last_delivery') or {}
               if last.get('kind')=='новость' and last.get('message_id'):
                   try:
-                      telegram._call('editMessageReplyMarkup',chat_id=dzen.TARGET,message_id=last['message_id'],reply_markup=promotion.news_keyboard(last.get('source_id')))
+                      telegram._call('editMessageReplyMarkup',chat_id=dzen.TARGET,message_id=last['message_id'],reply_markup=json.dumps({'inline_keyboard':[]}))
                       report['mirror_news_buttons']=True
                   except Exception as e:report['mirror_news_buttons_error']=type(e).__name__
+          if os.environ.get('CLEAR_DZEN_BUTTONS')=='true':
+              state=json.loads(Path('data/state.json').read_text(encoding='utf-8'));last=state.get('dz_last_delivery') or {}
+              newest=int(last.get('message_id') or 0);cleared=[];unchanged=0;errors=0
+              for mid in range(max(1,newest-49),newest+1):
+                  try:
+                      result=telegram._call('editMessageReplyMarkup',chat_id=dzen.TARGET,message_id=mid,reply_markup=json.dumps({'inline_keyboard':[]}))
+                      if isinstance(result,dict) and not (result.get('reply_markup') or {}).get('inline_keyboard'):cleared.append(mid)
+                  except Exception as exc:
+                      if 'message is not modified' in str(exc).lower():unchanged+=1
+                      else:errors+=1
+              report['dzen_buttons_cleanup']={'cleared':cleared,'already_without_buttons':unchanged,'other_errors':errors,'latest_checked':newest}
           if os.environ.get('SEND_DZEN_PROBE')=='true':
               import requests,io,re
               from PIL import Image

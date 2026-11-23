@@ -64,6 +64,7 @@ class CuratedChannelTests(unittest.TestCase):
         self.assertEqual(calls[0].args[0], "copyMessage")
         self.assertEqual(calls[0].kwargs["message_id"], news_id)
         self.assertEqual(calls[0].kwargs["chat_id"], "@aistavvit_dzen")
+        self.assertEqual(json.loads(calls[0].kwargs["reply_markup"]), {"inline_keyboard": []})
         self.assertFalse(cards)
         self.assertEqual(state["dz_last"], news_id + 1)
 
@@ -75,6 +76,7 @@ class CuratedChannelTests(unittest.TestCase):
             dzen.post_news(b"image", text, 1, state=state)
             dzen.post_news(b"image", text, 1, state=state)
             self.assertEqual(send.call_count, 1)
+            self.assertNotIn("reply_markup",send.call_args.kwargs)
         done, calls, _ = self._run({"1": self.post(text)}, state)
         self.assertEqual(done, 0)
         self.assertFalse(calls)
