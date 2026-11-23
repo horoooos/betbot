@@ -335,7 +335,10 @@ def review(ev: dict, w: dict, fx_loader, hist_loader, calib: dict, state: dict) 
     probs = mk.all_markets(*lam)
     source_signal = {"status": "unavailable", "weight": 0.0}
     try:
-        probs, source_signal = stavka.adjust(ev, lam, probs, pd.Timestamp.now(tz=MSK))
+        from betbot import intelligence
+        probs, source_signal = intelligence.adjust_football(ev,lam,probs,pd.Timestamp.now(tz=MSK))
+        if not source_signal.get('weight'):
+            probs,source_signal=stavka.adjust(ev,lam,probs,pd.Timestamp.now(tz=MSK))
     except Exception as exc:
         print(f"  ! Внешние сигналы: сигнал не применён: {exc}")
     scores = probs.pop("scores")
@@ -354,7 +357,7 @@ def review(ev: dict, w: dict, fx_loader, hist_loader, calib: dict, state: dict) 
          "top": pro.is_top(state, ev["div"], ev["id"]), "lam": list(lam), "probs": probs, "scores": scores, "main": main, "bold": bold,
          "value": value_pick(probs, mkt), "odds_src": mkt["src"] if mkt else "нет, только модель",
          "model_w": w.get("1X2", 0.0) if mkt else 1.0,
-         "learned_n": len(read_results()), "stavka_signal": source_signal}
+         "learned_n": len(read_results()), "stavka_signal": source_signal, "research": intelligence.context_for(ev)}
     if row is not None and ev["div"] in HIST_LEAGUES:  # угловые и карточки по статистике сезона (без кэфов)
         try:
             m["extra"] = extras.corners_cards(hist_loader(), ev["div"], row["HomeTeam"], row["AwayTeam"])
@@ -420,11 +423,15 @@ def other_review(e: dict, calib: dict, ctx: dict, state: dict) -> dict | None:
         return None
     source_signal={"status":"unavailable","weight":0.0}
     try:
-        a,source_signal=stavka_sports.adjust(e,a,pd.Timestamp.now(tz=MSK))
+        from betbot import intelligence
+        a,source_signal=intelligence.adjust_sport(e,a,pd.Timestamp.now(tz=MSK))
+        if not source_signal.get('weight'):
+            a,source_signal=stavka_sports.adjust(e,a,pd.Timestamp.now(tz=MSK))
     except Exception as exc:
         print(f"  ! Внешние сигналы: сигнал {e['sport']} не применён: {exc}")
     m = {**e, **a}
     m['stavka_signal']=source_signal
+    m['research']=intelligence.context_for(e)
     m["main"], m["bold"] = sports.pick(a, calib)
     for t in (m["main"], m["bold"]):
         if t:

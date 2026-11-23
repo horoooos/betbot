@@ -386,6 +386,7 @@ def votes_for(store, event, at):
           and abs((utc(t['kickoff'])-utc(event['kickoff'])).total_seconds())<=300]
     # A prolific author gets at most one vote per market family, never N votes.
     families=[('H','D','A'),('O25','U25')]
+    if store.get('multi_market'):families += [('O15','U15'),('O35','U35'),('O45','U45'),('BTTS_Y','BTTS_N')]
     votes={}
     kept=[]
     for family in families:
@@ -401,12 +402,17 @@ def votes_for(store, event, at):
     return votes,kept
 
 
-def adjusted_matrix(lam, votes, weight):
+def adjusted_matrix(lam, votes, weight, extended=False):
     m=mk.matrix(*lam).copy()
     if not 0<=weight<=.5:
         raise ValueError('Invalid external signal weight')
     x=np.arange(m.shape[0]);i,j=np.meshgrid(x,x,indexing='ij')
-    for keys,masks in [(('H','D','A'),(i>j,i==j,i<j)),(('O25','U25'),(i+j>2.5,i+j<2.5))]:
+    families=[(('H','D','A'),(i>j,i==j,i<j)),(('O25','U25'),(i+j>2.5,i+j<2.5))]
+    if extended:
+        for line in (1.5,3.5,4.5):
+            suffix=str(line).replace('.','');families.append((('O'+suffix,'U'+suffix),(i+j>line,i+j<line)))
+        yes=(i>0)&(j>0);families.append((('BTTS_Y','BTTS_N'),(yes,~yes)))
+    for keys,masks in families:
         counts=np.array([votes.get(k,0.0) for k in keys],float)
         if counts.sum()<=0:
             continue
@@ -432,7 +438,7 @@ def train(store, now):
     if len(training)<60 or len(validation)<20:
         model['status']='insufficient_temporal_split';store['model']=model;return model
     def loss(rows,w):
-        return float(np.mean([-math.log(max(adjusted_matrix(s['lam'],s['votes'],w)[tuple(s['score'])],1e-12)) for s in rows]))
+        return float(np.mean([-math.log(max(adjusted_matrix(s['lam'],s['votes'],w,extended=store.get('multi_market',False))[tuple(s['score'])],1e-12)) for s in rows]))
     grid=[(loss(training,float(w)),float(w)) for w in np.linspace(0,.5,11)]
     candidate=min(grid)[1]
     baseline=loss(validation,0.0);control=loss(validation,candidate)
@@ -463,16 +469,19 @@ def tick(events, now):
         train(store,now)
     if other_changed or not store.get('sport_models'):
         stavka_sports.train(store,now)
+    from . import intelligence
+    try:external_status=intelligence.tick(store,events,now)
+    except Exception as exc:external_status={'status':'unavailable','error':type(exc).__name__}
     _runtime=store
     save(store)
-    return {'model':store['model'],'sport_models':store.get('sport_models',{}),'source':store.get('source_status'),'error':store.get('source_error'),
+    return {'external_sources':external_status,'model':store['model'],'sport_models':store.get('sport_models',{}),'source':store.get('source_status'),'error':store.get('source_error'),
             'tips':len(store['tips']),'snapshots':len(store['samples']),
             'unmapped_markets':len(store.get('market_observations',{})),'quote_matches':len(store.get('quotes',{}))}
 
 
-def adjust(event, lam, probs, now):
+def adjust(event, lam, probs, now, store=None, persist=True):
     """Freeze one baseline per match, then use only a previously validated weight."""
-    store=_runtime
+    store=store if store is not None else _runtime
     if store is None or event.get('state')!='pre' or utc(now)>=utc(event['kickoff'])-pd.Timedelta(minutes=5):
         return probs, {'status':'no_prematch_context','weight':0.0}
     votes,opinions=votes_for(store,event,now)
@@ -489,11 +498,11 @@ def adjust(event, lam, probs, now):
         weight=0.0
     result=dict(probs)
     if weight:
-        m=adjusted_matrix(lam,votes,weight)
+        m=adjusted_matrix(lam,votes,weight,extended=store.get('multi_market',False))
         for k,(_,_,condition) in mk.MARKETS.items():
             result[k]=mk._p(m,condition)
         result['scores']=sorted(((float(m[i,j]),f'{i}:{j}') for i in range(6) for j in range(6)),reverse=True)[:3]
         result['scores']=[(score,p) for p,score in result['scores']]
-    save(store)
+    if persist:save(store)
     return result,dict(status=model['status'],weight=weight,authors=len({t['author'] for t in opinions}),
                        votes=votes,source='https://stavka.tv',snapshot=key)

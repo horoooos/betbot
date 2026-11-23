@@ -45,7 +45,7 @@ def author_weights(store,category,at):
     return {a:math.exp(float(np.clip(edge/(n+20),-.3,.3))) for a,(n,edge) in stats.items()}
 
 
-def adjust(event,analysis,now,store=None):
+def adjust(event,analysis,now,store=None,persist=True):
     from . import stavka
     store=store if store is not None else stavka._runtime
     info=dict(status='insufficient_opinions',weight=0.0)
@@ -93,7 +93,7 @@ def adjust(event,analysis,now,store=None):
                 result['model']['src']='комбинированная оценка'
             else:result['center']=sports.public_model_label(result['center'])+' · комбинированная оценка'
             result['model']['external_weight']=weight
-    stavka.save(store)
+    if persist:stavka.save(store)
     return result,dict(status=model['status'],weight=weight,authors=len(tips),group=category,snapshot=sid,source='https://stavka.tv')
 
 
