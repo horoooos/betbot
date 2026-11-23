@@ -2839,35 +2839,35 @@
     "weight": 0.0,
     "settled_matches": 49,
     "required_matches": 100,
-    "trained_at": "2026-11-23T15:11:20.245172+00:00"
+    "trained_at": "2026-11-23T20:56:19.407727+00:00"
    },
    "basketball": {
     "status": "collecting",
     "weight": 0.0,
     "settled_matches": 55,
     "required_matches": 100,
-    "trained_at": "2026-11-23T15:11:20.245172+00:00"
+    "trained_at": "2026-11-23T20:56:19.407727+00:00"
    },
    "tennis": {
     "status": "collecting",
     "weight": 0.0,
-    "settled_matches": 4,
+    "settled_matches": 5,
     "required_matches": 100,
-    "trained_at": "2026-11-23T15:11:20.245172+00:00"
+    "trained_at": "2026-11-23T20:56:19.407727+00:00"
    },
    "esports:CS2": {
     "status": "collecting",
     "weight": 0.0,
     "settled_matches": 0,
     "required_matches": 100,
-    "trained_at": "2026-11-23T15:11:20.245172+00:00"
+    "trained_at": "2026-11-23T20:56:19.407727+00:00"
    },
    "esports:DOTA": {
     "status": "collecting",
     "weight": 0.0,
     "settled_matches": 0,
     "required_matches": 100,
-    "trained_at": "2026-11-23T15:11:20.245172+00:00"
+    "trained_at": "2026-11-23T20:56:19.407727+00:00"
    }
   },
   "source": {
@@ -2893,7 +2893,7 @@
   "quote_matches": 42
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-23T23:54:19.094194+03:00",
+  "last_poll": "2026-11-23T23:56:19.407727+03:00",
   "cursor": "367",
   "posts": [
    {
@@ -3674,7 +3674,7 @@
    "186817": "post",
    "186813": "post",
    "186823": "post",
-   "186815": "in",
+   "186815": "post",
    "186814": "pre",
    "186828": "pre",
    "186827": "pre",
