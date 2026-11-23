@@ -240,7 +240,7 @@ def choose(keys: list[str], probs: dict, real: dict, score, main_pool: list[str]
 def stake_text(t: dict) -> str:
     """«💰 Ставка: 1% банка · ставить при кэфе от 1.72» — минимальный кэф = точка безубыточности (1 / вероятность)."""
     s = t.get("stake", 1.0)
-    if t.get('strategy')=='external_trial':return f"🧪 Учёт в виртуальном банке: <b>{s:g}%</b> · эксперимент"
+    if t.get('strategy')=='external_trial':return f"💰 Виртуальный банк: <b>{s:g}%</b>"
     line = f"💰 Ставка: <b>{s:g}% банка</b>"
     if s > 1.0:
         line += " · есть перевес над линией"

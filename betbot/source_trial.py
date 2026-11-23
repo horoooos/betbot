@@ -1,5 +1,5 @@
-"""Expiring paper-bank fallback from external picks. Never places bookmaker bets."""
-import json,math
+"""Source-based fallback for the paper bank. Never places bookmaker bets."""
+import json,math,re
 from html import escape
 from pathlib import Path
 import pandas as pd
@@ -10,7 +10,10 @@ CONFIG=Path(__file__).resolve().parents[1]/'data/external_trial.json'
 def config(now):
     try:
         c=json.loads(CONFIG.read_text(encoding='utf-8'))
-        if c.get('enabled') is not True or not stavka.utc(c['starts_at'])<=stavka.utc(now)<stavka.utc(c['expires_at']):return None
+        if c.get('enabled') is not True or stavka.utc(now)<stavka.utc(c['starts_at']):return None
+        if c.get('permanent') is True:
+            if c.get('fallback_only') is not True:return None
+        elif not stavka.utc(now)<stavka.utc(c['expires_at']):return None
         if not 0<float(c['stake_pct'])<=1 or not 1<=int(c['max_open'])<=6:return None
         return c
     except (OSError,ValueError,KeyError,TypeError):return None
@@ -60,7 +63,7 @@ def select(event,probs,real,labels,state,now,root=None):
     _,_,k,tips=max(candidates,key=lambda v:(v[0],v[1],v[2]))
     p=float(probs[k]);price=round(float(real[k]),2)
     return dict(key=k,label=labels[k],p=round(p,4),odds=price,est=False,stake=float(c['stake_pct']),
-        strategy='external_trial',trial_expires_at=c['expires_at'],probability_origin='baseline_model',
+        strategy='external_trial',selection_mode='external_fallback',trial_expires_at=c.get('expires_at'),probability_origin='baseline_model',
         model_edge=round(p*price-1,5),source_count=len(tips),
         source_refs=[{f:t.get(f) for f in ('author','provider','source','published_at','observed_at','odds','price_kind')} for t in tips])
 
@@ -91,12 +94,36 @@ def settle(state,results,now):
 
 def note(tip):
     if tip.get('strategy')!='external_trial':return ''
-    return (f"🧪 <b>Временный прогноз по внешним мнениям</b> · {tip['source_count']} мн.\n"
-            "Проценты — оценка модели. Перевес не подтверждён; результат учитывается для обучения.")
+    return f"📚 Учтено внешних мнений: <b>{tip['source_count']}</b>."
 
 
 def explanation(tip):
     if tip.get('strategy')!='external_trial':return ''
-    refs=list(dict.fromkeys(t.get('source') for t in tip['source_refs'] if t.get('source')))[:3]
-    links=' · '.join(f'<a href="{escape(url,quote=True)}">Источник {i}</a>' for i,url in enumerate(refs,1))
-    return note(tip)+'\n\n'+links+'\n\n'+f"Учёт: {tip['stake']:g}% виртуального банка. Коэффициент на момент проверки: {tip['odds']:.2f}."
+    return note(tip)+'\n\n'+f"Виртуальный банк: {tip['stake']:g}%. Коэффициент на момент проверки: {tip['odds']:.2f}."
+
+
+def without_links(text):
+    """Keep readable content and formatting, omit outbound links from these forecasts."""
+    text=re.sub(r'<a\b[^>]*>(.*?)</a>',lambda m:re.sub(r'<[^>]+>','',m[1]),text,flags=re.I|re.S)
+    return re.sub(r'(?:https?://|www\.)[^\s<>]+','',text).strip()
+
+
+REPOSTS=CONFIG.parent/'source_reposts.json'
+
+def remap(records):
+    """Apply message aliases without creating a second forecast or changing bank records."""
+    try:mapping=json.loads(REPOSTS.read_text(encoding='utf-8')).get('reposts',{})
+    except (OSError,ValueError):return
+    for m in records.values():
+        if m.get('main',{}).get('strategy')!='external_trial':continue
+        original=m.get('original_msg_id',m.get('msg_id'));entry=mapping.get(str(original),{})
+        if entry.get('status')=='done' and entry.get('message_id'):
+            m['original_msg_id']=original;m['msg_id']=int(entry['message_id'])
+
+
+def public_text(text):
+    text=re.sub(r'🧪.*?Временный прогноз по внешним мнениям.*?(?=\n\n|$)','',text,flags=re.S)
+    text=text.replace('Проценты — оценка модели. Перевес не подтверждён; результат учитывается для обучения.','')
+    text=text.replace('🧪 Учёт в виртуальном банке:','💰 Виртуальный банк:').replace(' · эксперимент','')
+    text=re.sub(r'<a[^>]+>Источник \d+</a>(?:\s*·\s*)?','',text)
+    return re.sub(r'\n{3,}','\n\n',without_links(text)).strip()

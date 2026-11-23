@@ -471,7 +471,7 @@ def _matches(stores: dict, results: pd.DataFrame, store: dict[int, dict], now: p
             "hl": (m["home"].get("logo") or [None, None])[1] if isinstance(m["home"].get("logo"), list) else m["home"].get("logo"),
             "al": (m["away"].get("logo") or [None, None])[1] if isinstance(m["away"].get("logo"), list) else m["away"].get("logo"),
             "kickoff": pd.Timestamp(m["kickoff"]).tz_convert("Europe/Moscow"), "league": live._league(m), "msg": m["msg_id"],
-            "tip": m["main"]["label"], "odds": m["main"].get("odds"), "p": m["main"].get("p"), "bot": _bot_block(m),
+            "selection_mode":m["main"].get("strategy"), "tip": m["main"]["label"], "odds": m["main"].get("odds"), "p": m["main"].get("p"), "bot": _bot_block(m),
             "path": path, "live": btn[1] if btn else None, "venue": m.get("venue")}
     try:   # ⚡ live-прогнозы: находим по тем же командам, чтобы показать на странице матча
         from . import pro
@@ -537,6 +537,10 @@ def _match_page(m: dict, store: dict[int, dict], all_m: list[dict]) -> str:
     pred = store.get(m["msg"], {})
     pred={**pred,'html':public_model_label(pred.get('html',''))}
     thread = sorted([{**p,'html':public_model_label(p.get('html',''))} for p in store.values() if p.get("reply") == m["msg"]], key=lambda p: p["id"])
+    if m.get('selection_mode')=='external_trial':
+        from .source_trial import public_text
+        pred['html']=public_text(pred.get('html',''))
+        thread=[{**p,'html':public_text(p['html'])} for p in thread]
     analysis = [p for p in thread if "#live" not in p["html"][-60:] and "#итог" not in p["html"][-60:]]
     livep = [p for p in thread if p not in analysis]
     crumbs, bc = _crumbs("../", [("Главная", ""), ("Прогнозы", "predictions/"), (title_teams, None)])
@@ -929,6 +933,8 @@ def _vk_rss(news: list[dict], now: pd.Timestamp, *, article=False) -> str:
 def build(stores: dict, results: pd.DataFrame, now: pd.Timestamp, max_pages: int = 25) -> dict:
     """Синхронизирует канал, пишет страницы новостей и прогнозов, sitemap.xml и robots.txt.
     Возвращает блоки для главной (свежие новости и ближайшие прогнозы)."""
+    from . import source_trial
+    source_trial.remap(stores)
     store = sync_channel(max_pages)
     news = _news(store)
     ms = _matches(stores, results, store, now)
