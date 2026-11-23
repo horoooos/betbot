@@ -9,7 +9,7 @@ try{
  await page.goto(base+'/news/?verify='+Date.now(),{waitUntil:'domcontentloaded'});
  await page.locator('.arch-f').waitFor();
  const text=await page.locator('body').innerText();for(const s of ['@media','grid-template-columns','overflow-wrap','аккуратные переносы'])assert(!text.includes(s),'CSS visible in news: '+s);
- await page.getByRole('heading',{name:'📚 Архив новостей'}).scrollIntoViewIfNeeded();await page.screenshot({path:new URL('news-desktop.png',out).pathname});report.checks.push('desktop archive has no visible CSS');
+ await page.getByRole('heading',{name:'📚 Архив новостей'}).scrollIntoViewIfNeeded();if(process.env.NEWS_SITE)await page.waitForFunction(()=>[...document.querySelectorAll('.arch img')].some(i=>i.complete&&i.naturalWidth>0&&!i.src.startsWith('data:')),undefined,{timeout:20000});await page.screenshot({path:new URL('news-desktop.png',out).pathname});report.checks.push('desktop archive has no visible CSS');
  await page.setViewportSize({width:390,height:844});await page.locator('.arch-f').scrollIntoViewIfNeeded();assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);await page.screenshot({path:new URL('news-mobile.png',out).pathname});report.checks.push('mobile archive fits viewport');
  const chips=page.locator('.arch-f button');if(await chips.count()>1){await chips.nth(1).click();assert(await page.locator('.arch a:visible').count()>0);report.checks.push('archive sport filter works');}
  assert.deepEqual(report.errors,[]);
