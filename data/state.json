@@ -2898,7 +2898,7 @@
   "quote_matches": 45
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-24T00:27:59.717978+03:00",
+  "last_poll": "2026-11-24T00:29:59.638463+03:00",
   "cursor": "369",
   "posts": [
    {
@@ -3969,6 +3969,36 @@
    "odds": 1.62,
    "edge": -0.07968,
    "estimated": false
+  },
+  "football|BRA|401841323": {
+   "reason": "edge_below_minimum",
+   "checked_at": "2026-11-23T21:30:20.941844+00:00",
+   "kickoff": "2026-11-24T01:30:00+03:00",
+   "sport": "football",
+   "id": "401841323",
+   "home": "Интернасьонал",
+   "away": "Витория",
+   "priced_markets": 3,
+   "market": "П1",
+   "probability": 0.597,
+   "odds": 1.62,
+   "edge": -0.03286,
+   "estimated": false
+  },
+  "football|URU|401934683": {
+   "reason": "no_qualified_real_market",
+   "checked_at": "2026-11-23T21:30:21.352388+00:00",
+   "kickoff": "2026-11-24T01:30:00+03:00",
+   "sport": "football",
+   "id": "401934683",
+   "home": "Альбион",
+   "away": "Данубио",
+   "priced_markets": 6,
+   "market": "Обе забьют — да",
+   "probability": 0.5684,
+   "odds": 1.64,
+   "edge": -0.06782,
+   "estimated": true
   }
  },
  "source_trial": {
