@@ -99,3 +99,12 @@ class SourcePresentationTests(unittest.TestCase):
   self.assertIn('П2 · кэф 1.92',cleaned)
   self.assertIn('0.5%',cleaned)
   self.assertNotIn('Временный',cleaned);self.assertNotIn('эксперимент',cleaned)
+
+ def test_recovery_entry_import_order_works_in_a_fresh_process(self):
+  import subprocess,sys
+  run=subprocess.run([sys.executable,'-c','from betbot import card,sports,texts,source_trial,telegram,vk_rss'],capture_output=True)
+  self.assertEqual(run.returncode,0,run.stderr.decode('utf-8',errors='replace'))
+ def test_recovered_analysis_keeps_the_original_pick_without_outbound_links(self):
+  tip={'strategy':'external_trial','key':'H','label':'П1','p':.45,'odds':2.0,'stake':.5,'source_count':2,'source_refs':[]}
+  text=tr.recovery_analysis({**E,'main':tip})
+  self.assertIn('П1',text);self.assertIn('2.00',text);self.assertNotIn('https://',text)
