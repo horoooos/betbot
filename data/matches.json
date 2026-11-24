@@ -25353,5 +25353,21 @@
   "div": "CRC",
   "reason": "edge_below_minimum",
   "retry_at": 1795485738.597621
+ },
+ "401902008": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-24T20:30:00+03:00",
+  "sport": "football",
+  "div": "RSA",
+  "reason": "no_qualified_real_market",
+  "retry_at": 1795538387.478839
+ },
+ "401902004": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-24T20:30:00+03:00",
+  "sport": "football",
+  "div": "RSA",
+  "reason": "edge_below_minimum",
+  "retry_at": 1795538387.478839
  }
 }
