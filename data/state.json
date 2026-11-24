@@ -7,11 +7,6 @@
  "schedule_day": "2026-11-24",
  "content_slot": "2026-11-24-23",
  "news_seen": [
-  "https://www.sport-express.ru/hockey/nhl/news/vankuver-gotov-obsuzhdat-obmen-cheshskogo-zaschitnika-filipa-groneka-informaciya-the-fourth-period-v-noyabre-2026-2477299/",
-  "https://www.sport-express.ru/football/rfpl/news/orenburg-baltika-golenkov-udvoil-preimuschestvo-gostey-2477307/",
-  "https://www.sport-express.ru/football/copa-america/news/kubok-ameriki-po-futbolu-2028-goda-planiruyut-provesti-v-ssha-reshenie-konmebol-v-noyabre-2026-o-globo-2477298/",
-  "https://www.sport-express.ru/basketball/nba/news/forvard-franc-vagner-oboshel-penni-hardueya-i-vyshel-na-trete-mesto-v-istorii-orlando-po-matcham-nba-s-30-5-5-2477297/",
-  "https://www.sport-express.ru/basketball/nba/news/tureckiy-centrovoy-alperen-shengyun-povtoril-rezultat-hakima-oladzhyuvona-po-tripl-dablam-za-hyuston-v-nba-2477296/",
   "https://www.sport-express.ru/basketball/nba/news/forvard-ey-dzhey-dibanca-pervym-sredi-tineydzherov-vashingtona-sdelal-dva-podryad-dabl-dabla-iz-20-ochkov-i-10-podborov-2477295/",
   "https://www.sport-express.ru/stavki-na-sport/prognozy/news/nicca-pszh-prognoz-na-match-chempionata-francii-po-futbolu-21-noyabrya-2026-goda-2477306/",
   "https://www.sport-express.ru/hockey/nhl/news/kris-letang-sravnyalsya-s-viktorom-hedmanom-na-vosmom-meste-sredi-zaschitnikov-nhl-po-ochkam-za-odin-klub-20-noyabrya-2026-2477308/",
@@ -506,9 +501,14 @@
   "https://www.sport-express.ru/football/champions-league/news/arsenal-borussiya-startovye-sostavy-komand-na-match-ligi-chempionov-24-noyabrya-2026-2478522/",
   "https://www.sport-express.ru/football/champions-league/news/galatasaray-aston-villa-schet-0-0-posle-pervogo-tayma-matcha-ligi-chempionov-24-noyabrya-2026-2478514/",
   "https://www.sport-express.ru/football/rus_cup/news/zenit-krylya-sovetov-1-0-schet-i-rezultat-matcha-fonbet-kubka-rossii-24-noyabrya-2026-2478513/",
-  "eksperty-parivision-okazhet-sya-v-shage-ot-vykhoda-vo-vtoruyu-stadiyu-pgl-major"
+  "eksperty-parivision-okazhet-sya-v-shage-ot-vykhoda-vo-vtoruyu-stadiyu-pgl-major",
+  "https://www.sport-express.ru/hockey/khl/news/kudashov-o-povedenii-fanatov-dinamo-chuvstvuyu-podderzhku-i-blagodaryu-2478535/",
+  "https://www.sport-express.ru/hockey/nhl/news/malkin-vernulsya-k-trenirovkam-pittsburga-posle-propuska-dvuh-matchey-2478525/",
+  "https://www.sport-express.ru/hockey/khl/news/dinamo-m-avtomobilist-schet-i-rezultat-matcha-khl-24-noyabrya-2026-2478516/",
+  "https://www.sport-express.ru/football/champions-league/news/sanches-o-pobede-galatasaraya-nad-aston-villoy-vsya-komanda-rabotala-neveroyatno-mnogo-2478546/",
+  "https://www.sport-express.ru/football/rus_cup/news/semak-nazval-neprostoy-pobedu-zenita-nad-krylyami-sovetov-2478540/"
  ],
- "news_i": 2,
+ "news_i": 4,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1695,7 +1695,7 @@
  "streak_day": {
   "2026-11-22": 2
  },
- "news_next": "2026-11-24T23:22:20.595500+03:00",
+ "news_next": "2026-11-24T23:50:20.582464+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1726,7 +1726,6 @@
  "vk_mode": "photo",
  "dz_err": null,
  "img_used": [
-  "https://upload.wikimedia.org/wikipedia/commons/9/9a/GGadzhiev.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
   "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5f/Uganda_Cranes_fans_going_to_Nambooole_Stadium5.jpg/1280px-Uganda_Cranes_fans_going_to_Nambooole_Stadium5.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
   "https://upload.wikimedia.org/wikipedia/commons/3/31/CSKA-MC_%285%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
   "https://upload.wikimedia.org/wikipedia/commons/5/55/5597.90290.AS_10552.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
@@ -2025,7 +2024,8 @@
   "https://upload.wikimedia.org/wikipedia/commons/1/1e/Houses_in_the_shadow_of_Valley_Parade_football_stadium_-_geograph.org.uk_-_8054696.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
   "https://images.cybersport.ru/images/as-is/plain/77/77b1a769-34ab-4a36-be97-172696bb0f6e.jpg",
   "https://ss.sport-express.ru/userfiles/materials/224/2246529/1180x665.jpg",
-  "https://images.cybersport.ru/images/as-is/plain/cc/ccb19f8e-a85a-4552-8244-3abd3d1d5cd6.jpg"
+  "https://images.cybersport.ru/images/as-is/plain/cc/ccb19f8e-a85a-4552-8244-3abd3d1d5cd6.jpg",
+  "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/FC_Spartak_Moscow_vs._FC_Krylia_Sovetov_Samara%2C_1_May_2022_%2803%29.jpg/1280px-FC_Spartak_Moscow_vs._FC_Krylia_Sovetov_Samara%2C_1_May_2022_%2803%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
  ],
  "indexnow_day": "2026-11-24",
  "vk_wall_err": null,
@@ -2426,7 +2426,8 @@
   "9378",
   "9384",
   "9387",
-  "9400"
+  "9400",
+  "9407"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -2759,11 +2760,12 @@
   "2026-11-24:новость:5d3d4aae4b63c973ae889d5c",
   "2026-11-24:новость:9f9a1fdd8f0a4e274d1f550d",
   "2026-11-24:новость:564d2ddd8a98f6ae4efadda7",
-  "2026-11-24:новость:5e237722fd4d14ecf4a142c7"
+  "2026-11-24:новость:5e237722fd4d14ecf4a142c7",
+  "2026-11-24:новость:dfa752daddd80de614d86985"
  ],
  "dz_last_delivery": {
-  "source_id": 9400,
-  "message_id": 880,
+  "source_id": 9407,
+  "message_id": 881,
   "kind": "новость"
  },
  "learn_attempt_day": "2026-11-24",
@@ -2966,7 +2968,7 @@
   "quote_matches": 77
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-24T23:21:20.078951+03:00",
+  "last_poll": "2026-11-24T23:23:20.582464+03:00",
   "cursor": "396",
   "posts": [
    {
