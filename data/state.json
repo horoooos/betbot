@@ -1570,7 +1570,7 @@
  "value_day": "2026-11-23",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-23",
- "site_stamp": "1518|9281|2026-11-24 05|6|e92ddc521dd2526b",
+ "site_stamp": "1519|9282|2026-11-24 05|6|cecc9e4075f6d895",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1726,7 +1726,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 9281,
+ "dz_last": 9282,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2056,7 +2056,7 @@
  "vk_photos": [],
  "vk_photo_until": 1794644243.1147308,
  "vk_photo_cursor": {},
- "vk_story_last": 9281,
+ "vk_story_last": 9282,
  "vk_story_err": null,
  "push_weekly": "2026-47",
  "vk_story_at": 1795483253.1896534,
@@ -2853,35 +2853,35 @@
     "weight": 0.0,
     "settled_matches": 49,
     "required_matches": 100,
-    "trained_at": "2026-11-24T02:25:39.722191+00:00"
+    "trained_at": "2026-11-24T02:27:39.398232+00:00"
    },
    "basketball": {
     "status": "collecting",
     "weight": 0.0,
-    "settled_matches": 55,
+    "settled_matches": 56,
     "required_matches": 100,
-    "trained_at": "2026-11-24T02:25:39.722191+00:00"
+    "trained_at": "2026-11-24T02:27:39.398232+00:00"
    },
    "tennis": {
     "status": "collecting",
     "weight": 0.0,
     "settled_matches": 6,
     "required_matches": 100,
-    "trained_at": "2026-11-24T02:25:39.722191+00:00"
+    "trained_at": "2026-11-24T02:27:39.398232+00:00"
    },
    "esports:CS2": {
     "status": "collecting",
     "weight": 0.0,
     "settled_matches": 0,
     "required_matches": 100,
-    "trained_at": "2026-11-24T02:25:39.722191+00:00"
+    "trained_at": "2026-11-24T02:27:39.398232+00:00"
    },
    "esports:DOTA": {
     "status": "collecting",
     "weight": 0.0,
     "settled_matches": 0,
     "required_matches": 100,
-    "trained_at": "2026-11-24T02:25:39.722191+00:00"
+    "trained_at": "2026-11-24T02:27:39.398232+00:00"
    }
   },
   "source": {
@@ -2907,7 +2907,7 @@
   "quote_matches": 56
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-24T05:25:39.722191+03:00",
+  "last_poll": "2026-11-24T05:27:39.398232+03:00",
   "cursor": "370",
   "posts": [
    {
@@ -3560,7 +3560,7 @@
    "401892777": "in",
    "401892778": "pre",
    "401892779": "pre",
-   "401910036": "in",
+   "401910036": "post",
    "401910037": "post",
    "401910038": "in",
    "401910039": "in",

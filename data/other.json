@@ -5379,25 +5379,25 @@
   "kickoff": "2026-11-24T03:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Mon, November 23rd at 7:00 PM EST",
   "clock": "0.0",
   "period": 0,
   "home": {
+   "color": "008ca8",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/cha.png",
    "id": "30",
    "name": "Charlotte Hornets",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/cha.png",
-   "color": "008ca8",
    "score": "0",
    "record": "4-11",
    "periods": [],
    "ru": "Шарлотт Хорнетс"
   },
   "away": {
+   "color": "5d76a9",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/mem.png",
    "id": "29",
    "name": "Memphis Grizzlies",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/mem.png",
-   "color": "5d76a9",
    "score": "0",
    "record": "12-5",
    "periods": [],
@@ -5816,7 +5816,9 @@
   "btn": 4,
   "close": {
    "BB_ML_A": 0.5825
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null
  },
  "NBA|401910037": {
   "id": "401910037",
