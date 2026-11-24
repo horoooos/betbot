@@ -2941,7 +2941,7 @@
   "quote_matches": 66
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-24T08:25:54.533965+03:00",
+  "last_poll": "2026-11-24T08:27:54.250854+03:00",
   "cursor": "370",
   "posts": [
    {
@@ -3636,7 +3636,7 @@
    "186842": "pre",
    "186843": "pre",
    "1789258": "in",
-   "1789253": "pre",
+   "1789253": "in",
    "1789260": "pre",
    "1789259": "pre",
    "1789256": "pre",
@@ -7401,7 +7401,7 @@
     }
    },
    "basketball|NBA|401910045": {
-    "status": "open",
+    "status": "settled",
     "id": "401910045",
     "sport": "basketball",
     "div": "NBA",
@@ -7459,7 +7459,10 @@
        "price_kind": "author_recorded"
       }
      ]
-    }
+    },
+    "settled_at": "2026-11-24T05:27:54.250854+00:00",
+    "hit": false,
+    "profit_pct": -0.5
    },
    "esports|CS2|1789258": {
     "status": "open",
