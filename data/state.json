@@ -7,7 +7,6 @@
  "schedule_day": "2026-11-24",
  "content_slot": "2026-11-24-16",
  "news_seen": [
-  "https://www.sport-express.ru/basketball/nba/news/charaniya-kavay-leonard-propustit-esche-minimum-dve-nedeli-iz-za-travmy-kolena-2477193/",
   "https://www.sport-express.ru/tennis/atp/news/medvedev-pered-matchem-so-zverevym-sashe-v-etom-godu-udalos-stat-namnogo-stabilnee-2477199/",
   "https://www.sport-express.ru/tennis/atp/news/vilander-schitaet-chto-sinneru-potrebuetsya-okolo-goda-dlya-vozvrascheniya-na-prezhniy-uroven-posle-travmy-2477197/",
   "https://www.sport-express.ru/tennis/atp/news/daniil-medvedev-kommentariy-po-pobede-nad-frensisom-tiafo-na-itogovom-turnire-atp-2477166/",
@@ -506,9 +505,10 @@
   "https://www.sport-express.ru/hockey/khl/news/zaschitnik-salavata-alekseev-o-krizise-komandy-ne-nuzhno-iskat-kakie-to-otgovorki-2478395/",
   "https://www.sport-express.ru/hockey/nhl/news/ovechkin-o-vladelce-vashingtona-leonsise-ya-srazu-pochuvstvoval-sebya-kak-doma-blagodarya-seme-teda-2478393/",
   "https://www.sport-express.ru/hockey/nhl/news/vladelec-vashingtona-ob-ovechkine-on-mozhet-zayti-v-magazin-za-upakovkoy-piva-ochen-otkrytyy-paren-2478391/",
-  "https://www.sport-express.ru/football/rfpl/news/granat-schitaet-chto-rostov-mozhet-zakonchit-sezon-v-top-5-rpl-2478422/"
+  "https://www.sport-express.ru/football/rfpl/news/granat-schitaet-chto-rostov-mozhet-zakonchit-sezon-v-top-5-rpl-2478422/",
+  "dupreeh-pro-bcgame-na-meidzhore-igroki-vyglyadyat-napugannymi-kak-budto-boyat"
  ],
- "news_i": 4,
+ "news_i": 0,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1695,7 +1695,7 @@
  "streak_day": {
   "2026-11-22": 2
  },
- "news_next": "2026-11-24T17:50:36.753879+03:00",
+ "news_next": "2026-11-24T18:18:36.530187+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1726,7 +1726,6 @@
  "vk_mode": "photo",
  "dz_err": null,
  "img_used": [
-  "https://upload.wikimedia.org/wikipedia/commons/1/1c/FC_Dynamo_Kyiv_2010-2011.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
   "https://upload.wikimedia.org/wikipedia/commons/5/51/2008_Russian_Super_Cup.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
   "https://upload.wikimedia.org/wikipedia/commons/7/71/Stanislav_Sukhina.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
   "https://ss.sport-express.ru/userfiles/materials/224/2242582/1180x665.jpg",
@@ -2025,7 +2024,8 @@
   "https://images.cybersport.ru/images/as-is/plain/10/10df8487-c9bd-4ba3-aebd-6bc27752f5d0.jpg",
   "https://upload.wikimedia.org/wikipedia/commons/d/d6/CDKA_Moskva.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
   "https://images.cybersport.ru/images/as-is/plain/0c/0c93b368-a7ea-4521-966f-2c4818ab10e2.jpg",
-  "https://upload.wikimedia.org/wikipedia/commons/3/3c/Dinamo-Omonia_%286%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+  "https://upload.wikimedia.org/wikipedia/commons/3/3c/Dinamo-Omonia_%286%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "https://images.cybersport.ru/images/as-is/plain/96/96ddc3d3-df67-468d-abac-4418c1fcd2bf.jpg"
  ],
  "indexnow_day": "2026-11-24",
  "vk_wall_err": null,
@@ -2414,7 +2414,8 @@
   "9345",
   "9350",
   "9351",
-  "9355"
+  "9355",
+  "9356"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -2735,11 +2736,12 @@
   "2026-11-24:новость:163ca8d430f0a95bd68ae53f",
   "2026-11-24:новость:37741d8b2492c9737400b932",
   "2026-11-24:новость:3310a259bdfaf995f6e7764d",
-  "2026-11-24:новость:30c1107c8984675189ef5f01"
+  "2026-11-24:новость:30c1107c8984675189ef5f01",
+  "2026-11-24:новость:d95dd1c9e995ec7674f26184"
  ],
  "dz_last_delivery": {
-  "source_id": 9355,
-  "message_id": 868,
+  "source_id": 9356,
+  "message_id": 869,
   "kind": "новость"
  },
  "learn_attempt_day": "2026-11-24",
@@ -2942,7 +2944,7 @@
   "quote_matches": 73
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-24T17:49:36.124125+03:00",
+  "last_poll": "2026-11-24T17:51:36.530187+03:00",
   "cursor": "384",
   "posts": [
    {
@@ -4600,7 +4602,7 @@
   },
   "tennis|WTA|186814": {
    "reason": "insufficient_history_or_odds",
-   "checked_at": "2026-11-24T14:39:53.165681+00:00",
+   "checked_at": "2026-11-24T14:51:53.016774+00:00",
    "kickoff": "2026-11-24T18:30:00+03:00",
    "sport": "tennis",
    "id": "186814",
@@ -4609,7 +4611,7 @@
   },
   "tennis|WTA|186818": {
    "reason": "no_real_odds",
-   "checked_at": "2026-11-24T14:39:54.653078+00:00",
+   "checked_at": "2026-11-24T14:51:54.605652+00:00",
    "kickoff": "2026-11-24T18:30:00+03:00",
    "sport": "tennis",
    "id": "186818",
