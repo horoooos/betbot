@@ -451,8 +451,8 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-24-filadelfiya-siksers-portlend-401910037.html",
-"hs": "37",
-"as": "30",
+"hs": "40",
+"as": "33",
 "tip": "П1 (с ОТ) · 1.87",
 "top": false,
 "bot": {
@@ -653,7 +653,15 @@ null
 ],
 "center": "Ожидаемые голы 3.6 : 2.7"
 },
-"lt": null
+"lt": {
+"fair": 1.34,
+"label": "П1 (осн. время)",
+"min_odds": 1.4,
+"minute": "2-й период",
+"p": 0.749,
+"result": null,
+"score": "2:1"
+}
 },
 {
 "sport": "basketball",
@@ -715,11 +723,11 @@ null
 ]
 ],
 "div": "NBA",
-"state": "pre",
+"state": "in",
 "bo": null,
 "prediction": "",
-"hs": "0",
-"as": "0",
+"hs": "3",
+"as": "1",
 "tip": "",
 "top": false,
 "bot": null,
@@ -753,8 +761,8 @@ null
 "state": "in",
 "bo": null,
 "prediction": "",
-"hs": "3",
-"as": "0",
+"hs": "10",
+"as": "5",
 "tip": "",
 "top": false,
 "bot": null,
