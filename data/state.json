@@ -1570,7 +1570,7 @@
  "value_day": "2026-11-23",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-23",
- "site_stamp": "1520|9289|2026-11-24 05|6|c98955f92c1a8e81",
+ "site_stamp": "1520|9289|2026-11-24 06|6|72f2f9a3c3339d63",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1583,7 +1583,7 @@
    "I1|401874989"
   ]
  },
- "value_check": "2026-11-24-1",
+ "value_check": "2026-11-24-2",
  "express_risk": {
   "msg": 9019,
   "legs": [
@@ -2730,40 +2730,40 @@
   "external_sources": {
    "providers": {
     "legalbet": {
-     "at": "2026-11-24T02:31:39.485278+00:00",
+     "at": "2026-11-24T03:01:39.724857+00:00",
      "status": "ok",
-     "discovered": 2,
-     "pages": 2,
-     "opinions": 2,
+     "discovered": 1,
+     "pages": 1,
+     "opinions": 1,
      "mapped": 0,
      "articles_available": 9,
-     "next_offset": 3,
-     "contexts": 2
+     "next_offset": 1,
+     "contexts": 1
     },
     "livesport": {
-     "at": "2026-11-24T02:31:39.485278+00:00",
+     "at": "2026-11-24T03:01:39.724857+00:00",
      "status": "ok",
-     "discovered": 11,
+     "discovered": 13,
      "pages": 6,
-     "opinions": 10,
-     "mapped": 3,
+     "opinions": 12,
+     "mapped": 4,
      "articles_available": 17,
-     "next_offset": 6,
+     "next_offset": 12,
      "contexts": 6
     },
     "metaratings": {
-     "at": "2026-11-24T02:31:39.485278+00:00",
+     "at": "2026-11-24T03:01:39.724857+00:00",
      "status": "ok",
-     "discovered": 9,
+     "discovered": 8,
      "pages": 6,
      "opinions": 24,
      "mapped": 7,
      "articles_available": 37,
-     "next_offset": 12,
+     "next_offset": 10,
      "contexts": 6
     },
     "rb": {
-     "at": "2026-11-24T02:31:39.485278+00:00",
+     "at": "2026-11-24T03:01:39.724857+00:00",
      "status": "ok",
      "discovered": 1,
      "pages": 1,
@@ -2774,16 +2774,16 @@
      "contexts": 1
     },
     "vseprosport": {
-     "at": "2026-11-24T02:31:39.485278+00:00",
+     "at": "2026-11-24T03:01:39.724857+00:00",
      "status": "ok",
      "discovered": 9,
-     "pages": 4,
+     "pages": 2,
      "opinions": 0,
      "mapped": 0,
      "articles_available": 10,
-     "next_offset": 14,
-     "page_errors": 2,
-     "contexts": 4
+     "next_offset": 11,
+     "page_errors": 4,
+     "contexts": 2
     }
    },
    "opinions": 22,
@@ -2853,35 +2853,35 @@
     "weight": 0.0,
     "settled_matches": 50,
     "required_matches": 100,
-    "trained_at": "2026-11-24T02:55:39.602365+00:00"
+    "trained_at": "2026-11-24T03:01:39.724857+00:00"
    },
    "basketball": {
     "status": "collecting",
     "weight": 0.0,
-    "settled_matches": 57,
+    "settled_matches": 58,
     "required_matches": 100,
-    "trained_at": "2026-11-24T02:55:39.602365+00:00"
+    "trained_at": "2026-11-24T03:01:39.724857+00:00"
    },
    "tennis": {
     "status": "collecting",
     "weight": 0.0,
     "settled_matches": 6,
     "required_matches": 100,
-    "trained_at": "2026-11-24T02:55:39.602365+00:00"
+    "trained_at": "2026-11-24T03:01:39.724857+00:00"
    },
    "esports:CS2": {
     "status": "collecting",
     "weight": 0.0,
     "settled_matches": 0,
     "required_matches": 100,
-    "trained_at": "2026-11-24T02:55:39.602365+00:00"
+    "trained_at": "2026-11-24T03:01:39.724857+00:00"
    },
    "esports:DOTA": {
     "status": "collecting",
     "weight": 0.0,
     "settled_matches": 0,
     "required_matches": 100,
-    "trained_at": "2026-11-24T02:55:39.602365+00:00"
+    "trained_at": "2026-11-24T03:01:39.724857+00:00"
    }
   },
   "source": {
@@ -2902,12 +2902,12 @@
   },
   "error": null,
   "tips": 13983,
-  "snapshots": 288,
+  "snapshots": 290,
   "unmapped_markets": 21151,
   "quote_matches": 59
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-24T05:59:39.481919+03:00",
+  "last_poll": "2026-11-24T06:01:39.724857+03:00",
   "cursor": "370",
   "posts": [
    {
@@ -3564,7 +3564,7 @@
    "401910037": "post",
    "401910038": "post",
    "401910039": "in",
-   "401910040": "in",
+   "401910040": "post",
    "401910041": "in",
    "401910042": "in",
    "401910043": "in",
