@@ -7,8 +7,6 @@
  "schedule_day": "2026-11-24",
  "content_slot": "2026-11-24-20",
  "news_seen": [
-  "https://www.sport-express.ru/football/turkey/news/agent-batrakova-alekseyu-udalos-izbezhat-sereznoy-travmy-on-gotov-igrat-2477272/",
-  "https://www.sport-express.ru/tennis/wta/news/olhovskiy-o-vklyuchenii-shnayder-v-chislo-pretendentok-na-nagradu-proryv-goda-ona-idet-po-voshodyaschey-2477277/",
   "https://www.sport-express.ru/hockey/nhl/news/zaschitnik-simon-edvinsson-otkazalsya-ot-predlozheniy-drugih-klubov-nhl-chtoby-detroyt-ne-smog-sohranit-ego-sportsnet-2477290/",
   "https://www.sport-express.ru/football/england/news/chelsi-oshtrafovan-na-150-tysyach-funtov-za-diskriminacionnye-krichalki-bolelschikov-20-noyabrya-2026-2477287/",
   "https://www.sport-express.ru/hockey/khl/news/napadayuschiy-avangarda-maykl-maklaud-nabral-100-ochko-za-136-matchey-v-khl-statistika-20-noyabrya-2026-2477280/",
@@ -506,9 +504,11 @@
   "https://www.sport-express.ru/football/yflrussia/news/nikolay-larin-o-sozdanii-reytinga-vypusknikov-yufl-lyuboy-podobnyy-instrument-dostoin-vnimaniya-2478505/",
   "https://www.sport-express.ru/football/champions-league/news/fanaty-galatasaraya-vyvesili-banner-v-podderzhku-gazy-na-matche-ligi-chempionov-2478504/",
   "https://www.sport-express.ru/football/champions-league/news/glavnyy-trener-aston-villy-emeri-nazval-fantasticheskoy-igru-batrakova-2478500/",
-  "https://www.sport-express.ru/football/rus_cup/news/igdisamov-o-pobede-cska-nad-akronom-igra-poluchilas-tyazheloy-slozhnoy-vyazkoy-2478497/"
+  "https://www.sport-express.ru/football/rus_cup/news/igdisamov-o-pobede-cska-nad-akronom-igra-poluchilas-tyazheloy-slozhnoy-vyazkoy-2478497/",
+  "https://www.sport-express.ru/tennis/atp/news/sinner-obratilsya-k-bolelschikam-posle-operacii-na-kolene-2478496/",
+  "taz-posle-dvukh-porazhenii-na-meidzhore-nash-uroven-namnogo-vyshe-i-ya-ne"
  ],
- "news_i": 4,
+ "news_i": 0,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1695,7 +1695,7 @@
  "streak_day": {
   "2026-11-22": 2
  },
- "news_next": "2026-11-24T21:54:46.913471+03:00",
+ "news_next": "2026-11-24T22:24:20.105861+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1726,7 +1726,6 @@
  "vk_mode": "photo",
  "dz_err": null,
  "img_used": [
-  "https://images.cybersport.ru/images/as-is/plain/ee/ee2d3d49-71f2-42f7-ad0d-fbd09717fd73.jpg",
   "https://images.cybersport.ru/images/as-is/plain/0e/0e7d9576-039d-40a7-bb7a-fe371d6399e5.jpg",
   "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/98/Alaska_Anchorage_Seawolves_at_Wisconsin_Badgers_men%27s_ice_hockey_men%27s_ice_hockey_game_on_November_25%2C_2023_at_Kohl_Center_in_Madison%2C_Wisconsin_5476.jpg/1280px-Alaska_Anchorage_Seawolves_at_Wisconsin_Badgers_men%27s_ice_hockey_men%27s_ice_hockey_game_on_November_25%2C_2023_at_Kohl_Center_in_Madison%2C_Wisconsin_5476.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
   "https://upload.wikimedia.org/wikipedia/commons/9/9a/GGadzhiev.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
@@ -2025,7 +2024,8 @@
   "https://images.cybersport.ru/images/as-is/plain/8a/8a6ce493-7ec4-415b-9c3b-6d69ac3c3d0f.jpg",
   "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/Hitachi_Kashiwa_Stadium_in_2024.jpg/1280px-Hitachi_Kashiwa_Stadium_in_2024.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
   "https://images.cybersport.ru/images/as-is/plain/9e/9e2d9d86-3077-42f9-8c39-218b9615b9c0.jpg",
-  "https://upload.wikimedia.org/wikipedia/commons/1/1e/Houses_in_the_shadow_of_Valley_Parade_football_stadium_-_geograph.org.uk_-_8054696.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+  "https://upload.wikimedia.org/wikipedia/commons/1/1e/Houses_in_the_shadow_of_Valley_Parade_football_stadium_-_geograph.org.uk_-_8054696.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "https://images.cybersport.ru/images/as-is/plain/77/77b1a769-34ab-4a36-be97-172696bb0f6e.jpg"
  ],
  "indexnow_day": "2026-11-24",
  "vk_wall_err": null,
@@ -2423,7 +2423,8 @@
   "9367",
   "9368",
   "9371",
-  "9378"
+  "9378",
+  "9384"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -2753,11 +2754,12 @@
   "2026-11-24:новость:a9d0de15feeeaf34cfcb416f",
   "2026-11-24:новость:59e40fed799ab6a7944c9115",
   "2026-11-24:новость:07f9fabdc7696ee05addc843",
-  "2026-11-24:новость:5d3d4aae4b63c973ae889d5c"
+  "2026-11-24:новость:5d3d4aae4b63c973ae889d5c",
+  "2026-11-24:новость:9f9a1fdd8f0a4e274d1f550d"
  ],
  "dz_last_delivery": {
-  "source_id": 9378,
-  "message_id": 877,
+  "source_id": 9384,
+  "message_id": 878,
   "kind": "новость"
  },
  "learn_attempt_day": "2026-11-24",
@@ -2958,7 +2960,7 @@
   "quote_matches": 75
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-24T21:53:20.760714+03:00",
+  "last_poll": "2026-11-24T21:55:20.105861+03:00",
   "cursor": "394",
   "posts": [
    {
@@ -4897,7 +4899,7 @@
   },
   "football|E1|401880147": {
    "reason": "edge_below_minimum",
-   "checked_at": "2026-11-24T18:44:00.178701+00:00",
+   "checked_at": "2026-11-24T18:55:40.542309+00:00",
    "kickoff": "2026-11-24T22:45:00+03:00",
    "sport": "football",
    "id": "401880147",
@@ -4912,7 +4914,7 @@
   },
   "football|E1|401880146": {
    "reason": "edge_below_minimum",
-   "checked_at": "2026-11-24T18:44:00.477429+00:00",
+   "checked_at": "2026-11-24T18:55:40.803501+00:00",
    "kickoff": "2026-11-24T22:45:00+03:00",
    "sport": "football",
    "id": "401880146",
@@ -4927,7 +4929,7 @@
   },
   "football|E1|401880145": {
    "reason": "edge_below_minimum",
-   "checked_at": "2026-11-24T18:44:00.912518+00:00",
+   "checked_at": "2026-11-24T18:55:41.234662+00:00",
    "kickoff": "2026-11-24T22:45:00+03:00",
    "sport": "football",
    "id": "401880145",
@@ -4942,7 +4944,7 @@
   },
   "football|E1|401880144": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-24T18:44:01.343958+00:00",
+   "checked_at": "2026-11-24T18:55:41.662114+00:00",
    "kickoff": "2026-11-24T22:45:00+03:00",
    "sport": "football",
    "id": "401880144",
@@ -4950,14 +4952,14 @@
    "away": "Куинз Парк Рейнджерс",
    "priced_markets": 6,
    "market": "Обе забьют — да",
-   "probability": 0.6057,
-   "odds": 1.54,
-   "edge": -0.06722,
+   "probability": 0.6095,
+   "odds": 1.53,
+   "edge": -0.06746,
    "estimated": true
   },
   "football|E1|401880143": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-24T18:44:01.788079+00:00",
+   "checked_at": "2026-11-24T18:55:42.090723+00:00",
    "kickoff": "2026-11-24T22:45:00+03:00",
    "sport": "football",
    "id": "401880143",
@@ -4972,7 +4974,7 @@
   },
   "football|E1|401880142": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-24T18:44:02.218417+00:00",
+   "checked_at": "2026-11-24T18:55:42.518695+00:00",
    "kickoff": "2026-11-24T22:45:00+03:00",
    "sport": "football",
    "id": "401880142",
@@ -4987,7 +4989,7 @@
   },
   "football|E2|401880824": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-24T18:44:02.653058+00:00",
+   "checked_at": "2026-11-24T18:55:42.955340+00:00",
    "kickoff": "2026-11-24T22:45:00+03:00",
    "sport": "football",
    "id": "401880824",
@@ -5002,7 +5004,7 @@
   },
   "football|E2|401880838": {
    "reason": "edge_below_minimum",
-   "checked_at": "2026-11-24T18:44:02.892211+00:00",
+   "checked_at": "2026-11-24T18:55:43.191712+00:00",
    "kickoff": "2026-11-24T22:45:00+03:00",
    "sport": "football",
    "id": "401880838",
@@ -5017,7 +5019,7 @@
   },
   "football|E2|401880823": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-24T18:44:03.181083+00:00",
+   "checked_at": "2026-11-24T18:55:43.428297+00:00",
    "kickoff": "2026-11-24T22:45:00+03:00",
    "sport": "football",
    "id": "401880823",
@@ -5032,7 +5034,7 @@
   },
   "football|E2|401880829": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-24T18:44:03.423110+00:00",
+   "checked_at": "2026-11-24T18:55:43.662919+00:00",
    "kickoff": "2026-11-24T22:45:00+03:00",
    "sport": "football",
    "id": "401880829",
@@ -5047,7 +5049,7 @@
   },
   "football|E3|401881358": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-24T18:44:03.664075+00:00",
+   "checked_at": "2026-11-24T18:55:43.900227+00:00",
    "kickoff": "2026-11-24T22:45:00+03:00",
    "sport": "football",
    "id": "401881358",
@@ -5062,7 +5064,7 @@
   },
   "football|E3|401881354": {
    "reason": "edge_below_minimum",
-   "checked_at": "2026-11-24T18:44:03.901290+00:00",
+   "checked_at": "2026-11-24T18:55:44.191497+00:00",
    "kickoff": "2026-11-24T22:45:00+03:00",
    "sport": "football",
    "id": "401881354",
@@ -5077,7 +5079,7 @@
   },
   "football|SC0|401878348": {
    "reason": "edge_below_minimum",
-   "checked_at": "2026-11-24T18:44:04.416544+00:00",
+   "checked_at": "2026-11-24T18:55:44.620164+00:00",
    "kickoff": "2026-11-24T22:45:00+03:00",
    "sport": "football",
    "id": "401878348",
