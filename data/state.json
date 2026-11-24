@@ -1563,7 +1563,7 @@
  "value_day": "2026-11-24",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-24",
- "site_stamp": "1529|9338|2026-11-24 14|6|e44b786774c421c8",
+ "site_stamp": "1529|9339|2026-11-24 14|6|e44b786774c421c8",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1720,7 +1720,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 9338,
+ "dz_last": 9339,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2060,7 +2060,7 @@
  "vk_photo_until": 1794644243.1147308,
  "vk_photo_cursor": {},
  "vk_story_last": 9322,
- "vk_story_err": null,
+ "vk_story_err": "VK stories: сервер не вернул upload_result",
  "push_weekly": "2026-47",
  "vk_story_at": 1795518316.6112888,
  "vk_story_url": "https://vk.com/story-228963529_456239137",
@@ -2928,7 +2928,7 @@
   "quote_matches": 71
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-24T14:18:51.576086+03:00",
+  "last_poll": "2026-11-24T14:20:51.680788+03:00",
   "cursor": "378",
   "posts": [
    {
@@ -4479,7 +4479,7 @@
   },
   "esports|CS2|1816912": {
    "reason": "insufficient_history_or_odds",
-   "checked_at": "2026-11-24T11:09:09.592026+00:00",
+   "checked_at": "2026-11-24T11:21:08.977228+00:00",
    "kickoff": "2026-11-24T15:00:00+03:00",
    "sport": "esports",
    "id": "1816912",
@@ -8149,5 +8149,6 @@
     }
    }
   }
- }
+ },
+ "vk_story_retry_at": 1795522900.8705654
 }
