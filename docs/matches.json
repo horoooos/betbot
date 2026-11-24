@@ -818,7 +818,7 @@ null
 ]
 ],
 "div": "NHL",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "predictions/2026-11-24-aylenders-toronto-401892776.html",
 "hs": "2",
@@ -928,7 +928,7 @@ null
 "min_odds": 1.49,
 "minute": "2-й период",
 "p": 0.706,
-"result": null,
+"result": "miss",
 "score": "1:0"
 }
 },
@@ -960,7 +960,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "",
-"hs": "3",
+"hs": "4",
 "as": "2",
 "tip": "",
 "top": false,
@@ -1096,8 +1096,8 @@ null
 "state": "in",
 "bo": null,
 "prediction": "",
-"hs": "111",
-"as": "97",
+"hs": "113",
+"as": "101",
 "tip": "",
 "top": false,
 "bot": null,
