@@ -546,9 +546,44 @@ null
 },
 {
 "sport": "esports",
-"id": "1789259",
+"id": "1789260",
 "league": "Киберспорт · CS2",
 "kickoff": "2026-11-24T09:00:00+03:00",
+"home": "Liquid",
+"away": "GOSH",
+"hl": "https://cdn-api.pandascore.co/images/team/image/3213/463px_team_liquid_2024_full_lightmode.png",
+"al": "https://cdn-api.pandascore.co/images/team/image/139562/825px_gosh_allmode.png",
+"hid": "3213",
+"aid": "139562",
+"bb": "https://betboom.ru/search?query=%D0%9B%D0%B8%D0%BA%D0%B2%D0%B8%D0%B4&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=esports",
+"path": "",
+"url": "esports.html?e=1789260&d=CS2",
+"participants": [
+[
+"Liquid",
+"Liquid"
+],
+[
+"GOSH",
+"GOSH"
+]
+],
+"div": "CS2",
+"state": "pre",
+"bo": 1,
+"prediction": "",
+"hs": 0,
+"as": 0,
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "esports",
+"id": "1789259",
+"league": "Киберспорт · CS2",
+"kickoff": "2026-11-24T09:15:00+03:00",
 "home": "PVISION",
 "away": "DENDELE CS",
 "hl": "https://cdn-api.pandascore.co/images/team/image/139565/250px_parivision_allmode.png",
@@ -603,41 +638,6 @@ null
 ],
 "center": "BO1 · линия winline"
 },
-"lt": null
-},
-{
-"sport": "esports",
-"id": "1789260",
-"league": "Киберспорт · CS2",
-"kickoff": "2026-11-24T09:00:00+03:00",
-"home": "Liquid",
-"away": "GOSH",
-"hl": "https://cdn-api.pandascore.co/images/team/image/3213/463px_team_liquid_2024_full_lightmode.png",
-"al": "https://cdn-api.pandascore.co/images/team/image/139562/825px_gosh_allmode.png",
-"hid": "3213",
-"aid": "139562",
-"bb": "https://betboom.ru/search?query=%D0%9B%D0%B8%D0%BA%D0%B2%D0%B8%D0%B4&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=esports",
-"path": "",
-"url": "esports.html?e=1789260&d=CS2",
-"participants": [
-[
-"Liquid",
-"Liquid"
-],
-[
-"GOSH",
-"GOSH"
-]
-],
-"div": "CS2",
-"state": "pre",
-"bo": 1,
-"prediction": "",
-"hs": 0,
-"as": 0,
-"tip": "",
-"top": false,
-"bot": null,
 "lt": null
 },
 {
