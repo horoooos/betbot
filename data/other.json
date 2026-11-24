@@ -6492,25 +6492,25 @@
   "kickoff": "2026-11-24T04:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Mon, November 23rd at 8:00 PM EST",
   "clock": "0.0",
   "period": 0,
   "home": {
+   "color": "0a2240",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/no.png",
    "id": "3",
    "name": "New Orleans Pelicans",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/no.png",
-   "color": "0a2240",
    "score": "0",
    "record": "5-13",
    "periods": [],
    "ru": "Нью-Орлеан Пеликанс"
   },
   "away": {
+   "color": "29127a",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/phx.png",
    "id": "21",
    "name": "Phoenix Suns",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/phx.png",
-   "color": "29127a",
    "score": "0",
    "record": "8-7",
    "periods": [],
@@ -6597,7 +6597,9 @@
   "btn": 4,
   "close": {
    "BB_ML_A": 0.6147
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null
  },
  "NBA|401910043": {
   "status": "waiting_data",
