@@ -1570,7 +1570,7 @@
  "value_day": "2026-11-23",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-23",
- "site_stamp": "1520|9284|2026-11-24 05|6|599ebaa843370814",
+ "site_stamp": "1520|9288|2026-11-24 05|6|c98955f92c1a8e81",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1726,7 +1726,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 9284,
+ "dz_last": 9288,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2056,7 +2056,7 @@
  "vk_photos": [],
  "vk_photo_until": 1794644243.1147308,
  "vk_photo_cursor": {},
- "vk_story_last": 9284,
+ "vk_story_last": 9288,
  "vk_story_err": null,
  "push_weekly": "2026-47",
  "vk_story_at": 1795483253.1896534,
@@ -2730,7 +2730,7 @@
   "external_sources": {
    "providers": {
     "legalbet": {
-     "at": "2026-11-24T02:00:18.680641+00:00",
+     "at": "2026-11-24T02:31:39.485278+00:00",
      "status": "ok",
      "discovered": 2,
      "pages": 2,
@@ -2741,29 +2741,29 @@
      "contexts": 2
     },
     "livesport": {
-     "at": "2026-11-24T02:00:18.680641+00:00",
+     "at": "2026-11-24T02:31:39.485278+00:00",
      "status": "ok",
      "discovered": 11,
      "pages": 6,
      "opinions": 10,
-     "mapped": 4,
+     "mapped": 3,
      "articles_available": 17,
-     "next_offset": 11,
-     "contexts": 5
+     "next_offset": 6,
+     "contexts": 6
     },
     "metaratings": {
-     "at": "2026-11-24T02:00:18.680641+00:00",
+     "at": "2026-11-24T02:31:39.485278+00:00",
      "status": "ok",
      "discovered": 9,
      "pages": 6,
      "opinions": 24,
-     "mapped": 3,
+     "mapped": 7,
      "articles_available": 37,
-     "next_offset": 6,
+     "next_offset": 12,
      "contexts": 6
     },
     "rb": {
-     "at": "2026-11-24T02:00:18.680641+00:00",
+     "at": "2026-11-24T02:31:39.485278+00:00",
      "status": "ok",
      "discovered": 1,
      "pages": 1,
@@ -2774,16 +2774,16 @@
      "contexts": 1
     },
     "vseprosport": {
-     "at": "2026-11-24T02:00:18.680641+00:00",
+     "at": "2026-11-24T02:31:39.485278+00:00",
      "status": "ok",
      "discovered": 9,
-     "pages": 2,
+     "pages": 4,
      "opinions": 0,
      "mapped": 0,
      "articles_available": 10,
-     "next_offset": 8,
-     "page_errors": 4,
-     "contexts": 2
+     "next_offset": 14,
+     "page_errors": 2,
+     "contexts": 4
     }
    },
    "opinions": 22,
@@ -2907,7 +2907,7 @@
   "quote_matches": 56
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-24T05:29:39.345559+03:00",
+  "last_poll": "2026-11-24T05:31:39.485278+03:00",
   "cursor": "370",
   "posts": [
    {
@@ -4206,15 +4206,16 @@
    "estimated": false
   },
   "hockey|NHL|401892779": {
-   "reason": "edge_below_minimum",
-   "checked_at": "2026-11-24T02:19:55.003437+00:00",
+   "reason": "published",
+   "checked_at": "2026-11-24T02:32:23.459233+00:00",
    "kickoff": "2026-11-24T06:00:00+03:00",
    "sport": "hockey",
    "id": "401892779",
    "home": "Сан-Хосе",
    "away": "Миннесота",
-   "priced_markets": 4,
    "market": "П2 (с ОТ и буллитами)",
+   "strategy": "external_trial",
+   "source_count": 12,
    "probability": 0.6164,
    "odds": 1.56,
    "edge": -0.03842,
@@ -4222,7 +4223,7 @@
   },
   "basketball|NBA|401910044": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-24T02:19:55.234687+00:00",
+   "checked_at": "2026-11-24T02:32:23.691507+00:00",
    "kickoff": "2026-11-24T06:00:00+03:00",
    "sport": "basketball",
    "id": "401910044",
@@ -4236,19 +4237,20 @@
    "estimated": true
   },
   "basketball|NBA|401910045": {
-   "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-24T02:19:55.673733+00:00",
+   "reason": "published",
+   "checked_at": "2026-11-24T02:32:33.115803+00:00",
    "kickoff": "2026-11-24T06:00:00+03:00",
    "sport": "basketball",
    "id": "401910045",
    "home": "Сакраменто Кингз",
    "away": "Сан-Антонио Сперс",
-   "priced_markets": 6,
-   "market": "ТМ 230.5",
-   "probability": 0.6597,
-   "odds": 1.41,
-   "edge": -0.06982,
-   "estimated": true
+   "market": "П1 (с ОТ)",
+   "strategy": "external_trial",
+   "source_count": 4,
+   "probability": 0.2394,
+   "odds": 3.49,
+   "edge": -0.16449,
+   "estimated": false
   }
  },
  "source_trial": {
@@ -6127,7 +6129,7 @@
     "profit_pct": -0.5
    },
    "hockey|NHL|401892773": {
-    "status": "open",
+    "status": "settled",
     "id": "401892773",
     "sport": "hockey",
     "div": "NHL",
@@ -6257,7 +6259,10 @@
        "price_kind": "author_recorded"
       }
      ]
-    }
+    },
+    "settled_at": "2026-11-24T02:31:39.485278+00:00",
+    "hit": true,
+    "profit_pct": 0.245
    },
    "basketball|NBA|401910036": {
     "status": "settled",
@@ -7120,6 +7125,200 @@
        "published_at": "2026-11-24T01:22:00+00:00",
        "observed_at": "2026-11-24T01:30:18.638856+00:00",
        "odds": 1.98,
+       "price_kind": "author_recorded"
+      }
+     ]
+    }
+   },
+   "hockey|NHL|401892779": {
+    "status": "open",
+    "id": "401892779",
+    "sport": "hockey",
+    "div": "NHL",
+    "kickoff": "2026-11-24T06:00:00+03:00",
+    "published_at": "2026-11-24T02:32:20.077210+00:00",
+    "msg_id": 9285,
+    "tip": {
+     "key": "HK_ML_A",
+     "label": "П2 (с ОТ и буллитами)",
+     "p": 0.6164,
+     "odds": 1.56,
+     "est": false,
+     "stake": 0.5,
+     "strategy": "external_trial",
+     "selection_mode": "external_fallback",
+     "trial_expires_at": null,
+     "probability_origin": "baseline_model",
+     "model_edge": -0.03846,
+     "source_count": 12,
+     "source_refs": [
+      {
+       "author": "/predictors/nikodim-kadilov",
+       "provider": null,
+       "source": "https://stavka.tv/matches/ice-hockey/24-11-2026-san-jose-sharks-minnesota-wild",
+       "published_at": "2026-11-23T03:08:00+00:00",
+       "observed_at": "2026-11-23T03:15:22.000816+00:00",
+       "odds": 1.5,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/ivan-grishin-2",
+       "provider": null,
+       "source": "https://stavka.tv/matches/ice-hockey/24-11-2026-san-jose-sharks-minnesota-wild",
+       "published_at": "2026-11-23T13:30:00+00:00",
+       "observed_at": "2026-11-23T13:40:53.625936+00:00",
+       "odds": 1.52,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/sergei-goroxov-2",
+       "provider": null,
+       "source": "https://stavka.tv/matches/ice-hockey/24-11-2026-san-jose-sharks-minnesota-wild",
+       "published_at": "2026-11-23T17:06:00+00:00",
+       "observed_at": "2026-11-23T17:07:21.410618+00:00",
+       "odds": 1.55,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/padenie-materatstsi",
+       "provider": null,
+       "source": "https://stavka.tv/matches/ice-hockey/24-11-2026-san-jose-sharks-minnesota-wild",
+       "published_at": "2026-11-23T17:06:00+00:00",
+       "observed_at": "2026-11-23T17:07:21.410618+00:00",
+       "odds": 1.55,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/gleb-komarov-3",
+       "provider": null,
+       "source": "https://stavka.tv/matches/ice-hockey/24-11-2026-san-jose-sharks-minnesota-wild",
+       "published_at": "2026-11-23T17:27:00+00:00",
+       "observed_at": "2026-11-23T17:29:21.936116+00:00",
+       "odds": 1.57,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/ayder-resutov",
+       "provider": null,
+       "source": "https://stavka.tv/matches/ice-hockey/24-11-2026-san-jose-sharks-minnesota-wild",
+       "published_at": "2026-11-23T17:37:00+00:00",
+       "observed_at": "2026-11-23T17:47:21.950385+00:00",
+       "odds": 1.57,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/andrei-chernoshei-1",
+       "provider": null,
+       "source": "https://stavka.tv/matches/ice-hockey/24-11-2026-san-jose-sharks-minnesota-wild",
+       "published_at": "2026-11-23T17:42:00+00:00",
+       "observed_at": "2026-11-23T17:47:21.950385+00:00",
+       "odds": 1.57,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/aleksandr-tkacenko-5",
+       "provider": null,
+       "source": "https://stavka.tv/matches/ice-hockey/24-11-2026-san-jose-sharks-minnesota-wild",
+       "published_at": "2026-11-23T18:15:00+00:00",
+       "observed_at": "2026-11-23T18:27:22.836107+00:00",
+       "odds": 1.57,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/aleksandr-taktasev",
+       "provider": null,
+       "source": "https://stavka.tv/matches/ice-hockey/24-11-2026-san-jose-sharks-minnesota-wild",
+       "published_at": "2026-11-23T18:27:00+00:00",
+       "observed_at": "2026-11-23T18:50:00.735829+00:00",
+       "odds": 1.57,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/londonskiy",
+       "provider": null,
+       "source": "https://stavka.tv/matches/ice-hockey/24-11-2026-san-jose-sharks-minnesota-wild",
+       "published_at": "2026-11-23T22:35:00+00:00",
+       "observed_at": "2026-11-23T22:39:59.610693+00:00",
+       "odds": 1.55,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/yunost-85",
+       "provider": null,
+       "source": "https://stavka.tv/matches/ice-hockey/24-11-2026-san-jose-sharks-minnesota-wild",
+       "published_at": "2026-11-23T22:37:00+00:00",
+       "observed_at": "2026-11-23T22:39:59.610693+00:00",
+       "odds": 1.55,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/mixail-293",
+       "provider": null,
+       "source": "https://stavka.tv/matches/ice-hockey/24-11-2026-san-jose-sharks-minnesota-wild",
+       "published_at": "2026-11-23T23:35:00+00:00",
+       "observed_at": "2026-11-23T23:42:18.773195+00:00",
+       "odds": 1.55,
+       "price_kind": "author_recorded"
+      }
+     ]
+    }
+   },
+   "basketball|NBA|401910045": {
+    "status": "open",
+    "id": "401910045",
+    "sport": "basketball",
+    "div": "NBA",
+    "kickoff": "2026-11-24T06:00:00+03:00",
+    "published_at": "2026-11-24T02:32:29.701145+00:00",
+    "msg_id": 9287,
+    "tip": {
+     "key": "BB_ML_H",
+     "label": "П1 (с ОТ)",
+     "p": 0.2394,
+     "odds": 3.49,
+     "est": false,
+     "stake": 0.5,
+     "strategy": "external_trial",
+     "selection_mode": "external_fallback",
+     "trial_expires_at": null,
+     "probability_origin": "baseline_model",
+     "model_edge": -0.1646,
+     "source_count": 4,
+     "source_refs": [
+      {
+       "author": "/predictors/sivan2",
+       "provider": null,
+       "source": "https://stavka.tv/matches/basketball/24-11-2026-sacramento-kings-san-antonio-spurs",
+       "published_at": "2026-11-23T15:20:00+00:00",
+       "observed_at": "2026-11-23T15:25:20.727500+00:00",
+       "odds": 4.62,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/misa-steskin",
+       "provider": null,
+       "source": "https://stavka.tv/matches/basketball/24-11-2026-sacramento-kings-san-antonio-spurs",
+       "published_at": "2026-11-23T17:49:00+00:00",
+       "observed_at": "2026-11-23T18:07:22.210171+00:00",
+       "odds": 4.64,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/dima-osipov-6",
+       "provider": null,
+       "source": "https://stavka.tv/matches/basketball/24-11-2026-sacramento-kings-san-antonio-spurs",
+       "published_at": "2026-11-23T22:39:00+00:00",
+       "observed_at": "2026-11-23T22:39:59.610693+00:00",
+       "odds": 5.6,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/artem-zhabo",
+       "provider": null,
+       "source": "https://stavka.tv/matches/basketball/24-11-2026-sacramento-kings-san-antonio-spurs",
+       "published_at": "2026-11-24T00:06:00+00:00",
+       "observed_at": "2026-11-24T00:24:18.539436+00:00",
+       "odds": 5.61,
        "price_kind": "author_recorded"
       }
      ]
