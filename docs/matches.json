@@ -1,67 +1,6 @@
 [
 {
 "sport": "esports",
-"id": "1816911",
-"league": "Киберспорт · CS2",
-"kickoff": "2026-11-24T15:00:00+03:00",
-"home": "Liquid",
-"away": "Wildcard",
-"hl": "https://cdn-api.pandascore.co/images/team/image/3213/463px_team_liquid_2024_full_lightmode.png",
-"al": "https://cdn-api.pandascore.co/images/team/image/135273/188px_wildcard_2024_lightmode.png",
-"hid": "3213",
-"aid": "135273",
-"bb": "https://betboom.ru/search?query=%D0%9B%D0%B8%D0%BA%D0%B2%D0%B8%D0%B4&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=esports",
-"path": "",
-"url": "esports.html?e=1816911&d=CS2",
-"participants": [
-[
-"Liquid",
-"Liquid"
-],
-[
-"Wildcard",
-"Wildcard"
-]
-],
-"div": "CS2",
-"state": "unknown",
-"bo": 1,
-"prediction": "predictions/2026-11-24-liquid-wildcard-1816911.html",
-"hs": null,
-"as": null,
-"tip": "Победа: Wildcard · 3.05",
-"top": false,
-"bot": {
-"main": {
-"label": "Победа: Wildcard",
-"p": 0.311,
-"odds": 3.05,
-"est": false
-},
-"bold": null,
-"markets": [
-[
-"Победа: Liquid",
-0.688,
-1.38
-],
-[
-"Победа: Wildcard",
-0.312,
-3.05
-]
-],
-"bar": [
-0.688487584650113,
-0,
-0.31151241534988705
-],
-"center": "BO1 · линия pari · Эло 1674 : 1659"
-},
-"lt": null
-},
-{
-"sport": "esports",
 "id": "1816478",
 "league": "Киберспорт · Dota 2",
 "kickoff": "2026-11-24T17:01:26+03:00",
@@ -3406,6 +3345,41 @@ null
 ]
 ],
 "div": "UCL",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "basketball",
+"id": "401909317",
+"league": "США · NBA",
+"kickoff": "2026-11-26T01:00:00+03:00",
+"home": "Филадельфия Сиксерс",
+"away": "Майами Хит",
+"hl": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/phi.png",
+"al": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/mia.png",
+"hid": "20",
+"aid": "14",
+"bb": "https://betboom.ru/search?query=%D0%A4%D0%B8%D0%BB%D0%B0%D0%B4%D0%B5%D0%BB%D1%8C%D1%84%D0%B8%D1%8F&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=basketball",
+"path": "basketball/nba",
+"url": "live.html?s=basketball&p=basketball%2Fnba&e=401909317&h=%D0%A4%D0%B8%D0%BB%D0%B0%D0%B4%D0%B5%D0%BB%D1%8C%D1%84%D0%B8%D1%8F+%D0%A1%D0%B8%D0%BA%D1%81%D0%B5%D1%80%D1%81&a=%D0%9C%D0%B0%D0%B9%D0%B0%D0%BC%D0%B8+%D0%A5%D0%B8%D1%82",
+"participants": [
+[
+"Филадельфия Сиксерс",
+"Philadelphia 76ers"
+],
+[
+"Майами Хит",
+"Miami Heat"
+]
+],
+"div": "NBA",
 "state": "pre",
 "bo": null,
 "prediction": "",

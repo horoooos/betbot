@@ -5,7 +5,7 @@
  },
  "learned": "2026-11-24",
  "schedule_day": "2026-11-24",
- "content_slot": "2026-11-24-16",
+ "content_slot": "2026-11-24-19",
  "news_seen": [
   "https://www.sport-express.ru/tennis/atp/news/daniil-medvedev-kommentariy-po-pobede-nad-frensisom-tiafo-na-itogovom-turnire-atp-2477166/",
   "https://www.sport-express.ru/football/england/news/espn-semikratnyy-pobeditel-superboula-tom-bredi-priobrel-dolyu-v-chelsi-2477203/",
@@ -1563,7 +1563,7 @@
  "value_day": "2026-11-24",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-24",
- "site_stamp": "1532|9359|2026-11-24 18|6|9c83d6a0bedcadfe",
+ "site_stamp": "1532|9360|2026-11-24 19|6|9c83d6a0bedcadfe",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1720,7 +1720,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 9359,
+ "dz_last": 9360,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2771,7 +2771,7 @@
   "external_sources": {
    "providers": {
     "legalbet": {
-     "at": "2026-11-24T15:31:47.505026+00:00",
+     "at": "2026-11-24T16:01:47.535022+00:00",
      "status": "ok",
      "discovered": 4,
      "pages": 4,
@@ -2782,29 +2782,29 @@
      "contexts": 4
     },
     "livesport": {
-     "at": "2026-11-24T15:31:47.505026+00:00",
+     "at": "2026-11-24T16:01:47.535022+00:00",
      "status": "ok",
      "discovered": 15,
      "pages": 6,
-     "opinions": 12,
-     "mapped": 6,
+     "opinions": 8,
+     "mapped": 1,
      "articles_available": 18,
-     "next_offset": 11,
-     "contexts": 6
+     "next_offset": 17,
+     "contexts": 4
     },
     "metaratings": {
-     "at": "2026-11-24T15:31:47.505026+00:00",
+     "at": "2026-11-24T16:01:47.535022+00:00",
      "status": "ok",
-     "discovered": 6,
+     "discovered": 14,
      "pages": 6,
      "opinions": 24,
-     "mapped": 3,
-     "articles_available": 37,
-     "next_offset": 6,
+     "mapped": 4,
+     "articles_available": 38,
+     "next_offset": 12,
      "contexts": 6
     },
     "rb": {
-     "at": "2026-11-24T15:31:47.505026+00:00",
+     "at": "2026-11-24T16:01:47.535022+00:00",
      "status": "ok",
      "discovered": 1,
      "pages": 1,
@@ -2815,14 +2815,14 @@
      "contexts": 1
     },
     "vseprosport": {
-     "at": "2026-11-24T15:31:47.505026+00:00",
+     "at": "2026-11-24T16:01:47.535022+00:00",
      "status": "ok",
      "discovered": 7,
      "pages": 2,
      "opinions": 0,
      "mapped": 0,
      "articles_available": 10,
-     "next_offset": 6,
+     "next_offset": 12,
      "page_errors": 4,
      "contexts": 2
     }
@@ -2943,12 +2943,12 @@
   },
   "error": null,
   "tips": 14764,
-  "snapshots": 302,
+  "snapshots": 304,
   "unmapped_markets": 22363,
   "quote_matches": 74
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-24T18:59:47.341910+03:00",
+  "last_poll": "2026-11-24T19:01:47.535022+03:00",
   "cursor": "386",
   "posts": [
    {
