@@ -7890,22 +7890,22 @@
   "state": "pre",
   "completed": false,
   "tier": "s",
-  "status": "reviewed",
+  "status": "done",
   "home": {
+   "color": "3b4a7a",
+   "logo": "https://cdn-api.pandascore.co/images/team/image/139565/250px_parivision_allmode.png",
    "id": "139565",
    "name": "PVISION",
    "ru": "PVISION",
-   "logo": "https://cdn-api.pandascore.co/images/team/image/139565/250px_parivision_allmode.png",
-   "color": "3b4a7a",
    "score": 0,
    "winner": false
   },
   "away": {
+   "color": "3b4a7a",
+   "logo": "https://cdn-api.pandascore.co/images/team/image/138988/454px_dendele_cs_allmode.png",
    "id": "138988",
    "name": "DENDELE CS",
    "ru": "DENDELE CS",
-   "logo": "https://cdn-api.pandascore.co/images/team/image/138988/454px_dendele_cs_allmode.png",
-   "color": "3b4a7a",
    "score": 0,
    "winner": false
   },
@@ -7992,7 +7992,10 @@
   "btn": 4,
   "close": {
    "_": null
-  }
+  },
+  "settlement_retry_at": 1795508149.05379,
+  "main_hit": false,
+  "bold_hit": null
  },
  "CS2|1789256": {
   "status": "waiting_data",
