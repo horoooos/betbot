@@ -7,7 +7,6 @@
  "schedule_day": "2026-11-24",
  "content_slot": "2026-11-24-13",
  "news_seen": [
-  "https://www.sport-express.ru/football/rfpl/news/kirichenko-posle-pobedy-rostova-nad-krylyami-14-ochkov-v-6-matchah-greh-zhalovatsya-2477116/",
   "do-konca-proigrala-team-liquid-na-blast-slam-ix",
   "https://www.sport-express.ru/hockey/nhl/news/istochnik-rossiyskiy-forvard-pittsburga-malkin-vybyl-na-neopredelennyy-srok-iz-za-travmy-2477121/",
   "https://www.sport-express.ru/football/saudovskaya-araviya/news/al-ahli-al-nasr-schet-i-rezultat-matcha-9-tura-chempionata-saudovskoy-aravii-20-noyabrya-2026-2477115/",
@@ -506,9 +505,10 @@
   "https://www.sport-express.ru/hockey/nhl/news/kaprizov-priznan-vtoroy-zvezdoy-igrovogo-dnya-v-nhl-2478302/",
   "https://www.sport-express.ru/football/rfpl/news/sarkisyan-schitaet-cherchesova-luchshim-kandidatom-na-post-glavnogo-trenera-lokomotiva-2478323/",
   "https://www.sport-express.ru/tennis/wta/news/mirra-andreeva-priznana-proryvom-goda-po-versii-espn-2478343/",
-  "100-thieves-proigrali-imperial-esports-na-pgl-major-singapore-2026"
+  "100-thieves-proigrali-imperial-esports-na-pgl-major-singapore-2026",
+  "https://www.sport-express.ru/football/rfpl/news/kuznecov-raskritikoval-sudeystvo-v-matche-cska-ahmat-2478367/"
  ],
- "news_i": 0,
+ "news_i": 1,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1695,7 +1695,7 @@
  "streak_day": {
   "2026-11-22": 2
  },
- "news_next": "2026-11-24T14:18:51.181446+03:00",
+ "news_next": "2026-11-24T14:45:51.576086+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -2022,7 +2022,8 @@
   "https://images.cybersport.ru/images/as-is/plain/69/698fc882-860f-4fb9-8a25-bc4789597e07.jpg",
   "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/Heini_Vatnsdal_a_Faroese_Football_Player.jpg/1280px-Heini_Vatnsdal_a_Faroese_Football_Player.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
   "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fe/Mirra_Andreeva_%282023_US_Open%29_04.jpg/1280px-Mirra_Andreeva_%282023_US_Open%29_04.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-  "https://images.cybersport.ru/images/as-is/plain/04/04b42829-9595-4542-9214-a52a6507572f.jpg"
+  "https://images.cybersport.ru/images/as-is/plain/04/04b42829-9595-4542-9214-a52a6507572f.jpg",
+  "https://upload.wikimedia.org/wikipedia/commons/0/09/%D0%94%D0%BC%D0%B8%D1%82%D1%80%D0%B8%D0%B9_%D0%9A%D1%83%D0%B7%D0%BD%D0%B5%D1%86%D0%BE%D0%B2_%28%D0%B8%D1%8E%D0%BB%D1%8C_2022%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
  ],
  "indexnow_day": "2026-11-24",
  "vk_wall_err": null,
@@ -2404,7 +2405,8 @@
   "9326",
   "9330",
   "9334",
-  "9335"
+  "9335",
+  "9339"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -2718,11 +2720,12 @@
   "2026-11-24:новость:20e9f34ad447b5006e2ace42",
   "2026-11-24:новость:c0d198ead155e28a063d1792",
   "2026-11-24:новость:c18e103673ff3039359532b2",
-  "2026-11-24:новость:d6b0a85b26a184743a412e7e"
+  "2026-11-24:новость:d6b0a85b26a184743a412e7e",
+  "2026-11-24:новость:16dfcad620de1d079949cbcb"
  ],
  "dz_last_delivery": {
-  "source_id": 9335,
-  "message_id": 861,
+  "source_id": 9339,
+  "message_id": 862,
   "kind": "новость"
  },
  "learn_attempt_day": "2026-11-24",
@@ -2925,7 +2928,7 @@
   "quote_matches": 71
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-24T14:16:51.830906+03:00",
+  "last_poll": "2026-11-24T14:18:51.576086+03:00",
   "cursor": "378",
   "posts": [
    {
