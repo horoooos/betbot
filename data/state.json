@@ -1563,7 +1563,7 @@
  "value_day": "2026-11-24",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-24",
- "site_stamp": "1532|9387|2026-11-24 22|6|c35bb66a6ff1f4dc",
+ "site_stamp": "1532|9387|2026-11-24 22|6|2c9778802acc3bfc",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -2962,7 +2962,7 @@
   "quote_matches": 76
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-24T22:29:20.262703+03:00",
+  "last_poll": "2026-11-24T22:31:20.429787+03:00",
   "cursor": "394",
   "posts": [
    {
@@ -3759,7 +3759,8 @@
    "401934687": "pre",
    "401933757": "pre",
    "401921355": "pre",
-   "401931986": "pre"
+   "401931986": "pre",
+   "401934705": "pre"
   },
   "daily": {
    "day": "2026-11-24"
@@ -5097,7 +5098,7 @@
   },
   "football|E1|401880141": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-24T19:21:39.488848+00:00",
+   "checked_at": "2026-11-24T19:31:40.302776+00:00",
    "kickoff": "2026-11-24T23:00:00+03:00",
    "sport": "football",
    "id": "401880141",
@@ -5112,7 +5113,7 @@
   },
   "football|SC0|401878345": {
    "reason": "edge_below_minimum",
-   "checked_at": "2026-11-24T19:21:40.026219+00:00",
+   "checked_at": "2026-11-24T19:31:40.782442+00:00",
    "kickoff": "2026-11-24T23:00:00+03:00",
    "sport": "football",
    "id": "401878345",
@@ -5127,7 +5128,7 @@
   },
   "football|UCL|401915295": {
    "reason": "edge_below_minimum",
-   "checked_at": "2026-11-24T19:21:40.457295+00:00",
+   "checked_at": "2026-11-24T19:31:41.210163+00:00",
    "kickoff": "2026-11-24T23:00:00+03:00",
    "sport": "football",
    "id": "401915295",
@@ -5142,7 +5143,7 @@
   },
   "football|UCL|401915296": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-24T19:21:40.688747+00:00",
+   "checked_at": "2026-11-24T19:31:41.439998+00:00",
    "kickoff": "2026-11-24T23:00:00+03:00",
    "sport": "football",
    "id": "401915296",
@@ -5157,7 +5158,7 @@
   },
   "football|UCL|401915294": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-24T19:21:41.117413+00:00",
+   "checked_at": "2026-11-24T19:31:41.873655+00:00",
    "kickoff": "2026-11-24T23:00:00+03:00",
    "sport": "football",
    "id": "401915294",
@@ -5172,7 +5173,7 @@
   },
   "football|UCL|401915379": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-24T19:21:41.543526+00:00",
+   "checked_at": "2026-11-24T19:31:42.300853+00:00",
    "kickoff": "2026-11-24T23:00:00+03:00",
    "sport": "football",
    "id": "401915379",
@@ -5180,14 +5181,14 @@
    "away": "Наполи",
    "priced_markets": 7,
    "market": "Обе забьют — да",
-   "probability": 0.5917,
-   "odds": 1.57,
-   "edge": -0.07103,
+   "probability": 0.5855,
+   "odds": 1.59,
+   "edge": -0.06905,
    "estimated": true
   },
   "football|UCL|401915299": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-24T19:21:41.966891+00:00",
+   "checked_at": "2026-11-24T19:31:42.725432+00:00",
    "kickoff": "2026-11-24T23:00:00+03:00",
    "sport": "football",
    "id": "401915299",
@@ -5202,7 +5203,7 @@
   },
   "football|UCL|401915298": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-24T19:21:42.393445+00:00",
+   "checked_at": "2026-11-24T19:31:43.209456+00:00",
    "kickoff": "2026-11-24T23:00:00+03:00",
    "sport": "football",
    "id": "401915298",
@@ -5210,14 +5211,14 @@
    "away": "ПСВ",
    "priced_markets": 7,
    "market": "Обе забьют — да",
-   "probability": 0.6296,
-   "odds": 1.48,
-   "edge": -0.06819,
+   "probability": 0.6336,
+   "odds": 1.47,
+   "edge": -0.06861,
    "estimated": true
   },
   "football|UCL|401915297": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-24T19:21:42.632953+00:00",
+   "checked_at": "2026-11-24T19:31:43.454614+00:00",
    "kickoff": "2026-11-24T23:00:00+03:00",
    "sport": "football",
    "id": "401915297",
@@ -5225,9 +5226,9 @@
    "away": "Бетис",
    "priced_markets": 7,
    "market": "Обе забьют — да",
-   "probability": 0.5836,
-   "odds": 1.59,
-   "edge": -0.07208,
+   "probability": 0.5795,
+   "odds": 1.6,
+   "edge": -0.0728,
    "estimated": true
   }
  },
