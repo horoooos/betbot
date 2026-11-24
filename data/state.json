@@ -2061,8 +2061,8 @@
  "vk_photos": [],
  "vk_photo_until": 1794644243.1147308,
  "vk_photo_cursor": {},
- "vk_story_last": 9330,
- "vk_story_err": null,
+ "vk_story_last": 9333,
+ "vk_story_err": "VK stories: сервер не вернул upload_result",
  "push_weekly": "2026-47",
  "vk_story_at": 1795532170.7145367,
  "vk_story_url": "https://vk.com/story-228963529_456239140",
@@ -2944,7 +2944,7 @@
   "quote_matches": 73
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-24T18:09:46.816022+03:00",
+  "last_poll": "2026-11-24T18:11:47.572615+03:00",
   "cursor": "384",
   "posts": [
    {
@@ -4602,7 +4602,7 @@
   },
   "tennis|WTA|186814": {
    "reason": "insufficient_history_or_odds",
-   "checked_at": "2026-11-24T15:02:14.552250+00:00",
+   "checked_at": "2026-11-24T15:12:05.276130+00:00",
    "kickoff": "2026-11-24T18:30:00+03:00",
    "sport": "tennis",
    "id": "186814",
@@ -4611,7 +4611,7 @@
   },
   "tennis|WTA|186818": {
    "reason": "no_real_odds",
-   "checked_at": "2026-11-24T15:02:16.114343+00:00",
+   "checked_at": "2026-11-24T15:12:06.913558+00:00",
    "kickoff": "2026-11-24T18:30:00+03:00",
    "sport": "tennis",
    "id": "186818",
@@ -8419,5 +8419,6 @@
   "home": "Хайберниан",
   "away": "Данди",
   "kickoff": "2026-11-24T22:45:00+03:00"
- }
+ },
+ "vk_story_retry_at": 1795536736.1940663
 }
