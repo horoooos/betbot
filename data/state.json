@@ -2730,7 +2730,7 @@
   "external_sources": {
    "providers": {
     "legalbet": {
-     "at": "2026-11-24T00:58:18.353493+00:00",
+     "at": "2026-11-24T01:30:18.638856+00:00",
      "status": "ok",
      "discovered": 2,
      "pages": 2,
@@ -2741,29 +2741,29 @@
      "contexts": 2
     },
     "livesport": {
-     "at": "2026-11-24T00:58:18.353493+00:00",
+     "at": "2026-11-24T01:30:18.638856+00:00",
      "status": "ok",
-     "discovered": 12,
+     "discovered": 13,
      "pages": 6,
      "opinions": 8,
-     "mapped": 3,
-     "articles_available": 18,
-     "next_offset": 10,
-     "contexts": 5
+     "mapped": 1,
+     "articles_available": 17,
+     "next_offset": 16,
+     "contexts": 4
     },
     "metaratings": {
-     "at": "2026-11-24T00:58:18.353493+00:00",
+     "at": "2026-11-24T01:30:18.638856+00:00",
      "status": "ok",
      "discovered": 9,
      "pages": 6,
      "opinions": 24,
-     "mapped": 7,
+     "mapped": 4,
      "articles_available": 37,
-     "next_offset": 12,
+     "next_offset": 9,
      "contexts": 6
     },
     "rb": {
-     "at": "2026-11-24T00:58:18.353493+00:00",
+     "at": "2026-11-24T01:30:18.638856+00:00",
      "status": "ok",
      "discovered": 1,
      "pages": 1,
@@ -2774,16 +2774,16 @@
      "contexts": 1
     },
     "vseprosport": {
-     "at": "2026-11-24T00:58:18.353493+00:00",
+     "at": "2026-11-24T01:30:18.638856+00:00",
      "status": "ok",
      "discovered": 9,
-     "pages": 4,
+     "pages": 2,
      "opinions": 0,
      "mapped": 0,
      "articles_available": 10,
-     "next_offset": 14,
-     "page_errors": 2,
-     "contexts": 4
+     "next_offset": 11,
+     "page_errors": 4,
+     "contexts": 2
     }
    },
    "opinions": 21,
@@ -2885,10 +2885,10 @@
    }
   },
   "source": {
-   "last_success": "2026-11-24T01:08:18.377784+00:00",
-   "parsed": 379,
-   "added": 49,
-   "discovered_matches": 42,
+   "last_success": "2026-11-24T01:30:18.638856+00:00",
+   "parsed": 373,
+   "added": 37,
+   "discovered_matches": 43,
    "pages": 21,
    "errors": [],
    "parsed_by_sport": {
@@ -2901,13 +2901,13 @@
    }
   },
   "error": null,
-  "tips": 13892,
+  "tips": 13905,
   "snapshots": 285,
-  "unmapped_markets": 21017,
-  "quote_matches": 53
+  "unmapped_markets": 21041,
+  "quote_matches": 54
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-24T04:28:18.206495+03:00",
+  "last_poll": "2026-11-24T04:30:18.638856+03:00",
   "cursor": "370",
   "posts": [
    {
@@ -4176,7 +4176,7 @@
   },
   "football|CRC|401876819": {
    "reason": "edge_below_minimum",
-   "checked_at": "2026-11-24T01:20:44.356544+00:00",
+   "checked_at": "2026-11-24T01:31:07.253542+00:00",
    "kickoff": "2026-11-24T05:00:00+03:00",
    "sport": "football",
    "id": "401876819",
@@ -4184,9 +4184,9 @@
    "away": "Cartaginés",
    "priced_markets": 6,
    "market": "ТМ 2.5",
-   "probability": 0.5224,
-   "odds": 1.77,
-   "edge": -0.07535,
+   "probability": 0.5367,
+   "odds": 1.74,
+   "edge": -0.06614,
    "estimated": false
   }
  },
