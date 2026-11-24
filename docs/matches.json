@@ -1593,7 +1593,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "",
-"hs": "0",
+"hs": "1",
 "as": "0",
 "tip": "",
 "top": false,
@@ -1773,7 +1773,15 @@ null
 ]
 ]
 },
-"lt": null
+"lt": {
+"fair": 1.5,
+"label": "ТБ 2.5",
+"min_odds": 1.58,
+"minute": "25'",
+"p": 0.666,
+"result": null,
+"score": "1:0"
+}
 },
 {
 "sport": "football",
