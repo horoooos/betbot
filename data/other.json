@@ -7815,22 +7815,22 @@
   "state": "pre",
   "completed": false,
   "tier": "s",
-  "status": "reviewed",
+  "status": "done",
   "home": {
+   "color": "3b4a7a",
+   "logo": "https://cdn-api.pandascore.co/images/team/image/126709/9z_team_2024_lightmode.png",
    "id": "126709",
    "name": "9z",
    "ru": "9z",
-   "logo": "https://cdn-api.pandascore.co/images/team/image/126709/9z_team_2024_lightmode.png",
-   "color": "3b4a7a",
    "score": 0,
    "winner": false
   },
   "away": {
+   "color": "3b4a7a",
+   "logo": "https://cdn-api.pandascore.co/images/team/image/133435/788px_m80_2023_allmode.png",
    "id": "133435",
    "name": "M80",
    "ru": "M80",
-   "logo": "https://cdn-api.pandascore.co/images/team/image/133435/788px_m80_2023_allmode.png",
-   "color": "3b4a7a",
    "score": 0,
    "winner": false
   },
@@ -7974,7 +7974,10 @@
   "btn": 4,
   "close": {
    "_": null
-  }
+  },
+  "settlement_retry_at": 1795522551.848089,
+  "main_hit": true,
+  "bold_hit": null
  },
  "CS2|1816907": {
   "status": "waiting_data",
