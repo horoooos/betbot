@@ -2754,7 +2754,7 @@
   "external_sources": {
    "providers": {
     "legalbet": {
-     "at": "2026-11-24T11:22:51.183042+00:00",
+     "at": "2026-11-24T11:54:51.756731+00:00",
      "status": "ok",
      "discovered": 4,
      "pages": 4,
@@ -2765,29 +2765,29 @@
      "contexts": 4
     },
     "livesport": {
-     "at": "2026-11-24T11:22:51.183042+00:00",
+     "at": "2026-11-24T11:54:51.756731+00:00",
      "status": "ok",
      "discovered": 15,
      "pages": 6,
-     "opinions": 8,
-     "mapped": 4,
+     "opinions": 10,
+     "mapped": 3,
      "articles_available": 19,
-     "next_offset": 9,
-     "contexts": 4
+     "next_offset": 15,
+     "contexts": 6
     },
     "metaratings": {
-     "at": "2026-11-24T11:22:51.183042+00:00",
+     "at": "2026-11-24T11:54:51.756731+00:00",
      "status": "ok",
-     "discovered": 10,
+     "discovered": 11,
      "pages": 6,
-     "opinions": 16,
-     "mapped": 4,
-     "articles_available": 35,
-     "next_offset": 14,
-     "contexts": 4
+     "opinions": 20,
+     "mapped": 6,
+     "articles_available": 38,
+     "next_offset": 9,
+     "contexts": 5
     },
     "rb": {
-     "at": "2026-11-24T11:22:51.183042+00:00",
+     "at": "2026-11-24T11:54:51.756731+00:00",
      "status": "ok",
      "discovered": 1,
      "pages": 1,
@@ -2798,16 +2798,16 @@
      "contexts": 1
     },
     "vseprosport": {
-     "at": "2026-11-24T11:22:51.183042+00:00",
+     "at": "2026-11-24T11:54:51.756731+00:00",
      "status": "ok",
      "discovered": 9,
-     "pages": 2,
+     "pages": 4,
      "opinions": 0,
      "mapped": 0,
      "articles_available": 10,
-     "next_offset": 8,
-     "page_errors": 4,
-     "contexts": 2
+     "next_offset": 14,
+     "page_errors": 2,
+     "contexts": 4
     }
    },
    "opinions": 24,
@@ -2931,7 +2931,7 @@
   "quote_matches": 71
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-24T14:52:51.111467+03:00",
+  "last_poll": "2026-11-24T14:54:51.756731+03:00",
   "cursor": "378",
   "posts": [
    {
@@ -3703,7 +3703,7 @@
    "401877547": "pre",
    "1816909": "in",
    "1816912": "pre",
-   "1816911": "pre",
+   "1816911": "in",
    "401915378": "pre",
    "401915293": "pre"
   },
@@ -4483,7 +4483,7 @@
   },
   "esports|CS2|1816912": {
    "reason": "insufficient_history_or_odds",
-   "checked_at": "2026-11-24T11:45:17.029695+00:00",
+   "checked_at": "2026-11-24T11:55:28.554896+00:00",
    "kickoff": "2026-11-24T15:00:00+03:00",
    "sport": "esports",
    "id": "1816912",
