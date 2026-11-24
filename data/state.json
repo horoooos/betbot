@@ -1610,7 +1610,7 @@
  "value_day": "2026-11-23",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-23",
- "site_stamp": "1528|9316|2026-11-24 10|6|9073270fa3011f11",
+ "site_stamp": "1528|9317|2026-11-24 10|6|7908b67e1df8f347",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1766,7 +1766,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 9316,
+ "dz_last": 9317,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2096,7 +2096,7 @@
  "vk_photos": [],
  "vk_photo_until": 1794644243.1147308,
  "vk_photo_cursor": {},
- "vk_story_last": 9316,
+ "vk_story_last": 9317,
  "vk_story_err": null,
  "push_weekly": "2026-47",
  "vk_story_at": 1795483253.1896534,
@@ -2947,7 +2947,7 @@
   "quote_matches": 68
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-24T10:01:55.017207+03:00",
+  "last_poll": "2026-11-24T10:03:54.372480+03:00",
   "cursor": "370",
   "posts": [
    {
@@ -3641,7 +3641,6 @@
    "186841": "pre",
    "186842": "pre",
    "186843": "pre",
-   "1789259": "in",
    "1789256": "in",
    "1789255": "pre",
    "401876819": "post",
@@ -7501,7 +7500,7 @@
     "profit_pct": -0.5
    },
    "esports|CS2|1789258": {
-    "status": "open",
+    "status": "settled",
     "id": "1789258",
     "sport": "esports",
     "div": "CS2",
@@ -7838,7 +7837,10 @@
        "price_kind": "author_recorded"
       }
      ]
-    }
+    },
+    "settled_at": "2026-11-24T07:03:54.372480+00:00",
+    "hit": true,
+    "profit_pct": 0.35
    },
    "esports|CS2|1789259": {
     "status": "open",
