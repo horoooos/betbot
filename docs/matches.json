@@ -97,41 +97,6 @@
 },
 {
 "sport": "esports",
-"id": "1816906",
-"league": "Киберспорт · CS2",
-"kickoff": "2026-11-24T11:50:07+03:00",
-"home": "Heroic",
-"away": "Chinggis Warriors",
-"hl": "https://cdn-api.pandascore.co/images/team/image/3246/680px_heroic_2023_allmode.png",
-"al": "https://cdn-api.pandascore.co/images/team/image/134264/222px_cw_allmode.png",
-"hid": "3246",
-"aid": "134264",
-"bb": "https://betboom.ru/search?query=%D0%A5%D0%B5%D1%80%D0%BE%D0%B8%D1%87&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=esports",
-"path": "",
-"url": "esports.html?e=1816906&d=CS2",
-"participants": [
-[
-"Heroic",
-"Heroic"
-],
-[
-"Chinggis Warriors",
-"Chinggis Warriors"
-]
-],
-"div": "CS2",
-"state": "in",
-"bo": 1,
-"prediction": "",
-"hs": 0,
-"as": 0,
-"tip": "",
-"top": false,
-"bot": null,
-"lt": null
-},
-{
-"sport": "esports",
 "id": "1816908",
 "league": "Киберспорт · CS2",
 "kickoff": "2026-11-24T13:00:00+03:00",
@@ -157,12 +122,38 @@
 "div": "CS2",
 "state": "pre",
 "bo": 1,
-"prediction": "",
+"prediction": "predictions/2026-11-24-9z-m80-1816908.html",
 "hs": 0,
 "as": 0,
-"tip": "",
+"tip": "Победа: M80 · 1.87",
 "top": false,
-"bot": null,
+"bot": {
+"main": {
+"label": "Победа: M80",
+"p": 0.51,
+"odds": 1.87,
+"est": false
+},
+"bold": null,
+"markets": [
+[
+"Победа: 9z",
+0.49,
+1.95
+],
+[
+"Победа: M80",
+0.51,
+1.87
+]
+],
+"bar": [
+0.4895287958115184,
+0,
+0.5104712041884816
+],
+"center": "BO1 · линия winline · Эло 1444 : 1566"
+},
 "lt": null
 },
 {
