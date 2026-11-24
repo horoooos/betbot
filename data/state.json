@@ -2907,7 +2907,7 @@
   "quote_matches": 51
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-24T03:26:18.819791+03:00",
+  "last_poll": "2026-11-24T03:28:18.564805+03:00",
   "cursor": "370",
   "posts": [
    {
@@ -4158,6 +4158,21 @@
    "odds": 1.65,
    "edge": 0.01425,
    "estimated": false
+  },
+  "basketball|NBA|401910043": {
+   "reason": "no_qualified_real_market",
+   "checked_at": "2026-11-24T00:28:37.407435+00:00",
+   "kickoff": "2026-11-24T04:30:00+03:00",
+   "sport": "basketball",
+   "id": "401910043",
+   "home": "Хьюстон Рокетс",
+   "away": "Клипперс",
+   "priced_markets": 6,
+   "market": "ТМ 230.5",
+   "probability": 0.6597,
+   "odds": 1.41,
+   "edge": -0.06982,
+   "estimated": true
   }
  },
  "source_trial": {

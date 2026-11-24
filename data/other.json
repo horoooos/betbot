@@ -7489,5 +7489,13 @@
   "top": false,
   "msg_id": 9263,
   "btn": 4
+ },
+ "NBA|401910043": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-24T04:30:00+03:00",
+  "sport": "basketball",
+  "div": "NBA",
+  "reason": "no_qualified_real_market",
+  "retry_at": 1795480698.564805
  }
 }
