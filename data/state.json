@@ -2942,7 +2942,7 @@
   "quote_matches": 73
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-24T17:27:36.284313+03:00",
+  "last_poll": "2026-11-24T17:29:36.010021+03:00",
   "cursor": "384",
   "posts": [
    {
@@ -4596,6 +4596,30 @@
    "probability": 0.6046,
    "odds": 1.54,
    "edge": -0.06892,
+   "estimated": true
+  },
+  "tennis|WTA|186814": {
+   "reason": "insufficient_history_or_odds",
+   "checked_at": "2026-11-24T14:29:52.260983+00:00",
+   "kickoff": "2026-11-24T18:30:00+03:00",
+   "sport": "tennis",
+   "id": "186814",
+   "home": "Гуйомар Маристани",
+   "away": "Луна Мариа Синалли"
+  },
+  "tennis|WTA|186818": {
+   "reason": "no_real_odds",
+   "checked_at": "2026-11-24T14:29:53.641773+00:00",
+   "kickoff": "2026-11-24T18:30:00+03:00",
+   "sport": "tennis",
+   "id": "186818",
+   "home": "Лючия Бронцетти",
+   "away": "Алисиа Херреро Линана",
+   "priced_markets": 0,
+   "market": "Будет 2 сета",
+   "probability": 0.5181,
+   "odds": 1.8,
+   "edge": -0.06742,
    "estimated": true
   }
  },
