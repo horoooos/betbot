@@ -7,7 +7,6 @@
  "schedule_day": "2026-11-24",
  "content_slot": "2026-11-24-23",
  "news_seen": [
-  "1w-team-obygrala-lgd-gaming-na-blast-slam-ix",
   "https://www.sport-express.ru/football/rfpl/news/akron-fakel-gosti-zabili-dvazhdy-v-konce-pervogo-tayma-2477322/",
   "https://www.sport-express.ru/football/rfpl/news/akron-fakel-napadayuschego-gostey-koksharova-unesli-s-polya-na-nosilkah-posle-stolknoveniya-na-37-y-minute-2477321/",
   "https://www.sport-express.ru/football/rfpl/news/akron-fakel-hozyaeva-ostalis-vdesyaterom-posle-udaleniya-bardybahina-na-20-y-minute-2477319/",
@@ -506,9 +505,10 @@
   "https://www.sport-express.ru/football/champions-league/news/galatasaray-aston-villa-schet-i-rezultat-matcha-ligi-chempionov-24-noyabrya-2478529/",
   "https://www.sport-express.ru/football/champions-league/news/bude-glimt-lask-1-0-schet-i-rezultat-matcha-5-go-tura-ligi-chempionov-24-noyabrya-2026-2478530/",
   "https://www.sport-express.ru/football/champions-league/news/komo-aek-startovye-sostavy-komand-na-match-ligi-chempionov-24-noyabrya-2026-2478531/",
-  "https://www.sport-express.ru/football/rus_cup/news/blagoevich-o-porazhenii-akrona-ot-cska-nichego-ne-mogu-predyavit-rebyatam-v-plane-samootdachi-2478512/"
+  "https://www.sport-express.ru/football/rus_cup/news/blagoevich-o-porazhenii-akrona-ot-cska-nichego-ne-mogu-predyavit-rebyatam-v-plane-samootdachi-2478512/",
+  "kaori-v-chate-dota-2-posle-pobedy-nad-og-botson"
  ],
- "news_i": 1,
+ "news_i": 2,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1563,7 +1563,7 @@
  "value_day": "2026-11-24",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-24",
- "site_stamp": "1537|9420|2026-11-25 00|6|1db8a59e8fa74f36",
+ "site_stamp": "1538|9422|2026-11-25 00|6|d3df8ff45f861f09",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1695,7 +1695,7 @@
  "streak_day": {
   "2026-11-22": 2
  },
- "news_next": "2026-11-25T00:51:44.774434+03:00",
+ "news_next": "2026-11-25T01:19:44.686172+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1720,13 +1720,12 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 9420,
+ "dz_last": 9422,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
  "dz_err": null,
  "img_used": [
-  "https://upload.wikimedia.org/wikipedia/commons/5/55/5597.90290.AS_10552.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
   "https://images.cybersport.ru/images/as-is/plain/ed/ede7983c-271c-404a-93be-4f530fd3f1f1.jpg",
   "https://upload.wikimedia.org/wikipedia/commons/1/1d/Aleksey_Batrakov.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
   "https://images.cybersport.ru/images/as-is/plain/44/445dbd74-e823-434e-91f5-af5675033e6e.jpg",
@@ -2025,7 +2024,8 @@
   "https://images.cybersport.ru/images/as-is/plain/cc/ccb19f8e-a85a-4552-8244-3abd3d1d5cd6.jpg",
   "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/FC_Spartak_Moscow_vs._FC_Krylia_Sovetov_Samara%2C_1_May_2022_%2803%29.jpg/1280px-FC_Spartak_Moscow_vs._FC_Krylia_Sovetov_Samara%2C_1_May_2022_%2803%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
   "https://images.cybersport.ru/images/as-is/plain/dc/dc374533-4fd4-4747-9dc3-03ccdf0ef141.jpg",
-  "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/UW_football_fans_9-8-2010_028_%286351066025%29.jpg/1280px-UW_football_fans_9-8-2010_028_%286351066025%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/UW_football_fans_9-8-2010_028_%286351066025%29.jpg/1280px-UW_football_fans_9-8-2010_028_%286351066025%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "https://images.cybersport.ru/images/as-is/plain/b8/b80346b7-f66d-42e1-b485-f68b605217f3.jpg"
  ],
  "indexnow_day": "2026-11-25",
  "vk_wall_err": null,
@@ -2429,7 +2429,8 @@
   "9400",
   "9407",
   "9412",
-  "9417"
+  "9417",
+  "9423"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -2765,11 +2766,12 @@
   "2026-11-24:новость:5e237722fd4d14ecf4a142c7",
   "2026-11-24:новость:dfa752daddd80de614d86985",
   "2026-11-24:новость:ef6839048c86cf32c0d75abc",
-  "2026-11-24:новость:082305c9d0207997bf66d3ed"
+  "2026-11-24:новость:082305c9d0207997bf66d3ed",
+  "2026-11-24:новость:fb700d6624939135a912376a"
  ],
  "dz_last_delivery": {
-  "source_id": 9417,
-  "message_id": 883,
+  "source_id": 9423,
+  "message_id": 884,
   "kind": "новость"
  },
  "learn_attempt_day": "2026-11-25",
@@ -2902,15 +2904,15 @@
   "model": {
    "weight": 0.0,
    "status": "baseline_better",
-   "settled_matches": 132,
+   "settled_matches": 133,
    "required_matches": 100,
-   "trained_at": "2026-11-24T21:50:44.905851+00:00",
+   "trained_at": "2026-11-24T21:52:44.686172+00:00",
    "candidate_weight": 0.0,
    "train_matches": 83,
-   "validation_matches": 49,
+   "validation_matches": 50,
    "validation_from": "2026-11-22T00:00:00+00:00",
-   "validation_logloss": 3.0246531596829076,
-   "validation_baseline_logloss": 3.0246531596829076
+   "validation_logloss": 3.026309231920864,
+   "validation_baseline_logloss": 3.026309231920864
   },
   "sport_models": {
    "hockey": {
@@ -2972,7 +2974,7 @@
   "quote_matches": 79
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-25T00:50:44.905851+03:00",
+  "last_poll": "2026-11-25T00:52:44.686172+03:00",
   "cursor": "400",
   "posts": [
    {
@@ -3694,14 +3696,14 @@
    "401881358": "post",
    "401881354": "post",
    "401878348": "post",
-   "401880141": "in",
+   "401880141": "post",
    "401878345": "in",
-   "401915295": "in",
+   "401915295": "post",
    "401915296": "in",
    "401915294": "in",
    "401915379": "post",
-   "401915299": "in",
-   "401915298": "in",
+   "401915299": "post",
+   "401915298": "post",
    "401915297": "post",
    "401841335": "in",
    "401934688": "pre",

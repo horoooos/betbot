@@ -1224,7 +1224,7 @@ null
 ]
 ],
 "div": "E1",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "",
 "hs": "3",
@@ -1259,7 +1259,7 @@ null
 ]
 ],
 "div": "UCL",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "predictions/2026-11-24-arsenal-borussiya-d-401915295.html",
 "hs": "1",
@@ -1378,7 +1378,7 @@ null
 "min_odds": 1.58,
 "minute": "25'",
 "p": 0.666,
-"result": null,
+"result": "miss",
 "score": "1:0"
 }
 },
@@ -1625,7 +1625,7 @@ null
 ]
 ],
 "div": "UCL",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "",
 "hs": "3",
@@ -1660,7 +1660,7 @@ null
 ]
 ],
 "div": "UCL",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "",
 "hs": "5",
