@@ -7223,7 +7223,7 @@
   "sport": "hockey",
   "div": "NHL",
   "reason": "edge_below_minimum",
-  "retry_at": 1795486778.412165
+  "retry_at": 1795487379.387305
  },
  "NBA|401910044": {
   "status": "waiting_data",
@@ -7231,7 +7231,7 @@
   "sport": "basketball",
   "div": "NBA",
   "reason": "no_qualified_real_market",
-  "retry_at": 1795486778.412165
+  "retry_at": 1795487379.387305
  },
  "NBA|401910045": {
   "status": "waiting_data",
@@ -7239,6 +7239,6 @@
   "sport": "basketball",
   "div": "NBA",
   "reason": "no_qualified_real_market",
-  "retry_at": 1795486778.412165
+  "retry_at": 1795487379.387305
  }
 }
