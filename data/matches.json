@@ -27324,5 +27324,437 @@
   "div": "BRA",
   "reason": "no_qualified_real_market",
   "retry_at": 1795554080.806249
+ },
+ "401934688": {
+  "id": "401934688",
+  "div": "COL",
+  "slug": "col.1",
+  "kickoff": "2026-11-25T02:20:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "detail": "Scheduled",
+  "home": {
+   "id": "5484",
+   "name": "Millonarios",
+   "short": "Millonarios",
+   "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/5484.png",
+   "color": "0202db",
+   "alt": "000000",
+   "form": "DWLDD",
+   "score": "0",
+   "ru": "Мильонариос"
+  },
+  "away": {
+   "id": "6137",
+   "name": "Atlético Bucaramanga",
+   "short": "Bucaramanga",
+   "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/6137.png",
+   "color": "212121",
+   "alt": "000000",
+   "form": "DWWDW",
+   "score": "0",
+   "ru": "Atlético Bucaramanga"
+  },
+  "odds": {
+   "H": 1.526,
+   "D": 3.85,
+   "A": 6.0,
+   "line": 2.5,
+   "over": 2.1,
+   "under": 1.69,
+   "spread_h": [
+    -0.5,
+    1.5
+   ],
+   "spread_a": [
+    0.5,
+    2.4
+   ]
+  },
+  "venue": "Estadio Nemesio Camacho El Campín",
+  "clock": "0'",
+  "goals": [],
+  "open": {
+   "D": 0.2495
+  },
+  "top": false,
+  "lam": [
+   1.7350126821715182,
+   0.7379307297910689
+  ],
+  "probs": {
+   "H": 0.6038814269882581,
+   "D": 0.24948279940286036,
+   "A": 0.14663577360888186,
+   "1X": 0.8533642263911186,
+   "12": 0.7505172005971402,
+   "X2": 0.396118573011742,
+   "BTTS_Y": 0.4384740800243983,
+   "BTTS_N": 0.5615259199756015,
+   "O15": 0.7157425095273056,
+   "U15": 0.284257490472695,
+   "O25": 0.44922668982940983,
+   "U25": 0.55077331017059,
+   "O35": 0.23665444058729176,
+   "U35": 0.7633455594127083,
+   "H_O05": 0.8236016468259577,
+   "H_O15": 0.5175482669548226,
+   "A_O05": 0.5218977844747892,
+   "A_O15": 0.16909146765754246,
+   "H-1.5": 0.3502603005443809,
+   "A+1.5": 0.6497396994556195,
+   "A-1.5": 0.04373057516281454,
+   "H+1.5": 0.956269424837186,
+   "H-2.5": 0.15969810787616834,
+   "A-2.5": 0.009258881135169319,
+   "H+2.5": 0.9907411188648314,
+   "A+2.5": 0.840301892123832,
+   "O45": 0.10523465475495047,
+   "U45": 0.8947653452450496,
+   "H_O25": 0.25204501920588335,
+   "A_O25": 0.038918156235617736,
+   "H&O15": 0.46619483325903327,
+   "A&O15": 0.0930395255890643,
+   "H&BTTS": 0.2187538601866994,
+   "A&BTTS": 0.06321206915849185,
+   "1X&U35": 0.6412987618941317,
+   "X2&U35": 0.33163721720017864,
+   "BTTS&O25": 0.32185830906644936,
+   "HT_H": 0.42770660827793366,
+   "HT_D": 0.43314788548499916,
+   "HT_A": 0.1391455062370672,
+   "HT_O05": 0.6645544172796088,
+   "HT_U05": 0.33544558272039116,
+   "HT_O15": 0.31247984936756684,
+   "HT_U15": 0.6875201506324331
+  },
+  "scores": [
+   [
+    "1:0",
+    0.13768659372922445
+   ],
+   [
+    "2:0",
+    0.1269376909779065
+   ],
+   [
+    "1:1",
+    0.11661577095794906
+   ]
+  ],
+  "main": {
+   "key": "D",
+   "label": "Ничья",
+   "p": 0.2495,
+   "odds": 3.85,
+   "est": false,
+   "stake": 0.5,
+   "strategy": "external_trial",
+   "selection_mode": "external_fallback",
+   "trial_expires_at": null,
+   "probability_origin": "baseline_model",
+   "model_edge": -0.03949,
+   "source_count": 3,
+   "source_refs": [
+    {
+     "author": "/predictors/i-am-gamer",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/25-11-2026-millonarios-atletico-bucaramanga",
+     "published_at": "2026-11-24T03:26:00+00:00",
+     "observed_at": "2026-11-24T21:54:44.572563+00:00",
+     "odds": 4.1,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/odu-van-cik",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/25-11-2026-millonarios-atletico-bucaramanga",
+     "published_at": "2026-11-24T11:28:00+00:00",
+     "observed_at": "2026-11-24T21:54:44.572563+00:00",
+     "odds": 3.64,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/andrey-koryako-1",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/25-11-2026-millonarios-atletico-bucaramanga",
+     "published_at": "2026-11-24T19:14:00+00:00",
+     "observed_at": "2026-11-24T21:54:44.572563+00:00",
+     "odds": 3.86,
+     "price_kind": "author_recorded"
+    }
+   ]
+  },
+  "bold": {},
+  "value": null,
+  "odds_src": "DraftKings",
+  "model_w": 0.0,
+  "learned_n": 1539,
+  "stavka_signal": {
+   "status": "baseline_better",
+   "weight": 0.0,
+   "authors": 3,
+   "votes": {
+    "D": 3.0220453829425287
+   },
+   "source": "https://stavka.tv",
+   "snapshot": "COL|401934688"
+  },
+  "research": {
+   "articles": [],
+   "dossier": {
+    "observed_at": "2026-11-24T22:09:00.433711+00:00",
+    "kickoff": "2026-11-24T23:20:00+00:00",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/col.1/summary?event=401934688",
+    "status": "available",
+    "facts": {
+     "table": {
+      "8109": {
+       "rank": "1",
+       "gp": "1",
+       "w": "0",
+       "d": "1",
+       "l": "0",
+       "gd": "0",
+       "pts": "1",
+       "of": 4,
+       "raw": {
+        "GP": "1",
+        "L": "0",
+        "GD": "0",
+        "P": "1",
+        "D": "1",
+        "W": "0",
+        "R": "1",
+        "Total": "0-1-0"
+       },
+       "group": "Colombian Primera A Standings"
+      },
+      "6137": {
+       "rank": "2",
+       "gp": "1",
+       "w": "0",
+       "d": "1",
+       "l": "0",
+       "gd": "0",
+       "pts": "1",
+       "of": 4,
+       "raw": {
+        "GP": "1",
+        "L": "0",
+        "GD": "0",
+        "P": "1",
+        "D": "1",
+        "W": "0",
+        "R": "2",
+        "Total": "0-1-0"
+       },
+       "group": "Colombian Primera A Standings"
+      },
+      "2672": {
+       "rank": "3",
+       "gp": "1",
+       "w": "0",
+       "d": "1",
+       "l": "0",
+       "gd": "0",
+       "pts": "1",
+       "of": 4,
+       "raw": {
+        "GP": "1",
+        "L": "0",
+        "GD": "0",
+        "P": "1",
+        "D": "1",
+        "W": "0",
+        "R": "3",
+        "Total": "0-1-0"
+       },
+       "group": "Colombian Primera A Standings"
+      },
+      "5484": {
+       "rank": "4",
+       "gp": "1",
+       "w": "0",
+       "d": "1",
+       "l": "0",
+       "gd": "0",
+       "pts": "1",
+       "of": 4,
+       "raw": {
+        "GP": "1",
+        "L": "0",
+        "GD": "0",
+        "P": "1",
+        "D": "1",
+        "W": "0",
+        "R": "4",
+        "Total": "0-1-0"
+       },
+       "group": "Colombian Primera A Standings"
+      }
+     },
+     "last5": {
+      "5484": [
+       {
+        "res": "D",
+        "gf": 1,
+        "ga": 1,
+        "opp": "Once Caldas",
+        "home": true,
+        "date": "2026-10-21"
+       },
+       {
+        "res": "D",
+        "gf": 0,
+        "ga": 0,
+        "opp": "América de Cali",
+        "home": true,
+        "date": "2026-11-05"
+       },
+       {
+        "res": "L",
+        "gf": 1,
+        "ga": 2,
+        "opp": "Deportes Tolima",
+        "home": false,
+        "date": "2026-11-08"
+       },
+       {
+        "res": "W",
+        "gf": 2,
+        "ga": 0,
+        "opp": "Alianza FC",
+        "home": true,
+        "date": "2026-11-14"
+       },
+       {
+        "res": "D",
+        "gf": 0,
+        "ga": 0,
+        "opp": "Deportivo Cali",
+        "home": false,
+        "date": "2026-11-21"
+       }
+      ],
+      "6137": [
+       {
+        "res": "W",
+        "gf": 2,
+        "ga": 1,
+        "opp": "Deportivo Pasto",
+        "home": true,
+        "date": "2026-10-31"
+       },
+       {
+        "res": "D",
+        "gf": 1,
+        "ga": 1,
+        "opp": "Atlético Nacional",
+        "home": true,
+        "date": "2026-11-03"
+       },
+       {
+        "res": "W",
+        "gf": 4,
+        "ga": 0,
+        "opp": "Jaguares de Córdoba",
+        "home": false,
+        "date": "2026-11-08"
+       },
+       {
+        "res": "W",
+        "gf": 1,
+        "ga": 0,
+        "opp": "Fortaleza CEIF",
+        "home": true,
+        "date": "2026-11-14"
+       },
+       {
+        "res": "D",
+        "gf": 2,
+        "ga": 2,
+        "opp": "América de Cali",
+        "home": true,
+        "date": "2026-11-20"
+       }
+      ]
+     },
+     "h2h": [
+      {
+       "date": "2026-07-25",
+       "home_id": "5484",
+       "hs": "0",
+       "as": "1"
+      },
+      {
+       "date": "2026-01-18",
+       "home_id": "6137",
+       "hs": "2",
+       "as": "1"
+      },
+      {
+       "date": "2025-10-21",
+       "home_id": "5484",
+       "hs": "1",
+       "as": "1"
+      },
+      {
+       "date": "2025-04-28",
+       "home_id": "6137",
+       "hs": "0",
+       "as": "2"
+      },
+      {
+       "date": "2024-10-09",
+       "home_id": "6137",
+       "hs": "1",
+       "as": "1"
+      }
+     ],
+     "leaders": {
+      "5484": [
+       [
+        "Goals",
+        "Leonardo Castro",
+        "Matches: 34, Goals: 12"
+       ],
+       [
+        "Assists",
+        "Leonardo Castro",
+        "Matches: 34, Assists: 5"
+       ],
+       [
+        "Total Shots",
+        "Rodrigo Contreras",
+        "80"
+       ]
+      ],
+      "6137": [
+       [
+        "Goals",
+        "Luciano Pons",
+        "Matches: 35, Goals: 17"
+       ],
+       [
+        "Assists",
+        "Fabián Sambueza",
+        "Matches: 32, Assists: 8"
+       ],
+       [
+        "Total Shots",
+        "Luciano Pons",
+        "80"
+       ]
+      ]
+     },
+     "venue": "Estadio Nemesio Camacho El Campín",
+     "city": "Bogota"
+    }
+   }
+  },
+  "msg_id": 9426,
+  "btn": 4
  }
 }

@@ -1563,7 +1563,7 @@
  "value_day": "2026-11-24",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-24",
- "site_stamp": "1539|9425|2026-11-25 01|6|6335c3e18719f3fc",
+ "site_stamp": "1539|9425|2026-11-25 01|6|552a35b59fc2b76d",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -2974,7 +2974,7 @@
   "quote_matches": 80
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-25T01:16:44.364849+03:00",
+  "last_poll": "2026-11-25T01:18:44.567389+03:00",
   "cursor": "400",
   "posts": [
    {
@@ -5259,6 +5259,22 @@
    "odds": 1.65,
    "edge": -0.07122,
    "estimated": true
+  },
+  "football|COL|401934688": {
+   "reason": "published",
+   "checked_at": "2026-11-24T22:19:11.819312+00:00",
+   "kickoff": "2026-11-25T02:20:00+03:00",
+   "sport": "football",
+   "id": "401934688",
+   "home": "Мильонариос",
+   "away": "Atlético Bucaramanga",
+   "market": "Ничья",
+   "strategy": "external_trial",
+   "source_count": 3,
+   "probability": 0.2495,
+   "odds": 3.85,
+   "edge": -0.03942,
+   "estimated": false
   }
  },
  "source_trial": {
@@ -10375,6 +10391,58 @@
     "settled_at": "2026-11-24T22:00:44.552082+00:00",
     "hit": true,
     "profit_pct": 0.5
+   },
+   "football|COL|401934688": {
+    "status": "open",
+    "id": "401934688",
+    "sport": "football",
+    "div": "COL",
+    "kickoff": "2026-11-25T02:20:00+03:00",
+    "published_at": "2026-11-24T22:19:08.330872+00:00",
+    "msg_id": 9426,
+    "tip": {
+     "key": "D",
+     "label": "Ничья",
+     "p": 0.2495,
+     "odds": 3.85,
+     "est": false,
+     "stake": 0.5,
+     "strategy": "external_trial",
+     "selection_mode": "external_fallback",
+     "trial_expires_at": null,
+     "probability_origin": "baseline_model",
+     "model_edge": -0.03949,
+     "source_count": 3,
+     "source_refs": [
+      {
+       "author": "/predictors/i-am-gamer",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/25-11-2026-millonarios-atletico-bucaramanga",
+       "published_at": "2026-11-24T03:26:00+00:00",
+       "observed_at": "2026-11-24T21:54:44.572563+00:00",
+       "odds": 4.1,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/odu-van-cik",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/25-11-2026-millonarios-atletico-bucaramanga",
+       "published_at": "2026-11-24T11:28:00+00:00",
+       "observed_at": "2026-11-24T21:54:44.572563+00:00",
+       "odds": 3.64,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/andrey-koryako-1",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/25-11-2026-millonarios-atletico-bucaramanga",
+       "published_at": "2026-11-24T19:14:00+00:00",
+       "observed_at": "2026-11-24T21:54:44.572563+00:00",
+       "odds": 3.86,
+       "price_kind": "author_recorded"
+      }
+     ]
+    }
    }
   }
  }
