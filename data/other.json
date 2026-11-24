@@ -6928,5 +6928,293 @@
   "div": "NBA",
   "reason": "no_qualified_real_market",
   "retry_at": 1795483458.364278
+ },
+ "NHL|401892778": {
+  "id": "401892778",
+  "div": "NHL",
+  "sport": "hockey",
+  "kickoff": "2026-11-24T05:40:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "detail": "Mon, November 23rd at 9:40 PM EST",
+  "clock": "0:00",
+  "period": 0,
+  "home": {
+   "id": "124292",
+   "name": "Seattle Kraken",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/sea.png",
+   "color": "000d33",
+   "score": "0",
+   "record": "10-9-1",
+   "periods": [],
+   "ru": "Сиэтл"
+  },
+  "away": {
+   "id": "25",
+   "name": "Anaheim Ducks",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/ana.png",
+   "color": "fc4c02",
+   "score": "0",
+   "record": "11-12-1",
+   "periods": [],
+   "ru": "Анахайм"
+  },
+  "odds": {
+   "H": 1.847,
+   "A": 1.98,
+   "line": 6.5,
+   "over": 1.741,
+   "under": 2.14,
+   "spread": -1.5,
+   "sp_h": 3.0,
+   "sp_a": 1.408
+  },
+  "probs": {
+   "HK_ML_H": 0.5173817697717762,
+   "HK_ML_A": 0.4826182302282237,
+   "HK_H": 0.43740371412470924,
+   "HK_D": 0.1538039531674364,
+   "HK_A": 0.40879233270785426,
+   "HK_O5.5": 0.7004202688068458,
+   "HK_U5.5": 0.2995797311931538,
+   "HK_O6.5": 0.5514015131797867,
+   "HK_U6.5": 0.4485984868202131,
+   "HK_O7.5": 0.40209022353368307,
+   "HK_U7.5": 0.5979097764663168,
+   "HK_IT1O1.5": 0.8697157626873352,
+   "HK_IT1O2.5": 0.6889433206931009,
+   "HK_IT1O3.5": 0.47469581322235965,
+   "HK_IT2O1.5": 0.8594979702362764,
+   "HK_IT2O2.5": 0.6710487029603679,
+   "HK_IT2O3.5": 0.45381646673897097,
+   "HK_H-1.5": 0.2930426215587126,
+   "HK_A+1.5": 0.7069573784412874,
+   "HK_A-1.5": 0.2683828540821428,
+   "HK_H+1.5": 0.731617145917857
+  },
+  "labels": {
+   "HK_ML_H": "П1 (с ОТ и буллитами)",
+   "HK_ML_A": "П2 (с ОТ и буллитами)",
+   "HK_H": "П1 в основное время",
+   "HK_D": "Ничья в основное время",
+   "HK_A": "П2 в основное время",
+   "HK_O5.5": "ТБ 5.5",
+   "HK_U5.5": "ТМ 5.5",
+   "HK_O6.5": "ТБ 6.5",
+   "HK_U6.5": "ТМ 6.5",
+   "HK_O7.5": "ТБ 7.5",
+   "HK_U7.5": "ТМ 7.5",
+   "HK_IT1O1.5": "ИТ1 больше 1.5",
+   "HK_IT1O2.5": "ИТ1 больше 2.5",
+   "HK_IT1O3.5": "ИТ1 больше 3.5",
+   "HK_IT2O1.5": "ИТ2 больше 1.5",
+   "HK_IT2O2.5": "ИТ2 больше 2.5",
+   "HK_IT2O3.5": "ИТ2 больше 3.5",
+   "HK_H-1.5": "Ф1 (−1.5)",
+   "HK_A+1.5": "Ф2 (+1.5)",
+   "HK_A-1.5": "Ф2 (−1.5)",
+   "HK_H+1.5": "Ф1 (+1.5)"
+  },
+  "real": {
+   "HK_ML_H": 1.847,
+   "HK_ML_A": 1.98,
+   "HK_O6.5": 1.741,
+   "HK_U6.5": 2.14
+  },
+  "center": "Ожидаемые голы 3.6 : 3.5",
+  "bar": [
+   0.5173817697717762,
+   0,
+   0.4826182302282237
+  ],
+  "model": {
+   "lh": 3.5555337711968558,
+   "la": 3.4582077080195956
+  },
+  "stavka_signal": {
+   "status": "collecting",
+   "weight": 0.0,
+   "authors": 29,
+   "group": "hockey",
+   "snapshot": "NHL|401892778",
+   "source": "https://stavka.tv"
+  },
+  "research": {
+   "articles": [
+    {
+     "id": "c73448f703dd7778a1fa8047",
+     "kind": "context",
+     "provider": "metaratings",
+     "source": "https://metaratings.ru/prognozy/hokkey/sietl-kraken-anahajm-daks-prognoz-na-match-nhl-24-noyabrya-2026-goda/",
+     "sport": "hockey",
+     "div": "NHL",
+     "event_id": "401892778",
+     "kickoff": "2026-11-24T02:40:00+00:00",
+     "published_at": "2026-11-23T14:42:20+00:00",
+     "observed_at": "2026-11-23T18:47:48.310596+00:00",
+     "tables": []
+    }
+   ],
+   "dossier": null
+  },
+  "main": {
+   "key": "HK_ML_A",
+   "label": "П2 (с ОТ и буллитами)",
+   "p": 0.4826,
+   "odds": 1.98,
+   "est": false,
+   "stake": 0.5,
+   "strategy": "external_trial",
+   "selection_mode": "external_fallback",
+   "trial_expires_at": null,
+   "probability_origin": "baseline_model",
+   "model_edge": -0.04442,
+   "source_count": 15,
+   "source_refs": [
+    {
+     "author": "/predictors/player-successful",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/24-11-2026-seattle-kraken-anaheim-ducks",
+     "published_at": "2026-11-22T22:11:00+00:00",
+     "observed_at": "2026-11-23T01:31:21.910712+00:00",
+     "odds": 1.93,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/ilya-kurbatov-2",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/24-11-2026-seattle-kraken-anaheim-ducks",
+     "published_at": "2026-11-22T23:47:00+00:00",
+     "observed_at": "2026-11-23T01:31:21.910712+00:00",
+     "odds": 1.9,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/vyacheslav-nezhdanov",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/24-11-2026-seattle-kraken-anaheim-ducks",
+     "published_at": "2026-11-23T07:57:00+00:00",
+     "observed_at": "2026-11-23T08:07:40.767107+00:00",
+     "odds": 1.85,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/optimist-fsj6827",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/24-11-2026-seattle-kraken-anaheim-ducks",
+     "published_at": "2026-11-23T10:30:00+00:00",
+     "observed_at": "2026-11-23T10:30:51.758715+00:00",
+     "odds": 1.9,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/reznikoff-dmitry",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/24-11-2026-seattle-kraken-anaheim-ducks",
+     "published_at": "2026-11-23T12:09:00+00:00",
+     "observed_at": "2026-11-23T12:14:53.651152+00:00",
+     "odds": 1.9,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/ali-54",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/24-11-2026-seattle-kraken-anaheim-ducks",
+     "published_at": "2026-11-23T12:55:00+00:00",
+     "observed_at": "2026-11-23T12:56:53.847318+00:00",
+     "odds": 1.9,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/ruslan-terentev-1",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/24-11-2026-seattle-kraken-anaheim-ducks",
+     "published_at": "2026-11-23T16:31:00+00:00",
+     "observed_at": "2026-11-23T16:45:21.704127+00:00",
+     "odds": 1.98,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/kot-v-sapogax-3-akk",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/24-11-2026-seattle-kraken-anaheim-ducks",
+     "published_at": "2026-11-23T17:39:00+00:00",
+     "observed_at": "2026-11-23T17:47:21.950385+00:00",
+     "odds": 2.0,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/fail-akhmetov",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/24-11-2026-seattle-kraken-anaheim-ducks",
+     "published_at": "2026-11-23T19:43:00+00:00",
+     "observed_at": "2026-11-23T19:52:12.015171+00:00",
+     "odds": 2.0,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/niks-10",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/24-11-2026-seattle-kraken-anaheim-ducks",
+     "published_at": "2026-11-23T19:46:00+00:00",
+     "observed_at": "2026-11-23T19:52:12.015171+00:00",
+     "odds": 2.0,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/aleksei-nesterov-7",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/24-11-2026-seattle-kraken-anaheim-ducks",
+     "published_at": "2026-11-23T21:54:00+00:00",
+     "observed_at": "2026-11-23T21:55:59.612396+00:00",
+     "odds": 1.98,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/yunost-85",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/24-11-2026-seattle-kraken-anaheim-ducks",
+     "published_at": "2026-11-23T22:36:00+00:00",
+     "observed_at": "2026-11-23T22:39:59.610693+00:00",
+     "odds": 1.98,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/its-simple",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/24-11-2026-seattle-kraken-anaheim-ducks",
+     "published_at": "2026-11-23T23:21:00+00:00",
+     "observed_at": "2026-11-23T23:22:17.925958+00:00",
+     "odds": 1.98,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/seite-6",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/24-11-2026-seattle-kraken-anaheim-ducks",
+     "published_at": "2026-11-24T00:01:00+00:00",
+     "observed_at": "2026-11-24T00:04:18.000846+00:00",
+     "odds": 1.98,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/aleksandr-shvets-1",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/24-11-2026-seattle-kraken-anaheim-ducks",
+     "published_at": "2026-11-24T01:22:00+00:00",
+     "observed_at": "2026-11-24T01:30:18.638856+00:00",
+     "odds": 1.98,
+     "price_kind": "author_recorded"
+    }
+   ]
+  },
+  "bold": {},
+  "open": {
+   "HK_ML_A": 0.4826
+  },
+  "top": false,
+  "msg_id": 9279,
+  "btn": 4
  }
 }

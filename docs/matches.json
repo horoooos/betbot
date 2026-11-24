@@ -315,7 +315,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-24-sharlott-hornets-memfis-grizzlis-401910036.html",
-"hs": "70",
+"hs": "72",
 "as": "69",
 "tip": "П2 (с ОТ) · 1.68",
 "top": false,
@@ -416,8 +416,8 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-24-filadelfiya-siksers-portlend-401910037.html",
-"hs": "76",
-"as": "78",
+"hs": "78",
+"as": "80",
 "tip": "П1 (с ОТ) · 1.87",
 "top": false,
 "bot": {
@@ -691,8 +691,8 @@ null
 "state": "in",
 "bo": null,
 "prediction": "",
-"hs": "52",
-"as": "47",
+"hs": "53",
+"as": "49",
 "tip": "",
 "top": false,
 "bot": null,
@@ -726,8 +726,8 @@ null
 "state": "in",
 "bo": null,
 "prediction": "",
-"hs": "68",
-"as": "58",
+"hs": "74",
+"as": "61",
 "tip": "",
 "top": false,
 "bot": null,
@@ -1213,7 +1213,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-24-nyu-orlean-pelikans-finiks-sanz-401910042.html",
-"hs": "32",
+"hs": "35",
 "as": "31",
 "tip": "П2 (с ОТ) · 1.65",
 "top": false,
@@ -1314,8 +1314,8 @@ null
 "state": "in",
 "bo": null,
 "prediction": "",
-"hs": "24",
-"as": "28",
+"hs": "27",
+"as": "30",
 "tip": "",
 "top": false,
 "bot": null,
@@ -1453,12 +1453,108 @@ null
 "div": "NHL",
 "state": "pre",
 "bo": null,
-"prediction": "",
+"prediction": "predictions/2026-11-24-sietl-anahaym-401892778.html",
 "hs": "0",
 "as": "0",
-"tip": "",
+"tip": "П2 (с ОТ и буллитами) · 1.98",
 "top": false,
-"bot": null,
+"bot": {
+"main": {
+"label": "П2 (с ОТ и буллитами)",
+"p": 0.483,
+"odds": 1.98,
+"est": false
+},
+"bold": null,
+"markets": [
+[
+"П1 (с ОТ и буллитами)",
+0.517,
+1.847
+],
+[
+"П2 (с ОТ и буллитами)",
+0.483,
+1.98
+],
+[
+"П1 в основное время",
+0.437,
+null
+],
+[
+"Ничья в основное время",
+0.154,
+null
+],
+[
+"П2 в основное время",
+0.409,
+null
+],
+[
+"ТБ 5.5",
+0.7,
+null
+],
+[
+"ТМ 5.5",
+0.3,
+null
+],
+[
+"ТБ 6.5",
+0.551,
+1.741
+],
+[
+"ТМ 6.5",
+0.449,
+2.14
+],
+[
+"ТБ 7.5",
+0.402,
+null
+],
+[
+"ТМ 7.5",
+0.598,
+null
+],
+[
+"ИТ1 больше 1.5",
+0.87,
+null
+],
+[
+"ИТ1 больше 2.5",
+0.689,
+null
+],
+[
+"ИТ1 больше 3.5",
+0.475,
+null
+],
+[
+"ИТ2 больше 1.5",
+0.859,
+null
+],
+[
+"ИТ2 больше 2.5",
+0.671,
+null
+]
+],
+"bar": [
+0.5173817697717762,
+0,
+0.4826182302282237
+],
+"center": "Ожидаемые голы 3.6 : 3.5"
+},
 "lt": null
 },
 {
