@@ -5,7 +5,7 @@
  },
  "learned": "2026-11-24",
  "schedule_day": "2026-11-24",
- "content_slot": "2026-11-24-13",
+ "content_slot": "2026-11-24-16",
  "news_seen": [
   "https://www.sport-express.ru/tennis/atp/news/daniil-medvedev-aleksandr-zverev-data-i-vremya-polufinala-itogovogo-turnira-vo-skolko-nachalo-matcha-po-msk-2477152/",
   "https://www.sport-express.ru/tennis/atp/news/daniil-medvedev-otreagiroval-na-vyhod-v-polufinal-itogovogo-turnira-atp-2477151/",
@@ -1563,7 +1563,7 @@
  "value_day": "2026-11-24",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-24",
- "site_stamp": "1530|9347|2026-11-24 15|6|977d7abbb981485d",
+ "site_stamp": "1530|9349|2026-11-24 16|6|977d7abbb981485d",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1720,7 +1720,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 9347,
+ "dz_last": 9349,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2931,12 +2931,12 @@
   },
   "error": null,
   "tips": 14576,
-  "snapshots": 299,
+  "snapshots": 302,
   "unmapped_markets": 22029,
   "quote_matches": 73
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-24T15:58:51.660204+03:00",
+  "last_poll": "2026-11-24T16:00:51.561010+03:00",
   "cursor": "380",
   "posts": [
    {
@@ -3716,7 +3716,10 @@
    "1816918": "pre",
    "1816920": "pre",
    "1816919": "pre",
-   "1816917": "pre"
+   "1816917": "pre",
+   "401899534": "pre",
+   "401899533": "pre",
+   "401899531": "pre"
   },
   "daily": {
    "day": "2026-11-24"
@@ -8362,5 +8365,14 @@
    }
   }
  },
- "vk_story_retry_at": 1795526620.1580536
+ "vk_story_retry_at": 1795526620.1580536,
+ "mod_poll": {
+  "key": "SC0|401878348",
+  "id": "401878348",
+  "poll": 9349,
+  "post": 9348,
+  "home": "Хайберниан",
+  "away": "Данди",
+  "kickoff": "2026-11-24T22:45:00+03:00"
+ }
 }
