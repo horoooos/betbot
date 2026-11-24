@@ -22108,7 +22108,7 @@
   "kickoff": "2026-11-24T20:45:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Scheduled",
   "home": {
    "id": "2980",
@@ -23264,7 +23264,10 @@
   "btn": 4,
   "close": {
    "O45": 0.3908
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null,
+  "value_hit": null
  },
  "401915300": {
   "id": "401915300",
@@ -27264,7 +27267,10 @@
    }
   },
   "msg_id": 9382,
-  "btn": 4
+  "btn": 4,
+  "close": {
+   "H": 0.4147
+  }
  },
  "401880147": {
   "status": "waiting_data",
