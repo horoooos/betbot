@@ -2941,7 +2941,7 @@
   "quote_matches": 66
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-24T08:21:55.077335+03:00",
+  "last_poll": "2026-11-24T08:23:54.243359+03:00",
   "cursor": "370",
   "posts": [
    {
@@ -7105,7 +7105,7 @@
     "profit_pct": -0.5
    },
    "hockey|NHL|401892778": {
-    "status": "open",
+    "status": "settled",
     "id": "401892778",
     "sport": "hockey",
     "div": "NHL",
@@ -7262,7 +7262,10 @@
        "price_kind": "author_recorded"
       }
      ]
-    }
+    },
+    "settled_at": "2026-11-24T05:23:54.243359+00:00",
+    "hit": false,
+    "profit_pct": -0.5
    },
    "hockey|NHL|401892779": {
     "status": "open",
