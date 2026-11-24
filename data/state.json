@@ -1570,7 +1570,7 @@
  "value_day": "2026-11-23",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-23",
- "site_stamp": "1524|9300|2026-11-24 06|6|8003e09d8871ec85",
+ "site_stamp": "1524|9302|2026-11-24 06|6|831a85b3b91d117b",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1726,7 +1726,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 9300,
+ "dz_last": 9302,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2056,7 +2056,7 @@
  "vk_photos": [],
  "vk_photo_until": 1794644243.1147308,
  "vk_photo_cursor": {},
- "vk_story_last": 9300,
+ "vk_story_last": 9302,
  "vk_story_err": null,
  "push_weekly": "2026-47",
  "vk_story_at": 1795483253.1896534,
@@ -2907,7 +2907,7 @@
   "quote_matches": 63
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-24T06:57:39.641959+03:00",
+  "last_poll": "2026-11-24T06:59:39.558368+03:00",
   "cursor": "370",
   "posts": [
    {
@@ -4280,6 +4280,37 @@
    "probability": 0.7919,
    "odds": 1.17,
    "edge": -0.07348,
+   "estimated": true
+  },
+  "esports|CS2|1789258": {
+   "reason": "published",
+   "checked_at": "2026-11-24T04:00:05.994020+00:00",
+   "kickoff": "2026-11-24T08:00:00+03:00",
+   "sport": "esports",
+   "id": "1789258",
+   "home": "NIP",
+   "away": "M80",
+   "market": "Победа: NIP",
+   "strategy": "external_trial",
+   "source_count": 35,
+   "probability": 0.5584,
+   "odds": 1.7,
+   "edge": -0.05072,
+   "estimated": false
+  },
+  "esports|CS2|1789253": {
+   "reason": "no_real_odds",
+   "checked_at": "2026-11-24T04:00:07.937290+00:00",
+   "kickoff": "2026-11-24T08:00:00+03:00",
+   "sport": "esports",
+   "id": "1789253",
+   "home": "100 Thieves",
+   "away": "Chinggis Warriors",
+   "priced_markets": 0,
+   "market": "Победа: 100 Thieves",
+   "probability": 0.7144,
+   "odds": 1.3,
+   "edge": -0.07128,
    "estimated": true
   }
  },
@@ -7358,6 +7389,346 @@
        "published_at": "2026-11-24T00:06:00+00:00",
        "observed_at": "2026-11-24T00:24:18.539436+00:00",
        "odds": 5.61,
+       "price_kind": "author_recorded"
+      }
+     ]
+    }
+   },
+   "esports|CS2|1789258": {
+    "status": "open",
+    "id": "1789258",
+    "sport": "esports",
+    "div": "CS2",
+    "kickoff": "2026-11-24T08:00:00+03:00",
+    "published_at": "2026-11-24T04:00:02.560195+00:00",
+    "msg_id": 9301,
+    "tip": {
+     "key": "ES_W1",
+     "label": "Победа: NIP",
+     "p": 0.5584,
+     "odds": 1.7,
+     "est": false,
+     "stake": 0.5,
+     "strategy": "external_trial",
+     "selection_mode": "external_fallback",
+     "trial_expires_at": null,
+     "probability_origin": "baseline_model",
+     "model_edge": -0.05065,
+     "source_count": 35,
+     "source_refs": [
+      {
+       "author": "/predictors/gennadiy-sovetskikh",
+       "provider": null,
+       "source": "https://stavka.tv/matches/csgo/24-11-2026-nip-m80",
+       "published_at": "2026-11-22T23:38:00+00:00",
+       "observed_at": "2026-11-23T00:11:19.564544+00:00",
+       "odds": 1.73,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/andrei-semenov-17",
+       "provider": null,
+       "source": "https://stavka.tv/matches/csgo/24-11-2026-nip-m80",
+       "published_at": "2026-11-22T23:50:00+00:00",
+       "observed_at": "2026-11-23T00:11:19.564544+00:00",
+       "odds": 1.73,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/besprosvetnaya-toska",
+       "provider": null,
+       "source": "https://stavka.tv/matches/csgo/24-11-2026-nip-m80",
+       "published_at": "2026-11-22T23:50:00+00:00",
+       "observed_at": "2026-11-23T00:11:19.564544+00:00",
+       "odds": 1.73,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/kamila-rozhdestvenskaya",
+       "provider": null,
+       "source": "https://stavka.tv/matches/csgo/24-11-2026-nip-m80",
+       "published_at": "2026-11-23T05:01:00+00:00",
+       "observed_at": "2026-11-23T05:19:38.955271+00:00",
+       "odds": 1.73,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/renat-18",
+       "provider": null,
+       "source": "https://stavka.tv/matches/csgo/24-11-2026-nip-m80",
+       "published_at": "2026-11-23T05:11:00+00:00",
+       "observed_at": "2026-11-23T05:19:38.955271+00:00",
+       "odds": 1.73,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/regalfortune-pro-1",
+       "provider": null,
+       "source": "https://stavka.tv/matches/csgo/24-11-2026-nip-m80",
+       "published_at": "2026-11-23T05:45:00+00:00",
+       "observed_at": "2026-11-23T06:03:38.117757+00:00",
+       "odds": 1.73,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/aleksandr-spartakovic-1",
+       "provider": null,
+       "source": "https://stavka.tv/matches/csgo/24-11-2026-nip-m80",
+       "published_at": "2026-11-23T05:52:00+00:00",
+       "observed_at": "2026-11-23T06:03:38.117757+00:00",
+       "odds": 1.73,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/ne-genii",
+       "provider": null,
+       "source": "https://stavka.tv/matches/csgo/24-11-2026-nip-m80",
+       "published_at": "2026-11-23T06:05:00+00:00",
+       "observed_at": "2026-11-23T06:23:39.710669+00:00",
+       "odds": 1.73,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/stavki-na-sport-7",
+       "provider": null,
+       "source": "https://stavka.tv/matches/csgo/24-11-2026-nip-m80",
+       "published_at": "2026-11-23T06:26:00+00:00",
+       "observed_at": "2026-11-23T06:43:40.662881+00:00",
+       "odds": 1.73,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/roman-akhmatov-1",
+       "provider": null,
+       "source": "https://stavka.tv/matches/csgo/24-11-2026-nip-m80",
+       "published_at": "2026-11-23T07:05:00+00:00",
+       "observed_at": "2026-11-23T07:25:40.420408+00:00",
+       "odds": 1.73,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/maksim-smidt",
+       "provider": null,
+       "source": "https://stavka.tv/matches/csgo/24-11-2026-nip-m80",
+       "published_at": "2026-11-23T07:20:00+00:00",
+       "observed_at": "2026-11-23T07:25:40.420408+00:00",
+       "odds": 1.73,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/lionel-ronaldo",
+       "provider": null,
+       "source": "https://stavka.tv/matches/csgo/24-11-2026-nip-m80",
+       "published_at": "2026-11-23T08:32:00+00:00",
+       "observed_at": "2026-11-23T08:49:40.080740+00:00",
+       "odds": 1.73,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/oleg-kovanev-5",
+       "provider": null,
+       "source": "https://stavka.tv/matches/csgo/24-11-2026-nip-m80",
+       "published_at": "2026-11-23T09:31:00+00:00",
+       "observed_at": "2026-11-23T09:50:50.135566+00:00",
+       "odds": 1.73,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/ivan-zhirikhin",
+       "provider": null,
+       "source": "https://stavka.tv/matches/csgo/24-11-2026-nip-m80",
+       "published_at": "2026-11-23T09:42:00+00:00",
+       "observed_at": "2026-11-23T09:50:50.135566+00:00",
+       "odds": 1.73,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/gurat",
+       "provider": null,
+       "source": "https://stavka.tv/matches/csgo/24-11-2026-nip-m80",
+       "published_at": "2026-11-23T12:41:00+00:00",
+       "observed_at": "2026-11-23T12:56:53.847318+00:00",
+       "odds": 1.73,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/prosto-car-car",
+       "provider": null,
+       "source": "https://stavka.tv/matches/csgo/24-11-2026-nip-m80",
+       "published_at": "2026-11-23T14:28:00+00:00",
+       "observed_at": "2026-11-23T14:43:27.244203+00:00",
+       "odds": 1.73,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/adelina-safina",
+       "provider": null,
+       "source": "https://stavka.tv/matches/csgo/24-11-2026-nip-m80",
+       "published_at": "2026-11-23T16:02:00+00:00",
+       "observed_at": "2026-11-23T16:25:21.426084+00:00",
+       "odds": 1.73,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/valek2-valek2",
+       "provider": null,
+       "source": "https://stavka.tv/matches/csgo/24-11-2026-nip-m80",
+       "published_at": "2026-11-23T17:20:00+00:00",
+       "observed_at": "2026-11-23T17:29:21.936116+00:00",
+       "odds": 1.73,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/andrei-baturin-2",
+       "provider": null,
+       "source": "https://stavka.tv/matches/csgo/24-11-2026-nip-m80",
+       "published_at": "2026-11-23T18:02:00+00:00",
+       "observed_at": "2026-11-23T18:07:22.210171+00:00",
+       "odds": 1.71,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/koroleva-tancpola",
+       "provider": null,
+       "source": "https://stavka.tv/matches/csgo/24-11-2026-nip-m80",
+       "published_at": "2026-11-23T18:50:00+00:00",
+       "observed_at": "2026-11-23T19:12:00.263916+00:00",
+       "odds": 1.7,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/mr-xx-1",
+       "provider": null,
+       "source": "https://stavka.tv/matches/csgo/24-11-2026-nip-m80",
+       "published_at": "2026-11-23T19:17:00+00:00",
+       "observed_at": "2026-11-23T19:32:11.991055+00:00",
+       "odds": 1.7,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/denis-zyryanov-2",
+       "provider": null,
+       "source": "https://stavka.tv/matches/csgo/24-11-2026-nip-m80",
+       "published_at": "2026-11-23T19:44:00+00:00",
+       "observed_at": "2026-11-23T19:52:12.015171+00:00",
+       "odds": 1.7,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/katy-perk",
+       "provider": null,
+       "source": "https://stavka.tv/matches/csgo/24-11-2026-nip-m80",
+       "published_at": "2026-11-23T19:48:00+00:00",
+       "observed_at": "2026-11-23T20:12:12.332837+00:00",
+       "odds": 1.7,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/emo-emooo",
+       "provider": null,
+       "source": "https://stavka.tv/matches/csgo/24-11-2026-nip-m80",
+       "published_at": "2026-11-23T20:12:00+00:00",
+       "observed_at": "2026-11-23T20:32:47.453052+00:00",
+       "odds": 1.7,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/izzo-lv",
+       "provider": null,
+       "source": "https://stavka.tv/matches/csgo/24-11-2026-nip-m80",
+       "published_at": "2026-11-23T20:21:00+00:00",
+       "observed_at": "2026-11-23T20:32:47.453052+00:00",
+       "odds": 1.7,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/lucky-roger",
+       "provider": null,
+       "source": "https://stavka.tv/matches/csgo/24-11-2026-nip-m80",
+       "published_at": "2026-11-23T20:44:00+00:00",
+       "observed_at": "2026-11-23T20:54:19.094194+00:00",
+       "odds": 1.7,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/andrey-kulyazin-3",
+       "provider": null,
+       "source": "https://stavka.tv/matches/csgo/24-11-2026-nip-m80",
+       "published_at": "2026-11-23T20:55:00+00:00",
+       "observed_at": "2026-11-23T21:15:58.711037+00:00",
+       "odds": 1.7,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/-1305",
+       "provider": null,
+       "source": "https://stavka.tv/matches/csgo/24-11-2026-nip-m80",
+       "published_at": "2026-11-23T21:07:00+00:00",
+       "observed_at": "2026-11-23T21:15:58.711037+00:00",
+       "odds": 1.7,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/maksimka-kaper",
+       "provider": null,
+       "source": "https://stavka.tv/matches/csgo/24-11-2026-nip-m80",
+       "published_at": "2026-11-23T21:26:00+00:00",
+       "observed_at": "2026-11-23T21:35:59.520060+00:00",
+       "odds": 1.7,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/mark-kotov-2",
+       "provider": null,
+       "source": "https://stavka.tv/matches/csgo/24-11-2026-nip-m80",
+       "published_at": "2026-11-23T21:36:00+00:00",
+       "observed_at": "2026-11-23T21:55:59.612396+00:00",
+       "odds": 1.7,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/frenk-gallager",
+       "provider": null,
+       "source": "https://stavka.tv/matches/csgo/24-11-2026-nip-m80",
+       "published_at": "2026-11-23T22:11:00+00:00",
+       "observed_at": "2026-11-23T22:17:59.724065+00:00",
+       "odds": 1.71,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/alexandr-martynov",
+       "provider": null,
+       "source": "https://stavka.tv/matches/csgo/24-11-2026-nip-m80",
+       "published_at": "2026-11-23T23:15:00+00:00",
+       "observed_at": "2026-11-23T23:22:17.925958+00:00",
+       "odds": 1.71,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/alina-ponkratova",
+       "provider": null,
+       "source": "https://stavka.tv/matches/csgo/24-11-2026-nip-m80",
+       "published_at": "2026-11-24T00:16:00+00:00",
+       "observed_at": "2026-11-24T00:24:18.539436+00:00",
+       "odds": 1.71,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/aleksandr-tkacenko-15",
+       "provider": null,
+       "source": "https://stavka.tv/matches/csgo/24-11-2026-nip-m80",
+       "published_at": "2026-11-24T03:05:00+00:00",
+       "observed_at": "2026-11-24T03:17:39.854981+00:00",
+       "odds": 1.71,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/den-denislamov-1",
+       "provider": null,
+       "source": "https://stavka.tv/matches/csgo/24-11-2026-nip-m80",
+       "published_at": "2026-11-24T03:30:00+00:00",
+       "observed_at": "2026-11-24T03:39:39.766776+00:00",
+       "odds": 1.71,
        "price_kind": "author_recorded"
       }
      ]

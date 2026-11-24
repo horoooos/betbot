@@ -1340,8 +1340,8 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-24-sakramento-kingz-san-antonio-spers-401910045.html",
-"hs": "43",
-"as": "48",
+"hs": "45",
+"as": "50",
 "tip": "П1 (с ОТ) · 3.49",
 "top": false,
 "bot": {
@@ -1441,8 +1441,8 @@ null
 "state": "in",
 "bo": null,
 "prediction": "",
-"hs": "42",
-"as": "32",
+"hs": "47",
+"as": "34",
 "tip": "",
 "top": false,
 "bot": null,
@@ -1684,12 +1684,38 @@ null
 "div": "CS2",
 "state": "pre",
 "bo": 1,
-"prediction": "",
+"prediction": "predictions/2026-11-24-nip-m80-1789258.html",
 "hs": 0,
 "as": 0,
-"tip": "",
+"tip": "Победа: NIP · 1.70",
 "top": false,
-"bot": null,
+"bot": {
+"main": {
+"label": "Победа: NIP",
+"p": 0.558,
+"odds": 1.7,
+"est": false
+},
+"bold": null,
+"markets": [
+[
+"Победа: NIP",
+0.558,
+1.7
+],
+[
+"Победа: M80",
+0.442,
+2.15
+]
+],
+"bar": [
+0.5584415584415584,
+0,
+0.4415584415584416
+],
+"center": "BO1 · линия pari · Эло 1676 : 1566"
+},
 "lt": null
 },
 {
