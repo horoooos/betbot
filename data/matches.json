@@ -22930,7 +22930,7 @@
   "kickoff": "2026-11-24T22:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Scheduled",
   "home": {
    "id": "11137",
@@ -23726,7 +23726,10 @@
   "btn": 4,
   "close": {
    "A": 0.518
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null,
+  "value_hit": null
  },
  "401880148": {
   "id": "401880148",
@@ -27750,6 +27753,6 @@
   "sport": "football",
   "div": "BRA",
   "reason": "no_qualified_real_market",
-  "retry_at": 1795553480.684773
+  "retry_at": 1795554080.806249
  }
 }
