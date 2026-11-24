@@ -2912,7 +2912,7 @@
   "quote_matches": 69
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-24T11:56:49.998493+03:00",
+  "last_poll": "2026-11-24T11:58:50.070400+03:00",
   "cursor": "373",
   "posts": [
    {
@@ -4408,6 +4408,36 @@
    "probability": 0.6241,
    "odds": 1.49,
    "edge": -0.07009,
+   "estimated": true
+  },
+  "esports|CS2|1816908": {
+   "reason": "no_real_odds",
+   "checked_at": "2026-11-24T08:59:09.505568+00:00",
+   "kickoff": "2026-11-24T13:00:00+03:00",
+   "sport": "esports",
+   "id": "1816908",
+   "home": "9z",
+   "away": "M80",
+   "priced_markets": 0,
+   "market": "Победа: M80",
+   "probability": 0.6692,
+   "odds": 1.39,
+   "edge": -0.06981,
+   "estimated": true
+  },
+  "esports|CS2|1816907": {
+   "reason": "no_real_odds",
+   "checked_at": "2026-11-24T08:59:10.828627+00:00",
+   "kickoff": "2026-11-24T13:00:00+03:00",
+   "sport": "esports",
+   "id": "1816907",
+   "home": "100 Thieves",
+   "away": "Imperial",
+   "priced_markets": 0,
+   "market": "Победа: 100 Thieves",
+   "probability": 0.5325,
+   "odds": 1.75,
+   "edge": -0.06812,
    "estimated": true
   }
  },
