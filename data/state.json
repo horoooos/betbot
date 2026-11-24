@@ -2885,10 +2885,10 @@
    }
   },
   "source": {
-   "last_success": "2026-11-24T01:30:18.638856+00:00",
-   "parsed": 373,
-   "added": 37,
-   "discovered_matches": 43,
+   "last_success": "2026-11-24T01:52:18.597621+00:00",
+   "parsed": 379,
+   "added": 58,
+   "discovered_matches": 42,
    "pages": 21,
    "errors": [],
    "parsed_by_sport": {
@@ -2901,13 +2901,13 @@
    }
   },
   "error": null,
-  "tips": 13905,
+  "tips": 13920,
   "snapshots": 286,
-  "unmapped_markets": 21041,
-  "quote_matches": 54
+  "unmapped_markets": 21084,
+  "quote_matches": 55
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-24T04:50:18.610067+03:00",
+  "last_poll": "2026-11-24T04:52:18.597621+03:00",
   "cursor": "370",
   "posts": [
    {
@@ -4176,7 +4176,7 @@
   },
   "football|CRC|401876819": {
    "reason": "edge_below_minimum",
-   "checked_at": "2026-11-24T01:42:39.268840+00:00",
+   "checked_at": "2026-11-24T01:53:04.802439+00:00",
    "kickoff": "2026-11-24T05:00:00+03:00",
    "sport": "football",
    "id": "401876819",
@@ -4184,9 +4184,9 @@
    "away": "Cartaginés",
    "priced_markets": 6,
    "market": "ТМ 2.5",
-   "probability": 0.5457,
-   "odds": 1.71,
-   "edge": -0.06685,
+   "probability": 0.5631,
+   "odds": 1.67,
+   "edge": -0.05962,
    "estimated": false
   },
   "hockey|NHL|401892778": {
