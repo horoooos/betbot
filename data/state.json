@@ -1570,7 +1570,7 @@
  "value_day": "2026-11-23",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-23",
- "site_stamp": "1517|9280|2026-11-24 04|6|01f5cddecb520f35",
+ "site_stamp": "1517|9280|2026-11-24 05|6|01f5cddecb520f35",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -2730,7 +2730,7 @@
   "external_sources": {
    "providers": {
     "legalbet": {
-     "at": "2026-11-24T01:30:18.638856+00:00",
+     "at": "2026-11-24T02:00:18.680641+00:00",
      "status": "ok",
      "discovered": 2,
      "pages": 2,
@@ -2741,29 +2741,29 @@
      "contexts": 2
     },
     "livesport": {
-     "at": "2026-11-24T01:30:18.638856+00:00",
+     "at": "2026-11-24T02:00:18.680641+00:00",
      "status": "ok",
-     "discovered": 13,
+     "discovered": 11,
      "pages": 6,
-     "opinions": 8,
-     "mapped": 1,
+     "opinions": 10,
+     "mapped": 4,
      "articles_available": 17,
-     "next_offset": 16,
-     "contexts": 4
+     "next_offset": 11,
+     "contexts": 5
     },
     "metaratings": {
-     "at": "2026-11-24T01:30:18.638856+00:00",
+     "at": "2026-11-24T02:00:18.680641+00:00",
      "status": "ok",
      "discovered": 9,
      "pages": 6,
      "opinions": 24,
-     "mapped": 4,
+     "mapped": 3,
      "articles_available": 37,
-     "next_offset": 9,
+     "next_offset": 6,
      "contexts": 6
     },
     "rb": {
-     "at": "2026-11-24T01:30:18.638856+00:00",
+     "at": "2026-11-24T02:00:18.680641+00:00",
      "status": "ok",
      "discovered": 1,
      "pages": 1,
@@ -2774,21 +2774,21 @@
      "contexts": 1
     },
     "vseprosport": {
-     "at": "2026-11-24T01:30:18.638856+00:00",
+     "at": "2026-11-24T02:00:18.680641+00:00",
      "status": "ok",
      "discovered": 9,
      "pages": 2,
      "opinions": 0,
      "mapped": 0,
      "articles_available": 10,
-     "next_offset": 11,
+     "next_offset": 8,
      "page_errors": 4,
      "contexts": 2
     }
    },
-   "opinions": 21,
+   "opinions": 22,
    "snapshots": 0,
-   "contexts": 43,
+   "contexts": 44,
    "model": {
     "weight": 0.0,
     "status": "collecting",
@@ -2902,12 +2902,12 @@
   },
   "error": null,
   "tips": 13920,
-  "snapshots": 286,
+  "snapshots": 288,
   "unmapped_markets": 21084,
   "quote_matches": 55
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-24T04:58:18.686831+03:00",
+  "last_poll": "2026-11-24T05:00:18.680641+03:00",
   "cursor": "370",
   "posts": [
    {
