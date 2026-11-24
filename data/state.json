@@ -7,10 +7,6 @@
  "schedule_day": "2026-11-24",
  "content_slot": "2026-11-24-10",
  "news_seen": [
-  "https://www.sport-express.ru/tennis/wta/news/olhovskiy-schitaet-chto-andreeva-zasluzhila-nagradu-luchshey-tennisistki-sezona-u-mirry-progress-nalico-2477071/",
-  "https://www.sport-express.ru/tennis/atp/news/alkaras-rasskazal-o-svoem-fizicheskom-sostoyanii-posle-pobedy-nad-kobolli-na-itogovom-turnire-atp-2477039/",
-  "og-proigrala-natus-vincere-na-blast-slam-ix",
-  "team-spirit-ustupila-team-nemesis-na-blast-slam-ix",
   "team-yandex-vyigrala-u-playtime-na-blast-slam-ix",
   "parivision-ili-legion-kto-okazhet-sya-silneye-v-matche-na-blast-slam-ix",
   "https://www.sport-express.ru/football/rfpl/news/rostov-krylya-sovetov-suleymanov-s-pasa-oluseguna-udvoil-preimuschestvo-rostovchan-2477089/",
@@ -506,9 +502,13 @@
   "https://www.sport-express.ru/hockey/nhl/news/kaprizov-povtoril-rekord-minnesoty-po-kolichestvu-matchey-s-4-i-bolee-ochkami-2478246/",
   "parivision-oderzhala-pervuyu-pobedu-na-pgl-major-singapore-2026-razgromiv",
   "https://www.sport-express.ru/cybersport/esports/news/heroic-imperial-esports-rezultat-matcha-pgl-major-singapore-2026-po-cs2-schet-24-noyabrya-2026-goda-2478250/",
-  "https://www.sport-express.ru/football/rfpl/news/orlov-raskritikoval-igru-osipenko-za-dinamo-medlennyy-skolko-golov-po-ego-vine-bylo-2478252/"
+  "https://www.sport-express.ru/football/rfpl/news/orlov-raskritikoval-igru-osipenko-za-dinamo-medlennyy-skolko-golov-po-ego-vine-bylo-2478252/",
+  "https://www.sport-express.ru/cybersport/esports/news/parivision-dendele-cs-rezultat-matcha-pgl-major-singapore-2026-po-cs2-schet-24-noyabrya-2026-goda-2478274/",
+  "https://www.sport-express.ru/cybersport/esports/news/team-liquid-bcgame-rezultat-matcha-pgl-major-singapore-2026-po-cs2-schet-24-noyabrya-2026-goda-2478269/",
+  "https://www.sport-express.ru/hockey/nhl/news/kaprizov-stal-devyatym-igrokom-v-istorii-nhl-s-shestyu-matchami-podryad-s-dvumya-i-bolee-golevymi-peredachami-2478277/",
+  "https://www.sport-express.ru/football/rfpl/news/trener-cska-igdisamov-obyasnil-porazhenie-ot-krasnodara-individualnymi-oshibkami-2478268/"
  ],
- "news_i": 1,
+ "news_i": 4,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1695,7 +1695,7 @@
  "streak_day": {
   "2026-11-22": 2
  },
- "news_next": "2026-11-24T10:41:54.520046+03:00",
+ "news_next": "2026-11-24T11:12:49.537270+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -2014,7 +2014,8 @@
   "https://images.cybersport.ru/images/as-is/plain/bf/bf0a70ee-0b2d-4b4a-82bc-44936d845b54.jpg",
   "https://images.cybersport.ru/images/as-is/plain/1c/1c123d29-a9e8-4bff-89cb-acf3fee39441.jpg",
   "https://ss.sport-express.ru/userfiles/materials/224/2246233/1180x665.jpg",
-  "https://upload.wikimedia.org/wikipedia/commons/8/86/Hjalgr%C3%ADm_Eltt%C3%B8r_A_Faroese_Football_Player.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+  "https://upload.wikimedia.org/wikipedia/commons/8/86/Hjalgr%C3%ADm_Eltt%C3%B8r_A_Faroese_Football_Player.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Wisconsin_Badgers_football_fans_09-15-2012_284_%288016467646%29.jpg/1280px-Wisconsin_Badgers_football_fans_09-15-2012_284_%288016467646%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
  ],
  "indexnow_day": "2026-11-24",
  "vk_wall_err": null,
@@ -2389,7 +2390,8 @@
   "9221",
   "9228",
   "9232",
-  "9318"
+  "9318",
+  "9320"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -2696,11 +2698,12 @@
   "2026-11-23:новость:d6314019c411d2263d7a6675",
   "2026-11-23:новость:fc8eb7cc7f36a6ffba8936d9",
   "2026-11-23:новость:ae206e19bb065a852abf1236",
-  "2026-11-24:новость:6fe6a1f8958c4c09526d9c25"
+  "2026-11-24:новость:6fe6a1f8958c4c09526d9c25",
+  "2026-11-24:новость:1eb0d1463e5217925730362e"
  ],
  "dz_last_delivery": {
-  "source_id": 9318,
-  "message_id": 854,
+  "source_id": 9320,
+  "message_id": 855,
   "kind": "новость"
  },
  "learn_attempt_day": "2026-11-24",
@@ -2903,7 +2906,7 @@
   "quote_matches": 69
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-24T10:40:49.840901+03:00",
+  "last_poll": "2026-11-24T10:42:49.537270+03:00",
   "cursor": "370",
   "posts": [
    {
