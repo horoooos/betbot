@@ -2938,9 +2938,9 @@
    }
   },
   "source": {
-   "last_success": "2026-11-24T18:43:20.878202+00:00",
+   "last_success": "2026-11-24T19:05:19.985493+00:00",
    "parsed": 366,
-   "added": 58,
+   "added": 79,
    "discovered_matches": 37,
    "pages": 20,
    "errors": [],
@@ -2954,13 +2954,13 @@
    }
   },
   "error": null,
-  "tips": 14982,
+  "tips": 15027,
   "snapshots": 323,
-  "unmapped_markets": 22718,
-  "quote_matches": 75
+  "unmapped_markets": 22752,
+  "quote_matches": 76
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-24T22:03:20.552960+03:00",
+  "last_poll": "2026-11-24T22:05:19.985493+03:00",
   "cursor": "394",
   "posts": [
    {
@@ -3664,7 +3664,7 @@
    "401915380": "in",
    "401915300": "in",
    "401899536": "in",
-   "401899539": "pre",
+   "401899539": "in",
    "401899538": "in",
    "401899532": "in",
    "401899535": "in",
@@ -4853,7 +4853,7 @@
   },
   "tennis|WTA|186827": {
    "reason": "no_real_odds",
-   "checked_at": "2026-11-24T18:53:40.009149+00:00",
+   "checked_at": "2026-11-24T19:05:48.258082+00:00",
    "kickoff": "2026-11-24T22:30:00+03:00",
    "sport": "tennis",
    "id": "186827",
