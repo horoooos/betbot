@@ -1570,7 +1570,7 @@
  "value_day": "2026-11-23",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-23",
- "site_stamp": "1521|9291|2026-11-24 06|6|586af6601c22b08f",
+ "site_stamp": "1521|9292|2026-11-24 06|6|586af6601c22b08f",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1726,7 +1726,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 9291,
+ "dz_last": 9292,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2056,7 +2056,7 @@
  "vk_photos": [],
  "vk_photo_until": 1794644243.1147308,
  "vk_photo_cursor": {},
- "vk_story_last": 9291,
+ "vk_story_last": 9292,
  "vk_story_err": null,
  "push_weekly": "2026-47",
  "vk_story_at": 1795483253.1896534,
@@ -2907,7 +2907,7 @@
   "quote_matches": 59
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-24T06:07:39.368730+03:00",
+  "last_poll": "2026-11-24T06:09:39.630026+03:00",
   "cursor": "370",
   "posts": [
    {
@@ -3559,7 +3559,7 @@
    "401892776": "post",
    "401892777": "in",
    "401892778": "in",
-   "401892779": "pre",
+   "401892779": "in",
    "401910036": "post",
    "401910037": "post",
    "401910038": "post",
@@ -4254,7 +4254,7 @@
   },
   "esports|CS2|1789257": {
    "reason": "no_real_odds",
-   "checked_at": "2026-11-24T02:59:57.215309+00:00",
+   "checked_at": "2026-11-24T03:09:57.675050+00:00",
    "kickoff": "2026-11-24T07:00:00+03:00",
    "sport": "esports",
    "id": "1789257",
@@ -4269,7 +4269,7 @@
   },
   "esports|CS2|1789254": {
    "reason": "no_real_odds",
-   "checked_at": "2026-11-24T02:59:58.971527+00:00",
+   "checked_at": "2026-11-24T03:09:59.419081+00:00",
    "kickoff": "2026-11-24T07:00:00+03:00",
    "sport": "esports",
    "id": "1789254",
@@ -6859,7 +6859,7 @@
     }
    },
    "hockey|NHL|401892776": {
-    "status": "open",
+    "status": "settled",
     "id": "401892776",
     "sport": "hockey",
     "div": "NHL",
@@ -6998,7 +6998,10 @@
        "price_kind": "author_recorded"
       }
      ]
-    }
+    },
+    "settled_at": "2026-11-24T03:09:39.630026+00:00",
+    "hit": false,
+    "profit_pct": -0.5
    },
    "hockey|NHL|401892778": {
     "status": "open",
