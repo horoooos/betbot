@@ -2900,9 +2900,9 @@
    }
   },
   "source": {
-   "last_success": "2026-11-24T10:18:50.557472+00:00",
+   "last_success": "2026-11-24T10:40:50.726724+00:00",
    "parsed": 390,
-   "added": 55,
+   "added": 56,
    "discovered_matches": 36,
    "pages": 21,
    "errors": [],
@@ -2916,13 +2916,13 @@
    }
   },
   "error": null,
-  "tips": 14414,
+  "tips": 14437,
   "snapshots": 298,
-  "unmapped_markets": 21793,
+  "unmapped_markets": 21826,
   "quote_matches": 70
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-24T13:38:50.321641+03:00",
+  "last_poll": "2026-11-24T13:40:50.726724+03:00",
   "cursor": "375",
   "posts": [
    {
@@ -4450,7 +4450,7 @@
   },
   "esports|CS2|1816910": {
    "reason": "no_real_odds",
-   "checked_at": "2026-11-24T10:29:10.137550+00:00",
+   "checked_at": "2026-11-24T10:41:17.098294+00:00",
    "kickoff": "2026-11-24T14:00:00+03:00",
    "sport": "esports",
    "id": "1816910",
@@ -4465,7 +4465,7 @@
   },
   "esports|CS2|1816909": {
    "reason": "insufficient_history_or_odds",
-   "checked_at": "2026-11-24T10:29:11.318102+00:00",
+   "checked_at": "2026-11-24T10:41:18.081032+00:00",
    "kickoff": "2026-11-24T14:00:00+03:00",
    "sport": "esports",
    "id": "1816909",
