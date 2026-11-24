@@ -23276,7 +23276,7 @@
   "kickoff": "2026-11-24T20:45:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Scheduled",
   "home": {
    "id": "432",
@@ -24758,7 +24758,10 @@
   "btn": 4,
   "close": {
    "H": 0.2814
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null,
+  "value_hit": null
  },
  "401899536": {
   "status": "waiting_data",
@@ -27382,7 +27385,7 @@
   "sport": "football",
   "div": "E1",
   "reason": "no_qualified_real_market",
-  "retry_at": 1795549280.429787
+  "retry_at": 1795549880.768131
  },
  "401878345": {
   "status": "waiting_data",
@@ -27390,15 +27393,1268 @@
   "sport": "football",
   "div": "SC0",
   "reason": "edge_below_minimum",
-  "retry_at": 1795549280.429787
+  "retry_at": 1795549880.768131
  },
  "401915295": {
-  "status": "waiting_data",
-  "kickoff": "2026-11-24T23:00:00+03:00",
-  "sport": "football",
+  "id": "401915295",
   "div": "UCL",
-  "reason": "edge_below_minimum",
-  "retry_at": 1795549280.429787
+  "slug": "uefa.champions",
+  "kickoff": "2026-11-24T23:00:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "detail": "Scheduled",
+  "home": {
+   "id": "359",
+   "name": "Arsenal",
+   "short": "Arsenal",
+   "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/359.png",
+   "color": "e20520",
+   "alt": "003399",
+   "form": "DWWWL",
+   "score": "0",
+   "ru": "Арсенал"
+  },
+  "away": {
+   "id": "124",
+   "name": "Borussia Dortmund",
+   "short": "Dortmund",
+   "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/124.png",
+   "color": "ffee00",
+   "alt": "272726",
+   "form": "WWWDW",
+   "score": "0",
+   "ru": "Боруссия Д"
+  },
+  "odds": {
+   "H": 1.455,
+   "D": 4.7,
+   "A": 7.0,
+   "line": 2.5,
+   "over": 1.667,
+   "under": 2.2,
+   "spread_h": [
+    -1.5,
+    2.2
+   ],
+   "spread_a": [
+    1.5,
+    1.606
+   ]
+  },
+  "venue": "Emirates Stadium",
+  "clock": "0'",
+  "goals": [],
+  "open": {
+   "H": 0.658
+  },
+  "top": false,
+  "lam": [
+   2.119575674893621,
+   0.8528505117047712
+  ],
+  "probs": {
+   "H": 0.6579701999629908,
+   "D": 0.20972776870082493,
+   "A": 0.13230203133618423,
+   "1X": 0.8676979686638157,
+   "12": 0.7902722312991751,
+   "X2": 0.3420298000370091,
+   "BTTS_Y": 0.5122984568209338,
+   "BTTS_N": 0.4877015431790662,
+   "O15": 0.8040936967080807,
+   "U15": 0.19590630329191927,
+   "O25": 0.5705978635663789,
+   "U25": 0.4294021364336213,
+   "O35": 0.3465814546991618,
+   "U35": 0.6534185453008383,
+   "H_O05": 0.8799157319066271,
+   "H_O15": 0.6253880383185098,
+   "A_O05": 0.5738016836539241,
+   "A_O15": 0.2103182314704611,
+   "H-1.5": 0.42442696108637007,
+   "A+1.5": 0.5755730389136298,
+   "A-1.5": 0.042754852563474166,
+   "H+1.5": 0.9572451474365258,
+   "H-2.5": 0.2224994766375001,
+   "A-2.5": 0.010062708031210224,
+   "H+2.5": 0.9899372919687898,
+   "A+2.5": 0.7775005233624998,
+   "O45": 0.1801133947129997,
+   "U45": 0.8198866052870003,
+   "H_O25": 0.35564268436043434,
+   "A_O25": 0.055319707375019525,
+   "H&O15": 0.5568922538716214,
+   "A&O15": 0.09605471539601687,
+   "H&BTTS": 0.29035292487729747,
+   "A&BTTS": 0.07079880450319394,
+   "1X&U35": 0.5538155922188954,
+   "X2&U35": 0.25810192746336535,
+   "BTTS&O25": 0.4123805236998939,
+   "HT_H": 0.4794829643516329,
+   "HT_D": 0.38308981684276316,
+   "HT_A": 0.13742721880560377,
+   "HT_O05": 0.729836497870505,
+   "HT_U05": 0.2701635021294948,
+   "HT_O15": 0.3941223865699311,
+   "HT_U15": 0.6058776134300687
+  },
+  "scores": [
+   [
+    "2:0",
+    0.11496501569910807
+   ],
+   [
+    "1:0",
+    0.10107794609136929
+   ],
+   [
+    "1:1",
+    0.09991793312103986
+   ]
+  ],
+  "main": {
+   "key": "H",
+   "label": "П1",
+   "p": 0.658,
+   "odds": 1.46,
+   "est": false,
+   "stake": 0.5,
+   "strategy": "external_trial",
+   "selection_mode": "external_fallback",
+   "trial_expires_at": null,
+   "probability_origin": "baseline_model",
+   "model_edge": -0.03936,
+   "source_count": 3,
+   "source_refs": [
+    {
+     "author": "/predictors/nikolai-vasilev-13",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/24-11-2026-arsenal-borussia-dortmund",
+     "published_at": "2026-11-24T04:29:00+00:00",
+     "observed_at": "2026-11-24T08:32:50.654806+00:00",
+     "odds": 1.43,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/sportivnyi-paren",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/24-11-2026-arsenal-borussia-dortmund",
+     "published_at": "2026-11-24T05:48:00+00:00",
+     "observed_at": "2026-11-24T08:32:50.654806+00:00",
+     "odds": 1.47,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/yanis-bananis",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/24-11-2026-arsenal-borussia-dortmund",
+     "published_at": "2026-11-24T14:26:00+00:00",
+     "observed_at": "2026-11-24T15:33:47.303149+00:00",
+     "odds": 1.47,
+     "price_kind": "author_recorded"
+    }
+   ]
+  },
+  "bold": {},
+  "value": null,
+  "odds_src": "DraftKings",
+  "model_w": 0.0,
+  "learned_n": 1533,
+  "stavka_signal": {
+   "status": "baseline_better",
+   "weight": 0.0,
+   "authors": 3,
+   "votes": {
+    "H": 3.0995643580922394
+   },
+   "source": "https://stavka.tv",
+   "snapshot": "UCL|401915295"
+  },
+  "research": {
+   "articles": [
+    {
+     "id": "263e973d32eff707c6cb50fe",
+     "kind": "context",
+     "provider": "livesport",
+     "source": "https://www.livesport.ru/tips/football/2026/11/24/arsenal-bordortmund-1/",
+     "sport": "football",
+     "div": "UCL",
+     "event_id": "401915295",
+     "kickoff": "2026-11-24T20:00:00+00:00",
+     "published_at": "2026-11-23T23:00:00+00:00",
+     "observed_at": "2026-11-23T23:24:41.928318+00:00",
+     "tables": [
+      [
+       [
+        "",
+        "Букмекер",
+        "1",
+        "x",
+        "2",
+        "Новым игрокам",
+        ""
+       ],
+       [
+        "",
+        "",
+        "1.42",
+        "4.80",
+        "7.40",
+        "Фрибет",
+        "15 000 ₽"
+       ],
+       [
+        "",
+        "",
+        "1.42",
+        "5.02",
+        "7.43",
+        "Фрибет",
+        "30 000 ₽"
+       ],
+       [
+        "",
+        "",
+        "1.40",
+        "5.00",
+        "7.40",
+        "Фрибет всем",
+        "10 000 ₽"
+       ],
+       [
+        "",
+        "",
+        "1.41",
+        "4.85",
+        "7.33",
+        "Фрибет",
+        "1000 ₽"
+       ]
+      ]
+     ]
+    },
+    {
+     "id": "b78165ff5b6c4ba02de33b3f",
+     "kind": "context",
+     "provider": "livesport",
+     "source": "https://www.livesport.ru/tips/football/2026/11/24/arsenal-bordortmund-brave/",
+     "sport": "football",
+     "div": "UCL",
+     "event_id": "401915295",
+     "kickoff": "2026-11-24T20:00:00+00:00",
+     "published_at": "2026-11-24T09:00:00+00:00",
+     "observed_at": "2026-11-24T09:19:08.811588+00:00",
+     "tables": [
+      [
+       [
+        "",
+        "Букмекер",
+        "1",
+        "x",
+        "2",
+        "Новым игрокам",
+        ""
+       ],
+       [
+        "",
+        "",
+        "1.45",
+        "4.60",
+        "6.90",
+        "Фрибет",
+        "15 000 ₽"
+       ],
+       [
+        "",
+        "",
+        "1.49",
+        "4.58",
+        "6.60",
+        "Фрибет",
+        "30 000 ₽"
+       ],
+       [
+        "",
+        "",
+        "1.48",
+        "4.60",
+        "6.60",
+        "Фрибет всем",
+        "10 000 ₽"
+       ],
+       [
+        "",
+        "",
+        "1.44",
+        "4.67",
+        "6.99",
+        "Фрибет",
+        "1000 ₽"
+       ]
+      ]
+     ]
+    }
+   ],
+   "dossier": {
+    "observed_at": "2026-11-24T19:29:36.941240+00:00",
+    "kickoff": "2026-11-24T20:00:00+00:00",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.champions/summary?event=401915295",
+    "status": "available",
+    "facts": {
+     "table": {
+      "160": {
+       "rank": "1",
+       "gp": "4",
+       "w": "4",
+       "d": "0",
+       "l": "0",
+       "gd": "+15",
+       "pts": "12",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "0",
+        "GD": "+15",
+        "P": "12",
+        "D": "0",
+        "W": "4",
+        "R": "1",
+        "Total": "4-0-0"
+       },
+       "group": "UEFA Champions League Standings"
+      },
+      "86": {
+       "rank": "2",
+       "gp": "4",
+       "w": "4",
+       "d": "0",
+       "l": "0",
+       "gd": "+6",
+       "pts": "12",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "0",
+        "GD": "+6",
+        "P": "12",
+        "D": "0",
+        "W": "4",
+        "R": "2",
+        "Total": "4-0-0"
+       },
+       "group": "UEFA Champions League Standings"
+      },
+      "359": {
+       "rank": "3",
+       "gp": "4",
+       "w": "3",
+       "d": "1",
+       "l": "0",
+       "gd": "+5",
+       "pts": "10",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "0",
+        "GD": "+5",
+        "P": "10",
+        "D": "1",
+        "W": "3",
+        "R": "3",
+        "Total": "3-1-0"
+       },
+       "group": "UEFA Champions League Standings"
+      },
+      "2572": {
+       "rank": "4",
+       "gp": "4",
+       "w": "3",
+       "d": "0",
+       "l": "1",
+       "gd": "+13",
+       "pts": "9",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "1",
+        "GD": "+13",
+        "P": "9",
+        "D": "0",
+        "W": "3",
+        "R": "4",
+        "Total": "3-0-1"
+       },
+       "group": "UEFA Champions League Standings"
+      },
+      "83": {
+       "rank": "5",
+       "gp": "4",
+       "w": "3",
+       "d": "0",
+       "l": "1",
+       "gd": "+8",
+       "pts": "9",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "1",
+        "GD": "+8",
+        "P": "9",
+        "D": "0",
+        "W": "3",
+        "R": "5",
+        "Total": "3-0-1"
+       },
+       "group": "UEFA Champions League Standings"
+      },
+      "362": {
+       "rank": "6",
+       "gp": "4",
+       "w": "3",
+       "d": "0",
+       "l": "1",
+       "gd": "+6",
+       "pts": "9",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "1",
+        "GD": "+6",
+        "P": "9",
+        "D": "0",
+        "W": "3",
+        "R": "6",
+        "Total": "3-0-1"
+       },
+       "group": "UEFA Champions League Standings"
+      },
+      "382": {
+       "rank": "7",
+       "gp": "4",
+       "w": "3",
+       "d": "0",
+       "l": "1",
+       "gd": "+5",
+       "pts": "9",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "1",
+        "GD": "+5",
+        "P": "9",
+        "D": "0",
+        "W": "3",
+        "R": "7",
+        "Total": "3-0-1"
+       },
+       "group": "UEFA Champions League Standings"
+      },
+      "364": {
+       "rank": "8",
+       "gp": "4",
+       "w": "3",
+       "d": "0",
+       "l": "1",
+       "gd": "+4",
+       "pts": "9",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "1",
+        "GD": "+4",
+        "P": "9",
+        "D": "0",
+        "W": "3",
+        "R": "8",
+        "Total": "3-0-1"
+       },
+       "group": "UEFA Champions League Standings"
+      },
+      "570": {
+       "rank": "9",
+       "gp": "4",
+       "w": "3",
+       "d": "0",
+       "l": "1",
+       "gd": "+4",
+       "pts": "9",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "1",
+        "GD": "+4",
+        "P": "9",
+        "D": "0",
+        "W": "3",
+        "R": "9",
+        "Total": "3-0-1"
+       },
+       "group": "UEFA Champions League Standings"
+      },
+      "2250": {
+       "rank": "10",
+       "gp": "4",
+       "w": "3",
+       "d": "0",
+       "l": "1",
+       "gd": "+4",
+       "pts": "9",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "1",
+        "GD": "+4",
+        "P": "9",
+        "D": "0",
+        "W": "3",
+        "R": "10",
+        "Total": "3-0-1"
+       },
+       "group": "UEFA Champions League Standings"
+      },
+      "244": {
+       "rank": "11",
+       "gp": "4",
+       "w": "3",
+       "d": "0",
+       "l": "1",
+       "gd": "+2",
+       "pts": "9",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "1",
+        "GD": "+2",
+        "P": "9",
+        "D": "0",
+        "W": "3",
+        "R": "11",
+        "Total": "3-0-1"
+       },
+       "group": "UEFA Champions League Standings"
+      },
+      "124": {
+       "rank": "12",
+       "gp": "4",
+       "w": "3",
+       "d": "0",
+       "l": "1",
+       "gd": "+2",
+       "pts": "9",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "1",
+        "GD": "+2",
+        "P": "9",
+        "D": "0",
+        "W": "3",
+        "R": "12",
+        "Total": "3-0-1"
+       },
+       "group": "UEFA Champions League Standings"
+      },
+      "132": {
+       "rank": "13",
+       "gp": "4",
+       "w": "2",
+       "d": "2",
+       "l": "0",
+       "gd": "+7",
+       "pts": "8",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "0",
+        "GD": "+7",
+        "P": "8",
+        "D": "2",
+        "W": "2",
+        "R": "13",
+        "Total": "2-2-0"
+       },
+       "group": "UEFA Champions League Standings"
+      },
+      "134": {
+       "rank": "14",
+       "gp": "4",
+       "w": "2",
+       "d": "1",
+       "l": "1",
+       "gd": "+3",
+       "pts": "7",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "1",
+        "GD": "+3",
+        "P": "7",
+        "D": "1",
+        "W": "2",
+        "R": "14",
+        "Total": "2-1-1"
+       },
+       "group": "UEFA Champions League Standings"
+      },
+      "110": {
+       "rank": "15",
+       "gp": "4",
+       "w": "2",
+       "d": "0",
+       "l": "2",
+       "gd": "+2",
+       "pts": "6",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "2",
+        "GD": "+2",
+        "P": "6",
+        "D": "0",
+        "W": "2",
+        "R": "15",
+        "Total": "2-0-2"
+       },
+       "group": "UEFA Champions League Standings"
+      },
+      "4411": {
+       "rank": "16",
+       "gp": "4",
+       "w": "2",
+       "d": "0",
+       "l": "2",
+       "gd": "+1",
+       "pts": "6",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "2",
+        "GD": "+1",
+        "P": "6",
+        "D": "0",
+        "W": "2",
+        "R": "16",
+        "Total": "2-0-2"
+       },
+       "group": "UEFA Champions League Standings"
+      },
+      "360": {
+       "rank": "17",
+       "gp": "4",
+       "w": "2",
+       "d": "0",
+       "l": "2",
+       "gd": "0",
+       "pts": "6",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "2",
+        "GD": "0",
+        "P": "6",
+        "D": "0",
+        "W": "2",
+        "R": "17",
+        "Total": "2-0-2"
+       },
+       "group": "UEFA Champions League Standings"
+      },
+      "432": {
+       "rank": "18",
+       "gp": "4",
+       "w": "2",
+       "d": "0",
+       "l": "2",
+       "gd": "-1",
+       "pts": "6",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "2",
+        "GD": "-1",
+        "P": "6",
+        "D": "0",
+        "W": "2",
+        "R": "18",
+        "Total": "2-0-2"
+       },
+       "group": "UEFA Champions League Standings"
+      },
+      "436": {
+       "rank": "19",
+       "gp": "4",
+       "w": "1",
+       "d": "2",
+       "l": "1",
+       "gd": "-5",
+       "pts": "5",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "1",
+        "GD": "-5",
+        "P": "5",
+        "D": "2",
+        "W": "1",
+        "R": "19",
+        "Total": "1-2-1"
+       },
+       "group": "UEFA Champions League Standings"
+      },
+      "104": {
+       "rank": "20",
+       "gp": "4",
+       "w": "1",
+       "d": "1",
+       "l": "2",
+       "gd": "+2",
+       "pts": "4",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "2",
+        "GD": "+2",
+        "P": "4",
+        "D": "1",
+        "W": "1",
+        "R": "20",
+        "Total": "1-1-2"
+       },
+       "group": "UEFA Champions League Standings"
+      },
+      "493": {
+       "rank": "21",
+       "gp": "4",
+       "w": "1",
+       "d": "1",
+       "l": "2",
+       "gd": "0",
+       "pts": "4",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "2",
+        "GD": "0",
+        "P": "4",
+        "D": "1",
+        "W": "1",
+        "R": "21",
+        "Total": "1-1-2"
+       },
+       "group": "UEFA Champions League Standings"
+      },
+      "510": {
+       "rank": "22",
+       "gp": "4",
+       "w": "1",
+       "d": "1",
+       "l": "2",
+       "gd": "-1",
+       "pts": "4",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "2",
+        "GD": "-1",
+        "P": "4",
+        "D": "1",
+        "W": "1",
+        "R": "22",
+        "Total": "1-1-2"
+       },
+       "group": "UEFA Champions League Standings"
+      },
+      "1068": {
+       "rank": "23",
+       "gp": "4",
+       "w": "1",
+       "d": "1",
+       "l": "2",
+       "gd": "-1",
+       "pts": "4",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "2",
+        "GD": "-1",
+        "P": "4",
+        "D": "1",
+        "W": "1",
+        "R": "23",
+        "Total": "1-1-2"
+       },
+       "group": "UEFA Champions League Standings"
+      },
+      "148": {
+       "rank": "24",
+       "gp": "4",
+       "w": "1",
+       "d": "1",
+       "l": "2",
+       "gd": "-1",
+       "pts": "4",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "2",
+        "GD": "-1",
+        "P": "4",
+        "D": "1",
+        "W": "1",
+        "R": "24",
+        "Total": "1-1-2"
+       },
+       "group": "UEFA Champions League Standings"
+      },
+      "2980": {
+       "rank": "25",
+       "gp": "4",
+       "w": "1",
+       "d": "1",
+       "l": "2",
+       "gd": "-5",
+       "pts": "4",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "2",
+        "GD": "-5",
+        "P": "4",
+        "D": "1",
+        "W": "1",
+        "R": "25",
+        "Total": "1-1-2"
+       },
+       "group": "UEFA Champions League Standings"
+      },
+      "437": {
+       "rank": "26",
+       "gp": "4",
+       "w": "1",
+       "d": "0",
+       "l": "3",
+       "gd": "-1",
+       "pts": "3",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "3",
+        "GD": "-1",
+        "P": "3",
+        "D": "0",
+        "W": "1",
+        "R": "26",
+        "Total": "1-0-3"
+       },
+       "group": "UEFA Champions League Standings"
+      },
+      "114": {
+       "rank": "27",
+       "gp": "4",
+       "w": "1",
+       "d": "0",
+       "l": "3",
+       "gd": "-5",
+       "pts": "3",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "3",
+        "GD": "-5",
+        "P": "3",
+        "D": "0",
+        "W": "1",
+        "R": "27",
+        "Total": "1-0-3"
+       },
+       "group": "UEFA Champions League Standings"
+      },
+      "102": {
+       "rank": "28",
+       "gp": "4",
+       "w": "1",
+       "d": "0",
+       "l": "3",
+       "gd": "-6",
+       "pts": "3",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "3",
+        "GD": "-6",
+        "P": "3",
+        "D": "0",
+        "W": "1",
+        "R": "28",
+        "Total": "1-0-3"
+       },
+       "group": "UEFA Champions League Standings"
+      },
+      "887": {
+       "rank": "29",
+       "gp": "4",
+       "w": "1",
+       "d": "0",
+       "l": "3",
+       "gd": "-6",
+       "pts": "3",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "3",
+        "GD": "-6",
+        "P": "3",
+        "D": "0",
+        "W": "1",
+        "R": "29",
+        "Total": "1-0-3"
+       },
+       "group": "UEFA Champions League Standings"
+      },
+      "11420": {
+       "rank": "30",
+       "gp": "4",
+       "w": "1",
+       "d": "0",
+       "l": "3",
+       "gd": "-6",
+       "pts": "3",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "3",
+        "GD": "-6",
+        "P": "3",
+        "D": "0",
+        "W": "1",
+        "R": "30",
+        "Total": "1-0-3"
+       },
+       "group": "UEFA Champions League Standings"
+      },
+      "21922": {
+       "rank": "31",
+       "gp": "4",
+       "w": "1",
+       "d": "0",
+       "l": "3",
+       "gd": "-6",
+       "pts": "3",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "3",
+        "GD": "-6",
+        "P": "3",
+        "D": "0",
+        "W": "1",
+        "R": "31",
+        "Total": "1-0-3"
+       },
+       "group": "UEFA Champions League Standings"
+      },
+      "142": {
+       "rank": "32",
+       "gp": "4",
+       "w": "1",
+       "d": "0",
+       "l": "3",
+       "gd": "-7",
+       "pts": "3",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "3",
+        "GD": "-7",
+        "P": "3",
+        "D": "0",
+        "W": "1",
+        "R": "32",
+        "Total": "1-0-3"
+       },
+       "group": "UEFA Champions League Standings"
+      },
+      "175": {
+       "rank": "33",
+       "gp": "4",
+       "w": "1",
+       "d": "0",
+       "l": "3",
+       "gd": "-12",
+       "pts": "3",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "3",
+        "GD": "-12",
+        "P": "3",
+        "D": "0",
+        "W": "1",
+        "R": "33",
+        "Total": "1-0-3"
+       },
+       "group": "UEFA Champions League Standings"
+      },
+      "494": {
+       "rank": "34",
+       "gp": "4",
+       "w": "0",
+       "d": "1",
+       "l": "3",
+       "gd": "-4",
+       "pts": "1",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "3",
+        "GD": "-4",
+        "P": "1",
+        "D": "1",
+        "W": "0",
+        "R": "34",
+        "Total": "0-1-3"
+       },
+       "group": "UEFA Champions League Standings"
+      },
+      "166": {
+       "rank": "35",
+       "gp": "4",
+       "w": "0",
+       "d": "1",
+       "l": "3",
+       "gd": "-6",
+       "pts": "1",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "3",
+        "GD": "-6",
+        "P": "1",
+        "D": "1",
+        "W": "0",
+        "R": "35",
+        "Total": "0-1-3"
+       },
+       "group": "UEFA Champions League Standings"
+      },
+      "521": {
+       "rank": "36",
+       "gp": "4",
+       "w": "0",
+       "d": "0",
+       "l": "4",
+       "gd": "-16",
+       "pts": "0",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "4",
+        "GD": "-16",
+        "P": "0",
+        "D": "0",
+        "W": "0",
+        "R": "36",
+        "Total": "0-0-4"
+       },
+       "group": "UEFA Champions League Standings"
+      }
+     },
+     "last5": {
+      "359": [
+       {
+        "res": "L",
+        "gf": 1,
+        "ga": 1,
+        "opp": "Fleetwood Town",
+        "home": false,
+        "date": "2026-10-27"
+       },
+       {
+        "res": "W",
+        "gf": 1,
+        "ga": 0,
+        "opp": "Liverpool",
+        "home": false,
+        "date": "2026-11-01"
+       },
+       {
+        "res": "W",
+        "gf": 2,
+        "ga": 1,
+        "opp": "Slavia Prague",
+        "home": false,
+        "date": "2026-11-04"
+       },
+       {
+        "res": "W",
+        "gf": 1,
+        "ga": 0,
+        "opp": "Hull City",
+        "home": true,
+        "date": "2026-11-07"
+       },
+       {
+        "res": "D",
+        "gf": 2,
+        "ga": 2,
+        "opp": "Newcastle United",
+        "home": false,
+        "date": "2026-11-21"
+       }
+      ],
+      "124": [
+       {
+        "res": "W",
+        "gf": 3,
+        "ga": 2,
+        "opp": "Werder Bremen",
+        "home": true,
+        "date": "2026-10-27"
+       },
+       {
+        "res": "D",
+        "gf": 2,
+        "ga": 2,
+        "opp": "Bayern Munich",
+        "home": false,
+        "date": "2026-10-31"
+       },
+       {
+        "res": "W",
+        "gf": 2,
+        "ga": 1,
+        "opp": "Real Betis",
+        "home": true,
+        "date": "2026-11-04"
+       },
+       {
+        "res": "W",
+        "gf": 2,
+        "ga": 1,
+        "opp": "SV Elversberg",
+        "home": true,
+        "date": "2026-11-07"
+       },
+       {
+        "res": "W",
+        "gf": 1,
+        "ga": 0,
+        "opp": "Borussia Mönchengladbach",
+        "home": false,
+        "date": "2026-11-21"
+       }
+      ]
+     },
+     "h2h": [
+      {
+       "date": "2026-08-09",
+       "home_id": "359",
+       "hs": "2",
+       "as": "3"
+      },
+      {
+       "date": "2014-11-26",
+       "home_id": "359",
+       "hs": "2",
+       "as": "0"
+      },
+      {
+       "date": "2014-09-16",
+       "home_id": "124",
+       "hs": "2",
+       "as": "0"
+      },
+      {
+       "date": "2013-11-06",
+       "home_id": "124",
+       "hs": "0",
+       "as": "1"
+      },
+      {
+       "date": "2013-10-22",
+       "home_id": "359",
+       "hs": "1",
+       "as": "2"
+      }
+     ],
+     "lineups": {
+      "359": {
+       "formation": "4-2-3-1",
+       "starters": [
+        "Kepa Arrizabalaga",
+        "Ben White",
+        "Ezri Konsa",
+        "Piero Hincapié",
+        "Gabriel Magalhães",
+        "Christos Tzolis",
+        "Noni Madueke",
+        "Myles Lewis-Skelly",
+        "Declan Rice",
+        "Martin Ødegaard",
+        "Viktor Gyökeres"
+       ]
+      },
+      "124": {
+       "formation": "3-4-2-1",
+       "starters": [
+        "Gregor Kobel",
+        "Nico Schlotterbeck",
+        "Waldemar Anton",
+        "Kouakou Gadou",
+        "Maximilian Beier",
+        "Daniel Svensson",
+        "Felix Nmecha",
+        "Joey Veerman",
+        "Julian Ryerson",
+        "Jobe Bellingham",
+        "Fábio Silva"
+       ]
+      }
+     },
+     "leaders": {
+      "359": [
+       [
+        "Goals",
+        "Eberechi Eze",
+        "Matches: 4, Goals: 2"
+       ],
+       [
+        "Assists",
+        "Viktor Gyökeres",
+        "Matches: 4, Assists: 2"
+       ],
+       [
+        "Total Shots",
+        "Eberechi Eze",
+        "10"
+       ]
+      ],
+      "124": [
+       [
+        "Goals",
+        "Serhou Guirassy",
+        "Matches: 4, Goals: 4"
+       ],
+       [
+        "Assists",
+        "Fábio Silva",
+        "Matches: 4, Assists: 2"
+       ],
+       [
+        "Total Shots",
+        "Serhou Guirassy",
+        "16"
+       ]
+      ]
+     },
+     "venue": "Emirates Stadium",
+     "city": "London"
+    }
+   }
+  },
+  "msg_id": 9391,
+  "btn": 4
  },
  "401915296": {
   "status": "waiting_data",
@@ -27406,7 +28662,7 @@
   "sport": "football",
   "div": "UCL",
   "reason": "no_qualified_real_market",
-  "retry_at": 1795549280.429787
+  "retry_at": 1795549880.768131
  },
  "401915294": {
   "status": "waiting_data",
@@ -27414,7 +28670,7 @@
   "sport": "football",
   "div": "UCL",
   "reason": "no_qualified_real_market",
-  "retry_at": 1795549280.429787
+  "retry_at": 1795549880.768131
  },
  "401915379": {
   "status": "waiting_data",
@@ -27422,7 +28678,7 @@
   "sport": "football",
   "div": "UCL",
   "reason": "no_qualified_real_market",
-  "retry_at": 1795549280.429787
+  "retry_at": 1795549880.768131
  },
  "401915299": {
   "status": "waiting_data",
@@ -27430,7 +28686,7 @@
   "sport": "football",
   "div": "UCL",
   "reason": "no_qualified_real_market",
-  "retry_at": 1795549280.429787
+  "retry_at": 1795549880.768131
  },
  "401915298": {
   "status": "waiting_data",
@@ -27438,7 +28694,7 @@
   "sport": "football",
   "div": "UCL",
   "reason": "no_qualified_real_market",
-  "retry_at": 1795549280.429787
+  "retry_at": 1795549880.768131
  },
  "401915297": {
   "status": "waiting_data",
@@ -27446,6 +28702,6 @@
   "sport": "football",
   "div": "UCL",
   "reason": "no_qualified_real_market",
-  "retry_at": 1795549280.429787
+  "retry_at": 1795549880.768131
  }
 }
