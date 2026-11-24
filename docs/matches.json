@@ -64,7 +64,7 @@
 "sport": "esports",
 "id": "1816911",
 "league": "Киберспорт · CS2",
-"kickoff": "2026-11-24T14:53:52+03:00",
+"kickoff": "2026-11-24T15:00:00+03:00",
 "home": "Liquid",
 "away": "Wildcard",
 "hl": "https://cdn-api.pandascore.co/images/team/image/3213/463px_team_liquid_2024_full_lightmode.png",
@@ -85,11 +85,11 @@
 ]
 ],
 "div": "CS2",
-"state": "in",
+"state": "unknown",
 "bo": 1,
 "prediction": "predictions/2026-11-24-liquid-wildcard-1816911.html",
-"hs": 0,
-"as": 0,
+"hs": null,
+"as": null,
 "tip": "Победа: Wildcard · 3.05",
 "top": false,
 "bot": {
