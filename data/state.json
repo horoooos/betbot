@@ -1563,7 +1563,7 @@
  "value_day": "2026-11-24",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-24",
- "site_stamp": "1532|9368|2026-11-24 20|6|17118abe82c8b041",
+ "site_stamp": "1532|9368|2026-11-24 20|6|48bde6b9a6e2a76e",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -2779,7 +2779,7 @@
   "external_sources": {
    "providers": {
     "legalbet": {
-     "at": "2026-11-24T17:03:47.156525+00:00",
+     "at": "2026-11-24T17:33:47.573407+00:00",
      "status": "ok",
      "discovered": 4,
      "pages": 4,
@@ -2790,29 +2790,29 @@
      "contexts": 4
     },
     "livesport": {
-     "at": "2026-11-24T17:03:47.156525+00:00",
+     "at": "2026-11-24T17:33:47.573407+00:00",
      "status": "ok",
-     "discovered": 16,
+     "discovered": 15,
      "pages": 6,
-     "opinions": 8,
-     "mapped": 2,
-     "articles_available": 19,
-     "next_offset": 14,
-     "contexts": 4
-    },
-    "metaratings": {
-     "at": "2026-11-24T17:03:47.156525+00:00",
-     "status": "ok",
-     "discovered": 12,
-     "pages": 6,
-     "opinions": 24,
-     "mapped": 2,
-     "articles_available": 38,
-     "next_offset": 12,
+     "opinions": 12,
+     "mapped": 4,
+     "articles_available": 18,
+     "next_offset": 20,
      "contexts": 6
     },
+    "metaratings": {
+     "at": "2026-11-24T17:33:47.573407+00:00",
+     "status": "ok",
+     "discovered": 0,
+     "pages": 0,
+     "opinions": 0,
+     "mapped": 0,
+     "articles_available": 26,
+     "next_offset": 0,
+     "contexts": 0
+    },
     "rb": {
-     "at": "2026-11-24T17:03:47.156525+00:00",
+     "at": "2026-11-24T17:33:47.573407+00:00",
      "status": "ok",
      "discovered": 0,
      "pages": 0,
@@ -2823,16 +2823,16 @@
      "contexts": 0
     },
     "vseprosport": {
-     "at": "2026-11-24T17:03:47.156525+00:00",
+     "at": "2026-11-24T17:33:47.573407+00:00",
      "status": "ok",
      "discovered": 8,
-     "pages": 1,
+     "pages": 3,
      "opinions": 0,
      "mapped": 0,
      "articles_available": 10,
-     "next_offset": 8,
-     "page_errors": 5,
-     "contexts": 1
+     "next_offset": 6,
+     "page_errors": 3,
+     "contexts": 3
     }
    },
    "opinions": 27,
@@ -2956,7 +2956,7 @@
   "quote_matches": 74
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-24T20:31:47.633139+03:00",
+  "last_poll": "2026-11-24T20:33:47.573407+03:00",
   "cursor": "391",
   "posts": [
    {
@@ -3690,7 +3690,7 @@
    "401915297": "pre",
    "401841335": "pre",
    "401934688": "pre",
-   "1816479": "pre",
+   "1816479": "in",
    "1816480": "in",
    "401934706": "pre",
    "401933738": "pre",
@@ -4730,7 +4730,7 @@
   },
   "football|I2|401899536": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-24T17:24:05.601338+00:00",
+   "checked_at": "2026-11-24T17:34:16.653241+00:00",
    "kickoff": "2026-11-24T21:00:00+03:00",
    "sport": "football",
    "id": "401899536",
@@ -4745,7 +4745,7 @@
   },
   "tennis|WTA|186821": {
    "reason": "insufficient_history_or_odds",
-   "checked_at": "2026-11-24T17:24:09.318281+00:00",
+   "checked_at": "2026-11-24T17:34:18.174824+00:00",
    "kickoff": "2026-11-24T21:00:00+03:00",
    "sport": "tennis",
    "id": "186821",
@@ -4754,7 +4754,7 @@
   },
   "tennis|WTA|186826": {
    "reason": "no_real_odds",
-   "checked_at": "2026-11-24T17:24:10.515207+00:00",
+   "checked_at": "2026-11-24T17:34:19.386837+00:00",
    "kickoff": "2026-11-24T21:00:00+03:00",
    "sport": "tennis",
    "id": "186826",
