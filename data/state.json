@@ -1563,7 +1563,7 @@
  "value_day": "2026-11-24",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-24",
- "site_stamp": "1532|9361|2026-11-24 19|6|cbd47650ef7cd487",
+ "site_stamp": "1532|9365|2026-11-24 19|6|fae2ee967a391917",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1720,7 +1720,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 9361,
+ "dz_last": 9365,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2950,7 +2950,7 @@
   "quote_matches": 74
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-24T19:41:47.427264+03:00",
+  "last_poll": "2026-11-24T19:43:47.462692+03:00",
   "cursor": "388",
   "posts": [
    {
@@ -4687,6 +4687,38 @@
    "probability": 0.538,
    "odds": 1.74,
    "edge": -0.06388,
+   "estimated": false
+  },
+  "football|UCL|401915380": {
+   "reason": "published",
+   "checked_at": "2026-11-24T16:44:14.446537+00:00",
+   "kickoff": "2026-11-24T20:45:00+03:00",
+   "sport": "football",
+   "id": "401915380",
+   "home": "Будё-Глимт",
+   "away": "ЛАСК",
+   "market": "ТБ 4.5",
+   "strategy": "external_trial",
+   "source_count": 4,
+   "probability": 0.4027,
+   "odds": 2.35,
+   "edge": -0.05366,
+   "estimated": false
+  },
+  "football|UCL|401915300": {
+   "reason": "published",
+   "checked_at": "2026-11-24T16:44:23.636389+00:00",
+   "kickoff": "2026-11-24T20:45:00+03:00",
+   "sport": "football",
+   "id": "401915300",
+   "home": "Галатасарай",
+   "away": "Астон Вилла",
+   "market": "П1",
+   "strategy": "external_trial",
+   "source_count": 39,
+   "probability": 0.2942,
+   "odds": 3.3,
+   "edge": -0.02914,
    "estimated": false
   }
  },
@@ -8476,6 +8508,443 @@
     "settled_at": "2026-11-24T15:43:47.238018+00:00",
     "hit": false,
     "profit_pct": -0.5
+   },
+   "football|UCL|401915380": {
+    "status": "open",
+    "id": "401915380",
+    "sport": "football",
+    "div": "UCL",
+    "kickoff": "2026-11-24T20:45:00+03:00",
+    "published_at": "2026-11-24T16:44:11.084483+00:00",
+    "msg_id": 9362,
+    "tip": {
+     "key": "O45",
+     "label": "ТБ 4.5",
+     "p": 0.4027,
+     "odds": 2.35,
+     "est": false,
+     "stake": 0.5,
+     "strategy": "external_trial",
+     "selection_mode": "external_fallback",
+     "trial_expires_at": null,
+     "probability_origin": "baseline_model",
+     "model_edge": -0.05369,
+     "source_count": 4,
+     "source_refs": [
+      {
+       "author": "/predictors/aleksey-alekseevich-6",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/24-11-2026-bodo-glimt-lask",
+       "published_at": "2026-11-23T10:49:00+00:00",
+       "observed_at": "2026-11-24T02:55:39.602365+00:00",
+       "odds": 2.49,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/dimas-barabasik",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/24-11-2026-bodo-glimt-lask",
+       "published_at": "2026-11-23T15:37:00+00:00",
+       "observed_at": "2026-11-23T15:45:21.147897+00:00",
+       "odds": 2.49,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/nikolay-pshenichnykh-1",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/24-11-2026-bodo-glimt-lask",
+       "published_at": "2026-11-24T13:01:00+00:00",
+       "observed_at": "2026-11-24T13:09:36.404256+00:00",
+       "odds": 2.33,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/santyago-ordenosez",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/24-11-2026-bodo-glimt-lask",
+       "published_at": "2026-11-24T15:08:00+00:00",
+       "observed_at": "2026-11-24T15:13:47.005137+00:00",
+       "odds": 2.33,
+       "price_kind": "author_recorded"
+      }
+     ]
+    }
+   },
+   "football|UCL|401915300": {
+    "status": "open",
+    "id": "401915300",
+    "sport": "football",
+    "div": "UCL",
+    "kickoff": "2026-11-24T20:45:00+03:00",
+    "published_at": "2026-11-24T16:44:20.255069+00:00",
+    "msg_id": 9364,
+    "tip": {
+     "key": "H",
+     "label": "П1",
+     "p": 0.2942,
+     "odds": 3.3,
+     "est": false,
+     "stake": 0.5,
+     "strategy": "external_trial",
+     "selection_mode": "external_fallback",
+     "trial_expires_at": null,
+     "probability_origin": "baseline_model",
+     "model_edge": -0.02905,
+     "source_count": 39,
+     "source_refs": [
+      {
+       "author": "/predictors/roman-pavluchenko",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/24-11-2026-galatasaray-istanbul-aston-villa",
+       "published_at": "2026-11-23T09:38:00+00:00",
+       "observed_at": "2026-11-23T13:18:53.808089+00:00",
+       "odds": 2.75,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/vladimir-ensiferum",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/24-11-2026-galatasaray-istanbul-aston-villa",
+       "published_at": "2026-11-23T11:45:00+00:00",
+       "observed_at": "2026-11-23T11:54:52.185746+00:00",
+       "odds": 2.91,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/ilnar-raxmatullin-5",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/24-11-2026-galatasaray-istanbul-aston-villa",
+       "published_at": "2026-11-23T12:55:00+00:00",
+       "observed_at": "2026-11-23T12:56:53.847318+00:00",
+       "odds": 2.91,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/anatoliy-gostyuzhev",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/24-11-2026-galatasaray-istanbul-aston-villa",
+       "published_at": "2026-11-23T13:14:00+00:00",
+       "observed_at": "2026-11-23T13:18:53.808089+00:00",
+       "odds": 2.91,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/serz-serzik",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/24-11-2026-galatasaray-istanbul-aston-villa",
+       "published_at": "2026-11-23T14:35:00+00:00",
+       "observed_at": "2026-11-23T14:43:27.244203+00:00",
+       "odds": 2.91,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/mesok-lenivyi",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/24-11-2026-galatasaray-istanbul-aston-villa",
+       "published_at": "2026-11-23T14:38:00+00:00",
+       "observed_at": "2026-11-23T14:43:27.244203+00:00",
+       "odds": 2.91,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/vasya-siluyanov",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/24-11-2026-galatasaray-istanbul-aston-villa",
+       "published_at": "2026-11-23T15:20:00+00:00",
+       "observed_at": "2026-11-23T15:25:20.727500+00:00",
+       "odds": 2.91,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/budu-profi",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/24-11-2026-galatasaray-istanbul-aston-villa",
+       "published_at": "2026-11-23T15:20:00+00:00",
+       "observed_at": "2026-11-23T15:25:20.727500+00:00",
+       "odds": 2.91,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/tatyana-proxorova",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/24-11-2026-galatasaray-istanbul-aston-villa",
+       "published_at": "2026-11-23T16:23:00+00:00",
+       "observed_at": "2026-11-23T16:25:21.426084+00:00",
+       "odds": 2.96,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/xxz-xxz",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/24-11-2026-galatasaray-istanbul-aston-villa",
+       "published_at": "2026-11-23T17:00:00+00:00",
+       "observed_at": "2026-11-23T17:07:21.410618+00:00",
+       "odds": 2.96,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/nikita-subin",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/24-11-2026-galatasaray-istanbul-aston-villa",
+       "published_at": "2026-11-23T18:25:00+00:00",
+       "observed_at": "2026-11-23T18:27:22.836107+00:00",
+       "odds": 2.96,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/aleksandr-izvestnyi",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/24-11-2026-galatasaray-istanbul-aston-villa",
+       "published_at": "2026-11-23T18:38:00+00:00",
+       "observed_at": "2026-11-23T18:50:00.735829+00:00",
+       "odds": 2.96,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/aleksei-borovkov-3",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/24-11-2026-galatasaray-istanbul-aston-villa",
+       "published_at": "2026-11-23T18:43:00+00:00",
+       "observed_at": "2026-11-23T18:50:00.735829+00:00",
+       "odds": 2.96,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/holeim",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/24-11-2026-galatasaray-istanbul-aston-villa",
+       "published_at": "2026-11-23T19:07:00+00:00",
+       "observed_at": "2026-11-23T19:12:00.263916+00:00",
+       "odds": 2.96,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/evgenii-286",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/24-11-2026-galatasaray-istanbul-aston-villa",
+       "published_at": "2026-11-23T19:08:00+00:00",
+       "observed_at": "2026-11-23T19:12:00.263916+00:00",
+       "odds": 2.96,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/depressed-sad-2",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/24-11-2026-galatasaray-istanbul-aston-villa",
+       "published_at": "2026-11-23T19:27:00+00:00",
+       "observed_at": "2026-11-23T19:32:11.991055+00:00",
+       "odds": 2.96,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/katy-perk",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/24-11-2026-galatasaray-istanbul-aston-villa",
+       "published_at": "2026-11-23T19:46:00+00:00",
+       "observed_at": "2026-11-23T19:52:12.015171+00:00",
+       "odds": 2.96,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/gorki-star",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/24-11-2026-galatasaray-istanbul-aston-villa",
+       "published_at": "2026-11-23T20:08:00+00:00",
+       "observed_at": "2026-11-23T20:12:12.332837+00:00",
+       "odds": 2.96,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/maksim-cerevko-1",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/24-11-2026-galatasaray-istanbul-aston-villa",
+       "published_at": "2026-11-23T20:44:00+00:00",
+       "observed_at": "2026-11-23T20:54:19.094194+00:00",
+       "odds": 2.96,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/miki-maus-1",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/24-11-2026-galatasaray-istanbul-aston-villa",
+       "published_at": "2026-11-23T21:13:00+00:00",
+       "observed_at": "2026-11-23T21:15:58.711037+00:00",
+       "odds": 2.96,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/fritz-bet",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/24-11-2026-galatasaray-istanbul-aston-villa",
+       "published_at": "2026-11-23T21:26:00+00:00",
+       "observed_at": "2026-11-23T21:35:59.520060+00:00",
+       "odds": 2.96,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/konstantin-pominov",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/24-11-2026-galatasaray-istanbul-aston-villa",
+       "published_at": "2026-11-23T21:31:00+00:00",
+       "observed_at": "2026-11-23T21:35:59.520060+00:00",
+       "odds": 2.96,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/vsevolod-kozyrev",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/24-11-2026-galatasaray-istanbul-aston-villa",
+       "published_at": "2026-11-23T22:15:00+00:00",
+       "observed_at": "2026-11-23T22:17:59.724065+00:00",
+       "odds": 2.96,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/denis-gudov",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/24-11-2026-galatasaray-istanbul-aston-villa",
+       "published_at": "2026-11-23T22:37:00+00:00",
+       "observed_at": "2026-11-23T22:39:59.610693+00:00",
+       "odds": 2.96,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/aleksey-samoylov-4",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/24-11-2026-galatasaray-istanbul-aston-villa",
+       "published_at": "2026-11-23T22:54:00+00:00",
+       "observed_at": "2026-11-23T23:02:16.351064+00:00",
+       "odds": 2.96,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/besprosvetnaya-toska",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/24-11-2026-galatasaray-istanbul-aston-villa",
+       "published_at": "2026-11-23T23:12:00+00:00",
+       "observed_at": "2026-11-23T23:22:17.925958+00:00",
+       "odds": 2.96,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/gerbert-morales",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/24-11-2026-galatasaray-istanbul-aston-villa",
+       "published_at": "2026-11-23T23:49:00+00:00",
+       "observed_at": "2026-11-24T00:04:18.000846+00:00",
+       "odds": 2.96,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/vitaliy-zakharov-1",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/24-11-2026-galatasaray-istanbul-aston-villa",
+       "published_at": "2026-11-23T23:51:00+00:00",
+       "observed_at": "2026-11-24T00:04:18.000846+00:00",
+       "odds": 2.96,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/evgenii-fg369asdf",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/24-11-2026-galatasaray-istanbul-aston-villa",
+       "published_at": "2026-11-24T00:14:00+00:00",
+       "observed_at": "2026-11-24T00:24:18.539436+00:00",
+       "odds": 2.96,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/shakhriyar-miriev",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/24-11-2026-galatasaray-istanbul-aston-villa",
+       "published_at": "2026-11-24T02:13:00+00:00",
+       "observed_at": "2026-11-24T02:33:39.992880+00:00",
+       "odds": 2.96,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/nikolai-mancaev",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/24-11-2026-galatasaray-istanbul-aston-villa",
+       "published_at": "2026-11-24T02:54:00+00:00",
+       "observed_at": "2026-11-24T02:55:39.602365+00:00",
+       "odds": 2.96,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/andrei-suxov-6",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/24-11-2026-galatasaray-istanbul-aston-villa",
+       "published_at": "2026-11-24T03:32:00+00:00",
+       "observed_at": "2026-11-24T03:39:39.766776+00:00",
+       "odds": 2.96,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/nikolay-rodin-1",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/24-11-2026-galatasaray-istanbul-aston-villa",
+       "published_at": "2026-11-24T03:54:00+00:00",
+       "observed_at": "2026-11-24T04:01:39.472903+00:00",
+       "odds": 2.96,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/artem-dolzhenko",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/24-11-2026-galatasaray-istanbul-aston-villa",
+       "published_at": "2026-11-24T03:54:00+00:00",
+       "observed_at": "2026-11-24T04:01:39.472903+00:00",
+       "odds": 2.96,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/kirill-spotkai",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/24-11-2026-galatasaray-istanbul-aston-villa",
+       "published_at": "2026-11-24T09:31:00+00:00",
+       "observed_at": "2026-11-24T09:36:50.453655+00:00",
+       "odds": 3.08,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/vadim-konovalcikov-vatnik",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/24-11-2026-galatasaray-istanbul-aston-villa",
+       "published_at": "2026-11-24T09:33:00+00:00",
+       "observed_at": "2026-11-24T09:36:50.453655+00:00",
+       "odds": 3.08,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/ak-53",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/24-11-2026-galatasaray-istanbul-aston-villa",
+       "published_at": "2026-11-24T10:16:00+00:00",
+       "observed_at": "2026-11-24T10:18:50.557472+00:00",
+       "odds": 3.08,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/igor-kostyan",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/24-11-2026-galatasaray-istanbul-aston-villa",
+       "published_at": "2026-11-24T15:50:00+00:00",
+       "observed_at": "2026-11-24T15:55:47.061402+00:00",
+       "odds": 3.08,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/egor-002",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/24-11-2026-galatasaray-istanbul-aston-villa",
+       "published_at": "2026-11-24T16:30:00+00:00",
+       "observed_at": "2026-11-24T16:35:47.368074+00:00",
+       "odds": 3.08,
+       "price_kind": "author_recorded"
+      }
+     ]
+    }
    }
   }
  },
