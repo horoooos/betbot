@@ -2954,7 +2954,7 @@
   "quote_matches": 74
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-24T20:09:47.155620+03:00",
+  "last_poll": "2026-11-24T20:11:47.726281+03:00",
   "cursor": "388",
   "posts": [
    {
@@ -3628,7 +3628,7 @@
    "186828": "pre",
    "186827": "pre",
    "186825": "pre",
-   "186818": "in",
+   "186818": "post",
    "186819": "post",
    "186820": "post",
    "186821": "pre",
@@ -4651,7 +4651,7 @@
   },
   "esports|DOTA|1816479": {
    "reason": "no_real_odds",
-   "checked_at": "2026-11-24T17:00:07.740344+00:00",
+   "checked_at": "2026-11-24T17:12:07.870119+00:00",
    "kickoff": "2026-11-24T20:30:00+03:00",
    "sport": "esports",
    "id": "1816479",
@@ -4666,7 +4666,7 @@
   },
   "football|RSA|401902008": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-24T17:02:07.306555+00:00",
+   "checked_at": "2026-11-24T17:12:05.577464+00:00",
    "kickoff": "2026-11-24T20:30:00+03:00",
    "sport": "football",
    "id": "401902008",
@@ -4674,14 +4674,14 @@
    "away": "Polokwane City FC",
    "priced_markets": 6,
    "market": "Обе забьют — нет",
-   "probability": 0.6343,
-   "odds": 1.47,
-   "edge": -0.06758,
+   "probability": 0.6278,
+   "odds": 1.48,
+   "edge": -0.07086,
    "estimated": true
   },
   "football|RSA|401902004": {
    "reason": "edge_below_minimum",
-   "checked_at": "2026-11-24T17:02:07.510984+00:00",
+   "checked_at": "2026-11-24T17:12:05.790473+00:00",
    "kickoff": "2026-11-24T20:30:00+03:00",
    "sport": "football",
    "id": "401902004",
@@ -4689,9 +4689,9 @@
    "away": "Голден Эрроуз",
    "priced_markets": 7,
    "market": "П1",
-   "probability": 0.6542,
-   "odds": 1.41,
-   "edge": -0.07758,
+   "probability": 0.6512,
+   "odds": 1.43,
+   "edge": -0.06878,
    "estimated": false
   },
   "football|UCL|401915380": {
@@ -4728,7 +4728,7 @@
   },
   "football|I2|401899536": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-24T17:00:06.457102+00:00",
+   "checked_at": "2026-11-24T17:12:06.000062+00:00",
    "kickoff": "2026-11-24T21:00:00+03:00",
    "sport": "football",
    "id": "401899536",
@@ -4743,7 +4743,7 @@
   },
   "tennis|WTA|186821": {
    "reason": "insufficient_history_or_odds",
-   "checked_at": "2026-11-24T17:00:09.466136+00:00",
+   "checked_at": "2026-11-24T17:12:09.572698+00:00",
    "kickoff": "2026-11-24T21:00:00+03:00",
    "sport": "tennis",
    "id": "186821",
@@ -4752,7 +4752,7 @@
   },
   "tennis|WTA|186826": {
    "reason": "no_real_odds",
-   "checked_at": "2026-11-24T17:00:10.838445+00:00",
+   "checked_at": "2026-11-24T17:12:10.718540+00:00",
    "kickoff": "2026-11-24T21:00:00+03:00",
    "sport": "tennis",
    "id": "186826",
