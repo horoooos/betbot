@@ -547,7 +547,8 @@
   "https://www.sport-express.ru/football/mls/news/kavan-sallivan-priznan-luchshim-molodym-igrokom-mls-2026-goda-2478198/",
   "9z-team-ne-spravilas-s-lynn-vision-gaming-na-pgl-major-singapore-2026",
   "https://www.sport-express.ru/football/england/news/napadayuschiy-liverpulya-barkolya-ostalsya-nedovolen-svoey-igroy-v-matche-s-manchester-yunayted-2478235/",
-  "https://www.sport-express.ru/hockey/nhl/news/sietl-anahaym-rezultat-matcha-nhl-24-noyabrya-2026-2478236/"
+  "https://www.sport-express.ru/hockey/nhl/news/sietl-anahaym-rezultat-matcha-nhl-24-noyabrya-2026-2478236/",
+  "https://www.sport-express.ru/hockey/nhl/news/san-hose-minnesota-rezultat-matcha-nhl-24-noyabrya-2026-2478238/"
  ],
  "news_i": 4,
  "oddspapi": {
@@ -1736,7 +1737,7 @@
  "streak_day": {
   "2026-11-22": 2
  },
- "news_next": "2026-11-24T08:41:54.884260+03:00",
+ "news_next": "2026-11-24T08:47:55.039276+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -2941,7 +2942,7 @@
   "quote_matches": 66
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-24T08:39:54.423583+03:00",
+  "last_poll": "2026-11-24T08:41:55.039276+03:00",
   "cursor": "370",
   "posts": [
    {
@@ -7268,7 +7269,7 @@
     "profit_pct": -0.5
    },
    "hockey|NHL|401892779": {
-    "status": "open",
+    "status": "settled",
     "id": "401892779",
     "sport": "hockey",
     "div": "NHL",
@@ -7398,7 +7399,10 @@
        "price_kind": "author_recorded"
       }
      ]
-    }
+    },
+    "settled_at": "2026-11-24T05:41:55.039276+00:00",
+    "hit": true,
+    "profit_pct": 0.28
    },
    "basketball|NBA|401910045": {
     "status": "settled",
