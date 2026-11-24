@@ -1563,7 +1563,7 @@
  "value_day": "2026-11-24",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-24",
- "site_stamp": "1530|9342|2026-11-24 15|6|4d9d995780def166",
+ "site_stamp": "1530|9342|2026-11-24 15|6|0193b56dc11774df",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -2931,7 +2931,7 @@
   "quote_matches": 71
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-24T15:00:51.848089+03:00",
+  "last_poll": "2026-11-24T15:02:50.994085+03:00",
   "cursor": "378",
   "posts": [
    {
@@ -7986,7 +7986,7 @@
     "profit_pct": -0.5
    },
    "esports|CS2|1816908": {
-    "status": "open",
+    "status": "settled",
     "id": "1816908",
     "sport": "esports",
     "div": "CS2",
@@ -8080,7 +8080,10 @@
        "price_kind": "author_recorded"
       }
      ]
-    }
+    },
+    "settled_at": "2026-11-24T12:02:50.994085+00:00",
+    "hit": true,
+    "profit_pct": 0.435
    },
    "esports|CS2|1816911": {
     "status": "open",
