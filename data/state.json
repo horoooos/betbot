@@ -7,7 +7,6 @@
  "schedule_day": "2026-11-24",
  "content_slot": "2026-11-24-20",
  "news_seen": [
-  "https://www.sport-express.ru/hockey/nhl/news/springfild-tanderberds-sharlott-chekers-schet-2-5-rezultat-matcha-regulyarnogo-chempionata-ahl-21-noyabrya-2477187/",
   "https://www.sport-express.ru/football/foreign/news/portu-paredes-schet-1-1-rezultat-matcha-kubka-portugalii-20-noyabrya-2026-goda-2477167/",
   "https://www.sport-express.ru/football/germany/news/u-olise-diagnostirovan-ushib-perednego-otdela-stopy-2477164/",
   "https://www.sport-express.ru/football/germany/news/keyn-v-matche-s-kelnom-poluchil-razryv-sindesmoznoy-svyazki-2477161/",
@@ -506,9 +505,10 @@
   "https://www.sport-express.ru/basketball/nba/news/forvard-brendon-ingrem-debyutiroval-za-klippers-posle-operacii-novosti-nba-24-noyabrya-2026-2478444/",
   "https://www.sport-express.ru/tennis/wta/news/olhovskiy-ob-obvineniyah-svitolinoy-u-mirry-dazhe-ne-bylo-mysley-provocirovat-2478470/",
   "parivision-obygrala-gamerlegion-na-blast-slam-ix",
-  "https://www.sport-express.ru/football/rfpl/news/u-zaschitnika-baltiki-muyokolo-diagnostirovano-povrezhdenie-svyazochnogo-apparata-golenostopa-2478491/"
+  "https://www.sport-express.ru/football/rfpl/news/u-zaschitnika-baltiki-muyokolo-diagnostirovano-povrezhdenie-svyazochnogo-apparata-golenostopa-2478491/",
+  "team-yandex-odolela-1w-team-na-blast-slam-ix"
  ],
- "news_i": 1,
+ "news_i": 2,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1695,7 +1695,7 @@
  "streak_day": {
   "2026-11-22": 2
  },
- "news_next": "2026-11-24T20:50:47.750931+03:00",
+ "news_next": "2026-11-24T21:20:47.007207+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1726,7 +1726,6 @@
  "vk_mode": "photo",
  "dz_err": null,
  "img_used": [
-  "https://images.cybersport.ru/images/as-is/plain/f2/f2ac6f30-28fc-4233-bc46-fd55f9fd8b6d.jpg",
   "https://images.cybersport.ru/images/as-is/plain/0e/0e1c90d0-4b5b-4a1a-b596-578ce9457562.jpg",
   "https://images.cybersport.ru/images/as-is/plain/ee/ee2d3d49-71f2-42f7-ad0d-fbd09717fd73.jpg",
   "https://images.cybersport.ru/images/as-is/plain/0e/0e7d9576-039d-40a7-bb7a-fe371d6399e5.jpg",
@@ -2025,7 +2024,8 @@
   "https://images.cybersport.ru/images/as-is/plain/3f/3fb8c9a9-bfce-49b2-aa63-70b8d2995f7b.jpg",
   "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/Football_match_at_Shrewsbury_%281453336%29.jpg/1280px-Football_match_at_Shrewsbury_%281453336%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
   "https://images.cybersport.ru/images/as-is/plain/8a/8a6ce493-7ec4-415b-9c3b-6d69ac3c3d0f.jpg",
-  "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/Hitachi_Kashiwa_Stadium_in_2024.jpg/1280px-Hitachi_Kashiwa_Stadium_in_2024.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/Hitachi_Kashiwa_Stadium_in_2024.jpg/1280px-Hitachi_Kashiwa_Stadium_in_2024.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "https://images.cybersport.ru/images/as-is/plain/9e/9e2d9d86-3077-42f9-8c39-218b9615b9c0.jpg"
  ],
  "indexnow_day": "2026-11-24",
  "vk_wall_err": null,
@@ -2421,7 +2421,8 @@
   "9361",
   "9366",
   "9367",
-  "9368"
+  "9368",
+  "9371"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -2749,11 +2750,12 @@
   "2026-11-24:новость:5dfce901a5a0323e96f2b053",
   "2026-11-24:новость:c6ba29f56bd6f9e709792017",
   "2026-11-24:новость:a9d0de15feeeaf34cfcb416f",
-  "2026-11-24:новость:59e40fed799ab6a7944c9115"
+  "2026-11-24:новость:59e40fed799ab6a7944c9115",
+  "2026-11-24:новость:07f9fabdc7696ee05addc843"
  ],
  "dz_last_delivery": {
-  "source_id": 9368,
-  "message_id": 875,
+  "source_id": 9371,
+  "message_id": 876,
   "kind": "новость"
  },
  "learn_attempt_day": "2026-11-24",
@@ -2956,7 +2958,7 @@
   "quote_matches": 74
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-24T20:49:47.425041+03:00",
+  "last_poll": "2026-11-24T20:51:47.007207+03:00",
   "cursor": "391",
   "posts": [
    {
