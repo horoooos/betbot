@@ -1,67 +1,6 @@
 [
 {
 "sport": "esports",
-"id": "1816908",
-"league": "Киберспорт · CS2",
-"kickoff": "2026-11-24T13:00:00+03:00",
-"home": "9z",
-"away": "M80",
-"hl": "https://cdn-api.pandascore.co/images/team/image/126709/9z_team_2024_lightmode.png",
-"al": "https://cdn-api.pandascore.co/images/team/image/133435/788px_m80_2023_allmode.png",
-"hid": "126709",
-"aid": "133435",
-"bb": "https://betboom.ru/search?query=9%D0%B7&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=esports",
-"path": "",
-"url": "esports.html?e=1816908&d=CS2",
-"participants": [
-[
-"9z",
-"9z"
-],
-[
-"M80",
-"M80"
-]
-],
-"div": "CS2",
-"state": "unknown",
-"bo": 1,
-"prediction": "predictions/2026-11-24-9z-m80-1816908.html",
-"hs": null,
-"as": null,
-"tip": "Победа: M80 · 1.87",
-"top": false,
-"bot": {
-"main": {
-"label": "Победа: M80",
-"p": 0.51,
-"odds": 1.87,
-"est": false
-},
-"bold": null,
-"markets": [
-[
-"Победа: 9z",
-0.49,
-1.95
-],
-[
-"Победа: M80",
-0.51,
-1.87
-]
-],
-"bar": [
-0.4895287958115184,
-0,
-0.5104712041884816
-],
-"center": "BO1 · линия winline · Эло 1444 : 1566"
-},
-"lt": null
-},
-{
-"sport": "esports",
 "id": "1816911",
 "league": "Киберспорт · CS2",
 "kickoff": "2026-11-24T15:00:00+03:00",
@@ -123,41 +62,6 @@
 },
 {
 "sport": "esports",
-"id": "1816478",
-"league": "Киберспорт · Dota 2",
-"kickoff": "2026-11-24T17:00:00+03:00",
-"home": "GamerLegion",
-"away": "PARIVISION",
-"hl": "https://cdn-api.pandascore.co/images/team/image/137588/591px_gamer_legion_2026_allmode.png",
-"al": "https://cdn-api.pandascore.co/images/team/image/135712/250px_parivision_allmode.png",
-"hid": "137588",
-"aid": "135712",
-"bb": "https://betboom.ru/search?query=%D0%93%D0%B0%D0%BC%D0%B5%D1%80%D0%BB%D0%B5%D0%B3%D0%B8%D0%BE%D0%BD&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=esports",
-"path": "",
-"url": "dota.html?e=1816478&d=DOTA",
-"participants": [
-[
-"GamerLegion",
-"GamerLegion"
-],
-[
-"PARIVISION",
-"PARIVISION"
-]
-],
-"div": "DOTA",
-"state": "pre",
-"bo": 3,
-"prediction": "",
-"hs": 0,
-"as": 0,
-"tip": "",
-"top": false,
-"bot": null,
-"lt": null
-},
-{
-"sport": "esports",
 "id": "1816477",
 "league": "Киберспорт · Dota 2",
 "kickoff": "2026-11-24T17:00:00+03:00",
@@ -182,6 +86,41 @@
 ],
 "div": "DOTA",
 "state": "pre",
+"bo": 3,
+"prediction": "",
+"hs": 0,
+"as": 0,
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "esports",
+"id": "1816478",
+"league": "Киберспорт · Dota 2",
+"kickoff": "2026-11-24T17:01:26+03:00",
+"home": "GamerLegion",
+"away": "PARIVISION",
+"hl": "https://cdn-api.pandascore.co/images/team/image/137588/591px_gamer_legion_2026_allmode.png",
+"al": "https://cdn-api.pandascore.co/images/team/image/135712/250px_parivision_allmode.png",
+"hid": "137588",
+"aid": "135712",
+"bb": "https://betboom.ru/search?query=%D0%93%D0%B0%D0%BC%D0%B5%D1%80%D0%BB%D0%B5%D0%B3%D0%B8%D0%BE%D0%BD&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=esports",
+"path": "",
+"url": "dota.html?e=1816478&d=DOTA",
+"participants": [
+[
+"GamerLegion",
+"GamerLegion"
+],
+[
+"PARIVISION",
+"PARIVISION"
+]
+],
+"div": "DOTA",
+"state": "in",
 "bo": 3,
 "prediction": "",
 "hs": 0,
@@ -3187,6 +3126,286 @@ null
 ]
 ],
 "div": "E1",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "football",
+"id": "401880138",
+"league": "Англия · Чемпионшип",
+"kickoff": "2026-11-25T23:00:00+03:00",
+"home": "Сток Сити",
+"away": "Миллуолл",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/336.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/391.png",
+"hid": "336",
+"aid": "391",
+"bb": "https://betboom.ru/search?query=%D0%A1%D1%82%D0%BE%D0%BA&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/eng.2",
+"url": "live.html?s=football&p=soccer%2Feng.2&e=401880138&h=%D0%A1%D1%82%D0%BE%D0%BA+%D0%A1%D0%B8%D1%82%D0%B8&a=%D0%9C%D0%B8%D0%BB%D0%BB%D1%83%D0%BE%D0%BB%D0%BB",
+"participants": [
+[
+"Сток Сити",
+"Stoke City"
+],
+[
+"Миллуолл",
+"Millwall"
+]
+],
+"div": "E1",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "football",
+"id": "401915291",
+"league": "Европа · Лига чемпионов",
+"kickoff": "2026-11-25T23:00:00+03:00",
+"home": "Атлетико",
+"away": "Викинг",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/1068.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/510.png",
+"hid": "1068",
+"aid": "510",
+"bb": "https://betboom.ru/search?query=%D0%90%D1%82%D0%BB%D0%B5%D1%82%D0%B8%D0%BA%D0%BE&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/uefa.champions",
+"url": "live.html?s=football&p=soccer%2Fuefa.champions&e=401915291&h=%D0%90%D1%82%D0%BB%D0%B5%D1%82%D0%B8%D0%BA%D0%BE&a=%D0%92%D0%B8%D0%BA%D0%B8%D0%BD%D0%B3",
+"participants": [
+[
+"Атлетико",
+"Atlético Madrid"
+],
+[
+"Викинг",
+"Viking FK"
+]
+],
+"div": "UCL",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "football",
+"id": "401915292",
+"league": "Европа · Лига чемпионов",
+"kickoff": "2026-11-25T23:00:00+03:00",
+"home": "Брюгге",
+"away": "Ливерпуль",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/570.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/364.png",
+"hid": "570",
+"aid": "364",
+"bb": "https://betboom.ru/search?query=%D0%91%D1%80%D1%8E%D0%B3%D0%B3%D0%B5&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/uefa.champions",
+"url": "live.html?s=football&p=soccer%2Fuefa.champions&e=401915292&h=%D0%91%D1%80%D1%8E%D0%B3%D0%B3%D0%B5&a=%D0%9B%D0%B8%D0%B2%D0%B5%D1%80%D0%BF%D1%83%D0%BB%D1%8C",
+"participants": [
+[
+"Брюгге",
+"Club Brugge"
+],
+[
+"Ливерпуль",
+"Liverpool"
+]
+],
+"div": "UCL",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "football",
+"id": "401915376",
+"league": "Европа · Лига чемпионов",
+"kickoff": "2026-11-25T23:00:00+03:00",
+"home": "Интер",
+"away": "Штутгарт",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/110.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/134.png",
+"hid": "110",
+"aid": "134",
+"bb": "https://betboom.ru/search?query=%D0%98%D0%BD%D1%82%D0%B5%D1%80&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/uefa.champions",
+"url": "live.html?s=football&p=soccer%2Fuefa.champions&e=401915376&h=%D0%98%D0%BD%D1%82%D0%B5%D1%80&a=%D0%A8%D1%82%D1%83%D1%82%D0%B3%D0%B0%D1%80%D1%82",
+"participants": [
+[
+"Интер",
+"Internazionale"
+],
+[
+"Штутгарт",
+"VfB Stuttgart"
+]
+],
+"div": "UCL",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "football",
+"id": "401915377",
+"league": "Европа · Лига чемпионов",
+"kickoff": "2026-11-25T23:00:00+03:00",
+"home": "Лилль",
+"away": "Бавария",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/166.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/132.png",
+"hid": "166",
+"aid": "132",
+"bb": "https://betboom.ru/search?query=%D0%9B%D0%B8%D0%BB%D0%BB%D1%8C&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/uefa.champions",
+"url": "live.html?s=football&p=soccer%2Fuefa.champions&e=401915377&h=%D0%9B%D0%B8%D0%BB%D0%BB%D1%8C&a=%D0%91%D0%B0%D0%B2%D0%B0%D1%80%D0%B8%D1%8F",
+"participants": [
+[
+"Лилль",
+"Lille"
+],
+[
+"Бавария",
+"Bayern Munich"
+]
+],
+"div": "UCL",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "football",
+"id": "401915374",
+"league": "Европа · Лига чемпионов",
+"kickoff": "2026-11-25T23:00:00+03:00",
+"home": "ПСЖ",
+"away": "Рома",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/160.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/104.png",
+"hid": "160",
+"aid": "104",
+"bb": "https://betboom.ru/search?query=%D0%9F%D0%A1%D0%96&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/uefa.champions",
+"url": "live.html?s=football&p=soccer%2Fuefa.champions&e=401915374&h=%D0%9F%D0%A1%D0%96&a=%D0%A0%D0%BE%D0%BC%D0%B0",
+"participants": [
+[
+"ПСЖ",
+"Paris Saint-Germain"
+],
+[
+"Рома",
+"AS Roma"
+]
+],
+"div": "UCL",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "football",
+"id": "401915375",
+"league": "Европа · Лига чемпионов",
+"kickoff": "2026-11-25T23:00:00+03:00",
+"home": "Шахтёр",
+"away": "Фенербахче",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/493.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/436.png",
+"hid": "493",
+"aid": "436",
+"bb": "https://betboom.ru/search?query=%D0%A8%D0%B0%D1%85%D1%82%D1%91%D1%80&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/uefa.champions",
+"url": "live.html?s=football&p=soccer%2Fuefa.champions&e=401915375&h=%D0%A8%D0%B0%D1%85%D1%82%D1%91%D1%80&a=%D0%A4%D0%B5%D0%BD%D0%B5%D1%80%D0%B1%D0%B0%D1%85%D1%87%D0%B5",
+"participants": [
+[
+"Шахтёр",
+"Shakhtar Donetsk"
+],
+[
+"Фенербахче",
+"Fenerbahce"
+]
+],
+"div": "UCL",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "football",
+"id": "401915373",
+"league": "Европа · Лига чемпионов",
+"kickoff": "2026-11-25T23:00:00+03:00",
+"home": "Спортинг",
+"away": "Манчестер Юнайтед",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/2250.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/360.png",
+"hid": "2250",
+"aid": "360",
+"bb": "https://betboom.ru/search?query=%D0%A1%D0%BF%D0%BE%D1%80%D1%82%D0%B8%D0%BD%D0%B3&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/uefa.champions",
+"url": "live.html?s=football&p=soccer%2Fuefa.champions&e=401915373&h=%D0%A1%D0%BF%D0%BE%D1%80%D1%82%D0%B8%D0%BD%D0%B3&a=%D0%9C%D0%B0%D0%BD%D1%87%D0%B5%D1%81%D1%82%D0%B5%D1%80+%D0%AE%D0%BD%D0%B0%D0%B9%D1%82%D0%B5%D0%B4",
+"participants": [
+[
+"Спортинг",
+"Sporting CP"
+],
+[
+"Манчестер Юнайтед",
+"Manchester United"
+]
+],
+"div": "UCL",
 "state": "pre",
 "bo": null,
 "prediction": "",
