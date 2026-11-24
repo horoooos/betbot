@@ -7445,22 +7445,22 @@
   "state": "pre",
   "completed": false,
   "tier": "s",
-  "status": "reviewed",
+  "status": "done",
   "home": {
+   "color": "3b4a7a",
+   "logo": "https://cdn-api.pandascore.co/images/team/image/3218/600px_ninjas_in_pyjamas_2021_lightmode.png",
    "id": "3218",
    "name": "NIP",
    "ru": "NIP",
-   "logo": "https://cdn-api.pandascore.co/images/team/image/3218/600px_ninjas_in_pyjamas_2021_lightmode.png",
-   "color": "3b4a7a",
    "score": 0,
    "winner": false
   },
   "away": {
+   "color": "3b4a7a",
+   "logo": "https://cdn-api.pandascore.co/images/team/image/133435/788px_m80_2023_allmode.png",
    "id": "133435",
    "name": "M80",
    "ru": "M80",
-   "logo": "https://cdn-api.pandascore.co/images/team/image/133435/788px_m80_2023_allmode.png",
-   "color": "3b4a7a",
    "score": 0,
    "winner": false
   },
@@ -7847,7 +7847,10 @@
   "btn": 4,
   "close": {
    "_": null
-  }
+  },
+  "settlement_retry_at": 1795504615.017207,
+  "main_hit": true,
+  "bold_hit": null
  },
  "CS2|1789253": {
   "status": "waiting_data",
