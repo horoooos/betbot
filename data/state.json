@@ -2928,14 +2928,14 @@
    }
   },
   "source": {
-   "last_success": "2026-11-24T16:15:47.300365+00:00",
+   "last_success": "2026-11-24T16:35:47.368074+00:00",
    "parsed": 383,
-   "added": 69,
-   "discovered_matches": 40,
+   "added": 87,
+   "discovered_matches": 33,
    "pages": 21,
    "errors": [],
    "parsed_by_sport": {
-    "soccer": 50,
+    "soccer": 49,
     "ice-hockey": 50,
     "basketball": 50,
     "tennis": 50,
@@ -2944,13 +2944,13 @@
    }
   },
   "error": null,
-  "tips": 14797,
+  "tips": 14832,
   "snapshots": 304,
-  "unmapped_markets": 22399,
+  "unmapped_markets": 22451,
   "quote_matches": 74
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-24T19:33:46.807607+03:00",
+  "last_poll": "2026-11-24T19:35:47.368074+03:00",
   "cursor": "388",
   "posts": [
    {
@@ -4646,7 +4646,7 @@
   },
   "esports|DOTA|1816479": {
    "reason": "no_real_odds",
-   "checked_at": "2026-11-24T16:24:04.975767+00:00",
+   "checked_at": "2026-11-24T16:36:11.101885+00:00",
    "kickoff": "2026-11-24T20:00:00+03:00",
    "sport": "esports",
    "id": "1816479",
