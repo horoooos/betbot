@@ -1001,41 +1001,6 @@ null
 },
 {
 "sport": "tennis",
-"id": "186827",
-"league": "Теннис · WTA",
-"kickoff": "2026-11-24T22:30:00+03:00",
-"home": "Надя Подорошка",
-"away": "Лейре Ромеро Гормас",
-"hl": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
-"al": "https://a.espncdn.com/i/teamlogos/countries/500/esp.png",
-"hid": "3256",
-"aid": "10676",
-"bb": "https://betboom.ru/search?query=%D0%9F%D0%BE%D0%B4%D0%BE%D1%80%D0%BE%D1%88%D0%BA%D0%B0&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=tennis",
-"path": "tennis/wta",
-"url": "live.html?s=tennis&p=tennis%2Fwta&e=186827&h=%D0%9D%D0%B0%D0%B4%D1%8F+%D0%9F%D0%BE%D0%B4%D0%BE%D1%80%D0%BE%D1%88%D0%BA%D0%B0&a=%D0%9B%D0%B5%D0%B9%D1%80%D0%B5+%D0%A0%D0%BE%D0%BC%D0%B5%D1%80%D0%BE+%D0%93%D0%BE%D1%80%D0%BC%D0%B0%D1%81",
-"participants": [
-[
-"Надя Подорошка",
-"Nadia Podoroska"
-],
-[
-"Лейре Ромеро Гормас",
-"Leyre Romero Gormaz"
-]
-],
-"div": "WTA",
-"state": "pre",
-"bo": null,
-"prediction": "",
-"hs": null,
-"as": null,
-"tip": "",
-"top": false,
-"bot": null,
-"lt": null
-},
-{
-"sport": "tennis",
 "id": "186825",
 "league": "Теннис · WTA",
 "kickoff": "2026-11-24T22:30:00+03:00",
@@ -1056,6 +1021,107 @@ null
 [
 "София Костоулас",
 "Sofia Costoulas"
+]
+],
+"div": "WTA",
+"state": "pre",
+"bo": null,
+"prediction": "predictions/2026-11-24-polona-hertsog-sofiya-kostoulas-186825.html",
+"hs": null,
+"as": null,
+"tip": "Победа: София Костоулас · 2.45",
+"top": false,
+"bot": {
+"main": {
+"label": "Победа: София Костоулас",
+"p": 0.381,
+"odds": 2.45,
+"est": false
+},
+"bold": null,
+"markets": [
+[
+"Победа: Полона Херцог",
+0.619,
+1.51
+],
+[
+"Победа: София Костоулас",
+0.381,
+2.45
+],
+[
+"Будет 3 сета",
+0.487,
+null
+],
+[
+"Будет 2 сета",
+0.513,
+null
+],
+[
+"Счёт по сетам 2:0",
+0.336,
+null
+],
+[
+"Счёт по сетам 0:2",
+0.177,
+null
+],
+[
+"Счёт по сетам 2:1",
+0.283,
+null
+],
+[
+"Счёт по сетам 1:2",
+0.205,
+null
+],
+[
+"Полона Херцог возьмёт хотя бы сет",
+0.823,
+null
+],
+[
+"София Костоулас возьмёт хотя бы сет",
+0.664,
+null
+]
+],
+"bar": [
+0.6186868686868687,
+0,
+0.38131313131313127
+],
+"center": "Линия winline · Эло 1544 : 1457"
+},
+"lt": null
+},
+{
+"sport": "tennis",
+"id": "186827",
+"league": "Теннис · WTA",
+"kickoff": "2026-11-24T22:30:00+03:00",
+"home": "Надя Подорошка",
+"away": "Лейре Ромеро Гормас",
+"hl": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+"al": "https://a.espncdn.com/i/teamlogos/countries/500/esp.png",
+"hid": "3256",
+"aid": "10676",
+"bb": "https://betboom.ru/search?query=%D0%9F%D0%BE%D0%B4%D0%BE%D1%80%D0%BE%D1%88%D0%BA%D0%B0&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=tennis",
+"path": "tennis/wta",
+"url": "live.html?s=tennis&p=tennis%2Fwta&e=186827&h=%D0%9D%D0%B0%D0%B4%D1%8F+%D0%9F%D0%BE%D0%B4%D0%BE%D1%80%D0%BE%D1%88%D0%BA%D0%B0&a=%D0%9B%D0%B5%D0%B9%D1%80%D0%B5+%D0%A0%D0%BE%D0%BC%D0%B5%D1%80%D0%BE+%D0%93%D0%BE%D1%80%D0%BC%D0%B0%D1%81",
+"participants": [
+[
+"Надя Подорошка",
+"Nadia Podoroska"
+],
+[
+"Лейре Ромеро Гормас",
+"Leyre Romero Gormaz"
 ]
 ],
 "div": "WTA",
