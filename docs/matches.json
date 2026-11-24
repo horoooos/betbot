@@ -315,8 +315,8 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-24-sharlott-hornets-memfis-grizzlis-401910036.html",
-"hs": "60",
-"as": "62",
+"hs": "62",
+"as": "65",
 "tip": "П2 (с ОТ) · 1.68",
 "top": false,
 "bot": {
@@ -656,7 +656,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "",
-"hs": "39",
+"hs": "43",
 "as": "38",
 "tip": "",
 "top": false,
@@ -691,8 +691,8 @@ null
 "state": "in",
 "bo": null,
 "prediction": "",
-"hs": "33",
-"as": "34",
+"hs": "38",
+"as": "37",
 "tip": "",
 "top": false,
 "bot": null,
@@ -862,7 +862,15 @@ null
 ],
 "center": "Ожидаемые голы 3.5 : 3.0"
 },
-"lt": null
+"lt": {
+"fair": 1.32,
+"label": "X2 (осн. время)",
+"min_odds": 1.39,
+"minute": "2-й период",
+"p": 0.758,
+"result": null,
+"score": "0:1"
+}
 },
 {
 "sport": "hockey",
