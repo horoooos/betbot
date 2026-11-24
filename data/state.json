@@ -2952,7 +2952,7 @@
   "quote_matches": 74
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-24T19:57:46.936722+03:00",
+  "last_poll": "2026-11-24T19:59:47.256291+03:00",
   "cursor": "388",
   "posts": [
    {
@@ -4648,8 +4648,8 @@
   },
   "esports|DOTA|1816479": {
    "reason": "no_real_odds",
-   "checked_at": "2026-11-24T16:48:05.780820+00:00",
-   "kickoff": "2026-11-24T20:00:00+03:00",
+   "checked_at": "2026-11-24T17:00:07.740344+00:00",
+   "kickoff": "2026-11-24T20:30:00+03:00",
    "sport": "esports",
    "id": "1816479",
    "home": "OG",
@@ -4722,6 +4722,45 @@
    "odds": 3.3,
    "edge": -0.02914,
    "estimated": false
+  },
+  "football|I2|401899536": {
+   "reason": "no_qualified_real_market",
+   "checked_at": "2026-11-24T17:00:06.457102+00:00",
+   "kickoff": "2026-11-24T21:00:00+03:00",
+   "sport": "football",
+   "id": "401899536",
+   "home": "Юве Стабия",
+   "away": "Катандзаро",
+   "priced_markets": 6,
+   "market": "Обе забьют — да",
+   "probability": 0.5766,
+   "odds": 1.61,
+   "edge": -0.07167,
+   "estimated": true
+  },
+  "tennis|WTA|186821": {
+   "reason": "insufficient_history_or_odds",
+   "checked_at": "2026-11-24T17:00:09.466136+00:00",
+   "kickoff": "2026-11-24T21:00:00+03:00",
+   "sport": "tennis",
+   "id": "186821",
+   "home": "Лурдес Эйала",
+   "away": "Ирен Бурильо"
+  },
+  "tennis|WTA|186826": {
+   "reason": "no_real_odds",
+   "checked_at": "2026-11-24T17:00:10.838445+00:00",
+   "kickoff": "2026-11-24T21:00:00+03:00",
+   "sport": "tennis",
+   "id": "186826",
+   "home": "Солана Сьерра",
+   "away": "Виктория Хименес-Касинцева",
+   "priced_markets": 0,
+   "market": "Будет 2 сета",
+   "probability": 0.5111,
+   "odds": 1.82,
+   "edge": -0.0698,
+   "estimated": true
   }
  },
  "source_trial": {

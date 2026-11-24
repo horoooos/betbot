@@ -27870,5 +27870,13 @@
   },
   "msg_id": 9364,
   "btn": 4
+ },
+ "401899536": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-24T21:00:00+03:00",
+  "sport": "football",
+  "div": "I2",
+  "reason": "no_qualified_real_market",
+  "retry_at": 1795540187.256291
  }
 }

@@ -8098,10 +8098,26 @@
  },
  "DOTA|1816479": {
   "status": "waiting_data",
-  "kickoff": "2026-11-24T20:00:00+03:00",
+  "kickoff": "2026-11-24T20:30:00+03:00",
   "sport": "esports",
   "div": "DOTA",
   "reason": "no_real_odds",
-  "retry_at": 1795539467.288668
+  "retry_at": 1795540187.256291
+ },
+ "WTA|186821": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-24T21:00:00+03:00",
+  "sport": "tennis",
+  "div": "WTA",
+  "reason": "insufficient_history_or_odds",
+  "retry_at": 1795540187.256291
+ },
+ "WTA|186826": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-24T21:00:00+03:00",
+  "sport": "tennis",
+  "div": "WTA",
+  "reason": "no_real_odds",
+  "retry_at": 1795540187.256291
  }
 }
