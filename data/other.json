@@ -7297,5 +7297,130 @@
   "close": {
    "_": null
   }
+ },
+ "NBA|401909314": {
+  "id": "401909314",
+  "div": "NBA",
+  "sport": "basketball",
+  "kickoff": "2026-11-25T03:00:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "detail": "Tue, November 24th at 7:00 PM EST",
+  "clock": "0.0",
+  "period": 0,
+  "home": {
+   "id": "19",
+   "name": "Orlando Magic",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/orl.png",
+   "color": "0150b5",
+   "score": "0",
+   "record": "7-9",
+   "periods": [],
+   "ru": "Орландо Мэджик"
+  },
+  "away": {
+   "id": "8",
+   "name": "Detroit Pistons",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/det.png",
+   "color": "1d428a",
+   "score": "0",
+   "record": "10-6",
+   "periods": [],
+   "ru": "Детройт Пистонс"
+  },
+  "odds": {
+   "H": 2.1,
+   "A": 1.769,
+   "line": 212.5,
+   "over": 1.885,
+   "under": 1.935,
+   "spread": 2.5,
+   "sp_h": 1.855,
+   "sp_a": 1.962
+  },
+  "probs": {
+   "BB_ML_H": 0.4174843531794775,
+   "BB_ML_A": 0.5825156468205225,
+   "BB_SPR_H": 0.5,
+   "BB_SPR_A": 0.5,
+   "BB_O205.5": 0.6597440535491568,
+   "BB_U205.5": 0.3402559464508432,
+   "BB_O212.5": 0.5,
+   "BB_U212.5": 0.5,
+   "BB_O219.5": 0.3402559464508432,
+   "BB_U219.5": 0.6597440535491568
+  },
+  "labels": {
+   "BB_ML_H": "П1 (с ОТ)",
+   "BB_ML_A": "П2 (с ОТ)",
+   "BB_SPR_H": "Ф1 (+2.5)",
+   "BB_SPR_A": "Ф2 (-2.5)",
+   "BB_O205.5": "ТБ 205.5",
+   "BB_U205.5": "ТМ 205.5",
+   "BB_O212.5": "ТБ 212.5",
+   "BB_U212.5": "ТМ 212.5",
+   "BB_O219.5": "ТБ 219.5",
+   "BB_U219.5": "ТМ 219.5"
+  },
+  "real": {
+   "BB_ML_H": 2.1,
+   "BB_ML_A": 1.769,
+   "BB_SPR_H": 1.855,
+   "BB_SPR_A": 1.962,
+   "BB_O212.5": 1.885,
+   "BB_U212.5": 1.935
+  },
+  "center": "Ожидаемый счёт 105 : 108",
+  "bar": [
+   0.4174843531794775,
+   0,
+   0.5825156468205225
+  ],
+  "model": {
+   "mu": -2.5,
+   "T": 212.5
+  },
+  "stavka_signal": {
+   "status": "collecting",
+   "weight": 0.0,
+   "authors": 67,
+   "group": "basketball",
+   "snapshot": "NBA|401909314",
+   "source": "https://stavka.tv"
+  },
+  "research": {
+   "articles": [
+    {
+     "id": "b64376da7cdf9a027f2e5f30",
+     "kind": "context",
+     "provider": "legalbet",
+     "source": "https://legalbet.ru/tips/prognoz-na-match-orlando-medzhik-detrojt-pistons-25-noyabrya-zimarin/",
+     "sport": "basketball",
+     "div": "NBA",
+     "event_id": "401909314",
+     "kickoff": "2026-11-25T00:00:00+00:00",
+     "published_at": "2026-11-24T06:23:40+00:00",
+     "observed_at": "2026-11-24T06:42:16.464745+00:00",
+     "tables": []
+    }
+   ],
+   "dossier": null
+  },
+  "main": {
+   "key": "BB_ML_A",
+   "label": "П2 (с ОТ)",
+   "p": 0.5825,
+   "odds": 1.77,
+   "est": false,
+   "stake": 1.0
+  },
+  "bold": {},
+  "open": {
+   "BB_ML_A": 0.5825
+  },
+  "top": false,
+  "msg_id": 9430,
+  "btn": 4
  }
 }

@@ -1563,7 +1563,7 @@
  "value_day": "2026-11-24",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-24",
- "site_stamp": "1539|9429|2026-11-25 01|6|944d72aec26a1001",
+ "site_stamp": "1539|9431|2026-11-25 01|6|24d49cb2e0e5afd7",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1720,7 +1720,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 9429,
+ "dz_last": 9431,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2978,7 +2978,7 @@
   "quote_matches": 80
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-25T01:56:44.466596+03:00",
+  "last_poll": "2026-11-25T01:58:44.575972+03:00",
   "cursor": "402",
   "posts": [
    {
@@ -5278,6 +5278,20 @@
    "probability": 0.2495,
    "odds": 3.85,
    "edge": -0.03942,
+   "estimated": false
+  },
+  "basketball|NBA|401909314": {
+   "reason": "published",
+   "checked_at": "2026-11-24T22:59:14.554418+00:00",
+   "kickoff": "2026-11-25T03:00:00+03:00",
+   "sport": "basketball",
+   "id": "401909314",
+   "home": "Орландо Мэджик",
+   "away": "Детройт Пистонс",
+   "market": "П2 (с ОТ)",
+   "probability": 0.5825,
+   "odds": 1.77,
+   "edge": 0.03103,
    "estimated": false
   }
  },
