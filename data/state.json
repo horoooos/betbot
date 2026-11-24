@@ -2902,15 +2902,15 @@
   "model": {
    "weight": 0.0,
    "status": "baseline_better",
-   "settled_matches": 126,
+   "settled_matches": 130,
    "required_matches": 100,
-   "trained_at": "2026-11-24T21:38:44.549093+00:00",
+   "trained_at": "2026-11-24T21:40:44.897690+00:00",
    "candidate_weight": 0.0,
    "train_matches": 83,
-   "validation_matches": 43,
+   "validation_matches": 47,
    "validation_from": "2026-11-22T00:00:00+00:00",
-   "validation_logloss": 3.127758301210289,
-   "validation_baseline_logloss": 3.127758301210289
+   "validation_logloss": 3.0479668423771087,
+   "validation_baseline_logloss": 3.0479668423771087
   },
   "sport_models": {
    "hockey": {
@@ -2972,7 +2972,7 @@
   "quote_matches": 79
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-25T00:38:44.549093+03:00",
+  "last_poll": "2026-11-25T00:40:44.897690+03:00",
   "cursor": "398",
   "posts": [
    {
@@ -3685,10 +3685,10 @@
    "401880146": "post",
    "401880145": "post",
    "401880144": "post",
-   "401880143": "in",
-   "401880142": "in",
+   "401880143": "post",
+   "401880142": "post",
    "401880824": "post",
-   "401880838": "in",
+   "401880838": "post",
    "401880823": "post",
    "401880829": "post",
    "401881358": "post",
@@ -9697,7 +9697,7 @@
     }
    },
    "football|E1|401880148": {
-    "status": "open",
+    "status": "settled",
     "id": "401880148",
     "sport": "football",
     "div": "E1",
@@ -9755,7 +9755,10 @@
        "price_kind": "author_recorded"
       }
      ]
-    }
+    },
+    "settled_at": "2026-11-24T21:40:44.897690+00:00",
+    "hit": false,
+    "profit_pct": -0.5
    },
    "football|UCL|401915295": {
     "status": "open",
