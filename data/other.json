@@ -7433,7 +7433,10 @@
   },
   "top": false,
   "msg_id": 9285,
-  "btn": 4
+  "btn": 4,
+  "close": {
+   "HK_ML_A": 0.6164
+  }
  },
  "NBA|401910044": {
   "status": "waiting_data",
@@ -7441,7 +7444,7 @@
   "sport": "basketball",
   "div": "NBA",
   "reason": "no_qualified_real_market",
-  "retry_at": 1795488699.704339
+  "retry_at": 1795489419.757389
  },
  "NBA|401910045": {
   "id": "401910045",
@@ -7596,6 +7599,9 @@
   },
   "top": false,
   "msg_id": 9287,
-  "btn": 4
+  "btn": 4,
+  "close": {
+   "BB_ML_H": 0.2394
+  }
  }
 }
