@@ -1570,7 +1570,7 @@
  "value_day": "2026-11-23",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-23",
- "site_stamp": "1516|9264|2026-11-24 03|6|40510421bbe644b2",
+ "site_stamp": "1516|9265|2026-11-24 03|6|40510421bbe644b2",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1726,7 +1726,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 9264,
+ "dz_last": 9265,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2905,7 +2905,7 @@
   "quote_matches": 50
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-24T03:06:18.842022+03:00",
+  "last_poll": "2026-11-24T03:08:18.706646+03:00",
   "cursor": "370",
   "posts": [
    {
@@ -3551,7 +3551,7 @@
    "401934683": "in",
    "401888561": "post",
    "401888562": "in",
-   "401892773": "pre",
+   "401892773": "in",
    "401892774": "pre",
    "401892775": "pre",
    "401892776": "pre",
@@ -4115,7 +4115,7 @@
   },
   "football|USA|401933728": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-23T23:58:39.117384+00:00",
+   "checked_at": "2026-11-24T00:08:39.276307+00:00",
    "kickoff": "2026-11-24T04:00:00+03:00",
    "sport": "football",
    "id": "401933728",
@@ -4123,14 +4123,14 @@
    "away": "Лос-Анджелес",
    "priced_markets": 6,
    "market": "Обе забьют — да",
-   "probability": 0.5904,
+   "probability": 0.5876,
    "odds": 1.58,
-   "edge": -0.06717,
+   "edge": -0.07159,
    "estimated": true
   },
   "basketball|NBA|401910041": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-23T23:58:39.530804+00:00",
+   "checked_at": "2026-11-24T00:08:39.683613+00:00",
    "kickoff": "2026-11-24T04:00:00+03:00",
    "sport": "basketball",
    "id": "401910041",
