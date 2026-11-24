@@ -2908,15 +2908,15 @@
   "model": {
    "weight": 0.0,
    "status": "baseline_better",
-   "settled_matches": 137,
+   "settled_matches": 138,
    "required_matches": 100,
-   "trained_at": "2026-11-24T21:58:44.777212+00:00",
+   "trained_at": "2026-11-24T22:56:44.466596+00:00",
    "candidate_weight": 0.0,
    "train_matches": 107,
-   "validation_matches": 29,
+   "validation_matches": 30,
    "validation_from": "2026-11-23T00:00:00+00:00",
-   "validation_logloss": 3.0318851806838847,
-   "validation_baseline_logloss": 3.0318851806838847
+   "validation_logloss": 3.014020004708462,
+   "validation_baseline_logloss": 3.014020004708462
   },
   "sport_models": {
    "hockey": {
@@ -2956,9 +2956,9 @@
    }
   },
   "source": {
-   "last_success": "2026-11-24T22:36:44.008237+00:00",
+   "last_success": "2026-11-24T22:56:44.466596+00:00",
    "parsed": 353,
-   "added": 90,
+   "added": 66,
    "discovered_matches": 34,
    "pages": 18,
    "errors": [],
@@ -2972,13 +2972,13 @@
    }
   },
   "error": null,
-  "tips": 15266,
+  "tips": 15295,
   "snapshots": 325,
-  "unmapped_markets": 23282,
+  "unmapped_markets": 23319,
   "quote_matches": 80
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-25T01:54:44.213858+03:00",
+  "last_poll": "2026-11-25T01:56:44.466596+03:00",
   "cursor": "402",
   "posts": [
    {
@@ -3709,7 +3709,7 @@
    "401915299": "post",
    "401915298": "post",
    "401915297": "post",
-   "401841335": "in",
+   "401841335": "post",
    "401934688": "pre",
    "401934706": "pre",
    "401933738": "pre",
