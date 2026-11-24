@@ -2948,7 +2948,7 @@
   "quote_matches": 74
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-24T18:57:47.703805+03:00",
+  "last_poll": "2026-11-24T18:59:47.341910+03:00",
   "cursor": "386",
   "posts": [
    {
@@ -3622,7 +3622,7 @@
    "186828": "pre",
    "186827": "pre",
    "186825": "pre",
-   "186818": "pre",
+   "186818": "in",
    "186819": "post",
    "186820": "post",
    "186821": "pre",
@@ -4626,6 +4626,36 @@
    "probability": 0.5181,
    "odds": 1.8,
    "edge": -0.06742,
+   "estimated": true
+  },
+  "esports|DOTA|1816480": {
+   "reason": "no_real_odds",
+   "checked_at": "2026-11-24T16:00:07.998479+00:00",
+   "kickoff": "2026-11-24T20:00:00+03:00",
+   "sport": "esports",
+   "id": "1816480",
+   "home": "Xtreme Gaming",
+   "away": "Team Liquid",
+   "priced_markets": 0,
+   "market": "Всухую (2:0 или 0:2)",
+   "probability": 0.5015,
+   "odds": 1.85,
+   "edge": -0.07223,
+   "estimated": true
+  },
+  "esports|DOTA|1816479": {
+   "reason": "no_real_odds",
+   "checked_at": "2026-11-24T16:00:09.383629+00:00",
+   "kickoff": "2026-11-24T20:00:00+03:00",
+   "sport": "esports",
+   "id": "1816479",
+   "home": "OG",
+   "away": "Aurora",
+   "priced_markets": 0,
+   "market": "Всухую (2:0 или 0:2)",
+   "probability": 0.5028,
+   "odds": 1.85,
+   "edge": -0.06982,
    "estimated": true
   }
  },
