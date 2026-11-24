@@ -1570,7 +1570,7 @@
  "value_day": "2026-11-23",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-23",
- "site_stamp": "1524|9302|2026-11-24 06|6|831a85b3b91d117b",
+ "site_stamp": "1524|9302|2026-11-24 07|6|831a85b3b91d117b",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -2885,10 +2885,10 @@
    }
   },
   "source": {
-   "last_success": "2026-11-24T03:39:39.766776+00:00",
+   "last_success": "2026-11-24T04:01:39.472903+00:00",
    "parsed": 383,
-   "added": 59,
-   "discovered_matches": 40,
+   "added": 38,
+   "discovered_matches": 38,
    "pages": 21,
    "errors": [],
    "parsed_by_sport": {
@@ -2901,13 +2901,13 @@
    }
   },
   "error": null,
-  "tips": 14054,
-  "snapshots": 290,
-  "unmapped_markets": 21181,
-  "quote_matches": 63
+  "tips": 14071,
+  "snapshots": 292,
+  "unmapped_markets": 21202,
+  "quote_matches": 64
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-24T06:59:39.558368+03:00",
+  "last_poll": "2026-11-24T07:01:39.472903+03:00",
   "cursor": "370",
   "posts": [
    {
@@ -3677,7 +3677,13 @@
    "401909322": "pre",
    "401909323": "pre",
    "401909324": "pre",
-   "401909325": "pre"
+   "401909325": "pre",
+   "401877527": "pre",
+   "401877528": "pre",
+   "401877546": "pre",
+   "401877529": "pre",
+   "401877530": "pre",
+   "401877545": "pre"
   },
   "daily": {
    "day": "2026-11-24"
