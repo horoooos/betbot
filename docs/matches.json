@@ -957,7 +957,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "",
-"hs": "0",
+"hs": "1",
 "as": "0",
 "tip": "",
 "top": false,
@@ -2166,7 +2166,7 @@ null
 ]
 ],
 "div": "BRA",
-"state": "pre",
+"state": "in",
 "bo": null,
 "prediction": "",
 "hs": "0",
@@ -4613,6 +4613,111 @@ null
 [
 "Чикаго",
 "Chicago Blackhawks"
+]
+],
+"div": "NHL",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "basketball",
+"id": "401909324",
+"league": "США · NBA",
+"kickoff": "2026-11-26T06:00:00+03:00",
+"home": "Голден Стэйт",
+"away": "Сакраменто Кингз",
+"hl": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/gs.png",
+"al": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/sac.png",
+"hid": "9",
+"aid": "23",
+"bb": "https://betboom.ru/search?query=%D0%93%D0%BE%D0%BB%D0%B4%D0%B5%D0%BD&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=basketball",
+"path": "basketball/nba",
+"url": "live.html?s=basketball&p=basketball%2Fnba&e=401909324&h=%D0%93%D0%BE%D0%BB%D0%B4%D0%B5%D0%BD+%D0%A1%D1%82%D1%8D%D0%B9%D1%82&a=%D0%A1%D0%B0%D0%BA%D1%80%D0%B0%D0%BC%D0%B5%D0%BD%D1%82%D0%BE+%D0%9A%D0%B8%D0%BD%D0%B3%D0%B7",
+"participants": [
+[
+"Голден Стэйт",
+"Golden State Warriors"
+],
+[
+"Сакраменто Кингз",
+"Sacramento Kings"
+]
+],
+"div": "NBA",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "basketball",
+"id": "401909325",
+"league": "США · NBA",
+"kickoff": "2026-11-26T06:00:00+03:00",
+"home": "Портленд",
+"away": "Сан-Антонио Сперс",
+"hl": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/por.png",
+"al": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/sa.png",
+"hid": "22",
+"aid": "24",
+"bb": "https://betboom.ru/search?query=%D0%9F%D0%BE%D1%80%D1%82%D0%BB%D0%B5%D0%BD%D0%B4&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=basketball",
+"path": "basketball/nba",
+"url": "live.html?s=basketball&p=basketball%2Fnba&e=401909325&h=%D0%9F%D0%BE%D1%80%D1%82%D0%BB%D0%B5%D0%BD%D0%B4&a=%D0%A1%D0%B0%D0%BD-%D0%90%D0%BD%D1%82%D0%BE%D0%BD%D0%B8%D0%BE+%D0%A1%D0%BF%D0%B5%D1%80%D1%81",
+"participants": [
+[
+"Портленд",
+"Portland Trail Blazers"
+],
+[
+"Сан-Антонио Сперс",
+"San Antonio Spurs"
+]
+],
+"div": "NBA",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "hockey",
+"id": "401892793",
+"league": "США · NHL",
+"kickoff": "2026-11-26T06:00:00+03:00",
+"home": "Анахайм",
+"away": "Сан-Хосе",
+"hl": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/ana.png",
+"al": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/sj.png",
+"hid": "25",
+"aid": "18",
+"bb": "https://betboom.ru/search?query=%D0%90%D0%BD%D0%B0%D1%85%D0%B0%D0%B9%D0%BC&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=hockey",
+"path": "hockey/nhl",
+"url": "live.html?s=hockey&p=hockey%2Fnhl&e=401892793&h=%D0%90%D0%BD%D0%B0%D1%85%D0%B0%D0%B9%D0%BC&a=%D0%A1%D0%B0%D0%BD-%D0%A5%D0%BE%D1%81%D0%B5",
+"participants": [
+[
+"Анахайм",
+"Anaheim Ducks"
+],
+[
+"Сан-Хосе",
+"San Jose Sharks"
 ]
 ],
 "div": "NHL",

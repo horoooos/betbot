@@ -3,7 +3,7 @@
   "1X2": 0.0,
   "OU25": 0.0
  },
- "learned": "2026-11-24",
+ "learned": "2026-11-25",
  "schedule_day": "2026-11-24",
  "content_slot": "2026-11-24-23",
  "news_seen": [
@@ -1563,7 +1563,7 @@
  "value_day": "2026-11-24",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-24",
- "site_stamp": "1536|9414|2026-11-24 23|6|d53c470ef52f1c33",
+ "site_stamp": "1536|9414|2026-11-25 00|6|d53c470ef52f1c33",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1576,7 +1576,7 @@
    "I1|401874989"
   ]
  },
- "value_check": "2026-11-24-7",
+ "value_check": "2026-11-25-0",
  "express_risk": {
   "msg": 9019,
   "legs": [
@@ -2027,7 +2027,7 @@
   "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/FC_Spartak_Moscow_vs._FC_Krylia_Sovetov_Samara%2C_1_May_2022_%2803%29.jpg/1280px-FC_Spartak_Moscow_vs._FC_Krylia_Sovetov_Samara%2C_1_May_2022_%2803%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
   "https://images.cybersport.ru/images/as-is/plain/dc/dc374533-4fd4-4747-9dc3-03ccdf0ef141.jpg"
  ],
- "indexnow_day": "2026-11-24",
+ "indexnow_day": "2026-11-25",
  "vk_wall_err": null,
  "shorts_day": "2026-11-24",
  "shorts_err": {
@@ -2770,22 +2770,22 @@
   "message_id": 882,
   "kind": "новость"
  },
- "learn_attempt_day": "2026-11-24",
+ "learn_attempt_day": "2026-11-25",
  "learn_diagnostics": {
   "objective": "shared_lambda_1X2_OU25",
   "rows": 8000,
-  "train_rows": 6139,
-  "validation_rows": 1861,
-  "validation_from": "2026-10-03",
-  "history_from": "2026-02-24",
-  "history_until": "2026-11-22",
+  "train_rows": 6069,
+  "validation_rows": 1931,
+  "validation_from": "2026-10-05",
+  "history_from": "2026-02-28",
+  "history_until": "2026-11-24",
   "candidate_weight": 0.0,
   "weight": 0.0,
-  "train_logloss": 0.8412498472044128,
-  "validation_logloss": 0.8173070859484345,
-  "validation_market_logloss": 0.8173070859484345
+  "train_logloss": 0.8420800545006316,
+  "validation_logloss": 0.8200641566836838,
+  "validation_market_logloss": 0.8200641566836838
  },
- "learned_at": "2026-11-24T00:00:19.130777+03:00",
+ "learned_at": "2026-11-25T00:01:20.457703+03:00",
  "learn_version": "shared-lambda-v2",
  "learn_error": null,
  "learn_retry_at": 0,
@@ -2970,7 +2970,7 @@
   "quote_matches": 78
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-24T23:59:20.711937+03:00",
+  "last_poll": "2026-11-25T00:01:20.457703+03:00",
   "cursor": "398",
   "posts": [
    {
@@ -3603,7 +3603,6 @@
    "401876686": "post",
    "401876683": "post",
    "401888370": "post",
-   "401896728": "post",
    "401874538": "post",
    "401842888": "post",
    "401842884": "post",
@@ -3702,7 +3701,7 @@
    "401915299": "in",
    "401915298": "in",
    "401915297": "in",
-   "401841335": "pre",
+   "401841335": "in",
    "401934688": "pre",
    "401934706": "pre",
    "401933738": "pre",
@@ -3770,7 +3769,7 @@
    "1816494": "pre"
   },
   "daily": {
-   "day": "2026-11-24"
+   "day": "2026-11-25"
   }
  },
  "forecast_decisions": {
