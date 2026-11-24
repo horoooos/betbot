@@ -1562,8 +1562,8 @@
  "streak_posted": 0,
  "value_day": "2026-11-24",
  "repost_done": "2026-11-02-news-strong",
- "table_day": "2026-11-23",
- "site_stamp": "1529|9323|2026-11-24 11|6|d3cb60319a934abc",
+ "table_day": "2026-11-24",
+ "site_stamp": "1529|9324|2026-11-24 12|6|d3cb60319a934abc",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1576,7 +1576,7 @@
    "I1|401874989"
   ]
  },
- "value_check": "2026-11-24-3",
+ "value_check": "2026-11-24-4",
  "express_risk": {
   "msg": 9019,
   "legs": [
@@ -1719,7 +1719,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 9323,
+ "dz_last": 9324,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2021,7 +2021,7 @@
  ],
  "indexnow_day": "2026-11-24",
  "vk_wall_err": null,
- "shorts_day": "2026-11-23",
+ "shorts_day": "2026-11-24",
  "shorts_err": {
   "vk": "В VK только новости; ролики с прогнозами и итогами не отправляются",
   "youtube": "YouTube не подключён (нет секретов YT_*)"
@@ -2086,7 +2086,7 @@
  "vk_comment_err": null,
  "vk_fresh_err": "фото стены: попытка 1: VK photos.getWallUploadServer: 9 Flood control",
  "vk_fresh_retry_at": 1794662243.1134844,
- "shorts_retry_day": "2026-11-23",
+ "shorts_retry_day": "2026-11-24",
  "dz_sent_ids": [
   "5731",
   "5735",
@@ -2912,7 +2912,7 @@
   "quote_matches": 69
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-24T11:58:50.070400+03:00",
+  "last_poll": "2026-11-24T12:00:50.875160+03:00",
   "cursor": "373",
   "posts": [
    {
