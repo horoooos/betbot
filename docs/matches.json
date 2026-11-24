@@ -94,7 +94,7 @@
 ]
 ],
 "div": "NHL",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "predictions/2026-11-24-sietl-anahaym-401892778.html",
 "hs": "3",
@@ -204,7 +204,7 @@ null
 "min_odds": 1.65,
 "minute": "2-й период",
 "p": 0.638,
-"result": null,
+"result": "hit",
 "score": "0:0"
 }
 },
@@ -337,8 +337,8 @@ null
 "state": "in",
 "bo": null,
 "prediction": "",
-"hs": "95",
-"as": "84",
+"hs": "99",
+"as": "86",
 "tip": "",
 "top": false,
 "bot": null,
