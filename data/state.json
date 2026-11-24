@@ -2978,28 +2978,9 @@
   "quote_matches": 82
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-25T02:54:43.947580+03:00",
-  "cursor": "402",
+  "last_poll": "2026-11-25T02:56:43.938684+03:00",
+  "cursor": "403",
   "posts": [
-   {
-    "post_id": 822,
-    "published_at": 1795510450,
-    "url": "https://vk.com/wall-228963529_822",
-    "title": "s1mple показал второй худший рейтинг карты на мейджоре",
-    "text": "рџ“° Александр s1mple Костылев, игрок состава BCGame по Counter-Strike 2, завершил карту против Team Liquid со средним индивидуальным рейтингом 0,53 на PGL Major Singapore 2026. Это второй худший показатель украинца в истории мейджоров.\n\nрџ“Љ Данные опубликованы на портале [#alias|HLTV.org|HLTV.org].\n\nрџЏ† Единственный более низкий результат у s1mple был зафиксирован на [#alias|BLAST.tv|BLAST.tv] Paris Major 2023, где, представляя Natus Vincere, он набрал 0,46 в матче против Monte.\n\nрџ“… PGL Major Singapore 2026 проходит с 24 ноября по 13 декабря в Сингапуре. В турнире участвуют 32 команды, а призовой фонд составляет $1,25 млн.\n\nрџ”Ћ Следить за ходом ивента можно в официальном репортаже.\n\nПодписывайтесь на «АИ СТАВИТ» — спортивные новости каждый день.\n\n#киберспорт #новостиспорта #спорт #главное #аиставит\n\nрџ“Љ Подробнее на сайте рџ‘‡",
-    "checks": {
-     "encoding_clean": false,
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": true,
-     "details_present": true,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-24T11:54:50.546250+03:00"
-   },
    {
     "post_id": 823,
     "published_at": 1795514271,
@@ -3550,6 +3531,25 @@
     },
     "status": "needs_review",
     "observed_at": "2026-11-25T01:50:44.613493+03:00"
+   },
+   {
+    "post_id": 852,
+    "published_at": 1795564585,
+    "url": "https://vk.com/wall-228963529_852",
+    "title": "Aurora Gaming обыграла OG и вышла в плей-офф BLAST Slam IX",
+    "text": "вљ”пёЏ Aurora Gaming победила OG в решающем матче сетки последнего шанса турнира BLAST Slam IX по Dota 2. Формат встречи – best-of-3, и команда «Aurora Gaming» одержала победу со счётом 2:1.\n\nрџ“Њ Это позволило им занять место в следующей стадии ивента.\n\nрџ“Љ Плей-офф турнира стартует 26 ноября в 13:00 мск. Сам BLAST Slam IX проходит онлайн с 20 по 29 ноября, в нём участвуют 16 команд, борющихся за призовой фонд в $750 тыс.\n\nПодписывайтесь на «АИ СТАВИТ» — спортивные новости каждый день.\n\n#киберспорт #Dota #новостиспорта #спорт #главное #аиставит\n\nрџ“Љ Подробнее на сайте рџ‘‡",
+    "checks": {
+     "encoding_clean": false,
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": true,
+     "details_present": true,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-25T02:56:43.938684+03:00"
    }
   ],
   "status": "observing"
