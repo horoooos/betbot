@@ -2851,44 +2851,44 @@
    "hockey": {
     "status": "collecting",
     "weight": 0.0,
-    "settled_matches": 49,
+    "settled_matches": 50,
     "required_matches": 100,
-    "trained_at": "2026-11-24T02:29:39.345559+00:00"
+    "trained_at": "2026-11-24T02:55:39.602365+00:00"
    },
    "basketball": {
     "status": "collecting",
     "weight": 0.0,
     "settled_matches": 57,
     "required_matches": 100,
-    "trained_at": "2026-11-24T02:29:39.345559+00:00"
+    "trained_at": "2026-11-24T02:55:39.602365+00:00"
    },
    "tennis": {
     "status": "collecting",
     "weight": 0.0,
     "settled_matches": 6,
     "required_matches": 100,
-    "trained_at": "2026-11-24T02:29:39.345559+00:00"
+    "trained_at": "2026-11-24T02:55:39.602365+00:00"
    },
    "esports:CS2": {
     "status": "collecting",
     "weight": 0.0,
     "settled_matches": 0,
     "required_matches": 100,
-    "trained_at": "2026-11-24T02:29:39.345559+00:00"
+    "trained_at": "2026-11-24T02:55:39.602365+00:00"
    },
    "esports:DOTA": {
     "status": "collecting",
     "weight": 0.0,
     "settled_matches": 0,
     "required_matches": 100,
-    "trained_at": "2026-11-24T02:29:39.345559+00:00"
+    "trained_at": "2026-11-24T02:55:39.602365+00:00"
    }
   },
   "source": {
-   "last_success": "2026-11-24T02:33:39.992880+00:00",
+   "last_success": "2026-11-24T02:55:39.602365+00:00",
    "parsed": 379,
-   "added": 67,
-   "discovered_matches": 42,
+   "added": 39,
+   "discovered_matches": 39,
    "pages": 21,
    "errors": [],
    "parsed_by_sport": {
@@ -2901,13 +2901,13 @@
    }
   },
   "error": null,
-  "tips": 13962,
+  "tips": 13983,
   "snapshots": 288,
-  "unmapped_markets": 21133,
-  "quote_matches": 57
+  "unmapped_markets": 21151,
+  "quote_matches": 59
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-24T05:53:39.757389+03:00",
+  "last_poll": "2026-11-24T05:55:39.602365+03:00",
   "cursor": "370",
   "posts": [
    {
@@ -3562,7 +3562,7 @@
    "401892779": "pre",
    "401910036": "post",
    "401910037": "post",
-   "401910038": "in",
+   "401910038": "post",
    "401910039": "in",
    "401910040": "in",
    "401910041": "in",
