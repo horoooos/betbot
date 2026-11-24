@@ -2907,7 +2907,7 @@
   "quote_matches": 59
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-24T05:57:39.716750+03:00",
+  "last_poll": "2026-11-24T05:59:39.481919+03:00",
   "cursor": "370",
   "posts": [
    {
@@ -4251,6 +4251,36 @@
    "odds": 3.49,
    "edge": -0.16449,
    "estimated": false
+  },
+  "esports|CS2|1789257": {
+   "reason": "no_real_odds",
+   "checked_at": "2026-11-24T02:59:57.215309+00:00",
+   "kickoff": "2026-11-24T07:00:00+03:00",
+   "sport": "esports",
+   "id": "1789257",
+   "home": "Heroic",
+   "away": "Imperial",
+   "priced_markets": 0,
+   "market": "Победа: Imperial",
+   "probability": 0.5695,
+   "odds": 1.63,
+   "edge": -0.07172,
+   "estimated": true
+  },
+  "esports|CS2|1789254": {
+   "reason": "no_real_odds",
+   "checked_at": "2026-11-24T02:59:58.971527+00:00",
+   "kickoff": "2026-11-24T07:00:00+03:00",
+   "sport": "esports",
+   "id": "1789254",
+   "home": "9z",
+   "away": "Lynn Vision",
+   "priced_markets": 0,
+   "market": "Победа: Lynn Vision",
+   "probability": 0.7919,
+   "odds": 1.17,
+   "edge": -0.07348,
+   "estimated": true
   }
  },
  "source_trial": {
