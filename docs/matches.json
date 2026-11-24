@@ -132,41 +132,6 @@
 },
 {
 "sport": "esports",
-"id": "1816912",
-"league": "Киберспорт · CS2",
-"kickoff": "2026-11-24T15:00:00+03:00",
-"home": "FaZe",
-"away": "GOSH",
-"hl": "https://cdn-api.pandascore.co/images/team/image/3212/285px_fa_ze_esports_october_2025_lightmode.png",
-"al": "https://cdn-api.pandascore.co/images/team/image/139562/825px_gosh_allmode.png",
-"hid": "3212",
-"aid": "139562",
-"bb": "https://betboom.ru/search?query=%D0%A4%D0%B0%D0%B7%D0%B5&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=esports",
-"path": "",
-"url": "esports.html?e=1816912&d=CS2",
-"participants": [
-[
-"FaZe",
-"FaZe"
-],
-[
-"GOSH",
-"GOSH"
-]
-],
-"div": "CS2",
-"state": "pre",
-"bo": 1,
-"prediction": "",
-"hs": 0,
-"as": 0,
-"tip": "",
-"top": false,
-"bot": null,
-"lt": null
-},
-{
-"sport": "esports",
 "id": "1816911",
 "league": "Киберспорт · CS2",
 "kickoff": "2026-11-24T15:00:00+03:00",
@@ -187,6 +152,67 @@
 [
 "Wildcard",
 "Wildcard"
+]
+],
+"div": "CS2",
+"state": "pre",
+"bo": 1,
+"prediction": "predictions/2026-11-24-liquid-wildcard-1816911.html",
+"hs": 0,
+"as": 0,
+"tip": "Победа: Wildcard · 3.05",
+"top": false,
+"bot": {
+"main": {
+"label": "Победа: Wildcard",
+"p": 0.311,
+"odds": 3.05,
+"est": false
+},
+"bold": null,
+"markets": [
+[
+"Победа: Liquid",
+0.688,
+1.38
+],
+[
+"Победа: Wildcard",
+0.312,
+3.05
+]
+],
+"bar": [
+0.688487584650113,
+0,
+0.31151241534988705
+],
+"center": "BO1 · линия pari · Эло 1674 : 1659"
+},
+"lt": null
+},
+{
+"sport": "esports",
+"id": "1816912",
+"league": "Киберспорт · CS2",
+"kickoff": "2026-11-24T15:00:00+03:00",
+"home": "FaZe",
+"away": "GOSH",
+"hl": "https://cdn-api.pandascore.co/images/team/image/3212/285px_fa_ze_esports_october_2025_lightmode.png",
+"al": "https://cdn-api.pandascore.co/images/team/image/139562/825px_gosh_allmode.png",
+"hid": "3212",
+"aid": "139562",
+"bb": "https://betboom.ru/search?query=%D0%A4%D0%B0%D0%B7%D0%B5&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=esports",
+"path": "",
+"url": "esports.html?e=1816912&d=CS2",
+"participants": [
+[
+"FaZe",
+"FaZe"
+],
+[
+"GOSH",
+"GOSH"
 ]
 ],
 "div": "CS2",
@@ -2375,7 +2401,7 @@
 "id": "401877527",
 "league": "Япония · J-League",
 "kickoff": "2026-11-25T13:00:00+03:00",
-"home": "Ависпа Фукуока",
+"home": "Avispa Fukuoka",
 "away": "Иокогама Ф. Маринос",
 "hl": "https://a.espncdn.com/i/teamlogos/soccer/500/7107.png",
 "al": "https://a.espncdn.com/i/teamlogos/soccer/500/7116.png",
@@ -2383,10 +2409,10 @@
 "aid": "7116",
 "bb": "https://betboom.ru/search?query=%D0%A4%D1%83%D0%BA%D1%83%D0%BE%D0%BA%D0%B0&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
 "path": "soccer/jpn.1",
-"url": "live.html?s=football&p=soccer%2Fjpn.1&e=401877527&h=%D0%90%D0%B2%D0%B8%D1%81%D0%BF%D0%B0+%D0%A4%D1%83%D0%BA%D1%83%D0%BE%D0%BA%D0%B0&a=%D0%98%D0%BE%D0%BA%D0%BE%D0%B3%D0%B0%D0%BC%D0%B0+%D0%A4.+%D0%9C%D0%B0%D1%80%D0%B8%D0%BD%D0%BE%D1%81",
+"url": "live.html?s=football&p=soccer%2Fjpn.1&e=401877527&h=Avispa+Fukuoka&a=%D0%98%D0%BE%D0%BA%D0%BE%D0%B3%D0%B0%D0%BC%D0%B0+%D0%A4.+%D0%9C%D0%B0%D1%80%D0%B8%D0%BD%D0%BE%D1%81",
 "participants": [
 [
-"Ависпа Фукуока",
+"Avispa Fukuoka",
 "Avispa Fukuoka"
 ],
 [
