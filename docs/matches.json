@@ -347,7 +347,15 @@ null
 ]
 ]
 },
-"lt": null
+"lt": {
+"fair": 1.49,
+"label": "П1",
+"min_odds": 1.56,
+"minute": "25'",
+"p": 0.672,
+"result": null,
+"score": "0:0"
+}
 },
 {
 "sport": "football",
@@ -487,7 +495,15 @@ null
 ]
 ]
 },
-"lt": null
+"lt": {
+"fair": 1.58,
+"label": "ТМ 2.5",
+"min_odds": 1.65,
+"minute": "26'",
+"p": 0.634,
+"result": null,
+"score": "0:0"
+}
 },
 {
 "sport": "football",
@@ -549,7 +565,7 @@ null
 ]
 ],
 "div": "WTA",
-"state": "pre",
+"state": "in",
 "bo": null,
 "prediction": "",
 "hs": null,
