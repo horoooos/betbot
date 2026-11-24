@@ -28182,5 +28182,77 @@
   "div": "SC0",
   "reason": "edge_below_minimum",
   "retry_at": 1795547120.105861
+ },
+ "401880141": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-24T23:00:00+03:00",
+  "sport": "football",
+  "div": "E1",
+  "reason": "no_qualified_real_market",
+  "retry_at": 1795547360.338818
+ },
+ "401878345": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-24T23:00:00+03:00",
+  "sport": "football",
+  "div": "SC0",
+  "reason": "edge_below_minimum",
+  "retry_at": 1795547360.338818
+ },
+ "401915295": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-24T23:00:00+03:00",
+  "sport": "football",
+  "div": "UCL",
+  "reason": "edge_below_minimum",
+  "retry_at": 1795547360.338818
+ },
+ "401915296": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-24T23:00:00+03:00",
+  "sport": "football",
+  "div": "UCL",
+  "reason": "no_qualified_real_market",
+  "retry_at": 1795547360.338818
+ },
+ "401915294": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-24T23:00:00+03:00",
+  "sport": "football",
+  "div": "UCL",
+  "reason": "no_qualified_real_market",
+  "retry_at": 1795547360.338818
+ },
+ "401915379": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-24T23:00:00+03:00",
+  "sport": "football",
+  "div": "UCL",
+  "reason": "no_qualified_real_market",
+  "retry_at": 1795547360.338818
+ },
+ "401915299": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-24T23:00:00+03:00",
+  "sport": "football",
+  "div": "UCL",
+  "reason": "no_qualified_real_market",
+  "retry_at": 1795547360.338818
+ },
+ "401915298": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-24T23:00:00+03:00",
+  "sport": "football",
+  "div": "UCL",
+  "reason": "no_qualified_real_market",
+  "retry_at": 1795547360.338818
+ },
+ "401915297": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-24T23:00:00+03:00",
+  "sport": "football",
+  "div": "UCL",
+  "reason": "no_qualified_real_market",
+  "retry_at": 1795547360.338818
  }
 }
