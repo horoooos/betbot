@@ -1563,7 +1563,7 @@
  "value_day": "2026-11-24",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-24",
- "site_stamp": "1539|9425|2026-11-25 00|6|6335c3e18719f3fc",
+ "site_stamp": "1539|9425|2026-11-25 01|6|6335c3e18719f3fc",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -2974,7 +2974,7 @@
   "quote_matches": 80
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-25T00:58:44.777212+03:00",
+  "last_poll": "2026-11-25T01:00:44.552082+03:00",
   "cursor": "400",
   "posts": [
    {
@@ -9818,7 +9818,7 @@
     "profit_pct": -0.5
    },
    "football|UCL|401915294": {
-    "status": "open",
+    "status": "settled",
     "id": "401915294",
     "sport": "football",
     "div": "UCL",
@@ -10371,7 +10371,10 @@
        "price_kind": "author_recorded"
       }
      ]
-    }
+    },
+    "settled_at": "2026-11-24T22:00:44.552082+00:00",
+    "hit": true,
+    "profit_pct": 0.5
    }
   }
  }
