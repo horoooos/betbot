@@ -544,7 +544,8 @@
   "https://www.sport-express.ru/hockey/nhl/news/nyu-dzhersi-kolambus-schet-3-2-rezultat-matcha-nhl-24-noyabrya-2026-2478217/",
   "https://www.sport-express.ru/hockey/nhl/news/napadayuschiy-dilan-larkin-sdelal-rezultativnyy-pas-v-pervom-matche-za-monreal-posle-obmena-iz-detroyta-2478213/",
   "https://www.sport-express.ru/hockey/nhl/news/napadayuschiy-los-andzhelesa-artemiy-panarin-vyshel-na-led-v-matche-nhl-vpervye-posle-smerti-deda-2478210/",
-  "https://www.sport-express.ru/football/mls/news/kavan-sallivan-priznan-luchshim-molodym-igrokom-mls-2026-goda-2478198/"
+  "https://www.sport-express.ru/football/mls/news/kavan-sallivan-priznan-luchshim-molodym-igrokom-mls-2026-goda-2478198/",
+  "9z-team-ne-spravilas-s-lynn-vision-gaming-na-pgl-major-singapore-2026"
  ],
  "news_i": 4,
  "oddspapi": {
@@ -1733,7 +1734,7 @@
  "streak_day": {
   "2026-11-22": 2
  },
- "news_next": "2026-11-24T08:07:39.831457+03:00",
+ "news_next": "2026-11-24T08:13:54.694671+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -2761,7 +2762,7 @@
   "external_sources": {
    "providers": {
     "legalbet": {
-     "at": "2026-11-24T04:37:39.419230+00:00",
+     "at": "2026-11-24T05:07:54.694671+00:00",
      "status": "ok",
      "discovered": 1,
      "pages": 1,
@@ -2772,27 +2773,29 @@
      "contexts": 1
     },
     "livesport": {
-     "at": "2026-11-24T04:37:39.419230+00:00",
+     "at": "2026-11-24T05:07:54.694671+00:00",
      "status": "ok",
      "discovered": 14,
      "pages": 6,
-     "opinions": 6,
-     "mapped": 1,
+     "opinions": 8,
+     "mapped": 3,
      "articles_available": 17,
-     "next_offset": 16,
+     "next_offset": 8,
      "contexts": 4
     },
     "metaratings": {
-     "at": "2026-11-24T04:37:39.419230+00:00",
-     "status": "unavailable",
-     "discovered": 0,
-     "pages": 0,
-     "opinions": 0,
-     "mapped": 0,
-     "error": "HTTPError"
+     "at": "2026-11-24T05:07:54.694671+00:00",
+     "status": "ok",
+     "discovered": 8,
+     "pages": 6,
+     "opinions": 24,
+     "mapped": 3,
+     "articles_available": 37,
+     "next_offset": 6,
+     "contexts": 6
     },
     "rb": {
-     "at": "2026-11-24T04:37:39.419230+00:00",
+     "at": "2026-11-24T05:07:54.694671+00:00",
      "status": "ok",
      "discovered": 1,
      "pages": 1,
@@ -2803,14 +2806,14 @@
      "contexts": 1
     },
     "vseprosport": {
-     "at": "2026-11-24T04:37:39.419230+00:00",
+     "at": "2026-11-24T05:07:54.694671+00:00",
      "status": "ok",
      "discovered": 9,
      "pages": 2,
      "opinions": 0,
      "mapped": 0,
      "articles_available": 10,
-     "next_offset": 11,
+     "next_offset": 8,
      "page_errors": 4,
      "contexts": 2
     }
@@ -2936,7 +2939,7 @@
   "quote_matches": 65
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-24T08:05:54.255823+03:00",
+  "last_poll": "2026-11-24T08:07:54.694671+03:00",
   "cursor": "370",
   "posts": [
    {
@@ -3630,7 +3633,6 @@
    "186841": "pre",
    "186842": "pre",
    "186843": "pre",
-   "1789254": "in",
    "1789258": "in",
    "1789253": "pre",
    "1789260": "pre",
