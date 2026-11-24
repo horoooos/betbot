@@ -1563,7 +1563,7 @@
  "value_day": "2026-11-24",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-24",
- "site_stamp": "1535|9411|2026-11-24 23|6|48807727ef2aac20",
+ "site_stamp": "1536|9413|2026-11-24 23|6|d53c470ef52f1c33",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1720,7 +1720,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 9411,
+ "dz_last": 9413,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2900,15 +2900,15 @@
   "model": {
    "weight": 0.0,
    "status": "baseline_better",
-   "settled_matches": 123,
+   "settled_matches": 124,
    "required_matches": 100,
-   "trained_at": "2026-11-24T20:51:20.806249+00:00",
+   "trained_at": "2026-11-24T20:53:20.074460+00:00",
    "candidate_weight": 0.0,
    "train_matches": 83,
-   "validation_matches": 40,
+   "validation_matches": 41,
    "validation_from": "2026-11-22T00:00:00+00:00",
-   "validation_logloss": 3.131119159441224,
-   "validation_baseline_logloss": 3.131119159441224
+   "validation_logloss": 3.119956987519379,
+   "validation_baseline_logloss": 3.119956987519379
   },
   "sport_models": {
    "hockey": {
@@ -2970,7 +2970,7 @@
   "quote_matches": 78
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-24T23:51:20.806249+03:00",
+  "last_poll": "2026-11-24T23:53:20.074460+03:00",
   "cursor": "398",
   "posts": [
    {
@@ -3674,7 +3674,7 @@
    "401915380": "post",
    "401915300": "post",
    "401899536": "post",
-   "401899539": "in",
+   "401899539": "post",
    "401899538": "post",
    "401899532": "in",
    "401899535": "post",
@@ -9548,7 +9548,7 @@
     }
    },
    "football|I2|401899530": {
-    "status": "open",
+    "status": "settled",
     "id": "401899530",
     "sport": "football",
     "div": "I2",
@@ -9615,7 +9615,10 @@
        "price_kind": "author_recorded"
       }
      ]
-    }
+    },
+    "settled_at": "2026-11-24T20:53:20.074460+00:00",
+    "hit": false,
+    "profit_pct": -0.5
    },
    "tennis|WTA|186825": {
     "status": "open",
