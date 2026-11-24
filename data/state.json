@@ -2970,7 +2970,7 @@
   "quote_matches": 78
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-24T23:53:20.074460+03:00",
+  "last_poll": "2026-11-24T23:55:20.092630+03:00",
   "cursor": "398",
   "posts": [
    {
@@ -9487,7 +9487,7 @@
     "profit_pct": 1.15
    },
    "football|I2|401899539": {
-    "status": "open",
+    "status": "settled",
     "id": "401899539",
     "sport": "football",
     "div": "I2",
@@ -9545,7 +9545,10 @@
        "price_kind": "author_recorded"
       }
      ]
-    }
+    },
+    "settled_at": "2026-11-24T20:55:20.092630+00:00",
+    "hit": true,
+    "profit_pct": 0.255
    },
    "football|I2|401899530": {
     "status": "settled",
