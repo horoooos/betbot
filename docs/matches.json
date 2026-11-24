@@ -123,44 +123,9 @@
 },
 {
 "sport": "esports",
-"id": "1816906",
-"league": "Киберспорт · CS2",
-"kickoff": "2026-11-24T11:45:00+03:00",
-"home": "Heroic",
-"away": "Chinggis Warriors",
-"hl": "https://cdn-api.pandascore.co/images/team/image/3246/680px_heroic_2023_allmode.png",
-"al": "https://cdn-api.pandascore.co/images/team/image/134264/222px_cw_allmode.png",
-"hid": "3246",
-"aid": "134264",
-"bb": "https://betboom.ru/search?query=%D0%A5%D0%B5%D1%80%D0%BE%D0%B8%D1%87&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=esports",
-"path": "",
-"url": "esports.html?e=1816906&d=CS2",
-"participants": [
-[
-"Heroic",
-"Heroic"
-],
-[
-"Chinggis Warriors",
-"Chinggis Warriors"
-]
-],
-"div": "CS2",
-"state": "pre",
-"bo": 1,
-"prediction": "",
-"hs": 0,
-"as": 0,
-"tip": "",
-"top": false,
-"bot": null,
-"lt": null
-},
-{
-"sport": "esports",
 "id": "1816902",
 "league": "Киберспорт · CS2",
-"kickoff": "2026-11-24T11:45:00+03:00",
+"kickoff": "2026-11-24T11:49:07+03:00",
 "home": "NIP",
 "away": "Lynn Vision",
 "hl": "https://cdn-api.pandascore.co/images/team/image/3218/600px_ninjas_in_pyjamas_2021_lightmode.png",
@@ -181,7 +146,42 @@
 ]
 ],
 "div": "CS2",
-"state": "pre",
+"state": "in",
+"bo": 1,
+"prediction": "",
+"hs": 0,
+"as": 0,
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "esports",
+"id": "1816906",
+"league": "Киберспорт · CS2",
+"kickoff": "2026-11-24T11:50:07+03:00",
+"home": "Heroic",
+"away": "Chinggis Warriors",
+"hl": "https://cdn-api.pandascore.co/images/team/image/3246/680px_heroic_2023_allmode.png",
+"al": "https://cdn-api.pandascore.co/images/team/image/134264/222px_cw_allmode.png",
+"hid": "3246",
+"aid": "134264",
+"bb": "https://betboom.ru/search?query=%D0%A5%D0%B5%D1%80%D0%BE%D0%B8%D1%87&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=esports",
+"path": "",
+"url": "esports.html?e=1816906&d=CS2",
+"participants": [
+[
+"Heroic",
+"Heroic"
+],
+[
+"Chinggis Warriors",
+"Chinggis Warriors"
+]
+],
+"div": "CS2",
+"state": "in",
 "bo": 1,
 "prediction": "",
 "hs": 0,
