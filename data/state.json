@@ -7,9 +7,6 @@
  "schedule_day": "2026-11-24",
  "content_slot": "2026-11-24-10",
  "news_seen": [
-  "team-yandex-vyigrala-u-playtime-na-blast-slam-ix",
-  "parivision-ili-legion-kto-okazhet-sya-silneye-v-matche-na-blast-slam-ix",
-  "https://www.sport-express.ru/football/rfpl/news/rostov-krylya-sovetov-suleymanov-s-pasa-oluseguna-udvoil-preimuschestvo-rostovchan-2477089/",
   "dosia-ne-poveril-v-prokhod-komandy-s1mple-na-vtoroi-yetap-pgl-major-singapore",
   "parivision-razobralas-s-komandoi-zayac-i-xakoda-na-blast-slam-ix",
   "malr1ne-i-kiritych-potrollili-drug-druga-v-matche-na-blast-slam-ix-patch",
@@ -506,9 +503,12 @@
   "https://www.sport-express.ru/cybersport/esports/news/parivision-dendele-cs-rezultat-matcha-pgl-major-singapore-2026-po-cs2-schet-24-noyabrya-2026-goda-2478274/",
   "https://www.sport-express.ru/cybersport/esports/news/team-liquid-bcgame-rezultat-matcha-pgl-major-singapore-2026-po-cs2-schet-24-noyabrya-2026-goda-2478269/",
   "https://www.sport-express.ru/hockey/nhl/news/kaprizov-stal-devyatym-igrokom-v-istorii-nhl-s-shestyu-matchami-podryad-s-dvumya-i-bolee-golevymi-peredachami-2478277/",
-  "https://www.sport-express.ru/football/rfpl/news/trener-cska-igdisamov-obyasnil-porazhenie-ot-krasnodara-individualnymi-oshibkami-2478268/"
+  "https://www.sport-express.ru/football/rfpl/news/trener-cska-igdisamov-obyasnil-porazhenie-ot-krasnodara-individualnymi-oshibkami-2478268/",
+  "https://www.sport-express.ru/basketball/nba/news/chikago-otchislil-centrovogo-orlando-robinsona-2478271/",
+  "flyquest-pobedila-eternal-fire-v-debyutnom-matche-na-pgl-major-singapore-2026",
+  "s1mple-sygral-vtoruyu-khudshuyu-kartu-na-meidzhorakh-po-counter-strike"
  ],
- "news_i": 4,
+ "news_i": 0,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1695,7 +1695,7 @@
  "streak_day": {
   "2026-11-22": 2
  },
- "news_next": "2026-11-24T11:12:49.537270+03:00",
+ "news_next": "2026-11-24T11:45:49.042390+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -2015,7 +2015,8 @@
   "https://images.cybersport.ru/images/as-is/plain/1c/1c123d29-a9e8-4bff-89cb-acf3fee39441.jpg",
   "https://ss.sport-express.ru/userfiles/materials/224/2246233/1180x665.jpg",
   "https://upload.wikimedia.org/wikipedia/commons/8/86/Hjalgr%C3%ADm_Eltt%C3%B8r_A_Faroese_Football_Player.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-  "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Wisconsin_Badgers_football_fans_09-15-2012_284_%288016467646%29.jpg/1280px-Wisconsin_Badgers_football_fans_09-15-2012_284_%288016467646%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Wisconsin_Badgers_football_fans_09-15-2012_284_%288016467646%29.jpg/1280px-Wisconsin_Badgers_football_fans_09-15-2012_284_%288016467646%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "https://images.cybersport.ru/images/as-is/plain/11/1187affc-5055-405e-b77b-1d38cda58f1a.jpg"
  ],
  "indexnow_day": "2026-11-24",
  "vk_wall_err": null,
@@ -2391,7 +2392,8 @@
   "9228",
   "9232",
   "9318",
-  "9320"
+  "9320",
+  "9322"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -2699,11 +2701,12 @@
   "2026-11-23:новость:fc8eb7cc7f36a6ffba8936d9",
   "2026-11-23:новость:ae206e19bb065a852abf1236",
   "2026-11-24:новость:6fe6a1f8958c4c09526d9c25",
-  "2026-11-24:новость:1eb0d1463e5217925730362e"
+  "2026-11-24:новость:1eb0d1463e5217925730362e",
+  "2026-11-24:новость:4048a284898205bd71a63b79"
  ],
  "dz_last_delivery": {
-  "source_id": 9320,
-  "message_id": 855,
+  "source_id": 9322,
+  "message_id": 856,
   "kind": "новость"
  },
  "learn_attempt_day": "2026-11-24",
@@ -2906,7 +2909,7 @@
   "quote_matches": 69
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-24T11:12:49.254826+03:00",
+  "last_poll": "2026-11-24T11:14:49.042390+03:00",
   "cursor": "371",
   "posts": [
    {
@@ -3675,7 +3678,11 @@
    "401877529": "pre",
    "401877530": "pre",
    "401877545": "pre",
-   "401877547": "pre"
+   "401877547": "pre",
+   "1816902": "pre",
+   "1816906": "pre",
+   "1816908": "pre",
+   "1816907": "pre"
   },
   "daily": {
    "day": "2026-11-24"
@@ -4364,6 +4371,36 @@
    "probability": 0.5423,
    "odds": 1.71,
    "edge": -0.07267,
+   "estimated": true
+  },
+  "esports|CS2|1816902": {
+   "reason": "no_real_odds",
+   "checked_at": "2026-11-24T08:15:07.905788+00:00",
+   "kickoff": "2026-11-24T11:45:00+03:00",
+   "sport": "esports",
+   "id": "1816902",
+   "home": "NIP",
+   "away": "Lynn Vision",
+   "priced_markets": 0,
+   "market": "Победа: Lynn Vision",
+   "probability": 0.5005,
+   "odds": 1.86,
+   "edge": -0.06907,
+   "estimated": true
+  },
+  "esports|CS2|1816906": {
+   "reason": "no_real_odds",
+   "checked_at": "2026-11-24T08:15:09.435396+00:00",
+   "kickoff": "2026-11-24T12:00:00+03:00",
+   "sport": "esports",
+   "id": "1816906",
+   "home": "Heroic",
+   "away": "Chinggis Warriors",
+   "priced_markets": 0,
+   "market": "Победа: Heroic",
+   "probability": 0.6241,
+   "odds": 1.49,
+   "edge": -0.07009,
    "estimated": true
   }
  },
