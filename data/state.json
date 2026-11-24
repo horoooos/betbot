@@ -1563,7 +1563,7 @@
  "value_day": "2026-11-24",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-24",
- "site_stamp": "1531|9353|2026-11-24 17|6|9569fddbac1d33af",
+ "site_stamp": "1531|9353|2026-11-24 17|6|8d84710ad7bf5b43",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -2940,7 +2940,7 @@
   "quote_matches": 73
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-24T17:01:36.218193+03:00",
+  "last_poll": "2026-11-24T17:03:36.477233+03:00",
   "cursor": "382",
   "posts": [
    {
@@ -3640,7 +3640,7 @@
    "401909315": "pre",
    "401909316": "pre",
    "1816478": "in",
-   "1816477": "pre",
+   "1816477": "in",
    "401902008": "pre",
    "401902004": "pre",
    "401915380": "pre",
@@ -8176,7 +8176,7 @@
     "profit_pct": 0.435
    },
    "esports|CS2|1816911": {
-    "status": "open",
+    "status": "settled",
     "id": "1816911",
     "sport": "esports",
     "div": "CS2",
@@ -8243,7 +8243,10 @@
        "price_kind": "author_recorded"
       }
      ]
-    }
+    },
+    "settled_at": "2026-11-24T14:03:36.477233+00:00",
+    "hit": false,
+    "profit_pct": -0.5
    },
    "tennis|WTA|186820": {
     "status": "open",
