@@ -1563,7 +1563,7 @@
  "value_day": "2026-11-24",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-24",
- "site_stamp": "1536|9418|2026-11-25 00|6|17bb0ba5d5cd7a10",
+ "site_stamp": "1537|9420|2026-11-25 00|6|1db8a59e8fa74f36",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1720,7 +1720,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 9418,
+ "dz_last": 9420,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2902,15 +2902,15 @@
   "model": {
    "weight": 0.0,
    "status": "baseline_better",
-   "settled_matches": 125,
+   "settled_matches": 126,
    "required_matches": 100,
-   "trained_at": "2026-11-24T21:36:44.485310+00:00",
+   "trained_at": "2026-11-24T21:38:44.549093+00:00",
    "candidate_weight": 0.0,
    "train_matches": 83,
-   "validation_matches": 42,
+   "validation_matches": 43,
    "validation_from": "2026-11-22T00:00:00+00:00",
-   "validation_logloss": 3.1480929631264494,
-   "validation_baseline_logloss": 3.1480929631264494
+   "validation_logloss": 3.127758301210289,
+   "validation_baseline_logloss": 3.127758301210289
   },
   "sport_models": {
    "hockey": {
@@ -2972,7 +2972,7 @@
   "quote_matches": 79
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-25T00:36:44.485310+03:00",
+  "last_poll": "2026-11-25T00:38:44.549093+03:00",
   "cursor": "398",
   "posts": [
    {
@@ -3680,20 +3680,20 @@
    "401899532": "post",
    "401899535": "post",
    "401899530": "post",
-   "401880148": "in",
-   "401880147": "in",
-   "401880146": "in",
-   "401880145": "in",
-   "401880144": "in",
+   "401880148": "post",
+   "401880147": "post",
+   "401880146": "post",
+   "401880145": "post",
+   "401880144": "post",
    "401880143": "in",
    "401880142": "in",
    "401880824": "post",
    "401880838": "in",
-   "401880823": "in",
-   "401880829": "in",
+   "401880823": "post",
+   "401880829": "post",
    "401881358": "post",
-   "401881354": "in",
-   "401878348": "in",
+   "401881354": "post",
+   "401878348": "post",
    "401880141": "in",
    "401878345": "in",
    "401915295": "in",
@@ -10366,14 +10366,5 @@
     }
    }
   }
- },
- "mod_poll": {
-  "key": "SC0|401878348",
-  "id": "401878348",
-  "poll": 9349,
-  "post": 9348,
-  "home": "Хайберниан",
-  "away": "Данди",
-  "kickoff": "2026-11-24T22:45:00+03:00"
  }
 }

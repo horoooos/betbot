@@ -884,7 +884,7 @@ null
 ]
 ],
 "div": "E2",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "",
 "hs": "1",
@@ -919,7 +919,7 @@ null
 ]
 ],
 "div": "E2",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "",
 "hs": "0",
@@ -989,7 +989,7 @@ null
 ]
 ],
 "div": "E3",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "",
 "hs": "1",
@@ -1024,7 +1024,7 @@ null
 ]
 ],
 "div": "E1",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "predictions/2026-11-24-bristol-siti-reksem-401880148.html",
 "hs": "1",
@@ -1145,7 +1145,7 @@ null
 "min_odds": 1.66,
 "minute": "26'",
 "p": 0.631,
-"result": null,
+"result": "hit",
 "score": "0:1"
 }
 },
@@ -1174,7 +1174,7 @@ null
 ]
 ],
 "div": "E1",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "",
 "hs": "0",
@@ -1209,7 +1209,7 @@ null
 ]
 ],
 "div": "E1",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "",
 "hs": "4",
@@ -1244,7 +1244,7 @@ null
 ]
 ],
 "div": "E1",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "",
 "hs": "2",
@@ -1279,7 +1279,7 @@ null
 ]
 ],
 "div": "E1",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "",
 "hs": "1",
@@ -1485,7 +1485,7 @@ null
 ]
 ],
 "div": "SC0",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "",
 "hs": "2",
