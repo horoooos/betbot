@@ -1563,7 +1563,7 @@
  "value_day": "2026-11-24",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-24",
- "site_stamp": "1534|9395|2026-11-24 22|6|4b4252213093948a",
+ "site_stamp": "1534|9399|2026-11-24 22|6|f23f4a0628fdd2de",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1720,7 +1720,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 9395,
+ "dz_last": 9399,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2962,7 +2962,7 @@
   "quote_matches": 76
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-24T22:51:20.266834+03:00",
+  "last_poll": "2026-11-24T22:53:20.325774+03:00",
   "cursor": "396",
   "posts": [
    {
@@ -3635,7 +3635,7 @@
    "186814": "post",
    "186828": "pre",
    "186827": "pre",
-   "186825": "pre",
+   "186825": "in",
    "186818": "post",
    "186819": "post",
    "186820": "post",
@@ -5098,7 +5098,7 @@
   },
   "football|E1|401880141": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-24T19:41:59.030358+00:00",
+   "checked_at": "2026-11-24T19:53:45.186719+00:00",
    "kickoff": "2026-11-24T23:00:00+03:00",
    "sport": "football",
    "id": "401880141",
@@ -5113,7 +5113,7 @@
   },
   "football|SC0|401878345": {
    "reason": "edge_below_minimum",
-   "checked_at": "2026-11-24T19:41:59.518482+00:00",
+   "checked_at": "2026-11-24T19:53:45.724221+00:00",
    "kickoff": "2026-11-24T23:00:00+03:00",
    "sport": "football",
    "id": "401878345",
@@ -5144,7 +5144,7 @@
   },
   "football|UCL|401915296": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-24T19:42:09.718970+00:00",
+   "checked_at": "2026-11-24T19:53:45.962544+00:00",
    "kickoff": "2026-11-24T23:00:00+03:00",
    "sport": "football",
    "id": "401915296",
@@ -5152,29 +5152,30 @@
    "away": "АЕК",
    "priced_markets": 7,
    "market": "Обе забьют — да",
-   "probability": 0.5667,
-   "odds": 1.64,
-   "edge": -0.07061,
+   "probability": 0.5653,
+   "odds": 1.65,
+   "edge": -0.06726,
    "estimated": true
   },
   "football|UCL|401915294": {
-   "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-24T19:42:10.165253+00:00",
+   "reason": "published",
+   "checked_at": "2026-11-24T19:53:55.584418+00:00",
    "kickoff": "2026-11-24T23:00:00+03:00",
    "sport": "football",
    "id": "401915294",
    "home": "Фейеноорд",
    "away": "Порту",
-   "priced_markets": 6,
-   "market": "Обе забьют — да",
-   "probability": 0.5827,
-   "odds": 1.6,
-   "edge": -0.06768,
-   "estimated": true
+   "market": "П2",
+   "strategy": "external_trial",
+   "source_count": 59,
+   "probability": 0.4767,
+   "odds": 2.0,
+   "edge": -0.0466,
+   "estimated": false
   },
   "football|UCL|401915379": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-24T19:42:10.593765+00:00",
+   "checked_at": "2026-11-24T19:53:56.057773+00:00",
    "kickoff": "2026-11-24T23:00:00+03:00",
    "sport": "football",
    "id": "401915379",
@@ -5182,14 +5183,14 @@
    "away": "Наполи",
    "priced_markets": 7,
    "market": "Обе забьют — да",
-   "probability": 0.5855,
-   "odds": 1.59,
-   "edge": -0.06905,
+   "probability": 0.589,
+   "odds": 1.58,
+   "edge": -0.06938,
    "estimated": true
   },
   "football|UCL|401915299": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-24T19:42:11.024316+00:00",
+   "checked_at": "2026-11-24T19:53:56.485727+00:00",
    "kickoff": "2026-11-24T23:00:00+03:00",
    "sport": "football",
    "id": "401915299",
@@ -5197,14 +5198,14 @@
    "away": "Ланс",
    "priced_markets": 7,
    "market": "Обе забьют — да",
-   "probability": 0.6539,
+   "probability": 0.6567,
    "odds": 1.42,
-   "edge": -0.07146,
+   "edge": -0.06749,
    "estimated": true
   },
   "football|UCL|401915298": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-24T19:42:11.507770+00:00",
+   "checked_at": "2026-11-24T19:53:56.918457+00:00",
    "kickoff": "2026-11-24T23:00:00+03:00",
    "sport": "football",
    "id": "401915298",
@@ -5212,24 +5213,24 @@
    "away": "ПСВ",
    "priced_markets": 7,
    "market": "Обе забьют — да",
-   "probability": 0.6219,
-   "odds": 1.5,
-   "edge": -0.06715,
+   "probability": 0.6179,
+   "odds": 1.51,
+   "edge": -0.06697,
    "estimated": true
   },
   "football|UCL|401915297": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-24T19:42:11.751785+00:00",
+   "checked_at": "2026-11-24T19:53:57.220187+00:00",
    "kickoff": "2026-11-24T23:00:00+03:00",
    "sport": "football",
    "id": "401915297",
    "home": "Слован",
    "away": "Бетис",
    "priced_markets": 7,
-   "market": "Обе забьют — да",
-   "probability": 0.5795,
-   "odds": 1.6,
-   "edge": -0.0728,
+   "market": "П2 и ТБ 1.5",
+   "probability": 0.6508,
+   "odds": 1.43,
+   "edge": -0.06936,
    "estimated": true
   }
  },
@@ -9772,6 +9773,562 @@
        "published_at": "2026-11-24T14:26:00+00:00",
        "observed_at": "2026-11-24T15:33:47.303149+00:00",
        "odds": 1.47,
+       "price_kind": "author_recorded"
+      }
+     ]
+    }
+   },
+   "football|UCL|401915294": {
+    "status": "open",
+    "id": "401915294",
+    "sport": "football",
+    "div": "UCL",
+    "kickoff": "2026-11-24T23:00:00+03:00",
+    "published_at": "2026-11-24T19:53:52.114638+00:00",
+    "msg_id": 9396,
+    "tip": {
+     "key": "A",
+     "label": "П2",
+     "p": 0.4767,
+     "odds": 2.0,
+     "est": false,
+     "stake": 0.5,
+     "strategy": "external_trial",
+     "selection_mode": "external_fallback",
+     "trial_expires_at": null,
+     "probability_origin": "baseline_model",
+     "model_edge": -0.04655,
+     "source_count": 59,
+     "source_refs": [
+      {
+       "author": "/predictors/aleksandr-rozhko",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+       "published_at": "2026-11-23T09:53:00+00:00",
+       "observed_at": "2026-11-23T17:07:21.410618+00:00",
+       "odds": 2.47,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/aleksey-alekseevich-6",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+       "published_at": "2026-11-23T10:53:00+00:00",
+       "observed_at": "2026-11-23T17:07:21.410618+00:00",
+       "odds": 2.47,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/aleksandr-zuev-10",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+       "published_at": "2026-11-23T13:54:00+00:00",
+       "observed_at": "2026-11-23T14:00:53.686074+00:00",
+       "odds": 2.47,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "expert:александр москвин",
+       "provider": "metaratings",
+       "source": "https://metaratings.ru/prognozy/futbol/fejenoord-portu-prognoz-na-match-ligi-chempionov-24-noyabrya-2026-goda/",
+       "published_at": "2026-11-23T14:43:33+00:00",
+       "observed_at": "2026-11-23T21:52:26.544347+00:00",
+       "odds": 2.4,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/budu-profi",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+       "published_at": "2026-11-23T15:22:00+00:00",
+       "observed_at": "2026-11-23T15:25:20.727500+00:00",
+       "odds": 2.38,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/adelina-safina",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+       "published_at": "2026-11-23T17:59:00+00:00",
+       "observed_at": "2026-11-24T03:39:39.766776+00:00",
+       "odds": 2.38,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/egor-grishchenko-1",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+       "published_at": "2026-11-23T18:03:00+00:00",
+       "observed_at": "2026-11-23T18:07:22.210171+00:00",
+       "odds": 2.38,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/luchshiyvsvoem-dele",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+       "published_at": "2026-11-23T19:34:00+00:00",
+       "observed_at": "2026-11-24T03:39:39.766776+00:00",
+       "odds": 2.38,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/kloun-pikabu",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+       "published_at": "2026-11-23T19:39:00+00:00",
+       "observed_at": "2026-11-23T19:52:12.015171+00:00",
+       "odds": 2.38,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/denis-titov-6",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+       "published_at": "2026-11-23T19:50:00+00:00",
+       "observed_at": "2026-11-23T19:52:12.015171+00:00",
+       "odds": 2.38,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "expert:роман петренко",
+       "provider": "livesport",
+       "source": "https://www.livesport.ru/tips/football/2026/11/24/feyenoord-porto/",
+       "published_at": "2026-11-23T19:54:00+00:00",
+       "observed_at": "2026-11-23T20:20:35.117915+00:00",
+       "odds": 2.5,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/denis-minskii",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+       "published_at": "2026-11-23T20:52:00+00:00",
+       "observed_at": "2026-11-23T20:54:19.094194+00:00",
+       "odds": 2.38,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/miki-maus-1",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+       "published_at": "2026-11-23T21:15:00+00:00",
+       "observed_at": "2026-11-23T21:15:58.711037+00:00",
+       "odds": 2.38,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/mark-kotov-2",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+       "published_at": "2026-11-23T21:27:00+00:00",
+       "observed_at": "2026-11-23T21:35:59.520060+00:00",
+       "odds": 2.38,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/evgenii-an",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+       "published_at": "2026-11-23T21:27:00+00:00",
+       "observed_at": "2026-11-23T21:35:59.520060+00:00",
+       "odds": 2.38,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/roman-pavlov-21",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+       "published_at": "2026-11-23T22:08:00+00:00",
+       "observed_at": "2026-11-24T03:39:39.766776+00:00",
+       "odds": 2.38,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/sergey-rozhkov-4",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+       "published_at": "2026-11-23T22:57:00+00:00",
+       "observed_at": "2026-11-23T23:02:16.351064+00:00",
+       "odds": 2.29,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/layuk-stanislav",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+       "published_at": "2026-11-23T23:03:00+00:00",
+       "observed_at": "2026-11-23T23:22:17.925958+00:00",
+       "odds": 2.29,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/vitaliy-zakharov-1",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+       "published_at": "2026-11-23T23:56:00+00:00",
+       "observed_at": "2026-11-24T00:04:18.000846+00:00",
+       "odds": 2.29,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/aleksandr-suslebin",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+       "published_at": "2026-11-24T00:47:00+00:00",
+       "observed_at": "2026-11-24T01:08:18.377784+00:00",
+       "odds": 2.29,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/katerina-khartlova",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+       "published_at": "2026-11-24T02:21:00+00:00",
+       "observed_at": "2026-11-24T02:33:39.992880+00:00",
+       "odds": 2.29,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/viktor-kirov",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+       "published_at": "2026-11-24T02:31:00+00:00",
+       "observed_at": "2026-11-24T02:33:39.992880+00:00",
+       "odds": 2.29,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/roman-akhmatov-1",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+       "published_at": "2026-11-24T03:12:00+00:00",
+       "observed_at": "2026-11-24T03:17:39.854981+00:00",
+       "odds": 2.29,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/andrei-rassovskii",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+       "published_at": "2026-11-24T03:52:00+00:00",
+       "observed_at": "2026-11-24T04:01:39.472903+00:00",
+       "odds": 2.29,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/artem-zb-akk3",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+       "published_at": "2026-11-24T04:16:00+00:00",
+       "observed_at": "2026-11-24T04:21:39.517612+00:00",
+       "odds": 2.29,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/aleksandr-novikov-63",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+       "published_at": "2026-11-24T04:18:00+00:00",
+       "observed_at": "2026-11-24T04:21:39.517612+00:00",
+       "odds": 2.29,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/ninja-gaiden",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+       "published_at": "2026-11-24T06:04:00+00:00",
+       "observed_at": "2026-11-24T06:05:54.771914+00:00",
+       "odds": 2.21,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/aleksei-shhukin-4",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+       "published_at": "2026-11-24T06:42:00+00:00",
+       "observed_at": "2026-11-24T06:47:54.561183+00:00",
+       "odds": 2.21,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/iaroslav-mitkov",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+       "published_at": "2026-11-24T07:20:00+00:00",
+       "observed_at": "2026-11-24T07:31:54.520181+00:00",
+       "odds": 2.21,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/aleksandr-shvets-1",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+       "published_at": "2026-11-24T07:47:00+00:00",
+       "observed_at": "2026-11-24T07:52:49.129040+00:00",
+       "odds": 2.21,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/easy-street",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+       "published_at": "2026-11-24T08:26:00+00:00",
+       "observed_at": "2026-11-24T08:32:50.654806+00:00",
+       "odds": 2.21,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/d-m-i-t-r-i-i-r",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+       "published_at": "2026-11-24T09:08:00+00:00",
+       "observed_at": "2026-11-24T09:14:50.765671+00:00",
+       "odds": 2.21,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/siraz-33",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+       "published_at": "2026-11-24T09:57:00+00:00",
+       "observed_at": "2026-11-24T09:58:50.166738+00:00",
+       "odds": 2.21,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/evgenii-rozkov-1",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+       "published_at": "2026-11-24T10:15:00+00:00",
+       "observed_at": "2026-11-24T10:18:50.557472+00:00",
+       "odds": 2.21,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/vitaliy-tulubenskiy",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+       "published_at": "2026-11-24T10:18:00+00:00",
+       "observed_at": "2026-11-24T10:18:50.557472+00:00",
+       "odds": 2.21,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/georgii-domnikov",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+       "published_at": "2026-11-24T10:37:00+00:00",
+       "observed_at": "2026-11-24T10:40:50.726724+00:00",
+       "odds": 2.21,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/aleksei-zigalenko-1",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+       "published_at": "2026-11-24T10:55:00+00:00",
+       "observed_at": "2026-11-24T11:00:51.833442+00:00",
+       "odds": 2.12,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/dmitrii-mortvicev",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+       "published_at": "2026-11-24T10:59:00+00:00",
+       "observed_at": "2026-11-24T11:00:51.833442+00:00",
+       "odds": 2.12,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/armeec-moskvy",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+       "published_at": "2026-11-24T11:37:00+00:00",
+       "observed_at": "2026-11-24T11:44:51.033667+00:00",
+       "odds": 2.12,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/gennadiy-evrost",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+       "published_at": "2026-11-24T12:06:00+00:00",
+       "observed_at": "2026-11-24T19:47:20.579178+00:00",
+       "odds": 2.12,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/s-club-7",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+       "published_at": "2026-11-24T12:21:00+00:00",
+       "observed_at": "2026-11-24T12:26:51.592004+00:00",
+       "odds": 2.12,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/ameliya-mixailova",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+       "published_at": "2026-11-24T12:22:00+00:00",
+       "observed_at": "2026-11-24T12:26:51.592004+00:00",
+       "odds": 2.12,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/rino-mino",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+       "published_at": "2026-11-24T12:41:00+00:00",
+       "observed_at": "2026-11-24T12:48:51.823688+00:00",
+       "odds": 2.12,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/sbn-sunny",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+       "published_at": "2026-11-24T12:42:00+00:00",
+       "observed_at": "2026-11-24T12:48:51.823688+00:00",
+       "odds": 2.12,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/yuriy-plyatsko",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+       "published_at": "2026-11-24T12:43:00+00:00",
+       "observed_at": "2026-11-24T12:48:51.823688+00:00",
+       "odds": 2.12,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/sergei-belocerkovec-1",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+       "published_at": "2026-11-24T12:59:00+00:00",
+       "observed_at": "2026-11-24T13:09:36.404256+00:00",
+       "odds": 2.12,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/stas-rotor-volg",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+       "published_at": "2026-11-24T13:28:00+00:00",
+       "observed_at": "2026-11-24T13:31:36.014373+00:00",
+       "odds": 2.12,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/alan-bzarov",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+       "published_at": "2026-11-24T13:29:00+00:00",
+       "observed_at": "2026-11-24T13:31:36.014373+00:00",
+       "odds": 2.12,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/vitaliy-nizamutdinov-1",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+       "published_at": "2026-11-24T13:30:00+00:00",
+       "observed_at": "2026-11-24T13:31:36.014373+00:00",
+       "odds": 2.12,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/aleksandr-slepcov-1",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+       "published_at": "2026-11-24T15:27:00+00:00",
+       "observed_at": "2026-11-24T15:33:47.303149+00:00",
+       "odds": 2.14,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/aleksandr-nevskii-10",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+       "published_at": "2026-11-24T16:08:00+00:00",
+       "observed_at": "2026-11-24T16:15:47.300365+00:00",
+       "odds": 2.14,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/sol-gudman",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+       "published_at": "2026-11-24T16:48:00+00:00",
+       "observed_at": "2026-11-24T16:55:47.598596+00:00",
+       "odds": 2.14,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/grom-prognoz",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+       "published_at": "2026-11-24T16:50:00+00:00",
+       "observed_at": "2026-11-24T16:55:47.598596+00:00",
+       "odds": 2.14,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/arhangel-1",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+       "published_at": "2026-11-24T17:11:00+00:00",
+       "observed_at": "2026-11-24T17:17:47.009152+00:00",
+       "odds": 2.14,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/aleksei-borisov-15",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+       "published_at": "2026-11-24T17:33:00+00:00",
+       "observed_at": "2026-11-24T17:37:47.741162+00:00",
+       "odds": 2.14,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/ivan-brovkin-2",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+       "published_at": "2026-11-24T18:45:00+00:00",
+       "observed_at": "2026-11-24T19:47:20.579178+00:00",
+       "odds": 2.14,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/plohish",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+       "published_at": "2026-11-24T18:59:00+00:00",
+       "observed_at": "2026-11-24T19:47:20.579178+00:00",
+       "odds": 2.14,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/raxat-azikulov-3",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+       "published_at": "2026-11-24T19:17:00+00:00",
+       "observed_at": "2026-11-24T19:25:20.764469+00:00",
+       "odds": 2.07,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/yurii-onoprienko",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+       "published_at": "2026-11-24T19:22:00+00:00",
+       "observed_at": "2026-11-24T19:25:20.764469+00:00",
+       "odds": 2.07,
        "price_kind": "author_recorded"
       }
      ]

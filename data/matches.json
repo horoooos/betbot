@@ -26161,7 +26161,7 @@
   "sport": "football",
   "div": "E1",
   "reason": "no_qualified_real_market",
-  "retry_at": 1795549880.768131
+  "retry_at": 1795550600.325774
  },
  "401878345": {
   "status": "waiting_data",
@@ -26169,7 +26169,7 @@
   "sport": "football",
   "div": "SC0",
   "reason": "edge_below_minimum",
-  "retry_at": 1795549880.768131
+  "retry_at": 1795550600.325774
  },
  "401915295": {
   "id": "401915295",
@@ -27430,7 +27430,10 @@
    }
   },
   "msg_id": 9391,
-  "btn": 4
+  "btn": 4,
+  "close": {
+   "H": 0.654
+  }
  },
  "401915296": {
   "status": "waiting_data",
@@ -27438,15 +27441,1713 @@
   "sport": "football",
   "div": "UCL",
   "reason": "no_qualified_real_market",
-  "retry_at": 1795549880.768131
+  "retry_at": 1795550600.325774
  },
  "401915294": {
-  "status": "waiting_data",
-  "kickoff": "2026-11-24T23:00:00+03:00",
-  "sport": "football",
+  "id": "401915294",
   "div": "UCL",
-  "reason": "no_qualified_real_market",
-  "retry_at": 1795549880.768131
+  "slug": "uefa.champions",
+  "kickoff": "2026-11-24T23:00:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "detail": "Scheduled",
+  "home": {
+   "id": "142",
+   "name": "Feyenoord Rotterdam",
+   "short": "Feyenoord",
+   "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/142.png",
+   "color": "ef2f24",
+   "alt": "000000",
+   "form": "LLLDD",
+   "score": "0",
+   "ru": "Фейеноорд"
+  },
+  "away": {
+   "id": "437",
+   "name": "FC Porto",
+   "short": "FC Porto",
+   "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/437.png",
+   "color": "0000dd",
+   "alt": "ffa000",
+   "form": "WWWWW",
+   "score": "0",
+   "ru": "Порту"
+  },
+  "odds": {
+   "H": 3.6,
+   "D": 3.65,
+   "A": 2.0,
+   "line": 2.5,
+   "over": 1.69,
+   "under": 2.15,
+   "spread_h": [
+    0.5,
+    1.769
+   ],
+   "spread_a": [
+    -0.5,
+    1.909
+   ]
+  },
+  "venue": "De Kuip",
+  "clock": "0'",
+  "goals": [],
+  "open": {
+   "A": 0.4767
+  },
+  "top": false,
+  "lam": [
+   1.2215912645856533,
+   1.6986946940268137
+  ],
+  "probs": {
+   "H": 0.26625115811222577,
+   "D": 0.2570226517338969,
+   "A": 0.47672619015387746,
+   "1X": 0.5232738098461223,
+   "12": 0.742977348266103,
+   "X2": 0.7337488418877747,
+   "BTTS_Y": 0.5851860526226913,
+   "BTTS_N": 0.41481394737730887,
+   "O15": 0.7975755039467848,
+   "U15": 0.20242449605321527,
+   "O25": 0.5587147658905322,
+   "U25": 0.44128523410946785,
+   "O35": 0.33491396746273244,
+   "U35": 0.6650860325372676,
+   "H_O05": 0.7052392269171643,
+   "H_O15": 0.3451620413766583,
+   "A_O05": 0.8170775311693014,
+   "A_O15": 0.5063481039483084,
+   "H-1.5": 0.11281850517162365,
+   "A+1.5": 0.8871814948283764,
+   "A-1.5": 0.2598731733457373,
+   "H+1.5": 0.7401268266542629,
+   "H-2.5": 0.036451456447344384,
+   "A-2.5": 0.11220570450454943,
+   "H+2.5": 0.8877942954954507,
+   "A+2.5": 0.9635485435526557,
+   "O45": 0.1715233851689916,
+   "U45": 0.8284766148310084,
+   "H_O25": 0.12522846916022332,
+   "A_O25": 0.2424308892991624,
+   "H&O15": 0.20933587657301445,
+   "A&O15": 0.3940862701760988,
+   "H&BTTS": 0.1461979838177524,
+   "A&BTTS": 0.24483471160726733,
+   "1X&U35": 0.36557456619500106,
+   "X2&U35": 0.4832182647063086,
+   "BTTS&O25": 0.4643485487948747,
+   "HT_H": 0.22805950552167986,
+   "HT_D": 0.4121189956806919,
+   "HT_A": 0.35982149879762826,
+   "HT_O05": 0.7222585352595167,
+   "HT_U05": 0.27774146474048333,
+   "HT_O15": 0.387207408322591,
+   "HT_U15": 0.6127925916774091
+  },
+  "scores": [
+   [
+    "1:1",
+    0.12083750382781658
+   ],
+   [
+    "1:2",
+    0.09503056786655407
+   ],
+   [
+    "0:1",
+    0.08263991997777874
+   ]
+  ],
+  "main": {
+   "key": "A",
+   "label": "П2",
+   "p": 0.4767,
+   "odds": 2.0,
+   "est": false,
+   "stake": 0.5,
+   "strategy": "external_trial",
+   "selection_mode": "external_fallback",
+   "trial_expires_at": null,
+   "probability_origin": "baseline_model",
+   "model_edge": -0.04655,
+   "source_count": 59,
+   "source_refs": [
+    {
+     "author": "/predictors/aleksandr-rozhko",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+     "published_at": "2026-11-23T09:53:00+00:00",
+     "observed_at": "2026-11-23T17:07:21.410618+00:00",
+     "odds": 2.47,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/aleksey-alekseevich-6",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+     "published_at": "2026-11-23T10:53:00+00:00",
+     "observed_at": "2026-11-23T17:07:21.410618+00:00",
+     "odds": 2.47,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/aleksandr-zuev-10",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+     "published_at": "2026-11-23T13:54:00+00:00",
+     "observed_at": "2026-11-23T14:00:53.686074+00:00",
+     "odds": 2.47,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "expert:александр москвин",
+     "provider": "metaratings",
+     "source": "https://metaratings.ru/prognozy/futbol/fejenoord-portu-prognoz-na-match-ligi-chempionov-24-noyabrya-2026-goda/",
+     "published_at": "2026-11-23T14:43:33+00:00",
+     "observed_at": "2026-11-23T21:52:26.544347+00:00",
+     "odds": 2.4,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/budu-profi",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+     "published_at": "2026-11-23T15:22:00+00:00",
+     "observed_at": "2026-11-23T15:25:20.727500+00:00",
+     "odds": 2.38,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/adelina-safina",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+     "published_at": "2026-11-23T17:59:00+00:00",
+     "observed_at": "2026-11-24T03:39:39.766776+00:00",
+     "odds": 2.38,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/egor-grishchenko-1",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+     "published_at": "2026-11-23T18:03:00+00:00",
+     "observed_at": "2026-11-23T18:07:22.210171+00:00",
+     "odds": 2.38,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/luchshiyvsvoem-dele",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+     "published_at": "2026-11-23T19:34:00+00:00",
+     "observed_at": "2026-11-24T03:39:39.766776+00:00",
+     "odds": 2.38,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/kloun-pikabu",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+     "published_at": "2026-11-23T19:39:00+00:00",
+     "observed_at": "2026-11-23T19:52:12.015171+00:00",
+     "odds": 2.38,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/denis-titov-6",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+     "published_at": "2026-11-23T19:50:00+00:00",
+     "observed_at": "2026-11-23T19:52:12.015171+00:00",
+     "odds": 2.38,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "expert:роман петренко",
+     "provider": "livesport",
+     "source": "https://www.livesport.ru/tips/football/2026/11/24/feyenoord-porto/",
+     "published_at": "2026-11-23T19:54:00+00:00",
+     "observed_at": "2026-11-23T20:20:35.117915+00:00",
+     "odds": 2.5,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/denis-minskii",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+     "published_at": "2026-11-23T20:52:00+00:00",
+     "observed_at": "2026-11-23T20:54:19.094194+00:00",
+     "odds": 2.38,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/miki-maus-1",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+     "published_at": "2026-11-23T21:15:00+00:00",
+     "observed_at": "2026-11-23T21:15:58.711037+00:00",
+     "odds": 2.38,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/mark-kotov-2",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+     "published_at": "2026-11-23T21:27:00+00:00",
+     "observed_at": "2026-11-23T21:35:59.520060+00:00",
+     "odds": 2.38,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/evgenii-an",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+     "published_at": "2026-11-23T21:27:00+00:00",
+     "observed_at": "2026-11-23T21:35:59.520060+00:00",
+     "odds": 2.38,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/roman-pavlov-21",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+     "published_at": "2026-11-23T22:08:00+00:00",
+     "observed_at": "2026-11-24T03:39:39.766776+00:00",
+     "odds": 2.38,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/sergey-rozhkov-4",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+     "published_at": "2026-11-23T22:57:00+00:00",
+     "observed_at": "2026-11-23T23:02:16.351064+00:00",
+     "odds": 2.29,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/layuk-stanislav",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+     "published_at": "2026-11-23T23:03:00+00:00",
+     "observed_at": "2026-11-23T23:22:17.925958+00:00",
+     "odds": 2.29,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/vitaliy-zakharov-1",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+     "published_at": "2026-11-23T23:56:00+00:00",
+     "observed_at": "2026-11-24T00:04:18.000846+00:00",
+     "odds": 2.29,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/aleksandr-suslebin",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+     "published_at": "2026-11-24T00:47:00+00:00",
+     "observed_at": "2026-11-24T01:08:18.377784+00:00",
+     "odds": 2.29,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/katerina-khartlova",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+     "published_at": "2026-11-24T02:21:00+00:00",
+     "observed_at": "2026-11-24T02:33:39.992880+00:00",
+     "odds": 2.29,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/viktor-kirov",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+     "published_at": "2026-11-24T02:31:00+00:00",
+     "observed_at": "2026-11-24T02:33:39.992880+00:00",
+     "odds": 2.29,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/roman-akhmatov-1",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+     "published_at": "2026-11-24T03:12:00+00:00",
+     "observed_at": "2026-11-24T03:17:39.854981+00:00",
+     "odds": 2.29,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/andrei-rassovskii",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+     "published_at": "2026-11-24T03:52:00+00:00",
+     "observed_at": "2026-11-24T04:01:39.472903+00:00",
+     "odds": 2.29,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/artem-zb-akk3",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+     "published_at": "2026-11-24T04:16:00+00:00",
+     "observed_at": "2026-11-24T04:21:39.517612+00:00",
+     "odds": 2.29,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/aleksandr-novikov-63",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+     "published_at": "2026-11-24T04:18:00+00:00",
+     "observed_at": "2026-11-24T04:21:39.517612+00:00",
+     "odds": 2.29,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/ninja-gaiden",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+     "published_at": "2026-11-24T06:04:00+00:00",
+     "observed_at": "2026-11-24T06:05:54.771914+00:00",
+     "odds": 2.21,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/aleksei-shhukin-4",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+     "published_at": "2026-11-24T06:42:00+00:00",
+     "observed_at": "2026-11-24T06:47:54.561183+00:00",
+     "odds": 2.21,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/iaroslav-mitkov",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+     "published_at": "2026-11-24T07:20:00+00:00",
+     "observed_at": "2026-11-24T07:31:54.520181+00:00",
+     "odds": 2.21,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/aleksandr-shvets-1",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+     "published_at": "2026-11-24T07:47:00+00:00",
+     "observed_at": "2026-11-24T07:52:49.129040+00:00",
+     "odds": 2.21,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/easy-street",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+     "published_at": "2026-11-24T08:26:00+00:00",
+     "observed_at": "2026-11-24T08:32:50.654806+00:00",
+     "odds": 2.21,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/d-m-i-t-r-i-i-r",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+     "published_at": "2026-11-24T09:08:00+00:00",
+     "observed_at": "2026-11-24T09:14:50.765671+00:00",
+     "odds": 2.21,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/siraz-33",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+     "published_at": "2026-11-24T09:57:00+00:00",
+     "observed_at": "2026-11-24T09:58:50.166738+00:00",
+     "odds": 2.21,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/evgenii-rozkov-1",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+     "published_at": "2026-11-24T10:15:00+00:00",
+     "observed_at": "2026-11-24T10:18:50.557472+00:00",
+     "odds": 2.21,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/vitaliy-tulubenskiy",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+     "published_at": "2026-11-24T10:18:00+00:00",
+     "observed_at": "2026-11-24T10:18:50.557472+00:00",
+     "odds": 2.21,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/georgii-domnikov",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+     "published_at": "2026-11-24T10:37:00+00:00",
+     "observed_at": "2026-11-24T10:40:50.726724+00:00",
+     "odds": 2.21,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/aleksei-zigalenko-1",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+     "published_at": "2026-11-24T10:55:00+00:00",
+     "observed_at": "2026-11-24T11:00:51.833442+00:00",
+     "odds": 2.12,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/dmitrii-mortvicev",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+     "published_at": "2026-11-24T10:59:00+00:00",
+     "observed_at": "2026-11-24T11:00:51.833442+00:00",
+     "odds": 2.12,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/armeec-moskvy",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+     "published_at": "2026-11-24T11:37:00+00:00",
+     "observed_at": "2026-11-24T11:44:51.033667+00:00",
+     "odds": 2.12,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/gennadiy-evrost",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+     "published_at": "2026-11-24T12:06:00+00:00",
+     "observed_at": "2026-11-24T19:47:20.579178+00:00",
+     "odds": 2.12,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/s-club-7",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+     "published_at": "2026-11-24T12:21:00+00:00",
+     "observed_at": "2026-11-24T12:26:51.592004+00:00",
+     "odds": 2.12,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/ameliya-mixailova",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+     "published_at": "2026-11-24T12:22:00+00:00",
+     "observed_at": "2026-11-24T12:26:51.592004+00:00",
+     "odds": 2.12,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/rino-mino",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+     "published_at": "2026-11-24T12:41:00+00:00",
+     "observed_at": "2026-11-24T12:48:51.823688+00:00",
+     "odds": 2.12,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/sbn-sunny",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+     "published_at": "2026-11-24T12:42:00+00:00",
+     "observed_at": "2026-11-24T12:48:51.823688+00:00",
+     "odds": 2.12,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/yuriy-plyatsko",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+     "published_at": "2026-11-24T12:43:00+00:00",
+     "observed_at": "2026-11-24T12:48:51.823688+00:00",
+     "odds": 2.12,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/sergei-belocerkovec-1",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+     "published_at": "2026-11-24T12:59:00+00:00",
+     "observed_at": "2026-11-24T13:09:36.404256+00:00",
+     "odds": 2.12,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/stas-rotor-volg",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+     "published_at": "2026-11-24T13:28:00+00:00",
+     "observed_at": "2026-11-24T13:31:36.014373+00:00",
+     "odds": 2.12,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/alan-bzarov",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+     "published_at": "2026-11-24T13:29:00+00:00",
+     "observed_at": "2026-11-24T13:31:36.014373+00:00",
+     "odds": 2.12,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/vitaliy-nizamutdinov-1",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+     "published_at": "2026-11-24T13:30:00+00:00",
+     "observed_at": "2026-11-24T13:31:36.014373+00:00",
+     "odds": 2.12,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/aleksandr-slepcov-1",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+     "published_at": "2026-11-24T15:27:00+00:00",
+     "observed_at": "2026-11-24T15:33:47.303149+00:00",
+     "odds": 2.14,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/aleksandr-nevskii-10",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+     "published_at": "2026-11-24T16:08:00+00:00",
+     "observed_at": "2026-11-24T16:15:47.300365+00:00",
+     "odds": 2.14,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/sol-gudman",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+     "published_at": "2026-11-24T16:48:00+00:00",
+     "observed_at": "2026-11-24T16:55:47.598596+00:00",
+     "odds": 2.14,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/grom-prognoz",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+     "published_at": "2026-11-24T16:50:00+00:00",
+     "observed_at": "2026-11-24T16:55:47.598596+00:00",
+     "odds": 2.14,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/arhangel-1",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+     "published_at": "2026-11-24T17:11:00+00:00",
+     "observed_at": "2026-11-24T17:17:47.009152+00:00",
+     "odds": 2.14,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/aleksei-borisov-15",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+     "published_at": "2026-11-24T17:33:00+00:00",
+     "observed_at": "2026-11-24T17:37:47.741162+00:00",
+     "odds": 2.14,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/ivan-brovkin-2",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+     "published_at": "2026-11-24T18:45:00+00:00",
+     "observed_at": "2026-11-24T19:47:20.579178+00:00",
+     "odds": 2.14,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/plohish",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+     "published_at": "2026-11-24T18:59:00+00:00",
+     "observed_at": "2026-11-24T19:47:20.579178+00:00",
+     "odds": 2.14,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/raxat-azikulov-3",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+     "published_at": "2026-11-24T19:17:00+00:00",
+     "observed_at": "2026-11-24T19:25:20.764469+00:00",
+     "odds": 2.07,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/yurii-onoprienko",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/24-11-2026-feyenoord-rotterdam-porto",
+     "published_at": "2026-11-24T19:22:00+00:00",
+     "observed_at": "2026-11-24T19:25:20.764469+00:00",
+     "odds": 2.07,
+     "price_kind": "author_recorded"
+    }
+   ]
+  },
+  "bold": {},
+  "value": null,
+  "odds_src": "DraftKings",
+  "model_w": 0.0,
+  "learned_n": 1534,
+  "stavka_signal": {
+   "status": "baseline_better",
+   "weight": 0.0,
+   "authors": 86,
+   "votes": {
+    "A": 57.52544102969642,
+    "H": 12.157073712158807,
+    "D": 7.0232856062638325,
+    "O25": 5.9583836233348615,
+    "U25": 2.9801307294673607
+   },
+   "source": "https://stavka.tv",
+   "snapshot": "UCL|401915294"
+  },
+  "research": {
+   "articles": [
+    {
+     "id": "07e5ea1072836a5689ec6df3",
+     "kind": "context",
+     "provider": "livesport",
+     "source": "https://www.livesport.ru/tips/football/2026/11/24/feyenoord-porto/",
+     "sport": "football",
+     "div": "UCL",
+     "event_id": "401915294",
+     "kickoff": "2026-11-24T20:00:00+00:00",
+     "published_at": "2026-11-23T19:54:00+00:00",
+     "observed_at": "2026-11-23T20:20:35.117915+00:00",
+     "tables": [
+      [
+       [
+        "",
+        "Букмекер",
+        "1",
+        "x",
+        "2",
+        "Новым игрокам",
+        ""
+       ],
+       [
+        "",
+        "",
+        "2.95",
+        "3.75",
+        "2.30",
+        "Фрибет",
+        "15 000 ₽"
+       ],
+       [
+        "",
+        "",
+        "2.88",
+        "3.63",
+        "2.37",
+        "Фрибет",
+        "30 000 ₽"
+       ],
+       [
+        "",
+        "",
+        "2.85",
+        "3.65",
+        "2.36",
+        "Фрибет всем",
+        "10 000 ₽"
+       ],
+       [
+        "",
+        "",
+        "2.95",
+        "3.74",
+        "2.26",
+        "Фрибет",
+        "1000 ₽"
+       ]
+      ]
+     ]
+    },
+    {
+     "id": "8ed1a9de845fd42c7a391f6b",
+     "kind": "context",
+     "provider": "metaratings",
+     "source": "https://metaratings.ru/prognozy/futbol/fejenoord-portu-prognoz-na-match-ligi-chempionov-24-noyabrya-2026-goda/",
+     "sport": "football",
+     "div": "UCL",
+     "event_id": "401915294",
+     "kickoff": "2026-11-24T20:00:00+00:00",
+     "published_at": "2026-11-23T14:43:33+00:00",
+     "observed_at": "2026-11-23T21:52:26.544347+00:00",
+     "tables": []
+    }
+   ],
+   "dossier": {
+    "observed_at": "2026-11-24T19:45:43.149504+00:00",
+    "kickoff": "2026-11-24T20:00:00+00:00",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.champions/summary?event=401915294",
+    "status": "available",
+    "facts": {
+     "table": {
+      "160": {
+       "rank": "1",
+       "gp": "4",
+       "w": "4",
+       "d": "0",
+       "l": "0",
+       "gd": "+15",
+       "pts": "12",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "0",
+        "GD": "+15",
+        "P": "12",
+        "D": "0",
+        "W": "4",
+        "R": "1",
+        "Total": "4-0-0"
+       },
+       "group": "UEFA Champions League Standings"
+      },
+      "86": {
+       "rank": "2",
+       "gp": "4",
+       "w": "4",
+       "d": "0",
+       "l": "0",
+       "gd": "+6",
+       "pts": "12",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "0",
+        "GD": "+6",
+        "P": "12",
+        "D": "0",
+        "W": "4",
+        "R": "2",
+        "Total": "4-0-0"
+       },
+       "group": "UEFA Champions League Standings"
+      },
+      "359": {
+       "rank": "3",
+       "gp": "4",
+       "w": "3",
+       "d": "1",
+       "l": "0",
+       "gd": "+5",
+       "pts": "10",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "0",
+        "GD": "+5",
+        "P": "10",
+        "D": "1",
+        "W": "3",
+        "R": "3",
+        "Total": "3-1-0"
+       },
+       "group": "UEFA Champions League Standings"
+      },
+      "2572": {
+       "rank": "4",
+       "gp": "4",
+       "w": "3",
+       "d": "0",
+       "l": "1",
+       "gd": "+13",
+       "pts": "9",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "1",
+        "GD": "+13",
+        "P": "9",
+        "D": "0",
+        "W": "3",
+        "R": "4",
+        "Total": "3-0-1"
+       },
+       "group": "UEFA Champions League Standings"
+      },
+      "83": {
+       "rank": "5",
+       "gp": "4",
+       "w": "3",
+       "d": "0",
+       "l": "1",
+       "gd": "+8",
+       "pts": "9",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "1",
+        "GD": "+8",
+        "P": "9",
+        "D": "0",
+        "W": "3",
+        "R": "5",
+        "Total": "3-0-1"
+       },
+       "group": "UEFA Champions League Standings"
+      },
+      "382": {
+       "rank": "6",
+       "gp": "4",
+       "w": "3",
+       "d": "0",
+       "l": "1",
+       "gd": "+5",
+       "pts": "9",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "1",
+        "GD": "+5",
+        "P": "9",
+        "D": "0",
+        "W": "3",
+        "R": "6",
+        "Total": "3-0-1"
+       },
+       "group": "UEFA Champions League Standings"
+      },
+      "362": {
+       "rank": "7",
+       "gp": "5",
+       "w": "3",
+       "d": "0",
+       "l": "2",
+       "gd": "+5",
+       "pts": "9",
+       "of": 36,
+       "raw": {
+        "GP": "5",
+        "L": "2",
+        "GD": "+5",
+        "P": "9",
+        "D": "0",
+        "W": "3",
+        "R": "7",
+        "Total": "3-0-2"
+       },
+       "group": "UEFA Champions League Standings"
+      },
+      "364": {
+       "rank": "8",
+       "gp": "4",
+       "w": "3",
+       "d": "0",
+       "l": "1",
+       "gd": "+4",
+       "pts": "9",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "1",
+        "GD": "+4",
+        "P": "9",
+        "D": "0",
+        "W": "3",
+        "R": "8",
+        "Total": "3-0-1"
+       },
+       "group": "UEFA Champions League Standings"
+      },
+      "570": {
+       "rank": "9",
+       "gp": "4",
+       "w": "3",
+       "d": "0",
+       "l": "1",
+       "gd": "+4",
+       "pts": "9",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "1",
+        "GD": "+4",
+        "P": "9",
+        "D": "0",
+        "W": "3",
+        "R": "9",
+        "Total": "3-0-1"
+       },
+       "group": "UEFA Champions League Standings"
+      },
+      "2250": {
+       "rank": "10",
+       "gp": "4",
+       "w": "3",
+       "d": "0",
+       "l": "1",
+       "gd": "+4",
+       "pts": "9",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "1",
+        "GD": "+4",
+        "P": "9",
+        "D": "0",
+        "W": "3",
+        "R": "10",
+        "Total": "3-0-1"
+       },
+       "group": "UEFA Champions League Standings"
+      },
+      "244": {
+       "rank": "11",
+       "gp": "4",
+       "w": "3",
+       "d": "0",
+       "l": "1",
+       "gd": "+2",
+       "pts": "9",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "1",
+        "GD": "+2",
+        "P": "9",
+        "D": "0",
+        "W": "3",
+        "R": "11",
+        "Total": "3-0-1"
+       },
+       "group": "UEFA Champions League Standings"
+      },
+      "124": {
+       "rank": "12",
+       "gp": "4",
+       "w": "3",
+       "d": "0",
+       "l": "1",
+       "gd": "+2",
+       "pts": "9",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "1",
+        "GD": "+2",
+        "P": "9",
+        "D": "0",
+        "W": "3",
+        "R": "12",
+        "Total": "3-0-1"
+       },
+       "group": "UEFA Champions League Standings"
+      },
+      "432": {
+       "rank": "13",
+       "gp": "5",
+       "w": "3",
+       "d": "0",
+       "l": "2",
+       "gd": "0",
+       "pts": "9",
+       "of": 36,
+       "raw": {
+        "GP": "5",
+        "L": "2",
+        "GD": "0",
+        "P": "9",
+        "D": "0",
+        "W": "3",
+        "R": "13",
+        "Total": "3-0-2"
+       },
+       "group": "UEFA Champions League Standings"
+      },
+      "132": {
+       "rank": "14",
+       "gp": "4",
+       "w": "2",
+       "d": "2",
+       "l": "0",
+       "gd": "+7",
+       "pts": "8",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "0",
+        "GD": "+7",
+        "P": "8",
+        "D": "2",
+        "W": "2",
+        "R": "14",
+        "Total": "2-2-0"
+       },
+       "group": "UEFA Champions League Standings"
+      },
+      "134": {
+       "rank": "15",
+       "gp": "4",
+       "w": "2",
+       "d": "1",
+       "l": "1",
+       "gd": "+3",
+       "pts": "7",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "1",
+        "GD": "+3",
+        "P": "7",
+        "D": "1",
+        "W": "2",
+        "R": "15",
+        "Total": "2-1-1"
+       },
+       "group": "UEFA Champions League Standings"
+      },
+      "2980": {
+       "rank": "16",
+       "gp": "5",
+       "w": "2",
+       "d": "1",
+       "l": "2",
+       "gd": "-4",
+       "pts": "7",
+       "of": 36,
+       "raw": {
+        "GP": "5",
+        "L": "2",
+        "GD": "-4",
+        "P": "7",
+        "D": "1",
+        "W": "2",
+        "R": "16",
+        "Total": "2-1-2"
+       },
+       "group": "UEFA Champions League Standings"
+      },
+      "110": {
+       "rank": "17",
+       "gp": "4",
+       "w": "2",
+       "d": "0",
+       "l": "2",
+       "gd": "+2",
+       "pts": "6",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "2",
+        "GD": "+2",
+        "P": "6",
+        "D": "0",
+        "W": "2",
+        "R": "17",
+        "Total": "2-0-2"
+       },
+       "group": "UEFA Champions League Standings"
+      },
+      "4411": {
+       "rank": "18",
+       "gp": "5",
+       "w": "2",
+       "d": "0",
+       "l": "3",
+       "gd": "0",
+       "pts": "6",
+       "of": 36,
+       "raw": {
+        "GP": "5",
+        "L": "3",
+        "GD": "0",
+        "P": "6",
+        "D": "0",
+        "W": "2",
+        "R": "18",
+        "Total": "2-0-3"
+       },
+       "group": "UEFA Champions League Standings"
+      },
+      "360": {
+       "rank": "19",
+       "gp": "4",
+       "w": "2",
+       "d": "0",
+       "l": "2",
+       "gd": "0",
+       "pts": "6",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "2",
+        "GD": "0",
+        "P": "6",
+        "D": "0",
+        "W": "2",
+        "R": "19",
+        "Total": "2-0-2"
+       },
+       "group": "UEFA Champions League Standings"
+      },
+      "436": {
+       "rank": "20",
+       "gp": "4",
+       "w": "1",
+       "d": "2",
+       "l": "1",
+       "gd": "-5",
+       "pts": "5",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "1",
+        "GD": "-5",
+        "P": "5",
+        "D": "2",
+        "W": "1",
+        "R": "20",
+        "Total": "1-2-1"
+       },
+       "group": "UEFA Champions League Standings"
+      },
+      "104": {
+       "rank": "21",
+       "gp": "4",
+       "w": "1",
+       "d": "1",
+       "l": "2",
+       "gd": "+2",
+       "pts": "4",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "2",
+        "GD": "+2",
+        "P": "4",
+        "D": "1",
+        "W": "1",
+        "R": "21",
+        "Total": "1-1-2"
+       },
+       "group": "UEFA Champions League Standings"
+      },
+      "493": {
+       "rank": "22",
+       "gp": "4",
+       "w": "1",
+       "d": "1",
+       "l": "2",
+       "gd": "0",
+       "pts": "4",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "2",
+        "GD": "0",
+        "P": "4",
+        "D": "1",
+        "W": "1",
+        "R": "22",
+        "Total": "1-1-2"
+       },
+       "group": "UEFA Champions League Standings"
+      },
+      "510": {
+       "rank": "23",
+       "gp": "4",
+       "w": "1",
+       "d": "1",
+       "l": "2",
+       "gd": "-1",
+       "pts": "4",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "2",
+        "GD": "-1",
+        "P": "4",
+        "D": "1",
+        "W": "1",
+        "R": "23",
+        "Total": "1-1-2"
+       },
+       "group": "UEFA Champions League Standings"
+      },
+      "1068": {
+       "rank": "24",
+       "gp": "4",
+       "w": "1",
+       "d": "1",
+       "l": "2",
+       "gd": "-1",
+       "pts": "4",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "2",
+        "GD": "-1",
+        "P": "4",
+        "D": "1",
+        "W": "1",
+        "R": "24",
+        "Total": "1-1-2"
+       },
+       "group": "UEFA Champions League Standings"
+      },
+      "148": {
+       "rank": "25",
+       "gp": "4",
+       "w": "1",
+       "d": "1",
+       "l": "2",
+       "gd": "-1",
+       "pts": "4",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "2",
+        "GD": "-1",
+        "P": "4",
+        "D": "1",
+        "W": "1",
+        "R": "25",
+        "Total": "1-1-2"
+       },
+       "group": "UEFA Champions League Standings"
+      },
+      "437": {
+       "rank": "26",
+       "gp": "4",
+       "w": "1",
+       "d": "0",
+       "l": "3",
+       "gd": "-1",
+       "pts": "3",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "3",
+        "GD": "-1",
+        "P": "3",
+        "D": "0",
+        "W": "1",
+        "R": "26",
+        "Total": "1-0-3"
+       },
+       "group": "UEFA Champions League Standings"
+      },
+      "114": {
+       "rank": "27",
+       "gp": "4",
+       "w": "1",
+       "d": "0",
+       "l": "3",
+       "gd": "-5",
+       "pts": "3",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "3",
+        "GD": "-5",
+        "P": "3",
+        "D": "0",
+        "W": "1",
+        "R": "27",
+        "Total": "1-0-3"
+       },
+       "group": "UEFA Champions League Standings"
+      },
+      "102": {
+       "rank": "28",
+       "gp": "4",
+       "w": "1",
+       "d": "0",
+       "l": "3",
+       "gd": "-6",
+       "pts": "3",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "3",
+        "GD": "-6",
+        "P": "3",
+        "D": "0",
+        "W": "1",
+        "R": "28",
+        "Total": "1-0-3"
+       },
+       "group": "UEFA Champions League Standings"
+      },
+      "887": {
+       "rank": "29",
+       "gp": "4",
+       "w": "1",
+       "d": "0",
+       "l": "3",
+       "gd": "-6",
+       "pts": "3",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "3",
+        "GD": "-6",
+        "P": "3",
+        "D": "0",
+        "W": "1",
+        "R": "29",
+        "Total": "1-0-3"
+       },
+       "group": "UEFA Champions League Standings"
+      },
+      "11420": {
+       "rank": "30",
+       "gp": "4",
+       "w": "1",
+       "d": "0",
+       "l": "3",
+       "gd": "-6",
+       "pts": "3",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "3",
+        "GD": "-6",
+        "P": "3",
+        "D": "0",
+        "W": "1",
+        "R": "30",
+        "Total": "1-0-3"
+       },
+       "group": "UEFA Champions League Standings"
+      },
+      "21922": {
+       "rank": "31",
+       "gp": "4",
+       "w": "1",
+       "d": "0",
+       "l": "3",
+       "gd": "-6",
+       "pts": "3",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "3",
+        "GD": "-6",
+        "P": "3",
+        "D": "0",
+        "W": "1",
+        "R": "31",
+        "Total": "1-0-3"
+       },
+       "group": "UEFA Champions League Standings"
+      },
+      "142": {
+       "rank": "32",
+       "gp": "4",
+       "w": "1",
+       "d": "0",
+       "l": "3",
+       "gd": "-7",
+       "pts": "3",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "3",
+        "GD": "-7",
+        "P": "3",
+        "D": "0",
+        "W": "1",
+        "R": "32",
+        "Total": "1-0-3"
+       },
+       "group": "UEFA Champions League Standings"
+      },
+      "175": {
+       "rank": "33",
+       "gp": "4",
+       "w": "1",
+       "d": "0",
+       "l": "3",
+       "gd": "-12",
+       "pts": "3",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "3",
+        "GD": "-12",
+        "P": "3",
+        "D": "0",
+        "W": "1",
+        "R": "33",
+        "Total": "1-0-3"
+       },
+       "group": "UEFA Champions League Standings"
+      },
+      "494": {
+       "rank": "34",
+       "gp": "4",
+       "w": "0",
+       "d": "1",
+       "l": "3",
+       "gd": "-4",
+       "pts": "1",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "3",
+        "GD": "-4",
+        "P": "1",
+        "D": "1",
+        "W": "0",
+        "R": "34",
+        "Total": "0-1-3"
+       },
+       "group": "UEFA Champions League Standings"
+      },
+      "166": {
+       "rank": "35",
+       "gp": "4",
+       "w": "0",
+       "d": "1",
+       "l": "3",
+       "gd": "-6",
+       "pts": "1",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "3",
+        "GD": "-6",
+        "P": "1",
+        "D": "1",
+        "W": "0",
+        "R": "35",
+        "Total": "0-1-3"
+       },
+       "group": "UEFA Champions League Standings"
+      },
+      "521": {
+       "rank": "36",
+       "gp": "4",
+       "w": "0",
+       "d": "0",
+       "l": "4",
+       "gd": "-16",
+       "pts": "0",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "4",
+        "GD": "-16",
+        "P": "0",
+        "D": "0",
+        "W": "0",
+        "R": "36",
+        "Total": "0-0-4"
+       },
+       "group": "UEFA Champions League Standings"
+      }
+     },
+     "last5": {
+      "142": [
+       {
+        "res": "D",
+        "gf": 1,
+        "ga": 1,
+        "opp": "PSV Eindhoven",
+        "home": false,
+        "date": "2026-10-25"
+       },
+       {
+        "res": "D",
+        "gf": 1,
+        "ga": 1,
+        "opp": "Fortuna Sittard",
+        "home": true,
+        "date": "2026-10-31"
+       },
+       {
+        "res": "L",
+        "gf": 0,
+        "ga": 3,
+        "opp": "Internazionale",
+        "home": true,
+        "date": "2026-11-03"
+       },
+       {
+        "res": "L",
+        "gf": 3,
+        "ga": 5,
+        "opp": "Heerenveen",
+        "home": false,
+        "date": "2026-11-08"
+       },
+       {
+        "res": "L",
+        "gf": 2,
+        "ga": 3,
+        "opp": "Excelsior",
+        "home": true,
+        "date": "2026-11-21"
+       }
+      ],
+      "437": [
+       {
+        "res": "W",
+        "gf": 1,
+        "ga": 0,
+        "opp": "Gil Vicente",
+        "home": false,
+        "date": "2026-10-24"
+       },
+       {
+        "res": "W",
+        "gf": 4,
+        "ga": 0,
+        "opp": "Estoril",
+        "home": true,
+        "date": "2026-10-31"
+       },
+       {
+        "res": "W",
+        "gf": 4,
+        "ga": 1,
+        "opp": "Napoli",
+        "home": true,
+        "date": "2026-11-04"
+       },
+       {
+        "res": "W",
+        "gf": 2,
+        "ga": 1,
+        "opp": "Vitória de Guimaraes",
+        "home": false,
+        "date": "2026-11-08"
+       },
+       {
+        "res": "W",
+        "gf": 1,
+        "ga": 1,
+        "opp": "Paredes",
+        "home": true,
+        "date": "2026-11-20"
+       }
+      ]
+     },
+     "h2h": [
+      {
+       "date": "2019-12-12",
+       "home_id": "437",
+       "hs": "3",
+       "as": "2"
+      },
+      {
+       "date": "2019-10-03",
+       "home_id": "142",
+       "hs": "2",
+       "as": "0"
+      }
+     ],
+     "lineups": {
+      "142": {
+       "formation": "4-3-3",
+       "starters": [
+        "Florian Kastenmeier",
+        "Mika Mármol",
+        "Thijs Kraaijeveld",
+        "Javi López",
+        "Givairo Read",
+        "Charles Vanhoutte",
+        "Oussama Targhaline",
+        "Gjivai Zechiël",
+        "Shaqueel Van Persie",
+        "Luciano Valente",
+        "Anis Hadj Moussa"
+       ]
+      },
+      "437": {
+       "formation": "4-3-3",
+       "starters": [
+        "Diogo Costa",
+        "Jakub Kiwior",
+        "Jan Bednarek",
+        "Zaidu Sanusi",
+        "Alberto Costa",
+        "Pablo Rosario",
+        "Victor Froholdt",
+        "Gabri Veiga",
+        "Santiago Gimenez",
+        "Oskar Pietuszewski",
+        "Pepê"
+       ]
+      }
+     },
+     "leaders": {
+      "142": [
+       [
+        "Goals",
+        "Gjivai Zechiël",
+        "Matches: 4, Goals: 1"
+       ],
+       [
+        "Assists",
+        "Luciano Valente",
+        "Matches: 4, Assists: 1"
+       ],
+       [
+        "Total Shots",
+        "Anis Hadj Moussa",
+        "13"
+       ]
+      ],
+      "437": [
+       [
+        "Goals",
+        "Gabri Veiga",
+        "Matches: 4, Goals: 2"
+       ],
+       [
+        "Assists",
+        "Pepê",
+        "Matches: 4, Assists: 1"
+       ],
+       [
+        "Total Shots",
+        "Gabri Veiga",
+        "9"
+       ]
+      ]
+     },
+     "venue": "De Kuip",
+     "city": "Rotterdam"
+    }
+   }
+  },
+  "msg_id": 9396,
+  "btn": 4,
+  "close": {
+   "A": 0.4767
+  }
  },
  "401915379": {
   "status": "waiting_data",
@@ -27454,7 +29155,7 @@
   "sport": "football",
   "div": "UCL",
   "reason": "no_qualified_real_market",
-  "retry_at": 1795549880.768131
+  "retry_at": 1795550600.325774
  },
  "401915299": {
   "status": "waiting_data",
@@ -27462,7 +29163,7 @@
   "sport": "football",
   "div": "UCL",
   "reason": "no_qualified_real_market",
-  "retry_at": 1795549880.768131
+  "retry_at": 1795550600.325774
  },
  "401915298": {
   "status": "waiting_data",
@@ -27470,7 +29171,7 @@
   "sport": "football",
   "div": "UCL",
   "reason": "no_qualified_real_market",
-  "retry_at": 1795549880.768131
+  "retry_at": 1795550600.325774
  },
  "401915297": {
   "status": "waiting_data",
@@ -27478,6 +29179,6 @@
   "sport": "football",
   "div": "UCL",
   "reason": "no_qualified_real_market",
-  "retry_at": 1795549880.768131
+  "retry_at": 1795550600.325774
  }
 }
