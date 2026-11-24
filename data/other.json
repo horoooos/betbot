@@ -5825,25 +5825,25 @@
   "kickoff": "2026-11-24T03:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Mon, November 23rd at 7:00 PM EST",
   "clock": "0.0",
   "period": 0,
   "home": {
+   "color": "1d428a",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/phi.png",
    "id": "20",
    "name": "Philadelphia 76ers",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/phi.png",
-   "color": "1d428a",
    "score": "0",
    "record": "14-3",
    "periods": [],
    "ru": "Филадельфия Сиксерс"
   },
   "away": {
+   "color": "e03a3e",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/por.png",
    "id": "22",
    "name": "Portland Trail Blazers",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/por.png",
-   "color": "e03a3e",
    "score": "0",
    "record": "10-6",
    "periods": [],
@@ -5944,7 +5944,9 @@
   "btn": 4,
   "close": {
    "BB_ML_H": 0.4503
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null
  },
  "NHL|401892774": {
   "id": "401892774",
