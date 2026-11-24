@@ -7143,5 +7143,568 @@
   "close": {
    "BB_ML_A": 0.3853
   }
+ },
+ "NHL|401892780": {
+  "id": "401892780",
+  "div": "NHL",
+  "sport": "hockey",
+  "kickoff": "2026-11-25T04:00:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "detail": "Tue, November 24th at 8:00 PM EST",
+  "clock": "0:00",
+  "period": 0,
+  "home": {
+   "id": "6",
+   "name": "Edmonton Oilers",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/edm.png",
+   "color": "00205b",
+   "score": "0",
+   "record": "17-5-4",
+   "periods": [],
+   "ru": "Эдмонтон"
+  },
+  "away": {
+   "id": "37",
+   "name": "Vegas Golden Knights",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/vgk.png",
+   "color": "344043",
+   "score": "0",
+   "record": "14-6-5",
+   "periods": [],
+   "ru": "Вегас"
+  },
+  "odds": {
+   "H": 2.0,
+   "A": 1.833,
+   "line": 6.5,
+   "over": 1.82,
+   "under": 2.02,
+   "spread": 1.5,
+   "sp_h": 1.388,
+   "sp_a": 3.1
+  },
+  "probs": {
+   "HK_ML_H": 0.4782119946872331,
+   "HK_ML_A": 0.5217880053127669,
+   "HK_H": 0.39733846161803665,
+   "HK_D": 0.15552602513307,
+   "HK_A": 0.44713551324889333,
+   "HK_O5.5": 0.6784242657522238,
+   "HK_U5.5": 0.32157573424777647,
+   "HK_O6.5": 0.5260376501570375,
+   "HK_U6.5": 0.4739623498429627,
+   "HK_O7.5": 0.3770380147795296,
+   "HK_U7.5": 0.6229619852204704,
+   "HK_IT1O1.5": 0.8459230280159467,
+   "HK_IT1O2.5": 0.6480085420597119,
+   "HK_IT1O3.5": 0.4277599501147819,
+   "HK_IT2O1.5": 0.8645914963412238,
+   "HK_IT2O2.5": 0.679907356388108,
+   "HK_IT2O3.5": 0.46408087668503695,
+   "HK_H-1.5": 0.2571460192931596,
+   "HK_A+1.5": 0.7428539807068402,
+   "HK_A-1.5": 0.2999164094541097,
+   "HK_H+1.5": 0.7000835905458904
+  },
+  "labels": {
+   "HK_ML_H": "П1 (с ОТ и буллитами)",
+   "HK_ML_A": "П2 (с ОТ и буллитами)",
+   "HK_H": "П1 в основное время",
+   "HK_D": "Ничья в основное время",
+   "HK_A": "П2 в основное время",
+   "HK_O5.5": "ТБ 5.5",
+   "HK_U5.5": "ТМ 5.5",
+   "HK_O6.5": "ТБ 6.5",
+   "HK_U6.5": "ТМ 6.5",
+   "HK_O7.5": "ТБ 7.5",
+   "HK_U7.5": "ТМ 7.5",
+   "HK_IT1O1.5": "ИТ1 больше 1.5",
+   "HK_IT1O2.5": "ИТ1 больше 2.5",
+   "HK_IT1O3.5": "ИТ1 больше 3.5",
+   "HK_IT2O1.5": "ИТ2 больше 1.5",
+   "HK_IT2O2.5": "ИТ2 больше 2.5",
+   "HK_IT2O3.5": "ИТ2 больше 3.5",
+   "HK_H-1.5": "Ф1 (−1.5)",
+   "HK_A+1.5": "Ф2 (+1.5)",
+   "HK_A-1.5": "Ф2 (−1.5)",
+   "HK_H+1.5": "Ф1 (+1.5)"
+  },
+  "real": {
+   "HK_ML_H": 2.0,
+   "HK_ML_A": 1.833,
+   "HK_O6.5": 1.82,
+   "HK_U6.5": 2.02
+  },
+  "center": "Ожидаемые голы 3.3 : 3.5",
+  "bar": [
+   0.4782119946872331,
+   0,
+   0.5217880053127669
+  ],
+  "model": {
+   "lh": 3.338541757781698,
+   "la": 3.5058746207096205
+  },
+  "stavka_signal": {
+   "status": "collecting",
+   "weight": 0.0,
+   "authors": 42,
+   "group": "hockey",
+   "snapshot": "NHL|401892780",
+   "source": "https://stavka.tv"
+  },
+  "research": {
+   "articles": [
+    {
+     "id": "d4d759c7a732fe09912f065e",
+     "kind": "context",
+     "provider": "legalbet",
+     "source": "https://legalbet.ru/tips/prognoz-na-match-edmonton-ojlers-vegas-golden-najts-25-noyabrya-karpuk/",
+     "sport": "hockey",
+     "div": "NHL",
+     "event_id": "401892780",
+     "kickoff": "2026-11-25T01:00:00+00:00",
+     "published_at": "2026-11-23T20:09:55+00:00",
+     "observed_at": "2026-11-23T20:20:33.095306+00:00",
+     "tables": []
+    },
+    {
+     "id": "7e15670261795cb7905e273b",
+     "kind": "context",
+     "provider": "livesport",
+     "source": "https://www.livesport.ru/tips/hockey/2026/11/25/edmonton-oilers-vegas-golden-knights/",
+     "sport": "hockey",
+     "div": "NHL",
+     "event_id": "401892780",
+     "kickoff": "2026-11-25T01:00:00+00:00",
+     "published_at": "2026-11-24T04:00:00+00:00",
+     "observed_at": "2026-11-24T04:37:57.942683+00:00",
+     "tables": [
+      [
+       [
+        "",
+        "Букмекер",
+        "1",
+        "x",
+        "2",
+        "Новым игрокам",
+        ""
+       ],
+       [
+        "",
+        "",
+        "2.50",
+        "4.20",
+        "2.40",
+        "Фрибет",
+        "15 000 ₽"
+       ],
+       [
+        "",
+        "",
+        "2.48",
+        "4.21",
+        "2.44",
+        "Фрибет",
+        "30 000 ₽"
+       ],
+       [
+        "",
+        "",
+        "2.50",
+        "4.20",
+        "2.41",
+        "Фрибет всем",
+        "10 000 ₽"
+       ],
+       [
+        "",
+        "",
+        "2.52",
+        "4.03",
+        "2.41",
+        "Фрибет",
+        "1000 ₽"
+       ]
+      ]
+     ]
+    },
+    {
+     "id": "5f330ea00653c20bdbd9e720",
+     "kind": "context",
+     "provider": "vseprosport",
+     "source": "https://www.vseprosport.ru/news/2026/11/24/edmonton-vegas-prognoz-kf-1-83-i-stavki-na-match-nhl-25-nojabrja-2026-goda",
+     "sport": "hockey",
+     "div": "NHL",
+     "event_id": "401892780",
+     "kickoff": "2026-11-25T01:00:00+00:00",
+     "published_at": "2026-11-24T09:05:32+00:00",
+     "observed_at": "2026-11-24T10:23:19.467737+00:00",
+     "tables": []
+    },
+    {
+     "id": "bd2b2ae3cb960a770f2b4f9a",
+     "kind": "context",
+     "provider": "metaratings",
+     "source": "https://metaratings.ru/prognozy/hokkey/edmonton-vegas-prognoz-na-match-nhl-25-noyabrya-2026-goda/",
+     "sport": "hockey",
+     "div": "NHL",
+     "event_id": "401892780",
+     "kickoff": "2026-11-25T01:00:00+00:00",
+     "published_at": "2026-11-24T12:05:00+00:00",
+     "observed_at": "2026-11-24T14:32:01.793465+00:00",
+     "tables": []
+    }
+   ],
+   "dossier": null
+  },
+  "main": {
+   "key": "HK_ML_H",
+   "label": "П1 (с ОТ и буллитами)",
+   "p": 0.4782,
+   "odds": 2.0,
+   "est": false,
+   "stake": 0.5,
+   "strategy": "external_trial",
+   "selection_mode": "external_fallback",
+   "trial_expires_at": null,
+   "probability_origin": "baseline_model",
+   "model_edge": -0.04358,
+   "source_count": 35,
+   "source_refs": [
+    {
+     "author": "/predictors/vera-andreevna",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/25-11-2026-edmonton-oilers-vegas-golden-knights-1",
+     "published_at": "2026-11-23T23:06:00+00:00",
+     "observed_at": "2026-11-24T01:08:18.377784+00:00",
+     "odds": 1.91,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/vyacheslav-lazarev",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/25-11-2026-edmonton-oilers-vegas-golden-knights-1",
+     "published_at": "2026-11-24T02:57:00+00:00",
+     "observed_at": "2026-11-24T03:17:39.854981+00:00",
+     "odds": 1.93,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/vladislav-2",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/25-11-2026-edmonton-oilers-vegas-golden-knights-1",
+     "published_at": "2026-11-24T03:49:00+00:00",
+     "observed_at": "2026-11-24T04:01:39.472903+00:00",
+     "odds": 1.93,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/evgeniy-krasnykh",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/25-11-2026-edmonton-oilers-vegas-golden-knights-1",
+     "published_at": "2026-11-24T03:51:00+00:00",
+     "observed_at": "2026-11-24T04:01:39.472903+00:00",
+     "odds": 1.93,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/optimist-fsj6827",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/25-11-2026-edmonton-oilers-vegas-golden-knights-1",
+     "published_at": "2026-11-24T05:47:00+00:00",
+     "observed_at": "2026-11-24T06:05:54.771914+00:00",
+     "odds": 1.93,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/yunost-85",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/25-11-2026-edmonton-oilers-vegas-golden-knights-1",
+     "published_at": "2026-11-24T07:35:00+00:00",
+     "observed_at": "2026-11-24T07:52:49.129040+00:00",
+     "odds": 1.94,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/rodion-frolov",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/25-11-2026-edmonton-oilers-vegas-golden-knights-1",
+     "published_at": "2026-11-24T09:18:00+00:00",
+     "observed_at": "2026-11-24T09:36:50.453655+00:00",
+     "odds": 1.93,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/cto-tut-delaiu",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/25-11-2026-edmonton-oilers-vegas-golden-knights-1",
+     "published_at": "2026-11-24T09:35:00+00:00",
+     "observed_at": "2026-11-24T09:36:50.453655+00:00",
+     "odds": 1.93,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/pavel-sirokostup",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/25-11-2026-edmonton-oilers-vegas-golden-knights-1",
+     "published_at": "2026-11-24T09:39:00+00:00",
+     "observed_at": "2026-11-24T09:58:50.166738+00:00",
+     "odds": 1.93,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/grigorii-kiselev",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/25-11-2026-edmonton-oilers-vegas-golden-knights-1",
+     "published_at": "2026-11-24T09:42:00+00:00",
+     "observed_at": "2026-11-24T09:58:50.166738+00:00",
+     "odds": 1.93,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/andrei-vladimirovic-14",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/25-11-2026-edmonton-oilers-vegas-golden-knights-1",
+     "published_at": "2026-11-24T10:31:00+00:00",
+     "observed_at": "2026-11-24T10:40:50.726724+00:00",
+     "odds": 1.93,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/maksim-maksim-43",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/25-11-2026-edmonton-oilers-vegas-golden-knights-1",
+     "published_at": "2026-11-24T11:43:00+00:00",
+     "observed_at": "2026-11-24T11:44:51.033667+00:00",
+     "odds": 1.93,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/valentin-boldyrev-2",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/25-11-2026-edmonton-oilers-vegas-golden-knights-1",
+     "published_at": "2026-11-24T12:16:00+00:00",
+     "observed_at": "2026-11-24T12:26:51.592004+00:00",
+     "odds": 1.93,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/yura-oleinikov",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/25-11-2026-edmonton-oilers-vegas-golden-knights-1",
+     "published_at": "2026-11-24T13:48:00+00:00",
+     "observed_at": "2026-11-24T13:51:36.574115+00:00",
+     "odds": 1.93,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/sergey-gavrilov",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/25-11-2026-edmonton-oilers-vegas-golden-knights-1",
+     "published_at": "2026-11-24T14:10:00+00:00",
+     "observed_at": "2026-11-24T14:31:36.713465+00:00",
+     "odds": 1.93,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/andrei-chernoshei-1",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/25-11-2026-edmonton-oilers-vegas-golden-knights-1",
+     "published_at": "2026-11-24T15:29:00+00:00",
+     "observed_at": "2026-11-24T15:33:47.303149+00:00",
+     "odds": 1.97,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/sveta-podolsk",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/25-11-2026-edmonton-oilers-vegas-golden-knights-1",
+     "published_at": "2026-11-24T15:43:00+00:00",
+     "observed_at": "2026-11-24T15:55:47.061402+00:00",
+     "odds": 1.97,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/andrei-kulikov-10",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/25-11-2026-edmonton-oilers-vegas-golden-knights-1",
+     "published_at": "2026-11-24T16:35:00+00:00",
+     "observed_at": "2026-11-24T16:55:47.598596+00:00",
+     "odds": 1.95,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/padenie-materatstsi",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/25-11-2026-edmonton-oilers-vegas-golden-knights-1",
+     "published_at": "2026-11-24T17:12:00+00:00",
+     "observed_at": "2026-11-24T17:17:47.009152+00:00",
+     "odds": 1.93,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/aleksandr-novichkov",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/25-11-2026-edmonton-oilers-vegas-golden-knights-1",
+     "published_at": "2026-11-24T17:47:00+00:00",
+     "observed_at": "2026-11-24T17:59:47.251652+00:00",
+     "odds": 1.97,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/skayz999",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/25-11-2026-edmonton-oilers-vegas-golden-knights-1",
+     "published_at": "2026-11-24T17:56:00+00:00",
+     "observed_at": "2026-11-24T17:59:47.251652+00:00",
+     "odds": 1.97,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/sergei-exp",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/25-11-2026-edmonton-oilers-vegas-golden-knights-1",
+     "published_at": "2026-11-24T18:08:00+00:00",
+     "observed_at": "2026-11-24T18:21:46.913471+00:00",
+     "odds": 1.97,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/sergey-shein",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/25-11-2026-edmonton-oilers-vegas-golden-knights-1",
+     "published_at": "2026-11-24T18:20:00+00:00",
+     "observed_at": "2026-11-24T18:21:46.913471+00:00",
+     "odds": 1.97,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/aleksandr-tkacenko-5",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/25-11-2026-edmonton-oilers-vegas-golden-knights-1",
+     "published_at": "2026-11-24T19:33:00+00:00",
+     "observed_at": "2026-11-24T19:47:20.579178+00:00",
+     "odds": 1.95,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/vyacheslav-kizikov",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/25-11-2026-edmonton-oilers-vegas-golden-knights-1",
+     "published_at": "2026-11-24T19:44:00+00:00",
+     "observed_at": "2026-11-24T19:47:20.579178+00:00",
+     "odds": 1.95,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/sergey-147",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/25-11-2026-edmonton-oilers-vegas-golden-knights-1",
+     "published_at": "2026-11-24T19:48:00+00:00",
+     "observed_at": "2026-11-24T20:09:20.127166+00:00",
+     "odds": 1.95,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/niks-10",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/25-11-2026-edmonton-oilers-vegas-golden-knights-1",
+     "published_at": "2026-11-24T20:14:00+00:00",
+     "observed_at": "2026-11-24T20:31:20.293078+00:00",
+     "odds": 1.95,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/egor-002",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/25-11-2026-edmonton-oilers-vegas-golden-knights-1",
+     "published_at": "2026-11-24T21:47:00+00:00",
+     "observed_at": "2026-11-24T21:54:44.572563+00:00",
+     "odds": 1.97,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/aleksei-movsenko",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/25-11-2026-edmonton-oilers-vegas-golden-knights-1",
+     "published_at": "2026-11-24T22:02:00+00:00",
+     "observed_at": "2026-11-24T22:14:44.724992+00:00",
+     "odds": 1.97,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/rif-subaev-1",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/25-11-2026-edmonton-oilers-vegas-golden-knights-1",
+     "published_at": "2026-11-24T22:04:00+00:00",
+     "observed_at": "2026-11-24T22:14:44.724992+00:00",
+     "odds": 1.97,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/aleksei-nepytaev",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/25-11-2026-edmonton-oilers-vegas-golden-knights-1",
+     "published_at": "2026-11-24T22:11:00+00:00",
+     "observed_at": "2026-11-24T22:14:44.724992+00:00",
+     "odds": 1.97,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/ksenia-prognoz",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/25-11-2026-edmonton-oilers-vegas-golden-knights-1",
+     "published_at": "2026-11-24T22:19:00+00:00",
+     "observed_at": "2026-11-24T22:36:44.008237+00:00",
+     "odds": 1.97,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/sergey-snimshchikov",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/25-11-2026-edmonton-oilers-vegas-golden-knights-1",
+     "published_at": "2026-11-24T22:24:00+00:00",
+     "observed_at": "2026-11-24T22:36:44.008237+00:00",
+     "odds": 1.97,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/diman-diman-1",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/25-11-2026-edmonton-oilers-vegas-golden-knights-1",
+     "published_at": "2026-11-24T22:39:00+00:00",
+     "observed_at": "2026-11-24T22:56:44.466596+00:00",
+     "odds": 1.95,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/sanya-bazuev-1",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/25-11-2026-edmonton-oilers-vegas-golden-knights-1",
+     "published_at": "2026-11-24T22:43:00+00:00",
+     "observed_at": "2026-11-24T22:56:44.466596+00:00",
+     "odds": 1.95,
+     "price_kind": "author_recorded"
+    }
+   ]
+  },
+  "bold": {},
+  "open": {
+   "HK_ML_H": 0.4782
+  },
+  "top": false,
+  "msg_id": 9432,
+  "btn": 4
+ },
+ "NBA|401909315": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-25T04:00:00+03:00",
+  "sport": "basketball",
+  "div": "NBA",
+  "reason": "no_qualified_real_market",
+  "retry_at": 1795565324.013079
  }
 }
