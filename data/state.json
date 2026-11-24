@@ -2061,14 +2061,14 @@
  "vk_photos": [],
  "vk_photo_until": 1794644243.1147308,
  "vk_photo_cursor": {},
- "vk_story_last": 9333,
- "vk_story_err": "VK stories: сервер не вернул upload_result",
+ "vk_story_last": 9334,
+ "vk_story_err": null,
  "push_weekly": "2026-47",
- "vk_story_at": 1795532170.7145367,
- "vk_story_url": "https://vk.com/story-228963529_456239140",
+ "vk_story_at": 1795536851.5928714,
+ "vk_story_url": "https://vk.com/story-228963529_456239141",
  "vk_story_day": {
   "date": "2026-11-24",
-  "count": 12
+  "count": 13
  },
  "vk_legacy_pending": [
   {
@@ -2948,7 +2948,7 @@
   "quote_matches": 74
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-24T19:11:47.453165+03:00",
+  "last_poll": "2026-11-24T19:13:47.235844+03:00",
   "cursor": "386",
   "posts": [
    {
@@ -8455,6 +8455,5 @@
   "home": "Хайберниан",
   "away": "Данди",
   "kickoff": "2026-11-24T22:45:00+03:00"
- },
- "vk_story_retry_at": 1795536736.1940663
+ }
 }
