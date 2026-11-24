@@ -2730,7 +2730,7 @@
   "external_sources": {
    "providers": {
     "legalbet": {
-     "at": "2026-11-24T03:33:40.028422+00:00",
+     "at": "2026-11-24T04:05:40.138396+00:00",
      "status": "ok",
      "discovered": 1,
      "pages": 1,
@@ -2741,29 +2741,29 @@
      "contexts": 1
     },
     "livesport": {
-     "at": "2026-11-24T03:33:40.028422+00:00",
+     "at": "2026-11-24T04:05:40.138396+00:00",
      "status": "ok",
-     "discovered": 13,
+     "discovered": 14,
      "pages": 6,
-     "opinions": 4,
-     "mapped": 0,
+     "opinions": 10,
+     "mapped": 4,
      "articles_available": 17,
-     "next_offset": 18,
-     "contexts": 2
+     "next_offset": 10,
+     "contexts": 5
     },
     "metaratings": {
-     "at": "2026-11-24T03:33:40.028422+00:00",
+     "at": "2026-11-24T04:05:40.138396+00:00",
      "status": "ok",
      "discovered": 8,
      "pages": 6,
      "opinions": 24,
-     "mapped": 4,
+     "mapped": 3,
      "articles_available": 37,
-     "next_offset": 8,
+     "next_offset": 6,
      "contexts": 6
     },
     "rb": {
-     "at": "2026-11-24T03:33:40.028422+00:00",
+     "at": "2026-11-24T04:05:40.138396+00:00",
      "status": "ok",
      "discovered": 1,
      "pages": 1,
@@ -2774,16 +2774,16 @@
      "contexts": 1
     },
     "vseprosport": {
-     "at": "2026-11-24T03:33:40.028422+00:00",
+     "at": "2026-11-24T04:05:40.138396+00:00",
      "status": "ok",
      "discovered": 9,
-     "pages": 2,
+     "pages": 4,
      "opinions": 0,
      "mapped": 0,
      "articles_available": 10,
-     "next_offset": 8,
-     "page_errors": 4,
-     "contexts": 2
+     "next_offset": 14,
+     "page_errors": 2,
+     "contexts": 4
     }
    },
    "opinions": 22,
@@ -2907,7 +2907,7 @@
   "quote_matches": 64
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-24T07:03:39.183689+03:00",
+  "last_poll": "2026-11-24T07:05:40.138396+03:00",
   "cursor": "370",
   "posts": [
    {
@@ -3602,7 +3602,7 @@
    "186842": "pre",
    "186843": "pre",
    "1789257": "pre",
-   "1789254": "pre",
+   "1789254": "in",
    "1789258": "pre",
    "1789253": "pre",
    "1789260": "pre",
