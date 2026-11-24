@@ -1570,7 +1570,7 @@
  "value_day": "2026-11-23",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-23",
- "site_stamp": "1522|9296|2026-11-24 06|6|d06287846b03e4c0",
+ "site_stamp": "1523|9298|2026-11-24 06|6|3c21c0b2f132bb7e",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1726,7 +1726,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 9296,
+ "dz_last": 9298,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2056,7 +2056,7 @@
  "vk_photos": [],
  "vk_photo_until": 1794644243.1147308,
  "vk_photo_cursor": {},
- "vk_story_last": 9296,
+ "vk_story_last": 9298,
  "vk_story_err": null,
  "push_weekly": "2026-47",
  "vk_story_at": 1795483253.1896534,
@@ -2851,37 +2851,37 @@
    "hockey": {
     "status": "collecting",
     "weight": 0.0,
-    "settled_matches": 52,
+    "settled_matches": 53,
     "required_matches": 100,
-    "trained_at": "2026-11-24T03:25:39.645593+00:00"
+    "trained_at": "2026-11-24T03:27:39.840715+00:00"
    },
    "basketball": {
     "status": "collecting",
     "weight": 0.0,
     "settled_matches": 60,
     "required_matches": 100,
-    "trained_at": "2026-11-24T03:25:39.645593+00:00"
+    "trained_at": "2026-11-24T03:27:39.840715+00:00"
    },
    "tennis": {
     "status": "collecting",
     "weight": 0.0,
     "settled_matches": 6,
     "required_matches": 100,
-    "trained_at": "2026-11-24T03:25:39.645593+00:00"
+    "trained_at": "2026-11-24T03:27:39.840715+00:00"
    },
    "esports:CS2": {
     "status": "collecting",
     "weight": 0.0,
     "settled_matches": 0,
     "required_matches": 100,
-    "trained_at": "2026-11-24T03:25:39.645593+00:00"
+    "trained_at": "2026-11-24T03:27:39.840715+00:00"
    },
    "esports:DOTA": {
     "status": "collecting",
     "weight": 0.0,
     "settled_matches": 0,
     "required_matches": 100,
-    "trained_at": "2026-11-24T03:25:39.645593+00:00"
+    "trained_at": "2026-11-24T03:27:39.840715+00:00"
    }
   },
   "source": {
@@ -2907,7 +2907,7 @@
   "quote_matches": 61
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-24T06:25:39.645593+03:00",
+  "last_poll": "2026-11-24T06:27:39.840715+03:00",
   "cursor": "370",
   "posts": [
    {
@@ -3548,13 +3548,13 @@
    "401841326": "post",
    "401841320": "post",
    "401933756": "post",
-   "401933728": "in",
+   "401933728": "post",
    "401934684": "post",
    "401934683": "post",
    "401888561": "post",
    "401888562": "post",
    "401892773": "post",
-   "401892774": "in",
+   "401892774": "post",
    "401892775": "post",
    "401892776": "post",
    "401892777": "post",
@@ -3565,7 +3565,7 @@
    "401910038": "post",
    "401910039": "post",
    "401910040": "post",
-   "401910041": "in",
+   "401910041": "post",
    "401910042": "in",
    "401910043": "in",
    "401910044": "in",
@@ -6789,7 +6789,7 @@
     }
    },
    "hockey|NHL|401892775": {
-    "status": "open",
+    "status": "settled",
     "id": "401892775",
     "sport": "hockey",
     "div": "NHL",
@@ -6856,7 +6856,10 @@
        "price_kind": "author_recorded"
       }
      ]
-    }
+    },
+    "settled_at": "2026-11-24T03:27:39.840715+00:00",
+    "hit": false,
+    "profit_pct": -0.5
    },
    "hockey|NHL|401892776": {
     "status": "settled",
