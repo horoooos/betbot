@@ -41402,5 +41402,13 @@
   "div": "USA",
   "reason": "no_qualified_real_market",
   "retry_at": 1795482138.11949
+ },
+ "401876819": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-24T05:00:00+03:00",
+  "sport": "football",
+  "div": "CRC",
+  "reason": "edge_below_minimum",
+  "retry_at": 1795482498.353493
  }
 }

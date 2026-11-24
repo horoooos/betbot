@@ -2730,7 +2730,7 @@
   "external_sources": {
    "providers": {
     "legalbet": {
-     "at": "2026-11-24T00:26:18.819791+00:00",
+     "at": "2026-11-24T00:58:18.353493+00:00",
      "status": "ok",
      "discovered": 2,
      "pages": 2,
@@ -2741,29 +2741,29 @@
      "contexts": 2
     },
     "livesport": {
-     "at": "2026-11-24T00:26:18.819791+00:00",
+     "at": "2026-11-24T00:58:18.353493+00:00",
      "status": "ok",
      "discovered": 12,
      "pages": 6,
      "opinions": 8,
-     "mapped": 1,
+     "mapped": 3,
      "articles_available": 18,
-     "next_offset": 16,
-     "contexts": 4
+     "next_offset": 10,
+     "contexts": 5
     },
     "metaratings": {
-     "at": "2026-11-24T00:26:18.819791+00:00",
+     "at": "2026-11-24T00:58:18.353493+00:00",
      "status": "ok",
      "discovered": 9,
      "pages": 6,
      "opinions": 24,
-     "mapped": 3,
+     "mapped": 7,
      "articles_available": 37,
-     "next_offset": 6,
+     "next_offset": 12,
      "contexts": 6
     },
     "rb": {
-     "at": "2026-11-24T00:26:18.819791+00:00",
+     "at": "2026-11-24T00:58:18.353493+00:00",
      "status": "ok",
      "discovered": 1,
      "pages": 1,
@@ -2774,21 +2774,21 @@
      "contexts": 1
     },
     "vseprosport": {
-     "at": "2026-11-24T00:26:18.819791+00:00",
+     "at": "2026-11-24T00:58:18.353493+00:00",
      "status": "ok",
      "discovered": 9,
-     "pages": 2,
+     "pages": 4,
      "opinions": 0,
      "mapped": 0,
      "articles_available": 10,
-     "next_offset": 8,
-     "page_errors": 4,
-     "contexts": 2
+     "next_offset": 14,
+     "page_errors": 2,
+     "contexts": 4
     }
    },
    "opinions": 21,
    "snapshots": 0,
-   "contexts": 42,
+   "contexts": 43,
    "model": {
     "weight": 0.0,
     "status": "collecting",
@@ -2907,7 +2907,7 @@
   "quote_matches": 52
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-24T03:56:18.215349+03:00",
+  "last_poll": "2026-11-24T03:58:18.353493+03:00",
   "cursor": "370",
   "posts": [
    {
@@ -4173,6 +4173,21 @@
    "odds": 1.41,
    "edge": -0.06982,
    "estimated": true
+  },
+  "football|CRC|401876819": {
+   "reason": "edge_below_minimum",
+   "checked_at": "2026-11-24T00:58:57.193822+00:00",
+   "kickoff": "2026-11-24T05:00:00+03:00",
+   "sport": "football",
+   "id": "401876819",
+   "home": "Alajuelense",
+   "away": "Cartaginés",
+   "priced_markets": 6,
+   "market": "ТМ 2.5",
+   "probability": 0.5215,
+   "odds": 1.77,
+   "edge": -0.07695,
+   "estimated": false
   }
  },
  "source_trial": {
