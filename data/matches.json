@@ -29180,5 +29180,13 @@
   "div": "UCL",
   "reason": "no_qualified_real_market",
   "retry_at": 1795550600.325774
+ },
+ "401841335": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-25T00:00:00+03:00",
+  "sport": "football",
+  "div": "BRA",
+  "reason": "no_qualified_real_market",
+  "retry_at": 1795550960.129123
  }
 }

@@ -2964,7 +2964,7 @@
   "quote_matches": 76
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-24T22:57:19.955944+03:00",
+  "last_poll": "2026-11-24T22:59:20.129123+03:00",
   "cursor": "396",
   "posts": [
    {
@@ -5233,6 +5233,21 @@
    "probability": 0.6508,
    "odds": 1.43,
    "edge": -0.06936,
+   "estimated": true
+  },
+  "football|BRA|401841335": {
+   "reason": "no_qualified_real_market",
+   "checked_at": "2026-11-24T19:59:45.995153+00:00",
+   "kickoff": "2026-11-25T00:00:00+03:00",
+   "sport": "football",
+   "id": "401841335",
+   "home": "Шапекоэнсе",
+   "away": "Палмейрас",
+   "priced_markets": 3,
+   "market": "Обе забьют — да",
+   "probability": 0.5629,
+   "odds": 1.65,
+   "edge": -0.07122,
    "estimated": true
   }
  },
