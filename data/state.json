@@ -2056,14 +2056,14 @@
  "vk_photos": [],
  "vk_photo_until": 1794644243.1147308,
  "vk_photo_cursor": {},
- "vk_story_last": 9193,
+ "vk_story_last": 9203,
  "vk_story_err": null,
  "push_weekly": "2026-47",
- "vk_story_at": 1795479407.1207497,
- "vk_story_url": "https://vk.com/story-228963529_456239130",
+ "vk_story_at": 1795480366.4913003,
+ "vk_story_url": "https://vk.com/story-228963529_456239131",
  "vk_story_day": {
   "date": "2026-11-24",
-  "count": 2
+  "count": 3
  },
  "vk_legacy_pending": [
   {
@@ -2837,15 +2837,15 @@
   "model": {
    "weight": 0.0,
    "status": "baseline_better",
-   "settled_matches": 117,
+   "settled_matches": 118,
    "required_matches": 100,
-   "trained_at": "2026-11-24T00:22:18.457702+00:00",
+   "trained_at": "2026-11-24T00:32:18.479769+00:00",
    "candidate_weight": 0.0,
    "train_matches": 83,
-   "validation_matches": 34,
+   "validation_matches": 35,
    "validation_from": "2026-11-22T00:00:00+00:00",
-   "validation_logloss": 3.0622167879449775,
-   "validation_baseline_logloss": 3.0622167879449775
+   "validation_logloss": 3.0331550487131085,
+   "validation_baseline_logloss": 3.0331550487131085
   },
   "sport_models": {
    "hockey": {
@@ -2907,7 +2907,7 @@
   "quote_matches": 51
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-24T03:30:18.842011+03:00",
+  "last_poll": "2026-11-24T03:32:18.479769+03:00",
   "cursor": "370",
   "posts": [
    {
@@ -3544,7 +3544,7 @@
    "401874538": "post",
    "401842888": "post",
    "401842884": "post",
-   "401841323": "in",
+   "401841323": "post",
    "401841326": "in",
    "401841320": "in",
    "401933756": "post",
