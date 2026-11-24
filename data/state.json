@@ -2946,7 +2946,7 @@
   "quote_matches": 74
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-24T18:41:47.620599+03:00",
+  "last_poll": "2026-11-24T18:43:47.238018+03:00",
   "cursor": "386",
   "posts": [
    {
@@ -8279,7 +8279,7 @@
     "profit_pct": -0.5
    },
    "tennis|WTA|186820": {
-    "status": "open",
+    "status": "settled",
     "id": "186820",
     "sport": "tennis",
     "div": "WTA",
@@ -8409,7 +8409,10 @@
        "price_kind": "author_recorded"
       }
      ]
-    }
+    },
+    "settled_at": "2026-11-24T15:43:47.238018+00:00",
+    "hit": false,
+    "profit_pct": -0.5
    }
   }
  },
