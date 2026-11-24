@@ -2061,8 +2061,8 @@
  "vk_photos": [],
  "vk_photo_until": 1794644243.1147308,
  "vk_photo_cursor": {},
- "vk_story_last": 9323,
- "vk_story_err": null,
+ "vk_story_last": 9325,
+ "vk_story_err": "VK stories: сервер не вернул upload_result",
  "push_weekly": "2026-47",
  "vk_story_at": 1795526638.5272706,
  "vk_story_url": "https://vk.com/story-228963529_456239138",
@@ -2938,7 +2938,7 @@
   "quote_matches": 73
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-24T16:37:35.887869+03:00",
+  "last_poll": "2026-11-24T16:39:36.403719+03:00",
   "cursor": "382",
   "posts": [
    {
@@ -8375,5 +8375,6 @@
   "home": "Хайберниан",
   "away": "Данди",
   "kickoff": "2026-11-24T22:45:00+03:00"
- }
+ },
+ "vk_story_retry_at": 1795531199.0144758
 }
