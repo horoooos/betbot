@@ -7,8 +7,6 @@
  "schedule_day": "2026-11-24",
  "content_slot": "2026-11-24-16",
  "news_seen": [
-  "https://www.sport-express.ru/tennis/atp/news/daniil-medvedev-aleksandr-zverev-data-i-vremya-polufinala-itogovogo-turnira-vo-skolko-nachalo-matcha-po-msk-2477152/",
-  "https://www.sport-express.ru/tennis/atp/news/daniil-medvedev-otreagiroval-na-vyhod-v-polufinal-itogovogo-turnira-atp-2477151/",
   "https://www.sport-express.ru/tennis/atp/news/daniil-medvedev-frensis-tiafo-schet-i-rezultat-matcha-itogovogo-turnira-atp-20-noyabrya-2026-2477146/",
   "https://www.sport-express.ru/tennis/wta/news/arina-sobolenko-vyigrala-bolshe-vseh-matchey-v-dvuh-setah-i-na-turnirah-bolshogo-shlema-v-sezone-2026-goda-2477137/",
   "https://www.sport-express.ru/football/spain/news/atletik-espanol-schet-0-1-rezultat-matcha-chempionata-francii-20-noyabrya-2026-goda-2477157/",
@@ -506,9 +504,11 @@
   "https://www.sport-express.ru/football/spain/news/zidan-bellingem-olise-sinner-i-osaka-voshli-v-spisok-samyh-stilnyh-sportsmenov-2026-goda-po-versii-vogue-2478352/",
   "komanda-s1mple-proigrala-vtoroi-match-podryad-na-pgl-major-singapore-2026",
   "team-liquid-oderzhala-vtoruyu-pobedu-na-pgl-major-singapore-2026-obygrav",
-  "team-yandex-ili-1w-team-kto-pobedit-v-matche-na-blast-slam-ix"
+  "team-yandex-ili-1w-team-kto-pobedit-v-matche-na-blast-slam-ix",
+  "https://www.sport-express.ru/football/spain/news/ernandes-ernandes-luchshiy-sudya-ispanii-del-serro-grande-luchshiy-var-2478401/",
+  "https://www.sport-express.ru/football/rus_cup/news/akron-cska-startovye-sostavy-na-match-6-go-tura-puti-rpl-kubka-rossii-24-noyabrya-2026-2478400/"
  ],
- "news_i": 0,
+ "news_i": 1,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1695,7 +1695,7 @@
  "streak_day": {
   "2026-11-22": 2
  },
- "news_next": "2026-11-24T16:16:51.823688+03:00",
+ "news_next": "2026-11-24T16:45:36.096908+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1726,7 +1726,6 @@
  "vk_mode": "photo",
  "dz_err": null,
  "img_used": [
-  "https://images.cybersport.ru/images/as-is/plain/ac/ac12208a-caeb-4553-b73f-98b5e460de44.jpg",
   "https://upload.wikimedia.org/wikipedia/commons/3/3f/Mikhail_Galaktionov_2020.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
   "https://images.cybersport.ru/images/as-is/plain/bf/bf180d09-0403-47bc-b75c-384638877db5.jpg",
   "https://upload.wikimedia.org/wikipedia/commons/1/1c/FC_Dynamo_Kyiv_2010-2011.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
@@ -2025,7 +2024,8 @@
   "https://upload.wikimedia.org/wikipedia/commons/0/09/%D0%94%D0%BC%D0%B8%D1%82%D1%80%D0%B8%D0%B9_%D0%9A%D1%83%D0%B7%D0%BD%D0%B5%D1%86%D0%BE%D0%B2_%28%D0%B8%D1%8E%D0%BB%D1%8C_2022%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
   "https://images.cybersport.ru/images/as-is/plain/2b/2b03c776-0ff9-4c60-9a8d-f8abbc87a843.jpg",
   "https://ss.sport-express.ru/userfiles/materials/224/2246403/1180x665.jpg",
-  "https://images.cybersport.ru/images/as-is/plain/10/10df8487-c9bd-4ba3-aebd-6bc27752f5d0.jpg"
+  "https://images.cybersport.ru/images/as-is/plain/10/10df8487-c9bd-4ba3-aebd-6bc27752f5d0.jpg",
+  "https://upload.wikimedia.org/wikipedia/commons/d/d6/CDKA_Moskva.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
  ],
  "indexnow_day": "2026-11-24",
  "vk_wall_err": null,
@@ -2411,7 +2411,8 @@
   "9339",
   "9340",
   "9343",
-  "9345"
+  "9345",
+  "9350"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -2729,11 +2730,12 @@
   "2026-11-24:новость:16dfcad620de1d079949cbcb",
   "2026-11-24:новость:9d6601528c012dfecb19dd80",
   "2026-11-24:новость:317cc0099682846c58ce6673",
-  "2026-11-24:новость:163ca8d430f0a95bd68ae53f"
+  "2026-11-24:новость:163ca8d430f0a95bd68ae53f",
+  "2026-11-24:новость:37741d8b2492c9737400b932"
  ],
  "dz_last_delivery": {
-  "source_id": 9345,
-  "message_id": 865,
+  "source_id": 9350,
+  "message_id": 866,
   "kind": "новость"
  },
  "learn_attempt_day": "2026-11-24",
@@ -2936,7 +2938,7 @@
   "quote_matches": 73
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-24T16:15:36.117529+03:00",
+  "last_poll": "2026-11-24T16:17:36.096908+03:00",
   "cursor": "382",
   "posts": [
    {
