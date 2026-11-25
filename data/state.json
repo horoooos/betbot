@@ -1563,7 +1563,7 @@
  "value_day": "2026-11-24",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-24",
- "site_stamp": "1540|9440|2026-11-25 04|6|393e32280bc76408",
+ "site_stamp": "1540|9440|2026-11-25 05|6|14d9e4ed614aceef",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -2801,7 +2801,7 @@
   "external_sources": {
    "providers": {
     "legalbet": {
-     "at": "2026-11-25T01:28:04.386401+00:00",
+     "at": "2026-11-25T02:00:04.450962+00:00",
      "status": "ok",
      "discovered": 1,
      "pages": 1,
@@ -2812,29 +2812,29 @@
      "contexts": 1
     },
     "livesport": {
-     "at": "2026-11-25T01:28:04.386401+00:00",
+     "at": "2026-11-25T02:00:04.450962+00:00",
      "status": "ok",
      "discovered": 20,
      "pages": 6,
-     "opinions": 4,
-     "mapped": 2,
+     "opinions": 6,
+     "mapped": 3,
      "articles_available": 23,
-     "next_offset": 7,
-     "contexts": 2
+     "next_offset": 13,
+     "contexts": 3
     },
     "metaratings": {
-     "at": "2026-11-25T01:28:04.386401+00:00",
+     "at": "2026-11-25T02:00:04.450962+00:00",
      "status": "ok",
-     "discovered": 10,
-     "pages": 6,
-     "opinions": 24,
-     "mapped": 2,
-     "articles_available": 39,
-     "next_offset": 15,
-     "contexts": 6
+     "discovered": 0,
+     "pages": 0,
+     "opinions": 0,
+     "mapped": 0,
+     "articles_available": 35,
+     "next_offset": 0,
+     "contexts": 0
     },
     "rb": {
-     "at": "2026-11-25T01:28:04.386401+00:00",
+     "at": "2026-11-25T02:00:04.450962+00:00",
      "status": "ok",
      "discovered": 2,
      "pages": 2,
@@ -2845,16 +2845,13 @@
      "contexts": 2
     },
     "vseprosport": {
-     "at": "2026-11-25T01:28:04.386401+00:00",
-     "status": "ok",
-     "discovered": 7,
-     "pages": 4,
+     "at": "2026-11-25T02:00:04.450962+00:00",
+     "status": "markup_changed",
+     "discovered": 0,
+     "pages": 0,
      "opinions": 0,
      "mapped": 0,
-     "articles_available": 10,
-     "next_offset": 11,
-     "page_errors": 2,
-     "contexts": 2
+     "articles_available": 0
     }
    },
    "opinions": 37,
@@ -2973,12 +2970,12 @@
   },
   "error": null,
   "tips": 15479,
-  "snapshots": 328,
+  "snapshots": 330,
   "unmapped_markets": 23638,
   "quote_matches": 87
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-25T04:58:04.213361+03:00",
+  "last_poll": "2026-11-25T05:00:04.450962+03:00",
   "cursor": "403",
   "posts": [
    {
