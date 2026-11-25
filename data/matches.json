@@ -24307,5 +24307,797 @@
   "close": {
    "H": 0.5003
   }
+ },
+ "401899534": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-25T22:00:00+03:00",
+  "sport": "football",
+  "div": "I2",
+  "reason": "edge_below_minimum",
+  "retry_at": 1795630107.612906
+ },
+ "401899533": {
+  "id": "401899533",
+  "div": "I2",
+  "slug": "ita.2",
+  "kickoff": "2026-11-25T22:00:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "detail": "Scheduled",
+  "home": {
+   "id": "3952",
+   "name": "Padova",
+   "short": "Padova",
+   "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/3952.png",
+   "color": "aa0001",
+   "alt": "1a1a1a",
+   "form": "DDDWW",
+   "score": "0",
+   "ru": "Падова"
+  },
+  "away": {
+   "id": "2734",
+   "name": "Sampdoria",
+   "short": "Sampdoria",
+   "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/2734.png",
+   "color": "2234a4",
+   "alt": "ffffff",
+   "form": "WWWLD",
+   "score": "0",
+   "ru": "Сампдория"
+  },
+  "odds": {
+   "H": 3.25,
+   "D": 3.1,
+   "A": 2.35,
+   "line": 2.5,
+   "over": 2.05,
+   "under": 1.714,
+   "spread_h": [
+    0.5,
+    1.588
+   ],
+   "spread_a": [
+    -0.5,
+    2.2
+   ]
+  },
+  "venue": "Euganeo",
+  "clock": "0'",
+  "goals": [],
+  "open": {
+   "U25": 0.5508
+  },
+  "top": false,
+  "lam": [
+   1.1902761145025154,
+   1.2787678985333228
+  ],
+  "probs": {
+   "H": 0.3326427629839314,
+   "D": 0.29232304938368703,
+   "A": 0.37503418763238155,
+   "1X": 0.6249658123676184,
+   "12": 0.7076769506163126,
+   "X2": 0.6673572370160682,
+   "BTTS_Y": 0.5124578601886325,
+   "BTTS_N": 0.4875421398113672,
+   "O15": 0.7166001953307182,
+   "U15": 0.2833998046692815,
+   "O25": 0.44822187212974557,
+   "U25": 0.5517781278702545,
+   "O35": 0.23582743890184854,
+   "U35": 0.7641725610981513,
+   "H_O05": 0.6958627067789896,
+   "H_O15": 0.33385535112857384,
+   "A_O05": 0.7216198857968992,
+   "A_O15": 0.36563633216393454,
+   "H-1.5": 0.14336047115413186,
+   "A+1.5": 0.8566395288458677,
+   "A-1.5": 0.17091312610930368,
+   "H+1.5": 0.829086873890696,
+   "H-2.5": 0.046539874140424674,
+   "A-2.5": 0.05916100630522,
+   "H+2.5": 0.9408389936947799,
+   "A+2.5": 0.953460125859575,
+   "O45": 0.10472463796097901,
+   "U45": 0.895275362039021,
+   "H_O25": 0.11841099677612024,
+   "A_O25": 0.13802616176810878,
+   "H&O15": 0.2421766071680628,
+   "A&O15": 0.2770758063917119,
+   "H&BTTS": 0.14923791639357423,
+   "A&BTTS": 0.16587216202411462,
+   "1X&U35": 0.48508542390421217,
+   "X2&U35": 0.5132405629048469,
+   "BTTS&O25": 0.3732797020904684,
+   "HT_H": 0.2595280501746809,
+   "HT_D": 0.4550022619982022,
+   "HT_A": 0.28546968782711696,
+   "HT_O05": 0.6626759018693253,
+   "HT_U05": 0.3373240981306746,
+   "HT_O15": 0.31313943008261924,
+   "HT_U15": 0.6868605699173809
+  },
+  "scores": [
+   [
+    "1:1",
+    0.1391781580981644
+   ],
+   [
+    "0:1",
+    0.09795838124066963
+   ],
+   [
+    "0:0",
+    0.09497526761274325
+   ]
+  ],
+  "main": {
+   "key": "U25",
+   "label": "ТМ 2.5",
+   "p": 0.5518,
+   "odds": 1.69,
+   "est": false,
+   "stake": 0.5,
+   "strategy": "external_trial",
+   "selection_mode": "external_fallback",
+   "trial_expires_at": null,
+   "probability_origin": "baseline_model",
+   "model_edge": -0.06749,
+   "source_count": 2,
+   "source_refs": [
+    {
+     "author": "/predictors/kapral-1",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/25-11-2026-padova-sampdoria",
+     "published_at": "2026-11-25T07:15:00+00:00",
+     "observed_at": "2026-11-25T11:34:18.943805+00:00",
+     "odds": 1.76,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/roman-kosov-2",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/25-11-2026-padova-sampdoria",
+     "published_at": "2026-11-25T11:16:00+00:00",
+     "observed_at": "2026-11-25T11:34:18.943805+00:00",
+     "odds": 1.76,
+     "price_kind": "author_recorded"
+    }
+   ]
+  },
+  "bold": {},
+  "value": null,
+  "odds_src": "среднее по букмекерам",
+  "model_w": 0.0,
+  "learned_n": 1548,
+  "stavka_signal": {
+   "status": "baseline_better",
+   "weight": 0.0,
+   "authors": 7,
+   "votes": {
+    "A": 0.9771490863383377,
+    "D": 2.0963927901383936,
+    "O25": 2.0,
+    "U25": 2.0
+   },
+   "source": "https://stavka.tv",
+   "snapshot": "I2|401899533"
+  },
+  "research": {
+   "articles": [],
+   "dossier": {
+    "observed_at": "2026-11-25T17:48:40.466961+00:00",
+    "kickoff": "2026-11-25T19:00:00+00:00",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/ita.2/summary?event=401899533",
+    "status": "available",
+    "facts": {
+     "table": {
+      "2923": {
+       "rank": "1",
+       "gp": "13",
+       "w": "9",
+       "d": "3",
+       "l": "1",
+       "gd": "+13",
+       "pts": "30",
+       "of": 20,
+       "raw": {
+        "GP": "13",
+        "L": "1",
+        "GD": "+13",
+        "P": "30",
+        "D": "3",
+        "W": "9",
+        "R": "1",
+        "Total": "9-3-1"
+       },
+       "group": "Italian Serie B Standings"
+      },
+      "2573": {
+       "rank": "2",
+       "gp": "12",
+       "w": "8",
+       "d": "2",
+       "l": "2",
+       "gd": "+12",
+       "pts": "26",
+       "of": 20,
+       "raw": {
+        "GP": "12",
+        "L": "2",
+        "GD": "+12",
+        "P": "26",
+        "D": "2",
+        "W": "8",
+        "R": "2",
+        "Total": "8-2-2"
+       },
+       "group": "Italian Serie B Standings"
+      },
+      "3346": {
+       "rank": "3",
+       "gp": "13",
+       "w": "5",
+       "d": "6",
+       "l": "2",
+       "gd": "+6",
+       "pts": "21",
+       "of": 20,
+       "raw": {
+        "GP": "13",
+        "L": "2",
+        "GD": "+6",
+        "P": "21",
+        "D": "6",
+        "W": "5",
+        "R": "3",
+        "Total": "5-6-2"
+       },
+       "group": "Italian Serie B Standings"
+      },
+      "3337": {
+       "rank": "4",
+       "gp": "13",
+       "w": "5",
+       "d": "6",
+       "l": "2",
+       "gd": "+4",
+       "pts": "21",
+       "of": 20,
+       "raw": {
+        "GP": "13",
+        "L": "2",
+        "GD": "+4",
+        "P": "21",
+        "D": "6",
+        "W": "5",
+        "R": "4",
+        "Total": "5-6-2"
+       },
+       "group": "Italian Serie B Standings"
+      },
+      "4055": {
+       "rank": "5",
+       "gp": "12",
+       "w": "5",
+       "d": "4",
+       "l": "3",
+       "gd": "+8",
+       "pts": "19",
+       "of": 20,
+       "raw": {
+        "GP": "12",
+        "L": "3",
+        "GD": "+8",
+        "P": "19",
+        "D": "4",
+        "W": "5",
+        "R": "5",
+        "Total": "5-4-3"
+       },
+       "group": "Italian Serie B Standings"
+      },
+      "3956": {
+       "rank": "6",
+       "gp": "12",
+       "w": "5",
+       "d": "4",
+       "l": "3",
+       "gd": "+4",
+       "pts": "19",
+       "of": 20,
+       "raw": {
+        "GP": "12",
+        "L": "3",
+        "GD": "+4",
+        "P": "19",
+        "D": "4",
+        "W": "5",
+        "R": "6",
+        "Total": "5-4-3"
+       },
+       "group": "Italian Serie B Standings"
+      },
+      "3991": {
+       "rank": "7",
+       "gp": "12",
+       "w": "5",
+       "d": "4",
+       "l": "3",
+       "gd": "+1",
+       "pts": "19",
+       "of": 20,
+       "raw": {
+        "GP": "12",
+        "L": "3",
+        "GD": "+1",
+        "P": "19",
+        "D": "4",
+        "W": "5",
+        "R": "7",
+        "Total": "5-4-3"
+       },
+       "group": "Italian Serie B Standings"
+      },
+      "4059": {
+       "rank": "8",
+       "gp": "13",
+       "w": "5",
+       "d": "4",
+       "l": "4",
+       "gd": "+7",
+       "pts": "19",
+       "of": 20,
+       "raw": {
+        "GP": "13",
+        "L": "4",
+        "GD": "+7",
+        "P": "19",
+        "D": "4",
+        "W": "5",
+        "R": "8",
+        "Total": "5-4-4"
+       },
+       "group": "Italian Serie B Standings"
+      },
+      "11139": {
+       "rank": "9",
+       "gp": "13",
+       "w": "4",
+       "d": "6",
+       "l": "3",
+       "gd": "-1",
+       "pts": "18",
+       "of": 20,
+       "raw": {
+        "GP": "13",
+        "L": "3",
+        "GD": "-1",
+        "P": "18",
+        "D": "6",
+        "W": "4",
+        "R": "9",
+        "Total": "4-6-3"
+       },
+       "group": "Italian Serie B Standings"
+      },
+      "3952": {
+       "rank": "10",
+       "gp": "12",
+       "w": "4",
+       "d": "4",
+       "l": "4",
+       "gd": "-1",
+       "pts": "16",
+       "of": 20,
+       "raw": {
+        "GP": "12",
+        "L": "4",
+        "GD": "-1",
+        "P": "16",
+        "D": "4",
+        "W": "4",
+        "R": "10",
+        "Total": "4-4-4"
+       },
+       "group": "Italian Serie B Standings"
+      },
+      "119": {
+       "rank": "11",
+       "gp": "13",
+       "w": "4",
+       "d": "4",
+       "l": "5",
+       "gd": "+3",
+       "pts": "16",
+       "of": 20,
+       "raw": {
+        "GP": "13",
+        "L": "5",
+        "GD": "+3",
+        "P": "16",
+        "D": "4",
+        "W": "4",
+        "R": "11",
+        "Total": "4-4-5"
+       },
+       "group": "Italian Serie B Standings"
+      },
+      "3988": {
+       "rank": "12",
+       "gp": "13",
+       "w": "5",
+       "d": "1",
+       "l": "7",
+       "gd": "-3",
+       "pts": "16",
+       "of": 20,
+       "raw": {
+        "GP": "13",
+        "L": "7",
+        "GD": "-3",
+        "P": "16",
+        "D": "1",
+        "W": "5",
+        "R": "12",
+        "Total": "5-1-7"
+       },
+       "group": "Italian Serie B Standings"
+      },
+      "4050": {
+       "rank": "13",
+       "gp": "12",
+       "w": "4",
+       "d": "3",
+       "l": "5",
+       "gd": "+1",
+       "pts": "15",
+       "of": 20,
+       "raw": {
+        "GP": "12",
+        "L": "5",
+        "GD": "+1",
+        "P": "15",
+        "D": "3",
+        "W": "4",
+        "R": "13",
+        "Total": "4-3-5"
+       },
+       "group": "Italian Serie B Standings"
+      },
+      "2734": {
+       "rank": "14",
+       "gp": "12",
+       "w": "4",
+       "d": "2",
+       "l": "6",
+       "gd": "-5",
+       "pts": "14",
+       "of": 20,
+       "raw": {
+        "GP": "12",
+        "L": "6",
+        "GD": "-5",
+        "P": "14",
+        "D": "2",
+        "W": "4",
+        "R": "14",
+        "Total": "4-2-6"
+       },
+       "group": "Italian Serie B Standings"
+      },
+      "11137": {
+       "rank": "15",
+       "gp": "13",
+       "w": "3",
+       "d": "4",
+       "l": "6",
+       "gd": "-3",
+       "pts": "13",
+       "of": 20,
+       "raw": {
+        "GP": "13",
+        "L": "6",
+        "GD": "-3",
+        "P": "13",
+        "D": "4",
+        "W": "3",
+        "R": "15",
+        "Total": "3-4-6"
+       },
+       "group": "Italian Serie B Standings"
+      },
+      "3345": {
+       "rank": "16",
+       "gp": "12",
+       "w": "3",
+       "d": "3",
+       "l": "6",
+       "gd": "-11",
+       "pts": "12",
+       "of": 20,
+       "raw": {
+        "GP": "12",
+        "L": "6",
+        "GD": "-11",
+        "P": "12",
+        "D": "3",
+        "W": "3",
+        "R": "16",
+        "Total": "3-3-6"
+       },
+       "group": "Italian Serie B Standings"
+      },
+      "3975": {
+       "rank": "17",
+       "gp": "13",
+       "w": "4",
+       "d": "4",
+       "l": "5",
+       "gd": "-3",
+       "pts": "12",
+       "of": 20,
+       "raw": {
+        "GP": "13",
+        "L": "5",
+        "GD": "-3",
+        "P": "12",
+        "D": "4",
+        "W": "4",
+        "R": "17",
+        "Total": "4-4-5"
+       },
+       "group": "Italian Serie B Standings"
+      },
+      "3257": {
+       "rank": "18",
+       "gp": "13",
+       "w": "3",
+       "d": "3",
+       "l": "7",
+       "gd": "-8",
+       "pts": "12",
+       "of": 20,
+       "raw": {
+        "GP": "13",
+        "L": "7",
+        "GD": "-8",
+        "P": "12",
+        "D": "3",
+        "W": "3",
+        "R": "18",
+        "Total": "3-3-7"
+       },
+       "group": "Italian Serie B Standings"
+      },
+      "120": {
+       "rank": "19",
+       "gp": "13",
+       "w": "2",
+       "d": "4",
+       "l": "7",
+       "gd": "-11",
+       "pts": "10",
+       "of": 20,
+       "raw": {
+        "GP": "13",
+        "L": "7",
+        "GD": "-11",
+        "P": "10",
+        "D": "4",
+        "W": "2",
+        "R": "19",
+        "Total": "2-4-7"
+       },
+       "group": "Italian Serie B Standings"
+      },
+      "2574": {
+       "rank": "20",
+       "gp": "13",
+       "w": "2",
+       "d": "3",
+       "l": "8",
+       "gd": "-13",
+       "pts": "9",
+       "of": 20,
+       "raw": {
+        "GP": "13",
+        "L": "8",
+        "GD": "-13",
+        "P": "9",
+        "D": "3",
+        "W": "2",
+        "R": "20",
+        "Total": "2-3-8"
+       },
+       "group": "Italian Serie B Standings"
+      }
+     },
+     "last5": {
+      "3952": [
+       {
+        "res": "W",
+        "gf": 1,
+        "ga": 0,
+        "opp": "US Avellino",
+        "home": false,
+        "date": "2026-10-24"
+       },
+       {
+        "res": "W",
+        "gf": 2,
+        "ga": 0,
+        "opp": "Sudtirol",
+        "home": true,
+        "date": "2026-10-27"
+       },
+       {
+        "res": "D",
+        "gf": 1,
+        "ga": 1,
+        "opp": "Catanzaro",
+        "home": false,
+        "date": "2026-10-31"
+       },
+       {
+        "res": "D",
+        "gf": 2,
+        "ga": 2,
+        "opp": "Empoli",
+        "home": true,
+        "date": "2026-11-07"
+       },
+       {
+        "res": "D",
+        "gf": 1,
+        "ga": 1,
+        "opp": "Arezzo",
+        "home": false,
+        "date": "2026-11-22"
+       }
+      ],
+      "2734": [
+       {
+        "res": "D",
+        "gf": 1,
+        "ga": 1,
+        "opp": "Sudtirol",
+        "home": false,
+        "date": "2026-10-24"
+       },
+       {
+        "res": "L",
+        "gf": 0,
+        "ga": 2,
+        "opp": "Ascoli",
+        "home": false,
+        "date": "2026-10-27"
+       },
+       {
+        "res": "W",
+        "gf": 2,
+        "ga": 0,
+        "opp": "Virtus Entella",
+        "home": true,
+        "date": "2026-10-31"
+       },
+       {
+        "res": "W",
+        "gf": 1,
+        "ga": 0,
+        "opp": "Carrarese",
+        "home": false,
+        "date": "2026-11-08"
+       },
+       {
+        "res": "W",
+        "gf": 3,
+        "ga": 1,
+        "opp": "Benevento",
+        "home": true,
+        "date": "2026-11-21"
+       }
+      ]
+     },
+     "h2h": [
+      {
+       "date": "2026-02-14",
+       "home_id": "2734",
+       "hs": "1",
+       "as": "0"
+      },
+      {
+       "date": "2025-12-20",
+       "home_id": "3952",
+       "hs": "1",
+       "as": "1"
+      },
+      {
+       "date": "2012-01-14",
+       "home_id": "3952",
+       "hs": "1",
+       "as": "2"
+      },
+      {
+       "date": "2011-08-25",
+       "home_id": "2734",
+       "hs": "2",
+       "as": "2"
+      }
+     ],
+     "leaders": {
+      "3952": [
+       [
+        "Goals",
+        "Gabriele Artistico",
+        "Matches: 7, Goals: 3"
+       ],
+       [
+        "Assists",
+        "Lorenzo Carissoni",
+        "Matches: 11, Assists: 2"
+       ],
+       [
+        "Total Shots",
+        "Luca Moro",
+        "17"
+       ]
+      ],
+      "2734": [
+       [
+        "Goals",
+        "Lorenzo Insigne",
+        "Matches: 6, Goals: 4"
+       ],
+       [
+        "Assists",
+        "Tjas Begic",
+        "Matches: 12, Assists: 3"
+       ],
+       [
+        "Total Shots",
+        "Liam Henderson",
+        "25"
+       ]
+      ]
+     },
+     "venue": "Euganeo",
+     "city": "Padova"
+    }
+   }
+  },
+  "extra": {
+   "corners": {
+    "home": 3.7055607476635517,
+    "away": 6.606168224299067,
+    "total": 10.31172897196262,
+    "lines": {
+     "8.5": 0.7011662170842285,
+     "9.5": 0.5804144810489982,
+     "10.5": 0.45589856356007064
+    }
+   },
+   "cards": {
+    "total": 4.199999999999999,
+    "lines": {
+     "3.5": 0.6045966303976437,
+     "4.5": 0.41017297868942226,
+     "5.5": 0.24685711125451593
+    }
+   }
+  },
+  "msg_id": 9509,
+  "btn": 4
+ },
+ "401899531": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-25T22:00:00+03:00",
+  "sport": "football",
+  "div": "I2",
+  "reason": "no_qualified_real_market",
+  "retry_at": 1795630107.612906
  }
 }

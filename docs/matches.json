@@ -559,41 +559,6 @@ null
 },
 {
 "sport": "football",
-"id": "401899534",
-"league": "Италия · Серия B",
-"kickoff": "2026-11-25T22:00:00+03:00",
-"home": "Мантова",
-"away": "Ареццо",
-"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/3991.png",
-"al": "https://a.espncdn.com/i/teamlogos/soccer/500/3345.png",
-"hid": "3991",
-"aid": "3345",
-"bb": "https://betboom.ru/search?query=%D0%9C%D0%B0%D0%BD%D1%82%D0%BE%D0%B2%D0%B0&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
-"path": "soccer/ita.2",
-"url": "live.html?s=football&p=soccer%2Fita.2&e=401899534&h=%D0%9C%D0%B0%D0%BD%D1%82%D0%BE%D0%B2%D0%B0&a=%D0%90%D1%80%D0%B5%D1%86%D1%86%D0%BE",
-"participants": [
-[
-"Мантова",
-"Mantova"
-],
-[
-"Ареццо",
-"Arezzo"
-]
-],
-"div": "I2",
-"state": "pre",
-"bo": null,
-"prediction": "",
-"hs": "0",
-"as": "0",
-"tip": "",
-"top": false,
-"bot": null,
-"lt": null
-},
-{
-"sport": "football",
 "id": "401899533",
 "league": "Италия · Серия B",
 "kickoff": "2026-11-25T22:00:00+03:00",
@@ -614,6 +579,148 @@ null
 [
 "Сампдория",
 "Sampdoria"
+]
+],
+"div": "I2",
+"state": "pre",
+"bo": null,
+"prediction": "predictions/2026-11-25-padova-sampdoriya-401899533.html",
+"hs": "0",
+"as": "0",
+"tip": "ТМ 2.5 · 1.69",
+"top": false,
+"bot": {
+"main": {
+"label": "ТМ 2.5",
+"p": 0.552,
+"odds": 1.69,
+"est": false
+},
+"bold": null,
+"markets": [
+[
+"П1",
+0.333,
+3.25
+],
+[
+"Ничья",
+0.292,
+3.1
+],
+[
+"П2",
+0.375,
+2.35
+],
+[
+"1X",
+0.625,
+null
+],
+[
+"X2",
+0.667,
+null
+],
+[
+"ТБ 1.5",
+0.717,
+null
+],
+[
+"ТБ 2.5",
+0.448,
+2.05
+],
+[
+"ТМ 2.5",
+0.552,
+1.714
+],
+[
+"ТБ 3.5",
+0.236,
+null
+],
+[
+"Обе забьют — да",
+0.512,
+null
+],
+[
+"Обе забьют — нет",
+0.488,
+null
+],
+[
+"ИТ1 больше 1.5",
+0.334,
+null
+],
+[
+"ИТ2 больше 1.5",
+0.366,
+null
+],
+[
+"Ф1 (−1.5)",
+0.143,
+null
+],
+[
+"Ф2 (+1.5)",
+0.857,
+null
+]
+],
+"bar": [
+0.3326427629839314,
+0.29232304938368703,
+0.37503418763238155
+],
+"center": "Ожидаемые голы (xG) 1.2 : 1.3",
+"scores": [
+[
+"1:1",
+0.139
+],
+[
+"0:1",
+0.098
+],
+[
+"0:0",
+0.095
+]
+],
+"corners": 10.3,
+"cards": 4.2
+},
+"lt": null
+},
+{
+"sport": "football",
+"id": "401899534",
+"league": "Италия · Серия B",
+"kickoff": "2026-11-25T22:00:00+03:00",
+"home": "Мантова",
+"away": "Ареццо",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/3991.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/3345.png",
+"hid": "3991",
+"aid": "3345",
+"bb": "https://betboom.ru/search?query=%D0%9C%D0%B0%D0%BD%D1%82%D0%BE%D0%B2%D0%B0&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/ita.2",
+"url": "live.html?s=football&p=soccer%2Fita.2&e=401899534&h=%D0%9C%D0%B0%D0%BD%D1%82%D0%BE%D0%B2%D0%B0&a=%D0%90%D1%80%D0%B5%D1%86%D1%86%D0%BE",
+"participants": [
+[
+"Мантова",
+"Mantova"
+],
+[
+"Ареццо",
+"Arezzo"
 ]
 ],
 "div": "I2",
