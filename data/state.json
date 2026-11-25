@@ -3038,7 +3038,7 @@
   "quote_matches": 113
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-26T01:30:18.289968+03:00",
+  "last_poll": "2026-11-26T01:32:18.784292+03:00",
   "cursor": "432",
   "posts": [
    {
@@ -6003,7 +6003,7 @@
   },
   "football|BRA|401841319": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-25T22:20:38.136593+00:00",
+   "checked_at": "2026-11-25T22:32:38.915008+00:00",
    "kickoff": "2026-11-26T02:00:00+03:00",
    "sport": "football",
    "id": "401841319",
@@ -6018,7 +6018,7 @@
   },
   "football|COL|401934687": {
    "reason": "edge_below_minimum",
-   "checked_at": "2026-11-25T22:20:38.468206+00:00",
+   "checked_at": "2026-11-25T22:32:39.246733+00:00",
    "kickoff": "2026-11-26T02:20:00+03:00",
    "sport": "football",
    "id": "401934687",
@@ -6026,9 +6026,9 @@
    "away": "Онсе Кальдас",
    "priced_markets": 6,
    "market": "ТМ 2.5",
-   "probability": 0.6057,
-   "odds": 1.56,
-   "edge": -0.05511,
+   "probability": 0.6169,
+   "odds": 1.53,
+   "edge": -0.05614,
    "estimated": false
   }
  },
