@@ -1563,7 +1563,7 @@
  "value_day": "2026-11-25",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-25",
- "site_stamp": "1553|9556|2026-11-26 00|6|27bf5a03ab4f854a",
+ "site_stamp": "1553|9557|2026-11-26 00|6|27bf5a03ab4f854a",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1721,7 +1721,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 9556,
+ "dz_last": 9557,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2964,15 +2964,15 @@
   "model": {
    "weight": 0.0,
    "status": "baseline_better",
-   "settled_matches": 150,
+   "settled_matches": 151,
    "required_matches": 100,
-   "trained_at": "2026-11-25T21:37:40.012937+00:00",
+   "trained_at": "2026-11-25T21:41:40.530107+00:00",
    "candidate_weight": 0.0,
    "train_matches": 117,
-   "validation_matches": 30,
+   "validation_matches": 31,
    "validation_from": "2026-11-24T00:00:00+00:00",
-   "validation_logloss": 2.7590449513073394,
-   "validation_baseline_logloss": 2.7590449513073394
+   "validation_logloss": 2.764505446695545,
+   "validation_baseline_logloss": 2.764505446695545
   },
   "sport_models": {
    "hockey": {
@@ -3012,10 +3012,10 @@
    }
   },
   "source": {
-   "last_success": "2026-11-25T21:21:40.393356+00:00",
-   "parsed": 367,
-   "added": 113,
-   "discovered_matches": 55,
+   "last_success": "2026-11-25T21:41:40.530107+00:00",
+   "parsed": 368,
+   "added": 115,
+   "discovered_matches": 56,
    "pages": 19,
    "errors": [],
    "parsed_by_sport": {
@@ -3028,13 +3028,13 @@
    }
   },
   "error": null,
-  "tips": 17222,
+  "tips": 17264,
   "snapshots": 357,
-  "unmapped_markets": 26275,
-  "quote_matches": 111
+  "unmapped_markets": 26348,
+  "quote_matches": 112
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-26T00:39:40.052670+03:00",
+  "last_poll": "2026-11-26T00:41:40.530107+03:00",
   "cursor": "432",
   "posts": [
    {
@@ -3746,8 +3746,8 @@
    "401899533": "post",
    "401899531": "post",
    "401880140": "post",
-   "401880139": "in",
-   "401880137": "in",
+   "401880139": "post",
+   "401880137": "post",
    "401880138": "in",
    "401915291": "in",
    "401915292": "in",
