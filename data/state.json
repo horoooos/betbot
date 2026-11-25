@@ -1563,7 +1563,7 @@
  "value_day": "2026-11-24",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-24",
- "site_stamp": "1540|9435|2026-11-25 04|6|477f6bd501a2cf87",
+ "site_stamp": "1540|9436|2026-11-25 04|6|66e22d8a57766278",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1720,7 +1720,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 9435,
+ "dz_last": 9436,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2978,7 +2978,7 @@
   "quote_matches": 86
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-25T04:16:04.103869+03:00",
+  "last_poll": "2026-11-25T04:18:04.107364+03:00",
   "cursor": "403",
   "posts": [
    {
@@ -10420,7 +10420,7 @@
     "profit_pct": 0.5
    },
    "football|COL|401934688": {
-    "status": "open",
+    "status": "settled",
     "id": "401934688",
     "sport": "football",
     "div": "COL",
@@ -10469,7 +10469,10 @@
        "price_kind": "author_recorded"
       }
      ]
-    }
+    },
+    "settled_at": "2026-11-25T01:18:04.107364+00:00",
+    "hit": false,
+    "profit_pct": -0.5
    },
    "hockey|NHL|401892780": {
     "status": "open",
