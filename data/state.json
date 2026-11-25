@@ -1723,7 +1723,7 @@
  "streak_day": {
   "2026-11-22": 2
  },
- "news_next": "2026-11-25T08:34:32.292105+03:00",
+ "news_next": "2026-11-25T08:40:32.907446+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -2829,7 +2829,7 @@
   "external_sources": {
    "providers": {
     "legalbet": {
-     "at": "2026-11-25T05:04:32.132965+00:00",
+     "at": "2026-11-25T05:34:32.907446+00:00",
      "status": "ok",
      "discovered": 0,
      "pages": 0,
@@ -2840,29 +2840,29 @@
      "contexts": 0
     },
     "livesport": {
-     "at": "2026-11-25T05:04:32.132965+00:00",
+     "at": "2026-11-25T05:34:32.907446+00:00",
      "status": "ok",
      "discovered": 13,
      "pages": 6,
-     "opinions": 10,
-     "mapped": 6,
+     "opinions": 6,
+     "mapped": 3,
      "articles_available": 22,
-     "next_offset": 10,
+     "next_offset": 16,
      "contexts": 6
     },
     "metaratings": {
-     "at": "2026-11-25T05:04:32.132965+00:00",
+     "at": "2026-11-25T05:34:32.907446+00:00",
      "status": "ok",
      "discovered": 11,
      "pages": 6,
      "opinions": 24,
-     "mapped": 2,
+     "mapped": 4,
      "articles_available": 39,
-     "next_offset": 15,
+     "next_offset": 10,
      "contexts": 6
     },
     "rb": {
-     "at": "2026-11-25T05:04:32.132965+00:00",
+     "at": "2026-11-25T05:34:32.907446+00:00",
      "status": "ok",
      "discovered": 2,
      "pages": 2,
@@ -2873,16 +2873,16 @@
      "contexts": 2
     },
     "vseprosport": {
-     "at": "2026-11-25T05:04:32.132965+00:00",
+     "at": "2026-11-25T05:34:32.907446+00:00",
      "status": "ok",
      "discovered": 7,
      "pages": 4,
      "opinions": 0,
      "mapped": 0,
      "articles_available": 10,
-     "next_offset": 9,
+     "next_offset": 8,
      "page_errors": 2,
-     "contexts": 2
+     "contexts": 1
     }
    },
    "opinions": 39,
@@ -3006,7 +3006,7 @@
   "quote_matches": 97
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-25T08:32:32.190350+03:00",
+  "last_poll": "2026-11-25T08:34:32.907446+03:00",
   "cursor": "403",
   "posts": [
    {
