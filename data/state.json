@@ -3029,7 +3029,7 @@
   "quote_matches": 107
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-25T22:40:33.286428+03:00",
+  "last_poll": "2026-11-25T22:42:33.450387+03:00",
   "cursor": "427",
   "posts": [
    {
@@ -12002,7 +12002,7 @@
     "profit_pct": -0.5
    },
    "football|UCL|401915293": {
-    "status": "open",
+    "status": "settled",
     "id": "401915293",
     "sport": "football",
     "div": "UCL",
@@ -12591,7 +12591,10 @@
        "price_kind": "author_recorded"
       }
      ]
-    }
+    },
+    "settled_at": "2026-11-25T19:42:33.450387+00:00",
+    "hit": true,
+    "profit_pct": 0.65
    },
    "football|I2|401899537": {
     "status": "open",
