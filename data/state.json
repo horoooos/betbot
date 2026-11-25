@@ -1563,7 +1563,7 @@
  "value_day": "2026-11-25",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-25",
- "site_stamp": "1550|9534|2026-11-25 22|6|bcfe429306fbcb73",
+ "site_stamp": "1551|9535|2026-11-25 22|6|e5f885eae847db26",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1721,7 +1721,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 9534,
+ "dz_last": 9535,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2959,15 +2959,15 @@
   "model": {
    "weight": 0.0,
    "status": "baseline_better",
-   "settled_matches": 146,
+   "settled_matches": 147,
    "required_matches": 100,
-   "trained_at": "2026-11-25T19:40:33.286428+00:00",
+   "trained_at": "2026-11-25T19:58:33.769053+00:00",
    "candidate_weight": 0.0,
    "train_matches": 107,
-   "validation_matches": 38,
+   "validation_matches": 39,
    "validation_from": "2026-11-23T00:00:00+00:00",
-   "validation_logloss": 2.990591963218079,
-   "validation_baseline_logloss": 2.990591963218079
+   "validation_logloss": 2.9830501430309706,
+   "validation_baseline_logloss": 2.9830501430309706
   },
   "sport_models": {
    "hockey": {
@@ -3029,7 +3029,7 @@
   "quote_matches": 107
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-25T22:56:33.753332+03:00",
+  "last_poll": "2026-11-25T22:58:33.769053+03:00",
   "cursor": "427",
   "posts": [
    {
@@ -3736,7 +3736,7 @@
    "401877547": "post",
    "401915378": "post",
    "401915293": "post",
-   "401899537": "in",
+   "401899537": "post",
    "401899534": "in",
    "401899533": "in",
    "401899531": "in",
@@ -5957,6 +5957,21 @@
    "probability": 0.6474,
    "odds": 1.44,
    "edge": -0.06774,
+   "estimated": true
+  },
+  "tennis|WTA|186840": {
+   "reason": "no_qualified_real_market",
+   "checked_at": "2026-11-25T19:58:55.035451+00:00",
+   "kickoff": "2026-11-26T00:00:00+03:00",
+   "sport": "tennis",
+   "id": "186840",
+   "home": "Солана Сьерра",
+   "away": "Кароль Монне",
+   "priced_markets": 2,
+   "market": "Будет 2 сета",
+   "probability": 0.5062,
+   "odds": 1.84,
+   "edge": -0.06859,
    "estimated": true
   }
  },
