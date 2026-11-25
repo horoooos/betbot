@@ -7,7 +7,6 @@
  "schedule_day": "2026-11-25",
  "content_slot": "2026-11-25-10",
  "news_seen": [
-  "https://www.sport-express.ru/football/england/news/vratar-arsenala-rayya-poluchil-travmu-v-matche-s-nyukaslom-ego-zamenili-na-70-y-minute-2477459/",
   "https://www.sport-express.ru/football/rfpl/news/krugovoy-posle-porazheniya-cska-ot-ahmata-penalti-ne-bylo-melkadze-sdelal-tolchok-ya-nachal-zavalivatsya-2477456/",
   "https://www.sport-express.ru/basketball/nba/news/filadelfiya-miluoki-schet-i-rezultat-matcha-nba-21-noyabrya-2026-2477471/",
   "https://www.sport-express.ru/tennis/atp/news/aleksandr-zverev-daniil-medvedev-schet-i-rezultat-polufinalnogo-matcha-itogovogo-turnira-atp-21-noyabrya-2026-2477473/",
@@ -506,9 +505,10 @@
   "https://www.sport-express.ru/basketball/nba/news/denver-dallas-101-120-schet-i-rezultat-matcha-nba-25-noyabrya-2026-2478640/",
   "https://www.sport-express.ru/football/champions-league/news/okan-buruk-kommentariy-po-igre-poluzaschitnika-alekseya-batrakova-v-matche-s-aston-villoy-2478611/",
   "https://www.sport-express.ru/football/champions-league/news/napadayuschiy-aston-villy-abraham-vysoko-ocenil-kachestva-batrakova-2478612/",
-  "100-thieves-okazalis-slabeye-eternal-fire-na-pervom-yetape-pgl-major-singapore"
+  "100-thieves-okazalis-slabeye-eternal-fire-na-pervom-yetape-pgl-major-singapore",
+  "https://www.sport-express.ru/football/rfpl/news/gendirektor-mahachkalinskogo-dinamo-gazizov-zayavil-chto-mahachev-zaryazhaet-igrokov-komandy-nuzhnoy-energiey-2478655/"
  ],
- "news_i": 2,
+ "news_i": 4,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1695,7 +1695,7 @@
  "streak_day": {
   "2026-11-22": 2
  },
- "news_next": "2026-11-25T10:13:45.880324+03:00",
+ "news_next": "2026-11-25T10:42:45.315158+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1726,7 +1726,6 @@
  "vk_mode": "photo",
  "dz_err": null,
  "img_used": [
-  "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cc/16014-event-Football_Game_Fans-1856_%2821223890396%29.jpg/1280px-16014-event-Football_Game_Fans-1856_%2821223890396%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
   "https://ss.sport-express.ru/userfiles/materials/224/2242920/1180x665.jpg",
   "https://images.cybersport.ru/images/as-is/plain/5a/5ad0e1f1-2675-4898-85ce-a5bd81c869a4.jpg",
   "https://ss.sport-express.ru/userfiles/materials/224/2242947/1180x665.jpg",
@@ -2025,7 +2024,8 @@
   "https://images.cybersport.ru/images/as-is/plain/b8/b80346b7-f66d-42e1-b485-f68b605217f3.jpg",
   "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/12/FC_Spartak_Moscow_vs._FC_Krylia_Sovetov_Samara%2C_1_May_2022%2C_dear_guests_of_Spartak_%2809%29.jpg/1280px-FC_Spartak_Moscow_vs._FC_Krylia_Sovetov_Samara%2C_1_May_2022%2C_dear_guests_of_Spartak_%2809%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
   "https://images.cybersport.ru/images/as-is/plain/6e/6e147b6f-653f-49e2-a869-9baaea45251f.jpg",
-  "https://images.cybersport.ru/images/as-is/plain/0b/0b970739-e520-4fe1-a3c3-8295a8bd518d.jpg"
+  "https://images.cybersport.ru/images/as-is/plain/0b/0b970739-e520-4fe1-a3c3-8295a8bd518d.jpg",
+  "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/47/FC_Dynamo_Kyiv_vs_FC_Arsenal_Kyiv_10-03-2019_%285%29.jpg/1280px-FC_Dynamo_Kyiv_vs_FC_Arsenal_Kyiv_10-03-2019_%285%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
  ],
  "indexnow_day": "2026-11-25",
  "vk_wall_err": null,
@@ -2433,7 +2433,8 @@
   "9423",
   "9428",
   "9429",
-  "9455"
+  "9455",
+  "9456"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -2773,11 +2774,12 @@
   "2026-11-24:новость:fb700d6624939135a912376a",
   "2026-11-24:новость:9424f03d5746b9dfca4bbaf7",
   "2026-11-24:новость:580c1578185c32b7229272f1",
-  "2026-11-25:новость:38a48f35040041fc519bd31f"
+  "2026-11-25:новость:38a48f35040041fc519bd31f",
+  "2026-11-25:новость:8d01f0c7e0cb15fd3abc50c1"
  ],
  "dz_last_delivery": {
-  "source_id": 9455,
-  "message_id": 887,
+  "source_id": 9456,
+  "message_id": 888,
   "kind": "новость"
  },
  "learn_attempt_day": "2026-11-25",
@@ -2980,7 +2982,7 @@
   "quote_matches": 100
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-25T10:12:46.067152+03:00",
+  "last_poll": "2026-11-25T10:14:45.315158+03:00",
   "cursor": "403",
   "posts": [
    {
