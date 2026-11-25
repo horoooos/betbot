@@ -2848,7 +2848,7 @@
   "external_sources": {
    "providers": {
     "legalbet": {
-     "at": "2026-11-25T17:58:27.612906+00:00",
+     "at": "2026-11-25T18:28:28.621357+00:00",
      "status": "ok",
      "discovered": 6,
      "pages": 6,
@@ -2859,54 +2859,54 @@
      "contexts": 6
     },
     "livesport": {
-     "at": "2026-11-25T17:58:27.612906+00:00",
+     "at": "2026-11-25T18:28:28.621357+00:00",
      "status": "ok",
      "discovered": 20,
      "pages": 6,
-     "opinions": 4,
-     "mapped": 2,
-     "articles_available": 39,
-     "next_offset": 13,
+     "opinions": 8,
+     "mapped": 4,
+     "articles_available": 38,
+     "next_offset": 19,
      "contexts": 6
     },
     "metaratings": {
-     "at": "2026-11-25T17:58:27.612906+00:00",
+     "at": "2026-11-25T18:28:28.621357+00:00",
      "status": "ok",
-     "discovered": 13,
+     "discovered": 16,
      "pages": 6,
-     "opinions": 24,
-     "mapped": 4,
-     "articles_available": 39,
-     "next_offset": 12,
-     "contexts": 6
+     "opinions": 20,
+     "mapped": 0,
+     "articles_available": 38,
+     "next_offset": 18,
+     "contexts": 5
     },
     "rb": {
-     "at": "2026-11-25T17:58:27.612906+00:00",
+     "at": "2026-11-25T18:28:28.621357+00:00",
      "status": "ok",
-     "discovered": 1,
-     "pages": 1,
+     "discovered": 0,
+     "pages": 0,
      "opinions": 0,
      "mapped": 0,
      "articles_available": 1,
-     "next_offset": 1,
+     "next_offset": 0,
      "contexts": 0
     },
     "vseprosport": {
-     "at": "2026-11-25T17:58:27.612906+00:00",
+     "at": "2026-11-25T18:28:28.621357+00:00",
      "status": "ok",
      "discovered": 7,
-     "pages": 4,
+     "pages": 5,
      "opinions": 0,
      "mapped": 0,
      "articles_available": 10,
-     "next_offset": 7,
-     "page_errors": 2,
+     "next_offset": 6,
+     "page_errors": 1,
      "contexts": 1
     }
    },
    "opinions": 43,
    "snapshots": 0,
-   "contexts": 100,
+   "contexts": 104,
    "model": {
     "weight": 0.0,
     "status": "collecting",
@@ -3025,7 +3025,7 @@
   "quote_matches": 106
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-25T21:26:28.215910+03:00",
+  "last_poll": "2026-11-25T21:28:28.621357+03:00",
   "cursor": "426",
   "posts": [
    {
@@ -5755,6 +5755,36 @@
    "probability": 0.5714,
    "odds": 1.63,
    "edge": -0.06862,
+   "estimated": true
+  },
+  "tennis|WTA|186837": {
+   "reason": "no_qualified_real_market",
+   "checked_at": "2026-11-25T18:28:54.919465+00:00",
+   "kickoff": "2026-11-25T22:30:00+03:00",
+   "sport": "tennis",
+   "id": "186837",
+   "home": "Ипек Оз",
+   "away": "Хулия Риера",
+   "priced_markets": 2,
+   "market": "Будет 2 сета",
+   "probability": 0.5399,
+   "odds": 1.72,
+   "edge": -0.07137,
+   "estimated": true
+  },
+  "tennis|WTA|186838": {
+   "reason": "no_real_odds",
+   "checked_at": "2026-11-25T18:28:56.392880+00:00",
+   "kickoff": "2026-11-25T22:30:00+03:00",
+   "sport": "tennis",
+   "id": "186838",
+   "home": "Алисиа Херреро Линана",
+   "away": "Ариана Гирлингс",
+   "priced_markets": 0,
+   "market": "Будет 2 сета",
+   "probability": 0.5441,
+   "odds": 1.71,
+   "edge": -0.06959,
    "estimated": true
   }
  },

@@ -5564,5 +5564,21 @@
   "close": {
    "_": null
   }
+ },
+ "WTA|186837": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-25T22:30:00+03:00",
+  "sport": "tennis",
+  "div": "WTA",
+  "reason": "no_qualified_real_market",
+  "retry_at": 1795631908.621357
+ },
+ "WTA|186838": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-25T22:30:00+03:00",
+  "sport": "tennis",
+  "div": "WTA",
+  "reason": "no_real_odds",
+  "retry_at": 1795631908.621357
  }
 }
