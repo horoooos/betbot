@@ -3040,7 +3040,7 @@
   "quote_matches": 114
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-26T02:30:18.217899+03:00",
+  "last_poll": "2026-11-26T02:32:19.090721+03:00",
   "cursor": "433",
   "posts": [
    {
@@ -6033,7 +6033,7 @@
   },
   "football|ARG|401933757": {
    "reason": "edge_below_minimum",
-   "checked_at": "2026-11-25T23:20:38.925838+00:00",
+   "checked_at": "2026-11-25T23:32:39.348765+00:00",
    "kickoff": "2026-11-26T03:00:00+03:00",
    "sport": "football",
    "id": "401933757",
@@ -6048,7 +6048,7 @@
   },
   "football|ECU|401921355": {
    "reason": "edge_below_minimum",
-   "checked_at": "2026-11-25T23:20:39.259683+00:00",
+   "checked_at": "2026-11-25T23:32:39.681389+00:00",
    "kickoff": "2026-11-26T03:00:00+03:00",
    "sport": "football",
    "id": "401921355",
@@ -6056,9 +6056,9 @@
    "away": "Индепендьенте дель Валье",
    "priced_markets": 6,
    "market": "ТМ 2.5",
-   "probability": 0.5379,
+   "probability": 0.5323,
    "odds": 1.74,
-   "edge": -0.06405,
+   "edge": -0.0738,
    "estimated": false
   },
   "hockey|NHL|401892781": {
@@ -6095,7 +6095,7 @@
   },
   "hockey|NHL|401892783": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-25T23:20:39.862302+00:00",
+   "checked_at": "2026-11-25T23:32:40.282836+00:00",
    "kickoff": "2026-11-26T03:00:00+03:00",
    "sport": "hockey",
    "id": "401892783",
@@ -6110,7 +6110,7 @@
   },
   "hockey|NHL|401892784": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-25T23:20:40.439754+00:00",
+   "checked_at": "2026-11-25T23:32:40.865452+00:00",
    "kickoff": "2026-11-26T03:00:00+03:00",
    "sport": "hockey",
    "id": "401892784",
@@ -6125,7 +6125,7 @@
   },
   "hockey|NHL|401892785": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-25T23:20:41.019417+00:00",
+   "checked_at": "2026-11-25T23:32:41.441419+00:00",
    "kickoff": "2026-11-26T03:00:00+03:00",
    "sport": "hockey",
    "id": "401892785",
@@ -6140,7 +6140,7 @@
   },
   "hockey|NHL|401892786": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-25T23:20:41.596392+00:00",
+   "checked_at": "2026-11-25T23:32:42.025168+00:00",
    "kickoff": "2026-11-26T03:00:00+03:00",
    "sport": "hockey",
    "id": "401892786",
@@ -6155,7 +6155,7 @@
   },
   "hockey|NHL|401892787": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-25T23:20:42.178333+00:00",
+   "checked_at": "2026-11-25T23:32:42.604574+00:00",
    "kickoff": "2026-11-26T03:00:00+03:00",
    "sport": "hockey",
    "id": "401892787",
@@ -6170,7 +6170,7 @@
   },
   "hockey|NHL|401892788": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-25T23:20:42.758472+00:00",
+   "checked_at": "2026-11-25T23:32:43.191994+00:00",
    "kickoff": "2026-11-26T03:00:00+03:00",
    "sport": "hockey",
    "id": "401892788",
@@ -6184,19 +6184,19 @@
    "estimated": true
   },
   "basketball|NBA|401909318": {
-   "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-25T23:20:43.324825+00:00",
+   "reason": "edge_below_minimum",
+   "checked_at": "2026-11-25T23:32:43.761017+00:00",
    "kickoff": "2026-11-26T03:00:00+03:00",
    "sport": "basketball",
    "id": "401909318",
    "home": "Шарлотт Хорнетс",
    "away": "Чикаго Буллз",
    "priced_markets": 6,
-   "market": "ТМ 224.5",
-   "probability": 0.6597,
-   "odds": 1.41,
-   "edge": -0.06982,
-   "estimated": true
+   "market": "П1 (с ОТ)",
+   "probability": 0.6147,
+   "odds": 1.56,
+   "edge": -0.04107,
+   "estimated": false
   },
   "hockey|NHL|401892789": {
    "reason": "no_qualified_real_market",

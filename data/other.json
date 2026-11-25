@@ -6699,7 +6699,7 @@
   "sport": "hockey",
   "div": "NHL",
   "reason": "no_qualified_real_market",
-  "retry_at": 1795649418.451712
+  "retry_at": 1795650139.090721
  },
  "NHL|401892784": {
   "status": "waiting_data",
@@ -6707,7 +6707,7 @@
   "sport": "hockey",
   "div": "NHL",
   "reason": "no_qualified_real_market",
-  "retry_at": 1795649418.451712
+  "retry_at": 1795650139.090721
  },
  "NHL|401892785": {
   "status": "waiting_data",
@@ -6715,7 +6715,7 @@
   "sport": "hockey",
   "div": "NHL",
   "reason": "no_qualified_real_market",
-  "retry_at": 1795649418.451712
+  "retry_at": 1795650139.090721
  },
  "NHL|401892786": {
   "status": "waiting_data",
@@ -6723,7 +6723,7 @@
   "sport": "hockey",
   "div": "NHL",
   "reason": "no_qualified_real_market",
-  "retry_at": 1795649418.451712
+  "retry_at": 1795650139.090721
  },
  "NHL|401892787": {
   "status": "waiting_data",
@@ -6731,7 +6731,7 @@
   "sport": "hockey",
   "div": "NHL",
   "reason": "no_qualified_real_market",
-  "retry_at": 1795649418.451712
+  "retry_at": 1795650139.090721
  },
  "NHL|401892788": {
   "status": "waiting_data",
@@ -6739,15 +6739,15 @@
   "sport": "hockey",
   "div": "NHL",
   "reason": "no_qualified_real_market",
-  "retry_at": 1795649418.451712
+  "retry_at": 1795650139.090721
  },
  "NBA|401909318": {
   "status": "waiting_data",
   "kickoff": "2026-11-26T03:00:00+03:00",
   "sport": "basketball",
   "div": "NBA",
-  "reason": "no_qualified_real_market",
-  "retry_at": 1795649418.451712
+  "reason": "edge_below_minimum",
+  "retry_at": 1795650139.090721
  },
  "NHL|401892789": {
   "status": "waiting_data",
