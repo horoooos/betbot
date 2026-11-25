@@ -5,6 +5,7 @@
 <url><loc>https://horoooos.github.io/betbot/predictions/</loc><changefreq>hourly</changefreq><priority>0.9</priority></url>
 <url><loc>https://horoooos.github.io/betbot/news/</loc><changefreq>hourly</changefreq><priority>0.9</priority></url>
 <url><loc>https://horoooos.github.io/betbot/feed.html</loc><changefreq>hourly</changefreq><priority>0.6</priority></url>
+<url><loc>https://horoooos.github.io/betbot/news/9494-kuznetsov-nazval-pozitsii-kotorye-tsska-dolzhen-usilit-v-zimnee-okno.html</loc><lastmod>2026-11-25</lastmod><priority>0.6</priority></url>
 <url><loc>https://horoooos.github.io/betbot/news/9492-jakob-pimp-nazval-nip-luchshey-komandoy-pervogo-etapa-pgl-major.html</loc><lastmod>2026-11-25</lastmod><priority>0.6</priority></url>
 <url><loc>https://horoooos.github.io/betbot/news/9491-byvshiy-sportdirektor-orenburga-andreev-skeptichen-k-rasshireniyu-rpl.html</loc><lastmod>2026-11-25</lastmod><priority>0.6</priority></url>
 <url><loc>https://horoooos.github.io/betbot/news/9490-bcgame-esports-razyasnili-my-ne-gosh-posle-vyleta-iz-pgl-major-singapo.html</loc><lastmod>2026-11-25</lastmod><priority>0.6</priority></url>
@@ -404,7 +405,6 @@
 <url><loc>https://horoooos.github.io/betbot/news/4690-krabeni-iz-fut-esports-riskuet-propustit-blast-rivals-iz-za-vizy.html</loc><lastmod>2026-11-09</lastmod><priority>0.6</priority></url>
 <url><loc>https://horoooos.github.io/betbot/news/4687-bartoli-nazvala-favorita-wta-finals-2026-posle-otkaza-rybakinoy.html</loc><lastmod>2026-11-09</lastmod><priority>0.6</priority></url>
 <url><loc>https://horoooos.github.io/betbot/news/4685-lebron-pohvalil-igru-s-dzheylenom-braunom-posle-pobedy-nad-bullz.html</loc><lastmod>2026-11-09</lastmod><priority>0.6</priority></url>
-<url><loc>https://horoooos.github.io/betbot/news/4680-kurani-batrakov-legko-vpisalsya-by-v-bavariyu.html</loc><lastmod>2026-11-09</lastmod><priority>0.6</priority></url>
 <url><loc>https://horoooos.github.io/betbot/teams/football-urava-red-daymonds.html</loc><changefreq>daily</changefreq><priority>0.6</priority></url>
 <url><loc>https://horoooos.github.io/betbot/teams/football-sereso-osaka.html</loc><changefreq>daily</changefreq><priority>0.6</priority></url>
 <url><loc>https://horoooos.github.io/betbot/teams/football-fadzhiano-okayama.html</loc><changefreq>daily</changefreq><priority>0.6</priority></url>
@@ -516,12 +516,12 @@
 <url><loc>https://horoooos.github.io/betbot/teams/esports-aurora.html</loc><changefreq>daily</changefreq><priority>0.6</priority></url>
 <url><loc>https://horoooos.github.io/betbot/teams/tennis-aleksandr-zverev.html</loc><changefreq>daily</changefreq><priority>0.6</priority></url>
 <url><loc>https://horoooos.github.io/betbot/teams/tennis-karlos-alkaras.html</loc><changefreq>daily</changefreq><priority>0.6</priority></url>
-<url><loc>https://horoooos.github.io/betbot/teams/football-liverpul.html</loc><changefreq>daily</changefreq><priority>0.6</priority></url>
-<url><loc>https://horoooos.github.io/betbot/teams/football-manchester-yunayted.html</loc><changefreq>daily</changefreq><priority>0.6</priority></url>
-<url><loc>https://horoooos.github.io/betbot/teams/football-verder.html</loc><changefreq>daily</changefreq><priority>0.6</priority></url>
-<url><loc>https://horoooos.github.io/betbot/teams/football-hamburg-sv.html</loc><changefreq>daily</changefreq><priority>0.6</priority></url>
 <url><loc>https://horoooos.github.io/betbot/teams/football-manta.html</loc><changefreq>daily</changefreq><priority>0.6</priority></url>
 <url><loc>https://horoooos.github.io/betbot/teams/football-peskara.html</loc><changefreq>daily</changefreq><priority>0.6</priority></url>
+<url><loc>https://horoooos.github.io/betbot/teams/football-verder.html</loc><changefreq>daily</changefreq><priority>0.6</priority></url>
+<url><loc>https://horoooos.github.io/betbot/teams/football-hamburg-sv.html</loc><changefreq>daily</changefreq><priority>0.6</priority></url>
+<url><loc>https://horoooos.github.io/betbot/teams/football-liverpul.html</loc><changefreq>daily</changefreq><priority>0.6</priority></url>
+<url><loc>https://horoooos.github.io/betbot/teams/football-manchester-yunayted.html</loc><changefreq>daily</changefreq><priority>0.6</priority></url>
 <url><loc>https://horoooos.github.io/betbot/teams/football-loryan.html</loc><changefreq>daily</changefreq><priority>0.6</priority></url>
 <url><loc>https://horoooos.github.io/betbot/teams/football-renn.html</loc><changefreq>daily</changefreq><priority>0.6</priority></url>
 <url><loc>https://horoooos.github.io/betbot/teams/football-aretstso.html</loc><changefreq>daily</changefreq><priority>0.6</priority></url>
@@ -1698,9 +1698,9 @@
 <url><loc>https://horoooos.github.io/betbot/predictions/2026-11-22-lgd-gaming-astra-invicta-1816470.html</loc><lastmod>2026-11-22</lastmod><priority>0.5</priority></url>
 <url><loc>https://horoooos.github.io/betbot/predictions/2026-11-22-1w-team-aurora-1816469.html</loc><lastmod>2026-11-22</lastmod><priority>0.5</priority></url>
 <url><loc>https://horoooos.github.io/betbot/predictions/2026-11-22-aleksandr-zverev-karlos-alkaras-187529.html</loc><lastmod>2026-11-22</lastmod><priority>0.5</priority></url>
-<url><loc>https://horoooos.github.io/betbot/predictions/2026-11-22-liverpul-manchester-yunayted-401878755.html</loc><lastmod>2026-11-22</lastmod><priority>0.5</priority></url>
-<url><loc>https://horoooos.github.io/betbot/predictions/2026-11-22-verder-hamburg-sv-401884730.html</loc><lastmod>2026-11-22</lastmod><priority>0.5</priority></url>
 <url><loc>https://horoooos.github.io/betbot/predictions/2026-11-22-manta-peskara-401921363.html</loc><lastmod>2026-11-22</lastmod><priority>0.5</priority></url>
+<url><loc>https://horoooos.github.io/betbot/predictions/2026-11-22-verder-hamburg-sv-401884730.html</loc><lastmod>2026-11-22</lastmod><priority>0.5</priority></url>
+<url><loc>https://horoooos.github.io/betbot/predictions/2026-11-22-liverpul-manchester-yunayted-401878755.html</loc><lastmod>2026-11-22</lastmod><priority>0.5</priority></url>
 <url><loc>https://horoooos.github.io/betbot/predictions/2026-11-22-loryan-renn-401876401.html</loc><lastmod>2026-11-22</lastmod><priority>0.5</priority></url>
 <url><loc>https://horoooos.github.io/betbot/predictions/2026-11-22-aretstso-padova-401899549.html</loc><lastmod>2026-11-22</lastmod><priority>0.5</priority></url>
 <url><loc>https://horoooos.github.io/betbot/predictions/2026-11-22-kristiansund-sanneford-401843487.html</loc><lastmod>2026-11-22</lastmod><priority>0.5</priority></url>
