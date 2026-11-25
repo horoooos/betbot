@@ -1563,7 +1563,7 @@
  "value_day": "2026-11-25",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-25",
- "site_stamp": "1554|9562|2026-11-26 01|6|b0a31fc3c07340d3",
+ "site_stamp": "1554|9564|2026-11-26 01|6|b0a31fc3c07340d3",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1721,7 +1721,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 9562,
+ "dz_last": 9564,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -3038,7 +3038,7 @@
   "quote_matches": 112
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-26T01:16:19.966378+03:00",
+  "last_poll": "2026-11-26T01:20:18.305173+03:00",
   "cursor": "432",
   "posts": [
    {
@@ -6003,7 +6003,7 @@
   },
   "football|BRA|401841319": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-25T22:09:55.232666+00:00",
+   "checked_at": "2026-11-25T22:20:38.136593+00:00",
    "kickoff": "2026-11-26T02:00:00+03:00",
    "sport": "football",
    "id": "401841319",
@@ -6015,6 +6015,21 @@
    "odds": 1.72,
    "edge": -0.07,
    "estimated": true
+  },
+  "football|COL|401934687": {
+   "reason": "edge_below_minimum",
+   "checked_at": "2026-11-25T22:20:38.468206+00:00",
+   "kickoff": "2026-11-26T02:20:00+03:00",
+   "sport": "football",
+   "id": "401934687",
+   "home": "Индепендьенте Санта-Фе",
+   "away": "Онсе Кальдас",
+   "priced_markets": 6,
+   "market": "ТМ 2.5",
+   "probability": 0.6057,
+   "odds": 1.56,
+   "edge": -0.05511,
+   "estimated": false
   }
  },
  "source_trial": {

@@ -26314,6 +26314,14 @@
   "sport": "football",
   "div": "BRA",
   "reason": "no_qualified_real_market",
-  "retry_at": 1795645179.981871
+  "retry_at": 1795645818.305173
+ },
+ "401934687": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-26T02:20:00+03:00",
+  "sport": "football",
+  "div": "COL",
+  "reason": "edge_below_minimum",
+  "retry_at": 1795645818.305173
  }
 }
