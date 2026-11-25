@@ -1563,7 +1563,7 @@
  "value_day": "2026-11-25",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-25",
- "site_stamp": "1554|9571|2026-11-26 02|6|df1ed98d38325860",
+ "site_stamp": "1555|9572|2026-11-26 02|6|97cf1a5d4cd0fe3d",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1721,7 +1721,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 9571,
+ "dz_last": 9572,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -3040,7 +3040,7 @@
   "quote_matches": 114
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-26T02:36:18.263059+03:00",
+  "last_poll": "2026-11-26T02:38:18.518789+03:00",
   "cursor": "433",
   "posts": [
    {
@@ -3683,7 +3683,7 @@
    "186821": "post",
    "186826": "post",
    "186833": "pre",
-   "186840": "in",
+   "186840": "post",
    "186839": "post",
    "186838": "post",
    "186837": "post",
@@ -6200,7 +6200,7 @@
   },
   "hockey|NHL|401892789": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-25T23:28:36.331299+00:00",
+   "checked_at": "2026-11-25T23:38:36.995321+00:00",
    "kickoff": "2026-11-26T03:30:00+03:00",
    "sport": "hockey",
    "id": "401892789",
@@ -6215,7 +6215,7 @@
   },
   "basketball|NBA|401909319": {
    "reason": "edge_below_minimum",
-   "checked_at": "2026-11-25T23:28:36.902034+00:00",
+   "checked_at": "2026-11-25T23:38:37.571082+00:00",
    "kickoff": "2026-11-26T03:30:00+03:00",
    "sport": "basketball",
    "id": "401909319",
