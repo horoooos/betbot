@@ -1215,7 +1215,15 @@ null
 "corners": 11.9,
 "cards": 3.9
 },
-"lt": null
+"lt": {
+"fair": 1.7,
+"label": "Обе забьют — да",
+"min_odds": 1.78,
+"minute": "26'",
+"p": 0.59,
+"result": null,
+"score": "1:0"
+}
 },
 {
 "sport": "football",
@@ -1245,7 +1253,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "",
-"hs": "1",
+"hs": "2",
 "as": "0",
 "tip": "",
 "top": false,
