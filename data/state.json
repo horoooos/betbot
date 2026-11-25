@@ -1563,7 +1563,7 @@
  "value_day": "2026-11-25",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-25",
- "site_stamp": "1544|9468|2026-11-25 12|6|e13f68bc6af310d9",
+ "site_stamp": "1544|9470|2026-11-25 12|6|125ce99e5a813a86",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1720,7 +1720,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 9468,
+ "dz_last": 9470,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2988,7 +2988,7 @@
   "quote_matches": 101
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-25T12:26:48.947308+03:00",
+  "last_poll": "2026-11-25T12:28:48.805339+03:00",
   "cursor": "406",
   "posts": [
    {
@@ -5519,6 +5519,46 @@
    "odds": 1.84,
    "edge": -0.08074,
    "estimated": false
+  },
+  "football|JPN|401877547": {
+   "reason": "published",
+   "checked_at": "2026-11-25T09:29:22.879049+00:00",
+   "kickoff": "2026-11-25T13:30:00+03:00",
+   "sport": "football",
+   "id": "401877547",
+   "home": "Урава Ред Даймондс",
+   "away": "Сересо Осака",
+   "market": "П1",
+   "strategy": "external_trial",
+   "source_count": 6,
+   "probability": 0.5078,
+   "odds": 1.81,
+   "edge": -0.08088,
+   "estimated": false
+  },
+  "esports|CS2|1816920": {
+   "reason": "no_real_odds",
+   "checked_at": "2026-11-25T09:29:25.800343+00:00",
+   "kickoff": "2026-11-25T13:30:00+03:00",
+   "sport": "esports",
+   "id": "1816920",
+   "home": "NIP",
+   "away": "Liquid",
+   "priced_markets": 0,
+   "market": "Всухую (2:0 или 0:2)",
+   "probability": 0.5,
+   "odds": 1.86,
+   "edge": -0.07,
+   "estimated": true
+  },
+  "esports|CS2|1816919": {
+   "reason": "insufficient_history_or_odds",
+   "checked_at": "2026-11-25T09:29:27.366225+00:00",
+   "kickoff": "2026-11-25T13:30:00+03:00",
+   "sport": "esports",
+   "id": "1816919",
+   "home": "GOSH",
+   "away": "Chinggis Warriors"
   }
  },
  "source_trial": {
@@ -11331,6 +11371,85 @@
        "published_at": "2026-11-25T06:16:00+00:00",
        "observed_at": "2026-11-25T08:24:46.028856+00:00",
        "odds": 1.84,
+       "price_kind": "author_recorded"
+      }
+     ]
+    }
+   },
+   "football|JPN|401877547": {
+    "status": "open",
+    "id": "401877547",
+    "sport": "football",
+    "div": "JPN",
+    "kickoff": "2026-11-25T13:30:00+03:00",
+    "published_at": "2026-11-25T09:29:19.342063+00:00",
+    "msg_id": 9469,
+    "tip": {
+     "key": "H",
+     "label": "П1",
+     "p": 0.5078,
+     "odds": 1.81,
+     "est": false,
+     "stake": 0.5,
+     "strategy": "external_trial",
+     "selection_mode": "external_fallback",
+     "trial_expires_at": null,
+     "probability_origin": "baseline_model",
+     "model_edge": -0.08093,
+     "source_count": 6,
+     "source_refs": [
+      {
+       "author": "/predictors/sergey-kritskiy",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/25-11-2026-urawa-red-diamonds-cerezo-osaka",
+       "published_at": "2026-11-24T05:55:00+00:00",
+       "observed_at": "2026-11-25T01:28:04.386401+00:00",
+       "odds": 1.83,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/aleksandr-sergeevich-87",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/25-11-2026-urawa-red-diamonds-cerezo-osaka",
+       "published_at": "2026-11-24T16:55:00+00:00",
+       "observed_at": "2026-11-25T01:28:04.386401+00:00",
+       "odds": 1.83,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/denis-levykin",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/25-11-2026-urawa-red-diamonds-cerezo-osaka",
+       "published_at": "2026-11-24T23:51:00+00:00",
+       "observed_at": "2026-11-25T00:02:44.620046+00:00",
+       "odds": 1.83,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/evgeniy-drobiazko",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/25-11-2026-urawa-red-diamonds-cerezo-osaka",
+       "published_at": "2026-11-25T06:18:00+00:00",
+       "observed_at": "2026-11-25T06:20:45.510889+00:00",
+       "odds": 1.8,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/aleks-internetov",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/25-11-2026-urawa-red-diamonds-cerezo-osaka",
+       "published_at": "2026-11-25T06:35:00+00:00",
+       "observed_at": "2026-11-25T07:44:45.270080+00:00",
+       "odds": 1.74,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/dmitrii2-mortvicev",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/25-11-2026-urawa-red-diamonds-cerezo-osaka",
+       "published_at": "2026-11-25T09:23:00+00:00",
+       "observed_at": "2026-11-25T09:26:48.947308+00:00",
+       "odds": 1.67,
        "price_kind": "author_recorded"
       }
      ]
