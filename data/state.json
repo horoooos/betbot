@@ -3027,7 +3027,7 @@
   "quote_matches": 107
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-25T22:30:33.271378+03:00",
+  "last_poll": "2026-11-25T22:32:33.595824+03:00",
   "cursor": "427",
   "posts": [
    {
@@ -5837,7 +5837,7 @@
   },
   "football|E1|401880138": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-25T19:20:48.508021+00:00",
+   "checked_at": "2026-11-25T19:32:50.942268+00:00",
    "kickoff": "2026-11-25T23:00:00+03:00",
    "sport": "football",
    "id": "401880138",
@@ -5852,7 +5852,7 @@
   },
   "football|UCL|401915291": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-25T19:20:48.753026+00:00",
+   "checked_at": "2026-11-25T19:32:51.190379+00:00",
    "kickoff": "2026-11-25T23:00:00+03:00",
    "sport": "football",
    "id": "401915291",
@@ -5867,7 +5867,7 @@
   },
   "football|UCL|401915292": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-25T19:20:49.212754+00:00",
+   "checked_at": "2026-11-25T19:32:51.650211+00:00",
    "kickoff": "2026-11-25T23:00:00+03:00",
    "sport": "football",
    "id": "401915292",
@@ -5882,7 +5882,7 @@
   },
   "football|UCL|401915376": {
    "reason": "edge_below_minimum",
-   "checked_at": "2026-11-25T19:20:49.669187+00:00",
+   "checked_at": "2026-11-25T19:32:52.111588+00:00",
    "kickoff": "2026-11-25T23:00:00+03:00",
    "sport": "football",
    "id": "401915376",
@@ -5897,7 +5897,7 @@
   },
   "football|UCL|401915377": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-25T19:20:50.119977+00:00",
+   "checked_at": "2026-11-25T19:32:52.571375+00:00",
    "kickoff": "2026-11-25T23:00:00+03:00",
    "sport": "football",
    "id": "401915377",
@@ -5905,14 +5905,14 @@
    "away": "Бавария",
    "priced_markets": 6,
    "market": "П2 и ТБ 1.5",
-   "probability": 0.4879,
-   "odds": 1.91,
-   "edge": -0.06811,
+   "probability": 0.491,
+   "odds": 1.89,
+   "edge": -0.07201,
    "estimated": true
   },
   "football|UCL|401915374": {
    "reason": "edge_below_minimum",
-   "checked_at": "2026-11-25T19:20:50.569135+00:00",
+   "checked_at": "2026-11-25T19:32:53.028041+00:00",
    "kickoff": "2026-11-25T23:00:00+03:00",
    "sport": "football",
    "id": "401915374",
@@ -5920,14 +5920,14 @@
    "away": "Рома",
    "priced_markets": 7,
    "market": "П1",
-   "probability": 0.6388,
-   "odds": 1.5,
-   "edge": -0.0418,
+   "probability": 0.6426,
+   "odds": 1.49,
+   "edge": -0.04253,
    "estimated": false
   },
   "football|UCL|401915375": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-25T19:20:50.807344+00:00",
+   "checked_at": "2026-11-25T19:32:53.271734+00:00",
    "kickoff": "2026-11-25T23:00:00+03:00",
    "sport": "football",
    "id": "401915375",
@@ -5942,7 +5942,7 @@
   },
   "football|UCL|401915373": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-25T19:20:51.256691+00:00",
+   "checked_at": "2026-11-25T19:32:53.730356+00:00",
    "kickoff": "2026-11-25T23:00:00+03:00",
    "sport": "football",
    "id": "401915373",
@@ -5950,9 +5950,9 @@
    "away": "Манчестер Юнайтед",
    "priced_markets": 6,
    "market": "ТБ 2.5",
-   "probability": 0.6479,
+   "probability": 0.6474,
    "odds": 1.44,
-   "edge": -0.06702,
+   "edge": -0.06774,
    "estimated": true
   }
  },
