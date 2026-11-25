@@ -167,8 +167,8 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-25-orlando-medzhik-detroyt-pistons-401909314.html",
-"hs": "84",
-"as": "97",
+"hs": "86",
+"as": "100",
 "tip": "П2 (с ОТ) · 1.77",
 "top": false,
 "bot": {
@@ -303,7 +303,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-25-edmonton-vegas-401892780.html",
-"hs": "0",
+"hs": "1",
 "as": "2",
 "tip": "П1 (с ОТ и буллитами) · 2.00",
 "top": false,
@@ -404,7 +404,15 @@ null
 ],
 "center": "Ожидаемые голы 3.3 : 3.5"
 },
-"lt": null
+"lt": {
+"fair": 1.54,
+"label": "П2 (осн. время)",
+"min_odds": 1.61,
+"minute": "2-й период",
+"p": 0.651,
+"result": null,
+"score": "1:2"
+}
 },
 {
 "sport": "football",
