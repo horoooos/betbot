@@ -26323,5 +26323,13 @@
   "div": "ECU",
   "reason": "edge_below_minimum",
   "retry_at": 1795651458.250741
+ },
+ "401931986": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-26T04:00:00+03:00",
+  "sport": "football",
+  "div": "MEX",
+  "reason": "edge_below_minimum",
+  "retry_at": 1795651698.762811
  }
 }

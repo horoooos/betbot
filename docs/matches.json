@@ -1547,41 +1547,6 @@ null
 },
 {
 "sport": "basketball",
-"id": "401909321",
-"league": "США · NBA",
-"kickoff": "2026-11-26T04:00:00+03:00",
-"home": "Мемфис Гриззлис",
-"away": "Клипперс",
-"hl": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/mem.png",
-"al": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/lac.png",
-"hid": "29",
-"aid": "12",
-"bb": "https://betboom.ru/search?query=%D0%93%D1%80%D0%B8%D0%B7%D0%B7%D0%BB%D0%B8%D1%81&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=basketball",
-"path": "basketball/nba",
-"url": "live.html?s=basketball&p=basketball%2Fnba&e=401909321&h=%D0%9C%D0%B5%D0%BC%D1%84%D0%B8%D1%81+%D0%93%D1%80%D0%B8%D0%B7%D0%B7%D0%BB%D0%B8%D1%81&a=%D0%9A%D0%BB%D0%B8%D0%BF%D0%BF%D0%B5%D1%80%D1%81",
-"participants": [
-[
-"Мемфис Гриззлис",
-"Memphis Grizzlies"
-],
-[
-"Клипперс",
-"LA Clippers"
-]
-],
-"div": "NBA",
-"state": "pre",
-"bo": null,
-"prediction": "",
-"hs": "0",
-"as": "0",
-"tip": "",
-"top": false,
-"bot": null,
-"lt": null
-},
-{
-"sport": "basketball",
 "id": "401909322",
 "league": "США · NBA",
 "kickoff": "2026-11-26T04:00:00+03:00",
@@ -1602,6 +1567,107 @@ null
 [
 "Бруклин Нетс",
 "Brooklyn Nets"
+]
+],
+"div": "NBA",
+"state": "pre",
+"bo": null,
+"prediction": "predictions/2026-11-26-miluoki-baks-bruklin-nets-401909322.html",
+"hs": "0",
+"as": "0",
+"tip": "П1 (с ОТ) · 1.85",
+"top": false,
+"bot": {
+"main": {
+"label": "П1 (с ОТ)",
+"p": 0.55,
+"odds": 1.85,
+"est": false
+},
+"bold": null,
+"markets": [
+[
+"П1 (с ОТ)",
+0.55,
+1.855
+],
+[
+"П2 (с ОТ)",
+0.45,
+1.99
+],
+[
+"Ф1 (-1.5)",
+0.5,
+1.952
+],
+[
+"Ф2 (+1.5)",
+0.5,
+1.87
+],
+[
+"ТБ 227.5",
+0.66,
+null
+],
+[
+"ТМ 227.5",
+0.34,
+null
+],
+[
+"ТБ 234.5",
+0.5,
+1.935
+],
+[
+"ТМ 234.5",
+0.5,
+1.885
+],
+[
+"ТБ 241.5",
+0.34,
+null
+],
+[
+"ТМ 241.5",
+0.66,
+null
+]
+],
+"bar": [
+0.5497382248301129,
+0,
+0.4502617751698871
+],
+"center": "Ожидаемый счёт 118 : 116"
+},
+"lt": null
+},
+{
+"sport": "basketball",
+"id": "401909321",
+"league": "США · NBA",
+"kickoff": "2026-11-26T04:00:00+03:00",
+"home": "Мемфис Гриззлис",
+"away": "Клипперс",
+"hl": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/mem.png",
+"al": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/lac.png",
+"hid": "29",
+"aid": "12",
+"bb": "https://betboom.ru/search?query=%D0%93%D1%80%D0%B8%D0%B7%D0%B7%D0%BB%D0%B8%D1%81&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=basketball",
+"path": "basketball/nba",
+"url": "live.html?s=basketball&p=basketball%2Fnba&e=401909321&h=%D0%9C%D0%B5%D0%BC%D1%84%D0%B8%D1%81+%D0%93%D1%80%D0%B8%D0%B7%D0%B7%D0%BB%D0%B8%D1%81&a=%D0%9A%D0%BB%D0%B8%D0%BF%D0%BF%D0%B5%D1%80%D1%81",
+"participants": [
+[
+"Мемфис Гриззлис",
+"Memphis Grizzlies"
+],
+[
+"Клипперс",
+"LA Clippers"
 ]
 ],
 "div": "NBA",

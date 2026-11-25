@@ -1563,7 +1563,7 @@
  "value_day": "2026-11-25",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-25",
- "site_stamp": "1555|9574|2026-11-26 02|6|4c4afdb9ca1fc1f2",
+ "site_stamp": "1555|9576|2026-11-26 02|6|e236ae152924a87a",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1721,7 +1721,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 9574,
+ "dz_last": 9576,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -3040,7 +3040,7 @@
   "quote_matches": 115
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-26T02:56:18.408603+03:00",
+  "last_poll": "2026-11-26T02:58:18.762811+03:00",
   "cursor": "435",
   "posts": [
    {
@@ -6239,6 +6239,80 @@
    "probability": 0.5825,
    "odds": 1.74,
    "edge": 0.01355,
+   "estimated": false
+  },
+  "football|MEX|401931986": {
+   "reason": "edge_below_minimum",
+   "checked_at": "2026-11-25T23:58:39.000930+00:00",
+   "kickoff": "2026-11-26T04:00:00+03:00",
+   "sport": "football",
+   "id": "401931986",
+   "home": "Толука",
+   "away": "Атлас",
+   "priced_markets": 3,
+   "market": "П1",
+   "probability": 0.6535,
+   "odds": 1.4,
+   "edge": -0.0851,
+   "estimated": false
+  },
+  "hockey|NHL|401892790": {
+   "reason": "no_qualified_real_market",
+   "checked_at": "2026-11-25T23:58:39.628039+00:00",
+   "kickoff": "2026-11-26T04:00:00+03:00",
+   "sport": "hockey",
+   "id": "401892790",
+   "home": "Даллас",
+   "away": "Нэшвилл",
+   "priced_markets": 4,
+   "market": "ИТ1 больше 2.5",
+   "probability": 0.6258,
+   "odds": 1.49,
+   "edge": -0.06756,
+   "estimated": true
+  },
+  "hockey|NHL|401892791": {
+   "reason": "no_qualified_real_market",
+   "checked_at": "2026-11-25T23:58:39.944902+00:00",
+   "kickoff": "2026-11-26T04:00:00+03:00",
+   "sport": "hockey",
+   "id": "401892791",
+   "home": "Миннесота",
+   "away": "Юта",
+   "priced_markets": 4,
+   "market": "ТБ 5.5",
+   "probability": 0.6256,
+   "odds": 1.49,
+   "edge": -0.06786,
+   "estimated": true
+  },
+  "basketball|NBA|401909321": {
+   "reason": "no_qualified_real_market",
+   "checked_at": "2026-11-25T23:58:40.542021+00:00",
+   "kickoff": "2026-11-26T04:00:00+03:00",
+   "sport": "basketball",
+   "id": "401909321",
+   "home": "Мемфис Гриззлис",
+   "away": "Клипперс",
+   "priced_markets": 6,
+   "market": "ТБ 220.5",
+   "probability": 0.6597,
+   "odds": 1.41,
+   "edge": -0.06982,
+   "estimated": true
+  },
+  "basketball|NBA|401909322": {
+   "reason": "published",
+   "checked_at": "2026-11-25T23:58:54.303524+00:00",
+   "kickoff": "2026-11-26T04:00:00+03:00",
+   "sport": "basketball",
+   "id": "401909322",
+   "home": "Милуоки Бакс",
+   "away": "Бруклин Нетс",
+   "market": "П1 (с ОТ)",
+   "probability": 0.5497,
+   "odds": 1.85,
+   "edge": 0.01694,
    "estimated": false
   }
  },
