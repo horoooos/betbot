@@ -5,7 +5,7 @@
  },
  "learned": "2026-11-25",
  "schedule_day": "2026-11-25",
- "content_slot": "2026-11-25-22",
+ "content_slot": "2026-11-25-23",
  "news_seen": [
   "https://www.sport-express.ru/football/rfpl/news/nikolaev-schitaet-chto-arbitru-ne-sledovalo-naznachat-penalti-v-vorota-cska-v-igre-s-ahmatom-2477667/",
   "https://www.sport-express.ru/hockey/khl/news/stala-izvestna-zarplata-morozova-po-kontraktu-s-metallurgom-2477657/",
@@ -1563,7 +1563,7 @@
  "value_day": "2026-11-25",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-25",
- "site_stamp": "1551|9535|2026-11-25 22|6|e5f885eae847db26",
+ "site_stamp": "1551|9535|2026-11-25 23|6|e5f885eae847db26",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -3024,12 +3024,12 @@
   },
   "error": null,
   "tips": 17059,
-  "snapshots": 355,
+  "snapshots": 356,
   "unmapped_markets": 26034,
   "quote_matches": 107
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-25T22:58:33.769053+03:00",
+  "last_poll": "2026-11-25T23:00:33.045672+03:00",
   "cursor": "427",
   "posts": [
    {
@@ -12613,7 +12613,7 @@
     "profit_pct": 0.65
    },
    "football|I2|401899537": {
-    "status": "open",
+    "status": "settled",
     "id": "401899537",
     "sport": "football",
     "div": "I2",
@@ -12653,7 +12653,10 @@
        "price_kind": "author_recorded"
       }
      ]
-    }
+    },
+    "settled_at": "2026-11-25T20:00:33.045672+00:00",
+    "hit": false,
+    "profit_pct": -0.5
    },
    "tennis|WTA|186839": {
     "status": "open",
