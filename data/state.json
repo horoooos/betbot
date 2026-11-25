@@ -2978,7 +2978,7 @@
   "quote_matches": 84
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-25T03:26:04.828873+03:00",
+  "last_poll": "2026-11-25T03:28:04.795995+03:00",
   "cursor": "403",
   "posts": [
    {
@@ -5286,6 +5286,21 @@
    "probability": 0.6597,
    "odds": 1.41,
    "edge": -0.06982,
+   "estimated": true
+  },
+  "football|COL|401934706": {
+   "reason": "no_qualified_real_market",
+   "checked_at": "2026-11-25T00:28:24.254132+00:00",
+   "kickoff": "2026-11-25T04:30:00+03:00",
+   "sport": "football",
+   "id": "401934706",
+   "home": "Америка",
+   "away": "Deportivo Cali",
+   "priced_markets": 6,
+   "market": "Обе забьют — нет",
+   "probability": 0.6135,
+   "odds": 1.52,
+   "edge": -0.06748,
    "estimated": true
   }
  },

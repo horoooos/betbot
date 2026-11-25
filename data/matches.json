@@ -26720,5 +26720,13 @@
   "close": {
    "D": 0.2576
   }
+ },
+ "401934706": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-25T04:30:00+03:00",
+  "sport": "football",
+  "div": "COL",
+  "reason": "no_qualified_real_market",
+  "retry_at": 1795567084.795995
  }
 }
