@@ -25271,12 +25271,1031 @@
   "retry_at": 1795636113.369776
  },
  "401880138": {
-  "status": "waiting_data",
-  "kickoff": "2026-11-25T23:00:00+03:00",
-  "sport": "football",
+  "id": "401880138",
   "div": "E1",
-  "reason": "no_qualified_real_market",
-  "retry_at": 1795635753.595824
+  "slug": "eng.2",
+  "kickoff": "2026-11-25T23:00:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "detail": "Scheduled",
+  "home": {
+   "id": "336",
+   "name": "Stoke City",
+   "short": "Stoke",
+   "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/336.png",
+   "color": "f42727",
+   "alt": "1a1a1a",
+   "form": "DWWWD",
+   "score": "0",
+   "ru": "Сток Сити"
+  },
+  "away": {
+   "id": "391",
+   "name": "Millwall",
+   "short": "Millwall",
+   "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/391.png",
+   "color": "091453",
+   "alt": "007066",
+   "form": "LLLWL",
+   "score": "0",
+   "ru": "Миллуолл"
+  },
+  "odds": {
+   "H": 2.1,
+   "D": 3.45,
+   "A": 3.6,
+   "line": 2.5,
+   "over": 2.05,
+   "under": 1.769,
+   "spread_h": [
+    -0.5,
+    2.0
+   ],
+   "spread_a": [
+    0.5,
+    1.741
+   ]
+  },
+  "venue": "bet365 Stadium",
+  "clock": "0'",
+  "goals": [],
+  "open": {
+   "H": 0.4548
+  },
+  "top": false,
+  "lam": [
+   1.4452582216965206,
+   1.1640998418325725
+  ],
+  "probs": {
+   "H": 0.42550504138461215,
+   "D": 0.2800836222849851,
+   "A": 0.29441133633040245,
+   "1X": 0.7055886636695975,
+   "12": 0.7199163777150148,
+   "X2": 0.574494958615388,
+   "BTTS_Y": 0.5355965795092813,
+   "BTTS_N": 0.4644034204907186,
+   "O15": 0.7443206216817896,
+   "U15": 0.2556793783182107,
+   "O25": 0.48391694870183116,
+   "U25": 0.5160830512981686,
+   "O35": 0.266035545505467,
+   "U35": 0.7339644544945328,
+   "H_O05": 0.7643146995463889,
+   "H_O15": 0.423688581332792,
+   "A_O05": 0.6877964174512484,
+   "A_O15": 0.3243602763866835,
+   "H-1.5": 0.21069098134929024,
+   "A+1.5": 0.78930901865071,
+   "A-1.5": 0.123313527973533,
+   "H+1.5": 0.876686472026467,
+   "H-2.5": 0.08059155886633508,
+   "A-2.5": 0.03890915811676878,
+   "H+2.5": 0.9610908418832312,
+   "A+2.5": 0.9194084411336652,
+   "O45": 0.1239028964246005,
+   "U45": 0.8760971035753996,
+   "H_O25": 0.17754223239640657,
+   "A_O25": 0.11282229922193376,
+   "H&O15": 0.3290640143246009,
+   "A&O15": 0.21865844758384773,
+   "H&BTTS": 0.19678692134750506,
+   "A&BTTS": 0.14221149838843575,
+   "1X&U35": 0.5169538747932941,
+   "X2&U35": 0.434195551518183,
+   "BTTS&O25": 0.4018970702039813,
+   "HT_H": 0.3201690239737683,
+   "HT_D": 0.4405198398930876,
+   "HT_A": 0.23931113613314436,
+   "HT_O05": 0.6825137145370056,
+   "HT_U05": 0.317486285462994,
+   "HT_O15": 0.3364560417490928,
+   "HT_U15": 0.6635439582509075
+  },
+  "scores": [
+   [
+    "1:1",
+    0.1336995093052998
+   ],
+   [
+    "1:0",
+    0.09644102706001133
+   ],
+   [
+    "2:1",
+    0.08945847919457174
+   ]
+  ],
+  "main": {
+   "key": "H",
+   "label": "П1",
+   "p": 0.4255,
+   "odds": 2.2,
+   "est": false,
+   "stake": 0.5,
+   "strategy": "external_trial",
+   "selection_mode": "external_fallback",
+   "trial_expires_at": null,
+   "probability_origin": "baseline_model",
+   "model_edge": -0.06389,
+   "source_count": 16,
+   "source_refs": [
+    {
+     "author": "/predictors/rustam-rustem",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/25-11-2026-stoke-city-millwall",
+     "published_at": "2026-11-24T17:02:00+00:00",
+     "observed_at": "2026-11-25T00:46:04.699877+00:00",
+     "odds": 2.19,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/ivan-ivanov-848",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/25-11-2026-stoke-city-millwall",
+     "published_at": "2026-11-24T18:39:00+00:00",
+     "observed_at": "2026-11-24T18:43:20.878202+00:00",
+     "odds": 2.19,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/nastia-orlova",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/25-11-2026-stoke-city-millwall",
+     "published_at": "2026-11-24T19:02:00+00:00",
+     "observed_at": "2026-11-24T19:05:19.985493+00:00",
+     "odds": 2.19,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/maratkaaydarov",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/25-11-2026-stoke-city-millwall",
+     "published_at": "2026-11-24T22:34:00+00:00",
+     "observed_at": "2026-11-24T22:36:44.008237+00:00",
+     "odds": 2.19,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/anna-petrovskaia-bondar",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/25-11-2026-stoke-city-millwall",
+     "published_at": "2026-11-25T02:54:00+00:00",
+     "observed_at": "2026-11-25T03:10:04.834324+00:00",
+     "odds": 2.19,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/aleksandr-tolkacev-3",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/25-11-2026-stoke-city-millwall",
+     "published_at": "2026-11-25T07:58:00+00:00",
+     "observed_at": "2026-11-25T08:04:45.952445+00:00",
+     "odds": 2.19,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/aleksei-aleksii",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/25-11-2026-stoke-city-millwall",
+     "published_at": "2026-11-25T09:02:00+00:00",
+     "observed_at": "2026-11-25T13:18:19.535466+00:00",
+     "odds": 2.12,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/superkrasti14",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/25-11-2026-stoke-city-millwall",
+     "published_at": "2026-11-25T11:46:00+00:00",
+     "observed_at": "2026-11-25T13:18:19.535466+00:00",
+     "odds": 2.12,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/dmitrii2-mortvicev",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/25-11-2026-stoke-city-millwall",
+     "published_at": "2026-11-25T12:35:00+00:00",
+     "observed_at": "2026-11-25T13:18:19.535466+00:00",
+     "odds": 2.12,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/rafdik-molodoy",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/25-11-2026-stoke-city-millwall",
+     "published_at": "2026-11-25T13:13:00+00:00",
+     "observed_at": "2026-11-25T13:18:19.535466+00:00",
+     "odds": 2.12,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/yurii-tockii",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/25-11-2026-stoke-city-millwall",
+     "published_at": "2026-11-25T14:22:00+00:00",
+     "observed_at": "2026-11-25T18:34:28.360128+00:00",
+     "odds": 2.12,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/znaxar87",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/25-11-2026-stoke-city-millwall",
+     "published_at": "2026-11-25T17:07:00+00:00",
+     "observed_at": "2026-11-25T17:12:27.101765+00:00",
+     "odds": 2.04,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/andrejf78",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/25-11-2026-stoke-city-millwall",
+     "published_at": "2026-11-25T18:13:00+00:00",
+     "observed_at": "2026-11-25T18:34:28.360128+00:00",
+     "odds": 2.04,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/dmitrii-562",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/25-11-2026-stoke-city-millwall",
+     "published_at": "2026-11-25T18:24:00+00:00",
+     "observed_at": "2026-11-25T18:34:28.360128+00:00",
+     "odds": 2.04,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/bet-monster-1",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/25-11-2026-stoke-city-millwall",
+     "published_at": "2026-11-25T18:32:00+00:00",
+     "observed_at": "2026-11-25T18:34:28.360128+00:00",
+     "odds": 2.04,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/aleksandr-kolesnikov-40",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/25-11-2026-stoke-city-millwall",
+     "published_at": "2026-11-25T19:33:00+00:00",
+     "observed_at": "2026-11-25T19:36:33.324068+00:00",
+     "odds": 2.04,
+     "price_kind": "author_recorded"
+    }
+   ]
+  },
+  "bold": {},
+  "value": null,
+  "odds_src": "среднее по букмекерам",
+  "model_w": 0.0,
+  "learned_n": 1550,
+  "stavka_signal": {
+   "status": "baseline_better",
+   "weight": 0.0,
+   "authors": 22,
+   "votes": {
+    "H": 15.981473104933666,
+    "D": 1.0507757256261836,
+    "A": 1.0,
+    "U25": 2.0,
+    "O25": 2.040922791914369
+   },
+   "source": "https://stavka.tv",
+   "snapshot": "E1|401880138"
+  },
+  "research": {
+   "articles": [],
+   "dossier": {
+    "observed_at": "2026-11-25T19:36:55.071607+00:00",
+    "kickoff": "2026-11-25T20:00:00+00:00",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.2/summary?event=401880138",
+    "status": "available",
+    "facts": {
+     "table": {
+      "369": {
+       "rank": "1",
+       "gp": "17",
+       "w": "10",
+       "d": "5",
+       "l": "2",
+       "gd": "+14",
+       "pts": "35",
+       "of": 24,
+       "raw": {
+        "GP": "17",
+        "L": "2",
+        "GD": "+14",
+        "P": "35",
+        "D": "5",
+        "W": "10",
+        "R": "1",
+        "Total": "10-5-2"
+       },
+       "group": "English League Championship Standings"
+      },
+      "380": {
+       "rank": "2",
+       "gp": "17",
+       "w": "10",
+       "d": "4",
+       "l": "3",
+       "gd": "+12",
+       "pts": "34",
+       "of": 24,
+       "raw": {
+        "GP": "17",
+        "L": "3",
+        "GD": "+12",
+        "P": "34",
+        "D": "4",
+        "W": "10",
+        "R": "2",
+        "Total": "10-4-3"
+       },
+       "group": "English League Championship Standings"
+      },
+      "336": {
+       "rank": "3",
+       "gp": "16",
+       "w": "10",
+       "d": "2",
+       "l": "4",
+       "gd": "+7",
+       "pts": "32",
+       "of": 24,
+       "raw": {
+        "GP": "16",
+        "L": "4",
+        "GD": "+7",
+        "P": "32",
+        "D": "2",
+        "W": "10",
+        "R": "3",
+        "Total": "10-2-4"
+       },
+       "group": "English League Championship Standings"
+      },
+      "392": {
+       "rank": "4",
+       "gp": "16",
+       "w": "8",
+       "d": "5",
+       "l": "3",
+       "gd": "+13",
+       "pts": "29",
+       "of": 24,
+       "raw": {
+        "GP": "16",
+        "L": "3",
+        "GD": "+13",
+        "P": "29",
+        "D": "5",
+        "W": "8",
+        "R": "4",
+        "Total": "8-5-3"
+       },
+       "group": "English League Championship Standings"
+      },
+      "383": {
+       "rank": "5",
+       "gp": "16",
+       "w": "8",
+       "d": "5",
+       "l": "3",
+       "gd": "+8",
+       "pts": "29",
+       "of": 24,
+       "raw": {
+        "GP": "16",
+        "L": "3",
+        "GD": "+8",
+        "P": "29",
+        "D": "5",
+        "W": "8",
+        "R": "5",
+        "Total": "8-5-3"
+       },
+       "group": "English League Championship Standings"
+      },
+      "376": {
+       "rank": "6",
+       "gp": "17",
+       "w": "9",
+       "d": "5",
+       "l": "3",
+       "gd": "+16",
+       "pts": "28",
+       "of": 24,
+       "raw": {
+        "GP": "17",
+        "L": "3",
+        "GD": "+16",
+        "P": "28",
+        "D": "5",
+        "W": "9",
+        "R": "6",
+        "Total": "9-5-3"
+       },
+       "group": "English League Championship Standings"
+      },
+      "334": {
+       "rank": "7",
+       "gp": "17",
+       "w": "7",
+       "d": "7",
+       "l": "3",
+       "gd": "+7",
+       "pts": "28",
+       "of": 24,
+       "raw": {
+        "GP": "17",
+        "L": "3",
+        "GD": "+7",
+        "P": "28",
+        "D": "7",
+        "W": "7",
+        "R": "7",
+        "Total": "7-7-3"
+       },
+       "group": "English League Championship Standings"
+      },
+      "318": {
+       "rank": "8",
+       "gp": "17",
+       "w": "8",
+       "d": "3",
+       "l": "6",
+       "gd": "+3",
+       "pts": "27",
+       "of": 24,
+       "raw": {
+        "GP": "17",
+        "L": "6",
+        "GD": "+3",
+        "P": "27",
+        "D": "3",
+        "W": "8",
+        "R": "8",
+        "Total": "8-3-6"
+       },
+       "group": "English League Championship Standings"
+      },
+      "398": {
+       "rank": "9",
+       "gp": "17",
+       "w": "7",
+       "d": "5",
+       "l": "5",
+       "gd": "+6",
+       "pts": "26",
+       "of": 24,
+       "raw": {
+        "GP": "17",
+        "L": "5",
+        "GD": "+6",
+        "P": "26",
+        "D": "5",
+        "W": "7",
+        "R": "9",
+        "Total": "7-5-5"
+       },
+       "group": "English League Championship Standings"
+      },
+      "385": {
+       "rank": "10",
+       "gp": "17",
+       "w": "7",
+       "d": "5",
+       "l": "5",
+       "gd": "+3",
+       "pts": "26",
+       "of": 24,
+       "raw": {
+        "GP": "17",
+        "L": "5",
+        "GD": "+3",
+        "P": "26",
+        "D": "5",
+        "W": "7",
+        "R": "10",
+        "Total": "7-5-5"
+       },
+       "group": "English League Championship Standings"
+      },
+      "381": {
+       "rank": "11",
+       "gp": "17",
+       "w": "8",
+       "d": "1",
+       "l": "8",
+       "gd": "+9",
+       "pts": "25",
+       "of": 24,
+       "raw": {
+        "GP": "17",
+        "L": "8",
+        "GD": "+9",
+        "P": "25",
+        "D": "1",
+        "W": "8",
+        "R": "11",
+        "Total": "8-1-8"
+       },
+       "group": "English League Championship Standings"
+      },
+      "371": {
+       "rank": "12",
+       "gp": "17",
+       "w": "6",
+       "d": "6",
+       "l": "5",
+       "gd": "+13",
+       "pts": "24",
+       "of": 24,
+       "raw": {
+        "GP": "17",
+        "L": "5",
+        "GD": "+13",
+        "P": "24",
+        "D": "6",
+        "W": "6",
+        "R": "12",
+        "Total": "6-6-5"
+       },
+       "group": "English League Championship Standings"
+      },
+      "365": {
+       "rank": "13",
+       "gp": "16",
+       "w": "6",
+       "d": "4",
+       "l": "6",
+       "gd": "-1",
+       "pts": "22",
+       "of": 24,
+       "raw": {
+        "GP": "16",
+        "L": "6",
+        "GD": "-1",
+        "P": "22",
+        "D": "4",
+        "W": "6",
+        "R": "13",
+        "Total": "6-4-6"
+       },
+       "group": "English League Championship Standings"
+      },
+      "352": {
+       "rank": "14",
+       "gp": "17",
+       "w": "5",
+       "d": "7",
+       "l": "5",
+       "gd": "-1",
+       "pts": "22",
+       "of": 24,
+       "raw": {
+        "GP": "17",
+        "L": "5",
+        "GD": "-1",
+        "P": "22",
+        "D": "7",
+        "W": "5",
+        "R": "14",
+        "Total": "5-7-5"
+       },
+       "group": "English League Championship Standings"
+      },
+      "372": {
+       "rank": "15",
+       "gp": "17",
+       "w": "5",
+       "d": "5",
+       "l": "7",
+       "gd": "-7",
+       "pts": "20",
+       "of": 24,
+       "raw": {
+        "GP": "17",
+        "L": "7",
+        "GD": "-7",
+        "P": "20",
+        "D": "5",
+        "W": "5",
+        "R": "15",
+        "Total": "5-5-7"
+       },
+       "group": "English League Championship Standings"
+      },
+      "333": {
+       "rank": "16",
+       "gp": "17",
+       "w": "5",
+       "d": "4",
+       "l": "8",
+       "gd": "-10",
+       "pts": "19",
+       "of": 24,
+       "raw": {
+        "GP": "17",
+        "L": "8",
+        "GD": "-10",
+        "P": "19",
+        "D": "4",
+        "W": "5",
+        "R": "16",
+        "Total": "5-4-8"
+       },
+       "group": "English League Championship Standings"
+      },
+      "347": {
+       "rank": "17",
+       "gp": "17",
+       "w": "4",
+       "d": "6",
+       "l": "7",
+       "gd": "-5",
+       "pts": "18",
+       "of": 24,
+       "raw": {
+        "GP": "17",
+        "L": "7",
+        "GD": "-5",
+        "P": "18",
+        "D": "6",
+        "W": "4",
+        "R": "17",
+        "Total": "4-6-7"
+       },
+       "group": "English League Championship Standings"
+      },
+      "391": {
+       "rank": "18",
+       "gp": "16",
+       "w": "5",
+       "d": "3",
+       "l": "8",
+       "gd": "-5",
+       "pts": "18",
+       "of": 24,
+       "raw": {
+        "GP": "16",
+        "L": "8",
+        "GD": "-5",
+        "P": "18",
+        "D": "3",
+        "W": "5",
+        "R": "18",
+        "Total": "5-3-8"
+       },
+       "group": "English League Championship Standings"
+      },
+      "358": {
+       "rank": "19",
+       "gp": "16",
+       "w": "5",
+       "d": "3",
+       "l": "8",
+       "gd": "-9",
+       "pts": "18",
+       "of": 24,
+       "raw": {
+        "GP": "16",
+        "L": "8",
+        "GD": "-9",
+        "P": "18",
+        "D": "3",
+        "W": "5",
+        "R": "19",
+        "Total": "5-3-8"
+       },
+       "group": "English League Championship Standings"
+      },
+      "395": {
+       "rank": "20",
+       "gp": "16",
+       "w": "4",
+       "d": "3",
+       "l": "9",
+       "gd": "-14",
+       "pts": "15",
+       "of": 24,
+       "raw": {
+        "GP": "16",
+        "L": "9",
+        "GD": "-14",
+        "P": "15",
+        "D": "3",
+        "W": "4",
+        "R": "20",
+        "Total": "4-3-9"
+       },
+       "group": "English League Championship Standings"
+      },
+      "314": {
+       "rank": "21",
+       "gp": "17",
+       "w": "4",
+       "d": "3",
+       "l": "10",
+       "gd": "-16",
+       "pts": "15",
+       "of": 24,
+       "raw": {
+        "GP": "17",
+        "L": "10",
+        "GD": "-16",
+        "P": "15",
+        "D": "3",
+        "W": "4",
+        "R": "21",
+        "Total": "4-3-10"
+       },
+       "group": "English League Championship Standings"
+      },
+      "394": {
+       "rank": "22",
+       "gp": "17",
+       "w": "3",
+       "d": "3",
+       "l": "11",
+       "gd": "-13",
+       "pts": "12",
+       "of": 24,
+       "raw": {
+        "GP": "17",
+        "L": "11",
+        "GD": "-13",
+        "P": "12",
+        "D": "3",
+        "W": "3",
+        "R": "22",
+        "Total": "3-3-11"
+       },
+       "group": "English League Championship Standings"
+      },
+      "379": {
+       "rank": "23",
+       "gp": "16",
+       "w": "1",
+       "d": "8",
+       "l": "7",
+       "gd": "-9",
+       "pts": "11",
+       "of": 24,
+       "raw": {
+        "GP": "16",
+        "L": "7",
+        "GD": "-9",
+        "P": "11",
+        "D": "8",
+        "W": "1",
+        "R": "23",
+        "Total": "1-8-7"
+       },
+       "group": "English League Championship Standings"
+      },
+      "374": {
+       "rank": "24",
+       "gp": "17",
+       "w": "2",
+       "d": "4",
+       "l": "11",
+       "gd": "-21",
+       "pts": "10",
+       "of": 24,
+       "raw": {
+        "GP": "17",
+        "L": "11",
+        "GD": "-21",
+        "P": "10",
+        "D": "4",
+        "W": "2",
+        "R": "24",
+        "Total": "2-4-11"
+       },
+       "group": "English League Championship Standings"
+      }
+     },
+     "last5": {
+      "336": [
+       {
+        "res": "D",
+        "gf": 0,
+        "ga": 0,
+        "opp": "Bristol City",
+        "home": true,
+        "date": "2026-10-24"
+       },
+       {
+        "res": "W",
+        "gf": 2,
+        "ga": 0,
+        "opp": "Preston North End",
+        "home": true,
+        "date": "2026-10-31"
+       },
+       {
+        "res": "W",
+        "gf": 2,
+        "ga": 1,
+        "opp": "Blackburn Rovers",
+        "home": false,
+        "date": "2026-11-03"
+       },
+       {
+        "res": "W",
+        "gf": 2,
+        "ga": 1,
+        "opp": "Portsmouth",
+        "home": false,
+        "date": "2026-11-07"
+       },
+       {
+        "res": "W",
+        "gf": 1,
+        "ga": 0,
+        "opp": "Birmingham City",
+        "home": true,
+        "date": "2026-11-21"
+       }
+      ],
+      "391": [
+       {
+        "res": "L",
+        "gf": 1,
+        "ga": 2,
+        "opp": "Portsmouth",
+        "home": false,
+        "date": "2026-10-24"
+       },
+       {
+        "res": "W",
+        "gf": 4,
+        "ga": 1,
+        "opp": "Derby County",
+        "home": true,
+        "date": "2026-10-31"
+       },
+       {
+        "res": "L",
+        "gf": 0,
+        "ga": 3,
+        "opp": "Birmingham City",
+        "home": false,
+        "date": "2026-11-03"
+       },
+       {
+        "res": "L",
+        "gf": 0,
+        "ga": 3,
+        "opp": "West Bromwich Albion",
+        "home": false,
+        "date": "2026-11-07"
+       },
+       {
+        "res": "L",
+        "gf": 0,
+        "ga": 1,
+        "opp": "Queens Park Rangers",
+        "home": true,
+        "date": "2026-11-21"
+       }
+      ]
+     },
+     "h2h": [
+      {
+       "date": "2026-04-21",
+       "home_id": "336",
+       "hs": "1",
+       "as": "3"
+      },
+      {
+       "date": "2025-10-21",
+       "home_id": "391",
+       "hs": "2",
+       "as": "0"
+      },
+      {
+       "date": "2025-03-15",
+       "home_id": "391",
+       "hs": "1",
+       "as": "0"
+      },
+      {
+       "date": "2024-11-09",
+       "home_id": "336",
+       "hs": "1",
+       "as": "1"
+      },
+      {
+       "date": "2023-12-23",
+       "home_id": "336",
+       "hs": "0",
+       "as": "0"
+      }
+     ],
+     "lineups": {
+      "336": {
+       "formation": "3-4-3",
+       "starters": [
+        "Viktor Johansson",
+        "Luke Graham",
+        "Bosun Lawal",
+        "Ben Wilmot",
+        "Jack McGlynn",
+        "Ben Johnson",
+        "Justin Devenny",
+        "Ethan Galbraith",
+        "Million Manhoef",
+        "George Hirst",
+        "Bae Jun-Ho"
+       ]
+      },
+      "391": {
+       "formation": "4-2-3-1",
+       "starters": [
+        "Lukas Jensen",
+        "Alfie Doughty",
+        "Caleb Taylor",
+        "Jordi Osei-Tutu",
+        "Jake Cooper",
+        "Taïryk Arconte",
+        "Derek Mazou-Sacko",
+        "Jenson Metcalfe",
+        "Camiel Neghli",
+        "Mark Sykes",
+        "Mihailo Ivanovic"
+       ]
+      }
+     },
+     "leaders": {
+      "336": [
+       [
+        "Goals",
+        "Jack McGlynn",
+        "Matches: 12, Goals: 5"
+       ],
+       [
+        "Assists",
+        "Ethan Galbraith",
+        "Matches: 14, Assists: 4"
+       ],
+       [
+        "Total Shots",
+        "Jack McGlynn",
+        "20"
+       ]
+      ],
+      "391": [
+       [
+        "Goals",
+        "Lyndon Dykes",
+        "Matches: 16, Goals: 4"
+       ],
+       [
+        "Assists",
+        "Camiel Neghli",
+        "Matches: 16, Assists: 3"
+       ],
+       [
+        "Total Shots",
+        "Kyrell Lisbie",
+        "30"
+       ]
+      ]
+     },
+     "venue": "bet365 Stadium",
+     "city": "Stoke-on-Trent"
+    }
+   }
+  },
+  "extra": {
+   "corners": {
+    "home": 6.812236921226698,
+    "away": 5.057787131689716,
+    "total": 11.870024052916413,
+    "lines": {
+     "8.5": 0.8362699683379575,
+     "9.5": 0.7460681251949677,
+     "10.5": 0.6389983204224994
+    }
+   },
+   "cards": {
+    "total": 3.8999999999999995,
+    "lines": {
+     "3.5": 0.5467532398612709,
+     "4.5": 0.3516346237900496,
+     "5.5": 0.19944210325449685
+    }
+   }
+  },
+  "msg_id": 9532,
+  "btn": 4
  },
  "401915291": {
   "status": "waiting_data",
@@ -25284,7 +26303,7 @@
   "sport": "football",
   "div": "UCL",
   "reason": "no_qualified_real_market",
-  "retry_at": 1795635753.595824
+  "retry_at": 1795636473.425559
  },
  "401915292": {
   "status": "waiting_data",
@@ -25292,7 +26311,7 @@
   "sport": "football",
   "div": "UCL",
   "reason": "no_qualified_real_market",
-  "retry_at": 1795635753.595824
+  "retry_at": 1795636473.425559
  },
  "401915376": {
   "status": "waiting_data",
@@ -25300,7 +26319,7 @@
   "sport": "football",
   "div": "UCL",
   "reason": "edge_below_minimum",
-  "retry_at": 1795635753.595824
+  "retry_at": 1795636473.425559
  },
  "401915377": {
   "status": "waiting_data",
@@ -25308,7 +26327,7 @@
   "sport": "football",
   "div": "UCL",
   "reason": "no_qualified_real_market",
-  "retry_at": 1795635753.595824
+  "retry_at": 1795636473.425559
  },
  "401915374": {
   "status": "waiting_data",
@@ -25316,7 +26335,7 @@
   "sport": "football",
   "div": "UCL",
   "reason": "edge_below_minimum",
-  "retry_at": 1795635753.595824
+  "retry_at": 1795636473.425559
  },
  "401915375": {
   "status": "waiting_data",
@@ -25324,7 +26343,7 @@
   "sport": "football",
   "div": "UCL",
   "reason": "no_qualified_real_market",
-  "retry_at": 1795635753.595824
+  "retry_at": 1795636473.425559
  },
  "401915373": {
   "status": "waiting_data",
@@ -25332,6 +26351,6 @@
   "sport": "football",
   "div": "UCL",
   "reason": "no_qualified_real_market",
-  "retry_at": 1795635753.595824
+  "retry_at": 1795636473.425559
  }
 }
