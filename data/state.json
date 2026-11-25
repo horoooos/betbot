@@ -5,7 +5,7 @@
  },
  "learned": "2026-11-25",
  "schedule_day": "2026-11-25",
- "content_slot": "2026-11-25-13",
+ "content_slot": "2026-11-25-16",
  "news_seen": [
   "https://www.sport-express.ru/hockey/nhl/news/neshvill-pittsburg-andrey-kuzmenko-zabil-1-y-gol-v-sezone-nhl-video-shayby-22-noyabrya-2026-2477488/",
   "https://www.sport-express.ru/hockey/nhl/news/san-hose-sietl-schet-i-rezultat-matcha-nhl-22-noyabrya-2026-2477530/",
@@ -1563,7 +1563,7 @@
  "value_day": "2026-11-25",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-25",
- "site_stamp": "1548|9483|2026-11-25 15|6|7afd1bc6fcefad38",
+ "site_stamp": "1548|9485|2026-11-25 16|6|7afd1bc6fcefad38",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1721,7 +1721,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 9483,
+ "dz_last": 9485,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -3003,7 +3003,7 @@
   "quote_matches": 101
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-25T15:58:19.461796+03:00",
+  "last_poll": "2026-11-25T16:00:19.324143+03:00",
   "cursor": "414",
   "posts": [
    {
@@ -11499,5 +11499,14 @@
     "profit_pct": -0.5
    }
   }
+ },
+ "mod_poll": {
+  "key": "E1|401880140",
+  "id": "401880140",
+  "poll": 9485,
+  "post": 9484,
+  "home": "Болтон Уондерерс",
+  "away": "Вест Бромвич Альбион",
+  "kickoff": "2026-11-25T22:45:00+03:00"
  }
 }
