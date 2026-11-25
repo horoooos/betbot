@@ -2049,6 +2049,11 @@
 "358",
 "Bolton Wanderers"
 ],
+"football|Борац": [
+"soccer/uefa.europa.conf",
+"20710",
+"Borac Banja Luka"
+],
 "football|Борнмут": [
 "soccer/eng.1",
 "349",
@@ -2615,9 +2620,9 @@
 "Independiente del Valle"
 ],
 "football|Интер": [
-"soccer/ita.1",
-"110",
-"Internazionale"
+"soccer/uefa.europa.conf",
+"20703",
+"Inter D'Escaldes"
 ],
 "football|Интер Майами": [
 "soccer/usa.1",
@@ -2908,6 +2913,11 @@
 "soccer/rus.1",
 "3850",
 "Krylia Sovetov"
+],
+"football|КуПС": [
+"soccer/uefa.europa.conf",
+"8169",
+"KuPS Kuopio"
 ],
 "football|Куинз Парк": [
 "soccer/sco.2",
@@ -3445,14 +3455,19 @@
 "Olympiacos"
 ],
 "football|Олимпик": [
-"soccer/fra.1",
-"176",
-"Marseille"
+"soccer/uefa.europa",
+"167",
+"Lyon"
 ],
 "football|Олимпия": [
 "soccer/par.1",
 "2675",
 "Club Olimpia"
+],
+"football|Омония": [
+"soccer/uefa.europa",
+"617",
+"Omonia Nicosia"
 ],
 "football|Онсе Кальдас": [
 "soccer/col.1",
@@ -4504,6 +4519,11 @@
 "272",
 "Sochaux"
 ],
+"football|Спарта": [
+"soccer/uefa.europa",
+"433",
+"Sparta Prague"
+],
 "football|Спарта Роттердам": [
 "soccer/ned.1",
 "151",
@@ -4729,6 +4749,11 @@
 "3802",
 "AFC Wimbledon"
 ],
+"football|Униан Торренсе": [
+"soccer/uefa.europa",
+"21615",
+"Torreense"
+],
 "football|Универсидад Католика": [
 "soccer/chi.1",
 "885",
@@ -4824,6 +4849,11 @@
 "436",
 "Fenerbahce"
 ],
+"football|Ференцварош": [
+"soccer/uefa.europa",
+"622",
+"Ferencvaros"
+],
 "football|Филадельфия Юнион": [
 "soccer/usa.1",
 "10739",
@@ -4898,6 +4928,11 @@
 "soccer/ger.2",
 "6418",
 "1. FC Heidenheim 1846"
+],
+"football|Хайдук": [
+"soccer/uefa.europa.conf",
+"489",
+"Hajduk Split"
 ],
 "football|Халл Сити": [
 "soccer/eng.1",
@@ -4980,14 +5015,24 @@
 "Houston Dynamo FC"
 ],
 "football|ЦСКА": [
-"soccer/rus.1",
-"1963",
-"CSKA Moscow"
+"soccer/uefa.europa.conf",
+"10834",
+"CSKA Sofia"
+],
+"football|Целе": [
+"soccer/uefa.europa",
+"3362",
+"NK Celje"
 ],
 "football|Цинциннати": [
 "soccer/usa.1",
 "18267",
 "FC Cincinnati"
+],
+"football|Црвена звезда": [
+"soccer/uefa.europa.conf",
+"2290",
+"Red Star Belgrade"
 ],
 "football|Чарльтон Атлетик": [
 "soccer/eng.2",
@@ -5188,6 +5233,11 @@
 "soccer/uefa.europa.conf",
 "7922",
 "Jablonec"
+],
+"football|Ягеллония": [
+"soccer/uefa.europa",
+"11505",
+"Jagiellonia Bialystok"
 ],
 "hockey|Айлендерс": [
 "hockey/nhl",
