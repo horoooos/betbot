@@ -7,7 +7,6 @@
  "schedule_day": "2026-11-25",
  "content_slot": "2026-11-25-23",
  "news_seen": [
-  "https://www.sport-express.ru/football/rfpl/news/ovchinnikov-poblagodaril-rotenberga-posle-pobedy-nad-rodinoy-komanda-videla-chto-rukovodstvo-ih-ne-brosaet-2477776/",
   "9class-nazval-svoi-silnyye-storony-v-dota-2",
   "https://www.sport-express.ru/hockey/nhl/news/napadayuschiy-bostona-elias-lindholm-pokazal-tretiy-po-prodolzhitelnosti-pereryv-mezhdu-matchami-s-5-ochkami-v-nhl-2477805/",
   "https://www.sport-express.ru/hockey/nhl/news/forvard-maklin-selebrini-bystree-vseh-v-istorii-san-hose-zabil-80-golov-za-175-matchey-regulyarnogo-chempionata-nhl-2477803/",
@@ -506,9 +505,10 @@
   "https://www.sport-express.ru/football/champions-league/news/pszh-roma-ermoso-vyvel-gostey-vpered-na-5-y-minute-2478996/",
   "https://www.sport-express.ru/football/champions-league/news/slaviya-vilyarreal-schet-i-rezultat-matcha-obschego-etapa-ligi-chempionov-25-noyabrya-2026-2478992/",
   "https://www.sport-express.ru/football/champions-league/news/sabah-barselona-schet-i-rezultat-matcha-ligi-chempionov-25-noyabrya-2026-2478991/",
-  "https://www.sport-express.ru/football/rus_cup/news/rubin-rodina-schet-i-rezultat-matcha-puti-rpl-kubka-rossii-25-noyabrya-2026-2478990/"
+  "https://www.sport-express.ru/football/rus_cup/news/rubin-rodina-schet-i-rezultat-matcha-puti-rpl-kubka-rossii-25-noyabrya-2026-2478990/",
+  "https://www.sport-express.ru/hockey/khl/news/maksim-berezkin-kommentariy-po-pobede-lokomotiva-nad-ska-v-matche-khl-2479021/"
  ],
- "news_i": 1,
+ "news_i": 3,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1695,7 +1695,7 @@
  "streak_day": {
   "2026-11-22": 2
  },
- "news_next": "2026-11-26T01:15:40.777528+03:00",
+ "news_next": "2026-11-26T01:44:19.966378+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1727,7 +1727,6 @@
  "vk_mode": "photo",
  "dz_err": null,
  "img_used": [
-  "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Andreeva_M._WMQ23_%2853062105200%29.jpg/1280px-Andreeva_M._WMQ23_%2853062105200%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
   "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/63/23.08.2026_FC_Spartak_Moscow_vs._FC_Zenit_Saint_Petersburg554.jpg/1280px-23.08.2026_FC_Spartak_Moscow_vs._FC_Zenit_Saint_Petersburg554.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
   "https://images.cybersport.ru/images/as-is/plain/8f/8f98ae49-bd14-4f5b-bc3f-da8cf3171187.jpg",
   "https://upload.wikimedia.org/wikipedia/commons/a/af/Dinamo-Loc2015_%289%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
@@ -2026,7 +2025,8 @@
   "https://images.cybersport.ru/images/as-is/plain/4e/4e9baaa1-aae3-4d2b-8e72-ac39b053ead6.jpg",
   "https://upload.wikimedia.org/wikipedia/commons/7/73/Maksim_Mukhin_2020.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
   "https://images.cybersport.ru/images/as-is/plain/8c/8c7bd9c8-467d-49dd-8c4b-3a99b7b0b1fe.jpg",
-  "https://upload.wikimedia.org/wikipedia/commons/c/c9/Amkar-Loco_%2810%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+  "https://upload.wikimedia.org/wikipedia/commons/c/c9/Amkar-Loco_%2810%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/LOKOMOTIV_MOSKVA_VS._ZL%C3%8DN_3_-_0_%2822%29.jpg/1280px-LOKOMOTIV_MOSKVA_VS._ZL%C3%8DN_3_-_0_%2822%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
  ],
  "indexnow_day": "2026-11-26",
  "vk_wall_err": null,
@@ -2462,7 +2462,8 @@
   "9525",
   "9538",
   "9552",
-  "9558"
+  "9558",
+  "9563"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -2830,11 +2831,12 @@
   "2026-11-25:новость:8c809cb62dbd110c6eac9501",
   "2026-11-25:новость:bf5c80018810d13d82e4e83a",
   "2026-11-25:новость:7557e53b7b93933f59d5923c",
-  "2026-11-25:новость:1e210f3280a492344d670ec8"
+  "2026-11-25:новость:1e210f3280a492344d670ec8",
+  "2026-11-25:новость:7d24187431d24db3fea7bbc4"
  ],
  "dz_last_delivery": {
-  "source_id": 9558,
-  "message_id": 915,
+  "source_id": 9563,
+  "message_id": 916,
   "kind": "новость"
  },
  "learn_attempt_day": "2026-11-26",
@@ -3036,7 +3038,7 @@
   "quote_matches": 112
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-26T01:13:40.301653+03:00",
+  "last_poll": "2026-11-26T01:16:19.966378+03:00",
   "cursor": "432",
   "posts": [
    {
