@@ -26442,5 +26442,344 @@
   "div": "COL",
   "reason": "no_qualified_real_market",
   "retry_at": 1795570444.711643
+ },
+ "401933738": {
+  "id": "401933738",
+  "div": "USA",
+  "slug": "usa.1",
+  "kickoff": "2026-11-25T06:00:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "detail": "Scheduled",
+  "home": {
+   "id": "191",
+   "name": "San Jose Earthquakes",
+   "short": "San Jose",
+   "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/191.png",
+   "color": "003da6",
+   "alt": "ffffff",
+   "form": "DWDLD",
+   "score": "0",
+   "ru": "Сан-Хосе Эртквейкс"
+  },
+  "away": {
+   "id": "6077",
+   "name": "Houston Dynamo FC",
+   "short": "Houston",
+   "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/6077.png",
+   "color": "ff6b00",
+   "alt": "101820",
+   "form": "LLWDD",
+   "score": "0",
+   "ru": "Хьюстон Динамо"
+  },
+  "odds": {
+   "H": 1.909,
+   "D": 3.6,
+   "A": 3.6,
+   "line": 2.5,
+   "over": 1.69,
+   "under": 2.15,
+   "spread_h": [
+    -0.5,
+    1.87
+   ],
+   "spread_a": [
+    0.5,
+    1.833
+   ]
+  },
+  "venue": "PayPal Park",
+  "clock": "0'",
+  "goals": [],
+  "open": {
+   "D": 0.2555
+  },
+  "top": false,
+  "lam": [
+   1.6072298216835579,
+   1.2850542898629602
+  ],
+  "probs": {
+   "H": 0.44026510835176585,
+   "D": 0.26290690095024083,
+   "A": 0.2968279906979934,
+   "1X": 0.7031720093020064,
+   "12": 0.7370930990497592,
+   "X2": 0.5597348916482342,
+   "BTTS_Y": 0.5875334914421679,
+   "BTTS_N": 0.41246650855783207,
+   "O15": 0.7933367940880279,
+   "U15": 0.20666320591197207,
+   "O25": 0.5522488871444221,
+   "U25": 0.4477511128555778,
+   "O35": 0.3286502803466938,
+   "U35": 0.6713497196533063,
+   "H_O05": 0.7995576794539531,
+   "H_O15": 0.477400804344892,
+   "A_O05": 0.7233644014353053,
+   "A_O15": 0.36787263877093707,
+   "H-1.5": 0.23053657350227977,
+   "A+1.5": 0.7694634264977203,
+   "A-1.5": 0.1309769092930334,
+   "H+1.5": 0.8690230907069664,
+   "H-2.5": 0.09496977523579558,
+   "A-2.5": 0.04431259069054908,
+   "H+2.5": 0.9556874093094506,
+   "A+2.5": 0.9050302247642045,
+   "O45": 0.166972605895442,
+   "U45": 0.833027394104558,
+   "H_O25": 0.2185107358770576,
+   "A_O25": 0.13945953145954085,
+   "H&O15": 0.3603069776051963,
+   "A&O15": 0.23473432608550004,
+   "H&BTTS": 0.22824092033998045,
+   "A&BTTS": 0.16099708070485585,
+   "1X&U35": 0.4702760555349299,
+   "X2&U35": 0.3893711192892078,
+   "BTTS&O25": 0.4638474468242458,
+   "HT_H": 0.3364035074095782,
+   "HT_D": 0.416602204059816,
+   "HT_A": 0.24699428853060565,
+   "HT_O05": 0.7187795249269407,
+   "HT_U05": 0.28122047507305853,
+   "HT_O15": 0.38282283606535666,
+   "HT_U15": 0.6171771639346431
+  },
+  "scores": [
+   [
+    "1:1",
+    0.1236860446179222
+   ],
+   [
+    "2:1",
+    0.09203328677592948
+   ],
+   [
+    "1:0",
+    0.0799581307465695
+   ]
+  ],
+  "main": {
+   "key": "D",
+   "label": "Ничья",
+   "p": 0.2629,
+   "odds": 3.5,
+   "est": false,
+   "stake": 0.5,
+   "strategy": "external_trial",
+   "selection_mode": "external_fallback",
+   "trial_expires_at": null,
+   "probability_origin": "baseline_model",
+   "model_edge": -0.07983,
+   "source_count": 2,
+   "source_refs": [
+    {
+     "author": "/predictors/dyadyadima",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/25-11-2026-san-jose-earthquakes-houston-dynamo",
+     "published_at": "2026-11-24T22:36:00+00:00",
+     "observed_at": "2026-11-24T22:36:44.008237+00:00",
+     "odds": 3.7,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/sergei-sadovskii",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/25-11-2026-san-jose-earthquakes-houston-dynamo",
+     "published_at": "2026-11-24T23:53:00+00:00",
+     "observed_at": "2026-11-25T00:02:44.620046+00:00",
+     "odds": 3.7,
+     "price_kind": "author_recorded"
+    }
+   ]
+  },
+  "bold": {},
+  "value": null,
+  "odds_src": "среднее по букмекерам",
+  "model_w": 0.0,
+  "learned_n": 1540,
+  "stavka_signal": {
+   "status": "baseline_better",
+   "weight": 0.0,
+   "authors": 3,
+   "votes": {
+    "H": 1.0,
+    "D": 2.039545815471086
+   },
+   "source": "https://stavka.tv",
+   "snapshot": "USA|401933738"
+  },
+  "research": {
+   "articles": [],
+   "dossier": {
+    "observed_at": "2026-11-25T01:48:29.097598+00:00",
+    "kickoff": "2026-11-25T03:00:00+00:00",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/summary?event=401933738",
+    "status": "available",
+    "facts": {
+     "last5": {
+      "191": [
+       {
+        "res": "D",
+        "gf": 1,
+        "ga": 1,
+        "opp": "Nashville SC",
+        "home": true,
+        "date": "2026-10-18"
+       },
+       {
+        "res": "L",
+        "gf": 0,
+        "ga": 3,
+        "opp": "FC Dallas",
+        "home": false,
+        "date": "2026-10-25"
+       },
+       {
+        "res": "D",
+        "gf": 2,
+        "ga": 2,
+        "opp": "Colorado Rapids",
+        "home": true,
+        "date": "2026-10-29"
+       },
+       {
+        "res": "W",
+        "gf": 2,
+        "ga": 1,
+        "opp": "Real Salt Lake",
+        "home": true,
+        "date": "2026-10-31"
+       },
+       {
+        "res": "L",
+        "gf": 1,
+        "ga": 3,
+        "opp": "Minnesota United FC",
+        "home": false,
+        "date": "2026-11-08"
+       }
+      ],
+      "6077": [
+       {
+        "res": "D",
+        "gf": 2,
+        "ga": 2,
+        "opp": "FC Dallas",
+        "home": true,
+        "date": "2026-10-18"
+       },
+       {
+        "res": "D",
+        "gf": 0,
+        "ga": 0,
+        "opp": "Minnesota United FC",
+        "home": true,
+        "date": "2026-10-25"
+       },
+       {
+        "res": "W",
+        "gf": 1,
+        "ga": 0,
+        "opp": "Seattle Sounders FC",
+        "home": false,
+        "date": "2026-10-29"
+       },
+       {
+        "res": "L",
+        "gf": 1,
+        "ga": 3,
+        "opp": "Portland Timbers",
+        "home": false,
+        "date": "2026-11-02"
+       },
+       {
+        "res": "L",
+        "gf": 0,
+        "ga": 1,
+        "opp": "St. Louis CITY SC",
+        "home": true,
+        "date": "2026-11-08"
+       }
+      ]
+     },
+     "h2h": [
+      {
+       "date": "2026-09-13",
+       "home_id": "191",
+       "hs": "1",
+       "as": "0"
+      },
+      {
+       "date": "2026-08-30",
+       "home_id": "6077",
+       "hs": "0",
+       "as": "0"
+      },
+      {
+       "date": "2025-08-24",
+       "home_id": "6077",
+       "hs": "1",
+       "as": "2"
+      },
+      {
+       "date": "2025-05-25",
+       "home_id": "191",
+       "hs": "3",
+       "as": "3"
+      },
+      {
+       "date": "2024-07-18",
+       "home_id": "191",
+       "hs": "0",
+       "as": "1"
+      }
+     ],
+     "leaders": {
+      "191": [
+       [
+        "Goals",
+        "Preston Judd",
+        "Matches: 32, Goals: 17"
+       ],
+       [
+        "Assists",
+        "Niko Tsakiris",
+        "Matches: 23, Assists: 13"
+       ],
+       [
+        "Total Shots",
+        "Preston Judd",
+        "87"
+       ]
+      ],
+      "6077": [
+       [
+        "Goals",
+        "Guilherme Augusto",
+        "Matches: 31, Goals: 16"
+       ],
+       [
+        "Assists",
+        "Guilherme Augusto",
+        "Matches: 31, Assists: 10"
+       ],
+       [
+        "Total Shots",
+        "Mateusz Bogusz",
+        "97"
+       ]
+      ]
+     },
+     "venue": "PayPal Park",
+     "city": "San Jose, California"
+    }
+   }
+  },
+  "extra": null,
+  "msg_id": 9437,
+  "btn": 4
  }
 }

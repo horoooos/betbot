@@ -1563,7 +1563,7 @@
  "value_day": "2026-11-24",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-24",
- "site_stamp": "1540|9436|2026-11-25 04|6|66e22d8a57766278",
+ "site_stamp": "1540|9440|2026-11-25 04|6|393e32280bc76408",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1720,7 +1720,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 9436,
+ "dz_last": 9440,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2978,7 +2978,7 @@
   "quote_matches": 87
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-25T04:56:04.855401+03:00",
+  "last_poll": "2026-11-25T04:58:04.213361+03:00",
   "cursor": "403",
   "posts": [
    {
@@ -5302,6 +5302,38 @@
    "odds": 1.48,
    "edge": -0.07278,
    "estimated": true
+  },
+  "football|USA|401933738": {
+   "reason": "published",
+   "checked_at": "2026-11-25T01:58:35.034776+00:00",
+   "kickoff": "2026-11-25T06:00:00+03:00",
+   "sport": "football",
+   "id": "401933738",
+   "home": "Сан-Хосе Эртквейкс",
+   "away": "Хьюстон Динамо",
+   "market": "Ничья",
+   "strategy": "external_trial",
+   "source_count": 2,
+   "probability": 0.2629,
+   "odds": 3.5,
+   "edge": -0.07985,
+   "estimated": false
+  },
+  "basketball|NBA|401909316": {
+   "reason": "published",
+   "checked_at": "2026-11-25T01:58:45.671136+00:00",
+   "kickoff": "2026-11-25T06:00:00+03:00",
+   "sport": "basketball",
+   "id": "401909316",
+   "home": "Денвер Наггетс",
+   "away": "Даллас Маверикс",
+   "market": "П2 (с ОТ)",
+   "strategy": "external_trial",
+   "source_count": 9,
+   "probability": 0.2394,
+   "odds": 3.41,
+   "edge": -0.18365,
+   "estimated": false
   }
  },
  "source_trial": {
@@ -10809,6 +10841,155 @@
        "published_at": "2026-11-24T22:43:00+00:00",
        "observed_at": "2026-11-24T22:56:44.466596+00:00",
        "odds": 1.95,
+       "price_kind": "author_recorded"
+      }
+     ]
+    }
+   },
+   "football|USA|401933738": {
+    "status": "open",
+    "id": "401933738",
+    "sport": "football",
+    "div": "USA",
+    "kickoff": "2026-11-25T06:00:00+03:00",
+    "published_at": "2026-11-25T01:58:31.576532+00:00",
+    "msg_id": 9437,
+    "tip": {
+     "key": "D",
+     "label": "Ничья",
+     "p": 0.2629,
+     "odds": 3.5,
+     "est": false,
+     "stake": 0.5,
+     "strategy": "external_trial",
+     "selection_mode": "external_fallback",
+     "trial_expires_at": null,
+     "probability_origin": "baseline_model",
+     "model_edge": -0.07983,
+     "source_count": 2,
+     "source_refs": [
+      {
+       "author": "/predictors/dyadyadima",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/25-11-2026-san-jose-earthquakes-houston-dynamo",
+       "published_at": "2026-11-24T22:36:00+00:00",
+       "observed_at": "2026-11-24T22:36:44.008237+00:00",
+       "odds": 3.7,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/sergei-sadovskii",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/25-11-2026-san-jose-earthquakes-houston-dynamo",
+       "published_at": "2026-11-24T23:53:00+00:00",
+       "observed_at": "2026-11-25T00:02:44.620046+00:00",
+       "odds": 3.7,
+       "price_kind": "author_recorded"
+      }
+     ]
+    }
+   },
+   "basketball|NBA|401909316": {
+    "status": "open",
+    "id": "401909316",
+    "sport": "basketball",
+    "div": "NBA",
+    "kickoff": "2026-11-25T06:00:00+03:00",
+    "published_at": "2026-11-25T01:58:41.957383+00:00",
+    "msg_id": 9439,
+    "tip": {
+     "key": "BB_ML_A",
+     "label": "П2 (с ОТ)",
+     "p": 0.2394,
+     "odds": 3.41,
+     "est": false,
+     "stake": 0.5,
+     "strategy": "external_trial",
+     "selection_mode": "external_fallback",
+     "trial_expires_at": null,
+     "probability_origin": "baseline_model",
+     "model_edge": -0.18375,
+     "source_count": 9,
+     "source_refs": [
+      {
+       "author": "/predictors/mesok-lenivyi",
+       "provider": null,
+       "source": "https://stavka.tv/matches/basketball/25-11-2026-denver-nuggets-dallas-mavericks",
+       "published_at": "2026-11-24T10:07:00+00:00",
+       "observed_at": "2026-11-24T10:18:50.557472+00:00",
+       "odds": 3.52,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/nenastradamus-zatovanga",
+       "provider": null,
+       "source": "https://stavka.tv/matches/basketball/25-11-2026-denver-nuggets-dallas-mavericks",
+       "published_at": "2026-11-24T10:35:00+00:00",
+       "observed_at": "2026-11-24T10:40:50.726724+00:00",
+       "odds": 3.52,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/sergei-bystrov-5",
+       "provider": null,
+       "source": "https://stavka.tv/matches/basketball/25-11-2026-denver-nuggets-dallas-mavericks",
+       "published_at": "2026-11-24T15:39:00+00:00",
+       "observed_at": "2026-11-24T15:55:47.061402+00:00",
+       "odds": 3.52,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/yanis-bananis",
+       "provider": null,
+       "source": "https://stavka.tv/matches/basketball/25-11-2026-denver-nuggets-dallas-mavericks",
+       "published_at": "2026-11-24T16:32:00+00:00",
+       "observed_at": "2026-11-24T16:35:47.368074+00:00",
+       "odds": 3.65,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/yan-oblak",
+       "provider": null,
+       "source": "https://stavka.tv/matches/basketball/25-11-2026-denver-nuggets-dallas-mavericks",
+       "published_at": "2026-11-24T17:07:00+00:00",
+       "observed_at": "2026-11-24T17:17:47.009152+00:00",
+       "odds": 3.65,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/sergey-ivanov-103",
+       "provider": null,
+       "source": "https://stavka.tv/matches/basketball/25-11-2026-denver-nuggets-dallas-mavericks",
+       "published_at": "2026-11-24T17:49:00+00:00",
+       "observed_at": "2026-11-24T17:59:47.251652+00:00",
+       "odds": 3.63,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/sivan2",
+       "provider": null,
+       "source": "https://stavka.tv/matches/basketball/25-11-2026-denver-nuggets-dallas-mavericks",
+       "published_at": "2026-11-24T17:50:00+00:00",
+       "observed_at": "2026-11-24T17:59:47.251652+00:00",
+       "odds": 3.63,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/dima-osipov-6",
+       "provider": null,
+       "source": "https://stavka.tv/matches/basketball/25-11-2026-denver-nuggets-dallas-mavericks",
+       "published_at": "2026-11-24T22:10:00+00:00",
+       "observed_at": "2026-11-24T22:36:44.008237+00:00",
+       "odds": 3.71,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/tairon-buker",
+       "provider": null,
+       "source": "https://stavka.tv/matches/basketball/25-11-2026-denver-nuggets-dallas-mavericks",
+       "published_at": "2026-11-24T22:17:00+00:00",
+       "observed_at": "2026-11-24T22:36:44.008237+00:00",
+       "odds": 3.76,
        "price_kind": "author_recorded"
       }
      ]
