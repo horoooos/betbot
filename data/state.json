@@ -7,10 +7,6 @@
  "schedule_day": "2026-11-25",
  "content_slot": "2026-11-25-16",
  "news_seen": [
-  "https://www.sport-express.ru/hockey/nhl/news/neshvill-pittsburg-andrey-kuzmenko-zabil-1-y-gol-v-sezone-nhl-video-shayby-22-noyabrya-2026-2477488/",
-  "https://www.sport-express.ru/hockey/nhl/news/san-hose-sietl-schet-i-rezultat-matcha-nhl-22-noyabrya-2026-2477530/",
-  "https://www.sport-express.ru/hockey/nhl/news/vankuver-minnesota-schet-i-rezultat-matcha-nhl-22-noyabrya-2026-2477533/",
-  "https://www.sport-express.ru/hockey/nhl/news/luchshie-snaypery-nhl-22-noyabrya-2026-top-10-regulyarnogo-chempionata-lidery-po-golam-drayzaytl-gote-kaprizov-2477535/",
   "https://www.sport-express.ru/hockey/nhl/news/kirill-kaprizov-povtoril-rekord-minnesoty-po-prodolzhitelnosti-rezultativnoy-serii-v-nhl-2477538/",
   "https://www.sport-express.ru/hockey/nhl/news/luchshie-bombardiry-nhl-22-noyabrya-2026-top-10-regulyarnogo-chempionata-lidery-po-golam-makdevid-drayzaytl-kaprizov-2477541/",
   "https://www.sport-express.ru/football/foreign/news/eks-igrok-zenita-paredes-poteryal-soznanie-vo-vremya-intervyu-posle-pobedy-v-finale-yuzhnoamerikanskogo-kubka-2477552/",
@@ -506,9 +502,13 @@
   "https://www.sport-express.ru/tennis/wta/news/svischev-nazval-bezumiem-slova-svitolinoy-zayavivshey-o-provokacii-v-rechi-andreevoy-2478814/",
   "https://www.sport-express.ru/tennis/grand-slam/news/nishesh-basavareddi-i-riz-brantmayer-poluchili-wild-card-na-turnir-australian-open-v-sezone-2027-goda-2478766/",
   "https://www.sport-express.ru/tennis/wta/news/filippinskaya-tennisistka-aleksandra-eala-sygraet-na-turnire-wta-500-v-abu-dabi-v-sezone-2027-goda-2478762/",
-  "ninjas-in-pyjamas-okazalis-silneye-team-liquid-i-vyshli-vo-vtoruyu-stadiyu-pgl"
+  "ninjas-in-pyjamas-okazalis-silneye-team-liquid-i-vyshli-vo-vtoruyu-stadiyu-pgl",
+  "https://www.sport-express.ru/football/england/news/18-letniy-uilyams-barnett-prodlil-kontrakt-s-tottenhemom-do-2031-goda-2478836/",
+  "https://www.sport-express.ru/football/england/news/vice-chempion-evropy-sterling-poluchil-god-uslovno-za-opasnuyu-ezdu-v-chas-pik-i-lishilsya-prav-na-dva-goda-2478832/",
+  "https://www.sport-express.ru/football/rus_cup/news/petrushin-ne-somnevaetsya-v-uverennoy-pobede-dinamo-nad-fakelom-2478829/",
+  "https://www.sport-express.ru/football/rfpl/news/gadzhiev-esli-budem-kachestvenno-gotovit-svoih-futbolistov-to-nikakie-limity-nam-ne-strashny-2478827/"
  ],
- "news_i": 0,
+ "news_i": 1,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1695,7 +1695,7 @@
  "streak_day": {
   "2026-11-22": 2
  },
- "news_next": "2026-11-25T16:23:18.888768+03:00",
+ "news_next": "2026-11-25T16:53:19.356956+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1727,7 +1727,6 @@
  "vk_mode": "photo",
  "dz_err": null,
  "img_used": [
-  "https://images.cybersport.ru/images/as-is/plain/67/6705775c-a60d-44f3-930b-7ece288fef2b.jpg",
   "https://ss.sport-express.ru/userfiles/materials/224/2243088/1180x665.jpg",
   "https://upload.wikimedia.org/wikipedia/commons/1/17/1st_meeting_of_the_youth_military-patriotic_movement_%C2%ABYunarmiya%C2%BB_04.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
   "https://ss.sport-express.ru/userfiles/materials/224/2243135/1180x665.jpg",
@@ -2026,7 +2025,8 @@
   "https://ss.sport-express.ru/userfiles/materials/224/2246722/1180x665.jpg",
   "https://images.cybersport.ru/images/as-is/plain/b3/b321fbe9-dcf1-4b56-908d-9e17d6213b01.jpg",
   "https://upload.wikimedia.org/wikipedia/commons/d/d7/KL_2018_%284%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-  "https://images.cybersport.ru/images/as-is/plain/71/719bf629-0359-47ae-b436-9baa3a95b248.jpg"
+  "https://images.cybersport.ru/images/as-is/plain/71/719bf629-0359-47ae-b436-9baa3a95b248.jpg",
+  "https://upload.wikimedia.org/wikipedia/commons/9/9a/GGadzhiev.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
  ],
  "indexnow_day": "2026-11-25",
  "vk_wall_err": null,
@@ -2445,7 +2445,8 @@
   "9476",
   "9478",
   "9481",
-  "9483"
+  "9483",
+  "9486"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -2796,11 +2797,12 @@
   "2026-11-25:новость:db244ebccf742b050e76a0af",
   "2026-11-25:новость:2607ea8d5cf61498c1a283e7",
   "2026-11-25:новость:a3d59cf0fb0228efce5b0833",
-  "2026-11-25:новость:607a1e578cc41bad492b2dbe"
+  "2026-11-25:новость:607a1e578cc41bad492b2dbe",
+  "2026-11-25:новость:fb4347ab8a97374c73fe34a9"
  ],
  "dz_last_delivery": {
-  "source_id": 9483,
-  "message_id": 898,
+  "source_id": 9486,
+  "message_id": 899,
   "kind": "новость"
  },
  "learn_attempt_day": "2026-11-25",
@@ -3003,7 +3005,7 @@
   "quote_matches": 101
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-25T16:22:19.483949+03:00",
+  "last_poll": "2026-11-25T16:24:19.356956+03:00",
   "cursor": "414",
   "posts": [
    {
