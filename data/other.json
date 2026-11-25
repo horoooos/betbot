@@ -5287,7 +5287,7 @@
   "kickoff": "2026-11-25T21:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "void",
   "detail": "Wed, November 25th at 1:00 PM EST",
   "home": {
    "id": "1374",
@@ -5571,7 +5571,7 @@
   "sport": "tennis",
   "div": "WTA",
   "reason": "no_qualified_real_market",
-  "retry_at": 1795632628.403637
+  "retry_at": 1795633228.691082
  },
  "WTA|186838": {
   "status": "waiting_data",
@@ -5579,6 +5579,6 @@
   "sport": "tennis",
   "div": "WTA",
   "reason": "no_real_odds",
-  "retry_at": 1795632628.403637
+  "retry_at": 1795633228.691082
  }
 }

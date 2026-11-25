@@ -1563,7 +1563,7 @@
  "value_day": "2026-11-25",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-25",
- "site_stamp": "1548|9516|2026-11-25 21|6|d89a06f8eca7aedc",
+ "site_stamp": "1548|9517|2026-11-25 21|6|19a8fbb48844bb27",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1721,7 +1721,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 9516,
+ "dz_last": 9517,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2973,35 +2973,35 @@
     "weight": 0.0,
     "settled_matches": 57,
     "required_matches": 100,
-    "trained_at": "2026-11-25T05:36:32.082609+00:00"
+    "trained_at": "2026-11-25T18:50:28.691082+00:00"
    },
    "basketball": {
     "status": "collecting",
     "weight": 0.0,
-    "settled_matches": 66,
+    "settled_matches": 67,
     "required_matches": 100,
-    "trained_at": "2026-11-25T05:36:32.082609+00:00"
+    "trained_at": "2026-11-25T18:50:28.691082+00:00"
    },
    "tennis": {
     "status": "collecting",
     "weight": 0.0,
     "settled_matches": 7,
     "required_matches": 100,
-    "trained_at": "2026-11-25T05:36:32.082609+00:00"
+    "trained_at": "2026-11-25T18:50:28.691082+00:00"
    },
    "esports:CS2": {
     "status": "collecting",
     "weight": 0.0,
     "settled_matches": 0,
     "required_matches": 100,
-    "trained_at": "2026-11-25T05:36:32.082609+00:00"
+    "trained_at": "2026-11-25T18:50:28.691082+00:00"
    },
    "esports:DOTA": {
     "status": "collecting",
     "weight": 0.0,
     "settled_matches": 0,
     "required_matches": 100,
-    "trained_at": "2026-11-25T05:36:32.082609+00:00"
+    "trained_at": "2026-11-25T18:50:28.691082+00:00"
    }
   },
   "source": {
@@ -3027,7 +3027,7 @@
   "quote_matches": 106
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-25T21:48:28.354132+03:00",
+  "last_poll": "2026-11-25T21:50:28.691082+03:00",
   "cursor": "426",
   "posts": [
    {
@@ -3671,7 +3671,7 @@
    "186826": "post",
    "186833": "pre",
    "186840": "pre",
-   "186839": "in",
+   "186839": "post",
    "186838": "pre",
    "186837": "pre",
    "186836": "pre",
@@ -5761,7 +5761,7 @@
   },
   "tennis|WTA|186837": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-25T18:40:42.772011+00:00",
+   "checked_at": "2026-11-25T18:50:43.975211+00:00",
    "kickoff": "2026-11-25T22:30:00+03:00",
    "sport": "tennis",
    "id": "186837",
@@ -5776,7 +5776,7 @@
   },
   "tennis|WTA|186838": {
    "reason": "no_real_odds",
-   "checked_at": "2026-11-25T18:40:44.729443+00:00",
+   "checked_at": "2026-11-25T18:50:45.609051+00:00",
    "kickoff": "2026-11-25T22:30:00+03:00",
    "sport": "tennis",
    "id": "186838",
