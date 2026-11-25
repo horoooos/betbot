@@ -1,145 +1,5 @@
 [
 {
-"sport": "football",
-"id": "401934688",
-"league": "Колумбия · Примера A",
-"kickoff": "2026-11-25T02:20:00+03:00",
-"home": "Мильонариос",
-"away": "Atlético Bucaramanga",
-"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/5484.png",
-"al": "https://a.espncdn.com/i/teamlogos/soccer/500/6137.png",
-"hid": "5484",
-"aid": "6137",
-"bb": "https://betboom.ru/search?query=%D0%9C%D0%B8%D0%BB%D1%8C%D0%BE%D0%BD%D0%B0%D1%80%D0%B8%D0%BE%D1%81&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
-"path": "soccer/col.1",
-"url": "live.html?s=football&p=soccer%2Fcol.1&e=401934688&h=%D0%9C%D0%B8%D0%BB%D1%8C%D0%BE%D0%BD%D0%B0%D1%80%D0%B8%D0%BE%D1%81&a=Atl%C3%A9tico+Bucaramanga",
-"participants": [
-[
-"Мильонариос",
-"Millonarios"
-],
-[
-"Atlético Bucaramanga",
-"Atlético Bucaramanga"
-]
-],
-"div": "COL",
-"state": "post",
-"bo": null,
-"prediction": "predictions/2026-11-25-milonarios-atl-tico-bucaramanga-401934688.html",
-"hs": "4",
-"as": "1",
-"tip": "Ничья · 3.85",
-"top": false,
-"bot": {
-"main": {
-"label": "Ничья",
-"p": 0.249,
-"odds": 3.85,
-"est": false
-},
-"bold": null,
-"markets": [
-[
-"П1",
-0.604,
-1.526
-],
-[
-"Ничья",
-0.249,
-3.85
-],
-[
-"П2",
-0.147,
-6.0
-],
-[
-"1X",
-0.853,
-null
-],
-[
-"X2",
-0.396,
-null
-],
-[
-"ТБ 1.5",
-0.716,
-null
-],
-[
-"ТБ 2.5",
-0.449,
-2.1
-],
-[
-"ТМ 2.5",
-0.551,
-1.69
-],
-[
-"ТБ 3.5",
-0.237,
-null
-],
-[
-"Обе забьют — да",
-0.438,
-null
-],
-[
-"Обе забьют — нет",
-0.562,
-null
-],
-[
-"ИТ1 больше 1.5",
-0.518,
-null
-],
-[
-"ИТ2 больше 1.5",
-0.169,
-null
-],
-[
-"Ф1 (−1.5)",
-0.35,
-null
-],
-[
-"Ф2 (+1.5)",
-0.65,
-null
-]
-],
-"bar": [
-0.6038814269882581,
-0.24948279940286036,
-0.14663577360888186
-],
-"center": "Ожидаемые голы (xG) 1.7 : 0.7",
-"scores": [
-[
-"1:0",
-0.138
-],
-[
-"2:0",
-0.127
-],
-[
-"1:1",
-0.117
-]
-]
-},
-"lt": null
-},
-{
 "sport": "basketball",
 "id": "401909314",
 "league": "США · NBA",
@@ -268,8 +128,8 @@ null
 "state": "in",
 "bo": null,
 "prediction": "",
-"hs": "103",
-"as": "116",
+"hs": "104",
+"as": "117",
 "tip": "",
 "top": false,
 "bot": null,
@@ -617,8 +477,8 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-25-denver-naggets-dallas-maveriks-401909316.html",
-"hs": "5",
-"as": "0",
+"hs": "7",
+"as": "9",
 "tip": "П2 (с ОТ) · 3.41",
 "top": false,
 "bot": {
