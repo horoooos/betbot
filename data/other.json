@@ -5234,25 +5234,25 @@
   "kickoff": "2026-11-25T04:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Tue, November 24th at 8:00 PM EST",
   "clock": "0:00",
   "period": 0,
   "home": {
+   "color": "00205b",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/edm.png",
    "id": "6",
    "name": "Edmonton Oilers",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/edm.png",
-   "color": "00205b",
    "score": "0",
    "record": "17-5-4",
    "periods": [],
    "ru": "Эдмонтон"
   },
   "away": {
+   "color": "344043",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/vgk.png",
    "id": "37",
    "name": "Vegas Golden Knights",
-   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/vgk.png",
-   "color": "344043",
    "score": "0",
    "record": "14-6-5",
    "periods": [],
@@ -5783,7 +5783,9 @@
   "btn": 4,
   "close": {
    "HK_ML_H": 0.4782
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null
  },
  "NBA|401909315": {
   "status": "waiting_data",
