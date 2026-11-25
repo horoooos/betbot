@@ -2801,40 +2801,40 @@
   "external_sources": {
    "providers": {
     "legalbet": {
-     "at": "2026-11-25T00:56:04.641933+00:00",
+     "at": "2026-11-25T01:28:04.386401+00:00",
      "status": "ok",
      "discovered": 1,
      "pages": 1,
      "opinions": 1,
      "mapped": 0,
-     "articles_available": 6,
+     "articles_available": 4,
      "next_offset": 1,
      "contexts": 1
     },
     "livesport": {
-     "at": "2026-11-25T00:56:04.641933+00:00",
+     "at": "2026-11-25T01:28:04.386401+00:00",
      "status": "ok",
      "discovered": 20,
      "pages": 6,
      "opinions": 4,
      "mapped": 2,
      "articles_available": 23,
-     "next_offset": 21,
-     "contexts": 6
+     "next_offset": 7,
+     "contexts": 2
     },
     "metaratings": {
-     "at": "2026-11-25T00:56:04.641933+00:00",
+     "at": "2026-11-25T01:28:04.386401+00:00",
      "status": "ok",
-     "discovered": 5,
-     "pages": 5,
-     "opinions": 20,
+     "discovered": 10,
+     "pages": 6,
+     "opinions": 24,
      "mapped": 2,
      "articles_available": 39,
-     "next_offset": 9,
-     "contexts": 5
+     "next_offset": 15,
+     "contexts": 6
     },
     "rb": {
-     "at": "2026-11-25T00:56:04.641933+00:00",
+     "at": "2026-11-25T01:28:04.386401+00:00",
      "status": "ok",
      "discovered": 2,
      "pages": 2,
@@ -2845,15 +2845,15 @@
      "contexts": 2
     },
     "vseprosport": {
-     "at": "2026-11-25T00:56:04.641933+00:00",
+     "at": "2026-11-25T01:28:04.386401+00:00",
      "status": "ok",
      "discovered": 7,
-     "pages": 5,
+     "pages": 4,
      "opinions": 0,
      "mapped": 0,
      "articles_available": 10,
-     "next_offset": 12,
-     "page_errors": 1,
+     "next_offset": 11,
+     "page_errors": 2,
      "contexts": 2
     }
    },
@@ -2956,10 +2956,10 @@
    }
   },
   "source": {
-   "last_success": "2026-11-25T01:08:04.271219+00:00",
-   "parsed": 345,
-   "added": 52,
-   "discovered_matches": 44,
+   "last_success": "2026-11-25T01:28:04.386401+00:00",
+   "parsed": 352,
+   "added": 56,
+   "discovered_matches": 45,
    "pages": 18,
    "errors": [],
    "parsed_by_sport": {
@@ -2972,13 +2972,13 @@
    }
   },
   "error": null,
-  "tips": 15440,
+  "tips": 15459,
   "snapshots": 328,
-  "unmapped_markets": 23568,
-  "quote_matches": 86
+  "unmapped_markets": 23605,
+  "quote_matches": 87
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-25T04:26:04.295221+03:00",
+  "last_poll": "2026-11-25T04:28:04.386401+03:00",
   "cursor": "403",
   "posts": [
    {
