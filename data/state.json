@@ -1563,7 +1563,7 @@
  "value_day": "2026-11-25",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-25",
- "site_stamp": "1552|9554|2026-11-26 00|6|c91459dc7d10abf7",
+ "site_stamp": "1553|9556|2026-11-26 00|6|27bf5a03ab4f854a",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1721,7 +1721,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 9554,
+ "dz_last": 9556,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2964,15 +2964,15 @@
   "model": {
    "weight": 0.0,
    "status": "baseline_better",
-   "settled_matches": 149,
+   "settled_matches": 150,
    "required_matches": 100,
-   "trained_at": "2026-11-25T21:00:32.893281+00:00",
+   "trained_at": "2026-11-25T21:37:40.012937+00:00",
    "candidate_weight": 0.0,
-   "train_matches": 107,
-   "validation_matches": 41,
-   "validation_from": "2026-11-23T00:00:00+00:00",
-   "validation_logloss": 2.962059777418734,
-   "validation_baseline_logloss": 2.962059777418734
+   "train_matches": 117,
+   "validation_matches": 30,
+   "validation_from": "2026-11-24T00:00:00+00:00",
+   "validation_logloss": 2.7590449513073394,
+   "validation_baseline_logloss": 2.7590449513073394
   },
   "sport_models": {
    "hockey": {
@@ -3034,7 +3034,7 @@
   "quote_matches": 111
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-26T00:35:40.163296+03:00",
+  "last_poll": "2026-11-26T00:37:40.012937+03:00",
   "cursor": "432",
   "posts": [
    {
@@ -3745,7 +3745,7 @@
    "401899534": "post",
    "401899533": "post",
    "401899531": "post",
-   "401880140": "in",
+   "401880140": "post",
    "401880139": "in",
    "401880137": "in",
    "401880138": "in",
@@ -13528,14 +13528,5 @@
     }
    }
   }
- },
- "mod_poll": {
-  "key": "E1|401880140",
-  "id": "401880140",
-  "poll": 9485,
-  "post": 9484,
-  "home": "Болтон Уондерерс",
-  "away": "Вест Бромвич Альбион",
-  "kickoff": "2026-11-25T22:45:00+03:00"
  }
 }
