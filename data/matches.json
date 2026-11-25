@@ -23543,7 +23543,7 @@
   "kickoff": "2026-11-25T22:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Scheduled",
   "home": {
    "id": "3952",
@@ -24313,7 +24313,10 @@
   "btn": 4,
   "close": {
    "U25": 0.5594
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null,
+  "value_hit": null
  },
  "401899531": {
   "status": "waiting_data",

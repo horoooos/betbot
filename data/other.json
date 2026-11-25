@@ -5738,5 +5738,13 @@
   "close": {
    "_": null
   }
+ },
+ "NBA|401909317": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-26T01:00:00+03:00",
+  "sport": "basketball",
+  "div": "NBA",
+  "reason": "no_qualified_real_market",
+  "retry_at": 1795640912.894094
  }
 }

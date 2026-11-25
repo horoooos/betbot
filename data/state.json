@@ -1563,7 +1563,7 @@
  "value_day": "2026-11-25",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-25",
- "site_stamp": "1551|9547|2026-11-25 23|6|96d75a51508d4b8a",
+ "site_stamp": "1552|9548|2026-11-25 23|6|60d3e52db2cc8cc9",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1721,7 +1721,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 9547,
+ "dz_last": 9548,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2962,15 +2962,15 @@
   "model": {
    "weight": 0.0,
    "status": "baseline_better",
-   "settled_matches": 147,
+   "settled_matches": 148,
    "required_matches": 100,
-   "trained_at": "2026-11-25T19:58:33.769053+00:00",
+   "trained_at": "2026-11-25T20:58:32.894094+00:00",
    "candidate_weight": 0.0,
    "train_matches": 107,
-   "validation_matches": 39,
+   "validation_matches": 40,
    "validation_from": "2026-11-23T00:00:00+00:00",
-   "validation_logloss": 2.9830501430309706,
-   "validation_baseline_logloss": 2.9830501430309706
+   "validation_logloss": 2.9737059808486976,
+   "validation_baseline_logloss": 2.9737059808486976
   },
   "sport_models": {
    "hockey": {
@@ -3032,7 +3032,7 @@
   "quote_matches": 110
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-25T23:56:33.534633+03:00",
+  "last_poll": "2026-11-25T23:58:32.894094+03:00",
   "cursor": "430",
   "posts": [
    {
@@ -3677,7 +3677,7 @@
    "186833": "pre",
    "186840": "pre",
    "186839": "post",
-   "186838": "in",
+   "186838": "post",
    "186837": "in",
    "186836": "pre",
    "186835": "pre",
@@ -3741,7 +3741,7 @@
    "401915293": "post",
    "401899537": "post",
    "401899534": "post",
-   "401899533": "in",
+   "401899533": "post",
    "401899531": "in",
    "401880140": "in",
    "401880139": "in",
@@ -5977,6 +5977,21 @@
    "odds": 2.24,
    "edge": -0.06659,
    "estimated": false
+  },
+  "basketball|NBA|401909317": {
+   "reason": "no_qualified_real_market",
+   "checked_at": "2026-11-25T20:58:52.741772+00:00",
+   "kickoff": "2026-11-26T01:00:00+03:00",
+   "sport": "basketball",
+   "id": "401909317",
+   "home": "Филадельфия Сиксерс",
+   "away": "Майами Хит",
+   "priced_markets": 6,
+   "market": "ТБ 231.5",
+   "probability": 0.6597,
+   "odds": 1.41,
+   "edge": -0.06982,
+   "estimated": true
   }
  },
  "source_trial": {
