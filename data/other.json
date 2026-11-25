@@ -5582,11 +5582,162 @@
   "retry_at": 1795633948.503981
  },
  "WTA|186840": {
-  "status": "waiting_data",
-  "kickoff": "2026-11-26T00:00:00+03:00",
-  "sport": "tennis",
+  "id": "186840",
   "div": "WTA",
-  "reason": "no_qualified_real_market",
-  "retry_at": 1795637313.769053
+  "sport": "tennis",
+  "tournament": "IEB+ Argentina Open",
+  "round": "Round 2",
+  "bo5": false,
+  "kickoff": "2026-11-26T00:00:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "detail": "Wed, November 25th at 4:00 PM EST",
+  "home": {
+   "id": "6500",
+   "name": "Solana Sierra",
+   "logo": [
+    "https://a.espncdn.com/i/headshots/tennis/players/full/6500.png",
+    "https://a.espncdn.com/i/teamlogos/countries/500/arg.png"
+   ],
+   "country": "Argentina",
+   "color": "2d6a4f",
+   "winner": false,
+   "sets": [],
+   "set_won": [],
+   "ru": "Солана Сьерра"
+  },
+  "away": {
+   "id": "5299",
+   "name": "Carole Monnet",
+   "logo": [
+    "https://a.espncdn.com/i/headshots/tennis/players/full/5299.png",
+    "https://a.espncdn.com/i/teamlogos/countries/500/fra.png"
+   ],
+   "country": "France",
+   "color": "2d6a4f",
+   "winner": false,
+   "sets": [],
+   "set_won": [],
+   "ru": "Кароль Монне"
+  },
+  "odds": {
+   "H": 1.6,
+   "A": 2.24,
+   "src": "winline",
+   "source_url": "https://stavka.tv/matches/tennis/26-11-2026-sierra-solana-monnet-carole",
+   "observed_at": "2026-11-25T19:56:33.753332+00:00",
+   "price_kind": "public_displayed"
+  },
+  "probs": {
+   "TN_W1": 0.5833333333333334,
+   "TN_W2": 0.41666666666666663,
+   "TN_3S": 0.4937756103028913,
+   "TN_2S": 0.5062243896971087,
+   "TN_S2:0": 0.3088992439599238,
+   "TN_S0:2": 0.1973251457371849,
+   "TN_S2:1": 0.27443408937340946,
+   "TN_S1:2": 0.21934152092948184,
+   "TN_SET1": 0.802674854262815,
+   "TN_SET2": 0.6911007560400761
+  },
+  "labels": {
+   "TN_W1": "Победа: Солана Сьерра",
+   "TN_W2": "Победа: Кароль Монне",
+   "TN_3S": "Будет 3 сета",
+   "TN_2S": "Будет 2 сета",
+   "TN_S2:0": "Счёт по сетам 2:0",
+   "TN_S0:2": "Счёт по сетам 0:2",
+   "TN_S2:1": "Счёт по сетам 2:1",
+   "TN_S1:2": "Счёт по сетам 1:2",
+   "TN_SET1": "Солана Сьерра возьмёт хотя бы сет",
+   "TN_SET2": "Кароль Монне возьмёт хотя бы сет"
+  },
+  "real": {
+   "TN_W1": 1.6,
+   "TN_W2": 2.24
+  },
+  "center": "Линия winline · Эло 1494 : 1642",
+  "bar": [
+   0.5833333333333334,
+   0,
+   0.41666666666666663
+  ],
+  "model": {
+   "elo": [
+    1494.2351841175398,
+    1641.921322520499
+   ],
+   "src": "winline"
+  },
+  "stavka_signal": {
+   "status": "collecting",
+   "weight": 0.0,
+   "authors": 7,
+   "group": "tennis",
+   "snapshot": "WTA|186840",
+   "source": "https://stavka.tv"
+  },
+  "research": {
+   "articles": [],
+   "dossier": null
+  },
+  "main": {
+   "key": "TN_W2",
+   "label": "Победа: Кароль Монне",
+   "p": 0.4167,
+   "odds": 2.24,
+   "est": false,
+   "stake": 0.5,
+   "strategy": "external_trial",
+   "selection_mode": "external_fallback",
+   "trial_expires_at": null,
+   "probability_origin": "baseline_model",
+   "model_edge": -0.06667,
+   "source_count": 4,
+   "source_refs": [
+    {
+     "author": "/predictors/nebuxai",
+     "provider": null,
+     "source": "https://stavka.tv/matches/tennis/26-11-2026-sierra-solana-monnet-carole",
+     "published_at": "2026-11-25T06:25:00+00:00",
+     "observed_at": "2026-11-25T06:42:45.411834+00:00",
+     "odds": 2.17,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/11-22",
+     "provider": null,
+     "source": "https://stavka.tv/matches/tennis/26-11-2026-sierra-solana-monnet-carole",
+     "published_at": "2026-11-25T15:33:00+00:00",
+     "observed_at": "2026-11-25T15:46:19.290418+00:00",
+     "odds": 2.21,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/frenk-gallager",
+     "provider": null,
+     "source": "https://stavka.tv/matches/tennis/26-11-2026-sierra-solana-monnet-carole",
+     "published_at": "2026-11-25T16:33:00+00:00",
+     "observed_at": "2026-11-25T16:52:15.885432+00:00",
+     "odds": 2.21,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/misel-kostyl",
+     "provider": null,
+     "source": "https://stavka.tv/matches/tennis/26-11-2026-sierra-solana-monnet-carole",
+     "published_at": "2026-11-25T19:16:00+00:00",
+     "observed_at": "2026-11-25T19:36:33.324068+00:00",
+     "odds": 2.23,
+     "price_kind": "author_recorded"
+    }
+   ]
+  },
+  "bold": {},
+  "open": {},
+  "top": false,
+  "msg_id": 9541,
+  "btn": 4
  }
 }
