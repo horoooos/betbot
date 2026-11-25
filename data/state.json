@@ -2830,7 +2830,7 @@
   "external_sources": {
    "providers": {
     "legalbet": {
-     "at": "2026-11-25T13:50:18.951928+00:00",
+     "at": "2026-11-25T14:22:19.633144+00:00",
      "status": "ok",
      "discovered": 5,
      "pages": 5,
@@ -2841,29 +2841,29 @@
      "contexts": 5
     },
     "livesport": {
-     "at": "2026-11-25T13:50:18.951928+00:00",
+     "at": "2026-11-25T14:22:19.633144+00:00",
      "status": "ok",
      "discovered": 15,
      "pages": 6,
-     "opinions": 4,
-     "mapped": 3,
+     "opinions": 12,
+     "mapped": 5,
      "articles_available": 26,
-     "next_offset": 15,
+     "next_offset": 6,
      "contexts": 6
     },
     "metaratings": {
-     "at": "2026-11-25T13:50:18.951928+00:00",
+     "at": "2026-11-25T14:22:19.633144+00:00",
      "status": "ok",
      "discovered": 11,
      "pages": 6,
      "opinions": 24,
-     "mapped": 2,
+     "mapped": 4,
      "articles_available": 39,
-     "next_offset": 7,
+     "next_offset": 13,
      "contexts": 6
     },
     "rb": {
-     "at": "2026-11-25T13:50:18.951928+00:00",
+     "at": "2026-11-25T14:22:19.633144+00:00",
      "status": "ok",
      "discovered": 2,
      "pages": 2,
@@ -2874,16 +2874,13 @@
      "contexts": 2
     },
     "vseprosport": {
-     "at": "2026-11-25T13:50:18.951928+00:00",
-     "status": "ok",
-     "discovered": 5,
-     "pages": 3,
+     "at": "2026-11-25T14:22:19.633144+00:00",
+     "status": "markup_changed",
+     "discovered": 0,
+     "pages": 0,
      "opinions": 0,
      "mapped": 0,
-     "articles_available": 10,
-     "next_offset": 9,
-     "page_errors": 2,
-     "contexts": 3
+     "articles_available": 0
     }
    },
    "opinions": 39,
@@ -2985,11 +2982,11 @@
    }
   },
   "source": {
-   "last_success": "2026-11-25T14:02:18.862926+00:00",
-   "parsed": 365,
-   "added": 80,
-   "discovered_matches": 43,
-   "pages": 19,
+   "last_success": "2026-11-25T14:22:19.633144+00:00",
+   "parsed": 367,
+   "added": 96,
+   "discovered_matches": 45,
+   "pages": 20,
    "errors": [],
    "parsed_by_sport": {
     "soccer": 50,
@@ -3001,10 +2998,10 @@
    }
   },
   "error": null,
-  "tips": 16435,
+  "tips": 16470,
   "snapshots": 339,
-  "unmapped_markets": 25077,
-  "quote_matches": 102
+  "unmapped_markets": 25138,
+  "quote_matches": 103
  },
  "vk_rss_audit": {
   "last_poll": "2026-11-25T17:20:18.837837+03:00",
