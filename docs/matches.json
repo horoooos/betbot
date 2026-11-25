@@ -1,252 +1,5 @@
 [
 {
-"sport": "football",
-"id": "401899533",
-"league": "Италия · Серия B",
-"kickoff": "2026-11-25T22:00:00+03:00",
-"home": "Падова",
-"away": "Сампдория",
-"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/3952.png",
-"al": "https://a.espncdn.com/i/teamlogos/soccer/500/2734.png",
-"hid": "3952",
-"aid": "2734",
-"bb": "https://betboom.ru/search?query=%D0%9F%D0%B0%D0%B4%D0%BE%D0%B2%D0%B0&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
-"path": "soccer/ita.2",
-"url": "live.html?s=football&p=soccer%2Fita.2&e=401899533&h=%D0%9F%D0%B0%D0%B4%D0%BE%D0%B2%D0%B0&a=%D0%A1%D0%B0%D0%BC%D0%BF%D0%B4%D0%BE%D1%80%D0%B8%D1%8F",
-"participants": [
-[
-"Падова",
-"Padova"
-],
-[
-"Сампдория",
-"Sampdoria"
-]
-],
-"div": "I2",
-"state": "post",
-"bo": null,
-"prediction": "predictions/2026-11-25-padova-sampdoriya-401899533.html",
-"hs": "1",
-"as": "2",
-"tip": "ТМ 2.5 · 1.69",
-"top": false,
-"bot": {
-"main": {
-"label": "ТМ 2.5",
-"p": 0.552,
-"odds": 1.69,
-"est": false
-},
-"bold": null,
-"markets": [
-[
-"П1",
-0.333,
-3.25
-],
-[
-"Ничья",
-0.292,
-3.1
-],
-[
-"П2",
-0.375,
-2.35
-],
-[
-"1X",
-0.625,
-null
-],
-[
-"X2",
-0.667,
-null
-],
-[
-"ТБ 1.5",
-0.717,
-null
-],
-[
-"ТБ 2.5",
-0.448,
-2.05
-],
-[
-"ТМ 2.5",
-0.552,
-1.714
-],
-[
-"ТБ 3.5",
-0.236,
-null
-],
-[
-"Обе забьют — да",
-0.512,
-null
-],
-[
-"Обе забьют — нет",
-0.488,
-null
-],
-[
-"ИТ1 больше 1.5",
-0.334,
-null
-],
-[
-"ИТ2 больше 1.5",
-0.366,
-null
-],
-[
-"Ф1 (−1.5)",
-0.143,
-null
-],
-[
-"Ф2 (+1.5)",
-0.857,
-null
-]
-],
-"bar": [
-0.3326427629839314,
-0.29232304938368703,
-0.37503418763238155
-],
-"center": "Ожидаемые голы (xG) 1.2 : 1.3",
-"scores": [
-[
-"1:1",
-0.139
-],
-[
-"0:1",
-0.098
-],
-[
-"0:0",
-0.095
-]
-],
-"corners": 10.3,
-"cards": 4.2
-},
-"lt": null
-},
-{
-"sport": "football",
-"id": "401899534",
-"league": "Италия · Серия B",
-"kickoff": "2026-11-25T22:00:00+03:00",
-"home": "Мантова",
-"away": "Ареццо",
-"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/3991.png",
-"al": "https://a.espncdn.com/i/teamlogos/soccer/500/3345.png",
-"hid": "3991",
-"aid": "3345",
-"bb": "https://betboom.ru/search?query=%D0%9C%D0%B0%D0%BD%D1%82%D0%BE%D0%B2%D0%B0&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
-"path": "soccer/ita.2",
-"url": "live.html?s=football&p=soccer%2Fita.2&e=401899534&h=%D0%9C%D0%B0%D0%BD%D1%82%D0%BE%D0%B2%D0%B0&a=%D0%90%D1%80%D0%B5%D1%86%D1%86%D0%BE",
-"participants": [
-[
-"Мантова",
-"Mantova"
-],
-[
-"Ареццо",
-"Arezzo"
-]
-],
-"div": "I2",
-"state": "post",
-"bo": null,
-"prediction": "",
-"hs": "3",
-"as": "0",
-"tip": "",
-"top": false,
-"bot": null,
-"lt": null
-},
-{
-"sport": "football",
-"id": "401899531",
-"league": "Италия · Серия B",
-"kickoff": "2026-11-25T22:00:00+03:00",
-"home": "Пиза",
-"away": "Modena",
-"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/3956.png",
-"al": "https://a.espncdn.com/i/teamlogos/soccer/500/2573.png",
-"hid": "3956",
-"aid": "2573",
-"bb": "https://betboom.ru/search?query=%D0%9F%D0%B8%D0%B7%D0%B0&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
-"path": "soccer/ita.2",
-"url": "live.html?s=football&p=soccer%2Fita.2&e=401899531&h=%D0%9F%D0%B8%D0%B7%D0%B0&a=Modena",
-"participants": [
-[
-"Пиза",
-"Pisa"
-],
-[
-"Modena",
-"Modena"
-]
-],
-"div": "I2",
-"state": "post",
-"bo": null,
-"prediction": "",
-"hs": "1",
-"as": "1",
-"tip": "",
-"top": false,
-"bot": null,
-"lt": null
-},
-{
-"sport": "tennis",
-"id": "186838",
-"league": "Теннис · WTA",
-"kickoff": "2026-11-25T22:00:00+03:00",
-"home": "Алисиа Херреро Линана",
-"away": "Ариана Гирлингс",
-"hl": "https://a.espncdn.com/i/teamlogos/countries/500/esp.png",
-"al": "https://a.espncdn.com/i/teamlogos/countries/500/esp.png",
-"hid": "4629",
-"aid": "14607",
-"bb": "https://betboom.ru/search?query=%D0%9B%D0%B8%D0%BD%D0%B0%D0%BD%D0%B0&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=tennis",
-"path": "tennis/wta",
-"url": "live.html?s=tennis&p=tennis%2Fwta&e=186838&h=%D0%90%D0%BB%D0%B8%D1%81%D0%B8%D0%B0+%D0%A5%D0%B5%D1%80%D1%80%D0%B5%D1%80%D0%BE+%D0%9B%D0%B8%D0%BD%D0%B0%D0%BD%D0%B0&a=%D0%90%D1%80%D0%B8%D0%B0%D0%BD%D0%B0+%D0%93%D0%B8%D1%80%D0%BB%D0%B8%D0%BD%D0%B3%D1%81",
-"participants": [
-[
-"Алисиа Херреро Линана",
-"Alicia Herrero Linana"
-],
-[
-"Ариана Гирлингс",
-"Ariana Geerlings"
-]
-],
-"div": "WTA",
-"state": "post",
-"bo": null,
-"prediction": "",
-"hs": null,
-"as": null,
-"tip": "",
-"top": false,
-"bot": null,
-"lt": null
-},
-{
 "sport": "tennis",
 "id": "186837",
 "league": "Теннис · WTA",
@@ -925,7 +678,7 @@ null
 "bo": null,
 "prediction": "predictions/2026-11-26-filadelfiya-siksers-mayami-hit-401909317.html",
 "hs": "49",
-"as": "43",
+"as": "46",
 "tip": "П2 (с ОТ) · 1.80",
 "top": false,
 "bot": {
@@ -4225,6 +3978,146 @@ null
 "prediction": "",
 "hs": "0",
 "as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "tennis",
+"id": "186832",
+"league": "Теннис · WTA",
+"kickoff": "2026-11-27T08:00:00+03:00",
+"home": "Тбд",
+"away": "Вероника Эрьявец",
+"hl": null,
+"al": "https://a.espncdn.com/i/teamlogos/countries/500/slo.png",
+"hid": "-3",
+"aid": "5878",
+"bb": "https://betboom.ru/search?query=%D0%A2%D0%B1%D0%B4&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=tennis",
+"path": "tennis/wta",
+"url": "live.html?s=tennis&p=tennis%2Fwta&e=186832&h=%D0%A2%D0%B1%D0%B4&a=%D0%92%D0%B5%D1%80%D0%BE%D0%BD%D0%B8%D0%BA%D0%B0+%D0%AD%D1%80%D1%8C%D1%8F%D0%B2%D0%B5%D1%86",
+"participants": [
+[
+"Тбд",
+"TBD"
+],
+[
+"Вероника Эрьявец",
+"Veronika Erjavec"
+]
+],
+"div": "WTA",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": null,
+"as": null,
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "tennis",
+"id": "186831",
+"league": "Теннис · WTA",
+"kickoff": "2026-11-27T08:00:00+03:00",
+"home": "Алисиа Херреро Линана",
+"away": "Хулия Риера",
+"hl": "https://a.espncdn.com/i/teamlogos/countries/500/esp.png",
+"al": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+"hid": "4629",
+"aid": "5749",
+"bb": "https://betboom.ru/search?query=%D0%9B%D0%B8%D0%BD%D0%B0%D0%BD%D0%B0&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=tennis",
+"path": "tennis/wta",
+"url": "live.html?s=tennis&p=tennis%2Fwta&e=186831&h=%D0%90%D0%BB%D0%B8%D1%81%D0%B8%D0%B0+%D0%A5%D0%B5%D1%80%D1%80%D0%B5%D1%80%D0%BE+%D0%9B%D0%B8%D0%BD%D0%B0%D0%BD%D0%B0&a=%D0%A5%D1%83%D0%BB%D0%B8%D1%8F+%D0%A0%D0%B8%D0%B5%D1%80%D0%B0",
+"participants": [
+[
+"Алисиа Херреро Линана",
+"Alicia Herrero Linana"
+],
+[
+"Хулия Риера",
+"Julia Riera"
+]
+],
+"div": "WTA",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": null,
+"as": null,
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "tennis",
+"id": "186830",
+"league": "Теннис · WTA",
+"kickoff": "2026-11-27T08:00:00+03:00",
+"home": "Тбд",
+"away": "Тбд",
+"hl": null,
+"al": null,
+"hid": "-3",
+"aid": "-4",
+"bb": "https://betboom.ru/search?query=%D0%A2%D0%B1%D0%B4&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=tennis",
+"path": "tennis/wta",
+"url": "live.html?s=tennis&p=tennis%2Fwta&e=186830&h=%D0%A2%D0%B1%D0%B4&a=%D0%A2%D0%B1%D0%B4",
+"participants": [
+[
+"Тбд",
+"TBD"
+],
+[
+"Тбд",
+"TBD"
+]
+],
+"div": "WTA",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": null,
+"as": null,
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "tennis",
+"id": "186829",
+"league": "Теннис · WTA",
+"kickoff": "2026-11-27T08:00:00+03:00",
+"home": "Тбд",
+"away": "Тбд",
+"hl": null,
+"al": null,
+"hid": "-3",
+"aid": "-4",
+"bb": "https://betboom.ru/search?query=%D0%A2%D0%B1%D0%B4&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=tennis",
+"path": "tennis/wta",
+"url": "live.html?s=tennis&p=tennis%2Fwta&e=186829&h=%D0%A2%D0%B1%D0%B4&a=%D0%A2%D0%B1%D0%B4",
+"participants": [
+[
+"Тбд",
+"TBD"
+],
+[
+"Тбд",
+"TBD"
+]
+],
+"div": "WTA",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": null,
+"as": null,
 "tip": "",
 "top": false,
 "bot": null,
