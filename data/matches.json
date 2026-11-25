@@ -23996,7 +23996,7 @@
   "sport": "football",
   "div": "I2",
   "reason": "edge_below_minimum",
-  "retry_at": 1795632148.203684
+  "retry_at": 1795632868.789546
  },
  "401899533": {
   "id": "401899533",
@@ -24780,6 +24780,30 @@
   "sport": "football",
   "div": "I2",
   "reason": "no_qualified_real_market",
-  "retry_at": 1795632148.203684
+  "retry_at": 1795632868.789546
+ },
+ "401880140": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-25T22:45:00+03:00",
+  "sport": "football",
+  "div": "E1",
+  "reason": "no_qualified_real_market",
+  "retry_at": 1795632868.789546
+ },
+ "401880139": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-25T22:45:00+03:00",
+  "sport": "football",
+  "div": "E1",
+  "reason": "no_qualified_real_market",
+  "retry_at": 1795632868.789546
+ },
+ "401880137": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-25T22:45:00+03:00",
+  "sport": "football",
+  "div": "E1",
+  "reason": "no_qualified_real_market",
+  "retry_at": 1795632868.789546
  }
 }
