@@ -1562,8 +1562,8 @@
  "streak_posted": 0,
  "value_day": "2026-11-25",
  "repost_done": "2026-11-02-news-strong",
- "table_day": "2026-11-24",
- "site_stamp": "1544|9466|2026-11-25 11|6|e13f68bc6af310d9",
+ "table_day": "2026-11-25",
+ "site_stamp": "1544|9466|2026-11-25 12|6|e13f68bc6af310d9",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1576,7 +1576,7 @@
    "NBA|401909320"
   ]
  },
- "value_check": "2026-11-25-3",
+ "value_check": "2026-11-25-4",
  "express_risk": {
   "msg": 9019,
   "legs": [
@@ -2029,7 +2029,7 @@
  ],
  "indexnow_day": "2026-11-25",
  "vk_wall_err": null,
- "shorts_day": "2026-11-24",
+ "shorts_day": "2026-11-25",
  "shorts_err": {
   "vk": "В VK только новости; ролики с прогнозами и итогами не отправляются",
   "youtube": "YouTube не подключён (нет секретов YT_*)"
@@ -2094,7 +2094,7 @@
  "vk_comment_err": null,
  "vk_fresh_err": "фото стены: попытка 1: VK photos.getWallUploadServer: 9 Flood control",
  "vk_fresh_retry_at": 1794662243.1134844,
- "shorts_retry_day": "2026-11-24",
+ "shorts_retry_day": "2026-11-25",
  "dz_sent_ids": [
   "5731",
   "5735",
@@ -2981,12 +2981,12 @@
   },
   "error": null,
   "tips": 16016,
-  "snapshots": 334,
+  "snapshots": 337,
   "unmapped_markets": 24475,
   "quote_matches": 101
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-25T11:58:45.475904+03:00",
+  "last_poll": "2026-11-25T12:00:48.736313+03:00",
   "cursor": "406",
   "posts": [
    {
