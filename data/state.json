@@ -1563,7 +1563,7 @@
  "value_day": "2026-11-25",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-25",
- "site_stamp": "1548|9522|2026-11-25 22|6|4424ab5d4b4d9a4e",
+ "site_stamp": "1548|9524|2026-11-25 22|6|4424ab5d4b4d9a4e",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1721,7 +1721,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 9522,
+ "dz_last": 9524,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -3029,7 +3029,7 @@
   "quote_matches": 107
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-25T22:06:28.660727+03:00",
+  "last_poll": "2026-11-25T22:08:33.590996+03:00",
   "cursor": "426",
   "posts": [
    {
@@ -3674,7 +3674,7 @@
    "186833": "pre",
    "186840": "pre",
    "186839": "post",
-   "186838": "pre",
+   "186838": "in",
    "186837": "pre",
    "186836": "pre",
    "186835": "pre",
@@ -5839,7 +5839,7 @@
   },
   "football|E1|401880138": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-25T18:58:43.694125+00:00",
+   "checked_at": "2026-11-25T19:08:50.121737+00:00",
    "kickoff": "2026-11-25T23:00:00+03:00",
    "sport": "football",
    "id": "401880138",
@@ -5854,7 +5854,7 @@
   },
   "football|UCL|401915291": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-25T18:58:43.940494+00:00",
+   "checked_at": "2026-11-25T19:08:50.368037+00:00",
    "kickoff": "2026-11-25T23:00:00+03:00",
    "sport": "football",
    "id": "401915291",
@@ -5869,7 +5869,7 @@
   },
   "football|UCL|401915292": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-25T18:58:44.392466+00:00",
+   "checked_at": "2026-11-25T19:08:50.817713+00:00",
    "kickoff": "2026-11-25T23:00:00+03:00",
    "sport": "football",
    "id": "401915292",
@@ -5877,14 +5877,14 @@
    "away": "Ливерпуль",
    "priced_markets": 6,
    "market": "П2 и ТБ 1.5",
-   "probability": 0.5306,
-   "odds": 1.75,
-   "edge": -0.07145,
+   "probability": 0.523,
+   "odds": 1.78,
+   "edge": -0.06906,
    "estimated": true
   },
   "football|UCL|401915376": {
    "reason": "edge_below_minimum",
-   "checked_at": "2026-11-25T18:58:44.845079+00:00",
+   "checked_at": "2026-11-25T19:08:51.274886+00:00",
    "kickoff": "2026-11-25T23:00:00+03:00",
    "sport": "football",
    "id": "401915376",
@@ -5899,7 +5899,7 @@
   },
   "football|UCL|401915377": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-25T18:58:45.295789+00:00",
+   "checked_at": "2026-11-25T19:08:51.725817+00:00",
    "kickoff": "2026-11-25T23:00:00+03:00",
    "sport": "football",
    "id": "401915377",
@@ -5907,14 +5907,14 @@
    "away": "Бавария",
    "priced_markets": 6,
    "market": "П2 и ТБ 1.5",
-   "probability": 0.4833,
+   "probability": 0.4847,
    "odds": 1.92,
-   "edge": -0.07206,
+   "edge": -0.06938,
    "estimated": true
   },
   "football|UCL|401915374": {
    "reason": "edge_below_minimum",
-   "checked_at": "2026-11-25T18:58:45.747661+00:00",
+   "checked_at": "2026-11-25T19:08:52.179710+00:00",
    "kickoff": "2026-11-25T23:00:00+03:00",
    "sport": "football",
    "id": "401915374",
@@ -5922,14 +5922,14 @@
    "away": "Рома",
    "priced_markets": 7,
    "market": "П1",
-   "probability": 0.639,
+   "probability": 0.6388,
    "odds": 1.5,
-   "edge": -0.0415,
+   "edge": -0.0418,
    "estimated": false
   },
   "football|UCL|401915375": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-25T18:58:45.989468+00:00",
+   "checked_at": "2026-11-25T19:08:52.420805+00:00",
    "kickoff": "2026-11-25T23:00:00+03:00",
    "sport": "football",
    "id": "401915375",
@@ -5937,14 +5937,14 @@
    "away": "Фенербахче",
    "priced_markets": 6,
    "market": "Обе забьют — да",
-   "probability": 0.5725,
-   "odds": 1.62,
-   "edge": -0.07255,
+   "probability": 0.5693,
+   "odds": 1.63,
+   "edge": -0.07204,
    "estimated": true
   },
   "football|UCL|401915373": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-25T18:58:46.437259+00:00",
+   "checked_at": "2026-11-25T19:08:52.866423+00:00",
    "kickoff": "2026-11-25T23:00:00+03:00",
    "sport": "football",
    "id": "401915373",
