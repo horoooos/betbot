@@ -1590,7 +1590,7 @@
  "value_day": "2026-11-24",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-24",
- "site_stamp": "1542|9451|2026-11-25 08|6|6d05ac028ae590f3",
+ "site_stamp": "1543|9451|2026-11-25 08|6|dcade50493c6495b",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -2935,15 +2935,15 @@
   "model": {
    "weight": 0.0,
    "status": "baseline_better",
-   "settled_matches": 139,
+   "settled_matches": 140,
    "required_matches": 100,
-   "trained_at": "2026-11-25T01:16:04.103869+00:00",
+   "trained_at": "2026-11-25T05:26:32.918242+00:00",
    "candidate_weight": 0.0,
    "train_matches": 107,
-   "validation_matches": 31,
+   "validation_matches": 32,
    "validation_from": "2026-11-23T00:00:00+00:00",
-   "validation_logloss": 3.04605345393609,
-   "validation_baseline_logloss": 3.04605345393609
+   "validation_logloss": 3.0680780791200806,
+   "validation_baseline_logloss": 3.0680780791200806
   },
   "sport_models": {
    "hockey": {
@@ -3005,7 +3005,7 @@
   "quote_matches": 97
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-25T08:24:32.603612+03:00",
+  "last_poll": "2026-11-25T08:26:32.918242+03:00",
   "cursor": "403",
   "posts": [
    {
@@ -3702,7 +3702,7 @@
    "401841335": "post",
    "401934688": "post",
    "401934706": "post",
-   "401933738": "in",
+   "401933738": "post",
    "401877527": "pre",
    "401877528": "pre",
    "401877546": "pre",
