@@ -2980,7 +2980,7 @@
   "quote_matches": 100
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-25T09:56:45.479090+03:00",
+  "last_poll": "2026-11-25T09:58:45.461225+03:00",
   "cursor": "403",
   "posts": [
    {
@@ -3688,7 +3688,6 @@
    "401915378": "pre",
    "401915293": "pre",
    "401899537": "pre",
-   "1816914": "in",
    "1816916": "pre",
    "1816915": "pre",
    "1816918": "pre",
@@ -5388,6 +5387,36 @@
    "probability": 0.525,
    "odds": 1.77,
    "edge": -0.07075,
+   "estimated": true
+  },
+  "esports|CS2|1816918": {
+   "reason": "no_real_odds",
+   "checked_at": "2026-11-25T06:59:06.665065+00:00",
+   "kickoff": "2026-11-25T11:00:00+03:00",
+   "sport": "esports",
+   "id": "1816918",
+   "home": "9z",
+   "away": "DENDELE CS",
+   "priced_markets": 0,
+   "market": "9z возьмёт хотя бы карту",
+   "probability": 0.5513,
+   "odds": 1.69,
+   "edge": -0.0683,
+   "estimated": true
+  },
+  "esports|CS2|1816917": {
+   "reason": "no_real_odds",
+   "checked_at": "2026-11-25T06:59:08.870353+00:00",
+   "kickoff": "2026-11-25T11:00:00+03:00",
+   "sport": "esports",
+   "id": "1816917",
+   "home": "Imperial",
+   "away": "FlyQuest",
+   "priced_markets": 0,
+   "market": "Всухую (2:0 или 0:2)",
+   "probability": 0.5605,
+   "odds": 1.66,
+   "edge": -0.06957,
    "estimated": true
   }
  },
