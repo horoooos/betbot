@@ -6696,12 +6696,348 @@
   "btn": 4
  },
  "NHL|401892783": {
-  "status": "waiting_data",
-  "kickoff": "2026-11-26T03:00:00+03:00",
-  "sport": "hockey",
+  "id": "401892783",
   "div": "NHL",
-  "reason": "no_qualified_real_market",
-  "retry_at": 1795650139.090721
+  "sport": "hockey",
+  "kickoff": "2026-11-26T03:00:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "detail": "Wed, November 25th at 7:00 PM EST",
+  "clock": "0:00",
+  "period": 0,
+  "home": {
+   "id": "20",
+   "name": "Tampa Bay Lightning",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/tb.png",
+   "color": "003e7e",
+   "score": "0",
+   "record": "15-6-2",
+   "periods": [],
+   "ru": "Тампа-Бэй"
+  },
+  "away": {
+   "id": "7",
+   "name": "Carolina Hurricanes",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/car.png",
+   "color": "e30426",
+   "score": "0",
+   "record": "18-3-3",
+   "periods": [],
+   "ru": "Каролина"
+  },
+  "odds": {
+   "H": 2.0,
+   "A": 1.833,
+   "line": 6.5,
+   "over": 2.05,
+   "under": 1.8,
+   "spread": 1.5,
+   "sp_h": 1.388,
+   "sp_a": 3.1
+  },
+  "probs": {
+   "HK_ML_H": 0.4782173719570843,
+   "HK_ML_A": 0.5217826280429156,
+   "HK_H": 0.39495679372607345,
+   "HK_D": 0.16011649659809782,
+   "HK_A": 0.4449267096758287,
+   "HK_O5.5": 0.6255933179399803,
+   "HK_U5.5": 0.37440668206001965,
+   "HK_O6.5": 0.4675377735839248,
+   "HK_U6.5": 0.5324622264160752,
+   "HK_O7.5": 0.3215384505397213,
+   "HK_U7.5": 0.6784615494602787,
+   "HK_IT1O1.5": 0.8222823986712188,
+   "HK_IT1O2.5": 0.6097021762409075,
+   "HK_IT1O3.5": 0.3863896240236185,
+   "HK_IT2O1.5": 0.843065864085651,
+   "HK_IT2O2.5": 0.6432600833069962,
+   "HK_IT2O3.5": 0.4225017855754782,
+   "HK_H-1.5": 0.2514747098741727,
+   "HK_A+1.5": 0.7485252901258267,
+   "HK_A-1.5": 0.29401727749333834,
+   "HK_H+1.5": 0.7059827225066618
+  },
+  "labels": {
+   "HK_ML_H": "П1 (с ОТ и буллитами)",
+   "HK_ML_A": "П2 (с ОТ и буллитами)",
+   "HK_H": "П1 в основное время",
+   "HK_D": "Ничья в основное время",
+   "HK_A": "П2 в основное время",
+   "HK_O5.5": "ТБ 5.5",
+   "HK_U5.5": "ТМ 5.5",
+   "HK_O6.5": "ТБ 6.5",
+   "HK_U6.5": "ТМ 6.5",
+   "HK_O7.5": "ТБ 7.5",
+   "HK_U7.5": "ТМ 7.5",
+   "HK_IT1O1.5": "ИТ1 больше 1.5",
+   "HK_IT1O2.5": "ИТ1 больше 2.5",
+   "HK_IT1O3.5": "ИТ1 больше 3.5",
+   "HK_IT2O1.5": "ИТ2 больше 1.5",
+   "HK_IT2O2.5": "ИТ2 больше 2.5",
+   "HK_IT2O3.5": "ИТ2 больше 3.5",
+   "HK_H-1.5": "Ф1 (−1.5)",
+   "HK_A+1.5": "Ф2 (+1.5)",
+   "HK_A-1.5": "Ф2 (−1.5)",
+   "HK_H+1.5": "Ф1 (+1.5)"
+  },
+  "real": {
+   "HK_ML_H": 2.0,
+   "HK_ML_A": 1.833,
+   "HK_O6.5": 2.05,
+   "HK_U6.5": 1.8
+  },
+  "center": "Ожидаемые голы 3.2 : 3.3",
+  "bar": [
+   0.4782173719570843,
+   0,
+   0.5217826280429156
+  ],
+  "model": {
+   "lh": 3.1514580660084097,
+   "la": 3.3145932545776757
+  },
+  "stavka_signal": {
+   "status": "collecting",
+   "weight": 0.0,
+   "authors": 19,
+   "group": "hockey",
+   "snapshot": "NHL|401892783",
+   "source": "https://stavka.tv"
+  },
+  "research": {
+   "articles": [
+    {
+     "id": "9a987373acd0bad52a5f59be",
+     "kind": "context",
+     "provider": "livesport",
+     "source": "https://www.livesport.ru/tips/hockey/2026/11/26/tampa-bay-lightning-carolina-hurricanes/",
+     "sport": "hockey",
+     "div": "NHL",
+     "event_id": "401892783",
+     "kickoff": "2026-11-26T00:00:00+00:00",
+     "published_at": "2026-11-24T23:00:00+00:00",
+     "observed_at": "2026-11-25T00:56:24.903953+00:00",
+     "tables": [
+      [
+       [
+        "",
+        "Букмекер",
+        "1",
+        "x",
+        "2",
+        "Новым игрокам",
+        ""
+       ],
+       [
+        "",
+        "",
+        "2.65",
+        "4.20",
+        "2.30",
+        "Фрибет",
+        "15 000 ₽"
+       ],
+       [
+        "",
+        "",
+        "2.66",
+        "4.22",
+        "2.27",
+        "Фрибет",
+        "30 000 ₽"
+       ],
+       [
+        "",
+        "",
+        "2.65",
+        "4.20",
+        "2.28",
+        "Фрибет всем",
+        "10 000 ₽"
+       ],
+       [
+        "",
+        "",
+        "2.65",
+        "4.20",
+        "2.25",
+        "Фрибет",
+        "1000 ₽"
+       ]
+      ]
+     ]
+    },
+    {
+     "id": "237f5484185bcb9e01227810",
+     "kind": "context",
+     "provider": "metaratings",
+     "source": "https://metaratings.ru/prognozy/hokkey/tampa-bej-karolina-prognoz-na-match-nhl-26-noyabrya-2026-goda/",
+     "sport": "hockey",
+     "div": "NHL",
+     "event_id": "401892783",
+     "kickoff": "2026-11-26T00:00:00+00:00",
+     "published_at": "2026-11-24T12:00:00+00:00",
+     "observed_at": "2026-11-25T05:04:54.548781+00:00",
+     "tables": []
+    },
+    {
+     "id": "0410ab10b711c20e86155201",
+     "kind": "context",
+     "provider": "legalbet",
+     "source": "https://legalbet.ru/tips/prognoz-na-match-tampa-bej-lajtning-karolina-harrikejns-26-noyabrya-zimarin/",
+     "sport": "hockey",
+     "div": "NHL",
+     "event_id": "401892783",
+     "kickoff": "2026-11-26T00:00:00+00:00",
+     "published_at": "2026-11-25T10:21:05+00:00",
+     "observed_at": "2026-11-25T10:41:12.675321+00:00",
+     "tables": []
+    }
+   ],
+   "dossier": null
+  },
+  "main": {
+   "key": "HK_ML_A",
+   "label": "П2 (с ОТ и буллитами)",
+   "p": 0.5218,
+   "odds": 1.83,
+   "est": false,
+   "stake": 0.5,
+   "strategy": "external_trial",
+   "selection_mode": "external_fallback",
+   "trial_expires_at": null,
+   "probability_origin": "baseline_model",
+   "model_edge": -0.04514,
+   "source_count": 13,
+   "source_refs": [
+    {
+     "author": "/predictors/darya-mironova",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/26-11-2026-tampa-bay-lightning-carolina-hurricanes",
+     "published_at": "2026-11-24T21:22:00+00:00",
+     "observed_at": "2026-11-25T01:48:04.548894+00:00",
+     "odds": 1.77,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/ochen-vajno",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/26-11-2026-tampa-bay-lightning-carolina-hurricanes",
+     "published_at": "2026-11-24T22:45:00+00:00",
+     "observed_at": "2026-11-25T01:48:04.548894+00:00",
+     "odds": 1.77,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/player-successful",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/26-11-2026-tampa-bay-lightning-carolina-hurricanes",
+     "published_at": "2026-11-24T23:40:00+00:00",
+     "observed_at": "2026-11-25T00:02:44.620046+00:00",
+     "odds": 1.8,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/aleksandr-tolkacev-3",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/26-11-2026-tampa-bay-lightning-carolina-hurricanes",
+     "published_at": "2026-11-25T10:08:00+00:00",
+     "observed_at": "2026-11-25T10:08:48.933167+00:00",
+     "odds": 1.8,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/skayz999",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/26-11-2026-tampa-bay-lightning-carolina-hurricanes",
+     "published_at": "2026-11-25T11:09:00+00:00",
+     "observed_at": "2026-11-25T14:02:18.862926+00:00",
+     "odds": 1.8,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/sergei-exp",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/26-11-2026-tampa-bay-lightning-carolina-hurricanes",
+     "published_at": "2026-11-25T11:29:00+00:00",
+     "observed_at": "2026-11-25T11:34:18.943805+00:00",
+     "odds": 1.8,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/dmitrii-kilin",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/26-11-2026-tampa-bay-lightning-carolina-hurricanes",
+     "published_at": "2026-11-25T11:49:00+00:00",
+     "observed_at": "2026-11-25T11:54:19.635981+00:00",
+     "odds": 1.8,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/well-ton",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/26-11-2026-tampa-bay-lightning-carolina-hurricanes",
+     "published_at": "2026-11-25T12:32:00+00:00",
+     "observed_at": "2026-11-25T12:38:18.842098+00:00",
+     "odds": 1.8,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/padenie-materatstsi",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/26-11-2026-tampa-bay-lightning-carolina-hurricanes",
+     "published_at": "2026-11-25T15:16:00+00:00",
+     "observed_at": "2026-11-25T15:24:19.759651+00:00",
+     "odds": 1.8,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/diman3-diman3",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/26-11-2026-tampa-bay-lightning-carolina-hurricanes",
+     "published_at": "2026-11-25T16:41:00+00:00",
+     "observed_at": "2026-11-25T16:52:15.885432+00:00",
+     "odds": 1.8,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/nphne-ai-aa-io3lo426",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/26-11-2026-tampa-bay-lightning-carolina-hurricanes",
+     "published_at": "2026-11-25T17:26:00+00:00",
+     "observed_at": "2026-11-25T17:32:27.276416+00:00",
+     "odds": 1.85,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/akim-bobrov-1",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/26-11-2026-tampa-bay-lightning-carolina-hurricanes",
+     "published_at": "2026-11-25T19:05:00+00:00",
+     "observed_at": "2026-11-25T19:16:33.313179+00:00",
+     "odds": 1.85,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/dmitrii-sug",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/26-11-2026-tampa-bay-lightning-carolina-hurricanes",
+     "published_at": "2026-11-25T20:15:00+00:00",
+     "observed_at": "2026-11-25T20:18:32.956620+00:00",
+     "odds": 1.85,
+     "price_kind": "author_recorded"
+    }
+   ]
+  },
+  "bold": {},
+  "open": {
+   "HK_ML_A": 0.5218
+  },
+  "top": false,
+  "msg_id": 9573,
+  "btn": 4
  },
  "NHL|401892784": {
   "status": "waiting_data",
@@ -6709,7 +7045,7 @@
   "sport": "hockey",
   "div": "NHL",
   "reason": "no_qualified_real_market",
-  "retry_at": 1795650139.090721
+  "retry_at": 1795650858.194569
  },
  "NHL|401892785": {
   "status": "waiting_data",
@@ -6717,7 +7053,7 @@
   "sport": "hockey",
   "div": "NHL",
   "reason": "no_qualified_real_market",
-  "retry_at": 1795650139.090721
+  "retry_at": 1795650858.194569
  },
  "NHL|401892786": {
   "status": "waiting_data",
@@ -6725,7 +7061,7 @@
   "sport": "hockey",
   "div": "NHL",
   "reason": "no_qualified_real_market",
-  "retry_at": 1795650139.090721
+  "retry_at": 1795650858.194569
  },
  "NHL|401892787": {
   "status": "waiting_data",
@@ -6733,7 +7069,7 @@
   "sport": "hockey",
   "div": "NHL",
   "reason": "no_qualified_real_market",
-  "retry_at": 1795650139.090721
+  "retry_at": 1795650858.194569
  },
  "NHL|401892788": {
   "status": "waiting_data",
@@ -6741,7 +7077,7 @@
   "sport": "hockey",
   "div": "NHL",
   "reason": "no_qualified_real_market",
-  "retry_at": 1795650139.090721
+  "retry_at": 1795650858.194569
  },
  "NBA|401909318": {
   "status": "waiting_data",
@@ -6749,7 +7085,7 @@
   "sport": "basketball",
   "div": "NBA",
   "reason": "edge_below_minimum",
-  "retry_at": 1795650139.090721
+  "retry_at": 1795650858.194569
  },
  "NHL|401892789": {
   "status": "waiting_data",
