@@ -7,7 +7,6 @@
  "schedule_day": "2026-11-25",
  "content_slot": "2026-11-25-10",
  "news_seen": [
-  "https://www.sport-express.ru/football/spain/news/rayo-valekano-valensiya-schet-i-rezultat-matcha-13-go-tura-chempionata-ispanii-21-noyabrya-2026-2477405/",
   "https://www.sport-express.ru/football/rfpl/news/v-ahmate-zayavili-chto-klub-rasstalsya-s-cherchesovym-bez-vyplaty-otstupnyh-2477396/",
   "team-spirit-proigrala-xtreme-gaming-i-vyletela-iz-blast-slam-ix",
   "https://www.sport-express.ru/hockey/nhl/news/mark-shayfli-stal-luchshim-snayperom-v-istorii-vinnipega-2477525/",
@@ -506,9 +505,10 @@
   "https://www.sport-express.ru/basketball/nba/news/golden-steyt-rasschityvaet-na-vozvraschenie-karri-v-techenie-dvuh-nedel-2478696/",
   "https://www.sport-express.ru/football/turkey/news/tureckiy-zhurnalist-galatasaray-gotov-podnyat-otstupnye-za-batrakova-do-80-85-millionov-evro-2478719/",
   "https://www.sport-express.ru/football/champions-league/news/kuzmichev-boyalsya-udaleniya-batrakova-v-matche-s-aston-villoy-moment-na-tonenkogo-2478677/",
-  "https://www.sport-express.ru/football/transfers/news/zaschitnik-heven-mozhet-pokinut-manchester-yunayted-v-zimnee-transfernoe-okno-2478653/"
+  "https://www.sport-express.ru/football/transfers/news/zaschitnik-heven-mozhet-pokinut-manchester-yunayted-v-zimnee-transfernoe-okno-2478653/",
+  "spisok-ispravlenii-dlya-dota-2-v-patche-7-42a"
  ],
- "news_i": 1,
+ "news_i": 2,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1695,7 +1695,7 @@
  "streak_day": {
   "2026-11-22": 2
  },
- "news_next": "2026-11-25T12:49:48.353421+03:00",
+ "news_next": "2026-11-25T13:23:48.416882+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1726,7 +1726,6 @@
  "vk_mode": "photo",
  "dz_err": null,
  "img_used": [
-  "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/1165064_sPICT.jpg/1280px-1165064_sPICT.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
   "https://upload.wikimedia.org/wikipedia/commons/9/9a/Dmitry_Medvedev_in_Tatarstan_%282009-10-23%29_37.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
   "https://images.cybersport.ru/images/as-is/plain/ae/ae7e2300-f791-440a-9486-9fe0f236d365.jpg",
   "https://ss.sport-express.ru/userfiles/materials/224/2243041/1180x665.jpg",
@@ -2025,7 +2024,8 @@
   "https://images.cybersport.ru/images/as-is/plain/d5/d5310717-25fe-43da-be41-5f0e76b06761.jpg",
   "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/46/Zamalek_SC_fans_Tifo_against_CR_Belouizdad%2C_Cairo_Stadium%2C_Confederation_Cup_03.jpg/1280px-Zamalek_SC_fans_Tifo_against_CR_Belouizdad%2C_Cairo_Stadium%2C_Confederation_Cup_03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
   "https://upload.wikimedia.org/wikipedia/commons/8/87/RuslanPimenov.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-  "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/A_statue_of_Sir_Alex_Ferguson_at_Old_Trafford.jpg/1280px-A_statue_of_Sir_Alex_Ferguson_at_Old_Trafford.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/A_statue_of_Sir_Alex_Ferguson_at_Old_Trafford.jpg/1280px-A_statue_of_Sir_Alex_Ferguson_at_Old_Trafford.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "https://images.cybersport.ru/images/as-is/plain/40/40523410-9bfd-44e3-b927-e74f00de3b1e.jpg"
  ],
  "indexnow_day": "2026-11-25",
  "vk_wall_err": null,
@@ -2437,7 +2437,8 @@
   "9456",
   "9457",
   "9460",
-  "9468"
+  "9468",
+  "9471"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -2781,11 +2782,12 @@
   "2026-11-25:новость:8d01f0c7e0cb15fd3abc50c1",
   "2026-11-25:новость:f7391312e5f7e0173727ec1b",
   "2026-11-25:новость:0a2c278ad9d34c7d9a321f89",
-  "2026-11-25:новость:a39eaec984c4802fd6c6be55"
+  "2026-11-25:новость:a39eaec984c4802fd6c6be55",
+  "2026-11-25:новость:d0b8a2211846a1d1ab6014ca"
  ],
  "dz_last_delivery": {
-  "source_id": 9468,
-  "message_id": 891,
+  "source_id": 9471,
+  "message_id": 892,
   "kind": "новость"
  },
  "learn_attempt_day": "2026-11-25",
@@ -2988,7 +2990,7 @@
   "quote_matches": 101
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-25T12:48:48.292197+03:00",
+  "last_poll": "2026-11-25T12:50:48.416882+03:00",
   "cursor": "408",
   "posts": [
    {
@@ -5538,7 +5540,7 @@
   },
   "esports|CS2|1816920": {
    "reason": "no_real_odds",
-   "checked_at": "2026-11-25T09:41:09.491964+00:00",
+   "checked_at": "2026-11-25T09:51:10.164055+00:00",
    "kickoff": "2026-11-25T13:30:00+03:00",
    "sport": "esports",
    "id": "1816920",
@@ -5553,7 +5555,7 @@
   },
   "esports|CS2|1816919": {
    "reason": "insufficient_history_or_odds",
-   "checked_at": "2026-11-25T09:41:11.193769+00:00",
+   "checked_at": "2026-11-25T09:51:11.603179+00:00",
    "kickoff": "2026-11-25T13:30:00+03:00",
    "sport": "esports",
    "id": "1816919",
