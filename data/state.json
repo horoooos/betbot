@@ -2858,7 +2858,7 @@
   "external_sources": {
    "providers": {
     "legalbet": {
-     "at": "2026-11-25T21:05:39.808663+00:00",
+     "at": "2026-11-25T21:35:40.163296+00:00",
      "status": "ok",
      "discovered": 6,
      "pages": 6,
@@ -2869,29 +2869,29 @@
      "contexts": 6
     },
     "livesport": {
-     "at": "2026-11-25T21:05:39.808663+00:00",
+     "at": "2026-11-25T21:35:40.163296+00:00",
      "status": "ok",
      "discovered": 27,
      "pages": 6,
-     "opinions": 2,
-     "mapped": 1,
+     "opinions": 0,
+     "mapped": 0,
      "articles_available": 43,
-     "next_offset": 25,
-     "contexts": 6
+     "next_offset": 31,
+     "contexts": 2
     },
     "metaratings": {
-     "at": "2026-11-25T21:05:39.808663+00:00",
+     "at": "2026-11-25T21:35:40.163296+00:00",
      "status": "ok",
-     "discovered": 7,
+     "discovered": 10,
      "pages": 6,
      "opinions": 24,
      "mapped": 0,
-     "articles_available": 38,
-     "next_offset": 11,
+     "articles_available": 35,
+     "next_offset": 7,
      "contexts": 6
     },
     "rb": {
-     "at": "2026-11-25T21:05:39.808663+00:00",
+     "at": "2026-11-25T21:35:40.163296+00:00",
      "status": "ok",
      "discovered": 1,
      "pages": 1,
@@ -2902,20 +2902,20 @@
      "contexts": 1
     },
     "vseprosport": {
-     "at": "2026-11-25T21:05:39.808663+00:00",
+     "at": "2026-11-25T21:35:40.163296+00:00",
      "status": "ok",
-     "discovered": 2,
-     "pages": 2,
+     "discovered": 4,
+     "pages": 4,
      "opinions": 0,
      "mapped": 0,
      "articles_available": 10,
-     "next_offset": 3,
-     "contexts": 2
+     "next_offset": 7,
+     "contexts": 4
     }
    },
    "opinions": 46,
    "snapshots": 0,
-   "contexts": 120,
+   "contexts": 123,
    "model": {
     "weight": 0.0,
     "status": "collecting",
@@ -3034,7 +3034,7 @@
   "quote_matches": 111
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-26T00:33:39.896410+03:00",
+  "last_poll": "2026-11-26T00:35:40.163296+03:00",
   "cursor": "432",
   "posts": [
    {
