@@ -882,12 +882,119 @@ null
 "div": "E1",
 "state": "pre",
 "bo": null,
-"prediction": "",
+"prediction": "predictions/2026-11-25-bolton-uonderers-vest-bromvich-albion-401880140.html",
 "hs": "0",
 "as": "0",
-"tip": "",
+"tip": "П2 · 1.97",
 "top": false,
-"bot": null,
+"bot": {
+"main": {
+"label": "П2",
+"p": 0.475,
+"odds": 1.97,
+"est": false
+},
+"bold": null,
+"markets": [
+[
+"П1",
+0.267,
+3.75
+],
+[
+"Ничья",
+0.258,
+3.65
+],
+[
+"П2",
+0.475,
+1.952
+],
+[
+"1X",
+0.525,
+null
+],
+[
+"X2",
+0.733,
+null
+],
+[
+"ТБ 1.5",
+0.796,
+null
+],
+[
+"ТБ 2.5",
+0.557,
+1.769
+],
+[
+"ТМ 2.5",
+0.443,
+2.05
+],
+[
+"ТБ 3.5",
+0.333,
+null
+],
+[
+"Обе забьют — да",
+0.584,
+null
+],
+[
+"Обе забьют — нет",
+0.416,
+null
+],
+[
+"ИТ1 больше 1.5",
+0.345,
+null
+],
+[
+"ИТ2 больше 1.5",
+0.504,
+null
+],
+[
+"Ф1 (−1.5)",
+0.113,
+null
+],
+[
+"Ф2 (+1.5)",
+0.887,
+null
+]
+],
+"bar": [
+0.26735257061372364,
+0.25770404083261106,
+0.47494338855366497
+],
+"center": "Ожидаемые голы (xG) 1.2 : 1.7",
+"scores": [
+[
+"1:1",
+0.121
+],
+[
+"1:2",
+0.095
+],
+[
+"0:1",
+0.083
+]
+],
+"corners": 11.3,
+"cards": 3.5
+},
 "lt": null
 },
 {
@@ -3030,7 +3137,7 @@ null
 "id": "401915521",
 "league": "Европа · Лига Европы",
 "kickoff": "2026-11-26T20:45:00+03:00",
-"home": "Олимпиакос",
+"home": "Olympiacos",
 "away": "Милан",
 "hl": "https://a.espncdn.com/i/teamlogos/soccer/500/435.png",
 "al": "https://a.espncdn.com/i/teamlogos/soccer/500/103.png",
@@ -3038,10 +3145,10 @@ null
 "aid": "103",
 "bb": "https://betboom.ru/search?query=%D0%9E%D0%BB%D0%B8%D0%BC%D0%BF%D0%B8%D0%B0%D0%BA%D0%BE%D1%81&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
 "path": "soccer/uefa.europa",
-"url": "live.html?s=football&p=soccer%2Fuefa.europa&e=401915521&h=%D0%9E%D0%BB%D0%B8%D0%BC%D0%BF%D0%B8%D0%B0%D0%BA%D0%BE%D1%81&a=%D0%9C%D0%B8%D0%BB%D0%B0%D0%BD",
+"url": "live.html?s=football&p=soccer%2Fuefa.europa&e=401915521&h=Olympiacos&a=%D0%9C%D0%B8%D0%BB%D0%B0%D0%BD",
 "participants": [
 [
-"Олимпиакос",
+"Olympiacos",
 "Olympiacos"
 ],
 [
@@ -3976,21 +4083,21 @@ null
 "league": "Европа · Лига конференций",
 "kickoff": "2026-11-26T23:00:00+03:00",
 "home": "Норшелланн",
-"away": "Панатинаикос",
+"away": "Panathinaikos",
 "hl": "https://a.espncdn.com/i/teamlogos/soccer/500/3101.png",
 "al": "https://a.espncdn.com/i/teamlogos/soccer/500/443.png",
 "hid": "3101",
 "aid": "443",
 "bb": "https://betboom.ru/search?query=%D0%9D%D0%BE%D1%80%D1%88%D0%B5%D0%BB%D0%BB%D0%B0%D0%BD%D0%BD&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
 "path": "soccer/uefa.europa.conf",
-"url": "live.html?s=football&p=soccer%2Fuefa.europa.conf&e=401915807&h=%D0%9D%D0%BE%D1%80%D1%88%D0%B5%D0%BB%D0%BB%D0%B0%D0%BD%D0%BD&a=%D0%9F%D0%B0%D0%BD%D0%B0%D1%82%D0%B8%D0%BD%D0%B0%D0%B8%D0%BA%D0%BE%D1%81",
+"url": "live.html?s=football&p=soccer%2Fuefa.europa.conf&e=401915807&h=%D0%9D%D0%BE%D1%80%D1%88%D0%B5%D0%BB%D0%BB%D0%B0%D0%BD%D0%BD&a=Panathinaikos",
 "participants": [
 [
 "Норшелланн",
 "FC Nordsjælland"
 ],
 [
-"Панатинаикос",
+"Panathinaikos",
 "Panathinaikos"
 ]
 ],

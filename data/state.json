@@ -1563,7 +1563,7 @@
  "value_day": "2026-11-25",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-25",
- "site_stamp": "1549|9525|2026-11-25 22|6|ad8a23459072123f",
+ "site_stamp": "1549|9529|2026-11-25 22|6|9a40e7eaa1a301b5",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1721,7 +1721,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 9527,
+ "dz_last": 9529,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -3029,7 +3029,7 @@
   "quote_matches": 107
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-25T22:36:33.324068+03:00",
+  "last_poll": "2026-11-25T22:38:33.369776+03:00",
   "cursor": "427",
   "posts": [
    {
@@ -5793,23 +5793,24 @@
    "estimated": true
   },
   "football|E1|401880140": {
-   "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-25T19:28:49.094348+00:00",
+   "reason": "published",
+   "checked_at": "2026-11-25T19:38:58.261328+00:00",
    "kickoff": "2026-11-25T22:45:00+03:00",
    "sport": "football",
    "id": "401880140",
    "home": "Болтон Уондерерс",
    "away": "Вест Бромвич Альбион",
-   "priced_markets": 6,
-   "market": "Обе забьют — да",
-   "probability": 0.584,
-   "odds": 1.59,
-   "edge": -0.07144,
-   "estimated": true
+   "market": "П2",
+   "strategy": "external_trial",
+   "source_count": 3,
+   "probability": 0.4749,
+   "odds": 1.97,
+   "edge": -0.06445,
+   "estimated": false
   },
   "football|E1|401880139": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-25T19:28:49.557261+00:00",
+   "checked_at": "2026-11-25T19:38:58.731274+00:00",
    "kickoff": "2026-11-25T22:45:00+03:00",
    "sport": "football",
    "id": "401880139",
@@ -5824,7 +5825,7 @@
   },
   "football|E1|401880137": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-25T19:28:50.018393+00:00",
+   "checked_at": "2026-11-25T19:38:59.191016+00:00",
    "kickoff": "2026-11-25T22:45:00+03:00",
    "sport": "football",
    "id": "401880137",
@@ -11865,7 +11866,7 @@
     "profit_pct": -0.5
    },
    "football|UCL|401915378": {
-    "status": "open",
+    "status": "settled",
     "id": "401915378",
     "sport": "football",
     "div": "UCL",
@@ -11995,7 +11996,10 @@
        "price_kind": "author_recorded"
       }
      ]
-    }
+    },
+    "settled_at": "2026-11-25T19:38:33.369776+00:00",
+    "hit": false,
+    "profit_pct": -0.5
    },
    "football|UCL|401915293": {
     "status": "open",
@@ -12857,6 +12861,58 @@
        "published_at": "2026-11-25T11:16:00+00:00",
        "observed_at": "2026-11-25T11:34:18.943805+00:00",
        "odds": 1.76,
+       "price_kind": "author_recorded"
+      }
+     ]
+    }
+   },
+   "football|E1|401880140": {
+    "status": "open",
+    "id": "401880140",
+    "sport": "football",
+    "div": "E1",
+    "kickoff": "2026-11-25T22:45:00+03:00",
+    "published_at": "2026-11-25T19:38:54.631870+00:00",
+    "msg_id": 9528,
+    "tip": {
+     "key": "A",
+     "label": "П2",
+     "p": 0.4749,
+     "odds": 1.97,
+     "est": false,
+     "stake": 0.5,
+     "strategy": "external_trial",
+     "selection_mode": "external_fallback",
+     "trial_expires_at": null,
+     "probability_origin": "baseline_model",
+     "model_edge": -0.06436,
+     "source_count": 3,
+     "source_refs": [
+      {
+       "author": "/predictors/luchshiyvsvoem-dele",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/25-11-2026-bolton-wanderers-west-bromwich-albion",
+       "published_at": "2026-11-24T18:40:00+00:00",
+       "observed_at": "2026-11-25T18:56:28.104744+00:00",
+       "odds": 1.98,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/egor-002",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/25-11-2026-bolton-wanderers-west-bromwich-albion",
+       "published_at": "2026-11-24T21:59:00+00:00",
+       "observed_at": "2026-11-25T18:56:28.104744+00:00",
+       "odds": 1.98,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/sanchez-1",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/25-11-2026-bolton-wanderers-west-bromwich-albion",
+       "published_at": "2026-11-25T18:36:00+00:00",
+       "observed_at": "2026-11-25T18:56:28.104744+00:00",
+       "odds": 1.89,
        "price_kind": "author_recorded"
       }
      ]
