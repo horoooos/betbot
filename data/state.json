@@ -2983,12 +2983,12 @@
   },
   "error": null,
   "tips": 16077,
-  "snapshots": 337,
+  "snapshots": 339,
   "unmapped_markets": 24543,
   "quote_matches": 101
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-25T12:28:48.805339+03:00",
+  "last_poll": "2026-11-25T12:30:48.665431+03:00",
   "cursor": "406",
   "posts": [
    {
@@ -3747,7 +3747,8 @@
    "401892794": "pre",
    "401892793": "pre",
    "401900874": "pre",
-   "401900443": "pre"
+   "401900443": "pre",
+   "401915816": "pre"
   },
   "daily": {
    "day": "2026-11-25"
@@ -5429,7 +5430,7 @@
   },
   "football|JPN|401877527": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-25T09:19:10.988346+00:00",
+   "checked_at": "2026-11-25T09:31:09.504873+00:00",
    "kickoff": "2026-11-25T13:00:00+03:00",
    "sport": "football",
    "id": "401877527",
@@ -5476,7 +5477,7 @@
   },
   "football|JPN|401877529": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-25T09:19:11.308509+00:00",
+   "checked_at": "2026-11-25T09:31:09.819970+00:00",
    "kickoff": "2026-11-25T13:00:00+03:00",
    "sport": "football",
    "id": "401877529",
@@ -5491,7 +5492,7 @@
   },
   "football|JPN|401877530": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-25T09:19:11.619436+00:00",
+   "checked_at": "2026-11-25T09:31:10.129566+00:00",
    "kickoff": "2026-11-25T13:00:00+03:00",
    "sport": "football",
    "id": "401877530",

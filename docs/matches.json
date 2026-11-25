@@ -2903,5 +2903,40 @@ null
 "top": false,
 "bot": null,
 "lt": null
+},
+{
+"sport": "football",
+"id": "401915816",
+"league": "Европа · Лига конференций",
+"kickoff": "2026-11-26T18:30:00+03:00",
+"home": "Кайрат",
+"away": "Мьельбю",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/2528.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/20301.png",
+"hid": "2528",
+"aid": "20301",
+"bb": "https://betboom.ru/search?query=%D0%9A%D0%B0%D0%B9%D1%80%D0%B0%D1%82&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/uefa.europa.conf",
+"url": "live.html?s=football&p=soccer%2Fuefa.europa.conf&e=401915816&h=%D0%9A%D0%B0%D0%B9%D1%80%D0%B0%D1%82&a=%D0%9C%D1%8C%D0%B5%D0%BB%D1%8C%D0%B1%D1%8E",
+"participants": [
+[
+"Кайрат",
+"Kairat Almaty"
+],
+[
+"Мьельбю",
+"Mjällby AIF"
+]
+],
+"div": "UECL",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
 }
 ]
