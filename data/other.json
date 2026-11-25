@@ -5802,25 +5802,25 @@
   "kickoff": "2026-11-25T06:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Tue, November 24th at 10:00 PM EST",
   "clock": "0.0",
   "period": 0,
   "home": {
+   "color": "0e2240",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/den.png",
    "id": "7",
    "name": "Denver Nuggets",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/den.png",
-   "color": "0e2240",
    "score": "0",
    "record": "10-5",
    "periods": [],
    "ru": "Денвер Наггетс"
   },
   "away": {
+   "color": "0064b1",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/dal.png",
    "id": "6",
    "name": "Dallas Mavericks",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/dal.png",
-   "color": "0064b1",
    "score": "0",
    "record": "10-7",
    "periods": [],
@@ -6010,7 +6010,9 @@
   "btn": 4,
   "close": {
    "BB_ML_A": 0.266
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null
  },
  "CS2|1816914": {
   "status": "waiting_data",
