@@ -1563,7 +1563,7 @@
  "value_day": "2026-11-25",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-25",
- "site_stamp": "1547|9480|2026-11-25 14|6|b26f127bccf4ca85",
+ "site_stamp": "1547|9480|2026-11-25 15|6|b26f127bccf4ca85",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1576,7 +1576,7 @@
    "NBA|401909320"
   ]
  },
- "value_check": "2026-11-25-4",
+ "value_check": "2026-11-25-5",
  "express_risk": {
   "msg": 9019,
   "legs": [
@@ -2999,7 +2999,7 @@
   "quote_matches": 101
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-25T14:58:19.030251+03:00",
+  "last_poll": "2026-11-25T15:00:19.096230+03:00",
   "cursor": "412",
   "posts": [
    {
@@ -3701,7 +3701,7 @@
    "401877528": "post",
    "401877546": "post",
    "401877529": "post",
-   "401877530": "in",
+   "401877530": "post",
    "401877545": "post",
    "401877547": "in",
    "401915378": "pre",
@@ -11304,7 +11304,7 @@
     "profit_pct": -0.5
    },
    "football|JPN|401877546": {
-    "status": "open",
+    "status": "settled",
     "id": "401877546",
     "sport": "football",
     "div": "JPN",
@@ -11353,10 +11353,13 @@
        "price_kind": "author_recorded"
       }
      ]
-    }
+    },
+    "settled_at": "2026-11-25T12:00:19.096230+00:00",
+    "hit": false,
+    "profit_pct": -0.5
    },
    "football|JPN|401877545": {
-    "status": "open",
+    "status": "settled",
     "id": "401877545",
     "sport": "football",
     "div": "JPN",
@@ -11405,7 +11408,10 @@
        "price_kind": "author_recorded"
       }
      ]
-    }
+    },
+    "settled_at": "2026-11-25T12:00:19.096230+00:00",
+    "hit": true,
+    "profit_pct": 0.42
    },
    "football|JPN|401877547": {
     "status": "open",
