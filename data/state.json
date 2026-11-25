@@ -7,8 +7,6 @@
  "schedule_day": "2026-11-25",
  "content_slot": "2026-11-25-13",
  "news_seen": [
-  "https://www.sport-express.ru/hockey/nhl/news/trener-pittsburga-myuz-o-kuzmenko-on-vlozhil-v-rabotu-ochen-mnogo-sil-eto-proishodilo-kazhdyy-den-2477521/",
-  "https://www.sport-express.ru/hockey/nhl/news/sebastyan-aho-vyshel-na-vtoroe-mesto-v-istorii-karoliny-po-golam-v-nhl-2477519/",
   "https://www.sport-express.ru/hockey/nhl/news/napadayuschiy-andrey-svechnikov-posle-matcha-karolina-edmonton-my-davno-ne-poluchali-takogo-opyta-2477517/",
   "https://www.sport-express.ru/hockey/nhl/news/svechnikov-voshel-v-top-10-po-chislu-matchey-s-dvumya-i-bolee-golami-v-istorii-karoliny-2477511/",
   "https://www.sport-express.ru/hockey/nhl/news/napadayuschiy-vashingtona-aleksandr-ovechkin-prodlil-bezgolevuyu-seriyu-do-16-matchey-2477506/",
@@ -506,9 +504,11 @@
   "spisok-ispravlenii-dlya-dota-2-v-patche-7-42a",
   "https://www.sport-express.ru/hockey/world/news/iihf-poydet-v-federalnyy-sud-shveycarii-posle-nesoglasiya-s-cas-po-dopusku-rossii-2478729/",
   "https://www.sport-express.ru/hockey/nhl/news/monreal-mozhet-popytatsya-podpisat-kucherova-letom-2027-goda-2478702/",
-  "https://www.sport-express.ru/football/rfpl/news/leschenko-verit-v-chempionstvo-dinamo-v-etom-sezone-komanda-na-hodu-2478731/"
+  "https://www.sport-express.ru/football/rfpl/news/leschenko-verit-v-chempionstvo-dinamo-v-etom-sezone-komanda-na-hodu-2478731/",
+  "https://www.sport-express.ru/basketball/nba/news/flegg-oboshel-dyuranta-po-kolichestvu-matchey-s-20-i-bolee-ochkami-do-20-letiya-v-nba-2478721/",
+  "flyquest-proshla-na-vtoroi-yetap-pgl-major-singapore-2026-obygrav-imperial"
  ],
- "news_i": 4,
+ "news_i": 0,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1695,7 +1695,7 @@
  "streak_day": {
   "2026-11-22": 2
  },
- "news_next": "2026-11-25T13:56:48.597675+03:00",
+ "news_next": "2026-11-25T14:24:49.384295+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1727,7 +1727,6 @@
  "vk_mode": "photo",
  "dz_err": null,
  "img_used": [
-  "https://images.cybersport.ru/images/as-is/plain/ae/ae7e2300-f791-440a-9486-9fe0f236d365.jpg",
   "https://ss.sport-express.ru/userfiles/materials/224/2243041/1180x665.jpg",
   "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/Academy_Sports_%2B_Outdoors_-_Sarah_Stierch_-_May_2024_21.jpg/1280px-Academy_Sports_%2B_Outdoors_-_Sarah_Stierch_-_May_2024_21.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
   "https://images.cybersport.ru/images/as-is/plain/76/76178cea-468f-46db-9514-91a2dc220909.jpg",
@@ -2026,7 +2025,8 @@
   "https://upload.wikimedia.org/wikipedia/commons/8/87/RuslanPimenov.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
   "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/A_statue_of_Sir_Alex_Ferguson_at_Old_Trafford.jpg/1280px-A_statue_of_Sir_Alex_Ferguson_at_Old_Trafford.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
   "https://images.cybersport.ru/images/as-is/plain/40/40523410-9bfd-44e3-b927-e74f00de3b1e.jpg",
-  "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0a/FC_Dynamo_Kyiv_vs_FC_Arsenal_Kyiv_10-03-2019_%281%29.jpg/1280px-FC_Dynamo_Kyiv_vs_FC_Arsenal_Kyiv_10-03-2019_%281%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0a/FC_Dynamo_Kyiv_vs_FC_Arsenal_Kyiv_10-03-2019_%281%29.jpg/1280px-FC_Dynamo_Kyiv_vs_FC_Arsenal_Kyiv_10-03-2019_%281%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "https://images.cybersport.ru/images/as-is/plain/86/86c6dc53-279e-4191-8fb9-49f3f7ac0599.jpg"
  ],
  "indexnow_day": "2026-11-25",
  "vk_wall_err": null,
@@ -2440,7 +2440,8 @@
   "9460",
   "9468",
   "9471",
-  "9474"
+  "9474",
+  "9475"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -2786,11 +2787,12 @@
   "2026-11-25:новость:0a2c278ad9d34c7d9a321f89",
   "2026-11-25:новость:a39eaec984c4802fd6c6be55",
   "2026-11-25:новость:d0b8a2211846a1d1ab6014ca",
-  "2026-11-25:новость:f9275ae812163fa4d9001f4c"
+  "2026-11-25:новость:f9275ae812163fa4d9001f4c",
+  "2026-11-25:новость:da46275058922748faba5c49"
  ],
  "dz_last_delivery": {
-  "source_id": 9474,
-  "message_id": 893,
+  "source_id": 9475,
+  "message_id": 894,
   "kind": "новость"
  },
  "learn_attempt_day": "2026-11-25",
@@ -2993,7 +2995,7 @@
   "quote_matches": 101
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-25T13:54:49.519443+03:00",
+  "last_poll": "2026-11-25T13:56:49.384295+03:00",
   "cursor": "410",
   "posts": [
    {
