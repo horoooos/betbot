@@ -6168,5 +6168,589 @@
   "close": {
    "BB_ML_A": 0.5497
   }
+ },
+ "NHL|401892781": {
+  "id": "401892781",
+  "div": "NHL",
+  "sport": "hockey",
+  "kickoff": "2026-11-26T03:00:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "detail": "Wed, November 25th at 7:00 PM EST",
+  "clock": "0:00",
+  "period": 0,
+  "home": {
+   "id": "1",
+   "name": "Boston Bruins",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/bos.png",
+   "color": "231f20",
+   "score": "0",
+   "record": "15-7-1",
+   "periods": [],
+   "ru": "Бостон"
+  },
+  "away": {
+   "id": "28",
+   "name": "Winnipeg Jets",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/wpg.png",
+   "color": "002d62",
+   "score": "0",
+   "record": "12-9-4",
+   "periods": [],
+   "ru": "Виннипег"
+  },
+  "odds": {
+   "H": 1.588,
+   "A": 2.42,
+   "line": 6.5,
+   "over": 1.952,
+   "under": 1.87,
+   "spread": -1.5,
+   "sp_h": 2.5,
+   "sp_a": 1.556
+  },
+  "probs": {
+   "HK_ML_H": 0.6037936577917268,
+   "HK_ML_A": 0.3962063422082733,
+   "HK_H": 0.5238147603903938,
+   "HK_D": 0.15380557192564037,
+   "HK_A": 0.3223796676839659,
+   "HK_O5.5": 0.6456141093801091,
+   "HK_U5.5": 0.3543858906198915,
+   "HK_O6.5": 0.48927769284019357,
+   "HK_U6.5": 0.5107223071598065,
+   "HK_O7.5": 0.3417376531012988,
+   "HK_U7.5": 0.6582623468987012,
+   "HK_IT1O1.5": 0.8778760001602545,
+   "HK_IT1O2.5": 0.7036003902662167,
+   "HK_IT1O3.5": 0.49223376626192594,
+   "HK_IT2O1.5": 0.7959131867879106,
+   "HK_IT2O2.5": 0.5694085054079516,
+   "HK_IT2O3.5": 0.3453462050956932,
+   "HK_H-1.5": 0.3670638631689272,
+   "HK_A+1.5": 0.6329361368310731,
+   "HK_A-1.5": 0.1945293405202569,
+   "HK_H+1.5": 0.8054706594797438
+  },
+  "labels": {
+   "HK_ML_H": "П1 (с ОТ и буллитами)",
+   "HK_ML_A": "П2 (с ОТ и буллитами)",
+   "HK_H": "П1 в основное время",
+   "HK_D": "Ничья в основное время",
+   "HK_A": "П2 в основное время",
+   "HK_O5.5": "ТБ 5.5",
+   "HK_U5.5": "ТМ 5.5",
+   "HK_O6.5": "ТБ 6.5",
+   "HK_U6.5": "ТМ 6.5",
+   "HK_O7.5": "ТБ 7.5",
+   "HK_U7.5": "ТМ 7.5",
+   "HK_IT1O1.5": "ИТ1 больше 1.5",
+   "HK_IT1O2.5": "ИТ1 больше 2.5",
+   "HK_IT1O3.5": "ИТ1 больше 3.5",
+   "HK_IT2O1.5": "ИТ2 больше 1.5",
+   "HK_IT2O2.5": "ИТ2 больше 2.5",
+   "HK_IT2O3.5": "ИТ2 больше 3.5",
+   "HK_H-1.5": "Ф1 (−1.5)",
+   "HK_A+1.5": "Ф2 (+1.5)",
+   "HK_A-1.5": "Ф2 (−1.5)",
+   "HK_H+1.5": "Ф1 (+1.5)"
+  },
+  "real": {
+   "HK_ML_H": 1.588,
+   "HK_ML_A": 2.42,
+   "HK_O6.5": 1.952,
+   "HK_U6.5": 1.87
+  },
+  "center": "Ожидаемые голы 3.6 : 3.0",
+  "bar": [
+   0.6037936577917268,
+   0,
+   0.3962063422082733
+  ],
+  "model": {
+   "lh": 3.638488899269456,
+   "la": 2.967651250479848
+  },
+  "stavka_signal": {
+   "status": "collecting",
+   "weight": 0.0,
+   "authors": 14,
+   "group": "hockey",
+   "snapshot": "NHL|401892781",
+   "source": "https://stavka.tv"
+  },
+  "research": {
+   "articles": [
+    {
+     "id": "1e4c42272499f76ceeb94587",
+     "kind": "context",
+     "provider": "legalbet",
+     "source": "https://legalbet.ru/tips/prognoz-na-match-boston-bryuins-vinnipeg-dzhets-26-noyabrya-ilinov/",
+     "sport": "hockey",
+     "div": "NHL",
+     "event_id": "401892781",
+     "kickoff": "2026-11-26T00:00:00+00:00",
+     "published_at": "2026-11-25T06:54:40+00:00",
+     "observed_at": "2026-11-25T07:07:08.088840+00:00",
+     "tables": []
+    },
+    {
+     "id": "ec22514c9ec643f245319dbf",
+     "kind": "context",
+     "provider": "metaratings",
+     "source": "https://metaratings.ru/prognozy/hokkey/boston-vinnipeg-prognoz-na-match-nhl-26-noyabrya-2026-goda/",
+     "sport": "hockey",
+     "div": "NHL",
+     "event_id": "401892781",
+     "kickoff": "2026-11-26T00:00:00+00:00",
+     "published_at": "2026-11-25T15:13:19+00:00",
+     "observed_at": "2026-11-25T18:28:47.151224+00:00",
+     "tables": []
+    }
+   ],
+   "dossier": null
+  },
+  "main": {
+   "key": "HK_ML_H",
+   "label": "П1 (с ОТ и буллитами)",
+   "p": 0.6038,
+   "odds": 1.59,
+   "est": false,
+   "stake": 0.5,
+   "strategy": "external_trial",
+   "selection_mode": "external_fallback",
+   "trial_expires_at": null,
+   "probability_origin": "baseline_model",
+   "model_edge": -0.03997,
+   "source_count": 9,
+   "source_refs": [
+    {
+     "author": "/predictors/aleksandr-saska-ball",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/26-11-2026-boston-bruins-winnipeg-jets",
+     "published_at": "2026-11-24T23:34:00+00:00",
+     "observed_at": "2026-11-25T00:02:44.620046+00:00",
+     "odds": 1.6,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/velikolepie-hel",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/26-11-2026-boston-bruins-winnipeg-jets",
+     "published_at": "2026-11-25T00:43:00+00:00",
+     "observed_at": "2026-11-25T01:08:04.271219+00:00",
+     "odds": 1.6,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/cto-tut-delaiu",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/26-11-2026-boston-bruins-winnipeg-jets",
+     "published_at": "2026-11-25T06:06:00+00:00",
+     "observed_at": "2026-11-25T06:20:45.510889+00:00",
+     "odds": 1.6,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/pavel-sirokostup",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/26-11-2026-boston-bruins-winnipeg-jets",
+     "published_at": "2026-11-25T12:24:00+00:00",
+     "observed_at": "2026-11-25T12:38:18.842098+00:00",
+     "odds": 1.6,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/irina-novogorodceva-2",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/26-11-2026-boston-bruins-winnipeg-jets",
+     "published_at": "2026-11-25T12:45:00+00:00",
+     "observed_at": "2026-11-25T12:58:19.461796+00:00",
+     "odds": 1.6,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/vyacheslav-nezhdanov",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/26-11-2026-boston-bruins-winnipeg-jets",
+     "published_at": "2026-11-25T13:15:00+00:00",
+     "observed_at": "2026-11-25T13:18:19.535466+00:00",
+     "odds": 1.65,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/zlobikus",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/26-11-2026-boston-bruins-winnipeg-jets",
+     "published_at": "2026-11-25T16:41:00+00:00",
+     "observed_at": "2026-11-25T16:52:15.885432+00:00",
+     "odds": 1.6,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/skayz999",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/26-11-2026-boston-bruins-winnipeg-jets",
+     "published_at": "2026-11-25T20:12:00+00:00",
+     "observed_at": "2026-11-25T20:18:32.956620+00:00",
+     "odds": 1.62,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/denis-titov-6",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/26-11-2026-boston-bruins-winnipeg-jets",
+     "published_at": "2026-11-25T20:56:00+00:00",
+     "observed_at": "2026-11-25T21:00:32.893281+00:00",
+     "odds": 1.62,
+     "price_kind": "author_recorded"
+    }
+   ]
+  },
+  "bold": {},
+  "open": {
+   "HK_ML_H": 0.6038
+  },
+  "top": false,
+  "msg_id": 9566,
+  "btn": 4
+ },
+ "NHL|401892782": {
+  "id": "401892782",
+  "div": "NHL",
+  "sport": "hockey",
+  "kickoff": "2026-11-26T03:00:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "detail": "Wed, November 25th at 7:00 PM EST",
+  "clock": "0:00",
+  "period": 0,
+  "home": {
+   "id": "2",
+   "name": "Buffalo Sabres",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/buf.png",
+   "color": "00468b",
+   "score": "0",
+   "record": "10-10-4",
+   "periods": [],
+   "ru": "Баффало"
+  },
+  "away": {
+   "id": "13",
+   "name": "New York Rangers",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/nyr.png",
+   "color": "0056ae",
+   "score": "0",
+   "record": "13-9-1",
+   "periods": [],
+   "ru": "Рейнджерс"
+  },
+  "odds": {
+   "H": 1.741,
+   "A": 2.14,
+   "line": 6.5,
+   "over": 1.98,
+   "under": 1.847,
+   "spread": -1.5,
+   "sp_h": 2.85,
+   "sp_a": 1.444
+  },
+  "probs": {
+   "HK_ML_H": 0.5513969761713634,
+   "HK_ML_A": 0.44860302382863665,
+   "HK_H": 0.46919084692575985,
+   "HK_D": 0.15808871008769917,
+   "HK_A": 0.37272044298654106,
+   "HK_O5.5": 0.6395114873906095,
+   "HK_U5.5": 0.36048851260939063,
+   "HK_O6.5": 0.4826237209629893,
+   "HK_U6.5": 0.517376279037011,
+   "HK_O7.5": 0.33554149776847536,
+   "HK_U7.5": 0.6644585022315248,
+   "HK_IT1O1.5": 0.8575230497449148,
+   "HK_IT1O2.5": 0.6676460600556472,
+   "HK_IT1O3.5": 0.4499107033092193,
+   "HK_IT2O1.5": 0.8183211824105536,
+   "HK_IT2O2.5": 0.6034928876098875,
+   "HK_IT2O3.5": 0.3799036442771015,
+   "HK_H-1.5": 0.316494227783665,
+   "HK_A+1.5": 0.683505772216335,
+   "HK_A-1.5": 0.234130336981968,
+   "HK_H+1.5": 0.765869663018032
+  },
+  "labels": {
+   "HK_ML_H": "П1 (с ОТ и буллитами)",
+   "HK_ML_A": "П2 (с ОТ и буллитами)",
+   "HK_H": "П1 в основное время",
+   "HK_D": "Ничья в основное время",
+   "HK_A": "П2 в основное время",
+   "HK_O5.5": "ТБ 5.5",
+   "HK_U5.5": "ТМ 5.5",
+   "HK_O6.5": "ТБ 6.5",
+   "HK_U6.5": "ТМ 6.5",
+   "HK_O7.5": "ТБ 7.5",
+   "HK_U7.5": "ТМ 7.5",
+   "HK_IT1O1.5": "ИТ1 больше 1.5",
+   "HK_IT1O2.5": "ИТ1 больше 2.5",
+   "HK_IT1O3.5": "ИТ1 больше 3.5",
+   "HK_IT2O1.5": "ИТ2 больше 1.5",
+   "HK_IT2O2.5": "ИТ2 больше 2.5",
+   "HK_IT2O3.5": "ИТ2 больше 3.5",
+   "HK_H-1.5": "Ф1 (−1.5)",
+   "HK_A+1.5": "Ф2 (+1.5)",
+   "HK_A-1.5": "Ф2 (−1.5)",
+   "HK_H+1.5": "Ф1 (+1.5)"
+  },
+  "real": {
+   "HK_ML_H": 1.741,
+   "HK_ML_A": 2.14,
+   "HK_O6.5": 1.98,
+   "HK_U6.5": 1.847
+  },
+  "center": "Ожидаемые голы 3.4 : 3.1",
+  "bar": [
+   0.5513969761713634,
+   0,
+   0.44860302382863665
+  ],
+  "model": {
+   "lh": 3.4401539191676216,
+   "la": 3.1223435005186237
+  },
+  "stavka_signal": {
+   "status": "collecting",
+   "weight": 0.0,
+   "authors": 11,
+   "group": "hockey",
+   "snapshot": "NHL|401892782",
+   "source": "https://stavka.tv"
+  },
+  "research": {
+   "articles": [
+    {
+     "id": "258e254d2742e2ac91fecc2f",
+     "kind": "context",
+     "provider": "livesport",
+     "source": "https://www.livesport.ru/tips/hockey/2026/11/26/buffalo-sabres-new-york-rangers/",
+     "sport": "hockey",
+     "div": "NHL",
+     "event_id": "401892782",
+     "kickoff": "2026-11-26T00:00:00+00:00",
+     "published_at": "2026-11-24T23:00:00+00:00",
+     "observed_at": "2026-11-24T23:21:05.590262+00:00",
+     "tables": [
+      [
+       [
+        "",
+        "Букмекер",
+        "1",
+        "x",
+        "2",
+        "Новым игрокам",
+        ""
+       ],
+       [
+        "",
+        "",
+        "2.20",
+        "4.30",
+        "2.75",
+        "Фрибет",
+        "15 000 ₽"
+       ],
+       [
+        "",
+        "",
+        "2.20",
+        "4.30",
+        "2.75",
+        "Фрибет",
+        "1000 ₽"
+       ]
+      ]
+     ]
+    },
+    {
+     "id": "57a42fba6c934e2b9ec56367",
+     "kind": "context",
+     "provider": "metaratings",
+     "source": "https://metaratings.ru/prognozy/hokkey/baffalo-nyu-york-reyndzhers-prognoz-na-match-nhl-26-noyabrya-2026-goda/",
+     "sport": "hockey",
+     "div": "NHL",
+     "event_id": "401892782",
+     "kickoff": "2026-11-26T00:00:00+00:00",
+     "published_at": "2026-11-25T15:15:11+00:00",
+     "observed_at": "2026-11-25T18:28:49.103931+00:00",
+     "tables": []
+    },
+    {
+     "id": "0dba65e4beda5c54377c4a88",
+     "kind": "context",
+     "provider": "vseprosport",
+     "source": "https://www.vseprosport.ru/news/2026/11/25/baffalo-rejndzhers-prognoz-kf-2-20-i-stavki-na-match-nhl-26-nojabrja-2026-goda",
+     "sport": "hockey",
+     "div": "NHL",
+     "event_id": "401892782",
+     "kickoff": "2026-11-26T00:00:00+00:00",
+     "published_at": "2026-11-25T08:40:48+00:00",
+     "observed_at": "2026-11-25T21:36:00.888774+00:00",
+     "tables": []
+    }
+   ],
+   "dossier": null
+  },
+  "main": {
+   "key": "HK_ML_A",
+   "label": "П2 (с ОТ и буллитами)",
+   "p": 0.4486,
+   "odds": 2.14,
+   "est": false,
+   "stake": 0.5,
+   "strategy": "external_trial",
+   "selection_mode": "external_fallback",
+   "trial_expires_at": null,
+   "probability_origin": "baseline_model",
+   "model_edge": -0.03999,
+   "source_count": 8,
+   "source_refs": [
+    {
+     "author": "/predictors/aleksandr-saska-ball",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/26-11-2026-buffalo-sabres-new-york-rangers",
+     "published_at": "2026-11-24T23:23:00+00:00",
+     "observed_at": "2026-11-25T02:50:04.495889+00:00",
+     "odds": 2.1,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/player-successful",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/26-11-2026-buffalo-sabres-new-york-rangers",
+     "published_at": "2026-11-24T23:31:00+00:00",
+     "observed_at": "2026-11-25T00:02:44.620046+00:00",
+     "odds": 2.1,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/evgeniy-krasnykh",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/26-11-2026-buffalo-sabres-new-york-rangers",
+     "published_at": "2026-11-25T08:01:00+00:00",
+     "observed_at": "2026-11-25T08:04:45.952445+00:00",
+     "odds": 2.1,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/andrey-malko",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/26-11-2026-buffalo-sabres-new-york-rangers",
+     "published_at": "2026-11-25T08:59:00+00:00",
+     "observed_at": "2026-11-25T09:06:48.813186+00:00",
+     "odds": 2.05,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/yunost-85",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/26-11-2026-buffalo-sabres-new-york-rangers",
+     "published_at": "2026-11-25T11:23:00+00:00",
+     "observed_at": "2026-11-25T11:34:18.943805+00:00",
+     "odds": 2.05,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/aleksandr-novichkov",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/26-11-2026-buffalo-sabres-new-york-rangers",
+     "published_at": "2026-11-25T16:03:00+00:00",
+     "observed_at": "2026-11-25T16:08:18.938885+00:00",
+     "odds": 2.05,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/yura-oleinikov",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/26-11-2026-buffalo-sabres-new-york-rangers",
+     "published_at": "2026-11-25T16:24:00+00:00",
+     "observed_at": "2026-11-25T16:30:19.504335+00:00",
+     "odds": 2.05,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/akim-bobrov-1",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/26-11-2026-buffalo-sabres-new-york-rangers",
+     "published_at": "2026-11-25T19:08:00+00:00",
+     "observed_at": "2026-11-25T19:16:33.313179+00:00",
+     "odds": 2.07,
+     "price_kind": "author_recorded"
+    }
+   ]
+  },
+  "bold": {},
+  "open": {
+   "HK_ML_A": 0.4486
+  },
+  "top": false,
+  "msg_id": 9568,
+  "btn": 4
+ },
+ "NHL|401892783": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-26T03:00:00+03:00",
+  "sport": "hockey",
+  "div": "NHL",
+  "reason": "no_qualified_real_market",
+  "retry_at": 1795648098.568407
+ },
+ "NHL|401892784": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-26T03:00:00+03:00",
+  "sport": "hockey",
+  "div": "NHL",
+  "reason": "no_qualified_real_market",
+  "retry_at": 1795648098.568407
+ },
+ "NHL|401892785": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-26T03:00:00+03:00",
+  "sport": "hockey",
+  "div": "NHL",
+  "reason": "no_qualified_real_market",
+  "retry_at": 1795648098.568407
+ },
+ "NHL|401892786": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-26T03:00:00+03:00",
+  "sport": "hockey",
+  "div": "NHL",
+  "reason": "no_qualified_real_market",
+  "retry_at": 1795648098.568407
+ },
+ "NHL|401892787": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-26T03:00:00+03:00",
+  "sport": "hockey",
+  "div": "NHL",
+  "reason": "no_qualified_real_market",
+  "retry_at": 1795648098.568407
+ },
+ "NHL|401892788": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-26T03:00:00+03:00",
+  "sport": "hockey",
+  "div": "NHL",
+  "reason": "no_qualified_real_market",
+  "retry_at": 1795648098.568407
+ },
+ "NBA|401909318": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-26T03:00:00+03:00",
+  "sport": "basketball",
+  "div": "NBA",
+  "reason": "edge_below_minimum",
+  "retry_at": 1795648098.568407
  }
 }

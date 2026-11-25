@@ -26319,5 +26319,21 @@
   "div": "COL",
   "reason": "no_qualified_real_market",
   "retry_at": 1795647859.136999
+ },
+ "401933757": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-26T03:00:00+03:00",
+  "sport": "football",
+  "div": "ARG",
+  "reason": "edge_below_minimum",
+  "retry_at": 1795648098.568407
+ },
+ "401921355": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-26T03:00:00+03:00",
+  "sport": "football",
+  "div": "ECU",
+  "reason": "edge_below_minimum",
+  "retry_at": 1795648098.568407
  }
 }
