@@ -7,7 +7,6 @@
  "schedule_day": "2026-11-25",
  "content_slot": "2026-11-25-23",
  "news_seen": [
-  "https://www.sport-express.ru/football/rfpl/news/nikolaev-schitaet-chto-arbitru-ne-sledovalo-naznachat-penalti-v-vorota-cska-v-igre-s-ahmatom-2477667/",
   "https://www.sport-express.ru/hockey/khl/news/stala-izvestna-zarplata-morozova-po-kontraktu-s-metallurgom-2477657/",
   "https://www.sport-express.ru/football/rfpl/news/ozdoev-o-borbe-za-zoloto-rpl-krasnodar-budet-pribavlyat-2477690/",
   "https://www.sport-express.ru/tennis/atp/news/kafelnikov-ozhidaet-yarkogo-finala-mezhdu-zverevym-i-alkarasom-shansy-50-na-50-2477697/",
@@ -506,9 +505,10 @@
   "https://www.sport-express.ru/football/rfpl/news/kechinov-nazval-barko-solari-i-ugalde-luchshimi-igrokami-spartaka-na-dannyy-moment-2478962/",
   "emotsii-s1mple-i-bcgame-posle-vyleta-iz-pgl-major-singapore-2026-so-schetom-0-3",
   "https://www.sport-express.ru/football/champions-league/news/shahter-fenerbahche-startovye-sostavy-komand-na-match-ligi-chempionov-25-noyabrya-2026-2478989/",
-  "https://www.sport-express.ru/football/rus_cup/news/lokomotiv-rostov-schet-i-rezultat-matcha-kubka-rossii-25-noyabrya-2026-2478988/"
+  "https://www.sport-express.ru/football/rus_cup/news/lokomotiv-rostov-schet-i-rezultat-matcha-kubka-rossii-25-noyabrya-2026-2478988/",
+  "insaider-falcons-perevedet-karrigan-v-zapas-posle-pgl-major-singapore-2026-niko"
  ],
- "news_i": 1,
+ "news_i": 2,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1695,7 +1695,7 @@
  "streak_day": {
   "2026-11-22": 2
  },
- "news_next": "2026-11-25T23:05:32.971649+03:00",
+ "news_next": "2026-11-25T23:39:33.617361+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1727,7 +1727,6 @@
  "vk_mode": "photo",
  "dz_err": null,
  "img_used": [
-  "https://upload.wikimedia.org/wikipedia/commons/1/17/C.Ronaldo.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
   "https://images.cybersport.ru/images/as-is/plain/eb/ebdc995e-c056-4b30-b02a-9b9a3bdced39.jpg",
   "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/2016_NHL_All-Star_Game_%2824751803866%29.jpg/1280px-2016_NHL_All-Star_Game_%2824751803866%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
   "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/72/2017_IIHF_World_Championship_-_ITA_vs_RUS_1.jpg/1280px-2017_IIHF_World_Championship_-_ITA_vs_RUS_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -2026,7 +2025,8 @@
   "https://images.cybersport.ru/images/as-is/plain/c6/c649a40f-1065-44f7-b877-eeb9715f8b69.jpg",
   "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f6/Bradley_Barcola_France_v_Spain_7.24.26-112_%28cropped%29.jpg/1280px-Bradley_Barcola_France_v_Spain_7.24.26-112_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
   "https://images.cybersport.ru/images/as-is/plain/a4/a4b18cc8-eddc-4fd9-bf11-de6fccc14730.jpg",
-  "https://ss.sport-express.ru/userfiles/materials/224/2246923/1180x665.jpg"
+  "https://ss.sport-express.ru/userfiles/materials/224/2246923/1180x665.jpg",
+  "https://images.cybersport.ru/images/as-is/plain/4e/4e9baaa1-aae3-4d2b-8e72-ac39b053ead6.jpg"
  ],
  "indexnow_day": "2026-11-25",
  "vk_wall_err": null,
@@ -2459,7 +2459,8 @@
   "9511",
   "9516",
   "9523",
-  "9525"
+  "9525",
+  "9538"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -2824,11 +2825,12 @@
   "2026-11-25:новость:082b1332b4c9888e034e22bc",
   "2026-11-25:новость:c0705f59d4c452dd6b256917",
   "2026-11-25:новость:d3e81c7211793e12334f157d",
-  "2026-11-25:новость:8c809cb62dbd110c6eac9501"
+  "2026-11-25:новость:8c809cb62dbd110c6eac9501",
+  "2026-11-25:новость:bf5c80018810d13d82e4e83a"
  ],
  "dz_last_delivery": {
-  "source_id": 9525,
-  "message_id": 912,
+  "source_id": 9538,
+  "message_id": 913,
   "kind": "новость"
  },
  "learn_attempt_day": "2026-11-25",
@@ -3028,7 +3030,7 @@
   "quote_matches": 107
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-25T23:04:33.564787+03:00",
+  "last_poll": "2026-11-25T23:06:33.617361+03:00",
   "cursor": "427",
   "posts": [
    {
