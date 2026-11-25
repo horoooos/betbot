@@ -2978,7 +2978,7 @@
   "quote_matches": 95
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-25T07:56:04.829018+03:00",
+  "last_poll": "2026-11-25T07:58:05.052118+03:00",
   "cursor": "403",
   "posts": [
    {
@@ -5334,6 +5334,36 @@
    "odds": 3.41,
    "edge": -0.18365,
    "estimated": false
+  },
+  "esports|CS2|1816914": {
+   "reason": "no_real_odds",
+   "checked_at": "2026-11-25T04:58:26.050001+00:00",
+   "kickoff": "2026-11-25T09:00:00+03:00",
+   "sport": "esports",
+   "id": "1816914",
+   "home": "Heroic",
+   "away": "M80",
+   "priced_markets": 0,
+   "market": "Победа: Heroic",
+   "probability": 0.6493,
+   "odds": 1.43,
+   "edge": -0.0715,
+   "estimated": true
+  },
+  "esports|CS2|1816913": {
+   "reason": "no_real_odds",
+   "checked_at": "2026-11-25T04:58:28.260037+00:00",
+   "kickoff": "2026-11-25T09:00:00+03:00",
+   "sport": "esports",
+   "id": "1816913",
+   "home": "Eternal Fire",
+   "away": "100 Thieves",
+   "priced_markets": 0,
+   "market": "Победа: 100 Thieves",
+   "probability": 0.808,
+   "odds": 1.15,
+   "edge": -0.0708,
+   "estimated": true
   }
  },
  "source_trial": {
