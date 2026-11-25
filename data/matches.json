@@ -1,8 +1,4 @@
 {
- "401877047": {
-  "status": "skipped",
-  "kickoff": "2026-11-23T02:07:00+03:00"
- },
  "401933730": {
   "status": "skipped",
   "kickoff": "2026-11-23T02:30:00+03:00"
@@ -26326,7 +26322,7 @@
   "sport": "football",
   "div": "ARG",
   "reason": "edge_below_minimum",
-  "retry_at": 1795648098.568407
+  "retry_at": 1795648699.054377
  },
  "401921355": {
   "status": "waiting_data",
@@ -26334,6 +26330,6 @@
   "sport": "football",
   "div": "ECU",
   "reason": "edge_below_minimum",
-  "retry_at": 1795648098.568407
+  "retry_at": 1795648699.054377
  }
 }

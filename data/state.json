@@ -2864,7 +2864,7 @@
   "external_sources": {
    "providers": {
     "legalbet": {
-     "at": "2026-11-25T22:36:18.776769+00:00",
+     "at": "2026-11-25T23:08:19.054377+00:00",
      "status": "ok",
      "discovered": 5,
      "pages": 5,
@@ -2875,40 +2875,40 @@
      "contexts": 5
     },
     "livesport": {
-     "at": "2026-11-25T22:36:18.776769+00:00",
+     "at": "2026-11-25T23:08:19.054377+00:00",
      "status": "ok",
-     "discovered": 27,
+     "discovered": 29,
      "pages": 6,
-     "opinions": 4,
-     "mapped": 2,
-     "articles_available": 43,
-     "next_offset": 19,
+     "opinions": 2,
+     "mapped": 1,
+     "articles_available": 45,
+     "next_offset": 25,
      "contexts": 6
     },
     "metaratings": {
-     "at": "2026-11-25T22:36:18.776769+00:00",
+     "at": "2026-11-25T23:08:19.054377+00:00",
+     "status": "ok",
+     "discovered": 11,
+     "pages": 6,
+     "opinions": 24,
+     "mapped": 0,
+     "articles_available": 36,
+     "next_offset": 8,
+     "contexts": 6
+    },
+    "rb": {
+     "at": "2026-11-25T23:08:19.054377+00:00",
      "status": "ok",
      "discovered": 2,
      "pages": 2,
-     "opinions": 8,
-     "mapped": 0,
-     "articles_available": 39,
-     "next_offset": 2,
-     "contexts": 2
-    },
-    "rb": {
-     "at": "2026-11-25T22:36:18.776769+00:00",
-     "status": "ok",
-     "discovered": 1,
-     "pages": 1,
      "opinions": 0,
      "mapped": 0,
-     "articles_available": 1,
-     "next_offset": 1,
+     "articles_available": 2,
+     "next_offset": 3,
      "contexts": 1
     },
     "vseprosport": {
-     "at": "2026-11-25T22:36:18.776769+00:00",
+     "at": "2026-11-25T23:08:19.054377+00:00",
      "status": "ok",
      "discovered": 4,
      "pages": 4,
@@ -2921,7 +2921,7 @@
    },
    "opinions": 46,
    "snapshots": 0,
-   "contexts": 126,
+   "contexts": 128,
    "model": {
     "weight": 0.0,
     "status": "collecting",
@@ -3040,7 +3040,7 @@
   "quote_matches": 114
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-26T02:06:18.397882+03:00",
+  "last_poll": "2026-11-26T02:08:19.054377+03:00",
   "cursor": "433",
   "posts": [
    {
@@ -6035,7 +6035,7 @@
   },
   "football|ARG|401933757": {
    "reason": "edge_below_minimum",
-   "checked_at": "2026-11-25T22:58:38.802060+00:00",
+   "checked_at": "2026-11-25T23:08:57.655050+00:00",
    "kickoff": "2026-11-26T03:00:00+03:00",
    "sport": "football",
    "id": "401933757",
@@ -6050,7 +6050,7 @@
   },
   "football|ECU|401921355": {
    "reason": "edge_below_minimum",
-   "checked_at": "2026-11-25T22:58:39.139688+00:00",
+   "checked_at": "2026-11-25T23:08:57.994650+00:00",
    "kickoff": "2026-11-26T03:00:00+03:00",
    "sport": "football",
    "id": "401921355",
@@ -6097,7 +6097,7 @@
   },
   "hockey|NHL|401892783": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-25T22:59:00.239628+00:00",
+   "checked_at": "2026-11-25T23:08:58.609245+00:00",
    "kickoff": "2026-11-26T03:00:00+03:00",
    "sport": "hockey",
    "id": "401892783",
@@ -6112,7 +6112,7 @@
   },
   "hockey|NHL|401892784": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-25T22:59:00.834874+00:00",
+   "checked_at": "2026-11-25T23:08:59.202431+00:00",
    "kickoff": "2026-11-26T03:00:00+03:00",
    "sport": "hockey",
    "id": "401892784",
@@ -6127,7 +6127,7 @@
   },
   "hockey|NHL|401892785": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-25T22:59:01.421639+00:00",
+   "checked_at": "2026-11-25T23:08:59.795569+00:00",
    "kickoff": "2026-11-26T03:00:00+03:00",
    "sport": "hockey",
    "id": "401892785",
@@ -6135,14 +6135,14 @@
    "away": "Сент-Луис",
    "priced_markets": 4,
    "market": "ИТ1 больше 2.5",
-   "probability": 0.6021,
-   "odds": 1.54,
-   "edge": -0.07277,
+   "probability": 0.6079,
+   "odds": 1.53,
+   "edge": -0.06991,
    "estimated": true
   },
   "hockey|NHL|401892786": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-25T22:59:02.010558+00:00",
+   "checked_at": "2026-11-25T23:09:00.385952+00:00",
    "kickoff": "2026-11-26T03:00:00+03:00",
    "sport": "hockey",
    "id": "401892786",
@@ -6157,7 +6157,7 @@
   },
   "hockey|NHL|401892787": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-25T22:59:02.606732+00:00",
+   "checked_at": "2026-11-25T23:09:00.977284+00:00",
    "kickoff": "2026-11-26T03:00:00+03:00",
    "sport": "hockey",
    "id": "401892787",
@@ -6172,7 +6172,7 @@
   },
   "hockey|NHL|401892788": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-25T22:59:03.207602+00:00",
+   "checked_at": "2026-11-25T23:09:01.563448+00:00",
    "kickoff": "2026-11-26T03:00:00+03:00",
    "sport": "hockey",
    "id": "401892788",
@@ -6187,7 +6187,7 @@
   },
   "basketball|NBA|401909318": {
    "reason": "edge_below_minimum",
-   "checked_at": "2026-11-25T22:59:03.785506+00:00",
+   "checked_at": "2026-11-25T23:09:02.137934+00:00",
    "kickoff": "2026-11-26T03:00:00+03:00",
    "sport": "basketball",
    "id": "401909318",
