@@ -1500,41 +1500,6 @@ null
 },
 {
 "sport": "basketball",
-"id": "401909319",
-"league": "США · NBA",
-"kickoff": "2026-11-26T03:30:00+03:00",
-"home": "Нью-Йорк Никс",
-"away": "Кливленд",
-"hl": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/ny.png",
-"al": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/cle.png",
-"hid": "18",
-"aid": "5",
-"bb": "https://betboom.ru/search?query=%D0%9D%D1%8C%D1%8E-%D0%99%D0%BE%D1%80%D0%BA&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=basketball",
-"path": "basketball/nba",
-"url": "live.html?s=basketball&p=basketball%2Fnba&e=401909319&h=%D0%9D%D1%8C%D1%8E-%D0%99%D0%BE%D1%80%D0%BA+%D0%9D%D0%B8%D0%BA%D1%81&a=%D0%9A%D0%BB%D0%B8%D0%B2%D0%BB%D0%B5%D0%BD%D0%B4",
-"participants": [
-[
-"Нью-Йорк Никс",
-"New York Knicks"
-],
-[
-"Кливленд",
-"Cleveland Cavaliers"
-]
-],
-"div": "NBA",
-"state": "pre",
-"bo": null,
-"prediction": "",
-"hs": "0",
-"as": "0",
-"tip": "",
-"top": false,
-"bot": null,
-"lt": null
-},
-{
-"sport": "basketball",
 "id": "401909320",
 "league": "США · NBA",
 "kickoff": "2026-11-26T03:30:00+03:00",
@@ -1555,6 +1520,107 @@ null
 [
 "Миннесота Тимбервулвз",
 "Minnesota Timberwolves"
+]
+],
+"div": "NBA",
+"state": "pre",
+"bo": null,
+"prediction": "predictions/2026-11-26-oklahoma-siti-tander-minnesota-timbervulvz-401909320.html",
+"hs": "0",
+"as": "0",
+"tip": "П1 (с ОТ) · 1.74",
+"top": true,
+"bot": {
+"main": {
+"label": "П1 (с ОТ)",
+"p": 0.583,
+"odds": 1.74,
+"est": false
+},
+"bold": null,
+"markets": [
+[
+"П1 (с ОТ)",
+0.583,
+1.741
+],
+[
+"П2 (с ОТ)",
+0.417,
+2.14
+],
+[
+"Ф1 (-2.5)",
+0.5,
+1.917
+],
+[
+"Ф2 (+2.5)",
+0.5,
+1.901
+],
+[
+"ТБ 216.5",
+0.66,
+null
+],
+[
+"ТМ 216.5",
+0.34,
+null
+],
+[
+"ТБ 223.5",
+0.5,
+1.952
+],
+[
+"ТМ 223.5",
+0.5,
+1.87
+],
+[
+"ТБ 230.5",
+0.34,
+null
+],
+[
+"ТМ 230.5",
+0.66,
+null
+]
+],
+"bar": [
+0.5825156468205225,
+0,
+0.4174843531794775
+],
+"center": "Ожидаемый счёт 113 : 110"
+},
+"lt": null
+},
+{
+"sport": "basketball",
+"id": "401909319",
+"league": "США · NBA",
+"kickoff": "2026-11-26T03:30:00+03:00",
+"home": "Нью-Йорк Никс",
+"away": "Кливленд",
+"hl": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/ny.png",
+"al": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/cle.png",
+"hid": "18",
+"aid": "5",
+"bb": "https://betboom.ru/search?query=%D0%9D%D1%8C%D1%8E-%D0%99%D0%BE%D1%80%D0%BA&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=basketball",
+"path": "basketball/nba",
+"url": "live.html?s=basketball&p=basketball%2Fnba&e=401909319&h=%D0%9D%D1%8C%D1%8E-%D0%99%D0%BE%D1%80%D0%BA+%D0%9D%D0%B8%D0%BA%D1%81&a=%D0%9A%D0%BB%D0%B8%D0%B2%D0%BB%D0%B5%D0%BD%D0%B4",
+"participants": [
+[
+"Нью-Йорк Никс",
+"New York Knicks"
+],
+[
+"Кливленд",
+"Cleveland Cavaliers"
 ]
 ],
 "div": "NBA",
