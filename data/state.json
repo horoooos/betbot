@@ -3016,10 +3016,10 @@
    }
   },
   "source": {
-   "last_success": "2026-11-25T22:22:18.479798+00:00",
-   "parsed": 358,
-   "added": 126,
-   "discovered_matches": 54,
+   "last_success": "2026-11-25T22:42:19.142188+00:00",
+   "parsed": 352,
+   "added": 129,
+   "discovered_matches": 53,
    "pages": 18,
    "errors": [],
    "parsed_by_sport": {
@@ -3032,13 +3032,13 @@
    }
   },
   "error": null,
-  "tips": 17331,
+  "tips": 17366,
   "snapshots": 357,
-  "unmapped_markets": 26526,
-  "quote_matches": 113
+  "unmapped_markets": 26620,
+  "quote_matches": 114
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-26T01:40:19.078177+03:00",
+  "last_poll": "2026-11-26T01:42:19.142188+03:00",
   "cursor": "433",
   "posts": [
    {
@@ -6003,7 +6003,7 @@
   },
   "football|BRA|401841319": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-25T22:32:38.915008+00:00",
+   "checked_at": "2026-11-25T22:42:48.849860+00:00",
    "kickoff": "2026-11-26T02:00:00+03:00",
    "sport": "football",
    "id": "401841319",
@@ -6018,7 +6018,7 @@
   },
   "football|COL|401934687": {
    "reason": "edge_below_minimum",
-   "checked_at": "2026-11-25T22:32:39.246733+00:00",
+   "checked_at": "2026-11-25T22:42:49.184149+00:00",
    "kickoff": "2026-11-26T02:20:00+03:00",
    "sport": "football",
    "id": "401934687",
