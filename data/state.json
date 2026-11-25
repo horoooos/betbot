@@ -5,7 +5,7 @@
  },
  "learned": "2026-11-25",
  "schedule_day": "2026-11-25",
- "content_slot": "2026-11-25-20",
+ "content_slot": "2026-11-25-22",
  "news_seen": [
   "https://www.sport-express.ru/football/spain/news/barselona-vilyarreal-yamal-ne-realizoval-penalti-na-23-y-minute-2477658/",
   "https://www.sport-express.ru/football/rfpl/news/gendirektor-dinamo-pivovarov-ne-hochu-kommentirovat-slova-karpina-o-nedoverii-k-klubam-2477656/",
@@ -1563,7 +1563,7 @@
  "value_day": "2026-11-25",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-25",
- "site_stamp": "1548|9519|2026-11-25 21|6|19a8fbb48844bb27",
+ "site_stamp": "1548|9520|2026-11-25 22|6|19a8fbb48844bb27",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1721,7 +1721,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 9519,
+ "dz_last": 9520,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2850,7 +2850,7 @@
   "external_sources": {
    "providers": {
     "legalbet": {
-     "at": "2026-11-25T18:28:28.621357+00:00",
+     "at": "2026-11-25T19:00:28.373793+00:00",
      "status": "ok",
      "discovered": 6,
      "pages": 6,
@@ -2861,29 +2861,29 @@
      "contexts": 6
     },
     "livesport": {
-     "at": "2026-11-25T18:28:28.621357+00:00",
+     "at": "2026-11-25T19:00:28.373793+00:00",
      "status": "ok",
-     "discovered": 20,
+     "discovered": 28,
      "pages": 6,
-     "opinions": 8,
-     "mapped": 4,
-     "articles_available": 38,
-     "next_offset": 19,
+     "opinions": 6,
+     "mapped": 3,
+     "articles_available": 47,
+     "next_offset": 25,
      "contexts": 6
     },
     "metaratings": {
-     "at": "2026-11-25T18:28:28.621357+00:00",
+     "at": "2026-11-25T19:00:28.373793+00:00",
      "status": "ok",
-     "discovered": 16,
+     "discovered": 8,
      "pages": 6,
-     "opinions": 20,
-     "mapped": 0,
-     "articles_available": 38,
-     "next_offset": 18,
-     "contexts": 5
+     "opinions": 24,
+     "mapped": 4,
+     "articles_available": 39,
+     "next_offset": 8,
+     "contexts": 6
     },
     "rb": {
-     "at": "2026-11-25T18:28:28.621357+00:00",
+     "at": "2026-11-25T19:00:28.373793+00:00",
      "status": "ok",
      "discovered": 0,
      "pages": 0,
@@ -2894,21 +2894,21 @@
      "contexts": 0
     },
     "vseprosport": {
-     "at": "2026-11-25T18:28:28.621357+00:00",
+     "at": "2026-11-25T19:00:28.373793+00:00",
      "status": "ok",
      "discovered": 7,
      "pages": 5,
      "opinions": 0,
      "mapped": 0,
      "articles_available": 10,
-     "next_offset": 6,
+     "next_offset": 12,
      "page_errors": 1,
      "contexts": 1
     }
    },
-   "opinions": 43,
+   "opinions": 46,
    "snapshots": 0,
-   "contexts": 104,
+   "contexts": 109,
    "model": {
     "weight": 0.0,
     "status": "collecting",
@@ -3022,12 +3022,12 @@
   },
   "error": null,
   "tips": 16951,
-  "snapshots": 349,
+  "snapshots": 355,
   "unmapped_markets": 25905,
   "quote_matches": 107
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-25T21:58:27.852620+03:00",
+  "last_poll": "2026-11-25T22:00:28.373793+03:00",
   "cursor": "426",
   "posts": [
    {
@@ -3827,7 +3827,8 @@
    "401915738": "pre",
    "401915804": "pre",
    "401915801": "pre",
-   "401841329": "pre"
+   "401841329": "pre",
+   "401931982": "pre"
   },
   "daily": {
    "day": "2026-11-25"
