@@ -7,8 +7,6 @@
  "schedule_day": "2026-11-25",
  "content_slot": "2026-11-25-20",
  "news_seen": [
-  "https://www.sport-express.ru/basketball/nba/news/centrovoy-san-antonio-viktor-vembanyama-pervym-v-istorii-nba-nabral-50-ochkov-s-5-blok-shotami-i-5-trehochkovymi-2477608/",
-  "parivision-ili-team-liquid-kto-stanet-liderom-gruppy-c-na-blast-slam-ix",
   "https://www.sport-express.ru/football/france/news/lequipe-due-propustit-neskolko-mesyacev-iz-za-travmy-krestoobraznoy-svyazki-kolena-2477625/",
   "https://www.sport-express.ru/football/rfpl/news/sluckiy-nazval-glavnoy-oshibkoy-v-karere-sovmeschenie-raboty-v-cska-i-sbornoy-rossii-2477623/",
   "https://www.sport-express.ru/hockey/russia/news/umer-sovetnik-prezidenta-fhr-po-sudeystvu-anatoliy-barinov-2477627/",
@@ -506,9 +504,11 @@
   "https://www.sport-express.ru/football/rfpl/news/kuznecov-nazval-pozicii-kotorye-cska-neobhodimo-usilit-v-zimnee-transfernoe-okno-2478941/",
   "https://www.sport-express.ru/basketball/nba/news/nba-planiruet-privlech-ne-menee-10-milliardov-evro-na-stroitelstvo-i-rekonstrukciyu-basketbolnyh-aren-v-evrope-2478904/",
   "vydokhshiisya-pereotsenennyi-i-zazhravshiisya-kassad-i-s1mple-ustroili-perepalku",
-  "https://www.sport-express.ru/football/rfpl/news/evseev-obyasnil-pochemu-ne-schitaet-barko-luchshim-v-rpl-zabivay-otdavay-a-chto-vdol-polya-begat-2478857/"
+  "https://www.sport-express.ru/football/rfpl/news/evseev-obyasnil-pochemu-ne-schitaet-barko-luchshim-v-rpl-zabivay-otdavay-a-chto-vdol-polya-begat-2478857/",
+  "magisk-posle-vyleta-iz-pgl-major-singapore-2026-nam-nuzhno-reshit-problemy-a",
+  "turniry-po-cs2-popali-v-programmu-esports-world-cup-do-2028-goda"
  ],
- "news_i": 1,
+ "news_i": 2,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1695,7 +1695,7 @@
  "streak_day": {
   "2026-11-22": 2
  },
- "news_next": "2026-11-25T21:00:27.276416+03:00",
+ "news_next": "2026-11-25T21:32:27.788737+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1727,7 +1727,6 @@
  "vk_mode": "photo",
  "dz_err": null,
  "img_used": [
-  "https://upload.wikimedia.org/wikipedia/commons/9/9a/Amkar-Loco_%281%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
   "https://upload.wikimedia.org/wikipedia/commons/6/6d/Dinamo-Rostov15_%283%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
   "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e0/%22La_Gazzetta_dello_Sport%22_-_diffusione_media_del_quotidiano_-_avarage_daily_newspaper_circulation_%281976-%29.png/1280px-%22La_Gazzetta_dello_Sport%22_-_diffusione_media_del_quotidiano_-_avarage_daily_newspaper_circulation_%281976-%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
   "https://images.cybersport.ru/images/as-is/plain/f9/f9155943-0ee2-468d-82b4-c11231e8b56a.jpg",
@@ -2026,7 +2025,8 @@
   "https://images.cybersport.ru/images/as-is/plain/ee/ee09f27a-18dc-479f-9616-171165132e0f.jpg",
   "https://upload.wikimedia.org/wikipedia/commons/f/f1/CSKA-RM18_%2812%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
   "https://images.cybersport.ru/images/as-is/plain/dc/dce81d4b-c359-4b2f-8fca-c74bb3affe13.jpg",
-  "https://ss.sport-express.ru/userfiles/materials/224/2246818/1180x665.jpg"
+  "https://ss.sport-express.ru/userfiles/materials/224/2246818/1180x665.jpg",
+  "https://images.cybersport.ru/images/as-is/plain/c6/c649a40f-1065-44f7-b877-eeb9715f8b69.jpg"
  ],
  "indexnow_day": "2026-11-25",
  "vk_wall_err": null,
@@ -2455,7 +2455,8 @@
   "9494",
   "9503",
   "9504",
-  "9506"
+  "9506",
+  "9511"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -2816,11 +2817,12 @@
   "2026-11-25:новость:6b8be55ddd11832c21026b03",
   "2026-11-25:новость:cde575979df10fdd5fc8a662",
   "2026-11-25:новость:3dee4299ad5ec254f0305ce6",
-  "2026-11-25:новость:5108c46ef7ca563caf4d00e3"
+  "2026-11-25:новость:5108c46ef7ca563caf4d00e3",
+  "2026-11-25:новость:082b1332b4c9888e034e22bc"
  ],
  "dz_last_delivery": {
-  "source_id": 9506,
-  "message_id": 908,
+  "source_id": 9511,
+  "message_id": 909,
   "kind": "новость"
  },
  "learn_attempt_day": "2026-11-25",
@@ -3023,7 +3025,7 @@
   "quote_matches": 106
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-25T21:00:27.118327+03:00",
+  "last_poll": "2026-11-25T21:02:27.788737+03:00",
   "cursor": "422",
   "posts": [
    {
