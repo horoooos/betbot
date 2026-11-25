@@ -27987,7 +27987,7 @@
   "kickoff": "2026-11-25T13:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Scheduled",
   "home": {
    "id": "3385",
@@ -28778,6 +28778,9 @@
   "btn": 4,
   "close": {
    "H": 0.5677
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null,
+  "value_hit": null
  }
 }
