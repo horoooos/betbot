@@ -7,8 +7,6 @@
  "schedule_day": "2026-11-25",
  "content_slot": "2026-11-25-13",
  "news_seen": [
-  "https://www.sport-express.ru/hockey/nhl/news/napadayuschiy-vashingtona-aleksandr-ovechkin-prodlil-bezgolevuyu-seriyu-do-16-matchey-2477506/",
-  "https://www.sport-express.ru/hockey/nhl/news/ottava-los-andzheles-schet-4-2-rezultat-matcha-nhl-22-noyabrya-2026-2477505/",
   "https://www.sport-express.ru/hockey/nhl/news/vegas-vinnipeg-ivan-barbashev-zabil-5-y-gol-v-sezone-nhl-video-shayby-22-noyabrya-2026-2477515/",
   "https://www.sport-express.ru/hockey/nhl/news/sent-luis-nyu-dzhersi-schet-9-6-rezultat-matcha-nhl-22-noyabrya-2026-2477502/",
   "https://www.sport-express.ru/hockey/nhl/news/monreal-filadelfiya-schet-3-4-rezultat-matcha-nhl-22-noyabrya-2026-2477501/",
@@ -506,9 +504,11 @@
   "https://www.sport-express.ru/basketball/nba/news/flegg-oboshel-dyuranta-po-kolichestvu-matchey-s-20-i-bolee-ochkami-do-20-letiya-v-nba-2478721/",
   "flyquest-proshla-na-vtoroi-yetap-pgl-major-singapore-2026-obygrav-imperial",
   "https://www.sport-express.ru/football/champions-league/news/trener-sabaha-dambrauskas-zayavil-chto-emu-trudno-nayti-u-barselony-slabye-mesta-2478771/",
-  "https://www.sport-express.ru/football/rfpl/news/bolelschiki-zenita-vpervye-ispolnili-klubnyy-gimn-na-zhestovom-yazyke-2478770/"
+  "https://www.sport-express.ru/football/rfpl/news/bolelschiki-zenita-vpervye-ispolnili-klubnyy-gimn-na-zhestovom-yazyke-2478770/",
+  "chopper-pro-flyquest-na-meidzhore-magiya-jks-v-sile",
+  "valve-mozhet-dobavit-podderzhku-predmetov-dlya-lichnostei-v-dota-2"
  ],
- "news_i": 1,
+ "news_i": 2,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1563,7 +1563,7 @@
  "value_day": "2026-11-25",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-25",
- "site_stamp": "1544|9476|2026-11-25 14|6|c7f7baf30fa0e775",
+ "site_stamp": "1545|9477|2026-11-25 14|6|1be07bf74ed8dbf8",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1695,7 +1695,7 @@
  "streak_day": {
   "2026-11-22": 2
  },
- "news_next": "2026-11-25T14:53:19.656255+03:00",
+ "news_next": "2026-11-25T15:21:19.635981+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1721,13 +1721,12 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 9476,
+ "dz_last": 9477,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
  "dz_err": null,
  "img_used": [
-  "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/Academy_Sports_%2B_Outdoors_-_Sarah_Stierch_-_May_2024_21.jpg/1280px-Academy_Sports_%2B_Outdoors_-_Sarah_Stierch_-_May_2024_21.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
   "https://images.cybersport.ru/images/as-is/plain/76/76178cea-468f-46db-9514-91a2dc220909.jpg",
   "https://ss.sport-express.ru/userfiles/materials/224/2243116/1180x665.jpg",
   "https://images.cybersport.ru/images/as-is/plain/67/6705775c-a60d-44f3-930b-7ece288fef2b.jpg",
@@ -2026,7 +2025,8 @@
   "https://images.cybersport.ru/images/as-is/plain/40/40523410-9bfd-44e3-b927-e74f00de3b1e.jpg",
   "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0a/FC_Dynamo_Kyiv_vs_FC_Arsenal_Kyiv_10-03-2019_%281%29.jpg/1280px-FC_Dynamo_Kyiv_vs_FC_Arsenal_Kyiv_10-03-2019_%281%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
   "https://images.cybersport.ru/images/as-is/plain/86/86c6dc53-279e-4191-8fb9-49f3f7ac0599.jpg",
-  "https://ss.sport-express.ru/userfiles/materials/224/2246722/1180x665.jpg"
+  "https://ss.sport-express.ru/userfiles/materials/224/2246722/1180x665.jpg",
+  "https://images.cybersport.ru/images/as-is/plain/b3/b321fbe9-dcf1-4b56-908d-9e17d6213b01.jpg"
  ],
  "indexnow_day": "2026-11-25",
  "vk_wall_err": null,
@@ -2442,7 +2442,8 @@
   "9471",
   "9474",
   "9475",
-  "9476"
+  "9476",
+  "9478"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -2790,11 +2791,12 @@
   "2026-11-25:новость:d0b8a2211846a1d1ab6014ca",
   "2026-11-25:новость:f9275ae812163fa4d9001f4c",
   "2026-11-25:новость:da46275058922748faba5c49",
-  "2026-11-25:новость:db244ebccf742b050e76a0af"
+  "2026-11-25:новость:db244ebccf742b050e76a0af",
+  "2026-11-25:новость:2607ea8d5cf61498c1a283e7"
  ],
  "dz_last_delivery": {
-  "source_id": 9476,
-  "message_id": 895,
+  "source_id": 9478,
+  "message_id": 896,
   "kind": "новость"
  },
  "learn_attempt_day": "2026-11-25",
@@ -2927,15 +2929,15 @@
   "model": {
    "weight": 0.0,
    "status": "baseline_better",
-   "settled_matches": 140,
+   "settled_matches": 141,
    "required_matches": 100,
-   "trained_at": "2026-11-25T05:26:32.918242+00:00",
+   "trained_at": "2026-11-25T11:54:19.635981+00:00",
    "candidate_weight": 0.0,
    "train_matches": 107,
-   "validation_matches": 32,
+   "validation_matches": 33,
    "validation_from": "2026-11-23T00:00:00+00:00",
-   "validation_logloss": 3.0680780791200806,
-   "validation_baseline_logloss": 3.0680780791200806
+   "validation_logloss": 3.047397075346433,
+   "validation_baseline_logloss": 3.047397075346433
   },
   "sport_models": {
    "hockey": {
@@ -2975,10 +2977,10 @@
    }
   },
   "source": {
-   "last_success": "2026-11-25T11:34:18.943805+00:00",
-   "parsed": 350,
-   "added": 68,
-   "discovered_matches": 34,
+   "last_success": "2026-11-25T11:54:19.635981+00:00",
+   "parsed": 354,
+   "added": 55,
+   "discovered_matches": 38,
    "pages": 18,
    "errors": [],
    "parsed_by_sport": {
@@ -2991,13 +2993,13 @@
    }
   },
   "error": null,
-  "tips": 16236,
+  "tips": 16256,
   "snapshots": 339,
-  "unmapped_markets": 24766,
+  "unmapped_markets": 24801,
   "quote_matches": 101
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-25T14:52:19.391320+03:00",
+  "last_poll": "2026-11-25T14:54:19.635981+03:00",
   "cursor": "412",
   "posts": [
    {
@@ -3696,7 +3698,7 @@
    "401934706": "post",
    "401933738": "post",
    "401877527": "in",
-   "401877528": "in",
+   "401877528": "post",
    "401877546": "in",
    "401877529": "in",
    "401877530": "in",
