@@ -3,7 +3,7 @@
   "1X2": 0.0,
   "OU25": 0.0
  },
- "learned": "2026-11-25",
+ "learned": "2026-11-26",
  "schedule_day": "2026-11-25",
  "content_slot": "2026-11-25-23",
  "news_seen": [
@@ -1563,7 +1563,7 @@
  "value_day": "2026-11-25",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-25",
- "site_stamp": "1552|9548|2026-11-25 23|6|60d3e52db2cc8cc9",
+ "site_stamp": "1552|9548|2026-11-26 00|6|60d3e52db2cc8cc9",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1576,7 +1576,7 @@
    "NBA|401909320"
   ]
  },
- "value_check": "2026-11-25-7",
+ "value_check": "2026-11-26-0",
  "express_risk": {
   "msg": 9019,
   "legs": [
@@ -2028,7 +2028,7 @@
   "https://images.cybersport.ru/images/as-is/plain/4e/4e9baaa1-aae3-4d2b-8e72-ac39b053ead6.jpg",
   "https://upload.wikimedia.org/wikipedia/commons/7/73/Maksim_Mukhin_2020.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
  ],
- "indexnow_day": "2026-11-25",
+ "indexnow_day": "2026-11-26",
  "vk_wall_err": null,
  "shorts_day": "2026-11-25",
  "shorts_err": {
@@ -2833,7 +2833,7 @@
   "message_id": 913,
   "kind": "новость"
  },
- "learn_attempt_day": "2026-11-25",
+ "learn_attempt_day": "2026-11-26",
  "learn_diagnostics": {
   "objective": "shared_lambda_1X2_OU25",
   "rows": 8000,
@@ -2844,11 +2844,11 @@
   "history_until": "2026-11-24",
   "candidate_weight": 0.0,
   "weight": 0.0,
-  "train_logloss": 0.8420800545006316,
+  "train_logloss": 0.8414942055724828,
   "validation_logloss": 0.8200641566836838,
   "validation_market_logloss": 0.8200641566836838
  },
- "learned_at": "2026-11-25T00:01:20.457703+03:00",
+ "learned_at": "2026-11-26T00:00:32.893281+03:00",
  "learn_version": "shared-lambda-v2",
  "learn_error": null,
  "learn_retry_at": 0,
@@ -2962,15 +2962,15 @@
   "model": {
    "weight": 0.0,
    "status": "baseline_better",
-   "settled_matches": 148,
+   "settled_matches": 149,
    "required_matches": 100,
-   "trained_at": "2026-11-25T20:58:32.894094+00:00",
+   "trained_at": "2026-11-25T21:00:32.893281+00:00",
    "candidate_weight": 0.0,
    "train_matches": 107,
-   "validation_matches": 40,
+   "validation_matches": 41,
    "validation_from": "2026-11-23T00:00:00+00:00",
-   "validation_logloss": 2.9737059808486976,
-   "validation_baseline_logloss": 2.9737059808486976
+   "validation_logloss": 2.962059777418734,
+   "validation_baseline_logloss": 2.962059777418734
   },
   "sport_models": {
    "hockey": {
@@ -3010,11 +3010,11 @@
    }
   },
   "source": {
-   "last_success": "2026-11-25T20:38:33.045660+00:00",
-   "parsed": 358,
-   "added": 95,
-   "discovered_matches": 40,
-   "pages": 18,
+   "last_success": "2026-11-25T21:00:32.893281+00:00",
+   "parsed": 367,
+   "added": 104,
+   "discovered_matches": 55,
+   "pages": 19,
    "errors": [],
    "parsed_by_sport": {
     "soccer": 50,
@@ -3026,13 +3026,13 @@
    }
   },
   "error": null,
-  "tips": 17119,
-  "snapshots": 356,
-  "unmapped_markets": 26161,
-  "quote_matches": 110
+  "tips": 17170,
+  "snapshots": 357,
+  "unmapped_markets": 26214,
+  "quote_matches": 111
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-25T23:58:32.894094+03:00",
+  "last_poll": "2026-11-26T00:00:32.893281+03:00",
   "cursor": "430",
   "posts": [
    {
@@ -3742,7 +3742,7 @@
    "401899537": "post",
    "401899534": "post",
    "401899533": "post",
-   "401899531": "in",
+   "401899531": "post",
    "401880140": "in",
    "401880139": "in",
    "401880137": "in",
@@ -3836,7 +3836,7 @@
    "401931982": "pre"
   },
   "daily": {
-   "day": "2026-11-25"
+   "day": "2026-11-26"
   }
  },
  "forecast_decisions": {
@@ -12865,7 +12865,7 @@
     }
    },
    "football|I2|401899533": {
-    "status": "open",
+    "status": "settled",
     "id": "401899533",
     "sport": "football",
     "div": "I2",
@@ -12905,7 +12905,10 @@
        "price_kind": "author_recorded"
       }
      ]
-    }
+    },
+    "settled_at": "2026-11-25T21:00:32.893281+00:00",
+    "hit": false,
+    "profit_pct": -0.5
    },
    "football|E1|401880140": {
     "status": "open",
