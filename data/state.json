@@ -533,7 +533,8 @@
   "https://www.sport-express.ru/football/champions-league/news/viktor-dekeresh-kommentariy-po-nichey-arsenala-i-borussii-v-matche-ligi-chempionov-2478603/",
   "https://www.sport-express.ru/tennis/atp/news/rinderknehu-grozit-chetyrehletnyaya-diskvalifikaciya-2478610/",
   "https://www.sport-express.ru/football/champions-league/news/frenki-de-yong-kommentariy-po-matchu-barselony-protiv-sabaha-v-lige-chempionov-2478635/",
-  "https://www.sport-express.ru/hockey/nhl/news/napadayuschiy-sent-luisa-buchnevich-poluchil-travmu-verhney-chasti-tela-2478636/"
+  "https://www.sport-express.ru/hockey/nhl/news/napadayuschiy-sent-luisa-buchnevich-poluchil-travmu-verhney-chasti-tela-2478636/",
+  "https://www.sport-express.ru/tennis/davis-cup/news/alkaras-mozhet-propustit-chetvertfinal-kubka-devisa-iz-za-problem-s-bedrom-2478637/"
  ],
  "news_i": 0,
  "oddspapi": {
@@ -1590,7 +1591,7 @@
  "value_day": "2026-11-24",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-24",
- "site_stamp": "1543|9451|2026-11-25 08|6|dcade50493c6495b",
+ "site_stamp": "1543|9453|2026-11-25 08|6|dcade50493c6495b",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1722,7 +1723,7 @@
  "streak_day": {
   "2026-11-22": 2
  },
- "news_next": "2026-11-25T08:26:32.955879+03:00",
+ "news_next": "2026-11-25T08:34:32.292105+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1747,7 +1748,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 9451,
+ "dz_last": 9453,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2088,7 +2089,7 @@
  "vk_photos": [],
  "vk_photo_until": 1794644243.1147308,
  "vk_photo_cursor": {},
- "vk_story_last": 9451,
+ "vk_story_last": 9453,
  "vk_story_err": null,
  "push_weekly": "2026-47",
  "vk_story_at": 1795573591.2175958,
@@ -3005,7 +3006,7 @@
   "quote_matches": 97
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-25T08:26:32.918242+03:00",
+  "last_poll": "2026-11-25T08:28:32.292105+03:00",
   "cursor": "403",
   "posts": [
    {
@@ -10907,7 +10908,7 @@
     "profit_pct": -0.5
    },
    "football|USA|401933738": {
-    "status": "open",
+    "status": "settled",
     "id": "401933738",
     "sport": "football",
     "div": "USA",
@@ -10947,7 +10948,10 @@
        "price_kind": "author_recorded"
       }
      ]
-    }
+    },
+    "settled_at": "2026-11-25T05:28:32.292105+00:00",
+    "hit": false,
+    "profit_pct": -0.5
    },
    "basketball|NBA|401909316": {
     "status": "open",
