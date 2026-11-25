@@ -2862,7 +2862,7 @@
   "external_sources": {
    "providers": {
     "legalbet": {
-     "at": "2026-11-25T22:05:40.567824+00:00",
+     "at": "2026-11-25T22:36:18.776769+00:00",
      "status": "ok",
      "discovered": 5,
      "pages": 5,
@@ -2873,29 +2873,29 @@
      "contexts": 5
     },
     "livesport": {
-     "at": "2026-11-25T22:05:40.567824+00:00",
+     "at": "2026-11-25T22:36:18.776769+00:00",
      "status": "ok",
-     "discovered": 24,
+     "discovered": 27,
      "pages": 6,
-     "opinions": 6,
-     "mapped": 3,
+     "opinions": 4,
+     "mapped": 2,
      "articles_available": 43,
-     "next_offset": 13,
+     "next_offset": 19,
      "contexts": 6
     },
     "metaratings": {
-     "at": "2026-11-25T22:05:40.567824+00:00",
+     "at": "2026-11-25T22:36:18.776769+00:00",
      "status": "ok",
-     "discovered": 7,
-     "pages": 6,
-     "opinions": 24,
+     "discovered": 2,
+     "pages": 2,
+     "opinions": 8,
      "mapped": 0,
-     "articles_available": 38,
-     "next_offset": 6,
-     "contexts": 6
+     "articles_available": 39,
+     "next_offset": 2,
+     "contexts": 2
     },
     "rb": {
-     "at": "2026-11-25T22:05:40.567824+00:00",
+     "at": "2026-11-25T22:36:18.776769+00:00",
      "status": "ok",
      "discovered": 1,
      "pages": 1,
@@ -2906,7 +2906,7 @@
      "contexts": 1
     },
     "vseprosport": {
-     "at": "2026-11-25T22:05:40.567824+00:00",
+     "at": "2026-11-25T22:36:18.776769+00:00",
      "status": "ok",
      "discovered": 4,
      "pages": 4,
@@ -2919,7 +2919,7 @@
    },
    "opinions": 46,
    "snapshots": 0,
-   "contexts": 125,
+   "contexts": 126,
    "model": {
     "weight": 0.0,
     "status": "collecting",
@@ -3038,28 +3038,9 @@
   "quote_matches": 113
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-26T01:34:18.531920+03:00",
-  "cursor": "432",
+  "last_poll": "2026-11-26T01:36:18.776769+03:00",
+  "cursor": "433",
   "posts": [
-   {
-    "post_id": 852,
-    "published_at": 1795564585,
-    "url": "https://vk.com/wall-228963529_852",
-    "title": "Aurora Gaming обыграла OG и вышла в плей-офф BLAST Slam IX",
-    "text": "вљ”пёЏ Aurora Gaming победила OG в решающем матче сетки последнего шанса турнира BLAST Slam IX по Dota 2. Формат встречи – best-of-3, и команда «Aurora Gaming» одержала победу со счётом 2:1.\n\nрџ“Њ Это позволило им занять место в следующей стадии ивента.\n\nрџ“Љ Плей-офф турнира стартует 26 ноября в 13:00 мск. Сам BLAST Slam IX проходит онлайн с 20 по 29 ноября, в нём участвуют 16 команд, борющихся за призовой фонд в $750 тыс.\n\nПодписывайтесь на «АИ СТАВИТ» — спортивные новости каждый день.\n\n#киберспорт #Dota #новостиспорта #спорт #главное #аиставит\n\nрџ“Љ Подробнее на сайте рџ‘‡",
-    "checks": {
-     "encoding_clean": false,
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": true,
-     "details_present": true,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-25T02:56:43.938684+03:00"
-   },
    {
     "post_id": 853,
     "published_at": 1795591826,
@@ -3610,6 +3591,25 @@
     },
     "status": "needs_review",
     "observed_at": "2026-11-26T00:33:39.896410+03:00"
+   },
+   {
+    "post_id": 882,
+    "published_at": 1795646173,
+    "url": "https://vk.com/wall-228963529_882",
+    "title": "«Рубин» победил «Родину» в серии пенальти 3:0",
+    "text": "рџ“° «Рубин» на своем поле обыграл «Родину» в матче 6-го тура Пути РПЛ FONBET Кубка России. Основное время закончилось ничьей 1:1, а в серии пенальти казанцы победили со счётом 3:0.\n\nрџ“Љ На 38-й минуте гостей открыл счёт Артём Максименко, а хозяевами сравнял Эдди Сальседо на 69-й минуте.\n\nрџ§¤ Вратарь «Рубина» Артур Нигматуллин продемонстрировал уверенную игру, сделав три сейва в серии пенальти, что обеспечило чистый лист сопернику.\n\nрџЏ† После победы «Рубин» получил 6 очков и занял третье место в группе A. Команда из Казани выйдет в первом этапе 1/8 финала Пути регионов. «Родина» с 4 очками завершила групповой турнир на последнем месте и выбывает из Кубка.\n\nрџ“… Следующие матчи Кубка России запланированы на 24-26 ноября: «Оренбург» — «Спартак», «Динамо» — «Факел».\n\nПодписывайтесь на «АИ СТАВИТ» — спортивные новости каждый день.\n\n#футбол #РПЛ #Максименко #Рубин #новостиспорта #спорт #главное #аиставит\n\nрџ“Љ Подробнее на сайте рџ‘‡",
+    "checks": {
+     "encoding_clean": false,
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": true,
+     "details_present": true,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-26T01:36:18.776769+03:00"
    }
   ],
   "status": "observing"
