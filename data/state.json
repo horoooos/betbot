@@ -2818,40 +2818,40 @@
   "external_sources": {
    "providers": {
     "legalbet": {
-     "at": "2026-11-25T10:40:49.017738+00:00",
+     "at": "2026-11-25T11:10:49.355317+00:00",
      "status": "ok",
-     "discovered": 4,
-     "pages": 4,
-     "opinions": 4,
+     "discovered": 5,
+     "pages": 5,
+     "opinions": 5,
      "mapped": 0,
-     "articles_available": 9,
+     "articles_available": 10,
      "next_offset": 7,
-     "contexts": 4
+     "contexts": 5
     },
     "livesport": {
-     "at": "2026-11-25T10:40:49.017738+00:00",
+     "at": "2026-11-25T11:10:49.355317+00:00",
      "status": "ok",
-     "discovered": 14,
+     "discovered": 15,
      "pages": 6,
-     "opinions": 12,
-     "mapped": 6,
-     "articles_available": 23,
-     "next_offset": 9,
+     "opinions": 4,
+     "mapped": 3,
+     "articles_available": 24,
+     "next_offset": 15,
      "contexts": 6
     },
     "metaratings": {
-     "at": "2026-11-25T10:40:49.017738+00:00",
+     "at": "2026-11-25T11:10:49.355317+00:00",
      "status": "ok",
      "discovered": 11,
      "pages": 6,
      "opinions": 24,
-     "mapped": 2,
+     "mapped": 4,
      "articles_available": 39,
-     "next_offset": 15,
+     "next_offset": 10,
      "contexts": 6
     },
     "rb": {
-     "at": "2026-11-25T10:40:49.017738+00:00",
+     "at": "2026-11-25T11:10:49.355317+00:00",
      "status": "ok",
      "discovered": 2,
      "pages": 2,
@@ -2862,21 +2862,21 @@
      "contexts": 2
     },
     "vseprosport": {
-     "at": "2026-11-25T10:40:49.017738+00:00",
+     "at": "2026-11-25T11:10:49.355317+00:00",
      "status": "ok",
-     "discovered": 4,
-     "pages": 2,
+     "discovered": 5,
+     "pages": 3,
      "opinions": 0,
      "mapped": 0,
      "articles_available": 10,
-     "next_offset": 4,
+     "next_offset": 9,
      "page_errors": 2,
-     "contexts": 2
+     "contexts": 3
     }
    },
    "opinions": 39,
    "snapshots": 0,
-   "contexts": 89,
+   "contexts": 91,
    "model": {
     "weight": 0.0,
     "status": "collecting",
@@ -2995,7 +2995,7 @@
   "quote_matches": 101
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-25T14:08:49.594935+03:00",
+  "last_poll": "2026-11-25T14:10:49.355317+03:00",
   "cursor": "410",
   "posts": [
    {
