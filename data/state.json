@@ -1563,7 +1563,7 @@
  "value_day": "2026-11-25",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-25",
- "site_stamp": "1562|9617|2026-11-26 08|6|05869622aeb27d85",
+ "site_stamp": "1563|9618|2026-11-26 08|6|2716d18750674e12",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1721,7 +1721,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 9617,
+ "dz_last": 9618,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2972,15 +2972,15 @@
   "model": {
    "weight": 0.0,
    "status": "baseline_better",
-   "settled_matches": 159,
+   "settled_matches": 160,
    "required_matches": 100,
-   "trained_at": "2026-11-26T03:26:24.697411+00:00",
+   "trained_at": "2026-11-26T05:13:54.754830+00:00",
    "candidate_weight": 0.0,
    "train_matches": 117,
-   "validation_matches": 39,
+   "validation_matches": 40,
    "validation_from": "2026-11-24T00:00:00+00:00",
-   "validation_logloss": 2.7602239644390387,
-   "validation_baseline_logloss": 2.7602239644390387
+   "validation_logloss": 2.765194906039583,
+   "validation_baseline_logloss": 2.765194906039583
   },
   "sport_models": {
    "hockey": {
@@ -3042,7 +3042,7 @@
   "quote_matches": 122
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-26T08:11:54.865489+03:00",
+  "last_poll": "2026-11-26T08:13:54.754830+03:00",
   "cursor": "435",
   "posts": [
    {
@@ -3739,7 +3739,7 @@
    "401909324": "in",
    "401909325": "in",
    "1816494": "pre",
-   "401931998": "in",
+   "401931998": "post",
    "1816493": "pre",
    "401892781": "post",
    "401892782": "post",
