@@ -709,6 +709,146 @@ null
 },
 {
 "sport": "football",
+"id": "401915520",
+"league": "Европа · Лига Европы",
+"kickoff": "2026-11-26T20:45:00+03:00",
+"home": "Ред Булл",
+"away": "Арарат Москва",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/2790.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/20024.png",
+"hid": "2790",
+"aid": "20024",
+"bb": "https://betboom.ru/search?query=%D0%91%D1%83%D0%BB%D0%BB&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/uefa.europa",
+"url": "live.html?s=football&p=soccer%2Fuefa.europa&e=401915520&h=%D0%A0%D0%B5%D0%B4+%D0%91%D1%83%D0%BB%D0%BB&a=%D0%90%D1%80%D0%B0%D1%80%D0%B0%D1%82+%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0",
+"participants": [
+[
+"Ред Булл",
+"RB Salzburg"
+],
+[
+"Арарат Москва",
+"Ararat-Armenia"
+]
+],
+"div": "UEL",
+"state": "pre",
+"bo": null,
+"prediction": "predictions/2026-11-26-red-bull-ararat-moskva-401915520.html",
+"hs": "0",
+"as": "0",
+"tip": "ТБ 3.5 · 1.71",
+"top": false,
+"bot": {
+"main": {
+"label": "ТБ 3.5",
+"p": 0.552,
+"odds": 1.71,
+"est": false
+},
+"bold": null,
+"markets": [
+[
+"П1",
+0.807,
+1.182
+],
+[
+"Ничья",
+0.125,
+8.0
+],
+[
+"П2",
+0.068,
+13.0
+],
+[
+"1X",
+0.932,
+null
+],
+[
+"X2",
+0.193,
+null
+],
+[
+"ТБ 1.5",
+0.907,
+null
+],
+[
+"ТБ 2.5",
+0.751,
+null
+],
+[
+"ТМ 2.5",
+0.249,
+null
+],
+[
+"ТБ 3.5",
+0.552,
+1.714
+],
+[
+"Обе забьют — да",
+0.552,
+null
+],
+[
+"Обе забьют — нет",
+0.448,
+null
+],
+[
+"ИТ1 больше 1.5",
+0.811,
+null
+],
+[
+"ИТ2 больше 1.5",
+0.211,
+null
+],
+[
+"Ф1 (−1.5)",
+0.627,
+null
+],
+[
+"Ф2 (+1.5)",
+0.373,
+null
+]
+],
+"bar": [
+0.8069754063012686,
+0.12548381381590684,
+0.06754077988282517
+],
+"center": "Ожидаемые голы (xG) 3.1 : 0.9",
+"scores": [
+[
+"3:0",
+0.095
+],
+[
+"2:0",
+0.093
+],
+[
+"3:1",
+0.081
+]
+]
+},
+"lt": null
+},
+{
+"sport": "football",
 "id": "401915506",
 "league": "Европа · Лига Европы",
 "kickoff": "2026-11-26T20:45:00+03:00",
@@ -764,41 +904,6 @@ null
 [
 "Левски",
 "Levski Sofia"
-]
-],
-"div": "UEL",
-"state": "pre",
-"bo": null,
-"prediction": "",
-"hs": "0",
-"as": "0",
-"tip": "",
-"top": false,
-"bot": null,
-"lt": null
-},
-{
-"sport": "football",
-"id": "401915520",
-"league": "Европа · Лига Европы",
-"kickoff": "2026-11-26T20:45:00+03:00",
-"home": "Ред Булл",
-"away": "Арарат Москва",
-"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/2790.png",
-"al": "https://a.espncdn.com/i/teamlogos/soccer/500/20024.png",
-"hid": "2790",
-"aid": "20024",
-"bb": "https://betboom.ru/search?query=%D0%91%D1%83%D0%BB%D0%BB&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
-"path": "soccer/uefa.europa",
-"url": "live.html?s=football&p=soccer%2Fuefa.europa&e=401915520&h=%D0%A0%D0%B5%D0%B4+%D0%91%D1%83%D0%BB%D0%BB&a=%D0%90%D1%80%D0%B0%D1%80%D0%B0%D1%82+%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0",
-"participants": [
-[
-"Ред Булл",
-"RB Salzburg"
-],
-[
-"Арарат Москва",
-"Ararat-Armenia"
 ]
 ],
 "div": "UEL",
