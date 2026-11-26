@@ -942,7 +942,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "",
-"hs": "2",
+"hs": "3",
 "as": "0",
 "tip": "",
 "top": false,
@@ -1083,7 +1083,7 @@ null
 "bo": null,
 "prediction": "",
 "hs": "1",
-"as": "1",
+"as": "2",
 "tip": "",
 "top": false,
 "bot": null,
@@ -1223,7 +1223,7 @@ null
 "bo": null,
 "prediction": "",
 "hs": "0",
-"as": "0",
+"as": "1",
 "tip": "",
 "top": false,
 "bot": null,
@@ -3949,6 +3949,146 @@ null
 ]
 ],
 "div": "NBA",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "basketball",
+"id": "401909327",
+"league": "США · NBA",
+"kickoff": "2026-11-28T03:30:00+03:00",
+"home": "Детройт Пистонс",
+"away": "Милуоки Бакс",
+"hl": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/det.png",
+"al": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/mil.png",
+"hid": "8",
+"aid": "15",
+"bb": "https://betboom.ru/search?query=%D0%94%D0%B5%D1%82%D1%80%D0%BE%D0%B9%D1%82&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=basketball",
+"path": "basketball/nba",
+"url": "live.html?s=basketball&p=basketball%2Fnba&e=401909327&h=%D0%94%D0%B5%D1%82%D1%80%D0%BE%D0%B9%D1%82+%D0%9F%D0%B8%D1%81%D1%82%D0%BE%D0%BD%D1%81&a=%D0%9C%D0%B8%D0%BB%D1%83%D0%BE%D0%BA%D0%B8+%D0%91%D0%B0%D0%BA%D1%81",
+"participants": [
+[
+"Детройт Пистонс",
+"Detroit Pistons"
+],
+[
+"Милуоки Бакс",
+"Milwaukee Bucks"
+]
+],
+"div": "NBA",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "basketball",
+"id": "401909328",
+"league": "США · NBA",
+"kickoff": "2026-11-28T03:30:00+03:00",
+"home": "Индиана Пэйсерс",
+"away": "Филадельфия Сиксерс",
+"hl": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/ind.png",
+"al": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/phi.png",
+"hid": "11",
+"aid": "20",
+"bb": "https://betboom.ru/search?query=%D0%98%D0%BD%D0%B4%D0%B8%D0%B0%D0%BD%D0%B0&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=basketball",
+"path": "basketball/nba",
+"url": "live.html?s=basketball&p=basketball%2Fnba&e=401909328&h=%D0%98%D0%BD%D0%B4%D0%B8%D0%B0%D0%BD%D0%B0+%D0%9F%D1%8D%D0%B9%D1%81%D0%B5%D1%80%D1%81&a=%D0%A4%D0%B8%D0%BB%D0%B0%D0%B4%D0%B5%D0%BB%D1%8C%D1%84%D0%B8%D1%8F+%D0%A1%D0%B8%D0%BA%D1%81%D0%B5%D1%80%D1%81",
+"participants": [
+[
+"Индиана Пэйсерс",
+"Indiana Pacers"
+],
+[
+"Филадельфия Сиксерс",
+"Philadelphia 76ers"
+]
+],
+"div": "NBA",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "basketball",
+"id": "401909329",
+"league": "США · NBA",
+"kickoff": "2026-11-28T03:30:00+03:00",
+"home": "Торонто Рэпторс",
+"away": "Бруклин Нетс",
+"hl": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/tor.png",
+"al": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/bkn.png",
+"hid": "28",
+"aid": "17",
+"bb": "https://betboom.ru/search?query=%D0%A2%D0%BE%D1%80%D0%BE%D0%BD%D1%82%D0%BE&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=basketball",
+"path": "basketball/nba",
+"url": "live.html?s=basketball&p=basketball%2Fnba&e=401909329&h=%D0%A2%D0%BE%D1%80%D0%BE%D0%BD%D1%82%D0%BE+%D0%A0%D1%8D%D0%BF%D1%82%D0%BE%D1%80%D1%81&a=%D0%91%D1%80%D1%83%D0%BA%D0%BB%D0%B8%D0%BD+%D0%9D%D0%B5%D1%82%D1%81",
+"participants": [
+[
+"Торонто Рэпторс",
+"Toronto Raptors"
+],
+[
+"Бруклин Нетс",
+"Brooklyn Nets"
+]
+],
+"div": "NBA",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "hockey",
+"id": "401892807",
+"league": "США · NHL",
+"kickoff": "2026-11-28T03:30:00+03:00",
+"home": "Айлендерс",
+"away": "Виннипег",
+"hl": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/nyi.png",
+"al": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/wpg.png",
+"hid": "12",
+"aid": "28",
+"bb": "https://betboom.ru/search?query=%D0%90%D0%B9%D0%BB%D0%B5%D0%BD%D0%B4%D0%B5%D1%80%D1%81&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=hockey",
+"path": "hockey/nhl",
+"url": "live.html?s=hockey&p=hockey%2Fnhl&e=401892807&h=%D0%90%D0%B9%D0%BB%D0%B5%D0%BD%D0%B4%D0%B5%D1%80%D1%81&a=%D0%92%D0%B8%D0%BD%D0%BD%D0%B8%D0%BF%D0%B5%D0%B3",
+"participants": [
+[
+"Айлендерс",
+"New York Islanders"
+],
+[
+"Виннипег",
+"Winnipeg Jets"
+]
+],
+"div": "NHL",
 "state": "pre",
 "bo": null,
 "prediction": "",
