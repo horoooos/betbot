@@ -7209,12 +7209,242 @@
   }
  },
  "NHL|401892790": {
-  "status": "waiting_data",
-  "kickoff": "2026-11-26T04:00:00+03:00",
-  "sport": "hockey",
+  "id": "401892790",
   "div": "NHL",
-  "reason": "no_qualified_real_market",
-  "retry_at": 1795653738.439021
+  "sport": "hockey",
+  "kickoff": "2026-11-26T04:00:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "detail": "Wed, November 25th at 8:00 PM EST",
+  "clock": "0:00",
+  "period": 0,
+  "home": {
+   "id": "9",
+   "name": "Dallas Stars",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/dal.png",
+   "color": "20864c",
+   "score": "0",
+   "record": "15-6-2",
+   "periods": [],
+   "ru": "Даллас"
+  },
+  "away": {
+   "id": "27",
+   "name": "Nashville Predators",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/nsh.png",
+   "color": "fdba31",
+   "score": "0",
+   "record": "12-6-5",
+   "periods": [],
+   "ru": "Нэшвилл"
+  },
+  "odds": {
+   "H": 1.588,
+   "A": 2.42,
+   "line": 5.5,
+   "over": 1.82,
+   "under": 2.02,
+   "spread": -1.5,
+   "sp_h": 2.7,
+   "sp_a": 1.488
+  },
+  "probs": {
+   "HK_ML_H": 0.6038070048926797,
+   "HK_ML_A": 0.3961929951073202,
+   "HK_H": 0.5184391696144182,
+   "HK_D": 0.16416891399665678,
+   "HK_A": 0.31739191638892494,
+   "HK_O4.5": 0.6910925838338623,
+   "HK_U4.5": 0.3089074161661377,
+   "HK_O5.5": 0.5260454504384509,
+   "HK_U5.5": 0.4739545495615492,
+   "HK_O6.5": 0.3657251988478119,
+   "HK_U6.5": 0.634274801152188,
+   "HK_IT1O1.5": 0.8324041513730662,
+   "HK_IT1O2.5": 0.6258345910178309,
+   "HK_IT1O3.5": 0.4035239397669779,
+   "HK_IT2O1.5": 0.7325060792547463,
+   "HK_IT2O2.5": 0.4814138900298697,
+   "HK_IT2O3.5": 0.26383787512325785,
+   "HK_H-1.5": 0.3521247271489992,
+   "HK_A+1.5": 0.6478752728510009,
+   "HK_A-1.5": 0.18348166254373746,
+   "HK_H+1.5": 0.8165183374562625
+  },
+  "labels": {
+   "HK_ML_H": "П1 (с ОТ и буллитами)",
+   "HK_ML_A": "П2 (с ОТ и буллитами)",
+   "HK_H": "П1 в основное время",
+   "HK_D": "Ничья в основное время",
+   "HK_A": "П2 в основное время",
+   "HK_O4.5": "ТБ 4.5",
+   "HK_U4.5": "ТМ 4.5",
+   "HK_O5.5": "ТБ 5.5",
+   "HK_U5.5": "ТМ 5.5",
+   "HK_O6.5": "ТБ 6.5",
+   "HK_U6.5": "ТМ 6.5",
+   "HK_IT1O1.5": "ИТ1 больше 1.5",
+   "HK_IT1O2.5": "ИТ1 больше 2.5",
+   "HK_IT1O3.5": "ИТ1 больше 3.5",
+   "HK_IT2O1.5": "ИТ2 больше 1.5",
+   "HK_IT2O2.5": "ИТ2 больше 2.5",
+   "HK_IT2O3.5": "ИТ2 больше 3.5",
+   "HK_H-1.5": "Ф1 (−1.5)",
+   "HK_A+1.5": "Ф2 (+1.5)",
+   "HK_A-1.5": "Ф2 (−1.5)",
+   "HK_H+1.5": "Ф1 (+1.5)"
+  },
+  "real": {
+   "HK_ML_H": 1.588,
+   "HK_ML_A": 2.42,
+   "HK_O5.5": 1.82,
+   "HK_U5.5": 2.02
+  },
+  "center": "Ожидаемые голы 3.2 : 2.6",
+  "bar": [
+   0.6038070048926797,
+   0,
+   0.3961929951073202
+  ],
+  "model": {
+   "lh": 3.2286071220059926,
+   "la": 2.5995553534931166
+  },
+  "stavka_signal": {
+   "status": "collecting",
+   "weight": 0.0,
+   "authors": 8,
+   "group": "hockey",
+   "snapshot": "NHL|401892790",
+   "source": "https://stavka.tv"
+  },
+  "research": {
+   "articles": [
+    {
+     "id": "64b1c9085da2e4fecf58738b",
+     "kind": "context",
+     "provider": "legalbet",
+     "source": "https://legalbet.ru/tips/prognoz-na-match-dallas-stars-neshvill-predators-26-noyabrya-10159/",
+     "sport": "hockey",
+     "div": "NHL",
+     "event_id": "401892790",
+     "kickoff": "2026-11-26T01:00:00+00:00",
+     "published_at": "2026-11-25T11:04:55+00:00",
+     "observed_at": "2026-11-25T11:11:13.371940+00:00",
+     "tables": []
+    },
+    {
+     "id": "a97a8711b97dbff62657f9bc",
+     "kind": "context",
+     "provider": "metaratings",
+     "source": "https://metaratings.ru/prognozy/hokkey/dallas-neshvill-prognoz-na-match-nhl-26-noyabrya-2026-goda/",
+     "sport": "hockey",
+     "div": "NHL",
+     "event_id": "401892790",
+     "kickoff": "2026-11-26T01:00:00+00:00",
+     "published_at": "2026-11-25T15:27:00+00:00",
+     "observed_at": "2026-11-25T20:34:52.878715+00:00",
+     "tables": []
+    }
+   ],
+   "dossier": null
+  },
+  "main": {
+   "key": "HK_ML_H",
+   "label": "П1 (с ОТ и буллитами)",
+   "p": 0.6038,
+   "odds": 1.59,
+   "est": false,
+   "stake": 0.5,
+   "strategy": "external_trial",
+   "selection_mode": "external_fallback",
+   "trial_expires_at": null,
+   "probability_origin": "baseline_model",
+   "model_edge": -0.03995,
+   "source_count": 8,
+   "source_refs": [
+    {
+     "author": "/predictors/sergey-shein",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/26-11-2026-dallas-stars-nashville-predators",
+     "published_at": "2026-11-25T07:55:00+00:00",
+     "observed_at": "2026-11-25T08:04:45.952445+00:00",
+     "odds": 1.6,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/golden-boy-1",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/26-11-2026-dallas-stars-nashville-predators",
+     "published_at": "2026-11-25T08:23:00+00:00",
+     "observed_at": "2026-11-25T08:24:46.028856+00:00",
+     "odds": 1.6,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/marsel-gafurov",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/26-11-2026-dallas-stars-nashville-predators",
+     "published_at": "2026-11-25T10:19:00+00:00",
+     "observed_at": "2026-11-25T10:30:48.700626+00:00",
+     "odds": 1.6,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/aleksandr-saska-ball",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/26-11-2026-dallas-stars-nashville-predators",
+     "published_at": "2026-11-25T11:47:00+00:00",
+     "observed_at": "2026-11-25T11:54:19.635981+00:00",
+     "odds": 1.6,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/sergei-exp",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/26-11-2026-dallas-stars-nashville-predators",
+     "published_at": "2026-11-25T11:57:00+00:00",
+     "observed_at": "2026-11-25T12:16:19.271919+00:00",
+     "odds": 1.6,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/ivan-brovkin-2",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/26-11-2026-dallas-stars-nashville-predators",
+     "published_at": "2026-11-25T13:42:00+00:00",
+     "observed_at": "2026-11-25T21:00:32.893281+00:00",
+     "odds": 1.6,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/leonel-messi-5",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/26-11-2026-dallas-stars-nashville-predators",
+     "published_at": "2026-11-25T18:04:00+00:00",
+     "observed_at": "2026-11-25T18:12:28.402798+00:00",
+     "odds": 1.58,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/denis-titov-6",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/26-11-2026-dallas-stars-nashville-predators",
+     "published_at": "2026-11-25T20:57:00+00:00",
+     "observed_at": "2026-11-25T21:00:32.893281+00:00",
+     "odds": 1.58,
+     "price_kind": "author_recorded"
+    }
+   ]
+  },
+  "bold": {},
+  "open": {
+   "HK_ML_H": 0.6038
+  },
+  "top": false,
+  "msg_id": 9581,
+  "btn": 4
  },
  "NHL|401892791": {
   "status": "waiting_data",
@@ -7222,7 +7452,7 @@
   "sport": "hockey",
   "div": "NHL",
   "reason": "no_qualified_real_market",
-  "retry_at": 1795653738.439021
+  "retry_at": 1795654338.618612
  },
  "NBA|401909321": {
   "status": "waiting_data",
@@ -7230,7 +7460,7 @@
   "sport": "basketball",
   "div": "NBA",
   "reason": "no_qualified_real_market",
-  "retry_at": 1795653738.439021
+  "retry_at": 1795654338.618612
  },
  "NBA|401909322": {
   "id": "401909322",
