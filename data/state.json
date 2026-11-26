@@ -1563,7 +1563,7 @@
  "value_day": "2026-11-26",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-26",
- "site_stamp": "1575|9743|2026-11-27 00|6|8ac75f43682d2114",
+ "site_stamp": "1575|9748|2026-11-27 00|6|8ac75f43682d2114",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1722,7 +1722,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 9743,
+ "dz_last": 9748,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -3030,15 +3030,15 @@
   "model": {
    "weight": 0.0,
    "status": "baseline_better",
-   "settled_matches": 173,
+   "settled_matches": 175,
    "required_matches": 100,
-   "trained_at": "2026-11-26T21:56:39.131583+00:00",
+   "trained_at": "2026-11-26T21:58:54.848300+00:00",
    "candidate_weight": 0.0,
-   "train_matches": 117,
-   "validation_matches": 53,
-   "validation_from": "2026-11-24T00:00:00+00:00",
-   "validation_logloss": 2.843843094387245,
-   "validation_baseline_logloss": 2.843843094387245
+   "train_matches": 139,
+   "validation_matches": 35,
+   "validation_from": "2026-11-25T00:00:00+00:00",
+   "validation_logloss": 2.815052321911049,
+   "validation_baseline_logloss": 2.815052321911049
   },
   "sport_models": {
    "hockey": {
@@ -3100,7 +3100,7 @@
   "quote_matches": 138
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-27T00:56:39.131583+03:00",
+  "last_poll": "2026-11-27T00:58:54.848300+03:00",
   "cursor": "462",
   "posts": [
    {
@@ -3834,16 +3834,16 @@
    "401915503": "post",
    "401915514": "post",
    "401915513": "post",
-   "401915512": "in",
+   "401915512": "post",
    "401915515": "post",
    "401915806": "post",
    "401915802": "post",
-   "401915803": "in",
+   "401915803": "post",
    "401915807": "post",
    "401915805": "post",
    "401915738": "post",
    "401915804": "post",
-   "401915801": "in",
+   "401915801": "post",
    "401841329": "pre",
    "401931982": "pre",
    "401931995": "pre",
@@ -7306,6 +7306,21 @@
    "probability": 0.5243,
    "odds": 1.77,
    "edge": -0.07199,
+   "estimated": true
+  },
+  "football|BRA|401841329": {
+   "reason": "no_qualified_real_market",
+   "checked_at": "2026-11-26T21:59:18.166781+00:00",
+   "kickoff": "2026-11-27T02:00:00+03:00",
+   "sport": "football",
+   "id": "401841329",
+   "home": "Сан-Паулу",
+   "away": "Ремо",
+   "priced_markets": 3,
+   "market": "ТМ 3.5",
+   "probability": 0.6452,
+   "odds": 1.44,
+   "edge": -0.07091,
    "estimated": true
   }
  },
@@ -16555,7 +16570,7 @@
     "profit_pct": -0.5
    },
    "football|UEL|401915504": {
-    "status": "open",
+    "status": "settled",
     "id": "401915504",
     "sport": "football",
     "div": "UEL",
@@ -16721,7 +16736,10 @@
        "price_kind": "author_recorded"
       }
      ]
-    }
+    },
+    "settled_at": "2026-11-26T21:58:54.848300+00:00",
+    "hit": false,
+    "profit_pct": -0.5
    },
    "football|UEL|401915516": {
     "status": "settled",
@@ -16861,7 +16879,7 @@
     "profit_pct": 0.285
    },
    "football|UEL|401915503": {
-    "status": "open",
+    "status": "settled",
     "id": "401915503",
     "sport": "football",
     "div": "UEL",
@@ -17045,7 +17063,10 @@
        "price_kind": "author_recorded"
       }
      ]
-    }
+    },
+    "settled_at": "2026-11-26T21:58:54.848300+00:00",
+    "hit": true,
+    "profit_pct": 0.37
    }
   }
  }

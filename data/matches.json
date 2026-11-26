@@ -30083,5 +30083,13 @@
   "div": "UECL",
   "reason": "no_qualified_real_market",
   "retry_at": 1795723030.152257
+ },
+ "401841329": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-27T02:00:00+03:00",
+  "sport": "football",
+  "div": "BRA",
+  "reason": "no_qualified_real_market",
+  "retry_at": 1795730934.8483
  }
 }
