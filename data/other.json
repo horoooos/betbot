@@ -8210,5 +8210,13 @@
   "div": "WTA",
   "reason": "no_qualified_real_market",
   "retry_at": 1795716550.07648
+ },
+ "WTA|186833": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-26T22:30:00+03:00",
+  "sport": "tennis",
+  "div": "WTA",
+  "reason": "no_real_odds",
+  "retry_at": 1795718349.247773
  }
 }

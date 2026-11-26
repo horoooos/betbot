@@ -3086,7 +3086,7 @@
   "quote_matches": 135
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-26T21:27:09.144713+03:00",
+  "last_poll": "2026-11-26T21:29:09.247773+03:00",
   "cursor": "456",
   "posts": [
    {
@@ -6969,6 +6969,21 @@
    "probability": 0.5068,
    "odds": 1.84,
    "edge": -0.06749,
+   "estimated": true
+  },
+  "tennis|WTA|186833": {
+   "reason": "no_real_odds",
+   "checked_at": "2026-11-26T18:29:29.832303+00:00",
+   "kickoff": "2026-11-26T22:30:00+03:00",
+   "sport": "tennis",
+   "id": "186833",
+   "home": "Ирен Бурильо",
+   "away": "Лаура Самсон",
+   "priced_markets": 0,
+   "market": "Будет 2 сета",
+   "probability": 0.5008,
+   "odds": 1.86,
+   "edge": -0.06851,
    "estimated": true
   }
  },
