@@ -2063,5 +2063,75 @@
 "top": false,
 "bot": null,
 "lt": null
+},
+{
+"sport": "football",
+"id": "401888241",
+"league": "Турция · Суперлига",
+"kickoff": "2026-11-27T20:00:00+03:00",
+"home": "Аланьяспор",
+"away": "Коньяспор",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/9078.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/7648.png",
+"hid": "9078",
+"aid": "7648",
+"bb": "https://betboom.ru/search?query=%D0%90%D0%BB%D0%B0%D0%BD%D1%8C%D1%8F%D1%81%D0%BF%D0%BE%D1%80&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/tur.1",
+"url": "live.html?s=football&p=soccer%2Ftur.1&e=401888241&h=%D0%90%D0%BB%D0%B0%D0%BD%D1%8C%D1%8F%D1%81%D0%BF%D0%BE%D1%80&a=%D0%9A%D0%BE%D0%BD%D1%8C%D1%8F%D1%81%D0%BF%D0%BE%D1%80",
+"participants": [
+[
+"Аланьяспор",
+"Alanyaspor"
+],
+[
+"Коньяспор",
+"Konyaspor"
+]
+],
+"div": "T1",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "football",
+"id": "401888240",
+"league": "Турция · Суперлига",
+"kickoff": "2026-11-27T20:00:00+03:00",
+"home": "Кайкур Ризеспор",
+"away": "Касымпаша",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/7656.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/6870.png",
+"hid": "7656",
+"aid": "6870",
+"bb": "https://betboom.ru/search?query=%D0%A0%D0%B8%D0%B7%D0%B5%D1%81%D0%BF%D0%BE%D1%80&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/tur.1",
+"url": "live.html?s=football&p=soccer%2Ftur.1&e=401888240&h=%D0%9A%D0%B0%D0%B9%D0%BA%D1%83%D1%80+%D0%A0%D0%B8%D0%B7%D0%B5%D1%81%D0%BF%D0%BE%D1%80&a=%D0%9A%D0%B0%D1%81%D1%8B%D0%BC%D0%BF%D0%B0%D1%88%D0%B0",
+"participants": [
+[
+"Кайкур Ризеспор",
+"Caykur Rizespor"
+],
+[
+"Касымпаша",
+"Kasimpasa"
+]
+],
+"div": "T1",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
 }
 ]
