@@ -35,41 +35,6 @@
 "lt": null
 },
 {
-"sport": "esports",
-"id": "1816494",
-"league": "Киберспорт · Dota 2",
-"kickoff": "2026-11-26T15:44:47+03:00",
-"home": "1w Team",
-"away": "Team Liquid",
-"hl": "https://cdn-api.pandascore.co/images/team/image/134536/800px_1win_team_2024_allmode.png",
-"al": "https://cdn-api.pandascore.co/images/team/image/1647/527px_team_liquid_2023_lightmode.png",
-"hid": "134536",
-"aid": "1647",
-"bb": "https://betboom.ru/search?query=%D0%A2%D0%B5%D0%B0%D0%BC&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=esports",
-"path": "",
-"url": "dota.html?e=1816494&d=DOTA",
-"participants": [
-[
-"1w Team",
-"1w Team"
-],
-[
-"Team Liquid",
-"Team Liquid"
-]
-],
-"div": "DOTA",
-"state": "in",
-"bo": 3,
-"prediction": "",
-"hs": 0,
-"as": 1,
-"tip": "",
-"top": false,
-"bot": null,
-"lt": null
-},
-{
 "sport": "football",
 "id": "401900874",
 "league": "Саудовская Аравия · Про-лига",
@@ -2059,6 +2024,41 @@ null
 "prediction": "",
 "hs": "0",
 "as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "esports",
+"id": "1816496",
+"league": "Киберспорт · Dota 2",
+"kickoff": "2026-11-27T13:00:00+03:00",
+"home": "Team Liquid",
+"away": "PARIVISION",
+"hl": "https://cdn-api.pandascore.co/images/team/image/1647/527px_team_liquid_2023_lightmode.png",
+"al": "https://cdn-api.pandascore.co/images/team/image/135712/250px_parivision_allmode.png",
+"hid": "1647",
+"aid": "135712",
+"bb": "https://betboom.ru/search?query=%D0%9B%D0%B8%D0%BA%D0%B2%D0%B8%D0%B4&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=esports",
+"path": "",
+"url": "dota.html?e=1816496&d=DOTA",
+"participants": [
+[
+"Team Liquid",
+"Team Liquid"
+],
+[
+"PARIVISION",
+"PARIVISION"
+]
+],
+"div": "DOTA",
+"state": "pre",
+"bo": 3,
+"prediction": "",
+"hs": 0,
+"as": 0,
 "tip": "",
 "top": false,
 "bot": null,
