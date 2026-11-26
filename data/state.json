@@ -3035,12 +3035,12 @@
   },
   "error": null,
   "tips": 17558,
-  "snapshots": 373,
+  "snapshots": 374,
   "unmapped_markets": 26965,
   "quote_matches": 116
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-26T03:52:18.576136+03:00",
+  "last_poll": "2026-11-26T03:54:18.179833+03:00",
   "cursor": "435",
   "posts": [
    {
@@ -6232,7 +6232,7 @@
   },
   "football|MEX|401931986": {
    "reason": "edge_below_minimum",
-   "checked_at": "2026-11-26T00:42:39.096622+00:00",
+   "checked_at": "2026-11-26T00:54:38.198554+00:00",
    "kickoff": "2026-11-26T04:00:00+03:00",
    "sport": "football",
    "id": "401931986",
@@ -6263,7 +6263,7 @@
   },
   "hockey|NHL|401892791": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-26T00:42:49.606961+00:00",
+   "checked_at": "2026-11-26T00:54:38.525510+00:00",
    "kickoff": "2026-11-26T04:00:00+03:00",
    "sport": "hockey",
    "id": "401892791",
@@ -6271,14 +6271,14 @@
    "away": "Юта",
    "priced_markets": 4,
    "market": "ТБ 5.5",
-   "probability": 0.6256,
-   "odds": 1.49,
-   "edge": -0.06786,
+   "probability": 0.616,
+   "odds": 1.51,
+   "edge": -0.06984,
    "estimated": true
   },
   "basketball|NBA|401909321": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-26T00:42:50.192605+00:00",
+   "checked_at": "2026-11-26T00:54:39.097127+00:00",
    "kickoff": "2026-11-26T04:00:00+03:00",
    "sport": "basketball",
    "id": "401909321",
