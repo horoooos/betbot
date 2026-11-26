@@ -1,12 +1,4 @@
 {
- "WTA|186815": {
-  "status": "waiting_data",
-  "kickoff": "2026-11-23T22:00:00+03:00",
-  "sport": "tennis",
-  "div": "WTA",
-  "reason": "no_qualified_real_market",
-  "retry_at": 1795460121.989198
- },
  "NHL|401892773": {
   "id": "401892773",
   "div": "NHL",
@@ -8217,6 +8209,6 @@
   "sport": "tennis",
   "div": "WTA",
   "reason": "no_real_odds",
-  "retry_at": 1795719550.003031
+  "retry_at": 1795720269.757354
  }
 }

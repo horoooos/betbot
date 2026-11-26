@@ -5,7 +5,7 @@
  },
  "learned": "2026-11-26",
  "schedule_day": "2026-11-26",
- "content_slot": "2026-11-26-20",
+ "content_slot": "2026-11-26-22",
  "news_seen": [
   "https://www.sport-express.ru/hockey/nhl/news/larkin-debyutiruet-za-monreal-v-matche-s-los-andzhelesom-2478126/",
   "https://www.sport-express.ru/hockey/vhl/news/v-matche-olimpbet-vhl-vratar-privez-gol-v-svoi-vorota-pytayas-porazit-chuzhie-2478117/",
@@ -1563,7 +1563,7 @@
  "value_day": "2026-11-26",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-26",
- "site_stamp": "1567|9687|2026-11-26 21|6|9d2eebdf6a674f2e",
+ "site_stamp": "1567|9689|2026-11-26 22|6|9d2eebdf6a674f2e",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1722,7 +1722,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 9687,
+ "dz_last": 9689,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -3083,13 +3083,13 @@
   },
   "error": null,
   "tips": 18469,
-  "snapshots": 396,
+  "snapshots": 404,
   "unmapped_markets": 28013,
   "quote_matches": 135
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-26T21:59:09.649757+03:00",
-  "cursor": "456",
+  "last_poll": "2026-11-26T22:01:09.757354+03:00",
+  "cursor": 458,
   "posts": [
    {
     "post_id": 876,
@@ -3662,7 +3662,7 @@
     "observed_at": "2026-11-26T20:55:09.665673+03:00"
    }
   ],
-  "status": "observing"
+  "status": "cursor_reset"
  },
  "promotion": {
   "targets": {
@@ -3894,7 +3894,8 @@
    "401888557": "pre",
    "401936333": "pre",
    "401936055": "pre",
-   "1816498": "pre"
+   "1816498": "pre",
+   "401933727": "pre"
   },
   "daily": {
    "day": "2026-11-26"
@@ -6975,7 +6976,7 @@
   },
   "tennis|WTA|186833": {
    "reason": "no_real_odds",
-   "checked_at": "2026-11-26T18:49:29.909345+00:00",
+   "checked_at": "2026-11-26T19:01:35.889576+00:00",
    "kickoff": "2026-11-26T22:30:00+03:00",
    "sport": "tennis",
    "id": "186833",
