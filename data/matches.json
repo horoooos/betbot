@@ -27179,5 +27179,4142 @@
   "div": "KSA",
   "reason": "no_qualified_real_market",
   "retry_at": 1795711861.986443
+ },
+ "401915506": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-26T20:45:00+03:00",
+  "sport": "football",
+  "div": "UEL",
+  "reason": "no_qualified_real_market",
+  "retry_at": 1795711981.843176
+ },
+ "401915519": {
+  "id": "401915519",
+  "div": "UEL",
+  "slug": "uefa.europa",
+  "kickoff": "2026-11-26T20:45:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "detail": "Scheduled",
+  "home": {
+   "id": "85",
+   "name": "Celta Vigo",
+   "short": "Celta Vigo",
+   "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/85.png",
+   "color": "6cace4",
+   "alt": "004996",
+   "form": "LWDLL",
+   "score": "0",
+   "ru": "Сельта"
+  },
+  "away": {
+   "id": "349",
+   "name": "AFC Bournemouth",
+   "short": "Bournemouth",
+   "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/349.png",
+   "color": "f42727",
+   "alt": "B57EDC",
+   "form": "WWWWW",
+   "score": "0",
+   "ru": "Борнмут"
+  },
+  "odds": {
+   "H": 3.65,
+   "D": 3.6,
+   "A": 2.0,
+   "line": 2.5,
+   "over": 1.87,
+   "under": 1.909,
+   "spread_h": [
+    0.5,
+    1.769
+   ],
+   "spread_a": [
+    -0.5,
+    1.909
+   ]
+  },
+  "venue": "Balaidos",
+  "clock": "0'",
+  "goals": [],
+  "open": {
+   "A": 0.4736
+  },
+  "top": false,
+  "lam": [
+   1.1142762372271056,
+   1.5875642059868647
+  ],
+  "probs": {
+   "H": 0.2576005279343165,
+   "D": 0.26875629784948457,
+   "A": 0.473643174216199,
+   "1X": 0.5263568257838006,
+   "12": 0.7312437021505157,
+   "X2": 0.7423994720656839,
+   "BTTS_Y": 0.5439995296305765,
+   "BTTS_N": 0.45600047036942365,
+   "O15": 0.7611664883426765,
+   "U15": 0.23883351165732364,
+   "O25": 0.5068257599915508,
+   "U25": 0.49317424000844917,
+   "O35": 0.28631292387413476,
+   "U35": 0.7136870761258653,
+   "H_O05": 0.6718472925516388,
+   "H_O15": 0.30619452846019113,
+   "A_O05": 0.7955768675732563,
+   "A_O15": 0.47104201965684506,
+   "H-1.5": 0.10359635375273951,
+   "A+1.5": 0.8964036462472609,
+   "A-1.5": 0.25019354683818845,
+   "H+1.5": 0.7498064531618114,
+   "H-2.5": 0.031275023890431325,
+   "A-2.5": 0.10338773042178165,
+   "H+2.5": 0.8966122695782185,
+   "A+2.5": 0.968724976109569,
+   "O45": 0.13736529915667248,
+   "U45": 0.8626347008433276,
+   "H_O25": 0.10247543540843683,
+   "A_O25": 0.2134320655831024,
+   "H&O15": 0.19234600965301626,
+   "A&O15": 0.3766395503458571,
+   "H&BTTS": 0.12975276501325425,
+   "A&BTTS": 0.22206583627351908,
+   "1X&U35": 0.39321712947528853,
+   "X2&U35": 0.5252057454756622,
+   "BTTS&O25": 0.41583910031117244,
+   "HT_H": 0.21808225366933306,
+   "HT_D": 0.42955339561484523,
+   "HT_A": 0.35236435071582173,
+   "HT_O05": 0.6950396737130488,
+   "HT_U05": 0.3049603262869516,
+   "HT_O15": 0.3515818095646722,
+   "HT_U15": 0.6484181904353278
+  },
+  "scores": [
+   [
+    "1:1",
+    0.12816042931940394
+   ],
+   [
+    "0:1",
+    0.09700362387034189
+   ],
+   [
+    "1:2",
+    0.09419579176453483
+   ]
+  ],
+  "main": {
+   "key": "A",
+   "label": "П2",
+   "p": 0.4736,
+   "odds": 2.0,
+   "est": false,
+   "stake": 0.5,
+   "strategy": "external_trial",
+   "selection_mode": "external_fallback",
+   "trial_expires_at": null,
+   "probability_origin": "baseline_model",
+   "model_edge": -0.05271,
+   "source_count": 45,
+   "source_refs": [
+    {
+     "author": "/predictors/radel-garayshin-1",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/26-11-2026-celta-de-vigo-bournemouth",
+     "published_at": "2026-11-25T13:13:00+00:00",
+     "observed_at": "2026-11-25T13:18:19.535466+00:00",
+     "odds": 2.06,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/dmitriy-vyshinskiy",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/26-11-2026-celta-de-vigo-bournemouth",
+     "published_at": "2026-11-25T15:40:00+00:00",
+     "observed_at": "2026-11-25T15:46:19.290418+00:00",
+     "odds": 2.06,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/nikita-subin",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/26-11-2026-celta-de-vigo-bournemouth",
+     "published_at": "2026-11-25T17:07:00+00:00",
+     "observed_at": "2026-11-25T17:12:27.101765+00:00",
+     "odds": 2.06,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/maks-volman",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/26-11-2026-celta-de-vigo-bournemouth",
+     "published_at": "2026-11-25T17:24:00+00:00",
+     "observed_at": "2026-11-25T19:56:33.753332+00:00",
+     "odds": 2.06,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/lucky-roger",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/26-11-2026-celta-de-vigo-bournemouth",
+     "published_at": "2026-11-25T19:08:00+00:00",
+     "observed_at": "2026-11-25T19:16:33.313179+00:00",
+     "odds": 2.06,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/raxat-azikulov",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/26-11-2026-celta-de-vigo-bournemouth",
+     "published_at": "2026-11-25T20:02:00+00:00",
+     "observed_at": "2026-11-25T20:18:32.956620+00:00",
+     "odds": 2.06,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/rados-nikiforov",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/26-11-2026-celta-de-vigo-bournemouth",
+     "published_at": "2026-11-25T20:09:00+00:00",
+     "observed_at": "2026-11-25T20:18:32.956620+00:00",
+     "odds": 2.06,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/maksim-builov",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/26-11-2026-celta-de-vigo-bournemouth",
+     "published_at": "2026-11-25T20:14:00+00:00",
+     "observed_at": "2026-11-25T20:18:32.956620+00:00",
+     "odds": 2.06,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/mixail-mossakovskii",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/26-11-2026-celta-de-vigo-bournemouth",
+     "published_at": "2026-11-25T21:40:00+00:00",
+     "observed_at": "2026-11-26T08:37:55.224805+00:00",
+     "odds": 2.06,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/deniska-rediska",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/26-11-2026-celta-de-vigo-bournemouth",
+     "published_at": "2026-11-25T21:54:00+00:00",
+     "observed_at": "2026-11-25T22:01:40.762063+00:00",
+     "odds": 2.06,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/vladimir-bondarenko-3",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/26-11-2026-celta-de-vigo-bournemouth",
+     "published_at": "2026-11-25T22:17:00+00:00",
+     "observed_at": "2026-11-25T22:22:18.479798+00:00",
+     "odds": 2.06,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/gennadiy-sovetskikh",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/26-11-2026-celta-de-vigo-bournemouth",
+     "published_at": "2026-11-25T23:13:00+00:00",
+     "observed_at": "2026-11-25T23:26:18.285735+00:00",
+     "odds": 2.06,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/katy-perk",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/26-11-2026-celta-de-vigo-bournemouth",
+     "published_at": "2026-11-25T23:49:00+00:00",
+     "observed_at": "2026-11-26T00:10:18.450101+00:00",
+     "odds": 2.06,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/aleksey-samoylov-4",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/26-11-2026-celta-de-vigo-bournemouth",
+     "published_at": "2026-11-26T00:19:00+00:00",
+     "observed_at": "2026-11-26T00:32:18.439021+00:00",
+     "odds": 2.06,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/lexa-bystryi",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/26-11-2026-celta-de-vigo-bournemouth",
+     "published_at": "2026-11-26T00:44:00+00:00",
+     "observed_at": "2026-11-26T00:52:18.576136+00:00",
+     "odds": 2.06,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/venom-li",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/26-11-2026-celta-de-vigo-bournemouth",
+     "published_at": "2026-11-26T00:52:00+00:00",
+     "observed_at": "2026-11-26T01:14:19.135959+00:00",
+     "odds": 2.06,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/aleksandr-spartakovic-2",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/26-11-2026-celta-de-vigo-bournemouth",
+     "published_at": "2026-11-26T01:20:00+00:00",
+     "observed_at": "2026-11-26T01:36:18.793605+00:00",
+     "odds": 2.06,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/denis-oleynik",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/26-11-2026-celta-de-vigo-bournemouth",
+     "published_at": "2026-11-26T01:40:00+00:00",
+     "observed_at": "2026-11-26T08:37:55.224805+00:00",
+     "odds": 2.06,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/vladislav-solovev-1",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/26-11-2026-celta-de-vigo-bournemouth",
+     "published_at": "2026-11-26T03:36:00+00:00",
+     "observed_at": "2026-11-26T03:44:24.553251+00:00",
+     "odds": 2.06,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/tatyana-arshaulova",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/26-11-2026-celta-de-vigo-bournemouth",
+     "published_at": "2026-11-26T04:04:00+00:00",
+     "observed_at": "2026-11-26T04:05:49.598582+00:00",
+     "odds": 2.06,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/kamila-rozhdestvenskaya",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/26-11-2026-celta-de-vigo-bournemouth",
+     "published_at": "2026-11-26T04:46:00+00:00",
+     "observed_at": "2026-11-26T04:47:50.889526+00:00",
+     "odds": 2.06,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/stanislav-stepanov-1",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/26-11-2026-celta-de-vigo-bournemouth",
+     "published_at": "2026-11-26T04:46:00+00:00",
+     "observed_at": "2026-11-26T04:47:50.889526+00:00",
+     "odds": 2.06,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/aleksandr-rozhko",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/26-11-2026-celta-de-vigo-bournemouth",
+     "published_at": "2026-11-26T04:55:00+00:00",
+     "observed_at": "2026-11-26T08:37:55.224805+00:00",
+     "odds": 2.06,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/vadim-fairuzov",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/26-11-2026-celta-de-vigo-bournemouth",
+     "published_at": "2026-11-26T05:43:00+00:00",
+     "observed_at": "2026-11-26T05:47:54.571352+00:00",
+     "odds": 2.06,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/ninja-gaiden",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/26-11-2026-celta-de-vigo-bournemouth",
+     "published_at": "2026-11-26T06:05:00+00:00",
+     "observed_at": "2026-11-26T06:09:54.420324+00:00",
+     "odds": 2.06,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/pliuskin",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/26-11-2026-celta-de-vigo-bournemouth",
+     "published_at": "2026-11-26T06:47:00+00:00",
+     "observed_at": "2026-11-26T06:51:54.765185+00:00",
+     "odds": 1.99,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/egor-kucin",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/26-11-2026-celta-de-vigo-bournemouth",
+     "published_at": "2026-11-26T08:08:00+00:00",
+     "observed_at": "2026-11-26T08:15:55.486840+00:00",
+     "odds": 1.99,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/ero-1",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/26-11-2026-celta-de-vigo-bournemouth",
+     "published_at": "2026-11-26T08:34:00+00:00",
+     "observed_at": "2026-11-26T08:37:55.224805+00:00",
+     "odds": 1.99,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/viktor-gushhin",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/26-11-2026-celta-de-vigo-bournemouth",
+     "published_at": "2026-11-26T10:33:00+00:00",
+     "observed_at": "2026-11-26T10:39:30.849372+00:00",
+     "odds": 1.99,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/-4973",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/26-11-2026-celta-de-vigo-bournemouth",
+     "published_at": "2026-11-26T10:54:00+00:00",
+     "observed_at": "2026-11-26T11:01:30.152813+00:00",
+     "odds": 1.99,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/sergei-picuzkin",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/26-11-2026-celta-de-vigo-bournemouth",
+     "published_at": "2026-11-26T11:14:00+00:00",
+     "observed_at": "2026-11-26T11:21:30.644295+00:00",
+     "odds": 1.99,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/gennadiy-evrost",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/26-11-2026-celta-de-vigo-bournemouth",
+     "published_at": "2026-11-26T11:15:00+00:00",
+     "observed_at": "2026-11-26T11:21:30.644295+00:00",
+     "odds": 1.99,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/gennadiy-shirobokikh",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/26-11-2026-celta-de-vigo-bournemouth",
+     "published_at": "2026-11-26T11:38:00+00:00",
+     "observed_at": "2026-11-26T11:43:30.620779+00:00",
+     "odds": 1.99,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/real-madrid-cf-real-madrid-cf",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/26-11-2026-celta-de-vigo-bournemouth",
+     "published_at": "2026-11-26T12:24:00+00:00",
+     "observed_at": "2026-11-26T12:27:30.332332+00:00",
+     "odds": 1.99,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/denis-lyashchenko",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/26-11-2026-celta-de-vigo-bournemouth",
+     "published_at": "2026-11-26T12:25:00+00:00",
+     "observed_at": "2026-11-26T12:27:30.332332+00:00",
+     "odds": 1.99,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/sergei-antonov-12",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/26-11-2026-celta-de-vigo-bournemouth",
+     "published_at": "2026-11-26T13:06:00+00:00",
+     "observed_at": "2026-11-26T13:07:30.684830+00:00",
+     "odds": 1.99,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/alexander-ageev",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/26-11-2026-celta-de-vigo-bournemouth",
+     "published_at": "2026-11-26T13:44:00+00:00",
+     "observed_at": "2026-11-26T13:51:30.289571+00:00",
+     "odds": 1.99,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/aleksandr-tkachenko-14",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/26-11-2026-celta-de-vigo-bournemouth",
+     "published_at": "2026-11-26T13:45:00+00:00",
+     "observed_at": "2026-11-26T13:51:30.289571+00:00",
+     "odds": 1.99,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/akim-bobrov-1",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/26-11-2026-celta-de-vigo-bournemouth",
+     "published_at": "2026-11-26T14:06:00+00:00",
+     "observed_at": "2026-11-26T14:11:30.325508+00:00",
+     "odds": 1.99,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/nphne-aa-aa-k76xc42n",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/26-11-2026-celta-de-vigo-bournemouth",
+     "published_at": "2026-11-26T14:08:00+00:00",
+     "observed_at": "2026-11-26T14:11:30.325508+00:00",
+     "odds": 1.99,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/petr-trotsenko",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/26-11-2026-celta-de-vigo-bournemouth",
+     "published_at": "2026-11-26T14:08:00+00:00",
+     "observed_at": "2026-11-26T14:11:30.325508+00:00",
+     "odds": 1.99,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/vladimir-nevozmutimyy",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/26-11-2026-celta-de-vigo-bournemouth",
+     "published_at": "2026-11-26T14:29:00+00:00",
+     "observed_at": "2026-11-26T14:31:30.545913+00:00",
+     "odds": 1.99,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/terminator-stavok",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/26-11-2026-celta-de-vigo-bournemouth",
+     "published_at": "2026-11-26T14:51:00+00:00",
+     "observed_at": "2026-11-26T14:53:01.758624+00:00",
+     "odds": 1.99,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/dmitry-mijer",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/26-11-2026-celta-de-vigo-bournemouth",
+     "published_at": "2026-11-26T15:28:00+00:00",
+     "observed_at": "2026-11-26T15:35:01.213210+00:00",
+     "odds": 1.99,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/aleksandr-slepcov-1",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/26-11-2026-celta-de-vigo-bournemouth",
+     "published_at": "2026-11-26T16:14:00+00:00",
+     "observed_at": "2026-11-26T16:15:02.088745+00:00",
+     "odds": 1.92,
+     "price_kind": "author_recorded"
+    }
+   ]
+  },
+  "bold": {},
+  "value": null,
+  "odds_src": "DraftKings",
+  "model_w": 0.0,
+  "learned_n": 1566,
+  "stavka_signal": {
+   "status": "baseline_better",
+   "weight": 0.0,
+   "authors": 64,
+   "votes": {
+    "A": 44.97873224896024,
+    "H": 2.958011968652694,
+    "D": 2.020156454720153,
+    "O25": 10.912898974706547,
+    "U25": 3.0
+   },
+   "source": "https://stavka.tv",
+   "snapshot": "UEL|401915519"
+  },
+  "research": {
+   "articles": [
+    {
+     "id": "7380543909b7e286daf04c42",
+     "kind": "context",
+     "provider": "livesport",
+     "source": "https://www.livesport.ru/tips/football/2026/11/26/celta-bournemouth/",
+     "sport": "football",
+     "div": "UEL",
+     "event_id": "401915519",
+     "kickoff": "2026-11-26T17:45:00+00:00",
+     "published_at": "2026-11-25T16:45:00+00:00",
+     "observed_at": "2026-11-25T16:58:33.656420+00:00",
+     "tables": [
+      [
+       [
+        "",
+        "Букмекер",
+        "1",
+        "x",
+        "2",
+        "Новым игрокам",
+        ""
+       ],
+       [
+        "",
+        "",
+        "3.60",
+        "3.55",
+        "2.05",
+        "Фрибет",
+        "15 000 ₽"
+       ],
+       [
+        "",
+        "",
+        "3.57",
+        "3.51",
+        "2.10",
+        "Фрибет",
+        "30 000 ₽"
+       ],
+       [
+        "",
+        "",
+        "3.55",
+        "3.50",
+        "2.07",
+        "Фрибет всем",
+        "10 000 ₽"
+       ],
+       [
+        "",
+        "",
+        "3.56",
+        "3.51",
+        "2.04",
+        "Фрибет",
+        "1000 ₽"
+       ]
+      ]
+     ]
+    },
+    {
+     "id": "b36a5e50beec36d03f9d111f",
+     "kind": "context",
+     "provider": "metaratings",
+     "source": "https://metaratings.ru/prognozy/futbol/selta-bornmut-prognoz-na-match-ligi-evropy-26-noyabrya-2026-goda/",
+     "sport": "football",
+     "div": "UEL",
+     "event_id": "401915519",
+     "kickoff": "2026-11-26T17:45:00+00:00",
+     "published_at": "2026-11-25T16:48:46+00:00",
+     "observed_at": "2026-11-25T23:40:43.522264+00:00",
+     "tables": []
+    }
+   ],
+   "dossier": {
+    "observed_at": "2026-11-26T16:33:18.739817+00:00",
+    "kickoff": "2026-11-26T17:45:00+00:00",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa/summary?event=401915519",
+    "status": "available",
+    "facts": {
+     "table": {
+      "1929": {
+       "rank": "1",
+       "gp": "4",
+       "w": "4",
+       "d": "0",
+       "l": "0",
+       "gd": "+10",
+       "pts": "12",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "0",
+        "GD": "+10",
+        "P": "12",
+        "D": "0",
+        "W": "4",
+        "R": "1",
+        "Total": "4-0-0"
+       },
+       "group": "UEFA Europa League Standings"
+      },
+      "349": {
+       "rank": "2",
+       "gp": "4",
+       "w": "4",
+       "d": "0",
+       "l": "0",
+       "gd": "+9",
+       "pts": "12",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "0",
+        "GD": "+9",
+        "P": "12",
+        "D": "0",
+        "W": "4",
+        "R": "2",
+        "Total": "4-0-0"
+       },
+       "group": "UEFA Europa League Standings"
+      },
+      "622": {
+       "rank": "3",
+       "gp": "4",
+       "w": "4",
+       "d": "0",
+       "l": "0",
+       "gd": "+8",
+       "pts": "12",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "0",
+        "GD": "+8",
+        "P": "12",
+        "D": "0",
+        "W": "4",
+        "R": "3",
+        "Total": "4-0-0"
+       },
+       "group": "UEFA Europa League Standings"
+      },
+      "5807": {
+       "rank": "4",
+       "gp": "4",
+       "w": "3",
+       "d": "1",
+       "l": "0",
+       "gd": "+8",
+       "pts": "10",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "0",
+        "GD": "+8",
+        "P": "10",
+        "D": "1",
+        "W": "3",
+        "R": "4",
+        "Total": "3-1-0"
+       },
+       "group": "UEFA Europa League Standings"
+      },
+      "111": {
+       "rank": "5",
+       "gp": "4",
+       "w": "3",
+       "d": "1",
+       "l": "0",
+       "gd": "+7",
+       "pts": "10",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "0",
+        "GD": "+7",
+        "P": "10",
+        "D": "1",
+        "W": "3",
+        "R": "5",
+        "Total": "3-1-0"
+       },
+       "group": "UEFA Europa League Standings"
+      },
+      "435": {
+       "rank": "6",
+       "gp": "4",
+       "w": "3",
+       "d": "1",
+       "l": "0",
+       "gd": "+3",
+       "pts": "10",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "0",
+        "GD": "+3",
+        "P": "10",
+        "D": "1",
+        "W": "3",
+        "R": "6",
+        "Total": "3-1-0"
+       },
+       "group": "UEFA Europa League Standings"
+      },
+      "131": {
+       "rank": "7",
+       "gp": "4",
+       "w": "3",
+       "d": "0",
+       "l": "1",
+       "gd": "+7",
+       "pts": "9",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "1",
+        "GD": "+7",
+        "P": "9",
+        "D": "0",
+        "W": "3",
+        "R": "7",
+        "Total": "3-0-1"
+       },
+       "group": "UEFA Europa League Standings"
+      },
+      "1895": {
+       "rank": "8",
+       "gp": "4",
+       "w": "2",
+       "d": "1",
+       "l": "1",
+       "gd": "+3",
+       "pts": "7",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "1",
+        "GD": "+3",
+        "P": "7",
+        "D": "1",
+        "W": "2",
+        "R": "8",
+        "Total": "2-1-1"
+       },
+       "group": "UEFA Europa League Standings"
+      },
+      "597": {
+       "rank": "9",
+       "gp": "4",
+       "w": "2",
+       "d": "1",
+       "l": "1",
+       "gd": "+1",
+       "pts": "7",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "1",
+        "GD": "+1",
+        "P": "7",
+        "D": "1",
+        "W": "2",
+        "R": "9",
+        "Total": "2-1-1"
+       },
+       "group": "UEFA Europa League Standings"
+      },
+      "490": {
+       "rank": "10",
+       "gp": "4",
+       "w": "2",
+       "d": "1",
+       "l": "1",
+       "gd": "+1",
+       "pts": "7",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "1",
+        "GD": "+1",
+        "P": "7",
+        "D": "1",
+        "W": "2",
+        "R": "10",
+        "Total": "2-1-1"
+       },
+       "group": "UEFA Europa League Standings"
+      },
+      "366": {
+       "rank": "11",
+       "gp": "4",
+       "w": "2",
+       "d": "1",
+       "l": "1",
+       "gd": "0",
+       "pts": "7",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "1",
+        "GD": "0",
+        "P": "7",
+        "D": "1",
+        "W": "2",
+        "R": "11",
+        "Total": "2-1-1"
+       },
+       "group": "UEFA Europa League Standings"
+      },
+      "147": {
+       "rank": "12",
+       "gp": "4",
+       "w": "2",
+       "d": "1",
+       "l": "1",
+       "gd": "-1",
+       "pts": "7",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "1",
+        "GD": "-1",
+        "P": "7",
+        "D": "1",
+        "W": "2",
+        "R": "12",
+        "Total": "2-1-1"
+       },
+       "group": "UEFA Europa League Standings"
+      },
+      "167": {
+       "rank": "13",
+       "gp": "4",
+       "w": "2",
+       "d": "1",
+       "l": "1",
+       "gd": "-1",
+       "pts": "7",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "1",
+        "GD": "-1",
+        "P": "7",
+        "D": "1",
+        "W": "2",
+        "R": "13",
+        "Total": "2-1-1"
+       },
+       "group": "UEFA Europa League Standings"
+      },
+      "140": {
+       "rank": "14",
+       "gp": "4",
+       "w": "2",
+       "d": "0",
+       "l": "2",
+       "gd": "+3",
+       "pts": "6",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "2",
+        "GD": "+3",
+        "P": "6",
+        "D": "0",
+        "W": "2",
+        "R": "14",
+        "Total": "2-0-2"
+       },
+       "group": "UEFA Europa League Standings"
+      },
+      "441": {
+       "rank": "15",
+       "gp": "4",
+       "w": "2",
+       "d": "0",
+       "l": "2",
+       "gd": "+3",
+       "pts": "6",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "2",
+        "GD": "+3",
+        "P": "6",
+        "D": "0",
+        "W": "2",
+        "R": "15",
+        "Total": "2-0-2"
+       },
+       "group": "UEFA Europa League Standings"
+      },
+      "1010": {
+       "rank": "16",
+       "gp": "4",
+       "w": "2",
+       "d": "0",
+       "l": "2",
+       "gd": "+1",
+       "pts": "6",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "2",
+        "GD": "+1",
+        "P": "6",
+        "D": "0",
+        "W": "2",
+        "R": "16",
+        "Total": "2-0-2"
+       },
+       "group": "UEFA Europa League Standings"
+      },
+      "169": {
+       "rank": "17",
+       "gp": "4",
+       "w": "1",
+       "d": "3",
+       "l": "0",
+       "gd": "+1",
+       "pts": "6",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "0",
+        "GD": "+1",
+        "P": "6",
+        "D": "3",
+        "W": "1",
+        "R": "17",
+        "Total": "1-3-0"
+       },
+       "group": "UEFA Europa League Standings"
+      },
+      "617": {
+       "rank": "18",
+       "gp": "4",
+       "w": "2",
+       "d": "0",
+       "l": "2",
+       "gd": "-1",
+       "pts": "6",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "2",
+        "GD": "-1",
+        "P": "6",
+        "D": "0",
+        "W": "2",
+        "R": "18",
+        "Total": "2-0-2"
+       },
+       "group": "UEFA Europa League Standings"
+      },
+      "21615": {
+       "rank": "19",
+       "gp": "4",
+       "w": "2",
+       "d": "0",
+       "l": "2",
+       "gd": "-2",
+       "pts": "6",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "2",
+        "GD": "-2",
+        "P": "6",
+        "D": "0",
+        "W": "2",
+        "R": "19",
+        "Total": "2-0-2"
+       },
+       "group": "UEFA Europa League Standings"
+      },
+      "89": {
+       "rank": "20",
+       "gp": "4",
+       "w": "1",
+       "d": "2",
+       "l": "1",
+       "gd": "+5",
+       "pts": "5",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "1",
+        "GD": "+5",
+        "P": "5",
+        "D": "2",
+        "W": "1",
+        "R": "20",
+        "Total": "1-2-1"
+       },
+       "group": "UEFA Europa League Standings"
+      },
+      "384": {
+       "rank": "21",
+       "gp": "4",
+       "w": "1",
+       "d": "2",
+       "l": "1",
+       "gd": "+3",
+       "pts": "5",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "1",
+        "GD": "+3",
+        "P": "5",
+        "D": "2",
+        "W": "1",
+        "R": "21",
+        "Total": "1-2-1"
+       },
+       "group": "UEFA Europa League Standings"
+      },
+      "433": {
+       "rank": "22",
+       "gp": "4",
+       "w": "1",
+       "d": "1",
+       "l": "2",
+       "gd": "0",
+       "pts": "4",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "2",
+        "GD": "0",
+        "P": "4",
+        "D": "1",
+        "W": "1",
+        "R": "22",
+        "Total": "1-1-2"
+       },
+       "group": "UEFA Europa League Standings"
+      },
+      "7911": {
+       "rank": "23",
+       "gp": "4",
+       "w": "1",
+       "d": "1",
+       "l": "2",
+       "gd": "0",
+       "pts": "4",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "2",
+        "GD": "0",
+        "P": "4",
+        "D": "1",
+        "W": "1",
+        "R": "23",
+        "Total": "1-1-2"
+       },
+       "group": "UEFA Europa League Standings"
+      },
+      "3746": {
+       "rank": "24",
+       "gp": "4",
+       "w": "1",
+       "d": "1",
+       "l": "2",
+       "gd": "-3",
+       "pts": "4",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "2",
+        "GD": "-3",
+        "P": "4",
+        "D": "1",
+        "W": "1",
+        "R": "24",
+        "Total": "1-1-2"
+       },
+       "group": "UEFA Europa League Standings"
+      },
+      "3362": {
+       "rank": "25",
+       "gp": "4",
+       "w": "1",
+       "d": "1",
+       "l": "2",
+       "gd": "-4",
+       "pts": "4",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "2",
+        "GD": "-4",
+        "P": "4",
+        "D": "1",
+        "W": "1",
+        "R": "25",
+        "Total": "1-1-2"
+       },
+       "group": "UEFA Europa League Standings"
+      },
+      "2790": {
+       "rank": "26",
+       "gp": "4",
+       "w": "1",
+       "d": "1",
+       "l": "2",
+       "gd": "-5",
+       "pts": "4",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "2",
+        "GD": "-5",
+        "P": "4",
+        "D": "1",
+        "W": "1",
+        "R": "26",
+        "Total": "1-1-2"
+       },
+       "group": "UEFA Europa League Standings"
+      },
+      "85": {
+       "rank": "27",
+       "gp": "4",
+       "w": "1",
+       "d": "0",
+       "l": "3",
+       "gd": "-2",
+       "pts": "3",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "3",
+        "GD": "-2",
+        "P": "3",
+        "D": "0",
+        "W": "1",
+        "R": "27",
+        "Total": "1-0-3"
+       },
+       "group": "UEFA Europa League Standings"
+      },
+      "103": {
+       "rank": "28",
+       "gp": "4",
+       "w": "1",
+       "d": "0",
+       "l": "3",
+       "gd": "-3",
+       "pts": "3",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "3",
+        "GD": "-3",
+        "P": "3",
+        "D": "0",
+        "W": "1",
+        "R": "28",
+        "Total": "1-0-3"
+       },
+       "group": "UEFA Europa League Standings"
+      },
+      "11505": {
+       "rank": "29",
+       "gp": "4",
+       "w": "1",
+       "d": "0",
+       "l": "3",
+       "gd": "-3",
+       "pts": "3",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "3",
+        "GD": "-3",
+        "P": "3",
+        "D": "0",
+        "W": "1",
+        "R": "29",
+        "Total": "1-0-3"
+       },
+       "group": "UEFA Europa League Standings"
+      },
+      "11706": {
+       "rank": "30",
+       "gp": "4",
+       "w": "1",
+       "d": "0",
+       "l": "3",
+       "gd": "-4",
+       "pts": "3",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "3",
+        "GD": "-4",
+        "P": "3",
+        "D": "0",
+        "W": "1",
+        "R": "30",
+        "Total": "1-0-3"
+       },
+       "group": "UEFA Europa League Standings"
+      },
+      "176": {
+       "rank": "31",
+       "gp": "4",
+       "w": "1",
+       "d": "0",
+       "l": "3",
+       "gd": "-4",
+       "pts": "3",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "3",
+        "GD": "-4",
+        "P": "3",
+        "D": "0",
+        "W": "1",
+        "R": "31",
+        "Total": "1-0-3"
+       },
+       "group": "UEFA Europa League Standings"
+      },
+      "256": {
+       "rank": "32",
+       "gp": "4",
+       "w": "1",
+       "d": "0",
+       "l": "3",
+       "gd": "-5",
+       "pts": "3",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "3",
+        "GD": "-5",
+        "P": "3",
+        "D": "0",
+        "W": "1",
+        "R": "32",
+        "Total": "1-0-3"
+       },
+       "group": "UEFA Europa League Standings"
+      },
+      "13083": {
+       "rank": "33",
+       "gp": "4",
+       "w": "0",
+       "d": "1",
+       "l": "3",
+       "gd": "-7",
+       "pts": "1",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "3",
+        "GD": "-7",
+        "P": "1",
+        "D": "1",
+        "W": "0",
+        "R": "33",
+        "Total": "0-1-3"
+       },
+       "group": "UEFA Europa League Standings"
+      },
+      "987": {
+       "rank": "34",
+       "gp": "4",
+       "w": "0",
+       "d": "1",
+       "l": "3",
+       "gd": "-8",
+       "pts": "1",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "3",
+        "GD": "-8",
+        "P": "1",
+        "D": "1",
+        "W": "0",
+        "R": "34",
+        "Total": "0-1-3"
+       },
+       "group": "UEFA Europa League Standings"
+      },
+      "2990": {
+       "rank": "35",
+       "gp": "4",
+       "w": "0",
+       "d": "1",
+       "l": "3",
+       "gd": "-10",
+       "pts": "1",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "3",
+        "GD": "-10",
+        "P": "1",
+        "D": "1",
+        "W": "0",
+        "R": "35",
+        "Total": "0-1-3"
+       },
+       "group": "UEFA Europa League Standings"
+      },
+      "20024": {
+       "rank": "36",
+       "gp": "4",
+       "w": "0",
+       "d": "0",
+       "l": "4",
+       "gd": "-10",
+       "pts": "0",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "4",
+        "GD": "-10",
+        "P": "0",
+        "D": "0",
+        "W": "0",
+        "R": "36",
+        "Total": "0-0-4"
+       },
+       "group": "UEFA Europa League Standings"
+      }
+     },
+     "last5": {
+      "85": [
+       {
+        "res": "L",
+        "gf": 0,
+        "ga": 3,
+        "opp": "Rayo Vallecano",
+        "home": false,
+        "date": "2026-10-31"
+       },
+       {
+        "res": "L",
+        "gf": 1,
+        "ga": 2,
+        "opp": "Union St.-Gilloise",
+        "home": true,
+        "date": "2026-11-05"
+       },
+       {
+        "res": "D",
+        "gf": 0,
+        "ga": 0,
+        "opp": "Levante",
+        "home": true,
+        "date": "2026-11-08"
+       },
+       {
+        "res": "W",
+        "gf": 5,
+        "ga": 0,
+        "opp": "Salamanca UDS",
+        "home": false,
+        "date": "2026-11-13"
+       },
+       {
+        "res": "L",
+        "gf": 1,
+        "ga": 2,
+        "opp": "Real Madrid",
+        "home": false,
+        "date": "2026-11-21"
+       }
+      ],
+      "349": [
+       {
+        "res": "W",
+        "gf": 3,
+        "ga": 0,
+        "opp": "Aston Villa",
+        "home": true,
+        "date": "2026-10-28"
+       },
+       {
+        "res": "W",
+        "gf": 2,
+        "ga": 0,
+        "opp": "Leeds United",
+        "home": true,
+        "date": "2026-10-31"
+       },
+       {
+        "res": "W",
+        "gf": 3,
+        "ga": 1,
+        "opp": "Sparta Prague",
+        "home": false,
+        "date": "2026-11-05"
+       },
+       {
+        "res": "W",
+        "gf": 2,
+        "ga": 1,
+        "opp": "Ipswich Town",
+        "home": false,
+        "date": "2026-11-08"
+       },
+       {
+        "res": "W",
+        "gf": 2,
+        "ga": 0,
+        "opp": "Nottingham Forest",
+        "home": true,
+        "date": "2026-11-21"
+       }
+      ]
+     },
+     "leaders": {
+      "85": [
+       [
+        "Goals",
+        "Javi Rodríguez",
+        "Matches: 4, Goals: 2"
+       ],
+       [
+        "Assists",
+        "Sergio Carreira",
+        "Matches: 4, Assists: 1"
+       ],
+       [
+        "Total Shots",
+        "Ferran Jutglà",
+        "7"
+       ]
+      ],
+      "349": [
+       [
+        "Goals",
+        "Rayan",
+        "Matches: 4, Goals: 3"
+       ],
+       [
+        "Assists",
+        "Evanilson",
+        "Matches: 4, Assists: 1"
+       ],
+       [
+        "Total Shots",
+        "Álvaro Rodríguez",
+        "10"
+       ]
+      ]
+     },
+     "venue": "Balaidos",
+     "city": "Vigo"
+    }
+   }
+  },
+  "msg_id": 9656,
+  "btn": 4
+ },
+ "401915517": {
+  "id": "401915517",
+  "div": "UEL",
+  "slug": "uefa.europa",
+  "kickoff": "2026-11-26T20:45:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "detail": "Scheduled",
+  "home": {
+   "id": "597",
+   "name": "Dinamo Zagreb",
+   "short": "Dinamo Zagreb",
+   "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/597.png",
+   "color": "0000bb",
+   "alt": "ccff00",
+   "form": "WLWDL",
+   "score": "0",
+   "ru": "Динамо"
+  },
+  "away": {
+   "id": "131",
+   "name": "Bayer Leverkusen",
+   "short": "Leverkusen",
+   "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/131.png",
+   "color": "DA0308",
+   "alt": "f9fbfc",
+   "form": "WWLLW",
+   "score": "0",
+   "ru": "Байер"
+  },
+  "odds": {
+   "H": 5.0,
+   "D": 4.4,
+   "A": 1.625,
+   "line": 3.5,
+   "over": 2.25,
+   "under": 1.645,
+   "spread_h": [
+    0.5,
+    2.25
+   ],
+   "spread_a": [
+    -0.5,
+    1.556
+   ]
+  },
+  "venue": "Maksimir Stadium",
+  "clock": "0'",
+  "goals": [],
+  "open": {
+   "O35": 0.4223
+  },
+  "top": false,
+  "lam": [
+   1.1657322526152738,
+   2.146295825346195
+  ],
+  "probs": {
+   "H": 0.1919224192503665,
+   "D": 0.21784583013760375,
+   "A": 0.5902317506120301,
+   "1X": 0.40976824938797046,
+   "12": 0.7821541698623966,
+   "X2": 0.8080775807496339,
+   "BTTS_Y": 0.6151245326347212,
+   "BTTS_N": 0.38487546736527883,
+   "O15": 0.8501521571177137,
+   "U15": 0.14984784288228664,
+   "O25": 0.6429777268487291,
+   "U25": 0.357022273151271,
+   "O35": 0.42230830604977254,
+   "U35": 0.5776916939502278,
+   "H_O05": 0.6883056459961772,
+   "H_O15": 0.32495348457583806,
+   "A_O05": 0.8830817139560571,
+   "A_O15": 0.6321404847133091,
+   "H-1.5": 0.07617669210123391,
+   "A+1.5": 0.9238233078987664,
+   "A-1.5": 0.37098998534643013,
+   "H+1.5": 0.6290100146535701,
+   "H-2.5": 0.02310705606131616,
+   "A-2.5": 0.19109144229832217,
+   "H+2.5": 0.8089085577016778,
+   "A+2.5": 0.9768929439386841,
+   "O45": 0.23959247664136213,
+   "U45": 0.7604075233586377,
+   "H_O25": 0.11316781776325752,
+   "A_O25": 0.36284342834783295,
+   "H&O15": 0.15673431034952454,
+   "A&O15": 0.5193091893130729,
+   "H&BTTS": 0.11874130588891058,
+   "A&BTTS": 0.32227456929069437,
+   "1X&U35": 0.264928900654216,
+   "X2&U35": 0.4549744070561149,
+   "BTTS&O25": 0.5166500915571056,
+   "HT_H": 0.1852125412158257,
+   "HT_D": 0.3729788763292206,
+   "HT_A": 0.44180858245495386,
+   "HT_O05": 0.765589171384564,
+   "HT_U05": 0.234410828615436,
+   "HT_O15": 0.4480917883194759,
+   "HT_U15": 0.5519082116805243
+  },
+  "scores": [
+   [
+    "1:1",
+    0.0984744410776156
+   ],
+   [
+    "1:2",
+    0.09784966749453068
+   ],
+   [
+    "0:2",
+    0.08393837201896821
+   ]
+  ],
+  "main": {
+   "key": "O35",
+   "label": "ТБ 3.5",
+   "p": 0.4223,
+   "odds": 2.25,
+   "est": false,
+   "stake": 0.5,
+   "strategy": "external_trial",
+   "selection_mode": "external_fallback",
+   "trial_expires_at": null,
+   "probability_origin": "baseline_model",
+   "model_edge": -0.04981,
+   "source_count": 2,
+   "source_refs": [
+    {
+     "author": "expert:роман петренко",
+     "provider": "livesport",
+     "source": "https://www.livesport.ru/tips/football/2026/11/26/dinamo-zagreb-bayleverkusen/",
+     "published_at": "2026-11-25T16:45:00+00:00",
+     "observed_at": "2026-11-25T16:58:31.614810+00:00",
+     "odds": 2.2,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/rodion-makin",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/26-11-2026-dinamo-zagreb-bayer-leverkusen",
+     "published_at": "2026-11-26T03:43:00+00:00",
+     "observed_at": "2026-11-26T03:44:24.553251+00:00",
+     "odds": 2.16,
+     "price_kind": "author_recorded"
+    }
+   ]
+  },
+  "bold": {},
+  "value": null,
+  "odds_src": "DraftKings",
+  "model_w": 0.0,
+  "learned_n": 1566,
+  "stavka_signal": {
+   "status": "baseline_better",
+   "weight": 0.0,
+   "authors": 3,
+   "votes": {
+    "H": 2.0,
+    "A": 0.9672447114717027
+   },
+   "source": "https://stavka.tv",
+   "snapshot": "UEL|401915517"
+  },
+  "research": {
+   "articles": [
+    {
+     "id": "8d7d1457146cd523679b8157",
+     "kind": "context",
+     "provider": "livesport",
+     "source": "https://www.livesport.ru/tips/football/2026/11/26/dinamo-zagreb-bayleverkusen/",
+     "sport": "football",
+     "div": "UEL",
+     "event_id": "401915517",
+     "kickoff": "2026-11-26T17:45:00+00:00",
+     "published_at": "2026-11-25T16:45:00+00:00",
+     "observed_at": "2026-11-25T16:58:31.614810+00:00",
+     "tables": [
+      [
+       [
+        "",
+        "Букмекер",
+        "1",
+        "x",
+        "2",
+        "Новым игрокам",
+        ""
+       ],
+       [
+        "",
+        "",
+        "4.60",
+        "4.40",
+        "1.65",
+        "Фрибет",
+        "15 000 ₽"
+       ],
+       [
+        "",
+        "",
+        "4.38",
+        "4.30",
+        "1.67",
+        "Фрибет",
+        "30 000 ₽"
+       ],
+       [
+        "",
+        "",
+        "4.40",
+        "4.30",
+        "1.69",
+        "Фрибет всем",
+        "10 000 ₽"
+       ],
+       [
+        "",
+        "",
+        "4.50",
+        "4.25",
+        "1.68",
+        "Фрибет",
+        "1000 ₽"
+       ]
+      ]
+     ]
+    },
+    {
+     "id": "21efb4fc5b5e8e12be52baac",
+     "kind": "context",
+     "provider": "rb",
+     "source": "https://bookmaker-ratings.ru/tips/dinamo-zagreb-bayer-prognoz-i-stavka-dion-bele-snova-zabet/",
+     "sport": "football",
+     "div": "UEL",
+     "event_id": "401915517",
+     "kickoff": "2026-11-26T17:45:00+00:00",
+     "published_at": "2026-11-25T18:36:09+00:00",
+     "observed_at": "2026-11-25T20:34:53.863094+00:00",
+     "tables": []
+    }
+   ],
+   "dossier": {
+    "observed_at": "2026-11-26T16:33:18.771961+00:00",
+    "kickoff": "2026-11-26T17:45:00+00:00",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa/summary?event=401915517",
+    "status": "available",
+    "facts": {
+     "table": {
+      "1929": {
+       "rank": "1",
+       "gp": "4",
+       "w": "4",
+       "d": "0",
+       "l": "0",
+       "gd": "+10",
+       "pts": "12",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "0",
+        "GD": "+10",
+        "P": "12",
+        "D": "0",
+        "W": "4",
+        "R": "1",
+        "Total": "4-0-0"
+       },
+       "group": "UEFA Europa League Standings"
+      },
+      "349": {
+       "rank": "2",
+       "gp": "4",
+       "w": "4",
+       "d": "0",
+       "l": "0",
+       "gd": "+9",
+       "pts": "12",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "0",
+        "GD": "+9",
+        "P": "12",
+        "D": "0",
+        "W": "4",
+        "R": "2",
+        "Total": "4-0-0"
+       },
+       "group": "UEFA Europa League Standings"
+      },
+      "622": {
+       "rank": "3",
+       "gp": "4",
+       "w": "4",
+       "d": "0",
+       "l": "0",
+       "gd": "+8",
+       "pts": "12",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "0",
+        "GD": "+8",
+        "P": "12",
+        "D": "0",
+        "W": "4",
+        "R": "3",
+        "Total": "4-0-0"
+       },
+       "group": "UEFA Europa League Standings"
+      },
+      "5807": {
+       "rank": "4",
+       "gp": "4",
+       "w": "3",
+       "d": "1",
+       "l": "0",
+       "gd": "+8",
+       "pts": "10",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "0",
+        "GD": "+8",
+        "P": "10",
+        "D": "1",
+        "W": "3",
+        "R": "4",
+        "Total": "3-1-0"
+       },
+       "group": "UEFA Europa League Standings"
+      },
+      "111": {
+       "rank": "5",
+       "gp": "4",
+       "w": "3",
+       "d": "1",
+       "l": "0",
+       "gd": "+7",
+       "pts": "10",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "0",
+        "GD": "+7",
+        "P": "10",
+        "D": "1",
+        "W": "3",
+        "R": "5",
+        "Total": "3-1-0"
+       },
+       "group": "UEFA Europa League Standings"
+      },
+      "435": {
+       "rank": "6",
+       "gp": "4",
+       "w": "3",
+       "d": "1",
+       "l": "0",
+       "gd": "+3",
+       "pts": "10",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "0",
+        "GD": "+3",
+        "P": "10",
+        "D": "1",
+        "W": "3",
+        "R": "6",
+        "Total": "3-1-0"
+       },
+       "group": "UEFA Europa League Standings"
+      },
+      "131": {
+       "rank": "7",
+       "gp": "4",
+       "w": "3",
+       "d": "0",
+       "l": "1",
+       "gd": "+7",
+       "pts": "9",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "1",
+        "GD": "+7",
+        "P": "9",
+        "D": "0",
+        "W": "3",
+        "R": "7",
+        "Total": "3-0-1"
+       },
+       "group": "UEFA Europa League Standings"
+      },
+      "1895": {
+       "rank": "8",
+       "gp": "4",
+       "w": "2",
+       "d": "1",
+       "l": "1",
+       "gd": "+3",
+       "pts": "7",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "1",
+        "GD": "+3",
+        "P": "7",
+        "D": "1",
+        "W": "2",
+        "R": "8",
+        "Total": "2-1-1"
+       },
+       "group": "UEFA Europa League Standings"
+      },
+      "597": {
+       "rank": "9",
+       "gp": "4",
+       "w": "2",
+       "d": "1",
+       "l": "1",
+       "gd": "+1",
+       "pts": "7",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "1",
+        "GD": "+1",
+        "P": "7",
+        "D": "1",
+        "W": "2",
+        "R": "9",
+        "Total": "2-1-1"
+       },
+       "group": "UEFA Europa League Standings"
+      },
+      "490": {
+       "rank": "10",
+       "gp": "4",
+       "w": "2",
+       "d": "1",
+       "l": "1",
+       "gd": "+1",
+       "pts": "7",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "1",
+        "GD": "+1",
+        "P": "7",
+        "D": "1",
+        "W": "2",
+        "R": "10",
+        "Total": "2-1-1"
+       },
+       "group": "UEFA Europa League Standings"
+      },
+      "366": {
+       "rank": "11",
+       "gp": "4",
+       "w": "2",
+       "d": "1",
+       "l": "1",
+       "gd": "0",
+       "pts": "7",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "1",
+        "GD": "0",
+        "P": "7",
+        "D": "1",
+        "W": "2",
+        "R": "11",
+        "Total": "2-1-1"
+       },
+       "group": "UEFA Europa League Standings"
+      },
+      "147": {
+       "rank": "12",
+       "gp": "4",
+       "w": "2",
+       "d": "1",
+       "l": "1",
+       "gd": "-1",
+       "pts": "7",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "1",
+        "GD": "-1",
+        "P": "7",
+        "D": "1",
+        "W": "2",
+        "R": "12",
+        "Total": "2-1-1"
+       },
+       "group": "UEFA Europa League Standings"
+      },
+      "167": {
+       "rank": "13",
+       "gp": "4",
+       "w": "2",
+       "d": "1",
+       "l": "1",
+       "gd": "-1",
+       "pts": "7",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "1",
+        "GD": "-1",
+        "P": "7",
+        "D": "1",
+        "W": "2",
+        "R": "13",
+        "Total": "2-1-1"
+       },
+       "group": "UEFA Europa League Standings"
+      },
+      "140": {
+       "rank": "14",
+       "gp": "4",
+       "w": "2",
+       "d": "0",
+       "l": "2",
+       "gd": "+3",
+       "pts": "6",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "2",
+        "GD": "+3",
+        "P": "6",
+        "D": "0",
+        "W": "2",
+        "R": "14",
+        "Total": "2-0-2"
+       },
+       "group": "UEFA Europa League Standings"
+      },
+      "441": {
+       "rank": "15",
+       "gp": "4",
+       "w": "2",
+       "d": "0",
+       "l": "2",
+       "gd": "+3",
+       "pts": "6",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "2",
+        "GD": "+3",
+        "P": "6",
+        "D": "0",
+        "W": "2",
+        "R": "15",
+        "Total": "2-0-2"
+       },
+       "group": "UEFA Europa League Standings"
+      },
+      "1010": {
+       "rank": "16",
+       "gp": "4",
+       "w": "2",
+       "d": "0",
+       "l": "2",
+       "gd": "+1",
+       "pts": "6",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "2",
+        "GD": "+1",
+        "P": "6",
+        "D": "0",
+        "W": "2",
+        "R": "16",
+        "Total": "2-0-2"
+       },
+       "group": "UEFA Europa League Standings"
+      },
+      "169": {
+       "rank": "17",
+       "gp": "4",
+       "w": "1",
+       "d": "3",
+       "l": "0",
+       "gd": "+1",
+       "pts": "6",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "0",
+        "GD": "+1",
+        "P": "6",
+        "D": "3",
+        "W": "1",
+        "R": "17",
+        "Total": "1-3-0"
+       },
+       "group": "UEFA Europa League Standings"
+      },
+      "617": {
+       "rank": "18",
+       "gp": "4",
+       "w": "2",
+       "d": "0",
+       "l": "2",
+       "gd": "-1",
+       "pts": "6",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "2",
+        "GD": "-1",
+        "P": "6",
+        "D": "0",
+        "W": "2",
+        "R": "18",
+        "Total": "2-0-2"
+       },
+       "group": "UEFA Europa League Standings"
+      },
+      "21615": {
+       "rank": "19",
+       "gp": "4",
+       "w": "2",
+       "d": "0",
+       "l": "2",
+       "gd": "-2",
+       "pts": "6",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "2",
+        "GD": "-2",
+        "P": "6",
+        "D": "0",
+        "W": "2",
+        "R": "19",
+        "Total": "2-0-2"
+       },
+       "group": "UEFA Europa League Standings"
+      },
+      "89": {
+       "rank": "20",
+       "gp": "4",
+       "w": "1",
+       "d": "2",
+       "l": "1",
+       "gd": "+5",
+       "pts": "5",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "1",
+        "GD": "+5",
+        "P": "5",
+        "D": "2",
+        "W": "1",
+        "R": "20",
+        "Total": "1-2-1"
+       },
+       "group": "UEFA Europa League Standings"
+      },
+      "384": {
+       "rank": "21",
+       "gp": "4",
+       "w": "1",
+       "d": "2",
+       "l": "1",
+       "gd": "+3",
+       "pts": "5",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "1",
+        "GD": "+3",
+        "P": "5",
+        "D": "2",
+        "W": "1",
+        "R": "21",
+        "Total": "1-2-1"
+       },
+       "group": "UEFA Europa League Standings"
+      },
+      "433": {
+       "rank": "22",
+       "gp": "4",
+       "w": "1",
+       "d": "1",
+       "l": "2",
+       "gd": "0",
+       "pts": "4",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "2",
+        "GD": "0",
+        "P": "4",
+        "D": "1",
+        "W": "1",
+        "R": "22",
+        "Total": "1-1-2"
+       },
+       "group": "UEFA Europa League Standings"
+      },
+      "7911": {
+       "rank": "23",
+       "gp": "4",
+       "w": "1",
+       "d": "1",
+       "l": "2",
+       "gd": "0",
+       "pts": "4",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "2",
+        "GD": "0",
+        "P": "4",
+        "D": "1",
+        "W": "1",
+        "R": "23",
+        "Total": "1-1-2"
+       },
+       "group": "UEFA Europa League Standings"
+      },
+      "3746": {
+       "rank": "24",
+       "gp": "4",
+       "w": "1",
+       "d": "1",
+       "l": "2",
+       "gd": "-3",
+       "pts": "4",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "2",
+        "GD": "-3",
+        "P": "4",
+        "D": "1",
+        "W": "1",
+        "R": "24",
+        "Total": "1-1-2"
+       },
+       "group": "UEFA Europa League Standings"
+      },
+      "3362": {
+       "rank": "25",
+       "gp": "4",
+       "w": "1",
+       "d": "1",
+       "l": "2",
+       "gd": "-4",
+       "pts": "4",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "2",
+        "GD": "-4",
+        "P": "4",
+        "D": "1",
+        "W": "1",
+        "R": "25",
+        "Total": "1-1-2"
+       },
+       "group": "UEFA Europa League Standings"
+      },
+      "2790": {
+       "rank": "26",
+       "gp": "4",
+       "w": "1",
+       "d": "1",
+       "l": "2",
+       "gd": "-5",
+       "pts": "4",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "2",
+        "GD": "-5",
+        "P": "4",
+        "D": "1",
+        "W": "1",
+        "R": "26",
+        "Total": "1-1-2"
+       },
+       "group": "UEFA Europa League Standings"
+      },
+      "85": {
+       "rank": "27",
+       "gp": "4",
+       "w": "1",
+       "d": "0",
+       "l": "3",
+       "gd": "-2",
+       "pts": "3",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "3",
+        "GD": "-2",
+        "P": "3",
+        "D": "0",
+        "W": "1",
+        "R": "27",
+        "Total": "1-0-3"
+       },
+       "group": "UEFA Europa League Standings"
+      },
+      "103": {
+       "rank": "28",
+       "gp": "4",
+       "w": "1",
+       "d": "0",
+       "l": "3",
+       "gd": "-3",
+       "pts": "3",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "3",
+        "GD": "-3",
+        "P": "3",
+        "D": "0",
+        "W": "1",
+        "R": "28",
+        "Total": "1-0-3"
+       },
+       "group": "UEFA Europa League Standings"
+      },
+      "11505": {
+       "rank": "29",
+       "gp": "4",
+       "w": "1",
+       "d": "0",
+       "l": "3",
+       "gd": "-3",
+       "pts": "3",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "3",
+        "GD": "-3",
+        "P": "3",
+        "D": "0",
+        "W": "1",
+        "R": "29",
+        "Total": "1-0-3"
+       },
+       "group": "UEFA Europa League Standings"
+      },
+      "11706": {
+       "rank": "30",
+       "gp": "4",
+       "w": "1",
+       "d": "0",
+       "l": "3",
+       "gd": "-4",
+       "pts": "3",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "3",
+        "GD": "-4",
+        "P": "3",
+        "D": "0",
+        "W": "1",
+        "R": "30",
+        "Total": "1-0-3"
+       },
+       "group": "UEFA Europa League Standings"
+      },
+      "176": {
+       "rank": "31",
+       "gp": "4",
+       "w": "1",
+       "d": "0",
+       "l": "3",
+       "gd": "-4",
+       "pts": "3",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "3",
+        "GD": "-4",
+        "P": "3",
+        "D": "0",
+        "W": "1",
+        "R": "31",
+        "Total": "1-0-3"
+       },
+       "group": "UEFA Europa League Standings"
+      },
+      "256": {
+       "rank": "32",
+       "gp": "4",
+       "w": "1",
+       "d": "0",
+       "l": "3",
+       "gd": "-5",
+       "pts": "3",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "3",
+        "GD": "-5",
+        "P": "3",
+        "D": "0",
+        "W": "1",
+        "R": "32",
+        "Total": "1-0-3"
+       },
+       "group": "UEFA Europa League Standings"
+      },
+      "13083": {
+       "rank": "33",
+       "gp": "4",
+       "w": "0",
+       "d": "1",
+       "l": "3",
+       "gd": "-7",
+       "pts": "1",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "3",
+        "GD": "-7",
+        "P": "1",
+        "D": "1",
+        "W": "0",
+        "R": "33",
+        "Total": "0-1-3"
+       },
+       "group": "UEFA Europa League Standings"
+      },
+      "987": {
+       "rank": "34",
+       "gp": "4",
+       "w": "0",
+       "d": "1",
+       "l": "3",
+       "gd": "-8",
+       "pts": "1",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "3",
+        "GD": "-8",
+        "P": "1",
+        "D": "1",
+        "W": "0",
+        "R": "34",
+        "Total": "0-1-3"
+       },
+       "group": "UEFA Europa League Standings"
+      },
+      "2990": {
+       "rank": "35",
+       "gp": "4",
+       "w": "0",
+       "d": "1",
+       "l": "3",
+       "gd": "-10",
+       "pts": "1",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "3",
+        "GD": "-10",
+        "P": "1",
+        "D": "1",
+        "W": "0",
+        "R": "35",
+        "Total": "0-1-3"
+       },
+       "group": "UEFA Europa League Standings"
+      },
+      "20024": {
+       "rank": "36",
+       "gp": "4",
+       "w": "0",
+       "d": "0",
+       "l": "4",
+       "gd": "-10",
+       "pts": "0",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "4",
+        "GD": "-10",
+        "P": "0",
+        "D": "0",
+        "W": "0",
+        "R": "36",
+        "Total": "0-0-4"
+       },
+       "group": "UEFA Europa League Standings"
+      }
+     },
+     "last5": {
+      "597": [
+       {
+        "res": "L",
+        "gf": 1,
+        "ga": 3,
+        "opp": "Viking FK",
+        "home": false,
+        "date": "2026-08-26"
+       },
+       {
+        "res": "D",
+        "gf": 0,
+        "ga": 0,
+        "opp": "Hapoel Be'er",
+        "home": false,
+        "date": "2026-09-16"
+       },
+       {
+        "res": "W",
+        "gf": 1,
+        "ga": 0,
+        "opp": "Anderlecht",
+        "home": true,
+        "date": "2026-10-15"
+       },
+       {
+        "res": "L",
+        "gf": 2,
+        "ga": 4,
+        "opp": "NEC Nijmegen",
+        "home": true,
+        "date": "2026-10-22"
+       },
+       {
+        "res": "W",
+        "gf": 2,
+        "ga": 0,
+        "opp": "Sunderland",
+        "home": false,
+        "date": "2026-11-05"
+       }
+      ],
+      "131": [
+       {
+        "res": "W",
+        "gf": 5,
+        "ga": 2,
+        "opp": "1. FC Nürnberg",
+        "home": true,
+        "date": "2026-10-28"
+       },
+       {
+        "res": "L",
+        "gf": 2,
+        "ga": 4,
+        "opp": "VfB Stuttgart",
+        "home": true,
+        "date": "2026-10-31"
+       },
+       {
+        "res": "L",
+        "gf": 0,
+        "ga": 1,
+        "opp": "Marseille",
+        "home": true,
+        "date": "2026-11-05"
+       },
+       {
+        "res": "W",
+        "gf": 2,
+        "ga": 1,
+        "opp": "FC Cologne",
+        "home": false,
+        "date": "2026-11-08"
+       },
+       {
+        "res": "W",
+        "gf": 4,
+        "ga": 0,
+        "opp": "SC Paderborn 07",
+        "home": true,
+        "date": "2026-11-21"
+       }
+      ]
+     },
+     "leaders": {
+      "597": [
+       [
+        "Goals",
+        "Dion Drena Beljo",
+        "Matches: 3, Goals: 4"
+       ],
+       [
+        "Assists",
+        "Luka Stojkovic",
+        "Matches: 4, Assists: 1"
+       ],
+       [
+        "Total Shots",
+        "Luka Stojkovic",
+        "12"
+       ]
+      ],
+      "131": [
+       [
+        "Goals",
+        "Patrik Schick",
+        "Matches: 4, Goals: 2"
+       ],
+       [
+        "Assists",
+        "Aleix García",
+        "Matches: 4, Assists: 1"
+       ],
+       [
+        "Total Shots",
+        "Patrik Schick",
+        "11"
+       ]
+      ]
+     },
+     "venue": "Maksimir Stadium",
+     "city": "Zagreb"
+    }
+   }
+  },
+  "msg_id": 9658,
+  "btn": 4
+ },
+ "401915507": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-26T20:45:00+03:00",
+  "sport": "football",
+  "div": "UEL",
+  "reason": "edge_below_minimum",
+  "retry_at": 1795711981.843176
+ },
+ "401915521": {
+  "id": "401915521",
+  "div": "UEL",
+  "slug": "uefa.europa",
+  "kickoff": "2026-11-26T20:45:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "detail": "Scheduled",
+  "home": {
+   "id": "435",
+   "name": "Olympiacos",
+   "short": "Olympiacos",
+   "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/435.png",
+   "color": "d01729",
+   "alt": "0202fb",
+   "form": "WDDWW",
+   "score": "0",
+   "ru": "Олимпиакос"
+  },
+  "away": {
+   "id": "103",
+   "name": "AC Milan",
+   "short": "Milan",
+   "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/103.png",
+   "color": "e4002b",
+   "alt": "ffffff",
+   "form": "WWLWL",
+   "score": "0",
+   "ru": "Милан"
+  },
+  "odds": {
+   "H": 2.9,
+   "D": 3.45,
+   "A": 2.45,
+   "line": 2.5,
+   "over": 1.952,
+   "under": 1.833,
+   "spread_h": [
+    0.5,
+    1.541
+   ],
+   "spread_a": [
+    -0.5,
+    2.3
+   ]
+  },
+  "venue": "Georgios Karaiskakis Stadium",
+  "clock": "0'",
+  "goals": [],
+  "open": {
+   "H": 0.3284
+  },
+  "top": false,
+  "lam": [
+   1.2432488223353417,
+   1.374057277653708
+  ],
+  "probs": {
+   "H": 0.32837482891485736,
+   "D": 0.2821798114480171,
+   "A": 0.3894453596371253,
+   "1X": 0.6105546403628742,
+   "12": 0.7178201885519826,
+   "X2": 0.6716251710851423,
+   "BTTS_Y": 0.5414518822687425,
+   "BTTS_N": 0.4585481177312569,
+   "O15": 0.7459156231647025,
+   "U15": 0.25408437683529705,
+   "O25": 0.4859061342675728,
+   "U25": 0.514093865732427,
+   "O35": 0.267768375989333,
+   "U35": 0.732231624010667,
+   "H_O05": 0.7115543889423691,
+   "H_O15": 0.3529447226871725,
+   "A_O05": 0.7469218746105292,
+   "A_O15": 0.39917803460417,
+   "H-1.5": 0.14457844726684327,
+   "A+1.5": 0.8554215527331565,
+   "A-1.5": 0.18526117588975183,
+   "H+1.5": 0.8147388241102478,
+   "H-2.5": 0.04833730925830719,
+   "A-2.5": 0.06770260171254983,
+   "H+2.5": 0.9322973982874496,
+   "A+2.5": 0.9516626907416926,
+   "O45": 0.12503505464443923,
+   "U45": 0.8749649453555606,
+   "H_O25": 0.13002420006225043,
+   "A_O25": 0.16026805754417744,
+   "H&O15": 0.24759491102500697,
+   "A&O15": 0.2991165194075226,
+   "H&BTTS": 0.15827232224123086,
+   "A&BTTS": 0.1839753672953388,
+   "1X&U35": 0.4557515658866753,
+   "X2&U35": 0.4941363234393754,
+   "BTTS&O25": 0.4067712356692032,
+   "HT_H": 0.2606394634235845,
+   "HT_D": 0.44111176692412746,
+   "HT_A": 0.2982487696522879,
+   "HT_O05": 0.6835181479488065,
+   "HT_U05": 0.3164818520511937,
+   "HT_O15": 0.3378526577751647,
+   "HT_U15": 0.6621473422248352
+  },
+  "scores": [
+   [
+    "1:1",
+    0.13468064659953974
+   ],
+   [
+    "0:1",
+    0.09032884022960275
+   ],
+   [
+    "1:2",
+    0.08567542713852071
+   ]
+  ],
+  "main": {
+   "key": "H",
+   "label": "П1",
+   "p": 0.3284,
+   "odds": 2.9,
+   "est": false,
+   "stake": 0.5,
+   "strategy": "external_trial",
+   "selection_mode": "external_fallback",
+   "trial_expires_at": null,
+   "probability_origin": "baseline_model",
+   "model_edge": -0.04771,
+   "source_count": 23,
+   "source_refs": [
+    {
+     "author": "/predictors/vyacheslav-yurkin",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/26-11-2026-olympiacos-milan",
+     "published_at": "2026-11-25T15:50:00+00:00",
+     "observed_at": "2026-11-26T06:09:54.420324+00:00",
+     "odds": 2.88,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/stepan-toporkov",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/26-11-2026-olympiacos-milan",
+     "published_at": "2026-11-25T16:59:00+00:00",
+     "observed_at": "2026-11-26T06:09:54.420324+00:00",
+     "odds": 2.88,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/maks-volman",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/26-11-2026-olympiacos-milan",
+     "published_at": "2026-11-25T17:24:00+00:00",
+     "observed_at": "2026-11-26T06:09:54.420324+00:00",
+     "odds": 2.88,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/ilya-valerevich-1",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/26-11-2026-olympiacos-milan",
+     "published_at": "2026-11-25T19:37:00+00:00",
+     "observed_at": "2026-11-26T06:09:54.420324+00:00",
+     "odds": 2.88,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/rados-nikiforov",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/26-11-2026-olympiacos-milan",
+     "published_at": "2026-11-25T20:27:00+00:00",
+     "observed_at": "2026-11-25T20:38:33.045660+00:00",
+     "odds": 2.88,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/the-red",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/26-11-2026-olympiacos-milan",
+     "published_at": "2026-11-25T22:28:00+00:00",
+     "observed_at": "2026-11-25T22:42:19.142188+00:00",
+     "odds": 2.88,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/gennadiy-sovetskikh",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/26-11-2026-olympiacos-milan",
+     "published_at": "2026-11-25T23:13:00+00:00",
+     "observed_at": "2026-11-25T23:26:18.285735+00:00",
+     "odds": 2.88,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/lexa-bystryi",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/26-11-2026-olympiacos-milan",
+     "published_at": "2026-11-26T00:43:00+00:00",
+     "observed_at": "2026-11-26T00:52:18.576136+00:00",
+     "odds": 2.88,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/xo-krkr",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/26-11-2026-olympiacos-milan",
+     "published_at": "2026-11-26T01:27:00+00:00",
+     "observed_at": "2026-11-26T01:36:18.793605+00:00",
+     "odds": 2.88,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/ninja-gaiden",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/26-11-2026-olympiacos-milan",
+     "published_at": "2026-11-26T06:07:00+00:00",
+     "observed_at": "2026-11-26T06:09:54.420324+00:00",
+     "odds": 2.88,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/mq-ephemeral",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/26-11-2026-olympiacos-milan",
+     "published_at": "2026-11-26T06:25:00+00:00",
+     "observed_at": "2026-11-26T06:29:55.126141+00:00",
+     "odds": 2.88,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/pliuskin",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/26-11-2026-olympiacos-milan",
+     "published_at": "2026-11-26T06:47:00+00:00",
+     "observed_at": "2026-11-26T06:51:54.765185+00:00",
+     "odds": 2.88,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/anton-valerevic",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/26-11-2026-olympiacos-milan",
+     "published_at": "2026-11-26T07:08:00+00:00",
+     "observed_at": "2026-11-26T07:13:54.757691+00:00",
+     "odds": 2.88,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/andrey-baturin-1",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/26-11-2026-olympiacos-milan",
+     "published_at": "2026-11-26T07:48:00+00:00",
+     "observed_at": "2026-11-26T07:53:56.146736+00:00",
+     "odds": 2.88,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/dmitrii-bartasuk",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/26-11-2026-olympiacos-milan",
+     "published_at": "2026-11-26T08:07:00+00:00",
+     "observed_at": "2026-11-26T08:15:55.486840+00:00",
+     "odds": 3.02,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/poligraf-poligrafyc-2",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/26-11-2026-olympiacos-milan",
+     "published_at": "2026-11-26T10:34:00+00:00",
+     "observed_at": "2026-11-26T10:39:30.849372+00:00",
+     "odds": 3.02,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/sergei-kitaev-2-akk",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/26-11-2026-olympiacos-milan",
+     "published_at": "2026-11-26T11:36:00+00:00",
+     "observed_at": "2026-11-26T11:43:30.620779+00:00",
+     "odds": 2.88,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/maksim-viktorovich",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/26-11-2026-olympiacos-milan",
+     "published_at": "2026-11-26T12:22:00+00:00",
+     "observed_at": "2026-11-26T12:27:30.332332+00:00",
+     "odds": 2.88,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/11-22",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/26-11-2026-olympiacos-milan",
+     "published_at": "2026-11-26T12:22:00+00:00",
+     "observed_at": "2026-11-26T12:27:30.332332+00:00",
+     "odds": 2.88,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/vitaliy-zakharov-1",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/26-11-2026-olympiacos-milan",
+     "published_at": "2026-11-26T15:09:00+00:00",
+     "observed_at": "2026-11-26T15:13:01.940630+00:00",
+     "odds": 2.88,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/sergey-147",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/26-11-2026-olympiacos-milan",
+     "published_at": "2026-11-26T15:51:00+00:00",
+     "observed_at": "2026-11-26T15:55:01.332127+00:00",
+     "odds": 2.88,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/-4973",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/26-11-2026-olympiacos-milan",
+     "published_at": "2026-11-26T16:13:00+00:00",
+     "observed_at": "2026-11-26T16:15:02.088745+00:00",
+     "odds": 2.88,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/aleksandr-bucnev-1",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/26-11-2026-olympiacos-milan",
+     "published_at": "2026-11-26T16:31:00+00:00",
+     "observed_at": "2026-11-26T16:37:02.125240+00:00",
+     "odds": 2.88,
+     "price_kind": "author_recorded"
+    }
+   ]
+  },
+  "bold": {},
+  "value": null,
+  "odds_src": "DraftKings",
+  "model_w": 0.0,
+  "learned_n": 1566,
+  "stavka_signal": {
+   "status": "baseline_better",
+   "weight": 0.0,
+   "authors": 62,
+   "votes": {
+    "A": 21.863412551001304,
+    "H": 23.254107516325764,
+    "D": 5.997623733344078,
+    "U25": 6.958906364800478,
+    "O25": 4.015090181389911
+   },
+   "source": "https://stavka.tv",
+   "snapshot": "UEL|401915521"
+  },
+  "research": {
+   "articles": [
+    {
+     "id": "b2b70e82a81a435523f056ae",
+     "kind": "context",
+     "provider": "livesport",
+     "source": "https://www.livesport.ru/tips/football/2026/11/26/olympiacos-milan/",
+     "sport": "football",
+     "div": "UEL",
+     "event_id": "401915521",
+     "kickoff": "2026-11-26T17:45:00+00:00",
+     "published_at": "2026-11-25T16:45:00+00:00",
+     "observed_at": "2026-11-25T16:58:32.091640+00:00",
+     "tables": [
+      [
+       [
+        "",
+        "Букмекер",
+        "1",
+        "x",
+        "2",
+        "Новым игрокам",
+        ""
+       ],
+       [
+        "",
+        "",
+        "2.80",
+        "3.45",
+        "2.50",
+        "Фрибет",
+        "15 000 ₽"
+       ],
+       [
+        "",
+        "",
+        "2.87",
+        "3.45",
+        "2.45",
+        "Фрибет",
+        "30 000 ₽"
+       ],
+       [
+        "",
+        "",
+        "2.85",
+        "3.45",
+        "2.44",
+        "Фрибет всем",
+        "10 000 ₽"
+       ],
+       [
+        "",
+        "",
+        "2.74",
+        "3.45",
+        "2.51",
+        "Фрибет",
+        "1000 ₽"
+       ]
+      ]
+     ]
+    },
+    {
+     "id": "93c55b3b75081a41e65b3b10",
+     "kind": "context",
+     "provider": "metaratings",
+     "source": "https://metaratings.ru/prognozy/futbol/olimpiakos-milan-prognoz-na-match-ligi-evropy-26-noyabrya-2026-goda/",
+     "sport": "football",
+     "div": "UEL",
+     "event_id": "401915521",
+     "kickoff": "2026-11-26T17:45:00+00:00",
+     "published_at": "2026-11-25T16:47:06+00:00",
+     "observed_at": "2026-11-26T01:46:42.399881+00:00",
+     "tables": []
+    }
+   ],
+   "dossier": {
+    "observed_at": "2026-11-26T16:33:18.852953+00:00",
+    "kickoff": "2026-11-26T17:45:00+00:00",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa/summary?event=401915521",
+    "status": "available",
+    "facts": {
+     "table": {
+      "1929": {
+       "rank": "1",
+       "gp": "4",
+       "w": "4",
+       "d": "0",
+       "l": "0",
+       "gd": "+10",
+       "pts": "12",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "0",
+        "GD": "+10",
+        "P": "12",
+        "D": "0",
+        "W": "4",
+        "R": "1",
+        "Total": "4-0-0"
+       },
+       "group": "UEFA Europa League Standings"
+      },
+      "349": {
+       "rank": "2",
+       "gp": "4",
+       "w": "4",
+       "d": "0",
+       "l": "0",
+       "gd": "+9",
+       "pts": "12",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "0",
+        "GD": "+9",
+        "P": "12",
+        "D": "0",
+        "W": "4",
+        "R": "2",
+        "Total": "4-0-0"
+       },
+       "group": "UEFA Europa League Standings"
+      },
+      "622": {
+       "rank": "3",
+       "gp": "4",
+       "w": "4",
+       "d": "0",
+       "l": "0",
+       "gd": "+8",
+       "pts": "12",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "0",
+        "GD": "+8",
+        "P": "12",
+        "D": "0",
+        "W": "4",
+        "R": "3",
+        "Total": "4-0-0"
+       },
+       "group": "UEFA Europa League Standings"
+      },
+      "5807": {
+       "rank": "4",
+       "gp": "4",
+       "w": "3",
+       "d": "1",
+       "l": "0",
+       "gd": "+8",
+       "pts": "10",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "0",
+        "GD": "+8",
+        "P": "10",
+        "D": "1",
+        "W": "3",
+        "R": "4",
+        "Total": "3-1-0"
+       },
+       "group": "UEFA Europa League Standings"
+      },
+      "111": {
+       "rank": "5",
+       "gp": "4",
+       "w": "3",
+       "d": "1",
+       "l": "0",
+       "gd": "+7",
+       "pts": "10",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "0",
+        "GD": "+7",
+        "P": "10",
+        "D": "1",
+        "W": "3",
+        "R": "5",
+        "Total": "3-1-0"
+       },
+       "group": "UEFA Europa League Standings"
+      },
+      "435": {
+       "rank": "6",
+       "gp": "4",
+       "w": "3",
+       "d": "1",
+       "l": "0",
+       "gd": "+3",
+       "pts": "10",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "0",
+        "GD": "+3",
+        "P": "10",
+        "D": "1",
+        "W": "3",
+        "R": "6",
+        "Total": "3-1-0"
+       },
+       "group": "UEFA Europa League Standings"
+      },
+      "131": {
+       "rank": "7",
+       "gp": "4",
+       "w": "3",
+       "d": "0",
+       "l": "1",
+       "gd": "+7",
+       "pts": "9",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "1",
+        "GD": "+7",
+        "P": "9",
+        "D": "0",
+        "W": "3",
+        "R": "7",
+        "Total": "3-0-1"
+       },
+       "group": "UEFA Europa League Standings"
+      },
+      "1895": {
+       "rank": "8",
+       "gp": "4",
+       "w": "2",
+       "d": "1",
+       "l": "1",
+       "gd": "+3",
+       "pts": "7",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "1",
+        "GD": "+3",
+        "P": "7",
+        "D": "1",
+        "W": "2",
+        "R": "8",
+        "Total": "2-1-1"
+       },
+       "group": "UEFA Europa League Standings"
+      },
+      "597": {
+       "rank": "9",
+       "gp": "4",
+       "w": "2",
+       "d": "1",
+       "l": "1",
+       "gd": "+1",
+       "pts": "7",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "1",
+        "GD": "+1",
+        "P": "7",
+        "D": "1",
+        "W": "2",
+        "R": "9",
+        "Total": "2-1-1"
+       },
+       "group": "UEFA Europa League Standings"
+      },
+      "490": {
+       "rank": "10",
+       "gp": "4",
+       "w": "2",
+       "d": "1",
+       "l": "1",
+       "gd": "+1",
+       "pts": "7",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "1",
+        "GD": "+1",
+        "P": "7",
+        "D": "1",
+        "W": "2",
+        "R": "10",
+        "Total": "2-1-1"
+       },
+       "group": "UEFA Europa League Standings"
+      },
+      "366": {
+       "rank": "11",
+       "gp": "4",
+       "w": "2",
+       "d": "1",
+       "l": "1",
+       "gd": "0",
+       "pts": "7",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "1",
+        "GD": "0",
+        "P": "7",
+        "D": "1",
+        "W": "2",
+        "R": "11",
+        "Total": "2-1-1"
+       },
+       "group": "UEFA Europa League Standings"
+      },
+      "147": {
+       "rank": "12",
+       "gp": "4",
+       "w": "2",
+       "d": "1",
+       "l": "1",
+       "gd": "-1",
+       "pts": "7",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "1",
+        "GD": "-1",
+        "P": "7",
+        "D": "1",
+        "W": "2",
+        "R": "12",
+        "Total": "2-1-1"
+       },
+       "group": "UEFA Europa League Standings"
+      },
+      "167": {
+       "rank": "13",
+       "gp": "4",
+       "w": "2",
+       "d": "1",
+       "l": "1",
+       "gd": "-1",
+       "pts": "7",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "1",
+        "GD": "-1",
+        "P": "7",
+        "D": "1",
+        "W": "2",
+        "R": "13",
+        "Total": "2-1-1"
+       },
+       "group": "UEFA Europa League Standings"
+      },
+      "140": {
+       "rank": "14",
+       "gp": "4",
+       "w": "2",
+       "d": "0",
+       "l": "2",
+       "gd": "+3",
+       "pts": "6",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "2",
+        "GD": "+3",
+        "P": "6",
+        "D": "0",
+        "W": "2",
+        "R": "14",
+        "Total": "2-0-2"
+       },
+       "group": "UEFA Europa League Standings"
+      },
+      "441": {
+       "rank": "15",
+       "gp": "4",
+       "w": "2",
+       "d": "0",
+       "l": "2",
+       "gd": "+3",
+       "pts": "6",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "2",
+        "GD": "+3",
+        "P": "6",
+        "D": "0",
+        "W": "2",
+        "R": "15",
+        "Total": "2-0-2"
+       },
+       "group": "UEFA Europa League Standings"
+      },
+      "1010": {
+       "rank": "16",
+       "gp": "4",
+       "w": "2",
+       "d": "0",
+       "l": "2",
+       "gd": "+1",
+       "pts": "6",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "2",
+        "GD": "+1",
+        "P": "6",
+        "D": "0",
+        "W": "2",
+        "R": "16",
+        "Total": "2-0-2"
+       },
+       "group": "UEFA Europa League Standings"
+      },
+      "169": {
+       "rank": "17",
+       "gp": "4",
+       "w": "1",
+       "d": "3",
+       "l": "0",
+       "gd": "+1",
+       "pts": "6",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "0",
+        "GD": "+1",
+        "P": "6",
+        "D": "3",
+        "W": "1",
+        "R": "17",
+        "Total": "1-3-0"
+       },
+       "group": "UEFA Europa League Standings"
+      },
+      "617": {
+       "rank": "18",
+       "gp": "4",
+       "w": "2",
+       "d": "0",
+       "l": "2",
+       "gd": "-1",
+       "pts": "6",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "2",
+        "GD": "-1",
+        "P": "6",
+        "D": "0",
+        "W": "2",
+        "R": "18",
+        "Total": "2-0-2"
+       },
+       "group": "UEFA Europa League Standings"
+      },
+      "21615": {
+       "rank": "19",
+       "gp": "4",
+       "w": "2",
+       "d": "0",
+       "l": "2",
+       "gd": "-2",
+       "pts": "6",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "2",
+        "GD": "-2",
+        "P": "6",
+        "D": "0",
+        "W": "2",
+        "R": "19",
+        "Total": "2-0-2"
+       },
+       "group": "UEFA Europa League Standings"
+      },
+      "89": {
+       "rank": "20",
+       "gp": "4",
+       "w": "1",
+       "d": "2",
+       "l": "1",
+       "gd": "+5",
+       "pts": "5",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "1",
+        "GD": "+5",
+        "P": "5",
+        "D": "2",
+        "W": "1",
+        "R": "20",
+        "Total": "1-2-1"
+       },
+       "group": "UEFA Europa League Standings"
+      },
+      "384": {
+       "rank": "21",
+       "gp": "4",
+       "w": "1",
+       "d": "2",
+       "l": "1",
+       "gd": "+3",
+       "pts": "5",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "1",
+        "GD": "+3",
+        "P": "5",
+        "D": "2",
+        "W": "1",
+        "R": "21",
+        "Total": "1-2-1"
+       },
+       "group": "UEFA Europa League Standings"
+      },
+      "433": {
+       "rank": "22",
+       "gp": "4",
+       "w": "1",
+       "d": "1",
+       "l": "2",
+       "gd": "0",
+       "pts": "4",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "2",
+        "GD": "0",
+        "P": "4",
+        "D": "1",
+        "W": "1",
+        "R": "22",
+        "Total": "1-1-2"
+       },
+       "group": "UEFA Europa League Standings"
+      },
+      "7911": {
+       "rank": "23",
+       "gp": "4",
+       "w": "1",
+       "d": "1",
+       "l": "2",
+       "gd": "0",
+       "pts": "4",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "2",
+        "GD": "0",
+        "P": "4",
+        "D": "1",
+        "W": "1",
+        "R": "23",
+        "Total": "1-1-2"
+       },
+       "group": "UEFA Europa League Standings"
+      },
+      "3746": {
+       "rank": "24",
+       "gp": "4",
+       "w": "1",
+       "d": "1",
+       "l": "2",
+       "gd": "-3",
+       "pts": "4",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "2",
+        "GD": "-3",
+        "P": "4",
+        "D": "1",
+        "W": "1",
+        "R": "24",
+        "Total": "1-1-2"
+       },
+       "group": "UEFA Europa League Standings"
+      },
+      "3362": {
+       "rank": "25",
+       "gp": "4",
+       "w": "1",
+       "d": "1",
+       "l": "2",
+       "gd": "-4",
+       "pts": "4",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "2",
+        "GD": "-4",
+        "P": "4",
+        "D": "1",
+        "W": "1",
+        "R": "25",
+        "Total": "1-1-2"
+       },
+       "group": "UEFA Europa League Standings"
+      },
+      "2790": {
+       "rank": "26",
+       "gp": "4",
+       "w": "1",
+       "d": "1",
+       "l": "2",
+       "gd": "-5",
+       "pts": "4",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "2",
+        "GD": "-5",
+        "P": "4",
+        "D": "1",
+        "W": "1",
+        "R": "26",
+        "Total": "1-1-2"
+       },
+       "group": "UEFA Europa League Standings"
+      },
+      "85": {
+       "rank": "27",
+       "gp": "4",
+       "w": "1",
+       "d": "0",
+       "l": "3",
+       "gd": "-2",
+       "pts": "3",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "3",
+        "GD": "-2",
+        "P": "3",
+        "D": "0",
+        "W": "1",
+        "R": "27",
+        "Total": "1-0-3"
+       },
+       "group": "UEFA Europa League Standings"
+      },
+      "103": {
+       "rank": "28",
+       "gp": "4",
+       "w": "1",
+       "d": "0",
+       "l": "3",
+       "gd": "-3",
+       "pts": "3",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "3",
+        "GD": "-3",
+        "P": "3",
+        "D": "0",
+        "W": "1",
+        "R": "28",
+        "Total": "1-0-3"
+       },
+       "group": "UEFA Europa League Standings"
+      },
+      "11505": {
+       "rank": "29",
+       "gp": "4",
+       "w": "1",
+       "d": "0",
+       "l": "3",
+       "gd": "-3",
+       "pts": "3",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "3",
+        "GD": "-3",
+        "P": "3",
+        "D": "0",
+        "W": "1",
+        "R": "29",
+        "Total": "1-0-3"
+       },
+       "group": "UEFA Europa League Standings"
+      },
+      "11706": {
+       "rank": "30",
+       "gp": "4",
+       "w": "1",
+       "d": "0",
+       "l": "3",
+       "gd": "-4",
+       "pts": "3",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "3",
+        "GD": "-4",
+        "P": "3",
+        "D": "0",
+        "W": "1",
+        "R": "30",
+        "Total": "1-0-3"
+       },
+       "group": "UEFA Europa League Standings"
+      },
+      "176": {
+       "rank": "31",
+       "gp": "4",
+       "w": "1",
+       "d": "0",
+       "l": "3",
+       "gd": "-4",
+       "pts": "3",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "3",
+        "GD": "-4",
+        "P": "3",
+        "D": "0",
+        "W": "1",
+        "R": "31",
+        "Total": "1-0-3"
+       },
+       "group": "UEFA Europa League Standings"
+      },
+      "256": {
+       "rank": "32",
+       "gp": "4",
+       "w": "1",
+       "d": "0",
+       "l": "3",
+       "gd": "-5",
+       "pts": "3",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "3",
+        "GD": "-5",
+        "P": "3",
+        "D": "0",
+        "W": "1",
+        "R": "32",
+        "Total": "1-0-3"
+       },
+       "group": "UEFA Europa League Standings"
+      },
+      "13083": {
+       "rank": "33",
+       "gp": "4",
+       "w": "0",
+       "d": "1",
+       "l": "3",
+       "gd": "-7",
+       "pts": "1",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "3",
+        "GD": "-7",
+        "P": "1",
+        "D": "1",
+        "W": "0",
+        "R": "33",
+        "Total": "0-1-3"
+       },
+       "group": "UEFA Europa League Standings"
+      },
+      "987": {
+       "rank": "34",
+       "gp": "4",
+       "w": "0",
+       "d": "1",
+       "l": "3",
+       "gd": "-8",
+       "pts": "1",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "3",
+        "GD": "-8",
+        "P": "1",
+        "D": "1",
+        "W": "0",
+        "R": "34",
+        "Total": "0-1-3"
+       },
+       "group": "UEFA Europa League Standings"
+      },
+      "2990": {
+       "rank": "35",
+       "gp": "4",
+       "w": "0",
+       "d": "1",
+       "l": "3",
+       "gd": "-10",
+       "pts": "1",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "3",
+        "GD": "-10",
+        "P": "1",
+        "D": "1",
+        "W": "0",
+        "R": "35",
+        "Total": "0-1-3"
+       },
+       "group": "UEFA Europa League Standings"
+      },
+      "20024": {
+       "rank": "36",
+       "gp": "4",
+       "w": "0",
+       "d": "0",
+       "l": "4",
+       "gd": "-10",
+       "pts": "0",
+       "of": 36,
+       "raw": {
+        "GP": "4",
+        "L": "4",
+        "GD": "-10",
+        "P": "0",
+        "D": "0",
+        "W": "0",
+        "R": "36",
+        "Total": "0-0-4"
+       },
+       "group": "UEFA Europa League Standings"
+      }
+     },
+     "last5": {
+      "435": [
+       {
+        "res": "W",
+        "gf": 5,
+        "ga": 0,
+        "opp": "Kalamata",
+        "home": true,
+        "date": "2026-10-25"
+       },
+       {
+        "res": "W",
+        "gf": 3,
+        "ga": 2,
+        "opp": "Kifisia",
+        "home": false,
+        "date": "2026-10-31"
+       },
+       {
+        "res": "D",
+        "gf": 0,
+        "ga": 0,
+        "opp": "Stade Rennais",
+        "home": false,
+        "date": "2026-11-04"
+       },
+       {
+        "res": "D",
+        "gf": 1,
+        "ga": 1,
+        "opp": "PAOK",
+        "home": true,
+        "date": "2026-11-08"
+       },
+       {
+        "res": "W",
+        "gf": 6,
+        "ga": 2,
+        "opp": "Iraklis",
+        "home": true,
+        "date": "2026-11-22"
+       }
+      ],
+      "103": [
+       {
+        "res": "L",
+        "gf": 2,
+        "ga": 4,
+        "opp": "Bologna",
+        "home": true,
+        "date": "2026-10-28"
+       },
+       {
+        "res": "W",
+        "gf": 3,
+        "ga": 1,
+        "opp": "Internazionale",
+        "home": true,
+        "date": "2026-10-31"
+       },
+       {
+        "res": "L",
+        "gf": 0,
+        "ga": 2,
+        "opp": "Ferencvaros",
+        "home": true,
+        "date": "2026-11-05"
+       },
+       {
+        "res": "W",
+        "gf": 2,
+        "ga": 1,
+        "opp": "Genoa",
+        "home": false,
+        "date": "2026-11-08"
+       },
+       {
+        "res": "W",
+        "gf": 5,
+        "ga": 1,
+        "opp": "Frosinone",
+        "home": true,
+        "date": "2026-11-22"
+       }
+      ]
+     },
+     "h2h": [
+      {
+       "date": "2018-12-13",
+       "home_id": "435",
+       "hs": "3",
+       "as": "1"
+      },
+      {
+       "date": "2018-10-04",
+       "home_id": "103",
+       "hs": "3",
+       "as": "1"
+      },
+      {
+       "date": "2014-07-25",
+       "home_id": "435",
+       "hs": "3",
+       "as": "0"
+      },
+      {
+       "date": "2014-07-25",
+       "home_id": "103",
+       "hs": "0",
+       "as": "3"
+      }
+     ],
+     "leaders": {
+      "435": [
+       [
+        "Goals",
+        "Santiago Hezze",
+        "Matches: 4, Goals: 1"
+       ],
+       [
+        "Assists",
+        "Chiquinho",
+        "Matches: 4, Assists: 1"
+       ],
+       [
+        "Total Shots",
+        "Jota Silva",
+        "17"
+       ]
+      ],
+      "103": [
+       [
+        "Goals",
+        "Alphadjo Cissè",
+        "Matches: 4, Goals: 3"
+       ],
+       [
+        "Assists",
+        "Davide Bartesaghi",
+        "Matches: 4, Assists: 1"
+       ],
+       [
+        "Total Shots",
+        "Omari Hutchinson",
+        "9"
+       ]
+      ]
+     },
+     "venue": "Georgios Karaiskakis Stadium",
+     "city": "Piraeus"
+    }
+   }
+  },
+  "msg_id": 9660,
+  "btn": 4
+ },
+ "401915520": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-26T20:45:00+03:00",
+  "sport": "football",
+  "div": "UEL",
+  "reason": "no_qualified_real_market",
+  "retry_at": 1795711981.843176
+ },
+ "401915508": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-26T20:45:00+03:00",
+  "sport": "football",
+  "div": "UEL",
+  "reason": "no_qualified_real_market",
+  "retry_at": 1795711981.843176
+ },
+ "401915518": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-26T20:45:00+03:00",
+  "sport": "football",
+  "div": "UEL",
+  "reason": "no_qualified_real_market",
+  "retry_at": 1795711981.843176
+ },
+ "401915815": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-26T20:45:00+03:00",
+  "sport": "football",
+  "div": "UECL",
+  "reason": "no_qualified_real_market",
+  "retry_at": 1795711981.843176
+ },
+ "401915814": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-26T20:45:00+03:00",
+  "sport": "football",
+  "div": "UECL",
+  "reason": "no_qualified_real_market",
+  "retry_at": 1795711981.843176
+ },
+ "401915810": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-26T20:45:00+03:00",
+  "sport": "football",
+  "div": "UECL",
+  "reason": "edge_below_minimum",
+  "retry_at": 1795711981.843176
+ },
+ "401915811": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-26T20:45:00+03:00",
+  "sport": "football",
+  "div": "UECL",
+  "reason": "no_qualified_real_market",
+  "retry_at": 1795711981.843176
+ },
+ "401915813": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-26T20:45:00+03:00",
+  "sport": "football",
+  "div": "UECL",
+  "reason": "edge_below_minimum",
+  "retry_at": 1795711981.843176
+ },
+ "401915812": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-26T20:45:00+03:00",
+  "sport": "football",
+  "div": "UECL",
+  "reason": "no_qualified_real_market",
+  "retry_at": 1795711981.843176
+ },
+ "401915739": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-26T20:45:00+03:00",
+  "sport": "football",
+  "div": "UECL",
+  "reason": "no_qualified_real_market",
+  "retry_at": 1795711981.843176
+ },
+ "401915809": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-26T20:45:00+03:00",
+  "sport": "football",
+  "div": "UECL",
+  "reason": "no_qualified_real_market",
+  "retry_at": 1795711981.843176
+ },
+ "401915808": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-26T20:45:00+03:00",
+  "sport": "football",
+  "div": "UECL",
+  "reason": "no_qualified_real_market",
+  "retry_at": 1795711981.843176
  }
 }
