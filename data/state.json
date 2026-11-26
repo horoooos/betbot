@@ -3028,14 +3028,14 @@
    }
   },
   "source": {
-   "last_success": "2026-11-26T09:39:25.979198+00:00",
-   "parsed": 338,
-   "added": 27,
-   "discovered_matches": 27,
-   "pages": 16,
+   "last_success": "2026-11-26T09:59:26.796873+00:00",
+   "parsed": 349,
+   "added": 45,
+   "discovered_matches": 29,
+   "pages": 17,
    "errors": [],
    "parsed_by_sport": {
-    "soccer": 49,
+    "soccer": 50,
     "ice-hockey": 50,
     "basketball": 50,
     "tennis": 49,
@@ -3044,13 +3044,13 @@
    }
   },
   "error": null,
-  "tips": 18005,
+  "tips": 18021,
   "snapshots": 384,
-  "unmapped_markets": 27528,
+  "unmapped_markets": 27557,
   "quote_matches": 129
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-26T12:57:26.419025+03:00",
+  "last_poll": "2026-11-26T12:59:26.796873+03:00",
   "cursor": "439",
   "posts": [
    {
@@ -6505,6 +6505,36 @@
    "probability": 0.5004,
    "odds": 1.86,
    "edge": -0.06926,
+   "estimated": true
+  },
+  "esports|CS2|1816926": {
+   "reason": "no_real_odds",
+   "checked_at": "2026-11-26T09:59:55.289727+00:00",
+   "kickoff": "2026-11-26T14:00:00+03:00",
+   "sport": "esports",
+   "id": "1816926",
+   "home": "Wildcard",
+   "away": "Chinggis Warriors",
+   "priced_markets": 0,
+   "market": "Победа: Wildcard",
+   "probability": 0.6042,
+   "odds": 1.54,
+   "edge": -0.06953,
+   "estimated": true
+  },
+  "esports|CS2|1816925": {
+   "reason": "no_real_odds",
+   "checked_at": "2026-11-26T09:59:57.541463+00:00",
+   "kickoff": "2026-11-26T14:00:00+03:00",
+   "sport": "esports",
+   "id": "1816925",
+   "home": "Imperial",
+   "away": "Liquid",
+   "priced_markets": 0,
+   "market": "Всухую (2:0 или 0:2)",
+   "probability": 0.5041,
+   "odds": 1.84,
+   "edge": -0.07246,
    "estimated": true
   }
  },
