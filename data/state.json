@@ -2870,7 +2870,7 @@
   "external_sources": {
    "providers": {
     "legalbet": {
-     "at": "2026-11-26T07:55:55.359328+00:00",
+     "at": "2026-11-26T08:27:56.109953+00:00",
      "status": "ok",
      "discovered": 0,
      "pages": 0,
@@ -2881,29 +2881,29 @@
      "contexts": 0
     },
     "livesport": {
-     "at": "2026-11-26T07:55:55.359328+00:00",
+     "at": "2026-11-26T08:27:56.109953+00:00",
      "status": "ok",
      "discovered": 26,
      "pages": 6,
      "opinions": 2,
      "mapped": 1,
      "articles_available": 43,
-     "next_offset": 16,
+     "next_offset": 22,
      "contexts": 6
     },
     "metaratings": {
-     "at": "2026-11-26T07:55:55.359328+00:00",
+     "at": "2026-11-26T08:27:56.109953+00:00",
      "status": "ok",
      "discovered": 7,
      "pages": 6,
      "opinions": 24,
      "mapped": 6,
      "articles_available": 36,
-     "next_offset": 9,
+     "next_offset": 8,
      "contexts": 6
     },
     "rb": {
-     "at": "2026-11-26T07:55:55.359328+00:00",
+     "at": "2026-11-26T08:27:56.109953+00:00",
      "status": "ok",
      "discovered": 2,
      "pages": 2,
@@ -2914,14 +2914,14 @@
      "contexts": 1
     },
     "vseprosport": {
-     "at": "2026-11-26T07:55:55.359328+00:00",
+     "at": "2026-11-26T08:27:56.109953+00:00",
      "status": "ok",
      "discovered": 7,
      "pages": 6,
      "opinions": 0,
      "mapped": 0,
      "articles_available": 10,
-     "next_offset": 11,
+     "next_offset": 10,
      "contexts": 3
     }
    },
@@ -3046,7 +3046,7 @@
   "quote_matches": 128
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-26T11:25:55.180129+03:00",
+  "last_poll": "2026-11-26T11:27:56.109953+03:00",
   "cursor": "437",
   "posts": [
    {
@@ -6468,7 +6468,7 @@
   },
   "esports|CS2|1816924": {
    "reason": "no_real_odds",
-   "checked_at": "2026-11-26T08:16:21.937704+00:00",
+   "checked_at": "2026-11-26T08:28:35.190113+00:00",
    "kickoff": "2026-11-26T12:00:00+03:00",
    "sport": "esports",
    "id": "1816924",
@@ -6483,8 +6483,8 @@
   },
   "esports|CS2|1816923": {
    "reason": "insufficient_history_or_odds",
-   "checked_at": "2026-11-26T08:16:20.412770+00:00",
-   "kickoff": "2026-11-26T11:30:00+03:00",
+   "checked_at": "2026-11-26T08:28:36.595362+00:00",
+   "kickoff": "2026-11-26T12:00:00+03:00",
    "sport": "esports",
    "id": "1816923",
    "home": "Lynn Vision",
