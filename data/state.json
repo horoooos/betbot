@@ -3090,7 +3090,7 @@
   "quote_matches": 135
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-26T22:57:43.078150+03:00",
+  "last_poll": "2026-11-26T22:59:42.282844+03:00",
   "cursor": "458",
   "posts": [
    {
@@ -7279,6 +7279,21 @@
    "probability": 0.5897,
    "odds": 1.58,
    "edge": -0.06827,
+   "estimated": true
+  },
+  "tennis|WTA|186835": {
+   "reason": "no_qualified_real_market",
+   "checked_at": "2026-11-26T20:00:00.770144+00:00",
+   "kickoff": "2026-11-27T00:00:00+03:00",
+   "sport": "tennis",
+   "id": "186835",
+   "home": "Мария Лурдес Карле",
+   "away": "Надя Подорошка",
+   "priced_markets": 2,
+   "market": "Будет 2 сета",
+   "probability": 0.5243,
+   "odds": 1.77,
+   "edge": -0.07199,
    "estimated": true
   }
  },
