@@ -3040,7 +3040,7 @@
   "quote_matches": 115
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-26T03:26:18.893865+03:00",
+  "last_poll": "2026-11-26T03:28:19.052736+03:00",
   "cursor": "435",
   "posts": [
    {
@@ -6303,6 +6303,36 @@
    "odds": 1.85,
    "edge": 0.01694,
    "estimated": false
+  },
+  "football|COL|401934705": {
+   "reason": "edge_below_minimum",
+   "checked_at": "2026-11-26T00:28:38.891818+00:00",
+   "kickoff": "2026-11-26T04:30:00+03:00",
+   "sport": "football",
+   "id": "401934705",
+   "home": "Атлетико Насьональ",
+   "away": "Индепендьенте Медельин",
+   "priced_markets": 6,
+   "market": "П1",
+   "probability": 0.5284,
+   "odds": 1.74,
+   "edge": -0.08058,
+   "estimated": false
+  },
+  "basketball|NBA|401909323": {
+   "reason": "no_qualified_real_market",
+   "checked_at": "2026-11-26T00:28:39.483359+00:00",
+   "kickoff": "2026-11-26T04:30:00+03:00",
+   "sport": "basketball",
+   "id": "401909323",
+   "home": "Хьюстон Рокетс",
+   "away": "Финикс Санз",
+   "priced_markets": 6,
+   "market": "ТМ 229.5",
+   "probability": 0.6597,
+   "odds": 1.41,
+   "edge": -0.06982,
+   "estimated": true
   }
  },
  "source_trial": {
