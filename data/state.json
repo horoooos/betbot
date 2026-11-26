@@ -1733,7 +1733,7 @@
  "streak_day": {
   "2026-11-22": 2
  },
- "news_next": "2026-11-26T10:23:54.983999+03:00",
+ "news_next": "2026-11-26T10:31:54.961710+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -2904,7 +2904,7 @@
   "external_sources": {
    "providers": {
     "legalbet": {
-     "at": "2026-11-26T06:53:54.990223+00:00",
+     "at": "2026-11-26T07:25:54.961710+00:00",
      "status": "ok",
      "discovered": 0,
      "pages": 0,
@@ -2915,29 +2915,29 @@
      "contexts": 0
     },
     "livesport": {
-     "at": "2026-11-26T06:53:54.990223+00:00",
+     "at": "2026-11-26T07:25:54.961710+00:00",
      "status": "ok",
      "discovered": 26,
      "pages": 6,
-     "opinions": 4,
-     "mapped": 2,
+     "opinions": 6,
+     "mapped": 3,
      "articles_available": 43,
-     "next_offset": 30,
-     "contexts": 4
+     "next_offset": 10,
+     "contexts": 6
     },
     "metaratings": {
-     "at": "2026-11-26T06:53:54.990223+00:00",
+     "at": "2026-11-26T07:25:54.961710+00:00",
      "status": "ok",
      "discovered": 7,
      "pages": 6,
      "opinions": 24,
-     "mapped": 5,
+     "mapped": 4,
      "articles_available": 36,
-     "next_offset": 11,
+     "next_offset": 10,
      "contexts": 6
     },
     "rb": {
-     "at": "2026-11-26T06:53:54.990223+00:00",
+     "at": "2026-11-26T07:25:54.961710+00:00",
      "status": "ok",
      "discovered": 2,
      "pages": 2,
@@ -2948,20 +2948,20 @@
      "contexts": 1
     },
     "vseprosport": {
-     "at": "2026-11-26T06:53:54.990223+00:00",
+     "at": "2026-11-26T07:25:54.961710+00:00",
      "status": "ok",
      "discovered": 7,
      "pages": 6,
      "opinions": 0,
      "mapped": 0,
      "articles_available": 10,
-     "next_offset": 6,
-     "contexts": 3
+     "next_offset": 12,
+     "contexts": 2
     }
    },
    "opinions": 51,
    "snapshots": 0,
-   "contexts": 137,
+   "contexts": 138,
    "model": {
     "weight": 0.0,
     "status": "collecting",
@@ -3080,7 +3080,7 @@
   "quote_matches": 127
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-26T10:23:54.387433+03:00",
+  "last_poll": "2026-11-26T10:25:54.961710+03:00",
   "cursor": "436",
   "posts": [
    {
