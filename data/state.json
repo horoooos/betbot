@@ -3018,9 +3018,9 @@
    }
   },
   "source": {
-   "last_success": "2026-11-26T00:32:18.439021+00:00",
+   "last_success": "2026-11-26T00:52:18.576136+00:00",
    "parsed": 359,
-   "added": 86,
+   "added": 44,
    "discovered_matches": 42,
    "pages": 18,
    "errors": [],
@@ -3034,13 +3034,13 @@
    }
   },
   "error": null,
-  "tips": 17534,
+  "tips": 17558,
   "snapshots": 373,
-  "unmapped_markets": 26945,
-  "quote_matches": 115
+  "unmapped_markets": 26965,
+  "quote_matches": 116
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-26T03:50:18.589665+03:00",
+  "last_poll": "2026-11-26T03:52:18.576136+03:00",
   "cursor": "435",
   "posts": [
    {
@@ -6307,7 +6307,7 @@
   },
   "football|COL|401934705": {
    "reason": "edge_below_minimum",
-   "checked_at": "2026-11-26T00:40:39.390372+00:00",
+   "checked_at": "2026-11-26T00:52:49.704964+00:00",
    "kickoff": "2026-11-26T04:30:00+03:00",
    "sport": "football",
    "id": "401934705",
@@ -6322,7 +6322,7 @@
   },
   "basketball|NBA|401909323": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-26T00:40:39.994872+00:00",
+   "checked_at": "2026-11-26T00:52:50.299616+00:00",
    "kickoff": "2026-11-26T04:30:00+03:00",
    "sport": "basketball",
    "id": "401909323",
