@@ -3069,7 +3069,7 @@
   "quote_matches": 133
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-26T17:47:30.804584+03:00",
+  "last_poll": "2026-11-26T17:50:09.626460+03:00",
   "cursor": "448",
   "posts": [
    {
@@ -3874,7 +3874,9 @@
    "401880129": "pre",
    "401882791": "pre",
    "401885389": "pre",
-   "401888643": "pre"
+   "401888643": "pre",
+   "1816927": "pre",
+   "1816929": "pre"
   },
   "daily": {
    "day": "2026-11-26"
@@ -6604,19 +6606,19 @@
    "estimated": true
   },
   "football|KSA|401900443": {
-   "reason": "edge_below_minimum",
-   "checked_at": "2026-11-26T14:37:52.081736+00:00",
+   "reason": "no_qualified_real_market",
+   "checked_at": "2026-11-26T14:50:31.307858+00:00",
    "kickoff": "2026-11-26T18:05:00+03:00",
    "sport": "football",
    "id": "401900443",
    "home": "Абха",
    "away": "Аш-Шабаб",
    "priced_markets": 6,
-   "market": "П2",
+   "market": "Обе забьют — да",
    "probability": 0.5286,
-   "odds": 1.77,
-   "edge": -0.06438,
-   "estimated": false
+   "odds": 1.76,
+   "edge": -0.06966,
+   "estimated": true
   },
   "football|UECL|401915816": {
    "reason": "published",
