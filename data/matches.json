@@ -26708,5 +26708,13 @@
   "main_hit": false,
   "bold_hit": null,
   "value_hit": null
+ },
+ "401900874": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-26T17:25:00+03:00",
+  "sport": "football",
+  "div": "KSA",
+  "reason": "no_qualified_real_market",
+  "retry_at": 1795700010.270502
  }
 }
