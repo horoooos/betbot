@@ -2879,7 +2879,7 @@
   "external_sources": {
    "providers": {
     "legalbet": {
-     "at": "2026-11-26T10:31:30.511426+00:00",
+     "at": "2026-11-26T11:03:30.446410+00:00",
      "status": "ok",
      "discovered": 0,
      "pages": 0,
@@ -2890,27 +2890,29 @@
      "contexts": 0
     },
     "livesport": {
-     "at": "2026-11-26T10:31:30.511426+00:00",
+     "at": "2026-11-26T11:03:30.446410+00:00",
      "status": "ok",
      "discovered": 26,
      "pages": 6,
-     "opinions": 0,
-     "mapped": 0,
+     "opinions": 8,
+     "mapped": 4,
      "articles_available": 43,
-     "next_offset": 26,
-     "contexts": 2
+     "next_offset": 6,
+     "contexts": 6
     },
     "metaratings": {
-     "at": "2026-11-26T10:31:30.511426+00:00",
-     "status": "unavailable",
-     "discovered": 0,
-     "pages": 0,
-     "opinions": 0,
-     "mapped": 0,
-     "error": "ConnectionError"
+     "at": "2026-11-26T11:03:30.446410+00:00",
+     "status": "ok",
+     "discovered": 7,
+     "pages": 6,
+     "opinions": 24,
+     "mapped": 7,
+     "articles_available": 36,
+     "next_offset": 6,
+     "contexts": 6
     },
     "rb": {
-     "at": "2026-11-26T10:31:30.511426+00:00",
+     "at": "2026-11-26T11:03:30.446410+00:00",
      "status": "ok",
      "discovered": 1,
      "pages": 1,
@@ -2921,15 +2923,15 @@
      "contexts": 0
     },
     "vseprosport": {
-     "at": "2026-11-26T10:31:30.511426+00:00",
+     "at": "2026-11-26T11:03:30.446410+00:00",
      "status": "ok",
      "discovered": 7,
      "pages": 6,
      "opinions": 0,
      "mapped": 0,
      "articles_available": 10,
-     "next_offset": 6,
-     "contexts": 3
+     "next_offset": 12,
+     "contexts": 2
     }
    },
    "opinions": 51,
@@ -3053,7 +3055,7 @@
   "quote_matches": 129
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-26T14:01:30.152813+03:00",
+  "last_poll": "2026-11-26T14:03:30.446410+03:00",
   "cursor": "440",
   "posts": [
    {
@@ -6528,8 +6530,8 @@
   },
   "esports|CS2|1816925": {
    "reason": "no_real_odds",
-   "checked_at": "2026-11-26T10:51:52.113520+00:00",
-   "kickoff": "2026-11-26T14:00:00+03:00",
+   "checked_at": "2026-11-26T11:04:12.979276+00:00",
+   "kickoff": "2026-11-26T14:20:00+03:00",
    "sport": "esports",
    "id": "1816925",
    "home": "Imperial",
