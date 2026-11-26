@@ -1563,7 +1563,7 @@
  "value_day": "2026-11-26",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-26",
- "site_stamp": "1570|9701|2026-11-26 22|6|bc5b654a73ff4ab5",
+ "site_stamp": "1571|9703|2026-11-26 22|6|4c969906bc3847d3",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1722,7 +1722,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 9701,
+ "dz_last": 9703,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -3018,15 +3018,15 @@
   "model": {
    "weight": 0.0,
    "status": "baseline_better",
-   "settled_matches": 163,
+   "settled_matches": 167,
    "required_matches": 100,
-   "trained_at": "2026-11-26T19:39:09.305385+00:00",
+   "trained_at": "2026-11-26T19:41:09.992833+00:00",
    "candidate_weight": 0.0,
    "train_matches": 117,
-   "validation_matches": 43,
+   "validation_matches": 47,
    "validation_from": "2026-11-24T00:00:00+00:00",
-   "validation_logloss": 2.785536389828521,
-   "validation_baseline_logloss": 2.785536389828521
+   "validation_logloss": 2.773353562263242,
+   "validation_baseline_logloss": 2.773353562263242
   },
   "sport_models": {
    "hockey": {
@@ -3088,7 +3088,7 @@
   "quote_matches": 135
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-26T22:39:09.305385+03:00",
+  "last_poll": "2026-11-26T22:41:09.992833+03:00",
   "cursor": "458",
   "posts": [
    {
@@ -3800,13 +3800,13 @@
    "401915519": "post",
    "401915517": "post",
    "401915507": "post",
-   "401915521": "in",
+   "401915521": "post",
    "401915520": "post",
    "401915508": "post",
    "401915518": "post",
-   "401915815": "in",
-   "401915814": "in",
-   "401915810": "in",
+   "401915815": "post",
+   "401915814": "post",
+   "401915810": "post",
    "401915811": "in",
    "401915813": "post",
    "401915812": "post",
@@ -3895,7 +3895,8 @@
    "401936333": "pre",
    "401936055": "pre",
    "1816498": "pre",
-   "401933727": "pre"
+   "401933727": "pre",
+   "401936054": "pre"
   },
   "daily": {
    "day": "2026-11-26"
@@ -15761,7 +15762,7 @@
     "profit_pct": 0.6
    },
    "football|UEL|401915519": {
-    "status": "open",
+    "status": "settled",
     "id": "401915519",
     "sport": "football",
     "div": "UEL",
@@ -16188,10 +16189,13 @@
        "price_kind": "author_recorded"
       }
      ]
-    }
+    },
+    "settled_at": "2026-11-26T19:41:09.992833+00:00",
+    "hit": true,
+    "profit_pct": 0.5
    },
    "football|UEL|401915517": {
-    "status": "open",
+    "status": "settled",
     "id": "401915517",
     "sport": "football",
     "div": "UEL",
@@ -16231,7 +16235,10 @@
        "price_kind": "author_recorded"
       }
      ]
-    }
+    },
+    "settled_at": "2026-11-26T19:41:09.992833+00:00",
+    "hit": false,
+    "profit_pct": -0.5
    },
    "football|UEL|401915521": {
     "status": "open",
