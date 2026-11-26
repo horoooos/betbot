@@ -1563,7 +1563,7 @@
  "value_day": "2026-11-25",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-25",
- "site_stamp": "1564|9618|2026-11-26 08|6|09c3376a585d26ed",
+ "site_stamp": "1564|9619|2026-11-26 08|6|09c3376a585d26ed",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1721,7 +1721,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 9618,
+ "dz_last": 9619,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -3042,7 +3042,7 @@
   "quote_matches": 122
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-26T08:23:54.652067+03:00",
+  "last_poll": "2026-11-26T08:25:54.437133+03:00",
   "cursor": "435",
   "posts": [
    {
@@ -14636,7 +14636,7 @@
     }
    },
    "basketball|NBA|401909324": {
-    "status": "open",
+    "status": "settled",
     "id": "401909324",
     "sport": "basketball",
     "div": "NBA",
@@ -14766,7 +14766,10 @@
        "price_kind": "author_recorded"
       }
      ]
-    }
+    },
+    "settled_at": "2026-11-26T05:25:54.437133+00:00",
+    "hit": false,
+    "profit_pct": -0.5
    }
   }
  },
