@@ -3061,7 +3061,7 @@
   "quote_matches": 130
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-26T15:27:30.332332+03:00",
+  "last_poll": "2026-11-26T15:29:30.587441+03:00",
   "cursor": "442",
   "posts": [
    {
@@ -6551,6 +6551,21 @@
    "probability": 0.5041,
    "odds": 1.84,
    "edge": -0.07246,
+   "estimated": true
+  },
+  "esports|DOTA|1816494": {
+   "reason": "no_real_odds",
+   "checked_at": "2026-11-26T12:29:51.192688+00:00",
+   "kickoff": "2026-11-26T16:30:00+03:00",
+   "sport": "esports",
+   "id": "1816494",
+   "home": "1w Team",
+   "away": "Team Liquid",
+   "priced_markets": 0,
+   "market": "Всухую (2:0 или 0:2)",
+   "probability": 0.5882,
+   "odds": 1.58,
+   "edge": -0.07064,
    "estimated": true
   }
  },
