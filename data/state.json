@@ -2864,7 +2864,7 @@
   "external_sources": {
    "providers": {
     "legalbet": {
-     "at": "2026-11-26T02:48:24.141858+00:00",
+     "at": "2026-11-26T03:18:24.185756+00:00",
      "status": "ok",
      "discovered": 0,
      "pages": 0,
@@ -2875,29 +2875,29 @@
      "contexts": 0
     },
     "livesport": {
-     "at": "2026-11-26T02:48:24.141858+00:00",
+     "at": "2026-11-26T03:18:24.185756+00:00",
      "status": "ok",
      "discovered": 26,
      "pages": 6,
-     "opinions": 6,
-     "mapped": 3,
+     "opinions": 4,
+     "mapped": 2,
      "articles_available": 43,
-     "next_offset": 8,
+     "next_offset": 14,
      "contexts": 6
     },
     "metaratings": {
-     "at": "2026-11-26T02:48:24.141858+00:00",
+     "at": "2026-11-26T03:18:24.185756+00:00",
      "status": "ok",
-     "discovered": 4,
-     "pages": 4,
-     "opinions": 16,
-     "mapped": 3,
-     "articles_available": 37,
+     "discovered": 6,
+     "pages": 6,
+     "opinions": 24,
+     "mapped": 7,
+     "articles_available": 39,
      "next_offset": 7,
-     "contexts": 4
+     "contexts": 6
     },
     "rb": {
-     "at": "2026-11-26T02:48:24.141858+00:00",
+     "at": "2026-11-26T03:18:24.185756+00:00",
      "status": "ok",
      "discovered": 2,
      "pages": 2,
@@ -2908,20 +2908,20 @@
      "contexts": 1
     },
     "vseprosport": {
-     "at": "2026-11-26T02:48:24.141858+00:00",
+     "at": "2026-11-26T03:18:24.185756+00:00",
      "status": "ok",
      "discovered": 7,
      "pages": 6,
      "opinions": 0,
      "mapped": 0,
      "articles_available": 10,
-     "next_offset": 7,
-     "contexts": 2
+     "next_offset": 6,
+     "contexts": 3
     }
    },
-   "opinions": 48,
+   "opinions": 51,
    "snapshots": 0,
-   "contexts": 134,
+   "contexts": 136,
    "model": {
     "weight": 0.0,
     "status": "collecting",
@@ -3040,7 +3040,7 @@
   "quote_matches": 119
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-26T06:16:24.474957+03:00",
+  "last_poll": "2026-11-26T06:18:24.185756+03:00",
   "cursor": "435",
   "posts": [
    {
