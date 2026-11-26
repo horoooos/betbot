@@ -1563,7 +1563,7 @@
  "value_day": "2026-11-25",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-25",
- "site_stamp": "1559|9604|2026-11-26 06|6|6f60bd473821f880",
+ "site_stamp": "1560|9605|2026-11-26 06|6|5ca197a11d50354b",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1721,7 +1721,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 9604,
+ "dz_last": 9605,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2984,37 +2984,37 @@
    "hockey": {
     "status": "collecting",
     "weight": 0.0,
-    "settled_matches": 64,
+    "settled_matches": 65,
     "required_matches": 100,
-    "trained_at": "2026-11-26T02:58:24.989515+00:00"
+    "trained_at": "2026-11-26T03:10:24.594597+00:00"
    },
    "basketball": {
     "status": "collecting",
     "weight": 0.0,
-    "settled_matches": 69,
+    "settled_matches": 70,
     "required_matches": 100,
-    "trained_at": "2026-11-26T02:58:24.989515+00:00"
+    "trained_at": "2026-11-26T03:10:24.594597+00:00"
    },
    "tennis": {
     "status": "collecting",
     "weight": 0.0,
     "settled_matches": 8,
     "required_matches": 100,
-    "trained_at": "2026-11-26T02:58:24.989515+00:00"
+    "trained_at": "2026-11-26T03:10:24.594597+00:00"
    },
    "esports:CS2": {
     "status": "collecting",
     "weight": 0.0,
     "settled_matches": 0,
     "required_matches": 100,
-    "trained_at": "2026-11-26T02:58:24.989515+00:00"
+    "trained_at": "2026-11-26T03:10:24.594597+00:00"
    },
    "esports:DOTA": {
     "status": "collecting",
     "weight": 0.0,
     "settled_matches": 0,
     "required_matches": 100,
-    "trained_at": "2026-11-26T02:58:24.989515+00:00"
+    "trained_at": "2026-11-26T03:10:24.594597+00:00"
    }
   },
   "source": {
@@ -3040,7 +3040,7 @@
   "quote_matches": 119
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-26T06:08:25.129056+03:00",
+  "last_poll": "2026-11-26T06:10:24.594597+03:00",
   "cursor": "435",
   "posts": [
    {
@@ -3724,13 +3724,13 @@
    "401841319": "post",
    "401934687": "post",
    "401933757": "post",
-   "401921355": "in",
+   "401921355": "post",
    "401931986": "post",
    "401934705": "in",
    "401909317": "post",
    "401909318": "post",
    "401909319": "post",
-   "401909320": "in",
+   "401909320": "post",
    "401909321": "in",
    "401909322": "in",
    "401909323": "in",
