@@ -2889,7 +2889,7 @@
   "external_sources": {
    "providers": {
     "legalbet": {
-     "at": "2026-11-26T13:07:30.684830+00:00",
+     "at": "2026-11-26T13:39:30.240536+00:00",
      "status": "ok",
      "discovered": 0,
      "pages": 0,
@@ -2900,29 +2900,29 @@
      "contexts": 0
     },
     "livesport": {
-     "at": "2026-11-26T13:07:30.684830+00:00",
+     "at": "2026-11-26T13:39:30.240536+00:00",
      "status": "ok",
      "discovered": 26,
      "pages": 6,
-     "opinions": 4,
-     "mapped": 2,
+     "opinions": 6,
+     "mapped": 3,
      "articles_available": 43,
-     "next_offset": 30,
-     "contexts": 4
+     "next_offset": 10,
+     "contexts": 6
     },
     "metaratings": {
-     "at": "2026-11-26T13:07:30.684830+00:00",
+     "at": "2026-11-26T13:39:30.240536+00:00",
      "status": "ok",
      "discovered": 9,
      "pages": 6,
      "opinions": 24,
-     "mapped": 3,
+     "mapped": 4,
      "articles_available": 37,
-     "next_offset": 12,
+     "next_offset": 9,
      "contexts": 6
     },
     "rb": {
-     "at": "2026-11-26T13:07:30.684830+00:00",
+     "at": "2026-11-26T13:39:30.240536+00:00",
      "status": "ok",
      "discovered": 1,
      "pages": 1,
@@ -2933,15 +2933,15 @@
      "contexts": 0
     },
     "vseprosport": {
-     "at": "2026-11-26T13:07:30.684830+00:00",
+     "at": "2026-11-26T13:39:30.240536+00:00",
      "status": "ok",
-     "discovered": 7,
-     "pages": 6,
+     "discovered": 4,
+     "pages": 4,
      "opinions": 0,
      "mapped": 0,
      "articles_available": 10,
-     "next_offset": 8,
-     "contexts": 2
+     "next_offset": 4,
+     "contexts": 3
     }
    },
    "opinions": 51,
@@ -3065,7 +3065,7 @@
   "quote_matches": 131
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-26T16:37:30.236399+03:00",
+  "last_poll": "2026-11-26T16:39:30.240536+03:00",
   "cursor": "445",
   "posts": [
    {
@@ -3799,7 +3799,6 @@
    "401915809": "pre",
    "401915808": "pre",
    "1816926": "in",
-   "1816925": "in",
    "401880728": "pre",
    "401915504": "pre",
    "401915516": "pre",
