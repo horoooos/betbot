@@ -3040,7 +3040,7 @@
   "quote_matches": 115
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-26T03:34:18.812010+03:00",
+  "last_poll": "2026-11-26T03:36:18.948802+03:00",
   "cursor": "435",
   "posts": [
    {
@@ -13543,7 +13543,7 @@
     "profit_pct": 0.62
    },
    "basketball|NBA|401909317": {
-    "status": "open",
+    "status": "settled",
     "id": "401909317",
     "sport": "basketball",
     "div": "NBA",
@@ -13871,7 +13871,10 @@
        "price_kind": "author_recorded"
       }
      ]
-    }
+    },
+    "settled_at": "2026-11-26T00:36:18.948802+00:00",
+    "hit": false,
+    "profit_pct": -0.5
    },
    "hockey|NHL|401892781": {
     "status": "open",
