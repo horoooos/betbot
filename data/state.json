@@ -2887,7 +2887,7 @@
   "external_sources": {
    "providers": {
     "legalbet": {
-     "at": "2026-11-26T08:59:55.922696+00:00",
+     "at": "2026-11-26T09:31:25.508394+00:00",
      "status": "ok",
      "discovered": 0,
      "pages": 0,
@@ -2898,29 +2898,29 @@
      "contexts": 0
     },
     "livesport": {
-     "at": "2026-11-26T08:59:55.922696+00:00",
+     "at": "2026-11-26T09:31:25.508394+00:00",
      "status": "ok",
-     "discovered": 26,
+     "discovered": 20,
      "pages": 6,
-     "opinions": 2,
-     "mapped": 1,
+     "opinions": 4,
+     "mapped": 2,
      "articles_available": 43,
-     "next_offset": 28,
-     "contexts": 2
-    },
-    "metaratings": {
-     "at": "2026-11-26T08:59:55.922696+00:00",
-     "status": "ok",
-     "discovered": 7,
-     "pages": 6,
-     "opinions": 24,
-     "mapped": 5,
-     "articles_available": 36,
-     "next_offset": 7,
+     "next_offset": 14,
      "contexts": 6
     },
+    "metaratings": {
+     "at": "2026-11-26T09:31:25.508394+00:00",
+     "status": "ok",
+     "discovered": 9,
+     "pages": 6,
+     "opinions": 12,
+     "mapped": 4,
+     "articles_available": 36,
+     "next_offset": 13,
+     "contexts": 3
+    },
     "rb": {
-     "at": "2026-11-26T08:59:55.922696+00:00",
+     "at": "2026-11-26T09:31:25.508394+00:00",
      "status": "ok",
      "discovered": 2,
      "pages": 2,
@@ -2931,15 +2931,15 @@
      "contexts": 1
     },
     "vseprosport": {
-     "at": "2026-11-26T08:59:55.922696+00:00",
+     "at": "2026-11-26T09:31:25.508394+00:00",
      "status": "ok",
      "discovered": 7,
      "pages": 6,
      "opinions": 0,
      "mapped": 0,
      "articles_available": 10,
-     "next_offset": 9,
-     "contexts": 3
+     "next_offset": 8,
+     "contexts": 2
     }
    },
    "opinions": 51,
@@ -3063,7 +3063,7 @@
   "quote_matches": 129
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-26T12:29:25.305417+03:00",
+  "last_poll": "2026-11-26T12:31:25.508394+03:00",
   "cursor": "439",
   "posts": [
    {
@@ -6507,7 +6507,7 @@
   },
   "esports|DOTA|1816493": {
    "reason": "no_real_odds",
-   "checked_at": "2026-11-26T09:21:46.536218+00:00",
+   "checked_at": "2026-11-26T09:32:06.792267+00:00",
    "kickoff": "2026-11-26T13:00:00+03:00",
    "sport": "esports",
    "id": "1816493",
