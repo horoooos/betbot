@@ -3069,7 +3069,7 @@
   "quote_matches": 133
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-26T18:21:01.591536+03:00",
+  "last_poll": "2026-11-26T18:23:01.900586+03:00",
   "cursor": "448",
   "posts": [
    {
@@ -6635,6 +6635,21 @@
    "odds": 2.2,
    "edge": -0.05092,
    "estimated": false
+  },
+  "esports|DOTA|1816495": {
+   "reason": "no_real_odds",
+   "checked_at": "2026-11-26T15:23:21.654267+00:00",
+   "kickoff": "2026-11-26T18:30:00+03:00",
+   "sport": "esports",
+   "id": "1816495",
+   "home": "Team Yandex",
+   "away": "GamerLegion",
+   "priced_markets": 0,
+   "market": "Всухую (2:0 или 0:2)",
+   "probability": 0.6101,
+   "odds": 1.52,
+   "edge": -0.07265,
+   "estimated": true
   }
  },
  "source_trial": {
