@@ -29277,5 +29277,13 @@
   "div": "BRA",
   "reason": "no_qualified_real_market",
   "retry_at": 1795734294.834802
+ },
+ "401931982": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-27T04:00:00+03:00",
+  "sport": "football",
+  "div": "MEX",
+  "reason": "no_qualified_real_market",
+  "retry_at": 1795738135.015002
  }
 }
