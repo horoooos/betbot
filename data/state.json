@@ -3042,7 +3042,7 @@
   "quote_matches": 122
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-26T08:13:54.754830+03:00",
+  "last_poll": "2026-11-26T08:15:54.296034+03:00",
   "cursor": "435",
   "posts": [
    {
@@ -14457,7 +14457,7 @@
     "profit_pct": -0.5
    },
    "football|MEX|401931998": {
-    "status": "open",
+    "status": "settled",
     "id": "401931998",
     "sport": "football",
     "div": "MEX",
@@ -14497,7 +14497,10 @@
        "price_kind": "author_recorded"
       }
      ]
-    }
+    },
+    "settled_at": "2026-11-26T05:15:54.296034+00:00",
+    "hit": false,
+    "profit_pct": -0.5
    },
    "hockey|NHL|401892793": {
     "status": "open",
