@@ -59,7 +59,7 @@
 ]
 ],
 "div": "UEL",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "predictions/2026-11-26-selta-bornmut-401915519.html",
 "hs": "1",
@@ -178,7 +178,7 @@ null
 "min_odds": 1.74,
 "minute": "26'",
 "p": 0.603,
-"result": null,
+"result": "hit",
 "score": "1:0"
 }
 },
@@ -207,7 +207,7 @@ null
 ]
 ],
 "div": "UEL",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "predictions/2026-11-26-dinamo-bayer-401915517.html",
 "hs": "0",
@@ -326,7 +326,7 @@ null
 "min_odds": 1.74,
 "minute": "25'",
 "p": 0.603,
-"result": null,
+"result": "hit",
 "score": "0:1"
 }
 },
@@ -359,7 +359,7 @@ null
 "bo": null,
 "prediction": "predictions/2026-11-26-olimpiakos-milan-401915521.html",
 "hs": "2",
-"as": "3",
+"as": "4",
 "tip": "П1 · 2.90",
 "top": false,
 "bot": {
@@ -686,7 +686,7 @@ null
 ]
 ],
 "div": "UEL",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "",
 "hs": "1",
@@ -721,7 +721,7 @@ null
 ]
 ],
 "div": "UEL",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "",
 "hs": "2",
@@ -931,7 +931,7 @@ null
 ]
 ],
 "div": "UECL",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "",
 "hs": "1",
@@ -966,7 +966,7 @@ null
 ]
 ],
 "div": "UECL",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "",
 "hs": "2",
@@ -1036,7 +1036,7 @@ null
 ]
 ],
 "div": "UECL",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "",
 "hs": "0",

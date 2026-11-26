@@ -199,14 +199,15 @@
    "min_odds": 1.74,
    "minute": "26'",
    "score": "1:0",
-   "sport": "football"
+   "sport": "football",
+   "result": "hit"
   }
  },
  "UEL|401915521": {
   "msg": 9671,
   "hs": 2,
-  "as": 3,
-  "goals": 5,
+  "as": 4,
+  "goals": 6,
   "kickoff": "2026-11-26T20:45:00+03:00",
   "lt": {
    "key": "1X",
@@ -251,7 +252,8 @@
    "min_odds": 1.74,
    "minute": "25'",
    "score": "0:1",
-   "sport": "football"
+   "sport": "football",
+   "result": "hit"
   }
  }
 }

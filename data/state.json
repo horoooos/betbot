@@ -1563,7 +1563,7 @@
  "value_day": "2026-11-26",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-26",
- "site_stamp": "1568|9696|2026-11-26 22|6|e3d691f5ac1df56c",
+ "site_stamp": "1570|9701|2026-11-26 22|6|bc5b654a73ff4ab5",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1722,7 +1722,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 9696,
+ "dz_last": 9701,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -3018,15 +3018,15 @@
   "model": {
    "weight": 0.0,
    "status": "baseline_better",
-   "settled_matches": 162,
+   "settled_matches": 163,
    "required_matches": 100,
-   "trained_at": "2026-11-26T19:37:09.691760+00:00",
+   "trained_at": "2026-11-26T19:39:09.305385+00:00",
    "candidate_weight": 0.0,
    "train_matches": 117,
-   "validation_matches": 42,
+   "validation_matches": 43,
    "validation_from": "2026-11-24T00:00:00+00:00",
-   "validation_logloss": 2.749418417469288,
-   "validation_baseline_logloss": 2.749418417469288
+   "validation_logloss": 2.785536389828521,
+   "validation_baseline_logloss": 2.785536389828521
   },
   "sport_models": {
    "hockey": {
@@ -3088,7 +3088,7 @@
   "quote_matches": 135
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-26T22:37:09.691760+03:00",
+  "last_poll": "2026-11-26T22:39:09.305385+03:00",
   "cursor": "458",
   "posts": [
    {
@@ -3797,21 +3797,21 @@
    "401915816": "post",
    "401900871": "post",
    "401915506": "in",
-   "401915519": "in",
-   "401915517": "in",
-   "401915507": "in",
+   "401915519": "post",
+   "401915517": "post",
+   "401915507": "post",
    "401915521": "in",
    "401915520": "post",
-   "401915508": "in",
+   "401915508": "post",
    "401915518": "post",
    "401915815": "in",
    "401915814": "in",
    "401915810": "in",
    "401915811": "in",
-   "401915813": "in",
-   "401915812": "in",
+   "401915813": "post",
+   "401915812": "post",
    "401915739": "in",
-   "401915809": "in",
+   "401915809": "post",
    "401915808": "post",
    "401880728": "pre",
    "401915504": "pre",
@@ -16466,7 +16466,7 @@
     }
    },
    "football|UEL|401915520": {
-    "status": "open",
+    "status": "settled",
     "id": "401915520",
     "sport": "football",
     "div": "UEL",
@@ -16506,7 +16506,10 @@
        "price_kind": "author_recorded"
       }
      ]
-    }
+    },
+    "settled_at": "2026-11-26T19:39:09.305385+00:00",
+    "hit": false,
+    "profit_pct": -0.5
    }
   }
  },
