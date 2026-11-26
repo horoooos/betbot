@@ -3080,7 +3080,7 @@
   "quote_matches": 127
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-26T10:27:55.163567+03:00",
+  "last_poll": "2026-11-26T10:29:55.775399+03:00",
   "cursor": "436",
   "posts": [
    {
@@ -6498,6 +6498,30 @@
    "odds": 1.49,
    "edge": -0.06786,
    "estimated": true
+  },
+  "esports|CS2|1816924": {
+   "reason": "no_real_odds",
+   "checked_at": "2026-11-26T07:30:15.047704+00:00",
+   "kickoff": "2026-11-26T11:30:00+03:00",
+   "sport": "esports",
+   "id": "1816924",
+   "home": "100 Thieves",
+   "away": "9z",
+   "priced_markets": 0,
+   "market": "Всухую (2:0 или 0:2)",
+   "probability": 0.6302,
+   "odds": 1.48,
+   "edge": -0.0673,
+   "estimated": true
+  },
+  "esports|CS2|1816923": {
+   "reason": "insufficient_history_or_odds",
+   "checked_at": "2026-11-26T07:30:16.379824+00:00",
+   "kickoff": "2026-11-26T11:30:00+03:00",
+   "sport": "esports",
+   "id": "1816923",
+   "home": "Lynn Vision",
+   "away": "PVISION"
   }
  },
  "source_trial": {
