@@ -601,7 +601,15 @@ null
 ],
 "center": "Ожидаемые голы 3.4 : 3.1"
 },
-"lt": null
+"lt": {
+"fair": 1.49,
+"label": "П1 (осн. время)",
+"min_odds": 1.57,
+"minute": "2-й период",
+"p": 0.67,
+"result": null,
+"score": "1:0"
+}
 },
 {
 "sport": "hockey",
@@ -969,11 +977,11 @@ null
 ]
 ],
 "div": "NBA",
-"state": "pre",
+"state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-26-oklahoma-siti-tander-minnesota-timbervulvz-401909320.html",
 "hs": "0",
-"as": "0",
+"as": "2",
 "tip": "П1 (с ОТ) · 1.74",
 "top": true,
 "bot": {
@@ -1073,8 +1081,8 @@ null
 "state": "in",
 "bo": null,
 "prediction": "",
-"hs": "3",
-"as": "0",
+"hs": "5",
+"as": "5",
 "tip": "",
 "top": false,
 "bot": null,
