@@ -3,7 +3,7 @@
   "1X2": 0.0,
   "OU25": 0.0
  },
- "learned": "2026-11-26",
+ "learned": "2026-11-27",
  "schedule_day": "2026-11-26",
  "content_slot": "2026-11-26-23",
  "news_seen": [
@@ -1563,7 +1563,7 @@
  "value_day": "2026-11-26",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-26",
- "site_stamp": "1571|9730|2026-11-26 23|6|6e8850de92f31458",
+ "site_stamp": "1571|9730|2026-11-27 00|6|6e8850de92f31458",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1576,7 +1576,7 @@
    "NBA|401909320"
   ]
  },
- "value_check": "2026-11-26-7",
+ "value_check": "2026-11-27-0",
  "express_risk": {
   "msg": 9019,
   "legs": [
@@ -2029,7 +2029,7 @@
   "https://images.cybersport.ru/images/as-is/plain/ba/ba9ada07-fb3d-4032-afa0-02d2be82364d.jpg",
   "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/66/Football_Stadium_in_Galich.jpg/1280px-Football_Stadium_in_Galich.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
  ],
- "indexnow_day": "2026-11-26",
+ "indexnow_day": "2026-11-27",
  "vk_wall_err": null,
  "shorts_day": "2026-11-26",
  "shorts_err": {
@@ -2896,22 +2896,22 @@
   "message_id": 944,
   "kind": "новость"
  },
- "learn_attempt_day": "2026-11-26",
+ "learn_attempt_day": "2026-11-27",
  "learn_diagnostics": {
   "objective": "shared_lambda_1X2_OU25",
   "rows": 8000,
-  "train_rows": 6069,
-  "validation_rows": 1931,
-  "validation_from": "2026-10-05",
+  "train_rows": 6044,
+  "validation_rows": 1956,
+  "validation_from": "2026-10-06",
   "history_from": "2026-02-28",
-  "history_until": "2026-11-24",
+  "history_until": "2026-11-25",
   "candidate_weight": 0.0,
   "weight": 0.0,
-  "train_logloss": 0.8414942055724828,
-  "validation_logloss": 0.8200641566836838,
-  "validation_market_logloss": 0.8200641566836838
+  "train_logloss": 0.8419886771754159,
+  "validation_logloss": 0.8204079879178231,
+  "validation_market_logloss": 0.8204079879178231
  },
- "learned_at": "2026-11-26T00:00:32.893281+03:00",
+ "learned_at": "2026-11-27T00:00:41.220594+03:00",
  "learn_version": "shared-lambda-v2",
  "learn_error": null,
  "learn_retry_at": 0,
@@ -3096,7 +3096,7 @@
   "quote_matches": 136
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-26T23:58:41.316423+03:00",
+  "last_poll": "2026-11-27T00:00:41.220594+03:00",
   "cursor": "459",
   "posts": [
    {
@@ -3905,10 +3905,11 @@
    "1816498": "pre",
    "401933727": "pre",
    "401936054": "pre",
-   "401876813": "pre"
+   "401876813": "pre",
+   "401933725": "pre"
   },
   "daily": {
-   "day": "2026-11-26"
+   "day": "2026-11-27"
   }
  },
  "forecast_decisions": {
