@@ -1563,7 +1563,7 @@
  "value_day": "2026-11-25",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-25",
- "site_stamp": "1557|9593|2026-11-26 05|6|1a18c1e628dbd8a0",
+ "site_stamp": "1559|9597|2026-11-26 05|6|2f36c8f1cf0ee6d3",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1721,7 +1721,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 9593,
+ "dz_last": 9597,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2984,37 +2984,37 @@
    "hockey": {
     "status": "collecting",
     "weight": 0.0,
-    "settled_matches": 57,
+    "settled_matches": 58,
     "required_matches": 100,
-    "trained_at": "2026-11-26T02:36:18.334861+00:00"
+    "trained_at": "2026-11-26T02:38:18.232992+00:00"
    },
    "basketball": {
     "status": "collecting",
     "weight": 0.0,
     "settled_matches": 69,
     "required_matches": 100,
-    "trained_at": "2026-11-26T02:36:18.334861+00:00"
+    "trained_at": "2026-11-26T02:38:18.232992+00:00"
    },
    "tennis": {
     "status": "collecting",
     "weight": 0.0,
     "settled_matches": 8,
     "required_matches": 100,
-    "trained_at": "2026-11-26T02:36:18.334861+00:00"
+    "trained_at": "2026-11-26T02:38:18.232992+00:00"
    },
    "esports:CS2": {
     "status": "collecting",
     "weight": 0.0,
     "settled_matches": 0,
     "required_matches": 100,
-    "trained_at": "2026-11-26T02:36:18.334861+00:00"
+    "trained_at": "2026-11-26T02:38:18.232992+00:00"
    },
    "esports:DOTA": {
     "status": "collecting",
     "weight": 0.0,
     "settled_matches": 0,
     "required_matches": 100,
-    "trained_at": "2026-11-26T02:36:18.334861+00:00"
+    "trained_at": "2026-11-26T02:38:18.232992+00:00"
    }
   },
   "source": {
@@ -3040,7 +3040,7 @@
   "quote_matches": 119
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-26T05:36:18.334861+03:00",
+  "last_poll": "2026-11-26T05:38:18.232992+03:00",
   "cursor": "435",
   "posts": [
    {
@@ -3740,8 +3740,8 @@
    "401931998": "pre",
    "1816493": "pre",
    "401892781": "post",
-   "401892782": "in",
-   "401892783": "in",
+   "401892782": "post",
+   "401892783": "post",
    "401892784": "in",
    "401892785": "in",
    "401892786": "in",
@@ -3750,7 +3750,7 @@
    "401892789": "in",
    "401892790": "in",
    "401892791": "in",
-   "401892792": "pre",
+   "401892792": "in",
    "401892794": "pre",
    "401892793": "pre",
    "401900874": "pre",
@@ -13967,7 +13967,7 @@
     "profit_pct": -0.5
    },
    "hockey|NHL|401892781": {
-    "status": "open",
+    "status": "settled",
     "id": "401892781",
     "sport": "hockey",
     "div": "NHL",
@@ -14070,7 +14070,10 @@
        "price_kind": "author_recorded"
       }
      ]
-    }
+    },
+    "settled_at": "2026-11-26T02:38:18.232992+00:00",
+    "hit": false,
+    "profit_pct": -0.5
    },
    "hockey|NHL|401892782": {
     "status": "open",
