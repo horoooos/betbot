@@ -7581,6 +7581,14 @@
   "sport": "hockey",
   "div": "NHL",
   "reason": "no_qualified_real_market",
-  "retry_at": 1795657098.533631
+  "retry_at": 1795657698.902248
+ },
+ "NHL|401892794": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-26T05:40:00+03:00",
+  "sport": "hockey",
+  "div": "NHL",
+  "reason": "no_qualified_real_market",
+  "retry_at": 1795657698.902248
  }
 }

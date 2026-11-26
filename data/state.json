@@ -3040,7 +3040,7 @@
   "quote_matches": 117
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-26T04:36:18.793605+03:00",
+  "last_poll": "2026-11-26T04:38:18.902248+03:00",
   "cursor": "435",
   "posts": [
    {
@@ -6337,12 +6337,27 @@
   },
   "hockey|NHL|401892792": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-26T01:28:37.634969+00:00",
+   "checked_at": "2026-11-26T01:38:37.230361+00:00",
    "kickoff": "2026-11-26T05:30:00+03:00",
    "sport": "hockey",
    "id": "401892792",
    "home": "Колорадо",
    "away": "Монреаль",
+   "priced_markets": 4,
+   "market": "ТБ 5.5",
+   "probability": 0.6395,
+   "odds": 1.45,
+   "edge": -0.07273,
+   "estimated": true
+  },
+  "hockey|NHL|401892794": {
+   "reason": "no_qualified_real_market",
+   "checked_at": "2026-11-26T01:38:37.825083+00:00",
+   "kickoff": "2026-11-26T05:40:00+03:00",
+   "sport": "hockey",
+   "id": "401892794",
+   "home": "Сиэтл",
+   "away": "Чикаго",
    "priced_markets": 4,
    "market": "ТБ 5.5",
    "probability": 0.6395,
