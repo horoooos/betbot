@@ -3077,7 +3077,7 @@
   "quote_matches": 134
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-26T19:51:08.632552+03:00",
+  "last_poll": "2026-11-26T19:53:08.555697+03:00",
   "cursor": "452",
   "posts": [
    {
@@ -6670,7 +6670,7 @@
   },
   "football|UEL|401915506": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-26T16:43:21.731583+00:00",
+   "checked_at": "2026-11-26T16:53:28.159971+00:00",
    "kickoff": "2026-11-26T20:45:00+03:00",
    "sport": "football",
    "id": "401915506",
@@ -6678,9 +6678,9 @@
    "away": "Хапоэль",
    "priced_markets": 7,
    "market": "Обе забьют — да",
-   "probability": 0.5711,
-   "odds": 1.63,
-   "edge": -0.06911,
+   "probability": 0.5922,
+   "odds": 1.57,
+   "edge": -0.07025,
    "estimated": true
   },
   "football|UEL|401915519": {
@@ -6716,19 +6716,19 @@
    "estimated": false
   },
   "football|UEL|401915507": {
-   "reason": "edge_below_minimum",
-   "checked_at": "2026-11-26T16:43:42.751823+00:00",
+   "reason": "no_qualified_real_market",
+   "checked_at": "2026-11-26T16:53:28.518460+00:00",
    "kickoff": "2026-11-26T20:45:00+03:00",
    "sport": "football",
    "id": "401915507",
    "home": "Олимпик",
    "away": "Левски",
    "priced_markets": 7,
-   "market": "П1",
-   "probability": 0.6788,
-   "odds": 1.41,
-   "edge": -0.04289,
-   "estimated": false
+   "market": "ТМ 3.5",
+   "probability": 0.6552,
+   "odds": 1.42,
+   "edge": -0.06962,
+   "estimated": true
   },
   "football|UEL|401915521": {
    "reason": "published",
@@ -6748,7 +6748,7 @@
   },
   "football|UEL|401915520": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-26T16:43:53.606723+00:00",
+   "checked_at": "2026-11-26T16:53:28.871666+00:00",
    "kickoff": "2026-11-26T20:45:00+03:00",
    "sport": "football",
    "id": "401915520",
@@ -6756,14 +6756,14 @@
    "away": "Арарат Москва",
    "priced_markets": 7,
    "market": "Обе забьют — да",
-   "probability": 0.5155,
-   "odds": 1.8,
-   "edge": -0.0721,
+   "probability": 0.5505,
+   "odds": 1.69,
+   "edge": -0.06966,
    "estimated": true
   },
   "football|UEL|401915508": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-26T16:43:53.961017+00:00",
+   "checked_at": "2026-11-26T16:53:29.228551+00:00",
    "kickoff": "2026-11-26T20:45:00+03:00",
    "sport": "football",
    "id": "401915508",
@@ -6771,14 +6771,14 @@
    "away": "Лех",
    "priced_markets": 7,
    "market": "ТБ 2.5",
-   "probability": 0.6368,
-   "odds": 1.46,
-   "edge": -0.07027,
+   "probability": 0.6275,
+   "odds": 1.48,
+   "edge": -0.0713,
    "estimated": true
   },
   "football|UEL|401915518": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-26T16:43:54.319354+00:00",
+   "checked_at": "2026-11-26T16:53:29.587420+00:00",
    "kickoff": "2026-11-26T20:45:00+03:00",
    "sport": "football",
    "id": "401915518",
@@ -6786,14 +6786,14 @@
    "away": "Бенфика",
    "priced_markets": 7,
    "market": "П2 и ТБ 1.5",
-   "probability": 0.5665,
-   "odds": 1.64,
-   "edge": -0.07094,
+   "probability": 0.5451,
+   "odds": 1.71,
+   "edge": -0.06788,
    "estimated": true
   },
   "football|UECL|401915815": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-26T16:43:54.677443+00:00",
+   "checked_at": "2026-11-26T16:53:29.946272+00:00",
    "kickoff": "2026-11-26T20:45:00+03:00",
    "sport": "football",
    "id": "401915815",
@@ -6801,14 +6801,14 @@
    "away": "Тун",
    "priced_markets": 7,
    "market": "Обе забьют — да",
-   "probability": 0.589,
+   "probability": 0.5904,
    "odds": 1.58,
-   "edge": -0.06938,
+   "edge": -0.06717,
    "estimated": true
   },
   "football|UECL|401915814": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-26T16:43:55.038420+00:00",
+   "checked_at": "2026-11-26T16:53:30.306784+00:00",
    "kickoff": "2026-11-26T20:45:00+03:00",
    "sport": "football",
    "id": "401915814",
@@ -6823,22 +6823,22 @@
   },
   "football|UECL|401915810": {
    "reason": "edge_below_minimum",
-   "checked_at": "2026-11-26T16:43:55.393767+00:00",
+   "checked_at": "2026-11-26T16:53:30.661084+00:00",
    "kickoff": "2026-11-26T20:45:00+03:00",
    "sport": "football",
    "id": "401915810",
    "home": "Egnatia",
    "away": "Линкольн",
-   "priced_markets": 6,
+   "priced_markets": 7,
    "market": "П1",
-   "probability": 0.5916,
-   "odds": 1.61,
-   "edge": -0.04752,
+   "probability": 0.6009,
+   "odds": 1.59,
+   "edge": -0.04457,
    "estimated": false
   },
   "football|UECL|401915811": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-26T16:43:56.043100+00:00",
+   "checked_at": "2026-11-26T16:53:31.311028+00:00",
    "kickoff": "2026-11-26T20:45:00+03:00",
    "sport": "football",
    "id": "401915811",
@@ -6846,14 +6846,14 @@
    "away": "Монако",
    "priced_markets": 7,
    "market": "П2 и ТБ 1.5",
-   "probability": 0.5452,
-   "odds": 1.71,
-   "edge": -0.06771,
+   "probability": 0.5206,
+   "odds": 1.79,
+   "edge": -0.06813,
    "estimated": true
   },
   "football|UECL|401915813": {
    "reason": "edge_below_minimum",
-   "checked_at": "2026-11-26T16:43:56.405675+00:00",
+   "checked_at": "2026-11-26T16:53:31.673732+00:00",
    "kickoff": "2026-11-26T20:45:00+03:00",
    "sport": "football",
    "id": "401915813",
@@ -6868,7 +6868,7 @@
   },
   "football|UECL|401915812": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-26T16:43:57.050024+00:00",
+   "checked_at": "2026-11-26T16:53:32.327501+00:00",
    "kickoff": "2026-11-26T20:45:00+03:00",
    "sport": "football",
    "id": "401915812",
@@ -6876,14 +6876,14 @@
    "away": "Лугано",
    "priced_markets": 6,
    "market": "Обе забьют — да",
-   "probability": 0.6046,
-   "odds": 1.54,
-   "edge": -0.06892,
+   "probability": 0.5987,
+   "odds": 1.55,
+   "edge": -0.07201,
    "estimated": true
   },
   "football|UECL|401915739": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-26T16:43:57.403468+00:00",
+   "checked_at": "2026-11-26T16:53:32.685855+00:00",
    "kickoff": "2026-11-26T20:45:00+03:00",
    "sport": "football",
    "id": "401915739",
@@ -6898,7 +6898,7 @@
   },
   "football|UECL|401915809": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-26T16:43:59.736206+00:00",
+   "checked_at": "2026-11-26T16:53:33.338500+00:00",
    "kickoff": "2026-11-26T20:45:00+03:00",
    "sport": "football",
    "id": "401915809",
@@ -6913,7 +6913,7 @@
   },
   "football|UECL|401915808": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-26T16:44:00.392841+00:00",
+   "checked_at": "2026-11-26T16:53:33.993242+00:00",
    "kickoff": "2026-11-26T20:45:00+03:00",
    "sport": "football",
    "id": "401915808",
@@ -6921,9 +6921,9 @@
    "away": "Орхус",
    "priced_markets": 6,
    "market": "Обе забьют — да",
-   "probability": 0.6499,
+   "probability": 0.6519,
    "odds": 1.43,
-   "edge": -0.07064,
+   "edge": -0.06778,
    "estimated": true
   }
  },
