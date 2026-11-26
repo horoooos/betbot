@@ -334,8 +334,8 @@ null
 "state": "in",
 "bo": null,
 "prediction": "",
-"hs": "63",
-"as": "68",
+"hs": "69",
+"as": "70",
 "tip": "",
 "top": false,
 "bot": null,
@@ -1203,7 +1203,7 @@ null
 "bo": null,
 "prediction": "predictions/2026-11-26-miluoki-baks-bruklin-nets-401909322.html",
 "hs": "27",
-"as": "30",
+"as": "37",
 "tip": "П1 (с ОТ) · 1.85",
 "top": false,
 "bot": {
@@ -1303,8 +1303,8 @@ null
 "state": "in",
 "bo": null,
 "prediction": "",
-"hs": "34",
-"as": "21",
+"hs": "36",
+"as": "24",
 "tip": "",
 "top": false,
 "bot": null,
@@ -1439,7 +1439,15 @@ null
 ],
 "center": "Ожидаемые голы 3.2 : 2.6"
 },
-"lt": null
+"lt": {
+"fair": 1.32,
+"label": "X2 (осн. время)",
+"min_odds": 1.39,
+"minute": "2-й период",
+"p": 0.756,
+"result": null,
+"score": "0:1"
+}
 },
 {
 "sport": "hockey",
@@ -1539,7 +1547,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "",
-"hs": "1",
+"hs": "5",
 "as": "0",
 "tip": "",
 "top": false,
