@@ -1563,7 +1563,7 @@
  "value_day": "2026-11-25",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-25",
- "site_stamp": "1556|9589|2026-11-26 05|6|8d211b7abf99394b",
+ "site_stamp": "1556|9591|2026-11-26 05|6|72906b816c035180",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1721,7 +1721,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 9589,
+ "dz_last": 9591,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -3040,7 +3040,7 @@
   "quote_matches": 118
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-26T05:06:18.838127+03:00",
+  "last_poll": "2026-11-26T05:08:18.392001+03:00",
   "cursor": "435",
   "posts": [
    {
@@ -6367,22 +6367,22 @@
   },
   "hockey|NHL|401892793": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-26T01:58:46.696611+00:00",
+   "checked_at": "2026-11-26T02:08:40.172846+00:00",
    "kickoff": "2026-11-26T06:00:00+03:00",
    "sport": "hockey",
    "id": "401892793",
    "home": "Анахайм",
    "away": "Сан-Хосе",
    "priced_markets": 4,
-   "market": "ТМ 7.5",
-   "probability": 0.623,
-   "odds": 1.49,
-   "edge": -0.07173,
+   "market": "ИТ2 больше 2.5",
+   "probability": 0.6431,
+   "odds": 1.45,
+   "edge": -0.06751,
    "estimated": true
   },
   "basketball|NBA|401909324": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-26T01:58:47.277260+00:00",
+   "checked_at": "2026-11-26T02:08:40.747045+00:00",
    "kickoff": "2026-11-26T06:00:00+03:00",
    "sport": "basketball",
    "id": "401909324",
@@ -6396,18 +6396,32 @@
    "estimated": true
   },
   "basketball|NBA|401909325": {
-   "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-26T01:58:47.866946+00:00",
+   "reason": "published",
+   "checked_at": "2026-11-26T02:08:54.265643+00:00",
    "kickoff": "2026-11-26T06:00:00+03:00",
    "sport": "basketball",
    "id": "401909325",
    "home": "Портленд",
    "away": "Сан-Антонио Сперс",
-   "priced_markets": 6,
-   "market": "ТБ 220.5",
-   "probability": 0.6597,
-   "odds": 1.41,
-   "edge": -0.06982,
+   "market": "П2 (с ОТ)",
+   "probability": 0.6147,
+   "odds": 1.65,
+   "edge": 0.01425,
+   "estimated": false
+  },
+  "football|MEX|401931998": {
+   "reason": "no_qualified_real_market",
+   "checked_at": "2026-11-26T02:08:39.561919+00:00",
+   "kickoff": "2026-11-26T06:10:00+03:00",
+   "sport": "football",
+   "id": "401931998",
+   "home": "Монтеррей",
+   "away": "Америка",
+   "priced_markets": 3,
+   "market": "Обе забьют — да",
+   "probability": 0.5575,
+   "odds": 1.67,
+   "edge": -0.06898,
    "estimated": true
   }
  },

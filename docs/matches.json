@@ -132,7 +132,7 @@
 "state": "in",
 "bo": null,
 "prediction": "",
-"hs": "90",
+"hs": "95",
 "as": "91",
 "tip": "",
 "top": false,
@@ -1424,41 +1424,6 @@ null
 },
 {
 "sport": "basketball",
-"id": "401909324",
-"league": "США · NBA",
-"kickoff": "2026-11-26T06:00:00+03:00",
-"home": "Голден Стэйт",
-"away": "Сакраменто Кингз",
-"hl": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/gs.png",
-"al": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/sac.png",
-"hid": "9",
-"aid": "23",
-"bb": "https://betboom.ru/search?query=%D0%93%D0%BE%D0%BB%D0%B4%D0%B5%D0%BD&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=basketball",
-"path": "basketball/nba",
-"url": "live.html?s=basketball&p=basketball%2Fnba&e=401909324&h=%D0%93%D0%BE%D0%BB%D0%B4%D0%B5%D0%BD+%D0%A1%D1%82%D1%8D%D0%B9%D1%82&a=%D0%A1%D0%B0%D0%BA%D1%80%D0%B0%D0%BC%D0%B5%D0%BD%D1%82%D0%BE+%D0%9A%D0%B8%D0%BD%D0%B3%D0%B7",
-"participants": [
-[
-"Голден Стэйт",
-"Golden State Warriors"
-],
-[
-"Сакраменто Кингз",
-"Sacramento Kings"
-]
-],
-"div": "NBA",
-"state": "pre",
-"bo": null,
-"prediction": "",
-"hs": "0",
-"as": "0",
-"tip": "",
-"top": false,
-"bot": null,
-"lt": null
-},
-{
-"sport": "basketball",
 "id": "401909325",
 "league": "США · NBA",
 "kickoff": "2026-11-26T06:00:00+03:00",
@@ -1479,6 +1444,107 @@ null
 [
 "Сан-Антонио Сперс",
 "San Antonio Spurs"
+]
+],
+"div": "NBA",
+"state": "pre",
+"bo": null,
+"prediction": "predictions/2026-11-26-portlend-san-antonio-spers-401909325.html",
+"hs": "0",
+"as": "0",
+"tip": "П2 (с ОТ) · 1.65",
+"top": false,
+"bot": {
+"main": {
+"label": "П2 (с ОТ)",
+"p": 0.615,
+"odds": 1.65,
+"est": false
+},
+"bold": null,
+"markets": [
+[
+"П1 (с ОТ)",
+0.385,
+2.3
+],
+[
+"П2 (с ОТ)",
+0.615,
+1.645
+],
+[
+"Ф1 (+3.5)",
+0.5,
+1.855
+],
+[
+"Ф2 (-3.5)",
+0.5,
+1.971
+],
+[
+"ТБ 219.5",
+0.66,
+null
+],
+[
+"ТМ 219.5",
+0.34,
+null
+],
+[
+"ТБ 226.5",
+0.5,
+1.893
+],
+[
+"ТМ 226.5",
+0.5,
+1.926
+],
+[
+"ТБ 233.5",
+0.34,
+null
+],
+[
+"ТМ 233.5",
+0.66,
+null
+]
+],
+"bar": [
+0.3852707488552771,
+0,
+0.6147292511447229
+],
+"center": "Ожидаемый счёт 112 : 115"
+},
+"lt": null
+},
+{
+"sport": "basketball",
+"id": "401909324",
+"league": "США · NBA",
+"kickoff": "2026-11-26T06:00:00+03:00",
+"home": "Голден Стэйт",
+"away": "Сакраменто Кингз",
+"hl": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/gs.png",
+"al": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/sac.png",
+"hid": "9",
+"aid": "23",
+"bb": "https://betboom.ru/search?query=%D0%93%D0%BE%D0%BB%D0%B4%D0%B5%D0%BD&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=basketball",
+"path": "basketball/nba",
+"url": "live.html?s=basketball&p=basketball%2Fnba&e=401909324&h=%D0%93%D0%BE%D0%BB%D0%B4%D0%B5%D0%BD+%D0%A1%D1%82%D1%8D%D0%B9%D1%82&a=%D0%A1%D0%B0%D0%BA%D1%80%D0%B0%D0%BC%D0%B5%D0%BD%D1%82%D0%BE+%D0%9A%D0%B8%D0%BD%D0%B3%D0%B7",
+"participants": [
+[
+"Голден Стэйт",
+"Golden State Warriors"
+],
+[
+"Сакраменто Кингз",
+"Sacramento Kings"
 ]
 ],
 "div": "NBA",

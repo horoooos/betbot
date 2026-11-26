@@ -26327,5 +26327,13 @@
   "div": "COL",
   "reason": "edge_below_minimum",
   "retry_at": 1795656259.135959
+ },
+ "401931998": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-26T06:10:00+03:00",
+  "sport": "football",
+  "div": "MEX",
+  "reason": "no_qualified_real_market",
+  "retry_at": 1795659498.392001
  }
 }
