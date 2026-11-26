@@ -1563,7 +1563,7 @@
  "value_day": "2026-11-26",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-26",
- "site_stamp": "1566|9662|2026-11-26 20|6|67ad06dbc222c1ca",
+ "site_stamp": "1566|9663|2026-11-26 20|6|67ad06dbc222c1ca",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1722,7 +1722,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 9662,
+ "dz_last": 9663,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2483,7 +2483,8 @@
   "9648",
   "9651",
   "9655",
-  "9662"
+  "9662",
+  "9663"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -2871,11 +2872,12 @@
   "2026-11-26:новость:d4f274e798ca7f98f870d224",
   "2026-11-26:новость:cbe71018841c90dd3824fe4c",
   "2026-11-26:новость:7566506482305b1ff2b0883e",
-  "2026-11-26:новость:941e317bed59c289b0f2916e"
+  "2026-11-26:новость:941e317bed59c289b0f2916e",
+  "2026-11-26:новость:dff6893cef2adf6cbc0318c1"
  ],
  "dz_last_delivery": {
-  "source_id": 9662,
-  "message_id": 935,
+  "source_id": 9663,
+  "message_id": 936,
   "kind": "новость"
  },
  "learn_attempt_day": "2026-11-26",
@@ -3077,7 +3079,7 @@
   "quote_matches": 134
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-26T20:01:08.529531+03:00",
+  "last_poll": "2026-11-26T20:03:08.394419+03:00",
   "cursor": "452",
   "posts": [
    {
@@ -6658,7 +6660,7 @@
   },
   "football|KSA|401900871": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-26T16:51:28.114181+00:00",
+   "checked_at": "2026-11-26T17:03:27.731314+00:00",
    "kickoff": "2026-11-26T20:30:00+03:00",
    "sport": "football",
    "id": "401900871",
@@ -6666,9 +6668,9 @@
    "away": "Дирия",
    "priced_markets": 6,
    "market": "Обе забьют — да",
-   "probability": 0.6071,
-   "odds": 1.53,
-   "edge": -0.07114,
+   "probability": 0.5968,
+   "odds": 1.56,
+   "edge": -0.06899,
    "estimated": true
   },
   "football|UEL|401915506": {
