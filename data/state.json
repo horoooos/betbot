@@ -2881,7 +2881,7 @@
   "external_sources": {
    "providers": {
     "legalbet": {
-     "at": "2026-11-26T11:03:30.446410+00:00",
+     "at": "2026-11-26T11:33:30.607443+00:00",
      "status": "ok",
      "discovered": 0,
      "pages": 0,
@@ -2892,53 +2892,53 @@
      "contexts": 0
     },
     "livesport": {
-     "at": "2026-11-26T11:03:30.446410+00:00",
+     "at": "2026-11-26T11:33:30.607443+00:00",
      "status": "ok",
      "discovered": 26,
      "pages": 6,
-     "opinions": 8,
-     "mapped": 4,
+     "opinions": 4,
+     "mapped": 2,
      "articles_available": 43,
-     "next_offset": 6,
+     "next_offset": 12,
      "contexts": 6
     },
     "metaratings": {
-     "at": "2026-11-26T11:03:30.446410+00:00",
+     "at": "2026-11-26T11:33:30.607443+00:00",
      "status": "ok",
-     "discovered": 7,
+     "discovered": 8,
      "pages": 6,
      "opinions": 24,
-     "mapped": 7,
+     "mapped": 3,
      "articles_available": 36,
-     "next_offset": 6,
+     "next_offset": 12,
      "contexts": 6
     },
     "rb": {
-     "at": "2026-11-26T11:03:30.446410+00:00",
+     "at": "2026-11-26T11:33:30.607443+00:00",
      "status": "ok",
-     "discovered": 1,
-     "pages": 1,
+     "discovered": 2,
+     "pages": 2,
      "opinions": 0,
      "mapped": 0,
-     "articles_available": 1,
-     "next_offset": 1,
-     "contexts": 0
+     "articles_available": 2,
+     "next_offset": 3,
+     "contexts": 1
     },
     "vseprosport": {
-     "at": "2026-11-26T11:03:30.446410+00:00",
+     "at": "2026-11-26T11:33:30.607443+00:00",
      "status": "ok",
      "discovered": 7,
      "pages": 6,
      "opinions": 0,
      "mapped": 0,
      "articles_available": 10,
-     "next_offset": 12,
-     "contexts": 2
+     "next_offset": 11,
+     "contexts": 3
     }
    },
    "opinions": 51,
    "snapshots": 0,
-   "contexts": 138,
+   "contexts": 139,
    "model": {
     "weight": 0.0,
     "status": "collecting",
@@ -3057,7 +3057,7 @@
   "quote_matches": 129
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-26T14:31:30.574600+03:00",
+  "last_poll": "2026-11-26T14:33:30.607443+03:00",
   "cursor": "442",
   "posts": [
    {
@@ -6521,7 +6521,7 @@
   },
   "esports|CS2|1816926": {
    "reason": "no_real_odds",
-   "checked_at": "2026-11-26T11:22:00.267289+00:00",
+   "checked_at": "2026-11-26T11:34:15.507820+00:00",
    "kickoff": "2026-11-26T15:00:00+03:00",
    "sport": "esports",
    "id": "1816926",
