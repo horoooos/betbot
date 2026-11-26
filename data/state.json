@@ -1563,7 +1563,7 @@
  "value_day": "2026-11-26",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-26",
- "site_stamp": "1566|9644|2026-11-26 17|6|17b6ae1cd7ad4197",
+ "site_stamp": "1566|9646|2026-11-26 17|6|c0e34216ba8962e8",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1722,7 +1722,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 9644,
+ "dz_last": 9646,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -3067,7 +3067,7 @@
   "quote_matches": 133
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-26T17:27:30.647366+03:00",
+  "last_poll": "2026-11-26T17:29:30.096147+03:00",
   "cursor": "445",
   "posts": [
    {
@@ -3779,7 +3779,7 @@
    "401892792": "post",
    "401892794": "post",
    "401892793": "post",
-   "401900874": "pre",
+   "401900874": "in",
    "401900443": "pre",
    "401915816": "pre",
    "401900871": "pre",
@@ -6614,6 +6614,22 @@
    "odds": 1.75,
    "edge": -0.07092,
    "estimated": true
+  },
+  "football|UECL|401915816": {
+   "reason": "published",
+   "checked_at": "2026-11-26T14:30:01.203763+00:00",
+   "kickoff": "2026-11-26T18:30:00+03:00",
+   "sport": "football",
+   "id": "401915816",
+   "home": "Кайрат",
+   "away": "Мьельбю",
+   "market": "П1",
+   "strategy": "external_trial",
+   "source_count": 16,
+   "probability": 0.4314,
+   "odds": 2.2,
+   "edge": -0.05092,
+   "estimated": false
   }
  },
  "source_trial": {
@@ -14928,6 +14944,175 @@
     "settled_at": "2026-11-26T05:25:54.437133+00:00",
     "hit": false,
     "profit_pct": -0.5
+   },
+   "football|UECL|401915816": {
+    "status": "open",
+    "id": "401915816",
+    "sport": "football",
+    "div": "UECL",
+    "kickoff": "2026-11-26T18:30:00+03:00",
+    "published_at": "2026-11-26T14:29:57.657453+00:00",
+    "msg_id": 9645,
+    "tip": {
+     "key": "H",
+     "label": "П1",
+     "p": 0.4314,
+     "odds": 2.2,
+     "est": false,
+     "stake": 0.5,
+     "strategy": "external_trial",
+     "selection_mode": "external_fallback",
+     "trial_expires_at": null,
+     "probability_origin": "baseline_model",
+     "model_edge": -0.05103,
+     "source_count": 16,
+     "source_refs": [
+      {
+       "author": "/predictors/moskovskiy-kapper",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/26-11-2026-kairat-almaty-mjallby-aif",
+       "published_at": "2026-11-25T10:20:00+00:00",
+       "observed_at": "2026-11-25T10:30:48.700626+00:00",
+       "odds": 2.31,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/kostya-pechenkin-1",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/26-11-2026-kairat-almaty-mjallby-aif",
+       "published_at": "2026-11-25T10:24:00+00:00",
+       "observed_at": "2026-11-25T10:30:48.700626+00:00",
+       "odds": 2.31,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/armeec-moskvy",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/26-11-2026-kairat-almaty-mjallby-aif",
+       "published_at": "2026-11-25T10:43:00+00:00",
+       "observed_at": "2026-11-25T10:50:49.501042+00:00",
+       "odds": 2.31,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/aleksandr-nerkin",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/26-11-2026-kairat-almaty-mjallby-aif",
+       "published_at": "2026-11-25T13:15:00+00:00",
+       "observed_at": "2026-11-25T13:18:19.535466+00:00",
+       "odds": 2.31,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/saska-isunka",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/26-11-2026-kairat-almaty-mjallby-aif",
+       "published_at": "2026-11-25T13:36:00+00:00",
+       "observed_at": "2026-11-25T13:40:19.761615+00:00",
+       "odds": 2.31,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/ilya-valerevich-1",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/26-11-2026-kairat-almaty-mjallby-aif",
+       "published_at": "2026-11-25T19:33:00+00:00",
+       "observed_at": "2026-11-25T19:36:33.324068+00:00",
+       "odds": 2.21,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/maksim-cerevko-1",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/26-11-2026-kairat-almaty-mjallby-aif",
+       "published_at": "2026-11-25T20:17:00+00:00",
+       "observed_at": "2026-11-25T20:18:32.956620+00:00",
+       "odds": 2.21,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/suleyman-mansimov-2",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/26-11-2026-kairat-almaty-mjallby-aif",
+       "published_at": "2026-11-25T21:50:00+00:00",
+       "observed_at": "2026-11-25T22:01:40.762063+00:00",
+       "odds": 2.21,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/the-red",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/26-11-2026-kairat-almaty-mjallby-aif",
+       "published_at": "2026-11-25T22:27:00+00:00",
+       "observed_at": "2026-11-25T22:42:19.142188+00:00",
+       "odds": 2.21,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/nikolay-mantyshev",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/26-11-2026-kairat-almaty-mjallby-aif",
+       "published_at": "2026-11-25T22:37:00+00:00",
+       "observed_at": "2026-11-25T22:42:19.142188+00:00",
+       "odds": 2.21,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/lionel-ronaldo",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/26-11-2026-kairat-almaty-mjallby-aif",
+       "published_at": "2026-11-25T22:57:00+00:00",
+       "observed_at": "2026-11-25T23:04:18.979267+00:00",
+       "odds": 2.14,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/alex-sandra",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/26-11-2026-kairat-almaty-mjallby-aif",
+       "published_at": "2026-11-25T23:44:00+00:00",
+       "observed_at": "2026-11-25T23:48:18.337540+00:00",
+       "odds": 2.14,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/vladimir-tyumenev-2",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/26-11-2026-kairat-almaty-mjallby-aif",
+       "published_at": "2026-11-26T01:22:00+00:00",
+       "observed_at": "2026-11-26T01:36:18.793605+00:00",
+       "odds": 2.14,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/konstantin-nikolayuk",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/26-11-2026-kairat-almaty-mjallby-aif",
+       "published_at": "2026-11-26T11:36:00+00:00",
+       "observed_at": "2026-11-26T11:43:30.620779+00:00",
+       "odds": 2.14,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/maksim-547",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/26-11-2026-kairat-almaty-mjallby-aif",
+       "published_at": "2026-11-26T12:43:00+00:00",
+       "observed_at": "2026-11-26T12:47:30.533097+00:00",
+       "odds": 2.14,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/timofei-teresko",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/26-11-2026-kairat-almaty-mjallby-aif",
+       "published_at": "2026-11-26T13:25:00+00:00",
+       "observed_at": "2026-11-26T13:29:30.762714+00:00",
+       "odds": 2.14,
+       "price_kind": "author_recorded"
+      }
+     ]
+    }
    }
   }
  },
