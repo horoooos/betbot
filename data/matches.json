@@ -27171,5 +27171,13 @@
   "close": {
    "H": 0.4528
   }
+ },
+ "401900871": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-26T20:30:00+03:00",
+  "sport": "football",
+  "div": "KSA",
+  "reason": "no_qualified_real_market",
+  "retry_at": 1795711141.298277
  }
 }
