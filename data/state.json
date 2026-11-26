@@ -3018,10 +3018,10 @@
    }
   },
   "source": {
-   "last_success": "2026-11-26T00:52:18.576136+00:00",
+   "last_success": "2026-11-26T01:14:19.135959+00:00",
    "parsed": 359,
-   "added": 44,
-   "discovered_matches": 42,
+   "added": 41,
+   "discovered_matches": 39,
    "pages": 18,
    "errors": [],
    "parsed_by_sport": {
@@ -3034,13 +3034,13 @@
    }
   },
   "error": null,
-  "tips": 17558,
+  "tips": 17573,
   "snapshots": 374,
-  "unmapped_markets": 26965,
+  "unmapped_markets": 26991,
   "quote_matches": 116
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-26T04:12:18.365084+03:00",
+  "last_poll": "2026-11-26T04:14:19.135959+03:00",
   "cursor": "435",
   "posts": [
    {
@@ -6307,7 +6307,7 @@
   },
   "football|COL|401934705": {
    "reason": "edge_below_minimum",
-   "checked_at": "2026-11-26T01:02:39.008573+00:00",
+   "checked_at": "2026-11-26T01:14:50.292850+00:00",
    "kickoff": "2026-11-26T04:30:00+03:00",
    "sport": "football",
    "id": "401934705",
@@ -6315,14 +6315,14 @@
    "away": "Индепендьенте Медельин",
    "priced_markets": 6,
    "market": "П1",
-   "probability": 0.5528,
+   "probability": 0.5527,
    "odds": 1.67,
-   "edge": -0.07682,
+   "edge": -0.07699,
    "estimated": false
   },
   "basketball|NBA|401909323": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-26T01:02:39.605216+00:00",
+   "checked_at": "2026-11-26T01:14:50.933672+00:00",
    "kickoff": "2026-11-26T04:30:00+03:00",
    "sport": "basketball",
    "id": "401909323",
