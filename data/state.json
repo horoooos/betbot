@@ -3088,8 +3088,8 @@
   "quote_matches": 135
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-26T22:01:09.757354+03:00",
-  "cursor": 458,
+  "last_poll": "2026-11-26T22:03:09.978564+03:00",
+  "cursor": "458",
   "posts": [
    {
     "post_id": 876,
@@ -3662,7 +3662,7 @@
     "observed_at": "2026-11-26T20:55:09.665673+03:00"
    }
   ],
-  "status": "cursor_reset"
+  "status": "observing"
  },
  "promotion": {
   "targets": {
