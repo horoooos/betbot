@@ -511,6 +511,8 @@
 <url><loc>https://horoooos.github.io/betbot/teams/basketball-memfis-grizzlis.html</loc><changefreq>daily</changefreq><priority>0.6</priority></url>
 <url><loc>https://horoooos.github.io/betbot/teams/football-botafogo.html</loc><changefreq>daily</changefreq><priority>0.6</priority></url>
 <url><loc>https://horoooos.github.io/betbot/teams/football-san-paulu.html</loc><changefreq>daily</changefreq><priority>0.6</priority></url>
+<url><loc>https://horoooos.github.io/betbot/teams/football-ceuta.html</loc><changefreq>daily</changefreq><priority>0.6</priority></url>
+<url><loc>https://horoooos.github.io/betbot/teams/football-almer-a.html</loc><changefreq>daily</changefreq><priority>0.6</priority></url>
 <url><loc>https://horoooos.github.io/betbot/teams/football-brentford.html</loc><changefreq>daily</changefreq><priority>0.6</priority></url>
 <url><loc>https://horoooos.github.io/betbot/teams/football-everton.html</loc><changefreq>daily</changefreq><priority>0.6</priority></url>
 <url><loc>https://horoooos.github.io/betbot/teams/football-levante.html</loc><changefreq>daily</changefreq><priority>0.6</priority></url>
@@ -521,8 +523,6 @@
 <url><loc>https://horoooos.github.io/betbot/teams/football-grenobl.html</loc><changefreq>daily</changefreq><priority>0.6</priority></url>
 <url><loc>https://horoooos.github.io/betbot/teams/football-sosho.html</loc><changefreq>daily</changefreq><priority>0.6</priority></url>
 <url><loc>https://horoooos.github.io/betbot/teams/football-dunkerque.html</loc><changefreq>daily</changefreq><priority>0.6</priority></url>
-<url><loc>https://horoooos.github.io/betbot/teams/football-ceuta.html</loc><changefreq>daily</changefreq><priority>0.6</priority></url>
-<url><loc>https://horoooos.github.io/betbot/teams/football-almer-a.html</loc><changefreq>daily</changefreq><priority>0.6</priority></url>
 <url><loc>https://horoooos.github.io/betbot/teams/football-rosario-sentral.html</loc><changefreq>daily</changefreq><priority>0.6</priority></url>
 <url><loc>https://horoooos.github.io/betbot/teams/football-gimnasia-mendoza.html</loc><changefreq>daily</changefreq><priority>0.6</priority></url>
 <url><loc>https://horoooos.github.io/betbot/teams/football-krisiuma.html</loc><changefreq>daily</changefreq><priority>0.6</priority></url>
@@ -1708,12 +1708,12 @@
 <url><loc>https://horoooos.github.io/betbot/predictions/2026-11-24-sharlott-hornets-memfis-grizzlis-401910036.html</loc><lastmod>2026-11-24</lastmod><priority>0.5</priority></url>
 <url><loc>https://horoooos.github.io/betbot/predictions/2026-11-24-filadelfiya-siksers-portlend-401910037.html</loc><lastmod>2026-11-24</lastmod><priority>0.5</priority></url>
 <url><loc>https://horoooos.github.io/betbot/predictions/2026-11-24-botafogo-san-paulu-401841326.html</loc><lastmod>2026-11-24</lastmod><priority>0.5</priority></url>
+<url><loc>https://horoooos.github.io/betbot/predictions/2026-11-23-ceuta-almer-a-401883110.html</loc><lastmod>2026-11-23</lastmod><priority>0.5</priority></url>
 <url><loc>https://horoooos.github.io/betbot/predictions/2026-11-23-brentford-everton-401879237.html</loc><lastmod>2026-11-23</lastmod><priority>0.5</priority></url>
 <url><loc>https://horoooos.github.io/betbot/predictions/2026-11-23-levante-elche-401882802.html</loc><lastmod>2026-11-23</lastmod><priority>0.5</priority></url>
 <url><loc>https://horoooos.github.io/betbot/predictions/2026-11-23-montsa-fiorentina-401875009.html</loc><lastmod>2026-11-23</lastmod><priority>0.5</priority></url>
 <url><loc>https://horoooos.github.io/betbot/predictions/2026-11-23-nant-grenobl-401876686.html</loc><lastmod>2026-11-23</lastmod><priority>0.5</priority></url>
 <url><loc>https://horoooos.github.io/betbot/predictions/2026-11-23-sosho-dunkerque-401876683.html</loc><lastmod>2026-11-23</lastmod><priority>0.5</priority></url>
-<url><loc>https://horoooos.github.io/betbot/predictions/2026-11-23-ceuta-almer-a-401883110.html</loc><lastmod>2026-11-23</lastmod><priority>0.5</priority></url>
 <url><loc>https://horoooos.github.io/betbot/predictions/2026-11-22-rosario-sentral-gimnasia-mendoza-401933759.html</loc><lastmod>2026-11-22</lastmod><priority>0.5</priority></url>
 <url><loc>https://horoooos.github.io/betbot/predictions/2026-11-22-krisiuma-fortaleza-sipakira-401912682.html</loc><lastmod>2026-11-22</lastmod><priority>0.5</priority></url>
 <url><loc>https://horoooos.github.io/betbot/predictions/2026-11-22-atletiko-paranaense-remo-401841318.html</loc><lastmod>2026-11-22</lastmod><priority>0.5</priority></url>
@@ -4295,6 +4295,7 @@
 <url><loc>https://horoooos.github.io/betbot/watch/2026-11-28-michigan-steyt-spartans-zh-xavier-zh-401932672.html</loc><lastmod>2026-11-28</lastmod><priority>0.8</priority></url>
 <url><loc>https://horoooos.github.io/betbot/watch/2026-11-28-milonarios-amerika-401936054.html</loc><lastmod>2026-11-28</lastmod><priority>0.8</priority></url>
 <url><loc>https://horoooos.github.io/betbot/watch/2026-11-28-minnesota-kolorado-401892803.html</loc><lastmod>2026-11-28</lastmod><priority>0.8</priority></url>
+<url><loc>https://horoooos.github.io/betbot/watch/2026-11-28-minnesota-timbervulvz-memfis-grizzlis-401909331.html</loc><lastmod>2026-11-28</lastmod><priority>0.8</priority></url>
 <url><loc>https://horoooos.github.io/betbot/watch/2026-11-28-nort-karolina-zh-washington-zh-401932677.html</loc><lastmod>2026-11-28</lastmod><priority>0.8</priority></url>
 <url><loc>https://horoooos.github.io/betbot/watch/2026-11-28-north-carolina-zh-washington-zh-401932677.html</loc><lastmod>2026-11-28</lastmod><priority>0.8</priority></url>
 <url><loc>https://horoooos.github.io/betbot/watch/2026-11-28-notre-dame-zh-mississippi-state-zh-401932670.html</loc><lastmod>2026-11-28</lastmod><priority>0.8</priority></url>
