@@ -7,7 +7,6 @@
  "schedule_day": "2026-11-26",
  "content_slot": "2026-11-26-22",
  "news_seen": [
-  "https://www.sport-express.ru/hockey/nhl/news/larkin-debyutiruet-za-monreal-v-matche-s-los-andzhelesom-2478126/",
   "https://www.sport-express.ru/hockey/vhl/news/v-matche-olimpbet-vhl-vratar-privez-gol-v-svoi-vorota-pytayas-porazit-chuzhie-2478117/",
   "https://www.sport-express.ru/hockey/khl/news/napadayuschiy-nekolenko-priznal-chto-polozhenie-sibiri-v-tablice-khl-davit-na-igrokov-2478091/",
   "https://www.sport-express.ru/basketball/nba/news/filadelfiya-vyigrala-pervye-12-klatch-matchey-sezona-tretiy-takoy-start-v-nba-s-1997-goda-2026-27-2478130/",
@@ -506,9 +505,10 @@
   "https://www.sport-express.ru/basketball/nba/news/zhurnalist-armbreht-otvetil-bolelschikam-bruklina-na-kritiku-demina-pohozhe-slishkom-burno-otreagirovali-2479413/",
   "https://www.sport-express.ru/basketball/nba/news/fridzon-schitaet-chto-demin-nabral-horoshuyu-formu-posle-travmy-2479409/",
   "vladelets-1w-team-iz-pochti-17-tys-uzhe-nanesennykh-na-oruzhiye-stikerov-pgl",
-  "https://www.sport-express.ru/football/rus_cup/news/dinamo-moskva-fakel-schet-i-rezultat-matcha-puti-rpl-kubka-rossii-26-noyabrya-2026-2479441/"
+  "https://www.sport-express.ru/football/rus_cup/news/dinamo-moskva-fakel-schet-i-rezultat-matcha-puti-rpl-kubka-rossii-26-noyabrya-2026-2479441/",
+  "hobbit-o-pgl-major-singapore-2026-net-takogo-stressa-kak-na-predydushchikh"
  ],
- "news_i": 1,
+ "news_i": 2,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1563,7 +1563,7 @@
  "value_day": "2026-11-26",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-26",
- "site_stamp": "1567|9690|2026-11-26 22|6|9d2eebdf6a674f2e",
+ "site_stamp": "1567|9691|2026-11-26 22|6|9d2eebdf6a674f2e",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1695,7 +1695,7 @@
  "streak_day": {
   "2026-11-22": 2
  },
- "news_next": "2026-11-26T22:16:09.932750+03:00",
+ "news_next": "2026-11-26T22:49:09.622310+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1722,13 +1722,12 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 9690,
+ "dz_last": 9691,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
  "dz_err": null,
  "img_used": [
-  "https://images.cybersport.ru/images/as-is/plain/b9/b9948e95-7085-4527-a5bd-c3c15a4f0352.jpg",
   "https://upload.wikimedia.org/wikipedia/commons/f/f1/Notre_Dame_Fans%2C_Notre_Dame_Stadium%2C_University_of_Notre_Dame%2C_South_Bend%2C_Indiana_%2811045887666%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
   "https://images.cybersport.ru/images/as-is/plain/ba/ba8bbf39-84fd-405c-afc0-539782639124.jpg",
   "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a3/EC_Stadium.jpg/1280px-EC_Stadium.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -2027,7 +2026,8 @@
   "https://images.cybersport.ru/images/as-is/plain/52/52e47f43-17f5-4723-b886-d9f219895067.jpg",
   "https://upload.wikimedia.org/wikipedia/commons/f/fd/DinamoMB.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
   "https://images.cybersport.ru/images/as-is/plain/a8/a823a6ef-59ff-48ad-aa4f-67fc15ddf272.jpg",
-  "https://ss.sport-express.ru/userfiles/materials/224/2247327/1180x665.jpg"
+  "https://ss.sport-express.ru/userfiles/materials/224/2247327/1180x665.jpg",
+  "https://images.cybersport.ru/images/as-is/plain/54/5419fbda-f4f4-4dc3-aea3-b20b33c9f96e.jpg"
  ],
  "indexnow_day": "2026-11-26",
  "vk_wall_err": null,
@@ -2488,7 +2488,8 @@
   "9664",
   "9669",
   "9680",
-  "9683"
+  "9683",
+  "9692"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -2881,11 +2882,12 @@
   "2026-11-26:новость:5a5c4dc20d742f6d1b7a0ea7",
   "2026-11-26:новость:523fd766c9d9b690b87d3dd2",
   "2026-11-26:новость:4e5298dc14c01ce5200af44e",
-  "2026-11-26:новость:db86e95135e534b7b01f2b44"
+  "2026-11-26:новость:db86e95135e534b7b01f2b44",
+  "2026-11-26:новость:fca1910d69fb7f66a13639be"
  ],
  "dz_last_delivery": {
-  "source_id": 9683,
-  "message_id": 940,
+  "source_id": 9692,
+  "message_id": 941,
   "kind": "новость"
  },
  "learn_attempt_day": "2026-11-26",
@@ -3088,7 +3090,7 @@
   "quote_matches": 135
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-26T22:15:09.551502+03:00",
+  "last_poll": "2026-11-26T22:17:09.622310+03:00",
   "cursor": "458",
   "posts": [
    {
