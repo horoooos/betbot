@@ -8196,5 +8196,21 @@
   "close": {
    "BB_ML_A": 0.6147
   }
+ },
+ "CS2|1816922": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-26T09:00:00+03:00",
+  "sport": "esports",
+  "div": "CS2",
+  "reason": "no_real_odds",
+  "retry_at": 1795669790.273686
+ },
+ "CS2|1816921": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-26T09:00:00+03:00",
+  "sport": "esports",
+  "div": "CS2",
+  "reason": "no_real_odds",
+  "retry_at": 1795669790.273686
  }
 }

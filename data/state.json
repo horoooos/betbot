@@ -3040,7 +3040,7 @@
   "quote_matches": 121
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-26T07:57:50.937218+03:00",
+  "last_poll": "2026-11-26T07:59:50.273686+03:00",
   "cursor": "435",
   "posts": [
    {
@@ -6427,6 +6427,36 @@
    "odds": 2.33,
    "edge": -0.08338,
    "estimated": false
+  },
+  "esports|CS2|1816922": {
+   "reason": "no_real_odds",
+   "checked_at": "2026-11-26T05:00:13.791432+00:00",
+   "kickoff": "2026-11-26T09:00:00+03:00",
+   "sport": "esports",
+   "id": "1816922",
+   "home": "M80",
+   "away": "Eternal Fire",
+   "priced_markets": 0,
+   "market": "Победа: M80",
+   "probability": 0.6014,
+   "odds": 1.55,
+   "edge": -0.06783,
+   "estimated": true
+  },
+  "esports|CS2|1816921": {
+   "reason": "no_real_odds",
+   "checked_at": "2026-11-26T05:00:15.831855+00:00",
+   "kickoff": "2026-11-26T09:00:00+03:00",
+   "sport": "esports",
+   "id": "1816921",
+   "home": "Heroic",
+   "away": "FaZe",
+   "priced_markets": 0,
+   "market": "FaZe возьмёт хотя бы карту",
+   "probability": 0.6256,
+   "odds": 1.49,
+   "edge": -0.06786,
+   "estimated": true
   }
  },
  "source_trial": {
