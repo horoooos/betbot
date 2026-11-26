@@ -264,7 +264,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "",
-"hs": "1",
+"hs": "2",
 "as": "0",
 "tip": "",
 "top": false,
@@ -334,8 +334,8 @@ null
 "state": "in",
 "bo": null,
 "prediction": "",
-"hs": "30",
-"as": "36",
+"hs": "38",
+"as": "40",
 "tip": "",
 "top": false,
 "bot": null,
@@ -470,7 +470,15 @@ null
 ],
 "center": "Ожидаемые голы 3.6 : 3.0"
 },
-"lt": null
+"lt": {
+"fair": 1.36,
+"label": "X2 (осн. время)",
+"min_odds": 1.42,
+"minute": "2-й период",
+"p": 0.737,
+"result": null,
+"score": "1:2"
+}
 },
 {
 "sport": "hockey",
@@ -980,8 +988,8 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-26-oklahoma-siti-tander-minnesota-timbervulvz-401909320.html",
-"hs": "0",
-"as": "2",
+"hs": "4",
+"as": "4",
 "tip": "П1 (с ОТ) · 1.74",
 "top": true,
 "bot": {
@@ -1082,7 +1090,7 @@ null
 "bo": null,
 "prediction": "",
 "hs": "5",
-"as": "5",
+"as": "8",
 "tip": "",
 "top": false,
 "bot": null,
@@ -1113,7 +1121,7 @@ null
 ]
 ],
 "div": "NHL",
-"state": "pre",
+"state": "in",
 "bo": null,
 "prediction": "",
 "hs": "0",
