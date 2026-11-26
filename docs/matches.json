@@ -73,7 +73,7 @@
 "sport": "esports",
 "id": "1816926",
 "league": "Киберспорт · CS2",
-"kickoff": "2026-11-26T15:00:00+03:00",
+"kickoff": "2026-11-26T15:10:00+03:00",
 "home": "Wildcard",
 "away": "Chinggis Warriors",
 "hl": "https://cdn-api.pandascore.co/images/team/image/135273/188px_wildcard_2024_lightmode.png",
@@ -2229,6 +2229,146 @@
 ]
 ],
 "div": "RSA",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "football",
+"id": "401874563",
+"league": "Дания · Суперлига",
+"kickoff": "2026-11-27T21:00:00+03:00",
+"home": "Сённерйюск",
+"away": "Брондбю",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/8118.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/575.png",
+"hid": "8118",
+"aid": "575",
+"bb": "https://betboom.ru/search?query=%D0%A1%D1%91%D0%BD%D0%BD%D0%B5%D1%80%D0%B9%D1%8E%D1%81%D0%BA&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/den.1",
+"url": "live.html?s=football&p=soccer%2Fden.1&e=401874563&h=%D0%A1%D1%91%D0%BD%D0%BD%D0%B5%D1%80%D0%B9%D1%8E%D1%81%D0%BA&a=%D0%91%D1%80%D0%BE%D0%BD%D0%B4%D0%B1%D1%8E",
+"participants": [
+[
+"Сённерйюск",
+"Sønderjyske Fodbold"
+],
+[
+"Брондбю",
+"Brøndby IF"
+]
+],
+"div": "DNK",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "hockey",
+"id": "401892795",
+"league": "США · NHL",
+"kickoff": "2026-11-27T21:00:00+03:00",
+"home": "Бостон",
+"away": "Торонто",
+"hl": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/bos.png",
+"al": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/tor.png",
+"hid": "1",
+"aid": "21",
+"bb": "https://betboom.ru/search?query=%D0%91%D0%BE%D1%81%D1%82%D0%BE%D0%BD&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=hockey",
+"path": "hockey/nhl",
+"url": "live.html?s=hockey&p=hockey%2Fnhl&e=401892795&h=%D0%91%D0%BE%D1%81%D1%82%D0%BE%D0%BD&a=%D0%A2%D0%BE%D1%80%D0%BE%D0%BD%D1%82%D0%BE",
+"participants": [
+[
+"Бостон",
+"Boston Bruins"
+],
+[
+"Торонто",
+"Toronto Maple Leafs"
+]
+],
+"div": "NHL",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "hockey",
+"id": "401892796",
+"league": "США · NHL",
+"kickoff": "2026-11-27T21:00:00+03:00",
+"home": "Нью-Джерси",
+"away": "Калгари",
+"hl": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/nj.png",
+"al": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/cgy.png",
+"hid": "11",
+"aid": "3",
+"bb": "https://betboom.ru/search?query=%D0%9D%D1%8C%D1%8E-%D0%94%D0%B6%D0%B5%D1%80%D1%81%D0%B8&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=hockey",
+"path": "hockey/nhl",
+"url": "live.html?s=hockey&p=hockey%2Fnhl&e=401892796&h=%D0%9D%D1%8C%D1%8E-%D0%94%D0%B6%D0%B5%D1%80%D1%81%D0%B8&a=%D0%9A%D0%B0%D0%BB%D0%B3%D0%B0%D1%80%D0%B8",
+"participants": [
+[
+"Нью-Джерси",
+"New Jersey Devils"
+],
+[
+"Калгари",
+"Calgary Flames"
+]
+],
+"div": "NHL",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "hockey",
+"id": "401892797",
+"league": "США · NHL",
+"kickoff": "2026-11-27T21:00:00+03:00",
+"home": "Нэшвилл",
+"away": "Юта",
+"hl": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/nsh.png",
+"al": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/uta.png",
+"hid": "27",
+"aid": "129764",
+"bb": "https://betboom.ru/search?query=%D0%9D%D1%8D%D1%88%D0%B2%D0%B8%D0%BB%D0%BB&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=hockey",
+"path": "hockey/nhl",
+"url": "live.html?s=hockey&p=hockey%2Fnhl&e=401892797&h=%D0%9D%D1%8D%D1%88%D0%B2%D0%B8%D0%BB%D0%BB&a=%D0%AE%D1%82%D0%B0",
+"participants": [
+[
+"Нэшвилл",
+"Nashville Predators"
+],
+[
+"Юта",
+"Utah Mammoth"
+]
+],
+"div": "NHL",
 "state": "pre",
 "bo": null,
 "prediction": "",
