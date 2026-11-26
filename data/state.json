@@ -7,9 +7,6 @@
  "schedule_day": "2026-11-26",
  "content_slot": "2026-11-26-20",
  "news_seen": [
-  "nazvany-komandy-kotorykh-chashche-vsego-vybirali-v-pick-em-na-prokhod-vo-vtoruyu",
-  "heroic-mogla-raskryt-kak-budet-vyglyadet-kubok-pgl-major-singapore-2026",
-  "navi-poluchit-pochti-467-tys-ot-esl-po-itogam-partnerskoi-programmy-za-2026-god",
   "analitiki-aurora-po-silam-vybit-lgd-iz-blast-slam-ix",
   "https://www.sport-express.ru/cybersport/videogames/news/gta-6-na-twitch-pryamaya-translyaciya-prohozhdenie-igry-i-pervye-vpechatleniya-smotret-onlayn-2476640/",
   "https://www.sport-express.ru/hockey/world-u20/news/monson-obvinil-gretcki-v-licemerii-iz-za-pozicii-po-rossiyskim-sportsmenam-2478088/",
@@ -506,9 +503,12 @@
   "betboom-team-predstavila-dzhersi-komandy-na-pgl-major-singapore-2026",
   "https://www.sport-express.ru/football/spain/news/zaschitnik-barselony-alehandro-balde-poluchil-travmu-golenostopa-2479389/",
   "https://www.sport-express.ru/football/france/news/sarkisyan-o-safonove-on-vyigral-konkurenciyu-ne-tolko-u-shevale-no-i-u-nekogo-zaschitnika-2479382/",
-  "https://www.sport-express.ru/football/rfpl/news/logashov-schitaet-chto-rostov-mozhet-zakonchit-chempionat-v-troyke-liderov-rpl-2479381/"
+  "https://www.sport-express.ru/football/rfpl/news/logashov-schitaet-chto-rostov-mozhet-zakonchit-chempionat-v-troyke-liderov-rpl-2479381/",
+  "100-thieves-vstretyat-sya-s-m80-a-heroic-poboret-sya-s-lynn-vision-stali",
+  "wildcard-gaming-vybila-chinggis-warriors-iz-pgl-major-singapore-2026",
+  "1w-team-ne-spravilas-s-team-liquid-i-upala-v-nizhnyuyu-setku-plei-off-na-blast"
  ],
- "news_i": 1,
+ "news_i": 2,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1695,7 +1695,7 @@
  "streak_day": {
   "2026-11-22": 2
  },
- "news_next": "2026-11-26T20:13:08.250000+03:00",
+ "news_next": "2026-11-26T20:43:09.084868+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1728,7 +1728,6 @@
  "vk_mode": "photo",
  "dz_err": null,
  "img_used": [
-  "https://images.cybersport.ru/images/as-is/plain/25/2550dc2c-0cc2-478c-9c7b-61d84688ebaf.jpg",
   "https://images.cybersport.ru/images/as-is/plain/0f/0fd1483b-6ab7-48f4-9352-58e5ff825449.jpg",
   "https://ss.sport-express.ru/userfiles/materials/224/2243686/1180x665.jpg",
   "https://ss.sport-express.ru/userfiles/materials/224/2243723/1180x665.jpg",
@@ -2027,7 +2026,8 @@
   "https://ss.sport-express.ru/userfiles/materials/224/2247266/1180x665.jpg",
   "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/29/FC_Dynamo_Kyiv_vs_FC_Arsenal_Kyiv_10-03-2019_%282%29.jpg/1280px-FC_Dynamo_Kyiv_vs_FC_Arsenal_Kyiv_10-03-2019_%282%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
   "https://images.cybersport.ru/images/as-is/plain/a5/a5f2c2a9-ec99-49f8-8dfe-09d5076ae153.jpg",
-  "https://upload.wikimedia.org/wikipedia/commons/b/b8/Arseniy_Logashov_2011.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+  "https://upload.wikimedia.org/wikipedia/commons/b/b8/Arseniy_Logashov_2011.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "https://images.cybersport.ru/images/as-is/plain/52/52e47f43-17f5-4723-b886-d9f219895067.jpg"
  ],
  "indexnow_day": "2026-11-26",
  "vk_wall_err": null,
@@ -2484,7 +2484,8 @@
   "9651",
   "9655",
   "9662",
-  "9663"
+  "9663",
+  "9664"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -2873,11 +2874,12 @@
   "2026-11-26:новость:cbe71018841c90dd3824fe4c",
   "2026-11-26:новость:7566506482305b1ff2b0883e",
   "2026-11-26:новость:941e317bed59c289b0f2916e",
-  "2026-11-26:новость:dff6893cef2adf6cbc0318c1"
+  "2026-11-26:новость:dff6893cef2adf6cbc0318c1",
+  "2026-11-26:новость:5a5c4dc20d742f6d1b7a0ea7"
  ],
  "dz_last_delivery": {
-  "source_id": 9663,
-  "message_id": 936,
+  "source_id": 9664,
+  "message_id": 937,
   "kind": "новость"
  },
  "learn_attempt_day": "2026-11-26",
@@ -3079,7 +3081,7 @@
   "quote_matches": 134
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-26T20:11:08.503421+03:00",
+  "last_poll": "2026-11-26T20:13:09.084868+03:00",
   "cursor": "452",
   "posts": [
    {
@@ -6660,7 +6662,7 @@
   },
   "football|KSA|401900871": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-26T17:03:27.731314+00:00",
+   "checked_at": "2026-11-26T17:13:28.693434+00:00",
    "kickoff": "2026-11-26T20:30:00+03:00",
    "sport": "football",
    "id": "401900871",
