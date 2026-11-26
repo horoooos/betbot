@@ -2063,7 +2063,7 @@
  "vk_photo_until": 1794644243.1147308,
  "vk_photo_cursor": {},
  "vk_story_last": 9624,
- "vk_story_err": "VK stories: сервер не вернул upload_result",
+ "vk_story_err": "VK stories: ошибка загрузки; подписанный URL скрыт",
  "push_weekly": "2026-47",
  "vk_story_at": 1795682208.0567868,
  "vk_story_url": "https://vk.com/story-228963529_456239167",
@@ -3050,7 +3050,7 @@
   "quote_matches": 129
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-26T12:51:26.512792+03:00",
+  "last_poll": "2026-11-26T12:53:26.483673+03:00",
   "cursor": "439",
   "posts": [
    {
@@ -14823,5 +14823,5 @@
    }
   }
  },
- "vk_story_retry_at": 1795686738.8618772
+ "vk_story_retry_at": 1795690433.870739
 }
