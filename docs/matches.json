@@ -3856,5 +3856,40 @@ null
 "top": false,
 "bot": null,
 "lt": null
+},
+{
+"sport": "football",
+"id": "401936333",
+"league": "Уругвай · Примера",
+"kickoff": "2026-11-28T02:30:00+03:00",
+"home": "Ливерпуль",
+"away": "Racing (Montevideo)",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/5492.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/9903.png",
+"hid": "5492",
+"aid": "9903",
+"bb": "https://betboom.ru/search?query=%D0%9B%D0%B8%D0%B2%D0%B5%D1%80%D0%BF%D1%83%D0%BB%D1%8C&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/uru.1",
+"url": "live.html?s=football&p=soccer%2Furu.1&e=401936333&h=%D0%9B%D0%B8%D0%B2%D0%B5%D1%80%D0%BF%D1%83%D0%BB%D1%8C&a=Racing+%28Montevideo%29",
+"participants": [
+[
+"Ливерпуль",
+"Liverpool"
+],
+[
+"Racing (Montevideo)",
+"Racing (Montevideo)"
+]
+],
+"div": "URU",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
 }
 ]
