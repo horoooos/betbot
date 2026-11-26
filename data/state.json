@@ -7,17 +7,6 @@
  "schedule_day": "2026-11-26",
  "content_slot": "2026-11-26-23",
  "news_seen": [
-  "https://www.sport-express.ru/football/rfpl/news/cska-obratilsya-v-esk-po-penalti-v-matche-s-ahmatom-2478141/",
-  "https://www.sport-express.ru/basketball/world/muzhchiny/news/centrovoy-zhalgirisa-yonas-valanchyunas-propustit-match-sbornoy-litvy-s-serbiey-v-otbore-chm-2027-2478139/",
-  "team-liquid-proshla-v-setku-poslednego-shansa-na-blast-slam-ix-odolev-do-konca",
-  "https://www.sport-express.ru/football/turkey/news/cies-batrakov-voshel-v-top-4-samyh-perspektivnyh-molodyh-assistentov-evropy-2478178/",
-  "https://www.sport-express.ru/football/england/news/pochettino-otmenil-vyhodnye-posle-matchey-dlya-futbolistov-manchester-yunayted-2478166/",
-  "lgd-gaming-vyletela-iz-blast-slam-ix-ustupiv-aurora-gaming",
-  "https://www.sport-express.ru/tennis/wta/news/ukrainka-svitolina-nazvala-slova-podderzhki-ot-andreevoy-na-nagrazhdenii-itogovogo-turnira-wta-provokaciey-2478177/",
-  "https://www.sport-express.ru/cybersport/videogames/news/igroki-gta-6-na-ps5-pozhalovalis-na-vylety-s-oshibkoy-ce-108255-1-2478164/",
-  "https://www.sport-express.ru/cybersport/videogames/news/prodazhi-gta-6-za-pervye-sutki-ocenili-v-3-79-milliarda-dollarov-2478161/",
-  "https://www.sport-express.ru/cybersport/esports/news/donk-i-niko-mogut-dognat-magisk-po-chislu-eysov-na-meydzhorah-counter-strike-2478160/",
-  "https://www.sport-express.ru/football/champions-league/news/espn-pszh-safonova-glavnyy-favorit-ligi-chempionov-komo-vyshe-intera-i-atletiko-2478181/",
   "https://www.sport-express.ru/football/rfpl/news/fk-rostov-fonbet-i-roman-naguchev-predstavili-kollekciyu-futbolok-k-desyatiletiyu-pobedy-nad-bavariey-2478183/",
   "https://www.sport-express.ru/football/champions-league/news/massimiliano-allegri-napoli-opredelenno-nuzhno-kak-minimum-tri-pobedy-dlya-vyhoda-v-pley-off-lch-matematicheski-2478185/",
   "https://www.sport-express.ru/hockey/nhl/news/napadayuschiy-vashingtona-kayru-propustit-kak-minimum-nedelyu-iz-za-travmy-2478188/",
@@ -506,9 +495,20 @@
   "thorin-posle-vyleta-faze-iz-meidzhora-etot-sostav-ne-imel-prava-predstavlyat",
   "https://www.sport-express.ru/football/europa-league/news/ozil-osudil-deystviya-policii-v-gruzii-posle-konfrontacii-s-bolelschikami-beshiktasha-2479479/",
   "https://www.sport-express.ru/football/europa-league/news/beshiktash-hapoel-beer-sheva-schet-i-rezultat-matcha-5-tura-obschego-etapa-ligi-evropy-26-noyabrya-2026-2479474/",
-  "https://www.sport-express.ru/football/rfpl/news/tyukavin-ob-udalenii-osipenko-v-matche-s-krasnodarom-budem-verit-chto-krasnuyu-otmenyat-no-hot-raz-takoe-bylo-2479472/"
+  "https://www.sport-express.ru/football/rfpl/news/tyukavin-ob-udalenii-osipenko-v-matche-s-krasnodarom-budem-verit-chto-krasnuyu-otmenyat-no-hot-raz-takoe-bylo-2479472/",
+  "https://www.sport-express.ru/cybersport/esports/news/v-rossii-planiruyut-sozdat-postoyannuyu-zhenskuyu-kibersportivnuyu-ligu-v-2027-godu-podrobnosti-novogo-proekta-2479366/",
+  "https://www.sport-express.ru/hockey/khl/news/grishin-nazval-zasluzhennoy-pobedu-neftehimika-v-matche-s-sochi-2479493/",
+  "https://www.sport-express.ru/hockey/khl/news/1961-sharik-chak-chaka-i-tort-na-16-kvadratnyh-metrov-salavat-yulaev-otmetil-yubiley-2479489/",
+  "https://www.sport-express.ru/hockey/khl/news/nikitin-posle-pobedy-cska-nad-spartakom-igra-nashey-komandy-poka-ne-obrazcovaya-2479490/",
+  "https://www.sport-express.ru/hockey/nhl/news/zaschitnik-nyu-dzhersi-dillon-diskvalificirovan-na-chetyre-matcha-za-udar-sopernika-v-golovu-2479473/",
+  "https://www.sport-express.ru/hockey/nhl/news/byvshiy-zaschitnik-klubov-nhl-dzheff-petri-zavershil-kareru-posle-16-sezonov-v-nacionalnoy-hokkeynoy-lige-2479461/",
+  "https://www.sport-express.ru/football/europa-league/news/glavy-mid-turcii-i-gruzii-proveli-peregovory-posle-stolknoveniy-fanatov-beshiktasha-s-policiey-2479494/",
+  "https://www.sport-express.ru/football/europa-league/news/galatasaray-osudil-uefa-i-policiyu-gruzii-za-otnoshenie-k-bolelschikam-beshiktasha-2479488/",
+  "https://www.sport-express.ru/football/europa-league/news/beshiktash-osudil-deystviya-policii-v-batumi-posle-matcha-s-hapoelem-2479482/",
+  "https://www.sport-express.ru/football/europa-league/news/amorim-zayavil-chto-pobeda-nad-olimpiakosom-izmenila-sudbu-milana-v-lige-evropy-2479485/",
+  "https://www.sport-express.ru/football/rus_cup/news/napadayuschiy-dinamo-tyukavin-o-sostoyanii-zdorovya-bylo-ochen-trevozhno-truhanul-2479466/"
  ],
- "news_i": 1,
+ "news_i": 4,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1563,7 +1563,7 @@
  "value_day": "2026-11-26",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-26",
- "site_stamp": "1571|9731|2026-11-27 00|6|6e8850de92f31458",
+ "site_stamp": "1571|9732|2026-11-27 00|6|6e8850de92f31458",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1695,7 +1695,7 @@
  "streak_day": {
   "2026-11-22": 2
  },
- "news_next": "2026-11-27T00:23:40.997021+03:00",
+ "news_next": "2026-11-27T00:56:34.587525+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1722,13 +1722,12 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 9731,
+ "dz_last": 9732,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
  "dz_err": null,
  "img_used": [
-  "https://upload.wikimedia.org/wikipedia/commons/2/2b/FC_Dynamo_Kyiv_2011.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
   "https://upload.wikimedia.org/wikipedia/commons/6/6b/Igor_Leshchuk_2017.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
   "https://images.cybersport.ru/images/as-is/plain/52/5278fad2-db8c-4aaf-aab7-399c2bb5307b.jpg",
   "https://images.cybersport.ru/images/as-is/plain/b4/b4a745cf-cd7c-4bec-bae0-e99124d763d0.jpg",
@@ -2027,7 +2026,8 @@
   "https://images.cybersport.ru/images/as-is/plain/54/5419fbda-f4f4-4dc3-aea3-b20b33c9f96e.jpg",
   "https://upload.wikimedia.org/wikipedia/commons/b/bb/Anzor_Kavazashvili.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
   "https://images.cybersport.ru/images/as-is/plain/ba/ba9ada07-fb3d-4032-afa0-02d2be82364d.jpg",
-  "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/66/Football_Stadium_in_Galich.jpg/1280px-Football_Stadium_in_Galich.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/66/Football_Stadium_in_Galich.jpg/1280px-Football_Stadium_in_Galich.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/Incheon_Soccer_Stadium_5.JPG/1280px-Incheon_Soccer_Stadium_5.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
  ],
  "indexnow_day": "2026-11-27",
  "vk_wall_err": null,
@@ -2492,7 +2492,8 @@
   "9692",
   "9712",
   "9720",
-  "9729"
+  "9729",
+  "9733"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -2889,11 +2890,12 @@
   "2026-11-26:новость:fca1910d69fb7f66a13639be",
   "2026-11-26:новость:13c0f3d467bcbdba1cc4ddf1",
   "2026-11-26:новость:bfbd5f5d841383b0d59f7e07",
-  "2026-11-26:новость:7f1c5879a7e7a3334e888ad1"
+  "2026-11-26:новость:7f1c5879a7e7a3334e888ad1",
+  "2026-11-26:новость:ea7bcaca2655f10b8282cbbb"
  ],
  "dz_last_delivery": {
-  "source_id": 9729,
-  "message_id": 944,
+  "source_id": 9733,
+  "message_id": 945,
   "kind": "новость"
  },
  "learn_attempt_day": "2026-11-27",
@@ -3096,7 +3098,7 @@
   "quote_matches": 137
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-27T00:22:34.155562+03:00",
+  "last_poll": "2026-11-27T00:24:34.587525+03:00",
   "cursor": "462",
   "posts": [
    {
