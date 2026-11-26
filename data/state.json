@@ -1563,7 +1563,7 @@
  "value_day": "2026-11-26",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-26",
- "site_stamp": "1566|9642|2026-11-26 16|6|17b6ae1cd7ad4197",
+ "site_stamp": "1566|9643|2026-11-26 16|6|17b6ae1cd7ad4197",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1722,7 +1722,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 9642,
+ "dz_last": 9643,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -3065,28 +3065,9 @@
   "quote_matches": 131
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-26T16:33:30.331272+03:00",
-  "cursor": "444",
+  "last_poll": "2026-11-26T16:35:30.891491+03:00",
+  "cursor": "445",
   "posts": [
-   {
-    "post_id": 865,
-    "published_at": 1795615226,
-    "url": "https://vk.com/wall-228963529_865",
-    "title": "Ninjas in Pyjamas обыграли Team Liquid и прошли в вторую стадию PGL Major Singapore 2026",
-    "text": "рџ“° Ninjas in Pyjamas победили Team Liquid в первом этапе PGL Major Singapore 2026 по Counter-Strike 2, выиграв со счётом 2:0.\n\nвљ”пёЏ В первой карте «Inferno» команда «Ninjas in Pyjamas» доминировала, завершив раунд со счётом 13:3, а во второй карте «Ancient» удержала преимущество – 13:8.\n\nрџ“… Победители выйдут во вторую стадию турнира, старт которой намечен на 28 ноября в 7:00 мск.\n\nрџ’° PGL Major Singapore 2026 проходит с 24 ноября по 13 декабря, а призовой фонд составляет $1,25 млн.\n\nПодписывайтесь на «АИ СТАВИТ» — спортивные новости каждый день.\n\n#киберспорт #новостиспорта #спорт #главное #аиставит\n\nрџ“Љ Подробнее на сайте рџ‘‡",
-    "checks": {
-     "encoding_clean": false,
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": true,
-     "details_present": true,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-25T17:02:18.862926+03:00"
-   },
    {
     "post_id": 864,
     "published_at": 1795615226,
@@ -3637,6 +3618,25 @@
     },
     "status": "needs_review",
     "observed_at": "2026-11-26T15:31:30.295676+03:00"
+   },
+   {
+    "post_id": 894,
+    "published_at": 1795700013,
+    "url": "https://vk.com/wall-228963529_894",
+    "title": "9z Team вылетела из PGL Major Singapore 2026 после поражения 100 Thieves",
+    "text": "рџ“° 9z Team завершила участие в PGL Major Singapore 2026, проиграв команде 100 Thieves в матче первой стадии.\n\nрџЋ® Счёт встречи составил 1:2: на карте Nuke 13:5 в пользу 9z, на Dust2 6:13 и на Ancient 5:13 – обе карты одержали победу у 100 Thieves.\n\nрџ“Љ В конце игрового дня планируется матч между Chinggis Warriors и Wildcard Gaming, который стартует 26 ноября в 15:00 мск.\n\nрџЏ† PGL Major Singapore проходит с 24 ноября по 13 декабря, а призовой фонд турнира составляет $1,25 млн.\n\nПодписывайтесь на «АИ СТАВИТ» — спортивные новости каждый день.\n\n#киберспорт #новостиспорта #спорт #главное #аиставит\n\nрџ“Љ Подробнее на сайте рџ‘‡",
+    "checks": {
+     "encoding_clean": false,
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": true,
+     "details_present": true,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-26T16:35:30.891491+03:00"
    }
   ],
   "status": "observing"
