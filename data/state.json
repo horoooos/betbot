@@ -1563,7 +1563,7 @@
  "value_day": "2026-11-26",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-26",
- "site_stamp": "1566|9664|2026-11-26 20|6|67ad06dbc222c1ca",
+ "site_stamp": "1567|9666|2026-11-26 20|6|0de552196749e784",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1722,7 +1722,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 9664,
+ "dz_last": 9666,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -3011,15 +3011,15 @@
   "model": {
    "weight": 0.0,
    "status": "baseline_better",
-   "settled_matches": 160,
+   "settled_matches": 161,
    "required_matches": 100,
-   "trained_at": "2026-11-26T05:13:54.754830+00:00",
+   "trained_at": "2026-11-26T17:21:09.039577+00:00",
    "candidate_weight": 0.0,
    "train_matches": 117,
-   "validation_matches": 40,
+   "validation_matches": 41,
    "validation_from": "2026-11-24T00:00:00+00:00",
-   "validation_logloss": 2.765194906039583,
-   "validation_baseline_logloss": 2.765194906039583
+   "validation_logloss": 2.7603269161006536,
+   "validation_baseline_logloss": 2.7603269161006536
   },
   "sport_models": {
    "hockey": {
@@ -3081,7 +3081,7 @@
   "quote_matches": 134
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-26T20:19:08.797916+03:00",
+  "last_poll": "2026-11-26T20:21:09.039577+03:00",
   "cursor": "452",
   "posts": [
    {
@@ -3787,7 +3787,7 @@
    "401892793": "post",
    "401900874": "post",
    "401900443": "post",
-   "401915816": "in",
+   "401915816": "post",
    "401900871": "pre",
    "401915506": "pre",
    "401915519": "pre",
@@ -6935,7 +6935,7 @@
   },
   "tennis|WTA|186836": {
    "reason": "no_real_odds",
-   "checked_at": "2026-11-26T17:11:28.272462+00:00",
+   "checked_at": "2026-11-26T17:21:36.499108+00:00",
    "kickoff": "2026-11-26T21:00:00+03:00",
    "sport": "tennis",
    "id": "186836",
@@ -6950,7 +6950,7 @@
   },
   "tennis|WTA|186834": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-26T17:11:28.881427+00:00",
+   "checked_at": "2026-11-26T17:21:37.144209+00:00",
    "kickoff": "2026-11-26T21:00:00+03:00",
    "sport": "tennis",
    "id": "186834",
