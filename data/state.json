@@ -2062,7 +2062,7 @@
  "vk_photos": [],
  "vk_photo_until": 1794644243.1147308,
  "vk_photo_cursor": {},
- "vk_story_last": 9510,
+ "vk_story_last": 9522,
  "vk_story_err": "VK stories: сервер не вернул upload_result",
  "push_weekly": "2026-47",
  "vk_story_at": 1795610567.7753198,
@@ -3040,7 +3040,7 @@
   "quote_matches": 116
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-26T04:00:18.529343+03:00",
+  "last_poll": "2026-11-26T04:02:18.942777+03:00",
   "cursor": "435",
   "posts": [
    {
@@ -3725,7 +3725,7 @@
    "401934687": "in",
    "401933757": "in",
    "401921355": "pre",
-   "401931986": "pre",
+   "401931986": "in",
    "401934705": "pre",
    "401909317": "post",
    "401909318": "in",
@@ -6307,7 +6307,7 @@
   },
   "football|COL|401934705": {
    "reason": "edge_below_minimum",
-   "checked_at": "2026-11-26T00:52:49.704964+00:00",
+   "checked_at": "2026-11-26T01:02:39.008573+00:00",
    "kickoff": "2026-11-26T04:30:00+03:00",
    "sport": "football",
    "id": "401934705",
@@ -6315,14 +6315,14 @@
    "away": "Индепендьенте Медельин",
    "priced_markets": 6,
    "market": "П1",
-   "probability": 0.5284,
-   "odds": 1.74,
-   "edge": -0.08058,
+   "probability": 0.5528,
+   "odds": 1.67,
+   "edge": -0.07682,
    "estimated": false
   },
   "basketball|NBA|401909323": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-26T00:52:50.299616+00:00",
+   "checked_at": "2026-11-26T01:02:39.605216+00:00",
    "kickoff": "2026-11-26T04:30:00+03:00",
    "sport": "basketball",
    "id": "401909323",
@@ -14321,5 +14321,5 @@
    }
   }
  },
- "vk_story_retry_at": 1795654890.0493014
+ "vk_story_retry_at": 1795658569.1240108
 }
