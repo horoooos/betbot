@@ -2872,7 +2872,7 @@
   "external_sources": {
    "providers": {
     "legalbet": {
-     "at": "2026-11-26T08:27:56.109953+00:00",
+     "at": "2026-11-26T08:59:55.922696+00:00",
      "status": "ok",
      "discovered": 0,
      "pages": 0,
@@ -2883,29 +2883,29 @@
      "contexts": 0
     },
     "livesport": {
-     "at": "2026-11-26T08:27:56.109953+00:00",
+     "at": "2026-11-26T08:59:55.922696+00:00",
      "status": "ok",
      "discovered": 26,
      "pages": 6,
      "opinions": 2,
      "mapped": 1,
      "articles_available": 43,
-     "next_offset": 22,
-     "contexts": 6
+     "next_offset": 28,
+     "contexts": 2
     },
     "metaratings": {
-     "at": "2026-11-26T08:27:56.109953+00:00",
+     "at": "2026-11-26T08:59:55.922696+00:00",
      "status": "ok",
      "discovered": 7,
      "pages": 6,
      "opinions": 24,
-     "mapped": 6,
+     "mapped": 5,
      "articles_available": 36,
-     "next_offset": 8,
+     "next_offset": 7,
      "contexts": 6
     },
     "rb": {
-     "at": "2026-11-26T08:27:56.109953+00:00",
+     "at": "2026-11-26T08:59:55.922696+00:00",
      "status": "ok",
      "discovered": 2,
      "pages": 2,
@@ -2916,14 +2916,14 @@
      "contexts": 1
     },
     "vseprosport": {
-     "at": "2026-11-26T08:27:56.109953+00:00",
+     "at": "2026-11-26T08:59:55.922696+00:00",
      "status": "ok",
      "discovered": 7,
      "pages": 6,
      "opinions": 0,
      "mapped": 0,
      "articles_available": 10,
-     "next_offset": 10,
+     "next_offset": 9,
      "contexts": 3
     }
    },
@@ -3048,7 +3048,7 @@
   "quote_matches": 129
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-26T11:57:55.704628+03:00",
+  "last_poll": "2026-11-26T11:59:55.922696+03:00",
   "cursor": "437",
   "posts": [
    {
@@ -6489,6 +6489,21 @@
    "id": "1816923",
    "home": "Lynn Vision",
    "away": "PVISION"
+  },
+  "esports|DOTA|1816493": {
+   "reason": "no_real_odds",
+   "checked_at": "2026-11-26T09:00:40.446978+00:00",
+   "kickoff": "2026-11-26T13:00:00+03:00",
+   "sport": "esports",
+   "id": "1816493",
+   "home": "GamerLegion",
+   "away": "Aurora",
+   "priced_markets": 0,
+   "market": "Всухую (2:0 или 0:2)",
+   "probability": 0.5004,
+   "odds": 1.86,
+   "edge": -0.06926,
+   "estimated": true
   }
  },
  "source_trial": {
