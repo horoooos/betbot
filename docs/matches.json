@@ -785,7 +785,7 @@ null
 "bo": null,
 "prediction": "predictions/2026-11-26-portlend-san-antonio-spers-401909325.html",
 "hs": "60",
-"as": "54",
+"as": "57",
 "tip": "П2 (с ОТ) · 1.65",
 "top": false,
 "bot": {
@@ -986,7 +986,15 @@ null
 ],
 "center": "Ожидаемые голы 3.6 : 3.3"
 },
-"lt": null
+"lt": {
+"fair": 1.27,
+"label": "ТБ 5.5",
+"min_odds": 1.33,
+"minute": "2-й период",
+"p": 0.789,
+"result": null,
+"score": "3:0"
+}
 },
 {
 "sport": "football",
