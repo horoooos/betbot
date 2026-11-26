@@ -1563,7 +1563,7 @@
  "value_day": "2026-11-26",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-26",
- "site_stamp": "1575|9748|2026-11-27 01|6|8ac75f43682d2114",
+ "site_stamp": "1575|9749|2026-11-27 01|6|8ac75f43682d2114",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1722,7 +1722,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 9748,
+ "dz_last": 9749,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -3080,10 +3080,10 @@
    }
   },
   "source": {
-   "last_success": "2026-11-26T22:10:54.146298+00:00",
+   "last_success": "2026-11-26T22:32:54.641591+00:00",
    "parsed": 339,
-   "added": 43,
-   "discovered_matches": 22,
+   "added": 57,
+   "discovered_matches": 24,
    "pages": 17,
    "errors": [],
    "parsed_by_sport": {
@@ -3096,13 +3096,13 @@
    }
   },
   "error": null,
-  "tips": 18701,
+  "tips": 18724,
   "snapshots": 405,
-  "unmapped_markets": 28234,
-  "quote_matches": 138
+  "unmapped_markets": 28268,
+  "quote_matches": 139
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-27T01:30:53.941168+03:00",
+  "last_poll": "2026-11-27T01:32:54.641591+03:00",
   "cursor": "463",
   "posts": [
    {
@@ -7312,7 +7312,7 @@
   },
   "football|BRA|401841329": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-26T22:23:34.642551+00:00",
+   "checked_at": "2026-11-26T22:33:25.224055+00:00",
    "kickoff": "2026-11-27T02:00:00+03:00",
    "sport": "football",
    "id": "401841329",
