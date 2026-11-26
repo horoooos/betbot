@@ -1563,7 +1563,7 @@
  "value_day": "2026-11-25",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-25",
- "site_stamp": "1562|9616|2026-11-26 08|6|05869622aeb27d85",
+ "site_stamp": "1562|9617|2026-11-26 08|6|05869622aeb27d85",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1721,7 +1721,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 9616,
+ "dz_last": 9617,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2063,7 +2063,7 @@
  "vk_photo_until": 1794644243.1147308,
  "vk_photo_cursor": {},
  "vk_story_last": 9616,
- "vk_story_err": null,
+ "vk_story_err": "VK stories: ошибка загрузки; подписанный URL скрыт",
  "push_weekly": "2026-47",
  "vk_story_at": 1795666213.1472766,
  "vk_story_url": "https://vk.com/story-228963529_456239165",
@@ -3042,7 +3042,7 @@
   "quote_matches": 121
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-26T08:01:50.974225+03:00",
+  "last_poll": "2026-11-26T08:03:53.574237+03:00",
   "cursor": "435",
   "posts": [
    {
@@ -14766,5 +14766,6 @@
     }
    }
   }
- }
+ },
+ "vk_story_retry_at": 1795673088.6688714
 }
