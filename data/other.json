@@ -7598,20 +7598,478 @@
   "retry_at": 1795660938.587511
  },
  "NHL|401892793": {
-  "status": "waiting_data",
-  "kickoff": "2026-11-26T06:00:00+03:00",
-  "sport": "hockey",
+  "id": "401892793",
   "div": "NHL",
-  "reason": "no_qualified_real_market",
-  "retry_at": 1795660818.393138
+  "sport": "hockey",
+  "kickoff": "2026-11-26T06:00:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "detail": "Wed, November 25th at 10:00 PM EST",
+  "clock": "0:00",
+  "period": 0,
+  "home": {
+   "id": "25",
+   "name": "Anaheim Ducks",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/ana.png",
+   "color": "fc4c02",
+   "score": "0",
+   "record": "11-13-1",
+   "periods": [],
+   "ru": "Анахайм"
+  },
+  "away": {
+   "id": "18",
+   "name": "San Jose Sharks",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/sj.png",
+   "color": "00788a",
+   "score": "0",
+   "record": "11-13-2",
+   "periods": [],
+   "ru": "Сан-Хосе"
+  },
+  "odds": {
+   "H": 1.741,
+   "A": 2.14,
+   "line": 6.5,
+   "over": 1.8,
+   "under": 2.05,
+   "spread": -1.5,
+   "sp_h": 2.8,
+   "sp_a": 1.459
+  },
+  "probs": {
+   "HK_ML_H": 0.5514093944309456,
+   "HK_ML_A": 0.4485906055690544,
+   "HK_H": 0.47120847082397566,
+   "HK_D": 0.15423254539801906,
+   "HK_A": 0.37455898377800523,
+   "HK_O5.5": 0.6840632328287732,
+   "HK_U5.5": 0.31593676717122676,
+   "HK_O6.5": 0.5324728085118547,
+   "HK_U6.5": 0.4675271914881453,
+   "HK_O7.5": 0.3833237019423458,
+   "HK_U7.5": 0.6166762980576542,
+   "HK_IT1O1.5": 0.8748172586465599,
+   "HK_IT1O2.5": 0.6980669477327317,
+   "HK_IT1O3.5": 0.4855655544913584,
+   "HK_IT2O1.5": 0.8389099491906451,
+   "HK_IT2O2.5": 0.6364132881780266,
+   "HK_IT2O3.5": 0.41498585068046934,
+   "HK_H-1.5": 0.3217519919916963,
+   "HK_A+1.5": 0.6782480080083035,
+   "HK_A-1.5": 0.2386254151667618,
+   "HK_H+1.5": 0.7613745848332382
+  },
+  "labels": {
+   "HK_ML_H": "П1 (с ОТ и буллитами)",
+   "HK_ML_A": "П2 (с ОТ и буллитами)",
+   "HK_H": "П1 в основное время",
+   "HK_D": "Ничья в основное время",
+   "HK_A": "П2 в основное время",
+   "HK_O5.5": "ТБ 5.5",
+   "HK_U5.5": "ТМ 5.5",
+   "HK_O6.5": "ТБ 6.5",
+   "HK_U6.5": "ТМ 6.5",
+   "HK_O7.5": "ТБ 7.5",
+   "HK_U7.5": "ТМ 7.5",
+   "HK_IT1O1.5": "ИТ1 больше 1.5",
+   "HK_IT1O2.5": "ИТ1 больше 2.5",
+   "HK_IT1O3.5": "ИТ1 больше 3.5",
+   "HK_IT2O1.5": "ИТ2 больше 1.5",
+   "HK_IT2O2.5": "ИТ2 больше 2.5",
+   "HK_IT2O3.5": "ИТ2 больше 3.5",
+   "HK_H-1.5": "Ф1 (−1.5)",
+   "HK_A+1.5": "Ф2 (+1.5)",
+   "HK_A-1.5": "Ф2 (−1.5)",
+   "HK_H+1.5": "Ф1 (+1.5)"
+  },
+  "real": {
+   "HK_ML_H": 1.741,
+   "HK_ML_A": 2.14,
+   "HK_O6.5": 1.8,
+   "HK_U6.5": 2.05
+  },
+  "center": "Ожидаемые голы 3.6 : 3.3",
+  "bar": [
+   0.5514093944309456,
+   0,
+   0.4485906055690544
+  ],
+  "model": {
+   "lh": 3.6068065534262304,
+   "la": 3.280460572390761
+  },
+  "stavka_signal": {
+   "status": "collecting",
+   "weight": 0.0,
+   "authors": 14,
+   "group": "hockey",
+   "snapshot": "NHL|401892793",
+   "source": "https://stavka.tv"
+  },
+  "research": {
+   "articles": [],
+   "dossier": null
+  },
+  "main": {
+   "key": "HK_ML_H",
+   "label": "П1 (с ОТ и буллитами)",
+   "p": 0.5514,
+   "odds": 1.74,
+   "est": false,
+   "stake": 0.5,
+   "strategy": "external_trial",
+   "selection_mode": "external_fallback",
+   "trial_expires_at": null,
+   "probability_origin": "baseline_model",
+   "model_edge": -0.04055,
+   "source_count": 12,
+   "source_refs": [
+    {
+     "author": "/predictors/vitalii-belyak",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/26-11-2026-anaheim-ducks-san-jose-sharks",
+     "published_at": "2026-11-25T09:21:00+00:00",
+     "observed_at": "2026-11-25T09:26:48.947308+00:00",
+     "odds": 1.67,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/ilya-kurbatov-2",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/26-11-2026-anaheim-ducks-san-jose-sharks",
+     "published_at": "2026-11-25T12:33:00+00:00",
+     "observed_at": "2026-11-25T12:38:18.842098+00:00",
+     "odds": 1.68,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/vlad-naumov",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/26-11-2026-anaheim-ducks-san-jose-sharks",
+     "published_at": "2026-11-25T13:45:00+00:00",
+     "observed_at": "2026-11-25T19:16:33.313179+00:00",
+     "odds": 1.7,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/irina-novogorodceva-2",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/26-11-2026-anaheim-ducks-san-jose-sharks",
+     "published_at": "2026-11-25T13:55:00+00:00",
+     "observed_at": "2026-11-25T14:02:18.862926+00:00",
+     "odds": 1.7,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/ali-54",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/26-11-2026-anaheim-ducks-san-jose-sharks",
+     "published_at": "2026-11-25T19:20:00+00:00",
+     "observed_at": "2026-11-25T19:36:33.324068+00:00",
+     "odds": 1.72,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/kapitan-kryuk-1",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/26-11-2026-anaheim-ducks-san-jose-sharks",
+     "published_at": "2026-11-25T20:57:00+00:00",
+     "observed_at": "2026-11-25T21:00:32.893281+00:00",
+     "odds": 1.75,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/evan-gurishin",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/26-11-2026-anaheim-ducks-san-jose-sharks",
+     "published_at": "2026-11-25T21:57:00+00:00",
+     "observed_at": "2026-11-25T22:01:40.762063+00:00",
+     "odds": 1.75,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/andrei-angarovok",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/26-11-2026-anaheim-ducks-san-jose-sharks",
+     "published_at": "2026-11-25T23:01:00+00:00",
+     "observed_at": "2026-11-25T23:04:18.979267+00:00",
+     "odds": 1.75,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/velikolepie-hel",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/26-11-2026-anaheim-ducks-san-jose-sharks",
+     "published_at": "2026-11-25T23:24:00+00:00",
+     "observed_at": "2026-11-25T23:26:18.285735+00:00",
+     "odds": 1.75,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/iurii-sycev",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/26-11-2026-anaheim-ducks-san-jose-sharks",
+     "published_at": "2026-11-26T00:09:00+00:00",
+     "observed_at": "2026-11-26T00:32:18.439021+00:00",
+     "odds": 1.75,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/anatoliy-vasilev",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/26-11-2026-anaheim-ducks-san-jose-sharks",
+     "published_at": "2026-11-26T01:51:00+00:00",
+     "observed_at": "2026-11-26T01:58:18.338915+00:00",
+     "odds": 1.73,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/vasilii-eroskin-1",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/26-11-2026-anaheim-ducks-san-jose-sharks",
+     "published_at": "2026-11-26T02:32:00+00:00",
+     "observed_at": "2026-11-26T02:40:18.331129+00:00",
+     "odds": 1.73,
+     "price_kind": "author_recorded"
+    }
+   ]
+  },
+  "bold": {},
+  "open": {
+   "HK_ML_H": 0.5514
+  },
+  "top": false,
+  "msg_id": 9600,
+  "btn": 4
  },
  "NBA|401909324": {
-  "status": "waiting_data",
-  "kickoff": "2026-11-26T06:00:00+03:00",
-  "sport": "basketball",
+  "id": "401909324",
   "div": "NBA",
-  "reason": "no_qualified_real_market",
-  "retry_at": 1795660818.393138
+  "sport": "basketball",
+  "kickoff": "2026-11-26T06:00:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "detail": "Wed, November 25th at 10:00 PM EST",
+  "clock": "0.0",
+  "period": 0,
+  "home": {
+   "id": "9",
+   "name": "Golden State Warriors",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/gs.png",
+   "color": "fdb927",
+   "score": "0",
+   "record": "9-8",
+   "periods": [],
+   "ru": "Голден Стэйт"
+  },
+  "away": {
+   "id": "23",
+   "name": "Sacramento Kings",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/sac.png",
+   "color": "5a2d81",
+   "score": "0",
+   "record": "2-15",
+   "periods": [],
+   "ru": "Сакраменто Кингз"
+  },
+  "odds": {
+   "H": 1.309,
+   "A": 3.61,
+   "line": 216.5,
+   "over": 1.935,
+   "under": 1.885,
+   "spread": -8.5,
+   "sp_h": 1.87,
+   "sp_a": 1.952
+  },
+  "probs": {
+   "BB_ML_H": 0.76063085913355,
+   "BB_ML_A": 0.23936914086645,
+   "BB_SPR_H": 0.5,
+   "BB_SPR_A": 0.5,
+   "BB_O209.5": 0.6597440535491568,
+   "BB_U209.5": 0.3402559464508432,
+   "BB_O216.5": 0.5,
+   "BB_U216.5": 0.5,
+   "BB_O223.5": 0.3402559464508432,
+   "BB_U223.5": 0.6597440535491568
+  },
+  "labels": {
+   "BB_ML_H": "П1 (с ОТ)",
+   "BB_ML_A": "П2 (с ОТ)",
+   "BB_SPR_H": "Ф1 (-8.5)",
+   "BB_SPR_A": "Ф2 (+8.5)",
+   "BB_O209.5": "ТБ 209.5",
+   "BB_U209.5": "ТМ 209.5",
+   "BB_O216.5": "ТБ 216.5",
+   "BB_U216.5": "ТМ 216.5",
+   "BB_O223.5": "ТБ 223.5",
+   "BB_U223.5": "ТМ 223.5"
+  },
+  "real": {
+   "BB_ML_H": 1.309,
+   "BB_ML_A": 3.61,
+   "BB_SPR_H": 1.87,
+   "BB_SPR_A": 1.952,
+   "BB_O216.5": 1.935,
+   "BB_U216.5": 1.885
+  },
+  "center": "Ожидаемый счёт 112 : 104",
+  "bar": [
+   0.76063085913355,
+   0,
+   0.23936914086645
+  ],
+  "model": {
+   "mu": 8.5,
+   "T": 216.5
+  },
+  "stavka_signal": {
+   "status": "collecting",
+   "weight": 0.0,
+   "authors": 24,
+   "group": "basketball",
+   "snapshot": "NBA|401909324",
+   "source": "https://stavka.tv"
+  },
+  "research": {
+   "articles": [],
+   "dossier": null
+  },
+  "main": {
+   "key": "BB_ML_A",
+   "label": "П2 (с ОТ)",
+   "p": 0.2394,
+   "odds": 3.61,
+   "est": false,
+   "stake": 0.5,
+   "strategy": "external_trial",
+   "selection_mode": "external_fallback",
+   "trial_expires_at": null,
+   "probability_origin": "baseline_model",
+   "model_edge": -0.13588,
+   "source_count": 12,
+   "source_refs": [
+    {
+     "author": "/predictors/igor-nazarov-10",
+     "provider": null,
+     "source": "https://stavka.tv/matches/basketball/26-11-2026-golden-state-warriors-sacramento-kings",
+     "published_at": "2026-11-25T06:08:00+00:00",
+     "observed_at": "2026-11-25T06:20:45.510889+00:00",
+     "odds": 2.87,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/mixail-baranov-kapper",
+     "provider": null,
+     "source": "https://stavka.tv/matches/basketball/26-11-2026-golden-state-warriors-sacramento-kings",
+     "published_at": "2026-11-25T06:09:00+00:00",
+     "observed_at": "2026-11-25T06:20:45.510889+00:00",
+     "odds": 2.87,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/sanek-22",
+     "provider": null,
+     "source": "https://stavka.tv/matches/basketball/26-11-2026-golden-state-warriors-sacramento-kings",
+     "published_at": "2026-11-25T07:03:00+00:00",
+     "observed_at": "2026-11-25T07:22:46.125920+00:00",
+     "odds": 2.86,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/yuliya-ismanskaya",
+     "provider": null,
+     "source": "https://stavka.tv/matches/basketball/26-11-2026-golden-state-warriors-sacramento-kings",
+     "published_at": "2026-11-25T10:17:00+00:00",
+     "observed_at": "2026-11-25T10:30:48.700626+00:00",
+     "odds": 2.86,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/yan-belyaev",
+     "provider": null,
+     "source": "https://stavka.tv/matches/basketball/26-11-2026-golden-state-warriors-sacramento-kings",
+     "published_at": "2026-11-25T11:33:00+00:00",
+     "observed_at": "2026-11-25T11:54:19.635981+00:00",
+     "odds": 2.86,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/finntroll-1997",
+     "provider": null,
+     "source": "https://stavka.tv/matches/basketball/26-11-2026-golden-state-warriors-sacramento-kings",
+     "published_at": "2026-11-25T11:56:00+00:00",
+     "observed_at": "2026-11-25T12:16:19.271919+00:00",
+     "odds": 2.86,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/igor-kovalchuk",
+     "provider": null,
+     "source": "https://stavka.tv/matches/basketball/26-11-2026-golden-state-warriors-sacramento-kings",
+     "published_at": "2026-11-25T12:12:00+00:00",
+     "observed_at": "2026-11-25T12:16:19.271919+00:00",
+     "odds": 2.86,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/sergei-oshhepkov-1",
+     "provider": null,
+     "source": "https://stavka.tv/matches/basketball/26-11-2026-golden-state-warriors-sacramento-kings",
+     "published_at": "2026-11-25T14:00:00+00:00",
+     "observed_at": "2026-11-25T14:22:19.633144+00:00",
+     "odds": 3.2,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/misa-steskin",
+     "provider": null,
+     "source": "https://stavka.tv/matches/basketball/26-11-2026-golden-state-warriors-sacramento-kings",
+     "published_at": "2026-11-25T15:23:00+00:00",
+     "observed_at": "2026-11-25T15:46:19.290418+00:00",
+     "odds": 3.08,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/nphne-rupgz64t",
+     "provider": null,
+     "source": "https://stavka.tv/matches/basketball/26-11-2026-golden-state-warriors-sacramento-kings",
+     "published_at": "2026-11-25T22:23:00+00:00",
+     "observed_at": "2026-11-25T22:42:19.142188+00:00",
+     "odds": 3.5,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/anton-shipilin",
+     "provider": null,
+     "source": "https://stavka.tv/matches/basketball/26-11-2026-golden-state-warriors-sacramento-kings",
+     "published_at": "2026-11-25T22:54:00+00:00",
+     "observed_at": "2026-11-25T23:04:18.979267+00:00",
+     "odds": 3.66,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/dima-osipov-6",
+     "provider": null,
+     "source": "https://stavka.tv/matches/basketball/26-11-2026-golden-state-warriors-sacramento-kings",
+     "published_at": "2026-11-25T22:58:00+00:00",
+     "observed_at": "2026-11-25T23:04:18.979267+00:00",
+     "odds": 3.66,
+     "price_kind": "author_recorded"
+    }
+   ]
+  },
+  "bold": {},
+  "open": {
+   "BB_ML_A": 0.2394
+  },
+  "top": false,
+  "msg_id": 9602,
+  "btn": 4
  },
  "NBA|401909325": {
   "id": "401909325",

@@ -26329,11 +26329,378 @@
   "retry_at": 1795656259.135959
  },
  "401931998": {
-  "status": "waiting_data",
-  "kickoff": "2026-11-26T06:10:00+03:00",
-  "sport": "football",
+  "id": "401931998",
   "div": "MEX",
-  "reason": "no_qualified_real_market",
-  "retry_at": 1795660818.393138
+  "slug": "mex.1",
+  "kickoff": "2026-11-26T06:10:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "detail": "Scheduled",
+  "home": {
+   "id": "220",
+   "name": "Monterrey",
+   "short": "Monterrey",
+   "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/220.png",
+   "color": "001C58",
+   "alt": "ffffff",
+   "form": "WWLDL",
+   "score": "0",
+   "ru": "Монтеррей"
+  },
+  "away": {
+   "id": "227",
+   "name": "América",
+   "short": "América",
+   "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/227.png",
+   "color": "ffff91",
+   "alt": "001C58",
+   "form": "LDDDL",
+   "score": "0",
+   "ru": "Америка"
+  },
+  "odds": {
+   "H": 2.05,
+   "D": 3.45,
+   "A": 3.5,
+   "line": 2.5,
+   "over": 1.909,
+   "under": 1.833,
+   "spread_h": [
+    -0.5,
+    2.0
+   ],
+   "spread_a": [
+    0.5,
+    1.741
+   ]
+  },
+  "venue": "Estadio BBVA",
+  "clock": "0'",
+  "goals": [],
+  "open": {
+   "H": 0.4579
+  },
+  "top": false,
+  "lam": [
+   1.4199051380277399,
+   1.2816152221697215
+  ],
+  "probs": {
+   "H": 0.39337549317234455,
+   "D": 0.2769173305529075,
+   "A": 0.32970717627474794,
+   "1X": 0.6702928237252522,
+   "12": 0.7230826694470925,
+   "X2": 0.6066245068276556,
+   "BTTS_Y": 0.557546851274883,
+   "BTTS_N": 0.4424531487251173,
+   "O15": 0.7613842750649992,
+   "U15": 0.23861572493500094,
+   "O25": 0.5067476503352568,
+   "U25": 0.49325234966474346,
+   "O35": 0.2862427262955715,
+   "U35": 0.7137572737044285,
+   "H_O05": 0.7582629741144039,
+   "H_O15": 0.4150193290079006,
+   "A_O05": 0.7224113959814802,
+   "A_O15": 0.36664961557050174,
+   "H-1.5": 0.1905023477681601,
+   "A+1.5": 0.8094976522318398,
+   "A-1.5": 0.14754405494981654,
+   "H+1.5": 0.8524559450501838,
+   "H-2.5": 0.07126847682514519,
+   "A-2.5": 0.05040445820876726,
+   "H+2.5": 0.949595541791233,
+   "A+2.5": 0.9287315231748546,
+   "O45": 0.1373180908413207,
+   "U45": 0.8626819091586795,
+   "H_O25": 0.1713326213668539,
+   "A_O25": 0.1386747589500462,
+   "H&O15": 0.3078640065128296,
+   "A&O15": 0.25347541917826094,
+   "H&BTTS": 0.19265937033282357,
+   "A&BTTS": 0.16484263156815085,
+   "1X&U35": 0.4806213758394572,
+   "X2&U35": 0.4418903869656412,
+   "BTTS&O25": 0.4256648433532117,
+   "HT_H": 0.30279716710321325,
+   "HT_D": 0.4337411628108149,
+   "HT_A": 0.2634616700859717,
+   "HT_O05": 0.6947517940504093,
+   "HT_U05": 0.3052482059495903,
+   "HT_O15": 0.3517750654975268,
+   "HT_U15": 0.6482249345024731
+  },
+  "scores": [
+   [
+    "1:1",
+    0.13188200792167096
+   ],
+   [
+    "2:1",
+    0.08669441697286838
+   ],
+   [
+    "1:0",
+    0.08551148665951497
+   ]
+  ],
+  "main": {
+   "key": "H",
+   "label": "П1",
+   "p": 0.3934,
+   "odds": 2.33,
+   "est": false,
+   "stake": 0.5,
+   "strategy": "external_trial",
+   "selection_mode": "external_fallback",
+   "trial_expires_at": null,
+   "probability_origin": "baseline_model",
+   "model_edge": -0.08344,
+   "source_count": 2,
+   "source_refs": [
+    {
+     "author": "/predictors/sanchez-1",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/26-11-2026-rayados-de-monterrey-club-america",
+     "published_at": "2026-11-25T18:41:00+00:00",
+     "observed_at": "2026-11-26T01:58:18.338915+00:00",
+     "odds": 2.2,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/gol-futbol-1",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/26-11-2026-rayados-de-monterrey-club-america",
+     "published_at": "2026-11-25T20:06:00+00:00",
+     "observed_at": "2026-11-25T20:18:32.956620+00:00",
+     "odds": 2.2,
+     "price_kind": "author_recorded"
+    }
+   ]
+  },
+  "bold": {},
+  "value": null,
+  "odds_src": "среднее по букмекерам",
+  "model_w": 0.0,
+  "learned_n": 1559,
+  "stavka_signal": {
+   "status": "baseline_better",
+   "weight": 0.0,
+   "authors": 7,
+   "votes": {
+    "D": 2.0,
+    "H": 1.9769276622155927,
+    "O25": 1.0,
+    "U25": 1.9781953785027588
+   },
+   "source": "https://stavka.tv",
+   "snapshot": "MEX|401931998"
+  },
+  "research": {
+   "articles": [],
+   "dossier": {
+    "observed_at": "2026-11-26T02:30:35.539395+00:00",
+    "kickoff": "2026-11-26T03:10:00+00:00",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/mex.1/summary?event=401931998",
+    "status": "available",
+    "facts": {
+     "last5": {
+      "220": [
+       {
+        "res": "L",
+        "gf": 0,
+        "ga": 1,
+        "opp": "Guadalajara",
+        "home": true,
+        "date": "2026-10-25"
+       },
+       {
+        "res": "D",
+        "gf": 3,
+        "ga": 3,
+        "opp": "Tijuana",
+        "home": true,
+        "date": "2026-11-01"
+       },
+       {
+        "res": "L",
+        "gf": 0,
+        "ga": 4,
+        "opp": "Toluca",
+        "home": false,
+        "date": "2026-11-08"
+       },
+       {
+        "res": "W",
+        "gf": 1,
+        "ga": 0,
+        "opp": "Querétaro",
+        "home": false,
+        "date": "2026-11-14"
+       },
+       {
+        "res": "W",
+        "gf": 2,
+        "ga": 0,
+        "opp": "Pumas UNAM",
+        "home": false,
+        "date": "2026-11-22"
+       }
+      ],
+      "227": [
+       {
+        "res": "D",
+        "gf": 1,
+        "ga": 1,
+        "opp": "Tijuana",
+        "home": true,
+        "date": "2026-10-29"
+       },
+       {
+        "res": "D",
+        "gf": 2,
+        "ga": 2,
+        "opp": "Toluca",
+        "home": true,
+        "date": "2026-11-01"
+       },
+       {
+        "res": "D",
+        "gf": 2,
+        "ga": 2,
+        "opp": "Pumas UNAM",
+        "home": false,
+        "date": "2026-11-08"
+       },
+       {
+        "res": "L",
+        "gf": 0,
+        "ga": 1,
+        "opp": "Red Bull New York",
+        "home": false,
+        "date": "2026-11-15"
+       },
+       {
+        "res": "L",
+        "gf": 0,
+        "ga": 1,
+        "opp": "Tigres UANL",
+        "home": false,
+        "date": "2026-11-22"
+       }
+      ]
+     },
+     "h2h": [
+      {
+       "date": "2026-10-11",
+       "home_id": "227",
+       "hs": "1",
+       "as": "1"
+      },
+      {
+       "date": "2026-09-03",
+       "home_id": "227",
+       "hs": "2",
+       "as": "2"
+      },
+      {
+       "date": "2026-02-08",
+       "home_id": "227",
+       "hs": "1",
+       "as": "0"
+      },
+      {
+       "date": "2025-11-29",
+       "home_id": "227",
+       "hs": "2",
+       "as": "1"
+      },
+      {
+       "date": "2025-11-27",
+       "home_id": "220",
+       "hs": "2",
+       "as": "0"
+      }
+     ],
+     "lineups": {
+      "220": {
+       "formation": "4-2-3-1",
+       "starters": [
+        "Luis Cárdenas",
+        "Jorge Rodríguez",
+        "Víctor Guzmán",
+        "Gerardo Arteaga",
+        "Ricardo Chávez",
+        "Lucas Ocampos",
+        "Orbelín Pineda",
+        "Óliver Torres",
+        "Hugo Cuypers",
+        "Jesús Corona",
+        "Luca Orellano"
+       ]
+      },
+      "227": {
+       "formation": "4-2-3-1",
+       "starters": [
+        "Rodolfo Cota",
+        "Santiago Ramos",
+        "Santiago Bueno",
+        "Israel Reyes",
+        "Kevin Álvarez",
+        "Edwin Cerrillo",
+        "Alan Cervantes",
+        "Érick Sánchez",
+        "Miguel Borja",
+        "Óscar Perea",
+        "Alejandro Zendejas"
+       ]
+      }
+     },
+     "leaders": {
+      "220": [
+       [
+        "Goals",
+        "Lucas Ocampos",
+        "Matches: 15, Goals: 7"
+       ],
+       [
+        "Assists",
+        "Óliver Torres",
+        "Matches: 16, Assists: 6"
+       ],
+       [
+        "Total Shots",
+        "Lucas Ocampos",
+        "52"
+       ]
+      ],
+      "227": [
+       [
+        "Goals",
+        "Henry Martín",
+        "Matches: 15, Goals: 11"
+       ],
+       [
+        "Assists",
+        "Henry Martín",
+        "Matches: 15, Assists: 3"
+       ],
+       [
+        "Total Shots",
+        "Brian Rodríguez",
+        "38"
+       ]
+      ]
+     },
+     "venue": "Estadio BBVA",
+     "city": "Guadalupe"
+    }
+   }
+  },
+  "extra": null,
+  "msg_id": 9598,
+  "btn": 4
  }
 }
