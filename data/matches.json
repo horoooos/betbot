@@ -30152,7 +30152,7 @@
   "kickoff": "2026-11-26T20:45:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Scheduled",
   "home": {
    "id": "2790",
@@ -31237,7 +31237,10 @@
   "btn": 4,
   "close": {
    "O35": 0.5516
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null,
+  "value_hit": null
  },
  "401915508": {
   "status": "waiting_data",
