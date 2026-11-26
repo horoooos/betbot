@@ -32393,7 +32393,7 @@
   "sport": "football",
   "div": "E2",
   "reason": "no_qualified_real_market",
-  "retry_at": 1795720149.649757
+  "retry_at": 1795720870.00241
  },
  "401915504": {
   "status": "waiting_data",
@@ -32401,7 +32401,7 @@
   "sport": "football",
   "div": "UEL",
   "reason": "no_qualified_real_market",
-  "retry_at": 1795720149.649757
+  "retry_at": 1795720870.00241
  },
  "401915516": {
   "status": "waiting_data",
@@ -32409,15 +32409,15 @@
   "sport": "football",
   "div": "UEL",
   "reason": "no_qualified_real_market",
-  "retry_at": 1795720149.649757
+  "retry_at": 1795720870.00241
  },
  "401915502": {
   "status": "waiting_data",
   "kickoff": "2026-11-26T23:00:00+03:00",
   "sport": "football",
   "div": "UEL",
-  "reason": "no_qualified_real_market",
-  "retry_at": 1795720149.649757
+  "reason": "edge_below_minimum",
+  "retry_at": 1795720870.00241
  },
  "401915501": {
   "status": "waiting_data",
@@ -32425,7 +32425,7 @@
   "sport": "football",
   "div": "UEL",
   "reason": "no_qualified_real_market",
-  "retry_at": 1795720149.649757
+  "retry_at": 1795720870.00241
  },
  "401915505": {
   "status": "waiting_data",
@@ -32433,15 +32433,15 @@
   "sport": "football",
   "div": "UEL",
   "reason": "no_qualified_real_market",
-  "retry_at": 1795720149.649757
+  "retry_at": 1795720870.00241
  },
  "401915503": {
   "status": "waiting_data",
   "kickoff": "2026-11-26T23:00:00+03:00",
   "sport": "football",
   "div": "UEL",
-  "reason": "no_qualified_real_market",
-  "retry_at": 1795720149.649757
+  "reason": "edge_below_minimum",
+  "retry_at": 1795720870.00241
  },
  "401915514": {
   "status": "waiting_data",
@@ -32449,15 +32449,15 @@
   "sport": "football",
   "div": "UEL",
   "reason": "no_qualified_real_market",
-  "retry_at": 1795720149.649757
+  "retry_at": 1795720870.00241
  },
  "401915513": {
   "status": "waiting_data",
   "kickoff": "2026-11-26T23:00:00+03:00",
   "sport": "football",
   "div": "UEL",
-  "reason": "edge_below_minimum",
-  "retry_at": 1795720149.649757
+  "reason": "no_qualified_real_market",
+  "retry_at": 1795720870.00241
  },
  "401915512": {
   "status": "waiting_data",
@@ -32465,7 +32465,7 @@
   "sport": "football",
   "div": "UEL",
   "reason": "no_qualified_real_market",
-  "retry_at": 1795720149.649757
+  "retry_at": 1795720870.00241
  },
  "401915515": {
   "status": "waiting_data",
@@ -32473,7 +32473,7 @@
   "sport": "football",
   "div": "UEL",
   "reason": "no_qualified_real_market",
-  "retry_at": 1795720149.649757
+  "retry_at": 1795720870.00241
  },
  "401915806": {
   "status": "waiting_data",
@@ -32481,7 +32481,7 @@
   "sport": "football",
   "div": "UECL",
   "reason": "no_qualified_real_market",
-  "retry_at": 1795720149.649757
+  "retry_at": 1795720870.00241
  },
  "401915802": {
   "status": "waiting_data",
@@ -32489,7 +32489,7 @@
   "sport": "football",
   "div": "UECL",
   "reason": "no_qualified_real_market",
-  "retry_at": 1795720149.649757
+  "retry_at": 1795720870.00241
  },
  "401915803": {
   "status": "waiting_data",
@@ -32497,7 +32497,7 @@
   "sport": "football",
   "div": "UECL",
   "reason": "no_qualified_real_market",
-  "retry_at": 1795720149.649757
+  "retry_at": 1795720870.00241
  },
  "401915807": {
   "status": "waiting_data",
@@ -32505,7 +32505,7 @@
   "sport": "football",
   "div": "UECL",
   "reason": "no_qualified_real_market",
-  "retry_at": 1795720149.649757
+  "retry_at": 1795720870.00241
  },
  "401915805": {
   "status": "waiting_data",
@@ -32513,7 +32513,7 @@
   "sport": "football",
   "div": "UECL",
   "reason": "no_qualified_real_market",
-  "retry_at": 1795720149.649757
+  "retry_at": 1795720870.00241
  },
  "401915738": {
   "status": "waiting_data",
@@ -32521,7 +32521,7 @@
   "sport": "football",
   "div": "UECL",
   "reason": "no_qualified_real_market",
-  "retry_at": 1795720149.649757
+  "retry_at": 1795720870.00241
  },
  "401915804": {
   "status": "waiting_data",
@@ -32529,7 +32529,7 @@
   "sport": "football",
   "div": "UECL",
   "reason": "no_qualified_real_market",
-  "retry_at": 1795720149.649757
+  "retry_at": 1795720870.00241
  },
  "401915801": {
   "status": "waiting_data",
@@ -32537,6 +32537,6 @@
   "sport": "football",
   "div": "UECL",
   "reason": "no_qualified_real_market",
-  "retry_at": 1795720149.649757
+  "retry_at": 1795720870.00241
  }
 }
