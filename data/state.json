@@ -5,7 +5,7 @@
  },
  "learned": "2026-11-26",
  "schedule_day": "2026-11-26",
- "content_slot": "2026-11-26-13",
+ "content_slot": "2026-11-26-16",
  "news_seen": [
   "https://www.sport-express.ru/football/rfpl/news/romaschenko-nazval-resheniem-protiv-futbola-udalenie-osipenko-v-matche-dinamo-i-krasnodara-2477999/",
   "https://www.sport-express.ru/football/rfpl/news/zaschitnik-lokomotiva-fasson-teplo-poproschalsya-s-galaktionovym-2477998/",
@@ -1563,7 +1563,7 @@
  "value_day": "2026-11-26",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-26",
- "site_stamp": "1566|9639|2026-11-26 15|6|17b6ae1cd7ad4197",
+ "site_stamp": "1566|9642|2026-11-26 16|6|17b6ae1cd7ad4197",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1722,7 +1722,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 9639,
+ "dz_last": 9642,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -3063,7 +3063,7 @@
   "quote_matches": 131
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-26T15:59:30.797112+03:00",
+  "last_poll": "2026-11-26T16:01:30.905888+03:00",
   "cursor": "444",
   "posts": [
    {
@@ -3857,7 +3857,9 @@
    "401902007": "pre",
    "401874563": "pre",
    "1816495": "pre",
-   "401881739": "pre"
+   "401881739": "pre",
+   "401875536": "pre",
+   "401921332": "pre"
   },
   "daily": {
    "day": "2026-11-26"
@@ -14886,5 +14888,14 @@
     "profit_pct": -0.5
    }
   }
+ },
+ "mod_poll": {
+  "key": "E2|401880728",
+  "id": "401880728",
+  "poll": 9642,
+  "post": 9641,
+  "home": "Донкастер",
+  "away": "Хаддерсфилд Таун",
+  "kickoff": "2026-11-26T23:00:00+03:00"
  }
 }
