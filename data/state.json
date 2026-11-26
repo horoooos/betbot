@@ -1563,7 +1563,7 @@
  "value_day": "2026-11-26",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-26",
- "site_stamp": "1571|9703|2026-11-26 22|6|4c969906bc3847d3",
+ "site_stamp": "1571|9711|2026-11-26 22|6|194bdb1613e33bd6",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1722,7 +1722,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 9703,
+ "dz_last": 9711,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -3018,15 +3018,15 @@
   "model": {
    "weight": 0.0,
    "status": "baseline_better",
-   "settled_matches": 167,
+   "settled_matches": 168,
    "required_matches": 100,
-   "trained_at": "2026-11-26T19:41:09.992833+00:00",
+   "trained_at": "2026-11-26T19:47:10.152257+00:00",
    "candidate_weight": 0.0,
    "train_matches": 117,
-   "validation_matches": 47,
+   "validation_matches": 48,
    "validation_from": "2026-11-24T00:00:00+00:00",
-   "validation_logloss": 2.773353562263242,
-   "validation_baseline_logloss": 2.773353562263242
+   "validation_logloss": 2.8151999323244223,
+   "validation_baseline_logloss": 2.8151999323244223
   },
   "sport_models": {
    "hockey": {
@@ -3066,10 +3066,10 @@
    }
   },
   "source": {
-   "last_success": "2026-11-26T19:27:10.089363+00:00",
+   "last_success": "2026-11-26T19:47:10.152257+00:00",
    "parsed": 346,
-   "added": 39,
-   "discovered_matches": 28,
+   "added": 37,
+   "discovered_matches": 23,
    "pages": 17,
    "errors": [],
    "parsed_by_sport": {
@@ -3082,13 +3082,13 @@
    }
   },
   "error": null,
-  "tips": 18511,
+  "tips": 18529,
   "snapshots": 404,
-  "unmapped_markets": 28054,
+  "unmapped_markets": 28073,
   "quote_matches": 135
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-26T22:45:09.936135+03:00",
+  "last_poll": "2026-11-26T22:47:10.152257+03:00",
   "cursor": "458",
   "posts": [
    {
@@ -3807,7 +3807,7 @@
    "401915815": "post",
    "401915814": "post",
    "401915810": "post",
-   "401915811": "in",
+   "401915811": "post",
    "401915813": "post",
    "401915812": "post",
    "401915739": "in",
@@ -6992,7 +6992,7 @@
   },
   "football|E2|401880728": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-26T19:35:30.990738+00:00",
+   "checked_at": "2026-11-26T19:47:39.590239+00:00",
    "kickoff": "2026-11-26T23:00:00+03:00",
    "sport": "football",
    "id": "401880728",
@@ -7006,53 +7006,56 @@
    "estimated": true
   },
   "football|UEL|401915504": {
-   "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-26T19:35:31.653120+00:00",
+   "reason": "published",
+   "checked_at": "2026-11-26T19:47:50.271566+00:00",
    "kickoff": "2026-11-26T23:00:00+03:00",
    "sport": "football",
    "id": "401915504",
    "home": "Кристал Пэлас",
    "away": "Реал Сосьедад",
-   "priced_markets": 6,
-   "market": "Обе забьют — да",
-   "probability": 0.6334,
-   "odds": 1.47,
-   "edge": -0.0689,
-   "estimated": true
+   "market": "X2",
+   "strategy": "external_trial",
+   "source_count": 16,
+   "probability": 0.4895,
+   "odds": 1.91,
+   "edge": -0.06506,
+   "estimated": false
   },
   "football|UEL|401915516": {
-   "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-26T19:35:32.314202+00:00",
+   "reason": "published",
+   "checked_at": "2026-11-26T19:48:00.540853+00:00",
    "kickoff": "2026-11-26T23:00:00+03:00",
    "sport": "football",
    "id": "401915516",
    "home": "Ференцварош",
    "away": "Целе",
-   "priced_markets": 7,
-   "market": "Обе забьют — да",
-   "probability": 0.574,
-   "odds": 1.62,
-   "edge": -0.07012,
-   "estimated": true
+   "market": "ТБ 3.5",
+   "strategy": "external_trial",
+   "source_count": 8,
+   "probability": 0.442,
+   "odds": 2.15,
+   "edge": -0.0497,
+   "estimated": false
   },
   "football|UEL|401915502": {
-   "reason": "edge_below_minimum",
-   "checked_at": "2026-11-26T19:35:32.684767+00:00",
+   "reason": "published",
+   "checked_at": "2026-11-26T19:48:10.597602+00:00",
    "kickoff": "2026-11-26T23:00:00+03:00",
    "sport": "football",
    "id": "401915502",
    "home": "Ювентус",
    "away": "Омония",
-   "priced_markets": 7,
    "market": "ТБ 2.5",
-   "probability": 0.5991,
-   "odds": 1.59,
-   "edge": -0.04743,
+   "strategy": "external_trial",
+   "source_count": 1,
+   "probability": 0.6065,
+   "odds": 1.57,
+   "edge": -0.04779,
    "estimated": false
   },
   "football|UEL|401915501": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-26T19:35:33.048488+00:00",
+   "checked_at": "2026-11-26T19:48:10.959654+00:00",
    "kickoff": "2026-11-26T23:00:00+03:00",
    "sport": "football",
    "id": "401915501",
@@ -7060,14 +7063,14 @@
    "away": "Лиллестрём",
    "priced_markets": 7,
    "market": "ТБ 2.5",
-   "probability": 0.6439,
+   "probability": 0.6468,
    "odds": 1.44,
-   "edge": -0.07278,
+   "edge": -0.06861,
    "estimated": true
   },
   "football|UEL|401915505": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-26T19:35:33.413390+00:00",
+   "checked_at": "2026-11-26T19:48:11.324968+00:00",
    "kickoff": "2026-11-26T23:00:00+03:00",
    "sport": "football",
    "id": "401915505",
@@ -7075,21 +7078,22 @@
    "away": "Ренн",
    "priced_markets": 6,
    "market": "ТБ 2.5",
-   "probability": 0.6604,
+   "probability": 0.6575,
    "odds": 1.41,
-   "edge": -0.06884,
+   "edge": -0.07293,
    "estimated": true
   },
   "football|UEL|401915503": {
-   "reason": "edge_below_minimum",
-   "checked_at": "2026-11-26T19:35:34.089702+00:00",
+   "reason": "published",
+   "checked_at": "2026-11-26T19:48:21.518074+00:00",
    "kickoff": "2026-11-26T23:00:00+03:00",
    "sport": "football",
    "id": "401915503",
    "home": "ОФИ",
    "away": "Андерлехт",
-   "priced_markets": 6,
    "market": "П2",
+   "strategy": "external_trial",
+   "source_count": 18,
    "probability": 0.5516,
    "odds": 1.74,
    "edge": -0.04022,
@@ -7097,7 +7101,7 @@
   },
   "football|UEL|401915514": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-26T19:35:34.751988+00:00",
+   "checked_at": "2026-11-26T19:48:22.173917+00:00",
    "kickoff": "2026-11-26T23:00:00+03:00",
    "sport": "football",
    "id": "401915514",
@@ -7105,14 +7109,14 @@
    "away": "АЗ",
    "priced_markets": 6,
    "market": "Обе забьют — да",
-   "probability": 0.5884,
-   "odds": 1.58,
-   "edge": -0.07033,
+   "probability": 0.5952,
+   "odds": 1.56,
+   "edge": -0.07149,
    "estimated": true
   },
   "football|UEL|401915513": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-26T19:35:35.415870+00:00",
+   "checked_at": "2026-11-26T19:48:22.840290+00:00",
    "kickoff": "2026-11-26T23:00:00+03:00",
    "sport": "football",
    "id": "401915513",
@@ -7127,7 +7131,7 @@
   },
   "football|UEL|401915512": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-26T19:35:35.782303+00:00",
+   "checked_at": "2026-11-26T19:48:23.206925+00:00",
    "kickoff": "2026-11-26T23:00:00+03:00",
    "sport": "football",
    "id": "401915512",
@@ -7135,14 +7139,14 @@
    "away": "Селтик",
    "priced_markets": 6,
    "market": "Обе забьют — да",
-   "probability": 0.635,
-   "odds": 1.46,
-   "edge": -0.0729,
+   "probability": 0.6289,
+   "odds": 1.48,
+   "edge": -0.06923,
    "estimated": true
   },
   "football|UEL|401915515": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-26T19:35:36.151671+00:00",
+   "checked_at": "2026-11-26T19:48:23.571565+00:00",
    "kickoff": "2026-11-26T23:00:00+03:00",
    "sport": "football",
    "id": "401915515",
@@ -7150,14 +7154,14 @@
    "away": "Штурм",
    "priced_markets": 7,
    "market": "Обе забьют — да",
-   "probability": 0.5973,
-   "odds": 1.56,
-   "edge": -0.06821,
+   "probability": 0.5907,
+   "odds": 1.57,
+   "edge": -0.0726,
    "estimated": true
   },
   "football|UECL|401915806": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-26T19:35:36.517185+00:00",
+   "checked_at": "2026-11-26T19:48:24.023306+00:00",
    "kickoff": "2026-11-26T23:00:00+03:00",
    "sport": "football",
    "id": "401915806",
@@ -7165,14 +7169,14 @@
    "away": "Аталанта",
    "priced_markets": 7,
    "market": "П2 и ТБ 1.5",
-   "probability": 0.5826,
-   "odds": 1.6,
-   "edge": -0.06784,
+   "probability": 0.5653,
+   "odds": 1.65,
+   "edge": -0.06726,
    "estimated": true
   },
   "football|UECL|401915802": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-26T19:35:36.888025+00:00",
+   "checked_at": "2026-11-26T19:48:24.393949+00:00",
    "kickoff": "2026-11-26T23:00:00+03:00",
    "sport": "football",
    "id": "401915802",
@@ -7180,14 +7184,14 @@
    "away": "КуПС",
    "priced_markets": 7,
    "market": "ТБ 2.5",
-   "probability": 0.6346,
-   "odds": 1.47,
-   "edge": -0.06714,
+   "probability": 0.6372,
+   "odds": 1.46,
+   "edge": -0.06969,
    "estimated": true
   },
   "football|UECL|401915803": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-26T19:35:37.550923+00:00",
+   "checked_at": "2026-11-26T19:48:25.053536+00:00",
    "kickoff": "2026-11-26T23:00:00+03:00",
    "sport": "football",
    "id": "401915803",
@@ -7195,14 +7199,14 @@
    "away": "Трабзонспор",
    "priced_markets": 6,
    "market": "Обе забьют — да",
-   "probability": 0.6237,
+   "probability": 0.6262,
    "odds": 1.49,
-   "edge": -0.07069,
+   "edge": -0.06696,
    "estimated": true
   },
   "football|UECL|401915807": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-26T19:35:37.911789+00:00",
+   "checked_at": "2026-11-26T19:48:25.418508+00:00",
    "kickoff": "2026-11-26T23:00:00+03:00",
    "sport": "football",
    "id": "401915807",
@@ -7210,14 +7214,14 @@
    "away": "Панатинаикос",
    "priced_markets": 6,
    "market": "Обе забьют — да",
-   "probability": 0.5985,
-   "odds": 1.55,
-   "edge": -0.07232,
+   "probability": 0.6027,
+   "odds": 1.54,
+   "edge": -0.07184,
    "estimated": true
   },
   "football|UECL|401915805": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-26T19:35:38.270430+00:00",
+   "checked_at": "2026-11-26T19:48:25.780860+00:00",
    "kickoff": "2026-11-26T23:00:00+03:00",
    "sport": "football",
    "id": "401915805",
@@ -7225,14 +7229,14 @@
    "away": "Сент-Трюйден",
    "priced_markets": 6,
    "market": "Обе забьют — да",
-   "probability": 0.5858,
-   "odds": 1.59,
-   "edge": -0.06858,
+   "probability": 0.5805,
+   "odds": 1.6,
+   "edge": -0.0712,
    "estimated": true
   },
   "football|UECL|401915738": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-26T19:35:38.640263+00:00",
+   "checked_at": "2026-11-26T19:48:26.148944+00:00",
    "kickoff": "2026-11-26T23:00:00+03:00",
    "sport": "football",
    "id": "401915738",
@@ -7240,14 +7244,14 @@
    "away": "Копенгаген",
    "priced_markets": 7,
    "market": "П2 и ТБ 1.5",
-   "probability": 0.585,
-   "odds": 1.59,
-   "edge": -0.06985,
+   "probability": 0.5802,
+   "odds": 1.6,
+   "edge": -0.07168,
    "estimated": true
   },
   "football|UECL|401915804": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-26T19:35:39.299475+00:00",
+   "checked_at": "2026-11-26T19:48:26.808255+00:00",
    "kickoff": "2026-11-26T23:00:00+03:00",
    "sport": "football",
    "id": "401915804",
@@ -7262,7 +7266,7 @@
   },
   "football|UECL|401915801": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-26T19:35:39.960397+00:00",
+   "checked_at": "2026-11-26T19:48:27.465880+00:00",
    "kickoff": "2026-11-26T23:00:00+03:00",
    "sport": "football",
    "id": "401915801",
@@ -7270,9 +7274,9 @@
    "away": "Твенте",
    "priced_markets": 6,
    "market": "Обе забьют — да",
-   "probability": 0.5856,
-   "odds": 1.59,
-   "edge": -0.0689,
+   "probability": 0.5897,
+   "odds": 1.58,
+   "edge": -0.06827,
    "estimated": true
   }
  },
@@ -16520,6 +16524,493 @@
     "settled_at": "2026-11-26T19:39:09.305385+00:00",
     "hit": false,
     "profit_pct": -0.5
+   },
+   "football|UEL|401915504": {
+    "status": "open",
+    "id": "401915504",
+    "sport": "football",
+    "div": "UEL",
+    "kickoff": "2026-11-26T23:00:00+03:00",
+    "published_at": "2026-11-26T19:47:46.777896+00:00",
+    "msg_id": 9704,
+    "tip": {
+     "key": "X2",
+     "label": "X2",
+     "p": 0.4895,
+     "odds": 1.91,
+     "est": false,
+     "stake": 0.5,
+     "strategy": "external_trial",
+     "selection_mode": "external_fallback",
+     "trial_expires_at": null,
+     "probability_origin": "baseline_model",
+     "model_edge": -0.06511,
+     "source_count": 16,
+     "source_refs": [
+      {
+       "author": "/predictors/dmitriy-r-e-z-n-i-k-o-v",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/26-11-2026-crystal-palace-real-sociedad",
+       "published_at": "2026-11-25T10:00:00+00:00",
+       "observed_at": "2026-11-25T21:41:40.530107+00:00",
+       "odds": 1.8,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/vitalii-shhegolev",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/26-11-2026-crystal-palace-real-sociedad",
+       "published_at": "2026-11-25T21:25:00+00:00",
+       "observed_at": "2026-11-25T21:41:40.530107+00:00",
+       "odds": 1.8,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/andrey-19",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/26-11-2026-crystal-palace-real-sociedad",
+       "published_at": "2026-11-25T21:30:00+00:00",
+       "observed_at": "2026-11-25T21:41:40.530107+00:00",
+       "odds": 1.8,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/alex-sandra",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/26-11-2026-crystal-palace-real-sociedad",
+       "published_at": "2026-11-25T23:41:00+00:00",
+       "observed_at": "2026-11-25T23:48:18.337540+00:00",
+       "odds": 1.8,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/denis-oleynik",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/26-11-2026-crystal-palace-real-sociedad",
+       "published_at": "2026-11-26T01:52:00+00:00",
+       "observed_at": "2026-11-26T01:58:18.338915+00:00",
+       "odds": 1.8,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/admin-your-money",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/26-11-2026-crystal-palace-real-sociedad",
+       "published_at": "2026-11-26T04:40:00+00:00",
+       "observed_at": "2026-11-26T04:47:50.889526+00:00",
+       "odds": 1.8,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/kamila-rozhdestvenskaya",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/26-11-2026-crystal-palace-real-sociedad",
+       "published_at": "2026-11-26T04:56:00+00:00",
+       "observed_at": "2026-11-26T05:07:54.178597+00:00",
+       "odds": 1.8,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/-3227",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/26-11-2026-crystal-palace-real-sociedad",
+       "published_at": "2026-11-26T08:07:00+00:00",
+       "observed_at": "2026-11-26T08:15:55.486840+00:00",
+       "odds": 1.8,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/dmitrii-bartasuk",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/26-11-2026-crystal-palace-real-sociedad",
+       "published_at": "2026-11-26T08:08:00+00:00",
+       "observed_at": "2026-11-26T08:15:55.486840+00:00",
+       "odds": 1.8,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/evgenii-kalasnik",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/26-11-2026-crystal-palace-real-sociedad",
+       "published_at": "2026-11-26T08:35:00+00:00",
+       "observed_at": "2026-11-26T08:37:55.224805+00:00",
+       "odds": 1.8,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/vitalii-denisov-6",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/26-11-2026-crystal-palace-real-sociedad",
+       "published_at": "2026-11-26T09:53:00+00:00",
+       "observed_at": "2026-11-26T09:59:26.796873+00:00",
+       "odds": 1.83,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/artur-neftik",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/26-11-2026-crystal-palace-real-sociedad",
+       "published_at": "2026-11-26T09:57:00+00:00",
+       "observed_at": "2026-11-26T18:01:09.819658+00:00",
+       "odds": 1.83,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/stan-liddy-1",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/26-11-2026-crystal-palace-real-sociedad",
+       "published_at": "2026-11-26T17:12:00+00:00",
+       "observed_at": "2026-11-26T17:19:08.797916+00:00",
+       "odds": 1.77,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/andrey-zakozhurnikov-1",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/26-11-2026-crystal-palace-real-sociedad",
+       "published_at": "2026-11-26T17:52:00+00:00",
+       "observed_at": "2026-11-26T18:01:09.819658+00:00",
+       "odds": 1.77,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/sergei-zukov-9",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/26-11-2026-crystal-palace-real-sociedad",
+       "published_at": "2026-11-26T19:00:00+00:00",
+       "observed_at": "2026-11-26T19:07:09.592806+00:00",
+       "odds": 1.83,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/andrei-razuvaev-1",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/26-11-2026-crystal-palace-real-sociedad",
+       "published_at": "2026-11-26T19:43:00+00:00",
+       "observed_at": "2026-11-26T19:47:10.152257+00:00",
+       "odds": 1.89,
+       "price_kind": "author_recorded"
+      }
+     ]
+    }
+   },
+   "football|UEL|401915516": {
+    "status": "open",
+    "id": "401915516",
+    "sport": "football",
+    "div": "UEL",
+    "kickoff": "2026-11-26T23:00:00+03:00",
+    "published_at": "2026-11-26T19:47:57.011636+00:00",
+    "msg_id": 9706,
+    "tip": {
+     "key": "O35",
+     "label": "ТБ 3.5",
+     "p": 0.442,
+     "odds": 2.15,
+     "est": false,
+     "stake": 0.5,
+     "strategy": "external_trial",
+     "selection_mode": "external_fallback",
+     "trial_expires_at": null,
+     "probability_origin": "baseline_model",
+     "model_edge": -0.04968,
+     "source_count": 8,
+     "source_refs": [
+      {
+       "author": "/predictors/mikhail-baranov-1",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/26-11-2026-ferencvarosi-celje",
+       "published_at": "2026-11-25T08:42:00+00:00",
+       "observed_at": "2026-11-25T15:04:19.573091+00:00",
+       "odds": 2.32,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/tatyana-ryaskina",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/26-11-2026-ferencvarosi-celje",
+       "published_at": "2026-11-25T22:00:00+00:00",
+       "observed_at": "2026-11-25T22:01:40.762063+00:00",
+       "odds": 2.32,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/egorov-vladimir",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/26-11-2026-ferencvarosi-celje",
+       "published_at": "2026-11-26T07:29:00+00:00",
+       "observed_at": "2026-11-26T07:33:55.307725+00:00",
+       "odds": 2.32,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/vse-budet-xoroso",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/26-11-2026-ferencvarosi-celje",
+       "published_at": "2026-11-26T07:49:00+00:00",
+       "observed_at": "2026-11-26T07:53:56.146736+00:00",
+       "odds": 2.32,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/mx-iv",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/26-11-2026-ferencvarosi-celje",
+       "published_at": "2026-11-26T10:18:00+00:00",
+       "observed_at": "2026-11-26T10:19:30.678733+00:00",
+       "odds": 2.32,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/aleksei-karpov-1",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/26-11-2026-ferencvarosi-celje",
+       "published_at": "2026-11-26T11:37:00+00:00",
+       "observed_at": "2026-11-26T11:43:30.620779+00:00",
+       "odds": 2.32,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/luciferik",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/26-11-2026-ferencvarosi-celje",
+       "published_at": "2026-11-26T15:03:00+00:00",
+       "observed_at": "2026-11-26T19:07:09.592806+00:00",
+       "odds": 2.32,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/tapok-tennisa",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/26-11-2026-ferencvarosi-celje",
+       "published_at": "2026-11-26T18:58:00+00:00",
+       "observed_at": "2026-11-26T19:07:09.592806+00:00",
+       "odds": 2.32,
+       "price_kind": "author_recorded"
+      }
+     ]
+    }
+   },
+   "football|UEL|401915502": {
+    "status": "open",
+    "id": "401915502",
+    "sport": "football",
+    "div": "UEL",
+    "kickoff": "2026-11-26T23:00:00+03:00",
+    "published_at": "2026-11-26T19:48:07.152718+00:00",
+    "msg_id": 9708,
+    "tip": {
+     "key": "O25",
+     "label": "ТБ 2.5",
+     "p": 0.6065,
+     "odds": 1.57,
+     "est": false,
+     "stake": 0.5,
+     "strategy": "external_trial",
+     "selection_mode": "external_fallback",
+     "trial_expires_at": null,
+     "probability_origin": "baseline_model",
+     "model_edge": -0.04775,
+     "source_count": 1,
+     "source_refs": [
+      {
+       "author": "expert:александр москвин",
+       "provider": "metaratings",
+       "source": "https://metaratings.ru/prognozy/futbol/yuventus-omoniya-prognoz-na-match-ligi-evropy-26-noyabrya-2026-goda/",
+       "published_at": "2026-11-25T16:57:35+00:00",
+       "observed_at": "2026-11-26T17:47:32.482217+00:00",
+       "odds": 1.38,
+       "price_kind": "author_recorded"
+      }
+     ]
+    }
+   },
+   "football|UEL|401915503": {
+    "status": "open",
+    "id": "401915503",
+    "sport": "football",
+    "div": "UEL",
+    "kickoff": "2026-11-26T23:00:00+03:00",
+    "published_at": "2026-11-26T19:48:18.061187+00:00",
+    "msg_id": 9710,
+    "tip": {
+     "key": "A",
+     "label": "П2",
+     "p": 0.5516,
+     "odds": 1.74,
+     "est": false,
+     "stake": 0.5,
+     "strategy": "external_trial",
+     "selection_mode": "external_fallback",
+     "trial_expires_at": null,
+     "probability_origin": "baseline_model",
+     "model_edge": -0.04028,
+     "source_count": 18,
+     "source_refs": [
+      {
+       "author": "/predictors/kotov-mark",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/26-11-2026-ofi-rsc-anderlecht",
+       "published_at": "2026-11-25T21:34:00+00:00",
+       "observed_at": "2026-11-25T21:41:40.530107+00:00",
+       "odds": 1.78,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/alex-sandra",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/26-11-2026-ofi-rsc-anderlecht",
+       "published_at": "2026-11-25T23:56:00+00:00",
+       "observed_at": "2026-11-26T00:10:18.450101+00:00",
+       "odds": 1.78,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/nikita-savelev-17",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/26-11-2026-ofi-rsc-anderlecht",
+       "published_at": "2026-11-26T01:48:00+00:00",
+       "observed_at": "2026-11-26T01:58:18.338915+00:00",
+       "odds": 1.78,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/aleksandr-suslebin",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/26-11-2026-ofi-rsc-anderlecht",
+       "published_at": "2026-11-26T02:16:00+00:00",
+       "observed_at": "2026-11-26T02:18:18.569425+00:00",
+       "odds": 1.78,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/vyacheslav-eliseev",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/26-11-2026-ofi-rsc-anderlecht",
+       "published_at": "2026-11-26T04:01:00+00:00",
+       "observed_at": "2026-11-26T04:05:49.598582+00:00",
+       "odds": 1.78,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/evgenii-suckov",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/26-11-2026-ofi-rsc-anderlecht",
+       "published_at": "2026-11-26T05:21:00+00:00",
+       "observed_at": "2026-11-26T05:27:54.520497+00:00",
+       "odds": 1.78,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/maksim-maksim-43",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/26-11-2026-ofi-rsc-anderlecht",
+       "published_at": "2026-11-26T07:08:00+00:00",
+       "observed_at": "2026-11-26T07:13:54.757691+00:00",
+       "odds": 1.78,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/misa-vinters",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/26-11-2026-ofi-rsc-anderlecht",
+       "published_at": "2026-11-26T10:53:00+00:00",
+       "observed_at": "2026-11-26T11:01:30.152813+00:00",
+       "odds": 1.78,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/vladimir-tyumenev-2",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/26-11-2026-ofi-rsc-anderlecht",
+       "published_at": "2026-11-26T10:54:00+00:00",
+       "observed_at": "2026-11-26T11:01:30.152813+00:00",
+       "odds": 1.78,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/dmitrii-evmenenko",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/26-11-2026-ofi-rsc-anderlecht",
+       "published_at": "2026-11-26T12:01:00+00:00",
+       "observed_at": "2026-11-26T12:05:30.426403+00:00",
+       "odds": 1.78,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/ruslan-afandiyev",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/26-11-2026-ofi-rsc-anderlecht",
+       "published_at": "2026-11-26T14:29:00+00:00",
+       "observed_at": "2026-11-26T14:31:30.545913+00:00",
+       "odds": 1.78,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/roma-bayanov",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/26-11-2026-ofi-rsc-anderlecht",
+       "published_at": "2026-11-26T15:11:00+00:00",
+       "observed_at": "2026-11-26T15:13:01.940630+00:00",
+       "odds": 1.78,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/andrejf78",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/26-11-2026-ofi-rsc-anderlecht",
+       "published_at": "2026-11-26T17:49:00+00:00",
+       "observed_at": "2026-11-26T18:01:09.819658+00:00",
+       "odds": 1.78,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/aleksandr-tkachenko-14",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/26-11-2026-ofi-rsc-anderlecht",
+       "published_at": "2026-11-26T17:54:00+00:00",
+       "observed_at": "2026-11-26T18:01:09.819658+00:00",
+       "odds": 1.78,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/podkat-spensa",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/26-11-2026-ofi-rsc-anderlecht",
+       "published_at": "2026-11-26T18:39:00+00:00",
+       "observed_at": "2026-11-26T18:45:09.932750+00:00",
+       "odds": 1.78,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/roman-sukotnov-1",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/26-11-2026-ofi-rsc-anderlecht",
+       "published_at": "2026-11-26T19:00:00+00:00",
+       "observed_at": "2026-11-26T19:07:09.592806+00:00",
+       "odds": 1.84,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/andrei-razuvaev-1",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/26-11-2026-ofi-rsc-anderlecht",
+       "published_at": "2026-11-26T19:44:00+00:00",
+       "observed_at": "2026-11-26T19:47:10.152257+00:00",
+       "odds": 1.77,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/nphne-rupgz64t",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/26-11-2026-ofi-rsc-anderlecht",
+       "published_at": "2026-11-26T19:44:00+00:00",
+       "observed_at": "2026-11-26T19:47:10.152257+00:00",
+       "odds": 1.77,
+       "price_kind": "author_recorded"
+      }
+     ]
+    }
    }
   }
  },
