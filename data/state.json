@@ -3077,7 +3077,7 @@
   "quote_matches": 134
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-26T19:57:08.853370+03:00",
+  "last_poll": "2026-11-26T19:59:08.929898+03:00",
   "cursor": "452",
   "posts": [
    {
@@ -6924,6 +6924,36 @@
    "probability": 0.6519,
    "odds": 1.43,
    "edge": -0.06778,
+   "estimated": true
+  },
+  "tennis|WTA|186836": {
+   "reason": "no_real_odds",
+   "checked_at": "2026-11-26T16:59:28.839683+00:00",
+   "kickoff": "2026-11-26T21:00:00+03:00",
+   "sport": "tennis",
+   "id": "186836",
+   "home": "Гуйомар Маристани",
+   "away": "Нурия Бранкаччо",
+   "priced_markets": 0,
+   "market": "Будет 2 сета",
+   "probability": 0.5669,
+   "odds": 1.64,
+   "edge": -0.07028,
+   "estimated": true
+  },
+  "tennis|WTA|186834": {
+   "reason": "no_qualified_real_market",
+   "checked_at": "2026-11-26T16:59:29.450465+00:00",
+   "kickoff": "2026-11-26T21:00:00+03:00",
+   "sport": "tennis",
+   "id": "186834",
+   "home": "София Костоулас",
+   "away": "Варвара Лепченко",
+   "priced_markets": 2,
+   "market": "Будет 2 сета",
+   "probability": 0.5068,
+   "odds": 1.84,
+   "edge": -0.06749,
    "estimated": true
   }
  },
