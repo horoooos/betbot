@@ -5712,25 +5712,25 @@
   "kickoff": "2026-11-26T01:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Wed, November 25th at 5:00 PM EST",
   "clock": "0.0",
   "period": 0,
   "home": {
+   "color": "1d428a",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/phi.png",
    "id": "20",
    "name": "Philadelphia 76ers",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/phi.png",
-   "color": "1d428a",
    "score": "0",
    "record": "14-4",
    "periods": [],
    "ru": "Филадельфия Сиксерс"
   },
   "away": {
+   "color": "98002e",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/mia.png",
    "id": "14",
    "name": "Miami Heat",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/mia.png",
-   "color": "98002e",
    "score": "0",
    "record": "10-6",
    "periods": [],
@@ -6145,7 +6145,9 @@
   "btn": 4,
   "close": {
    "BB_ML_A": 0.5497
-  }
+  },
+  "main_hit": false,
+  "bold_hit": null
  },
  "NHL|401892781": {
   "id": "401892781",
