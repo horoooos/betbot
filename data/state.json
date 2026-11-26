@@ -1563,7 +1563,7 @@
  "value_day": "2026-11-26",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-26",
- "site_stamp": "1573|9742|2026-11-27 00|6|03399264ffff8caa",
+ "site_stamp": "1573|9743|2026-11-27 00|6|03399264ffff8caa",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1722,7 +1722,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 9742,
+ "dz_last": 9743,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -3098,7 +3098,7 @@
   "quote_matches": 138
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-27T00:52:39.410566+03:00",
+  "last_poll": "2026-11-27T00:54:39.812969+03:00",
   "cursor": "462",
   "posts": [
    {
@@ -3746,7 +3746,7 @@
    "186838": "post",
    "186837": "post",
    "186836": "post",
-   "186835": "pre",
+   "186835": "in",
    "186834": "post",
    "186831": "pre",
    "186830": "pre",
@@ -3827,13 +3827,13 @@
    "401915504": "in",
    "401915516": "post",
    "401915502": "post",
-   "401915501": "in",
-   "401915505": "in",
+   "401915501": "post",
+   "401915505": "post",
    "401915503": "in",
    "401915514": "post",
    "401915513": "post",
    "401915512": "in",
-   "401915515": "in",
+   "401915515": "post",
    "401915806": "in",
    "401915802": "post",
    "401915803": "in",
@@ -16722,7 +16722,7 @@
     }
    },
    "football|UEL|401915516": {
-    "status": "open",
+    "status": "settled",
     "id": "401915516",
     "sport": "football",
     "div": "UEL",
@@ -16816,10 +16816,13 @@
        "price_kind": "author_recorded"
       }
      ]
-    }
+    },
+    "settled_at": "2026-11-26T21:54:39.812969+00:00",
+    "hit": false,
+    "profit_pct": -0.5
    },
    "football|UEL|401915502": {
-    "status": "open",
+    "status": "settled",
     "id": "401915502",
     "sport": "football",
     "div": "UEL",
@@ -16850,7 +16853,10 @@
        "price_kind": "author_recorded"
       }
      ]
-    }
+    },
+    "settled_at": "2026-11-26T21:54:39.812969+00:00",
+    "hit": true,
+    "profit_pct": 0.285
    },
    "football|UEL|401915503": {
     "status": "open",
