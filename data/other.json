@@ -7590,5 +7590,29 @@
   "div": "NHL",
   "reason": "no_qualified_real_market",
   "retry_at": 1795658299.20053
+ },
+ "NHL|401892793": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-26T06:00:00+03:00",
+  "sport": "hockey",
+  "div": "NHL",
+  "reason": "no_qualified_real_market",
+  "retry_at": 1795658898.338915
+ },
+ "NBA|401909324": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-26T06:00:00+03:00",
+  "sport": "basketball",
+  "div": "NBA",
+  "reason": "no_qualified_real_market",
+  "retry_at": 1795658898.338915
+ },
+ "NBA|401909325": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-26T06:00:00+03:00",
+  "sport": "basketball",
+  "div": "NBA",
+  "reason": "no_qualified_real_market",
+  "retry_at": 1795658898.338915
  }
 }

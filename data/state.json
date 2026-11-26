@@ -3018,10 +3018,10 @@
    }
   },
   "source": {
-   "last_success": "2026-11-26T01:36:18.793605+00:00",
+   "last_success": "2026-11-26T01:58:18.338915+00:00",
    "parsed": 359,
-   "added": 32,
-   "discovered_matches": 36,
+   "added": 56,
+   "discovered_matches": 35,
    "pages": 18,
    "errors": [],
    "parsed_by_sport": {
@@ -3034,13 +3034,13 @@
    }
   },
   "error": null,
-  "tips": 17584,
+  "tips": 17606,
   "snapshots": 376,
-  "unmapped_markets": 27012,
-  "quote_matches": 117
+  "unmapped_markets": 27046,
+  "quote_matches": 118
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-26T04:56:18.559834+03:00",
+  "last_poll": "2026-11-26T04:58:18.338915+03:00",
   "cursor": "435",
   "posts": [
    {
@@ -3723,7 +3723,7 @@
    "401915373": "post",
    "401841319": "post",
    "401934687": "post",
-   "401933757": "in",
+   "401933757": "post",
    "401921355": "in",
    "401931986": "in",
    "401934705": "in",
@@ -6363,6 +6363,51 @@
    "probability": 0.6395,
    "odds": 1.45,
    "edge": -0.07273,
+   "estimated": true
+  },
+  "hockey|NHL|401892793": {
+   "reason": "no_qualified_real_market",
+   "checked_at": "2026-11-26T01:58:46.696611+00:00",
+   "kickoff": "2026-11-26T06:00:00+03:00",
+   "sport": "hockey",
+   "id": "401892793",
+   "home": "Анахайм",
+   "away": "Сан-Хосе",
+   "priced_markets": 4,
+   "market": "ТМ 7.5",
+   "probability": 0.623,
+   "odds": 1.49,
+   "edge": -0.07173,
+   "estimated": true
+  },
+  "basketball|NBA|401909324": {
+   "reason": "no_qualified_real_market",
+   "checked_at": "2026-11-26T01:58:47.277260+00:00",
+   "kickoff": "2026-11-26T06:00:00+03:00",
+   "sport": "basketball",
+   "id": "401909324",
+   "home": "Голден Стэйт",
+   "away": "Сакраменто Кингз",
+   "priced_markets": 6,
+   "market": "ТБ 209.5",
+   "probability": 0.6597,
+   "odds": 1.41,
+   "edge": -0.06982,
+   "estimated": true
+  },
+  "basketball|NBA|401909325": {
+   "reason": "no_qualified_real_market",
+   "checked_at": "2026-11-26T01:58:47.866946+00:00",
+   "kickoff": "2026-11-26T06:00:00+03:00",
+   "sport": "basketball",
+   "id": "401909325",
+   "home": "Портленд",
+   "away": "Сан-Антонио Сперс",
+   "priced_markets": 6,
+   "market": "ТБ 220.5",
+   "probability": 0.6597,
+   "odds": 1.41,
+   "edge": -0.06982,
    "estimated": true
   }
  },
