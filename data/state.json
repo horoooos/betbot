@@ -2063,8 +2063,8 @@
  "vk_photos": [],
  "vk_photo_until": 1794644243.1147308,
  "vk_photo_cursor": {},
- "vk_story_last": 9630,
- "vk_story_err": null,
+ "vk_story_last": 9633,
+ "vk_story_err": "VK stories: сервер не вернул upload_result",
  "push_weekly": "2026-47",
  "vk_story_at": 1795699807.0036054,
  "vk_story_url": "https://vk.com/story-228963529_456239170",
@@ -3065,7 +3065,7 @@
   "quote_matches": 131
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-26T16:43:30.751586+03:00",
+  "last_poll": "2026-11-26T16:45:30.632861+03:00",
   "cursor": "445",
   "posts": [
    {
@@ -3862,7 +3862,10 @@
    "401875536": "pre",
    "401921332": "pre",
    "401883102": "pre",
-   "401884720": "pre"
+   "401884720": "pre",
+   "401875004": "pre",
+   "401876392": "pre",
+   "401878930": "pre"
   },
   "daily": {
    "day": "2026-11-26"
@@ -14915,5 +14918,6 @@
   "home": "Донкастер",
   "away": "Хаддерсфилд Таун",
   "kickoff": "2026-11-26T23:00:00+03:00"
- }
+ },
+ "vk_story_retry_at": 1795704358.2830102
 }
