@@ -7,9 +7,6 @@
  "schedule_day": "2026-11-26",
  "content_slot": "2026-11-26-23",
  "news_seen": [
-  "https://www.sport-express.ru/hockey/vhl/news/napadayuschiy-norilska-mihail-shalagin-ustanovil-rekord-vhl-i-nabiral-ochki-v-18-matchah-podryad-23-noyabrya-2026-2478153/",
-  "https://www.sport-express.ru/football/transfers/news/bavariya-rassmatrivaet-vozmozhnost-vozvrascheniya-shupo-motinga-na-zamenu-keynu-2478159/",
-  "https://www.sport-express.ru/football/africa-cup/news/marca-cas-priznaet-marokko-pobeditelem-kubka-afriki-2025-2478163/",
   "https://www.sport-express.ru/football/rfpl/news/cska-obratilsya-v-esk-po-penalti-v-matche-s-ahmatom-2478141/",
   "https://www.sport-express.ru/basketball/world/muzhchiny/news/centrovoy-zhalgirisa-yonas-valanchyunas-propustit-match-sbornoy-litvy-s-serbiey-v-otbore-chm-2027-2478139/",
   "team-liquid-proshla-v-setku-poslednego-shansa-na-blast-slam-ix-odolev-do-konca",
@@ -506,9 +503,12 @@
   "https://www.sport-express.ru/tennis/wta/news/mirra-andreeva-vyigrala-bolshe-vseh-setov-so-schetom-6-0-v-sezone-2026-goda-itogovaya-statistika-wta-2479460/",
   "https://www.sport-express.ru/tennis/davis-cup/news/karlos-alkaras-zayavlen-tolko-na-parnyy-match-ispanii-s-avstriey-v-kubke-devisa-26-noyabrya-2026-2479458/",
   "team-yandex-pobedila-gamerlegion-i-vyshla-v-final-verkhnei-setki-plei-off-blast",
-  "thorin-posle-vyleta-faze-iz-meidzhora-etot-sostav-ne-imel-prava-predstavlyat"
+  "thorin-posle-vyleta-faze-iz-meidzhora-etot-sostav-ne-imel-prava-predstavlyat",
+  "https://www.sport-express.ru/football/europa-league/news/ozil-osudil-deystviya-policii-v-gruzii-posle-konfrontacii-s-bolelschikami-beshiktasha-2479479/",
+  "https://www.sport-express.ru/football/europa-league/news/beshiktash-hapoel-beer-sheva-schet-i-rezultat-matcha-5-tura-obschego-etapa-ligi-evropy-26-noyabrya-2026-2479474/",
+  "https://www.sport-express.ru/football/rfpl/news/tyukavin-ob-udalenii-osipenko-v-matche-s-krasnodarom-budem-verit-chto-krasnuyu-otmenyat-no-hot-raz-takoe-bylo-2479472/"
  ],
- "news_i": 0,
+ "news_i": 1,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1695,7 +1695,7 @@
  "streak_day": {
   "2026-11-22": 2
  },
- "news_next": "2026-11-26T23:52:19.866194+03:00",
+ "news_next": "2026-11-27T00:23:40.997021+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1728,7 +1728,6 @@
  "vk_mode": "photo",
  "dz_err": null,
  "img_used": [
-  "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a3/EC_Stadium.jpg/1280px-EC_Stadium.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
   "https://upload.wikimedia.org/wikipedia/commons/2/2b/FC_Dynamo_Kyiv_2011.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
   "https://upload.wikimedia.org/wikipedia/commons/6/6b/Igor_Leshchuk_2017.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
   "https://images.cybersport.ru/images/as-is/plain/52/5278fad2-db8c-4aaf-aab7-399c2bb5307b.jpg",
@@ -2027,7 +2026,8 @@
   "https://ss.sport-express.ru/userfiles/materials/224/2247327/1180x665.jpg",
   "https://images.cybersport.ru/images/as-is/plain/54/5419fbda-f4f4-4dc3-aea3-b20b33c9f96e.jpg",
   "https://upload.wikimedia.org/wikipedia/commons/b/bb/Anzor_Kavazashvili.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-  "https://images.cybersport.ru/images/as-is/plain/ba/ba9ada07-fb3d-4032-afa0-02d2be82364d.jpg"
+  "https://images.cybersport.ru/images/as-is/plain/ba/ba9ada07-fb3d-4032-afa0-02d2be82364d.jpg",
+  "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/66/Football_Stadium_in_Galich.jpg/1280px-Football_Stadium_in_Galich.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
  ],
  "indexnow_day": "2026-11-26",
  "vk_wall_err": null,
@@ -2491,7 +2491,8 @@
   "9683",
   "9692",
   "9712",
-  "9720"
+  "9720",
+  "9729"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -2887,11 +2888,12 @@
   "2026-11-26:новость:db86e95135e534b7b01f2b44",
   "2026-11-26:новость:fca1910d69fb7f66a13639be",
   "2026-11-26:новость:13c0f3d467bcbdba1cc4ddf1",
-  "2026-11-26:новость:bfbd5f5d841383b0d59f7e07"
+  "2026-11-26:новость:bfbd5f5d841383b0d59f7e07",
+  "2026-11-26:новость:7f1c5879a7e7a3334e888ad1"
  ],
  "dz_last_delivery": {
-  "source_id": 9720,
-  "message_id": 943,
+  "source_id": 9729,
+  "message_id": 944,
   "kind": "новость"
  },
  "learn_attempt_day": "2026-11-26",
@@ -3094,7 +3096,7 @@
   "quote_matches": 136
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-26T23:50:41.587100+03:00",
+  "last_poll": "2026-11-26T23:52:40.997021+03:00",
   "cursor": "459",
   "posts": [
    {
