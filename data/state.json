@@ -7,9 +7,6 @@
  "schedule_day": "2026-11-26",
  "content_slot": "2026-11-26-19",
  "news_seen": [
-  "https://www.sport-express.ru/football/women/news/fifa-oficialno-utverdila-hozyaek-zhenskih-chempionatov-mira-2031-i-2035-godov-2478059/",
-  "https://www.sport-express.ru/football/world/news/glava-fifa-infantino-chempionat-mira-sredi-devushek-do-15-let-budet-otkryt-absolyutno-dlya-vseh-2478049/",
-  "https://www.sport-express.ru/football/rfpl/news/rfs-razrabotal-rekomendacii-po-stroitelstvu-stadionov-vmestimostyu-do-10-tysyach-zriteley-2478046/",
   "nazvany-komandy-kotorykh-chashche-vsego-vybirali-v-pick-em-na-prokhod-vo-vtoruyu",
   "heroic-mogla-raskryt-kak-budet-vyglyadet-kubok-pgl-major-singapore-2026",
   "navi-poluchit-pochti-467-tys-ot-esl-po-itogam-partnerskoi-programmy-za-2026-god",
@@ -506,9 +503,12 @@
   "https://www.sport-express.ru/basketball/vtb-league/news/sportivnyy-direktor-uniksa-bogdan-bogachev-pereizbran-prezidentom-federacii-basketbola-tatarstana-noyabr-2026-goda-2479294/",
   "https://www.sport-express.ru/basketball/euroleague/news/hapoel-vernet-trenirovochnuyu-bazu-v-izrail-i-prodolzhit-igrat-v-evrolige-v-sofii-noyabr-2026-goda-2479293/",
   "https://www.sport-express.ru/tennis/atp/news/genri-patten-obyasnil-reshenie-prekratit-sotrudnichestvo-s-arri-heliovaaroy-parnyy-razryad-v-atp-ture-2479296/",
-  "betboom-team-predstavila-dzhersi-komandy-na-pgl-major-singapore-2026"
+  "betboom-team-predstavila-dzhersi-komandy-na-pgl-major-singapore-2026",
+  "https://www.sport-express.ru/football/spain/news/zaschitnik-barselony-alehandro-balde-poluchil-travmu-golenostopa-2479389/",
+  "https://www.sport-express.ru/football/france/news/sarkisyan-o-safonove-on-vyigral-konkurenciyu-ne-tolko-u-shevale-no-i-u-nekogo-zaschitnika-2479382/",
+  "https://www.sport-express.ru/football/rfpl/news/logashov-schitaet-chto-rostov-mozhet-zakonchit-chempionat-v-troyke-liderov-rpl-2479381/"
  ],
- "news_i": 0,
+ "news_i": 1,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1695,7 +1695,7 @@
  "streak_day": {
   "2026-11-22": 2
  },
- "news_next": "2026-11-26T19:44:01.772924+03:00",
+ "news_next": "2026-11-26T20:13:08.250000+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1728,7 +1728,6 @@
  "vk_mode": "photo",
  "dz_err": null,
  "img_used": [
-  "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a8/Trailblazer_Stadium%2C_Lakewood%2C_CO%2C_CCU_Soccer_banner_2023-05-07.jpg/1280px-Trailblazer_Stadium%2C_Lakewood%2C_CO%2C_CCU_Soccer_banner_2023-05-07.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
   "https://images.cybersport.ru/images/as-is/plain/25/2550dc2c-0cc2-478c-9c7b-61d84688ebaf.jpg",
   "https://images.cybersport.ru/images/as-is/plain/0f/0fd1483b-6ab7-48f4-9352-58e5ff825449.jpg",
   "https://ss.sport-express.ru/userfiles/materials/224/2243686/1180x665.jpg",
@@ -2027,7 +2026,8 @@
   "https://images.cybersport.ru/images/as-is/plain/70/706c86b2-ff34-427f-8acd-368b81f333a5.jpg",
   "https://ss.sport-express.ru/userfiles/materials/224/2247266/1180x665.jpg",
   "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/29/FC_Dynamo_Kyiv_vs_FC_Arsenal_Kyiv_10-03-2019_%282%29.jpg/1280px-FC_Dynamo_Kyiv_vs_FC_Arsenal_Kyiv_10-03-2019_%282%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-  "https://images.cybersport.ru/images/as-is/plain/a5/a5f2c2a9-ec99-49f8-8dfe-09d5076ae153.jpg"
+  "https://images.cybersport.ru/images/as-is/plain/a5/a5f2c2a9-ec99-49f8-8dfe-09d5076ae153.jpg",
+  "https://upload.wikimedia.org/wikipedia/commons/b/b8/Arseniy_Logashov_2011.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
  ],
  "indexnow_day": "2026-11-26",
  "vk_wall_err": null,
@@ -2482,7 +2482,8 @@
   "9647",
   "9648",
   "9651",
-  "9655"
+  "9655",
+  "9662"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -2869,11 +2870,12 @@
   "2026-11-26:новость:b1b9f48157f714eb1d4dbf2b",
   "2026-11-26:новость:d4f274e798ca7f98f870d224",
   "2026-11-26:новость:cbe71018841c90dd3824fe4c",
-  "2026-11-26:новость:7566506482305b1ff2b0883e"
+  "2026-11-26:новость:7566506482305b1ff2b0883e",
+  "2026-11-26:новость:941e317bed59c289b0f2916e"
  ],
  "dz_last_delivery": {
-  "source_id": 9655,
-  "message_id": 934,
+  "source_id": 9662,
+  "message_id": 935,
   "kind": "новость"
  },
  "learn_attempt_day": "2026-11-26",
@@ -2899,7 +2901,7 @@
   "external_sources": {
    "providers": {
     "legalbet": {
-     "at": "2026-11-26T16:15:02.088745+00:00",
+     "at": "2026-11-26T16:45:08.250000+00:00",
      "status": "ok",
      "discovered": 0,
      "pages": 0,
@@ -2910,29 +2912,29 @@
      "contexts": 0
     },
     "livesport": {
-     "at": "2026-11-26T16:15:02.088745+00:00",
+     "at": "2026-11-26T16:45:08.250000+00:00",
      "status": "ok",
      "discovered": 22,
      "pages": 6,
      "opinions": 2,
      "mapped": 1,
-     "articles_available": 43,
-     "next_offset": 15,
+     "articles_available": 42,
+     "next_offset": 21,
      "contexts": 6
     },
     "metaratings": {
-     "at": "2026-11-26T16:15:02.088745+00:00",
+     "at": "2026-11-26T16:45:08.250000+00:00",
      "status": "ok",
      "discovered": 12,
      "pages": 6,
      "opinions": 24,
-     "mapped": 4,
+     "mapped": 7,
      "articles_available": 39,
-     "next_offset": 12,
+     "next_offset": 6,
      "contexts": 6
     },
     "rb": {
-     "at": "2026-11-26T16:15:02.088745+00:00",
+     "at": "2026-11-26T16:45:08.250000+00:00",
      "status": "ok",
      "discovered": 0,
      "pages": 0,
@@ -2943,7 +2945,7 @@
      "contexts": 0
     },
     "vseprosport": {
-     "at": "2026-11-26T16:15:02.088745+00:00",
+     "at": "2026-11-26T16:45:08.250000+00:00",
      "status": "ok",
      "discovered": 5,
      "pages": 5,
@@ -3070,12 +3072,12 @@
   },
   "error": null,
   "tips": 18329,
-  "snapshots": 388,
+  "snapshots": 395,
   "unmapped_markets": 27875,
   "quote_matches": 134
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-26T19:43:01.843176+03:00",
+  "last_poll": "2026-11-26T19:45:08.250000+03:00",
   "cursor": "450",
   "posts": [
    {
