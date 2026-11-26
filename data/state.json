@@ -2877,7 +2877,7 @@
   "external_sources": {
    "providers": {
     "legalbet": {
-     "at": "2026-11-26T10:01:26.760318+00:00",
+     "at": "2026-11-26T10:31:30.511426+00:00",
      "status": "ok",
      "discovered": 0,
      "pages": 0,
@@ -2888,48 +2888,46 @@
      "contexts": 0
     },
     "livesport": {
-     "at": "2026-11-26T10:01:26.760318+00:00",
+     "at": "2026-11-26T10:31:30.511426+00:00",
      "status": "ok",
      "discovered": 26,
      "pages": 6,
-     "opinions": 2,
-     "mapped": 1,
-     "articles_available": 43,
-     "next_offset": 20,
-     "contexts": 6
-    },
-    "metaratings": {
-     "at": "2026-11-26T10:01:26.760318+00:00",
-     "status": "ok",
-     "discovered": 7,
-     "pages": 6,
-     "opinions": 24,
-     "mapped": 4,
-     "articles_available": 36,
-     "next_offset": 12,
-     "contexts": 6
-    },
-    "rb": {
-     "at": "2026-11-26T10:01:26.760318+00:00",
-     "status": "ok",
-     "discovered": 2,
-     "pages": 2,
      "opinions": 0,
      "mapped": 0,
-     "articles_available": 2,
-     "next_offset": 3,
-     "contexts": 1
+     "articles_available": 43,
+     "next_offset": 26,
+     "contexts": 2
+    },
+    "metaratings": {
+     "at": "2026-11-26T10:31:30.511426+00:00",
+     "status": "unavailable",
+     "discovered": 0,
+     "pages": 0,
+     "opinions": 0,
+     "mapped": 0,
+     "error": "ConnectionError"
+    },
+    "rb": {
+     "at": "2026-11-26T10:31:30.511426+00:00",
+     "status": "ok",
+     "discovered": 1,
+     "pages": 1,
+     "opinions": 0,
+     "mapped": 0,
+     "articles_available": 1,
+     "next_offset": 1,
+     "contexts": 0
     },
     "vseprosport": {
-     "at": "2026-11-26T10:01:26.760318+00:00",
+     "at": "2026-11-26T10:31:30.511426+00:00",
      "status": "ok",
      "discovered": 7,
      "pages": 6,
      "opinions": 0,
      "mapped": 0,
      "articles_available": 10,
-     "next_offset": 7,
-     "contexts": 2
+     "next_offset": 6,
+     "contexts": 3
     }
    },
    "opinions": 51,
@@ -3053,7 +3051,7 @@
   "quote_matches": 129
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-26T13:29:30.825913+03:00",
+  "last_poll": "2026-11-26T13:31:30.511426+03:00",
   "cursor": "440",
   "posts": [
    {
