@@ -5,7 +5,7 @@
  },
  "learned": "2026-11-26",
  "schedule_day": "2026-11-26",
- "content_slot": "2026-11-26-10",
+ "content_slot": "2026-11-26-13",
  "news_seen": [
   "https://www.sport-express.ru/basketball/nba/news/zaschitnik-dzhosh-giddi-pervym-za-60-let-v-chikago-nabral-20-ochkov-s-20-peredachami-i-10-podborami-22-noyabrya-2026-2477958/",
   "https://www.sport-express.ru/tennis/wta/news/tarpischev-andreeva-tochno-zasluzhila-byt-priznannoy-luchshey-tennisistkoy-goda-2477930/",
@@ -1563,7 +1563,7 @@
  "value_day": "2026-11-26",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-26",
- "site_stamp": "1566|9631|2026-11-26 12|6|17b6ae1cd7ad4197",
+ "site_stamp": "1566|9633|2026-11-26 13|6|17b6ae1cd7ad4197",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1713,7 +1713,8 @@
   "Турниры Большого шлема",
   "Мейджоры в CS2",
   "Банкролл-менеджмент",
-  "Почему фаворит не всегда выигрывает"
+  "Почему фаворит не всегда выигрывает",
+  "Самый популярный вид спорта"
  ],
  "poster_day": "2026-11-20",
  "bot_setup": 3,
@@ -1721,7 +1722,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 9631,
+ "dz_last": 9633,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2874,7 +2875,7 @@
   "external_sources": {
    "providers": {
     "legalbet": {
-     "at": "2026-11-26T09:31:25.508394+00:00",
+     "at": "2026-11-26T10:01:26.760318+00:00",
      "status": "ok",
      "discovered": 0,
      "pages": 0,
@@ -2885,29 +2886,29 @@
      "contexts": 0
     },
     "livesport": {
-     "at": "2026-11-26T09:31:25.508394+00:00",
+     "at": "2026-11-26T10:01:26.760318+00:00",
      "status": "ok",
-     "discovered": 20,
+     "discovered": 26,
      "pages": 6,
-     "opinions": 4,
-     "mapped": 2,
+     "opinions": 2,
+     "mapped": 1,
      "articles_available": 43,
-     "next_offset": 14,
+     "next_offset": 20,
      "contexts": 6
     },
     "metaratings": {
-     "at": "2026-11-26T09:31:25.508394+00:00",
+     "at": "2026-11-26T10:01:26.760318+00:00",
      "status": "ok",
-     "discovered": 9,
+     "discovered": 7,
      "pages": 6,
-     "opinions": 12,
+     "opinions": 24,
      "mapped": 4,
      "articles_available": 36,
-     "next_offset": 13,
-     "contexts": 3
+     "next_offset": 12,
+     "contexts": 6
     },
     "rb": {
-     "at": "2026-11-26T09:31:25.508394+00:00",
+     "at": "2026-11-26T10:01:26.760318+00:00",
      "status": "ok",
      "discovered": 2,
      "pages": 2,
@@ -2918,14 +2919,14 @@
      "contexts": 1
     },
     "vseprosport": {
-     "at": "2026-11-26T09:31:25.508394+00:00",
+     "at": "2026-11-26T10:01:26.760318+00:00",
      "status": "ok",
      "discovered": 7,
      "pages": 6,
      "opinions": 0,
      "mapped": 0,
      "articles_available": 10,
-     "next_offset": 8,
+     "next_offset": 7,
      "contexts": 2
     }
    },
@@ -3045,12 +3046,12 @@
   },
   "error": null,
   "tips": 18021,
-  "snapshots": 384,
+  "snapshots": 386,
   "unmapped_markets": 27557,
   "quote_matches": 129
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-26T12:59:26.796873+03:00",
+  "last_poll": "2026-11-26T13:01:26.760318+03:00",
   "cursor": "439",
   "posts": [
    {
