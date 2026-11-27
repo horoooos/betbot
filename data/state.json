@@ -2952,7 +2952,7 @@
   "external_sources": {
    "providers": {
     "legalbet": {
-     "at": "2026-11-27T11:42:14.786165+00:00",
+     "at": "2026-11-27T12:12:14.810374+00:00",
      "status": "ok",
      "discovered": 2,
      "pages": 2,
@@ -2963,29 +2963,29 @@
      "contexts": 2
     },
     "livesport": {
-     "at": "2026-11-27T11:42:14.786165+00:00",
+     "at": "2026-11-27T12:12:14.810374+00:00",
      "status": "ok",
-     "discovered": 12,
+     "discovered": 13,
      "pages": 6,
-     "opinions": 4,
-     "mapped": 3,
-     "articles_available": 22,
-     "next_offset": 12,
+     "opinions": 10,
+     "mapped": 5,
+     "articles_available": 23,
+     "next_offset": 18,
      "contexts": 6
     },
     "metaratings": {
-     "at": "2026-11-27T11:42:14.786165+00:00",
+     "at": "2026-11-27T12:12:14.810374+00:00",
      "status": "ok",
      "discovered": 10,
      "pages": 6,
      "opinions": 24,
-     "mapped": 2,
+     "mapped": 0,
      "articles_available": 33,
-     "next_offset": 8,
+     "next_offset": 14,
      "contexts": 6
     },
     "rb": {
-     "at": "2026-11-27T11:42:14.786165+00:00",
+     "at": "2026-11-27T12:12:14.810374+00:00",
      "status": "ok",
      "discovered": 1,
      "pages": 1,
@@ -2996,7 +2996,7 @@
      "contexts": 1
     },
     "vseprosport": {
-     "at": "2026-11-27T11:42:14.786165+00:00",
+     "at": "2026-11-27T12:12:14.810374+00:00",
      "status": "ok",
      "discovered": 4,
      "pages": 3,
@@ -3008,9 +3008,9 @@
      "contexts": 3
     }
    },
-   "opinions": 63,
+   "opinions": 64,
    "snapshots": 0,
-   "contexts": 180,
+   "contexts": 182,
    "model": {
     "weight": 0.0,
     "status": "collecting",
@@ -3129,7 +3129,7 @@
   "quote_matches": 157
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-27T15:10:14.183159+03:00",
+  "last_poll": "2026-11-27T15:12:14.810374+03:00",
   "cursor": "473",
   "posts": [
    {
