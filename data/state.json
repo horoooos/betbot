@@ -2987,7 +2987,7 @@
   "external_sources": {
    "providers": {
     "legalbet": {
-     "at": "2026-11-27T17:24:40.211847+00:00",
+     "at": "2026-11-27T17:54:41.060005+00:00",
      "status": "ok",
      "discovered": 2,
      "pages": 2,
@@ -2998,45 +2998,47 @@
      "contexts": 2
     },
     "livesport": {
-     "at": "2026-11-27T17:24:40.211847+00:00",
+     "at": "2026-11-27T17:54:41.060005+00:00",
      "status": "ok",
      "discovered": 23,
      "pages": 6,
-     "opinions": 10,
-     "mapped": 5,
-     "articles_available": 37,
-     "next_offset": 6,
+     "opinions": 2,
+     "mapped": 2,
+     "articles_available": 35,
+     "next_offset": 12,
      "contexts": 6
     },
     "metaratings": {
-     "at": "2026-11-27T17:24:40.211847+00:00",
+     "at": "2026-11-27T17:54:41.060005+00:00",
      "status": "ok",
      "discovered": 10,
      "pages": 6,
      "opinions": 24,
-     "mapped": 2,
+     "mapped": 0,
      "articles_available": 33,
-     "next_offset": 14,
+     "next_offset": 10,
      "contexts": 6
     },
     "rb": {
-     "at": "2026-11-27T17:24:40.211847+00:00",
-     "status": "markup_changed",
+     "at": "2026-11-27T17:54:41.060005+00:00",
+     "status": "ok",
      "discovered": 0,
      "pages": 0,
      "opinions": 0,
      "mapped": 0,
-     "articles_available": 0
+     "articles_available": 1,
+     "next_offset": 0,
+     "contexts": 0
     },
     "vseprosport": {
-     "at": "2026-11-27T17:24:40.211847+00:00",
+     "at": "2026-11-27T17:54:41.060005+00:00",
      "status": "ok",
      "discovered": 7,
      "pages": 1,
      "opinions": 0,
      "mapped": 0,
      "articles_available": 10,
-     "next_offset": 8,
+     "next_offset": 7,
      "page_errors": 5,
      "contexts": 1
     }
@@ -3162,7 +3164,7 @@
   "quote_matches": 164
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-27T20:52:41.630916+03:00",
+  "last_poll": "2026-11-27T20:54:41.060005+03:00",
   "cursor": "486",
   "posts": [
    {
@@ -7849,7 +7851,7 @@
   },
   "football|DNK|401874563": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-27T17:43:00.880048+00:00",
+   "checked_at": "2026-11-27T17:55:21.047622+00:00",
    "kickoff": "2026-11-27T21:00:00+03:00",
    "sport": "football",
    "id": "401874563",
@@ -7880,7 +7882,7 @@
   },
   "hockey|NHL|401892796": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-27T17:43:01.654976+00:00",
+   "checked_at": "2026-11-27T17:55:21.435616+00:00",
    "kickoff": "2026-11-27T21:00:00+03:00",
    "sport": "hockey",
    "id": "401892796",
@@ -7888,14 +7890,14 @@
    "away": "Калгари",
    "priced_markets": 4,
    "market": "ТБ 5.5",
-   "probability": 0.6317,
-   "odds": 1.47,
-   "edge": -0.0714,
+   "probability": 0.6396,
+   "odds": 1.45,
+   "edge": -0.07258,
    "estimated": true
   },
   "hockey|NHL|401892797": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-27T17:43:02.405479+00:00",
+   "checked_at": "2026-11-27T17:55:21.805778+00:00",
    "kickoff": "2026-11-27T21:00:00+03:00",
    "sport": "hockey",
    "id": "401892797",
@@ -7903,39 +7905,39 @@
    "away": "Юта",
    "priced_markets": 4,
    "market": "ТМ 7.5",
-   "probability": 0.6271,
-   "odds": 1.48,
-   "edge": -0.07189,
+   "probability": 0.6378,
+   "odds": 1.46,
+   "edge": -0.06881,
    "estimated": true
   },
   "tennis|WTA|186832": {
-   "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-27T17:43:03.419706+00:00",
+   "reason": "no_real_odds",
+   "checked_at": "2026-11-27T17:55:22.481948+00:00",
    "kickoff": "2026-11-27T21:00:00+03:00",
    "sport": "tennis",
    "id": "186832",
    "home": "Кароль Монне",
    "away": "Вероника Эрьявец",
-   "priced_markets": 2,
+   "priced_markets": 0,
    "market": "Будет 2 сета",
-   "probability": 0.5003,
-   "odds": 1.86,
-   "edge": -0.06944,
+   "probability": 0.5089,
+   "odds": 1.83,
+   "edge": -0.06871,
    "estimated": true
   },
   "tennis|WTA|186829": {
-   "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-27T17:43:04.168854+00:00",
+   "reason": "no_real_odds",
+   "checked_at": "2026-11-27T17:55:22.839635+00:00",
    "kickoff": "2026-11-27T21:00:00+03:00",
    "sport": "tennis",
    "id": "186829",
    "home": "Варвара Лепченко",
    "away": "Лаура Самсон",
-   "priced_markets": 2,
+   "priced_markets": 0,
    "market": "Будет 2 сета",
-   "probability": 0.5686,
-   "odds": 1.64,
-   "edge": -0.0675,
+   "probability": 0.6011,
+   "odds": 1.55,
+   "edge": -0.06829,
    "estimated": true
   },
   "football|AUT|401881739": {

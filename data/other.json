@@ -5036,7 +5036,7 @@
   "sport": "hockey",
   "div": "NHL",
   "reason": "no_qualified_real_market",
-  "retry_at": 1795801961.923936
+  "retry_at": 1795802681.060005
  },
  "NHL|401892797": {
   "status": "waiting_data",
@@ -5044,22 +5044,22 @@
   "sport": "hockey",
   "div": "NHL",
   "reason": "no_qualified_real_market",
-  "retry_at": 1795801961.923936
+  "retry_at": 1795802681.060005
  },
  "WTA|186832": {
   "status": "waiting_data",
   "kickoff": "2026-11-27T21:00:00+03:00",
   "sport": "tennis",
   "div": "WTA",
-  "reason": "no_qualified_real_market",
-  "retry_at": 1795801961.923936
+  "reason": "no_real_odds",
+  "retry_at": 1795802681.060005
  },
  "WTA|186829": {
   "status": "waiting_data",
   "kickoff": "2026-11-27T21:00:00+03:00",
   "sport": "tennis",
   "div": "WTA",
-  "reason": "no_qualified_real_market",
-  "retry_at": 1795801961.923936
+  "reason": "no_real_odds",
+  "retry_at": 1795802681.060005
  }
 }
