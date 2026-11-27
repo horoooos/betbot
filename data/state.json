@@ -3164,7 +3164,7 @@
   "quote_matches": 164
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-27T20:56:41.517581+03:00",
+  "last_poll": "2026-11-27T20:58:41.267075+03:00",
   "cursor": "486",
   "posts": [
    {
@@ -7954,6 +7954,45 @@
    "odds": 1.75,
    "edge": -0.07145,
    "estimated": true
+  },
+  "football|N1|401875536": {
+   "reason": "edge_below_minimum",
+   "checked_at": "2026-11-27T17:59:00.285771+00:00",
+   "kickoff": "2026-11-27T22:00:00+03:00",
+   "sport": "football",
+   "id": "401875536",
+   "home": "Гронинген",
+   "away": "Виллем II",
+   "priced_markets": 5,
+   "market": "ТБ 2.5",
+   "probability": 0.6596,
+   "odds": 1.42,
+   "edge": -0.06337,
+   "estimated": false
+  },
+  "football|ECU|401921332": {
+   "reason": "insufficient_history_or_odds",
+   "checked_at": "2026-11-27T17:59:03.128337+00:00",
+   "kickoff": "2026-11-27T22:00:00+03:00",
+   "sport": "football",
+   "id": "401921332",
+   "home": "Пескара",
+   "away": "Orense"
+  },
+  "hockey|NHL|401892798": {
+   "reason": "edge_below_minimum",
+   "checked_at": "2026-11-27T17:59:03.877888+00:00",
+   "kickoff": "2026-11-27T22:00:00+03:00",
+   "sport": "hockey",
+   "id": "401892798",
+   "home": "Сент-Луис",
+   "away": "Даллас",
+   "priced_markets": 4,
+   "market": "П2 (с ОТ и буллитами)",
+   "probability": 0.5514,
+   "odds": 1.74,
+   "edge": -0.04056,
+   "estimated": false
   }
  },
  "source_trial": {
