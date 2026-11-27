@@ -5579,5 +5579,13 @@
   "div": "WTA",
   "reason": "no_qualified_real_market",
   "retry_at": 1795729839.41762
+ },
+ "CS2|1816927": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-27T09:00:00+03:00",
+  "sport": "esports",
+  "div": "CS2",
+  "reason": "no_real_odds",
+  "retry_at": 1795756099.753742
  }
 }
