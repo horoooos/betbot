@@ -5839,5 +5839,75 @@ null
 "top": false,
 "bot": null,
 "lt": null
+},
+{
+"sport": "football",
+"id": "401875531",
+"league": "Нидерланды · Эредивизи",
+"kickoff": "2026-11-28T20:45:00+03:00",
+"home": "ПСВ",
+"away": "Гоу Эхед Иглз",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/148.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/3706.png",
+"hid": "148",
+"aid": "3706",
+"bb": "https://betboom.ru/search?query=%D0%9F%D0%A1%D0%92&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/ned.1",
+"url": "live.html?s=football&p=soccer%2Fned.1&e=401875531&h=%D0%9F%D0%A1%D0%92&a=%D0%93%D0%BE%D1%83+%D0%AD%D1%85%D0%B5%D0%B4+%D0%98%D0%B3%D0%BB%D0%B7",
+"participants": [
+[
+"ПСВ",
+"PSV Eindhoven"
+],
+[
+"Гоу Эхед Иглз",
+"Go Ahead Eagles"
+]
+],
+"div": "N1",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "football",
+"id": "401878329",
+"league": "Шотландия · Премьершип",
+"kickoff": "2026-11-28T20:45:00+03:00",
+"home": "Мотеруэлл",
+"away": "Хайберниан",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/266.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/258.png",
+"hid": "266",
+"aid": "258",
+"bb": "https://betboom.ru/search?query=%D0%9C%D0%BE%D1%82%D0%B5%D1%80%D1%83%D1%8D%D0%BB%D0%BB&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/sco.1",
+"url": "live.html?s=football&p=soccer%2Fsco.1&e=401878329&h=%D0%9C%D0%BE%D1%82%D0%B5%D1%80%D1%83%D1%8D%D0%BB%D0%BB&a=%D0%A5%D0%B0%D0%B9%D0%B1%D0%B5%D1%80%D0%BD%D0%B8%D0%B0%D0%BD",
+"participants": [
+[
+"Мотеруэлл",
+"Motherwell"
+],
+[
+"Хайберниан",
+"Hibernian"
+]
+],
+"div": "SC0",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
 }
 ]
