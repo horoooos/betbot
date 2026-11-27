@@ -5,7 +5,7 @@
  },
  "learned": "2026-11-27",
  "schedule_day": "2026-11-27",
- "content_slot": "2026-11-27-22",
+ "content_slot": "2026-11-27-23",
  "news_seen": [
   "https://www.sport-express.ru/hockey/nhl/news/leon-drayzaytl-o-vzaimoponimanii-s-konnorom-makdevidom-est-momenty-kogda-nam-dazhe-ne-nuzhno-govorit-2478481/",
   "https://www.sport-express.ru/hockey/nhl/news/legenda-edmontona-yari-kurri-obyasnil-konnor-makdevid-motivirovan-posle-dvuh-proigrannyh-finalov-kubka-stenli-2478480/",
@@ -1572,7 +1572,7 @@
  "value_day": "2026-11-27",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-27",
- "site_stamp": "1580|9834|2026-11-27 22|6|058d74888f72247d",
+ "site_stamp": "1580|9838|2026-11-27 23|6|058d74888f72247d",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1740,7 +1740,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 9834,
+ "dz_last": 9838,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -3167,12 +3167,12 @@
   },
   "error": null,
   "tips": 20228,
-  "snapshots": 429,
+  "snapshots": 432,
   "unmapped_markets": 30470,
   "quote_matches": 164
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-27T22:59:47.905865+03:00",
+  "last_poll": "2026-11-27T23:01:47.529202+03:00",
   "cursor": "490",
   "posts": [
    {
@@ -4061,8 +4061,8 @@
    "401875004": "in",
    "401876392": "in",
    "401878930": "in",
-   "401879225": "pre",
-   "401880129": "pre",
+   "401879225": "in",
+   "401880129": "in",
    "401882791": "pre",
    "401885389": "pre",
    "401888643": "pre",
@@ -8235,7 +8235,7 @@
   },
   "football|P1|401885389": {
    "reason": "edge_below_minimum",
-   "checked_at": "2026-11-27T19:50:11.066782+00:00",
+   "checked_at": "2026-11-27T20:02:18.171755+00:00",
    "kickoff": "2026-11-27T23:15:00+03:00",
    "sport": "football",
    "id": "401885389",
@@ -8250,7 +8250,7 @@
   },
   "football|PAR|401888643": {
    "reason": "edge_below_minimum",
-   "checked_at": "2026-11-27T19:50:11.463602+00:00",
+   "checked_at": "2026-11-27T20:02:18.565118+00:00",
    "kickoff": "2026-11-27T23:30:00+03:00",
    "sport": "football",
    "id": "401888643",
@@ -8258,9 +8258,9 @@
    "away": "Рубио Нью",
    "priced_markets": 7,
    "market": "П1",
-   "probability": 0.6277,
-   "odds": 1.48,
-   "edge": -0.071,
+   "probability": 0.6264,
+   "odds": 1.47,
+   "edge": -0.07919,
    "estimated": false
   },
   "hockey|NHL|401892803": {
