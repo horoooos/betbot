@@ -3130,63 +3130,63 @@
    "hockey": {
     "status": "collecting",
     "weight": 0.0,
-    "settled_matches": 75,
+    "settled_matches": 77,
     "required_matches": 100,
-    "trained_at": "2026-11-27T22:42:35.370640+00:00"
+    "trained_at": "2026-11-27T22:48:35.489897+00:00"
    },
    "basketball": {
     "status": "collecting",
     "weight": 0.0,
     "settled_matches": 76,
     "required_matches": 100,
-    "trained_at": "2026-11-27T22:42:35.370640+00:00"
+    "trained_at": "2026-11-27T22:48:35.489897+00:00"
    },
    "tennis": {
     "status": "collecting",
     "weight": 0.0,
     "settled_matches": 10,
     "required_matches": 100,
-    "trained_at": "2026-11-27T22:42:35.370640+00:00"
+    "trained_at": "2026-11-27T22:48:35.489897+00:00"
    },
    "esports:CS2": {
     "status": "collecting",
     "weight": 0.0,
     "settled_matches": 0,
     "required_matches": 100,
-    "trained_at": "2026-11-27T22:42:35.370640+00:00"
+    "trained_at": "2026-11-27T22:48:35.489897+00:00"
    },
    "esports:DOTA": {
     "status": "collecting",
     "weight": 0.0,
     "settled_matches": 0,
     "required_matches": 100,
-    "trained_at": "2026-11-27T22:42:35.370640+00:00"
+    "trained_at": "2026-11-27T22:48:35.489897+00:00"
    }
   },
   "source": {
-   "last_success": "2026-11-27T22:26:35.892469+00:00",
-   "parsed": 333,
-   "added": 126,
-   "discovered_matches": 66,
+   "last_success": "2026-11-27T22:48:35.489897+00:00",
+   "parsed": 332,
+   "added": 105,
+   "discovered_matches": 71,
    "pages": 17,
    "errors": [],
    "parsed_by_sport": {
     "soccer": 50,
     "ice-hockey": 50,
     "basketball": 50,
-    "tennis": 48,
-    "csgo": 35,
+    "tennis": 49,
+    "csgo": 37,
     "dota2": 50
    }
   },
   "error": null,
-  "tips": 20472,
+  "tips": 20506,
   "snapshots": 433,
-  "unmapped_markets": 30928,
+  "unmapped_markets": 30999,
   "quote_matches": 168
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-28T01:46:35.324945+03:00",
+  "last_poll": "2026-11-28T01:48:35.489897+03:00",
   "cursor": "494",
   "posts": [
    {
@@ -4058,7 +4058,7 @@
    "401892798": "post",
    "401892799": "post",
    "401892800": "post",
-   "401892801": "in",
+   "401892801": "post",
    "401892802": "post",
    "401892803": "in",
    "401892804": "in",
