@@ -1572,7 +1572,7 @@
  "value_day": "2026-11-27",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-27",
- "site_stamp": "1577|9812|2026-11-27 20|6|2e8d7f04af37a353",
+ "site_stamp": "1577|9813|2026-11-27 20|6|2e8d7f04af37a353",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1740,7 +1740,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 9812,
+ "dz_last": 9813,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -3162,7 +3162,7 @@
   "quote_matches": 163
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-27T20:40:41.671982+03:00",
+  "last_poll": "2026-11-27T20:42:41.923936+03:00",
   "cursor": "486",
   "posts": [
    {
@@ -7849,7 +7849,7 @@
   },
   "football|DNK|401874563": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-27T17:33:08.064571+00:00",
+   "checked_at": "2026-11-27T17:43:00.880048+00:00",
    "kickoff": "2026-11-27T21:00:00+03:00",
    "sport": "football",
    "id": "401874563",
@@ -7880,7 +7880,7 @@
   },
   "hockey|NHL|401892796": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-27T17:33:08.825569+00:00",
+   "checked_at": "2026-11-27T17:43:01.654976+00:00",
    "kickoff": "2026-11-27T21:00:00+03:00",
    "sport": "hockey",
    "id": "401892796",
@@ -7895,22 +7895,22 @@
   },
   "hockey|NHL|401892797": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-27T17:33:09.568858+00:00",
+   "checked_at": "2026-11-27T17:43:02.405479+00:00",
    "kickoff": "2026-11-27T21:00:00+03:00",
    "sport": "hockey",
    "id": "401892797",
    "home": "Нэшвилл",
    "away": "Юта",
    "priced_markets": 4,
-   "market": "ИТ1 больше 2.5",
-   "probability": 0.655,
-   "odds": 1.42,
-   "edge": -0.0699,
+   "market": "ТМ 7.5",
+   "probability": 0.6271,
+   "odds": 1.48,
+   "edge": -0.07189,
    "estimated": true
   },
   "tennis|WTA|186832": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-27T17:33:10.499807+00:00",
+   "checked_at": "2026-11-27T17:43:03.419706+00:00",
    "kickoff": "2026-11-27T21:00:00+03:00",
    "sport": "tennis",
    "id": "186832",
@@ -7925,7 +7925,7 @@
   },
   "tennis|WTA|186829": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-27T17:33:11.222351+00:00",
+   "checked_at": "2026-11-27T17:43:04.168854+00:00",
    "kickoff": "2026-11-27T21:00:00+03:00",
    "sport": "tennis",
    "id": "186829",
