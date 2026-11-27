@@ -3182,7 +3182,7 @@
   "quote_matches": 166
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-28T00:22:35.604178+03:00",
+  "last_poll": "2026-11-28T00:24:35.805989+03:00",
   "cursor": "492",
   "posts": [
    {
@@ -8333,8 +8333,8 @@
   },
   "tennis|WTA|186831": {
    "reason": "no_real_odds",
-   "checked_at": "2026-11-27T21:12:58.098064+00:00",
-   "kickoff": "2026-11-28T00:25:00+03:00",
+   "checked_at": "2026-11-27T21:24:57.088395+00:00",
+   "kickoff": "2026-11-28T00:35:00+03:00",
    "sport": "tennis",
    "id": "186831",
    "home": "Алисиа Херреро Линана",
@@ -8348,7 +8348,7 @@
   },
   "football|ECU|401921361": {
    "reason": "edge_below_minimum",
-   "checked_at": "2026-11-27T21:12:55.935653+00:00",
+   "checked_at": "2026-11-27T21:24:54.884293+00:00",
    "kickoff": "2026-11-28T00:30:00+03:00",
    "sport": "football",
    "id": "401921361",
@@ -8356,9 +8356,9 @@
    "away": "Манта",
    "priced_markets": 6,
    "market": "П1",
-   "probability": 0.5871,
+   "probability": 0.5916,
    "odds": 1.57,
-   "edge": -0.07825,
+   "edge": -0.07119,
    "estimated": false
   }
  },
