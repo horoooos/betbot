@@ -1572,7 +1572,7 @@
  "value_day": "2026-11-27",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-27",
- "site_stamp": "1577|9798|2026-11-27 19|6|6294bc248f996529",
+ "site_stamp": "1577|9802|2026-11-27 19|6|ba31b1b1b309c1ff",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1731,7 +1731,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 9798,
+ "dz_last": 9802,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -3125,29 +3125,29 @@
    }
   },
   "source": {
-   "last_success": "2026-11-27T16:08:40.417199+00:00",
-   "parsed": 336,
-   "added": 91,
-   "discovered_matches": 49,
+   "last_success": "2026-11-27T16:28:40.551943+00:00",
+   "parsed": 331,
+   "added": 70,
+   "discovered_matches": 53,
    "pages": 18,
    "errors": [],
    "parsed_by_sport": {
     "soccer": 50,
     "ice-hockey": 50,
     "basketball": 50,
-    "tennis": 48,
+    "tennis": 46,
     "csgo": 32,
     "dota2": 50
    }
   },
   "error": null,
-  "tips": 19834,
+  "tips": 19873,
   "snapshots": 412,
-  "unmapped_markets": 30005,
+  "unmapped_markets": 30036,
   "quote_matches": 162
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-27T19:26:40.597575+03:00",
+  "last_poll": "2026-11-27T19:28:40.551943+03:00",
   "cursor": "482",
   "posts": [
    {
@@ -7739,6 +7739,68 @@
    "probability": 0.5895,
    "odds": 1.58,
    "edge": -0.06859,
+   "estimated": true
+  },
+  "football|D2|401885047": {
+   "reason": "published",
+   "checked_at": "2026-11-27T16:29:18.358594+00:00",
+   "kickoff": "2026-11-27T20:30:00+03:00",
+   "sport": "football",
+   "id": "401885047",
+   "home": "Хайденхайм",
+   "away": "Нюрнберг",
+   "market": "П1",
+   "strategy": "external_trial",
+   "source_count": 6,
+   "probability": 0.433,
+   "odds": 2.14,
+   "edge": -0.07338,
+   "estimated": false
+  },
+  "football|D2|401885045": {
+   "reason": "published",
+   "checked_at": "2026-11-27T16:29:28.366078+00:00",
+   "kickoff": "2026-11-27T20:30:00+03:00",
+   "sport": "football",
+   "id": "401885045",
+   "home": "Бохум",
+   "away": "Дармштадт",
+   "market": "П1",
+   "strategy": "external_trial",
+   "source_count": 27,
+   "probability": 0.5496,
+   "odds": 1.67,
+   "edge": -0.08217,
+   "estimated": false
+  },
+  "football|KSA|401900873": {
+   "reason": "no_qualified_real_market",
+   "checked_at": "2026-11-27T16:29:28.931125+00:00",
+   "kickoff": "2026-11-27T20:30:00+03:00",
+   "sport": "football",
+   "id": "401900873",
+   "home": "Аль-Иттихад",
+   "away": "Неом",
+   "priced_markets": 6,
+   "market": "Обе забьют — да",
+   "probability": 0.5864,
+   "odds": 1.59,
+   "edge": -0.06762,
+   "estimated": true
+  },
+  "football|RSA|401902007": {
+   "reason": "no_qualified_real_market",
+   "checked_at": "2026-11-27T16:29:29.417064+00:00",
+   "kickoff": "2026-11-27T20:30:00+03:00",
+   "sport": "football",
+   "id": "401902007",
+   "home": "Stellenbosch",
+   "away": "TS Galaxy FC",
+   "priced_markets": 6,
+   "market": "ТМ 2.5",
+   "probability": 0.6495,
+   "odds": 1.43,
+   "edge": -0.07122,
    "estimated": true
   }
  },
@@ -18093,6 +18155,353 @@
        "published_at": "2026-11-26T20:42:00+00:00",
        "observed_at": "2026-11-26T20:48:41.882017+00:00",
        "odds": 1.77,
+       "price_kind": "author_recorded"
+      }
+     ]
+    }
+   },
+   "football|D2|401885047": {
+    "status": "open",
+    "id": "401885047",
+    "sport": "football",
+    "div": "D2",
+    "kickoff": "2026-11-27T20:30:00+03:00",
+    "published_at": "2026-11-27T16:29:14.844825+00:00",
+    "msg_id": 9799,
+    "tip": {
+     "key": "H",
+     "label": "П1",
+     "p": 0.433,
+     "odds": 2.14,
+     "est": false,
+     "stake": 0.5,
+     "strategy": "external_trial",
+     "selection_mode": "external_fallback",
+     "trial_expires_at": null,
+     "probability_origin": "baseline_model",
+     "model_edge": -0.07339,
+     "source_count": 6,
+     "source_refs": [
+      {
+       "author": "/predictors/sasha-k",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-heidenheim-nuremberg",
+       "published_at": "2026-11-26T13:00:00+00:00",
+       "observed_at": "2026-11-26T20:07:42.294598+00:00",
+       "odds": 2.1,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/tutka-tamka",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-heidenheim-nuremberg",
+       "published_at": "2026-11-26T16:42:00+00:00",
+       "observed_at": "2026-11-26T20:07:42.294598+00:00",
+       "odds": 2.1,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/sbn-sunny",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-heidenheim-nuremberg",
+       "published_at": "2026-11-26T20:43:00+00:00",
+       "observed_at": "2026-11-26T20:48:41.882017+00:00",
+       "odds": 2.1,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/-2209",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-heidenheim-nuremberg",
+       "published_at": "2026-11-26T21:40:00+00:00",
+       "observed_at": "2026-11-26T21:50:39.809441+00:00",
+       "odds": 2.1,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/aleksandr-suslebin",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-heidenheim-nuremberg",
+       "published_at": "2026-11-27T04:51:00+00:00",
+       "observed_at": "2026-11-27T04:56:19.582450+00:00",
+       "odds": 2.1,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/sergey-skokshin",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-heidenheim-nuremberg",
+       "published_at": "2026-11-27T11:34:00+00:00",
+       "observed_at": "2026-11-27T11:36:14.852934+00:00",
+       "odds": 2.15,
+       "price_kind": "author_recorded"
+      }
+     ]
+    }
+   },
+   "football|D2|401885045": {
+    "status": "open",
+    "id": "401885045",
+    "sport": "football",
+    "div": "D2",
+    "kickoff": "2026-11-27T20:30:00+03:00",
+    "published_at": "2026-11-27T16:29:24.966349+00:00",
+    "msg_id": 9801,
+    "tip": {
+     "key": "H",
+     "label": "П1",
+     "p": 0.5496,
+     "odds": 1.67,
+     "est": false,
+     "stake": 0.5,
+     "strategy": "external_trial",
+     "selection_mode": "external_fallback",
+     "trial_expires_at": null,
+     "probability_origin": "baseline_model",
+     "model_edge": -0.08225,
+     "source_count": 27,
+     "source_refs": [
+      {
+       "author": "/predictors/koefficient-200",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-bochum-darmstadt",
+       "published_at": "2026-11-26T06:12:00+00:00",
+       "observed_at": "2026-11-27T11:16:14.237281+00:00",
+       "odds": 1.73,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/georgii-domnikov",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-bochum-darmstadt",
+       "published_at": "2026-11-26T10:39:00+00:00",
+       "observed_at": "2026-11-27T11:16:14.237281+00:00",
+       "odds": 1.73,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/masa-masina",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-bochum-darmstadt",
+       "published_at": "2026-11-26T14:45:00+00:00",
+       "observed_at": "2026-11-27T11:16:14.237281+00:00",
+       "odds": 1.73,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/andrei-zv",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-bochum-darmstadt",
+       "published_at": "2026-11-26T15:11:00+00:00",
+       "observed_at": "2026-11-26T15:13:01.940630+00:00",
+       "odds": 1.73,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/tutka-tamka",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-bochum-darmstadt",
+       "published_at": "2026-11-26T16:42:00+00:00",
+       "observed_at": "2026-11-27T11:16:14.237281+00:00",
+       "odds": 1.73,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/artem-lasin",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-bochum-darmstadt",
+       "published_at": "2026-11-26T18:47:00+00:00",
+       "observed_at": "2026-11-27T11:16:14.237281+00:00",
+       "odds": 1.78,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/aslan-kockarov-8",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-bochum-darmstadt",
+       "published_at": "2026-11-26T19:22:00+00:00",
+       "observed_at": "2026-11-26T19:27:10.089363+00:00",
+       "odds": 1.78,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/aleksandr-novikov-2",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-bochum-darmstadt",
+       "published_at": "2026-11-26T20:00:00+00:00",
+       "observed_at": "2026-11-26T20:07:42.294598+00:00",
+       "odds": 1.78,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/sbn-sunny",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-bochum-darmstadt",
+       "published_at": "2026-11-26T20:05:00+00:00",
+       "observed_at": "2026-11-26T20:07:42.294598+00:00",
+       "odds": 1.78,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/oleg-zakharevskiy",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-bochum-darmstadt",
+       "published_at": "2026-11-26T20:34:00+00:00",
+       "observed_at": "2026-11-26T20:48:41.882017+00:00",
+       "odds": 1.78,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/ten-3",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-bochum-darmstadt",
+       "published_at": "2026-11-26T20:49:00+00:00",
+       "observed_at": "2026-11-27T11:16:14.237281+00:00",
+       "odds": 1.78,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/aleksandr-tkacenko-15",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-bochum-darmstadt",
+       "published_at": "2026-11-26T20:56:00+00:00",
+       "observed_at": "2026-11-26T21:10:34.589122+00:00",
+       "odds": 1.78,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/andrei-semenov-17",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-bochum-darmstadt",
+       "published_at": "2026-11-26T22:29:00+00:00",
+       "observed_at": "2026-11-26T22:32:54.641591+00:00",
+       "odds": 1.78,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/andryusa-3",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-bochum-darmstadt",
+       "published_at": "2026-11-27T00:54:00+00:00",
+       "observed_at": "2026-11-27T01:00:56.767660+00:00",
+       "odds": 1.78,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/marina-sol",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-bochum-darmstadt",
+       "published_at": "2026-11-27T02:42:00+00:00",
+       "observed_at": "2026-11-27T02:48:20.068059+00:00",
+       "odds": 1.78,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/aleksandr-aleksandrov-128",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-bochum-darmstadt",
+       "published_at": "2026-11-27T02:58:00+00:00",
+       "observed_at": "2026-11-27T03:10:19.403938+00:00",
+       "odds": 1.78,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/ruslan-ivanov-33",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-bochum-darmstadt",
+       "published_at": "2026-11-27T03:09:00+00:00",
+       "observed_at": "2026-11-27T03:10:19.403938+00:00",
+       "odds": 1.78,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/aleksandr-suslebin",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-bochum-darmstadt",
+       "published_at": "2026-11-27T04:50:00+00:00",
+       "observed_at": "2026-11-27T04:56:19.582450+00:00",
+       "odds": 1.78,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/georgii-romasov",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-bochum-darmstadt",
+       "published_at": "2026-11-27T05:34:00+00:00",
+       "observed_at": "2026-11-27T05:37:39.840873+00:00",
+       "odds": 1.78,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/aleksandr-stenchin",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-bochum-darmstadt",
+       "published_at": "2026-11-27T06:27:00+00:00",
+       "observed_at": "2026-11-27T11:16:14.237281+00:00",
+       "odds": 1.87,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/max-wolman",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-bochum-darmstadt",
+       "published_at": "2026-11-27T06:37:00+00:00",
+       "observed_at": "2026-11-27T06:39:39.476539+00:00",
+       "odds": 1.87,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/aleksandr-saulov",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-bochum-darmstadt",
+       "published_at": "2026-11-27T07:16:00+00:00",
+       "observed_at": "2026-11-27T07:21:39.497116+00:00",
+       "odds": 1.74,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/sasha-k",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-bochum-darmstadt",
+       "published_at": "2026-11-27T07:22:00+00:00",
+       "observed_at": "2026-11-27T11:16:14.237281+00:00",
+       "odds": 1.74,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/giperion",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-bochum-darmstadt",
+       "published_at": "2026-11-27T07:34:00+00:00",
+       "observed_at": "2026-11-27T07:42:13.542946+00:00",
+       "odds": 1.74,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/mikhail-tavleev-1",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-bochum-darmstadt",
+       "published_at": "2026-11-27T08:01:00+00:00",
+       "observed_at": "2026-11-27T08:04:13.289223+00:00",
+       "odds": 1.74,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/alex-bet-9",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-bochum-darmstadt",
+       "published_at": "2026-11-27T14:39:00+00:00",
+       "observed_at": "2026-11-27T14:44:40.416189+00:00",
+       "odds": 1.63,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/aleksandr-maksimov-17",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-bochum-darmstadt",
+       "published_at": "2026-11-27T16:25:00+00:00",
+       "observed_at": "2026-11-27T16:28:40.551943+00:00",
+       "odds": 1.63,
        "price_kind": "author_recorded"
       }
      ]

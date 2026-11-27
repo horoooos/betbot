@@ -30941,5 +30941,1786 @@
   "div": "T1",
   "reason": "no_qualified_real_market",
   "retry_at": 1795797040.2436
+ },
+ "401885047": {
+  "id": "401885047",
+  "div": "D2",
+  "slug": "ger.2",
+  "kickoff": "2026-11-27T20:30:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "detail": "Scheduled",
+  "home": {
+   "id": "6418",
+   "name": "1. FC Heidenheim 1846",
+   "short": "Heidenheim",
+   "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/6418.png",
+   "color": "DA0308",
+   "alt": "003399",
+   "form": "LDLDL",
+   "score": "0",
+   "ru": "Хайденхайм"
+  },
+  "away": {
+   "id": "269",
+   "name": "1. FC Nürnberg",
+   "short": "1. FC Nürnberg",
+   "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/269.png",
+   "color": "9f0000",
+   "alt": "1a1a1a",
+   "form": "LWWLL",
+   "score": "0",
+   "ru": "Нюрнберг"
+  },
+  "odds": {
+   "H": 2.2,
+   "D": 3.8,
+   "A": 2.95,
+   "line": 3.5,
+   "over": 2.1,
+   "under": 1.69,
+   "spread_h": [
+    -0.5,
+    2.05
+   ],
+   "spread_a": [
+    0.5,
+    1.667
+   ]
+  },
+  "venue": "Voith-Arena",
+  "clock": "0'",
+  "goals": [],
+  "open": {
+   "H": 0.4344
+  },
+  "top": false,
+  "lam": [
+   1.8373067115341746,
+   1.5831604567455082
+  ],
+  "probs": {
+   "H": 0.43299543428361953,
+   "D": 0.23911431587910817,
+   "A": 0.3278902498372725,
+   "1X": 0.6721097501627272,
+   "12": 0.7608856841208914,
+   "X2": 0.5670045657163805,
+   "BTTS_Y": 0.6757342908126991,
+   "BTTS_N": 0.32426570918730063,
+   "O15": 0.8630712807566199,
+   "U15": 0.1369287192433797,
+   "O25": 0.6641899582615352,
+   "U25": 0.3358100417384645,
+   "O35": 0.44610934617741527,
+   "U35": 0.5538906538225848,
+   "H_O05": 0.8407536534953284,
+   "H_O15": 0.548169272274999,
+   "A_O05": 0.7946746593765078,
+   "A_O15": 0.46961169933359354,
+   "H-1.5": 0.2388847112268084,
+   "A+1.5": 0.7611152887731916,
+   "A-1.5": 0.16168244975586132,
+   "H+1.5": 0.8383175502441383,
+   "H-2.5": 0.10646096760819493,
+   "A-2.5": 0.063360064493407,
+   "H+2.5": 0.9366399355065927,
+   "A+2.5": 0.8935390323918049,
+   "O45": 0.2596249527593974,
+   "U45": 0.7403750472406027,
+   "H_O25": 0.27938564862190707,
+   "A_O25": 0.21229828718729987,
+   "H&O15": 0.3805291141501861,
+   "A&O15": 0.2837338286681888,
+   "H&BTTS": 0.2679760716009902,
+   "A&BTTS": 0.20894988127346364,
+   "1X&U35": 0.3718481489156709,
+   "X2&U35": 0.3250654954713258,
+   "BTTS&O25": 0.5730172781891499,
+   "HT_H": 0.3426796424533649,
+   "HT_D": 0.3810187190253938,
+   "HT_A": 0.2763016385212411,
+   "HT_O05": 0.7753395198616332,
+   "HT_U05": 0.22466048013836695,
+   "HT_O15": 0.46532122256940744,
+   "HT_U15": 0.5346787774305923
+  },
+  "scores": [
+   [
+    "1:1",
+    0.10271701262354918
+   ],
+   [
+    "2:1",
+    0.08737160031573492
+   ],
+   [
+    "1:2",
+    0.07528588547251493
+   ]
+  ],
+  "main": {
+   "key": "H",
+   "label": "П1",
+   "p": 0.433,
+   "odds": 2.14,
+   "est": false,
+   "stake": 0.5,
+   "strategy": "external_trial",
+   "selection_mode": "external_fallback",
+   "trial_expires_at": null,
+   "probability_origin": "baseline_model",
+   "model_edge": -0.07339,
+   "source_count": 6,
+   "source_refs": [
+    {
+     "author": "/predictors/sasha-k",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-heidenheim-nuremberg",
+     "published_at": "2026-11-26T13:00:00+00:00",
+     "observed_at": "2026-11-26T20:07:42.294598+00:00",
+     "odds": 2.1,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/tutka-tamka",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-heidenheim-nuremberg",
+     "published_at": "2026-11-26T16:42:00+00:00",
+     "observed_at": "2026-11-26T20:07:42.294598+00:00",
+     "odds": 2.1,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/sbn-sunny",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-heidenheim-nuremberg",
+     "published_at": "2026-11-26T20:43:00+00:00",
+     "observed_at": "2026-11-26T20:48:41.882017+00:00",
+     "odds": 2.1,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/-2209",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-heidenheim-nuremberg",
+     "published_at": "2026-11-26T21:40:00+00:00",
+     "observed_at": "2026-11-26T21:50:39.809441+00:00",
+     "odds": 2.1,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/aleksandr-suslebin",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-heidenheim-nuremberg",
+     "published_at": "2026-11-27T04:51:00+00:00",
+     "observed_at": "2026-11-27T04:56:19.582450+00:00",
+     "odds": 2.1,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/sergey-skokshin",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-heidenheim-nuremberg",
+     "published_at": "2026-11-27T11:34:00+00:00",
+     "observed_at": "2026-11-27T11:36:14.852934+00:00",
+     "odds": 2.15,
+     "price_kind": "author_recorded"
+    }
+   ]
+  },
+  "bold": {},
+  "value": null,
+  "odds_src": "среднее по букмекерам",
+  "model_w": 0.0,
+  "learned_n": 1577,
+  "stavka_signal": {
+   "status": "baseline_better",
+   "weight": 0.0,
+   "authors": 8,
+   "votes": {
+    "H": 5.9824456851868675,
+    "D": 1.0,
+    "A": 0.9805150419081964
+   },
+   "source": "https://stavka.tv",
+   "snapshot": "D2|401885047"
+  },
+  "research": {
+   "articles": [
+    {
+     "id": "dca409a1528ccfbbea3144f0",
+     "kind": "context",
+     "provider": "rb",
+     "source": "https://bookmaker-ratings.ru/tips/haydenhaym-nyurnberg-prognoz-i-stavka-gosti-budut-silnee-v-rezultativnom-matche/",
+     "sport": "football",
+     "div": "D2",
+     "event_id": "401885047",
+     "kickoff": "2026-11-27T17:30:00+00:00",
+     "published_at": "2026-11-26T16:33:01+00:00",
+     "observed_at": "2026-11-27T00:23:23.299851+00:00",
+     "tables": []
+    }
+   ],
+   "dossier": {
+    "observed_at": "2026-11-27T16:18:55.782391+00:00",
+    "kickoff": "2026-11-27T17:30:00+00:00",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/ger.2/summary?event=401885047",
+    "status": "available",
+    "facts": {
+     "table": {
+      "129": {
+       "rank": "1",
+       "gp": "12",
+       "w": "11",
+       "d": "1",
+       "l": "0",
+       "gd": "+20",
+       "pts": "34",
+       "of": 18,
+       "raw": {
+        "GP": "12",
+        "L": "0",
+        "GD": "+20",
+        "P": "34",
+        "D": "1",
+        "W": "11",
+        "R": "1",
+        "Total": "11-1-0"
+       },
+       "group": "German 2. Bundesliga Standings"
+      },
+      "269": {
+       "rank": "2",
+       "gp": "12",
+       "w": "7",
+       "d": "3",
+       "l": "2",
+       "gd": "+12",
+       "pts": "24",
+       "of": 18,
+       "raw": {
+        "GP": "12",
+        "L": "2",
+        "GD": "+12",
+        "P": "24",
+        "D": "3",
+        "W": "7",
+        "R": "2",
+        "Total": "7-3-2"
+       },
+       "group": "German 2. Bundesliga Standings"
+      },
+      "10382": {
+       "rank": "3",
+       "gp": "12",
+       "w": "7",
+       "d": "2",
+       "l": "3",
+       "gd": "+12",
+       "pts": "23",
+       "of": 18,
+       "raw": {
+        "GP": "12",
+        "L": "3",
+        "GD": "+12",
+        "P": "23",
+        "D": "2",
+        "W": "7",
+        "R": "3",
+        "Total": "7-2-3"
+       },
+       "group": "German 2. Bundesliga Standings"
+      },
+      "138": {
+       "rank": "4",
+       "gp": "12",
+       "w": "6",
+       "d": "4",
+       "l": "2",
+       "gd": "+13",
+       "pts": "22",
+       "of": 18,
+       "raw": {
+        "GP": "12",
+        "L": "2",
+        "GD": "+13",
+        "P": "22",
+        "D": "4",
+        "W": "6",
+        "R": "4",
+        "Total": "6-4-2"
+       },
+       "group": "German 2. Bundesliga Standings"
+      },
+      "130": {
+       "rank": "5",
+       "gp": "12",
+       "w": "6",
+       "d": "4",
+       "l": "2",
+       "gd": "+3",
+       "pts": "22",
+       "of": 18,
+       "raw": {
+        "GP": "12",
+        "L": "2",
+        "GD": "+3",
+        "P": "22",
+        "D": "4",
+        "W": "6",
+        "R": "5",
+        "Total": "6-4-2"
+       },
+       "group": "German 2. Bundesliga Standings"
+      },
+      "2506": {
+       "rank": "6",
+       "gp": "12",
+       "w": "5",
+       "d": "2",
+       "l": "5",
+       "gd": "+1",
+       "pts": "17",
+       "of": 18,
+       "raw": {
+        "GP": "12",
+        "L": "5",
+        "GD": "+1",
+        "P": "17",
+        "D": "2",
+        "W": "5",
+        "R": "6",
+        "Total": "5-2-5"
+       },
+       "group": "German 2. Bundesliga Standings"
+      },
+      "6418": {
+       "rank": "7",
+       "gp": "12",
+       "w": "4",
+       "d": "4",
+       "l": "4",
+       "gd": "-3",
+       "pts": "16",
+       "of": 18,
+       "raw": {
+        "GP": "12",
+        "L": "4",
+        "GD": "-3",
+        "P": "16",
+        "D": "4",
+        "W": "4",
+        "R": "7",
+        "Total": "4-4-4"
+       },
+       "group": "German 2. Bundesliga Standings"
+      },
+      "270": {
+       "rank": "8",
+       "gp": "12",
+       "w": "3",
+       "d": "6",
+       "l": "3",
+       "gd": "-1",
+       "pts": "15",
+       "of": 18,
+       "raw": {
+        "GP": "12",
+        "L": "3",
+        "GD": "-1",
+        "P": "15",
+        "D": "6",
+        "W": "3",
+        "R": "8",
+        "Total": "3-6-3"
+       },
+       "group": "German 2. Bundesliga Standings"
+      },
+      "2428": {
+       "rank": "9",
+       "gp": "12",
+       "w": "4",
+       "d": "3",
+       "l": "5",
+       "gd": "-5",
+       "pts": "15",
+       "of": 18,
+       "raw": {
+        "GP": "12",
+        "L": "5",
+        "GD": "-5",
+        "P": "15",
+        "D": "3",
+        "W": "4",
+        "R": "9",
+        "Total": "4-3-5"
+       },
+       "group": "German 2. Bundesliga Standings"
+      },
+      "3067": {
+       "rank": "10",
+       "gp": "12",
+       "w": "4",
+       "d": "2",
+       "l": "6",
+       "gd": "-1",
+       "pts": "14",
+       "of": 18,
+       "raw": {
+        "GP": "12",
+        "L": "6",
+        "GD": "-1",
+        "P": "14",
+        "D": "2",
+        "W": "4",
+        "R": "10",
+        "Total": "4-2-6"
+       },
+       "group": "German 2. Bundesliga Standings"
+      },
+      "121": {
+       "rank": "11",
+       "gp": "12",
+       "w": "4",
+       "d": "2",
+       "l": "6",
+       "gd": "-4",
+       "pts": "14",
+       "of": 18,
+       "raw": {
+        "GP": "12",
+        "L": "6",
+        "GD": "-4",
+        "P": "14",
+        "D": "2",
+        "W": "4",
+        "R": "11",
+        "Total": "4-2-6"
+       },
+       "group": "German 2. Bundesliga Standings"
+      },
+      "7013": {
+       "rank": "12",
+       "gp": "12",
+       "w": "3",
+       "d": "3",
+       "l": "6",
+       "gd": "-4",
+       "pts": "12",
+       "of": 18,
+       "raw": {
+        "GP": "12",
+        "L": "6",
+        "GD": "-4",
+        "P": "12",
+        "D": "3",
+        "W": "3",
+        "R": "12",
+        "Total": "3-3-6"
+       },
+       "group": "German 2. Bundesliga Standings"
+      },
+      "7017": {
+       "rank": "13",
+       "gp": "12",
+       "w": "3",
+       "d": "3",
+       "l": "6",
+       "gd": "-5",
+       "pts": "12",
+       "of": 18,
+       "raw": {
+        "GP": "12",
+        "L": "6",
+        "GD": "-5",
+        "P": "12",
+        "D": "3",
+        "W": "3",
+        "R": "13",
+        "Total": "3-3-6"
+       },
+       "group": "German 2. Bundesliga Standings"
+      },
+      "3070": {
+       "rank": "14",
+       "gp": "12",
+       "w": "3",
+       "d": "3",
+       "l": "6",
+       "gd": "-7",
+       "pts": "12",
+       "of": 18,
+       "raw": {
+        "GP": "12",
+        "L": "6",
+        "GD": "-7",
+        "P": "12",
+        "D": "3",
+        "W": "3",
+        "R": "14",
+        "Total": "3-3-6"
+       },
+       "group": "German 2. Bundesliga Standings"
+      },
+      "4471": {
+       "rank": "15",
+       "gp": "12",
+       "w": "3",
+       "d": "3",
+       "l": "6",
+       "gd": "-9",
+       "pts": "12",
+       "of": 18,
+       "raw": {
+        "GP": "12",
+        "L": "6",
+        "GD": "-9",
+        "P": "12",
+        "D": "3",
+        "W": "3",
+        "R": "15",
+        "Total": "3-3-6"
+       },
+       "group": "German 2. Bundesliga Standings"
+      },
+      "3812": {
+       "rank": "16",
+       "gp": "12",
+       "w": "3",
+       "d": "3",
+       "l": "6",
+       "gd": "-10",
+       "pts": "12",
+       "of": 18,
+       "raw": {
+        "GP": "12",
+        "L": "6",
+        "GD": "-10",
+        "P": "12",
+        "D": "3",
+        "W": "3",
+        "R": "16",
+        "Total": "3-3-6"
+       },
+       "group": "German 2. Bundesliga Standings"
+      },
+      "123": {
+       "rank": "17",
+       "gp": "12",
+       "w": "2",
+       "d": "5",
+       "l": "5",
+       "gd": "-6",
+       "pts": "11",
+       "of": 18,
+       "raw": {
+        "GP": "12",
+        "L": "5",
+        "GD": "-6",
+        "P": "11",
+        "D": "5",
+        "W": "2",
+        "R": "17",
+        "Total": "2-5-5"
+       },
+       "group": "German 2. Bundesliga Standings"
+      },
+      "7884": {
+       "rank": "18",
+       "gp": "12",
+       "w": "1",
+       "d": "5",
+       "l": "6",
+       "gd": "-6",
+       "pts": "8",
+       "of": 18,
+       "raw": {
+        "GP": "12",
+        "L": "6",
+        "GD": "-6",
+        "P": "8",
+        "D": "5",
+        "W": "1",
+        "R": "18",
+        "Total": "1-5-6"
+       },
+       "group": "German 2. Bundesliga Standings"
+      }
+     },
+     "last5": {
+      "6418": [
+       {
+        "res": "L",
+        "gf": 1,
+        "ga": 3,
+        "opp": "VfL Wolfsburg",
+        "home": false,
+        "date": "2026-10-17"
+       },
+       {
+        "res": "D",
+        "gf": 1,
+        "ga": 1,
+        "opp": "Energie Cottbus",
+        "home": true,
+        "date": "2026-10-24"
+       },
+       {
+        "res": "L",
+        "gf": 1,
+        "ga": 2,
+        "opp": "Karlsruher SC",
+        "home": false,
+        "date": "2026-10-31"
+       },
+       {
+        "res": "D",
+        "gf": 2,
+        "ga": 2,
+        "opp": "Hannover 96",
+        "home": true,
+        "date": "2026-11-08"
+       },
+       {
+        "res": "L",
+        "gf": 1,
+        "ga": 3,
+        "opp": "SV Darmstadt 98",
+        "home": false,
+        "date": "2026-11-20"
+       }
+      ],
+      "269": [
+       {
+        "res": "L",
+        "gf": 0,
+        "ga": 1,
+        "opp": "Kaiserslautern",
+        "home": true,
+        "date": "2026-10-24"
+       },
+       {
+        "res": "L",
+        "gf": 2,
+        "ga": 5,
+        "opp": "Bayer Leverkusen",
+        "home": false,
+        "date": "2026-10-28"
+       },
+       {
+        "res": "W",
+        "gf": 3,
+        "ga": 1,
+        "opp": "St. Pauli",
+        "home": false,
+        "date": "2026-11-01"
+       },
+       {
+        "res": "W",
+        "gf": 2,
+        "ga": 0,
+        "opp": "SV Darmstadt 98",
+        "home": true,
+        "date": "2026-11-07"
+       },
+       {
+        "res": "L",
+        "gf": 1,
+        "ga": 2,
+        "opp": "TSV Eintracht Braunschweig",
+        "home": true,
+        "date": "2026-11-21"
+       }
+      ]
+     },
+     "h2h": [
+      {
+       "date": "2023-02-19",
+       "home_id": "6418",
+       "hs": "5",
+       "as": "0"
+      },
+      {
+       "date": "2022-08-12",
+       "home_id": "269",
+       "hs": "0",
+       "as": "3"
+      },
+      {
+       "date": "2022-04-03",
+       "home_id": "6418",
+       "hs": "3",
+       "as": "1"
+      },
+      {
+       "date": "2021-10-23",
+       "home_id": "269",
+       "hs": "4",
+       "as": "0"
+      },
+      {
+       "date": "2021-04-24",
+       "home_id": "269",
+       "hs": "3",
+       "as": "1"
+      }
+     ],
+     "leaders": {
+      "6418": [
+       [
+        "Goals",
+        "Budu Zivzivadze",
+        "Matches: 10, Goals: 5"
+       ],
+       [
+        "Assists",
+        "Marcel Costly",
+        "Matches: 10, Assists: 3"
+       ],
+       [
+        "Total Shots",
+        "Budu Zivzivadze",
+        "30"
+       ]
+      ],
+      "269": [
+       [
+        "Goals",
+        "Mohamed Alì Zoma",
+        "Matches: 8, Goals: 7"
+       ],
+       [
+        "Assists",
+        "Adam Markhiev",
+        "Matches: 12, Assists: 4"
+       ],
+       [
+        "Total Shots",
+        "Piet Scobel",
+        "43"
+       ]
+      ]
+     },
+     "venue": "Voith-Arena",
+     "city": "Heidenheim"
+    }
+   }
+  },
+  "extra": {
+   "corners": {
+    "home": 5.616604920680156,
+    "away": 7.118457300275481,
+    "total": 12.735062220955637,
+    "lines": {
+     "8.5": 0.8874950920110148,
+     "9.5": 0.8159665523520934,
+     "10.5": 0.7248745120390474
+    }
+   },
+   "cards": {
+    "total": 4.066666666666666,
+    "lines": {
+     "3.5": 0.579444625771476,
+     "4.5": 0.38418512750030476,
+     "5.5": 0.2253740689064183
+    }
+   }
+  },
+  "msg_id": 9799,
+  "btn": 2
+ },
+ "401885045": {
+  "id": "401885045",
+  "div": "D2",
+  "slug": "ger.2",
+  "kickoff": "2026-11-27T20:30:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "detail": "Scheduled",
+  "home": {
+   "id": "121",
+   "name": "VfL Bochum",
+   "short": "Bochum",
+   "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/121.png",
+   "color": "000055",
+   "alt": "aac4f2",
+   "form": "LWWWD",
+   "score": "0",
+   "ru": "Бохум"
+  },
+  "away": {
+   "id": "3812",
+   "name": "SV Darmstadt 98",
+   "short": "Darmstadt",
+   "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/3812.png",
+   "color": "003399",
+   "alt": "fafafc",
+   "form": "WLDWD",
+   "score": "0",
+   "ru": "Дармштадт"
+  },
+  "odds": {
+   "H": 1.625,
+   "D": 4.2,
+   "A": 5.0,
+   "line": 2.5,
+   "over": 1.69,
+   "under": 2.1,
+   "spread_h": [
+    -0.5,
+    1.571
+   ],
+   "spread_a": [
+    0.5,
+    2.25
+   ]
+  },
+  "venue": "Vonovia Ruhrstadion",
+  "clock": "0'",
+  "goals": [],
+  "open": {
+   "H": 0.5816
+  },
+  "top": false,
+  "lam": [
+   1.878878909001917,
+   1.0898180275694327
+  ],
+  "probs": {
+   "H": 0.5495529254601367,
+   "D": 0.2411899878995024,
+   "A": 0.20925708664036016,
+   "1X": 0.790742913359639,
+   "12": 0.7588100121004968,
+   "X2": 0.45044707453986293,
+   "BTTS_Y": 0.5707458137905258,
+   "BTTS_N": 0.42925418620947353,
+   "O15": 0.8045413063223642,
+   "U15": 0.19545869367763508,
+   "O25": 0.5697582489319711,
+   "U25": 0.4302417510680282,
+   "O35": 0.34575223411480915,
+   "U35": 0.6542477658851911,
+   "H_O05": 0.8472380186874537,
+   "H_O15": 0.5602167539019672,
+   "A_O05": 0.6637223105739101,
+   "A_O15": 0.29724082236796384,
+   "H-1.5": 0.3225216738382357,
+   "A+1.5": 0.6774783261617642,
+   "A-1.5": 0.08110472298794938,
+   "H+1.5": 0.9188952770120499,
+   "H-2.5": 0.15176030804118182,
+   "A-2.5": 0.02365340287491457,
+   "H+2.5": 0.9763465971250849,
+   "A+2.5": 0.848239691958818,
+   "O45": 0.17950074162449195,
+   "U45": 0.820499258375508,
+   "H_O25": 0.2905776534817154,
+   "A_O25": 0.09754175605930607,
+   "H&O15": 0.46144911614314715,
+   "A&O15": 0.16168768680887655,
+   "H&BTTS": 0.27306072056320935,
+   "A&BTTS": 0.11628058985697616,
+   "1X&U35": 0.507771911776251,
+   "X2&U35": 0.31986435732466667,
+   "BTTS&O25": 0.45714279510396133,
+   "HT_H": 0.4072154563857219,
+   "HT_D": 0.401213991639898,
+   "HT_A": 0.1915705519743798,
+   "HT_O05": 0.7283607075902317,
+   "HT_U05": 0.27163929240976803,
+   "HT_O15": 0.39456802598740937,
+   "HT_U15": 0.6054319740125904
+  },
+  "scores": [
+   [
+    "1:1",
+    0.11360301868656536
+   ],
+   [
+    "2:1",
+    0.09881773880052698
+   ],
+   [
+    "2:0",
+    0.09067361366825184
+   ]
+  ],
+  "main": {
+   "key": "H",
+   "label": "П1",
+   "p": 0.5496,
+   "odds": 1.67,
+   "est": false,
+   "stake": 0.5,
+   "strategy": "external_trial",
+   "selection_mode": "external_fallback",
+   "trial_expires_at": null,
+   "probability_origin": "baseline_model",
+   "model_edge": -0.08225,
+   "source_count": 27,
+   "source_refs": [
+    {
+     "author": "/predictors/koefficient-200",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-bochum-darmstadt",
+     "published_at": "2026-11-26T06:12:00+00:00",
+     "observed_at": "2026-11-27T11:16:14.237281+00:00",
+     "odds": 1.73,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/georgii-domnikov",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-bochum-darmstadt",
+     "published_at": "2026-11-26T10:39:00+00:00",
+     "observed_at": "2026-11-27T11:16:14.237281+00:00",
+     "odds": 1.73,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/masa-masina",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-bochum-darmstadt",
+     "published_at": "2026-11-26T14:45:00+00:00",
+     "observed_at": "2026-11-27T11:16:14.237281+00:00",
+     "odds": 1.73,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/andrei-zv",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-bochum-darmstadt",
+     "published_at": "2026-11-26T15:11:00+00:00",
+     "observed_at": "2026-11-26T15:13:01.940630+00:00",
+     "odds": 1.73,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/tutka-tamka",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-bochum-darmstadt",
+     "published_at": "2026-11-26T16:42:00+00:00",
+     "observed_at": "2026-11-27T11:16:14.237281+00:00",
+     "odds": 1.73,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/artem-lasin",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-bochum-darmstadt",
+     "published_at": "2026-11-26T18:47:00+00:00",
+     "observed_at": "2026-11-27T11:16:14.237281+00:00",
+     "odds": 1.78,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/aslan-kockarov-8",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-bochum-darmstadt",
+     "published_at": "2026-11-26T19:22:00+00:00",
+     "observed_at": "2026-11-26T19:27:10.089363+00:00",
+     "odds": 1.78,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/aleksandr-novikov-2",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-bochum-darmstadt",
+     "published_at": "2026-11-26T20:00:00+00:00",
+     "observed_at": "2026-11-26T20:07:42.294598+00:00",
+     "odds": 1.78,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/sbn-sunny",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-bochum-darmstadt",
+     "published_at": "2026-11-26T20:05:00+00:00",
+     "observed_at": "2026-11-26T20:07:42.294598+00:00",
+     "odds": 1.78,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/oleg-zakharevskiy",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-bochum-darmstadt",
+     "published_at": "2026-11-26T20:34:00+00:00",
+     "observed_at": "2026-11-26T20:48:41.882017+00:00",
+     "odds": 1.78,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/ten-3",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-bochum-darmstadt",
+     "published_at": "2026-11-26T20:49:00+00:00",
+     "observed_at": "2026-11-27T11:16:14.237281+00:00",
+     "odds": 1.78,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/aleksandr-tkacenko-15",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-bochum-darmstadt",
+     "published_at": "2026-11-26T20:56:00+00:00",
+     "observed_at": "2026-11-26T21:10:34.589122+00:00",
+     "odds": 1.78,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/andrei-semenov-17",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-bochum-darmstadt",
+     "published_at": "2026-11-26T22:29:00+00:00",
+     "observed_at": "2026-11-26T22:32:54.641591+00:00",
+     "odds": 1.78,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/andryusa-3",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-bochum-darmstadt",
+     "published_at": "2026-11-27T00:54:00+00:00",
+     "observed_at": "2026-11-27T01:00:56.767660+00:00",
+     "odds": 1.78,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/marina-sol",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-bochum-darmstadt",
+     "published_at": "2026-11-27T02:42:00+00:00",
+     "observed_at": "2026-11-27T02:48:20.068059+00:00",
+     "odds": 1.78,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/aleksandr-aleksandrov-128",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-bochum-darmstadt",
+     "published_at": "2026-11-27T02:58:00+00:00",
+     "observed_at": "2026-11-27T03:10:19.403938+00:00",
+     "odds": 1.78,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/ruslan-ivanov-33",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-bochum-darmstadt",
+     "published_at": "2026-11-27T03:09:00+00:00",
+     "observed_at": "2026-11-27T03:10:19.403938+00:00",
+     "odds": 1.78,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/aleksandr-suslebin",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-bochum-darmstadt",
+     "published_at": "2026-11-27T04:50:00+00:00",
+     "observed_at": "2026-11-27T04:56:19.582450+00:00",
+     "odds": 1.78,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/georgii-romasov",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-bochum-darmstadt",
+     "published_at": "2026-11-27T05:34:00+00:00",
+     "observed_at": "2026-11-27T05:37:39.840873+00:00",
+     "odds": 1.78,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/aleksandr-stenchin",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-bochum-darmstadt",
+     "published_at": "2026-11-27T06:27:00+00:00",
+     "observed_at": "2026-11-27T11:16:14.237281+00:00",
+     "odds": 1.87,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/max-wolman",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-bochum-darmstadt",
+     "published_at": "2026-11-27T06:37:00+00:00",
+     "observed_at": "2026-11-27T06:39:39.476539+00:00",
+     "odds": 1.87,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/aleksandr-saulov",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-bochum-darmstadt",
+     "published_at": "2026-11-27T07:16:00+00:00",
+     "observed_at": "2026-11-27T07:21:39.497116+00:00",
+     "odds": 1.74,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/sasha-k",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-bochum-darmstadt",
+     "published_at": "2026-11-27T07:22:00+00:00",
+     "observed_at": "2026-11-27T11:16:14.237281+00:00",
+     "odds": 1.74,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/giperion",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-bochum-darmstadt",
+     "published_at": "2026-11-27T07:34:00+00:00",
+     "observed_at": "2026-11-27T07:42:13.542946+00:00",
+     "odds": 1.74,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/mikhail-tavleev-1",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-bochum-darmstadt",
+     "published_at": "2026-11-27T08:01:00+00:00",
+     "observed_at": "2026-11-27T08:04:13.289223+00:00",
+     "odds": 1.74,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/alex-bet-9",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-bochum-darmstadt",
+     "published_at": "2026-11-27T14:39:00+00:00",
+     "observed_at": "2026-11-27T14:44:40.416189+00:00",
+     "odds": 1.63,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/aleksandr-maksimov-17",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-bochum-darmstadt",
+     "published_at": "2026-11-27T16:25:00+00:00",
+     "observed_at": "2026-11-27T16:28:40.551943+00:00",
+     "odds": 1.63,
+     "price_kind": "author_recorded"
+    }
+   ]
+  },
+  "bold": {},
+  "value": null,
+  "odds_src": "среднее по букмекерам",
+  "model_w": 0.0,
+  "learned_n": 1577,
+  "stavka_signal": {
+   "status": "baseline_better",
+   "weight": 0.0,
+   "authors": 27,
+   "votes": {
+    "H": 26.914959552705376
+   },
+   "source": "https://stavka.tv",
+   "snapshot": "D2|401885045"
+  },
+  "research": {
+   "articles": [
+    {
+     "id": "36635ce865cfee17b7aced71",
+     "kind": "context",
+     "provider": "rb",
+     "source": "https://bookmaker-ratings.ru/tips/bohum-darmshtadt-prognoz-i-stavka-gosti-ne-proigrayut-pervyy-taym/",
+     "sport": "football",
+     "div": "D2",
+     "event_id": "401885045",
+     "kickoff": "2026-11-27T17:30:00+00:00",
+     "published_at": "2026-11-26T15:37:31+00:00",
+     "observed_at": "2026-11-26T20:20:05.697207+00:00",
+     "tables": []
+    }
+   ],
+   "dossier": {
+    "observed_at": "2026-11-27T16:18:55.772257+00:00",
+    "kickoff": "2026-11-27T17:30:00+00:00",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/ger.2/summary?event=401885045",
+    "status": "available",
+    "facts": {
+     "table": {
+      "129": {
+       "rank": "1",
+       "gp": "12",
+       "w": "11",
+       "d": "1",
+       "l": "0",
+       "gd": "+20",
+       "pts": "34",
+       "of": 18,
+       "raw": {
+        "GP": "12",
+        "L": "0",
+        "GD": "+20",
+        "P": "34",
+        "D": "1",
+        "W": "11",
+        "R": "1",
+        "Total": "11-1-0"
+       },
+       "group": "German 2. Bundesliga Standings"
+      },
+      "269": {
+       "rank": "2",
+       "gp": "12",
+       "w": "7",
+       "d": "3",
+       "l": "2",
+       "gd": "+12",
+       "pts": "24",
+       "of": 18,
+       "raw": {
+        "GP": "12",
+        "L": "2",
+        "GD": "+12",
+        "P": "24",
+        "D": "3",
+        "W": "7",
+        "R": "2",
+        "Total": "7-3-2"
+       },
+       "group": "German 2. Bundesliga Standings"
+      },
+      "10382": {
+       "rank": "3",
+       "gp": "12",
+       "w": "7",
+       "d": "2",
+       "l": "3",
+       "gd": "+12",
+       "pts": "23",
+       "of": 18,
+       "raw": {
+        "GP": "12",
+        "L": "3",
+        "GD": "+12",
+        "P": "23",
+        "D": "2",
+        "W": "7",
+        "R": "3",
+        "Total": "7-2-3"
+       },
+       "group": "German 2. Bundesliga Standings"
+      },
+      "138": {
+       "rank": "4",
+       "gp": "12",
+       "w": "6",
+       "d": "4",
+       "l": "2",
+       "gd": "+13",
+       "pts": "22",
+       "of": 18,
+       "raw": {
+        "GP": "12",
+        "L": "2",
+        "GD": "+13",
+        "P": "22",
+        "D": "4",
+        "W": "6",
+        "R": "4",
+        "Total": "6-4-2"
+       },
+       "group": "German 2. Bundesliga Standings"
+      },
+      "130": {
+       "rank": "5",
+       "gp": "12",
+       "w": "6",
+       "d": "4",
+       "l": "2",
+       "gd": "+3",
+       "pts": "22",
+       "of": 18,
+       "raw": {
+        "GP": "12",
+        "L": "2",
+        "GD": "+3",
+        "P": "22",
+        "D": "4",
+        "W": "6",
+        "R": "5",
+        "Total": "6-4-2"
+       },
+       "group": "German 2. Bundesliga Standings"
+      },
+      "2506": {
+       "rank": "6",
+       "gp": "12",
+       "w": "5",
+       "d": "2",
+       "l": "5",
+       "gd": "+1",
+       "pts": "17",
+       "of": 18,
+       "raw": {
+        "GP": "12",
+        "L": "5",
+        "GD": "+1",
+        "P": "17",
+        "D": "2",
+        "W": "5",
+        "R": "6",
+        "Total": "5-2-5"
+       },
+       "group": "German 2. Bundesliga Standings"
+      },
+      "6418": {
+       "rank": "7",
+       "gp": "12",
+       "w": "4",
+       "d": "4",
+       "l": "4",
+       "gd": "-3",
+       "pts": "16",
+       "of": 18,
+       "raw": {
+        "GP": "12",
+        "L": "4",
+        "GD": "-3",
+        "P": "16",
+        "D": "4",
+        "W": "4",
+        "R": "7",
+        "Total": "4-4-4"
+       },
+       "group": "German 2. Bundesliga Standings"
+      },
+      "270": {
+       "rank": "8",
+       "gp": "12",
+       "w": "3",
+       "d": "6",
+       "l": "3",
+       "gd": "-1",
+       "pts": "15",
+       "of": 18,
+       "raw": {
+        "GP": "12",
+        "L": "3",
+        "GD": "-1",
+        "P": "15",
+        "D": "6",
+        "W": "3",
+        "R": "8",
+        "Total": "3-6-3"
+       },
+       "group": "German 2. Bundesliga Standings"
+      },
+      "2428": {
+       "rank": "9",
+       "gp": "12",
+       "w": "4",
+       "d": "3",
+       "l": "5",
+       "gd": "-5",
+       "pts": "15",
+       "of": 18,
+       "raw": {
+        "GP": "12",
+        "L": "5",
+        "GD": "-5",
+        "P": "15",
+        "D": "3",
+        "W": "4",
+        "R": "9",
+        "Total": "4-3-5"
+       },
+       "group": "German 2. Bundesliga Standings"
+      },
+      "3067": {
+       "rank": "10",
+       "gp": "12",
+       "w": "4",
+       "d": "2",
+       "l": "6",
+       "gd": "-1",
+       "pts": "14",
+       "of": 18,
+       "raw": {
+        "GP": "12",
+        "L": "6",
+        "GD": "-1",
+        "P": "14",
+        "D": "2",
+        "W": "4",
+        "R": "10",
+        "Total": "4-2-6"
+       },
+       "group": "German 2. Bundesliga Standings"
+      },
+      "121": {
+       "rank": "11",
+       "gp": "12",
+       "w": "4",
+       "d": "2",
+       "l": "6",
+       "gd": "-4",
+       "pts": "14",
+       "of": 18,
+       "raw": {
+        "GP": "12",
+        "L": "6",
+        "GD": "-4",
+        "P": "14",
+        "D": "2",
+        "W": "4",
+        "R": "11",
+        "Total": "4-2-6"
+       },
+       "group": "German 2. Bundesliga Standings"
+      },
+      "7013": {
+       "rank": "12",
+       "gp": "12",
+       "w": "3",
+       "d": "3",
+       "l": "6",
+       "gd": "-4",
+       "pts": "12",
+       "of": 18,
+       "raw": {
+        "GP": "12",
+        "L": "6",
+        "GD": "-4",
+        "P": "12",
+        "D": "3",
+        "W": "3",
+        "R": "12",
+        "Total": "3-3-6"
+       },
+       "group": "German 2. Bundesliga Standings"
+      },
+      "7017": {
+       "rank": "13",
+       "gp": "12",
+       "w": "3",
+       "d": "3",
+       "l": "6",
+       "gd": "-5",
+       "pts": "12",
+       "of": 18,
+       "raw": {
+        "GP": "12",
+        "L": "6",
+        "GD": "-5",
+        "P": "12",
+        "D": "3",
+        "W": "3",
+        "R": "13",
+        "Total": "3-3-6"
+       },
+       "group": "German 2. Bundesliga Standings"
+      },
+      "3070": {
+       "rank": "14",
+       "gp": "12",
+       "w": "3",
+       "d": "3",
+       "l": "6",
+       "gd": "-7",
+       "pts": "12",
+       "of": 18,
+       "raw": {
+        "GP": "12",
+        "L": "6",
+        "GD": "-7",
+        "P": "12",
+        "D": "3",
+        "W": "3",
+        "R": "14",
+        "Total": "3-3-6"
+       },
+       "group": "German 2. Bundesliga Standings"
+      },
+      "4471": {
+       "rank": "15",
+       "gp": "12",
+       "w": "3",
+       "d": "3",
+       "l": "6",
+       "gd": "-9",
+       "pts": "12",
+       "of": 18,
+       "raw": {
+        "GP": "12",
+        "L": "6",
+        "GD": "-9",
+        "P": "12",
+        "D": "3",
+        "W": "3",
+        "R": "15",
+        "Total": "3-3-6"
+       },
+       "group": "German 2. Bundesliga Standings"
+      },
+      "3812": {
+       "rank": "16",
+       "gp": "12",
+       "w": "3",
+       "d": "3",
+       "l": "6",
+       "gd": "-10",
+       "pts": "12",
+       "of": 18,
+       "raw": {
+        "GP": "12",
+        "L": "6",
+        "GD": "-10",
+        "P": "12",
+        "D": "3",
+        "W": "3",
+        "R": "16",
+        "Total": "3-3-6"
+       },
+       "group": "German 2. Bundesliga Standings"
+      },
+      "123": {
+       "rank": "17",
+       "gp": "12",
+       "w": "2",
+       "d": "5",
+       "l": "5",
+       "gd": "-6",
+       "pts": "11",
+       "of": 18,
+       "raw": {
+        "GP": "12",
+        "L": "5",
+        "GD": "-6",
+        "P": "11",
+        "D": "5",
+        "W": "2",
+        "R": "17",
+        "Total": "2-5-5"
+       },
+       "group": "German 2. Bundesliga Standings"
+      },
+      "7884": {
+       "rank": "18",
+       "gp": "12",
+       "w": "1",
+       "d": "5",
+       "l": "6",
+       "gd": "-6",
+       "pts": "8",
+       "of": 18,
+       "raw": {
+        "GP": "12",
+        "L": "6",
+        "GD": "-6",
+        "P": "8",
+        "D": "5",
+        "W": "1",
+        "R": "18",
+        "Total": "1-5-6"
+       },
+       "group": "German 2. Bundesliga Standings"
+      }
+     },
+     "last5": {
+      "121": [
+       {
+        "res": "D",
+        "gf": 1,
+        "ga": 1,
+        "opp": "VfL Wolfsburg",
+        "home": true,
+        "date": "2026-10-23"
+       },
+       {
+        "res": "W",
+        "gf": 2,
+        "ga": 0,
+        "opp": "Mainz",
+        "home": true,
+        "date": "2026-10-27"
+       },
+       {
+        "res": "W",
+        "gf": 2,
+        "ga": 1,
+        "opp": "Energie Cottbus",
+        "home": false,
+        "date": "2026-10-30"
+       },
+       {
+        "res": "W",
+        "gf": 3,
+        "ga": 2,
+        "opp": "Karlsruher SC",
+        "home": true,
+        "date": "2026-11-08"
+       },
+       {
+        "res": "L",
+        "gf": 0,
+        "ga": 2,
+        "opp": "St. Pauli",
+        "home": false,
+        "date": "2026-11-21"
+       }
+      ],
+      "3812": [
+       {
+        "res": "D",
+        "gf": 0,
+        "ga": 0,
+        "opp": "St. Pauli",
+        "home": true,
+        "date": "2026-10-23"
+       },
+       {
+        "res": "W",
+        "gf": 2,
+        "ga": 0,
+        "opp": "SV Elversberg",
+        "home": false,
+        "date": "2026-10-27"
+       },
+       {
+        "res": "D",
+        "gf": 1,
+        "ga": 1,
+        "opp": "1. FC Magdeburg",
+        "home": true,
+        "date": "2026-10-31"
+       },
+       {
+        "res": "L",
+        "gf": 0,
+        "ga": 2,
+        "opp": "1. FC Nürnberg",
+        "home": false,
+        "date": "2026-11-07"
+       },
+       {
+        "res": "W",
+        "gf": 3,
+        "ga": 1,
+        "opp": "1. FC Heidenheim 1846",
+        "home": true,
+        "date": "2026-11-20"
+       }
+      ]
+     },
+     "h2h": [
+      {
+       "date": "2026-01-18",
+       "home_id": "121",
+       "hs": "3",
+       "as": "3"
+      },
+      {
+       "date": "2025-08-02",
+       "home_id": "3812",
+       "hs": "4",
+       "as": "1"
+      },
+      {
+       "date": "2024-03-31",
+       "home_id": "121",
+       "hs": "2",
+       "as": "2"
+      },
+      {
+       "date": "2023-11-03",
+       "home_id": "3812",
+       "hs": "1",
+       "as": "2"
+      },
+      {
+       "date": "2021-04-26",
+       "home_id": "3812",
+       "hs": "3",
+       "as": "1"
+      }
+     ],
+     "leaders": {
+      "121": [
+       [
+        "Goals",
+        "Philipp Hofmann",
+        "Matches: 12, Goals: 5"
+       ],
+       [
+        "Assists",
+        "Maximilian Wittek",
+        "Matches: 12, Assists: 1"
+       ],
+       [
+        "Total Shots",
+        "Philipp Hofmann",
+        "32"
+       ]
+      ],
+      "3812": [
+       [
+        "Goals",
+        "Milan Smit",
+        "Matches: 11, Goals: 3"
+       ],
+       [
+        "Assists",
+        "Marco Richter",
+        "Matches: 8, Assists: 3"
+       ],
+       [
+        "Total Shots",
+        "Noah Weißhaupt",
+        "17"
+       ]
+      ]
+     },
+     "venue": "Vonovia Ruhrstadion",
+     "city": "Bochum"
+    }
+   }
+  },
+  "extra": {
+   "corners": {
+    "home": 5.229837560558563,
+    "away": 4.694499857509261,
+    "total": 9.924337418067825,
+    "lines": {
+     "8.5": 0.6585966605635398,
+     "9.5": 0.5325690555994287,
+     "10.5": 0.40749500803394745
+    }
+   },
+   "cards": {
+    "total": 4.65,
+    "lines": {
+     "3.5": 0.6823761334698786,
+     "4.5": 0.49611114537188494,
+     "5.5": 0.3228847064407512
+    }
+   }
+  },
+  "msg_id": 9801,
+  "btn": 2
+ },
+ "401900873": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-27T20:30:00+03:00",
+  "sport": "football",
+  "div": "KSA",
+  "reason": "no_qualified_real_market",
+  "retry_at": 1795797520.551943
+ },
+ "401902007": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-27T20:30:00+03:00",
+  "sport": "football",
+  "div": "RSA",
+  "reason": "no_qualified_real_market",
+  "retry_at": 1795797520.551943
  }
 }
