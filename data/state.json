@@ -1572,7 +1572,7 @@
  "value_day": "2026-11-27",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-27",
- "site_stamp": "1580|9839|2026-11-27 23|6|6442a0f520ae282a",
+ "site_stamp": "1580|9840|2026-11-27 23|6|6442a0f520ae282a",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1740,7 +1740,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 9839,
+ "dz_last": 9840,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -3172,7 +3172,7 @@
   "quote_matches": 164
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-27T23:09:48.210674+03:00",
+  "last_poll": "2026-11-27T23:11:49.200722+03:00",
   "cursor": "490",
   "posts": [
    {
@@ -8250,7 +8250,7 @@
   },
   "football|PAR|401888643": {
    "reason": "edge_below_minimum",
-   "checked_at": "2026-11-27T20:02:18.565118+00:00",
+   "checked_at": "2026-11-27T20:12:14.460299+00:00",
    "kickoff": "2026-11-27T23:30:00+03:00",
    "sport": "football",
    "id": "401888643",
@@ -8258,9 +8258,9 @@
    "away": "Рубио Нью",
    "priced_markets": 7,
    "market": "П1",
-   "probability": 0.6264,
-   "odds": 1.47,
-   "edge": -0.07919,
+   "probability": 0.6156,
+   "odds": 1.5,
+   "edge": -0.0766,
    "estimated": false
   },
   "hockey|NHL|401892803": {

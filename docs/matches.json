@@ -740,7 +740,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "",
-"hs": "2",
+"hs": "3",
 "as": "3",
 "tip": "",
 "top": false,
@@ -776,7 +776,7 @@ null
 "bo": null,
 "prediction": "",
 "hs": "3",
-"as": "3",
+"as": "4",
 "tip": "",
 "top": false,
 "bot": null,
@@ -1272,7 +1272,15 @@ null
 "corners": 9.6,
 "cards": 3.2
 },
-"lt": null
+"lt": {
+"fair": 1.51,
+"label": "1X",
+"min_odds": 1.59,
+"minute": "26'",
+"p": 0.661,
+"result": null,
+"score": "0:0"
+}
 },
 {
 "sport": "football",
@@ -5413,22 +5421,22 @@ null
 "id": "401896807",
 "league": "Греция · Суперлига",
 "kickoff": "2026-11-28T18:00:00+03:00",
-"home": "Iraklis",
-"away": "Panetolikos",
+"home": "Ираклис",
+"away": "Панетоликос",
 "hl": "https://a.espncdn.com/i/teamlogos/soccer/500/2575.png",
 "al": "https://a.espncdn.com/i/teamlogos/soccer/500/11431.png",
 "hid": "2575",
 "aid": "11431",
 "bb": "https://betboom.ru/search?query=%D0%98%D1%80%D0%B0%D0%BA%D0%BB%D0%B8%D1%81&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
 "path": "soccer/gre.1",
-"url": "live.html?s=football&p=soccer%2Fgre.1&e=401896807&h=Iraklis&a=Panetolikos",
+"url": "live.html?s=football&p=soccer%2Fgre.1&e=401896807&h=%D0%98%D1%80%D0%B0%D0%BA%D0%BB%D0%B8%D1%81&a=%D0%9F%D0%B0%D0%BD%D0%B5%D1%82%D0%BE%D0%BB%D0%B8%D0%BA%D0%BE%D1%81",
 "participants": [
 [
-"Iraklis",
+"Ираклис",
 "Iraklis"
 ],
 [
-"Panetolikos",
+"Панетоликос",
 "Panetolikos"
 ]
 ],
@@ -6184,21 +6192,21 @@ null
 "league": "Норвегия · Элитсерия",
 "kickoff": "2026-11-28T20:00:00+03:00",
 "home": "Русенборг",
-"away": "Molde",
+"away": "Молде",
 "hl": "https://a.espncdn.com/i/teamlogos/soccer/500/438.png",
 "al": "https://a.espncdn.com/i/teamlogos/soccer/500/2715.png",
 "hid": "438",
 "aid": "2715",
 "bb": "https://betboom.ru/search?query=%D0%A0%D1%83%D1%81%D0%B5%D0%BD%D0%B1%D0%BE%D1%80%D0%B3&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
 "path": "soccer/nor.1",
-"url": "live.html?s=football&p=soccer%2Fnor.1&e=401843497&h=%D0%A0%D1%83%D1%81%D0%B5%D0%BD%D0%B1%D0%BE%D1%80%D0%B3&a=Molde",
+"url": "live.html?s=football&p=soccer%2Fnor.1&e=401843497&h=%D0%A0%D1%83%D1%81%D0%B5%D0%BD%D0%B1%D0%BE%D1%80%D0%B3&a=%D0%9C%D0%BE%D0%BB%D0%B4%D0%B5",
 "participants": [
 [
 "Русенборг",
 "Rosenborg"
 ],
 [
-"Molde",
+"Молде",
 "Molde"
 ]
 ],
@@ -6534,21 +6542,21 @@ null
 "league": "Греция · Суперлига",
 "kickoff": "2026-11-28T21:00:00+03:00",
 "home": "Kifisia",
-"away": "Kalamata",
+"away": "Каламата",
 "hl": "https://a.espncdn.com/i/teamlogos/soccer/500/21969.png",
 "al": "https://a.espncdn.com/i/teamlogos/soccer/500/132429.png",
 "hid": "21969",
 "aid": "132429",
 "bb": "https://betboom.ru/search?query=%D0%9A%D0%B8%D1%84%D0%B8%D1%81%D0%B8%D0%B0&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
 "path": "soccer/gre.1",
-"url": "live.html?s=football&p=soccer%2Fgre.1&e=401896808&h=Kifisia&a=Kalamata",
+"url": "live.html?s=football&p=soccer%2Fgre.1&e=401896808&h=Kifisia&a=%D0%9A%D0%B0%D0%BB%D0%B0%D0%BC%D0%B0%D1%82%D0%B0",
 "participants": [
 [
 "Kifisia",
 "Kifisia"
 ],
 [
-"Kalamata",
+"Каламата",
 "Kalamata"
 ]
 ],
