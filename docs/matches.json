@@ -5909,5 +5909,75 @@ null
 "top": false,
 "bot": null,
 "lt": null
+},
+{
+"sport": "football",
+"id": "401896808",
+"league": "Греция · Суперлига",
+"kickoff": "2026-11-28T21:00:00+03:00",
+"home": "Kifisia",
+"away": "Kalamata",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/21969.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/132429.png",
+"hid": "21969",
+"aid": "132429",
+"bb": "https://betboom.ru/search?query=%D0%9A%D0%B8%D1%84%D0%B8%D1%81%D0%B8%D0%B0&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/gre.1",
+"url": "live.html?s=football&p=soccer%2Fgre.1&e=401896808&h=Kifisia&a=Kalamata",
+"participants": [
+[
+"Kifisia",
+"Kifisia"
+],
+[
+"Kalamata",
+"Kalamata"
+]
+],
+"div": "G1",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "football",
+"id": "401885393",
+"league": "Португалия · Примейра",
+"kickoff": "2026-11-28T21:00:00+03:00",
+"home": "Академику де Визеу",
+"away": "Alverca",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/21607.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/21613.png",
+"hid": "21607",
+"aid": "21613",
+"bb": "https://betboom.ru/search?query=%D0%90%D0%BA%D0%B0%D0%B4%D0%B5%D0%BC%D0%B8%D0%BA%D1%83&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/por.1",
+"url": "live.html?s=football&p=soccer%2Fpor.1&e=401885393&h=%D0%90%D0%BA%D0%B0%D0%B4%D0%B5%D0%BC%D0%B8%D0%BA%D1%83+%D0%B4%D0%B5+%D0%92%D0%B8%D0%B7%D0%B5%D1%83&a=Alverca",
+"participants": [
+[
+"Академику де Визеу",
+"Académico de Viseu"
+],
+[
+"Alverca",
+"Alverca"
+]
+],
+"div": "P1",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
 }
 ]
