@@ -740,7 +740,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "",
-"hs": "3",
+"hs": "4",
 "as": "3",
 "tip": "",
 "top": false,
@@ -775,7 +775,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "",
-"hs": "4",
+"hs": "5",
 "as": "4",
 "tip": "",
 "top": false,
@@ -1457,7 +1457,15 @@ null
 "corners": 9.8,
 "cards": 4.3
 },
-"lt": null
+"lt": {
+"fair": 1.61,
+"label": "Обе забьют — да",
+"min_odds": 1.69,
+"minute": "26'",
+"p": 0.62,
+"result": null,
+"score": "1:0"
+}
 },
 {
 "sport": "football",
@@ -1599,7 +1607,15 @@ null
 "corners": 10.8,
 "cards": 3.5
 },
-"lt": null
+"lt": {
+"fair": 1.55,
+"label": "ТМ 2.5",
+"min_odds": 1.62,
+"minute": "26'",
+"p": 0.647,
+"result": null,
+"score": "0:0"
+}
 },
 {
 "sport": "football",
