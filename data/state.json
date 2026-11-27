@@ -3164,7 +3164,7 @@
   "quote_matches": 164
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-27T21:02:41.749192+03:00",
+  "last_poll": "2026-11-27T21:04:41.110400+03:00",
   "cursor": "486",
   "posts": [
    {
@@ -4020,7 +4020,7 @@
    "401885045": "in",
    "401900873": "in",
    "401902007": "in",
-   "401874563": "pre",
+   "401874563": "in",
    "401881739": "pre",
    "401875536": "pre",
    "401921332": "pre",
@@ -7912,18 +7912,18 @@
    "estimated": true
   },
   "tennis|WTA|186832": {
-   "reason": "no_real_odds",
-   "checked_at": "2026-11-27T17:55:22.481948+00:00",
-   "kickoff": "2026-11-27T21:00:00+03:00",
+   "reason": "no_qualified_real_market",
+   "checked_at": "2026-11-27T18:05:00.122794+00:00",
+   "kickoff": "2026-11-27T21:10:00+03:00",
    "sport": "tennis",
    "id": "186832",
    "home": "Кароль Монне",
    "away": "Вероника Эрьявец",
-   "priced_markets": 0,
+   "priced_markets": 2,
    "market": "Будет 2 сета",
-   "probability": 0.5089,
-   "odds": 1.83,
-   "edge": -0.06871,
+   "probability": 0.5003,
+   "odds": 1.86,
+   "edge": -0.06944,
    "estimated": true
   },
   "tennis|WTA|186829": {
