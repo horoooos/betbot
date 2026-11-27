@@ -2070,8 +2070,8 @@
  "vk_photos": [],
  "vk_photo_until": 1794644243.1147308,
  "vk_photo_cursor": {},
- "vk_story_last": 9767,
- "vk_story_err": null,
+ "vk_story_last": 9769,
+ "vk_story_err": "VK stories: сервер не вернул upload_result",
  "push_weekly": "2026-47",
  "vk_story_at": 1795784520.3807209,
  "vk_story_url": "https://vk.com/story-228963529_456239186",
@@ -3133,7 +3133,7 @@
   "quote_matches": 157
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-27T16:14:39.566763+03:00",
+  "last_poll": "2026-11-27T16:16:39.522744+03:00",
   "cursor": "476",
   "posts": [
    {
@@ -17912,5 +17912,6 @@
   "home": "Ноттингем Форест",
   "away": "Челси",
   "kickoff": "2026-11-27T23:00:00+03:00"
- }
+ },
+ "vk_story_retry_at": 1795789024.4209464
 }
