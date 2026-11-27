@@ -7,8 +7,6 @@
  "schedule_day": "2026-11-27",
  "content_slot": "2026-11-27-16",
  "news_seen": [
-  "team-liquid-oderzhala-vtoruyu-pobedu-na-pgl-major-singapore-2026-obygrav",
-  "team-yandex-ili-1w-team-kto-pobedit-v-matche-na-blast-slam-ix",
   "https://www.sport-express.ru/football/spain/news/ernandes-ernandes-luchshiy-sudya-ispanii-del-serro-grande-luchshiy-var-2478401/",
   "https://www.sport-express.ru/football/rus_cup/news/akron-cska-startovye-sostavy-na-match-6-go-tura-puti-rpl-kubka-rossii-24-noyabrya-2026-2478400/",
   "v-dota-2-izmenili-povedeniye-neitralnykh-i-lainovykh-kripov",
@@ -506,9 +504,11 @@
   "snappi-o-vylete-iz-pgl-major-singapore-2026-na-nas-skazalos-davleniye-meidzhora",
   "https://www.sport-express.ru/football/rfpl/news/byvshiy-sportivnyy-direktor-baltiki-margaryan-andrade-mog-pereyti-v-cska-zenit-predlozhil-maksimalnuyu-summu-2479681/",
   "team-liquid-vybila-parivision-v-nizhnyuyu-setku-plei-off-na-blast-slam-ix",
-  "rain-ya-by-khotel-ostat-sya-v-kibersporte-no-ne-v-roli-trenera"
+  "rain-ya-by-khotel-ostat-sya-v-kibersporte-no-ne-v-roli-trenera",
+  "https://www.sport-express.ru/football/europa-league/news/uefa-nachal-rassledovaniya-besporyadkov-na-dvuh-matchah-ligi-evropy-2479726/",
+  "https://www.sport-express.ru/football/rfpl/news/tyukavin-ob-igre-galatasaraya-kak-budto-ne-hvatalo-napadayuschego-2479723/"
  ],
- "news_i": 2,
+ "news_i": 4,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1701,7 +1701,7 @@
  "streak_day": {
   "2026-11-22": 2
  },
- "news_next": "2026-11-27T17:04:39.192967+03:00",
+ "news_next": "2026-11-27T17:36:39.393482+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1735,7 +1735,6 @@
  "vk_mode": "photo",
  "dz_err": null,
  "img_used": [
-  "https://images.cybersport.ru/images/as-is/plain/61/61c40544-656c-4e16-ae71-9af82bb94234.jpg",
   "https://ss.sport-express.ru/userfiles/materials/224/2244177/1180x665.jpg",
   "https://ss.sport-express.ru/userfiles/materials/224/2244186/1180x665.jpg",
   "https://images.cybersport.ru/images/as-is/plain/c9/c9124d55-587f-4671-b0c6-dbc2842fd0ef.jpg",
@@ -2034,7 +2033,8 @@
   "https://upload.wikimedia.org/wikipedia/commons/5/55/5597.90290.AS_10552.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
   "https://images.cybersport.ru/images/as-is/plain/39/396a4cd5-d6e2-43af-928c-b9cf58dc9a29.jpg",
   "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8f/1112020_sPICT.jpg/1280px-1112020_sPICT.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-  "https://images.cybersport.ru/images/as-is/plain/4f/4f06dfa1-456a-4a97-be51-23b68561dc2d.jpg"
+  "https://images.cybersport.ru/images/as-is/plain/4f/4f06dfa1-456a-4a97-be51-23b68561dc2d.jpg",
+  "https://upload.wikimedia.org/wikipedia/commons/9/94/Agdz_Football_%28soccer%29_match.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
  ],
  "indexnow_day": "2026-11-27",
  "vk_wall_err": null,
@@ -2515,7 +2515,8 @@
   "9777",
   "9780",
   "9784",
-  "9786"
+  "9786",
+  "9788"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -2928,11 +2929,12 @@
   "2026-11-27:новость:2b97f8fd3f683bb9866c1438",
   "2026-11-27:новость:7d91b46c54a905f27d5c84cb",
   "2026-11-27:новость:632329965c91b050f2e72441",
-  "2026-11-27:новость:101d9736b39f4db9c6b10183"
+  "2026-11-27:новость:101d9736b39f4db9c6b10183",
+  "2026-11-27:новость:a84aca234082e2e5056486aa"
  ],
  "dz_last_delivery": {
-  "source_id": 9786,
-  "message_id": 960,
+  "source_id": 9788,
+  "message_id": 961,
   "kind": "новость"
  },
  "learn_attempt_day": "2026-11-27",
@@ -3135,7 +3137,7 @@
   "quote_matches": 160
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-27T17:02:39.491585+03:00",
+  "last_poll": "2026-11-27T17:04:39.393482+03:00",
   "cursor": "476",
   "posts": [
    {
@@ -7645,7 +7647,7 @@
   },
   "football|KSA|401900870": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-27T13:52:58.914445+00:00",
+   "checked_at": "2026-11-27T14:04:57.689705+00:00",
    "kickoff": "2026-11-27T17:20:00+03:00",
    "sport": "football",
    "id": "401900870",
@@ -7653,9 +7655,9 @@
    "away": "Аль-Фейха",
    "priced_markets": 7,
    "market": "Обе забьют — да",
-   "probability": 0.5394,
-   "odds": 1.72,
-   "edge": -0.07223,
+   "probability": 0.5331,
+   "odds": 1.74,
+   "edge": -0.07241,
    "estimated": true
   }
  },
