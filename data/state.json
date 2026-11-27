@@ -2064,7 +2064,7 @@
  "vk_photo_until": 1794644243.1147308,
  "vk_photo_cursor": {},
  "vk_story_last": 9749,
- "vk_story_err": null,
+ "vk_story_err": "VK stories: сервер не вернул upload_result",
  "push_weekly": "2026-47",
  "vk_story_at": 1795752405.4268215,
  "vk_story_url": "https://vk.com/story-228963529_456239181",
@@ -3104,7 +3104,7 @@
   "quote_matches": 149
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-27T07:20:19.831923+03:00",
+  "last_poll": "2026-11-27T07:22:19.333708+03:00",
   "cursor": "466",
   "posts": [
    {
@@ -17080,5 +17080,6 @@
     "profit_pct": 0.37
    }
   }
- }
+ },
+ "vk_story_retry_at": 1795756965.291818
 }
