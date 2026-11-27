@@ -3103,29 +3103,29 @@
    }
   },
   "source": {
-   "last_success": "2026-11-27T10:54:14.686069+00:00",
-   "parsed": 358,
-   "added": 64,
-   "discovered_matches": 36,
+   "last_success": "2026-11-27T11:16:14.237281+00:00",
+   "parsed": 356,
+   "added": 91,
+   "discovered_matches": 42,
    "pages": 18,
    "errors": [],
    "parsed_by_sport": {
     "soccer": 50,
     "ice-hockey": 50,
     "basketball": 50,
-    "tennis": 50,
+    "tennis": 48,
     "csgo": 48,
     "dota2": 50
    }
   },
   "error": null,
-  "tips": 19401,
+  "tips": 19436,
   "snapshots": 411,
-  "unmapped_markets": 29407,
-  "quote_matches": 156
+  "unmapped_markets": 29463,
+  "quote_matches": 157
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-27T14:14:14.398639+03:00",
+  "last_poll": "2026-11-27T14:16:14.237281+03:00",
   "cursor": "472",
   "posts": [
    {
@@ -4029,7 +4029,8 @@
    "401876394": "pre",
    "401921319": "pre",
    "401874826": "pre",
-   "401843497": "pre"
+   "401843497": "pre",
+   "401878932": "pre"
   },
   "daily": {
    "day": "2026-11-27"
