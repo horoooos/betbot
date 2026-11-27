@@ -569,11 +569,11 @@ null
 ]
 ],
 "div": "NHL",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "predictions/2026-11-28-minnesota-kolorado-401892803.html",
 "hs": "3",
-"as": "3",
+"as": "4",
 "tip": "П1 (с ОТ и буллитами) · 1.85",
 "top": false,
 "bot": {
@@ -679,7 +679,7 @@ null
 "min_odds": 1.4,
 "minute": "2-й период",
 "p": 0.752,
-"result": null,
+"result": "hit",
 "score": "2:0"
 }
 },
@@ -1095,8 +1095,8 @@ null
 "state": "in",
 "bo": null,
 "prediction": "",
-"hs": "1",
-"as": "0",
+"hs": "0",
+"as": "1",
 "tip": "",
 "top": false,
 "bot": null,

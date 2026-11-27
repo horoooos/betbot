@@ -1574,7 +1574,7 @@
  "value_day": "2026-11-27",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-27",
- "site_stamp": "1584|9877|2026-11-28 02|6|f65d51bf75b5feb6",
+ "site_stamp": "1585|9879|2026-11-28 02|6|3355560dec790cbd",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1744,7 +1744,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 9877,
+ "dz_last": 9879,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -3132,37 +3132,37 @@
    "hockey": {
     "status": "collecting",
     "weight": 0.0,
-    "settled_matches": 79,
+    "settled_matches": 80,
     "required_matches": 100,
-    "trained_at": "2026-11-27T23:46:35.646161+00:00"
+    "trained_at": "2026-11-27T23:54:35.278303+00:00"
    },
    "basketball": {
     "status": "collecting",
     "weight": 0.0,
     "settled_matches": 76,
     "required_matches": 100,
-    "trained_at": "2026-11-27T23:46:35.646161+00:00"
+    "trained_at": "2026-11-27T23:54:35.278303+00:00"
    },
    "tennis": {
     "status": "collecting",
     "weight": 0.0,
     "settled_matches": 10,
     "required_matches": 100,
-    "trained_at": "2026-11-27T23:46:35.646161+00:00"
+    "trained_at": "2026-11-27T23:54:35.278303+00:00"
    },
    "esports:CS2": {
     "status": "collecting",
     "weight": 0.0,
     "settled_matches": 0,
     "required_matches": 100,
-    "trained_at": "2026-11-27T23:46:35.646161+00:00"
+    "trained_at": "2026-11-27T23:54:35.278303+00:00"
    },
    "esports:DOTA": {
     "status": "collecting",
     "weight": 0.0,
     "settled_matches": 0,
     "required_matches": 100,
-    "trained_at": "2026-11-27T23:46:35.646161+00:00"
+    "trained_at": "2026-11-27T23:54:35.278303+00:00"
    }
   },
   "source": {
@@ -3188,7 +3188,7 @@
   "quote_matches": 169
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-28T02:52:35.653720+03:00",
+  "last_poll": "2026-11-28T02:54:35.278303+03:00",
   "cursor": "496",
   "posts": [
    {
@@ -4056,7 +4056,7 @@
    "401892800": "post",
    "401892801": "post",
    "401892802": "post",
-   "401892803": "in",
+   "401892803": "post",
    "401892804": "post",
    "401892805": "post",
    "401892806": "in",
