@@ -15,6 +15,7 @@ report['latest_main']=[{'id':k,'t':v.get('t'),'title':re.sub('<[^>]+>','',v.get(
 report['mirror']={k:state.get(k) for k in ('dz_last','dz_err','dz_last_delivery')}
 report['expresses']={k:{f:(state.get(k) or {}).get(f) for f in ('day','done','msg','odds','stake_pct')} for k in ('express','express_risk')}
 picks=state.get('source_trial',{}).get('picks',{})
+report['learning']={k:state.get(k) for k in ('learned','learn_error','weights','stavka')}
 report['fallback_statuses']=dict(Counter(v.get('status') for v in picks.values()))
 report['unsettled']=[{k:p.get(k) for k in ('sport','id','kickoff','status')} for p in picks.values() if p.get('status')=='open']
 site='https://horoooos.github.io/betbot/'
@@ -51,8 +52,12 @@ try:
  days=[now.strftime('%Y%m%d'),(now+pd.Timedelta(days=1)).strftime('%Y%m%d')]
  football=scoreboard({k:v[3] for k,v in ALL.items()},days)
  other=sports.fetch(now)
+ from betbot import stavka
+ stavka._runtime=stavka.load()
+ for e in football+other:
+  for side in ("home","away"):e[side].setdefault("ru",e[side].get("name",side))
  normal=content._favourites(football,other,now,24);risky=content._risky_legs(football,other,now)
- report['express_candidates']={'fixtures':len(football)+len(other),'normal':len(normal),'risky':len(risky),'tennis_normal':sum(e['sport']=='tennis' for e in normal)}
+ report['express_candidates']={'fixtures':len(football)+len(other),'normal':len(normal),'risky':len(risky),'tennis_normal':sum(e['sport']=='tennis' for e in normal),'with_quotes':sum(bool((e.get('odds') or {}).get('H')) for e in football+other)}
  for kind,legs in [('normal',normal[:3]),('risky',risky[:5])]:
   if not legs:continue
   odds=1.;p=1.

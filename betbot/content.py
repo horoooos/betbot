@@ -79,10 +79,16 @@ def _winner_legs(football, other, now, hours, risky=False):
     for e in football + other:
         try:
             k = pd.Timestamp(e["kickoff"])
+            from .stavka_markets import supplement
+            e = supplement(e, now)
             o = e.get("odds") or {}
             if e.get("state") != "pre" or not now + pd.Timedelta(minutes=30) < k <= end:
                 continue
             if "ru" not in e.get("home", {}) or "ru" not in e.get("away", {}) or o.get("est"):
+                continue
+            if e.get("sport", "football") == "football" and not o.get("D"):
+                continue
+            if e.get("sport") == "esports" and e.get("bo") == 2:
                 continue
             keys = ["H", "D", "A"] if o.get("D") else ["H", "A"]
             prices = [float(o[key]) for key in keys]
