@@ -5,7 +5,7 @@
  },
  "learned": "2026-11-27",
  "schedule_day": "2026-11-27",
- "content_slot": "2026-11-27-19",
+ "content_slot": "2026-11-27-20",
  "news_seen": [
   "https://www.sport-express.ru/hockey/nhl/news/zaschitnik-dryu-dauti-stal-vtorym-hokkeistom-v-istorii-los-andzheles-kingz-so-1300-matchami-v-nhl-za-klub-2478441/",
   "https://www.sport-express.ru/hockey/nhl/news/igrok-kolambusa-zak-verenski-stal-shestym-zaschitnikom-v-istorii-nhl-s-ochkami-v-10-pervyh-gostevyh-matchah-sezona-2478440/",
@@ -1572,7 +1572,7 @@
  "value_day": "2026-11-27",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-27",
- "site_stamp": "1577|9805|2026-11-27 19|6|2e8d7f04af37a353",
+ "site_stamp": "1577|9807|2026-11-27 20|6|2e8d7f04af37a353",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1586,119 +1586,128 @@
  },
  "value_check": "2026-11-27-6",
  "express_risk": {
-  "msg": 9019,
+  "msg": 9806,
   "legs": [
    {
+    "sport": "hockey",
+    "div": "NHL",
+    "id": "401892795",
+    "side": "home",
+    "p": 0.5830164765525981,
+    "odds": 1.645,
+    "kickoff": "2026-11-27T21:00:00+03:00",
+    "probability_origin": "market_baseline",
+    "quoted_at": "2026-11-27T20:00:40.293034+03:00",
+    "home": "Бостон",
+    "away": "Торонто",
+    "league": "🇺🇸 США · NHL",
+    "logos": [
+     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/bos.png",
+     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/tor.png"
+    ],
+    "colors": [
+     "231f20",
+     "003e7e"
+    ],
+    "label": "Победа: Бостон (с ОТ)"
+   },
+   {
+    "sport": "hockey",
+    "div": "NHL",
+    "id": "401892798",
+    "side": "away",
+    "p": 0.5635245901639344,
+    "odds": 1.704,
+    "kickoff": "2026-11-27T22:00:00+03:00",
+    "probability_origin": "market_baseline",
+    "quoted_at": "2026-11-27T20:00:40.293034+03:00",
+    "home": "Сент-Луис",
+    "away": "Даллас",
+    "league": "🇺🇸 США · NHL",
+    "logos": [
+     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/stl.png",
+     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/dal.png"
+    ],
+    "colors": [
+     "0070b9",
+     "20864c"
+    ],
+    "label": "Победа: Даллас (с ОТ)"
+   },
+   {
+    "sport": "hockey",
+    "div": "NHL",
+    "id": "401892799",
+    "side": "home",
+    "p": 0.5635245901639344,
+    "odds": 1.704,
+    "kickoff": "2026-11-27T23:00:00+03:00",
+    "probability_origin": "market_baseline",
+    "quoted_at": "2026-11-27T20:00:40.293034+03:00",
+    "home": "Тампа-Бэй",
+    "away": "Оттава",
+    "league": "🇺🇸 США · NHL",
+    "logos": [
+     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/tb.png",
+     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/ott.png"
+    ],
+    "colors": [
+     "003e7e",
+     "dd1a32"
+    ],
+    "label": "Победа: Тампа-Бэй (с ОТ)"
+   },
+   {
     "sport": "basketball",
     "div": "NBA",
-    "id": "401910029",
-    "side": "away",
-    "p": 0.5427759110881364,
-    "odds": 1.769,
-    "kickoff": "2026-11-22T23:30:00+03:00",
-    "home": "Атланта Хокс",
-    "away": "Детройт Пистонс",
+    "id": "401909326",
+    "side": "home",
+    "p": 0.5934121196882072,
+    "odds": 1.617,
+    "kickoff": "2026-11-28T03:00:00+03:00",
+    "probability_origin": "market_baseline",
+    "quoted_at": "2026-11-27T20:00:40.293034+03:00",
+    "home": "Нью-Йорк Никс",
+    "away": "Майами Хит",
     "league": "🇺🇸 США · NBA",
     "logos": [
-     "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/atl.png",
-     "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/det.png"
+     "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/ny.png",
+     "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/mia.png"
     ],
     "colors": [
-     "c8102e",
-     "1d428a"
+     "1d428a",
+     "98002e"
     ],
-    "label": "Победа: Детройт Пистонс (с ОТ)",
-    "win": false,
-    "score": "107:97"
+    "label": "Победа: Нью-Йорк Никс (с ОТ)"
    },
    {
-    "sport": "football",
-    "div": "PAR",
-    "id": "401888646",
-    "side": "away",
-    "p": 0.5719893150608961,
-    "odds": 1.606,
-    "kickoff": "2026-11-23T00:00:00+03:00",
-    "home": "Рубио Нью",
-    "away": "Libertad",
-    "league": "🇵🇾 Парагвай · Примера",
-    "logos": [
-     "https://a.espncdn.com/i/teamlogos/soccer/500/10080.png",
-     "https://a.espncdn.com/i/teamlogos/soccer/500/2670.png"
-    ],
-    "colors": [
-     "32CD32",
-     "212121"
-    ],
-    "label": "Победа: Libertad"
-   },
-   {
-    "sport": "football",
-    "div": "PAR",
-    "id": "401888645",
+    "sport": "hockey",
+    "div": "NHL",
+    "id": "401892808",
     "side": "home",
-    "p": 0.5406048250084947,
-    "odds": 1.69,
-    "kickoff": "2026-11-23T00:00:00+03:00",
-    "home": "Олимпия",
-    "away": "Sportivo Trinidense",
-    "league": "🇵🇾 Парагвай · Примера",
+    "p": 0.5635245901639344,
+    "odds": 1.704,
+    "kickoff": "2026-11-28T04:00:00+03:00",
+    "probability_origin": "market_baseline",
+    "quoted_at": "2026-11-27T20:00:40.293034+03:00",
+    "home": "Баффало",
+    "away": "Питтсбург",
+    "league": "🇺🇸 США · NHL",
     "logos": [
-     "https://a.espncdn.com/i/teamlogos/soccer/500/2675.png",
-     "https://a.espncdn.com/i/teamlogos/soccer/500/7466.png"
+     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/buf.png",
+     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/pit.png"
     ],
     "colors": [
-     "1a1a1a",
+     "00468b",
      "000000"
     ],
-    "label": "Победа: Олимпия"
-   },
-   {
-    "sport": "football",
-    "div": "ARG",
-    "id": "401933761",
-    "side": "home",
-    "p": 0.5757808534862348,
-    "odds": 1.645,
-    "kickoff": "2026-11-23T01:00:00+03:00",
-    "home": "Ривер Плейт",
-    "away": "Ланус",
-    "league": "🇦🇷 Аргентина · Примера",
-    "logos": [
-     "https://a.espncdn.com/i/teamlogos/soccer/500/16.png",
-     "https://a.espncdn.com/i/teamlogos/soccer/500/12.png"
-    ],
-    "colors": [
-     "C60000",
-     "9f0000"
-    ],
-    "label": "Победа: Ривер Плейт"
-   },
-   {
-    "sport": "basketball",
-    "div": "NBA",
-    "id": "401910030",
-    "side": "home",
-    "p": 0.5980980980980981,
-    "odds": 1.606,
-    "kickoff": "2026-11-23T02:00:00+03:00",
-    "home": "Майами Хит",
-    "away": "Оклахома-Сити Тандер",
-    "league": "🇺🇸 США · NBA",
-    "logos": [
-     "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/mia.png",
-     "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/okc.png"
-    ],
-    "colors": [
-     "98002e",
-     "007ac1"
-    ],
-    "label": "Победа: Майами Хит (с ОТ)"
+    "label": "Победа: Баффало (с ОТ)"
    }
   ],
-  "odds": 12.684446518944203,
-  "day": "2026-11-22",
-  "done": true
+  "odds": 13.16087285458176,
+  "day": "2026-11-27",
+  "stake_pct": 0.5,
+  "done": false
  },
  "streak_day": {
   "2026-11-22": 2
@@ -1731,7 +1740,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 9805,
+ "dz_last": 9807,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2523,7 +2532,8 @@
   "9791",
   "9793",
   "9798",
-  "9803"
+  "9803",
+  "9807"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -2942,11 +2952,12 @@
   "2026-11-27:новость:180ae46b57e492471ac565d3",
   "2026-11-27:новость:06c5b695622ec6fac4bba46f",
   "2026-11-27:новость:6f59c1452a04c67a3a6b2278",
-  "2026-11-27:новость:26ff739878584b7ab8a9fb57"
+  "2026-11-27:новость:26ff739878584b7ab8a9fb57",
+  "2026-11-27:новость:7782ce9edb9a4036a7d1e944"
  ],
  "dz_last_delivery": {
-  "source_id": 9803,
-  "message_id": 966,
+  "source_id": 9807,
+  "message_id": 967,
   "kind": "новость"
  },
  "learn_attempt_day": "2026-11-27",
@@ -3142,12 +3153,12 @@
   },
   "error": null,
   "tips": 19918,
-  "snapshots": 414,
+  "snapshots": 419,
   "unmapped_markets": 30084,
   "quote_matches": 162
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-27T19:58:40.228848+03:00",
+  "last_poll": "2026-11-27T20:00:40.293034+03:00",
   "cursor": "482",
   "posts": [
    {
@@ -3839,27 +3850,27 @@
  },
  "growth": {
   "digest": {
-   "id": 8820261126,
-   "title": "Главное в спорте за 26.11",
-   "sport": "football",
-   "t": "2026-11-26T20:01:08.529531+03:00",
-   "photo": "https://horoooos.github.io/betbot/share/digest-2026-11-26.jpg",
+   "id": 8820261127,
+   "title": "Главное в спорте за 27.11",
+   "sport": "esports",
+   "t": "2026-11-27T20:00:40.293034+03:00",
+   "photo": "https://horoooos.github.io/betbot/share/digest-2026-11-27.jpg",
    "digest": true,
    "complete": true,
-   "url": "digest/2026-11-26.html",
-   "body": "<b>Логашов: «Ростов» может выйти в тройку лидеров РПЛ</b>\nБывший защитник «Ростова» Арсений Логашов в интервью «СЭ» высказал оптимизм по поводу текущей формы команды.\n<a href=\"https://horoooos.github.io/betbot/news/9662-logashov-rostov-mozhet-vyyti-v-troyku-liderov-rpl.html\">Читать новость полностью</a>\n\n<b>BETBOOM TEAM показала новую форму для PGL Major Singapore 2026</b>\nBETBOOM TEAM представила эксклюзивный дизайн игровой формы, в которой их состав по CS2 будет выступать на PGL Major Singapore 2026.\n<a href=\"https://horoooos.github.io/betbot/news/9655-betboom-team-pokazala-novuyu-formu-dlya-pgl-major-singapore-2026.html\">Читать новость полностью</a>\n\n<b>Прохоркин: Мы всеми правдами и неправдами бьемся за Буше</b>\nНападающий «Авангарда» Николай Прохоркин в эксклюзивном интервью рассказал, что команда «всеми правдами и неправдами» борется за главного тренера Ги Буше.\n<a href=\"https://horoooos.github.io/betbot/news/9648-prohorkin-my-vsemi-pravdami-i-nepravdami-bemsya-za-bushe.html\">Читать новость полностью</a>\n\n<b>«Динамо» и «Факел» назвали стартовые составы на Кубок России</b>\n«Динамо» и «Факел» объявили стартовые составы на матч Пути РПЛ FONBET Кубка России, который пройдёт на «ВТБ Арене» в Москве в 19:30 мск.\n<a href=\"https://horoooos.github.io/betbot/news/9651-dinamo-i-fakel-nazvali-startovye-sostavy-na-kubok-rossii.html\">Читать новость полностью</a>\n\n<b>CEO 9z Team: игроки могут бойкотировать мейджор CS2 в Аргентине</b>\n⚔️ CEO 9z Team Франсиско Постильоне в X сообщил, что часть киберспортсменов рассматривают бойкот следующего мейджора по Counter-Strike 2 из-за низких выплат от Valve.\n<a href=\"https://horoooos.github.io/betbot/news/9647-ceo-9z-team-igroki-mogut-boykotirovat-meydzhor-cs2-v-argentine.html\">Читать новость полностью</a>",
+   "url": "digest/2026-11-27.html",
+   "body": "<b>Team Spirit выпустил гимн-кавер к PGL Major Singapore 2026</b>\nКиберспортивный клуб «Team Spirit» выпустил музыкальный клип-кавер на знаменитую композицию «Seven Nation Army» группы The White Stripes, приуроченный к PGL Major Singapore 2026.\n<a href=\"https://horoooos.github.io/betbot/news/9803-team-spirit-vypustil-gimn-kaver-k-pgl-major-singapore-2026.html\">Читать новость полностью</a>\n\n<b>ЦСКА ведет переговоры о переходе Кевина Вивероса</b>\n27 ноября руководство «ЦСКА» запланировало переговоры с представителями колумбийского форварда Кевина Вивероса.\n<a href=\"https://horoooos.github.io/betbot/news/9798-tsska-vedet-peregovory-o-perehode-kevina-viverosa.html\">Читать новость полностью</a>\n\n<b>Na&#x27;Vi и 1w Team объявили соперников в первом туре PGL Major 2026</b>\nНа первом туре второго этапа PGL Major Singapore 2026 по Counter-Strike 2 известны пары. «Natus Vincere» встретится с «PARIVISION», «1w Team» сыграет против «Eternal Fire», а «G2 Esports» примет «Team Liquid».\n<a href=\"https://horoooos.github.io/betbot/news/9793-na-vi-i-1w-team-obyavili-sopernikov-v-pervom-ture-pgl-major-2026.html\">Читать новость полностью</a>\n\n<b>Александр Мостовой назвал «Зенит» фаворитом матча с ЦСКА</b>\nБывший футболист сборной России Александр Мостовой заявил, что в предстоящей встрече 16-го тура РПЛ «Зенит» будет фаворитом против ЦСКА.\n<a href=\"https://horoooos.github.io/betbot/news/9791-aleksandr-mostovoy-nazval-zenit-favoritom-matcha-s-tsska.html\">Читать новость полностью</a>\n\n<b>FalleN предложил Valve добавить идеи Dota 2 для решения проблем CS2</b>\n⚡️ Капитан сборной FURIA Esports по Counter-Strike 2 Габриэль «FalleN» Толедо в своём посте в X предложил разработчикам Valve позаимствовать элементы из Dota 2, чтобы оживить мейджоры и решить финансовые трудности проекта.\n<a href=\"https://horoooos.github.io/betbot/news/9789-fallen-predlozhil-valve-dobavit-idei-dota-2-dlya-resheniya-problem-cs2.html\">Читать новость полностью</a>",
    "items": [
-    "9662",
-    "9655",
-    "9648",
-    "9651",
-    "9647"
+    "9803",
+    "9798",
+    "9793",
+    "9791",
+    "9789"
    ],
    "desc": "Главные спортивные новости за последние 24 часа. Полные материалы и источники внутри."
   },
-  "digest_day": "2026-11-26",
+  "digest_day": "2026-11-27",
   "digest_status": "published",
-  "digest_message": 9663,
+  "digest_message": 9807,
   "video_day": "2026-11-26",
   "video_status": "published",
   "video_launch": "news-video-launch-2026-11-22",
@@ -4145,7 +4156,10 @@
    "1817105": "pre",
    "1817104": "pre",
    "401933723": "pre",
-   "401921318": "pre"
+   "401921318": "pre",
+   "401912709": "pre",
+   "401936353": "pre",
+   "401888558": "pre"
   },
   "daily": {
    "day": "2026-11-27"
@@ -7775,7 +7789,7 @@
   },
   "football|KSA|401900873": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-27T16:51:07.862500+00:00",
+   "checked_at": "2026-11-27T17:01:06.957428+00:00",
    "kickoff": "2026-11-27T20:30:00+03:00",
    "sport": "football",
    "id": "401900873",
@@ -7783,14 +7797,14 @@
    "away": "Неом",
    "priced_markets": 6,
    "market": "Обе забьют — да",
-   "probability": 0.5888,
-   "odds": 1.58,
-   "edge": -0.0697,
+   "probability": 0.5923,
+   "odds": 1.57,
+   "edge": -0.07009,
    "estimated": true
   },
   "football|RSA|401902007": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-27T16:51:08.302607+00:00",
+   "checked_at": "2026-11-27T17:01:07.334623+00:00",
    "kickoff": "2026-11-27T20:30:00+03:00",
    "sport": "football",
    "id": "401902007",
