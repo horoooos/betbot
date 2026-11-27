@@ -5052,6 +5052,14 @@
   "sport": "hockey",
   "div": "NHL",
   "reason": "edge_below_minimum",
-  "retry_at": 1795804122.134987
+  "retry_at": 1795804758.055483
+ },
+ "WTA|186830": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-27T22:30:00+03:00",
+  "sport": "tennis",
+  "div": "WTA",
+  "reason": "no_real_odds",
+  "retry_at": 1795804758.055483
  }
 }

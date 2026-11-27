@@ -30068,7 +30068,7 @@
   "sport": "football",
   "div": "N1",
   "reason": "edge_below_minimum",
-  "retry_at": 1795804122.134987
+  "retry_at": 1795804758.055483
  },
  "401921332": {
   "status": "waiting_data",
@@ -30076,6 +30076,22 @@
   "sport": "football",
   "div": "ECU",
   "reason": "insufficient_history_or_odds",
-  "retry_at": 1795804122.134987
+  "retry_at": 1795804758.055483
+ },
+ "401883102": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-27T22:30:00+03:00",
+  "sport": "football",
+  "div": "SP2",
+  "reason": "edge_below_minimum",
+  "retry_at": 1795804758.055483
+ },
+ "401884720": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-27T22:30:00+03:00",
+  "sport": "football",
+  "div": "D1",
+  "reason": "no_qualified_real_market",
+  "retry_at": 1795804758.055483
  }
 }

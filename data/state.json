@@ -3166,7 +3166,7 @@
   "quote_matches": 164
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-27T21:26:42.762742+03:00",
+  "last_poll": "2026-11-27T21:29:18.055483+03:00",
   "cursor": "486",
   "posts": [
    {
@@ -3940,7 +3940,7 @@
    "186831": "pre",
    "186830": "pre",
    "186829": "in",
-   "186832": "pre",
+   "186832": "post",
    "186841": "pre",
    "186842": "pre",
    "186843": "pre",
@@ -7960,7 +7960,7 @@
   },
   "football|N1|401875536": {
    "reason": "edge_below_minimum",
-   "checked_at": "2026-11-27T18:19:01.423816+00:00",
+   "checked_at": "2026-11-27T18:29:36.808102+00:00",
    "kickoff": "2026-11-27T22:00:00+03:00",
    "sport": "football",
    "id": "401875536",
@@ -7975,7 +7975,7 @@
   },
   "football|ECU|401921332": {
    "reason": "insufficient_history_or_odds",
-   "checked_at": "2026-11-27T18:19:04.508610+00:00",
+   "checked_at": "2026-11-27T18:29:39.805105+00:00",
    "kickoff": "2026-11-27T22:00:00+03:00",
    "sport": "football",
    "id": "401921332",
@@ -7984,7 +7984,7 @@
   },
   "hockey|NHL|401892798": {
    "reason": "edge_below_minimum",
-   "checked_at": "2026-11-27T18:19:05.296166+00:00",
+   "checked_at": "2026-11-27T18:29:41.728673+00:00",
    "kickoff": "2026-11-27T22:00:00+03:00",
    "sport": "hockey",
    "id": "401892798",
@@ -7996,6 +7996,51 @@
    "odds": 1.77,
    "edge": -0.03924,
    "estimated": false
+  },
+  "football|SP2|401883102": {
+   "reason": "edge_below_minimum",
+   "checked_at": "2026-11-27T18:29:40.564849+00:00",
+   "kickoff": "2026-11-27T22:30:00+03:00",
+   "sport": "football",
+   "id": "401883102",
+   "home": "Леганес",
+   "away": "CD Sabadell",
+   "priced_markets": 5,
+   "market": "ТМ 2.5",
+   "probability": 0.5962,
+   "odds": 1.56,
+   "edge": -0.06993,
+   "estimated": false
+  },
+  "football|D1|401884720": {
+   "reason": "no_qualified_real_market",
+   "checked_at": "2026-11-27T18:29:40.976364+00:00",
+   "kickoff": "2026-11-27T22:30:00+03:00",
+   "sport": "football",
+   "id": "401884720",
+   "home": "Вердер",
+   "away": "Боруссия М",
+   "priced_markets": 5,
+   "market": "Обе забьют — да",
+   "probability": 0.6046,
+   "odds": 1.54,
+   "edge": -0.06892,
+   "estimated": true
+  },
+  "tennis|WTA|186830": {
+   "reason": "no_real_odds",
+   "checked_at": "2026-11-27T18:29:43.809983+00:00",
+   "kickoff": "2026-11-27T22:30:00+03:00",
+   "sport": "tennis",
+   "id": "186830",
+   "home": "Гуйомар Маристани",
+   "away": "Мария Лурдес Карле",
+   "priced_markets": 0,
+   "market": "Будет 2 сета",
+   "probability": 0.6282,
+   "odds": 1.48,
+   "edge": -0.07026,
+   "estimated": true
   }
  },
  "source_trial": {
