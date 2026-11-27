@@ -3184,7 +3184,7 @@
   "quote_matches": 167
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-28T00:56:35.246073+03:00",
+  "last_poll": "2026-11-28T00:58:35.945789+03:00",
   "cursor": "494",
   "posts": [
    {
@@ -8390,6 +8390,51 @@
    "odds": 1.56,
    "edge": -0.03842,
    "estimated": false
+  },
+  "football|BRA|401841337": {
+   "reason": "no_qualified_real_market",
+   "checked_at": "2026-11-27T21:58:53.997086+00:00",
+   "kickoff": "2026-11-28T02:00:00+03:00",
+   "sport": "football",
+   "id": "401841337",
+   "home": "Флуминенсе",
+   "away": "Крузейро",
+   "priced_markets": 3,
+   "market": "Обе забьют — да",
+   "probability": 0.5591,
+   "odds": 1.66,
+   "edge": -0.07189,
+   "estimated": true
+  },
+  "football|BRA2|401912683": {
+   "reason": "no_qualified_real_market",
+   "checked_at": "2026-11-27T21:58:54.405883+00:00",
+   "kickoff": "2026-11-28T02:00:00+03:00",
+   "sport": "football",
+   "id": "401912683",
+   "home": "Вила-Нова",
+   "away": "Атлетико Гоияниенсе",
+   "priced_markets": 6,
+   "market": "Обе забьют — нет",
+   "probability": 0.5801,
+   "odds": 1.6,
+   "edge": -0.07184,
+   "estimated": true
+  },
+  "football|PAR|401888557": {
+   "reason": "no_qualified_real_market",
+   "checked_at": "2026-11-27T21:58:54.810600+00:00",
+   "kickoff": "2026-11-28T02:00:00+03:00",
+   "sport": "football",
+   "id": "401888557",
+   "home": "Спортиво Лукеньо",
+   "away": "Олимпия",
+   "priced_markets": 6,
+   "market": "Обе забьют — да",
+   "probability": 0.5605,
+   "odds": 1.66,
+   "edge": -0.06957,
+   "estimated": true
   }
  },
  "source_trial": {

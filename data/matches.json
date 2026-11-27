@@ -28256,5 +28256,29 @@
   "div": "ECU",
   "reason": "edge_below_minimum",
   "retry_at": 1795815275.805989
+ },
+ "401841337": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-28T02:00:00+03:00",
+  "sport": "football",
+  "div": "BRA",
+  "reason": "no_qualified_real_market",
+  "retry_at": 1795817315.945789
+ },
+ "401912683": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-28T02:00:00+03:00",
+  "sport": "football",
+  "div": "BRA2",
+  "reason": "no_qualified_real_market",
+  "retry_at": 1795817315.945789
+ },
+ "401888557": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-28T02:00:00+03:00",
+  "sport": "football",
+  "div": "PAR",
+  "reason": "no_qualified_real_market",
+  "retry_at": 1795817315.945789
  }
 }
