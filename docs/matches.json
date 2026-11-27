@@ -999,7 +999,7 @@ null
 ]
 ],
 "div": "P1",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "",
 "hs": "1",
@@ -1173,7 +1173,15 @@ null
 ],
 "center": "Ожидаемые голы 3.2 : 3.2"
 },
-"lt": null
+"lt": {
+"fair": 1.33,
+"label": "ТБ 4.5",
+"min_odds": 1.4,
+"minute": "2-й период",
+"p": 0.752,
+"result": null,
+"score": "2:0"
+}
 },
 {
 "sport": "hockey",
@@ -1204,7 +1212,7 @@ null
 "bo": null,
 "prediction": "",
 "hs": "2",
-"as": "1",
+"as": "2",
 "tip": "",
 "top": false,
 "bot": null,
