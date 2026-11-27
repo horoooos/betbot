@@ -869,7 +869,7 @@ null
 ]
 ],
 "div": "AUT",
-"state": "pre",
+"state": "in",
 "bo": null,
 "prediction": "",
 "hs": "0",
@@ -7516,6 +7516,76 @@ null
 [
 "Вашингтон",
 "Washington Capitals"
+]
+],
+"div": "NHL",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "football",
+"id": "401936045",
+"league": "Колумбия · Примера A",
+"kickoff": "2026-11-29T03:30:00+03:00",
+"home": "Индепендьенте Санта-Фе",
+"away": "Атлетико Насьональ",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/5488.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/5264.png",
+"hid": "5488",
+"aid": "5264",
+"bb": "https://betboom.ru/search?query=%D0%98%D0%BD%D0%B4%D0%B5%D0%BF%D0%B5%D0%BD%D0%B4%D1%8C%D0%B5%D0%BD%D1%82%D0%B5&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/col.1",
+"url": "live.html?s=football&p=soccer%2Fcol.1&e=401936045&h=%D0%98%D0%BD%D0%B4%D0%B5%D0%BF%D0%B5%D0%BD%D0%B4%D1%8C%D0%B5%D0%BD%D1%82%D0%B5+%D0%A1%D0%B0%D0%BD%D1%82%D0%B0-%D0%A4%D0%B5&a=%D0%90%D1%82%D0%BB%D0%B5%D1%82%D0%B8%D0%BA%D0%BE+%D0%9D%D0%B0%D1%81%D1%8C%D0%BE%D0%BD%D0%B0%D0%BB%D1%8C",
+"participants": [
+[
+"Индепендьенте Санта-Фе",
+"Independiente Santa Fe"
+],
+[
+"Атлетико Насьональ",
+"Atlético Nacional"
+]
+],
+"div": "COL",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "hockey",
+"id": "401892818",
+"league": "США · NHL",
+"kickoff": "2026-11-29T03:30:00+03:00",
+"home": "Филадельфия",
+"away": "Айлендерс",
+"hl": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/phi.png",
+"al": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/nyi.png",
+"hid": "15",
+"aid": "12",
+"bb": "https://betboom.ru/search?query=%D0%A4%D0%B8%D0%BB%D0%B0%D0%B4%D0%B5%D0%BB%D1%8C%D1%84%D0%B8%D1%8F&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=hockey",
+"path": "hockey/nhl",
+"url": "live.html?s=hockey&p=hockey%2Fnhl&e=401892818&h=%D0%A4%D0%B8%D0%BB%D0%B0%D0%B4%D0%B5%D0%BB%D1%8C%D1%84%D0%B8%D1%8F&a=%D0%90%D0%B9%D0%BB%D0%B5%D0%BD%D0%B4%D0%B5%D1%80%D1%81",
+"participants": [
+[
+"Филадельфия",
+"Philadelphia Flyers"
+],
+[
+"Айлендерс",
+"New York Islanders"
 ]
 ],
 "div": "NHL",
