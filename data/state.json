@@ -7,11 +7,6 @@
  "schedule_day": "2026-11-27",
  "content_slot": "2026-11-27-20",
  "news_seen": [
-  "https://www.sport-express.ru/hockey/nhl/news/golkiper-konnor-hellibak-bystree-vseh-vratarey-iz-ssha-oderzhal-200-domashnih-pobed-v-nhl-24-noyabrya-2026-2478439/",
-  "https://www.sport-express.ru/football/rus_cup/news/akron-cska-0-1-schet-i-rezultat-matcha-fonbet-kubka-rossii-24-noyabrya-2026-2478460/",
-  "https://www.sport-express.ru/basketball/euroleague/news/evroliga-planiruet-zapustit-letnyuyu-ligu-v-2027-godu-informaciya-izdaniya-eurohoops-24-noyabrya-2026-2478447/",
-  "https://www.sport-express.ru/paralympics/news/prizera-paralimpiady-2024-obvinili-v-11-epizodah-iznasilovaniya-2478421/",
-  "https://www.sport-express.ru/basketball/russia/news/18-basketbolistov-voshli-v-sostav-sbornoy-rossii-na-match-s-lokomotivom-kubanyu-2478406/",
   "https://www.sport-express.ru/basketball/nba/news/centrovoy-miluoki-maylz-terner-dostig-otmetki-v-10-tysyach-ochkov-za-kareru-v-nba-24-noyabrya-2026-2478445/",
   "https://www.sport-express.ru/basketball/nba/news/forvard-brendon-ingrem-debyutiroval-za-klippers-posle-operacii-novosti-nba-24-noyabrya-2026-2478444/",
   "https://www.sport-express.ru/tennis/wta/news/olhovskiy-ob-obvineniyah-svitolinoy-u-mirry-dazhe-ne-bylo-mysley-provocirovat-2478470/",
@@ -506,9 +501,14 @@
   "https://www.sport-express.ru/tennis/atp/news/bublik-o-motivacii-na-turniry-inogda-priezzhayu-potomu-chto-nado-i-net-vybora-inogda-za-pobedoy-2479756/",
   "team-spirit-predstavila-gimn-dlya-bolelshchikov-k-pgl-major-singapore-2026-yeto",
   "https://www.sport-express.ru/football/rfpl/news/v-rostove-ozhidayut-vysokuyu-poseschaemost-na-matche-s-krasnodarom-2479789/",
-  "chopper-pokazal-pick-em-na-vtoroi-yetap-pgl-major-singapore-2026"
+  "chopper-pokazal-pick-em-na-vtoroi-yetap-pgl-major-singapore-2026",
+  "https://www.sport-express.ru/hockey/nhl/news/fridman-michkov-propustit-match-filadelfii-iz-za-narusheniya-komandnyh-pravil-2479811/",
+  "https://www.sport-express.ru/hockey/khl/news/napadayuschiy-admirala-kamara-diskvalificirovan-na-odin-match-2479792/",
+  "https://www.sport-express.ru/hockey/nhl/news/palmeri-vtoroy-god-podryad-vybyl-do-konca-sezona-iz-za-razryva-krestoobraznoy-svyazki-2479788/",
+  "https://www.sport-express.ru/hockey/nhl/news/istochnik-vashington-poluchil-neskolko-predlozheniy-po-obmenu-miroshnichenko-2479781/",
+  "https://www.sport-express.ru/football/rfpl/news/mazhich-ob-udalenii-osipenko-pomoschnik-soobschil-sude-chto-narusheniya-ne-bylo-2479799/"
  ],
- "news_i": 2,
+ "news_i": 4,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1712,7 +1712,7 @@
  "streak_day": {
   "2026-11-22": 2
  },
- "news_next": "2026-11-27T21:11:41.671982+03:00",
+ "news_next": "2026-11-27T21:42:41.426786+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1746,7 +1746,6 @@
  "vk_mode": "photo",
  "dz_err": null,
  "img_used": [
-  "https://images.cybersport.ru/images/as-is/plain/3f/3f48b047-3165-409a-9f9a-d98e94f012af.jpg",
   "https://images.cybersport.ru/images/as-is/plain/0e/0edd6fc1-c8fe-42eb-aed1-368423588002.jpg",
   "https://ss.sport-express.ru/userfiles/materials/224/2244277/1180x665.jpg",
   "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f0/Ayesha_Curry.jpg/1280px-Ayesha_Curry.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -2045,7 +2044,8 @@
   "https://upload.wikimedia.org/wikipedia/commons/4/45/1924_torneio_inicio.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
   "https://images.cybersport.ru/images/as-is/plain/4e/4ee08a99-23fb-47a2-bed5-55424997d0ea.jpg",
   "https://upload.wikimedia.org/wikipedia/commons/d/d8/Spanish_national_football_team_before_the_match_against_Switzerland_in_Valencia%2C_28.12.1941.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-  "https://images.cybersport.ru/images/as-is/plain/0c/0c2996f5-b16f-4c27-a855-d58795f56562.jpg"
+  "https://images.cybersport.ru/images/as-is/plain/0c/0c2996f5-b16f-4c27-a855-d58795f56562.jpg",
+  "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/2017_Confederations_Cup_-_Final_-_Judges_awarding_ceremony.jpg/1280px-2017_Confederations_Cup_-_Final_-_Judges_awarding_ceremony.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
  ],
  "indexnow_day": "2026-11-27",
  "vk_wall_err": null,
@@ -2535,7 +2535,8 @@
   "9803",
   "9807",
   "9809",
-  "9813"
+  "9813",
+  "9815"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -2957,11 +2958,12 @@
   "2026-11-27:новость:26ff739878584b7ab8a9fb57",
   "2026-11-27:новость:7782ce9edb9a4036a7d1e944",
   "2026-11-27:новость:42a497ac8c125e4839a29fc6",
-  "2026-11-27:новость:04f5fed7e80431e758a71009"
+  "2026-11-27:новость:04f5fed7e80431e758a71009",
+  "2026-11-27:новость:ca4633341ee8927b8266b84e"
  ],
  "dz_last_delivery": {
-  "source_id": 9813,
-  "message_id": 969,
+  "source_id": 9815,
+  "message_id": 970,
   "kind": "новость"
  },
  "learn_attempt_day": "2026-11-27",
@@ -3164,7 +3166,7 @@
   "quote_matches": 164
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-27T21:10:41.056450+03:00",
+  "last_poll": "2026-11-27T21:12:41.426786+03:00",
   "cursor": "486",
   "posts": [
    {
@@ -7943,7 +7945,7 @@
   },
   "football|AUT|401881739": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-27T18:01:02.804199+00:00",
+   "checked_at": "2026-11-27T18:13:01.024397+00:00",
    "kickoff": "2026-11-27T21:30:00+03:00",
    "sport": "football",
    "id": "401881739",
