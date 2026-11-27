@@ -4671,5 +4671,408 @@
   "div": "DOTA",
   "reason": "no_real_odds",
   "retry_at": 1795786359.770355
+ },
+ "NHL|401892795": {
+  "id": "401892795",
+  "div": "NHL",
+  "sport": "hockey",
+  "kickoff": "2026-11-27T21:00:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "detail": "Fri, November 27th at 1:00 PM EST",
+  "clock": "0:00",
+  "period": 0,
+  "home": {
+   "id": "1",
+   "name": "Boston Bruins",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/bos.png",
+   "color": "231f20",
+   "score": "0",
+   "record": "15-8-1",
+   "periods": [],
+   "ru": "Бостон"
+  },
+  "away": {
+   "id": "21",
+   "name": "Toronto Maple Leafs",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/tor.png",
+   "color": "003e7e",
+   "score": "0",
+   "record": "9-14-3",
+   "periods": [],
+   "ru": "Торонто"
+  },
+  "odds": {
+   "H": 1.645,
+   "A": 2.3,
+   "line": 6.5,
+   "over": 1.87,
+   "under": 1.952,
+   "spread": -1.5,
+   "sp_h": 2.5,
+   "sp_a": 1.556
+  },
+  "probs": {
+   "HK_ML_H": 0.5830125256957526,
+   "HK_ML_A": 0.4169874743042475,
+   "HK_H": 0.5029509231065741,
+   "HK_D": 0.15396462036380484,
+   "HK_A": 0.34308445652962116,
+   "HK_O5.5": 0.6649092004158568,
+   "HK_U5.5": 0.3350907995841431,
+   "HK_O6.5": 0.510728795792759,
+   "HK_U6.5": 0.4892712042072406,
+   "HK_O7.5": 0.3621719374294712,
+   "HK_U7.5": 0.6378280625705288,
+   "HK_IT1O1.5": 0.8780580734273097,
+   "HK_IT1O2.5": 0.7039312944671423,
+   "HK_IT1O3.5": 0.49263436586142545,
+   "HK_IT2O1.5": 0.8158244349623597,
+   "HK_IT2O2.5": 0.5996084834556381,
+   "HK_IT2O3.5": 0.3758764829039175,
+   "HK_H-1.5": 0.349175306941413,
+   "HK_A+1.5": 0.650824693058587,
+   "HK_A-1.5": 0.21195500858617192,
+   "HK_H+1.5": 0.788044991413828
+  },
+  "labels": {
+   "HK_ML_H": "П1 (с ОТ и буллитами)",
+   "HK_ML_A": "П2 (с ОТ и буллитами)",
+   "HK_H": "П1 в основное время",
+   "HK_D": "Ничья в основное время",
+   "HK_A": "П2 в основное время",
+   "HK_O5.5": "ТБ 5.5",
+   "HK_U5.5": "ТМ 5.5",
+   "HK_O6.5": "ТБ 6.5",
+   "HK_U6.5": "ТМ 6.5",
+   "HK_O7.5": "ТБ 7.5",
+   "HK_U7.5": "ТМ 7.5",
+   "HK_IT1O1.5": "ИТ1 больше 1.5",
+   "HK_IT1O2.5": "ИТ1 больше 2.5",
+   "HK_IT1O3.5": "ИТ1 больше 3.5",
+   "HK_IT2O1.5": "ИТ2 больше 1.5",
+   "HK_IT2O2.5": "ИТ2 больше 2.5",
+   "HK_IT2O3.5": "ИТ2 больше 3.5",
+   "HK_H-1.5": "Ф1 (−1.5)",
+   "HK_A+1.5": "Ф2 (+1.5)",
+   "HK_A-1.5": "Ф2 (−1.5)",
+   "HK_H+1.5": "Ф1 (+1.5)"
+  },
+  "real": {
+   "HK_ML_H": 1.645,
+   "HK_ML_A": 2.3,
+   "HK_O6.5": 1.87,
+   "HK_U6.5": 1.952
+  },
+  "center": "Ожидаемые голы 3.6 : 3.1",
+  "bar": [
+   0.5830125256957526,
+   0,
+   0.4169874743042475
+  ],
+  "model": {
+   "lh": 3.640398045622593,
+   "la": 3.10428530817393
+  },
+  "stavka_signal": {
+   "status": "collecting",
+   "weight": 0.0,
+   "authors": 18,
+   "group": "hockey",
+   "snapshot": "NHL|401892795",
+   "source": "https://stavka.tv"
+  },
+  "research": {
+   "articles": [
+    {
+     "id": "9adfc906d23a409e4e0abd34",
+     "kind": "context",
+     "provider": "vseprosport",
+     "source": "https://www.vseprosport.ru/news/2026/11/26/boston-toronto-prognoz-kf-1-80-i-stavki-na-match-nhl-27-nojabrja-2026-goda",
+     "sport": "hockey",
+     "div": "NHL",
+     "event_id": "401892795",
+     "kickoff": "2026-11-27T18:00:00+00:00",
+     "published_at": "2026-11-26T13:55:57+00:00",
+     "observed_at": "2026-11-26T14:42:04.240837+00:00",
+     "tables": []
+    },
+    {
+     "id": "dd6264c5f88455a99572d380",
+     "kind": "context",
+     "provider": "livesport",
+     "source": "https://www.livesport.ru/tips/hockey/2026/11/27/boston-bruins-toronto-maple-leafs/",
+     "sport": "hockey",
+     "div": "NHL",
+     "event_id": "401892795",
+     "kickoff": "2026-11-27T18:00:00+00:00",
+     "published_at": "2026-11-26T17:00:00+00:00",
+     "observed_at": "2026-11-26T17:15:31.820271+00:00",
+     "tables": [
+      [
+       [
+        "",
+        "Букмекер",
+        "1",
+        "x",
+        "2",
+        "Новым игрокам",
+        ""
+       ],
+       [
+        "",
+        "",
+        "2.00",
+        "4.40",
+        "3.05",
+        "Фрибет",
+        "15 000 ₽"
+       ],
+       [
+        "",
+        "",
+        "1.92",
+        "4.42",
+        "3.33",
+        "Фрибет",
+        "30 000 ₽"
+       ],
+       [
+        "",
+        "",
+        "1.98",
+        "4.40",
+        "3.10",
+        "Фрибет всем",
+        "10 000 ₽"
+       ],
+       [
+        "",
+        "",
+        "1.90",
+        "4.40",
+        "3.35",
+        "Фрибет",
+        "1000 ₽"
+       ]
+      ]
+     ]
+    },
+    {
+     "id": "0e7a14ca9a92591e38c4fadc",
+     "kind": "context",
+     "provider": "metaratings",
+     "source": "https://metaratings.ru/prognozy/hokkey/boston-toronto-prognoz-na-match-nhl-27-noyabrya-2026-goda/",
+     "sport": "hockey",
+     "div": "NHL",
+     "event_id": "401892795",
+     "kickoff": "2026-11-27T18:00:00+00:00",
+     "published_at": "2026-11-26T15:59:16+00:00",
+     "observed_at": "2026-11-26T19:19:34.914282+00:00",
+     "tables": []
+    }
+   ],
+   "dossier": null
+  },
+  "main": {
+   "key": "HK_ML_H",
+   "label": "П1 (с ОТ и буллитами)",
+   "p": 0.583,
+   "odds": 1.65,
+   "est": false,
+   "stake": 0.5,
+   "strategy": "external_trial",
+   "selection_mode": "external_fallback",
+   "trial_expires_at": null,
+   "probability_origin": "baseline_model",
+   "model_edge": -0.03803,
+   "source_count": 16,
+   "source_refs": [
+    {
+     "author": "/predictors/nphne-ai-aa-io3lo426",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/27-11-2026-boston-bruins-toronto-maple-leafs",
+     "published_at": "2026-11-26T09:09:00+00:00",
+     "observed_at": "2026-11-26T09:18:40.670763+00:00",
+     "odds": 1.55,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/sergei-exp",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/27-11-2026-boston-bruins-toronto-maple-leafs",
+     "published_at": "2026-11-26T16:18:00+00:00",
+     "observed_at": "2026-11-26T18:45:09.932750+00:00",
+     "odds": 1.6,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/aleksandr-slepcov-1",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/27-11-2026-boston-bruins-toronto-maple-leafs",
+     "published_at": "2026-11-26T17:31:00+00:00",
+     "observed_at": "2026-11-26T17:41:08.304008+00:00",
+     "odds": 1.62,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/ilya-kurbatov-2",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/27-11-2026-boston-bruins-toronto-maple-leafs",
+     "published_at": "2026-11-26T17:44:00+00:00",
+     "observed_at": "2026-11-26T18:01:09.819658+00:00",
+     "odds": 1.62,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/leonel-messi-5",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/27-11-2026-boston-bruins-toronto-maple-leafs",
+     "published_at": "2026-11-26T19:00:00+00:00",
+     "observed_at": "2026-11-26T19:07:09.592806+00:00",
+     "odds": 1.6,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/dmitrii-sug",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/27-11-2026-boston-bruins-toronto-maple-leafs",
+     "published_at": "2026-11-26T19:09:00+00:00",
+     "observed_at": "2026-11-26T19:27:10.089363+00:00",
+     "odds": 1.6,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/ekaterina-filippova-2",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/27-11-2026-boston-bruins-toronto-maple-leafs",
+     "published_at": "2026-11-26T20:38:00+00:00",
+     "observed_at": "2026-11-26T20:48:41.882017+00:00",
+     "odds": 1.6,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/dimas-barabasik",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/27-11-2026-boston-bruins-toronto-maple-leafs",
+     "published_at": "2026-11-26T23:26:00+00:00",
+     "observed_at": "2026-11-26T23:36:55.824201+00:00",
+     "odds": 1.6,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/viaceslav-29",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/27-11-2026-boston-bruins-toronto-maple-leafs",
+     "published_at": "2026-11-27T02:41:00+00:00",
+     "observed_at": "2026-11-27T02:48:20.068059+00:00",
+     "odds": 1.6,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/kair-akisevv-1",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/27-11-2026-boston-bruins-toronto-maple-leafs",
+     "published_at": "2026-11-27T06:54:00+00:00",
+     "observed_at": "2026-11-27T06:59:39.762594+00:00",
+     "odds": 1.6,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/ivan-brovkin-2",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/27-11-2026-boston-bruins-toronto-maple-leafs",
+     "published_at": "2026-11-27T08:36:00+00:00",
+     "observed_at": "2026-11-27T12:40:15.253492+00:00",
+     "odds": 1.6,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/maguk55",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/27-11-2026-boston-bruins-toronto-maple-leafs",
+     "published_at": "2026-11-27T09:03:00+00:00",
+     "observed_at": "2026-11-27T09:08:14.328803+00:00",
+     "odds": 1.6,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/pavel-nekrasov-1",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/27-11-2026-boston-bruins-toronto-maple-leafs",
+     "published_at": "2026-11-27T10:26:00+00:00",
+     "observed_at": "2026-11-27T10:32:14.161852+00:00",
+     "odds": 1.6,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/pavel-appolonov-1",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/27-11-2026-boston-bruins-toronto-maple-leafs",
+     "published_at": "2026-11-27T12:30:00+00:00",
+     "observed_at": "2026-11-27T12:40:15.253492+00:00",
+     "odds": 1.6,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/troy9907",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/27-11-2026-boston-bruins-toronto-maple-leafs",
+     "published_at": "2026-11-27T14:36:00+00:00",
+     "observed_at": "2026-11-27T14:44:40.416189+00:00",
+     "odds": 1.6,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/dannil-mazur",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/27-11-2026-boston-bruins-toronto-maple-leafs",
+     "published_at": "2026-11-27T16:05:00+00:00",
+     "observed_at": "2026-11-27T16:08:40.417199+00:00",
+     "odds": 1.65,
+     "price_kind": "author_recorded"
+    }
+   ]
+  },
+  "bold": {},
+  "open": {
+   "HK_ML_H": 0.583
+  },
+  "top": false,
+  "msg_id": 9804,
+  "btn": 2
+ },
+ "NHL|401892796": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-27T21:00:00+03:00",
+  "sport": "hockey",
+  "div": "NHL",
+  "reason": "no_qualified_real_market",
+  "retry_at": 1795799320.228848
+ },
+ "NHL|401892797": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-27T21:00:00+03:00",
+  "sport": "hockey",
+  "div": "NHL",
+  "reason": "no_qualified_real_market",
+  "retry_at": 1795799320.228848
+ },
+ "WTA|186832": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-27T21:00:00+03:00",
+  "sport": "tennis",
+  "div": "WTA",
+  "reason": "no_qualified_real_market",
+  "retry_at": 1795799320.228848
+ },
+ "WTA|186829": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-27T21:00:00+03:00",
+  "sport": "tennis",
+  "div": "WTA",
+  "reason": "no_qualified_real_market",
+  "retry_at": 1795799320.228848
  }
 }
