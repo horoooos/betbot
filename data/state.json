@@ -7,10 +7,6 @@
  "schedule_day": "2026-11-27",
  "content_slot": "2026-11-27-16",
  "news_seen": [
-  "https://www.sport-express.ru/football/spain/news/ernandes-ernandes-luchshiy-sudya-ispanii-del-serro-grande-luchshiy-var-2478401/",
-  "https://www.sport-express.ru/football/rus_cup/news/akron-cska-startovye-sostavy-na-match-6-go-tura-puti-rpl-kubka-rossii-24-noyabrya-2026-2478400/",
-  "v-dota-2-izmenili-povedeniye-neitralnykh-i-lainovykh-kripov",
-  "https://www.sport-express.ru/hockey/khl/news/golkiper-salavata-bocharov-zadacha-propustit-na-odnu-menshe-chem-sopernik-2478411/",
   "https://www.sport-express.ru/hockey/khl/news/golkiper-salavata-bocharov-menya-zdorovo-prinyali-v-ufe-2478409/",
   "https://www.sport-express.ru/hockey/khl/news/zaschitnik-salavata-alekseev-o-krizise-komandy-ne-nuzhno-iskat-kakie-to-otgovorki-2478395/",
   "https://www.sport-express.ru/hockey/nhl/news/ovechkin-o-vladelce-vashingtona-leonsise-ya-srazu-pochuvstvoval-sebya-kak-doma-blagodarya-seme-teda-2478393/",
@@ -506,9 +502,13 @@
   "team-liquid-vybila-parivision-v-nizhnyuyu-setku-plei-off-na-blast-slam-ix",
   "rain-ya-by-khotel-ostat-sya-v-kibersporte-no-ne-v-roli-trenera",
   "https://www.sport-express.ru/football/europa-league/news/uefa-nachal-rassledovaniya-besporyadkov-na-dvuh-matchah-ligi-evropy-2479726/",
-  "https://www.sport-express.ru/football/rfpl/news/tyukavin-ob-igre-galatasaraya-kak-budto-ne-hvatalo-napadayuschego-2479723/"
+  "https://www.sport-express.ru/football/rfpl/news/tyukavin-ob-igre-galatasaraya-kak-budto-ne-hvatalo-napadayuschego-2479723/",
+  "https://www.sport-express.ru/basketball/vtb-league/news/reper-t-killah-podpisal-kontrakt-s-basketbolnym-zenitom-2479738/",
+  "https://www.sport-express.ru/tennis/wta/news/aleksandr-medvedev-obyasnil-pochemu-andreeva-i-rublev-ne-sygrayut-v-trofeyah-severnoy-palmiry-2026-2479736/",
+  "https://www.sport-express.ru/olympics/news/shnayder-hochet-vystupit-s-andreevoy-na-olimpiade-2028-budem-delat-vse-vozmozhnoe-2479733/",
+  "fallen-o-finansovykh-problemakh-v-cs2-ikh-mozhno-bylo-by-reshit-dobaviv-chto-to"
  ],
- "news_i": 4,
+ "news_i": 0,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1701,7 +1701,7 @@
  "streak_day": {
   "2026-11-22": 2
  },
- "news_next": "2026-11-27T17:36:39.393482+03:00",
+ "news_next": "2026-11-27T18:04:40.013782+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1735,7 +1735,6 @@
  "vk_mode": "photo",
  "dz_err": null,
  "img_used": [
-  "https://ss.sport-express.ru/userfiles/materials/224/2244177/1180x665.jpg",
   "https://ss.sport-express.ru/userfiles/materials/224/2244186/1180x665.jpg",
   "https://images.cybersport.ru/images/as-is/plain/c9/c9124d55-587f-4671-b0c6-dbc2842fd0ef.jpg",
   "https://upload.wikimedia.org/wikipedia/commons/7/78/Aleksandr_Mostovoi_2007.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
@@ -2034,7 +2033,8 @@
   "https://images.cybersport.ru/images/as-is/plain/39/396a4cd5-d6e2-43af-928c-b9cf58dc9a29.jpg",
   "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8f/1112020_sPICT.jpg/1280px-1112020_sPICT.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
   "https://images.cybersport.ru/images/as-is/plain/4f/4f06dfa1-456a-4a97-be51-23b68561dc2d.jpg",
-  "https://upload.wikimedia.org/wikipedia/commons/9/94/Agdz_Football_%28soccer%29_match.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+  "https://upload.wikimedia.org/wikipedia/commons/9/94/Agdz_Football_%28soccer%29_match.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "https://images.cybersport.ru/images/as-is/plain/c0/c0ac370a-c9c6-426c-b644-00c0f80f8b3e.jpg"
  ],
  "indexnow_day": "2026-11-27",
  "vk_wall_err": null,
@@ -2516,7 +2516,8 @@
   "9780",
   "9784",
   "9786",
-  "9788"
+  "9788",
+  "9789"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -2930,11 +2931,12 @@
   "2026-11-27:новость:7d91b46c54a905f27d5c84cb",
   "2026-11-27:новость:632329965c91b050f2e72441",
   "2026-11-27:новость:101d9736b39f4db9c6b10183",
-  "2026-11-27:новость:a84aca234082e2e5056486aa"
+  "2026-11-27:новость:a84aca234082e2e5056486aa",
+  "2026-11-27:новость:a50035e9e2389c7af8043a8c"
  ],
  "dz_last_delivery": {
-  "source_id": 9788,
-  "message_id": 961,
+  "source_id": 9789,
+  "message_id": 962,
   "kind": "новость"
  },
  "learn_attempt_day": "2026-11-27",
@@ -3137,7 +3139,7 @@
   "quote_matches": 160
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-27T17:34:39.448915+03:00",
+  "last_poll": "2026-11-27T17:36:40.013782+03:00",
   "cursor": "478",
   "posts": [
    {
