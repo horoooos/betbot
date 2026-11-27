@@ -3114,15 +3114,15 @@
   "model": {
    "weight": 0.0,
    "status": "baseline_better",
-   "settled_matches": 185,
+   "settled_matches": 187,
    "required_matches": 100,
-   "trained_at": "2026-11-27T21:54:35.708412+00:00",
+   "trained_at": "2026-11-27T21:56:35.246073+00:00",
    "candidate_weight": 0.0,
    "train_matches": 139,
-   "validation_matches": 45,
+   "validation_matches": 47,
    "validation_from": "2026-11-25T00:00:00+00:00",
-   "validation_logloss": 2.786247179817986,
-   "validation_baseline_logloss": 2.786247179817986
+   "validation_logloss": 2.811408825174363,
+   "validation_baseline_logloss": 2.811408825174363
   },
   "sport_models": {
    "hockey": {
@@ -3184,7 +3184,7 @@
   "quote_matches": 167
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-28T00:54:35.708412+03:00",
+  "last_poll": "2026-11-28T00:56:35.246073+03:00",
   "cursor": "494",
   "posts": [
    {
@@ -4096,7 +4096,7 @@
    "401878930": "post",
    "401879225": "post",
    "401880129": "post",
-   "401882791": "in",
+   "401882791": "post",
    "401885389": "in",
    "401888643": "in",
    "401921361": "in",
@@ -19277,7 +19277,7 @@
     "profit_pct": -0.5
    },
    "football|E0|401879225": {
-    "status": "open",
+    "status": "settled",
     "id": "401879225",
     "sport": "football",
     "div": "E0",
@@ -19695,7 +19695,10 @@
        "price_kind": "author_recorded"
       }
      ]
-    }
+    },
+    "settled_at": "2026-11-27T21:56:35.246073+00:00",
+    "hit": false,
+    "profit_pct": -0.5
    },
    "football|I1|401875004": {
     "status": "settled",
@@ -20320,7 +20323,7 @@
     "profit_pct": -0.5
    },
    "football|E1|401880129": {
-    "status": "open",
+    "status": "settled",
     "id": "401880129",
     "sport": "football",
     "div": "E1",
@@ -20423,7 +20426,10 @@
        "price_kind": "author_recorded"
       }
      ]
-    }
+    },
+    "settled_at": "2026-11-27T21:56:35.246073+00:00",
+    "hit": false,
+    "profit_pct": -0.5
    },
    "hockey|NHL|401892803": {
     "status": "open",
