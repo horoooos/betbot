@@ -2964,7 +2964,7 @@
   "external_sources": {
    "providers": {
     "legalbet": {
-     "at": "2026-11-27T14:46:40.681375+00:00",
+     "at": "2026-11-27T15:18:40.784048+00:00",
      "status": "ok",
      "discovered": 2,
      "pages": 2,
@@ -2975,29 +2975,29 @@
      "contexts": 2
     },
     "livesport": {
-     "at": "2026-11-27T14:46:40.681375+00:00",
+     "at": "2026-11-27T15:18:40.784048+00:00",
      "status": "ok",
-     "discovered": 19,
+     "discovered": 21,
      "pages": 6,
      "opinions": 10,
      "mapped": 5,
-     "articles_available": 32,
-     "next_offset": 20,
+     "articles_available": 34,
+     "next_offset": 26,
      "contexts": 6
     },
     "metaratings": {
-     "at": "2026-11-27T14:46:40.681375+00:00",
+     "at": "2026-11-27T15:18:40.784048+00:00",
      "status": "ok",
      "discovered": 10,
      "pages": 6,
      "opinions": 24,
-     "mapped": 2,
+     "mapped": 0,
      "articles_available": 34,
-     "next_offset": 14,
+     "next_offset": 10,
      "contexts": 6
     },
     "rb": {
-     "at": "2026-11-27T14:46:40.681375+00:00",
+     "at": "2026-11-27T15:18:40.784048+00:00",
      "status": "ok",
      "discovered": 1,
      "pages": 1,
@@ -3008,21 +3008,18 @@
      "contexts": 1
     },
     "vseprosport": {
-     "at": "2026-11-27T14:46:40.681375+00:00",
-     "status": "ok",
-     "discovered": 4,
-     "pages": 3,
+     "at": "2026-11-27T15:18:40.784048+00:00",
+     "status": "unavailable",
+     "discovered": 0,
+     "pages": 0,
      "opinions": 0,
      "mapped": 0,
-     "articles_available": 10,
-     "next_offset": 4,
-     "page_errors": 1,
-     "contexts": 3
+     "error": "HTTPError"
     }
    },
-   "opinions": 68,
+   "opinions": 69,
    "snapshots": 0,
-   "contexts": 189,
+   "contexts": 190,
    "model": {
     "weight": 0.0,
     "status": "collecting",
@@ -3141,7 +3138,7 @@
   "quote_matches": 161
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-27T18:16:40.435374+03:00",
+  "last_poll": "2026-11-27T18:18:40.784048+03:00",
   "cursor": "480",
   "posts": [
    {
