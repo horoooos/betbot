@@ -2070,8 +2070,8 @@
  "vk_photos": [],
  "vk_photo_until": 1794644243.1147308,
  "vk_photo_cursor": {},
- "vk_story_last": 9763,
- "vk_story_err": null,
+ "vk_story_last": 9765,
+ "vk_story_err": "VK stories: сервер не вернул upload_result",
  "push_weekly": "2026-47",
  "vk_story_at": 1795778804.0666947,
  "vk_story_url": "https://vk.com/story-228963529_456239184",
@@ -2950,51 +2950,51 @@
   "external_sources": {
    "providers": {
     "legalbet": {
-     "at": "2026-11-27T11:12:14.011682+00:00",
-     "status": "ok",
-     "discovered": 1,
-     "pages": 1,
-     "opinions": 1,
-     "mapped": 0,
-     "articles_available": 5,
-     "next_offset": 1,
-     "contexts": 1
-    },
-    "livesport": {
-     "at": "2026-11-27T11:12:14.011682+00:00",
-     "status": "ok",
-     "discovered": 12,
-     "pages": 6,
-     "opinions": 8,
-     "mapped": 4,
-     "articles_available": 22,
-     "next_offset": 6,
-     "contexts": 6
-    },
-    "metaratings": {
-     "at": "2026-11-27T11:12:14.011682+00:00",
-     "status": "ok",
-     "discovered": 8,
-     "pages": 6,
-     "opinions": 24,
-     "mapped": 0,
-     "articles_available": 32,
-     "next_offset": 12,
-     "contexts": 6
-    },
-    "rb": {
-     "at": "2026-11-27T11:12:14.011682+00:00",
+     "at": "2026-11-27T11:42:14.786165+00:00",
      "status": "ok",
      "discovered": 2,
      "pages": 2,
-     "opinions": 0,
+     "opinions": 2,
      "mapped": 0,
-     "articles_available": 2,
+     "articles_available": 5,
      "next_offset": 3,
      "contexts": 2
     },
+    "livesport": {
+     "at": "2026-11-27T11:42:14.786165+00:00",
+     "status": "ok",
+     "discovered": 12,
+     "pages": 6,
+     "opinions": 4,
+     "mapped": 3,
+     "articles_available": 22,
+     "next_offset": 12,
+     "contexts": 6
+    },
+    "metaratings": {
+     "at": "2026-11-27T11:42:14.786165+00:00",
+     "status": "ok",
+     "discovered": 10,
+     "pages": 6,
+     "opinions": 24,
+     "mapped": 2,
+     "articles_available": 33,
+     "next_offset": 8,
+     "contexts": 6
+    },
+    "rb": {
+     "at": "2026-11-27T11:42:14.786165+00:00",
+     "status": "ok",
+     "discovered": 1,
+     "pages": 1,
+     "opinions": 0,
+     "mapped": 0,
+     "articles_available": 1,
+     "next_offset": 1,
+     "contexts": 1
+    },
     "vseprosport": {
-     "at": "2026-11-27T11:12:14.011682+00:00",
+     "at": "2026-11-27T11:42:14.786165+00:00",
      "status": "ok",
      "discovered": 4,
      "pages": 3,
@@ -3008,7 +3008,7 @@
    },
    "opinions": 63,
    "snapshots": 0,
-   "contexts": 178,
+   "contexts": 180,
    "model": {
     "weight": 0.0,
     "status": "collecting",
@@ -3127,7 +3127,7 @@
   "quote_matches": 157
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-27T14:40:14.260268+03:00",
+  "last_poll": "2026-11-27T14:42:14.786165+03:00",
   "cursor": "472",
   "posts": [
    {
@@ -3916,7 +3916,6 @@
    "1816929": "pre",
    "1816496": "in",
    "401921361": "pre",
-   "1816928": "in",
    "401841337": "pre",
    "401912683": "pre",
    "401888557": "pre",
@@ -17849,5 +17848,6 @@
     }
    }
   }
- }
+ },
+ "vk_story_retry_at": 1795783380.7783961
 }
