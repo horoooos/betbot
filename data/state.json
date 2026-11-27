@@ -3123,7 +3123,7 @@
   "quote_matches": 154
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-27T13:32:14.161852+03:00",
+  "last_poll": "2026-11-27T13:34:14.695614+03:00",
   "cursor": "469",
   "posts": [
    {
@@ -17272,7 +17272,7 @@
     "profit_pct": 0.37
    },
    "football|AUS|401892133": {
-    "status": "open",
+    "status": "settled",
     "id": "401892133",
     "sport": "football",
     "div": "AUS",
@@ -17582,7 +17582,10 @@
        "price_kind": "author_recorded"
       }
      ]
-    }
+    },
+    "settled_at": "2026-11-27T10:34:14.695614+00:00",
+    "hit": true,
+    "profit_pct": 0.305
    }
   }
  },
