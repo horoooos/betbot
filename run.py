@@ -778,6 +778,8 @@ def main():
             if pd.Timestamp(m["kickoff"]) < now - pd.Timedelta(hours=3):
                 m["btn"] = btn_ver  # старые матчи не трогаем
                 continue
+            if m.get("main", {}).get("strategy") == "external_trial":
+                continue
             sp = m.get("sport", "football")
             if telegram.add_buttons(m["msg_id"], live.buttons(m, sp, m["home"]["ru"], m["away"]["ru"])):
                 m["btn"] = btn_ver

@@ -31,5 +31,9 @@ class StakeGateTests(unittest.TestCase):
     def test_express_does_not_repackage_bookmaker_margin_as_edge(self):
         now=pd.Timestamp('2026-11-22T10:00:00Z')
         event={'state':'pre','kickoff':now+pd.Timedelta(hours=1),'odds':{'H':1.5,'D':4.,'A':6.},'home':{'ru':'А'},'away':{'ru':'Б'},'id':'1','div':'E0'}
-        self.assertEqual(content._favourites([event],[],now,6),[])
+        leg=content._favourites([event],[],now,6)[0]
+        self.assertEqual(leg['probability_origin'],'market_baseline')
+        self.assertLess(leg['p']*leg['odds'],1)
+        self.assertEqual(pro.stake(leg),0)
+        self.assertIn('перевес не подтверждён',content._express_text([leg],leg['odds'],leg['p']))
         self.assertEqual(content._risky_legs([event],[],now),[])
