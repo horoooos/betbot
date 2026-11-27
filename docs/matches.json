@@ -1,40 +1,5 @@
 [
 {
-"sport": "esports",
-"id": "1816499",
-"league": "Киберспорт · Dota 2",
-"kickoff": "2026-11-27T18:58:57+03:00",
-"home": "Aurora",
-"away": "PARIVISION",
-"hl": "https://cdn-api.pandascore.co/images/team/image/133882/600px_aurora_gaming_2025_allmode.png",
-"al": "https://cdn-api.pandascore.co/images/team/image/135712/250px_parivision_allmode.png",
-"hid": "133882",
-"aid": "135712",
-"bb": "https://betboom.ru/search?query=%D0%90%D1%83%D1%80%D0%BE%D1%80%D0%B0&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=esports",
-"path": "",
-"url": "dota.html?e=1816499&d=DOTA",
-"participants": [
-[
-"Aurora",
-"Aurora"
-],
-[
-"PARIVISION",
-"PARIVISION"
-]
-],
-"div": "DOTA",
-"state": "in",
-"bo": 3,
-"prediction": "",
-"hs": 1,
-"as": 1,
-"tip": "",
-"top": false,
-"bot": null,
-"lt": null
-},
-{
 "sport": "football",
 "id": "401888241",
 "league": "Турция · Суперлига",
@@ -951,7 +916,7 @@ null
 "bo": null,
 "prediction": "",
 "hs": "0",
-"as": "0",
+"as": "1",
 "tip": "",
 "top": false,
 "bot": null,
@@ -4644,21 +4609,21 @@ null
 "league": "Англия · Лига 1",
 "kickoff": "2026-11-28T18:00:00+03:00",
 "home": "Стокпорт Каунти",
-"away": "Leyton Orient",
+"away": "Лейтон Ориент",
 "hl": "https://a.espncdn.com/i/teamlogos/soccer/500/400.png",
 "al": "https://a.espncdn.com/i/teamlogos/soccer/500/309.png",
 "hid": "400",
 "aid": "309",
 "bb": "https://betboom.ru/search?query=%D0%A1%D1%82%D0%BE%D0%BA%D0%BF%D0%BE%D1%80%D1%82&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
 "path": "soccer/eng.3",
-"url": "live.html?s=football&p=soccer%2Feng.3&e=401880721&h=%D0%A1%D1%82%D0%BE%D0%BA%D0%BF%D0%BE%D1%80%D1%82+%D0%9A%D0%B0%D1%83%D0%BD%D1%82%D0%B8&a=Leyton+Orient",
+"url": "live.html?s=football&p=soccer%2Feng.3&e=401880721&h=%D0%A1%D1%82%D0%BE%D0%BA%D0%BF%D0%BE%D1%80%D1%82+%D0%9A%D0%B0%D1%83%D0%BD%D1%82%D0%B8&a=%D0%9B%D0%B5%D0%B9%D1%82%D0%BE%D0%BD+%D0%9E%D1%80%D0%B8%D0%B5%D0%BD%D1%82",
 "participants": [
 [
 "Стокпорт Каунти",
 "Stockport County"
 ],
 [
-"Leyton Orient",
+"Лейтон Ориент",
 "Leyton Orient"
 ]
 ],
@@ -5099,21 +5064,21 @@ null
 "league": "Англия · Премьер-лига",
 "kickoff": "2026-11-28T18:00:00+03:00",
 "home": "Лидс Юнайтед",
-"away": "Coventry City",
+"away": "Ковентри Сити",
 "hl": "https://a.espncdn.com/i/teamlogos/soccer/500/357.png",
 "al": "https://a.espncdn.com/i/teamlogos/soccer/500/388.png",
 "hid": "357",
 "aid": "388",
 "bb": "https://betboom.ru/search?query=%D0%AE%D0%BD%D0%B0%D0%B9%D1%82%D0%B5%D0%B4&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
 "path": "soccer/eng.1",
-"url": "live.html?s=football&p=soccer%2Feng.1&e=401879227&h=%D0%9B%D0%B8%D0%B4%D1%81+%D0%AE%D0%BD%D0%B0%D0%B9%D1%82%D0%B5%D0%B4&a=Coventry+City",
+"url": "live.html?s=football&p=soccer%2Feng.1&e=401879227&h=%D0%9B%D0%B8%D0%B4%D1%81+%D0%AE%D0%BD%D0%B0%D0%B9%D1%82%D0%B5%D0%B4&a=%D0%9A%D0%BE%D0%B2%D0%B5%D0%BD%D1%82%D1%80%D0%B8+%D0%A1%D0%B8%D1%82%D0%B8",
 "participants": [
 [
 "Лидс Юнайтед",
 "Leeds United"
 ],
 [
-"Coventry City",
+"Ковентри Сити",
 "Coventry City"
 ]
 ],
@@ -5508,6 +5473,41 @@ null
 "prediction": "",
 "hs": "0",
 "as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "esports",
+"id": "1816500",
+"league": "Киберспорт · Dota 2",
+"kickoff": "2026-11-28T18:00:00+03:00",
+"home": "1w Team",
+"away": "PARIVISION",
+"hl": "https://cdn-api.pandascore.co/images/team/image/134536/800px_1win_team_2024_allmode.png",
+"al": "https://cdn-api.pandascore.co/images/team/image/135712/250px_parivision_allmode.png",
+"hid": "134536",
+"aid": "135712",
+"bb": "https://betboom.ru/search?query=%D0%A2%D0%B5%D0%B0%D0%BC&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=esports",
+"path": "",
+"url": "dota.html?e=1816500&d=DOTA",
+"participants": [
+[
+"1w Team",
+"1w Team"
+],
+[
+"PARIVISION",
+"PARIVISION"
+]
+],
+"div": "DOTA",
+"state": "pre",
+"bo": 3,
+"prediction": "",
+"hs": 0,
+"as": 0,
 "tip": "",
 "top": false,
 "bot": null,
