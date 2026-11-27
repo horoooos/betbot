@@ -26645,7 +26645,7 @@
   "kickoff": "2026-11-27T20:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Scheduled",
   "home": {
    "id": "6418",
@@ -27428,7 +27428,10 @@
   "btn": 2,
   "close": {
    "H": 0.4314
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null,
+  "value_hit": null
  },
  "401885045": {
   "id": "401885045",
@@ -27437,7 +27440,7 @@
   "kickoff": "2026-11-27T20:30:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Scheduled",
   "home": {
    "id": "121",
@@ -28407,7 +28410,10 @@
   "btn": 2,
   "close": {
    "H": 0.5793
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null,
+  "value_hit": null
  },
  "401900873": {
   "status": "waiting_data",
@@ -29772,6 +29778,6 @@
   "sport": "football",
   "div": "P1",
   "reason": "edge_below_minimum",
-  "retry_at": 1795807428.058758
+  "retry_at": 1795808147.707768
  }
 }

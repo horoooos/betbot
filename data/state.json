@@ -1572,7 +1572,7 @@
  "value_day": "2026-11-27",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-27",
- "site_stamp": "1578|9826|2026-11-27 22|6|95a7e06b497ab288",
+ "site_stamp": "1580|9828|2026-11-27 22|6|f4b3dc62aeb9abca",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1740,7 +1740,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 9826,
+ "dz_last": 9828,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2993,7 +2993,7 @@
   "external_sources": {
    "providers": {
     "legalbet": {
-     "at": "2026-11-27T18:55:47.356701+00:00",
+     "at": "2026-11-27T19:25:47.707768+00:00",
      "status": "ok",
      "discovered": 2,
      "pages": 2,
@@ -3004,29 +3004,29 @@
      "contexts": 2
     },
     "livesport": {
-     "at": "2026-11-27T18:55:47.356701+00:00",
+     "at": "2026-11-27T19:25:47.707768+00:00",
      "status": "ok",
-     "discovered": 25,
+     "discovered": 24,
      "pages": 6,
      "opinions": 8,
      "mapped": 4,
      "articles_available": 39,
-     "next_offset": 24,
+     "next_offset": 6,
      "contexts": 6
     },
     "metaratings": {
-     "at": "2026-11-27T18:55:47.356701+00:00",
+     "at": "2026-11-27T19:25:47.707768+00:00",
      "status": "ok",
      "discovered": 7,
      "pages": 6,
      "opinions": 24,
      "mapped": 2,
      "articles_available": 32,
-     "next_offset": 7,
+     "next_offset": 6,
      "contexts": 6
     },
     "rb": {
-     "at": "2026-11-27T18:55:47.356701+00:00",
+     "at": "2026-11-27T19:25:47.707768+00:00",
      "status": "ok",
      "discovered": 0,
      "pages": 0,
@@ -3037,7 +3037,7 @@
      "contexts": 0
     },
     "vseprosport": {
-     "at": "2026-11-27T18:55:47.356701+00:00",
+     "at": "2026-11-27T19:25:47.707768+00:00",
      "status": "ok",
      "discovered": 4,
      "pages": 2,
@@ -3100,15 +3100,15 @@
   "model": {
    "weight": 0.0,
    "status": "baseline_better",
-   "settled_matches": 180,
+   "settled_matches": 181,
    "required_matches": 100,
-   "trained_at": "2026-11-27T18:57:47.518409+00:00",
+   "trained_at": "2026-11-27T19:25:47.707768+00:00",
    "candidate_weight": 0.0,
    "train_matches": 139,
-   "validation_matches": 40,
+   "validation_matches": 41,
    "validation_from": "2026-11-25T00:00:00+00:00",
-   "validation_logloss": 2.823601021954542,
-   "validation_baseline_logloss": 2.823601021954542
+   "validation_logloss": 2.8168306679997652,
+   "validation_baseline_logloss": 2.8168306679997652
   },
   "sport_models": {
    "hockey": {
@@ -3170,7 +3170,7 @@
   "quote_matches": 164
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-27T22:23:47.774317+03:00",
+  "last_poll": "2026-11-27T22:25:47.707768+03:00",
   "cursor": "487",
   "posts": [
    {
@@ -4028,8 +4028,8 @@
    "401900870": "post",
    "401888241": "post",
    "401888240": "post",
-   "401885047": "in",
-   "401885045": "in",
+   "401885047": "post",
+   "401885045": "post",
    "401900873": "in",
    "401902007": "post",
    "401874563": "in",
@@ -8212,7 +8212,7 @@
   },
   "football|P1|401885389": {
    "reason": "edge_below_minimum",
-   "checked_at": "2026-11-27T19:14:10.825900+00:00",
+   "checked_at": "2026-11-27T19:26:29.181371+00:00",
    "kickoff": "2026-11-27T23:15:00+03:00",
    "sport": "football",
    "id": "401885389",
