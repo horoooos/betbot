@@ -7,7 +7,6 @@
  "schedule_day": "2026-11-27",
  "content_slot": "2026-11-27-13",
  "news_seen": [
-  "https://www.sport-express.ru/hockey/nhl/news/oston-mettyus-pobil-rekord-toronto-105-letney-davnosti-po-rezultativnoy-serii-v-gostyah-so-starta-sezona-nhl-2478335/",
   "https://www.sport-express.ru/hockey/nhl/news/kirill-kaprizov-i-minnesota-ustanovili-klubnye-rekordy-serii-s-ochkami-iz-15-matchey-24-noyabrya-2026-2478334/",
   "https://www.sport-express.ru/hockey/nhl/news/monreal-i-anahaym-obmenyalis-vyborami-vo-vtorom-raunde-drafta-novosti-nhl-24-noyabrya-2026-2478366/",
   "https://www.sport-express.ru/football/rfpl/news/amerikanskiy-reper-french-montana-posetit-match-cska-zenit-2478385/",
@@ -506,9 +505,10 @@
   "https://www.sport-express.ru/sudejstvo/news/guida-vpervye-budet-sudit-match-napoli-hotya-ranshe-otkazyvalsya-ot-takih-naznacheniy-2479647/",
   "https://www.sport-express.ru/football/transfers/news/teamtalk-tottenhem-chelsi-i-fulhem-sledyat-za-kumbedi-iz-volfsburga-2479639/",
   "https://www.sport-express.ru/sudejstvo/news/teylor-vnov-priznal-sudeyskuyu-oshibku-v-polzu-komandy-batrakova-2479629/",
-  "https://www.sport-express.ru/football/rus_cup/news/vratar-dinamo-leschuk-zayavil-chto-igraet-v-gta-vi-poka-rebenok-spit-ryadom-nuzhno-chto-to-delat-2479587/"
+  "https://www.sport-express.ru/football/rus_cup/news/vratar-dinamo-leschuk-zayavil-chto-igraet-v-gta-vi-poka-rebenok-spit-ryadom-nuzhno-chto-to-delat-2479587/",
+  "valve-slomala-mekhaniku-stakov-v-dota-2-posle-pererabotki-meepo-igroki"
  ],
- "news_i": 1,
+ "news_i": 2,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1701,7 +1701,7 @@
  "streak_day": {
   "2026-11-22": 2
  },
- "news_next": "2026-11-27T14:27:14.402555+03:00",
+ "news_next": "2026-11-27T14:57:14.553023+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1735,7 +1735,6 @@
  "vk_mode": "photo",
  "dz_err": null,
  "img_used": [
-  "https://images.cybersport.ru/images/as-is/plain/6c/6cffa5e4-d127-4186-a64b-6b3c68b20c1d.jpg",
   "https://images.cybersport.ru/images/as-is/plain/e5/e587e7de-be65-4fd6-a68d-fd669741f8fe.jpg",
   "https://upload.wikimedia.org/wikipedia/commons/c/ce/GennadyOrlov.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
   "https://ss.sport-express.ru/userfiles/materials/224/2244022/1180x665.jpg",
@@ -2034,7 +2033,8 @@
   "https://images.cybersport.ru/images/as-is/plain/e6/e64b14cb-987a-4f1c-bd5a-c80ab1f93dce.jpg",
   "https://upload.wikimedia.org/wikipedia/commons/a/a4/%D0%9C.%D0%9C%D0%BE%D1%80%D0%BE%D0%B7%D1%8E%D0%BA%2C_%D0%A4%D0%9A_%22%D0%94%D0%B8%D0%BD%D0%B0%D0%BC%D0%BE_%D0%9A%D0%B8%D1%97%D0%B2%22_%282%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
   "https://images.cybersport.ru/images/as-is/plain/39/39886783-df60-4b45-9057-fb9fa65df16d.jpg",
-  "https://upload.wikimedia.org/wikipedia/commons/a/af/Dinamo-Loc2015_%289%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+  "https://upload.wikimedia.org/wikipedia/commons/a/af/Dinamo-Loc2015_%289%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "https://images.cybersport.ru/images/as-is/plain/ab/ab9ce120-0ae4-44aa-9950-338eb1c4fe8e.jpg"
  ],
  "indexnow_day": "2026-11-27",
  "vk_wall_err": null,
@@ -2510,7 +2510,8 @@
   "9766",
   "9767",
   "9770",
-  "9774"
+  "9774",
+  "9776"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -2918,11 +2919,12 @@
   "2026-11-27:новость:e46dbcd9ecccbad1b43fb093",
   "2026-11-27:новость:38709bb1ee423a5abfae91ed",
   "2026-11-27:новость:194873333f0d061ce32e4c49",
-  "2026-11-27:новость:a9a45b57fb86f59aaa418831"
+  "2026-11-27:новость:a9a45b57fb86f59aaa418831",
+  "2026-11-27:новость:45437eef260830832eb5cb18"
  ],
  "dz_last_delivery": {
-  "source_id": 9774,
-  "message_id": 955,
+  "source_id": 9776,
+  "message_id": 956,
   "kind": "новость"
  },
  "learn_attempt_day": "2026-11-27",
@@ -3125,7 +3127,7 @@
   "quote_matches": 157
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-27T14:26:14.805779+03:00",
+  "last_poll": "2026-11-27T14:28:14.553023+03:00",
   "cursor": "472",
   "posts": [
    {
