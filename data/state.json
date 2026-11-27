@@ -3005,7 +3005,7 @@
   "external_sources": {
    "providers": {
     "legalbet": {
-     "at": "2026-11-27T20:59:48.305756+00:00",
+     "at": "2026-11-27T21:30:35.557281+00:00",
      "status": "ok",
      "discovered": 2,
      "pages": 2,
@@ -3016,29 +3016,29 @@
      "contexts": 2
     },
     "livesport": {
-     "at": "2026-11-27T20:59:48.305756+00:00",
+     "at": "2026-11-27T21:30:35.557281+00:00",
      "status": "ok",
      "discovered": 17,
      "pages": 6,
-     "opinions": 10,
-     "mapped": 5,
-     "articles_available": 36,
-     "next_offset": 7,
+     "opinions": 8,
+     "mapped": 4,
+     "articles_available": 31,
+     "next_offset": 13,
      "contexts": 6
     },
     "metaratings": {
-     "at": "2026-11-27T20:59:48.305756+00:00",
+     "at": "2026-11-27T21:30:35.557281+00:00",
      "status": "ok",
      "discovered": 6,
      "pages": 6,
      "opinions": 24,
      "mapped": 2,
-     "articles_available": 38,
+     "articles_available": 39,
      "next_offset": 9,
      "contexts": 6
     },
     "rb": {
-     "at": "2026-11-27T20:59:48.305756+00:00",
+     "at": "2026-11-27T21:30:35.557281+00:00",
      "status": "ok",
      "discovered": 1,
      "pages": 1,
@@ -3049,21 +3049,21 @@
      "contexts": 0
     },
     "vseprosport": {
-     "at": "2026-11-27T20:59:48.305756+00:00",
+     "at": "2026-11-27T21:30:35.557281+00:00",
      "status": "ok",
-     "discovered": 7,
-     "pages": 2,
+     "discovered": 4,
+     "pages": 3,
      "opinions": 0,
      "mapped": 0,
      "articles_available": 10,
-     "next_offset": 10,
-     "page_errors": 4,
-     "contexts": 2
+     "next_offset": 6,
+     "page_errors": 1,
+     "contexts": 3
     }
    },
    "opinions": 74,
    "snapshots": 0,
-   "contexts": 203,
+   "contexts": 204,
    "model": {
     "weight": 0.0,
     "status": "collecting",
@@ -3177,12 +3177,12 @@
   },
   "error": null,
   "tips": 20359,
-  "snapshots": 432,
+  "snapshots": 433,
   "unmapped_markets": 30694,
   "quote_matches": 166
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-28T00:28:35.490741+03:00",
+  "last_poll": "2026-11-28T00:30:35.557281+03:00",
   "cursor": "492",
   "posts": [
    {
@@ -3996,7 +3996,6 @@
    "186841": "pre",
    "186842": "pre",
    "186843": "pre",
-   "401915816": "post",
    "401900871": "post",
    "401915506": "post",
    "401915519": "post",
@@ -4254,7 +4253,8 @@
    "401933726": "pre",
    "1816500": "pre",
    "401934475": "pre",
-   "401931996": "pre"
+   "401931996": "pre",
+   "401933721": "pre"
   },
   "daily": {
    "day": "2026-11-28"
