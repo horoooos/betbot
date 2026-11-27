@@ -28463,7 +28463,7 @@
   "sport": "football",
   "div": "SP2",
   "reason": "edge_below_minimum",
-  "retry_at": 1795806707.704029
+  "retry_at": 1795807428.058758
  },
  "401884720": {
   "status": "waiting_data",
@@ -28471,7 +28471,7 @@
   "sport": "football",
   "div": "D1",
   "reason": "no_qualified_real_market",
-  "retry_at": 1795806707.704029
+  "retry_at": 1795807428.058758
  },
  "401875004": {
   "status": "waiting_data",
@@ -29765,5 +29765,13 @@
   "div": "SP1",
   "reason": "edge_below_minimum",
   "retry_at": 1795807307.577943
+ },
+ "401885389": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-27T23:15:00+03:00",
+  "sport": "football",
+  "div": "P1",
+  "reason": "edge_below_minimum",
+  "retry_at": 1795807428.058758
  }
 }

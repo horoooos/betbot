@@ -7,8 +7,6 @@
  "schedule_day": "2026-11-27",
  "content_slot": "2026-11-27-22",
  "news_seen": [
-  "https://www.sport-express.ru/hockey/nhl/news/trener-rik-tokket-sravnil-konnora-makdevida-s-ueynom-gretcki-i-vliyanie-na-igru-v-nhl-on-prosto-dominiruet-v-lige-2478483/",
-  "https://www.sport-express.ru/hockey/nhl/news/trener-edmontona-mayk-bebkok-o-rezultativnosti-konnora-makdevida-ne-menee-vazhno-ne-pozvolyat-soperniku-zabivat-2478482/",
   "https://www.sport-express.ru/hockey/nhl/news/napadayuschiy-tampy-giki-vybyl-na-neskolko-mesyacev-posle-operacii-2478499/",
   "https://www.sport-express.ru/hockey/nhl/news/leon-drayzaytl-o-vzaimoponimanii-s-konnorom-makdevidom-est-momenty-kogda-nam-dazhe-ne-nuzhno-govorit-2478481/",
   "https://www.sport-express.ru/hockey/nhl/news/legenda-edmontona-yari-kurri-obyasnil-konnor-makdevid-motivirovan-posle-dvuh-proigrannyh-finalov-kubka-stenli-2478480/",
@@ -506,9 +504,11 @@
   "https://www.sport-express.ru/tennis/news/diana-shnayder-pobedila-dena-evansa-v-bitve-polov-27-noyabrya-2026-goda-2479791/",
   "https://www.sport-express.ru/tennis/wta/news/diana-shnayder-nazvala-mirru-andreevu-i-elenu-rybakinu-pretendentkami-na-zvanie-tennisistki-2026-goda-v-ture-wta-2479739/",
   "https://www.sport-express.ru/tennis/wta/news/elena-vesnina-schitaet-mirra-andreeva-mozhet-stat-pervoy-raketkoy-mira-v-reytinge-wta-2479687/",
-  "100-thieves-proshli-na-vtoroi-yetap-pgl-major-singapore-2026-obygrav-m80"
+  "100-thieves-proshli-na-vtoroi-yetap-pgl-major-singapore-2026-obygrav-m80",
+  "https://www.sport-express.ru/football/rus_d1/news/torpedo-ska-habarovsk-2-0-schet-i-rezultat-matcha-20-go-tura-ligi-pari-27-noyabrya-2026-2479831/",
+  "https://www.sport-express.ru/football/rfpl/news/mazhich-o-penalti-v-matche-cska-ahmat-var-snachala-razbiralsya-pravilno-2479798/"
  ],
- "news_i": 0,
+ "news_i": 1,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1712,7 +1712,7 @@
  "streak_day": {
   "2026-11-22": 2
  },
- "news_next": "2026-11-27T22:12:47.916102+03:00",
+ "news_next": "2026-11-27T22:46:48.058758+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1746,7 +1746,6 @@
  "vk_mode": "photo",
  "dz_err": null,
  "img_used": [
-  "https://ss.sport-express.ru/userfiles/materials/224/2244277/1180x665.jpg",
   "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f0/Ayesha_Curry.jpg/1280px-Ayesha_Curry.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
   "https://images.cybersport.ru/images/as-is/plain/09/094a70e6-f0a5-4325-9e2f-992f4d28e70d.jpg",
   "https://ss.sport-express.ru/userfiles/materials/224/2244352/1180x665.jpg",
@@ -2045,7 +2044,8 @@
   "https://upload.wikimedia.org/wikipedia/commons/d/d8/Spanish_national_football_team_before_the_match_against_Switzerland_in_Valencia%2C_28.12.1941.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
   "https://images.cybersport.ru/images/as-is/plain/0c/0c2996f5-b16f-4c27-a855-d58795f56562.jpg",
   "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/2017_Confederations_Cup_-_Final_-_Judges_awarding_ceremony.jpg/1280px-2017_Confederations_Cup_-_Final_-_Judges_awarding_ceremony.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-  "https://images.cybersport.ru/images/as-is/plain/3b/3b9cae3a-fe2f-440e-90d3-a17f2b139e2a.jpg"
+  "https://images.cybersport.ru/images/as-is/plain/3b/3b9cae3a-fe2f-440e-90d3-a17f2b139e2a.jpg",
+  "https://upload.wikimedia.org/wikipedia/commons/c/c8/Iran_vs._Argentina_match%2C_2014_FIFA_World_Cup_36.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
  ],
  "indexnow_day": "2026-11-27",
  "vk_wall_err": null,
@@ -2537,7 +2537,8 @@
   "9809",
   "9813",
   "9815",
-  "9817"
+  "9817",
+  "9825"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -2961,11 +2962,12 @@
   "2026-11-27:новость:42a497ac8c125e4839a29fc6",
   "2026-11-27:новость:04f5fed7e80431e758a71009",
   "2026-11-27:новость:ca4633341ee8927b8266b84e",
-  "2026-11-27:новость:ee5ada5690559331c9fb4930"
+  "2026-11-27:новость:ee5ada5690559331c9fb4930",
+  "2026-11-27:новость:c388d1a04c3b1ae5be4a10e8"
  ],
  "dz_last_delivery": {
-  "source_id": 9817,
-  "message_id": 971,
+  "source_id": 9825,
+  "message_id": 972,
   "kind": "новость"
  },
  "learn_attempt_day": "2026-11-27",
@@ -3168,7 +3170,7 @@
   "quote_matches": 164
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-27T22:11:47.577943+03:00",
+  "last_poll": "2026-11-27T22:13:48.058758+03:00",
   "cursor": "487",
   "posts": [
    {
@@ -8014,7 +8016,7 @@
   },
   "football|SP2|401883102": {
    "reason": "edge_below_minimum",
-   "checked_at": "2026-11-27T19:02:55.931573+00:00",
+   "checked_at": "2026-11-27T19:14:10.044516+00:00",
    "kickoff": "2026-11-27T22:30:00+03:00",
    "sport": "football",
    "id": "401883102",
@@ -8029,7 +8031,7 @@
   },
   "football|D1|401884720": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-27T19:02:56.344418+00:00",
+   "checked_at": "2026-11-27T19:14:10.439617+00:00",
    "kickoff": "2026-11-27T22:30:00+03:00",
    "sport": "football",
    "id": "401884720",
@@ -8044,7 +8046,7 @@
   },
   "tennis|WTA|186830": {
    "reason": "no_real_odds",
-   "checked_at": "2026-11-27T19:02:58.735545+00:00",
+   "checked_at": "2026-11-27T19:14:13.416076+00:00",
    "kickoff": "2026-11-27T22:30:00+03:00",
    "sport": "tennis",
    "id": "186830",
@@ -8207,6 +8209,21 @@
    "odds": 1.59,
    "edge": -0.07033,
    "estimated": true
+  },
+  "football|P1|401885389": {
+   "reason": "edge_below_minimum",
+   "checked_at": "2026-11-27T19:14:10.825900+00:00",
+   "kickoff": "2026-11-27T23:15:00+03:00",
+   "sport": "football",
+   "id": "401885389",
+   "home": "Маритиму",
+   "away": "Насьонал",
+   "priced_markets": 5,
+   "market": "ТМ 2.5",
+   "probability": 0.5887,
+   "odds": 1.58,
+   "edge": -0.06985,
+   "estimated": false
   }
  },
  "source_trial": {
