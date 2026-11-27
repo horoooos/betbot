@@ -5388,5 +5388,75 @@ null
 "top": false,
 "bot": null,
 "lt": null
+},
+{
+"sport": "football",
+"id": "401899524",
+"league": "Италия · Серия B",
+"kickoff": "2026-11-28T19:15:00+03:00",
+"home": "Виченца",
+"away": "Чезена",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/120.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/3337.png",
+"hid": "120",
+"aid": "3337",
+"bb": "https://betboom.ru/search?query=%D0%92%D0%B8%D1%87%D0%B5%D0%BD%D1%86%D0%B0&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/ita.2",
+"url": "live.html?s=football&p=soccer%2Fita.2&e=401899524&h=%D0%92%D0%B8%D1%87%D0%B5%D0%BD%D1%86%D0%B0&a=%D0%A7%D0%B5%D0%B7%D0%B5%D0%BD%D0%B0",
+"participants": [
+[
+"Виченца",
+"Vicenza"
+],
+[
+"Чезена",
+"Cesena"
+]
+],
+"div": "I2",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "football",
+"id": "401876394",
+"league": "Франция · Лига 1",
+"kickoff": "2026-11-28T19:15:00+03:00",
+"home": "Анже",
+"away": "Ланс",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/7868.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/175.png",
+"hid": "7868",
+"aid": "175",
+"bb": "https://betboom.ru/search?query=%D0%90%D0%BD%D0%B6%D0%B5&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/fra.1",
+"url": "live.html?s=football&p=soccer%2Ffra.1&e=401876394&h=%D0%90%D0%BD%D0%B6%D0%B5&a=%D0%9B%D0%B0%D0%BD%D1%81",
+"participants": [
+[
+"Анже",
+"Angers"
+],
+[
+"Ланс",
+"Lens"
+]
+],
+"div": "F1",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
 }
 ]
