@@ -1572,7 +1572,7 @@
  "value_day": "2026-11-27",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-27",
- "site_stamp": "1577|9818|2026-11-27 21|6|141a370228e31aaf",
+ "site_stamp": "1577|9819|2026-11-27 21|6|141a370228e31aaf",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1740,7 +1740,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 9818,
+ "dz_last": 9819,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2991,7 +2991,7 @@
   "external_sources": {
    "providers": {
     "legalbet": {
-     "at": "2026-11-27T18:24:42.673975+00:00",
+     "at": "2026-11-27T18:55:47.356701+00:00",
      "status": "ok",
      "discovered": 2,
      "pages": 2,
@@ -3002,29 +3002,29 @@
      "contexts": 2
     },
     "livesport": {
-     "at": "2026-11-27T18:24:42.673975+00:00",
+     "at": "2026-11-27T18:55:47.356701+00:00",
      "status": "ok",
-     "discovered": 22,
+     "discovered": 25,
      "pages": 6,
-     "opinions": 10,
-     "mapped": 5,
-     "articles_available": 35,
-     "next_offset": 18,
+     "opinions": 8,
+     "mapped": 4,
+     "articles_available": 39,
+     "next_offset": 24,
      "contexts": 6
     },
     "metaratings": {
-     "at": "2026-11-27T18:24:42.673975+00:00",
+     "at": "2026-11-27T18:55:47.356701+00:00",
      "status": "ok",
-     "discovered": 8,
+     "discovered": 7,
      "pages": 6,
      "opinions": 24,
-     "mapped": 0,
-     "articles_available": 33,
-     "next_offset": 8,
+     "mapped": 2,
+     "articles_available": 32,
+     "next_offset": 7,
      "contexts": 6
     },
     "rb": {
-     "at": "2026-11-27T18:24:42.673975+00:00",
+     "at": "2026-11-27T18:55:47.356701+00:00",
      "status": "ok",
      "discovered": 0,
      "pages": 0,
@@ -3035,21 +3035,21 @@
      "contexts": 0
     },
     "vseprosport": {
-     "at": "2026-11-27T18:24:42.673975+00:00",
+     "at": "2026-11-27T18:55:47.356701+00:00",
      "status": "ok",
-     "discovered": 7,
+     "discovered": 4,
      "pages": 2,
      "opinions": 0,
      "mapped": 0,
      "articles_available": 10,
      "next_offset": 6,
-     "page_errors": 4,
+     "page_errors": 2,
      "contexts": 2
     }
    },
-   "opinions": 72,
+   "opinions": 73,
    "snapshots": 0,
-   "contexts": 195,
+   "contexts": 198,
    "model": {
     "weight": 0.0,
     "status": "collecting",
@@ -3146,29 +3146,29 @@
    }
   },
   "source": {
-   "last_success": "2026-11-27T18:35:46.928326+00:00",
-   "parsed": 323,
-   "added": 93,
-   "discovered_matches": 45,
+   "last_success": "2026-11-27T18:55:47.356701+00:00",
+   "parsed": 325,
+   "added": 72,
+   "discovered_matches": 37,
    "pages": 16,
    "errors": [],
    "parsed_by_sport": {
     "soccer": 50,
     "ice-hockey": 50,
     "basketball": 50,
-    "tennis": 47,
+    "tennis": 49,
     "csgo": 36,
     "dota2": 50
    }
   },
   "error": null,
-  "tips": 20107,
+  "tips": 20145,
   "snapshots": 422,
-  "unmapped_markets": 30326,
+  "unmapped_markets": 30360,
   "quote_matches": 164
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-27T21:53:47.901544+03:00",
+  "last_poll": "2026-11-27T21:55:47.356701+03:00",
   "cursor": "487",
   "posts": [
    {
@@ -4025,7 +4025,7 @@
    "401900872": "post",
    "401900870": "post",
    "401888241": "in",
-   "401888240": "in",
+   "401888240": "post",
    "401885047": "in",
    "401885045": "in",
    "401900873": "in",
@@ -8053,7 +8053,7 @@
   },
   "football|I1|401875004": {
    "reason": "edge_below_minimum",
-   "checked_at": "2026-11-27T18:44:12.869819+00:00",
+   "checked_at": "2026-11-27T18:56:39.860059+00:00",
    "kickoff": "2026-11-27T22:45:00+03:00",
    "sport": "football",
    "id": "401875004",
@@ -8068,7 +8068,7 @@
   },
   "football|F1|401876392": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-27T18:44:13.259048+00:00",
+   "checked_at": "2026-11-27T18:56:40.256740+00:00",
    "kickoff": "2026-11-27T22:45:00+03:00",
    "sport": "football",
    "id": "401876392",
@@ -8083,7 +8083,7 @@
   },
   "football|B1|401878930": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-27T18:44:13.646217+00:00",
+   "checked_at": "2026-11-27T18:56:40.646059+00:00",
    "kickoff": "2026-11-27T22:45:00+03:00",
    "sport": "football",
    "id": "401878930",
