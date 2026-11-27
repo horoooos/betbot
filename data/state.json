@@ -3003,7 +3003,7 @@
   "external_sources": {
    "providers": {
     "legalbet": {
-     "at": "2026-11-27T20:27:48.683454+00:00",
+     "at": "2026-11-27T20:59:48.305756+00:00",
      "status": "ok",
      "discovered": 2,
      "pages": 2,
@@ -3014,29 +3014,29 @@
      "contexts": 2
     },
     "livesport": {
-     "at": "2026-11-27T20:27:48.683454+00:00",
+     "at": "2026-11-27T20:59:48.305756+00:00",
      "status": "ok",
-     "discovered": 19,
+     "discovered": 17,
      "pages": 6,
-     "opinions": 8,
-     "mapped": 4,
-     "articles_available": 39,
-     "next_offset": 18,
+     "opinions": 10,
+     "mapped": 5,
+     "articles_available": 36,
+     "next_offset": 7,
      "contexts": 6
     },
     "metaratings": {
-     "at": "2026-11-27T20:27:48.683454+00:00",
+     "at": "2026-11-27T20:59:48.305756+00:00",
      "status": "ok",
-     "discovered": 3,
-     "pages": 3,
-     "opinions": 12,
-     "mapped": 0,
-     "articles_available": 32,
-     "next_offset": 3,
-     "contexts": 3
+     "discovered": 6,
+     "pages": 6,
+     "opinions": 24,
+     "mapped": 2,
+     "articles_available": 38,
+     "next_offset": 9,
+     "contexts": 6
     },
     "rb": {
-     "at": "2026-11-27T20:27:48.683454+00:00",
+     "at": "2026-11-27T20:59:48.305756+00:00",
      "status": "ok",
      "discovered": 1,
      "pages": 1,
@@ -3047,21 +3047,21 @@
      "contexts": 0
     },
     "vseprosport": {
-     "at": "2026-11-27T20:27:48.683454+00:00",
+     "at": "2026-11-27T20:59:48.305756+00:00",
      "status": "ok",
      "discovered": 7,
      "pages": 2,
      "opinions": 0,
      "mapped": 0,
      "articles_available": 10,
-     "next_offset": 11,
+     "next_offset": 10,
      "page_errors": 4,
      "contexts": 2
     }
    },
-   "opinions": 73,
+   "opinions": 74,
    "snapshots": 0,
-   "contexts": 200,
+   "contexts": 203,
    "model": {
     "weight": 0.0,
     "status": "collecting",
@@ -3180,7 +3180,7 @@
   "quote_matches": 165
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-27T23:57:48.518147+03:00",
+  "last_poll": "2026-11-27T23:59:48.305756+03:00",
   "cursor": "492",
   "posts": [
    {
