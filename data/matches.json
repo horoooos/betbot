@@ -28280,5 +28280,13 @@
   "div": "PAR",
   "reason": "no_qualified_real_market",
   "retry_at": 1795818635.969818
+ },
+ "401936333": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-28T02:30:00+03:00",
+  "sport": "football",
+  "div": "URU",
+  "reason": "insufficient_history_or_odds",
+  "retry_at": 1795819115.617913
  }
 }

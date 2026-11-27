@@ -3186,7 +3186,7 @@
   "quote_matches": 168
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-28T01:26:35.892469+03:00",
+  "last_poll": "2026-11-28T01:28:35.617913+03:00",
   "cursor": "494",
   "posts": [
    {
@@ -8437,6 +8437,15 @@
    "odds": 1.66,
    "edge": -0.06957,
    "estimated": true
+  },
+  "football|URU|401936333": {
+   "reason": "insufficient_history_or_odds",
+   "checked_at": "2026-11-27T22:28:55.540747+00:00",
+   "kickoff": "2026-11-28T02:30:00+03:00",
+   "sport": "football",
+   "id": "401936333",
+   "home": "Ливерпуль",
+   "away": "Racing (Montevideo)"
   }
  },
  "source_trial": {
