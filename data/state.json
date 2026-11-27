@@ -2073,7 +2073,7 @@
  "vk_photo_until": 1794644243.1147308,
  "vk_photo_cursor": {},
  "vk_story_last": 9773,
- "vk_story_err": "VK stories: сервер не вернул upload_result",
+ "vk_story_err": "VK stories: ошибка загрузки; подписанный URL скрыт",
  "push_weekly": "2026-48",
  "vk_story_at": 1795789041.290099,
  "vk_story_url": "https://vk.com/story-228963529_456239187",
@@ -3147,7 +3147,7 @@
   "quote_matches": 162
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-27T19:30:40.033237+03:00",
+  "last_poll": "2026-11-27T19:32:40.633091+03:00",
   "cursor": "482",
   "posts": [
    {
@@ -7728,7 +7728,7 @@
   },
   "football|T1|401888240": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-27T16:21:00.016861+00:00",
+   "checked_at": "2026-11-27T16:32:59.608062+00:00",
    "kickoff": "2026-11-27T20:00:00+03:00",
    "sport": "football",
    "id": "401888240",
@@ -18518,5 +18518,5 @@
   "away": "Челси",
   "kickoff": "2026-11-27T23:00:00+03:00"
  },
- "vk_story_retry_at": 1795797186.6769452
+ "vk_story_retry_at": 1795800788.2519248
 }
