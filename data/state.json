@@ -1574,7 +1574,7 @@
  "value_day": "2026-11-27",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-27",
- "site_stamp": "1581|9854|2026-11-28 00|6|b622f8da9e92bfb2",
+ "site_stamp": "1581|9856|2026-11-28 00|6|b622f8da9e92bfb2",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1744,7 +1744,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 9854,
+ "dz_last": 9856,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -3112,15 +3112,15 @@
   "model": {
    "weight": 0.0,
    "status": "baseline_better",
-   "settled_matches": 181,
+   "settled_matches": 183,
    "required_matches": 100,
-   "trained_at": "2026-11-27T19:25:47.707768+00:00",
+   "trained_at": "2026-11-27T21:22:35.604178+00:00",
    "candidate_weight": 0.0,
    "train_matches": 139,
-   "validation_matches": 41,
+   "validation_matches": 43,
    "validation_from": "2026-11-25T00:00:00+00:00",
-   "validation_logloss": 2.8168306679997652,
-   "validation_baseline_logloss": 2.8168306679997652
+   "validation_logloss": 2.8097312277288595,
+   "validation_baseline_logloss": 2.8097312277288595
   },
   "sport_models": {
    "hockey": {
@@ -3160,29 +3160,29 @@
    }
   },
   "source": {
-   "last_success": "2026-11-27T21:01:48.531612+00:00",
-   "parsed": 260,
-   "added": 84,
-   "discovered_matches": 57,
+   "last_success": "2026-11-27T21:22:35.604178+00:00",
+   "parsed": 323,
+   "added": 109,
+   "discovered_matches": 67,
    "pages": 17,
    "errors": [],
    "parsed_by_sport": {
-    "soccer": 0,
-    "ice-hockey": 39,
-    "basketball": 48,
-    "tennis": 49,
-    "csgo": 27,
+    "soccer": 50,
+    "ice-hockey": 50,
+    "basketball": 50,
+    "tennis": 48,
+    "csgo": 33,
     "dota2": 50
    }
   },
   "error": null,
-  "tips": 20322,
+  "tips": 20359,
   "snapshots": 432,
-  "unmapped_markets": 30622,
+  "unmapped_markets": 30694,
   "quote_matches": 166
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-28T00:20:36.149565+03:00",
+  "last_poll": "2026-11-28T00:22:35.604178+03:00",
   "cursor": "492",
   "posts": [
    {
@@ -4076,7 +4076,7 @@
    "401881739": "post",
    "401875536": "post",
    "401921332": "post",
-   "401883102": "in",
+   "401883102": "post",
    "401884720": "in",
    "401875004": "in",
    "401876392": "in",
