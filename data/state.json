@@ -3116,7 +3116,7 @@
   "quote_matches": 151
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-27T11:56:14.326592+03:00",
+  "last_poll": "2026-11-27T11:58:14.577281+03:00",
   "cursor": "467",
   "posts": [
    {
@@ -7424,6 +7424,21 @@
    "odds": 1.61,
    "edge": -0.053,
    "estimated": false
+  },
+  "esports|DOTA|1816496": {
+   "reason": "no_real_odds",
+   "checked_at": "2026-11-27T08:58:36.752429+00:00",
+   "kickoff": "2026-11-27T13:00:00+03:00",
+   "sport": "esports",
+   "id": "1816496",
+   "home": "PARIVISION",
+   "away": "Team Liquid",
+   "priced_markets": 0,
+   "market": "Team Liquid возьмёт хотя бы карту",
+   "probability": 0.5774,
+   "odds": 1.61,
+   "edge": -0.07039,
+   "estimated": true
   }
  },
  "source_trial": {
