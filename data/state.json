@@ -1572,7 +1572,7 @@
  "value_day": "2026-11-27",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-27",
- "site_stamp": "1580|9828|2026-11-27 22|6|f4b3dc62aeb9abca",
+ "site_stamp": "1580|9830|2026-11-27 22|6|bb73b74b185bbfe9",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1740,7 +1740,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 9828,
+ "dz_last": 9830,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -3170,7 +3170,7 @@
   "quote_matches": 164
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-27T22:25:47.707768+03:00",
+  "last_poll": "2026-11-27T22:27:47.689182+03:00",
   "cursor": "487",
   "posts": [
    {
@@ -8060,23 +8060,24 @@
    "estimated": true
   },
   "football|I1|401875004": {
-   "reason": "edge_below_minimum",
-   "checked_at": "2026-11-27T19:16:24.165118+00:00",
+   "reason": "published",
+   "checked_at": "2026-11-27T19:28:21.269101+00:00",
    "kickoff": "2026-11-27T22:45:00+03:00",
    "sport": "football",
    "id": "401875004",
    "home": "Венеция",
    "away": "Болонья",
-   "priced_markets": 5,
-   "market": "ТМ 2.5",
-   "probability": 0.5493,
-   "odds": 1.71,
-   "edge": -0.0607,
+   "market": "П2",
+   "strategy": "external_trial",
+   "source_count": 66,
+   "probability": 0.3942,
+   "odds": 2.4,
+   "edge": -0.05392,
    "estimated": false
   },
   "football|F1|401876392": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-27T19:16:24.557676+00:00",
+   "checked_at": "2026-11-27T19:28:21.679244+00:00",
    "kickoff": "2026-11-27T22:45:00+03:00",
    "sport": "football",
    "id": "401876392",
@@ -8091,7 +8092,7 @@
   },
   "football|B1|401878930": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-27T19:16:24.949607+00:00",
+   "checked_at": "2026-11-27T19:28:22.078705+00:00",
    "kickoff": "2026-11-27T22:45:00+03:00",
    "sport": "football",
    "id": "401878930",
@@ -18586,7 +18587,7 @@
     "profit_pct": -0.5
    },
    "football|D2|401885047": {
-    "status": "open",
+    "status": "settled",
     "id": "401885047",
     "sport": "football",
     "div": "D2",
@@ -18662,10 +18663,13 @@
        "price_kind": "author_recorded"
       }
      ]
-    }
+    },
+    "settled_at": "2026-11-27T19:27:47.689182+00:00",
+    "hit": true,
+    "profit_pct": 0.57
    },
    "football|D2|401885045": {
-    "status": "open",
+    "status": "settled",
     "id": "401885045",
     "sport": "football",
     "div": "D2",
@@ -18930,7 +18934,10 @@
        "price_kind": "author_recorded"
       }
      ]
-    }
+    },
+    "settled_at": "2026-11-27T19:27:47.689182+00:00",
+    "hit": true,
+    "profit_pct": 0.335
    },
    "hockey|NHL|401892795": {
     "status": "open",
@@ -19517,6 +19524,625 @@
        "published_at": "2026-11-27T18:54:00+00:00",
        "observed_at": "2026-11-27T18:55:47.356701+00:00",
        "odds": 2.96,
+       "price_kind": "author_recorded"
+      }
+     ]
+    }
+   },
+   "football|I1|401875004": {
+    "status": "open",
+    "id": "401875004",
+    "sport": "football",
+    "div": "I1",
+    "kickoff": "2026-11-27T22:45:00+03:00",
+    "published_at": "2026-11-27T19:28:17.731313+00:00",
+    "msg_id": 9829,
+    "tip": {
+     "key": "A",
+     "label": "П2",
+     "p": 0.3942,
+     "odds": 2.4,
+     "est": false,
+     "stake": 0.5,
+     "strategy": "external_trial",
+     "selection_mode": "external_fallback",
+     "trial_expires_at": null,
+     "probability_origin": "baseline_model",
+     "model_edge": -0.05402,
+     "source_count": 66,
+     "source_refs": [
+      {
+       "author": "/predictors/mpr-rpm",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+       "published_at": "2026-11-26T12:37:00+00:00",
+       "observed_at": "2026-11-26T13:51:30.289571+00:00",
+       "odds": 2.2,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/dmitrii-ki",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+       "published_at": "2026-11-26T12:42:00+00:00",
+       "observed_at": "2026-11-26T13:51:30.289571+00:00",
+       "odds": 2.2,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/nika-verner",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+       "published_at": "2026-11-26T12:48:00+00:00",
+       "observed_at": "2026-11-26T13:51:30.289571+00:00",
+       "odds": 2.2,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/lepruinii-feluina",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+       "published_at": "2026-11-26T12:55:00+00:00",
+       "observed_at": "2026-11-26T13:51:30.289571+00:00",
+       "odds": 2.2,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/tanya-5",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+       "published_at": "2026-11-26T13:39:00+00:00",
+       "observed_at": "2026-11-26T13:51:30.289571+00:00",
+       "odds": 2.25,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/ruslan-siraziev-5",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+       "published_at": "2026-11-26T13:45:00+00:00",
+       "observed_at": "2026-11-26T13:51:30.289571+00:00",
+       "odds": 2.25,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/maks-volman",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+       "published_at": "2026-11-26T16:21:00+00:00",
+       "observed_at": "2026-11-27T03:32:19.535925+00:00",
+       "odds": 2.25,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/vlad-naumov",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+       "published_at": "2026-11-26T17:38:00+00:00",
+       "observed_at": "2026-11-27T03:32:19.535925+00:00",
+       "odds": 2.25,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/valek-valek",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+       "published_at": "2026-11-26T19:01:00+00:00",
+       "observed_at": "2026-11-26T19:07:09.592806+00:00",
+       "odds": 2.25,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/andrey-malko",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+       "published_at": "2026-11-26T20:28:00+00:00",
+       "observed_at": "2026-11-26T20:28:41.323883+00:00",
+       "odds": 2.25,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/velikii-mag",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+       "published_at": "2026-11-26T21:10:00+00:00",
+       "observed_at": "2026-11-27T03:32:19.535925+00:00",
+       "odds": 2.25,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/aleksandr-golubev-5",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+       "published_at": "2026-11-26T21:40:00+00:00",
+       "observed_at": "2026-11-26T21:50:39.809441+00:00",
+       "odds": 2.25,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/dmitrii-bartasuk",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+       "published_at": "2026-11-26T21:56:00+00:00",
+       "observed_at": "2026-11-26T22:10:54.146298+00:00",
+       "odds": 2.25,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/aleksei-kalinin-12",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+       "published_at": "2026-11-26T22:09:00+00:00",
+       "observed_at": "2026-11-26T22:10:54.146298+00:00",
+       "odds": 2.25,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/andrey-zakozhurnikov-1",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+       "published_at": "2026-11-26T22:10:00+00:00",
+       "observed_at": "2026-11-26T22:10:54.146298+00:00",
+       "odds": 2.25,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/sergei-rozkov-6",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+       "published_at": "2026-11-26T22:29:00+00:00",
+       "observed_at": "2026-11-26T22:32:54.641591+00:00",
+       "odds": 2.25,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/sergei-antonov-12",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+       "published_at": "2026-11-26T22:46:00+00:00",
+       "observed_at": "2026-11-26T22:54:54.834802+00:00",
+       "odds": 2.25,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/andrei-makarov-26",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+       "published_at": "2026-11-26T22:50:00+00:00",
+       "observed_at": "2026-11-26T22:54:54.834802+00:00",
+       "odds": 2.25,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/aleksandr-shirshov",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+       "published_at": "2026-11-26T22:50:00+00:00",
+       "observed_at": "2026-11-26T22:54:54.834802+00:00",
+       "odds": 2.25,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/gennadii-sovetskix",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+       "published_at": "2026-11-26T22:59:00+00:00",
+       "observed_at": "2026-11-26T23:14:55.202093+00:00",
+       "odds": 2.25,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/aleksey-samoylov-4",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+       "published_at": "2026-11-26T23:09:00+00:00",
+       "observed_at": "2026-11-26T23:14:55.202093+00:00",
+       "odds": 2.25,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/nowkam",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+       "published_at": "2026-11-26T23:22:00+00:00",
+       "observed_at": "2026-11-26T23:36:55.824201+00:00",
+       "odds": 2.25,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/vsevolod-kozyrev",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+       "published_at": "2026-11-26T23:34:00+00:00",
+       "observed_at": "2026-11-26T23:36:55.824201+00:00",
+       "odds": 2.25,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/rino-mino",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+       "published_at": "2026-11-26T23:50:00+00:00",
+       "observed_at": "2026-11-26T23:58:55.015002+00:00",
+       "odds": 2.25,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/aleksandr-lebed-13",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+       "published_at": "2026-11-27T00:28:00+00:00",
+       "observed_at": "2026-11-27T00:40:55.993190+00:00",
+       "odds": 2.25,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/velikolepie-hel",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+       "published_at": "2026-11-27T01:25:00+00:00",
+       "observed_at": "2026-11-27T01:42:56.339913+00:00",
+       "odds": 2.25,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/margarita-winning",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+       "published_at": "2026-11-27T01:31:00+00:00",
+       "observed_at": "2026-11-27T01:42:56.339913+00:00",
+       "odds": 2.25,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/dobryi-slon",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+       "published_at": "2026-11-27T02:17:00+00:00",
+       "observed_at": "2026-11-27T02:26:20.148788+00:00",
+       "odds": 2.25,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/igor-nikulin",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+       "published_at": "2026-11-27T02:50:00+00:00",
+       "observed_at": "2026-11-27T03:32:19.535925+00:00",
+       "odds": 2.25,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/kreutz-2",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+       "published_at": "2026-11-27T03:00:00+00:00",
+       "observed_at": "2026-11-27T03:10:19.403938+00:00",
+       "odds": 2.25,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/evgenii-sustov-1",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+       "published_at": "2026-11-27T03:01:00+00:00",
+       "observed_at": "2026-11-27T03:10:19.403938+00:00",
+       "odds": 2.25,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/lionel-ronaldo",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+       "published_at": "2026-11-27T04:02:00+00:00",
+       "observed_at": "2026-11-27T04:14:19.579731+00:00",
+       "odds": 2.25,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/anatoliy-vasilev",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+       "published_at": "2026-11-27T04:09:00+00:00",
+       "observed_at": "2026-11-27T04:14:19.579731+00:00",
+       "odds": 2.25,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/football-stavki",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+       "published_at": "2026-11-27T05:10:00+00:00",
+       "observed_at": "2026-11-27T05:17:39.313651+00:00",
+       "odds": 2.25,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/yuriy-antropov",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+       "published_at": "2026-11-27T05:39:00+00:00",
+       "observed_at": "2026-11-27T13:00:38.248046+00:00",
+       "odds": 2.42,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/akim-bobrov-1",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+       "published_at": "2026-11-27T06:16:00+00:00",
+       "observed_at": "2026-11-27T06:19:39.303383+00:00",
+       "odds": 2.39,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/nik-nik-23",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+       "published_at": "2026-11-27T07:34:00+00:00",
+       "observed_at": "2026-11-27T07:42:13.542946+00:00",
+       "odds": 2.4,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/dimon-afrizonov",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+       "published_at": "2026-11-27T07:34:00+00:00",
+       "observed_at": "2026-11-27T07:42:13.542946+00:00",
+       "odds": 2.4,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/gennadiy-evrost",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+       "published_at": "2026-11-27T08:11:00+00:00",
+       "observed_at": "2026-11-27T13:00:38.248046+00:00",
+       "odds": 2.4,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/viktoriy-sku",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+       "published_at": "2026-11-27T08:22:00+00:00",
+       "observed_at": "2026-11-27T08:26:13.879382+00:00",
+       "odds": 2.4,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/aleksandr-tolkacev-3",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+       "published_at": "2026-11-27T08:23:00+00:00",
+       "observed_at": "2026-11-27T08:26:13.879382+00:00",
+       "odds": 2.4,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/vladimir-tsarukyan",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+       "published_at": "2026-11-27T08:24:00+00:00",
+       "observed_at": "2026-11-27T08:26:13.879382+00:00",
+       "odds": 2.4,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/andrei-rassovskii",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+       "published_at": "2026-11-27T08:42:00+00:00",
+       "observed_at": "2026-11-27T08:48:13.087483+00:00",
+       "odds": 2.4,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/vitaliy-belov",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+       "published_at": "2026-11-27T09:03:00+00:00",
+       "observed_at": "2026-11-27T09:08:14.328803+00:00",
+       "odds": 2.4,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/armeec-moskvy",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+       "published_at": "2026-11-27T09:40:00+00:00",
+       "observed_at": "2026-11-27T09:50:14.238528+00:00",
+       "odds": 2.4,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/sergei-parxomenko-1",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+       "published_at": "2026-11-27T09:46:00+00:00",
+       "observed_at": "2026-11-27T09:50:14.238528+00:00",
+       "odds": 2.4,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/kerala-blasters",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+       "published_at": "2026-11-27T10:29:00+00:00",
+       "observed_at": "2026-11-27T10:32:14.161852+00:00",
+       "odds": 2.4,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/d-m-i-t-r-i-i-r",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+       "published_at": "2026-11-27T10:49:00+00:00",
+       "observed_at": "2026-11-27T10:54:14.686069+00:00",
+       "odds": 2.4,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/ainur-xasanov-4",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+       "published_at": "2026-11-27T10:51:00+00:00",
+       "observed_at": "2026-11-27T10:54:14.686069+00:00",
+       "odds": 2.4,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/aleksandr-grad",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+       "published_at": "2026-11-27T11:10:00+00:00",
+       "observed_at": "2026-11-27T11:16:14.237281+00:00",
+       "odds": 2.4,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/dannil-mazur",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+       "published_at": "2026-11-27T11:34:00+00:00",
+       "observed_at": "2026-11-27T11:36:14.852934+00:00",
+       "odds": 2.45,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/lalo-salamanca-2",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+       "published_at": "2026-11-27T11:51:00+00:00",
+       "observed_at": "2026-11-27T11:58:14.649867+00:00",
+       "odds": 2.45,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/roma-bayanov",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+       "published_at": "2026-11-27T11:52:00+00:00",
+       "observed_at": "2026-11-27T11:58:14.649867+00:00",
+       "odds": 2.45,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/yura-oleinikov",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+       "published_at": "2026-11-27T12:15:00+00:00",
+       "observed_at": "2026-11-27T12:20:14.564030+00:00",
+       "odds": 2.45,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/kaper-maksimka2",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+       "published_at": "2026-11-27T13:18:00+00:00",
+       "observed_at": "2026-11-27T13:20:39.155767+00:00",
+       "odds": 2.45,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/sergei-picuzkin",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+       "published_at": "2026-11-27T13:19:00+00:00",
+       "observed_at": "2026-11-27T13:20:39.155767+00:00",
+       "odds": 2.45,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/evgeniy-voronin-6",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+       "published_at": "2026-11-27T15:18:00+00:00",
+       "observed_at": "2026-11-27T15:26:40.541595+00:00",
+       "odds": 2.45,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/denis-kursanov",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+       "published_at": "2026-11-27T15:39:00+00:00",
+       "observed_at": "2026-11-27T15:46:40.647995+00:00",
+       "odds": 2.45,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/olesya-oleksenko",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+       "published_at": "2026-11-27T15:43:00+00:00",
+       "observed_at": "2026-11-27T15:46:40.647995+00:00",
+       "odds": 2.45,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/oleksandr-zilka",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+       "published_at": "2026-11-27T16:02:00+00:00",
+       "observed_at": "2026-11-27T16:08:40.417199+00:00",
+       "odds": 2.45,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/andrey-egorov-9",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+       "published_at": "2026-11-27T16:03:00+00:00",
+       "observed_at": "2026-11-27T16:08:40.417199+00:00",
+       "odds": 2.45,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/aleksandr-kravcenko-3",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+       "published_at": "2026-11-27T16:46:00+00:00",
+       "observed_at": "2026-11-27T16:50:40.075253+00:00",
+       "odds": 2.45,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/artyom-bannikov",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+       "published_at": "2026-11-27T17:29:00+00:00",
+       "observed_at": "2026-11-27T17:32:40.568811+00:00",
+       "odds": 2.45,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/ero-1",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+       "published_at": "2026-11-27T17:29:00+00:00",
+       "observed_at": "2026-11-27T17:32:40.568811+00:00",
+       "odds": 2.45,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/viktor-marchuk",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+       "published_at": "2026-11-27T17:49:00+00:00",
+       "observed_at": "2026-11-27T17:52:41.630916+00:00",
+       "odds": 2.45,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/lucky-roger",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+       "published_at": "2026-11-27T18:11:00+00:00",
+       "observed_at": "2026-11-27T18:14:41.583829+00:00",
+       "odds": 2.45,
        "price_kind": "author_recorded"
       }
      ]

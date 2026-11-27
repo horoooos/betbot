@@ -28480,12 +28480,1470 @@
   "retry_at": 1795807428.058758
  },
  "401875004": {
-  "status": "waiting_data",
-  "kickoff": "2026-11-27T22:45:00+03:00",
-  "sport": "football",
+  "id": "401875004",
   "div": "I1",
-  "reason": "edge_below_minimum",
-  "retry_at": 1795807548.093566
+  "slug": "ita.1",
+  "kickoff": "2026-11-27T22:45:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "detail": "Scheduled",
+  "home": {
+   "id": "17530",
+   "name": "Venezia",
+   "short": "Venezia",
+   "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/17530.png",
+   "color": "000000",
+   "alt": "ffffff",
+   "form": "LWLLL",
+   "score": "0",
+   "ru": "Венеция"
+  },
+  "away": {
+   "id": "107",
+   "name": "Bologna",
+   "short": "Bologna",
+   "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/107.png",
+   "color": "04043d",
+   "alt": "ffffff",
+   "form": "DWWWW",
+   "score": "0",
+   "ru": "Болонья"
+  },
+  "odds": {
+   "H": 2.95,
+   "D": 3.05,
+   "A": 2.45,
+   "line": 2.5,
+   "over": 2.25,
+   "under": 1.645,
+   "spread_h": [
+    0.5,
+    1.526
+   ],
+   "spread_a": [
+    -0.5,
+    2.35
+   ]
+  },
+  "venue": "Stadio Pier Luigi Penzo",
+  "clock": "0'",
+  "goals": [],
+  "open": {
+   "A": 0.3822
+  },
+  "top": false,
+  "lam": [
+   1.1565100235907264,
+   1.3220578412360713
+  ],
+  "probs": {
+   "H": 0.3150525137480519,
+   "D": 0.29079001825913875,
+   "A": 0.39415746799280915,
+   "1X": 0.6058425320071912,
+   "12": 0.7092099817408618,
+   "X2": 0.6849474862519481,
+   "BTTS_Y": 0.5129528807065552,
+   "BTTS_N": 0.4870471192934451,
+   "O15": 0.7185339314851461,
+   "U15": 0.2814660685148545,
+   "O25": 0.45067743029718277,
+   "U25": 0.549322569702817,
+   "O35": 0.23785228631848096,
+   "U35": 0.7621477136815189,
+   "H_O05": 0.6854178348272855,
+   "H_O15": 0.32160040756216607,
+   "A_O05": 0.7334138117418665,
+   "A_O15": 0.3809714511899644,
+   "H-1.5": 0.13267931053369705,
+   "A+1.5": 0.8673206894663029,
+   "A-1.5": 0.1842102098030039,
+   "H+1.5": 0.8157897901969967,
+   "H-2.5": 0.041954464026605624,
+   "A-2.5": 0.06565289555490648,
+   "H+2.5": 0.9343471044450941,
+   "A+2.5": 0.9580455359733945,
+   "O45": 0.10597689564529429,
+   "U45": 0.8940231043547056,
+   "H_O25": 0.11122115686761637,
+   "A_O25": 0.14799685801426835,
+   "H&O15": 0.2283217864215821,
+   "A&O15": 0.29354336094182826,
+   "H&BTTS": 0.14258755962732186,
+   "A&BTTS": 0.17369653695749798,
+   "1X&U35": 0.47118601789048653,
+   "X2&U35": 0.5235655766336934,
+   "BTTS&O25": 0.37447023400129753,
+   "HT_H": 0.24894050873499565,
+   "HT_D": 0.4536609923152629,
+   "HT_A": 0.29739849894974135,
+   "HT_O05": 0.6640819211335967,
+   "HT_U05": 0.3359180788664036,
+   "HT_O15": 0.3147085428514544,
+   "HT_U15": 0.6852914571485456
+  },
+  "scores": [
+   [
+    "1:1",
+    0.13848264670525717
+   ],
+   [
+    "0:1",
+    0.10061410705098084
+   ],
+   [
+    "0:0",
+    0.09412123413740388
+   ]
+  ],
+  "main": {
+   "key": "A",
+   "label": "П2",
+   "p": 0.3942,
+   "odds": 2.4,
+   "est": false,
+   "stake": 0.5,
+   "strategy": "external_trial",
+   "selection_mode": "external_fallback",
+   "trial_expires_at": null,
+   "probability_origin": "baseline_model",
+   "model_edge": -0.05402,
+   "source_count": 66,
+   "source_refs": [
+    {
+     "author": "/predictors/mpr-rpm",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+     "published_at": "2026-11-26T12:37:00+00:00",
+     "observed_at": "2026-11-26T13:51:30.289571+00:00",
+     "odds": 2.2,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/dmitrii-ki",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+     "published_at": "2026-11-26T12:42:00+00:00",
+     "observed_at": "2026-11-26T13:51:30.289571+00:00",
+     "odds": 2.2,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/nika-verner",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+     "published_at": "2026-11-26T12:48:00+00:00",
+     "observed_at": "2026-11-26T13:51:30.289571+00:00",
+     "odds": 2.2,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/lepruinii-feluina",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+     "published_at": "2026-11-26T12:55:00+00:00",
+     "observed_at": "2026-11-26T13:51:30.289571+00:00",
+     "odds": 2.2,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/tanya-5",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+     "published_at": "2026-11-26T13:39:00+00:00",
+     "observed_at": "2026-11-26T13:51:30.289571+00:00",
+     "odds": 2.25,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/ruslan-siraziev-5",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+     "published_at": "2026-11-26T13:45:00+00:00",
+     "observed_at": "2026-11-26T13:51:30.289571+00:00",
+     "odds": 2.25,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/maks-volman",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+     "published_at": "2026-11-26T16:21:00+00:00",
+     "observed_at": "2026-11-27T03:32:19.535925+00:00",
+     "odds": 2.25,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/vlad-naumov",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+     "published_at": "2026-11-26T17:38:00+00:00",
+     "observed_at": "2026-11-27T03:32:19.535925+00:00",
+     "odds": 2.25,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/valek-valek",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+     "published_at": "2026-11-26T19:01:00+00:00",
+     "observed_at": "2026-11-26T19:07:09.592806+00:00",
+     "odds": 2.25,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/andrey-malko",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+     "published_at": "2026-11-26T20:28:00+00:00",
+     "observed_at": "2026-11-26T20:28:41.323883+00:00",
+     "odds": 2.25,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/velikii-mag",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+     "published_at": "2026-11-26T21:10:00+00:00",
+     "observed_at": "2026-11-27T03:32:19.535925+00:00",
+     "odds": 2.25,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/aleksandr-golubev-5",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+     "published_at": "2026-11-26T21:40:00+00:00",
+     "observed_at": "2026-11-26T21:50:39.809441+00:00",
+     "odds": 2.25,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/dmitrii-bartasuk",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+     "published_at": "2026-11-26T21:56:00+00:00",
+     "observed_at": "2026-11-26T22:10:54.146298+00:00",
+     "odds": 2.25,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/aleksei-kalinin-12",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+     "published_at": "2026-11-26T22:09:00+00:00",
+     "observed_at": "2026-11-26T22:10:54.146298+00:00",
+     "odds": 2.25,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/andrey-zakozhurnikov-1",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+     "published_at": "2026-11-26T22:10:00+00:00",
+     "observed_at": "2026-11-26T22:10:54.146298+00:00",
+     "odds": 2.25,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/sergei-rozkov-6",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+     "published_at": "2026-11-26T22:29:00+00:00",
+     "observed_at": "2026-11-26T22:32:54.641591+00:00",
+     "odds": 2.25,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/sergei-antonov-12",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+     "published_at": "2026-11-26T22:46:00+00:00",
+     "observed_at": "2026-11-26T22:54:54.834802+00:00",
+     "odds": 2.25,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/andrei-makarov-26",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+     "published_at": "2026-11-26T22:50:00+00:00",
+     "observed_at": "2026-11-26T22:54:54.834802+00:00",
+     "odds": 2.25,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/aleksandr-shirshov",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+     "published_at": "2026-11-26T22:50:00+00:00",
+     "observed_at": "2026-11-26T22:54:54.834802+00:00",
+     "odds": 2.25,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/gennadii-sovetskix",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+     "published_at": "2026-11-26T22:59:00+00:00",
+     "observed_at": "2026-11-26T23:14:55.202093+00:00",
+     "odds": 2.25,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/aleksey-samoylov-4",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+     "published_at": "2026-11-26T23:09:00+00:00",
+     "observed_at": "2026-11-26T23:14:55.202093+00:00",
+     "odds": 2.25,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/nowkam",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+     "published_at": "2026-11-26T23:22:00+00:00",
+     "observed_at": "2026-11-26T23:36:55.824201+00:00",
+     "odds": 2.25,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/vsevolod-kozyrev",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+     "published_at": "2026-11-26T23:34:00+00:00",
+     "observed_at": "2026-11-26T23:36:55.824201+00:00",
+     "odds": 2.25,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/rino-mino",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+     "published_at": "2026-11-26T23:50:00+00:00",
+     "observed_at": "2026-11-26T23:58:55.015002+00:00",
+     "odds": 2.25,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/aleksandr-lebed-13",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+     "published_at": "2026-11-27T00:28:00+00:00",
+     "observed_at": "2026-11-27T00:40:55.993190+00:00",
+     "odds": 2.25,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/velikolepie-hel",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+     "published_at": "2026-11-27T01:25:00+00:00",
+     "observed_at": "2026-11-27T01:42:56.339913+00:00",
+     "odds": 2.25,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/margarita-winning",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+     "published_at": "2026-11-27T01:31:00+00:00",
+     "observed_at": "2026-11-27T01:42:56.339913+00:00",
+     "odds": 2.25,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/dobryi-slon",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+     "published_at": "2026-11-27T02:17:00+00:00",
+     "observed_at": "2026-11-27T02:26:20.148788+00:00",
+     "odds": 2.25,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/igor-nikulin",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+     "published_at": "2026-11-27T02:50:00+00:00",
+     "observed_at": "2026-11-27T03:32:19.535925+00:00",
+     "odds": 2.25,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/kreutz-2",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+     "published_at": "2026-11-27T03:00:00+00:00",
+     "observed_at": "2026-11-27T03:10:19.403938+00:00",
+     "odds": 2.25,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/evgenii-sustov-1",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+     "published_at": "2026-11-27T03:01:00+00:00",
+     "observed_at": "2026-11-27T03:10:19.403938+00:00",
+     "odds": 2.25,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/lionel-ronaldo",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+     "published_at": "2026-11-27T04:02:00+00:00",
+     "observed_at": "2026-11-27T04:14:19.579731+00:00",
+     "odds": 2.25,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/anatoliy-vasilev",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+     "published_at": "2026-11-27T04:09:00+00:00",
+     "observed_at": "2026-11-27T04:14:19.579731+00:00",
+     "odds": 2.25,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/football-stavki",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+     "published_at": "2026-11-27T05:10:00+00:00",
+     "observed_at": "2026-11-27T05:17:39.313651+00:00",
+     "odds": 2.25,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/yuriy-antropov",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+     "published_at": "2026-11-27T05:39:00+00:00",
+     "observed_at": "2026-11-27T13:00:38.248046+00:00",
+     "odds": 2.42,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/akim-bobrov-1",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+     "published_at": "2026-11-27T06:16:00+00:00",
+     "observed_at": "2026-11-27T06:19:39.303383+00:00",
+     "odds": 2.39,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/nik-nik-23",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+     "published_at": "2026-11-27T07:34:00+00:00",
+     "observed_at": "2026-11-27T07:42:13.542946+00:00",
+     "odds": 2.4,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/dimon-afrizonov",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+     "published_at": "2026-11-27T07:34:00+00:00",
+     "observed_at": "2026-11-27T07:42:13.542946+00:00",
+     "odds": 2.4,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/gennadiy-evrost",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+     "published_at": "2026-11-27T08:11:00+00:00",
+     "observed_at": "2026-11-27T13:00:38.248046+00:00",
+     "odds": 2.4,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/viktoriy-sku",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+     "published_at": "2026-11-27T08:22:00+00:00",
+     "observed_at": "2026-11-27T08:26:13.879382+00:00",
+     "odds": 2.4,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/aleksandr-tolkacev-3",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+     "published_at": "2026-11-27T08:23:00+00:00",
+     "observed_at": "2026-11-27T08:26:13.879382+00:00",
+     "odds": 2.4,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/vladimir-tsarukyan",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+     "published_at": "2026-11-27T08:24:00+00:00",
+     "observed_at": "2026-11-27T08:26:13.879382+00:00",
+     "odds": 2.4,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/andrei-rassovskii",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+     "published_at": "2026-11-27T08:42:00+00:00",
+     "observed_at": "2026-11-27T08:48:13.087483+00:00",
+     "odds": 2.4,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/vitaliy-belov",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+     "published_at": "2026-11-27T09:03:00+00:00",
+     "observed_at": "2026-11-27T09:08:14.328803+00:00",
+     "odds": 2.4,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/armeec-moskvy",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+     "published_at": "2026-11-27T09:40:00+00:00",
+     "observed_at": "2026-11-27T09:50:14.238528+00:00",
+     "odds": 2.4,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/sergei-parxomenko-1",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+     "published_at": "2026-11-27T09:46:00+00:00",
+     "observed_at": "2026-11-27T09:50:14.238528+00:00",
+     "odds": 2.4,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/kerala-blasters",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+     "published_at": "2026-11-27T10:29:00+00:00",
+     "observed_at": "2026-11-27T10:32:14.161852+00:00",
+     "odds": 2.4,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/d-m-i-t-r-i-i-r",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+     "published_at": "2026-11-27T10:49:00+00:00",
+     "observed_at": "2026-11-27T10:54:14.686069+00:00",
+     "odds": 2.4,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/ainur-xasanov-4",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+     "published_at": "2026-11-27T10:51:00+00:00",
+     "observed_at": "2026-11-27T10:54:14.686069+00:00",
+     "odds": 2.4,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/aleksandr-grad",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+     "published_at": "2026-11-27T11:10:00+00:00",
+     "observed_at": "2026-11-27T11:16:14.237281+00:00",
+     "odds": 2.4,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/dannil-mazur",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+     "published_at": "2026-11-27T11:34:00+00:00",
+     "observed_at": "2026-11-27T11:36:14.852934+00:00",
+     "odds": 2.45,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/lalo-salamanca-2",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+     "published_at": "2026-11-27T11:51:00+00:00",
+     "observed_at": "2026-11-27T11:58:14.649867+00:00",
+     "odds": 2.45,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/roma-bayanov",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+     "published_at": "2026-11-27T11:52:00+00:00",
+     "observed_at": "2026-11-27T11:58:14.649867+00:00",
+     "odds": 2.45,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/yura-oleinikov",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+     "published_at": "2026-11-27T12:15:00+00:00",
+     "observed_at": "2026-11-27T12:20:14.564030+00:00",
+     "odds": 2.45,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/kaper-maksimka2",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+     "published_at": "2026-11-27T13:18:00+00:00",
+     "observed_at": "2026-11-27T13:20:39.155767+00:00",
+     "odds": 2.45,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/sergei-picuzkin",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+     "published_at": "2026-11-27T13:19:00+00:00",
+     "observed_at": "2026-11-27T13:20:39.155767+00:00",
+     "odds": 2.45,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/evgeniy-voronin-6",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+     "published_at": "2026-11-27T15:18:00+00:00",
+     "observed_at": "2026-11-27T15:26:40.541595+00:00",
+     "odds": 2.45,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/denis-kursanov",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+     "published_at": "2026-11-27T15:39:00+00:00",
+     "observed_at": "2026-11-27T15:46:40.647995+00:00",
+     "odds": 2.45,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/olesya-oleksenko",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+     "published_at": "2026-11-27T15:43:00+00:00",
+     "observed_at": "2026-11-27T15:46:40.647995+00:00",
+     "odds": 2.45,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/oleksandr-zilka",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+     "published_at": "2026-11-27T16:02:00+00:00",
+     "observed_at": "2026-11-27T16:08:40.417199+00:00",
+     "odds": 2.45,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/andrey-egorov-9",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+     "published_at": "2026-11-27T16:03:00+00:00",
+     "observed_at": "2026-11-27T16:08:40.417199+00:00",
+     "odds": 2.45,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/aleksandr-kravcenko-3",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+     "published_at": "2026-11-27T16:46:00+00:00",
+     "observed_at": "2026-11-27T16:50:40.075253+00:00",
+     "odds": 2.45,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/artyom-bannikov",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+     "published_at": "2026-11-27T17:29:00+00:00",
+     "observed_at": "2026-11-27T17:32:40.568811+00:00",
+     "odds": 2.45,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/ero-1",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+     "published_at": "2026-11-27T17:29:00+00:00",
+     "observed_at": "2026-11-27T17:32:40.568811+00:00",
+     "odds": 2.45,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/viktor-marchuk",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+     "published_at": "2026-11-27T17:49:00+00:00",
+     "observed_at": "2026-11-27T17:52:41.630916+00:00",
+     "odds": 2.45,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/lucky-roger",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-venezia-bologna",
+     "published_at": "2026-11-27T18:11:00+00:00",
+     "observed_at": "2026-11-27T18:14:41.583829+00:00",
+     "odds": 2.45,
+     "price_kind": "author_recorded"
+    }
+   ]
+  },
+  "bold": {},
+  "value": null,
+  "odds_src": "среднее по букмекерам",
+  "model_w": 0.0,
+  "learned_n": 1580,
+  "stavka_signal": {
+   "status": "baseline_better",
+   "weight": 0.0,
+   "authors": 82,
+   "votes": {
+    "A": 66.33675638439053,
+    "H": 5.070907966838044,
+    "D": 5.043994367918948,
+    "O25": 3.042462184299519,
+    "U25": 2.9969353477049885
+   },
+   "source": "https://stavka.tv",
+   "snapshot": "I1|401875004"
+  },
+  "research": {
+   "articles": [
+    {
+     "id": "a7b91d7fdb4dd0a7104bf95d",
+     "kind": "context",
+     "provider": "vseprosport",
+     "source": "https://www.vseprosport.ru/news/2026/11/26/venecija-bolonja-prognoz-kf-2-25-i-stavki-na-match-serii-a-27-nojabrja-2026-goda",
+     "sport": "football",
+     "div": "I1",
+     "event_id": "401875004",
+     "kickoff": "2026-11-27T19:45:00+00:00",
+     "published_at": "2026-11-26T16:41:30+00:00",
+     "observed_at": "2026-11-26T18:17:41.083206+00:00",
+     "tables": []
+    },
+    {
+     "id": "bd27c92b0c584e76192852a9",
+     "kind": "context",
+     "provider": "livesport",
+     "source": "https://www.livesport.ru/tips/football/2026/11/27/venezia-bologna/",
+     "sport": "football",
+     "div": "I1",
+     "event_id": "401875004",
+     "kickoff": "2026-11-27T19:45:00+00:00",
+     "published_at": "2026-11-26T18:45:00+00:00",
+     "observed_at": "2026-11-26T18:47:32.800895+00:00",
+     "tables": [
+      [
+       [
+        "",
+        "Букмекер",
+        "1",
+        "x",
+        "2",
+        "Новым игрокам",
+        ""
+       ],
+       [
+        "",
+        "",
+        "3.38",
+        "3.22",
+        "2.24",
+        "Фрибет",
+        "30 000 ₽"
+       ],
+       [
+        "",
+        "",
+        "3.35",
+        "3.25",
+        "2.25",
+        "Фрибет всем",
+        "10 000 ₽"
+       ],
+       [
+        "",
+        "",
+        "3.30",
+        "3.25",
+        "2.17",
+        "Фрибет",
+        "1000 ₽"
+       ]
+      ]
+     ]
+    },
+    {
+     "id": "1f116889e9683b82e45cd340",
+     "kind": "context",
+     "provider": "metaratings",
+     "source": "https://metaratings.ru/prognozy/futbol/veneciya-bolonya-prognoz-na-match-serii-a-27-noyabrya-2026-goda/",
+     "sport": "football",
+     "div": "I1",
+     "event_id": "401875004",
+     "kickoff": "2026-11-27T19:45:00+00:00",
+     "published_at": "2026-11-26T11:40:00+00:00",
+     "observed_at": "2026-11-26T22:23:17.141757+00:00",
+     "tables": []
+    }
+   ],
+   "dossier": {
+    "observed_at": "2026-11-27T19:24:04.278737+00:00",
+    "kickoff": "2026-11-27T19:45:00+00:00",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/ita.1/summary?event=401875004",
+    "status": "available",
+    "facts": {
+     "table": {
+      "112": {
+       "rank": "1",
+       "gp": "12",
+       "w": "10",
+       "d": "2",
+       "l": "0",
+       "gd": "+19",
+       "pts": "32",
+       "of": 20,
+       "raw": {
+        "GP": "12",
+        "L": "0",
+        "GD": "+19",
+        "P": "32",
+        "D": "2",
+        "W": "10",
+        "R": "1",
+        "Total": "10-2-0"
+       },
+       "group": "Italian Serie A Standings"
+      },
+      "104": {
+       "rank": "2",
+       "gp": "12",
+       "w": "9",
+       "d": "3",
+       "l": "0",
+       "gd": "+25",
+       "pts": "30",
+       "of": 20,
+       "raw": {
+        "GP": "12",
+        "L": "0",
+        "GD": "+25",
+        "P": "30",
+        "D": "3",
+        "W": "9",
+        "R": "2",
+        "Total": "9-3-0"
+       },
+       "group": "Italian Serie A Standings"
+      },
+      "110": {
+       "rank": "3",
+       "gp": "12",
+       "w": "9",
+       "d": "2",
+       "l": "1",
+       "gd": "+15",
+       "pts": "29",
+       "of": 20,
+       "raw": {
+        "GP": "12",
+        "L": "1",
+        "GD": "+15",
+        "P": "29",
+        "D": "2",
+        "W": "9",
+        "R": "3",
+        "Total": "9-2-1"
+       },
+       "group": "Italian Serie A Standings"
+      },
+      "103": {
+       "rank": "4",
+       "gp": "12",
+       "w": "8",
+       "d": "3",
+       "l": "1",
+       "gd": "+14",
+       "pts": "27",
+       "of": 20,
+       "raw": {
+        "GP": "12",
+        "L": "1",
+        "GD": "+14",
+        "P": "27",
+        "D": "3",
+        "W": "8",
+        "R": "4",
+        "Total": "8-3-1"
+       },
+       "group": "Italian Serie A Standings"
+      },
+      "2572": {
+       "rank": "5",
+       "gp": "12",
+       "w": "8",
+       "d": "2",
+       "l": "2",
+       "gd": "+10",
+       "pts": "26",
+       "of": 20,
+       "raw": {
+        "GP": "12",
+        "L": "2",
+        "GD": "+10",
+        "P": "26",
+        "D": "2",
+        "W": "8",
+        "R": "5",
+        "Total": "8-2-2"
+       },
+       "group": "Italian Serie A Standings"
+      },
+      "111": {
+       "rank": "6",
+       "gp": "12",
+       "w": "6",
+       "d": "3",
+       "l": "3",
+       "gd": "+7",
+       "pts": "21",
+       "of": 20,
+       "raw": {
+        "GP": "12",
+        "L": "3",
+        "GD": "+7",
+        "P": "21",
+        "D": "3",
+        "W": "6",
+        "R": "6",
+        "Total": "6-3-3"
+       },
+       "group": "Italian Serie A Standings"
+      },
+      "4057": {
+       "rank": "7",
+       "gp": "12",
+       "w": "6",
+       "d": "2",
+       "l": "4",
+       "gd": "+5",
+       "pts": "20",
+       "of": 20,
+       "raw": {
+        "GP": "12",
+        "L": "4",
+        "GD": "+5",
+        "P": "20",
+        "D": "2",
+        "W": "6",
+        "R": "7",
+        "Total": "6-2-4"
+       },
+       "group": "Italian Serie A Standings"
+      },
+      "114": {
+       "rank": "8",
+       "gp": "12",
+       "w": "5",
+       "d": "3",
+       "l": "4",
+       "gd": "+5",
+       "pts": "18",
+       "of": 20,
+       "raw": {
+        "GP": "12",
+        "L": "4",
+        "GD": "+5",
+        "P": "18",
+        "D": "3",
+        "W": "5",
+        "R": "8",
+        "Total": "5-3-4"
+       },
+       "group": "Italian Serie A Standings"
+      },
+      "107": {
+       "rank": "9",
+       "gp": "12",
+       "w": "5",
+       "d": "3",
+       "l": "4",
+       "gd": "+2",
+       "pts": "18",
+       "of": 20,
+       "raw": {
+        "GP": "12",
+        "L": "4",
+        "GD": "+2",
+        "P": "18",
+        "D": "3",
+        "W": "5",
+        "R": "9",
+        "Total": "5-3-4"
+       },
+       "group": "Italian Serie A Standings"
+      },
+      "3263": {
+       "rank": "10",
+       "gp": "12",
+       "w": "5",
+       "d": "1",
+       "l": "6",
+       "gd": "-3",
+       "pts": "16",
+       "of": 20,
+       "raw": {
+        "GP": "12",
+        "L": "6",
+        "GD": "-3",
+        "P": "16",
+        "D": "1",
+        "W": "5",
+        "R": "10",
+        "Total": "5-1-6"
+       },
+       "group": "Italian Serie A Standings"
+      },
+      "2925": {
+       "rank": "11",
+       "gp": "12",
+       "w": "5",
+       "d": "1",
+       "l": "6",
+       "gd": "-7",
+       "pts": "16",
+       "of": 20,
+       "raw": {
+        "GP": "12",
+        "L": "6",
+        "GD": "-7",
+        "P": "16",
+        "D": "1",
+        "W": "5",
+        "R": "11",
+        "Total": "5-1-6"
+       },
+       "group": "Italian Serie A Standings"
+      },
+      "105": {
+       "rank": "12",
+       "gp": "12",
+       "w": "4",
+       "d": "3",
+       "l": "5",
+       "gd": "-3",
+       "pts": "15",
+       "of": 20,
+       "raw": {
+        "GP": "12",
+        "L": "5",
+        "GD": "-3",
+        "P": "15",
+        "D": "3",
+        "W": "4",
+        "R": "12",
+        "Total": "4-3-5"
+       },
+       "group": "Italian Serie A Standings"
+      },
+      "239": {
+       "rank": "13",
+       "gp": "12",
+       "w": "4",
+       "d": "2",
+       "l": "6",
+       "gd": "-3",
+       "pts": "14",
+       "of": 20,
+       "raw": {
+        "GP": "12",
+        "L": "6",
+        "GD": "-3",
+        "P": "14",
+        "D": "2",
+        "W": "4",
+        "R": "13",
+        "Total": "4-2-6"
+       },
+       "group": "Italian Serie A Standings"
+      },
+      "4007": {
+       "rank": "14",
+       "gp": "12",
+       "w": "3",
+       "d": "1",
+       "l": "8",
+       "gd": "-5",
+       "pts": "10",
+       "of": 20,
+       "raw": {
+        "GP": "12",
+        "L": "8",
+        "GD": "-5",
+        "P": "10",
+        "D": "1",
+        "W": "3",
+        "R": "14",
+        "Total": "3-1-8"
+       },
+       "group": "Italian Serie A Standings"
+      },
+      "113": {
+       "rank": "15",
+       "gp": "12",
+       "w": "3",
+       "d": "1",
+       "l": "8",
+       "gd": "-13",
+       "pts": "10",
+       "of": 20,
+       "raw": {
+        "GP": "12",
+        "L": "8",
+        "GD": "-13",
+        "P": "10",
+        "D": "1",
+        "W": "3",
+        "R": "15",
+        "Total": "3-1-8"
+       },
+       "group": "Italian Serie A Standings"
+      },
+      "109": {
+       "rank": "16",
+       "gp": "12",
+       "w": "2",
+       "d": "3",
+       "l": "7",
+       "gd": "-11",
+       "pts": "9",
+       "of": 20,
+       "raw": {
+        "GP": "12",
+        "L": "7",
+        "GD": "-11",
+        "P": "9",
+        "D": "3",
+        "W": "2",
+        "R": "16",
+        "Total": "2-3-7"
+       },
+       "group": "Italian Serie A Standings"
+      },
+      "115": {
+       "rank": "17",
+       "gp": "12",
+       "w": "2",
+       "d": "2",
+       "l": "8",
+       "gd": "-12",
+       "pts": "8",
+       "of": 20,
+       "raw": {
+        "GP": "12",
+        "L": "8",
+        "GD": "-12",
+        "P": "8",
+        "D": "2",
+        "W": "2",
+        "R": "17",
+        "Total": "2-2-8"
+       },
+       "group": "Italian Serie A Standings"
+      },
+      "3997": {
+       "rank": "18",
+       "gp": "12",
+       "w": "2",
+       "d": "2",
+       "l": "8",
+       "gd": "-15",
+       "pts": "8",
+       "of": 20,
+       "raw": {
+        "GP": "12",
+        "L": "8",
+        "GD": "-15",
+        "P": "8",
+        "D": "2",
+        "W": "2",
+        "R": "18",
+        "Total": "2-2-8"
+       },
+       "group": "Italian Serie A Standings"
+      },
+      "118": {
+       "rank": "19",
+       "gp": "12",
+       "w": "1",
+       "d": "3",
+       "l": "8",
+       "gd": "-13",
+       "pts": "6",
+       "of": 20,
+       "raw": {
+        "GP": "12",
+        "L": "8",
+        "GD": "-13",
+        "P": "6",
+        "D": "3",
+        "W": "1",
+        "R": "19",
+        "Total": "1-3-8"
+       },
+       "group": "Italian Serie A Standings"
+      },
+      "17530": {
+       "rank": "20",
+       "gp": "12",
+       "w": "2",
+       "d": "0",
+       "l": "10",
+       "gd": "-17",
+       "pts": "6",
+       "of": 20,
+       "raw": {
+        "GP": "12",
+        "L": "10",
+        "GD": "-17",
+        "P": "6",
+        "D": "0",
+        "W": "2",
+        "R": "20",
+        "Total": "2-0-10"
+       },
+       "group": "Italian Serie A Standings"
+      }
+     },
+     "last5": {
+      "17530": [
+       {
+        "res": "L",
+        "gf": 0,
+        "ga": 1,
+        "opp": "Genoa",
+        "home": false,
+        "date": "2026-10-25"
+       },
+       {
+        "res": "L",
+        "gf": 0,
+        "ga": 2,
+        "opp": "Internazionale",
+        "home": true,
+        "date": "2026-10-28"
+       },
+       {
+        "res": "L",
+        "gf": 0,
+        "ga": 1,
+        "opp": "Como",
+        "home": false,
+        "date": "2026-11-01"
+       },
+       {
+        "res": "W",
+        "gf": 2,
+        "ga": 1,
+        "opp": "Udinese",
+        "home": true,
+        "date": "2026-11-06"
+       },
+       {
+        "res": "L",
+        "gf": 0,
+        "ga": 4,
+        "opp": "Juventus",
+        "home": false,
+        "date": "2026-11-22"
+       }
+      ],
+      "107": [
+       {
+        "res": "W",
+        "gf": 2,
+        "ga": 0,
+        "opp": "Cagliari",
+        "home": false,
+        "date": "2026-10-24"
+       },
+       {
+        "res": "W",
+        "gf": 4,
+        "ga": 2,
+        "opp": "AC Milan",
+        "home": false,
+        "date": "2026-10-28"
+       },
+       {
+        "res": "W",
+        "gf": 2,
+        "ga": 1,
+        "opp": "Monza",
+        "home": true,
+        "date": "2026-10-31"
+       },
+       {
+        "res": "W",
+        "gf": 2,
+        "ga": 1,
+        "opp": "Parma",
+        "home": false,
+        "date": "2026-11-07"
+       },
+       {
+        "res": "D",
+        "gf": 1,
+        "ga": 1,
+        "opp": "Udinese",
+        "home": true,
+        "date": "2026-11-22"
+       }
+      ]
+     },
+     "h2h": [
+      {
+       "date": "2025-03-29",
+       "home_id": "17530",
+       "hs": "0",
+       "as": "1"
+      },
+      {
+       "date": "2024-11-30",
+       "home_id": "107",
+       "hs": "3",
+       "as": "0"
+      },
+      {
+       "date": "2022-05-08",
+       "home_id": "17530",
+       "hs": "4",
+       "as": "3"
+      },
+      {
+       "date": "2021-11-21",
+       "home_id": "107",
+       "hs": "0",
+       "as": "1"
+      }
+     ],
+     "lineups": {
+      "17530": {
+       "formation": "3-5-2",
+       "starters": [
+        "Filip Stankovic",
+        "Matías Moreno",
+        "Juan Jesus",
+        "Redouane Halhal",
+        "Simon Sohm",
+        "Enrique Perez",
+        "Gianluca Busio",
+        "Ridgeciano Haps",
+        "Antoine Hainaut",
+        "Akor Adams",
+        "John Yeboah"
+       ]
+      },
+      "107": {
+       "formation": "3-4-3",
+       "starters": [
+        "Lukasz Skorupski",
+        "Nicoló Casale",
+        "Arthur Theate",
+        "Martin Vitík",
+        "Tommaso Pobega",
+        "Lewis Ferguson",
+        "Rahim Alhassane",
+        "Nadir Zortea",
+        "Jens Odgaard",
+        "Samuel Mbangula",
+        "Federico Bernardeschi"
+       ]
+      }
+     },
+     "leaders": {
+      "17530": [
+       [
+        "Goals",
+        "Akor Adams",
+        "Matches: 12, Goals: 2"
+       ],
+       [
+        "Assists",
+        "Antoine Hainaut",
+        "Matches: 12, Assists: 2"
+       ],
+       [
+        "Total Shots",
+        "Akor Adams",
+        "35"
+       ]
+      ],
+      "107": [
+       [
+        "Goals",
+        "Federico Bernardeschi",
+        "Matches: 12, Goals: 3"
+       ],
+       [
+        "Assists",
+        "Juan Miranda",
+        "Matches: 10, Assists: 5"
+       ],
+       [
+        "Total Shots",
+        "Federico Bernardeschi",
+        "34"
+       ]
+      ]
+     },
+     "venue": "Stadio Pier Luigi Penzo",
+     "city": "Venezia"
+    }
+   }
+  },
+  "extra": {
+   "corners": {
+    "home": 3.8235892221657344,
+    "away": 5.73353668869683,
+    "total": 9.557125910862565,
+    "lines": {
+     "8.5": 0.6151801907736932,
+     "9.5": 0.4855889373853447,
+     "10.5": 0.3617369448274501
+    }
+   },
+   "cards": {
+    "total": 3.2083333333333335,
+    "lines": {
+     "3.5": 0.39933491948528177,
+     "4.5": 0.22087313579511492,
+     "5.5": 0.10636015792725784
+    }
+   }
+  },
+  "msg_id": 9829,
+  "btn": 2
  },
  "401876392": {
   "status": "waiting_data",
@@ -28493,7 +29951,7 @@
   "sport": "football",
   "div": "F1",
   "reason": "no_qualified_real_market",
-  "retry_at": 1795807548.093566
+  "retry_at": 1795808267.689182
  },
  "401878930": {
   "status": "waiting_data",
@@ -28501,7 +29959,7 @@
   "sport": "football",
   "div": "B1",
   "reason": "no_qualified_real_market",
-  "retry_at": 1795807548.093566
+  "retry_at": 1795808267.689182
  },
  "401879225": {
   "id": "401879225",
