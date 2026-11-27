@@ -32739,5 +32739,13 @@
   "div": "DNK",
   "reason": "no_qualified_real_market",
   "retry_at": 1795800640.309068
+ },
+ "401881739": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-27T21:30:00+03:00",
+  "sport": "football",
+  "div": "AUT",
+  "reason": "no_qualified_real_market",
+  "retry_at": 1795801120.65685
  }
 }
