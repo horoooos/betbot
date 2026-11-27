@@ -7,7 +7,6 @@
  "schedule_day": "2026-11-27",
  "content_slot": "2026-11-27-23",
  "news_seen": [
-  "https://www.sport-express.ru/football/champions-league/news/galatasaray-aston-villa-batrakova-zamenili-na-74-y-minute-matcha-ligi-chempionov-24-noyabrya-2026-2478524/",
   "https://www.sport-express.ru/football/champions-league/news/manchester-siti-napoli-startovye-sostavy-komand-na-match-ligi-chempionov-24-noyabrya-2026-2478526/",
   "https://www.sport-express.ru/football/champions-league/news/feyenoord-portu-startovye-sostavy-na-match-ligi-chempionov-24-noyabrya-2026-2478521/",
   "https://www.sport-express.ru/football/champions-league/news/real-madrid-psv-startovye-sostavy-na-match-ligi-chempionov-24-noyabrya-2026-2478520/",
@@ -506,9 +505,10 @@
   "https://www.sport-express.ru/basketball/euroleague/news/zaschitnik-parizha-nadir-ifi-priznan-samym-cennym-igrokom-noyabrya-2026-goda-v-evrolige-evrosezon-2026-27-2479826/",
   "https://www.sport-express.ru/tennis/wta/news/rahimova-ocenila-svoe-vystuplenie-na-turnire-v-tokio-2479809/",
   "navi-ili-parivision-kto-nachnet-s-pobedy-vystupleniye-vo-vtoroi-stadii-pgl-major",
-  "dosia-postavil-nip-i-100-thieves-na-vylet-so-schetom-0-3-iz-vtorogo-yetapa-pgl"
+  "dosia-postavil-nip-i-100-thieves-na-vylet-so-schetom-0-3-iz-vtorogo-yetapa-pgl",
+  "https://www.sport-express.ru/football/rfpl/news/istochnik-spartak-prodlil-kontrakt-s-maksimenko-2479897/"
  ],
- "news_i": 0,
+ "news_i": 1,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1574,7 +1574,7 @@
  "value_day": "2026-11-27",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-27",
- "site_stamp": "1582|9861|2026-11-28 00|6|f3a3da106d56a6bd",
+ "site_stamp": "1582|9863|2026-11-28 00|6|650485db253df265",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1716,7 +1716,7 @@
  "streak_day": {
   "2026-11-22": 2
  },
- "news_next": "2026-11-28T00:50:36.149565+03:00",
+ "news_next": "2026-11-28T01:23:36.178610+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1744,13 +1744,12 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 9861,
+ "dz_last": 9863,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
  "dz_err": null,
  "img_used": [
-  "https://upload.wikimedia.org/wikipedia/commons/9/91/FC_Spartak_Moscow_Logotype.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
   "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/2015-11-20_-_Tarasova_and_Grishin_-_Photo_1.jpg/1280px-2015-11-20_-_Tarasova_and_Grishin_-_Photo_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
   "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/2015-11-20_-_Tarasova_and_Grishin_-_Photo_3.jpg/1280px-2015-11-20_-_Tarasova_and_Grishin_-_Photo_3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
   "https://upload.wikimedia.org/wikipedia/commons/8/8f/Cadet_Soccer_Stadium.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
@@ -2049,7 +2048,8 @@
   "https://images.cybersport.ru/images/as-is/plain/89/89e19333-007c-42a5-b89e-532adc7e8002.jpg",
   "https://upload.wikimedia.org/wikipedia/commons/3/3b/Kino_North_Stadium_at_night.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
   "https://upload.wikimedia.org/wikipedia/commons/0/06/Kirill_Levnikov_2022.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-  "https://images.cybersport.ru/images/as-is/plain/0e/0e9b4369-4398-4876-911b-b534c538690c.jpg"
+  "https://images.cybersport.ru/images/as-is/plain/0e/0e9b4369-4398-4876-911b-b534c538690c.jpg",
+  "https://upload.wikimedia.org/wikipedia/commons/0/06/Andrey_Fedorovich_Karpov_by_I.Makarov_%281886%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
  ],
  "indexnow_day": "2026-11-28",
  "vk_wall_err": null,
@@ -2546,7 +2546,8 @@
   "9834",
   "9841",
   "9850",
-  "9855"
+  "9855",
+  "9864"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -2975,11 +2976,12 @@
   "2026-11-27:новость:7faa2b93110e70a1547058a1",
   "2026-11-27:новость:64432e39af18075e301c55f5",
   "2026-11-27:новость:6c91d3b33a39699e6cbfb8c7",
-  "2026-11-27:новость:5080bfcebde9555d7d86c3c7"
+  "2026-11-27:новость:5080bfcebde9555d7d86c3c7",
+  "2026-11-27:новость:706c4527982d758d6e304a3d"
  ],
  "dz_last_delivery": {
-  "source_id": 9855,
-  "message_id": 976,
+  "source_id": 9864,
+  "message_id": 977,
   "kind": "новость"
  },
  "learn_attempt_day": "2026-11-28",
@@ -3182,7 +3184,7 @@
   "quote_matches": 167
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-28T00:48:35.620856+03:00",
+  "last_poll": "2026-11-28T00:50:36.178610+03:00",
   "cursor": "494",
   "posts": [
    {
@@ -8374,15 +8376,16 @@
    "estimated": false
   },
   "hockey|NHL|401892806": {
-   "reason": "edge_below_minimum",
-   "checked_at": "2026-11-27T21:38:52.290558+00:00",
+   "reason": "published",
+   "checked_at": "2026-11-27T21:51:01.734436+00:00",
    "kickoff": "2026-11-28T01:30:00+03:00",
    "sport": "hockey",
    "id": "401892806",
    "home": "Чикаго",
    "away": "Рейнджерс",
-   "priced_markets": 4,
    "market": "П2 (с ОТ и буллитами)",
+   "strategy": "external_trial",
+   "source_count": 9,
    "probability": 0.6164,
    "odds": 1.56,
    "edge": -0.03842,
@@ -20523,6 +20526,112 @@
        "published_at": "2026-11-27T19:14:00+00:00",
        "observed_at": "2026-11-27T19:15:48.093566+00:00",
        "odds": 1.8,
+       "price_kind": "author_recorded"
+      }
+     ]
+    }
+   },
+   "hockey|NHL|401892806": {
+    "status": "open",
+    "id": "401892806",
+    "sport": "hockey",
+    "div": "NHL",
+    "kickoff": "2026-11-28T01:30:00+03:00",
+    "published_at": "2026-11-27T21:50:58.283805+00:00",
+    "msg_id": 9862,
+    "tip": {
+     "key": "HK_ML_A",
+     "label": "П2 (с ОТ и буллитами)",
+     "p": 0.6164,
+     "odds": 1.56,
+     "est": false,
+     "stake": 0.5,
+     "strategy": "external_trial",
+     "selection_mode": "external_fallback",
+     "trial_expires_at": null,
+     "probability_origin": "baseline_model",
+     "model_edge": -0.03847,
+     "source_count": 9,
+     "source_refs": [
+      {
+       "author": "/predictors/sergei-exp",
+       "provider": null,
+       "source": "https://stavka.tv/matches/ice-hockey/28-11-2026-chicago-blackhawks-new-york-rangers",
+       "published_at": "2026-11-26T23:39:00+00:00",
+       "observed_at": "2026-11-27T08:26:13.879382+00:00",
+       "odds": 1.58,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/yunost-85",
+       "provider": null,
+       "source": "https://stavka.tv/matches/ice-hockey/28-11-2026-chicago-blackhawks-new-york-rangers",
+       "published_at": "2026-11-27T16:47:00+00:00",
+       "observed_at": "2026-11-27T16:50:40.075253+00:00",
+       "odds": 1.58,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/armeec-moskvy",
+       "provider": null,
+       "source": "https://stavka.tv/matches/ice-hockey/28-11-2026-chicago-blackhawks-new-york-rangers",
+       "published_at": "2026-11-27T21:00:00+00:00",
+       "observed_at": "2026-11-27T21:01:48.531612+00:00",
+       "odds": 1.55,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/artur-borisenko",
+       "provider": null,
+       "source": "https://stavka.tv/matches/ice-hockey/28-11-2026-chicago-blackhawks-new-york-rangers",
+       "published_at": "2026-11-27T21:11:00+00:00",
+       "observed_at": "2026-11-27T21:22:35.604178+00:00",
+       "odds": 1.55,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/sergey-antonov",
+       "provider": null,
+       "source": "https://stavka.tv/matches/ice-hockey/28-11-2026-chicago-blackhawks-new-york-rangers",
+       "published_at": "2026-11-27T21:14:00+00:00",
+       "observed_at": "2026-11-27T21:22:35.604178+00:00",
+       "odds": 1.55,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/maksim-cerevko",
+       "provider": null,
+       "source": "https://stavka.tv/matches/ice-hockey/28-11-2026-chicago-blackhawks-new-york-rangers",
+       "published_at": "2026-11-27T21:19:00+00:00",
+       "observed_at": "2026-11-27T21:22:35.604178+00:00",
+       "odds": 1.55,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/aleksandr-tkacenko-5",
+       "provider": null,
+       "source": "https://stavka.tv/matches/ice-hockey/28-11-2026-chicago-blackhawks-new-york-rangers",
+       "published_at": "2026-11-27T21:33:00+00:00",
+       "observed_at": "2026-11-27T21:42:35.648370+00:00",
+       "odds": 1.57,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/vadym-pistriuha",
+       "provider": null,
+       "source": "https://stavka.tv/matches/ice-hockey/28-11-2026-chicago-blackhawks-new-york-rangers",
+       "published_at": "2026-11-27T21:34:00+00:00",
+       "observed_at": "2026-11-27T21:42:35.648370+00:00",
+       "odds": 1.57,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/dmitriy-vyshinskiy",
+       "provider": null,
+       "source": "https://stavka.tv/matches/ice-hockey/28-11-2026-chicago-blackhawks-new-york-rangers",
+       "published_at": "2026-11-27T21:35:00+00:00",
+       "observed_at": "2026-11-27T21:42:35.648370+00:00",
+       "odds": 1.57,
        "price_kind": "author_recorded"
       }
      ]
