@@ -3141,7 +3141,7 @@
   "quote_matches": 161
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-27T18:08:40.601446+03:00",
+  "last_poll": "2026-11-27T18:10:40.687732+03:00",
   "cursor": "478",
   "posts": [
    {
@@ -17741,7 +17741,7 @@
     "profit_pct": 0.305
    },
    "esports|CS2|1816929": {
-    "status": "open",
+    "status": "settled",
     "id": "1816929",
     "sport": "esports",
     "div": "CS2",
@@ -17952,7 +17952,10 @@
        "price_kind": "author_recorded"
       }
      ]
-    }
+    },
+    "settled_at": "2026-11-27T15:10:40.687732+00:00",
+    "hit": true,
+    "profit_pct": 0.25
    }
   }
  },
