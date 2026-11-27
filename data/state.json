@@ -1588,7 +1588,7 @@
  "value_day": "2026-11-26",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-26",
- "site_stamp": "1575|9756|2026-11-27 08|6|6cd5c3f26725690b",
+ "site_stamp": "1575|9756|2026-11-27 09|6|bdbe9d0c742789fa",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1600,7 +1600,7 @@
    "NBA|401909332"
   ]
  },
- "value_check": "2026-11-27-2",
+ "value_check": "2026-11-27-3",
  "express_risk": {
   "msg": 9019,
   "legs": [
@@ -2951,7 +2951,7 @@
   "external_sources": {
    "providers": {
     "legalbet": {
-     "at": "2026-11-27T05:31:39.272732+00:00",
+     "at": "2026-11-27T06:01:39.576278+00:00",
      "status": "ok",
      "discovered": 1,
      "pages": 1,
@@ -2962,29 +2962,29 @@
      "contexts": 1
     },
     "livesport": {
-     "at": "2026-11-27T05:31:39.272732+00:00",
+     "at": "2026-11-27T06:01:39.576278+00:00",
      "status": "ok",
-     "discovered": 10,
+     "discovered": 11,
      "pages": 6,
-     "opinions": 6,
-     "mapped": 4,
-     "articles_available": 16,
-     "next_offset": 8,
-     "contexts": 6
+     "opinions": 2,
+     "mapped": 1,
+     "articles_available": 17,
+     "next_offset": 14,
+     "contexts": 5
     },
     "metaratings": {
-     "at": "2026-11-27T05:31:39.272732+00:00",
+     "at": "2026-11-27T06:01:39.576278+00:00",
      "status": "ok",
      "discovered": 7,
      "pages": 6,
      "opinions": 24,
      "mapped": 2,
      "articles_available": 30,
-     "next_offset": 12,
+     "next_offset": 11,
      "contexts": 6
     },
     "rb": {
-     "at": "2026-11-27T05:31:39.272732+00:00",
+     "at": "2026-11-27T06:01:39.576278+00:00",
      "status": "ok",
      "discovered": 2,
      "pages": 2,
@@ -2995,7 +2995,7 @@
      "contexts": 2
     },
     "vseprosport": {
-     "at": "2026-11-27T05:31:39.272732+00:00",
+     "at": "2026-11-27T06:01:39.576278+00:00",
      "status": "ok",
      "discovered": 5,
      "pages": 4,
@@ -3128,7 +3128,7 @@
   "quote_matches": 150
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-27T08:59:40.073798+03:00",
+  "last_poll": "2026-11-27T09:01:39.576278+03:00",
   "cursor": "466",
   "posts": [
    {
@@ -3917,7 +3917,10 @@
    "401910050": "pre",
    "401877525": "pre",
    "401892132": "pre",
-   "401879793": "pre"
+   "401879793": "pre",
+   "401885044": "pre",
+   "401885046": "pre",
+   "401885043": "pre"
   },
   "daily": {
    "day": "2026-11-27"
