@@ -1106,7 +1106,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "",
-"hs": "2",
+"hs": "3",
 "as": "0",
 "tip": "",
 "top": false,
@@ -1277,7 +1277,15 @@ null
 ],
 "center": "Ожидаемые голы 2.8 : 3.6"
 },
-"lt": null
+"lt": {
+"fair": 1.38,
+"label": "1X (осн. время)",
+"min_odds": 1.45,
+"minute": "2-й период",
+"p": 0.724,
+"result": null,
+"score": "2:1"
+}
 },
 {
 "sport": "football",
