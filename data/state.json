@@ -3126,7 +3126,7 @@
   "quote_matches": 150
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-27T08:23:39.557566+03:00",
+  "last_poll": "2026-11-27T08:25:39.776778+03:00",
   "cursor": "466",
   "posts": [
    {
@@ -3700,7 +3700,8 @@
     "observed_at": "2026-11-27T02:14:55.202093+03:00"
    }
   ],
-  "status": "observing"
+  "status": "observing",
+  "missing_cover_posts": []
  },
  "promotion": {
   "targets": {
