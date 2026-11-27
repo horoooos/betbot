@@ -1572,7 +1572,7 @@
  "value_day": "2026-11-27",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-27",
- "site_stamp": "1578|9824|2026-11-27 22|6|95a7e06b497ab288",
+ "site_stamp": "1578|9826|2026-11-27 22|6|95a7e06b497ab288",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1740,7 +1740,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 9824,
+ "dz_last": 9826,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -3148,29 +3148,29 @@
    }
   },
   "source": {
-   "last_success": "2026-11-27T18:55:47.356701+00:00",
-   "parsed": 325,
-   "added": 72,
-   "discovered_matches": 37,
+   "last_success": "2026-11-27T19:15:48.093566+00:00",
+   "parsed": 326,
+   "added": 77,
+   "discovered_matches": 36,
    "pages": 16,
    "errors": [],
    "parsed_by_sport": {
     "soccer": 50,
     "ice-hockey": 50,
     "basketball": 50,
-    "tennis": 49,
+    "tennis": 50,
     "csgo": 36,
     "dota2": 50
    }
   },
   "error": null,
-  "tips": 20145,
+  "tips": 20173,
   "snapshots": 429,
-  "unmapped_markets": 30360,
+  "unmapped_markets": 30409,
   "quote_matches": 164
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-27T22:13:48.058758+03:00",
+  "last_poll": "2026-11-27T22:15:48.093566+03:00",
   "cursor": "487",
   "posts": [
    {
@@ -8061,7 +8061,7 @@
   },
   "football|I1|401875004": {
    "reason": "edge_below_minimum",
-   "checked_at": "2026-11-27T19:06:13.428555+00:00",
+   "checked_at": "2026-11-27T19:16:24.165118+00:00",
    "kickoff": "2026-11-27T22:45:00+03:00",
    "sport": "football",
    "id": "401875004",
@@ -8076,7 +8076,7 @@
   },
   "football|F1|401876392": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-27T19:06:13.841528+00:00",
+   "checked_at": "2026-11-27T19:16:24.557676+00:00",
    "kickoff": "2026-11-27T22:45:00+03:00",
    "sport": "football",
    "id": "401876392",
@@ -8091,7 +8091,7 @@
   },
   "football|B1|401878930": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-27T19:06:14.249235+00:00",
+   "checked_at": "2026-11-27T19:16:24.949607+00:00",
    "kickoff": "2026-11-27T22:45:00+03:00",
    "sport": "football",
    "id": "401878930",
