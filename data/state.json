@@ -2958,7 +2958,7 @@
   "external_sources": {
    "providers": {
     "legalbet": {
-     "at": "2026-11-27T13:12:39.152915+00:00",
+     "at": "2026-11-27T13:44:39.885799+00:00",
      "status": "ok",
      "discovered": 2,
      "pages": 2,
@@ -2969,29 +2969,29 @@
      "contexts": 2
     },
     "livesport": {
-     "at": "2026-11-27T13:12:39.152915+00:00",
+     "at": "2026-11-27T13:44:39.885799+00:00",
      "status": "ok",
-     "discovered": 14,
+     "discovered": 15,
      "pages": 6,
-     "opinions": 10,
-     "mapped": 5,
-     "articles_available": 26,
-     "next_offset": 17,
+     "opinions": 6,
+     "mapped": 4,
+     "articles_available": 29,
+     "next_offset": 8,
      "contexts": 6
     },
     "metaratings": {
-     "at": "2026-11-27T13:12:39.152915+00:00",
+     "at": "2026-11-27T13:44:39.885799+00:00",
      "status": "ok",
      "discovered": 10,
      "pages": 6,
      "opinions": 24,
-     "mapped": 2,
-     "articles_available": 33,
-     "next_offset": 6,
+     "mapped": 0,
+     "articles_available": 34,
+     "next_offset": 12,
      "contexts": 6
     },
     "rb": {
-     "at": "2026-11-27T13:12:39.152915+00:00",
+     "at": "2026-11-27T13:44:39.885799+00:00",
      "status": "ok",
      "discovered": 1,
      "pages": 1,
@@ -3002,7 +3002,7 @@
      "contexts": 1
     },
     "vseprosport": {
-     "at": "2026-11-27T13:12:39.152915+00:00",
+     "at": "2026-11-27T13:44:39.885799+00:00",
      "status": "ok",
      "discovered": 4,
      "pages": 3,
@@ -3016,7 +3016,7 @@
    },
    "opinions": 65,
    "snapshots": 0,
-   "contexts": 183,
+   "contexts": 184,
    "model": {
     "weight": 0.0,
     "status": "collecting",
@@ -3135,7 +3135,7 @@
   "quote_matches": 159
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-27T16:42:38.991862+03:00",
+  "last_poll": "2026-11-27T16:44:39.885799+03:00",
   "cursor": "476",
   "posts": [
    {
@@ -3952,7 +3952,7 @@
    "401888557": "pre",
    "401936333": "pre",
    "401936055": "pre",
-   "1816498": "pre",
+   "1816498": "in",
    "401933727": "pre",
    "401936054": "pre",
    "401876813": "pre",
