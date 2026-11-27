@@ -4775,11 +4775,356 @@
   "retry_at": 1795773854.895586
  },
  "CS2|1816929": {
-  "status": "waiting_data",
-  "kickoff": "2026-11-27T14:00:00+03:00",
-  "sport": "esports",
+  "id": "1816929",
   "div": "CS2",
-  "reason": "no_real_odds",
-  "retry_at": 1795776134.161852
+  "sport": "esports",
+  "streams": [
+   {
+    "provider": "twitch",
+    "channel": "krl_stream",
+    "url": "https://www.twitch.tv/krl_stream",
+    "language": "fr",
+    "source": "PandaScore",
+    "official": false,
+    "status": "listed",
+    "access": "unknown"
+   },
+   {
+    "provider": "youtube",
+    "video_id": "yFgVYA-yJ6s",
+    "url": "https://www.youtube.com/watch?v=yFgVYA-yJ6s",
+    "language": "pl",
+    "source": "PandaScore",
+    "official": false,
+    "status": "listed",
+    "access": "unknown"
+   },
+   {
+    "provider": "twitch",
+    "channel": "bysl4m",
+    "url": "https://www.twitch.tv/bysl4m",
+    "language": "ru",
+    "source": "PandaScore",
+    "official": false,
+    "status": "listed",
+    "access": "unknown"
+   },
+   {
+    "provider": "youtube",
+    "video_id": "JRQtOvSfPZ8",
+    "url": "https://www.youtube.com/watch?v=JRQtOvSfPZ8",
+    "language": "en",
+    "source": "PandaScore",
+    "official": false,
+    "status": "listed",
+    "access": "unknown"
+   },
+   {
+    "provider": "twitch",
+    "channel": "pgl",
+    "url": "https://www.twitch.tv/pgl",
+    "language": "en",
+    "source": "PandaScore",
+    "official": true,
+    "status": "listed",
+    "access": "unknown"
+   }
+  ],
+  "tournament": "PGL Major · Singapore 2026",
+  "bo": 3,
+  "kickoff": "2026-11-27T14:00:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "tier": "s",
+  "status": "reviewed",
+  "home": {
+   "id": "133435",
+   "name": "M80",
+   "ru": "M80",
+   "logo": "https://cdn-api.pandascore.co/images/team/image/133435/788px_m80_2023_allmode.png",
+   "color": "3b4a7a",
+   "score": 0,
+   "winner": false
+  },
+  "away": {
+   "id": "126452",
+   "name": "100 Thieves",
+   "ru": "100 Thieves",
+   "logo": "https://cdn-api.pandascore.co/images/team/image/126452/8474.png",
+   "color": "3b4a7a",
+   "score": 0,
+   "winner": false
+  },
+  "odds": {
+   "H": 2.6,
+   "A": 1.5,
+   "src": "winline",
+   "source_url": "https://stavka.tv/matches/csgo/27-11-2026-m80-100-thieves",
+   "observed_at": "2026-11-27T10:42:34.983700+00:00",
+   "price_kind": "public_displayed"
+  },
+  "probs": {
+   "ES_W1": 0.3658536585365854,
+   "ES_W2": 0.6341463414634145,
+   "ES_FULL": 0.4836497312059983,
+   "ES_DRY": 0.5163502687940017,
+   "ES_S2:0": 0.1677586845828169,
+   "ES_S0:2": 0.3485915842111848,
+   "ES_S2:1": 0.19809497395376846,
+   "ES_S1:2": 0.28555475725222984,
+   "ES_MAP1": 0.6514084157888151,
+   "ES_MAP2": 0.832241315417183
+  },
+  "labels": {
+   "ES_W1": "Победа: M80",
+   "ES_W2": "Победа: 100 Thieves",
+   "ES_FULL": "Больше 2 карт",
+   "ES_DRY": "Всухую (2:0 или 0:2)",
+   "ES_S2:0": "Счёт по картам 2:0",
+   "ES_S0:2": "Счёт по картам 0:2",
+   "ES_S2:1": "Счёт по картам 2:1",
+   "ES_S1:2": "Счёт по картам 1:2",
+   "ES_MAP1": "M80 возьмёт хотя бы карту",
+   "ES_MAP2": "100 Thieves возьмёт хотя бы карту"
+  },
+  "real": {
+   "ES_W1": 2.6,
+   "ES_W2": 1.5
+  },
+  "center": "BO3 · линия winline · Эло 1566 : 1745",
+  "bar": [
+   0.3658536585365854,
+   0,
+   0.6341463414634145
+  ],
+  "model": {
+   "elo": [
+    1566.3116358270715,
+    1744.5254487263232
+   ],
+   "src": "winline"
+  },
+  "stavka_signal": {
+   "status": "collecting",
+   "weight": 0.0,
+   "authors": 32,
+   "group": "esports:CS2",
+   "snapshot": "CS2|1816929",
+   "source": "https://stavka.tv"
+  },
+  "research": {
+   "articles": [],
+   "dossier": null
+  },
+  "main": {
+   "key": "ES_W2",
+   "label": "Победа: 100 Thieves",
+   "p": 0.6341,
+   "odds": 1.5,
+   "est": false,
+   "stake": 0.5,
+   "strategy": "external_trial",
+   "selection_mode": "external_fallback",
+   "trial_expires_at": null,
+   "probability_origin": "baseline_model",
+   "model_edge": -0.04878,
+   "source_count": 21,
+   "source_refs": [
+    {
+     "author": "/predictors/prosto-car-car",
+     "provider": null,
+     "source": "https://stavka.tv/matches/csgo/27-11-2026-m80-100-thieves",
+     "published_at": "2026-11-26T15:36:00+00:00",
+     "observed_at": "2026-11-26T15:55:01.332127+00:00",
+     "odds": 1.63,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/gennadiy-sovetskikh",
+     "provider": null,
+     "source": "https://stavka.tv/matches/csgo/27-11-2026-m80-100-thieves",
+     "published_at": "2026-11-26T16:42:00+00:00",
+     "observed_at": "2026-11-26T16:57:08.853370+00:00",
+     "odds": 1.57,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/izbasar",
+     "provider": null,
+     "source": "https://stavka.tv/matches/csgo/27-11-2026-m80-100-thieves",
+     "published_at": "2026-11-26T16:48:00+00:00",
+     "observed_at": "2026-11-26T16:57:08.853370+00:00",
+     "odds": 1.57,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/-1305",
+     "provider": null,
+     "source": "https://stavka.tv/matches/csgo/27-11-2026-m80-100-thieves",
+     "published_at": "2026-11-26T16:51:00+00:00",
+     "observed_at": "2026-11-26T16:57:08.853370+00:00",
+     "odds": 1.57,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/makar-xiznyak",
+     "provider": null,
+     "source": "https://stavka.tv/matches/csgo/27-11-2026-m80-100-thieves",
+     "published_at": "2026-11-26T17:20:00+00:00",
+     "observed_at": "2026-11-26T17:41:08.304008+00:00",
+     "odds": 1.55,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/maksim-smidt",
+     "provider": null,
+     "source": "https://stavka.tv/matches/csgo/27-11-2026-m80-100-thieves",
+     "published_at": "2026-11-26T19:00:00+00:00",
+     "observed_at": "2026-11-26T19:07:09.592806+00:00",
+     "odds": 1.55,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/mikhail-arinin",
+     "provider": null,
+     "source": "https://stavka.tv/matches/csgo/27-11-2026-m80-100-thieves",
+     "published_at": "2026-11-26T19:14:00+00:00",
+     "observed_at": "2026-11-26T19:27:10.089363+00:00",
+     "odds": 1.55,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/emo-emooo",
+     "provider": null,
+     "source": "https://stavka.tv/matches/csgo/27-11-2026-m80-100-thieves",
+     "published_at": "2026-11-26T19:53:00+00:00",
+     "observed_at": "2026-11-26T20:07:42.294598+00:00",
+     "odds": 1.55,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/andrei-malko-1",
+     "provider": null,
+     "source": "https://stavka.tv/matches/csgo/27-11-2026-m80-100-thieves",
+     "published_at": "2026-11-26T20:12:00+00:00",
+     "observed_at": "2026-11-26T20:28:41.323883+00:00",
+     "odds": 1.55,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/aleksandr-tkacenko-15",
+     "provider": null,
+     "source": "https://stavka.tv/matches/csgo/27-11-2026-m80-100-thieves",
+     "published_at": "2026-11-26T20:46:00+00:00",
+     "observed_at": "2026-11-26T21:10:34.589122+00:00",
+     "odds": 1.55,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/artem-iakovlev",
+     "provider": null,
+     "source": "https://stavka.tv/matches/csgo/27-11-2026-m80-100-thieves",
+     "published_at": "2026-11-26T21:18:00+00:00",
+     "observed_at": "2026-11-26T21:30:38.889024+00:00",
+     "odds": 1.55,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/dannil-mazur",
+     "provider": null,
+     "source": "https://stavka.tv/matches/csgo/27-11-2026-m80-100-thieves",
+     "published_at": "2026-11-26T21:35:00+00:00",
+     "observed_at": "2026-11-26T21:50:39.809441+00:00",
+     "odds": 1.55,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/igor-larin-10",
+     "provider": null,
+     "source": "https://stavka.tv/matches/csgo/27-11-2026-m80-100-thieves",
+     "published_at": "2026-11-26T21:38:00+00:00",
+     "observed_at": "2026-11-26T21:50:39.809441+00:00",
+     "odds": 1.55,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/fireflowt12",
+     "provider": null,
+     "source": "https://stavka.tv/matches/csgo/27-11-2026-m80-100-thieves",
+     "published_at": "2026-11-26T22:14:00+00:00",
+     "observed_at": "2026-11-26T22:32:54.641591+00:00",
+     "odds": 1.55,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/iurii-sycev",
+     "provider": null,
+     "source": "https://stavka.tv/matches/csgo/27-11-2026-m80-100-thieves",
+     "published_at": "2026-11-26T22:23:00+00:00",
+     "observed_at": "2026-11-26T22:32:54.641591+00:00",
+     "odds": 1.55,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/kiryxache",
+     "provider": null,
+     "source": "https://stavka.tv/matches/csgo/27-11-2026-m80-100-thieves",
+     "published_at": "2026-11-26T23:09:00+00:00",
+     "observed_at": "2026-11-26T23:14:55.202093+00:00",
+     "odds": 1.55,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/denis-zyryanov-2",
+     "provider": null,
+     "source": "https://stavka.tv/matches/csgo/27-11-2026-m80-100-thieves",
+     "published_at": "2026-11-27T03:02:00+00:00",
+     "observed_at": "2026-11-27T03:10:19.403938+00:00",
+     "odds": 1.53,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/-4852",
+     "provider": null,
+     "source": "https://stavka.tv/matches/csgo/27-11-2026-m80-100-thieves",
+     "published_at": "2026-11-27T03:29:00+00:00",
+     "observed_at": "2026-11-27T03:32:19.535925+00:00",
+     "odds": 1.53,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/mikhail-litvinov-1",
+     "provider": null,
+     "source": "https://stavka.tv/matches/csgo/27-11-2026-m80-100-thieves",
+     "published_at": "2026-11-27T04:43:00+00:00",
+     "observed_at": "2026-11-27T04:56:19.582450+00:00",
+     "odds": 1.53,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/kair-akisevv-1",
+     "provider": null,
+     "source": "https://stavka.tv/matches/csgo/27-11-2026-m80-100-thieves",
+     "published_at": "2026-11-27T06:30:00+00:00",
+     "observed_at": "2026-11-27T06:39:39.476539+00:00",
+     "odds": 1.52,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/-1951",
+     "provider": null,
+     "source": "https://stavka.tv/matches/csgo/27-11-2026-m80-100-thieves",
+     "published_at": "2026-11-27T08:17:00+00:00",
+     "observed_at": "2026-11-27T08:26:13.879382+00:00",
+     "odds": 1.52,
+     "price_kind": "author_recorded"
+    }
+   ]
+  },
+  "bold": {},
+  "open": {},
+  "top": false,
+  "msg_id": 9772,
+  "btn": 2
  }
 }
