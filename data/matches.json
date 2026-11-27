@@ -30222,7 +30222,10 @@
    }
   },
   "msg_id": 9822,
-  "btn": 2
+  "btn": 2,
+  "close": {
+   "A": 0.3377
+  }
  },
  "401880129": {
   "id": "401880129",
@@ -31248,7 +31251,10 @@
    }
   },
   "msg_id": 9831,
-  "btn": 2
+  "btn": 2,
+  "close": {
+   "A": 0.4353
+  }
  },
  "401882791": {
   "status": "waiting_data",
@@ -31256,7 +31262,7 @@
   "sport": "football",
   "div": "SP1",
   "reason": "edge_below_minimum",
-  "retry_at": 1795809228.005761
+  "retry_at": 1795809828.021068
  },
  "401885389": {
   "status": "waiting_data",
