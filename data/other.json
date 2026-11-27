@@ -4383,22 +4383,22 @@
   "state": "pre",
   "completed": false,
   "tier": "s",
-  "status": "reviewed",
+  "status": "done",
   "home": {
+   "color": "3b4a7a",
+   "logo": "https://cdn-api.pandascore.co/images/team/image/133435/788px_m80_2023_allmode.png",
    "id": "133435",
    "name": "M80",
    "ru": "M80",
-   "logo": "https://cdn-api.pandascore.co/images/team/image/133435/788px_m80_2023_allmode.png",
-   "color": "3b4a7a",
    "score": 0,
    "winner": false
   },
   "away": {
+   "color": "3b4a7a",
+   "logo": "https://cdn-api.pandascore.co/images/team/image/126452/8474.png",
    "id": "126452",
    "name": "100 Thieves",
    "ru": "100 Thieves",
-   "logo": "https://cdn-api.pandascore.co/images/team/image/126452/8474.png",
-   "color": "3b4a7a",
    "score": 0,
    "winner": false
   },
@@ -4676,7 +4676,9 @@
   "close": {
    "_": null
   },
-  "settlement_retry_at": 1795792060.086789
+  "settlement_retry_at": 1795793020.601446,
+  "main_hit": true,
+  "bold_hit": null
  },
  "DOTA|1816498": {
   "status": "waiting_data",
