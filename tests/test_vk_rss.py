@@ -94,7 +94,7 @@ class VKRSSFeedTests(unittest.TestCase):
         self.assertEqual([item.findtext("title") for item in items], ["fresh"])
         self.assertEqual(items[0].find("enclosure").attrib["url"], pages.SITE + "rss-images/123.jpg")
         self.assertEqual(items[0].find("enclosure").attrib["length"], str(len(JPEG)))
-        self.assertIn(f'<img src="{pages.SITE}rss-images/123.jpg">', items[0].findtext("{http://purl.org/rss/1.0/modules/content/}encoded"))
+        self.assertIn(f'<img src="{pages.SITE}rss-images/123.jpg" width="640" height="360"', items[0].findtext("{http://purl.org/rss/1.0/modules/content/}encoded"))
         self.assertEqual(feed.find("channel/{http://www.w3.org/2005/Atom}link").attrib["href"], pages.SITE + "rss-vk.xml")
         self.assertNotIn("прогноз", feed.findtext("channel/description").lower())
 
