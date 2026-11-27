@@ -31237,5 +31237,13 @@
   "div": "P1",
   "reason": "edge_below_minimum",
   "retry_at": 1795808147.707768
+ },
+ "401888643": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-27T23:30:00+03:00",
+  "sport": "football",
+  "div": "PAR",
+  "reason": "edge_below_minimum",
+  "retry_at": 1795808387.282554
  }
 }

@@ -3170,7 +3170,7 @@
   "quote_matches": 164
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-27T22:27:47.689182+03:00",
+  "last_poll": "2026-11-27T22:29:47.282554+03:00",
   "cursor": "487",
   "posts": [
    {
@@ -4030,7 +4030,7 @@
    "401888240": "post",
    "401885047": "post",
    "401885045": "post",
-   "401900873": "in",
+   "401900873": "post",
    "401902007": "post",
    "401874563": "in",
    "401881739": "in",
@@ -8224,6 +8224,21 @@
    "probability": 0.5887,
    "odds": 1.58,
    "edge": -0.06985,
+   "estimated": false
+  },
+  "football|PAR|401888643": {
+   "reason": "edge_below_minimum",
+   "checked_at": "2026-11-27T19:30:08.914185+00:00",
+   "kickoff": "2026-11-27T23:30:00+03:00",
+   "sport": "football",
+   "id": "401888643",
+   "home": "Насьональ",
+   "away": "Рубио Нью",
+   "priced_markets": 7,
+   "market": "П1",
+   "probability": 0.6181,
+   "odds": 1.49,
+   "edge": -0.07903,
    "estimated": false
   }
  },
