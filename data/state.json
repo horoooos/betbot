@@ -2972,7 +2972,7 @@
   "external_sources": {
    "providers": {
     "legalbet": {
-     "at": "2026-11-27T16:22:40.724473+00:00",
+     "at": "2026-11-27T16:54:40.038252+00:00",
      "status": "ok",
      "discovered": 2,
      "pages": 2,
@@ -2983,54 +2983,52 @@
      "contexts": 2
     },
     "livesport": {
-     "at": "2026-11-27T16:22:40.724473+00:00",
+     "at": "2026-11-27T16:54:40.038252+00:00",
      "status": "ok",
-     "discovered": 22,
+     "discovered": 23,
      "pages": 6,
-     "opinions": 8,
-     "mapped": 4,
-     "articles_available": 35,
-     "next_offset": 17,
+     "opinions": 10,
+     "mapped": 5,
+     "articles_available": 38,
+     "next_offset": 23,
      "contexts": 6
     },
     "metaratings": {
-     "at": "2026-11-27T16:22:40.724473+00:00",
+     "at": "2026-11-27T16:54:40.038252+00:00",
      "status": "ok",
      "discovered": 10,
      "pages": 6,
      "opinions": 24,
-     "mapped": 0,
+     "mapped": 2,
      "articles_available": 34,
-     "next_offset": 12,
+     "next_offset": 8,
      "contexts": 6
     },
     "rb": {
-     "at": "2026-11-27T16:22:40.724473+00:00",
-     "status": "ok",
+     "at": "2026-11-27T16:54:40.038252+00:00",
+     "status": "markup_changed",
      "discovered": 0,
      "pages": 0,
      "opinions": 0,
      "mapped": 0,
-     "articles_available": 1,
-     "next_offset": 0,
-     "contexts": 0
+     "articles_available": 0
     },
     "vseprosport": {
-     "at": "2026-11-27T16:22:40.724473+00:00",
+     "at": "2026-11-27T16:54:40.038252+00:00",
      "status": "ok",
      "discovered": 7,
      "pages": 4,
      "opinions": 0,
      "mapped": 0,
      "articles_available": 10,
-     "next_offset": 10,
+     "next_offset": 9,
      "page_errors": 2,
      "contexts": 2
     }
    },
-   "opinions": 69,
+   "opinions": 72,
    "snapshots": 0,
-   "contexts": 190,
+   "contexts": 194,
    "model": {
     "weight": 0.0,
     "status": "collecting",
@@ -3149,7 +3147,7 @@
   "quote_matches": 162
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-27T19:52:40.539920+03:00",
+  "last_poll": "2026-11-27T19:54:40.038252+03:00",
   "cursor": "482",
   "posts": [
    {
@@ -7730,7 +7728,7 @@
   },
   "football|T1|401888240": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-27T16:42:59.705392+00:00",
+   "checked_at": "2026-11-27T16:55:21.056450+00:00",
    "kickoff": "2026-11-27T20:00:00+03:00",
    "sport": "football",
    "id": "401888240",
