@@ -750,7 +750,7 @@ def _rss(news: list[dict], ms: list[dict], store: dict[int, dict], now: pd.Times
             body = "\n\n".join(f"<p>{H.escape(_plain(p)).replace(chr(10), '<br>')}</p>" for p in wall_description(n).split("\n\n") if p.strip())
         else:
             body = "".join(f"<p>{H.escape(p)}</p>" for p in n["body"].split(chr(10) * 2) if p.strip())
-        photo_html = (f'<img src="{n["photo"]}">' if n.get('photo') else '')
+        photo_html = (f'<img src="{H.escape(n["photo"], quote=True)}" width="{int(n.get("photo_width", 800))}" height="{int(n.get("photo_height", 450))}" alt="{H.escape(n["title"], quote=True)}">' if n.get('photo') else '')
         if photo_html and feed_name.startswith("rss-vk"):
             photo_html += "\n\n"
         description = _plain(n['body']) if feed_name.startswith('rss-vk') else n['desc']

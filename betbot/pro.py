@@ -162,7 +162,8 @@ def all_bets(res: pd.DataFrame, start: str | None = None, end: str | None = None
         end = end or str(res["date"].max())[:10]
     if start or end:
         ex = expresses(start, end)
-        rows += [(str(r["date"])[:10], float(r["odds"]), str(r["hit"]).lower() in ("true", "1", "1.0"), STAKE_MIN)
+        rows += [(str(r["date"])[:10], float(r["odds"]), str(r["hit"]).lower() in ("true", "1", "1.0"),
+                  float(r["stake_pct"]) if pd.notna(r.get("stake_pct")) else STAKE_MIN)
                  for _, r in ex.iterrows() if float(r["odds"]) > 1]
         lb = live_bets(start, end)
         rows += [(str(r["date"])[:10], float(r["min_odds"]), str(r["hit"]).lower() in ("true", "1", "1.0"), STAKE_MIN)

@@ -8,8 +8,18 @@ from betbot import vk_rss_audit as audit,vk
 
 
 class NativeRSSAuditTests(unittest.TestCase):
+    def setUp(self):
+        patcher=patch('betbot.vk_rss.public_image_ready',return_value=True)
+        patcher.start();self.addCleanup(patcher.stop)
+
+    def test_placeholder_or_unavailable_cover_is_not_success(self):
+        p=self.post();p['attachments'][0]['article']['photo']={'id':1}
+        self.assertFalse(audit.inspect(p,[self.item()])['checks']['image_present'])
+        with patch('betbot.vk_rss.public_image_ready',return_value=False):
+            self.assertFalse(audit.inspect(self.post(),[self.item()])['checks']['image_present'])
+
     def item(self):return dict(title='Тест оформления',description='Первый абзац закончен.\n\n#футбол #аиставит\n\n📊 Подробнее на сайте 👇')
-    def post(self):return dict(id=123,text='Тест оформления\n\n'+self.item()['description']+'\nvk.cc/example',attachments=[dict(type='article',article=dict(title='Тест оформления',photo={'id':1}))])
+    def post(self):return dict(id=123,text='Тест оформления\n\n'+self.item()['description']+'\nvk.cc/example',attachments=[dict(type='article',article=dict(title='Тест оформления',photo={'sizes':[{'width':800,'height':450,'url':'https://example.test/cover.jpg'}]}))])
 
     def test_real_complete_caption_is_verified_and_clipped_full_text_fails(self):
         self.assertEqual(audit.inspect(self.post(),[self.item()])['status'],'verified')

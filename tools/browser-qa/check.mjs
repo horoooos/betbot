@@ -36,6 +36,12 @@ try{
   await page.goto(base+'/dota.html?d=DOTA&game='+frames[0].match_id+'&debug=1',{waitUntil:'domcontentloaded'});
   await page.waitForFunction(()=>window.__dotaProbe?.().loaded===10,undefined,{timeout:180000});
   await page.waitForFunction(()=>window.__dotaProbe?.().environment?.ready,undefined,{timeout:180000});await page.waitForFunction(()=>window.__dotaProbe?.().environment?.trees>=2214,undefined,{timeout:120000});await page.waitForTimeout(21000);const positions=[];for(let i=0;i<30;i++){positions.push(await page.evaluate(()=>window.__dotaProbe()));await page.waitForTimeout(100);}
+  // Software rendering can take longer than the initial three-second sample.
+  if(positions.every(p=>p.renderedFrames===positions[0].renderedFrames)){
+    const before=positions.at(-1).renderedFrames;
+    await page.waitForFunction(n=>window.__dotaProbe().renderedFrames>n,before,{timeout:45000});
+    positions.push(await page.evaluate(()=>window.__dotaProbe()));
+  }
   let maxStep=0,total=0;for(let i=1;i<positions.length;i++){for(let j=0;j<positions[i].units.length;j++){const a=positions[i-1].units[j],b=positions[i].units[j],step=Math.hypot(b.x-a.x,b.z-a.z);maxStep=Math.max(maxStep,step);total+=step;assert(Number.isFinite(b.x)&&Number.isFinite(b.z)&&Number.isFinite(b.y));}}
   const poseChanged=positions.some((p,i)=>i>0&&p.units.some((u,j)=>u.model?.pose?.some((v,k)=>Math.abs(v-(positions[i-1].units[j].model?.pose?.[k]??v))>1e-6)));report.checks.push({name:'dota',maxStep,total,poseChanged,last:positions.at(-1)});assert(positions.at(-1).units.some(u=>u.y>.1),'Characters were not placed on the terrain');assert(poseChanged,'No skeletal animation changed in the character sample');assert(maxStep<8,'Unexpected instantaneous movement');assert(total>.01,'Characters never moved during the recorded motion test');
   await page.screenshot({path:new URL('dota-desktop.png',out).pathname,fullPage:false});for(let i=0;i<10;i++){await page.locator('#radiantRoster [data-player],#direRoster [data-player]').nth(i).click();await page.waitForTimeout(700);await page.screenshot({path:new URL('hero-'+i+'.png',out).pathname,fullPage:false});}await page.setViewportSize({width:390,height:844});await page.screenshot({path:new URL('dota-mobile.png',out).pathname,fullPage:false});

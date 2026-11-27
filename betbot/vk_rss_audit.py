@@ -11,6 +11,33 @@ from . import vk
 FEED=Path(__file__).resolve().parents[1]/'docs/rss-vk-article.xml'
 
 
+def cover_evidence(attachments):
+    """Require a real full-size image, not an article placeholder or photo id."""
+    from urllib.parse import urlsplit
+    from .vk_rss import public_image_ready
+    candidates = []
+    def visit(value):
+        if isinstance(value, list):
+            for item in value: visit(item)
+        elif isinstance(value, dict):
+            url = value.get('url') or value.get('src')
+            try:
+                if isinstance(url, str) and url.startswith('https://') and int(value.get('width', 0)) >= 320 and int(value.get('height', 0)) >= 180:
+                    candidates.append(value)
+            except (ValueError, TypeError): pass
+            for key in ('sizes', 'images', 'photo', 'cover', 'original'):
+                if key in value: visit(value[key])
+    for a in attachments:
+        if a.get('type') in ('photo', 'article', 'link'):
+            visit(a.get(a['type']) or {})
+    candidates.sort(key=lambda v: int(v['width']) * int(v['height']), reverse=True)
+    for image in candidates[:3]:
+        url = image.get('url') or image.get('src')
+        if public_image_ready(url, cache=True):
+            return dict(verified=True, width=image['width'], height=image['height'], host=urlsplit(url).hostname)
+    return dict(verified=False, candidate_count=len(candidates), reason='no_downloadable_full_size_cover')
+
+
 def inspect(post,items):
     text=post.get('text','')
     attachments=post.get('attachments') or []
@@ -26,7 +53,8 @@ def inspect(post,items):
     body=re.sub(r'\s+(?:https?://)?vk\.cc/[A-Za-z0-9]+$','',body).strip()
     tags=re.findall(r'#[\wА-Яа-яЁё]+',matched['description'])
     links=set(re.findall(r'(?:https?://)?vk\.cc/[A-Za-z0-9]+',text))
-    image=any(a.get('type')=='photo' or bool((a.get('article') or {}).get('photo') or (a.get('article') or {}).get('cover') or (a.get('link') or {}).get('photo')) for a in attachments)
+    cover=cover_evidence(attachments)
+    image=cover["verified"]
     checks=dict(encoding_clean=not bool(re.search(r'[рР]џ|(?:Р[^\s]){3,}|\ufffd',text+' '.join(titles))),expected_caption_present=bool(expected) and expected in actual,
                 complete_layout=body==expected,
                 hashtags_present=bool(tags) and all(t in text for t in tags),
@@ -34,7 +62,7 @@ def inspect(post,items):
                 one_short_link=len(links)==1,long_source_absent='horoooos.github.io' not in text,
                 image_present=image)
     return dict(post_id=post.get('id'),published_at=post.get('date'),url=f"https://vk.com/wall-{vk.GROUP_ID}_{post.get('id')}",
-                title=matched['title'],text=text[:4096],checks=checks,
+                title=matched['title'],text=text[:4096],checks=checks,cover=cover,
                 status='verified' if all(checks.values()) else 'needs_review')
 
 
@@ -64,3 +92,6 @@ def poll(state,now):
             print('VK RSS actual post:',receipt['status'],receipt['url'])
     audit['posts']=list(receipts.values())[-30:]
     audit['status']='observing'
+    failed=[p['post_id'] for p in audit['posts'] if p.get('cover',{}).get('verified') is False]
+    audit['missing_cover_posts']=failed
+    if failed: print('VK RSS: covers not verified for posts', ','.join(map(str,failed)))

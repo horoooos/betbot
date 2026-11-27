@@ -9,6 +9,7 @@
   после матча дня — 🤖 Бот против 👥 подписчиков: кто угадал в опросе
 """
 import random
+import math
 from pathlib import Path
 from html import escape
 
@@ -71,31 +72,57 @@ def _sport_title(e: dict) -> str:
     return title(e["div"]) if e["div"] in ALL else sports.title(e["div"])
 
 
-def _favourites(football: list[dict], other: list[dict], now: pd.Timestamp, hours: int,
-                ratio: float = 1.0) -> list[dict]:
-    """Кандидаты в экспресс: явные фавориты (60–82%) с реальным коэффициентом, в ближайшие N часов."""
+def _winner_legs(football, other, now, hours, risky=False):
+    """Market-based express selections, never advertised as positive-edge singles."""
     end = now + pd.Timedelta(hours=hours)
     legs = []
     for e in football + other:
-        k = pd.Timestamp(e["kickoff"])
-        o = e.get("odds") or {}
-        if e["state"] != "pre" or not (now + pd.Timedelta(minutes=30) < k <= end) or not (o.get("H") and o.get("A")):
+        try:
+            k = pd.Timestamp(e["kickoff"])
+            from .stavka_markets import supplement
+            e = supplement(e, now)
+            o = e.get("odds") or {}
+            if e.get("state") != "pre" or not now + pd.Timedelta(minutes=30) < k <= end:
+                continue
+            if "ru" not in e.get("home", {}) or "ru" not in e.get("away", {}) or o.get("est"):
+                continue
+            if e.get("sport", "football") == "football" and not o.get("D"):
+                continue
+            if e.get("sport") == "esports" and e.get("bo") == 2:
+                continue
+            keys = ["H", "D", "A"] if o.get("D") else ["H", "A"]
+            prices = [float(o[key]) for key in keys]
+            if not all(math.isfinite(v) and v > 1 for v in prices):
+                continue
+            if o.get("observed_at"):
+                age = now - pd.Timestamp(o["observed_at"])
+                if not pd.Timedelta(0) <= age <= pd.Timedelta(minutes=25):
+                    continue
+            probabilities = mk.fair(prices)
+            options = [("home", float(probabilities[0]), prices[0]),
+                       ("away", float(probabilities[-1]), prices[-1])]
+            if not risky:
+                options = [max(options, key=lambda v: v[1])]
+            for side, prob, odds in options:
+                eligible = (.38 <= prob <= .62 and 1.6 <= odds <= 2.7) if risky else (.6 <= prob <= .82)
+                if not eligible:
+                    continue
+                team = e[side]["ru"]
+                legs.append({"sport": e.get("sport", "football"), "div": e["div"], "id": e["id"],
+                             "side": side, "p": prob, "odds": odds, "kickoff": e["kickoff"],
+                             "probability_origin": "market_baseline", "quoted_at": now.isoformat(),
+                             "home": e["home"]["ru"], "away": e["away"]["ru"], "league": _sport_title(e),
+                             "logos": [e["home"].get("logo"), e["away"].get("logo")],
+                             "colors": [e["home"].get("color"), e["away"].get("color")],
+                             "label": f"Победа: {team}" + (" (с ОТ)" if e.get("sport") in ("hockey", "basketball") else "")})
+        except (KeyError, TypeError, ValueError):
             continue
-        if "ru" not in e["home"] or e.get("sport") == "tennis":
-            continue
-        p = mk.fair([o["H"], o["D"], o["A"]]) if o.get("D") else mk.fair([o["H"], o["A"]])
-        ph, pa = float(p[0]), float(p[-1])
-        side, prob, odds = ("home", ph, o["H"]) if ph >= pa else ("away", pa, o["A"])
-        prob = min(max(prob * ratio, 0.05), 0.95)   # поправка по истории экспрессов
-        if 0.6 <= prob <= 0.82 and pro.stake({"p": float(prob), "odds": float(odds), "est": False}) > 0:
-            team = e[side]["ru"]
-            legs.append({"sport": e.get("sport", "football"), "div": e["div"], "id": e["id"], "side": side,
-                         "p": prob, "odds": float(odds), "kickoff": e["kickoff"],
-                         "home": e["home"]["ru"], "away": e["away"]["ru"], "league": _sport_title(e),
-                         "logos": [e["home"].get("logo"), e["away"].get("logo")],
-                         "colors": [e["home"].get("color"), e["away"].get("color")],
-                         "label": f"Победа: {team}" + (" (с ОТ)" if e.get("sport") in ("hockey", "basketball") else "")})
-    return sorted(legs, key=lambda x: -x["p"])
+    return sorted(legs, key=lambda leg: -leg["p"])
+
+
+def _favourites(football, other, now, hours, ratio=1.0):
+    # A hit-rate correction for a whole accumulator must not scale each leg.
+    return _winner_legs(football, other, now, hours)
 
 
 def _post(png: bytes, text: str) -> int:
@@ -109,13 +136,15 @@ def _post(png: bytes, text: str) -> int:
 
 def express(state: dict, football, other, now, brand) -> bool:
     from . import pro
-    ratio, _n = pro.express_calibration()
-    legs = _favourites(football, other, now, 14, ratio)
+    if (state.get("express") or {}).get("day") == str(now.date()):
+        return True
+    legs = _favourites(football, other, now, 14)
     picked, seen = [], set()
     for leg in legs:
-        if leg["id"] not in seen:
+        identity = (leg["sport"], leg["div"], str(leg["id"]))
+        if identity not in seen:
             picked.append(leg)
-            seen.add(leg["id"])
+            seen.add(identity)
         if len(picked) == 3:
             break
     if len(picked) < 2:
@@ -127,42 +156,25 @@ def express(state: dict, football, other, now, brand) -> bool:
         p_all *= leg["p"]
     png = card.express_card(picked, total, p_all, f"{now.day} {MONTHS[now.month - 1]}", brand)
     mid = _post(png, _express_text(picked, total, p_all))
-    state["express"] = {"msg": mid, "legs": picked, "odds": total, "day": str(now.date()), "done": False}
+    state["express"] = {"msg": mid, "legs": picked, "odds": total, "day": str(now.date()), "stake_pct": 0.5, "done": False}
     return True
 
 
-def _risky_legs(football: list[dict], other: list[dict], now: pd.Timestamp) -> list[dict]:
-    """Кандидаты в «экспресс на яйцах»: матчи вечера и ночи, где у победы шанс 38–62% и кэф 1.6–2.7."""
-    end = now + pd.Timedelta(hours=10)
-    legs = []
-    for e in football + other:
-        k = pd.Timestamp(e["kickoff"])
-        o = e.get("odds") or {}
-        if e["state"] != "pre" or not (now + pd.Timedelta(minutes=30) < k <= end) or not (o.get("H") and o.get("A")):
-            continue
-        if "ru" not in e["home"] or e.get("sport") == "tennis":
-            continue
-        p = mk.fair([o["H"], o["D"], o["A"]]) if o.get("D") else mk.fair([o["H"], o["A"]])
-        for side, prob, odds in (("home", float(p[0]), float(o["H"])), ("away", float(p[-1]), float(o["A"]))):
-            if 0.38 <= prob <= 0.62 and 1.6 <= odds <= 2.7 and pro.stake({"p": prob, "odds": odds, "est": False}) > 0:
-                team = e[side]["ru"]
-                legs.append({"sport": e.get("sport", "football"), "div": e["div"], "id": e["id"], "side": side,
-                             "p": prob, "odds": odds, "kickoff": e["kickoff"],
-                             "home": e["home"]["ru"], "away": e["away"]["ru"], "league": _sport_title(e),
-                             "logos": [e["home"].get("logo"), e["away"].get("logo")],
-                             "colors": [e["home"].get("color"), e["away"].get("color")],
-                             "label": f"Победа: {team}" + (" (с ОТ)" if e.get("sport") in ("hockey", "basketball") else "")})
-    return sorted(legs, key=lambda x: -x["p"])
+def _risky_legs(football, other, now):
+    return _winner_legs(football, other, now, 10, risky=True)
 
 
 def risky(state: dict, football, other, now, brand) -> bool:
     """🥚 Экспресс на яйцах: 3–6 событий вечера с итоговым кэфом от 10 — ставка «на кураж» на копейки."""
+    if (state.get("express_risk") or {}).get("day") == str(now.date()):
+        return True
     picked, seen, total, p_all = [], set(), 1.0, 1.0
     for leg in _risky_legs(football, other, now):
-        if leg["id"] in seen:
+        identity = (leg["sport"], leg["div"], str(leg["id"]))
+        if identity in seen:
             continue
         picked.append(leg)
-        seen.add(leg["id"])
+        seen.add(identity)
         total *= leg["odds"]
         p_all *= leg["p"]
         if total >= RISKY_MIN_ODDS and len(picked) >= 3:
@@ -177,13 +189,14 @@ def risky(state: dict, football, other, now, brand) -> bool:
         k = pd.Timestamp(leg["kickoff"])
         lines.append(f"{i}. {k:%H:%M} {escape(leg['home'])} — {escape(leg['away'])}\n"
                      f"   🎲 <b>{escape(leg['label'])}</b> · {_pct(leg['p'])} · кэф {leg['odds']:.2f}")
-    lines += [f"\n💰 Итоговый кэф: <b>{total:.2f}</b> · шанс, что зайдёт всё: <b>{_pct(p_all)}</b>",
-              "🧠 Это лотерея, а не стратегия: ставь сумму, которую не жалко, — максимум 0.5% банка.",
+    lines += [f"\n💰 Итоговый кэф: <b>{total:.2f}</b> · оценка совместного шанса: <b>{_pct(p_all)}</b>",
+              "📊 Проценты рассчитаны по котировкам без маржи; общий шанс — при независимости матчей.",
+              "💰 Виртуальный банк: 0.5%. Высокий риск; положительный перевес не подтверждён.",
               "Бот будет отмечать каждый матч ответом на этот пост 👇", FOOTER]
     png = card.express_card(picked, total, p_all, f"{now.day} {MONTHS[now.month - 1]} · вечер", brand,
                             title="Экспресс на яйцах", colors=((200, 40, 90), (120, 50, 220)))
     mid = _post(png, "\n".join(lines))
-    state["express_risk"] = {"msg": mid, "legs": picked, "odds": total, "day": str(now.date()), "done": False}
+    state["express_risk"] = {"msg": mid, "legs": picked, "odds": total, "day": str(now.date()), "stake_pct": 0.5, "done": False}
     return True
 
 
@@ -208,13 +221,15 @@ def repost_express(state: dict, football: list[dict], other: list[dict], now, br
 
 
 def _express_text(legs: list[dict], total: float, p_all: float) -> str:
-    lines = ["🔥 <b>ЭКСПРЕСС ДНЯ</b>", "Самые надёжные исходы сегодняшнего дня в одной ставке:\n"]
+    lines = ["🔥 <b>ЭКСПРЕСС ДНЯ</b>", "Фавориты ближайших матчей в одной ставке:\n"]
     for i, leg in enumerate(legs, 1):
         k = pd.Timestamp(leg["kickoff"])
         lines.append(f"{i}. {k:%H:%M} {escape(leg['home'])} — {escape(leg['away'])}\n"
                      f"   ✅ <b>{escape(leg['label'])}</b> · {_pct(leg['p'])} · кэф {leg['odds']:.2f}")
-    lines += [f"\n💰 Итоговый кэф: <b>{total:.2f}</b> · шанс, что зайдёт всё: <b>{_pct(p_all)}</b>",
-              "Вечером бот напишет, зашёл ли экспресс 👇", FOOTER]
+    lines += [f"\n💰 Итоговый кэф: <b>{total:.2f}</b> · оценка совместного шанса: <b>{_pct(p_all)}</b>",
+              "📊 Проценты рассчитаны по котировкам без маржи; общий шанс — при независимости матчей.",
+              "💰 Виртуальный банк: 0.5%. Положительный перевес не подтверждён.",
+              "После матчей бот напишет, зашёл ли экспресс 👇", FOOTER]
     return "\n".join(lines)
 
 
@@ -236,11 +251,22 @@ def _log_express(name: str, ex: dict, ok: bool) -> None:
     try:
         last = max(pd.Timestamp(leg["kickoff"]) for leg in ex["legs"])
         new = not EXPRESS_LOG.exists()
+        fields = ["date", "name", "legs", "odds", "hit", "stake_pct"]
+        if not new:
+            with EXPRESS_LOG.open(encoding="utf-8", newline="") as old:
+                reader = csv.DictReader(old); old_fields = reader.fieldnames; rows = list(reader)
+            if old_fields != fields:
+                temporary = EXPRESS_LOG.with_suffix(".tmp")
+                with temporary.open("w", encoding="utf-8", newline="") as upgraded:
+                    writer = csv.DictWriter(upgraded, fieldnames=fields); writer.writeheader()
+                    for row in rows:
+                        row.setdefault("stake_pct", pro.STAKE_MIN); writer.writerow(row)
+                temporary.replace(EXPRESS_LOG)
         with EXPRESS_LOG.open("a", encoding="utf-8", newline="") as f:
             w = csv.writer(f)
             if new:
-                w.writerow(["date", "name", "legs", "odds", "hit"])
-            w.writerow([f"{last.tz_convert('Europe/Moscow'):%Y-%m-%d}", name, len(ex["legs"]), f"{float(ex['odds']):.2f}", ok])
+                w.writerow(fields)
+            w.writerow([f"{last.tz_convert('Europe/Moscow'):%Y-%m-%d}", name, len(ex["legs"]), f"{float(ex['odds']):.2f}", ok, ex.get("stake_pct", pro.STAKE_MIN)])
     except Exception as e:
         print(f"  ! экспресс не записан в журнал: {e}")
 
@@ -573,7 +599,9 @@ def run(state: dict, football: list[dict], other: list[dict], res: pd.DataFrame,
     slot = f"{now.date()}-{now.hour}"
     if state.get("content_slot") == slot:
         return
-    state["content_slot"] = slot
+    retry = state.get("content_retry") or {}
+    if retry.get("slot") == slot and now < pd.Timestamp(retry["after"]):
+        return
     kind = SLOTS[now.hour]
     try:
         if kind == "express":
@@ -607,8 +635,16 @@ def run(state: dict, football: list[dict], other: list[dict], res: pd.DataFrame,
             done = recap(res, now, brand)
         else:
             done = facts(res, now, brand) or learn(state, now, brand)
+        if done or kind not in ("express", "risky"):
+            state["content_slot"] = slot
+            state.pop("content_retry", None)
+        else:
+            state["content_retry"] = {"slot": slot, "kind": kind, "reason": "insufficient_legs",
+                                      "after": (now + pd.Timedelta(minutes=5)).isoformat()}
         print(f"Тематический пост ({kind}): {'опубликован' if done else 'нечего публиковать'}")
     except Exception as e:
+        state["content_retry"] = {"slot": slot, "kind": kind, "reason": "publication_error",
+                                  "after": (now + pd.Timedelta(minutes=5)).isoformat()}
         print(f"  ! тематический пост ({kind}) не удался: {e}")
 
 

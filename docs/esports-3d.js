@@ -6,7 +6,7 @@ import {sampledPosition,advancePlayhead} from './dota-data.js?v=3';
 
 // Environment is a visual reconstruction. Unit/building positions stay in Valve's frame.
 export function createArena(container,heroes={}) {
-  let playhead=null,latestAt=null;
+  let playhead=null,latestAt=null,renderedFrames=0;
   const scene=new THREE.Scene();scene.background=new THREE.Color('#09121b');scene.fog=new THREE.FogExp2('#09121b',.003);
   const camera=new THREE.PerspectiveCamera(43,1,.1,420);
   const renderer=new THREE.WebGLRenderer({antialias:true,alpha:false,powerPreference:'high-performance'});
@@ -119,7 +119,7 @@ export function createArena(container,heroes={}) {
     if(follow&&units.has(follow)){const next=units.get(follow).group.position.clone().add(new THREE.Vector3(0,2,0));if(flight){const progress=Math.min(1,(now-flight.at)/1400),ease=progress*progress*(3-2*progress);camera.position.lerpVectors(flight.camera,next.clone().add(flight.offset),ease);controls.target.lerpVectors(flight.target,next,ease);if(progress>=1)flight=null;}else{const delta=next.clone().sub(controls.target);camera.position.add(delta);controls.target.copy(next);}}
     environment.focus(follow&&units.has(follow)?units.get(follow).group.position:null);
     for(const b of structures.values())b.position.y=environment.height(b.position.x,b.position.z);
-    controls.update();renderer.render(scene,camera);
+    controls.update();renderer.render(scene,camera);renderedFrames++;
   });
-  return {update,focus,overview,inspect(){return{playhead,latestAt,loaded:modelLoaded,environment:environment.inspect(),units:[...units.values()].map(u=>({key:u.key,x:u.group.position.x,y:u.group.position.y,z:u.group.position.z,model:u.visual.diagnostics?.()}))};},freeze(){active=false;},camera(){flight=null;top=!top;const target=controls.target;camera.position.copy(target).add(top?new THREE.Vector3(0,follow?28:145,.01):new THREE.Vector3(follow?12:63,follow?15:102,follow?20:101));controls.update();},rotate(){const offset=camera.position.clone().sub(controls.target).applyAxisAngle(new THREE.Vector3(0,1,0),Math.PI/4);camera.position.copy(controls.target).add(offset);controls.update();},zoom(){const offset=camera.position.clone().sub(controls.target);offset.multiplyScalar(offset.length()>30?.65:2);camera.position.copy(controls.target).add(offset);controls.update();},dispose(){environment.dispose();renderer.setAnimationLoop(null);observer.disconnect();controls.dispose();for(const u of units.values())clearUnit(u);renderer.dispose();}};
+  return {update,focus,overview,inspect(){return{playhead,latestAt,renderedFrames,active,hidden:document.hidden,videoOpen:document.body.classList.contains('video-open'),loaded:modelLoaded,environment:environment.inspect(),units:[...units.values()].map(u=>({key:u.key,x:u.group.position.x,y:u.group.position.y,z:u.group.position.z,model:u.visual.diagnostics?.()}))};},freeze(){active=false;},camera(){flight=null;top=!top;const target=controls.target;camera.position.copy(target).add(top?new THREE.Vector3(0,follow?28:145,.01):new THREE.Vector3(follow?12:63,follow?15:102,follow?20:101));controls.update();},rotate(){const offset=camera.position.clone().sub(controls.target).applyAxisAngle(new THREE.Vector3(0,1,0),Math.PI/4);camera.position.copy(controls.target).add(offset);controls.update();},zoom(){const offset=camera.position.clone().sub(controls.target);offset.multiplyScalar(offset.length()>30?.65:2);camera.position.copy(controls.target).add(offset);controls.update();},dispose(){environment.dispose();renderer.setAnimationLoop(null);observer.disconnect();controls.dispose();for(const u of units.values())clearUnit(u);renderer.dispose();}};
 }
