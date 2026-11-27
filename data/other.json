@@ -5448,5 +5448,322 @@
   "close": {
    "HK_ML_A": 0.6164
   }
+ },
+ "NBA|401909326": {
+  "id": "401909326",
+  "div": "NBA",
+  "sport": "basketball",
+  "kickoff": "2026-11-28T03:00:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "detail": "Fri, November 27th at 7:00 PM EST",
+  "clock": "0.0",
+  "period": 0,
+  "home": {
+   "id": "18",
+   "name": "New York Knicks",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/ny.png",
+   "color": "1d428a",
+   "score": "0",
+   "record": "12-6",
+   "periods": [],
+   "ru": "Нью-Йорк Никс"
+  },
+  "away": {
+   "id": "14",
+   "name": "Miami Heat",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/mia.png",
+   "color": "98002e",
+   "score": "0",
+   "record": "10-7",
+   "periods": [],
+   "ru": "Майами Хит"
+  },
+  "odds": {
+   "H": 1.676,
+   "A": 2.24,
+   "line": 222.5,
+   "over": 1.952,
+   "under": 1.87,
+   "spread": -2.5,
+   "sp_h": 1.893,
+   "sp_a": 1.926
+  },
+  "probs": {
+   "BB_ML_H": 0.5825156468205225,
+   "BB_ML_A": 0.4174843531794775,
+   "BB_SPR_H": 0.5,
+   "BB_SPR_A": 0.5,
+   "BB_O215.5": 0.6597440535491568,
+   "BB_U215.5": 0.3402559464508432,
+   "BB_O222.5": 0.5,
+   "BB_U222.5": 0.5,
+   "BB_O229.5": 0.3402559464508432,
+   "BB_U229.5": 0.6597440535491568
+  },
+  "labels": {
+   "BB_ML_H": "П1 (с ОТ)",
+   "BB_ML_A": "П2 (с ОТ)",
+   "BB_SPR_H": "Ф1 (-2.5)",
+   "BB_SPR_A": "Ф2 (+2.5)",
+   "BB_O215.5": "ТБ 215.5",
+   "BB_U215.5": "ТМ 215.5",
+   "BB_O222.5": "ТБ 222.5",
+   "BB_U222.5": "ТМ 222.5",
+   "BB_O229.5": "ТБ 229.5",
+   "BB_U229.5": "ТМ 229.5"
+  },
+  "real": {
+   "BB_ML_H": 1.676,
+   "BB_ML_A": 2.24,
+   "BB_SPR_H": 1.893,
+   "BB_SPR_A": 1.926,
+   "BB_O222.5": 1.952,
+   "BB_U222.5": 1.87
+  },
+  "center": "Ожидаемый счёт 112 : 110",
+  "bar": [
+   0.5825156468205225,
+   0,
+   0.4174843531794775
+  ],
+  "model": {
+   "mu": 2.5,
+   "T": 222.5
+  },
+  "stavka_signal": {
+   "status": "collecting",
+   "weight": 0.0,
+   "authors": 32,
+   "group": "basketball",
+   "snapshot": "NBA|401909326",
+   "source": "https://stavka.tv"
+  },
+  "research": {
+   "articles": [],
+   "dossier": null
+  },
+  "main": {
+   "key": "BB_ML_A",
+   "label": "П2 (с ОТ)",
+   "p": 0.4175,
+   "odds": 2.24,
+   "est": false,
+   "stake": 0.5,
+   "strategy": "external_trial",
+   "selection_mode": "external_fallback",
+   "trial_expires_at": null,
+   "probability_origin": "baseline_model",
+   "model_edge": -0.06484,
+   "source_count": 22,
+   "source_refs": [
+    {
+     "author": "/predictors/sergey-sumaneev",
+     "provider": null,
+     "source": "https://stavka.tv/matches/basketball/28-11-2026-new-york-knicks-miami-heat",
+     "published_at": "2026-11-26T23:13:00+00:00",
+     "observed_at": "2026-11-27T00:18:56.251033+00:00",
+     "odds": 2.42,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/andrey-kosurin",
+     "provider": null,
+     "source": "https://stavka.tv/matches/basketball/28-11-2026-new-york-knicks-miami-heat",
+     "published_at": "2026-11-27T02:09:00+00:00",
+     "observed_at": "2026-11-27T02:26:20.148788+00:00",
+     "odds": 2.42,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/kirpic-krasnyi-1",
+     "provider": null,
+     "source": "https://stavka.tv/matches/basketball/28-11-2026-new-york-knicks-miami-heat",
+     "published_at": "2026-11-27T03:26:00+00:00",
+     "observed_at": "2026-11-27T03:32:19.535925+00:00",
+     "odds": 2.38,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/roman-mytarkin",
+     "provider": null,
+     "source": "https://stavka.tv/matches/basketball/28-11-2026-new-york-knicks-miami-heat",
+     "published_at": "2026-11-27T05:37:00+00:00",
+     "observed_at": "2026-11-27T05:57:40.020802+00:00",
+     "odds": 2.35,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/valeriya-nikolaeva",
+     "provider": null,
+     "source": "https://stavka.tv/matches/basketball/28-11-2026-new-york-knicks-miami-heat",
+     "published_at": "2026-11-27T06:31:00+00:00",
+     "observed_at": "2026-11-27T06:39:39.476539+00:00",
+     "odds": 2.35,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/misa-steskin",
+     "provider": null,
+     "source": "https://stavka.tv/matches/basketball/28-11-2026-new-york-knicks-miami-heat",
+     "published_at": "2026-11-27T08:01:00+00:00",
+     "observed_at": "2026-11-27T08:26:13.879382+00:00",
+     "odds": 2.35,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/venom-li",
+     "provider": null,
+     "source": "https://stavka.tv/matches/basketball/28-11-2026-new-york-knicks-miami-heat",
+     "published_at": "2026-11-27T09:00:00+00:00",
+     "observed_at": "2026-11-27T09:08:14.328803+00:00",
+     "odds": 2.38,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/mixail-baranov-kapper",
+     "provider": null,
+     "source": "https://stavka.tv/matches/basketball/28-11-2026-new-york-knicks-miami-heat",
+     "published_at": "2026-11-27T09:18:00+00:00",
+     "observed_at": "2026-11-27T09:28:14.357598+00:00",
+     "odds": 2.38,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/nenastradamus-zatovanga",
+     "provider": null,
+     "source": "https://stavka.tv/matches/basketball/28-11-2026-new-york-knicks-miami-heat",
+     "published_at": "2026-11-27T09:35:00+00:00",
+     "observed_at": "2026-11-27T09:50:14.238528+00:00",
+     "odds": 2.38,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/dmitrii-reznikov",
+     "provider": null,
+     "source": "https://stavka.tv/matches/basketball/28-11-2026-new-york-knicks-miami-heat",
+     "published_at": "2026-11-27T11:41:00+00:00",
+     "observed_at": "2026-11-27T11:58:14.649867+00:00",
+     "odds": 2.35,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/maksim-pogodin-1",
+     "provider": null,
+     "source": "https://stavka.tv/matches/basketball/28-11-2026-new-york-knicks-miami-heat",
+     "published_at": "2026-11-27T11:49:00+00:00",
+     "observed_at": "2026-11-27T11:58:14.649867+00:00",
+     "odds": 2.35,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/vitaliy-zakharov-1",
+     "provider": null,
+     "source": "https://stavka.tv/matches/basketball/28-11-2026-new-york-knicks-miami-heat",
+     "published_at": "2026-11-27T12:35:00+00:00",
+     "observed_at": "2026-11-27T12:40:15.253492+00:00",
+     "odds": 2.42,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/saiat-parman",
+     "provider": null,
+     "source": "https://stavka.tv/matches/basketball/28-11-2026-new-york-knicks-miami-heat",
+     "published_at": "2026-11-27T14:20:00+00:00",
+     "observed_at": "2026-11-27T14:24:39.403127+00:00",
+     "odds": 2.43,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/andrei-suxov-6",
+     "provider": null,
+     "source": "https://stavka.tv/matches/basketball/28-11-2026-new-york-knicks-miami-heat",
+     "published_at": "2026-11-27T14:55:00+00:00",
+     "observed_at": "2026-11-27T15:06:39.958621+00:00",
+     "odds": 2.51,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/rambay-chelovek",
+     "provider": null,
+     "source": "https://stavka.tv/matches/basketball/28-11-2026-new-york-knicks-miami-heat",
+     "published_at": "2026-11-27T16:33:00+00:00",
+     "observed_at": "2026-11-27T16:50:40.075253+00:00",
+     "odds": 2.44,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/prosto-krasava-1",
+     "provider": null,
+     "source": "https://stavka.tv/matches/basketball/28-11-2026-new-york-knicks-miami-heat",
+     "published_at": "2026-11-27T17:23:00+00:00",
+     "observed_at": "2026-11-27T17:32:40.568811+00:00",
+     "odds": 2.12,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/ares-avetisyan",
+     "provider": null,
+     "source": "https://stavka.tv/matches/basketball/28-11-2026-new-york-knicks-miami-heat",
+     "published_at": "2026-11-27T17:26:00+00:00",
+     "observed_at": "2026-11-27T17:32:40.568811+00:00",
+     "odds": 2.12,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/ruslan-babaev-5",
+     "provider": null,
+     "source": "https://stavka.tv/matches/basketball/28-11-2026-new-york-knicks-miami-heat",
+     "published_at": "2026-11-27T18:17:00+00:00",
+     "observed_at": "2026-11-27T18:35:46.928326+00:00",
+     "odds": 2.26,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/mesok-lenivyi",
+     "provider": null,
+     "source": "https://stavka.tv/matches/basketball/28-11-2026-new-york-knicks-miami-heat",
+     "published_at": "2026-11-27T18:29:00+00:00",
+     "observed_at": "2026-11-27T18:35:46.928326+00:00",
+     "odds": 2.22,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/skrytyi-genii",
+     "provider": null,
+     "source": "https://stavka.tv/matches/basketball/28-11-2026-new-york-knicks-miami-heat",
+     "published_at": "2026-11-27T18:38:00+00:00",
+     "observed_at": "2026-11-27T18:55:47.356701+00:00",
+     "odds": 2.21,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/emo-emooo",
+     "provider": null,
+     "source": "https://stavka.tv/matches/basketball/28-11-2026-new-york-knicks-miami-heat",
+     "published_at": "2026-11-27T20:45:00+00:00",
+     "observed_at": "2026-11-27T21:01:48.531612+00:00",
+     "odds": 2.1,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/nphne-rupgz64t",
+     "provider": null,
+     "source": "https://stavka.tv/matches/basketball/28-11-2026-new-york-knicks-miami-heat",
+     "published_at": "2026-11-27T21:40:00+00:00",
+     "observed_at": "2026-11-27T21:42:35.648370+00:00",
+     "odds": 2.2,
+     "price_kind": "author_recorded"
+    }
+   ]
+  },
+  "bold": {},
+  "open": {
+   "BB_ML_A": 0.4175
+  },
+  "top": false,
+  "msg_id": 9872,
+  "btn": 2
  }
 }
