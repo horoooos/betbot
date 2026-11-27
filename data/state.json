@@ -7,8 +7,6 @@
  "schedule_day": "2026-11-27",
  "content_slot": "2026-11-27-10",
  "news_seen": [
-  "flyquest-pobedila-eternal-fire-v-debyutnom-matche-na-pgl-major-singapore-2026",
-  "s1mple-sygral-vtoruyu-khudshuyu-kartu-na-meidzhorakh-po-counter-strike",
   "https://www.sport-express.ru/football/rus_cup/news/nikita-kologrivyy-i-evgeniya-medvedeva-vystupyat-na-matche-dinamo-fakel-2478308/",
   "https://www.sport-express.ru/football/rfpl/news/igdisamov-zayavil-chto-tekuschiy-sostav-cska-esche-ne-dostig-svoego-potolka-2478280/",
   "s1mple-o-bcgame-na-pgl-major-singapore-2026-nasha-igra-mozhet-udivit-vsekh",
@@ -506,9 +504,11 @@
   "lynn-vision-gaming-vystupit-vo-vtoroi-stadii-pgl-major-singapore-2026-heroic",
   "https://www.sport-express.ru/football/europa-league/news/uefa-zayavila-chto-ne-neset-otvetstvennosti-za-bezopasnost-na-matche-beshiktash-hapoel-v-gruzii-2479605/",
   "https://www.sport-express.ru/football/foreign/news/umer-chetvertfinalist-evro-2016-v-sostave-sbornoy-islandii-younsson-emu-bylo-37-let-2479601/",
-  "https://www.sport-express.ru/football/rfpl/news/pisarskiy-o-nesostoyavshemsya-perehode-v-zenit-boyalsya-chto-ne-budu-igrat-2479599/"
+  "https://www.sport-express.ru/football/rfpl/news/pisarskiy-o-nesostoyavshemsya-perehode-v-zenit-boyalsya-chto-ne-budu-igrat-2479599/",
+  "brollan-posle-vyleta-iz-pgl-major-singapore-2026-ya-s-bolshim-optimizmom-smotryu",
+  "fl1t-o-nizkikh-dokhodakh-ot-stikerov-nadeyus-gembling-vernut-i-counter-strike"
  ],
- "news_i": 1,
+ "news_i": 2,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1701,7 +1701,7 @@
  "streak_day": {
   "2026-11-22": 2
  },
- "news_next": "2026-11-27T12:22:13.992015+03:00",
+ "news_next": "2026-11-27T12:50:14.531614+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1734,7 +1734,6 @@
  "vk_mode": "photo",
  "dz_err": null,
  "img_used": [
-  "https://images.cybersport.ru/images/as-is/plain/63/63ed8c05-e496-4d9d-bd6a-f32273f4da73.jpg",
   "https://ss.sport-express.ru/userfiles/materials/224/2243981/1180x665.jpg",
   "https://images.cybersport.ru/images/as-is/plain/b8/b8b405a6-24c6-44f6-b47c-0f3b0b86ad78.jpg",
   "https://images.cybersport.ru/images/as-is/plain/c1/c17e885d-ae7a-45e3-86a3-5f6a48f21b59.jpg",
@@ -2033,7 +2032,8 @@
   "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/CSKA_team_is_celebrating_after_winning_the_2025_Russian_Cup_Super_Final_June_1%2C_2025.jpg/1280px-CSKA_team_is_celebrating_after_winning_the_2025_Russian_Cup_Super_Final_June_1%2C_2025.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
   "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b6/1175239_sPICT.jpg/1280px-1175239_sPICT.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
   "https://images.cybersport.ru/images/as-is/plain/a0/a0a81200-29dd-4f93-9ada-ad36757eb011.jpg",
-  "https://upload.wikimedia.org/wikipedia/commons/d/d2/Dmitry_Medvedev_16_May_2008-2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+  "https://upload.wikimedia.org/wikipedia/commons/d/d2/Dmitry_Medvedev_16_May_2008-2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "https://images.cybersport.ru/images/as-is/plain/e6/e64b14cb-987a-4f1c-bd5a-c80ab1f93dce.jpg"
  ],
  "indexnow_day": "2026-11-27",
  "vk_wall_err": null,
@@ -2505,7 +2505,8 @@
   "9750",
   "9761",
   "9762",
-  "9763"
+  "9763",
+  "9766"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -2909,11 +2910,12 @@
   "2026-11-26:новость:be528454c33b5d0426e19e31",
   "2026-11-27:новость:24a3141e2376624e56406f7e",
   "2026-11-27:новость:59433868a54ef0f57596ea00",
-  "2026-11-27:новость:b839bef7826ce69d65648a76"
+  "2026-11-27:новость:b839bef7826ce69d65648a76",
+  "2026-11-27:новость:e46dbcd9ecccbad1b43fb093"
  ],
  "dz_last_delivery": {
-  "source_id": 9763,
-  "message_id": 951,
+  "source_id": 9766,
+  "message_id": 952,
   "kind": "новость"
  },
  "learn_attempt_day": "2026-11-27",
@@ -3116,7 +3118,7 @@
   "quote_matches": 151
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-27T12:20:13.996369+03:00",
+  "last_poll": "2026-11-27T12:22:14.531614+03:00",
   "cursor": "467",
   "posts": [
    {
@@ -7469,7 +7471,7 @@
   },
   "esports|DOTA|1816496": {
    "reason": "no_real_odds",
-   "checked_at": "2026-11-27T09:10:36.476305+00:00",
+   "checked_at": "2026-11-27T09:22:38.355574+00:00",
    "kickoff": "2026-11-27T13:00:00+03:00",
    "sport": "esports",
    "id": "1816496",
