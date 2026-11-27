@@ -4935,7 +4935,8 @@
   "btn": 2,
   "close": {
    "_": null
-  }
+  },
+  "settlement_retry_at": 1795785338.248046
  },
  "DOTA|1816498": {
   "status": "waiting_data",
@@ -4943,6 +4944,6 @@
   "sport": "esports",
   "div": "DOTA",
   "reason": "no_real_odds",
-  "retry_at": 1795784415.880283
+  "retry_at": 1795785038.248046
  }
 }

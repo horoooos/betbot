@@ -5,7 +5,7 @@
  },
  "learned": "2026-11-27",
  "schedule_day": "2026-11-27",
- "content_slot": "2026-11-27-13",
+ "content_slot": "2026-11-27-16",
  "news_seen": [
   "https://www.sport-express.ru/tennis/atp/news/yanchuk-schitaet-chto-tennisist-medvedev-provel-horoshiy-sezon-2478353/",
   "https://www.sport-express.ru/football/spain/news/zidan-bellingem-olise-sinner-i-osaka-voshli-v-spisok-samyh-stilnyh-sportsmenov-2026-goda-po-versii-vogue-2478352/",
@@ -1570,7 +1570,7 @@
  "value_day": "2026-11-27",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-27",
- "site_stamp": "1576|9781|2026-11-27 15|6|f23f57bd883c7c80",
+ "site_stamp": "1576|9783|2026-11-27 16|6|f23f57bd883c7c80",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1729,7 +1729,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 9781,
+ "dz_last": 9783,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2070,14 +2070,14 @@
  "vk_photos": [],
  "vk_photo_until": 1794644243.1147308,
  "vk_photo_cursor": {},
- "vk_story_last": 9766,
+ "vk_story_last": 9767,
  "vk_story_err": null,
  "push_weekly": "2026-47",
- "vk_story_at": 1795783384.1344883,
- "vk_story_url": "https://vk.com/story-228963529_456239185",
+ "vk_story_at": 1795784520.3807209,
+ "vk_story_url": "https://vk.com/story-228963529_456239186",
  "vk_story_day": {
   "date": "2026-11-27",
-  "count": 9
+  "count": 10
  },
  "vk_legacy_pending": [
   {
@@ -3109,29 +3109,29 @@
    }
   },
   "source": {
-   "last_success": "2026-11-27T12:40:15.253492+00:00",
-   "parsed": 343,
-   "added": 46,
-   "discovered_matches": 35,
+   "last_success": "2026-11-27T13:00:38.248046+00:00",
+   "parsed": 344,
+   "added": 49,
+   "discovered_matches": 37,
    "pages": 17,
    "errors": [],
    "parsed_by_sport": {
     "soccer": 50,
     "ice-hockey": 50,
     "basketball": 50,
-    "tennis": 47,
+    "tennis": 48,
     "csgo": 46,
     "dota2": 50
    }
   },
   "error": null,
-  "tips": 19539,
+  "tips": 19555,
   "snapshots": 411,
-  "unmapped_markets": 29599,
+  "unmapped_markets": 29632,
   "quote_matches": 157
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-27T15:56:53.222753+03:00",
+  "last_poll": "2026-11-27T16:00:38.248046+03:00",
   "cursor": "473",
   "posts": [
    {
@@ -4056,7 +4056,8 @@
    "1817024": "pre",
    "1817103": "pre",
    "401899522": "pre",
-   "401881738": "pre"
+   "401881738": "pre",
+   "401921317": "pre"
   },
   "daily": {
    "day": "2026-11-27"
@@ -7593,7 +7594,7 @@
   },
   "esports|DOTA|1816498": {
    "reason": "no_real_odds",
-   "checked_at": "2026-11-27T12:50:40.171340+00:00",
+   "checked_at": "2026-11-27T13:01:16.126514+00:00",
    "kickoff": "2026-11-27T16:30:00+03:00",
    "sport": "esports",
    "id": "1816498",
@@ -17882,5 +17883,14 @@
     }
    }
   }
+ },
+ "mod_poll": {
+  "key": "E0|401879225",
+  "id": "401879225",
+  "poll": 9783,
+  "post": 9782,
+  "home": "Ноттингем Форест",
+  "away": "Челси",
+  "kickoff": "2026-11-27T23:00:00+03:00"
  }
 }
