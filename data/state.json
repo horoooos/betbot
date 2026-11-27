@@ -2070,14 +2070,14 @@
  "vk_photos": [],
  "vk_photo_until": 1794644243.1147308,
  "vk_photo_cursor": {},
- "vk_story_last": 9765,
- "vk_story_err": "VK stories: сервер не вернул upload_result",
+ "vk_story_last": 9766,
+ "vk_story_err": null,
  "push_weekly": "2026-47",
- "vk_story_at": 1795778804.0666947,
- "vk_story_url": "https://vk.com/story-228963529_456239184",
+ "vk_story_at": 1795783384.1344883,
+ "vk_story_url": "https://vk.com/story-228963529_456239185",
  "vk_story_day": {
   "date": "2026-11-27",
-  "count": 8
+  "count": 9
  },
  "vk_legacy_pending": [
   {
@@ -2954,7 +2954,7 @@
   "external_sources": {
    "providers": {
     "legalbet": {
-     "at": "2026-11-27T12:12:14.810374+00:00",
+     "at": "2026-11-27T12:42:15.600692+00:00",
      "status": "ok",
      "discovered": 2,
      "pages": 2,
@@ -2965,29 +2965,29 @@
      "contexts": 2
     },
     "livesport": {
-     "at": "2026-11-27T12:12:14.810374+00:00",
+     "at": "2026-11-27T12:42:15.600692+00:00",
      "status": "ok",
      "discovered": 13,
      "pages": 6,
-     "opinions": 10,
-     "mapped": 5,
+     "opinions": 2,
+     "mapped": 2,
      "articles_available": 23,
-     "next_offset": 18,
+     "next_offset": 11,
      "contexts": 6
     },
     "metaratings": {
-     "at": "2026-11-27T12:12:14.810374+00:00",
+     "at": "2026-11-27T12:42:15.600692+00:00",
      "status": "ok",
      "discovered": 10,
      "pages": 6,
      "opinions": 24,
-     "mapped": 0,
+     "mapped": 2,
      "articles_available": 33,
-     "next_offset": 14,
+     "next_offset": 10,
      "contexts": 6
     },
     "rb": {
-     "at": "2026-11-27T12:12:14.810374+00:00",
+     "at": "2026-11-27T12:42:15.600692+00:00",
      "status": "ok",
      "discovered": 1,
      "pages": 1,
@@ -2998,7 +2998,7 @@
      "contexts": 1
     },
     "vseprosport": {
-     "at": "2026-11-27T12:12:14.810374+00:00",
+     "at": "2026-11-27T12:42:15.600692+00:00",
      "status": "ok",
      "discovered": 4,
      "pages": 3,
@@ -3131,7 +3131,7 @@
   "quote_matches": 157
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-27T15:40:15.253492+03:00",
+  "last_poll": "2026-11-27T15:42:15.600692+03:00",
   "cursor": "473",
   "posts": [
    {
@@ -17882,6 +17882,5 @@
     }
    }
   }
- },
- "vk_story_retry_at": 1795783380.7783961
+ }
 }
