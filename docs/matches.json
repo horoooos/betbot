@@ -6084,5 +6084,75 @@ null
 "top": false,
 "bot": null,
 "lt": null
+},
+{
+"sport": "football",
+"id": "401885039",
+"league": "Германия · 2. Бундеслига",
+"kickoff": "2026-11-28T22:30:00+03:00",
+"home": "VfL Osnabruck",
+"away": "Ганновер",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/7013.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/2428.png",
+"hid": "7013",
+"aid": "2428",
+"bb": "https://betboom.ru/search?query=%D0%9E%D1%81%D0%BD%D0%B0%D0%B1%D1%80%D1%83%D0%BA&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/ger.2",
+"url": "live.html?s=football&p=soccer%2Fger.2&e=401885039&h=VfL+Osnabruck&a=%D0%93%D0%B0%D0%BD%D0%BD%D0%BE%D0%B2%D0%B5%D1%80",
+"participants": [
+[
+"VfL Osnabruck",
+"VfL Osnabruck"
+],
+[
+"Ганновер",
+"Hannover 96"
+]
+],
+"div": "D2",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "football",
+"id": "401933724",
+"league": "США · MLS",
+"kickoff": "2026-11-28T22:30:00+03:00",
+"home": "Хьюстон Динамо",
+"away": "Сан-Хосе Эртквейкс",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/6077.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/191.png",
+"hid": "6077",
+"aid": "191",
+"bb": "https://betboom.ru/search?query=%D0%A5%D1%8C%D1%8E%D1%81%D1%82%D0%BE%D0%BD&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/usa.1",
+"url": "live.html?s=football&p=soccer%2Fusa.1&e=401933724&h=%D0%A5%D1%8C%D1%8E%D1%81%D1%82%D0%BE%D0%BD+%D0%94%D0%B8%D0%BD%D0%B0%D0%BC%D0%BE&a=%D0%A1%D0%B0%D0%BD-%D0%A5%D0%BE%D1%81%D0%B5+%D0%AD%D1%80%D1%82%D0%BA%D0%B2%D0%B5%D0%B9%D0%BA%D1%81",
+"participants": [
+[
+"Хьюстон Динамо",
+"Houston Dynamo FC"
+],
+[
+"Сан-Хосе Эртквейкс",
+"San Jose Earthquakes"
+]
+],
+"div": "USA",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
 }
 ]
