@@ -3113,5 +3113,110 @@
 "top": false,
 "bot": null,
 "lt": null
+},
+{
+"sport": "football",
+"id": "401882796",
+"league": "Испания · Ла Лига",
+"kickoff": "2026-11-28T16:00:00+03:00",
+"home": "Бетис",
+"away": "Райо Вальекано",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/244.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/101.png",
+"hid": "244",
+"aid": "101",
+"bb": "https://betboom.ru/search?query=%D0%91%D0%B5%D1%82%D0%B8%D1%81&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/esp.1",
+"url": "live.html?s=football&p=soccer%2Fesp.1&e=401882796&h=%D0%91%D0%B5%D1%82%D0%B8%D1%81&a=%D0%A0%D0%B0%D0%B9%D0%BE+%D0%92%D0%B0%D0%BB%D1%8C%D0%B5%D0%BA%D0%B0%D0%BD%D0%BE",
+"participants": [
+[
+"Бетис",
+"Real Betis"
+],
+[
+"Райо Вальекано",
+"Rayo Vallecano"
+]
+],
+"div": "SP1",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "football",
+"id": "401883101",
+"league": "Испания · Сегунда",
+"kickoff": "2026-11-28T16:00:00+03:00",
+"home": "Лас-Пальмас",
+"away": "Андорра",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/98.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/20179.png",
+"hid": "98",
+"aid": "20179",
+"bb": "https://betboom.ru/search?query=%D0%9B%D0%B0%D1%81-%D0%9F%D0%B0%D0%BB%D1%8C%D0%BC%D0%B0%D1%81&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/esp.2",
+"url": "live.html?s=football&p=soccer%2Fesp.2&e=401883101&h=%D0%9B%D0%B0%D1%81-%D0%9F%D0%B0%D0%BB%D1%8C%D0%BC%D0%B0%D1%81&a=%D0%90%D0%BD%D0%B4%D0%BE%D1%80%D1%80%D0%B0",
+"participants": [
+[
+"Лас-Пальмас",
+"Las Palmas"
+],
+[
+"Андорра",
+"FC Andorra"
+]
+],
+"div": "SP2",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "football",
+"id": "401888236",
+"league": "Турция · Суперлига",
+"kickoff": "2026-11-28T16:00:00+03:00",
+"home": "Самсунспор",
+"away": "Генчлербирлиги",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/11429.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/996.png",
+"hid": "11429",
+"aid": "996",
+"bb": "https://betboom.ru/search?query=%D0%A1%D0%B0%D0%BC%D1%81%D1%83%D0%BD%D1%81%D0%BF%D0%BE%D1%80&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/tur.1",
+"url": "live.html?s=football&p=soccer%2Ftur.1&e=401888236&h=%D0%A1%D0%B0%D0%BC%D1%81%D1%83%D0%BD%D1%81%D0%BF%D0%BE%D1%80&a=%D0%93%D0%B5%D0%BD%D1%87%D0%BB%D0%B5%D1%80%D0%B1%D0%B8%D1%80%D0%BB%D0%B8%D0%B3%D0%B8",
+"participants": [
+[
+"Самсунспор",
+"Samsunspor"
+],
+[
+"Генчлербирлиги",
+"Genclerbirligi"
+]
+],
+"div": "T1",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
 }
 ]

@@ -5,7 +5,7 @@
  },
  "learned": "2026-11-27",
  "schedule_day": "2026-11-27",
- "content_slot": "2026-11-26-23",
+ "content_slot": "2026-11-27-10",
  "news_seen": [
   "https://www.sport-express.ru/football/champions-league/news/glavnyy-trener-reala-zhoze-mourinyu-psv-horoshaya-komanda-luchshe-chem-govorit-ih-tekuschee-kolichestvo-ochkov-2478211/",
   "https://www.sport-express.ru/football/england/news/the-telegraph-18-letniy-uilyams-barnett-prodlit-kontrakt-s-tottenhemom-2478209/",
@@ -1511,87 +1511,94 @@
   ]
  },
  "express": {
-  "msg": 8714,
+  "msg": 9758,
   "legs": [
    {
     "sport": "football",
-    "div": "N1",
-    "id": "401875545",
+    "div": "KSA",
+    "id": "401900870",
     "side": "home",
-    "p": 0.6553652569031807,
-    "odds": 1.083,
-    "kickoff": "2026-11-22T14:15:00+03:00",
-    "home": "Твенте",
-    "away": "Виллем II",
-    "league": "🇳🇱 Нидерланды · Эредивизи",
+    "p": 0.7832080200501254,
+    "odds": 1.211,
+    "kickoff": "2026-11-27T17:20:00+03:00",
+    "probability_origin": "market_baseline",
+    "quoted_at": "2026-11-27T10:01:39.746655+03:00",
+    "home": "Аль-Кадисия",
+    "away": "Аль-Фейха",
+    "league": "🇸🇦 Саудовская Аравия · Про-лига",
     "logos": [
-     "https://a.espncdn.com/i/teamlogos/soccer/500/152.png",
-     "https://a.espncdn.com/i/teamlogos/soccer/500/156.png"
+     "https://a.espncdn.com/i/teamlogos/soccer/500/22022.png",
+     "https://a.espncdn.com/i/teamlogos/soccer/500/21827.png"
     ],
     "colors": [
-     "F31522",
-     "1a316b"
+     "ffd700",
+     "fa8228"
     ],
-    "label": "Победа: Твенте",
-    "win": true,
-    "score": "2:1"
+    "label": "Победа: Аль-Кадисия"
    },
    {
-    "sport": "football",
-    "div": "T1",
-    "id": "401888249",
-    "side": "home",
-    "p": 0.6309235558630232,
-    "odds": 1.125,
-    "kickoff": "2026-11-22T19:00:00+03:00",
-    "home": "Трабзонспор",
-    "away": "Эюпспор",
-    "league": "🇹🇷 Турция · Суперлига",
+    "sport": "tennis",
+    "div": "WTA",
+    "id": "186829",
+    "side": "away",
+    "p": 0.7286324786324786,
+    "odds": 1.27,
+    "kickoff": "2026-11-27T21:00:00+03:00",
+    "probability_origin": "market_baseline",
+    "quoted_at": "2026-11-27T10:01:39.746655+03:00",
+    "home": "Варвара Лепченко",
+    "away": "Лаура Самсон",
+    "league": "🎾 Теннис · WTA",
     "logos": [
-     "https://a.espncdn.com/i/teamlogos/soccer/500/997.png",
-     "https://a.espncdn.com/i/teamlogos/soccer/500/20729.png"
+     [
+      "https://a.espncdn.com/i/headshots/tennis/players/full/423.png",
+      "https://a.espncdn.com/i/teamlogos/countries/500/usa.png"
+     ],
+     [
+      "https://a.espncdn.com/i/headshots/tennis/players/full/15069.png",
+      "https://a.espncdn.com/i/teamlogos/countries/500/cze.png"
+     ]
     ],
     "colors": [
-     "5699eb",
-     "000000"
+     "2d6a4f",
+     "2d6a4f"
     ],
-    "label": "Победа: Трабзонспор",
-    "win": true,
-    "score": "1:0"
+    "label": "Победа: Лаура Самсон"
    },
    {
-    "sport": "football",
-    "div": "N1",
-    "id": "401875547",
+    "sport": "hockey",
+    "div": "NHL",
+    "id": "401892796",
     "side": "home",
-    "p": 0.6026113157013726,
-    "odds": 1.174,
-    "kickoff": "2026-11-22T16:30:00+03:00",
-    "home": "Аякс",
-    "away": "АДО Ден Хааг",
-    "league": "🇳🇱 Нидерланды · Эредивизи",
+    "p": 0.7095248333691679,
+    "odds": 1.351,
+    "kickoff": "2026-11-27T21:00:00+03:00",
+    "probability_origin": "market_baseline",
+    "quoted_at": "2026-11-27T10:01:39.746655+03:00",
+    "home": "Нью-Джерси",
+    "away": "Калгари",
+    "league": "🇺🇸 США · NHL",
     "logos": [
-     "https://a.espncdn.com/i/teamlogos/soccer/500/139.png",
-     "https://a.espncdn.com/i/teamlogos/soccer/500/2726.png"
+     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/nj.png",
+     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/cgy.png"
     ],
     "colors": [
-     "DF1B27",
-     "307B64"
+     "e30b2b",
+     "dd1a32"
     ],
-    "label": "Победа: Аякс",
-    "win": true,
-    "score": "3:0"
+    "label": "Победа: Нью-Джерси (с ОТ)"
    }
   ],
-  "odds": 1.43037225,
-  "day": "2026-11-22",
-  "done": true
+  "odds": 2.07779747,
+  "day": "2026-11-27",
+  "stake_pct": 0.5,
+  "done": false
  },
  "streak_posted": 0,
  "value_day": "2026-11-26",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-26",
- "site_stamp": "1575|9756|2026-11-27 09|6|bdbe9d0c742789fa",
+ "site_stamp": "1575|9758|2026-11-27 10|6|bdbe9d0c742789fa",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1749,7 +1756,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 9756,
+ "dz_last": 9758,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2090,7 +2097,7 @@
  "vk_photos": [],
  "vk_photo_until": 1794644243.1147308,
  "vk_photo_cursor": {},
- "vk_story_last": 9756,
+ "vk_story_last": 9758,
  "vk_story_err": "VK stories: сервер не вернул upload_result",
  "push_weekly": "2026-47",
  "vk_story_at": 1795752405.4268215,
@@ -3131,7 +3138,7 @@
   "quote_matches": 151
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-27T09:59:39.762594+03:00",
+  "last_poll": "2026-11-27T10:01:39.746655+03:00",
   "cursor": "466",
   "posts": [
    {
@@ -3931,7 +3938,10 @@
    "401880725": "pre",
    "401880724": "pre",
    "401881252": "pre",
-   "401881249": "pre"
+   "401881249": "pre",
+   "401882796": "pre",
+   "401883101": "pre",
+   "401888236": "pre"
   },
   "daily": {
    "day": "2026-11-27"
