@@ -3129,7 +3129,7 @@
   "quote_matches": 157
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-27T15:26:14.529515+03:00",
+  "last_poll": "2026-11-27T15:28:14.377427+03:00",
   "cursor": "473",
   "posts": [
    {
@@ -7585,6 +7585,21 @@
    "probability": 0.6017,
    "odds": 1.55,
    "edge": -0.06737,
+   "estimated": true
+  },
+  "esports|DOTA|1816498": {
+   "reason": "no_real_odds",
+   "checked_at": "2026-11-27T12:28:41.279369+00:00",
+   "kickoff": "2026-11-27T16:30:00+03:00",
+   "sport": "esports",
+   "id": "1816498",
+   "home": "GamerLegion",
+   "away": "1w Team",
+   "priced_markets": 0,
+   "market": "GamerLegion возьмёт хотя бы карту",
+   "probability": 0.6108,
+   "odds": 1.52,
+   "edge": -0.07158,
    "estimated": true
   }
  },
