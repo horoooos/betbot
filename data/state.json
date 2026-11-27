@@ -1572,7 +1572,7 @@
  "value_day": "2026-11-27",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-27",
- "site_stamp": "1580|9833|2026-11-27 22|6|058d74888f72247d",
+ "site_stamp": "1580|9834|2026-11-27 22|6|058d74888f72247d",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1740,7 +1740,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 9833,
+ "dz_last": 9834,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2081,14 +2081,14 @@
  "vk_photos": [],
  "vk_photo_until": 1794644243.1147308,
  "vk_photo_cursor": {},
- "vk_story_last": 9785,
- "vk_story_err": "VK stories: ошибка загрузки; подписанный URL скрыт",
+ "vk_story_last": 9788,
+ "vk_story_err": null,
  "push_weekly": "2026-48",
- "vk_story_at": 1795804453.3749573,
- "vk_story_url": "https://vk.com/story-228963529_456239188",
+ "vk_story_at": 1795809048.8029497,
+ "vk_story_url": "https://vk.com/story-228963529_456239189",
  "vk_story_day": {
   "date": "2026-11-27",
-  "count": 12
+  "count": 13
  },
  "vk_legacy_pending": [
   {
@@ -3172,7 +3172,7 @@
   "quote_matches": 164
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-27T22:47:47.681252+03:00",
+  "last_poll": "2026-11-27T22:49:47.941489+03:00",
   "cursor": "490",
   "posts": [
    {
@@ -8235,7 +8235,7 @@
   },
   "football|P1|401885389": {
    "reason": "edge_below_minimum",
-   "checked_at": "2026-11-27T19:38:26.517157+00:00",
+   "checked_at": "2026-11-27T19:50:11.066782+00:00",
    "kickoff": "2026-11-27T23:15:00+03:00",
    "sport": "football",
    "id": "401885389",
@@ -8250,7 +8250,7 @@
   },
   "football|PAR|401888643": {
    "reason": "edge_below_minimum",
-   "checked_at": "2026-11-27T19:40:21.148999+00:00",
+   "checked_at": "2026-11-27T19:50:11.463602+00:00",
    "kickoff": "2026-11-27T23:30:00+03:00",
    "sport": "football",
    "id": "401888643",
@@ -20301,6 +20301,5 @@
   "home": "Ноттингем Форест",
   "away": "Челси",
   "kickoff": "2026-11-27T23:00:00+03:00"
- },
- "vk_story_retry_at": 1795809012.7431843
+ }
 }
