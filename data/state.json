@@ -7,7 +7,6 @@
  "schedule_day": "2026-11-27",
  "content_slot": "2026-11-27-23",
  "news_seen": [
-  "https://www.sport-express.ru/football/champions-league/news/manchester-siti-napoli-startovye-sostavy-komand-na-match-ligi-chempionov-24-noyabrya-2026-2478526/",
   "https://www.sport-express.ru/football/champions-league/news/feyenoord-portu-startovye-sostavy-na-match-ligi-chempionov-24-noyabrya-2026-2478521/",
   "https://www.sport-express.ru/football/champions-league/news/real-madrid-psv-startovye-sostavy-na-match-ligi-chempionov-24-noyabrya-2026-2478520/",
   "https://www.sport-express.ru/football/champions-league/news/galatasaray-aston-villa-batrakov-poluchil-zheltuyu-kartochku-vo-vtorom-tayme-matcha-ligi-chempionov-24-noyabrya-2026-2478519/",
@@ -506,9 +505,10 @@
   "https://www.sport-express.ru/tennis/wta/news/rahimova-ocenila-svoe-vystuplenie-na-turnire-v-tokio-2479809/",
   "navi-ili-parivision-kto-nachnet-s-pobedy-vystupleniye-vo-vtoroi-stadii-pgl-major",
   "dosia-postavil-nip-i-100-thieves-na-vylet-so-schetom-0-3-iz-vtorogo-yetapa-pgl",
-  "https://www.sport-express.ru/football/rfpl/news/istochnik-spartak-prodlil-kontrakt-s-maksimenko-2479897/"
+  "https://www.sport-express.ru/football/rfpl/news/istochnik-spartak-prodlil-kontrakt-s-maksimenko-2479897/",
+  "v-dota-2-obnaruzhili-bag-kotoryi-pozvolyayet-vyzyvat-vylety-igrokov-iz-matcha"
  ],
- "news_i": 1,
+ "news_i": 2,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1716,7 +1716,7 @@
  "streak_day": {
   "2026-11-22": 2
  },
- "news_next": "2026-11-28T01:23:36.178610+03:00",
+ "news_next": "2026-11-28T01:56:35.531176+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1750,7 +1750,6 @@
  "vk_mode": "photo",
  "dz_err": null,
  "img_used": [
-  "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/2015-11-20_-_Tarasova_and_Grishin_-_Photo_1.jpg/1280px-2015-11-20_-_Tarasova_and_Grishin_-_Photo_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
   "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/2015-11-20_-_Tarasova_and_Grishin_-_Photo_3.jpg/1280px-2015-11-20_-_Tarasova_and_Grishin_-_Photo_3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
   "https://upload.wikimedia.org/wikipedia/commons/8/8f/Cadet_Soccer_Stadium.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
   "https://upload.wikimedia.org/wikipedia/commons/e/e7/600px_blu_e_rosso_con_stella.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
@@ -2049,7 +2048,8 @@
   "https://upload.wikimedia.org/wikipedia/commons/3/3b/Kino_North_Stadium_at_night.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
   "https://upload.wikimedia.org/wikipedia/commons/0/06/Kirill_Levnikov_2022.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
   "https://images.cybersport.ru/images/as-is/plain/0e/0e9b4369-4398-4876-911b-b534c538690c.jpg",
-  "https://upload.wikimedia.org/wikipedia/commons/0/06/Andrey_Fedorovich_Karpov_by_I.Makarov_%281886%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+  "https://upload.wikimedia.org/wikipedia/commons/0/06/Andrey_Fedorovich_Karpov_by_I.Makarov_%281886%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "https://images.cybersport.ru/images/as-is/plain/f5/f532a61e-42e5-4d61-b40c-e267a92c6156.jpg"
  ],
  "indexnow_day": "2026-11-28",
  "vk_wall_err": null,
@@ -2547,7 +2547,8 @@
   "9841",
   "9850",
   "9855",
-  "9864"
+  "9864",
+  "9870"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -2977,11 +2978,12 @@
   "2026-11-27:новость:64432e39af18075e301c55f5",
   "2026-11-27:новость:6c91d3b33a39699e6cbfb8c7",
   "2026-11-27:новость:5080bfcebde9555d7d86c3c7",
-  "2026-11-27:новость:706c4527982d758d6e304a3d"
+  "2026-11-27:новость:706c4527982d758d6e304a3d",
+  "2026-11-27:новость:f6c3e9da4454b0dca79fb1f1"
  ],
  "dz_last_delivery": {
-  "source_id": 9864,
-  "message_id": 977,
+  "source_id": 9870,
+  "message_id": 978,
   "kind": "новость"
  },
  "learn_attempt_day": "2026-11-28",
@@ -3184,7 +3186,7 @@
   "quote_matches": 168
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-28T01:22:36.049666+03:00",
+  "last_poll": "2026-11-28T01:24:35.531176+03:00",
   "cursor": "494",
   "posts": [
    {
@@ -4098,7 +4100,7 @@
    "401880129": "post",
    "401882791": "post",
    "401885389": "post",
-   "401888643": "in",
+   "401888643": "post",
    "401921361": "in",
    "401841337": "pre",
    "401912683": "pre",
