@@ -1560,7 +1560,9 @@
      "e30b2b",
      "dd1a32"
     ],
-    "label": "Победа: Нью-Джерси (с ОТ)"
+    "label": "Победа: Нью-Джерси (с ОТ)",
+    "win": true,
+    "score": "5:3"
    }
   ],
   "odds": 2.07779747,
@@ -1572,7 +1574,7 @@
  "value_day": "2026-11-27",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-27",
- "site_stamp": "1580|9843|2026-11-27 23|6|6442a0f520ae282a",
+ "site_stamp": "1580|9844|2026-11-27 23|6|6442a0f520ae282a",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1740,7 +1742,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 9843,
+ "dz_last": 9844,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2081,14 +2083,14 @@
  "vk_photos": [],
  "vk_photo_until": 1794644243.1147308,
  "vk_photo_cursor": {},
- "vk_story_last": 9791,
+ "vk_story_last": 9793,
  "vk_story_err": null,
  "push_weekly": "2026-48",
- "vk_story_at": 1795810962.4193945,
- "vk_story_url": "https://vk.com/story-228963529_456239191",
+ "vk_story_at": 1795811928.5763721,
+ "vk_story_url": "https://vk.com/story-228963529_456239192",
  "vk_story_day": {
   "date": "2026-11-27",
-  "count": 15
+  "count": 16
  },
  "vk_legacy_pending": [
   {
@@ -3120,35 +3122,35 @@
     "weight": 0.0,
     "settled_matches": 70,
     "required_matches": 100,
-    "trained_at": "2026-11-26T21:34:39.570709+00:00"
+    "trained_at": "2026-11-27T20:37:48.819085+00:00"
    },
    "basketball": {
     "status": "collecting",
     "weight": 0.0,
     "settled_matches": 76,
     "required_matches": 100,
-    "trained_at": "2026-11-26T21:34:39.570709+00:00"
+    "trained_at": "2026-11-27T20:37:48.819085+00:00"
    },
    "tennis": {
     "status": "collecting",
     "weight": 0.0,
-    "settled_matches": 8,
+    "settled_matches": 9,
     "required_matches": 100,
-    "trained_at": "2026-11-26T21:34:39.570709+00:00"
+    "trained_at": "2026-11-27T20:37:48.819085+00:00"
    },
    "esports:CS2": {
     "status": "collecting",
     "weight": 0.0,
     "settled_matches": 0,
     "required_matches": 100,
-    "trained_at": "2026-11-26T21:34:39.570709+00:00"
+    "trained_at": "2026-11-27T20:37:48.819085+00:00"
    },
    "esports:DOTA": {
     "status": "collecting",
     "weight": 0.0,
     "settled_matches": 0,
     "required_matches": 100,
-    "trained_at": "2026-11-26T21:34:39.570709+00:00"
+    "trained_at": "2026-11-27T20:37:48.819085+00:00"
    }
   },
   "source": {
@@ -3174,7 +3176,7 @@
   "quote_matches": 165
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-27T23:35:48.764539+03:00",
+  "last_poll": "2026-11-27T23:37:48.819085+03:00",
   "cursor": "490",
   "posts": [
    {
@@ -4019,7 +4021,7 @@
    "401931982": "post",
    "401931995": "post",
    "401892795": "in",
-   "401892796": "in",
+   "401892796": "post",
    "401892797": "in",
    "401892798": "in",
    "401892799": "in",
