@@ -2995,7 +2995,7 @@
   "external_sources": {
    "providers": {
     "legalbet": {
-     "at": "2026-11-27T19:25:47.707768+00:00",
+     "at": "2026-11-27T19:57:47.738975+00:00",
      "status": "ok",
      "discovered": 2,
      "pages": 2,
@@ -3006,54 +3006,54 @@
      "contexts": 2
     },
     "livesport": {
-     "at": "2026-11-27T19:25:47.707768+00:00",
+     "at": "2026-11-27T19:57:47.738975+00:00",
      "status": "ok",
-     "discovered": 24,
+     "discovered": 19,
      "pages": 6,
-     "opinions": 8,
-     "mapped": 4,
+     "opinions": 10,
+     "mapped": 5,
      "articles_available": 39,
-     "next_offset": 6,
+     "next_offset": 12,
      "contexts": 6
     },
     "metaratings": {
-     "at": "2026-11-27T19:25:47.707768+00:00",
+     "at": "2026-11-27T19:57:47.738975+00:00",
      "status": "ok",
-     "discovered": 7,
-     "pages": 6,
-     "opinions": 24,
-     "mapped": 2,
+     "discovered": 3,
+     "pages": 3,
+     "opinions": 12,
+     "mapped": 0,
      "articles_available": 32,
-     "next_offset": 6,
-     "contexts": 6
+     "next_offset": 3,
+     "contexts": 3
     },
     "rb": {
-     "at": "2026-11-27T19:25:47.707768+00:00",
+     "at": "2026-11-27T19:57:47.738975+00:00",
      "status": "ok",
-     "discovered": 0,
-     "pages": 0,
+     "discovered": 1,
+     "pages": 1,
      "opinions": 0,
      "mapped": 0,
-     "articles_available": 1,
-     "next_offset": 0,
+     "articles_available": 2,
+     "next_offset": 1,
      "contexts": 0
     },
     "vseprosport": {
-     "at": "2026-11-27T19:25:47.707768+00:00",
+     "at": "2026-11-27T19:57:47.738975+00:00",
      "status": "ok",
-     "discovered": 4,
+     "discovered": 7,
      "pages": 2,
      "opinions": 0,
      "mapped": 0,
      "articles_available": 10,
-     "next_offset": 6,
-     "page_errors": 2,
+     "next_offset": 12,
+     "page_errors": 4,
      "contexts": 2
     }
    },
    "opinions": 73,
    "snapshots": 0,
-   "contexts": 198,
+   "contexts": 199,
    "model": {
     "weight": 0.0,
     "status": "collecting",
@@ -3172,7 +3172,7 @@
   "quote_matches": 164
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-27T22:55:47.258931+03:00",
+  "last_poll": "2026-11-27T22:57:47.738975+03:00",
   "cursor": "490",
   "posts": [
    {
