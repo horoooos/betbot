@@ -4918,12 +4918,286 @@
   "retry_at": 1795809828.021068
  },
  "NHL|401892803": {
-  "status": "waiting_data",
-  "kickoff": "2026-11-28T00:00:00+03:00",
-  "sport": "hockey",
+  "id": "401892803",
   "div": "NHL",
-  "reason": "no_qualified_real_market",
-  "retry_at": 1795812588.81497
+  "sport": "hockey",
+  "kickoff": "2026-11-28T00:00:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "detail": "Fri, November 27th at 4:00 PM EST",
+  "clock": "0:00",
+  "period": 0,
+  "home": {
+   "id": "30",
+   "name": "Minnesota Wild",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/min.png",
+   "color": "124734",
+   "score": "0",
+   "record": "18-4-5",
+   "periods": [],
+   "ru": "Миннесота"
+  },
+  "away": {
+   "id": "17",
+   "name": "Colorado Avalanche",
+   "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/col.png",
+   "color": "860038",
+   "score": "0",
+   "record": "14-7-3",
+   "periods": [],
+   "ru": "Колорадо"
+  },
+  "odds": {
+   "H": 1.847,
+   "A": 1.98,
+   "line": 6.5,
+   "over": 2.1,
+   "under": 1.769,
+   "spread": -1.5,
+   "sp_h": 2.95,
+   "sp_a": 1.42
+  },
+  "probs": {
+   "HK_ML_H": 0.5173771601245151,
+   "HK_ML_A": 0.4826228398754848,
+   "HK_H": 0.4335721782786792,
+   "HK_D": 0.16116342662660743,
+   "HK_A": 0.40526439509471324,
+   "HK_O5.5": 0.6159555998757593,
+   "HK_U5.5": 0.3840444001242404,
+   "HK_O6.5": 0.45721715197649626,
+   "HK_U6.5": 0.5427828480235037,
+   "HK_O7.5": 0.3120721213791718,
+   "HK_U7.5": 0.6879278786208282,
+   "HK_IT1O1.5": 0.8346421871105643,
+   "HK_IT1O2.5": 0.6294548197947392,
+   "HK_IT1O3.5": 0.407426011454868,
+   "HK_IT2O1.5": 0.822668422112236,
+   "HK_IT2O2.5": 0.6103103600616359,
+   "HK_IT2O3.5": 0.3870281360905221,
+   "HK_H-1.5": 0.2834590006736476,
+   "HK_A+1.5": 0.7165409993263521,
+   "HK_A-1.5": 0.25940127292768334,
+   "HK_H+1.5": 0.7405987270723163
+  },
+  "labels": {
+   "HK_ML_H": "П1 (с ОТ и буллитами)",
+   "HK_ML_A": "П2 (с ОТ и буллитами)",
+   "HK_H": "П1 в основное время",
+   "HK_D": "Ничья в основное время",
+   "HK_A": "П2 в основное время",
+   "HK_O5.5": "ТБ 5.5",
+   "HK_U5.5": "ТМ 5.5",
+   "HK_O6.5": "ТБ 6.5",
+   "HK_U6.5": "ТМ 6.5",
+   "HK_O7.5": "ТБ 7.5",
+   "HK_U7.5": "ТМ 7.5",
+   "HK_IT1O1.5": "ИТ1 больше 1.5",
+   "HK_IT1O2.5": "ИТ1 больше 2.5",
+   "HK_IT1O3.5": "ИТ1 больше 3.5",
+   "HK_IT2O1.5": "ИТ2 больше 1.5",
+   "HK_IT2O2.5": "ИТ2 больше 2.5",
+   "HK_IT2O3.5": "ИТ2 больше 3.5",
+   "HK_H-1.5": "Ф1 (−1.5)",
+   "HK_A+1.5": "Ф2 (+1.5)",
+   "HK_A-1.5": "Ф2 (−1.5)",
+   "HK_H+1.5": "Ф1 (+1.5)"
+  },
+  "real": {
+   "HK_ML_H": 1.847,
+   "HK_ML_A": 1.98,
+   "HK_O6.5": 2.1,
+   "HK_U6.5": 1.769
+  },
+  "center": "Ожидаемые голы 3.2 : 3.2",
+  "bar": [
+   0.5173771601245151,
+   0,
+   0.4826228398754848
+  ],
+  "model": {
+   "lh": 3.2462350569290734,
+   "la": 3.1543265437868477
+  },
+  "stavka_signal": {
+   "status": "collecting",
+   "weight": 0.0,
+   "authors": 12,
+   "group": "hockey",
+   "snapshot": "NHL|401892803",
+   "source": "https://stavka.tv"
+  },
+  "research": {
+   "articles": [
+    {
+     "id": "68d791fb08f724df024af7d4",
+     "kind": "context",
+     "provider": "livesport",
+     "source": "https://www.livesport.ru/tips/hockey/2026/11/28/minnesota-wild-colorado-avalanche/",
+     "sport": "hockey",
+     "div": "NHL",
+     "event_id": "401892803",
+     "kickoff": "2026-11-27T21:00:00+00:00",
+     "published_at": "2026-11-26T20:00:00+00:00",
+     "observed_at": "2026-11-26T20:51:06.741874+00:00",
+     "tables": [
+      [
+       [
+        "",
+        "Букмекер",
+        "1",
+        "x",
+        "2",
+        "Новым игрокам",
+        ""
+       ],
+       [
+        "",
+        "",
+        "2.30",
+        "4.10",
+        "2.70",
+        "Фрибет",
+        "15 000 ₽"
+       ],
+       [
+        "",
+        "",
+        "2.31",
+        "4.07",
+        "2.67",
+        "Фрибет",
+        "30 000 ₽"
+       ],
+       [
+        "",
+        "",
+        "2.30",
+        "4.10",
+        "2.70",
+        "Фрибет всем",
+        "10 000 ₽"
+       ],
+       [
+        "",
+        "",
+        "2.30",
+        "4.10",
+        "2.65",
+        "Фрибет",
+        "1000 ₽"
+       ]
+      ]
+     ]
+    }
+   ],
+   "dossier": null
+  },
+  "main": {
+   "key": "HK_ML_H",
+   "label": "П1 (с ОТ и буллитами)",
+   "p": 0.5174,
+   "odds": 1.85,
+   "est": false,
+   "stake": 0.5,
+   "strategy": "external_trial",
+   "selection_mode": "external_fallback",
+   "trial_expires_at": null,
+   "probability_origin": "baseline_model",
+   "model_edge": -0.04285,
+   "source_count": 9,
+   "source_refs": [
+    {
+     "author": "/predictors/sergei-exp",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/28-11-2026-minnesota-wild-colorado-avalanche",
+     "published_at": "2026-11-26T23:39:00+00:00",
+     "observed_at": "2026-11-27T00:40:55.993190+00:00",
+     "odds": 1.8,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/optimist-fsj6827",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/28-11-2026-minnesota-wild-colorado-avalanche",
+     "published_at": "2026-11-27T05:51:00+00:00",
+     "observed_at": "2026-11-27T05:57:40.020802+00:00",
+     "odds": 1.8,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/nas-nedogonyat",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/28-11-2026-minnesota-wild-colorado-avalanche",
+     "published_at": "2026-11-27T07:14:00+00:00",
+     "observed_at": "2026-11-27T07:21:39.497116+00:00",
+     "odds": 1.8,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/pavel-sirokostup",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/28-11-2026-minnesota-wild-colorado-avalanche",
+     "published_at": "2026-11-27T13:11:00+00:00",
+     "observed_at": "2026-11-27T13:20:39.155767+00:00",
+     "odds": 1.8,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/ruslan-siraziev-5",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/28-11-2026-minnesota-wild-colorado-avalanche",
+     "published_at": "2026-11-27T14:22:00+00:00",
+     "observed_at": "2026-11-27T14:24:39.403127+00:00",
+     "odds": 1.8,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/dmitrii-kilin",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/28-11-2026-minnesota-wild-colorado-avalanche",
+     "published_at": "2026-11-27T15:09:00+00:00",
+     "observed_at": "2026-11-27T15:26:40.541595+00:00",
+     "odds": 1.8,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/yunost-85",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/28-11-2026-minnesota-wild-colorado-avalanche",
+     "published_at": "2026-11-27T16:41:00+00:00",
+     "observed_at": "2026-11-27T16:50:40.075253+00:00",
+     "odds": 1.8,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/andrey-malko",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/28-11-2026-minnesota-wild-colorado-avalanche",
+     "published_at": "2026-11-27T19:04:00+00:00",
+     "observed_at": "2026-11-27T19:15:48.093566+00:00",
+     "odds": 1.8,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/skayz999",
+     "provider": null,
+     "source": "https://stavka.tv/matches/ice-hockey/28-11-2026-minnesota-wild-colorado-avalanche",
+     "published_at": "2026-11-27T19:14:00+00:00",
+     "observed_at": "2026-11-27T19:15:48.093566+00:00",
+     "odds": 1.8,
+     "price_kind": "author_recorded"
+    }
+   ]
+  },
+  "bold": {},
+  "open": {
+   "HK_ML_H": 0.5174
+  },
+  "top": false,
+  "msg_id": 9848,
+  "btn": 2
  },
  "NHL|401892804": {
   "status": "waiting_data",
@@ -4931,7 +5205,7 @@
   "sport": "hockey",
   "div": "NHL",
   "reason": "no_qualified_real_market",
-  "retry_at": 1795812588.81497
+  "retry_at": 1795813188.994444
  },
  "NHL|401892805": {
   "status": "waiting_data",
@@ -4939,7 +5213,7 @@
   "sport": "hockey",
   "div": "NHL",
   "reason": "edge_below_minimum",
-  "retry_at": 1795812588.81497
+  "retry_at": 1795813188.994444
  },
  "WTA|186831": {
   "status": "waiting_data",
@@ -4947,6 +5221,6 @@
   "sport": "tennis",
   "div": "WTA",
   "reason": "no_real_odds",
-  "retry_at": 1795812588.81497
+  "retry_at": 1795813188.994444
  }
 }
