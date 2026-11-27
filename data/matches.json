@@ -29261,5 +29261,13 @@
   "div": "MEX",
   "reason": "no_qualified_real_market",
   "retry_at": 1795741496.700094
+ },
+ "401931995": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-27T06:10:00+03:00",
+  "sport": "football",
+  "div": "MEX",
+  "reason": "no_qualified_real_market",
+  "retry_at": 1795745899.215225
  }
 }
