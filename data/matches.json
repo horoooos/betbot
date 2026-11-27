@@ -1,12 +1,4 @@
 {
- "401899536": {
-  "status": "waiting_data",
-  "kickoff": "2026-11-24T21:00:00+03:00",
-  "sport": "football",
-  "div": "I2",
-  "reason": "no_qualified_real_market",
-  "retry_at": 1795542947.50303
- },
  "401899539": {
   "id": "401899539",
   "div": "I2",
@@ -30068,7 +30060,7 @@
   "sport": "football",
   "div": "AUT",
   "reason": "no_qualified_real_market",
-  "retry_at": 1795802321.700206
+  "retry_at": 1795803041.40128
  },
  "401875536": {
   "status": "waiting_data",
