@@ -3130,37 +3130,37 @@
    "hockey": {
     "status": "collecting",
     "weight": 0.0,
-    "settled_matches": 74,
+    "settled_matches": 75,
     "required_matches": 100,
-    "trained_at": "2026-11-27T22:36:35.980832+00:00"
+    "trained_at": "2026-11-27T22:42:35.370640+00:00"
    },
    "basketball": {
     "status": "collecting",
     "weight": 0.0,
     "settled_matches": 76,
     "required_matches": 100,
-    "trained_at": "2026-11-27T22:36:35.980832+00:00"
+    "trained_at": "2026-11-27T22:42:35.370640+00:00"
    },
    "tennis": {
     "status": "collecting",
     "weight": 0.0,
     "settled_matches": 10,
     "required_matches": 100,
-    "trained_at": "2026-11-27T22:36:35.980832+00:00"
+    "trained_at": "2026-11-27T22:42:35.370640+00:00"
    },
    "esports:CS2": {
     "status": "collecting",
     "weight": 0.0,
     "settled_matches": 0,
     "required_matches": 100,
-    "trained_at": "2026-11-27T22:36:35.980832+00:00"
+    "trained_at": "2026-11-27T22:42:35.370640+00:00"
    },
    "esports:DOTA": {
     "status": "collecting",
     "weight": 0.0,
     "settled_matches": 0,
     "required_matches": 100,
-    "trained_at": "2026-11-27T22:36:35.980832+00:00"
+    "trained_at": "2026-11-27T22:42:35.370640+00:00"
    }
   },
   "source": {
@@ -3186,7 +3186,7 @@
   "quote_matches": 168
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-28T01:40:35.905400+03:00",
+  "last_poll": "2026-11-28T01:42:35.370640+03:00",
   "cursor": "494",
   "posts": [
    {
@@ -4056,8 +4056,8 @@
    "401892796": "post",
    "401892797": "post",
    "401892798": "post",
-   "401892799": "in",
-   "401892800": "in",
+   "401892799": "post",
+   "401892800": "post",
    "401892801": "in",
    "401892802": "post",
    "401892803": "in",
@@ -8395,7 +8395,7 @@
   },
   "football|BRA|401841337": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-27T22:31:11.882818+00:00",
+   "checked_at": "2026-11-27T22:42:54.182461+00:00",
    "kickoff": "2026-11-28T02:00:00+03:00",
    "sport": "football",
    "id": "401841337",
@@ -8410,7 +8410,7 @@
   },
   "football|BRA2|401912683": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-27T22:31:12.370613+00:00",
+   "checked_at": "2026-11-27T22:42:54.580496+00:00",
    "kickoff": "2026-11-28T02:00:00+03:00",
    "sport": "football",
    "id": "401912683",
@@ -8425,7 +8425,7 @@
   },
   "football|PAR|401888557": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-27T22:31:12.787366+00:00",
+   "checked_at": "2026-11-27T22:42:54.978992+00:00",
    "kickoff": "2026-11-28T02:00:00+03:00",
    "sport": "football",
    "id": "401888557",
