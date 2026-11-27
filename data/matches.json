@@ -30156,5 +30156,790 @@
   "div": "KSA",
   "reason": "no_qualified_real_market",
   "retry_at": 1795789479.797302
+ },
+ "401888241": {
+  "id": "401888241",
+  "div": "T1",
+  "slug": "tur.1",
+  "kickoff": "2026-11-27T20:00:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "detail": "Scheduled",
+  "home": {
+   "id": "9078",
+   "name": "Alanyaspor",
+   "short": "Alanyaspor",
+   "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/9078.png",
+   "color": "000000",
+   "alt": "000000",
+   "form": "LLLLL",
+   "score": "0",
+   "ru": "Аланьяспор"
+  },
+  "away": {
+   "id": "7648",
+   "name": "Konyaspor",
+   "short": "Konyaspor",
+   "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/7648.png",
+   "color": "288A00",
+   "alt": "000000",
+   "form": "LLLWL",
+   "score": "0",
+   "ru": "Коньяспор"
+  },
+  "odds": {
+   "H": 2.7,
+   "D": 3.1,
+   "A": 2.75,
+   "line": 2.5,
+   "over": 2.15,
+   "under": 1.645,
+   "spread_h": [
+    0.5,
+    1.444
+   ],
+   "spread_a": [
+    -0.5,
+    2.55
+   ]
+  },
+  "venue": "Kirbiyik Holding Stadyumu",
+  "clock": "0'",
+  "goals": [],
+  "open": {
+   "U25": 0.5698
+  },
+  "top": false,
+  "lam": [
+   1.1896238962218644,
+   1.197716635349631
+  ],
+  "probs": {
+   "H": 0.3488172141593705,
+   "D": 0.29843084320326446,
+   "A": 0.3527519426373651,
+   "1X": 0.647248057362635,
+   "12": 0.7015691567967356,
+   "X2": 0.6511827858406295,
+   "BTTS_Y": 0.49612760129146166,
+   "BTTS_N": 0.5038723987085385,
+   "O15": 0.6992648442636307,
+   "U15": 0.30073515573636933,
+   "O25": 0.4269802144300109,
+   "U25": 0.5730197855699891,
+   "O35": 0.21863520794929803,
+   "U35": 0.7813647920507019,
+   "H_O05": 0.6956642782689046,
+   "H_O15": 0.3336192312236658,
+   "A_O05": 0.6981172476604514,
+   "A_O15": 0.3365472532582411,
+   "H-1.5": 0.1512807781825643,
+   "A+1.5": 0.8487192218174358,
+   "A-1.5": 0.15380047035471064,
+   "H+1.5": 0.8461995296452893,
+   "H-2.5": 0.04934072868488227,
+   "A-2.5": 0.05046875364973041,
+   "H+2.5": 0.9495312463502695,
+   "A+2.5": 0.9506592713151175,
+   "O45": 0.09428758831881498,
+   "U45": 0.9057124116811849,
+   "H_O25": 0.11827051148677309,
+   "A_O25": 0.12001805468884112,
+   "H&O15": 0.249994428937132,
+   "A&O15": 0.2531856474853399,
+   "H&BTTS": 0.14928053718192746,
+   "A&BTTS": 0.1507622962683754,
+   "1X&U35": 0.5111987311850557,
+   "X2&U35": 0.5138891319119265,
+   "BTTS&O25": 0.35475060560728705,
+   "HT_H": 0.26720799177446447,
+   "HT_D": 0.46318540370169203,
+   "HT_A": 0.26960660452384344,
+   "HT_O05": 0.6505809363497378,
+   "HT_U05": 0.3494190636502623,
+   "HT_O15": 0.29943493599813353,
+   "HT_U15": 0.7005650640018664
+  },
+  "scores": [
+   [
+    "1:1",
+    0.14137699568417453
+   ],
+   [
+    "0:0",
+    0.10234607536210567
+   ],
+   [
+    "0:1",
+    0.09956629515202516
+   ]
+  ],
+  "main": {
+   "key": "U25",
+   "label": "ТМ 2.5",
+   "p": 0.573,
+   "odds": 1.63,
+   "est": false,
+   "stake": 0.5,
+   "strategy": "external_trial",
+   "selection_mode": "external_fallback",
+   "trial_expires_at": null,
+   "probability_origin": "baseline_model",
+   "model_edge": -0.06598,
+   "source_count": 6,
+   "source_refs": [
+    {
+     "author": "/predictors/koefficient-200",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-alanyaspor-konyaspor",
+     "published_at": "2026-11-26T06:11:00+00:00",
+     "observed_at": "2026-11-27T10:54:14.686069+00:00",
+     "odds": 1.77,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/lyubimec-fartuny",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-alanyaspor-konyaspor",
+     "published_at": "2026-11-26T12:24:00+00:00",
+     "observed_at": "2026-11-26T12:27:30.332332+00:00",
+     "odds": 1.77,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/yanis-bananis",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-alanyaspor-konyaspor",
+     "published_at": "2026-11-26T15:00:00+00:00",
+     "observed_at": "2026-11-27T10:54:14.686069+00:00",
+     "odds": 1.77,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/kot-v-sapogax-4akk-avtor",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-alanyaspor-konyaspor",
+     "published_at": "2026-11-26T16:28:00+00:00",
+     "observed_at": "2026-11-27T10:54:14.686069+00:00",
+     "odds": 1.77,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/aslan-kockarov-8",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-alanyaspor-konyaspor",
+     "published_at": "2026-11-26T19:22:00+00:00",
+     "observed_at": "2026-11-26T19:27:10.089363+00:00",
+     "odds": 1.77,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/ten-3",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-alanyaspor-konyaspor",
+     "published_at": "2026-11-26T20:42:00+00:00",
+     "observed_at": "2026-11-26T20:48:41.882017+00:00",
+     "odds": 1.77,
+     "price_kind": "author_recorded"
+    }
+   ]
+  },
+  "bold": {},
+  "value": null,
+  "odds_src": "среднее по букмекерам",
+  "model_w": 0.0,
+  "learned_n": 1577,
+  "stavka_signal": {
+   "status": "baseline_better",
+   "weight": 0.0,
+   "authors": 25,
+   "votes": {
+    "D": 5.0,
+    "H": 3.9771582553340563,
+    "A": 3.9435944833875713,
+    "U25": 6.024573447522135,
+    "O25": 6.0
+   },
+   "source": "https://stavka.tv",
+   "snapshot": "T1|401888241"
+  },
+  "research": {
+   "articles": [],
+   "dossier": {
+    "observed_at": "2026-11-27T15:48:55.887832+00:00",
+    "kickoff": "2026-11-27T17:00:00+00:00",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/tur.1/summary?event=401888241",
+    "status": "available",
+    "facts": {
+     "table": {
+      "432": {
+       "rank": "1",
+       "gp": "12",
+       "w": "10",
+       "d": "1",
+       "l": "1",
+       "gd": "+13",
+       "pts": "31",
+       "of": 18,
+       "raw": {
+        "GP": "12",
+        "L": "1",
+        "GD": "+13",
+        "P": "31",
+        "D": "1",
+        "W": "10",
+        "R": "1",
+        "Total": "10-1-1"
+       },
+       "group": "Turkish Super Lig Standings"
+      },
+      "997": {
+       "rank": "2",
+       "gp": "12",
+       "w": "9",
+       "d": "1",
+       "l": "2",
+       "gd": "+19",
+       "pts": "28",
+       "of": 18,
+       "raw": {
+        "GP": "12",
+        "L": "2",
+        "GD": "+19",
+        "P": "28",
+        "D": "1",
+        "W": "9",
+        "R": "2",
+        "Total": "9-1-2"
+       },
+       "group": "Turkish Super Lig Standings"
+      },
+      "1895": {
+       "rank": "3",
+       "gp": "12",
+       "w": "8",
+       "d": "1",
+       "l": "3",
+       "gd": "+13",
+       "pts": "25",
+       "of": 18,
+       "raw": {
+        "GP": "12",
+        "L": "3",
+        "GD": "+13",
+        "P": "25",
+        "D": "1",
+        "W": "8",
+        "R": "3",
+        "Total": "8-1-3"
+       },
+       "group": "Turkish Super Lig Standings"
+      },
+      "132335": {
+       "rank": "4",
+       "gp": "12",
+       "w": "7",
+       "d": "2",
+       "l": "3",
+       "gd": "+11",
+       "pts": "23",
+       "of": 18,
+       "raw": {
+        "GP": "12",
+        "L": "3",
+        "GD": "+11",
+        "P": "23",
+        "D": "2",
+        "W": "7",
+        "R": "4",
+        "Total": "7-2-3"
+       },
+       "group": "Turkish Super Lig Standings"
+      },
+      "6870": {
+       "rank": "5",
+       "gp": "12",
+       "w": "6",
+       "d": "5",
+       "l": "1",
+       "gd": "+7",
+       "pts": "23",
+       "of": 18,
+       "raw": {
+        "GP": "12",
+        "L": "1",
+        "GD": "+7",
+        "P": "23",
+        "D": "5",
+        "W": "6",
+        "R": "5",
+        "Total": "6-5-1"
+       },
+       "group": "Turkish Super Lig Standings"
+      },
+      "436": {
+       "rank": "6",
+       "gp": "12",
+       "w": "6",
+       "d": "2",
+       "l": "4",
+       "gd": "+19",
+       "pts": "20",
+       "of": 18,
+       "raw": {
+        "GP": "12",
+        "L": "4",
+        "GD": "+19",
+        "P": "20",
+        "D": "2",
+        "W": "6",
+        "R": "6",
+        "Total": "6-2-4"
+       },
+       "group": "Turkish Super Lig Standings"
+      },
+      "7914": {
+       "rank": "7",
+       "gp": "12",
+       "w": "6",
+       "d": "2",
+       "l": "4",
+       "gd": "+4",
+       "pts": "20",
+       "of": 18,
+       "raw": {
+        "GP": "12",
+        "L": "4",
+        "GD": "+4",
+        "P": "20",
+        "D": "2",
+        "W": "6",
+        "R": "7",
+        "Total": "6-2-4"
+       },
+       "group": "Turkish Super Lig Standings"
+      },
+      "995": {
+       "rank": "8",
+       "gp": "12",
+       "w": "6",
+       "d": "2",
+       "l": "4",
+       "gd": "+4",
+       "pts": "20",
+       "of": 18,
+       "raw": {
+        "GP": "12",
+        "L": "4",
+        "GD": "+4",
+        "P": "20",
+        "D": "2",
+        "W": "6",
+        "R": "8",
+        "Total": "6-2-4"
+       },
+       "group": "Turkish Super Lig Standings"
+      },
+      "789": {
+       "rank": "9",
+       "gp": "12",
+       "w": "5",
+       "d": "3",
+       "l": "4",
+       "gd": "+4",
+       "pts": "18",
+       "of": 18,
+       "raw": {
+        "GP": "12",
+        "L": "4",
+        "GD": "+4",
+        "P": "18",
+        "D": "3",
+        "W": "5",
+        "R": "9",
+        "Total": "5-3-4"
+       },
+       "group": "Turkish Super Lig Standings"
+      },
+      "7656": {
+       "rank": "10",
+       "gp": "12",
+       "w": "5",
+       "d": "2",
+       "l": "5",
+       "gd": "-1",
+       "pts": "17",
+       "of": 18,
+       "raw": {
+        "GP": "12",
+        "L": "5",
+        "GD": "-1",
+        "P": "17",
+        "D": "2",
+        "W": "5",
+        "R": "10",
+        "Total": "5-2-5"
+       },
+       "group": "Turkish Super Lig Standings"
+      },
+      "132334": {
+       "rank": "11",
+       "gp": "12",
+       "w": "5",
+       "d": "1",
+       "l": "6",
+       "gd": "-2",
+       "pts": "16",
+       "of": 18,
+       "raw": {
+        "GP": "12",
+        "L": "6",
+        "GD": "-2",
+        "P": "16",
+        "D": "1",
+        "W": "5",
+        "R": "11",
+        "Total": "5-1-6"
+       },
+       "group": "Turkish Super Lig Standings"
+      },
+      "996": {
+       "rank": "12",
+       "gp": "12",
+       "w": "4",
+       "d": "2",
+       "l": "6",
+       "gd": "-8",
+       "pts": "14",
+       "of": 18,
+       "raw": {
+        "GP": "12",
+        "L": "6",
+        "GD": "-8",
+        "P": "14",
+        "D": "2",
+        "W": "4",
+        "R": "12",
+        "Total": "4-2-6"
+       },
+       "group": "Turkish Super Lig Standings"
+      },
+      "19267": {
+       "rank": "13",
+       "gp": "12",
+       "w": "4",
+       "d": "2",
+       "l": "6",
+       "gd": "-8",
+       "pts": "14",
+       "of": 18,
+       "raw": {
+        "GP": "12",
+        "L": "6",
+        "GD": "-8",
+        "P": "14",
+        "D": "2",
+        "W": "4",
+        "R": "13",
+        "Total": "4-2-6"
+       },
+       "group": "Turkish Super Lig Standings"
+      },
+      "9078": {
+       "rank": "14",
+       "gp": "12",
+       "w": "3",
+       "d": "3",
+       "l": "6",
+       "gd": "-10",
+       "pts": "12",
+       "of": 18,
+       "raw": {
+        "GP": "12",
+        "L": "6",
+        "GD": "-10",
+        "P": "12",
+        "D": "3",
+        "W": "3",
+        "R": "14",
+        "Total": "3-3-6"
+       },
+       "group": "Turkish Super Lig Standings"
+      },
+      "7648": {
+       "rank": "15",
+       "gp": "12",
+       "w": "2",
+       "d": "2",
+       "l": "8",
+       "gd": "-10",
+       "pts": "8",
+       "of": 18,
+       "raw": {
+        "GP": "12",
+        "L": "8",
+        "GD": "-10",
+        "P": "8",
+        "D": "2",
+        "W": "2",
+        "R": "15",
+        "Total": "2-2-8"
+       },
+       "group": "Turkish Super Lig Standings"
+      },
+      "20070": {
+       "rank": "16",
+       "gp": "12",
+       "w": "2",
+       "d": "2",
+       "l": "8",
+       "gd": "-11",
+       "pts": "8",
+       "of": 18,
+       "raw": {
+        "GP": "12",
+        "L": "8",
+        "GD": "-11",
+        "P": "8",
+        "D": "2",
+        "W": "2",
+        "R": "16",
+        "Total": "2-2-8"
+       },
+       "group": "Turkish Super Lig Standings"
+      },
+      "11429": {
+       "rank": "17",
+       "gp": "12",
+       "w": "2",
+       "d": "1",
+       "l": "9",
+       "gd": "-16",
+       "pts": "7",
+       "of": 18,
+       "raw": {
+        "GP": "12",
+        "L": "9",
+        "GD": "-16",
+        "P": "7",
+        "D": "1",
+        "W": "2",
+        "R": "17",
+        "Total": "2-1-9"
+       },
+       "group": "Turkish Super Lig Standings"
+      },
+      "20729": {
+       "rank": "18",
+       "gp": "12",
+       "w": "1",
+       "d": "0",
+       "l": "11",
+       "gd": "-28",
+       "pts": "3",
+       "of": 18,
+       "raw": {
+        "GP": "12",
+        "L": "11",
+        "GD": "-28",
+        "P": "3",
+        "D": "0",
+        "W": "1",
+        "R": "18",
+        "Total": "1-0-11"
+       },
+       "group": "Turkish Super Lig Standings"
+      }
+     },
+     "last5": {
+      "9078": [
+       {
+        "res": "L",
+        "gf": 0,
+        "ga": 3,
+        "opp": "Fenerbahce",
+        "home": false,
+        "date": "2026-10-17"
+       },
+       {
+        "res": "L",
+        "gf": 1,
+        "ga": 2,
+        "opp": "Kocaelispor",
+        "home": true,
+        "date": "2026-10-23"
+       },
+       {
+        "res": "L",
+        "gf": 0,
+        "ga": 5,
+        "opp": "Genclerbirligi",
+        "home": false,
+        "date": "2026-11-02"
+       },
+       {
+        "res": "L",
+        "gf": 0,
+        "ga": 2,
+        "opp": "Trabzonspor",
+        "home": true,
+        "date": "2026-11-08"
+       },
+       {
+        "res": "L",
+        "gf": 1,
+        "ga": 2,
+        "opp": "Kasimpasa",
+        "home": false,
+        "date": "2026-11-22"
+       }
+      ],
+      "7648": [
+       {
+        "res": "L",
+        "gf": 0,
+        "ga": 1,
+        "opp": "Amed SFK",
+        "home": false,
+        "date": "2026-10-17"
+       },
+       {
+        "res": "W",
+        "gf": 2,
+        "ga": 0,
+        "opp": "Genclerbirligi",
+        "home": true,
+        "date": "2026-10-25"
+       },
+       {
+        "res": "L",
+        "gf": 0,
+        "ga": 4,
+        "opp": "Galatasaray",
+        "home": true,
+        "date": "2026-10-30"
+       },
+       {
+        "res": "L",
+        "gf": 0,
+        "ga": 1,
+        "opp": "Samsunspor",
+        "home": false,
+        "date": "2026-11-07"
+       },
+       {
+        "res": "L",
+        "gf": 2,
+        "ga": 4,
+        "opp": "Besiktas",
+        "home": true,
+        "date": "2026-11-22"
+       }
+      ]
+     },
+     "h2h": [
+      {
+       "date": "2026-02-14",
+       "home_id": "9078",
+       "hs": "2",
+       "as": "1"
+      },
+      {
+       "date": "2025-09-13",
+       "home_id": "7648",
+       "hs": "1",
+       "as": "2"
+      },
+      {
+       "date": "2025-05-25",
+       "home_id": "7648",
+       "hs": "1",
+       "as": "2"
+      },
+      {
+       "date": "2025-01-03",
+       "home_id": "9078",
+       "hs": "2",
+       "as": "1"
+      },
+      {
+       "date": "2024-04-20",
+       "home_id": "7648",
+       "hs": "0",
+       "as": "2"
+      }
+     ],
+     "leaders": {
+      "9078": [
+       [
+        "Goals",
+        "Ruan",
+        "Matches: 12, Goals: 2"
+       ],
+       [
+        "Assists",
+        "Florent Hadergjonaj",
+        "Matches: 12, Assists: 2"
+       ],
+       [
+        "Total Shots",
+        "Ruan",
+        "22"
+       ]
+      ],
+      "7648": [
+       [
+        "Goals",
+        "Chidozie Awaziem",
+        "Matches: 9, Goals: 2"
+       ],
+       [
+        "Assists",
+        "Deniz Turuc",
+        "Matches: 11, Assists: 3"
+       ],
+       [
+        "Total Shots",
+        "Deniz Turuc",
+        "21"
+       ]
+      ]
+     },
+     "venue": "Kirbiyik Holding Stadyumu",
+     "city": "Antalya"
+    }
+   }
+  },
+  "extra": {
+   "corners": {
+    "home": 4.665178013741411,
+    "away": 2.815990006246096,
+    "total": 7.481168019987507,
+    "lines": {
+     "8.5": 0.3354483560372674,
+     "9.5": 0.22144131970316816,
+     "10.5": 0.13615074027554652
+    }
+   },
+   "cards": {
+    "total": 4.225,
+    "lines": {
+     "3.5": 0.6092091903059949,
+     "4.5": 0.4150305635559358,
+     "5.5": 0.25094962395213594
+    }
+   }
+  },
+  "msg_id": 9794,
+  "btn": 2
+ },
+ "401888240": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-27T20:00:00+03:00",
+  "sport": "football",
+  "div": "T1",
+  "reason": "no_qualified_real_market",
+  "retry_at": 1795795720.091839
  }
 }

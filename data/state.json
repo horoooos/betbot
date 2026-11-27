@@ -1570,7 +1570,7 @@
  "value_day": "2026-11-27",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-27",
- "site_stamp": "1577|9793|2026-11-27 18|6|3e4f5426a2ac6dd9",
+ "site_stamp": "1577|9795|2026-11-27 18|6|6294bc248f996529",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1729,7 +1729,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 9793,
+ "dz_last": 9795,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -3143,7 +3143,7 @@
   "quote_matches": 162
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-27T18:56:40.891331+03:00",
+  "last_poll": "2026-11-27T18:58:40.091839+03:00",
   "cursor": "480",
   "posts": [
    {
@@ -7692,6 +7692,37 @@
    "probability": 0.5278,
    "odds": 1.76,
    "edge": -0.07107,
+   "estimated": true
+  },
+  "football|T1|401888241": {
+   "reason": "published",
+   "checked_at": "2026-11-27T15:59:09.133506+00:00",
+   "kickoff": "2026-11-27T20:00:00+03:00",
+   "sport": "football",
+   "id": "401888241",
+   "home": "Аланьяспор",
+   "away": "Коньяспор",
+   "market": "ТМ 2.5",
+   "strategy": "external_trial",
+   "source_count": 6,
+   "probability": 0.573,
+   "odds": 1.63,
+   "edge": -0.06601,
+   "estimated": false
+  },
+  "football|T1|401888240": {
+   "reason": "no_qualified_real_market",
+   "checked_at": "2026-11-27T15:59:09.624131+00:00",
+   "kickoff": "2026-11-27T20:00:00+03:00",
+   "sport": "football",
+   "id": "401888240",
+   "home": "Кайкур Ризеспор",
+   "away": "Касымпаша",
+   "priced_markets": 6,
+   "market": "Обе забьют — да",
+   "probability": 0.5895,
+   "odds": 1.58,
+   "edge": -0.06859,
    "estimated": true
   }
  },
@@ -17971,6 +18002,85 @@
     "settled_at": "2026-11-27T15:10:40.687732+00:00",
     "hit": true,
     "profit_pct": 0.25
+   },
+   "football|T1|401888241": {
+    "status": "open",
+    "id": "401888241",
+    "sport": "football",
+    "div": "T1",
+    "kickoff": "2026-11-27T20:00:00+03:00",
+    "published_at": "2026-11-27T15:59:05.698649+00:00",
+    "msg_id": 9794,
+    "tip": {
+     "key": "U25",
+     "label": "ТМ 2.5",
+     "p": 0.573,
+     "odds": 1.63,
+     "est": false,
+     "stake": 0.5,
+     "strategy": "external_trial",
+     "selection_mode": "external_fallback",
+     "trial_expires_at": null,
+     "probability_origin": "baseline_model",
+     "model_edge": -0.06598,
+     "source_count": 6,
+     "source_refs": [
+      {
+       "author": "/predictors/koefficient-200",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-alanyaspor-konyaspor",
+       "published_at": "2026-11-26T06:11:00+00:00",
+       "observed_at": "2026-11-27T10:54:14.686069+00:00",
+       "odds": 1.77,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/lyubimec-fartuny",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-alanyaspor-konyaspor",
+       "published_at": "2026-11-26T12:24:00+00:00",
+       "observed_at": "2026-11-26T12:27:30.332332+00:00",
+       "odds": 1.77,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/yanis-bananis",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-alanyaspor-konyaspor",
+       "published_at": "2026-11-26T15:00:00+00:00",
+       "observed_at": "2026-11-27T10:54:14.686069+00:00",
+       "odds": 1.77,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/kot-v-sapogax-4akk-avtor",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-alanyaspor-konyaspor",
+       "published_at": "2026-11-26T16:28:00+00:00",
+       "observed_at": "2026-11-27T10:54:14.686069+00:00",
+       "odds": 1.77,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/aslan-kockarov-8",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-alanyaspor-konyaspor",
+       "published_at": "2026-11-26T19:22:00+00:00",
+       "observed_at": "2026-11-26T19:27:10.089363+00:00",
+       "odds": 1.77,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/ten-3",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-alanyaspor-konyaspor",
+       "published_at": "2026-11-26T20:42:00+00:00",
+       "observed_at": "2026-11-26T20:48:41.882017+00:00",
+       "odds": 1.77,
+       "price_kind": "author_recorded"
+      }
+     ]
+    }
    }
   }
  },
