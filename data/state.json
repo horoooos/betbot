@@ -3,7 +3,7 @@
   "1X2": 0.0,
   "OU25": 0.0
  },
- "learned": "2026-11-27",
+ "learned": "2026-11-28",
  "schedule_day": "2026-11-27",
  "content_slot": "2026-11-27-23",
  "news_seen": [
@@ -1574,7 +1574,7 @@
  "value_day": "2026-11-27",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-27",
- "site_stamp": "1581|9850|2026-11-27 23|6|b622f8da9e92bfb2",
+ "site_stamp": "1581|9850|2026-11-28 00|6|b622f8da9e92bfb2",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1586,7 +1586,7 @@
    "NBA|401909332"
   ]
  },
- "value_check": "2026-11-27-7",
+ "value_check": "2026-11-28-0",
  "express_risk": {
   "msg": 9806,
   "legs": [
@@ -2051,7 +2051,7 @@
   "https://upload.wikimedia.org/wikipedia/commons/3/3b/Kino_North_Stadium_at_night.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
   "https://upload.wikimedia.org/wikipedia/commons/0/06/Kirill_Levnikov_2022.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
  ],
- "indexnow_day": "2026-11-27",
+ "indexnow_day": "2026-11-28",
  "vk_wall_err": null,
  "shorts_day": "2026-11-27",
  "shorts_err": {
@@ -2980,22 +2980,22 @@
   "message_id": 975,
   "kind": "новость"
  },
- "learn_attempt_day": "2026-11-27",
+ "learn_attempt_day": "2026-11-28",
  "learn_diagnostics": {
   "objective": "shared_lambda_1X2_OU25",
   "rows": 8000,
-  "train_rows": 6044,
-  "validation_rows": 1956,
-  "validation_from": "2026-10-06",
+  "train_rows": 6034,
+  "validation_rows": 1966,
+  "validation_from": "2026-10-08",
   "history_from": "2026-02-28",
-  "history_until": "2026-11-25",
+  "history_until": "2026-11-27",
   "candidate_weight": 0.0,
   "weight": 0.0,
-  "train_logloss": 0.8419886771754159,
-  "validation_logloss": 0.8204079879178231,
-  "validation_market_logloss": 0.8204079879178231
+  "train_logloss": 0.8423710730022397,
+  "validation_logloss": 0.8196993664146813,
+  "validation_market_logloss": 0.8196993664146813
  },
- "learned_at": "2026-11-27T00:00:41.220594+03:00",
+ "learned_at": "2026-11-28T00:01:48.531612+03:00",
  "learn_version": "shared-lambda-v2",
  "learn_error": null,
  "learn_retry_at": 0,
@@ -3158,29 +3158,29 @@
    }
   },
   "source": {
-   "last_success": "2026-11-27T20:39:48.814970+00:00",
-   "parsed": 320,
-   "added": 89,
-   "discovered_matches": 38,
-   "pages": 16,
+   "last_success": "2026-11-27T21:01:48.531612+00:00",
+   "parsed": 260,
+   "added": 84,
+   "discovered_matches": 57,
+   "pages": 17,
    "errors": [],
    "parsed_by_sport": {
-    "soccer": 50,
-    "ice-hockey": 50,
-    "basketball": 50,
-    "tennis": 50,
-    "csgo": 30,
+    "soccer": 0,
+    "ice-hockey": 39,
+    "basketball": 48,
+    "tennis": 49,
+    "csgo": 27,
     "dota2": 50
    }
   },
   "error": null,
-  "tips": 20299,
+  "tips": 20322,
   "snapshots": 432,
-  "unmapped_markets": 30561,
-  "quote_matches": 165
+  "unmapped_markets": 30622,
+  "quote_matches": 166
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-27T23:59:48.305756+03:00",
+  "last_poll": "2026-11-28T00:01:48.531612+03:00",
   "cursor": "492",
   "posts": [
    {
@@ -4045,7 +4045,7 @@
    "401892801": "in",
    "401892802": "in",
    "401892803": "pre",
-   "401892804": "pre",
+   "401892804": "in",
    "401892805": "pre",
    "401892806": "pre",
    "401892807": "pre",
@@ -4073,8 +4073,8 @@
    "401902007": "post",
    "401874563": "post",
    "401881739": "post",
-   "401875536": "in",
-   "401921332": "in",
+   "401875536": "post",
+   "401921332": "post",
    "401883102": "in",
    "401884720": "in",
    "401875004": "in",
@@ -4251,10 +4251,11 @@
    "401876886": "pre",
    "401876812": "pre",
    "401933726": "pre",
-   "1816500": "pre"
+   "1816500": "pre",
+   "401934475": "pre"
   },
   "daily": {
-   "day": "2026-11-27"
+   "day": "2026-11-28"
   }
  },
  "forecast_decisions": {
@@ -8330,32 +8331,32 @@
   },
   "tennis|WTA|186831": {
    "reason": "no_real_odds",
-   "checked_at": "2026-11-27T20:50:25.880296+00:00",
-   "kickoff": "2026-11-28T00:00:00+03:00",
+   "checked_at": "2026-11-27T21:07:49.661612+00:00",
+   "kickoff": "2026-11-28T00:25:00+03:00",
    "sport": "tennis",
    "id": "186831",
    "home": "Алисиа Херреро Линана",
    "away": "Хулия Риера",
    "priced_markets": 0,
    "market": "Будет 2 сета",
-   "probability": 0.5059,
-   "odds": 1.84,
-   "edge": -0.06914,
+   "probability": 0.514,
+   "odds": 1.81,
+   "edge": -0.06966,
    "estimated": true
   },
   "football|ECU|401921361": {
    "reason": "edge_below_minimum",
-   "checked_at": "2026-11-27T20:50:11.797963+00:00",
+   "checked_at": "2026-11-27T21:07:47.347542+00:00",
    "kickoff": "2026-11-28T00:30:00+03:00",
    "sport": "football",
    "id": "401921361",
    "home": "Депортиво Куэнка",
    "away": "Манта",
-   "priced_markets": 7,
+   "priced_markets": 6,
    "market": "П1",
-   "probability": 0.6023,
-   "odds": 1.54,
-   "edge": -0.07246,
+   "probability": 0.5871,
+   "odds": 1.57,
+   "edge": -0.07825,
    "estimated": false
   }
  },

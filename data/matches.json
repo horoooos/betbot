@@ -1,12 +1,4 @@
 {
- "401841335": {
-  "status": "waiting_data",
-  "kickoff": "2026-11-25T00:00:00+03:00",
-  "sport": "football",
-  "div": "BRA",
-  "reason": "no_qualified_real_market",
-  "retry_at": 1795554080.806249
- },
  "401934688": {
   "id": "401934688",
   "div": "COL",
@@ -28254,6 +28246,6 @@
   "sport": "football",
   "div": "ECU",
   "reason": "edge_below_minimum",
-  "retry_at": 1795813188.994444
+  "retry_at": 1795813908.531612
  }
 }

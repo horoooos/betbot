@@ -1,191 +1,6 @@
 [
 {
 "sport": "football",
-"id": "401888241",
-"league": "Турция · Суперлига",
-"kickoff": "2026-11-27T20:00:00+03:00",
-"home": "Аланьяспор",
-"away": "Коньяспор",
-"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/9078.png",
-"al": "https://a.espncdn.com/i/teamlogos/soccer/500/7648.png",
-"hid": "9078",
-"aid": "7648",
-"bb": "https://betboom.ru/search?query=%D0%90%D0%BB%D0%B0%D0%BD%D1%8C%D1%8F%D1%81%D0%BF%D0%BE%D1%80&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
-"path": "soccer/tur.1",
-"url": "live.html?s=football&p=soccer%2Ftur.1&e=401888241&h=%D0%90%D0%BB%D0%B0%D0%BD%D1%8C%D1%8F%D1%81%D0%BF%D0%BE%D1%80&a=%D0%9A%D0%BE%D0%BD%D1%8C%D1%8F%D1%81%D0%BF%D0%BE%D1%80",
-"participants": [
-[
-"Аланьяспор",
-"Alanyaspor"
-],
-[
-"Коньяспор",
-"Konyaspor"
-]
-],
-"div": "T1",
-"state": "post",
-"bo": null,
-"prediction": "predictions/2026-11-27-alanyaspor-konyaspor-401888241.html",
-"hs": "1",
-"as": "2",
-"tip": "ТМ 2.5 · 1.63",
-"top": false,
-"bot": {
-"main": {
-"label": "ТМ 2.5",
-"p": 0.573,
-"odds": 1.63,
-"est": false
-},
-"bold": null,
-"markets": [
-[
-"П1",
-0.349,
-2.7
-],
-[
-"Ничья",
-0.298,
-3.1
-],
-[
-"П2",
-0.353,
-2.75
-],
-[
-"1X",
-0.647,
-null
-],
-[
-"X2",
-0.651,
-null
-],
-[
-"ТБ 1.5",
-0.699,
-null
-],
-[
-"ТБ 2.5",
-0.427,
-2.15
-],
-[
-"ТМ 2.5",
-0.573,
-1.645
-],
-[
-"ТБ 3.5",
-0.219,
-null
-],
-[
-"Обе забьют — да",
-0.496,
-null
-],
-[
-"Обе забьют — нет",
-0.504,
-null
-],
-[
-"ИТ1 больше 1.5",
-0.334,
-null
-],
-[
-"ИТ2 больше 1.5",
-0.337,
-null
-],
-[
-"Ф1 (−1.5)",
-0.151,
-null
-],
-[
-"Ф2 (+1.5)",
-0.849,
-null
-]
-],
-"bar": [
-0.3488172141593705,
-0.29843084320326446,
-0.3527519426373651
-],
-"center": "Ожидаемые голы (xG) 1.2 : 1.2",
-"scores": [
-[
-"1:1",
-0.141
-],
-[
-"0:0",
-0.102
-],
-[
-"0:1",
-0.1
-]
-],
-"corners": 7.5,
-"cards": 4.2
-},
-"lt": {
-"fair": 1.43,
-"label": "1X",
-"min_odds": 1.5,
-"minute": "25'",
-"p": 0.698,
-"result": "miss",
-"score": "1:1"
-}
-},
-{
-"sport": "football",
-"id": "401888240",
-"league": "Турция · Суперлига",
-"kickoff": "2026-11-27T20:00:00+03:00",
-"home": "Кайкур Ризеспор",
-"away": "Касымпаша",
-"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/7656.png",
-"al": "https://a.espncdn.com/i/teamlogos/soccer/500/6870.png",
-"hid": "7656",
-"aid": "6870",
-"bb": "https://betboom.ru/search?query=%D0%A0%D0%B8%D0%B7%D0%B5%D1%81%D0%BF%D0%BE%D1%80&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
-"path": "soccer/tur.1",
-"url": "live.html?s=football&p=soccer%2Ftur.1&e=401888240&h=%D0%9A%D0%B0%D0%B9%D0%BA%D1%83%D1%80+%D0%A0%D0%B8%D0%B7%D0%B5%D1%81%D0%BF%D0%BE%D1%80&a=%D0%9A%D0%B0%D1%81%D1%8B%D0%BC%D0%BF%D0%B0%D1%88%D0%B0",
-"participants": [
-[
-"Кайкур Ризеспор",
-"Caykur Rizespor"
-],
-[
-"Касымпаша",
-"Kasimpasa"
-]
-],
-"div": "T1",
-"state": "post",
-"bo": null,
-"prediction": "",
-"hs": "3",
-"as": "2",
-"tip": "",
-"top": false,
-"bot": null,
-"lt": null
-},
-{
-"sport": "football",
 "id": "401885047",
 "league": "Германия · 2. Бундеслига",
 "kickoff": "2026-11-27T20:30:00+03:00",
@@ -912,7 +727,7 @@ null
 ]
 ],
 "div": "N1",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "",
 "hs": "1",
@@ -951,7 +766,7 @@ null
 "bo": null,
 "prediction": "",
 "hs": "2",
-"as": "2",
+"as": "3",
 "tip": "",
 "top": false,
 "bot": null,
@@ -982,7 +797,7 @@ null
 ]
 ],
 "div": "ECU",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "",
 "hs": "0",
@@ -1126,7 +941,7 @@ null
 "bo": null,
 "prediction": "",
 "hs": "1",
-"as": "0",
+"as": "1",
 "tip": "",
 "top": false,
 "bot": null,
@@ -1715,7 +1530,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "",
-"hs": "1",
+"hs": "2",
 "as": "0",
 "tip": "",
 "top": false,
@@ -2018,7 +1833,7 @@ null
 ]
 ],
 "div": "NHL",
-"state": "pre",
+"state": "in",
 "bo": null,
 "prediction": "",
 "hs": "0",
@@ -2067,7 +1882,7 @@ null
 "sport": "tennis",
 "id": "186831",
 "league": "Теннис · WTA",
-"kickoff": "2026-11-28T00:00:00+03:00",
+"kickoff": "2026-11-28T00:25:00+03:00",
 "home": "Алисиа Херреро Линана",
 "away": "Хулия Риера",
 "hl": "https://a.espncdn.com/i/teamlogos/countries/500/esp.png",
@@ -8490,6 +8305,76 @@ null
 [
 "Анахайм",
 "Anaheim Ducks"
+]
+],
+"div": "NHL",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "football",
+"id": "401934475",
+"league": "Мексика · Лига де Экспансьон",
+"kickoff": "2026-11-29T06:00:00+03:00",
+"home": "Club Atlético La Paz",
+"away": "Монаркас Морелия",
+"hl": "https://a.espncdn.com/guid/c6a0e36d-c3f5-3f04-93d8-1436cb1f6e9c/logos/default.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/221.png",
+"hid": "21533",
+"aid": "221",
+"bb": "https://betboom.ru/search?query=%D0%90%D1%82%D0%BB%D0%B5%D1%82%D0%B8%D0%BA%D0%BE&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/mex.2",
+"url": "live.html?s=football&p=soccer%2Fmex.2&e=401934475&h=Club+Atl%C3%A9tico+La+Paz&a=%D0%9C%D0%BE%D0%BD%D0%B0%D1%80%D0%BA%D0%B0%D1%81+%D0%9C%D0%BE%D1%80%D0%B5%D0%BB%D0%B8%D1%8F",
+"participants": [
+[
+"Club Atlético La Paz",
+"Club Atlético La Paz"
+],
+[
+"Монаркас Морелия",
+"Club Atlético Morelia"
+]
+],
+"div": "MEX2",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "hockey",
+"id": "401892822",
+"league": "США · NHL",
+"kickoff": "2026-11-29T06:00:00+03:00",
+"home": "Сиэтл",
+"away": "Эдмонтон",
+"hl": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/sea.png",
+"al": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/edm.png",
+"hid": "124292",
+"aid": "6",
+"bb": "https://betboom.ru/search?query=%D0%A1%D0%B8%D1%8D%D1%82%D0%BB&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=hockey",
+"path": "hockey/nhl",
+"url": "live.html?s=hockey&p=hockey%2Fnhl&e=401892822&h=%D0%A1%D0%B8%D1%8D%D1%82%D0%BB&a=%D0%AD%D0%B4%D0%BC%D0%BE%D0%BD%D1%82%D0%BE%D0%BD",
+"participants": [
+[
+"Сиэтл",
+"Seattle Kraken"
+],
+[
+"Эдмонтон",
+"Edmonton Oilers"
 ]
 ],
 "div": "NHL",
