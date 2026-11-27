@@ -29269,5 +29269,870 @@
   "div": "MEX",
   "reason": "no_qualified_real_market",
   "retry_at": 1795749139.944993
+ },
+ "401892133": {
+  "id": "401892133",
+  "div": "AUS",
+  "slug": "aus.1",
+  "kickoff": "2026-11-27T11:40:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "detail": "Scheduled",
+  "home": {
+   "id": "19340",
+   "name": "Macarthur FC",
+   "short": "Macarthur",
+   "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/19340.png",
+   "color": "dbc242",
+   "alt": "000000",
+   "form": "WLDDW",
+   "score": "0",
+   "ru": "Макартур"
+  },
+  "away": {
+   "id": "11143",
+   "name": "Melbourne City FC",
+   "short": "Melbourne C",
+   "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/11143.png",
+   "color": "87cefa",
+   "alt": "fafafc",
+   "form": "WWDLL",
+   "score": "0",
+   "ru": "Мельбурн Сити"
+  },
+  "odds": {
+   "H": 2.85,
+   "D": 3.7,
+   "A": 2.3,
+   "line": 2.5,
+   "over": 1.571,
+   "under": 2.3,
+   "spread_h": [
+    0.5,
+    1.606
+   ],
+   "spread_a": [
+    -0.5,
+    2.2
+   ]
+  },
+  "venue": "Campbelltown Sports Stadium",
+  "clock": "0'",
+  "goals": [],
+  "open": {
+   "1X": 0.5882
+  },
+  "top": false,
+  "lam": [
+   1.4475909140607768,
+   1.630559278463309
+  ],
+  "probs": {
+   "H": 0.33237507511904746,
+   "D": 0.2558007230010491,
+   "A": 0.41182420187990343,
+   "1X": 0.5881757981200963,
+   "12": 0.7441992769989507,
+   "X2": 0.6676249248809523,
+   "BTTS_Y": 0.623782595987427,
+   "BTTS_N": 0.376217404012573,
+   "O15": 0.8209185143073133,
+   "U15": 0.1790814856926864,
+   "O25": 0.5940882520364392,
+   "U25": 0.4059117479635606,
+   "O35": 0.3702701393150546,
+   "U35": 0.6297298606849454,
+   "H_O05": 0.7648638386838473,
+   "H_O15": 0.42448286799545615,
+   "A_O05": 0.8041797340468122,
+   "A_O15": 0.4848831824856897,
+   "H-1.5": 0.15794086878841024,
+   "A+1.5": 0.8420591312115897,
+   "A-1.5": 0.21424341635549504,
+   "H+1.5": 0.7857565836445046,
+   "H-2.5": 0.058592406218056343,
+   "A-2.5": 0.08819347795961528,
+   "H+2.5": 0.9118065220403846,
+   "A+2.5": 0.9414075937819435,
+   "O45": 0.19803369762412737,
+   "U45": 0.8019663023758725,
+   "H_O25": 0.17811666775160453,
+   "A_O25": 0.22456720512102604,
+   "H&O15": 0.27441618052606903,
+   "A&O15": 0.3454406340369625,
+   "H&BTTS": 0.19129383242262707,
+   "A&BTTS": 0.23142706382051786,
+   "1X&U35": 0.380261306903792,
+   "X2&U35": 0.421584644808378,
+   "BTTS&O25": 0.5064055282169694,
+   "HT_H": 0.27308407943953267,
+   "HT_D": 0.4041289182585131,
+   "HT_A": 0.3227870023019543,
+   "HT_O05": 0.7401478196208071,
+   "HT_U05": 0.25985218037919267,
+   "HT_O15": 0.412606165703313,
+   "HT_U15": 0.5873938342966872
+  },
+  "scores": [
+   [
+    "1:1",
+    0.11737706777045748
+   ],
+   [
+    "1:2",
+    0.08860660506108152
+   ],
+   [
+    "2:1",
+    0.07866387815907883
+   ]
+  ],
+  "main": {
+   "key": "1X",
+   "label": "1X",
+   "p": 0.5882,
+   "odds": 1.61,
+   "est": false,
+   "stake": 0.5,
+   "strategy": "external_trial",
+   "selection_mode": "external_fallback",
+   "trial_expires_at": null,
+   "probability_origin": "baseline_model",
+   "model_edge": -0.05304,
+   "source_count": 32,
+   "source_refs": [
+    {
+     "author": "/predictors/arsen-pichakchyan",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-macarthur-melbourne-city",
+     "published_at": "2026-11-25T21:28:00+00:00",
+     "observed_at": "2026-11-26T07:53:56.146736+00:00",
+     "odds": 1.73,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/kanikuly-bonifaciia-4",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-macarthur-melbourne-city",
+     "published_at": "2026-11-25T21:51:00+00:00",
+     "observed_at": "2026-11-26T07:53:56.146736+00:00",
+     "odds": 1.73,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/sergei-bobrov-3",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-macarthur-melbourne-city",
+     "published_at": "2026-11-26T04:22:00+00:00",
+     "observed_at": "2026-11-26T04:27:50.174697+00:00",
+     "odds": 1.73,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/artem-zb-akk3",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-macarthur-melbourne-city",
+     "published_at": "2026-11-26T05:45:00+00:00",
+     "observed_at": "2026-11-26T05:47:54.571352+00:00",
+     "odds": 1.73,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/oleg-kovanev-2",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-macarthur-melbourne-city",
+     "published_at": "2026-11-26T06:06:00+00:00",
+     "observed_at": "2026-11-26T06:09:54.420324+00:00",
+     "odds": 1.73,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/andrei-belov-6",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-macarthur-melbourne-city",
+     "published_at": "2026-11-26T06:08:00+00:00",
+     "observed_at": "2026-11-26T06:09:54.420324+00:00",
+     "odds": 1.73,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/kirill-kifir",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-macarthur-melbourne-city",
+     "published_at": "2026-11-26T06:24:00+00:00",
+     "observed_at": "2026-11-26T06:29:55.126141+00:00",
+     "odds": 1.73,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/vyaceslav-nezdanov",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-macarthur-melbourne-city",
+     "published_at": "2026-11-26T07:38:00+00:00",
+     "observed_at": "2026-11-26T07:53:56.146736+00:00",
+     "odds": 1.73,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/cristiano-ronaldo",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-macarthur-melbourne-city",
+     "published_at": "2026-11-26T07:46:00+00:00",
+     "observed_at": "2026-11-26T07:53:56.146736+00:00",
+     "odds": 1.73,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/punkov76-1",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-macarthur-melbourne-city",
+     "published_at": "2026-11-26T07:50:00+00:00",
+     "observed_at": "2026-11-26T07:53:56.146736+00:00",
+     "odds": 1.73,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/artem-polokhin",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-macarthur-melbourne-city",
+     "published_at": "2026-11-26T10:14:00+00:00",
+     "observed_at": "2026-11-26T10:19:30.678733+00:00",
+     "odds": 1.73,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/antoxa-fart",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-macarthur-melbourne-city",
+     "published_at": "2026-11-26T10:36:00+00:00",
+     "observed_at": "2026-11-26T10:39:30.849372+00:00",
+     "odds": 1.73,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/nikos-paraskevopulos",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-macarthur-melbourne-city",
+     "published_at": "2026-11-26T17:13:00+00:00",
+     "observed_at": "2026-11-26T17:19:08.797916+00:00",
+     "odds": 1.73,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/andrey-emelyanov",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-macarthur-melbourne-city",
+     "published_at": "2026-11-26T17:14:00+00:00",
+     "observed_at": "2026-11-26T17:19:08.797916+00:00",
+     "odds": 1.73,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/vlad-trovlad-1",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-macarthur-melbourne-city",
+     "published_at": "2026-11-26T18:45:00+00:00",
+     "observed_at": "2026-11-26T20:48:41.882017+00:00",
+     "odds": 1.73,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/kaktus-obyknovennyi",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-macarthur-melbourne-city",
+     "published_at": "2026-11-26T19:00:00+00:00",
+     "observed_at": "2026-11-26T19:07:09.592806+00:00",
+     "odds": 1.73,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/victor-mikhailov",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-macarthur-melbourne-city",
+     "published_at": "2026-11-26T20:44:00+00:00",
+     "observed_at": "2026-11-26T20:48:41.882017+00:00",
+     "odds": 1.73,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/konstantin-pominov",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-macarthur-melbourne-city",
+     "published_at": "2026-11-26T21:05:00+00:00",
+     "observed_at": "2026-11-26T21:10:34.589122+00:00",
+     "odds": 1.73,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/aleksandr-izvestnyi",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-macarthur-melbourne-city",
+     "published_at": "2026-11-26T21:24:00+00:00",
+     "observed_at": "2026-11-26T21:30:38.889024+00:00",
+     "odds": 1.73,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/vitalii-shhegolev",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-macarthur-melbourne-city",
+     "published_at": "2026-11-26T21:35:00+00:00",
+     "observed_at": "2026-11-26T21:50:39.809441+00:00",
+     "odds": 1.73,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/iurii-sycev",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-macarthur-melbourne-city",
+     "published_at": "2026-11-26T22:28:00+00:00",
+     "observed_at": "2026-11-26T22:32:54.641591+00:00",
+     "odds": 1.73,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/surovaya-realnost",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-macarthur-melbourne-city",
+     "published_at": "2026-11-26T22:29:00+00:00",
+     "observed_at": "2026-11-26T22:32:54.641591+00:00",
+     "odds": 1.73,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/nowkam",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-macarthur-melbourne-city",
+     "published_at": "2026-11-26T23:25:00+00:00",
+     "observed_at": "2026-11-26T23:36:55.824201+00:00",
+     "odds": 1.73,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/marat-maratov-10",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-macarthur-melbourne-city",
+     "published_at": "2026-11-27T00:16:00+00:00",
+     "observed_at": "2026-11-27T00:18:56.251033+00:00",
+     "odds": 1.73,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/vsevolod-kozyrev-1",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-macarthur-melbourne-city",
+     "published_at": "2026-11-27T01:06:00+00:00",
+     "observed_at": "2026-11-27T01:20:56.789858+00:00",
+     "odds": 1.73,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/konstantin-bloxin",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-macarthur-melbourne-city",
+     "published_at": "2026-11-27T01:31:00+00:00",
+     "observed_at": "2026-11-27T01:42:56.339913+00:00",
+     "odds": 1.73,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/aleksandr-manaenko",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-macarthur-melbourne-city",
+     "published_at": "2026-11-27T01:44:00+00:00",
+     "observed_at": "2026-11-27T02:04:19.766447+00:00",
+     "odds": 1.73,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/aleksandr-ivanov-63",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-macarthur-melbourne-city",
+     "published_at": "2026-11-27T01:58:00+00:00",
+     "observed_at": "2026-11-27T02:04:19.766447+00:00",
+     "odds": 1.73,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/anton-ponikarov-1",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-macarthur-melbourne-city",
+     "published_at": "2026-11-27T02:44:00+00:00",
+     "observed_at": "2026-11-27T02:48:20.068059+00:00",
+     "odds": 1.73,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/andrey-grontsev-2",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-macarthur-melbourne-city",
+     "published_at": "2026-11-27T04:25:00+00:00",
+     "observed_at": "2026-11-27T04:34:19.741452+00:00",
+     "odds": 1.73,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/aleksandr-pushkarev",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-macarthur-melbourne-city",
+     "published_at": "2026-11-27T04:27:00+00:00",
+     "observed_at": "2026-11-27T04:34:19.741452+00:00",
+     "odds": 1.73,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/aleksandr-stenchin",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/27-11-2026-macarthur-melbourne-city",
+     "published_at": "2026-11-27T06:23:00+00:00",
+     "observed_at": "2026-11-27T07:21:39.497116+00:00",
+     "odds": 1.62,
+     "price_kind": "author_recorded"
+    }
+   ]
+  },
+  "bold": {},
+  "value": null,
+  "odds_src": "DraftKings",
+  "model_w": 0.0,
+  "learned_n": 1575,
+  "stavka_signal": {
+   "status": "baseline_better",
+   "weight": 0.0,
+   "authors": 18,
+   "votes": {
+    "H": 4.008114671350026,
+    "A": 2.976236873214238,
+    "D": 6.109091710736094,
+    "U25": 2.0,
+    "O25": 2.9287462090755474
+   },
+   "source": "https://stavka.tv",
+   "snapshot": "AUS|401892133"
+  },
+  "research": {
+   "articles": [],
+   "dossier": {
+    "observed_at": "2026-11-27T07:30:32.611967+00:00",
+    "kickoff": "2026-11-27T08:40:00+00:00",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/aus.1/summary?event=401892133",
+    "status": "available",
+    "facts": {
+     "table": {
+      "8352": {
+       "rank": "1",
+       "gp": "5",
+       "w": "3",
+       "d": "1",
+       "l": "1",
+       "gd": "+5",
+       "pts": "10",
+       "of": 12,
+       "raw": {
+        "GP": "5",
+        "L": "1",
+        "GD": "+5",
+        "P": "10",
+        "D": "1",
+        "W": "3",
+        "R": "1",
+        "Total": "3-1-1"
+       },
+       "group": "Australian A-League Men Standings"
+      },
+      "13696": {
+       "rank": "2",
+       "gp": "5",
+       "w": "2",
+       "d": "2",
+       "l": "1",
+       "gd": "+4",
+       "pts": "8",
+       "of": 12,
+       "raw": {
+        "GP": "5",
+        "L": "1",
+        "GD": "+4",
+        "P": "8",
+        "D": "2",
+        "W": "2",
+        "R": "2",
+        "Total": "2-2-1"
+       },
+       "group": "Australian A-League Men Standings"
+      },
+      "5327": {
+       "rank": "3",
+       "gp": "5",
+       "w": "2",
+       "d": "2",
+       "l": "1",
+       "gd": "+3",
+       "pts": "8",
+       "of": 12,
+       "raw": {
+        "GP": "5",
+        "L": "1",
+        "GD": "+3",
+        "P": "8",
+        "D": "2",
+        "W": "2",
+        "R": "3",
+        "Total": "2-2-1"
+       },
+       "group": "Australian A-League Men Standings"
+      },
+      "5326": {
+       "rank": "4",
+       "gp": "4",
+       "w": "2",
+       "d": "2",
+       "l": "0",
+       "gd": "+2",
+       "pts": "8",
+       "of": 12,
+       "raw": {
+        "GP": "4",
+        "L": "0",
+        "GD": "+2",
+        "P": "8",
+        "D": "2",
+        "W": "2",
+        "R": "4",
+        "Total": "2-2-0"
+       },
+       "group": "Australian A-League Men Standings"
+      },
+      "19340": {
+       "rank": "5",
+       "gp": "5",
+       "w": "2",
+       "d": "2",
+       "l": "1",
+       "gd": "+1",
+       "pts": "8",
+       "of": 12,
+       "raw": {
+        "GP": "5",
+        "L": "1",
+        "GD": "+1",
+        "P": "8",
+        "D": "2",
+        "W": "2",
+        "R": "5",
+        "Total": "2-2-1"
+       },
+       "group": "Australian A-League Men Standings"
+      },
+      "5322": {
+       "rank": "6",
+       "gp": "5",
+       "w": "2",
+       "d": "1",
+       "l": "2",
+       "gd": "+3",
+       "pts": "7",
+       "of": 12,
+       "raw": {
+        "GP": "5",
+        "L": "2",
+        "GD": "+3",
+        "P": "7",
+        "D": "1",
+        "W": "2",
+        "R": "6",
+        "Total": "2-1-2"
+       },
+       "group": "Australian A-League Men Standings"
+      },
+      "11143": {
+       "rank": "7",
+       "gp": "4",
+       "w": "2",
+       "d": "1",
+       "l": "1",
+       "gd": "0",
+       "pts": "7",
+       "of": 12,
+       "raw": {
+        "GP": "4",
+        "L": "1",
+        "GD": "0",
+        "P": "7",
+        "D": "1",
+        "W": "2",
+        "R": "7",
+        "Total": "2-1-1"
+       },
+       "group": "Australian A-League Men Standings"
+      },
+      "22344": {
+       "rank": "8",
+       "gp": "5",
+       "w": "1",
+       "d": "3",
+       "l": "1",
+       "gd": "-1",
+       "pts": "6",
+       "of": 12,
+       "raw": {
+        "GP": "5",
+        "L": "1",
+        "GD": "-1",
+        "P": "6",
+        "D": "3",
+        "W": "1",
+        "R": "8",
+        "Total": "1-3-1"
+       },
+       "group": "Australian A-League Men Standings"
+      },
+      "5328": {
+       "rank": "9",
+       "gp": "5",
+       "w": "0",
+       "d": "4",
+       "l": "1",
+       "gd": "-1",
+       "pts": "4",
+       "of": 12,
+       "raw": {
+        "GP": "5",
+        "L": "1",
+        "GD": "-1",
+        "P": "4",
+        "D": "4",
+        "W": "0",
+        "R": "9",
+        "Total": "0-4-1"
+       },
+       "group": "Australian A-League Men Standings"
+      },
+      "5325": {
+       "rank": "10",
+       "gp": "5",
+       "w": "0",
+       "d": "3",
+       "l": "2",
+       "gd": "-5",
+       "pts": "3",
+       "of": 12,
+       "raw": {
+        "GP": "5",
+        "L": "2",
+        "GD": "-5",
+        "P": "3",
+        "D": "3",
+        "W": "0",
+        "R": "10",
+        "Total": "0-3-2"
+       },
+       "group": "Australian A-League Men Standings"
+      },
+      "5323": {
+       "rank": "11",
+       "gp": "4",
+       "w": "0",
+       "d": "2",
+       "l": "2",
+       "gd": "-4",
+       "pts": "2",
+       "of": 12,
+       "raw": {
+        "GP": "4",
+        "L": "2",
+        "GD": "-4",
+        "P": "2",
+        "D": "2",
+        "W": "0",
+        "R": "11",
+        "Total": "0-2-2"
+       },
+       "group": "Australian A-League Men Standings"
+      },
+      "5321": {
+       "rank": "12",
+       "gp": "4",
+       "w": "0",
+       "d": "1",
+       "l": "3",
+       "gd": "-7",
+       "pts": "1",
+       "of": 12,
+       "raw": {
+        "GP": "4",
+        "L": "3",
+        "GD": "-7",
+        "P": "1",
+        "D": "1",
+        "W": "0",
+        "R": "12",
+        "Total": "0-1-3"
+       },
+       "group": "Australian A-League Men Standings"
+      }
+     },
+     "last5": {
+      "19340": [
+       {
+        "res": "W",
+        "gf": 2,
+        "ga": 1,
+        "opp": "Perth Glory FC",
+        "home": true,
+        "date": "2026-10-17"
+       },
+       {
+        "res": "D",
+        "gf": 1,
+        "ga": 1,
+        "opp": "Newcastle Jets",
+        "home": false,
+        "date": "2026-10-24"
+       },
+       {
+        "res": "D",
+        "gf": 0,
+        "ga": 0,
+        "opp": "Western Sydney Wanderers FC",
+        "home": true,
+        "date": "2026-10-31"
+       },
+       {
+        "res": "L",
+        "gf": 1,
+        "ga": 2,
+        "opp": "Brisbane Roar FC",
+        "home": true,
+        "date": "2026-11-08"
+       },
+       {
+        "res": "W",
+        "gf": 2,
+        "ga": 1,
+        "opp": "Wellington Phoenix",
+        "home": false,
+        "date": "2026-11-22"
+       }
+      ],
+      "11143": [
+       {
+        "res": "W",
+        "gf": 2,
+        "ga": 0,
+        "opp": "Oakleigh Cannons FC",
+        "home": false,
+        "date": "2026-09-25"
+       },
+       {
+        "res": "L",
+        "gf": 1,
+        "ga": 3,
+        "opp": "Auckland FC",
+        "home": false,
+        "date": "2026-10-17"
+       },
+       {
+        "res": "D",
+        "gf": 1,
+        "ga": 1,
+        "opp": "Melbourne Victory",
+        "home": false,
+        "date": "2026-10-24"
+       },
+       {
+        "res": "W",
+        "gf": 2,
+        "ga": 1,
+        "opp": "Sydney FC",
+        "home": true,
+        "date": "2026-10-31"
+       },
+       {
+        "res": "W",
+        "gf": 2,
+        "ga": 1,
+        "opp": "Western Sydney Wanderers FC",
+        "home": true,
+        "date": "2026-11-07"
+       }
+      ]
+     },
+     "h2h": [
+      {
+       "date": "2026-01-24",
+       "home_id": "19340",
+       "hs": "6",
+       "as": "2"
+      },
+      {
+       "date": "2025-12-23",
+       "home_id": "11143",
+       "hs": "1",
+       "as": "1"
+      },
+      {
+       "date": "2025-03-07",
+       "home_id": "11143",
+       "hs": "2",
+       "as": "0"
+      },
+      {
+       "date": "2025-01-25",
+       "home_id": "19340",
+       "hs": "1",
+       "as": "0"
+      },
+      {
+       "date": "2024-03-01",
+       "home_id": "19340",
+       "hs": "2",
+       "as": "0"
+      }
+     ],
+     "leaders": {
+      "19340": [
+       [
+        "Goals",
+        "Apostolos Stamatelopoulos",
+        "Matches: 5, Goals: 2"
+       ],
+       [
+        "Assists",
+        "Ryan Fraser",
+        "Matches: 5, Assists: 3"
+       ],
+       [
+        "Total Shots",
+        "Apostolos Stamatelopoulos",
+        "7"
+       ]
+      ],
+      "11143": [
+       [
+        "Goals",
+        "Andrew Nabbout",
+        "Matches: 4, Goals: 2"
+       ],
+       [
+        "Assists",
+        "Julio Cascante",
+        "Matches: 3, Assists: 2"
+       ],
+       [
+        "Total Shots",
+        "Awer Mabil",
+        "9"
+       ]
+      ]
+     },
+     "venue": "Campbelltown Sports Stadium",
+     "city": "Sydney"
+    }
+   }
+  },
+  "msg_id": 9759,
+  "btn": 2
  }
 }

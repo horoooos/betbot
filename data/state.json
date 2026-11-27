@@ -1599,7 +1599,7 @@
  "value_day": "2026-11-26",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-26",
- "site_stamp": "1575|9758|2026-11-27 10|6|bdbe9d0c742789fa",
+ "site_stamp": "1575|9760|2026-11-27 10|6|78bb62f3259ec561",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1757,7 +1757,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 9758,
+ "dz_last": 9760,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2098,7 +2098,7 @@
  "vk_photos": [],
  "vk_photo_until": 1794644243.1147308,
  "vk_photo_cursor": {},
- "vk_story_last": 9758,
+ "vk_story_last": 9760,
  "vk_story_err": "VK stories: сервер не вернул upload_result",
  "push_weekly": "2026-47",
  "vk_story_at": 1795752405.4268215,
@@ -3139,7 +3139,7 @@
   "quote_matches": 151
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-27T10:36:13.056840+03:00",
+  "last_poll": "2026-11-27T10:38:13.278401+03:00",
   "cursor": "466",
   "posts": [
    {
@@ -7405,7 +7405,7 @@
   },
   "esports|CS2|1816928": {
    "reason": "no_real_odds",
-   "checked_at": "2026-11-27T07:28:35.328492+00:00",
+   "checked_at": "2026-11-27T07:38:48.061899+00:00",
    "kickoff": "2026-11-27T11:30:00+03:00",
    "sport": "esports",
    "id": "1816928",
@@ -7417,6 +7417,22 @@
    "odds": 1.58,
    "edge": -0.0678,
    "estimated": true
+  },
+  "football|AUS|401892133": {
+   "reason": "published",
+   "checked_at": "2026-11-27T07:38:45.341742+00:00",
+   "kickoff": "2026-11-27T11:40:00+03:00",
+   "sport": "football",
+   "id": "401892133",
+   "home": "Макартур",
+   "away": "Мельбурн Сити",
+   "market": "1X",
+   "strategy": "external_trial",
+   "source_count": 32,
+   "probability": 0.5882,
+   "odds": 1.61,
+   "edge": -0.053,
+   "estimated": false
   }
  },
  "source_trial": {
@@ -17162,6 +17178,319 @@
     "settled_at": "2026-11-26T21:58:54.848300+00:00",
     "hit": true,
     "profit_pct": 0.37
+   },
+   "football|AUS|401892133": {
+    "status": "open",
+    "id": "401892133",
+    "sport": "football",
+    "div": "AUS",
+    "kickoff": "2026-11-27T11:40:00+03:00",
+    "published_at": "2026-11-27T07:38:41.778668+00:00",
+    "msg_id": 9759,
+    "tip": {
+     "key": "1X",
+     "label": "1X",
+     "p": 0.5882,
+     "odds": 1.61,
+     "est": false,
+     "stake": 0.5,
+     "strategy": "external_trial",
+     "selection_mode": "external_fallback",
+     "trial_expires_at": null,
+     "probability_origin": "baseline_model",
+     "model_edge": -0.05304,
+     "source_count": 32,
+     "source_refs": [
+      {
+       "author": "/predictors/arsen-pichakchyan",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-macarthur-melbourne-city",
+       "published_at": "2026-11-25T21:28:00+00:00",
+       "observed_at": "2026-11-26T07:53:56.146736+00:00",
+       "odds": 1.73,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/kanikuly-bonifaciia-4",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-macarthur-melbourne-city",
+       "published_at": "2026-11-25T21:51:00+00:00",
+       "observed_at": "2026-11-26T07:53:56.146736+00:00",
+       "odds": 1.73,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/sergei-bobrov-3",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-macarthur-melbourne-city",
+       "published_at": "2026-11-26T04:22:00+00:00",
+       "observed_at": "2026-11-26T04:27:50.174697+00:00",
+       "odds": 1.73,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/artem-zb-akk3",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-macarthur-melbourne-city",
+       "published_at": "2026-11-26T05:45:00+00:00",
+       "observed_at": "2026-11-26T05:47:54.571352+00:00",
+       "odds": 1.73,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/oleg-kovanev-2",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-macarthur-melbourne-city",
+       "published_at": "2026-11-26T06:06:00+00:00",
+       "observed_at": "2026-11-26T06:09:54.420324+00:00",
+       "odds": 1.73,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/andrei-belov-6",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-macarthur-melbourne-city",
+       "published_at": "2026-11-26T06:08:00+00:00",
+       "observed_at": "2026-11-26T06:09:54.420324+00:00",
+       "odds": 1.73,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/kirill-kifir",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-macarthur-melbourne-city",
+       "published_at": "2026-11-26T06:24:00+00:00",
+       "observed_at": "2026-11-26T06:29:55.126141+00:00",
+       "odds": 1.73,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/vyaceslav-nezdanov",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-macarthur-melbourne-city",
+       "published_at": "2026-11-26T07:38:00+00:00",
+       "observed_at": "2026-11-26T07:53:56.146736+00:00",
+       "odds": 1.73,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/cristiano-ronaldo",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-macarthur-melbourne-city",
+       "published_at": "2026-11-26T07:46:00+00:00",
+       "observed_at": "2026-11-26T07:53:56.146736+00:00",
+       "odds": 1.73,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/punkov76-1",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-macarthur-melbourne-city",
+       "published_at": "2026-11-26T07:50:00+00:00",
+       "observed_at": "2026-11-26T07:53:56.146736+00:00",
+       "odds": 1.73,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/artem-polokhin",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-macarthur-melbourne-city",
+       "published_at": "2026-11-26T10:14:00+00:00",
+       "observed_at": "2026-11-26T10:19:30.678733+00:00",
+       "odds": 1.73,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/antoxa-fart",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-macarthur-melbourne-city",
+       "published_at": "2026-11-26T10:36:00+00:00",
+       "observed_at": "2026-11-26T10:39:30.849372+00:00",
+       "odds": 1.73,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/nikos-paraskevopulos",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-macarthur-melbourne-city",
+       "published_at": "2026-11-26T17:13:00+00:00",
+       "observed_at": "2026-11-26T17:19:08.797916+00:00",
+       "odds": 1.73,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/andrey-emelyanov",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-macarthur-melbourne-city",
+       "published_at": "2026-11-26T17:14:00+00:00",
+       "observed_at": "2026-11-26T17:19:08.797916+00:00",
+       "odds": 1.73,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/vlad-trovlad-1",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-macarthur-melbourne-city",
+       "published_at": "2026-11-26T18:45:00+00:00",
+       "observed_at": "2026-11-26T20:48:41.882017+00:00",
+       "odds": 1.73,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/kaktus-obyknovennyi",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-macarthur-melbourne-city",
+       "published_at": "2026-11-26T19:00:00+00:00",
+       "observed_at": "2026-11-26T19:07:09.592806+00:00",
+       "odds": 1.73,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/victor-mikhailov",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-macarthur-melbourne-city",
+       "published_at": "2026-11-26T20:44:00+00:00",
+       "observed_at": "2026-11-26T20:48:41.882017+00:00",
+       "odds": 1.73,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/konstantin-pominov",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-macarthur-melbourne-city",
+       "published_at": "2026-11-26T21:05:00+00:00",
+       "observed_at": "2026-11-26T21:10:34.589122+00:00",
+       "odds": 1.73,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/aleksandr-izvestnyi",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-macarthur-melbourne-city",
+       "published_at": "2026-11-26T21:24:00+00:00",
+       "observed_at": "2026-11-26T21:30:38.889024+00:00",
+       "odds": 1.73,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/vitalii-shhegolev",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-macarthur-melbourne-city",
+       "published_at": "2026-11-26T21:35:00+00:00",
+       "observed_at": "2026-11-26T21:50:39.809441+00:00",
+       "odds": 1.73,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/iurii-sycev",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-macarthur-melbourne-city",
+       "published_at": "2026-11-26T22:28:00+00:00",
+       "observed_at": "2026-11-26T22:32:54.641591+00:00",
+       "odds": 1.73,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/surovaya-realnost",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-macarthur-melbourne-city",
+       "published_at": "2026-11-26T22:29:00+00:00",
+       "observed_at": "2026-11-26T22:32:54.641591+00:00",
+       "odds": 1.73,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/nowkam",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-macarthur-melbourne-city",
+       "published_at": "2026-11-26T23:25:00+00:00",
+       "observed_at": "2026-11-26T23:36:55.824201+00:00",
+       "odds": 1.73,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/marat-maratov-10",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-macarthur-melbourne-city",
+       "published_at": "2026-11-27T00:16:00+00:00",
+       "observed_at": "2026-11-27T00:18:56.251033+00:00",
+       "odds": 1.73,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/vsevolod-kozyrev-1",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-macarthur-melbourne-city",
+       "published_at": "2026-11-27T01:06:00+00:00",
+       "observed_at": "2026-11-27T01:20:56.789858+00:00",
+       "odds": 1.73,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/konstantin-bloxin",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-macarthur-melbourne-city",
+       "published_at": "2026-11-27T01:31:00+00:00",
+       "observed_at": "2026-11-27T01:42:56.339913+00:00",
+       "odds": 1.73,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/aleksandr-manaenko",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-macarthur-melbourne-city",
+       "published_at": "2026-11-27T01:44:00+00:00",
+       "observed_at": "2026-11-27T02:04:19.766447+00:00",
+       "odds": 1.73,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/aleksandr-ivanov-63",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-macarthur-melbourne-city",
+       "published_at": "2026-11-27T01:58:00+00:00",
+       "observed_at": "2026-11-27T02:04:19.766447+00:00",
+       "odds": 1.73,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/anton-ponikarov-1",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-macarthur-melbourne-city",
+       "published_at": "2026-11-27T02:44:00+00:00",
+       "observed_at": "2026-11-27T02:48:20.068059+00:00",
+       "odds": 1.73,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/andrey-grontsev-2",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-macarthur-melbourne-city",
+       "published_at": "2026-11-27T04:25:00+00:00",
+       "observed_at": "2026-11-27T04:34:19.741452+00:00",
+       "odds": 1.73,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/aleksandr-pushkarev",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-macarthur-melbourne-city",
+       "published_at": "2026-11-27T04:27:00+00:00",
+       "observed_at": "2026-11-27T04:34:19.741452+00:00",
+       "odds": 1.73,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/aleksandr-stenchin",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/27-11-2026-macarthur-melbourne-city",
+       "published_at": "2026-11-27T06:23:00+00:00",
+       "observed_at": "2026-11-27T07:21:39.497116+00:00",
+       "odds": 1.62,
+       "price_kind": "author_recorded"
+      }
+     ]
+    }
    }
   }
  },
