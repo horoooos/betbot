@@ -5061,5 +5061,37 @@
   "div": "WTA",
   "reason": "no_real_odds",
   "retry_at": 1795806107.351375
+ },
+ "NHL|401892799": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-27T23:00:00+03:00",
+  "sport": "hockey",
+  "div": "NHL",
+  "reason": "no_qualified_real_market",
+  "retry_at": 1795806587.988145
+ },
+ "NHL|401892800": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-27T23:00:00+03:00",
+  "sport": "hockey",
+  "div": "NHL",
+  "reason": "no_qualified_real_market",
+  "retry_at": 1795806587.988145
+ },
+ "NHL|401892801": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-27T23:00:00+03:00",
+  "sport": "hockey",
+  "div": "NHL",
+  "reason": "no_qualified_real_market",
+  "retry_at": 1795806587.988145
+ },
+ "NHL|401892802": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-27T23:00:00+03:00",
+  "sport": "hockey",
+  "div": "NHL",
+  "reason": "no_qualified_real_market",
+  "retry_at": 1795806587.988145
  }
 }

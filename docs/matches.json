@@ -1067,7 +1067,7 @@ null
 "id": "401883102",
 "league": "Испания · Сегунда",
 "kickoff": "2026-11-27T22:30:00+03:00",
-"home": "Leganés",
+"home": "Леганес",
 "away": "CD Sabadell",
 "hl": "https://a.espncdn.com/i/teamlogos/soccer/500/17534.png",
 "al": "https://a.espncdn.com/i/teamlogos/soccer/500/11487.png",
@@ -1075,10 +1075,10 @@ null
 "aid": "11487",
 "bb": "https://betboom.ru/search?query=%D0%9B%D0%B5%D0%B3%D0%B0%D0%BD%D0%B5%D1%81&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
 "path": "soccer/esp.2",
-"url": "live.html?s=football&p=soccer%2Fesp.2&e=401883102&h=Legan%C3%A9s&a=CD+Sabadell",
+"url": "live.html?s=football&p=soccer%2Fesp.2&e=401883102&h=%D0%9B%D0%B5%D0%B3%D0%B0%D0%BD%D0%B5%D1%81&a=CD+Sabadell",
 "participants": [
 [
-"Leganés",
+"Леганес",
 "Leganés"
 ],
 [
@@ -1264,12 +1264,119 @@ null
 "div": "E0",
 "state": "pre",
 "bo": null,
-"prediction": "",
+"prediction": "predictions/2026-11-27-nottingem-forest-chelsi-401879225.html",
 "hs": "0",
 "as": "0",
-"tip": "",
+"tip": "П2 · 2.88",
 "top": false,
-"bot": null,
+"bot": {
+"main": {
+"label": "П2",
+"p": 0.329,
+"odds": 2.88,
+"est": false
+},
+"bold": null,
+"markets": [
+[
+"П1",
+0.392,
+2.45
+],
+[
+"Ничья",
+0.279,
+3.45
+],
+[
+"П2",
+0.329,
+2.85
+],
+[
+"1X",
+0.671,
+null
+],
+[
+"X2",
+0.608,
+null
+],
+[
+"ТБ 1.5",
+0.756,
+null
+],
+[
+"ТБ 2.5",
+0.5,
+1.769
+],
+[
+"ТМ 2.5",
+0.5,
+2.05
+],
+[
+"ТБ 3.5",
+0.28,
+null
+],
+[
+"Обе забьют — да",
+0.552,
+null
+],
+[
+"Обе забьют — нет",
+0.448,
+null
+],
+[
+"ИТ1 больше 1.5",
+0.41,
+null
+],
+[
+"ИТ2 больше 1.5",
+0.362,
+null
+],
+[
+"Ф1 (−1.5)",
+0.189,
+null
+],
+[
+"Ф2 (+1.5)",
+0.811,
+null
+]
+],
+"bar": [
+0.3924865301312098,
+0.2785800140341074,
+0.3289334558346826
+],
+"center": "Ожидаемые голы (xG) 1.4 : 1.3",
+"scores": [
+[
+"1:1",
+0.133
+],
+[
+"1:0",
+0.087
+],
+[
+"2:1",
+0.086
+]
+],
+"corners": 9.8,
+"cards": 4.3
+},
 "lt": null
 },
 {
@@ -2782,7 +2889,7 @@ null
 "id": "401877537",
 "league": "Япония · J-League",
 "kickoff": "2026-11-28T08:00:00+03:00",
-"home": "Kyoto Sanga",
+"home": "Киото Санга",
 "away": "Сересо Осака",
 "hl": "https://a.espncdn.com/i/teamlogos/soccer/500/21361.png",
 "al": "https://a.espncdn.com/i/teamlogos/soccer/500/7109.png",
@@ -2790,10 +2897,10 @@ null
 "aid": "7109",
 "bb": "https://betboom.ru/search?query=%D0%9A%D0%B8%D0%BE%D1%82%D0%BE&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
 "path": "soccer/jpn.1",
-"url": "live.html?s=football&p=soccer%2Fjpn.1&e=401877537&h=Kyoto+Sanga&a=%D0%A1%D0%B5%D1%80%D0%B5%D1%81%D0%BE+%D0%9E%D1%81%D0%B0%D0%BA%D0%B0",
+"url": "live.html?s=football&p=soccer%2Fjpn.1&e=401877537&h=%D0%9A%D0%B8%D0%BE%D1%82%D0%BE+%D0%A1%D0%B0%D0%BD%D0%B3%D0%B0&a=%D0%A1%D0%B5%D1%80%D0%B5%D1%81%D0%BE+%D0%9E%D1%81%D0%B0%D0%BA%D0%B0",
 "participants": [
 [
-"Kyoto Sanga",
+"Киото Санга",
 "Kyoto Sanga"
 ],
 [
@@ -2957,7 +3064,7 @@ null
 "id": "401877516",
 "league": "Япония · J-League",
 "kickoff": "2026-11-28T09:00:00+03:00",
-"home": "Vissel Kobe",
+"home": "Виссел Кобе",
 "away": "ДЖЕФ Юнайтед Итихара Тиба",
 "hl": "https://a.espncdn.com/i/teamlogos/soccer/500/7477.png",
 "al": "https://a.espncdn.com/i/teamlogos/soccer/500/7111.png",
@@ -2965,10 +3072,10 @@ null
 "aid": "7111",
 "bb": "https://betboom.ru/search?query=%D0%92%D0%B8%D1%81%D1%81%D0%B5%D0%BB&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
 "path": "soccer/jpn.1",
-"url": "live.html?s=football&p=soccer%2Fjpn.1&e=401877516&h=Vissel+Kobe&a=%D0%94%D0%96%D0%95%D0%A4+%D0%AE%D0%BD%D0%B0%D0%B9%D1%82%D0%B5%D0%B4+%D0%98%D1%82%D0%B8%D1%85%D0%B0%D1%80%D0%B0+%D0%A2%D0%B8%D0%B1%D0%B0",
+"url": "live.html?s=football&p=soccer%2Fjpn.1&e=401877516&h=%D0%92%D0%B8%D1%81%D1%81%D0%B5%D0%BB+%D0%9A%D0%BE%D0%B1%D0%B5&a=%D0%94%D0%96%D0%95%D0%A4+%D0%AE%D0%BD%D0%B0%D0%B9%D1%82%D0%B5%D0%B4+%D0%98%D1%82%D0%B8%D1%85%D0%B0%D1%80%D0%B0+%D0%A2%D0%B8%D0%B1%D0%B0",
 "participants": [
 [
-"Vissel Kobe",
+"Виссел Кобе",
 "Vissel Kobe"
 ],
 [
@@ -3727,7 +3834,7 @@ null
 "id": "401902006",
 "league": "ЮАР · Премьер-лига",
 "kickoff": "2026-11-28T16:30:00+03:00",
-"home": "AmaZulu",
+"home": "Амазулу",
 "away": "Milford FC",
 "hl": "https://a.espncdn.com/i/teamlogos/soccer/500/7079.png",
 "al": "https://a.espncdn.com/i/teamlogos/soccer/500/21990.png",
@@ -3735,10 +3842,10 @@ null
 "aid": "21990",
 "bb": "https://betboom.ru/search?query=%D0%90%D0%BC%D0%B0%D0%B7%D1%83%D0%BB%D1%83&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
 "path": "soccer/rsa.1",
-"url": "live.html?s=football&p=soccer%2Frsa.1&e=401902006&h=AmaZulu&a=Milford+FC",
+"url": "live.html?s=football&p=soccer%2Frsa.1&e=401902006&h=%D0%90%D0%BC%D0%B0%D0%B7%D1%83%D0%BB%D1%83&a=Milford+FC",
 "participants": [
 [
-"AmaZulu",
+"Амазулу",
 "AmaZulu"
 ],
 [
