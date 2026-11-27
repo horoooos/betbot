@@ -48,15 +48,16 @@ for name in ('VK_TOKEN','VK_USER_TOKEN'):
 try:
  from betbot.espn import scoreboard
  from betbot.leagues import ALL
+ from run import REVIEW_LEAGUES,professional
  now=pd.Timestamp.now(tz='Europe/Moscow')
  days=[now.strftime('%Y%m%d'),(now+pd.Timedelta(days=1)).strftime('%Y%m%d')]
- football=scoreboard({k:v[3] for k,v in ALL.items()},days)
+ football=[e for e in scoreboard({k:ALL[k][3] for k in REVIEW_LEAGUES},days) if professional(e,state.get("cup_teams",{}))]
  other=sports.fetch(now)
  from betbot import stavka
  stavka._runtime=stavka.load()
  for e in football+other:
   for side in ("home","away"):e[side].setdefault("ru",e[side].get("name",side))
- normal=content._favourites(football,other,now,24);risky=content._risky_legs(football,other,now)
+ normal=content._favourites(football,other,now,14);risky=content._risky_legs(football,other,now)
  report['express_candidates']={'fixtures':len(football)+len(other),'normal':len(normal),'risky':len(risky),'tennis_normal':sum(e['sport']=='tennis' for e in normal),'with_quotes':sum(bool((e.get('odds') or {}).get('H')) for e in football+other)}
  for kind,legs in [('normal',normal[:3]),('risky',risky[:5])]:
   if not legs:continue
