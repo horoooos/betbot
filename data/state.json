@@ -3168,7 +3168,7 @@
   "quote_matches": 164
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-27T22:09:47.884028+03:00",
+  "last_poll": "2026-11-27T22:11:47.577943+03:00",
   "cursor": "487",
   "posts": [
    {
@@ -8120,7 +8120,7 @@
   },
   "football|E1|401880129": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-27T19:00:34.257916+00:00",
+   "checked_at": "2026-11-27T19:12:13.192598+00:00",
    "kickoff": "2026-11-27T23:00:00+03:00",
    "sport": "football",
    "id": "401880129",
@@ -8135,7 +8135,7 @@
   },
   "football|SP1|401882791": {
    "reason": "edge_below_minimum",
-   "checked_at": "2026-11-27T19:00:34.992494+00:00",
+   "checked_at": "2026-11-27T19:12:13.914576+00:00",
    "kickoff": "2026-11-27T23:00:00+03:00",
    "sport": "football",
    "id": "401882791",
@@ -8150,7 +8150,7 @@
   },
   "hockey|NHL|401892799": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-27T19:00:35.722982+00:00",
+   "checked_at": "2026-11-27T19:12:14.623204+00:00",
    "kickoff": "2026-11-27T23:00:00+03:00",
    "sport": "hockey",
    "id": "401892799",
@@ -8158,14 +8158,14 @@
    "away": "Оттава",
    "priced_markets": 4,
    "market": "ИТ1 больше 2.5",
-   "probability": 0.616,
-   "odds": 1.51,
-   "edge": -0.06984,
+   "probability": 0.654,
+   "odds": 1.42,
+   "edge": -0.07132,
    "estimated": true
   },
   "hockey|NHL|401892800": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-27T19:00:36.421739+00:00",
+   "checked_at": "2026-11-27T19:12:15.314134+00:00",
    "kickoff": "2026-11-27T23:00:00+03:00",
    "sport": "hockey",
    "id": "401892800",
@@ -8180,7 +8180,7 @@
   },
   "hockey|NHL|401892801": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-27T19:00:37.128893+00:00",
+   "checked_at": "2026-11-27T19:12:16.000684+00:00",
    "kickoff": "2026-11-27T23:00:00+03:00",
    "sport": "hockey",
    "id": "401892801",
@@ -8195,7 +8195,7 @@
   },
   "hockey|NHL|401892802": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-27T19:00:37.840106+00:00",
+   "checked_at": "2026-11-27T19:12:16.684841+00:00",
    "kickoff": "2026-11-27T23:00:00+03:00",
    "sport": "hockey",
    "id": "401892802",
