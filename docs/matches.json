@@ -6084,5 +6084,75 @@ null
 "top": false,
 "bot": null,
 "lt": null
+},
+{
+"sport": "football",
+"id": "401881738",
+"league": "Австрия · Бундеслига",
+"kickoff": "2026-11-28T21:30:00+03:00",
+"home": "Аустрия",
+"away": "Рапид",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/21540.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/519.png",
+"hid": "21540",
+"aid": "519",
+"bb": "https://betboom.ru/search?query=%D0%90%D1%83%D1%81%D1%82%D1%80%D0%B8%D1%8F&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/aut.1",
+"url": "live.html?s=football&p=soccer%2Faut.1&e=401881738&h=%D0%90%D1%83%D1%81%D1%82%D1%80%D0%B8%D1%8F&a=%D0%A0%D0%B0%D0%BF%D0%B8%D0%B4",
+"participants": [
+[
+"Аустрия",
+"Austria Lustenau"
+],
+[
+"Рапид",
+"Rapid Vienna"
+]
+],
+"div": "AUT",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "football",
+"id": "401899522",
+"league": "Италия · Серия B",
+"kickoff": "2026-11-28T21:30:00+03:00",
+"home": "Палермо",
+"away": "Benevento",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/2923.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/4059.png",
+"hid": "2923",
+"aid": "4059",
+"bb": "https://betboom.ru/search?query=%D0%9F%D0%B0%D0%BB%D0%B5%D1%80%D0%BC%D0%BE&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/ita.2",
+"url": "live.html?s=football&p=soccer%2Fita.2&e=401899522&h=%D0%9F%D0%B0%D0%BB%D0%B5%D1%80%D0%BC%D0%BE&a=Benevento",
+"participants": [
+[
+"Палермо",
+"Palermo"
+],
+[
+"Benevento",
+"Benevento"
+]
+],
+"div": "I2",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
 }
 ]

@@ -7,7 +7,6 @@
  "schedule_day": "2026-11-27",
  "content_slot": "2026-11-27-13",
  "news_seen": [
-  "https://www.sport-express.ru/tennis/atp/news/yannik-sinner-uspeshno-perenes-operaciyu-na-kolene-i-propustit-australian-open-v-yanvare-2027-go-2478358/",
   "https://www.sport-express.ru/tennis/atp/news/yanchuk-schitaet-chto-tennisist-medvedev-provel-horoshiy-sezon-2478353/",
   "https://www.sport-express.ru/football/spain/news/zidan-bellingem-olise-sinner-i-osaka-voshli-v-spisok-samyh-stilnyh-sportsmenov-2026-goda-po-versii-vogue-2478352/",
   "komanda-s1mple-proigrala-vtoroi-match-podryad-na-pgl-major-singapore-2026",
@@ -506,9 +505,10 @@
   "https://www.sport-express.ru/hockey/world/news/bykov-o-reshenii-iihf-obzhalovat-verdikt-cas-po-rossii-kazhdaya-storona-staraetsya-dobitsya-neobhodimogo-rezultata-2479648/",
   "https://www.sport-express.ru/hockey/world/news/bykov-o-22-m-pakete-sankciy-ochen-grustno-chto-sport-v-nekotoryh-situaciyah-stanovitsya-zalozhnikom-politiki-2479642/",
   "https://www.sport-express.ru/hockey/nhl/news/rotenberg-luchshiy-rossiyskiy-sportsmen-2026-goda-aleksandr-ovechkin-2479634/",
-  "https://www.sport-express.ru/football/rfpl/news/spartak-naznachil-valeriya-kechinova-otvetstvennym-za-rabotu-s-bolelschikami-i-veteranami-2479660/"
+  "https://www.sport-express.ru/football/rfpl/news/spartak-naznachil-valeriya-kechinova-otvetstvennym-za-rabotu-s-bolelschikami-i-veteranami-2479660/",
+  "snappi-o-vylete-iz-pgl-major-singapore-2026-na-nas-skazalos-davleniye-meidzhora"
  ],
- "news_i": 4,
+ "news_i": 0,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1701,7 +1701,7 @@
  "streak_day": {
   "2026-11-22": 2
  },
- "news_next": "2026-11-27T15:28:14.649867+03:00",
+ "news_next": "2026-11-27T16:02:14.288005+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1735,7 +1735,6 @@
  "vk_mode": "photo",
  "dz_err": null,
  "img_used": [
-  "https://upload.wikimedia.org/wikipedia/commons/c/ce/GennadyOrlov.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
   "https://ss.sport-express.ru/userfiles/materials/224/2244022/1180x665.jpg",
   "https://images.cybersport.ru/images/as-is/plain/a7/a72277c0-d4c2-4f8c-ad05-f501b66ccc98.jpg",
   "https://images.cybersport.ru/images/as-is/plain/61/61c40544-656c-4e16-ae71-9af82bb94234.jpg",
@@ -2034,7 +2033,8 @@
   "https://images.cybersport.ru/images/as-is/plain/39/39886783-df60-4b45-9057-fb9fa65df16d.jpg",
   "https://upload.wikimedia.org/wikipedia/commons/a/af/Dinamo-Loc2015_%289%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
   "https://images.cybersport.ru/images/as-is/plain/ab/ab9ce120-0ae4-44aa-9950-338eb1c4fe8e.jpg",
-  "https://upload.wikimedia.org/wikipedia/commons/5/55/5597.90290.AS_10552.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+  "https://upload.wikimedia.org/wikipedia/commons/5/55/5597.90290.AS_10552.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "https://images.cybersport.ru/images/as-is/plain/39/396a4cd5-d6e2-43af-928c-b9cf58dc9a29.jpg"
  ],
  "indexnow_day": "2026-11-27",
  "vk_wall_err": null,
@@ -2512,7 +2512,8 @@
   "9770",
   "9774",
   "9776",
-  "9777"
+  "9777",
+  "9780"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -2922,11 +2923,12 @@
   "2026-11-27:новость:194873333f0d061ce32e4c49",
   "2026-11-27:новость:a9a45b57fb86f59aaa418831",
   "2026-11-27:новость:45437eef260830832eb5cb18",
-  "2026-11-27:новость:2b97f8fd3f683bb9866c1438"
+  "2026-11-27:новость:2b97f8fd3f683bb9866c1438",
+  "2026-11-27:новость:7d91b46c54a905f27d5c84cb"
  ],
  "dz_last_delivery": {
-  "source_id": 9777,
-  "message_id": 957,
+  "source_id": 9780,
+  "message_id": 958,
   "kind": "новость"
  },
  "learn_attempt_day": "2026-11-27",
@@ -3129,7 +3131,7 @@
   "quote_matches": 157
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-27T15:28:14.377427+03:00",
+  "last_poll": "2026-11-27T15:30:14.288005+03:00",
   "cursor": "473",
   "posts": [
    {
@@ -4052,7 +4054,9 @@
    "401896808": "pre",
    "1817025": "pre",
    "1817024": "pre",
-   "1817103": "pre"
+   "1817103": "pre",
+   "401899522": "pre",
+   "401881738": "pre"
   },
   "daily": {
    "day": "2026-11-27"
