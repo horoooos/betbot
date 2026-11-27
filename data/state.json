@@ -1574,7 +1574,7 @@
  "value_day": "2026-11-27",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-27",
- "site_stamp": "1585|9879|2026-11-28 02|6|3355560dec790cbd",
+ "site_stamp": "1585|9881|2026-11-28 02|6|eb29c38efc69391d",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1744,7 +1744,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 9879,
+ "dz_last": 9881,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -3188,7 +3188,7 @@
   "quote_matches": 169
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-28T02:56:35.938828+03:00",
+  "last_poll": "2026-11-28T02:58:35.759933+03:00",
   "cursor": "497",
   "posts": [
    {
@@ -8492,7 +8492,7 @@
   },
   "basketball|NBA|401909327": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-27T23:48:52.190776+00:00",
+   "checked_at": "2026-11-27T23:59:05.199955+00:00",
    "kickoff": "2026-11-28T03:30:00+03:00",
    "sport": "basketball",
    "id": "401909327",
@@ -8507,7 +8507,7 @@
   },
   "basketball|NBA|401909328": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-27T23:48:52.879334+00:00",
+   "checked_at": "2026-11-27T23:59:05.889729+00:00",
    "kickoff": "2026-11-28T03:30:00+03:00",
    "sport": "basketball",
    "id": "401909328",
@@ -8522,7 +8522,7 @@
   },
   "basketball|NBA|401909329": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-27T23:48:53.578163+00:00",
+   "checked_at": "2026-11-27T23:59:06.580875+00:00",
    "kickoff": "2026-11-28T03:30:00+03:00",
    "sport": "basketball",
    "id": "401909329",
@@ -8530,6 +8530,67 @@
    "away": "Бруклин Нетс",
    "priced_markets": 6,
    "market": "ТБ 211.5",
+   "probability": 0.6597,
+   "odds": 1.41,
+   "edge": -0.06982,
+   "estimated": true
+  },
+  "football|USA|401933727": {
+   "reason": "published",
+   "checked_at": "2026-11-27T23:59:04.468312+00:00",
+   "kickoff": "2026-11-28T04:00:00+03:00",
+   "sport": "football",
+   "id": "401933727",
+   "home": "Коламбус Крю",
+   "away": "Интер Майами",
+   "market": "П2",
+   "strategy": "external_trial",
+   "source_count": 2,
+   "probability": 0.3647,
+   "odds": 2.52,
+   "edge": -0.08096,
+   "estimated": false
+  },
+  "hockey|NHL|401892808": {
+   "reason": "no_qualified_real_market",
+   "checked_at": "2026-11-27T23:59:07.285145+00:00",
+   "kickoff": "2026-11-28T04:00:00+03:00",
+   "sport": "hockey",
+   "id": "401892808",
+   "home": "Баффало",
+   "away": "Питтсбург",
+   "priced_markets": 4,
+   "market": "ТМ 7.5",
+   "probability": 0.6271,
+   "odds": 1.48,
+   "edge": -0.07189,
+   "estimated": true
+  },
+  "hockey|NHL|401892809": {
+   "reason": "no_qualified_real_market",
+   "checked_at": "2026-11-27T23:59:07.991528+00:00",
+   "kickoff": "2026-11-28T04:00:00+03:00",
+   "sport": "hockey",
+   "id": "401892809",
+   "home": "Эдмонтон",
+   "away": "Сиэтл",
+   "priced_markets": 4,
+   "market": "ТБ 5.5",
+   "probability": 0.6396,
+   "odds": 1.45,
+   "edge": -0.07258,
+   "estimated": true
+  },
+  "basketball|NBA|401909330": {
+   "reason": "no_qualified_real_market",
+   "checked_at": "2026-11-27T23:59:08.686646+00:00",
+   "kickoff": "2026-11-28T04:00:00+03:00",
+   "sport": "basketball",
+   "id": "401909330",
+   "home": "Бостон Селтикс",
+   "away": "Атланта Хокс",
+   "priced_markets": 6,
+   "market": "ТБ 217.5",
    "probability": 0.6597,
    "odds": 1.41,
    "edge": -0.06982,
@@ -21123,6 +21184,49 @@
        "published_at": "2026-11-27T23:02:00+00:00",
        "observed_at": "2026-11-27T23:08:36.084584+00:00",
        "odds": 1.98,
+       "price_kind": "author_recorded"
+      }
+     ]
+    }
+   },
+   "football|USA|401933727": {
+    "status": "open",
+    "id": "401933727",
+    "sport": "football",
+    "div": "USA",
+    "kickoff": "2026-11-28T04:00:00+03:00",
+    "published_at": "2026-11-27T23:59:01.097607+00:00",
+    "msg_id": 9880,
+    "tip": {
+     "key": "A",
+     "label": "П2",
+     "p": 0.3647,
+     "odds": 2.52,
+     "est": false,
+     "stake": 0.5,
+     "strategy": "external_trial",
+     "selection_mode": "external_fallback",
+     "trial_expires_at": null,
+     "probability_origin": "baseline_model",
+     "model_edge": -0.08092,
+     "source_count": 2,
+     "source_refs": [
+      {
+       "author": "/predictors/ivan-ivanovic-20",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/28-11-2026-columbus-crew-inter-miami",
+       "published_at": "2026-11-27T18:29:00+00:00",
+       "observed_at": "2026-11-27T18:35:46.928326+00:00",
+       "odds": 2.74,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/zeka-xacikov",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/28-11-2026-columbus-crew-inter-miami",
+       "published_at": "2026-11-27T23:07:00+00:00",
+       "observed_at": "2026-11-27T23:08:36.084584+00:00",
+       "odds": 2.39,
        "price_kind": "author_recorded"
       }
      ]

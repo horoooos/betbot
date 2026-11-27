@@ -27858,5 +27858,358 @@
   "div": "COL",
   "reason": "edge_below_minimum",
   "retry_at": 1795822715.426495
+ },
+ "401933727": {
+  "id": "401933727",
+  "div": "USA",
+  "slug": "usa.1",
+  "kickoff": "2026-11-28T04:00:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "detail": "Scheduled",
+  "home": {
+   "id": "183",
+   "name": "Columbus Crew",
+   "short": "Columbus",
+   "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/183.png",
+   "color": "000000",
+   "alt": "fedd00",
+   "form": "WWWWW",
+   "score": "0",
+   "ru": "Коламбус Крю"
+  },
+  "away": {
+   "id": "20232",
+   "name": "Inter Miami CF",
+   "short": "Miami",
+   "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/20232.png",
+   "color": "231f20",
+   "alt": "f7b5cd",
+   "form": "LDWDL",
+   "score": "0",
+   "ru": "Интер Майами"
+  },
+  "odds": {
+   "H": 2.55,
+   "D": 3.95,
+   "A": 2.3,
+   "line": 3.5,
+   "over": 1.952,
+   "under": 1.8,
+   "spread_h": [
+    0.5,
+    1.588
+   ],
+   "spread_a": [
+    -0.5,
+    2.25
+   ]
+  },
+  "venue": "ScottsMiracle-Gro Field",
+  "clock": "0'",
+  "goals": [],
+  "open": {
+   "A": 0.4026
+  },
+  "top": false,
+  "lam": [
+   1.7248665480106364,
+   1.657492127415671
+  ],
+  "probs": {
+   "H": 0.3927820744981589,
+   "D": 0.24250201980334257,
+   "A": 0.3647159056984987,
+   "1X": 0.6352840943015015,
+   "12": 0.7574979801966573,
+   "X2": 0.6072179255018412,
+   "BTTS_Y": 0.6729223488858075,
+   "BTTS_N": 0.3270776511141928,
+   "O15": 0.8589117219495539,
+   "U15": 0.14108827805044596,
+   "O25": 0.6568435753536175,
+   "U25": 0.34315642464638263,
+   "O35": 0.43778031282780905,
+   "U35": 0.5622196871721911,
+   "H_O05": 0.8218027963110128,
+   "H_O15": 0.5144364007188422,
+   "A_O05": 0.8093833036860162,
+   "A_O15": 0.49343763019160386,
+   "H-1.5": 0.20729726259482473,
+   "A+1.5": 0.7927027374051752,
+   "A-1.5": 0.18677971022666795,
+   "H+1.5": 0.813220289773332,
+   "H-2.5": 0.0877013173193172,
+   "A-2.5": 0.07634428563350763,
+   "H+2.5": 0.9236557143664924,
+   "A+2.5": 0.9122986826806827,
+   "O45": 0.2525426812099693,
+   "U45": 0.7474573187900307,
+   "H_O25": 0.24935339384907185,
+   "A_O25": 0.23159889693758867,
+   "H&O15": 0.3419617942416356,
+   "A&O15": 0.31618415679335427,
+   "H&BTTS": 0.243901627072953,
+   "A&BTTS": 0.22825495089829004,
+   "1X&U35": 0.3607696440880876,
+   "X2&U35": 0.34806626146699365,
+   "BTTS&O25": 0.5680423793916958,
+   "HT_H": 0.3166677637311603,
+   "HT_D": 0.3843475754537869,
+   "HT_A": 0.29898466081505237,
+   "HT_O05": 0.771629713209446,
+   "HT_U05": 0.2283702867905544,
+   "HT_O15": 0.45963988851262255,
+   "HT_U15": 0.540360111487377
+  },
+  "scores": [
+   [
+    "1:1",
+    0.10487996949411191
+   ],
+   [
+    "2:1",
+    0.0837518291373934
+   ],
+   [
+    "1:2",
+    0.0804804276667066
+   ]
+  ],
+  "main": {
+   "key": "A",
+   "label": "П2",
+   "p": 0.3647,
+   "odds": 2.52,
+   "est": false,
+   "stake": 0.5,
+   "strategy": "external_trial",
+   "selection_mode": "external_fallback",
+   "trial_expires_at": null,
+   "probability_origin": "baseline_model",
+   "model_edge": -0.08092,
+   "source_count": 2,
+   "source_refs": [
+    {
+     "author": "/predictors/ivan-ivanovic-20",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/28-11-2026-columbus-crew-inter-miami",
+     "published_at": "2026-11-27T18:29:00+00:00",
+     "observed_at": "2026-11-27T18:35:46.928326+00:00",
+     "odds": 2.74,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/zeka-xacikov",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/28-11-2026-columbus-crew-inter-miami",
+     "published_at": "2026-11-27T23:07:00+00:00",
+     "observed_at": "2026-11-27T23:08:36.084584+00:00",
+     "odds": 2.39,
+     "price_kind": "author_recorded"
+    }
+   ]
+  },
+  "bold": {},
+  "value": null,
+  "odds_src": "среднее по букмекерам",
+  "model_w": 0.0,
+  "learned_n": 1585,
+  "stavka_signal": {
+   "status": "baseline_better",
+   "weight": 0.0,
+   "authors": 3,
+   "votes": {
+    "D": 1.0,
+    "A": 2.0
+   },
+   "source": "https://stavka.tv",
+   "snapshot": "USA|401933727"
+  },
+  "research": {
+   "articles": [
+    {
+     "id": "a75ea872eff1bc5f0a8fa080",
+     "kind": "context",
+     "provider": "legalbet",
+     "source": "https://legalbet.ru/tips/prognoz-na-match-kolambus-kryu-inter-majami-28-noyabrya-karpuk/",
+     "sport": "football",
+     "div": "USA",
+     "event_id": "401933727",
+     "kickoff": "2026-11-28T01:00:00+00:00",
+     "published_at": "2026-11-25T14:55:50+00:00",
+     "observed_at": "2026-11-26T19:19:30.563975+00:00",
+     "tables": []
+    }
+   ],
+   "dossier": {
+    "observed_at": "2026-11-27T23:48:51.041496+00:00",
+    "kickoff": "2026-11-28T01:00:00+00:00",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/summary?event=401933727",
+    "status": "available",
+    "facts": {
+     "last5": {
+      "183": [
+       {
+        "res": "W",
+        "gf": 4,
+        "ga": 2,
+        "opp": "Toronto FC",
+        "home": true,
+        "date": "2026-10-24"
+       },
+       {
+        "res": "W",
+        "gf": 2,
+        "ga": 0,
+        "opp": "FC Dallas",
+        "home": false,
+        "date": "2026-10-29"
+       },
+       {
+        "res": "W",
+        "gf": 3,
+        "ga": 0,
+        "opp": "D.C. United",
+        "home": true,
+        "date": "2026-10-31"
+       },
+       {
+        "res": "W",
+        "gf": 4,
+        "ga": 3,
+        "opp": "Chicago Fire FC",
+        "home": false,
+        "date": "2026-11-07"
+       },
+       {
+        "res": "W",
+        "gf": 3,
+        "ga": 0,
+        "opp": "Inter Miami CF",
+        "home": false,
+        "date": "2026-11-21"
+       }
+      ],
+      "20232": [
+       {
+        "res": "L",
+        "gf": 0,
+        "ga": 2,
+        "opp": "Red Bull New York",
+        "home": false,
+        "date": "2026-10-24"
+       },
+       {
+        "res": "D",
+        "gf": 2,
+        "ga": 2,
+        "opp": "FC Cincinnati",
+        "home": true,
+        "date": "2026-10-28"
+       },
+       {
+        "res": "W",
+        "gf": 2,
+        "ga": 1,
+        "opp": "New England Revolution",
+        "home": false,
+        "date": "2026-11-02"
+       },
+       {
+        "res": "D",
+        "gf": 3,
+        "ga": 3,
+        "opp": "Charlotte FC",
+        "home": true,
+        "date": "2026-11-07"
+       },
+       {
+        "res": "L",
+        "gf": 0,
+        "ga": 3,
+        "opp": "Columbus Crew",
+        "home": true,
+        "date": "2026-11-21"
+       }
+      ]
+     },
+     "h2h": [
+      {
+       "date": "2026-11-21",
+       "home_id": "20232",
+       "hs": "0",
+       "as": "3"
+      },
+      {
+       "date": "2026-09-27",
+       "home_id": "183",
+       "hs": "2",
+       "as": "1"
+      },
+      {
+       "date": "2026-08-02",
+       "home_id": "20232",
+       "hs": "2",
+       "as": "2"
+      },
+      {
+       "date": "2025-05-31",
+       "home_id": "20232",
+       "hs": "5",
+       "as": "1"
+      },
+      {
+       "date": "2025-04-19",
+       "home_id": "183",
+       "hs": "0",
+       "as": "1"
+      }
+     ],
+     "leaders": {
+      "183": [
+       [
+        "Goals",
+        "Gonzalo Tapia",
+        "Matches: 12, Goals: 8"
+       ],
+       [
+        "Assists",
+        "Dylan Chambost",
+        "Matches: 31, Assists: 9"
+       ],
+       [
+        "Total Shots",
+        "Brais Méndez",
+        "40"
+       ]
+      ],
+      "20232": [
+       [
+        "Goals",
+        "Lionel Messi",
+        "Matches: 32, Goals: 26"
+       ],
+       [
+        "Assists",
+        "Lionel Messi",
+        "Matches: 32, Assists: 16"
+       ],
+       [
+        "Total Shots",
+        "Lionel Messi",
+        "185"
+       ]
+      ]
+     },
+     "venue": "ScottsMiracle-Gro Field",
+     "city": "Columbus, Ohio"
+    }
+   }
+  },
+  "extra": null,
+  "msg_id": 9880,
+  "btn": 2
  }
 }
