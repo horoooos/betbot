@@ -3174,7 +3174,7 @@
   "quote_matches": 165
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-27T23:27:48.683454+03:00",
+  "last_poll": "2026-11-27T23:29:48.649923+03:00",
   "cursor": "490",
   "posts": [
    {
@@ -8266,7 +8266,7 @@
   },
   "hockey|NHL|401892803": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-27T20:20:17.052604+00:00",
+   "checked_at": "2026-11-27T20:30:45.488114+00:00",
    "kickoff": "2026-11-28T00:00:00+03:00",
    "sport": "hockey",
    "id": "401892803",
@@ -8281,7 +8281,7 @@
   },
   "hockey|NHL|401892804": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-27T20:20:17.740397+00:00",
+   "checked_at": "2026-11-27T20:30:46.177589+00:00",
    "kickoff": "2026-11-28T00:00:00+03:00",
    "sport": "hockey",
    "id": "401892804",
@@ -8296,7 +8296,7 @@
   },
   "hockey|NHL|401892805": {
    "reason": "edge_below_minimum",
-   "checked_at": "2026-11-27T20:20:18.437062+00:00",
+   "checked_at": "2026-11-27T20:30:46.875949+00:00",
    "kickoff": "2026-11-28T00:00:00+03:00",
    "sport": "hockey",
    "id": "401892805",
@@ -8311,7 +8311,7 @@
   },
   "tennis|WTA|186831": {
    "reason": "no_real_odds",
-   "checked_at": "2026-11-27T20:20:20.533309+00:00",
+   "checked_at": "2026-11-27T20:30:49.252907+00:00",
    "kickoff": "2026-11-28T00:00:00+03:00",
    "sport": "tennis",
    "id": "186831",
@@ -8323,6 +8323,21 @@
    "odds": 1.84,
    "edge": -0.06914,
    "estimated": true
+  },
+  "football|ECU|401921361": {
+   "reason": "edge_below_minimum",
+   "checked_at": "2026-11-27T20:30:44.770193+00:00",
+   "kickoff": "2026-11-28T00:30:00+03:00",
+   "sport": "football",
+   "id": "401921361",
+   "home": "Депортиво Куэнка",
+   "away": "Манта",
+   "priced_markets": 7,
+   "market": "П1",
+   "probability": 0.6165,
+   "odds": 1.5,
+   "edge": -0.07525,
+   "estimated": false
   }
  },
  "source_trial": {

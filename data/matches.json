@@ -28247,5 +28247,13 @@
   "div": "PAR",
   "reason": "edge_below_minimum",
   "retry_at": 1795811628.520362
+ },
+ "401921361": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-28T00:30:00+03:00",
+  "sport": "football",
+  "div": "ECU",
+  "reason": "edge_below_minimum",
+  "retry_at": 1795811988.649923
  }
 }
