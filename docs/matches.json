@@ -1,249 +1,5 @@
 [
 {
-"sport": "football",
-"id": "401874563",
-"league": "Дания · Суперлига",
-"kickoff": "2026-11-27T21:00:00+03:00",
-"home": "Сённерйюск",
-"away": "Брондбю",
-"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/8118.png",
-"al": "https://a.espncdn.com/i/teamlogos/soccer/500/575.png",
-"hid": "8118",
-"aid": "575",
-"bb": "https://betboom.ru/search?query=%D0%A1%D1%91%D0%BD%D0%BD%D0%B5%D1%80%D0%B9%D1%8E%D1%81%D0%BA&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
-"path": "soccer/den.1",
-"url": "live.html?s=football&p=soccer%2Fden.1&e=401874563&h=%D0%A1%D1%91%D0%BD%D0%BD%D0%B5%D1%80%D0%B9%D1%8E%D1%81%D0%BA&a=%D0%91%D1%80%D0%BE%D0%BD%D0%B4%D0%B1%D1%8E",
-"participants": [
-[
-"Сённерйюск",
-"Sønderjyske Fodbold"
-],
-[
-"Брондбю",
-"Brøndby IF"
-]
-],
-"div": "DNK",
-"state": "post",
-"bo": null,
-"prediction": "",
-"hs": "1",
-"as": "1",
-"tip": "",
-"top": false,
-"bot": null,
-"lt": null
-},
-{
-"sport": "hockey",
-"id": "401892795",
-"league": "США · NHL",
-"kickoff": "2026-11-27T21:00:00+03:00",
-"home": "Бостон",
-"away": "Торонто",
-"hl": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/bos.png",
-"al": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/tor.png",
-"hid": "1",
-"aid": "21",
-"bb": "https://betboom.ru/search?query=%D0%91%D0%BE%D1%81%D1%82%D0%BE%D0%BD&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=hockey",
-"path": "hockey/nhl",
-"url": "live.html?s=hockey&p=hockey%2Fnhl&e=401892795&h=%D0%91%D0%BE%D1%81%D1%82%D0%BE%D0%BD&a=%D0%A2%D0%BE%D1%80%D0%BE%D0%BD%D1%82%D0%BE",
-"participants": [
-[
-"Бостон",
-"Boston Bruins"
-],
-[
-"Торонто",
-"Toronto Maple Leafs"
-]
-],
-"div": "NHL",
-"state": "post",
-"bo": null,
-"prediction": "predictions/2026-11-27-boston-toronto-401892795.html",
-"hs": "1",
-"as": "3",
-"tip": "П1 (с ОТ и буллитами) · 1.65",
-"top": false,
-"bot": {
-"main": {
-"label": "П1 (с ОТ и буллитами)",
-"p": 0.583,
-"odds": 1.65,
-"est": false
-},
-"bold": null,
-"markets": [
-[
-"П1 (с ОТ и буллитами)",
-0.583,
-1.645
-],
-[
-"П2 (с ОТ и буллитами)",
-0.417,
-2.3
-],
-[
-"П1 в основное время",
-0.503,
-null
-],
-[
-"Ничья в основное время",
-0.154,
-null
-],
-[
-"П2 в основное время",
-0.343,
-null
-],
-[
-"ТБ 5.5",
-0.665,
-null
-],
-[
-"ТМ 5.5",
-0.335,
-null
-],
-[
-"ТБ 6.5",
-0.511,
-1.87
-],
-[
-"ТМ 6.5",
-0.489,
-1.952
-],
-[
-"ТБ 7.5",
-0.362,
-null
-],
-[
-"ТМ 7.5",
-0.638,
-null
-],
-[
-"ИТ1 больше 1.5",
-0.878,
-null
-],
-[
-"ИТ1 больше 2.5",
-0.704,
-null
-],
-[
-"ИТ1 больше 3.5",
-0.493,
-null
-],
-[
-"ИТ2 больше 1.5",
-0.816,
-null
-],
-[
-"ИТ2 больше 2.5",
-0.6,
-null
-]
-],
-"bar": [
-0.5830125256957526,
-0,
-0.4169874743042475
-],
-"center": "Ожидаемые голы 3.6 : 3.1"
-},
-"lt": {
-"fair": 1.45,
-"label": "1X (осн. время)",
-"min_odds": 1.52,
-"minute": "2-й период",
-"p": 0.692,
-"result": "miss",
-"score": "1:1"
-}
-},
-{
-"sport": "hockey",
-"id": "401892796",
-"league": "США · NHL",
-"kickoff": "2026-11-27T21:00:00+03:00",
-"home": "Нью-Джерси",
-"away": "Калгари",
-"hl": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/nj.png",
-"al": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/cgy.png",
-"hid": "11",
-"aid": "3",
-"bb": "https://betboom.ru/search?query=%D0%9D%D1%8C%D1%8E-%D0%94%D0%B6%D0%B5%D1%80%D1%81%D0%B8&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=hockey",
-"path": "hockey/nhl",
-"url": "live.html?s=hockey&p=hockey%2Fnhl&e=401892796&h=%D0%9D%D1%8C%D1%8E-%D0%94%D0%B6%D0%B5%D1%80%D1%81%D0%B8&a=%D0%9A%D0%B0%D0%BB%D0%B3%D0%B0%D1%80%D0%B8",
-"participants": [
-[
-"Нью-Джерси",
-"New Jersey Devils"
-],
-[
-"Калгари",
-"Calgary Flames"
-]
-],
-"div": "NHL",
-"state": "post",
-"bo": null,
-"prediction": "",
-"hs": "5",
-"as": "3",
-"tip": "",
-"top": false,
-"bot": null,
-"lt": null
-},
-{
-"sport": "hockey",
-"id": "401892797",
-"league": "США · NHL",
-"kickoff": "2026-11-27T21:00:00+03:00",
-"home": "Нэшвилл",
-"away": "Юта",
-"hl": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/nsh.png",
-"al": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/uta.png",
-"hid": "27",
-"aid": "129764",
-"bb": "https://betboom.ru/search?query=%D0%9D%D1%8D%D1%88%D0%B2%D0%B8%D0%BB%D0%BB&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=hockey",
-"path": "hockey/nhl",
-"url": "live.html?s=hockey&p=hockey%2Fnhl&e=401892797&h=%D0%9D%D1%8D%D1%88%D0%B2%D0%B8%D0%BB%D0%BB&a=%D0%AE%D1%82%D0%B0",
-"participants": [
-[
-"Нэшвилл",
-"Nashville Predators"
-],
-[
-"Юта",
-"Utah Mammoth"
-]
-],
-"div": "NHL",
-"state": "post",
-"bo": null,
-"prediction": "",
-"hs": "5",
-"as": "6",
-"tip": "",
-"top": false,
-"bot": null,
-"lt": null
-},
-{
 "sport": "tennis",
 "id": "186829",
 "league": "Теннис · WTA",
@@ -548,7 +304,7 @@ null
 ]
 ],
 "div": "WTA",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "",
 "hs": null,
@@ -2710,19 +2466,19 @@ null
 "id": "186841",
 "league": "Теннис · WTA",
 "kickoff": "2026-11-28T08:00:00+03:00",
-"home": "Тбд",
+"home": "Гуйомар Маристани",
 "away": "Варвара Лепченко",
-"hl": null,
+"hl": "https://a.espncdn.com/i/teamlogos/countries/500/esp.png",
 "al": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
-"hid": "-3",
+"hid": "12957",
 "aid": "423",
-"bb": "https://betboom.ru/search?query=%D0%A2%D0%B1%D0%B4&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=tennis",
+"bb": "https://betboom.ru/search?query=%D0%9C%D0%B0%D1%80%D0%B8%D1%81%D1%82%D0%B0%D0%BD%D0%B8&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=tennis",
 "path": "tennis/wta",
-"url": "live.html?s=tennis&p=tennis%2Fwta&e=186841&h=%D0%A2%D0%B1%D0%B4&a=%D0%92%D0%B0%D1%80%D0%B2%D0%B0%D1%80%D0%B0+%D0%9B%D0%B5%D0%BF%D1%87%D0%B5%D0%BD%D0%BA%D0%BE",
+"url": "live.html?s=tennis&p=tennis%2Fwta&e=186841&h=%D0%93%D1%83%D0%B9%D0%BE%D0%BC%D0%B0%D1%80+%D0%9C%D0%B0%D1%80%D0%B8%D1%81%D1%82%D0%B0%D0%BD%D0%B8&a=%D0%92%D0%B0%D1%80%D0%B2%D0%B0%D1%80%D0%B0+%D0%9B%D0%B5%D0%BF%D1%87%D0%B5%D0%BD%D0%BA%D0%BE",
 "participants": [
 [
-"Тбд",
-"TBD"
+"Гуйомар Маристани",
+"Guiomar Maristany Zuleta De Reales"
 ],
 [
 "Варвара Лепченко",
