@@ -3011,7 +3011,7 @@
   "external_sources": {
    "providers": {
     "legalbet": {
-     "at": "2026-11-27T23:02:36.089572+00:00",
+     "at": "2026-11-27T23:34:35.321920+00:00",
      "status": "ok",
      "discovered": 2,
      "pages": 2,
@@ -3022,29 +3022,29 @@
      "contexts": 2
     },
     "livesport": {
-     "at": "2026-11-27T23:02:36.089572+00:00",
+     "at": "2026-11-27T23:34:35.321920+00:00",
      "status": "ok",
      "discovered": 21,
      "pages": 6,
-     "opinions": 10,
-     "mapped": 5,
+     "opinions": 2,
+     "mapped": 1,
      "articles_available": 33,
-     "next_offset": 14,
+     "next_offset": 20,
      "contexts": 6
     },
     "metaratings": {
-     "at": "2026-11-27T23:02:36.089572+00:00",
+     "at": "2026-11-27T23:34:35.321920+00:00",
      "status": "ok",
      "discovered": 11,
      "pages": 6,
      "opinions": 24,
-     "mapped": 5,
+     "mapped": 3,
      "articles_available": 39,
-     "next_offset": 8,
+     "next_offset": 14,
      "contexts": 6
     },
     "rb": {
-     "at": "2026-11-27T23:02:36.089572+00:00",
+     "at": "2026-11-27T23:34:35.321920+00:00",
      "status": "ok",
      "discovered": 1,
      "pages": 1,
@@ -3055,7 +3055,7 @@
      "contexts": 0
     },
     "vseprosport": {
-     "at": "2026-11-27T23:02:36.089572+00:00",
+     "at": "2026-11-27T23:34:35.321920+00:00",
      "status": "ok",
      "discovered": 4,
      "pages": 3,
@@ -3067,9 +3067,9 @@
      "contexts": 3
     }
    },
-   "opinions": 76,
+   "opinions": 78,
    "snapshots": 0,
-   "contexts": 208,
+   "contexts": 212,
    "model": {
     "weight": 0.0,
     "status": "collecting",
@@ -3188,7 +3188,7 @@
   "quote_matches": 168
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-28T02:32:35.464841+03:00",
+  "last_poll": "2026-11-28T02:34:35.321920+03:00",
   "cursor": "496",
   "posts": [
    {
@@ -4019,7 +4019,7 @@
    "186836": "post",
    "186835": "post",
    "186834": "post",
-   "186831": "in",
+   "186831": "post",
    "186830": "post",
    "186829": "post",
    "186832": "post",
