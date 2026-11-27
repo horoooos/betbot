@@ -737,7 +737,15 @@ null
 ],
 "center": "Ожидаемые голы 3.6 : 3.1"
 },
-"lt": null
+"lt": {
+"fair": 1.45,
+"label": "1X (осн. время)",
+"min_odds": 1.52,
+"minute": "2-й период",
+"p": 0.692,
+"result": null,
+"score": "1:1"
+}
 },
 {
 "sport": "hockey",
@@ -803,7 +811,7 @@ null
 "bo": null,
 "prediction": "",
 "hs": "2",
-"as": "1",
+"as": "2",
 "tip": "",
 "top": false,
 "bot": null,
