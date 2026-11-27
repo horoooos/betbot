@@ -3121,29 +3121,29 @@
    }
   },
   "source": {
-   "last_success": "2026-11-27T15:46:40.647995+00:00",
-   "parsed": 347,
-   "added": 67,
-   "discovered_matches": 43,
-   "pages": 19,
+   "last_success": "2026-11-27T16:08:40.417199+00:00",
+   "parsed": 336,
+   "added": 91,
+   "discovered_matches": 49,
+   "pages": 18,
    "errors": [],
    "parsed_by_sport": {
     "soccer": 50,
     "ice-hockey": 50,
     "basketball": 50,
-    "tennis": 49,
-    "csgo": 31,
+    "tennis": 48,
+    "csgo": 32,
     "dota2": 50
    }
   },
   "error": null,
-  "tips": 19798,
+  "tips": 19834,
   "snapshots": 412,
-  "unmapped_markets": 29950,
+  "unmapped_markets": 30005,
   "quote_matches": 162
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-27T19:06:40.315582+03:00",
+  "last_poll": "2026-11-27T19:08:40.417199+03:00",
   "cursor": "480",
   "posts": [
    {
@@ -7712,7 +7712,7 @@
   },
   "football|T1|401888240": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-27T15:59:09.624131+00:00",
+   "checked_at": "2026-11-27T16:09:07.888162+00:00",
    "kickoff": "2026-11-27T20:00:00+03:00",
    "sport": "football",
    "id": "401888240",
