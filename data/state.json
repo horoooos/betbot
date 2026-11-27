@@ -3120,7 +3120,7 @@
   "quote_matches": 152
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-27T12:56:14.362871+03:00",
+  "last_poll": "2026-11-27T12:58:14.771055+03:00",
   "cursor": "469",
   "posts": [
    {
@@ -7499,6 +7499,21 @@
    "probability": 0.5774,
    "odds": 1.61,
    "edge": -0.07039,
+   "estimated": true
+  },
+  "esports|CS2|1816929": {
+   "reason": "no_real_odds",
+   "checked_at": "2026-11-27T09:58:38.865266+00:00",
+   "kickoff": "2026-11-27T14:00:00+03:00",
+   "sport": "esports",
+   "id": "1816929",
+   "home": "M80",
+   "away": "100 Thieves",
+   "priced_markets": 0,
+   "market": "M80 возьмёт хотя бы карту",
+   "probability": 0.5602,
+   "odds": 1.66,
+   "edge": -0.07007,
    "estimated": true
   }
  },
