@@ -29943,7 +29943,10 @@
    }
   },
   "msg_id": 9829,
-  "btn": 2
+  "btn": 2,
+  "close": {
+   "A": 0.3822
+  }
  },
  "401876392": {
   "status": "waiting_data",
@@ -29951,7 +29954,7 @@
   "sport": "football",
   "div": "F1",
   "reason": "no_qualified_real_market",
-  "retry_at": 1795808267.689182
+  "retry_at": 1795808867.920906
  },
  "401878930": {
   "status": "waiting_data",
@@ -29959,7 +29962,7 @@
   "sport": "football",
   "div": "B1",
   "reason": "no_qualified_real_market",
-  "retry_at": 1795808267.689182
+  "retry_at": 1795808867.920906
  },
  "401879225": {
   "id": "401879225",
@@ -32254,7 +32257,7 @@
   "sport": "football",
   "div": "P1",
   "reason": "edge_below_minimum",
-  "retry_at": 1795808147.707768
+  "retry_at": 1795808867.920906
  },
  "401888643": {
   "status": "waiting_data",
