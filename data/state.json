@@ -3133,7 +3133,7 @@
   "quote_matches": 157
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-27T16:16:39.522744+03:00",
+  "last_poll": "2026-11-27T16:18:39.856347+03:00",
   "cursor": "476",
   "posts": [
    {
@@ -7625,6 +7625,21 @@
    "probability": 0.6108,
    "odds": 1.52,
    "edge": -0.07158,
+   "estimated": true
+  },
+  "football|KSA|401900870": {
+   "reason": "no_qualified_real_market",
+   "checked_at": "2026-11-27T13:18:57.869986+00:00",
+   "kickoff": "2026-11-27T17:20:00+03:00",
+   "sport": "football",
+   "id": "401900870",
+   "home": "Аль-Кадисия",
+   "away": "Аль-Фейха",
+   "priced_markets": 7,
+   "market": "Обе забьют — да",
+   "probability": 0.5689,
+   "odds": 1.63,
+   "edge": -0.07269,
    "estimated": true
   }
  },

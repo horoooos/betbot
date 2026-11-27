@@ -30148,5 +30148,13 @@
   "div": "KSA",
   "reason": "no_qualified_real_market",
   "retry_at": 1795781414.019145
+ },
+ "401900870": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-27T17:20:00+03:00",
+  "sport": "football",
+  "div": "KSA",
+  "reason": "no_qualified_real_market",
+  "retry_at": 1795786119.856347
  }
 }
