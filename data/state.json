@@ -3160,7 +3160,7 @@
   "quote_matches": 162
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-27T20:20:40.309068+03:00",
+  "last_poll": "2026-11-27T20:22:40.586858+03:00",
   "cursor": "482",
   "posts": [
    {
@@ -7791,7 +7791,7 @@
   },
   "football|KSA|401900873": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-27T17:11:07.769143+00:00",
+   "checked_at": "2026-11-27T17:23:00.231477+00:00",
    "kickoff": "2026-11-27T20:30:00+03:00",
    "sport": "football",
    "id": "401900873",
@@ -7806,7 +7806,7 @@
   },
   "football|RSA|401902007": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-27T17:11:08.225862+00:00",
+   "checked_at": "2026-11-27T17:23:00.635291+00:00",
    "kickoff": "2026-11-27T20:30:00+03:00",
    "sport": "football",
    "id": "401902007",
@@ -7814,9 +7814,9 @@
    "away": "TS Galaxy FC",
    "priced_markets": 6,
    "market": "ТМ 2.5",
-   "probability": 0.6495,
+   "probability": 0.6513,
    "odds": 1.43,
-   "edge": -0.07122,
+   "edge": -0.06864,
    "estimated": true
   },
   "football|DNK|401874563": {
