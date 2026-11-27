@@ -5,7 +5,7 @@
  },
  "learned": "2026-11-27",
  "schedule_day": "2026-11-27",
- "content_slot": "2026-11-27-20",
+ "content_slot": "2026-11-27-22",
  "news_seen": [
   "https://www.sport-express.ru/hockey/nhl/news/trener-rik-tokket-sravnil-konnora-makdevida-s-ueynom-gretcki-i-vliyanie-na-igru-v-nhl-on-prosto-dominiruet-v-lige-2478483/",
   "https://www.sport-express.ru/hockey/nhl/news/trener-edmontona-mayk-bebkok-o-rezultativnosti-konnora-makdevida-ne-menee-vazhno-ne-pozvolyat-soperniku-zabivat-2478482/",
@@ -1572,7 +1572,7 @@
  "value_day": "2026-11-27",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-27",
- "site_stamp": "1578|9823|2026-11-27 21|6|b107783b72da63f6",
+ "site_stamp": "1578|9824|2026-11-27 22|6|b107783b72da63f6",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1740,7 +1740,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 9823,
+ "dz_last": 9824,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -3163,12 +3163,12 @@
   },
   "error": null,
   "tips": 20145,
-  "snapshots": 422,
+  "snapshots": 429,
   "unmapped_markets": 30360,
   "quote_matches": 164
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-27T21:59:47.988145+03:00",
+  "last_poll": "2026-11-27T22:01:47.704029+03:00",
   "cursor": "487",
   "posts": [
    {
@@ -4203,7 +4203,13 @@
    "401933722": "pre",
    "401850706": "pre",
    "401841336": "pre",
-   "401936045": "pre"
+   "401936045": "pre",
+   "401936413": "pre",
+   "401931997": "pre",
+   "401876815": "pre",
+   "401876814": "pre",
+   "401876886": "pre",
+   "401876812": "pre"
   },
   "daily": {
    "day": "2026-11-27"
@@ -8008,7 +8014,7 @@
   },
   "football|SP2|401883102": {
    "reason": "edge_below_minimum",
-   "checked_at": "2026-11-27T18:52:14.214520+00:00",
+   "checked_at": "2026-11-27T19:02:55.931573+00:00",
    "kickoff": "2026-11-27T22:30:00+03:00",
    "sport": "football",
    "id": "401883102",
@@ -8023,7 +8029,7 @@
   },
   "football|D1|401884720": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-27T18:52:14.612954+00:00",
+   "checked_at": "2026-11-27T19:02:56.344418+00:00",
    "kickoff": "2026-11-27T22:30:00+03:00",
    "sport": "football",
    "id": "401884720",
@@ -8038,7 +8044,7 @@
   },
   "tennis|WTA|186830": {
    "reason": "no_real_odds",
-   "checked_at": "2026-11-27T18:52:17.503098+00:00",
+   "checked_at": "2026-11-27T19:02:58.735545+00:00",
    "kickoff": "2026-11-27T22:30:00+03:00",
    "sport": "tennis",
    "id": "186830",
