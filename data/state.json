@@ -1563,7 +1563,7 @@
  "value_day": "2026-11-26",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-26",
- "site_stamp": "1575|9750|2026-11-27 03|6|d59ec126c83a7c81",
+ "site_stamp": "1575|9750|2026-11-27 04|6|78b29ad268b2668c",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -3082,9 +3082,9 @@
    }
   },
   "source": {
-   "last_success": "2026-11-27T00:40:55.993190+00:00",
-   "parsed": 346,
-   "added": 43,
+   "last_success": "2026-11-27T01:00:56.767660+00:00",
+   "parsed": 351,
+   "added": 29,
    "discovered_matches": 39,
    "pages": 18,
    "errors": [],
@@ -3098,13 +3098,13 @@
    }
   },
   "error": null,
-  "tips": 18833,
+  "tips": 18846,
   "snapshots": 406,
-  "unmapped_markets": 28439,
-  "quote_matches": 143
+  "unmapped_markets": 28455,
+  "quote_matches": 144
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-27T03:58:56.570849+03:00",
+  "last_poll": "2026-11-27T04:00:56.767660+03:00",
   "cursor": "466",
   "posts": [
    {
@@ -3889,7 +3889,8 @@
    "401910047": "pre",
    "401910048": "pre",
    "401910049": "pre",
-   "401910050": "pre"
+   "401910050": "pre",
+   "401877525": "pre"
   },
   "daily": {
    "day": "2026-11-27"
