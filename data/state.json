@@ -2081,8 +2081,8 @@
  "vk_photos": [],
  "vk_photo_until": 1794644243.1147308,
  "vk_photo_cursor": {},
- "vk_story_last": 9773,
- "vk_story_err": "VK stories: ошибка загрузки; подписанный URL скрыт",
+ "vk_story_last": 9776,
+ "vk_story_err": "VK stories: сервер не вернул upload_result",
  "push_weekly": "2026-48",
  "vk_story_at": 1795789041.290099,
  "vk_story_url": "https://vk.com/story-228963529_456239187",
@@ -3138,10 +3138,10 @@
    }
   },
   "source": {
-   "last_success": "2026-11-27T17:10:40.658641+00:00",
+   "last_success": "2026-11-27T17:32:40.568811+00:00",
    "parsed": 342,
-   "added": 82,
-   "discovered_matches": 45,
+   "added": 103,
+   "discovered_matches": 49,
    "pages": 18,
    "errors": [],
    "parsed_by_sport": {
@@ -3149,18 +3149,18 @@
     "ice-hockey": 50,
     "basketball": 50,
     "tennis": 46,
-    "csgo": 36,
+    "csgo": 37,
     "dota2": 50
    }
   },
   "error": null,
-  "tips": 19955,
+  "tips": 20009,
   "snapshots": 419,
-  "unmapped_markets": 30129,
-  "quote_matches": 162
+  "unmapped_markets": 30178,
+  "quote_matches": 163
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-27T20:30:40.139655+03:00",
+  "last_poll": "2026-11-27T20:32:40.568811+03:00",
   "cursor": "486",
   "posts": [
    {
@@ -4012,10 +4012,10 @@
    "401900870": "post",
    "401888241": "in",
    "401888240": "in",
-   "401885047": "pre",
-   "401885045": "pre",
+   "401885047": "in",
+   "401885045": "in",
    "401900873": "pre",
-   "401902007": "pre",
+   "401902007": "in",
    "401874563": "pre",
    "401881739": "pre",
    "401875536": "pre",
@@ -7847,7 +7847,7 @@
   },
   "football|DNK|401874563": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-27T17:20:58.800152+00:00",
+   "checked_at": "2026-11-27T17:33:08.064571+00:00",
    "kickoff": "2026-11-27T21:00:00+03:00",
    "sport": "football",
    "id": "401874563",
@@ -7878,7 +7878,7 @@
   },
   "hockey|NHL|401892796": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-27T17:20:59.633002+00:00",
+   "checked_at": "2026-11-27T17:33:08.825569+00:00",
    "kickoff": "2026-11-27T21:00:00+03:00",
    "sport": "hockey",
    "id": "401892796",
@@ -7893,22 +7893,22 @@
   },
   "hockey|NHL|401892797": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-27T17:21:00.365925+00:00",
+   "checked_at": "2026-11-27T17:33:09.568858+00:00",
    "kickoff": "2026-11-27T21:00:00+03:00",
    "sport": "hockey",
    "id": "401892797",
    "home": "Нэшвилл",
    "away": "Юта",
    "priced_markets": 4,
-   "market": "ТМ 7.5",
-   "probability": 0.6522,
-   "odds": 1.43,
-   "edge": -0.06735,
+   "market": "ИТ1 больше 2.5",
+   "probability": 0.655,
+   "odds": 1.42,
+   "edge": -0.0699,
    "estimated": true
   },
   "tennis|WTA|186832": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-27T17:21:01.368840+00:00",
+   "checked_at": "2026-11-27T17:33:10.499807+00:00",
    "kickoff": "2026-11-27T21:00:00+03:00",
    "sport": "tennis",
    "id": "186832",
@@ -7923,7 +7923,7 @@
   },
   "tennis|WTA|186829": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-27T17:21:02.136984+00:00",
+   "checked_at": "2026-11-27T17:33:11.222351+00:00",
    "kickoff": "2026-11-27T21:00:00+03:00",
    "sport": "tennis",
    "id": "186829",
@@ -18835,5 +18835,5 @@
   "away": "Челси",
   "kickoff": "2026-11-27T23:00:00+03:00"
  },
- "vk_story_retry_at": 1795800788.2519248
+ "vk_story_retry_at": 1795804399.870797
 }
