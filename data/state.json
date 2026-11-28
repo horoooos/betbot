@@ -3184,7 +3184,7 @@
   "quote_matches": 185
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-28T11:28:38.030325+03:00",
+  "last_poll": "2026-11-28T11:30:37.586909+03:00",
   "cursor": "498",
   "posts": [
    {
@@ -4292,7 +4292,12 @@
    "1817106": "pre",
    "1817109": "pre",
    "1817108": "pre",
-   "1817111": "pre"
+   "1817111": "pre",
+   "401884724": "pre",
+   "401879799": "pre",
+   "1817110": "pre",
+   "1817113": "pre",
+   "1817112": "pre"
   },
   "daily": {
    "day": "2026-11-28"
@@ -8985,6 +8990,36 @@
    "id": "1817108",
    "home": "THE ONE",
    "away": "TheMongolz"
+  },
+  "esports|CS2|1817107": {
+   "reason": "no_real_odds",
+   "checked_at": "2026-11-28T08:31:01.352249+00:00",
+   "kickoff": "2026-11-28T12:00:00+03:00",
+   "sport": "esports",
+   "id": "1817107",
+   "home": "Nemiga",
+   "away": "Lynn Vision",
+   "priced_markets": 0,
+   "market": "Победа: Nemiga",
+   "probability": 0.6303,
+   "odds": 1.48,
+   "edge": -0.06716,
+   "estimated": true
+  },
+  "esports|CS2|1817106": {
+   "reason": "no_real_odds",
+   "checked_at": "2026-11-28T08:31:03.483928+00:00",
+   "kickoff": "2026-11-28T12:00:00+03:00",
+   "sport": "esports",
+   "id": "1817106",
+   "home": "G2",
+   "away": "NIP",
+   "priced_markets": 0,
+   "market": "Победа: G2",
+   "probability": 0.5628,
+   "odds": 1.65,
+   "edge": -0.07138,
+   "estimated": true
   }
  },
  "source_trial": {
