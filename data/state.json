@@ -1733,7 +1733,7 @@
  "streak_day": {
   "2026-11-22": 2
  },
- "news_next": "2026-11-28T09:12:34.352378+03:00",
+ "news_next": "2026-11-28T09:18:34.656271+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -3030,7 +3030,7 @@
   "external_sources": {
    "providers": {
     "legalbet": {
-     "at": "2026-11-28T05:40:34.613036+00:00",
+     "at": "2026-11-28T06:12:34.656271+00:00",
      "status": "ok",
      "discovered": 1,
      "pages": 1,
@@ -3041,29 +3041,29 @@
      "contexts": 1
     },
     "livesport": {
-     "at": "2026-11-28T05:40:34.613036+00:00",
+     "at": "2026-11-28T06:12:34.656271+00:00",
      "status": "ok",
      "discovered": 20,
      "pages": 6,
-     "opinions": 8,
-     "mapped": 4,
+     "opinions": 6,
+     "mapped": 3,
      "articles_available": 34,
-     "next_offset": 11,
+     "next_offset": 17,
      "contexts": 6
     },
     "metaratings": {
-     "at": "2026-11-28T05:40:34.613036+00:00",
+     "at": "2026-11-28T06:12:34.656271+00:00",
      "status": "ok",
      "discovered": 10,
      "pages": 6,
      "opinions": 24,
-     "mapped": 3,
+     "mapped": 7,
      "articles_available": 41,
-     "next_offset": 13,
+     "next_offset": 9,
      "contexts": 6
     },
     "rb": {
-     "at": "2026-11-28T05:40:34.613036+00:00",
+     "at": "2026-11-28T06:12:34.656271+00:00",
      "status": "ok",
      "discovered": 1,
      "pages": 1,
@@ -3074,7 +3074,7 @@
      "contexts": 0
     },
     "vseprosport": {
-     "at": "2026-11-28T05:40:34.613036+00:00",
+     "at": "2026-11-28T06:12:34.656271+00:00",
      "status": "ok",
      "discovered": 4,
      "pages": 3,
@@ -3202,12 +3202,12 @@
   },
   "error": null,
   "tips": 21033,
-  "snapshots": 455,
+  "snapshots": 456,
   "unmapped_markets": 31723,
   "quote_matches": 183
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-28T09:10:34.544963+03:00",
+  "last_poll": "2026-11-28T09:12:34.656271+03:00",
   "cursor": "498",
   "posts": [
    {
