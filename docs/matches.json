@@ -1,181 +1,6 @@
 [
 {
 "sport": "football",
-"id": "401877542",
-"league": "Япония · J-League",
-"kickoff": "2026-11-28T09:00:00+03:00",
-"home": "Касима Антлерс",
-"away": "Фаджиано Окаяма",
-"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/7115.png",
-"al": "https://a.espncdn.com/i/teamlogos/soccer/500/22522.png",
-"hid": "7115",
-"aid": "22522",
-"bb": "https://betboom.ru/search?query=%D0%90%D0%BD%D1%82%D0%BB%D0%B5%D1%80%D1%81&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
-"path": "soccer/jpn.1",
-"url": "live.html?s=football&p=soccer%2Fjpn.1&e=401877542&h=%D0%9A%D0%B0%D1%81%D0%B8%D0%BC%D0%B0+%D0%90%D0%BD%D1%82%D0%BB%D0%B5%D1%80%D1%81&a=%D0%A4%D0%B0%D0%B4%D0%B6%D0%B8%D0%B0%D0%BD%D0%BE+%D0%9E%D0%BA%D0%B0%D1%8F%D0%BC%D0%B0",
-"participants": [
-[
-"Касима Антлерс",
-"Kashima Antlers"
-],
-[
-"Фаджиано Окаяма",
-"Fagiano Okayama"
-]
-],
-"div": "JPN",
-"state": "post",
-"bo": null,
-"prediction": "predictions/2026-11-28-kasima-antlers-fadzhiano-okayama-401877542.html",
-"hs": "1",
-"as": "1",
-"tip": "П1 · 1.78",
-"top": false,
-"bot": {
-"main": {
-"label": "П1",
-"p": 0.517,
-"odds": 1.78,
-"est": false
-},
-"bold": null,
-"markets": [
-[
-"П1",
-0.517,
-1.69
-],
-[
-"Ничья",
-0.261,
-3.85
-],
-[
-"П2",
-0.222,
-4.8
-],
-[
-"1X",
-0.778,
-null
-],
-[
-"X2",
-0.483,
-null
-],
-[
-"ТБ 1.5",
-0.761,
-null
-],
-[
-"ТБ 2.5",
-0.507,
-1.833
-],
-[
-"ТМ 2.5",
-0.493,
-1.909
-],
-[
-"ТБ 3.5",
-0.286,
-null
-],
-[
-"Обе забьют — да",
-0.531,
-null
-],
-[
-"Обе забьют — нет",
-0.469,
-null
-],
-[
-"ИТ1 больше 1.5",
-0.5,
-null
-],
-[
-"ИТ2 больше 1.5",
-0.273,
-null
-],
-[
-"Ф1 (−1.5)",
-0.285,
-null
-],
-[
-"Ф2 (+1.5)",
-0.715,
-null
-]
-],
-"bar": [
-0.5172909810081945,
-0.26084156313229073,
-0.22186745585951484
-],
-"center": "Ожидаемые голы (xG) 1.7 : 1.0",
-"scores": [
-[
-"1:1",
-0.124
-],
-[
-"1:0",
-0.103
-],
-[
-"2:1",
-0.097
-]
-]
-},
-"lt": null
-},
-{
-"sport": "football",
-"id": "401877516",
-"league": "Япония · J-League",
-"kickoff": "2026-11-28T09:00:00+03:00",
-"home": "Vissel Kobe",
-"away": "ДЖЕФ Юнайтед Итихара Тиба",
-"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/7477.png",
-"al": "https://a.espncdn.com/i/teamlogos/soccer/500/7111.png",
-"hid": "7477",
-"aid": "7111",
-"bb": "https://betboom.ru/search?query=%D0%92%D0%B8%D1%81%D1%81%D0%B5%D0%BB&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
-"path": "soccer/jpn.1",
-"url": "live.html?s=football&p=soccer%2Fjpn.1&e=401877516&h=Vissel+Kobe&a=%D0%94%D0%96%D0%95%D0%A4+%D0%AE%D0%BD%D0%B0%D0%B9%D1%82%D0%B5%D0%B4+%D0%98%D1%82%D0%B8%D1%85%D0%B0%D1%80%D0%B0+%D0%A2%D0%B8%D0%B1%D0%B0",
-"participants": [
-[
-"Vissel Kobe",
-"Vissel Kobe"
-],
-[
-"ДЖЕФ Юнайтед Итихара Тиба",
-"JEF United Ichihara-Chiba"
-]
-],
-"div": "JPN",
-"state": "post",
-"bo": null,
-"prediction": "",
-"hs": "3",
-"as": "1",
-"tip": "",
-"top": false,
-"bot": null,
-"lt": null
-},
-{
-"sport": "football",
 "id": "401877525",
 "league": "Япония · J-League",
 "kickoff": "2026-11-28T10:00:00+03:00",
@@ -2700,21 +2525,21 @@ null
 "league": "Греция · Суперлига",
 "kickoff": "2026-11-28T18:00:00+03:00",
 "home": "Ираклис",
-"away": "Panetolikos",
+"away": "Панетоликос",
 "hl": "https://a.espncdn.com/i/teamlogos/soccer/500/2575.png",
 "al": "https://a.espncdn.com/i/teamlogos/soccer/500/11431.png",
 "hid": "2575",
 "aid": "11431",
 "bb": "https://betboom.ru/search?query=%D0%98%D1%80%D0%B0%D0%BA%D0%BB%D0%B8%D1%81&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
 "path": "soccer/gre.1",
-"url": "live.html?s=football&p=soccer%2Fgre.1&e=401896807&h=%D0%98%D1%80%D0%B0%D0%BA%D0%BB%D0%B8%D1%81&a=Panetolikos",
+"url": "live.html?s=football&p=soccer%2Fgre.1&e=401896807&h=%D0%98%D1%80%D0%B0%D0%BA%D0%BB%D0%B8%D1%81&a=%D0%9F%D0%B0%D0%BD%D0%B5%D1%82%D0%BE%D0%BB%D0%B8%D0%BA%D0%BE%D1%81",
 "participants": [
 [
 "Ираклис",
 "Iraklis"
 ],
 [
-"Panetolikos",
+"Панетоликос",
 "Panetolikos"
 ]
 ],
@@ -7759,6 +7584,216 @@ null
 ]
 ],
 "div": "N1",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "football",
+"id": "401881742",
+"league": "Австрия · Бундеслига",
+"kickoff": "2026-11-29T19:00:00+03:00",
+"home": "Ред Булл",
+"away": "ЛАСК",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/2790.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/4411.png",
+"hid": "2790",
+"aid": "4411",
+"bb": "https://betboom.ru/search?query=%D0%91%D1%83%D0%BB%D0%BB&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/aut.1",
+"url": "live.html?s=football&p=soccer%2Faut.1&e=401881742&h=%D0%A0%D0%B5%D0%B4+%D0%91%D1%83%D0%BB%D0%BB&a=%D0%9B%D0%90%D0%A1%D0%9A",
+"participants": [
+[
+"Ред Булл",
+"RB Salzburg"
+],
+[
+"ЛАСК",
+"LASK Linz"
+]
+],
+"div": "AUT",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "football",
+"id": "401843491",
+"league": "Норвегия · Элитсерия",
+"kickoff": "2026-11-29T19:00:00+03:00",
+"home": "Старт",
+"away": "Сарпсборг",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/6750.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/5002.png",
+"hid": "6750",
+"aid": "5002",
+"bb": "https://betboom.ru/search?query=%D0%A1%D1%82%D0%B0%D1%80%D1%82&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/nor.1",
+"url": "live.html?s=football&p=soccer%2Fnor.1&e=401843491&h=%D0%A1%D1%82%D0%B0%D1%80%D1%82&a=%D0%A1%D0%B0%D1%80%D0%BF%D1%81%D0%B1%D0%BE%D1%80%D0%B3",
+"participants": [
+[
+"Старт",
+"IK Start"
+],
+[
+"Сарпсборг",
+"Sarpsborg FK"
+]
+],
+"div": "NOR",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "football",
+"id": "401843498",
+"league": "Норвегия · Элитсерия",
+"kickoff": "2026-11-29T19:00:00+03:00",
+"home": "Саннефьорд",
+"away": "Тромсё",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/3279.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/5270.png",
+"hid": "3279",
+"aid": "5270",
+"bb": "https://betboom.ru/search?query=%D0%A1%D0%B0%D0%BD%D0%BD%D0%B5%D1%84%D1%8C%D0%BE%D1%80%D0%B4&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/nor.1",
+"url": "live.html?s=football&p=soccer%2Fnor.1&e=401843498&h=%D0%A1%D0%B0%D0%BD%D0%BD%D0%B5%D1%84%D1%8C%D0%BE%D1%80%D0%B4&a=%D0%A2%D1%80%D0%BE%D0%BC%D1%81%D1%91",
+"participants": [
+[
+"Саннефьорд",
+"Sandefjord"
+],
+[
+"Тромсё",
+"Tromso"
+]
+],
+"div": "NOR",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "football",
+"id": "401843494",
+"league": "Норвегия · Элитсерия",
+"kickoff": "2026-11-29T19:00:00+03:00",
+"home": "Бранн",
+"away": "Кристиансунд",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/620.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/6672.png",
+"hid": "620",
+"aid": "6672",
+"bb": "https://betboom.ru/search?query=%D0%91%D1%80%D0%B0%D0%BD%D0%BD&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/nor.1",
+"url": "live.html?s=football&p=soccer%2Fnor.1&e=401843494&h=%D0%91%D1%80%D0%B0%D0%BD%D0%BD&a=%D0%9A%D1%80%D0%B8%D1%81%D1%82%D0%B8%D0%B0%D0%BD%D1%81%D1%83%D0%BD%D0%B4",
+"participants": [
+[
+"Бранн",
+"SK Brann"
+],
+[
+"Кристиансунд",
+"Kristiansund BK"
+]
+],
+"div": "NOR",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "football",
+"id": "401888238",
+"league": "Турция · Суперлига",
+"kickoff": "2026-11-29T19:00:00+03:00",
+"home": "Фенербахче",
+"away": "Эрзурумспор",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/436.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/19267.png",
+"hid": "436",
+"aid": "19267",
+"bb": "https://betboom.ru/search?query=%D0%A4%D0%B5%D0%BD%D0%B5%D1%80%D0%B1%D0%B0%D1%85%D1%87%D0%B5&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/tur.1",
+"url": "live.html?s=football&p=soccer%2Ftur.1&e=401888238&h=%D0%A4%D0%B5%D0%BD%D0%B5%D1%80%D0%B1%D0%B0%D1%85%D1%87%D0%B5&a=%D0%AD%D1%80%D0%B7%D1%83%D1%80%D1%83%D0%BC%D1%81%D0%BF%D0%BE%D1%80",
+"participants": [
+[
+"Фенербахче",
+"Fenerbahce"
+],
+[
+"Эрзурумспор",
+"Erzurum BB"
+]
+],
+"div": "T1",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "football",
+"id": "401902001",
+"league": "ЮАР · Премьер-лига",
+"kickoff": "2026-11-29T19:00:00+03:00",
+"home": "Sekhukhune United FC",
+"away": "Siwelele",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/20814.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/131361.png",
+"hid": "20814",
+"aid": "131361",
+"bb": "https://betboom.ru/search?query=%D0%A1%D0%B5%D1%85%D1%83%D1%85%D1%83%D0%BD%D0%B5&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/rsa.1",
+"url": "live.html?s=football&p=soccer%2Frsa.1&e=401902001&h=Sekhukhune+United+FC&a=Siwelele",
+"participants": [
+[
+"Sekhukhune United FC",
+"Sekhukhune United FC"
+],
+[
+"Siwelele",
+"Siwelele"
+]
+],
+"div": "RSA",
 "state": "pre",
 "bo": null,
 "prediction": "",
