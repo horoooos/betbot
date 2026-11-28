@@ -4762,25 +4762,25 @@
   "kickoff": "2026-11-28T03:00:00+03:00",
   "state": "pre",
   "completed": false,
-  "status": "reviewed",
+  "status": "done",
   "detail": "Fri, November 27th at 7:00 PM EST",
   "clock": "0.0",
   "period": 0,
   "home": {
+   "color": "1d428a",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/ny.png",
    "id": "18",
    "name": "New York Knicks",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/ny.png",
-   "color": "1d428a",
    "score": "0",
    "record": "12-6",
    "periods": [],
    "ru": "Нью-Йорк Никс"
   },
   "away": {
+   "color": "98002e",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/mia.png",
    "id": "14",
    "name": "Miami Heat",
-   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/mia.png",
-   "color": "98002e",
    "score": "0",
    "record": "10-7",
    "periods": [],
@@ -5073,7 +5073,9 @@
   "btn": 2,
   "close": {
    "BB_ML_A": 0.3853
-  }
+  },
+  "main_hit": true,
+  "bold_hit": null
  },
  "NHL|401892807": {
   "id": "401892807",
