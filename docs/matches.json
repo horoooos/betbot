@@ -1,214 +1,5 @@
 [
 {
-"sport": "hockey",
-"id": "401892803",
-"league": "США · NHL",
-"kickoff": "2026-11-28T00:00:00+03:00",
-"home": "Миннесота",
-"away": "Колорадо",
-"hl": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/min.png",
-"al": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/col.png",
-"hid": "30",
-"aid": "17",
-"bb": "https://betboom.ru/search?query=%D0%9C%D0%B8%D0%BD%D0%BD%D0%B5%D1%81%D0%BE%D1%82%D0%B0&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=hockey",
-"path": "hockey/nhl",
-"url": "live.html?s=hockey&p=hockey%2Fnhl&e=401892803&h=%D0%9C%D0%B8%D0%BD%D0%BD%D0%B5%D1%81%D0%BE%D1%82%D0%B0&a=%D0%9A%D0%BE%D0%BB%D0%BE%D1%80%D0%B0%D0%B4%D0%BE",
-"participants": [
-[
-"Миннесота",
-"Minnesota Wild"
-],
-[
-"Колорадо",
-"Colorado Avalanche"
-]
-],
-"div": "NHL",
-"state": "post",
-"bo": null,
-"prediction": "predictions/2026-11-28-minnesota-kolorado-401892803.html",
-"hs": "3",
-"as": "4",
-"tip": "П1 (с ОТ и буллитами) · 1.85",
-"top": false,
-"bot": {
-"main": {
-"label": "П1 (с ОТ и буллитами)",
-"p": 0.517,
-"odds": 1.85,
-"est": false
-},
-"bold": null,
-"markets": [
-[
-"П1 (с ОТ и буллитами)",
-0.517,
-1.847
-],
-[
-"П2 (с ОТ и буллитами)",
-0.483,
-1.98
-],
-[
-"П1 в основное время",
-0.434,
-null
-],
-[
-"Ничья в основное время",
-0.161,
-null
-],
-[
-"П2 в основное время",
-0.405,
-null
-],
-[
-"ТБ 5.5",
-0.616,
-null
-],
-[
-"ТМ 5.5",
-0.384,
-null
-],
-[
-"ТБ 6.5",
-0.457,
-2.1
-],
-[
-"ТМ 6.5",
-0.543,
-1.769
-],
-[
-"ТБ 7.5",
-0.312,
-null
-],
-[
-"ТМ 7.5",
-0.688,
-null
-],
-[
-"ИТ1 больше 1.5",
-0.835,
-null
-],
-[
-"ИТ1 больше 2.5",
-0.629,
-null
-],
-[
-"ИТ1 больше 3.5",
-0.407,
-null
-],
-[
-"ИТ2 больше 1.5",
-0.823,
-null
-],
-[
-"ИТ2 больше 2.5",
-0.61,
-null
-]
-],
-"bar": [
-0.5173771601245151,
-0,
-0.4826228398754848
-],
-"center": "Ожидаемые голы 3.2 : 3.2"
-},
-"lt": {
-"fair": 1.33,
-"label": "ТБ 4.5",
-"min_odds": 1.4,
-"minute": "2-й период",
-"p": 0.752,
-"result": "hit",
-"score": "2:0"
-}
-},
-{
-"sport": "hockey",
-"id": "401892804",
-"league": "США · NHL",
-"kickoff": "2026-11-28T00:00:00+03:00",
-"home": "Анахайм",
-"away": "Лос-Анджелес",
-"hl": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/ana.png",
-"al": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/la.png",
-"hid": "25",
-"aid": "8",
-"bb": "https://betboom.ru/search?query=%D0%90%D0%BD%D0%B0%D1%85%D0%B0%D0%B9%D0%BC&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=hockey",
-"path": "hockey/nhl",
-"url": "live.html?s=hockey&p=hockey%2Fnhl&e=401892804&h=%D0%90%D0%BD%D0%B0%D1%85%D0%B0%D0%B9%D0%BC&a=%D0%9B%D0%BE%D1%81-%D0%90%D0%BD%D0%B4%D0%B6%D0%B5%D0%BB%D0%B5%D1%81",
-"participants": [
-[
-"Анахайм",
-"Anaheim Ducks"
-],
-[
-"Лос-Анджелес",
-"Los Angeles Kings"
-]
-],
-"div": "NHL",
-"state": "post",
-"bo": null,
-"prediction": "",
-"hs": "3",
-"as": "5",
-"tip": "",
-"top": false,
-"bot": null,
-"lt": null
-},
-{
-"sport": "hockey",
-"id": "401892805",
-"league": "США · NHL",
-"kickoff": "2026-11-28T00:00:00+03:00",
-"home": "Сан-Хосе",
-"away": "Вегас",
-"hl": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/sj.png",
-"al": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/vgk.png",
-"hid": "18",
-"aid": "37",
-"bb": "https://betboom.ru/search?query=%D0%A1%D0%B0%D0%BD-%D0%A5%D0%BE%D1%81%D0%B5&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=hockey",
-"path": "hockey/nhl",
-"url": "live.html?s=hockey&p=hockey%2Fnhl&e=401892805&h=%D0%A1%D0%B0%D0%BD-%D0%A5%D0%BE%D1%81%D0%B5&a=%D0%92%D0%B5%D0%B3%D0%B0%D1%81",
-"participants": [
-[
-"Сан-Хосе",
-"San Jose Sharks"
-],
-[
-"Вегас",
-"Vegas Golden Knights"
-]
-],
-"div": "NHL",
-"state": "post",
-"bo": null,
-"prediction": "",
-"hs": "4",
-"as": "1",
-"tip": "",
-"top": false,
-"bot": null,
-"lt": null
-},
-{
 "sport": "football",
 "id": "401921361",
 "league": "Эквадор · Лига Про",
@@ -620,8 +411,8 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-28-nyu-york-niks-mayami-hit-401909326.html",
-"hs": "31",
-"as": "52",
+"hs": "34",
+"as": "54",
 "tip": "П2 (с ОТ) · 2.24",
 "top": false,
 "bot": {
@@ -721,8 +512,8 @@ null
 "state": "in",
 "bo": null,
 "prediction": "",
-"hs": "11",
-"as": "19",
+"hs": "14",
+"as": "22",
 "tip": "",
 "top": false,
 "bot": null,
@@ -756,7 +547,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "",
-"hs": "13",
+"hs": "18",
 "as": "22",
 "tip": "",
 "top": false,
@@ -792,7 +583,7 @@ null
 "bo": null,
 "prediction": "",
 "hs": "20",
-"as": "15",
+"as": "18",
 "tip": "",
 "top": false,
 "bot": null,
@@ -7387,6 +7178,41 @@ null
 [
 "Avispa Fukuoka",
 "Avispa Fukuoka"
+]
+],
+"div": "JPN",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "football",
+"id": "401877524",
+"league": "Япония · J-League",
+"kickoff": "2026-11-29T10:00:00+03:00",
+"home": "Матида Зельвия",
+"away": "Токио Верди",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/22167.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/3393.png",
+"hid": "22167",
+"aid": "3393",
+"bb": "https://betboom.ru/search?query=%D0%97%D0%B5%D0%BB%D1%8C%D0%B2%D0%B8%D1%8F&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/jpn.1",
+"url": "live.html?s=football&p=soccer%2Fjpn.1&e=401877524&h=%D0%9C%D0%B0%D1%82%D0%B8%D0%B4%D0%B0+%D0%97%D0%B5%D0%BB%D1%8C%D0%B2%D0%B8%D1%8F&a=%D0%A2%D0%BE%D0%BA%D0%B8%D0%BE+%D0%92%D0%B5%D1%80%D0%B4%D0%B8",
+"participants": [
+[
+"Матида Зельвия",
+"Machida Zelvia"
+],
+[
+"Токио Верди",
+"Tokyo Verdy 1969"
 ]
 ],
 "div": "JPN",
