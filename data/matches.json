@@ -30969,5 +30969,905 @@
   "div": "RSA",
   "reason": "no_qualified_real_market",
   "retry_at": 1795870857.150915
+ },
+ "401875081": {
+  "id": "401875081",
+  "div": "I1",
+  "slug": "ita.1",
+  "kickoff": "2026-11-28T17:00:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "detail": "Scheduled",
+  "home": {
+   "id": "4057",
+   "name": "Frosinone",
+   "short": "Frosinone",
+   "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/4057.png",
+   "color": "FACF08",
+   "alt": "ffffff",
+   "form": "LLWWD",
+   "score": "0",
+   "ru": "Фрозиноне"
+  },
+  "away": {
+   "id": "115",
+   "name": "Parma",
+   "short": "Parma",
+   "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/115.png",
+   "color": "19161D",
+   "alt": "ffdd30",
+   "form": "LLWDL",
+   "score": "0",
+   "ru": "Парма"
+  },
+  "odds": {
+   "H": 1.426,
+   "D": 4.8,
+   "A": 5.75,
+   "line": 3.5,
+   "over": 1.909,
+   "under": 1.833,
+   "spread_h": [
+    -1.5,
+    2.05
+   ],
+   "spread_a": [
+    1.5,
+    1.69
+   ]
+  },
+  "venue": "Stadio Benito Stirpe",
+  "clock": "0'",
+  "goals": [],
+  "open": {
+   "H": 0.6472
+  },
+  "top": false,
+  "lam": [
+   2.379175691907167,
+   1.1580872581679518
+  ],
+  "probs": {
+   "H": 0.6379687518000654,
+   "D": 0.19746281226499235,
+   "A": 0.16456843593494203,
+   "1X": 0.8354315640650578,
+   "12": 0.8025371877350075,
+   "X2": 0.36203124819993426,
+   "BTTS_Y": 0.6287900321553165,
+   "BTTS_N": 0.37120996784468363,
+   "O15": 0.8744058401972391,
+   "U15": 0.12559415980276067,
+   "O25": 0.6859773958149821,
+   "U25": 0.3140226041850178,
+   "O35": 0.47136523474241654,
+   "U35": 0.5286347652575836,
+   "H_O05": 0.9073694102119775,
+   "H_O15": 0.6869849626612904,
+   "A_O05": 0.6859136134281344,
+   "A_O15": 0.3221741711752428,
+   "H-1.5": 0.42443476625532084,
+   "A+1.5": 0.5755652337446794,
+   "A-1.5": 0.06392006979371767,
+   "H+1.5": 0.9360799302062821,
+   "H-2.5": 0.2350393463836322,
+   "A-2.5": 0.019045632997513356,
+   "H+2.5": 0.9809543670024864,
+   "A+2.5": 0.7649606536163681,
+   "O45": 0.28158032324303134,
+   "U45": 0.7184196767569686,
+   "H_O25": 0.4248183024177981,
+   "A_O25": 0.11155316449214717,
+   "H&O15": 0.575161998294897,
+   "A&O15": 0.13728803815255428,
+   "H&BTTS": 0.35938937374340457,
+   "A&BTTS": 0.1074448546621242,
+   "1X&U35": 0.42789541778119866,
+   "X2&U35": 0.22282187330755202,
+   "BTTS&O25": 0.5422145148393539,
+   "HT_H": 0.4789019609562814,
+   "HT_D": 0.3521764298908961,
+   "HT_A": 0.16892160915282275,
+   "HT_O05": 0.7873483822885416,
+   "HT_U05": 0.21265161771145807,
+   "HT_O15": 0.48149212298400135,
+   "HT_U15": 0.5185078770159988
+  },
+  "scores": [
+   [
+    "2:1",
+    0.09536035477427122
+   ],
+   [
+    "1:1",
+    0.08657551731596244
+   ],
+   [
+    "2:0",
+    0.08234297899549256
+   ]
+  ],
+  "main": {
+   "key": "H",
+   "label": "П1",
+   "p": 0.638,
+   "odds": 1.47,
+   "est": false,
+   "stake": 0.5,
+   "strategy": "external_trial",
+   "selection_mode": "external_fallback",
+   "trial_expires_at": null,
+   "probability_origin": "baseline_model",
+   "model_edge": -0.06219,
+   "source_count": 4,
+   "source_refs": [
+    {
+     "author": "/predictors/leonidzemliackov",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/28-11-2026-frosinone-calcio-parma",
+     "published_at": "2026-11-27T08:52:00+00:00",
+     "observed_at": "2026-11-27T09:50:14.238528+00:00",
+     "odds": 1.49,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/artem-278",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/28-11-2026-frosinone-calcio-parma",
+     "published_at": "2026-11-27T19:14:00+00:00",
+     "observed_at": "2026-11-27T19:15:48.093566+00:00",
+     "odds": 1.49,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/aleksandr-niculenko-1",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/28-11-2026-frosinone-calcio-parma",
+     "published_at": "2026-11-27T19:55:00+00:00",
+     "observed_at": "2026-11-27T19:59:47.905865+00:00",
+     "odds": 1.49,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/king-mountain",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/28-11-2026-frosinone-calcio-parma",
+     "published_at": "2026-11-28T08:51:00+00:00",
+     "observed_at": "2026-11-28T08:56:37.963874+00:00",
+     "odds": 1.41,
+     "price_kind": "author_recorded"
+    }
+   ]
+  },
+  "bold": {},
+  "value": null,
+  "odds_src": "среднее по букмекерам",
+  "model_w": 0.0,
+  "learned_n": 1597,
+  "stavka_signal": {
+   "status": "baseline_better",
+   "weight": 0.0,
+   "authors": 4,
+   "votes": {
+    "H": 4.053819171405154
+   },
+   "source": "https://stavka.tv",
+   "snapshot": "I1|401875081"
+  },
+  "research": {
+   "articles": [
+    {
+     "id": "d14c026723dd304eeb2456ef",
+     "kind": "context",
+     "provider": "vseprosport",
+     "source": "https://www.vseprosport.ru/news/2026/11/27/frozinone-parma-prognoz-kf-2-44-i-stavki-na-match-serii-a-28-nojabrja-2026-goda",
+     "sport": "football",
+     "div": "I1",
+     "event_id": "401875081",
+     "kickoff": "2026-11-28T14:00:00+00:00",
+     "published_at": "2026-11-27T09:37:05+00:00",
+     "observed_at": "2026-11-27T10:40:47.592858+00:00",
+     "tables": []
+    },
+    {
+     "id": "ff8b837f8b9b946a6e319e30",
+     "kind": "context",
+     "provider": "livesport",
+     "source": "https://www.livesport.ru/tips/football/2026/11/28/frosinone-parma/",
+     "sport": "football",
+     "div": "I1",
+     "event_id": "401875081",
+     "kickoff": "2026-11-28T14:00:00+00:00",
+     "published_at": "2026-11-27T13:00:00+00:00",
+     "observed_at": "2026-11-27T13:13:00.964148+00:00",
+     "tables": [
+      [
+       [
+        "",
+        "Букмекер",
+        "1",
+        "x",
+        "2",
+        "Новым игрокам",
+        ""
+       ],
+       [
+        "",
+        "",
+        "1.48",
+        "4.99",
+        "5.61",
+        "Фрибет",
+        "30 000 ₽"
+       ],
+       [
+        "",
+        "",
+        "1.49",
+        "5.00",
+        "5.60",
+        "Фрибет всем",
+        "10 000 ₽"
+       ],
+       [
+        "",
+        "",
+        "1.50",
+        "5.00",
+        "5.60",
+        "Фрибет",
+        "1000 ₽"
+       ]
+      ]
+     ]
+    },
+    {
+     "id": "5075cfcf6bccd261e742d725",
+     "kind": "context",
+     "provider": "metaratings",
+     "source": "https://metaratings.ru/prognozy/futbol/frozinone-parma-prognoz-na-match-serii-a-28-noyabrya-2026-goda/",
+     "sport": "football",
+     "div": "I1",
+     "event_id": "401875081",
+     "kickoff": "2026-11-28T14:00:00+00:00",
+     "published_at": "2026-11-26T21:30:00+00:00",
+     "observed_at": "2026-11-27T22:30:58.270545+00:00",
+     "tables": []
+    }
+   ],
+   "dossier": {
+    "observed_at": "2026-11-28T12:49:15.409545+00:00",
+    "kickoff": "2026-11-28T14:00:00+00:00",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/ita.1/summary?event=401875081",
+    "status": "available",
+    "facts": {
+     "table": {
+      "112": {
+       "rank": "1",
+       "gp": "12",
+       "w": "10",
+       "d": "2",
+       "l": "0",
+       "gd": "+19",
+       "pts": "32",
+       "of": 20,
+       "raw": {
+        "GP": "12",
+        "L": "0",
+        "GD": "+19",
+        "P": "32",
+        "D": "2",
+        "W": "10",
+        "R": "1",
+        "Total": "10-2-0"
+       },
+       "group": "Italian Serie A Standings"
+      },
+      "104": {
+       "rank": "2",
+       "gp": "12",
+       "w": "9",
+       "d": "3",
+       "l": "0",
+       "gd": "+25",
+       "pts": "30",
+       "of": 20,
+       "raw": {
+        "GP": "12",
+        "L": "0",
+        "GD": "+25",
+        "P": "30",
+        "D": "3",
+        "W": "9",
+        "R": "2",
+        "Total": "9-3-0"
+       },
+       "group": "Italian Serie A Standings"
+      },
+      "110": {
+       "rank": "3",
+       "gp": "12",
+       "w": "9",
+       "d": "2",
+       "l": "1",
+       "gd": "+15",
+       "pts": "29",
+       "of": 20,
+       "raw": {
+        "GP": "12",
+        "L": "1",
+        "GD": "+15",
+        "P": "29",
+        "D": "2",
+        "W": "9",
+        "R": "3",
+        "Total": "9-2-1"
+       },
+       "group": "Italian Serie A Standings"
+      },
+      "103": {
+       "rank": "4",
+       "gp": "12",
+       "w": "8",
+       "d": "3",
+       "l": "1",
+       "gd": "+14",
+       "pts": "27",
+       "of": 20,
+       "raw": {
+        "GP": "12",
+        "L": "1",
+        "GD": "+14",
+        "P": "27",
+        "D": "3",
+        "W": "8",
+        "R": "4",
+        "Total": "8-3-1"
+       },
+       "group": "Italian Serie A Standings"
+      },
+      "2572": {
+       "rank": "5",
+       "gp": "12",
+       "w": "8",
+       "d": "2",
+       "l": "2",
+       "gd": "+10",
+       "pts": "26",
+       "of": 20,
+       "raw": {
+        "GP": "12",
+        "L": "2",
+        "GD": "+10",
+        "P": "26",
+        "D": "2",
+        "W": "8",
+        "R": "5",
+        "Total": "8-2-2"
+       },
+       "group": "Italian Serie A Standings"
+      },
+      "111": {
+       "rank": "6",
+       "gp": "12",
+       "w": "6",
+       "d": "3",
+       "l": "3",
+       "gd": "+7",
+       "pts": "21",
+       "of": 20,
+       "raw": {
+        "GP": "12",
+        "L": "3",
+        "GD": "+7",
+        "P": "21",
+        "D": "3",
+        "W": "6",
+        "R": "6",
+        "Total": "6-3-3"
+       },
+       "group": "Italian Serie A Standings"
+      },
+      "4057": {
+       "rank": "7",
+       "gp": "12",
+       "w": "6",
+       "d": "2",
+       "l": "4",
+       "gd": "+5",
+       "pts": "20",
+       "of": 20,
+       "raw": {
+        "GP": "12",
+        "L": "4",
+        "GD": "+5",
+        "P": "20",
+        "D": "2",
+        "W": "6",
+        "R": "7",
+        "Total": "6-2-4"
+       },
+       "group": "Italian Serie A Standings"
+      },
+      "107": {
+       "rank": "8",
+       "gp": "13",
+       "w": "5",
+       "d": "4",
+       "l": "4",
+       "gd": "+2",
+       "pts": "19",
+       "of": 20,
+       "raw": {
+        "GP": "13",
+        "L": "4",
+        "GD": "+2",
+        "P": "19",
+        "D": "4",
+        "W": "5",
+        "R": "8",
+        "Total": "5-4-4"
+       },
+       "group": "Italian Serie A Standings"
+      },
+      "114": {
+       "rank": "9",
+       "gp": "12",
+       "w": "5",
+       "d": "3",
+       "l": "4",
+       "gd": "+5",
+       "pts": "18",
+       "of": 20,
+       "raw": {
+        "GP": "12",
+        "L": "4",
+        "GD": "+5",
+        "P": "18",
+        "D": "3",
+        "W": "5",
+        "R": "9",
+        "Total": "5-3-4"
+       },
+       "group": "Italian Serie A Standings"
+      },
+      "3263": {
+       "rank": "10",
+       "gp": "12",
+       "w": "5",
+       "d": "1",
+       "l": "6",
+       "gd": "-3",
+       "pts": "16",
+       "of": 20,
+       "raw": {
+        "GP": "12",
+        "L": "6",
+        "GD": "-3",
+        "P": "16",
+        "D": "1",
+        "W": "5",
+        "R": "10",
+        "Total": "5-1-6"
+       },
+       "group": "Italian Serie A Standings"
+      },
+      "2925": {
+       "rank": "11",
+       "gp": "12",
+       "w": "5",
+       "d": "1",
+       "l": "6",
+       "gd": "-7",
+       "pts": "16",
+       "of": 20,
+       "raw": {
+        "GP": "12",
+        "L": "6",
+        "GD": "-7",
+        "P": "16",
+        "D": "1",
+        "W": "5",
+        "R": "11",
+        "Total": "5-1-6"
+       },
+       "group": "Italian Serie A Standings"
+      },
+      "105": {
+       "rank": "12",
+       "gp": "12",
+       "w": "4",
+       "d": "3",
+       "l": "5",
+       "gd": "-3",
+       "pts": "15",
+       "of": 20,
+       "raw": {
+        "GP": "12",
+        "L": "5",
+        "GD": "-3",
+        "P": "15",
+        "D": "3",
+        "W": "4",
+        "R": "12",
+        "Total": "4-3-5"
+       },
+       "group": "Italian Serie A Standings"
+      },
+      "239": {
+       "rank": "13",
+       "gp": "12",
+       "w": "4",
+       "d": "2",
+       "l": "6",
+       "gd": "-3",
+       "pts": "14",
+       "of": 20,
+       "raw": {
+        "GP": "12",
+        "L": "6",
+        "GD": "-3",
+        "P": "14",
+        "D": "2",
+        "W": "4",
+        "R": "13",
+        "Total": "4-2-6"
+       },
+       "group": "Italian Serie A Standings"
+      },
+      "4007": {
+       "rank": "14",
+       "gp": "12",
+       "w": "3",
+       "d": "1",
+       "l": "8",
+       "gd": "-5",
+       "pts": "10",
+       "of": 20,
+       "raw": {
+        "GP": "12",
+        "L": "8",
+        "GD": "-5",
+        "P": "10",
+        "D": "1",
+        "W": "3",
+        "R": "14",
+        "Total": "3-1-8"
+       },
+       "group": "Italian Serie A Standings"
+      },
+      "113": {
+       "rank": "15",
+       "gp": "12",
+       "w": "3",
+       "d": "1",
+       "l": "8",
+       "gd": "-13",
+       "pts": "10",
+       "of": 20,
+       "raw": {
+        "GP": "12",
+        "L": "8",
+        "GD": "-13",
+        "P": "10",
+        "D": "1",
+        "W": "3",
+        "R": "15",
+        "Total": "3-1-8"
+       },
+       "group": "Italian Serie A Standings"
+      },
+      "109": {
+       "rank": "16",
+       "gp": "12",
+       "w": "2",
+       "d": "3",
+       "l": "7",
+       "gd": "-11",
+       "pts": "9",
+       "of": 20,
+       "raw": {
+        "GP": "12",
+        "L": "7",
+        "GD": "-11",
+        "P": "9",
+        "D": "3",
+        "W": "2",
+        "R": "16",
+        "Total": "2-3-7"
+       },
+       "group": "Italian Serie A Standings"
+      },
+      "115": {
+       "rank": "17",
+       "gp": "12",
+       "w": "2",
+       "d": "2",
+       "l": "8",
+       "gd": "-12",
+       "pts": "8",
+       "of": 20,
+       "raw": {
+        "GP": "12",
+        "L": "8",
+        "GD": "-12",
+        "P": "8",
+        "D": "2",
+        "W": "2",
+        "R": "17",
+        "Total": "2-2-8"
+       },
+       "group": "Italian Serie A Standings"
+      },
+      "3997": {
+       "rank": "18",
+       "gp": "12",
+       "w": "2",
+       "d": "2",
+       "l": "8",
+       "gd": "-15",
+       "pts": "8",
+       "of": 20,
+       "raw": {
+        "GP": "12",
+        "L": "8",
+        "GD": "-15",
+        "P": "8",
+        "D": "2",
+        "W": "2",
+        "R": "18",
+        "Total": "2-2-8"
+       },
+       "group": "Italian Serie A Standings"
+      },
+      "17530": {
+       "rank": "19",
+       "gp": "13",
+       "w": "2",
+       "d": "1",
+       "l": "10",
+       "gd": "-17",
+       "pts": "7",
+       "of": 20,
+       "raw": {
+        "GP": "13",
+        "L": "10",
+        "GD": "-17",
+        "P": "7",
+        "D": "1",
+        "W": "2",
+        "R": "19",
+        "Total": "2-1-10"
+       },
+       "group": "Italian Serie A Standings"
+      },
+      "118": {
+       "rank": "20",
+       "gp": "12",
+       "w": "1",
+       "d": "3",
+       "l": "8",
+       "gd": "-13",
+       "pts": "6",
+       "of": 20,
+       "raw": {
+        "GP": "12",
+        "L": "8",
+        "GD": "-13",
+        "P": "6",
+        "D": "3",
+        "W": "1",
+        "R": "20",
+        "Total": "1-3-8"
+       },
+       "group": "Italian Serie A Standings"
+      }
+     },
+     "last5": {
+      "4057": [
+       {
+        "res": "D",
+        "gf": 4,
+        "ga": 4,
+        "opp": "Atalanta",
+        "home": false,
+        "date": "2026-10-25"
+       },
+       {
+        "res": "W",
+        "gf": 5,
+        "ga": 1,
+        "opp": "Lecce",
+        "home": true,
+        "date": "2026-10-29"
+       },
+       {
+        "res": "W",
+        "gf": 2,
+        "ga": 0,
+        "opp": "Torino",
+        "home": true,
+        "date": "2026-11-01"
+       },
+       {
+        "res": "L",
+        "gf": 0,
+        "ga": 1,
+        "opp": "Cagliari",
+        "home": false,
+        "date": "2026-11-07"
+       },
+       {
+        "res": "L",
+        "gf": 1,
+        "ga": 5,
+        "opp": "AC Milan",
+        "home": false,
+        "date": "2026-11-22"
+       }
+      ],
+      "115": [
+       {
+        "res": "L",
+        "gf": 1,
+        "ga": 2,
+        "opp": "Lazio",
+        "home": false,
+        "date": "2026-10-24"
+       },
+       {
+        "res": "D",
+        "gf": 0,
+        "ga": 0,
+        "opp": "Udinese",
+        "home": true,
+        "date": "2026-10-28"
+       },
+       {
+        "res": "W",
+        "gf": 3,
+        "ga": 0,
+        "opp": "Atalanta",
+        "home": false,
+        "date": "2026-11-02"
+       },
+       {
+        "res": "L",
+        "gf": 1,
+        "ga": 2,
+        "opp": "Bologna",
+        "home": true,
+        "date": "2026-11-07"
+       },
+       {
+        "res": "L",
+        "gf": 1,
+        "ga": 5,
+        "opp": "AS Roma",
+        "home": true,
+        "date": "2026-11-21"
+       }
+      ]
+     },
+     "h2h": [
+      {
+       "date": "2023-02-24",
+       "home_id": "4057",
+       "hs": "3",
+       "as": "4"
+      },
+      {
+       "date": "2022-10-01",
+       "home_id": "115",
+       "hs": "2",
+       "as": "1"
+      },
+      {
+       "date": "2022-01-21",
+       "home_id": "115",
+       "hs": "0",
+       "as": "1"
+      },
+      {
+       "date": "2021-08-20",
+       "home_id": "4057",
+       "hs": "2",
+       "as": "2"
+      },
+      {
+       "date": "2019-12-05",
+       "home_id": "115",
+       "hs": "2",
+       "as": "1"
+      }
+     ],
+     "leaders": {
+      "4057": [
+       [
+        "Goals",
+        "Antonio Raimondo",
+        "Matches: 10, Goals: 8"
+       ],
+       [
+        "Assists",
+        "Giorgi Kvernadze",
+        "Matches: 12, Assists: 4"
+       ],
+       [
+        "Total Shots",
+        "Giorgi Kvernadze",
+        "35"
+       ]
+      ],
+      "115": [
+       [
+        "Goals",
+        "Simone Lontani",
+        "Matches: 12, Goals: 3"
+       ],
+       [
+        "Assists",
+        "Giovanni Fabbian",
+        "Matches: 10, Assists: 2"
+       ],
+       [
+        "Total Shots",
+        "Simone Lontani",
+        "17"
+       ]
+      ]
+     },
+     "venue": "Stadio Benito Stirpe",
+     "city": "Frosinone"
+    }
+   }
+  },
+  "extra": {
+   "corners": {
+    "home": 11.040382985934588,
+    "away": 4.196712421623453,
+    "total": 15.23709540755804,
+    "lines": {
+     "8.5": 0.9669163661918042,
+     "9.5": 0.9374741705975039,
+     "10.5": 0.8926128162696699
+    }
+   },
+   "cards": {
+    "total": 3.2333333333333334,
+    "lines": {
+     "3.5": 0.4048926841540289,
+     "4.5": 0.22534828925957362,
+     "5.5": 0.10924291389449259
+    }
+   }
+  },
+  "msg_id": 9959,
+  "btn": 2
+ },
+ "401899528": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-28T17:00:00+03:00",
+  "sport": "football",
+  "div": "I2",
+  "reason": "edge_below_minimum",
+  "retry_at": 1795871337.60059
+ },
+ "401899527": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-28T17:00:00+03:00",
+  "sport": "football",
+  "div": "I2",
+  "reason": "edge_below_minimum",
+  "retry_at": 1795871337.60059
+ },
+ "401899525": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-28T17:00:00+03:00",
+  "sport": "football",
+  "div": "I2",
+  "reason": "no_qualified_real_market",
+  "retry_at": 1795871337.60059
  }
 }

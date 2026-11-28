@@ -1564,7 +1564,7 @@
  "value_day": "2026-11-28",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-28",
- "site_stamp": "1597|9958|2026-11-28 15|6|80d5e546d9142ea7",
+ "site_stamp": "1597|9960|2026-11-28 15|6|d6f932863bfb7ea4",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1735,7 +1735,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 9958,
+ "dz_last": 9960,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -3201,7 +3201,7 @@
   "quote_matches": 192
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-28T15:56:57.522456+03:00",
+  "last_poll": "2026-11-28T15:58:57.600590+03:00",
   "cursor": "507",
   "posts": [
    {
@@ -9410,6 +9410,67 @@
    "probability": 0.6301,
    "odds": 1.48,
    "edge": -0.06745,
+   "estimated": true
+  },
+  "football|I1|401875081": {
+   "reason": "published",
+   "checked_at": "2026-11-28T12:59:30.811015+00:00",
+   "kickoff": "2026-11-28T17:00:00+03:00",
+   "sport": "football",
+   "id": "401875081",
+   "home": "Фрозиноне",
+   "away": "Парма",
+   "market": "П1",
+   "strategy": "external_trial",
+   "source_count": 4,
+   "probability": 0.638,
+   "odds": 1.47,
+   "edge": -0.06214,
+   "estimated": false
+  },
+  "football|I2|401899528": {
+   "reason": "edge_below_minimum",
+   "checked_at": "2026-11-28T12:59:31.218827+00:00",
+   "kickoff": "2026-11-28T17:00:00+03:00",
+   "sport": "football",
+   "id": "401899528",
+   "home": "Ascoli",
+   "away": "Виртус Энтелла",
+   "priced_markets": 6,
+   "market": "ТМ 2.5",
+   "probability": 0.5246,
+   "odds": 1.76,
+   "edge": -0.0767,
+   "estimated": false
+  },
+  "football|I2|401899527": {
+   "reason": "edge_below_minimum",
+   "checked_at": "2026-11-28T12:59:31.621477+00:00",
+   "kickoff": "2026-11-28T17:00:00+03:00",
+   "sport": "football",
+   "id": "401899527",
+   "home": "Каррарезе",
+   "away": "Юве Стабия",
+   "priced_markets": 5,
+   "market": "ТМ 2.5",
+   "probability": 0.523,
+   "odds": 1.78,
+   "edge": -0.06906,
+   "estimated": false
+  },
+  "football|I2|401899525": {
+   "reason": "no_qualified_real_market",
+   "checked_at": "2026-11-28T12:59:32.033249+00:00",
+   "kickoff": "2026-11-28T17:00:00+03:00",
+   "sport": "football",
+   "id": "401899525",
+   "home": "Эмполи",
+   "away": "Верона",
+   "priced_markets": 6,
+   "market": "Обе забьют — да",
+   "probability": 0.5516,
+   "odds": 1.69,
+   "edge": -0.0678,
    "estimated": true
   }
  },
@@ -23737,6 +23798,67 @@
        "published_at": "2026-11-28T11:39:00+00:00",
        "observed_at": "2026-11-28T11:44:56.270403+00:00",
        "odds": 1.59,
+       "price_kind": "author_recorded"
+      }
+     ]
+    }
+   },
+   "football|I1|401875081": {
+    "status": "open",
+    "id": "401875081",
+    "sport": "football",
+    "div": "I1",
+    "kickoff": "2026-11-28T17:00:00+03:00",
+    "published_at": "2026-11-28T12:59:27.347704+00:00",
+    "msg_id": 9959,
+    "tip": {
+     "key": "H",
+     "label": "П1",
+     "p": 0.638,
+     "odds": 1.47,
+     "est": false,
+     "stake": 0.5,
+     "strategy": "external_trial",
+     "selection_mode": "external_fallback",
+     "trial_expires_at": null,
+     "probability_origin": "baseline_model",
+     "model_edge": -0.06219,
+     "source_count": 4,
+     "source_refs": [
+      {
+       "author": "/predictors/leonidzemliackov",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/28-11-2026-frosinone-calcio-parma",
+       "published_at": "2026-11-27T08:52:00+00:00",
+       "observed_at": "2026-11-27T09:50:14.238528+00:00",
+       "odds": 1.49,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/artem-278",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/28-11-2026-frosinone-calcio-parma",
+       "published_at": "2026-11-27T19:14:00+00:00",
+       "observed_at": "2026-11-27T19:15:48.093566+00:00",
+       "odds": 1.49,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/aleksandr-niculenko-1",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/28-11-2026-frosinone-calcio-parma",
+       "published_at": "2026-11-27T19:55:00+00:00",
+       "observed_at": "2026-11-27T19:59:47.905865+00:00",
+       "odds": 1.49,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/king-mountain",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/28-11-2026-frosinone-calcio-parma",
+       "published_at": "2026-11-28T08:51:00+00:00",
+       "observed_at": "2026-11-28T08:56:37.963874+00:00",
+       "odds": 1.41,
        "price_kind": "author_recorded"
       }
      ]
