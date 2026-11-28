@@ -3191,7 +3191,7 @@
   "quote_matches": 186
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-28T13:26:59.084878+03:00",
+  "last_poll": "2026-11-28T13:28:58.227113+03:00",
   "cursor": "501",
   "posts": [
    {
@@ -9057,6 +9057,51 @@
    "odds": 1.86,
    "edge": -0.04731,
    "estimated": false
+  },
+  "esports|CS2|1817111": {
+   "reason": "no_real_odds",
+   "checked_at": "2026-11-28T10:29:24.034026+00:00",
+   "kickoff": "2026-11-28T14:30:00+03:00",
+   "sport": "esports",
+   "id": "1817111",
+   "home": "MIBR",
+   "away": "Imperial",
+   "priced_markets": 0,
+   "market": "Победа: Imperial",
+   "probability": 0.5419,
+   "odds": 1.72,
+   "edge": -0.06793,
+   "estimated": true
+  },
+  "esports|CS2|1817110": {
+   "reason": "no_real_odds",
+   "checked_at": "2026-11-28T10:29:26.187148+00:00",
+   "kickoff": "2026-11-28T14:30:00+03:00",
+   "sport": "esports",
+   "id": "1817110",
+   "home": "FUT Esports",
+   "away": "100 Thieves",
+   "priced_markets": 0,
+   "market": "Победа: 100 Thieves",
+   "probability": 0.6055,
+   "odds": 1.54,
+   "edge": -0.06753,
+   "estimated": true
+  },
+  "esports|DOTA|1816497": {
+   "reason": "no_real_odds",
+   "checked_at": "2026-11-28T10:29:28.651225+00:00",
+   "kickoff": "2026-11-28T14:30:00+03:00",
+   "sport": "esports",
+   "id": "1816497",
+   "home": "Team Yandex",
+   "away": "Team Liquid",
+   "priced_markets": 0,
+   "market": "Всухую (2:0 или 0:2)",
+   "probability": 0.6807,
+   "odds": 1.37,
+   "edge": -0.06744,
+   "estimated": true
   }
  },
  "source_trial": {
