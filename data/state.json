@@ -3136,42 +3136,42 @@
     "weight": 0.0,
     "settled_matches": 85,
     "required_matches": 100,
-    "trained_at": "2026-11-28T05:00:54.939832+00:00"
+    "trained_at": "2026-11-28T05:05:08.023127+00:00"
    },
    "basketball": {
     "status": "collecting",
     "weight": 0.0,
-    "settled_matches": 84,
+    "settled_matches": 85,
     "required_matches": 100,
-    "trained_at": "2026-11-28T05:00:54.939832+00:00"
+    "trained_at": "2026-11-28T05:05:08.023127+00:00"
    },
    "tennis": {
     "status": "collecting",
     "weight": 0.0,
     "settled_matches": 10,
     "required_matches": 100,
-    "trained_at": "2026-11-28T05:00:54.939832+00:00"
+    "trained_at": "2026-11-28T05:05:08.023127+00:00"
    },
    "esports:CS2": {
     "status": "collecting",
     "weight": 0.0,
     "settled_matches": 0,
     "required_matches": 100,
-    "trained_at": "2026-11-28T05:00:54.939832+00:00"
+    "trained_at": "2026-11-28T05:05:08.023127+00:00"
    },
    "esports:DOTA": {
     "status": "collecting",
     "weight": 0.0,
     "settled_matches": 0,
     "required_matches": 100,
-    "trained_at": "2026-11-28T05:00:54.939832+00:00"
+    "trained_at": "2026-11-28T05:05:08.023127+00:00"
    }
   },
   "source": {
-   "last_success": "2026-11-28T04:44:55.499710+00:00",
-   "parsed": 327,
-   "added": 41,
-   "discovered_matches": 59,
+   "last_success": "2026-11-28T05:05:08.023127+00:00",
+   "parsed": 314,
+   "added": 33,
+   "discovered_matches": 58,
    "pages": 18,
    "errors": [],
    "parsed_by_sport": {
@@ -3179,18 +3179,18 @@
     "ice-hockey": 50,
     "basketball": 50,
     "tennis": 44,
-    "csgo": 35,
+    "csgo": 33,
     "dota2": 50
    }
   },
   "error": null,
-  "tips": 20948,
+  "tips": 20960,
   "snapshots": 454,
-  "unmapped_markets": 31622,
-  "quote_matches": 182
+  "unmapped_markets": 31643,
+  "quote_matches": 183
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-28T08:03:07.982147+03:00",
+  "last_poll": "2026-11-28T08:05:08.023127+03:00",
   "cursor": "497",
   "posts": [
    {
@@ -4053,7 +4053,7 @@
    "401909333": "in",
    "401909334": "post",
    "401909335": "post",
-   "401909336": "in",
+   "401909336": "post",
    "401892133": "post",
    "401900872": "post",
    "401900870": "post",
@@ -4087,8 +4087,8 @@
    "401936054": "post",
    "401876813": "post",
    "401933725": "in",
-   "401877537": "pre",
-   "401877539": "pre",
+   "401877537": "in",
+   "401877539": "in",
    "401877542": "pre",
    "401877516": "pre",
    "401892810": "pre",
