@@ -524,7 +524,7 @@ null
 ]
 ],
 "div": "KSA",
-"state": "pre",
+"state": "in",
 "bo": null,
 "prediction": "",
 "hs": "0",
@@ -8298,6 +8298,76 @@ null
 ]
 ],
 "div": "P1",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "football",
+"id": "401878925",
+"league": "Бельгия · Про-лига",
+"kickoff": "2026-11-29T21:15:00+03:00",
+"home": "Юнион",
+"away": "Гент",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/5807.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/3611.png",
+"hid": "5807",
+"aid": "3611",
+"bb": "https://betboom.ru/search?query=%D0%AE%D0%BD%D0%B8%D0%BE%D0%BD&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/bel.1",
+"url": "live.html?s=football&p=soccer%2Fbel.1&e=401878925&h=%D0%AE%D0%BD%D0%B8%D0%BE%D0%BD&a=%D0%93%D0%B5%D0%BD%D1%82",
+"participants": [
+[
+"Юнион",
+"Union St.-Gilloise"
+],
+[
+"Гент",
+"KAA Gent"
+]
+],
+"div": "B1",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "football",
+"id": "401843493",
+"league": "Норвегия · Элитсерия",
+"kickoff": "2026-11-29T21:15:00+03:00",
+"home": "Викинг",
+"away": "Волеренга",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/510.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/2791.png",
+"hid": "510",
+"aid": "2791",
+"bb": "https://betboom.ru/search?query=%D0%92%D0%B8%D0%BA%D0%B8%D0%BD%D0%B3&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/nor.1",
+"url": "live.html?s=football&p=soccer%2Fnor.1&e=401843493&h=%D0%92%D0%B8%D0%BA%D0%B8%D0%BD%D0%B3&a=%D0%92%D0%BE%D0%BB%D0%B5%D1%80%D0%B5%D0%BD%D0%B3%D0%B0",
+"participants": [
+[
+"Викинг",
+"Viking FK"
+],
+[
+"Волеренга",
+"Vålerenga"
+]
+],
+"div": "NOR",
 "state": "pre",
 "bo": null,
 "prediction": "",
