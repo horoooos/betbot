@@ -3188,7 +3188,7 @@
   "quote_matches": 178
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-28T06:10:55.359927+03:00",
+  "last_poll": "2026-11-28T06:12:54.907603+03:00",
   "cursor": "497",
   "posts": [
    {
@@ -21357,7 +21357,7 @@
     "profit_pct": 0.51
    },
    "football|USA|401933727": {
-    "status": "open",
+    "status": "settled",
     "id": "401933727",
     "sport": "football",
     "div": "USA",
@@ -21397,7 +21397,10 @@
        "price_kind": "author_recorded"
       }
      ]
-    }
+    },
+    "settled_at": "2026-11-28T03:12:54.907603+00:00",
+    "hit": false,
+    "profit_pct": -0.5
    },
    "basketball|NBA|401909331": {
     "status": "open",
