@@ -7,7 +7,6 @@
  "schedule_day": "2026-11-28",
  "content_slot": "2026-11-28-10",
  "news_seen": [
-  "https://www.sport-express.ru/basketball/nba/news/centrovoy-mitchell-robinson-propustit-tretiy-podryad-match-bostona-v-sezone-nba-iz-za-bolezni-24-noyabrya-2026-2478563/",
   "https://www.sport-express.ru/tennis/wta/news/ekaterina-aleksandrova-edinstvennaya-rossiyanka-s-polozhitelnym-balansom-matchey-protiv-top-10-wta-v-sezone-2026-2478558/",
   "https://www.sport-express.ru/tennis/wta/news/anna-kalinskaya-pokazala-luchshiy-rezultat-sezona-2026-goda-v-wta-po-chislu-spasennyh-matchbolov-v-vyigrannom-matche-2478557/",
   "https://www.sport-express.ru/tennis/atp/news/tennisista-danielya-salasara-diskvalificirovali-na-poltora-goda-za-narushenie-antikorrupcionnyh-pravil-2478564/",
@@ -506,9 +505,10 @@
   "g2-esports-obygrala-team-liquid-na-pgl-major-singapore-2026",
   "natus-vincere-nachali-vystupleniye-na-pgl-major-singapore-2026-s-pobedy-nad",
   "parivision-srazit-sya-s-flyquest-a-1w-team-stolknet-sya-s-the-mongolz-matchi",
-  "nepriyatno-zweih-o-porazhenii-ot-navi-na-pgl-major-singapore-2026"
+  "nepriyatno-zweih-o-porazhenii-ot-navi-na-pgl-major-singapore-2026",
+  "nafany-o-vystuplenii-na-meidzhore-chestno-govorya-seichas-ya-ispytyvayu-ne-te"
  ],
- "news_i": 0,
+ "news_i": 2,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1706,7 +1706,7 @@
  "streak_day": {
   "2026-11-22": 2
  },
- "news_next": "2026-11-28T12:31:37.911581+03:00",
+ "news_next": "2026-11-28T13:01:59.161031+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1740,7 +1740,6 @@
  "vk_mode": "photo",
  "dz_err": null,
  "img_used": [
-  "https://images.cybersport.ru/images/as-is/plain/33/330e0115-6a5b-4e50-9ae3-e113f64c0c3f.jpg",
   "https://upload.wikimedia.org/wikipedia/commons/4/42/CSKA_Moscow_and_Pakistan_national_football_team_at_the_KMC_Stadium%2C_Karachi_in_1969.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
   "https://images.cybersport.ru/images/as-is/plain/86/86e852b6-a4b5-4abc-b0f1-0fd057fc095f.jpg",
   "https://upload.wikimedia.org/wikipedia/commons/0/0c/MatheusReis2021.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
@@ -2039,7 +2038,8 @@
   "https://images.cybersport.ru/images/as-is/plain/1e/1e8ffed1-9564-4a17-81fc-6f3fdf69d5b4.jpg",
   "https://images.cybersport.ru/images/as-is/plain/e3/e364411e-7aa7-4216-802b-ea9affe903ef.jpg",
   "https://images.cybersport.ru/images/as-is/plain/ae/aef60dbf-25f4-43f6-972e-814be19ecf2f.jpg",
-  "https://images.cybersport.ru/images/as-is/plain/d3/d3650569-a802-4df0-b46a-9012483ee6f7.jpg"
+  "https://images.cybersport.ru/images/as-is/plain/d3/d3650569-a802-4df0-b46a-9012483ee6f7.jpg",
+  "https://images.cybersport.ru/images/as-is/plain/b2/b28ac280-6171-44b3-b68d-46774d714d6e.jpg"
  ],
  "indexnow_day": "2026-11-28",
  "vk_wall_err": null,
@@ -2543,7 +2543,8 @@
   "9917",
   "9923",
   "9925",
-  "9927"
+  "9927",
+  "9930"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -2979,11 +2980,12 @@
   "2026-11-28:новость:db58541f625132c0dd05e3a8",
   "2026-11-28:новость:a8649f765d3e6e3a40e74285",
   "2026-11-28:новость:f0825172d16a7bf1f089845c",
-  "2026-11-28:новость:eed8bcbd6a68a9d1764fe160"
+  "2026-11-28:новость:eed8bcbd6a68a9d1764fe160",
+  "2026-11-28:новость:d8aecb84fc61a46c1c3f2c14"
  ],
  "dz_last_delivery": {
-  "source_id": 9927,
-  "message_id": 983,
+  "source_id": 9930,
+  "message_id": 984,
   "kind": "новость"
  },
  "learn_attempt_day": "2026-11-28",
@@ -3186,7 +3188,7 @@
   "quote_matches": 186
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-28T12:30:59.178117+03:00",
+  "last_poll": "2026-11-28T12:32:59.161031+03:00",
   "cursor": "499",
   "posts": [
    {
