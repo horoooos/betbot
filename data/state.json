@@ -1574,7 +1574,7 @@
  "value_day": "2026-11-27",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-27",
- "site_stamp": "1588|9901|2026-11-28 06|6|49ad3df7e031fbbb",
+ "site_stamp": "1589|9902|2026-11-28 06|6|43556b189ea17b50",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1744,7 +1744,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 9901,
+ "dz_last": 9902,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2085,7 +2085,7 @@
  "vk_photos": [],
  "vk_photo_until": 1794644243.1147308,
  "vk_photo_cursor": {},
- "vk_story_last": 9901,
+ "vk_story_last": 9902,
  "vk_story_err": null,
  "push_weekly": "2026-48",
  "vk_story_at": 1795832722.905856,
@@ -3118,15 +3118,15 @@
   "model": {
    "weight": 0.0,
    "status": "baseline_better",
-   "settled_matches": 187,
+   "settled_matches": 188,
    "required_matches": 100,
-   "trained_at": "2026-11-27T21:56:35.246073+00:00",
+   "trained_at": "2026-11-28T03:10:55.359927+00:00",
    "candidate_weight": 0.0,
    "train_matches": 139,
-   "validation_matches": 47,
+   "validation_matches": 48,
    "validation_from": "2026-11-25T00:00:00+00:00",
-   "validation_logloss": 2.811408825174363,
-   "validation_baseline_logloss": 2.811408825174363
+   "validation_logloss": 2.8225502014802673,
+   "validation_baseline_logloss": 2.8225502014802673
   },
   "sport_models": {
    "hockey": {
@@ -3188,7 +3188,7 @@
   "quote_matches": 178
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-28T06:08:54.740252+03:00",
+  "last_poll": "2026-11-28T06:10:55.359927+03:00",
   "cursor": "497",
   "posts": [
    {
@@ -4081,7 +4081,7 @@
    "401888557": "post",
    "401936333": "post",
    "401936055": "post",
-   "401933727": "in",
+   "401933727": "post",
    "401936054": "in",
    "401876813": "in",
    "401933725": "pre",
@@ -8726,7 +8726,7 @@
   },
   "esports|CS2|1817105": {
    "reason": "no_real_odds",
-   "checked_at": "2026-11-28T02:59:15.385728+00:00",
+   "checked_at": "2026-11-28T03:11:21.676862+00:00",
    "kickoff": "2026-11-28T07:00:00+03:00",
    "sport": "esports",
    "id": "1817105",
@@ -8741,7 +8741,7 @@
   },
   "esports|CS2|1817025": {
    "reason": "no_real_odds",
-   "checked_at": "2026-11-28T02:59:17.527683+00:00",
+   "checked_at": "2026-11-28T03:11:23.784064+00:00",
    "kickoff": "2026-11-28T07:00:00+03:00",
    "sport": "esports",
    "id": "1817025",
