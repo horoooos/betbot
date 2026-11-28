@@ -339,7 +339,7 @@ null
 ]
 ],
 "div": "JPN",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "",
 "hs": "3",
@@ -6744,6 +6744,426 @@ null
 ]
 ],
 "div": "RSA",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "football",
+"id": "401874992",
+"league": "Италия · Серия A",
+"kickoff": "2026-11-29T17:00:00+03:00",
+"home": "Сассуоло",
+"away": "Наполи",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/3997.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/114.png",
+"hid": "3997",
+"aid": "114",
+"bb": "https://betboom.ru/search?query=%D0%A1%D0%B0%D1%81%D1%81%D1%83%D0%BE%D0%BB%D0%BE&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/ita.1",
+"url": "live.html?s=football&p=soccer%2Fita.1&e=401874992&h=%D0%A1%D0%B0%D1%81%D1%81%D1%83%D0%BE%D0%BB%D0%BE&a=%D0%9D%D0%B0%D0%BF%D0%BE%D0%BB%D0%B8",
+"participants": [
+[
+"Сассуоло",
+"Sassuolo"
+],
+[
+"Наполи",
+"Napoli"
+]
+],
+"div": "I1",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "football",
+"id": "401899523",
+"league": "Италия · Серия B",
+"kickoff": "2026-11-29T17:00:00+03:00",
+"home": "Modena",
+"away": "Падова",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/2573.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/3952.png",
+"hid": "2573",
+"aid": "3952",
+"bb": "https://betboom.ru/search?query=%D0%9C%D0%BE%D0%B4%D0%B5%D0%BD%D0%B0&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/ita.2",
+"url": "live.html?s=football&p=soccer%2Fita.2&e=401899523&h=Modena&a=%D0%9F%D0%B0%D0%B4%D0%BE%D0%B2%D0%B0",
+"participants": [
+[
+"Modena",
+"Modena"
+],
+[
+"Падова",
+"Padova"
+]
+],
+"div": "I2",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "football",
+"id": "401899520",
+"league": "Италия · Серия B",
+"kickoff": "2026-11-29T17:00:00+03:00",
+"home": "Зюйдтироль",
+"away": "Мантова",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/11139.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/3991.png",
+"hid": "11139",
+"aid": "3991",
+"bb": "https://betboom.ru/search?query=%D0%97%D1%8E%D0%B9%D0%B4%D1%82%D0%B8%D1%80%D0%BE%D0%BB%D1%8C&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/ita.2",
+"url": "live.html?s=football&p=soccer%2Fita.2&e=401899520&h=%D0%97%D1%8E%D0%B9%D0%B4%D1%82%D0%B8%D1%80%D0%BE%D0%BB%D1%8C&a=%D0%9C%D0%B0%D0%BD%D1%82%D0%BE%D0%B2%D0%B0",
+"participants": [
+[
+"Зюйдтироль",
+"Sudtirol"
+],
+[
+"Мантова",
+"Mantova"
+]
+],
+"div": "I2",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "football",
+"id": "401876393",
+"league": "Франция · Лига 1",
+"kickoff": "2026-11-29T17:00:00+03:00",
+"home": "Осер",
+"away": "Олимпик",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/172.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/176.png",
+"hid": "172",
+"aid": "176",
+"bb": "https://betboom.ru/search?query=%D0%9E%D1%81%D0%B5%D1%80&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/fra.1",
+"url": "live.html?s=football&p=soccer%2Ffra.1&e=401876393&h=%D0%9E%D1%81%D0%B5%D1%80&a=%D0%9E%D0%BB%D0%B8%D0%BC%D0%BF%D0%B8%D0%BA",
+"participants": [
+[
+"Осер",
+"AJ Auxerre"
+],
+[
+"Олимпик",
+"Marseille"
+]
+],
+"div": "F1",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "football",
+"id": "401842890",
+"league": "Швеция · Аллсвенскан",
+"kickoff": "2026-11-29T17:00:00+03:00",
+"home": "Дегерфорс",
+"away": "Örgryte IS",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/20856.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/131552.png",
+"hid": "20856",
+"aid": "131552",
+"bb": "https://betboom.ru/search?query=%D0%94%D0%B5%D0%B3%D0%B5%D1%80%D1%84%D0%BE%D1%80%D1%81&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/swe.1",
+"url": "live.html?s=football&p=soccer%2Fswe.1&e=401842890&h=%D0%94%D0%B5%D0%B3%D0%B5%D1%80%D1%84%D0%BE%D1%80%D1%81&a=%C3%96rgryte+IS",
+"participants": [
+[
+"Дегерфорс",
+"Degerfors IF"
+],
+[
+"Örgryte IS",
+"Örgryte IS"
+]
+],
+"div": "SWE",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "football",
+"id": "401842896",
+"league": "Швеция · Аллсвенскан",
+"kickoff": "2026-11-29T17:00:00+03:00",
+"home": "Юргорден",
+"away": "Хеккен",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/2339.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/7834.png",
+"hid": "2339",
+"aid": "7834",
+"bb": "https://betboom.ru/search?query=%D0%AE%D1%80%D0%B3%D0%BE%D1%80%D0%B4%D0%B5%D0%BD&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/swe.1",
+"url": "live.html?s=football&p=soccer%2Fswe.1&e=401842896&h=%D0%AE%D1%80%D0%B3%D0%BE%D1%80%D0%B4%D0%B5%D0%BD&a=%D0%A5%D0%B5%D0%BA%D0%BA%D0%B5%D0%BD",
+"participants": [
+[
+"Юргорден",
+"Djurgården"
+],
+[
+"Хеккен",
+"BK Häcken"
+]
+],
+"div": "SWE",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "football",
+"id": "401842894",
+"league": "Швеция · Аллсвенскан",
+"kickoff": "2026-11-29T17:00:00+03:00",
+"home": "Хальмстад",
+"away": "Мьельбю",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/3017.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/20301.png",
+"hid": "3017",
+"aid": "20301",
+"bb": "https://betboom.ru/search?query=%D0%A5%D0%B0%D0%BB%D1%8C%D0%BC%D1%81%D1%82%D0%B0%D0%B4&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/swe.1",
+"url": "live.html?s=football&p=soccer%2Fswe.1&e=401842894&h=%D0%A5%D0%B0%D0%BB%D1%8C%D0%BC%D1%81%D1%82%D0%B0%D0%B4&a=%D0%9C%D1%8C%D0%B5%D0%BB%D1%8C%D0%B1%D1%8E",
+"participants": [
+[
+"Хальмстад",
+"Halmstads BK"
+],
+[
+"Мьельбю",
+"Mjällby AIF"
+]
+],
+"div": "SWE",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "football",
+"id": "401842895",
+"league": "Швеция · Аллсвенскан",
+"kickoff": "2026-11-29T17:00:00+03:00",
+"home": "Эльфсборг",
+"away": "GAIS",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/529.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/8222.png",
+"hid": "529",
+"aid": "8222",
+"bb": "https://betboom.ru/search?query=%D0%AD%D0%BB%D1%8C%D1%84%D1%81%D0%B1%D0%BE%D1%80%D0%B3&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/swe.1",
+"url": "live.html?s=football&p=soccer%2Fswe.1&e=401842895&h=%D0%AD%D0%BB%D1%8C%D1%84%D1%81%D0%B1%D0%BE%D1%80%D0%B3&a=GAIS",
+"participants": [
+[
+"Эльфсборг",
+"IF Elfsborg"
+],
+[
+"GAIS",
+"GAIS"
+]
+],
+"div": "SWE",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "football",
+"id": "401842893",
+"league": "Швеция · Аллсвенскан",
+"kickoff": "2026-11-29T17:00:00+03:00",
+"home": "IFK Göteborg",
+"away": "Сириус",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/2556.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/8547.png",
+"hid": "2556",
+"aid": "8547",
+"bb": "https://betboom.ru/search?query=%D0%93%D0%BE%D1%82%D0%B5%D0%B1%D0%BE%D1%80%D0%B3&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/swe.1",
+"url": "live.html?s=football&p=soccer%2Fswe.1&e=401842893&h=IFK+G%C3%B6teborg&a=%D0%A1%D0%B8%D1%80%D0%B8%D1%83%D1%81",
+"participants": [
+[
+"IFK Göteborg",
+"IFK Göteborg"
+],
+[
+"Сириус",
+"IK Sirius"
+]
+],
+"div": "SWE",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "football",
+"id": "401842892",
+"league": "Швеция · Аллсвенскан",
+"kickoff": "2026-11-29T17:00:00+03:00",
+"home": "Кальмар",
+"away": "АИК",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/3052.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/994.png",
+"hid": "3052",
+"aid": "994",
+"bb": "https://betboom.ru/search?query=%D0%9A%D0%B0%D0%BB%D1%8C%D0%BC%D0%B0%D1%80&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/swe.1",
+"url": "live.html?s=football&p=soccer%2Fswe.1&e=401842892&h=%D0%9A%D0%B0%D0%BB%D1%8C%D0%BC%D0%B0%D1%80&a=%D0%90%D0%98%D0%9A",
+"participants": [
+[
+"Кальмар",
+"Kalmar FF"
+],
+[
+"АИК",
+"AIK"
+]
+],
+"div": "SWE",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "football",
+"id": "401842891",
+"league": "Швеция · Аллсвенскан",
+"kickoff": "2026-11-29T17:00:00+03:00",
+"home": "Русенгорд",
+"away": "Броммапойкарна",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/2720.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/8221.png",
+"hid": "2720",
+"aid": "8221",
+"bb": "https://betboom.ru/search?query=%D0%A0%D1%83%D1%81%D0%B5%D0%BD%D0%B3%D0%BE%D1%80%D0%B4&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/swe.1",
+"url": "live.html?s=football&p=soccer%2Fswe.1&e=401842891&h=%D0%A0%D1%83%D1%81%D0%B5%D0%BD%D0%B3%D0%BE%D1%80%D0%B4&a=%D0%91%D1%80%D0%BE%D0%BC%D0%BC%D0%B0%D0%BF%D0%BE%D0%B9%D0%BA%D0%B0%D1%80%D0%BD%D0%B0",
+"participants": [
+[
+"Русенгорд",
+"Malmö FF"
+],
+[
+"Броммапойкарна",
+"IF Brommapojkarna"
+]
+],
+"div": "SWE",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "football",
+"id": "401842897",
+"league": "Швеция · Аллсвенскан",
+"kickoff": "2026-11-29T17:00:00+03:00",
+"home": "Вестерос",
+"away": "Хаммарбю",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/22163.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/2495.png",
+"hid": "22163",
+"aid": "2495",
+"bb": "https://betboom.ru/search?query=%D0%92%D0%B5%D1%81%D1%82%D0%B5%D1%80%D0%BE%D1%81&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/swe.1",
+"url": "live.html?s=football&p=soccer%2Fswe.1&e=401842897&h=%D0%92%D0%B5%D1%81%D1%82%D0%B5%D1%80%D0%BE%D1%81&a=%D0%A5%D0%B0%D0%BC%D0%BC%D0%B0%D1%80%D0%B1%D1%8E",
+"participants": [
+[
+"Вестерос",
+"Västerås SK"
+],
+[
+"Хаммарбю",
+"Hammarby IF"
+]
+],
+"div": "SWE",
 "state": "pre",
 "bo": null,
 "prediction": "",
