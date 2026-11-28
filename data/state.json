@@ -3188,7 +3188,7 @@
   "quote_matches": 172
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-28T04:30:55.370128+03:00",
+  "last_poll": "2026-11-28T04:32:55.626802+03:00",
   "cursor": "497",
   "posts": [
    {
@@ -4080,7 +4080,7 @@
    "401912683": "post",
    "401888557": "post",
    "401936333": "in",
-   "401936055": "in",
+   "401936055": "post",
    "401933727": "in",
    "401936054": "pre",
    "401876813": "pre",
@@ -8609,7 +8609,7 @@
   },
   "football|COL|401936054": {
    "reason": "edge_below_minimum",
-   "checked_at": "2026-11-28T01:23:15.952156+00:00",
+   "checked_at": "2026-11-28T01:33:15.611793+00:00",
    "kickoff": "2026-11-28T04:40:00+03:00",
    "sport": "football",
    "id": "401936054",
@@ -8624,7 +8624,7 @@
   },
   "football|CRC|401876813": {
    "reason": "edge_below_minimum",
-   "checked_at": "2026-11-28T01:21:16.875277+00:00",
+   "checked_at": "2026-11-28T01:33:15.923430+00:00",
    "kickoff": "2026-11-28T05:00:00+03:00",
    "sport": "football",
    "id": "401876813",
@@ -8632,9 +8632,9 @@
    "away": "Escorpiones Belén",
    "priced_markets": 7,
    "market": "П1",
-   "probability": 0.6388,
+   "probability": 0.6389,
    "odds": 1.44,
-   "edge": -0.08013,
+   "edge": -0.07998,
    "estimated": false
   },
   "basketball|NBA|401909332": {
