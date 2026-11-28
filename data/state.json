@@ -3166,29 +3166,29 @@
    }
   },
   "source": {
-   "last_success": "2026-11-28T01:36:55.372460+00:00",
-   "parsed": 314,
-   "added": 49,
+   "last_success": "2026-11-28T01:58:55.587967+00:00",
+   "parsed": 322,
+   "added": 55,
    "discovered_matches": 59,
-   "pages": 17,
+   "pages": 18,
    "errors": [],
    "parsed_by_sport": {
     "soccer": 50,
     "ice-hockey": 50,
     "basketball": 50,
     "tennis": 44,
-    "csgo": 30,
+    "csgo": 29,
     "dota2": 50
    }
   },
   "error": null,
-  "tips": 20731,
+  "tips": 20746,
   "snapshots": 447,
-  "unmapped_markets": 31399,
-  "quote_matches": 174
+  "unmapped_markets": 31439,
+  "quote_matches": 175
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-28T04:56:54.933636+03:00",
+  "last_poll": "2026-11-28T04:58:55.587967+03:00",
   "cursor": "497",
   "posts": [
    {
@@ -8707,6 +8707,21 @@
    "probability": 0.6597,
    "odds": 1.41,
    "edge": -0.06982,
+   "estimated": true
+  },
+  "football|USA|401933725": {
+   "reason": "no_qualified_real_market",
+   "checked_at": "2026-11-28T01:59:23.072199+00:00",
+   "kickoff": "2026-11-28T06:00:00+03:00",
+   "sport": "football",
+   "id": "401933725",
+   "home": "Реал Солт-Лейк",
+   "away": "Ванкувер Уайткэпс",
+   "priced_markets": 3,
+   "market": "Обе забьют — да",
+   "probability": 0.6355,
+   "odds": 1.46,
+   "edge": -0.07217,
    "estimated": true
   }
  },
