@@ -1,41 +1,6 @@
 [
 {
 "sport": "football",
-"id": "401933725",
-"league": "США · MLS",
-"kickoff": "2026-11-28T06:00:00+03:00",
-"home": "Реал Солт-Лейк",
-"away": "Ванкувер Уайткэпс",
-"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/4771.png",
-"al": "https://a.espncdn.com/i/teamlogos/soccer/500/9727.png",
-"hid": "4771",
-"aid": "9727",
-"bb": "https://betboom.ru/search?query=%D0%A1%D0%BE%D0%BB%D1%82-%D0%9B%D0%B5%D0%B9%D0%BA&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
-"path": "soccer/usa.1",
-"url": "live.html?s=football&p=soccer%2Fusa.1&e=401933725&h=%D0%A0%D0%B5%D0%B0%D0%BB+%D0%A1%D0%BE%D0%BB%D1%82-%D0%9B%D0%B5%D0%B9%D0%BA&a=%D0%92%D0%B0%D0%BD%D0%BA%D1%83%D0%B2%D0%B5%D1%80+%D0%A3%D0%B0%D0%B9%D1%82%D0%BA%D1%8D%D0%BF%D1%81",
-"participants": [
-[
-"Реал Солт-Лейк",
-"Real Salt Lake"
-],
-[
-"Ванкувер Уайткэпс",
-"Vancouver Whitecaps"
-]
-],
-"div": "USA",
-"state": "post",
-"bo": null,
-"prediction": "",
-"hs": "0",
-"as": "1",
-"tip": "",
-"top": false,
-"bot": null,
-"lt": null
-},
-{
-"sport": "football",
 "id": "401877537",
 "league": "Япония · J-League",
 "kickoff": "2026-11-28T08:00:00+03:00",
@@ -59,7 +24,7 @@
 ]
 ],
 "div": "JPN",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "predictions/2026-11-28-kioto-sanga-sereso-osaka-401877537.html",
 "hs": "4",
@@ -6464,6 +6429,181 @@ null
 ]
 ],
 "div": "D2",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "football",
+"id": "401874500",
+"league": "Дания · Суперлига",
+"kickoff": "2026-11-29T16:00:00+03:00",
+"home": "Люнгбю",
+"away": "Виборг",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/7860.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/3153.png",
+"hid": "7860",
+"aid": "3153",
+"bb": "https://betboom.ru/search?query=%D0%9B%D1%8E%D0%BD%D0%B3%D0%B1%D1%8E&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/den.1",
+"url": "live.html?s=football&p=soccer%2Fden.1&e=401874500&h=%D0%9B%D1%8E%D0%BD%D0%B3%D0%B1%D1%8E&a=%D0%92%D0%B8%D0%B1%D0%BE%D1%80%D0%B3",
+"participants": [
+[
+"Люнгбю",
+"Lyngby Boldklub"
+],
+[
+"Виборг",
+"Viborg FF"
+]
+],
+"div": "DNK",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "football",
+"id": "401874725",
+"league": "Дания · Суперлига",
+"kickoff": "2026-11-29T16:00:00+03:00",
+"home": "Раннерс",
+"away": "Хорсенс",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/3132.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/3585.png",
+"hid": "3132",
+"aid": "3585",
+"bb": "https://betboom.ru/search?query=%D0%A0%D0%B0%D0%BD%D0%BD%D0%B5%D1%80%D1%81&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/den.1",
+"url": "live.html?s=football&p=soccer%2Fden.1&e=401874725&h=%D0%A0%D0%B0%D0%BD%D0%BD%D0%B5%D1%80%D1%81&a=%D0%A5%D0%BE%D1%80%D1%81%D0%B5%D0%BD%D1%81",
+"participants": [
+[
+"Раннерс",
+"Randers FC"
+],
+[
+"Хорсенс",
+"AC Horsens"
+]
+],
+"div": "DNK",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "football",
+"id": "401882787",
+"league": "Испания · Ла Лига",
+"kickoff": "2026-11-29T16:00:00+03:00",
+"home": "Валенсия",
+"away": "Осасуна",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/94.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/97.png",
+"hid": "94",
+"aid": "97",
+"bb": "https://betboom.ru/search?query=%D0%92%D0%B0%D0%BB%D0%B5%D0%BD%D1%81%D0%B8%D1%8F&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/esp.1",
+"url": "live.html?s=football&p=soccer%2Fesp.1&e=401882787&h=%D0%92%D0%B0%D0%BB%D0%B5%D0%BD%D1%81%D0%B8%D1%8F&a=%D0%9E%D1%81%D0%B0%D1%81%D1%83%D0%BD%D0%B0",
+"participants": [
+[
+"Валенсия",
+"Valencia"
+],
+[
+"Осасуна",
+"Osasuna"
+]
+],
+"div": "SP1",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "football",
+"id": "401883103",
+"league": "Испания · Сегунда",
+"kickoff": "2026-11-29T16:00:00+03:00",
+"home": "Granada",
+"away": "Ceuta",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/3747.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/5404.png",
+"hid": "3747",
+"aid": "5404",
+"bb": "https://betboom.ru/search?query=%D0%93%D1%80%D0%B0%D0%BD%D0%B0%D0%B4%D0%B0&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/esp.2",
+"url": "live.html?s=football&p=soccer%2Fesp.2&e=401883103&h=Granada&a=Ceuta",
+"participants": [
+[
+"Granada",
+"Granada"
+],
+[
+"Ceuta",
+"Ceuta"
+]
+],
+"div": "SP2",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "football",
+"id": "401888242",
+"league": "Турция · Суперлига",
+"kickoff": "2026-11-29T16:00:00+03:00",
+"home": "Эюпспор",
+"away": "Истанбул Башакшехир",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/20729.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/7914.png",
+"hid": "20729",
+"aid": "7914",
+"bb": "https://betboom.ru/search?query=%D0%AD%D1%8E%D0%BF%D1%81%D0%BF%D0%BE%D1%80&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/tur.1",
+"url": "live.html?s=football&p=soccer%2Ftur.1&e=401888242&h=%D0%AD%D1%8E%D0%BF%D1%81%D0%BF%D0%BE%D1%80&a=%D0%98%D1%81%D1%82%D0%B0%D0%BD%D0%B1%D1%83%D0%BB+%D0%91%D0%B0%D1%88%D0%B0%D0%BA%D1%88%D0%B5%D1%85%D0%B8%D1%80",
+"participants": [
+[
+"Эюпспор",
+"Eyupspor"
+],
+[
+"Истанбул Башакшехир",
+"Istanbul Basaksehir"
+]
+],
+"div": "T1",
 "state": "pre",
 "bo": null,
 "prediction": "",

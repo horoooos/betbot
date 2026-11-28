@@ -5,7 +5,7 @@
  },
  "learned": "2026-11-28",
  "schedule_day": "2026-11-28",
- "content_slot": "2026-11-27-23",
+ "content_slot": "2026-11-28-10",
  "news_seen": [
   "https://www.sport-express.ru/football/foreign/news/al-nasr-al-sadd-schet-i-rezultat-matcha-ligi-chempionov-afk-24-noyabrya-2026-2478547/",
   "https://www.sport-express.ru/stavki-na-sport/prognozy/news/sabah-barselona-prognoz-na-match-ligi-chempionov-25-noyabrya-2026-goda-2478528/",
@@ -1501,90 +1501,80 @@
   ]
  },
  "express": {
-  "msg": 9758,
+  "msg": 9921,
   "legs": [
    {
     "sport": "football",
-    "div": "KSA",
-    "id": "401900870",
+    "div": "F1",
+    "id": "401876387",
     "side": "home",
-    "p": 0.7832080200501254,
-    "odds": 1.211,
-    "kickoff": "2026-11-27T17:20:00+03:00",
+    "p": 0.7998687394889044,
+    "odds": 1.19,
+    "kickoff": "2026-11-28T22:45:00+03:00",
     "probability_origin": "market_baseline",
-    "quoted_at": "2026-11-27T10:01:39.746655+03:00",
-    "home": "Аль-Кадисия",
-    "away": "Аль-Фейха",
+    "quoted_at": "2026-11-28T10:00:34.276071+03:00",
+    "home": "ПСЖ",
+    "away": "Лорьян",
+    "league": "🇫🇷 Франция · Лига 1",
+    "logos": [
+     "https://a.espncdn.com/i/teamlogos/soccer/500/160.png",
+     "https://a.espncdn.com/i/teamlogos/soccer/500/273.png"
+    ],
+    "colors": [
+     "011F68",
+     "f46100"
+    ],
+    "label": "Победа: ПСЖ"
+   },
+   {
+    "sport": "football",
+    "div": "N1",
+    "id": "401875531",
+    "side": "home",
+    "p": 0.7796865660004678,
+    "odds": 1.211,
+    "kickoff": "2026-11-28T20:45:00+03:00",
+    "probability_origin": "market_baseline",
+    "quoted_at": "2026-11-28T10:00:34.276071+03:00",
+    "home": "ПСВ",
+    "away": "Гоу Эхед Иглз",
+    "league": "🇳🇱 Нидерланды · Эредивизи",
+    "logos": [
+     "https://a.espncdn.com/i/teamlogos/soccer/500/148.png",
+     "https://a.espncdn.com/i/teamlogos/soccer/500/3706.png"
+    ],
+    "colors": [
+     "ef2f24",
+     "F80017"
+    ],
+    "label": "Победа: ПСВ"
+   },
+   {
+    "sport": "football",
+    "div": "KSA",
+    "id": "401900442",
+    "side": "away",
+    "p": 0.7692730369800539,
+    "odds": 1.235,
+    "kickoff": "2026-11-28T15:15:00+03:00",
+    "probability_origin": "market_baseline",
+    "quoted_at": "2026-11-28T10:00:34.276071+03:00",
+    "home": "Аль-Хазм",
+    "away": "Ан-Наср",
     "league": "🇸🇦 Саудовская Аравия · Про-лига",
     "logos": [
-     "https://a.espncdn.com/i/teamlogos/soccer/500/22022.png",
-     "https://a.espncdn.com/i/teamlogos/soccer/500/21827.png"
+     "https://a.espncdn.com/i/teamlogos/soccer/500/21964.png",
+     "https://a.espncdn.com/i/teamlogos/soccer/500/817.png"
     ],
     "colors": [
      "ffd700",
-     "fa8228"
+     "f7f316"
     ],
-    "label": "Победа: Аль-Кадисия",
-    "win": true,
-    "score": "2:0"
-   },
-   {
-    "sport": "tennis",
-    "div": "WTA",
-    "id": "186829",
-    "side": "away",
-    "p": 0.7286324786324786,
-    "odds": 1.27,
-    "kickoff": "2026-11-27T21:00:00+03:00",
-    "probability_origin": "market_baseline",
-    "quoted_at": "2026-11-27T10:01:39.746655+03:00",
-    "home": "Варвара Лепченко",
-    "away": "Лаура Самсон",
-    "league": "🎾 Теннис · WTA",
-    "logos": [
-     [
-      "https://a.espncdn.com/i/headshots/tennis/players/full/423.png",
-      "https://a.espncdn.com/i/teamlogos/countries/500/usa.png"
-     ],
-     [
-      "https://a.espncdn.com/i/headshots/tennis/players/full/15069.png",
-      "https://a.espncdn.com/i/teamlogos/countries/500/cze.png"
-     ]
-    ],
-    "colors": [
-     "2d6a4f",
-     "2d6a4f"
-    ],
-    "label": "Победа: Лаура Самсон"
-   },
-   {
-    "sport": "hockey",
-    "div": "NHL",
-    "id": "401892796",
-    "side": "home",
-    "p": 0.7095248333691679,
-    "odds": 1.351,
-    "kickoff": "2026-11-27T21:00:00+03:00",
-    "probability_origin": "market_baseline",
-    "quoted_at": "2026-11-27T10:01:39.746655+03:00",
-    "home": "Нью-Джерси",
-    "away": "Калгари",
-    "league": "🇺🇸 США · NHL",
-    "logos": [
-     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/nj.png",
-     "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/cgy.png"
-    ],
-    "colors": [
-     "e30b2b",
-     "dd1a32"
-    ],
-    "label": "Победа: Нью-Джерси (с ОТ)",
-    "win": true,
-    "score": "5:3"
+    "label": "Победа: Ан-Наср"
    }
   ],
-  "odds": 2.07779747,
-  "day": "2026-11-27",
+  "odds": 1.77974615,
+  "day": "2026-11-28",
   "stake_pct": 0.5,
   "done": false
  },
@@ -1592,7 +1582,7 @@
  "value_day": "2026-11-27",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-27",
- "site_stamp": "1593|9920|2026-11-28 09|6|9df69ebfa584163e",
+ "site_stamp": "1594|9922|2026-11-28 10|6|cd70f0cbeb8b4f39",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1762,7 +1752,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 9920,
+ "dz_last": 9922,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2103,7 +2093,7 @@
  "vk_photos": [],
  "vk_photo_until": 1794644243.1147308,
  "vk_photo_cursor": {},
- "vk_story_last": 9920,
+ "vk_story_last": 9922,
  "vk_story_err": null,
  "push_weekly": "2026-48",
  "vk_story_at": 1795842242.501179,
@@ -3138,15 +3128,15 @@
   "model": {
    "weight": 0.0,
    "status": "baseline_better",
-   "settled_matches": 189,
+   "settled_matches": 190,
    "required_matches": 100,
-   "trained_at": "2026-11-28T05:27:08.515392+00:00",
+   "trained_at": "2026-11-28T07:00:34.276071+00:00",
    "candidate_weight": 0.0,
    "train_matches": 139,
-   "validation_matches": 49,
+   "validation_matches": 50,
    "validation_from": "2026-11-25T00:00:00+00:00",
-   "validation_logloss": 2.8257524379075223,
-   "validation_baseline_logloss": 2.8257524379075223
+   "validation_logloss": 2.824939914481618,
+   "validation_baseline_logloss": 2.824939914481618
   },
   "sport_models": {
    "hockey": {
@@ -3208,7 +3198,7 @@
   "quote_matches": 183
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-28T09:58:34.541725+03:00",
+  "last_poll": "2026-11-28T10:00:34.276071+03:00",
   "cursor": "498",
   "posts": [
    {
@@ -4105,7 +4095,7 @@
    "401936054": "post",
    "401876813": "post",
    "401933725": "post",
-   "401877537": "in",
+   "401877537": "post",
    "401877539": "post",
    "401877542": "in",
    "401877516": "in",
@@ -4288,7 +4278,12 @@
    "401885042": "pre",
    "401885040": "pre",
    "401885041": "pre",
-   "401878926": "pre"
+   "401878926": "pre",
+   "401882787": "pre",
+   "401883103": "pre",
+   "401888242": "pre",
+   "401874500": "pre",
+   "401874725": "pre"
   },
   "daily": {
    "day": "2026-11-28"
