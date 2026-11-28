@@ -5,7 +5,7 @@
  },
  "learned": "2026-11-28",
  "schedule_day": "2026-11-28",
- "content_slot": "2026-11-28-13",
+ "content_slot": "2026-11-28-16",
  "news_seen": [
   "https://www.sport-express.ru/football/champions-league/news/zhoze-mourinyu-kommentariy-po-pobede-reala-nad-psv-v-lige-chempionov-2478609/",
   "https://www.sport-express.ru/football/champions-league/news/peter-bos-kommentariy-po-porazheniyu-psv-ot-reala-v-lige-chempionov-2478608/",
@@ -1564,7 +1564,7 @@
  "value_day": "2026-11-28",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-28",
- "site_stamp": "1597|9960|2026-11-28 15|6|d6f932863bfb7ea4",
+ "site_stamp": "1597|9962|2026-11-28 16|6|d6f932863bfb7ea4",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1735,7 +1735,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 9960,
+ "dz_last": 9962,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -3196,12 +3196,12 @@
   },
   "error": null,
   "tips": 21540,
-  "snapshots": 467,
+  "snapshots": 468,
   "unmapped_markets": 32388,
   "quote_matches": 192
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-28T15:58:57.600590+03:00",
+  "last_poll": "2026-11-28T16:00:57.729063+03:00",
   "cursor": "507",
   "posts": [
    {
@@ -4339,7 +4339,11 @@
    "401878925": "pre",
    "401843493": "pre",
    "401899529": "pre",
-   "401884727": "pre"
+   "401884727": "pre",
+   "401875533": "pre",
+   "401896721": "pre",
+   "401841333": "pre",
+   "401841332": "pre"
   },
   "daily": {
    "day": "2026-11-28"
@@ -9369,7 +9373,7 @@
   },
   "football|RUS|401879794": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-28T12:51:20.918183+00:00",
+   "checked_at": "2026-11-28T13:01:33.097066+00:00",
    "kickoff": "2026-11-28T16:30:00+03:00",
    "sport": "football",
    "id": "401879794",
@@ -9384,7 +9388,7 @@
   },
   "football|RSA|401902006": {
    "reason": "edge_below_minimum",
-   "checked_at": "2026-11-28T12:51:21.329332+00:00",
+   "checked_at": "2026-11-28T13:01:33.512235+00:00",
    "kickoff": "2026-11-28T16:30:00+03:00",
    "sport": "football",
    "id": "401902006",
@@ -9392,14 +9396,14 @@
    "away": "Milford FC",
    "priced_markets": 6,
    "market": "ТМ 2.5",
-   "probability": 0.5727,
-   "odds": 1.65,
-   "edge": -0.05505,
+   "probability": 0.5568,
+   "odds": 1.67,
+   "edge": -0.07014,
    "estimated": false
   },
   "football|RSA|401902005": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-28T12:51:21.738265+00:00",
+   "checked_at": "2026-11-28T13:01:33.920791+00:00",
    "kickoff": "2026-11-28T16:30:00+03:00",
    "sport": "football",
    "id": "401902005",
@@ -9407,9 +9411,9 @@
    "away": "Кайзер Чифс",
    "priced_markets": 6,
    "market": "Обе забьют — нет",
-   "probability": 0.6301,
-   "odds": 1.48,
-   "edge": -0.06745,
+   "probability": 0.6355,
+   "odds": 1.46,
+   "edge": -0.07217,
    "estimated": true
   },
   "football|I1|401875081": {
@@ -23870,5 +23874,14 @@
   "pid": 9927,
   "started_at": 1795859251.4316022
  },
- "vk_story_retry_at": 1795862851.4316022
+ "vk_story_retry_at": 1795862851.4316022,
+ "mod_poll": {
+  "key": "E0|401879227",
+  "id": "401879227",
+  "poll": 9962,
+  "post": 9961,
+  "home": "Лидс Юнайтед",
+  "away": "Ковентри Сити",
+  "kickoff": "2026-11-28T18:00:00+03:00"
+ }
 }
