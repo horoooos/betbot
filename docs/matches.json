@@ -544,8 +544,8 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-28-san-antonio-spers-leykers-401909333.html",
-"hs": "90",
-"as": "88",
+"hs": "92",
+"as": "90",
 "tip": "П1 (с ОТ) · 1.46",
 "top": false,
 "bot": {
@@ -645,7 +645,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-28-klippers-nyu-orlean-pelikans-401909335.html",
-"hs": "99",
+"hs": "101",
 "as": "104",
 "tip": "П1 (с ОТ) · 1.74",
 "top": false,
@@ -818,76 +818,6 @@ null
 "prediction": "",
 "hs": "0",
 "as": "1",
-"tip": "",
-"top": false,
-"bot": null,
-"lt": null
-},
-{
-"sport": "esports",
-"id": "1817025",
-"league": "Киберспорт · CS2",
-"kickoff": "2026-11-28T07:01:10+03:00",
-"home": "FUT Esports",
-"away": "FlyQuest",
-"hl": "https://cdn-api.pandascore.co/images/team/image/136955/fut_esportslogo_square.png",
-"al": "https://cdn-api.pandascore.co/images/team/image/134746/fly_questlogo_square.png",
-"hid": "136955",
-"aid": "134746",
-"bb": "https://betboom.ru/search?query=%D0%95%D1%81%D0%BF%D0%BE%D1%80%D1%86&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=esports",
-"path": "",
-"url": "esports.html?e=1817025&d=CS2",
-"participants": [
-[
-"FUT Esports",
-"FUT Esports"
-],
-[
-"FlyQuest",
-"FlyQuest"
-]
-],
-"div": "CS2",
-"state": "in",
-"bo": 1,
-"prediction": "",
-"hs": 0,
-"as": 0,
-"tip": "",
-"top": false,
-"bot": null,
-"lt": null
-},
-{
-"sport": "esports",
-"id": "1817105",
-"league": "Киберспорт · CS2",
-"kickoff": "2026-11-28T07:02:04+03:00",
-"home": "TheMongolz",
-"away": "Lynn Vision",
-"hl": "https://cdn-api.pandascore.co/images/team/image/3272/702px_the_mongol_z_2024_03_allmode.png",
-"al": "https://cdn-api.pandascore.co/images/team/image/126439/800px_lynn_vision_gaming_2024_allmode.png",
-"hid": "3272",
-"aid": "126439",
-"bb": "https://betboom.ru/search?query=%D0%A2%D0%B5%D0%BC%D0%BE%D0%BD%D0%B3%D0%BE%D0%BB%D0%B7&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=esports",
-"path": "",
-"url": "esports.html?e=1817105&d=CS2",
-"participants": [
-[
-"TheMongolz",
-"TheMongolz"
-],
-[
-"Lynn Vision",
-"Lynn Vision"
-]
-],
-"div": "CS2",
-"state": "in",
-"bo": 1,
-"prediction": "",
-"hs": 0,
-"as": 0,
 "tip": "",
 "top": false,
 "bot": null,
