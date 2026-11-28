@@ -3016,7 +3016,7 @@
   "external_sources": {
    "providers": {
     "legalbet": {
-     "at": "2026-11-28T10:18:58.999264+00:00",
+     "at": "2026-11-28T10:50:58.491986+00:00",
      "status": "ok",
      "discovered": 1,
      "pages": 1,
@@ -3027,29 +3027,29 @@
      "contexts": 1
     },
     "livesport": {
-     "at": "2026-11-28T10:18:58.999264+00:00",
+     "at": "2026-11-28T10:50:58.491986+00:00",
      "status": "ok",
-     "discovered": 23,
+     "discovered": 24,
      "pages": 6,
-     "opinions": 2,
-     "mapped": 1,
-     "articles_available": 37,
-     "next_offset": 21,
+     "opinions": 10,
+     "mapped": 6,
+     "articles_available": 38,
+     "next_offset": 27,
      "contexts": 6
     },
     "metaratings": {
-     "at": "2026-11-28T10:18:58.999264+00:00",
+     "at": "2026-11-28T10:50:58.491986+00:00",
      "status": "ok",
      "discovered": 15,
      "pages": 6,
      "opinions": 24,
-     "mapped": 2,
+     "mapped": 7,
      "articles_available": 42,
-     "next_offset": 20,
+     "next_offset": 11,
      "contexts": 6
     },
     "rb": {
-     "at": "2026-11-28T10:18:58.999264+00:00",
+     "at": "2026-11-28T10:50:58.491986+00:00",
      "status": "ok",
      "discovered": 1,
      "pages": 1,
@@ -3060,7 +3060,7 @@
      "contexts": 0
     },
     "vseprosport": {
-     "at": "2026-11-28T10:18:58.999264+00:00",
+     "at": "2026-11-28T10:50:58.491986+00:00",
      "status": "ok",
      "discovered": 6,
      "pages": 5,
@@ -3074,7 +3074,7 @@
    },
    "opinions": 83,
    "snapshots": 0,
-   "contexts": 226,
+   "contexts": 227,
    "model": {
     "weight": 0.0,
     "status": "collecting",
@@ -3193,7 +3193,7 @@
   "quote_matches": 186
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-28T13:48:58.481867+03:00",
+  "last_poll": "2026-11-28T13:50:58.491986+03:00",
   "cursor": "503",
   "posts": [
    {
@@ -9065,7 +9065,7 @@
   },
   "esports|CS2|1817111": {
    "reason": "no_real_odds",
-   "checked_at": "2026-11-28T10:39:24.524520+00:00",
+   "checked_at": "2026-11-28T10:51:45.622587+00:00",
    "kickoff": "2026-11-28T14:30:00+03:00",
    "sport": "esports",
    "id": "1817111",
@@ -9080,7 +9080,7 @@
   },
   "esports|CS2|1817110": {
    "reason": "no_real_odds",
-   "checked_at": "2026-11-28T10:39:26.761166+00:00",
+   "checked_at": "2026-11-28T10:51:47.922236+00:00",
    "kickoff": "2026-11-28T14:30:00+03:00",
    "sport": "esports",
    "id": "1817110",
@@ -9095,7 +9095,7 @@
   },
   "esports|DOTA|1816497": {
    "reason": "no_real_odds",
-   "checked_at": "2026-11-28T10:39:29.276417+00:00",
+   "checked_at": "2026-11-28T10:51:50.321159+00:00",
    "kickoff": "2026-11-28T14:30:00+03:00",
    "sport": "esports",
    "id": "1816497",
