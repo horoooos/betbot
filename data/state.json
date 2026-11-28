@@ -3199,7 +3199,7 @@
   "quote_matches": 192
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-28T15:30:57.211821+03:00",
+  "last_poll": "2026-11-28T15:32:57.783866+03:00",
   "cursor": "505",
   "posts": [
    {
@@ -4127,10 +4127,10 @@
    "401900442": "in",
    "401880135": "in",
    "401880133": "in",
-   "401880131": "pre",
+   "401880131": "in",
    "401880725": "in",
    "401880724": "in",
-   "401881252": "pre",
+   "401881252": "in",
    "401881249": "in",
    "401882796": "pre",
    "401883101": "pre",
@@ -9291,8 +9291,8 @@
   },
   "esports|CS2|1817113": {
    "reason": "no_real_odds",
-   "checked_at": "2026-11-28T12:21:23.481271+00:00",
-   "kickoff": "2026-11-28T15:30:00+03:00",
+   "checked_at": "2026-11-28T12:33:21.709979+00:00",
+   "kickoff": "2026-11-28T16:00:00+03:00",
    "sport": "esports",
    "id": "1817113",
    "home": "FlyQuest",
@@ -9305,19 +9305,19 @@
    "estimated": true
   },
   "esports|CS2|1817112": {
-   "reason": "edge_below_minimum",
-   "checked_at": "2026-11-28T12:21:24.189552+00:00",
-   "kickoff": "2026-11-28T15:30:00+03:00",
+   "reason": "no_real_odds",
+   "checked_at": "2026-11-28T12:33:19.787232+00:00",
+   "kickoff": "2026-11-28T15:45:00+03:00",
    "sport": "esports",
    "id": "1817112",
    "home": "Natus Vincere",
    "away": "Astralis",
-   "priced_markets": 2,
-   "market": "Победа: Natus Vincere",
-   "probability": 0.7203,
-   "odds": 1.32,
-   "edge": -0.0492,
-   "estimated": false
+   "priced_markets": 0,
+   "market": "Победа: Astralis",
+   "probability": 0.477,
+   "odds": 1.95,
+   "edge": -0.06985,
+   "estimated": true
   },
   "football|SP1|401882796": {
    "reason": "published",
