@@ -2085,7 +2085,7 @@
  "vk_photos": [],
  "vk_photo_until": 1794644243.1147308,
  "vk_photo_cursor": {},
- "vk_story_last": 9917,
+ "vk_story_last": 9918,
  "vk_story_err": null,
  "push_weekly": "2026-48",
  "vk_story_at": 1795842242.501179,
@@ -3190,34 +3190,9 @@
   "quote_matches": 183
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-28T08:17:08.499771+03:00",
-  "cursor": "497",
+  "last_poll": "2026-11-28T08:19:07.743228+03:00",
+  "cursor": "498",
   "posts": [
-   {
-    "post_id": 917,
-    "published_at": 1795773237,
-    "url": "https://vk.com/wall-228963529_917",
-    "title": "Lynn Vision Gaming обыграла Heroic и прошла в стадию мейджора",
-    "text": "рџ“° Lynn Vision Gaming обыграла Heroic в решающем матче первого этапа PGL Major Singapore 2026 по Counter-Strike 2.\n\nвљ”пёЏ Матч завершился со счётом 2:0: на карте Nuke команда LVG выиграла 13:11, а на Dust2 — 13:6.\n\nрџ“€ Победа гарантировала Lynn Vision Gaming место во второй стадии мейджора, тогда как Heroic получила третье поражение и вылетела из турнира.\n\nрџ“… PGL Major Singapore 2026 проходит с 24 ноября по 13 декабря, привлекая лучшие команды мира.\n\nрџ’° Призовой фонд мероприятия составляет 1,25 млн долларов, а расписание и результаты доступны в официальном репортаже.\n\nПодписывайтесь на «АИ СТАВИТ» — спортивные новости каждый день.\n\n#киберспорт #новостиспорта #спорт #главное #аиставит\n\nрџ“Љ Подробнее на сайте рџ‘‡",
-    "checks": {
-     "encoding_clean": false,
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": true,
-     "details_present": true,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "cover": {
-     "verified": true,
-     "width": 800,
-     "height": 450,
-     "host": "sun9-83.userapi.com"
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-27T12:54:14.895586+03:00"
-   },
    {
     "post_id": 918,
     "published_at": 1795773238,
@@ -3942,6 +3917,31 @@
     },
     "status": "needs_review",
     "observed_at": "2026-11-28T02:56:35.938828+03:00"
+   },
+   {
+    "post_id": 947,
+    "published_at": 1795843069,
+    "url": "https://vk.com/wall-228963529_947",
+    "title": "FUT Esports победила FlyQuest 13:10 в первом раунде второго этапа PGL Major Singapore 2026",
+    "text": "вљ”пёЏ FUT Esports одержала победу над FlyQuest в первом раунде второго этапа PGL Major Singapore 2026 по CS2. Матч проходил на карте Cache и завершился со счётом 13:10.\n\nрџЋ® Для команды Аулона Krabeni Фазлии это первая победа на данном турнире. Теперь FlyQuest находится в группе с результатом 0:1.\n\nрџ“Љ Игровой день продолжит встреча Astralis — Imperial Esports, запланированная на 28 ноября в 8:00 мск.\n\nрџЏ† PGL Major Singapore 2026 проходит с 24 ноября по 13 декабря в Калланге, Сингапур, а призовой фонд турнира составляет $1,25 млн.\n\nрџ”Ґ За расписанием и результатами мейджора можно следить в официальном репортаже.\n\nПодписывайтесь на «АИ СТАВИТ» — спортивные новости каждый день.\n\n#киберспорт #CS2 #новостиспорта #спорт #главное #аиставит\n\nрџ“Љ Подробнее на сайте рџ‘‡",
+    "checks": {
+     "encoding_clean": false,
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": true,
+     "details_present": true,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "cover": {
+     "verified": true,
+     "width": 800,
+     "height": 450,
+     "host": "sun9-2.userapi.com"
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-28T08:19:07.743228+03:00"
    }
   ],
   "status": "observing",
