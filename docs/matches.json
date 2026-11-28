@@ -1,141 +1,5 @@
 [
 {
-"sport": "football",
-"id": "401876813",
-"league": "Коста-Рика · Примера",
-"kickoff": "2026-11-28T05:00:00+03:00",
-"home": "Эредиано",
-"away": "Escorpiones Belén",
-"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/862.png",
-"al": "https://a.espncdn.com/i/teamlogos/soccer/500/132447.png",
-"hid": "862",
-"aid": "132447",
-"bb": "https://betboom.ru/search?query=%D0%AD%D1%80%D0%B5%D0%B4%D0%B8%D0%B0%D0%BD%D0%BE&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
-"path": "soccer/crc.1",
-"url": "live.html?s=football&p=soccer%2Fcrc.1&e=401876813&h=%D0%AD%D1%80%D0%B5%D0%B4%D0%B8%D0%B0%D0%BD%D0%BE&a=Escorpiones+Bel%C3%A9n",
-"participants": [
-[
-"Эредиано",
-"Herediano"
-],
-[
-"Escorpiones Belén",
-"Escorpiones Belén"
-]
-],
-"div": "CRC",
-"state": "post",
-"bo": null,
-"prediction": "",
-"hs": "2",
-"as": "1",
-"tip": "",
-"top": false,
-"bot": null,
-"lt": null
-},
-{
-"sport": "basketball",
-"id": "401909332",
-"league": "США · NBA",
-"kickoff": "2026-11-28T05:00:00+03:00",
-"home": "Финикс Санз",
-"away": "Даллас Маверикс",
-"hl": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/phx.png",
-"al": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/dal.png",
-"hid": "21",
-"aid": "6",
-"bb": "https://betboom.ru/search?query=%D0%A4%D0%B8%D0%BD%D0%B8%D0%BA%D1%81&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=basketball",
-"path": "basketball/nba",
-"url": "live.html?s=basketball&p=basketball%2Fnba&e=401909332&h=%D0%A4%D0%B8%D0%BD%D0%B8%D0%BA%D1%81+%D0%A1%D0%B0%D0%BD%D0%B7&a=%D0%94%D0%B0%D0%BB%D0%BB%D0%B0%D1%81+%D0%9C%D0%B0%D0%B2%D0%B5%D1%80%D0%B8%D0%BA%D1%81",
-"participants": [
-[
-"Финикс Санз",
-"Phoenix Suns"
-],
-[
-"Даллас Маверикс",
-"Dallas Mavericks"
-]
-],
-"div": "NBA",
-"state": "post",
-"bo": null,
-"prediction": "predictions/2026-11-28-finiks-sanz-dallas-maveriks-401909332.html",
-"hs": "109",
-"as": "113",
-"tip": "П1 (с ОТ) · 1.57",
-"top": true,
-"bot": {
-"main": {
-"label": "П1 (с ОТ)",
-"p": 0.646,
-"odds": 1.57,
-"est": false
-},
-"bold": null,
-"markets": [
-[
-"П1 (с ОТ)",
-0.646,
-1.575
-],
-[
-"П2 (с ОТ)",
-0.354,
-2.46
-],
-[
-"Ф1 (-4.5)",
-0.5,
-1.952
-],
-[
-"Ф2 (+4.5)",
-0.5,
-1.87
-],
-[
-"ТБ 218.5",
-0.66,
-null
-],
-[
-"ТМ 218.5",
-0.34,
-null
-],
-[
-"ТБ 225.5",
-0.5,
-1.909
-],
-[
-"ТМ 225.5",
-0.5,
-1.909
-],
-[
-"ТБ 232.5",
-0.34,
-null
-],
-[
-"ТМ 232.5",
-0.66,
-null
-]
-],
-"bar": [
-0.6461697666727237,
-0,
-0.35383023332727626
-],
-"center": "Ожидаемый счёт 115 : 110"
-},
-"lt": null
-},
-{
 "sport": "basketball",
 "id": "401909333",
 "league": "США · NBA",
@@ -6522,6 +6386,76 @@ null
 ]
 ],
 "div": "I1",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "football",
+"id": "401879229",
+"league": "Англия · Премьер-лига",
+"kickoff": "2026-11-29T15:00:00+03:00",
+"home": "Эвертон",
+"away": "Ливерпуль",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/368.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/364.png",
+"hid": "368",
+"aid": "364",
+"bb": "https://betboom.ru/search?query=%D0%AD%D0%B2%D0%B5%D1%80%D1%82%D0%BE%D0%BD&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/eng.1",
+"url": "live.html?s=football&p=soccer%2Feng.1&e=401879229&h=%D0%AD%D0%B2%D0%B5%D1%80%D1%82%D0%BE%D0%BD&a=%D0%9B%D0%B8%D0%B2%D0%B5%D1%80%D0%BF%D1%83%D0%BB%D1%8C",
+"participants": [
+[
+"Эвертон",
+"Everton"
+],
+[
+"Ливерпуль",
+"Liverpool"
+]
+],
+"div": "E0",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "football",
+"id": "401880128",
+"league": "Англия · Чемпионшип",
+"kickoff": "2026-11-29T15:00:00+03:00",
+"home": "Суонси Сити",
+"away": "Cardiff City",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/318.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/347.png",
+"hid": "318",
+"aid": "347",
+"bb": "https://betboom.ru/search?query=%D0%A1%D1%83%D0%BE%D0%BD%D1%81%D0%B8&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/eng.2",
+"url": "live.html?s=football&p=soccer%2Feng.2&e=401880128&h=%D0%A1%D1%83%D0%BE%D0%BD%D1%81%D0%B8+%D0%A1%D0%B8%D1%82%D0%B8&a=Cardiff+City",
+"participants": [
+[
+"Суонси Сити",
+"Swansea City"
+],
+[
+"Cardiff City",
+"Cardiff City"
+]
+],
+"div": "E1",
 "state": "pre",
 "bo": null,
 "prediction": "",
