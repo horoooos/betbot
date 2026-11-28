@@ -3166,14 +3166,14 @@
    }
   },
   "source": {
-   "last_success": "2026-11-28T01:58:55.587967+00:00",
-   "parsed": 322,
-   "added": 55,
-   "discovered_matches": 59,
+   "last_success": "2026-11-28T02:20:54.785458+00:00",
+   "parsed": 318,
+   "added": 54,
+   "discovered_matches": 62,
    "pages": 18,
    "errors": [],
    "parsed_by_sport": {
-    "soccer": 50,
+    "soccer": 49,
     "ice-hockey": 50,
     "basketball": 50,
     "tennis": 44,
@@ -3182,13 +3182,13 @@
    }
   },
   "error": null,
-  "tips": 20746,
+  "tips": 20767,
   "snapshots": 448,
-  "unmapped_markets": 31439,
+  "unmapped_markets": 31472,
   "quote_matches": 175
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-28T05:18:55.364492+03:00",
+  "last_poll": "2026-11-28T05:20:54.785458+03:00",
   "cursor": "497",
   "posts": [
    {
@@ -8711,7 +8711,7 @@
   },
   "football|USA|401933725": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-28T02:09:16.264076+00:00",
+   "checked_at": "2026-11-28T02:21:23.936953+00:00",
    "kickoff": "2026-11-28T06:00:00+03:00",
    "sport": "football",
    "id": "401933725",
