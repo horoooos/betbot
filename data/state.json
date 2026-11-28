@@ -7,8 +7,6 @@
  "schedule_day": "2026-11-28",
  "content_slot": "2026-11-28-10",
  "news_seen": [
-  "https://www.sport-express.ru/football/rus_cup/news/zenit-krylya-sovetov-peterburzhcy-vedut-1-0-posle-pervogo-tayma-matcha-kubka-rossii-2478494/",
-  "https://www.sport-express.ru/football/rus_cup/news/zenit-krylya-sovetov-vendel-otkryl-schet-na-38-y-minute-matcha-kubka-rossii-2478489/",
   "https://www.sport-express.ru/basketball/nba/news/memfis-pervym-s-2021-goda-realizoval-ne-menee-24-shtrafnyh-bez-promaha-v-matche-nba-s-sharlott-24-noyabrya-2026-2478555/",
   "https://www.sport-express.ru/basketball/nba/news/centrovoy-mitchell-robinson-propustit-tretiy-podryad-match-bostona-v-sezone-nba-iz-za-bolezni-24-noyabrya-2026-2478563/",
   "https://www.sport-express.ru/tennis/wta/news/ekaterina-aleksandrova-edinstvennaya-rossiyanka-s-polozhitelnym-balansom-matchey-protiv-top-10-wta-v-sezone-2026-2478558/",
@@ -507,9 +505,10 @@
   "https://www.sport-express.ru/hockey/women/news/v-iihf-zhdut-informaciyu-po-povodu-provedeniya-zhenskogo-yuniorskogo-chempionata-mira-2479959/",
   "1w-team-odolela-eternal-fire-na-pgl-major-singapore-2026",
   "g2-esports-obygrala-team-liquid-na-pgl-major-singapore-2026",
-  "natus-vincere-nachali-vystupleniye-na-pgl-major-singapore-2026-s-pobedy-nad"
+  "natus-vincere-nachali-vystupleniye-na-pgl-major-singapore-2026-s-pobedy-nad",
+  "parivision-srazit-sya-s-flyquest-a-1w-team-stolknet-sya-s-the-mongolz-matchi"
  ],
- "news_i": 0,
+ "news_i": 2,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1707,7 +1706,7 @@
  "streak_day": {
   "2026-11-22": 2
  },
- "news_next": "2026-11-28T11:24:37.413751+03:00",
+ "news_next": "2026-11-28T11:59:37.725708+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1741,7 +1740,6 @@
  "vk_mode": "photo",
  "dz_err": null,
  "img_used": [
-  "https://images.cybersport.ru/images/as-is/plain/dc/dc77e6fa-1718-4c8d-b0a5-fe3e9685d4de.jpg",
   "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/2021-12-08_-_FC_Zenit_Saint_Petersburg_v_Chelsea_F.C._-_Photo_115.jpg/1280px-2021-12-08_-_FC_Zenit_Saint_Petersburg_v_Chelsea_F.C._-_Photo_115.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
   "https://images.cybersport.ru/images/as-is/plain/33/330e0115-6a5b-4e50-9ae3-e113f64c0c3f.jpg",
   "https://upload.wikimedia.org/wikipedia/commons/4/42/CSKA_Moscow_and_Pakistan_national_football_team_at_the_KMC_Stadium%2C_Karachi_in_1969.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
@@ -2040,7 +2038,8 @@
   "https://images.cybersport.ru/images/as-is/plain/f5/f532a61e-42e5-4d61-b40c-e267a92c6156.jpg",
   "https://images.cybersport.ru/images/as-is/plain/5e/5e438e58-6071-4034-9721-9dc2dfd7ac1c.jpg",
   "https://images.cybersport.ru/images/as-is/plain/1e/1e8ffed1-9564-4a17-81fc-6f3fdf69d5b4.jpg",
-  "https://images.cybersport.ru/images/as-is/plain/e3/e364411e-7aa7-4216-802b-ea9affe903ef.jpg"
+  "https://images.cybersport.ru/images/as-is/plain/e3/e364411e-7aa7-4216-802b-ea9affe903ef.jpg",
+  "https://images.cybersport.ru/images/as-is/plain/ae/aef60dbf-25f4-43f6-972e-814be19ecf2f.jpg"
  ],
  "indexnow_day": "2026-11-28",
  "vk_wall_err": null,
@@ -2542,7 +2541,8 @@
   "9870",
   "9874",
   "9917",
-  "9923"
+  "9923",
+  "9925"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -2976,11 +2976,12 @@
   "2026-11-27:новость:f6c3e9da4454b0dca79fb1f1",
   "2026-11-27:новость:6fc13d9a969ad8d56c9e3a3a",
   "2026-11-28:новость:db58541f625132c0dd05e3a8",
-  "2026-11-28:новость:a8649f765d3e6e3a40e74285"
+  "2026-11-28:новость:a8649f765d3e6e3a40e74285",
+  "2026-11-28:новость:f0825172d16a7bf1f089845c"
  ],
  "dz_last_delivery": {
-  "source_id": 9923,
-  "message_id": 981,
+  "source_id": 9925,
+  "message_id": 982,
   "kind": "новость"
  },
  "learn_attempt_day": "2026-11-28",
@@ -3183,7 +3184,7 @@
   "quote_matches": 185
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-28T11:24:37.397755+03:00",
+  "last_poll": "2026-11-28T11:26:37.725708+03:00",
   "cursor": "498",
   "posts": [
    {
