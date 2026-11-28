@@ -1564,7 +1564,7 @@
  "value_day": "2026-11-28",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-27",
- "site_stamp": "1595|9925|2026-11-28 11|6|0b1e038dbf471ea5",
+ "site_stamp": "1596|9926|2026-11-28 11|6|64513dd0c29c44ee",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1734,7 +1734,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 9925,
+ "dz_last": 9926,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -3114,15 +3114,15 @@
   "model": {
    "weight": 0.0,
    "status": "baseline_better",
-   "settled_matches": 191,
+   "settled_matches": 192,
    "required_matches": 100,
-   "trained_at": "2026-11-28T07:58:34.428154+00:00",
+   "trained_at": "2026-11-28T08:56:37.963874+00:00",
    "candidate_weight": 0.0,
    "train_matches": 139,
-   "validation_matches": 51,
+   "validation_matches": 52,
    "validation_from": "2026-11-25T00:00:00+00:00",
-   "validation_logloss": 2.8526293290390923,
-   "validation_baseline_logloss": 2.8526293290390923
+   "validation_logloss": 2.83784003682391,
+   "validation_baseline_logloss": 2.83784003682391
   },
   "sport_models": {
    "hockey": {
@@ -3162,9 +3162,9 @@
    }
   },
   "source": {
-   "last_success": "2026-11-28T08:36:37.225306+00:00",
-   "parsed": 315,
-   "added": 57,
+   "last_success": "2026-11-28T08:56:37.963874+00:00",
+   "parsed": 319,
+   "added": 52,
    "discovered_matches": 59,
    "pages": 18,
    "errors": [],
@@ -3172,19 +3172,19 @@
     "soccer": 50,
     "ice-hockey": 50,
     "basketball": 50,
-    "tennis": 40,
+    "tennis": 44,
     "csgo": 34,
     "dota2": 50
    }
   },
   "error": null,
-  "tips": 21197,
+  "tips": 21218,
   "snapshots": 456,
-  "unmapped_markets": 31944,
+  "unmapped_markets": 31975,
   "quote_matches": 185
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-28T11:54:37.315029+03:00",
+  "last_poll": "2026-11-28T11:56:37.963874+03:00",
   "cursor": "499",
   "posts": [
    {
@@ -4103,7 +4103,7 @@
    "401910048": "pre",
    "401910049": "pre",
    "401910050": "pre",
-   "401877525": "in",
+   "401877525": "post",
    "401892132": "in",
    "401879793": "pre",
    "401885044": "pre",
