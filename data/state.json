@@ -3009,7 +3009,7 @@
   "external_sources": {
    "providers": {
     "legalbet": {
-     "at": "2026-11-28T08:46:37.295210+00:00",
+     "at": "2026-11-28T09:16:58.920155+00:00",
      "status": "ok",
      "discovered": 1,
      "pages": 1,
@@ -3020,29 +3020,29 @@
      "contexts": 1
     },
     "livesport": {
-     "at": "2026-11-28T08:46:37.295210+00:00",
+     "at": "2026-11-28T09:16:58.920155+00:00",
      "status": "ok",
-     "discovered": 22,
+     "discovered": 23,
      "pages": 6,
-     "opinions": 12,
-     "mapped": 7,
-     "articles_available": 34,
-     "next_offset": 26,
+     "opinions": 10,
+     "mapped": 5,
+     "articles_available": 35,
+     "next_offset": 9,
      "contexts": 6
     },
     "metaratings": {
-     "at": "2026-11-28T08:46:37.295210+00:00",
+     "at": "2026-11-28T09:16:58.920155+00:00",
      "status": "ok",
-     "discovered": 13,
+     "discovered": 14,
      "pages": 6,
      "opinions": 24,
-     "mapped": 2,
+     "mapped": 9,
      "articles_available": 41,
-     "next_offset": 16,
+     "next_offset": 8,
      "contexts": 6
     },
     "rb": {
-     "at": "2026-11-28T08:46:37.295210+00:00",
+     "at": "2026-11-28T09:16:58.920155+00:00",
      "status": "ok",
      "discovered": 1,
      "pages": 1,
@@ -3053,7 +3053,7 @@
      "contexts": 0
     },
     "vseprosport": {
-     "at": "2026-11-28T08:46:37.295210+00:00",
+     "at": "2026-11-28T09:16:58.920155+00:00",
      "status": "ok",
      "discovered": 6,
      "pages": 5,
@@ -3164,29 +3164,29 @@
    }
   },
   "source": {
-   "last_success": "2026-11-28T08:56:37.963874+00:00",
-   "parsed": 319,
-   "added": 52,
-   "discovered_matches": 59,
+   "last_success": "2026-11-28T09:16:58.920155+00:00",
+   "parsed": 326,
+   "added": 51,
+   "discovered_matches": 65,
    "pages": 18,
    "errors": [],
    "parsed_by_sport": {
     "soccer": 50,
     "ice-hockey": 50,
     "basketball": 50,
-    "tennis": 44,
-    "csgo": 34,
+    "tennis": 42,
+    "csgo": 35,
     "dota2": 50
    }
   },
   "error": null,
-  "tips": 21218,
+  "tips": 21246,
   "snapshots": 456,
-  "unmapped_markets": 31975,
-  "quote_matches": 185
+  "unmapped_markets": 31998,
+  "quote_matches": 186
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-28T12:14:58.515402+03:00",
+  "last_poll": "2026-11-28T12:16:58.920155+03:00",
   "cursor": "499",
   "posts": [
    {
@@ -4303,7 +4303,9 @@
    "401878928": "pre",
    "401896719": "pre",
    "401878330": "pre",
-   "401874552": "pre"
+   "401874552": "pre",
+   "401882794": "pre",
+   "401882295": "pre"
   },
   "daily": {
    "day": "2026-11-28"
