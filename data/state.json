@@ -3182,7 +3182,7 @@
   "quote_matches": 184
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-28T10:36:34.841480+03:00",
+  "last_poll": "2026-11-28T10:38:34.477012+03:00",
   "cursor": "498",
   "posts": [
    {
@@ -8924,6 +8924,21 @@
    "probability": 0.5917,
    "odds": 1.57,
    "edge": -0.07103,
+   "estimated": true
+  },
+  "football|AUS|401892132": {
+   "reason": "no_qualified_real_market",
+   "checked_at": "2026-11-28T07:38:59.357788+00:00",
+   "kickoff": "2026-11-28T11:40:00+03:00",
+   "sport": "football",
+   "id": "401892132",
+   "home": "Сентрал Кост Маринерс",
+   "away": "Окленд",
+   "priced_markets": 6,
+   "market": "Обе забьют — да",
+   "probability": 0.6133,
+   "odds": 1.52,
+   "edge": -0.06778,
    "estimated": true
   }
  },

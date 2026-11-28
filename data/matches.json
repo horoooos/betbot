@@ -30451,5 +30451,13 @@
   "close": {
    "A": 0.3158
   }
+ },
+ "401892132": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-28T11:40:00+03:00",
+  "sport": "football",
+  "div": "AUS",
+  "reason": "no_qualified_real_market",
+  "retry_at": 1795852114.477012
  }
 }
