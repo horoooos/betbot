@@ -3188,34 +3188,9 @@
   "quote_matches": 186
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-28T12:34:58.366048+03:00",
-  "cursor": "499",
+  "last_poll": "2026-11-28T12:36:58.379061+03:00",
+  "cursor": "500",
   "posts": [
-   {
-    "post_id": 919,
-    "published_at": 1795777042,
-    "url": "https://vk.com/wall-228963529_919",
-    "title": "FL1T жалуется на низкие выплаты от стикеров на PGL Major Singapore 2026",
-    "text": "рџ“° Евгений FL1T Лебедев из состава «PARIVISION» выступил с критикой выплат от Valve за стикеры на PGL Major Singapore 2026.\n\nрџ’¬ FL1T подчеркнул, что нынешний формат продажи — фиксированная цена за любой стикер — лишает игроков доходов, в отличие от прежней модели с капсулами, где покупатели получали случайные предметы.\n\nрџЏ† Он выразил надежду, что вернут гемблинг-модель продажи стикеров, считая её важной для развития Counter-Strike 2.\n\nрџ“Ј Ранее CEO команды 9z Team Франсиско Постильоне тоже говорил о проблеме и предупредил, что некоторые киберспортсмены могут бойкотировать следующий мейджор, если ситуация не изменится.\n\nПодписывайтесь на «АИ СТАВИТ» — спортивные новости каждый день.\n\n#киберспорт #Постильоне #новостиспорта #спорт #главное #аиставит\n\nрџ“Љ Подробнее на сайте рџ‘‡",
-    "checks": {
-     "encoding_clean": false,
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": true,
-     "details_present": true,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "cover": {
-     "verified": true,
-     "width": 800,
-     "height": 450,
-     "host": "sun9-67.userapi.com"
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-27T13:58:14.402555+03:00"
-   },
    {
     "post_id": 920,
     "published_at": 1795777043,
@@ -3940,6 +3915,31 @@
     },
     "status": "needs_review",
     "observed_at": "2026-11-28T11:32:37.330603+03:00"
+   },
+   {
+    "post_id": 949,
+    "published_at": 1795858590,
+    "url": "https://vk.com/wall-228963529_949",
+    "title": "PGL Major Singapore 2026: объявлены пары второго раунда второго этапа",
+    "text": "рџ“° Организаторы PGL Major Singapore 2026 по Counter-Strike 2 объявили состав пар второго раунда второго этапа турнира.\n\nрџ“Љ Встречи запланированы так: Natus Vincere против Astralis, 100 Thieves vs FUT Esports, G2 Esports против Ninjas in Pyjamas и 1w Team против The Mongolz.\n\nрџ”Ґ В тот же день стартуют матчи Team Liquid — Eternal Fire, PARIVISION — FlyQuest, Nemiga Gaming — Lynn Vision Gaming и MIBR — Imperial Esports.\n\nрџЏ† Турнир проходит с 24 ноября по 13 декабря в Калланге, Сингапур, а призовой фонд составляет $1,25 млн. Следить за расписанием и результатами можно в официальном репортаже.\n\nПодписывайтесь на «АИ СТАВИТ» — спортивные новости каждый день.\n\n#киберспорт #новостиспорта #спорт #главное #аиставит\n\nрџ“Љ Подробнее на сайте рџ‘‡",
+    "checks": {
+     "encoding_clean": false,
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": true,
+     "details_present": true,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "cover": {
+     "verified": true,
+     "width": 800,
+     "height": 450,
+     "host": "sun9-80.userapi.com"
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-28T12:36:58.379061+03:00"
    }
   ],
   "status": "observing",
