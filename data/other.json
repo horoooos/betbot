@@ -5383,12 +5383,357 @@
   "retry_at": 1795827895.276971
  },
  "NBA|401909331": {
-  "status": "waiting_data",
-  "kickoff": "2026-11-28T04:30:00+03:00",
-  "sport": "basketball",
+  "id": "401909331",
   "div": "NBA",
-  "reason": "no_qualified_real_market",
-  "retry_at": 1795828254.903481
+  "sport": "basketball",
+  "kickoff": "2026-11-28T04:30:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "detail": "Fri, November 27th at 8:30 PM EST",
+  "clock": "0.0",
+  "period": 0,
+  "home": {
+   "id": "16",
+   "name": "Minnesota Timberwolves",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/min.png",
+   "color": "266092",
+   "score": "0",
+   "record": "14-5",
+   "periods": [],
+   "ru": "Миннесота Тимбервулвз"
+  },
+  "away": {
+   "id": "29",
+   "name": "Memphis Grizzlies",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/mem.png",
+   "color": "5d76a9",
+   "score": "0",
+   "record": "14-5",
+   "periods": [],
+   "ru": "Мемфис Гриззлис"
+  },
+  "odds": {
+   "H": 1.676,
+   "A": 2.24,
+   "line": 220.5,
+   "over": 1.952,
+   "under": 1.87,
+   "spread": -2.5,
+   "sp_h": 1.893,
+   "sp_a": 1.926
+  },
+  "probs": {
+   "BB_ML_H": 0.5825156468205225,
+   "BB_ML_A": 0.4174843531794775,
+   "BB_SPR_H": 0.5,
+   "BB_SPR_A": 0.5,
+   "BB_O213.5": 0.6597440535491568,
+   "BB_U213.5": 0.3402559464508432,
+   "BB_O220.5": 0.5,
+   "BB_U220.5": 0.5,
+   "BB_O227.5": 0.3402559464508432,
+   "BB_U227.5": 0.6597440535491568
+  },
+  "labels": {
+   "BB_ML_H": "П1 (с ОТ)",
+   "BB_ML_A": "П2 (с ОТ)",
+   "BB_SPR_H": "Ф1 (-2.5)",
+   "BB_SPR_A": "Ф2 (+2.5)",
+   "BB_O213.5": "ТБ 213.5",
+   "BB_U213.5": "ТМ 213.5",
+   "BB_O220.5": "ТБ 220.5",
+   "BB_U220.5": "ТМ 220.5",
+   "BB_O227.5": "ТБ 227.5",
+   "BB_U227.5": "ТМ 227.5"
+  },
+  "real": {
+   "BB_ML_H": 1.676,
+   "BB_ML_A": 2.24,
+   "BB_SPR_H": 1.893,
+   "BB_SPR_A": 1.926,
+   "BB_O220.5": 1.952,
+   "BB_U220.5": 1.87
+  },
+  "center": "Ожидаемый счёт 112 : 109",
+  "bar": [
+   0.5825156468205225,
+   0,
+   0.4174843531794775
+  ],
+  "model": {
+   "mu": 2.5,
+   "T": 220.5
+  },
+  "stavka_signal": {
+   "status": "collecting",
+   "weight": 0.0,
+   "authors": 38,
+   "group": "basketball",
+   "snapshot": "NBA|401909331",
+   "source": "https://stavka.tv"
+  },
+  "research": {
+   "articles": [],
+   "dossier": null
+  },
+  "main": {
+   "key": "BB_ML_A",
+   "label": "П2 (с ОТ)",
+   "p": 0.4175,
+   "odds": 2.24,
+   "est": false,
+   "stake": 0.5,
+   "strategy": "external_trial",
+   "selection_mode": "external_fallback",
+   "trial_expires_at": null,
+   "probability_origin": "baseline_model",
+   "model_edge": -0.06484,
+   "source_count": 26,
+   "source_refs": [
+    {
+     "author": "/predictors/dmitrii-melnikov-1",
+     "provider": null,
+     "source": "https://stavka.tv/matches/basketball/28-11-2026-minnesota-timberwolves-memphis-grizzlies",
+     "published_at": "2026-11-26T23:19:00+00:00",
+     "observed_at": "2026-11-27T00:18:56.251033+00:00",
+     "odds": 2.5,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/roman-mytarkin",
+     "provider": null,
+     "source": "https://stavka.tv/matches/basketball/28-11-2026-minnesota-timberwolves-memphis-grizzlies",
+     "published_at": "2026-11-27T05:38:00+00:00",
+     "observed_at": "2026-11-27T05:57:40.020802+00:00",
+     "odds": 2.34,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/optimist-fsj6827",
+     "provider": null,
+     "source": "https://stavka.tv/matches/basketball/28-11-2026-minnesota-timberwolves-memphis-grizzlies",
+     "published_at": "2026-11-27T06:00:00+00:00",
+     "observed_at": "2026-11-27T06:19:39.303383+00:00",
+     "odds": 2.34,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/andrey-kosurin",
+     "provider": null,
+     "source": "https://stavka.tv/matches/basketball/28-11-2026-minnesota-timberwolves-memphis-grizzlies",
+     "published_at": "2026-11-27T06:37:00+00:00",
+     "observed_at": "2026-11-27T06:59:39.762594+00:00",
+     "odds": 2.34,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/venom-li",
+     "provider": null,
+     "source": "https://stavka.tv/matches/basketball/28-11-2026-minnesota-timberwolves-memphis-grizzlies",
+     "published_at": "2026-11-27T09:02:00+00:00",
+     "observed_at": "2026-11-27T09:08:14.328803+00:00",
+     "odds": 2.34,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/mixail-baranov-kapper",
+     "provider": null,
+     "source": "https://stavka.tv/matches/basketball/28-11-2026-minnesota-timberwolves-memphis-grizzlies",
+     "published_at": "2026-11-27T09:19:00+00:00",
+     "observed_at": "2026-11-27T09:28:14.357598+00:00",
+     "odds": 2.34,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/miru-mir-1",
+     "provider": null,
+     "source": "https://stavka.tv/matches/basketball/28-11-2026-minnesota-timberwolves-memphis-grizzlies",
+     "published_at": "2026-11-27T09:34:00+00:00",
+     "observed_at": "2026-11-27T09:50:14.238528+00:00",
+     "odds": 2.34,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/nenastradamus-zatovanga",
+     "provider": null,
+     "source": "https://stavka.tv/matches/basketball/28-11-2026-minnesota-timberwolves-memphis-grizzlies",
+     "published_at": "2026-11-27T09:36:00+00:00",
+     "observed_at": "2026-11-27T09:50:14.238528+00:00",
+     "odds": 2.34,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/andrey-terentev-2",
+     "provider": null,
+     "source": "https://stavka.tv/matches/basketball/28-11-2026-minnesota-timberwolves-memphis-grizzlies",
+     "published_at": "2026-11-27T11:30:00+00:00",
+     "observed_at": "2026-11-27T11:36:14.852934+00:00",
+     "odds": 2.34,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/maksim-pogodin-1",
+     "provider": null,
+     "source": "https://stavka.tv/matches/basketball/28-11-2026-minnesota-timberwolves-memphis-grizzlies",
+     "published_at": "2026-11-27T11:52:00+00:00",
+     "observed_at": "2026-11-27T11:58:14.649867+00:00",
+     "odds": 2.34,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/sergei-oshhepkov-1",
+     "provider": null,
+     "source": "https://stavka.tv/matches/basketball/28-11-2026-minnesota-timberwolves-memphis-grizzlies",
+     "published_at": "2026-11-27T11:56:00+00:00",
+     "observed_at": "2026-11-27T12:20:14.564030+00:00",
+     "odds": 2.34,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/daniil-55",
+     "provider": null,
+     "source": "https://stavka.tv/matches/basketball/28-11-2026-minnesota-timberwolves-memphis-grizzlies",
+     "published_at": "2026-11-27T16:05:00+00:00",
+     "observed_at": "2026-11-27T16:08:40.417199+00:00",
+     "odds": 2.61,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/rambay-chelovek",
+     "provider": null,
+     "source": "https://stavka.tv/matches/basketball/28-11-2026-minnesota-timberwolves-memphis-grizzlies",
+     "published_at": "2026-11-27T16:34:00+00:00",
+     "observed_at": "2026-11-27T16:50:40.075253+00:00",
+     "odds": 2.53,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/andrei-suxov-6",
+     "provider": null,
+     "source": "https://stavka.tv/matches/basketball/28-11-2026-minnesota-timberwolves-memphis-grizzlies",
+     "published_at": "2026-11-27T16:42:00+00:00",
+     "observed_at": "2026-11-27T16:50:40.075253+00:00",
+     "odds": 2.53,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/prosto-krasava-1",
+     "provider": null,
+     "source": "https://stavka.tv/matches/basketball/28-11-2026-minnesota-timberwolves-memphis-grizzlies",
+     "published_at": "2026-11-27T17:24:00+00:00",
+     "observed_at": "2026-11-27T17:32:40.568811+00:00",
+     "odds": 2.6,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/ares-avetisyan",
+     "provider": null,
+     "source": "https://stavka.tv/matches/basketball/28-11-2026-minnesota-timberwolves-memphis-grizzlies",
+     "published_at": "2026-11-27T17:29:00+00:00",
+     "observed_at": "2026-11-27T17:32:40.568811+00:00",
+     "odds": 2.6,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/mesok-lenivyi",
+     "provider": null,
+     "source": "https://stavka.tv/matches/basketball/28-11-2026-minnesota-timberwolves-memphis-grizzlies",
+     "published_at": "2026-11-27T18:30:00+00:00",
+     "observed_at": "2026-11-27T18:35:46.928326+00:00",
+     "odds": 2.39,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/skrytyi-genii",
+     "provider": null,
+     "source": "https://stavka.tv/matches/basketball/28-11-2026-minnesota-timberwolves-memphis-grizzlies",
+     "published_at": "2026-11-27T18:39:00+00:00",
+     "observed_at": "2026-11-27T18:55:47.356701+00:00",
+     "odds": 2.39,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/slavik-cymbal",
+     "provider": null,
+     "source": "https://stavka.tv/matches/basketball/28-11-2026-minnesota-timberwolves-memphis-grizzlies",
+     "published_at": "2026-11-27T19:07:00+00:00",
+     "observed_at": "2026-11-27T19:15:48.093566+00:00",
+     "odds": 2.2,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/vladimir-ooops",
+     "provider": null,
+     "source": "https://stavka.tv/matches/basketball/28-11-2026-minnesota-timberwolves-memphis-grizzlies",
+     "published_at": "2026-11-27T20:12:00+00:00",
+     "observed_at": "2026-11-27T20:19:48.415583+00:00",
+     "odds": 2.2,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/artem-godlike",
+     "provider": null,
+     "source": "https://stavka.tv/matches/basketball/28-11-2026-minnesota-timberwolves-memphis-grizzlies",
+     "published_at": "2026-11-27T20:16:00+00:00",
+     "observed_at": "2026-11-27T20:19:48.415583+00:00",
+     "odds": 2.2,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/paul-skenes",
+     "provider": null,
+     "source": "https://stavka.tv/matches/basketball/28-11-2026-minnesota-timberwolves-memphis-grizzlies",
+     "published_at": "2026-11-27T20:22:00+00:00",
+     "observed_at": "2026-11-27T20:39:48.814970+00:00",
+     "odds": 2.2,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/-328",
+     "provider": null,
+     "source": "https://stavka.tv/matches/basketball/28-11-2026-minnesota-timberwolves-memphis-grizzlies",
+     "published_at": "2026-11-27T20:24:00+00:00",
+     "observed_at": "2026-11-27T20:39:48.814970+00:00",
+     "odds": 2.2,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/nphne-rupgz64t",
+     "provider": null,
+     "source": "https://stavka.tv/matches/basketball/28-11-2026-minnesota-timberwolves-memphis-grizzlies",
+     "published_at": "2026-11-27T21:43:00+00:00",
+     "observed_at": "2026-11-27T22:04:36.100319+00:00",
+     "odds": 2.2,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/yurii-sycev-25",
+     "provider": null,
+     "source": "https://stavka.tv/matches/basketball/28-11-2026-minnesota-timberwolves-memphis-grizzlies",
+     "published_at": "2026-11-28T00:09:00+00:00",
+     "observed_at": "2026-11-28T00:30:55.105567+00:00",
+     "odds": 2.2,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/player-successful",
+     "provider": null,
+     "source": "https://stavka.tv/matches/basketball/28-11-2026-minnesota-timberwolves-memphis-grizzlies",
+     "published_at": "2026-11-28T00:11:00+00:00",
+     "observed_at": "2026-11-28T00:30:55.105567+00:00",
+     "odds": 2.2,
+     "price_kind": "author_recorded"
+    }
+   ]
+  },
+  "bold": {},
+  "open": {
+   "BB_ML_A": 0.4175
+  },
+  "top": false,
+  "msg_id": 9888,
+  "btn": 2
  },
  "NBA|401909332": {
   "id": "401909332",

@@ -411,8 +411,8 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-28-nyu-york-niks-mayami-hit-401909326.html",
-"hs": "40",
-"as": "58",
+"hs": "44",
+"as": "60",
 "tip": "П2 (с ОТ) · 2.24",
 "top": false,
 "bot": {
@@ -618,7 +618,7 @@ null
 "bo": null,
 "prediction": "predictions/2026-11-28-aylenders-vinnipeg-401892807.html",
 "hs": "0",
-"as": "0",
+"as": "1",
 "tip": "П2 (с ОТ и буллитами) · 2.02",
 "top": false,
 "bot": {
@@ -885,7 +885,7 @@ null
 ]
 ],
 "div": "NBA",
-"state": "pre",
+"state": "in",
 "bo": null,
 "prediction": "",
 "hs": "0",
@@ -992,12 +992,78 @@ null
 "div": "NBA",
 "state": "pre",
 "bo": null,
-"prediction": "",
+"prediction": "predictions/2026-11-28-minnesota-timbervulvz-memfis-grizzlis-401909331.html",
 "hs": "0",
 "as": "0",
-"tip": "",
+"tip": "П2 (с ОТ) · 2.24",
 "top": false,
-"bot": null,
+"bot": {
+"main": {
+"label": "П2 (с ОТ)",
+"p": 0.417,
+"odds": 2.24,
+"est": false
+},
+"bold": null,
+"markets": [
+[
+"П1 (с ОТ)",
+0.583,
+1.676
+],
+[
+"П2 (с ОТ)",
+0.417,
+2.24
+],
+[
+"Ф1 (-2.5)",
+0.5,
+1.893
+],
+[
+"Ф2 (+2.5)",
+0.5,
+1.926
+],
+[
+"ТБ 213.5",
+0.66,
+null
+],
+[
+"ТМ 213.5",
+0.34,
+null
+],
+[
+"ТБ 220.5",
+0.5,
+1.952
+],
+[
+"ТМ 220.5",
+0.5,
+1.87
+],
+[
+"ТБ 227.5",
+0.34,
+null
+],
+[
+"ТМ 227.5",
+0.66,
+null
+]
+],
+"bar": [
+0.5825156468205225,
+0,
+0.4174843531794775
+],
+"center": "Ожидаемый счёт 112 : 109"
+},
 "lt": null
 },
 {
