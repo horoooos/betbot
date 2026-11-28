@@ -246,41 +246,6 @@ null
 },
 {
 "sport": "esports",
-"id": "1817110",
-"league": "Киберспорт · CS2",
-"kickoff": "2026-11-28T14:30:00+03:00",
-"home": "FUT Esports",
-"away": "100 Thieves",
-"hl": "https://cdn-api.pandascore.co/images/team/image/136955/fut_esportslogo_square.png",
-"al": "https://cdn-api.pandascore.co/images/team/image/126452/8474.png",
-"hid": "136955",
-"aid": "126452",
-"bb": "https://betboom.ru/search?query=%D0%95%D1%81%D0%BF%D0%BE%D1%80%D1%86&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=esports",
-"path": "",
-"url": "esports.html?e=1817110&d=CS2",
-"participants": [
-[
-"FUT Esports",
-"FUT Esports"
-],
-[
-"100 Thieves",
-"100 Thieves"
-]
-],
-"div": "CS2",
-"state": "pre",
-"bo": 1,
-"prediction": "",
-"hs": 0,
-"as": 0,
-"tip": "",
-"top": false,
-"bot": null,
-"lt": null
-},
-{
-"sport": "esports",
 "id": "1816497",
 "league": "Киберспорт · Dota 2",
 "kickoff": "2026-11-28T14:30:00+03:00",
@@ -336,6 +301,41 @@ null
 [
 "Imperial",
 "Imperial"
+]
+],
+"div": "CS2",
+"state": "pre",
+"bo": 1,
+"prediction": "",
+"hs": 0,
+"as": 0,
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "esports",
+"id": "1817110",
+"league": "Киберспорт · CS2",
+"kickoff": "2026-11-28T14:40:00+03:00",
+"home": "FUT Esports",
+"away": "100 Thieves",
+"hl": "https://cdn-api.pandascore.co/images/team/image/136955/fut_esportslogo_square.png",
+"al": "https://cdn-api.pandascore.co/images/team/image/126452/8474.png",
+"hid": "136955",
+"aid": "126452",
+"bb": "https://betboom.ru/search?query=%D0%95%D1%81%D0%BF%D0%BE%D1%80%D1%86&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=esports",
+"path": "",
+"url": "esports.html?e=1817110&d=CS2",
+"participants": [
+[
+"FUT Esports",
+"FUT Esports"
+],
+[
+"100 Thieves",
+"100 Thieves"
 ]
 ],
 "div": "CS2",

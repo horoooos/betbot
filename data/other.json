@@ -5919,19 +5919,19 @@
  },
  "CS2|1817111": {
   "status": "waiting_data",
-  "kickoff": "2026-11-28T14:30:00+03:00",
+  "kickoff": "2026-11-28T14:40:00+03:00",
   "sport": "esports",
   "div": "CS2",
   "reason": "no_real_odds",
-  "retry_at": 1795864976.672434
+  "retry_at": 1795865696.592897
  },
  "CS2|1817110": {
   "status": "waiting_data",
-  "kickoff": "2026-11-28T14:30:00+03:00",
+  "kickoff": "2026-11-28T14:40:00+03:00",
   "sport": "esports",
   "div": "CS2",
-  "reason": "no_real_odds",
-  "retry_at": 1795864976.672434
+  "reason": "edge_below_minimum",
+  "retry_at": 1795865696.592897
  },
  "DOTA|1816497": {
   "status": "waiting_data",
@@ -5939,6 +5939,6 @@
   "sport": "esports",
   "div": "DOTA",
   "reason": "no_real_odds",
-  "retry_at": 1795864976.672434
+  "retry_at": 1795865696.592897
  }
 }
