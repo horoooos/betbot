@@ -7628,5 +7628,40 @@ null
 "top": false,
 "bot": null,
 "lt": null
+},
+{
+"sport": "football",
+"id": "401896722",
+"league": "Греция · Суперлига",
+"kickoff": "2026-11-29T18:30:00+03:00",
+"home": "ОФИ",
+"away": "Levadiakos",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/1010.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/5276.png",
+"hid": "1010",
+"aid": "5276",
+"bb": "https://betboom.ru/search?query=%D0%9E%D0%A4%D0%98&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/gre.1",
+"url": "live.html?s=football&p=soccer%2Fgre.1&e=401896722&h=%D0%9E%D0%A4%D0%98&a=Levadiakos",
+"participants": [
+[
+"ОФИ",
+"OFI Crete"
+],
+[
+"Levadiakos",
+"Levadiakos"
+]
+],
+"div": "G1",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
 }
 ]
