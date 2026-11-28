@@ -3022,62 +3022,65 @@
   "external_sources": {
    "providers": {
     "legalbet": {
-     "at": "2026-11-28T11:54:56.732550+00:00",
+     "at": "2026-11-28T12:24:57.254232+00:00",
      "status": "ok",
      "discovered": 1,
      "pages": 1,
      "opinions": 1,
      "mapped": 0,
-     "articles_available": 4,
+     "articles_available": 3,
      "next_offset": 1,
      "contexts": 1
     },
     "livesport": {
-     "at": "2026-11-28T11:54:56.732550+00:00",
+     "at": "2026-11-28T12:24:57.254232+00:00",
      "status": "ok",
-     "discovered": 25,
+     "discovered": 26,
      "pages": 6,
-     "opinions": 8,
-     "mapped": 4,
-     "articles_available": 41,
-     "next_offset": 14,
+     "opinions": 2,
+     "mapped": 1,
+     "articles_available": 40,
+     "next_offset": 20,
      "contexts": 6
     },
     "metaratings": {
-     "at": "2026-11-28T11:54:56.732550+00:00",
+     "at": "2026-11-28T12:24:57.254232+00:00",
      "status": "ok",
-     "discovered": 14,
+     "discovered": 15,
      "pages": 6,
      "opinions": 24,
-     "mapped": 9,
-     "articles_available": 42,
-     "next_offset": 9,
+     "mapped": 2,
+     "articles_available": 41,
+     "next_offset": 15,
      "contexts": 6
     },
     "rb": {
-     "at": "2026-11-28T11:54:56.732550+00:00",
+     "at": "2026-11-28T12:24:57.254232+00:00",
      "status": "ok",
-     "discovered": 1,
-     "pages": 1,
+     "discovered": 2,
+     "pages": 2,
      "opinions": 0,
      "mapped": 0,
      "articles_available": 2,
-     "next_offset": 1,
-     "contexts": 0
+     "next_offset": 3,
+     "contexts": 1
     },
     "vseprosport": {
-     "at": "2026-11-28T11:54:56.732550+00:00",
-     "status": "unavailable",
-     "discovered": 0,
-     "pages": 0,
+     "at": "2026-11-28T12:24:57.254232+00:00",
+     "status": "ok",
+     "discovered": 6,
+     "pages": 5,
      "opinions": 0,
      "mapped": 0,
-     "error": "ConnectionError"
+     "articles_available": 10,
+     "next_offset": 6,
+     "page_errors": 1,
+     "contexts": 5
     }
    },
-   "opinions": 83,
+   "opinions": 84,
    "snapshots": 0,
-   "contexts": 227,
+   "contexts": 229,
    "model": {
     "weight": 0.0,
     "status": "collecting",
@@ -3196,7 +3199,7 @@
   "quote_matches": 191
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-28T15:22:57.742917+03:00",
+  "last_poll": "2026-11-28T15:24:57.254232+03:00",
   "cursor": "505",
   "posts": [
    {
