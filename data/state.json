@@ -3013,7 +3013,7 @@
   "external_sources": {
    "providers": {
     "legalbet": {
-     "at": "2026-11-28T04:38:55.095622+00:00",
+     "at": "2026-11-28T05:09:08.158446+00:00",
      "status": "ok",
      "discovered": 1,
      "pages": 1,
@@ -3024,29 +3024,29 @@
      "contexts": 1
     },
     "livesport": {
-     "at": "2026-11-28T04:38:55.095622+00:00",
+     "at": "2026-11-28T05:09:08.158446+00:00",
      "status": "ok",
      "discovered": 20,
      "pages": 6,
-     "opinions": 2,
-     "mapped": 1,
+     "opinions": 10,
+     "mapped": 5,
      "articles_available": 34,
-     "next_offset": 19,
+     "next_offset": 25,
      "contexts": 6
     },
     "metaratings": {
-     "at": "2026-11-28T04:38:55.095622+00:00",
+     "at": "2026-11-28T05:09:08.158446+00:00",
      "status": "ok",
      "discovered": 10,
      "pages": 6,
      "opinions": 24,
-     "mapped": 6,
+     "mapped": 8,
      "articles_available": 41,
-     "next_offset": 11,
+     "next_offset": 7,
      "contexts": 6
     },
     "rb": {
-     "at": "2026-11-28T04:38:55.095622+00:00",
+     "at": "2026-11-28T05:09:08.158446+00:00",
      "status": "ok",
      "discovered": 1,
      "pages": 1,
@@ -3057,7 +3057,7 @@
      "contexts": 0
     },
     "vseprosport": {
-     "at": "2026-11-28T04:38:55.095622+00:00",
+     "at": "2026-11-28T05:09:08.158446+00:00",
      "status": "ok",
      "discovered": 4,
      "pages": 3,
@@ -3190,7 +3190,7 @@
   "quote_matches": 183
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-28T08:07:08.128380+03:00",
+  "last_poll": "2026-11-28T08:09:08.158446+03:00",
   "cursor": "497",
   "posts": [
    {
@@ -4204,7 +4204,7 @@
    "401885393": "pre",
    "401896808": "pre",
    "1817024": "pre",
-   "1817103": "pre",
+   "1817103": "in",
    "401899522": "pre",
    "401881738": "pre",
    "401921317": "pre",
@@ -8835,7 +8835,7 @@
   },
   "football|JPN|401877516": {
    "reason": "edge_below_minimum",
-   "checked_at": "2026-11-28T04:59:26.108121+00:00",
+   "checked_at": "2026-11-28T05:09:45.532978+00:00",
    "kickoff": "2026-11-28T09:00:00+03:00",
    "sport": "football",
    "id": "401877516",
@@ -8850,7 +8850,7 @@
   },
   "esports|CS2|1817101": {
    "reason": "no_real_odds",
-   "checked_at": "2026-11-28T04:59:28.285131+00:00",
+   "checked_at": "2026-11-28T05:09:47.250712+00:00",
    "kickoff": "2026-11-28T09:00:00+03:00",
    "sport": "esports",
    "id": "1817101",
@@ -8865,7 +8865,7 @@
   },
   "esports|CS2|1817100": {
    "reason": "insufficient_history_or_odds",
-   "checked_at": "2026-11-28T04:59:30.294230+00:00",
+   "checked_at": "2026-11-28T05:09:48.848016+00:00",
    "kickoff": "2026-11-28T09:00:00+03:00",
    "sport": "esports",
    "id": "1817100",
