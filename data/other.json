@@ -5955,5 +5955,116 @@
   "div": "NBA",
   "reason": "no_qualified_real_market",
   "retry_at": 1795827535.150096
+ },
+ "NBA|401909332": {
+  "id": "401909332",
+  "div": "NBA",
+  "sport": "basketball",
+  "kickoff": "2026-11-28T05:00:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "detail": "Fri, November 27th at 9:00 PM EST",
+  "clock": "0.0",
+  "period": 0,
+  "home": {
+   "id": "21",
+   "name": "Phoenix Suns",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/phx.png",
+   "color": "29127a",
+   "score": "0",
+   "record": "9-8",
+   "periods": [],
+   "ru": "Финикс Санз"
+  },
+  "away": {
+   "id": "6",
+   "name": "Dallas Mavericks",
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/dal.png",
+   "color": "0064b1",
+   "score": "0",
+   "record": "11-7",
+   "periods": [],
+   "ru": "Даллас Маверикс"
+  },
+  "odds": {
+   "H": 1.575,
+   "A": 2.46,
+   "line": 225.5,
+   "over": 1.909,
+   "under": 1.909,
+   "spread": -4.5,
+   "sp_h": 1.952,
+   "sp_a": 1.87
+  },
+  "probs": {
+   "BB_ML_H": 0.6461697666727237,
+   "BB_ML_A": 0.35383023332727626,
+   "BB_SPR_H": 0.5,
+   "BB_SPR_A": 0.5,
+   "BB_O218.5": 0.6597440535491568,
+   "BB_U218.5": 0.3402559464508432,
+   "BB_O225.5": 0.5,
+   "BB_U225.5": 0.5,
+   "BB_O232.5": 0.3402559464508432,
+   "BB_U232.5": 0.6597440535491568
+  },
+  "labels": {
+   "BB_ML_H": "П1 (с ОТ)",
+   "BB_ML_A": "П2 (с ОТ)",
+   "BB_SPR_H": "Ф1 (-4.5)",
+   "BB_SPR_A": "Ф2 (+4.5)",
+   "BB_O218.5": "ТБ 218.5",
+   "BB_U218.5": "ТМ 218.5",
+   "BB_O225.5": "ТБ 225.5",
+   "BB_U225.5": "ТМ 225.5",
+   "BB_O232.5": "ТБ 232.5",
+   "BB_U232.5": "ТМ 232.5"
+  },
+  "real": {
+   "BB_ML_H": 1.575,
+   "BB_ML_A": 2.46,
+   "BB_SPR_H": 1.952,
+   "BB_SPR_A": 1.87,
+   "BB_O225.5": 1.909,
+   "BB_U225.5": 1.909
+  },
+  "center": "Ожидаемый счёт 115 : 110",
+  "bar": [
+   0.6461697666727237,
+   0,
+   0.35383023332727626
+  ],
+  "model": {
+   "mu": 4.5,
+   "T": 225.5
+  },
+  "stavka_signal": {
+   "status": "collecting",
+   "weight": 0.0,
+   "authors": 25,
+   "group": "basketball",
+   "snapshot": "NBA|401909332",
+   "source": "https://stavka.tv"
+  },
+  "research": {
+   "articles": [],
+   "dossier": null
+  },
+  "main": {
+   "key": "BB_ML_H",
+   "label": "П1 (с ОТ)",
+   "p": 0.6462,
+   "odds": 1.57,
+   "est": false,
+   "stake": 1.0
+  },
+  "bold": {},
+  "open": {
+   "BB_ML_H": 0.6462
+  },
+  "top": true,
+  "msg_id": 9884,
+  "btn": 4
  }
 }

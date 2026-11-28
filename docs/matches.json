@@ -442,7 +442,7 @@ null
 ]
 ],
 "div": "BRA",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "",
 "hs": "0",
@@ -477,7 +477,7 @@ null
 ]
 ],
 "div": "BRA2",
-"state": "in",
+"state": "post",
 "bo": null,
 "prediction": "",
 "hs": "2",
@@ -620,8 +620,8 @@ null
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-28-nyu-york-niks-mayami-hit-401909326.html",
-"hs": "29",
-"as": "48",
+"hs": "31",
+"as": "52",
 "tip": "П2 (с ОТ) · 2.24",
 "top": false,
 "bot": {
@@ -721,7 +721,7 @@ null
 "state": "in",
 "bo": null,
 "prediction": "",
-"hs": "3",
+"hs": "11",
 "as": "19",
 "tip": "",
 "top": false,
@@ -756,8 +756,8 @@ null
 "state": "in",
 "bo": null,
 "prediction": "",
-"hs": "11",
-"as": "21",
+"hs": "13",
+"as": "22",
 "tip": "",
 "top": false,
 "bot": null,
@@ -791,8 +791,8 @@ null
 "state": "in",
 "bo": null,
 "prediction": "",
-"hs": "17",
-"as": "13",
+"hs": "20",
+"as": "15",
 "tip": "",
 "top": false,
 "bot": null,
@@ -1306,12 +1306,78 @@ null
 "div": "NBA",
 "state": "pre",
 "bo": null,
-"prediction": "",
+"prediction": "predictions/2026-11-28-finiks-sanz-dallas-maveriks-401909332.html",
 "hs": "0",
 "as": "0",
-"tip": "",
-"top": false,
-"bot": null,
+"tip": "П1 (с ОТ) · 1.57",
+"top": true,
+"bot": {
+"main": {
+"label": "П1 (с ОТ)",
+"p": 0.646,
+"odds": 1.57,
+"est": false
+},
+"bold": null,
+"markets": [
+[
+"П1 (с ОТ)",
+0.646,
+1.575
+],
+[
+"П2 (с ОТ)",
+0.354,
+2.46
+],
+[
+"Ф1 (-4.5)",
+0.5,
+1.952
+],
+[
+"Ф2 (+4.5)",
+0.5,
+1.87
+],
+[
+"ТБ 218.5",
+0.66,
+null
+],
+[
+"ТМ 218.5",
+0.34,
+null
+],
+[
+"ТБ 225.5",
+0.5,
+1.909
+],
+[
+"ТМ 225.5",
+0.5,
+1.909
+],
+[
+"ТБ 232.5",
+0.34,
+null
+],
+[
+"ТМ 232.5",
+0.66,
+null
+]
+],
+"bar": [
+0.6461697666727237,
+0,
+0.35383023332727626
+],
+"center": "Ожидаемый счёт 115 : 110"
+},
 "lt": null
 },
 {

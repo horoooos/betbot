@@ -28222,5 +28222,13 @@
   "div": "COL",
   "reason": "no_qualified_real_market",
   "retry_at": 1795827535.150096
+ },
+ "401876813": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-28T05:00:00+03:00",
+  "sport": "football",
+  "div": "CRC",
+  "reason": "edge_below_minimum",
+  "retry_at": 1795828134.962778
  }
 }
