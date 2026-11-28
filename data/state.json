@@ -1564,7 +1564,7 @@
  "value_day": "2026-11-28",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-28",
- "site_stamp": "1596|9931|2026-11-28 12|6|64513dd0c29c44ee",
+ "site_stamp": "1596|9933|2026-11-28 12|6|1f171d05bd1df62b",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1734,7 +1734,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 9931,
+ "dz_last": 9933,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -3166,29 +3166,29 @@
    }
   },
   "source": {
-   "last_success": "2026-11-28T09:38:58.498486+00:00",
-   "parsed": 338,
-   "added": 98,
-   "discovered_matches": 67,
+   "last_success": "2026-11-28T09:58:58.724494+00:00",
+   "parsed": 343,
+   "added": 45,
+   "discovered_matches": 59,
    "pages": 18,
    "errors": [],
    "parsed_by_sport": {
     "soccer": 50,
     "ice-hockey": 50,
     "basketball": 50,
-    "tennis": 40,
-    "csgo": 38,
+    "tennis": 42,
+    "csgo": 41,
     "dota2": 50
    }
   },
   "error": null,
-  "tips": 21296,
+  "tips": 21314,
   "snapshots": 457,
-  "unmapped_markets": 32046,
+  "unmapped_markets": 32073,
   "quote_matches": 186
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-28T12:56:58.213373+03:00",
+  "last_poll": "2026-11-28T12:58:58.724494+03:00",
   "cursor": "501",
   "posts": [
    {
@@ -9031,6 +9031,22 @@
    "odds": 1.65,
    "edge": -0.07138,
    "estimated": true
+  },
+  "football|RUS|401879793": {
+   "reason": "published",
+   "checked_at": "2026-11-28T09:59:46.621325+00:00",
+   "kickoff": "2026-11-28T14:00:00+03:00",
+   "sport": "football",
+   "id": "401879793",
+   "home": "Рубин",
+   "away": "Акрон",
+   "market": "П1",
+   "strategy": "external_trial",
+   "source_count": 69,
+   "probability": 0.5122,
+   "odds": 1.86,
+   "edge": -0.04731,
+   "estimated": false
   }
  },
  "source_trial": {
@@ -22313,6 +22329,652 @@
     "settled_at": "2026-11-28T08:58:37.471735+00:00",
     "hit": false,
     "profit_pct": -0.5
+   },
+   "football|RUS|401879793": {
+    "status": "open",
+    "id": "401879793",
+    "sport": "football",
+    "div": "RUS",
+    "kickoff": "2026-11-28T14:00:00+03:00",
+    "published_at": "2026-11-28T09:59:43.076640+00:00",
+    "msg_id": 9932,
+    "tip": {
+     "key": "H",
+     "label": "П1",
+     "p": 0.5122,
+     "odds": 1.86,
+     "est": false,
+     "stake": 0.5,
+     "strategy": "external_trial",
+     "selection_mode": "external_fallback",
+     "trial_expires_at": null,
+     "probability_origin": "baseline_model",
+     "model_edge": -0.04733,
+     "source_count": 69,
+     "source_refs": [
+      {
+       "author": "/predictors/velikii-mag",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/28-11-2026-rubin-kazan-akron-tolyatti",
+       "published_at": "2026-11-26T21:12:00+00:00",
+       "observed_at": "2026-11-27T06:59:39.762594+00:00",
+       "odds": 1.9,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/aleksandr-rozhko",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/28-11-2026-rubin-kazan-akron-tolyatti",
+       "published_at": "2026-11-27T05:02:00+00:00",
+       "observed_at": "2026-11-27T06:59:39.762594+00:00",
+       "odds": 1.9,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/lev-abalkin",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/28-11-2026-rubin-kazan-akron-tolyatti",
+       "published_at": "2026-11-27T05:53:00+00:00",
+       "observed_at": "2026-11-27T05:57:40.020802+00:00",
+       "odds": 1.9,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/igor-nikulin",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/28-11-2026-rubin-kazan-akron-tolyatti",
+       "published_at": "2026-11-27T06:15:00+00:00",
+       "observed_at": "2026-11-27T06:59:39.762594+00:00",
+       "odds": 1.9,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/radik-burkeev",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/28-11-2026-rubin-kazan-akron-tolyatti",
+       "published_at": "2026-11-27T06:17:00+00:00",
+       "observed_at": "2026-11-27T06:19:39.303383+00:00",
+       "odds": 1.9,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/pliuskin",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/28-11-2026-rubin-kazan-akron-tolyatti",
+       "published_at": "2026-11-27T06:49:00+00:00",
+       "observed_at": "2026-11-27T06:59:39.762594+00:00",
+       "odds": 1.9,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/saxalin-ostrovityanin",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/28-11-2026-rubin-kazan-akron-tolyatti",
+       "published_at": "2026-11-27T06:55:00+00:00",
+       "observed_at": "2026-11-27T06:59:39.762594+00:00",
+       "odds": 1.9,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/vitalii-7",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/28-11-2026-rubin-kazan-akron-tolyatti",
+       "published_at": "2026-11-27T09:04:00+00:00",
+       "observed_at": "2026-11-27T09:08:14.328803+00:00",
+       "odds": 1.9,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/nikodim-kadilov",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/28-11-2026-rubin-kazan-akron-tolyatti",
+       "published_at": "2026-11-27T09:23:00+00:00",
+       "observed_at": "2026-11-27T09:28:14.357598+00:00",
+       "odds": 1.9,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/dmitrii-tyurin",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/28-11-2026-rubin-kazan-akron-tolyatti",
+       "published_at": "2026-11-27T09:44:00+00:00",
+       "observed_at": "2026-11-27T09:50:14.238528+00:00",
+       "odds": 1.9,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/nikitarsk11",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/28-11-2026-rubin-kazan-akron-tolyatti",
+       "published_at": "2026-11-27T10:27:00+00:00",
+       "observed_at": "2026-11-27T10:32:14.161852+00:00",
+       "odds": 1.9,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/vitalii-denisov-6",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/28-11-2026-rubin-kazan-akron-tolyatti",
+       "published_at": "2026-11-27T11:51:00+00:00",
+       "observed_at": "2026-11-27T11:58:14.649867+00:00",
+       "odds": 1.83,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/andrei-makarov-26",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/28-11-2026-rubin-kazan-akron-tolyatti",
+       "published_at": "2026-11-27T11:52:00+00:00",
+       "observed_at": "2026-11-27T11:58:14.649867+00:00",
+       "odds": 1.83,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/pux-i-prax",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/28-11-2026-rubin-kazan-akron-tolyatti",
+       "published_at": "2026-11-27T12:15:00+00:00",
+       "observed_at": "2026-11-27T12:20:14.564030+00:00",
+       "odds": 1.83,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/nikita-subin",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/28-11-2026-rubin-kazan-akron-tolyatti",
+       "published_at": "2026-11-27T12:34:00+00:00",
+       "observed_at": "2026-11-27T12:40:15.253492+00:00",
+       "odds": 1.83,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/-1305",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/28-11-2026-rubin-kazan-akron-tolyatti",
+       "published_at": "2026-11-27T12:58:00+00:00",
+       "observed_at": "2026-11-27T13:00:38.248046+00:00",
+       "odds": 1.83,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/mixail-belousov",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/28-11-2026-rubin-kazan-akron-tolyatti",
+       "published_at": "2026-11-27T13:38:00+00:00",
+       "observed_at": "2026-11-27T13:42:38.991862+00:00",
+       "odds": 1.83,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/anton-valerevic",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/28-11-2026-rubin-kazan-akron-tolyatti",
+       "published_at": "2026-11-27T13:55:00+00:00",
+       "observed_at": "2026-11-27T14:02:39.491585+00:00",
+       "odds": 1.83,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/vasiliy-ivakhnov",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/28-11-2026-rubin-kazan-akron-tolyatti",
+       "published_at": "2026-11-27T13:57:00+00:00",
+       "observed_at": "2026-11-27T14:02:39.491585+00:00",
+       "odds": 1.83,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/a-v-k-1",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/28-11-2026-rubin-kazan-akron-tolyatti",
+       "published_at": "2026-11-27T13:58:00+00:00",
+       "observed_at": "2026-11-27T14:02:39.491585+00:00",
+       "odds": 1.83,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/sergey-skokshin",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/28-11-2026-rubin-kazan-akron-tolyatti",
+       "published_at": "2026-11-27T14:20:00+00:00",
+       "observed_at": "2026-11-27T14:24:39.403127+00:00",
+       "odds": 1.83,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/andrey-ryzhkov",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/28-11-2026-rubin-kazan-akron-tolyatti",
+       "published_at": "2026-11-27T14:38:00+00:00",
+       "observed_at": "2026-11-27T14:44:40.416189+00:00",
+       "odds": 1.83,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/nikolai-kasircev",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/28-11-2026-rubin-kazan-akron-tolyatti",
+       "published_at": "2026-11-27T14:40:00+00:00",
+       "observed_at": "2026-11-27T14:44:40.416189+00:00",
+       "odds": 1.83,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/artpop-1",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/28-11-2026-rubin-kazan-akron-tolyatti",
+       "published_at": "2026-11-27T15:40:00+00:00",
+       "observed_at": "2026-11-27T15:46:40.647995+00:00",
+       "odds": 1.83,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/saska-isunka",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/28-11-2026-rubin-kazan-akron-tolyatti",
+       "published_at": "2026-11-27T16:02:00+00:00",
+       "observed_at": "2026-11-27T16:08:40.417199+00:00",
+       "odds": 1.83,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/natanel-yusupov-1",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/28-11-2026-rubin-kazan-akron-tolyatti",
+       "published_at": "2026-11-27T17:08:00+00:00",
+       "observed_at": "2026-11-27T17:10:40.658641+00:00",
+       "odds": 1.83,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/s-club-7",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/28-11-2026-rubin-kazan-akron-tolyatti",
+       "published_at": "2026-11-27T17:47:00+00:00",
+       "observed_at": "2026-11-27T17:52:41.630916+00:00",
+       "odds": 1.83,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/andrey-elisey-2",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/28-11-2026-rubin-kazan-akron-tolyatti",
+       "published_at": "2026-11-27T17:50:00+00:00",
+       "observed_at": "2026-11-27T17:52:41.630916+00:00",
+       "odds": 1.83,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/belenov-vladimir",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/28-11-2026-rubin-kazan-akron-tolyatti",
+       "published_at": "2026-11-27T18:10:00+00:00",
+       "observed_at": "2026-11-27T18:14:41.583829+00:00",
+       "odds": 1.83,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/farxat",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/28-11-2026-rubin-kazan-akron-tolyatti",
+       "published_at": "2026-11-27T18:28:00+00:00",
+       "observed_at": "2026-11-27T18:35:46.928326+00:00",
+       "odds": 1.83,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/barabek-barabek",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/28-11-2026-rubin-kazan-akron-tolyatti",
+       "published_at": "2026-11-27T19:15:00+00:00",
+       "observed_at": "2026-11-27T19:15:48.093566+00:00",
+       "odds": 1.83,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/anton-bordovskiy",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/28-11-2026-rubin-kazan-akron-tolyatti",
+       "published_at": "2026-11-27T20:10:00+00:00",
+       "observed_at": "2026-11-27T20:19:48.415583+00:00",
+       "odds": 1.83,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/aleksei-borisov-15",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/28-11-2026-rubin-kazan-akron-tolyatti",
+       "published_at": "2026-11-27T20:17:00+00:00",
+       "observed_at": "2026-11-27T20:19:48.415583+00:00",
+       "odds": 1.83,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/maksim-builov",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/28-11-2026-rubin-kazan-akron-tolyatti",
+       "published_at": "2026-11-27T20:31:00+00:00",
+       "observed_at": "2026-11-28T09:38:58.498486+00:00",
+       "odds": 1.83,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/aleksandr-filippov-8",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/28-11-2026-rubin-kazan-akron-tolyatti",
+       "published_at": "2026-11-27T21:16:00+00:00",
+       "observed_at": "2026-11-27T21:22:35.604178+00:00",
+       "odds": 1.83,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/lyudmila-lyolya",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/28-11-2026-rubin-kazan-akron-tolyatti",
+       "published_at": "2026-11-27T21:41:00+00:00",
+       "observed_at": "2026-11-27T21:42:35.648370+00:00",
+       "odds": 1.83,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/evan-gurishin",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/28-11-2026-rubin-kazan-akron-tolyatti",
+       "published_at": "2026-11-27T22:03:00+00:00",
+       "observed_at": "2026-11-27T22:04:36.100319+00:00",
+       "odds": 1.83,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/nikolai-savelev-1",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/28-11-2026-rubin-kazan-akron-tolyatti",
+       "published_at": "2026-11-27T23:05:00+00:00",
+       "observed_at": "2026-11-27T23:08:36.084584+00:00",
+       "odds": 1.83,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/aleksandr-borodach-2",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/28-11-2026-rubin-kazan-akron-tolyatti",
+       "published_at": "2026-11-27T23:22:00+00:00",
+       "observed_at": "2026-11-27T23:30:35.617576+00:00",
+       "odds": 1.83,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/oleg-zakharevskiy",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/28-11-2026-rubin-kazan-akron-tolyatti",
+       "published_at": "2026-11-28T00:43:00+00:00",
+       "observed_at": "2026-11-28T00:52:55.145811+00:00",
+       "odds": 1.83,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/vitaliy-zakharov-1",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/28-11-2026-rubin-kazan-akron-tolyatti",
+       "published_at": "2026-11-28T00:45:00+00:00",
+       "observed_at": "2026-11-28T00:52:55.145811+00:00",
+       "odds": 1.83,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/koefficient-200",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/28-11-2026-rubin-kazan-akron-tolyatti",
+       "published_at": "2026-11-28T01:06:00+00:00",
+       "observed_at": "2026-11-28T01:14:55.322025+00:00",
+       "odds": 1.83,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/vlad-kuzin",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/28-11-2026-rubin-kazan-akron-tolyatti",
+       "published_at": "2026-11-28T02:57:00+00:00",
+       "observed_at": "2026-11-28T03:00:55.351346+00:00",
+       "odds": 1.83,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/gleb-mugattarov",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/28-11-2026-rubin-kazan-akron-tolyatti",
+       "published_at": "2026-11-28T03:13:00+00:00",
+       "observed_at": "2026-11-28T03:22:54.784418+00:00",
+       "odds": 1.83,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/anton-yarkin-1",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/28-11-2026-rubin-kazan-akron-tolyatti",
+       "published_at": "2026-11-28T03:14:00+00:00",
+       "observed_at": "2026-11-28T03:22:54.784418+00:00",
+       "odds": 1.83,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/roman-yuzovickii",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/28-11-2026-rubin-kazan-akron-tolyatti",
+       "published_at": "2026-11-28T03:15:00+00:00",
+       "observed_at": "2026-11-28T03:22:54.784418+00:00",
+       "odds": 1.83,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/ilya-kozhemyakin-4",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/28-11-2026-rubin-kazan-akron-tolyatti",
+       "published_at": "2026-11-28T03:18:00+00:00",
+       "observed_at": "2026-11-28T03:22:54.784418+00:00",
+       "odds": 1.83,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/aleksandr-ovkadzhiev-1",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/28-11-2026-rubin-kazan-akron-tolyatti",
+       "published_at": "2026-11-28T04:02:00+00:00",
+       "observed_at": "2026-11-28T04:04:54.957222+00:00",
+       "odds": 1.83,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/vovan41k-mykhaylyk",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/28-11-2026-rubin-kazan-akron-tolyatti",
+       "published_at": "2026-11-28T04:38:00+00:00",
+       "observed_at": "2026-11-28T04:44:55.499710+00:00",
+       "odds": 1.83,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/pavel-novoselov",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/28-11-2026-rubin-kazan-akron-tolyatti",
+       "published_at": "2026-11-28T04:38:00+00:00",
+       "observed_at": "2026-11-28T04:44:55.499710+00:00",
+       "odds": 1.83,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/nikolay-rodin-1",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/28-11-2026-rubin-kazan-akron-tolyatti",
+       "published_at": "2026-11-28T04:40:00+00:00",
+       "observed_at": "2026-11-28T04:44:55.499710+00:00",
+       "odds": 1.83,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/aleksey-litvinov",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/28-11-2026-rubin-kazan-akron-tolyatti",
+       "published_at": "2026-11-28T04:45:00+00:00",
+       "observed_at": "2026-11-28T09:38:58.498486+00:00",
+       "odds": 1.83,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/sergei-sergei-22",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/28-11-2026-rubin-kazan-akron-tolyatti",
+       "published_at": "2026-11-28T05:03:00+00:00",
+       "observed_at": "2026-11-28T05:05:08.023127+00:00",
+       "odds": 1.83,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/sandzhif-daro",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/28-11-2026-rubin-kazan-akron-tolyatti",
+       "published_at": "2026-11-28T05:21:00+00:00",
+       "observed_at": "2026-11-28T05:25:08.078132+00:00",
+       "odds": 1.83,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/alximik",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/28-11-2026-rubin-kazan-akron-tolyatti",
+       "published_at": "2026-11-28T05:21:00+00:00",
+       "observed_at": "2026-11-28T05:25:08.078132+00:00",
+       "odds": 1.83,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/aleksandr-martynkin-1",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/28-11-2026-rubin-kazan-akron-tolyatti",
+       "published_at": "2026-11-28T05:22:00+00:00",
+       "observed_at": "2026-11-28T05:25:08.078132+00:00",
+       "odds": 1.83,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/kolya-grecanik-1",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/28-11-2026-rubin-kazan-akron-tolyatti",
+       "published_at": "2026-11-28T06:08:00+00:00",
+       "observed_at": "2026-11-28T06:08:34.489565+00:00",
+       "odds": 1.83,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/mickey-cohen",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/28-11-2026-rubin-kazan-akron-tolyatti",
+       "published_at": "2026-11-28T06:21:00+00:00",
+       "observed_at": "2026-11-28T09:38:58.498486+00:00",
+       "odds": 1.83,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/spartancy-vip",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/28-11-2026-rubin-kazan-akron-tolyatti",
+       "published_at": "2026-11-28T06:23:00+00:00",
+       "observed_at": "2026-11-28T06:28:35.124949+00:00",
+       "odds": 1.83,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/denis-oleynik",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/28-11-2026-rubin-kazan-akron-tolyatti",
+       "published_at": "2026-11-28T06:32:00+00:00",
+       "observed_at": "2026-11-28T09:38:58.498486+00:00",
+       "odds": 1.83,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/oleg-alfimov",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/28-11-2026-rubin-kazan-akron-tolyatti",
+       "published_at": "2026-11-28T07:10:00+00:00",
+       "observed_at": "2026-11-28T07:12:35.053600+00:00",
+       "odds": 1.83,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/sergei-zukov-9",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/28-11-2026-rubin-kazan-akron-tolyatti",
+       "published_at": "2026-11-28T07:10:00+00:00",
+       "observed_at": "2026-11-28T07:12:35.053600+00:00",
+       "odds": 1.83,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/arsen-carikaev",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/28-11-2026-rubin-kazan-akron-tolyatti",
+       "published_at": "2026-11-28T07:11:00+00:00",
+       "observed_at": "2026-11-28T07:12:35.053600+00:00",
+       "odds": 1.83,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/liza-cyresnia-2",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/28-11-2026-rubin-kazan-akron-tolyatti",
+       "published_at": "2026-11-28T07:29:00+00:00",
+       "observed_at": "2026-11-28T07:34:34.886041+00:00",
+       "odds": 1.83,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/vitalya-belyaev",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/28-11-2026-rubin-kazan-akron-tolyatti",
+       "published_at": "2026-11-28T07:50:00+00:00",
+       "observed_at": "2026-11-28T07:54:35.182339+00:00",
+       "odds": 1.83,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/vasilii-konkov",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/28-11-2026-rubin-kazan-akron-tolyatti",
+       "published_at": "2026-11-28T08:14:00+00:00",
+       "observed_at": "2026-11-28T08:14:38.157037+00:00",
+       "odds": 1.83,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/anatoliy-kochergin",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/28-11-2026-rubin-kazan-akron-tolyatti",
+       "published_at": "2026-11-28T08:34:00+00:00",
+       "observed_at": "2026-11-28T08:36:37.225306+00:00",
+       "odds": 1.83,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/sergei-smolin-4",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/28-11-2026-rubin-kazan-akron-tolyatti",
+       "published_at": "2026-11-28T08:52:00+00:00",
+       "observed_at": "2026-11-28T08:56:37.963874+00:00",
+       "odds": 1.83,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/marat-iskandarov-1",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/28-11-2026-rubin-kazan-akron-tolyatti",
+       "published_at": "2026-11-28T09:48:00+00:00",
+       "observed_at": "2026-11-28T09:58:58.724494+00:00",
+       "odds": 1.83,
+       "price_kind": "author_recorded"
+      }
+     ]
+    }
    }
   }
  },
