@@ -520,7 +520,8 @@
   "https://www.sport-express.ru/hockey/nhl/news/michkov-vernetsya-v-sostav-filadelfii-v-matche-s-aylenders-2479916/",
   "https://www.sport-express.ru/hockey/nhl/news/askarov-priznan-luchshim-igrokom-matcha-san-hose-vegas-2479915/",
   "the-mongolz-obygrala-lynn-vision-gaming-na-pgl-major-singapore-2026",
-  "https://www.sport-express.ru/hockey/nhl/news/makdevid-ustanovil-rekord-xxi-veka-po-skorosti-dostizheniya-60-ochkov-v-nhl-2479955/"
+  "https://www.sport-express.ru/hockey/nhl/news/makdevid-ustanovil-rekord-xxi-veka-po-skorosti-dostizheniya-60-ochkov-v-nhl-2479955/",
+  "ninjas-in-pyjamas-pobedili-nemiga-gaming-na-pgl-major-singapore-2026"
  ],
  "news_i": 2,
  "oddspapi": {
@@ -1730,7 +1731,7 @@
  "streak_day": {
   "2026-11-22": 2
  },
- "news_next": "2026-11-28T08:56:35.054231+03:00",
+ "news_next": "2026-11-28T09:04:34.567708+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -3204,7 +3205,7 @@
   "quote_matches": 183
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-28T08:56:34.215474+03:00",
+  "last_poll": "2026-11-28T08:58:34.567708+03:00",
   "cursor": "498",
   "posts": [
    {
@@ -4217,7 +4218,6 @@
    "401878329": "pre",
    "401885393": "pre",
    "401896808": "pre",
-   "1817103": "in",
    "401899522": "pre",
    "401881738": "pre",
    "401921317": "pre",
@@ -8886,6 +8886,51 @@
    "id": "1817100",
    "home": "THE ONE",
    "away": "Eternal Fire"
+  },
+  "football|JPN|401877525": {
+   "reason": "no_qualified_real_market",
+   "checked_at": "2026-11-28T05:58:58.971133+00:00",
+   "kickoff": "2026-11-28T10:00:00+03:00",
+   "sport": "football",
+   "id": "401877525",
+   "home": "Касива Рейсол",
+   "away": "Санфречче Хиросима",
+   "priced_markets": 3,
+   "market": "Обе забьют — да",
+   "probability": 0.6169,
+   "odds": 1.51,
+   "edge": -0.06848,
+   "estimated": true
+  },
+  "esports|CS2|1817104": {
+   "reason": "no_real_odds",
+   "checked_at": "2026-11-28T05:59:02.197138+00:00",
+   "kickoff": "2026-11-28T10:00:00+03:00",
+   "sport": "esports",
+   "id": "1817104",
+   "home": "MIBR",
+   "away": "100 Thieves",
+   "priced_markets": 0,
+   "market": "Победа: 100 Thieves",
+   "probability": 0.5807,
+   "odds": 1.6,
+   "edge": -0.07088,
+   "estimated": true
+  },
+  "esports|CS2|1817102": {
+   "reason": "no_real_odds",
+   "checked_at": "2026-11-28T05:59:04.207206+00:00",
+   "kickoff": "2026-11-28T10:00:00+03:00",
+   "sport": "esports",
+   "id": "1817102",
+   "home": "Natus Vincere",
+   "away": "PARIVISION",
+   "priced_markets": 0,
+   "market": "Победа: Natus Vincere",
+   "probability": 0.5917,
+   "odds": 1.57,
+   "edge": -0.07103,
+   "estimated": true
   }
  },
  "source_trial": {

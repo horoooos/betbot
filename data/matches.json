@@ -29650,5 +29650,13 @@
   "div": "JPN",
   "reason": "edge_below_minimum",
   "retry_at": 1795845754.932753
+ },
+ "401877525": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-28T10:00:00+03:00",
+  "sport": "football",
+  "div": "JPN",
+  "reason": "no_qualified_real_market",
+  "retry_at": 1795846114.567708
  }
 }
