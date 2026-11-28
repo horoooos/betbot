@@ -1574,7 +1574,7 @@
  "value_day": "2026-11-27",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-27",
- "site_stamp": "1586|9890|2026-11-28 04|6|60411d3b9c0d121d",
+ "site_stamp": "1586|9894|2026-11-28 04|6|78b58635293d1159",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1744,7 +1744,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 9890,
+ "dz_last": 9894,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -3188,7 +3188,7 @@
   "quote_matches": 172
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-28T04:26:55.329271+03:00",
+  "last_poll": "2026-11-28T04:28:55.489558+03:00",
   "cursor": "497",
   "posts": [
    {
@@ -8650,6 +8650,64 @@
    "odds": 1.57,
    "edge": 0.01453,
    "estimated": false
+  },
+  "basketball|NBA|401909333": {
+   "reason": "published",
+   "checked_at": "2026-11-28T01:29:27.245881+00:00",
+   "kickoff": "2026-11-28T05:30:00+03:00",
+   "sport": "basketball",
+   "id": "401909333",
+   "home": "Сан-Антонио Сперс",
+   "away": "Лейкерс",
+   "market": "П1 (с ОТ)",
+   "probability": 0.706,
+   "odds": 1.46,
+   "edge": 0.03076,
+   "estimated": false
+  },
+  "basketball|NBA|401909334": {
+   "reason": "no_qualified_real_market",
+   "checked_at": "2026-11-28T01:29:27.850158+00:00",
+   "kickoff": "2026-11-28T05:30:00+03:00",
+   "sport": "basketball",
+   "id": "401909334",
+   "home": "Юта Джаз",
+   "away": "Денвер Наггетс",
+   "priced_markets": 6,
+   "market": "ТМ 239.5",
+   "probability": 0.6597,
+   "odds": 1.41,
+   "edge": -0.06982,
+   "estimated": true
+  },
+  "basketball|NBA|401909335": {
+   "reason": "published",
+   "checked_at": "2026-11-28T01:29:37.337161+00:00",
+   "kickoff": "2026-11-28T05:30:00+03:00",
+   "sport": "basketball",
+   "id": "401909335",
+   "home": "Клипперс",
+   "away": "Нью-Орлеан Пеликанс",
+   "market": "П1 (с ОТ)",
+   "probability": 0.5825,
+   "odds": 1.74,
+   "edge": 0.01355,
+   "estimated": false
+  },
+  "basketball|NBA|401909336": {
+   "reason": "no_qualified_real_market",
+   "checked_at": "2026-11-28T01:29:37.950149+00:00",
+   "kickoff": "2026-11-28T05:30:00+03:00",
+   "sport": "basketball",
+   "id": "401909336",
+   "home": "Портленд",
+   "away": "Голден Стэйт",
+   "priced_markets": 6,
+   "market": "ТБ 209.5",
+   "probability": 0.6597,
+   "odds": 1.41,
+   "edge": -0.06982,
+   "estimated": true
   }
  },
  "source_trial": {
