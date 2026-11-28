@@ -253,6 +253,41 @@ null
 "lt": null
 },
 {
+"sport": "esports",
+"id": "1817111",
+"league": "Киберспорт · CS2",
+"kickoff": "2026-11-28T14:59:25+03:00",
+"home": "MIBR",
+"away": "Imperial",
+"hl": "https://cdn-api.pandascore.co/images/team/image/3250/600px_mibr_2018.png",
+"al": "https://cdn-api.pandascore.co/images/team/image/126377/711px_imperial_esports_2025_allmode.png",
+"hid": "3250",
+"aid": "126377",
+"bb": "https://betboom.ru/search?query=%D0%9C%D0%B8%D0%B1%D1%80&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=esports",
+"path": "",
+"url": "esports.html?e=1817111&d=CS2",
+"participants": [
+[
+"MIBR",
+"MIBR"
+],
+[
+"Imperial",
+"Imperial"
+]
+],
+"div": "CS2",
+"state": "in",
+"bo": 1,
+"prediction": "",
+"hs": 0,
+"as": 0,
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
 "sport": "football",
 "id": "401885043",
 "league": "Германия · 2. Бундеслига",
@@ -459,41 +494,6 @@ null
 "prediction": "",
 "hs": "0",
 "as": "0",
-"tip": "",
-"top": false,
-"bot": null,
-"lt": null
-},
-{
-"sport": "esports",
-"id": "1817111",
-"league": "Киберспорт · CS2",
-"kickoff": "2026-11-28T15:00:00+03:00",
-"home": "MIBR",
-"away": "Imperial",
-"hl": "https://cdn-api.pandascore.co/images/team/image/3250/600px_mibr_2018.png",
-"al": "https://cdn-api.pandascore.co/images/team/image/126377/711px_imperial_esports_2025_allmode.png",
-"hid": "3250",
-"aid": "126377",
-"bb": "https://betboom.ru/search?query=%D0%9C%D0%B8%D0%B1%D1%80&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=esports",
-"path": "",
-"url": "esports.html?e=1817111&d=CS2",
-"participants": [
-[
-"MIBR",
-"MIBR"
-],
-[
-"Imperial",
-"Imperial"
-]
-],
-"div": "CS2",
-"state": "pre",
-"bo": 1,
-"prediction": "",
-"hs": 0,
-"as": 0,
 "tip": "",
 "top": false,
 "bot": null,
@@ -8263,6 +8263,41 @@ null
 ]
 ],
 "div": "SP2",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "football",
+"id": "401885390",
+"league": "Португалия · Примейра",
+"kickoff": "2026-11-29T21:00:00+03:00",
+"home": "Жил Висенте",
+"away": "Эшторил",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/3699.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/12216.png",
+"hid": "3699",
+"aid": "12216",
+"bb": "https://betboom.ru/search?query=%D0%92%D0%B8%D1%81%D0%B5%D0%BD%D1%82%D0%B5&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/por.1",
+"url": "live.html?s=football&p=soccer%2Fpor.1&e=401885390&h=%D0%96%D0%B8%D0%BB+%D0%92%D0%B8%D1%81%D0%B5%D0%BD%D1%82%D0%B5&a=%D0%AD%D1%88%D1%82%D0%BE%D1%80%D0%B8%D0%BB",
+"participants": [
+[
+"Жил Висенте",
+"Gil Vicente"
+],
+[
+"Эшторил",
+"Estoril"
+]
+],
+"div": "P1",
 "state": "pre",
 "bo": null,
 "prediction": "",
