@@ -1564,7 +1564,7 @@
  "value_day": "2026-11-28",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-28",
- "site_stamp": "1596|9955|2026-11-28 15|6|3f0494f16d526992",
+ "site_stamp": "1597|9958|2026-11-28 15|6|80d5e546d9142ea7",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1735,7 +1735,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 9955,
+ "dz_last": 9958,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -3024,7 +3024,7 @@
   "external_sources": {
    "providers": {
     "legalbet": {
-     "at": "2026-11-28T12:24:57.254232+00:00",
+     "at": "2026-11-28T12:54:57.581252+00:00",
      "status": "ok",
      "discovered": 1,
      "pages": 1,
@@ -3035,29 +3035,29 @@
      "contexts": 1
     },
     "livesport": {
-     "at": "2026-11-28T12:24:57.254232+00:00",
+     "at": "2026-11-28T12:54:57.581252+00:00",
      "status": "ok",
      "discovered": 26,
      "pages": 6,
-     "opinions": 2,
-     "mapped": 1,
+     "opinions": 10,
+     "mapped": 5,
      "articles_available": 40,
-     "next_offset": 20,
+     "next_offset": 26,
      "contexts": 6
     },
     "metaratings": {
-     "at": "2026-11-28T12:24:57.254232+00:00",
+     "at": "2026-11-28T12:54:57.581252+00:00",
      "status": "ok",
      "discovered": 15,
      "pages": 6,
      "opinions": 24,
-     "mapped": 2,
+     "mapped": 3,
      "articles_available": 41,
-     "next_offset": 15,
+     "next_offset": 6,
      "contexts": 6
     },
     "rb": {
-     "at": "2026-11-28T12:24:57.254232+00:00",
+     "at": "2026-11-28T12:54:57.581252+00:00",
      "status": "ok",
      "discovered": 2,
      "pages": 2,
@@ -3065,10 +3065,10 @@
      "mapped": 0,
      "articles_available": 2,
      "next_offset": 3,
-     "contexts": 1
+     "contexts": 0
     },
     "vseprosport": {
-     "at": "2026-11-28T12:24:57.254232+00:00",
+     "at": "2026-11-28T12:54:57.581252+00:00",
      "status": "ok",
      "discovered": 6,
      "pages": 5,
@@ -3080,9 +3080,9 @@
      "contexts": 5
     }
    },
-   "opinions": 84,
+   "opinions": 86,
    "snapshots": 0,
-   "contexts": 229,
+   "contexts": 232,
    "model": {
     "weight": 0.0,
     "status": "collecting",
@@ -3131,15 +3131,15 @@
   "model": {
    "weight": 0.0,
    "status": "baseline_better",
-   "settled_matches": 192,
+   "settled_matches": 193,
    "required_matches": 100,
-   "trained_at": "2026-11-28T08:56:37.963874+00:00",
+   "trained_at": "2026-11-28T12:54:57.581252+00:00",
    "candidate_weight": 0.0,
    "train_matches": 139,
-   "validation_matches": 52,
+   "validation_matches": 53,
    "validation_from": "2026-11-25T00:00:00+00:00",
-   "validation_logloss": 2.83784003682391,
-   "validation_baseline_logloss": 2.83784003682391
+   "validation_logloss": 2.8471736499004403,
+   "validation_baseline_logloss": 2.8471736499004403
   },
   "sport_models": {
    "hockey": {
@@ -3201,7 +3201,7 @@
   "quote_matches": 192
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-28T15:52:57.543408+03:00",
+  "last_poll": "2026-11-28T15:54:57.581252+03:00",
   "cursor": "507",
   "posts": [
    {
@@ -4122,7 +4122,7 @@
    "401910050": "pre",
    "401877525": "post",
    "401892132": "post",
-   "401879793": "in",
+   "401879793": "post",
    "401885044": "in",
    "401885046": "in",
    "401885043": "in",
@@ -9293,8 +9293,8 @@
   },
   "esports|CS2|1817113": {
    "reason": "no_real_odds",
-   "checked_at": "2026-11-28T12:43:18.528002+00:00",
-   "kickoff": "2026-11-28T16:00:00+03:00",
+   "checked_at": "2026-11-28T12:55:47.794320+00:00",
+   "kickoff": "2026-11-28T16:15:00+03:00",
    "sport": "esports",
    "id": "1817113",
    "home": "FlyQuest",

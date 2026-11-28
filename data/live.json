@@ -192,7 +192,8 @@
    "min_odds": 1.74,
    "minute": "26'",
    "score": "2:0",
-   "sport": "football"
+   "sport": "football",
+   "result": "miss"
   }
  },
  "E1|401880133": {
@@ -200,6 +201,16 @@
   "hs": 0,
   "as": 0,
   "goals": 0,
-  "kickoff": "2026-11-28T15:30:00+03:00"
+  "kickoff": "2026-11-28T15:30:00+03:00",
+  "lt": {
+   "key": "O1.5",
+   "label": "ТБ 1.5",
+   "p": 0.633,
+   "fair": 1.58,
+   "min_odds": 1.66,
+   "minute": "25'",
+   "score": "0:0",
+   "sport": "football"
+  }
  }
 }
