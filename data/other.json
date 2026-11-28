@@ -6093,5 +6093,21 @@
   "div": "NBA",
   "reason": "no_qualified_real_market",
   "retry_at": 1795833295.635103
+ },
+ "CS2|1817105": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-28T07:00:00+03:00",
+  "sport": "esports",
+  "div": "CS2",
+  "reason": "no_real_odds",
+  "retry_at": 1795835334.917876
+ },
+ "CS2|1817025": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-28T07:00:00+03:00",
+  "sport": "esports",
+  "div": "CS2",
+  "reason": "no_real_odds",
+  "retry_at": 1795835334.917876
  }
 }

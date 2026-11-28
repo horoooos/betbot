@@ -3134,35 +3134,35 @@
     "weight": 0.0,
     "settled_matches": 82,
     "required_matches": 100,
-    "trained_at": "2026-11-28T02:46:54.965796+00:00"
+    "trained_at": "2026-11-28T02:58:54.917876+00:00"
    },
    "basketball": {
     "status": "collecting",
     "weight": 0.0,
-    "settled_matches": 76,
+    "settled_matches": 77,
     "required_matches": 100,
-    "trained_at": "2026-11-28T02:46:54.965796+00:00"
+    "trained_at": "2026-11-28T02:58:54.917876+00:00"
    },
    "tennis": {
     "status": "collecting",
     "weight": 0.0,
     "settled_matches": 10,
     "required_matches": 100,
-    "trained_at": "2026-11-28T02:46:54.965796+00:00"
+    "trained_at": "2026-11-28T02:58:54.917876+00:00"
    },
    "esports:CS2": {
     "status": "collecting",
     "weight": 0.0,
     "settled_matches": 0,
     "required_matches": 100,
-    "trained_at": "2026-11-28T02:46:54.965796+00:00"
+    "trained_at": "2026-11-28T02:58:54.917876+00:00"
    },
    "esports:DOTA": {
     "status": "collecting",
     "weight": 0.0,
     "settled_matches": 0,
     "required_matches": 100,
-    "trained_at": "2026-11-28T02:46:54.965796+00:00"
+    "trained_at": "2026-11-28T02:58:54.917876+00:00"
    }
   },
   "source": {
@@ -3188,7 +3188,7 @@
   "quote_matches": 177
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-28T05:56:55.439400+03:00",
+  "last_poll": "2026-11-28T05:58:54.917876+03:00",
   "cursor": "497",
   "posts": [
    {
@@ -4042,7 +4042,7 @@
    "401892808": "in",
    "401892809": "in",
    "401909326": "post",
-   "401909327": "in",
+   "401909327": "post",
    "401909328": "in",
    "401909329": "in",
    "401909330": "in",
@@ -8722,6 +8722,36 @@
    "probability": 0.6355,
    "odds": 1.46,
    "edge": -0.07217,
+   "estimated": true
+  },
+  "esports|CS2|1817105": {
+   "reason": "no_real_odds",
+   "checked_at": "2026-11-28T02:59:15.385728+00:00",
+   "kickoff": "2026-11-28T07:00:00+03:00",
+   "sport": "esports",
+   "id": "1817105",
+   "home": "TheMongolz",
+   "away": "Lynn Vision",
+   "priced_markets": 0,
+   "market": "Победа: Lynn Vision",
+   "probability": 0.5748,
+   "odds": 1.62,
+   "edge": -0.06882,
+   "estimated": true
+  },
+  "esports|CS2|1817025": {
+   "reason": "no_real_odds",
+   "checked_at": "2026-11-28T02:59:17.527683+00:00",
+   "kickoff": "2026-11-28T07:00:00+03:00",
+   "sport": "esports",
+   "id": "1817025",
+   "home": "FUT Esports",
+   "away": "FlyQuest",
+   "priced_markets": 0,
+   "market": "Победа: FUT Esports",
+   "probability": 0.7012,
+   "odds": 1.33,
+   "edge": -0.0674,
    "estimated": true
   }
  },
