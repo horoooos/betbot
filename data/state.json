@@ -1734,7 +1734,7 @@
  "streak_day": {
   "2026-11-22": 2
  },
- "news_next": "2026-11-28T09:42:34.550959+03:00",
+ "news_next": "2026-11-28T09:48:34.819964+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -3031,7 +3031,7 @@
   "external_sources": {
    "providers": {
     "legalbet": {
-     "at": "2026-11-28T06:12:34.656271+00:00",
+     "at": "2026-11-28T06:42:34.819964+00:00",
      "status": "ok",
      "discovered": 1,
      "pages": 1,
@@ -3042,29 +3042,29 @@
      "contexts": 1
     },
     "livesport": {
-     "at": "2026-11-28T06:12:34.656271+00:00",
+     "at": "2026-11-28T06:42:34.819964+00:00",
      "status": "ok",
-     "discovered": 20,
+     "discovered": 21,
      "pages": 6,
      "opinions": 6,
-     "mapped": 3,
-     "articles_available": 34,
-     "next_offset": 17,
+     "mapped": 4,
+     "articles_available": 35,
+     "next_offset": 23,
      "contexts": 6
     },
     "metaratings": {
-     "at": "2026-11-28T06:12:34.656271+00:00",
+     "at": "2026-11-28T06:42:34.819964+00:00",
      "status": "ok",
-     "discovered": 10,
+     "discovered": 11,
      "pages": 6,
      "opinions": 24,
-     "mapped": 7,
+     "mapped": 2,
      "articles_available": 41,
-     "next_offset": 9,
+     "next_offset": 15,
      "contexts": 6
     },
     "rb": {
-     "at": "2026-11-28T06:12:34.656271+00:00",
+     "at": "2026-11-28T06:42:34.819964+00:00",
      "status": "ok",
      "discovered": 1,
      "pages": 1,
@@ -3075,7 +3075,7 @@
      "contexts": 0
     },
     "vseprosport": {
-     "at": "2026-11-28T06:12:34.656271+00:00",
+     "at": "2026-11-28T06:42:34.819964+00:00",
      "status": "ok",
      "discovered": 4,
      "pages": 3,
@@ -3087,9 +3087,9 @@
      "contexts": 3
     }
    },
-   "opinions": 79,
+   "opinions": 81,
    "snapshots": 0,
-   "contexts": 215,
+   "contexts": 216,
    "model": {
     "weight": 0.0,
     "status": "collecting",
@@ -3208,7 +3208,7 @@
   "quote_matches": 183
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-28T09:40:34.930584+03:00",
+  "last_poll": "2026-11-28T09:42:34.819964+03:00",
   "cursor": "498",
   "posts": [
    {
@@ -8915,7 +8915,7 @@
   },
   "esports|CS2|1817104": {
    "reason": "no_real_odds",
-   "checked_at": "2026-11-28T06:32:58.301582+00:00",
+   "checked_at": "2026-11-28T06:43:17.016636+00:00",
    "kickoff": "2026-11-28T10:00:00+03:00",
    "sport": "esports",
    "id": "1817104",
@@ -8930,7 +8930,7 @@
   },
   "esports|CS2|1817102": {
    "reason": "no_real_odds",
-   "checked_at": "2026-11-28T06:33:00.333792+00:00",
+   "checked_at": "2026-11-28T06:43:19.220461+00:00",
    "kickoff": "2026-11-28T10:00:00+03:00",
    "sport": "esports",
    "id": "1817102",
