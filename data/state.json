@@ -1724,7 +1724,7 @@
  "streak_day": {
   "2026-11-22": 2
  },
- "news_next": "2026-11-28T10:02:34.302484+03:00",
+ "news_next": "2026-11-28T10:08:34.428401+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -3198,7 +3198,7 @@
   "quote_matches": 183
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-28T10:00:34.276071+03:00",
+  "last_poll": "2026-11-28T10:02:34.428401+03:00",
   "cursor": "498",
   "posts": [
    {
@@ -21849,7 +21849,7 @@
     "profit_pct": 0.62
    },
    "football|JPN|401877537": {
-    "status": "open",
+    "status": "settled",
     "id": "401877537",
     "sport": "football",
     "div": "JPN",
@@ -21943,7 +21943,10 @@
        "price_kind": "author_recorded"
       }
      ]
-    }
+    },
+    "settled_at": "2026-11-28T07:02:34.428401+00:00",
+    "hit": true,
+    "profit_pct": 0.705
    },
    "football|JPN|401877542": {
     "status": "open",
