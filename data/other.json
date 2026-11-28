@@ -5957,7 +5957,10 @@
   },
   "top": false,
   "msg_id": 9891,
-  "btn": 4
+  "btn": 4,
+  "close": {
+   "BB_ML_H": 0.706
+  }
  },
  "NBA|401909334": {
   "status": "waiting_data",
@@ -6076,7 +6079,10 @@
   },
   "top": false,
   "msg_id": 9893,
-  "btn": 4
+  "btn": 4,
+  "close": {
+   "BB_ML_H": 0.5825
+  }
  },
  "NBA|401909336": {
   "status": "waiting_data",
