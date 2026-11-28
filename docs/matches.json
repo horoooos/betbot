@@ -62,7 +62,7 @@
 "state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-28-rubin-akron-401879793.html",
-"hs": "2",
+"hs": "3",
 "as": "0",
 "tip": "П1 · 1.86",
 "top": false,
@@ -888,44 +888,9 @@ null
 },
 {
 "sport": "esports",
-"id": "1817113",
-"league": "Киберспорт · CS2",
-"kickoff": "2026-11-28T15:30:00+03:00",
-"home": "FlyQuest",
-"away": "PVISION",
-"hl": "https://cdn-api.pandascore.co/images/team/image/134746/fly_questlogo_square.png",
-"al": "https://cdn-api.pandascore.co/images/team/image/139565/250px_parivision_allmode.png",
-"hid": "134746",
-"aid": "139565",
-"bb": "https://betboom.ru/search?query=%D0%A4%D0%BB%D0%B8%D0%BA%D0%B2%D0%B5%D1%81%D1%82&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=esports",
-"path": "",
-"url": "esports.html?e=1817113&d=CS2",
-"participants": [
-[
-"FlyQuest",
-"FlyQuest"
-],
-[
-"PVISION",
-"PVISION"
-]
-],
-"div": "CS2",
-"state": "pre",
-"bo": 1,
-"prediction": "",
-"hs": 0,
-"as": 0,
-"tip": "",
-"top": false,
-"bot": null,
-"lt": null
-},
-{
-"sport": "esports",
 "id": "1817112",
 "league": "Киберспорт · CS2",
-"kickoff": "2026-11-28T15:30:00+03:00",
+"kickoff": "2026-11-28T15:45:00+03:00",
 "home": "Natus Vincere",
 "away": "Astralis",
 "hl": "https://cdn-api.pandascore.co/images/team/image/3216/1022px_natus_vincere_2021_lightmode.png",
@@ -1128,6 +1093,41 @@ null
 "prediction": "",
 "hs": "0",
 "as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "esports",
+"id": "1817113",
+"league": "Киберспорт · CS2",
+"kickoff": "2026-11-28T16:00:00+03:00",
+"home": "FlyQuest",
+"away": "PVISION",
+"hl": "https://cdn-api.pandascore.co/images/team/image/134746/fly_questlogo_square.png",
+"al": "https://cdn-api.pandascore.co/images/team/image/139565/250px_parivision_allmode.png",
+"hid": "134746",
+"aid": "139565",
+"bb": "https://betboom.ru/search?query=%D0%A4%D0%BB%D0%B8%D0%BA%D0%B2%D0%B5%D1%81%D1%82&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=esports",
+"path": "",
+"url": "esports.html?e=1817113&d=CS2",
+"participants": [
+[
+"FlyQuest",
+"FlyQuest"
+],
+[
+"PVISION",
+"PVISION"
+]
+],
+"div": "CS2",
+"state": "pre",
+"bo": 1,
+"prediction": "",
+"hs": 0,
+"as": 0,
 "tip": "",
 "top": false,
 "bot": null,
