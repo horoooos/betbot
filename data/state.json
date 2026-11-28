@@ -3188,7 +3188,7 @@
   "quote_matches": 169
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-28T03:06:54.487582+03:00",
+  "last_poll": "2026-11-28T03:08:54.631381+03:00",
   "cursor": "497",
   "posts": [
    {
@@ -8486,37 +8486,37 @@
   },
   "basketball|NBA|401909327": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-27T23:59:05.199955+00:00",
+   "checked_at": "2026-11-28T00:09:14.842919+00:00",
    "kickoff": "2026-11-28T03:30:00+03:00",
    "sport": "basketball",
    "id": "401909327",
    "home": "Детройт Пистонс",
    "away": "Милуоки Бакс",
    "priced_markets": 6,
-   "market": "ТБ 212.5",
+   "market": "ТБ 211.5",
    "probability": 0.6597,
    "odds": 1.41,
    "edge": -0.06982,
    "estimated": true
   },
   "basketball|NBA|401909328": {
-   "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-27T23:59:05.889729+00:00",
+   "reason": "edge_below_minimum",
+   "checked_at": "2026-11-28T00:09:15.553174+00:00",
    "kickoff": "2026-11-28T03:30:00+03:00",
    "sport": "basketball",
    "id": "401909328",
    "home": "Индиана Пэйсерс",
    "away": "Филадельфия Сиксерс",
    "priced_markets": 6,
-   "market": "ТБ 221.5",
-   "probability": 0.6597,
-   "odds": 1.41,
-   "edge": -0.06982,
-   "estimated": true
+   "market": "П2 (с ОТ)",
+   "probability": 0.6462,
+   "odds": 1.52,
+   "edge": -0.01778,
+   "estimated": false
   },
   "basketball|NBA|401909329": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-27T23:59:06.580875+00:00",
+   "checked_at": "2026-11-28T00:09:16.165820+00:00",
    "kickoff": "2026-11-28T03:30:00+03:00",
    "sport": "basketball",
    "id": "401909329",
@@ -8547,7 +8547,7 @@
   },
   "hockey|NHL|401892808": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-27T23:59:07.285145+00:00",
+   "checked_at": "2026-11-28T00:09:16.719778+00:00",
    "kickoff": "2026-11-28T04:00:00+03:00",
    "sport": "hockey",
    "id": "401892808",
@@ -8562,7 +8562,7 @@
   },
   "hockey|NHL|401892809": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-27T23:59:07.991528+00:00",
+   "checked_at": "2026-11-28T00:09:17.359815+00:00",
    "kickoff": "2026-11-28T04:00:00+03:00",
    "sport": "hockey",
    "id": "401892809",
@@ -8577,7 +8577,7 @@
   },
   "basketball|NBA|401909330": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-27T23:59:08.686646+00:00",
+   "checked_at": "2026-11-28T00:09:17.970545+00:00",
    "kickoff": "2026-11-28T04:00:00+03:00",
    "sport": "basketball",
    "id": "401909330",

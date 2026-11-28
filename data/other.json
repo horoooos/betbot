@@ -5903,15 +5903,15 @@
   "sport": "basketball",
   "div": "NBA",
   "reason": "no_qualified_real_market",
-  "retry_at": 1795824515.759933
+  "retry_at": 1795825134.631381
  },
  "NBA|401909328": {
   "status": "waiting_data",
   "kickoff": "2026-11-28T03:30:00+03:00",
   "sport": "basketball",
   "div": "NBA",
-  "reason": "no_qualified_real_market",
-  "retry_at": 1795824515.759933
+  "reason": "edge_below_minimum",
+  "retry_at": 1795825134.631381
  },
  "NBA|401909329": {
   "status": "waiting_data",
@@ -5919,7 +5919,7 @@
   "sport": "basketball",
   "div": "NBA",
   "reason": "no_qualified_real_market",
-  "retry_at": 1795824515.759933
+  "retry_at": 1795825134.631381
  },
  "NHL|401892808": {
   "status": "waiting_data",
@@ -5927,7 +5927,7 @@
   "sport": "hockey",
   "div": "NHL",
   "reason": "no_qualified_real_market",
-  "retry_at": 1795824515.759933
+  "retry_at": 1795825134.631381
  },
  "NHL|401892809": {
   "status": "waiting_data",
@@ -5935,7 +5935,7 @@
   "sport": "hockey",
   "div": "NHL",
   "reason": "no_qualified_real_market",
-  "retry_at": 1795824515.759933
+  "retry_at": 1795825134.631381
  },
  "NBA|401909330": {
   "status": "waiting_data",
@@ -5943,6 +5943,6 @@
   "sport": "basketball",
   "div": "NBA",
   "reason": "no_qualified_real_market",
-  "retry_at": 1795824515.759933
+  "retry_at": 1795825134.631381
  }
 }
