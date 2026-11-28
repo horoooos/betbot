@@ -3201,7 +3201,7 @@
   "quote_matches": 192
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-28T15:48:57.204327+03:00",
+  "last_poll": "2026-11-28T15:50:57.150915+03:00",
   "cursor": "505",
   "posts": [
    {
@@ -9339,7 +9339,7 @@
   },
   "football|SP2|401883101": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-28T12:39:19.502450+00:00",
+   "checked_at": "2026-11-28T12:51:19.397629+00:00",
    "kickoff": "2026-11-28T16:00:00+03:00",
    "sport": "football",
    "id": "401883101",
@@ -9354,7 +9354,7 @@
   },
   "football|T1|401888236": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-28T12:39:20.260543+00:00",
+   "checked_at": "2026-11-28T12:51:20.155791+00:00",
    "kickoff": "2026-11-28T16:00:00+03:00",
    "sport": "football",
    "id": "401888236",
@@ -9369,7 +9369,7 @@
   },
   "football|RUS|401879794": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-28T12:39:21.023051+00:00",
+   "checked_at": "2026-11-28T12:51:20.918183+00:00",
    "kickoff": "2026-11-28T16:30:00+03:00",
    "sport": "football",
    "id": "401879794",
@@ -9384,7 +9384,7 @@
   },
   "football|RSA|401902006": {
    "reason": "edge_below_minimum",
-   "checked_at": "2026-11-28T12:39:21.430961+00:00",
+   "checked_at": "2026-11-28T12:51:21.329332+00:00",
    "kickoff": "2026-11-28T16:30:00+03:00",
    "sport": "football",
    "id": "401902006",
@@ -9392,14 +9392,14 @@
    "away": "Milford FC",
    "priced_markets": 6,
    "market": "ТМ 2.5",
-   "probability": 0.5755,
-   "odds": 1.62,
-   "edge": -0.06769,
+   "probability": 0.5727,
+   "odds": 1.65,
+   "edge": -0.05505,
    "estimated": false
   },
   "football|RSA|401902005": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-28T12:39:21.838995+00:00",
+   "checked_at": "2026-11-28T12:51:21.738265+00:00",
    "kickoff": "2026-11-28T16:30:00+03:00",
    "sport": "football",
    "id": "401902005",
