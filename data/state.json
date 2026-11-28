@@ -7,9 +7,6 @@
  "schedule_day": "2026-11-28",
  "content_slot": "2026-11-28-13",
  "news_seen": [
-  "https://www.sport-express.ru/football/champions-league/news/dzhud-bellingem-kommentariy-sravneniyam-s-zinedinom-zidanom-v-reale-2478630/",
-  "https://www.sport-express.ru/football/champions-league/news/marko-nikolich-kommentariy-po-porazheniyu-aek-ot-komo-v-lige-chempionov-2478628/",
-  "https://www.sport-express.ru/football/champions-league/news/sesk-fabregas-kommentariy-po-pobede-komo-nad-aek-v-lige-chempionov-2478627/",
   "https://www.sport-express.ru/football/champions-league/news/erling-holann-kommentariy-po-nichey-manchester-siti-s-napoli-v-lige-chempionov-2478622/",
   "https://www.sport-express.ru/football/champions-league/news/rasmus-heylunn-kommentariy-po-nichey-manchester-siti-i-napoli-v-lige-chempionov-2478621/",
   "https://www.sport-express.ru/football/champions-league/news/massimiliano-allegri-kommentariy-po-nichey-manchester-siti-i-napoli-v-lige-chempionov-2478620/",
@@ -506,9 +503,12 @@
   "robo-o-nemiga-na-meidzhore-v-idealnom-stsenarii-my-khotim-popast-v-plei-off",
   "nemiga-gaming-oderzhala-pervuyu-pobedu-vo-vtoroi-stadii-pgl-major-singapore-2026",
   "aleksib-o-navi-v-nachale-sezona-mne-kazalos-chto-my-dvizhemsya-isklyuchitelno",
-  "https://www.sport-express.ru/football/rfpl/news/skonchalsya-uchastnik-chempionata-mira-1966-goda-v-sostave-sbornoy-sssr-vasiliy-danilov-2480034/"
+  "https://www.sport-express.ru/football/rfpl/news/skonchalsya-uchastnik-chempionata-mira-1966-goda-v-sostave-sbornoy-sssr-vasiliy-danilov-2480034/",
+  "team-liquid-pereigrala-eternal-fire-na-pgl-major-singapore-2026",
+  "1w-team-oderzhala-vtoruyu-pobedu-podryad-na-pgl-major-singapore-2026",
+  "pure-zanyal-pervoye-mesto-v-yevropeiskom-laddere-dota-2"
  ],
- "news_i": 1,
+ "news_i": 2,
  "oddspapi": {
   "meta": {
    "sports": {
@@ -1706,7 +1706,7 @@
  "streak_day": {
   "2026-11-22": 2
  },
- "news_next": "2026-11-28T14:41:56.198275+03:00",
+ "news_next": "2026-11-28T15:11:56.358758+03:00",
  "lesson_titles": [
   "Что такое офсайд",
   "Первый чемпионат мира",
@@ -1741,7 +1741,6 @@
  "vk_mode": "photo",
  "dz_err": null,
  "img_used": [
-  "https://images.cybersport.ru/images/as-is/plain/bd/bd2b4bd1-5b73-4069-b134-9f41baed2168.jpg",
   "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/66/Sporting_%28Sporting_CP_x_Belenenses_SAD%2C_Abril_2021%29.png/1280px-Sporting_%28Sporting_CP_x_Belenenses_SAD%2C_Abril_2021%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
   "https://images.cybersport.ru/images/as-is/plain/3b/3b23056b-fe2f-4752-972c-4c4f988c428f.jpg",
   "https://upload.wikimedia.org/wikipedia/commons/2/2d/First_ever_ice_hockey_game_in_Australia.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
@@ -2040,7 +2039,8 @@
   "https://images.cybersport.ru/images/as-is/plain/b2/b28ac280-6171-44b3-b68d-46774d714d6e.jpg",
   "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/01_Oleg_Romantsev%2C_Alexander_Lvov%2C_Valery_Gazzaev.jpg/1280px-01_Oleg_Romantsev%2C_Alexander_Lvov%2C_Valery_Gazzaev.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
   "https://images.cybersport.ru/images/as-is/plain/2f/2fb7991d-29e2-44be-a18c-4cc3c62b5e23.jpg",
-  "https://upload.wikimedia.org/wikipedia/commons/f/fa/Vasiliy_Danilov_2017.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+  "https://upload.wikimedia.org/wikipedia/commons/f/fa/Vasiliy_Danilov_2017.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "https://images.cybersport.ru/images/as-is/plain/70/70505302-f18a-44be-a251-04c5fee11cef.jpg"
  ],
  "indexnow_day": "2026-11-28",
  "vk_wall_err": null,
@@ -2548,7 +2548,8 @@
   "9930",
   "9936",
   "9937",
-  "9942"
+  "9942",
+  "9948"
  ],
  "dz_sent_keys": [
   "2026-11-14:новость:e45bc7fef64184123f1662b8",
@@ -2988,11 +2989,12 @@
   "2026-11-28:новость:d8aecb84fc61a46c1c3f2c14",
   "2026-11-28:новость:c994fc4151380abf9f8be078",
   "2026-11-28:новость:88eb7ffc0d4d78086e589bf0",
-  "2026-11-28:новость:f0afa69aa1315cd15a311da5"
+  "2026-11-28:новость:f0afa69aa1315cd15a311da5",
+  "2026-11-28:новость:27d7ad1a294d6ae70f7c69da"
  ],
  "dz_last_delivery": {
-  "source_id": 9942,
-  "message_id": 987,
+  "source_id": 9948,
+  "message_id": 988,
   "kind": "новость"
  },
  "learn_attempt_day": "2026-11-28",
@@ -3195,7 +3197,7 @@
   "quote_matches": 190
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-28T14:40:56.171169+03:00",
+  "last_poll": "2026-11-28T14:42:56.358758+03:00",
   "cursor": "503",
   "posts": [
    {
@@ -4302,7 +4304,7 @@
    "1817111": "pre",
    "401884724": "pre",
    "401879799": "pre",
-   "1817110": "pre",
+   "1817110": "in",
    "1817113": "pre",
    "1817112": "pre",
    "401878928": "pre",
