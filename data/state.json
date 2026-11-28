@@ -2085,14 +2085,14 @@
  "vk_photos": [],
  "vk_photo_until": 1794644243.1147308,
  "vk_photo_cursor": {},
- "vk_story_last": 9834,
+ "vk_story_last": 9841,
  "vk_story_err": null,
  "push_weekly": "2026-48",
- "vk_story_at": 1795826965.0851362,
- "vk_story_url": "https://vk.com/story-228963529_456239196",
+ "vk_story_at": 1795827940.4523108,
+ "vk_story_url": "https://vk.com/story-228963529_456239197",
  "vk_story_day": {
   "date": "2026-11-28",
-  "count": 4
+  "count": 5
  },
  "vk_legacy_pending": [
   {
@@ -3011,40 +3011,40 @@
   "external_sources": {
    "providers": {
     "legalbet": {
-     "at": "2026-11-28T00:34:54.879155+00:00",
+     "at": "2026-11-28T01:04:55.069075+00:00",
      "status": "ok",
-     "discovered": 2,
-     "pages": 2,
-     "opinions": 2,
+     "discovered": 1,
+     "pages": 1,
+     "opinions": 1,
      "mapped": 0,
-     "articles_available": 5,
-     "next_offset": 3,
-     "contexts": 2
+     "articles_available": 4,
+     "next_offset": 1,
+     "contexts": 1
     },
     "livesport": {
-     "at": "2026-11-28T00:34:54.879155+00:00",
+     "at": "2026-11-28T01:04:55.069075+00:00",
      "status": "ok",
-     "discovered": 21,
+     "discovered": 20,
      "pages": 6,
-     "opinions": 8,
-     "mapped": 4,
+     "opinions": 6,
+     "mapped": 3,
      "articles_available": 34,
-     "next_offset": 11,
+     "next_offset": 17,
      "contexts": 6
     },
     "metaratings": {
-     "at": "2026-11-28T00:34:54.879155+00:00",
+     "at": "2026-11-28T01:04:55.069075+00:00",
      "status": "ok",
-     "discovered": 12,
+     "discovered": 10,
      "pages": 6,
      "opinions": 24,
-     "mapped": 4,
+     "mapped": 7,
      "articles_available": 40,
-     "next_offset": 13,
+     "next_offset": 9,
      "contexts": 6
     },
     "rb": {
-     "at": "2026-11-28T00:34:54.879155+00:00",
+     "at": "2026-11-28T01:04:55.069075+00:00",
      "status": "ok",
      "discovered": 1,
      "pages": 1,
@@ -3055,7 +3055,7 @@
      "contexts": 0
     },
     "vseprosport": {
-     "at": "2026-11-28T00:34:54.879155+00:00",
+     "at": "2026-11-28T01:04:55.069075+00:00",
      "status": "ok",
      "discovered": 4,
      "pages": 3,
@@ -3188,7 +3188,7 @@
   "quote_matches": 171
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-28T04:02:55.600118+03:00",
+  "last_poll": "2026-11-28T04:04:55.069075+03:00",
   "cursor": "497",
   "posts": [
    {
