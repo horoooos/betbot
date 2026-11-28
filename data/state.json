@@ -3166,56 +3166,31 @@
    }
   },
   "source": {
-   "last_success": "2026-11-28T09:16:58.920155+00:00",
-   "parsed": 326,
-   "added": 51,
-   "discovered_matches": 65,
+   "last_success": "2026-11-28T09:38:58.498486+00:00",
+   "parsed": 338,
+   "added": 98,
+   "discovered_matches": 67,
    "pages": 18,
    "errors": [],
    "parsed_by_sport": {
     "soccer": 50,
     "ice-hockey": 50,
     "basketball": 50,
-    "tennis": 42,
-    "csgo": 35,
+    "tennis": 40,
+    "csgo": 38,
     "dota2": 50
    }
   },
   "error": null,
-  "tips": 21246,
+  "tips": 21296,
   "snapshots": 457,
-  "unmapped_markets": 31998,
+  "unmapped_markets": 32046,
   "quote_matches": 186
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-28T12:36:58.379061+03:00",
-  "cursor": "500",
+  "last_poll": "2026-11-28T12:38:58.498486+03:00",
+  "cursor": "501",
   "posts": [
-   {
-    "post_id": 920,
-    "published_at": 1795777043,
-    "url": "https://vk.com/wall-228963529_920",
-    "title": "Сергей Силкин не верит в чемпионство «Динамо»",
-    "text": "рџ“° Эк-главный тренер «Динамо» Сергей Силкин в интервью «СЭ» сказал, что не верит в то, что команда станет чемпионом в этом сезоне.\n\nрџ—ЈпёЏ Силкин отметил, что, несмотря на лидерство, «Динамо» пока не обладает стабильностью, которой не хватало в прошлые сезоны.\n\nрџЏ† Он подчеркнул, что нынешнее положение в таблице «ни о чём не говорит», потому что в весенний период чемпионат обычно меняет динамику.\n\nрџ“… Следующий матч «Динамо» под Шварцем запланирован на 29 ноября против «Крыльев-Самары».\n\nПодписывайтесь на «АИ СТАВИТ» — спортивные новости каждый день.\n\n#футбол #Силкин #Динамо #новостиспорта #спорт #главное #аиставит\n\nрџ“Љ Подробнее на сайте рџ‘‡",
-    "checks": {
-     "encoding_clean": false,
-     "expected_caption_present": false,
-     "complete_layout": false,
-     "hashtags_present": true,
-     "details_present": true,
-     "one_short_link": false,
-     "long_source_absent": true,
-     "image_present": true
-    },
-    "cover": {
-     "verified": true,
-     "width": 1536,
-     "height": 1023,
-     "host": "sun9-63.userapi.com"
-    },
-    "status": "needs_review",
-    "observed_at": "2026-11-27T13:58:14.402555+03:00"
-   },
    {
     "post_id": 921,
     "published_at": 1795777044,
@@ -3940,6 +3915,31 @@
     },
     "status": "needs_review",
     "observed_at": "2026-11-28T12:36:58.379061+03:00"
+   },
+   {
+    "post_id": 950,
+    "published_at": 1795858629,
+    "url": "https://vk.com/wall-228963529_950",
+    "title": "zweih назвал поражение от NAVI в PGL Major Singapore 2026 неприятным",
+    "text": "рџ“° Иван zweih Гогин, игрок состава «PARIVISION» по Counter-Strike 2, коротко отреагировал на поражение своей команды в стартовом матче второго этапа PGL Major Singapore 2026.\n\nрџ“Љ «Natus Vincere» обыграла «PARIVISION» на карте Ancient со счётом 13:10. Изначально лидерство держал Алексей «Aleksib» Виролайнен, выведя команду в 7:0.\n\nрџ• Для «PARIVISION» это первое поражение на второй стадии турнира. Zweih в Telegram написал лишь одно слово — «Неприятно».\n\nрџ”њ В следующем раунде «PARIVISION» встретится с «FlyQuest».\n\nрџ“… PGL Major Singapore 2026 проходит с 24 ноября по 13 декабря в Калланге, Сингапур, а призовой фонд турнира составляет $1,25 млн.\n\nПодписывайтесь на «АИ СТАВИТ» — спортивные новости каждый день.\n\n#киберспорт #новостиспорта #спорт #главное #аиставит\n\nрџ“Љ Подробнее на сайте рџ‘‡",
+    "checks": {
+     "encoding_clean": false,
+     "expected_caption_present": false,
+     "complete_layout": false,
+     "hashtags_present": true,
+     "details_present": true,
+     "one_short_link": false,
+     "long_source_absent": true,
+     "image_present": true
+    },
+    "cover": {
+     "verified": true,
+     "width": 1536,
+     "height": 1023,
+     "host": "sun9-63.userapi.com"
+    },
+    "status": "needs_review",
+    "observed_at": "2026-11-28T12:38:58.498486+03:00"
    }
   ],
   "status": "observing",
