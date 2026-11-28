@@ -253,41 +253,6 @@ null
 "lt": null
 },
 {
-"sport": "esports",
-"id": "1817111",
-"league": "Киберспорт · CS2",
-"kickoff": "2026-11-28T14:50:00+03:00",
-"home": "MIBR",
-"away": "Imperial",
-"hl": "https://cdn-api.pandascore.co/images/team/image/3250/600px_mibr_2018.png",
-"al": "https://cdn-api.pandascore.co/images/team/image/126377/711px_imperial_esports_2025_allmode.png",
-"hid": "3250",
-"aid": "126377",
-"bb": "https://betboom.ru/search?query=%D0%9C%D0%B8%D0%B1%D1%80&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=esports",
-"path": "",
-"url": "esports.html?e=1817111&d=CS2",
-"participants": [
-[
-"MIBR",
-"MIBR"
-],
-[
-"Imperial",
-"Imperial"
-]
-],
-"div": "CS2",
-"state": "pre",
-"bo": 1,
-"prediction": "",
-"hs": 0,
-"as": 0,
-"tip": "",
-"top": false,
-"bot": null,
-"lt": null
-},
-{
 "sport": "football",
 "id": "401885043",
 "league": "Германия · 2. Бундеслига",
@@ -494,6 +459,41 @@ null
 "prediction": "",
 "hs": "0",
 "as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "esports",
+"id": "1817111",
+"league": "Киберспорт · CS2",
+"kickoff": "2026-11-28T15:00:00+03:00",
+"home": "MIBR",
+"away": "Imperial",
+"hl": "https://cdn-api.pandascore.co/images/team/image/3250/600px_mibr_2018.png",
+"al": "https://cdn-api.pandascore.co/images/team/image/126377/711px_imperial_esports_2025_allmode.png",
+"hid": "3250",
+"aid": "126377",
+"bb": "https://betboom.ru/search?query=%D0%9C%D0%B8%D0%B1%D1%80&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=esports",
+"path": "",
+"url": "esports.html?e=1817111&d=CS2",
+"participants": [
+[
+"MIBR",
+"MIBR"
+],
+[
+"Imperial",
+"Imperial"
+]
+],
+"div": "CS2",
+"state": "pre",
+"bo": 1,
+"prediction": "",
+"hs": 0,
+"as": 0,
 "tip": "",
 "top": false,
 "bot": null,

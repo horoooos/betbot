@@ -5919,11 +5919,11 @@
  },
  "CS2|1817111": {
   "status": "waiting_data",
-  "kickoff": "2026-11-28T14:50:00+03:00",
+  "kickoff": "2026-11-28T15:00:00+03:00",
   "sport": "esports",
   "div": "CS2",
   "reason": "no_real_odds",
-  "retry_at": 1795866416.621083
+  "retry_at": 1795867137.06673
  },
  "CS2|1817110": {
   "status": "waiting_data",
@@ -5947,7 +5947,7 @@
   "sport": "esports",
   "div": "CS2",
   "reason": "no_real_odds",
-  "retry_at": 1795866537.006938
+  "retry_at": 1795867137.06673
  },
  "CS2|1817112": {
   "status": "waiting_data",
@@ -5955,6 +5955,6 @@
   "sport": "esports",
   "div": "CS2",
   "reason": "edge_below_minimum",
-  "retry_at": 1795866537.006938
+  "retry_at": 1795867137.06673
  }
 }
