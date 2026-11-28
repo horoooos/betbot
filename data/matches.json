@@ -29638,7 +29638,10 @@
   },
   "extra": null,
   "msg_id": 9907,
-  "btn": 2
+  "btn": 2,
+  "close": {
+   "H": 0.5702
+  }
  },
  "401877516": {
   "status": "waiting_data",
@@ -29646,6 +29649,6 @@
   "sport": "football",
   "div": "JPN",
   "reason": "edge_below_minimum",
-  "retry_at": 1795845154.238081
+  "retry_at": 1795845754.932753
  }
 }
