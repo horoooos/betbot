@@ -3201,7 +3201,7 @@
   "quote_matches": 192
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-28T15:54:57.581252+03:00",
+  "last_poll": "2026-11-28T15:56:57.522456+03:00",
   "cursor": "507",
   "posts": [
    {
@@ -22695,7 +22695,7 @@
     "profit_pct": -0.5
    },
    "football|RUS|401879793": {
-    "status": "open",
+    "status": "settled",
     "id": "401879793",
     "sport": "football",
     "div": "RUS",
@@ -23338,7 +23338,10 @@
        "price_kind": "author_recorded"
       }
      ]
-    }
+    },
+    "settled_at": "2026-11-28T12:56:57.522456+00:00",
+    "hit": true,
+    "profit_pct": 0.43
    },
    "football|D2|401885043": {
     "status": "open",
