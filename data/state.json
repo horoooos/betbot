@@ -1574,7 +1574,7 @@
  "value_day": "2026-11-27",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-27",
- "site_stamp": "1587|9899|2026-11-28 05|6|91412a7afca7b71a",
+ "site_stamp": "1587|9899|2026-11-28 06|6|22677627f0128531",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1586,7 +1586,7 @@
    "NBA|401909332"
   ]
  },
- "value_check": "2026-11-28-1",
+ "value_check": "2026-11-28-2",
  "express_risk": {
   "msg": 9806,
   "legs": [
@@ -3134,61 +3134,61 @@
     "weight": 0.0,
     "settled_matches": 82,
     "required_matches": 100,
-    "trained_at": "2026-11-28T02:58:54.917876+00:00"
+    "trained_at": "2026-11-28T03:00:55.351346+00:00"
    },
    "basketball": {
     "status": "collecting",
     "weight": 0.0,
-    "settled_matches": 77,
+    "settled_matches": 78,
     "required_matches": 100,
-    "trained_at": "2026-11-28T02:58:54.917876+00:00"
+    "trained_at": "2026-11-28T03:00:55.351346+00:00"
    },
    "tennis": {
     "status": "collecting",
     "weight": 0.0,
     "settled_matches": 10,
     "required_matches": 100,
-    "trained_at": "2026-11-28T02:58:54.917876+00:00"
+    "trained_at": "2026-11-28T03:00:55.351346+00:00"
    },
    "esports:CS2": {
     "status": "collecting",
     "weight": 0.0,
     "settled_matches": 0,
     "required_matches": 100,
-    "trained_at": "2026-11-28T02:58:54.917876+00:00"
+    "trained_at": "2026-11-28T03:00:55.351346+00:00"
    },
    "esports:DOTA": {
     "status": "collecting",
     "weight": 0.0,
     "settled_matches": 0,
     "required_matches": 100,
-    "trained_at": "2026-11-28T02:58:54.917876+00:00"
+    "trained_at": "2026-11-28T03:00:55.351346+00:00"
    }
   },
   "source": {
-   "last_success": "2026-11-28T02:40:54.881717+00:00",
-   "parsed": 311,
-   "added": 31,
-   "discovered_matches": 58,
+   "last_success": "2026-11-28T03:00:55.351346+00:00",
+   "parsed": 316,
+   "added": 44,
+   "discovered_matches": 59,
    "pages": 18,
    "errors": [],
    "parsed_by_sport": {
-    "soccer": 48,
+    "soccer": 50,
     "ice-hockey": 50,
     "basketball": 50,
     "tennis": 44,
-    "csgo": 30,
+    "csgo": 27,
     "dota2": 50
    }
   },
   "error": null,
-  "tips": 20783,
-  "snapshots": 448,
-  "unmapped_markets": 31487,
-  "quote_matches": 177
+  "tips": 20804,
+  "snapshots": 450,
+  "unmapped_markets": 31510,
+  "quote_matches": 178
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-28T05:58:54.917876+03:00",
+  "last_poll": "2026-11-28T06:00:55.351346+03:00",
   "cursor": "497",
   "posts": [
    {
@@ -4043,7 +4043,7 @@
    "401892809": "in",
    "401909326": "post",
    "401909327": "post",
-   "401909328": "in",
+   "401909328": "post",
    "401909329": "in",
    "401909330": "in",
    "401909331": "in",
