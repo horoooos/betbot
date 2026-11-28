@@ -596,41 +596,6 @@ null
 },
 {
 "sport": "esports",
-"id": "1817111",
-"league": "Киберспорт · CS2",
-"kickoff": "2026-11-28T13:30:00+03:00",
-"home": "MIBR",
-"away": "Imperial",
-"hl": "https://cdn-api.pandascore.co/images/team/image/3250/600px_mibr_2018.png",
-"al": "https://cdn-api.pandascore.co/images/team/image/126377/711px_imperial_esports_2025_allmode.png",
-"hid": "3250",
-"aid": "126377",
-"bb": "https://betboom.ru/search?query=%D0%9C%D0%B8%D0%B1%D1%80&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=esports",
-"path": "",
-"url": "esports.html?e=1817111&d=CS2",
-"participants": [
-[
-"MIBR",
-"MIBR"
-],
-[
-"Imperial",
-"Imperial"
-]
-],
-"div": "CS2",
-"state": "pre",
-"bo": 1,
-"prediction": "",
-"hs": 0,
-"as": 0,
-"tip": "",
-"top": false,
-"bot": null,
-"lt": null
-},
-{
-"sport": "esports",
 "id": "1817109",
 "league": "Киберспорт · CS2",
 "kickoff": "2026-11-28T13:30:00+03:00",
@@ -736,26 +701,26 @@ null
 },
 {
 "sport": "esports",
-"id": "1817113",
+"id": "1817111",
 "league": "Киберспорт · CS2",
 "kickoff": "2026-11-28T14:30:00+03:00",
-"home": "FlyQuest",
-"away": "PVISION",
-"hl": "https://cdn-api.pandascore.co/images/team/image/134746/fly_questlogo_square.png",
-"al": "https://cdn-api.pandascore.co/images/team/image/139565/250px_parivision_allmode.png",
-"hid": "134746",
-"aid": "139565",
-"bb": "https://betboom.ru/search?query=%D0%A4%D0%BB%D0%B8%D0%BA%D0%B2%D0%B5%D1%81%D1%82&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=esports",
+"home": "MIBR",
+"away": "Imperial",
+"hl": "https://cdn-api.pandascore.co/images/team/image/3250/600px_mibr_2018.png",
+"al": "https://cdn-api.pandascore.co/images/team/image/126377/711px_imperial_esports_2025_allmode.png",
+"hid": "3250",
+"aid": "126377",
+"bb": "https://betboom.ru/search?query=%D0%9C%D0%B8%D0%B1%D1%80&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=esports",
 "path": "",
-"url": "esports.html?e=1817113&d=CS2",
+"url": "esports.html?e=1817111&d=CS2",
 "participants": [
 [
-"FlyQuest",
-"FlyQuest"
+"MIBR",
+"MIBR"
 ],
 [
-"PVISION",
-"PVISION"
+"Imperial",
+"Imperial"
 ]
 ],
 "div": "CS2",
@@ -1219,6 +1184,41 @@ null
 "prediction": "",
 "hs": "0",
 "as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "esports",
+"id": "1817113",
+"league": "Киберспорт · CS2",
+"kickoff": "2026-11-28T15:30:00+03:00",
+"home": "FlyQuest",
+"away": "PVISION",
+"hl": "https://cdn-api.pandascore.co/images/team/image/134746/fly_questlogo_square.png",
+"al": "https://cdn-api.pandascore.co/images/team/image/139565/250px_parivision_allmode.png",
+"hid": "134746",
+"aid": "139565",
+"bb": "https://betboom.ru/search?query=%D0%A4%D0%BB%D0%B8%D0%BA%D0%B2%D0%B5%D1%81%D1%82&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=esports",
+"path": "",
+"url": "esports.html?e=1817113&d=CS2",
+"participants": [
+[
+"FlyQuest",
+"FlyQuest"
+],
+[
+"PVISION",
+"PVISION"
+]
+],
+"div": "CS2",
+"state": "pre",
+"bo": 1,
+"prediction": "",
+"hs": 0,
+"as": 0,
 "tip": "",
 "top": false,
 "bot": null,
