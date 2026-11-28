@@ -3166,10 +3166,10 @@
    }
   },
   "source": {
-   "last_success": "2026-11-28T00:10:54.525006+00:00",
-   "parsed": 331,
-   "added": 104,
-   "discovered_matches": 69,
+   "last_success": "2026-11-28T00:30:55.105567+00:00",
+   "parsed": 333,
+   "added": 64,
+   "discovered_matches": 61,
    "pages": 18,
    "errors": [],
    "parsed_by_sport": {
@@ -3182,13 +3182,13 @@
    }
   },
   "error": null,
-  "tips": 20641,
-  "snapshots": 442,
-  "unmapped_markets": 31250,
-  "quote_matches": 170
+  "tips": 20661,
+  "snapshots": 443,
+  "unmapped_markets": 31294,
+  "quote_matches": 171
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-28T03:28:54.779867+03:00",
+  "last_poll": "2026-11-28T03:30:55.105567+03:00",
   "cursor": "497",
   "posts": [
    {
@@ -8547,7 +8547,7 @@
   },
   "hockey|NHL|401892808": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-28T00:19:15.183834+00:00",
+   "checked_at": "2026-11-28T00:31:23.105549+00:00",
    "kickoff": "2026-11-28T04:00:00+03:00",
    "sport": "hockey",
    "id": "401892808",
@@ -8562,7 +8562,7 @@
   },
   "hockey|NHL|401892809": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-28T00:19:15.803545+00:00",
+   "checked_at": "2026-11-28T00:31:23.715146+00:00",
    "kickoff": "2026-11-28T04:00:00+03:00",
    "sport": "hockey",
    "id": "401892809",
@@ -8577,7 +8577,7 @@
   },
   "basketball|NBA|401909330": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-28T00:19:16.344882+00:00",
+   "checked_at": "2026-11-28T00:31:24.286790+00:00",
    "kickoff": "2026-11-28T04:00:00+03:00",
    "sport": "basketball",
    "id": "401909330",
