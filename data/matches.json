@@ -29907,5 +29907,1034 @@
   "div": "E3",
   "reason": "edge_below_minimum",
   "retry_at": 1795867137.06673
+ },
+ "401882796": {
+  "id": "401882796",
+  "div": "SP1",
+  "slug": "esp.1",
+  "kickoff": "2026-11-28T16:00:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "detail": "Scheduled",
+  "home": {
+   "id": "244",
+   "name": "Real Betis",
+   "short": "Betis",
+   "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/244.png",
+   "color": "288A00",
+   "alt": "0A422D",
+   "form": "WDWWL",
+   "score": "0",
+   "ru": "Бетис"
+  },
+  "away": {
+   "id": "101",
+   "name": "Rayo Vallecano",
+   "short": "Rayo",
+   "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/101.png",
+   "color": "ffffff",
+   "alt": "cd0000",
+   "form": "LLWWL",
+   "score": "0",
+   "ru": "Райо Вальекано"
+  },
+  "odds": {
+   "H": 1.606,
+   "D": 4.2,
+   "A": 5.25,
+   "line": 3.5,
+   "over": 2.4,
+   "under": 1.571,
+   "spread_h": [
+    -0.5,
+    1.556
+   ],
+   "spread_a": [
+    0.5,
+    2.3
+   ]
+  },
+  "venue": "Estadio La Cartuja",
+  "clock": "0'",
+  "goals": [],
+  "open": {
+   "H": 0.5936
+  },
+  "top": false,
+  "lam": [
+   2.065568908473337,
+   1.0825377094447068
+  ],
+  "probs": {
+   "H": 0.5923432115449597,
+   "D": 0.22333780298851327,
+   "A": 0.18431898546652714,
+   "1X": 0.815681014533473,
+   "12": 0.7766621970114872,
+   "X2": 0.4076567884550407,
+   "BTTS_Y": 0.5851316049755545,
+   "BTTS_N": 0.4148683950244462,
+   "O15": 0.8295861338585183,
+   "U15": 0.1704138661414822,
+   "O25": 0.6091565138577605,
+   "U25": 0.39084348614224007,
+   "O35": 0.38590388936755243,
+   "U35": 0.6140961106324475,
+   "H_O05": 0.8732524216505893,
+   "H_O15": 0.6114465645877578,
+   "A_O05": 0.6612651690058902,
+   "A_O15": 0.2945719409523854,
+   "H-1.5": 0.3675243690210624,
+   "A+1.5": 0.6324756309789379,
+   "A-1.5": 0.07014946889061595,
+   "H+1.5": 0.9298505311093843,
+   "H-2.5": 0.18545898713438363,
+   "A-2.5": 0.020142092746819787,
+   "H+2.5": 0.9798579072531806,
+   "A+2.5": 0.8145410128656166,
+   "O45": 0.2101981232112539,
+   "U45": 0.789801876788746,
+   "H_O25": 0.3410575453851574,
+   "A_O25": 0.09609231736942273,
+   "H&O15": 0.5113406435874878,
+   "A&O15": 0.1455217016015919,
+   "H&BTTS": 0.3042223948699243,
+   "A&BTTS": 0.10818542143619143,
+   "1X&U35": 0.4891011547481532,
+   "X2&U35": 0.27929159984102836,
+   "BTTS&O25": 0.48144897533789516,
+   "HT_H": 0.439522555657214,
+   "HT_D": 0.38298674467766824,
+   "HT_A": 0.1774906996651177,
+   "HT_O05": 0.7486891172238086,
+   "HT_U05": 0.251310882776191,
+   "HT_O15": 0.42268625381467145,
+   "HT_U15": 0.5773137461853286
+  },
+  "scores": [
+   [
+    "1:1",
+    0.10368262963765877
+   ],
+   [
+    "2:1",
+    0.09914982228162222
+   ],
+   [
+    "2:0",
+    0.0915901787222559
+   ]
+  ],
+  "main": {
+   "key": "H",
+   "label": "П1",
+   "p": 0.5923,
+   "odds": 1.58,
+   "est": false,
+   "stake": 0.5,
+   "strategy": "external_trial",
+   "selection_mode": "external_fallback",
+   "trial_expires_at": null,
+   "probability_origin": "baseline_model",
+   "model_edge": -0.0641,
+   "source_count": 22,
+   "source_refs": [
+    {
+     "author": "/predictors/azenit-100",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/28-11-2026-real-betis-rayo-vallecano",
+     "published_at": "2026-11-27T22:24:00+00:00",
+     "observed_at": "2026-11-27T22:26:35.892469+00:00",
+     "odds": 1.59,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/znaxar87",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/28-11-2026-real-betis-rayo-vallecano",
+     "published_at": "2026-11-27T23:24:00+00:00",
+     "observed_at": "2026-11-27T23:30:35.617576+00:00",
+     "odds": 1.59,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/evan-gurishin",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/28-11-2026-real-betis-rayo-vallecano",
+     "published_at": "2026-11-27T23:24:00+00:00",
+     "observed_at": "2026-11-27T23:30:35.617576+00:00",
+     "odds": 1.59,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/kiryxache",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/28-11-2026-real-betis-rayo-vallecano",
+     "published_at": "2026-11-27T23:46:00+00:00",
+     "observed_at": "2026-11-27T23:50:35.714041+00:00",
+     "odds": 1.59,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/andrei-zv",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/28-11-2026-real-betis-rayo-vallecano",
+     "published_at": "2026-11-28T00:23:00+00:00",
+     "observed_at": "2026-11-28T00:30:55.105567+00:00",
+     "odds": 1.59,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/aleksey-orlov-8",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/28-11-2026-real-betis-rayo-vallecano",
+     "published_at": "2026-11-28T00:24:00+00:00",
+     "observed_at": "2026-11-28T00:30:55.105567+00:00",
+     "odds": 1.59,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/andrei-rassovskii",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/28-11-2026-real-betis-rayo-vallecano",
+     "published_at": "2026-11-28T00:44:00+00:00",
+     "observed_at": "2026-11-28T00:52:55.145811+00:00",
+     "odds": 1.59,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/vladimir-266",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/28-11-2026-real-betis-rayo-vallecano",
+     "published_at": "2026-11-28T01:32:00+00:00",
+     "observed_at": "2026-11-28T01:36:55.372460+00:00",
+     "odds": 1.59,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/regalfortune-pro-1",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/28-11-2026-real-betis-rayo-vallecano",
+     "published_at": "2026-11-28T03:19:00+00:00",
+     "observed_at": "2026-11-28T03:22:54.784418+00:00",
+     "odds": 1.59,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/aleksandr-nerkin-3",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/28-11-2026-real-betis-rayo-vallecano",
+     "published_at": "2026-11-28T04:19:00+00:00",
+     "observed_at": "2026-11-28T04:24:55.343932+00:00",
+     "odds": 1.59,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/maksim-savkin",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/28-11-2026-real-betis-rayo-vallecano",
+     "published_at": "2026-11-28T04:20:00+00:00",
+     "observed_at": "2026-11-28T04:24:55.343932+00:00",
+     "odds": 1.59,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/igor-miskin",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/28-11-2026-real-betis-rayo-vallecano",
+     "published_at": "2026-11-28T04:41:00+00:00",
+     "observed_at": "2026-11-28T04:44:55.499710+00:00",
+     "odds": 1.59,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/moskovskiy-kapper",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/28-11-2026-real-betis-rayo-vallecano",
+     "published_at": "2026-11-28T06:50:00+00:00",
+     "observed_at": "2026-11-28T06:50:34.766485+00:00",
+     "odds": 1.59,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/sergey-borisenko",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/28-11-2026-real-betis-rayo-vallecano",
+     "published_at": "2026-11-28T07:11:00+00:00",
+     "observed_at": "2026-11-28T07:12:35.053600+00:00",
+     "odds": 1.59,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/vlad-ananin-1",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/28-11-2026-real-betis-rayo-vallecano",
+     "published_at": "2026-11-28T08:13:00+00:00",
+     "observed_at": "2026-11-28T08:14:38.157037+00:00",
+     "odds": 1.59,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/zaxar-trofimov",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/28-11-2026-real-betis-rayo-vallecano",
+     "published_at": "2026-11-28T08:14:00+00:00",
+     "observed_at": "2026-11-28T08:14:38.157037+00:00",
+     "odds": 1.59,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/the-red",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/28-11-2026-real-betis-rayo-vallecano",
+     "published_at": "2026-11-28T08:49:00+00:00",
+     "observed_at": "2026-11-28T08:56:37.963874+00:00",
+     "odds": 1.59,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/vladimir-grisin",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/28-11-2026-real-betis-rayo-vallecano",
+     "published_at": "2026-11-28T08:51:00+00:00",
+     "observed_at": "2026-11-28T08:56:37.963874+00:00",
+     "odds": 1.59,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/dmitrii-mortvicev",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/28-11-2026-real-betis-rayo-vallecano",
+     "published_at": "2026-11-28T09:11:00+00:00",
+     "observed_at": "2026-11-28T09:16:58.920155+00:00",
+     "odds": 1.59,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/syao-yan",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/28-11-2026-real-betis-rayo-vallecano",
+     "published_at": "2026-11-28T09:33:00+00:00",
+     "observed_at": "2026-11-28T09:38:58.498486+00:00",
+     "odds": 1.59,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/dima-chebanenko",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/28-11-2026-real-betis-rayo-vallecano",
+     "published_at": "2026-11-28T10:37:00+00:00",
+     "observed_at": "2026-11-28T10:40:58.378108+00:00",
+     "odds": 1.59,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/aleksandr-lebed-8",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/28-11-2026-real-betis-rayo-vallecano",
+     "published_at": "2026-11-28T11:39:00+00:00",
+     "observed_at": "2026-11-28T11:44:56.270403+00:00",
+     "odds": 1.59,
+     "price_kind": "author_recorded"
+    }
+   ]
+  },
+  "bold": {},
+  "value": null,
+  "odds_src": "среднее по букмекерам",
+  "model_w": 0.0,
+  "learned_n": 1596,
+  "stavka_signal": {
+   "status": "baseline_better",
+   "weight": 0.0,
+   "authors": 23,
+   "votes": {
+    "H": 22.085959081883736,
+    "D": 1.0
+   },
+   "source": "https://stavka.tv",
+   "snapshot": "SP1|401882796"
+  },
+  "research": {
+   "articles": [
+    {
+     "id": "1a76af26ce074dfaeea2e1cb",
+     "kind": "context",
+     "provider": "livesport",
+     "source": "https://www.livesport.ru/tips/football/2026/11/28/rbetis-rayovallecano/",
+     "sport": "football",
+     "div": "SP1",
+     "event_id": "401882796",
+     "kickoff": "2026-11-28T13:00:00+00:00",
+     "published_at": "2026-11-27T12:00:00+00:00",
+     "observed_at": "2026-11-27T12:12:37.874177+00:00",
+     "tables": [
+      [
+       [
+        "",
+        "Букмекер",
+        "1",
+        "x",
+        "2",
+        "Новым игрокам",
+        ""
+       ],
+       [
+        "",
+        "",
+        "1.59",
+        "4.38",
+        "4.99",
+        "Фрибет",
+        "30 000 ₽"
+       ],
+       [
+        "",
+        "",
+        "1.60",
+        "4.40",
+        "5.00",
+        "Фрибет всем",
+        "10 000 ₽"
+       ],
+       [
+        "",
+        "",
+        "1.60",
+        "4.30",
+        "5.20",
+        "Фрибет",
+        "1000 ₽"
+       ]
+      ]
+     ]
+    }
+   ],
+   "dossier": {
+    "observed_at": "2026-11-28T11:49:15.165327+00:00",
+    "kickoff": "2026-11-28T13:00:00+00:00",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/summary?event=401882796",
+    "status": "available",
+    "facts": {
+     "table": {
+      "83": {
+       "rank": "1",
+       "gp": "13",
+       "w": "12",
+       "d": "0",
+       "l": "1",
+       "gd": "+36",
+       "pts": "36",
+       "of": 20,
+       "raw": {
+        "GP": "13",
+        "L": "1",
+        "GD": "+36",
+        "P": "36",
+        "D": "0",
+        "W": "12",
+        "R": "1",
+        "Total": "12-0-1"
+       },
+       "group": "Spanish LALIGA Standings"
+      },
+      "86": {
+       "rank": "2",
+       "gp": "13",
+       "w": "11",
+       "d": "0",
+       "l": "2",
+       "gd": "+22",
+       "pts": "33",
+       "of": 20,
+       "raw": {
+        "GP": "13",
+        "L": "2",
+        "GD": "+22",
+        "P": "33",
+        "D": "0",
+        "W": "11",
+        "R": "2",
+        "Total": "11-0-2"
+       },
+       "group": "Spanish LALIGA Standings"
+      },
+      "1068": {
+       "rank": "3",
+       "gp": "13",
+       "w": "10",
+       "d": "1",
+       "l": "2",
+       "gd": "+16",
+       "pts": "31",
+       "of": 20,
+       "raw": {
+        "GP": "13",
+        "L": "2",
+        "GD": "+16",
+        "P": "31",
+        "D": "1",
+        "W": "10",
+        "R": "3",
+        "Total": "10-1-2"
+       },
+       "group": "Spanish LALIGA Standings"
+      },
+      "244": {
+       "rank": "4",
+       "gp": "13",
+       "w": "8",
+       "d": "3",
+       "l": "2",
+       "gd": "+5",
+       "pts": "27",
+       "of": 20,
+       "raw": {
+        "GP": "13",
+        "L": "2",
+        "GD": "+5",
+        "P": "27",
+        "D": "3",
+        "W": "8",
+        "R": "4",
+        "Total": "8-3-2"
+       },
+       "group": "Spanish LALIGA Standings"
+      },
+      "89": {
+       "rank": "5",
+       "gp": "13",
+       "w": "7",
+       "d": "1",
+       "l": "5",
+       "gd": "0",
+       "pts": "22",
+       "of": 20,
+       "raw": {
+        "GP": "13",
+        "L": "5",
+        "GD": "0",
+        "P": "22",
+        "D": "1",
+        "W": "7",
+        "R": "5",
+        "Total": "7-1-5"
+       },
+       "group": "Spanish LALIGA Standings"
+      },
+      "87": {
+       "rank": "6",
+       "gp": "14",
+       "w": "6",
+       "d": "2",
+       "l": "6",
+       "gd": "-10",
+       "pts": "20",
+       "of": 20,
+       "raw": {
+        "GP": "14",
+        "L": "6",
+        "GD": "-10",
+        "P": "20",
+        "D": "2",
+        "W": "6",
+        "R": "6",
+        "Total": "6-2-6"
+       },
+       "group": "Spanish LALIGA Standings"
+      },
+      "243": {
+       "rank": "7",
+       "gp": "13",
+       "w": "5",
+       "d": "4",
+       "l": "4",
+       "gd": "-2",
+       "pts": "19",
+       "of": 20,
+       "raw": {
+        "GP": "13",
+        "L": "4",
+        "GD": "-2",
+        "P": "19",
+        "D": "4",
+        "W": "5",
+        "R": "7",
+        "Total": "5-4-4"
+       },
+       "group": "Spanish LALIGA Standings"
+      },
+      "93": {
+       "rank": "8",
+       "gp": "12",
+       "w": "4",
+       "d": "4",
+       "l": "4",
+       "gd": "+3",
+       "pts": "16",
+       "of": 20,
+       "raw": {
+        "GP": "12",
+        "L": "4",
+        "GD": "+3",
+        "P": "16",
+        "D": "4",
+        "W": "4",
+        "R": "8",
+        "Total": "4-4-4"
+       },
+       "group": "Spanish LALIGA Standings"
+      },
+      "96": {
+       "rank": "9",
+       "gp": "13",
+       "w": "4",
+       "d": "4",
+       "l": "5",
+       "gd": "0",
+       "pts": "16",
+       "of": 20,
+       "raw": {
+        "GP": "13",
+        "L": "5",
+        "GD": "0",
+        "P": "16",
+        "D": "4",
+        "W": "4",
+        "R": "9",
+        "Total": "4-4-5"
+       },
+       "group": "Spanish LALIGA Standings"
+      },
+      "102": {
+       "rank": "10",
+       "gp": "13",
+       "w": "4",
+       "d": "3",
+       "l": "6",
+       "gd": "+1",
+       "pts": "15",
+       "of": 20,
+       "raw": {
+        "GP": "13",
+        "L": "6",
+        "GD": "+1",
+        "P": "15",
+        "D": "3",
+        "W": "4",
+        "R": "10",
+        "Total": "4-3-6"
+       },
+       "group": "Spanish LALIGA Standings"
+      },
+      "88": {
+       "rank": "11",
+       "gp": "13",
+       "w": "4",
+       "d": "3",
+       "l": "6",
+       "gd": "0",
+       "pts": "15",
+       "of": 20,
+       "raw": {
+        "GP": "13",
+        "L": "6",
+        "GD": "0",
+        "P": "15",
+        "D": "3",
+        "W": "4",
+        "R": "11",
+        "Total": "4-3-6"
+       },
+       "group": "Spanish LALIGA Standings"
+      },
+      "90": {
+       "rank": "12",
+       "gp": "13",
+       "w": "3",
+       "d": "6",
+       "l": "4",
+       "gd": "-1",
+       "pts": "15",
+       "of": 20,
+       "raw": {
+        "GP": "13",
+        "L": "4",
+        "GD": "-1",
+        "P": "15",
+        "D": "6",
+        "W": "3",
+        "R": "12",
+        "Total": "3-6-4"
+       },
+       "group": "Spanish LALIGA Standings"
+      },
+      "97": {
+       "rank": "13",
+       "gp": "13",
+       "w": "4",
+       "d": "3",
+       "l": "6",
+       "gd": "-10",
+       "pts": "15",
+       "of": 20,
+       "raw": {
+        "GP": "13",
+        "L": "6",
+        "GD": "-10",
+        "P": "15",
+        "D": "3",
+        "W": "4",
+        "R": "13",
+        "Total": "4-3-6"
+       },
+       "group": "Spanish LALIGA Standings"
+      },
+      "85": {
+       "rank": "14",
+       "gp": "13",
+       "w": "2",
+       "d": "7",
+       "l": "4",
+       "gd": "-1",
+       "pts": "13",
+       "of": 20,
+       "raw": {
+        "GP": "13",
+        "L": "4",
+        "GD": "-1",
+        "P": "13",
+        "D": "7",
+        "W": "2",
+        "R": "14",
+        "Total": "2-7-4"
+       },
+       "group": "Spanish LALIGA Standings"
+      },
+      "1538": {
+       "rank": "15",
+       "gp": "14",
+       "w": "2",
+       "d": "6",
+       "l": "6",
+       "gd": "-7",
+       "pts": "12",
+       "of": 20,
+       "raw": {
+        "GP": "14",
+        "L": "6",
+        "GD": "-7",
+        "P": "12",
+        "D": "6",
+        "W": "2",
+        "R": "15",
+        "Total": "2-6-6"
+       },
+       "group": "Spanish LALIGA Standings"
+      },
+      "101": {
+       "rank": "16",
+       "gp": "12",
+       "w": "3",
+       "d": "3",
+       "l": "6",
+       "gd": "-7",
+       "pts": "12",
+       "of": 20,
+       "raw": {
+        "GP": "12",
+        "L": "6",
+        "GD": "-7",
+        "P": "12",
+        "D": "3",
+        "W": "3",
+        "R": "16",
+        "Total": "3-3-6"
+       },
+       "group": "Spanish LALIGA Standings"
+      },
+      "94": {
+       "rank": "17",
+       "gp": "13",
+       "w": "3",
+       "d": "3",
+       "l": "7",
+       "gd": "-11",
+       "pts": "12",
+       "of": 20,
+       "raw": {
+        "GP": "13",
+        "L": "7",
+        "GD": "-11",
+        "P": "12",
+        "D": "3",
+        "W": "3",
+        "R": "17",
+        "Total": "3-3-7"
+       },
+       "group": "Spanish LALIGA Standings"
+      },
+      "2922": {
+       "rank": "18",
+       "gp": "13",
+       "w": "3",
+       "d": "3",
+       "l": "7",
+       "gd": "-13",
+       "pts": "12",
+       "of": 20,
+       "raw": {
+        "GP": "13",
+        "L": "7",
+        "GD": "-13",
+        "P": "12",
+        "D": "3",
+        "W": "3",
+        "R": "18",
+        "Total": "3-3-7"
+       },
+       "group": "Spanish LALIGA Standings"
+      },
+      "3751": {
+       "rank": "19",
+       "gp": "13",
+       "w": "2",
+       "d": "5",
+       "l": "6",
+       "gd": "-6",
+       "pts": "11",
+       "of": 20,
+       "raw": {
+        "GP": "13",
+        "L": "6",
+        "GD": "-6",
+        "P": "11",
+        "D": "5",
+        "W": "2",
+        "R": "19",
+        "Total": "2-5-6"
+       },
+       "group": "Spanish LALIGA Standings"
+      },
+      "99": {
+       "rank": "20",
+       "gp": "13",
+       "w": "0",
+       "d": "5",
+       "l": "8",
+       "gd": "-15",
+       "pts": "5",
+       "of": 20,
+       "raw": {
+        "GP": "13",
+        "L": "8",
+        "GD": "-15",
+        "P": "5",
+        "D": "5",
+        "W": "0",
+        "R": "20",
+        "Total": "0-5-8"
+       },
+       "group": "Spanish LALIGA Standings"
+      }
+     },
+     "last5": {
+      "244": [
+       {
+        "res": "L",
+        "gf": 1,
+        "ga": 2,
+        "opp": "Borussia Dortmund",
+        "home": false,
+        "date": "2026-11-04"
+       },
+       {
+        "res": "W",
+        "gf": 2,
+        "ga": 0,
+        "opp": "Elche",
+        "home": false,
+        "date": "2026-11-08"
+       },
+       {
+        "res": "W",
+        "gf": 3,
+        "ga": 2,
+        "opp": "CD Artistico Navalcarnero",
+        "home": false,
+        "date": "2026-11-12"
+       },
+       {
+        "res": "D",
+        "gf": 1,
+        "ga": 1,
+        "opp": "Sevilla",
+        "home": false,
+        "date": "2026-11-21"
+       },
+       {
+        "res": "W",
+        "gf": 2,
+        "ga": 0,
+        "opp": "Slovan Bratislava",
+        "home": false,
+        "date": "2026-11-24"
+       }
+      ],
+      "101": [
+       {
+        "res": "L",
+        "gf": 0,
+        "ga": 3,
+        "opp": "Elche",
+        "home": true,
+        "date": "2026-10-24"
+       },
+       {
+        "res": "W",
+        "gf": 3,
+        "ga": 2,
+        "opp": "Recreativo Huelva",
+        "home": false,
+        "date": "2026-10-27"
+       },
+       {
+        "res": "W",
+        "gf": 3,
+        "ga": 0,
+        "opp": "Celta Vigo",
+        "home": true,
+        "date": "2026-10-31"
+       },
+       {
+        "res": "L",
+        "gf": 0,
+        "ga": 1,
+        "opp": "Real Sociedad",
+        "home": false,
+        "date": "2026-11-08"
+       },
+       {
+        "res": "L",
+        "gf": 0,
+        "ga": 1,
+        "opp": "Valencia",
+        "home": true,
+        "date": "2026-11-21"
+       }
+      ]
+     },
+     "h2h": [
+      {
+       "date": "2026-02-21",
+       "home_id": "244",
+       "hs": "1",
+       "as": "1"
+      },
+      {
+       "date": "2025-12-15",
+       "home_id": "101",
+       "hs": "0",
+       "as": "0"
+      },
+      {
+       "date": "2025-05-15",
+       "home_id": "101",
+       "hs": "2",
+       "as": "2"
+      },
+      {
+       "date": "2024-12-22",
+       "home_id": "244",
+       "hs": "1",
+       "as": "1"
+      },
+      {
+       "date": "2024-03-17",
+       "home_id": "101",
+       "hs": "2",
+       "as": "0"
+      }
+     ],
+     "leaders": {
+      "244": [
+       [
+        "Goals",
+        "Rodrigo Riquelme",
+        "Matches: 12, Goals: 3"
+       ],
+       [
+        "Assists",
+        "Isco",
+        "Matches: 12, Assists: 2"
+       ],
+       [
+        "Total Shots",
+        "Antony",
+        "40"
+       ]
+      ],
+      "101": [
+       [
+        "Goals",
+        "Sergio Camello",
+        "Matches: 13, Goals: 7"
+       ],
+       [
+        "Assists",
+        "Unai López",
+        "Matches: 13, Assists: 3"
+       ],
+       [
+        "Total Shots",
+        "Pedro Díaz",
+        "28"
+       ]
+      ]
+     },
+     "venue": "Estadio La Cartuja",
+     "city": "Sevilla"
+    }
+   }
+  },
+  "extra": {
+   "corners": {
+    "home": 5.995107421875,
+    "away": 5.912812499999999,
+    "total": 11.907919921875,
+    "lines": {
+     "8.5": 0.8388457684448061,
+     "9.5": 0.7494707379152474,
+     "10.5": 0.6430436672591349
+    }
+   },
+   "cards": {
+    "total": 4.3,
+    "lines": {
+     "3.5": 0.6228460722703608,
+     "4.5": 0.42956189260589617,
+     "5.5": 0.2633374980944563
+    }
+   }
+  },
+  "msg_id": 9949,
+  "btn": 2
+ },
+ "401883101": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-28T16:00:00+03:00",
+  "sport": "football",
+  "div": "SP2",
+  "reason": "no_qualified_real_market",
+  "retry_at": 1795867736.14085
+ },
+ "401888236": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-28T16:00:00+03:00",
+  "sport": "football",
+  "div": "T1",
+  "reason": "no_qualified_real_market",
+  "retry_at": 1795867736.14085
  }
 }

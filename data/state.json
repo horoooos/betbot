@@ -1564,7 +1564,7 @@
  "value_day": "2026-11-28",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-28",
- "site_stamp": "1596|9948|2026-11-28 14|6|6472c04a6b52204d",
+ "site_stamp": "1596|9950|2026-11-28 14|6|3f0494f16d526992",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1735,7 +1735,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 9948,
+ "dz_last": 9950,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -3194,7 +3194,7 @@
   "quote_matches": 191
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-28T14:56:56.704191+03:00",
+  "last_poll": "2026-11-28T14:58:56.140850+03:00",
   "cursor": "505",
   "posts": [
    {
@@ -9309,6 +9309,52 @@
    "odds": 1.32,
    "edge": -0.0492,
    "estimated": false
+  },
+  "football|SP1|401882796": {
+   "reason": "published",
+   "checked_at": "2026-11-28T11:59:28.187200+00:00",
+   "kickoff": "2026-11-28T16:00:00+03:00",
+   "sport": "football",
+   "id": "401882796",
+   "home": "Бетис",
+   "away": "Райо Вальекано",
+   "market": "П1",
+   "strategy": "external_trial",
+   "source_count": 22,
+   "probability": 0.5923,
+   "odds": 1.58,
+   "edge": -0.06417,
+   "estimated": false
+  },
+  "football|SP2|401883101": {
+   "reason": "no_qualified_real_market",
+   "checked_at": "2026-11-28T11:59:28.591405+00:00",
+   "kickoff": "2026-11-28T16:00:00+03:00",
+   "sport": "football",
+   "id": "401883101",
+   "home": "Лас-Пальмас",
+   "away": "Андорра",
+   "priced_markets": 5,
+   "market": "Обе забьют — да",
+   "probability": 0.5722,
+   "odds": 1.63,
+   "edge": -0.06731,
+   "estimated": true
+  },
+  "football|T1|401888236": {
+   "reason": "no_qualified_real_market",
+   "checked_at": "2026-11-28T11:59:29.342391+00:00",
+   "kickoff": "2026-11-28T16:00:00+03:00",
+   "sport": "football",
+   "id": "401888236",
+   "home": "Самсунспор",
+   "away": "Генчлербирлиги",
+   "priced_markets": 6,
+   "market": "Обе забьют — да",
+   "probability": 0.5449,
+   "odds": 1.71,
+   "edge": -0.06822,
+   "estimated": true
   }
  },
  "source_trial": {
@@ -23409,6 +23455,229 @@
        "published_at": "2026-11-28T08:36:00+00:00",
        "observed_at": "2026-11-28T08:36:37.225306+00:00",
        "odds": 1.81,
+       "price_kind": "author_recorded"
+      }
+     ]
+    }
+   },
+   "football|SP1|401882796": {
+    "status": "open",
+    "id": "401882796",
+    "sport": "football",
+    "div": "SP1",
+    "kickoff": "2026-11-28T16:00:00+03:00",
+    "published_at": "2026-11-28T11:59:24.732588+00:00",
+    "msg_id": 9949,
+    "tip": {
+     "key": "H",
+     "label": "П1",
+     "p": 0.5923,
+     "odds": 1.58,
+     "est": false,
+     "stake": 0.5,
+     "strategy": "external_trial",
+     "selection_mode": "external_fallback",
+     "trial_expires_at": null,
+     "probability_origin": "baseline_model",
+     "model_edge": -0.0641,
+     "source_count": 22,
+     "source_refs": [
+      {
+       "author": "/predictors/azenit-100",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/28-11-2026-real-betis-rayo-vallecano",
+       "published_at": "2026-11-27T22:24:00+00:00",
+       "observed_at": "2026-11-27T22:26:35.892469+00:00",
+       "odds": 1.59,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/znaxar87",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/28-11-2026-real-betis-rayo-vallecano",
+       "published_at": "2026-11-27T23:24:00+00:00",
+       "observed_at": "2026-11-27T23:30:35.617576+00:00",
+       "odds": 1.59,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/evan-gurishin",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/28-11-2026-real-betis-rayo-vallecano",
+       "published_at": "2026-11-27T23:24:00+00:00",
+       "observed_at": "2026-11-27T23:30:35.617576+00:00",
+       "odds": 1.59,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/kiryxache",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/28-11-2026-real-betis-rayo-vallecano",
+       "published_at": "2026-11-27T23:46:00+00:00",
+       "observed_at": "2026-11-27T23:50:35.714041+00:00",
+       "odds": 1.59,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/andrei-zv",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/28-11-2026-real-betis-rayo-vallecano",
+       "published_at": "2026-11-28T00:23:00+00:00",
+       "observed_at": "2026-11-28T00:30:55.105567+00:00",
+       "odds": 1.59,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/aleksey-orlov-8",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/28-11-2026-real-betis-rayo-vallecano",
+       "published_at": "2026-11-28T00:24:00+00:00",
+       "observed_at": "2026-11-28T00:30:55.105567+00:00",
+       "odds": 1.59,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/andrei-rassovskii",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/28-11-2026-real-betis-rayo-vallecano",
+       "published_at": "2026-11-28T00:44:00+00:00",
+       "observed_at": "2026-11-28T00:52:55.145811+00:00",
+       "odds": 1.59,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/vladimir-266",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/28-11-2026-real-betis-rayo-vallecano",
+       "published_at": "2026-11-28T01:32:00+00:00",
+       "observed_at": "2026-11-28T01:36:55.372460+00:00",
+       "odds": 1.59,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/regalfortune-pro-1",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/28-11-2026-real-betis-rayo-vallecano",
+       "published_at": "2026-11-28T03:19:00+00:00",
+       "observed_at": "2026-11-28T03:22:54.784418+00:00",
+       "odds": 1.59,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/aleksandr-nerkin-3",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/28-11-2026-real-betis-rayo-vallecano",
+       "published_at": "2026-11-28T04:19:00+00:00",
+       "observed_at": "2026-11-28T04:24:55.343932+00:00",
+       "odds": 1.59,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/maksim-savkin",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/28-11-2026-real-betis-rayo-vallecano",
+       "published_at": "2026-11-28T04:20:00+00:00",
+       "observed_at": "2026-11-28T04:24:55.343932+00:00",
+       "odds": 1.59,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/igor-miskin",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/28-11-2026-real-betis-rayo-vallecano",
+       "published_at": "2026-11-28T04:41:00+00:00",
+       "observed_at": "2026-11-28T04:44:55.499710+00:00",
+       "odds": 1.59,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/moskovskiy-kapper",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/28-11-2026-real-betis-rayo-vallecano",
+       "published_at": "2026-11-28T06:50:00+00:00",
+       "observed_at": "2026-11-28T06:50:34.766485+00:00",
+       "odds": 1.59,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/sergey-borisenko",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/28-11-2026-real-betis-rayo-vallecano",
+       "published_at": "2026-11-28T07:11:00+00:00",
+       "observed_at": "2026-11-28T07:12:35.053600+00:00",
+       "odds": 1.59,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/vlad-ananin-1",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/28-11-2026-real-betis-rayo-vallecano",
+       "published_at": "2026-11-28T08:13:00+00:00",
+       "observed_at": "2026-11-28T08:14:38.157037+00:00",
+       "odds": 1.59,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/zaxar-trofimov",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/28-11-2026-real-betis-rayo-vallecano",
+       "published_at": "2026-11-28T08:14:00+00:00",
+       "observed_at": "2026-11-28T08:14:38.157037+00:00",
+       "odds": 1.59,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/the-red",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/28-11-2026-real-betis-rayo-vallecano",
+       "published_at": "2026-11-28T08:49:00+00:00",
+       "observed_at": "2026-11-28T08:56:37.963874+00:00",
+       "odds": 1.59,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/vladimir-grisin",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/28-11-2026-real-betis-rayo-vallecano",
+       "published_at": "2026-11-28T08:51:00+00:00",
+       "observed_at": "2026-11-28T08:56:37.963874+00:00",
+       "odds": 1.59,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/dmitrii-mortvicev",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/28-11-2026-real-betis-rayo-vallecano",
+       "published_at": "2026-11-28T09:11:00+00:00",
+       "observed_at": "2026-11-28T09:16:58.920155+00:00",
+       "odds": 1.59,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/syao-yan",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/28-11-2026-real-betis-rayo-vallecano",
+       "published_at": "2026-11-28T09:33:00+00:00",
+       "observed_at": "2026-11-28T09:38:58.498486+00:00",
+       "odds": 1.59,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/dima-chebanenko",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/28-11-2026-real-betis-rayo-vallecano",
+       "published_at": "2026-11-28T10:37:00+00:00",
+       "observed_at": "2026-11-28T10:40:58.378108+00:00",
+       "odds": 1.59,
+       "price_kind": "author_recorded"
+      },
+      {
+       "author": "/predictors/aleksandr-lebed-8",
+       "provider": null,
+       "source": "https://stavka.tv/matches/soccer/28-11-2026-real-betis-rayo-vallecano",
+       "published_at": "2026-11-28T11:39:00+00:00",
+       "observed_at": "2026-11-28T11:44:56.270403+00:00",
+       "odds": 1.59,
        "price_kind": "author_recorded"
       }
      ]
