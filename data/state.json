@@ -3005,7 +3005,7 @@
   "external_sources": {
    "providers": {
     "legalbet": {
-     "at": "2026-11-28T06:42:34.819964+00:00",
+     "at": "2026-11-28T07:12:35.053600+00:00",
      "status": "ok",
      "discovered": 1,
      "pages": 1,
@@ -3016,29 +3016,29 @@
      "contexts": 1
     },
     "livesport": {
-     "at": "2026-11-28T06:42:34.819964+00:00",
+     "at": "2026-11-28T07:12:35.053600+00:00",
      "status": "ok",
      "discovered": 21,
      "pages": 6,
-     "opinions": 6,
-     "mapped": 4,
+     "opinions": 10,
+     "mapped": 5,
      "articles_available": 35,
-     "next_offset": 23,
+     "next_offset": 8,
      "contexts": 6
     },
     "metaratings": {
-     "at": "2026-11-28T06:42:34.819964+00:00",
+     "at": "2026-11-28T07:12:35.053600+00:00",
      "status": "ok",
      "discovered": 11,
      "pages": 6,
      "opinions": 24,
-     "mapped": 2,
+     "mapped": 7,
      "articles_available": 41,
-     "next_offset": 15,
+     "next_offset": 10,
      "contexts": 6
     },
     "rb": {
-     "at": "2026-11-28T06:42:34.819964+00:00",
+     "at": "2026-11-28T07:12:35.053600+00:00",
      "status": "ok",
      "discovered": 1,
      "pages": 1,
@@ -3049,21 +3049,21 @@
      "contexts": 0
     },
     "vseprosport": {
-     "at": "2026-11-28T06:42:34.819964+00:00",
+     "at": "2026-11-28T07:12:35.053600+00:00",
      "status": "ok",
-     "discovered": 4,
+     "discovered": 7,
      "pages": 3,
      "opinions": 0,
      "mapped": 0,
      "articles_available": 10,
-     "next_offset": 6,
-     "page_errors": 1,
-     "contexts": 3
+     "next_offset": 12,
+     "page_errors": 3,
+     "contexts": 2
     }
    },
    "opinions": 81,
    "snapshots": 0,
-   "contexts": 216,
+   "contexts": 217,
    "model": {
     "weight": 0.0,
     "status": "collecting",
@@ -3160,29 +3160,29 @@
    }
   },
   "source": {
-   "last_success": "2026-11-28T06:50:34.766485+00:00",
-   "parsed": 315,
-   "added": 53,
-   "discovered_matches": 54,
+   "last_success": "2026-11-28T07:12:35.053600+00:00",
+   "parsed": 323,
+   "added": 68,
+   "discovered_matches": 57,
    "pages": 18,
    "errors": [],
    "parsed_by_sport": {
     "soccer": 50,
     "ice-hockey": 50,
     "basketball": 50,
-    "tennis": 42,
-    "csgo": 19,
+    "tennis": 41,
+    "csgo": 25,
     "dota2": 50
    }
   },
   "error": null,
-  "tips": 21074,
+  "tips": 21100,
   "snapshots": 456,
-  "unmapped_markets": 31782,
-  "quote_matches": 183
+  "unmapped_markets": 31824,
+  "quote_matches": 184
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-28T10:10:34.643589+03:00",
+  "last_poll": "2026-11-28T10:12:35.053600+03:00",
   "cursor": "498",
   "posts": [
    {
