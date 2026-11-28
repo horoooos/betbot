@@ -5908,5 +5908,21 @@
   "div": "CS2",
   "reason": "no_real_odds",
   "retry_at": 1795850074.920323
+ },
+ "CS2|1817109": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-28T12:30:00+03:00",
+  "sport": "esports",
+  "div": "CS2",
+  "reason": "no_real_odds",
+  "retry_at": 1795855118.030325
+ },
+ "CS2|1817108": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-28T12:30:00+03:00",
+  "sport": "esports",
+  "div": "CS2",
+  "reason": "insufficient_history_or_odds",
+  "retry_at": 1795855118.030325
  }
 }

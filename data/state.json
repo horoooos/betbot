@@ -1564,7 +1564,7 @@
  "value_day": "2026-11-28",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-27",
- "site_stamp": "1595|9924|2026-11-28 11|6|0b1e038dbf471ea5",
+ "site_stamp": "1595|9925|2026-11-28 11|6|0b1e038dbf471ea5",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1734,7 +1734,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 9924,
+ "dz_last": 9925,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -2075,8 +2075,8 @@
  "vk_photos": [],
  "vk_photo_until": 1794644243.1147308,
  "vk_photo_cursor": {},
- "vk_story_last": 9923,
- "vk_story_err": null,
+ "vk_story_last": 9924,
+ "vk_story_err": "VK stories: сервер не вернул upload_result",
  "push_weekly": "2026-48",
  "vk_story_at": 1795853589.6460736,
  "vk_story_url": "https://vk.com/story-228963529_456239204",
@@ -3184,7 +3184,7 @@
   "quote_matches": 185
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-28T11:26:37.725708+03:00",
+  "last_poll": "2026-11-28T11:28:38.030325+03:00",
   "cursor": "498",
   "posts": [
    {
@@ -4287,7 +4287,12 @@
    "401879231": "pre",
    "401879230": "pre",
    "401879228": "pre",
-   "401879224": "pre"
+   "401879224": "pre",
+   "1817107": "pre",
+   "1817106": "pre",
+   "1817109": "pre",
+   "1817108": "pre",
+   "1817111": "pre"
   },
   "daily": {
    "day": "2026-11-28"
@@ -8956,6 +8961,30 @@
    "odds": 1.6,
    "edge": -0.0712,
    "estimated": true
+  },
+  "esports|CS2|1817109": {
+   "reason": "no_real_odds",
+   "checked_at": "2026-11-28T08:29:04.052166+00:00",
+   "kickoff": "2026-11-28T12:30:00+03:00",
+   "sport": "esports",
+   "id": "1817109",
+   "home": "Liquid",
+   "away": "Eternal Fire",
+   "priced_markets": 0,
+   "market": "Победа: Liquid",
+   "probability": 0.6848,
+   "odds": 1.36,
+   "edge": -0.06867,
+   "estimated": true
+  },
+  "esports|CS2|1817108": {
+   "reason": "insufficient_history_or_odds",
+   "checked_at": "2026-11-28T08:29:05.539870+00:00",
+   "kickoff": "2026-11-28T12:30:00+03:00",
+   "sport": "esports",
+   "id": "1817108",
+   "home": "THE ONE",
+   "away": "TheMongolz"
   }
  },
  "source_trial": {
@@ -22237,5 +22266,6 @@
     }
    }
   }
- }
+ },
+ "vk_story_retry_at": 1795858192.2466
 }
