@@ -254,41 +254,6 @@ null
 },
 {
 "sport": "esports",
-"id": "1817111",
-"league": "Киберспорт · CS2",
-"kickoff": "2026-11-28T14:40:00+03:00",
-"home": "MIBR",
-"away": "Imperial",
-"hl": "https://cdn-api.pandascore.co/images/team/image/3250/600px_mibr_2018.png",
-"al": "https://cdn-api.pandascore.co/images/team/image/126377/711px_imperial_esports_2025_allmode.png",
-"hid": "3250",
-"aid": "126377",
-"bb": "https://betboom.ru/search?query=%D0%9C%D0%B8%D0%B1%D1%80&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=esports",
-"path": "",
-"url": "esports.html?e=1817111&d=CS2",
-"participants": [
-[
-"MIBR",
-"MIBR"
-],
-[
-"Imperial",
-"Imperial"
-]
-],
-"div": "CS2",
-"state": "pre",
-"bo": 1,
-"prediction": "",
-"hs": 0,
-"as": 0,
-"tip": "",
-"top": false,
-"bot": null,
-"lt": null
-},
-{
-"sport": "esports",
 "id": "1817110",
 "league": "Киберспорт · CS2",
 "kickoff": "2026-11-28T14:40:00+03:00",
@@ -309,6 +274,41 @@ null
 [
 "100 Thieves",
 "100 Thieves"
+]
+],
+"div": "CS2",
+"state": "pre",
+"bo": 1,
+"prediction": "",
+"hs": 0,
+"as": 0,
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "esports",
+"id": "1817111",
+"league": "Киберспорт · CS2",
+"kickoff": "2026-11-28T14:50:00+03:00",
+"home": "MIBR",
+"away": "Imperial",
+"hl": "https://cdn-api.pandascore.co/images/team/image/3250/600px_mibr_2018.png",
+"al": "https://cdn-api.pandascore.co/images/team/image/126377/711px_imperial_esports_2025_allmode.png",
+"hid": "3250",
+"aid": "126377",
+"bb": "https://betboom.ru/search?query=%D0%9C%D0%B8%D0%B1%D1%80&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=esports",
+"path": "",
+"url": "esports.html?e=1817111&d=CS2",
+"participants": [
+[
+"MIBR",
+"MIBR"
+],
+[
+"Imperial",
+"Imperial"
 ]
 ],
 "div": "CS2",
@@ -8086,6 +8086,111 @@ null
 ]
 ],
 "div": "I1",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "football",
+"id": "401878927",
+"league": "Бельгия · Про-лига",
+"kickoff": "2026-11-29T20:30:00+03:00",
+"home": "Стандард",
+"away": "Брюгге",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/559.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/570.png",
+"hid": "559",
+"aid": "570",
+"bb": "https://betboom.ru/search?query=%D0%A1%D1%82%D0%B0%D0%BD%D0%B4%D0%B0%D1%80%D0%B4&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/bel.1",
+"url": "live.html?s=football&p=soccer%2Fbel.1&e=401878927&h=%D0%A1%D1%82%D0%B0%D0%BD%D0%B4%D0%B0%D1%80%D0%B4&a=%D0%91%D1%80%D1%8E%D0%B3%D0%B3%D0%B5",
+"participants": [
+[
+"Стандард",
+"Standard Liege"
+],
+[
+"Брюгге",
+"Club Brugge"
+]
+],
+"div": "B1",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "football",
+"id": "401882795",
+"league": "Испания · Ла Лига",
+"kickoff": "2026-11-29T20:30:00+03:00",
+"home": "Сельта",
+"away": "Вильярреал",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/85.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/102.png",
+"hid": "85",
+"aid": "102",
+"bb": "https://betboom.ru/search?query=%D0%A1%D0%B5%D0%BB%D1%8C%D1%82%D0%B0&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/esp.1",
+"url": "live.html?s=football&p=soccer%2Fesp.1&e=401882795&h=%D0%A1%D0%B5%D0%BB%D1%8C%D1%82%D0%B0&a=%D0%92%D0%B8%D0%BB%D1%8C%D1%8F%D1%80%D1%80%D0%B5%D0%B0%D0%BB",
+"participants": [
+[
+"Сельта",
+"Celta Vigo"
+],
+[
+"Вильярреал",
+"Villarreal"
+]
+],
+"div": "SP1",
+"state": "pre",
+"bo": null,
+"prediction": "",
+"hs": "0",
+"as": "0",
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "football",
+"id": "401883105",
+"league": "Испания · Сегунда",
+"kickoff": "2026-11-29T20:30:00+03:00",
+"home": "Cádiz",
+"away": "Кордова",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/3842.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/8447.png",
+"hid": "3842",
+"aid": "8447",
+"bb": "https://betboom.ru/search?query=%D0%9A%D0%B0%D0%B4%D0%B8%D0%B7&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/esp.2",
+"url": "live.html?s=football&p=soccer%2Fesp.2&e=401883105&h=C%C3%A1diz&a=%D0%9A%D0%BE%D1%80%D0%B4%D0%BE%D0%B2%D0%B0",
+"participants": [
+[
+"Cádiz",
+"Cádiz"
+],
+[
+"Кордова",
+"Córdoba"
+]
+],
+"div": "SP2",
 "state": "pre",
 "bo": null,
 "prediction": "",
