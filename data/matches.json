@@ -29652,11 +29652,798 @@
   "retry_at": 1795845754.932753
  },
  "401877525": {
-  "status": "waiting_data",
-  "kickoff": "2026-11-28T10:00:00+03:00",
-  "sport": "football",
+  "id": "401877525",
   "div": "JPN",
-  "reason": "no_qualified_real_market",
-  "retry_at": 1795846114.567708
+  "slug": "jpn.1",
+  "kickoff": "2026-11-28T10:00:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "detail": "Scheduled",
+  "home": {
+   "id": "7476",
+   "name": "Kashiwa Reysol",
+   "short": "Kashiwa",
+   "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/7476.png",
+   "color": "000000",
+   "alt": "000000",
+   "form": "WLWWW",
+   "score": "0",
+   "ru": "Касива Рейсол"
+  },
+  "away": {
+   "id": "7114",
+   "name": "Sanfrecce Hiroshima",
+   "short": "Sanfreece",
+   "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/7114.png",
+   "color": "69519F",
+   "alt": "F9BED4",
+   "form": "DDDWW",
+   "score": "0",
+   "ru": "Санфречче Хиросима"
+  },
+  "odds": {
+   "H": 2.3,
+   "D": 3.65,
+   "A": 2.85,
+   "line": 2.5,
+   "over": 1.645,
+   "under": 2.15,
+   "spread_h": [
+    -0.5,
+    2.2
+   ],
+   "spread_a": [
+    0.5,
+    1.588
+   ]
+  },
+  "venue": "Sankyo Frontier Kashiwa Stadium",
+  "clock": "0'",
+  "goals": [],
+  "open": {
+   "A": 0.3293
+  },
+  "top": false,
+  "lam": [
+   1.3984880766940742,
+   1.648033512512302
+  ],
+  "probs": {
+   "H": 0.31742505379989416,
+   "D": 0.25640963348726814,
+   "A": 0.4261653127128376,
+   "1X": 0.5738346872871624,
+   "12": 0.7435903665127318,
+   "X2": 0.6825749462001054,
+   "BTTS_Y": 0.6168881659379241,
+   "BTTS_N": 0.3831118340620759,
+   "O15": 0.8164555145429194,
+   "U15": 0.18354448545708033,
+   "O25": 0.5871508060179085,
+   "U25": 0.41284919398209147,
+   "O35": 0.3631886053136968,
+   "U35": 0.6368113946863032,
+   "H_O05": 0.7530298492450452,
+   "H_O15": 0.4076450381149035,
+   "A_O05": 0.8075717946260336,
+   "A_O15": 0.49044366341713724,
+   "H-1.5": 0.14736237165680824,
+   "A+1.5": 0.8526376283431915,
+   "A-1.5": 0.22419316451762183,
+   "H+1.5": 0.775806835482378,
+   "H-2.5": 0.05315789618804927,
+   "A-2.5": 0.09336957010932632,
+   "H+2.5": 0.9066304298906734,
+   "A+2.5": 0.9468421038119504,
+   "O45": 0.19261218541080874,
+   "U45": 0.8073878145891912,
+   "H_O25": 0.1661367679965344,
+   "A_O25": 0.2291247694208076,
+   "H&O15": 0.2597257736068258,
+   "A&O15": 0.35660662951567057,
+   "H&BTTS": 0.181283370492773,
+   "A&BTTS": 0.23548168402472802,
+   "1X&U35": 0.37700559070908257,
+   "X2&U35": 0.4343860649218364,
+   "BTTS&O25": 0.4985944270601534,
+   "HT_H": 0.2630537551669957,
+   "HT_D": 0.40587396188170577,
+   "HT_A": 0.3310722829512987,
+   "HT_O05": 0.7366517106913387,
+   "HT_U05": 0.26334828930866117,
+   "HT_O15": 0.4075705998372482,
+   "HT_U15": 0.592429400162752
+  },
+  "scores": [
+   [
+    "1:1",
+    0.1182937388777707
+   ],
+   [
+    "1:2",
+    0.09025557684765997
+   ],
+   [
+    "2:1",
+    0.07658906637413175
+   ]
+  ],
+  "main": {
+   "key": "A",
+   "label": "П2",
+   "p": 0.4262,
+   "odds": 2.16,
+   "est": false,
+   "stake": 0.5,
+   "strategy": "external_trial",
+   "selection_mode": "external_fallback",
+   "trial_expires_at": null,
+   "probability_origin": "baseline_model",
+   "model_edge": -0.07948,
+   "source_count": 2,
+   "source_refs": [
+    {
+     "author": "/predictors/ainur-xasanov-4",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/28-11-2026-kashiwa-reysol-sanfrecce-hiroshima",
+     "published_at": "2026-11-27T00:51:00+00:00",
+     "observed_at": "2026-11-27T01:00:56.767660+00:00",
+     "odds": 2.14,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/artem-lasin",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/28-11-2026-kashiwa-reysol-sanfrecce-hiroshima",
+     "published_at": "2026-11-27T19:40:00+00:00",
+     "observed_at": "2026-11-28T06:08:34.489565+00:00",
+     "odds": 2.14,
+     "price_kind": "author_recorded"
+    }
+   ]
+  },
+  "bold": {},
+  "value": null,
+  "odds_src": "среднее по букмекерам",
+  "model_w": 0.0,
+  "learned_n": 1593,
+  "stavka_signal": {
+   "status": "baseline_better",
+   "weight": 0.0,
+   "authors": 3,
+   "votes": {
+    "A": 1.9815028280704046,
+    "H": 0.9824535161294233
+   },
+   "source": "https://stavka.tv",
+   "snapshot": "JPN|401877525"
+  },
+  "research": {
+   "articles": [],
+   "dossier": {
+    "observed_at": "2026-11-28T06:09:07.377373+00:00",
+    "kickoff": "2026-11-28T07:00:00+00:00",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/jpn.1/summary?event=401877525",
+    "status": "available",
+    "facts": {
+     "table": {
+      "3384": {
+       "rank": "1",
+       "gp": "16",
+       "w": "11",
+       "d": "4",
+       "l": "1",
+       "gd": "+28",
+       "pts": "37",
+       "of": 20,
+       "raw": {
+        "GP": "16",
+        "L": "1",
+        "GD": "+28",
+        "P": "37",
+        "D": "4",
+        "W": "11",
+        "R": "1",
+        "Total": "11-4-1"
+       },
+       "group": "Japanese J.League Standings"
+      },
+      "7114": {
+       "rank": "2",
+       "gp": "16",
+       "w": "9",
+       "d": "5",
+       "l": "2",
+       "gd": "+22",
+       "pts": "32",
+       "of": 20,
+       "raw": {
+        "GP": "16",
+        "L": "2",
+        "GD": "+22",
+        "P": "32",
+        "D": "5",
+        "W": "9",
+        "R": "2",
+        "Total": "9-5-2"
+       },
+       "group": "Japanese J.League Standings"
+      },
+      "7476": {
+       "rank": "3",
+       "gp": "15",
+       "w": "10",
+       "d": "1",
+       "l": "4",
+       "gd": "+10",
+       "pts": "31",
+       "of": 20,
+       "raw": {
+        "GP": "15",
+        "L": "4",
+        "GD": "+10",
+        "P": "31",
+        "D": "1",
+        "W": "10",
+        "R": "3",
+        "Total": "10-1-4"
+       },
+       "group": "Japanese J.League Standings"
+      },
+      "22167": {
+       "rank": "4",
+       "gp": "15",
+       "w": "8",
+       "d": "6",
+       "l": "1",
+       "gd": "+20",
+       "pts": "30",
+       "of": 20,
+       "raw": {
+        "GP": "15",
+        "L": "1",
+        "GD": "+20",
+        "P": "30",
+        "D": "6",
+        "W": "8",
+        "R": "4",
+        "Total": "8-6-1"
+       },
+       "group": "Japanese J.League Standings"
+      },
+      "7112": {
+       "rank": "5",
+       "gp": "16",
+       "w": "8",
+       "d": "4",
+       "l": "4",
+       "gd": "+6",
+       "pts": "28",
+       "of": 20,
+       "raw": {
+        "GP": "16",
+        "L": "4",
+        "GD": "+6",
+        "P": "28",
+        "D": "4",
+        "W": "8",
+        "R": "5",
+        "Total": "8-4-4"
+       },
+       "group": "Japanese J.League Standings"
+      },
+      "7477": {
+       "rank": "6",
+       "gp": "15",
+       "w": "8",
+       "d": "3",
+       "l": "4",
+       "gd": "+8",
+       "pts": "27",
+       "of": 20,
+       "raw": {
+        "GP": "15",
+        "L": "4",
+        "GD": "+8",
+        "P": "27",
+        "D": "3",
+        "W": "8",
+        "R": "6",
+        "Total": "8-3-4"
+       },
+       "group": "Japanese J.League Standings"
+      },
+      "7116": {
+       "rank": "7",
+       "gp": "16",
+       "w": "6",
+       "d": "8",
+       "l": "2",
+       "gd": "+7",
+       "pts": "26",
+       "of": 20,
+       "raw": {
+        "GP": "16",
+        "L": "2",
+        "GD": "+7",
+        "P": "26",
+        "D": "8",
+        "W": "6",
+        "R": "7",
+        "Total": "6-8-2"
+       },
+       "group": "Japanese J.League Standings"
+      },
+      "7115": {
+       "rank": "8",
+       "gp": "15",
+       "w": "7",
+       "d": "3",
+       "l": "5",
+       "gd": "+5",
+       "pts": "24",
+       "of": 20,
+       "raw": {
+        "GP": "15",
+        "L": "5",
+        "GD": "+5",
+        "P": "24",
+        "D": "3",
+        "W": "7",
+        "R": "8",
+        "Total": "7-3-5"
+       },
+       "group": "Japanese J.League Standings"
+      },
+      "22522": {
+       "rank": "9",
+       "gp": "16",
+       "w": "7",
+       "d": "2",
+       "l": "7",
+       "gd": "-3",
+       "pts": "23",
+       "of": 20,
+       "raw": {
+        "GP": "16",
+        "L": "7",
+        "GD": "-3",
+        "P": "23",
+        "D": "2",
+        "W": "7",
+        "R": "9",
+        "Total": "7-2-7"
+       },
+       "group": "Japanese J.League Standings"
+      },
+      "3385": {
+       "rank": "10",
+       "gp": "16",
+       "w": "7",
+       "d": "2",
+       "l": "7",
+       "gd": "-7",
+       "pts": "23",
+       "of": 20,
+       "raw": {
+        "GP": "16",
+        "L": "7",
+        "GD": "-7",
+        "P": "23",
+        "D": "2",
+        "W": "7",
+        "R": "10",
+        "Total": "7-2-7"
+       },
+       "group": "Japanese J.League Standings"
+      },
+      "21361": {
+       "rank": "11",
+       "gp": "15",
+       "w": "5",
+       "d": "4",
+       "l": "6",
+       "gd": "-3",
+       "pts": "19",
+       "of": 20,
+       "raw": {
+        "GP": "15",
+        "L": "6",
+        "GD": "-3",
+        "P": "19",
+        "D": "4",
+        "W": "5",
+        "R": "11",
+        "Total": "5-4-6"
+       },
+       "group": "Japanese J.League Standings"
+      },
+      "7108": {
+       "rank": "12",
+       "gp": "16",
+       "w": "5",
+       "d": "3",
+       "l": "8",
+       "gd": "-7",
+       "pts": "18",
+       "of": 20,
+       "raw": {
+        "GP": "16",
+        "L": "8",
+        "GD": "-7",
+        "P": "18",
+        "D": "3",
+        "W": "5",
+        "R": "12",
+        "Total": "5-3-8"
+       },
+       "group": "Japanese J.League Standings"
+      },
+      "7109": {
+       "rank": "13",
+       "gp": "16",
+       "w": "4",
+       "d": "6",
+       "l": "6",
+       "gd": "-12",
+       "pts": "18",
+       "of": 20,
+       "raw": {
+        "GP": "16",
+        "L": "6",
+        "GD": "-12",
+        "P": "18",
+        "D": "6",
+        "W": "4",
+        "R": "13",
+        "Total": "4-6-6"
+       },
+       "group": "Japanese J.League Standings"
+      },
+      "7111": {
+       "rank": "14",
+       "gp": "16",
+       "w": "4",
+       "d": "4",
+       "l": "8",
+       "gd": "-8",
+       "pts": "16",
+       "of": 20,
+       "raw": {
+        "GP": "16",
+        "L": "8",
+        "GD": "-8",
+        "P": "16",
+        "D": "4",
+        "W": "4",
+        "R": "14",
+        "Total": "4-4-8"
+       },
+       "group": "Japanese J.League Standings"
+      },
+      "3393": {
+       "rank": "15",
+       "gp": "16",
+       "w": "3",
+       "d": "6",
+       "l": "7",
+       "gd": "-11",
+       "pts": "15",
+       "of": 20,
+       "raw": {
+        "GP": "16",
+        "L": "7",
+        "GD": "-11",
+        "P": "15",
+        "D": "6",
+        "W": "3",
+        "R": "15",
+        "Total": "3-6-7"
+       },
+       "group": "Japanese J.League Standings"
+      },
+      "131701": {
+       "rank": "16",
+       "gp": "16",
+       "w": "4",
+       "d": "3",
+       "l": "9",
+       "gd": "-12",
+       "pts": "15",
+       "of": 20,
+       "raw": {
+        "GP": "16",
+        "L": "9",
+        "GD": "-12",
+        "P": "15",
+        "D": "3",
+        "W": "4",
+        "R": "16",
+        "Total": "4-3-9"
+       },
+       "group": "Japanese J.League Standings"
+      },
+      "7104": {
+       "rank": "17",
+       "gp": "16",
+       "w": "4",
+       "d": "3",
+       "l": "9",
+       "gd": "-15",
+       "pts": "15",
+       "of": 20,
+       "raw": {
+        "GP": "16",
+        "L": "9",
+        "GD": "-15",
+        "P": "15",
+        "D": "3",
+        "W": "4",
+        "R": "17",
+        "Total": "4-3-9"
+       },
+       "group": "Japanese J.League Standings"
+      },
+      "19001": {
+       "rank": "18",
+       "gp": "16",
+       "w": "3",
+       "d": "5",
+       "l": "8",
+       "gd": "-6",
+       "pts": "14",
+       "of": 20,
+       "raw": {
+        "GP": "16",
+        "L": "8",
+        "GD": "-6",
+        "P": "14",
+        "D": "5",
+        "W": "3",
+        "R": "18",
+        "Total": "3-5-8"
+       },
+       "group": "Japanese J.League Standings"
+      },
+      "7102": {
+       "rank": "19",
+       "gp": "15",
+       "w": "2",
+       "d": "6",
+       "l": "7",
+       "gd": "-9",
+       "pts": "12",
+       "of": 20,
+       "raw": {
+        "GP": "15",
+        "L": "7",
+        "GD": "-9",
+        "P": "12",
+        "D": "6",
+        "W": "2",
+        "R": "19",
+        "Total": "2-6-7"
+       },
+       "group": "Japanese J.League Standings"
+      },
+      "7107": {
+       "rank": "20",
+       "gp": "16",
+       "w": "2",
+       "d": "2",
+       "l": "12",
+       "gd": "-13",
+       "pts": "8",
+       "of": 20,
+       "raw": {
+        "GP": "16",
+        "L": "12",
+        "GD": "-13",
+        "P": "8",
+        "D": "2",
+        "W": "2",
+        "R": "20",
+        "Total": "2-2-12"
+       },
+       "group": "Japanese J.League Standings"
+      }
+     },
+     "last5": {
+      "7476": [
+       {
+        "res": "W",
+        "gf": 4,
+        "ga": 0,
+        "opp": "Urawa Red Diamonds",
+        "home": true,
+        "date": "2026-10-31"
+       },
+       {
+        "res": "W",
+        "gf": 2,
+        "ga": 0,
+        "opp": "Daejeon Hana Citizen FC",
+        "home": true,
+        "date": "2026-11-03"
+       },
+       {
+        "res": "W",
+        "gf": 2,
+        "ga": 1,
+        "opp": "Kawasaki Frontale",
+        "home": true,
+        "date": "2026-11-07"
+       },
+       {
+        "res": "L",
+        "gf": 0,
+        "ga": 1,
+        "opp": "JEF United Ichihara-Chiba",
+        "home": true,
+        "date": "2026-11-20"
+       },
+       {
+        "res": "W",
+        "gf": 2,
+        "ga": 1,
+        "opp": "Newcastle Jets",
+        "home": false,
+        "date": "2026-11-24"
+       }
+      ],
+      "7114": [
+       {
+        "res": "W",
+        "gf": 4,
+        "ga": 0,
+        "opp": "Shimizu S-Pulse",
+        "home": true,
+        "date": "2026-10-24"
+       },
+       {
+        "res": "W",
+        "gf": 3,
+        "ga": 0,
+        "opp": "Mito Hollyhock",
+        "home": false,
+        "date": "2026-10-31"
+       },
+       {
+        "res": "D",
+        "gf": 0,
+        "ga": 0,
+        "opp": "Machida Zelvia",
+        "home": false,
+        "date": "2026-11-08"
+       },
+       {
+        "res": "D",
+        "gf": 2,
+        "ga": 2,
+        "opp": "Yokohama F. Marinos",
+        "home": true,
+        "date": "2026-11-21"
+       },
+       {
+        "res": "D",
+        "gf": 2,
+        "ga": 2,
+        "opp": "FC Tokyo",
+        "home": false,
+        "date": "2026-11-25"
+       }
+      ]
+     },
+     "h2h": [
+      {
+       "date": "2025-09-23",
+       "home_id": "7476",
+       "hs": "0",
+       "as": "0"
+      },
+      {
+       "date": "2025-03-16",
+       "home_id": "7114",
+       "hs": "1",
+       "as": "1"
+      },
+      {
+       "date": "2024-08-25",
+       "home_id": "7114",
+       "hs": "2",
+       "as": "0"
+      },
+      {
+       "date": "2024-06-22",
+       "home_id": "7476",
+       "hs": "0",
+       "as": "1"
+      },
+      {
+       "date": "2023-08-26",
+       "home_id": "7476",
+       "hs": "0",
+       "as": "0"
+      }
+     ],
+     "lineups": {
+      "7476": {
+       "formation": "3-4-2-1",
+       "starters": [
+        "Kengo Nagai",
+        "Taiyo Koga",
+        "Daiki Sugioka",
+        "Yusei Yamanouchi",
+        "Sachiro Toshima",
+        "Nobuteru Nakagawa",
+        "Kenshin Yuba",
+        "Tojiro Kubo",
+        "Shota Fujio",
+        "Hinata Yamauchi",
+        "Yoshio Koizumi"
+       ]
+      },
+      "7114": {
+       "formation": "3-4-2-1",
+       "starters": [
+        "Keisuke Osako",
+        "Kim Ju-Sung",
+        "Naoto Arai",
+        "Taishi Matsumoto",
+        "Shun Ayukawa",
+        "Akito Suzuki",
+        "Yotaro Nakajima",
+        "Shuto Nakano",
+        "Hayato Araki",
+        "Daiki Suga",
+        "Sébastien Haller"
+       ]
+      }
+     },
+     "leaders": {
+      "7476": [
+       [
+        "Goals",
+        "Yusuke Segawa",
+        "Matches: 14, Goals: 7"
+       ],
+       [
+        "Assists",
+        "Yoshio Koizumi",
+        "Matches: 15, Assists: 5"
+       ],
+       [
+        "Total Shots",
+        "Yusuke Segawa",
+        "29"
+       ]
+      ],
+      "7114": [
+       [
+        "Goals",
+        "Akito Suzuki",
+        "Matches: 16, Goals: 10"
+       ],
+       [
+        "Assists",
+        "Akito Suzuki",
+        "Matches: 16, Assists: 5"
+       ],
+       [
+        "Total Shots",
+        "Akito Suzuki",
+        "55"
+       ]
+      ]
+     },
+     "venue": "Sankyo Frontier Kashiwa Stadium",
+     "city": "Kashiwa"
+    }
+   }
+  },
+  "extra": null,
+  "msg_id": 9919,
+  "btn": 2
  }
 }
