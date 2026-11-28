@@ -3184,7 +3184,7 @@
   "quote_matches": 185
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-28T11:56:37.963874+03:00",
+  "last_poll": "2026-11-28T11:58:37.471735+03:00",
   "cursor": "499",
   "posts": [
    {
@@ -22258,7 +22258,7 @@
     "profit_pct": -0.5
    },
    "football|JPN|401877525": {
-    "status": "open",
+    "status": "settled",
     "id": "401877525",
     "sport": "football",
     "div": "JPN",
@@ -22298,7 +22298,10 @@
        "price_kind": "author_recorded"
       }
      ]
-    }
+    },
+    "settled_at": "2026-11-28T08:58:37.471735+00:00",
+    "hit": false,
+    "profit_pct": -0.5
    }
   }
  },
