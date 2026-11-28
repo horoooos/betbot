@@ -29439,5 +29439,470 @@
   "div": "KSA",
   "reason": "no_qualified_real_market",
   "retry_at": 1795865696.592897
+ },
+ "401880135": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-28T15:30:00+03:00",
+  "sport": "football",
+  "div": "E1",
+  "reason": "no_qualified_real_market",
+  "retry_at": 1795865936.847878
+ },
+ "401880133": {
+  "id": "401880133",
+  "div": "E1",
+  "slug": "eng.2",
+  "kickoff": "2026-11-28T15:30:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "detail": "Scheduled",
+  "home": {
+   "id": "314",
+   "name": "Lincoln City",
+   "short": "Lincoln City",
+   "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/314.png",
+   "color": "C8142F",
+   "alt": "c6d4db",
+   "form": "DLLLL",
+   "score": "0",
+   "ru": "Линкольн Сити"
+  },
+  "away": {
+   "id": "380",
+   "name": "Wolverhampton Wanderers",
+   "short": "Wolves",
+   "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/380.png",
+   "color": "fdb913",
+   "alt": "32A8DD",
+   "form": "DWDWW",
+   "score": "0",
+   "ru": "Вулверхэмптон"
+  },
+  "odds": {
+   "H": 6.0,
+   "D": 4.3,
+   "A": 1.526,
+   "line": 2.5,
+   "over": 1.87,
+   "under": 1.909,
+   "spread_h": [
+    1.5,
+    1.5
+   ],
+   "spread_a": [
+    -1.5,
+    2.4
+   ]
+  },
+  "venue": "LNER Stadium",
+  "clock": "0'",
+  "goals": [],
+  "open": {
+   "O25": 0.5093
+  },
+  "top": false,
+  "lam": [
+   0.898552134212777,
+   1.919832719257157
+  ],
+  "probs": {
+   "H": 0.16203042868619272,
+   "D": 0.23308713415010254,
+   "A": 0.6048824371637043,
+   "1X": 0.39511756283629523,
+   "12": 0.7669128658498972,
+   "X2": 0.837969571313807,
+   "BTTS_Y": 0.5141508601173546,
+   "BTTS_N": 0.4858491398826451,
+   "O15": 0.7802716668436765,
+   "U15": 0.21972833315632334,
+   "O25": 0.5349146110342933,
+   "U25": 0.4650853889657066,
+   "O35": 0.312151577430371,
+   "U35": 0.6878484225696291,
+   "H_O05": 0.5928412542207275,
+   "H_O15": 0.22698789423736487,
+   "A_O05": 0.8533676761408905,
+   "A_O15": 0.5718581430954605,
+   "H-1.5": 0.054961408885676064,
+   "A+1.5": 0.9450385911143238,
+   "A-1.5": 0.3667557519985709,
+   "H+1.5": 0.6332442480014291,
+   "H-2.5": 0.013642314085727296,
+   "A-2.5": 0.17813432919341235,
+   "H+2.5": 0.8218656708065875,
+   "A+2.5": 0.9863576859142725,
+   "O45": 0.15519358747479384,
+   "U45": 0.8448064125252063,
+   "H_O25": 0.06261873552638196,
+   "A_O25": 0.30163253693375025,
+   "H&O15": 0.11662379700273046,
+   "A&O15": 0.4985026654465802,
+   "H&BTTS": 0.08334003458281988,
+   "A&BTTS": 0.2656656211401688,
+   "1X&U35": 0.3021713009233877,
+   "X2&U35": 0.5648495566165572,
+   "BTTS&O25": 0.4029203549027752,
+   "HT_H": 0.15648684565777832,
+   "HT_D": 0.4042346439090847,
+   "HT_A": 0.43927851043313704,
+   "HT_O05": 0.7108212929002412,
+   "HT_U05": 0.28917870709975835,
+   "HT_O15": 0.3697579459093842,
+   "HT_U15": 0.630242054090616
+  },
+  "scores": [
+   [
+    "1:1",
+    0.11123050521457953
+   ],
+   [
+    "0:2",
+    0.11002471888224558
+   ],
+   [
+    "0:1",
+    0.10637977171712451
+   ]
+  ],
+  "main": {
+   "key": "O25",
+   "label": "ТБ 2.5",
+   "p": 0.5349,
+   "odds": 1.75,
+   "est": false,
+   "stake": 0.5,
+   "strategy": "external_trial",
+   "selection_mode": "external_fallback",
+   "trial_expires_at": null,
+   "probability_origin": "baseline_model",
+   "model_edge": -0.0639,
+   "source_count": 12,
+   "source_refs": [
+    {
+     "author": "/predictors/aleksandr-tkacenko-15",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/28-11-2026-lincoln-city-wolverhampton-wanderers",
+     "published_at": "2026-11-27T08:23:00+00:00",
+     "observed_at": "2026-11-27T08:26:13.879382+00:00",
+     "odds": 1.76,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/kot-v-sapogax-4akk-avtor",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/28-11-2026-lincoln-city-wolverhampton-wanderers",
+     "published_at": "2026-11-27T09:34:00+00:00",
+     "observed_at": "2026-11-28T00:10:54.525006+00:00",
+     "odds": 1.76,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/frenk-gallager",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/28-11-2026-lincoln-city-wolverhampton-wanderers",
+     "published_at": "2026-11-27T16:24:00+00:00",
+     "observed_at": "2026-11-27T16:28:40.551943+00:00",
+     "odds": 1.81,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/svetlana-shtefan",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/28-11-2026-lincoln-city-wolverhampton-wanderers",
+     "published_at": "2026-11-27T17:05:00+00:00",
+     "observed_at": "2026-11-27T17:10:40.658641+00:00",
+     "odds": 1.81,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/kharli-kvin",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/28-11-2026-lincoln-city-wolverhampton-wanderers",
+     "published_at": "2026-11-27T17:49:00+00:00",
+     "observed_at": "2026-11-27T17:52:41.630916+00:00",
+     "odds": 1.81,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/sergey-osipov-2",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/28-11-2026-lincoln-city-wolverhampton-wanderers",
+     "published_at": "2026-11-27T18:11:00+00:00",
+     "observed_at": "2026-11-27T18:14:41.583829+00:00",
+     "odds": 1.81,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/ten-3",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/28-11-2026-lincoln-city-wolverhampton-wanderers",
+     "published_at": "2026-11-27T18:47:00+00:00",
+     "observed_at": "2026-11-28T00:10:54.525006+00:00",
+     "odds": 1.81,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/andrey-malko-1",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/28-11-2026-lincoln-city-wolverhampton-wanderers",
+     "published_at": "2026-11-27T18:53:00+00:00",
+     "observed_at": "2026-11-27T18:55:47.356701+00:00",
+     "odds": 1.81,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/masa-masina",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/28-11-2026-lincoln-city-wolverhampton-wanderers",
+     "published_at": "2026-11-27T19:28:00+00:00",
+     "observed_at": "2026-11-28T00:10:54.525006+00:00",
+     "odds": 1.81,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/irina-bagaeva",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/28-11-2026-lincoln-city-wolverhampton-wanderers",
+     "published_at": "2026-11-27T20:38:00+00:00",
+     "observed_at": "2026-11-27T20:39:48.814970+00:00",
+     "odds": 1.81,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/artem-avanesov",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/28-11-2026-lincoln-city-wolverhampton-wanderers",
+     "published_at": "2026-11-27T22:01:00+00:00",
+     "observed_at": "2026-11-27T22:04:36.100319+00:00",
+     "odds": 1.81,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/artyom-petrov-6",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/28-11-2026-lincoln-city-wolverhampton-wanderers",
+     "published_at": "2026-11-28T08:36:00+00:00",
+     "observed_at": "2026-11-28T08:36:37.225306+00:00",
+     "odds": 1.81,
+     "price_kind": "author_recorded"
+    }
+   ]
+  },
+  "bold": {},
+  "value": null,
+  "odds_src": "среднее по букмекерам",
+  "model_w": 0.0,
+  "learned_n": 1596,
+  "stavka_signal": {
+   "status": "baseline_better",
+   "weight": 0.0,
+   "authors": 17,
+   "votes": {
+    "A": 3.0698453165123225,
+    "O25": 11.921626966429974,
+    "U25": 1.9734552564721761
+   },
+   "source": "https://stavka.tv",
+   "snapshot": "E1|401880133"
+  },
+  "research": {
+   "articles": [],
+   "dossier": {
+    "observed_at": "2026-11-28T11:21:15.196527+00:00",
+    "kickoff": "2026-11-28T12:30:00+00:00",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.2/summary?event=401880133",
+    "status": "available",
+    "facts": {
+     "last5": {
+      "314": [
+       {
+        "res": "L",
+        "gf": 1,
+        "ga": 3,
+        "opp": "Birmingham City",
+        "home": true,
+        "date": "2026-10-31"
+       },
+       {
+        "res": "L",
+        "gf": 0,
+        "ga": 1,
+        "opp": "Watford",
+        "home": false,
+        "date": "2026-11-03"
+       },
+       {
+        "res": "L",
+        "gf": 1,
+        "ga": 2,
+        "opp": "Queens Park Rangers",
+        "home": false,
+        "date": "2026-11-07"
+       },
+       {
+        "res": "L",
+        "gf": 0,
+        "ga": 1,
+        "opp": "Wrexham",
+        "home": true,
+        "date": "2026-11-21"
+       },
+       {
+        "res": "L",
+        "gf": 0,
+        "ga": 4,
+        "opp": "Charlton Athletic",
+        "home": false,
+        "date": "2026-11-24"
+       }
+      ],
+      "380": [
+       {
+        "res": "W",
+        "gf": 3,
+        "ga": 0,
+        "opp": "Cardiff City",
+        "home": true,
+        "date": "2026-10-31"
+       },
+       {
+        "res": "W",
+        "gf": 2,
+        "ga": 1,
+        "opp": "Bristol City",
+        "home": false,
+        "date": "2026-11-04"
+       },
+       {
+        "res": "D",
+        "gf": 1,
+        "ga": 1,
+        "opp": "Wrexham",
+        "home": false,
+        "date": "2026-11-07"
+       },
+       {
+        "res": "W",
+        "gf": 2,
+        "ga": 1,
+        "opp": "Charlton Athletic",
+        "home": true,
+        "date": "2026-11-21"
+       },
+       {
+        "res": "W",
+        "gf": 3,
+        "ga": 0,
+        "opp": "Derby County",
+        "home": true,
+        "date": "2026-11-24"
+       }
+      ]
+     },
+     "leaders": {
+      "314": [
+       [
+        "Goals",
+        "Mikkel Ladefoged",
+        "Matches: 10, Goals: 3"
+       ],
+       [
+        "Assists",
+        "Ben House",
+        "Matches: 14, Assists: 2"
+       ],
+       [
+        "Total Shots",
+        "Freddie Draper",
+        "24"
+       ]
+      ],
+      "380": [
+       [
+        "Goals",
+        "Adam Armstrong",
+        "Matches: 15, Goals: 7"
+       ],
+       [
+        "Assists",
+        "Mateus Mané",
+        "Matches: 17, Assists: 3"
+       ],
+       [
+        "Total Shots",
+        "Fernando López",
+        "41"
+       ]
+      ]
+     },
+     "venue": "LNER Stadium",
+     "city": "Lincoln"
+    }
+   }
+  },
+  "extra": {
+   "corners": {
+    "home": 2.588909542962294,
+    "away": 9.854558905469377,
+    "total": 12.44346844843167,
+    "lines": {
+     "8.5": 0.8719376179734841,
+     "9.5": 0.7942091079720555,
+     "10.5": 0.6974878817974175
+    }
+   },
+   "cards": {
+    "total": 4.264705882352941,
+    "lines": {
+     "3.5": 0.6164664563343136,
+     "4.5": 0.4227320004155686,
+     "5.5": 0.25748790566134483
+    }
+   }
+  },
+  "msg_id": 9945,
+  "btn": 2
+ },
+ "401880131": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-28T15:30:00+03:00",
+  "sport": "football",
+  "div": "E1",
+  "reason": "no_qualified_real_market",
+  "retry_at": 1795865936.847878
+ },
+ "401880725": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-28T15:30:00+03:00",
+  "sport": "football",
+  "div": "E2",
+  "reason": "no_qualified_real_market",
+  "retry_at": 1795865936.847878
+ },
+ "401880724": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-28T15:30:00+03:00",
+  "sport": "football",
+  "div": "E2",
+  "reason": "no_qualified_real_market",
+  "retry_at": 1795865936.847878
+ },
+ "401881252": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-28T15:30:00+03:00",
+  "sport": "football",
+  "div": "E3",
+  "reason": "no_qualified_real_market",
+  "retry_at": 1795865936.847878
+ },
+ "401881249": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-28T15:30:00+03:00",
+  "sport": "football",
+  "div": "E3",
+  "reason": "edge_below_minimum",
+  "retry_at": 1795865936.847878
  }
 }

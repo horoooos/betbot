@@ -207,7 +207,15 @@ null
 ]
 ]
 },
-"lt": null
+"lt": {
+"fair": 1.66,
+"label": "ТБ 3.5",
+"min_odds": 1.74,
+"minute": "26'",
+"p": 0.604,
+"result": null,
+"score": "2:0"
+}
 },
 {
 "sport": "esports",
@@ -703,41 +711,6 @@ null
 },
 {
 "sport": "football",
-"id": "401880135",
-"league": "Англия · Чемпионшип",
-"kickoff": "2026-11-28T15:30:00+03:00",
-"home": "Блэкберн Роверс",
-"away": "Чарльтон Атлетик",
-"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/365.png",
-"al": "https://a.espncdn.com/i/teamlogos/soccer/500/372.png",
-"hid": "365",
-"aid": "372",
-"bb": "https://betboom.ru/search?query=%D0%91%D0%BB%D1%8D%D0%BA%D0%B1%D0%B5%D1%80%D0%BD&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
-"path": "soccer/eng.2",
-"url": "live.html?s=football&p=soccer%2Feng.2&e=401880135&h=%D0%91%D0%BB%D1%8D%D0%BA%D0%B1%D0%B5%D1%80%D0%BD+%D0%A0%D0%BE%D0%B2%D0%B5%D1%80%D1%81&a=%D0%A7%D0%B0%D1%80%D0%BB%D1%8C%D1%82%D0%BE%D0%BD+%D0%90%D1%82%D0%BB%D0%B5%D1%82%D0%B8%D0%BA",
-"participants": [
-[
-"Блэкберн Роверс",
-"Blackburn Rovers"
-],
-[
-"Чарльтон Атлетик",
-"Charlton Athletic"
-]
-],
-"div": "E1",
-"state": "pre",
-"bo": null,
-"prediction": "",
-"hs": "0",
-"as": "0",
-"tip": "",
-"top": false,
-"bot": null,
-"lt": null
-},
-{
-"sport": "football",
 "id": "401880133",
 "league": "Англия · Чемпионшип",
 "kickoff": "2026-11-28T15:30:00+03:00",
@@ -758,6 +731,148 @@ null
 [
 "Вулверхэмптон",
 "Wolverhampton Wanderers"
+]
+],
+"div": "E1",
+"state": "pre",
+"bo": null,
+"prediction": "predictions/2026-11-28-linkoln-siti-vulverhempton-401880133.html",
+"hs": "0",
+"as": "0",
+"tip": "ТБ 2.5 · 1.75",
+"top": false,
+"bot": {
+"main": {
+"label": "ТБ 2.5",
+"p": 0.535,
+"odds": 1.75,
+"est": false
+},
+"bold": null,
+"markets": [
+[
+"П1",
+0.162,
+6.0
+],
+[
+"Ничья",
+0.233,
+4.3
+],
+[
+"П2",
+0.605,
+1.526
+],
+[
+"1X",
+0.395,
+null
+],
+[
+"X2",
+0.838,
+null
+],
+[
+"ТБ 1.5",
+0.78,
+null
+],
+[
+"ТБ 2.5",
+0.535,
+1.87
+],
+[
+"ТМ 2.5",
+0.465,
+1.909
+],
+[
+"ТБ 3.5",
+0.312,
+null
+],
+[
+"Обе забьют — да",
+0.514,
+null
+],
+[
+"Обе забьют — нет",
+0.486,
+null
+],
+[
+"ИТ1 больше 1.5",
+0.227,
+null
+],
+[
+"ИТ2 больше 1.5",
+0.572,
+null
+],
+[
+"Ф1 (−1.5)",
+0.055,
+null
+],
+[
+"Ф2 (+1.5)",
+0.945,
+null
+]
+],
+"bar": [
+0.16203042868619272,
+0.23308713415010254,
+0.6048824371637043
+],
+"center": "Ожидаемые голы (xG) 0.9 : 1.9",
+"scores": [
+[
+"1:1",
+0.111
+],
+[
+"0:2",
+0.11
+],
+[
+"0:1",
+0.106
+]
+],
+"corners": 12.4,
+"cards": 4.3
+},
+"lt": null
+},
+{
+"sport": "football",
+"id": "401880135",
+"league": "Англия · Чемпионшип",
+"kickoff": "2026-11-28T15:30:00+03:00",
+"home": "Блэкберн Роверс",
+"away": "Чарльтон Атлетик",
+"hl": "https://a.espncdn.com/i/teamlogos/soccer/500/365.png",
+"al": "https://a.espncdn.com/i/teamlogos/soccer/500/372.png",
+"hid": "365",
+"aid": "372",
+"bb": "https://betboom.ru/search?query=%D0%91%D0%BB%D1%8D%D0%BA%D0%B1%D0%B5%D1%80%D0%BD&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=football",
+"path": "soccer/eng.2",
+"url": "live.html?s=football&p=soccer%2Feng.2&e=401880135&h=%D0%91%D0%BB%D1%8D%D0%BA%D0%B1%D0%B5%D1%80%D0%BD+%D0%A0%D0%BE%D0%B2%D0%B5%D1%80%D1%81&a=%D0%A7%D0%B0%D1%80%D0%BB%D1%8C%D1%82%D0%BE%D0%BD+%D0%90%D1%82%D0%BB%D0%B5%D1%82%D0%B8%D0%BA",
+"participants": [
+[
+"Блэкберн Роверс",
+"Blackburn Rovers"
+],
+[
+"Чарльтон Атлетик",
+"Charlton Athletic"
 ]
 ],
 "div": "E1",
