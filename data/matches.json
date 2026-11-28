@@ -29431,5 +29431,13 @@
   },
   "msg_id": 9938,
   "btn": 2
+ },
+ "401900442": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-28T15:15:00+03:00",
+  "sport": "football",
+  "div": "KSA",
+  "reason": "no_qualified_real_market",
+  "retry_at": 1795865096.207978
  }
 }
