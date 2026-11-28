@@ -28715,5 +28715,937 @@
   "div": "JPN",
   "reason": "no_qualified_real_market",
   "retry_at": 1795842295.078318
+ },
+ "401877542": {
+  "id": "401877542",
+  "div": "JPN",
+  "slug": "jpn.1",
+  "kickoff": "2026-11-28T09:00:00+03:00",
+  "state": "pre",
+  "completed": false,
+  "status": "reviewed",
+  "detail": "Scheduled",
+  "home": {
+   "id": "7115",
+   "name": "Kashima Antlers",
+   "short": "Kashima",
+   "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/7115.png",
+   "color": "EF0107",
+   "alt": "060040",
+   "form": "WDLDW",
+   "score": "0",
+   "ru": "Касима Антлерс"
+  },
+  "away": {
+   "id": "22522",
+   "name": "Fagiano Okayama",
+   "short": "Okayama",
+   "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/22522.png",
+   "color": "000000",
+   "alt": "C60000",
+   "form": "DWDLL",
+   "score": "0",
+   "ru": "Фаджиано Окаяма"
+  },
+  "odds": {
+   "H": 1.69,
+   "D": 3.85,
+   "A": 4.8,
+   "line": 2.5,
+   "over": 1.833,
+   "under": 1.909,
+   "spread_h": [
+    -0.5,
+    1.645
+   ],
+   "spread_a": [
+    0.5,
+    2.1
+   ]
+  },
+  "venue": "Kashima Soccer Stadium",
+  "clock": "0'",
+  "goals": [],
+  "open": {
+   "H": 0.5567
+  },
+  "top": false,
+  "lam": [
+   1.6776188585293996,
+   1.0249175578542562
+  ],
+  "probs": {
+   "H": 0.5172909810081945,
+   "D": 0.26084156313229073,
+   "A": 0.22186745585951484,
+   "1X": 0.7781325441404852,
+   "12": 0.7391584368677091,
+   "X2": 0.48270901899180557,
+   "BTTS_Y": 0.5306116997612761,
+   "BTTS_N": 0.46938830023872413,
+   "O15": 0.76102004099404,
+   "U15": 0.23897995900595995,
+   "O25": 0.5069958360402602,
+   "U25": 0.49300416395973967,
+   "O35": 0.2864659438038113,
+   "U35": 0.7135340561961888,
+   "H_O05": 0.8131814118645891,
+   "H_O15": 0.499771025284788,
+   "A_O05": 0.6411739488037949,
+   "A_O15": 0.27340682871729405,
+   "H-1.5": 0.2853312170031541,
+   "A+1.5": 0.7146687829968458,
+   "A-1.5": 0.08374245849265927,
+   "H+1.5": 0.9162575415073406,
+   "H-2.5": 0.12388069344340026,
+   "A-2.5": 0.023482236825150115,
+   "H+2.5": 0.9765177631748498,
+   "A+2.5": 0.8761193065565996,
+   "O45": 0.13746842763626932,
+   "U45": 0.8625315723637306,
+   "H_O25": 0.2368794377921556,
+   "A_O25": 0.08494133942821933,
+   "H&O15": 0.4140521324101003,
+   "A&O15": 0.16238268454454083,
+   "H&BTTS": 0.23472126890488082,
+   "A&BTTS": 0.11130520681699593,
+   "1X&U35": 0.5477446612905815,
+   "X2&U35": 0.3665287320983616,
+   "BTTS&O25": 0.4061287016614135,
+   "HT_H": 0.3796515777025934,
+   "HT_D": 0.42541118403213823,
+   "HT_A": 0.19493723826526843,
+   "HT_O05": 0.6953731364200323,
+   "HT_U05": 0.304626863579968,
+   "HT_O15": 0.3514540665246431,
+   "HT_U15": 0.6485459334753567
+  },
+  "scores": [
+   [
+    "1:1",
+    0.12448299809986259
+   ],
+   [
+    "1:0",
+    0.10323884859809426
+   ],
+   [
+    "2:1",
+    0.09668288202713375
+   ]
+  ],
+  "main": {
+   "key": "H",
+   "label": "П1",
+   "p": 0.5173,
+   "odds": 1.78,
+   "est": false,
+   "stake": 0.5,
+   "strategy": "external_trial",
+   "selection_mode": "external_fallback",
+   "trial_expires_at": null,
+   "probability_origin": "baseline_model",
+   "model_edge": -0.07922,
+   "source_count": 22,
+   "source_refs": [
+    {
+     "author": "/predictors/kanikuly-bonifaciia-4",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/28-11-2026-kashima-antlers-fagiano-okayama",
+     "published_at": "2026-11-26T23:04:00+00:00",
+     "observed_at": "2026-11-27T10:12:14.053886+00:00",
+     "odds": 1.76,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/marat-maratov-10",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/28-11-2026-kashima-antlers-fagiano-okayama",
+     "published_at": "2026-11-27T00:18:00+00:00",
+     "observed_at": "2026-11-27T00:18:56.251033+00:00",
+     "odds": 1.76,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/vyacheslav-25",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/28-11-2026-kashima-antlers-fagiano-okayama",
+     "published_at": "2026-11-27T00:25:00+00:00",
+     "observed_at": "2026-11-27T00:40:55.993190+00:00",
+     "odds": 1.76,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/dmitriy-petrachenko",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/28-11-2026-kashima-antlers-fagiano-okayama",
+     "published_at": "2026-11-27T00:44:00+00:00",
+     "observed_at": "2026-11-27T10:12:14.053886+00:00",
+     "odds": 1.76,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/ivan-fartovyi",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/28-11-2026-kashima-antlers-fagiano-okayama",
+     "published_at": "2026-11-27T00:47:00+00:00",
+     "observed_at": "2026-11-27T01:00:56.767660+00:00",
+     "odds": 1.76,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/oleg-kovanev-2",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/28-11-2026-kashima-antlers-fagiano-okayama",
+     "published_at": "2026-11-27T00:49:00+00:00",
+     "observed_at": "2026-11-27T01:00:56.767660+00:00",
+     "odds": 1.76,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/spartakas-win-sukotnov",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/28-11-2026-kashima-antlers-fagiano-okayama",
+     "published_at": "2026-11-27T04:08:00+00:00",
+     "observed_at": "2026-11-27T04:14:19.579731+00:00",
+     "odds": 1.76,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/ilyukha-murzaleev",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/28-11-2026-kashima-antlers-fagiano-okayama",
+     "published_at": "2026-11-27T04:52:00+00:00",
+     "observed_at": "2026-11-27T04:56:19.582450+00:00",
+     "odds": 1.76,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/sergei-evtyuxin-3",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/28-11-2026-kashima-antlers-fagiano-okayama",
+     "published_at": "2026-11-27T05:33:00+00:00",
+     "observed_at": "2026-11-27T05:37:39.840873+00:00",
+     "odds": 1.76,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/sportivnyi-paren",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/28-11-2026-kashima-antlers-fagiano-okayama",
+     "published_at": "2026-11-27T08:10:00+00:00",
+     "observed_at": "2026-11-27T10:12:14.053886+00:00",
+     "odds": 1.76,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/kot-v-sapogax2-akk",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/28-11-2026-kashima-antlers-fagiano-okayama",
+     "published_at": "2026-11-27T09:06:00+00:00",
+     "observed_at": "2026-11-27T09:08:14.328803+00:00",
+     "odds": 1.76,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/noveisii-novyi",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/28-11-2026-kashima-antlers-fagiano-okayama",
+     "published_at": "2026-11-27T10:44:00+00:00",
+     "observed_at": "2026-11-27T14:24:39.403127+00:00",
+     "odds": 1.76,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/finntroll-1997",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/28-11-2026-kashima-antlers-fagiano-okayama",
+     "published_at": "2026-11-27T12:14:00+00:00",
+     "observed_at": "2026-11-27T12:20:14.564030+00:00",
+     "odds": 1.76,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/mixail-belousov",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/28-11-2026-kashima-antlers-fagiano-okayama",
+     "published_at": "2026-11-27T13:58:00+00:00",
+     "observed_at": "2026-11-27T14:02:39.491585+00:00",
+     "odds": 1.76,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/vlad-trovlad-1",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/28-11-2026-kashima-antlers-fagiano-okayama",
+     "published_at": "2026-11-27T13:59:00+00:00",
+     "observed_at": "2026-11-27T14:02:39.491585+00:00",
+     "odds": 1.76,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/tony-montana-14",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/28-11-2026-kashima-antlers-fagiano-okayama",
+     "published_at": "2026-11-27T14:20:00+00:00",
+     "observed_at": "2026-11-27T14:24:39.403127+00:00",
+     "odds": 1.76,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/vasiliy-bersenev",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/28-11-2026-kashima-antlers-fagiano-okayama",
+     "published_at": "2026-11-27T14:58:00+00:00",
+     "observed_at": "2026-11-27T15:06:39.958621+00:00",
+     "odds": 1.76,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/v-vas",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/28-11-2026-kashima-antlers-fagiano-okayama",
+     "published_at": "2026-11-27T17:29:00+00:00",
+     "observed_at": "2026-11-27T17:32:40.568811+00:00",
+     "odds": 1.76,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/victor-mikhailov",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/28-11-2026-kashima-antlers-fagiano-okayama",
+     "published_at": "2026-11-27T19:31:00+00:00",
+     "observed_at": "2026-11-27T19:37:47.920906+00:00",
+     "odds": 1.76,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/aslan-kockarov-8",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/28-11-2026-kashima-antlers-fagiano-okayama",
+     "published_at": "2026-11-27T20:17:00+00:00",
+     "observed_at": "2026-11-27T20:19:48.415583+00:00",
+     "odds": 1.76,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/aleksandr-novikov-63",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/28-11-2026-kashima-antlers-fagiano-okayama",
+     "published_at": "2026-11-27T21:16:00+00:00",
+     "observed_at": "2026-11-27T21:22:35.604178+00:00",
+     "odds": 1.76,
+     "price_kind": "author_recorded"
+    },
+    {
+     "author": "/predictors/vladimir-266",
+     "provider": null,
+     "source": "https://stavka.tv/matches/soccer/28-11-2026-kashima-antlers-fagiano-okayama",
+     "published_at": "2026-11-28T01:35:00+00:00",
+     "observed_at": "2026-11-28T01:36:55.372460+00:00",
+     "odds": 1.76,
+     "price_kind": "author_recorded"
+    }
+   ]
+  },
+  "bold": {},
+  "value": null,
+  "odds_src": "среднее по букмекерам",
+  "model_w": 0.0,
+  "learned_n": 1591,
+  "stavka_signal": {
+   "status": "baseline_better",
+   "weight": 0.0,
+   "authors": 27,
+   "votes": {
+    "H": 22.059195514899237,
+    "A": 1.0228127099466895,
+    "O25": 3.927163711114758
+   },
+   "source": "https://stavka.tv",
+   "snapshot": "JPN|401877542"
+  },
+  "research": {
+   "articles": [],
+   "dossier": {
+    "observed_at": "2026-11-28T04:49:14.154977+00:00",
+    "kickoff": "2026-11-28T06:00:00+00:00",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/jpn.1/summary?event=401877542",
+    "status": "available",
+    "facts": {
+     "table": {
+      "3384": {
+       "rank": "1",
+       "gp": "16",
+       "w": "11",
+       "d": "4",
+       "l": "1",
+       "gd": "+28",
+       "pts": "37",
+       "of": 20,
+       "raw": {
+        "GP": "16",
+        "L": "1",
+        "GD": "+28",
+        "P": "37",
+        "D": "4",
+        "W": "11",
+        "R": "1",
+        "Total": "11-4-1"
+       },
+       "group": "Japanese J.League Standings"
+      },
+      "7114": {
+       "rank": "2",
+       "gp": "16",
+       "w": "9",
+       "d": "5",
+       "l": "2",
+       "gd": "+22",
+       "pts": "32",
+       "of": 20,
+       "raw": {
+        "GP": "16",
+        "L": "2",
+        "GD": "+22",
+        "P": "32",
+        "D": "5",
+        "W": "9",
+        "R": "2",
+        "Total": "9-5-2"
+       },
+       "group": "Japanese J.League Standings"
+      },
+      "7476": {
+       "rank": "3",
+       "gp": "15",
+       "w": "10",
+       "d": "1",
+       "l": "4",
+       "gd": "+10",
+       "pts": "31",
+       "of": 20,
+       "raw": {
+        "GP": "15",
+        "L": "4",
+        "GD": "+10",
+        "P": "31",
+        "D": "1",
+        "W": "10",
+        "R": "3",
+        "Total": "10-1-4"
+       },
+       "group": "Japanese J.League Standings"
+      },
+      "22167": {
+       "rank": "4",
+       "gp": "15",
+       "w": "8",
+       "d": "6",
+       "l": "1",
+       "gd": "+20",
+       "pts": "30",
+       "of": 20,
+       "raw": {
+        "GP": "15",
+        "L": "1",
+        "GD": "+20",
+        "P": "30",
+        "D": "6",
+        "W": "8",
+        "R": "4",
+        "Total": "8-6-1"
+       },
+       "group": "Japanese J.League Standings"
+      },
+      "7112": {
+       "rank": "5",
+       "gp": "16",
+       "w": "8",
+       "d": "4",
+       "l": "4",
+       "gd": "+6",
+       "pts": "28",
+       "of": 20,
+       "raw": {
+        "GP": "16",
+        "L": "4",
+        "GD": "+6",
+        "P": "28",
+        "D": "4",
+        "W": "8",
+        "R": "5",
+        "Total": "8-4-4"
+       },
+       "group": "Japanese J.League Standings"
+      },
+      "7477": {
+       "rank": "6",
+       "gp": "15",
+       "w": "8",
+       "d": "3",
+       "l": "4",
+       "gd": "+8",
+       "pts": "27",
+       "of": 20,
+       "raw": {
+        "GP": "15",
+        "L": "4",
+        "GD": "+8",
+        "P": "27",
+        "D": "3",
+        "W": "8",
+        "R": "6",
+        "Total": "8-3-4"
+       },
+       "group": "Japanese J.League Standings"
+      },
+      "7116": {
+       "rank": "7",
+       "gp": "16",
+       "w": "6",
+       "d": "8",
+       "l": "2",
+       "gd": "+7",
+       "pts": "26",
+       "of": 20,
+       "raw": {
+        "GP": "16",
+        "L": "2",
+        "GD": "+7",
+        "P": "26",
+        "D": "8",
+        "W": "6",
+        "R": "7",
+        "Total": "6-8-2"
+       },
+       "group": "Japanese J.League Standings"
+      },
+      "7115": {
+       "rank": "8",
+       "gp": "15",
+       "w": "7",
+       "d": "3",
+       "l": "5",
+       "gd": "+5",
+       "pts": "24",
+       "of": 20,
+       "raw": {
+        "GP": "15",
+        "L": "5",
+        "GD": "+5",
+        "P": "24",
+        "D": "3",
+        "W": "7",
+        "R": "8",
+        "Total": "7-3-5"
+       },
+       "group": "Japanese J.League Standings"
+      },
+      "22522": {
+       "rank": "9",
+       "gp": "16",
+       "w": "7",
+       "d": "2",
+       "l": "7",
+       "gd": "-3",
+       "pts": "23",
+       "of": 20,
+       "raw": {
+        "GP": "16",
+        "L": "7",
+        "GD": "-3",
+        "P": "23",
+        "D": "2",
+        "W": "7",
+        "R": "9",
+        "Total": "7-2-7"
+       },
+       "group": "Japanese J.League Standings"
+      },
+      "3385": {
+       "rank": "10",
+       "gp": "16",
+       "w": "7",
+       "d": "2",
+       "l": "7",
+       "gd": "-7",
+       "pts": "23",
+       "of": 20,
+       "raw": {
+        "GP": "16",
+        "L": "7",
+        "GD": "-7",
+        "P": "23",
+        "D": "2",
+        "W": "7",
+        "R": "10",
+        "Total": "7-2-7"
+       },
+       "group": "Japanese J.League Standings"
+      },
+      "21361": {
+       "rank": "11",
+       "gp": "15",
+       "w": "5",
+       "d": "4",
+       "l": "6",
+       "gd": "-3",
+       "pts": "19",
+       "of": 20,
+       "raw": {
+        "GP": "15",
+        "L": "6",
+        "GD": "-3",
+        "P": "19",
+        "D": "4",
+        "W": "5",
+        "R": "11",
+        "Total": "5-4-6"
+       },
+       "group": "Japanese J.League Standings"
+      },
+      "7108": {
+       "rank": "12",
+       "gp": "16",
+       "w": "5",
+       "d": "3",
+       "l": "8",
+       "gd": "-7",
+       "pts": "18",
+       "of": 20,
+       "raw": {
+        "GP": "16",
+        "L": "8",
+        "GD": "-7",
+        "P": "18",
+        "D": "3",
+        "W": "5",
+        "R": "12",
+        "Total": "5-3-8"
+       },
+       "group": "Japanese J.League Standings"
+      },
+      "7109": {
+       "rank": "13",
+       "gp": "16",
+       "w": "4",
+       "d": "6",
+       "l": "6",
+       "gd": "-12",
+       "pts": "18",
+       "of": 20,
+       "raw": {
+        "GP": "16",
+        "L": "6",
+        "GD": "-12",
+        "P": "18",
+        "D": "6",
+        "W": "4",
+        "R": "13",
+        "Total": "4-6-6"
+       },
+       "group": "Japanese J.League Standings"
+      },
+      "7111": {
+       "rank": "14",
+       "gp": "16",
+       "w": "4",
+       "d": "4",
+       "l": "8",
+       "gd": "-8",
+       "pts": "16",
+       "of": 20,
+       "raw": {
+        "GP": "16",
+        "L": "8",
+        "GD": "-8",
+        "P": "16",
+        "D": "4",
+        "W": "4",
+        "R": "14",
+        "Total": "4-4-8"
+       },
+       "group": "Japanese J.League Standings"
+      },
+      "3393": {
+       "rank": "15",
+       "gp": "16",
+       "w": "3",
+       "d": "6",
+       "l": "7",
+       "gd": "-11",
+       "pts": "15",
+       "of": 20,
+       "raw": {
+        "GP": "16",
+        "L": "7",
+        "GD": "-11",
+        "P": "15",
+        "D": "6",
+        "W": "3",
+        "R": "15",
+        "Total": "3-6-7"
+       },
+       "group": "Japanese J.League Standings"
+      },
+      "131701": {
+       "rank": "16",
+       "gp": "16",
+       "w": "4",
+       "d": "3",
+       "l": "9",
+       "gd": "-12",
+       "pts": "15",
+       "of": 20,
+       "raw": {
+        "GP": "16",
+        "L": "9",
+        "GD": "-12",
+        "P": "15",
+        "D": "3",
+        "W": "4",
+        "R": "16",
+        "Total": "4-3-9"
+       },
+       "group": "Japanese J.League Standings"
+      },
+      "7104": {
+       "rank": "17",
+       "gp": "16",
+       "w": "4",
+       "d": "3",
+       "l": "9",
+       "gd": "-15",
+       "pts": "15",
+       "of": 20,
+       "raw": {
+        "GP": "16",
+        "L": "9",
+        "GD": "-15",
+        "P": "15",
+        "D": "3",
+        "W": "4",
+        "R": "17",
+        "Total": "4-3-9"
+       },
+       "group": "Japanese J.League Standings"
+      },
+      "19001": {
+       "rank": "18",
+       "gp": "16",
+       "w": "3",
+       "d": "5",
+       "l": "8",
+       "gd": "-6",
+       "pts": "14",
+       "of": 20,
+       "raw": {
+        "GP": "16",
+        "L": "8",
+        "GD": "-6",
+        "P": "14",
+        "D": "5",
+        "W": "3",
+        "R": "18",
+        "Total": "3-5-8"
+       },
+       "group": "Japanese J.League Standings"
+      },
+      "7102": {
+       "rank": "19",
+       "gp": "15",
+       "w": "2",
+       "d": "6",
+       "l": "7",
+       "gd": "-9",
+       "pts": "12",
+       "of": 20,
+       "raw": {
+        "GP": "15",
+        "L": "7",
+        "GD": "-9",
+        "P": "12",
+        "D": "6",
+        "W": "2",
+        "R": "19",
+        "Total": "2-6-7"
+       },
+       "group": "Japanese J.League Standings"
+      },
+      "7107": {
+       "rank": "20",
+       "gp": "16",
+       "w": "2",
+       "d": "2",
+       "l": "12",
+       "gd": "-13",
+       "pts": "8",
+       "of": 20,
+       "raw": {
+        "GP": "16",
+        "L": "12",
+        "GD": "-13",
+        "P": "8",
+        "D": "2",
+        "W": "2",
+        "R": "20",
+        "Total": "2-2-12"
+       },
+       "group": "Japanese J.League Standings"
+      }
+     },
+     "last5": {
+      "7115": [
+       {
+        "res": "W",
+        "gf": 4,
+        "ga": 1,
+        "opp": "Cerezo Osaka",
+        "home": true,
+        "date": "2026-10-31"
+       },
+       {
+        "res": "D",
+        "gf": 0,
+        "ga": 0,
+        "opp": "Buriram United",
+        "home": false,
+        "date": "2026-11-04"
+       },
+       {
+        "res": "L",
+        "gf": 0,
+        "ga": 2,
+        "opp": "FC Tokyo",
+        "home": false,
+        "date": "2026-11-07"
+       },
+       {
+        "res": "D",
+        "gf": 1,
+        "ga": 1,
+        "opp": "Shimizu S-Pulse",
+        "home": true,
+        "date": "2026-11-20"
+       },
+       {
+        "res": "W",
+        "gf": 3,
+        "ga": 0,
+        "opp": "Jeonbuk Hyundai Motors",
+        "home": true,
+        "date": "2026-11-25"
+       }
+      ],
+      "22522": [
+       {
+        "res": "L",
+        "gf": 1,
+        "ga": 2,
+        "opp": "Kawasaki Frontale",
+        "home": false,
+        "date": "2026-10-25"
+       },
+       {
+        "res": "L",
+        "gf": 0,
+        "ga": 4,
+        "opp": "FC Tokyo",
+        "home": true,
+        "date": "2026-10-31"
+       },
+       {
+        "res": "D",
+        "gf": 1,
+        "ga": 1,
+        "opp": "Yokohama F. Marinos",
+        "home": false,
+        "date": "2026-11-07"
+       },
+       {
+        "res": "W",
+        "gf": 1,
+        "ga": 0,
+        "opp": "Gamba Osaka",
+        "home": false,
+        "date": "2026-11-21"
+       },
+       {
+        "res": "W",
+        "gf": 2,
+        "ga": 0,
+        "opp": "Shimizu S-Pulse",
+        "home": true,
+        "date": "2026-11-25"
+       }
+      ]
+     },
+     "h2h": [
+      {
+       "date": "2025-06-28",
+       "home_id": "7115",
+       "hs": "1",
+       "as": "2"
+      },
+      {
+       "date": "2025-04-20",
+       "home_id": "22522",
+       "hs": "1",
+       "as": "2"
+      }
+     ],
+     "leaders": {
+      "7115": [
+       [
+        "Goals",
+        "Léo Pereira",
+        "Matches: 13, Goals: 13"
+       ],
+       [
+        "Assists",
+        "Yuma Suzuki",
+        "Matches: 14, Assists: 5"
+       ],
+       [
+        "Total Shots",
+        "Léo Pereira",
+        "53"
+       ]
+      ],
+      "22522": [
+       [
+        "Goals",
+        "Kota Kawano",
+        "Matches: 13, Goals: 4"
+       ],
+       [
+        "Assists",
+        "Lucas Marcos Meireles",
+        "Matches: 14, Assists: 4"
+       ],
+       [
+        "Total Shots",
+        "Lucas Marcos Meireles",
+        "33"
+       ]
+      ]
+     },
+     "venue": "Kashima Soccer Stadium",
+     "city": "Kashima"
+    }
+   }
+  },
+  "extra": null,
+  "msg_id": 9907,
+  "btn": 2
+ },
+ "401877516": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-28T09:00:00+03:00",
+  "sport": "football",
+  "div": "JPN",
+  "reason": "edge_below_minimum",
+  "retry_at": 1795842534.849965
  }
 }
