@@ -1574,7 +1574,7 @@
  "value_day": "2026-11-27",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-27",
- "site_stamp": "1585|9885|2026-11-28 04|6|dcde4055f5181380",
+ "site_stamp": "1586|9887|2026-11-28 04|6|9e0cf2d5cb6458de",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1744,7 +1744,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 9885,
+ "dz_last": 9887,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -3132,37 +3132,37 @@
    "hockey": {
     "status": "collecting",
     "weight": 0.0,
-    "settled_matches": 80,
+    "settled_matches": 81,
     "required_matches": 100,
-    "trained_at": "2026-11-27T23:54:35.278303+00:00"
+    "trained_at": "2026-11-28T01:08:55.132525+00:00"
    },
    "basketball": {
     "status": "collecting",
     "weight": 0.0,
     "settled_matches": 76,
     "required_matches": 100,
-    "trained_at": "2026-11-27T23:54:35.278303+00:00"
+    "trained_at": "2026-11-28T01:08:55.132525+00:00"
    },
    "tennis": {
     "status": "collecting",
     "weight": 0.0,
     "settled_matches": 10,
     "required_matches": 100,
-    "trained_at": "2026-11-27T23:54:35.278303+00:00"
+    "trained_at": "2026-11-28T01:08:55.132525+00:00"
    },
    "esports:CS2": {
     "status": "collecting",
     "weight": 0.0,
     "settled_matches": 0,
     "required_matches": 100,
-    "trained_at": "2026-11-27T23:54:35.278303+00:00"
+    "trained_at": "2026-11-28T01:08:55.132525+00:00"
    },
    "esports:DOTA": {
     "status": "collecting",
     "weight": 0.0,
     "settled_matches": 0,
     "required_matches": 100,
-    "trained_at": "2026-11-27T23:54:35.278303+00:00"
+    "trained_at": "2026-11-28T01:08:55.132525+00:00"
    }
   },
   "source": {
@@ -3188,7 +3188,7 @@
   "quote_matches": 171
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-28T04:06:54.954245+03:00",
+  "last_poll": "2026-11-28T04:08:55.132525+03:00",
   "cursor": "497",
   "posts": [
    {
@@ -4037,7 +4037,7 @@
    "401892803": "post",
    "401892804": "post",
    "401892805": "post",
-   "401892806": "in",
+   "401892806": "post",
    "401892807": "in",
    "401892808": "pre",
    "401892809": "pre",
@@ -8623,7 +8623,7 @@
   },
   "football|CRC|401876813": {
    "reason": "edge_below_minimum",
-   "checked_at": "2026-11-28T00:59:15.806776+00:00",
+   "checked_at": "2026-11-28T01:09:15.018402+00:00",
    "kickoff": "2026-11-28T05:00:00+03:00",
    "sport": "football",
    "id": "401876813",
