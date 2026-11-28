@@ -3199,7 +3199,7 @@
   "quote_matches": 192
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-28T15:26:57.998094+03:00",
+  "last_poll": "2026-11-28T15:28:57.376481+03:00",
   "cursor": "505",
   "posts": [
    {
@@ -4306,7 +4306,6 @@
    "1817111": "in",
    "401884724": "pre",
    "401879799": "pre",
-   "1817110": "in",
    "1817113": "pre",
    "1817112": "pre",
    "401878928": "pre",
@@ -9336,7 +9335,7 @@
   },
   "football|SP2|401883101": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-28T12:19:19.057341+00:00",
+   "checked_at": "2026-11-28T12:29:19.178951+00:00",
    "kickoff": "2026-11-28T16:00:00+03:00",
    "sport": "football",
    "id": "401883101",
@@ -9351,7 +9350,7 @@
   },
   "football|T1|401888236": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-28T12:19:19.811715+00:00",
+   "checked_at": "2026-11-28T12:29:19.934033+00:00",
    "kickoff": "2026-11-28T16:00:00+03:00",
    "sport": "football",
    "id": "401888236",
@@ -9362,6 +9361,51 @@
    "probability": 0.5449,
    "odds": 1.71,
    "edge": -0.06822,
+   "estimated": true
+  },
+  "football|RUS|401879794": {
+   "reason": "no_qualified_real_market",
+   "checked_at": "2026-11-28T12:29:22.496030+00:00",
+   "kickoff": "2026-11-28T16:30:00+03:00",
+   "sport": "football",
+   "id": "401879794",
+   "home": "ЦСКА",
+   "away": "Зенит",
+   "priced_markets": 3,
+   "market": "Обе забьют — да",
+   "probability": 0.6182,
+   "odds": 1.5,
+   "edge": -0.0727,
+   "estimated": true
+  },
+  "football|RSA|401902006": {
+   "reason": "edge_below_minimum",
+   "checked_at": "2026-11-28T12:29:22.903386+00:00",
+   "kickoff": "2026-11-28T16:30:00+03:00",
+   "sport": "football",
+   "id": "401902006",
+   "home": "Амазулу",
+   "away": "Milford FC",
+   "priced_markets": 6,
+   "market": "ТМ 2.5",
+   "probability": 0.5755,
+   "odds": 1.62,
+   "edge": -0.06769,
+   "estimated": false
+  },
+  "football|RSA|401902005": {
+   "reason": "no_qualified_real_market",
+   "checked_at": "2026-11-28T12:29:23.311827+00:00",
+   "kickoff": "2026-11-28T16:30:00+03:00",
+   "sport": "football",
+   "id": "401902005",
+   "home": "Чиппа Юнайтед",
+   "away": "Кайзер Чифс",
+   "priced_markets": 6,
+   "market": "Обе забьют — нет",
+   "probability": 0.6301,
+   "odds": 1.48,
+   "edge": -0.06745,
    "estimated": true
   }
  },

@@ -30930,7 +30930,7 @@
   "sport": "football",
   "div": "SP2",
   "reason": "no_qualified_real_market",
-  "retry_at": 1795868937.132187
+  "retry_at": 1795869537.376481
  },
  "401888236": {
   "status": "waiting_data",
@@ -30938,6 +30938,30 @@
   "sport": "football",
   "div": "T1",
   "reason": "no_qualified_real_market",
-  "retry_at": 1795868937.132187
+  "retry_at": 1795869537.376481
+ },
+ "401879794": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-28T16:30:00+03:00",
+  "sport": "football",
+  "div": "RUS",
+  "reason": "no_qualified_real_market",
+  "retry_at": 1795869537.376481
+ },
+ "401902006": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-28T16:30:00+03:00",
+  "sport": "football",
+  "div": "RSA",
+  "reason": "edge_below_minimum",
+  "retry_at": 1795869537.376481
+ },
+ "401902005": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-28T16:30:00+03:00",
+  "sport": "football",
+  "div": "RSA",
+  "reason": "no_qualified_real_market",
+  "retry_at": 1795869537.376481
  }
 }
