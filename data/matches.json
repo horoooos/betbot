@@ -28211,5 +28211,13 @@
   "extra": null,
   "msg_id": 9880,
   "btn": 2
+ },
+ "401936054": {
+  "status": "waiting_data",
+  "kickoff": "2026-11-28T04:40:00+03:00",
+  "sport": "football",
+  "div": "COL",
+  "reason": "no_qualified_real_market",
+  "retry_at": 1795826935.144288
  }
 }

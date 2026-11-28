@@ -1574,7 +1574,7 @@
  "value_day": "2026-11-27",
  "repost_done": "2026-11-02-news-strong",
  "table_day": "2026-11-27",
- "site_stamp": "1585|9882|2026-11-28 03|6|afe4786147d7f00a",
+ "site_stamp": "1585|9883|2026-11-28 03|6|afe4786147d7f00a",
  "battle": {
   "bot": 1,
   "crowd": 1
@@ -1744,7 +1744,7 @@
  "push_watch": {},
  "news_video": true,
  "vk_last": 5728,
- "dz_last": 9882,
+ "dz_last": 9883,
  "vk_err": "Загрузка актуального фото ограничена VK; архивная подмена отключена",
  "news_forced": "now",
  "vk_mode": "photo",
@@ -3188,7 +3188,7 @@
   "quote_matches": 171
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-28T03:36:54.928896+03:00",
+  "last_poll": "2026-11-28T03:38:55.144288+03:00",
   "cursor": "497",
   "posts": [
    {
@@ -4038,7 +4038,7 @@
    "401892804": "post",
    "401892805": "post",
    "401892806": "in",
-   "401892807": "pre",
+   "401892807": "in",
    "401892808": "pre",
    "401892809": "pre",
    "401909326": "in",
@@ -8592,7 +8592,7 @@
   },
   "basketball|NBA|401909331": {
    "reason": "no_qualified_real_market",
-   "checked_at": "2026-11-28T00:29:13.063270+00:00",
+   "checked_at": "2026-11-28T00:39:16.058900+00:00",
    "kickoff": "2026-11-28T04:30:00+03:00",
    "sport": "basketball",
    "id": "401909331",
@@ -8603,6 +8603,21 @@
    "probability": 0.6597,
    "odds": 1.41,
    "edge": -0.06982,
+   "estimated": true
+  },
+  "football|COL|401936054": {
+   "reason": "no_qualified_real_market",
+   "checked_at": "2026-11-28T00:39:15.439642+00:00",
+   "kickoff": "2026-11-28T04:40:00+03:00",
+   "sport": "football",
+   "id": "401936054",
+   "home": "Мильонариос",
+   "away": "Америка",
+   "priced_markets": 6,
+   "market": "Обе забьют — нет",
+   "probability": 0.6089,
+   "odds": 1.53,
+   "edge": -0.06838,
    "estimated": true
   }
  },
