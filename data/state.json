@@ -3188,7 +3188,7 @@
   "quote_matches": 170
  },
  "vk_rss_audit": {
-  "last_poll": "2026-11-28T03:26:54.449400+03:00",
+  "last_poll": "2026-11-28T03:28:54.779867+03:00",
   "cursor": "497",
   "posts": [
    {
@@ -8585,6 +8585,21 @@
    "away": "Атланта Хокс",
    "priced_markets": 6,
    "market": "ТБ 217.5",
+   "probability": 0.6597,
+   "odds": 1.41,
+   "edge": -0.06982,
+   "estimated": true
+  },
+  "basketball|NBA|401909331": {
+   "reason": "no_qualified_real_market",
+   "checked_at": "2026-11-28T00:29:13.063270+00:00",
+   "kickoff": "2026-11-28T04:30:00+03:00",
+   "sport": "basketball",
+   "id": "401909331",
+   "home": "Миннесота Тимбервулвз",
+   "away": "Мемфис Гриззлис",
+   "priced_markets": 6,
+   "market": "ТМ 227.5",
    "probability": 0.6597,
    "odds": 1.41,
    "edge": -0.06982,
