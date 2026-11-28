@@ -385,111 +385,6 @@ null
 "lt": null
 },
 {
-"sport": "esports",
-"id": "1817101",
-"league": "Киберспорт · CS2",
-"kickoff": "2026-11-28T09:17:11+03:00",
-"home": "G2",
-"away": "Liquid",
-"hl": "https://cdn-api.pandascore.co/images/team/image/3210/5995.png",
-"al": "https://cdn-api.pandascore.co/images/team/image/3213/463px_team_liquid_2024_full_lightmode.png",
-"hid": "3210",
-"aid": "3213",
-"bb": "https://betboom.ru/search?query=%D0%932&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=esports",
-"path": "",
-"url": "esports.html?e=1817101&d=CS2",
-"participants": [
-[
-"G2",
-"G2"
-],
-[
-"Liquid",
-"Liquid"
-]
-],
-"div": "CS2",
-"state": "in",
-"bo": 1,
-"prediction": "",
-"hs": 0,
-"as": 0,
-"tip": "",
-"top": false,
-"bot": null,
-"lt": null
-},
-{
-"sport": "esports",
-"id": "1817104",
-"league": "Киберспорт · CS2",
-"kickoff": "2026-11-28T10:00:00+03:00",
-"home": "MIBR",
-"away": "100 Thieves",
-"hl": "https://cdn-api.pandascore.co/images/team/image/3250/600px_mibr_2018.png",
-"al": "https://cdn-api.pandascore.co/images/team/image/126452/8474.png",
-"hid": "3250",
-"aid": "126452",
-"bb": "https://betboom.ru/search?query=%D0%9C%D0%B8%D0%B1%D1%80&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=esports",
-"path": "",
-"url": "esports.html?e=1817104&d=CS2",
-"participants": [
-[
-"MIBR",
-"MIBR"
-],
-[
-"100 Thieves",
-"100 Thieves"
-]
-],
-"div": "CS2",
-"state": "pre",
-"bo": 1,
-"prediction": "",
-"hs": 0,
-"as": 0,
-"tip": "",
-"top": false,
-"bot": null,
-"lt": null
-},
-{
-"sport": "esports",
-"id": "1817102",
-"league": "Киберспорт · CS2",
-"kickoff": "2026-11-28T10:00:00+03:00",
-"home": "Natus Vincere",
-"away": "PARIVISION",
-"hl": "https://cdn-api.pandascore.co/images/team/image/3216/1022px_natus_vincere_2021_lightmode.png",
-"al": "https://cdn-api.pandascore.co/images/team/image/133719/250px_parivision_allmode.png",
-"hid": "3216",
-"aid": "133719",
-"bb": "https://betboom.ru/search?query=%D0%92%D0%B8%D0%BD%D1%81%D0%B5%D1%80%D0%B5&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=esports",
-"path": "",
-"url": "esports.html?e=1817102&d=CS2",
-"participants": [
-[
-"Natus Vincere",
-"Natus Vincere"
-],
-[
-"PARIVISION",
-"PARIVISION"
-]
-],
-"div": "CS2",
-"state": "pre",
-"bo": 1,
-"prediction": "",
-"hs": 0,
-"as": 0,
-"tip": "",
-"top": false,
-"bot": null,
-"lt": null
-},
-{
 "sport": "football",
 "id": "401877525",
 "league": "Япония · J-League",
@@ -514,7 +409,7 @@ null
 ]
 ],
 "div": "JPN",
-"state": "pre",
+"state": "in",
 "bo": null,
 "prediction": "predictions/2026-11-28-kasiva-reysol-sanfrechche-hirosima-401877525.html",
 "hs": "0",
@@ -627,6 +522,76 @@ null
 ]
 ]
 },
+"lt": null
+},
+{
+"sport": "esports",
+"id": "1817104",
+"league": "Киберспорт · CS2",
+"kickoff": "2026-11-28T10:15:00+03:00",
+"home": "MIBR",
+"away": "100 Thieves",
+"hl": "https://cdn-api.pandascore.co/images/team/image/3250/600px_mibr_2018.png",
+"al": "https://cdn-api.pandascore.co/images/team/image/126452/8474.png",
+"hid": "3250",
+"aid": "126452",
+"bb": "https://betboom.ru/search?query=%D0%9C%D0%B8%D0%B1%D1%80&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=esports",
+"path": "",
+"url": "esports.html?e=1817104&d=CS2",
+"participants": [
+[
+"MIBR",
+"MIBR"
+],
+[
+"100 Thieves",
+"100 Thieves"
+]
+],
+"div": "CS2",
+"state": "pre",
+"bo": 1,
+"prediction": "",
+"hs": 0,
+"as": 0,
+"tip": "",
+"top": false,
+"bot": null,
+"lt": null
+},
+{
+"sport": "esports",
+"id": "1817102",
+"league": "Киберспорт · CS2",
+"kickoff": "2026-11-28T10:15:00+03:00",
+"home": "Natus Vincere",
+"away": "PARIVISION",
+"hl": "https://cdn-api.pandascore.co/images/team/image/3216/1022px_natus_vincere_2021_lightmode.png",
+"al": "https://cdn-api.pandascore.co/images/team/image/133719/250px_parivision_allmode.png",
+"hid": "3216",
+"aid": "133719",
+"bb": "https://betboom.ru/search?query=%D0%92%D0%B8%D0%BD%D1%81%D0%B5%D1%80%D0%B5&utm_source=site&utm_medium=search&utm_campaign=betbot&utm_content=esports",
+"path": "",
+"url": "esports.html?e=1817102&d=CS2",
+"participants": [
+[
+"Natus Vincere",
+"Natus Vincere"
+],
+[
+"PARIVISION",
+"PARIVISION"
+]
+],
+"div": "CS2",
+"state": "pre",
+"bo": 1,
+"prediction": "",
+"hs": 0,
+"as": 0,
+"tip": "",
+"top": false,
+"bot": null,
 "lt": null
 },
 {
